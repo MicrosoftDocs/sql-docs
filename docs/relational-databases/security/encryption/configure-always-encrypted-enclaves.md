@@ -66,7 +66,7 @@ To determine an attestation service URL, you need to configure your tools and ap
 1. Log on to you SQL Server computer as administrator.
 2. Open PowerShell as administrator.
 3. Run [Get-HGSClientConfiguration](https://docs.microsoft.com/powershell/module/hgsclient/get-hgsclientconfiguration).
-4. Write down and save the AttestationServerURL property. It should look like this: *http://10.193.16.185/Attestation*.(???checking with windows if this works on all editions???)
+4. Write down and save the AttestationServerURL property. It should look like this: *http://x.x.x.x/Attestation*.(???checking with windows if this works on all editions???)
 
 
 ### Install tools
@@ -75,15 +75,13 @@ Install the following tools on the client/development computer:
 
 1. [.NET Framework 4.7.2](https://www.microsoft.com/net/download/dotnet-framework-runtime).
 2. [SSMS 18.0 or later](../../../ssms/download-sql-server-management-studio-ssms.md).
-3. [SQL Server PowerShell module](../../../powershell/download-sql-server-ps-module.md)(??? we will need to specify min version???.
+3. [SQL Server PowerShell module](../../../powershell/download-sql-server-ps-module.md) version 21.5 or later.
 4. [Visual Studio (2017 or later recommended)](https://visualstudio.microsoft.com/downloads/).
 5. [Developer Pack for .NET Framework 4.7.2](https://www.microsoft.com/net/download/visual-studio-sdks).
-6. Install the following NuGet packages:(???the below instructions will need to be updated for public packages - the below instructions is for private packages, we used for private preview???)
+6. Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider NuGet package, version 3.0 or later.
+7. Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider NuGet package.
 
-    1. Download Always Encrypted Enclave Providers Pre-Release EULA.rtf and Azure Key Vault Always Encrypted Provider Pre-Release EULA.rtf from MS Collaborate. If you accept the EULAs, proceed to the next step.
-    2. Download *microsoft.sqlserver.management.alwaysencrypted.azurekeyvaultprovider.150.16160.0.nupkg* and *microsoft.sqlserver.management.alwaysencrypted.enclaveproviders.150.16160.0.nupkg* save the in a local folder, for example, C:\\LocalRepository.
-
-    The first NuGet package implements client-side logic for the driver to attest and interact with secure enclaves. The second NuGet package contains the Microsoft Azure Key Vault Provider for Always Encrypted Column Master Keys. Both packages are intended and it is intended to be used in Visual Studio projects. For instructions on how to consume the NuGet package in a Visual Studio project see the Develop Applications issuing Rich Queries in Visual Studio section later in this document.
+Both NuGet packages listed above are intended to be used in Visual Studio projects for developing  applications using Always Encrypted with secure enclaves. The first package is required only if you store your column master keys in Azure Key Vault. See the Develop Applications issuing Rich Queries in Visual Studio section later in this document.
 
 ### Configure a secure enclave
 
@@ -125,15 +123,13 @@ On the client/development computer:
     | ------------------------------ | ----- | -------------- |
     | column encryption enclave type | 1     | 1              |
 
-6. To enable rich computations on encrypted columns, run the following query(???Need to replace "122" below with teh right traceflag???):
+6. To enable rich computations on encrypted columns, run the following query:
    ```sql
-   DBCC traceon(122,-1)
+   DBCC traceon(127,-1)
    ```     
     > [!NOTE]
     > Rich computations are disabled by default in CTP 2.0. They need to be enabled using the above statement after each restart of your SQL Server instance.
 ## Provision enclave-enabled keys
-
-Before provisioning keys, you need to create your database (for example, by restoring it from a backup file) on the SQL Server instance with the secure enclave loaded.(??? Should we keep this sentence? If it is fine for the tutorial, but not sure it belongs to the docs???)
 
 The introduction of enclave-enabled keys does not fundamentally change the [key provisioning and key management workflows for Always Encrypted](overview-of-key-management-for-always-encrypted.md). The only change is in the column master key provisioning workflow, where you can now mark the key as enclave-enabled (by default, column master keys, are not enclave-enabled). When you specify the new column master key is to be enclave-enabled, a couple things happen:
 
@@ -171,7 +167,7 @@ The following steps create enclave-enabled keys (requires SSMS 18.0 or later):
     1. Right click **Always Encrypted Keys** and select **New Column Encryption Key**.
     2. Enter a name for the new column encryption key.
     3. In the **Column master key** dropdown, select the column master key you created in the previous steps.
-    4. Click **OK**.(???Need to replace the below screenshot???)
+    4. Click **OK**.(???Need to replace the above screenshot - Jakub sent the updated image to Steve???)
 
 ### **Provision enclave-enabled keys using PowerShell**
 
@@ -334,7 +330,7 @@ In SQL Server, collations can be set at the server, database, or column level. F
 
 ### Special considerations for non-UNICODE string columns
 
-(???The following restriction likely appleis to the current version of AE  -confirming with Engineering. IF so, we probably should move it out of this section???) The following additional restriction, imposed by a limitation in SQL client drivers (not related to Always Encrypted), applies to non-UNICODE (ASCII) string columns.
+(???The following restriction applies to the current version of AE  - I've confirmed with Engineering. We probably should move it out of this section???) The following additional restriction, imposed by a limitation in SQL client drivers (not related to Always Encrypted), applies to non-UNICODE (ASCII) string columns.
 
 If you overwrite the database collation for a non-UNICODE (char, varchar) string column, **you must ensure the column collation uses the same code page as the database collation**.
 
@@ -824,49 +820,44 @@ GO;
 
 ### Set up your you Visual Studio Project
 
-To use the preview functionality of Always Encrypted in a .NET Framework application, you need to make sure your application is built against .NET 4.7.2 and is integrated with the Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders NuGet. In addition, if your store you column master key in Azure Key Vault, you also need to integrate your application with the Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider NuGet. 
+To use Always Encrypted with secure enclaves in a .NET Framework application, you need to make sure your application is built against .NET FRamework 4.7.2 and is integrated with the Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders NuGet. In addition, if you store you column master key in Azure Key Vault, you also need to integrate your application with the Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider NuGet, version 3.0 or later. 
 
 1. Open Visual Studio.
 2. Create a new Visual C\# project, or open an existing project.
 3. Make sure your project targets at least .NET Framework 4.7.2. Right-click on the project in Solution Explorer, select Properties and set Target framework to .NET Framework 4.7.2.
 
-4. Select **Tools** (main menu) > **NuGet Package Manager** > **Package Manager Settings**.
-5. Select **Package Sources**.
-6. Click the **+** icon to add a new package source. Enter a name of the package source (for example, Local Repository). Click the **…** button and navigate to the directory containing the NuGet package with the preview version of the *.NET Framework Data Provider for SQL Server (SqlClient)*. Note, in the Azure VM, which has been provisioned for you, the NuGet is located in C:\\LocalRepository.(???This and some subsequent steps will change once the Nuget package is public???) 
-7. Click **OK**.
-    
-    ![LocalRepository](./media/always-encrypted-enclaves/local-repository.png)
+4. Install the following NuGet package by going to **Tools** (main menu) > **NuGet Package Manager** > **Package Manager Console**. Run the following code in the Package Manager Console.
 
-7. Select Tools > NuGet Package Manager > Manage NuGet Packages for this Solution.
+```powershell
+Install-Package Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider --IncludePrerelease 
+```
 
-8. In the NuGet – Solution tab, select the package source, you have created (Local Repository) as Package source. Click Browse and select Include prerelease.
-    
-    ![EnclaveProviders package](./media/always-encrypted-enclaves/enclave-providers.png)
+5. If you use Azure Key Vault for storing your column master keys, install the following NuGet packages by going to **Tools** (main menu) > **NuGet Package Manager** > **Package Manager Console**. Run the following code in the Package Manager Console.
 
-9. Select **Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders**. This package contains the logic to attest and interact with the enclaves.
+```powershell
+Install-Package Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider --IncludePrerelease -Version 3.0
+Install-Package Microsoft.IdentityModel.Clients.ActiveDirectory
+```
+6. Select your project and click Install.
 
-10. If you use Azure Key Vault for storing your column master keys, select Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider. This package contains the preview/pre-release version the Always Encrypted provider for Azure Key Vault.
+7. Open the configuration file from your project (for example, App.config or Web.config).
 
-11. Select your project and click Install.
-
-12. Open the configuration file from your project (for example, App.config or Web.config).
-
-13. Locate the \<configuration\> section. Within the \<configuration\> section, locate the \<configSections\> section. Add the following section within the \<configSections\>:
+8. Locate the \<configuration\> section. Within the \<configuration\> section, locate the \<configSections\> section. Add the following section within the \<configSections\>:
 
     <section name="SqlColumnEncryptionEnclaveProviders" type="System.Data.SqlClient.SqlColumnEncryptionEnclaveProviderConfigurationSection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" /\>
 
-14. Inside the configuration section, below the \<configSections\>, add the following section, which specific an enclave provider to be used to attest and interact with Intel SGX enclaves:
+9. Inside the configuration section, below the \<configSections\>, add the following section, which specific an enclave provider to be used to attest and interact with Intel SGX enclaves:
 
     \<SqlColumnEncryptionEnclaveProviders\>
     
     \<providers\>
     
-    \<add name="VBS" type="Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders.VirtualizationBasedSecurityEclaveProvider, Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"/\>
+    \<add name="VBS" type="Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders.VirtualizationBasedSecurityEnclaveProvider, Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"/\>
     \</SqlColumnEncryptionEnclaveProviders\> 
 
 ### Develop and Test Your App 
 
-To use Always Encrypted and enclave computations, your application needs to connect to the database with the following two keywords in the connection string: **Column Encryption Setting = Enabled; Enclave Attestation Url=https://atts-stage.cloudapp.net/api/attestation/verifyQuote**.
+To use Always Encrypted and enclave computations, your application needs to connect to the database with the following two keywords in the connection string: **Column Encryption Setting = Enabled; Enclave Attestation Url=http://x.x.x.x/Attestation**.
 
 In addition, your application needs to adhere to common guidelines that apply to applications using Always Encrypted, for example, your application must have access to column master keys associated with the database columns, referenced in application queries.
 

@@ -29,7 +29,7 @@ Configure replication on Linux with either SQL Server Management Studio (SSMS) o
 
 * To use SSMS, follow the instructions in this article.
 
-  Use SSMS on a Windows operating system to connect to instances of SQL Server. To for background and instructions, see [Use SSMS to Manage SQL Server on Linux](./sql-server-linux-manage-ssms.md).
+  Use SSMS on a Windows operating system to connect to instances of SQL Server. For background and instructions, see [Use SSMS to Manage SQL Server on Linux](./sql-server-linux-manage-ssms.md).
   
 * For an example with stored procedures, follow the [Configure SQL Server replication on Linux](sql-server-linux-replication-tutorial-tsql.md) tutorial.
 

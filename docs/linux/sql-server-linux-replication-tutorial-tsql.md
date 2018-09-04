@@ -37,6 +37,8 @@ To complete this tutorial, you will need:
 - 2 instances of SQL Server with the latest version of SQL Server on Linux
 - A tool to issue T-SQL queries to set up replication such as SQLCMD or SSMS
 
+  See [Use SSMS to Manage SQL Server on Linux](./sql-server-linux-manage-ssms.md).
+
 ## Detailed steps
 
 1. Enable SQL Server Replication Agents on Linux

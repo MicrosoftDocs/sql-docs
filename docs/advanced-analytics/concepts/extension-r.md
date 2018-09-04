@@ -23,7 +23,7 @@ SQL Server includes both open-source and proprietary packages. The base R librar
 
 SQL Server does not modify the base R executables, but you must use the version of R installed by Setup because that version is the one that the proprietary packages are built and tested on. For more information about how MRO differs from a base distribution of R that you might get from CRAN, see [Interoperability with R language and Microsoft R products and features](https://docs.microsoft.com/r-server/what-is-r-server-interoperability).
 
-The R base package distribution insstalled by Setup can be found in the folder associated with the instance. For example, if you installed R Services on the default instance, the R libraries are located in this folder by default: `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library`. Similarly, the R tools associated with the default instance would be located in this folder by default: `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin`.
+The R base package distribution installed by Setup can be found in the folder associated with the instance. For example, if you installed R Services on a SQL Server 2016 default instance, the R libraries are located in this folder by default: `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library`. Similarly, the R tools associated with the default instance would be located in this folder by default: `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin`.
 
 R packages added by Microsoft for parallel and distributed workloads include the following libraries.
 
@@ -50,7 +50,7 @@ The following diagrams depict the interaction of SQL Server components with the 
 
 R code that is run from "inside" SQL Server is executed by calling a stored procedure. Thus, any application that can make a stored procedure call can initiate execution of R code.  Thereafter SQL Server manages the execution of R code as summarized in the following diagram.
 
-![rsql_indb780-01](../media/script_in-db-r.png)
+![rsql_indb780-01](../r/media/script_in-db-r.png)
 
 1. A request for the R runtime is indicated by the parameter _@language='R'_ passed to the stored procedure, [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). SQL Server sends this request to the Launchpad service.
 2. The Launchpad service starts the appropriate launcher; in this case, RLauncher.
@@ -64,7 +64,7 @@ R code that is run from "inside" SQL Server is executed by calling a stored proc
 
 When connecting from a remote data science client that supports Microsoft R, you can run R functions in the context of SQL Server by using the RevoScaleR functions. This is a different workflow from the previous one, and is summarized in the following diagram.
 
-![rsql_fromR2db-01](../media/remote-sqlcc-from-r2.png)
+![rsql_fromR2db-01](../r/media/remote-sqlcc-from-r2.png)
 
 1. For RevoScaleR functions, the R runtime calls a linking function which in turn calls BxlServer.
 2. BxlServer is provided with Microsoft R and runs in a separate process from the R runtime.

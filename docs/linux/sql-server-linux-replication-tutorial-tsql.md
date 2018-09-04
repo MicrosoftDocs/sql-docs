@@ -298,6 +298,10 @@ In this tutorial you configured SQL Server snapshot replication on Linux with 2 
 > * Configure subscriber 
 > * Run the replication jobs
 
+## See also
+
+For detailed information about replication, see [SQL Server replication documentation](../relational-databases/replication/sql-server-replication.md).
+
 ## Next steps
 
 [Concepts: SQL Server replication on Linux](sql-server-linux-replication.md)

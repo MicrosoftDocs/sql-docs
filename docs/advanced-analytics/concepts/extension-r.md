@@ -13,13 +13,13 @@ manager: cgronlun
 # R extension in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-The R extension is part of the SQL Server Machine Learning Services add-on to the relational database engine. It adds an R execution environment, base R distribution with standard libraries and tools, and the Microsoft R libraries: [RevoScaleR](../r/revoscaler-overview.md) for analytics at scale, [MicrosoftML](../using-the-microsoftml-package.md) for machine learning algorithms, and other libraries for accesssing data or R code in SQL Server.
+The R extension is part of the SQL Server Machine Learning Services add-on to the relational database engine. It adds an R execution environment, base R distribution with standard libraries and tools, and the Microsoft R libraries: [RevoScaleR](../r/revoscaler-overview.md) for analytics at scale, [MicrosoftML](../using-the-microsoftml-package.md) for machine learning algorithms, and other libraries for accessing data or R code in SQL Server.
 
 R integration is available in SQL Server starting in SQL Server 2016, with [R Services](../r/sql-server-r-services.md), and continuing forward as part of [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md).
 
 ## R components
 
-SQL Server does not modify the R executables. The R runtime is Microsoft's distribution of open-source R: Microsoft R Open (MRO). It is installed independently of SQL tools, and is executed outside of core engine processes. During installation, you must consent to the terms of the open-source license. Thereafter, you can run standard R packages without further modification just as you would in any other open source distribution of R.
+SQL Server does not modify the R executables. The R runtime is Microsoft's distribution of open-source R: Microsoft R Open (MRO). It is installed independently of SQL tools, and is executed outside of core engine processes. During installation, you must consent to the terms of the open-source license. Thereafter, you can run standard R packages without further modification just as you would in any other open-source distribution of R.
 
 The R base package distribution that is associated with a specific [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] instance can be found in the folder associated with the instance. For example, if you installed R Services on the default instance, the R libraries are located in this folder by default: `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library`.
 
@@ -31,8 +31,18 @@ R packages added by Microsoft include the following packages.
 
 | Library | Description |
 |---------|-------------|
-| [**RevoScaleR**](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) | Supports data source objects and data exploration, manipulation, transformation, and visualization. It supports creation of remote compute contexts, as well as a various scalable machine learning models, such as **rxLinMod**. The APIs have been optimized to analyze data sets that are too big to fit in memory and to perform computations distributed over several cores or processors. The RevoScaleR package also supports the .XDF file format for faster movement and storage of data used for analysis. The XDF format uses columnar storage, is portable, and can be used to load and then manipulate data from various sources, including text, SPSS, or an ODBC connection. |
+| [**RevoScaleR**](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) | Supports data source objects and data exploration, manipulation, transformation, and visualization. It supports creation of remote compute contexts, as well as a various scalable machine learning models, such as **rxLinMod**. The APIs have been optimized to analyze data sets that are too big to fit in memory and to perform computations distributed over several cores or processors. The RevoScaleR package also supports the XDF file format for faster movement and storage of data used for analysis. The XDF format uses columnar storage, is portable, and can be used to load and then manipulate data from various sources, including text, SPSS, or an ODBC connection. |
 | [**MicrosoftML**](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package) | Contains machine learning algorithms that have been optimized for speed and accuracy, as well as in-line transformations for working with text and images. For more information, see [Using the MicrosoftML package with SQL Server](https://docs.microsoft.com/sql/advanced-analytics/using-the-microsoftml-package). | 
+
+## Using R in SQL Server
+
+You import the **RevoScaleR** module into your R code, and then call functions from the module, like any other R functions.
+ 
+Supported data sources include ODBC databases, SQL Server, and XDF file format to exchange data with other sources, or with R solutions. Input data must be tabular. All R results must be returned in the form of a data frame.
+
+Supported compute contexts include local, or remote SQL Server compute context. A remote compute context refers to code execution that starts on one computer such as a workstation, but then switches script execution to a remote computer. Switching the compute context requires that both systems have the same RevoScaleR library.
+
+Local compute context, as you might expect, includes execution of R code on the same server as the database engine instance, with code inside T-SQL or embedded in a stored procedure. You can also run the code from a local R IDE and have the script execute on the SQL Server computer, by defining a remote compute context.
 
 ## Execution architecture
 
@@ -42,7 +52,7 @@ The following diagrams depict the interaction of SQL Server components with the 
 
 R code that is run from "inside" SQL Server is executed by calling a stored procedure. Thus, any application that can make a stored procedure call can initiate execution of R code.  Thereafter SQL Server manages the execution of R code as summarized in the following diagram.
 
-![rsql_indb780-01](media/script_in-db-r.png)
+![rsql_indb780-01](../media/script_in-db-r.png)
 
 1. A request for the R runtime is indicated by the parameter _@language='R'_ passed to the stored procedure, [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). SQL Server sends this request to the Launchpad service.
 2. The Launchpad service starts the appropriate launcher; in this case, RLauncher.
@@ -56,7 +66,7 @@ R code that is run from "inside" SQL Server is executed by calling a stored proc
 
 When connecting from a remote data science client that supports Microsoft R, you can run R functions in the context of SQL Server by using the RevoScaleR functions. This is a different workflow from the previous one, and is summarized in the following diagram.
 
-![rsql_fromR2db-01](media/remote-sqlcc-from-r2.png)
+![rsql_fromR2db-01](../media/remote-sqlcc-from-r2.png)
 
 1. For RevoScaleR functions, the R runtime calls a linking function which in turn calls BxlServer.
 2. BxlServer is provided with Microsoft R and runs in a separate process from the R runtime.

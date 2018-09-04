@@ -42,32 +42,7 @@ Supported data sources include ODBC databases, SQL Server, and XDF file format t
 
 Supported compute contexts include local, or remote SQL Server compute context. A remote compute context refers to code execution that starts on one computer such as a workstation, but then switches script execution to a remote computer. Switching the compute context requires that both systems have the same revoscalepy library.
 
-Local compute context, as you might exepcted, includes execution of Python code on the same server as the database engine instance, with code inside T-SQL or embedded in a stored procedure. You can also run the code from a local Python IDE and have the script execute on the SQL Server computer, by defining a remote compute context.
-
-## Python and SQL Data Types
-
-Python supports a limited number of data types in comparison to SQL Server. As a result, whenever you use data from SQL Server in Python scripts, data might be implicitly converted to a compatible data type. However, often an exact conversion cannot be performed automatically, and an error is returned.
-
-This table lists the implicit conversions that are provided. Other data types are not supported.
-
-|SQLtype|Python type|
-|-------|-----------|
-|**bigint**|`numeric`|
-|**binary**|`raw`|
-|**bit**|`bool`|
-|**char**|`str`|
-|**float**|`float64`|
-|**int**|`int32`|
-|**nchar**|`str`|
-|**nvarchar**|`str`|
-|**nvarchar(max)**|`str`|
-|**real**|`float32`|
-|**smallint**|`int16`|
-|**tinyint**|`uint8`|
-|**varbinary**|`bytes`|
-|**varbinary(max)**|`bytes`|
-|**varchar(n)**|`str`|
-|**varchar(max)**|`str`|
+Local compute context, as you might expect, includes execution of Python code on the same server as the database engine instance, with code inside T-SQL or embedded in a stored procedure. You can also run the code from a local Python IDE and have the script execute on the SQL Server computer, by defining a remote compute context.
 
 ## Execution architecture
 
@@ -94,7 +69,7 @@ After the script has been embedded in the stored procedure, any application that
 You can run Python scripts from a remote computer, such as a laptop, and have them execute in the context of the SQl Server computer, if these conditions are met:
 
 + You design the scripts appropriately
-+ The remote computer has installed the extensibility libraries that are used by Machine Learning Services. The [revoscalepy](what-is-revoscalepy.md) package is required to use remote compute contexts.
++ The remote computer has installed the extensibility libraries that are used by Machine Learning Services. The [revoscalepy](../python/what-is-revoscalepy.md) package is required to use remote compute contexts.
 
 The following diagram summarizes the overall workflow when scripts are sent from a remote computer.
 
@@ -112,6 +87,6 @@ The following diagram summarizes the overall workflow when scripts are sent from
 
 ## See also
 
-+ [What is revoscalepy](what-is-revoscalepy.md) 
++ [What is revoscalepy](../python/what-is-revoscalepy.md) 
 + [Extensibility framework in SQL Server](extensibility-framework.md)
 + [R and machine learning extensions in SQL Server](extension-r.md)

@@ -24,7 +24,30 @@ A subset of the RevoScaleR functionality (rxLinMod, rxLogit, rxPredict, rxDTrees
 
 For more information, see [What Is revoscalepy?](what-is-revoscalepy.md).
 
+Python supports a limited number of data types in comparison to SQL Server. As a result, whenever you use data from SQL Server in Python scripts, data might be implicitly converted to a compatible data type. However, often an exact conversion cannot be performed automatically, and an error is returned.
 
+## Python and SQL Data Types
+
+This table lists the implicit conversions that are provided. Other data types are not supported.
+
+|SQLtype|Python type|
+|-------|-----------|
+|**bigint**|`numeric`|
+|**binary**|`raw`|
+|**bit**|`bool`|
+|**char**|`str`|
+|**float**|`float64`|
+|**int**|`int32`|
+|**nchar**|`str`|
+|**nvarchar**|`str`|
+|**nvarchar(max)**|`str`|
+|**real**|`float32`|
+|**smallint**|`int16`|
+|**tinyint**|`uint8`|
+|**varbinary**|`bytes`|
+|**varbinary(max)**|`bytes`|
+|**varchar(n)**|`str`|
+|**varchar(max)**|`str`|
 
 
 

@@ -14,17 +14,15 @@ manager: cgronlun
 # Extensibility architecture in SQL Server Machine Learning Services 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server supports an extensibility framework for execution of R and Python script. This article covers concepts and components, explains the benefits of integration, and the mechanics of script execution.
-
-## Timeline 
-
-The extensibility framework was introduced in SQL Server 2016 to support the R run time. SQL Server 2017 adds support for the Python run time.
+SQL Server supports an extensibility framework for execution of R and Python script. This article covers concepts, components, and the interaction model.
 
 ## Background
 
+The extensibility framework was introduced in SQL Server 2016 to support the R run time. SQL Server 2017 adds support for the Python run time.
+
 The purpose of the extensibility framework is to provide an interface between SQL Server and data science languages such as R and Python, both to reduce the friction that occurs when data science solutions are moved into production, and to protect data that might be exposed during the data science development process. By executing a trusted scripting language within a secure framework managed by SQL Server, the database developer can maintain security while allowing data scientists to use enterprise data.
 
-  ![Goals of integration with SQL Server](media/ml-service-value-add.png "Machine Learning Services Value Add")
+  ![Goals of integration with SQL Server](../media/ml-service-value-add.png "Machine Learning Services Value Add")
 
 Language run times are built on open-source distribution. You can port existing code and execute it in SQL Server with relatively minor modifications as long as your script is compatible with the language versions installed by SQL Server Setup.
 
@@ -37,7 +35,6 @@ Script execution is within the boundaries of the data security model, extended t
 Permissions on the relational database are the basis of data access in your script. At the database level, an administrator should be able to manage resources used by external scripts, manage users, and manage and monitor external code libraries. A user running R or Python script should not be able to use any data that could not be accessed by that user in a SQL query. 
 
 For a permissions perspective, you need the standard database read and write permissions, plus an additional permission to run external script. Models and code that you write for relational data are wrapped in stored procedures, or serialized to a binary format and stored in a table, or loaded from disk if you serialized the raw byte stream to a file.
-
 
 ## Launchpad
 
@@ -111,13 +108,7 @@ The SQL Satellite can be monitored by using windows extended events (xEvents). F
 
 + **Other protocols**
 
-  Processes that might need to work in "chunks" or transfer data back to a remote client can also use the .XDF file format. Actual data transfer is via encoded blobs.
-
-
-
-
-
-
+  Processes that might need to work in "chunks" or transfer data back to a remote client can also use the XDF file format. Actual data transfer is via encoded blobs.
 
 ## Resource governance
 
@@ -125,5 +116,5 @@ In SQL Server Enterprise Edition, you can use Resource Governor to manage and mo
 
 ## See Also
 
-+ [R and machine learning extensions in SQL Server](extension-r.md)
-+ [Python and machine learning extensions in SQL Server](extension-py.md)
++ [R extension in SQL Server](extension-r.md)
++ [Python extension in SQL Server](extension-py.md)

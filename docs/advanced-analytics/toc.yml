@@ -211,6 +211,8 @@
     items:
     - name: R libraries and data types
       href: r/r-libraries-and-data-types.md
+    - name: Python libraries and data types
+      href: python/python-libraries-and-data-types.md
     - name: Predictive modeling with R
       href: r/data-exploration-and-predictive-modeling-with-r.md
     - name: Load R objects using ODBC

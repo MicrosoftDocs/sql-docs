@@ -25,8 +25,10 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 
 Configure replication on Linux with either SQL Server Management Studio (SSMS) or Transact-SQL stored procedures.
 
-* To use SSMS, follow the instructions in this article
+* To use SSMS, follow the instructions in this article.
+
   Use SSMS on a Windows operating system to connect to instances of SQL Server. To for background and instructions, see [Use SSMS to Manage SQL Server on Linux](./sql-server-linux-manage-ssms.md).
+  
 * For an example with stored procedures, follow the [Configure SQL Server replication on Linux](sql-server-linux-replication-tutorial-tsql.md) tutorial.
 
 ## Prerequisites

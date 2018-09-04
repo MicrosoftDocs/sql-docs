@@ -16,10 +16,21 @@ ms.technology: linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
+<!--Linux on SQL Server 2017-->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017 || =sqlallproducts-allversions"
+
 This tutorial demonstrates how to move and restore a SQL Server backup file into a SQL Server 2017 Linux container image running on Docker.
 
+::: moniker-end
+<!--Linux on SQL Server 2019-->
+::: moniker range="= sql-server-linux-ver15 || = sql-server-ver15"
+
+This tutorial demonstrates how to move and restore a SQL Server backup file into a SQL Server 2019 CTP 2.0 Linux container image running on Docker.
+
+::: moniker-end
+
 > [!div class="checklist"]
-> * Pull and run the latest SQL Server 2017 Linux container image.
+> * Pull and run the latest SQL Server Linux container image.
 > * Copy the World Wide Importers database file into the container.
 > * Restore the database in the container.
 > * Run Transact-SQL statements to view and modify the database.
@@ -36,7 +47,10 @@ This tutorial demonstrates how to move and restore a SQL Server backup file into
 
 1. Open a bash terminal on Linux/Mac or an elevated PowerShell session on Windows.
 
-1. Pull the SQL Server 2017 Linux container image from Docker Hub.
+<!--Linux on SQL Server 2017-->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017 || =sqlallproducts-allversions"
+
+2. Pull the SQL Server 2017 Linux container image from Docker Hub.
 
     ```bash
     sudo docker pull mcr.microsoft.com/mssql/server/mssql-server-linux:2017-latest
@@ -46,10 +60,29 @@ This tutorial demonstrates how to move and restore a SQL Server backup file into
     docker pull mcr.microsoft.com/mssql/server/mssql-server-linux:2017-latest
     ```
 
+::: moniker-end
+<!--Linux on SQL Server 2019-->
+::: moniker range="= sql-server-linux-ver15 || = sql-server-ver15"
+
+2. Pull the SQL Server 2017 Linux container image from Docker Hub.
+
+    ```bash
+    sudo docker pull mcr.microsoft.com/mssql/server/mssql-server-linux:2019-latest
+    ```
+
+    ```PowerShell
+    docker pull mcr.microsoft.com/mssql/server/mssql-server-linux:2019-latest
+    ```
+
+::: moniker-end
+
     > [!TIP]
     > Throughout this tutorial, docker command examples are given for both the bash shell (Linux/Mac) and PowerShell (Windows).
 
-1. To run the container image with Docker, you can use the following command:
+<!--Linux on SQL Server 2017-->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017 || =sqlallproducts-allversions"
+
+3. To run the container image with Docker, you can use the following command:
 
     ```bash
     sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
@@ -70,6 +103,30 @@ This tutorial demonstrates how to move and restore a SQL Server backup file into
    > [!NOTE]
    > The process for running production SQL Server editions in containers is slightly different. For more information, see [Run production container images](sql-server-linux-configure-docker.md#production). If you use the same container names and ports, the rest of this walkthrough still works with production containers.
 
+::: moniker-end
+<!--Linux on SQL Server 2019-->
+::: moniker range="= sql-server-linux-ver15 || = sql-server-ver15"
+
+3. To run the container image with Docker, you can use the following command:
+
+    ```bash
+    sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
+       --name 'sql1' -p 1401:1433 \
+       -v sql1data:/var/opt/mssql \
+       -d mcr.microsoft.com/mssql/server/mssql-server-linux:2019-latest
+    ```
+
+    ```PowerShell
+    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
+       --name "sql1" -p 1401:1433 `
+       -v sql1data:/var/opt/mssql `
+       -d mcr.microsoft.com/mssql/server/mssql-server-linux:2019-latest
+    ```
+
+    This command creates a SQL Server 2019 CTP 2.0 container with the Developer edition (default). SQL Server port **1433** is exposed on the host as port **1401**. The optional `-v sql1data:/var/opt/mssql` parameter creates a data volume container named **sql1ddata**. This is used to persist the data created by SQL Server.
+
+::: moniker-end
+
 1. To view your Docker containers, use the `docker ps` command.
 
     ```bash
@@ -80,7 +137,7 @@ This tutorial demonstrates how to move and restore a SQL Server backup file into
     docker ps -a
     ```
  
-1. If the **STATUS** column shows a status of **Up**, then SQL Server is running in the container and listening on the port specified in the **PORTS** column. If the **STATUS** column for your SQL Server container shows **Exited**, see the [Troubleshooting section of the configuration guide](sql-server-linux-configure-docker.md#troubleshooting).
+2. If the **STATUS** column shows a status of **Up**, then SQL Server is running in the container and listening on the port specified in the **PORTS** column. If the **STATUS** column for your SQL Server container shows **Exited**, see the [Troubleshooting section of the configuration guide](sql-server-linux-configure-docker.md#troubleshooting).
 
    ```
    $ sudo docker ps -a
@@ -354,6 +411,9 @@ In addition to taking database backups for protecting your data, you can also us
    docker rm sql1
    ```
 
+<!--Linux on SQL Server 2017-->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017 || =sqlallproducts-allversions"
+
 1. Create a new container, **sql2**, and reuse the **sql1data** data volume container.
 
     ```bash
@@ -367,6 +427,27 @@ In addition to taking database backups for protecting your data, you can also us
        --name "sql2" -e "MSSQL_PID=Developer" -p 1401:1433 `
        -v sql1data:/var/opt/mssql -d mcr.microsoft.com/mssql/server/mssql-server-linux:2017-latest
     ```
+
+::: moniker-end
+<!--Linux on SQL Server 2019-->
+::: moniker range="= sql-server-linux-ver15 || = sql-server-ver15"
+
+1. Create a new container, **sql2**, and reuse the **sql1data** data volume container.
+
+    ```bash
+    sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
+       --name 'sql2' -e 'MSSQL_PID=Developer' -p 1401:1433 \
+       -v sql1data:/var/opt/mssql -d mcr.microsoft.com/mssql/server/mssql-server-linux:2019-latest
+    ```
+
+    ```PowerShell
+    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
+       --name "sql2" -e "MSSQL_PID=Developer" -p 1401:1433 `
+       -v sql1data:/var/opt/mssql -d mcr.microsoft.com/mssql/server/mssql-server-linux:2019-latest
+    ```
+
+::: moniker-end
+
 
 1. The Wide World Importers database is now in the new container. Run a query to verify the previous change you made.
 
@@ -387,9 +468,21 @@ In addition to taking database backups for protecting your data, you can also us
 
 ## Next steps
 
-In this tutorial, you learned how to back up a database on Windows and move it to a Linux server running SQL Server 2017 RC2. You learned how to:
+<!--Linux on SQL Server 2017-->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017 || =sqlallproducts-allversions"
+
+In this tutorial, you learned how to back up a database on Windows and move it to a Linux server running SQL Server 2017. You learned how to:
+
+::: moniker-end
+<!--Linux on SQL Server 2019-->
+::: moniker range="= sql-server-linux-ver15 || = sql-server-ver15"
+
+In this tutorial, you learned how to back up a database on Windows and move it to a Linux server running SQL Server 2019 CTP 2.0. You learned how to:
+
+::: moniker-end
+
 > [!div class="checklist"]
-> * Create SQL Server 2017 Linux container images.
+> * Create SQL Server Linux container images.
 > * Copy SQL Server database backups into a container.
 > * Run Transact-SQL statements inside the container with **sqlcmd**.
 > * Create and extract backup files from a container.

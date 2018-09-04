@@ -35,6 +35,7 @@ This image consists of SQL Server running on Linux based on Ubuntu 16.04. It can
 <!--The following H2 is versioned for 2017 and 2019. Much of the content is duplicated, so
 any changes to one section should be considered to be mirrored in the other-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017 || =sqlallproducts-allversions"
+
 ## <a id="pullandrun2017"></a> Pull and run the container image
 
 1. Pull the SQL Server 2017 Linux container image from Docker Hub.
@@ -110,11 +111,13 @@ SELECT @@SERVERNAME,
 ```
 
 Setting `-h` and `--name` to the same value is a good way to easily identify the target container.
+
 ::: moniker-end
 <!--End of 2017 "Pull and run" section-->
 
 <!--This is the 2019 version of the "Pull and run" section-->
 ::: moniker range="= sql-server-linux-ver15 || = sql-server-ver15"
+
 ## <a id="pullandrun2019"></a> Pull and run the container image
 
 1. Pull the SQL Server 2019 CTP 2.0 Linux container image from Docker Hub.
@@ -190,6 +193,7 @@ SELECT @@SERVERNAME,
 ```
 
 Setting `-h` and `--name` to the same value is a good way to easily identify the target container.
+
 ::: moniker-end
 <!--End of 2019 "Pull and run" section-->
 

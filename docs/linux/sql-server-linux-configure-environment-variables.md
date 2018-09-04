@@ -70,7 +70,7 @@ This example docker command uses the following environment variables to create a
 - **MSSQL_SA_PASSWORD** sets a strong password.
 - **MSSQL_TCP_PORT** sets the TCP port that SQL Server listens on to 1234. This means that instead of mapping port 1433 (default) to a host port, the custom TCP port must be mapped with the `-p 1234:1234` command in this example.
 
-<!--Linux on SQL Server 2017-->
+<!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017 || =sqlallproducts-allversions"
 
 If you are running Docker on Linux/macOS, use the following syntax with single quotes:
@@ -86,7 +86,7 @@ docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<Your
 ```
 
 ::: moniker-end
-<!--Linux on SQL Server 2019-->
+<!--SQL Server 2019 on Linux-->
 ::: moniker range="= sql-server-linux-ver15 || = sql-server-ver15"
 
 If you are running Docker on Linux/macOS, use the following syntax with single quotes:

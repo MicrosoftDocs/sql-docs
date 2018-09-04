@@ -12,6 +12,7 @@ ms.suite: "sql"
 ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: "sql-linux"
+moniker: ">= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions"
 ---
 # Configure SQL Server container images on Docker
 
@@ -130,7 +131,7 @@ Starting with SQL Server 2017 CTP 2.0, the [SQL Server command-line tools](sql-s
 
 Docker provides a way to run multiple SQL Server containers on the same host machine. This is the approach for scenarios that require multiple instances of SQL Server on the same host. Each container must expose itself on a different port.
 
-<!--Linux on SQL Server 2017-->
+<!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017 || =sqlallproducts-allversions"
 
 The following example creates two SQL Server 2017 containers and maps them to ports **1401** and **1402** on the host machine.
@@ -146,7 +147,7 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 14
 ```
 
 ::: moniker-end
-<!--Linux on SQL Server 2019-->
+<!--SQL Server 2019 on Linux-->
 ::: moniker range="= sql-server-linux-ver15 || = sql-server-ver15"
 
 The following example creates two SQL Server 2019 CTP 2.0 containers and maps them to ports **1401** and **1402** on the host machine.
@@ -196,7 +197,7 @@ Your SQL Server configuration changes and database files are persisted in the co
 
 The first option is to mount a directory on your host as a data volume in your container. To do that, use the `docker run` command with the `-v <host directory>:/var/opt/mssql` flag. This allows the data to be restored between container executions.
 
-<!--Linux on SQL Server 2017-->
+<!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017 || =sqlallproducts-allversions"
 
 ```bash
@@ -208,7 +209,7 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 14
 ```
 
 ::: moniker-end
-<!--Linux on SQL Server 2019-->
+<!--SQL Server 2019 on Linux-->
 ::: moniker range="= sql-server-linux-ver15 || = sql-server-ver15"
 
 ```bash
@@ -230,7 +231,7 @@ This technique also enables you to share and view the files on the host outside 
 
 The second option is to use a data volume container. You can create a data volume container by specifying a volume name instead of a host directory with the `-v` parameter. The following example creates a shared data volume named **sqlvolume**.
 
-<!--Linux on SQL Server 2017-->
+<!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017 || =sqlallproducts-allversions"
 
 ```bash
@@ -242,7 +243,7 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 14
 ```
 
 ::: moniker-end
-<!--Linux on SQL Server 2019-->
+<!--SQL Server 2019 on Linux-->
 ::: moniker range="= sql-server-linux-ver15 || = sql-server-ver15"
 
 ```bash
@@ -463,7 +464,7 @@ If the SQL Server container fails to run, try the following tests:
 
 - If you get an error such as **'failed to create endpoint CONTAINER_NAME on network bridge. Error starting proxy: listen tcp 0.0.0.0:1433 bind: address already in use.'**, then you are attempting to map the container port 1433 to a port that is already in use. This can happen if you're running SQL Server locally on the host machine. It can also happen if you start two SQL Server containers and try to map them both to the same host port. If this happens, use the `-p` parameter to map the container port 1433 to a different host port. For example: 
 
-<!--Linux on SQL Server 2017-->
+<!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017 || =sqlallproducts-allversions"
 
     ```bash
@@ -475,7 +476,7 @@ If the SQL Server container fails to run, try the following tests:
     ```
 
 ::: moniker-end
-<!--Linux on SQL Server 2019-->
+<!--SQL Server 2019 on Linux-->
 ::: moniker range="= sql-server-linux-ver15 || = sql-server-ver15"
 
     ```bash
@@ -504,7 +505,7 @@ If the SQL Server container fails to run, try the following tests:
 
 If the SQL Server process is failing inside the container, you should create a new container with **SYS_PTRACE** enabled. This adds the Linux capability to trace a process, which is necessary for creating a dump file on an exception. The dump file can be used by support to help troubleshoot the problem. The following docker run command enables this capability.
 
-<!--Linux on SQL Server 2017-->
+<!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017 || =sqlallproducts-allversions"
 
 ```bash
@@ -512,7 +513,7 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -e "M
 ```
 
 ::: moniker-end
-<!--Linux on SQL Server 2019-->
+<!--SQL Server 2019 on Linux-->
 ::: moniker range="= sql-server-linux-ver15 || = sql-server-ver15"
 
 ```bash

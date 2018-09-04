@@ -66,7 +66,7 @@ To disable Customer Feedback on docker, you must have Docker [persist your data]
 
 2. Run the container image
 
-<!--Linux on SQL Server 2017-->
+<!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017 || =sqlallproducts-allversions"
 
    ```bash
@@ -78,7 +78,7 @@ To disable Customer Feedback on docker, you must have Docker [persist your data]
    ```
 
 ::: moniker-end
-<!--Linux on SQL Server 2019-->
+<!--SQL Server 2019 on Linux-->
 ::: moniker range="= sql-server-linux-ver15 || = sql-server-ver15"
 
    ```bash
@@ -147,7 +147,7 @@ To enable Local Audit on docker, you must have Docker [persist your data](sql-se
 
 2. Run the container image
 
-<!--Linux on SQL Server 2017-->
+<!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017 || =sqlallproducts-allversions"
 
    ```bash
@@ -159,7 +159,7 @@ To enable Local Audit on docker, you must have Docker [persist your data](sql-se
    ```
 
 ::: moniker-end
-<!--Linux on SQL Server 2019-->
+<!--SQL Server 2019 on Linux-->
 ::: moniker range="= sql-server-linux-ver15 || = sql-server-ver15"
 
    ```bash

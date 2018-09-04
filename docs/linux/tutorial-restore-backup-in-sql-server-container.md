@@ -17,13 +17,13 @@ moniker: ">= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allv
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-<!--Linux on SQL Server 2017-->
+<!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017 || =sqlallproducts-allversions"
 
 This tutorial demonstrates how to move and restore a SQL Server backup file into a SQL Server 2017 Linux container image running on Docker.
 
 ::: moniker-end
-<!--Linux on SQL Server 2019-->
+<!--SQL Server 2019 on Linux-->
 ::: moniker range="= sql-server-linux-ver15 || = sql-server-ver15"
 
 This tutorial demonstrates how to move and restore a SQL Server backup file into a SQL Server 2019 CTP 2.0 Linux container image running on Docker.
@@ -48,7 +48,7 @@ This tutorial demonstrates how to move and restore a SQL Server backup file into
 
 1. Open a bash terminal on Linux/Mac or an elevated PowerShell session on Windows.
 
-<!--Linux on SQL Server 2017-->
+<!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017 || =sqlallproducts-allversions"
 
 2. Pull the SQL Server 2017 Linux container image from Docker Hub.
@@ -65,7 +65,7 @@ This tutorial demonstrates how to move and restore a SQL Server backup file into
     > Throughout this tutorial, docker command examples are given for both the bash shell (Linux/Mac) and PowerShell (Windows).
 
 ::: moniker-end
-<!--Linux on SQL Server 2019-->
+<!--SQL Server 2019 on Linux-->
 ::: moniker range="= sql-server-linux-ver15 || = sql-server-ver15"
 
 2. Pull the SQL Server 2019 CTP 2.0 Linux container image from Docker Hub.
@@ -83,7 +83,7 @@ This tutorial demonstrates how to move and restore a SQL Server backup file into
 
 ::: moniker-end
 
-<!--Linux on SQL Server 2017-->
+<!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017 || =sqlallproducts-allversions"
 
 3. To run the container image with Docker, you can use the following command:
@@ -108,7 +108,7 @@ This tutorial demonstrates how to move and restore a SQL Server backup file into
    > The process for running production SQL Server editions in containers is slightly different. For more information, see [Run production container images](sql-server-linux-configure-docker.md#production). If you use the same container names and ports, the rest of this walkthrough still works with production containers.
 
 ::: moniker-end
-<!--Linux on SQL Server 2019-->
+<!--SQL Server 2019 on Linux-->
 ::: moniker range="= sql-server-linux-ver15 || = sql-server-ver15"
 
 3. To run the container image with Docker, you can use the following command:
@@ -415,7 +415,7 @@ In addition to taking database backups for protecting your data, you can also us
    docker rm sql1
    ```
 
-<!--Linux on SQL Server 2017-->
+<!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017 || =sqlallproducts-allversions"
 
 1. Create a new container, **sql2**, and reuse the **sql1data** data volume container.
@@ -433,7 +433,7 @@ In addition to taking database backups for protecting your data, you can also us
     ```
 
 ::: moniker-end
-<!--Linux on SQL Server 2019-->
+<!--SQL Server 2019 on Linux-->
 ::: moniker range="= sql-server-linux-ver15 || = sql-server-ver15"
 
 1. Create a new container, **sql2**, and reuse the **sql1data** data volume container.
@@ -472,13 +472,13 @@ In addition to taking database backups for protecting your data, you can also us
 
 ## Next steps
 
-<!--Linux on SQL Server 2017-->
+<!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017 || =sqlallproducts-allversions"
 
 In this tutorial, you learned how to back up a database on Windows and move it to a Linux server running SQL Server 2017. You learned how to:
 
 ::: moniker-end
-<!--Linux on SQL Server 2019-->
+<!--SQL Server 2019 on Linux-->
 ::: moniker range="= sql-server-linux-ver15 || = sql-server-ver15"
 
 In this tutorial, you learned how to back up a database on Windows and move it to a Linux server running SQL Server 2019 CTP 2.0. You learned how to:

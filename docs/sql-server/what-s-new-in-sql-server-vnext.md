@@ -77,11 +77,9 @@ Continue reading for more details about these features.
   - Responsiveness is more critical than absolute precision. `APPROXIMATE_COUNT_DISTINCT` yields results typically within 2% of the precise answer in a small fraction of the time.
 
 - **Batch mode on rowstore** enables batch mode without requiring a columnstore index. Batch mode processing allows query operators to process data more efficiently by working on a batch of rows at a time instead of one row at a time. A number of other scalability improvements are tied to batch mode processing.  In earlier versions, batch mode only worked in conjunction with columnstore indexes.  This feature is enabled by default under database compatibility level 150. Workloads that may benefit:
--	A significant part of the workload consists of analytical queries (as a rule of thumb, queries with operators such as joins or aggregates processing hundreds of thousands of rows or more), AND
--	The workload is CPU bound AND
--	Creating a columnstore index adds too much overhead to the transactional part of your workload, OR creating a columnstore index is not feasible because your application depends on a feature that is not yet supported with columnstore indexes.
-
-- **Scalar UDF inlining** automatically transforms scalar user-defined functions (UDF) into relational expressions and embeds them in the calling SQL query, thereby improving the performance of workloads that leverage scalar UDFs. Scalar UDF inlining facilitates cost-based optimization of operations inside UDFs, and results in efficient plans that are set-oriented and parallel as opposed to inefficient, iterative, serial execution plans. This feature is enabled by default under database compatibility level 150.
+  - A significant part of the workload consists of analytical queries (as a rule of thumb, queries with operators such as joins or aggregates processing hundreds of thousands of rows or more), AND
+  - The workload is CPU bound AND
+  - Creating a columnstore index adds too much overhead to the transactional part of your workload, OR creating a columnstore index is not feasible because your application depends on a feature that is not yet supported with columnstore indexes.
 
 - **Table variable deferred compilation** improves plan quality and overall performance for queries referencing table variables. During optimization and initial compilation, this feature will propagate cardinality estimates that are based on actual table variable row counts.  This accurate row count information will be used for optimizing downstream plan operations. This feature is enabled by default under database compatibility level 150.
 

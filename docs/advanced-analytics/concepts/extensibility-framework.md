@@ -14,57 +14,35 @@ manager: cgronlun
 # Extensibility architecture in SQL Server Machine Learning Services 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server has an extensibility framework for loading external language runtime environments as an *extension process*. 
+SQL Server has an extensibility framework for running external script such as R or Python on the server. Script executes in a language runtime environment as an extension to the core database engine. 
 
-The architecture is designed such that external scripts run in a separate process from SQL Server, but with components for seamlessly managing a chain of requests for data and operations on SQL Server. Depending on the version of SQL Server, supported language extensions include R and Python. 
-
-  ![Component architecture](../media/generic-architecture.png "Component architecture")
-
-Components include a **Launchpad** service used to invoke language-specific launchers (R or Python), language and library-specific logic for loading interpreters and libraries. The Launcher loads a language run time, plus any proprietary modules. For example, if your code includes RevoScaleR functions, a RevoScaleR interpreter would load. **BxlServer** and **SQL Satellite** manage communication and data transfer with SQL Server.
-
-Language runtimes are built on open-source distributions, which means you can port existing code and execute it in SQL Server with relatively minor modifications, assuming your script is compatible with the language versions installed by SQL Server Setup.
-
-## Core concepts
+## Background
 
 The extensibility framework was introduced in SQL Server 2016 to support the R runtime. SQL Server 2017 adds support for Python
 
 The purpose of the extensibility framework is to provide an interface between SQL Server and data science languages such as R and Python, reducing friction when moving data science solutions into production, and protecting data exposed during the development process. By executing a trusted scripting language within a secure framework managed by SQL Server, database administrators can maintain security while allowing data scientists access to enterprise data.
 
-Benefits of language integration include data proximity and security, and enterprise-class tools and infrastructure.
+The following diagram visually describes opportunities and benefits of the extensible artchitecture.
 
   ![Goals of integration with SQL Server](../media/ml-service-value-add.png "Machine Learning Services Value Add")
 
-### Security integration and data proximity
+Any R or Python script can be run by calling a stored procedure, and the results are returned as tabular results directly to SQL Server, making it easy to generate or consume machine learning from any application that can send a SQL query and handle the results.
 
-Script execution occurs within the boundaries of the SQL Server data security model. A guiding principle of the security model is that a user running external script should not be able to use any data that could not be accessed by that user in a SQL query. From a permissions perspective, this translates to standard database read permissions, plus an additional permission to run external script. Users who need to create and save stored procedures, or persist models, also need write permission. 
++ External script execution is subject to SQL Server data security, where a user running external script can only access data that is equally available in a SQL query. If a query fails due to insufficient permission, script run by the same user would also fail for the same reason. SQL Server security is enforced at the table, database, and instance level. Database administrators can manage user access, resources used by external scripts, and external code libraries added to the server.  
 
-All tasks are secured by Windows job objects or SQL Server security. Data is kept within the compliance boundary by enforcing SQL Server security at the table, database, and instance level. At the database level, an administrator can manage resources used by external scripts, manage users, and manage and monitor external code libraries.  
++ Scale and optimization opportunities have a dual basis: gains through the databaes platform (ColumnStore Indexes, [resource governance](../../advanced-analytics/r/resource-governance-for-r-services.md)), and extension-specific gains when Microsoft libraries for R and Python are used for data science models. Whereas R is single-threaded, RevoScaleR functions are multi-threaded, capabile of distributing a workload over multiple cores.
 
-### Scale and performance benefits
++ Deployment uses SQL Server methodologies: stored procedures wrapping external script, embedded SQL, or T-SQL queries calling functions like PREDICT to return results from forecasting models persisted on the server.
 
-Integration with SQL Server is key to improving the usefulness of R and Python in the enterprise. Any R or Python script can be run by calling a stored procedure, and the results are returned as tabular results directly to SQL Server, making it easy to generate or consume machine learning from any application that can send a SQL query and handle the results.
++ R and Python developers with established skills in specific tools and IDEs can write code in those tools and then port code to SQL Server.
 
-Performance optimization relies on two equally powerful aspects of the platform: 
+## Architecture diagram
 
-+ Resource governance and parallel processing using SQL Server. 
+The architecture is designed such that external scripts run in a separate process from SQL Server, but with components that internally manage the chain of requests for data and operations on SQL Server. Depending on the version of SQL Server, supported language extensions include R and Python. 
 
-+ Distributed computing provided by the algorithms in RevoScaleR and revoscalepy. Whereas R is single-threaded, RevoScaleR and revoscalepy are multi-threaded, using available processing power to distribute a workload over multiple cores.
+  ![Component architecture](../media/generic-architecture.png "Component architecture")
 
-#### Resource governance
-
-In SQL Server Enterprise Edition, you can use Resource Governor to manage and monitor resource use of external script operations, including R script and Python scripts. For more information, see [Resource Governance for R](../../advanced-analytics/r/resource-governance-for-r-services.md).
-
-#### Microsoft libraries
-
-Parallel and distributed computing requires the functions in Microsoft product libraries, such as RevoScaleR and revoscalepy. With few exceptions, you cannot make open-source or third-party functions more capable than they already are, although proximity to data offers tangible benefits when script can execute quickly, with no wait time for data transfer.
-
-If you do not use the Revo functions, you can still get some performance improvements by running your R code in the context of SQL Server by co-location of data and script execution.
-
-### Development and deployment
-
-Integration with SQL Server simplifies development if you are using Visual Studio or other IDEs used ofr database development.
-
-For deployment, code runnning in the extensibility framework is available through standard SQL Server data access methodologies. Models and code operating over relational data are wrapped in stored procedures, or serialized to a binary format and stored in a table, or loaded from disk if you serialize the raw byte stream to a file. You can query and run commands interactively using T-SQL. Or, you can write embedded SQL in other programming languages that make calls to R and Python functions running on SQL Server.
+Components include a **Launchpad** service used to invoke language-specific launchers (R or Python), language and library-specific logic for loading interpreters and libraries. The Launcher loads a language run time, plus any proprietary modules. For example, if your code includes RevoScaleR functions, a RevoScaleR interpreter would load. **BxlServer** and **SQL Satellite** manage communication and data transfer with SQL Server.
 
 ## Launchpad
 
@@ -140,18 +118,6 @@ Communication protocols among components and data platforms are described in thi
 + **Other protocols**
 
   Processes that might need to work in "chunks" or transfer data back to a remote client can also use the [XDF file format](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-xdf). Actual data transfer is via encoded blobs.
-
-## Development and deployment
-
-Programming or language extensions integrate with traditional RDBMS monitoring tools, development tools, and data access modalities in SQL Server.
-
-  ![ML solution development process](media/ml-solution-development-process.png "Develop and deploy using Machine Learning Services")
-
-+ Data stays within the compliance boundary and use of data can be managed and monitored by SQL Server database administrators. Meanwhile, the DBA has full control over who can install packages or run scripts on the server. If so desired, the DBA can also delegate permissions on a database level to data scientists or managers.
-
-+ For development, data scientists can build and test solutions in preferred R or Python environments, disconnected from the server, and then port code to SQL Server. A SQL developer can use familiar tools such as Management Studio or Visual Studio to integrate the R or Python code with SQL Server. The tight integration means that the savvy developer can choose the best tool to optimize each task. For example, you might use SQL for some feature engineering tasks and R for others. You might embed Python script in an Integration Services task to perform sophisticated text analytics.
-
-+ Deploying predictive solutions to the BI stack or external applications is typically through stored procedures. R and Python tutorials can help you learn the steps.
 
 ## See Also
 

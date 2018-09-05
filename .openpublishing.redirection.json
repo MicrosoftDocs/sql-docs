@@ -1,6 +1,46 @@
 {
     "redirections": [
         {
+            "source_path": "docs/advanced-analytics/architecture-overview-machine-learning.md",
+            "redirect_url": "https://docs.microsoft.com/advanced-analytics/concepts/extensibility-framework",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "docs/advanced-analytics/r/architecture-overview-sql-server-r.md",
+            "redirect_url": "https://docs.microsoft.com/advanced-analytics/concepts/extensibility-framework",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "docs/advanced-analytics/r/r-interoperability-in-sql-server.md",
+            "redirect_url": "https://docs.microsoft.com/advanced-analytics/concepts/extension-r",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "docs/advanced-analytics/r/new-components-in-sql-server-to-support-r",
+            "redirect_url": "https://docs.microsoft.com/advanced-analytics/concepts/extension-r",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "docs/advanced-analytics/python/architecture-overview-sql-server-python.md",
+            "redirect_url": "https://docs.microsoft.com/advanced-analytics/concepts/extensibility-framework",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "docs/advanced-analytics/python/sql-server-python-services.md",
+            "redirect_url": "https://docs.microsoft.com/advanced-analytics/concepts/extension-py",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "docs/advanced-analytics/python/python-interoperability.md",
+            "redirect_url": "https://docs.microsoft.com/advanced-analytics/concepts/extension-py",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "docs/advanced-analytics/python/new-components-in-sql-server-to-support-python-integration.md",
+            "redirect_url": "https://docs.microsoft.com/advanced-analytics/concepts/extension-py",
+            "redirect_document_id": false
+        }, 
+        {
             "source_path": "docs/advanced-analytics/r/differences-in-r-features-between-editions-of-sql-server.md",
             "redirect_url": "https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-2017",
             "redirect_document_id": false

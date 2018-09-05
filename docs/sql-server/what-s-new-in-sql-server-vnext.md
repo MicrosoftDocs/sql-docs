@@ -32,6 +32,7 @@ Community technology preview (CTP) 2.0 is the first public release of [!INCLUDE[
 - [Database engine](#databaseengine)
   - Intelligent query processing
   - Database scoped configuration setting for online and resumable DDL operations
+  - Expanded support for Persistent Memory (PMEM) devices 
 - [High Availability](#ha)
   - Connection redirection
 - [SQL Graph](#sqlgraph)
@@ -77,15 +78,47 @@ Continue reading for more details about these features.
   - Responsiveness is more critical than absolute precision. `APPROXIMATE_COUNT_DISTINCT` yields results typically within 2% of the precise answer in a small fraction of the time.
 
 - **Batch mode on rowstore** enables batch mode without requiring a columnstore index. Batch mode processing allows query operators to process data more efficiently by working on a batch of rows at a time instead of one row at a time. A number of other scalability improvements are tied to batch mode processing.  In earlier versions, batch mode only worked in conjunction with columnstore indexes.  This feature is enabled by default under database compatibility level 150. Workloads that may benefit:
--	A significant part of the workload consists of analytical queries (as a rule of thumb, queries with operators such as joins or aggregates processing hundreds of thousands of rows or more), AND
--	The workload is CPU bound AND
--	Creating a columnstore index adds too much overhead to the transactional part of your workload, OR creating a columnstore index is not feasible because your application depends on a feature that is not yet supported with columnstore indexes.
-
-- **Scalar UDF inlining** automatically transforms scalar user-defined functions (UDF) into relational expressions and embeds them in the calling SQL query, thereby improving the performance of workloads that leverage scalar UDFs. Scalar UDF inlining facilitates cost-based optimization of operations inside UDFs, and results in efficient plans that are set-oriented and parallel as opposed to inefficient, iterative, serial execution plans. This feature is enabled by default under database compatibility level 150.
+  - A significant part of the workload consists of analytical queries (as a rule of thumb, queries with operators such as joins or aggregates processing hundreds of thousands of rows or more), AND
+  - The workload is CPU bound AND
+  - Creating a columnstore index adds too much overhead to the transactional part of your workload, OR creating a columnstore index is not feasible because your application depends on a feature that is not yet supported with columnstore indexes.
 
 - **Table variable deferred compilation** improves plan quality and overall performance for queries referencing table variables. During optimization and initial compilation, this feature will propagate cardinality estimates that are based on actual table variable row counts.  This accurate row count information will be used for optimizing downstream plan operations. This feature is enabled by default under database compatibility level 150.
 
-### Database scoped configuration setting for online and resumable DDL operations
+### Resumable online index create
+
+- **Resumable online index create** allows an index create operation to pause and resume later from where the operation was paused or failed, instead of restarting from the beginning.
+
+  Resumable Online Index Create supports the follow scenarios:
+  - Resume an index create operation after an index create failure, such as after a database failover or after running out of disk space.
+  - Pause an ongoing index create operation and resume it later allowing to temporarily free system resources as required and resume this operation later.
+  - Create large indexes without using a lot of log space and a long-running transaction that blocks other maintenance activities and allowing log truncation.
+
+In case of an execution error or failure, without this feature an online index create operation must be executed again and the operation must be restarted from the beginning
+
+With this release, we extend the resumable functionality adding this feature to available [resumable online index rebuild](http://azure.microsoft.com/blog/modernize-index-maintenance-with-resumable-online-index-rebuild/).
+
+In addition, this feature can be setup be default for a specific database using  
+[database scoped default setting for online and resumable DDL operations](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
+
+For more information see [Resumable Online Index Create](http://azure.microsoft.com/blog/resumable-online-index-create-is-in-public-preview-for-azure-sql-db/)
+
+### Database scoped default setting for online and resumable DDL operations 
+
+- **Database scoped default setting for online and resumable DDL operations** allows a default behavior setting for `ONLINE` and `RESUMABLE` index operations at the database level, rather than defining these options for each individual index DDL statement such as index create or rebuild.
+
+- Set these defaults using the `ELEVATE_ONLINE` and `ELEVATE_RESUMABLE` database scoped configuration options. Both options will cause the engine to automatically elevate supported operations to index online or resumable execution. You can enable the following behaviors using these options:
+
+  - `FAIL_UNSUPPORTED` option allows to execute all index operations online or resumable and fail index operations that are not supported for online or resumable.
+  - `WHEN_SUPPPORTED` option allows to execute supported operations online or resumable and run index unsupported operations offline or non-resumable.
+  - `OFF` option allows the current behavior of executing all index operations offline and non-resumable unless explicitly specified in the DDL statement.
+
+To override the default setting, include the ONLINE or RESUMABLE option in the index create and rebuild commands.  
+
+Without this feature you have to specify the online and resumable options directly in the index DDL statement such as index create and rebuild.
+
+More information:
+For more information on index resumable operations see [Resumable Online Index Create](http://azure.microsoft.com/blog/resumable-online-index-create-is-in-public-preview-for-azure-sql-db/).
+
 
 ## <a id="ha"></a> High Availability
 

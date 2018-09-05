@@ -32,6 +32,42 @@ To pull and run the Docker container images for SQL Server 2017 and SQL Server 2
 
 This configuration article provides additional usage scenarios in the following sections.
 
+## <a id="rhel"></a> Run RHEL-based container images
+
+All of the documentation on SQL Server Linux container images point to Ubuntu-based containers. If you would rather use containers based on Red Hat Enterprise Linux (RHEL), change the container repository from **mcr.microsoft.com/mssql/server** to **mcr.microsoft.com/mssql/rhel/server** in all of your docker commands.
+
+<!--SQL Server 2017 on Linux-->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017 || =sqlallproducts-allversions"
+
+For example, the following command pulls the latest SQL Server 2017 container that uses RHEL:
+
+```bash
+sudo docker pull mcr.microsoft.com/mssql/rhel/server/mssql-server-linux:2017-latest
+```
+
+```PowerShell
+docker pull mcr.microsoft.com/mssql/rhel/server/mssql-server-linux:2017-latest
+```
+
+::: moniker-end
+<!--SQL Server 2019 on Linux-->
+::: moniker range="= sql-server-linux-ver15 || = sql-server-ver15"
+
+For example, the following command pulls the latest SQL Server 2019 CTP 2.0 container that uses RHEL:
+
+```bash
+sudo docker pull mcr.microsoft.com/mssql/rhel/server/mssql-server-linux:2019-latest
+```
+
+```PowerShell
+docker pull mcr.microsoft.com/mssql/rhel/server/mssql-server-linux:2019-latest
+```
+
+::: moniker-end
+
+<!--SQL Server 2017 on Linux-->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017 || =sqlallproducts-allversions"
+
 ## <a id="production"></a> Run production container images
 
 The quickstart in the previous section runs the free Developer edition of SQL Server from Docker Hub. Most of the information still applies if you want to run production container images, such as Enterprise, Standard, or Web editions. However, there are a few differences that are outlined here.
@@ -71,6 +107,8 @@ The quickstart in the previous section runs the free Developer edition of SQL Se
 
       > [!NOTE]
       > For a full list of possible values for **MSSQL_PID**, see [Configure SQL Server settings with environment variables on Linux](sql-server-linux-configure-environment-variables.md).
+
+::: moniker-end
 
 ## Connect and query
 

@@ -156,7 +156,7 @@ Setting `-h` and `--name` to the same value is a good way to easily identify the
    > The password should follow the SQL Server default password policy, otherwise the container can not setup SQL server and will stop working. By default, the password must be at least 8 characters long and contain characters from three of the following four sets: Uppercase letters, Lowercase letters, Base 10 digits, and Symbols. You can examine the error log by executing the [docker logs](https://docs.docker.com/engine/reference/commandline/logs/) command.
 
    > [!NOTE]
-   > By default, this creates a container with the Developer edition of SQL Server 2019 CTP 2.0. The process for running production editions in containers is slightly different. For more information, see [Run production container images](sql-server-linux-configure-docker.md#production).
+   > By default, this creates a container with the Developer edition of SQL Server 2019 CTP 2.0.
 
    The following table provides a description of the parameters in the previous `docker run` example:
 

@@ -19,7 +19,7 @@ R integration is available in SQL Server starting in SQL Server 2016, with [R Se
 
 ## R components
 
-SQL Server includes both open-source and proprietary packages. The base R libraries are installed through Microsoft's distribution of open-source R: Microsoft R Open (MRO). MRO is installed independently of SQL tools, and is executed outside of core engine processes, in the extensibility framework. During installation, you must consent to the terms of the open-source license. Thereafter, you can run standard R packages without further modification just as you would in any other open-source distribution of R. 
+SQL Server includes both open-source and proprietary packages. The base R libraries are installed through Microsoft's distribution of open-source R: Microsoft R Open (MRO). Current users of R should be able to port their R code and execute it in T-SQL with relatively minor modifications. MRO is installed independently of SQL tools, and is executed outside of core engine processes, in the extensibility framework. During installation, you must consent to the terms of the open-source license. Thereafter, you can run standard R packages without further modification just as you would in any other open-source distribution of R. 
 
 SQL Server does not modify the base R executables, but you must use the version of R installed by Setup because that version is the one that the proprietary packages are built and tested on. For more information about how MRO differs from a base distribution of R that you might get from CRAN, see [Interoperability with R language and Microsoft R products and features](https://docs.microsoft.com/r-server/what-is-r-server-interoperability).
 
@@ -34,7 +34,7 @@ R packages added by Microsoft for parallel and distributed workloads include the
 
 ## Using R in SQL Server
 
-You import the **RevoScaleR** module into your R code, and then call functions from the module, like any other R functions.
+You can script R using base functions, but to benefit from multi-processing, you must import the **RevoScaleR** and **MicrosoftML** modules into your R code, and then call its functions to create models that execute in parallel. 
  
 Supported data sources include ODBC databases, SQL Server, and XDF file format to exchange data with other sources, or with R solutions. Input data must be tabular. All R results must be returned in the form of a data frame.
 

@@ -245,18 +245,26 @@
       href: r/performance-case-study-r-services.md
     - name: Use R code profiling functions
       href: r/using-r-code-profiling-functions.md
+  - name: Security
+    items:
+    - name: Security considerations for the R runtime in SQL Server
+      href: r/security-considerations-for-the-r-runtime-in-sql-server.md
+    - name: Security for R
+      href: r/security-overview-sql-server-r.md
+    - name: Python security
+      href: python/security-overview-sql-server-python-services.md
+    - name: SQL Server Launchpad service account
+      href: general/sql-server-launchpad-service-account.md
+    - name: Modify SQLRUserGroup
+      href: r/modify-the-user-account-pool-for-sql-server-r-services.md
+    - name: Add SQLRUserGroup as a database user
+      href: r/add-sqlrusergroup-to-database.md
   - name: Administration
     items:
     - name: Configure and manage R
       href: r/configuration-sql-server-r-services.md
     - name: Advanced configuration options for Machine Learning Services
       href: r/configure-and-manage-advanced-analytics-extensions.md
-    - name: Security considerations for the R runtime in SQL Server
-      href: r/security-considerations-for-the-r-runtime-in-sql-server.md
-    - name: Modify the user account pool for SQL Server Machine Learning Services
-      href: r/modify-the-user-account-pool-for-sql-server-r-services.md
-    - name: Add SQLRUserGroup as a database user
-      href: r/add-sqlrusergroup-to-database.md
     - name: Deploy and consume models using web services
       href: operationalization-with-mrsdeploy.md
     - name: Manage and monitor solutions

@@ -18,9 +18,9 @@ SQL Server has an extensibility framework for loading external language runtime 
 
 ## Background
 
-The extensibility framework was introduced in SQL Server 2016 to support the R run time. SQL Server 2017 adds support for the Python run time.
+The extensibility framework was introduced in SQL Server 2016 to support the R runtime. SQL Server 2017 adds support for Python.
 
-The purpose of the extensibility framework is to provide an interface between SQL Server and data science languages such as R and Python, both to reduce the friction that occurs when data science solutions are moved into production, and to protect data that might be exposed during the data science development process. By executing a trusted scripting language within a secure framework managed by SQL Server, the database developer can maintain security while allowing data scientists access to enterprise data.
+The purpose of the extensibility framework is to provide an interface between SQL Server and data science languages such as R and Python, both to reduce the friction that occurs when data science solutions are moved into production, and to protect data that might be exposed during the data science development process. By executing a trusted scripting language within a secure framework managed by SQL Server, the database administrator can maintain security while allowing data scientists access to enterprise data.
 
 Benefits of language integration include data proximity and security, and enterprise-class tools and infrastructure.
 
@@ -32,32 +32,33 @@ Parallel and distributed computing requires the functions in Microsoft product l
 
 ## Core concepts
 
-### Multi-process architecture
-
-Programming extensions in SQL Server allow you to run external code on SQL Server, with proximity to data, subject to the data security model. However, to preserve the integrity of core database engine processes, external code runs as a separate process managed by components that manage the hand offs.
-
-  ![Component architecture](../media/generic-architecture.png "Component architecture")
-
-When you execute external code on SQL Server, the SQL Server Launchpad service starts, invoking a trusted launcher that corresponds to the programming extension. The Launcher service starts the extension framework, a multi-process archicture that loads a language run time, plus any proprietary modules. For example, if the code includes RevoScaleR functions, a RevoScaleR interpreter would load. BxlServer and SQL Satellite manage communication and data transfer with SQL Server.
-
-### Scalability and performance
-
-Integration with SQL Server is key to improving the usefulness of R and Python in the enterprise. Any R or Python script can be run by calling a stored procedure, and the results are returned as tabular results directly to SQL Server, making it easy to generate or consume machine learning from any application that can send a SQL query and handle the results.
-
-Performance optimization relies on two equally powerful aspects of the platform: resource governance and parallel processing using SQL Server, and distributed computing provided by the algorithms in RevoScaleR and revoscalepy. Whereas R is single-threaded, RevoScaleR and revoscalepy are multi-threaded, using available processing power to distribute a workload over multiple cores.
- 
-> [!Note]
-> In SQL Server Enterprise Edition, you can use Resource Governor to manage and monitor resource use of external script operations, including R script and Python scripts. For more information, see [Resource Governance for R](../../advanced-analytics/r/resource-governance-for-r-services.md).
-
 ### Security model
 
-Script execution occurs within the boundaries of the SQL Server data security model. Permissions on the relational database are the basis of data access in your script. A user running R or Python script should not be able to use any data that could not be accessed by that user in a SQL query. For a permissions perspective, you need the standard database read and write permissions, plus an additional permission to run external script. 
+Script execution occurs within the boundaries of the SQL Server data security model. A guiding principle of the security model is that a user running external script should not be able to use any data that could not be accessed by that user in a SQL query. From a permissions perspective, this translates to standard database read permissions, plus an additional permission to run external script. Users who need to create and save stored procedures, or persist models, also need write permission. 
 
 All tasks are secured by Windows job objects or SQL Server security. Data is kept within the compliance boundary by enforcing SQL Server security at the table, database, and instance level. At the database level, an administrator can manage resources used by external scripts, manage users, and manage and monitor external code libraries.  
 
 ### Deployment 
 
-Code that runs in the extensibility framework can be made available through standard SQL Server data access methodologies. Models and code that you write for relational data are wrapped in stored procedures, or serialized to a binary format and stored in a table, or loaded from disk if you serialize the raw byte stream to a file. You can query and run commands interactively using T-SQL. Or, you can write embedded SQL in other programming languages that make calls to R and Python functions running on SQL Server.
+Code runnning in the extensibility framework is available through standard SQL Server data access methodologies. Models and code operating over relational data are wrapped in stored procedures, or serialized to a binary format and stored in a table, or loaded from disk if you serialize the raw byte stream to a file. You can query and run commands interactively using T-SQL. Or, you can write embedded SQL in other programming languages that make calls to R and Python functions running on SQL Server.
+
+### Scalability and performance
+
+Integration with SQL Server is key to improving the usefulness of R and Python in the enterprise. Any R or Python script can be run by calling a stored procedure, and the results are returned as tabular results directly to SQL Server, making it easy to generate or consume machine learning from any application that can send a SQL query and handle the results.
+
+Performance optimization relies on two equally powerful aspects of the platform: 
+
++ Resource governance and parallel processing using SQL Server. In SQL Server Enterprise Edition, you can use Resource Governor to manage and monitor resource use of external script operations, including R script and Python scripts. For more information, see [Resource Governance for R](../../advanced-analytics/r/resource-governance-for-r-services.md).
+
++ Distributed computing provided by the algorithms in RevoScaleR and revoscalepy. Whereas R is single-threaded, RevoScaleR and revoscalepy are multi-threaded, using available processing power to distribute a workload over multiple cores.
+
+### Multi-process architecture
+
+Programming extensions in SQL Server allow you to run external code on SQL Server, with proximity to data, subject to the data security model. However, to preserve the integrity of core database engine processes, external code runs as a separate process managed by components that perform the hand offs.
+
+  ![Component architecture](../media/generic-architecture.png "Component architecture")
+
+When you execute external code on SQL Server, the SQL Server Launchpad service starts, invoking a trusted launcher that corresponds to the programming extension. The Launcher service starts the extension framework, a multi-process archicture that loads a language run time, plus any proprietary modules. For example, if the code includes RevoScaleR functions, a RevoScaleR interpreter would load. BxlServer and SQL Satellite manage communication and data transfer with SQL Server.
 
 ## Launchpad
 

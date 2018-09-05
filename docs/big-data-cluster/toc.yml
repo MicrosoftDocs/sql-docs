@@ -105,9 +105,9 @@
   - name: Manage
     items:
     - name: Monitoring
-      href: manage-monitor.md
+      href: manage-monitoring.md
     - name: Troubleshooting   
-      href: manage-troubleshoot.md
+      href: manage-troubleshooting.md
 - name: Resources
   items:
   - name: FAQ

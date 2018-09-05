@@ -32,6 +32,7 @@ Community technology preview (CTP) 2.0 is the first public release of [!INCLUDE[
 - [Database engine](#databaseengine)
   - Intelligent query processing
   - Database scoped configuration setting for online and resumable DDL operations
+  - Expanded support for Persistent Memory (PMEM) devices 
 - [High Availability](#ha)
   - Connection redirection
 - [SQL Graph](#sqlgraph)

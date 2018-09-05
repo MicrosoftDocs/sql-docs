@@ -56,7 +56,7 @@ Community technology preview (CTP) 2.0 is the first public release of [!INCLUDE[
 - [Programmability extensions](#programmability)
   - Java language extension
 - [Security](#security)
-  - Always Encrypted with enclaves
+  - Always Encrypted with secure enclaves
 
 Continue reading for more details about these features.
 
@@ -174,6 +174,8 @@ For detailed information, see [What's new in SQL Server Machine Learning Service
 - **Java language extension**: Use the Java language extension to execute Java code in SQL Server. In CTP2.0, this extension is installed when you add the feature 'Machine Learning Services (in-database)' to your SQL Server instance.
 
 ## <a id="security"></a>Security
+
+- **Always Encrypted with secure enclaves**: Expands upon Always Encrypted with in-place encryption and rich computations, by enabling computations on plaintext data inside a secure enclave on the server side. For details, see [Always Encrypted with secure enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md).
 
 ## Next steps
 

@@ -13,22 +13,22 @@ ms.custom: "sql-linux"
 ms.technology: linux
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
-# SQL Server Always On availability group - Kubernetes specification
+# SQL Server Always On Availability Group - Kubernetes specification
 
-To configure an Always On availability group on Kubernetes, create a specification. The specification is a `.yaml` file.  
+To configure an Always On Availability Group on Kubernetes, create a specification. The specification is a `.yaml` file.  
 
 This article shows how to create the specification, and explains the parameters the parameters. See an example of the of the end-to-end deployment in [this tutorial](tutorial-sql-server-ag-kubernetes.md).
 
 ## Create a manifest file for the specification
 
-The following example of a manifest file describes a Kubernetes specification for SQL Server. Copy the contents of the example into a new file named `sqlservers.yaml` to create the SQL Server availability group StatefulSet in Kubernetes.
+The following example of a manifest file describes a Kubernetes specification for SQL Server. Copy the contents of the example into a new file named `sqlserver.yaml` to create the SQL Server availability group StatefulSet in Kubernetes.
 
-[!INCLUDE[kubernetes-ag-sql-statefulset-yaml](../includes/kubernetes-ag-sql-statefulset-yaml.md)]
+[sqlserver.yaml](https://sqlhelsinki.visualstudio.com/_git/pm-tools?path=%2Fkubernetes-ag-samples%2Fazure-kubernetes-service-sql-ag-example&version=GBmaster#path=%2Fkubernetes-ag-samples%2Fazure-kubernetes-service-sql-ag-example%2Fsqlserver.yaml&version=GBmaster)
 
 To deploy the SQL Server instances and create the availability group, run the following command.
 
 ```azurecli
-kubectl apply -f sqlservers.yaml
+kubectl apply -f sqlserver.yaml
 ```
 
 ## Parameters

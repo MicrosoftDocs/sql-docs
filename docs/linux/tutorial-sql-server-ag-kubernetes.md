@@ -41,7 +41,7 @@ Several of the steps in this article create a manifest and then deploy the manif
 
 * General familiarity with these technologies
 
-  * [Kubernetes](http://kubernetes.io)
+  * [Kubernetes](http://kubernetes.io) version 1.8
   * [Azure Kubernetes Service (AKS)](http://docs.microsoft.com/azure/aks/)
   * [SQL Server on Docker](quickstart-install-connect-docker.md)
   * [SQL Server Always On availability group](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
@@ -54,7 +54,7 @@ Several of the steps in this article create a manifest and then deploy the manif
 
 Kubernetes objects are deployed and managed with .yaml files.
 
-For this tutorial, you can download the .yaml files from [GitHub](https://sqlhelsinki.visualstudio.com/_git/pm-tools?path=%2Fkubernetes-ag-samples%2Fazure-kubernetes-service-sql-ag-example&version=GBmaster). Download all of the files to one directory.  
+For this tutorial, you can download the .yaml files from [GitHub](http://sqlhelsinki.visualstudio.com/_git/pm-tools?path=%2Fkubernetes-ag-samples%2Fazure-kubernetes-service-sql-ag-example&version=GBmaster). Download all of the files to one directory.  
 
 The tutorial will show how to apply the .yaml files to your Kubernetes cluster.
 

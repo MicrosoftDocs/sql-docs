@@ -23,47 +23,8 @@ This article explains the operator global environment variables.
 
 The following example describes a deployment for the `mssql-operator`.
 
-[!INCLUDE[kubernetes-ag-operator-yaml](../includes/kubernetes-ag-operator-yaml.md)]
+[operator.yaml](http://sqlhelsinki.visualstudio.com/_git/pm-tools?path=%2Fkubernetes-ag-samples%2Fazure-kubernetes-service-sql-ag-example&version=GBmaster#path=%2Fkubernetes-ag-samples%2Fazure-kubernetes-service-sql-ag-example%2Foperator.yaml&version=GBmaster)
 
-## Global environment variables
-
-* `MSSQL_K8S_POD_NAMESPACE` 
-  * Required
-  * **Description**: the Kubernetes namespace of the operator.
-
-* `MSSQL_K8S_SQL_WRITE_LEASE_PERIOD_SECONDS`
-  * Optional
-  * **Description**: The duration of the sql server external write lease to keep the sql server writable and prevent split-brain scenarios. Secondary replicas wait for this expiration after electing a new leader.
-
-* `MSSQL_K8S_MONITOR_PERIOD_SECONDS`
-  * Optional
-  * **Description**: The period to monitor if the state of the availability group. Determines how quickly replicas are added and dropped. Must be less than `MSSQL_K8S_SQL_WRITE_LEASE_PERIOD_SECONDS`.
-  * **Default**: 1
-
-* `MSSQL_K8S_LEASE_DURATION_SECONDS`
-  * Optional
-  * **Description**: Duration of availability group leader lease. Determines how long the secondary replicas wait before re-electing if the primary replica crashed. This is different than SQL Server write lease. 
-  * **Default**: 10
-  
-  >[!NOTE]
-  >Other settings automatically calculated based on `MSSQL_K8S_LEASE_DURATION_SECONDS`.
-
-* `MSSQL_K8S_RENEW_DEADLINE_SECONDS`
-  * Optional
-  * **Description**: Duration that the acting primary replica retries refreshing leadership before giving up. Must be less than `MSSQL_K8S_LEASE_DURATION_SECONDS`.
-  * **Default**: `MSSQL_K8S_LEASE_DURATION_SECONDS`/2
-
-* `MSSQL_K8S_RETRY_PERIOD_SECONDS`
-  * Optional
-  * **Description**: Duration the acting [master](http://kubernetes.io/docs/concepts/architecture/master-node-communication/) will wait before renewing the leader lease. Must be less than `MSSQL_K8S_LEASE_DURATION_SECONDS`.
-  * **Default**: `MSSQL_K8S_RENEW_DEADLINE_SECONDS`/2
-
-* `MSSQL_K8S_ACQUIRE_PERIOD_SECONDS` 
-  * Optional
-  * **Description**: Period that secondary replicas poll if the leader lease has expired. 
-  * **Default**: 1
-
-
-  ## Next steps
+## Next steps
 
 [SQL Server availability group on Kubernetes cluster](sql-server-ag-kubernetes.md)

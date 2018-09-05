@@ -13,9 +13,9 @@ ms.custom: "sql-linux"
 ms.technology: linux
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
-# Create listener services for secondary replicas
+# Create service type load balancer to connect to secondary replicas
 
-In a Kubernetes cluster, use a service to host an IP address for an availability group listener. [Configure a SQL Server Always On availability group on Docker containers in Kubernetes for high availability](tutorial-sql-server-ag-kubernetes.md) tutorial creates a listener for the primary replica. This article shows how to create a listener for secondary replicas.
+In a Kubernetes cluster, create a service type of load balancer to connect to secondary replica. [Configure a SQL Server Always On availability group on Docker containers in Kubernetes for high availability](tutorial-sql-server-ag-kubernetes.md) tutorial creates a listener for the primary replica. This article shows how to create a listener for secondary replicas.
 
 ## Requirements
 

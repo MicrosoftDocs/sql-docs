@@ -1,5 +1,5 @@
 ---
-title: Overview of the SQL Server Aris controller | Microsoft Docs
+title: Overview of the SQL Server Big Data Cluster controller | Microsoft Docs
 description:
 author: rothja 
 ms.author: jroth 
@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.prod: sql
 ---
 
-# Overview of the SQL Server Aris controller
+# Overview of the SQL Server Big Data Cluster controller
 
 ## What is the cluster Controller?
 The Controller hosts the core logic for building and managing the cluster. It takes care of all interactions with Kubernetes, SQL Servers instances that are part of the cluster as well as Hadoop components like HDFS. 
@@ -31,14 +31,14 @@ The Controller is hosted as a daemon set in the same Kubernetes environment wher
 python mssqlctl.py create cluster <name of your cluster>
 ```
 
-The buildout workflow will layout on top of Kubernetes a fully functional Aris cluster that includes all the components described in the Overview (TBD add link) section. This workflow creates first the Controller, and once this is deployed, it will coordinate the installation and configuration of rest of the services part of Master, Compute, Data and Storage pools.
+The buildout workflow will layout on top of Kubernetes a fully functional Big Data Cluster that includes all the components described in the Overview (TBD add link) section. This workflow creates first the Controller, and once this is deployed, it will coordinate the installation and configuration of rest of the services part of Master, Compute, Data and Storage pools.
 
 ## Manging the cluster through the Controller
 Customers are expected to manage the cluster purely through the Controller using either `mssqlctl` APIs or the administration portal this is hosted within the cluster. If customers will deploy additional Kubernetes objects (e.g. pods) into the same namespace, they will not be managed or monitored by the Controller.
 The Controller and the Kubernetes objects (stateful sets, pods, secrets, etc…) created for the cluster reside in a dedicated Kubernetes namespace. The Controller service will be granted permission by the Kubernetes cluster administrator to manage all resources within that namespace.  The RBAC policy this scenario is configured automatically as part of initial cluster deployment. 
 
 ### mssqlctl
-`mssqlctl` is a command line utility written in Python that enables cluster administrators to bootstrap and manage the Aris cluster via REST APIs.
+`mssqlctl` is a command line utility written in Python that enables cluster administrators to bootstrap and manage the Big Data Cluster via REST APIs.
 TBD Aquisition experience I.e. from any client machine->pip install.... 
 
 ### Cluster Admin Portal
@@ -68,4 +68,4 @@ TBD
 
 ## Next steps
 
-- [Deploy SQL Server Aris on Kubernetes](quickstart-sql-server-aris-deploy.md)
+- [Deploy SQL Server Big Data Cluster on Kubernetes](quickstart-big-data-cluster-deploy.md)

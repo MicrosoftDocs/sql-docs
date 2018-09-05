@@ -17,4 +17,4 @@ TODO: Determine if we want to convert the detailed steps from **ctp1.8/documenta
 
 The next step is to deploy SQL Server vNext to the cluster.
 
-[Deploy SQL Server vNext on Kubernetes](quickstart-sql-server-aris-get-started.md)
+[Deploy SQL Server vNext on Kubernetes](quickstart-big-data-cluster-get-started.md)

@@ -69,4 +69,4 @@ Set-VM -Name minikube -CheckpointType Disabled -AutomaticCheckpointsEnabled $fal
 
 The steps in this article configured a Minikube cluster. The next step is to deploy SQL Server vNext to the cluster.
 
-[Deploy SQL Server vNext on Kubernetes](quickstart-sql-server-aris-get-started.md)
+[Deploy SQL Server vNext on Kubernetes](quickstart-big-data-cluster-get-started.md)

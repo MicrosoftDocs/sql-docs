@@ -175,4 +175,4 @@ az acs kubernetes install-cli
 
 The steps in this article configured a Kubernetes cluster in ACS. The next step is to deploy SQL Server vNext to the cluster.
 
-[Deploy SQL Server vNext on Kubernetes](quickstart-sql-server-aris-get-started.md)
+[Deploy SQL Server vNext on Kubernetes](quickstart-big-data-cluster-get-started.md)

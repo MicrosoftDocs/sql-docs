@@ -1,5 +1,5 @@
 ---
-title: Frequently asked questions about SQL Server Aris | Microsoft Docs
+title: Frequently asked questions about SQL Server Big Data Cluster | Microsoft Docs
 description:
 author: rothja 
 ms.author: jroth 
@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.prod: sql
 ---
 
-# Frequently asked questions about SQL Server Aris
+# Frequently asked questions about SQL Server Big Data Cluster
 
 TBD
 

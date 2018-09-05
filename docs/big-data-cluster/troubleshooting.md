@@ -1,5 +1,5 @@
 ---
-title: How to troubleshoot SQL Server Aris | Microsoft Docs
+title: How to troubleshoot SQL Server Big Data Cluster | Microsoft Docs
 description:
 author: rothja 
 ms.author: jroth 
@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.prod: sql
 ---
 
-# How to troubleshoot SQL Server Aris
+# How to troubleshoot SQL Server Big Data Cluster
 
 TBD
 

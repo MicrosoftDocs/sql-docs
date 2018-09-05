@@ -15,9 +15,9 @@ In this quickstart, you will combine high-volume HDFS data with high-value relat
 
 ## Prerequisites
 
-This quickstart requires a running SQL Server Aris cluster. For instructions, see the following article:
+This quickstart requires a running SQL Server Big Data Cluster cluster. For instructions, see the following article:
 
-[Quickstart: Deploy SQL Server Aris on Kubernetes](quickstart-sql-server-aris-deploy.md)
+[Quickstart: Deploy SQL Server Big Data Cluster on Kubernetes](quickstart-big-data-cluster-deploy.md)
 
 ## Initialize a data pool
 
@@ -103,4 +103,4 @@ GO
 Explore how to run Jupyter notebooks in Azure Data Studio:
 
 > [!div class="nextstepaction"]
-> [Run Jupyter notebooks on SQL Server vNext](quickstart-sql-server-aris-jupyter-notebook.md)
+> [Run Jupyter notebooks on SQL Server vNext](quickstart-big-data-cluster-jupyter-notebook.md)

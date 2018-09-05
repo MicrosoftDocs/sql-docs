@@ -1,5 +1,5 @@
 ---
-title: How to monitor SQL Server Aris | Microsoft Docs
+title: Spark Machine Learning on SQL Server Big Data Cluster | Microsoft Docs
 description:
 author: rothja 
 ms.author: jroth 
@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.prod: sql
 ---
 
-# How to monitor SQL Server Aris
+# Spark Machine Learning on SQL Server Big Data Cluster
 
 TBD
 

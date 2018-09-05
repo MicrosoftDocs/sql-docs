@@ -1,5 +1,5 @@
 ---
-title: How to deploy SQL Server Aris on Kubernetes | Microsoft Docs
+title: How to deploy SQL Server Big Data Cluster on Kubernetes | Microsoft Docs
 description:
 author: rothja 
 ms.author: jroth 
@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.prod: sql
 ---
 
-# How to deploy SQL Server Aris on Kubernetes
+# How to deploy SQL Server Big Data Cluster on Kubernetes
 
 SQL Server vNext can be deployed as docker containers on a Kubernetes cluster. This is an overview of the setup and configuration steps:
 
@@ -37,16 +37,16 @@ You can choose to deploy Kubernetes in any of three ways:
 
 For guidance on configuring one of these Kubernetes cluster options for SQL Server vNext, see one of the followin articles:
 
-   - [Configure Minikube](sql-server-aris-deploy-on-minikube.md)
-   - [Configure Kubernetes on Azure Container Service](sql-server-aris-deploy-on-acs.md)
-   - [Configure Kubernetes on multiple VMs](sql-server-aris-deploy-on-vms.md)
+   - [Configure Minikube](deploy-on-minikube.md)
+   - [Configure Kubernetes on Azure Container Service](deploy-on-acs.md)
+   - [Configure Kubernetes on multiple VMs](deploy-on-vms.md)
 
 ## <a id="deploy"></a> Deploy SQL Server vNext
 
 After you have configured your Kubernetes cluster, you can proceed with the deployment for SQL Server vNext. The deployment steps are described in the following article:
 
-[Quickstart: Deploy SQL Server Aris on Kubernetes](quickstart-sql-server-aris-deploy.md)
+[Quickstart: Deploy SQL Server Big Data Cluster on Kubernetes](quickstart-big-data-cluster-deploy.md)
 
 ## Next steps
 
-After successfully deploying SQL Server vNext to Kubernetes, [install the big data tools](sql-server-aris-install-big-data-tools.md) and learn more in the [getting started quickstart](quickstart-sql-server-aris-get-started.md).
+After successfully deploying SQL Server vNext to Kubernetes, [install the big data tools](install-big-data-tools.md) and learn more in the [getting started quickstart](quickstart-big-data-cluster-get-started.md).

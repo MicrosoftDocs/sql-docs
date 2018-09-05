@@ -1,5 +1,5 @@
 ---
-title: Overview of the SQL Server Aris master instance | Microsoft Docs
+title: Overview of the SQL Server Big Data Cluster master instance | Microsoft Docs
 description:
 author: rothja 
 ms.author: jroth 
@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.prod: sql
 ---
 
-# Overview of the SQL Server Aris master instance
+# Overview of the SQL Server Big Data Cluster master instance
 
 TBD
 

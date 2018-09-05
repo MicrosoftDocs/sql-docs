@@ -1,5 +1,5 @@
 ---
-title: Restore a database into SQL Server Aris | Microsoft Docs
+title: Restore a database into SQL Server Big Data Cluster | Microsoft Docs
 description:
 author: rothja
 ms.author: jroth
@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.prod: sql
 ---
 
-# Restore a database into the SQL Server Aris master instance
+# Restore a database into the SQL Server Big Data Cluster master instance
 
 To bring an existing SQL Server database into the master instance, we recommend using a backup, copy and restore approach.  In this example we will show how to restore the AdventureWorks database, but you can use any database backup that you have.  You can download the AdventureWorks backup [here](https://www.microsoft.com/en-us/download/details.aspx?id=49502).
 
@@ -24,7 +24,7 @@ kubectl cp <path to .bak file> mssql-data-pool-master-0:/tmp/ -c mssql-data-pool
 Example:
 
 ```bash
-kubectl cp ~/Downloads/AdventureWorks2016CTP3.bak mssql-data-pool-master-0:/tmp/ -c mssql-data-pool-data -n aristest
+kubectl cp ~/Downloads/AdventureWorks2016CTP3.bak mssql-data-pool-master-0:/tmp/ -c mssql-data-pool-data -n clustertest
 ```
 
 Then, verify that the backup file was copied to the pod container.
@@ -38,7 +38,7 @@ root@mssql-data-pool-master-0:/# exit
 Example:
 
 ```bash
-kubectl exec -it mssql-data-pool-master-0 -n aristest -c mssql-data-pool-data -- bin/bash
+kubectl exec -it mssql-data-pool-master-0 -n clustertest -c mssql-data-pool-data -- bin/bash
 root@mssql-data-pool-master-0:/# ls /tmp
 ```
 
@@ -54,7 +54,7 @@ Example:
 RESTORE FILELISTONLY FROM DISK='/tmp/AdventureWorks2016CTP3.bak'
 ```
 
-![Backup file list](media/sql-server-aris-restore-database/database-restore-file-list.png)
+![Backup file list](media/restore-database/database-restore-file-list.png)
 
 Now, restore the database with a script like this, substituting the names/paths as needed depending on your database backup.
 

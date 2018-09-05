@@ -1,5 +1,5 @@
 ---
-title: Deploy SQL Server Aris | Microsoft Docs
+title: Deploy SQL Server Big Data Cluster | Microsoft Docs
 description:
 author: rothja 
 ms.author: jroth 
@@ -9,9 +9,9 @@ ms.topic: quickstart
 ms.prod: sql
 ---
 
-# Quickstart: Deploy SQL Server Aris on Kubernetes
+# Quickstart: Deploy SQL Server Big Data Cluster on Kubernetes
 
-In this quickstart, you will install SQL Server Aris on Kubernetes in a default configuration suitable for dev/test environments. Here is the list of environment variables and their default values you can update to customize your cluster configuration:
+In this quickstart, you will install SQL Server Big Data Cluster on Kubernetes in a default configuration suitable for dev/test environments. Here is the list of environment variables and their default values you can update to customize your cluster configuration:
 TBD
 
 
@@ -19,7 +19,7 @@ TBD
 
 This quickstart requires that you have already configured a Kubernetes cluster. For more information, see the Kubernetes section in the deployment guide:
 
-- [Configure a Kubernetes cluster](sql-server-aris-deployment-guidance.md#kubernetes).
+- [Configure a Kubernetes cluster](deployment-guidance.md#kubernetes).
 
 
 ## Verify kubernetes configuration
@@ -30,13 +30,13 @@ Execute the below kubectl command to view the cluster configuration. Ensure that
 kubectl config view
 ```
 
-## Install mssqlctl CLI management tool for Aris
+## Install mssqlctl CLI management tool
 
 TBD
 
 ## Define environment variables
 
-Setting the environment variables required for deploying Aris cluster differs depending on whether you are using Windows or Linux client.  Choose the steps below depending on which operating system you are using.
+Setting the environment variables required for deploying Big Data Cluster differs depending on whether you are using Windows or Linux client.  Choose the steps below depending on which operating system you are using.
 
 > [!IMPORTANT]
 > Make sure you wrap the passwords in double quotes if it contains any special characters.
@@ -46,7 +46,7 @@ Setting the environment variables required for deploying Aris cluster differs de
 > [!NOTE]
 > For the CTP 2.0 release do not change the default ports.
 
-Initialize the following environment variables, they are required for deploying the Aris cluster:
+Initialize the following environment variables, they are required for deploying the Big Data Cluster:
 
 ### Windows
 
@@ -111,7 +111,7 @@ python mssqlctl.py create cluster <name of your cluster>
 ```
 
 > [!NOTE]
-> The name of your cluster needs to be only lower case alpha-numeric characters, no spaces. All Kubernetes artifacts for the Aris cluster will be created in a namespace with same name as the cluster name specified.
+> The name of your cluster needs to be only lower case alpha-numeric characters, no spaces. All Kubernetes artifacts for the Big Data Cluster will be created in a namespace with same name as the cluster name specified.
 
 
 The command window will ouput the deployment status. You can also check the deployment status by running these commands in a different cmd window:
@@ -154,7 +154,7 @@ minikube ip
 
 # Next steps
 
-Now that SQL Server Aris is deployed, try out some of the new capabilities:
+Now that SQL Server Big Data Cluster is deployed, try out some of the new capabilities:
 
 > [!div class="nextstepaction"]
-> [Get started with SQL Server Aris](quickstart-sql-server-aris-get-started.md)
+> [Get started with SQL Server Big Data Cluster](quickstart-big-data-cluster-get-started.md)

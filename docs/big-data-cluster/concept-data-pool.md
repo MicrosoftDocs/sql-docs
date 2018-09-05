@@ -1,5 +1,5 @@
 ---
-title: Overview of SQL Server Aris data pools | Microsoft Docs
+title: Overview of SQL Server Big Data Cluster data pools | Microsoft Docs
 description:
 author: rothja 
 ms.author: jroth 
@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.prod: sql
 ---
 
-# Overview of SQL Server Aris data pools
+# Overview of SQL Server Big Data Cluster data pools
 
 TBD
 

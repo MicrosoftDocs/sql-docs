@@ -1,17 +1,17 @@
 - name: Overview
   items:
-  - name: What is SQL Server Aris?
-    href: sql-server-aris-overview.md
+  - name: What is SQL Server Big Data Cluster?
+    href: big-data-cluster-overview.md
   - name: Release notes
-    href: sql-server-aris-release-notes.md
+    href: big-data-cluster-release-notes.md
 - name: Quickstarts
   items:
-  - name: Deploy SQL Server Aris
-    href: quickstart-sql-server-aris-deploy.md
-  - name: Get started with SQL Server Aris
-    href: quickstart-sql-server-aris-get-started.md 
+  - name: Deploy SQL Server Big Data Cluster
+    href: quickstart-big-data-cluster-deploy.md
+  - name: Get started with SQL Server Big Data Cluster
+    href: quickstart-big-data-cluster-get-started.md 
   - name: Run Jupyter Notebooks
-    href: quickstart-sql-server-aris-jupyter-notebook.md
+    href: quickstart-big-data-cluster-jupyter-notebook.md
 - name: Concepts
   items:
   - name: HDFS
@@ -21,11 +21,11 @@
   - name: Machine Learning and extensibility
     items:
     - name: Java extension
-      href: sql-server-aris-ml-java-extension.md
+      href: ml-java-extension.md
     - name: Spark ML
-      href: sql-server-aris-ml-spark.md
+      href: ml-spark.md
     - name: ML services on Master
-      href: sql-server-aris-ml-on-master.md
+      href: ml-on-master.md
   - name: Controller
     href: concept-controller.md
   - name: Master instance
@@ -45,73 +45,73 @@
   - name: Install
     items:
     - name: Deployment guidance
-      href: sql-server-aris-deployment-guidance.md
+      href: deployment-guidance.md
     - name: Deploy on Minikube
-      href: sql-server-aris-deploy-on-minikube.md
+      href: deploy-on-minikube.md
     - name: Deploy on ACS
-      href: sql-server-aris-deploy-on-acs.md
+      href: deploy-on-acs.md
     - name: Deploy on Multiple VMs
-      href: sql-server-aris-deploy-on-vms.md
+      href: deploy-on-vms.md
     - name: Install big data tools
-      href: sql-server-aris-install-big-data-tools.md
+      href: install-big-data-tools.md
   - name: Data virtualization
     items:
     - name: Virtualize external data
-      href: sql-server-aris-virtualize-data.md
+      href: virtualize-data.md
   - name: Data ingestion
     items:
     - name: Load data with curl
-      href: sql-server-aris-data-ingestion-curl.md
+      href: data-ingestion-curl.md
     - name: Streaming
       items:
       - name: Spark streaming
-        href: sql-server-aris-streaming-spark.md
+        href: streaming-spark.md
       - name: Stream to data pool
-        href: sql-server-aris-stream-data-pool.md
+        href: streaming-data-pool.md
     - name: Restore a database
-      href: sql-server-aris-restore-databse.md
+      href: restore-databse.md
   - name: Big Data/Machine Learning
     items:
     - name: Use Prose for automated big data wrangling
-      href: sql-server-aris-prose-automated-big-data.md
+      href: prose-automated-big-data.md
     - name: Machine learning with Spark
-      href: sql-server-aris-spark-ml.md
+      href: ml-model-training-scoring-spark.md
     - name: Model training and Export with Spark
-      href: sql-server-aris-spark-model-training.md
+      href: ml-model-training-and-export-spark.md
     - name: Scoring MLeap exported model with SQL/ML
-      href: sql-server-aris-mleap-scoring-ml.md
+      href: mleap-scoring-ml.md
   - name: Query scenarios
     items:
       - name: Read CSV with OPENROWSET
-        href: sql-server-aris-openrowset.md
+        href: openrowset.md
       - name: Create a data pool
-        href: sql-server-aris-query-create-datapool.md
+        href: query-create-datapool.md
       - name: Hive tables
-        href: sql-server-aris-query-hive-tables.md
+        href: query-hive-tables.md
       - name: Define external table over HDFS
-        href: sql-server-aris-query-define-external-table.md
+        href: query-define-external-table.md
       - name: Datamart queries
-        href: sql-server-aris-query-datamart.md
+        href: query-datamart.md
       - name: Compex analytical queries
-        href: sql-server-aris-query-complex-analytical.md
+        href: query-complex-analytical.md
       - name: Segregate external tables
-        href: sql-server-aris-query-segregate-external-tables.md
+        href: query-segregate-external-tables.md
       - name: Monitoring and troubleshooting
-        href: sql-server-aris-troubleshooting-queries.md
+        href: troubleshooting-queries.md
   - name: Notebooks
     items:
     - name: How to use Jupyter notebooks in SQL Server vNext
-      href: sql-server-aris-jupyter-notebook-guidance.md
+      href: jupyter-notebook-guidance.md
   - name: Manage
     items:
     - name: Monitoring
-      href: sql-server-aris-monitoring.md
+      href: monitoring.md
     - name: Troubleshooting   
-      href: sql-server-aris-troubleshooting.md
+      href: troubleshooting.md
 - name: Resources
   items:
   - name: FAQ
-    href: sql-server-aris-faq.md
+    href: big-data-cluster-faq.md
   - name: SQL Server Documentation
     href: ../sql-server/sql-server-technical-documentation.md
   - name: DBA Stack Exchange

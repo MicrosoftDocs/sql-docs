@@ -1,5 +1,5 @@
 ---
-title: Monitoring and troubleshooting queries for SQL Server Aris | Microsoft Docs
+title: Monitoring and troubleshooting queries for SQL Server Big Data Cluster | Microsoft Docs
 description:
 author: rothja 
 ms.author: jroth 
@@ -9,9 +9,9 @@ ms.topic: conceptual
 ms.prod: sql
 ---
 
-# Monitoring and troubleshooting queries for SQL Server Aris
+# Monitoring and troubleshooting queries for SQL Server Big Data Cluster
 
-This article describes the DMVs and stored procedures available to help troubleshoot SQL Server Aris. It also provides troubleshooting recommendations for known issues.
+This article describes the DMVs and stored procedures available to help troubleshoot SQL Server Big Data Cluster. It also provides troubleshooting recommendations for known issues.
 
 ## Dynamic management views
 
@@ -149,7 +149,7 @@ Depending on the environment, you might get pip not found error when trying to i
 sudo python -m ensurepip --default-pip
 ```
 
-Due to the large size of the images for Project Aris, in some cases you might have a timeout error happen when pulling the images.  You may need to "pre-pull" the images for now.  Below are steps to use to SSH into each ACS agent VM and pre-pull the images.  Use this as an example of what to do if you are using other container hosting services like AWS EKS or GCP GKE.
+Due to the large size of the images for Big Data Cluster, in some cases you might have a timeout error happen when pulling the images.  You may need to "pre-pull" the images for now.  Below are steps to use to SSH into each ACS agent VM and pre-pull the images.  Use this as an example of what to do if you are using other container hosting services like AWS EKS or GCP GKE.
 
 > [!IMPORTANT]
 > Before starting this series of steps, you need the credentials to the private docker registry containing SQL Server vNext CTP2.0 images.  This should be provided to you by your PM buddy via email when you joined the Early Adoption Program.  If you have not already received them, please contact your PM buddy.
@@ -163,7 +163,7 @@ scp -i <path to your key file created earlier>/id_rsa <path to your key file cre
 Example:
 
 ```bash
-scp -i /Users/travis/arisacskeys/id_rsa /Users/travis/arisacskeys/id_rsa azureuser@13.66.229.6:/tmp
+scp -i /Users/travis/clusteracskeys/id_rsa /Users/travis/clusteracskeys/id_rsa azureuser@13.66.229.6:/tmp
 ```
 
 Then, SSH into the ACS master VM:
@@ -175,7 +175,7 @@ ssh -i <path to your key file created earlier>/id_rsa azureuser@<public IP>
 Example:
 
 ```
-ssh -i /Users/travis/arisacskeys/id_rsa azureuser@13.66.229.6
+ssh -i /Users/travis/clusteracskeys/id_rsa azureuser@13.66.229.6
 ```
 
 From the ACS master VM SSH into EACH of the agent VMs as follows:

@@ -1,3 +1,3 @@
 ---
-redirect_url: /sql/aris/sql-server-aris-overview
+redirect_url: /sql/big-data-cluster/big-data-cluster-overview
 ---

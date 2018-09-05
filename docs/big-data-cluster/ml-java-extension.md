@@ -1,5 +1,5 @@
 ---
-title: Java extension for ML on SQL Server Aris | Microsoft Docs
+title: Java extension for ML on SQL Server Big Data Cluster | Microsoft Docs
 description:
 author: rothja 
 ms.author: jroth 
@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.prod: sql
 ---
 
-# Java extension for ML on SQL Server Aris
+# Java extension for ML on SQL Server Big Data Cluster
 
 TBD
 

@@ -1,5 +1,5 @@
 ---
-title: Security concepts for SQL Server Aris | Microsoft Docs
+title: Security concepts for SQL Server Big Data Cluster | Microsoft Docs
 description:
 author: rothja 
 ms.author: jroth 
@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.prod: sql
 ---
 
-# Security concepts for SQL Server Aris
+# Security concepts for SQL Server Big Data Cluster
 
 TBD
 

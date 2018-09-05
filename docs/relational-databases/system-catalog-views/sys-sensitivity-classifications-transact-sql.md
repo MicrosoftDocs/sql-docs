@@ -1,13 +1,9 @@
 ---
 title: "sys.sensitivity_classifications (Transact-SQL) | Microsoft Docs"
-ms.date: "06/17/2018"
+ms.date: 06/17/2018
 ms.reviewer: ""
 ms.prod: sql
-ms.prod_service: "sql-database"
-ms.service: "sql-database"
 ms.technology: t-sql
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 ms.custom: ""
 ms.manager: craigg

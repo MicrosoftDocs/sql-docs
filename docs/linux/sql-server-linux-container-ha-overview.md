@@ -53,7 +53,7 @@ In the image above, a four-node kubernetes cluster hosts an availability group w
 
 * Three nodes, each hosting a [*StatefulSet*](http://kubernetes.io/docs/concepts/workloads/controllers/statefulset/). The StatefulSet contains a pod. Each pod contains:
   * A SQL Server container running one instance of SQL Server.
-  * A supervisor `mssql-ha-supervisor` to manage the availability group.
+  * A supervisor `mcr.microsoft.com/mssql/ha` to manage the availability group.
 
 * Two [*ConfigMaps*](http://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/) related to the availability group. The ConfigMaps provide information about:
   * The deployment for the operator.

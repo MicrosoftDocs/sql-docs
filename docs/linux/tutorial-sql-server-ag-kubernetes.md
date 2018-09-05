@@ -130,7 +130,7 @@ In a production environment use a different, complex password.
 The next step creates the SQL Server instances and the availability group in one Kubernetes deployment. After you apply this deployment to the cluster, the operator will deploy the SQL Server instances as Docker containers. This deployment will result in three StatefulSets with one pod each. Every pod will include two containers:
 
 * SQL Server instance based on the `mssql-server` image
-* AG agent
+* HA supervisor
 
 In addition, the deployment describes a load balancer service for the availability group listener
 

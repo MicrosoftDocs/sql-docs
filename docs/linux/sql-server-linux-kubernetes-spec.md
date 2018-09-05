@@ -73,7 +73,7 @@ kubectl apply -f sqlserver.yaml
   * **Example**
 
    ```yaml
-    agentsContainerImage: private-repo.microsoft.com/mssql-private-preview/mssql-server-k8s-agents
+    agentsContainerImage: private-repo.microsoft.com/mssql-private-preview/mssql-ha-supervisor
    ```
 
 * `acceptEula`
@@ -118,7 +118,7 @@ kubectl apply -f sqlserver.yaml
 
 * `connectionTimeoutSec`
   * Optional
-  * **Description**: Connection time out in seconds for the AG agents to connect to SQL Server. Minimum: 1 second. Default: 30 seconds.
+  * **Description**: Connection time out in seconds for the HA supervisors to connect to SQL Server. Minimum: 1 second. Default: 30 seconds.
 
 * `queryCommandTimeoutSec`
   * Optional

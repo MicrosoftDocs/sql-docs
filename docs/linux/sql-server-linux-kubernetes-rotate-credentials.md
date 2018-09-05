@@ -109,7 +109,7 @@ spec:
       restartPolicy: Never
       containers:
       - name: rotate-creds
-        image: mssql-server-k8s-agents:20.22 
+        image: mssql-ha-supervisor:20.22 
         command: ["/mssql-server-k8s-rotate-creds"]
         env:
         - name: MSSQL_K8S_STATEFULSET_NAME

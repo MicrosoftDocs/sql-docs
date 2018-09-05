@@ -74,7 +74,7 @@ spec:
       restartPolicy: Never
       containers:
       - name: manual-failover
-        image: mssql-server-k8s-agents:20.22
+        image: mssql-ha-supervisor:20.22
         command: ["/mssql-server-k8s-failover"]
         env:
         - name: MSSQL_K8S_AG_NAME
@@ -87,7 +87,7 @@ spec:
               fieldPath: metadata.namespace
 ```
 
-When you run the job, the AG agents will elect a new leader and move the primary replica to the SQL Server instance of the leader. To run the job, run the following command:
+When you run the job, the supervisor will elect a new leader and move the primary replica to the SQL Server instance of the leader. To run the job, run the following command:
 
 ```azurecli
 kubectl apply -f manualFailover.yaml

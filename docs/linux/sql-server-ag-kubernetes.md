@@ -64,11 +64,11 @@ The StatfulSet contains:
 
 * mssql-server container
 
-* AG Agent container
+* mssql-ha-supervisor container
 
-The code for the operator, AG agent, and SQL Server is packaged in a Docker image called `mssql-server-k8s-agents`. This image contains following binaries:
+The code for the operator, HA supervisor, and SQL Server is packaged in a Docker image called `mcr.microsoft.com/mssql/ha`. This image contains following binaries:
 
-* `mssql-server-k8s-operator`
+* `mssql-operator`
 
     This process is deployed as a separate Kubernetes deployment. It registers the custom Kubernetes [custom resource](http://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/) called `SqlServer` (sqlservers.mssql.microsoft.com). Then it listens for such resources being created or updated in the Kubernetes cluster. For every such event, it creates or updates the Kubernetes resources for the corresponding instance (for example the StatefulSet, or `mssql-server-k8s-init-sql` job).
 
@@ -76,9 +76,11 @@ The code for the operator, AG agent, and SQL Server is packaged in a Docker imag
 
     This web server serves Kubernetes [liveness probes](http://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes/) to determine the health of a SQL Server instance. Monitors the health of the local SQL Server instance by calling `sp_server_diagnostics` and comparing the results with your monitor policy.
 
-* `mssql-server-k8s-ag-agent-supervisor`
-  
-    This process spawns `mssql-server-k8s-ag-agent` and `mssql-server-k8s-sqlhealth-agent` processes as child processes and terminates them as necessary, based on which AGs the local SQL Server instance is meant to be part of. 
+* `mssql-ha-supervisor`
+
+  Contains `mssql-health-monitor`
+
+  This process spawns `mssql-server-k8s-ag-agent` and `mssql-server-k8s-sqlhealth-agent` processes as child processes and terminates them as necessary, based on which AGs the local SQL Server instance is meant to be part of. 
 
     It also maintains the ag certificate and endpoint. 
 
@@ -107,7 +109,7 @@ The code for the operator, AG agent, and SQL Server is packaged in a Docker imag
 
 ### Notes
 
-Regardless of the AG configuration, The operator will always deploy the AG agent. If the SqlServer resource does not list any AG, the operator will still deploy this container.
+Regardless of the AG configuration, The operator will always deploy the HA supervisor. If the SqlServer resource does not list any AG, the operator will still deploy this container.
 
 The version for the operator image is identical to the version for the SQL Server image.
 

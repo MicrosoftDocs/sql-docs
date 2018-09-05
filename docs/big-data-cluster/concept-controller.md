@@ -15,14 +15,14 @@ ms.prod: sql
 The Controller hosts the core logic for building and managing the cluster. It takes care of all interactions with Kubernetes, SQL Servers instances that are part of the cluster as well as Hadoop components like HDFS. 
 
 The Controller service provides the following core functionality: 
-- Manage cluster lifecycle: cluster bootstrap & delete, update configurations and upgrade (upgrade not available in CTP2.0)
+- Manage cluster lifecycle: cluster bootstrap & delete, update configurations and upgrade (upgrade not available inCTP 2.0)
 - Manage master SQL Server instances
 - Manage compute, data and storage pools
 - Expose monitoring tools to observe the state of the cluster
 - Expose troubleshooting tools to detect and repair unexpected issues
 - Manage cluster security: ensure secure cluster endpoints, manage users and roles, configure credentials for intra-cluster communication
-- Manage the workflow of upgrades so that they are implemented safely (not available in CTP2.0)
-- Manage high availability and DR for statefull services in the cluster (not in CTP2.0)
+- Manage the workflow of upgrades so that they are implemented safely (not available inCTP 2.0)
+- Manage high availability and DR for statefull services in the cluster (not inCTP 2.0)
 
 ## Deploying the Controller service
 The Controller is hosted as a daemon set in the same Kubernetes environment where the customer wants to build out the cluster. This service is installed by a Kubernetes administrator during cluster bootstrap, using the mssqlctl command-line utility:
@@ -48,7 +48,7 @@ Once the Controller service is up and running, cluster administrator can leverag
 TBD (see service status, where are the logs)
 
 ## Controller service security
-All communication to the Controller is conducted via a REST API over HTTPS. Certificates for Controller endpoint will be configured at bootstrap time. A self-signed certificate will be automatically generated for the CTP2.0. In future releases,  we will provide a mechanism for customers to provide their certificates from their own certificate authority for production deployments. 
+All communication to the Controller is conducted via a REST API over HTTPS. Certificates for Controller endpoint will be configured at bootstrap time. A self-signed certificate will be automatically generated for theCTP 2.0. In future releases,  we will provide a mechanism for customers to provide their certificates from their own certificate authority for production deployments. 
 
 Authentication to Controller endpoint is based on username and password. These credentials are provisioned at cluster bootstrap time using the input for environment variables `CONTROLLER_USERNAME` and `CONTROLLER_PASSWORD`. For example, from a Linux client, you can run below script to set the environment variables:
 

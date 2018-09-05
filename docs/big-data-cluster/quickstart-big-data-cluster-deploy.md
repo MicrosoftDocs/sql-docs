@@ -102,9 +102,9 @@ If you are using ACS or AKS, then set the following environment variable also:
 export DOCKER_IMAGE_POLICY=IfNotPresent
 ```
 
-## Deploy SQL Server vNext
+## Deploy SQL Server 2019 CTP 2.0
 
-To deploy SQL Server vNext on your Kubernetes cluster, run the following command:
+To deploy SQL Server 2019 CTP 2.0 on your Kubernetes cluster, run the following command:
 
 ```bash
 python mssqlctl.py create cluster <name of your cluster>

@@ -11,7 +11,7 @@ ms.prod: sql
 
 # What is SQL Server Big Data Cluster?
 
-[!INCLUDE[SQL Server vNext](../includes/sssqlv15-md.md)] CTP 2.0 enables you to integrate your "high-value" relational data in SQL Server with your "high-volume" data in big data environments, such as Hadoop.
+[!INCLUDE[SQL Server 2019 CTP 2.0](../includes/sssqlv15-md.md)] CTP 2.0 enables you to integrate your "high-value" relational data in SQL Server with your "high-volume" data in big data environments, such as Hadoop.
 
 ## Architecture
 
@@ -28,5 +28,5 @@ The following diagram shows the eventual state of the Big Data Cluster architect
 To get started, see the following quickstarts:
 
 - [Deploy SQL Server Big Data Cluster on Kubernetes](quickstart-big-data-cluster-deploy.md)
-- [Get started with SQL Server Big Data Cluster on SQL Server vNext](quickstart-big-data-cluster-get-started.md)
-- [Run Jupypter Notebooks on SQL Server vNext](quickstart-big-data-cluster-notebooks.md)
+- [Get started with SQL Server Big Data Cluster on SQL Server 2019 CTP 2.0](quickstart-big-data-cluster-get-started.md)
+- [Run Jupypter Notebooks on SQL Server 2019 CTP 2.0](quickstart-big-data-cluster-notebooks.md)

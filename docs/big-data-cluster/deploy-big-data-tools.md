@@ -1,5 +1,5 @@
 ---
-title: Install big data tools for SQL Server vNext | Microsoft Docs
+title: Install big data tools for SQL Server 2019 CTP 2.0 | Microsoft Docs
 description:
 author: rothja 
 ms.author: jroth 
@@ -9,9 +9,9 @@ ms.topic: conceptual
 ms.prod: sql
 ---
 
-# Install big data tools for SQL Server vNext
+# Install big data tools for SQL Server 2019 CTP 2.0
 
-This article describes how to install big data tools for SQL Server vNext.
+This article describes how to install big data tools for SQL Server 2019 CTP 2.0.
 
 ## Install [!INCLUDE [SQL Operations Studio](../includes/name-sos-short.md)]
 
@@ -39,4 +39,4 @@ Click Connect, and the **Server Dashboard** will appear.   You are now connected
 
 ## Next steps
 
-To explore different ways to interact with your cluster, see [Quickstart: Get started with big data on SQL Server vNext](quickstart-big-data-cluster-get-started.md).
+To explore different ways to interact with your cluster, see [Quickstart: Get started with big data on SQL Server 2019 CTP 2.0](quickstart-big-data-cluster-get-started.md).

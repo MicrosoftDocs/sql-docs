@@ -1,7 +1,7 @@
 ---
 title: "Download SQL Server Data Tools (SSDT) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/28/2018"
+ms.date: "09/05/2018"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.component: "ssdt"
@@ -43,19 +43,18 @@ The installer lists available Visual Studio instances to add the SSDT tools to. 
 
 ## SSDT for VS 2017 (standalone installer)
 
-[![download](../ssdt/media/download.png) Download SSDT for Visual Studio 2017 (15.7.1) ](https://go.microsoft.com/fwlink/?linkid=875613) 
+[![download](../ssdt/media/download.png) Download SSDT for Visual Studio 2017 (15.8) ](https://go.microsoft.com/fwlink/?linkid=2014060) 
 
 > [!IMPORTANT]
-> - Before installing SSDT for Visual Studio 2017 (15.7.1), uninstall *Analysis Services Projects* and *Reporting Services Projects* extensions if they are already installed, and close all VS instances.
-> - When installing SSDT on Windows 10 and choosing **Install new SQL Server Data Tools for Visual Studio 2017 instance**, please clear any checkbox and install the new instance first. After the new instance is installed, please reboot the computer and open the SSDT installer again to continue the installation.  
+> - Before installing SSDT for Visual Studio 2017 (15.8), uninstall *Analysis Services Projects* and *Reporting Services Projects* extensions if they are already installed, and close all VS instances.
 
 
 
 **Version Information**  
   
-Release number: 15.7.1  
-Build number: 14.0.16167.0  
-Release date: July 02, 2018  
+Release number: 15.8  
+Build Number: 14.0.16174.0
+Release date: September 05, 2018
 
 For a complete list of changes, see the [changelog](changelog-for-sql-server-data-tools-ssdt.md).
 
@@ -65,17 +64,17 @@ SSDT for Visual Studio 2017 has the same [system requirements](https://docs.micr
 
 This release of **SSDT for VS 2017** can be installed in the following languages:  
 
-[Chinese (Simplified)]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x804) | 
-[Chinese (Traditional)]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x404) | 
-[English (United States)]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x409) | 
-[French]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x40c)  
-[German]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x407) | 
-[Italian]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x410) | 
-[Japanese]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x411) | 
-[Korean]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x412) | 
-[Portuguese (Brazil)]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x416) | 
-[Russian]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x419) | 
-[Spanish]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x40a)  
+[Chinese (Simplified)]( https://go.microsoft.com/fwlink/?linkid=2014060&clcid=0x804) | 
+[Chinese (Traditional)]( https://go.microsoft.com/fwlink/?linkid=2014060&clcid=0x404) | 
+[English (United States)]( https://go.microsoft.com/fwlink/?linkid=2014060&clcid=0x409) | 
+[French]( https://go.microsoft.com/fwlink/?linkid=2014060&clcid=0x40c)  
+[German]( https://go.microsoft.com/fwlink/?linkid=2014060&clcid=0x407) | 
+[Italian]( https://go.microsoft.com/fwlink/?linkid=2014060&clcid=0x410) | 
+[Japanese]( https://go.microsoft.com/fwlink/?linkid=2014060&clcid=0x411) | 
+[Korean]( https://go.microsoft.com/fwlink/?linkid=2014060&clcid=0x412) | 
+[Portuguese (Brazil)]( https://go.microsoft.com/fwlink/?linkid=2014060&clcid=0x416) | 
+[Russian]( https://go.microsoft.com/fwlink/?linkid=2014060&clcid=0x419) | 
+[Spanish]( https://go.microsoft.com/fwlink/?linkid=2014060&clcid=0x40a)  
 
 
 

@@ -60,4 +60,4 @@ All settings take the form of a key-value pair, with each setting on a separate 
 
 ## See also
 
-[Security considerations](security-considerations-for-the-r-runtime-in-sql-server.md)
+[Extensibility framework](../concepts/extensibility-framework.md)

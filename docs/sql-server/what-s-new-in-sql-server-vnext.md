@@ -32,7 +32,10 @@ Community technology preview (CTP) 2.0 is the first public release of [!INCLUDE[
 - [Database engine](#databaseengine)
   - Intelligent query processing
   - Database scoped configuration setting for online and resumable DDL operations
-  - Expanded support for Persistent Memory (PMEM) devices 
+  - Expanded support for Persistent Memory (PMEM) devices
+  - Clustered columnstore online index build and rebuild
+  - UTF-8 Support
+  - Lightweight query profiling infrastructure enabled by default
 - [High Availability](#ha)
   - Connection redirection
 - [SQL Graph](#sqlgraph)
@@ -57,6 +60,7 @@ Community technology preview (CTP) 2.0 is the first public release of [!INCLUDE[
   - Java language extension
 - [Security](#security)
   - Always Encrypted with secure enclaves
+  - Certificate management in SQL Server Configuration Manager
 
 Continue reading for more details about these features.
 
@@ -119,6 +123,33 @@ Without this feature you have to specify the online and resumable options direct
 More information:
 For more information on index resumable operations see [Resumable Online Index Create](http://azure.microsoft.com/blog/resumable-online-index-create-is-in-public-preview-for-azure-sql-db/).
 
+### Build and rebuild clustered columnstore indexes online
+
+Convert row-store tables into columnstore format. Create clustered columnstore indexes (CCI). This was an offline process in previous versions of SQL Server - requiring all changes stop while CCI is created. SQL Server 2019 and Azure SQL Database enable customers to create or re-create CCI online. Workload will not be blocked and all changes to made on the underlying data are transparently added into the target columnstore table. Examples of new TSQL statements that can be used are:
+
+  ```sql
+  CREATE CLUSTERED COLUMNSTORE INDEX cci
+    ON <tableName>
+    WITH (ONLINE = ON)
+  ```
+
+  ```SQL  
+  ALTER INDEX cci
+    ON <tableName>
+    REBUILD WITH (ONLINE = ON)
+  ```
+
+### UTF-8 Support
+
+Full support for the widely used UTF-8 character encoding as an import or export encoding, or as database-level or column-level collation for text data. UTF-8 is allowed in the CHAR and VARCHAR datatypes, and is enabled when creating or changing an object’s collation to a collation with the `UTF8` suffix. 
+
+For example,`LATIN1_GENERAL_100_CI_AS_SC` to `LATIN1_GENERAL_100_CI_AS_SC_UTF8`. UTF-8 is only available to Windows collations that support supplementary characters, as introduced in SQL Server 2012. Note that NCHAR and NVARCHAR allow UTF-16 encoding only, and remain unchanged.
+
+This may provide significant storage savings, depending on the character set in use. For example, changing an existing column data type from NCHAR(10) to CHAR(10) using an UTF-8 enabled collation, translates into 50% reduction in storage requirements. This is because NCHAR(10) requires 22 bytes for storage, whereas CHAR(10) requires 12 bytes for the same Unicode string.
+
+### Lightweight query profiling infrastructure enabled by default
+
+The lightweight query profiling infrastructure (LWQPI) is now enabled by default. The lightweight query profiling infrastructure was introduced in SQL Server 2016 SP1. It offers a query execution statistics collection mechanism with an expected overhead of 2% CPU, compared with an overhead of up to 75% CPU for the standard query profiling mechanism. On previous versions, it was OFF by default. Database administrators could enable it with [trace flag 7412](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 
 ## <a id="ha"></a> High Availability
 
@@ -177,6 +208,14 @@ For detailed information, see [What's new in SQL Server Machine Learning Service
 
 - **Always Encrypted with secure enclaves**: Expands upon Always Encrypted with in-place encryption and rich computations, by enabling computations on plaintext data inside a secure enclave on the server side. For details, see [Always Encrypted with secure enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md).
 
+- **Certificate management in SQL Server Configuration Manager**: SSL/TLS certificates are widely used to secure access to SQL Server instances. Certificate management is now integrated into the SQL Server Configuration Manager, simplifying common tasks such as:
+
+  - Viewing and validating certificates installed in a SQL Server instance. 
+  - Viewing certificates close to expiration.
+  - Deploy certificates across machines participating in Always On Availability Groups (from the node holding the primary replica).
+  - Deploy certificates across machines participating in a failover cluster instance (from the active node).
+
+Note: User must have administrator permissions on all the cluster nodes.
 ## Next steps
 
 See the [SQL Server 2019 Release Notes](sql-server-vnext-release-notes.md).

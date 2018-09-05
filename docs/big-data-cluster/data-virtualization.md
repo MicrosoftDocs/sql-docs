@@ -1,5 +1,5 @@
 ---
-title: Virtualize external data in SQL Server vNext | Microsoft Docs
+title: Virtualize external data in SQL Server 2019 CTP 2.0 | Microsoft Docs
 description:
 author: rothja
 ms.author: jroth
@@ -9,9 +9,9 @@ ms.topic: conceptual
 ms.prod: sql
 ---
 
-# Virtualize external data in SQL Server vNext
+# Virtualize external data in SQL Server 2019 CTP 2.0
 
-One of the key scenarios for SQL Server vNext is the ability to virtualize data such that the data can remain in it’s original location yet you can **virtualize** the data in a SQL Server instance so that it can be queried there like any other table in SQL Server. This will minimize the need for ETL processes.
+One of the key scenarios for SQL Server 2019 CTP 2.0 is the ability to virtualize data such that the data can remain in it’s original location yet you can **virtualize** the data in a SQL Server instance so that it can be queried there like any other table in SQL Server. This will minimize the need for ETL processes.
 
 ## Launch the virtualize data wizard
 

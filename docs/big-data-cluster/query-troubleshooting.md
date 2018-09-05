@@ -152,7 +152,7 @@ sudo python -m ensurepip --default-pip
 Due to the large size of the images for Big Data Cluster, in some cases you might have a timeout error happen when pulling the images.  You may need to "pre-pull" the images for now.  Below are steps to use to SSH into each ACS agent VM and pre-pull the images.  Use this as an example of what to do if you are using other container hosting services like AWS EKS or GCP GKE.
 
 > [!IMPORTANT]
-> Before starting this series of steps, you need the credentials to the private docker registry containing SQL Server vNext CTP2.0 images.  This should be provided to you by your PM buddy via email when you joined the Early Adoption Program.  If you have not already received them, please contact your PM buddy.
+> Before starting this series of steps, you need the credentials to the private docker registry containing SQL Server 2019CTP 2.0 images.  This should be provided to you by your PM buddy via email when you joined the Early Adoption Program.  If you have not already received them, please contact your PM buddy.
 
 First, copy your id_rsa SSH key file to the ACS master VM.  You will need the scp utility if you don't have it already installed.  You will also need to login to the Azure portal and find the public IP address of the ACS master VM.
 

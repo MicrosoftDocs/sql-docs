@@ -100,7 +100,7 @@
         href: query-troubleshooting.md
   - name: Notebooks
     items:
-    - name: How to use Jupyter notebooks in SQL Server vNext
+    - name: How to use Jupyter notebooks in SQL Server 2019 CTP 2.0
       href: notebooks-guidance.md
   - name: Manage
     items:

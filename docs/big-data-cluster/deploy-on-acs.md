@@ -1,5 +1,5 @@
 ---
-title: Configure Kubernetes on ACS for SQL Server vNext deployments | Microsoft Docs
+title: Configure Kubernetes on ACS for SQL Server 2019 CTP 2.0 deployments | Microsoft Docs
 description:
 author: rothja 
 ms.author: jroth 
@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.prod: sql
 ---
 
-# Configure Kubernetes on Azure Container Service (ACS) for SQL Server vNext
+# Configure Kubernetes on Azure Container Service (ACS) for SQL Server 2019 CTP 2.0
 
 Azure Container Service makes it simple to create, configure, and manage a cluster of virtual machines that are preconfigured with a Kubernetes cluster to run containerized applications. 
 
@@ -156,7 +156,7 @@ az acs kubernetes install-cli
 
 ## Give cluster admin permissions
 
-1. Before running the deploying SQL Server vNext, you must grant cluster admin permission to the default service account. Use the following kubectl command:
+1. Before running the deploying SQL Server 2019 CTP 2.0, you must grant cluster admin permission to the default service account. Use the following kubectl command:
 
    ```bash
    kubectl create clusterrolebinding add-on-cluster-admin --clusterrole=cluster-admin --serviceaccount=default:default
@@ -173,6 +173,6 @@ az acs kubernetes install-cli
 
 ## Next steps
 
-The steps in this article configured a Kubernetes cluster in ACS. The next step is to deploy SQL Server vNext to the cluster.
+The steps in this article configured a Kubernetes cluster in ACS. The next step is to deploy SQL Server 2019 CTP 2.0 to the cluster.
 
-[Deploy SQL Server vNext on Kubernetes](quickstart-big-data-cluster-get-started.md)
+[Deploy SQL Server 2019 CTP 2.0 on Kubernetes](quickstart-big-data-cluster-get-started.md)

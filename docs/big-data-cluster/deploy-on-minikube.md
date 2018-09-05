@@ -1,5 +1,5 @@
 ---
-title: Configure Minikube for SQL Server vNext deployments | Microsoft Docs
+title: Configure Minikube for SQL Server 2019 CTP 2.0 deployments | Microsoft Docs
 description:
 author: rothja 
 ms.author: jroth 
@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.prod: sql
 ---
 
-# Configure Minikube for SQL Server vNext
+# Configure Minikube for SQL Server 2019 CTP 2.0
 
 Minikube is a tool that makes it easy to run Kubernetes on a single machine like a laptop or a desktop. Minikube runs a single-node Kubernetes cluster inside a VM on your laptop for users looking to try out Kubernetes or develop with it day-to-day. 
 
 ## Prerequisites
 
-- To run a Minikube cluster for SQL Server vNext, it is recommended that your machine have at least 32 GB of RAM.
+- To run a Minikube cluster for SQL Server 2019 CTP 2.0, it is recommended that your machine have at least 32 GB of RAM.
 
    > [!TIP] 
    > If the machine has insufficient memory, then modify the cluster configuration such that only 3 instances are created: one master instance and two compute instances.
@@ -39,7 +39,7 @@ Minikube is a tool that makes it easy to run Kubernetes on a single machine like
 
 ## Install Minikube
 
-Install Minikube according to the instructions for the [v0.24.1 release](https://github.com/kubernetes/minikube/releases/tag/v0.24.1). The SQL Server vNext only works with v0.24.1.
+Install Minikube according to the instructions for the [v0.24.1 release](https://github.com/kubernetes/minikube/releases/tag/v0.24.1). The SQL Server 2019 CTP 2.0 only works with v0.24.1.
 
 ## Create a Minikube cluster
 
@@ -67,6 +67,6 @@ Set-VM -Name minikube -CheckpointType Disabled -AutomaticCheckpointsEnabled $fal
 
 ## Next steps
 
-The steps in this article configured a Minikube cluster. The next step is to deploy SQL Server vNext to the cluster.
+The steps in this article configured a Minikube cluster. The next step is to deploy SQL Server 2019 CTP 2.0 to the cluster.
 
-[Deploy SQL Server vNext on Kubernetes](quickstart-big-data-cluster-get-started.md)
+[Deploy SQL Server 2019 CTP 2.0 on Kubernetes](quickstart-big-data-cluster-get-started.md)

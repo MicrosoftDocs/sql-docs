@@ -1,5 +1,5 @@
 ---
-title: Run Jupypter Notebooks on SQL Server vNext | Microsoft Docs
+title: Run Jupypter Notebooks on SQL Server 2019 CTP 2.0 | Microsoft Docs
 description:
 author: rothja
 ms.author: jroth
@@ -9,7 +9,7 @@ ms.topic: quickstart
 ms.prod: sql
 ---
 
-# Quickstart: Run Jupypter Notebooks on SQL Server vNext
+# Quickstart: Run Jupypter Notebooks on SQL Server 2019 CTP 2.0
 
 This quickstart illustrates how you can launch Jupyter Notebooks on the cluster and start authoring your own Notebooks. It also shows how to submit jobs against the cluster.
 
@@ -186,4 +186,4 @@ If you like to uninstall a package, then please use the following command from y
 
 ## Next steps
 
-For more information about using Notebooks in [!INCLUDE [SQL Operations Studio](../includes/name-sos-short.md)], see [How to use Jupyter notebooks in SQL Server vNext](notebooks-guidance.md).
+For more information about using Notebooks in [!INCLUDE [SQL Operations Studio](../includes/name-sos-short.md)], see [How to use Jupyter notebooks in SQL Server 2019 CTP 2.0](notebooks-guidance.md).

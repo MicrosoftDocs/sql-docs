@@ -1,5 +1,5 @@
 ---
-title: Get started with big data on SQL Server vNext | Microsoft Docs
+title: Get started with big data on SQL Server 2019 CTP 2.0 | Microsoft Docs
 description:
 author: rothja 
 ms.author: jroth 
@@ -9,9 +9,9 @@ ms.topic: quickstart
 ms.prod: sql
 ---
 
-# Quickstart: Get started with big data on SQL Server vNext
+# Quickstart: Get started with big data on SQL Server 2019 CTP 2.0
 
-In this quickstart, you will combine high-volume HDFS data with high-value relational data using SQL Server vNext running on Kubernetes.
+In this quickstart, you will combine high-volume HDFS data with high-value relational data using SQL Server 2019 CTP 2.0 running on Kubernetes.
 
 ## Prerequisites
 
@@ -103,4 +103,4 @@ GO
 Explore how to run Jupyter notebooks in Azure Data Studio:
 
 > [!div class="nextstepaction"]
-> [Run Jupyter notebooks on SQL Server vNext](quickstart-big-data-cluster-notebooks.md)
+> [Run Jupyter notebooks on SQL Server 2019 CTP 2.0](quickstart-big-data-cluster-notebooks.md)

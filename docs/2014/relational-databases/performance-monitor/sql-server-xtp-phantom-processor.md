@@ -5,8 +5,7 @@ ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "dbe-cross-instance"
+ms.technology:
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 0f691b3d-a8fd-4459-ad21-2cfc8574a8c0

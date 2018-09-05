@@ -8,8 +8,6 @@ ms.component: "data-tier-applications"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "dbe-data-tier-apps"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.dbdeployment.settings.f1"

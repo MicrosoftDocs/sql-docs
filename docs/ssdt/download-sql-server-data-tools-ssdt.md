@@ -53,8 +53,8 @@ The installer lists available Visual Studio instances to add the SSDT tools to. 
 **Version Information**  
   
 Release number: 15.8  
-Build Number: 14.0.16174.0
-Release date: September 05, 2018
+Build Number: 14.0.16174.0  
+Release date: September 05, 2018  
 
 For a complete list of changes, see the [changelog](changelog-for-sql-server-data-tools-ssdt.md).
 

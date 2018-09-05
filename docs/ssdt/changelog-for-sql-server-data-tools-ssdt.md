@@ -24,16 +24,16 @@ This change log is for [SQL Server Data Tools (SSDT)](download-sql-server-data-t
 For detailed posts about what's new and changed, see [the SSDT Team blog](https://blogs.msdn.microsoft.com/ssdt/)
 
 ## SSDT for Visual Studio 2017 (15.8)
-Build Number: 14.0.16174.0
-Release date: September 05, 2018
+Build Number: 14.0.16174.0  
+Release date: September 05, 2018  
 
 ### What's New?
 
 **SSIS:**
 
-1.Fix regression in VS 15.8 that saving Script Task/Component will hit compile error.
-2.Fix regression in VS 15.8 that deployment wizard doesn’t work.
-3.Fix an issue that ADO.NET connection manager doesn't support 3rd party ADO.NET provider.
+1. Fix regression in VS 15.8 that saving Script Task/Component will hit compile error.
+1. Fix regression in VS 15.8 that deployment wizard doesn’t work.
+1. Fix an issue that ADO.NET connection manager doesn't support 3rd party ADO.NET provider.
 
 **Installer:**
 

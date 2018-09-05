@@ -1,7 +1,7 @@
 ---
 title: "Always Encrypted with Secure Enclaves (Database Engine) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/20/2018"
+ms.date: "09/24/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -45,9 +45,12 @@ With secure enclaves, Always Encrypted protects the confidentiality of sensitive
 
 - **In-place encryption** – cryptographic operations on sensitive data, for example: initial data encryption or rotating a column encryption key, are performed inside the secure enclave and do not require moving the data outside of the database. You can issue in-place encryption using the ALTER TABLE Transact-SQL statement, and you do not need to use tools, such as the Always Encrypted wizard in SSMS or the Set-SqlColumnEncryption PowerShell cmdlet.
 
-- **Rich computations** – operations on encrypted columns, including pattern matching (the LIKE predicate) and range comparisons, are supported inside the secure enclave, which unlocks Always Encrypted to a broad range of applications and scenarios that require such computations to be performed inside the database system. (??? need a note on this being in the "pre-preview" stage???)
+- **Rich computations (preview)** – operations on encrypted columns, including pattern matching (the LIKE predicate) and range comparisons, are supported inside the secure enclave, which unlocks Always Encrypted to a broad range of applications and scenarios that require such computations to be performed inside the database system. 
 
-In the current Community Technology Preview (CTP) of SQL Server vNext, Always Encrypted with secure enclaves uses [Virtualization-based Security (VBS)](https://docs.microsoft.com/windows-hardware/design/device-experiences/oem-vbs) secure memory enclaves (also known as Virtual Secure Mode, or VSM enclaves) in Windows.
+> [!IMPORTANT]
+> In SQL Server 2019 CTP 2.0, rich computations are pending several performance optimizations, include limited functionality (no indexing, etc), and are currently disabled by default. To enable rich computations, see  ???.
+
+In SQL Server 2019 CTP 2.0, Always Encrypted with secure enclaves uses [Virtualization-based Security (VBS)](https://docs.microsoft.com/windows-hardware/design/device-experiences/oem-vbs) secure memory enclaves (also known as Virtual Secure Mode, or VSM enclaves) in Windows.
 
 ## Secure Enclave Attestation
 
@@ -59,13 +62,13 @@ The attestation process, SQL Server supports for VBS secure enclaves in SQL Serv
 
 ## Secure Enclave Providers
 
-To use Always Encrypted with secure enclaves, an application must use a client driver that supports the feature. In this stage of the CTP (??? here and in other places, should we specificaly list CTP 2.0 ???), your applications must use .NET Framework 4.7.2 and .NET Framework Data Provider for SQL Server. In addition, .NET applications must be configured with a **secure enclave provider** specific to the enclave type (for example, VBS) and the attestation service (for example, HGS), you are using. The supported enclave providers are shipped separately in a NuGet package, which you need to integrate with your application. An enclave provider implements the client-side logic for the attestation protocol and for establishing a secure channel with a secure enclave of a given type.
+To use Always Encrypted with secure enclaves, an application must use a client driver that supports the feature. In SQL Server 2019 CTP 2.0, your applications must use .NET Framework 4.7.2 and .NET Framework Data Provider for SQL Server. In addition, .NET applications must be configured with a **secure enclave provider** specific to the enclave type (for example, VBS) and the attestation service (for example, HGS), you are using. The supported enclave providers are shipped separately in a NuGet package, which you need to integrate with your application. An enclave provider implements the client-side logic for the attestation protocol and for establishing a secure channel with a secure enclave of a given type.
 
 ## Enclave-enabled Keys
 
 Always Encrypted with secure enclaves introduces the concept of enclave-enabled keys:
 
-- **Enclave-enabled column master key** – a column master key that has the ENCLAVE\_COMPUTATIONS property specified in the column master key metadata object inside the database. The column master key metadata object must also contain a valid signature of the metadata properties.
+- **Enclave-enabled column master key** – a column master key that has the ENCLAVE_COMPUTATIONS property specified in the column master key metadata object inside the database. The column master key metadata object must also contain a valid signature of the metadata properties.
 - **Enclave-enabled column encryption key** – a column encryption key that is encrypted with an enclave-enabled column master key.
 
 When the SQL Server Engine determines operations, specified in a query, need to be performed inside the secure enclave, the SQL Server Engine requests the client driver shares the column encryption keys that are needed for the computations with the secure enclave. The client driver shares the column encryption keys only if the keys are enclave-enabled (that is, encrypted with enclave-enabled column master keys) and they are properly signed. Otherwise, the query fails.
@@ -80,16 +83,15 @@ An enclave-enabled column is a database column encrypted with an enclave-enabled
 For more information about encryption types, see [Always Encrypted Cryptography](always-encrypted-cryptography.md).
 
 The following table summarizes the functionality available for encrypted columns, depending on whether the columns use enclave-enabled column encryption keys and an encryption
-type.(???There is something wrong with the table - either some columns are missing (the original table had 5 columns), or we included the wrong subset of the 5 columns???)
+type.(???There is something wrong with the table (the original table had 5 columns), - testing format)
 
-| **Operation**                             | **Column is NOT enclave-enabled** | **Column is enclave-enabled**  |
-| ----------------------------------------- | ----------------------------------------------- | -------------------------------- | ------------------------------ | -------------------------------- |
-|                                           | **Randomized encryption**                       | **Deterministic encryption**     | **Randomized encryption**      | **Deterministic encryption**     |
-| **In-place encryption**                   | Not Supported                                   | Not Supported                    | Supported                      | Supported                        |
-| **Equality comparison**                   | Not Supported                                   | Supported outside of the enclave | Supported (inside the enclave) | Supported outside of the enclave |
-| **Comparison operators beyond equality** | Not Supported                                   | Not Supported                    | Supported                      | Not Supported                    |
-| **LIKE**                                  | Not Supported                                   | Not Supported                    | Supported                      | Not Supported                    |
-|                                           |                                                 |                                  |                                |                                  |
+| **Operation**                             | **Column is NOT enclave-enabled** || **Column is enclave-enabled**  ||
+|:---|:---|:---|:---|:---|
+| | **Randomized encryption**  | **Deterministic encryption**     | **Randomized encryption**      | **Deterministic encryption**     |
+| **In-place encryption** | Not Supported  | Not Supported   | Supported         | Supported    |
+| **Equality comparison**   | Not Supported | Supported outside of the enclave | Supported (inside the enclave) | Supported outside of the enclave |
+| **Comparison operators beyond equality** | Not Supported  | Not Supported   | Supported      | Not Supported     |
+| **LIKE**    | Not Supported      | Not Supported    | Supported     | Not Supported    |
 
 In-place encryption includes support for the following operations inside the enclave:
 
@@ -115,13 +117,13 @@ General limitations:
 
 - Equality comparison remains the only Transact-SQL operator supported with deterministic encryption and equality comparisons are performed by comparing ciphertext values outside of the enclave, regardless if the columns encryption key is enclave-enabled or not. The only new functionality that gets unlocked with enclave-enabled column encryption keys for deterministic encryption, are in-place cryptographic operations. If you have a column that is encrypted using deterministic encryption (and a key that is not enclave-enabled), to enable rich computations (pattern matching, comparison operations), you need to re-encrypt the column using randomized encryption.
 
-- The existing restriction on using collations apply to columns encrypted with enclave-enabled column encryption keys: character string columns (char, nchar, varchar, nvarchar) encrypted using deterministic encryption must use collations with a binary2 sort order (BIN2 collations). Character string columns using non-BIN2 collations (???Is "collations with binary2 sort order" more technically accurate????) can be encrypted using randomized encryption – however the only new functionality that is enabled for such columns (if they are encrypted with enclave-enabled column encryption keys) is in-place encryption. **To support rich computations (pattern matching, comparison operations), a column must use a BIN2 collation** (and the column must be encrypted using randomized encryption and an enclave-enabled column encryption key).
+- The existing restriction on using collations apply to columns encrypted with enclave-enabled column encryption keys: character string columns (char, nchar, varchar, nvarchar) encrypted using deterministic encryption must use collations with a binary2 sort order (BIN2 collations). Character string columns using non-BIN2 collations can be encrypted using randomized encryption – however the only new functionality that is enabled for such columns (if they are encrypted with enclave-enabled column encryption keys) is in-place encryption. **To support rich computations (pattern matching, comparison operations), a column must use a BIN2 collation** (and the column must be encrypted using randomized encryption and an enclave-enabled column encryption key).
 
 - Using enclave-enabled keys for columns in in-memory tables is not supported.
 
 - In-place cryptographic operations cannot be combined with any other changes of column metadata, except collation and nullability changes. For example, you cannot encrypt, re-encrypt, or decrypt, a column AND change a data type of the column in a single ALTER TABLE or ALTER COLUMN Transact-SQL statement. You need to use two separate statements.
 
-Limitations that apply to the preview and may be lifted later (???I'm wondering if it is ok to make such forward-looking statements in the docs???):
+The following limitations apply to the current Preview, but are on the roadmap to be addressed:
 
 - Enclave-enabled columns using randomized encryptions cannot be indexed, which means that comparison operations or LIKE operations require table scans.
 

@@ -1,7 +1,7 @@
 ---
 title: "CREATE COLUMN MASTER KEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/05/2018"
+ms.date: "09/24/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -37,9 +37,13 @@ manager: craigg
   Creates a column master key metadata object in a database. A column master key metadata entry that represents a key, stored in an external key store, which is used to protect (encrypt) column encryption keys when using the [Always Encrypted &#40;Database Engine&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md) feature. Multiple column master keys allow for key rotation; periodically changing the key to enhance security. You can create a column master key in a key store and its corresponding metadata object in the database by using the Object Explorer in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or PowerShell. For details, see [Overview of Key Management for Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md).  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
+ 
+
+> [!IMPORTANT]
+> Creating enclave-enabled keys (with ENCLAVE_COMPUTATIONS) requires [Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
+
 ## Syntax  
-  
+
 ```  
 CREATE COLUMN MASTER KEY key_name   
     WITH (  
@@ -149,10 +153,10 @@ The below tables captures the names of system providers:
      The URL of the key in Azure Key Vault
 
 ENCLAVE_COMPUTATIONS  
-Specifies the column master key is enclave-enabled, which means all column encryption keys, encrypted with this column master key, can be shared with a server-side secure enclave and used for computations inside the enclave. Please see [Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
+Specifies the column master key is enclave-enabled, which means all column encryption keys encrypted with this column master key can be shared with a server-side secure enclave and used for computations inside the enclave. For more information, see [Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
 
  *signature*  
-A binary literal that is a result of digitally signing *key path* and the ENCLAVE_COMPUTATIONS setting (i.e. the signature reflects whether ENCLAVE_COMPUTATIONS has been specified or not) with the column master key. The signature protects the signed values from being altered by an unauthorized user. An Always Encrypted-enabled client driver can verify the signature and return an error to the application, if the signature is invalid. The signature must generated using client-side tools. Please see [Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
+A binary literal that is a result of digitally signing *key path* and the ENCLAVE_COMPUTATIONS setting with the column master key (the signature reflects whether ENCLAVE_COMPUTATIONS has been specified or not). The signature protects the signed values from being altered by unauthorized users. An Always Encrypted-enabled client driver can verify the signature and return an error to the application if the signature is invalid. The signature must be generated using client-side tools. For more information, see [Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
   
   
 ## Remarks  

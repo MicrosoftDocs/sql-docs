@@ -48,7 +48,7 @@ With secure enclaves, Always Encrypted protects the confidentiality of sensitive
 - **Rich computations (preview)** – operations on encrypted columns, including pattern matching (the LIKE predicate) and range comparisons, are supported inside the secure enclave, which unlocks Always Encrypted to a broad range of applications and scenarios that require such computations to be performed inside the database system. 
 
 > [!IMPORTANT]
-> In SQL Server 2019 CTP 2.0, rich computations are pending several performance optimizations, include limited functionality (no indexing, etc), and are currently disabled by default. To enable rich computations, see  ???.
+> In SQL Server 2019 CTP 2.0, rich computations are pending several performance optimizations, include limited functionality (no indexing, etc), and are currently disabled by default. To enable rich computations, see  [Enable rich computations](configure-always-encrypted-enclaves.md#configure-a-secure-enclave).
 
 In SQL Server 2019 CTP 2.0, Always Encrypted with secure enclaves uses [Virtualization-based Security (VBS)](https://docs.microsoft.com/windows-hardware/design/device-experiences/oem-vbs) secure memory enclaves (also known as Virtual Secure Mode, or VSM enclaves) in Windows.
 
@@ -83,9 +83,9 @@ An enclave-enabled column is a database column encrypted with an enclave-enabled
 For more information about encryption types, see [Always Encrypted Cryptography](always-encrypted-cryptography.md).
 
 The following table summarizes the functionality available for encrypted columns, depending on whether the columns use enclave-enabled column encryption keys and an encryption
-type.(???There is something wrong with the table (the original table had 5 columns), - testing format)
+type.
 
-| **Operation**                             | **Column is NOT enclave-enabled** || **Column is enclave-enabled**  ||
+| **Operation**| **Column is NOT enclave-enabled** |**Column is NOT enclave-enabled**| **Column is enclave-enabled**  |**Column is enclave-enabled** |
 |:---|:---|:---|:---|:---|
 | | **Randomized encryption**  | **Deterministic encryption**     | **Randomized encryption**      | **Deterministic encryption**     |
 | **In-place encryption** | Not Supported  | Not Supported   | Supported         | Supported    |

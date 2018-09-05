@@ -33,7 +33,7 @@ This article describes how to install big data tools for SQL Server vNext.
 
 In [!INCLUDE [SQL Operations Studio](../includes/name-sos-short.md)], press F1 -> New Connection. You can now connect to your SQL Server (Example: **\<IP Address\>,31433**). Connect to the **high_value_data** database.
 
-![Connect to cluster](./media/install-big-data-tools/connect-to-cluster.png)
+![Connect to cluster](./media/deploy-big-data-tools/connect-to-cluster.png)
 
 Click Connect, and the **Server Dashboard** will appear.   You are now connected and can run queries and interact with the cluster.
 

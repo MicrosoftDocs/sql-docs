@@ -103,4 +103,4 @@ GO
 Explore how to run Jupyter notebooks in Azure Data Studio:
 
 > [!div class="nextstepaction"]
-> [Run Jupyter notebooks on SQL Server vNext](quickstart-big-data-cluster-jupyter-notebook.md)
+> [Run Jupyter notebooks on SQL Server vNext](quickstart-big-data-cluster-notebooks.md)

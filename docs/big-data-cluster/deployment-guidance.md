@@ -49,4 +49,4 @@ After you have configured your Kubernetes cluster, you can proceed with the depl
 
 ## Next steps
 
-After successfully deploying SQL Server vNext to Kubernetes, [install the big data tools](install-big-data-tools.md) and learn more in the [getting started quickstart](quickstart-big-data-cluster-get-started.md).
+After successfully deploying SQL Server vNext to Kubernetes, [install the big data tools](deploy-big-data-tools.md) and learn more in the [getting started quickstart](quickstart-big-data-cluster-get-started.md).

@@ -17,11 +17,11 @@ This quickstart illustrates how you can launch Jupyter Notebooks on the cluster 
 
 You can connect to different end-points in the cluster. You can connect to the Microsoft SQL Server connection type or to the Hadoop Gateway (Knox) end-point in the cluster. The Knox endpoint is exposed through a Kubernetes service called **service-security-lb**.
 
-![Kubernetes service example](media/quickstart-big-data-cluster-jupyter-notebook/kubernetes-service-example.png)
+![Kubernetes service example](media/quickstart-big-data-cluster-notebooks/kubernetes-service-example.png)
 
 In [!INCLUDE [SQL Operations Studio](../includes/name-sos-short.md)], press **F1** -> **New Connection** and you can connect to your Hadoop Gateway (Knox) end-point.
 
-![Knox login](media/quickstart-big-data-cluster-jupyter-notebook/hadoop-gateway-knox-login.png)
+![Knox login](media/quickstart-big-data-cluster-notebooks/hadoop-gateway-knox-login.png)
 
 > [!TIP]
 > For now, the login is **root** and the password is **root-password**.
@@ -30,7 +30,7 @@ In [!INCLUDE [SQL Operations Studio](../includes/name-sos-short.md)], press **F1
 
 Once you connect you will be able to browse your HDFS folder. WebHDFS is started when the deployment is completed, and you will be able to **Refresh**, add **New Directory**, **Upload** files and **Delete**.
 
-![HDFS Browse](media/quickstart-big-data-cluster-jupyter-notebook/browse-hdfs.png)
+![HDFS Browse](media/quickstart-big-data-cluster-notebooks/browse-hdfs.png)
 
 These simple operations let you bring your own data into HDFS.
 
@@ -70,7 +70,7 @@ Once you install Python, please re-start [!INCLUDE [SQL Operations Studio](../in
 
 The "New Jupyter Notebook" task will prompt you for naming your Notebook, provide the name as say "HelloWorld.ipynb" and click Save. This will now Install VirtualEnv and will Install Jupyter and this can take up to few minutes for everything to be installed. Once everything is installed you should be able to Start Notebook by clicking the button as shown in the following screenshot:
 
-![Start notebook](media/quickstart-big-data-cluster-jupyter-notebook/start-notebook.png)
+![Start notebook](media/quickstart-big-data-cluster-notebooks/start-notebook.png)
 
 This will launch the **HelloWorld.ipynb** Jupyter Notebook.
 
@@ -78,7 +78,7 @@ This will launch the **HelloWorld.ipynb** Jupyter Notebook.
 
 In our Jupyter Installation we support the PySpark and Spark, Spark Magic kernels which would allow users to write Python and Scala code using Spark. We also allow users to choose Python for their local development purposes.
 
-![Select a kernel](media/quickstart-big-data-cluster-jupyter-notebook/kernel-select.png)
+![Select a kernel](media/quickstart-big-data-cluster-notebooks/kernel-select.png)
 
 When you select one of these kernels we will install that kernel in the virtual environment and you can start writing code in the supported language.
 
@@ -90,7 +90,7 @@ When you select one of these kernels we will install that kernel in the virtual 
 
 The Attach to provides the context for the Kernel to attach. When you are connected to the Hadoop Gateway (Knox) end-point the default Attach to will be that end-point of the cluster.
 
-![Attach to](media/quickstart-big-data-cluster-jupyter-notebook/attach-to.png)
+![Attach to](media/quickstart-big-data-cluster-notebooks/attach-to.png)
 
 ## Helo world in the different contexts
 
@@ -110,7 +110,7 @@ Hello, World !.
 
 The code should look something similar to the following image.
 
-![Pyspark kernel code](media/quickstart-big-data-cluster-jupyter-notebook/pyspark-kernel-code.png)
+![Pyspark kernel code](media/quickstart-big-data-cluster-notebooks/pyspark-kernel-code.png)
 
 ### Spark kernel
 
@@ -128,7 +128,7 @@ Click **Run** and you should see the Spark Application being started and this wi
 
 The Notebook should look similar to the following image.
 
-![Spark kernel code](media/quickstart-big-data-cluster-jupyter-notebook/spark-kernel-code.png)
+![Spark kernel code](media/quickstart-big-data-cluster-notebooks/spark-kernel-code.png)
 
 Once you define the object then in the next Notebook cell type in the following code:
 
@@ -186,4 +186,4 @@ If you like to uninstall a package, then please use the following command from y
 
 ## Next steps
 
-For more information about using Notebooks in [!INCLUDE [SQL Operations Studio](../includes/name-sos-short.md)], see [How to use Jupyter notebooks in SQL Server vNext](jupyter-notebook-guidance.md).
+For more information about using Notebooks in [!INCLUDE [SQL Operations Studio](../includes/name-sos-short.md)], see [How to use Jupyter notebooks in SQL Server vNext](notebooks-guidance.md).

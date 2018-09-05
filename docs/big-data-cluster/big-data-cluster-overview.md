@@ -29,4 +29,4 @@ To get started, see the following quickstarts:
 
 - [Deploy SQL Server Big Data Cluster on Kubernetes](quickstart-big-data-cluster-deploy.md)
 - [Get started with SQL Server Big Data Cluster on SQL Server vNext](quickstart-big-data-cluster-get-started.md)
-- [Run Jupypter Notebooks on SQL Server vNext](quickstart-big-data-cluster-jupyter-notebook.md)
+- [Run Jupypter Notebooks on SQL Server vNext](quickstart-big-data-cluster-notebooks.md)

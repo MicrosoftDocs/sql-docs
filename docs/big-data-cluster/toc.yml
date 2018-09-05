@@ -11,7 +11,7 @@
   - name: Get started with SQL Server Big Data Cluster
     href: quickstart-big-data-cluster-get-started.md 
   - name: Run Jupyter Notebooks
-    href: quickstart-big-data-cluster-jupyter-notebook.md
+    href: quickstart-big-data-cluster-notebooks.md
 - name: Concepts
   items:
   - name: HDFS
@@ -53,11 +53,11 @@
     - name: Deploy on Multiple VMs
       href: deploy-on-vms.md
     - name: Install big data tools
-      href: install-big-data-tools.md
+      href: deploy-big-data-tools.md
   - name: Data virtualization
     items:
     - name: Virtualize external data
-      href: virtualize-data.md
+      href: data-virtualization.md
   - name: Data ingestion
     items:
     - name: Load data with curl
@@ -65,15 +65,15 @@
     - name: Streaming
       items:
       - name: Spark streaming
-        href: streaming-spark.md
+        href: data-ingestion-streaming-spark.md
       - name: Stream to data pool
-        href: streaming-data-pool.md
+        href: data-ingestion-streaming-data-pool.md
     - name: Restore a database
-      href: restore-databse.md
+      href: data-ingestion-restore-databse.md
   - name: Big Data/Machine Learning
     items:
     - name: Use Prose for automated big data wrangling
-      href: prose-automated-big-data.md
+      href: use-prose-for-big-data-automation.md
     - name: Machine learning with Spark
       href: ml-model-training-scoring-spark.md
     - name: Model training and Export with Spark
@@ -83,7 +83,7 @@
   - name: Query scenarios
     items:
       - name: Read CSV with OPENROWSET
-        href: openrowset.md
+        href: query-openrowset.md
       - name: Create a data pool
         href: query-create-datapool.md
       - name: Hive tables
@@ -97,17 +97,17 @@
       - name: Segregate external tables
         href: query-segregate-external-tables.md
       - name: Monitoring and troubleshooting
-        href: troubleshooting-queries.md
+        href: query-troubleshooting.md
   - name: Notebooks
     items:
     - name: How to use Jupyter notebooks in SQL Server vNext
-      href: jupyter-notebook-guidance.md
+      href: notebooks-guidance.md
   - name: Manage
     items:
     - name: Monitoring
-      href: monitoring.md
+      href: manage-monitor.md
     - name: Troubleshooting   
-      href: troubleshooting.md
+      href: manage-troubleshoot.md
 - name: Resources
   items:
   - name: FAQ

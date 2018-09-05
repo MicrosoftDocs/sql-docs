@@ -172,12 +172,13 @@ The following steps create enclave-enabled keys (requires SSMS 18.0 or later):
 
 ### **Provision enclave-enabled keys using PowerShell**
 
-The following sections provide sample PowerShell scripts for provisioning enclave-enabled keys. The steps that are specific (new) to Always Encrypted with secure enclaves are highlighted(???Don't see any highlighted parts). For more information (not specific to Always Encrypted with secure enclaves) about provisioning keys using PowerShell, see [Configure Always Encrypted Keys using PowerShell](https://docs.microsoft.com/sql/relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell).
+The following sections provide sample PowerShell scripts for provisioning enclave-enabled keys. The steps that are specific (new) to Always Encrypted with secure enclaves are highlighted. For more information (not specific to Always Encrypted with secure enclaves) about provisioning keys using PowerShell, see [Configure Always Encrypted Keys using PowerShell](https://docs.microsoft.com/sql/relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell).
 
 **Provisioning Enclave-Enabled Keys – Windows Certificate Store**
 
 On the client/development computer, open Windows PowerShell ISE, copy the following script into Windows PowerShell ISE, customize the script, and run it.
-???CALL OUT THE ENCLAVE HIGHLIGHTED
+
+Important to note is the use of the `-AllowEnclaveComputations` parameter in the **New-SqlCertificateStoreColumnMasterKeySettings** cmdlet.
 
 ```powershell
 # Create a column master key in Windows Certificate Store.
@@ -192,7 +193,8 @@ $databaseName = "<database name>"
 $connStr = "Data Source = " + $serverName + "; Initial Catalog = " + $databaseName + "; Integrated Security = true"
 $database = Get-SqlDatabase -ConnectionString $connStr
 
-# Create a SqlColumnMasterKeySettings object for your column master key.
+# Create a SqlColumnMasterKeySettings object for your column master key
+# using the -AllowEnclaveComputations parameter.
 $cmkSettings = New-SqlCertificateStoreColumnMasterKeySettings -CertificateStoreLocation "CurrentUser" -Thumbprint $cert.Thumbprint -AllowEnclaveComputations
 
 # Create column master key metadata in the database.

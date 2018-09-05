@@ -48,10 +48,10 @@ Components include a **Launchpad** service used to invoke language-specific laun
 
 The SQL Server Trusted Launchpad is a service that manages and executes external scripts, similar to the way that the full-text indexing and query service launches a separate host for processing full-text queries. The Launchpad service can start only trusted launchers that are published by Microsoft, or that have been certified by Microsoft as meeting requirements for performance and resource management.
 
-| Trusted launchers | SQL Server versions |
+| Trusted launchers | Extension | SQL Server versions |
 |-------------------|---------------------|
-| RLauncher.dll for the R language | SQL Server 2016, SQL Server 2017 |
-| Pythonlauncher.dll for Python 3.5 | SQL Server 2017 |
+| RLauncher.dll for the R language | [R extension](extension-r.md) | SQL Server 2016, SQL Server 2017 |
+| Pythonlauncher.dll for Python 3.5 | [Python extension](extension-py.md) | SQL Server 2017 |
 
 The [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] service runs under its own user account. If you change the account that runs Launchpad, be sure to do so using SQL Server Configuration Manager, to ensure that changes are written to related files.
 

@@ -155,29 +155,6 @@
     href: concepts/extension-r.md
   - name: Python extension
     href: concepts/extension-py.md
-- name: Concepts (old)
-  href: architecture-overview-machine-learning.md
-  items:
-  - name: R
-    href: r/architecture-overview-sql-server-r.md
-    items:
-    - name: R interoperability
-      href: r/r-interoperability-in-sql-server.md
-    - name: Components that support R integration
-      href: r/new-components-in-sql-server-to-support-r.md
-    - name: Security for R
-      href: r/security-overview-sql-server-r.md
-  - name: Python
-    href: python/architecture-overview-sql-server-python.md
-    items:
-    - name: Python in Machine Learning Services
-      href: python/sql-server-python-services.md
-    - name: Python interoperability
-      href: python/python-interoperability.md
-    - name: Components to support Python
-      href: python/new-components-in-sql-server-to-support-python-integration.md
-    - name: Python security
-      href: python/security-overview-sql-server-python-services.md
 - name: How To
   href: r/sql-server-machine-learning-tasks.md
   items:

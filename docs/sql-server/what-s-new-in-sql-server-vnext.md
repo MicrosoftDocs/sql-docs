@@ -59,6 +59,7 @@ Community technology preview (CTP) 2.0 is the first public release of [!INCLUDE[
   - Java language extension
 - [Security](#security)
   - Always Encrypted with secure enclaves
+  - Certificate management in SQL Server Configuration Manager
 
 Continue reading for more details about these features.
 
@@ -202,6 +203,14 @@ For detailed information, see [What's new in SQL Server Machine Learning Service
 
 - **Always Encrypted with secure enclaves**: Expands upon Always Encrypted with in-place encryption and rich computations, by enabling computations on plaintext data inside a secure enclave on the server side. For details, see [Always Encrypted with secure enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md).
 
+- **Certificate management in SQL Server Configuration Manager**: SSL/TLS certificates are widely used to secure access to SQL Server instances. Certificate management is now integrated into the SQL Server Configuration Manager, simplifying common tasks such as:
+
+  - Viewing and validating certificates installed in a SQL Server instance. 
+  - Viewing certificates close to expiration.
+  - Deploy certificates across machines participating in Always On Availability Groups (from the node holding the primary replica).
+  - Deploy certificates across machines participating in a failover cluster instance (from the active node).
+
+Note: User must have administrator permissions on all the cluster nodes.
 ## Next steps
 
 See the [SQL Server 2019 Release Notes](sql-server-vnext-release-notes.md).

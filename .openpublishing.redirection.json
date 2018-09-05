@@ -16,7 +16,7 @@
             "redirect_document_id": false
         }, 
         {
-            "source_path": "docs/advanced-analytics/r/new-components-in-sql-server-to-support-r",
+            "source_path": "docs/advanced-analytics/r/new-components-in-sql-server-to-support-r.md",
             "redirect_url": "https://docs.microsoft.com/advanced-analytics/concepts/extension-r",
             "redirect_document_id": false
         }, 

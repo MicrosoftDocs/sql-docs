@@ -22,7 +22,7 @@ The extensibility framework was introduced in SQL Server 2016 to support the R r
 
 The purpose of the extensibility framework is to provide an interface between SQL Server and data science languages such as R and Python, reducing friction when moving data science solutions into production, and protecting data exposed during the development process. By executing a trusted scripting language within a secure framework managed by SQL Server, database administrators can maintain security while allowing data scientists access to enterprise data.
 
-The following diagram visually describes opportunities and benefits of the extensible artchitecture.
+The following diagram visually describes opportunities and benefits of the extensible architecture.
 
   ![Goals of integration with SQL Server](../media/ml-service-value-add.png "Machine Learning Services Value Add")
 
@@ -30,7 +30,7 @@ Any R or Python script can be run by calling a stored procedure, and the results
 
 + External script execution is subject to SQL Server data security, where a user running external script can only access data that is equally available in a SQL query. If a query fails due to insufficient permission, script run by the same user would also fail for the same reason. SQL Server security is enforced at the table, database, and instance level. Database administrators can manage user access, resources used by external scripts, and external code libraries added to the server.  
 
-+ Scale and optimization opportunities have a dual basis: gains through the databaes platform (ColumnStore Indexes, [resource governance](../../advanced-analytics/r/resource-governance-for-r-services.md)), and extension-specific gains when Microsoft libraries for R and Python are used for data science models. Whereas R is single-threaded, RevoScaleR functions are multi-threaded, capabile of distributing a workload over multiple cores.
++ Scale and optimization opportunities have a dual basis: gains through the database platform (ColumnStore indexes, [resource governance](../../advanced-analytics/r/resource-governance-for-r-services.md)), and extension-specific gains when Microsoft libraries for R and Python are used for data science models. Whereas R is single-threaded, RevoScaleR functions are multi-threaded, capable of distributing a workload over multiple cores.
 
 + Deployment uses SQL Server methodologies: stored procedures wrapping external script, embedded SQL, or T-SQL queries calling functions like PREDICT to return results from forecasting models persisted on the server.
 

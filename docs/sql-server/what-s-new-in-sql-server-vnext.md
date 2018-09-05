@@ -175,7 +175,7 @@ For detailed information, see [What's new in SQL Server Machine Learning Service
 
 ## <a id="security"></a>Security
 
-- **Always Encrypted with secure enclaves**: Expands upon Always Encrypted with in-place encryption and rich computations, by enabling computations on plaintext data inside a secure enclave on the server side. For details, see [Always Encrypted with secure enclaves](../relational-databases/security/encryption/always-encrypted-enclaves).
+- **Always Encrypted with secure enclaves**: Expands upon Always Encrypted with in-place encryption and rich computations, by enabling computations on plaintext data inside a secure enclave on the server side. For details, see [Always Encrypted with secure enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md).
 
 ## Next steps
 

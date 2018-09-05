@@ -154,7 +154,7 @@
   - name: R extension
     href: concepts/extension-r.md
   - name: Python extension
-    href: concepts/extension-py.md
+    href: concepts/extension-python.md
 - name: How To
   href: r/sql-server-machine-learning-tasks.md
   items:

@@ -79,4 +79,4 @@ When connecting from a remote data science client that supports Microsoft R, you
 ## See also
 
 + [Extensibility framework in SQL Server](extensibility-framework.md)
-+ [Python and machine learning extensions in SQL Server](extension-py.md)
++ [Python and machine learning extensions in SQL Server](extension-python.md)

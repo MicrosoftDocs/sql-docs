@@ -64,6 +64,6 @@ When all files have been downloaded, the PowerShell script opens to the folder s
 
 ## See Also
 
-[Python extension in SQL Server](../concepts/extension-py.md)
+[Python extension in SQL Server](../concepts/extension-python.md)
 
 

@@ -361,4 +361,4 @@ In this tutorial, you've learned how to work with Python code embedded in stored
 
 ## See also
 
-[Python extension in SQL Server](../concepts/extension-py.md)
+[Python extension in SQL Server](../concepts/extension-python.md)

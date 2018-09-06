@@ -1,6 +1,6 @@
 ---
 title: "Query Hadoop from SQL Server on Linux | Microsoft Docs"
-ms.date: "08/28/2018"
+ms.date: "09/24/2018"
 ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"

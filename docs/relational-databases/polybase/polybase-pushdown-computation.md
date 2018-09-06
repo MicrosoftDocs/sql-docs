@@ -1,7 +1,7 @@
 ---
 title: "Push-down computations in PolyBase | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/28/2018"
+ms.date: "09/24/2018"
 ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"
@@ -13,6 +13,8 @@ ms.author: jroth
 manager: craigg
 ---
 # Push-down computations in PolyBase
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 TBD
 

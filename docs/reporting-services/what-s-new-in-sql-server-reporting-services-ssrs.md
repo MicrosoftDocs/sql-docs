@@ -3,18 +3,13 @@ title: "What's new in Reporting Services (SSRS) | Microsoft Docs"
 ms.date: "08/17/2018"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "reporting-services"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.custom: ""
-ms.technology: 
+ms.technology: reporting-services
+ms.suite: pro-bi
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "kfile"
+ms.topic: conceptual
+author: maggiesMSFT
+ms.author: maggies
 ---
 
 # What's new in SQL Server Reporting Services (SSRS)

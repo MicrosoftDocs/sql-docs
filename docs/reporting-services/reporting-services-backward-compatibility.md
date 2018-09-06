@@ -1,27 +1,21 @@
 ---
 title: "Backward Compatibility | Reporting Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/12/2016"
+ms.date: 09/12/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "reporting-services"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: reporting-services
+ms.suite: pro-bi
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Reporting Services, backward compatibility"
   - "SSRS, backward compatibility"
   - "SQL Server Reporting Services, backward compatibility"
   - "backward compatibility [Reporting Services]"
 ms.assetid: 675b0e0e-cfee-4790-9675-80fc3ea6d30f
-caps.latest.revision: 44
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ---
 #  Reporting Services Backward Compatibility
 Learn about changes in behavior of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. This covers features that are no longer available or are scheduled to be removed in a future release.

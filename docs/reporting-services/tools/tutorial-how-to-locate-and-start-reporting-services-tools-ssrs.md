@@ -1,16 +1,12 @@
 ---
 title: "Tutorial: How to Locate and Start Reporting Services Tools (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/30/2017"
+ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "tools"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: tools
+ms.suite: pro-bi
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Reporting Services, tutorials"
@@ -23,10 +19,8 @@ helpviewer_keywords:
   - "tutorials [Reporting Services]"
   - "Report Builder"
 ms.assetid: 51ad69d8-fe92-4662-a7cd-d235692f0c03
-caps.latest.revision: 63
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
 ---
 
 # Tutorial: How to Locate and Start Reporting Services Tools (SSRS)

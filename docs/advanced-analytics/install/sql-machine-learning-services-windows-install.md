@@ -22,10 +22,8 @@ This article explains how to install the machine learning component by running t
 
 + A database engine instance is required. You cannot install just R or Python features, although you can add them incrementally to an existing instance.
 
-+ Do not install Machine Learning Services on a SQL Server 2017 failover cluster. The security mechanism used for isolating R and Python processes is not compatible with a Windows Server failover cluster environment.
-
-  On SQL Server vNext, installing Machine Learning Services on a failover cluster is supported. 
-
+- Installing Machine Learning Services is *not supported* on a failover cluster in SQL Server 2017. However, it *is supported* with SQL Server 2019. 
+ 
 + Do not install Machine Learning Services on a domain controller. The Machine Learning Services portion of setup will fail.
 
 + Do not install **Shared Features** > **Machine Learning Server (Standalone)** on the same computer running an in-database instance. A standalone server will compete for the same resources, undermining the performance of both installations.
@@ -143,7 +141,7 @@ Use the following steps to verify that all components used to launch external sc
 
     The **run_value** should now be set to 1.
     
-2. Open the **Services** panel or SQL Server Configuration Manager, and verify **SQL Server Launchpad service** is running. You should have one service for every database engine instance that has R or Python installed. For more information, see [Components to support Python integration](../python/new-components-in-sql-server-to-support-python-integration.md). 
+2. Open the **Services** panel or SQL Server Configuration Manager, and verify **SQL Server Launchpad service** is running. You should have one service for every database engine instance that has R or Python installed. For more information about the service, see [Extensibility framework](../concepts/extensibility-framework.md). 
    
 3. If Launchpad is running, you should be able to run simple R and Python scripts to verify that external scripting runtimes can communicate with SQL Server.
 

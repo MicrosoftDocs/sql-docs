@@ -70,20 +70,41 @@ This example docker command uses the following environment variables to create a
 - **MSSQL_SA_PASSWORD** sets a strong password.
 - **MSSQL_TCP_PORT** sets the TCP port that SQL Server listens on to 1234. This means that instead of mapping port 1433 (default) to a host port, the custom TCP port must be mapped with the `-p 1234:1234` command in this example.
 
+<!--SQL Server 2017 on Linux -->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017 || =sqlallproducts-allversions"
+
 If you are running Docker on Linux/macOS, use the following syntax with single quotes:
 
 ```bash
-docker run -e ACCEPT_EULA=Y -e MSSQL_PID='Developer' -e MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>' -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d microsoft/mssql-server-linux:2017-latest
+docker run -e ACCEPT_EULA=Y -e MSSQL_PID='Developer' -e MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>' -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d mcr.microsoft.com/mssql/server/mssql-server-linux:2017-latest
 ```
 
 If you are running Docker on Windows, use the following syntax with double quotes:
 
 ```bash
-docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<YourStrong!Passw0rd>" -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d microsoft/mssql-server-linux:2017-latest
+docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<YourStrong!Passw0rd>" -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d mcr.microsoft.com/mssql/server/mssql-server-linux:2017-latest
 ```
 
 > [!NOTE]
 > The process for running production editions in containers is slightly different. For more information, see [Run production container images](sql-server-linux-configure-docker.md#production).
+
+::: moniker-end
+<!--SQL Server 2019 on Linux-->
+::: moniker range="= sql-server-linux-ver15 || = sql-server-ver15"
+
+If you are running Docker on Linux/macOS, use the following syntax with single quotes:
+
+```bash
+docker run -e ACCEPT_EULA=Y -e MSSQL_PID='Developer' -e MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>' -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d mcr.microsoft.com/mssql/server/mssql-server-linux:2019-latest
+```
+
+If you are running Docker on Windows, use the following syntax with double quotes:
+
+```bash
+docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<YourStrong!Passw0rd>" -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d mcr.microsoft.com/mssql/server/mssql-server-linux:2019-latest
+```
+
+::: moniker-end
 
 ## Next steps
 

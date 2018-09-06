@@ -30,7 +30,8 @@ PolyBase supports two Hadoop providers, Hortonworks Data Platform (HDP) and Clou
 - Cloudera CDH 4.3 on Linux  
 - Cloudera CDH 5.1 – 5.5, 5.9 - 5.13 on Linux
 
-> [!NOTE] Hadoop follows the "Major.Minor.Version" pattern for its new releases. All versions within a supported Major and Minor release are supported.
+> [!NOTE] 
+> Hadoop follows the "Major.Minor.Version" pattern for its new releases. All versions within a supported Major and Minor release are supported.
 
 ### Configure Hadoop connectivity
 

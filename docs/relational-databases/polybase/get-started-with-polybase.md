@@ -25,60 +25,6 @@ manager: craigg
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-
-## <a name="supported"></a> Configure PolyBase  
-
-After installing, you must configure SQL Server to use either your Hadoop version or Azure Blob Storage. PolyBase supports two Hadoop providers, Hortonworks Data Platform (HDP) and Cloudera Distributed Hadoop (CDH).  The supported external data sources include:  
-  
-- Hortonworks HDP 1.3 on Linux/Windows Server  
-- Hortonworks HDP 2.1 – 2.6 on Linux
-- Hortonworks HDP 2.1 - 2.3 on Windows Server  
-- Cloudera CDH 4.3 on Linux  
-- Cloudera CDH 5.1 – 5.5, 5.9 - 5.13 on Linux  
-- Azure Blob Storage  
-
-Hadoop follows the "Major.Minor.Version" pattern for its new releases. All versions within a supported Major and Minor release are supported.
-
-> [!NOTE]
-> Azure Data Lake Store connectivity is only supported in Azure SQL Data Warehouse.
-  
-### External data source configuration  
-
-1. Run [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) ‘hadoop connectivity’ and set an appropriate value. By Default, the hadoop connectivity is set to 7. To find the value, see [PolyBase Connectivity Configuration &#40;Transact-SQL&#41;](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).
-
-  ```sql  
-  -- Values map to various external data sources.  
-  -- Example: value 7 stands for Azure blob storage and Hortonworks HDP 2.3 on Linux.  
-  sp_configure @configname = 'hadoop connectivity', @configvalue = 7;   
-  GO   
- 
-  RECONFIGURE   
-  GO   
-  ```  
-
-2. You must restart  SQL Server using **services.msc**. Restarting SQL Server restarts these services:  
-
-  - SQL Server PolyBase Data Movement Service  
-  - SQL Server PolyBase Engine  
-  
- ![stop and start PolyBase services in services.msc](../../relational-databases/polybase/media/polybase-stop-start.png "stop and start PolyBase services in services.msc")  
-  
-### Pushdown configuration  
-
-To improve query performance,  enable pushdown computation to a Hadoop cluster:  
-  
-1. Find the file **yarn-site.xml** in the installation path of SQL Server. Typically, the path is:  
-
-  ```xml  
-  C:Program FilesMicrosoft SQL ServerMSSQL13.MSSQLSERVERMSSQLBinnPolybaseHadoopconf  
-  ```  
-
-2. On the Hadoop machine, find the analogous file in the Hadoop configuration directory. In the file, find and copy the value of the configuration key yarn.application.classpath.  
-  
-3. On the SQL Server machine, in the **yarn.site.xml file,** find the **yarn.application.classpath** property. Paste the value from the Hadoop machine into the value element.  
-  
-4. For all CDH 5.X versions, you will need to add the mapreduce.application.classpath configuration parameters either to the end of your yarn.site.xml file or into the mapred-site.xml file. HortonWorks includes these configurations within the yarn.application.classpath configurations. See [PolyBase configuration](../../relational-databases/polybase/polybase-configuration.md) for examples.
-
 ## Scale out PolyBase  
 
 The PolyBase group feature allows you to create a cluster of SQL Server instances to process large data sets from external data sources  in a scale-out fashion for better query performance.  
@@ -103,60 +49,6 @@ For details, see [PolyBase scale-out groups](../../relational-databases/polybase
 
 Create objects depending on the external data source, either Hadoop or Azure Storage.  
   
-### Hadoop  
-
-```sql  
--- 1: Create a database scoped credential.  
--- Create a master key on the database. This is required to encrypt the credential secret.  
-  
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
-  
--- 2: Create a database scoped credential  for Kerberos-secured Hadoop clusters.  
--- IDENTITY: the Kerberos user name.  
--- SECRET: the Kerberos password  
-  
-CREATE DATABASE SCOPED CREDENTIAL HadoopUser1   
-WITH IDENTITY = '<hadoop_user_name>', Secret = '<hadoop_password>';  
-  
--- 3:  Create an external data source.  
--- LOCATION (Required) : Hadoop Name Node IP address and port.  
--- RESOURCE MANAGER LOCATION (Optional): Hadoop Resource Manager location to enable pushdown computation.  
--- CREDENTIAL (Optional):  the database scoped credential, created above.  
-  
-CREATE EXTERNAL DATA SOURCE MyHadoopCluster WITH (  
-      TYPE = HADOOP,   
-      LOCATION ='hdfs://10.xxx.xx.xxx:xxxx',   
-      RESOURCE_MANAGER_LOCATION = '10.xxx.xx.xxx:xxxx',   
-      CREDENTIAL = HadoopUser1      
-);  
-  
--- 4: Create an external file format.  
--- FORMAT TYPE: Type of format in Hadoop (DELIMITEDTEXT,  RCFILE, ORC, PARQUET).   
-CREATE EXTERNAL FILE FORMAT TextFileFormat WITH (  
-      FORMAT_TYPE = DELIMITEDTEXT,   
-      FORMAT_OPTIONS (FIELD_TERMINATOR ='|',   
-            USE_TYPE_DEFAULT = TRUE)  
-  
--- 5:  Create an external table pointing to data stored in Hadoop.  
--- LOCATION: path to file or directory that contains the data (relative to HDFS root).  
-  
-CREATE EXTERNAL TABLE [dbo].[CarSensor_Data] (  
-      [SensorKey] int NOT NULL,   
-      [CustomerKey] int NOT NULL,   
-      [GeographyKey] int NULL,   
-      [Speed] float NOT NULL,   
-      [YearMeasured] int NOT NULL  
-)  
-WITH (LOCATION='/Demo/',   
-      DATA_SOURCE = MyHadoopCluster,  
-      FILE_FORMAT = TextFileFormat  
-);  
-  
--- 6:  Create statistics on an external table.   
-CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)  
-  
-```  
-
 ### Azure Blob Storage  
 
 ```sql  
@@ -216,81 +108,6 @@ WITH (LOCATION='/Demo/',
 CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)  
   
 ```  
-
-## PolyBase queries  
-
-There are three functions that PolyBase is suited for:  
-  
-- ad-hoc queries against external tables.  
-- importing data.  
-- exporting data.  
-  
-### Query examples  
-  
-- Ad-hoc queries  
-
-  ```sql  
-  -- PolyBase Scenario 1: Ad-Hoc Query joining relational with Hadoop data   
-  -- Select customers who drive faster than 35 mph: joining structured customer data stored   
-  -- in SQL Server with car sensor data stored in Hadoop.  
-  SELECT DISTINCT Insured_Customers.FirstName,Insured_Customers.LastName,   
-         Insured_Customers. YearlyIncome, CarSensor_Data.Speed  
-  FROM Insured_Customers, CarSensor_Data  
-  WHERE Insured_Customers.CustomerKey = CarSensor_Data.CustomerKey and CarSensor_Data.Speed > 35   
-  ORDER BY CarSensor_Data.Speed DESC  
-  OPTION (FORCE EXTERNALPUSHDOWN);   -- or OPTION (DISABLE EXTERNALPUSHDOWN)  
-  ```  
-
-- Importing data  
-
-  ```sql  
-  -- PolyBase Scenario 2: Import external data into SQL Server.  
-  -- Import data for fast drivers into SQL Server to do more in-depth analysis and  
-  -- leverage Columnstore technology.  
-  
-  SELECT DISTINCT   
-        Insured_Customers.FirstName, Insured_Customers.LastName,   
-        Insured_Customers.YearlyIncome, Insured_Customers.MaritalStatus  
-  INTO Fast_Customers from Insured_Customers INNER JOIN   
-  (  
-        SELECT * FROM CarSensor_Data where Speed > 35   
-  ) AS SensorD  
-  ON Insured_Customers.CustomerKey = SensorD.CustomerKey  
-  ORDER BY YearlyIncome  
-  
-  CREATE CLUSTERED COLUMNSTORE INDEX CCI_FastCustomers ON Fast_Customers;  
-  ```  
-
-- Exporting data  
-
-  ```sql
-  -- PolyBase Scenario 3: Export data from SQL Server to Hadoop.  
-
-  -- Enable INSERT into external table  
-  sp_configure ‘allow polybase export’, 1;  
-  reconfigure  
-  
-  -- Create an external table.   
-  CREATE EXTERNAL TABLE [dbo].[FastCustomers2009] (  
-        [FirstName] char(25) NOT NULL,   
-        [LastName] char(25) NOT NULL,   
-        [YearlyIncome] float NULL,   
-        [MaritalStatus] char(1) NOT NULL  
-  )  
-  WITH (  
-        LOCATION='/old_data/2009/customerdata',  
-        DATA_SOURCE = HadoopHDP2,  
-        FILE_FORMAT = TextFileFormat,  
-        REJECT_TYPE = VALUE,  
-        REJECT_VALUE = 0  
-  );  
- 
-  -- Export data: Move old data to Hadoop while keeping it query-able via an external table.  
-  INSERT INTO dbo.FastCustomer2009  
-  SELECT T.* FROM Insured_Customers T1 JOIN CarSensor_Data T2  
-  ON (T1.CustomerKey = T2.CustomerKey)  
-  WHERE T2.YearMeasured = 2009 and T2.Speed > 40;  
-  ```  
 
 ## Managing PolyBase objects in SSMS  
 

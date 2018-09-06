@@ -14,6 +14,7 @@ ms.author: jaszymas
 manager: craigg
 monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 ---
+[!INCLUDE[tsql-appliesto-ssvnext-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssvnext-xxxx-xxxx-xxx.md)]
 
 # Always Encrypted with Secure Enclaves
 

@@ -4,7 +4,7 @@ description: New feature announcements for each release of SQL Server 2016 R Ser
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 08/28/2018  
+ms.date: 09/24/2018  
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
@@ -19,7 +19,7 @@ Machine learning capabilities are added to SQL Server in each release as we cont
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 ## New in SQL Server vNext
 
-This release adds the top-requested features for R and Python machine learning operations in SQL Server. For more information about other features in this release, see [What's new in SQL Server vNext](../sql-server/what-s-new-in-sql-server-vnext.md)
+This release adds the top-requested features for R and Python machine learning operations in SQL Server. For more information about other features in this release, see [What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md) and [Release Notes for SQL Server 2019](../sql-server/sql-server-ver15-release-notes.md).
 
 | Release | Date | Feature update |
 |---------|------|----------------|

@@ -95,6 +95,23 @@ PolyBase enables the following scenarios in SQL Server:
 
 ## Next steps
 
-To get started with PolyBase and Hadoop, see the following quickstart:
+Before using PolyBase, you must [install the PolyBase feature](polybase-installation.md). Then see the following configuration guides depending on your data source:
 
-[Quickstart: Query external data in Hadoop from SQL Server](quickstart-query-hadoop-windows.md).
+<!--SQL Server 2016/2017-->
+::: moniker range="= sql-server-2016 || = sql-server-2017 || =sqlallproducts-allversions"
+
+- [Hadoop](polybase-configure-hadoop.md)
+- [Azure Blob Storage](polybase-configure-azure-blob-storage.md)
+
+::: moniker-end
+<!--SQL Server 2019-->
+::: moniker range=">= sql-server-ver15"
+
+- [Hadoop](polybase-configure-hadoop.md)
+- [Azure Blob Storage](polybase-configure-azure-blob-storage.md)
+- [SQL Server](polybase-configure-sql-server.md)
+- [Oracle](polybase-configure-oracle.md)
+- [Teradata](polybase-configure-teradata.md)
+- [MongoDB](polybase-configure-mongodb.md)
+
+::: moniker-end

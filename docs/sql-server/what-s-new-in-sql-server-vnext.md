@@ -148,7 +148,7 @@ Full support for the widely used UTF-8 character encoding as an import or export
 
 For example,`LATIN1_GENERAL_100_CI_AS_SC` to `LATIN1_GENERAL_100_CI_AS_SC_UTF8`. UTF-8 is only available to Windows collations that support supplementary characters, as introduced in SQL Server 2012. Note that NCHAR and NVARCHAR allow UTF-16 encoding only, and remain unchanged.
 
-This may provide significant storage savings, depending on the character set in use. For example, changing an existing column data type from NCHAR(10) to CHAR(10) using an UTF-8 enabled collation, translates into 50% reduction in storage requirements. This is because NCHAR(10) requires 22 bytes for storage, whereas CHAR(10) requires 12 bytes for the same Unicode string.
+This may provide significant storage savings, depending on the character set in use. For example, changing an existing column data type from NCHAR(10) to CHAR(10) using an UTF-8 enabled collation, translates into nearly 50% reduction in storage requirements. This is because NCHAR(10) requires 22 bytes for storage, whereas CHAR(10) requires 12 bytes for the same Unicode string.
 
 ### Lightweight query profiling infrastructure enabled by default
 
@@ -172,6 +172,27 @@ Data discovery and classification provides advanced capabilities natively built 
 >[!NOTE]
 >There are no changes in terms of how audit is enabled. There is a new field added to the audit records, `data_sensitivity_information`, which logs the sensitivity classifications (labels) of the actual data that was returned by the query. See [Auditing access to sensitive data](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-data-discovery-and-classification#subheading-3).
 
+### Support for columnstore statistics in DBCC CLONEDATABASE
+
+DBCC CLONEDATABASE creates a schema-only copy of a database which includes all the elements necessary to troubleshoot query performance issues without copying the data.  In previous versions of SQL Server, the command did not copy the statistics necessary to accurately troubleshoot columnstore index queries and manual steps were required to capture this information.  Now in SQL Server 2019, DBCC CLONEDATABASE automatically captures the stats blobs for columnstore indexes, so no manual steps will be required.
+
+### New options added to sp_estimate_data_compression_savings
+
+`sp_estimate_data_compression_savings` returns the current size of the requested object and estimates the object size for the requested compression state.  Currently this procedure supports three options: NONE, Row and Page.  SQL Server 2019 introduces two new options: COLUMNSTORE and COLUMNSTORE_ARCHIVE.  These new options will allow you to estimate the space savings if a columnstore index is created on the table using either standard or archive columnstore compression.
+
+### sys.dm_db_page_info
+
+`sys.dm_db_page_info(database_id, file_id, page_id, mode)` returns information about a page in a database.  The function returns a row that contains the header information from the page, including the `object_id`, `index_id` and `partition_id`.  This replaces the need to use DBCC PAGE in most cases.  
+
+In order to facilitate troubleshooting of page-related waits, a new column called page_resource was also added to `sys.dm_exec_requests` and `sys.sysprocesses`.  This new column allows you to join `sys.dm_db_page_info` to these views via another new system function - `sys.fn_PageResCracker`.  See the following script as an example:
+
+```sql
+SELECT page_info.* 
+FROM sys.dm_exec_requests AS d 
+  CROSS APPLY sys.fn_PageResCracker(d.page_resource) AS r
+  CROSS APPLY sys.dm_db_page_info(r.db_id, r.file_id, r.page_id,'DETAILED')
+    AS page_info
+```
 
 ## <a id="ha"></a> High Availability
 

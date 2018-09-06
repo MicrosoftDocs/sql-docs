@@ -185,9 +185,9 @@
     - name: SQL Server on Linux
       href: /sql/linux/
       homepage: /sql/linux/sql-server-linux-overview
-    - name: SQL Server Programming Extensions
+    - name: Programming Extensions
       href: /sql/advanced-analytics/
-      homepage: /sql/advanced-analytics/index
+      homepage: /sql/advanced-analytics/programming-ext-overview
       items:
       - name: Java
         href: sql/advanced-analytics/java

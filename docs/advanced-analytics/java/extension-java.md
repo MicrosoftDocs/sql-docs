@@ -34,6 +34,6 @@ Programmatic access to the code occurs when you call the procedure from your cod
 
 ## See also
 
-[Install SQL Server Machine Learning Services on Windows](install/sql-machine-learning-services-windows-install.md)
+[Install SQL Server Machine Learning Services on Windows](../install/sql-machine-learning-services-windows-install.md)
 
 [Install SQL Server Machine Learning Services on Linux](../../linux/sql-server-linux-setup-machine-learning.md)

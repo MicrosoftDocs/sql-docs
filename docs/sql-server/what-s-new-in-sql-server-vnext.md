@@ -213,7 +213,8 @@ For detailed information, see [What's new in SQL Server Machine Learning Service
 
 ## <a id="security"></a>Security
 
-- **Always Encrypted with secure enclaves**: Expands upon Always Encrypted with in-place encryption and rich computations by enabling computations on plaintext data inside a secure enclave on the server side. For details, see [Always Encrypted with secure enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md).
+- **Always Encrypted with secure enclaves**: Expands upon Always Encrypted with in-place encryption and rich computations by enabling computations on plaintext data inside a secure enclave on the server side.
+  - Cryptographic operations (encrypting columns, rotating columns encryption keys, etc), can now be issued using Transact-SQL and do not require moving data out of the database. Secure enclaves unlock Always Encrypted to a much broader set of scenarios and applications that demand sensitive data to be protected in use, while also requiring rich computations on protected data to be supported within the database system. For details, see [Always Encrypted with secure enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md).
 
 - **Certificate management in SQL Server Configuration Manager**: SSL/TLS certificates are widely used to secure access to SQL Server instances. Certificate management is now integrated into the SQL Server Configuration Manager, simplifying common tasks such as:
 
@@ -229,7 +230,6 @@ For detailed information, see [What's new in SQL Server Machine Learning Service
 - [**SQL Server Management Studio (SSMS) 18.0 (preview)**](../ssms/sql-server-management-studio-ssms.md)
 
   - Support for Always Encrypted with secure enclaves.
-  - SSMS 18.0 is based on the Visual Studio 2017 Isolated Shell.
 
 - [**Azure Data Studio (preview)**](../sql-operations-studio/what-is.md)
 

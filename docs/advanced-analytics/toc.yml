@@ -3,7 +3,7 @@
 - name: Java extensions
   items:
   - name: Run Java code on SQL
-    href: 
+    href: java/extension-java.md
 - name: SQL Server Machine Learning (R, Python)
   items:
   - name: Machine Learning Services  (R, Python)

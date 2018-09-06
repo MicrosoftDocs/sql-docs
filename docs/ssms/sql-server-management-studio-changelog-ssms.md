@@ -69,9 +69,9 @@ Object Explorer:
 Azure SQL: 
 
 - Fixed an issue related to enumeration of databases in the "Available Databases" where "master" was not displayed in the dropdown when connected to a specific database. 
-- Fixed an issue where trying to generate a script ("Data" or "Schema and Data") was failing then connected to the SQL Azure DB uwing AAD with MFA. 
+- Fixed an issue where trying to generate a script ("Data" or "Schema and Data") was failing then connected to the SQL Azure DB using AAD with MFA. 
 - Fixed an issue in the View Designer (Views) where it was not possible to select "Add Tables" from the UI when connected to a SQL Azure DB. 
-- Fixed an issue where SSMS Query Editor was silently closing and reopening connections during MFA token renewal. This will prevent side effects unbeknownst to the user (like closing a transaction and never reopening again) from happening. The change adds adds the token expiration time to the properties window. 
+- Fixed an issue where SSMS Query Editor was silently closing and reopening connections during MFA token renewal. This will prevent side effects unbeknownst to the user (like closing a transaction and never reopening again) from happening. The change adds the token expiration time to the properties window. 
 - Fixed an issue where SSMS was not enforcing password prompts for imported MSA accounts for AAD with MFA login. 
 
 Activity Monitor: 
@@ -86,7 +86,7 @@ Microsoft Azure integration:
 Object Scripting: 
 
 - When scripting "Drop and Create", SSMS now avoids generating dynamic T-SQL.
-- When scripting a database object, SSMS now does not generate script to set database scoped configurations , if they are set to default values.
+- When scripting a database object, SSMS now does not generate script to set database scoped configurations, if they are set to default values.
 
 Help:
 

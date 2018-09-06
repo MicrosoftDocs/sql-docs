@@ -12,9 +12,42 @@
     href: r/sql-server-r-services.md
   - name: Standalone server
     href: r/r-server-standalone.md
-  - name: What's new
+  - name: What's New
     href: what-s-new-in-sql-server-machine-learning-services.md
+<<<<<<< HEAD
   - name: Install
+=======
+- name: Install
+  items:
+  - name: Differences in SQL Server 2019 installation
+    href: install/sql-machine-learning-services-ver15.md
+  - name: Machine Learning Services (R, Python, Java)
+    href: install/sql-machine-learning-services-windows-install.md
+  - name: R Services
+    href: install/sql-r-services-windows-install.md
+  - name: Standalone server (R, Python)
+    href: install/sql-machine-learning-standalone-windows-install.md
+  - name: Pre-trained models
+    href: install/sql-pretrained-models-install.md
+  - name: Offline setup (no internet)
+    href: install/sql-ml-component-install-without-internet-access.md
+    items:
+    - name: CAB downloads (offline setup)
+      href: install/sql-ml-cab-downloads.md
+  - name: Command-prompt setup
+    href: install/sql-ml-component-commandline-install.md
+  - name: Upgrade R and Python
+    href: r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md
+  - name: Set up R tools55
+    href: r/set-up-a-data-science-client.md
+  - name: Set up Python tools
+    href: python/setup-python-client-tools-sql.md
+  - name: Set up a virtual server
+    href: r/installing-sql-server-r-services-on-an-azure-virtual-machine.md
+- name: Quickstarts
+  items:
+  - name: R
+>>>>>>> 35bbc6a6dde3fe54e1e07dfca409acea85047529
     items:
     - name: Differences in SQL Server 2019 installation
       href: install/sql-machine-learning-services-ver15.md
@@ -170,6 +203,7 @@
     - name: Python
       href: python/architecture-overview-sql-server-python.md
       items:
+<<<<<<< HEAD
       - name: Python in Machine Learning Services
         href: python/sql-server-python-services.md
       - name: Python interoperability
@@ -182,6 +216,45 @@
     href: r/sql-server-machine-learning-tasks.md
     items:
     - name: Package management
+=======
+      - name: Get data and scripts
+        href: tutorials/sqldev-py1-download-the-sample-data.md
+      - name: Import data
+        href: tutorials/sqldev-py2-import-data-to-sql-server-using-powershell.md
+      - name: Explore and visualize data
+        href: tutorials/sqldev-py3-explore-and-visualize-the-data.md
+      - name: Create data features
+        href: tutorials/sqldev-py4-create-data-features-using-t-sql.md
+      - name: Train and save the model
+        href: tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md
+      - name: Operationalize the model
+        href: tutorials/sqldev-py6-operationalize-the-model.md
+- name: Samples
+  href: https://github.com/Microsoft/sql-server-samples
+- name: Solutions
+  href: tutorials/data-science-scenarios-and-solution-templates.md
+- name: Concepts
+  items:
+  - name: Extensibility framework
+    href: concepts/extensibility-framework.md
+  - name: R extension
+    href: concepts/extension-r.md
+  - name: Python extension
+    href: concepts/extension-python.md
+- name: How To
+  href: r/sql-server-machine-learning-tasks.md
+  items:
+  - name: Package management
+    items:
+    - name: Default packages
+      href: r/installing-and-managing-r-packages.md
+    - name: Get package information
+      href: r/determine-which-packages-are-installed-on-sql-server.md
+    - name: Install new Python packages
+      href: python/install-additional-python-packages-on-sql-server.md
+    - name: Install new R packages
+      href: r/install-additional-r-packages-on-sql-server.md
+>>>>>>> 35bbc6a6dde3fe54e1e07dfca409acea85047529
       items:
       - name: Default packages
         href: r/installing-and-managing-r-packages.md
@@ -192,6 +265,7 @@
       - name: Install new R packages
         href: r/install-additional-r-packages-on-sql-server.md
         items:
+<<<<<<< HEAD
         - name: Use R package managers
           href: r/use-r-package-managers-on-sql-server.md
         - name: Use T-SQL
@@ -277,6 +351,125 @@
         href: r/monitor-r-services-using-custom-reports-in-management-studio.md
   - name: Package reference
     href: r/machine-learning-services-r-reference.md
+=======
+        - name: Enable remote R package management
+          href: r/r-package-how-to-enable-or-disable.md
+        - name: Synchronize R packages
+          href: r/package-install-uninstall-and-sync.md
+      - name: Create a miniCRAN repo
+        href: r/create-a-local-package-repository-using-minicran.md
+      - name: Tips for using R packages
+        href: r/packages-installed-in-user-libraries.md
+  - name: Data exploration and modeling
+    items:
+    - name: R libraries and data types
+      href: r/r-libraries-and-data-types.md
+    - name: Python libraries and data types
+      href: python/python-libraries-and-data-types.md
+    - name: Predictive modeling with R
+      href: r/data-exploration-and-predictive-modeling-with-r.md
+    - name: Load R objects using ODBC
+      href: r/save-and-load-r-objects-from-sql-server-using-odbc.md
+    - name: Converting R Code for Use in Machine Learning Services
+      href: r/converting-r-code-for-use-in-sql-server.md
+    - name: Creating multiple models using rxExecBy
+      href: r/creating-multiple-models-using-rxexecby.md
+    - name: Use data from OLAP cubes in R
+      href: r/using-data-from-olap-cubes-in-r.md
+    - name: Create a stored procedure using sqlrutils
+      href: r/how-to-create-a-stored-procedure-using-sqlrutils.md
+  - name: Predictions
+    items:
+    - name: How to generate predictions
+      href: r/how-to-do-realtime-scoring.md   
+    - name: Real-time scoring with sp_rxPredict
+      href: real-time-scoring.md
+    - name: Native scoring with PREDICT T-SQL
+      href: sql-native-scoring.md
+  - name: Performance
+    items:
+    - name: Performance tuning for R - Overview
+      href: r/sql-server-r-services-performance-tuning.md
+    - name: Performance tuning for R - SQL Server configuration)
+      href: r/sql-server-configuration-r-services.md
+    - name: Performance tuning for R - R and data optimization
+      href: r/r-and-data-optimization-r-services.md
+    - name: Performance tuning for R - Results
+      href: r/performance-case-study-r-services.md
+    - name: Use R code profiling functions
+      href: r/using-r-code-profiling-functions.md
+  - name: Security
+    items:
+    - name: Security considerations for the R runtime in SQL Server
+      href: r/security-considerations-for-the-r-runtime-in-sql-server.md
+    - name: Security for R
+      href: r/security-overview-sql-server-r.md
+    - name: Python security
+      href: python/security-overview-sql-server-python-services.md
+    - name: SQL Server Launchpad service account
+      href: general/sql-server-launchpad-service-account.md
+    - name: Modify SQLRUserGroup
+      href: r/modify-the-user-account-pool-for-sql-server-r-services.md
+    - name: Add SQLRUserGroup as a database user
+      href: r/add-sqlrusergroup-to-database.md
+  - name: Administration
+    items:
+    - name: Configure and manage R
+      href: r/configuration-sql-server-r-services.md
+    - name: Advanced configuration options for Machine Learning Services
+      href: r/configure-and-manage-advanced-analytics-extensions.md
+    - name: Deploy and consume models using web services
+      href: operationalization-with-mrsdeploy.md
+    - name: Manage and monitor solutions
+      href: r/managing-and-monitoring-r-solutions.md
+    - name: Resource governance for Machine Learning Services
+      href: r/resource-governance-for-r-services.md
+    - name: Create a resource pool for machine learning
+      href: r/how-to-create-a-resource-pool-for-r.md
+    - name: Extended events for Machine Learning Services
+      href: r/extended-events-for-sql-server-r-services.md
+    - name: Extended events for monitoring PREDICT statements
+      href: xe-event-predict-tsql.md
+    - name: DMVs for Machine Learning Services
+      href: r/dmvs-for-sql-server-r-services.md
+    - name: Using R code profiling functions
+      href: r/using-r-code-profiling-functions.md
+    - name: Monitor Machine Learning Services using custom reports in Management Studio
+      href: r/monitor-r-services-using-custom-reports-in-management-studio.md
+- name: Package reference
+  href: r/machine-learning-services-r-reference.md
+  items:
+  - name: MicrosoftML in SQL
+    href: using-the-microsoftml-package.md
+  - name: RevoScaleR in SQL
+    href: r/revoscaler-overview.md
+  - name: RevoScaleR function list for SQL Server data
+    href: r/scaler-functions-for-working-with-sql-server-data.md
+  - name: sqlrutils in SQL
+    href: r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md
+  - name: olapR in SQL
+    href: r/how-to-create-mdx-queries-using-olapr.md
+  - name: revoscalepy in SQL
+    href: python/what-is-revoscalepy.md
+- name: Resources
+  items:
+  - name: Known issues
+    href: known-issues-for-sql-server-machine-learning-services.md
+  - name: Release notes
+    href: https://docs.microsoft.com/sql/sql-server/sql-server-2017-release-notes
+  - name: Troubleshooting
+    href: machine-learning-troubleshooting-faq.md
+    items:
+    - name: Data collection
+      href: data-collection-ml-troubleshooting-process.md
+    - name: Install and upgrade errors
+      href: r/upgrade-and-installation-faq-sql-server-r-services.md
+    - name: Launchpad and external script execution errors
+      href: common-issues-external-script-execution.md
+    - name: R scripting errors
+      href: r-script-execution-errors.md
+  - name: Blogs
+>>>>>>> 35bbc6a6dde3fe54e1e07dfca409acea85047529
     items:
     - name: MicrosoftML in SQL
       href: using-the-microsoftml-package.md

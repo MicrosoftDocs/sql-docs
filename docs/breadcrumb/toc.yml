@@ -191,7 +191,7 @@
       items:
       - name: Java
         href: /sql/advanced-analytics/java/
-        homepage: sql/advanced-analytics/java/extension-java
+        homepage: /sql/advanced-analytics/java/extension-java
       - name: R
         href: /sql/advanced-analytics/r/
         homepage: /sql/advanced-analytics/r/architecture-overview-sql-server-r

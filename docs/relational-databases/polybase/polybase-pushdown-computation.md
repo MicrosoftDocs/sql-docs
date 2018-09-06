@@ -14,6 +14,8 @@ manager: craigg
 ---
 # Push-down computations in PolyBase
 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 TBD
 
 ## Next steps

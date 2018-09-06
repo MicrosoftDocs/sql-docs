@@ -15,6 +15,8 @@ monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 ---
 # Configure PolyBase to access external data in MongoDB
 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 TBD
 
 ## Next steps

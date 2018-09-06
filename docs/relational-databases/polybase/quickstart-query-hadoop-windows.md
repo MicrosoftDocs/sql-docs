@@ -14,6 +14,8 @@ manager: craigg
 ---
 # Query Hadoop from SQL Server on Windows
 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 TBD
 
 ## Next steps

@@ -15,11 +15,14 @@ manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # PolyBase features and limitations
+
 [!INCLUDE[appliesto-ss2016-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+
 Summary of PolyBase features available for SQL Server products and services.  
   
-## Feature Summary for Product Releases  
- This table summarizes key features for PolyBase and the products in which they are available.  
+## Feature Summary for Product Releases
+
+This table summarizes key features for PolyBase and the products in which they are available.  
   
 ||||||
 |-|-|-|-|-|   
@@ -35,8 +38,8 @@ Summary of PolyBase features available for SQL Server products and services.
 |Export data from Azure Data Lake Store|no|no|yes|no|
 |Run PolyBase queries from Microsoft's BI tools|yes|no|yes|yes|   
 
-
 ## Pushdown computation supported T-SQL operators
+
 In SQL Server and APS, not all T-SQL operators can be pushdown to the hadoop cluster. The table below lists the all supported and a subset of the unsupported operators. 
 
 ||||
@@ -50,7 +53,7 @@ In SQL Server and APS, not all T-SQL operators can be pushdown to the hadoop clu
 |Sorts|no|no|
 
 Partial aggregation means that a final aggregation must occur once the data reaches SQL Server, but a portion of the aggregation occurs in Hadoop. This is a common method computing aggregations in Massively Parallel Processing systems.  
+
 ## See Also  
- [PolyBase Guide](../../relational-databases/polybase/polybase-guide.md)  
-  
-  
+
+[PolyBase Guide](../../relational-databases/polybase/polybase-guide.md)  

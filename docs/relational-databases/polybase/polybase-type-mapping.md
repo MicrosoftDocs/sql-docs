@@ -14,6 +14,8 @@ manager: craigg
 ---
 # Type mapping with PolyBase
 
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 TBD
 
 ## Next steps

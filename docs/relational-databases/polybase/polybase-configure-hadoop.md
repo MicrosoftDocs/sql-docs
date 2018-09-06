@@ -14,6 +14,8 @@ manager: craigg
 ---
 # Configure PolyBase to access external data in Hadoop
 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 TBD
 
 ## Next steps

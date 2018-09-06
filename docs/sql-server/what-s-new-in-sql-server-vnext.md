@@ -62,8 +62,8 @@ Community technology preview (CTP) 2.0 is the first public release of [!INCLUDE[
   - Always Encrypted with secure enclaves
   - Certificate management in SQL Server Configuration Manager
 - [Tools](#tools)
-  - SSMS 18.0 (preview)
-  - Azure Data Studio 
+  - SQL Server Management Studio (SSMS) 18.0 (preview)
+  - Azure Data Studio (preview)
 
 Continue reading for more details about these features.
 
@@ -213,7 +213,7 @@ For detailed information, see [What's new in SQL Server Machine Learning Service
 
 ## <a id="security"></a>Security
 
-- **Always Encrypted with secure enclaves**: Expands upon Always Encrypted with in-place encryption and rich computations, by enabling computations on plaintext data inside a secure enclave on the server side. For details, see [Always Encrypted with secure enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md).
+- **Always Encrypted with secure enclaves**: Expands upon Always Encrypted with in-place encryption and rich computations by enabling computations on plaintext data inside a secure enclave on the server side. For details, see [Always Encrypted with secure enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md).
 
 - **Certificate management in SQL Server Configuration Manager**: SSL/TLS certificates are widely used to secure access to SQL Server instances. Certificate management is now integrated into the SQL Server Configuration Manager, simplifying common tasks such as:
 
@@ -226,8 +226,12 @@ For detailed information, see [What's new in SQL Server Machine Learning Service
 
 ## <a id="tools"></a>Tools
 
-- [**SQL Server Management Studio (SSMS) 18.0 (preview)**](../ssms/sql-server-management-studio-ssms.md) 
-- [**Azure Data Studio**](../sql-operations-studio/what-is.md)
+- [**SQL Server Management Studio (SSMS) 18.0 (preview)**](../ssms/sql-server-management-studio-ssms.md)
+
+  - Support for Always Encrypted with secure enclaves.
+  - SSMS 18.0 is based on the Visual Studio 2017 Isolated Shell.
+
+- [**Azure Data Studio (preview)**](../sql-operations-studio/what-is.md)
 
 
 ## Next steps

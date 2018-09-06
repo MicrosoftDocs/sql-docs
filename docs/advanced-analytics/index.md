@@ -17,7 +17,9 @@ Learn how to use external libraries and languages on resident, relational data w
 
 R and Python libraries in [SQL Server machine learning](what-is-sql-server-machine-learning.md) include base distributions, machine learning algorithms, and functions for conducting high-performance analytics at scale, without having to transfer data across the network. 
 
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 Java code execution uses the same extensibility framework as R and Python, but does not include data science and machine learning function libraries.
+::: moniker-end
 
 |   |   | 
 |---|---|-

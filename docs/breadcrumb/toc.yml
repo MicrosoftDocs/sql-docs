@@ -187,27 +187,23 @@
       homepage: /sql/linux/sql-server-linux-overview
     - name: Programming Extensions
       href: /sql/advanced-analytics/
-      homepage: /sql/advanced-analytics/programming-ext-overview
+      homepage: /sql/advanced-analytics/index
       items:
       - name: Java
         href: sql/advanced-analytics/java
         homepage: sql/advanced-analytics/java/extension-java
-      - name: Machine Learning (R, Python)
-        href: /sql/advanced-analytics/
-        homepage: /sql/advanced-analytics/what-is-sql-server-machine-learning
-        items:
-        - name: R
-          href: /sql/advanced-analytics/r/
-          homepage: /sql/advanced-analytics/r/architecture-overview-sql-server-r
-        - name: Python
-          href: /sql/advanced-analytics/python/
-          homepage: /sql/advanced-analytics/python/sql-server-python-services
-        - name: Install
-          href: /sql/advanced-analytics/install/
-          homepage: /sql/advanced-analytics/install/sql-machine-learning-services-windows-install
-        - name: Learn
-          href: /sql/advanced-analytics/tutorials/
-          homepage: /sql/advanced-analytics/tutorials/machine-learning-services-tutorials
+      - name: R
+        href: /sql/advanced-analytics/r/
+        homepage: /sql/advanced-analytics/r/architecture-overview-sql-server-r
+      - name: Python
+        href: /sql/advanced-analytics/python/
+        homepage: /sql/advanced-analytics/python/sql-server-python-services
+      - name: Install
+        href: /sql/advanced-analytics/install/
+        homepage: /sql/advanced-analytics/install/sql-machine-learning-services-windows-install
+      - name: Learn
+        href: /sql/advanced-analytics/tutorials/
+        homepage: /sql/advanced-analytics/tutorials/machine-learning-services-tutorials
     - name: SQL Server
       href: /sql/sql-server/
       homepage: /sql/sql-server/sql-server-technical-documentation

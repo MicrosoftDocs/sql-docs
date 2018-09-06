@@ -190,7 +190,7 @@
       homepage: /sql/advanced-analytics/what-is-sql-server-machine-learning
       items:
       - name: Java
-        href: sql/advanced-analytics/java
+        href: sql/advanced-analytics/java/
         homepage: sql/advanced-analytics/java/extension-java
       - name: R
         href: /sql/advanced-analytics/r/

@@ -55,7 +55,7 @@ After mapping to a worker account, [!INCLUDE[rsql_launchpad_md](../../includes/r
 
 When all [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] operations are completed, the user worker account is marked as free and returned to the pool.
 
-For more information about [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)], see [Components in SQL Server to support R integration](../../advanced-analytics/r/new-components-in-sql-server-to-support-r.md).
+For more information about the service, see [Extensibility framework](../concepts/extensibility-framework.md). 
 
 ### Implied authentication
 

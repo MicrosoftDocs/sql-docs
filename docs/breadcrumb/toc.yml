@@ -185,9 +185,9 @@
     - name: SQL Server on Linux
       href: /sql/linux/
       homepage: /sql/linux/sql-server-linux-overview
-    - name: Programming Extensions
+    - name: SQL Server Machine Learning Services
       href: /sql/advanced-analytics/
-      homepage: /sql/advanced-analytics/index
+      homepage: /sql/advanced-analytics/what-is-sql-server-machine-learning
       items:
       - name: Java
         href: sql/advanced-analytics/java
@@ -200,10 +200,10 @@
         homepage: /sql/advanced-analytics/python/sql-server-python-services
       - name: Install
         href: /sql/advanced-analytics/install/
-        homepage: /sql/advanced-analytics/install/sql-machine-learning-services-windows-install
+        homepage: /sql/advanced-analytics/install/sql-machine-learning-services-windows-install.md
       - name: Learn
         href: /sql/advanced-analytics/tutorials/
-        homepage: /sql/advanced-analytics/tutorials/machine-learning-services-tutorials
+        homepage: /sql/advanced-analytics/tutorials/machine-learning-services-tutorials  
     - name: SQL Server
       href: /sql/sql-server/
       homepage: /sql/sql-server/sql-server-technical-documentation

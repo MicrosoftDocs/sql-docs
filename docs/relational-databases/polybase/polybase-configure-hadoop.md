@@ -38,23 +38,23 @@ First, configure SQL Server PolyBase to use your specific Hadoop provider.
 
 1. Run [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) with 'hadoop connectivity' and set an appropriate value for your provider. To find the value for your provider, see [PolyBase Connectivity Configuration](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md). By Default, the Hadoop connectivity is set to 7.
 
-  ```sql  
-  -- Values map to various external data sources.  
-  -- Example: value 7 stands for Hortonworks HDP 2.1 to 2.6 on Linux,
-  -- 2.1 to 2.3 on Windows Server, and Azure blob storage  
-  sp_configure @configname = 'hadoop connectivity', @configvalue = 7;
-  GO
+   ```sql  
+   -- Values map to various external data sources.  
+   -- Example: value 7 stands for Hortonworks HDP 2.1 to 2.6 on Linux,
+   -- 2.1 to 2.3 on Windows Server, and Azure blob storage  
+   sp_configure @configname = 'hadoop connectivity', @configvalue = 7;
+   GO
 
-  RECONFIGURE
-  GO
-  ```  
+   RECONFIGURE
+   GO
+   ```  
 
 1. You must restart SQL Server using **services.msc**. Restarting SQL Server restarts these services:  
 
-  - SQL Server PolyBase Data Movement Service  
-  - SQL Server PolyBase Engine  
+   - SQL Server PolyBase Data Movement Service  
+   - SQL Server PolyBase Engine  
   
- ![stop and start PolyBase services in services.msc](../../relational-databases/polybase/media/polybase-stop-start.png "stop and start PolyBase services in services.msc")  
+   ![stop and start PolyBase services in services.msc](../../relational-databases/polybase/media/polybase-stop-start.png "stop and start PolyBase services in services.msc")  
   
 ## Enable pushdown computation  
 
@@ -62,9 +62,9 @@ To improve query performance, enable pushdown computation to your Hadoop cluster
   
 1. Find the file **yarn-site.xml** in the installation path of SQL Server. Typically, the path is:  
 
-  ```xml  
-  C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolybaseHadoopconf  
-  ```  
+   ```xml  
+   C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolybaseHadoopconf  
+   ```  
 
 1. On the Hadoop machine, find the analogous file in the Hadoop configuration directory. In the file, find and copy the value of the configuration key yarn.application.classpath.  
   
@@ -209,6 +209,12 @@ SELECT T.* FROM Insured_Customers T1 JOIN CarSensor_Data T2
 ON (T1.CustomerKey = T2.CustomerKey)  
 WHERE T2.YearMeasured = 2009 and T2.Speed > 40;  
 ```  
+
+## View PolyBase objects in SSMS  
+
+In SSMS, external tables are displayed in a separate folder **External Tables**. External data sources and external file formats are in subfolders under **External Resources**.  
+  
+![PolyBase objects in SSMS](media/polybase-management.png)  
 
 ## Next steps
 

@@ -100,18 +100,18 @@ Before using PolyBase, you must [install the PolyBase feature](polybase-installa
 <!--SQL Server 2016/2017-->
 ::: moniker range="= sql-server-2016 || = sql-server-2017 || =sqlallproducts-allversions"
 
-- [Configure PolyBase to access external data in Hadoop](polybase-configure-hadoop.md)
-- [Configure PolyBase to access external data in Azure Blob Storage](polybase-configure-azure-blob-storage.md)
+- [Hadoop](polybase-configure-hadoop.md)
+- [Azure Blob Storage](polybase-configure-azure-blob-storage.md)
 
 ::: moniker-end
 <!--SQL Server 2019-->
 ::: moniker range=">= sql-server-ver15"
 
-- [Configure PolyBase to access external data in Hadoop](polybase-configure-hadoop.md)
-- [Configure PolyBase to access external data in Azure Blob Storage](polybase-configure-azure-blob-storage.md)
-- [Configure PolyBase to access external data in SQL Server](polybase-configure-sql-server.md)
-- [Configure PolyBase to access external data in Oracle](polybase-configure-oracle.md)
-- [Configure PolyBase to access external data in Teradata](polybase-configure-teradata.md)
-- [Configure PolyBase to access external data in MongoDB](polybase-configure-mongodb.md)
+- [Hadoop](polybase-configure-hadoop.md)
+- [Azure Blob Storage](polybase-configure-azure-blob-storage.md)
+- [SQL Server](polybase-configure-sql-server.md)
+- [Oracle](polybase-configure-oracle.md)
+- [Teradata](polybase-configure-teradata.md)
+- [MongoDB](polybase-configure-mongodb.md)
 
 ::: moniker-end

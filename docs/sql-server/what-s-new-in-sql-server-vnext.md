@@ -61,6 +61,9 @@ Community technology preview (CTP) 2.0 is the first public release of [!INCLUDE[
 - [Security](#security)
   - Always Encrypted with secure enclaves
   - Certificate management in SQL Server Configuration Manager
+- [Tools](#tools)
+  - SQL Server Management Studio (SSMS) 18.0 (preview)
+  - Azure Data Studio (preview)
 
 Continue reading for more details about these features.
 
@@ -225,7 +228,8 @@ For detailed information, see [What's new in SQL Server Machine Learning Service
 
 ## <a id="security"></a>Security
 
-- **Always Encrypted with secure enclaves**: Expands upon Always Encrypted with in-place encryption and rich computations, by enabling computations on plaintext data inside a secure enclave on the server side. For details, see [Always Encrypted with secure enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md).
+- **Always Encrypted with secure enclaves**: Expands upon Always Encrypted with in-place encryption and rich computations by enabling computations on plaintext data inside a secure enclave on the server side.
+  - Cryptographic operations (encrypting columns, rotating columns encryption keys, etc), can now be issued using Transact-SQL and do not require moving data out of the database. Secure enclaves unlock Always Encrypted to a much broader set of scenarios and applications that demand sensitive data to be protected in use, while also requiring rich computations on protected data to be supported within the database system. For details, see [Always Encrypted with secure enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md).
 
 - **Certificate management in SQL Server Configuration Manager**: SSL/TLS certificates are widely used to secure access to SQL Server instances. Certificate management is now integrated into the SQL Server Configuration Manager, simplifying common tasks such as:
 
@@ -234,7 +238,17 @@ For detailed information, see [What's new in SQL Server Machine Learning Service
   - Deploy certificates across machines participating in Always On Availability Groups (from the node holding the primary replica).
   - Deploy certificates across machines participating in a failover cluster instance (from the active node).
 
-Note: User must have administrator permissions on all the cluster nodes.
+  Note: User must have administrator permissions on all the cluster nodes.
+
+## <a id="tools"></a>Tools
+
+- [**SQL Server Management Studio (SSMS) 18.0 (preview)**](../ssms/sql-server-management-studio-ssms.md)
+
+  - Support for Always Encrypted with secure enclaves.
+
+- [**Azure Data Studio (preview)**](../sql-operations-studio/what-is.md)
+
+
 ## Next steps
 
 See the [SQL Server 2019 Release Notes](sql-server-vnext-release-notes.md).

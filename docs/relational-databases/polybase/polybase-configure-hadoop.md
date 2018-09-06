@@ -30,7 +30,7 @@ PolyBase supports two Hadoop providers, Hortonworks Data Platform (HDP) and Clou
 - Cloudera CDH 4.3 on Linux  
 - Cloudera CDH 5.1 – 5.5, 5.9 - 5.13 on Linux
 
-> [!NOTE] 
+> [!NOTE]
 > Hadoop follows the "Major.Minor.Version" pattern for its new releases. All versions within a supported Major and Minor release are supported.
 
 ### Configure Hadoop connectivity
@@ -92,7 +92,7 @@ To query the data in your Hadoop data source, you must define an external table 
    WITH IDENTITY = '<hadoop_user_name>', Secret = '<hadoop_password>';  
    ```
 
-1. Create an external data source.
+2. Create an external data source with [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
    ```sql
    -- LOCATION (Required) : Hadoop Name Node IP address and port.  
@@ -106,7 +106,7 @@ To query the data in your Hadoop data source, you must define an external table 
    );  
    ```
 
-1. Create an external file format.
+3. Create an external file format with [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md).
 
    ```sql
    -- FORMAT TYPE: Type of format in Hadoop (DELIMITEDTEXT,  RCFILE, ORC, PARQUET).
@@ -116,7 +116,7 @@ To query the data in your Hadoop data source, you must define an external table 
                USE_TYPE_DEFAULT = TRUE)  
    ```
 
-1. Create an external table pointing to data stored in Hadoop. In this example, the external data contains car senor data.
+4. Create an external table pointing to data stored in Hadoop with [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md). In this example, the external data contains car senor data.
 
    ```sql
    -- LOCATION: path to file or directory that contains the data (relative to HDFS root).  
@@ -133,7 +133,7 @@ To query the data in your Hadoop data source, you must define an external table 
    );  
    ```
 
-1. Create statistics on an external table.
+5. Create statistics on an external table.
 
    ```sql
    CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)  
@@ -219,4 +219,7 @@ In SSMS, external tables are displayed in a separate folder **External Tables**.
 
 ## Next steps
 
-To learn more about PolyBase, see [Overview of SQL Server PolyBase](polybase-guide.md).
+Explore more ways to use and monitor PolyBase in the following articles:
+
+[PolyBase scale-out groups](../../relational-databases/polybase/polybase-scale-out-groups.md).  
+[PolyBase troubleshooting](polybase-troubleshooting.md).  

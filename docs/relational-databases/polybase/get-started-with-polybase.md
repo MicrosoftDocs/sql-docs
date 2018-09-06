@@ -25,29 +25,6 @@ manager: craigg
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This topic contains the basics about running PolyBase on a SQL Server instance.
-  
-After running the steps below, you will have:  
-  
-- PolyBase installed and runnable on your server  
-  
-- Examples of statements that create PolyBase objects  
-  
-- An understanding of how to manage PolyBase objects in SQL Server Management Studio (SSMS)  
-  
-- Examples of queries using PolyBase objects
-
-## Install PolyBase
-
-If you haven't installed PolyBase, see [PolyBase installation](../../relational-databases/polybase/polybase-installation.md). The installation article explains the prerequisites.
-  
-### How to confirm installation  
-
-After installation, run the following command to confirm that PolyBase has been successfully installed. If PolyBase is installed, returns 1; otherwise, 0.  
-
-```sql  
-SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;  
-```  
 
 ## <a name="supported"></a> Configure PolyBase  
 

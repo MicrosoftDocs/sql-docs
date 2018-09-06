@@ -16,7 +16,11 @@ manager: craigg
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-TBD
+The article explains how to use PolyBase on a SQL Server instance to query external data in Hadoop.
+
+## Prerequisites
+
+If you haven't installed PolyBase, see [PolyBase installation](polybase-installation.md). The installation article explains the prerequisites.
 
 ## Next steps
 

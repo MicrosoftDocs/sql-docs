@@ -149,11 +149,26 @@ This may provide significant storage savings, depending on the character set in 
 
 ### Lightweight query profiling infrastructure enabled by default
 
-The lightweight query profiling infrastructure (LWQPI) is now enabled by default. The lightweight query profiling infrastructure was introduced in SQL Server 2016 SP1. It offers a query execution statistics collection mechanism with an expected overhead of 2% CPU, compared with an overhead of up to 75% CPU for the standard query profiling mechanism. On previous versions, it was OFF by default. Database administrators could enable it with [trace flag 7412](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
+The lightweight query profiling infrastructure (LWQPI) is now enabled by default. The lightweight query profiling infrastructure was introduced in SQL Server 2016 SP1. It offers a query execution statistics collection mechanism with an expected overhead of 2% CPU, compared with an overhead of up to 75% CPU for the standard query profiling mechanism. On previous versions,
+ it was OFF by default. Database administrators could enable it with [trace flag 7412](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 
 ### Expanded support for Persistent Memory (PMEM) devices
 
 Any SQL Server file (database files, transaction log files, In-Memory OLTP checkpoint files, etc) placed on a Persistent Memory device (PMEM, also known as Storage Class Memory or SCM) will operate in "enlightened" mode, where SQL Server will directly access the device, avoiding the storage stack of the operating system and allowing extreme low latency I/Os against such devices. 
+
+### Data Discovery and Classification
+
+Data discovery and classification provides advanced capabilities natively built into SQL Server for classifying, labeling, and protecting the sensitive data in your databases. Classifying your most sensitive data (business, financial, healthcare, PII, etc.) can play a pivotal role in your organizational information protection stature. It can serve as infrastructure for:
+
+- Helping meet data privacy standards and regulatory compliance requirements
+- Various security scenarios, such as monitoring (auditing) and alerting on anomalous access to sensitive data
+- Making it easier to identify where sensitive data resides in the enterprise so admins can take the right steps securing the database
+
+[Auditing](../relational-databases/security/auditing/sql-server-audit-database-engine.md) has also been enhanced to include a new field in the audit log called `data_sensitivity_information`, which logs the sensitivity classifications (labels) of the actual data that was returned by the query. For details and examples, see [Add sensitivity classification](../t-sql/statements/add-sensitivity-classification-transact-sql.md).
+
+>[!NOTE]
+>There are no changes in terms of how audit is enabled. There is a new field added to the audit records, `data_sensitivity_information`, which logs the sensitivity classifications (labels) of the actual data that was returned by the query. See [Auditing access to sensitive data](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-data-discovery-and-classification#subheading-3).
+
 
 ## <a id="ha"></a> High Availability
 

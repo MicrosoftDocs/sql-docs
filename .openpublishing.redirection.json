@@ -1,13 +1,53 @@
 {
     "redirections": [
         {
+            "source_path": "docs/advanced-analytics/architecture-overview-machine-learning.md",
+            "redirect_url": "/sql/advanced-analytics/concepts/extensibility-framework",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "docs/advanced-analytics/r/architecture-overview-sql-server-r.md",
+            "redirect_url": "/sql/advanced-analytics/concepts/extensibility-framework",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "docs/advanced-analytics/r/r-interoperability-in-sql-server.md",
+            "redirect_url": "/sql/advanced-analytics/concepts/extension-r",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "docs/advanced-analytics/r/new-components-in-sql-server-to-support-r.md",
+            "redirect_url": "/sql/advanced-analytics/concepts/extension-r",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "docs/advanced-analytics/python/architecture-overview-sql-server-python.md",
+            "redirect_url": "/sql/advanced-analytics/concepts/extensibility-framework",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "docs/advanced-analytics/python/sql-server-python-services.md",
+            "redirect_url": "/sql/advanced-analytics/concepts/extension-py",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "docs/advanced-analytics/python/python-interoperability.md",
+            "redirect_url": "/sql/advanced-analytics/concepts/extension-py",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "docs/advanced-analytics/python/new-components-in-sql-server-to-support-python-integration.md",
+            "redirect_url": "/sql/advanced-analytics/concepts/extension-py",
+            "redirect_document_id": false
+        }, 
+        {
             "source_path": "docs/advanced-analytics/r/differences-in-r-features-between-editions-of-sql-server.md",
-            "redirect_url": "https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-2017",
+            "redirect_url": "/sql/sql-server/editions-and-components-of-sql-server-2017",
             "redirect_document_id": false
         }, 
         {
             "source_path": "docs/advanced-analytics/install/sql-r-standalone-windows-install.md",
-            "redirect_url": "https://docs.microsoft.com/sql/advanced-analytics/install/sql-machine-learning-standalone-windows-install",
+            "redirect_url": "/sql/advanced-analytics/install/sql-machine-learning-standalone-windows-install",
             "redirect_document_id": false
         },   
         {
@@ -17,27 +57,27 @@
         },
         {
             "source_path": "docs/advanced-analytics/r/install-pretrained-models-sql-server.md",
-            "redirect_url": "https://docs.microsoft.com/sql/advanced-analytics/install/sql-pretrained-models-install",
+            "redirect_url": "/sql/advanced-analytics/install/sql-pretrained-models-install",
             "redirect_document_id": false
         }, 
         {
             "source_path": "docs/advanced-analytics/r/sqldev-import-data-to-sql-server-using-powershell.md",
-            "redirect_url": "https://docs.microsoft.com/sql/advanced-analytics/tutorials/sqldev-download-the-sample-data",
+            "redirect_url": "/sql/advanced-analytics/tutorials/sqldev-download-the-sample-data",
             "redirect_document_id": false
         }, 
         {
             "source_path": "docs/advanced-analytics/tutorials/walkthrough-prerequisites-for-data-science-walkthroughs.md",
-            "redirect_url": "https://docs.microsoft.com/sql/advanced-analytics/tutorials/walkthrough-data-science-end-to-end-walkthrough",
+            "redirect_url": "/sql/advanced-analytics/tutorials/walkthrough-data-science-end-to-end-walkthrough",
             "redirect_document_id": false
         }, 
         {
             "source_path": "docs/advanced-analytics/r/r-package-management-for-sql-server-r-services.md",
-            "redirect_url": "https://docs.microsoft.com/sql/advanced-analytics/r/install-additional-r-packages-on-sql-server",
+            "redirect_url": "/sql/advanced-analytics/r/install-additional-r-packages-on-sql-server",
             "redirect_document_id": false
         },  
         {
             "source_path": "docs/advanced-analytics/r/using-r-in-azure-sql-database.md",
-            "redirect_url": "https://docs.microsoft.com/sql/advanced-analytics/what-s-new-in-sql-server-machine-learning-services#azure-sql-database-roadmap",
+            "redirect_url": "/sql/advanced-analytics/what-s-new-in-sql-server-machine-learning-services#azure-sql-database-roadmap",
             "redirect_document_id": false
         },        
         {

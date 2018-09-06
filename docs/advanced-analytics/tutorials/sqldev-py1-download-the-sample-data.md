@@ -64,6 +64,6 @@ When all files have been downloaded, the PowerShell script opens to the folder s
 
 ## See Also
 
-[Machine Learning Services with Python](../python/sql-server-python-services.md)
+[Python extension in SQL Server](../concepts/extension-python.md)
 
 

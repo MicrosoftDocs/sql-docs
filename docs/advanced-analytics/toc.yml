@@ -1,8 +1,12 @@
-- name: SQL ML and Extensibility Documentation
+- name: Programming Extensions Documentation
   href: index.md
+- name: Java extensions
+  items:
+  - name: Run Java code on SQL
+    href: 
 - name: SQL Server Machine Learning
   items:
-  - name: Machine Learning Services (R, Python, Java)
+  - name: Machine Learning Services (R, Python)
     href: what-is-sql-server-machine-learning.md
   - name: R Services
     href: r/sql-server-r-services.md
@@ -14,7 +18,7 @@
   items:
   - name: Differences in SQL Server 2019 installation
     href: install/sql-machine-learning-services-ver15.md
-  - name: Machine Learning Services (R, Python, Java)
+  - name: Machine Learning Services (R, Python)
     href: install/sql-machine-learning-services-windows-install.md
   - name: R Services
     href: install/sql-r-services-windows-install.md
@@ -31,7 +35,7 @@
       href: install/sql-ml-cab-downloads.md
   - name: Upgrade R and Python
     href: r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md
-  - name: Set up R tools55
+  - name: Set up R tools
     href: r/set-up-a-data-science-client.md
   - name: Set up Python tools
     href: python/setup-python-client-tools-sql.md

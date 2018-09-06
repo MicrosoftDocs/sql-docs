@@ -1,18 +1,22 @@
 ---
-title: SQL Server machine learning and extensibility product documentation | Microsoft Docs
+title: SQL Server programming extensions product documentation | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 08/30/2018  
+ms.date: 09/10/2018  
 ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
 
-# SQL Server Machine Learning and Extensibility Documentation
+# SQL Server Programming Extensions Documentation
 
-Learn how to use external libraries and languages on resident, relational data with our quickstarts, tutorials, and how-to articles. R and Python libraries in [SQL Server machine learning](what-is-sql-server-machine-learning.md) include base distributions, machine learning algorithms, and functions for conducting high-performance analytics at scale, without having to transfer data across the network. Java code execution uses the same extensibility framework as R and Python, but does not include data science and machine learning function libraries.
+Learn how to use external libraries and languages on resident, relational data with our quickstarts, tutorials, and how-to articles. 
+
+R and Python libraries in [SQL Server machine learning](what-is-sql-server-machine-learning.md) include base distributions, machine learning algorithms, and functions for conducting high-performance analytics at scale, without having to transfer data across the network. 
+
+Java code execution uses the same extensibility framework as R and Python, but does not include data science and machine learning function libraries.
 
 |   |   | 
 |---|---|-

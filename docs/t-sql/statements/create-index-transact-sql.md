@@ -1,7 +1,7 @@
 ---
 title: "CREATE INDEX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/15/2018"
+ms.date: "09/26/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -462,7 +462,7 @@ Specifies whether underlying tables and associated indexes are available for que
  
 RESUMABLE **=** { ON | **OFF**}
 
-**Applies to**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] as a public preview feature
+**Applies to**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] and SQL Server 2019 CTP 2.0 as a public preview feature
 
  Specifies whether an online index operation is resumable.
 
@@ -474,7 +474,7 @@ Index operation is not resumable.
 
 MAX_DURATION **=** *time* [**MINUTES**] used with **RESUMABLE = ON** (requires **ONLINE = ON**).
  
-**Applies to**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] as a public preview feature 
+**Applies to**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] and SQL Server 2019 CTP 2.0 as a public preview feature
 
 Indicates time (an integer value specified in minutes) that a resumable online index operation is executed before being paused. 
 
@@ -718,7 +718,7 @@ INSERT INTO t1 VALUES (1, 0);
  
 ### <a name="resumable-indexes"></a>Resumable index operations
 
-**Applies to**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] as a public preview feature.
+**Applies to**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] and SQL Server 2019 CTP 2.0 as a public preview feature
 
 The following guidelines apply for resumable index operations:
 
@@ -748,13 +748,8 @@ The following resources are required for resumable online index create operation
 
 **Current functional limitations**
 
-> [!IMPORTANT]
-> **Resumable Online Index Create** is currently only supported for non-clustered index.
-
 The following functionality is disabled for resumable index create operations
-- Resumable Index Create is not supported for a clustered index for public preview.
 - After a resumable online index create operation is paused, the initial value of MAXDOP cannot be changed
-- DROP EXISTING clause is not supported
 - Create an index that contains 
  - Computed or TIMESTAMP column(s) as key columns
  - LOB column as included column for resumable index create
@@ -1048,6 +1043,8 @@ GO
 ```  
 ### M. Create, resume, pause, and abort resumable index operations
 
+**Applies to**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] and SQL Server 2019 CTP 2.0 as a public preview feature
+
 ```sql
 -- Execute a resumable online index create statement with MAXDOP=1
 CREATE  INDEX test_idx1 on test_table (col1) WITH (ONLINE=ON, MAXDOP=1, RESUMABLE=ON)  
@@ -1074,6 +1071,8 @@ ALTER INDEX test_idx2 on test_table ABORT
   
 ### N. Basic syntax  
   ### Create, resume, pause, and abort resumable index operations
+
+**Applies to**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] and SQL Server 2019 CTP 2.0 as a public preview feature
 
 ```sql
 -- Execute a resumable online index create statement with MAXDOP=1

@@ -1,7 +1,7 @@
 ---
 title: "ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/142018"
+ms.date: "09/26/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -184,7 +184,7 @@ This value elevates operations that support ONLINE. Operations that do not suppo
  
 ELEVATE_RESUMABLE= { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
 
-**Applies to**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (feature is in public preview)
+***Applies to**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] and SQL Server 2019 CTP 2.0 as a public preview feature
 
 Allows you to select options to cause the engine to automatically elevate supported operations to resumable. The default is OFF, which means operations are not be elevated to resumable unless specified in the statement. [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) reflects the current value of ELEVATE_RESUMABLE. These options only apply to operations that are generally supported for resumable. 
 
@@ -248,7 +248,6 @@ This option only applies to DDL statements that support the WITH(ONLINE= syntax)
 **ELEVATE_RESUMABLE**
 
 This option only applies to DDL statements that support the WITH(ONLINE= syntax). XML indexes are not affected 
-
   
 ## Metadata  
 
@@ -363,7 +362,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE=FAIL_UNSUPPORTED ;
 
 ### J. Set ELEVATE_RESUMABLE 
 
-**Applies to**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (feature is in public preview)
+**Applies to**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] and SQL Server 2019 CTP 2.0 as a public preview feature
 
 This example sets ELEVEATE_RESUMABLE to WHEN_SUPPORTED.  tsqlCopy 
 
@@ -398,9 +397,14 @@ ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE=WHEN_SUPPORTED ;
 - [Guidelines for Online Index Operations](../../relational-databases/indexes/guidelines-for-online-index-operations.md) 
  
 ## More information  
- [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)   
- [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
+- [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)   
+- [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
  [Databases and Files Catalog Views](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
- [Server Configuration Options](../../database-engine/configure-windows/server-configuration-options-sql-server.md) 
- [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)  
+- [Server Configuration Options](../../database-engine/configure-windows/server-configuration-options-sql-server.md) 
+- [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)  
+- [How Online Index Operations Work](../../relational-databases/indexes/how-online-index-operations-work.md)  
+- [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)  
+- [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)  
+- [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
+  
  

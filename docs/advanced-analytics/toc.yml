@@ -172,7 +172,7 @@
       href: python/new-components-in-sql-server-to-support-python-integration.md
     - name: Python security
       href: python/security-overview-sql-server-python-services.md
-- name: How To
+- name: How-to guides
   href: r/sql-server-machine-learning-tasks.md
   items:
   - name: Package management

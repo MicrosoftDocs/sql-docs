@@ -9,6 +9,7 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
+monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
 
 # Java language extension in SQL Server 2019 

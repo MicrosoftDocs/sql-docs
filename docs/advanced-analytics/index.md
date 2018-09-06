@@ -8,6 +8,7 @@ ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 
 # SQL Server Programming Extensions Documentation

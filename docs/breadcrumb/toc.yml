@@ -186,8 +186,8 @@
       href: /sql/linux/
       homepage: /sql/linux/sql-server-linux-overview
     - name: SQL Server Programming Extensions
-      href: /sql/programming-extensions/
-      homepage: /sql/programming-extensions/program-extension-overview
+      href: /sql/advanced-analytics/
+      homepage: /sql/advanced-analytics/index
       items:
       - name: Java
         href: sql/advanced-analytics/java
@@ -204,7 +204,7 @@
           homepage: /sql/advanced-analytics/python/sql-server-python-services
         - name: Install
           href: /sql/advanced-analytics/install/
-          homepage: /sql/advanced-analytics/install/sql-machine-learning-services-windows-install.md
+          homepage: /sql/advanced-analytics/install/sql-machine-learning-services-windows-install
         - name: Learn
           href: /sql/advanced-analytics/tutorials/
           homepage: /sql/advanced-analytics/tutorials/machine-learning-services-tutorials

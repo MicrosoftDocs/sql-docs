@@ -1,6 +1,6 @@
 ---
-title: "Query Hadoop from SQL Server on Windows | Microsoft Docs"
-ms.date: "09/24/2018"
+title: "Query external data in Hadoop from SQL Server | Microsoft Docs"
+ms.date: "08/28/2018"
 ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"
@@ -12,7 +12,7 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ---
-# Query Hadoop from SQL Server on Windows
+# Quickstart: Query external data in Hadoop from SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 

@@ -20,7 +20,7 @@ monikerRange: "= sql-server-ver15 || = sqlallproducts-allversions"
 [!INCLUDE[tsql-appliesto-ssvnext-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssvnext-xxxx-xxxx-xxx.md)]
 
 This article describes limitations and known issues for the [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] Community Technology Preview (CTP) releases. For related information, see:
-- [What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-vnext.md)
+- [What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md)
 
 **Try [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] !**
 - [![Download from Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [Download [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] to install on Windows](http://go.microsoft.com/fwlink/?LinkID=829477)

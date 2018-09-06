@@ -180,6 +180,20 @@ DBCC CLONEDATABASE creates a schema-only copy of a database which includes all t
 
 `sp_estimate_data_compression_savings` returns the current size of the requested object and estimates the object size for the requested compression state.  Currently this procedure supports three options: NONE, Row and Page.  SQL Server 2019 introduces two new options: COLUMNSTORE and COLUMNSTORE_ARCHIVE.  These new options will allow you to estimate the space savings if a columnstore index is created on the table using either standard or archive columnstore compression.
 
+### sys.dm_db_page_info
+
+`sys.dm_db_page_info(database_id, file_id, page_id, mode)` returns information about a page in a database.  The function returns a row that contains the header information from the page, including the `object_id`, `index_id` and `partition_id`.  This replaces the need to use DBCC PAGE in most cases.  
+
+In order to facilitate troubleshooting of page-related waits, a new column called page_resource was also added to `sys.dm_exec_requests` and `sys.sysprocesses`.  This new column allows you to join `sys.dm_db_page_info` to these views via another new system function - `sys.fn_PageResCracker`.  See the following script as an example:
+
+```sql
+SELECT page_info.* 
+FROM sys.dm_exec_requests AS d 
+  CROSS APPLY sys.fn_PageResCracker(d.page_resource) AS r
+  CROSS APPLY sys.dm_db_page_info(r.db_id, r.file_id, r.page_id,'DETAILED')
+    AS page_info
+```
+
 ## <a id="ha"></a> High Availability
 
 - **Connection redirection**: Improved scale-out with automatic redirection of connections based on read/write intent.

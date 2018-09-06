@@ -4,9 +4,9 @@
   items:
   - name: Run Java code on SQL
     href: 
-- name: R and Python extensions
+- name: SQL Server Machine Learning (R, Python)
   items:
-  - name: Machine Learning Services
+  - name: Machine Learning Services  (R, Python)
     href: what-is-sql-server-machine-learning.md
   - name: R Services
     href: r/sql-server-r-services.md

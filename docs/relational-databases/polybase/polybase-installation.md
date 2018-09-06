@@ -116,7 +116,7 @@ Setup.exe /Q /ACTION=INSTALL /IACCEPTSQLSERVERLICENSETERMS /FEATURES=SQLEngine,P
 
 PolyBase installs three user databases, DWConfiguration, DWDiagnostics, and DWQueue.   These are for PolyBase use and should not be altered or deleted.  
   
-### How to confirm installation  
+### <a id="confirminstall"></a> How to confirm installation  
 
 Run the following command. If PolyBase is installed, returns 1; otherwise, 0.  
 

@@ -22,7 +22,7 @@ monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 To setup Always Encrypted with secure enclaves, use the following workflow:
 
 1. Configure HGS attestation.
-2. Install SQL Server vNext on the SQL Server computer.
+2. Install [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)] CTP 2.0 on the SQL Server computer.
 3. Install tools on the client/development computer.
 4. Configure the enclave type in your SQL Server instance.
 5. Provision enclave-enabled keys.
@@ -32,39 +32,32 @@ To setup Always Encrypted with secure enclaves, use the following workflow:
 
 ## Configure your environment 
 
-To use secure enclaves with Always Encrypted, your environment requires Windows Server 2019 Preview, and minimum versions of SQL Server Management Studio (SSMS), .NET Framework, and several other components. The following sections provide specific details and links to get the required components.
+To use secure enclaves with Always Encrypted, your environment requires Windows Server 2019 Preview, and SQL Server Management Studio (SSMS) 18.0 (preview), .NET Framework, and several other components. The following sections provide specific details and links to get the required components.
 
 ### SQL Server computer requirements
 
 The computer running SQL Server needs the following operating system and SQL Server version:
 
 - [Windows Server 2019 Preview](https://insider.windows.com/en-us/for-business-getting-started-server/). The computer must be configured as a guarded host, attested by HGS. See [Configure HGS Attestation](#configure-hgs-attestation) for details.
-- SQL Server vNext CTP 2.0 or later
+- [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)] CTP 2.0 or later
 
-    > [!NOTE]
-    > During the preview (for testing/prototyping), it is fine to use Always Encrypted with secure enclaves in a SQL Server instance inside a virtual machine. However, for production, the recommended TPM attestation mode requires SQL Server runs on a physical computer.
 
 ### HGS computer requirements
 
-For details on HGS computer requirements and set up, see [Setting up the Host Guardian Service for Always Encrypted in SQL Server](https://review.docs.microsoft.com/en-us/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server?branch=hgs2-secure-enclaves)
-
-- See Configuring HGS Attestation.pdf for details.
-
-    > [!NOTE]
-    > A single HGS computer is sufficient during the preview (testing/prototyping). For production, a Windows failover cluster with 3 computers is strongly recommended.
+A single HGS computer is sufficient during testing and prototyping. For production, a Windows failover cluster with 3 computers is strongly recommended.
 
 
 ### Configure HGS attestation
 
-For step-by-step instructions, see: Configuring HGS Attestation.pdf
+For details on HGS computer requirements and set up, see [Setting up the Host Guardian Service for Always Encrypted in SQL Server](https://review.docs.microsoft.com/en-us/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server?branch=hgs2-secure-enclaves)
 
 
 ### Determine your Attestation Service URL
 
-To determine an attestation service URL, you need to configure your tools and applications with:
+To determine an attestation service URL, you need to configure your tools and applications:
 
-1. Log on to you SQL Server computer as administrator.
-2. Open PowerShell as administrator.
+1. Log on to your SQL Server computer as administrator.
+2. Run PowerShell as administrator.
 3. Run [Get-HGSClientConfiguration](https://docs.microsoft.com/powershell/module/hgsclient/get-hgsclientconfiguration).
 4. Write down and save the AttestationServerURL property. It should look like this: *http://x.x.x.x/Attestation*.
 
@@ -128,7 +121,7 @@ On the client/development computer:
    DBCC traceon(127,-1)
    ```     
     > [!NOTE]
-    > Rich computations are disabled by default in SQL Server 2019 CTP 2.0. They need to be enabled using the above statement after each restart of your SQL Server instance.
+    > Rich computations are disabled by default in [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)] CTP 2.0. They need to be enabled using the above statement after each restart of your SQL Server instance.
 
 ## Provision enclave-enabled keys
 
@@ -139,7 +132,7 @@ The introduction of enclave-enabled keys does not fundamentally change the [key 
 
 The **ENCLAVE_COMPUTATIONS** property of a column master key is immutable – you cannot change it after the key has been provisioned. You can, however, replace the column master key with a new key that has a different value of the **ENCLAVE_COMPUTATIONS** property than the original key, via a process called a [column master key rotation](#initiate-the-rotation-from-the-current-column-master-key-to-the-new-column-master-key).
 
-To provision an enclave-enabled column encryption key, you just need to make sure that the column master key, encrypting the column encryption key, is enclave-enabled.
+To provision an enclave-enabled column encryption key, you need to make sure that the column master key that encrypts the column encryption key, is enclave-enabled.
 
 The following limitations currently apply to provisioning enclave-enabled keys:
 

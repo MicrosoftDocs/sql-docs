@@ -49,9 +49,9 @@ With secure enclaves, Always Encrypted protects the confidentiality of sensitive
 - **Rich computations (preview)** – operations on encrypted columns, including pattern matching (the LIKE predicate) and range comparisons, are supported inside the secure enclave, which unlocks Always Encrypted to a broad range of applications and scenarios that require such computations to be performed inside the database system. 
 
 > [!IMPORTANT]
-> In SQL Server 2019 CTP 2.0, rich computations are pending several performance optimizations, include limited functionality (no indexing, etc), and are currently disabled by default. To enable rich computations, see  [Enable rich computations](configure-always-encrypted-enclaves.md#configure-a-secure-enclave).
+> In [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)] CTP 2.0, rich computations are pending several performance optimizations, include limited functionality (no indexing, etc), and are currently disabled by default. To enable rich computations, see  [Enable rich computations](configure-always-encrypted-enclaves.md#configure-a-secure-enclave).
 
-In SQL Server 2019 CTP 2.0, Always Encrypted with secure enclaves uses [Virtualization-based Security (VBS)](https://docs.microsoft.com/windows-hardware/design/device-experiences/oem-vbs) secure memory enclaves (also known as Virtual Secure Mode, or VSM enclaves) in Windows.
+In [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)] CTP 2.0, Always Encrypted with secure enclaves uses [Virtualization-based Security (VBS)](https://docs.microsoft.com/windows-hardware/design/device-experiences/oem-vbs) secure memory enclaves (also known as Virtual Secure Mode, or VSM enclaves) in Windows.
 
 ## Secure Enclave Attestation
 

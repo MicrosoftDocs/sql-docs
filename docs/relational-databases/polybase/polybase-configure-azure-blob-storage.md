@@ -190,4 +190,7 @@ In SSMS, external tables are displayed in a separate folder **External Tables**.
 
 ## Next steps
 
-To learn more about PolyBase, see [Overview of SQL Server PolyBase](polybase-guide.md).
+Explore more ways to use and monitor PolyBase in the following articles:
+
+[PolyBase scale-out groups](../../relational-databases/polybase/polybase-scale-out-groups.md).  
+[PolyBase troubleshooting](polybase-troubleshooting.md).  

@@ -65,7 +65,7 @@ To query the data in your Hadoop data source, you must define an external table 
    WITH IDENTITY = 'user', Secret = '<azure_storage_account_key>';
    ```
 
-1. Create an external data source.
+1. Create an external data source with [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)..
 
    ```sql
    -- LOCATION:  Azure account storage account name and blob container name.  
@@ -77,7 +77,7 @@ To query the data in your Hadoop data source, you must define an external table 
    );  
    ```
 
-1. Create an external file format.
+1. Create an external file format with [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md).
 
    ```sql
    -- FORMAT TYPE: Type of format in Hadoop (DELIMITEDTEXT,  RCFILE, ORC, PARQUET).
@@ -87,7 +87,7 @@ To query the data in your Hadoop data source, you must define an external table 
                USE_TYPE_DEFAULT = TRUE)  
    ```
 
-1. Create an external table pointing to data stored in Azure storage. In this example, the external data contains car senor data.
+1. Create an external table pointing to data stored in Azure storage with [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md). In this example, the external data contains car senor data.
 
    ```sql
    -- LOCATION: path to file or directory that contains the data (relative to HDFS root).  

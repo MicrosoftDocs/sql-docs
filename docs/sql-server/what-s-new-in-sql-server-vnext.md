@@ -32,10 +32,10 @@ Community technology preview (CTP) 2.0 is the first public release of [!INCLUDE[
 - [Database engine](#databaseengine)
   - Intelligent query processing
   - Database scoped configuration setting for online and resumable DDL operations
-  - Expanded support for Persistent Memory (PMEM) devices
   - Clustered columnstore online index build and rebuild
   - UTF-8 Support
   - Lightweight query profiling infrastructure enabled by default
+  - Expanded support for Persistent Memory (PMEM) devices
 - [High Availability](#ha)
   - Connection redirection
 - [SQL Graph](#sqlgraph)
@@ -150,6 +150,10 @@ This may provide significant storage savings, depending on the character set in 
 ### Lightweight query profiling infrastructure enabled by default
 
 The lightweight query profiling infrastructure (LWQPI) is now enabled by default. The lightweight query profiling infrastructure was introduced in SQL Server 2016 SP1. It offers a query execution statistics collection mechanism with an expected overhead of 2% CPU, compared with an overhead of up to 75% CPU for the standard query profiling mechanism. On previous versions, it was OFF by default. Database administrators could enable it with [trace flag 7412](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
+
+### Expanded support for Persistent Memory (PMEM) devices
+
+Any SQL Server file (database files, transaction log files, In-Memory OLTP checkpoint files, etc) placed on a Persistent Memory device (PMEM, also known as Storage Class Memory or SCM) will operate in "enlightened" mode, where SQL Server will directly access the device, avoiding the storage stack of the operating system and allowing extreme low latency I/Os against such devices. 
 
 ## <a id="ha"></a> High Availability
 

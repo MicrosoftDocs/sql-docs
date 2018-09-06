@@ -23,7 +23,8 @@ ms.author: jroth
 manager: craigg
 ---
 # What is PolyBase?
-[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
+
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md-winonly](../../includes/appliesto-ss-xxxx-asdw-pdw-md-winonly.md)]
 
 PolyBase enables your SQL Server 2016 instance to process Transact-SQL queries that read data from Hadoop. The same query can also access relational tables in your SQL Server. PolyBase enables the same query to also join the data from Hadoop and SQL Server. In SQL Server, an [external table](../../t-sql/statements/create-external-table-transact-sql.md) or [external data source](../../t-sql/statements/create-external-data-source-transact-sql.md) provides the connection to Hadoop.
 
@@ -88,4 +89,3 @@ This guide includes topics to help you use PolyBase efficiently and effectively.
 |[PolyBase Queries](../../relational-databases/polybase/polybase-queries.md)|Use T-SQL statements to query, import, or export external data.|
 |[PolyBase troubleshooting](../../relational-databases/polybase/polybase-troubleshooting.md)|Techniques to manage PolyBase queries. Use dynamic management views (DMVs) to monitor PolyBase queries, and learn to read a PolyBase query plan to find performance bottlenecks.|
 | &nbsp; | &nbsp; |
-  

@@ -172,6 +172,13 @@ Data discovery and classification provides advanced capabilities natively built 
 >[!NOTE]
 >There are no changes in terms of how audit is enabled. There is a new field added to the audit records, `data_sensitivity_information`, which logs the sensitivity classifications (labels) of the actual data that was returned by the query. See [Auditing access to sensitive data](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-data-discovery-and-classification#subheading-3).
 
+### Support for columnstore statistics in DBCC CLONEDATABASE
+
+DBCC CLONEDATABASE creates a schema-only copy of a database which includes all the elements necessary to troubleshoot query performance issues without copying the data.  In previous versions of SQL Server, the command did not copy the statistics necessary to accurately troubleshoot columnstore index queries and manual steps were required to capture this information.  Now in SQL Server 2019, DBCC CLONEDATABASE automatically captures the stats blobs for columnstore indexes, so no manual steps will be required.
+
+### New options added to sp_estimate_data_compression_savings
+
+`sp_estimate_data_compression_savings` returns the current size of the requested object and estimates the object size for the requested compression state.  Currently this procedure supports three options: NONE, Row and Page.  SQL Server 2019 introduces two new options: COLUMNSTORE and COLUMNSTORE_ARCHIVE.  These new options will allow you to estimate the space savings if a columnstore index is created on the table using either standard or archive columnstore compression.
 
 ## <a id="ha"></a> High Availability
 

@@ -2,14 +2,6 @@
   items:
   - name: What is PolyBase?
     href: polybase-guide.md
-- name: Quickstarts
-  items:
-  - name: Query Hadoop on Windows
-    href: quickstart-query-hadoop-windows.md
-- name: Tutorials
-  items:
-  - name: Scale-out groups (Windows)
-    href: tutorial-scale-out-groups-windows.md
 - name: Concepts
   items:
   - name: External data sources
@@ -44,6 +36,10 @@
       href: polybase-configure-teradata.md
     - name: MongoDB
       href: polybase-configure-mongodb.md
+  - name: Scale-out groups
+    items:
+    - name: Configure a scale-out group
+      href: configure-scale-out-groups-windows.md
   - name: Troubleshoot
     items:
     - name: Monitor and troubleshoot

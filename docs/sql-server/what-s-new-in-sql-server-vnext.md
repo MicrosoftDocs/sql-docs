@@ -61,6 +61,9 @@ Community technology preview (CTP) 2.0 is the first public release of [!INCLUDE[
 - [Security](#security)
   - Always Encrypted with secure enclaves
   - Certificate management in SQL Server Configuration Manager
+- [Tools](#tools)
+  - SSMS 18.0 (preview)
+  - Azure Data Studio 
 
 Continue reading for more details about these features.
 
@@ -219,7 +222,14 @@ For detailed information, see [What's new in SQL Server Machine Learning Service
   - Deploy certificates across machines participating in Always On Availability Groups (from the node holding the primary replica).
   - Deploy certificates across machines participating in a failover cluster instance (from the active node).
 
-Note: User must have administrator permissions on all the cluster nodes.
+  Note: User must have administrator permissions on all the cluster nodes.
+
+## <a id="tools"></a>Tools
+
+- [**SQL Server Management Studio (SSMS) 18.0 (preview)**](../ssms/sql-server-management-studio-ssms.md) 
+- [**Azure Data Studio**](../sql-operations-studio/what-is.md)
+
+
 ## Next steps
 
 See the [SQL Server 2019 Release Notes](sql-server-vnext-release-notes.md).

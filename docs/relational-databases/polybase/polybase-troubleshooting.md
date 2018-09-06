@@ -210,19 +210,6 @@ After configuring a set of machines as part of a PolyBase scale out group, you c
   
 3. Run the DMV [sys.dm_exec_compute_node_status &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-status-transact-sql.md) to view the status of all the nodes in the PolyBase Group.  
   
-## Known Limitations
-
-PolyBase has the following limitations: 
-
-- The maximum possible row size, including the full length of variable length columns, can not exceed 32 KB in SQL Server or 1 MB in     Azure SQL Data Warehouse. 
-- PolyBase doesn’t support the Hive 0.12+ data types (i.e. Char(), VarChar())   
-- When exporting data into an ORC File Format from SQL Server or Azure SQL Data Warehouse text heavy columns can be limited to as few as 50 columns due to java out of memory errors. To work around this, export only a subset of the columns.
-- Cannot Read or Write data encrypted at rest in Hadoop. This includes HDFS Encrypted Zones or Transparent Encryption.
-- PolyBase cannot connect to a Hortonworks instance if KNOX is enabled. 
-- If you are using Hive tables with transactional = true, PolyBase cannot access the data in the Hive table's directory. 
-
-[PolyBase doesn't install when you add a node to a SQL Server 2016 Failover Cluster](https://support.microsoft.com/en-us/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster)
-
 ## Hadoop Name Node High Availability
 
 PolyBase does not interface with Name Node HA services like Zookeeper or Knox today. However, there is a proven workaround that can be used to provide the functionality. 

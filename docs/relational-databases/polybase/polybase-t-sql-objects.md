@@ -36,7 +36,7 @@ To use  PolyBase, you must create external tables to reference your external dat
 > PolyBase in SQL Server 2016 only supports Windows users. If you try to use a SQL user to query a PolyBase external table, the query will fail.
 
 ## Prerequisites  
- 
+
 Configure PolyBase. See [PolyBase configuration](../../relational-databases/polybase/polybase-configuration.md).  
   
 ## Create external tables for Hadoop
@@ -277,15 +277,15 @@ WITH
 ;
 ```  
 
-**5. Create Statistics**  
+**5. Create Statistics**
 
-```sql     
+```sql
 CREATE STATISTICS StatsForProduct on DimProduct_external(ProductKey)  
 ```  
 
 ## Next steps  
- For examples of queries, see [PolyBase Queries](../../relational-databases/polybase/polybase-queries.md).  
+For examples of queries, see [PolyBase Queries](../../relational-databases/polybase/polybase-queries.md).  
   
 ## See Also  
- [Get started with PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)   
- [PolyBase Guide](../../relational-databases/polybase/polybase-guide.md)
+[Get started with PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)   
+[PolyBase Guide](../../relational-databases/polybase/polybase-guide.md)

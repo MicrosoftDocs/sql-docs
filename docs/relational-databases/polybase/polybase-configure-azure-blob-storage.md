@@ -24,4 +24,4 @@ If you haven't installed PolyBase, see [PolyBase installation](polybase-installa
 
 ## Next steps
 
-TBD
+To learn more about PolyBase, see [Overview of SQL Server PolyBase](polybase-guide.md).

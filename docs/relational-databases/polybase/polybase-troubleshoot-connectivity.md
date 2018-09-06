@@ -30,6 +30,7 @@ This article serves as a guide to walk through the debugging process of such iss
 ## Introduction
 
 It helps to first understand the Kerberos protocol at a high-level. There are three actors involved:
+
 1. Kerberos client (SQL Server)
 1. Secured resource (HDFS, MR2, YARN, Job History, etc.)
 1. Key distribution center (referred to as a domain controller in Active Directory)
@@ -48,6 +49,7 @@ In PolyBase, when authentication is requested against any Kerberos-secured resou
 Issues with authentication fall into one or more of the above four steps. To help with faster debugging, PolyBase has introduced an integrated diagnostics tool to help identify the point of failure.
 
 ## Troubleshooting
+
 PolyBase has multiple configuration XMLs containing properties of the Hadoop cluster. Namely, these are the following files:
 
 - core-site.xml

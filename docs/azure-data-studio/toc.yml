@@ -16,8 +16,6 @@
   items:
   - name: T-SQL Editor
     href: tutorial-sql-editor.md
-  - name: Create an extension  
-    href: tutorial-create-extension.md
   - name: "Sample insight: slow queries"
     href: tutorial-qds-sql-server.md
   - name: "Sample insight: table space usage"
@@ -53,6 +51,10 @@
     href: enable-kerberos.md
   - name: Usage data collection
     href: usage-data-collection.md
+- name: Extension authoring
+  items:
+  - name: Create an extension  
+    href: tutorial-create-extension.md
 - name: Resources
   items:
   - name: Transact-SQL Reference

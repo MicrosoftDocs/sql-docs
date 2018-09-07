@@ -1,10 +1,10 @@
 ---
 title: Virtualize external data in SQL Server 2019 CTP 2.0 | Microsoft Docs
 description:
-author: rothja
-ms.author: jroth
+author: Abiola
+ms.author: aboke
 manager: craigg
-ms.date: 08/14/2018
+ms.date: 09/07/2018
 ms.topic: conceptual
 ms.prod: sql
 ---

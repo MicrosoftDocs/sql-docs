@@ -48,8 +48,8 @@
       href: deployment-guidance.md
     - name: Deploy on Minikube
       href: deploy-on-minikube.md
-    - name: Deploy on ACS
-      href: deploy-on-acs.md
+    - name: Deploy on AKS
+      href: deploy-on-aks.md
     - name: Deploy on Multiple VMs
       href: deploy-on-vms.md
     - name: Install big data tools

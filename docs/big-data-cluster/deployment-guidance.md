@@ -32,20 +32,20 @@ You can choose to deploy Kubernetes in any of three ways:
 | Deploy Kubernetes on: | Description |
 |---|---|
 | **Minikube** | A single-node Kubernetes cluster in a VM. |
-| **Azure Container Services (AKS)** | A managed Kubernetes container service in Azure. |
+| **Azure Kubernetes Services (AKS)** | A managed Kubernetes container service in Azure. |
 | **Multiple VMs** | A Kubernetes cluster deployed on your VMs using kubeadm |
 
 For guidance on configuring one of these Kubernetes cluster options for SQL Server Big Data cluster, see one of the following articles:
 
-   - [Configure Minikube](sql-server-aris-deploy-on-minikube.md)
-   - [Configure Kubernetes on Azure Container Service](sql-server-aris-deploy-on-acs.md)
-   - [Configure Kubernetes on multiple VMs](sql-server-aris-deploy-on-vms.md)
+   - [Configure Minikube](deploy-on-minikube.md)
+   - [Configure Kubernetes on Azure Kubernetes Service](deploy-on-aks.md)
+   - [Configure Kubernetes on multiple VMs](deploy-on-vms.md)
 
 ## <a id="deploy"></a> Deploy SQL Server Big Data cluster
 
 After you have configured your Kubernetes cluster, you can proceed with the deployment for SQL Server Big Data cluster. To deploy an Aris cluster with all default configurations for a dev/test environment, follow the instructions in this article:
 
-[Quickstart: Deploy SQL Server Aris on Kubernetes](quickstart-sql-server-aris-deploy.md)
+[Quickstart: Deploy SQL Server Aris on Kubernetes](quickstart-big-data-cluster-deploy.md)
 
 If you want to customize your Aris configuration, according to your workload needs, follow the next set of instructions.
 

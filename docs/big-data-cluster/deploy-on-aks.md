@@ -1,5 +1,5 @@
 ---
-title: Configure Kubernetes on ACS for SQL Server 2019 CTP 2.0 deployments | Microsoft Docs
+title: Configure Azure Kubernetes Service for SQL Server 2019 CTP 2.0 deployments | Microsoft Docs
 description:
 author: rothja 
 ms.author: jroth 
@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.prod: sql
 ---
 
-# Configure Kubernetes on Azure Container Service (ACS) for SQL Server 2019 CTP 2.0
+# Configure Azure Kubernetes Service for SQL Server 2019 CTP 2.0
 
 Azure Container Service makes it simple to create, configure, and manage a cluster of virtual machines that are preconfigured with a Kubernetes cluster to run containerized applications. 
 

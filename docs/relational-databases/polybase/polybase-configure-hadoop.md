@@ -60,7 +60,7 @@ First, configure SQL Server PolyBase to use your specific Hadoop provider.
   
    ![stop and start PolyBase services in services.msc](../../relational-databases/polybase/media/polybase-stop-start.png "stop and start PolyBase services in services.msc")  
   
-## Enable pushdown computation  
+## <a id="pushdown"></a> Enable pushdown computation  
 
 To improve query performance, enable pushdown computation to your Hadoop cluster:  
   

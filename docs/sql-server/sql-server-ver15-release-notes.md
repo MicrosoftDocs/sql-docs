@@ -17,7 +17,7 @@ monikerRange: "= sql-server-ver15 || = sqlallproducts-allversions"
 ---
 # SQL Server 2019 Release Notes
 
-[!INCLUDE[tsql-appliesto-ssvnext-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssvnext-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 This article describes limitations and known issues for the [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] Community Technology Preview (CTP) releases. For related information, see:
 - [What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md)

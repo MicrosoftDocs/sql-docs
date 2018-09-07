@@ -36,6 +36,11 @@ Community technology preview (CTP) 2.0 is the first public release of [!INCLUDE[
   - UTF-8 Support
   - Lightweight query profiling infrastructure enabled by default
   - Expanded support for Persistent Memory (PMEM) devices
+- [Big Data Cluster](#bigdatacluster)
+  - Deploy a SQL Server Big Data Cluster with Linux containers on Kubernetes
+  - Use Azure Data Studio to run Jupyter Notebooks
+  - Ingest external data into a data pool
+  - Query HDFS data in the storage pool
 - [High Availability](#ha)
   - Connection redirection
 - [SQL Graph](#sqlgraph)
@@ -56,6 +61,8 @@ Community technology preview (CTP) 2.0 is the first public release of [!INCLUDE[
   - Machine Learning on Linux
   - Partition-based modeling
   - Failover cluster support
+- [Master Data Services](#mds)
+  - Silverlight controls replaced
 - [Programmability extensions](#programmability)
   - Java language extension
 - [Security](#security)
@@ -194,6 +201,13 @@ FROM sys.dm_exec_requests AS d
     AS page_info
 ```
 
+## <a id="bigdatacluster"></a>Big Data Cluster
+
+- Deploy a SQL Server Big Data Cluster with Linux containers on Kubernetes
+- Use Azure Data Studio to run Jupyter Notebooks
+- Ingest external data into a data pool
+- Query HDFS data in the storage pool
+
 ## <a id="ha"></a> High Availability
 
 - **Connection redirection**: Improved scale-out with automatic redirection of connections based on read/write intent.
@@ -242,6 +256,10 @@ FROM sys.dm_exec_requests AS d
 - **Windows Server Failover Cluster**: Configure high availability for Machine Learning Services on a Windows Server Failover Cluster.
 
 For detailed information, see [What's new in SQL Server Machine Learning Services](../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md).
+
+## <a id="mds"></a> Master Data Services (MDS)
+
+- **Silverlight controls replaced with HTML**: The Master Data Services (MDS) portal no longer depends on Silverlight. All the former Silverlight components have been replaced with HTML controls.
 
 ## <a id="programmability"></a> Programmability extensions
 

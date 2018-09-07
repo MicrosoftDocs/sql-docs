@@ -37,11 +37,22 @@ This article describes limitations and known issues for the [!INCLUDE[SQL Server
 
 **Workaround**: Writing T-SQL scripts and running them against the server using SSMS or SQLCMD will work. Exporting or Importing database objects that create Edge constraints, have the new merge DML syntax or create derived tables/views on graph objects will not work. Users will have to manually create such objects in their database using t-sql scripts. 
 
-**Applies To**:  [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.0.
+**Applies to**:  [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.0.
 
-### Master Data Services (MDS)
+### UTF-8 collations
 
-The Master Data Services (MDS) portal no longer depends on Silverlight. All the former Silverlight components have been replaced with HTML controls.
+**Issue and customer impact**: UTF-8 enabled collations cannot be used with some other SQL Server features. UTF-8 is not supported when the following SQL Server features are in use:
+
+- SQL Server Replication
+- Linked Server
+- In-memory OLTP
+- External Table for Polybase
+
+  Also note there is currently no UI support to choose UTF-8 enabled collations in Azure Data Studio or SSDT. The latest SSMS version supports choice of UTF-8 enabled collations in the UI.
+
+**Workaround**: No workaround for SQL Server 2019 CTP 2.0.
+
+**Applies to**: SQL Server 2019 CTP 2.0
 
 [!INCLUDE[get-help-options-msft-only](../includes/paragraph-content/get-help-options.md)]
 

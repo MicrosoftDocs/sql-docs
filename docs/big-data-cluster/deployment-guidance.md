@@ -32,13 +32,13 @@ You can choose to deploy Kubernetes in any of three ways:
 | Deploy Kubernetes on: | Description |
 |---|---|
 | **Minikube** | A single-node Kubernetes cluster in a VM. |
-| **Azure Container Services (ACS)** | A managed Kubernetes cluster in Azure. |
+| **Azure Kubernetes Services (AKS)** | A managed Kubernetes cluster in Azure. |
 | **Multiple VMs** | Please refer to **CTP1.8/documentation/k8s-deployment-multiple-vms.docx** document in GitHub for instructions. |
 
 For guidance on configuring one of these Kubernetes cluster options for SQL Server 2019 CTP 2.0, see one of the followin articles:
 
    - [Configure Minikube](deploy-on-minikube.md)
-   - [Configure Kubernetes on Azure Container Service](deploy-on-acs.md)
+   - [Configure on Azure Kubernetes Service](deploy-on-aks.md)
    - [Configure Kubernetes on multiple VMs](deploy-on-vms.md)
 
 ## <a id="deploy"></a> Deploy SQL Server 2019 CTP 2.0

@@ -33,6 +33,7 @@ Community technology preview (CTP) 2.0 is the first public release of [!INCLUDE[
   - Intelligent query processing
   - Database scoped configuration setting for online and resumable DDL operations
   - Clustered columnstore online index build and rebuild
+  - Resumable online index create
   - UTF-8 Support
   - Lightweight query profiling infrastructure enabled by default
   - Expanded support for Persistent Memory (PMEM) devices

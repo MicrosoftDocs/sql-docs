@@ -174,7 +174,7 @@ manager: craigg
  IGNORE_NONCLUSTERED_COLUMNSTORE_INDEX  
  **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Prevents the query from using a nonclustered memory optimized columnstore index. If the query contains the query hint to avoid use of the columnstore index and an index hint to use a columnstore index, the hints are in conflict and the query returns an error.  
+ Prevents the query from using a nonclustered memory optimized columnstore index. If the query contains the query hint to avoid the use of the columnstore index, and an index hint to use a columnstore index, the hints are in conflict and the query returns an error.  
   
  MAX_GRANT_PERCENT = *percent*  
  The maximum memory grant size in PERCENT. The query is guaranteed not to exceed this limit. The actual limit can be lower if the Resource Governor setting is lower than the value specified by this hint. Valid values are between 0.0 and 100.0.  
@@ -272,7 +272,7 @@ manager: craigg
 *  'FORCE_DEFAULT_CARDINALITY_ESTIMATION'    
  Forces the Query Optimizer to use [Cardinality Estimation](../../relational-databases/performance/cardinality-estimation-sql-server.md) model that corresponds to the current database compatibility level. Use this hint to override [Database Scoped Configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) setting LEGACY_CARDINALITY_ESTIMATION=ON or [trace flag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481.
 *  'DISABLE_INTERLEAVED_EXECUTION_TVF'   
- Disables interleaved execution for multi-statement table valued functions. For more information, see [Interleaved execution for multi-statement table valued functions](../../relational-databases/performance/adaptive-query-processing.md#interleaved-execution-for-multi-statement-table-valued-functions).
+ Disables interleaved execution for multi-statement table valued functions. For more information, see [Interleaved execution for multi-statement table-valued functions](../../relational-databases/performance/adaptive-query-processing.md#interleaved-execution-for-multi-statement-table-valued-functions).
 *  'DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'     
  Disables batch mode memory grant feedback. For more information, see [Batch mode memory grant feedback](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-memory-grant-feedback).
 *  'DISABLE_BATCH_MODE_ADAPTIVE_JOINS'     

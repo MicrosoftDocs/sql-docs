@@ -15,7 +15,7 @@ monikerRange: ">= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallprod
 ---
 # Release notes for SQL Server 2019 CTP on Linux
 
-[!INCLUDE[tsql-appliesto-ssvnext-xxxx-xxxx-xxx-linuxonly.md](../includes/tsql-appliesto-ssvnext-xxxx-xxxx-xxx-linuxonly.md)]
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx-linuxonly.md](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-linuxonly.md)]
 
 The following release notes apply to SQL Server 2019 CTP running on Linux. This article is broken into sections for each release. Each release has a link to a support article describing the CU changes as well as links to the Linux package downloads.
 

@@ -13,7 +13,7 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 #customer intent: As an R developer, I want to model/train/score partitioned data to avoid manually subsetting data.
 ---
 # Tutorial: Create partition-based models in R on SQL Server
-[!INCLUDE[appliesto-ssvnex-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ssvnext-xxxx-xxxx-xxx.md)]
+[!INCLUDE[appliesto-ssvnex-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 In SQL Server 2019, partition-based modeling is the ability to create and train models over partitioned data. For stratified data that naturally segments into a given classification scheme - such as geographic regions, date and time, age or gender - you can execute script over the entire data set, with the ability to model, train, and score over partitions that remain intact over all these operations. 
 

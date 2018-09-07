@@ -20,18 +20,28 @@ The article explains how to use PolyBase on a SQL Server instance to query exter
 
 ## Prerequisites
 
-If you haven't installed PolyBase, see [PolyBase installation](polybase-installation.md). The installation article explains the prerequisites.
+- If you haven't installed PolyBase, see [PolyBase installation](polybase-installation.md). The installation article explains the prerequisites.
 
-PolyBase supports two Hadoop providers, Hortonworks Data Platform (HDP) and Cloudera Distributed Hadoop (CDH). The following Hadoop providers are supported:
+<!--SQL Server 2019-->
+::: moniker range=">= sql-server-ver15"
 
-- Hortonworks HDP 1.3 on Linux/Windows Server  
-- Hortonworks HDP 2.1 – 2.6 on Linux
-- Hortonworks HDP 2.1 - 2.3 on Windows Server  
-- Cloudera CDH 4.3 on Linux  
-- Cloudera CDH 5.1 – 5.5, 5.9 - 5.13 on Linux
+- Starting with SQL Server 2019, you must also [enable the PolyBase feature](polybase-installation.md#enable).
+
+::: moniker-end
+
+- PolyBase supports two Hadoop providers, Hortonworks Data Platform (HDP) and Cloudera Distributed Hadoop (CDH). The following Hadoop providers are supported:
+
+  - Hortonworks HDP 1.3 on Linux/Windows Server  
+  - Hortonworks HDP 2.1 – 2.6 on Linux
+  - Hortonworks HDP 2.1 - 2.3 on Windows Server  
+  - Cloudera CDH 4.3 on Linux  
+  - Cloudera CDH 5.1 – 5.5, 5.9 - 5.13 on Linux
+
+  > [!NOTE]
+  > Hadoop follows the "Major.Minor.Version" pattern for its new releases. All versions within a supported Major and Minor release are supported.
 
 > [!NOTE]
-> Hadoop follows the "Major.Minor.Version" pattern for its new releases. All versions within a supported Major and Minor release are supported.
+> PolyBase supports Hadoop encryption zones starting with SQL Server 2016 SP1 CU7 and SQL Server 2017.
 
 ### Configure Hadoop connectivity
 
@@ -50,14 +60,14 @@ First, configure SQL Server PolyBase to use your specific Hadoop provider.
    GO
    ```  
 
-1. You must restart SQL Server using **services.msc**. Restarting SQL Server restarts these services:  
+2. You must restart SQL Server using **services.msc**. Restarting SQL Server restarts these services:  
 
    - SQL Server PolyBase Data Movement Service  
    - SQL Server PolyBase Engine  
   
    ![stop and start PolyBase services in services.msc](../../relational-databases/polybase/media/polybase-stop-start.png "stop and start PolyBase services in services.msc")  
   
-## Enable pushdown computation  
+## <a id="pushdown"></a> Enable pushdown computation  
 
 To improve query performance, enable pushdown computation to your Hadoop cluster:  
   

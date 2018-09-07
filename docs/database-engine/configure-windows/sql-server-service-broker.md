@@ -10,13 +10,13 @@ ms.technology: configuration
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
-  - "SQL13.SWB.SSBMSGTYPEPROPERTIES.GENERAL.F1"
-  - "SQL13.SWB.SSBCONTRACTPROPERTIES.GENERAL.F1"
-  - "SQL13.SWB.SSBQUEUEPROPERTIES.GENERAL.F1"
-  - "SQL13.SWB.SSBREMSVCBINDPROPERTIES.GENERAL.F1"
-  - "SQL13.SWB.SSBROUTEPROPERTIES.GENERAL.F1"
-  - "SQL13.SWB.SSBPRIORITYPROPERTIES.GENERAL.F1"
-  - "SQL13.SWB.SSBSERVICEPROPERTIES.GENERAL.F1"
+  - SQL13.SWB.SSBMSGTYPEPROPERTIES.GENERAL.F1
+  - SQL13.SWB.SSBCONTRACTPROPERTIES.GENERAL.F1
+  - SQL13.SWB.SSBQUEUEPROPERTIES.GENERAL.F1
+  - SQL13.SWB.SSBREMSVCBINDPROPERTIES.GENERAL.F1
+  - SQL13.SWB.SSBROUTEPROPERTIES.GENERAL.F1
+  - SQL13.SWB.SSBPRIORITYPROPERTIES.GENERAL.F1
+  - SQL13.SWB.SSBSERVICEPROPERTIES.GENERAL.F1
 helpviewer_keywords: 
   - "Broker See Service Broker"
   - "SQL Server Service Broker"
@@ -57,8 +57,8 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
 
 - Cross-instance service broker is not supported 
  - `sys.routes` - Prerequisite: select address from sys.routes. Address must be LOCAL on every route. See [sys.routes](../../relational-databases/system-catalog-views/sys-routes-transact-sql.md).
- - `CREATE ROUTE` - you cannot `CREATE ROUTE` with `ADDRESS` other than `LOCAL`. See [CREATE ROUTE](https://docs.microsoft.com/sql/t-sql/statements/create-route-transact-sql).
- - `ALTER ROUTE` cannot `ALTER ROUTE` with `ADDRESS` other than `LOCAL`. See [ALTER ROUTE](../../t-sql/statements/alter-route-transact-sql.md).  
+ - `CREATE ROUTE` - you cannot use `CREATE ROUTE` with `ADDRESS` other than `LOCAL`. See [CREATE ROUTE](https://docs.microsoft.com/sql/t-sql/statements/create-route-transact-sql).
+ - `ALTER ROUTE` cannot use `ALTER ROUTE` with `ADDRESS` other than `LOCAL`. See [ALTER ROUTE](../../t-sql/statements/alter-route-transact-sql.md).  
   
 ### Messages can be sent to multiple target services (multicast)  
  The syntax of the [SEND &#40;Transact-SQL&#41;](../../t-sql/statements/send-transact-sql.md) statement has been extended to enable multicast by supporting multiple conversation handles.  

@@ -29,22 +29,21 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
 
   Removes a server from the list of known remote and linked servers on the local instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+ ![link icon](../../database-engine/configure-windows/media/topic-link.gif "link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
   
-```  
-  
+```sql  
 sp_dropserver [ @server = ] 'server'   
      [ , [ @droplogins = ] { 'droplogins' | NULL} ]  
 ```  
   
 ## Arguments  
- [ **@server =** ] **'***server***'**  
+ *server*  
  Is the server to be removed. *server* is **sysname**, with no default. *server* must exist.  
   
- [ **@droplogins =** ] **'droplogins'** | NULL  
- Indicates that related remote and linked server logins for *server* must also be removed if **droplogins** is specified. **@droplogins** is **char(10)**, with a default of NULL.  
+ *droplogins*  
+ Indicates that related remote and linked server logins for *server* must also be removed if **droplogins** is specified. **`@droplogins`** is **char(10)**, with a default of NULL.  
   
 ## Return Code Values  
  0 (success) or 1 (failure)  

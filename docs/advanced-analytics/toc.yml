@@ -26,19 +26,21 @@
       href: install/sql-machine-learning-standalone-windows-install.md
     - name: Pre-trained models
       href: install/sql-pretrained-models-install.md
-    - name: Command-prompt setup
-      href: install/sql-ml-component-commandline-install.md
     - name: Offline setup (no internet)
       href: install/sql-ml-component-install-without-internet-access.md
       items:
       - name: CAB downloads (offline setup)
         href: install/sql-ml-cab-downloads.md
+    - name: Command-prompt setup
+      href: install/sql-ml-component-commandline-install.md
     - name: Upgrade R and Python
       href: r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md
     - name: Set up R tools
       href: r/set-up-a-data-science-client.md
     - name: Set up Python tools
       href: python/setup-python-client-tools-sql.md
+    - name: Set up a virtual server
+      href: r/installing-sql-server-r-services-on-an-azure-virtual-machine.md
   - name: Quickstarts
     items:
     - name: R
@@ -234,11 +236,11 @@
         href: r/using-r-code-profiling-functions.md
     - name: Security
       items:
-      - name: Security considerations for the R runtime in SQL Server
+      - name: Security considerations
         href: r/security-considerations-for-the-r-runtime-in-sql-server.md
-      - name: Security for R
+      - name: Security for R 
         href: r/security-overview-sql-server-r.md
-      - name: Python security
+      - name: Security for Python
         href: python/security-overview-sql-server-python-services.md
       - name: SQL Server Launchpad account
         href: general/sql-server-launchpad-service-account.md
@@ -270,29 +272,32 @@
         href: r/using-r-code-profiling-functions.md
       - name: Monitor Machine Learning Services using custom reports in Management Studio
         href: r/monitor-r-services-using-custom-reports-in-management-studio.md
-  - name: Package reference
+  - name: Reference
     href: r/machine-learning-services-r-reference.md
     items:
-    - name: MicrosoftML in SQL
-      href: using-the-microsoftml-package.md
-    - name: RevoScaleR in SQL
-      href: r/revoscaler-overview.md
-    - name: RevoScaleR function list for SQL Server data
-      href: r/scaler-functions-for-working-with-sql-server-data.md
-    - name: sqlrutils in SQL
-      href: r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md
-    - name: olapR in SQL
-      href: r/how-to-create-mdx-queries-using-olapr.md
-    - name: revoscalepy in SQL
-      href: python/what-is-revoscalepy.md
+    - name: R Packages
+      href: r/machine-learning-services-r-reference.md
+      items:
+      - name: olapR in SQL
+        href: r/how-to-create-mdx-queries-using-olapr.md
+      - name: MicrosoftML in SQL
+        href: using-the-microsoftml-package.md
+      - name: RevoScaleR in SQL
+        href: r/revoscaler-overview.md
+      - name: RevoScaleR function list for SQL Server data
+        href: r/scaler-functions-for-working-with-sql-server-data.md
+      - name: sqlrutils in SQL
+        href: r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md
+    - name: Python Packages
+      items:
+      - name: revoscalepy in SQL
+        href: python/what-is-revoscalepy.md
   - name: Resources
     items:
     - name: Known issues
       href: known-issues-for-sql-server-machine-learning-services.md
     - name: Release notes
       href: https://docs.microsoft.com/sql/sql-server/sql-server-2017-release-notes
-    - name: Set up a virtual machine
-      href: r/installing-sql-server-r-services-on-an-azure-virtual-machine.md
     - name: Troubleshooting
       href: machine-learning-troubleshooting-faq.md
       items:

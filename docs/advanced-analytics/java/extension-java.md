@@ -22,9 +22,9 @@ To use the Java extension to run your own code, follow these steps.
 
 Run SQL Server 2019 Setup on Windows or Linux to install a database engine instance, adding the Machine Learning Services feature. This feature provides the extensibility framework and adds the security layer that isolates code execution, and protects data from unauthorized access.
 
-+ On Windows, in the feature selection screen, select **Machine Learning Services (in-database)**. You can omit R and Python if you wish.
++ On Windows, start the [Installation Wziard](../install/sql-machine-learning-services-windows-install.md). In Feature Selection, select **Machine Learning Services (in-database)**. You can omit R and Python if you wish.
 
-+ On Linux, install the extensibility package.
++ On Linux, install the [database engine and extensibility package](../../linux/sql-server-linux-setup-machine-learning.md).
 
 Be sure to complete the enable external script execution step in the installation instructions.
 

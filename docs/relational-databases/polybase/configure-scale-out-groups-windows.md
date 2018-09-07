@@ -20,7 +20,7 @@ This article describes how to setup a [PolyBase scale-out group](polybase-scale-
 
 ## Prerequisites
   
-- N machines in the same domain  
+- More than one machine in the same domain  
   
 - A domain user account to run PolyBase services  
   
@@ -50,7 +50,7 @@ This walks through the steps of configuring a PolyBase Group using:
   
 2. Domain account: *PQTH4A\PolybaseUse*r  
 
-#### Step 1: Install SQL Server with PolyBase on all machines
+## Install SQL Server with PolyBase on all machines
 
 1. Run setup.exe.
   
@@ -64,11 +64,11 @@ This walks through the steps of configuring a PolyBase Group using:
   
    ![PolyBase services](../../relational-databases/polybase/media/polybase-services.png "PolyBase services")  
   
-#### Step 2: Select one SQL Server as head node  
+## Select one SQL Server as head node  
   
-- After setup is complete, both machines can function as PolyBase Group head nodes. In this example, we will choose “MSSQLSERVER” on PQTH4A-CMP01 as the head node.
+After setup is complete, both machines can function as PolyBase Group head nodes. In this example, we will choose “MSSQLSERVER” on PQTH4A-CMP01 as the head node.
   
-#### Step 3: Add other SQL Server instances as compute nodes  
+## Add other SQL Server instances as compute nodes  
   
 1. Connect to SQL Server on PQTH4A-CMP02.
   
@@ -84,7 +84,7 @@ This walks through the steps of configuring a PolyBase Group using:
   
 4. Shutdown the PolyBase engine and restart the PolyBase data movement service.
   
-#### Optional: Remove a compute node  
+## Optional: Remove a compute node  
   
 1. Connect to the compute node SQL Server (PQTH4A-CMP02).
   
@@ -104,8 +104,4 @@ This walks through the steps of configuring a PolyBase Group using:
 
 For troubleshooting, see [PolyBase troubleshooting with dynamic management views](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80).
   
-## See Also
-
-[Get started with PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)
-[PolyBase Guide](../../relational-databases/polybase/polybase-guide.md)
-[PolyBase Connectivity Configuration &#40;Transact-SQL&#41;](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)
+For more information about PolyBase, see the [PolyBase overview](../../relational-databases/polybase/polybase-guide.md).

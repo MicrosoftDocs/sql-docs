@@ -310,7 +310,10 @@ AUTOGROW_ALL_FILES
 
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
   
-When a file in the filegroup meets the autogrow threshold, all files in the filegroup grow.  
+When a file in the filegroup meets the autogrow threshold, all files in the filegroup grow. 
+
+> [!NOTE]
+> This is the default value for TempDB.
   
 **\<filegroup_updatability_option>::=**  
   

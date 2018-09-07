@@ -18,7 +18,7 @@ One of the key scenarios for SQL Server 2019 CTP 2.0 is the ability to virtualiz
 
 ## Launch the virtualize data wizard
 
-Connect to the master instance using the IP address / port number (31433) obtained at the end of the [deployment script](quickstart-big-data-cluster-deploy.md). Expand your **Databases** node in the Object Explorer and select one of the databases where you would like to virtualize the data into from an existing SQL Server instance. Right-click on the Database and select **Virtualize Data** from the context menu. This launches the Virtualize Data wizard. You can also launch the Virtualize Data wizard from the command palette by typing Ctrl+Shift+P (in Windows) and Cmd+Shift+P (in Mac).
+Connect to the master instance using the IP address / port number (31433) obtained at the end of the [deployment script](../../big-data-cluster/quickstart-big-data-cluster-deploy.md). Expand your **Databases** node in the Object Explorer and select one of the databases where you would like to virtualize the data into from an existing SQL Server instance. Right-click on the Database and select **Virtualize Data** from the context menu. This launches the Virtualize Data wizard. You can also launch the Virtualize Data wizard from the command palette by typing Ctrl+Shift+P (in Windows) and Cmd+Shift+P (in Mac).
 
 ![Virtualize data wizard](media/data-virtualization/virtualize-data-wizard.png)
 
@@ -69,4 +69,4 @@ If you click, **Generate Script** you will see the T-SQL query being generated f
 
 ## Next steps
 
-For more information on SQL Server Big Data Cluster and related scenarios, see [What is SQL Server Big Data Cluster?](big-data-cluster-overview.md).
+For more information on SQL Server Big Data Cluster and related scenarios, see [What is SQL Server Big Data Cluster?](../../big-data-cluster/big-data-cluster-overview.md).

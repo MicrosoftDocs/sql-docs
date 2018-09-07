@@ -2,13 +2,11 @@
 title: "sys.event_log (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: ""
+ms.prod:
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.service: "sql-database"
-ms.component: "system-catalog-views"
-ms.suite: "sql"
-ms.technology: system-objects
+ms.service: sql-database
+ms.component: 
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 

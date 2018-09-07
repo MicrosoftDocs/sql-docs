@@ -45,16 +45,16 @@ PolyBase can be installed on only one SQL Server instance per machine.
    
 ## Single Node or PolyBase ScaleOut Group
 
-Before you start installing PolyBase on your SQL Server Instances, it is good to plan out if you want a single node installation or a PolyBase scale out group. 
+Before you start installing PolyBase on your SQL Server Instances, it is good to plan out if you want a single node installation or a PolyBase scale-out group. 
 
-For a PolyBase Scaleout group, you will need to make sure that: 
+For a PolyBase scale-out group, you will need to make sure that: 
 
 - All of the machines are on the same domain.
 - You use the same service account and password during installation.
 - Your SQL Server Instances can communicate with one another over the network.
 - The SQL Server Instances are all the same version of SQL Server.
 
-Once you have installed PolyBase as either stand alone or in a scaleout group, you cannot change. You will have to uninstall and reinstall the feature to change this setting.
+Once you have installed PolyBase as either stand alone or in a scale-out group, you cannot change. You will have to uninstall and reinstall the feature to change this setting.
 
 ## Install using the installation wizard  
    
@@ -80,11 +80,21 @@ Once you have installed PolyBase as either stand alone or in a scaleout group, y
      Selecting this option will also enable Microsoft Distributed Transaction Coordinator (MSDTC) firewall connections and modify MSDTC registry settings.  
    
 6. On the **PolyBase Configuration Page**, specify a port range with at least six ports. SQL Server setup will allocate the first six available ports from the range.  
-   
+
+<!--SQL Server 2019-->
+::: moniker range=">= sql-server-ver15"
+
+After installation, you must [enable the PolyBase feature](#enable).
+
+::: moniker-end
+
 ##  <a name="installing"></a> Install using a command prompt  
 
 Use the values in this table to create installation scripts. The two services **SQL Server PolyBase Engine** and **SQL Server PolyBase Data Movement Service** must run under the same account. In a PolyBase scale-out group, PolyBase services on all nodes must run under the same domain account.  
    
+<!--SQL Server 2016/2017-->
+::: moniker range="= sql-server-2016 || = sql-server-2017 || =sqlallproducts-allversions"
+
 |SQL Server component|Parameter and values|Description|  
 |--------------------------|--------------------------|-----------------|  
 |SQL Server setup control|**Required**<br /><br /> /FEATURES=PolyBase|Selects PolyBase feature.|  
@@ -96,6 +106,31 @@ Use the values in this table to create installation scripts. The two services **
 |SQL Server PolyBase Data Movement Service|**Optional**<br /><br /> /PBDMSSVCSTARTUPTYPE|Specifies the startup mode for the data movement service: Automatic (default) , Disabled,  and Manual|  
 |PolyBase|**Optional**<br /><br /> /PBSCALEOUT|Specifies if the SQL Server instance will be used as a part of PolyBase Scale-out computational group. <br />Supported values: **True**, **False**|  
 |PolyBase|**Optional**<br /><br /> /PBPORTRANGE|Specifies a port range with at least 6 ports for PolyBase services. Example:<br /><br /> `/PBPORTRANGE=16450-16460`|  
+
+::: moniker-end
+<!--SQL Server 2019-->
+::: moniker range=">= sql-server-ver15"
+
+|SQL Server component|Parameter and values|Description|  
+|--------------------------|--------------------------|-----------------|  
+|SQL Server setup control|**Required**<br /><br /> /FEATURES=PolyBaseCore, PolyBaseJava, PolyBase | **PolyBaseCore** installs support for all PolyBase features except Hadoop connectivity. **PolyBaseJava** enables Hadoop connectivity. **PolyBaseCore** installs both. |  
+|SQL Server PolyBase Engine|**Optional**<br /><br /> /PBENGSVCACCOUNT|Specifies the account for the engine service. The default is **NT Authority\NETWORK SERVICE**.|  
+|SQL Server PolyBase Engine|**Optional**<br /><br /> /PBENGSVCPASSWORD|Specifies the password for the engine service account.|  
+|SQL Server PolyBase Engine|**Optional**<br /><br /> /PBENGSVCSTARTUPTYPE|Specifies the startup mode for the PolyBase engine service: Automatic (default) , Disabled,  and Manual|  
+|SQL Server PolyBase Data Movement Service|**Optional**<br /><br /> /PBDMSSVCACCOUNT|Specifies the account for data movement service. The default is **NT Authority\NETWORK SERVICE**.|  
+|SQL Server PolyBase Data Movement Service|**Optional**<br /><br /> /PBDMSSVCPASSWORD|Specifies the password for the data movement account.|  
+|SQL Server PolyBase Data Movement Service|**Optional**<br /><br /> /PBDMSSVCSTARTUPTYPE|Specifies the startup mode for the data movement service: Automatic (default) , Disabled,  and Manual|  
+|PolyBase|**Optional**<br /><br /> /PBSCALEOUT|Specifies if the SQL Server instance will be used as a part of PolyBase Scale-out computational group. <br />Supported values: **True**, **False**|  
+|PolyBase|**Optional**<br /><br /> /PBPORTRANGE|Specifies a port range with at least 6 ports for PolyBase services. Example:<br /><br /> `/PBPORTRANGE=16450-16460`|  
+
+::: moniker-end
+
+<!--SQL Server 2019-->
+::: moniker range=">= sql-server-ver15"
+
+After installation, you must [enable the PolyBase feature](#enable).
+
+::: moniker-end
 
 **Example**
 
@@ -111,6 +146,18 @@ Setup.exe /Q /ACTION=INSTALL /IACCEPTSQLSERVERLICENSETERMS /FEATURES=SQLEngine,P
 /PBDMSSVCACCOUNT="<DomainName>\<UserName>" /PBDMSSVCPASSWORD="<StrongPassword>"  
    
 ```  
+
+<!--SQL Server 2019-->
+::: moniker range=">= sql-server-ver15"
+## <a id="enable"></a> Enable PolyBase
+
+Starting with SQL Server 2019 CTP 2.0, you must enable PolyBase after installation using the following Transact-SQL command:
+
+```sql
+sp_configure @configname = 'polybase enabled', @configvalue = 1;
+```
+
+::: moniker-end
 
 ## Post installation notes  
 

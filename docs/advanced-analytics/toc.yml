@@ -12,7 +12,7 @@
     href: what-s-new-in-sql-server-machine-learning-services.md
 - name: Install
   items:
-  - name: Differences in SQL Server 2019 installation
+  - name: Differences in a SQL Server 2019 installation
     href: install/sql-machine-learning-services-ver15.md
   - name: Machine Learning Services (R, Python, Java)
     href: install/sql-machine-learning-services-windows-install.md
@@ -236,7 +236,7 @@
       href: r/security-overview-sql-server-r.md
     - name: Python security
       href: python/security-overview-sql-server-python-services.md
-    - name: SQL Server Launchpad service account
+    - name: SQL Server Launchpad account
       href: general/sql-server-launchpad-service-account.md
     - name: Modify SQLRUserGroup
       href: r/modify-the-user-account-pool-for-sql-server-r-services.md

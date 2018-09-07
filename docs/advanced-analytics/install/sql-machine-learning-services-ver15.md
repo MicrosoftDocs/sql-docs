@@ -12,9 +12,9 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 # Differences in SQL Server Machine Learning Services installation in SQL Server 2019  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-On Windows, SQL Server 2019 Setup fundamentally changes the security and isolation model for external processes running Java, R, or Python tasks. If you are adding programming language extensions or machine learning to a database engine instance, this article explains how Setup provisions external processors for authorized access to data and operations.
+On Windows, SQL Server 2019 Setup fundamentally changes the security and isolation mechanism for external processes running Java, R, or Python tasks. If you are adding programming language extensions or machine learning to a database engine instance, this article explains how Setup provisions an authorization model for accessing data and operations.
 
-While isolation and security are changing, the mechanics of installation remain the same. If you installed the previous version, you'll notice that the Installation wizard and command line parameters are unchanged in SQL Server 2019. For help with installation, see [Install SQL Server Machine Learning Services](sql-machine-learning-services-windows-install.md).
+While isolation and security are changing, the mechanics of installation remain the same. If you installed the previous version, you'll notice that the Installation wizard and command-line parameters are unchanged in SQL Server 2019. For help with installation, see [Install SQL Server Machine Learning Services](sql-machine-learning-services-windows-install.md).
 
 ## AppContainer isolation
 
@@ -28,7 +28,7 @@ In terms of setup, the main differences with AppContainer isolation are:
 + **All Application Packages** security principle group will be granted 'read and execute' permissions to the SQL Server 'Binn', R_SERVICES, and PYTHON_SERVICES directories. 
 + All external scripts and code executed from sp_execute_external_script follow the new security model. This applies to R, Python, and the new Java language extension introduced in SQL Server 2019.
 
-As before, additional configuration is still required for implied authentication for remote users who execute code on SQL Server. For more information, see [Security for SQL Server machine learning and R](../r/security-overview-sql-server-r)
+As before, additional configuration is still required for implied authentication for remote users who execute code on SQL Server. For more information, see [Security for SQL Server machine learning and R](../r/security-overview-sql-server-r.md)
 
 
 ## Firewall

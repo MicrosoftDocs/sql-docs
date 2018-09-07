@@ -19,7 +19,9 @@ A separate [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] se
 
 By default, SQL Server Launchpad is configured to run under **NT Service\MSSQLLaunchpad**, which is provisioned with all necessary permissions to run external scripts. Stripping permissions from this account can result in Launchpad failing to start or to access the SQL Server instance where external scripts should be run.
 
-Permissions required for this account are listed below. If you modify the service account, be sure to use the **Local Security Policy** application (**All apps** > **Windows Administrative Tools** > **Local Security Policy**):
+If you modify the service account, be sure to use the **Local Security Policy** application (**All apps** > **Windows Administrative Tools** > **Local Security Policy**).
+
+Permissions required for this account are listed in the following table.
 
 | Group policy setting | Constant name |
 |----------------------|---------------|
@@ -39,9 +41,9 @@ Typically, there is no reason to modify service configuration. Properties that c
 1. Open [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md). 
 
   + On the Start page, enter **MMC** to open the Microsoft Management Console.
-  + On **File** > **Add/Remove Snap-in,**, move **SQL Server Configuration Manager** from Available to Selected Snap-ins.
+  + On **File** > **Add/Remove Snap-in**, move **SQL Server Configuration Manager** from Available to Selected Snap-ins.
 
-2. In SQL Server Services, right-click SQL Server Launchpad and select **Properties**.
+2. In SQL Server Configuration Manager under SQL Server Services, right-click SQL Server Launchpad and select **Properties**.
 
     + To change the service account, click the **Log On** tab.
 
@@ -50,7 +52,7 @@ Typically, there is no reason to modify service configuration. Properties that c
 > [!Note]
 > In early versions of SQL Server 2016 R Services, you could change some properties of the service by editing the [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] configuration file. This file is no longer used for changing configurations. SQL Server Configuration Manager is the right approach for changes to service configuration, such as the service account and number of users.
 
-#### Debug settings
+## Debug settings
 
 A few properties can only be changed by using the Launchpad's configuration file, which might be useful in limited cases, such as debugging. The configuration file is created during [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup and by default is saved as a plain text file in the following location: `<instance path>\binn\rlauncher.config`
 

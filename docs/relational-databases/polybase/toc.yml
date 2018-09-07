@@ -25,7 +25,11 @@
   - name: Configure external data sources
     items:
     - name: Hadoop
-      href: polybase-configure-hadoop.md
+      items:
+      - name: Connect to Hadoop
+        href: polybase-configure-hadoop.md
+      - name: Configuration settings
+        href: polybase-configuration.md
     - name: Azure Blob Storage
       href: polybase-configure-azure-blob-storage.md
     - name: SQL Server

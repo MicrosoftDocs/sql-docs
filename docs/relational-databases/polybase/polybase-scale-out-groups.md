@@ -49,6 +49,6 @@ After setup of SQL Server, the instance can be designated as either a head node 
 
 ## Next steps
 
-To configure a PolyBase scale-out group, see the following tutorial:
+To configure a PolyBase scale-out group, see the following guide:
 
 [Improve PolyBase scale-out groups on Windows](configure-scale-out-groups-windows.md)

@@ -33,6 +33,9 @@ PolyBase supports two Hadoop providers, Hortonworks Data Platform (HDP) and Clou
 > [!NOTE]
 > Hadoop follows the "Major.Minor.Version" pattern for its new releases. All versions within a supported Major and Minor release are supported.
 
+> [!NOTE]
+> PolyBase supports Hadoop encryption zones starting with SQL Server 2016 SP1 CU7 and SQL Server 2017.
+
 ### Configure Hadoop connectivity
 
 First, configure SQL Server PolyBase to use your specific Hadoop provider.
@@ -50,14 +53,14 @@ First, configure SQL Server PolyBase to use your specific Hadoop provider.
    GO
    ```  
 
-1. You must restart SQL Server using **services.msc**. Restarting SQL Server restarts these services:  
+2. You must restart SQL Server using **services.msc**. Restarting SQL Server restarts these services:  
 
    - SQL Server PolyBase Data Movement Service  
    - SQL Server PolyBase Engine  
   
    ![stop and start PolyBase services in services.msc](../../relational-databases/polybase/media/polybase-stop-start.png "stop and start PolyBase services in services.msc")  
   
-## Enable pushdown computation  
+## <a id="pushdown"></a> Enable pushdown computation  
 
 To improve query performance, enable pushdown computation to your Hadoop cluster:  
   

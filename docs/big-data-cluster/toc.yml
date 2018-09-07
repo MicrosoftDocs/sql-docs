@@ -57,7 +57,7 @@
   - name: Data virtualization
     items:
     - name: Virtualize external data
-      href: data-virtualization.md
+      href: ../relational-databases/polybase/data-virtualization.md?toc=%2fsql%2fbig-data-cluster%2ftoc.json
   - name: Data ingestion
     items:
     - name: Load data with curl

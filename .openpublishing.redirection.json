@@ -1,6 +1,11 @@
 {
     "redirections": [
         {
+            "source_path": "docs/relational-databases/polybase/get-started-with-polybase.md",
+            "redirect_url": "/sql/relational-databases/polybase/polybase-guide",
+            "redirect_document_id": false 
+        },
+        {
             "source_path": "docs/advanced-analytics/architecture-overview-machine-learning.md",
             "redirect_url": "/sql/advanced-analytics/concepts/extensibility-framework",
             "redirect_document_id": false

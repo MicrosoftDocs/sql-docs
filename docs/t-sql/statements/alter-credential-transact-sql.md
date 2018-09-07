@@ -1,7 +1,7 @@
 ﻿---
 title: "ALTER CREDENTIAL (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: 08/19/2015
+ms.date: 09/07/2018
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: "language-reference"
@@ -27,9 +27,8 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
 
   Changes the properties of a credential.  
 
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
-
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+> [!IMPORTANT]
+> “Should do” info as best practice; “must do” to complete task ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -47,7 +46,10 @@ ALTER CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
  Specifies the name of the account to be used when connecting outside the server.  
   
  SECRET **='***secret***'**  
- Specifies the secret required for outgoing authentication. *secret* is optional.  
+ Specifies the secret required for outgoing authentication. *secret* is optional.
+  
+> [!IMPORTANT]
+> Azure SQL Database only supports Azure Key Vault and Shared Access Signature identities. Windows user identities are not supported.
   
 ## Remarks  
  When a credential is changed, the values of both *identity_name* and *secret* are reset. If the optional SECRET argument is not specified, the value of the stored secret will be set to NULL.  

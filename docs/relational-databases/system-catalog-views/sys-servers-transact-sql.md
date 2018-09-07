@@ -1,7 +1,7 @@
 ﻿---
 title: "sys.servers (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/10/2016"
+ms.date: "09/07/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.component: "system-catalog-views"
@@ -31,8 +31,6 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
 
   Contains a row per linked or remote server registered, and a row for the local server that has **server_id** = 0.  
 
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]  
-  
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|Local ID of linked server.|  

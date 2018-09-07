@@ -1,7 +1,7 @@
 ﻿---
 title: "sp_dropserver (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "09/07/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.component: "system-stored-procedures"
@@ -29,8 +29,6 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
 
   Removes a server from the list of known remote and linked servers on the local instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
-
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  

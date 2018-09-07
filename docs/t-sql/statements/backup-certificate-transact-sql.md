@@ -1,7 +1,7 @@
 ---
 title: "BACKUP CERTIFICATE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "09/07/2018"
 ms.prod: sql
 ms.prod_service: "sql-data-warehouse, pdw, sql-database"
 ms.reviewer: ""
@@ -34,7 +34,7 @@ manager: craigg
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # BACKUP CERTIFICATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdbmi-asdw-pdw-md.md)]
 
   Exports a certificate to a file.  
   
@@ -72,6 +72,10 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
   
  *path_to_private_key_file*  
  Specifies the complete path, including file name, of the file in which the private key is to be saved. This can be a local path or a UNC path to a network location. The default is the path of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DATA folder.  
+
+> [!IMPORTANT]
+> Azure SQL Database does not support backing up a certificate to a file.
+
   
  *encryption_password*  
  Is the password that is used to encrypt the private key before writing the key to the backup file. The password is subject to complexity checks.  

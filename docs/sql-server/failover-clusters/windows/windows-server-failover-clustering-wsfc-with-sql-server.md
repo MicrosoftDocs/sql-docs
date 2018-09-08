@@ -154,7 +154,7 @@ manager: craigg
  WSFC configuration metadata and status for all nodes is stored on each node. Each server may provide asymmetric storage or shared storage (SAN) volumes for user or system databases. Each server has at least one physical network interface on one or more IP subnets.  
   
  The WSFC monitors health and manages configuration for a group of servers.  
- The WSFC mechanisms propagate changes to WSFC configuration metadata and status to all nodes in the WSFC. If a disk witness is used, the metadata is also stored there. By detault, each node of the WSFC gets a vote towards quorum and a witness will be used if necessary and is configured.
+ The WSFC mechanisms propagate changes to WSFC configuration metadata and status to all nodes in the WSFC. If a disk witness is used, the metadata is also stored there. By default, each node of the WSFC gets a vote towards quorum and a witness will be used if necessary and is configured.
  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] registry keys are subkeys of the WSFC cluster.  
  If you delete and re-create a WSFC, you must disable and re-enable the [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] feature on each server instance that was enabled for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] on the original WSFC. For more information, see [Enable and Disable Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).  

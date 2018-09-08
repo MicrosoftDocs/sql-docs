@@ -16,9 +16,9 @@ monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 ---
 # What's new in SQL Server 2019
 
-[!INCLUDE[tsql-appliesto-ssvnext-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssvnext-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-[!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] builds on previous releases to grow SQL Server as a platform that gives you choices of development languages, data types, on-premises or cloud, and operating systems. This article summarizes what is new for SQL Server 2019. For more information and known issues, see the [SQL Server 2019 Release Notes](sql-server-vnext-release-notes.md).
+[!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] builds on previous releases to grow SQL Server as a platform that gives you choices of development languages, data types, on-premises or cloud, and operating systems. This article summarizes what is new for SQL Server 2019. For more information and known issues, see the [SQL Server 2019 Release Notes](sql-server-ver15-release-notes.md).
 
 **Try SQL Server 2019!**
 - [![Download from Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [Download SQL Server 2019 to install on Windows](http://go.microsoft.com/fwlink/?LinkID=829477)
@@ -32,7 +32,16 @@ Community technology preview (CTP) 2.0 is the first public release of [!INCLUDE[
 - [Database engine](#databaseengine)
   - Intelligent query processing
   - Database scoped configuration setting for online and resumable DDL operations
-  - Expanded support for Persistent Memory (PMEM) devices 
+  - Clustered columnstore online index build and rebuild
+  - Resumable online index create
+  - UTF-8 Support
+  - Lightweight query profiling infrastructure enabled by default
+  - Expanded support for Persistent Memory (PMEM) devices
+- [Big Data Cluster](#bigdatacluster)
+  - Deploy a SQL Server Big Data Cluster with Linux containers on Kubernetes
+  - Use Azure Data Studio to run Jupyter Notebooks
+  - Ingest external data into a data pool
+  - Query HDFS data in the storage pool
 - [High Availability](#ha)
   - Connection redirection
 - [SQL Graph](#sqlgraph)
@@ -53,10 +62,16 @@ Community technology preview (CTP) 2.0 is the first public release of [!INCLUDE[
   - Machine Learning on Linux
   - Partition-based modeling
   - Failover cluster support
+- [Master Data Services](#mds)
+  - Silverlight controls replaced
 - [Programmability extensions](#programmability)
   - Java language extension
 - [Security](#security)
-  - Always Encrypted with enclaves
+  - Always Encrypted with secure enclaves
+  - Certificate management in SQL Server Configuration Manager
+- [Tools](#tools)
+  - SQL Server Management Studio (SSMS) 18.0 (preview)
+  - Azure Data Studio (preview)
 
 Continue reading for more details about these features.
 
@@ -119,6 +134,80 @@ Without this feature you have to specify the online and resumable options direct
 More information:
 For more information on index resumable operations see [Resumable Online Index Create](http://azure.microsoft.com/blog/resumable-online-index-create-is-in-public-preview-for-azure-sql-db/).
 
+### Build and rebuild clustered columnstore indexes online
+
+Convert row-store tables into columnstore format. Create clustered columnstore indexes (CCI). This was an offline process in previous versions of SQL Server - requiring all changes stop while CCI is created. SQL Server 2019 and Azure SQL Database enable customers to create or re-create CCI online. Workload will not be blocked and all changes to made on the underlying data are transparently added into the target columnstore table. Examples of new TSQL statements that can be used are:
+
+  ```sql
+  CREATE CLUSTERED COLUMNSTORE INDEX cci
+    ON <tableName>
+    WITH (ONLINE = ON)
+  ```
+
+  ```SQL  
+  ALTER INDEX cci
+    ON <tableName>
+    REBUILD WITH (ONLINE = ON)
+  ```
+
+### UTF-8 Support
+
+Full support for the widely used UTF-8 character encoding as an import or export encoding, or as database-level or column-level collation for text data. UTF-8 is allowed in the CHAR and VARCHAR datatypes, and is enabled when creating or changing an object’s collation to a collation with the `UTF8` suffix. 
+
+For example,`LATIN1_GENERAL_100_CI_AS_SC` to `LATIN1_GENERAL_100_CI_AS_SC_UTF8`. UTF-8 is only available to Windows collations that support supplementary characters, as introduced in SQL Server 2012. Note that NCHAR and NVARCHAR allow UTF-16 encoding only, and remain unchanged.
+
+This may provide significant storage savings, depending on the character set in use. For example, changing an existing column data type from NCHAR(10) to CHAR(10) using an UTF-8 enabled collation, translates into nearly 50% reduction in storage requirements. This is because NCHAR(10) requires 22 bytes for storage, whereas CHAR(10) requires 12 bytes for the same Unicode string.
+
+### Lightweight query profiling infrastructure enabled by default
+
+The lightweight query profiling infrastructure (LWQPI) is now enabled by default. The lightweight query profiling infrastructure was introduced in SQL Server 2016 SP1. It offers a query execution statistics collection mechanism with an expected overhead of 2% CPU, compared with an overhead of up to 75% CPU for the standard query profiling mechanism. On previous versions,
+ it was OFF by default. Database administrators could enable it with [trace flag 7412](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
+
+### Expanded support for Persistent Memory (PMEM) devices
+
+Any SQL Server file (database files, transaction log files, In-Memory OLTP checkpoint files, etc) placed on a Persistent Memory device (PMEM, also known as Storage Class Memory or SCM) will operate in "enlightened" mode, where SQL Server will directly access the device, avoiding the storage stack of the operating system and allowing extreme low latency I/Os against such devices. 
+
+### Data Discovery and Classification
+
+Data discovery and classification provides advanced capabilities natively built into SQL Server for classifying, labeling, and protecting the sensitive data in your databases. Classifying your most sensitive data (business, financial, healthcare, PII, etc.) can play a pivotal role in your organizational information protection stature. It can serve as infrastructure for:
+
+- Helping meet data privacy standards and regulatory compliance requirements
+- Various security scenarios, such as monitoring (auditing) and alerting on anomalous access to sensitive data
+- Making it easier to identify where sensitive data resides in the enterprise so admins can take the right steps securing the database
+
+[Auditing](../relational-databases/security/auditing/sql-server-audit-database-engine.md) has also been enhanced to include a new field in the audit log called `data_sensitivity_information`, which logs the sensitivity classifications (labels) of the actual data that was returned by the query. For details and examples, see [Add sensitivity classification](../t-sql/statements/add-sensitivity-classification-transact-sql.md).
+
+>[!NOTE]
+>There are no changes in terms of how audit is enabled. There is a new field added to the audit records, `data_sensitivity_information`, which logs the sensitivity classifications (labels) of the actual data that was returned by the query. See [Auditing access to sensitive data](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-data-discovery-and-classification#subheading-3).
+
+### Support for columnstore statistics in DBCC CLONEDATABASE
+
+DBCC CLONEDATABASE creates a schema-only copy of a database which includes all the elements necessary to troubleshoot query performance issues without copying the data.  In previous versions of SQL Server, the command did not copy the statistics necessary to accurately troubleshoot columnstore index queries and manual steps were required to capture this information.  Now in SQL Server 2019, DBCC CLONEDATABASE automatically captures the stats blobs for columnstore indexes, so no manual steps will be required.
+
+### New options added to sp_estimate_data_compression_savings
+
+`sp_estimate_data_compression_savings` returns the current size of the requested object and estimates the object size for the requested compression state.  Currently this procedure supports three options: NONE, Row and Page.  SQL Server 2019 introduces two new options: COLUMNSTORE and COLUMNSTORE_ARCHIVE.  These new options will allow you to estimate the space savings if a columnstore index is created on the table using either standard or archive columnstore compression.
+
+### sys.dm_db_page_info
+
+`sys.dm_db_page_info(database_id, file_id, page_id, mode)` returns information about a page in a database.  The function returns a row that contains the header information from the page, including the `object_id`, `index_id` and `partition_id`.  This replaces the need to use DBCC PAGE in most cases.  
+
+In order to facilitate troubleshooting of page-related waits, a new column called page_resource was also added to `sys.dm_exec_requests` and `sys.sysprocesses`.  This new column allows you to join `sys.dm_db_page_info` to these views via another new system function - `sys.fn_PageResCracker`.  See the following script as an example:
+
+```sql
+SELECT page_info.* 
+FROM sys.dm_exec_requests AS d 
+  CROSS APPLY sys.fn_PageResCracker(d.page_resource) AS r
+  CROSS APPLY sys.dm_db_page_info(r.db_id, r.file_id, r.page_id,'DETAILED')
+    AS page_info
+```
+
+## <a id="bigdatacluster"></a>Big Data Cluster
+
+- Deploy a SQL Server Big Data Cluster with Linux containers on Kubernetes
+- Use Azure Data Studio to run Jupyter Notebooks
+- Ingest external data into a data pool
+- Query HDFS data in the storage pool
 
 ## <a id="ha"></a> High Availability
 
@@ -169,14 +258,39 @@ For more information on index resumable operations see [Resumable Online Index C
 
 For detailed information, see [What's new in SQL Server Machine Learning Services](../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md).
 
+## <a id="mds"></a> Master Data Services (MDS)
+
+- **Silverlight controls replaced with HTML**: The Master Data Services (MDS) portal no longer depends on Silverlight. All the former Silverlight components have been replaced with HTML controls.
+
 ## <a id="programmability"></a> Programmability extensions
 
 - **Java language extension**: Use the Java language extension to execute Java code in SQL Server. In CTP2.0, this extension is installed when you add the feature 'Machine Learning Services (in-database)' to your SQL Server instance.
 
 ## <a id="security"></a>Security
 
+- **Always Encrypted with secure enclaves**: Expands upon Always Encrypted with in-place encryption and rich computations by enabling computations on plaintext data inside a secure enclave on the server side.
+  - Cryptographic operations (encrypting columns, rotating columns encryption keys, etc), can now be issued using Transact-SQL and do not require moving data out of the database. Secure enclaves unlock Always Encrypted to a much broader set of scenarios and applications that demand sensitive data to be protected in use, while also requiring rich computations on protected data to be supported within the database system. For details, see [Always Encrypted with secure enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md).
+
+- **Certificate management in SQL Server Configuration Manager**: SSL/TLS certificates are widely used to secure access to SQL Server instances. Certificate management is now integrated into the SQL Server Configuration Manager, simplifying common tasks such as:
+
+  - Viewing and validating certificates installed in a SQL Server instance. 
+  - Viewing certificates close to expiration.
+  - Deploy certificates across machines participating in Always On Availability Groups (from the node holding the primary replica).
+  - Deploy certificates across machines participating in a failover cluster instance (from the active node).
+
+  Note: User must have administrator permissions on all the cluster nodes.
+
+## <a id="tools"></a>Tools
+
+- [**SQL Server Management Studio (SSMS) 18.0 (preview)**](../ssms/sql-server-management-studio-ssms.md)
+
+  - Support for Always Encrypted with secure enclaves.
+
+- [**Azure Data Studio (preview)**](../sql-operations-studio/what-is.md)
+
+
 ## Next steps
 
-See the [SQL Server 2019 Release Notes](sql-server-vnext-release-notes.md).
+See the [SQL Server 2019 Release Notes](sql-server-ver15-release-notes.md).
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

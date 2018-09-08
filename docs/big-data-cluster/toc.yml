@@ -48,8 +48,8 @@
       href: deployment-guidance.md
     - name: Deploy on Minikube
       href: deploy-on-minikube.md
-    - name: Deploy on ACS
-      href: deploy-on-acs.md
+    - name: Deploy on AKS
+      href: deploy-on-aks.md
     - name: Deploy on Multiple VMs
       href: deploy-on-vms.md
     - name: Install big data tools
@@ -57,7 +57,7 @@
   - name: Data virtualization
     items:
     - name: Virtualize external data
-      href: data-virtualization.md
+      href: ../relational-databases/polybase/data-virtualization.md?toc=%2fsql%2fbig-data-cluster%2ftoc.json
   - name: Data ingestion
     items:
     - name: Load data with curl

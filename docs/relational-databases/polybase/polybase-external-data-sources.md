@@ -1,7 +1,7 @@
 ---
 title: "External data sources | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/28/2018"
+ms.date: "09/24/2018"
 ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"
@@ -13,6 +13,8 @@ ms.author: jroth
 manager: craigg
 ---
 # External data sources
+
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 TBD
 

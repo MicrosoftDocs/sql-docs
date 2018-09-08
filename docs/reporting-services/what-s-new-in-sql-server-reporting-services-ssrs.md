@@ -1,6 +1,6 @@
 ---
 title: "What's new in Reporting Services (SSRS) | Microsoft Docs"
-ms.date: "08/17/2018"
+ms.date: "09/06/2018"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.technology: reporting-services
@@ -27,7 +27,7 @@ For information about Power BI Report Server, see [What is Power BI Report Serve
 To download SQL Server 2017 Reporting Services, go to the  **[Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=55252)**.
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
-## SQL Server vNext CTP 2.0 Reporting Services
+## SQL Server 2019 CTP 2.0 Reporting Services
 
 SQL Server vNext CTP 2.0 Reporting Services isn’t available for preview. Install the current version, [SQL Server 2017 Reporting Services](install-windows/install-reporting-services.md). 
 ::: moniker-end

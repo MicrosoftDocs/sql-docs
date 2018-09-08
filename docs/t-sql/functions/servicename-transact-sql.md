@@ -30,8 +30,6 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
 
   Returns the name of the registry key under which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running. @@SERVICENAME returns 'MSSQLSERVER' if the current instance is the default instance; this function returns the instance name if the current instance is a named instance.  
 
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
-
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  

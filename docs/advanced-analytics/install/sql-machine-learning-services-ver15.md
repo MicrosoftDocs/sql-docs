@@ -24,10 +24,10 @@ In SQL Server 2019, Setup no longer creates worker accounts. Instead, isolation 
 
 As implemented by SQL Server, AppContainers are an internal mechanism. While you won't see physical evidence of AppContainers in Process Monitor, you can find them in outbound firewall rules created by Setup to prevent processes from making network calls.
 
-In SQL Server 2019, the only member of **SQLRUserGroup** is the SQL Server Launchpad service account. As with previous releases, the **SQL Restricted User Group (SQLRUserGroup)** continues to provide read and execute permissions on executables in the SQL Server Binn, R_SERVICES, and PYTHON_SERVICES directories. 
+In SQL Server 2019, the only member of **SQLRUserGroup** is the SQL Server Launchpad service account. As with previous releases, the **SQL Restricted User Group (SQLRUserGroup)** continues to provide read and execute permissions on executables in the SQL Server **Binn**, **R_SERVICES**, and **PYTHON_SERVICES** directories. 
 
 > [!NOTE]
-> On SQL Server, stored procedures and T-SQL queries execute as a database user, but any embedded script or code executes under a different identity. The security token of the database user is not used on the new process. In previous releases, the process identity was a worker account. In SQL Server 2019, the process identity is the Launchpad service account, with isolation provided by AppContainers.
+> On SQL Server, stored procedures and T-SQL queries execute as a database user, but that user's security token is not used on new processes. Instead, embedded script or code executes under a different identity. In previous releases, the process identity was a worker account. In SQL Server 2019, the process identity is the Launchpad service account, with isolation provided by AppContainers.
 
 Summarized, the main differences with AppContainer isolation are:
 
@@ -35,7 +35,7 @@ Summarized, the main differences with AppContainer isolation are:
 + **SQLRUserGroup** continues to be granted 'read and execute' permissions to the SQL Server **Binn**, **R_SERVICES**, and **PYTHON_SERVICES** directories, but membership now consists of just the SQL Server Launchpad service.
 + All external scripts and code executed from [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)follow the new security model. This applies to R, Python, and the new Java language extension introduced in SQL Server 2019.
 
-As before, additional configuration is still required for *implied authentication*, where script or code has to connect back to SQL Server to retrieve data or resources. The additional configuration is creating a dtabase login for **SQLRUserGroup**. For more information, see [Add SQLRUserGroup as a database user](../r/add-sqlrusergroup-to-database.md)
+As before, additional configuration is still required for *implied authentication*, where script or code has to connect back to SQL Server to retrieve data or resources. The additional configuration is creating a database login for **SQLRUserGroup**. For more information, see [Add SQLRUserGroup as a database user](../r/add-sqlrusergroup-to-database.md)
 
 > [!NOTE]
 > Wehn code or script passes connection instructions, such as an ODBC connection string, back to SQL Server, the server refuses the request from Launchpad service by default. This occurs because there is no login created for Launchpad or the parent **SQLRUserGroup**. If you require an impersonation token for an identity other than the original caller, a database login for **SQLRUserGroup** is required.

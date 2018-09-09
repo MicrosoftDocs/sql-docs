@@ -1,6 +1,11 @@
 {
     "redirections": [
         {
+            "source_path": "docs/relational-databases/polybase/get-started-with-polybase.md",
+            "redirect_url": "/sql/relational-databases/polybase/polybase-guide",
+            "redirect_document_id": false 
+        },
+        {
             "source_path": "docs/advanced-analytics/architecture-overview-machine-learning.md",
             "redirect_url": "/sql/advanced-analytics/concepts/extensibility-framework",
             "redirect_document_id": false
@@ -1904,16 +1909,6 @@
         {
             "source_path": "docs/database-engine/configure-windows/what-s-new-in-sql-server-vnext-database-engine.md",
             "redirect_url": "/sql/database-engine/configure-windows/what-s-new-in-sql-server-2017-database-engine",
-            "redirect_document_id": true
-        },
-        {
-            "source_path": "docs/sql-server/sql-server-vnext-release-notes.md",
-            "redirect_url": "/sql/sql-server/sql-server-2017-release-notes",
-            "redirect_document_id": true
-        },
-        {
-            "source_path": "docs/sql-server/what-s-new-in-sql-server-vnext.md",
-            "redirect_url": "/sql/sql-server/what-s-new-in-sql-server-2017",
             "redirect_document_id": true
         },
         {

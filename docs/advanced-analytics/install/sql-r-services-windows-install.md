@@ -13,9 +13,9 @@ manager: cgronlun
 # Install SQL Server 2016 R Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article explains how to install and configure **SQL Server 2016 R Services (In-Database)**. If you have SQL Server 2016, install this feature to enable execution of R code in SQL Server.
+This article explains how to install and configure **SQL Server 2016 R Services**. If you have SQL Server 2016, install this feature to enable execution of R code in SQL Server.
 
-In SQL Server 2017, R integration is offered in [Machine Learning Services](../r/r-server-standalone.md), renamed with the addition of Python. If you want R in SQL Server and have SQL Server 2017 installation media, choose the Machine Learning Services R feature during setup. For more information, see  install [SQL Server 2017 Machine Learning Services (In-Database)](sql-machine-learning-services-windows-install.md). 
+In SQL Server 2017, R integration is offered in [Machine Learning Services](../r/r-server-standalone.md), reflecting the addition of Python. If you want R integration and have SQL Server 2017 installation media, see [Install SQL Server 2017 Machine Learning Services](sql-machine-learning-services-windows-install.md) to add the feature. 
 
 ## <a name="bkmk_prereqs"> </a> Pre-install checklist
 

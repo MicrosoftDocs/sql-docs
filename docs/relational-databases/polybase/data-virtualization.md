@@ -1,10 +1,10 @@
 ---
 title: Virtualize external data in SQL Server 2019 CTP 2.0 | Microsoft Docs
 description:
-author: rothja
-ms.author: jroth
+author: Abiola
+ms.author: aboke
 manager: craigg
-ms.date: 08/14/2018
+ms.date: 09/07/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.suite: "sql"
@@ -32,23 +32,29 @@ Click Next to proceed to the next step in the wizard which sets the Database Mas
 
 ## Create database master key
 
-In this step, we will let you create a database master key. Creating the master key is required as this secures the credentials used by an External Data Source. Please choose a strong password for your Master Key. You should also backup the master key by using BACKUP MASTER KEY and store the backup in a secure off-site location.
+In this step, you will be prompted to create a database master key. Creating the master key is required as this secures the credentials used by an External Data Source. Please choose a strong password for your Master Key. You should also backup the master key by using BACKUP MASTER KEY and store the backup in a secure off-site location.
 
 ![Create a database master key](media/data-virtualization/virtualize-data-master-key.png)
 
 > [!IMPORTANT]
-> If you already have a database master key which is set up then the next time when you launch the wizard it will not prompt you to type in the master key anymore and you can click Next to proceed to the next page in the wizard.
+> If you already have a database master key the input fields will be restricted and you may bypass this step.You can just click "Next" to proceed to the next page in the wizard.
 
 > [!NOTE]
 > If you don’t choose a strong password, then the wizard will in the last step. This is a known issue which we will fix in upcoming release so that it is more intuitive.
 
 ## Enter the external data source credentials
 
-In this step, please enter your data source and credential details. This step creates an external data source object and then uses the credentials for the database object to connect to the data source. Provide a name of the External Data Source (example: Test) and provide the external data source SQL Server Connection details - the Server Name and the Database name where you want your external data source to be created on that server.
+In this step, please enter your external data source and the credential details. This step creates an external data source object and then uses the credentials for the database object to connect to the data source. Provide a name of the External Data Source (example: Test) and provide the external data source SQL Server Connection details - the Server Name and the Database name where you want your external data source to be created on that server.
 
 The next step is to Configure Credential, so provide a Credential Name, this is the name of the Database scoped credential used to securely store the login information for the External Data Source you are creating (example: TestCred) and provide the username and password to connect to the data source.
 
 ![External data source credentials](media/data-virtualization/data-source-credentials.png)
+
+## External Data Table Mapping
+
+In the next window, you will be able to select the databases you want to create external views of. Note: Selecting the parent will include all child tables as well.  When the tables are selected, the mapping of the external table can be seen on the right hand side. Here you can make any type changes or change the name of the external tables. Note: Double clicking a selected table will change the mapping view.
+
+[IMPORTANT] Photo type is not yet supported by the data virtualization tool. Creating an external view with a photo type in it will throw an error after creation of table. The table will still be created though.
 
 ## Summary
 

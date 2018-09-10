@@ -38,8 +38,17 @@ To use secure enclaves with Always Encrypted, your environment requires Windows 
 
 The computer running SQL Server needs the following operating system and SQL Server version:
 
-- [Windows Server 2019 Preview](https://insider.windows.com/en-us/for-business-getting-started-server/). The computer must be configured as a guarded host, attested by HGS. See [Configure HGS Attestation](#configure-hgs-attestation) for details.
+*SQL Server*:
+
 - [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)] CTP 2.0 or later
+
+*Windows*:
+
+- Windows 10 Enterprise, version 1809
+- Windows Server DataCenter (Semi-Annual Channel), version 1809
+- Windows Server 2019 DataCenter
+
+The computer must be configured as a guarded host, attested by HGS. See the following section for details.
 
 
 ### HGS computer requirements
@@ -324,6 +333,21 @@ The below table summarizes the functionality for enclave-enabled string columns,
 
 In SQL Server, collations can be set at the server, database, or column level. For general instructions on how to determine the current collation and change a collation at the server, database or column level, see <https://docs.microsoft.com/sql/relational-databases/collations/collation-and-unicode-support>.
 
+**Special considerations for non-UNICODE string columns**:
+
+The following additional restriction, imposed by a limitation in SQL client drivers (not related to Always Encrypted), applies to non-UNICODE (ASCII) string columns. If you overwrite the database collation for a non-UNICODE (char, varchar) string column, you must ensure the column collation uses the same code page as the database collation.
+To list all collations along with their code page identifiers, use the following query:
+
+```sql
+SELECT [Name]
+   , [Description]
+   , [CodePage] = COLLATIONPROPERTY([Name], 'CodePage')
+FROM ::fn_helpcollations()
+```
+
+For example, Chinese_Traditional_Stroke_Order_100_CI_AI_WS and Chinese_Traditional_Stroke_Order_100_BIN2 have the same code page (950), but Chinese_Traditional_Stroke_Order_100_CI_AI_WS and Latin1_General_100_BIN2 have different code pages (950 and 1252, respectively). The above restriction does not apply to UNICODE (nchar, nvarchar) string columns. Therefore, as a workaround, you may consider setting a UNICODE data type for your new encrypted columns, you are creating, or changing the type to a UNICODE type before encrypting an existing column.
+
+
 ## Create a New Table with Enclave-enabled Columns
 
 You can create a new table with encrypted columns using the [CREATE TABLE (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/create-table-transact-sql) statement. Always Encrypted with secure enclaves does not change the syntax of this statement.
@@ -366,13 +390,9 @@ GO
 You can add a new encrypted column to an existing table using the [ALTER TABLE (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/alter-table-transact-sql)
 / ADD statement. Always Encrypted with secure enclaves does not change the syntax of this statement.
 
-### 
-
 1. Using SSMS, connect to your database and open a query window.
     
-     > [!NOTE]
-     >     Always Encrypted does not have to be enabled in the connection
-     >     string for this task.
+   Always Encrypted does not have to be enabled in the connection string for this task.
 
 2. In the query window, issue the ALTER TABLE statement with the ADD clause, specifying the ENCRYPTED WITH clause in the [column definition](https://docs.microsoft.com/sql/t-sql/statements/alter-table-column-definition-transact-sql), and using an enclave-enabled column encryption key. You may also need to specify a BIN2 collation if your new column is a string column and if the default collation for your database is not a BIN2 collation. See the Collation Setup section for details.
 
@@ -389,7 +409,7 @@ ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NULL
 ```
 
 
-## Enclave enable the connection strings
+## Prepare an SSMS Query Window with Always Encrypted Enabled
 
 To add the required connection parameters to enable enclave computations:
 
@@ -429,7 +449,7 @@ To encrypt a column using a key that is not enclave-enabled, you need to use cli
 
 #### Steps
 
-1. Prepare an SSMS query window with Always Encrypted and enclave computations enabled in the database connection. See Section Preparing an SSMS Query Window with Always Encrypted Enabled.
+1. Prepare an SSMS query window with Always Encrypted and enclave computations enabled in the database connection. For details, see [Preparing an SSMS Query Window with Always Encrypted Enabled](#prepare-an-ssms-query-window-with-always-encrypted-enabled).
 2. In the query window, issue the ALTER TABLE statement with the ALTER COLUMN clause, specifying an enclave-enabled column encryption key in the ENCRYPTED WITH clause. If your column is a string column (for example, char, varchar, nchar, nvarchar), you may also need to change the collation to a BIN2 collation. See the Collation Setup section for details.
     
     > [!NOTE]

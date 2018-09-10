@@ -12,9 +12,15 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 # Differences in SQL Server Machine Learning Services installation in SQL Server 2019  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-On Windows, SQL Server 2019 Setup changes the isolation mechanism, substituting AppContainers for local worker accounts, for external processes running Java, R, or Python tasks. If you are adding programming extensions or machine learning to a database engine instance, this article explains how Setup provisions the server to contain those processes.
+On Windows, SQL Server 2019 Setup changes the isolation mechanism for external processes running Java, R, or Python tasks by replacing local worker accounts with [AppContainers](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-for-legacy-applications-). AppContainers are a containment feature for client apps running on Windows. If you are adding programming extensions or machine learning to a database engine instance, this article explains how Setup provisions the server to contain those processes. 
 
 Although process isolation has changed, the mechanics of installation remain the same. If you installed the previous version, you'll notice that the Installation wizard and command-line parameters are unchanged in SQL Server 2019. For help with installation, see [Install SQL Server Machine Learning Services](sql-machine-learning-services-windows-install.md).
+
+There are no specific action items for the administrator as a result of this change.
+
++ On a new or upgraded server, extensions for R, Python, and Java use the new isolation model automatically. 
++ **SQLRUserGroup** continues to be used in Access Control Lists (ACLs). 
++ **SQL Server Launchpad service** continues in its role of starting up external processes, but is now also running those processes in individual AppContainers, one per process. 
 
 ## About AppContainer isolation
 
@@ -33,7 +39,7 @@ Summarized, the main differences with AppContainer isolation are:
 
 + Physical accounts worker accounts under **SQLRUserGroup** are no longer created. This is beneficial for machines with policies that disable local users from logging on, and with passwords that expire. 
 + **SQLRUserGroup** continues to be granted 'read and execute' permissions to the SQL Server **Binn**, **R_SERVICES**, and **PYTHON_SERVICES** directories, but membership now consists of just the SQL Server Launchpad service.
-+ All external scripts and code executed from [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)follow the new security model. This applies to R, Python, and the new Java language extension introduced in SQL Server 2019.
++ All external scripts and code executed from [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) follow the new security model. This applies to R, Python, and the new Java language extension introduced in SQL Server 2019.
 
 As before, additional configuration is still required for *implied authentication*, where script or code has to connect back to SQL Server to retrieve data or resources. The additional configuration is creating a database login for **SQLRUserGroup**. For more information, see [Add SQLRUserGroup as a database user](../r/add-sqlrusergroup-to-database.md)
 

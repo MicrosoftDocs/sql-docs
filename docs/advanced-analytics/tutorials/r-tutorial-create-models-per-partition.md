@@ -141,7 +141,7 @@ go
 
 ### Parallel execution
 
-Notice that the `sp_execute_external_script` inputs include `@parallel=1`, used to enable parallel processing. In contrast with previous releases, in SQL Server vNext, setting `@parallel=1` delivers a stronger hint to the query optimizer, making parallel execution a much more likely outcome.
+Notice that the `sp_execute_external_script` inputs include `@parallel=1`, used to enable parallel processing. In contrast with previous releases, in SQL Server 2019, setting `@parallel=1` delivers a stronger hint to the query optimizer, making parallel execution a much more likely outcome.
 
 By default, the query optimizer tends to operate under `@parallel=1` on tables having more than 256 rows, but if you can handle this explicitly by setting `@parallel=1` as shown in this script.
 
@@ -301,7 +301,7 @@ In this tutorial, you used [sp_execute_external_script](https://docs.microsoft.c
 
 **(Not for production workloads)**
 
-One of the more common approaches for executing R or Python code on SQL data is providing script as an input parameter to the [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) stored procedure. In this CTP release, SQL Server vNext adds new parameters to `sp_execute_external_script` to process partitions with the external script executing once for every partition:
+One of the more common approaches for executing R or Python code on SQL data is providing script as an input parameter to the [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) stored procedure. In this CTP release, SQL Server 2019 adds new parameters to `sp_execute_external_script` to process partitions with the external script executing once for every partition:
 
 | Parameter | Usage |
 |-----------|-------|

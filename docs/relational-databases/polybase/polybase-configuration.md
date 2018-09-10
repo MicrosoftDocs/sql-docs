@@ -1,5 +1,5 @@
 ---
-title: "PolyBase configuration | Microsoft Docs"
+title: "PolyBase configuration and security for Hadoop | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/15/2018"
 ms.prod: sql
@@ -12,56 +12,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ---
-# PolyBase configuration
+# PolyBase configuration and security for Hadoop
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Use the procedures below to configure PolyBase.  
-   
-## External data source configuration  
-You must ensure connectivity to the external data source from SQL Server. The type of connectivity strongly influences query performance. For example, a 10Gbit Ethernet link will result in a faster query response time for PolyBase queries than a 1Gbit Ethernet link.  
-   
-You must configure SQL Server to connect to  either your Hadoop version or Azure Blob storage using **sp_configure**. PolyBase supports two Hadoop distributions: Hortonworks Data Platform (HDP) and Cloudera Distributed Hadoop (CDH).  For a complete list of supported external data sources, see [PolyBase Connectivity Configuration &#40;Transact-SQL&#41;](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).  
+This article provides a reference for various configuration settings that affect PolyBase connectivity to Hadoop. For a walkthrough on how to use PolyBase with Hadoop, see [Configure PolyBase to access external data in Hadoop](polybase-configure-hadoop.md).
 
-Note, PolyBase supports Hadoop encryption zones starting with SQL Server 2016 SP1 CU7 and SQL Server 2017.
-
-### Run sp_configure  
-   
-1. Run sp_configure ‘hadoop connectivity’ and set an appropriate value.  To find the value, see [PolyBase Connectivity Configuration &#40;Transact-SQL&#41;](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).  
-
-   ```sql  
-   -- Values map to various external data sources.  
-   -- Example: value 7 stands for Azure blob storage and Hortonworks HDP 2.3 on Linux.  
-   sp_configure @configname = 'hadoop connectivity', @configvalue = 7;   
-   GO   
-
-   RECONFIGURE   
-   GO   
-   ```  
-
-2. You must restart  SQL Server using **services.msc**. Restarting SQL Server restarts these services:  
-   
-   - SQL Server PolyBase Data Movement Service  
-   
-   - SQL Server PolyBase Engine  
-   
-## Pushdown configuration  
-
-To improve query performance, enable pushdown computation to a Hadoop cluster you will need to provide SQL Server some configuration parameters specific to your Hadoop environment:  
-   
-1. Find the file **yarn-site.xml** in the installation path of SQL Server. Typically, the path is:  
-   
-   ```  
-   C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\Polybase\Hadoop\conf  
-   ```  
-   
-2. On the Hadoop machine, find the analogous file in the Hadoop configuration directory. In the file, find and copy the value of the configuration key yarn.application.classpath.  
-   
-3. On the SQL Server machine, in the **yarn.site.xml file,** find the **yarn.application.classpath** property. Paste the value from the Hadoop machine into the value element.  
-
-4. For all CDH 5.X versions, you will need to add the **mapreduce.application.classpath** configuration parameters either to the end of your **yarn.site.xml file** or into the **mapred-site.xml file**. HortonWorks includes these configurations within the **yarn.application.classpath** configurations.
-
-## Connecting to Hadoop Cluster with Hadoop.RPC.Protection setting
+## <a id="rpcprotection"></a> Hadoop.RPC.Protection setting
 
 A common way to secure communication in a hadoop cluster is by changing the hadoop.rpc.protection configuration to 'Privacy' or 'Integrity'. By default, PolyBase assumes the configuration is set to 'Authenticate'. To override this default, add the following property to the core-site.xml file. Changing this configuration will enable secure data transfer among the hadoop nodes and SSL connection to SQL Server.
 
@@ -73,7 +30,7 @@ A common way to secure communication in a hadoop cluster is by changing the hado
    </property> 
 ```
 
-## Example yarn-site.xml and mapred-site.xml files for CDH 5.X cluster.
+## Example XML files for CDH 5.X cluster
 
 Yarn-site.xml with yarn.application.classpath and mapreduce.application.classpath configuration.
 
@@ -177,14 +134,13 @@ Note that we added the property mapreduce.application.classpath. In CDH 5.x you 
    </property>
 -->
 </configuration>
-   
 ```
 
 ## Kerberos configuration  
 
-Note, when PolyBase authenticates to a Kerberos secured cluster, it expects the hadoop.rpc.protection setting is 'Authenticate' by default. This leaves the data communication between Hadoop nodes unencrypted. To use 'Privacy' or 'Integrity' settings for hadoop.rpc.protection, update the core-site.xml file on the PolyBase server. For more information, see the previous section [Connecting to Hadoop Cluster with Hadoop.rpc.protection](#connecting-to-hadoop-cluster-with-hadooprpcprotection-setting).
+Note, when PolyBase authenticates to a Kerberos secured cluster, it expects the hadoop.rpc.protection setting is 'Authenticate' by default. This leaves the data communication between Hadoop nodes unencrypted. To use 'Privacy' or 'Integrity' settings for hadoop.rpc.protection, update the core-site.xml file on the PolyBase server. For more information, see the previous section [Connecting to Hadoop Cluster with Hadoop.rpc.protection](#rpcprotection).
 
-To connect to a Kerberos-secured Hadoop cluster [using MIT KDC] :
+To connect to a Kerberos-secured Hadoop cluster using MIT KDC:
 
 1. Find the Hadoop configuration directory in the installation path of SQL Server. Typically, the path is:  
 
@@ -205,15 +161,12 @@ To connect to a Kerberos-secured Hadoop cluster [using MIT KDC] :
    |5|mapred-site.xml|mapreduce.jobhistory.principal|Find the Hadoop side configuration and copy to SQL Server machine. For example: mapred/_HOST@YOUR-REALM.COM|  
    |6|mapred-site.xml|mapreduce.jobhistory.address|Find the Hadoop side configuration and copy to SQL Server machine. For example: 10.193.26.174:10020|  
    |7|yarn-site.xml yarn.|yarn.resourcemanager.principal|Find the Hadoop side configuration and copy to SQL Server machine. For example: yarn/_HOST@YOUR-REALM.COM|  
-   
+
 4. Create a database-scoped credential object to specify the authentication information for each Hadoop user. See [PolyBase T-SQL objects](../../relational-databases/polybase/polybase-t-sql-objects.md).  
-   
+
 ## Next steps  
 
-[PolyBase T-SQL objects](../../relational-databases/polybase/polybase-t-sql-objects.md)  
-[Get started with PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)  
-   
-## See Also  
+For more information, see the following articles:
 
-[PolyBase Connectivity Configuration &#40;Transact-SQL&#41;](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)   
-[PolyBase Guide](../../relational-databases/polybase/polybase-guide.md)
+[Configure PolyBase to access external data in Hadoop](polybase-configure-hadoop.md)
+[PolyBase overview](../../relational-databases/polybase/polybase-guide.md)

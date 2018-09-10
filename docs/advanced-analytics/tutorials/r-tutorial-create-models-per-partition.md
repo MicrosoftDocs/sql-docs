@@ -4,7 +4,7 @@ ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
   
-ms.date: 08/09/2018
+ms.date: 09/24/2018
 ms.topic: tutorial
 ms.author: heidist
 author: HeidiSteen
@@ -13,11 +13,9 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 #customer intent: As an R developer, I want to model/train/score partitioned data to avoid manually subsetting data.
 ---
 # Tutorial: Create partition-based models in R on SQL Server
-[!INCLUDE[appliesto-ssvnex-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ssvnext-xxxx-xxxx-xxx.md)]
+[!INCLUDE[appliesto-ssvnex-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-**(Not for production workloads)**
-
-In SQL Server vNext, partition-based modeling is the ability to create and train models over partitioned data. For stratified data that naturally segments into a given classification scheme - such as geographic regions, date and time, age or gender - you can execute script over the entire data set, with the ability to model, train, and score over partitions that remain intact over all these operations. 
+In SQL Server 2019, partition-based modeling is the ability to create and train models over partitioned data. For stratified data that naturally segments into a given classification scheme - such as geographic regions, date and time, age or gender - you can execute script over the entire data set, with the ability to model, train, and score over partitions that remain intact over all these operations. 
 
 Partition-based modeling is enabled through two new parameters on [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql):
 
@@ -33,15 +31,19 @@ In this tutorial, learn partition-based modeling using the classic NYC taxi samp
 
 ## Prerequisites
  
-To complete this tutorial, you must have SQL Server, sample data, and a tool for T-SQL query execution such as SQL Server Management Studio. 
+To complete this tutorial, you must have the following:
+
++ SQL Server 2019 database engine instance, with Machine Learning Services and the R feature
++ Sample data
++ A tool for T-SQL query execution, such as SQL Server Management Studio
 
 ### System resources
 
-The data set is large and training operations are resource-intensive. If possible, use a system having more than 4 GB RAM. Alternatively, you can use smaller data sets to work around resource constraints. Instructions for reducing the data set are inline. 
+The data set is large and training operations are resource-intensive. If possible, use a system having at least 8 GB RAM. Alternatively, you can use smaller data sets to work around resource constraints. Instructions for reducing the data set are inline. 
 
 ### SQL Server database engine with Machine Learning Services
 
-SQL Server vNext CTP 2.0 or later, with Machine Learning Services installed and configured, is required. You can check server version in Management Studio by executing `SELECT @@Version` as a T-SQL query. Output should be "Microsoft SQL Server vNext (CTP 2.0) - 15.0.x".
+SQL Server 2019 CTP 2.0 or later, with Machine Learning Services installed and configured, is required. You can check server version in Management Studio by executing `SELECT @@Version` as a T-SQL query. Output should be "Microsoft SQL Server 2019 (CTP 2.0) - 15.0.x".
 
 ### Tools for query execution
 

@@ -1,10 +1,10 @@
 ---
-title: Install SQL Server Machine Learning Services (R and Python) on Linux | Microsoft Docs
-description: This article describes how to install SQL Server Machine Learning Services (R and Python) on Red Hat and Ubuntu.
+title: Install SQL Server Machine Learning Services (R, Python, Java) on Linux | Microsoft Docs
+description: This article describes how to install SQL Server Machine Learning Services (R, Python, Java) on Red Hat and Ubuntu.
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.date: 08/09/2018
+ms.date: 09/09/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.component: ""
@@ -13,46 +13,22 @@ ms.custom: "sql-linux"
 ms.technology: machine-learning
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
-# Install SQL Server vNext Machine Learning Services R and Python support on Linux
+# Install SQL Server 2019 Machine Learning Services (R, Python, Java) on Linux
 
-[SQL Server Machine Learning Services (R and Python)](../advanced-analytics/what-is-sql-server-machine-learning.md) runs on Linux operating systems starting in this CTP 2.0 release of SQL Server vNext. Follow these steps to install in-database analytics on either of these Linux operating systems:
-
-- [Red Hat Enterprise Linux 7.3 or 7.4](#RHEL)
-- [Ubuntu 16.04](#ubuntu)
-
-> [!NOTE]
-> SUSE (SLES) is not a supported operating system in this release.
+[SQL Server Machine Learning Services](../advanced-analytics/what-is-sql-server-machine-learning.md) runs on Linux operating systems starting in this CTP 2.0 release of SQL Server 2019. Follow these steps to install the Java programming extension, or the machine learning extensions for R and Python. 
 
 ## Prerequisites
 
-First [install SQL Server vNext](sql-server-linux-setup.md#platforms). This configures the keys and repositories used when installing the R and Python packages.
++ Install the database engine on either [Red Hat Enterprise Linux 7.3 or 7.4](quickstart-install-connect-red-hat.md) or [Ubuntu 16.04](quickstart-install-connect-ubuntu.md).
 
-Hardware requirements include:
+> [!NOTE]
+> SUSE (SLES) is not a supported operating system for Java, R, or Python extensions in this release.
 
-+ Minimum of 2 GB of RAM, maximum 256 GB of RAM 
-+ Minimum of 4 GB of disk space 
-+ XFS (default on RHEL) or EXT4 file system 
-+ Network connectivity to the Internet to download the package 
-+ A hostname with a maximum of 15 characters 
-+ wget is a required package to run the configuration script 
-+ Python3 is required to run the configuration script 
+After the database engine is installed and configured, you can add the programming language extensions for Java, R, or Python. Packages for these extensions are downloaded and installed independently of the database engine. Download links and nstructions for each operating system are provided in the following sections.
 
 <a name="RHEL"></a>
 
-## Install on RHEL
-
-Download the Microsoft SQL Server Red Hat repository configuration file: 
-
-```bash
-sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo 
-```
-Run the following commands to install SQL Server. 
-
-```bash
-sudo yum install -y mssql-server 
- ```
-
-### Add both R and Python support
+## Red Hat package install
 
 Run the following commands to install SQL Server with Machine Learning Services with both R and Python. 
 
@@ -78,29 +54,8 @@ Run the following commands to install SQL Server with Machine Learning Services 
 
 <a name="ubuntu"></a>
 
-## Install on Ubuntu
+## Ubuntu package install
 
-Import the public repository GPG keys: 
-
-```bash
-
-wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add - 
-```
-
-Register the Microsoft SQL Server Ubuntu repository: 
-
-```bash
-sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)" 
-```
-
-Run the following commands to install SQL Server vNext.
-
-```bash 
-sudo apt-get update 
-sudo apt-get install -y mssql-server 
-```
-
-### Add both R and Python support
 Run the following commands to install SQL Server with Machine Learning Services with both R and Python: 
 
 ```bash
@@ -123,7 +78,7 @@ Run the following commands to install SQL Server with Machine Learning Services 
 
 ## Unattended installation 
  
-For Machine Learning Services, we have added a new environment variable (ACCEPT_ML_EULA) that you can use to accept the ML Services EULA supplement for unattended installations. This is a supplement to the SQL Server EULA. 
+For open-source R and Python components, use the environment variable (ACCEPT_ML_EULA) to accept the ML Services EULA supplement for unattended installations. This is a supplement to the SQL Server EULA. 
 
 The following example configures the Developer edition of SQL Server with SQL Server Machine Learning Services. The -n parameter performs an unprompted installation where the configuration values are pulled from the environment variables. 
 
@@ -199,7 +154,7 @@ GO
 
 ## Add other R and Python packages 
  
-You can install other R and Python packages and use them in script that executes on SQL Server vNext.
+You can install other R and Python packages and use them in script that executes on SQL Server 2019.
 
 ### R packages 
  

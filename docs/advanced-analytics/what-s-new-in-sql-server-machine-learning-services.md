@@ -4,7 +4,7 @@ description: New feature announcements for each release of SQL Server 2016 R Ser
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 08/28/2018  
+ms.date: 09/24/2018  
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
@@ -19,12 +19,11 @@ Machine learning capabilities are added to SQL Server in each release as we cont
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 ## New in SQL Server vNext
 
-This release adds the top-requested features for R and Python machine learning operations in SQL Server. For more information about other features in this release, see [What's new in SQL Server vNext](../sql-server/what-s-new-in-sql-server-vnext.md)
+This release adds the top-requested features for R and Python machine learning operations in SQL Server. For more information about other features in this release, see [What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md) and [Release Notes for SQL Server 2019](../sql-server/sql-server-ver15-release-notes.md).
 
 | Release | Date | Feature update |
 |---------|------|----------------|
 | CTP 2.0 | September 2018 | Linux platform support for SQL Server vNext Machine Learning Services (In-Database). <br/><br/>For instructions on Linux installation, see [Install SQL Server Machine Learning Services on Linux](../linux/sql-server-linux-setup-machine-learning.md). |
-| CTP 2.0 | September 2018 | Java language support. The same extensibility framework used for R and Python code execution now supports Java code. You can wrap Java code in a stored procedure, or serialize it to a binary format, stored as a table in a SQL Server database. |
 | CTP 2.0 | September 2018 | Partition-based modeling. By setting new parameters on the [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) system stored procedure, you can specify a column in the data set that naturally segments data into partitions (some examples are geographic regions, dates, age or gender, categories). At execution time, individual models are generated for each partition, with external script executing once for every partition. <br/><br/>Learn more in this tutorial, [Create partition-based models in R](tutorials/r-tutorial-create-models-per-partition.md). |
 | CTP 2.0 | September 2018 | Failover cluster support. You can install SQL Server vNext Machine Learning Services (In-Database) on a Windows failover cluster to meet your SLA requirements if your primary server fails over. Acceptance of the licensing agreements for R and Python distributions is a Setup requirement. <br/><br/> ![](install/media/sql-15-failoverclusterinstall-sqlmls-small.png)|
 ::: moniker-end

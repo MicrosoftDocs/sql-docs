@@ -20,18 +20,28 @@ The article explains how to use PolyBase on a SQL Server instance to query exter
 
 ## Prerequisites
 
-If you haven't installed PolyBase, see [PolyBase installation](polybase-installation.md). The installation article explains the prerequisites.
+- If you haven't installed PolyBase, see [PolyBase installation](polybase-installation.md). The installation article explains the prerequisites.
 
-PolyBase supports two Hadoop providers, Hortonworks Data Platform (HDP) and Cloudera Distributed Hadoop (CDH). The following Hadoop providers are supported:
+<!--SQL Server 2019-->
+::: moniker range=">= sql-server-ver15"
 
-- Hortonworks HDP 1.3 on Linux/Windows Server  
-- Hortonworks HDP 2.1 – 2.6 on Linux
-- Hortonworks HDP 2.1 - 2.3 on Windows Server  
-- Cloudera CDH 4.3 on Linux  
-- Cloudera CDH 5.1 – 5.5, 5.9 - 5.13 on Linux
+- Starting with SQL Server 2019, you must also [enable the PolyBase feature](polybase-installation.md#enable).
 
-> [!NOTE] 
-> Hadoop follows the "Major.Minor.Version" pattern for its new releases. All versions within a supported Major and Minor release are supported.
+::: moniker-end
+
+- PolyBase supports two Hadoop providers, Hortonworks Data Platform (HDP) and Cloudera Distributed Hadoop (CDH). The following Hadoop providers are supported:
+
+  - Hortonworks HDP 1.3 on Linux/Windows Server  
+  - Hortonworks HDP 2.1 – 2.6 on Linux
+  - Hortonworks HDP 2.1 - 2.3 on Windows Server  
+  - Cloudera CDH 4.3 on Linux  
+  - Cloudera CDH 5.1 – 5.5, 5.9 - 5.13 on Linux
+
+  > [!NOTE]
+  > Hadoop follows the "Major.Minor.Version" pattern for its new releases. All versions within a supported Major and Minor release are supported.
+
+> [!NOTE]
+> PolyBase supports Hadoop encryption zones starting with SQL Server 2016 SP1 CU7 and SQL Server 2017.
 
 ### Configure Hadoop connectivity
 
@@ -50,14 +60,14 @@ First, configure SQL Server PolyBase to use your specific Hadoop provider.
    GO
    ```  
 
-1. You must restart SQL Server using **services.msc**. Restarting SQL Server restarts these services:  
+2. You must restart SQL Server using **services.msc**. Restarting SQL Server restarts these services:  
 
    - SQL Server PolyBase Data Movement Service  
    - SQL Server PolyBase Engine  
   
    ![stop and start PolyBase services in services.msc](../../relational-databases/polybase/media/polybase-stop-start.png "stop and start PolyBase services in services.msc")  
   
-## Enable pushdown computation  
+## <a id="pushdown"></a> Enable pushdown computation  
 
 To improve query performance, enable pushdown computation to your Hadoop cluster:  
   
@@ -92,7 +102,7 @@ To query the data in your Hadoop data source, you must define an external table 
    WITH IDENTITY = '<hadoop_user_name>', Secret = '<hadoop_password>';  
    ```
 
-1. Create an external data source.
+2. Create an external data source with [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
    ```sql
    -- LOCATION (Required) : Hadoop Name Node IP address and port.  
@@ -106,7 +116,7 @@ To query the data in your Hadoop data source, you must define an external table 
    );  
    ```
 
-1. Create an external file format.
+3. Create an external file format with [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md).
 
    ```sql
    -- FORMAT TYPE: Type of format in Hadoop (DELIMITEDTEXT,  RCFILE, ORC, PARQUET).
@@ -116,7 +126,7 @@ To query the data in your Hadoop data source, you must define an external table 
                USE_TYPE_DEFAULT = TRUE)  
    ```
 
-1. Create an external table pointing to data stored in Hadoop. In this example, the external data contains car senor data.
+4. Create an external table pointing to data stored in Hadoop with [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md). In this example, the external data contains car senor data.
 
    ```sql
    -- LOCATION: path to file or directory that contains the data (relative to HDFS root).  
@@ -133,7 +143,7 @@ To query the data in your Hadoop data source, you must define an external table 
    );  
    ```
 
-1. Create statistics on an external table.
+5. Create statistics on an external table.
 
    ```sql
    CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)  
@@ -219,4 +229,7 @@ In SSMS, external tables are displayed in a separate folder **External Tables**.
 
 ## Next steps
 
-To learn more about PolyBase, see [Overview of SQL Server PolyBase](polybase-guide.md).
+Explore more ways to use and monitor PolyBase in the following articles:
+
+[PolyBase scale-out groups](../../relational-databases/polybase/polybase-scale-out-groups.md).  
+[PolyBase troubleshooting](polybase-troubleshooting.md).  

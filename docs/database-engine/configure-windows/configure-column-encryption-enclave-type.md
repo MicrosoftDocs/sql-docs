@@ -16,7 +16,7 @@ manager: craigg
 monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 ---
 # column encryption enclave type Server Configuration Option
-[!INCLUDE[tsql-appliesto-ssvnext-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnext-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
   Use the **column encryption enclave type** option to enable or disable a secure enclave for Always Encrypted.  For more information, see [Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
 

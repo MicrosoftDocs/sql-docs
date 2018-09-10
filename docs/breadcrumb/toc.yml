@@ -1106,9 +1106,9 @@
       href: /sql/tools/
       homepage: /sql/tools/overview-sql-tools
       items:
-      - name: SQL Operations Studio
-        href: /sql/sql-operations-studio/
-        homepage: /sql/sql-operations-studio/what-is
+      - name: Azure Data Studio
+        href: /sql/azure-data-studio/
+        homepage: /sql/azure-data-studio/what-is
       - name: Configuration Manager
         href: /sql/tools/configuration-manager/
         homepage: /sql/tools/configuration-manager/sql-server-configuration-manager-help

@@ -31,7 +31,7 @@
     items:
     - name: CAB downloads (offline setup)
       href: install/sql-ml-cab-downloads.md
-  - name: Command-prompt setup
+  - name: Command prompt setup
     href: install/sql-ml-component-commandline-install.md
   - name: Upgrade R and Python
     href: r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md
@@ -206,7 +206,7 @@
       href: r/data-exploration-and-predictive-modeling-with-r.md
     - name: Load R objects using ODBC
       href: r/save-and-load-r-objects-from-sql-server-using-odbc.md
-    - name: Converting R Code for Use in Machine Learning Services
+    - name: Converting R code for use in Machine Learning Services
       href: r/converting-r-code-for-use-in-sql-server.md
     - name: Creating multiple models using rxExecBy
       href: r/creating-multiple-models-using-rxexecby.md
@@ -224,13 +224,13 @@
       href: sql-native-scoring.md
   - name: Performance
     items:
-    - name: Performance tuning for R - Overview
+    - name: Performance tuning overview in R
       href: r/sql-server-r-services-performance-tuning.md
-    - name: Performance tuning for R - SQL Server configuration)
+    - name: Performance tuning server configuration
       href: r/sql-server-configuration-r-services.md
-    - name: Performance tuning for R - R and data optimization
+    - name: Performance tuning - data optimization in R
       href: r/r-and-data-optimization-r-services.md
-    - name: Performance tuning for R - Results
+    - name: Performance tuning for results in R
       href: r/performance-case-study-r-services.md
     - name: Use R code profiling functions
       href: r/using-r-code-profiling-functions.md
@@ -275,7 +275,7 @@
 - name: Reference
   href: r/machine-learning-services-r-reference.md
   items:
-  - name: R Packages
+  - name: R packages
     href: r/machine-learning-services-r-reference.md
     items:
     - name: olapR in SQL
@@ -288,7 +288,7 @@
       href: r/scaler-functions-for-working-with-sql-server-data.md
     - name: sqlrutils in SQL
       href: r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md
-  - name: Python Packages
+  - name: Python packages
     items:
     - name: revoscalepy in SQL
       href: python/what-is-revoscalepy.md

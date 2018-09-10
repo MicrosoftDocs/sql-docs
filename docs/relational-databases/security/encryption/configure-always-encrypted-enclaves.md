@@ -93,7 +93,7 @@ On the client/development computer:
 2. To verify Always Encrypted with secure enclaves is supported in your instance, run the following query:
 
    ```sql
-   SELECT * FROM sys.configurations
+   SELECT [name], [value], [value_in_use] FROM sys.configurations
    WHERE [name] = 'column encryption enclave type'
    ```
 
@@ -115,7 +115,7 @@ On the client/development computer:
 5. Confirm the secure enclave is now loaded by running the following query:
 
    ```sql
-   SELECT * FROM sys.configurations
+   SELECT [name], [value], [value_in_use] FROM sys.configurations
    WHERE [name] = 'column encryption enclave type'
    ```   
 

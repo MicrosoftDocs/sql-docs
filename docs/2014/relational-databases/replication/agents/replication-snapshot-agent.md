@@ -1,7 +1,7 @@
 ---
 title: "Replication Snapshot Agent | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/13/2017"
+ms.date: "09/07/2018"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
@@ -56,7 +56,8 @@ manager: craigg
 [-MaxNetworkOptimization [0|1]]  
 [-Outputoutput_path_and_file_name]  
 [-OutputVerboseLevel [0|1|2] ]  
-[-PacketSizepacket_size]  
+[-PacketSizepacket_size]
+[-PrefetchTables [0|1] ]  
 [-ProfileNameprofile_name]  
 [-PublisherDBpublisher_database]  
 [-PublisherDeadlockPriority [-1|0|1] ]  
@@ -188,6 +189,14 @@ manager: craigg
 |**0**|Only error messages are printed.|  
 |**1** (default)|All the progress report messages are printed (default).|  
 |**2**|All error messages and progress report messages are printed, which is useful for debugging.|  
+
+ **-PrefetchTables** [ **0**| **1**]  
+ Optional parameter that specifies if the table objects will be prefetched and cached.  The default behavior is to prefetch certain table properties using SMO component based on an internal calculation.  This parameter can be helpful in scenarions where SMO prefetch operation takes considerable longer to run. If this parameter is not used, this decision is made at runtime based on the percentage of tables that are added as articles to the publication.  
+  
+|OutputVerboseLevel value|Description|  
+|------------------------------|-----------------|  
+|**0**|Call to Prefetch method of SMO component is disabled.|  
+|**1**|Snapshot Agent will call Prefetch method to cache some table properties using SMO|  
   
  **-PacketSize** *packet_size*  
  Is the packet size (in bytes) used by the Snapshot Agent when connecting to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. The default value is 8192 bytes.  

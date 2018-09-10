@@ -12,7 +12,7 @@ ms.reviewer: "martinle"
 monikerRange: ">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
 ---
 #Appliance Feature Switches
-The **Feature Switch** page displays information about the feature switches that are being introduced in Analytics Platform System AU7 and beyond. Use this configuration page to update or enable/disable features and settings in Analytics Platform System. Changes to feature switch values requires a service restart.
+The **Feature Switch** page displays information about the feature switches that are being introduced in Analytics Platform System AU7 and later. Use this configuration page to update or enable/disable features and settings in Analytics Platform System. Changes to feature switch values require a service restart.
 
 ![DWConig Appliance Feature Switch](media/feature-switch/SQL_Server_PDW_DWConfig_feature_switch.png "DWConig Appliance Feature Switch") 
 

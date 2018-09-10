@@ -12,7 +12,7 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 # Differences in SQL Server Machine Learning Services installation in SQL Server 2019  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-On Windows, SQL Server 2019 Setup changes the isolation mechanism for external processes running Java, R, or Python tasks by replacing local worker accounts with [AppContainers](https://docs.microsoft.com/en-us/windows/desktop/secauthz/appcontainer-for-legacy-applications-). AppContainers are a containment feature for client apps running on Windows. If you are adding programming extensions or machine learning to a database engine instance, this article explains how Setup provisions the server to contain those processes. 
+On Windows, SQL Server 2019 Setup changes the isolation mechanism for external processes running Java, R, or Python tasks by replacing local worker accounts with [AppContainers](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-for-legacy-applications-). AppContainers are a containment feature for client apps running on Windows. If you are adding programming extensions or machine learning to a database engine instance, this article explains how Setup provisions the server to contain those processes. 
 
 Although process isolation has changed, the mechanics of installation remain the same. If you installed the previous version, you'll notice that the Installation wizard and command-line parameters are unchanged in SQL Server 2019. For help with installation, see [Install SQL Server Machine Learning Services](sql-machine-learning-services-windows-install.md).
 

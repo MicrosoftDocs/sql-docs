@@ -33,7 +33,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 -   Nonunique nonclustered indexes can be created online when the table contains LOB data types but none of these columns are used in the index definition as either key or nonkey (included) columns.  
   
 -   Indexes on local temp tables cannot be created, rebuilt, or dropped online. This restriction does not apply to indexes on global temp tables.
-- Indexes can be resumed from where it stopped after an unexpected failure, database failover, or a **PAUSE** command. See [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). 
+- Indexes can be resumed from where it stopped after an unexpected failure, database failover, or a **PAUSE** command. See [Create Index](../../t-sql/statements/create-index-transact-sql.md) and [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). 
 
 > [!NOTE]  
 >  Online index operations are not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features supported by editions](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
@@ -88,7 +88,7 @@ For more information, see [Disk Space Requirements for Index DDL Operations](../
 ## Resumable index considerations
 
 > [!NOTE]
-> The resumable index option applies to SQL Server (Starting with SQL Server 2017) (index rebuild only) and SQL Database (create non-clustered index and index rebuild). See [Create Index](../../t-sql/statements/create-index-transact-sql.md) (currently in public preview for SQL Database and SQL Server 2019 CTP 2.0) and [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). 
+> The resumable index option applies to SQL Server (Starting with SQL Server 2017) (index rebuild only) and SQL Database (create index and index rebuild). See [Create Index](../../t-sql/statements/create-index-transact-sql.md) (currently in public preview for SQL Database and SQL Server 2019 CTP 2.0) and [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). 
 
 When you perform resumable online index create or rebuild, the following guidelines apply:
 -	Managing, planning and extending of index maintenance windows. You can pause and restart an index create or rebuild operation multiple times to fit your maintenance windows.
@@ -112,7 +112,7 @@ Generally, there is no difference in defragmentation quality between resumable a
 ## Online default options 
 
 > [!IMPORTANT]
-> These options are in public preview for SQL Database and SQL Server 2019 CTP 2.0).
+> These options are in public preview for SQL Database and SQL Server 2019 CTP 2.0.
 
 You can set default options for online or resumable at a database level by setting the ELEVATE_ONLINE or ELEVATE_RESUMABLE database scoped configuration options. With these default options, you can avoid accidentally performing an operation that takes your database table offline. Both options will cause the engine to automatically elevate certain operations to online or resumable execution.  
 You can set either option as FAIL_UNSUPPORTED, WHEN_SUPPORTED, or OFF using the [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) command. You can set different values for online and resumable. 

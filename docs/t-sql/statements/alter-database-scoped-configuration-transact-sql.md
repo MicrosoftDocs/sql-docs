@@ -247,7 +247,7 @@ This option only applies to DDL statements that support the WITH(ONLINE= syntax)
 
 **ELEVATE_RESUMABLE**
 
-This option only applies to DDL statements that support the WITH(ONLINE= syntax). XML indexes are not affected 
+This option only applies to DDL statements that support the WITH(RESUMABLE= syntax). XML indexes are not affected 
   
 ## Metadata  
 
@@ -352,7 +352,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZE_FOR_AD_HOC_WORKLOADS = ON;
 
 ### I.  Set ELEVATE_ONLINE 
 
-**Applies to**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (feature is in public preview)
+**Applies to**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] and SQL Server 2019 CTP 2.0 as a public preview feature
  
 This example sets ELEVATE_ONLINE to FAIL_UNSUPPORTED.  tsqlCopy 
 
@@ -399,9 +399,8 @@ ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE=WHEN_SUPPORTED ;
 ## More information  
 - [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)   
 - [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
- [Databases and Files Catalog Views](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
+- [Databases and Files Catalog Views](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
 - [Server Configuration Options](../../database-engine/configure-windows/server-configuration-options-sql-server.md) 
-- [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)  
 - [How Online Index Operations Work](../../relational-databases/indexes/how-online-index-operations-work.md)  
 - [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)  
 - [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)  

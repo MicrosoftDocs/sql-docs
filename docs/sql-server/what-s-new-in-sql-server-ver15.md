@@ -136,7 +136,7 @@ For more information on index resumable operations see [Resumable Online Index C
 
 ### Build and rebuild clustered columnstore indexes online
 
-Convert row-store tables into columnstore format. Create clustered columnstore indexes (CCI). This was an offline process in previous versions of SQL Server - requiring all changes stop while CCI is created. SQL Server 2019 and Azure SQL Database enable customers to create or re-create CCI online. Workload will not be blocked and all changes to made on the underlying data are transparently added into the target columnstore table. Examples of new TSQL statements that can be used are:
+Convert row-store tables into columnstore format. Creating clustered columnstore indexes (CCI) was an offline process in the previous versions of SQL Server - requiring all changes stop while CCI is created. SQL Server 2019 and Azure SQL Database enable customers to create or re-create CCI online. Workload will not be blocked and all changes made on the underlying data are transparently added into the target columnstore table. Examples of new TSQL statements that can be used are:
 
   ```sql
   CREATE CLUSTERED COLUMNSTORE INDEX cci

@@ -204,9 +204,14 @@ MAXDOP = *max_degree_of_parallelism*
   
 ONLINE = [ON | OFF]   
    Applies to: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], in nonclustered columnstore indexes only.
-   ON specifies that the nonclustered columnstore index remains online and available while the new copy of the index is being built.
+   Applies to: [!INCLUDE[ssSQLv15_md](../../includes/sssqlv15-md.md)], in nonclustered and clustered columnstore indexes.
+   ON specifies that the columnstore index remains online and available while the new copy of the index is being built.
 
-   OFF specifies that the index is not available for use while the new copy is being built. As this is a nonclustered index only, the base table remains available, only the nonclustered columnstore index is not used to satisfy queries until the new index is complete. 
+   OFF specifies that the index is not available for use while the new copy is being built. In nonclustered index, the base table remains available, only the nonclustered columnstore index is not used to satisfy queries until the new index is complete. 
+
+```sql
+CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines WITH ( ONLINE = ON );
+```
 
 COMPRESSION_DELAY = **0** | \<delay>[Minutes]  
    Applies to: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 

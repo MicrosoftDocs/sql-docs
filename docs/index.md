@@ -3,6 +3,7 @@ layout: HubPage
 hide_bc: true
 title: Microsoft SQL Documentation | Microsoft Docs
 description: Learn about SQL
+ms.date: 09/01/2018
 author: craigg-msft 
 ms.author: craigg
 ms.topic: conceptual

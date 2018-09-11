@@ -307,17 +307,13 @@ Any SQL Server file that is placed on a PMEM device operates in *enlightened* mo
 
   - Supports scenarios using SQL Server Big Data Cluster.
 
-## SQL Server Integration Services (SSIS)
+## Other services
 
-SQL Server 2019 CTP 2.0 does not introduce new features for SSIS.
+SQL Server 2019 CTP 2.0 does not introduce new features for the following services:
 
-## SQL Server Analysis Services (SSAS)
-
-SQL Server 2019 CTP 2.0 does not introduce new features for SSAS.
-
-## SQL Server Reporting Services (SSRS)
-
-SQL Server 2019 CTP 2.0 does not introduce new features for SSRS.
+- SQL Server Analysis Services (SSAS)
+- SQL Server Integration Services (SSIS)
+- SQL Server Reporting Services (SSRS)
 
 ## Next steps
 

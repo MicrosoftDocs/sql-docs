@@ -42,7 +42,7 @@ On an internet-connected device, packages are downloaded and installed independe
 |mssql-mlservices-packages-r | R | Partial install. Provides base R, RevoScaleR, sqlRUtils, olapR. <br/>Excludes  pre-trained models and MicrosoftML. | 
 |mssql-mlservices-mlm-py | Python | Full install. Anaconda, revoscalepy, microsoftml, pre-trained models for image featurization and text sentiment analysis.| 
 |mssql-mlservices-mml-py | Python | Partial install. Provides Anaconda, revoscalepy, microsoftml. <br/>Excludes pre-trained models. | 
-|mssql-mlservices-packages-py | Python | Partial install. Provides Anaconda, revoscalepy. <br/>Excludes pre-trained models and micrososftml. | 
+|mssql-mlservices-packages-py | Python | Partial install. Provides Anaconda, revoscalepy. <br/>Excludes pre-trained models and microsoftml. | 
 
 <a name="RHEL"></a>
 

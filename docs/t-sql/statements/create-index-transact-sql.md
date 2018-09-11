@@ -462,7 +462,7 @@ Specifies whether underlying tables and associated indexes are available for que
  
 RESUMABLE **=** { ON | **OFF**}
 
-**Applies to**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] and SQL Server 2019 CTP 2.0 as a public preview feature
+**Applies to**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] and [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] as a public preview feature
 
  Specifies whether an online index operation is resumable.
 
@@ -474,7 +474,7 @@ Index operation is not resumable.
 
 MAX_DURATION **=** *time* [**MINUTES**] used with **RESUMABLE = ON** (requires **ONLINE = ON**).
  
-**Applies to**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] and SQL Server 2019 CTP 2.0 as a public preview feature
+**Applies to**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] and [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] as a public preview feature
 
 Indicates time (an integer value specified in minutes) that a resumable online index operation is executed before being paused. 
 
@@ -718,7 +718,7 @@ INSERT INTO t1 VALUES (1, 0);
  
 ### <a name="resumable-indexes"></a>Resumable index operations
 
-**Applies to**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] and SQL Server 2019 CTP 2.0 as a public preview feature
+**Applies to**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] and [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] as a public preview feature
 
 The following guidelines apply for resumable index operations:
 
@@ -1041,7 +1041,7 @@ GO
 ```  
 ### M. Create, resume, pause, and abort resumable index operations
 
-**Applies to**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] and SQL Server 2019 CTP 2.0 as a public preview feature
+**Applies to**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] and [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] as a public preview feature
 
 ```sql
 -- Execute a resumable online index create statement with MAXDOP=1
@@ -1070,7 +1070,7 @@ ALTER INDEX test_idx2 on test_table ABORT
 ### N. Basic syntax  
   ### Create, resume, pause, and abort resumable index operations
 
-**Applies to**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] and SQL Server 2019 CTP 2.0 as a public preview feature
+**Applies to**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] and [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] as a public preview feature
 
 ```sql
 -- Execute a resumable online index create statement with MAXDOP=1

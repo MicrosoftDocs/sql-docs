@@ -184,7 +184,7 @@ This value elevates operations that support ONLINE. Operations that do not suppo
  
 ELEVATE_RESUMABLE= { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
 
-***Applies to**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] and SQL Server 2019 CTP 2.0 as a public preview feature
+***Applies to**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] and [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] as a public preview feature
 
 Allows you to select options to cause the engine to automatically elevate supported operations to resumable. The default is OFF, which means operations are not be elevated to resumable unless specified in the statement. [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) reflects the current value of ELEVATE_RESUMABLE. These options only apply to operations that are generally supported for resumable. 
 
@@ -239,7 +239,7 @@ on the database. This permission can be granted by a user with CONTROL permissio
   
 **DacFx**  
   
- Since ALTER DATABASE SCOPED CONFIGURATION is a new feature in Azure SQL Database and SQL Server beginning with SQL Server 2016 that affects the database schema, exports of the schema (with or without data) are not be able to be imported into an older version of SQL Server e.g. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] or [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)]. For example, an export to a [DACPAC](../../relational-databases/data-tier-applications/data-tier-applications.md) or a [BACPAC](../../relational-databases/data-tier-applications/data-tier-applications.md) from an [!INCLUDE[ssSDS](../../includes/sssds-md.md)] or [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] database that used this new feature would not be able to be imported into a down-level server.  
+ Since ALTER DATABASE SCOPED CONFIGURATION is a new feature in [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] and SQL Server beginning with SQL Server 2016 that affects the database schema, exports of the schema (with or without data) are not be able to be imported into an older version of SQL Server e.g. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] or [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)]. For example, an export to a [DACPAC](../../relational-databases/data-tier-applications/data-tier-applications.md) or a [BACPAC](../../relational-databases/data-tier-applications/data-tier-applications.md) from an [!INCLUDE[ssSDS](../../includes/sssds-md.md)] or [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] database that used this new feature would not be able to be imported into a down-level server.  
 
 **ELEVATE_ONLINE** 
 
@@ -352,7 +352,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZE_FOR_AD_HOC_WORKLOADS = ON;
 
 ### I.  Set ELEVATE_ONLINE 
 
-**Applies to**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] and SQL Server 2019 CTP 2.0 as a public preview feature
+**Applies to**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] and  as a public preview feature
  
 This example sets ELEVATE_ONLINE to FAIL_UNSUPPORTED.  tsqlCopy 
 
@@ -362,7 +362,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE=FAIL_UNSUPPORTED ;
 
 ### J. Set ELEVATE_RESUMABLE 
 
-**Applies to**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] and SQL Server 2019 CTP 2.0 as a public preview feature
+**Applies to**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] and [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] as a public preview feature
 
 This example sets ELEVEATE_RESUMABLE to WHEN_SUPPORTED.  tsqlCopy 
 

@@ -25,20 +25,18 @@ Machine learning and programming extensions are an add-on to the database engine
 + [SUSE Enterprise Linux Server](quickstart-install-connect-suse.md)
 + [Ubuntu](quickstart-install-connect-ubuntu.md)
 
-After the database engine is configured, add the programming language extensions for Java, R, or Python. 
+After the database engine is configured, you can add the extensions. 
 
-Machine learning and extensibility packages are found in the SQL Server Linux source repositories. Because you already configured source repositories, you should be able to run the package install commands right away.
+Package locations are in the SQL Server Linux source repositories. Because you already configured source repositories, you should be able to run the package install commands right away.
 
 ## Package list
 
-On an internet-connected device, packages for these extensions are downloaded and installed independently of the database engine using the package installer for each operating system. For offline installation, see the [SQL Server Linx Release Notes](sql-server-linux-release-notes.md) for download links.
-
-The following table describes all available packages, but you only need *one* R or Python package to get a specific combination of features.
+On an internet-connected device, packages are downloaded and installed independently of the database engine using the package installer for each operating system. The following table describes all available packages, but you only need *one* R or Python package to get a specific combination of features.
 
 | Package name | Language | Description |
 |--------------|----------|-------------|
 |mssql-server-extensibility | All | Extensibility framework used to run R, Python, or Java code. |
-|mssql-server-extensibility-java | Java | Java extension |
+|mssql-server-extensibility-java | Java | Java extension for loading a Java execution environment. There are no additional libraries or packages for Java. |
 |mssql-mlservices-mlm-r | R | Full install. Base R, RevoScaleR, MicrosoftML, sqlRUtils, olapR, pre-trained models for image featurization and text sentiment analysis.| 
 |mssql-mlservices-mml-r | R | Partial install. Provides base R, RevoScaleR, MicrosoftML, sqlRUtils, olapR. <br/>Excludes pre-trained models.  |
 |mssql-mlservices-packages-r | R | Partial install. Provides base R, RevoScaleR, sqlRUtils, olapR. <br/>Excludes  pre-trained models and MicrosoftML. | 
@@ -55,9 +53,9 @@ Install the extensibility framework, followed by any *one* R package, plus any *
 > [!Tip]
 > If possible, run `yum clean all` to refresh packages on the system prior to installation.
 
-### Example 1 -  Full installation with extensibility framework, R, Python, Java, with machine learning libraries and pre-trained models for both R and Python
+### Example 1 -  Full installation 
 
-For R and Python, if you want something in between, such as machine learning libaries but without the pre-trained models, substitute the R or Python package providing the feature combination you require.
+Includes the extensibility framework, R, Python, Java, with machine learning libraries and pre-trained models for both R and Python. For R and Python, if you want something in between full and minimum install - such as machine learning libaries but without the pre-trained models - substitute the R or Python package providing the feature combination you want.
 
 ```bash
 # Install as root or sudo
@@ -68,9 +66,9 @@ sudo yum install mssql-mlservices-mlm-py
 sudo yum install mssql-server-extensibility-java
 ```
 
-### Example 2 - Minimum installation of core libraries and extensions
+### Example 2 - Minimum installation 
 
-Excludes pre-trained models and machine learning libraries. 
+Includes the extensibility framework, and core libraries and extensions. Excludes pre-trained models and machine learning libraries for R and Python. 
 
 ```bash
 # Install as root or sudo
@@ -90,9 +88,9 @@ Install the extensibility framework, followed by any *one* R package, plus any *
 > [!Tip]
 > If possible, run `apt-get update` to refresh packages on the system prior to installation. Additionally, some docker images of Ubuntu might not have the https apt transport option. To install it, use `apt-get install apt-transport-https`.
 
-### Example 1 -  Full installation with extensibility framework, R, Python, Java, with machine learning libraries and pre-trained models for both R and Python
+### Example 1 -  Full installation 
 
-For R and Python, if you want something in between, such as machine learning libaries but without the pre-trained models, substitute the R or Python package providing the feature combination you require.
+Includes the extensibility framework, R, Python, Java, with machine learning libraries and pre-trained models for both R and Python. For R and Python, if you want something in between full and minimum install - such as machine learning libaries but without the pre-trained models - substitute the R or Python package providing the feature combination you want.
 
 ```bash
 # Install as root or sudo
@@ -103,9 +101,9 @@ sudo apt-get install mssql-mlservices-mlm-py
 sudo apt-get install mssql-server-extensibility-java
 ```
 
-### Example 2 - Minimum installation of core libraries and extensions
+### Example 2 - Minimum installation 
 
-Excludes pre-trained models and machine learning libraries. 
+Includes the extensibility framework, and core libraries and extensions. Excludes pre-trained models and machine learning libraries for R and Python. 
 
 ```bash
 # Install as root or sudo

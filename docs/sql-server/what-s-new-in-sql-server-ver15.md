@@ -42,7 +42,7 @@ Community technology preview (CTP) 2.0 is the first public release of [!INCLUDE[
   - New `sys.dm_db_page_info` system function returns page information
   - Always On Availability Groups secondary to primary replica connection redirection
   - Always Encrypted with secure enclaves
-  - SQL Graph
+  - SQL Graph features
   - Java language programmability extension
   - SQL Server Machine Learning Services
   - Polybase
@@ -54,27 +54,17 @@ Community technology preview (CTP) 2.0 is the first public release of [!INCLUDE[
   - Query HDFS data in the storage pool
 - [High Availability](#ha)
   - Connection redirection
-- [SQL Graph](#sqlgraph)
-  - Match support in `MERGE` DML
-  - Edge Constraints
 - [SQL Server on Linux](#sqllinux)
   - Replication support
   - Support for the Microsoft Distributed Transaction Coordinator (MSDTC)
   - Always On Availability Group on Docker containers with Kubernetes
   - OpenLDAP support for third-party AD providers
-  - Machine Learning support
+  - Machine Learning on Linux
   - New container registry
   - New RHEL-based container images
-- [PolyBase](#polybase)
-  - New connectors for SQL Server, Oracle, Teradata, and MongoDB.
-- [SQL Server Machine Learning Services](#ml)
-  - Machine Learning on Linux
-  - Partition-based modeling
-  - Failover cluster support
 - [Master Data Services](#mds)
   - Silverlight controls replaced
 - [Security](#security)
-  - Always Encrypted with secure enclaves
   - Certificate management in SQL Server Configuration Manager
 - [Tools](#tools)
   - SQL Server Management Studio (SSMS) 18.0 (preview)
@@ -228,7 +218,7 @@ Cryptographic operations (encrypting columns, rotating columns encryption keys, 
 >[!NOTE]
 >Always Encrypted with secure enclaves applies to instances of SQL Server on Windows OS.
 
-## <a id="sqlgraph"></a> SQL Graph
+### <a id="sqlgraph"></a> SQL Graph features
 
 - **Match support in `MERGE` DML** allows you to specify graph relationships in a single statement, instead of separate `INSERT`, `UPDATE`, or `DELETE` statements. Merge your current graph data from node or edge tables with new data using the `MATCH` predicates in the `MERGE` statement. This feature enables `UPSERT` scenarios on edge tables. Users can now use a single merge statement to insert a new edge or update an existing one between two nodes.
 

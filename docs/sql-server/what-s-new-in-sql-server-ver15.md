@@ -277,9 +277,10 @@ Any SQL Server file that is placed on a PMEM device operates in *enlightened* mo
 
 - **Machine Learning on Linux**: SQL Server 2019 Machine Learning Services (In-Database) is now supported on Linux. Support includes `sp_execute_external_script` stored procedure. For instructions on how to install Machine Learning Services on Linux, see [Install SQL Server 2019 Machine Learning Services R and Python support on Linux](../linux/sql-server-linux-setup-machine-learning.md).
 
-- **New container registry**: All container images for SQL Server 2019 as well as SQL Server 2017 are now located in the Microsoft Container Registry.
+- **New container registry**: All container images for SQL Server 2019 as well as SQL Server 2017 are now located in the Microsoft Container Registry. Microsoft Container Registry is the official container registry for the distribution of Microsoft product containers. In addition, certified RHEL-based images are now published.
 
-- **New RHEL-based container images**: New certified RHEL-based container images are now available.
+  - Microsoft Container Registry: `mcr.microsoft.com/mssql/server:vNext-CTP2.0`
+  - Certified RHEL-based container images: `mcr.microsoft.com/mssql/rhel/server:vNext-CTP2.0`
 
 ## <a id="mds"></a> Master Data Services (MDS)
 

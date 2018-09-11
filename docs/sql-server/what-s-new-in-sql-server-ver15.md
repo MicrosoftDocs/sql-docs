@@ -175,7 +175,7 @@ The lightweight query profiling infrastructure provides query performance data m
 
 ### Data Discovery and Classification
 
-Data discovery and classification provides advanced capabilities natively built into SQL Server for classifying, labeling, and protecting the sensitive data in your databases. Classifying your most sensitive data (business, financial, healthcare, PII, etc.) can play a pivotal role in your organizational information protection stature. It can serve as infrastructure for:
+Data discovery and classification provides advanced capabilities natively built into SQL Server for classifying, labeling, and protecting the sensitive data in your databases. Classifying your most sensitive data (business, financial, healthcare, personal information, etc.) can play a pivotal role in your organizational information protection stature. It can serve as infrastructure for:
 
 - Helping meet data privacy standards and regulatory compliance requirements
 - Various security scenarios, such as monitoring (auditing) and alerting on anomalous access to sensitive data
@@ -210,10 +210,10 @@ FROM sys.dm_exec_requests AS d
 
 ### <a id="ha"></a>Always On Availability Groups secondary to primary replica connection redirection
 
-- **Secondary to primary replica connection redirection**: Allows client application connections to be directed to the primary replica regardless of the target server specified in the connection string. This allows connection redirection without a listener. Use Secondary to primary replica connection redrection in the following cases:
+- **Secondary to primary replica connection redirection**: Allows client application connections to be directed to the primary replica regardless of the target server specified in the connection string. This allows connection redirection without a listener. Use Secondary to primary replica connection redirection in the following cases:
 
-  - The custer technology does not offer a listener capability
-  - A multi subnet configurtion where redirection becomes complex
+  - The cluster technology does not offer a listener capability
+  - A multi subnet configuration where redirection becomes complex
   - Read scale-out or disaster recovery scenarios where cluster type is `NONE`
 
   For details see [Secondary to primary replica read/write connection redirection (Always On Availability Groups)](../database-engine/availability-groups/windows/secondary-replica-connection-redirection-always-on-availability-groups.md
@@ -223,7 +223,7 @@ FROM sys.dm_exec_requests AS d
 
 Expands upon Always Encrypted with in-place encryption and rich computations by enabling computations on plaintext data inside a secure enclave on the server side.
 
-Cryptographic operations (encrypting columns, rotating columns encryption keys, etc), can now be issued using Transact-SQL and do not require moving data out of the database. Secure enclaves unlock Always Encrypted to a much broader set of scenarios and applications that demand sensitive data to be protected in use, while also requiring rich computations on protected data to be supported within the database system. For details, see [Always Encrypted with secure enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md).
+Cryptographic operations (encrypting columns, rotating columns encryption keys, etc.), can now be issued using Transact-SQL and do not require moving data out of the database. Secure enclaves unlock Always Encrypted to a much broader set of scenarios and applications that demand sensitive data to be protected in use, while also requiring rich computations on protected data to be supported within the database system. For details, see [Always Encrypted with secure enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md).
 
 >[!NOTE]
 >Always Encrypted with secure enclaves applies to instances of SQL Server on Windows OS.

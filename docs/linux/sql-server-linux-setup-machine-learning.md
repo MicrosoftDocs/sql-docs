@@ -261,7 +261,7 @@ You can install other R and Python packages and use them in script that executes
 
 ## Limitations in CTP 2.0
 
-The following limitations exist in this CTP release but will be lifted in a future CTP.
+The following limitations exist in this CTP release but are expected to be lifted in a future CTP.
 
 + Implied authentication currently not available in Machine Learning Services on Linux, which means connecting back to the server from within an R or Python script is not supported on Linux at this time. 
 

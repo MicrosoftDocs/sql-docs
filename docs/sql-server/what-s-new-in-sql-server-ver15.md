@@ -105,7 +105,7 @@ To use intelligent query processing features, set database `COMPATIBILITY_LEVEL 
   Resumable online index create supports the follow scenarios:
   - Resume an index create operation after an index create failure, such as after a database failover or after running out of disk space.
   - Pause an ongoing index create operation and resume it later allowing to temporarily free system resources as required and resume this operation later.
-  - Create large indexes without using a lot of log space and a long-running transaction that blocks other maintenance activities and allowing log truncation.
+  - Create large indexes without using as much log space and a long-running transaction that blocks other maintenance activities and allowing log truncation.
 
   In case of an index create failure, without this feature an online index create operation must be executed again and the operation must be restarted from the beginning.
 
@@ -121,8 +121,8 @@ To use intelligent query processing features, set database `COMPATIBILITY_LEVEL 
 
 - Set these defaults using the `ELEVATE_ONLINE` and `ELEVATE_RESUMABLE` database scoped configuration options. Both options will cause the engine to automatically elevate supported operations to index online or resumable execution. You can enable the following behaviors using these options:
 
-  - `FAIL_UNSUPPORTED` option allows to execute all index operations online or resumable and fail index operations that are not supported for online or resumable.
-  - `WHEN_SUPPPORTED` option allows to execute supported operations online or resumable and run index unsupported operations offline or non-resumable.
+  - `FAIL_UNSUPPORTED` option allows all index operations online or resumable and fail index operations that are not supported for online or resumable.
+  - `WHEN_SUPPPORTED` option allows supported operations online or resumable and run index unsupported operations offline or non-resumable.
   - `OFF` option allows the current behavior of executing all index operations offline and non-resumable unless explicitly specified in the DDL statement.
 
 To override the default setting, include the ONLINE or RESUMABLE option in the index create and rebuild commands.  
@@ -152,7 +152,7 @@ Convert row-store tables into columnstore format. Creating clustered columnstore
 
 Full support for the widely used UTF-8 character encoding as an import or export encoding, or as database-level or column-level collation for text data. UTF-8 is allowed in the CHAR and VARCHAR datatypes, and is enabled when creating or changing an object’s collation to a collation with the `UTF8` suffix. 
 
-For example,`LATIN1_GENERAL_100_CI_AS_SC` to `LATIN1_GENERAL_100_CI_AS_SC_UTF8`. UTF-8 is only available to Windows collations that support supplementary characters, as introduced in SQL Server 2012. Note that NCHAR and NVARCHAR allow UTF-16 encoding only, and remain unchanged.
+For example,`LATIN1_GENERAL_100_CI_AS_SC` to `LATIN1_GENERAL_100_CI_AS_SC_UTF8`. UTF-8 is only available to Windows collations that support supplementary characters, as introduced in SQL Server 2012. `NCHAR` and `NVARCHAR` allow UTF-16 encoding only, and remain unchanged.
 
 This feature may provide significant storage savings, depending on the character set in use. For example, changing an existing column data type from `NCHAR(10)` to `CHAR(10)` using an UTF-8 enabled collation, translates into nearly 50% reduction in storage requirements. This reduction is because `NCHAR(10)` requires 22 bytes for storage, whereas `CHAR(10)` requires 12 bytes for the same Unicode string.
 

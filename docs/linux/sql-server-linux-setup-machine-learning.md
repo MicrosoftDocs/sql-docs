@@ -46,7 +46,7 @@ On an internet-connected device, packages are downloaded and installed independe
 
 <a name="RHEL"></a>
 
-## CentOS or Red Hat Enterprise Linux (RHEL) commands
+## RHEL/CentOS commands
 
 Install the extensibility framework, followed by any *one* R package, plus any *one* Python package, and Java if you want that capability. 
 
@@ -55,7 +55,7 @@ Install the extensibility framework, followed by any *one* R package, plus any *
 
 ### Example 1 -  Full installation 
 
-Includes the extensibility framework, R, Python, Java, with machine learning libraries and pre-trained models for both R and Python. For R and Python, if you want something in between full and minimum install - such as machine learning libaries but without the pre-trained models - substitute the R or Python package providing the feature combination you want.
+Includes the extensibility framework, R, Python, Java, with machine learning libraries and pre-trained models for both R and Python. For R and Python, if you want something in between full and minimum install - such as machine learning libraries but without the pre-trained models - substitute the R or Python package providing the feature combination you want.
 
 ```bash
 # Install as root or sudo
@@ -90,7 +90,7 @@ Install the extensibility framework, followed by any *one* R package, plus any *
 
 ### Example 1 -  Full installation 
 
-Includes the extensibility framework, R, Python, Java, with machine learning libraries and pre-trained models for both R and Python. For R and Python, if you want something in between full and minimum install - such as machine learning libaries but without the pre-trained models - substitute the R or Python package providing the feature combination you want.
+Includes the extensibility framework, R, Python, Java, with machine learning libraries and pre-trained models for both R and Python. For R and Python, if you want something in between full and minimum install - such as machine learning libraries but without the pre-trained models - substitute the R or Python package providing the feature combination you want.
 
 ```bash
 # Install as root or sudo
@@ -120,9 +120,9 @@ sudo apt-get install mssql-server-extensibility-java
 
 Install the extensibility framework, followed by any *one* R package, plus any *one* Python package, and Java if you want that capability. 
 
-### Example 1 -  Full installation with extensibility framework, R, Python, Java, with machine learning libraries and pre-trained models for both R and Python
+### Example 1 -  Full installation 
 
-For R and Python, if you want something in between, such as machine learning libaries but without the pre-trained models, substitute the R or Python package providing the feature combination you require.
+Includes the extensibility framework, R, Python, Java, with machine learning libraries and pre-trained models for both R and Python. For R and Python, if you want something in between full and minimum install - such as machine learning libraries but without the pre-trained models - substitute the R or Python package providing the feature combination you want.
 
 ```bash
 # Install as root or sudo
@@ -133,9 +133,9 @@ sudo zypper install mssql-mlservices-mlm-py
 sudo zypper install mssql-server-extensibility-java
 ```
 
-### Example 2 - Minimum installation of core libraries and extensions
+### Example 2 - Minimum installation 
 
-Excludes pre-trained models and machine learning libraries. 
+Includes the extensibility framework, and core libraries and extensions. Excludes pre-trained models and machine learning libraries for R and Python. 
 
 ```bash
 # Install as root or sudo
@@ -146,17 +146,28 @@ sudo zypper install mssql-mlservices-packages-py
 sudo zypper install mssql-server-extensibility-java
 ```
 
-
 ## Post-install config (required)
 
-Acceptance of the licensing agreements for open-source R and Python is required. If you already accepted SQL Server licensing and just added the R or Python extensions, the following command is your consent to their terms: : 
+1. Accept the licensing agreements for open-source R and Python. If you previously accepted SQL Server licensing and are now adding the R or Python extensions, the following command is your consent to their terms:
 
-```bash
-# Run as SUDO or root
-sudo /opt/mssql/bin/mssql-conf set accept-eula ml
+  ```bash
+  # Run as SUDO or root
+    sudo /opt/mssql/bin/mssql-conf set accept-eula ml
 ```
+  Alternatively, if you have not yet accepted the SQL Server database engine licensing agreement, that agreement contains a supplement for Machine Learning Services if you installed any of the mlservices packages: `sudo /opt/mssql/bin/mssql-conf setup` 
 
-Alternatively, if you have not yet accepted the SQL Server database engine licensing agreement, that agreement contains a supplement for Machine Learning Services if you installed any of the mlservices packages: `sudo /opt/mssql/bin/mssql-conf setup` 
+2. Configure external script execution. 
+
+  ```bash
+  EXEC sp_configure 'external scripts enabled', 1 
+  RECONFIGURE WITH OVERRIDE 
+  ```
+
+3. Restart SQL Server for the changes to take effect. 
+
+  ```bash
+  # sudo systemctl restart mssql-server 
+  ```
 
 ## Unattended installation 
  
@@ -172,22 +183,7 @@ For more information, see [Unattended install](https://docs.microsoft.com/sql/li
 
 ## Offline installation
 
-Locate the Machine Learning Servicesa and extensibility package downloads in the [Release notes](sql-server-linux-release-notes-2019.md). Follow the [Offline installation](sql-server-linux-setup.md#offline) instructions using the packages you obtained.
-
-## Configure external script execution 
-
-Before running R and Python scripts in SQL Server, enable external script execution. 
-
-```bash
-EXEC sp_configure 'external scripts enabled', 1 
-RECONFIGURE WITH OVERRIDE 
-```
-
-Restart SQL Server for the changes to take effect. 
-
-```bash
-# sudo systemctl restart mssql-server 
-```
+Locate the Machine Learning Services and extensibility package downloads in the [Release notes](sql-server-linux-release-notes-2019.md). Follow the [Offline installation](sql-server-linux-setup.md#offline) instructions using the packages you obtained.
  
 ## Verify external script execution
   
@@ -216,7 +212,7 @@ WITH RESULT SETS (([hello] int not null));
 GO 
 ```
 
-## Add other R and Python packages 
+## Add more R/Python packages 
  
 You can install other R and Python packages and use them in script that executes on SQL Server 2019.
 
@@ -278,10 +274,10 @@ There is parity between Linux and Windows for [Resource governance](../t-sql/sta
 | Column name   | Description | Value on Linux | 
 |---------------|--------------|---------------|
 |peak_memory_kb | The maximum amount of memory used for the resource pool. | On Linux, this statistic is sourced from the CGroups memory subsystem, where the value is memory.max_usage_in_bytes |
-|write_io_count | The total write IOs issued since the Resource Govenor statistics were reset. | On Linux, this statistic is sourced from the CGroups blkio subsystem, where the value on the write row is blkio.throttle.io_serviced | 
-|read_io_count | The total read IOs issued since the Resource Govenor statistics were reset. | On Linux, this statistic is sourced from the CGroups blkio subsystem, where value on the read row is blkio.throttle.io_serviced | 
-|total_cpu_kernel_ms | The cumulative CPU user kernel time in milliseconds since the Resource Govenor statistics were reset. | On Linux, this statistic is sourced from the CGroups cpuacct subsystem, where the value on the user row is cpuacct.stat |  
-|total_cpu_user_ms | The cumulative CPU user time in milliseconds since the Resource Govenor statistics were reset.| On Linux, this statistic is sourced from the CGroups cpuacct subsystem, where the value on the system row value is cpuacct.stat | 
+|write_io_count | The total write IOs issued since the Resource Governor statistics were reset. | On Linux, this statistic is sourced from the CGroups blkio subsystem, where the value on the write row is blkio.throttle.io_serviced | 
+|read_io_count | The total read IOs issued since the Resource Governor statistics were reset. | On Linux, this statistic is sourced from the CGroups blkio subsystem, where value on the read row is blkio.throttle.io_serviced | 
+|total_cpu_kernel_ms | The cumulative CPU user kernel time in milliseconds since the Resource Governor statistics were reset. | On Linux, this statistic is sourced from the CGroups cpuacct subsystem, where the value on the user row is cpuacct.stat |  
+|total_cpu_user_ms | The cumulative CPU user time in milliseconds since the Resource Governor statistics were reset.| On Linux, this statistic is sourced from the CGroups cpuacct subsystem, where the value on the system row value is cpuacct.stat | 
 |active_processes_count | The number of external processes running at the moment of the request.| On Linux, this statistic is sourced from the GGroups pids subsystem, where the value is pids.current | 
 
 ## Next steps

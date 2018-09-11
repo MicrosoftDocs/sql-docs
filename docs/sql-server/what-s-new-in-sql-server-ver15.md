@@ -103,19 +103,18 @@ Continue reading for more details about these features.
 
 - **Resumable online index create** allows an index create operation to pause and resume later from where the operation was paused or failed, instead of restarting from the beginning.
 
-  Resumable Online Index Create supports the follow scenarios:
+  Resumable online index create supports the follow scenarios:
   - Resume an index create operation after an index create failure, such as after a database failover or after running out of disk space.
   - Pause an ongoing index create operation and resume it later allowing to temporarily free system resources as required and resume this operation later.
   - Create large indexes without using a lot of log space and a long-running transaction that blocks other maintenance activities and allowing log truncation.
 
-In case of an execution error or failure, without this feature an online index create operation must be executed again and the operation must be restarted from the beginning
+  In case of an execution error or failure, without this feature an online index create operation must be executed again and the operation must be restarted from the beginning.
 
-With this release, we extend the resumable functionality adding this feature to available [resumable online index rebuild](http://azure.microsoft.com/blog/modernize-index-maintenance-with-resumable-online-index-rebuild/).
+  With this release, we extend the resumable functionality adding this feature to available [resumable online index rebuild](http://azure.microsoft.com/blog/modernize-index-maintenance-with-resumable-online-index-rebuild/).
 
-In addition, this feature can be setup be default for a specific database using  
-[database scoped default setting for online and resumable DDL operations](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
+  In addition, this feature can be set as the default for a specific database using [database scoped default setting for online and resumable DDL operations](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 
-For more information see [Resumable Online Index Create](http://azure.microsoft.com/blog/resumable-online-index-create-is-in-public-preview-for-azure-sql-db/)
+  For more information see [Resumable Online Index Create](http://azure.microsoft.com/blog/resumable-online-index-create-is-in-public-preview-for-azure-sql-db/)
 
 ### Database scoped default setting for online and resumable DDL operations 
 
@@ -202,16 +201,15 @@ FROM sys.dm_exec_requests AS d
     AS page_info
 ```
 
-## <a id="bigdatacluster"></a>Big Data Cluster
-
-- Deploy a SQL Server Big Data Cluster with Linux containers on Kubernetes
-- Use Azure Data Studio to run Jupyter Notebooks
-- Ingest external data into a data pool
-- Query HDFS data in the storage pool
-
-## <a id="ha"></a> High Availability
+### <a id="ha"></a> High Availability
 
 - **Connection redirection**: Improved scale-out with automatic redirection of connections based on read/write intent.
+
+### Always Encrypted with secure enclaves
+
+Expands upon Always Encrypted with in-place encryption and rich computations by enabling computations on plaintext data inside a secure enclave on the server side.
+
+Cryptographic operations (encrypting columns, rotating columns encryption keys, etc), can now be issued using Transact-SQL and do not require moving data out of the database. Secure enclaves unlock Always Encrypted to a much broader set of scenarios and applications that demand sensitive data to be protected in use, while also requiring rich computations on protected data to be supported within the database system. For details, see [Always Encrypted with secure enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md).
 
 ## <a id="sqlgraph"></a> SQL Graph
 
@@ -220,6 +218,25 @@ FROM sys.dm_exec_requests AS d
 - **Derived Tables and Views support for graph tables** allow you to put together multiple graph objects (node or edge tables) into a single object (node or edge) with the help of `UNION ALL` operator in a derived table or view. With the help of views or derived tables created on node or edge tables, users can now use a single `MATCH` query to identify heterogeneously connected data points in their database. For example, find all the relationships that two people in a graph share with each other or find all the entities that a given person in the graph is connected to.
 
 - **Edge Constraints** are introduced for edge tables in SQL Graph. Edge tables can connect any node to any other node in the database. With introduction of edge constraints, you can now apply some restrictions on this behavior. The new `CONNECTION` constraint can be used to specify the type of nodes a given edge table will be allowed to connect to in the schema.
+
+### <a id="programmability"></a> Programmability extensions
+
+- **Java language extension (preview)**: Use the Java language extension to execute Java code in SQL Server. In CTP2.0, this extension is installed when you add the feature 'Machine Learning Services (in-database)' to your SQL Server instance.
+
+### <a id="ml"></a> SQL Server Machine Learning Services
+
+- **Partition-based modeling**: Process external scripts per partition of your data using the new parameters added to `sp_execute_external_script`. This functionality supports training many small models (one model per partition of data) instead of one large model.
+
+- **Windows Server Failover Cluster**: Configure high availability for Machine Learning Services on a Windows Server Failover Cluster.
+
+For detailed information, see [What's new in SQL Server Machine Learning Services](../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md).
+
+## <a id="bigdatacluster"></a>Big Data Cluster
+
+- Deploy a SQL Server Big Data Cluster with Linux containers on Kubernetes
+- Use Azure Data Studio to run Jupyter Notebooks
+- Ingest external data into a data pool
+- Query HDFS data in the storage pool
 
 ## <a id="sqllinux"></a> SQL Server on Linux
 
@@ -230,7 +247,7 @@ FROM sys.dm_exec_requests AS d
   - Snapshot
   - Merge
 
-  CTP 2.0 does not support configuration of replication with the user interface. Use [replication stored procedures](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md).
+  Configure replication SQL Server Management Studio (SSMS) or use [replication stored procedures](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md).
 
 - **Support for the Microsoft Distributed Transaction Coordinator (MSDTC)**: SQL Server 2019 on Linux supports the Microsoft Distributed Transactions Coordinator (MSDTC).
 
@@ -238,7 +255,7 @@ FROM sys.dm_exec_requests AS d
 
 - **OpenLDAP support for third-party AD providers**: SQL Server on Linux supports OpenLDAP, which allows third-party providers to join Active Directory.
 
-- **Machine Learning on Linux**: SQL Server 2019 Machine Learning Services (In-Database) is now supported on Linux. For instructions on how to install Machine Learning Services on Linux, see [Install SQL Server 2019 Machine Learning Services R and Python support on Linux](../linux/sql-server-linux-setup-machine-learning.md).
+- **Machine Learning on Linux**: SQL Server 2019 Machine Learning Services (In-Database) is now supported on Linux. This includes support for `sp_execute_external_script`. For instructions on how to install Machine Learning Services on Linux, see [Install SQL Server 2019 Machine Learning Services R and Python support on Linux](../linux/sql-server-linux-setup-machine-learning.md).
 
 - **New container registry**: All container images for SQL Server 2019 as well as SQL Server 2017 are now located in the Microsoft Container Registry.
 
@@ -248,28 +265,13 @@ FROM sys.dm_exec_requests AS d
 
 - **New connectors for SQL Server, Oracle, Teradata, and MongoDB**: SQL Server 2019 introduces new connectors to external data for SQL Server, Oracle, Teradata, and MongoDB.
 
-## <a id="ml"></a> SQL Server Machine Learning Services
 
-- **Machine Learning on Linux**: SQL Server 2019 Machine Learning Services (In-Database) is now supported on Linux. For instructions on how to install Machine Learning Services on Linux, see [Install SQL Server 2019 Machine Learning Services R and Python support on Linux](../linux/sql-server-linux-setup-machine-learning.md).
-
-- **Partition-based modeling**: Process external scripts per partition of your data using the new parameters added to `sp_execute_external_script`. This functionality supports training many small models (one model per partition of data) instead of one large model.
-
-- **Windows Server Failover Cluster**: Configure high availability for Machine Learning Services on a Windows Server Failover Cluster.
-
-For detailed information, see [What's new in SQL Server Machine Learning Services](../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md).
 
 ## <a id="mds"></a> Master Data Services (MDS)
 
 - **Silverlight controls replaced with HTML**: The Master Data Services (MDS) portal no longer depends on Silverlight. All the former Silverlight components have been replaced with HTML controls.
 
-## <a id="programmability"></a> Programmability extensions
-
-- **Java language extension**: Use the Java language extension to execute Java code in SQL Server. In CTP2.0, this extension is installed when you add the feature 'Machine Learning Services (in-database)' to your SQL Server instance.
-
 ## <a id="security"></a>Security
-
-- **Always Encrypted with secure enclaves**: Expands upon Always Encrypted with in-place encryption and rich computations by enabling computations on plaintext data inside a secure enclave on the server side.
-  - Cryptographic operations (encrypting columns, rotating columns encryption keys, etc), can now be issued using Transact-SQL and do not require moving data out of the database. Secure enclaves unlock Always Encrypted to a much broader set of scenarios and applications that demand sensitive data to be protected in use, while also requiring rich computations on protected data to be supported within the database system. For details, see [Always Encrypted with secure enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md).
 
 - **Certificate management in SQL Server Configuration Manager**: SSL/TLS certificates are widely used to secure access to SQL Server instances. Certificate management is now integrated into the SQL Server Configuration Manager, simplifying common tasks such as:
 
@@ -288,6 +290,17 @@ For detailed information, see [What's new in SQL Server Machine Learning Service
 
 - [**Azure Data Studio (preview)**](../sql-operations-studio/what-is.md)
 
+## SQL Server Integration Services (SSIS)
+
+SQL Server 2019 CTP 2.0 does not introduce new features for SSIS.
+
+## SQL Server Analysis Services (SSAS)
+
+SQL Server 2019 CTP 2.0 does not introduce new features for SSAS.
+
+## SQL Server Reporting Services (SSRS)
+
+SQL Server 2019 CTP 2.0 does not introduce new features for SSRS.
 
 ## Next steps
 

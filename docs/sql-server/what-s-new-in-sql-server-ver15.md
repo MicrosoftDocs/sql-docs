@@ -52,8 +52,6 @@ Community technology preview (CTP) 2.0 is the first public release of [!INCLUDE[
   - Use Azure Data Studio to run Jupyter Notebooks
   - Ingest external data into a data pool
   - Query HDFS data in the storage pool
-- [High Availability](#ha)
-  - Connection redirection
 - [SQL Server on Linux](#sqllinux)
   - Replication support
   - Support for the Microsoft Distributed Transaction Coordinator (MSDTC)

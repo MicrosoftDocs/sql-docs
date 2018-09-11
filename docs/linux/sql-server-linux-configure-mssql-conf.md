@@ -24,7 +24,7 @@ ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 | [Agent](#agent) | Enable SQL Server Agent |
 | [Collation](#collation) | Set a new collation for SQL Server on Linux. |
 | [Customer feedback](#customerfeedback) | Choose whether or not SQL Server sends feedback to Microsoft. |
-| [Database Mail Profile](#dbmail) | Set the default database mail profile for SQL Server on Linux |
+| [Database Mail Profile](#dbmail) | Set the default database mail profile for SQL Server on Linux. |
 | [Default data directory](#datadir) | Change the default directory for new SQL Server database data files (.mdf). |
 | [Default log directory](#datadir) | Changes the default directory for new SQL Server database log (.ldf) files. |
 | [Default master database file directory](#masterdatabasedir) | Changes the default directory for the master database files on existing SQL installation.|
@@ -37,6 +37,7 @@ ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 | [Local Audit directory](#localaudit) | Set a a directory to add Local Audit files. |
 | [Locale](#lcid) | Set the locale for SQL Server to use. |
 | [Memory limit](#memorylimit) | Set the memory limit for SQL Server. |
+| [Microsoft Distributed Transaction Coordinator](#msdtc) | Configure and troubleshoot MSDTC on Linux. |
 | [TCP port](#tcpport) | Change the port where SQL Server listens for connections. |
 | [TLS](#tls) | Configure Transport Level Security. |
 | [Traceflags](#traceflags) | Set the traceflags that the service is going to use. |
@@ -441,6 +442,46 @@ The **memory.memorylimitmb** setting controls the amount physical memory (in MB)
    sudo systemctl restart mssql-server
    ```
 
+## <a id="msdtc"></a> Configure MSDTC
+
+The **network.rpcport** and **distributedtransaction.servertcpport** settings are used to configure the Microsoft Distributed Transaction Coordinator (MSDTC). To change these settings, run the following commands:
+
+1. Run the mssql-conf script as root with the **set** command for "network.rpcport":
+
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf set network.rpcport <rcp_port>
+   ```
+
+2. Then set the "distributedtransaction.servertcpport" setting:
+
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf set distributedtransaction.servertcpport <servertcpport_port>
+   ```
+
+In addition to setting these values, you must also configure routing and update the firewall for port 135. For more information on how to do this, see [How to configure MSDTC on Linux](sql-server-linux-configure-msdtc.md).
+
+There are several other settings for mssql-conf that you can use to monitor and troubleshoot MSDTC. The following table briefly describes these settings. For more information on their use, see the details in the Windows support article, [How to enable diagnostic tracing for MS DTC](https://support.microsoft.com/en-us/help/926099/how-to-enable-diagnostic-tracing-for-ms-dtc-on-a-windows-based-compute).
+
+| mssql-conf setting | Description |
+|---|---|
+| distributedtransaction.allowonlysecurerpccalls | Configure secure only rpc calls for distributed transactions |
+| distributedtransaction.fallbacktounsecurerpcifnecessary | Configure security only rpc calls for distributed |transactions
+| distributedtransaction.maxlogsize | DTC transaction log file size in MB. Default is 64MB |
+| distributedtransaction.memorybuffersize | Circular buffer size in which traces are stored. This size is in MB and default is 10MB |
+| distributedtransaction.servertcpport | MSDTC rpc server port |
+| distributedtransaction.trace_cm | Traces in the connection manager |
+| distributedtransaction.trace_contact | Traces the contact pool and contacts |
+| distributedtransaction.trace_gateway | Traces Gateway source |
+| distributedtransaction.trace_log | Log tracing |
+| distributedtransaction.trace_misc | Traces that cannot be categorized into the other categories |
+| distributedtransaction.trace_proxy | Traces that are generated in the MSDTC proxy |
+| distributedtransaction.trace_svc | Traces service and .exe file startup |
+| distributedtransaction.trace_trace | The trace infrastructure itself |
+| distributedtransaction.trace_util | Traces utility routines that are called from multiple locations |
+| distributedtransaction.trace_xa | XA Transaction Manager (XATM) tracing source |
+| distributedtransaction.tracefilepath | Folder in which trace files should be stored |
+| distributedtransaction.turnoffrpcsecurity | Enable or disable RPC security for distributed transactions |
+
 ## <a id="tcpport"></a> Change the TCP port
 
 The **network.tcpport** setting changes the TCP port where SQL Server listens for connections. By default, this port is set to 1433. To change the port, run the following commands:
@@ -451,13 +492,13 @@ The **network.tcpport** setting changes the TCP port where SQL Server listens fo
    sudo /opt/mssql/bin/mssql-conf set network.tcpport <new_tcp_port>
    ```
 
-1. Restart the SQL Server service:
+2. Restart the SQL Server service:
 
    ```bash
    sudo systemctl restart mssql-server
    ```
 
-1. When connecting to SQL Server now, you must specify the custom port with a comma (,) after the hostname or IP address. For example, to connect with SQLCMD, you would use the following command:
+3. When connecting to SQL Server now, you must specify the custom port with a comma (,) after the hostname or IP address. For example, to connect with SQLCMD, you would use the following command:
 
    ```bash
    sqlcmd -S localhost,<new_tcp_port> -U test -P test
@@ -544,6 +585,9 @@ accepteula = Y
 captureminiandfull = true
 coredumptype = full
 
+[distributedtransaction]
+servertcpport = 51999
+
 [filelocation]
 defaultbackupdir = /var/opt/mssql/data/
 defaultdatadir = /var/opt/mssql/data/
@@ -563,6 +607,7 @@ memorylimitmb = 4096
 forceencryption = 0
 ipaddress = 10.192.0.0
 kerberoskeytabfile = /var/opt/mssql/secrets/mssql.keytab
+rpcport = 13500
 tcpport = 1401
 tlscert = /etc/ssl/certs/mssql.pem
 tlsciphers = ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA

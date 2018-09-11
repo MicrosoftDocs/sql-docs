@@ -108,7 +108,7 @@ Continue reading for more details about these features.
   - Pause an ongoing index create operation and resume it later allowing to temporarily free system resources as required and resume this operation later.
   - Create large indexes without using a lot of log space and a long-running transaction that blocks other maintenance activities and allowing log truncation.
 
-  In case of an execution error or failure, without this feature an online index create operation must be executed again and the operation must be restarted from the beginning.
+  In case of an index create failure, without this feature an online index create operation must be executed again and the operation must be restarted from the beginning.
 
   With this release, we extend the resumable functionality adding this feature to available [resumable online index rebuild](http://azure.microsoft.com/blog/modernize-index-maintenance-with-resumable-online-index-rebuild/).
 
@@ -161,10 +161,6 @@ This may provide significant storage savings, depending on the character set in 
 
 The lightweight query profiling infrastructure (LWQPI) is now enabled by default. The lightweight query profiling infrastructure was introduced in SQL Server 2016 SP1. It offers a query execution statistics collection mechanism with an expected overhead of 2% CPU, compared with an overhead of up to 75% CPU for the standard query profiling mechanism. On previous versions,
  it was OFF by default. Database administrators could enable it with [trace flag 7412](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
-
-### Expanded support for Persistent Memory (PMEM) devices
-
-Any SQL Server file (database files, transaction log files, In-Memory OLTP checkpoint files, etc) placed on a Persistent Memory device (PMEM, also known as Storage Class Memory or SCM) will operate in "enlightened" mode, where SQL Server will directly access the device, avoiding the storage stack of the operating system and allowing extreme low latency I/Os against such devices. 
 
 ### Data Discovery and Classification
 
@@ -249,7 +245,7 @@ For detailed information, see [What's new in SQL Server Machine Learning Service
 
   Configure replication SQL Server Management Studio (SSMS) or use [replication stored procedures](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md).
 
-- **Support for the Microsoft Distributed Transaction Coordinator (MSDTC)**: SQL Server 2019 on Linux supports the Microsoft Distributed Transactions Coordinator (MSDTC).
+- **Support for the Microsoft Distributed Transaction Coordinator (MSDTC)**: SQL Server 2019 on Linux supports the Microsoft Distributed Transaction Coordinator (MSDTC). For details, see [How to configure MSDTC on Linux](../linux/sql-server-linux-configure-msdtc.md).
 
 - **Always On Availability Group on Docker containers with Kubernetes**: Kubernetes can orchestrate containers running SQL Server instances to provide a highly available set of databases with SQL Server Always On Availability Groups. A Kubernetes operator deploys a StatefulSet including a container with **mssql-server container** and a health monitor.
 
@@ -260,6 +256,9 @@ For detailed information, see [What's new in SQL Server Machine Learning Service
 - **New container registry**: All container images for SQL Server 2019 as well as SQL Server 2017 are now located in the Microsoft Container Registry.
 
 - **New RHEL-based container images**: New certified RHEL-based container images are now available.
+
+- **Expanded support for Persistent Memory (PMEM) devices**: Any SQL Server file (database files, transaction log files, In-Memory OLTP checkpoint files, etc) placed on a Persistent Memory device (PMEM, also known as Storage Class Memory or SCM) will operate in "enlightened" mode, where SQL Server will directly access the device, avoiding the storage stack of the operating system and allowing extreme low latency I/Os against such devices.
+
 
 ## <a id="polybase"></a> PolyBase
 

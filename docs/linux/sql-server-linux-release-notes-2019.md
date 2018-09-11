@@ -20,7 +20,7 @@ monikerRange: ">= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallprod
 The following release notes apply to SQL Server 2019 CTP running on Linux. This article is broken into sections for each release. Each release has a link to a support article describing the CU changes as well as links to the Linux package downloads.
 
 > [!TIP]
-> To learn about new Linux features in SQL Server 2019, see [What's new in SQL Server 2019 CTP 2.0 for Linux](../sql-server/what-s-new-in-sql-server-ver15.md#sqllinux).
+> To learn about new Linux features in SQL Server 2019, see [What's new in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md).
 
 ## Supported platforms
 
@@ -58,9 +58,9 @@ If you are updating existing SQL Server packages, run the appropriate update com
 - [Install SQL Server vNext Machine Learning Services R and Python support on Linux](sql-server-linux-setup-machine-learning.md)
 - [Enable SQL Server Agent](sql-server-linux-setup-sql-agent.md)
 
-## <a id="CU9-GDR2"></a> CU9-GDR2 (August 2018)
+## <a id="CTP20"></a> CTP 2.0 (September 2018)
 
-This is a security update that also includes the previously released CU (CU9) for SQL Server 2017. The SQL Server engine version for this release is 14.0.3035.2. For information about the fixes and improvements in this release, see [https://support.microsoft.com/en-us/help/4293805](https://support.microsoft.com/en-us/help/4293805).
+The following sections provide package locations and known issues for the CTP 2.0 release. To learn more about new features for Linux on SQL Server 2019, see the [What's new in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md).
 
 ### Package details
 
@@ -71,6 +71,12 @@ For manual or offline package installations, you can download the RPM and Debian
 | Red Hat RPM package | xx.x.xxxx.xx-1 | [Engine RPM package](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-xx.x.xxxx.xx-1.x86_64.rpm)</br>[High Availability RPM package](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-xx.x.xxxx.xx-1.x86_64.rpm)</br>[Full-text Search RPM package](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-xx.x.xxxx.xx-1.x86_64.rpm)| 
 | SLES RPM package | xx.x.xxxx.xx-1 | [mssql-server Engine RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-xx.x.xxxx.xx-1.x86_64.rpm)</br>[High Availability RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-xx.x.xxxx.xx-1.x86_64.rpm)</br>[Full-text Search RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-xx.x.xxxx.xx-1.x86_64.rpm) | 
 | Ubuntu 16.04 Debian package | xx.x.xxxx.xx-1 | [Engine Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_xx.x.xxxx.xx-1_amd64.deb)</br>[High Availability Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_xx.x.xxxx.xx-1_amd64.deb)</br>[Full-text Search Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_xx.x.xxxx.xx-1_amd64.deb)<br/> |
+
+### Known issues
+
+#### <a id="msdtc"></a> Microsoft Distributed Transaction Coordinator
+
+Currently, MSDTC requires transactions to be unauthenticated. For example, if you are using a linked server from SQL Server on Windows to SQL Server on Linux or use a Windows client application to start a distributed transaction against SQL Server on Linux, then MSDTC on Windows server/client is required to use option "No Authentication Required".
 
 ## Next steps
 

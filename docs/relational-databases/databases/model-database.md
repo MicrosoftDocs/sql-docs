@@ -43,7 +43,7 @@ manager: craigg
 |Primary data|modeldev|model.mdf|Autogrow by 64 MB until the disk is full.|  
 |Log|modellog|modellog.ldf|Autogrow by 64 MB to a maximum of 2 terabytes.|  
   
- For versions before [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], see [model Database](model-database.md)for default file growth values.  
+ For versions before [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], see [model Database](../../2014/relational-databases/databases/model-database.md) for default file growth values.  
   
  To move the **model** database or log files, see [Move System Databases](../../relational-databases/databases/move-system-databases.md).  
   

@@ -31,13 +31,22 @@ Community technology preview (CTP) 2.0 is the first public release of [!INCLUDE[
 
 - [Database engine](#databaseengine)
   - Intelligent query processing
+  - Resumable online index create
   - Database scoped configuration setting for online and resumable DDL operations
   - Clustered columnstore online index build and rebuild
-  - Resumable online index create
   - UTF-8 Support
   - Lightweight query profiling infrastructure enabled by default
+  - Data Discovery and Classification
+  - Support for columnstore statistics in `DBCC CLONEDATABASE`
+  - New options added to `sp_estimate_data_compression_savings`
+  - New `sys.dm_db_page_info` system function returns page information
+  - Always On Availability Groups secondary to primary replica connection redirection
+  - Always Encrypted with secure enclaves
+  - SQL Graph
+  - Java language programmability extension
+  - SQL Server Machine Learning Services
+  - Polybase
   - Expanded support for Persistent Memory (PMEM) devices
-  - Java language extension
 - [Big Data Cluster](#bigdatacluster)
   - Deploy a SQL Server Big Data Cluster with Linux containers on Kubernetes
   - Use Azure Data Studio to run Jupyter Notebooks
@@ -185,7 +194,7 @@ DBCC CLONEDATABASE creates a schema-only copy of a database which includes all t
 
 `sp_estimate_data_compression_savings` returns the current size of the requested object and estimates the object size for the requested compression state.  Currently this procedure supports three options: NONE, Row and Page.  SQL Server 2019 introduces two new options: COLUMNSTORE and COLUMNSTORE_ARCHIVE.  These new options will allow you to estimate the space savings if a columnstore index is created on the table using either standard or archive columnstore compression.
 
-### sys.dm_db_page_info
+### New sys.dm_db_page_info system function returns page information
 
 `sys.dm_db_page_info(database_id, file_id, page_id, mode)` returns information about a page in a database.  The function returns a row that contains the header information from the page, including the `object_id`, `index_id` and `partition_id`.  This replaces the need to use DBCC PAGE in most cases.  
 
@@ -199,7 +208,7 @@ FROM sys.dm_exec_requests AS d
     AS page_info
 ```
 
-### <a id="ha"></a> High Availability
+### <a id="ha"></a>Always On Availability Groups secondary to primary replica connection redirection
 
 - **Secondary to primary replica connection redirection**: Allows client application connections to be directed to the primary replica regardless of the target server specified in the connection string. This allows connection redirection without a listener. Use Secondary to primary replica connection redrection in the following cases:
 
@@ -225,7 +234,7 @@ Cryptographic operations (encrypting columns, rotating columns encryption keys, 
 
 - **Edge Constraints** are introduced for edge tables in SQL Graph. Edge tables can connect any node to any other node in the database. With introduction of edge constraints, you can now apply some restrictions on this behavior. The new `CONNECTION` constraint can be used to specify the type of nodes a given edge table will be allowed to connect to in the schema.
 
-### <a id="programmability"></a> Programmability extensions
+### <a id="programmability"></a> Java language programmability extensions
 
 - **Java language extension (preview)**: Use the Java language extension to execute Java code in SQL Server. In CTP2.0, this extension is installed when you add the feature 'Machine Learning Services (in-database)' to your SQL Server instance.
 
@@ -236,6 +245,22 @@ Cryptographic operations (encrypting columns, rotating columns encryption keys, 
 - **Windows Server Failover Cluster**: Configure high availability for Machine Learning Services on a Windows Server Failover Cluster.
 
 For detailed information, see [What's new in SQL Server Machine Learning Services](../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md).
+
+### <a id="polybase"></a> PolyBase
+
+- **New connectors for SQL Server, Oracle, Teradata, and MongoDB**: SQL Server 2019 introduces new connectors to external data for SQL Server, Oracle, Teradata, and MongoDB.
+
+### Expanded support for Persistent Memory (PMEM) devices
+
+Any SQL Server file that is placed on a PMEM device operates in *enlightened* mode. SQL Server directly accesses the device, bypassing the storage stack of the operating system. This mode improves performance because it allows extremely low latency input/output against such devices.
+    - Examples of SQL Server files include the following:
+        - Database files
+        - Transaction log files
+        - In-Memory OLTP checkpoint files
+    - PMEM is also known as storage class memory (SCM)
+
+>[!NOTE]
+>For this preview release, support for Persistent Memory (PMEM) devices is only available on Linux.
 
 ## <a id="bigdatacluster"></a>Big Data Cluster
 
@@ -267,23 +292,6 @@ For detailed information, see [What's new in SQL Server Machine Learning Service
 - **New container registry**: All container images for SQL Server 2019 as well as SQL Server 2017 are now located in the Microsoft Container Registry.
 
 - **New RHEL-based container images**: New certified RHEL-based container images are now available.
-
-## <a id="polybase"></a> PolyBase
-
-- **New connectors for SQL Server, Oracle, Teradata, and MongoDB**: SQL Server 2019 introduces new connectors to external data for SQL Server, Oracle, Teradata, and MongoDB.
-
-## Expanded support for Persistent Memory (PMEM) devices
-
-Any SQL Server file that is placed on a PMEM device operates in *enlightened* mode. SQL Server directly accesses the device, bypassing the storage stack of the operating system. This mode improves performance because it allows extremely low latency input/output against such devices.
-    - Examples of SQL Server files include the following:
-        - Database files
-        - Transaction log files
-        - In-Memory OLTP checkpoint files
-    - PMEM is also known as storage class memory (SCM)
-
-
->[!NOTE]
->For this preview release, support for Persistent Memory (PMEM) devices is only available on Linux.
 
 ## <a id="mds"></a> Master Data Services (MDS)
 

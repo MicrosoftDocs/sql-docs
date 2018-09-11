@@ -37,6 +37,7 @@ Community technology preview (CTP) 2.0 is the first public release of [!INCLUDE[
   - UTF-8 Support
   - Lightweight query profiling infrastructure enabled by default
   - Expanded support for Persistent Memory (PMEM) devices
+  - Java language extension
 - [Big Data Cluster](#bigdatacluster)
   - Deploy a SQL Server Big Data Cluster with Linux containers on Kubernetes
   - Use Azure Data Studio to run Jupyter Notebooks
@@ -46,7 +47,6 @@ Community technology preview (CTP) 2.0 is the first public release of [!INCLUDE[
   - Connection redirection
 - [SQL Graph](#sqlgraph)
   - Match support in `MERGE` DML
-  - Derived Tables and Views support for graph tables
   - Edge Constraints
 - [SQL Server on Linux](#sqllinux)
   - Replication support
@@ -64,8 +64,6 @@ Community technology preview (CTP) 2.0 is the first public release of [!INCLUDE[
   - Failover cluster support
 - [Master Data Services](#mds)
   - Silverlight controls replaced
-- [Programmability extensions](#programmability)
-  - Java language extension
 - [Security](#security)
   - Always Encrypted with secure enclaves
   - Certificate management in SQL Server Configuration Manager
@@ -77,13 +75,13 @@ Continue reading for more details about these features.
 
 ## <a id="databaseengine"></a> Database Engine
 
-### Intelligent query processing 
-
 - Database **COMPATIBILITY_LEVEL 150** is added. To enable for a specific user database, execute:
 
    ```sql
    ALTER DATABASE database_name SET COMPATIBILITY_LEVEL =  150;
    ```
+
+### Intelligent query processing
 
 - **Row mode memory grant feedback** expands on the memory grant feedback feature introduced in SQL Server 2017 by adjusting memory grant sizes for both batch and row mode operators.  For an excessive memory grant condition, if the granted memory is more than two times the size of the actual used memory, memory grant feedback will recalculate the memory grant. Consecutive executions will then request less memory. For an insufficiently sized memory grant that results in a spill to disk, memory grant feedback will trigger a recalculation of the memory grant.  Consecutive executions will then request more memory. This feature is enabled by default under database compatibility level 150.
 
@@ -98,6 +96,8 @@ Continue reading for more details about these features.
   - Creating a columnstore index adds too much overhead to the transactional part of your workload, OR creating a columnstore index is not feasible because your application depends on a feature that is not yet supported with columnstore indexes.
 
 - **Table variable deferred compilation** improves plan quality and overall performance for queries referencing table variables. During optimization and initial compilation, this feature will propagate cardinality estimates that are based on actual table variable row counts.  This accurate row count information will be used for optimizing downstream plan operations. This feature is enabled by default under database compatibility level 150.
+
+To use intelligent query processing features, set database `COMPATIBILITY_LEVEL = 150`.
 
 ### Resumable online index create
 
@@ -159,8 +159,10 @@ This may provide significant storage savings, depending on the character set in 
 
 ### Lightweight query profiling infrastructure enabled by default
 
-The lightweight query profiling infrastructure (LWQPI) is now enabled by default. The lightweight query profiling infrastructure was introduced in SQL Server 2016 SP1. It offers a query execution statistics collection mechanism with an expected overhead of 2% CPU, compared with an overhead of up to 75% CPU for the standard query profiling mechanism. On previous versions,
- it was OFF by default. Database administrators could enable it with [trace flag 7412](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
+The lightweight query profiling infrastructure provides query performance data more efficiently than standard profiling technologies. Lightweight profiling is now enabled by default. It was introduced in SQL Server 2016 SP1. Lightweight profiling offers a query execution statistics collection mechanism with an expected overhead of 2% CPU, compared with an overhead of up to 75% CPU for the standard query profiling mechanism. On previous versions,
+ it was OFF by default. Database administrators could enable it with [trace flag 7412](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). 
+
+ For more information, see [Developers Choice: Query progress – anytime, anywhere](http://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/).
 
 ### Data Discovery and Classification
 
@@ -199,7 +201,14 @@ FROM sys.dm_exec_requests AS d
 
 ### <a id="ha"></a> High Availability
 
-- **Connection redirection**: Improved scale-out with automatic redirection of connections based on read/write intent.
+- **Secondary to primary replica connection redirection**: Allows client application connections to be directed to the primary replica regardless of the target server specified in the connection string. This allows connection redirection without a listener. Use Secondary to primary replica connection redrection in the following cases:
+
+  - The custer technology does not offer a listener capability
+  - A multi subnet configurtion where redirection becomes complex
+  - Read scale-out or disaster recovery scenarios where cluster type is `NONE`
+
+  For details see [Secondary to primary replica read/write connection redirection (Always On Availability Groups)](../database-engine/availability-groups/windows/secondary-replica-connection-redirection-always-on-availability-groups.md
+).
 
 ### Always Encrypted with secure enclaves
 
@@ -207,11 +216,12 @@ Expands upon Always Encrypted with in-place encryption and rich computations by 
 
 Cryptographic operations (encrypting columns, rotating columns encryption keys, etc), can now be issued using Transact-SQL and do not require moving data out of the database. Secure enclaves unlock Always Encrypted to a much broader set of scenarios and applications that demand sensitive data to be protected in use, while also requiring rich computations on protected data to be supported within the database system. For details, see [Always Encrypted with secure enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md).
 
+>[!NOTE]
+>Always Encrypted with secure enclaves applies to instances of SQL Server on Windows OS.
+
 ## <a id="sqlgraph"></a> SQL Graph
 
 - **Match support in `MERGE` DML** allows you to specify graph relationships in a single statement, instead of separate `INSERT`, `UPDATE`, or `DELETE` statements. Merge your current graph data from node or edge tables with new data using the `MATCH` predicates in the `MERGE` statement. This enables `UPSERT` scenarios on edge tables. Users can now use a single merge statement to insert a new edge or update an existing one between two nodes.
-
-- **Derived Tables and Views support for graph tables** allow you to put together multiple graph objects (node or edge tables) into a single object (node or edge) with the help of `UNION ALL` operator in a derived table or view. With the help of views or derived tables created on node or edge tables, users can now use a single `MATCH` query to identify heterogeneously connected data points in their database. For example, find all the relationships that two people in a graph share with each other or find all the entities that a given person in the graph is connected to.
 
 - **Edge Constraints** are introduced for edge tables in SQL Graph. Edge tables can connect any node to any other node in the database. With introduction of edge constraints, you can now apply some restrictions on this behavior. The new `CONNECTION` constraint can be used to specify the type of nodes a given edge table will be allowed to connect to in the schema.
 
@@ -233,6 +243,7 @@ For detailed information, see [What's new in SQL Server Machine Learning Service
 - Use Azure Data Studio to run Jupyter Notebooks
 - Ingest external data into a data pool
 - Query HDFS data in the storage pool
+- Access features with [**Azure Data Studio (preview)**](../sql-operations-studio/what-is.md)
 
 ## <a id="sqllinux"></a> SQL Server on Linux
 
@@ -257,14 +268,22 @@ For detailed information, see [What's new in SQL Server Machine Learning Service
 
 - **New RHEL-based container images**: New certified RHEL-based container images are now available.
 
-- **Expanded support for Persistent Memory (PMEM) devices**: Any SQL Server file (database files, transaction log files, In-Memory OLTP checkpoint files, etc) placed on a Persistent Memory device (PMEM, also known as Storage Class Memory or SCM) will operate in "enlightened" mode, where SQL Server will directly access the device, avoiding the storage stack of the operating system and allowing extreme low latency I/Os against such devices.
-
-
 ## <a id="polybase"></a> PolyBase
 
 - **New connectors for SQL Server, Oracle, Teradata, and MongoDB**: SQL Server 2019 introduces new connectors to external data for SQL Server, Oracle, Teradata, and MongoDB.
 
+## Expanded support for Persistent Memory (PMEM) devices
 
+Any SQL Server file that is placed on a PMEM device operates in *enlightened* mode. SQL Server directly accesses the device, bypassing the storage stack of the operating system. This mode improves performance because it allows extremely low latency input/output against such devices.
+    - Examples of SQL Server files include the following:
+        - Database files
+        - Transaction log files
+        - In-Memory OLTP checkpoint files
+    - PMEM is also known as storage class memory (SCM)
+
+
+>[!NOTE]
+>For this preview release, support for Persistent Memory (PMEM) devices is only available on Linux.
 
 ## <a id="mds"></a> Master Data Services (MDS)
 
@@ -288,6 +307,8 @@ For detailed information, see [What's new in SQL Server Machine Learning Service
   - Support for Always Encrypted with secure enclaves.
 
 - [**Azure Data Studio (preview)**](../sql-operations-studio/what-is.md)
+
+  - Supports scenarios using SQL Server Big Data Cluster.
 
 ## SQL Server Integration Services (SSIS)
 

@@ -120,7 +120,7 @@ GO
 |FCB|Used to synchronize access to the file control block.|  
 |FCB_REPLICA|Internal use only.|  
 |FGCB_ALLOC|Use to synchronize access to round robin allocation information within a filegroup.|  
-|FGCB_ADD_REMOVE|Use to synchronize access to filegroups for ADD and DROP file operations.|  
+|FGCB_ADD_REMOVE|Use to synchronize access to filegroups for add, drop, grow, and shrink file operations.|  
 |FILEGROUP_MANAGER|Internal use only.|  
 |FILE_MANAGER|Internal use only.|  
 |FILESTREAM_FCB|Internal use only.|  

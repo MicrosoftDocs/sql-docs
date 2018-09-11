@@ -1,7 +1,7 @@
 ---
 title: "CREATE TABLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/10/2017"
+ms.date: "09/07/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -56,8 +56,6 @@ manager: craigg
 
   Creates a new table in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
-
 > [!NOTE]   
 >  For [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] syntax, see [CREATE TABLE (Azure SQL Data Warehouse)](../../t-sql/statements/create-table-azure-sql-data-warehouse.md).
   
@@ -406,7 +404,7 @@ column_name <data_type>
   
  FILESTREAM_ON { *partition_scheme_name* | filegroup | **"**default**"** } 
  
- **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Azure SQL Database does not support `FILESTREAM`.
  
  Specifies the filegroup for FILESTREAM data.  
   
@@ -847,7 +845,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  FILETABLE_COLLATE_FILENAME = { *collation_name* | database_default }  
    
-**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Azure SQL Database does not support `FILETABLE`. 
   
  Specifies the name of the collation to be applied to the **Name** column in the FileTable. The collation must be case-insensitive to comply with Windows file naming semantics. If this value is not specified, the database default collation is used. If the database default collation is case-sensitive, an error is raised and the CREATE TABLE operation fails.  
   
@@ -922,7 +920,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  MEMORY_OPTIMIZED  
    
-**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Azure SQL Database Managed Instance does not support memory optiimized tables. 
   
  The value  ON indicates that the table is memory optimized. Memory-optimized tables are part of the In-Memory OLTP feature, which is used to optimized the performance of transaction processing. To get started with In-Memory OLTP see [Quick Start 1: In-Memory OLTP Technologies for Faster Transact-SQL Performance](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md). For more in-depth information about memory-optimized tables see [Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   

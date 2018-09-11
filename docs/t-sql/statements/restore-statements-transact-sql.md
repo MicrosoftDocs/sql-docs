@@ -1,4 +1,4 @@
-﻿---
+---
 title: "RESTORE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/08/2018"
@@ -728,7 +728,7 @@ RESTORE DATABASE Sales
 
 # Azure SQL Database Managed Instance
 
-This command enables you to restore an entire database from a full database backup (a complete restore) form Azure Blob Storage account.
+This command enables you to restore an entire database from a full database backup (a complete restore) from Azure Blob Storage account.
 
 For other supported RESTORE commands, see:
 - [RESTORE FILELISTONLY (Transact-SQL)](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)  
@@ -767,6 +767,8 @@ Is a placeholder that indicates that up to 64 backup devices may be specified in
  
 ## General Remarks
 
+As a prerequisite, you need to create a credential with the name that matches the blob storage account url, and Shared Access Signature placed as secret. RESTORE command will lookup credential using the blob storage url to find the information required to read the backup device.
+
 RESTORE operation is asynchronous - the restore continues even if client connection breaks. If your connection is dropped, you can check [sys.dm_operation_status](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md) view for the status of a restore operation (as well as for CREATE and DROP database). 
 
 The following database options are set/overridden and cannot be changed later:
@@ -793,27 +795,30 @@ For more information, see [Managed Instance](/azure/sql-database/sql-database-ma
 To restore a database that is encrypted, you must have access to the certificate or asymmetric key that was used to encrypt the database. Without the certificate or asymmetric key, the database cannot be restored. As a result, the certificate that is used to encrypt the database encryption key must be retained as long as the backup is needed. For more information, see [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  
     
 ## Permissions  
-If the database being restored does not exist, the user must have CREATE DATABASE permissions to be able to execute RESTORE.  
-  
+The user must have CREATE DATABASE permissions to be able to execute RESTORE.  
+```
+CREATE LOGIN mylogin WITH PASSWORD = 'Very Strong Pwd123!';
+GRANT CREATE ANY DATABASE TO [mylogin];
+```  
 RESTORE permissions are given to roles in which membership information is always readily available to the server. Because fixed database role membership can be checked only when the database is accessible and undamaged, which is not always the case when RESTORE is executed, members of the **db_owner** fixed database role do not have RESTORE permissions.  
   
 ##  <a name="examples"></a> Examples  
 The following examples restore a copy only database backup from URL, including the creation of a credential.  
   
-###  <a name="restore-mi-database"></a> A. Restore database from three backup devices.   
+###  <a name="restore-mi-database"></a> A. Restore database from four backup devices.   
 ```sql
 
 -- Create credential
-CREATE CREDENTIAL [https://mibackups.blob.core.windows.net/wide-world-importers]
+CREATE CREDENTIAL [https://mybackups.blob.core.windows.net/wide-world-importers]
 WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
        SECRET = 'sv=2017-11-09&ss=bq&srt=sco&sp=rl&se=2022-06-19T22:41:07Z&st=2018-06-01T14:41:07Z&spr=https&sig=s7wddcf0w%3D';
 GO
--- Simple example 
+-- Restore database
 RESTORE DATABASE WideWorldImportersStandard
-FROM URL = N'https://mibackups.blob.core.windows.net/wide-world-importers/00-WideWorldImporters-Standard.bak',
-URL = N'https://mibackups.blob.core.windows.net/wide-world-importers/01-WideWorldImporters-Standard.bak',
-URL = N'https://mibackups.blob.core.windows.net/wide-world-importers/02-WideWorldImporters-Standard.bak',
-URL = N'https://mibackups.blob.core.windows.net/wide-world-importers/03-WideWorldImporters-Standard.bak'
+FROM URL = N'https://mybackups.blob.core.windows.net/wide-world-importers/00-WideWorldImporters-Standard.bak',
+URL = N'https://mybackups.blob.core.windows.net/wide-world-importers/01-WideWorldImporters-Standard.bak',
+URL = N'https://mybackups.blob.core.windows.net/wide-world-importers/02-WideWorldImporters-Standard.bak',
+URL = N'https://mybackups.blob.core.windows.net/wide-world-importers/03-WideWorldImporters-Standard.bak'
 ```
 The following error is shown if the database already exists:
 ```
@@ -821,12 +826,27 @@ Msg 1801, Level 16, State 1, Line 9
 Database 'WideWorldImportersStandard' already exists. Choose a different database name.
 ```
 ###  <a name="restore-mi-database-variables"></a> B. Restore database specified via variable.  
--- An example with variables:
+
+```
 DECLARE @db_name sysname = 'WideWorldImportersStandard';
-DECLARE @url nvarchar(400) = N'https://mibackups.blob.core.windows.net/wide-world-importers/WideWorldImporters-Standard.bak';
-RESTORE DATABASE @db_name
+DECLARE @url nvarchar(400) = N'https://mybackups.blob.core.windows.net/wide-world-importers/WideWorldImporters-Standard.bak';
+
+RESTORE DATABASE @db_name 
 FROM URL = @url
 ```  
+
+### <a name="restore-mi-database-progress"></a> C. Track progress of restore statement. 
+
+```
+SELECT	query = a.text, start_time, percent_complete,
+		eta = dateadd(second,estimated_completion_time/1000, getdate()) 
+FROM sys.dm_exec_requests r
+	CROSS APPLY sys.dm_exec_sql_text(r.sql_handle) a 
+WHERE r.command = 'RESTORE DATABASE'
+```
+
+> [!Note]
+> This view will probably show two restore requests. One is original RESTORE statement sent by the client, and the another one is background RESTORE statement that is executing even if the client connection fails.
 
 ::: moniker-end
 ::: moniker range="=aps-pdw-2016||=sqlallproducts-allversions"

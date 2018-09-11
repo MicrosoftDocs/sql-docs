@@ -164,7 +164,7 @@ Full support for the widely used UTF-8 character encoding as an import or export
 
 For example,`LATIN1_GENERAL_100_CI_AS_SC` to `LATIN1_GENERAL_100_CI_AS_SC_UTF8`. UTF-8 is only available to Windows collations that support supplementary characters, as introduced in SQL Server 2012. Note that NCHAR and NVARCHAR allow UTF-16 encoding only, and remain unchanged.
 
-This may provide significant storage savings, depending on the character set in use. For example, changing an existing column data type from NCHAR(10) to CHAR(10) using an UTF-8 enabled collation, translates into nearly 50% reduction in storage requirements. This is because NCHAR(10) requires 22 bytes for storage, whereas CHAR(10) requires 12 bytes for the same Unicode string.
+This feature may provide significant storage savings, depending on the character set in use. For example, changing an existing column data type from `NCHAR(10)` to `CHAR(10)` using an UTF-8 enabled collation, translates into nearly 50% reduction in storage requirements. This reduction is because `NCHAR(10)` requires 22 bytes for storage, whereas `CHAR(10)` requires 12 bytes for the same Unicode string.
 
 ### Lightweight query profiling infrastructure enabled by default
 
@@ -188,15 +188,15 @@ Data discovery and classification provides advanced capabilities natively built 
 
 ### Support for columnstore statistics in DBCC CLONEDATABASE
 
-DBCC CLONEDATABASE creates a schema-only copy of a database which includes all the elements necessary to troubleshoot query performance issues without copying the data.  In previous versions of SQL Server, the command did not copy the statistics necessary to accurately troubleshoot columnstore index queries and manual steps were required to capture this information.  Now in SQL Server 2019, DBCC CLONEDATABASE automatically captures the stats blobs for columnstore indexes, so no manual steps will be required.
+`DBCC CLONEDATABASE` creates a schema-only copy of a database that includes all the elements necessary to troubleshoot query performance issues without copying the data.  In previous versions of SQL Server, the command did not copy the statistics necessary to accurately troubleshoot columnstore index queries and manual steps were required to capture this information.  Now in SQL Server 2019, DBCC CLONEDATABASE automatically captures the stats blobs for columnstore indexes, so no manual steps will be required.
 
 ### New options added to sp_estimate_data_compression_savings
 
-`sp_estimate_data_compression_savings` returns the current size of the requested object and estimates the object size for the requested compression state.  Currently this procedure supports three options: NONE, Row and Page.  SQL Server 2019 introduces two new options: COLUMNSTORE and COLUMNSTORE_ARCHIVE.  These new options will allow you to estimate the space savings if a columnstore index is created on the table using either standard or archive columnstore compression.
+`sp_estimate_data_compression_savings` returns the current size of the requested object and estimates the object size for the requested compression state.  Currently this procedure supports three options: `NONE`, `ROW`, and `PAGE`.  SQL Server 2019 introduces two new options: `COLUMNSTORE` and `COLUMNSTORE_ARCHIVE`.  These new options will allow you to estimate the space savings if a columnstore index is created on the table using either standard or archive columnstore compression.
 
 ### New sys.dm_db_page_info system function returns page information
 
-`sys.dm_db_page_info(database_id, file_id, page_id, mode)` returns information about a page in a database.  The function returns a row that contains the header information from the page, including the `object_id`, `index_id` and `partition_id`.  This replaces the need to use DBCC PAGE in most cases.  
+`sys.dm_db_page_info(database_id, file_id, page_id, mode)` returns information about a page in a database.  The function returns a row that contains the header information from the page, including the `object_id`, `index_id`, and `partition_id`.  This function replaces the need to use `DBCC PAGE` in most cases.  
 
 In order to facilitate troubleshooting of page-related waits, a new column called page_resource was also added to `sys.dm_exec_requests` and `sys.sysprocesses`.  This new column allows you to join `sys.dm_db_page_info` to these views via another new system function - `sys.fn_PageResCracker`.  See the following script as an example:
 
@@ -210,13 +210,13 @@ FROM sys.dm_exec_requests AS d
 
 ### <a id="ha"></a>Always On Availability Groups secondary to primary replica connection redirection
 
-- **Secondary to primary replica connection redirection**: Allows client application connections to be directed to the primary replica regardless of the target server specified in the connection string. This allows connection redirection without a listener. Use Secondary to primary replica connection redirection in the following cases:
+- **Secondary to primary replica connection redirection**: Allows client application connections to be directed to the primary replica regardless of the target server specified in the connection string. This capability allows connection redirection without a listener. Use Secondary to primary replica connection redirection in the following cases:
 
   - The cluster technology does not offer a listener capability
   - A multi subnet configuration where redirection becomes complex
   - Read scale-out or disaster recovery scenarios where cluster type is `NONE`
 
-  For details see [Secondary to primary replica read/write connection redirection (Always On Availability Groups)](../database-engine/availability-groups/windows/secondary-replica-connection-redirection-always-on-availability-groups.md
+  For details, see [Secondary to primary replica read/write connection redirection (Always On Availability Groups)](../database-engine/availability-groups/windows/secondary-replica-connection-redirection-always-on-availability-groups.md
 ).
 
 ### Always Encrypted with secure enclaves
@@ -230,7 +230,7 @@ Cryptographic operations (encrypting columns, rotating columns encryption keys, 
 
 ## <a id="sqlgraph"></a> SQL Graph
 
-- **Match support in `MERGE` DML** allows you to specify graph relationships in a single statement, instead of separate `INSERT`, `UPDATE`, or `DELETE` statements. Merge your current graph data from node or edge tables with new data using the `MATCH` predicates in the `MERGE` statement. This enables `UPSERT` scenarios on edge tables. Users can now use a single merge statement to insert a new edge or update an existing one between two nodes.
+- **Match support in `MERGE` DML** allows you to specify graph relationships in a single statement, instead of separate `INSERT`, `UPDATE`, or `DELETE` statements. Merge your current graph data from node or edge tables with new data using the `MATCH` predicates in the `MERGE` statement. This feature enables `UPSERT` scenarios on edge tables. Users can now use a single merge statement to insert a new edge or update an existing one between two nodes.
 
 - **Edge Constraints** are introduced for edge tables in SQL Graph. Edge tables can connect any node to any other node in the database. With introduction of edge constraints, you can now apply some restrictions on this behavior. The new `CONNECTION` constraint can be used to specify the type of nodes a given edge table will be allowed to connect to in the schema.
 
@@ -252,8 +252,8 @@ For detailed information, see [What's new in SQL Server Machine Learning Service
 
 ### Expanded support for Persistent Memory (PMEM) devices
 
-Any SQL Server file that is placed on a PMEM device operates in *enlightened* mode. SQL Server directly accesses the device, bypassing the storage stack of the operating system. This mode improves performance because it allows extremely low latency input/output against such devices.
-    - Examples of SQL Server files include the following:
+Any SQL Server file that is placed on a PMEM device operates in *enlightened* mode. SQL Server directly accesses the device, bypassing the storage stack of the operating system. This mode improves performance because it allows low latency input/output against such devices.
+    - Examples of SQL Server files include:
         - Database files
         - Transaction log files
         - In-Memory OLTP checkpoint files
@@ -287,7 +287,7 @@ Any SQL Server file that is placed on a PMEM device operates in *enlightened* mo
 
 - **OpenLDAP support for third-party AD providers**: SQL Server on Linux supports OpenLDAP, which allows third-party providers to join Active Directory.
 
-- **Machine Learning on Linux**: SQL Server 2019 Machine Learning Services (In-Database) is now supported on Linux. This includes support for `sp_execute_external_script`. For instructions on how to install Machine Learning Services on Linux, see [Install SQL Server 2019 Machine Learning Services R and Python support on Linux](../linux/sql-server-linux-setup-machine-learning.md).
+- **Machine Learning on Linux**: SQL Server 2019 Machine Learning Services (In-Database) is now supported on Linux. Support includes `sp_execute_external_script` stored procedure. For instructions on how to install Machine Learning Services on Linux, see [Install SQL Server 2019 Machine Learning Services R and Python support on Linux](../linux/sql-server-linux-setup-machine-learning.md).
 
 - **New container registry**: All container images for SQL Server 2019 as well as SQL Server 2017 are now located in the Microsoft Container Registry.
 

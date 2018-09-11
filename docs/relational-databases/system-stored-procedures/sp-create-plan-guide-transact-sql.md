@@ -24,7 +24,7 @@ ms.author: sstein
 manager: craigg
 ---
 # sp_create_plan_guide (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Creates a plan guide for associating query hints or actual query plans with queries in a database. For more information about plan guides, see [Plan Guides](../../relational-databases/performance/plan-guides.md).  
   

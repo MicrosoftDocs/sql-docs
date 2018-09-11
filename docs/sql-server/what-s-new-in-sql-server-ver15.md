@@ -169,6 +169,8 @@ Data discovery and classification provides advanced capabilities natively built 
 - Various security scenarios, such as monitoring (auditing) and alerting on anomalous access to sensitive data
 - Making it easier to identify where sensitive data resides in the enterprise so admins can take the right steps securing the database
 
+For more information, see [SQL Data Discovery and Classification](../relational-databases/security/sql-data-discovery-and-classification).
+
 [Auditing](../relational-databases/security/auditing/sql-server-audit-database-engine.md) has also been enhanced to include a new field in the audit log called `data_sensitivity_information`, which logs the sensitivity classifications (labels) of the actual data that was returned by the query. For details and examples, see [Add sensitivity classification](../t-sql/statements/add-sensitivity-classification-transact-sql.md).
 
 >[!NOTE]

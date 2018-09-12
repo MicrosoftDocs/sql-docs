@@ -111,7 +111,7 @@ To use intelligent query processing features, set database `COMPATIBILITY_LEVEL 
 
   In addition, this feature can be set as the default for a specific database using [database scoped default setting for online and resumable DDL operations](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 
-  For more information, see [Resumable Online Index Create](../t-sql/statements/create-index-transact-sql.md).
+  For more information, see [Resumable Online Index Create](../t-sql/statements/create-index-transact-sql.md#resumable-indexes).
 
 ### Database scoped default setting for online and resumable DDL operations 
 

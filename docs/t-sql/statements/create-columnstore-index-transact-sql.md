@@ -154,6 +154,15 @@ COLUMNSTORE_ARCHIVE
   
    For more information about compression, see [Data Compression](../../relational-databases/data-compression/data-compression.md).  
 
+ONLINE = [ON | OFF]   
+   Applies to: [!INCLUDE[ssSQLv15_md](../../includes/sssqlv15-md.md)].
+- ON specifies that the columnstore index remains online and available while the new copy of the index is being built.
+- OFF specifies that the index is not available for use while the new copy is being built.
+
+```sql
+CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines WITH ( ONLINE = ON );
+```
+
 ON  
    With the ON options you can specify options for data storage, such as a partition scheme, a specific filegroup, or the default filegroup. If the ON option is not specified, the index uses the settings partition or filegroup settings of the existing table.  
   

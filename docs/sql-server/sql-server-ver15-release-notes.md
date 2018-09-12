@@ -52,15 +52,14 @@ SQL Server 2019 CTP 2.0 is delivered for
 
 ### Hardware and software requirements
 
-- **Hardware**
-  - [Windows - processor, memory, and operating system requirements](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#pmosr)
-  - [Linux - system requirements](../linux/sql-server-linux-setup.md#system)
-  
-- **Software**
-  - Windows Server 2016 or later. For additional requirements, see [Requirements for Installing SQL Server](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
-  - For Linux, refer to [Linux - supported platforms](../linux/sql-server-linux-setup.md#supportedplatforms)
+- **Issue and customer impact**: Hardware and software requirements are still being reviewed and not final for the product release.
 
-
+  - **Hardware**
+    - [Windows - processor, memory, and operating system requirements](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#pmosr)
+    - [Linux - system requirements](../linux/sql-server-linux-setup.md#system)
+  - **Software**
+    - Windows Server 2016 or later. For additional requirements, see [Requirements for Installing SQL Server](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
+    - For Linux, refer to [Linux - supported platforms](../linux/sql-server-linux-setup.md#supportedplatforms)
 
 ### SQL Graph
 

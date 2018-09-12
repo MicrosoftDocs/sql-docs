@@ -4,7 +4,7 @@ description: This article describes how to install SQL Server Machine Learning S
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.date: 09/09/2018
+ms.date: 09/11/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.component: ""
@@ -15,66 +15,159 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 ---
 # Install SQL Server 2019 Machine Learning Services (R, Python, Java) on Linux
 
-[SQL Server Machine Learning Services](../advanced-analytics/what-is-sql-server-machine-learning.md) runs on Linux operating systems starting in this CTP 2.0 release of SQL Server 2019. Follow these steps to install the Java programming extension, or the machine learning extensions for R and Python. 
+[SQL Server Machine Learning Services](../advanced-analytics/what-is-sql-server-machine-learning.md) runs on Linux operating systems starting in this preview release of SQL Server 2019. Follow these steps to install the Java programming extension, or the machine learning extensions for R and Python. 
 
 ## Prerequisites
 
-+ Install the database engine on either [Red Hat Enterprise Linux 7.3 or 7.4](quickstart-install-connect-red-hat.md) or [Ubuntu 16.04](quickstart-install-connect-ubuntu.md).
+Machine learning and programming extensions are an add-on to the database engine. As a prerequisite, install and configure the SQL Server database engine on [any supported Linux operating system](sql-server-linux-release-notes.md#supported-platforms), including docker:
 
-> [!NOTE]
-> SUSE (SLES) is not a supported operating system for Java, R, or Python extensions in this release.
++ [Red Hat Enterprise Linux (RHEL)](quickstart-install-connect-red-hat.md)
++ [SUSE Enterprise Linux Server](quickstart-install-connect-suse.md)
++ [Ubuntu](quickstart-install-connect-ubuntu.md)
 
-After the database engine is installed and configured, you can add the programming language extensions for Java, R, or Python. Packages for these extensions are downloaded and installed independently of the database engine. Download links and nstructions for each operating system are provided in the following sections.
+After the database engine is configured, you can add the extensions. 
+
+Package locations are in the SQL Server Linux source repositories. Because you already configured source repositories, you should be able to run the package install commands right away.
+
+## Package list
+
+On an internet-connected device, packages are downloaded and installed independently of the database engine using the package installer for each operating system. The following table describes all available packages, but you only need *one* R or Python package to get a specific combination of features.
+
+| Package name | Language | Description |
+|--------------|----------|-------------|
+|mssql-server-extensibility | All | Extensibility framework used to run R, Python, or Java code. |
+|mssql-server-extensibility-java | Java | Java extension for loading a Java execution environment. There are no additional libraries or packages for Java. |
+|mssql-mlservices-mlm-r | R | Full install. Base R, RevoScaleR, MicrosoftML, sqlRUtils, olapR, pre-trained models for image featurization and text sentiment analysis.| 
+|mssql-mlservices-mml-r | R | Partial install. Provides base R, RevoScaleR, MicrosoftML, sqlRUtils, olapR. <br/>Excludes pre-trained models.  |
+|mssql-mlservices-packages-r | R | Partial install. Provides base R, RevoScaleR, sqlRUtils, olapR. <br/>Excludes  pre-trained models and MicrosoftML. | 
+|mssql-mlservices-mlm-py | Python | Full install. Anaconda, revoscalepy, microsoftml, pre-trained models for image featurization and text sentiment analysis.| 
+|mssql-mlservices-mml-py | Python | Partial install. Provides Anaconda, revoscalepy, microsoftml. <br/>Excludes pre-trained models. | 
+|mssql-mlservices-packages-py | Python | Partial install. Provides Anaconda, revoscalepy. <br/>Excludes pre-trained models and microsoftml. | 
 
 <a name="RHEL"></a>
 
-## Red Hat package install
+## RHEL/CentOS commands
 
-Run the following commands to install SQL Server with Machine Learning Services with both R and Python. 
+Install the extensibility framework, followed by any *one* R package, plus any *one* Python package, and Java if you want that capability. 
 
-```bash
-# sudo yum install mssql-mlservices-all-9.4.1   
-```
+> [!Tip]
+> If possible, run `yum clean all` to refresh packages on the system prior to installation.
 
-### Add R only
- 
-Run the following commands to install SQL Server with Machine Learning Services with only R.
+### Example 1 -  Full installation 
 
-```bash 
-# sudo yum install mssql-mlservices-R-9.4.1   
-```
-
-### Add Python only
-
-Run the following commands to install SQL Server with Machine Learning Services with only Python. 
+Includes the extensibility framework, R, Python, Java, with machine learning libraries and pre-trained models for both R and Python. For R and Python, if you want something in between full and minimum install - such as machine learning libraries but without the pre-trained models - substitute the R or Python package providing the feature combination you want.
 
 ```bash
-# sudo yum install mssql-mlservices-python-9.4.1   
+# Install as root or sudo
+# Add everything
+sudo yum install mssql-server-extensibility
+sudo yum install mssql-mlservices-mlm-r   
+sudo yum install mssql-mlservices-mlm-py
+sudo yum install mssql-server-extensibility-java
+```
+
+### Example 2 - Minimum installation 
+
+Includes the extensibility framework, and core libraries and extensions. Excludes pre-trained models and machine learning libraries for R and Python. 
+
+```bash
+# Install as root or sudo
+# Minimum install of R, Python, Java
+sudo yum install mssql-server-extensibility
+sudo yum install mssql-mlservices-packages-r 
+sudo yum install mssql-mlservices-packages-py
+sudo yum install mssql-server-extensibility-java
 ```
 
 <a name="ubuntu"></a>
 
-## Ubuntu package install
+## Ubuntu commands
 
-Run the following commands to install SQL Server with Machine Learning Services with both R and Python: 
+Install the extensibility framework, followed by any *one* R package, plus any *one* Python package, and Java if you want that capability. 
 
-```bash
-# sudo apt-get install mssql-mlservices-all-9.4.1   
-```
-### Add R only
+> [!Tip]
+> If possible, run `apt-get update` to refresh packages on the system prior to installation. Additionally, some docker images of Ubuntu might not have the https apt transport option. To install it, use `apt-get install apt-transport-https`.
 
-Run the following commands to install SQL Server with Machine Learning Services with only R: 
+### Example 1 -  Full installation 
 
-```bash
-# sudo apt-get install mssql-mlservices-R-9.4.1   
-```
-### Add Python only
-
-Run the following commands to install SQL Server with Machine Learning Services with only Python: 
+Includes the extensibility framework, R, Python, Java, with machine learning libraries and pre-trained models for both R and Python. For R and Python, if you want something in between full and minimum install - such as machine learning libraries but without the pre-trained models - substitute the R or Python package providing the feature combination you want.
 
 ```bash
-# sudo apt-get install mssql-mlservices-python-9.4.1   
+# Install as root or sudo
+# Add everything
+sudo apt-get install mssql-server-extensibility
+sudo apt-get install mssql-mlservices-mlm-r   
+sudo apt-get install mssql-mlservices-mlm-py
+sudo apt-get install mssql-server-extensibility-java
 ```
+
+### Example 2 - Minimum installation 
+
+Includes the extensibility framework, and core libraries and extensions. Excludes pre-trained models and machine learning libraries for R and Python. 
+
+```bash
+# Install as root or sudo
+# Minimum install of R, Python, Java
+sudo apt-get install mssql-server-extensibility
+sudo apt-get install mssql-mlservices-packages-r 
+sudo apt-get install mssql-mlservices-packages-py
+sudo apt-get install mssql-server-extensibility-java
+```
+
+<a name="suse"></a>
+
+## SUSE commands
+
+Install the extensibility framework, followed by any *one* R package, plus any *one* Python package, and Java if you want that capability. 
+
+### Example 1 -  Full installation 
+
+Includes the extensibility framework, R, Python, Java, with machine learning libraries and pre-trained models for both R and Python. For R and Python, if you want something in between full and minimum install - such as machine learning libraries but without the pre-trained models - substitute the R or Python package providing the feature combination you want.
+
+```bash
+# Install as root or sudo
+# Add everything
+sudo zypper install mssql-server-extensibility
+sudo zypper install mssql-mlservices-mlm-r   
+sudo zypper install mssql-mlservices-mlm-py
+sudo zypper install mssql-server-extensibility-java
+```
+
+### Example 2 - Minimum installation 
+
+Includes the extensibility framework, and core libraries and extensions. Excludes pre-trained models and machine learning libraries for R and Python. 
+
+```bash
+# Install as root or sudo
+# Minimum install of R, Python, Java
+sudo zypper install mssql-server-extensibility
+sudo zypper install mssql-mlservices-packages-r 
+sudo zypper install mssql-mlservices-packages-py
+sudo zypper install mssql-server-extensibility-java
+```
+
+## Post-install config (required)
+
+1. Accept the licensing agreements for open-source R and Python. If you previously accepted SQL Server licensing and are now adding the R or Python extensions, the following command is your consent to their terms:
+
+  ```bash
+  # Run as SUDO or root
+    sudo /opt/mssql/bin/mssql-conf set accept-eula ml
+```
+  Alternatively, if you have not yet accepted the SQL Server database engine licensing agreement, that agreement contains a supplement for Machine Learning Services if you installed any of the mlservices packages: `sudo /opt/mssql/bin/mssql-conf setup` 
+
+2. Configure external script execution. 
+
+  ```bash
+  EXEC sp_configure 'external scripts enabled', 1 
+  RECONFIGURE WITH OVERRIDE 
+  ```
+
+3. Restart SQL Server for the changes to take effect. 
+
+  ```bash
+  # sudo systemctl restart mssql-server 
+  ```
 
 ## Unattended installation 
  
@@ -90,44 +183,11 @@ For more information, see [Unattended install](https://docs.microsoft.com/sql/li
 
 ## Offline installation
 
-1. Locate the MLS-specific package downloads in the [Release notes](sql-server-linux-release-notes-2019.md). 
-
-2. Continue with [Offline installation](sql-server-linux-setup.md#offline) instructions for your next step.
-
-## Post-install configuration
-
-After the database engine and Machine Learning Services packages are installed, configure the server for operations. This task includes acceptance of SQL Server, R, and Python license agreements and provision of the system administrator (SA) password.
-
-Run the configuration script to accept the license agreement and provide the System Administrator (SA) password: 
-
-```bash
-$ sudo /opt/mssql/bin/mssql-conf setup 
-```
-
-If you already have a SQL Server installation and just want to add the feature machine learning services, then you can install mlservices packages and run the following to accept the mlservices EULA: 
-
-```bash
-$ sudo /opt/mssql/bin/mssql-conf set accept-eula ml 
-```
-
-## Configure external script execution 
-
-Before running R and Python scripts in SQL Server, enable external script execution: 
-
-```bash
-EXEC sp_configure 'external scripts enabled', 1 
-RECONFIGURE WITH OVERRIDE 
-```
-
-Restart SQL Server for the changes to take effect: 
-
-```bash
-# sudo systemctl restart mssql-server 
-```
+Locate the Machine Learning Services and extensibility package downloads in the [Release notes](sql-server-linux-release-notes-2019.md). Follow the [Offline installation](sql-server-linux-setup.md#offline) instructions using the packages you obtained.
  
 ## Verify external script execution
   
-Execute the following SQL command to test R execution in SQL Server: 
+Execute the following SQL command to test R execution in SQL Server. 
 
 ```r
 EXEC sp_execute_external_script   
@@ -139,7 +199,7 @@ WITH RESULT SETS (([hello] int not null));
 GO 
 ```
  
-Execute the following SQL command to test Python execution in SQL Server: 
+Execute the following SQL command to test Python execution in SQL Server. 
  
 ```python
 EXEC sp_execute_external_script  
@@ -152,7 +212,7 @@ WITH RESULT SETS (([hello] int not null));
 GO 
 ```
 
-## Add other R and Python packages 
+## Add more R/Python packages 
  
 You can install other R and Python packages and use them in script that executes on SQL Server 2019.
 
@@ -164,7 +224,7 @@ You can install other R and Python packages and use them in script that executes
    # sudo /opt/mssql/mlservices/bin/R/R 
    ```
 
-2. Install an R package called “glue” to test package installation.
+2. Install an R package called [glue](https://mran.microsoft.com/package/glue) to test package installation.
 
    ```r
    # install.packages("glue",lib="/opt/mssql/mlservices/libraries/RServer") 
@@ -175,7 +235,7 @@ You can install other R and Python packages and use them in script that executes
    # sudo /opt/mssql/mlservices/bin/R/R CMD INSTALL -l /opt/mssql/mlservices/libraries/RServer glue_1.1.1.tar.gz 
    ```
   
-3. Import the R package in sp_execute_external_script 
+3. Import the R package in [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
    ```r
    EXEC sp_execute_external_script  
@@ -185,13 +245,13 @@ You can install other R and Python packages and use them in script that executes
 
 ### Python packages 
  
-1. Install a Python package called “httpie” using pip. 
+1. Install a Python package called [httpie](https://httpie.org/) using pip. 
 
    ```python
    # sudo /opt/mssql/mlservices/bin/python/python -m pip install httpie 
    ``` 
      
-2. Import the Python package in sp_execute_external_script
+2. Import the Python package in [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
  
    ```python
    EXEC sp_execute_external_script  
@@ -203,7 +263,22 @@ You can install other R and Python packages and use them in script that executes
 
 The following limitations exist in this CTP release.
 
-+ Implied authentication currently not available in Machine Learning Services on Linux, which means connecting back to the server from within an R or Python script is not supported on Linux at this time. 
++ Implied authentication is currently not available in Machine Learning Services on Linux at this time, which means you cannot connect back to the server from an in-progress R or Python script to access data or other resources. 
+
++ [CREATE EXTERNAL LIBRARY](../t-sql/statements/create-external-library-transact-sql.md) (for storing R packages in the database) is currently not available on Linux and does not support Python.  
+
+### Resource governance
+
+There is parity between Linux and Windows for [Resource governance](../t-sql/statements/create-external-resource-pool-transact-sql.md) for external resource pools, but the statistics for [sys.dm_resource_governor_external_resource_pools](../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) currently have different units on Linux. Units will align in an upcoming CTP.
+ 
+| Column name   | Description | Value on Linux | 
+|---------------|--------------|---------------|
+|peak_memory_kb | The maximum amount of memory used for the resource pool. | On Linux, this statistic is sourced from the CGroups memory subsystem, where the value is memory.max_usage_in_bytes |
+|write_io_count | The total write IOs issued since the Resource Governor statistics were reset. | On Linux, this statistic is sourced from the CGroups blkio subsystem, where the value on the write row is blkio.throttle.io_serviced | 
+|read_io_count | The total read IOs issued since the Resource Governor statistics were reset. | On Linux, this statistic is sourced from the CGroups blkio subsystem, where value on the read row is blkio.throttle.io_serviced | 
+|total_cpu_kernel_ms | The cumulative CPU user kernel time in milliseconds since the Resource Governor statistics were reset. | On Linux, this statistic is sourced from the CGroups cpuacct subsystem, where the value on the user row is cpuacct.stat |  
+|total_cpu_user_ms | The cumulative CPU user time in milliseconds since the Resource Governor statistics were reset.| On Linux, this statistic is sourced from the CGroups cpuacct subsystem, where the value on the system row value is cpuacct.stat | 
+|active_processes_count | The number of external processes running at the moment of the request.| On Linux, this statistic is sourced from the GGroups pids subsystem, where the value is pids.current | 
 
 ## Next steps
 

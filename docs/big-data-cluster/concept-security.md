@@ -91,7 +91,7 @@ Please note that in CTP2.0, only basic authentication is supported. Fine-grained
 
 ## Intra cluster communication
 
-Communication with non-SQL services within the Big Data Cluster, like for example Livy to Spark or Spark to Storage Pool, is secured using certificates. All SQL Sever to SQL Server communication between is secured using SQL logins.
+Communication with non-SQL services within the Big Data Cluster, like for example Livy to Spark or Spark to Storage Pool, is secured using certificates. All SQL Sever to SQL Server communication is secured using SQL logins.
 
 ## Next steps
 

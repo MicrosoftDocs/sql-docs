@@ -261,11 +261,11 @@ You can install other R and Python packages and use them in script that executes
 
 ## Limitations in CTP 2.0
 
-The following limitations exist in this CTP release but are expected to be lifted in a future CTP.
+The following limitations exist in this CTP release.
 
-+ Implied authentication currently not available in Machine Learning Services on Linux, which means connecting back to the server from within an R or Python script is not supported on Linux at this time. 
++ Implied authentication is currently not available in Machine Learning Services on Linux at this time, which means you cannot connect back to the server from an in-progress R or Python script to access data or other resources. 
 
-+ [CREATE EXTERNAL LIBRARY](../t-sql/statements/create-external-library-transact-sql.md) (for storing R packages in the database) is not available on Linux in this CTP.  
++ [CREATE EXTERNAL LIBRARY](../t-sql/statements/create-external-library-transact-sql.md) (for storing R packages in the database) is currently not available on Linux and does not support Python.  
 
 ### Resource governance
 

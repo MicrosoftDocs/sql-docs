@@ -17,7 +17,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 
 Learn how to use R and Python external libraries and languages on resident, relational data with our quickstarts, tutorials, and how-to articles. R and Python libraries in [SQL Server machine learning](what-is-sql-server-machine-learning.md) include base distributions, data science models, machine learning algorithms, and functions for conducting high-performance analytics at scale, without having to transfer data across the network. 
 
-In SQL Server 2019, Java code execution uses the same extensibility framework as R and Python, but does not include data science and machine learning function libraries.
+In SQL Server 2019, Java code execution uses the same extensibility framework as R and Python, but does not include data science and machine learning function libraries. For more information about new features, see [What's New in SQL Server Machine Services](what-s-new-in-sql-server-machine-learning-services.md).
 
 |   |   | 
 |---|---|-

@@ -20,8 +20,10 @@
     items:
     - name: Features and limitations
       href: polybase-versioned-feature-summary.md
-    - name: Install on Windows
+    - name: Windows
       href: polybase-installation.md
+    - name: Big Data Cluster
+      href: polybase-installation-big-data-cluster.md
   - name: Configure external data sources
     items:
     - name: Hadoop

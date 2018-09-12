@@ -109,7 +109,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX index_name
 ```  
   
 ## Arguments  
-CREATE CLUSTERED COLUMNSTORE INDEX  
+### CREATE CLUSTERED COLUMNSTORE INDEX  
 Create a clustered columnstore index in which all of the data is compressed and stored by column. The index includes all of the columns in the table, and stores the entire table. If the existing table is a heap or clustered index, the table is converted to a clustered columnstore index. If the table is already stored as a clustered columnstore index, the existing index is dropped and rebuilt.  
   
 *index_name*  
@@ -170,7 +170,7 @@ ON
   
    If "default" is specified, the QUOTED_IDENTIFIER option must be ON for the current session. QUOTED_IDENTIFIER is ON by default. For more information, see [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
-CREATE [NONCLUSTERED] COLUMNSTORE INDEX  
+### CREATE [NONCLUSTERED] COLUMNSTORE INDEX  
 Create an in-memory nonclustered columnstore index on a rowstore table stored as a heap or clustered index. The index can have a filtered condition and does not need to include all of the columns of the underlying table. The columnstore index requires enough space to store a copy of the data. It is updateable and is updated as the underlying table is changed. The nonclustered columnstore index on a clustered index enables real-time analytics.  
   
 *index_name*  

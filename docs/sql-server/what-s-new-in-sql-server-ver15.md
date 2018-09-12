@@ -216,7 +216,8 @@ Expands upon Always Encrypted with in-place encryption and rich computations by 
 Cryptographic operations (encrypting columns, rotating columns encryption keys, etc.), can now be issued using Transact-SQL and do not require moving data out of the database. Secure enclaves unlock Always Encrypted to a much broader set of scenarios and applications that demand sensitive data to be protected in use, while also requiring rich computations on protected data to be supported within the database system. For details, see [Always Encrypted with secure enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md).
 
 >[!NOTE]
->Always Encrypted with secure enclaves applies to instances of SQL Server on Windows OS.
+>Always Encrypted with secure enclaves is only available on Windows OS.
+>It requires ADO.NET 4.7.2. See [Configure Always Encrypted with secure enclaves](../relational-databases/security/encryption/configure-always-encrypted-enclaves.md) for complete requirements.
 
 ### <a id="sqlgraph"></a> SQL Graph features
 

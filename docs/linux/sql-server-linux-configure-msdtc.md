@@ -19,17 +19,7 @@ monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 
 This article describes how to configure the Microsoft Distributed Transaction Coordinator (MSTDC) on Linux. MSDTC support on Linux was introduced in SQL Server 2019 CTP 2.0.
 
-## Supported MSDTC configurations
-
-The following MSDTC configurations are supported:
-
-- OLE-TX Distributed transactions against SQL Server on Linux for JDBC providers.
-- XA Distributed transactions against SQL Server on Linux using JDBC providers.
-- Distributed transactions on Linked server.
-
-For limitations and known issues for MSDTC in CTP 2.0, see [Release notes for SQL Server 2019 CTP on Linux](sql-server-linux-release-notes-2019.md#msdtc).
-
-## MSDTC configuration overview
+## Overview
 
 Distributed transactions are enabled on SQL Server on Linux by introducing MSDTC and RPC endpoint mapper functionality within SQL Server. By default, an RPC endpoint mapping process listens on port 135 for incoming RPC requests and routes that to appropriate components (such as the MSDTC service). A process requires super user privilege to bind to system ports (port numbers less than 1024) on Linux. To avoid starting SQL Server with root privileges for the RPC endpoint mapper process, system administrators must use iptables to create NAT translation to route traffic on port 135 to SQL Server's RPC endpoint mapping process.
 
@@ -41,6 +31,18 @@ SQL Server 2019 introduces two configuration parameters for the mssql-conf utili
 | **network.servertcpport** | The port that the MSDTC server listens to. |
 
 For more information about these settings and other related MSDTC settings, see [Configure SQL Server on Linux with the mssql-conf tool](sql-server-linux-configure-mssql-conf.md#msdtc).
+
+## Supported MSDTC configurations
+
+The following MSDTC configurations are supported:
+
+- OLE-TX Distributed transactions against SQL Server on Linux for JDBC providers.
+- XA Distributed transactions against SQL Server on Linux using JDBC providers.
+- Distributed transactions on Linked server.
+
+For limitations and known issues for MSDTC in CTP 2.0, see [Release notes for SQL Server 2019 CTP on Linux](sql-server-linux-release-notes-2019.md#msdtc).
+
+## MSDTC configuration steps
 
 There are three steps to configure MSDTC communication and functionality.
 
@@ -82,9 +84,10 @@ Configure the Linux server routing table so that RPC communication on port 135 i
 1. Create routing rules for port 135. In the following example, port 135 is directed to the RPC port, 13500, defined in the previous section. Replace `<ipaddress>` with the IP address of your server.
 
    ```bash
-   iptables -t nat -A PREROUTING -d <ip> -p tcp --dport 135 -m addrtype --dst-type LOCAL -j DNAT --to-destination <ip>:13500 -m comment --comment RpcEndPointMapper
-
-   iptables -t nat -A OUTPUT -d <ip> -p tcp --dport 135 -m addrtype --dst-type LOCAL -j DNAT --to-destination <ip>:13500 -m comment --comment RpcEndPointMapper
+   iptables -t nat -A PREROUTING -d <ip> -p tcp --dport 135 -m addrtype --dst-type LOCAL  \
+      -j DNAT --to-destination <ip>:13500 -m comment --comment RpcEndPointMapper
+   iptables -t nat -A OUTPUT -d <ip> -p tcp --dport 135 -m addrtype --dst-type LOCAL \
+      -j DNAT --to-destination <ip>:13500 -m comment --comment RpcEndPointMapper
    ```
 
    The `--comment RpcEndPointMapper` parameter in the previous commands assists with managing these rules in later commands.

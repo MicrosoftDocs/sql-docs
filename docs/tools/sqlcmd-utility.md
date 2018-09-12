@@ -1,7 +1,7 @@
 ﻿---
 title: "sqlcmd Utility | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/27/2017"
+ms.date: "09/12/2018"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.component: "sqlcmd"
@@ -122,7 +122,7 @@ sqlcmd
 ## Command-line Options  
  **Login-Related Options**  
   **-A**  
- Signs in to SQL Server  with a Dedicated Administrator Connection (DAC). This kind of connection is used to troubleshoot a server. This connection works only with server computers that support DAC. If DAC is not available, **sqlcmd** generates an error message, and then exits. For more information about DAC, see [Diagnostic Connection for Database Administrators](../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md). The -A option is not supported with the -G option. When connecting to SQL Database using -A, you must be a SQL server administrator. The DAC is not availble for an Azure Active Directory adminstrator.
+ Signs in to SQL Server  with a Dedicated Administrator Connection (DAC). This kind of connection is used to troubleshoot a server. This connection works only with server computers that support DAC. If DAC is not available, **sqlcmd** generates an error message, and then exits. For more information about DAC, see [Diagnostic Connection for Database Administrators](../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md). The -A option is not supported with the -G option. When connecting to SQL Database using -A, you must be a SQL server administrator. The DAC is not available for an Azure Active Directory administrator.
   
  **-C**  
  This switch is used by the client to configure it to implicitly trust the server certificate without validation. This option is equivalent to the ADO.NET option `TRUSTSERVERCERTIFICATE = true`.  
@@ -134,7 +134,7 @@ sqlcmd
  Specifies the number of seconds before a **sqlcmd** login to the ODBC driver times out when you try to connect to a server. This option sets the **sqlcmd** scripting variable SQLCMDLOGINTIMEOUT. The default time-out for login to **sqlcmd** is eight seconds. When using the **-G** option to connect to SQL Database or SQL Data Warehouse and authenticate using Azure Active Directory, a timeout value of at least 30 seconds is recommended. The login time-out must be a number between 0 and 65534. If the value supplied is not numeric or does not fall into that range, **sqlcmd** generates an error message. A value of 0 specifies time-out to be infinite.
   
  **-E**  
- Uses a trusted connection instead of using a user name and password to log on to  SQL Server . By default, without **-E** specified, **sqlcmd** uses the trusted connection option.  
+ Uses a trusted connection instead of using a user name and password to sign in to SQL Server. By default, without **-E** specified, **sqlcmd** uses the trusted connection option.  
   
  The **-E** option ignores possible user name and password environment variable settings such as SQLCMDPASSWORD. If the **-E** option is used together with the **-U** option or the **-P** option, an error message is generated.  
 
@@ -145,7 +145,8 @@ Sets the Column Encryption Setting to `Enabled`. For more information, see [Alwa
  This switch is used by the client when connecting to SQL Database or SQL Data Warehouse to specify that the user be authenticated using Azure Active Directory authentication. This option sets the **sqlcmd** scripting variable SQLCMDUSEAAD = true. The -G switch requires at least **sqlcmd** version [13.1](http://go.microsoft.com/fwlink/?LinkID=825643). To determine your version, execute `sqlcmd -?`. For more information, see [Connecting to SQL Database or SQL Data Warehouse By Using Azure Active Directory Authentication](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/). The -A option is not supported with the -G option.
 
 > [!IMPORTANT]
-> The **-G** option only applies to Azure SQL Database and Azure Data Warehouse. 
+> The **-G** option only applies to Azure SQL Database and Azure Data Warehouse.
+> AAD Integrated Authentication is not currently supported on Linux or macOS. 
 
 - **Azure Active Directory Username and Password:** 
 
@@ -162,7 +163,8 @@ Sets the Column Encryption Setting to `Enabled`. For more information, see [Alwa
 
 - **Azure Active Directory Integrated** 
  
-   For Azure Active Directory Integrated authentication, provide the **-G** option without a user name or password: 
+   For Azure Active Directory Integrated authentication, provide the **-G** option without a user name or password.
+   *AAD Integrated Authentication is not currently supported on Linux or macOS*.
 
     ```
     Sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net  -G
@@ -245,7 +247,7 @@ We recommend that you use a strong password.
   
  If neither the **-U** option nor the **-P** option is specified, **sqlcmd** tries to connect by using Microsoft Windows Authentication mode. Authentication is based on the Windows account of the user who is running **sqlcmd**.  
   
- If the **-U** option is used with the **-E** option (described later in this topic), an error message is generated. If the **–U** option is followed by more than one argument, an error message is generated and the program exits.  
+ If the **-U** option is used with the **-E** option (described later in this article), an error message is generated. If the **–U** option is followed by more than one argument, an error message is generated and the program exits.  
   
  **-z** *new_password*  
  Change password:  
@@ -330,7 +332,7 @@ We recommend that you use a strong password.
 > [!IMPORTANT]  
 >  Do not use the GO terminator in the query.  
   
- If **-b** is specified together with this option, **sqlcmd** exits on error. **-b** is described later in this topic.  
+ If **-b** is specified together with this option, **sqlcmd** exits on error. **-b** is described later in this article.  
   
  **-Q"** *cmdline query* **"**  
  Executes a query when **sqlcmd** starts and then immediately exits **sqlcmd**. Multiple-semicolon-delimited queries can be executed.  
@@ -346,7 +348,7 @@ We recommend that you use a strong password.
 > [!IMPORTANT]  
 >  Do not use the GO terminator in the query.  
   
- If **-b** is specified together with this option, **sqlcmd** exits on error. **-b** is described later in this topic.  
+ If **-b** is specified together with this option, **sqlcmd** exits on error. **-b** is described later in this article.  
   
  **-t** *query_timeout*  
  Specifies the number of seconds before a command (or SQL statement) times out. This option sets the **sqlcmd** scripting variable SQLCMDSTATTIMEOUT. If a *time_out* value is not specified, the command does not time out. The *query**time_out* must be a number between 1 and 65534. If the value supplied is not numeric or does not fall into that range, **sqlcmd** generates an error message.  
@@ -366,7 +368,7 @@ We recommend that you use a strong password.
   
  **Formatting Options**  
   **-h** *headers*  
- Specifies the number of rows to print between the column headings. The default is to print headings one time for each set of query results. This option sets the **sqlcmd** scripting variable SQLCMDHEADERS. Use **-1** to specify that headers must not be printed. Any value that is not valid causes **sqlcmd** to generate an error message and then exit.  
+ Specifies the number of rows to print between the column headings. The default is to print headings one time for each set of query results. This option sets the **sqlcmd** scripting variable SQLCMDHEADERS. Use **-1** to specify that headers should not be printed. Any value that is not valid causes **sqlcmd** to generate an error message and then exit.  
   
  **-k** [**1** | **2**]  
  Removes all control characters, such as tabs and new line characters from the output. This parameter preserves column formatting when data is returned. If 1 is specified, the control characters are replaced by a single space. If 2 is specified, consecutive control characters are replaced by a single space. **-k** is the same as **-k1**.  
@@ -461,7 +463,7 @@ We recommend that you use a strong password.
   
  Where:  
   
- `x` = Number of transactions that are processed by  SQL Server .  
+ `x` = Number of transactions that are processed by  SQL Server.  
   
  `t1` = Total time for all transactions.  
   
@@ -492,7 +494,7 @@ We recommend that you use a strong password.
   
  When multiple results are returned, **sqlcmd** prints a blank line between each result set in a batch. In addition, the `<x> rows affected` message does not appear when it does not apply to the statement executed.  
   
- To use **sqlcmd** interactively, type **sqlcmd** at the command prompt with any one or more of the options described earlier in this topic. For more information, see [Use the sqlcmd Utility](~/relational-databases/scripting/sqlcmd-use-the-utility.md)  
+ To use **sqlcmd** interactively, type **sqlcmd** at the command prompt with any one or more of the options described earlier in this article. For more information, see [Use the sqlcmd Utility](~/relational-databases/scripting/sqlcmd-use-the-utility.md)  
   
 > [!NOTE]  
 >  The options **-L**, **-Q**, **-Z** or **-i** cause **sqlcmd** to exit after execution.  
@@ -536,7 +538,7 @@ We recommend that you use a strong password.
 |SQLCMDINI||R|""|
 |SQLCMDUSEAAD  | -G | R/W | "" |  
   
- SQLCMDUSER, SQLCMDPASSWORD and SQLCMDSERVER are set when **:Connect** is used.  
+ SQLCMDUSER, SQLCMDPASSWORD, and SQLCMDSERVER are set when **:Connect** is used.  
   
  R indicates the value can only be set one time during program initialization.  
   
@@ -562,7 +564,7 @@ We recommend that you use a strong password.
 -   All **sqlcmd** commands, except GO, must be prefixed by a colon (:).  
   
     > [!IMPORTANT]  
-    >  To maintain backward compatibility with existing **osql** scripts, some of the commands will be recognized without the colon. This is indicated by the [**:**].  
+    >  To maintain backward compatibility with existing **osql** scripts, some of the commands will be recognized without the colon, indicated by the [**:**].
   
 -   **sqlcmd** commands are recognized only if they appear at the start of a line.  
   
@@ -632,10 +634,10 @@ We recommend that you use a strong password.
  Switches error output to the **stdout** stream. If this has been redirected, the target to which the stream has been redirected will receive the error output.  
   
  **:Out \<** *filename* **>**| **STDERR**| **STDOUT**  
- Creates and redirects all query results to the file specified by *file name*, to **stderr** or to **stdout**. By default, output is sent to **stdout**. If the file already exists, it will be truncated to zero bytes. The **Out** command can appear multiple times in a script.  
+ Creates and redirects all query results to the file specified by *file name*, to **stderr** or to **stdout**. By default, output is sent to **stdout**. If the file already exists, it is truncated to zero bytes. The **Out** command can appear multiple times in a script.  
   
  **:Perftrace \<** *filename* **>**| **STDERR**| **STDOUT**  
- Creates and redirects all performance trace information to the file specified by *file name*, to **stderr** or to **stdout**. By default performance trace output is sent to **stdout**. If the file already exists, it will be truncated to zero bytes. The **Perftrace** command can appear multiple times in a script.  
+ Creates and redirects all performance trace information to the file specified by *file name*, to **stderr** or to **stdout**. By default performance trace output is sent to **stdout**. If the file already exists, it is truncated to zero bytes. The **Perftrace** command can appear multiple times in a script.  
   
  **Execution Control Commands**  
   **:On Error**[ **exit** | **ignore**]  
@@ -643,7 +645,7 @@ We recommend that you use a strong password.
   
  When the **exit** option is used, **sqlcmd** exits with the appropriate error value.  
   
- When the **ignore** option is used, **sqlcmd** ignores the error and continues executing the batch or script. By default, an error message will be printed.  
+ When the **ignore** option is used, **sqlcmd** ignores the error and continues executing the batch or script. By default, an error message is printed.  
   
  [**:**] **QUIT**  
  Causes **sqlcmd** to exit.  
@@ -727,7 +729,7 @@ We recommend that you use a strong password.
   
  If *timeout* is not specified, the value of the SQLCMDLOGINTIMEOUT variable is the default.  
   
- If only *user_name* is specified (either as an option, or as an environment variable), the user will be prompted to enter a password. This is not true if the SQLCMDUSER or SQLCMDPASSWORD environment variables have been set. If neither options nor environment variables are provided, Windows Authentication mode is used to sign in. For example to connect to an instance, `instance1`, of  SQL Server , `myserver`, by using integrated security you would use the following:  
+ If only *user_name* is specified (either as an option, or as an environment variable), the user will be prompted to enter a password. Users are not prompted if the SQLCMDUSER or SQLCMDPASSWORD environment variables have been set. If neither options nor environment variables are provided, Windows Authentication mode is used to sign in. For example to connect to an instance, `instance1`, of  SQL Server, `myserver`, by using integrated security you would use the following command:  
   
  `:connect myserver\instance1`  
   
@@ -748,7 +750,7 @@ We recommend that you use a strong password.
 >  The command is executed on the computer on which **sqlcmd** is running.  
   
  **:XML** [**ON** | **OFF**]  
- For more information, see [XML Output Format](#OutputXML) and [JSON Output Format](#OutputJSON) in this topic  
+ For more information, see [XML Output Format](#OutputXML) and [JSON Output Format](#OutputJSON) in this article  
   
  **:Help**  
  Lists **sqlcmd** commands together with a short description of each command.  
@@ -758,7 +760,7 @@ We recommend that you use a strong password.
   
 -   **:Error**, **:Out** and **:Perftrace** should use separate **\<***filename***>**. If the same **\<***filename***>** is used, inputs from the commands may be intermixed.  
   
--   If an input file that is located on a remote server is called from **sqlcmd** on a local computer and the file contains a drive file path such as :out c:\OutputFile.txt. The output file will be created on the local computer and not on the remote server.  
+-   If an input file that is located on a remote server is called from **sqlcmd** on a local computer and the file contains a drive file path such as :Out c:\OutputFile.txt. The output file is created on the local computer and not on the remote server.  
   
 -   Valid file paths include: `C:\<filename>`, `\\<Server>\<Share$>\<filename>` and `"C:\Some Folder\<file name>"`. If there is a space in the path, use quotation marks.  
   
@@ -768,7 +770,7 @@ We recommend that you use a strong password.
 
 **sqlcmd** prints any informational message that is sent by the server. In the following example, after the Transact-SQL statements are executed, an informational message is printed.
   
-At the command prompt, type the following:
+At the command prompt, type the command:
 
 `sqlcmd`
   
@@ -785,7 +787,7 @@ When you press ENTER, the following informational message is printed: "Changed d
   
  This line will be followed by a separator line that is a series of dash characters. The following output shows an example.  
   
- Start **sqlcmd**. At the **sqlcmd** command prompt, type the following:  
+ Start **sqlcmd**. At the **sqlcmd** command prompt, type the query:  
   
  `USE AdventureWorks2012;`  
   
@@ -807,7 +809,7 @@ When you press ENTER, the following informational message is printed: "Changed d
   
  `(2 row(s) affected)`  
   
- Although the `BusinessEntityID` column is only 4 characters wide, it has been expanded to accommodate the longer column name. By default, output is terminated at 80 characters. This can be changed by using the **-w** option, or by setting the SQLCMDCOLWIDTH scripting variable.  
+ Although the `BusinessEntityID` column is only four characters wide, it has been expanded to accommodate the longer column name. By default, output is terminated at 80 characters. This can be changed by using the **-w** option, or by setting the SQLCMDCOLWIDTH scripting variable.  
   
 ###  <a name="OutputXML"></a> XML Output Format  
  XML output that is the result of a FOR XML clause is output, unformatted, in a continuous stream.  
@@ -817,11 +819,11 @@ When you press ENTER, the following informational message is printed: "Changed d
 > [!NOTE]  
 >  **sqlcmd** returns error messages in the usual format. Notice that the error messages are also output in the XML text stream in XML format. By using `:XML ON`, **sqlcmd** does not display informational messages.  
   
- To set the XML mode off, use the following command: `:XML OFF`.  
+ To set the XML mode to off, use the following command: `:XML OFF`.  
   
  The GO command should not appear before the XML OFF command is issued because the XML OFF command switches **sqlcmd** back to row-oriented output.  
   
- XML (streamed) data and rowset data cannot be mixed. If the XML ON command has not been issued before a Transact-SQL statement that outputs XML streams is executed, the output will be garbled. If the XML ON command has been issued, you cannot execute Transact-SQL statements that output regular row sets.  
+ XML (streamed) data and rowset data can't be mixed. If the XML ON command hasn't been issued before a Transact-SQL statement that outputs XML streams is executed, the output is garbled. Once the XML ON command has been issued, you can't execute Transact-SQL statements that output regular row sets.  
   
 > [!NOTE]  
 >  The **:XML** command does not support the SET STATISTICS XML statement.  
@@ -829,9 +831,9 @@ When you press ENTER, the following informational message is printed: "Changed d
 ###  <a name="OutputJSON"></a> JSON Output Format  
  When you expect JSON output, use the following command: `:XML ON`. Otherwise the output includes both the column name and the JSON text. This output is not valid JSON.  
   
- To set the XML mode off, use the following command: `:XML OFF`.  
+ To set the XML mode to off, use the following command: `:XML OFF`.  
   
- For more info, see [XML Output Format](#OutputXML) in this topic.  
+ For more info, see [XML Output Format](#OutputXML) in this article.  
 
 ### Using Azure Active Directory Authentication  
 Examples using Azure Active Directory Authentication:

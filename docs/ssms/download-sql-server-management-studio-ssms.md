@@ -37,23 +37,21 @@ Use SQL Server Management Studio (SSMS) to query, design, and manage your databa
 
 **SSMS is free!**
 
-SSMS 17.x is the latest generation of *SQL Server Management Studio* and provides support for SQL Server 2017.
+SSMS 18.0 is the latest generation of *SQL Server Management Studio* and provides support for [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)].
 
-**[![download](../ssdt/media/download.png) Download SQL Server Management Studio 17.9](https://go.microsoft.com/fwlink/?linkid=2014306) (no previous version of SSMS 17.x is required on the computer)**
-
-**[![download](../ssdt/media/download.png) Download SQL Server Management Studio 17.9 Upgrade Package](https://go.microsoft.com/fwlink/?linkid=2014215) (upgrades 17.x to 17.9; a previous version of SSMS 17.x is required on the computer)**
+**[![download](../ssdt/media/download.png) Download SQL Server Management Studio 18.0](https://go.microsoft.com/fwlink/?linkid=2014306) (no previous version of SSMS 17.x is required on the computer)**
 
 
 **Version Information**
 
-Release number: 17.9<br>
-Build number: 14.0.17285.0<br>
-Release date: September 04, 2018
+Release number: 18.0<br>
+Build number: 18.0<br>
+Release date: September 24, 2018
 
-The SSMS 17.x installation does not upgrade or replace SSMS versions 16.x or earlier. SSMS 17.x installs side by side with previous versions so both versions are available for use.
-If a computer contains side by side installations of SSMS, verify you start the correct version for your specific needs. The latest version is labeled *Microsoft SQL Server Management Studio 17*, and has a new icon: 
+The SSMS 18.x installation does not upgrade or replace SSMS versions 17.x or earlier. SSMS 18.x installs side by side with previous versions so both versions are available for use.
+If a computer contains side by side installations of SSMS, verify you start the correct version for your specific needs. The latest version is labeled *Microsoft SQL Server Management Studio 18*, and has a new icon: 
  
-   ![SSMS 17.x](media/download-sql-server-management-studio-ssms/version-icons.png)
+   ![SSMS 18.x](media/download-sql-server-management-studio-ssms/version-icons.png)
 
 
 ## Available Languages
@@ -64,33 +62,110 @@ If a computer contains side by side installations of SSMS, verify you start the 
 
 This release of SSMS can be installed in the following languages:
 
-SQL Server Management Studio 17.9:<br>
+SQL Server Management Studio 18.0:<br>
 [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x40a)
 
-SQL Server Management Studio 17.9 Upgrade Package (upgrades 17.x to 17.9):<br>
-[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2014215&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2014215&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2014215&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2014215&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2014215&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2014215&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2014215&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2014215&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2014215&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2014215&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2014215&clcid=0x40a)
+SQL Server Management Studio 18.0 Upgrade Package (upgrades 18.x to 18.0):<br>
+No upgrade option is available at this time.
 
 > [!NOTE]
-> The SQL Server PowerShell module is now a separate install through the PowerShell Gallery. For more information, see [Download SQL Server PowerShell Module](download-sql-server-ps-module.md).
+> The SQL Server PowerShell module is a separate install through the PowerShell Gallery. For more information, see [Download SQL Server PowerShell Module](download-sql-server-ps-module.md).
 
 ## SQL Server Management Studio
 
 
 ## New in this Release
 
-SSMS 17.9 is the latest version of SQL Server Management Studio. The 17.x generation of SSMS provides support for almost all feature areas on SQL Server 2008 through SQL Server 2017. Version 17.x also supports SQL Analysis Service PaaS.
+SSMS 18.0 is the latest version of SQL Server Management Studio. The 18.x generation of SSMS provides support for almost all feature areas on SQL Server 2008 through SQL Server 2019. 
 
-Version 17.9 includes:
+Version 18.0 includes:
 
 **General SSMS**
 
-ShowPlan:
+Smaller Download Size:
 
-- Graphical Showplan now shows the new row mode memory grant feedback attributes when the feature is activated for a specific plan: IsMemoryGrantFeedbackAdjusted and LastRequestedMemory added to the MemoryGrantInfo query plan XML element. For more on row mode memory grant feedback, see [Adaptive query processing in SQL databases](https://docs.microsoft.com/sql/relational-databases/performance/adaptive-query-processing).
+- The current size of the bundle is less than half of what SSMS 17.x is (~400MB). The size will eventually grow a little when the IS components are added back to SSMS, but it should not be as big asit used to be.
 
-Azure SQL: 
+SSMS is based on the new VS 2017 Isolated Shell:
 
-- Added support for vCore SKUs in Azure DB creation. For more information, see [vCore-based purchasing model](https://docs.microsoft.com/azure/sql-database/sql-database-service-tiers#vcore-based-purchasing-model).
+- This means a modern shell (we picked up VS 2107 15.6.4). The new shell unlocks all the accessibility fixes that went in  in both SSMS and Visual Studio.
+
+SSMS accessibility improvements:
+
+- A lot of work went in to address Accessibility issues in all the tools (SSMS, DTA, and Profiler)
+
+SSMS can be installed in custom folder:
+
+- Currently, this is only available on the command line setup. Pass this extra argument to the SSMS-Setup-ENU.exe:
+    SSMSInstallRoot=C:\MySSMS18
+    By default, the new install location for SSMS is:
+    %ProgramFiles(x86)%\Microsoft SQL Server Management Studio 18\Common7\IDE\ssms.exe
+    Note: This does not mean that SSMS is multi-instance.
+
+SSMS does not share components with SQL Engine anymore:
+
+- A lot of effort went in to avoid sharing components with SQL Engine, which often resulted in serviceability issues (one clobbering the files installed by the other.
+
+SSMS now requires NetFx 4.7.2 or greater:
+
+- We upgraded our minimum requirement from NetFx4.6.1 to NetFx4.7.2: this will allow us to take advantage of the new functionality exposed by the new framework.
+
+SSMS is not supported on Windows 8 and Windows Server 2012; Windows 10 / Windows Server 2016 will require at least version 1607 (10.0.14393):
+  
+- Due to the new dependency on NetFx 4.7.2, SSMS 18.0 does not install on Windows 8 and Windows Server 2012 and older versions of Windows 10 and Windows Server 2016. SSMS setup will block on those operating systemss. Note: Windows 8.1 is still supported.
+
+SSMS is not added to the PATH environment variable:
+
+- Path to SSMS.EXE (and Tools in general) is not added to the path anymore. The users can either add it themselves or, if on a modern Windows, rely on the Start menu.
+
+Support for [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]
+
+- This is the first release of SSMS that is be fully *aware* of [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] (compatLevel 150, etc…)
+- Support "BATCH_STARTED_GROUP" and "BATCH_COMPLETED_GROUP" in SQLSERVER2018 and managed instance in SSMS
+- SMO support for UDF Inlining
+- GraphDB: Add flag in showplan for Graph TC Sequence
+- Always Encrypted: added support for Always Encrypted with secure enclaves
+
+Package IDs no longer needed to develop SSMS Extensions:
+
+- In the past, SSMS was selectively loading only well-known packages, requiring developers to register their own package. This is no longer the case.
+
+Better Azure SQL support:
+
+- SLO/Edition/MaxSize database properties now accept custom names, making it easier to support future editions of Azure SQL databases.
+
+SMO:
+
+- Extend SMO Support for Resumable Index Creation
+- Added new event on SMO objects ("PropertyMissing") to help application authors to detect SMO performance issues sooner. 
+
+SSMS:
+
+- Exposing AUTOGROW_ALL_FILES config option  for Filegroups in SSMS
+- Removed risky 'lightweight pooling' and 'priority boost' options from SSMS GUI (see https://blogs.msdn.microsoft.com/arvindsh/2010/01/26/priority-boost-details-and-why-its-not-recommended/)
+- SQL Editor honors the CTRL+D shortcut to duplicate lines (see https://feedback.azure.com/forums/908035-sql-server/suggestions/32896594)
+- New menu and key bindings to creates files: CTRL+ALT+N. CTRL+N will continue to create a new query. 
+- **New Firewall Rule** dialog now allow the user to specify a rule name, instead of automatically generating one on behalf of the user (see https://feedback.azure.com/forums/908035-sql-server/suggestions/32902039)
+- Data Classification: updated the recommendations
+- Improved intellisense in Editor especially for v140 T-SQL
+- Support for all Tier-1 language
+- Added support in SSMS UI for UTF-8 on collation dialog.
+- Switched to "Windows Credential Manager" for connection dialog MRU passwords. This will address a long outstanding issue where persistence of passwords was not always reliable. See https://feedback.azure.com/forums/908035-sql-server/suggestions/32896486.
+- Support for High DPI is enabled by default.
+
+
+SSMS / ShowPlan:
+
+- Added actual time elapsed, actual vs estimated rows under ShowPlan operator node if they are available. This will make actual plan look consistent with Live Query Stats plan.
+- Modified tooltip and added comment when clicking on Edit Query Button for a ShowPlan, to indicate to user that the ShowPlan might be truncated by the SQL engine if the query is over 4000 characters.
+
+Always On:
+
+- Rehash RTO (estimated recovery time) and RPO (estimated data loss) in SSMS Always on Dashboard. For details, see [Monitor performance for Always On Availability Groups](../database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups.md).
+
+Audit Files:
+
+- Changed authentication method from Storage Account Key based to Azure AD based authentication.
 
 
 ## Supported SQL offerings

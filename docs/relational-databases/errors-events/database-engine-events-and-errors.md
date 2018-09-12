@@ -1373,6 +1373,7 @@ The table contains error message numbers and the description, which is the text 
 |	2812	|	16	|	No	|	Could not find stored procedure '%.*ls'.	|
 |	2813	|	16	|	No	|	%.*ls is not supported on this edition of SQL Server.	|
 |	[2814](mssqlserver-2814-database-engine-error.md)	|	10	|	No	|	A possible infinite recompile was detected for SQLHANDLE %hs, PlanHandle %hs, starting offset %d, ending offset %d. The last recompile reason was %d.	|
+|	2628	|	16	|	No	|	String or binary data would be truncated in table '%.*ls', column '%.*ls'. Truncated value: '%.*ls'.	|
 |	&nbsp;	|	&nbsp;	|&nbsp;		|	&nbsp;	|
 
 ## Errors 3000 - 3999

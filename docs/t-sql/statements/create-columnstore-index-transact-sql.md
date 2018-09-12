@@ -120,7 +120,7 @@ If the table already has a clustered columnstore index, you can specify the same
 ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*  
    Specifies the one-, two-, or three-part name of the table to be stored as a clustered columnstore index. If the table is a heap or clustered index the table is converted from rowstore to a columnstore. If the table is already a columnstore, this statement rebuilds the clustered columnstore index.  
   
-WITH  
+### WITH options  
 DROP_EXISTING = [OFF] | ON  
    DROP_EXISTING = ON specifies to drop the existing clustered columnstore index, and create a new columnstore index.  
 
@@ -139,8 +139,14 @@ MAXDOP = *max_degree_of_parallelism*
 COMPRESSION_DELAY = **0** | *delay* [ Minutes ]  
    Applies to: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
 
-   For a disk-based table, *delay* specifies the minimum number of minutes a  delta rowgroup in the CLOSED state must remain in the delta rowgroup before SQL Server can compress it into the compressed rowgroup. Since disk-based tables don't track insert and update times on individual rows, SQL Server applies the delay to  delta rowgroups in the CLOSED state.  
+   For a disk-based table, *delay* specifies the minimum number of minutes a  delta rowgroup in the CLOSED state must remain in the delta rowgroup before SQL Server can compress it into the compressed rowgroup. Since disk-based tables don't track insert and update times on individual rows, SQL Server applies the delay to delta rowgroups in the CLOSED state.  
    The default is 0 minutes.  
+   
+```sql
+CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
+       WITH ( COMPRESSION_DELAY = 10 Minutes );
+```
+
    For recommendations on when to use COMPRESSION_DELAY, see [Get started with Columnstore for real time operational analytics](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md).  
   
 DATA_COMPRESSION = COLUMNSTORE | COLUMNSTORE_ARCHIVE  
@@ -152,6 +158,10 @@ COLUMNSTORE
 COLUMNSTORE_ARCHIVE  
    COLUMNSTORE_ARCHIVE further compresses the table or partition to a smaller size. Use this option for situations such as archival that require a smaller storage size and can afford more time for storage and retrieval.  
   
+```sql
+CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
+       WITH ( DATA_COMPRESSION = COLUMNSTORE_ARCHIVE );
+```
    For more information about compression, see [Data Compression](../../relational-databases/data-compression/data-compression.md).  
 
 ONLINE = [ON | OFF]   
@@ -160,10 +170,11 @@ ONLINE = [ON | OFF]
 - OFF specifies that the index is not available for use while the new copy is being built.
 
 ```sql
-CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines WITH ( ONLINE = ON );
+CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
+       WITH ( ONLINE = ON );
 ```
 
-ON  
+### ON options 
    With the ON options you can specify options for data storage, such as a partition scheme, a specific filegroup, or the default filegroup. If the ON option is not specified, the index uses the settings partition or filegroup settings of the existing table.  
   
    *partition_scheme_name* **(** *column_name* **)**  

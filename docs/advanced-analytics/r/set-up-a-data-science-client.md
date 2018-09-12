@@ -98,7 +98,7 @@ SQL Server must be enabled for [remote connections](https://docs.microsoft.com/s
 2. Confirm RevoScaleR is operational by running this command, which returns statistical summary on a demo dataset. Make sure you provide a valid server name for the SQL Server database engine instance.
 
 ```r
-connStr <- "Driver=SQL Server;Server=<your-server-name>;Database=TaxiNYC_Sample;Trusted_Connection=true"
+connStr <- "Driver=SQL Server;Server=<your-server-name>;Database=NYCTaxi_Sample;Trusted_Connection=true"
 testQuery <-"SELECT DISTINCT TOP(100) tip_amount FROM [dbo].nyctaxi_sample ORDER BY tip_amount DESC;"
 cc <-RxInSqlServer(connectionString=connStr)
 rxSummary(formula = ~ ., data = RxSqlServerData(sqlQuery=testQuery, connectionString=connStr), computeContext=cc)

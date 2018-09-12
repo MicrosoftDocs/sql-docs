@@ -120,13 +120,13 @@ If the table already has a clustered columnstore index, you can specify the same
 ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*  
    Specifies the one-, two-, or three-part name of the table to be stored as a clustered columnstore index. If the table is a heap or clustered index the table is converted from rowstore to a columnstore. If the table is already a columnstore, this statement rebuilds the clustered columnstore index.  
   
-### WITH options  
-DROP_EXISTING = [OFF] | ON  
+#### WITH options  
+##### DROP_EXISTING = [OFF] | ON  
    DROP_EXISTING = ON specifies to drop the existing clustered columnstore index, and create a new columnstore index.  
 
    The default, DROP_EXISTING = OFF expects the index name is the same as the existing name. An error occurs is the specified index name already exists.  
   
-MAXDOP = *max_degree_of_parallelism*  
+##### MAXDOP = *max_degree_of_parallelism*  
    Overrides the existing maximum degree of parallelism server configuration for the duration of the index operation. Use MAXDOP to limit the number of processors used in a parallel plan execution. The maximum is 64 processors.  
   
    *max_degree_of_parallelism* values can be:  
@@ -136,7 +136,7 @@ MAXDOP = *max_degree_of_parallelism*
   
    For more information, see [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md), and [Configure Parallel Index Operations](../../relational-databases/indexes/configure-parallel-index-operations.md).  
  
-COMPRESSION_DELAY = **0** | *delay* [ Minutes ]  
+###### COMPRESSION_DELAY = **0** | *delay* [ Minutes ]  
    Applies to: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
 
    For a disk-based table, *delay* specifies the minimum number of minutes a  delta rowgroup in the CLOSED state must remain in the delta rowgroup before SQL Server can compress it into the compressed rowgroup. Since disk-based tables don't track insert and update times on individual rows, SQL Server applies the delay to delta rowgroups in the CLOSED state.  
@@ -149,7 +149,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 
    For recommendations on when to use COMPRESSION_DELAY, see [Get started with Columnstore for real time operational analytics](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md).  
   
-DATA_COMPRESSION = COLUMNSTORE | COLUMNSTORE_ARCHIVE  
+##### DATA_COMPRESSION = COLUMNSTORE | COLUMNSTORE_ARCHIVE  
    Applies to: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
    Specifies the data compression option for the specified table, partition number, or range of partitions. The options are as follows:   
 COLUMNSTORE  
@@ -164,7 +164,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 ```
    For more information about compression, see [Data Compression](../../relational-databases/data-compression/data-compression.md).  
 
-ONLINE = [ON | OFF]   
+###### ONLINE = [ON | OFF]   
    Applies to: [!INCLUDE[ssSQLv15_md](../../includes/sssqlv15-md.md)].
 - ON specifies that the columnstore index remains online and available while the new copy of the index is being built.
 - OFF specifies that the index is not available for use while the new copy is being built.
@@ -174,7 +174,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
        WITH ( ONLINE = ON );
 ```
 
-### ON options 
+#### ON options 
    With the ON options you can specify options for data storage, such as a partition scheme, a specific filegroup, or the default filegroup. If the ON option is not specified, the index uses the settings partition or filegroup settings of the existing table.  
   
    *partition_scheme_name* **(** *column_name* **)**  

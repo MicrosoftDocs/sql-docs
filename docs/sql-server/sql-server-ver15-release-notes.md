@@ -15,14 +15,21 @@ ms.author: "mikeray"
 manager: "craigg"
 monikerRange: "= sql-server-ver15 || = sqlallproducts-allversions"
 ---
-# SQL Server 2019 Release Notes
+# SQL Server 2019 preview release notes
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 This article describes limitations and known issues for the [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] Community Technology Preview (CTP) releases. For related information, see:
 - [What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md)
 
-**Try [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] !**
+>[!NOTE]
+>Preview releases of SQL Server are made available for you to experience the features of the upcoming release. They are not supported or licensed for production use. The following scenarios are explicitly unsupported:
+>
+> - Side-by-side installation with other versions of SQL Server
+> - Uninstallation
+> - Upgrade from a previous edition of SQL Server
+
+**Try [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]!**
 - [![Download from Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [Download [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] to install on Windows](http://go.microsoft.com/fwlink/?LinkID=829477)
 - Install on Linux for [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md), [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md), and [Ubuntu](../linux/quickstart-install-connect-ubuntu.md).
 - [Run on SQL Server 2019 on Docker](../linux/quickstart-install-connect-docker.md).
@@ -30,6 +37,25 @@ This article describes limitations and known issues for the [!INCLUDE[SQL Server
 ## CTP 2.0 (September 2018)
 
 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.0 is the first public release of [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)].
+
+### Documentation (CTP 2.0)
+
+- **Issue and customer impact**: Documentation for SQL Server 2019 (15.x) is limited and content is included with the SQL Server 2017 (14.x) documentation set. Content in articles that is specific to SQL Server 2019 (15.x) is noted with **Applies To**.
+
+- **Issue and customer impact**: SQL Server documentation can be filtered by version. Use the control at the top left of each documentation page to filter for your requirements. 
+
+- **Issue and customer impact**: No offline content is available for SQL Server 2019 (15.x).
+
+### Hardware and software requirements
+
+- **Issue and customer impact**: Hardware and software requirements are still being reviewed and not final for the product release.
+
+  - **Hardware**
+    - [Windows - processor, memory, and operating system requirements](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#pmosr)
+    - [Linux - system requirements](../linux/sql-server-linux-setup.md#system)
+  - **Software**
+    - Windows Server 2016 or later. For additional requirements, see [Requirements for Installing SQL Server](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
+    - For Linux, refer to [Linux - supported platforms](../linux/sql-server-linux-setup.md#supportedplatforms)
 
 ### SQL Graph
 

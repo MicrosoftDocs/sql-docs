@@ -19,6 +19,12 @@ This article describes changes in [!INCLUDE[ssRSnoversion](../includes/ssrsnover
 
 ## SQL Server 2017 Reporting Services 
 
+### Version 14.0.600.906, Released: September 12, 2018
+
+This bug has been fixed:
+
+- Custom Authentication not returning correct cookie information
+
 ### Version 14.0.600.892, Released: August 31, 2018
 
 These bugs have been fixed:

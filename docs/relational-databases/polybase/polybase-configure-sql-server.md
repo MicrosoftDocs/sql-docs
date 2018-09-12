@@ -25,7 +25,18 @@ If you haven't installed PolyBase, see [PolyBase installation](polybase-installa
 
 ## Configure an External Table
 
-To query the data in your SQL Server data source, you must define an external table to use in Transact-SQL queries. The following steps describe how to configure the external table.
+To query the data from a SQL Server data source, you must create external tables to reference the external data. This section provides sample code to create these external tables. 
+ 
+We recommend creating statistics on external table columns, especially the ones used for joins, filters and aggregates, for optimal query performance.
+
+Here are the objects we will create in this section:
+
+- CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL) 
+- CREATE EXTERNAL DATA SOURCE (Transact-SQL) 
+- CREATE EXTERNAL FILE FORMAT (Transact-SQL) 
+- CREATE EXTERNAL TABLE (Transact-SQL) 
+- CREATE STATISTICS (Transact-SQL)
+.
 
 1. Create a master key on the database. This is required to encrypt the credential secret.
   ```sql

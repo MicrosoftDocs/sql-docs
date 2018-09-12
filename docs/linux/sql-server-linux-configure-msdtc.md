@@ -23,8 +23,8 @@ This article describes how to configure the Microsoft Distributed Transaction Co
 
 The following MSDTC configurations are supported:
 
-- OLE-TX Distributed transactions against SQL Server on Linux for both ODBC/JDBC providers.
-- XA Distributed transactions against SQL Server on Linux using both ODBC/JDBC provider (requires the use of the latest ODBC provider).
+- OLE-TX Distributed transactions against SQL Server on Linux for JDBC providers.
+- XA Distributed transactions against SQL Server on Linux using JDBC providers.
 - Distributed transactions on Linked server.
 
 For limitations and known issues for MSDTC in CTP 2.0, see [Release notes for SQL Server 2019 CTP on Linux](sql-server-linux-release-notes-2019.md#msdtc).
@@ -63,13 +63,13 @@ First, configure **network.rpcport** and **distributedtransaction.servertcpport*
    sudo /opt/mssql/bin/mssql-conf set network.rpcport 13500
    ```
 
-1. Set the **distributedtransaction.servertcpport** value. The following example sets it to 51999.
+2. Set the **distributedtransaction.servertcpport** value. The following example sets it to 51999.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set distributedtransaction.servertcpport 51999
    ```
 
-1. Restart SQL Server.
+3. Restart SQL Server.
 
    ```bash
    sudo systemctl restart mssql-server
@@ -82,15 +82,17 @@ Configure the Linux server routing table so that RPC communication on port 135 i
 1. Create routing rules for port 135. In the following example, port 135 is directed to the RPC port, 13500, defined in the previous section. Replace `<ipaddress>` with the IP address of your server.
 
    ```bash
-   iptables -t nat -A PREROUTING -d <ip> -p tcp --dport 135 -m addrtype --dst-type LOCAL -j DNAT --to-destination <ip>:13500
+   iptables -t nat -A PREROUTING -d <ip> -p tcp --dport 135 -m addrtype --dst-type LOCAL -j DNAT --to-destination <ip>:13500 -m comment --comment RpcEndPointMapper
 
-   iptables -t nat -A OUTPUT -d <ip> -p tcp --dport 135 -m addrtype --dst-type LOCAL -j DNAT --to-destination <ip>:13500
+   iptables -t nat -A OUTPUT -d <ip> -p tcp --dport 135 -m addrtype --dst-type LOCAL -j DNAT --to-destination <ip>:13500 -m comment --comment RpcEndPointMapper
    ```
+
+   The `--comment RpcEndPointMapper` parameter in the previous commands assists with managing these rules in later commands.
 
 1. View the routing rules you created with the following command:
 
    ```bash
-   sudo iptables -t nat -L
+   iptables -S -t nat | grep "RpcEndPointMapper"
    ```
 
 1. Save the routing rules to a file on your machine.
@@ -105,29 +107,35 @@ Configure the Linux server routing table so that RPC communication on port 135 i
    iptables-restore < /etc/iptables.conf
    ```
 
-> [!TIP]
-> If you need to recreate or delete existing routing rules, you can use the `-D` parameter of **iptable** and specify the name of the routing rule to remove.
+> [!IMPORTANT]
+> The previous steps assume a fixed IP address. If the IP address for your SQL Server instance changes (due to manual intervention or DHCP), you must remove and recreate the routing rules. If you need to recreate or delete existing routing rules, you can use the following command to remove old `RpcEndPointMapper` rules:
+> 
+> ```bash
+> iptables -S -t nat | grep "RpcEndPointMapper" | sed 's/^-A //' | while read rule; do iptables -t nat -D $rule; done
+> ```
 
 ## Configure the firewall
 
-The final step is to configure the firewall to allow communication on both **rpcport** and **servertcpport**. The actual steps for this will vary depending on your Linux distribution and firewall. The following example shows how to create these rules on Ubuntu.
+The final step is to configure the firewall to allow communication on the **rpcport**, the **servertcpport**, and port 135. The actual steps for this will vary depending on your Linux distribution and firewall. The following example shows how to create these rules on Ubuntu.
 
 ```bash
 sudo ufw allow from any to any port 13500 proto tcp
 sudo ufw allow from any to any port 51999 proto tcp
+sudo ufw allow from any to any port 135 proto tcp
 ```
 
-The following example shows how this could be done on Red Hat Enterprise Linux:
+The following example shows how this could be done on Red Hat Enterprise Linux (RHEL):
 
 ```bash
 sudo firewall-cmd --zone=public --add-port=51999/tcp --permanent
 sudo firewall-cmd --zone=public --add-port=13500/tcp --permanent
+sudo firewall-cmd --zone=public --add-port=135/tcp –permanent
 sudo firewall-cmd --reload
 ```
 
 ## Verify
 
-At this point, SQL Server should be able to participate in distributed transactions. To verify that SQL Server is listening, run the following command:
+At this point, SQL Server should be able to participate in distributed transactions. To verify that SQL Server is listening, run the **netstat** command (if you are using RHEL, you might have to first install the **net-tools** package):
 
 ```bash
 sudo netstat -tulpn | grep sqlservr

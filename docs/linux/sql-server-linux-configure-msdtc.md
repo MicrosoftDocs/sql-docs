@@ -44,14 +44,11 @@ For limitations and known issues for MSDTC in CTP 2.0, see [Release notes for SQ
 
 ## MSDTC configuration steps
 
-There are three steps to configure MSDTC communication and functionality.
+There are three steps to configure MSDTC communication and functionality. If the necessary configuration steps are not done, SQL Server will not enable MSDTC functionality.
 
 - Configure **network.rpcport** and **distributedtransaction.servertcpport** using mssql-conf.
 - Configure Linux server routing so that RPC communication on port 135 is redirected to SQL Server's **network.rpcport**.
 - Configure the firewall to allow communication on both **rpcport** and **servertcpport** so the RPC endpoint mapping process and MSDTC process can communicate externally to other transaction managers and coordinators.
-
-> [!IMPORTANT]
-> If the neccessary configuration steps are not done, SQL Server will not enable MSDTC functionality.
 
 The following sections provide detailed instructions for each step.
 

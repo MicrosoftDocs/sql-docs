@@ -122,8 +122,11 @@ ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*
   
 #### WITH options  
 ##### DROP_EXISTING = [OFF] | ON  
-   DROP_EXISTING = ON specifies to drop the existing clustered columnstore index, and create a new columnstore index.  
-
+   `DROP_EXISTING = ON` specifies to drop the existing index, and create a new columnstore index.  
+```sql
+CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
+       WITH (DROP_EXISTING = ON);
+```
    The default, DROP_EXISTING = OFF expects the index name is the same as the existing name. An error occurs is the specified index name already exists.  
   
 ##### MAXDOP = *max_degree_of_parallelism*  
@@ -134,6 +137,10 @@ ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*
    - \>1 - Restrict the maximum number of processors used in a parallel index operation to the specified number or fewer based on the current system workload. For example, when MAXDOP = 4, the number of processors used is 4 or less.  
    - 0 (default) - Use the actual number of processors or fewer based on the current system workload.  
   
+```sql
+CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
+       WITH (MAXDOP = 2);
+```
    For more information, see [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md), and [Configure Parallel Index Operations](../../relational-databases/indexes/configure-parallel-index-operations.md).  
  
 ###### COMPRESSION_DELAY = **0** | *delay* [ Minutes ]  
@@ -152,11 +159,8 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 ##### DATA_COMPRESSION = COLUMNSTORE | COLUMNSTORE_ARCHIVE  
    Applies to: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
    Specifies the data compression option for the specified table, partition number, or range of partitions. The options are as follows:   
-COLUMNSTORE  
-   COLUMNSTORE is the default and specifies to compress with the most performant columnstore compression. This is the typical choice.  
-  
-COLUMNSTORE_ARCHIVE  
-   COLUMNSTORE_ARCHIVE further compresses the table or partition to a smaller size. Use this option for situations such as archival that require a smaller storage size and can afford more time for storage and retrieval.  
+- `COLUMNSTORE` is the default and specifies to compress with the most performant columnstore compression. This is the typical choice.  
+- `COLUMNSTORE_ARCHIVE` further compresses the table or partition to a smaller size. Use this option for situations such as archival that require a smaller storage size and can afford more time for storage and retrieval.  
   
 ```sql
 CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
@@ -166,8 +170,8 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 
 ###### ONLINE = [ON | OFF]   
    Applies to: [!INCLUDE[ssSQLv15_md](../../includes/sssqlv15-md.md)].
-- ON specifies that the columnstore index remains online and available while the new copy of the index is being built.
-- OFF specifies that the index is not available for use while the new copy is being built.
+- `ON` specifies that the columnstore index remains online and available while the new copy of the index is being built.
+- `OFF` specifies that the index is not available for use while the new copy is being built.
 
 ```sql
 CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines

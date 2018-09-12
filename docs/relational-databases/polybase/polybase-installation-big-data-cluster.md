@@ -15,7 +15,7 @@ monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 ---
 # Install PolyBase on a SQL Server Big Data Cluster
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 This article explains how to install PolyBase on a SQL Server Big Data Cluster in SQL Server 2019 CTP 2.0.
 

@@ -102,7 +102,7 @@ WITH (
 );
 
 ```
-1. Create statistics on an external table.
+7. Create statistics on an external table.
 
   ```sql
     CREATE STATISTICS CustomerCustKeyStatistics ON sqlserver.customer(C_CUSTKEY) WITH FULLSCAN; 

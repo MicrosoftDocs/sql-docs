@@ -411,7 +411,7 @@ MODIFY (MAXSIZE **=** [100 MB | 500 MB | 1 | 1024…4096] GB)
 Specifies the maximum size of the database. The maximum size must comply with the valid set of values for the EDITION property of the database. Changing the maximum size of the database may cause the database EDITION to be changed. 
 
 > [!NOTE]
-> The MAXSIZE argument does not apply to single databases in the Hyperscale service tier.
+> The **MAXSIZE** argument does not apply to single databases in the Hyperscale service tier. Hyperscale tier databases grow as needed, up to 100 TB. The SQL Database service adds storage automatically - you do not need to set a maximum size.
 
 **DTU-based model**
 

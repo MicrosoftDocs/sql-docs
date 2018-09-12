@@ -974,7 +974,7 @@ MAXSIZE
 Specifies the maximum size of the database. MAXSIZE must be valid for the specified EDITION (service tier) Following are the supported MAXSIZE values and defaults (D) for the service tiers.
 
 > [!NOTE]
-> The MAXSIZE argument does not apply to single databases in the Hyperscale service tier.
+> The **MAXSIZE** argument does not apply to single databases in the Hyperscale service tier. Hyperscale tier databases grow as needed, up to 100 TB. The SQL Database service adds storage automatically - you do not need to set a maximum size.
 
 **DTU-based model for single and pooled databases on a logical server**
 

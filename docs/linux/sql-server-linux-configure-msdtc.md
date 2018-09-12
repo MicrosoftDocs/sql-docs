@@ -154,7 +154,7 @@ tcp6 0 0 :::13500 :::* LISTEN 13911/sqlservr
 tcp6 0 0 :::51999 :::* LISTEN 13911/sqlservr
 ```
 
-However, after a restart, SQL Server does not start listening on the **servertcpport** until the first distributed transaction. In this case you would not see SQL Server listening on port 51999 in this example until the first distributed transaction.
+However, after a restart, SQL Server does not start listening on the **servertcpport** until the first distributed transaction. In this case, you would not see SQL Server listening on port 51999 in this example until the first distributed transaction.
 
 ## Next steps
 

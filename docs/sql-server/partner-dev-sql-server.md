@@ -41,7 +41,9 @@ To learn more about some of our other partners, see [High availability, and disa
 <!--Datasheet Links-->
 
 <!--Marketplace Links -->
-<!----Not available[idera_marketplace]:https://azure.microsoft.com/en-us/marketplace/-->
+
+<!----Not available[idera_marketplace]:https://azure.microsoft.com/en-us/marketplace/ -->
+
 [click2cloud_marketplace]:https://marketplace.visualstudio.com/items?itemName=Click2CloudInc.Click2CloudDockerExtensionforVisualStudio 
 
 <!--Press links-->

@@ -117,6 +117,7 @@ Some of the options are not available in all database engine versions. The follo
 | COMPRESSION_DELAY | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] |
 | DATA_COMPRESSION | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] | 
 | ONLINE | [!INCLUDE[ssSQLv15_md](../../includes/sssqlv15-md.md)] | [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] |
+| WHERE clause | N/A | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] |
 
 All options are available in Azure SQL Database.
 
@@ -214,13 +215,13 @@ Create an in-memory nonclustered columnstore index on a rowstore table stored as
 ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*  
    Specifies the one-, two-, or three-part name of the table that contains the index.  
 
-WITH
-DROP_EXISTING = [OFF] | ON  
+#### WITH options
+##### DROP_EXISTING = [OFF] | ON  
    DROP_EXISTING = ON The existing index is dropped and rebuilt. The index name specified must be the same as a currently existing index; however, the index definition can be modified. For example, you can specify different columns, or index options.
   
    DROP_EXISTING = OFF An error is displayed if the specified index name already exists. The index type cannot be changed by using DROP_EXISTING. In backward compatible syntax, WITH DROP_EXISTING is equivalent to WITH DROP_EXISTING = ON.  
 
-MAXDOP = *max_degree_of_parallelism*  
+###### MAXDOP = *max_degree_of_parallelism*  
    Overrides the [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) configuration option for the duration of the index operation. Use MAXDOP to limit the number of processors used in a parallel plan execution. The maximum is 64 processors.  
   
    *max_degree_of_parallelism* values can be:  
@@ -233,7 +234,7 @@ MAXDOP = *max_degree_of_parallelism*
 > [!NOTE]  
 >  Parallel index operations are not available in every edition of [!INCLUDE[msC](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
-ONLINE = [ON | OFF]   
+###### ONLINE = [ON | OFF]   
 - `ON` specifies that the columnstore index remains online and available while the new copy of the index is being built.
 - `OFF` specifies that the index is not available for use while the new copy is being built. In nonclustered index, the base table remains available, only the nonclustered columnstore index is not used to satisfy queries until the new index is complete. 
 
@@ -244,20 +245,15 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
 ##### COMPRESSION_DELAY = **0** | \<delay>[Minutes]  
    Specifies a lower bound on how long a row should stay in delta rowgroup before it is eligible for migration to compressed rowgroup. For example, a customer can say that if a row is unchanged for  120 minutes, make it  eligible for compressing into columnar storage format. For columnstore index on disk-based tables, we don’t track the time when a row was inserted or updated,  we use the delta rowgroup closed time as a proxy for the row instead. The default duration is 0 minutes. A row is migrated to columnar storage once 1 million rows have been accumulated in delta rowgroup and it has been marked closed.  
   
-DATA_COMPRESSION  
-   Specifies the data compression option for the specified table, partition number, or range of partitions. The options are as follows:  
-COLUMNSTORE  
-   Applies to: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
-   Applies only to columnstore indexes, including both nonclustered columnstore and clustered columnstore indexes. COLUMNSTORE is the default and specifies to compress with the most performant columnstore compression. This is the typical choice.  
-  
-COLUMNSTORE_ARCHIVE  
-   Applies to: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
-   Applies only to columnstore indexes, including both nonclustered columnstore and clustered columnstore indexes. COLUMNSTORE_ARCHIVE further compresses the table or partition to a smaller size. This can be used for archival, or for other situations that require a smaller storage size and can afford more time for storage and retrieval.  
+###### DATA_COMPRESSION  
+   Specifies the data compression option for the specified table, partition number, or range of partitions. Applies only to columnstore indexes, including both nonclustered columnstore and clustered columnstore indexes. The options are as follows:
+   
+- `COLUMNSTORE` - the default and specifies to compress with the most performant columnstore compression. This is the typical choice.  
+- `COLUMNSTORE_ARCHIVE` -  COLUMNSTORE_ARCHIVE further compresses the table or partition to a smaller size. This can be used for archival, or for other situations that require a smaller storage size and can afford more time for storage and retrieval.  
   
  For more information about compression, see [Data Compression](../../relational-databases/data-compression/data-compression.md).  
   
-WHERE \<filter_expression> [ AND \<filter_expression> ]
-   Applies to: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+##### WHERE \<filter_expression> [ AND \<filter_expression> ]
   
    Called a filter predicate, this specifies which rows to include in the index. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] creates filtered statistics on the data rows in the filtered index.  
   
@@ -270,7 +266,7 @@ WHERE \<filter_expression> [ AND \<filter_expression> ]
    
    For guidance on filtered indexes, see [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md).  
   
-ON  
+#### ON options  
    These options specify the filegroups on which the index is created.  
   
 *partition_scheme_name* **(** *column_name* **)**  

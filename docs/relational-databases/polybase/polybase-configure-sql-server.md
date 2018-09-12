@@ -8,7 +8,7 @@ ms.suite: "sql"
 ms.technology: polybase
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
-author: Abiola Oke
+author: Abiola
 ms.author: aboke
 manager: craigg
 monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"

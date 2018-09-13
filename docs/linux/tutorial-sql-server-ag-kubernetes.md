@@ -285,5 +285,5 @@ In this tutorial, you learned how to:
 ## Next steps
 
 > [!div class="nextstepaction"]
->[Introduction to Kubernetes](http://docs.microsoft.com/en-us/azure/aks/intro-kubernetes)
->[Create listener services for secondary replicas](sql-server-linux-kubernetes-secondary-replica-listeners.md)
+>[Introduction to Kubernetes](http://docs.microsoft.com/azure/aks/intro-kubernetes)
+>[Manage SQL Server on Kubernetes](sql-server-linux-kubernetes-manage.md)

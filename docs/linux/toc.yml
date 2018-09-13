@@ -189,7 +189,7 @@
           - name: Manage
             href: sql-server-linux-kubernetes-manage.md
           - name: Connect
-            href: sql-server-linux-kubernetes-connect-job.md
+            href: sql-server-linux-kubernetes-connect.md
   - name: Security
     href: sql-server-linux-security-overview.md
     items:

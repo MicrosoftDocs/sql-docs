@@ -200,7 +200,7 @@ FROM sys.dm_exec_requests AS d
 
 ### <a id="ha"></a>Always On Availability Groups 
 
-- **Up to five synchronous replicas** – SQL Server 2019 preview increases the limit for synchronous replicas from three (in SQL Server 2017) to five. Users can now configure up to five synchronous replicas (1 primary and up to 4 synchronous secondary replicas) with automatic failover between these replica pairs.
+- **Up to five synchronous replicas** – SQL Server 2019 preview increases the limit for synchronous replicas from three (in SQL Server 2017) to five. Users can now configure up to five synchronous replicas (1 primary and up to 4 synchronous secondary replicas) with automatic failover between these replicas.
 
 - **Secondary to primary replica connection redirection**: Allows client application connections to be directed to the primary replica regardless of the target server specified in the connection string. This capability allows connection redirection without a listener. Use Secondary to primary replica connection redirection in the following cases:
 

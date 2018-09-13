@@ -19,13 +19,13 @@ Machine learning capabilities are added to SQL Server in each release as we cont
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 ## New in SQL Server 2019 preview
 
-This release adds the top-requested features for R and Python machine learning operations in SQL Server. For more information about all features in this release, see [What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md) and [Release Notes for SQL Server 2019](../sql-server/sql-server-ver15-release-notes.md).
+This release adds the top-requested features for R and Python machine learning operations in SQL Server. For more information about all of the features in this release, see [What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md) and [Release Notes for SQL Server 2019](../sql-server/sql-server-ver15-release-notes.md).
 
 | Release | Feature update |
 |---------|----------------|
 | CTP 2.0 | Linux platform support for R and Python machine learning, plus the new Java extension. For help getting started, see [Install SQL Server Machine Learning Services on Linux](../linux/sql-server-linux-setup-machine-learning.md). |
-| CTP 2.0 | By setting new parameters on the [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql), you can easily generate multiple models from partitioned data. Learn more in this tutorial, [Create partition-based models in R](tutorials/r-tutorial-create-models-per-partition.md). |
-| CTP 2.0 | Failover cluster support. You can install SQL Server 2019 Machine Learning Services (In-Database) on a Windows failover cluster to meet your SLA requirements if your primary server fails over. For more information, see [SQL Server failover cluster installation](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md). |
+| CTP 2.0 | The [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) includes two new parameters that enable you to easily generate multiple models from partitioned data. Learn more in this tutorial, [Create partition-based models in R](tutorials/r-tutorial-create-models-per-partition.md). |
+| CTP 2.0 | Failover cluster support is now suported on Windows. You can install SQL Server 2019 Machine Learning Services (In-Database) on a failover cluster to meet your SLA requirements for this feature. For more information, see [SQL Server failover cluster installation](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md). |
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"

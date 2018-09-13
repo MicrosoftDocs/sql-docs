@@ -16,32 +16,35 @@ manager: craigg
 ---
 # Getting started with [!INCLUDE[name-sos](../includes/name-sos-short.md)] extensibility
 
-[!INCLUDE[name-sos](../includes/name-sos.md)] has several extensibility mechanisms to customize the user experience and make those customizations available to the entire user community.  The core [!INCLUDE[name-sos](../includes/name-sos.md)] platform is built upon Visual Studio Code, so most of the Visual Studio Code extensibility APIs are available.  Additionally, we've provided additional extensibility points for data management specific activities.
+[!INCLUDE[name-sos](../includes/name-sos.md)] has several extensibility mechanisms to customize the user experience and make those customizations available to the entire user community. The core [!INCLUDE[name-sos](../includes/name-sos.md)] platform is built upon Visual Studio Code, so most of the Visual Studio Code extensibility APIs are available. Additionally, we've provided additional extensibility points for data management-specific activities.
 
-Some of the key extensibility points are listed below.
+Some of the key extensibility points are:
 
-* Visual Studio Code extensibility APIs
-* SQL Operations Studio extension authoring tools
-* Manage Dashboard tab panel contributions
-* Insights with Actions experiences
-* SQL Operations Studio extensibility APIs
-* Custom Data Provider APIs
+- Visual Studio Code extensibility APIs
+- Azure Data Studio extension authoring tools
+- Manage Dashboard tab panel contributions
+- Insights with Actions experiences
+- Azure Data Studio extensibility APIs
+- Custom Data Provider APIs
 
 ## Visual Studio Code extensibility APIs
-Please see take a look at [Extension Authoring](https://code.visualstudio.com/docs/extensions/overview) and [Extension API](https://code.visualstudio.com/docs/extensionAPI/overview) documentation on the VS Code website.
+
+For details, see [Extension Authoring](https://code.visualstudio.com/docs/extensions/overview) and [Extension API](https://code.visualstudio.com/docs/extensionAPI/overview) documentation on the VS Code website.
 
 ## Manage Dashboard tab panel contributions
-Please see [Contribution Points](#contribution-points) and [Context Variables](#context-variables).
+
+For details, see [Contribution Points](#contribution-points) and [Context Variables](#context-variables).
 
 ## Azure Data Studio extensibility APIs
-Please see [Extensibility APIs](#extensibility-apis).
+
+For details, see [Extensibility APIs](extensibility-apis.md).
 
 
 ## Contribution points
 
 This section covers the various contribution points that are defined in the package.json extension manifest.
 
-The intellisense is supported inside sqlopsstudio.
+The IntelliSense is supported inside sqlopsstudio.
 
 ## Contributes dashboard
 
@@ -89,7 +92,7 @@ Instead of specifying dashboard container inline (inside the dashboard.tab). You
 ]
 ```
 
-To refer to registered container, you can simply specify the id of the container
+To refer to registered container, specify the id of the container
 
 ```json
 "dashboard.tabs": [
@@ -106,7 +109,7 @@ To refer to registered container, you can simply specify the id of the container
 
 `dashboard.insights`
 
-You can register insights using dashboard.insights. This is similiar to [Tutorial: Build a custom insight widget](https://docs.microsoft.com/en-us/sql/sql-operations-studio/tutorial-build-custom-insight-sql-server)
+You can register insights using dashboard.insights. This is similar to [Tutorial: Build a custom insight widget](https://docs.microsoft.com/en-us/sql/sql-operations-studio/tutorial-build-custom-insight-sql-server)
 
 ```json
 "dashboard.insights": {
@@ -259,18 +262,16 @@ There are currently four supported container types:
 
 For general information about context in vscode and subsequently Azure Data Studio, see [Extensibility](https://code.visualstudio.com/docs/extensionAPI/extension-points#_example).
 
-In Azure Data Studio we have specific context around database connections available for extensions.
+In Azure Data Studio, we have specific context around database connections available for extensions.
 
 ### Dashboard
 
-In dashboard we provide the following context variables.
+In dashboard, we provide the following context variables:
 
-`connectionProvider` - A string of the identifier for the provider of the current connection. Ex. `connectionProvider == 'MSSQL'`.
-
-`serverName` - A string of the server name of the current connection. Ex. `serverName == 'localhost'`.
-
-`databaseName` - A string of the database name of the current connection. Ex. `databaseName == 'master'`.
-
-`connection` - The full connection profile object for the current connection (IConnectionProfile)
-
-`dashboardContext` - A string of the context of the page of the dashboard is currently on. Either 'database' or 'server'. Ex. `dashboardContext == 'database'`
+|context variable| description|
+|:---|:---|
+|`connectionProvider` | A string of the identifier for the provider of the current connection. Ex. `connectionProvider == 'MSSQL'`.|
+|`serverName`|A string of the server name of the current connection. Ex. `serverName == 'localhost'`.|
+|`databaseName` | A string of the database name of the current connection. Ex. `databaseName == 'master'`.|
+|`connection` | The full connection profile object for the current connection (IConnectionProfile)|
+|`dashboardContext` | A string of the context of the page of the dashboard is currently on. Either 'database' or 'server'. Ex. `dashboardContext == 'database'`|

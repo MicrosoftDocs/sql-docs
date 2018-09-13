@@ -102,17 +102,17 @@ kubectl describe pv
 
 ## Deploy the operator
 
-`mssql-operator` is a Kubernetes operator that deploys the instances of SQL Server and configures the availability group in the Kubernetes cluster. Deploy the operator as a one-replica Kubernetes deployment.
+`mssql-operator` is a Kubernetes operator that deploys the instances of SQL Server and configures the availability group in the Kubernetes cluster. Deploy the operator as one replica Kubernetes deployment.
 
-To deploy the operator, create a file named `operator.yaml`, and copy in the following manifest.
+To deploy the operator:
 
-
-[!INCLUDE[kubernetes-ag-operator-yaml](../includes/kubernetes-ag-operator-yaml.md)]
+1. Copy [kubernetes-ag-operator.yaml](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Linux) to your computer.
+2. Update `kubernetes-ag-operator.yaml` for your environment.
 
 Deploy the operator with the `kubectl apply` command.
 
 ```azurecli
-kubectl apply -f operator.yaml
+kubectl apply -f kubernetes-ag-operator.yaml
 ```
 
 ## Create the secrets
@@ -134,18 +134,15 @@ The next step creates the SQL Server instances and the availability group in one
 
 In addition, the deployment describes a load balancer service for the availability group listener
 
-For more information about the contents of the deployment file, see [Configure SQL Server specification (YAML)](sql-server-linux-kubernetes-spec.md).
+To deploy mssql-server:
 
-To create the specification, create a file named `sqlservers.yaml`.
+1. Copy [kubernetes-ag-sql-statefulset.yaml](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Linux) to your computer.
+2. Update `kubernetes-ag-sql-statefulset.yaml` for your environment.
 
-Copy the manifest below into the file.
-
-[!INCLUDE[kubernetes-ag-sql-statefulset-yaml](../includes/kubernetes-ag-sql-statefulset-yaml.md)]
-
-To deploy the SQL Server instances and create the availability group, run the following command.
+Deploy the operator with the `kubectl apply` command.
 
 ```azurecli
-kubectl apply -f sqlservers.yaml
+kubectl apply -f kubernetes-ag-sql-statefulset-yaml
 ```
 
 ### Monitor the deployment

@@ -15,7 +15,7 @@ manager: cgronlun
 
 This article prepares your system for tutorials on how to use R and Python for in-database analytics in SQL Server.
 
-In this exercise, you will download sample data, a PowerShell script for preparing the environment, and [!INCLUDE[tsql](../../includes/tsql-md.md)] script files used in several tutorials. When you are finished, an **TaxiNYC_Sample** database is available on your local instance, providing demo data for hands-on learning. 
+In this exercise, you will download sample data, a PowerShell script for preparing the environment, and [!INCLUDE[tsql](../../includes/tsql-md.md)] script files used in several tutorials. When you are finished, an **NYCTaxi_Sample** database is available on your local instance, providing demo data for hands-on learning. 
 
 ## Prerequisites
 

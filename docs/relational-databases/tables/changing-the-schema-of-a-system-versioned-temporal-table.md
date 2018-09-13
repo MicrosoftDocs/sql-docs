@@ -57,7 +57,7 @@ ALTER TABLE dbo.Department
   
 -   During an **ALTER TABLE** operation, the system holds a schema lock on both tables.  
   
--   Specified schema change is propagated to history table in appropriate way (depending on type of change)  
+-   Specified schema change is propagated to history table appropriately (depending on type of change).  
   
 -   If you add a non-nullable column or alter existing column to become non-nullable, you must specify the default value for existing rows. The system will generate an additional default with the same value and apply it to the history table. Adding **DEFAULT** to a non-empty table is a size of data operation on all editions other than [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition (on which it is a metadata operation).  
   

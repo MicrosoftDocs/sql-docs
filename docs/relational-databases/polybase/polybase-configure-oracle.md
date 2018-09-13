@@ -8,8 +8,8 @@ ms.suite: "sql"
 ms.technology: polybase
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: Abiola
+ms.author: aboke
 manager: craigg
 monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 ---
@@ -22,6 +22,105 @@ The article explains how to use PolyBase on a SQL Server instance to query exter
 ## Prerequisites
 
 If you haven't installed PolyBase, see [PolyBase installation](polybase-installation.md). The installation article explains the prerequisites.
+
+## Configure an External Table
+
+To query the data from an Oracle data source, you must create external tables to reference the external data. This section provides sample code to create these external tables. 
+ 
+We recommend creating statistics on external table columns, especially the ones used for joins, filters and aggregates, for optimal query performance.
+
+Here are the objects we will create in this section:
+
+- CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL) 
+- CREATE EXTERNAL DATA SOURCE (Transact-SQL) 
+- CREATE EXTERNAL FILE FORMAT (Transact-SQL) 
+- CREATE EXTERNAL TABLE (Transact-SQL) 
+- CREATE STATISTICS (Transact-SQL)
+
+
+1. Create a master key on the database. This is required to encrypt the credential secret.
+  ```sql
+   CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
+   ```
+
+2. Create a database scoped credential.
+
+ ```sql
+ /*  specify credentials to external data source
+ *  IDENTITY: user name for external source.  
+ *  SECRET: password for external source.
+ */
+CREATE DATABASE SCOPED CREDENTIAL OracleCredentials 
+WITH IDENTITY = 'username', Secret = 'password';
+  ```
+
+3. Create an external data source with [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md). Specify external data source location and credentials for the Oracle data source.
+
+  ```sql
+ /*  LOCATION: Server DNS name or IP address.
+ *  PUSHDOWN: specify whether computation should be pushed down to the source. ON by default.
+ *  CREDENTIAL: the database scoped credential, created above.
+ */  
+CREATE EXTERNAL DATA SOURCE OracleInstance
+WITH ( 
+  LOCATION = 'oracle://OracleTestDB'
+  --, PUSHDOWN = ON | OFF
+  , CREDENTIAL = OracleCredentials
+);
+
+
+
+   ```
+
+4. Create an external file format with [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md).
+
+  ```sql
+/*  specify external file format
+ *  FORMAT TYPE: Type of format in Hadoop - DELIMITEDTEXT, RCFILE, ORC, PARQUET
+ *  for compressed Parquet files, specify DATA_COMPRESSION  
+ */
+CREATE EXTERNAL FILE FORMAT Parquet
+WITH (
+    FORMAT_TYPE = PARQUET
+    -- , DATA_COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'
+); 
+   ```
+
+5. Create schemas for external data
+
+  ```sql
+CREATE SCHEMA oracle;
+GO
+
+   ```
+6.  Create external tables that represents data stored in external Oracle system [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md).
+ 
+ ```sql
+/*  LOCATION: Oracle table/view in '<database_name>.<schema_name>.<object_name>' format
+ *  DATA_SOURCE: the external data source, created above.
+ */
+CREATE EXTERNAL TABLE oracle.orders(
+    [O_ORDERKEY] DECIMAL(38) NOT NULL,
+    [O_CUSTKEY] DECIMAL(38) NOT NULL,
+    [O_ORDERSTATUS] CHAR COLLATE Latin1_General_BIN NOT NULL,
+    [O_TOTALPRICE] DECIMAL(15,2) NOT NULL,
+    [O_ORDERDATE] DATETIME2(0) NOT NULL,
+    [O_ORDERPRIORITY] CHAR(15) COLLATE Latin1_General_BIN NOT NULL,
+    [O_CLERK] CHAR(15) COLLATE Latin1_General_BIN NOT NULL,
+    [O_SHIPPRIORITY] DECIMAL(38) NOT NULL,
+    [O_COMMENT] VARCHAR(79) COLLATE Latin1_General_BIN NOT NULL
+)
+WITH (
+    LOCATION='TPCH..ORDERS',
+    DATA_SOURCE=OracleInstance
+);
+```
+7. Create statistics on an external table for optimized performance.
+
+  ```sql
+    CREATE STATISTICS OrdersOrderKeyStatistics ON oracle.orders(O_ORDERKEY) WITH FULLSCAN;
+   ```
+
 
 ## Next steps
 

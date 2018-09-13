@@ -18,11 +18,10 @@ There are no specific action items for the administrator as a result of the modi
 
 Summarized, the main differences in this release are:
 
-+ Local user accounts under **SQL Restricted User Group (SQLRUserGroup)** are no longer created.
-+ **SQLRUserGroup** membership continues to define the account under which processes run, but membership now consists of just the SQL Server Launchpad service account.
-+ **SQLRUserGroup** continues to be granted 'read and execute' permissions to the SQL Server **Binn**, **R_SERVICES**, and **PYTHON_SERVICES** directories. 
++ Local user accounts under **SQL Restricted User Group (SQLRUserGroup)** are no longer created or used to run external processes. AppContainers replace them.
++ **SQLRUserGroup** membership has changed. Instead of multiple local user accounts, membership consists of just the SQL Server Launchpad service account. R, Python, and Java processes now execute under the Launchpad service identity, isolated through AppContainers.
 
-Although process isolation has changed, the Installation wizard and command line parameters remain the same in SQL Server 2019. For help with installation, see [Install SQL Server Machine Learning Services](sql-machine-learning-services-windows-install.md).
+Although the isolation model has changed, the Installation wizard and command line parameters remain the same in SQL Server 2019. For help with installation, see [Install SQL Server Machine Learning Services](sql-machine-learning-services-windows-install.md).
 
 ## About AppContainer isolation
 
@@ -43,7 +42,7 @@ As part of the move to AppContainers, there are new firewall rules based on AppC
 
 ## Program file permissions
 
-As with previous releases, the **SQLRUserGroup** continues to provide read and execute permissions on executables in the SQL Server **Binn**, **R_SERVICES**, and **PYTHON_SERVICES** directories. In this release, the only member of **SQLRUserGroup** is the SQL Server Launchpad service account.  When Launchpad service starts the R or Python executable, the process runs as LaunchPad service.
+As with previous releases, the **SQLRUserGroup** continues to provide read and execute permissions on executables in the SQL Server **Binn**, **R_SERVICES**, and **PYTHON_SERVICES** directories. In this release, the only member of **SQLRUserGroup** is the SQL Server Launchpad service account.  When Launchpad service starts an R, Python, or Java execution environment, the process runs as LaunchPad service.
 
 ## Implied authentication
 

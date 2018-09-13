@@ -84,19 +84,19 @@ To install SSDT when you're not connected to the internet:
 First, you must get the necessary install files online:
 
 1. `SSDT-Setup-ENU.exe /Layout` puts files in layout folder as subdir where the .exe was located.
-2. `vs_sql.exe –layout <C:\yourlocation> –lang en-US` (~1GB of files) all languages: (~3.9GB)  https://docs.microsoft.com/en-us/visualstudio/install/create-a-network-installation-of-visual-studio
+2. `vs_sql.exe –layout <C:\yourlocation> –lang en-US` (~1GB of files) all languages: (~3.9GB) For details, see [Create a network installation of Visual Studio 2017](https://docs.microsoft.com/visualstudio/install/create-a-network-installation-of-visual-studio).
 
-   a.	vs_sql.exe –help  found the Language option vs_sql.exe –layout –lang en-US  
-   b.	–layout will put files in default folder need to reference location i.e. c:\VS2017
+   a.	vs_sql.exe –help found the Language option vs_sql.exe –layout –lang en-US  
+   b.	–layout will put files in default folder, but need to reference location i.e. c:\VS2017
 
 After completing the previous steps, the following can be done while offline:
 
-1. Copy VS2017 payload to the SSDT payload folder. Ensure all files from both are combined in a single layouts folder.
-2. Run `vs_setup.exe –NoWeb` to install the VS2017 Shell and SQL Server Data Project. You may be able to skip this and get the VS shell installed in the next step. 
+1. Copy the VS2017 payload to the SSDT payload folder. Ensure all files from both are combined into a single layouts folder.
+2. Run `vs_setup.exe –NoWeb` to install the VS2017 Shell and SQL Server Data Project. You may be able to skip this and get the VS shell installed in the next step.
 3. Run `SSDT-Setup-ENU.exe /install` and select SSIS/SSRS/SSAS.
 
-   a.	Or run `SSDT-Setup-ENU.exe /INSTALLALL[:visinstance:]`
-   b.	For available options, run `SSDT-Setup-ENU.exe /help`.
+   a.	Or run `SSDT-Setup-ENU.exe /INSTALLALL[:visinstance:]`  
+   b.	For available options, run `SSDT-Setup-ENU.exe /help`
 
 ## Supported SQL versions
   

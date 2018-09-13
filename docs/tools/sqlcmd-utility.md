@@ -320,7 +320,7 @@ We recommend that you use a strong password.
  **-I**  
  Sets the SET QUOTED_IDENTIFIER connection option to ON. By default, it is set to OFF. For more information, see [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](~/t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
- **-q"** *cmdline query* **"**  
+ **-q "** *cmdline query* **"**  
  Executes a query when **sqlcmd** starts, but does not exit **sqlcmd** when the query has finished running. Multiple-semicolon-delimited queries can be executed. Use quotation marks around the query, as shown in the following example.  
   
  At the command prompt, type:  
@@ -334,7 +334,7 @@ We recommend that you use a strong password.
   
  If **-b** is specified together with this option, **sqlcmd** exits on error. **-b** is described later in this article.  
   
- **-Q"** *cmdline query* **"**  
+ **-Q "** *cmdline query* **"**  
  Executes a query when **sqlcmd** starts and then immediately exits **sqlcmd**. Multiple-semicolon-delimited queries can be executed.  
   
  Use quotation marks around the query, as shown in the following example.  

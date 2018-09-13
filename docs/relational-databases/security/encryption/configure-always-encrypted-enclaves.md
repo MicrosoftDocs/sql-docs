@@ -22,7 +22,7 @@ monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 To setup Always Encrypted with secure enclaves, use the following workflow:
 
 1. Configure HGS attestation.
-2. Install [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)] CTP 2.0 on the SQL Server computer.
+2. Install [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)] on the SQL Server computer.
 3. Install tools on the client/development computer.
 4. Configure the enclave type in your SQL Server instance.
 5. Provision enclave-enabled keys.
@@ -40,7 +40,7 @@ The computer running SQL Server needs the following operating system and SQL Ser
 
 *SQL Server*:
 
-- [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)] CTP 2.0 or later
+- [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)] or later
 
 *Windows*:
 
@@ -130,7 +130,7 @@ On the client/development computer:
    DBCC traceon(127,-1)
    ```     
     > [!NOTE]
-    > Rich computations are disabled by default in [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)] CTP 2.0. They need to be enabled using the above statement after each restart of your SQL Server instance.
+    > Rich computations are disabled by default in [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)]. They need to be enabled using the above statement after each restart of your SQL Server instance.
 
 ## Provision enclave-enabled keys
 

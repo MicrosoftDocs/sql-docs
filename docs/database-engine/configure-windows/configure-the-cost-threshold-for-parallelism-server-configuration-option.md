@@ -68,7 +68,7 @@ FROM sys.dm_os_sys_info
   
 -   In certain cases, a parallel plan may be chosen even though the query's cost plan is less than the current **cost threshold for parallelism** value. This can happen because the decision to use a parallel or serial plan is based on a cost estimate provided before the full optimization is complete.  
 
--   While the default value of 5 is retained for backwards compatibility, it is likely that a higher value is appropriate for current systems. Many SQL Server professionals suggest a value of 25 or 50 as a starting point, and to perform application testing with higher and lower values to optimize application performance.
+-   While the default value of 5 is adequate for most systems, a different value may be appropriate. Perform application testing with higher and lower values if needed to optimize application performance.
   
 ###  <a name="Security"></a> Security  
   

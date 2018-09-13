@@ -129,7 +129,7 @@ The following example shows how this could be done on Red Hat Enterprise Linux (
 ```bash
 sudo firewall-cmd --zone=public --add-port=51999/tcp --permanent
 sudo firewall-cmd --zone=public --add-port=13500/tcp --permanent
-sudo firewall-cmd --zone=public --add-port=135/tcp –permanent
+sudo firewall-cmd --zone=public --add-port=135/tcp --permanent
 sudo firewall-cmd --reload
 ```
 

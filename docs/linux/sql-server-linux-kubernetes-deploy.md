@@ -49,4 +49,8 @@ The following example describes a deployment for the `mssql-operator`.
 
 ## Next steps
 
+[Connect to SQL Server availability group on Kubernetes cluster](sql-server-linux-kubernetes-connect.md)
+
+[Manage SQL Server availability group on Kubernetes cluster](sql-server-linux-kubernetes-manage.md)
+
 [SQL Server availability group on Kubernetes cluster](sql-server-ag-kubernetes.md)

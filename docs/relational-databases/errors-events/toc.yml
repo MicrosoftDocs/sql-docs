@@ -21,6 +21,8 @@
       href: mssqlserver-102-database-engine-error.md
     - name: 107
       href: mssqlserver-107-database-engine-error.md
+    - name: 125
+      href: mssqlserver-125-database-engine-error.md
     - name: 137
       href: mssqlserver-137-database-engine-error.md
     - name: 207
@@ -93,6 +95,8 @@
       href: mssqlserver-1418-database-engine-error.md
     - name: 1457
       href: mssqlserver-1457-database-engine-error.md
+    - name: 1458
+      href: mssqlserver-1458-database-engine-error.md
     - name: 1461
       href: mssqlserver-1461-database-engine-error.md
     - name: 1462

@@ -48,6 +48,8 @@
     href: convert-types-without-conversion-checking-sql-server-import-and-export-wizard.md
   - name: Column Mappings (SQL Server Import and Export Wizard)
     href: column-mappings-sql-server-import-and-export-wizard.md
+  - name: Data Type Mapping (SQL Server Import and Export Wizard)
+    href: data-type-mapping-in-the-sql-server-import-and-export-wizard.md
   - name: Review Data Type Mapping (SQL Server Import and Export Wizard)
     href: review-data-type-mapping-sql-server-import-and-export-wizard.md
   - name: Column Conversion Details Dialog Box (SQL Server Import and Export Wizard)

@@ -181,6 +181,8 @@
       href: use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md
     - name: Add secondary replica
       href: add-a-secondary-replica-to-an-availability-group-sql-server.md
+    - name: Use the Add Azure Replica Wizard (SQL Server)
+      href: use-the-add-azure-replica-wizard-sql-server.md
     - name: Change session-timeout period
       href: change-the-session-timeout-period-for-an-availability-replica-sql-server.md
     - name: Change the HADR cluster context

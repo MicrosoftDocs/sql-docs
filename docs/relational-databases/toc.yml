@@ -2,7 +2,7 @@
   href: database-features.md
   items:
   - name: Database Engine Developer Documentation
-    href: database-engine-developer-documentation
+    href: database-engine-developer-documentation.md
 - name: SQL Server Guides
   href: sql-server-guides.md
   items:

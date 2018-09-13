@@ -42,8 +42,7 @@ Here are the objects we will create in this section:
   ```sql
    CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
    ```
-
-2. Create a database scoped credential for.
+1. Create a database scoped credential for.
 
  ```sql
  /*  specify credentials to external data source
@@ -70,19 +69,6 @@ WITH (
 
    ```
 
-4. Create an external file format with [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md).
-
-  ```sql
-/*  specify external file format
- *  FORMAT TYPE: Type of format in Hadoop - DELIMITEDTEXT, RCFILE, ORC, PARQUET
- *  for compressed Parquet files, specify DATA_COMPRESSION  
- */
-CREATE EXTERNAL FILE FORMAT Parquet
-WITH (
-    FORMAT_TYPE = PARQUET
-    -- , DATA_COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'
-); 
-   ```
 
 5. Create schemas for external data
 
@@ -115,9 +101,9 @@ WITH (
 ```
 7. Create statistics on an external table.
 
-  ```sql
+```sql
     CREATE STATISTICS CustomerCustKeyStatistics ON sqlserver.customer(C_CUSTKEY) WITH FULLSCAN; 
-   ```
+```
 
 
 

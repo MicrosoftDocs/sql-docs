@@ -23,8 +23,6 @@ This article explains the operator global environment variables.
 
 The following example describes a deployment for the `mssql-operator`.
 
-[!INCLUDE[kubernetes-ag-operator-yaml](../includes/kubernetes-ag-operator-yaml.md)]
-
 ## Global environment variables
 
 * `MSSQL_K8S_POD_NAMESPACE` 

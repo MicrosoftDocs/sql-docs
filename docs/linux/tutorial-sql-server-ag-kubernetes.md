@@ -59,7 +59,6 @@ To create the storage, create a manifest that describes:
 
 To create the manifest for the storage, make a file named `pvc.yaml`, and copy in the following `.yaml` code.
 
-[!INCLUDE[ag-pvc-manifest](../includes/kubernetes-ag-pvc-yaml.md)]
 
 Next, apply the manifest to the Kubernetes cluster. The following example applies the manifest:
 
@@ -97,7 +96,6 @@ kubectl describe pv
 
 To deploy the operator, create a file named `operator.yaml`, and copy in the following manifest.
 
-[!INCLUDE[kubernetes-ag-operator-yaml](../includes/kubernetes-ag-operator-yaml.md)]
 
 Deploy the operator with the `kubectl apply` command.
 
@@ -130,7 +128,6 @@ To create the specification, create a file named `sqlservers.yaml`.
 
 Copy the manifest below into the file.
 
-[!INCLUDE[kubernetes-ag-sql-statefulset-yaml](../includes/kubernetes-ag-sql-statefulset-yaml.md)]
 
 To deploy the SQL Server instances and create the availability group, run the following command.
 

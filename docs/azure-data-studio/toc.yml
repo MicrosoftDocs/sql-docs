@@ -45,19 +45,23 @@
   - name: Usage data collection
     href: usage-data-collection.md
 - name: Extensions
-  href: extensions.md
   items:
+  - name: Overview
+    href: extensions.md
   - name: SQL Server Agent
     href: sql-server-agent-extension.md
   - name: SQL Server Profiler
     href: sql-server-profiler-extension.md
 - name: Extensibility
-  href: extensibility.md
   items:
+  - name: Overview
+    href: extensibility.md
   - name: Extension authoring
     href: extension-authoring.md
   - name: Create an extension  
     href: tutorial-create-extension.md
+  - name: Extensibility APIs
+    href: extensibility-apis.md
 - name: Resources
   items:
   - name: Transact-SQL Reference

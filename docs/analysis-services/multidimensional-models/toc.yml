@@ -37,6 +37,8 @@
       href: set-data-source-properties-ssas-multidimensional.md
     - name: Set Impersonation Options for a Data Source Connection
       href: set-impersonation-options-ssas-multidimensional.md
+    - name: Multidimensional Model Programming
+      href: multidimensional-model-programming.md
   - name: Data Source Views
     href: data-source-views-in-multidimensional-models.md
     items:

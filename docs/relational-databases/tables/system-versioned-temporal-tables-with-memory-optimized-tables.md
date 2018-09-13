@@ -37,7 +37,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 -   History table for memory-optimized system-versioned table must be disk-based, regardless if it was created by the end user or the system.  
   
--   Queries that affect only the current table (in-memory) can be used in [natively compiled T-SQL modules](https://msdn.microsoft.com/en-us/library/dn133184.aspx). Temporal queries using the FOR SYSTEM TIME clause are not supported in natively compiled modules. Use of the FOR SYSTEM TIME clause with memory-optimized tables in ad hoc queries and non-native modules is supported.  
+-   Queries that affect only the current table (in-memory) can be used in [natively compiled T-SQL modules](https://msdn.microsoft.com/library/dn133184.aspx). Temporal queries using the FOR SYSTEM TIME clause are not supported in natively compiled modules. Use of the FOR SYSTEM TIME clause with memory-optimized tables in ad hoc queries and non-native modules is supported.  
   
 -   When **SYSTEM_VERSIONING = ON**, an internal memory-optimized staging table is automatically created to accept the most recent system-versioned changes that are results of update and delete operations on memory-optimized current table.  
   

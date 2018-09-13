@@ -143,7 +143,7 @@
         href: tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md
       - name: Operationalize the model
         href: tutorials/sqldev-py6-operationalize-the-model.md
-- name: Samples
+- name: Samples (stored on GitHub.com)
   href: https://github.com/Microsoft/sql-server-samples
 - name: Solutions
   href: tutorials/data-science-scenarios-and-solution-templates.md
@@ -153,8 +153,16 @@
     href: concepts/extensibility-framework.md
   - name: R extension
     href: concepts/extension-r.md
+    items:
+    - name: Creating BI Workflows with R
+      href: r/creating-workflows-that-use-r-in-sql-server.md
+    - name: Operationalize R code (Machine Learning Services)
+      href: r/operationalizing-your-r-code.md
   - name: Python extension
     href: concepts/extension-python.md
+    items:
+    - name: Dynamic Management Views (DMVs) for Python +
+      href: python/dmvs-for-python.md
 - name: How To
   href: r/sql-server-machine-learning-tasks.md
   items:

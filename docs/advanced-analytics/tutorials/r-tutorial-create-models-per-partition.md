@@ -71,7 +71,7 @@ WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 
 ## Connect to the database
 
-Start Management Studio and connect to the database engine instance. In Object Explorer, verify the [TaxiNYC_Sample database](sqldev-download-the-sample-data.md) exists. 
+Start Management Studio and connect to the database engine instance. In Object Explorer, verify the [NYCTaxi_Sample database](sqldev-download-the-sample-data.md) exists. 
 
 ## Define a procedure for creating and training per-partition models
 
@@ -83,7 +83,7 @@ When creating the stored procedure, [use parallelism](#parallel) for faster time
 
 
 ```sql
-USE TaxiNYC_Sample
+USE NYCTaxi_Sample
 GO
 
 CREATE OR ALTER procedure [dbo].[train_rxLogIt_per_partition] (
@@ -186,7 +186,7 @@ You can use the same parameters for scoring. The following sample contains an R 
 As before, create a stored procedure to wrap your R code.
 
 ```sql
-USE TaxiNYC_Sample
+USE NYCTaxi_Sample
 GO
 
 -- Stored procedure that scores per partition. 

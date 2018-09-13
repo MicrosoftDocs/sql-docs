@@ -17,6 +17,8 @@ SQL Server Big Data cluster can be deployed as docker containers on a Kubernetes
 - Install the cluster configuration tool `mssqlctl` on your client machine
 - Deploy SQL Server Big Data cluster in a Kubernetes cluster
 
+[!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
+
 ## Kubernetes prerequisistes
 
 SQL Server Big Data cluster requires a minimum v1.10 version for Kubernetes, for both server and client. To install a specific version on kubectl client, see [Install kubectl binary via curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl).  Latest versions of minikube and AKS are at least 1.10. For AKS you will need to use `--kubernetes-version` parameter to specify a version different than default.
@@ -48,6 +50,8 @@ After you have configured your Kubernetes cluster, you can proceed with the depl
 [Quickstart: Deploy SQL Server Aris on Kubernetes](quickstart-big-data-cluster-deploy.md)
 
 If you want to customize your Aris configuration, according to your workload needs, follow the next set of instructions.
+
+[!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
 ## Verify kubernetes configuration
 

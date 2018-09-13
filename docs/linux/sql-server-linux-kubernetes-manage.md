@@ -25,7 +25,10 @@ This article shows how to create the specification, and explains the parameters 
 
 The following example of a manifest file describes a Kubernetes specification for SQL Server. Copy the contents of the example into a new file named `sqlserver.yaml` to create the SQL Server availability group StatefulSet in Kubernetes.
 
+<<<<<<< HEAD:docs/linux/sql-server-linux-kubernetes-manage.md
 [sqlserver.yaml](https://sqlhelsinki.visualstudio.com/_git/pm-tools?path=%2Fkubernetes-ag-samples%2Fazure-kubernetes-service-sql-ag-example&version=GBmaster#path=%2Fkubernetes-ag-samples%2Fazure-kubernetes-service-sql-ag-example%2Fsqlserver.yaml&version=GBmaster)
+=======
+>>>>>>> 7fba3a62938f174b3b21b29ff6b72fb621028e2a:docs/linux/sql-server-linux-kubernetes-spec.md
 
 To deploy the SQL Server instances and create the availability group, run the following command.
 

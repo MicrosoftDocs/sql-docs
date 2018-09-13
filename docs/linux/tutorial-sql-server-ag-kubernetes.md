@@ -104,8 +104,6 @@ kubectl describe pv
 
 To deploy the operator:
 
-1. Copy [kubernetes-ag-operator.yaml](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Linux) to your computer.
-2. Update `kubernetes-ag-operator.yaml` for your environment.
 
 Deploy the operator with the `kubectl apply` command.
 
@@ -137,7 +135,8 @@ To deploy mssql-server:
 1. Copy [kubernetes-ag-sql-statefulset.yaml](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Linux) to your computer.
 2. Update `kubernetes-ag-sql-statefulset.yaml` for your environment.
 
-Deploy the operator with the `kubectl apply` command.
+
+To deploy the SQL Server instances and create the availability group, run the following command.
 
 ```azurecli
 kubectl apply -f kubernetes-ag-sql-statefulset-yaml

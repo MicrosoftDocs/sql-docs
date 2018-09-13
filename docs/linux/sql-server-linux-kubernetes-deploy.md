@@ -1,5 +1,5 @@
 ---
-title: SQL Server Always On availability group Kubernetes operator global requirements
+title: Deploy SQL Server Always On Availability Group on Kubernetes Cluster
 description: This article explains the parameters for the SQL Server Kubernetes Always On availability group operator global requirements
 author: MikeRayMSFT
 ms.author: mikeray
@@ -13,11 +13,33 @@ ms.custom: "sql-linux"
 ms.technology: linux
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
-# SQL Server Always On availability group Kubernetes operator parameters
+# Deploy a SQL Server Always On Availability Group on Kubernetes Cluster
 
-An Always On availability group on Kubernetes requires an operator. The operator is described in a .yaml file.  See an example of the specification in [this tutorial](tutorial-sql-server-ag-kubernetes.md).
+To deploy a SQL Server Always On Availability Group on a Kubernetes Cluster
 
-This article explains the operator global environment variables.
+1. Configure the cluster
+
+  Use a cluster with at least four nodes. One node is the master. The other nodes host SQL Server containers with the replicas. At least three replicas are required for high-availability.
+
+1. Configure storage
+
+  In cloud environments like Azure, configure persistent volumes.
+
+1. Create Kubernetes secrets
+
+1. Configure and deploy the SQL Server operator manifest
+
+  Copy the SQL Server operator `.yaml` file from [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Linux)
+
+  The `.yaml` file is the deployment manifiest for the Kubernetes.
+
+  To configure the manifest, update the `.yaml` file for your environment.
+
+  Apply the manifest to the Kubernetes cluster.
+
+  ```azurecli
+  kubectl apply -f .yaml
+  ```
 
 ## Example
 

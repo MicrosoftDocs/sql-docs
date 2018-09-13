@@ -66,22 +66,6 @@ WITH (
   --, PUSHDOWN = ON | OFF
   , CREDENTIAL = TeradataCredentials
 );
-
-
-   ```
-
-4. Create an external file format with [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md).
-
-  ```sql
-/*  specify external file format
- *  FORMAT TYPE: Type of format in Hadoop - DELIMITEDTEXT, RCFILE, ORC, PARQUET
- *  for compressed Parquet files, specify DATA_COMPRESSION  
- */
-CREATE EXTERNAL FILE FORMAT Parquet
-WITH (
-    FORMAT_TYPE = PARQUET
-    -- , DATA_COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'
-); 
    ```
 
 5. Create schemas for external data
@@ -121,11 +105,12 @@ WITH (
 
 
 ```
+
 7. Create statistics on an external table for optimized performance.
 
-  ```sql
+```sql
     CREATE STATISTICS LineitemOrderKeyStatistics ON teradata.lineitem(L_ORDERKEY) WITH FULLSCAN; 
-   ```
+ ```
 
 
 

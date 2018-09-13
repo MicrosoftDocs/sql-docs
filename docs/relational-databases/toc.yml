@@ -1,5 +1,8 @@
 - name: Overview
   href: database-features.md
+  items:
+  - name: Database Engine Developer Documentation
+    href: database-engine-developer-documentation.md
 - name: SQL Server Guides
   href: sql-server-guides.md
   items:
@@ -58,6 +61,8 @@
     href: ../relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming.md
   - name: Extended stored procedures reference
     href: ../relational-databases/extended-stored-procedures-reference/database-engine-extended-stored-procedures-reference.md
+  - name: SQL Server Express LocalDB Reference
+    href: sql-server-express-localdb-reference.md
   - name: Express Localdb error messages
     href: ../relational-databases/express-localdb-error-messages/sql-server-express-localdb-reference-error-messages.md
   - name: Express Localdb instance APIs
@@ -75,7 +80,13 @@
     - name: WMI provider configuration classes
       href: ../relational-databases/wmi-provider-configuration-classes/wmi-provider-for-configuration-management-classes.md
     - name: WMI provider server events
-      href: ../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md
+      href: wmi-provider-server-events/wmi-provider-for-server-events-concepts.md
+    - name: WMI Provider Error 0x8007052f
+      href: wmi-provider-error-0x8007052f.md
+  - name: SqlToolsVSNativeHelpers
+    href: sqltoolsvsnativehelpers.md
+  - name: SqlToolsVSNativeHelpers - FrameWindowVisible
+    href: sqltoolsvsnativehelpers-framewindowvisible.md
 - name: Errors and events
   href: ../relational-databases/errors-events/errors-and-events-reference-database-engine.md
 - name: Event classes

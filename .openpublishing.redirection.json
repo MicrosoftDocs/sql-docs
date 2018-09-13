@@ -91,11 +91,6 @@
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/advanced-analytics/python/index.md",
-            "redirect_url": "/sql/advanced-analytics/what-is-sql-server-machine-learning",
-            "redirect_document_id": false
-        },
-        {
             "source_path": "docs/advanced-analytics/r/index.md",
             "redirect_url": "/sql/advanced-analytics/what-is-sql-server-machine-learning",
             "redirect_document_id": false

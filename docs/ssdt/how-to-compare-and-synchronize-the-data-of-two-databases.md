@@ -80,7 +80,7 @@ For more information, see [Compare and Synchronize Data in One or More Tables wi
   
     Replace the placeholders (*sServerName*, *sDatabaseName*, *sUserName*, *sPassword*, *sDisplayName*, *tServerName*, *tDatabaseName*, *tUserName*, *tPassword*, and *tDisplayName*) with the values for your source and target databases.  
   
-    If you do not specify a source and a target, the **New Data Comparison** dialog box appears. For more information about the parameters for the Sql.NewDataComparison command, see [Automation Command Reference for Database Features of Visual Studio Team System](https://msdn.microsoft.com/en-us/library/dd470565.aspx).  
+    If you do not specify a source and a target, the **New Data Comparison** dialog box appears. For more information about the parameters for the Sql.NewDataComparison command, see [Automation Command Reference for Database Features of Visual Studio Team System](https://msdn.microsoft.com/library/dd470565.aspx).  
   
     The data in the specified source and target databases are compared. The results appear in a Data Compare session. For more information about how to view results or synchronize the data, see [Viewing Data Differences](#ViewDifferences) and [Synchronizing Database Data](#Synchronize).  
   

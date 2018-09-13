@@ -14,6 +14,7 @@ ms.prod: sql
 In this quickstart, you will install SQL Server Big Data Cluster on Kubernetes in a default configuration suitable for dev/test environments. Here is the list of environment variables and their default values you can update to customize your cluster configuration:
 TBD
 
+[!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
 ## Prerequisites
 

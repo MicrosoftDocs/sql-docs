@@ -13,6 +13,8 @@ ms.prod: sql
 
 In this quickstart, you will combine high-volume HDFS data with high-value relational data using SQL Server 2019 CTP 2.0 running on Kubernetes.
 
+[!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
+
 ## Prerequisites
 
 This quickstart requires a running SQL Server Big Data Cluster cluster. For instructions, see the following article:

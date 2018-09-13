@@ -45,7 +45,7 @@ SQL Big Data Clusters enable AI and machine learning tasks on the data stored in
 
 Management and monitoring are provided through a combination of open-source components, SQL Server tools, and Dynamic Management Views.
 
-The cluster Admin portal is a web interface that displays the status and health of the pods in the cluster. It also provides links to other dashboards provided by Kubernetes, Grafana, or Kibana.
+The cluster Admin portal is a web interface that displays the status and health of the pods in the cluster. It also provides links to other dashboards provided by Grafana and Kibana.
 
 You can use Azure Data Studio to perform a variety of tasks on the Big Data Cluster. This is enabled by a new Scale-out Data Management extension. This extension provides:
 
@@ -68,7 +68,7 @@ The control plane provides management and [security](concept-security.md) for th
 
 ### Compute plane
 
-The compute plane provides computational resources to the cluster. It contains nodes running SQL Server on Linux pods. The pods in the compute plane are divided into [compute pools](concept-compute-pool.md) for specific processing tasks. A compute pool can act as a [PolyBase](../relational-databases/polybase/polybase-guide.md) scale-out group for distributed queries over different data sources—such as Oracle, MongoDB, or Teradata. It can also be configured to cache data returned from external queries.
+The compute plane provides computational resources to the cluster. It contains nodes running SQL Server on Linux pods. The pods in the compute plane are divided into [compute pools](concept-compute-pool.md) for specific processing tasks. A compute pool can act as a [PolyBase](../relational-databases/polybase/polybase-guide.md) scale-out group for distributed queries over different data sources—such as Oracle, MongoDB, or Teradata.
 
 ### Data plane
 

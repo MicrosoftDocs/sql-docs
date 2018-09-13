@@ -1,9 +1,10 @@
 ---
 title: Install SQL Server Machine Learning Services (In-Database) on Windows | Microsoft Docs
+description: R in SQL Server or Python on SQL Server is available when you install SQL Server 2017 Machine Learning Services on Windows.
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 08/15/2018  
+ms.date: 09/08/2018  
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
@@ -12,7 +13,7 @@ manager: cgronlun
 # Install SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Starting in SQL Server 2017, R and Python support for in-database analytics is provided in SQL Server Machine Learning Services, the successor to R Services feature introduced in SQL Server 2016. Function libraries are available in R and Python and run as external script on a database engine instance. 
+Starting in SQL Server 2017, R and Python support for in-database analytics is provided in SQL Server Machine Learning Services, the successor to [SQL Server R Services](../r/sql-server-r-services.md) introduced in SQL Server 2016. Function libraries are available in R and Python and run as external script on a database engine instance. 
 
 This article explains how to install the machine learning component by running the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup wizard, and following the on-screen prompts.
 
@@ -102,7 +103,7 @@ For local installations, you must run Setup as an administrator. If you install 
     > [!TIP]
     > You can download and install the appropriate version from this page: [Download SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
     > 
-    > You can also try out the preview release of [SQL Operations Studio](https://docs.microsoft.com/sql/sql-operations-studio/what-is), which supports administrative tasks and queries against SQL Server.
+    > You can also try out the preview release of [Azure Data Studio](../../azure-data-studio/what-is.md), which supports administrative tasks and queries against SQL Server.
   
 2. Connect to the instance where you installed Machine Learning Services, click **New Query** to open a query window, and run the following command:
 
@@ -141,7 +142,7 @@ Use the following steps to verify that all components used to launch external sc
 
     The **run_value** should now be set to 1.
     
-2. Open the **Services** panel or SQL Server Configuration Manager, and verify **SQL Server Launchpad service** is running. You should have one service for every database engine instance that has R or Python installed. For more information, see [Components to support Python integration](../python/new-components-in-sql-server-to-support-python-integration.md). 
+2. Open the **Services** panel or SQL Server Configuration Manager, and verify **SQL Server Launchpad service** is running. You should have one service for every database engine instance that has R or Python installed. For more information about the service, see [Extensibility framework](../concepts/extensibility-framework.md). 
    
 3. If Launchpad is running, you should be able to run simple R and Python scripts to verify that external scripting runtimes can communicate with SQL Server.
 

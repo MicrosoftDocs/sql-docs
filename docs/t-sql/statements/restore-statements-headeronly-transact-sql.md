@@ -32,9 +32,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
 
   Returns a result set containing all the backup header information for all backup sets on a particular backup device in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
-
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)] 
-  
+ 
 > [!NOTE]  
 >  For the descriptions of the arguments, see [RESTORE Arguments &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   

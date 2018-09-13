@@ -87,7 +87,9 @@
       href: sql-server-linux-configure-environment-variables.md
     - name: Configure Docker containers
       href: sql-server-linux-configure-docker.md
-    - name: Customer Feedback
+    - name: Configure MSDTC
+      href: sql-server-linux-configure-msdtc.md
+    - name: Customer feedback
       href: sql-server-linux-customer-feedback.md
   - name: Develop
     href: sql-server-linux-develop-overview.md

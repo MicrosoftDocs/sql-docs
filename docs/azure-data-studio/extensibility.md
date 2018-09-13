@@ -133,91 +133,90 @@ There are currently four supported container types:
 
     ![Widgets container](media/extensibility/widgets-container.png)
 
+    The list of widgets that will be displayed in the container. It’s a flow layout. It accepts the list of widgets.
 
-	The list of widgets that will be displayed in the container. It’s a flow layout. It accepts the list of widgets.
+    ```json
+    "container": {
+    	"widgets-container": [
+    	{
+    		"widget": {
+    			"query-data-store-db-insight": {
+    			}
+    		}
+    	},
+    	{
+    		"widget": {
+    			"explorer-widget": {
+    			}
+    		}
+    	}
+      ]
+    }
+    ```
 
-	```json
-	"container": {
-		"widgets-container": [
-			{
-				"widget": {
-					"query-data-store-db-insight": {
-					}
-				}
-			},
-			{
-				"widget": {
-					"explorer-widget": {
-					}
-				}
-			}
-		]
-	}
-	```
-	
-2. 	`webview-container`
+2. `webview-container`
 
     ![webview container](media/extensibility/webview-container.png)
 
-	The webview will be displayed in the entire container. It expects webview id to be the same is tab ID
+    The webview will be displayed in the entire container. It expects webview id to be the same is tab ID
 
-	```json
-	"container": {
-		"webview-container": null
-	}
-	```
-	
-3. 	`grid-container`
+    ```json
+    "container": {
+    	"webview-container": null
+    }
+    ```
 
-    ![grid container](media/extensibility/grid-container.png)
+3. `grid-container`
 
-	The list of widgets or webviews that will be displayed in the grid layout
+   ![grid container](media/extensibility/grid-container.png)
+
+   The list of widgets or webviews that will be displayed in the grid layout
 
 	```json
 	"container": {
 		"grid-container": [
-			{
-				"name": "widget 1",
-				"widget": {
-					"explorer-widget": {
-					}
-				},
-				"row":0,
-				"col":0
-			},
-			{
-				"name": "widget 2",
-				"widget": {
-					"tasks-widget": {
-						"backup", 
-						"restore",
-						"configureDashboard",
-						"newQuery"
-					}
-				},
-				"row":0,
-				"col":1
-			},
-			{
-				"name": "Webview 1",
-				"webview": {
-					"id": "google"
-				},
-				"row":1,
-				"col":0,
-				"colspan":2
-			},
-			{
-				"name": "widget 3",
-				"widget": {
-					"explorer-widget": {}
-				},
-				"row":0,
-				"col":3,
-				"rowspan":2
-			},
-		]
-	```
+        {
+        	"name": "widget 1",
+        	"widget": {
+        		"explorer-widget": {
+        		}
+        	},
+        	"row":0,
+        	"col":0
+        },
+        {
+        	"name": "widget 2",
+        	"widget": {
+        		"tasks-widget": {
+        			"backup", 
+        			"restore",
+        			"configureDashboard",
+        			"newQuery"
+        		}
+        	},
+        	"row":0,
+        	"col":1
+        },
+        {
+        	"name": "Webview 1",
+        	"webview": {
+        		"id": "google"
+        	},
+        	"row":1,
+        	"col":0,
+        	"colspan":2
+        },
+        {
+        	"name": "widget 3",
+        	"widget": {
+        		"explorer-widget": {}
+        	},
+        	"row":0,
+        	"col":3,
+        	"rowspan":2
+        },
+    ]
+    ```
 
 4. 	`nav-section`
 

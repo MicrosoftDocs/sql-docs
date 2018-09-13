@@ -11,11 +11,11 @@ ms.prod: sql
 
 # What is SQL Server 2019 Big Data Clusters?
 
-Staring with [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)], SQL Big Data Clusters allows you to deploy scalable clusters of SQL Server containers on Kubernetes. These containers are then used to read, write, and process big data from Transact-SQL, allowing you to easily combine your high-value relational data with high-volume big data within the same query.
+Staring with [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)], SQL Big Data Clusters allows you to deploy scalable clusters of SQL Server containers on Kubernetes. These containers are then used to read, write, and process big data from Transact-SQL, allowing you to easily combine and analyze your high-value relational data with high-volume big data.
 
-## Big data scenarios
+## Scenarios
 
-SQL Server Big Data Clusters enable the following scenarios:
+SQL Big Data Clusters provides flexibility in how you interact with your big data. You can query external data sources, store big data in HDFS managed by SQL Server, or pull data from multiple data sources into the cluster. You can then use the data for AI, Machine Learning, and other analysis tasks. The following sections provide more information about these scenarios.
 
 ### Data virtualization
 
@@ -68,7 +68,7 @@ The control plane provides management and [security](concept-security.md) for th
 
 ### Compute plane
 
-The compute plane provides computational resources to the cluster. It contains nodes running SQL Server on Linux pods. The pods in the compute plane are divided into [compute pools](concept-compute-pool.md) for specific processing tasks. A compute pool can act as a [PolyBase](../relational-databases/polybase) scale-out group for distributed queries over different data sources—such as Oracle, MongoDB, or Teradata. It can also be configured to cache data returned from external queries.
+The compute plane provides computational resources to the cluster. It contains nodes running SQL Server on Linux pods. The pods in the compute plane are divided into [compute pools](concept-compute-pool.md) for specific processing tasks. A compute pool can act as a [PolyBase](../relational-databases/polybase/polybase-guide.md) scale-out group for distributed queries over different data sources—such as Oracle, MongoDB, or Teradata. It can also be configured to cache data returned from external queries.
 
 ### Data plane
 

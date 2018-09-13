@@ -40,7 +40,7 @@ Community technology preview (CTP) 2.0 is the first public release of [!INCLUDE[
   - Support for columnstore statistics in `DBCC CLONEDATABASE`
   - New options added to `sp_estimate_data_compression_savings`
   - New `sys.dm_db_page_info` system function returns page information
-  - Always On Availability Groups secondary to primary replica connection redirection
+  - Always On Availability Groups
   - Always Encrypted with secure enclaves
   - SQL Graph features
   - Java language programmability extension
@@ -198,7 +198,9 @@ FROM sys.dm_exec_requests AS d
     AS page_info
 ```
 
-### <a id="ha"></a>Always On Availability Groups secondary to primary replica connection redirection
+### <a id="ha"></a>Always On Availability Groups 
+
+- **Up to five synchronous replicas** – SQL Server 2019 preview increases the limit for synchronous replicas from three (in SQL Server 2017) to five. Users can now configure up to five synchronous replicas (1 primary and up to 4 synchronous secondary replicas) with automatic failover between these replica pairs.
 
 - **Secondary to primary replica connection redirection**: Allows client application connections to be directed to the primary replica regardless of the target server specified in the connection string. This capability allows connection redirection without a listener. Use Secondary to primary replica connection redirection in the following cases:
 

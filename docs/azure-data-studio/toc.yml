@@ -28,13 +28,6 @@
   items:
   - name: Dashboards & insight widgets
     href: insight-widgets.md
-  - name: Extensions
-    href: extensions.md
-    items:
-    - name: SQL Server Agent
-      href: sql-server-agent-extension.md
-    - name: SQL Server Profiler
-      href: sql-server-profiler-extension.md
   - name: Code snippets
     href: code-snippets.md
   - name: Integrated terminal (PowerShell, Bash)
@@ -51,8 +44,18 @@
     href: enable-kerberos.md
   - name: Usage data collection
     href: usage-data-collection.md
-- name: Extension authoring
+- name: Extensions
+  href: extensions.md
   items:
+  - name: SQL Server Agent
+    href: sql-server-agent-extension.md
+  - name: SQL Server Profiler
+    href: sql-server-profiler-extension.md
+- name: Extensibility
+  href: extensibility.md
+  items:
+  - name: Extension authoring
+    href: extension-authoring.md
   - name: Create an extension  
     href: tutorial-create-extension.md
 - name: Resources

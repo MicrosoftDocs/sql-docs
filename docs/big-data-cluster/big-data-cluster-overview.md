@@ -1,5 +1,5 @@
 ---
-title: What is SQL Server Big Data Clusters? | Microsoft Docs
+title: What is SQL Server 2019 Big Data Clusters? | Microsoft Docs
 description:
 author: rothja 
 ms.author: jroth 
@@ -9,33 +9,52 @@ ms.topic: overview
 ms.prod: sql
 ---
 
-# What is SQL Server Big Data Clusters?
+# What is SQL Server 2019 Big Data Clusters?
 
-Staring with [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)], Big Data Clusters allows you to deploy scalable clusters of SQL Server containers on Kubernetes. These containers are then used to read, write, and process big data from Transact-SQL, allowing you to easily combine your high-value relational data with high-volume big data within the same query.
+Staring with [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)], SQL Big Data Clusters allows you to deploy scalable clusters of SQL Server containers on Kubernetes. These containers are then used to read, write, and process big data from Transact-SQL, allowing you to easily combine your high-value relational data with high-volume big data within the same query.
 
-## Capabilities
+## Big data scenarios
 
 SQL Server Big Data Clusters enable the following scenarios:
 
 ### Data virtualization
 
-By leveraging [SQL Server PolyBase](../relational-databases/polybase/polybase-guide.md), Big Data Clusters can query external data sources without importing the data. [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] introduces new connectors to data sources.
+By leveraging [SQL Server PolyBase](../relational-databases/polybase/polybase-guide.md), SQL Big Data Clusters can query external data sources without importing the data. [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] introduces new connectors to data sources.
 
 ![Data virtualization](media/big-data-cluster-overview/data-virtualization.png)
 
 ### Data lake
 
-A Big Data Cluster includes a scalable HDFS storage pool. This can be used to directly store big data, potentially ingested from multiple external sources. Once in the Big Data Cluster, you can analyze and query the data and combine it with your high-value relational data.
+A SQL Big Data Cluster includes a scalable HDFS [storage pool](concept-storage-pool.md). This can be used to directly store big data, potentially ingested from multiple external sources. Once in the Big Data Cluster, you can analyze and query the data and combine it with your high-value relational data.
 
 ![Data lake](media/big-data-cluster-overview/data-lake.png)
 
 ### Scale-out data mart
 
+SQL Big Data Clusters provides scale-out compute and storage to improve the performance of analyzing big data. Data from a variety of sources can be ingested and distributed across [data pool](concept-data-pool.md) nodes for further analysis.
+
 ![Data mart](media/big-data-cluster-overview/data-mart.png)
 
 ### Integrated AI and Machine Learning
 
-### Analysis and monitoring
+SQL Big Data Clusters enable AI and machine learning tasks on the data stored in data HDFS storage pools and the data pools. You can use Spark as well as built-in AI tools in SQL Server, using R, Python, or Java.
+
+![AI and ML](media/big-data-cluster-overview/ai-ml-spark.png)
+
+### Management and Monitoring
+
+Management and monitoring are provided through a combination of open-source components, SQL Server tools, and Dynamic Management Views.
+
+The cluster Admin portal is a web interface that displays the status and health of the pods in the cluster. It also provides links to other dashboards provided by Kubernetes, Grafana, or Kibana.
+
+You can use Azure Data Studio to perform a variety of tasks on the Big Data Cluster. This is enabled by a new Scale-out Data Management extension. This extension provides:
+
+- Built-in snippets for common management tasks.
+- Reports on the number of compute pools and the status of running jobs.
+- Reports on the status of HDFS and Spark jobs.
+- Ability to browse HDFS, upload files, preview files, and create directories.
+- Ability to create, open, and run Jupyter-compatible notebooks.
+- Data virtualization wizard to simplify the creation of external data sources.
 
 ## Architecture
 
@@ -45,15 +64,15 @@ A SQL Big Data Cluster is a cluster of Linux nodes orchestrated by Kubernetes. N
 
 ### Control plane
 
-The control plane provides management and security for the cluster. It contains the Kubernetes master, the SQL Server master instance, and other cluster-level services such as the Hive Metastore and Spark Driver.
+The control plane provides management and [security](concept-security.md) for the cluster. It contains the Kubernetes master, the [SQL Server master instance](concept-master-instance.md), and other cluster-level services such as the Hive Metastore and Spark Driver.
 
 ### Compute plane
 
-The compute plane provides computational resources to the cluster. It contains nodes running SQL Server on Linux pods. The pods in the compute plane are divided into compute pools for specific processing tasks. A compute pool can act as a [PolyBase](../relational-databases/polybase) scale-out group for distributed queries over different data sources—such as Oracle, MongoDB, or Teradata. It can also be configured to cache data returned from external queries.
+The compute plane provides computational resources to the cluster. It contains nodes running SQL Server on Linux pods. The pods in the compute plane are divided into [compute pools](concept-compute-pool.md) for specific processing tasks. A compute pool can act as a [PolyBase](../relational-databases/polybase) scale-out group for distributed queries over different data sources—such as Oracle, MongoDB, or Teradata. It can also be configured to cache data returned from external queries.
 
 ### Data plane
 
-The data plane is used for data persistence and caching. It contains the SQL data pool, and storage nodes.  The SQL data pool consists of one or more nodes running SQL Server on Linux. It is used to cache data returned by Spark jobs. SQL Big Data Cluster data marts are persisted in the data pool. Storage nodes run SQL Server on Linux, Spark, and HDFS. All the storage nodes in a SQL Big Data clusters are members of an HDFS cluster.
+The data plane is used for data persistence and caching. It contains the SQL data pool, and storage nodes.  The SQL [data pool](concept-data-pool.md) consists of one or more nodes running SQL Server on Linux. It is used to cache data returned by Spark jobs. SQL Big Data Cluster data marts are persisted in the data pool. The [storage pool](concept-storage-pool.md) consists of storage nodes comprised of SQL Server on Linux, Spark, and HDFS. All the storage nodes in a SQL Big Data cluster are members of an HDFS cluster.
 
 ## Next steps
 

@@ -68,8 +68,6 @@ To create the storage, create a manifest that describes:
 See the example  manifest
 To create the manifest for the storage, make a file named `pvc.yaml`, and copy in the following `.yaml` code.
 
-[!INCLUDE[ag-pvc-manifest](../includes/kubernetes-ag-pvc-yaml.md)]
-
 Next, apply the manifest to the Kubernetes cluster. The following example applies the manifest:
 
 ```azurecli

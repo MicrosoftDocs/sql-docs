@@ -15,7 +15,7 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 ---
 # Deploy a SQL Server Always On Availability Group on Kubernetes Cluster
 
-To deploy a SQL Server Always On Availability Group on a Kubernetes Cluster
+To deploy a SQL Server Always On Availability Group on a Kubernetes Cluster:
 
 1. Configure the cluster
 

@@ -54,7 +54,7 @@ manager: craigg
   
     -   The **max degree of parallelism** option is set to 1.  
   
- A logical processor is the basic unit of processor hardware that allows the operating system to dispatch a task or execute a thread context. Each logical processor can execute only one thread context at a time. The processor core is the circuitry that provides ability to decode and execute instructions. A processor core may contain one or more logical processors. The following [!INCLUDE[tsql](../../includes/tsql-md.md)] query can be used for obtaining CPU information for the system.  
+A logical processor is the basic unit of processor hardware that allows the operating system to dispatch a task or execute a thread context. Each logical processor can execute only one thread context at a time. The processor core is the circuitry that provides ability to decode and execute instructions. A processor core may contain one or more logical processors. The following [!INCLUDE[tsql](../../includes/tsql-md.md)] query can be used for obtaining CPU information for the system.  
   
 ```sql  
 SELECT (cpu_count / hyperthread_ratio) AS PhysicalCPUs,   
@@ -83,7 +83,7 @@ FROM sys.dm_os_sys_info
   
 2.  Click the **Advanced** node.  
   
-3.  Under **Parallelism**, change the **CostThresholdForParallelism** option to the value you want. Type or select a value from 0 to 32767.  
+3.  Under **Parallelism**, change the **Cost Threshold for Parallelism** option to the value you want. Type or select a value from 0 to 32767.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   

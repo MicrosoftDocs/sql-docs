@@ -52,9 +52,9 @@
     href: sql-server-agent-extension.md
   - name: SQL Server Profiler
     href: sql-server-profiler-extension.md
-- name: Extensibility
+- name: Extension Authoring
   items:
-  - name: Overview
+  - name: Extensibility overview
     href: extensibility.md
   - name: Extension authoring
     href: extension-authoring.md

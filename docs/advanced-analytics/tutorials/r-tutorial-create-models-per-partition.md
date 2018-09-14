@@ -73,6 +73,30 @@ WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 
 Start Management Studio and connect to the database engine instance. In Object Explorer, verify the [NYCTaxi_Sample database](sqldev-download-the-sample-data.md) exists. 
 
+## Create a training function
+
+The demo database comes with a scalar function for calculating distance, but our stored procedure works better with a table function. Run the following script to create the **CalculateDistance** function used in the [training step](#training-step).
+
+```sql
+USE NYCTaxi_sample
+GO
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE FUNCTION [dbo].[CalculateDistance] (@Lat1 float, @Long1 float, @Lat2 float, @Long2 float)
+-- User-defined function calculates the direct distance between two geographical coordinates.
+RETURNS TABLE
+AS
+RETURN
+       SELECT COALESCE(3958.75 * ATAN(SQRT(1 - POWER(t.distance, 2)) / nullif(t.distance,0)), 0) as direct_distance
+       FROM (VALUES (CAST( (SIN(@Lat1 / 57.2958) * SIN(@Lat2 / 57.2958))
+          + (COS(@Lat1 / 57.2958) * COS(@Lat2 / 57.2958) * COS((@Long2 / 57.2958) - (@Long1 / 57.2958)))
+          as decimal(28,10))) ) as t(distance)
+GO 
+ ```
+
 ## Define a procedure for creating and training per-partition models
 
 This tutorial wraps all R script in a stored procedure. In this step, you add script that creates an input dataset, builds a classification model to predict a tip outcome, and stores the model in the database.
@@ -147,6 +171,8 @@ By default, the query optimizer tends to operate under `@parallel=1` on tables h
 
 > [!Tip]
 > For training workoads, you can use `@parallel` with any arbitrary training script, even those using non-Microsoft-rx algorithms. Typically, only RevoScaleR algorithms (with the rx prefix) offer parallelism in training scenarios in SQL Server. But with the new parameter, you can parallelize a script that calls functions, including open-source R functions, not specifically engineered with that capability. This works because partitions have affinity to specific threads, so all operations called in a script execute on a per-partition basis, on the given thread.
+
+<a name="training-step"></a>
 
 ## Run the procedure and train the model
 

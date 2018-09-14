@@ -379,6 +379,35 @@ For information how this is used with availability groups, see the following two
 - [Configure Always On Availability Group for SQL Server on Linux](sql-server-linux-availability-group-configure-ha.md)
 - [Configure read-scale availability group for SQL Server on Linux](sql-server-linux-availability-group-configure-rs.md)
 
+
+## <a id="mlservices-eula"></a> Accept MLServices EULAs
+
+Adding [machine learning R or Python packages](sql-server-setup-machine-learning.md) to the database engine requires that you accept the licensing terms for open-source distributions of R and Python. The following table enumerates all available comamnds or options for accepting, removing or updating the mlservices EULAs. There are two EULAs for Anaconda and Microsoft R Open, respectively.
+
+```bash
+# For all packages: database engine and mlservices
+# Setup prompts for mlservices EULAs, which you need to accept
+sudo /opt/mssql/bin/mssql-conf setup
+
+# Add R or Python to an existing installation
+sudo /opt/mssql/bin/mssql-conf setup accept-eula-ml
+
+# Alternative valid syntax
+# Add R or Python to an existing installation
+sudo /opt/mssql/bin/mssql-conf set EULA accepteulaml Y
+
+# Rescind EULA acceptance
+sudo /opt/mssql/bin/mssql-conf unset EULA accepteulaml
+```
+
+You can also add EULA acceptance directly to the [mssql.conf file](#mssql.conf-format):
+
+```ini
+[EULA]
+accepteula = Y
+accepteulaml = Y
+``` 
+
 ## <a id="localaudit"></a> Set local audit directory
 
 The **telemetry.userrequestedlocalauditdirectory** setting enables Local Audit and lets you set the directory where the Local Audit logs are created.

@@ -34,7 +34,7 @@ ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 | [Default backup directory](#backupdir) | Change the default directory for new backup files. |
 | [Dump type](#coredump) | Choose the type of dump memory dump file to collect. |
 | [High availability](#hadr) | Enable Availability Groups. |
-| [Local Audit directory](#localaudit) | Set a a directory to add Local Audit files. |
+| [Local Audit directory](#localaudit) | Set a directory to add Local Audit files. |
 | [Locale](#lcid) | Set the locale for SQL Server to use. |
 | [Memory limit](#memorylimit) | Set the memory limit for SQL Server. |
 | [Microsoft Distributed Transaction Coordinator](#msdtc) | Configure and troubleshoot MSDTC on Linux. |
@@ -51,13 +51,13 @@ ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 
 * For the shared disk cluster scenario, do not attempt to restart the **mssql-server** service to apply changes. SQL Server is running as an application. Instead, take the resource offline and then back online.
 
-* These examples run mssql-conf by specify the full path: **/opt/mssql/bin/mssql-conf**. If you choose to navigate to that path instead, run mssql-conf in the context of the current directory: **./mssql-conf**.
+* These examples run mssql-conf by specifying the full path: **/opt/mssql/bin/mssql-conf**. If you choose to navigate to that path instead, run mssql-conf in the context of the current directory: **./mssql-conf**.
 
 ## <a id="agent"></a> Enable SQL Server Agent
 
 The **sqlagent.enabled** setting enables [SQL Server Agent](sql-server-linux-run-sql-server-agent-job.md). By default, SQL Server Agent is disabled. If **sqlagent.enabled** is not present in the mssql.conf settings file, then SQL Server internally assumes that SQL Server Agent is disabled.
 
-To change this settings, use the following steps:
+To change this setting, use the following steps:
 
 1. Enable the SQL Server Agent:
 
@@ -87,7 +87,7 @@ The **set-collation** option changes the collation value to any of the supported
 
 1. The mssql-conf utility will attempt to change to the specified collation value and restart the service. If there are any errors, it rolls back the collation to the previous value.
 
-1. Retore your user database backups.
+1. Restore your user database backups.
 
 For a list of supported collations, run the [sys.fn_helpcollations](../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) function: `SELECT Name from sys.fn_helpcollations()`.
 
@@ -374,7 +374,7 @@ sudo /opt/mssql/bin/mssql-conf set hadr.hadrenabled  1
 sudo systemctl restart mssql-server
 ```
 
-For information how this is used with availability groups, see the following two topics.
+For information on how this is used with availability groups, see the following two topics.
 
 - [Configure Always On Availability Group for SQL Server on Linux](sql-server-linux-availability-group-configure-ha.md)
 - [Configure read-scale availability group for SQL Server on Linux](sql-server-linux-availability-group-configure-rs.md)
@@ -382,7 +382,7 @@ For information how this is used with availability groups, see the following two
 
 ## <a id="mlservices-eula"></a> Accept MLServices EULAs
 
-Adding [machine learning R or Python packages](sql-server-setup-machine-learning.md) to the database engine requires that you accept the licensing terms for open-source distributions of R and Python. The following table enumerates all available comamnds or options for accepting, removing or updating the mlservices EULAs. There are two EULAs for Anaconda and Microsoft R Open, respectively.
+Adding [machine learning R or Python packages](sql-server-setup-machine-learning.md) to the database engine requires that you accept the licensing terms for open-source distributions of R and Python. The following table enumerates all available commands or options related to mlservices EULAs. There are two EULAs for Anaconda and Microsoft R Open, respectively. The same parameter is used for either or both packages, depending on what you installed.
 
 ```bash
 # For all packages: database engine and mlservices

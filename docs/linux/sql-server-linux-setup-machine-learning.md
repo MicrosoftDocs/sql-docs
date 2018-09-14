@@ -214,7 +214,7 @@ sudo yum install -y mssql-sqlserver mssql-server-extensibility mssql-server-exte
 
 Using the [unattended install](https://docs.microsoft.com/sql/linux/sql-server-linux-setup?view=sql-server-2017#unattended) for the Database Engine, add the packages for mlservices and EULAs.
 
-Recall that Setup or the mssql-conf tool prompts for licence agreement acceptance. For open-source R and Python components, accepting the mlservices EULA supplement for is required for uninterrupted installation for mlservices packages. This is in addition to the SQL Server EULA. 
+Recall that Setup or the mssql-conf tool prompts for license agreement acceptance. For open-source R and Python components, accepting the mlservices EULA supplement for is required for uninterrupted installation for mlservices packages. This is in addition to the SQL Server EULA. 
 
 All possible permutations of EULA acceptance are documented in [Configure SQL Server on Linux with the mssql-conf tool](sql-server-configure-mssql-conf.md#mlservices-eula).
 

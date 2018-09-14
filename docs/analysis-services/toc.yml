@@ -9,9 +9,11 @@
   - name: Tools and applications
     href: tools-and-applications-used-in-analysis-services.md
   - name: Client libraries (data providers)
-    href: ../analysis-services/instances/data-providers-used-for-analysis-services-connections.md
+    href: instances/data-providers-used-for-analysis-services-connections.md
   - name: Comparing Tabular and Multidimensional solutions
     href: comparing-tabular-and-multidimensional-solutions-ssas.md
+  - name: Analysis Services Features and Tasks
+    href: analysis-services-features-and-tasks.md
   - name: Analysis Services features supported by SQL Server editions
     href: analysis-services-features-supported-by-the-editions-of-sql-server-2016.md
   - name: Backward compatibility (SQL Server 2016 Analysis Services)
@@ -215,12 +217,16 @@
     href: ../analysis-services/data-mining/data-mining-ssas.md
   - name: Power Pivot for Sharepoint
     href: ../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md
+  - name: Monitor an Analysis Services Instance
+    href: instances/monitor-an-analysis-services-instance.md
   - name: Manage servers
     href: ../analysis-services/instances/analysis-services-instance-management.md
   - name: Trace-events
     href: ../analysis-services/trace-events/analysis-services-trace-events.md
 - name: Developer
   items:
+  - name: Analysis Services Developer Documentation
+    href: analysis-services-developer-documentation.md
   - name: Tabular Model Programming for Compatibility Level 1200 and higher
     href: ./tabular-model-programming-compatibility-level-1200/tabular-model-programming-for-compatibility-level-1200.md
     items:
@@ -248,6 +254,11 @@
     href: ../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md
   - name: Analysis Services Scripting Language (ASSL for XMLA)
     href: scripting/analysis-services-scripting-language-assl-for-xmla.md
+  - name: Data Mining Programming
+    href: data-mining-programming.md
+    items:
+    - name: Data Mining Programming - OLE DB
+      href: data-mining-programming-ole-db.md
 - name: Samples
   items:
   - name: Analysis Services samples

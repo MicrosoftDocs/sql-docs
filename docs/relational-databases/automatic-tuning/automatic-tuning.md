@@ -37,11 +37,11 @@ Automatic tuning in [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] enabl
 
 ## Why automatic tuning?
 
-One of the main tasks in classic database administration is monitoring the workload, identifying critical [!INCLUDE[tsql_md](../../includes/tsql-md.md)] queries, indexes that should be added to improve performance, and rarely used indexes. [!INCLUDE[ssde_md](../../includes/ssde_md.md)] provides detailed insight into the queries and indexes that you need to monitor. However, constantly monitoring database is a hard and tedious task, especially when dealing with many databases. Managing a huge number of databases might be impossible to do efficiently. Instead of monitoring and tuning your database manually, you might consider delegating some of the monitoring and tuning actions to [!INCLUDE[ssde_md](../../includes/ssde_md.md)] using automatic tuning feature.
+Three of the main tasks in classic database administration are monitoring the workload, identifying critical [!INCLUDE[tsql_md](../../includes/tsql-md.md)] queries, indexes that should be added to improve performance, and identifying rarely used. [!INCLUDE[ssde_md](../../includes/ssde_md.md)] provides detailed insight into the queries and indexes that you need to monitor. However, constantly monitoring a database is a hard and tedious task, especially when dealing with many databases. Managing a huge number of databases might be impossible to do efficiently. Instead of monitoring and tuning your database manually, you might consider delegating some of the monitoring and tuning actions to [!INCLUDE[ssde_md](../../includes/ssde_md.md)] using automatic tuning feature.
 
-### How does automatic tuning works?
+### How does automatic tuning work?
 
-Automatic tuning is a continuous monitoring and analysis process that constantly learns about the characteristic of your workload and identify potential issues and improvements.
+Automatic tuning is a continuous monitoring and analysis process that constantly learns about the characteristics of your workload and identify potential issues and improvements.
 
 ![Automatic tuning process](./media/tuning-process.png)
 

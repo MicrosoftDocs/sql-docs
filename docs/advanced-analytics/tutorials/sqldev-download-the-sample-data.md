@@ -125,9 +125,11 @@ The following table summarizes the objects created in the NYC Taxi demo database
 
 ## Query data for verification
 
-As a validation step, query the database to confirm the data was uploaded.
+As a validation step, run a query to confirm the data was uploaded.
 
-+ In Object Explorer, under Databases and NYCTaxi_sample, right-click **dbo.nyctaxi_sample** and choose **Select Top 1000 Rows** to return some data.
+1. In Object Explorer, under Databases, expand the **NYCTaxi_Sample** datatabase, and then open the Tables folder.
+
+2. Right-click the **dbo.nyctaxi_sample** and choose **Select Top 1000 Rows** to return some data.
 
 ## Next steps
 

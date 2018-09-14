@@ -51,8 +51,6 @@ After you have configured your Kubernetes cluster, you can proceed with the depl
 
 If you want to customize your Aris configuration, according to your workload needs, follow the next set of instructions.
 
-[!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
-
 ## Verify kubernetes configuration
 
 Execute the below kubectl command to view the cluster configuration. Ensure that kubectl is pointed to the correct cluster context.
@@ -73,10 +71,9 @@ sudo apt-get install python3-pip
 sudo pip3 install --upgrade pip
 ```
 
-# Download and install mssqlctl tool 
 Run the below command to install msqlctl:
 
-TBD Fix the right path and name
+TODO Fix the right path and name
 ```bash
 pip install mssqlctl-1.0.0-py3-none-any.whl
 ```
@@ -89,12 +86,12 @@ The cluster configuration can be customized using a set of environment variables
 |---|---|---|---|
 | **ACCEPT_EULA** | Yes | N/A | Accept the SQL Server license agreement (for example, 'Y').  |
 | **CLUSTER_NAME** | Yes | N/A | The name of the Kubernetes namespace to deploy SQLServer Big Data cluster into. |
-| **CLUSTER_PLATFORM** | Yes | N/A | The pltform the Kubernetes cluster is deployed. Can be `aks`,`minikube` |
+| **CLUSTER_PLATFORM** | Yes | N/A | The platform the Kubernetes cluster is deployed. Can be `aks`, `minikube`, `kubernetes`|
 | **CLUSTER_COMPUTE_POOL_REPLICAS** | No | 1 | The number of compute pool replicas to build out. In CTP2.0 only valued allowed is 1. |
 | **CLUSTER_DATA_POOL_REPLICAS** | No | 2 | The number of data pool replicas to build out. |
 | **CLUSTER_STORAGE_POOL_REPLICAS** | No | 2 | The number of storage pool replicas to build out. |
-| **DOCKER_REGISTRY** | Yes | TBD | The private registry where the images used to deploy the cluster are stored. See this <TBD add link> for a complete list of images. |
-| **DOCKER_REPOSITORY** | Yes | TBD | The private repository within the above registry where images are stored. |
+| **DOCKER_REGISTRY** | Yes | TBD | The private registry where the images used to deploy the cluster are stored. |
+| **DOCKER_REPOSITORY** | Yes | TBD | The private repository within the above registry where images are stored.  It is required for the duration of the gated public preview. |
 | **DOCKER_USERNAME** | Yes | N/A | The username to access the container images in case they are stored in a private repository. It is required for the duration of the gated public preview. |
 | **DOCKER_PASSWORD** | Yes | N/A | The password to access the above private repository. It is required for the duration of the gated public preview.|
 | **DOCKER_EMAIL** | Yes | N/A | The email associated with the above private repository. It is required for the duration of the gated private preview. |
@@ -103,22 +100,25 @@ The cluster configuration can be customized using a set of environment variables
 | **DOCKER_PRIVATE_REGISTRY** | Yes | 1 | For the timeframe of the gated public preview, this value has to be set to 1. |
 | **CONTROLLER_USERNAME** | Yes | N/A | The username for the cluster administrator. |
 | **CONTROLLER_PASSWORD** | Yes | N/A | The password for the cluster administrator. |
-| **KNOX_USERNAME** | Yes | N/A | The username for Knox user. |
 | **KNOX_PASSWORD** | Yes | N/A | The password for Knox user. |
 | **MSSQL_SA_PASSWORD** | Yes | N/A | The passowrd of SA user for SQL master instance. |
-| **USE_PERSISTENT_VOLUME** | No | true | `true` to use Kubernetes Persistent Volume Claims for pod storage.  `false` to use ephemeral host storage for pod storage. |
-| **STORAGE_CLASS_NAME** | No | default | If `USE_PERSISTENT_VOLUME` is `true` this indicates the name of the Kubernetes Storage Class to use.  |
+| **USE_PERSISTENT_VOLUME** | No | true | `true` to use Kubernetes Persistent Volume Claims for pod storage.  `false` to use ephemeral host storage for pod storage. See the [data persistence](concept-data-persistence.md) topic for more details. |
+| **STORAGE_CLASS_NAME** | No | default | If `USE_PERSISTENT_VOLUME` is `true` this indicates the name of the Kubernetes Storage Class to use. See the [data persistence](concept-data-persistence.md) topic for more details. |
 | **MASTER_SQL_PORT** | No | 31433 | The TCP/IP port that the master SQL instance listens on the public network. |
 | **KNOX_PORT** | No | 30443 | The TCP/IP port that Apache Knox listens on the public network. |
-| **GRAFNA_PORT** | No | 30888 | The TCP/IP port that the Grafana monitoring application listens on the public network. |
+| **GRAFANA_PORT** | No | 30888 | The TCP/IP port that the Grafana monitoring application listens on the public network. |
 | **KIBANA_PORT** | No | 30999 | The TCP/IP port that the Kibana log search application listens on the public network. |
 
-Setting the environment variables required for deploying Aris cluster differs depending on whether you are using Windows or Linux client.  Choose the steps below depending on which operating system you are using.
+
 
 > [!IMPORTANT]
-> Make sure you wrap the passwords in double quotes if it contains any special characters.
->
-> You can set the MSSQL_SA_PASSWORD to whatever you like, but make sure they are sufficiently complex and don’t use the ! & or ‘ characters.
+>1. For the duration of the limited private preview, credentials for the private Docker registry will be provided to you upon triaging your [EAP registration](https://aka.ms/eapsignup).
+>1. For an on-premises cluster built with kubeadm, the value for environment variable `CLUSTER_PLATFORM` is `kubernetes`. Also, when USE_PERSISTENT_STORAGE=true, you must pre-provision a Kubernetes storage class and pass it through using the STORAGE_CLASS_NAME.
+>1. Make sure you wrap the passwords in double quotes if it contains any special characters. You can set the MSSQL_SA_PASSWORD to whatever you like, but make sure they are sufficiently complex and don’t use the `!`, `&` or `‘` characters.
+>1. The name of your cluster must be only lower case alpha-numeric characters, no spaces. All Kubernetes artifacts (containers, pods, statefull sets, services) for the cluster will be created in a namespace with same name as the cluster name specified.
+
+
+Setting the environment variables required for deploying Aris cluster differs depending on whether you are using Windows or Linux client.  Choose the steps below depending on which operating system you are using.
 
 Initialize the following environment variables, they are required for deploying the cluster:
 
@@ -128,12 +128,10 @@ Using a CMD window (not PowerShell), configure the following environment variabl
 
 ```cmd
 SET ACCEPT_EULA=Y
-SET CLUSTER_PLATFORM=<minikube or aks>
-SET CLUSTER_NAME=<your SQL server Big Data cluster name>
+SET CLUSTER_PLATFORM=<minikube or aks or kubernetes>
 
 SET CONTROLLER_USERNAME=<controller_admin_name – can be anything>
 SET CONTROLLER_PASSWORD=<controller_admin_password – can be anything, password complexity compliant>
-SET KNOX_USERNAME=<knox_username – can be anything>
 SET KNOX_PASSWORD=<knox_password – can be anything, password complexity compliant>
 SET MSSQL_SA_PASSWORD=<sa_password_of_master_sql_instances>
 
@@ -150,13 +148,10 @@ Initialize the following environment variables:
 
 ```bash
 export ACCEPT_EULA=Y
-export CLUSTER_PLATFORM=<minikube or aks>
-export CLUSTER_PLATFORM=<minikube or aks>
-export CLUSTER_NODE_REPLICAS=<number_of_nodes_excluding_master>
+export CLUSTER_PLATFORM=<minikube or aks or kubernetes>
 
 export CONTROLLER_USERNAME=<controller_admin_name – can be anything>
 export CONTROLLER_PASSWORD=<controller_admin_password – can be anything, password complexity compliant>
-export KNOX_USERNAME=<knox_username – can be anything>
 export KNOX_PASSWORD=<knox_password – can be anything, password complexity compliant>
 export MSSQL_SA_PASSWORD=<sa_password_of_master_sql_instances>
 
@@ -167,22 +162,15 @@ export DOCKER_PASSWORD=<your password>
 export DOCKER_PRIVATE_REGISTRY="1"
 ```
 
-> [!NOTE]
-> For an on-premises cluster built with kubeadm, when USE_PERSISTENT_STORAGE=true, you must pre-provision a Kubernetes storage class and pass it through using the STORAGE_CLASS_NAME.
-
 ## Deploy SQL Server Big Data cluster
 
 The create cluster API is used to initialize the Kubernetes namespace and deploy all the application pods into the namespace. To deploy SQL Server Big Data cluster on your Kubernetes cluster, run the following command:
 
 ```bash
-mssqlctl create cluster <name of your cluster>
+TODO mssqlctl create cluster <name of your cluster>
 ```
 
-> [!NOTE]
-> The name of your cluster needs to be only lower case alpha-numeric characters, no spaces. All Kubernetes artifacts (containers, pods, statefull sets, services) for the cluster will be created in a namespace with same name as the cluster name specified.
-
-
-  The client uses the Get Cluster and Get Logs APIs to check the status of the Create Cluster operation.The command window will ouput the deployment status. You can also check the deployment status by running these commands in a different cmd window:
+During cluster bootstrap, the client command window will ouput the deployment status. You can also check the deployment status by running these commands in a different cmd window:
 
 ```bash
 kubectl get all -n <name of your cluster>
@@ -195,11 +183,11 @@ You can see a more granular status and configuration for each pod by running:
 kubectl describe pod <pod name> -n <name of your cluster>
 ```
 
-Once the Controller pod is running, you can use the Cluster Administration Portal to monitor the deployment. The portal will be launched automatically. 
+Once the Controller pod is running, you can leverage the Deployment tab in the [Cluster Administration Portal](manage-monitoring.md) to monitor the deployment.
 
 ## <a id="masterip"></a> Get the master instance IP address
 
-After the deployment script has completed successfully, you can obtain the IP address of the SQL Server master instance using the steps outlined below. You will use this IP address and port number 31433 to connect to the SQL Server master instance (for example: **\<ip-address\>,31433**). Similarly, for the Knox Gateway endpoint. All cluster endpoints are outlined in the Service Endpoints tab in the Cluster Administration Portal as well.
+After the deployment script has completed successfully, you can obtain the IP address of the SQL Server master instance using the steps outlined below. You will use this IP address and port number 31433 to connect to the SQL Server master instance (for example: **\<ip-address\>,31433**). Similarly, for the Knox Gateway endpoint. All cluster endpoints are outlined in the Service Endpoints tab in the [Cluster Administration Portal](manage-monitoring.md) as well.
 
 ### AKS
 
@@ -214,12 +202,16 @@ Look for the **External-IP** value that is assigned to the service. Then, connec
 
 ### Minikube
 
-If you are using Minikube, you need to run the following command to get the IP address you need to connect to. In addition to the IP, specify the port for the endpoint you need to connect to.
+If you are using Minikube, you need to run the following command to get the IP address you need to connect to. In addition to the IP, specify the port for the endpoint you need to connect to. To get all the service endpoints for 
 
 ```bash
 minikube ip
 ```
 
+Irrespective of the platform you are running your Kubernetes cluster on, to get all the service endpoints deployed for the cluster, run following command:
+```bash
+kubectl get svc -n <name of your cluster>
+```
 
 ## Next steps
 

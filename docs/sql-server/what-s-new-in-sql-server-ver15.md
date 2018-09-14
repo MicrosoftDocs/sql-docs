@@ -87,10 +87,12 @@ Continue reading for more details about these features.
 
 - **Row mode memory grant feedback** expands on the memory grant feedback feature introduced in SQL Server 2017 by adjusting memory grant sizes for both batch and row mode operators.  For an excessive memory grant condition, if the granted memory is more than two times the size of the actual used memory, memory grant feedback will recalculate the memory grant. Consecutive executions will then request less memory. For an insufficiently sized memory grant that results in a spill to disk, memory grant feedback will trigger a recalculation of the memory grant.  Consecutive executions will then request more memory. This feature is enabled by default under database compatibility level 150.
 
-- **Approximate COUNT DISTINCT** returns the approximate number of unique non-null values in a group. This function is designed for use in big data scenarios and is optimized for the following conditions:
-  - Access of data sets that are millions of rows or higher AND
-  - Aggregation of a column or columns that have a large number of distinct values AND
-  - Responsiveness is more critical than absolute precision. `APPROXIMATE_COUNT_DISTINCT` yields results typically within 2% of the precise answer in a small fraction of the time.
+- **Approximate COUNT DISTINCT** returns the approximate number of unique non-null values in a group. This function is designed for use in big data scenarios. This function is optimized for queries where all the following conditions are true:
+   - Accesses data sets of at least millions of rows.
+   - Aggregates a column or columns that have a large number of distinct values.
+   - Responsiveness is more critical than absolute precision.
+      - `APPROXIMATE_COUNT_DISTINCT` returns results that are typically within 2% of the precise answer.
+      - And it returns the approximate answer in a small fraction of the time needed for the precise answer.
 
 - **Batch mode on rowstore** no longer requires a columnstore index to process a query in batch mode. Batch mode allows query operators to work on a set of rows, instead of just one row at a time. This feature is enabled by default under database compatibility level 150. Batch mode improves the speed of queries that access rowstore tables when all the following are true:
    - The query uses analytic operators such as joins or aggregation operators.
@@ -209,7 +211,7 @@ FROM sys.dm_exec_requests AS d
 
 - **Up to five synchronous replicas** – SQL Server 2019 preview increases the maximum number of synchronous replicas to 5, up from 3 in SQL Server 2017. You can configure this group of 5 replicas to have automatic failover within the group. There is 1 primary replica, plus 4 synchronous secondary replicas.
 
-- **Secondary to primary replica connection redirection**: Allows client application connections to be directed to the primary replica regardless of the target server specified in the connection string. This capability allows connection redirection without a listener. Use Secondary to primary replica connection redirection in the following cases:
+- **Secondary-to-primary replica connection redirection**: Allows client application connections to be directed to the primary replica regardless of the target server specified in the connection string. This capability allows connection redirection without a listener. Use secondary-to-primary replica connection redirection in the following cases:
 
   - The cluster technology does not offer a listener capability.
   - A multi subnet configuration where redirection becomes complex.

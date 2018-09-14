@@ -30,13 +30,12 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-Executes the script provided as argument at an external location. The script must be written in a supported and registered language (R or Python). To execute **sp_execute_external_script**, you must first enable external scripts by using the statement, `sp_configure 'external scripts enabled', 1;`.  
+Executes the script, which is provided as an input argument, in the [extensibility framework](../advanced-analytics/concepts/extensibility-framework.md). Script must be written in a supported and registered language, and the database engine must have at least one extension: [R](../advanced-analytics/concepts/extension-r.md), [Python](../advanced-analytics/concepts/extension-python.md), or [Java (SQL Server 2019 preview only)](../advanced-analytics/java/extension-java.md). To execute **sp_execute_external_script**, you must first enable external scripts by using the statement, `sp_configure 'external scripts enabled', 1;`.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
-**This topic applies to**:  
-- [SQL Server 2017 Machine Learning Services (In-Database)](https://docs.microsoft.com/sql/advanced-analytics/install/sql-machine-learning-services-windows-install)
-- [SQL Server 2016 R Services](https://docs.microsoft.com/sql/advanced-analytics/install/sql-r-services-windows-install)
+> [!Note]
+> Language extensions vary by SQL Server version and only install as an add-on to the database engine instance.
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ## Syntax
@@ -73,7 +72,7 @@ sp_execute_external_script
 
 ## Arguments
  **@language** = N'*language*'  
- Indicates the script language. *language* is **sysname**.  Valid values are `Python` or `R`. 
+ Indicates the script language. *language* is **sysname**.  Depending on your version of SQL Server, valid values are R (SQL Server 2016 and later), Python (SQL Server 2017 and later), and Java (SQL Server 2019 preview). 
   
  **@script** = N'*script*' 
  External language  script specified as a literal or variable input. *script* is **nvarchar(max)**.  

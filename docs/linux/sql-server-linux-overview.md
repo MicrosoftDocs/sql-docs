@@ -72,7 +72,7 @@ If you are already familiar with SQL Server, review the [Release notes](sql-serv
 
 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] has the same underlying database engine on all supported platforms, including Linux. So many existing features and capabilities operate the same way on Linux. This area of the documentation exposes some of these features from a Linux perspective. It also calls out areas that have unique requirements on Linux.
 
-If you are already familiar with SQL Server on Linux, review the [Release notes](sql-server-linux-release-notes-2019.md) for general guidelines and known issues for this release. Then look at [what's new for SQL Server 2019 preview on Linux][What's new in SQL Server 2019 CTP 2.0 for Linux](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15).
+If you are already familiar with SQL Server on Linux, review the [Release notes](sql-server-linux-release-notes-2019.md) for general guidelines and known issues for this release. Then look at [what's new for SQL Server 2019 preview on Linux](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15).
 
 ::: moniker-end
 

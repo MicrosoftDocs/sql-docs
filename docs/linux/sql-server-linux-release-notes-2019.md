@@ -55,7 +55,7 @@ If you are updating existing SQL Server packages, run the appropriate update com
 - [Install SQL Server package](sql-server-linux-setup.md#upgrade)
 - [Install Full-text Search package](sql-server-linux-setup-full-text-search.md)
 - [Install SQL Server Integration Services](sql-server-linux-setup-ssis.md)
-- [Install SQL Server vNext Machine Learning Services R and Python support on Linux](sql-server-linux-setup-machine-learning.md)
+- [Install SQL Server 2019 preview Machine Learning Services R and Python support on Linux](sql-server-linux-setup-machine-learning.md)
 - [Enable SQL Server Agent](sql-server-linux-setup-sql-agent.md)
 
 ## <a id="CTP20"></a> CTP 2.0 (September 2018)

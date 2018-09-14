@@ -173,10 +173,13 @@ exec train_rxLogIt_per_partition N'
 go
 ```
 
-**Results**
+## Check results
 
-The result in the models table should be 5 different models since we had 5 partitions (payment types)
-select * from ml_models.
+The result in the models table should be five different models, based on five partitions segmented by the five payment types. Models are in the **ml_models** data source.
+
+```sql
+SELECT * ml_models
+```
 
  
 ## Define a procedure for predicting outcomes

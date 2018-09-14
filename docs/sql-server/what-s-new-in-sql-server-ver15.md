@@ -48,11 +48,12 @@ Community technology preview (CTP) 2.0 is the first public release of [!INCLUDE[
   - Polybase
   - Expanded support for Persistent Memory (PMEM) devices
 
-- [Big Data Cluster](#bigdatacluster)
-  - Deploy a SQL Server Big Data Cluster with Linux containers on Kubernetes
-  - Use Azure Data Studio to run Jupyter Notebooks
-  - Ingest external data into a data pool
-  - Query HDFS data in the storage pool
+- [Big Data Clusters](#bigdatacluster)
+  - Deploy a Big Data cluster with SQL and Spark Linux containers on Kubernetes
+  - Access your big data from HDFS
+  - Run Advanced analytics and machine learning with Spark
+  - Use Spark streaming to data to SQL data pools
+  - Use Azure Data Studio to run Query books that provide a notebook experience
 
 - [SQL Server on Linux](#sqllinux)
   - Replication support
@@ -268,13 +269,17 @@ Any SQL Server file that is placed on a PMEM device operates in *enlightened* mo
 >[!NOTE]
 >For this preview release, support for Persistent Memory (PMEM) devices is only available on Linux.
 
-## <a id="bigdatacluster"></a>Big Data Cluster
+## <a id="bigdatacluster"></a>Big Data Clusters
 
-- Deploy a SQL Server Big Data Cluster with Linux containers on Kubernetes
-- Use Azure Data Studio to run Jupyter Notebooks
-- Ingest external data into a data pool
-- Query HDFS data in the storage pool
-- Access features with [**Azure Data Studio (preview)**](../sql-operations-studio/what-is.md)
+SQL Server 2019 [Big Data Clusters](../big-data-cluster/big-data-cluster-overview.md) enables new scenarios including the following:
+
+- Deploy a Big Data cluster with SQL and Spark Linux containers on Kubernetes
+- Access your big data from HDFS
+- Run Advanced analytics and machine learning with Spark
+- Use Spark streaming to data to SQL data pools
+- Run Query books that provide a notebook experience in [**Azure Data Studio (preview)**](../sql-operations-studio/what-is.md).
+  
+[!INCLUDE [Big Data Clusters preview](../includes/big-data-cluster-preview-note.md)]
 
 ## <a id="sqllinux"></a> SQL Server on Linux
 

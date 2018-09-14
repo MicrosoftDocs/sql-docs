@@ -331,7 +331,7 @@ Other common tools to connect to SQL Server include:
 
 - [Visual Studio Code](sql-server-linux-develop-use-vscode.md)
 - [SQL Server Management Studio (SSMS) on Windows](sql-server-linux-manage-ssms.md)
-- [SQL Server Operations Studio (Preview)](../sql-operations-studio/what-is.md)
+- [Azure Data Studio (Preview)](../azure-data-studio/what-is.md)
 - [mssql-cli (Preview)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)
 
 ## Remove your container

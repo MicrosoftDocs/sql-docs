@@ -1,6 +1,6 @@
 ---
-title: Get started with SQL Server 2017 in the Cloud | Microsoft Docs
-description: This quickstart shows how to run the SQL Server 2017 on Linux in the cloud of your choice.
+title: Get started with SQL Server in the Cloud | Microsoft Docs
+description: This quickstart shows how to run the SQL Server on Linux in the cloud of your choice.
 author: annashres
 ms.author: annashres
 manager: craigg
@@ -12,11 +12,11 @@ ms.custom: "sql-linux"
 ms.technology: linux
 ms.assetid:
 ---
-# Quickstart: Run the SQL Server 2017 in the cloud
+# Quickstart: Run the SQL Server in the cloud
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-In this quickstart, you will install SQL Server 2017 on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), or Ubuntu in the cloud of your choice. Go to [Provision a Linux SQL Server virtual machine in the Azure portal](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json) to run SQL Server on Linux in Azure.
+In this quickstart, you will install SQL Server on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), or Ubuntu in the cloud of your choice. Go to [Provision a Linux SQL Server virtual machine in the Azure portal](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json) to run SQL Server on Linux in Azure.
 
     > [!NOTE]
     > If you choose to run a paid edition of SQL Server then you need to bring your own license (BYOL)

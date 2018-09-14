@@ -38,7 +38,7 @@ ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 | [Locale](#lcid) | Set the locale for SQL Server to use. |
 | [Memory limit](#memorylimit) | Set the memory limit for SQL Server. |
 | [Microsoft Distributed Transaction Coordinator](#msdtc) | Configure and troubleshoot MSDTC on Linux. |
-| [MLServices EULAs](#mlservices-eula) | Accept R and Python EULAs for mlservices packages.|
+| [MLServices EULAs](#mlservices-eula) | Accept R and Python EULAs for mlservices packages. Applies to SQL Server 2019 only.|
 | [TCP port](#tcpport) | Change the port where SQL Server listens for connections. |
 | [TLS](#tls) | Configure Transport Level Security. |
 | [Traceflags](#traceflags) | Set the traceflags that the service is going to use. |
@@ -484,6 +484,7 @@ There are several other settings for mssql-conf that you can use to monitor and 
 | distributedtransaction.tracefilepath | Folder in which trace files should be stored |
 | distributedtransaction.turnoffrpcsecurity | Enable or disable RPC security for distributed transactions |
 
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 ## <a id="mlservices-eula"></a> Accept MLServices EULAs
 
 Adding [machine learning R or Python packages](sql-server-linux-setup-machine-learning.md) to the database engine requires that you accept the licensing terms for open-source distributions of R and Python. The following table enumerates all available commands or options related to mlservices EULAs. There are two EULAs for Anaconda and Microsoft R Open, respectively. The same parameter is used for either or both packages, depending on what you installed.
@@ -511,6 +512,7 @@ You can also add EULA acceptance directly to the [mssql.conf file](#mssql-conf-f
 accepteula = Y
 accepteulaml = Y
 ``` 
+:::moniker-end
 
 ## <a id="tcpport"></a> Change the TCP port
 

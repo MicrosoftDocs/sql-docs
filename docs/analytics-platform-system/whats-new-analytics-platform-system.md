@@ -24,11 +24,11 @@ APS supports a subset of the T-SQL [DBCC commands](https://docs.microsoft.com/sq
 Using catalog objects for metadata calls instead of using SMO has shown performance improvement in APS. Starting from CU7.1, some of these metadata calls now use catalog objects by default. This behavior can be turned off by [feature switch](appliance-feature-switch.md) if customers using metadata queries heavily run into any issues.
 
 ### Bug fixes
-We have upgraded to SQL Server 2016 SP2 CU2 with APS CU7.1. The upgrade fixes some issues descibed below.
+We have upgraded to SQL Server 2016 SP2 CU2 with APS CU7.1. The upgrade fixes some issues described below.
 
 | Title | Description |
 |:---|:---|
-| **Potential tuple mover deadlock** |The upgrade fixes a long standing possibility of deadlock in a distributed transaction and tuple mover background thread. After installing CU7.1 customers who used TF634 to stop tuple mover as SQL Server startup parameter or global trace flag can safely remove it. | 
+| **Potential tuple mover deadlock** |The upgrade fixes a long standing possibility of deadlock in a distributed transaction and tuple mover background thread. After installing CU7.1, customers who used TF634 to stop tuple mover as SQL Server startup parameter or global trace flag can safely remove it. | 
 | **Certain lag/lead query fails** |Certain queries on CCI tables with nested lag/lead functions that would error is now fixed with this upgrade. | 
 
 

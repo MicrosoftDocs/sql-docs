@@ -17,7 +17,7 @@ ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-This article provides guidance for installing, updating, and uninstalling SQL Server 2017 and SQL Server vNext on Linux.
+This article provides guidance for installing, updating, and uninstalling SQL Server 2017 and SQL Server 2019 preview on Linux.
 
 > [!TIP]
 > This guide coves several deployment scenarios. If you are only looking for step-by-step installation instructions, jump to one of the quickstarts:
@@ -80,9 +80,9 @@ You can install SQL Server 2017 on Linux from the command line. For step-by-step
 - [Run on Docker](quickstart-install-connect-docker.md)
 - [Provision a SQL VM in Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
 
-## <a id="sqlvnext"></a> Install SQL Server vNext
+## <a id="sqlvnext"></a> Install SQL Server 2019 preview
 
-You can install SQL Server vNext on Linux using the same quickstart links in the previous section. However, you must register the **Preview (vNext)** repository instead of the **CU** repository. The quickstarts provide instructions on how to do this.  
+You can install SQL Server 2019 preview on Linux using the same quickstart links in the previous section. However, you must register the **Preview (vNext)** repository instead of the **CU** repository. The quickstarts provide instructions on how to do this.  
 
 After installing, consider making additional configuration changes for optimal performance. For more information, see [Performance best practices and configuration guidelines for SQL Server on Linux](sql-server-linux-performance-best-practices.md).
 

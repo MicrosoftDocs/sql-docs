@@ -38,7 +38,7 @@ See [What is SSMS?](../ssms/sql-server-management-studio-ssms.md) for more infor
 
 ## Install the newest version of SQL Server Management Studio (SSMS)
 
-When working with SQL Server, you should always use the most recent version of SQL Server Management Studio (SSMS). The latest version of SSMS is continually updated and optimized and currently works with SQL Server 2017 on Linux. To download and install the latest version, see [Download SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). To stay up-to-date, the latest version of SSMS prompts you when there is a new version available to download.
+When working with SQL Server, you should always use the most recent version of SQL Server Management Studio (SSMS). The latest version of SSMS is continually updated and optimized and currently works with SQL Server on Linux. To download and install the latest version, see [Download SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). To stay up-to-date, the latest version of SSMS prompts you when there is a new version available to download.
 
 > [!NOTE]
 > Before using SSMS to manage Linux, review the [known issues](sql-server-linux-release-notes.md) for SSMS on Linux.
@@ -57,7 +57,7 @@ Use the following basic steps to get connected:
    |-----|-----|
    | **Server type** | The default is database engine; do not change this value. |
    | **Server name** | Enter the name of the target Linux SQL Server machine or its IP address. |
-   | **Authentication** | For SQL Server 2017 on Linux, use **SQL Server Authentication**. |
+   | **Authentication** | For SQL Server on Linux, use **SQL Server Authentication**. |
    | **Login** | Enter the name of a user with access to a database on the server (for example, the default **SA** account created during setup). |
    | **Password** | Enter the password for the specified user (for the **SA** account, you created this during setup). |
 
@@ -95,11 +95,11 @@ Although it is possible to do almost any management task with Transact-SQL queri
 
 ## Create and manage databases
 
-While connected to the *master* database, you can create databases on the server and modify or drop existing databases. The following steps describe how to accomplish several common database management tasks through Management Studio. To perform these tasks, make sure you are connected to the *master* database with the server-level principal login that you created when you set up SQL Server 2017 on Linux.
+While connected to the *master* database, you can create databases on the server and modify or drop existing databases. The following steps describe how to accomplish several common database management tasks through Management Studio. To perform these tasks, make sure you are connected to the *master* database with the server-level principal login that you created when you set up SQL Server on Linux.
 
 ### Create a new database
 
-1. Start SSMS and connect to your server in SQL Server 2017 on Linux
+1. Start SSMS and connect to your server in SQL Server on Linux
 
 2. In Object Explorer, right-click on the *Databases* folder, and then click *New Database..."
 
@@ -109,7 +109,7 @@ The new database is successfully created in your server. If you prefer to create
 
 ### Drop a database
 
-1. Start SSMS and connect to your server in SQL Server 2017 on Linux
+1. Start SSMS and connect to your server in SQL Server on Linux
 
 2. In Object Explorer, expand the *Databases* folder to see a list of all the database on the server.
 
@@ -123,7 +123,7 @@ The database is successfully dropped from your server. If you prefer to drop a d
 
 The [Activity Monitor](../relational-databases/performance-monitor/activity-monitor.md) tool is built into SQL Server Management Studio (SSMS) and displays information about SQL Server processes and how these processes affect the current instance of SQL Server.
 
-1. Start SSMS and connect to your server in SQL Server 2017 on Linux
+1. Start SSMS and connect to your server in SQL Server on Linux
 
 1. In Object Explorer, right-click the *server* node, and then click *Activity Monitor*
 

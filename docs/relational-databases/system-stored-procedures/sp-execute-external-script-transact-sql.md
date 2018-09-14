@@ -30,12 +30,12 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-Executes the script, which is provided as an input argument, in the [extensibility framework](../advanced-analytics/concepts/extensibility-framework.md). Script must be written in a supported and registered language, and the database engine must have at least one extension: [R](../advanced-analytics/concepts/extension-r.md), [Python](../advanced-analytics/concepts/extension-python.md), or [Java (SQL Server 2019 preview only)](../advanced-analytics/java/extension-java.md). To execute **sp_execute_external_script**, you must first enable external scripts by using the statement, `sp_configure 'external scripts enabled', 1;`.  
+Executes the script, which is provided as an input argument, in the [extensibility framework](../../advanced-analytics/concepts/extensibility-framework.md). Script must be written in a supported and registered language, and the database engine must have at least one extension: [R](../../advanced-analytics/concepts/extension-r.md), [Python](../../advanced-analytics/concepts/extension-python.md), or [Java (in SQL Server 2019 preview only)](../../advanced-analytics/java/extension-java.md). To execute **sp_execute_external_script**, you must first enable external scripts by using the statement, `sp_configure 'external scripts enabled', 1;`.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 > [!Note]
-> Language extensions vary by SQL Server version and only install as an add-on to the database engine instance.
+> Machine learning (R and Python) and programming extensions ared installed as an add-on to the database engine instance. Support for specific extensions vary by SQL Server version.
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ## Syntax

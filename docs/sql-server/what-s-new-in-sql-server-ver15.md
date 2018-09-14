@@ -46,7 +46,7 @@ Community technology preview (CTP) 2.0 is the first public release of [!INCLUDE[
   - Java language programmability extension
   - SQL Server Machine Learning Services
   - Polybase
-  - Expanded support for Persistent Memory (PMEM) devices
+  - Expanded support for persistent memory devices
 
 - [Big Data Clusters](#bigdatacluster)
   - Deploy a Big Data cluster with SQL and Spark Linux containers on Kubernetes
@@ -257,17 +257,18 @@ For detailed information, see [What's new in SQL Server Machine Learning Service
 
 - **New connectors for SQL Server, Oracle, Teradata, and MongoDB**: SQL Server 2019 introduces new connectors to external data for SQL Server, Oracle, Teradata, and MongoDB.
 
-### Expanded support for Persistent Memory (PMEM) devices
+### Expanded support for persistent memory devices
 
-Any SQL Server file that is placed on a PMEM device operates in *enlightened* mode. SQL Server directly accesses the device, bypassing the storage stack of the operating system. This mode improves performance because it allows low latency input/output against such devices.
+Any SQL Server file that is placed on a persistent memory device operates in *enlightened* mode. SQL Server directly accesses the device, bypassing the storage stack of the operating system. This mode improves performance because it allows low latency input/output against such devices.
     - Examples of SQL Server files include:
         - Database files
         - Transaction log files
         - In-Memory OLTP checkpoint files
-    - PMEM is also known as storage class memory (SCM)
+    - Persistent memory is also known as storage class memory.
+    - Persistent memory is occasionally referred to informally as *pmem* on some non-Microsoft websites.
 
->[!NOTE]
->For this preview release, support for Persistent Memory (PMEM) devices is only available on Linux.
+> [!NOTE]
+> For this preview release, support for persistent memory devices is only available on Linux.
 
 ## <a id="bigdatacluster"></a>Big Data Clusters
 

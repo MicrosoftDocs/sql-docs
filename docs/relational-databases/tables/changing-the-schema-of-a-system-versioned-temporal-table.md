@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 9dbe5a21-9335-4f8b-85fd-9da83df79946
 caps.latest.revision: 13
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

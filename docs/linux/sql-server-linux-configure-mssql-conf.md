@@ -38,6 +38,7 @@ ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 | [Locale](#lcid) | Set the locale for SQL Server to use. |
 | [Memory limit](#memorylimit) | Set the memory limit for SQL Server. |
 | [Microsoft Distributed Transaction Coordinator](#msdtc) | Configure and troubleshoot MSDTC on Linux. |
+| [MLServices EULAs](#mlservices-eula) | Accept R and Python EULAs for mlservices packages.|
 | [TCP port](#tcpport) | Change the port where SQL Server listens for connections. |
 | [TLS](#tls) | Configure Transport Level Security. |
 | [Traceflags](#traceflags) | Set the traceflags that the service is going to use. |
@@ -380,34 +381,6 @@ For information on how this is used with availability groups, see the following 
 - [Configure read-scale availability group for SQL Server on Linux](sql-server-linux-availability-group-configure-rs.md)
 
 
-## <a id="mlservices-eula"></a> Accept MLServices EULAs
-
-Adding [machine learning R or Python packages](sql-server-setup-machine-learning.md) to the database engine requires that you accept the licensing terms for open-source distributions of R and Python. The following table enumerates all available commands or options related to mlservices EULAs. There are two EULAs for Anaconda and Microsoft R Open, respectively. The same parameter is used for either or both packages, depending on what you installed.
-
-```bash
-# For all packages: database engine and mlservices
-# Setup prompts for mlservices EULAs, which you need to accept
-sudo /opt/mssql/bin/mssql-conf setup
-
-# Add R or Python to an existing installation
-sudo /opt/mssql/bin/mssql-conf setup accept-eula-ml
-
-# Alternative valid syntax
-# Add R or Python to an existing installation
-sudo /opt/mssql/bin/mssql-conf set EULA accepteulaml Y
-
-# Rescind EULA acceptance
-sudo /opt/mssql/bin/mssql-conf unset EULA accepteulaml
-```
-
-You can also add EULA acceptance directly to the [mssql.conf file](#mssql.conf-format):
-
-```ini
-[EULA]
-accepteula = Y
-accepteulaml = Y
-``` 
-
 ## <a id="localaudit"></a> Set local audit directory
 
 The **telemetry.userrequestedlocalauditdirectory** setting enables Local Audit and lets you set the directory where the Local Audit logs are created.
@@ -510,6 +483,34 @@ There are several other settings for mssql-conf that you can use to monitor and 
 | distributedtransaction.trace_xa | XA Transaction Manager (XATM) tracing source |
 | distributedtransaction.tracefilepath | Folder in which trace files should be stored |
 | distributedtransaction.turnoffrpcsecurity | Enable or disable RPC security for distributed transactions |
+
+## <a id="mlservices-eula"></a> Accept MLServices EULAs
+
+Adding [machine learning R or Python packages](sql-server-linux-setup-machine-learning.md) to the database engine requires that you accept the licensing terms for open-source distributions of R and Python. The following table enumerates all available commands or options related to mlservices EULAs. There are two EULAs for Anaconda and Microsoft R Open, respectively. The same parameter is used for either or both packages, depending on what you installed.
+
+```bash
+# For all packages: database engine and mlservices
+# Setup prompts for mlservices EULAs, which you need to accept
+sudo /opt/mssql/bin/mssql-conf setup
+
+# Add R or Python to an existing installation
+sudo /opt/mssql/bin/mssql-conf setup accept-eula-ml
+
+# Alternative valid syntax
+# Add R or Python to an existing installation
+sudo /opt/mssql/bin/mssql-conf set EULA accepteulaml Y
+
+# Rescind EULA acceptance
+sudo /opt/mssql/bin/mssql-conf unset EULA accepteulaml
+```
+
+You can also add EULA acceptance directly to the [mssql.conf file](#mssql.conf-format):
+
+```ini
+[EULA]
+accepteula = Y
+accepteulaml = Y
+``` 
 
 ## <a id="tcpport"></a> Change the TCP port
 

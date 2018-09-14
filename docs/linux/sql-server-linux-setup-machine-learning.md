@@ -19,7 +19,9 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 
 ## Prerequisites
 
-Machine learning and programming extensions are an add-on to the database engine. Although you can [install the database engine and Machine Learning Services concurrently](#install-all), it's a best practice to install and configure the SQL Server database engine first so that you can resolve any issues before adding more components. Machine Learning and programming extensions run on top of the database engine on [any supported Linux operating system](sql-server-linux-release-notes.md#supported-platforms), including docker:
+Machine learning and programming extensions are an add-on to the database engine. Although you can [install the database engine and Machine Learning Services concurrently](#install-all), it's a best practice to install and configure the SQL Server database engine first so that you can resolve any issues before adding more components. 
+
+Machine Learning and programming extensions run on top of the database engine on [any supported Linux operating system](sql-server-linux-release-notes.md#supported-platforms), including docker:
 
 + [Install SQL Server on Red Hat Enterprise Linux (RHEL)](quickstart-install-connect-red-hat.md)
 + [Install SQL Server on SUSE Enterprise Linux Server](quickstart-install-connect-suse.md)
@@ -156,12 +158,9 @@ Additional configuration is primarily through the [mssql-conf tool](sql-server-l
   # Run as SUDO or root
   # Use set + EULA 
     sudo /opt/mssql/bin/mssql-conf set EULA accepteulaml Y
-  
-  # Alternative syntax: setup + accept-eula-ml
-    sudo /opt/mssql/bin/mssql-conf setup accept-eula-ml
   ```
 
-  An alternative workflow is that if you have not yet accepted the SQL Server database engine licensing agreement, setup detects that the mssql-mlservices packages are installed and prompts for R and Python EULA acceptance when `mssql-conf setup` is run.
+  An alternative workflow is that if you have not yet accepted the SQL Server database engine licensing agreement, setup detects the mssql-mlservices packages and prompts for EULA acceptance when `mssql-conf setup` is run. For more information about EULA parameters, see [mssql-conf tool](sql-server-linux-configure-mssql-conf.md#mlservices-eula)
 
 2. Configure external script execution. 
 
@@ -216,7 +215,7 @@ Using the [unattended install](https://docs.microsoft.com/sql/linux/sql-server-l
 
 Recall that Setup or the mssql-conf tool prompts for license agreement acceptance. For open-source R and Python components, accepting the mlservices EULA supplement for is required for uninterrupted installation for mlservices packages. This is in addition to the SQL Server EULA. 
 
-All possible permutations of EULA acceptance are documented in [Configure SQL Server on Linux with the mssql-conf tool](sql-server-configure-mssql-conf.md#mlservices-eula).
+All possible permutations of EULA acceptance are documented in [Configure SQL Server on Linux with the mssql-conf tool](sql-server-linux-configure-mssql-conf.md#mlservices-eula).
 
 ## Offline installation
 

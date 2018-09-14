@@ -136,4 +136,4 @@ The following limitations apply to the current Preview, but are on the roadmap t
 
 ## Known issues
 
-- Rich computations on non-UNICODE (char, varchar) string columns require a BIN2 collation is set at the database level. Please see Special considerations for non-UNICODE string columns in [Manage Collations](https://review.docs.microsoft.com/en-us/sql/relational-databases/security/encryption/configure-always-encrypted-enclaves?view=sql-server-ver15&branch=release-sqlseattle#manage-collations)
+- Rich computations on non-UNICODE (char, varchar) string columns require a BIN2 collation is set at the database level. Please see Special considerations for non-UNICODE string columns in [Manage Collations](configure-always-encrypted-enclaves.md#manage-collations)

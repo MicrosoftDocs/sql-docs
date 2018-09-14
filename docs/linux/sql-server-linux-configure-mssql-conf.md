@@ -504,7 +504,7 @@ sudo /opt/mssql/bin/mssql-conf set EULA accepteulaml Y
 sudo /opt/mssql/bin/mssql-conf unset EULA accepteulaml
 ```
 
-You can also add EULA acceptance directly to the [mssql.conf file](#mssql.conf-format):
+You can also add EULA acceptance directly to the [mssql.conf file](#mssql-conf-format):
 
 ```ini
 [EULA]
@@ -603,7 +603,8 @@ sudo cat /var/opt/mssql/mssql.conf
 
 Note that any settings not shown in this file are using their default values. The next section provides a sample **mssql.conf** file.
 
-## mssql.conf format
+
+## <a id="mssql-conf-format"></a> mssql.conf format
 
 The following **/var/opt/mssql/mssql.conf** file provides an example for each setting. You can use this format to manually make changes to the **mssql.conf** file as needed. If you do manually change the file, you must restart SQL Server before the changes are applied. To use the **mssql.conf** file with Docker, you must have Docker [persist your data](sql-server-linux-configure-docker.md). First add a complete **mssql.conf** file to your host directory and then run the container. There is an example of this in  [Customer Feedback](sql-server-linux-customer-feedback.md).
 

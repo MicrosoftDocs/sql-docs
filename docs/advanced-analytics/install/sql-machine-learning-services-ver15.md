@@ -27,7 +27,7 @@ Although the isolation model has changed, the Installation wizard and command li
 
 In previous releases, **SQLRUserGroup** contained a pool of local Windows user accounts (MSSQLSERVER00-MSSQLSERVER20) used for isolating and running external processes. When an external process was needed, SQL Server Launchpad service would take an available account and use it to run a process. 
 
-In SQL Server 2019, Setup no longer creates local worker accounts. Instead, isolation is achieved through [AppContainers](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation). At run time, when embedded script or code is detected in a stored procedure or query, SQL Server calls Launchpad with a request for an extension-specific launcher. Launchpad invokes the appropriate runtime environment in a process under its identity, and instantiates an AppContainer to contain it. This change is beneficial because local account and password management is no longer required. Also, on networks where local user accounts are prohibited, elimination of the local user account dependency means this feature can now qualify for installation.
+In SQL Server 2019, Setup no longer creates local worker accounts. Instead, isolation is achieved through [AppContainers](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation). At run time, when embedded script or code is detected in a stored procedure or query, SQL Server calls Launchpad with a request for an extension-specific launcher. Launchpad invokes the appropriate runtime environment in a process under its identity, and instantiates an AppContainer to contain it. This change is beneficial because local account and password management is no longer required. Also, on installations where local user accounts are prohibited, elimination of the local user account dependency means you can now use this feature.
 
 As implemented by SQL Server, AppContainers are an internal mechanism. While you won't see physical evidence of AppContainers in Process Monitor, you can find them in outbound firewall rules created by Setup to prevent processes from making network calls.
 
@@ -51,7 +51,7 @@ As before, additional configuration is still required for *implied authenticatio
 
 ## Symbolic link created by Setup
 
-A symbolic link is created to the current default **R_SERVICES location** as part of SQL Server Setup. If you don't want to create this link, an alternative is to grant 'all application packages' read permission to the hierarchy leading up to the **R_SERVICES** folder.
+A symbolic link is created to the current default **R_SERVICES**  and **PYTHON_SERIVCES** as part of SQL Server Setup. If you don't want to create this link, an alternative is to grant 'all application packages' read permission to the hierarchy leading up to the folder.
 
 
 ## See also

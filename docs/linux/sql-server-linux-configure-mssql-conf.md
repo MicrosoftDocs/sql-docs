@@ -488,7 +488,7 @@ There are several other settings for mssql-conf that you can use to monitor and 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 ## <a id="mlservices-eula"></a> Accept MLServices EULAs
 
-Adding [machine learning R or Python packages](sql-server-linux-setup-machine-learning.md) to the database engine requires that you accept the licensing terms for open-source distributions of R and Python. The following table enumerates all available commands or options related to mlservices EULAs. There are two EULAs for Anaconda and Microsoft R Open, respectively. The same parameter is used for either or both packages, depending on what you installed.
+Adding [machine learning R or Python packages](sql-server-linux-setup-machine-learning.md) to the database engine requires that you accept the licensing terms for open-source distributions of R and Python. The following table enumerates all available commands or options related to mlservices EULAs. The same EULA parameter is used for R and Python, depending on what you installed.
 
 ```bash
 # For all packages: database engine and mlservices

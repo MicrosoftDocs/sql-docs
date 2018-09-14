@@ -1,6 +1,6 @@
 ---
 title: Configure SQL Server settings on Linux | Microsoft Docs
-description: This article describes how to use the mssql-conf tool to  configure SQL Server 2017 settings on Linux.
+description: This article describes how to use the mssql-conf tool to  configure SQL Server settings on Linux.
 author: rothja 
 ms.author: jroth 
 manager: craigg
@@ -12,13 +12,43 @@ ms.suite: "sql"
 ms.custom: "sql-linux"
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-monikerRange: ">=sql-server-2017||=sqlallproducts-allversions"
 ---
 # Configure SQL Server on Linux with the mssql-conf tool
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
+<!--SQL Server 2017 on Linux-->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
+
 **mssql-conf** is a configuration script that installs with SQL Server 2017 for Red Hat Enterprise Linux, SUSE Linux Enterprise Server, and Ubuntu. You can use this utility to set the following parameters:
+
+|||
+|---|---|
+| [Agent](#agent) | Enable SQL Server Agent |
+| [Collation](#collation) | Set a new collation for SQL Server on Linux. |
+| [Customer feedback](#customerfeedback) | Choose whether or not SQL Server sends feedback to Microsoft. |
+| [Database Mail Profile](#dbmail) | Set the default database mail profile for SQL Server on Linux. |
+| [Default data directory](#datadir) | Change the default directory for new SQL Server database data files (.mdf). |
+| [Default log directory](#datadir) | Changes the default directory for new SQL Server database log (.ldf) files. |
+| [Default master database file directory](#masterdatabasedir) | Changes the default directory for the master database files on existing SQL installation.|
+| [Default master database file name](#masterdatabasename) | Changes the name of master database files. |
+| [Default dump directory](#dumpdir) | Change the default directory for new memory dumps and other troubleshooting files. |
+| [Default error log directory](#errorlogdir) | Changes the default directory for new SQL Server ErrorLog, Default Profiler Trace, System Health Session XE, and Hekaton Session XE files. |
+| [Default backup directory](#backupdir) | Change the default directory for new backup files. |
+| [Dump type](#coredump) | Choose the type of dump memory dump file to collect. |
+| [High availability](#hadr) | Enable Availability Groups. |
+| [Local Audit directory](#localaudit) | Set a directory to add Local Audit files. |
+| [Locale](#lcid) | Set the locale for SQL Server to use. |
+| [Memory limit](#memorylimit) | Set the memory limit for SQL Server. |
+| [TCP port](#tcpport) | Change the port where SQL Server listens for connections. |
+| [TLS](#tls) | Configure Transport Level Security. |
+| [Traceflags](#traceflags) | Set the traceflags that the service is going to use. |
+
+::: moniker-end
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+**mssql-conf** is a configuration script that installs with [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] for Red Hat Enterprise Linux, SUSE Linux Enterprise Server, and Ubuntu. You can use this utility to set the following parameters:
 
 |||
 |---|---|
@@ -44,6 +74,8 @@ monikerRange: ">=sql-server-2017||=sqlallproducts-allversions"
 | [TLS](#tls) | Configure Transport Level Security. |
 | [Traceflags](#traceflags) | Set the traceflags that the service is going to use. |
 
+::: moniker-end
+
 > [!TIP]
 > Some of these settings can also be configured with environment variables. For more information, see [Configure SQL Server settings with environment variables](sql-server-linux-configure-environment-variables.md).
 
@@ -67,7 +99,7 @@ To change this setting, use the following steps:
    sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true 
    ```
 
-1. Restart the SQL Server service:
+2. Restart the SQL Server service:
 
    ```bash
    sudo systemctl restart mssql-server
@@ -445,6 +477,8 @@ The **memory.memorylimitmb** setting controls the amount physical memory (in MB)
    sudo systemctl restart mssql-server
    ```
 
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
 ## <a id="msdtc"></a> Configure MSDTC
 
 The **network.rpcport** and **distributedtransaction.servertcpport** settings are used to configure the Microsoft Distributed Transaction Coordinator (MSDTC). To change these settings, run the following commands:
@@ -485,7 +519,9 @@ There are several other settings for mssql-conf that you can use to monitor and 
 | distributedtransaction.tracefilepath | Folder in which trace files should be stored |
 | distributedtransaction.turnoffrpcsecurity | Enable or disable RPC security for distributed transactions |
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker-end
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
 ## <a id="mlservices-eula"></a> Accept MLServices EULAs
 
 Adding [machine learning R or Python packages](sql-server-linux-setup-machine-learning.md) to the database engine requires that you accept the licensing terms for open-source distributions of R and Python. The following table enumerates all available commands or options related to mlservices EULAs. There are two EULAs for Anaconda and Microsoft R Open, respectively. The same parameter is used for either or both packages, depending on what you installed.
@@ -512,7 +548,8 @@ You can also add EULA acceptance directly to the [mssql.conf file](#mssql-conf-f
 [EULA]
 accepteula = Y
 accepteulaml = Y
-``` 
+```
+
 :::moniker-end
 
 ## <a id="tcpport"></a> Change the TCP port
@@ -611,9 +648,65 @@ Note that any settings not shown in this file are using their default values. Th
 
 The following **/var/opt/mssql/mssql.conf** file provides an example for each setting. You can use this format to manually make changes to the **mssql.conf** file as needed. If you do manually change the file, you must restart SQL Server before the changes are applied. To use the **mssql.conf** file with Docker, you must have Docker [persist your data](sql-server-linux-configure-docker.md). First add a complete **mssql.conf** file to your host directory and then run the container. There is an example of this in  [Customer Feedback](sql-server-linux-customer-feedback.md).
 
+<!--SQL Server 2017 on Linux-->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
+
 ```ini
 [EULA]
 accepteula = Y
+
+[coredump]
+captureminiandfull = true
+coredumptype = full
+
+[filelocation]
+defaultbackupdir = /var/opt/mssql/data/
+defaultdatadir = /var/opt/mssql/data/
+defaultdumpdir = /var/opt/mssql/data/
+defaultlogdir = /var/opt/mssql/data/
+
+[hadr]
+hadrenabled = 0
+
+[language]
+lcid = 1033
+
+[memory]
+memorylimitmb = 4096
+
+[network]
+forceencryption = 0
+ipaddress = 10.192.0.0
+kerberoskeytabfile = /var/opt/mssql/secrets/mssql.keytab
+tcpport = 1401
+tlscert = /etc/ssl/certs/mssql.pem
+tlsciphers = ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA
+tlskey = /etc/ssl/private/mssql.key
+tlsprotocols = 1.2,1.1,1.0
+
+[sqlagent]
+databasemailprofile = default
+errorlogfile = /var/opt/mssql/log/sqlagentlog.log
+errorlogginglevel = 7
+
+[telemetry]
+customerfeedback = true
+userrequestedlocalauditdirectory = /tmp/audit
+
+[traceflag]
+traceflag0 = 1204
+traceflag1 = 2345
+traceflag = 3456
+```
+
+::: moniker-end
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+```ini
+[EULA]
+accepteula = Y
+accepteulaml = Y
 
 [coredump]
 captureminiandfull = true
@@ -662,6 +755,8 @@ traceflag0 = 1204
 traceflag1 = 2345
 traceflag = 3456
 ```
+
+::: moniker-end
 
 ## Next steps
 

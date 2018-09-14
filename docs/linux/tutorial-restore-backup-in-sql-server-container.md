@@ -18,13 +18,13 @@ moniker: ">= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allv
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 <!--SQL Server 2017 on Linux -->
-::: moniker range="= sql-server-linux-2017 || = sql-server-2017 || =sqlallproducts-allversions"
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
 This tutorial demonstrates how to move and restore a SQL Server backup file into a SQL Server 2017 Linux container image running on Docker.
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range="= sql-server-linux-ver15 || = sql-server-ver15"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
 This tutorial demonstrates how to move and restore a SQL Server backup file into a SQL Server 2019 CTP 2.0 Linux container image running on Docker.
 
@@ -47,7 +47,7 @@ This tutorial demonstrates how to move and restore a SQL Server backup file into
 ## Pull and run the container image
 
 <!--SQL Server 2017 on Linux -->
-::: moniker range="= sql-server-linux-2017 || = sql-server-2017 || =sqlallproducts-allversions"
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
 1. Open a bash terminal on Linux/Mac or an elevated PowerShell session on Windows.
 
@@ -106,7 +106,7 @@ This tutorial demonstrates how to move and restore a SQL Server backup file into
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range="= sql-server-linux-ver15 || = sql-server-ver15"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
 1. Open a bash terminal on Linux/Mac or an elevated PowerShell session on Windows.
 
@@ -408,7 +408,7 @@ After you've restored your database into a container, you might also want to reg
 In addition to taking database backups for protecting your data, you can also use data volume containers. The beginning of this tutorial created the **sql1** container with the `-v sql1data:/var/opt/mssql` parameter. The **sql1data** data volume container persists the **/var/opt/mssql** data even after the container is removed. The following steps completely remove the **sql1** container and then create a new container, **sql2**, with the persisted data.
 
 <!--SQL Server 2017 on Linux -->
-::: moniker range="= sql-server-linux-2017 || = sql-server-2017 || =sqlallproducts-allversions"
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
 1. Stop the **sql1** container.
 
@@ -463,7 +463,7 @@ In addition to taking database backups for protecting your data, you can also us
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range="= sql-server-linux-ver15 || = sql-server-ver15"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
 1. Stop the **sql1** container.
 
@@ -521,13 +521,13 @@ In addition to taking database backups for protecting your data, you can also us
 ## Next steps
 
 <!--SQL Server 2017 on Linux -->
-::: moniker range="= sql-server-linux-2017 || = sql-server-2017 || =sqlallproducts-allversions"
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
 In this tutorial, you learned how to back up a database on Windows and move it to a Linux server running SQL Server 2017. You learned how to:
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range="= sql-server-linux-ver15 || = sql-server-ver15"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
 In this tutorial, you learned how to back up a database on Windows and move it to a Linux server running SQL Server 2019 CTP 2.0. You learned how to:
 

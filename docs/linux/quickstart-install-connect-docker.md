@@ -124,11 +124,11 @@ Setting `-h` and `--name` to the same value is a good way to easily identify the
 1. Pull the SQL Server 2019 CTP 2.0 Linux container image from Docker Hub.
 
    ```bash
-   sudo docker pull mcr.microsoft.com/mssql/server/mssql-server-linux:2019-latest
+   sudo docker pull mcr.microsoft.com/mssql/server/mssql-server-linux:vNext-CTP2.0
    ```
 
    ```PowerShell
-   docker pull mcr.microsoft.com/mssql/server/mssql-server-linux:2019-latest
+   docker pull mcr.microsoft.com/mssql/server/mssql-server-linux:vNext-CTP2.0
    ```
 
    > [!TIP]
@@ -143,13 +143,13 @@ Setting `-h` and `--name` to the same value is a good way to easily identify the
    ```bash
    sudo docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' \
       -p 1433:1433 --name sql1 \
-      -d mcr.microsoft.com/mssql/server/mssql-server-linux:2019-latest
+      -d mcr.microsoft.com/mssql/server/mssql-server-linux:vNext-CTP2.0
    ```
 
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" `
       -p 1433:1433 --name sql1 `
-      -d mcr.microsoft.com/mssql/server/mssql-server-linux:2019-latest
+      -d mcr.microsoft.com/mssql/server/mssql-server-linux:vNext-CTP2.0
    ```
 
    > [!NOTE]
@@ -166,7 +166,7 @@ Setting `-h` and `--name` to the same value is a good way to easily identify the
    | **-e 'SA_PASSWORD=\<YourStrong!Passw0rd\>'** | Specify your own strong password that is at least 8 characters and meets the [SQL Server password requirements](../relational-databases/security/password-policy.md). Required setting for the SQL Server image. |
    | **-p 1433:1433** | Map a TCP port on the host environment (first value) with a TCP port in the container (second value). In this example, SQL Server is listening on TCP 1433 in the container and this is exposed to the port, 1433, on the host. |
    | **--name sql1** | Specify a custom name for the container rather than a randomly generated one. If you run more than one container, you cannot reuse this same name. |
-   | **microsoft/mssql-server-linux:2019-latest** | The SQL Server 2019 CTP 2.0 Linux container image. |
+   | **microsoft/mssql-server-linux:vNext-CTP2.0** | The SQL Server 2019 CTP 2.0 Linux container image. |
 
 3. To view your Docker containers, use the `docker ps` command.
 

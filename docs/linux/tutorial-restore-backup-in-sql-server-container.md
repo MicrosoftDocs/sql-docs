@@ -113,11 +113,11 @@ This tutorial demonstrates how to move and restore a SQL Server backup file into
 1. Pull the SQL Server 2019 CTP 2.0 Linux container image from Docker Hub.
 
    ```bash
-   sudo docker pull mcr.microsoft.com/mssql/server/mssql-server-linux:2019-latest
+   sudo docker pull mcr.microsoft.com/mssql/server/mssql-server-linux:vNext-CTP2.0
    ```
 
    ```PowerShell
-   docker pull mcr.microsoft.com/mssql/server/mssql-server-linux:2019-latest
+   docker pull mcr.microsoft.com/mssql/server/mssql-server-linux:vNext-CTP2.0
    ```
 
    > [!TIP]
@@ -129,14 +129,14 @@ This tutorial demonstrates how to move and restore a SQL Server backup file into
    sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
       --name 'sql1' -p 1401:1433 \
       -v sql1data:/var/opt/mssql \
-      -d mcr.microsoft.com/mssql/server/mssql-server-linux:2019-latest
+      -d mcr.microsoft.com/mssql/server/mssql-server-linux:vNext-CTP2.0
    ```
 
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
       --name "sql1" -p 1401:1433 `
       -v sql1data:/var/opt/mssql `
-      -d mcr.microsoft.com/mssql/server/mssql-server-linux:2019-latest
+      -d mcr.microsoft.com/mssql/server/mssql-server-linux:vNext-CTP2.0
    ```
 
    This command creates a SQL Server 2019 CTP 2.0 container with the Developer edition (default). SQL Server port **1433** is exposed on the host as port **1401**. The optional `-v sql1data:/var/opt/mssql` parameter creates a data volume container named **sql1ddata**. This is used to persist the data created by SQL Server.
@@ -490,13 +490,13 @@ In addition to taking database backups for protecting your data, you can also us
     ```bash
     sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
        --name 'sql2' -e 'MSSQL_PID=Developer' -p 1401:1433 \
-       -v sql1data:/var/opt/mssql -d mcr.microsoft.com/mssql/server/mssql-server-linux:2019-latest
+       -v sql1data:/var/opt/mssql -d mcr.microsoft.com/mssql/server/mssql-server-linux:vNext-CTP2.0
     ```
 
     ```PowerShell
     docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
        --name "sql2" -e "MSSQL_PID=Developer" -p 1401:1433 `
-       -v sql1data:/var/opt/mssql -d mcr.microsoft.com/mssql/server/mssql-server-linux:2019-latest
+       -v sql1data:/var/opt/mssql -d mcr.microsoft.com/mssql/server/mssql-server-linux:vNext-CTP2.0
     ```
 
 1. The Wide World Importers database is now in the new container. Run a query to verify the previous change you made.

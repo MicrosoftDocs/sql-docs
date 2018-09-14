@@ -48,7 +48,7 @@ The computer running SQL Server needs the following operating system and SQL Ser
 - Windows Server DataCenter (Semi-Annual Channel), version 1809
 - Windows Server 2019 DataCenter
 
-The computer must be configured as a guarded host, attested by HGS. See the following section for details.
+The computer must be configured as a guarded host, attested by HGS. The enclave attestation method (TPM attestation), which is recommended for production environments, requires SQL Server runs on a physical (bare metal) machine, not in a virtual machine. Virtual machines are adequate for pre-production environments only. See the following section on Configure HGS attestation for details.
 
 
 ### HGS computer requirements
@@ -58,7 +58,7 @@ A single HGS computer is sufficient during testing and prototyping. For producti
 
 ### Configure HGS attestation
 
-For details on HGS computer requirements and set up, see [Setting up the Host Guardian Service for Always Encrypted in SQL Server](https://review.docs.microsoft.com/en-us/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server?branch=hgs2-secure-enclaves)
+For details on HGS computer requirements and set up, see [Setting up the Host Guardian Service for Always Encrypted in SQL Server](https://docs.microsoft.com/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server).
 
 
 ### Determine your Attestation Service URL
@@ -68,7 +68,7 @@ To determine an attestation service URL, you need to configure your tools and ap
 1. Log on to your SQL Server computer as administrator.
 2. Run PowerShell as administrator.
 3. Run [Get-HGSClientConfiguration](https://docs.microsoft.com/powershell/module/hgsclient/get-hgsclientconfiguration).
-4. Write down and save the AttestationServerURL property. It should look like this: *http://x.x.x.x/Attestation*.
+4. Write down and save the AttestationServerURL property. It should look like this: `http://x.x.x.x/Attestation`.
 
 
 ### Install tools
@@ -80,7 +80,7 @@ Install the following tools on the client/development computer:
 3. [SQL Server PowerShell module](../../../powershell/download-sql-server-ps-module.md) version 21.5 or later.
 4. [Visual Studio (2017 or later recommended)](https://visualstudio.microsoft.com/downloads/).
 5. [Developer Pack for .NET Framework 4.7.2](https://www.microsoft.com/net/download/visual-studio-sdks).
-6. Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider NuGet package, version 3.0 or later.
+6. Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider NuGet package, version 2.2.0 or later.
 7. Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider NuGet package.
 
 Both NuGet packages listed above are intended to be used in Visual Studio projects for developing  applications using Always Encrypted with secure enclaves. The first package is required only if you store your column master keys in Azure Key Vault. See the Develop Applications issuing Rich Queries in Visual Studio section later in this document.
@@ -106,7 +106,7 @@ On the client/development computer:
 3. Configure the secure enclave type to VBS enclaves.
 
    ```sql
-   EXEC sys.sp\_configure 'column encryption enclave type', 1
+   EXEC sys.sp_configure 'column encryption enclave type', 1
    RECONFIGURE
    ```
 
@@ -139,7 +139,7 @@ The introduction of enclave-enabled keys does not fundamentally change the [key 
 - The **ENCLAVE_COMPUTATIONS** property in the column master key metadata in the database is set.
 - The column master key property values (including the setting of **ENCLAVE_COMPUTATIONS**) are digitally signed. The tool adds the signature, which is produced using the actual column master key, to the metadata. The purpose of the signature is to prevent malicious DBAs and computer admins from tampering with the **ENCLAVE_COMPUTATIONS** setting. The SQL client drivers verify the signatures before allowing the enclave use. This provides security administrators with control over which column data can be computed inside the enclave.
 
-The **ENCLAVE_COMPUTATIONS** property of a column master key is immutable – you cannot change it after the key has been provisioned. You can, however, replace the column master key with a new key that has a different value of the **ENCLAVE_COMPUTATIONS** property than the original key, via a process called a [column master key rotation](#initiate-the-rotation-from-the-current-column-master-key-to-the-new-column-master-key).
+The **ENCLAVE_COMPUTATIONS** property of a column master key is immutable – you cannot change it after the key has been provisioned. You can, however, replace the column master key with a new key that has a different value of the **ENCLAVE_COMPUTATIONS** property than the original key, via a process called a [column master key rotation](#initiate-the-rotation-from-the-current-column-master-key-to-the-new-column-master-key). For more information about the ENCLAVE_COMPUTATIONS property, see [CREATE COLUMN MASTER KEY](../../../t-sql/statements/create-column-master-key-transact-sql.md).
 
 To provision an enclave-enabled column encryption key, you need to make sure that the column master key that encrypts the column encryption key, is enclave-enabled.
 
@@ -209,11 +209,11 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 ```
 
 
-**Provisioning Enclave-Enabled Keys – Azure Key Vault**
+### Provisioning Enclave-Enabled Keys – Azure Key Vault
 
 One the client/development computer, open Windows PowerShell ISE, copy the following script into Windows PowerShell ISE, customize the script and run it.
 
-### Step 1: Provision a column master key in Azure Key Vault
+**Step 1: Provision a column master key in Azure Key Vault**
 
 This can be also done using Azure portal. For details, see [Manage your key vaults from Azure portal](https://blogs.technet.microsoft.com/kv/2016/09/12/manage-your-key-vaults-from-new-azure-portal/)
 
@@ -245,7 +245,7 @@ Set-AzureRmKeyVaultAccessPolicy -VaultName $akvName -ResourceGroupName $resource
 $akvKey = Add-AzureKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destination "Software"
 ```
 
-### Step 2: Create column master key metadata in the database, create a column encryption key, and create column encryption key metadata in the database
+**Step 2: Create column master key metadata in the database, create a column encryption key, and create column encryption key metadata in the database**
 
 
 ```powershell
@@ -414,7 +414,7 @@ ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NULL
 To add the required connection parameters to enable enclave computations:
 
 1. Open SSMS.
-2. After specifying your server name and a database name in the Connect To Server dialog, click the **Additional Connection Parameter** tab and enter: **Column Encryption Setting = Enabled;** **Enclave Attestation Url = \<your attestation URL\>**
+2. After specifying your server name and a database name in the Connect To Server dialog, click **Options**. Navigate to the **Always Encrypted** tab, select **Always Encrypted Enabled**, and specify your enclave attestation URL.
     
     ![Column Encryption Setting](./media/always-encrypted-enclaves/column-encryption-setting.png)
 
@@ -425,7 +425,7 @@ Alternatively, if you already have a query window open, here is how you can upda
 
 1. Right-click anywhere in an existing query window.
 2. Select Connection \> Change Connection.
-3. Click on the Additional Connection Parameter tab and enter **Column Encryption Setting = Enabled; Enclave Attestation Url = \<your attestation URL\>**
+3. Click on **Options**. Navigate to the **Always Encrypted** tab, select **Always Encrypted Enabled**, and specify your enclave attestation URL.
 4. Click Connect.
 
 
@@ -816,7 +816,7 @@ GO;
 
 ### Set up your you Visual Studio Project
 
-To use Always Encrypted with secure enclaves in a .NET Framework application, you need to make sure your application is built against .NET Framework 4.7.2 and is integrated with the Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders NuGet. In addition, if you store you column master key in Azure Key Vault, you also need to integrate your application with the Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider NuGet, version 3.0 or later. 
+To use Always Encrypted with secure enclaves in a .NET Framework application, you need to make sure your application is built against .NET Framework 4.7.2 and is integrated with the Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders NuGet. In addition, if you store you column master key in Azure Key Vault, you also need to integrate your application with the Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider NuGet, version 2.2.0 or later. 
 
 1. Open Visual Studio.
 2. Create a new Visual C\# project, or open an existing project.
@@ -831,7 +831,7 @@ To use Always Encrypted with secure enclaves in a .NET Framework application, yo
 5. If you use Azure Key Vault for storing your column master keys, install the following NuGet packages by going to **Tools** (main menu) > **NuGet Package Manager** > **Package Manager Console**. Run the following code in the Package Manager Console.
 
   ```powershell
-  Install-Package Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider --IncludePrerelease -Version 3.0
+  Install-Package Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider --IncludePrerelease -Version 2.2.0
   Install-Package Microsoft.IdentityModel.Clients.ActiveDirectory
   ```
 

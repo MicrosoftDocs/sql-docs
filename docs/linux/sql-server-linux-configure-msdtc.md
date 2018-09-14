@@ -47,8 +47,8 @@ For limitations and known issues for MSDTC in CTP 2.0, see [Release notes for SQ
 There are three steps to configure MSDTC communication and functionality. If the necessary configuration steps are not done, SQL Server will not enable MSDTC functionality.
 
 - Configure **network.rpcport** and **distributedtransaction.servertcpport** using mssql-conf.
+- Configure the firewall to allow communication on **rpcport**, **servertcpport**, and port 135.
 - Configure Linux server routing so that RPC communication on port 135 is redirected to SQL Server's **network.rpcport**.
-- Configure the firewall to allow communication on both **rpcport** and **servertcpport** so the RPC endpoint mapping process and MSDTC process can communicate externally to other transaction managers and coordinators.
 
 The following sections provide detailed instructions for each step.
 
@@ -73,6 +73,29 @@ First, configure **network.rpcport** and **distributedtransaction.servertcpport*
    ```bash
    sudo systemctl restart mssql-server
    ```
+
+## Configure the firewall
+
+The final step is to configure the firewall to allow communication on **rpcport**, **servertcpport**, and port 135.  This enables the RPC endpoint mapping process and MSDTC process to communicate externally to other transaction managers and coordinators. The actual steps for this will vary depending on your Linux distribution and firewall. 
+
+The following example shows how to create these rules on Ubuntu.
+
+```bash
+sudo ufw allow from any to any port 13500 proto tcp
+sudo ufw allow from any to any port 51999 proto tcp
+sudo ufw allow from any to any port 135 proto tcp
+```
+
+The following example shows how this could be done on Red Hat Enterprise Linux (RHEL):
+
+```bash
+sudo firewall-cmd --zone=public --add-port=51999/tcp --permanent
+sudo firewall-cmd --zone=public --add-port=13500/tcp --permanent
+sudo firewall-cmd --zone=public --add-port=135/tcp --permanent
+sudo firewall-cmd --reload
+```
+
+It is important to configure the firewall before configuring port routing in the next section. Refreshing the firewall can clear the port routing rules in some cases.
 
 ## Configure port routing
 
@@ -113,25 +136,6 @@ Configure the Linux server routing table so that RPC communication on port 135 i
 > ```bash
 > iptables -S -t nat | grep "RpcEndPointMapper" | sed 's/^-A //' | while read rule; do iptables -t nat -D $rule; done
 > ```
-
-## Configure the firewall
-
-The final step is to configure the firewall to allow communication on the **rpcport**, the **servertcpport**, and port 135. The actual steps for this will vary depending on your Linux distribution and firewall. The following example shows how to create these rules on Ubuntu.
-
-```bash
-sudo ufw allow from any to any port 13500 proto tcp
-sudo ufw allow from any to any port 51999 proto tcp
-sudo ufw allow from any to any port 135 proto tcp
-```
-
-The following example shows how this could be done on Red Hat Enterprise Linux (RHEL):
-
-```bash
-sudo firewall-cmd --zone=public --add-port=51999/tcp --permanent
-sudo firewall-cmd --zone=public --add-port=13500/tcp --permanent
-sudo firewall-cmd --zone=public --add-port=135/tcp --permanent
-sudo firewall-cmd --reload
-```
 
 ## Verify
 

@@ -192,20 +192,20 @@ If the external script verification step was successful, you can run R or Python
 
 If you got an error when running the command, review the additional configuration steps in this section. You might need to make additional appropriate configurations to the service or database.
 
-Configuration at the instance level might include:
+At the instance level, additional configuration might include:
 
 * [Configure Windows firewall for in-bound connections](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)
 * [Enable additional network protocols](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)
 * [Enable remote connections](../../database-engine/configure-windows/configure-the-remote-access-server-configuration-option.md)
 
-Configuration changes specific to Machine Learning Services:
+On the database, you might need the following configuration updates:
 
 * [Extend built-in permissions to remote users](#bkmk_configureAccounts)
 * [Grant permission to run external scripts](#permissions-external-script)
 * [Grant access to individual databases](#permissions-db)
 
 > [!NOTE]
-> Whether additional configuration is required depends on your security schema, where you installed SQL Server, and how you expect users to connect to the database and run external scripts. For more information about troubleshooting, see [Upgrade and installation FAQ](../r/upgrade-and-installation-faq-sql-server-r-services.md)
+> Whether additional configuration is required depends on your security schema, where you installed SQL Server, and how you expect users to connect to the database and run external scripts. 
 
 ###  <a name="bkmk_configureAccounts"></a> Enable implied authentication for SQL Restricted User Group (SQLRUserGroup) account group
 

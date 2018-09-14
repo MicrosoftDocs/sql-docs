@@ -35,7 +35,11 @@ This diagram represents the solution that you make in this tutorial:
 
 ### Deployment methodology for Kubernetes
 
-Several of the steps in this article create a manifest and then deploy the manifest to the cluster. The manifest is a .yaml file with the description of the Kubernetes objects that you deploy. The objects include storage, operators, pods, containers, and services.
+Several of the steps in this article create a manifest and then deploy the manifest to the cluster. The manifest is a .yaml file with the description of the Kubernetes objects that you deploy.
+
+The .yaml files in this example are available at [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability).
+
+The objects include storage, operators, pods, containers, and services.
 
 ## Prerequisites
 
@@ -46,15 +50,13 @@ Several of the steps in this article create a manifest and then deploy the manif
   * [SQL Server on Docker](quickstart-install-connect-docker.md)
   * [SQL Server Always On availability group](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
 
-* A Kubernetes cluster with four nodes. For instructions, refer to [Tutorial: Deploy an Azure Kubernetes Service (AKS) cluster](http://docs.microsoft.com/azure/aks/tutorial-kubernetes-deploy-cluster).
+* A Kubernetes cluster with four nodes.
+
+  For instructions, refer to [Tutorial: Deploy an Azure Kubernetes Service (AKS) cluster](http://docs.microsoft.com/azure/aks/tutorial-kubernetes-deploy-cluster).
 
 * Install [`kubectl`](https://docs.microsoft.com/en-us/azure/aks/tutorial-kubernetes-deploy-cluster#install-the-kubectl-cli).
 
 ## Configuration and deployment procedures
-
-Kubernetes objects are deployed and managed with .yaml files.
-
-For this tutorial, you can download the .yaml files from [GitHub](http://sqlhelsinki.visualstudio.com/_git/pm-tools?path=%2Fkubernetes-ag-samples%2Fazure-kubernetes-service-sql-ag-example&version=GBmaster). Download all of the files to one directory.  
 
 The tutorial will show how to apply the .yaml files to your Kubernetes cluster.
 
@@ -98,19 +100,6 @@ kubectl describe pv
 
 `kubectl` returns metadata about the persistent volumes that were automatically created and bound to the persistent volume claims.
 
-## Deploy the operator
-
-`mssql-operator` is a Kubernetes operator that deploys the instances of SQL Server and configures the availability group in the Kubernetes cluster. Deploy the operator as one replica Kubernetes deployment.
-
-To deploy the operator:
-
-
-Deploy the operator with the `kubectl apply` command.
-
-```azurecli
-kubectl apply -f kubernetes-ag-operator.yaml
-```
-
 ## Create the secrets
 
 To create Kubernetes secrets to store the passwords for the SQL Server SA account and the SQL Server master key, run the following command.
@@ -120,6 +109,17 @@ kubectl create secret generic sql-secrets --from-literal=sapassword="MyC0m9l&xP@
 ```
 
 In a production environment use a different, complex password.
+## Deploy the operator
+
+`mssql-operator` is a Kubernetes operator that deploys the instances of SQL Server and configures the availability group in the Kubernetes cluster. Deploy the operator as one replica Kubernetes deployment.
+
+To deploy the operator:
+
+Deploy the operator with the `kubectl apply` command.
+
+```azurecli
+kubectl apply -f operator.yaml
+```
 
 ## Create the SQL Server AG Deployment
 
@@ -132,14 +132,37 @@ In addition, the deployment describes a load balancer service for the availabili
 
 To deploy mssql-server:
 
-1. Copy [kubernetes-ag-sql-statefulset.yaml](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Linux) to your computer.
-2. Update `kubernetes-ag-sql-statefulset.yaml` for your environment.
+1. Copy [sqlserver.yaml](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Linux) to your computer.
+2. Update `sqlserver.yaml` for your environment.
 
 
 To deploy the SQL Server instances and create the availability group, run the following command.
 
 ```azurecli
-kubectl apply -f kubernetes-ag-sql-statefulset-yaml
+kubectl apply -f sqlserver.yaml
+```
+
+## Deploy AG services
+
+In the Kubernetes cluster create load balancer services to direct calls to replicas in the availability group.
+
+[ag-services.yaml](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Linux) creates four services.
+
+* ag1-primary connects to the primary replica.
+* ag1-secondary-sync connects to a synchronous secondary replica.
+* ag1-secondary-async connects to an asynchronous secondary replica.
+* ag1-secondary-config connects to a configuration only replica. 
+
+  >[!NOTE]
+  >These load balancer services are provided as examples. In this tutorial there is not configuration-only replica.
+
+
+Deploy the load balancer services so that you can connect to the availability group.
+
+To deploy the services, run the following command.
+
+```azurecli
+kubectl apply -f ag-services.yaml
 ```
 
 ### Monitor the deployment
@@ -152,7 +175,7 @@ After deployment, only AG membership list and post-init T-SQL script can be upda
 
 ## Connect to the SQL Server instance hosting the primary replica
 
-The `sqlservers.yaml` describes a Kubernetes service name `ag1-primary`. `ag1-primary` creates an Azure load balancer that point the SQL Server instance hosting the primary replica. Use the external IP address of the service as target server, `sa` as account, and the password you created earlier in the `mssql secret` for the password.
+The `ag-services.yaml` describes a Kubernetes service name `ag1-primary`. `ag1-primary` creates an Azure load balancer that point the SQL Server instance hosting the primary replica. Use the external IP address of the service as target server, `sa` as account, and the password you created earlier in the `mssql secret` for the password.
 
 Use `kubectl get services` to get this IP address.
 

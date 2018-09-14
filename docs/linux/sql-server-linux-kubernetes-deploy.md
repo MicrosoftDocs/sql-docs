@@ -29,23 +29,17 @@ To deploy a SQL Server Always On Availability Group on a Kubernetes Cluster:
 
 1. Configure and deploy the SQL Server operator manifest
 
-  Copy the SQL Server operator `.yaml` file from [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Linux)
+  Copy the SQL Server operator `operator.yaml` file from [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Linux)
 
-  The `.yaml` file is the deployment manifiest for the Kubernetes.
+  The `operator.yaml` file is the deployment manifiest for the Kubernetes.
 
-  To configure the manifest, update the `.yaml` file for your environment.
+  To configure the manifest, update the `operator.yaml` file for your environment.
 
   Apply the manifest to the Kubernetes cluster.
 
   ```azurecli
-  kubectl apply -f .yaml
+  kubectl apply -f operator.yaml
   ```
-
-## Example
-
-The following example describes a deployment for the `mssql-operator`.
-
-[operator.yaml](http://sqlhelsinki.visualstudio.com/_git/pm-tools?path=%2Fkubernetes-ag-samples%2Fazure-kubernetes-service-sql-ag-example&version=GBmaster#path=%2Fkubernetes-ag-samples%2Fazure-kubernetes-service-sql-ag-example%2Foperator.yaml&version=GBmaster)
 
 ## Next steps
 

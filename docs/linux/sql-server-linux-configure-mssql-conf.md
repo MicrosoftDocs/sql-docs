@@ -12,6 +12,7 @@ ms.suite: "sql"
 ms.custom: "sql-linux"
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
+monikerRange: ">=sql-server-2017||=sqlallproducts-allversions"
 ---
 # Configure SQL Server on Linux with the mssql-conf tool
 
@@ -34,10 +35,11 @@ ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 | [Default backup directory](#backupdir) | Change the default directory for new backup files. |
 | [Dump type](#coredump) | Choose the type of dump memory dump file to collect. |
 | [High availability](#hadr) | Enable Availability Groups. |
-| [Local Audit directory](#localaudit) | Set a a directory to add Local Audit files. |
+| [Local Audit directory](#localaudit) | Set a directory to add Local Audit files. |
 | [Locale](#lcid) | Set the locale for SQL Server to use. |
 | [Memory limit](#memorylimit) | Set the memory limit for SQL Server. |
 | [Microsoft Distributed Transaction Coordinator](#msdtc) | Configure and troubleshoot MSDTC on Linux. |
+| [MLServices EULAs](#mlservices-eula) | Accept R and Python EULAs for mlservices packages. Applies to SQL Server 2019 only.|
 | [TCP port](#tcpport) | Change the port where SQL Server listens for connections. |
 | [TLS](#tls) | Configure Transport Level Security. |
 | [Traceflags](#traceflags) | Set the traceflags that the service is going to use. |
@@ -51,13 +53,13 @@ ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 
 * For the shared disk cluster scenario, do not attempt to restart the **mssql-server** service to apply changes. SQL Server is running as an application. Instead, take the resource offline and then back online.
 
-* These examples run mssql-conf by specify the full path: **/opt/mssql/bin/mssql-conf**. If you choose to navigate to that path instead, run mssql-conf in the context of the current directory: **./mssql-conf**.
+* These examples run mssql-conf by specifying the full path: **/opt/mssql/bin/mssql-conf**. If you choose to navigate to that path instead, run mssql-conf in the context of the current directory: **./mssql-conf**.
 
 ## <a id="agent"></a> Enable SQL Server Agent
 
 The **sqlagent.enabled** setting enables [SQL Server Agent](sql-server-linux-run-sql-server-agent-job.md). By default, SQL Server Agent is disabled. If **sqlagent.enabled** is not present in the mssql.conf settings file, then SQL Server internally assumes that SQL Server Agent is disabled.
 
-To change this settings, use the following steps:
+To change this setting, use the following steps:
 
 1. Enable the SQL Server Agent:
 
@@ -87,7 +89,7 @@ The **set-collation** option changes the collation value to any of the supported
 
 1. The mssql-conf utility will attempt to change to the specified collation value and restart the service. If there are any errors, it rolls back the collation to the previous value.
 
-1. Retore your user database backups.
+1. Restore your user database backups.
 
 For a list of supported collations, run the [sys.fn_helpcollations](../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) function: `SELECT Name from sys.fn_helpcollations()`.
 
@@ -374,10 +376,11 @@ sudo /opt/mssql/bin/mssql-conf set hadr.hadrenabled  1
 sudo systemctl restart mssql-server
 ```
 
-For information how this is used with availability groups, see the following two topics.
+For information on how this is used with availability groups, see the following two topics.
 
 - [Configure Always On Availability Group for SQL Server on Linux](sql-server-linux-availability-group-configure-ha.md)
 - [Configure read-scale availability group for SQL Server on Linux](sql-server-linux-availability-group-configure-rs.md)
+
 
 ## <a id="localaudit"></a> Set local audit directory
 
@@ -482,6 +485,36 @@ There are several other settings for mssql-conf that you can use to monitor and 
 | distributedtransaction.tracefilepath | Folder in which trace files should be stored |
 | distributedtransaction.turnoffrpcsecurity | Enable or disable RPC security for distributed transactions |
 
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+## <a id="mlservices-eula"></a> Accept MLServices EULAs
+
+Adding [machine learning R or Python packages](sql-server-linux-setup-machine-learning.md) to the database engine requires that you accept the licensing terms for open-source distributions of R and Python. The following table enumerates all available commands or options related to mlservices EULAs. There are two EULAs for Anaconda and Microsoft R Open, respectively. The same parameter is used for either or both packages, depending on what you installed.
+
+```bash
+# For all packages: database engine and mlservices
+# Setup prompts for mlservices EULAs, which you need to accept
+sudo /opt/mssql/bin/mssql-conf setup
+
+# Add R or Python to an existing installation
+sudo /opt/mssql/bin/mssql-conf setup accept-eula-ml
+
+# Alternative valid syntax
+# Add R or Python to an existing installation
+sudo /opt/mssql/bin/mssql-conf set EULA accepteulaml Y
+
+# Rescind EULA acceptance
+sudo /opt/mssql/bin/mssql-conf unset EULA accepteulaml
+```
+
+You can also add EULA acceptance directly to the [mssql.conf file](#mssql-conf-format):
+
+```ini
+[EULA]
+accepteula = Y
+accepteulaml = Y
+``` 
+:::moniker-end
+
 ## <a id="tcpport"></a> Change the TCP port
 
 The **network.tcpport** setting changes the TCP port where SQL Server listens for connections. By default, this port is set to 1433. To change the port, run the following commands:
@@ -573,7 +606,8 @@ sudo cat /var/opt/mssql/mssql.conf
 
 Note that any settings not shown in this file are using their default values. The next section provides a sample **mssql.conf** file.
 
-## mssql.conf format
+
+## <a id="mssql-conf-format"></a> mssql.conf format
 
 The following **/var/opt/mssql/mssql.conf** file provides an example for each setting. You can use this format to manually make changes to the **mssql.conf** file as needed. If you do manually change the file, you must restart SQL Server before the changes are applied. To use the **mssql.conf** file with Docker, you must have Docker [persist your data](sql-server-linux-configure-docker.md). First add a complete **mssql.conf** file to your host directory and then run the container. There is an example of this in  [Customer Feedback](sql-server-linux-customer-feedback.md).
 

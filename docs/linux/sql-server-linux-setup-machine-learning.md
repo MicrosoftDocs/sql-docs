@@ -4,7 +4,7 @@ description: This article describes how to install SQL Server Machine Learning S
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.date: 09/11/2018
+ms.date: 09/14/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.component: ""
@@ -19,15 +19,17 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 
 ## Prerequisites
 
-Machine learning and programming extensions are an add-on to the database engine. As a prerequisite, install and configure the SQL Server database engine on [any supported Linux operating system](sql-server-linux-release-notes.md#supported-platforms), including docker:
+Machine learning and programming extensions are an add-on to the database engine. Although you can [install the database engine and Machine Learning Services concurrently](#install-all), it's a best practice to install and configure the SQL Server database engine first so that you can resolve any issues before adding more components. 
 
-+ [Red Hat Enterprise Linux (RHEL)](quickstart-install-connect-red-hat.md)
-+ [SUSE Enterprise Linux Server](quickstart-install-connect-suse.md)
-+ [Ubuntu](quickstart-install-connect-ubuntu.md)
+Machine Learning and programming extensions run on top of the database engine on [any supported Linux operating system](sql-server-linux-release-notes.md#supported-platforms), including docker:
 
-After the database engine is configured, you can add the extensions. 
++ [Install SQL Server on Red Hat Enterprise Linux (RHEL)](quickstart-install-connect-red-hat.md)
++ [Install SQL Server on SUSE Enterprise Linux Server](quickstart-install-connect-suse.md)
++ [Install SQL Server on Ubuntu](quickstart-install-connect-ubuntu.md)
 
-Package locations are in the SQL Server Linux source repositories. Because you already configured source repositories, you should be able to run the package install commands right away.
+After the database engine is installed and configured, you can add the extensions using the commands in this article.
+
+Package locations are in the SQL Server Linux source repositories. Because you already configured source repositories, you should be able to run the package install commands without registering the repo.
 
 ## Package list
 
@@ -148,13 +150,17 @@ sudo zypper install mssql-server-extensibility-java
 
 ## Post-install config (required)
 
-1. Accept the licensing agreements for open-source R and Python. If you previously accepted SQL Server licensing and are now adding the R or Python extensions, the following command is your consent to their terms:
+Additional configuration is primarily through the [mssql-conf tool](sql-server-linux-configure-mssql-conf.md).
+
+1. Accept the licensing agreements for open-source R and Python. There are several ways to do this. If you previously accepted SQL Server licensing and are now adding the R or Python extensions, the following command is your consent to their terms:
 
   ```bash
   # Run as SUDO or root
-    sudo /opt/mssql/bin/mssql-conf set accept-eula ml
-```
-  Alternatively, if you have not yet accepted the SQL Server database engine licensing agreement, that agreement contains a supplement for Machine Learning Services if you installed any of the mlservices packages: `sudo /opt/mssql/bin/mssql-conf setup` 
+  # Use set + EULA 
+    sudo /opt/mssql/bin/mssql-conf set EULA accepteulaml Y
+  ```
+
+  An alternative workflow is that if you have not yet accepted the SQL Server database engine licensing agreement, setup detects the mssql-mlservices packages and prompts for EULA acceptance when `mssql-conf setup` is run. For more information about EULA parameters, see [mssql-conf tool](sql-server-linux-configure-mssql-conf.md#mlservices-eula)
 
 2. Configure external script execution. 
 
@@ -163,31 +169,12 @@ sudo zypper install mssql-server-extensibility-java
   RECONFIGURE WITH OVERRIDE 
   ```
 
-3. Restart SQL Server for the changes to take effect. 
+You should now be able to run external scripts on SQL Server with no restart required. 
 
-  ```bash
-  # sudo systemctl restart mssql-server 
-  ```
-
-## Unattended installation 
- 
-For open-source R and Python components, use the environment variable (ACCEPT_ML_EULA) to accept the ML Services EULA supplement for unattended installations. This is a supplement to the SQL Server EULA. 
-
-The following example configures the Developer edition of SQL Server with SQL Server Machine Learning Services. The -n parameter performs an unprompted installation where the configuration values are pulled from the environment variables. 
-
-```bash
-sudo MSSQL_PID=Developer ACCEPT_EULA=Y ACCEPT_ML_EULA=Y SSQL_SA_PASSWORD='<YourStrong!Passw0rd>' /opt/mssql/bin/mssql-conf -n setup 
-```
-
-For more information, see [Unattended install](https://docs.microsoft.com/sql/linux/sql-server-linux-setup?view=sql-server-2017#unattended).
-
-## Offline installation
-
-Locate the Machine Learning Services and extensibility package downloads in the [Release notes](sql-server-linux-release-notes-2019.md). Follow the [Offline installation](sql-server-linux-setup.md#offline) instructions using the packages you obtained.
- 
 ## Verify external script execution
   
-Execute the following SQL command to test R execution in SQL Server. 
+Execute the following SQL command to test R execution in SQL Server. If the script does not run, try a service restart,
+`sudo systemctl restart mssql-server`.
 
 ```r
 EXEC sp_execute_external_script   
@@ -211,6 +198,28 @@ OutputDataSet = InputDataSet;
 WITH RESULT SETS (([hello] int not null)); 
 GO 
 ```
+
+<a name="install-all"></a>
+
+## Install MSSQLSERVER and MLSERVICES
+
+You can install and configure the database engine and Machine Learning Services in one procedure by appending the extensibility, R, or Python packages and EULA parameters on a command that installs the database engine. The following example is an illustration using the Yum package manager:
+
+```bash
+sudo yum install -y mssql-sqlserver mssql-server-extensibility mssql-server-extensibility-java mssql-mlservices-mlm-py mssql-mlservices-mlm-r   
+```
+
+## Unattended installation
+
+Using the [unattended install](https://docs.microsoft.com/sql/linux/sql-server-linux-setup?view=sql-server-2017#unattended) for the Database Engine, add the packages for mlservices and EULAs.
+
+Recall that Setup or the mssql-conf tool prompts for license agreement acceptance. For open-source R and Python components, accepting the mlservices EULA supplement for is required for uninterrupted installation for mlservices packages. This is in addition to the SQL Server EULA. 
+
+All possible permutations of EULA acceptance are documented in [Configure SQL Server on Linux with the mssql-conf tool](sql-server-linux-configure-mssql-conf.md#mlservices-eula).
+
+## Offline installation
+
+Locate the Machine Learning Services and extensibility package downloads in the [Release notes](sql-server-linux-release-notes-2019.md). Follow the [Offline installation](sql-server-linux-setup.md#offline) instructions using the packages you obtained.
 
 ## Add more R/Python packages 
  

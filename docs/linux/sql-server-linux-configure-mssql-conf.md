@@ -12,6 +12,7 @@ ms.suite: "sql"
 ms.custom: "sql-linux"
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
+monikerRange: ">=sql-server-2017||=sqlallproducts-allversions"
 ---
 # Configure SQL Server on Linux with the mssql-conf tool
 

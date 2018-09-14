@@ -4,13 +4,13 @@ description: R in SQL Server or Python on SQL Server is available when you insta
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 09/08/2018  
+ms.date: 09/14/2018  
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-# Install SQL Server Machine Learning Services
+# Install SQL Server Machine Learning Services on Windows
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Starting in SQL Server 2017, R and Python support for in-database analytics is provided in SQL Server Machine Learning Services, the successor to [SQL Server R Services](../r/sql-server-r-services.md) introduced in SQL Server 2016. Function libraries are available in R and Python and run as external script on a database engine instance. 
@@ -188,34 +188,31 @@ Use the following steps to verify that all components used to launch external sc
 
 ## Additional configuration
 
-If the external script verification step was successful, you can run Python commands from SQL Server Management Studio, Visual Studio Code, or any other client that can send T-SQL statements to the server.
+If the external script verification step was successful, you can run R or Python commands from SQL Server Management Studio, Visual Studio Code, or any other client that can send T-SQL statements to the server.
 
 If you got an error when running the command, review the additional configuration steps in this section. You might need to make additional appropriate configurations to the service or database.
 
-Common scenarios that require additional changes include:
+Configuration at the instance level might include:
 
 * [Configure Windows firewall for in-bound connections](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)
 * [Enable additional network protocols](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)
 * [Enable remote connections](../../database-engine/configure-windows/configure-the-remote-access-server-configuration-option.md)
+
+Configuration changes specific to Machine Learning Services:
+
 * [Extend built-in permissions to remote users](#bkmk_configureAccounts)
 * [Grant permission to run external scripts](#permissions-external-script)
 * [Grant access to individual databases](#permissions-db)
 
 > [!NOTE]
-> Not all the listed changes are required, and none might be required. Requirements depend on your security schema, where you installed SQL Server, and how you expect users to connect to the database and run external scripts. Additional troubleshooting tips can be found here: [Upgrade and installation FAQ](../r/upgrade-and-installation-faq-sql-server-r-services.md)
+> Whether additional configuration is required depends on your security schema, where you installed SQL Server, and how you expect users to connect to the database and run external scripts. For more information about troubleshooting, see [Upgrade and installation FAQ](../r/upgrade-and-installation-faq-sql-server-r-services.md)
 
-###  <a name="bkmk_configureAccounts"></a> Enable implied authentication for Launchpad account group
+###  <a name="bkmk_configureAccounts"></a> Enable implied authentication for SQL Restricted User Group (SQLRUserGroup) account group
 
-During setup, a number of new Windows user accounts are created for the purpose of running tasks under the security token of the [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] service. When a user sends a Python or R script from an external client, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] activates an available worker account. Then it maps it to the identity of the calling user, and runs the script on behalf of the user.
+If you need to run scripts from a remote data science client, and you are using Windows authentication, additional configuration is required to give worker accounts running R and Python processes permission to sign in to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance on your behalf. This behavior is called *implied authentication*, and is implemented by the database engine to support secure execution of external scripts in SQL Server 2016 and SQL Server 2017.
 
-This is called *implied authentication*, and is a service of the database engine. This service supports secure execution of external scripts in SQL Server 2016 and SQL Server 2017.
-
-You can view these accounts in the Windows user group, **SQLRUserGroup**. By default, 20 worker accounts are created, which is usually more than enough for running external script jobs.
-
-> [!IMPORTANT]
-> The worker group is named **SQLRUserGroup** regardless of whether you installed R or Python. There is a single group for each instance.
-
-If you need to run scripts from a remote data science client, and you are using Windows authentication, there are additional considerations. These worker accounts must be given permission to sign in to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance on your behalf.
+> [!NOTE]
+> If you use a **SQL login** for running scripts in a SQL Server compute context, this extra step is not required.
 
 1. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], in Object Explorer, expand **Security**. Then right-click **Logins**, and select **New Login**.
 2. In the **Login - New** dialog box, select **Search**.
@@ -225,8 +222,13 @@ If you need to run scripts from a remote data science client, and you are using 
 6. By default, the group is assigned to the **public** role, and has permission to connect to the database engine.
 7. Select **OK**.
 
-> [!NOTE]
-> If you use a **SQL login** for running scripts in a SQL Server compute context, this extra step is not required.
+In SQL Server 2017 and earlier, a number of local Windows user accounts are created for the purpose of running tasks under the security token of the [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] service. You can view these accounts in the Windows user group, **SQLRUserGroup**. By default, 20 worker accounts are created, which is usually more than enough for running external script jobs. 
+
+These accounts are used as follows. When a user sends a Python or R script from an external client, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] activates an available worker account, maps it to the identity of the calling user, and runs the script on behalf of the user. If the script, which is executing external to SQL Server, has to retrieve data or resources from SQL Server, the connection back to SQL Server requires a log in. Creating a database login for **SQLRUserGroup** also the connection to succeed.
+
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+In SQL Server 2019, worker accounts are replaced with AppContainers, with processes executing under the SQL Server Launchpad service. Although the worker accounts are no longer used, you are still required to add a database login for **SQLRUsergroup** if implied authentication is needed. Just as the worker accounts did not have login permission, the Launchpad service identity does not either. Creating a login for **SQLRUserGroup**, which consists of the Launchpad service in this release, allows implied authentication to work.
+::: moniker-end
 
 ### <a name="permissions-external-script"></a> Give users permission to run external scripts
 

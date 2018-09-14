@@ -18,15 +18,20 @@ ms.prod: sql
 The way SQL Server Big Data Cluster consumes these persistent volumes is by using [Storage Classes](https://kubernetes.io/docs/concepts/storage/storage-classes/). You can create different storage classes for different kind of storage and specify them at the Big Data Cluster deployment time. You can configure which storage class to use for which purpose (pool). SQL Server Big Data Cluster creates [persistent volume claims](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims) with the specified storage class name for each pod that requires persistent volumes. It then mounts the corresponding persistent volume(s) in the pod.
 
 > [!NOTE]
-> For CTP 2.0, you can only have one storage class with static size and access mode for the whole cluster.
+> For CTP 2.0, only `ReadWriteOnce` access mode for the whole cluster is supported.
 
 ## Deployment settings
 
-To use persistent storage during deployment, configure the **USE_PERSISTENT_VOLUME** and **STORAGE_CLASS_NAME** flags with mssqlctl. **USE_PERSISTENT_VOLUME** is set to false by default, and, in this case, SQL Server Big Data Cluster uses emptyDir mounts. If you set the flag to true, you must also provide **STORAGE_CLASS_NAME** as a parameter at the deployment time.
+To use persistent storage during deployment, configure the **USE_PERSISTENT_VOLUME** and **STORAGE_CLASS_NAME** environment variables before running  `mssqlctl create cluster` command. **USE_PERSISTENT_VOLUME** is set to `true` by default. You can override the default and set it to `false` and, in this case, SQL Server Big Data Cluster uses emptyDir mounts. 
 
-## AKS/ACS storage classes
+> [!WARNING]
+> Running without persistent storage can result in a non-functional cluster. Upon pod restarts, cluster metadata and/or user data will be lost permanently.
 
-AKS and ACS both come with two built-in storage classes **default** and **premium-storage** along with dynamic provisioner for them. You can specify either of those or create their own storage class for deploying Big Data Cluster with persistent storage enabled.
+If you set the flag to true, you must also provide **STORAGE_CLASS_NAME** as a parameter at the deployment time.
+
+## AKS storage classes
+
+AKS comes with [two built-in storage classes](https://docs.microsoft.com/en-us/azure/aks/azure-disks-dynamic-pv) **default** and **premium-storage** along with dynamic provisioner for them. You can specify either of those or create your own storage class  for deploying Big Data Cluster with persistent storage enabled.
 
 ## Minikube storage class
 
@@ -38,7 +43,33 @@ Kubeadm does not come with a built-in storage class; therefore, we have created 
 
 ## On-premises cluster
 
-On-premise clusters obviously do not come with any built-in storage class, therefore you must set up persistent volumes/provisioners beforehand and then use the corresponding storage classes during SQL Server Big Data Cluster deployment.
+On-premise clusters obviously do not come with any built-in storage class, therefore you must set up [persistent volumes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/)/[provisioners](https://kubernetes.io/docs/concepts/storage/dynamic-provisioning/) beforehand and then use the corresponding storage classes during SQL Server Big Data Cluster deployment.
+
+# Customize storage size for each pool
+By default, the size of the persistent volume provisioned for each of the pods provisioned in the cluster is 6GB. This is configurable by setting the environment variable `STORAGE_SIZE` to a different value. For example, you can run below command to set the value to 10GB, before running the `mssqlctl create cluster command`.
+```bash
+export STORAGE_SIZE=10Gi
+```
+
+More, you can have different configurations for persistent storage settings such storage class name and persistent volume sizes for different pools in the cluster . For example, you can configure the persistent volumes deployed for the storage pool to use a different storage class and have higher capacity by setting below environment variables before deploying the cluster:
+```bash
+export STORAGE_POOL_USE_PERSISTENT_VOLUME=true
+export STORAGE_POOL_STORAGE_CLASS_NAME=premium-storage
+export STORAGE_POOL_STORAGE_SIZE=100Gi
+```
+
+Here is a comprehensive list of the environment variables related to setting up persistent storage for the SQL Server Big Data cluster:
+| Environment variable | Default value | Description |
+|---|---|---|
+| **USE_PERSISTENT_VOLUME** | true | `true` to use Kubernetes Persistent Volume Claims for pod storage. `false` to use ephemeral host storage for pod storage. |
+| **STORAGE_CLASS_NAME** | default | If `USE_PERSISTENT_VOLUME` is `true` this indicates the name of the Kubernetes Storage Class to use. |
+| **STORAGE_SIZE** | 6Gi | If `USE_PERSISTENT_VOLUME` is `true`, this indicates persistent volume size for each pod. |
+| **DATA_POOL_USE_PERSISTENT_VOLUME** | USE_PERSISTENT_VOLUME | `true` to use Kubernetes Persistent Volume Claims for pods in the data pool. `false` to use ephemeral host storage for data pool pods. |
+| **DATA_POOL_STORAGE_CLASS_NAME** | STORAGE_CLASS_NAME | Indicates the name of the Kubernetes Storage Class to use for the persistent volumes associated with data pool pods.|
+| **DATA_POOL_STORAGE_SIZE** | STORAGE_SIZE |Indicates the persistent volume size for each pod in the data pool. |
+| **STORAGE_POOL_USE_PERSISTENT_VOLUME** | USE_PERSISTENT_VOLUME | `true` to use Kubernetes Persistent Volume Claims for pods in the storage pool. `false` to use ephemeral host storage for storage pool pods.|
+| **STORAGE_POOL_STORAGE_CLASS_NAME** | STORAGE_CLASS_NAME | TIndicates the name of the Kubernetes Storage Class to use for the persistent volumes associated with storage pool pods. |
+| **STORAGE_POOL_STORAGE_SIZE** | STORAGE_SIZE | Indicates the persistent volume size for each pod in the storage pool. |
 
 ## Next steps
 

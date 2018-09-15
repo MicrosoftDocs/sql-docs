@@ -1,5 +1,5 @@
 ---
-title: Overview of the SQL Big Data Clusters master instance | Microsoft Docs
+title: What is the SQL Big Data Clusters master instance? | Microsoft Docs
 description:
 author: rothja 
 ms.author: jroth 
@@ -9,11 +9,11 @@ ms.topic: conceptual
 ms.prod: sql
 ---
 
-# Overview of the SQL Server Big Data Cluster master instance
+# What is the SQL Big Data Clusters master instance?
 
 This article describes the role of the *SQL Server master instance* in a SQL Server 2019 preview Big Data cluster. The master instance is a SQL Server instance running in the SQL Server Big Data Clusters [control plane](big-data-cluster-overview.md#controlplane).
 
-The SQL Server master instance serves the following functions:
+The SQL Server master instance provides the following functionality:
 
 ## Connectivity
 
@@ -31,6 +31,7 @@ You can also choose to add your own high-value databases to the SQL master insta
 
 ## Next steps
 
-To learn more about the overall architecture of Big Data Clusters, see [What is SQL Server 2019 Big Data Clusters?](big-data-cluster-overview.md). 
+To learn more about the SQL Server Big Data Clusters, see the following articles:
 
-To deploy a Big Data cluster on Kubernetes, see [Quickstart: Deploy SQL Server Big Data Cluster on Kubernetes](quickstart-big-data-cluster-deploy.md). 
+[What is SQL Server 2019 Big Data Clusters?](big-data-cluster-overview.md).
+[Quickstart: Deploy SQL Server Big Data Cluster on Kubernetes](quickstart-big-data-cluster-deploy.md).

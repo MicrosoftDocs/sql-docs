@@ -12,13 +12,13 @@ ms.technology: polybase
 monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 ---
 
-# Use the Data Virtualization Wizard with external tables
+# Use the Data External Table Wizard with external tables
 
 One of the key scenarios for SQL Server 2019 CTP 2.0 is the ability to virtualize data.  This process allows the data to stay in it’s original location, however you can **virtualize** the data in a SQL Server instance so that it can be queried there like any other table in SQL Server. This will minimize the need for ETL processes. This is possible with the use of Polybase connectors. For more information on Data Virtualization please refer to our [Get started with PolyBase](polybase-guide.md) Document.
 
-## Launch the virtualize data wizard
+## Launch the External Table wizard
 
-Connect to the master instance using the IP address / port number (31433) obtained at the end of the [deployment script](../../big-data-cluster/quickstart-big-data-cluster-deploy.md). Expand your **Databases** node in the Object Explorer and select one of the databases where you would like to virtualize the data into from an existing SQL Server instance. Right-click on the Database and select **Virtualize Data** from the context menu. This launches the Virtualize Data wizard. You can also launch the Virtualize Data wizard from the command palette by typing Ctrl+Shift+P (in Windows) and Cmd+Shift+P (in Mac).
+Connect to the master instance using the IP address / port number (31433) obtained at the end of the [deployment script](../../big-data-cluster/quickstart-big-data-cluster-deploy.md). Expand your **Databases** node in the Object Explorer and select one of the databases where you would like to virtualize the data into from an existing SQL Server instance. Right-click on the Database and select **Create External Table** from the context menu. This launches the Virtualize Data wizard. You can also launch the Virtualize Data wizard from the command palette by typing Ctrl+Shift+P (in Windows) and Cmd+Shift+P (in Mac).
 
 ![Virtualize data wizard](media/data-virtualization/virtualize-data-wizard.png)
 bue
@@ -54,11 +54,11 @@ The next step is to Configure Credential, so provide a Credential Name, this is 
 
 In the next window, you will be able to select the tables you want to create external views of. Selecting the Parent databases will include all child tables as well. When the tables are selected, a mapping table can be seen on the right hand side. Here you can make any 'type' changes or change the name of the selected external table itself.
 
-[!NOTE]
+> [!NOTE]
 Double clicking another selected table will change the mapping view.
 
-[!IMPORTANT]
-Photo type is not yet supported by the data virtualization tool. Creating an external view with a photo type in it will throw an error after creation of table. The table will still be created though.
+> [!IMPORTANT]
+Photo type is not yet supported by the External Table tool. Creating an external view with a photo type in it will throw an error after creation of table. The table will still be created though.
 
 ## Summary
 

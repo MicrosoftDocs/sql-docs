@@ -39,11 +39,12 @@ Here are the objects we will create in this section:
 
 
 1. Create a master key on the database. This is required to encrypt the credential secret.
+
 ```sql
    CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
 ```
 
-2. Create a database scoped credential.
+1. Create a database scoped credential.
 
 ```sql
  /*  specify credentials to external data source
@@ -54,7 +55,7 @@ CREATE DATABASE SCOPED CREDENTIAL OracleCredentials
 WITH IDENTITY = 'username', Secret = 'password';
 ```
 
-3. Create an external data source with [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md). Specify external data source location and credentials for the Oracle data source.
+1. Create an external data source with [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md). Specify external data source location and credentials for the Oracle data source.
 
 ```sql
  /*  LOCATION: Server DNS name or IP address.
@@ -67,19 +68,17 @@ WITH (
   --, PUSHDOWN = ON | OFF
   , CREDENTIAL = OracleCredentials
 );
-
-
-
 ```
 
-4. Create schemas for external data
-
+1. Create schemas for external data
+ 
 ```sql
 CREATE SCHEMA oracle;
 GO
 
 ```
-5.  Create external tables that represents data stored in external Oracle system [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md).
+
+1.  Create external tables that represents data stored in external Oracle system [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md).
  
 ```sql
 /*  LOCATION: Oracle table/view in '<database_name>.<schema_name>.<object_name>' format
@@ -101,12 +100,12 @@ WITH (
     DATA_SOURCE=OracleInstance
 );
 ```
-6. Create statistics on an external table for optimized performance.
+
+1. Create statistics on an external table for optimized performance.
 
 ```sql
     CREATE STATISTICS OrdersOrderKeyStatistics ON oracle.orders(O_ORDERKEY) WITH FULLSCAN;
 ```
-
 
 ## Next steps
 

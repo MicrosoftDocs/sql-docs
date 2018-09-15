@@ -39,10 +39,12 @@ Here are the objects we will create in this section:
 .
 
 1. Create a master key on the database. This is required to encrypt the credential secret.
+
 ```sql
    CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
 ```
-2. Create a database scoped credential for.
+
+1. Create a database scoped credential for.
 
 ```sql
  /*  specify credentials to external data source
@@ -53,7 +55,7 @@ CREATE DATABASE SCOPED CREDENTIAL SqlServerCredentials
 WITH IDENTITY = 'username', Secret = 'password';
 ```
 
-3. Create an external data source with [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).Specify external data source location and credentials for SQL Server.
+1. Create an external data source with [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).Specify external data source location and credentials for SQL Server.
 
 ```sql
  /*  LOCATION: Server DNS name or IP address.
@@ -66,18 +68,16 @@ WITH (
   -- PUSHDOWN = ON | OFF,
   CREDENTIAL = SqlServerCredentials
 );
-
 ```
 
-
-4. Create schemas for external data
+1. Create schemas for external data
 
 ```sql
 CREATE SCHEMA sqlserver;
 GO
- 
 ```
-5.  Create external tables that represents data stored in external SQL Server  [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md).
+
+1.  Create external tables that represents data stored in external SQL Server  [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md).
  
 ```sql
 /*  LOCATION: sql server table/view in 'database_name.schema_name.object_name' format
@@ -97,15 +97,13 @@ WITH (
     LOCATION='tpch_10.dbo.customer',
     DATA_SOURCE=SqlServerInstance
 );
-
 ```
-6. Create statistics on an external table.
+
+1. Create statistics on an external table.
 
 ```sql
     CREATE STATISTICS CustomerCustKeyStatistics ON sqlserver.customer(C_CUSTKEY) WITH FULLSCAN; 
 ```
-
-
 
 ## Next steps
 

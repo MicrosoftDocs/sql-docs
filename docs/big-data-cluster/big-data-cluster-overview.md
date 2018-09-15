@@ -4,7 +4,7 @@ description:
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 08/27/2018
+ms.date: 09/24/2018
 ms.topic: overview
 ms.prod: sql
 ---
@@ -33,7 +33,7 @@ A SQL Big Data Cluster includes a scalable HDFS [storage pool](concept-storage-p
 
 ### Scale-out data mart
 
-SQL Big Data Clusters provides scale-out compute and storage to improve the performance of analyzing big data. Data from a variety of sources can be ingested and distributed across [data pool](concept-data-pool.md) nodes for further analysis.
+SQL Big Data Clusters provides scale-out compute and storage to improve the performance of analyzing any data. Data from a variety of sources can be ingested and distributed across [data pool](concept-data-pool.md) nodes for further analysis.
 
 ![Data mart](media/big-data-cluster-overview/data-mart.png)
 
@@ -49,7 +49,7 @@ Management and monitoring are provided through a combination of open-source comp
 
 The cluster Admin portal is a web interface that displays the status and health of the pods in the cluster. It also provides links to other dashboards provided by Grafana and Kibana.
 
-You can use Azure Data Studio to perform a variety of tasks on the Big Data Cluster. This is enabled by a new Scale-out Data Management extension. This extension provides:
+You can use Azure Data Studio to perform a variety of tasks on the Big Data Cluster. This is enabled by the new **SQL Server 2019 Extension (Preview)**. This extension provides:
 
 - Built-in snippets for common management tasks.
 - Reports on the number of compute pools and the status of running jobs.
@@ -70,11 +70,11 @@ The control plane provides management and [security](concept-security.md) for th
 
 ### Compute plane
 
-The compute plane provides computational resources to the cluster. It contains nodes running SQL Server on Linux pods. The pods in the compute plane are divided into [compute pools](concept-compute-pool.md) for specific processing tasks. A compute pool can act as a [PolyBase](../relational-databases/polybase/polybase-guide.md) scale-out group for distributed queries over different data sources—such as Oracle, MongoDB, or Teradata.
+The compute plane provides computational resources to the cluster. It contains nodes running SQL Server on Linux pods. The pods in the compute plane are divided into [compute pools](concept-compute-pool.md) for specific processing tasks. A compute pool can act as a [PolyBase](../relational-databases/polybase/polybase-guide.md) scale-out group for distributed queries over different data sources—such as HDFS, Oracle, MongoDB, or Teradata.
 
 ### Data plane
 
-The data plane is used for data persistence and caching. It contains the SQL data pool, and storage nodes.  The SQL [data pool](concept-data-pool.md) consists of one or more nodes running SQL Server on Linux. It is used to cache data returned by Spark jobs. SQL Big Data Cluster data marts are persisted in the data pool. The [storage pool](concept-storage-pool.md) consists of storage nodes comprised of SQL Server on Linux, Spark, and HDFS. All the storage nodes in a SQL Big Data cluster are members of an HDFS cluster.
+The data plane is used for data persistence and caching. It contains the SQL data pool, and storage nodes.  The SQL [data pool](concept-data-pool.md) consists of one or more nodes running SQL Server on Linux. It is used to ingest data from SQL queries or Spark jobs. SQL Big Data Cluster data marts are persisted in the data pool. The [storage pool](concept-storage-pool.md) consists of storage nodes comprised of SQL Server on Linux, Spark, and HDFS. All the storage nodes in a SQL Big Data cluster are members of an HDFS cluster.
 
 ## Next steps
 

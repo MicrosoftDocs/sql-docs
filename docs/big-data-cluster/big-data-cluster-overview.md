@@ -58,21 +58,21 @@ You can use Azure Data Studio to perform a variety of tasks on the Big Data Clus
 - Ability to create, open, and run Jupyter-compatible notebooks.
 - Data virtualization wizard to simplify the creation of external data sources.
 
-## Architecture
+## <a id="architecture"></a> Architecture
 
 A SQL Big Data Cluster is a cluster of Linux nodes orchestrated by Kubernetes. Nodes in the cluster are arranged into three logical planes: the control plane, the compute pane, and the data plane. Each plane has different responsibilities in the cluster. Every Kubernetes node in a SQL Big Data Cluster is member of at least one plane.
 
 ![Architecture overview](media/big-data-cluster-overview/architecture-diagram-planes.png)
 
-### Control plane
+### <a id="controlplane"></a> Control plane
 
 The control plane provides management and [security](concept-security.md) for the cluster. It contains the Kubernetes master, the [SQL Server master instance](concept-master-instance.md), and other cluster-level services such as the Hive Metastore and Spark Driver.
 
-### Compute plane
+### <a id="computeplane"></a> Compute plane
 
 The compute plane provides computational resources to the cluster. It contains nodes running SQL Server on Linux pods. The pods in the compute plane are divided into [compute pools](concept-compute-pool.md) for specific processing tasks. A compute pool can act as a [PolyBase](../relational-databases/polybase/polybase-guide.md) scale-out group for distributed queries over different data sources—such as HDFS, Oracle, MongoDB, or Teradata.
 
-### Data plane
+### <a id="dataplane"></a> Data plane
 
 The data plane is used for data persistence and caching. It contains the SQL data pool, and storage nodes.  The SQL [data pool](concept-data-pool.md) consists of one or more nodes running SQL Server on Linux. It is used to ingest data from SQL queries or Spark jobs. SQL Big Data Cluster data marts are persisted in the data pool. The [storage pool](concept-storage-pool.md) consists of storage nodes comprised of SQL Server on Linux, Spark, and HDFS. All the storage nodes in a SQL Big Data cluster are members of an HDFS cluster.
 

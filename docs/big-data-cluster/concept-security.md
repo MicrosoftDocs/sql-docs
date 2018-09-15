@@ -55,29 +55,6 @@ Username for accessing the HDFS/Spark endpoint:
 
 Password for accessing the HDFS/Spark endpoint:
  + KNOX_PASSWORD=<knox_password>
- 
-### Update HDFS/Spark (Knox) and Controller passwords
-In order to update Knox and controller admin passwords, the following command can be used:
-
-   ```bash
-    mssqlctl set-password service [-h] [-v] servicename clustername
-   ```
-
-  Service name indicated which service to update the password for. This can be either "knox" or "controller"
-
-
-Optional arguments:
- *  -h, --help     show this help message and exit
- * -v, --verbose  Increase output verbosity
-
-For example, to update the Knox password for a cluster called "testcluster", run the following:
-
-  ```bash
-export KNOX_PASSWORD = <password>
-mssqlctl set-password service knox testcluster
-   ```
-
-It is currently not possible to change the Knox user name.
 
 ## Intra cluster authentication
 
@@ -93,6 +70,4 @@ Please note that in CTP2.0, only basic authentication is supported. Fine-grained
 
 Communication with non-SQL services within the Big Data Cluster, like for example Livy to Spark or Spark to Storage Pool, is secured using certificates. All SQL Sever to SQL Server communication is secured using SQL logins.
 
-## Next steps
-
-TBD
+## Next step

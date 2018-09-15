@@ -14,7 +14,7 @@ ms.reviewer: "martinle"
 See what’s new in the latest Appliance Updates for Microsoft® Analytics Platform System (APS). APS is a scale-out on-premises appliance that hosts MPP SQL Server Parallel Data Warehouse. 
 
 ::: moniker range=">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
-
+<a name="h2-aps-au7"></a>
 ## APS AU7
 APS 2016 is a prerequisite to upgrade to AU7. The following are new in APS AU7:
 
@@ -36,7 +36,7 @@ Microsoft advises all customers to install the BIOS updated. Microsoft has measu
 
 ::: moniker-end
 ::: moniker range=">= aps-pdw-2016 || = sqlallproducts-allversions"
-
+<a name="h2-aps-au6"></a>
 ## APS 2016
 This section described the new features for APS 2016-AU6.
 

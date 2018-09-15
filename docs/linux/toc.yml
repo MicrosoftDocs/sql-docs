@@ -49,6 +49,8 @@
       href: sql-server-linux-shared-disk-cluster-configure-nfs.md
     - name: SMB
       href: sql-server-linux-shared-disk-cluster-configure-smb.md
+  - name: Operate failover cluster instance - SQL Server on Linux
+    href: sql-server-linux-shared-disk-cluster-operate.md
   - name: 7_Deploy a Pacemaker cluster
     href: sql-server-linux-deploy-pacemaker-cluster.md
   - name: 8_Create and configure availability groups
@@ -184,16 +186,12 @@
         - name: Always On Availability groups for SQL Server containers
           href: sql-server-ag-kubernetes.md
           items: 
-          - name: SQL Server operator
-            href: sql-server-linux-kubernetes-operator.md
-          - name: SQL Server stateful set
-            href: sql-server-linux-kubernetes-spec.md
-          - name: Fail over primary replica
-            href: sql-server-linux-kubernetes-failover-job.md
-          - name: Rotate credentials
-            href: sql-server-linux-kubernetes-rotate-credentials.md
-          - name: Create listener services for secondary replicas
-            href: sql-server-linux-kubernetes-secondary-replica-listeners.md
+          - name: Deploy
+            href: sql-server-linux-kubernetes-deploy.md
+          - name: Manage
+            href: sql-server-linux-kubernetes-manage.md
+          - name: Connect
+            href: sql-server-linux-kubernetes-connect.md
   - name: Security
     href: sql-server-linux-security-overview.md
     items:

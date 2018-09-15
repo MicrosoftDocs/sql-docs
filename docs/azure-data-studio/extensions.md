@@ -18,7 +18,7 @@ manager: craigg
 
 Extensions in [!INCLUDE[name-sos](../includes/name-sos-short.md)] provide an easy way to add more functionality to the base [!INCLUDE[name-sos](../includes/name-sos-short.md)] installation. 
 
-Extensions are provided by the Azure Data Studio team (Microsoft), as well as the 3rd party community (you!). For details about creating extensions, see [Get started with Extensibility](https://github.com/Microsoft/sqlopsstudio/wiki/Getting-started-with-Extensibility).
+Extensions are provided by the Azure Data Studio team (Microsoft), as well as the 3rd party community (you!). For details about creating extensions, see [Extension authoring](extension-authoring.md).
 
 
 ## Add Azure Data Studio extensions
@@ -34,6 +34,7 @@ Extensions are provided by the Azure Data Studio team (Microsoft), as well as th
 6. Installed extensions appear as tabs on your management dashboard:
 
    ![extension manager](media/extensions/dashboard-extensions.png)
+
 
 
 

@@ -11,13 +11,19 @@ ms.component: ""
 ms.suite: "sql"
 ms.custom: "sql-linux"
 ms.technology: linux
-monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions"
 ---
 # High availability for SQL Server containers
 
 Create and manage your SQL Server instances natively in Kubernetes.
 
 Deploy SQL Server to docker containers managed by [Kubernetes](https://kubernetes.io/). In Kubernetes, a container with a SQL Server instance can automatically recover in case a cluster node fails. For more robust availability, configure SQL Server Always On availability group with SQL Server instances in containers on a Kubernetes cluster. This article compares the two solutions.
+
+## Compare SQL Server versions on Kubernetes
+
+SQL Server 2017 provides a Docker image that can deploy on Kubernetes. You can configure the image with a Kubernetes persistent volume claim (PVC). Kubernetes monitors the SQL Server process in the container. If the process, pod, container, or node fail, Kubernetes automatically bootstraps another instance and reconnects to the storage.
+
+SQL Server 2019 introduces a more robust archicture with a Kubernetes StatefulSet. This allows Kubernetes to orchestrate instances of SQL Server in container images that can participate in a SQL Server Always On Availability Group. This can provide improved health monitoring, faster recovery, offload backup, and read scale out.  
 
 ## Container with SQL Server instance on Kubernetes
 
@@ -33,9 +39,11 @@ Kubernetes orchestrates the resources in the cluster. When a pod or node hosting
 
 SQL Server 2017 and later support containers on Kubernetes.
 
+To create a container in Kubernetes, see [Deploy a SQL Server container in Kubernetes](tutorial-sql-server-containers-kubernetes.md)
+
 ## A SQL Server Always On availability group on SQL Server containers in Kubernetes
 
-SQL Server 2019 supports availability groups on containers in a Kubernetes. For availability groups, deploy the SQL Server [Kubernetes operator](http://coreos.com/blog/introducing-operators.html) to your Kubernetes cluster. The operator helps package, deploy, and manage the availability group in a cluster.
+SQL Server 2019 supports availability groups on containers in a Kubernetes. For availability groups, deploy the SQL Server [Kubernetes operator](http://coreos.com/blog/introducing-operators.html) to your Kubernetes cluster. The operator helps package, deploy, and manage SQL Server instances and the availability group in a cluster.
 
 ![AG in Kubernetes Container](media/tutorial-sql-server-ag-containers-kubernetes/KubernetesCluster.png)
 
@@ -45,7 +53,7 @@ In the image above, a four-node kubernetes cluster hosts an availability group w
 
 * Three nodes, each hosting a [*StatefulSet*](http://kubernetes.io/docs/concepts/workloads/controllers/statefulset/). The StatefulSet contains a pod. Each pod contains:
   * A SQL Server container running one instance of SQL Server.
-  * An availability group agent.
+  * A supervisor `mcr.microsoft.com/mssql/ha` to manage the availability group.
 
 * Two [*ConfigMaps*](http://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/) related to the availability group. The ConfigMaps provide information about:
   * The deployment for the operator.

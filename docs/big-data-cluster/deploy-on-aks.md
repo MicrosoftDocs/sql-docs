@@ -19,7 +19,7 @@ This article describes the steps to deploy Kubernetes on AKS using Azure CLI. If
 
 ## Prerequisites
 
-- For an AKS environment, the minimum VM requirement is at least two agent VMs (in addition to master) of size Standard_DS3_V2 which contains 4 CPUs and 14 GB of memory or larger, especially in terms of memory.
+- For an AKS environment, the minimum VM requirement is at least two agent VMs (in addition to master) of a minimum size Standard_DS3_V2. Minimum resources required per VM are 4 CPUs and 14 GB of memory.
 
 - This section requires that you be running the Azure CLI version 2.0.4 or later. If you need to install or upgrade, see [Install Azure CLI 2.0](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli). Run `az --version` to find the version if needed.
 
@@ -61,29 +61,6 @@ An Azure resource group is a logical group in which Azure resources are deployed
    ```bash
    az group create --name sqlbigdatagroup --location westus2
    ```
-
-## Create a service principal
-
-Create a service principal that Kubernetes will be used to interact with Azure APIs to manage resources within the service.
-
-1. Find your subscription ID:
-
-   ```bash
-   az account show
-   ```
-
-   Your subscription ID is the **ID** property value in the JSON that is returned by the previous command.
-
-1. Copy that and replace the `<subscriptionID>` placeholder in the following command to create the service principal with your subscription ID. Make sure you create the service principal in the same resource group that you previously created.
-
-   ```bash
-   az ad sp create-for-rbac --role="Contributor" --scopes="/subscriptions/<subscriptionID>/resourceGroups/sqlbigdatagroup"
-   ```
-
-1. Save the JSON output from the previous command for later use.
-
-> [!IMPORTANT]
-> Before proceeding with next steps, validate the newly created service principal is available for use in your resource group.
 
 ## Create a Kubernetes cluster
 

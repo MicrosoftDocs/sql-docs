@@ -21,7 +21,7 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-[!INCLUDE[sqlservervnext](../includes/sssqlv15-md.md)] CTP 2.0 introduces SQL Server Replication for instances of SQL Server on Linux.
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] introduces SQL Server Replication for instances of SQL Server on Linux.
 
 For detailed information about replication, see [SQL Server replication documentation](../relational-databases/replication/sql-server-replication.md).
 

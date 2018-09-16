@@ -60,7 +60,23 @@ You can use Azure Data Studio to perform a variety of tasks on the Big Data Clus
 
 ## <a id="architecture"></a> Architecture
 
-A SQL Big Data Cluster is a cluster of Linux nodes orchestrated by Kubernetes. Nodes in the cluster are arranged into three logical planes: the control plane, the compute pane, and the data plane. Each plane has different responsibilities in the cluster. Every Kubernetes node in a SQL Big Data Cluster is member of at least one plane.
+A SQL Big Data Cluster is a cluster of Linux nodes orchestrated by [Kubernetes](https://kubernetes.io/docs/concepts/). 
+
+### Kubernetes concepts
+
+Kubernetes is an open source container orchestrator, which can scale container deployments according to need. The following table defines some important Kubernetes terminology:
+
+|||
+|--|--|
+| **Cluster** | A Kubernetes cluster is a set of machines, known as nodes. One node controls the cluster and is designated the master node; the remaining nodes are worker nodes. The Kubernetes master is responsible for distributing work between the workers, and for monitoring the health of the cluster. |
+| **Node** | A node runs containerized applications. It can be either a physical machine or a virtual machine. A Kubernetes cluster can contain a mixture of physical machine and virtual machine nodes. |
+| **Pod** | A pod is the atomic unit of Kubernetes. A pod is a logical group of one or more containers—and associated resources—needed to run an application. Each pod runs on a node; a node can run one or more pods. The Kubernetes master automatically assigns pods to nodes in the cluster. |
+
+In SQL Server Big Data Clusters, Kubernetes is responsible for the state of the SQL Server Big Data clusters; Kubernetes builds and configures the cluster nodes, assigns pods to nodes, and monitors the health of the cluster.
+
+### Big Data Clusters architecture
+
+Nodes in the cluster are arranged into three logical planes: the control plane, the compute pane, and the data plane. Each plane has different responsibilities in the cluster. Every Kubernetes node in a SQL Big Data Cluster is member of at least one plane.
 
 ![Architecture overview](media/big-data-cluster-overview/architecture-diagram-planes.png)
 
@@ -76,10 +92,18 @@ The compute plane provides computational resources to the cluster. It contains n
 
 The data plane is used for data persistence and caching. It contains the SQL data pool, and storage nodes.  The SQL [data pool](concept-data-pool.md) consists of one or more nodes running SQL Server on Linux. It is used to ingest data from SQL queries or Spark jobs. SQL Big Data Cluster data marts are persisted in the data pool. The [storage pool](concept-storage-pool.md) consists of storage nodes comprised of SQL Server on Linux, Spark, and HDFS. All the storage nodes in a SQL Big Data cluster are members of an HDFS cluster.
 
+## Get started
+
+SQL Big Data Clusters is first available as a limited public preview through the SQL Server 2019
+Early Adoption Program. To request access, register [here](https://aka.ms/eapsignup), and specify your interest to try Big Data Clusters. Microsoft will triage all requests and respond as soon as possible.
+
+If you are accepted into the limited public preview, the next step is to setup a new Kubernetes cluster (or use an existing one) and then deploy SQL Server 2019 preview Big Data Clusters. For more information, see the following quickstart:
+
+[Deploy SQL Server Big Data Cluster on Kubernetes](quickstart-big-data-cluster-deploy.md)
+
 ## Next steps
 
-To get started, see the following quickstarts:
+After deploying SQL Server 2019 preview Big Data Clusters, explore some of its capabilities with the following quickstarts:
 
-- [Deploy SQL Server Big Data Cluster on Kubernetes](quickstart-big-data-cluster-deploy.md)
-- [Get started with SQL Server Big Data Cluster on SQL Server 2019 CTP 2.0](quickstart-big-data-cluster-get-started.md)
-- [Run Jupypter Notebooks on SQL Server 2019 CTP 2.0](quickstart-big-data-cluster-notebooks.md)
+- [Get started with SQL Server Big Data Cluster on SQL Server 2019 preview](quickstart-big-data-cluster-get-started.md)
+- [Run Jupypter Notebooks on SQL Server 2019 preview](quickstart-big-data-cluster-notebooks.md)

@@ -17,15 +17,20 @@ The SQL Server master instance provides the following functionality:
 
 ## Connectivity
 
-The SQL Server master instance provides an externally-accessible TDS endpoint for the cluster.
+The SQL Server master instance provides an externally accessible TDS endpoint for the cluster.
 
 ## Scale-out query management
 
-The SQL Server master instance contains the scale-out query engine that is used to distribute queries across SQL Server instances running nodes in the cluster compute plane and data plane. The scale-out query engine also provides access through Transact-SQL to all Hive tables in the cluster without any additional configuration.
+The SQL Server master instance contains the scale-out query engine that is used to distribute queries across SQL Server instances on nodes in the [compute pool](concept-compute-pool.md). The scale-out query engine also provides access through Transact-SQL to all Hive tables in the cluster without any additional configuration.
 
 ## Metadata and user databases
 
-In addition to the standard SQL Server system databases, the SQL master instance also contains a metadata database that holds HDFS table metadata, a data plane shard map, and details of external tables that provide access to the cluster data plane, and external sources using PolyBase.
+In addition to the standard SQL Server system databases, the SQL master instance also contains the following:
+
+- A metadata database that holds HDFS-table metadata
+- A data plane shard map
+- Details of external tables that provide access to the cluster data plane.
+- External sources using PolyBase.
 
 You can also choose to add your own high-value databases to the SQL master instance.
 

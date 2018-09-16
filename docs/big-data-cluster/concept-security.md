@@ -2,9 +2,9 @@
 title: Security concepts for SQL Server Big Data Cluster | Microsoft Docs
 description:
 author: nelgson 
-ms.author: ms.author:negust 
+ms.author: negust 
 manager: craigg
-ms.date: 08/06/2018
+ms.date: 09/24/2018
 ms.topic: conceptual
 ms.prod: sql
 ---
@@ -15,7 +15,7 @@ A secure Big Data cluster implies consistent and coherent support for authentica
 
 Authorization in Big Data context is usually performed through access control lists (ACLs), which associate user identities with specific permissions. HDFS supports authorization by limiting access to service APIs, HDFS files and job execution.
 
-This topic will cover the key security related concepts in the Big Data cluster.
+This article will cover the key security-related concepts in the Big Data cluster.
 
 ## Cluster Endpoints
 
@@ -23,7 +23,7 @@ There are three entry points to the Big Data Cluster
 
 * HDFS/Spark (Knox) gateway – This is an HTTPS-based endpoint. Other endpoints are proxied through this. HDFS/Spark gateway is used for accessing services like webHDFS and Livy. Wherever you see references to Knox, this is the endpoint.
 
-* Controller endpoint – Big Data Cluster  management service that exposes REST APIs for managing the cluster. Some tools like the Admin portal is also accessed through this endpoint.
+* Controller endpoint – Big Data Cluster  management service that exposes REST APIs for managing the cluster. Some tools, such as the Admin portal, are also accessed through this endpoint.
 
 * Master Instance  - TDS endpoint for database tools and applications to connect to SQL Server Master Instance in the cluster.
 
@@ -36,10 +36,11 @@ Securing endpoints in the Big Data Cluster is done using passwords that can be s
 # Authentication
 
 Upon provisioning the cluster, a number of logins are created.
-Some of this logins are for services to communicate with each other, and others are for end-users to access the cluster.
+
+Some of these logins are for services to communicate with each other, and others are for end users to access the cluster.
 
 ## End-user authentication
-Upon provisioning the cluster, a set of end-user passwords need to be set using environment variables. These are passwords that SQL administrators and cluster administrators use to access services:
+Upon provisioning the cluster, a number of end-user passwords needs to be set using environment variables. These are passwords that SQL administrators and cluster administrators use to access services:
 
 Controller username:
  + CONTROLLER_USERNAME=<controller_username>
@@ -62,12 +63,18 @@ Password for accessing the HDFS/Spark endpoint:
 
 * A special SQL login is created in the Controller SQL instance that is system managed, with sysadmin role. The password for this login is captured as a K8s secret.
 
-* A sysadmin login is created in all SQL instances in the cluster, that Controller owns and manages. It is required for Controller to perform administrative tasks on these instances (i.e. HA setup, upgrade etc.). These logins are also used for intra cluster communication between SQL instances, i.e. Master instance communicating with Data Pool.
+* A sysadmin login is created in all SQL instances in the cluster, that Controller owns and manages. It is required for Controller to perform administrative tasks, such as HA setup or upgrade, on these instances. These logins are also used for intra-cluster communication between SQL instances, such as the SQL master instance communicating with a data pool.
 
-Please note that in CTP2.0, only basic authentication is supported. Fine-grained access control to HDFS objects, and SQL Big Data Cluster compute and data pools, is not yet available.
+> [!NOTE]
+> In CTP2.0, only basic authentication is supported. Fine-grained access control to HDFS objects, and SQL Big Data Cluster compute and data pools, is not yet available.
 
 ## Intra cluster communication
 
-Communication with non-SQL services within the Big Data Cluster, like for example Livy to Spark or Spark to Storage Pool, is secured using certificates. All SQL Sever to SQL Server communication is secured using SQL logins.
+Communication with non-SQL services within the Big Data Cluster, such as Livy to Spark or Spark to the storage pool, is secured using certificates. All SQL Server to SQL Server communication is secured using SQL logins.
 
-## Next step
+## Next steps
+
+To learn more about the SQL Server Big Data Clusters, see the following articles:
+
+[What is SQL Server 2019 Big Data Clusters?](big-data-cluster-overview.md)
+[Quickstart: Deploy SQL Server Big Data Cluster on Kubernetes](quickstart-big-data-cluster-deploy.md)

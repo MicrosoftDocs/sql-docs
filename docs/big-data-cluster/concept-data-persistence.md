@@ -4,7 +4,7 @@ description:
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 08/24/2018
+ms.date: 09/24/2018
 ms.topic: conceptual
 ms.prod: sql
 ---
@@ -46,12 +46,14 @@ Kubeadm does not come with a built-in storage class; therefore, we have created 
 On-premise clusters obviously do not come with any built-in storage class, therefore you must set up [persistent volumes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/)/[provisioners](https://kubernetes.io/docs/concepts/storage/dynamic-provisioning/) beforehand and then use the corresponding storage classes during SQL Server Big Data Cluster deployment.
 
 # Customize storage size for each pool
-By default, the size of the persistent volume provisioned for each of the pods provisioned in the cluster is 6GB. This is configurable by setting the environment variable `STORAGE_SIZE` to a different value. For example, you can run below command to set the value to 10GB, before running the `mssqlctl create cluster command`.
+By default, the size of the persistent volume provisioned for each of the pods provisioned in the cluster is 6 GB. This is configurable by setting the environment variable `STORAGE_SIZE` to a different value. For example, you can run below command to set the value to 10 GB, before running the `mssqlctl create cluster command`.
+
 ```bash
 export STORAGE_SIZE=10Gi
 ```
 
-More, you can have different configurations for persistent storage settings such storage class name and persistent volume sizes for different pools in the cluster . For example, you can configure the persistent volumes deployed for the storage pool to use a different storage class and have higher capacity by setting below environment variables before deploying the cluster:
+You can also have different configurations for persistent storage settings such storage class name and persistent volume sizes for different pools in the cluster . For example, you can configure the persistent volumes deployed for the storage pool to use a different storage class and have higher capacity by setting below environment variables before deploying the cluster:
+
 ```bash
 export STORAGE_POOL_USE_PERSISTENT_VOLUME=true
 export STORAGE_POOL_STORAGE_CLASS_NAME=premium-storage
@@ -59,6 +61,7 @@ export STORAGE_POOL_STORAGE_SIZE=100Gi
 ```
 
 Here is a comprehensive list of the environment variables related to setting up persistent storage for the SQL Server Big Data cluster:
+
 | Environment variable | Default value | Description |
 |---|---|---|
 | **USE_PERSISTENT_VOLUME** | true | `true` to use Kubernetes Persistent Volume Claims for pod storage. `false` to use ephemeral host storage for pod storage. |

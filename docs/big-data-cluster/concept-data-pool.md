@@ -27,5 +27,5 @@ Data pools enable the creation of scale-out data marts, where external data from
 
 To learn more about the SQL Server Big Data Clusters, see the following articles:
 
-[What is SQL Server 2019 Big Data Clusters?](big-data-cluster-overview.md)
-[Quickstart: Deploy SQL Server Big Data Cluster on Kubernetes](quickstart-big-data-cluster-deploy.md)
+- [What is SQL Server 2019 Big Data Clusters?](big-data-cluster-overview.md)
+- [Quickstart: Deploy SQL Server Big Data Cluster on Kubernetes](quickstart-big-data-cluster-deploy.md)

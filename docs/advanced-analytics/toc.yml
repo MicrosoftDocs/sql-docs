@@ -4,6 +4,12 @@
   items:
   - name: Run Java code on SQL
     href: java/extension-java.md
+  - name: Java sample
+    href: java/java-first-sample.md
+  - name: Supported data types
+    href: java/java-sql-datatypes.md
+  - name: How to call Java from SQL
+    href: java/howto-call-java-from-sql.md
 - name: R and Python machine learning extensions
   items:
   - name: Machine Learning Services (R, Python)

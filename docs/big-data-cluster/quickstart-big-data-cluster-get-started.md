@@ -1,15 +1,15 @@
 ---
-title: Get started with big data on SQL Server 2019 CTP 2.0 | Microsoft Docs
+title: Get started with SQL Server 2019 Big Data Clusters | Microsoft Docs
 description:
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 08/06/2018
+ms.date: 09/24/2018
 ms.topic: quickstart
 ms.prod: sql
 ---
 
-# Quickstart: Get started with big data on SQL Server 2019 CTP 2.0
+# Quickstart: Get started with SQL Server 2019 Big Data Clusters
 
 In this quickstart, you will combine high-volume HDFS data with high-value relational data using SQL Server 2019 CTP 2.0 running on Kubernetes.
 
@@ -105,4 +105,4 @@ GO
 Explore how to run Jupyter notebooks in Azure Data Studio:
 
 > [!div class="nextstepaction"]
-> [Run Jupyter notebooks on SQL Server 2019 CTP 2.0](quickstart-big-data-cluster-notebooks.md)
+> [Run Jupyter notebooks on SQL Server 2019 preview](quickstart-big-data-cluster-notebooks.md)

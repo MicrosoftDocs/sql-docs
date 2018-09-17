@@ -108,6 +108,10 @@
       href: manage-monitoring.md
     - name: Troubleshooting   
       href: manage-troubleshooting.md
+  - name: Spark job
+    items:
+    - name: Submit Spark Job in Azure Data Studio
+      href: Submit-spark-job.md
 - name: Resources
   items:
   - name: FAQ

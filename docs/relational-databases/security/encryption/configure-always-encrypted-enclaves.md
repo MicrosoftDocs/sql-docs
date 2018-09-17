@@ -51,10 +51,9 @@ The computer running SQL Server needs the following operating system and SQL Ser
 
 ### HGS computer requirements
 
-The computer must be configured as a guarded host, attested by HGS. TPM attestation is the recommended enclave attestation method for production environments, and requires SQL Server runs on a physical machine, not in a virtual machine. Virtual machines are adequate for pre-production environments only. See the following section for details.
-
 A single HGS computer is sufficient during testing and prototyping. For production, a Windows failover cluster with 3 computers is strongly recommended.
 
+The computer must be configured as a guarded host, attested by HGS. TPM attestation is the recommended enclave attestation method for production environments, and requires SQL Server runs on a physical machine, not in a virtual machine. Virtual machines are adequate for pre-production environments only. See the following section for details.
 
 ### Configure HGS attestation
 

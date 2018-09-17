@@ -63,6 +63,7 @@ Community technology preview (CTP) 2.0 is the first public release of [!INCLUDE[
   - Machine Learning on Linux
   - New container registry
   - New RHEL-based container images
+  - Memory pressure notification
 
 - [Master Data Services](#mds)
   - Silverlight controls replaced

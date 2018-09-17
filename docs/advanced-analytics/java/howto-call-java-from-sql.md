@@ -14,7 +14,7 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 
 # How to call Java from SQL Server 2019
 
-When using the [Java language extension](extension-java.md), the [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) system stored procedure is the interface used to call the Java runtime. Any permissions on the database apply to Java code execution.
+When using the [Java language extension](extension-java.md), the [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) system stored procedure is the interface used to call the Java runtime. Permissions on the database apply to Java code execution.
 
 This article explains implementation details for Java classes and methods that execute on SQL Server. Once you are familiar with these details, review the [Java sample](java-first-sample.md) as your next step.
 
@@ -31,7 +31,7 @@ This article explains implementation details for Java classes and methods that e
 > [!Note]
 >  On the stored procedure, only input parameters are supported in CTP2.0.
 
-The following example shows an sp_execute_external_script using the Java extension.
+The following example shows an sp_execute_external_script using the Java extension, with path and API signature specifications.
 
 ```sql
 DECLARE @myClassPath nvarchar(30)
@@ -62,7 +62,7 @@ Once you have compiled your Java class or classes and placed the .class file(s) 
 
 * Option 2: Set CLASSPATH to a system environment variable called "CLASSPATH"
 
-## Java implementation requirements
+## Class requirements
 
 This section explains the implementation requirements for a Java class executing on SQL Server.
 
@@ -71,7 +71,7 @@ In order for SQL Server to communicate with the Java runtime, you need to implem
 > [Note!]
 > Expect the implementation details to change in upcoming CTPs as we work to improve the experience for developers.
 
-## Java method signature requirements
+## Method requirements
 Make sure that the method you want to call from SQL Server does NOT have any arguments. The return type must be void.  
 
 ```java
@@ -80,9 +80,11 @@ public static void test()  {}
 
 To pass arguments, use the **@param** parameter in sp_execute_external_script.
 
-## Push data to Java from a SQL Server query - InputDataSet
+## Data inputs 
 
-In sp_execute_external_script, you can pass an **InputDataSet** to Java. For every input column your SQL query pushes to Java, you need to declare an array.
+This section exlains how to push data to Java from a SQL Server query using **InputDataSet** in sp_execute_external_script.
+
+For every input column your SQL query pushes to Java, you need to declare an array.
 
 ### inputDataCol
 
@@ -108,9 +110,9 @@ The user only needs to initialize this variable (and the size of the array needs
 public static boolean[][] inputNullMap = new boolean[1][1];
 ```
 
-## Return data from Java to SQL Server - OutputDataSet
+## Data outputs 
 
-This section describes the output data sets you can send to and persist in SQL Server.
+This section describes **OutputDataSet**, the output data sets returned from Java, which you can send to and persist in SQL Server.
 
 > [!Note]
 > Output parameters in [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) are not supported in this version.

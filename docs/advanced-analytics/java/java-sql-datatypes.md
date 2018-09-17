@@ -16,30 +16,30 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 
 This article maps SQL Server data types to Java data types for data structures and parameters on [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql).
 
-### Supported types for InputDataSet and OutputDataset
+## InputDataSet and OutputDataset parameter data types
 
 The following SQL and Java data types are currently supported for Input and Output data sets.
 
-| SQL Type        | Java Type
-| ------------- |:-------------:|
-| Bit      | boolean |
-| Tinyint      | short      |
-| Smallint | short      |
-| Int | int      |
-| Real | float      |
-| Bigint | long      |
-| float | double      |
-| nchar(n) | String (unicode)      |
-| nvarchar(n) | String (unicode)      |
-| binary(n) | byte[]      |
-| varbinary(n) | byte[]      |
+| SQL Type        | Java Type | | |
+| ------------- |-------------|-|-|
+| Bit      | boolean | | |
+| Tinyint      | short      | | |
+| Smallint | short      | | |
+| Int | int      | | |
+| Real | float      | | |
+| Bigint | long      | | |
+| float | double      | | |
+| nchar(n) | String (unicode)      | | |
+| nvarchar(n) | String (unicode)      | | |
+| binary(n) | byte[]      | | |
+| varbinary(n) | byte[]      | | |
 
-## Supported data types for parameters
+## Input parameter data types
 
 The following SQL and Java data types are currently supported for input parameters.
 
 | SQL Type        | Java Type
-| ------------- |:-------------:|
+| ------------- |-------------|
 | Bit      | boolean |
 | Tinyint      | short      |
 | Smallint | short      |

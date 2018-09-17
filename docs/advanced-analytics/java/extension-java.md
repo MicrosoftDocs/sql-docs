@@ -16,7 +16,7 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 
 Starting in SQL Server 2019, you can run custom Java code in the [extensibility framework](../concepts/extensibility-framework.md) as an add-on to the database engine instance. 
 
-The extensibility framework is an architecture for executing external code: Java (starting in SQL Server 2019), [Python (starting in SQL Server 2017)](../concepts/extension-python.md), and [R (starting in SQL Server 2016)](../concepts/extension-r.md). Code execution is isolated from core engine processes, but fully integrated with SQL Server query execution. This means that you can push data from any SQL Server query to the external runtime.
+The extensibility framework is an architecture for executing external code: Java (starting in SQL Server 2019), [Python (starting in SQL Server 2017)](../concepts/extension-python.md), and [R (starting in SQL Server 2016)](../concepts/extension-r.md). Code execution is isolated from core engine processes, but fully integrated with SQL Server query execution. This means that you can push data from any SQL Server query to the external runtime, and consume or persist results back in SQL Server.
 
 As with any programming language extension, the system stored procedure [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) is the interface for executing pre-compiled Java code.
 
@@ -58,26 +58,25 @@ Using SQL Server Management Studio or another tool that runs Transact-SQL script
 
 One difference from previous language integrations such as R and Python is that you can choose which JVM to use with SQL Server.
 
-### Java version support in this CTP release
-
 | Java version | Operating system |
 |--------------|------------------|
 | [Java 1.10](http://jdk.java.net/10/)   | Windows |
 | Java 1.8   | Linux | 
 
-Given that Java is backwards compatible, earlier versions might work, but the supported and tested versions are listed in the table. 
+Given that Java is backwards compatible, earlier versions might work, but the supported and tested versions for this early CTP release are listed in the table. 
 
 ## JDK on Windows
 
-Download Windows version of the [Java SE Development Kit](http://www.oracle.com/technetwork/java/javase/downloads/jdk10-downloads-4416644.html).
+Download Windows version of the [Java SE Development Kit (JDK)](http://www.oracle.com/technetwork/java/javase/downloads/jdk10-downloads-4416644.html).
 
-Install Java SDK under the default /Program File/ folder if you want to avoid having to grant read permission to **ALL APPLICATION PACKAGES** and the **SQLRUserGroup** security groups on an alternate location. The same guidance applies for access to your Java classpath folders, where you keep your .class or .jar files. To learn more about authorization and isolation in this release, see [Differences in a SQL Server Machine 2019 Learning Services installation](../install/sql-machine-learning-services-ver15.md).
+Install the JDK under the default /Program Files/ folder if you want to avoid having to grant read permission to **ALL APPLICATION PACKAGES** and the **SQLRUserGroup** security groups on an alternate location. The same guidance applies for access to your Java classpath folders, where you keep your .class or .jar files. 
+
+> [!Note]
+> The authorization and isolation model for extensions has changed in this release. For more information, see [Differences in a SQL Server Machine 2019 Learning Services installation](../install/sql-machine-learning-services-ver15.md).
 
 ### Grant access to non-default JDK folder (Windows only)
 
-You can skip this step if you installed the JDK in the default folder.
-
-For a non-default folder installation, run the following PowerShell scripts to grant access to the **SQLRUsergroup** and SQL Server service accounts (in ALL_APPLICATION_PACKAGES) for accessing the JVM and the Java classpath.
+You can skip this step if you installed the JDK in the default folder. For a non-default folder installation, run the following PowerShell scripts to grant access to the **SQLRUsergroup** and SQL Server service accounts (in ALL_APPLICATION_PACKAGES) for accessing the JVM and the Java classpath.
 
 #### SQLRUserGroup permissions
 
@@ -97,8 +96,10 @@ $Acl.SetAccessRule($Ar)
 Set-Acl "<YOUR PATH TO JDK / CLASSPATH>" $Acl 
 ```
 
-### Add the Java SDK path to JAVA_HOME
-You also need to add the JDK installation path (for example, "C:\Program Files\Java\jdk-10.0.2") to a system environment variable that you name "JAVA_HOME".
+### Add the JDK path to JAVA_HOME
+You also need to add the JDK installation path (for example, "C:\Program Files\Java\jdk-10.0.2") to a system environment variable that you name "JAVA_HOME". 
+
+To create a system variable, use Control Panel > System and Security > System to access **Advanced System Properties**. Click **Environment Variables** and then create a new system variable for JAVA_HOME.
 
 ![Environment variable for Java Home](../media/java/env-variable-java-home.png "Setup for Java")
 

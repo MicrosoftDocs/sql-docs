@@ -55,16 +55,18 @@ EXEC sp_execute_external_script
 
 Once you have compiled your Java class or classes and placed the .class file(s) or .jar files in your Java classpath, you have two options for providing the classpath to the SQL Server Java extension:
 
-* Option 1: Pass CLASSPATH in the call from sp_execute_external_script (see example below). If you choose this approach, and have multiple paths, be sure to use the path separator that is valid for the underlying operating system:
+**Option 1: Pass as a parameter**
 
-  * On Linux, separate the paths in the CLASSPATH with colon ":".
-  * On Windows, separate the paths in CLASSPATH with a semi-colon ";"
+One approach for specifying a path to compiled code is by setting CLASSPATH as an input parameter to the sp_execute_external_script procedure. The [Java sample](java-first-sample.md#call-method) demonstrates this technique. If you choose this approach, and have multiple paths, be sure to use the path separator that is valid for the underlying operating system:
 
-* Option 2: Set CLASSPATH to a system environment variable called "CLASSPATH"
+* On Linux, separate the paths in the CLASSPATH with colon ":".
+* On Windows, separate the paths in CLASSPATH with a semi-colon ";"
+
+**Option 2: Register a system variable**
+
+Just as you created a system variable for the JDK executables, you can create a system variable for code paths. To do this, created a system environment variable called "CLASSPATH"
 
 ## Class requirements
-
-This section explains the implementation requirements for a Java class executing on SQL Server.
 
 In order for SQL Server to communicate with the Java runtime, you need to implement specific static variables in your class. SQL Server can then execute a method in the Java class and exchange data using the Java language extension.
 
@@ -82,7 +84,7 @@ To pass arguments, use the **@param** parameter in sp_execute_external_script.
 
 ## Data inputs 
 
-This section exlains how to push data to Java from a SQL Server query using **InputDataSet** in sp_execute_external_script.
+This section explains how to push data to Java from a SQL Server query using **InputDataSet** in sp_execute_external_script.
 
 For every input column your SQL query pushes to Java, you need to declare an array.
 

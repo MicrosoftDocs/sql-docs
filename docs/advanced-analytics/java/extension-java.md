@@ -44,7 +44,7 @@ sudo zypper install mssql-server-extensibility
 sudo zypper install mssql-server-extensibility-java
 ```
 
-## 2 - Post-install configuration (required)
+## 2 - Configuration
 
 Using SQL Server Management Studio or another tool that runs Transact-SQL script, configure external script execution on the database engine instance.
 
@@ -56,7 +56,7 @@ Using SQL Server Management Studio or another tool that runs Transact-SQL script
 
 ## 3 - Bring your own Java
 
-One difference from previous language integrations such as R and Python is that you can choose which JVM to use with SQL Server.
+One difference from previous language integrations such as R and Python is that you control which JVM is used with SQL Server.
 
 | Java version | Operating system |
 |--------------|------------------|

@@ -80,7 +80,6 @@ This article describes limitations and known issues for the [!INCLUDE[SQL Server
 
 **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.0.
 
-
 ### Always Encrypted with secure enclaves
 
 **Issue and customer impact**: Rich computations are pending several performance optimizations, include limited functionality (no indexing, etc), and are currently disabled by default.
@@ -88,6 +87,14 @@ This article describes limitations and known issues for the [!INCLUDE[SQL Server
 **Workaround**: To enable rich computations, run `DBCC traceon(127,-1)`. For details, see  [Enable rich computations](../relational-databases/security/encryption/configure-always-encrypted-enclaves.md#configure-a-secure-enclave).
 
 **Applies to**:  [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.0.
+
+### SQL Server Integration Services Transfer Database Task
+
+**Issue and customer impact**:  When a `Transfer Database Task` is configured to transfer a database in `Database Online` mode, it may fail with the following error:
+
+>The Execute method on the task returned error code 0x80131500 (An error occurred while transferring data. See the inner exception for details.). The Execute method must succeed, and indicate the result using an "out" parameter.
+
+**Workaround**: Execute `DBCC TRACEON (7416,-1)` on the server and try again.
 
 [!INCLUDE[get-help-options-msft-only](../includes/paragraph-content/get-help-options.md)]
 

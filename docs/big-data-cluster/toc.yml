@@ -108,6 +108,12 @@
       href: manage-monitoring.md
     - name: Troubleshooting   
       href: manage-troubleshooting.md
+  - name: Spark jobs
+    items:
+    - name: Submit Spark Job in Azure Data Studio
+      href: Submit-spark-job.md
+    - name: Use extended Spark History Server to debug and diagnose Spark applications
+      href: apache-azure-spark-history-server.md
 - name: Resources
   items:
   - name: FAQ

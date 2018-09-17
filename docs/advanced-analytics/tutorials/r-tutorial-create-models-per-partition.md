@@ -73,56 +73,69 @@ WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 
 Start Management Studio and connect to the database engine instance. In Object Explorer, verify the [NYCTaxi_Sample database](sqldev-download-the-sample-data.md) exists. 
 
-## Create a training function
+## Create CalculateDistance
 
-The demo database comes with a scalar function for calculating distance, but our stored procedure works better with a table function. Run the following script to create the **CalculateDistance** function used in the [training step](#training-step).
+The demo database comes with a scalar function for calculating distance, but our stored procedure works better with a table-valued function. Run the following script to create the **CalculateDistance** function used in the [training step](#training-step) later on.
+
+To confirm the function was created, check the \Programmability\Functions\Table-valued Functions under the **NYCTaxi_Sample** database in Object Explorer.
 
 ```sql
-USE NYCTaxi_sample
+USE NYCTaxi_sample
 GO
 
-SET ANSI_NULLS ON
+SET ANSI_NULLS ON
 GO
-SET QUOTED_IDENTIFIER ON
+
+SET QUOTED_IDENTIFIER ON
 GO
-CREATE FUNCTION [dbo].[CalculateDistance] (@Lat1 float, @Long1 float, @Lat2 float, @Long2 float)
--- User-defined function calculates the direct distance between two geographical coordinates.
-RETURNS TABLE
+
+CREATE FUNCTION [dbo].[CalculateDistance] (
+	@Lat1 FLOAT
+	,@Long1 FLOAT
+	,@Lat2 FLOAT
+	,@Long2 FLOAT
+	)
+	-- User-defined function calculates the direct distance between two geographical coordinates.
+RETURNS TABLE
 AS
 RETURN
-       SELECT COALESCE(3958.75 * ATAN(SQRT(1 - POWER(t.distance, 2)) / nullif(t.distance,0)), 0) as direct_distance
-       FROM (VALUES (CAST( (SIN(@Lat1 / 57.2958) * SIN(@Lat2 / 57.2958))
-          + (COS(@Lat1 / 57.2958) * COS(@Lat2 / 57.2958) * COS((@Long2 / 57.2958) - (@Long1 / 57.2958)))
-          as decimal(28,10))) ) as t(distance)
-GO 
+
+SELECT COALESCE(3958.75 * ATAN(SQRT(1 - POWER(t.distance, 2)) / nullif(t.distance, 0)), 0) AS direct_distance
+FROM (
+	VALUES (CAST((SIN(@Lat1 / 57.2958) * SIN(@Lat2 / 57.2958)) + (COS(@Lat1 / 57.2958) * COS(@Lat2 / 57.2958) * COS((@Long2 / 57.2958) - (@Long1 / 57.2958))) AS DECIMAL(28, 10)))
+	) AS t(distance)
+GO
  ```
 
 ## Define a procedure for creating and training per-partition models
 
-This tutorial wraps all R script in a stored procedure. In this step, you add script that creates an input dataset, builds a classification model to predict a tip outcome, and stores the model in the database.
+This tutorial wraps R script in a stored procedure. In this step, you create a stored procedure that uses R to create an input dataset, build a classification model for predicting tip outcomes, and then stores the model in the database.
 
-Among the objects created by this script, you'll see **input_data_1_partition_by_columns** and **input_data_1_order_by_columns**.  Recall that these parameters are the mechanism by which partitioned modeling occurs. The parameters are passed as inputs to `sp_execute_external_script` to process partitions with the external script executing once for every partition.
+Among the parameter inputs used by this script, you'll see **input_data_1_partition_by_columns** and **input_data_1_order_by_columns**. Recall that these parameters are the mechanism by which partitioned modeling occurs. The parameters are passed as inputs to [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) to process partitions with the external script executing once for every partition. 
 
-When creating the stored procedure, [use parallelism](#parallel) for faster time to completion.
+For this stored procedure, [use parallelism](#parallel) for faster time to completion.
 
+After you run this script, you should see **train_rxLogIt_per_partition** in \Programmability\Stored Procedures under the **NYCTaxi_Sample** database in Object Explorer. You should also see a new table used for storing models: **dbo.nyctaxi_models**.
 
 ```sql
 USE NYCTaxi_Sample
 GO
 
-CREATE OR ALTER procedure [dbo].[train_rxLogIt_per_partition] (
-	@input_query nvarchar(max)
-)
-as
-begin
-	declare @start datetime2 = SYSDATETIME(), @model_generation_duration float, @model varbinary(max)
-		  , @instance_name nvarchar(100) = @@SERVERNAME
-		  , @database_name nvarchar(128) = db_name();
-	
-	
-	exec sp_execute_external_script
-		@language = N'R'
-		, @script = N'
+CREATE
+	OR
+
+ALTER PROCEDURE [dbo].[train_rxLogIt_per_partition] (@input_query NVARCHAR(max))
+AS
+BEGIN
+	DECLARE @start DATETIME2 = SYSDATETIME()
+		,@model_generation_duration FLOAT
+		,@model VARBINARY(max)
+		,@instance_name NVARCHAR(100) = @@SERVERNAME
+		,@database_name NVARCHAR(128) = db_name();
+
+	EXEC sp_execute_external_script @language = N'R'
+		,@script = 
+		N'
 	
 	# Make sure InputDataSet is not empty. In parallel mode, if one thread gets zero data, an error occurs
 	if (nrow(InputDataSet) > 0) {
@@ -146,31 +159,28 @@ begin
 	} 
 	
 	'
-		, @input_data_1 = @input_query
-		, @input_data_1_partition_by_columns = N'payment_type'
-		, @input_data_1_order_by_columns = N'passenger_count'
-        , @parallel = 1 
-        , @params = N'@instance_name nvarchar(100), @database_name nvarchar(128)'
-       	, @instance_name = @instance_name
-		, @database_name = @database_name
-        
-		
+		,@input_data_1 = @input_query
+		,@input_data_1_partition_by_columns = N'payment_type'
+		,@input_data_1_order_by_columns = N'passenger_count'
+		,@parallel = 1
+		,@params = N'@instance_name nvarchar(100), @database_name nvarchar(128)'
+		,@instance_name = @instance_name
+		,@database_name = @database_name
 	WITH RESULT SETS NONE
-end;
-
-go
+END;
+GO
 ```
 
 <a name="parallel"></a>
 
 ### Parallel execution
 
-Notice that the `sp_execute_external_script` inputs include `@parallel=1`, used to enable parallel processing. In contrast with previous releases, in SQL Server 2019, setting `@parallel=1` delivers a stronger hint to the query optimizer, making parallel execution a much more likely outcome.
+Notice that the [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) inputs include **@parallel=1**, used to enable parallel processing. In contrast with previous releases, in SQL Server 2019, setting **@parallel=1** delivers a stronger hint to the query optimizer, making parallel execution a much more likely outcome.
 
-By default, the query optimizer tends to operate under `@parallel=1` on tables having more than 256 rows, but if you can handle this explicitly by setting `@parallel=1` as shown in this script.
+By default, the query optimizer tends to operate under **@parallel=1** on tables having more than 256 rows, but if you can handle this explicitly by setting **@parallel=1** as shown in this script.
 
 > [!Tip]
-> For training workoads, you can use `@parallel` with any arbitrary training script, even those using non-Microsoft-rx algorithms. Typically, only RevoScaleR algorithms (with the rx prefix) offer parallelism in training scenarios in SQL Server. But with the new parameter, you can parallelize a script that calls functions, including open-source R functions, not specifically engineered with that capability. This works because partitions have affinity to specific threads, so all operations called in a script execute on a per-partition basis, on the given thread.
+> For training workoads, you can use **@parallel** with any arbitrary training script, even those using non-Microsoft-rx algorithms. Typically, only RevoScaleR algorithms (with the rx prefix) offer parallelism in training scenarios in SQL Server. But with the new parameter, you can parallelize a script that calls functions, including open-source R functions, not specifically engineered with that capability. This works because partitions have affinity to specific threads, so all operations called in a script execute on a per-partition basis, on the given thread.
 
 <a name="training-step"></a>
 
@@ -180,23 +190,23 @@ In this section, the script trains the model that you created and saved in the p
 
 ```sql
 --Example 1: train on entire dataset
-exec train_rxLogIt_per_partition N'
+EXEC train_rxLogIt_per_partition N'
 SELECT payment_type, tipped, passenger_count, trip_time_in_secs, trip_distance, d.direct_distance
   FROM dbo.nyctaxi_sample CROSS APPLY [CalculateDistance](pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude) as d
   OPTION(MAXDOP 2)
 ';
-go
+GO
 ```
 
 ```sql
 --Example 2: Train on 80 percent of the dataset.
-exec train_rxLogIt_per_partition N'
+EXEC train_rxLogIt_per_partition N'
   SELECT tipped, payment_type, passenger_count, trip_time_in_secs, trip_distance, d.direct_distance
   FROM dbo.nyctaxi_sample TABLESAMPLE (80 PERCENT) REPEATABLE (98074)
   CROSS APPLY [CalculateDistance](pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude) as d
   OPTION(MAXDOP 2)
 ';
-go
+GO
 ```
 
 ## Check results
@@ -204,7 +214,8 @@ go
 The result in the models table should be five different models, based on five partitions segmented by the five payment types. Models are in the **ml_models** data source.
 
 ```sql
-SELECT * ml_models
+SELECT *
+FROM ml_models
 ```
 
  
@@ -220,20 +231,24 @@ GO
 
 -- Stored procedure that scores per partition. 
 -- Depending on the partition being processed, a model specific to that partition will be used
-CREATE OR ALTER procedure [dbo].[predict_per_partition] 
-as
-begin
-	declare @predict_duration float
-		  , @instance_name nvarchar(100) = @@SERVERNAME
-		  , @database_name nvarchar(128) = db_name(), @input_query nvarchar(max);
-	
-	set @input_query = 'SELECT tipped, passenger_count, trip_time_in_secs, trip_distance, d.direct_distance, payment_type
+CREATE
+	OR
+
+ALTER PROCEDURE [dbo].[predict_per_partition]
+AS
+BEGIN
+	DECLARE @predict_duration FLOAT
+		,@instance_name NVARCHAR(100) = @@SERVERNAME
+		,@database_name NVARCHAR(128) = db_name()
+		,@input_query NVARCHAR(max);
+
+	SET @input_query = 'SELECT tipped, passenger_count, trip_time_in_secs, trip_distance, d.direct_distance, payment_type
 						  FROM dbo.nyctaxi_sample TABLESAMPLE (1 PERCENT) REPEATABLE (98074)
 						  CROSS APPLY [CalculateDistance](pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude) as d'
-  
-	exec sp_execute_external_script
-		@language = N'R'
-		, @script = N'
+
+	EXEC sp_execute_external_script @language = N'R'
+		,@script = 
+		N'
 	
 	if (nrow(InputDataSet) > 0) {
 
@@ -264,50 +279,56 @@ begin
 		OutputDataSet <- data.frame(integer(), InputDataSet[,]);		
 	}
 	'
-		, @input_data_1 = @input_query
-		, @parallel = 1
-		, @input_data_1_partition_by_columns = N'payment_type'
-		, @params = N'@instance_name nvarchar(100), @database_name nvarchar(128)'
-       	, @instance_name = @instance_name
-		, @database_name = @database_name
-	
-		WITH RESULT SETS ((tipped_Pred int,
-						  payment_type varchar(5), 
-						  tipped int, 
-						  passenger_count int, 
-						  trip_distance float, 
-						  trip_time_in_secs int, 
-						  direct_distance float));
-end;
-go
+		,@input_data_1 = @input_query
+		,@parallel = 1
+		,@input_data_1_partition_by_columns = N'payment_type'
+		,@params = N'@instance_name nvarchar(100), @database_name nvarchar(128)'
+		,@instance_name = @instance_name
+		,@database_name = @database_name
+	WITH RESULT SETS((
+				tipped_Pred INT
+				,payment_type VARCHAR(5)
+				,tipped INT
+				,passenger_count INT
+				,trip_distance FLOAT
+				,trip_time_in_secs INT
+				,direct_distance FLOAT
+				));
+END;
+GO
 ```
 
 ## Create a table to store predictions
 
 ```sql
-create table prediction_results (tipped_Pred int,
-						  payment_type varchar(5), 
-						  tipped int, 
-						  passenger_count int, 
-						  trip_distance float, 
-						  trip_time_in_secs int, 
-						  direct_distance float);
+CREATE TABLE prediction_results (
+	tipped_Pred INT
+	,payment_type VARCHAR(5)
+	,tipped INT
+	,passenger_count INT
+	,trip_distance FLOAT
+	,trip_time_in_secs INT
+	,direct_distance FLOAT
+	);
 
-truncate table prediction_results
-go
+TRUNCATE TABLE prediction_results
+GO
 ```
 
 ## Run the procedure and save predictions
+
 ```sql
-insert into prediction_results (tipped_Pred,
-							   payment_type, 
-							   tipped, 
-							   passenger_count, 
-							   trip_distance, 
-							   trip_time_in_secs, 
-							   direct_distance)
-execute [predict_per_partition] 
-go
+INSERT INTO prediction_results (
+	tipped_Pred
+	,payment_type
+	,tipped
+	,passenger_count
+	,trip_distance
+	,trip_time_in_secs
+	,direct_distance
+	)
+EXECUTE [predict_per_partition]
+GO
 ```
 
 ## View predictions
@@ -315,7 +336,8 @@ go
 Because the predictions are stored, you can run a simple query to return a result set.
 
 ```sql
-select * from prediction_results;
+SELECT *
+FROM prediction_results;
 ```
 
 ## Next steps

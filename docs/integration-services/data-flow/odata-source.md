@@ -39,7 +39,7 @@ The OData source includes support for the following data sources:
 
 ## Supported data types
 
-The OData source supports the following simple data types: int, byte[], bool, byte, DateTime, DateTimeOffset, decimal, double, Guid, Int16, Int32, Int64, sbyte, float, string and TimeSpan.
+The OData source supports the following simple data types: int, byte[], bool, byte, DateTime, DateTimeOffset, decimal, double, Guid, Int16, Int32, Int64, sbyte, float, string, and TimeSpan.
 
 To discover the data types of columns in your data source, check the `http://<OData feed endpoint>/$metadata` page.
 

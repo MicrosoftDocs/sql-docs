@@ -38,21 +38,21 @@ The following SQL and Java data types are currently supported for Input and Outp
 
 The following SQL and Java data types are currently supported for input parameters.
 
-| SQL Type        | Java Type
-| ------------- |-------------|
-| Bit      | boolean |
-| Tinyint      | short      |
-| Smallint | short      |
-| Int | int      |
-| Real | float      |
-| Bigint | long      |
-| float | double      |
-| nchar(n) | String (unicode)      |
-| nvarchar(n) | String (unicode)      |
-| binary(n) | byte[]      |
-| varbinary(n) | byte[]      |
-| nvarchar(max) | String (unicode)      |
-| varbinary(max) | byte[]      |
+| SQL Type        | Java Type | | |
+| ------------- |-------------|-|-|
+| Bit      | boolean | | |
+| Tinyint      | short      | | |
+| Smallint | short      | | |
+| Int | int      | | |
+| Real | float      | | |
+| Bigint | long      | | |
+| float | double      | | |
+| nchar(n) | String (unicode)      | | |
+| nvarchar(n) | String (unicode)      | | |
+| binary(n) | byte[]      | | |
+| varbinary(n) | byte[]      | | |
+| nvarchar(max) | String (unicode)      | | |
+| varbinary(max) | byte[]      | | |
 
 ## See also
 

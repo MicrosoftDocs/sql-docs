@@ -18,13 +18,11 @@ This example demonstrates a Java class that receives two columns (ID and text) f
 
 ## Prerequisites
 
-+ SQL Server 2019 Database Engine instance with the extensibility framework and Java programming extension [on Windows](../install/sql-machine-learning-services-windows-install.md) or [on Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-setup).
-
-  For more information on system configuration, see [Java language extension in SQL Server 2019](extension-java.md). For more information about coding requirements, see [How to call Java in SQL Server](howto-call-java-from-sql.md).
-
-+ Java SE Development Kit (JDK) 1.10 on Windows, or JDK 1.8 on Linux.
++ SQL Server 2019 Database Engine instance with the extensibility framework and Java programming extension [on Windows](../install/sql-machine-learning-services-windows-install.md) or [on Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-setup). For more information on system configuration, see [Java language extension in SQL Server 2019](extension-java.md). For more information about coding requirements, see [How to call Java in SQL Server](howto-call-java-from-sql.md).
 
 + SQL Server Management Studio or another tool for running T-SQL.
+
++ Java SE Development Kit (JDK) 1.10 on Windows, or JDK 1.8 on Linux.
 
 A Java IDE is helpful for creating and compiling classes. If you don't have one, we recommend [Visual Studio Code](https://code.visualstudio.com/download) with the [Java extension](https://code.visualstudio.com/docs/languages/java) (not related to the SQL Server Java extension).
 

@@ -22,10 +22,6 @@ Azure Data Studio is a new open source, cross-platform desktop environment for d
 
 Research has shown that users spend an order of magnitude more time working on query editing than on any other task with SQL Server Management Studio. For that reason, Azure Data Studio has been designed to focus deeply on the functionality that is used the most, with additional experiences made available as optional extensions into the product. This allows every user to customize their environment to the workflows that they use most often.
 
-## When are we announcing Azure Data Studio?
-
-Azure Data Studio General Availability is scheduled to be announced at Ignite, on September 24th, 2018.
-
 
 ## How much does Azure Data Studio cost?
 

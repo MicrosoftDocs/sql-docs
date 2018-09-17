@@ -22,11 +22,13 @@ The sample class takes the two columns, and for text returns permutations of ngr
 
 + SQL Server 2019 Database Engine instance with the extensibility framework and Java programming extension [on Windows](../install/sql-machine-learning-services-windows-install.md) or [on Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-setup).
 
+  For more information on system configuration, see [Java language extension in SQL Server 2019](extension-java.md). For more information about coding requirements, see [How to call Java in SQL Server](howto-call-java-from-sql.md).
+
 + Java SE Development Kit (JDK) 1.10 on Windows, or JDK 1.8 on Linux.
 
 + SQL Server Management Studio or another tool for running T-SQL.
 
-For more information on system configuration, see [Java language extension in SQL Server 2019](extension-java.md). For more information about coding requirements, see [How to call Java in SQL Server](howto-call-java-from-sql.md).
+A Java IDE is helpful for creating and compiling classes. If you don't have one, we recommend [Visual Studio Code](https://code.visualstudio.com/download) with the [Java extension](https://code.visualstudio.com/docs/languages/java) (not related to the SQL Server Java extension).
 
 ## 1 - Create sample table with data
 
@@ -200,6 +202,8 @@ In this sample, the CLASSPATH provided in the sp_execute_external_script is '/ho
 If you plan to package your classes and dependencies into .jar files, you can do so and provide the full path to the .jar file in the sp_execute_external_script CLASSPATH parameter.
 
 For example, if the jar file is called 'ngram.jar', the CLASSPATH will be '/home/myclasspath/ngram.jar'
+
+<a name="call-method"></a>
 
 ## 6 - Call method *getNgrams()* from SQL Server
 

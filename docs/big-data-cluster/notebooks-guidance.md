@@ -152,4 +152,4 @@ If you like to uninstall a package, then please use the following command from y
 
 ## Next steps
 
-For a walkthrough of how to open and run notebooks in [!INCLUDE [SQL Operations Studio](../includes/name-sos-short.md)], see [Quickstart: Run Jupypter Notebooks on SQL Server 2019 CTP 2.0](quickstart-big-data-cluster-notebooks.md).
+For more information about SQL Server Big Data Clusters, see [What is SQL Server 2019 Big Data Clusters?](big-data-cluster-overview.md).

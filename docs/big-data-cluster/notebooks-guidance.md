@@ -1,5 +1,5 @@
 ---
-title: How to use Jupyter notebooks in SQL Server 2019 CTP 2.0 | Microsoft Docs
+title: How to use notebooks in SQL Server 2019 CTP 2.0 | Microsoft Docs
 description:
 author: rothja 
 ms.author: jroth 
@@ -9,9 +9,9 @@ ms.topic: conceptual
 ms.prod: sql
 ---
 
-# How to use Jupyter notebooks in SQL Server 2019 CTP 2.0
+# How to use notebooks in SQL Server 2019 CTP 2.0
 
-This how you can launch Jupyter Notebooks on the cluster and start authoring your own Notebooks. It also shows how to submit jobs against the cluster.
+This how you can launch notebooks on the cluster and start authoring your own Notebooks. It also shows how to submit jobs against the cluster.
 
 ## Connect to the Hadoop Gateway Knox end point
 You can connect to different end-points in the cluster. You can connect to the Microsoft SQL Server connection type or to the HDFS/Spark Gateway end-point.
@@ -152,4 +152,4 @@ If you like to uninstall a package, then please use the following command from y
 
 ## Next steps
 
-For a walkthrough of how to open and run Jupyter notebooks in [!INCLUDE [SQL Operations Studio](../includes/name-sos-short.md)], see [Quickstart: Run Jupypter Notebooks on SQL Server 2019 CTP 2.0](quickstart-big-data-cluster-notebooks.md).
+For a walkthrough of how to open and run notebooks in [!INCLUDE [SQL Operations Studio](../includes/name-sos-short.md)], see [Quickstart: Run Jupypter Notebooks on SQL Server 2019 CTP 2.0](quickstart-big-data-cluster-notebooks.md).

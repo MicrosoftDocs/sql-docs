@@ -11,7 +11,7 @@ ms.prod: sql
 
 # Quickstart: Run Jupypter Notebooks on SQL Server 2019 CTP 2.0
 
-This quickstart illustrates how you can launch Jupyter Notebooks on the cluster and start authoring your own Notebooks. It also shows how to submit jobs against the cluster.
+This quickstart illustrates how you can launch notebooks on the cluster and start authoring your own Notebooks. It also shows how to submit jobs against the cluster.
 
 ## Connect to the Hadoop Gateway Knox end point
 
@@ -39,13 +39,13 @@ These simple operations let you bring your own data into HDFS.
  
 ## Launch new Notebooks
 
-You can right-click and Manage on the Hadoop Gateway connection and this will launch the dashboard from where you can click on the **New Jupyter Notebook** task.
+You can right-click and Manage on the Hadoop Gateway connection and this will launch the dashboard from where you can click on the **New notebook** task.
 
 Please provide a name of your Notebook (Example: Test.ipynb) and click Save.
 
 ## Python installation
 
-We are using Jupyter Notebooks and we need a Python environment to install virtualenv and install Jupyter in that virtualenv.
+We are using notebooks and we need a Python environment to install virtualenv and install Jupyter in that virtualenv.
 
 If you have Python installed, please ensure that for Windows machines you don't have anything beyond version 3.6.6 installed (the latest is 3.7.0). On Mac and Linux machines, please use the Python 2.7.0 version and do not use any updated version. We will try to auto detect the Python environment and install virtualenv and Jupyter but if we cannot find your Python installation, please provide the path to your Python binary in the requested potion of the page.
 
@@ -54,11 +54,11 @@ If you do not have Python installed, on Windows machines, you will be prompted t
 > [!NOTE]
 > Please note the following known issues:
 >
-> - Jupyter Notebook is not supported on Linux environments.
+> - notebook is not supported on Linux environments.
 > - Please don't click on the Install Jupyter button.
-> - Jupyter notebook setup is incompatible with Python 3.7 & pip 10.0.
+> - notebook setup is incompatible with Python 3.7 & pip 10.0.
 
-Once you install Python, please re-start [!INCLUDE [SQL Operations Studio](../includes/name-sos-short.md)] as it will need to set your PATH environment variable. Connect to your Hadoop Gateway (Knox) endpoint and then try to launch **New Jupyter Notebook** task from your dashboard.
+Once you install Python, please re-start [!INCLUDE [SQL Operations Studio](../includes/name-sos-short.md)] as it will need to set your PATH environment variable. Connect to your Hadoop Gateway (Knox) endpoint and then try to launch **New notebook** task from your dashboard.
 
 > [!IMPORTANT]
 > If you decide to uninstall a previous old version of Python and install a new version not exceeding version 3.6.6 then please make sure you restart your machine to re-set the PATH environment variable and then restart Ops Studio.
@@ -68,11 +68,11 @@ Once you install Python, please re-start [!INCLUDE [SQL Operations Studio](../in
 
 ## Virtual env and Jupyter installation
 
-The "New Jupyter Notebook" task will prompt you for naming your Notebook, provide the name as say "HelloWorld.ipynb" and click Save. This will now Install VirtualEnv and will Install Jupyter and this can take up to few minutes for everything to be installed. Once everything is installed you should be able to Start Notebook by clicking the button as shown in the following screenshot:
+The "New notebook" task will prompt you for naming your Notebook, provide the name as say "HelloWorld.ipynb" and click Save. This will now Install VirtualEnv and will Install Jupyter and this can take up to few minutes for everything to be installed. Once everything is installed you should be able to Start Notebook by clicking the button as shown in the following screenshot:
 
 ![Start notebook](media/quickstart-big-data-cluster-notebooks/start-notebook.png)
 
-This will launch the **HelloWorld.ipynb** Jupyter Notebook.
+This will launch the **HelloWorld.ipynb** notebook.
 
 ## Supported kernels and attach to context
 
@@ -186,4 +186,4 @@ If you like to uninstall a package, then please use the following command from y
 
 ## Next steps
 
-For more information about using Notebooks in [!INCLUDE [SQL Operations Studio](../includes/name-sos-short.md)], see [How to use Jupyter notebooks in SQL Server 2019 CTP 2.0](notebooks-guidance.md).
+For more information about using Notebooks in [!INCLUDE [SQL Operations Studio](../includes/name-sos-short.md)], see [How to use notebooks in SQL Server 2019 CTP 2.0](notebooks-guidance.md).

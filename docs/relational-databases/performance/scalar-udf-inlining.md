@@ -240,10 +240,6 @@ END
 
 **NOTE:** The INLINE clause is not mandatory. If INLINE clause is not specified, it is automatically set to ON/OFF based on whether the UDF is inlineable. If INLINE=ON is specified but the UDF is found to be non-inlineable, an error will be thrown.
 
-## Interoperability with Dynamic Data masking
-
-As described in this article, scalar UDF inlining transforms a query with scalar UDFs into a query with an equivalent scalar sub-query. Due to this transformation,  
-
 ## Important Notes
 
 As described in this article, scalar UDF inlining transforms a query with scalar UDFs into a query with an equivalent scalar sub-query. Due to this transformation, users may notice some differences in behavior in the following scenarios:

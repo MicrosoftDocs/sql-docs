@@ -106,118 +106,6 @@ You also need to add the JDK installation path (for example, "C:\Program Files\J
 
 On Linux, the mssql-server-extensibility-java package automatically installs OpenJDK 1.8 if it is not already installed. It will also add the JVM path to an environment variable called JAVA_HOME.
 
-## Call Java from SQL
-
-The [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) system stored procedure is the interface used to call the Java runtime. Any permissions on the database apply to Java code execution.
-
-* The Java method to call needs to me provided in the "script" parameter. 
-
-* If the class belongs to a package, the "packageName" needs to be provided.
-
-* [CLASSPATH parameter](#set-classpath) provides the path to the compiled Java files. 
-
-* "params" is used to pass parameters to the Java class. Calling methods that require arguments is not supported, which makes parameters the recommended way to pass argument values. *Note: Only input parameters are supported in CTP2.0.*
-
-```sql
-DECLARE @myClassPath nvarchar(30)
-DECLARE @param1 int
-
-SET @myClassPath = N'/<my path>/program.jar'
-SET @param1 = 3
-
-EXEC sp_execute_external_script
-  @language = N'Java'
-, @script = N'<packageName>.<ClassName>.<methodName>'
-, @input_data_1 = N'<Input Query>
-, @params = N'@CLASSPATH nvarchar(30), @param1 INT'
-, @CLASSPATH = @myClassPath
-, @param1 = @param1
-```
-
-<a name="set-classpath"></a>
-
-### Setting CLASSPATH
-
-Once you have compiled your Java class/classes and placed the .class file(s) or .jar files in your Java classpath, you have two options on how to provide your classpath to the SQL Server Java extension:
-
-* Option 1: Pass CLASSPATH in the call from sp_execute_external_script (see example below). If you choose this approach, and have multiple paths, path separator characters vary by operating system:
-
-  * On Linux, separate the paths in the CLASSPATH with colon ":".
-  * On Windows, separate the paths in CLASSPATH with a semi-colon ";"
-
-* Option 2: Set CLASSPATH to a system environment variable called "CLASSPATH"
-
-## Java implementation requirements
-
-Before we show how you can call your Java program from SQL Server, we need to cover some implementation requirements in the Java class you will be calling.
-
-In order for SQL Server to communicate with the Java runtime, you need to implement specific static variables in your class. SQL Server will then be able to execute a method in the Java class and exchange data using the Java language extension.
-
-> [Note!]
-> These implementation details are subject to change in upcoming CTPs. We are working to improve the experience for developers.
-
-## Requirements for Java method signature 
-Make sure that the method you want to call from SQL Server does NOT have any arguments. The return type must be void.  
-
-```java
-public static void test()  {}
-```
-
-To pass arguments, use the **@param**s parameter in sp_execute_external_script
-
-## Push data to Java from SQL Server query - InputDataSet
-
-In sp_execute_external_script, you can pass an InputDataSet to Java. For every input column your SQL query is pushing to Java, you need to declare an array.
-
-### inputDataCol
-In the current version of the extension, the requirement is that the variable name is inputDataColN, where N is the column number. (This is subject to change for future CTPs.)
-
-```java
-public static <type>[] inputDataColN = new <type>[1]
-```
-
-These arrays have to be initialized (the size of the array needs to be greater than 0, and does not have to reflect the actual length of the column).
-
-Example: public static int[] inputDataCol1 = new int[1];
-
-These array variables will be populated with input data from a SQL server query before execution of the Java program you are calling.
-
-### inputNullMap
-
-Null map is used by the extension to know which values are null. This variable will be populated with information about null values by SQL Server before execution of the user function.
-The user only needs to initialize this variable (and the size of the array needs to be greater than 0).
-
-```java
-public static boolean[][] inputNullMap = new boolean[1][1];
-```
-
-## Return data from Java to SQL Server - OutputDataSet
-
-### outputDataColN
-
-Similar to inputDataSet, for every output column your Java program is sending back to SQL Server, you need to declare an array variable. All outputDataCol arrays should have the same length.
-
-```java
-public static <type>[] outputDataColN = new <type>[1]
-```
-
-### numberofOutputCols
-
-Must be set to the number of expected output data columns by the end of execution of the user function.
-
-```java
-public static short numberofOutputCols = <expected number of output columns>;
-```
-
-### outputNullMap
-
-Null map is used by the extension to know which values are null. We require this since primitive types don't support null. Currently, we also require the null map for String types, even though Strings can be null. Null values are indicated by “true”.
-
-This NullMap must be populated with the expected number of columns and rows you are returning to SQL Server.
-
-```java
-public static boolean[][] outputNullMap
-```
 
 ## Limitations in CTP 2.0
 
@@ -228,8 +116,8 @@ public static boolean[][] outputNullMap
 * No LOB datatype support for Input and output data sets in this version.
 
 
-## See also
+## Next steps
 
-[Install SQL Server Machine Learning Services on Windows](../install/sql-machine-learning-services-windows-install.md)
-
-[Install SQL Server Machine Learning Services on Linux](../../linux/sql-server-linux-setup-machine-learning.md)
++ [How to call Java in SQL Server](howto-call-java-from-sql.md)
++ [Java sample in SQL Server](java-first-sample.md)
++ [Java and SQL Server data types](java-sql-datatypes.md)

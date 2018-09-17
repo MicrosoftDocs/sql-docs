@@ -44,7 +44,7 @@ sudo zypper install mssql-server-extensibility
 sudo zypper install mssql-server-extensibility-java
 ```
 
-## 2 - Configuration (required)
+## 2 - Configuration
 
 Using SQL Server Management Studio or another tool that runs Transact-SQL script, configure external script execution on the database engine instance.
 

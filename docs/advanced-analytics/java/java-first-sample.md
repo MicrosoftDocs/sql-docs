@@ -14,9 +14,7 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 
 # SQL Server Java sample
 
-This example demonstrates a Java class that receives two columns (1 integer and 1 String column) from SQL Server and returns two columns back to SQL Server.
-
-The sample class takes the two columns, and for text returns permutations of ngrams (substrings) for that specific review, and return the substrings (ngrams) with their original ID. The length of the ngram is defined by a parameter sent to the Java class.
+This example demonstrates a Java class that receives two columns (ID and text) from SQL Server and returns two columns back to SQL Server (ID and ngram). For a given ID and string combination, the code generates permutations of ngrams (substrings), returning those permutations along with the original ID. The length of the ngram is defined by a parameter sent to the Java class.
 
 ## Prerequisites
 
@@ -30,7 +28,7 @@ The sample class takes the two columns, and for text returns permutations of ngr
 
 A Java IDE is helpful for creating and compiling classes. If you don't have one, we recommend [Visual Studio Code](https://code.visualstudio.com/download) with the [Java extension](https://code.visualstudio.com/docs/languages/java) (not related to the SQL Server Java extension).
 
-## 1 - Create sample table with data
+## 1 - Load sample data
 
 First, create and populate a *reviews* table with **ID** and **text** columns. Connect to SQL Server and run the following script to create a table:
 
@@ -47,7 +45,7 @@ INSERT INTO reviews(id, "text") VALUES (3, 'MMM NNN OOO PPP QQQ RRR')
 GO
 ```
 
-## 2 - Java class Ngram.java
+## 2 - Class Ngram.java
 
 Start by creating the main class. This is the first of three classes.
 
@@ -148,7 +146,7 @@ public class Ngram {
     }
 ```
 
-## 3 - Java class InputRow.java
+## 3 - Class InputRow.java
 
 Create a second class called **InputRow.java**, composed of the following code, and saved to the same location as **Ngram.java**.
 
@@ -167,7 +165,7 @@ public class InputRow {
 }
 ```
 
-## 4 - Java class OutputRow.java
+## 4 - Class OutputRow.java
 
 The third and final class is called **OutputRow.java**. Copy the code into the class and save it in the same location as the others.
 
@@ -205,12 +203,11 @@ For example, if the jar file is called 'ngram.jar', the CLASSPATH will be '/home
 
 <a name="call-method"></a>
 
-## 6 - Call method *getNgrams()* from SQL Server
+## 6 - Call *getNgrams()*
 
-To call the code, specify the Java method *getNgrams()* from the "script" parameter of sp_execute_external_script.
-This method belongs to a package called "pkg" and a class file called **Ngram.java**.
+To call the code from SQL Server, specify the Java method *getNgrams()* from the "script" parameter of sp_execute_external_script. This method belongs to a package called "pkg" and a class file called **Ngram.java**.
 
-This example passes the CLASSPATH parameter to provide the path to the Java files. We are also using "params" to pass a parameter to the Java class. 
+This example passes the CLASSPATH parameter to provide the path to the Java files. It also uses "params" to pass a parameter to the Java class. 
 
 Run the following code in SQL Server Management Studio or another tool used for running Transact-SQL.
 

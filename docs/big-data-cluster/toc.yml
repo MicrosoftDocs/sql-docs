@@ -10,8 +10,6 @@
     href: quickstart-big-data-cluster-deploy.md
   - name: Get started with SQL Server Big Data Cluster
     href: quickstart-big-data-cluster-get-started.md 
-  - name: Run Jupyter Notebooks
-    href: quickstart-big-data-cluster-notebooks.md
 - name: Concepts
   items:
   - name: HDFS
@@ -100,7 +98,7 @@
         href: query-troubleshooting.md
   - name: Notebooks
     items:
-    - name: How to use Jupyter notebooks in SQL Server 2019 CTP 2.0
+    - name: How to use notebooks in SQL Server 2019 CTP 2.0
       href: notebooks-guidance.md
   - name: Manage
     items:

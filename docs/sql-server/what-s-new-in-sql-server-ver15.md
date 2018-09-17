@@ -164,7 +164,7 @@ Full support for the widely used UTF-8 character encoding as an import or export
 
 For example,`LATIN1_GENERAL_100_CI_AS_SC` to `LATIN1_GENERAL_100_CI_AS_SC_UTF8`. UTF-8 is only available to Windows collations that support supplementary characters, as introduced in SQL Server 2012. `NCHAR` and `NVARCHAR` allow UTF-16 encoding only, and remain unchanged.
 
-This feature may provide significant storage savings, depending on the character set in use. For example, changing an existing column data type from `NCHAR(10)` to `CHAR(10)` using an UTF-8 enabled collation, translates into nearly 50% reduction in storage requirements. This reduction is because `NCHAR(10)` requires 22 bytes for storage, whereas `CHAR(10)` requires 12 bytes for the same Unicode string.
+This feature may provide significant storage savings, depending on the character set in use. For example, changing an existing column data type with ASCII strings from `NCHAR(10)` to `CHAR(10)` using an UTF-8 enabled collation, translates into nearly 50% reduction in storage requirements. This reduction is because `NCHAR(10)` requires 22 bytes for storage, whereas `CHAR(10)` requires 12 bytes for the same Unicode string.
 
 ### Lightweight query profiling infrastructure enabled by default
 
@@ -189,17 +189,17 @@ For more information, see [SQL Data Discovery and Classification](../relational-
 
 ### Support for columnstore statistics in DBCC CLONEDATABASE
 
-`DBCC CLONEDATABASE` creates a schema-only copy of a database that includes all the elements necessary to troubleshoot query performance issues without copying the data.  In previous versions of SQL Server, the command did not copy the statistics necessary to accurately troubleshoot columnstore index queries and manual steps were required to capture this information.  Now in SQL Server 2019, DBCC CLONEDATABASE automatically captures the stats blobs for columnstore indexes, so no manual steps will be required.
+`DBCC CLONEDATABASE` creates a schema-only copy of a database that includes all the elements necessary to troubleshoot query performance issues without copying the data.  In previous versions of SQL Server, the command did not copy the statistics necessary to accurately troubleshoot columnstore index queries and manual steps were required to capture this information. Now in SQL Server 2019, DBCC CLONEDATABASE automatically captures the stats blobs for columnstore indexes, so no manual steps will be required.
 
 ### New options added to sp_estimate_data_compression_savings
 
-`sp_estimate_data_compression_savings` returns the current size of the requested object and estimates the object size for the requested compression state.  Currently this procedure supports three options: `NONE`, `ROW`, and `PAGE`.  SQL Server 2019 introduces two new options: `COLUMNSTORE` and `COLUMNSTORE_ARCHIVE`.  These new options will allow you to estimate the space savings if a columnstore index is created on the table using either standard or archive columnstore compression.
+`sp_estimate_data_compression_savings` returns the current size of the requested object and estimates the object size for the requested compression state.  Currently this procedure supports three options: `NONE`, `ROW`, and `PAGE`. SQL Server 2019 introduces two new options: `COLUMNSTORE` and `COLUMNSTORE_ARCHIVE`. These new options will allow you to estimate the space savings if a columnstore index is created on the table using either standard or archive columnstore compression.
 
 ### New sys.dm_db_page_info system function returns page information
 
-`sys.dm_db_page_info(database_id, file_id, page_id, mode)` returns information about a page in a database.  The function returns a row that contains the header information from the page, including the `object_id`, `index_id`, and `partition_id`.  This function replaces the need to use `DBCC PAGE` in most cases.  
+`sys.dm_db_page_info(database_id, file_id, page_id, mode)` returns information about a page in a database. The function returns a row that contains the header information from the page, including the `object_id`, `index_id`, and `partition_id`. This function replaces the need to use `DBCC PAGE` in most cases.  
 
-In order to facilitate troubleshooting of page-related waits, a new column called page_resource was also added to `sys.dm_exec_requests` and `sys.sysprocesses`.  This new column allows you to join `sys.dm_db_page_info` to these views via another new system function - `sys.fn_PageResCracker`.  See the following script as an example:
+In order to facilitate troubleshooting of page-related waits, a new column called page_resource was also added to `sys.dm_exec_requests` and `sys.sysprocesses`. This new column allows you to join `sys.dm_db_page_info` to these views via another new system function - `sys.fn_PageResCracker`. See the following script as an example:
 
 ```sql
 SELECT page_info.* 
@@ -211,7 +211,7 @@ FROM sys.dm_exec_requests AS d
 
 ### <a id="ha"></a>Always On Availability Groups 
 
-- **Up to five synchronous replicas** – SQL Server 2019 preview increases the maximum number of synchronous replicas to 5, up from 3 in SQL Server 2017. You can configure this group of 5 replicas to have automatic failover within the group. There is 1 primary replica, plus 4 synchronous secondary replicas.
+- **Up to five synchronous replicas**: SQL Server 2019 preview increases the maximum number of synchronous replicas to 5, up from 3 in SQL Server 2017. You can configure this group of 5 replicas to have automatic failover within the group. There is 1 primary replica, plus 4 synchronous secondary replicas.
 
 - **Secondary-to-primary replica connection redirection**: Allows client application connections to be directed to the primary replica regardless of the target server specified in the connection string. This capability allows connection redirection without a listener. Use secondary-to-primary replica connection redirection in the following cases:
 
@@ -232,9 +232,9 @@ Cryptographic operations include the encryption of columns, and the rotating of 
 
 For details, see [Always Encrypted with secure enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md).
 
->[!NOTE]
->Always Encrypted with secure enclaves is only available on Windows OS.
->It requires ADO.NET 4.7.2. See [Configure Always Encrypted with secure enclaves](../relational-databases/security/encryption/configure-always-encrypted-enclaves.md) for complete requirements.
+> [!NOTE]
+> Always Encrypted with secure enclaves is only available on Windows OS.
+> This requires ADO.NET 4.7.2. See [Configure Always Encrypted with secure enclaves](../relational-databases/security/encryption/configure-always-encrypted-enclaves.md) for complete requirements.
 
 ### <a id="sqlgraph"></a> SQL Graph features
 
@@ -285,7 +285,7 @@ SQL Server 2019 [Big Data Clusters](../big-data-cluster/big-data-cluster-overvie
 
 ## <a id="sqllinux"></a> SQL Server on Linux
 
-- **Replication support**. CTP 2.0 supports SQL Server Replication on Linux. A Linux virtual machine with SQL Agent can be a publisher, distributor, or subscriber. 
+- **Replication support**: CTP 2.0 supports SQL Server Replication on Linux. A Linux virtual machine with SQL Agent can be a publisher, distributor, or subscriber. 
 
   Create the following types of publications:
   - Transactional
@@ -320,7 +320,8 @@ SQL Server 2019 [Big Data Clusters](../big-data-cluster/big-data-cluster-overvie
   - Deploy certificates across machines participating in Always On Availability Groups (from the node holding the primary replica).
   - Deploy certificates across machines participating in a failover cluster instance (from the active node).
 
-  Note: User must have administrator permissions on all the cluster nodes.
+  > [!NOTE]
+  > User must have administrator permissions on all the cluster nodes.
 
 ## <a id="tools"></a>Tools
 

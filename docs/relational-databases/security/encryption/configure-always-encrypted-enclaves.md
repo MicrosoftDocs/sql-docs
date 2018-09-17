@@ -80,9 +80,9 @@ Install the following tools on the client/development computer:
 4. [Visual Studio (2017 or later recommended)](https://visualstudio.microsoft.com/downloads/).
 5. [Developer Pack for .NET Framework 4.7.2](https://www.microsoft.com/net/download/visual-studio-sdks).
 6. [Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider NuGet package](https://www.nuget.org/packages/Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider), version 2.2.0 or later.
-7. Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders NuGet package.
+7. [Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders NuGet package](https://www.nuget.org/packages?q=Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders).
 
-The NuGet packages are intended to be used in Visual Studio projects for developing  applications using Always Encrypted with secure enclaves. The first package is required only if you store your column master keys in Azure Key Vault. For details, see [Develop applications](#develop-applications-issuing-rich-queries-in-visual-studio).
+The NuGet packages are intended to be used in Visual Studio projects for developing applications using Always Encrypted with secure enclaves. The first package is required only if you store your column master keys in Azure Key Vault. For details, see [Develop applications](#develop-applications-issuing-rich-queries-in-visual-studio).
 
 ### Configure a secure enclave
 

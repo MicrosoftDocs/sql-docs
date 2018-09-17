@@ -28,7 +28,7 @@ On Windows, start the [Installation Wizard](../install/sql-machine-learning-serv
 
 On Linux, install the [database engine](https://docs.microsoft.com/sql/linux/sql-server-linux-setup), as well as the [extensibility package and Java extension package](../../linux/sql-server-linux-setup-machine-learning.md).
 
-The following examples illustrate the sytnax for each Linux operating system.
+The following examples illustrate the syntax for each Linux operating system.
 
 ```bash
 # RedHat install commands
@@ -71,7 +71,7 @@ Given that Java is backwards compatible, earlier versions might work, but the su
 
 Download Windows version of the [Java SE Development Kit](http://www.oracle.com/technetwork/java/javase/downloads/jdk10-downloads-4416644.html).
 
-Install Java SDK under the default /Program File/ folder if you want to avoid having to grant read permission to **ALL APPLICATION PACKAGES** and the **SQLRUserGroup** security groups on an alternate location. The same guidance applies for access to your Java classpath folders, where you keep your .class or .jar files. To learn more about authorization and isolation in this release, see [Differences in a SQL Server Machine 2019 Learning Services installation](sql-machine-learning-services-ver15.md).
+Install Java SDK under the default /Program File/ folder if you want to avoid having to grant read permission to **ALL APPLICATION PACKAGES** and the **SQLRUserGroup** security groups on an alternate location. The same guidance applies for access to your Java classpath folders, where you keep your .class or .jar files. To learn more about authorization and isolation in this release, see [Differences in a SQL Server Machine 2019 Learning Services installation](../install/sql-machine-learning-services-ver15.md).
 
 ### Grant access to non-default JDK folder (Windows only)
 
@@ -100,7 +100,7 @@ Set-Acl "<YOUR PATH TO JDK / CLASSPATH>" $Acl
 ### Add the Java SDK path to JAVA_HOME
 You also need to add the JDK installation path (for example, "C:\Program Files\Java\jdk-10.0.2") to a system environment variable that you name "JAVA_HOME".
 
-   ![Environment variable for Java Home](../media/java/env-variable-java-home.png "Setup for Java")
+![Environment variable for Java Home](../media/java/env-variable-java-home.png "Setup for Java")
 
 ## Install Java SDK (JDK) on Linux
 
@@ -218,46 +218,6 @@ This NullMap must be populated with the expected number of columns and rows you 
 ```java
 public static boolean[][] outputNullMap
 ```
-
-## Supported data types
-
-### Supported types for InputDataSet and OutputDataset
-
-The following SQL and Java data types are currently supported for Input and Output data sets.
-
-| SQL Type        | Java Type
-| ------------- |:-------------:|
-| Bit      | boolean |
-| Tinyint      | short      |
-| Smallint | short      |
-| Int | int      |
-| Real | float      |
-| Bigint | long      |
-| float | double      |
-| nchar(n) | String (unicode)      |
-| nvarchar(n) | String (unicode)      |
-| binary(n) | byte[]      |
-| varbinary(n) | byte[]      |
-
-### Supported data types for parameters
-
-The following SQL and java data types are currently supported for input parameters.
-
-| SQL Type        | Java Type
-| ------------- |:-------------:|
-| Bit      | boolean |
-| Tinyint      | short      |
-| Smallint | short      |
-| Int | int      |
-| Real | float      |
-| Bigint | long      |
-| float | double      |
-| nchar(n) | String (unicode)      |
-| nvarchar(n) | String (unicode)      |
-| binary(n) | byte[]      |
-| varbinary(n) | byte[]      |
-| nvarchar(max) | String (unicode)      |
-| varbinary(max) | byte[]      |
 
 ## Limitations in CTP 2.0
 

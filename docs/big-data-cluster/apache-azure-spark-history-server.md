@@ -16,7 +16,7 @@ This article provides guidance on how to use extended Spark History Server to de
 
 ## Get access to Spark History Server
 
-The Spark history server user experience from open source is enhanced with information on job specific data and interactive visualization of job graph and data flows for big data cluster. 
+The Spark history server user experience from open source is enhanced with information, which includes job-specific data and interactive visualization of job graph and data flows for big data cluster. 
 
 ### Open the Spark History Server Web UI by URL
 Open the Spark History Server by browsing to the following URL, replace <Ipaddress> and <Port> with Big Data Cluster specific information. More information can be referred to: [Deploy SQL Server Big Data Cluster](quickstart-big-data-cluster-deploy.md)
@@ -58,7 +58,7 @@ Select job ID then click **Data** on the tool menu to get the data view.
 
     ![Data download row](./media/apache-azure-spark-history-server/sparkui-data-download-row.png)
 
-+ Copy full path or relative path by selecting the **Copy Full Path**, **Copy Relative Path** that expands from download menu. For azure data lake storage files, **Open in Azure Storage Explorer** will launch Azure Storage Explorer. And locate to the exact folder when sign in.
++ Copy full path or relative path by selecting the **Copy Full Path**, **Copy Relative Path** that expands from download menu. For azure data lake storage files, **Open in Azure Storage Explorer** will launch Azure Storage Explorer. And locate to the exact folder when signing in.
 
     ![Data copy path](./media/apache-azure-spark-history-server/sparkui-data-copy-path.png)
 
@@ -156,7 +156,7 @@ Select job ID then click **Diagnosis** on the tool menu to get the job Diagnosis
 ### Data Skew
 Click **Data Skew** tab, the corresponding skewed tasks are displayed based on the specified parameters. 
 
-+ **Specify Parameters** - The first section displays the parameters, which are used to detect Data Skew. The built-in rule is: Task Data Read is greater than 3 times of the average task data read, and the task data read is more than 10 MB. If you want to define your own rule for skewed tasks, you can choose your parameters, the **Skewed Stage**, and **Skew Char** section will be refreshed accordingly. 
++ **Specify Parameters** - The first section displays the parameters, which are used to detect Data Skew. The built-in rule is: Task Data Read is greater than three times of the average task data read, and the task data read is more than 10 MB. If you want to define your own rule for skewed tasks, you can choose your parameters, the **Skewed Stage**, and **Skew Char** section will be refreshed accordingly. 
 
 + **Skewed Stage** - The second section displays stages, which have skewed tasks meeting the criteria specified above. If there is more than one skewed task in a stage, the skewed stage table only displays the most skewed task (for example, the largest data for data skew). 
 

@@ -1,8 +1,8 @@
 ---
-title: Use extended Spark History Server to debug and diagnose Spark applications 
-description: Use extended Spark History Server to debug and diagnose Spark applications
-services: aris spark
-ms.service: aris spark
+title: Debug and Diagnose Spark Applications on SQL Server Big Data Clusters in Spark History Server 
+description: Debug and Diagnose Spark Applications on SQL Server Big Data Clusters in Spark History Server
+services: SQL Server 2019 Big Data Cluster spark
+ms.service: SQL Server 2019 Big Data Cluster spark
 author: jejiang
 ms.author: jejiang
 ms.reviewer: jroth
@@ -10,16 +10,17 @@ ms.custom: ""
 ms.topic: conceptual
 ms.date: 09/14/2018
 ---
-# Use extended Spark History Server to debug and diagnose Spark applications
+# Debug and Diagnose Spark Applications on SQL Server Big Data Clusters in Spark History Server
 
-This article provides guidance on how to use extended Spark History Server to debug and diagnose completed and running Spark applications. The extension includes data tab and graph tab and diagnosis tab. In data tab, users can check the input and output data of the Spark job. In graph tab, users can check the data flow and replay the job graph. In diagnosis tab, user can refer to Data skew, Time skew and Executor Usage analysis.
+This article provides guidance on how to use extended Spark History Server to debug and diagnose Spark applications in a SQL Server 2019 Big Data Cluster. These debug and diagnosis capabilities are built into Spark History Server and powered by Microsoft. The extension includes data tab and graph tab and diagnosis tab. In data tab, users can check the input and output data of the Spark job. In graph tab, users can check the data flow and replay the job graph. In diagnosis tab, user can refer to Data skew, Time skew, and Executor Usage analysis.
 
 ## Get access to Spark History Server
 
-Spark History Server is the web UI for completed and running Spark applications. 
+The Spark history server user experience from open source is enhanced with information on job specific data and interactive visualization of job graph and data flows for big data cluster. 
 
 ### Open the Spark History Server Web UI by URL
-Open the Spark History Server by browsing to the following URL, replace <Ipaddress> and <Port> with Aris specific information.
+Open the Spark History Server by browsing to the following URL, replace <Ipaddress> and <Port> with Big Data Cluster specific information. More information can be referred to: [Deploy SQL Server Big Data Cluster](quickstart-big-data-cluster-deploy.md)
+
 
    ```
    https://<Ipaddress>:<Port>/gateway/default/sparkhistory
@@ -53,11 +54,11 @@ Select job ID then click **Data** on the tool menu to get the data view.
 
     ![Data table](./media/apache-azure-spark-history-server/sparkui-data-table.png)
 
-+ Download single file by clicking button **Partial Download** that place at the right, then the selected file will be downloaded to local, if the file does not exist any more, it will open a new tab to show the error messages.
++ Download single file by clicking button **Partial Download** that place at the right, then the selected file is downloaded to local place. If the file does not exist any more, it will open a new tab to show the error messages.
 
     ![Data download row](./media/apache-azure-spark-history-server/sparkui-data-download-row.png)
 
-+ Copy full path or relative path by selecting the **Copy Full Path**, **Copy Relative Path** that expands from download menu. For azure data lake storage files, **Open in Azure Storage Explorer** will launch Azure Storage Explorer, and locate to the folder when sign-in.
++ Copy full path or relative path by selecting the **Copy Full Path**, **Copy Relative Path** that expands from download menu. For azure data lake storage files, **Open in Azure Storage Explorer** will launch Azure Storage Explorer. And locate to the exact folder when sign in.
 
     ![Data copy path](./media/apache-azure-spark-history-server/sparkui-data-copy-path.png)
 
@@ -83,7 +84,7 @@ Select job ID then click **Graph** on the tool menu to get the job graph view.
 
     ![graph job ID](./media/apache-azure-spark-history-server/sparkui-graph-jobid.png)
 
-+ By default, **Progress** is selected, user could check the data flow by selecting **Read/Written** in the dropdown list of **Display**.
++ We leave **Progress** as default value. User can check  data flow by selecting **Read** or **Written**** in the dropdown list of **Display**.
 
     ![graph display](./media/apache-azure-spark-history-server/sparkui-graph-display.png)
 
@@ -91,7 +92,7 @@ Select job ID then click **Graph** on the tool menu to get the job graph view.
 
     ![graph heatmap](./media/apache-azure-spark-history-server/sparkui-graph-heatmap.png)
 
-+ Play back the job by clicking the **Playback** button and stop anytime by clicking the stop button. The task display in color to show different status when playback:
++ Play back the job by clicking the **Playback** button and stop anytime by clicking the stop button. The task display in color to show different status when playing back:
 
     + Green for succeeded: The job has completed successfully.
     + Orange for retried: Instances of tasks that failed but do not affect the final result of the job. These tasks had duplicate or retry instances that may succeed later.
@@ -128,8 +129,8 @@ Select job ID then click **Graph** on the tool menu to get the job graph view.
     + ID.
     + Name or description.
     + Total task number.
-    + Data read: the sum of input size and shuffle read size.
-    + Data write: the sum of output size and shuffle write size.
+    + Data read: the sums of input size and shuffle read size.
+    + Data write: the sums of output size and shuffle write size.
     + Execution time: the time between start time of the first attempt and completion time of the last attempt.
     + Row count: the sum of input records, output records, shuffle read records and shuffle write records.
     + Progress.
@@ -155,9 +156,9 @@ Select job ID then click **Diagnosis** on the tool menu to get the job Diagnosis
 ### Data Skew
 Click **Data Skew** tab, the corresponding skewed tasks are displayed based on the specified parameters. 
 
-+ **Specify Parameters** - The first section displays the parameters, which are used to detect Data Skew. The built-in rule is: Task Data Read is greater than 3 times of the average task data read, and the task data read is more than 10MB. If you want to define your own rule for skewed tasks, you can choose your parameters, the **Skewed Stage**, and **Skew Char** section will be refreshed accordingly. 
++ **Specify Parameters** - The first section displays the parameters, which are used to detect Data Skew. The built-in rule is: Task Data Read is greater than 3 times of the average task data read, and the task data read is more than 10 MB. If you want to define your own rule for skewed tasks, you can choose your parameters, the **Skewed Stage**, and **Skew Char** section will be refreshed accordingly. 
 
-+ **Skewed Stage** - The second section displays stages, which have skewed tasks meeting the criteria specified above. If there is more than one skewed task in a stage, the skewed stage table only displays the most skewed task (e.g. the largest data for data skew). 
++ **Skewed Stage** - The second section displays stages, which have skewed tasks meeting the criteria specified above. If there is more than one skewed task in a stage, the skewed stage table only displays the most skewed task (for example, the largest data for data skew). 
 
     ![Data skew section2](./media/apache-azure-spark-history-server/sparkui-diagnosis-dataskew-section2.png)
 
@@ -177,7 +178,7 @@ The **Time Skew** tab displays skewed tasks based on task execution time.
 ### Executor Usage Analysis
 The Executor Usage Graph visualizes the Spark job actual executor allocation and running status.  
 
-+ Click **Executor Usage Analysis**, then four types curves about executor usage are drafted, including **Allocated Executors**, **Running Executors**, **idle Executors**, and **Max Executor Instances**. Regarding allocated executors, each "Executor added" or "Executor removed" event will increase or decrease the allocated executors, you can check "Event Timeline" in the “Jobs" tab for more comparison.
++ Click **Executor Usage Analysis**, then we draft four types curves about executor usage. They include **Allocated Executors**, **Running Executors**, **idle Executors**, and **Max Executor Instances**. Regarding allocated executors, each "Executor added" or "Executor removed" event will increase or decrease the allocated executors. You can check "Event Timeline" in the “Jobs" tab for more comparison.
 
     ![Executors tab](./media/apache-azure-spark-history-server/sparkui-diagnosis-executors.png)
 
@@ -186,18 +187,14 @@ The Executor Usage Graph visualizes the Spark job actual executor allocation and
     ![Select chart](./media/apache-azure-spark-history-server/sparkui-diagnosis-select-chart.png)
 
 
-## Known issue
+## Known issues
+The Spark History Server has the following known issues:
 
-1.	Currently, it only works for Spark 2.3 cluster.
++ Currently, it only works for Spark 2.3 cluster.
 
-2.	Input/output data using RDD will not show in data tab.
++ Input/output data using RDD will not be shown in Data tab.
 
 ## Next steps
 
 * [Manage resources for a Spark cluster on HDInsight](https://docs.microsoft.com/en-us/azure/hdinsight/spark/apache-spark-resource-manager)
 * [Configure Spark settings](https://docs.microsoft.com/en-us/azure/hdinsight/spark/apache-spark-settings)
-
-
-## Contact us
-
-If you have any feedback, or if you encounter any other problems when using this tool, send an email at ([hdivstool@microsoft.com](mailto:hdivstool@microsoft.com)).

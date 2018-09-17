@@ -92,9 +92,7 @@ This article describes limitations and known issues for the [!INCLUDE[SQL Server
 
 **Issue and customer impact**:  When a `Transfer Database Task` is configured to transfer a database in `Database Online` mode, it may fail with the following error:
 
-```
-The Execute method on the task returned error code 0x80131500 (An error occurred while transferring data. See the inner exception for details.). The Execute method must succeed, and indicate the result using an "out" parameter.
-```
+>The Execute method on the task returned error code 0x80131500 (An error occurred while transferring data. See the inner exception for details.). The Execute method must succeed, and indicate the result using an "out" parameter.
 
 **Workaround**: Execute `DBCC TRACEON (7416,-1)` on the server and try again.
 

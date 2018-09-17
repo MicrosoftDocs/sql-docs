@@ -3,7 +3,7 @@ title: "SQL Server TDE Extensible Key Management Using Azure Key Vault - Setup S
 ms.custom: ""
 ms.date: "08/24/2018"
 ms.prod: sql
-ms.reviewer: ""
+ms.reviewer: vanto
 ms.suite: "sql"
 ms.technology: security
 ms.tgt_pltfrm: ""

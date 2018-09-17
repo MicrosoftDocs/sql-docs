@@ -102,7 +102,7 @@ GO
 
 ## Next steps
 
-Explore how to run notebooks in Azure Data Studio:
+For more information about SQL Server Big Data Clusters, see:
 
 > [!div class="nextstepaction"]
-> [Run notebooks on SQL Server 2019 preview](quickstart-big-data-cluster-notebooks.md)
+> [Run notebooks on SQL Server 2019 preview](big-data-cluster-overview.md)

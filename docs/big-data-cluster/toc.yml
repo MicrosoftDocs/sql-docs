@@ -10,8 +10,6 @@
     href: quickstart-big-data-cluster-deploy.md
   - name: Get started with SQL Server Big Data Cluster
     href: quickstart-big-data-cluster-get-started.md 
-  - name: Run notebooks
-    href: quickstart-big-data-cluster-notebooks.md
 - name: Concepts
   items:
   - name: HDFS

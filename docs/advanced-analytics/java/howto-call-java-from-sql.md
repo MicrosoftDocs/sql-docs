@@ -68,7 +68,7 @@ This section explains the implementation requirements for a Java class executing
 
 In order for SQL Server to communicate with the Java runtime, you need to implement specific static variables in your class. SQL Server can then execute a method in the Java class and exchange data using the Java language extension.
 
-> [Note!]
+> [!Note]
 > Expect the implementation details to change in upcoming CTPs as we work to improve the experience for developers.
 
 ## Method requirements

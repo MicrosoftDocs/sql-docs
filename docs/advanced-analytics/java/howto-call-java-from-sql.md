@@ -16,7 +16,7 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 
 When using the [Java language extension](extension-java.md), the [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) system stored procedure is the interface used to call the Java runtime. Any permissions on the database apply to Java code execution.
 
-This article explains implementation details for Java classes and methods that execute on SQL Server. Once you are familiar with these details, review the [Java sample](java-sample.md) as your next step.
+This article explains implementation details for Java classes and methods that execute on SQL Server. Once you are familiar with these details, review the [Java sample](java-first-sample.md) as your next step.
 
 ## Basic principles
 

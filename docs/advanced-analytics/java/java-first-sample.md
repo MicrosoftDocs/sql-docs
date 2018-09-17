@@ -14,21 +14,23 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 
 # SQL Server Java sample
 
-This example demonstrates a Java class that receives 2 columns (1 int and 1 String column) from SQL Server and returns 2 columns back to SQL Server.
+This example demonstrates a Java class that receives two columns (1 integer and 1 String column) from SQL Server and returns two columns back to SQL Server.
 
-The sample class takes the two columns, and for text returns permutations of ngrams (substrings) for that specific review, and return the substrings (ngrams) with their original ID. The length of the ngram is defined by a parameter we will send to the Java class.
+The sample class takes the two columns, and for text returns permutations of ngrams (substrings) for that specific review, and return the substrings (ngrams) with their original ID. The length of the ngram is defined by a parameter sent to the Java class.
 
 ## Prerequisites
 
-+ SQL Server 2019 Database Engine instance with the extensibility framework and Java programming extension.
++ SQL Server 2019 Database Engine instance with the extensibility framework and Java programming extension [on Windows](../install/sql-machine-learning-services-windows-install.md) or [on Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-setup).
 
 + Java SE Development Kit (JDK) 1.10 on Windows, or JDK 1.8 on Linux.
 
-For more information on system configuration, see [Java language extension in SQL Server 2019](extension-java.md).
++ SQL Server Management Studio or another tool for running T-SQL.
 
-## Create sample table with data
+For more information on system configuration, see [Java language extension in SQL Server 2019](extension-java.md). For more information about coding requirements, see [How to call Java in SQL Server](howto-call-java-from-sql.md).
 
-First, create and populate a table with an **ID** and **text** column. Connect to SQL Server and run the following script to create a table:
+## 1 - Create sample table with data
+
+First, create and populate a *reviews* table with **ID** and **text** columns. Connect to SQL Server and run the following script to create a table:
 
 ```sql
 DROP TABLE IF exists reviews;
@@ -43,15 +45,16 @@ INSERT INTO reviews(id, "text") VALUES (3, 'MMM NNN OOO PPP QQQ RRR')
 GO
 ```
 
-## Java class Ngram.java
+## 2 - Java class Ngram.java
 
-Now let's look at the Java class implementation of our main class. In addition to this class, our sample also has two other classes described further down.
+Start by creating the main class. This is the first of three classes.
 
-Create a class called Ngram.java and and copy the following Java code into that file. Since this sample is using package, make sure to save all java classes in a folder called pkg before you compile.
+In this step, create a class called **Ngram.java** and copy the following Java code into that file. 
+
 
 ```java
 //We will package our classes in a package called pkg
-//This is optional. You don't need to package your classes
+//Packages are option in Java-SQL, but required for this sample.
 package pkg;
 
 import java.util.List;
@@ -143,9 +146,9 @@ public class Ngram {
     }
 ```
 
-## Java class InputRow.java
+## 3 - Java class InputRow.java
 
-Create an additional class called InputRow.java, copy this code into the class and save the class in the same location as Ngram.java.
+Create a second class called **InputRow.java**, composed of the following code, and saved to the same location as **Ngram.java**.
 
 ```java
 package pkg;
@@ -162,9 +165,9 @@ public class InputRow {
 }
 ```
 
-## Java class OutputRow.java
+## 4 - Java class OutputRow.java
 
-Create an additional class called OutputRow.java, copy this code into the class and save the class in the same location as Ngram.java.
+The third and final class is called **OutputRow.java**. Copy the code into the class and save it in the same location as the others.
 
 ```java
 package pkg;
@@ -184,30 +187,28 @@ public class OutputRow {
 }
 ```
 
-## Call Java from SQL Server
+## 5 - Compile
 
-### Save class files in classpath
+Once you have your classes ready, compile them to get ".class" files. You should have three .class files for this sample. (Ngram.class, InputRow.class and OutputRow.class).
 
-Once you have your classes ready, you need to compile them so that you get ".class" files. You should have 3 .class files for this sample. (Ngram.class, InputRow.class and OutputRow.class)
+The files should be located in a subfolder called "pkg" in your classpath location. For example, if the classpath location is called '/home/myclasspath/', then the .class files should be in '/home/myclasspath/pkg'.
 
-Now place these .class files in a sub folder called "pkg" in your classpath location.
+In this sample, the CLASSPATH provided in the sp_execute_external_script is '/home/myclasspath/'.
 
-If the classpath location is called '/home/myclasspath/', then place the .class files in '/home/myclasspath/pkg'
-
-The CLASSPATH provided in the sp_execute_external_script in this case will be '/home/myclasspath/'
-
-#### Using jar files
+### Using jar files
 
 If you plan to package your classes and dependencies into .jar files, you can do so and provide the full path to the .jar file in the sp_execute_external_script CLASSPATH parameter.
 
 For example, if the jar file is called 'ngram.jar', the CLASSPATH will be '/home/myclasspath/ngram.jar'
 
-### Call method *getNgrams()* from SQL Server
+## 6 - Call method *getNgrams()* from SQL Server
 
-We will be calling a Java method *getNgrams()* from the "script" parameter of sp_execute_external_script.
-This method belongs to a package called "pkg" and a class file called "Ngram.java".
+To call the code, specify the Java method *getNgrams()* from the "script" parameter of sp_execute_external_script.
+This method belongs to a package called "pkg" and a class file called **Ngram.java**.
 
-We are passing a CLASSPATH parameter to provide the path to the Java files. We are also using "params" to pass a parameter to the Java class. 
+This example passes the CLASSPATH parameter to provide the path to the Java files. We are also using "params" to pass a parameter to the Java class. 
+
+Run the following code in SQL Server Management Studio or another tool used for running Transact-SQL.
 
 ```sql
 DECLARE @myClassPath nvarchar(30)
@@ -231,12 +232,12 @@ GO
 
 ### Results
 
-After executing the call to the Java method, you should receive a result set with two columns:
+After executing the call, you should receive a result set showing the two columns:
 
-**TODO: Add image displaying results**
+![Results from Java sample](../media/java/java-sample-results.png "Sample results")
 
 ## See also
 
-[Install SQL Server Machine Learning Services on Windows](../install/sql-machine-learning-services-windows-install.md)
-
-[Install SQL Server Machine Learning Services on Linux](../../linux/sql-server-linux-setup-machine-learning.md)
++ [How to call Java in SQL Server](howto-call-java-from-sql.md)
++ [Java extensions in SQL Server](extension-java.md)
++ [Java and SQL Server data types](java-sql-datatypes.md)

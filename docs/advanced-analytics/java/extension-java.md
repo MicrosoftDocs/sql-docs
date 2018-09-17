@@ -67,7 +67,7 @@ One difference from previous language integrations such as R and Python is that 
 
 Given that Java is backwards compatible, earlier versions might work, but the supported and tested versions are listed in the table. 
 
-## Install Java SDK (JDK) on Windows
+## JDK on Windows
 
 Download Windows version of the [Java SE Development Kit](http://www.oracle.com/technetwork/java/javase/downloads/jdk10-downloads-4416644.html).
 
@@ -102,10 +102,9 @@ You also need to add the JDK installation path (for example, "C:\Program Files\J
 
 ![Environment variable for Java Home](../media/java/env-variable-java-home.png "Setup for Java")
 
-## Install Java SDK (JDK) on Linux
+## JDK on Linux
 
 On Linux, the mssql-server-extensibility-java package automatically installs OpenJDK 1.8 if it is not already installed. It will also add the JVM path to an environment variable called JAVA_HOME.
-
 
 ## Limitations in CTP 2.0
 

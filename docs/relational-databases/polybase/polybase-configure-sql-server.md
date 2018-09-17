@@ -29,7 +29,7 @@ To query the data from a SQL Server data source, you must create external tables
  
 We recommend creating statistics on external table columns, especially the ones used for joins, filters and aggregates, for optimal query performance.
 
-Here are the objects we will create in this section:
+These objects will create in this section:
 
 - CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL) 
 - CREATE EXTERNAL DATA SOURCE (Transact-SQL) 
@@ -40,70 +40,70 @@ Here are the objects we will create in this section:
 
 1. Create a master key on the database. This is required to encrypt the credential secret.
 
-```sql
-   CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
-```
+     ```sql
+      CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
+     ```
 
 1. Create a database scoped credential for.
 
-```sql
- /*  specify credentials to external data source
- *  IDENTITY: user name for external source.  
- *  SECRET: password for external source.
- */
-CREATE DATABASE SCOPED CREDENTIAL SqlServerCredentials   
-WITH IDENTITY = 'username', Secret = 'password';
-```
+     ```sql
+     /*  specify credentials to external data source
+     *  IDENTITY: user name for external source.  
+     *  SECRET: password for external source.
+     */
+     CREATE DATABASE SCOPED CREDENTIAL SqlServerCredentials   
+     WITH IDENTITY = 'username', Secret = 'password';
+     ```
 
 1. Create an external data source with [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).Specify external data source location and credentials for SQL Server.
 
-```sql
- /*  LOCATION: Server DNS name or IP address.
- *  PUSHDOWN: specify whether computation should be pushed down to the source. ON by default.
- *  CREDENTIAL: the database scoped credential, created above.
- */  
-CREATE EXTERNAL DATA SOURCE SqlServerInstance
-WITH ( 
-  LOCATION = 'sqlserver://TestDBs',
-  -- PUSHDOWN = ON | OFF,
-  CREDENTIAL = SqlServerCredentials
-);
-```
+     ```sql
+     /*  LOCATION: Server DNS name or IP address.
+     *  PUSHDOWN: specify whether computation should be pushed down to the source. ON by default.
+     *  CREDENTIAL: the database scoped credential, created above.
+     */  
+     CREATE EXTERNAL DATA SOURCE SqlServerInstance
+     WITH ( 
+     LOCATION = '<vendor>://<server>[:<port>]',
+     -- PUSHDOWN = ON | OFF,
+     CREDENTIAL = SqlServerCredentials
+     );
+     ```
 
 1. Create schemas for external data
 
-```sql
-CREATE SCHEMA sqlserver;
-GO
-```
+     ```sql
+     CREATE SCHEMA sqlserver;
+     GO
+     ```
 
 1.  Create external tables that represents data stored in external SQL Server  [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md).
  
-```sql
-/*  LOCATION: sql server table/view in 'database_name.schema_name.object_name' format
- *  DATA_SOURCE: the external data source, created above.
- */
-CREATE EXTERNAL TABLE sqlserver.customer(
-    C_CUSTKEY INT NOT NULL,
-    C_NAME VARCHAR(25) NOT NULL,
-    C_ADDRESS VARCHAR(40) NOT NULL,
-    C_NATIONKEY INT NOT NULL,
-    C_PHONE CHAR(15) NOT NULL,
-    C_ACCTBAL DECIMAL(15,2) NOT NULL,
-    C_MKTSEGMENT CHAR(10) NOT NULL,
-    C_COMMENT VARCHAR(117) NOT NULL
-)
-WITH (
-    LOCATION='tpch_10.dbo.customer',
-    DATA_SOURCE=SqlServerInstance
-);
-```
+     ```sql
+     /*  LOCATION: sql server table/view in 'database_name.schema_name.object_name' format
+     *  DATA_SOURCE: the external data source, created above.
+     */
+     CREATE EXTERNAL TABLE sqlserver.customer(
+     C_CUSTKEY INT NOT NULL,
+     C_NAME VARCHAR(25) NOT NULL,
+     C_ADDRESS VARCHAR(40) NOT NULL,
+     C_NATIONKEY INT NOT NULL,
+     C_PHONE CHAR(15) NOT NULL,
+     C_ACCTBAL DECIMAL(15,2) NOT NULL,
+     C_MKTSEGMENT CHAR(10) NOT NULL,
+     C_COMMENT VARCHAR(117) NOT NULL
+      )
+      WITH (
+      LOCATION='tpch_10.dbo.customer',
+      DATA_SOURCE=SqlServerInstance
+     );
+      ```
 
 1. Create statistics on an external table.
 
-```sql
-    CREATE STATISTICS CustomerCustKeyStatistics ON sqlserver.customer(C_CUSTKEY) WITH FULLSCAN; 
-```
+     ```sql
+      CREATE STATISTICS CustomerCustKeyStatistics ON sqlserver.customer (C_CUSTKEY) WITH FULLSCAN; 
+     ```
 
 ## Next steps
 

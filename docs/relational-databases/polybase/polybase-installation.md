@@ -34,9 +34,10 @@ To install a trial version of  SQL Server, go to [SQL Server evaluations](https:
    
 - TCP/IP must be enabled for Polybase to function correctly. TCP/IP is enabled by default on all editions of SQL Server except for the Developer and Express SQL Server editions. For Polybase to function correctly on the Developer and Express editions you must enable TCP/IP connectivity (See [Enable or Disable a Server Network Protocol](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).)
 
-- An external data source, which is either an Azure blob or a Hadoop cluster. For supported versions of Hadoop, see [Configure PolyBase](#supported).  
+- An external data source, which is either an Azure blob or a Hadoop cluster. For supported versions of Hadoop, see [Configure PolyBase](#supported). 
+- MSVC++ 2012 installation  
 
- [!NOTE]
+> [!NOTE]
 > If you are going to use the computation pushdown functionality against Hadoop, you will need to ensure that the target Hadoop cluster has core components of HDFS, Yarn/MapReduce with Jobhistory server enabled. PolyBase submits the pushdown query via MapReduce and pulls status from the JobHistory Server. Without either component the query will fail.
 
 **Notes**  
@@ -113,7 +114,7 @@ Use the values in this table to create installation scripts. The two services **
 
 |SQL Server component|Parameter and values|Description|  
 |--------------------------|--------------------------|-----------------|  
-|SQL Server setup control|**Required**<br /><br /> /FEATURES=PolyBaseCore, PolyBaseJava, PolyBase | **PolyBaseCore** installs support for all PolyBase features except Hadoop connectivity. **PolyBaseJava** enables Hadoop connectivity. **PolyBaseCore** installs both. |  
+|SQL Server setup control|**Required**<br /><br /> /FEATURES=PolyBaseCore, PolyBaseJava, PolyBase | **PolyBaseCore** installs support for all PolyBase features except Hadoop connectivity. **PolyBaseJava** enables Hadoop connectivity. **PolyBase** installs both. |  
 |SQL Server PolyBase Engine|**Optional**<br /><br /> /PBENGSVCACCOUNT|Specifies the account for the engine service. The default is **NT Authority\NETWORK SERVICE**.|  
 |SQL Server PolyBase Engine|**Optional**<br /><br /> /PBENGSVCPASSWORD|Specifies the password for the engine service account.|  
 |SQL Server PolyBase Engine|**Optional**<br /><br /> /PBENGSVCSTARTUPTYPE|Specifies the startup mode for the PolyBase engine service: Automatic (default) , Disabled,  and Manual|  

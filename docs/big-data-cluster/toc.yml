@@ -108,6 +108,10 @@
       href: manage-monitoring.md
     - name: Troubleshooting   
       href: manage-troubleshooting.md
+  - name: Spark job
+    items:
+    - name: Use extended Spark History Server to debug and diagnose Spark applications
+      href: apache-azure-spark-history-server.md
 - name: Resources
   items:
   - name: FAQ

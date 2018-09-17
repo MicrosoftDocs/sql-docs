@@ -253,6 +253,7 @@ As described in this article, scalar UDF inlining transforms a query with scalar
 1. Query level join hints might not be valid anymore, as inlining may introduce new joins. Local join hints will have to be used instead.
 1. Views that reference inlineable scalar UDFs cannot be indexed. If you need to create an index on such views, disable inlining for the referenced UDFs.
 1. The behavior of [Dynamic Data masking](../security/dynamic-data-masking.md) may not be the same as without inlining. More specifically, the behavior with inlining would be identical to the behavior observed if the UDF was a single scalar sub-query.
+1. If a UDF references builtins such as SCOPE_IDENTITY(), the value returned by these builtins will change with inlining. This is because inlining changes the scope of statements inside the UDF.
 
 ## See Also
 

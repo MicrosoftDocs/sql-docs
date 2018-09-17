@@ -21,7 +21,7 @@ monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 
 To setup Always Encrypted with secure enclaves, use the following workflow:
 
-1. Configure HGS attestation.
+1. Configure Host Guardian Service (HGS) attestation.
 2. Install [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)] on the SQL Server computer.
 3. Install tools on the client/development computer.
 4. Configure the enclave type in your SQL Server instance.
@@ -48,13 +48,12 @@ The computer running SQL Server needs the following operating system and SQL Ser
 - Windows Server DataCenter (Semi-Annual Channel), version 1809
 - Windows Server 2019 DataCenter
 
-The computer must be configured as a guarded host, attested by HGS. The enclave attestation method (TPM attestation), which is recommended for production environments, requires SQL Server runs on a physical (bare metal) machine, not in a virtual machine. Virtual machines are adequate for pre-production environments only. See the following section on Configure HGS attestation for details.
-
 
 ### HGS computer requirements
 
 A single HGS computer is sufficient during testing and prototyping. For production, a Windows failover cluster with 3 computers is strongly recommended.
 
+The computer must be configured as a guarded host, attested by HGS. TPM attestation is the recommended enclave attestation method for production environments, and requires SQL Server runs on a physical machine, not in a virtual machine. Virtual machines are adequate for pre-production environments only. See the following section for details.
 
 ### Configure HGS attestation
 
@@ -63,12 +62,12 @@ For details on HGS computer requirements and set up, see [Setting up the Host Gu
 
 ### Determine your Attestation Service URL
 
-To determine an attestation service URL, you need to configure your tools and applications:
+To determine the attestation service URL, you need to configure your tools and applications:
 
 1. Log on to your SQL Server computer as administrator.
 2. Run PowerShell as administrator.
 3. Run [Get-HGSClientConfiguration](https://docs.microsoft.com/powershell/module/hgsclient/get-hgsclientconfiguration).
-4. Write down and save the AttestationServerURL property. It should look like this: `http://x.x.x.x/Attestation`.
+4. Write down and save the AttestationServerURL property. It should look similar to this: `http://x.x.x.x/Attestation`.
 
 
 ### Install tools
@@ -80,10 +79,10 @@ Install the following tools on the client/development computer:
 3. [SQL Server PowerShell module](../../../powershell/download-sql-server-ps-module.md) version 21.5 or later.
 4. [Visual Studio (2017 or later recommended)](https://visualstudio.microsoft.com/downloads/).
 5. [Developer Pack for .NET Framework 4.7.2](https://www.microsoft.com/net/download/visual-studio-sdks).
-6. Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider NuGet package, version 2.2.0 or later.
-7. Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider NuGet package.
+6. [Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider NuGet package](https://www.nuget.org/packages/Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider), version 2.2.0 or later.
+7. Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders NuGet package.
 
-Both NuGet packages listed above are intended to be used in Visual Studio projects for developing  applications using Always Encrypted with secure enclaves. The first package is required only if you store your column master keys in Azure Key Vault. See the Develop Applications issuing Rich Queries in Visual Studio section later in this document.
+The NuGet packages are intended to be used in Visual Studio projects for developing  applications using Always Encrypted with secure enclaves. The first package is required only if you store your column master keys in Azure Key Vault. For details, see [Develop applications](#develop-applications-issuing-rich-queries-in-visual-studio).
 
 ### Configure a secure enclave
 
@@ -178,9 +177,9 @@ The following sections provide sample PowerShell scripts for provisioning enclav
 
 **Provisioning Enclave-Enabled Keys – Windows Certificate Store**
 
-On the client/development computer, open Windows PowerShell ISE, copy the following script into Windows PowerShell ISE, customize the script, and run it.
+On the client/development computer, open Windows PowerShell ISE, and run the following script.
 
-Important to note is the use of the `-AllowEnclaveComputations` parameter in the **New-SqlCertificateStoreColumnMasterKeySettings** cmdlet.
+Important to note is the use of the `-AllowEnclaveComputations` parameter in the [**New-SqlCertificateStoreColumnMasterKeySettings**](https://docs.microsoft.com/powershell/module/sqlserver/new-sqlcertificatestorecolumnmasterkeysettings) cmdlet.
 
 ```powershell
 # Create a column master key in Windows Certificate Store.
@@ -211,11 +210,11 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 
 ### Provisioning Enclave-Enabled Keys – Azure Key Vault
 
-One the client/development computer, open Windows PowerShell ISE, copy the following script into Windows PowerShell ISE, customize the script and run it.
+On the client/development computer, open Windows PowerShell ISE, and run the following script.
 
 **Step 1: Provision a column master key in Azure Key Vault**
 
-This can be also done using Azure portal. For details, see [Manage your key vaults from Azure portal](https://blogs.technet.microsoft.com/kv/2016/09/12/manage-your-key-vaults-from-new-azure-portal/)
+This can be also done using Azure portal. For details, see [Manage your key vaults from Azure portal](https://blogs.technet.microsoft.com/kv/2016/09/12/manage-your-key-vaults-from-new-azure-portal/).
 
 
 ```powershell
@@ -285,7 +284,7 @@ SELECT name, allow_enclave_computations
 FROM sys.column_master_keys
 ```
 
-To determine which column encryption keys are encrypted with enclave-enabled column encryption keys (and, thus, are enclave-enabled), you need to join **sys.column_master_keys**, **sys.column_encryption_key_values**, and **sys.column_encryption_keys**.
+To determine which column encryption keys are encrypted with enclave-enabled column encryption keys (and, thus, are enclave-enabled), you need to join [sys.column_master_keys](../../system-catalog-views/sys-column-master-keys-transact-sql.md), [sys.column_encryption_key_values](../../system-catalog-views/sys-column-encryption-key-values-transact-sql.md), and [sys.column_encryption_keys](../../system-catalog-views/sys-column-encryption-keys-transact-sql.md).
 
 
 ```sql

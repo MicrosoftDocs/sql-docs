@@ -1,21 +1,14 @@
 ---
 title: "Configure the Report Server Service Account (SSRS Configuration Manager) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/18/2016"
+ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.component: "install-windows"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.suite: pro-bi
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: f880c623-67c8-4167-b98b-ace17e800faa
-caps.latest.revision: 14
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ---
 # Configure the Report Server Service Account (SSRS Configuration Manager)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] is implemented as a single service that contains a Report Server Web service, [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)], and a background processing application that is used for scheduled report processing and subscription delivery. This topic explains how the service account is initially configured and how to modify the account or password using the Reporting Services Configuration tool.  

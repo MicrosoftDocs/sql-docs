@@ -2,7 +2,6 @@
 title: "Microsoft OLE DB Remoting Provider (ADO Service Provider) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: "ado"
 ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -90,4 +89,4 @@ rs.UpdateBatch     'Equivalent of RDS SubmitChanges
 ```
 
 ## See Also
- [Overview of the OLE DB Remoting Provider](http://msdn.microsoft.com/en-us/4083b72f-68c4-4252-b366-abb70db5ca2b)
+ [Overview of the OLE DB Remoting Provider](http://msdn.microsoft.com/4083b72f-68c4-4252-b366-abb70db5ca2b)

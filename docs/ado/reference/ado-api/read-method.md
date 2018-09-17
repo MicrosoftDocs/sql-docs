@@ -2,15 +2,13 @@
 title: "Read Method | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: "ado"
 ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: 
 ms.suite: sql
 ms.prod: sql  
-ms.prod_service: drivers
-ms.component: reference
+ms.prod_service: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"

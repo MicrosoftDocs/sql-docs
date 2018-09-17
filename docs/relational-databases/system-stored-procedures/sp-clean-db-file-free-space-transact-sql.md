@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_clean_db_file_free_space"
 ms.assetid: 3eb53a67-969d-4cb8-9681-b1c8e6fd55b6
 caps.latest.revision: 11
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_clean_db_file_free_space (Transact-SQL)
@@ -77,6 +77,7 @@ EXEC sp_clean_db_file_free_space
 ```  
   
 ## See Also  
- [Database Engine Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
+ [Database Engine Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)
+ <br>[Ghost Cleanup Process Guide](../ghost-record-cleanup-process-guide.md) 
   
   

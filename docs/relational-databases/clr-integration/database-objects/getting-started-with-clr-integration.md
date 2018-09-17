@@ -3,14 +3,10 @@ title: "Getting Started with CLR Integration | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/02/2016"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: "clr"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+ms.technology: clr
+ms.topic: quickstart
 dev_langs: 
   - "TSQL"
   - "VB"

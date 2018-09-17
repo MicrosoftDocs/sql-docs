@@ -14,11 +14,11 @@ manager: cgronlun
 
 The [**MicrosoftML**](https://msdn.microsoft.com/microsoft-r/microsoftml-introduction) package that is provided with Microsoft R Server and SQL Server 2017 includes multiple machine learning algorithms. These APIs were developed by Microsoft for internal machine learning applications, and have been refined over the years to support high performance on big data, using multicore processing and fast data streaming. MicrosoftML also includes numerous transformations for text and image processing.
 
-In SQL Server 2017 CTP 2.0, support was added for the Python language. The **microsoftml** package for Python contains functions equivalent to those in the MicrosoftML package for R. 
+In SQL Server 2017, support was added for the Python language. The **microsoftml** package for Python contains functions equivalent to those in the MicrosoftML package for R. 
 
 + **MicrosoftML for R**
 
-    Introduction and package reference: [MicrosoftML: machine learning R algorithms](https://docs.microsoft.com/en-us/r-server/r-reference/microsoftml/microsoftml-package)
+    Introduction and package reference: [MicrosoftML: machine learning R algorithms](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)
 
     Because R is case-sensitive, make sure that you reference the name correctly when loading the package.
 
@@ -110,4 +110,4 @@ For more information about revoscalepy, see:
 
 + [What is revoscalepy](python/what-is-revoscalepy.md)
 
-+ [revoscalepy function library](https://docs.microsoft.com/en-us/r-server/python-reference/revoscalepy/revoscalepy-package) 
++ [revoscalepy function library](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package) 

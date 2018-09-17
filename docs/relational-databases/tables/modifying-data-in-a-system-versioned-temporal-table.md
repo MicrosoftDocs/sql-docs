@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Modifying Data in a System-Versioned Temporal Table | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/28/2016"
@@ -14,7 +14,7 @@ caps.latest.revision: 8
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Modifying Data in a System-Versioned Temporal Table
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ CREATE TABLE [dbo].[CompanyLocation]
    , [City] [varchar](50) NOT NULL  
    , [SysStartTime] [datetime2](0) GENERATED ALWAYS AS ROW START HIDDEN NOT NULL   
    , [SysEndTime] [datetime2](0) GENERATED ALWAYS AS ROW END HIDDEN NOT NULL   
-PERIOD FOR SYSTEM_TIME ([SysStartTime], [SysEndTime])   
+   , PERIOD FOR SYSTEM_TIME ([SysStartTime], [SysEndTime])   
 )    
 WITH ( SYSTEM_VERSIONING = ON );   
 GO   

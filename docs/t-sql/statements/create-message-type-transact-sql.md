@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "04/10/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -30,8 +29,8 @@ helpviewer_keywords:
   - "CREATE MESSAGE TYPE statement"
 ms.assetid: 98fe0fff-1a2e-4ca2-b37f-83a06fdf098e
 caps.latest.revision: 41
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # CREATE MESSAGE TYPE (Transact-SQL)

@@ -1,10 +1,9 @@
-﻿---
+---
 title: "CREATE DATABASE ENCRYPTION KEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/24/2016"
 ms.prod: sql
 ms.prod_service: "pdw, sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -29,10 +28,10 @@ helpviewer_keywords:
   - "database encryption key, create"
 ms.assetid: 2ee95a32-5140-41bd-9ab3-a947b9990688
 caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CREATE DATABASE ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]

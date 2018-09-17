@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "07/18/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -28,8 +27,8 @@ helpviewer_keywords:
   - "Always Encrypted, create column master key"
 ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
 caps.latest.revision: 32
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # CREATE COLUMN MASTER KEY (Transact-SQL)

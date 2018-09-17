@@ -1,4 +1,4 @@
-﻿---
+---
 title: "sys.dm_pdw_component_health_active_alerts (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"

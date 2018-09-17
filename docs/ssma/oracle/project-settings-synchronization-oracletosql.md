@@ -1,8 +1,6 @@
 ---
 title: "Project Settings(Synchronization) (OracleToSQL) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.component: "ssma-oracle"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -17,7 +15,7 @@ ms.author: "Shamikg"
 manager: "v-thobro"
 ---
 # Project Settings(Synchronization) (OracleToSQL)
-The Synchronization page of the **Project Settings** dialog box contains settings that customize how SSMA loads and refreshes database objects, such as tables and stored procedures, into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+The Synchronization page of the **Project Settings** dialog box contains settings that customize how SSMA loads and refreshes database objects, such as tables and stored procedures, into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 The default actions options specify default settings for refreshing objects from the Oracle database and for synchronizing objects with the SQL Server database. For more information, see [Refresh from Database - Oracle](../../ssma/oracle/refresh-from-database-oracletosql.md).  
   
@@ -29,7 +27,7 @@ You can access two different Synchronization pages that contain the same setting
   
 ## Miscellaneous Options  
 **Attempts**  
-Specifies the number of attempts SSMA should make when it loads objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Objects that are not loaded into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] in the current attempt will be tried again until SSMA reaches the maximum number of attempts in the current synchronization process. Default value set is **2**  
+Specifies the number of attempts SSMA should make when it loads objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Objects that are not loaded into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in the current attempt will be tried again until SSMA reaches the maximum number of attempts in the current synchronization process. Default value set is **2**  
   
 ## Synchronization for Oracle Options  
 **Action on local and remote object change**  

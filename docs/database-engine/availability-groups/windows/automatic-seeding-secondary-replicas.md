@@ -5,7 +5,6 @@ services: data-lake-analytics
 ms.custom: ""
 ms.date: "09/25/2017"
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: high-availability
@@ -15,8 +14,8 @@ helpviewer_keywords:
 - "Automatic seeding [SQL Server], secondary replica"
 ms.assetid: 
 caps.latest.revision: 
-author: "allanhirt"
-ms.author: mikeray
+author: "MashaMSFT"
+ms.author: mathoma
 manager: craigg
 ---
 # Automatic seeding for secondary replicas

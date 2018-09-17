@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "7/23/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|data-types"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -17,8 +16,8 @@ helpviewer_keywords:
   - "LOB data [SQL Server]"
 ms.assetid: fe8ee5b6-7392-4aae-a551-973bae02de8d
 caps.latest.revision: 3
-author: edmacauley
-ms.author: edmaca
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # String and Binary Types

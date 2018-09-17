@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|functions"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -19,8 +18,8 @@ helpviewer_keywords:
   - "ranking rows"
 ms.assetid: e7f917ba-bf4a-4fe0-b342-a91bcf88a71b
 caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Ranking Functions (Transact-SQL)

@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "05/01/2016"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -25,8 +24,8 @@ helpviewer_keywords:
   - "activation stored procedures [Service Broker]"
 ms.assetid: d54aa325-8761-4cd4-8da7-acf33df12296
 caps.latest.revision: 49
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # ALTER QUEUE (Transact-SQL)

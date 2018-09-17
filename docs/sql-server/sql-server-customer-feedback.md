@@ -1,14 +1,12 @@
 ---
 title: Configure SQL Server to send feedback to Microsoft | Microsoft Docs
 description: 
-author: annashres 
-ms.author: anshrest 
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ms.date: 07/12/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.prod_service: sql
-ms.component: "sql-non-specified"
 ms.suite: "sql"
 ms.custom: ""
 ms.technology: configuration
@@ -57,7 +55,7 @@ For SQL Server on Linux refer to [Customer Feedback for SQL Server on Linux](htt
 After setup, the usage data collection setting for SQL Server components and instances can be changed through the Error and Usage Reporting application. This application is available as part of SQL Server installation. This tool lets each SQL Server instance configure its own Usage Data setting.
 
 > [!NOTE]
-> The Error and Usage Reporting application is listed under the Configuration Tools of SQL Server. You can use this tool to manage your preference for Error Reporting and Usage Feedback collection in the same manner as in SQL Server 2017. Error Reporting is separate from Usage Feedback collection, therefore can be turned on or off independently from Usage Feedback collection. Error Reporting collects crash dumps that are sent to Microsoft and that may contain sensitive information as outlined in the Privacy Statement.
+> The Error and Usage Reporting application is listed under the Configuration Tools of SQL Server. You can use this tool to manage your preference for Error Reporting and Usage Feedback collection in the same manner as in SQL Server 2017. Error Reporting is separate from Usage Feedback collection, therefore can be turned on or off independently from Usage Feedback collection. Error Reporting collects crash dumps that are sent to Microsoft and that may contain sensitive information as outlined in the [Privacy Statement](http://go.microsoft.com/fwlink/?LinkID=868444).
 
 To start SQL Server Error and Usage Reporting, click or tap **Start**, and then search on "Error" in the search box. The SQL Server Error and Usage Reporting item will be displayed. After you start the tool, you can manage usage feedback and serious errors that are collected for instances and components that are installed on that computer.
 
@@ -154,7 +152,7 @@ The procedure to turn this feature on or off is dependent on the OS version. To 
     [Configure Windows telemetry in your organization](https://technet.microsoft.com/en-us/itpro/windows/manage/configure-windows-telemetry-in-your-organization)
 - Windows Server 2008 R2 and Windows 7
 
-    [WER Settings](https://msdn.microsoft.com/en-us/library/windows/desktop/bb513638(v=vs.85).aspx)
+    [WER Settings](/windows/desktop/wer/wer-settings)
  
 ## Feedback for Analysis Services
 

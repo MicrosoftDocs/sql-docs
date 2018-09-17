@@ -2,10 +2,10 @@
 title: "Comparability for IRowsetFind | Microsoft Docs"
 description: "Comparability for IRowsetFind"
 ms.custom: ""
-ms.date: "03/26/2018"
+ms.date: "06/14/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "ole-db-date-time"
+ms.component: "oledb|ole-db-date-time"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: connectivity
@@ -13,12 +13,14 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "IRowsetFind comparability"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Comparability for IRowsetFind
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   For date/time types only, IRowsetFind supports the following comparisons:  
   

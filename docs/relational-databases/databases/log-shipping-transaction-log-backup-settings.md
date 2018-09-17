@@ -72,7 +72,7 @@ manager: craigg
 |**Do not compress backup**|Click to create an uncompressed backup, regardless of the server-level default.|  
   
 ## See Also  
- [Configure a User to Create and Manage SQL Server Agent Jobs](http://msdn.microsoft.com/library/67897e3e-b7d0-43dd-a2e2-2840ec4dd1ef)   
+ [Configure a User to Create and Manage SQL Server Agent Jobs](../../ssms/agent/configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)   
  [About Log Shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)  
   
   

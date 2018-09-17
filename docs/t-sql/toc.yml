@@ -1,0 +1,24 @@
+- name: Overview
+  href: language-reference.md
+- name: Data types
+  href: ../t-sql/data-types/data-types-transact-sql.md
+- name: Database Console Commands
+  href: ../t-sql/database-console-commands/database-console-commands.md
+- name: Functions
+  href: ../t-sql/functions/functions.md
+- name: Language elements
+  href: ../t-sql/language-elements/language-elements-transact-sql.md
+- name: Queries
+  href: ../t-sql/queries/queries.md
+- name: Statements
+  href: ../t-sql/statements/statements.md
+- name: "Tutorial: Writing Transact-SQL Statements"
+  href: tutorial-writing-transact-sql-statements.md
+  items:
+  - name: "Lesson 1: Create & query database objects"
+    href: lesson-1-creating-database-objects.md
+  - name: "Lesson 2: Configure permissions on database objects"
+    href: lesson-2-configuring-permissions-on-database-objects.md
+  - name: "Lesson 3: Delete database objects"
+    href: lesson-3-deleting-database-objects.md
+

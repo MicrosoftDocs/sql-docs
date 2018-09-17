@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "08/10/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -19,8 +18,8 @@ helpviewer_keywords:
   - "granting permissions [SQL Server], servers"
 ms.assetid: 7e880a5a-3bdc-491f-a167-7a9ed338be7f
 caps.latest.revision: 36
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # GRANT Server Permissions (Transact-SQL)

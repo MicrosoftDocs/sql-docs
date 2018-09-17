@@ -1,4 +1,4 @@
-﻿---
+---
 title: "sys.dm_tran_commit_table (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -23,7 +23,7 @@ caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Change Tracking - sys.dm_tran_commit_table
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

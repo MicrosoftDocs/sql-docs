@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "08/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|functions"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -19,8 +18,8 @@ helpviewer_keywords:
   - "FORMAT function"
 ms.assetid: dad6f24c-b8d9-4dbe-a561-9b167b8f20c8
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # FORMAT (Transact-SQL)

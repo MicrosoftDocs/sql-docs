@@ -1,10 +1,9 @@
-﻿---
+---
 title: "CREATE EXTERNAL TABLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "5/14/2018"
+ms.date: "6/12/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "PolyBase, external table"
 ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CREATE EXTERNAL TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -512,24 +511,29 @@ WITH (TYPE = HADOOP,
 
 
 CREATE EXTERNAL FILE FORMAT TextFileFormat 
-WITH ( FORMATTYPE = DELIMITEDTEXT 
-     , FORMATOPTIONS ( FIELDTERMINATOR = '|' 
+WITH
+(
+    FORMAT_TYPE = DELIMITEDTEXT 
+    , FORMAT_OPTIONS ( FIELDTERMINATOR = '|' 
 					 , STRINGDELIMITER = '' 
 					 , DATEFORMAT = 'yyyy-MM-dd HH:mm:ss.fff' 
 					 , USETYPE_DEFAULT = FALSE 
 					 ) 
-	)
+)
 
 
 CREATE EXTERNAL TABLE [dbo].[DimProductexternal] 
 ( [ProductKey] [int] NOT NULL, 
   [ProductLabel] nvarchar NULL, 
   [ProductName] nvarchar NULL ) 
-WITH ( LOCATION='/DimProduct/' , 
-	   DATA_SOURCE = AzureDataLakeStore , 
-	   FILE_FORMAT = TextFileFormat , 
-	   REJECT_TYPE = VALUE ,
-	   REJECT_VALUE = 0 ) ;
+WITH
+(
+    LOCATION='/DimProduct/' , 
+	DATA_SOURCE = AzureDataLakeStore , 
+	FILE_FORMAT = TextFileFormat , 
+	REJECT_TYPE = VALUE ,
+	REJECT_VALUE = 0
+) ;
 
 
 CREATE TABLE [dbo].[DimProduct] 

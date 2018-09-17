@@ -13,6 +13,7 @@ ms.assetid: f54be594-f290-4db2-bf18-fd2521728a4a
 caps.latest.revision: 13
 author: "stevestein"
 ms.author: "sstein"
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 manager: craigg
 ---
 # Report Server Properties (Log On Tab)

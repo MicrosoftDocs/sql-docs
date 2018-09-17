@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/26/2018"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: "php"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: connectivity
@@ -34,8 +33,8 @@ The following links are for tutorials about setting up FastCGI for PHP and hosti
 ## Video Presentations  
 The following links are for video presentations about setting up FastCGI for PHP and using IIS 7.0 features to host PHP applications:  
   
--   [Setting up FastCGI for PHP](https://docs.microsoft.com/en-us/iis/application-frameworks/running-php-applications-on-iis/set-up-fastcgi-for-php)  
--   [Partying with PHP on Microsoft Internet Information Services 7](https://docs.microsoft.com/en-us/iis/application-frameworks/running-php-applications-on-iis/mix08-partying-with-php-on-microsoft-internet-information-services-7-and-above)  
+-   [Setting up FastCGI for PHP](https://docs.microsoft.com/iis/application-frameworks/running-php-applications-on-iis/set-up-fastcgi-for-php)  
+-   [Partying with PHP on Microsoft Internet Information Services 7](https://docs.microsoft.com/iis/application-frameworks/running-php-applications-on-iis/mix08-partying-with-php-on-microsoft-internet-information-services-7-and-above)  
   
 ## Support Resources  
 The following forums provide community support for FastCGI on IIS:  

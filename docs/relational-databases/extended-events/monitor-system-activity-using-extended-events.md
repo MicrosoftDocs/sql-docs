@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Monitor System Activity Using Extended Events | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -17,7 +17,7 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Monitor System Activity Using Extended Events
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

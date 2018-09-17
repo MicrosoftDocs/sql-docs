@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "mds"
-ms.component: "non-specific"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
@@ -26,7 +25,7 @@ manager: "erikre"
 ```  
 <sources>  
       <!-- Adjust the switch value to control the types of messages that should be logged.   
-           http://msdn.microsoft.com/en-us/library/system.diagnostics.sourcelevels  
+           http://msdn.microsoft.com/library/system.diagnostics.sourcelevels  
            Use the a switchValue of Verbose to generate a full log. Please be aware that   
            the trace file can get quite large very quickly -->  
       <source name="MDS" switchType="System.Diagnostics.SourceSwitch" switchValue="Warning, ActivityTracing">  
@@ -49,7 +48,7 @@ manager: "erikre"
   
 -   Tracing is enabled for Warning and ActivityTracing messages.  
   
-     For more information, see [SourceLevels Enumeration](https://msdn.microsoft.com/en-us/library/system.diagnostics.sourcelevels).  
+     For more information, see [SourceLevels Enumeration](https://msdn.microsoft.com/library/system.diagnostics.sourcelevels).  
   
 -   The logs are saved in the Logs folder under the WebApplication folder. The default location is C:\Program Files\Microsoft SQL Server\130\Master Data Services\WebApplication\Logs.  
   

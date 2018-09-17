@@ -1,4 +1,4 @@
-﻿---
+---
 title: "System Stored Procedures (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/21/2016"
@@ -24,11 +24,10 @@ helpviewer_keywords:
   - "system stored procedures [SQL Server], categories"
   - "system stored procedures [SQL Server]"
 ms.assetid: a5c4d5b8-5a24-4a2d-99b4-d003b546ee3a
-caps.latest.revision: 49
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # System Stored Procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

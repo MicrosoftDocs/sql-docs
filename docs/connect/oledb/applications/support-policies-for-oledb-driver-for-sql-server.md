@@ -1,7 +1,7 @@
 ---
 title: "Support Policies for OLE DB Driver for SQL Server | Microsoft Docs"
 description: "Support policies for OLE DB Driver for SQL Server"
-ms.date: "03/26/2018"
+ms.date: "06/12/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.component: "oledb|applications"
@@ -11,8 +11,8 @@ ms.custom: ""
 ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Support Policies for OLE DB Driver for SQL Server

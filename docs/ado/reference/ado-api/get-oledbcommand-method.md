@@ -2,7 +2,6 @@
 title: "get_OLEDBCommand Method | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: "ado"
 ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -35,4 +34,4 @@ HRESULT get_OLEDBCommand(
  [out] A pointer to a pointer location where the IUnknown pointer for the underlying OLE DB Command will be written.  
   
 ## Applies To  
- [IADOCommandConstruction](http://msdn.microsoft.com/en-us/d8e54333-00eb-4b72-bf4a-ca92c7ca5f86)
+ [IADOCommandConstruction](http://msdn.microsoft.com/d8e54333-00eb-4b72-bf4a-ca92c7ca5f86)

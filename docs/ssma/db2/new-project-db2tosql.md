@@ -1,8 +1,6 @@
 ---
 title: "New Project (DB2ToSQL) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.component: "ssma-db2"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -32,11 +30,11 @@ Enter or browse to the folder or network location to save the project.
 **Migrate To**  
 Select one of the target database version from below list:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   
 -   Azure SQL DB  
   

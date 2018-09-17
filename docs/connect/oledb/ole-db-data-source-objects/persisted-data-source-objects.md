@@ -2,10 +2,10 @@
 title: "Persisted Data Source Objects | Microsoft Docs"
 description: "Persisted data source objects"
 ms.custom: ""
-ms.date: "03/26/2018"
+ms.date: "06/14/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "ole-db-data-source-objects"
+ms.component: "oledb|ole-db-data-source-objects"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: connectivity
@@ -16,12 +16,14 @@ helpviewer_keywords:
   - "data source objects [OLE DB]"
   - "OLE DB Driver for SQL Server, persisted data source objects"
   - "persisted data source objects"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Persisted Data Source Objects
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   The OLE DB Driver for SQL Server supports persisted data source objects with the **IPersistFile** interface.  
   

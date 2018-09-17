@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "07/29/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|functions"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -26,8 +25,8 @@ helpviewer_keywords:
   - "SUSER_SID function"
 ms.assetid: 57b42a74-94e1-4326-85f1-701b9de53c7d
 caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # SUSER_SID (Transact-SQL)
@@ -73,7 +72,7 @@ SUSER_SID ( [ 'login' ] [ , Param2 ] )
  The followng example returns the security identification number (SID) for the current security context.  
   
 ```  
-SELECT SUSER_SID('sa');  
+SELECT SUSER_SID();  
 ```  
   
 ### B. Using SUSER_SID with a specific login  

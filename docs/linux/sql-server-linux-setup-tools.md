@@ -5,7 +5,7 @@ author: rothja
 ms.author: jroth 
 manager: craigg
 ms.date: 10/02/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ""
 ms.suite: "sql"
@@ -57,7 +57,7 @@ Use the following steps to install the **mssql-tools** on Red Hat Enterprise Lin
 1. If you had a previous version of **mssql-tools** installed, remove any older unixODBC packages.
 
    ```bash
-   sudo yum remove unixODBC-utf16 unixODBC-utf16-devel
+   sudo yum remove mssql-tools unixODBC-utf16-devel
    ```
 
 1. Run the following commands to install **mssql-tools** with the unixODBC developer package.

@@ -1,8 +1,6 @@
 ---
 title: "Project Settings (Conversion) (AccessToSQL) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.component: "ssma-access"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -23,7 +21,7 @@ ms.author: "Shamikg"
 manager: craigg
 ---
 # Project Settings (Conversion) (AccessToSQL)
-The Conversion project settings let you configure how objects are converted from Access database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure database objects.  
+The Conversion project settings let you configure how objects are converted from Access database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure database objects.  
   
 The Conversion pane is available in the **Project Settings** and **Default Project Settings** dialog boxes.  
   
@@ -33,7 +31,7 @@ The Conversion pane is available in the **Project Settings** and **Default Proje
   
 ## Options  
 **Add primary key**  
-Creates a new primary key in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure table if an Access table has no primary key or unique index.  
+Creates a new primary key in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure table if an Access table has no primary key or unique index.  
   
 -   **Default Mode**: False  
   

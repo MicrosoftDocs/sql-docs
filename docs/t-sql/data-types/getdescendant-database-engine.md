@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "7/22/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|data-types"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -19,8 +18,8 @@ helpviewer_keywords:
   - "GetDescendant [Database Engine]"
 ms.assetid: f5f39596-033e-4243-acbc-caa188b45b03
 caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # GetDescendant (Database Engine)

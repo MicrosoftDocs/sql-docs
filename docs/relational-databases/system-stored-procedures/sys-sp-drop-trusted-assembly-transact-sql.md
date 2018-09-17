@@ -1,4 +1,4 @@
-﻿---
+---
 title: "sys.sp_drop_trusted_assembly (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/14/2017"
@@ -20,11 +20,10 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.sp_drop_trusted_assembly"
 ms.assetid: 
-caps.latest.revision: 
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
+monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.sp_drop_trusted_assembly (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]

@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "08/10/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -18,8 +17,8 @@ helpviewer_keywords:
   - "servers [SQL Server], permissions"
 ms.assetid: 7b9a56b3-face-452e-a655-147dac306ba1
 caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # REVOKE Server Permissions (Transact-SQL)

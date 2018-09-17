@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "05/15/2018"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.component: "extending-packages-scripting-task-examples"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-
+ms.technology: integration-services
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -65,7 +63,7 @@ manager: craigg
   
 4.  **References**. The code samples that read schema information from Excel files require an additional reference in the script project to the **System.Xml** namespace.  
   
-5.  Set the default scripting language for the Script component by using the **Scripting language** option on the **General** page of the **Options** dialog box. For more information, see [General Page](https://msdn.microsoft.com/library/ms189436(v=sql.110).aspx).  
+5.  Set the default scripting language for the Script component by using the **Scripting language** option on the **General** page of the **Options** dialog box. For more information, see [General Page](../general-page-of-integration-services-designers-options.md).  
   
 ##  <a name="example1"></a> Example 1 Description: Check Whether an Excel File Exists  
  This example determines whether the Excel workbook file specified in the `ExcelFile` variable exists, and then sets the Boolean value of the `ExcelFileExists` variable to the result. You can use this Boolean value for branching in the workflow of the package.  

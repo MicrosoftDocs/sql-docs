@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Creating SMO Programs | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -22,7 +22,7 @@ caps.latest.revision: 34
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
-monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Creating SMO Programs
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]

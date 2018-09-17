@@ -1,0 +1,72 @@
+- name: Full-Text Search
+  href: full-text-search.md
+  items:
+  - name: Get Started with Full-Text Search
+    href: get-started-with-full-text-search.md
+  - name: Query with Full-Text Search
+    href: query-with-full-text-search.md
+  - name: Search for Words Close to Another Word with NEAR
+    href: search-for-words-close-to-another-word-with-near.md
+  - name: Limit Search Results with RANK
+    href: limit-search-results-with-rank.md
+  - name: Improve the Performance of Full-Text Queries
+    href: improve-the-performance-of-full-text-queries.md
+  - name: Search Document Properties with Search Property Lists
+    href: search-document-properties-with-search-property-lists.md
+  - name: Find Property Set GUIDs and Property Integer IDs for Search Properties
+    href: find-property-set-guids-and-property-integer-ids-for-search-properties.md
+  - name: Create and Manage Full-Text Catalogs
+    href: create-and-manage-full-text-catalogs.md
+  - name: Create and Manage Full-Text Indexes
+    href: create-and-manage-full-text-indexes.md
+  - name: Choose a Language When Creating a Full-Text Index
+    href: choose-a-language-when-creating-a-full-text-index.md
+  - name: Populate Full-Text Indexes
+    href: populate-full-text-indexes.md
+  - name: Improve the Performance of Full-Text Indexes
+    href: improve-the-performance-of-full-text-indexes.md
+  - name: Troubleshoot Full-Text Indexing
+    href: troubleshoot-full-text-indexing.md
+  - name: Back Up and Restore Full-Text Catalogs and Indexes
+    href: back-up-and-restore-full-text-catalogs-and-indexes.md
+  - name: Configure and Manage Filters for Search
+    href: configure-and-manage-filters-for-search.md
+  - name: Configure and Manage Word Breakers and Stemmers for Search
+    href: configure-and-manage-word-breakers-and-stemmers-for-search.md
+  - name: View or Change Registered Filters and Word Breakers
+    href: view-or-change-registered-filters-and-word-breakers.md
+  - name: Change the Word Breaker Used for US English and UK English
+    href: change-the-word-breaker-used-for-us-english-and-uk-english.md
+  - name: Revert the Word Breakers Used by Search to the Previous Version
+    href: revert-the-word-breakers-used-by-search-to-the-previous-version.md
+  - name: Customize the Behavior of Word Breakers with a Custom Dictionary
+    href: customize-the-behavior-of-word-breakers-with-a-custom-dictionary.md
+  - name: Configure and Manage Stopwords and Stoplists for Full-Text Search
+    href: configure-and-manage-stopwords-and-stoplists-for-full-text-search.md
+  - name: Configure and Manage Thesaurus Files for Full-Text Search
+    href: configure-and-manage-thesaurus-files-for-full-text-search.md
+  - name: Manage and Monitor Full-Text Search for a Server Instance
+    href: manage-and-monitor-full-text-search-for-a-server-instance.md
+  - name: Set the Service Account for the Full-text Filter Daemon Launcher
+    href: set-the-service-account-for-the-full-text-filter-daemon-launcher.md
+  - name: Upgrade Full-Text Search
+    href: upgrade-full-text-search.md
+  - name: Full-Text Search DDL, Functions, Stored Procedures, and Views
+    href: full-text-search-ddl-functions-stored-procedures-and-views.md
+  - name: Use the Full-Text Indexing Wizard
+    href: use-the-full-text-indexing-wizard.md
+- name: Semantic Search
+  href: semantic-search-sql-server.md
+  items:
+  - name: Install and Configure Semantic Search
+    href: install-and-configure-semantic-search.md
+  - name: Enable Semantic Search on Tables and Columns
+    href: enable-semantic-search-on-tables-and-columns.md
+  - name: Find Key Phrases in Documents with Semantic Search
+    href: find-key-phrases-in-documents-with-semantic-search.md
+  - name: Find Similar and Related Documents with Semantic Search
+    href: find-similar-and-related-documents-with-semantic-search.md
+  - name: Manage and Monitor Semantic Search
+    href: manage-and-monitor-semantic-search.md
+  - name: Semantic Search DDL, Functions, Stored Procedures, and Views
+    href: semantic-search-ddl-functions-stored-procedures-and-views.md

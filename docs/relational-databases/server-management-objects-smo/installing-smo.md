@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Installing SMO | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/06/2017"
@@ -21,7 +21,7 @@ author: "stevestein"
 ms.author: "sstein"
 manager: craigg
 
-monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 #Installing SMO
@@ -41,7 +41,7 @@ This is a replacement for SharedManagementObjects.msi, which was previously rele
 
 ##Installing the Package
 
-See [NuGet Quick Start - Use a Package](https://docs.microsoft.com/en-us/nuget/quickstart/use-a-package) for instructions and examples of installing and using a NuGet package. 
+See [NuGet Quick Start - Use a Package](https://docs.microsoft.com/nuget/quickstart/use-a-package) for instructions and examples of installing and using a NuGet package. 
   
 ## System Requirements
   

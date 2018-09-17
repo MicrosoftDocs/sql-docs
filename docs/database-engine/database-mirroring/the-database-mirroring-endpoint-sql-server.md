@@ -1,10 +1,9 @@
----
+﻿---
 title: "The Database Mirroring Endpoint (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: high-availability
-ms.component: "database-mirroring"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: high-availability
@@ -21,7 +20,7 @@ caps.latest.revision: 47
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-monikerRange: ">= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # The Database Mirroring Endpoint (SQL Server)
 

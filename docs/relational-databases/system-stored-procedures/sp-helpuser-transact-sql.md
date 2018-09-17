@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sp_helpuser"
 ms.assetid: 9c70b41d-ef4c-43df-92da-bd534c287ca1
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_helpuser (Transact-SQL)

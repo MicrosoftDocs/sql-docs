@@ -1,4 +1,4 @@
-﻿---
+---
 title: "View or Change the Properties of a Database | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/05/2018"
@@ -21,7 +21,7 @@ caps.latest.revision: 42
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # View or Change the Properties of a Database
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

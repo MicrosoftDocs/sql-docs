@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|functions"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -23,8 +22,8 @@ helpviewer_keywords:
   - "names [SQL Server], columns"
 ms.assetid: 4db1fb3b-e46f-43fb-b269-a5b6e8b39ed0
 caps.latest.revision: 33
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # INDEX_COL (Transact-SQL)

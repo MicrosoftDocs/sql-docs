@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Degree of Parallelism (7.0 Insert) Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,7 +15,7 @@ caps.latest.revision: 35
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Degree of Parallelism (7.0 Insert) Event Class
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

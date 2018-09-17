@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "04/05/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -23,8 +22,8 @@ helpviewer_keywords:
   - "CREATE FULLTEXT INDEX statement"
 ms.assetid: 8b80390f-5f8b-4e66-9bcc-cabd653c19fd
 caps.latest.revision: 110
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # CREATE FULLTEXT INDEX (Transact-SQL)

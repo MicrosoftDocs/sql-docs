@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -21,8 +20,8 @@ helpviewer_keywords:
   - "ALTER DATABASE AUDIT SPECIFICATION statement"
 ms.assetid: 85f4e7e6-a330-4de0-9048-64f386ccc314
 caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # ALTER DATABASE AUDIT SPECIFICATION (Transact-SQL)

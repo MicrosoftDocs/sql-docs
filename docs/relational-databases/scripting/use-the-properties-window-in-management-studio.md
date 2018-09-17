@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Use the Properties Window in Management Studio | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -17,7 +17,7 @@ caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Use the Properties Window in Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

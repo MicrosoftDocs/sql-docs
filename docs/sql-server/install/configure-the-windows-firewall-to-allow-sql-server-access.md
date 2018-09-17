@@ -3,12 +3,9 @@ title: "Configure the Windows Firewall to Allow SQL Server Access | Microsoft Do
 ms.custom: ""
 ms.date: "05/17/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: "install"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "setup-install"
+ms.technology: install
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -26,15 +23,15 @@ helpviewer_keywords:
   - "netsh to open firewall ports"
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 caps.latest.revision: 48
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 
- > For content related to previous versions of SQL Server, see [Configure the Windows Firewall to Allow SQL Server Access](https://msdn.microsoft.com/en-US/library/cc646023(SQL.120).aspx).
+ > For content related to previous versions of SQL Server, see [Configure the Windows Firewall to Allow SQL Server Access](configure-the-windows-firewall-to-allow-sql-server-access.md).
 
 Firewall systems help prevent unauthorized access to computer resources. If a firewall is turned on but not correctly configured, attempts to connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] might be blocked.  
   

@@ -3,7 +3,6 @@ title: "Upgrade SQL Server Management Tools | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
 ms.prod: sql
-ms.prod_service: install
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: install
@@ -15,6 +14,7 @@ ms.assetid: 1dab50b9-d16c-49a1-9ecc-af72adb6c378
 caps.latest.revision: 19
 author: "stevestein"
 ms.author: "sstein"
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 manager: craigg
 ---
 # Upgrade SQL Server Management Tools
@@ -31,7 +31,7 @@ Consider the following issues before you upgrade to [!INCLUDE[ssCurrent](../../i
   
 ### For all upgrade scenarios:  
   
-- All TSX servers should be upgraded before the MSX server is upgraded. For more information about MSX/TSX in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Automated Administration Across an Enterprise](http://msdn.microsoft.com/library/44d8365b-42bd-4955-b5b2-74a8a9f4a75f).  
+- All TSX servers should be upgraded before the MSX server is upgraded. For more information about MSX/TSX in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Automated Administration Across an Enterprise](../../ssms/agent/automated-administration-across-an-enterprise.md).  
   
 -   All components in an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must be upgraded at the same time. Version numbers of the [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], and [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] components must be the same in an instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   

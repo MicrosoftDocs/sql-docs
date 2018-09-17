@@ -1,10 +1,9 @@
 ---
 title: "PDO::query | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "08/01/2018"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: "php"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: connectivity
@@ -114,8 +113,56 @@ while ( $stmt->fetch() ){
   
 $stmt = null;  
 ?>  
-```  
-  
+```
+
+## Example
+This code sample shows how to create a table of [sql_variant](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql) types and fetch the inserted data.
+
+```
+<?php
+$server = 'serverName';
+$dbName = 'databaseName';
+$uid = 'yourUserName';
+$pwd = 'yourPassword';
+
+$conn = new PDO("sqlsrv:server=$server; database = $dbName", $uid, $pwd);
+$conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );  
+
+try {
+    $tableName = 'testTable';
+    $query = "CREATE TABLE $tableName ([c1_int] sql_variant, [c2_varchar] sql_variant)";
+
+    $stmt = $conn->query($query);
+    unset($stmt);
+
+    $query = "INSERT INTO [$tableName] (c1_int, c2_varchar) VALUES (1, 'test_data')";
+    $stmt = $conn->query($query);
+    unset($stmt);
+
+    $query = "SELECT * FROM $tableName";
+    $stmt = $conn->query($query);
+
+    $result = $stmt->fetch(PDO::FETCH_ASSOC);
+    print_r($result);
+    
+    unset($stmt);
+    unset($conn);
+} catch (Exception $e) {
+    echo $e->getMessage();
+}
+?>
+```
+
+The expected output would be:
+
+```
+Array
+(
+    [c1_int] => 1
+    [c2_varchar] => test_data
+)
+```
+
 ## See Also  
 [PDO Class](../../connect/php/pdo-class.md)
 

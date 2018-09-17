@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "04/04/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -24,8 +23,8 @@ helpviewer_keywords:
   - "CREATE DATABASE AUDIT SPECIFICATION statement"
 ms.assetid: 0544da48-0ca3-4a01-ba4c-940e23dc315b
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # CREATE DATABASE AUDIT SPECIFICATION (Transact-SQL)

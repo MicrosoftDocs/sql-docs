@@ -1,10 +1,9 @@
-﻿---
+---
 title: "CREATE TABLE (SQL Graph) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/04/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -36,7 +35,7 @@ caps.latest.revision: 1
 author: "shkale-msft"
 ms.author: "shkale"
 manager: craigg
-monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
+monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CREATE TABLE (SQL Graph)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]

@@ -4,16 +4,11 @@ ms.description: "This article describes why and how to store and index JSON docu
 ms.custom: ""
 ms.date: "01/04/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.component: "json"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "dbe-json"
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
-ms.assetid: 
-caps.latest.revision: 
 author: "jovanpop-msft"
 ms.author: "jovanpop"
 ms.reviewer: douglasl
@@ -55,7 +50,7 @@ SELECT TOP 100 JSON_VALUE(log, ‘$.severity’), AVG( CAST( JSON_VALUE(log,’$
  WHERE CAST( JSON_VALUE(log,’$.date’) as datetime) > @datetime
  GROUP BY JSON_VALUE(log, ‘$.severity’)
  HAVING AVG( CAST( JSON_VALUE(log,’$.duration’) as float) ) > 100
- ORDER BY CAST( JSON_VALUE(log,’$.duration’) as float) ) DESC
+ ORDER BY AVG( CAST( JSON_VALUE(log,’$.duration’) as float) ) DESC
 ```
 
 It's a powerful advantage that you can use *any* T-SQL function and query clause to query JSON documents. SQL Server and SQL Database don't introduce any constraints in the queries that you can use to analyze JSON documents. You can extract values from a JSON document with the `JSON_VALUE` function and use it in the query like any other value.

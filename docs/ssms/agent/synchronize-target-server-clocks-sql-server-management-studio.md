@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Synchronize Target Server Clocks (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -29,7 +29,7 @@ monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts
 > [!IMPORTANT]  
 > On [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
 
-This topic describes how to synchronize target server clocks in [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] with the master server clock by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] or [!INCLUDE[tsql](../../includes/tsql_md.md)]. Synchronizing these system clocks supports your job schedules.  
+This topic describes how to synchronize target server clocks in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] with the master server clock by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. Synchronizing these system clocks supports your job schedules.  
   
 **In This Topic**  
   
@@ -89,5 +89,5 @@ Requires membership in the **sysadmin** fixed server role.
     GO  
     ```  
   
-For more information, see [sp_resync_targetserver (Transact-SQL)](http://msdn.microsoft.com/en-us/40e44df7-d3e3-44ee-b149-08aba629a21f).  
+For more information, see [sp_resync_targetserver (Transact-SQL)](http://msdn.microsoft.com/40e44df7-d3e3-44ee-b149-08aba629a21f).  
   

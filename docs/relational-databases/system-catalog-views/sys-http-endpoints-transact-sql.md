@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "sys.http_endpoints catalog view"
 ms.assetid: 16f59695-ecd9-457e-8874-055af63f8ea7
 caps.latest.revision: 42
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sys.http_endpoints (Transact-SQL)

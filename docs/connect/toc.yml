@@ -1,0 +1,26 @@
+- name: Programming to interact with SQL Server
+  href: homepage-sql-connection-programming.md
+- name: SQL Server Drivers
+  href: sql-connection-libraries.md
+- name: SQL Server Driver History
+  href: connect-history.md
+- name: ADO.NET +
+  href: ado-net/microsoft-ado-net-for-sql-server.md
+- name: JDBC +
+  href: jdbc/microsoft-jdbc-driver-for-sql-server.md
+- name: Node.js +
+  href: node-js/node-js-driver-for-sql-server.md
+- name: ODBC +
+  href: odbc/microsoft-odbc-driver-for-sql-server.md
+- name: OLE DB +
+  href: oledb/oledb-driver-for-sql-server.md
+- name: PHP +
+  href: php/microsoft-php-driver-for-sql-server.md
+- name: Python +
+  href: python/python-driver-for-sql-server.md
+- name: Ruby +
+  href: ruby/ruby-driver-for-sql-server.md
+- name: ADO OLE DB +
+  href: ../ado/microsoft-activex-data-objects-ado.md
+- name: SQL Data Developer
+  href: sql-data-developer.md

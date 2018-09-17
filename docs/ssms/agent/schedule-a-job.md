@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Schedule a Job | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -27,7 +27,7 @@ monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts
 > [!IMPORTANT]  
 > On [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
 
-This topic describes how to schedule a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent job.  
+This topic describes how to schedule a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job.  
   
 -   **Before you begin:** ,  
   
@@ -62,7 +62,7 @@ For detailed information, see [Implement SQL Server Agent Security](../../ssms/a
   
 6.  For **Schedule Type**, select one of the following:  
   
-    -   Click **Start automatically when SQL Server Agent starts** to start the job when the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent service is started.  
+    -   Click **Start automatically when SQL Server Agent starts** to start the job when the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service is started.  
   
     -   Click **Start whenever the CPUs become idle** to start the job when the CPUs reach an idle condition.  
   
@@ -114,7 +114,7 @@ For detailed information, see [Implement SQL Server Agent Security](../../ssms/a
     GO  
     ```  
   
-For more information, see [sp_add_schedule (Transact-SQL)](http://msdn.microsoft.com/en-us/9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7) and [sp_attach_schedule (Transact-SQL)](http://msdn.microsoft.com/en-us/80c80eaf-cf23-4ed8-b8dd-65fe59830dd1).  
+For more information, see [sp_add_schedule (Transact-SQL)](http://msdn.microsoft.com/9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7) and [sp_attach_schedule (Transact-SQL)](http://msdn.microsoft.com/80c80eaf-cf23-4ed8-b8dd-65fe59830dd1).  
   
 ## <a name="SMO"></a>Using SQL Server Management Objects  
 Use the **JobSchedule** class by using a programming language that you choose, such as Visual Basic, Visual C#, or PowerShell. For more information, see[SQL Server Management Objects (SMO)](http://msdn.microsoft.com/library/ms162169.aspx).  

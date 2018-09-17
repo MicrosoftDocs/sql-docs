@@ -16,11 +16,10 @@ helpviewer_keywords:
   - "row level security described"
   - "predicate based security"
 ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
-caps.latest.revision: 47
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Row-Level Security
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

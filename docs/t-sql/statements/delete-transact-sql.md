@@ -1,10 +1,9 @@
-﻿---
+---
 title: "DELETE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/10/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -27,10 +26,10 @@ helpviewer_keywords:
   - "deleting data"
 ms.assetid: ed6b2105-0f35-408f-ba51-e36ade7ad5b2
 caps.latest.revision: 78
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DELETE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -113,7 +112,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  *schema_name*  
  The name of the schema to which the table or view belongs.  
   
- *table_or view_name*  
+ *table_or_view_name*  
  The name of the table or view from which the rows are to be removed.  
   
  A table variable, within its scope, also can be used as a table source in a DELETE statement.  
@@ -456,7 +455,7 @@ OPTION ( LABEL = N'label1' );
 ```  
   
 ### N. Using a label and a query hint with the DELETE statement  
- This query shows the basic syntax for using a query join hint with the DELETE statement. For more information on join hints and how to use the OPTION clause, see [OPTION (SQL Server PDW)](http://msdn.microsoft.com/en-us/72bbce98-305b-42fa-a19f-d89620621ecc).  
+ This query shows the basic syntax for using a query join hint with the DELETE statement. For more information on join hints and how to use the OPTION clause, see [OPTION (SQL Server PDW)](http://msdn.microsoft.com/72bbce98-305b-42fa-a19f-d89620621ecc).  
   
 ```  
 -- Uses AdventureWorks  

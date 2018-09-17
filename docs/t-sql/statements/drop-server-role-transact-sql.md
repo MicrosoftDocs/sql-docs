@@ -1,10 +1,9 @@
-﻿---
+---
 title: "DROP SERVER ROLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "pdw, sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "DROP SERVER ROLE statement"
 ms.assetid: a2a1e6e6-e40c-4d6a-81be-d197b80bf226
 caps.latest.revision: 13
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DROP SERVER ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-pdw-md.md)]

@@ -1,7 +1,7 @@
 ---
 title: "Download SQL Server Management Studio (SSMS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/14/2018"
+ms.date: "09/04/2018"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.component: "ssms"
@@ -39,16 +39,16 @@ Use SQL Server Management Studio (SSMS) to query, design, and manage your databa
 
 SSMS 17.x is the latest generation of *SQL Server Management Studio* and provides support for SQL Server 2017.
 
-**[![download](../ssdt/media/download.png) Download SQL Server Management Studio 17.7](https://go.microsoft.com/fwlink/?linkid=873126)**
+**[![download](../ssdt/media/download.png) Download SQL Server Management Studio 17.9](https://go.microsoft.com/fwlink/?linkid=2014306) (no previous version of SSMS 17.x is required on the computer)**
 
-**[![download](../ssdt/media/download.png) Download SQL Server Management Studio 17.7 Upgrade Package (upgrades 17.x to 17.7)](https://go.microsoft.com/fwlink/?linkid=873128)**
+**[![download](../ssdt/media/download.png) Download SQL Server Management Studio 17.9 Upgrade Package](https://go.microsoft.com/fwlink/?linkid=2014215) (upgrades 17.x to 17.9; a previous version of SSMS 17.x is required on the computer)**
 
 
 **Version Information**
 
-Release number: 17.7<br>
-Build number: 14.0.17254.0<br>
-Release date: May 09, 2018
+Release number: 17.9<br>
+Build number: 14.0.17285.0<br>
+Release date: September 04, 2018
 
 The SSMS 17.x installation does not upgrade or replace SSMS versions 16.x or earlier. SSMS 17.x installs side by side with previous versions so both versions are available for use.
 If a computer contains side by side installations of SSMS, verify you start the correct version for your specific needs. The latest version is labeled *Microsoft SQL Server Management Studio 17*, and has a new icon: 
@@ -64,35 +64,33 @@ If a computer contains side by side installations of SSMS, verify you start the 
 
 This release of SSMS can be installed in the following languages:
 
-SQL Server Management Studio 17.7:<br>
-[Chinese (People's Republic of China)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x804) | [Chinese (Taiwan)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x40a)
+SQL Server Management Studio 17.9:<br>
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x40a)
 
-SQL Server Management Studio 17.7 Upgrade Package (upgrades 17.x to 17.7):<br>
-[Chinese (People's Republic of China)](https://go.microsoft.com/fwlink/?linkid=873128&clcid=0x804) | [Chinese (Taiwan)](https://go.microsoft.com/fwlink/?linkid=873128&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=873128&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=873128&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=873128&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=873128&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=873128&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=873128&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=873128&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=873128&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=873128&clcid=0x40a)
+SQL Server Management Studio 17.9 Upgrade Package (upgrades 17.x to 17.9):<br>
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2014215&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2014215&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2014215&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2014215&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2014215&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2014215&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2014215&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2014215&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2014215&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2014215&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2014215&clcid=0x40a)
 
 > [!NOTE]
 > The SQL Server PowerShell module is now a separate install through the PowerShell Gallery. For more information, see [Download SQL Server PowerShell Module](download-sql-server-ps-module.md).
+
 ## SQL Server Management Studio
 
 
 ## New in this Release
 
-SSMS 17.7 is the latest version of SQL Server Management Studio. The 17.x generation of SSMS provides support for almost all feature areas on SQL Server 2008 through SQL Server 2017. Version 17.x also supports SQL Analysis Service PaaS.
+SSMS 17.9 is the latest version of SQL Server Management Studio. The 17.x generation of SSMS provides support for almost all feature areas on SQL Server 2008 through SQL Server 2017. Version 17.x also supports SQL Analysis Service PaaS.
 
-Version 17.7 includes:
+Version 17.9 includes:
 
 **General SSMS**
 
-Replication Monitor:   
-- Replication monitor now supports registering a listener for scenarios where publisher database and/or distributor database is part of Availability Group. You can now monitor replication environments where publisher database and/or distribution database is part of Always On. 
- 
-Azure SQL Data Warehouse: 
-- Add Rejected Row Location support for External Tables in Azure SQL Data Warehouse. 
+ShowPlan:
 
-**Integration Services (IS)**
+- Graphical Showplan now shows the new row mode memory grant feedback attributes when the feature is activated for a specific plan: IsMemoryGrantFeedbackAdjusted and LastRequestedMemory added to the MemoryGrantInfo query plan XML element. For more on row mode memory grant feedback, see [Adaptive query processing in SQL databases](https://docs.microsoft.com/sql/relational-databases/performance/adaptive-query-processing).
 
-- Added a scheduling feature for SSIS packages deployed to Azure SQL Database. Unlike SQL Server on premises and SQL Database Managed Instance (Preview), which have SQL Server Agent as a first-class job scheduler, SQL Database does not have a built-in scheduler. This new SSMS feature provides a familiar user interface that's similar to SQL Server Agent for scheduling packages deployed to SQL Database. If you're using SQL Database to host the SSIS catalog database, SSISDB, you can use this SSMS feature to generate the Data Factory pipelines, activities, and triggers required to schedule SSIS packages. You can then edit and extend these objects in Data Factory. For more info, see [Schedule SSIS package execution on Azure SQL Database with SSMS](../integration-services/lift-shift/ssis-azure-schedule-packages-ssms.md). To learn more about Azure Data Factory pipelines, activities, and triggers, see [Pipelines and activities in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/concepts-pipelines-activities) and [Pipeline execution and triggers in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/concepts-pipeline-execution-triggers).
-- Support for SSIS package scheduling in SQL Agent on SQL Managed instance. It is now possible to create SQL Agent jobs to execute SSIS packages on the managed instance. 
+Azure SQL: 
+
+- Added support for vCore SKUs in Azure DB creation. For more information, see [vCore-based purchasing model](https://docs.microsoft.com/azure/sql-database/sql-database-service-tiers#vcore-based-purchasing-model).
 
 
 ## Supported SQL offerings
@@ -130,9 +128,8 @@ This release of SSMS supports the following 64-bit platforms when used with the 
 
 ## Release Notes
 
-The following are issues and limitations with this 17.7 release:
+There are currently no known issues in this release.
 
-Some dialogs display an invalid edition error when working with new *General Purpose* or *Business Critical* Azure SQL Database editions.
 
 
 ## Uninstall and reinstall SSMS

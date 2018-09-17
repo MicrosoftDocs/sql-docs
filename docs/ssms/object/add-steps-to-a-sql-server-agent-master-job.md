@@ -18,7 +18,7 @@ manager: craigg
 ---
 # Add Steps to a SQL Server Agent Master Job
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-This topic describes how to add steps to a SQL Server Agent master job in [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] or [!INCLUDE[tsql](../../includes/tsql_md.md)].  
+This topic describes how to add steps to a SQL Server Agent master job in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 **In This Topic**  
   
@@ -37,7 +37,7 @@ This topic describes how to add steps to a SQL Server Agent master job in [!INCL
 ## <a name="BeforeYouBegin"></a>Before You Begin  
   
 ### <a name="Restrictions"></a>Limitations and Restrictions  
-A [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent master job cannot be targeted at both local and remote servers.  
+A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent master job cannot be targeted at both local and remote servers.  
   
 ### <a name="Security"></a>Security  
   

@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "08/08/2017"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: "python"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: connectivity
@@ -77,4 +76,4 @@ while row:
   `      
   ## Next steps  
   
-For more information, see the [Python Developer Center](https://azure.microsoft.com/en-us/develop/python/).
+For more information, see the [Python Developer Center](https://azure.microsoft.com/develop/python/).

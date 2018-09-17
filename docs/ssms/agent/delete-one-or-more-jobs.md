@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Delete One or More Jobs | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -29,7 +29,7 @@ monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts
 > [!IMPORTANT]  
 > On [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
 
-This topic describes how to delete [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent jobs in [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], [!INCLUDE[tsql](../../includes/tsql_md.md)], or SQL Server Management Objects.  
+This topic describes how to delete [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent jobs in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or SQL Server Management Objects.  
   
 **In This Topic**  
   
@@ -91,7 +91,7 @@ Unless you are a member of the **sysadmin** fixed server role, you can only dele
     GO  
     ```  
   
-For more information, see [sp_delete_job (Transact-SQL)](http://msdn.microsoft.com/en-us/b85db6e4-623c-41f1-9643-07e5ea38db09).  
+For more information, see [sp_delete_job (Transact-SQL)](http://msdn.microsoft.com/b85db6e4-623c-41f1-9643-07e5ea38db09).  
   
 ## <a name="SMO"></a>Using SQL Server Management Objects  
 **To delete multiple jobs**  

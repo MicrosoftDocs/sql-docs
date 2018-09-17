@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "07/24/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|functions"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -19,8 +18,8 @@ helpviewer_keywords:
   - "CRYPT_GEN_RANDOM function"
 ms.assetid: b74bd9d4-758e-4b94-89a0-76dcda6d8c42
 caps.latest.revision: 11
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # CRYPT_GEN_RANDOM (Transact-SQL)

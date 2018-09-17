@@ -1,14 +1,12 @@
-﻿---
+---
 title: "Create a Database Schema | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/05/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "security"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: security
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
@@ -20,10 +18,10 @@ helpviewer_keywords:
   - "schemas [SQL Server], creating"
 ms.assetid: ed2a5522-f4d2-4111-95a4-d3e1e5081739
 caps.latest.revision: 11
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create a Database Schema
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

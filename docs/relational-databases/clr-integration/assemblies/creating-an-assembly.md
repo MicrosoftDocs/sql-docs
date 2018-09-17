@@ -3,13 +3,9 @@ title: "Creating an Assembly | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: "clr"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: clr
 ms.topic: "reference"
 helpviewer_keywords: 
   - "creating assemblies"
@@ -19,7 +15,6 @@ helpviewer_keywords:
   - "EXTERNAL_ACCESS assemblies"
   - "assemblies [CLR integration], creating"
 ms.assetid: a2bc503d-b6b2-4963-8beb-c11c323f18e0
-caps.latest.revision: 27
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

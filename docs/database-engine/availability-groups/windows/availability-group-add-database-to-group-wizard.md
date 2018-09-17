@@ -3,7 +3,6 @@ title: "Availability Group - Add Database to Group Wizard | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: high-availability
@@ -16,8 +15,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], databases"
 ms.assetid: 81e5e36d-735d-4731-8017-2654673abb88
 caps.latest.revision: 27
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Availability Group - Add Database to Group Wizard

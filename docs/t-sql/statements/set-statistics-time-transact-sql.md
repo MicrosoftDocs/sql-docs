@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -26,8 +25,8 @@ helpviewer_keywords:
   - "execution processing time [SQL Server]"
 ms.assetid: eec2e1cd-a29d-4cf3-a271-be9d61506f15
 caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # SET STATISTICS TIME (Transact-SQL)

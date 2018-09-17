@@ -1,26 +1,27 @@
 ---
-title: Install SQL Server 2017 Machine Learning Services (In-Database) on Windows | Microsoft Docs
+title: Install SQL Server Machine Learning Services (In-Database) on Windows | Microsoft Docs
+description: R in SQL Server or Python on SQL Server is available when you install SQL Server 2017 Machine Learning Services on Windows.
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
+ms.date: 09/08/2018  
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-# Install SQL Server 2017 Machine Learning Services (In-Database) on Windows 
+# Install SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-The Machine Learning Services component of SQL Server adds in-database predictive analytics, statistical analysis, visualization, and machine learning algorithms. Function libraries are available in R and Python and run as external script on a database engine instance. 
+Starting in SQL Server 2017, R and Python support for in-database analytics is provided in SQL Server Machine Learning Services, the successor to [SQL Server R Services](../r/sql-server-r-services.md) introduced in SQL Server 2016. Function libraries are available in R and Python and run as external script on a database engine instance. 
 
 This article explains how to install the machine learning component by running the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup wizard, and following the on-screen prompts.
 
 ## <a name="bkmk_prereqs"> </a> Pre-install checklist
 
-+ SQL Server 2017 setup is required if you want to install Machine Learning Services with language support for R, Python, or both. If instead you have SQL Server 2016 installation media, you can  install [SQL Server 2016 R Services (In-Database)](sql-r-services-windows-install.md) to get R language support.
++ SQL Server 2017 Setup is required for Machine Learning Services with R and Python. If instead you have SQL Server 2016 installation media, see [Install SQL Server 2016 R Services](sql-r-services-windows-install.md) to get R language support.
 
-+ A database engine instance is required. You cannot install just R or Python features, athough you can add them incrementally to an existing instance.
++ A database engine instance is required. You cannot install just R or Python features, although you can add them incrementally to an existing instance.
 
 + Do not install Machine Learning Services on a failover cluster. The security mechanism used for isolating R and Python processes is not compatible with a Windows Server failover cluster environment.
 
@@ -74,9 +75,9 @@ For local installations, you must run Setup as an administrator. If you install 
         > 
         > Do not select the option for **Machine Learning Server (Standalone)**. The option to install Machine Learning Server under **Shared Features** is intended for use on a separate computer.
 
-4. On the **Consent to Install R** page, select **Accept**. This license agreement covers Microsoft R Open, which includes a distribution of the open source R base packages and tools, together with enhanced R packages and connectivity providers from the Microsoft development team.
+4. On the **Consent to Install R** page, select **Accept**. This license agreement covers Microsoft R Open, which includes a distribution of the open-source R base packages and tools, together with enhanced R packages and connectivity providers from the Microsoft development team.
 
-5. On the **Consent to Install Python** page, select **Accept**. The Python open source licensing agreement also covers Anaconda and related tools, plus some new Python libraries from the Microsoft development team.
+5. On the **Consent to Install Python** page, select **Accept**. The Python open-source licensing agreement also covers Anaconda and related tools, plus some new Python libraries from the Microsoft development team.
      
      ![Agreement to Python license](media/2017setup-python-license.png "License agreement for Python")
   
@@ -93,15 +94,9 @@ For local installations, you must run Setup as an administrator. If you install 
 
     Note of the location of the folder under the path `..\Setup Bootstrap\Log` where the configuration files are stored. When setup is complete, you can review the installed components in the Summary file.
 
-## Restart the service
+7. After setup is complete, if you are instructed to restart the computer, do so now. It is important to read the message from the Installation Wizard when you have finished with Setup. For more information, see [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files).
 
-When the installation is complete, restart the database engine before continuing to the next, enabling script execution.
-
-Restarting the ervice also automatically restarts the related [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] service.
-
-You can restart the service using the right-click **Restart** command for the instance in SSMS, or by using the **Services** panel in Control Panel, or by using [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).
-
-## <a name="bkmk_enableFeature"></a>Enable external script execution
+## <a name="bkmk_enableFeature"></a>Enable script execution
 
 1. Open [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 
 
@@ -127,9 +122,13 @@ You can restart the service using the right-click **Restart** command for the in
     
     If you have already enabled the feature for the R language, don't run reconfigure a second time for Python. The underlying extensibility platform supports both languages.
 
-4. Restart the SQL Server service for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. Restarting the SQL Server service also automatically restarts the related [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] service.
+## Restart the service
 
-    You can restart the service using the right-click **Restart** command for the instance in SSMS, or by using the **Services** panel in Control Panel, or by using [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).
+When the installation is complete, restart the database engine before continuing to the next, enabling script execution.
+
+Restarting the service also automatically restarts the related [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] service.
+
+You can restart the service using the right-click **Restart** command for the instance in SSMS, or by using the **Services** panel in Control Panel, or by using [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).
 
 ## Verify installation
 
@@ -143,7 +142,7 @@ Use the following steps to verify that all components used to launch external sc
 
     The **run_value** should now be set to 1.
     
-2. Open the **Services** panel or SQL Server Configuration Manager, and verify **SQL Server Launchpad service** is running. You should have one service for every database engine instance that has R or Python installed. Restart the service if is not running. For more information, see [Components to support Python integration](../python/new-components-in-sql-server-to-support-python-integration.md). 
+2. Open the **Services** panel or SQL Server Configuration Manager, and verify **SQL Server Launchpad service** is running. You should have one service for every database engine instance that has R or Python installed. For more information about the service, see [Extensibility framework](../concepts/extensibility-framework.md). 
    
 3. If Launchpad is running, you should be able to run simple R and Python scripts to verify that external scripting runtimes can communicate with SQL Server.
 
@@ -293,11 +292,11 @@ If you are using Standard Edition and do not have Resource Governor, you can use
 
 ### Install additional R packages
 
-The R solutions you create for SQL Server can call basic R functions, functions from the properietary packes installed with SQL Server, and third-party R packages compatible with the version of open-source R installed by SQL Server.
+The R solutions you create for SQL Server can call basic R functions, functions from the proprietary packages installed with SQL Server, and third-party R packages compatible with the version of open-source R installed by SQL Server.
 
 Packages that you want to use from SQL Server must be installed in the default library that is used by the instance. If you have a separate installation of R on the computer, or if you installed packages to user libraries, you won't be able to use those packages from T-SQL.
 
-The process for installing and managing R packages is different in SQL Server 2016 and SQL Server 2017. In SQL Server 2016, a database administrator must install R packages that users need. In SQL Server 2017, you can set up user groups to share packages on a per-database level, or configure database roles to enable users to install their own packages. For more information, see [Package management](../r/r-package-management-for-sql-server-r-services.md).
+The process for installing and managing R packages is different in SQL Server 2016 and SQL Server 2017. In SQL Server 2016, a database administrator must install R packages that users need. In SQL Server 2017, you can set up user groups to share packages on a per-database level, or configure database roles to enable users to install their own packages. For more information, see [Install new R packages in SQL Server](../r/install-additional-r-packages-on-sql-server.md).
 
 
 ## Get help

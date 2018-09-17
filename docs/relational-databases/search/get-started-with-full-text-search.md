@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Get Started with Full-Text Search | Microsoft Docs"
 ms.date: "08/22/2016"
 ms.prod: sql
@@ -20,7 +20,7 @@ caps.latest.revision: 76
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Get Started with Full-Text Search
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

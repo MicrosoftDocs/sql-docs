@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "01/02/2018"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -53,7 +52,8 @@ ALTER AVAILABILITY GROUP group_name
    | GRANT CREATE ANY DATABASE  
    | DENY CREATE ANY DATABASE  
    | FAILOVER  
-   | FORCE_FAILOVER_ALLOW_DATA_LOSS   | ADD LISTENER ‘dns_name’ ( <add_listener_option> )  
+   | FORCE_FAILOVER_ALLOW_DATA_LOSS  
+   | ADD LISTENER ‘dns_name’ ( <add_listener_option> )  
    | MODIFY LISTENER ‘dns_name’ ( <modify_listener_option> )  
    | RESTART LISTENER ‘dns_name’  
    | REMOVE LISTENER ‘dns_name’  
@@ -124,7 +124,7 @@ ALTER AVAILABILITY GROUP group_name
 <modify_availability_group_spec>::=  
  <ag_name> WITH  
     (  
-       LISTENER = 'TCP://system-address:port'  
+       LISTENER_URL = 'TCP://system-address:port'  
        | AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT }  
        | SEEDING_MODE = { AUTOMATIC | MANUAL }  
     )  
@@ -469,15 +469,15 @@ Initiates a manual failover of the availability group without data loss to the s
 >  NetBIOS recognizes only the first 15 chars in the dns_name. If you have two WSFC clusters that are controlled by the same Active Directory and you try to create availability group listeners in both of clusters using names with more than 15 characters and an identical 15 character prefix, you will get an error reporting that the Virtual Network Name resource could not be brought online. For information about prefix naming rules for DNS names, see [Assigning Domain Names](http://technet.microsoft.com/library/cc731265\(WS.10\).aspx).  
   
  JOIN AVAILABILITY GROUP ON  
- Joins to a *distributed availability group*. When you create a distributed availability group, the availability group on the cluster where it is created is the primary availability group. The availability group that joins the distributed availability group is the secondary availability group.  
+ Joins to a *distributed availability group*. When you create a distributed availability group, the availability group on the cluster where it is created is the primary availability group. When you execute JOIN, the local server instance's availability group is the secondary availability group.  
   
  \<ag_name>  
  Specifies the name  of the availability group that makes up one half of the distributed availability group.  
   
- LISTENER **='**TCP**://***system-address***:***port***'**  
+ LISTENER_URL **='**TCP**://***system-address***:***port***'**  
  Specifies the URL path for the listener associated with the availability group.  
   
- The LISTENER clause is required.  
+ The LISTENER_URL clause is required.  
   
  **'**TCP**://***system-address***:***port***'**  
  Specifies a URL for the listener associated with the availability group. The URL parameters are as follows:  
@@ -486,7 +486,7 @@ Initiates a manual failover of the availability group without data loss to the s
  Is a string, such as a system name, a fully qualified domain name, or an IP address, that unambiguously identifies the listener.  
   
  *port*  
- Is a port number that is associated with the mirroring endpoint of the availability group. Note that this is not the port of the listener.  
+ Is a port number that is associated with the mirroring endpoint of the availability group. Note that this is not the port for client connectivity that is configured on the listener.  
   
  AVAILABILITY_MODE **=** { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT }  
  Specifies whether the primary replica has to wait for the secondary availability group to acknowledge the hardening (writing) of the log records to disk before the primary replica can commit the transaction on a given primary database.  

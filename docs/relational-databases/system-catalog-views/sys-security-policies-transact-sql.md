@@ -1,4 +1,4 @@
-﻿---
+---
 title: "sys.security_policies (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -24,11 +24,10 @@ helpviewer_keywords:
   - "sys.security_policies catalog view"
   - "security_policies catalog view"
 ms.assetid: 35362f5b-e601-4049-9e1d-c5307e823831
-caps.latest.revision: 9
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.security_policies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

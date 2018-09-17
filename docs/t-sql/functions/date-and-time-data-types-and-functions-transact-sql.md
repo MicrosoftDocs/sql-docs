@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "09/01/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|functions"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -22,8 +21,8 @@ helpviewer_keywords:
   - "time [SQL Server], functions"
 ms.assetid: 83e378a2-6e89-4c80-bc4f-644958d9e0a9
 caps.latest.revision: 79
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Date and Time Data Types and Functions (Transact-SQL)

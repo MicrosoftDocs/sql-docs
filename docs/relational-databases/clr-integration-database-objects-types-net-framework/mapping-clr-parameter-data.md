@@ -3,12 +3,9 @@ title: "Mapping CLR Parameter Data | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/01/2016"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: "clr"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-
+ms.technology: clr
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 

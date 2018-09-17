@@ -1,10 +1,9 @@
-﻿---
+---
 title: "BEGIN TRANSACTION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "sql-data-warehouse, database-engine, pdw, sql-database"
-ms.component: "t-sql|language-elements"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -34,10 +33,10 @@ caps.latest.revision: 56
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # BEGIN TRANSACTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Marks the starting point of an explicit, local transaction. Explicit transactions start with the BEGIN TRANSACTION statement and end with the COMMIT or ROLLBACK statement.  
 

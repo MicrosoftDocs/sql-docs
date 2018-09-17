@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Find Results Windows | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -20,7 +20,7 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Find Results Windows
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Configure IntelliSense (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/02/2016"
@@ -18,7 +18,7 @@ caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Configure IntelliSense (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,6 +28,11 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 >  Some changes will not take effect in your current editor session.  You must open a new Transact-SQL editor session to see the change.
   
 ### To turn statement completion options off by default  
+
+> [!NOTE]
+> SQL Data Warehouse does not support IntelliSense.
+>
+>
   
 1.  On the **Tools** menu, click **Options**.  
   

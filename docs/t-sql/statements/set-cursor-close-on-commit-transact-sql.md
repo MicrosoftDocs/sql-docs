@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "07/26/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -25,8 +24,8 @@ helpviewer_keywords:
   - "SET CURSOR_CLOSE_ON_COMMIT statement"
 ms.assetid: 7b976154-98ce-4a06-bbae-7e59c34211f7
 caps.latest.revision: 38
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # SET CURSOR_CLOSE_ON_COMMIT (Transact-SQL)

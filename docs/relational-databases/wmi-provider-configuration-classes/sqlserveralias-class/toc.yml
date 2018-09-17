@@ -1,0 +1,10 @@
+- name: AliasName Property (SqlServerAlias Class)
+  href: aliasname-property-sqlserveralias-class.md
+- name: ConnectionString Property (SqlServerAlias Class)
+  href: connectionstring-property-sqlserveralias-class.md
+- name: ProtocolName Property (SqlServerAlias Class)
+  href: protocolname-property-sqlserveralias-class.md
+- name: ServerName Property (SqlServerAlias Class)
+  href: servername-property-sqlserveralias-class.md
+- name: SqlServerAlias Class
+  href: sqlserveralias-class.md

@@ -3,7 +3,6 @@ title: "Overview of Always On Availability Groups (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: high-availability
@@ -17,14 +16,14 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server]"
 ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
 caps.latest.revision: 121
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Overview of Always On Availability Groups (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
- > For content related to previous versions of SQL Server, see [Overview of Always On Availability Groups (SQL Server)](https://msdn.microsoft.com/en-US/library/ff877884(SQL.120).aspx).
+ > For content related to previous versions of SQL Server, see [Overview of Always On Availability Groups (SQL Server)](https://msdn.microsoft.com/library/ff877884(SQL.120).aspx).
 
  This topic introduces the [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] concepts that are central for configuring and managing one or more availability groups in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. For a summary of the benefits offered by availability groups and an overview of [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] terminology, see [Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md).  
   

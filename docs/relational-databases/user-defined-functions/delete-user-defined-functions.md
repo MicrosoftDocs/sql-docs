@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Delete User-defined Functions | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -8,7 +8,6 @@ ms.component: "udf"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "dbe-udf"
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: db1d668a-23b7-4757-a9c5-1bd848ba7f6d
@@ -16,7 +15,7 @@ caps.latest.revision: 7
 author: "rothja"
 ms.author: "jroth"
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Delete User-defined Functions
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

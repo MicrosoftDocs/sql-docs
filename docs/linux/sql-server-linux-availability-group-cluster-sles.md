@@ -5,7 +5,7 @@ author: MikeRayMSFT
 ms.author: mikeray 
 manager: craigg
 ms.date: 04/30/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ""
 ms.suite: "sql"
@@ -210,7 +210,7 @@ crm configure property cluster-recheck-interval=2min
 
 For more information on Pacemaker cluster properties, see [Configuring Cluster Resources](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_config_crm_resources.html).
 
-# Configure fencing (STONITH)
+## Configure fencing (STONITH)
 Pacemaker cluster vendors require STONITH to be enabled and a fencing device configured for a supported cluster setup. When the cluster resource manager cannot determine the state of a node or of a resource on a node, fencing is used to bring the cluster to a known state again.
 
 Resource level fencing ensures mainly that there is no data corruption during an outage by configuring a resource. You can use resource level fencing, for instance, with DRBD (Distributed Replicated Block Device) to mark the disk on a node as outdated when the communication link goes down.
@@ -232,6 +232,16 @@ sudo crm configure property stonith-enabled=true
 ## Configure the cluster resources for SQL Server
 
 Refer to [SLES Administration Guid](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.manual_config)
+
+## Enable Pacemaker
+
+Enable Pacemaker so that it automatically starts.
+
+Run the following command on every node in the cluster.
+
+```bash
+systemctl enable pacemaker
+```
 
 ### Create availability group resource
 

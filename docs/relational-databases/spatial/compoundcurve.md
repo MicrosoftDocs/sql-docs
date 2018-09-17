@@ -1,4 +1,4 @@
-﻿---
+---
 title: "CompoundCurve | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/02/2016"
@@ -16,7 +16,7 @@ caps.latest.revision: 25
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CompoundCurve
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

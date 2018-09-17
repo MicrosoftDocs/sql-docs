@@ -27,14 +27,14 @@ manager: craigg
   
 |Name|Description|  
 |----------|-----------------|  
-|[CONCUR_SS_OPTIMISTIC_CC](../../../connect/jdbc/reference/concur-ss-optimistic-cc-field-sqlserverresultset.md)|Used to specify a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] read/write optimistic concurrency type with no row locks.|  
-|[CONCUR_SS_OPTIMISTIC_CCVAL](../../../connect/jdbc/reference/concur-ss-optimistic-ccval-field-sqlserverresultset.md)|Used to specify a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] read/write optimistic concurrency type with no row locks.|  
-|[CONCUR_SS_SCROLL_LOCKS](../../../connect/jdbc/reference/concur-ss-scroll-locks-field-sqlserverresultset.md)|Used to specify a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] read/write optimistic concurrency type with row locks.|  
-|[TYPE_SS_DIRECT_FORWARD_ONLY](../../../connect/jdbc/reference/type-ss-direct-forward-only-field-sqlserverresultset.md)|Used to specify a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] fast forward-only, read-only cursor type.|  
-|[TYPE_SS_SCROLL_DYNAMIC](../../../connect/jdbc/reference/type-ss-scroll-dynamic-field-sqlserverresultset.md)|Used to specify a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] dynamic cursor type.|  
-|[TYPE_SS_SCROLL_KEYSET](../../../connect/jdbc/reference/type-ss-scroll-keyset-field-sqlserverresultset.md)|Used to specify a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] keyset cursor type.|  
-|[TYPE_SS_SCROLL_STATIC](../../../connect/jdbc/reference/type-ss-scroll-static-field-sqlserverresultset.md)|Used to specify a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] static cursor type.|  
-|[TYPE_SS_SERVER_CURSOR_FORWARD_ONLY](../../../connect/jdbc/reference/type-ss-server-cursor-forward-only-field-sqlserverresultset.md)|Used to specify a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] fast forward-only, read-only cursor type.|  
+|[CONCUR_SS_OPTIMISTIC_CC](../../../connect/jdbc/reference/concur-ss-optimistic-cc-field-sqlserverresultset.md)|Used to specify a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] read/write optimistic concurrency type with no row locks.|  
+|[CONCUR_SS_OPTIMISTIC_CCVAL](../../../connect/jdbc/reference/concur-ss-optimistic-ccval-field-sqlserverresultset.md)|Used to specify a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] read/write optimistic concurrency type with no row locks.|  
+|[CONCUR_SS_SCROLL_LOCKS](../../../connect/jdbc/reference/concur-ss-scroll-locks-field-sqlserverresultset.md)|Used to specify a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] read/write optimistic concurrency type with row locks.|  
+|[TYPE_SS_DIRECT_FORWARD_ONLY](../../../connect/jdbc/reference/type-ss-direct-forward-only-field-sqlserverresultset.md)|Used to specify a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fast forward-only, read-only cursor type.|  
+|[TYPE_SS_SCROLL_DYNAMIC](../../../connect/jdbc/reference/type-ss-scroll-dynamic-field-sqlserverresultset.md)|Used to specify a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dynamic cursor type.|  
+|[TYPE_SS_SCROLL_KEYSET](../../../connect/jdbc/reference/type-ss-scroll-keyset-field-sqlserverresultset.md)|Used to specify a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] keyset cursor type.|  
+|[TYPE_SS_SCROLL_STATIC](../../../connect/jdbc/reference/type-ss-scroll-static-field-sqlserverresultset.md)|Used to specify a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] static cursor type.|  
+|[TYPE_SS_SERVER_CURSOR_FORWARD_ONLY](../../../connect/jdbc/reference/type-ss-server-cursor-forward-only-field-sqlserverresultset.md)|Used to specify a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fast forward-only, read-only cursor type.|  
   
 ## Inherited Fields  
   

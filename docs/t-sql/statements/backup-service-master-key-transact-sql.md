@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -26,8 +25,8 @@ helpviewer_keywords:
   - "service master key [SQL Server], exporting"
 ms.assetid: f8356683-6680-4f1c-9eaf-5c29a9a9020d
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # BACKUP SERVICE MASTER KEY (Transact-SQL)

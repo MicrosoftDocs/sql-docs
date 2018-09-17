@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Implementing Endpoints | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/06/2017"
@@ -18,7 +18,7 @@ caps.latest.revision: 45
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
-monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Implementing Endpoints
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]

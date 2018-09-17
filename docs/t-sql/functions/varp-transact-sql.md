@@ -1,10 +1,9 @@
-﻿---
+---
 title: "VARP (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/13/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "t-sql|functions"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "VARP function [Transact-SQL]"
 ms.assetid: ce5d2e32-01da-4e18-b8ed-a08b61d84456
 caps.latest.revision: 40
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # VARP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,20 +35,11 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 ## Syntax  
   
 ```  
--- Syntax for SQL Server and Azure SQL Database  
-  
-VARP ( [ ALL | DISTINCT ] expression )  
-   OVER ( [ partition_by_clause ] order_by_clause )  nh  
-```  
-  
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
 -- Aggregate Function Syntax   
 VARP ( [ ALL | DISTINCT ] expression )  
   
 -- Analytic Function Syntax  
-VARP (expression) OVER ( [ partition_by_clause ] order_by_clause)  
+VARP ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)  
 ```  
   
 ## Arguments  

@@ -18,7 +18,7 @@ manager: craigg
 # Deploying the JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  When you deploy an application that depends on the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], you must redistribute the JDBC driver together with your application. Unlike Windows Data Access Components (Windows DAC), which is a component of the Windows operating system, the JDBC driver is considered to be a component of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+  When you deploy an application that depends on the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], you must redistribute the JDBC driver together with your application. Unlike Windows Data Access Components (Windows DAC), which is a component of the Windows operating system, the JDBC driver is considered to be a component of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  There are two approaches to deploying the JDBC driver with your application. One is to include the JDBC driver files as part of your own custom installation package. The second approach involves using the JDBC installation package provided by Microsoft, which you can download from the [Microsoft JDBC Driver for SQL Server Developer Center](http://go.microsoft.com/fwlink/?LinkId=70166).  
   

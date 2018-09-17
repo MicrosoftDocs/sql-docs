@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "07/24/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|functions"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -19,8 +18,8 @@ helpviewer_keywords:
   - "CURRENT_REQUEST_ID"
 ms.assetid: 949f6e5f-bf5f-49d6-a763-c443d1d51fe2
 caps.latest.revision: 13
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # CURRENT_REQUEST_ID (Transact-SQL)

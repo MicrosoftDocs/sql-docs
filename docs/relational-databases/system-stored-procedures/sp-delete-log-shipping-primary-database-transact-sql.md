@@ -18,9 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_delete_log_shipping_primary_database"
 ms.assetid: cb1d5d00-2805-4d47-bd04-545232067345
-caps.latest.revision: 22
-author: "stevestein"
-ms.author: "sstein"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # sp_delete_log_shipping_primary_database (Transact-SQL)

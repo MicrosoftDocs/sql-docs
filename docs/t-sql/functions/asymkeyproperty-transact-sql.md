@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "07/24/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|functions"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -19,8 +18,8 @@ helpviewer_keywords:
   - "ASYMKEYPROPERTY"
 ms.assetid: a30581f2-e1b1-4996-93e6-527ff96b7c42
 caps.latest.revision: 13
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # ASYMKEYPROPERTY (Transact-SQL)

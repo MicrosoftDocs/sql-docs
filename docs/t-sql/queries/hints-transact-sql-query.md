@@ -1,10 +1,9 @@
 ---
 title: "Query Hints (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/14/2018"
+ms.date: "08/29/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|queries"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -79,8 +78,6 @@ manager: craigg
  [UPDATE](../../t-sql/queries/update-transact-sql.md)  
   
  [MERGE](../../t-sql/statements/merge-transact-sql.md)  
-  
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -177,10 +174,10 @@ manager: craigg
  IGNORE_NONCLUSTERED_COLUMNSTORE_INDEX  
  **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Prevents the query from using a nonclustered memory optimized columnstore index. If the query contains the query hint to avoid use of the columnstore index and an index hint to use a columnstore index, the hints are in conflict and the query returns an error.  
+ Prevents the query from using a nonclustered memory optimized columnstore index. If the query contains the query hint to avoid the use of the columnstore index, and an index hint to use a columnstore index, the hints are in conflict and the query returns an error.  
   
  MAX_GRANT_PERCENT = *percent*  
- The maximum memory grant size in PERCENT. The query is guaranteed not to exceed this limit. The actual limit can be lower if the resource governor setting is lower than this. Valid values are between 0.0 and 100.0.  
+ The maximum memory grant size in PERCENT. The query is guaranteed not to exceed this limit. The actual limit can be lower if the Resource Governor setting is lower than the value specified by this hint. Valid values are between 0.0 and 100.0.  
   
 **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -240,7 +237,7 @@ manager: craigg
  SIMPLE instructs the query optimizer to attempt simple parameterization. FORCED instructs the query optimizer to attempt forced parameterization. For more information, see [Forced Parameterization in the Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md#ForcedParam), and [Simple Parameterization in the Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md#SimpleParam).  
   
  RECOMPILE  
- Instructs the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] to discard the plan generated for the query after it executes, forcing the query optimizer to recompile a query plan the next time the same query is executed. Without specifying RECOMPILE, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] caches query plans and reuses them. When compiling query plans, the RECOMPILE query hint uses the current values of any local variables in the query and, if the query is inside a stored procedure, the current values passed to any parameters.  
+ Instructs the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] to generate a new, temporary plan for the query and immediately discard that plan after the query completes execution. The generated query plan does not replace a plan stored in cache when the the same query is executed without the RECOMPILE hint. Without specifying RECOMPILE, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] caches query plans and reuses them. When compiling query plans, the RECOMPILE query hint uses the current values of any local variables in the query and, if the query is inside a stored procedure, the current values passed to any parameters.  
   
  RECOMPILE is a useful alternative to creating a stored procedure that uses the WITH RECOMPILE clause when only a subset of queries inside the stored procedure, instead of the whole stored procedure, must be recompiled. For more information, see [Recompile a Stored Procedure](../../relational-databases/stored-procedures/recompile-a-stored-procedure.md). RECOMPILE is also useful when you create plan guides.  
   
@@ -250,7 +247,7 @@ manager: craigg
  If such a plan is not possible, the query optimizer returns an error instead of deferring error detection to query execution. Rows may contain variable-length columns; the [!INCLUDE[ssDE](../../includes/ssde-md.md)] allows for rows to be defined that have a maximum potential size beyond the ability of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to process them. Generally, despite the maximum potential size, an application stores rows that have actual sizes within the limits that the [!INCLUDE[ssDE](../../includes/ssde-md.md)] can process. If the [!INCLUDE[ssDE](../../includes/ssde-md.md)] encounters a row that is too long, an execution error is returned.  
  
 <a name="use_hint"></a> USE HINT ( **'***hint_name***'** )    
- **Applies to**: Applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1) and [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1) and [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
  
  Provides one or more additional hints to the query processor as specified by a hint name **inside single quotation marks**.   
 
@@ -275,17 +272,23 @@ manager: craigg
 *  'FORCE_DEFAULT_CARDINALITY_ESTIMATION'    
  Forces the Query Optimizer to use [Cardinality Estimation](../../relational-databases/performance/cardinality-estimation-sql-server.md) model that corresponds to the current database compatibility level. Use this hint to override [Database Scoped Configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) setting LEGACY_CARDINALITY_ESTIMATION=ON or [trace flag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481.
 *  'DISABLE_INTERLEAVED_EXECUTION_TVF'   
- Disables interleaved execution for multi-statement table valued functions. For more information, see [Interleaved execution for multi-statement table valued functions](../../relational-databases/performance/adaptive-query-processing.md#interleaved-execution-for-multi-statement-table-valued-functions).
+ Disables interleaved execution for multi-statement table valued functions. For more information, see [Interleaved execution for multi-statement table-valued functions](../../relational-databases/performance/adaptive-query-processing.md#interleaved-execution-for-multi-statement-table-valued-functions).
 *  'DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'     
  Disables batch mode memory grant feedback. For more information, see [Batch mode memory grant feedback](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-memory-grant-feedback).
 *  'DISABLE_BATCH_MODE_ADAPTIVE_JOINS'     
  Disables batch mode adaptive joins. For more information, see [Batch mode Adaptive Joins
 ](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-adaptive-joins).
+*  'QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n'       
+ Forces the query optimizer behavior at a query level, as if the query was compiled with database compatibility level *n*, where *n* is a supported database compatibility level. Refer to [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md) for a list of currently supported values for *n*. **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU10).   
  
-> [!TIP]
-> Hint names are case-insensitive.
+    > [!NOTE]
+    > The QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n hint does not override default or legacy cardinality estimation setting, if it is forced through database scoped configuration, trace flag or another query hint such as QUERYTRACEON.   
+    > This hint only affects the behavior of the query optimizer. It does not affect other features of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that may depend on the [database compatibility level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md), such as the availability of certain database features.   
   
   The list of all supported USE HINT names can be queried using the dynamic management view [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md).    
+
+> [!TIP]
+> Hint names are case-insensitive.   
   
 > [!IMPORTANT] 
 > Some USE HINT hints may conflict with trace flags enabled at the global or session level, or database scoped configuration settings. In this case, the query level hint (USE HINT) always takes precedence. If a USE HINT conflicts with another query hint, or a trace flag enabled at the query level (such as by QUERYTRACEON), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will generate an error when trying to execute the query. 
@@ -329,7 +332,7 @@ TABLE HINT **(***exposed_object_name* [ **,** \<table_hint> [ [**,** ]...*n* ] ]
 -   Dynamic management views  
 -   Named subqueries  
   
-The INDEX, FORCESCAN, and FORCESEEK table hints can be specified as query hints for a query that does not have any existing table hints, or they can be used to replace existing INDEX, FORCESCAN or FORCESEEK hints in the query, respectively. Table hints other than INDEX, FORCESCAN, and FORCESEEK are disallowed as query hints unless the query already has a WITH clause specifying the table hint. In this case, a matching hint must also be specified as a query hint by using TABLE HINT in the OPTION clause to preserve the semantics of the query. For example, if the query contains the table hint NOLOCK, the OPTION clause in the **@hints** parameter of the plan guide must also contain the NOLOCK hint. See Example K. When a table hint other than INDEX, FORCESCAN, or FORCESEEK is specified by using TABLE HINT in the OPTION clause without a matching query hint, or vice versa; error 8702 is raised (indicating that the OPTION clause can cause the semantics of the query to change) and the query fails.  
+The INDEX, FORCESCAN, and FORCESEEK table hints can be specified as query hints for a query that does not have any existing table hints, or they can be used to replace existing INDEX, FORCESCAN, or FORCESEEK hints in the query, respectively. Table hints other than INDEX, FORCESCAN, and FORCESEEK are disallowed as query hints unless the query already has a WITH clause specifying the table hint. In this case, a matching hint must also be specified as a query hint by using TABLE HINT in the OPTION clause to preserve the semantics of the query. For example, if the query contains the table hint NOLOCK, the OPTION clause in the **@hints** parameter of the plan guide must also contain the NOLOCK hint. See Example K. When a table hint other than INDEX, FORCESCAN, or FORCESEEK is specified by using TABLE HINT in the OPTION clause without a matching query hint, or vice versa; error 8702 is raised (indicating that the OPTION clause can cause the semantics of the query to change) and the query fails.  
   
 ## Examples  
   
@@ -507,7 +510,7 @@ GO
 ```  
   
 ### K. Specifying semantics-affecting table hints  
- The following example contains two table hints in the query: NOLOCK, which is semantic-affecting, and INDEX, which is non-semantic-affecting. To preserve the semantics of the query, the NOLOCK hint is specified in the OPTIONS clause of the plan guide. In addition to the NOLOCK hint, the INDEX and FORCESEEK hints are specified and replace the non-semantic-affecting INDEX hint in the query when the statement is compiled and optimized. The example uses the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  
+ The following example contains two table hints in the query: NOLOCK, which is semantic-affecting, and INDEX, which is non-semantic-affecting. To preserve the semantics of the query, the NOLOCK hint is specified in the OPTIONS clause of the plan guide. In addition to the NOLOCK hint, the INDEX, and FORCESEEK hints are specified and replace the non-semantic-affecting INDEX hint in the query when the statement is compiled and optimized. The example uses the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  
   
 ```sql  
 EXEC sp_create_plan_guide   
@@ -556,6 +559,6 @@ GO
  [Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)   
  [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
  [sp_control_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)  
- [Trace Flags](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
-  
+ [Trace Flags](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)       
+ [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)      
   

@@ -9,10 +9,10 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-# Work with SQL Server Data using R (SQL and R deep dive)
+# Lesson 1: Create a database and permissions
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article is part of the Data Science Deep Dive tutorial, on how to use [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
+This article is part of the [RevoScaleR tutorial](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) on how to use [RevoScaleR functions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
 
 In this lesson, you set up the environment and add the data you need for training your models and run some quick summaries of the data. As part of the process, you must complete these tasks:
   
@@ -98,7 +98,7 @@ This section lists some common issues that you might run across in the course of
   
     When the schema is associated with one particular user name, the user is the _schema owner_. When you create an object, you always create it in your own schema, unless you specifically ask it to be created in another schema.
   
-    For example, if you create a table with the name `*`TestData`, and your default schema is **db\_datareader**, the table is created with the name `<database_name>.db_datareader.TestData`.
+    For example, if you create a table with the name **TestData**, and your default schema is **db_datareader**, the table is created with the name `<database_name>.db_datareader.TestData`.
   
     For this reason, a database can contain multiple tables with the same names, as long as the tables belong to different schemas.
    

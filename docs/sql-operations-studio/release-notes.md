@@ -2,7 +2,7 @@
 title: Microsoft SQL Operations Studio (preview) release notes| Microsoft Docs
 description: 'Microsoft SQL Operations Studio (preview) release notes'
 ms.custom: "tools|sos"
-ms.date: "05/08/2018"
+ms.date: "08/30/2018"
 ms.prod: sql
 ms.reviewer: "alayu; sstein"
 ms.suite: "sql"
@@ -16,7 +16,124 @@ manager: craigg
 ---
 # SQL Operations Studio (preview) release notes
 
-**[Download the May Public Preview](download.md)**
+**[Download the August Public Preview](download.md)**
+
+
+## August 2018 (August Public Preview)
+
+release date: August 30, 2018  
+version: 0.32.8
+
+*0.32.8 contains fixes for a couple regressions found in 0.32.7 ([#1971](https://github.com/Microsoft/sqlopsstudio/issues/1971), [#2372](https://github.com/Microsoft/sqlopsstudio/issues/2372)*)
+
+The *August Public Preview* focuses on on bug fixes, product stabilization, and filling gaps in existing scenarios.  
+
+- Announcing the SQL Server Import Extension
+- SQL Server Profiler Session management
+- SQL Server Profiler session template support
+- SQL Server Agent improvements
+- New community extension: First responder kit
+- Quality of Life improvements: Connection strings
+
+### Bug Fixes
+
+- Parse SQL in a Query Editor window by using the `Parse Syntax` command.
+- Fix [issue #143](https://github.com/Microsoft/sqlopsstudio/issues/143): Double-click not selecting @ in variable name.
+- Fix [issue #387](https://github.com/Microsoft/sqlopsstudio/issues/387): SQL Tab DB Icon is red.
+- Fix [issue #825](https://github.com/Microsoft/sqlopsstudio/issues/825): Request: Auto Connect to current server after Script as... 
+- Fix [issue #1278](https://github.com/Microsoft/sqlopsstudio/issues/1278): sqlops.desktop [Desktop Entry] - redundant value for Name & Comment.
+- Fix [issue #1285](https://github.com/Microsoft/sqlopsstudio/issues/1285): Updating causes application icon to be removed/replaced in Windows.
+- Fix [issue #1317](https://github.com/Microsoft/sqlopsstudio/issues/1317): Fix the decimal separator.
+- Fix [issue #1474](https://github.com/Microsoft/sqlopsstudio/issues/1474): Cancel change connection disconnects current connection.
+- Fix [issue #1497](https://github.com/Microsoft/sqlopsstudio/issues/1497): View as Chart options are cut off at the bottom.
+- Fix [issue #1524](https://github.com/Microsoft/sqlopsstudio/issues/1524): Shell/Dashboard: Main viewlet icons are draggable and can crash the app.
+- Fix [issue #1578](https://github.com/Microsoft/sqlopsstudio/issues/1578): Not able to expand/collapse remote file browser folder by clicking name.
+- Fix [issue #1620](https://github.com/Microsoft/sqlopsstudio/issues/1620): Feature Suggestion: Get Connection String for existing connection.
+- Fix [issue #1624](https://github.com/Microsoft/sqlopsstudio/issues/1624): SelectBox doesn't change color when disabled.
+- Fix [issue #1728](https://github.com/Microsoft/sqlopsstudio/issues/1728): Save as JSON/EXCEL/CSV not work.
+- Fix [issue #1744](https://github.com/Microsoft/sqlopsstudio/issues/1744): Results pane loses its scrolling positions when switching between tabs.
+- Fix [issue #1748](https://github.com/Microsoft/sqlopsstudio/issues/1748): Error message when saving Excel file second (and subsequent) time.
+- Fix [issue #1782](https://github.com/Microsoft/sqlopsstudio/issues/1782): Edit data: cell doesn't revert to original value on hitting Escape key.
+- Fix [issue #1836](https://github.com/Microsoft/sqlopsstudio/issues/1836): .sql files not associated with SQL Operations Studio.
+- Fix [issue #1850](https://github.com/Microsoft/sqlopsstudio/issues/1850): Typing N'' autocompletes to N'''.
+- Fix [issue #1985](https://github.com/Microsoft/sqlopsstudio/issues/1985): Copy from query results grid is off by 1 column.
+- Fix [issue #1998](htpts://github.com/Microsoft/sqlopsstudio/pull/1998): Add VS Code version to About dialog.
+- Fix [issue #2042](https://github.com/Microsoft/sqlopsstudio/pull/2042): Agent: Enabled button to import queries from sql files.
+- Fix [issue #2091](https://github.com/Microsoft/sqlopsstudio/issues/2091): Can't use Ctrl+C shortcut to copy from result pane.
+- Fix [issue #2099](https://github.com/Microsoft/sqlopsstudio/pull/2099): Added more saveAsCsv options.
+- Fix [issue #2107](https://github.com/Microsoft/sqlopsstudio/issues/2107): Update document icon for Dashboard and Profiler documents.
+- Fix [issue #2129](https://github.com/Microsoft/sqlopsstudio/pull/2129): Save edit data scroll position when switching tabs.
+- Fix [issue #2152](https://github.com/Microsoft/sqlopsstudio/issues/2152): Results Grid Row Indicator Zero Based.
+
+## Known Issues
+
+- [Issue #2371](https://github.com/Microsoft/sqlopsstudio/issues/2371) Save As Excel Only Saves First Row of Data
+- [Issue #2150](https://github.com/Microsoft/sqlopsstudio/issues/2150): Unable to connect on Ubuntu 16.04 to SQL in a container
+
+For more information, see the [Change Log](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md), and [Releases](https://github.com/Microsoft/sqlopsstudio/releases).
+
+
+## July 2018 (July Public Preview)
+
+release date: July 19, 2018  
+version: 0.31.4
+
+The *July Public Preview* focuses on the initial release of the SQL Server Agent configuration scenarios, SQL Server Profiler session and view template enhancements, and continued bug fixes for customer reported GitHub issues. This release contains the following highlights:  
+
+- [SQL Server Agent for SQL Operations Studio extension](sql-server-agent-extension.md) improvements
+ - Added view of Alerts, Operators, and Proxies and icons on left pane
+ - Added dialogs for New Job, New Job Step, New Alert, and New Operator
+ - Added Delete Job, Delete Alert, and Delete Operator (right-click)
+ - Added Previous Runs visualization
+ - Added Filters for each column name
+- [SQL Server Profiler for SQL Operations Studio extension](sql-server-profiler-extension.md) improvements
+ - Added Hotkeys to quickly launch and start/stop Profiler
+ - Added 5 Default Templates to view Extended Events
+ - Added Server/Database connection name
+ - Added support for Azure SQL Database instances
+ - Added suggestion to exit Profiler when tab is closed when Profiler is still running
+- Release of Combine Scripts Extension
+- Wizard and Dialog Extensibility points added for Extension Authors
+- Fix GitHub Issues:
+ - Fix [issue 728](https://github.com/Microsoft/sqlopsstudio/issues/728): No response to Add Connection on macOS
+ - Fix [issue 1612](https://github.com/Microsoft/sqlopsstudio/issues/1612): Results grid text display is messed up by international characters
+ - Fix [issue 1693](https://github.com/Microsoft/sqlopsstudio/issues/1693): Backup dialog: File browser UI is broken
+ - Fix [issue 1713](https://github.com/Microsoft/sqlopsstudio/issues/1713): Number of rows affected
+ - Fix [issue 1718](https://github.com/Microsoft/sqlopsstudio/issues/1718): Unable to connect to any datasource
+ - Fix [issue 1719](https://github.com/Microsoft/sqlopsstudio/issues/1719): TypeError when Connecting to Server
+ - Fix [issue 1724](https://github.com/Microsoft/sqlopsstudio/issues/1724): Extension dialogs have stopped working
+ - Fix [issue 1749](https://github.com/Microsoft/sqlopsstudio/issues/1749): BUG: HTML data in a column gets interpreted
+ - Fix [issue 1789](https://github.com/Microsoft/sqlopsstudio/issues/1789): Extensibility: if you add a connection provider uninstall will never remove it from the list
+ - Fix [issue 1791](https://github.com/Microsoft/sqlopsstudio/issues/1791): Sqlops Extensions: queryeditor.connect() connects to the target database, but UI does not show the editor is connected
+ - Fix [issue 1799](https://github.com/Microsoft/sqlopsstudio/issues/1799): Top 10 DB Size chart does not work on case sensitive instances
+ - Fix [issue 1814](https://github.com/Microsoft/sqlopsstudio/issues/1814): sqlops.d.ts typo causing implicit 'any' type definition
+ - Fix [issue 1817](https://github.com/Microsoft/sqlopsstudio/issues/1817): Error de Ortografia
+ - Fix [issue 1830](https://github.com/Microsoft/sqlopsstudio/issues/1830): Setting iconPath in ButtonComponent after component() is called does not change icon
+ - Fix [issue 1843](https://github.com/Microsoft/sqlopsstudio/issues/1843): Better Table organization
+
+
+## June 2018 (June Public Preview)
+
+release date: June 20, 2018  
+version: 0.30.6
+
+The *June Public Preview* contains the following highlights:  
+
+- **SQL Server Profiler for SQL Operations Studio *Preview*** extension initial release.
+- The new **SQL Data Warehouse** extension includes rich customizable dashboard widgets surfacing insights to your data warehouse. This unlocks key scenarios around managing and tuning your data warehouse to ensure it is optimized for consistent performance.
+- **Edit Data "Filtering and Sorting"** support.
+- **SQL Server Agent for SQL Operations Studio *Preview*** extension enhancements for Jobs and Job History views.
+- Improved **Wizard & Dialog UI Builder Framework** extensibility APIs.
+- Update VS Code Platform source code integrating [March 2018 (1.22)](https://code.visualstudio.com/updates/v1_22) and [April 2018 (1.23)](https://code.visualstudio.com/updates/v1_23) releases.
+- Fix GitHub Issues:
+  - Feature request ([issue 1204](https://github.com/Microsoft/sqlopsstudio/issues/1204)): Please make the results grid auto-fit column width to data, and/or   remember manual changes if the same query is re-run.
+  - Fix [issue 1398](https://github.com/Microsoft/sqlopsstudio/issues/1398): Should show add message and add account account button when linked account is empty.
+  - Fix [issue 1399](https://github.com/Microsoft/sqlopsstudio/issues/1399): Linked account tab is broken when the view is collapsed.
+  - Fix [issue 1374](https://github.com/Microsoft/sqlopsstudio/issues/1374): SQL Tools Service crashes when opening .sql file from disk.
+  - Fix [issue 1372](https://github.com/Microsoft/sqlopsstudio/issues/1372): Missing SQL keyword "BETWEEN".
+  - Fix [issue 1395](https://github.com/Microsoft/sqlopsstudio/issues/1395): 'MATCH' keyword crashes SQL Tools Service.
+  - Fix [issue 1496](https://github.com/Microsoft/sqlopsstudio/issues/1496): "New Profiler" context menu option in Object Explorer does nothing.
+  - Fix [issue 1495](https://github.com/Microsoft/sqlopsstudio/issues/1495): Query editor "Explain" query plan is broken.
 
 
 ## May 2018 (May Public Preview)
@@ -41,8 +158,6 @@ The *May Public Preview* is focused on stabilization and bug fixes. This build c
    - Fix [issue 1215](https://github.com/Microsoft/sqlopsstudio/issues/1215): SQL Agent extension and the status bar
    - Fix [issue 1316](https://github.com/Microsoft/sqlopsstudio/issues/1316): SQL Agent Don´t resize after change windows size
 
-
-For more information, see the [Change Log](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md), and [Releases](https://github.com/Microsoft/sqlopsstudio/releases).
 
 
 

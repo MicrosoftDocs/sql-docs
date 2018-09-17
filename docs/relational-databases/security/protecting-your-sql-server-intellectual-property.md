@@ -3,21 +3,18 @@ title: "Protecting Your SQL Server Intellectual Property | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/31/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: "security"
+ms.prod_service: security
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: security
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "protecting intellectual property"
   - "intellectual property"
 ms.assetid: 174a646a-d65c-4074-8249-d783e91be2dd
-caps.latest.revision: 3
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Protecting Your SQL Server Intellectual Property

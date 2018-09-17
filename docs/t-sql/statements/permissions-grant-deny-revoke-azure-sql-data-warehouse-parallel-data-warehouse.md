@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "08/10/2017"
 ms.prod: sql
 ms.prod_service: "sql-data-warehouse, pdw"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -14,8 +13,8 @@ dev_langs:
   - "TSQL"
 ms.assetid: 5a3b7424-408e-4cb0-8957-667ebf4596fc
 caps.latest.revision: 9
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
@@ -127,7 +126,7 @@ REVOKE
  An implicit permission can also be inherited from a covering or parent permission. For example, **UPDATE** permission on a table can be inherited by having **UPDATE** permission on the schema that contains the table, or **CONTROL** permission on the table.  
   
 ### Ownership Chaining  
- When multiple database objects access each other sequentially, the sequence is known as a *chain*. Although such chains do not independently exist, when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] traverses the links in a chain, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] evaluates permissions on the constituent objects differently than it would if it were accessing the objects separately. Ownership chaining has important implications for managing security. For more information about ownership chains, see [Ownership Chains](http://msdn.microsoft.com/en-us/library/ms188676\(v=sql11\).aspx) and [Tutorial: Ownership Chains and Context Switching](http://msdn.microsoft.com/en-us/library/bb153640\(v=sql11\).aspx).  
+ When multiple database objects access each other sequentially, the sequence is known as a *chain*. Although such chains do not independently exist, when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] traverses the links in a chain, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] evaluates permissions on the constituent objects differently than it would if it were accessing the objects separately. Ownership chaining has important implications for managing security. For more information about ownership chains, see [Ownership Chains](http://msdn.microsoft.com/en-us/library/ms188676\(v=sql11\).aspx) and [Tutorial: Ownership Chains and Context Switching](../../relational-databases/tutorial-ownership-chains-and-context-switching.md).  
   
 ## Permission List  
   

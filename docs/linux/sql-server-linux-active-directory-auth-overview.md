@@ -5,7 +5,7 @@ author: rothja
 ms.date: 02/23/2018
 ms.author: jroth 
 manager: craigg
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 
 ms.component: ""
@@ -47,7 +47,6 @@ The details for how to configure AD authentication are provided in the tutorial,
 ## Known issues
 
 - At this time, the only authentication method supported for database mirroring endpoint is CERTIFICATE. WINDOWS authentication method will be enabled in a future release.
-- Third-party AD tools like Centrify, Powerbroker, and Vintela are not supported.
 
 ## Next Steps
 

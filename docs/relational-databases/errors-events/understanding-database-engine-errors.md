@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Understanding Database Engine Errors | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
@@ -19,7 +19,7 @@ caps.latest.revision: 27
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Understanding Database Engine Errors
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

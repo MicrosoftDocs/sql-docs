@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "07/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|functions"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -22,8 +21,8 @@ helpviewer_keywords:
   - "identity values [SQL Server], last-inserted"
 ms.assetid: eef24670-059b-4f10-91d4-a67bc1ed12ab
 caps.latest.revision: 36
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # SCOPE_IDENTITY (Transact-SQL)

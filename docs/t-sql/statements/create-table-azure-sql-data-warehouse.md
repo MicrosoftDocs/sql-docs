@@ -5,18 +5,16 @@ ms.date: "07/14/2017"
 ms.prod: ""
 ms.prod_service: "sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.service: "sql-data-warehouse"
-ms.component: "t-sql|statements"
+ms.service: sql-data-warehouse
 ms.suite: "sql"
-ms.technology: t-sql
+ms.component: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
-caps.latest.revision: 59
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
@@ -106,7 +104,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
 ### <a name="ColumnOptions"></a> Column options
 
  `COLLATE` *Windows_collation_name*  
- Specifies the collation for the expression. The collation must be one of the Windows collations supported by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of Windows collations supported by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Windows Collation Name (Transact-SQL)](http://msdn.microsoft.com/library/ms188046\(v=sql11\)/).  
+ Specifies the collation for the expression. The collation must be one of the Windows collations supported by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of Windows collations supported by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Windows Collation Name (Transact-SQL)](windows-collation-name-transact-sql.md)/).  
   
  `NULL` | `NOT NULL`  
  Specifies whether `NULL` values are allowed in the column. The default is `NULL`.  

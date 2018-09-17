@@ -1,10 +1,10 @@
 ---
-title: Upgrade R and Python components in SQL Server R instances (Machine Learning Services) | Microsoft Docs
-description: Upgrade R and Python in SQL Server 2016 R Services or SQL Server 2017 Machine Learning Services using sqlbindr.exe to bind to Machine Learning Server.
+title: Upgrade R and Python components in SQL Server instances (Machine Learning Services) | Microsoft Docs
+description: Upgrade R and Python in SQL Server 2016 Services or SQL Server 2017 Machine Learning Services using sqlbindr.exe to bind to Machine Learning Server.
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 05/05/2018  
+ms.date: 07/19/2018  
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
@@ -15,34 +15,30 @@ manager: cgronlun
 
 R and Python integration in SQL Server includes open-source and Microsoft-proprietary packages. Under standard SQL Server servicing, R and Python packages are updated according to the SQL Server release cycle, with bug fixes to existing packages at the current version. 
 
-Most data scientists are accustomed to working with newer packages as they become available. For both SQL Server 2017 Machine Learning Services (In-Database) and SQL Server 2016 R Services (In-Database), you can get newer versions of R and Python by changing the *binding* from SQL Server servicing to [Microsoft Machine Learning Server](https://docs.microsoft.com/en-us/machine-learning-server/index) and the [Modern Lifecycle Support policy](https://support.microsoft.com/help/30881/modern-lifecycle-policy).
+Most data scientists are accustomed to working with newer packages as they become available. For both SQL Server 2017 Machine Learning Services (In-Database) and SQL Server 2016 R Services (In-Database), you can get newer versions of R and Python by changing the *binding* from SQL Server servicing to [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/index) and the [Modern Lifecycle Support policy](https://support.microsoft.com/help/30881/modern-lifecycle-policy).
 
 Binding does not change the fundamentals of your installation: R and Python integration is still part of a database engine instance, licensing is unchanged (no additional costs associated with binding), and SQL Server support policies still hold for the database engine. But rebinding does change how R and Python packages are serviced. The rest of this article explains the binding mechanism and how it works for each version of SQL Server.
 
 > [!NOTE]
 > Binding applies to (In-Database) instances only. Binding is not relevant for a (Standalone) installation.
 
-**SQL Server 2017**
+**SQL Server 2017 binding considerations**
 
 For SQL Server 2017 Machine Learning Services, you would consider binding only when Microsoft Machine Learning Server begins to offer additional packages or newer versions over what you already have.
 
-**SQL Server 2016**
+**SQL Server 2016 binding considerations**
 
-For SQL Server 2016 R Services customers, there are two paths for getting new and updated R packages. One involves upgrading to SQL Server 2017; the second, binding to Microsoft Machine Learning Server.
+For SQL Server 2016 R Services customers, binding provides updated R packages, new packages not part of the original installation ([MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)), and [pretrained models](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models), all of which can further be refreshed at each new major and minor release of Microsoft Machine Learning Server. Binding does not give you Python support, which is a SQL Server 2017 feature. 
 
-Upgrading to SQL Server 2017 gets you R packages at the versions included in that release, plus Python features. Alternatively, binding gets you updated R packages, which can further be refreshed at each new major and minor release of Microsoft Machine Learning Server. 
+## Version map
 
-Binding does not give you Python support, which is a SQL Server 2017 feature. 
+The following table is a version map, showing package versions across release vehicles so that you can ascertain potential upgrade paths when you bind to Microsoft Machine Learning Server (previously known as R Server, before the addition of Python support starting in MLS 9.2.1). 
 
-**Component upgrades available through Microsoft Machine Learning Server**
-
-The following table is a version map, showing the version installed with SQL Server, with possible upgrades when you bind to Microsoft Machine Learning Server (previously known as R Server before the addition of Python support starting in MLS 9.2.1). 
-
-Notice that binding does not guarantee the very latest version of R or Anaconda. When you bind to Microsoft Machine Learning Server, you get the R or Python version installed through Setup, which may or may not be the latest version available on the web.
+Notice that binding does not guarantee the very latest version of R or Anaconda. When you bind to Microsoft Machine Learning Server (MLS), you get the R or Python version installed through Setup, which may not be the latest version available on the web.
 
 [**SQL Server 2016 R Services**](../install/sql-r-services-windows-install.md)
 
-Component |Initial Release | R Server 9.0.1 | R Server 9.1 | MLS 9.2.1 | MLS 9.3 |
+Component |Initial Release | [R Server 9.0.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows) | [R Server 9.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows) | [MLS 9.2.1](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) | [MLS 9.3](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) |
 ----------|----------------|----------------|--------------|---------|-------|
 Microsoft R Open (MRO) over R | R 3.2.2     | R 3.3.2   |R 3.3.3   | R 3.4.1  | R 3.4.3 |
 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) | 8.0.3  | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
@@ -68,9 +64,9 @@ Anaconda 4.2 over Python 3.5  | 4.2/3.5.2 | 4.2/3.5.2 | | | |
 
 ## How component upgrade works
 
-Component upgrade is through *binding* a SQL Server 2016 R Services instance (or a SQL Server 2017 Machine Learning Services instance) to [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/index). 
+Component upgrade occurs when you *bind* a SQL Server 2016 R Services instance (or a SQL Server 2017 Machine Learning Services instance) to [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/index). This process basically overwrites the contents of C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES as installed by SQL Server Setup with the contents of C:\Program Files\Microsoft\ML Server\R_SERVER. 
 
-Microsoft Machine Learning Server is an on-premises server product separate from SQL Server, but with the same interpreters and packages. Binding swaps out the SQL Server service update mechanism so that you can use the R and Python packages shipping with Microsoft Machine Learning Server, which are often newer than those installed by SQL Server. Switching support polices is an attractive option for data science teams who require newer generation R and Python modules for their solutions. 
+Microsoft Machine Learning Server is an on-premises server product separate from SQL Server, but with the same interpreters and packages. Binding swaps out the SQL Server service update mechanism so that you can use the R and Python packages shipping with Microsoft Machine Learning Server, which are often newer than those installed by SQL Server. Switching support policies is an attractive option for data science teams who require newer generation R and Python modules for their solutions. 
 
 Binding is executed by the [MLS installer](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install). The installer updates specific R and Python packages, but does not replace your SQL Server in-database instance with a standalone, disconnected server install.
 
@@ -112,6 +108,8 @@ Microsoft Machine Learning Setup detects the existing features and SQL Server ve
     WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
     ```
 
+1. Close down SSMS and any other tools having an open connection to SQL Server. Binding overwrites program files. If SQL Server has open sessions, binding will fail with bind error code 6.
+
 1. Download Microsoft Machine Learning Server onto the computer that has the instance you want to upgrade. We recommend the [latest version](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install#download-machine-learning-server-installer).
 
 1. Unzip the folder and start ServerSetup.exe, located under MLSWIN93.
@@ -120,7 +118,11 @@ Microsoft Machine Learning Setup detects the existing features and SQL Server ve
 
 1. On **Configure the installation**, confirm the components to upgrade, and review the list of compatible instances. 
 
+   This step is very important.
+
    On the left, choose every feature that you want to keep or upgrade. You cannot upgrade some features and not others. An empty checkbox removes that feature, assuming it is currently installed. In the screenshot, given an instance of SQL Server 2016 R Services (MSSQL13), R and the R version of the pre-trained models are selected. This configuration is valid because SQL Server 2016 supports R but not Python.
+
+   If you are upgrading components on SQL Server 2016 R Services, do not select the Python feature. You cannot add Python to SQL Server 2016 R Services.
 
    On the right, select the checkbox next to the instance name. If no instances are listed, you have an incompatible combination. If you do not select an instance, a new standalone installation of Machine Learning Server is created, and the SQL Server libraries are unchanged. If you can't select an instance, it might not be at [SP1 CU3](https://support.microsoft.com/help/4019916/cumulative-update-3-for-sql-server-2016-sp1). 
 
@@ -156,7 +158,7 @@ OutputDataSet <- data.frame(Name, Version);'
 WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 ```
 
-For SQL Server 2016 R Services bound to Machine Learning Server 9.3, R Base package should be 3.4.1, RevoScaleR should be  9.3, and you should also have MicrosoftML 9.3. 
+For SQL Server 2016 R Services bound to Machine Learning Server 9.3, R Base package should be 3.4.3, RevoScaleR should be  9.3, and you should also have MicrosoftML 9.3. 
 
 If you added the pre-trained models, the models are embedded in the MicrosoftML library and you can call them through MicrosoftML functions. For more information, see [R samples for MicrosoftML](https://docs.microsoft.com/machine-learning-server/r/sample-microsoftml).
 
@@ -285,7 +287,7 @@ MLS Installer and SqlBindR both return the following error codes and messages.
 |Bind error 3 | Invalid instance | An instance exists, but is not valid for binding. |
 |Bind error 4 | Not bindable | |
 |Bind error 5 | Already bound | You ran the *bind* command, but the specified instance is already bound. |
-|Bind error 6 | Bind failed | An error occurred while unbinding the instance. This error can occur if you run the MLS installer without selecting any features. Binding requires that you select both an MSSQL instance and R and Python, assuming the instance is SQL Server 2017.|
+|Bind error 6 | Bind failed | An error occurred while unbinding the instance. This error can occur if you run the MLS installer without selecting any features. Binding requires that you select both an MSSQL instance and R and Python, assuming the instance is SQL Server 2017. This error also occurs if SqlBindR could not write to the Program Files folder. Open sessions or handles to SQL Server will cause this error to occur. If you get this error, reboot the computer and redo the binding steps before starting any new sessions.|
 |Bind error 7 | Not bound | The database engine instance has R Services or SQL Server Machine Learning Services. The instance is not bound to Microsoft Machine Learning Server. |
 |Bind error 8 | Unbind failed | An error occurred while unbinding the instance. |
 |Bind error 9 | No instances found | No database engine instances were found on this computer. |
@@ -300,7 +302,7 @@ If you upgraded to Microsoft R Server 9.0.1, the version of SqlBindR.exe for tha
 
 Later version of SqlBindR automatically restore the original R features, eliminating the need for reinstallation of R components or re-patch the server. However, you must install any R package updates that might have been added after the initial installation.
 
-If you have used the package management roles to install and share package, this task is much easier: you can use R commands to synchronize installed packages to the file system using records in the database, and vice versa. For more information, see [R package management for SQL Server](r-package-management-for-sql-server-r-services.md).
+If you have used the package management roles to install and share package, this task is much easier: you can use R commands to synchronize installed packages to the file system using records in the database, and vice versa. For more information, see [R package management for SQL Server](install-additional-r-packages-on-sql-server.md).
 
 ### Problems with multiple upgrades from SQL Server
 

@@ -1,6 +1,6 @@
 ---
 title: "Using Set Functions | Microsoft Docs"
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ---
 # Using Set Functions
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   A set function retrieves a set from a dimension, hierarchy, level, or by traversing the absolute and relative locations of members within these objects, constructing sets in a variety of ways.  
   

@@ -2,10 +2,10 @@
 title: "OLE DB Driver for SQL Server Programming | Microsoft Docs"
 description: "OLE DB Driver for SQL Server Programming"
 ms.custom: ""
-ms.date: "03/26/2018"
+ms.date: "06/12/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "ole-db"
+ms.component: "oledb|ole-db"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: connectivity
@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "OLE DB"
   - "OLE DB Driver for SQL Server"
   - "OLE DB Driver for SQL Server, OLE DB"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # OLE DB Driver for SQL Server Programming

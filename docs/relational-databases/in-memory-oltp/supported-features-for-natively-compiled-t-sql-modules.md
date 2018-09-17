@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Supported Features for Natively Compiled T-SQL Modules | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/23/2017"
@@ -15,7 +15,7 @@ caps.latest.revision: 44
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Supported Features for Natively Compiled T-SQL Modules
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -4,8 +4,8 @@ description: This article provides answers to frequently asked questions about S
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 03/22/2018
-ms.topic: article
+ms.date: 07/24/2018
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ""
 ms.suite: "sql"
@@ -29,9 +29,13 @@ The following sections provide common questions and answers for SQL Server runni
 
    SQL Server is tested and supported on Linux for the previously listed distributions. Other Linux distributions are closely related and might be able to run SQL Server (for example, CentOS is closely related to Red Hat Enterprise Server). But if you choose to install SQL Server on an unsupported operating system, please review the **Support policy** section of the [Technical support policy for Microsoft SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server) to understand the support implications. Also note that some community-maintained Linux distributions do not have a formal way to receive support if the underlying operating system is the problem.
 
-1. **What SQL Server features are supported on Linux?**
+1. **How does licensing work on Linux?**
 
-   For a complete list of supported features and known issues, see the [Release notes](sql-server-linux-release-notes.md).
+   SQL Server is licensed the same way for both Windows and Linux. In fact, you license SQL Server and then you can choose to use that license on the platform of your choice. For more information, see [How to license SQL Server](https://www.microsoft.com/sql-server/sql-server-2017-pricing).
+
+1. **Is SQL Server on Linux the same as on Windows?**
+
+   The core Database Engine for SQL Server is the same on Linux as it is on Windows. However, some features are currently not supported on Linux. For a list of features that are not supported on Linux, see the [Unsupported features & services](sql-server-linux-release-notes.md#Unsupported). Also review the [Known issues](sql-server-linux-release-notes.md#known-issues). Unless specified in these lists, other SQL Server features and services are supported on Linux.
 
 1. **What is the support policy for SQL Server?**
 
@@ -84,6 +88,9 @@ The following sections provide common questions and answers for SQL Server runni
 1. **What tools are available to monitor SQL Server performance on Linux?**
 
    You can use [system dynamic management views (DMVs)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) to collect various types of information about SQL Server, including Linux process information. You can use [Query Store](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md) to improve query performance. Other tools, such as the built-in [Performance Dashboard](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-performance-dashboard-built-in/), work remotely in SQL Server Management Studio (SSMS) from Windows.
+
+   > [!TIP]
+   > One way to improve performance is to properly configure your Linux operating system and the SQL Server insance. For more information, see [Performance best practices and configuration guidelines for SQL Server on Linux](sql-server-linux-performance-best-practices.md).
 
 ## Administration
 

@@ -2,10 +2,10 @@
 title: "Fetching BLOB Data Using IRow::GetColumns and ISequentialStream | Microsoft Docs"
 description: "Fetching BLOB data using IRow::GetColumns and ISequentialStream"
 ms.custom: ""
-ms.date: "03/26/2018"
+ms.date: "06/14/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "ole-db-rowsets"
+ms.component: "oledb|ole-db-rowsets"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: connectivity
@@ -16,12 +16,14 @@ helpviewer_keywords:
   - "ISequentialStream interface"
   - "GetColumns method"
   - "BLOBs, fetching"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Fetching BLOB Data Using IRow::GetColumns and ISequentialStream
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   The following function uses **IRow::GetColumns** and **ISequentialStream** to fetch large data:  
   

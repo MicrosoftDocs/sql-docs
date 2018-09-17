@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Use the PowerShell Provider for Extended Events | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -18,7 +18,7 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Use the PowerShell Provider for Extended Events
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

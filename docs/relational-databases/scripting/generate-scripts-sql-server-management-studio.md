@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Generate Scripts (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,13 +15,13 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: "mathoma" 
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Generate Scripts (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] provides two mechanisms for generating [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts. You can create scripts for multiple objects by using the **Generate and Publish Scripts Wizard**. You can also generate a script for individual objects or multiple objects by using the **Script as** menu in **Object Explorer**.  
 
-For a detailed Tutorial on scripting various objects using SQL Server Management Studio (SSMS), please see [Tutorial: Scripting in SSMS](https://docs.microsoft.com/en-us/sql/ssms/tutorials/scripting-ssms).
+For a detailed Tutorial on scripting various objects using SQL Server Management Studio (SSMS), please see [Tutorial: Scripting in SSMS](https://docs.microsoft.com/sql/ssms/tutorials/scripting-ssms).
 
   
 ## Before You Begin  

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "sys.database_event_session_actions (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -17,7 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.database_event_session_actions (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

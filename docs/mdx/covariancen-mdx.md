@@ -1,6 +1,6 @@
 ---
 title: "CovarianceN (MDX) | Microsoft Docs"
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ---
 # CovarianceN (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Returns the sample covariance of x-y pairs of values evaluated over a set, by using the unbiased population formula (dividing by the number of x-y pairs).  
   

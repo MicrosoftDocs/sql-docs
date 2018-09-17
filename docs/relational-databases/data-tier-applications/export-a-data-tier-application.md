@@ -1,15 +1,9 @@
-﻿---
+---
 title: "Export a Data-tier Application | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: "data-tier-applications"
-ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-data-tier-apps"
-ms.tgt_pltfrm: ""
+ms.technology:
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.exportdac.progress.f1"
@@ -26,11 +20,10 @@ helpviewer_keywords:
   - "export DAC"
   - "data-tier application [SQL Server], export"
 ms.assetid: 61915bc5-0f5f-45ac-8cfe-3452bc185558
-caps.latest.revision: 20
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Export a Data-tier Application
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

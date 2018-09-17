@@ -1,15 +1,9 @@
-﻿---
+---
 title: "Import a BACPAC File to Create a New User Database | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/31/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.component: "data-tier-applications"
-ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-data-tier-apps"
-ms.tgt_pltfrm: ""
+ms.technology:
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb. importdac.results.f1"
@@ -28,11 +22,10 @@ helpviewer_keywords:
   - "Migrate database"
   - "DAC"
 ms.assetid: 736d8d9a-39f1-4bf8-b81f-2e56c134d12e
-caps.latest.revision: 25
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Import a BACPAC File to Create a New User Database
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -57,7 +50,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
  A DAC can be imported to [!INCLUDE[ssSDS](../../includes/sssds-md.md)], or an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] running [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) or later. If you export a DAC from a higher version, the DAC may contain objects not supported by [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. You cannot deploy those DACs to instances of [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
 ## Prerequisites  
- We recommend that you do not import a DAC export file from unknown or untrusted sources. Such files could contain malicious code that might execute unintended Transact-SQL code or cause errors by modifying the schema. Before you use an export file from an unknown or untrusted source, unpack the DAC and examine the code, like stored procedures and other user-defined code. For more information about how to perform these checks, see [Validate a DAC Package](https://msdn.microsoft.com/library/ee633948(SQL.130).aspx).  
+ We recommend that you do not import a DAC export file from unknown or untrusted sources. Such files could contain malicious code that might execute unintended Transact-SQL code or cause errors by modifying the schema. Before you use an export file from an unknown or untrusted source, unpack the DAC and examine the code, like stored procedures and other user-defined code. For more information about how to perform these checks, see [Validate a DAC Package](validate-a-dac-package.md).  
   
 ## Security  
  To improve security, SQL Server Authentication logins are stored in a DAC export file without a password. When the file is imported, the login is created as a disabled login with a generated password. To enable the logins, log in using a login that has ALTER ANY LOGIN permission and use ALTER LOGIN to enable the login and assign a new password that can be communicated to the user. This is not needed for Windows Authentication logins because their passwords are not managed by SQL Server.  

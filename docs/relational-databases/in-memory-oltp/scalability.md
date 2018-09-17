@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Scalability | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/27/2015"
@@ -15,7 +15,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Scalability
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

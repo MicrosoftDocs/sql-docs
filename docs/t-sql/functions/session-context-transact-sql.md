@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "06/22/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|functions"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -19,8 +18,8 @@ helpviewer_keywords:
   - "SESSION_CONTEXT function"
 ms.assetid: b6bdbc54-331a-43cc-ab3d-3872d6a12100
 caps.latest.revision: 11
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # SESSION_CONTEXT (Transact-SQL)

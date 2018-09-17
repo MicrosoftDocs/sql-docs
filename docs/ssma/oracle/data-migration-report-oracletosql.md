@@ -1,8 +1,6 @@
 ---
 title: "Data Migration Report  (OracleToSQL) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.component: "ssma-oracle"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -17,7 +15,7 @@ ms.author: "Shamikg"
 manager: "v-pelars"
 ---
 # Data Migration Report  (OracleToSQL)
-The **Data Migration Report** dialog box appears after you migrate data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+The **Data Migration Report** dialog box appears after you migrate data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## Options  
 **Status**  

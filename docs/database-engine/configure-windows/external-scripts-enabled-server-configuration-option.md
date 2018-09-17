@@ -2,22 +2,18 @@
 title: "External Scripts Enabled server configuration option | Microsoft Docs"
 ms.date: "11/13/2017"
 ms.prod: sql
-ms.prod_service: high-availability
+ms.technology: configuration
 ms.reviewer: ""
 ms.suite: "sql"
-ms.custom: ""
-ms.technology: configuration
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
+ms.topic: language-reference
 f1_keywords: 
   - "external scripts enabled"
   - "external_scripts_enabled_TSQL"
 helpviewer_keywords: 
   - "external scripts enabled option"
 ms.assetid: 9d0ce165-8719-4007-9ae8-00f85cab3a0d
-caps.latest.revision: 9
-author: "jeannt"
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # External Scripts Enabled server configuration option
@@ -53,7 +49,7 @@ RECONFIGURE WITH OVERRIDE;
 
 You must restart [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to make this change effective.
 
-For more information, see [Set up SQL Server Machine Learning](/../../advanced-analytics/r/set-up-sql-server-r-services-in-database.md).
+For more information, see [Set up SQL Server Machine Learning](../../advanced-analytics/r/set-up-sql-server-r-services-in-database.md).
 
 ## See also
 

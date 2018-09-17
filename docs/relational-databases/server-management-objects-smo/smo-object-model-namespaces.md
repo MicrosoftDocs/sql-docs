@@ -1,4 +1,4 @@
-﻿---
+---
 title: "SMO Namespaces | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/02/2016"
@@ -21,7 +21,7 @@ caps.latest.revision: 39
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
-monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SMO Object Model Namespaces
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]

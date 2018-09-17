@@ -1,10 +1,9 @@
-﻿---
+---
 title: "float and real (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "7/22/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "t-sql|data-types"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -24,10 +23,10 @@ helpviewer_keywords:
   - "real data type"
 ms.assetid: 08ea66b7-624e-4d8b-86bc-750ff76cdfc5
 caps.latest.revision: 40
-author: edmacauley
-ms.author: edmaca
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # float and real (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

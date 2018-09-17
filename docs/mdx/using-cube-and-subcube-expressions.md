@@ -1,6 +1,6 @@
 ---
 title: "Using Cube and Subcube Expressions | Microsoft Docs"
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ---
 # Using Cube and Subcube Expressions
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   You use cube and subcube expressions in Multidimensional Expressions (MDX) statements to define, manipulate, or retrieve data from a cube or subcube.  
   

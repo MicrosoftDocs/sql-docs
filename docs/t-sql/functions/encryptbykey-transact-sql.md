@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|functions"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -22,8 +21,8 @@ helpviewer_keywords:
   - "ENCRYPTBYKEY function"
 ms.assetid: 0e11f8c5-f79d-46c1-ab11-b68ef05d6787
 caps.latest.revision: 44
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # ENCRYPTBYKEY (Transact-SQL)

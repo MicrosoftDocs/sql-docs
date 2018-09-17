@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Poll Servers | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -52,7 +52,7 @@ Issue this command keeps the target servers synchronized with the current job de
   
 If you use the following items, you do not have to post operations explicitly:  
   
--   Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] to control multiserver jobs.  
+-   Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to control multiserver jobs.  
   
 -   Job stored procedures that do not modify job schedules or job steps.  
   
@@ -60,7 +60,7 @@ If you use the following items, you do not have to post operations explicitly:
   
 -   [SQL Server Management Studio](../../ssms/agent/force-a-target-server-to-poll-the-master-server.md)  
   
--   [Transact-SQL](http://msdn.microsoft.com/en-us/085deef8-2709-4da9-bb97-9ab32effdacf)  
+-   [Transact-SQL](http://msdn.microsoft.com/085deef8-2709-4da9-bb97-9ab32effdacf)  
   
 ## See Also  
 [Manage Events](../../ssms/agent/manage-events.md)  

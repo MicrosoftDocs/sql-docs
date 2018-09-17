@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Databases and Files Catalog Views (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/18/2016"
@@ -18,11 +18,10 @@ helpviewer_keywords:
   - "database catalog views [SQL Server]"
   - "catalog views [SQL Server], files"
 ms.assetid: 60a05111-c542-45b5-a0cb-433ddcf6286a
-caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Databases and Files Catalog Views (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

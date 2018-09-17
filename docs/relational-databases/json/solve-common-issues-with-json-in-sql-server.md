@@ -1,25 +1,21 @@
-﻿---
+---
 title: "Solve common issues with JSON in SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/07/2016"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.component: "json"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "dbe-json"
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "JSON, FAQ"
 ms.assetid: feae120b-55cc-4601-a811-278ef1c551f9
-caps.latest.revision: 9
 author: "jovanpop-msft"
 ms.author: "jovanpop"
 ms.reviewer: douglasl
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Solve common issues with JSON in SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

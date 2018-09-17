@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "05/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -14,8 +13,8 @@ dev_langs:
   - "TSQL"
 ms.assetid: cca96a8f-7737-42d2-bbcc-03d5f858dcc1
 caps.latest.revision: 13
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # ALTER INDEX (Selective XML Indexes)

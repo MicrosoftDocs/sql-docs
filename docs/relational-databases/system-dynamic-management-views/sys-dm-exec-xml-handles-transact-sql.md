@@ -1,4 +1,4 @@
-﻿---
+---
 title: "sys.dm_exec_xml_handles (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -23,7 +23,7 @@ caps.latest.revision: 12
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
-monikerRange: "= azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_xml_handles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]

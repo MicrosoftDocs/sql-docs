@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: "php"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: connectivity
@@ -31,7 +30,7 @@ The following example retrieves a row from the *Production.ProductReview* table 
   
 Retrieving data as a stream is accomplished by using [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md) and [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) with the return type specified as a character stream. The return type is specified by using the constant **SQLSRV_PHPTYPE_STREAM**. For information about **sqlsrv** constants, see [Constants &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
   
-The example assumes that [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] and the [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database are installed on the local computer. All output is written to the console when the example is run from the command line.  
+The example assumes that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and the [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database are installed on the local computer. All output is written to the console when the example is run from the command line.  
   
 ```  
 <?php  

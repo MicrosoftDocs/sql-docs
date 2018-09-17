@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "7/22/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|data-types"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -19,8 +18,8 @@ helpviewer_keywords:
   - "Parse [Database Engine]"
 ms.assetid: b37e28b6-6e2e-470a-945b-ce5252da743a
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Parse (Database Engine)

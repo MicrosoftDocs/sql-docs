@@ -3,7 +3,6 @@ title: "Uninstall an Existing Instance of SQL Server (Setup) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/27/2017"
 ms.prod: sql
-ms.component: install
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: install
@@ -16,15 +15,14 @@ helpviewer_keywords:
   - "instances of SQL Server, uninstalling"
   - "uninstalling SQL Server"
 ms.assetid: 3c64b29d-61d7-4b86-961c-0de62261c6a1
-caps.latest.revision: 74
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Uninstall an Existing Instance of SQL Server (Setup)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
- > For content related to previous versions of SQL Server, see [Uninstall an Existing Instance of SQL Server (Setup)](https://msdn.microsoft.com/en-US/library/ms143412(SQL.120).aspx).
+ > For content related to previous versions of SQL Server, see [Uninstall an Existing Instance of SQL Server (Setup)](uninstall-an-existing-instance-of-sql-server-setup.md).
 
   This article describes how to uninstall a stand-alone instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. By following the steps in this article, you also prepare the system so that you can reinstall [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

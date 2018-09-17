@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "7/22/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|data-types"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -19,8 +18,8 @@ helpviewer_keywords:
   - "GetRoot [Database Engine]"
 ms.assetid: 240b70f1-eeda-44ab-b4bb-9e4af80fa7c0
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # GetRoot (Database Engine)

@@ -31,7 +31,7 @@ Choose the columns that participate in this index. Select **<None>** to remove t
 Select a sort order for the specified column. Available options are **Ascending** or **Descending**.  
   
 ## See Also  
-[Create Clustered Indexes](http://msdn.microsoft.com/en-us/47148383-c2c7-4f08-a9e4-7016bf2d1d13)  
-[Create Nonclustered Indexes](http://msdn.microsoft.com/en-us/9402029a-1227-46c4-93aa-c2122eb1b943)  
+[Create Clustered Indexes](../../relational-databases/indexes/create-clustered-indexes.md)  
+[Create Nonclustered Indexes](../../relational-databases/indexes/create-nonclustered-indexes.md)  
 [Indexes - Keys Dialog Box &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/indexes-keys-dialog-box-visual-database-tools.md)  
   

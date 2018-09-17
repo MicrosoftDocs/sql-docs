@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.component: "data-flow"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 362bbcd8-b7b0-4bab-8afe-1212b2ad1af9
@@ -31,7 +29,7 @@ manager: craigg
 |ExposeCharColumnsAsUnicode|Boolean|This property determines how the component exposes CHAR columns. The default value is False, which indicates that CHAR columns are exposed as multi-byte strings (DT_STR). If True, CHAR columns are exposed as wide strings (DT_WSTR).<br /><br /> **Note**: This property is not available in the **ODBC Source Editor**, but can be set by using the **Advanced Editor**.|  
 |FetchMethod|Integer (enumeration)|The method used for getting the data. The possible options are Row by row (0) and Batch (1). The default value is Batch (1).<br /><br /> For more information about these options, see [ODBC Source](../../integration-services/data-flow/odbc-source.md).<br /><br /> **Note**: This property is not available in the **ODBC Source Editor**, but can be set by using the **Advanced Editor**.|  
 |SqlCommand|String|The SQL command to be executed when AccessMode is set to SQL Command.|  
-|StatementTimeout|Integer|The number of seconds to wait for an SQL statement to execute before returning, with an error, to the application. The default value is 120. A value of 0 indicates that the system does not time out.|  
+|StatementTimeout|Integer|The number of seconds to wait for an SQL statement to execute before returning, with an error, to the application. The default value is 0. A value of 0 indicates that the system does not time out.|  
 |TableName|String|The name of the table with the data that is being used when AccessMode is set to Table Name.|  
 |LobChunckSize|Integer|The chunk size allocation for LOB columns.|  
 ||||  

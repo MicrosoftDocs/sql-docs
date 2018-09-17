@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "07/18/2016"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-registration"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: ssms
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 

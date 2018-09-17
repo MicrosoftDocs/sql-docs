@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: "php"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: connectivity
@@ -48,5 +47,5 @@ When sending data to the server, the [!INCLUDE[ssDriverPHP](../../includes/ssdri
 
 [PHP Types](http://php.net/manual/language.types.php)
 
-[Data Types (Transact-SQL)](https://docs.microsoft.com/en-us/sql/t-sql/data-types/data-types-transact-sql)  
+[Data Types (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/data-types/data-types-transact-sql)  
   

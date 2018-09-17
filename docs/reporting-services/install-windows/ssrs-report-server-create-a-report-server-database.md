@@ -1,19 +1,13 @@
 ---
 title: "Create a Report Server Database  (SSRS Configuration Manager) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/20/2017"
+ms.date: 09/20/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.component: "install-windows"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.suite: pro-bi
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ---
 
 # Create a Report Server Database
@@ -73,6 +67,6 @@ manager: "kfile"
 
 ## Next steps
 
-[Reporting Services Configuration Manager](http://msdn.microsoft.com/en-us/63519ef4-e68a-42fb-9cf7-31228ea4e434)  
+[Reporting Services Configuration Manager](http://msdn.microsoft.com/63519ef4-e68a-42fb-9cf7-31228ea4e434)  
 
 More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

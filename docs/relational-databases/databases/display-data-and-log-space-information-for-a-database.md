@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Display Data and Log Space Information for a Database | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/01/2016"
@@ -25,7 +25,7 @@ caps.latest.revision: 28
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Display Data and Log Space Information for a Database
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

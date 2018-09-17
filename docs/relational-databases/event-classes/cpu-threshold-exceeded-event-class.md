@@ -1,4 +1,4 @@
-﻿---
+---
 title: "CPU Threshold Exceeded Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -15,7 +15,7 @@ caps.latest.revision: 15
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CPU Threshold Exceeded Event Class
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

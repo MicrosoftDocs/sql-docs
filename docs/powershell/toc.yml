@@ -1,0 +1,42 @@
+- name: Install SQL PowerShell module
+  href: download-sql-server-ps-module.md
+- name: SQL Server PowerShell overview
+  href: sql-server-powershell.md
+  items:
+  - name: SQL Server PowerShell Provider
+    href: sql-server-powershell-provider.md
+  - name: Query Expressions and Uniform Resource Names
+    href: query-expressions-and-uniform-resource-names.md
+- name: How to access SQL Server Objects
+  href: navigate-sql-server-powershell-paths.md
+- name: How to load the SMO Assemblies in Windows PowerShell
+  href: load-the-smo-assemblies-in-windows-powershell.md
+- name: How to run PowerShell in SSMS
+  href: run-windows-powershell-from-sql-server-management-studio.md
+- name: How to run PowerShell with SQL Server Agent
+  href: run-windows-powershell-steps-in-sql-server-agent.md
+- name: How to manage authentication
+  href: manage-authentication-in-database-engine-powershell.md
+- name: How to manage tab completion
+  href: manage-tab-completion-sql-server-powershell.md
+- name: Work With SQL Server PowerShell Paths
+  href: work-with-sql-server-powershell-paths.md
+- name: SQL Server Identifiers in PowerShell
+  href: sql-server-identifiers-in-powershell.md
+  items:
+  - name: Specify Instances in the SQL Server PowerShell Provider
+    href: specify-instances-in-the-sql-server-powershell-provider.md
+  - name: Encode and Decode SQL Server Identifiers
+    href: encode-and-decode-sql-server-identifiers.md
+  - name: Escape SQL Server Identifiers
+    href: escape-sql-server-identifiers.md
+- name: Resources
+  items:
+  - name: SQL Server PowerShell License Terms
+    href: sql-server-powershell-license-terms.md
+- name: Cmdlet reference
+  items:
+  - name: SqlServer cmdlets
+    href: https://docs.microsoft.com/powershell/module/sqlserver/?toc=/sql/powershell/toc.json
+  - name: SQLPS cmdlets
+    href: https://docs.microsoft.com/powershell/module/sqlps/?toc=/sql/powershell/toc.json

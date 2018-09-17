@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "08/10/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -23,8 +22,8 @@ helpviewer_keywords:
   - "granting permissions [SQL Server], impersonation"
 ms.assetid: 4cbed281-5e1e-4d8b-b410-4c18a6cd0205
 caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # GRANT Server Principal Permissions (Transact-SQL)

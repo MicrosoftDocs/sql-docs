@@ -1,10 +1,9 @@
-﻿---
+---
 title: "DROP ROLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/11/2017"
 ms.prod: sql
 ms.prod_service: "sql-data-warehouse, pdw, sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -24,10 +23,10 @@ helpviewer_keywords:
   - "dropping roles"
 ms.assetid: 1f6f13ae-56a2-4ef1-93f5-8e6151b83e1d
 caps.latest.revision: 50
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DROP ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]

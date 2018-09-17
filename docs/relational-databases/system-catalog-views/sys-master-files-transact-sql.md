@@ -1,4 +1,4 @@
-﻿---
+---
 title: "sys.master_files (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/10/2016"
@@ -21,10 +21,10 @@ helpviewer_keywords:
   - "sys.master_files catalog view"
 ms.assetid: 803b22f2-0016-436b-a561-ce6f023d6b6a
 caps.latest.revision: 56
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.master_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]

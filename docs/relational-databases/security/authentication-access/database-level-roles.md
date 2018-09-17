@@ -1,14 +1,12 @@
-﻿---
+---
 title: "Database-Level Roles | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/29/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "security"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: security
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
@@ -40,10 +38,10 @@ helpviewer_keywords:
   - "groups [SQL Server], roles"
 ms.assetid: 7f3fa5f6-6b50-43bb-9047-1544ade55e39
 caps.latest.revision: 49
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Database-Level Roles
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

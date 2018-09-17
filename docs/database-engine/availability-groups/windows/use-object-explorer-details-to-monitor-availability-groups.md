@@ -3,7 +3,6 @@ title: "Use Object Explorer Details to Monitor Availability Groups | Microsoft D
 ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: high-availability
@@ -17,8 +16,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server]"
 ms.assetid: 84affc47-40e0-43d9-855e-468967068c35
 caps.latest.revision: 28
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Use Object Explorer Details to Monitor Availability Groups
@@ -26,7 +25,7 @@ manager: craigg
   This topic describes how to use the **Object Explorer Details** pane of [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] to monitor and manage existing Always On availability groups, availability replicas, and availability databases.  
   
 > [!NOTE]  
->  For information about using the Object Explorer Details pane, see [Object Explorer Details Pane](http://msdn.microsoft.com/library/b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47).  
+>  For information about using the Object Explorer Details pane, see [Object Explorer Details Pane](../../../ssms/object/object-explorer-details-pane.md).  
   
 -   **Before you begin:**  [Prerequisites](#Prerequisites)  
   

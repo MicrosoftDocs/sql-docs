@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.component: "extending-packages-scripting-data-flow-script-component-types"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-
+ms.technology: integration-services
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -41,7 +39,7 @@ manager: craigg
  To set the script language for the Script component, you set the **ScriptLanguage** property on the **Script** page of the **Script Transformation Editor**.  
   
 > [!NOTE]  
->  To set the default scripting language for the Script component, use the **Scripting language** option on the **General** page of the **Options** dialog box. For more information, see [eneral Page](https://msdn.microsoft.com/library/ms189436(v=sql.110).aspx).  
+>  To set the default scripting language for the Script component, use the **Scripting language** option on the **General** page of the **Options** dialog box. For more information, see [eneral Page](../general-page-of-integration-services-designers-options.md).  
   
  A data flow transformation component has one input, and supports one or more outputs. Configuring the input and outputs for the component is one of the steps that you must complete in metadata design mode, by using the **Script Transformation Editor**, before you write your custom script.  
   

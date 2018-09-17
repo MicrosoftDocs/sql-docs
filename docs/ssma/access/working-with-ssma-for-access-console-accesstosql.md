@@ -1,8 +1,6 @@
 ---
 title: "Working with SSMA for Access Console (AccessToSQL) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.component: "ssma-access"
 ms.custom: ""
 ms.date: "08/17/2017"
 ms.reviewer: ""
@@ -41,5 +39,5 @@ Topics covered in this section include:
 |[Troubleshooting &#40;AccessToSQL&#41;](../../ssma/access/troubleshooting-accesstosql.md)|Provides brief information about fixing migration issues.|  
   
 ## See also  
-[Getting Started with SSMA for Access Console](http://msdn.microsoft.com/8585ec16-7e0a-483a-b250-adab9b9232a3)  
+[Getting Started with SSMA for Access Console](getting-started-with-ssma-for-access-console-accesstosql.md)  
   

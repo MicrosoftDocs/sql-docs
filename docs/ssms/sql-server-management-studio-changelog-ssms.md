@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Management Studio - Changelog (SSMS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/09/2018"
+ms.date: "09/04/2018"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.component: "ssms"
@@ -21,11 +21,162 @@ manager: craigg
 This article provides details about updates, improvements, and bug fixes for the current and previous versions of SSMS. Download [previous SSMS versions below](#previous-ssms-releases).
 
 
-## [SSMS 17.7](download-sql-server-management-studio-ssms.md)
+## [SSMS 17.9](download-sql-server-management-studio-ssms.md)
 
-Release number: 17.7<br>
+
+Build number: 14.0.17285.0<br>
+Release date: September 04, 2018
+
+### What's new
+
+**General SSMS**
+
+
+ShowPlan:
+
+- Graphical Showplan now shows the new row mode memory grant feedback attributes when the feature is activated for a specific plan: IsMemoryGrantFeedbackAdjusted and LastRequestedMemory added to the MemoryGrantInfo query plan XML element. For more on row mode memory grant feedback, see [Adaptive query processing in SQL databases](https://docs.microsoft.com/sql/relational-databases/performance/adaptive-query-processing).
+
+Azure SQL: 
+
+- Added support for vCore SKUs in Azure DB creation. For more information, see [vCore-based purchasing model](https://docs.microsoft.com/azure/sql-database/sql-database-service-tiers#vcore-based-purchasing-model).
+ 
+
+### Bug fixes
+
+**General SSMS**
+	
+Replication Monitor:
+
+- Fixed an issue that was causing Replication Monitor (SqlMonitor.exe) not to start (User Voice item: https://feedback.azure.com/forums/908035-sql-server/suggestions/34791079) 
+
+Import Flat File Wizard: 
+
+- Fixed the link to the help page for "Flat File Wizard" dialog 
+- Fixed issue where the wizard did not allow changing the destination table when the table already existed: this allows users to retry without having to exit the wizard, delete the failed table, and then reenter the information into the wizard (User Voice item: https://feedback.azure.com/forums/908035-sql-server/suggestions/32896186). 
+
+Import/Export Data-Tier Application:
+
+- Fixed an issue (in DacFx) which was causing the import of a .bacpac could fail with a message like "Error SQL72014: .Net SqlClient Data Provider: Msg 9108, Level 16, State 10, Line 1 This type of statistics is not supported to be incremental. " when dealing with tables with partitions defined and no indexes on the table. 
+
+Intellisense:
+
+- Fixed an issue where intellisense completion was not working when using AAD with MFA. 
+
+Object Explorer: 
+
+- Fixed an issue where the "Filter Dialog" was displayed on random monitors instead of the monitor where SSMS was running (multi-monitor systems).
+
+Azure SQL: 
+
+- Fixed an issue related to enumeration of databases in the "Available Databases" where "master" was not displayed in the dropdown when connected to a specific database. 
+- Fixed an issue where trying to generate a script ("Data" or "Schema and Data") was failing then connected to the SQL Azure DB using AAD with MFA. 
+- Fixed an issue in the View Designer (Views) where it was not possible to select "Add Tables" from the UI when connected to a SQL Azure DB. 
+- Fixed an issue where SSMS Query Editor was silently closing and reopening connections during MFA token renewal. This will prevent side effects unbeknownst to the user (like closing a transaction and never reopening again) from happening. The change adds the token expiration time to the properties window. 
+- Fixed an issue where SSMS was not enforcing password prompts for imported MSA accounts for AAD with MFA login. 
+
+Activity Monitor: 
+
+- Fixed a an issue that was causing "Live Query Statistics" to hang when launched from Activity Monitor and SQL Authentication was used. 
+
+Microsoft Azure integration: 
+
+- Fixed an issue where SSMS only shows the first 50 subscriptions (Always Encrypted dialogs, Backup/Restore from URL dialogs, etc…). 
+- Fixed an issue where SSMS was throwing an exception ("Index out of range") while trying to log on to an Microsoft Azure account which did not have any storage account (in Restore Backup from URL dialog). 
+
+Object Scripting: 
+
+- When scripting "Drop and Create", SSMS now avoids generating dynamic T-SQL.
+- When scripting a database object, SSMS now does not generate script to set database scoped configurations, if they are set to default values.
+
+Help:
+
+- Fixed a long outstanding issue where "Help on Help" was not honoring the online/offline mode.
+- When clicking on "Help | Community Projects and Samples" SSMS now opens the default browser that points to a Git page and shows no errors/warnings due to old browser being used.
+
+### Known issues
+
+- There are currently no known issues in this release.
+
+
+
+## Previous SSMS releases
+
+Download previous SSMS versions by clicking the title links in the following sections.
+
+## ![download](../ssdt/media/download.png) [SSMS 17.8.1](https://go.microsoft.com/fwlink/?linkid=875802)
+*A bug was discovered in 17.8 related to provisioning SQL databases, so SSMS 17.8.1 replaces 17.8.*
+
+Build number: 14.0.17277.0<br>
+Release date: June 26, 2018
+
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x40a)
+
+
+### What's new
+
+**General SSMS**
+
+Database Properties:
+
+- This improvement exposes the **AUTOGROW_ALL_FILES** configuration option for Filegroups. This new config option is added under the Database Properties > Filegroups window in the form of a new column (Autogrow All Files) of checkboxes for each available Filegroup (except for Filestream and Memory Optimized Filegroups). The user can enable/disable AUTOGROW_ALL_FILES for a particular Filegroup by toggling the corresponding Autogrow_All_Files checkbox. Correspondingly, the **AUTOGROW_ALL_FILES** option is properly scripted when scripting the database for CREATE / generating scripts for the database (SQL2016 and above).
+	
+SQL Editor:
+
+- Improved experience with Intellisense in Azure SQL Database when the user doesn't have master access.
+
+Scripting:
+
+- General performance improvements, especially over high-latency connections.
+	
+**Analysis Servics (AS)**
+
+- Analysis Services client libraries and data providers updated to the latest version, which added support for the new Azure Government AAD authority (login.microsoftonline.us).
+
+
+
+### Bug fixes
+
+**General SSMS**
+	
+Maintenance Plans:
+
+- Fixed an issue when editing maintenance plans with Sql Authentication where "Notify Operator Task" was failing when using SQL authentication.
+	
+Scripting:
+
+- Fixed an issue where PostProcess actions in SMO lead to resource exhaustion and SQL login failures
+	
+SMO:
+
+- Fixed an issue where Table.Alter() fails if adding a column with a default constraint and the table already has data. For details, see [sql server smo generating inline default constraint when adding a column to a table containing data](https://feedback.azure.com/forums/908035-sql-server/suggestions/32895625).
+	
+Always Encrypted:
+
+- Fixed an issue (in DacFx) which was causing a lock timeout error when enabling Always Encrypted on a partitioned table
+	
+
+**Analysis Services (AS)**
+
+- Fixed an issue that occurred when modifying an OAuth datasource in a Tabular Analysis Services 1400-level compatibility model, which caused the changes in the OAuth tokens to not get updated in the data source.
+- Fixed a crash in SSMS that may have occurred when using some invalid data source credentials or editing data sources that didn't support Change Data Source migration in Power Query (for example, Oracle) in Analysis Services Tabular 1400-level compatibility models.
+
+
+### Known issues
+
+- Clicking the *Script* button after modifying any filegroup property in the *Properties* window, generates two scripts – one script with a *USE <database>* statement, and a second script with a *USE master* statement.  The script with *USE master* is generated in error and should be discarded. Run the script that contains the *USE <database>* statement.
+- Some dialogs display an invalid edition error when working with new *General Purpose* or *Business Critical* Azure SQL Database editions.
+- Some latency in XEvents viewer may be observed. This is a [known issue in the .Net Framework](https://github.com/Microsoft/dotnet/blob/master/releases/net472/dotnet472-changes.md#sql). Please, consider upgrading to NetFx 4.7.2.
+
+
+
+
+## ![download](../ssdt/media/download.png) [SSMS 17.7](https://go.microsoft.com/fwlink/?linkid=873126)
+
 Build number: 14.0.17254.0<br>
 Release date: May 09, 2018
+
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x40a)
+
 
 ### What's new
 
@@ -94,7 +245,7 @@ Some dialogs display an invalid edition error when working with new *General Pur
 Build number: 14.0.17230.0<br>
 Release date: March 20, 2018
 
-[Chinese (People's Republic of China)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x804) | [Chinese (Taiwan)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x40a)
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x40a)
 
 ### What's new
 
@@ -172,14 +323,12 @@ Database Mail:
 > [!WARNING]
 > There is a known issue where SSMS 17.6 becomes unstable and crashes when using [Maintenance Plans](../relational-databases/maintenance-plans/maintenance-plans.md). If you use Maintenance Plans, do not install SSMS 17.6. Downgrade to SSMS 17.5 if you already installed 17.6 and this issue is affecting you. 
 
-## Previous SSMS releases
 
-Download previous SSMS versions by clicking the title links in the following sections.
 
 ## ![download](../ssdt/media/download.png) [SSMS 17.5](https://go.microsoft.com/fwlink/?linkid=867670)
 Generally available | Build number: 14.0.17224.0
 
-[Chinese (People's Republic of China)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x804) | [Chinese (Taiwan)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x40a)
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x40a)
 
 ### What's new
 
@@ -221,7 +370,7 @@ SMO:
 
 - Fixed an issue where SMO was not able to fetch AvailabilityReplica properties in case the server collation happened to be case-sensitive (as a result, SSMS could display an error message like "The multi-part identifier "a.delimited" could not be bound."
 - Fixed an issue in DatabaseScopedConfigurationCollection class, where incorrectly handling collations (as a result, an SSMS running on an ma machine with a Turkish locale could display an error like "legacy cardinality estimation is not valid scoped configuration" when right clicking on a database running on a server with a case-sensitive collation).
-- Fixed an issue in JobServer class, where SMO was not able to fetch SQL Agent properties on a SQL 2005 server (as a result, SSMS was throwing an error like "Cannot assign a default value to a local variable. Must declare the scalar variable "@ServiceStartMode" and, ultimately, was not displaying the SQL Agent node in Object Explorer).
+- Fixed an issue in JobServer class, where SMO was not able to fetch SQL Agent properties on a SQL 2005 server (as a result, SSMS was throwing an error like "Cannot assign a default value to a local variable. Must declare the scalar variable "\@ServiceStartMode" and, ultimately, was not displaying the SQL Agent node in Object Explorer).
 
 Templates: 
 
@@ -244,7 +393,7 @@ Data classification:
 ## ![download](../ssdt/media/download.png) [SSMS 17.4](https://go.microsoft.com/fwlink/?linkid=864329)
 Generally available | Build number: 14.0.17213.0
 
-[Chinese (People's Republic of China)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x804) | [Chinese (Taiwan)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x40a)
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x40a)
 
 
 ### What's new
@@ -340,7 +489,7 @@ Query Store:
 ## ![download](../ssdt/media/download.png) [SSMS 17.3](https://go.microsoft.com/fwlink/?linkid=858904)
 Generally available | Build number: 14.0.17199.0
 
-[Chinese (People's Republic of China)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x804) | [Chinese (Taiwan)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x40a)
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x40a)
 
 
 ### Enhancements
@@ -438,7 +587,7 @@ Generally available | Build number: 14.0.17199.0
 ## ![download](../ssdt/media/download.png) [SSMS 17.2](https://go.microsoft.com/fwlink/?linkid=854085)
 Generally available | Build number: 14.0.17177.0
 
-[Chinese (People's Republic of China)](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x804) | [Chinese (Taiwan)](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x40a)
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x40a)
 
 ### Enhancements
 
@@ -568,7 +717,7 @@ The connection is broken and recovery is not possible. The client driver attempt
 ## ![download](../ssdt/media/download.png) [SSMS 17.1](https://go.microsoft.com/fwlink/?linkid=849819)
 Generally available | Build number: 14.0.17119.0
 
-[Chinese (People's Republic of China)](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x804) | [Chinese (Taiwan)](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x40a)
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x40a)
 
 ### Enhancements
 
@@ -595,7 +744,7 @@ Generally available | Build number: 14.0.17119.0
 ## ![download](../ssdt/media/download.png) [SSMS 17.0](http://go.microsoft.com/fwlink/?LinkID=847722)
 Generally available | Build number: 14.0.17099.0
 
-[Chinese (People's Republic of China)](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x804) | [Chinese (Taiwan)](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x40a)
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x40a)
 
 ### Enhancements 
 
@@ -625,9 +774,9 @@ Generally available | Build number: 14.0.17099.0
     - Assorted Intellisense improvements
   - Universal Authentication
     - Allows users to specify a username and no password and the Azure Login Dialog will handle the connection
-  - SSMS PQ Integration: 
-    - Scripting of structured data sources works 
-    - Viewing and Editing of structured data sources in PQ UI
+  - SSMS PQ Integration: 
+    - Scripting of structured data sources works 
+    - Viewing and Editing of structured data sources in PQ UI
 - New "Add Unique Constraint" template
 - Showplan
 	- Show max instead of sum across the threads in properties window for elapsed time
@@ -639,8 +788,8 @@ Generally available | Build number: 14.0.17099.0
   - Introduced functionality in Showplan Comparison feature to find significant differences in Cardinality Estimation between matching nodes of two query plans and perform basic analysis of the possible root causes
 - Removed Configuration Manager from Registered Servers explorer
 - Enable reading audit logs from Azure blob storage
-- Added Parameterization for Always Encrypted, please refer to [this page](https://blogs.msdn.microsoft.com/sqlsecurity/2016/12/13/parameterization-for-always-encrypted-using-ssms-to-insert-into-update-and-filter-by-encrypted-columns/) for more details 
-- AAD Universal auth connection to Azure SQL DB supports custom tenant id 
+- Added Parameterization for Always Encrypted, please refer to [this page](https://blogs.msdn.microsoft.com/sqlsecurity/2016/12/13/parameterization-for-always-encrypted-using-ssms-to-insert-into-update-and-filter-by-encrypted-columns/) for more details 
+- AAD Universal auth connection to Azure SQL DB supports custom tenant id 
 - Generate scripts for Azure SQL Database, now scripts full text, rules, and database
 - Branding fixes in splash screens for SSMS and Profiler
 - Removed Utility Control Point UI from SSMS
@@ -713,9 +862,9 @@ Generally available | Build number: 14.0.17099.0
 - Fixed issue were SQL PowerShell was not able to connect legacy SQL instances (2014 and older). [Connect Item](https://connect.microsoft.com/SQLServer/feedback/details/1138754/sql-server-sqlps-powershell-module-fails-connection-to-sql-2012-instance)
 - Fixed an issue that was causing SSMS to crash when failing to import registered servers.
 - Fixed an issue that was causing SSMS to crash if a user has certain permissions an a database. 
-- SSMS - tables disappear from design surface while reviewing views. [Connect Item](https://connect.microsoft.com/SQLServer/feedback/details/2946125/ssms-tables-disappears-from-design-surface-while-reviewing-views) 
+- SSMS - tables disappear from design surface while reviewing views. [Connect Item](https://connect.microsoft.com/SQLServer/feedback/details/2946125/ssms-tables-disappears-from-design-surface-while-reviewing-views) 
 - The table scrollbar does not allow the user to scroll the table content, only the up/down Arrow allow this. Its also possible to scroll the table content after trying to scroll using the scrollbar which is a bug. [Connect Item](
-http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manager-2016-bug-in-design-view) 
+http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manager-2016-bug-in-design-view) 
 - Registered Servers not displaying icons after refreshing the root node.
 - Script button for Create Database on Azure v12 servers executes script then displays message "No action to be scripted".
 - SSMS Connect to Server dialog does not clear "Additional Properties" tab for each new connection.
@@ -762,7 +911,7 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 ## ![download](../ssdt/media/download.png) [SSMS 16.5.3](http://go.microsoft.com/fwlink/?LinkID=840946)
 Generally available | Build number: 13.0.16106.4
 
-[Chinese (People's Republic of China)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x804) | [Chinese (Taiwan)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x40a)
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x40a)
 
 The following issues were fixed this release:
 
@@ -781,11 +930,11 @@ The following issues were fixed this release:
 * *Open recent* menu doesn't show recently saved files. [Connect ID 3113288](https://connect.microsoft.com/SQLServer/feedback/details/3113288/ssms-2016-open-recent-menu-doesnt-show-recently-saved-files)
 
 * SSMS is slow when right-clicking an index for a table (over a remote (Internet) connection). [Connect ID 3114074](https://connect.microsoft.com/SQLServer/feedback/details/3114074/ssms-slow-when-right-clicking-an-index-for-a-table-over-a-remote-internet-connection)
- 
+ 
 * Fixed an issue with the SQL Designer scrollbar. [Connect ID 3114856](http://connect.microsoft.com/SQLServer/feedback/details/3114856/bug-in-scrollbar-on-sql-desginer-in-ssms-2016)
 
-* Context menu for tables momentarily hangs 
- 
+* Context menu for tables momentarily hangs 
+ 
 * SSMS occasionally throws exceptions in Activity Monitor and crashes. [Connect ID 697527](https://connect.microsoft.com/SQLServer/feedback/details/697527/)
 
 * SSMS 2016 crashes with error "The process was terminated due to an internal error in the .NET Runtime at IP 71AF8579 (71AE0000) with exit code 80131506"
@@ -805,7 +954,7 @@ Generally available | Build number: 13.0.16100.1
 Generally available | Build number: 13.0.16000.28
 
 
-[Chinese (People's Republic of China)](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x804) | [Chinese (Taiwan)](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x40a)
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x40a)
 
 * Fixed an issue where a crash could occur when a database with table name containing “;:” was clicked on.
 * Fixed an issue where changes made to the Model page in AS Tabular Database Properties window would script out the original definition. 
@@ -831,7 +980,7 @@ Generally available | Build number: 13.0.16000.28
 ## ![download](../ssdt/media/download.png) [SSMS 16.4.1 (September 2016)](http://go.microsoft.com/fwlink/?LinkID=828615)
 Generally available | Build number: 13.0.15900.1
 
-[Chinese (People's Republic of China)](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x804) | [Chinese (Taiwan)](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x40a)
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x40a)
 
 *  Fixed an issue where attempting to ALTER/Modify a Stored Procedure fails:  
 [Microsoft Connect item #3103831](https://connect.microsoft.com/SQLServer/feedback/details/3103831)
@@ -896,7 +1045,7 @@ Generally available | Build number: 13.0.15900.1
 Generally available | Version number: 13.0.15700.28
 
 
-[Chinese (People's Republic of China)](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x804) | [Chinese (Taiwan)](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x40a)
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x40a)
 
 * SSMS monthly releases are now branded numerically.
 
@@ -954,7 +1103,7 @@ Generally available | Version number: 13.0.15700.28
 ## ![download](../ssdt/media/download.png) [SSMS July 2016 hotfix update](http://go.microsoft.com/fwlink/?LinkID=822301)
 Generally available | Version number: 13.0.15600.2
 
-[Chinese (People's Republic of China)](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x804) | [Chinese (Taiwan)](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x40a)
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x40a)
 
 * **Bug fix in SSMS to enable missing right-click menu items**.  
 *Linked customer bug requests:*  
@@ -1024,7 +1173,7 @@ Generally available | Version number: 13.0.15500.91
 ## ![download](../ssdt/media/download.png) [SSMS June 2016](http://go.microsoft.com/fwlink/?LinkID=799832)
 Generally available | Version number: 13.0.15000.23
 
-[Chinese (People's Republic of China)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x804) | [Chinese (Taiwan)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40a)
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40a)
 
 * SSMS is generally available starting with the June 2016 release.
 

@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/26/2018"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: "php"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: connectivity
@@ -19,7 +18,7 @@ manager: craigg
 # PDO Class
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-The PDO class contains methods that allow your PHP application to connect to an [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] instance.  
+The PDO class contains methods that allow your PHP application to connect to an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.  
   
 ## Syntax  
   

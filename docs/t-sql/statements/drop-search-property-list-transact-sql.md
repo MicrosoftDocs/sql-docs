@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -22,8 +21,8 @@ helpviewer_keywords:
   - "search property lists [SQL Server], deleting"
 ms.assetid: 7c7ce52a-6b77-4a1c-9abf-d5feb664bea8
 caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # DROP SEARCH PROPERTY LIST (Transact-SQL)

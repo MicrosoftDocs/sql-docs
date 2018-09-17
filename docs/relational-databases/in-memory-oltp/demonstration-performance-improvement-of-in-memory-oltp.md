@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Demonstration: Performance Improvement of In-Memory OLTP | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/19/2016"
@@ -15,7 +15,7 @@ caps.latest.revision: 16
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Demonstration: Performance Improvement of In-Memory OLTP
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

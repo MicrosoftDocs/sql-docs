@@ -1,4 +1,4 @@
-﻿---
+---
 title: "About SQL Server Analysis Services | Microsoft Docs"
 ms.date: 05/08/2018
 ms.prod: sql
@@ -34,7 +34,7 @@ In general, [Azure Analysis Services documentation](https://docs.microsoft.com/a
 *  [Power Pivot for SharePoint](../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)  
 *  [Tutorials](../analysis-services/analysis-services-tutorials-ssas.md)   
 *  [Server management](../analysis-services/instances/analysis-services-instance-management.md)    
-*  [Developer documentation](https://msdn.microsoft.com/library/bb500153(SQL.130).aspx)  
+*  [Developer documentation](analysis-services-developer-documentation.md)  
 *  [Technical reference](../analysis-services/powershell/technical-reference-ssas.md)
 
 See also

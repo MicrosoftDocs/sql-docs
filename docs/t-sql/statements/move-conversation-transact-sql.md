@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "07/26/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -25,8 +24,8 @@ helpviewer_keywords:
   - "conversations [Service Broker], moving"
 ms.assetid: 1da4d2c9-e767-434e-b49b-615711a7f626
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # MOVE CONVERSATION (Transact-SQL)

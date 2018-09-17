@@ -2,13 +2,11 @@
 title: "CREATE EXTERNAL TABLE AS SELECT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/10/2017"
-ms.prod: ""
 ms.prod_service: "sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.service: "sql-data-warehouse"
-ms.component: "t-sql|statements"
+ms.service: sql-data-warehouse
 ms.suite: "sql"
-ms.technology: t-sql
+ms.component: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
@@ -21,9 +19,8 @@ helpviewer_keywords:
   - "External, table create as select"
   - "PolyBase, create table as select"
 ms.assetid: 32dfe254-6df7-4437-bfd6-ca7d37557b0a
-caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: ronortloff
+ms.author: rortloff
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---

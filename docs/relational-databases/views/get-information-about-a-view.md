@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Get Information About a View | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -25,10 +25,10 @@ caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Get Information About a View
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
   You can gain information about a view’s definition or properties in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. You may need to see the definition of the view to understand how its data is derived from the source tables or to see the data defined by the view.  
   
 > [!IMPORTANT]  

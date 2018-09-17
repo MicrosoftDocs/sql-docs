@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|functions"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -22,8 +21,8 @@ helpviewer_keywords:
   - "database nullability [SQL Server]"
 ms.assetid: 189399e4-428d-4902-b3a8-94f07fdefc6a
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # GETANSINULL (Transact-SQL)

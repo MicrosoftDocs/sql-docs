@@ -1,8 +1,6 @@
 ---
 title: "Connecting to Oracle Database (OracleToSQL) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.component: "ssma-oracle"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -19,7 +17,7 @@ ms.author: "Shamikg"
 manager: "v-thobro"
 ---
 # Connecting to Oracle Database (OracleToSQL)
-To migrate Oracle databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], you must connect to the Oracle database that you want to migrate. When you connect, SSMA obtains metadata about all Oracle schemas, and then displays it in the Oracle Metadata Explorer pane. SSMA stores information about the database server, but does not store passwords.  
+To migrate Oracle databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you must connect to the Oracle database that you want to migrate. When you connect, SSMA obtains metadata about all Oracle schemas, and then displays it in the Oracle Metadata Explorer pane. SSMA stores information about the database server, but does not store passwords.  
   
 Your connection to the database stays active until you close the project. When you reopen the project, you must reconnect if you want an active connection to the database.  
   
@@ -43,7 +41,7 @@ The account that is used to connect to the Oracle database must have at least **
 -   SELECT ANY DICTIONARY  
   
 ## Establishing a Connection to Oracle  
-When you connect to a database, SSMA reads the database metadata, and then adds this metadata to the project file. This metadata is used by SSMA when it converts objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] syntax, and when it migrates data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. You can browse this metadata in the Oracle Metadata Explorer pane and review properties of individual database objects.  
+When you connect to a database, SSMA reads the database metadata, and then adds this metadata to the project file. This metadata is used by SSMA when it converts objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] syntax, and when it migrates data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. You can browse this metadata in the Oracle Metadata Explorer pane and review properties of individual database objects.  
   
 > [!IMPORTANT]  
 > Before you try to connect, make sure that the database server is running and can accept connections.  
@@ -93,7 +91,7 @@ When you connect to a database, SSMA reads the database metadata, and then adds 
     For more information, see [Connect To Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md).  
   
 ## Reconnecting to Oracle  
-Your connection to the database server stays active until you close the project. When you reopen the project, you must reconnect if you want an active connection to the database. You can work offline until you want to update metadata, load database objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], and migrate data.  
+Your connection to the database server stays active until you close the project. When you reopen the project, you must reconnect if you want an active connection to the database. You can work offline until you want to update metadata, load database objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and migrate data.  
   
 ## Refreshing Oracle Metadata  
 Metadata about the Oracle database is not automatically refreshed. The metadata in Oracle Metadata Explorer is a snapshot of the metadata when you first connected, or the last time that you manually refreshed metadata. You can manually update metadata for all schemas, a single schema, or individual database objects.  
@@ -118,11 +116,11 @@ Metadata about the Oracle database is not automatically refreshed. The metadata 
   
     To view the definitions of the color coding, click the **Legend** button.  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok_md.md)]  
+5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## Next Step  
   
--   The next step in the migration process is to [Connect to an instance of SQL Server](http://msdn.microsoft.com/en-us/1b2a8059-1829-4904-a82f-9c06de1e245f).  
+-   The next step in the migration process is to [Connect to an instance of SQL Server](connecting-to-sql-server-oracletosql.md).  
   
 ## See Also  
 [Migrating Oracle Databases to SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  

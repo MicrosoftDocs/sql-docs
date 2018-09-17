@@ -1,8 +1,6 @@
 ---
 title: "Data Migration Report (DB2ToSQL) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.component: "ssma-db2"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -20,7 +18,7 @@ ms.author: "Shamikg"
 manager: craigg
 ---
 # Data Migration Report (DB2ToSQL)
-The **Data Migration Report** dialog box appears after you migrate data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+The **Data Migration Report** dialog box appears after you migrate data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## Options  
 **Status**  

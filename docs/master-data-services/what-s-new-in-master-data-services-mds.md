@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "07/08/2016"
 ms.prod: sql
 ms.prod_service: "mds"
-ms.component: "non-specific"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
@@ -33,7 +32,7 @@ manager: craigg
   
 -   To download [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], go to  **[Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**.  
   
--   Have an Azure account?  Then go **[Here](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** to spin up a Virtual Machine with [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] already installed.  
+-   Have an Azure account?  Then go **[Here](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** to spin up a Virtual Machine with [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] already installed.  
   
 ##  Improved Performance  
   

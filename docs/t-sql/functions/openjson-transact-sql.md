@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "07/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|functions"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-json"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "JSON, importing"
   - "JSON, converting from"
 ms.assetid: 233d0877-046b-4dcc-b5da-adeb22f78531
-caps.latest.revision: 32
 author: "jovanpop-msft"
 ms.author: "jovanpop"
 ms.reviewer: douglasl
@@ -357,7 +354,7 @@ DECLARE @json NVARCHAR(max)  = N'{
   WITH (id int,  
         firstName nvarchar(50), lastName nvarchar(50),   
         isAlive bit, age int,  
-        dateOfBirth datetime2, spouse nvarchar(50)
+        dateOfBirth datetime2, spouse nvarchar(50))
 ```  
   
 ## See Also  

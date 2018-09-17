@@ -1,14 +1,12 @@
-﻿---
+---
 title: "Server-Level Roles | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/24/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, pdw"
-ms.component: "security"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: security
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
@@ -25,10 +23,10 @@ helpviewer_keywords:
   - "authentication [SQL Server], roles"
 ms.assetid: 7adf2ad7-015d-4cbe-9e29-abaefd779008
 caps.latest.revision: 52
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Server-Level Roles
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]

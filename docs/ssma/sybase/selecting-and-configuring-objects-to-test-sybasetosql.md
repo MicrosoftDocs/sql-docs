@@ -3,8 +3,6 @@ title: "Selecting and Configuring Objects to Test (SybaseToSQL) | Microsoft Docs
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.component: "ssma-sybase"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: ssma
@@ -38,7 +36,7 @@ Establish the comparison rules for output parameters and return values in the **
 ### Use During Comparisons  
 Enable using of the selected parameter in test results comparison.  
   
--   If you choose **True**, SSMA will compare the output value of this parameter after executing the procedure on Sybase with the corresponding value on [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]  
+-   If you choose **True**, SSMA will compare the output value of this parameter after executing the procedure on Sybase with the corresponding value on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 -   If you choose**False**, the parameter will be excluded from results verification.  
   

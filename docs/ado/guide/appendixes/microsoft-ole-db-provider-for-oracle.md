@@ -2,7 +2,6 @@
 title: "Microsoft OLE DB Provider for Oracle | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: "ado"
 ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -59,7 +58,7 @@ MSDAORA
 ## Provider-Specific Connection Parameters
  The provider supports several provider-specific connection parameters in addition to those defined by ADO. As with the ADO connection properties, these provider-specific properties can be set via the [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) collection of a [Connection](../../../ado/reference/ado-api/connection-object-ado.md) or as part of the **ConnectionString**.
 
- These parameters are fully described in the [OLE DB Programmer's Reference](http://msdn.microsoft.com/en-us/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8). The [ADO Dynamic Property Index](../../../ado/reference/ado-api/ado-dynamic-property-index.md) provides a cross-reference between these parameter names and the corresponding OLE DB properties.
+ These parameters are fully described in the [OLE DB Programmer's Reference](http://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8). The [ADO Dynamic Property Index](../../../ado/reference/ado-api/ado-dynamic-property-index.md) provides a cross-reference between these parameter names and the corresponding OLE DB properties.
 
 |Parameter|Description|
 |---------------|-----------------|

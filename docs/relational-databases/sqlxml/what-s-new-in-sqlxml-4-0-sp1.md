@@ -1,4 +1,4 @@
-﻿---
+---
 title: "What&#39;s New in SQLXML 4.0 SP1 | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
@@ -24,7 +24,7 @@ caps.latest.revision: 67
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # What&#39;s New in SQLXML 4.0 SP1
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

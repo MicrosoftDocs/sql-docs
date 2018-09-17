@@ -1,4 +1,4 @@
-﻿---
+---
 title: "sys.sql_logins (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/20/2016"
@@ -20,11 +20,10 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.sql_logins catalog view"
 ms.assetid: 0d9c5b09-86fe-40ff-baab-00b7c051402f
-caps.latest.revision: 43
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.sql_logins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]

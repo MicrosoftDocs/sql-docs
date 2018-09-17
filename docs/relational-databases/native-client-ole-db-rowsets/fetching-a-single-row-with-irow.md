@@ -1,14 +1,12 @@
-﻿---
+---
 title: "Fetching a Single Row with IRow | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "native-client-ole-db-rowsets"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-
+ms.technology: native-client
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -23,7 +21,7 @@ caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Fetching a Single Row with IRow
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

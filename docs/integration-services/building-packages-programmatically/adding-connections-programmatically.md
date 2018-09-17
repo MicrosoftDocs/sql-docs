@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.component: "building-packages-programmatically"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-
+ms.technology: integration-services 
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -204,7 +202,7 @@ End Class
   
  `Connection description: OLE DB connection to the AdventureWorks database.`  
   
- `Connection description: OLE DB connection to the AdventureWorks database.`  
+ `Connection description: Flat File connection.`  
   
  `Number of connections in package: 2`  
   

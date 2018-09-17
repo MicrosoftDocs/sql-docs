@@ -1,8 +1,6 @@
 ---
 title: "Working with SSMA Projects (MySQLToSQL) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.component: "ssma-mysql"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -56,7 +54,7 @@ SSMA contains several settings for converting and loading database, migrating da
   
 -   For information about settings for Synchronization to SQL Server, see [Project Settings &#40;Synchronization&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-synchronization-mysqltosql.md).  
   
--   For information about GUI settings, see [Project Settings (GUI) (SSMA Common)](http://msdn.microsoft.com/en-us/cf06baf1-8714-48a3-95dc-781f6ca53693).  
+-   For information about GUI settings, see [Project Settings (GUI) (SSMA Common)](http://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693).  
   
 -   For information about data type mapping settings, see [Project Settings &#40;Type Mapping&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md).  
   
@@ -76,15 +74,15 @@ To migrate data from MySQL databases to SQL Server or SQL Azure, you must create
   
 3.  In the **Location** box, enter or select a folder for the project.  
   
-4.  In the **Migration To** drop down, select the version of target [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] used for migration. The options available are:  
+4.  In the **Migration To** drop down, select the version of target [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] used for migration. The options available are:  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014  
   
     -   Azure SQL DB  
   

@@ -119,8 +119,7 @@ GO
   
     ```  
     EXEC msdb.managed_backup.sp_backup_config_basic  
-                    @database_name = 'TestDB'   
-                    ,@enable_backup = 0;  
+                    @enable_backup = 0;  
     GO  
   
     ```  

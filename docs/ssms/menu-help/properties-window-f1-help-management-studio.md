@@ -52,5 +52,5 @@ Displays the properties for an object.
 The description pane appears at the bottom of the **Properties** window and shows the property type and a short description of the property. You can turn the description of the property off and on using the **Description** command on the shortcut menu.  
   
 ## See Also  
-[Properties Window in SQL Server Management Studio](http://msdn.microsoft.com/en-us/903d4aca-f57c-43d9-a893-702eceaa7004)  
+[Properties Window in SQL Server Management Studio](../../relational-databases/scripting/use-the-properties-window-in-management-studio.md)  
   

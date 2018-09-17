@@ -1,6 +1,6 @@
 ---
 title: "CALL Statement (MDX) | Microsoft Docs"
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ---
 # MDX Data Manipulation - CALL
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Runs a stored procedure that returns a void either in the current scope or optionally on a specified cube.  
   
@@ -42,7 +42,7 @@ CALL SP_Name
  If a cube is not specified, the statement runs the stored procedure on the current cube.  
   
 > [!NOTE]  
->  If the stored procedure is not registered on the client, the **CALL** statement attempts to call the stored procedure from an instance of [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
+>  If the stored procedure is not registered on the client, the **CALL** statement attempts to call the stored procedure from an instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
 ## See Also  
  [MDX Data Manipulation Statements &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   

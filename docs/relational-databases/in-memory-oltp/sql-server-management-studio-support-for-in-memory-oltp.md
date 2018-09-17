@@ -1,4 +1,4 @@
-﻿---
+---
 title: "SQL Server Management Studio Support for In-Memory OLTP | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,7 +15,7 @@ caps.latest.revision: 31
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server Management Studio Support for In-Memory OLTP
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
   
 2.  To replace the template parameters, click **Specify Values for Template Parameters** on the **Query** menu.  
   
-     For more information on how to use templates, see [Template Explorer](http://msdn.microsoft.com/library/b9ee55c5-bb44-4f76-90ac-792d8d83b4c8).  
+     For more information on how to use templates, see [Template Explorer](../../ssms/template/template-explorer.md).  
   
 3.  In **Object Explorer**, tables will be ordered first by disk-based tables followed by memory-optimized tables. Use **Object Explorer Details** to see all tables ordered by name.  
   

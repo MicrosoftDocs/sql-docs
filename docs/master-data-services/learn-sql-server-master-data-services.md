@@ -4,13 +4,12 @@ ms.custom: ""
 ms.date: "02/14/2017"
 ms.prod: sql
 ms.prod_service: "mds"
-ms.component: "non-specific"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "master-data-services"
 ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+ms.topic: quickstart
 keywords: 
   - "learn sql"
 ms.assetid: 87516551-a3b6-4b29-928b-ddd25672a98c

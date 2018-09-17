@@ -1,10 +1,9 @@
 ---
 title: "CREATE EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/06/2017"
+ms.date: "08/20/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "External"
   - "External, data source"
   - "PolyBase, create data source"
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -55,10 +54,10 @@ CREATE EXTERNAL DATA SOURCE data_source_name
 [;]  
   
 -- PolyBase only: Azure Storage Blob as data source   
--- (on SQL Server 2016 and Azure SQL Data Warehouse)  
+-- (on SQL Server 2016)  
 CREATE EXTERNAL DATA SOURCE data_source_name  
     WITH (   
-        TYPE = HADOOP,  
+        TYPE = BLOB_STORAGE,  
         LOCATION = 'wasb[s]://container@account_name.blob.core.windows.net'
         [, CREDENTIAL = credential_name ]
     )  
@@ -87,7 +86,7 @@ CREATE EXTERNAL DATA SOURCE data_source_name
 -- (on Parallel Data Warehouse)
 CREATE EXTERNAL DATA SOURCE data_source_name
     WITH ( 
-        TYPE = HADOOP,
+        TYPE = BLOB_STORAGE,
         LOCATION = 'wasb[s]://container@account_name.blob.core.windows.net'
     )
 [;]
@@ -194,6 +193,8 @@ For a step-by-step tutorial on RDBMS, see [Getting started with cross-database q
 **BLOB_STORAGE**   
 For bulk operations only, `LOCATION` must be valid the URL to Azure Blob storage and container. Do not put **/**, file name, or shared access signature parameters at the end of the `LOCATION` URL.   
 The credential used, must be created using `SHARED ACCESS SIGNATURE` as the identity. For more information on shared access signatures, see [Using Shared Access Signatures (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1). For an example of accessing blob storage, see example F of [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md). 
+>[!NOTE] 
+>To load from Azure Blob storage into SQL DW or Parallel Data Warehouse, the Secret must be the Azure Storage Key.
 
   
  RESOURCE_MANAGER_LOCATION = '*ResourceManager_URI*[:*port*]'  

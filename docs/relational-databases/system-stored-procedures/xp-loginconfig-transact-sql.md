@@ -18,9 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "xp_loginconfig"
 ms.assetid: d380e799-2857-408a-bcbf-5e73a8e6aa5a
-caps.latest.revision: 38
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # xp_loginconfig (Transact-SQL)

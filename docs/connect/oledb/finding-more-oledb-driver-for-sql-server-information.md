@@ -2,7 +2,7 @@
 title: "Finding More OLE DB Driver for SQL Server Information | Microsoft Docs"
 description: "Where to find more OLE DB Driver for SQL Server information"
 ms.custom: ""
-ms.date: "03/26/2018"
+ms.date: "06/14/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.component: "oledb"
@@ -14,8 +14,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "MSOLEDBSQL, additional resources"
   - "OLE DB Driver for SQL Server, additional resources"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Finding More OLE DB Driver for SQL Server Information

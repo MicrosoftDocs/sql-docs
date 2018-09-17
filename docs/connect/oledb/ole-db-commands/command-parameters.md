@@ -2,10 +2,10 @@
 title: "Command Parameters | Microsoft Docs"
 description: "Command parameters"
 ms.custom: ""
-ms.date: "03/26/2018"
+ms.date: "06/14/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "ole-db-commands"
+ms.component: "oledb|ole-db-commands"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: connectivity
@@ -17,12 +17,14 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, commands"
   - "parameters [OLE DB Driver for SQL Server], OLE DB"
   - "commands [OLE DB]"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Command Parameters
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Parameters are marked in command text with the question mark character. For example, the following SQL statement is marked for a single input parameter:  
   

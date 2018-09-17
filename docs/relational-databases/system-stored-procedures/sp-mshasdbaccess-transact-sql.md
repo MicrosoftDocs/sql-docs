@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sp_MShasdbaccess"
 ms.assetid: a9a23b90-2c60-4460-80a7-d7e14cc5a6a8
 caps.latest.revision: 14
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_MShasdbaccess (Transact-SQL)

@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|xml"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -67,7 +66,7 @@ XQuery [xmldb_test.xmlcol.query()]: Attribute may not appear outside of an eleme
  Location steps, function parameters, and operators that require singletons will return an error if the compiler cannot determine whether a singleton is guaranteed at run time. This problem occurs frequently with untyped data. For example, the lookup of an attribute requires a singleton parent element. An ordinal that selects a single parent node is sufficient. The evaluation of a **node()**-**value()** combination to extract attribute values may not require the ordinal specification. This is shown in the next example.  
   
 ### Example: Known Singleton  
- In this example, the **nodes()** method generates a separate row for each <`book`> element. The **value()** method that is evaluated on a <`book`> node extracts the value of @genre and, being an attribute, is a singleton.  
+ In this example, the **nodes()** method generates a separate row for each <`book`> element. The **value()** method that is evaluated on a <`book`> node extracts the value of \@genre and, being an attribute, is a singleton.  
   
 ```  
 SELECT nref.value('@genre', 'varchar(max)') LastName  

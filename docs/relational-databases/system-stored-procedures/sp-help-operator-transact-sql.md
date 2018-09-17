@@ -90,7 +90,7 @@ sp_help_operator
   
 -   **SQLAgentOperatorRole**  
   
- For details about the permissions of these roles, see [SQL Server Agent Fixed Database Roles](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ For details about the permissions of these roles, see [SQL Server Agent Fixed Database Roles](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
 ## Examples  
  The following example reports information about operator `François Ajenstat`.  

@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: t-sql
@@ -22,8 +21,8 @@ helpviewer_keywords:
   - "contracts [Service Broker], permissions"
 ms.assetid: c5579976-97c4-4123-be0c-d0b98a9e38fb
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # GRANT Service Broker Permissions (Transact-SQL)

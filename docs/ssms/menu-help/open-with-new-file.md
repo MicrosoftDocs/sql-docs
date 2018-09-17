@@ -38,11 +38,11 @@ Click this button to add a program to the list under **Select a program to open*
 To remove a program, select the program and then click **Remove**.  
   
 **Set as Default**  
-To specify a default editor (and language encoding options, if applicable) for the type of file selected, choose a program from the list under **Select a program to open** and then click **Set as Default**. The next time you open this type of file in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], the document will open in the new default editor.  
+To specify a default editor (and language encoding options, if applicable) for the type of file selected, choose a program from the list under **Select a program to open** and then click **Set as Default**. The next time you open this type of file in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], the document will open in the new default editor.  
   
 > [!NOTE]  
 > In the list of programs under **Select a program to open**, the name of the default editor for the type of file selected is followed by **(Default)**.  
   
 ## See Also  
-[Associating File Extensions to a Code Editor](http://msdn.microsoft.com/en-us/193630f4-93de-4950-8f36-68702531f925)  
+[Associating File Extensions to a Code Editor](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)  
   

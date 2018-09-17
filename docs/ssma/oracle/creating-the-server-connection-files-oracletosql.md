@@ -1,8 +1,6 @@
 ---
 title: "Creating the Server Connection Files (OracleToSQL) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.component: "ssma-oracle"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -105,5 +103,5 @@ Server information can be specified either in the servers section of the script 
 The next step in operating the console is [Executing the SSMA Console &#40;OracleToSQL&#41;](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)  
   
 ## See Also  
-[Executing the SSMA Console](http://msdn.microsoft.com/en-us/7228ccba-c69f-4b4c-8664-01a2750183c5)  
+[Executing the SSMA Console](executing-the-ssma-console-oracletosql.md)  
   

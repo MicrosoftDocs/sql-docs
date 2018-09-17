@@ -1,6 +1,6 @@
 ---
 title: "Aggregate (MDX) | Microsoft Docs"
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ---
 # Aggregate (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Returns a number that is calculated by aggregating over the cells returned by the set expression. If a numeric expression is not provided, this function aggregates each measure within the current query context by using the default aggregation operator that is specified for each measure. If a numeric expression is provided, this function first evaluates, and then sums, the numeric expression for each cell in the specified set.  
   

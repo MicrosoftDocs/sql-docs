@@ -5,7 +5,7 @@ author: rothja
 ms.author: jroth 
 manager: craigg
 ms.date: 03/17/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ""
 ms.suite: "sql"
@@ -20,11 +20,12 @@ ms.custom: "sql-linux"
 There are several ways to manage SQL Server 2017 on Linux. The following section provides a quick overview of different management tools and techniques with pointers to more resources.
 
 ## mssql-conf 
+
 The **mssql-conf** tool configures SQL Server on Linux. For more information, see [Configure SQL Server on Linux with mssql-conf](sql-server-linux-configure-mssql-conf.md).
 
 ## Transact-SQL
 
-Almost everything you can do in a client tool can also be accomplished with Transact-SQL statements. SQL Server provides [Dynamic Management Views (DMVs)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) that query the status and configuration of SQL Server. There are also [Transact-SQL commands](https://msdn.microsoft.com/library/bb510741.aspx) for database management tasks. You can run these commands in any client tool that supports connecting to SQL Server and running Transact-SQL queries, for example [sqlcmd](sql-server-linux-setup-tools.md) or [Visual Studio Code](sql-server-linux-develop-use-vscode.md).
+Almost everything you can do in a client tool can also be accomplished with Transact-SQL statements. SQL Server provides [Dynamic Management Views (DMVs)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) that query the status and configuration of SQL Server. There are also [Transact-SQL commands](../t-sql/language-reference.md) for database management tasks. You can run these commands in any client tool that supports connecting to SQL Server and running Transact-SQL queries, for example [sqlcmd](sql-server-linux-setup-tools.md) or [Visual Studio Code](sql-server-linux-develop-use-vscode.md).
 
 ## SQL Server Operations Studio (preview)
 

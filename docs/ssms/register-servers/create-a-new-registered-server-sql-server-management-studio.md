@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-registration"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: ssms
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
@@ -102,7 +100,7 @@ manager: craigg
  To execute queries against all the servers that are registered with a Central Management Server, expand the Central Management Server, right-click the server group, point to click **Connect**, and then click **New Query**. When queries are executed in the new Query Editor window, they will execute against all of the servers in the server group, using the stored connection information and using the Windows Authentication context of the user.  
   
 ## See Also  
- [Hide System Objects in Object Explorer](http://msdn.microsoft.com/library/c01d8804-838c-4f75-b78c-80e41e4fffdc)   
+ [Hide System Objects in Object Explorer](../object/hide-system-objects-in-object-explorer.md)   
  [Export Registered Server Information &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/export-registered-server-information-sql-server-management-studio.md)   
  [Import Registered Server Information &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/import-registered-server-information-sql-server-management-studio.md)  
   

@@ -1,22 +1,18 @@
 ---
 title: "Integrating Reporting Services into Applications | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/19/2017"
+ms.date: 10/19/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.component: "application-integration"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: application-integration
+ms.suite: pro-bi
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+ms.topic: reference
 applies_to: 
   - "SQL Server 2016 Preview"
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
+monikerRange: "= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Integrating Reporting Services into Applications
 

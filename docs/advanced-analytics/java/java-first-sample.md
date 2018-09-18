@@ -187,21 +187,44 @@ public class OutputRow {
 
 ## 5 - Compile
 
-Once you have your classes ready, run javac to compile them into ".class" files. You should have three .class files for this sample. (Ngram.class, InputRow.class and OutputRow.class).
+Once you have your classes ready, run javac to compile them into ".class" files (`javac Ngram.java InputRow.java OutputRow.java). You should get three .class files for this sample (Ngram.class, InputRow.class, and OutputRow.class).
 
-Place these file in a subfolder called "pkg" in your classpath location. For example, if the classpath location is called '/home/myclasspath/', then the .class files should be in '/home/myclasspath/pkg'.
+On the SQL Server computer, place these files in a subfolder called "pkg" in your classpath location. For example, on Linux, if the classpath location is called '/home/myclasspath/', then the .class files should be in '/home/myclasspath/pkg'. In this sample, the CLASSPATH provided in the sp_execute_external_script is '/home/myclasspath/' assuming Linux. 
 
-In this sample, the CLASSPATH provided in the sp_execute_external_script is '/home/myclasspath/'.
+If you are using Windows, set the value to a Windows folder path 'C:\myJavaCode'. In this CTP, use a relatively shallow folder structure to simplify permissions.
+
+For instructions on how to set the classpath, see [Set CLASSPATH](howto-call-java-from-sql.md#set-classpath). 
 
 ### Using jar files
 
-If you plan to package your classes and dependencies into .jar files, you can do so and provide the full path to the .jar file in the sp_execute_external_script CLASSPATH parameter.
+If you plan to package your classes and dependencies into .jar files, provide the full path to the .jar file in the sp_execute_external_script CLASSPATH parameter. For example, if the jar file is called 'ngram.jar', the CLASSPATH will be '/home/myclasspath/ngram.jar'
 
-For example, if the jar file is called 'ngram.jar', the CLASSPATH will be '/home/myclasspath/ngram.jar'
+## 6 - Permissions
+
+Grant permissions on the compiled code so that SQL Server Launchpad service and AppContainers can execute it.
+
+### On Windows
+
+Grant 'Read and Execute' permissions to **SQLRUserGroup** and the **All application packages** SID on the folder containing your compiled Java code. The entire folder path must have permissions, including parent folders. 
+ 
+1. Right-click the folder (for example, 'C:\myJavaCode'), choose **Properties** > **Security**.
+2. Click **Edit**.
+3. Click **Add**.
+4. In **Select Users, Computer, SErvice Accounts, or Groups**:
+   + Click **Object Types** and make sure *Built-in security principles* and *Groups* are selected.
+   + Click **Locations** to select the local computer name at the top of the list.
+5. Enter **SQLRUserGroup**, check the name, and then click OK to add the group.
+6. Enter **all application packages**, check the name, and then click OK to add.
+
+Make sure both security identities have 'Read and Execute' permissions on the folder.
+
+### On Linux
+
+Grant read/execute permissions on the classpath to the **mssql-satellite** user.
 
 <a name="call-method"></a>
 
-## 6 - Call *getNgrams()*
+## 7 - Call *getNgrams()*
 
 To call the code from SQL Server, specify the Java method *getNgrams()* from the "script" parameter of sp_execute_external_script. This method belongs to a package called "pkg" and a class file called **Ngram.java**.
 

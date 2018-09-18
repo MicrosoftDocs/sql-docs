@@ -14,7 +14,7 @@ author: "stevestein"
 ms.author: "sstein"
 manager: craigg
 ---
-# [!INCLUDE[name-sos](../includes/name-sos.md)] FAQ
+# [!INCLUDE[Azure Data Studio](../includes/name-sos.md)] FAQ
 
 ## What is Azure Data Studio?
 
@@ -186,4 +186,4 @@ Yes. Azure Data Studio support for Azure SQL Data Warehouse is currently in prev
 
 ## Why is Azure Data Studio important for the new version of SQL Server?
 
-As SQL Server extends its capabilities into the Big Data space, it needs new tooling to support those use cases. For that reason, Azure Data Studio is today shipping a new preview experience of support for SQL Server Big Data, including the first ever notebook experience in the SQL Server toolset and a new Virtualize External Data wizard that makes accessing data from remote SQL Server and Oracle instances easy and fast.
+As SQL Server extends its capabilities into the Big Data space, it needs new tooling to support those use cases. For that reason, Azure Data Studio is today shipping a new preview experience of support for SQL Server Big Data, including the first ever notebook experience in the SQL Server toolset and a new Create External Table wizard that makes accessing data from remote SQL Server and Oracle instances easy and fast.

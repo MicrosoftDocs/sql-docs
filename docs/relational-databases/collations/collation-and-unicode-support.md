@@ -130,7 +130,7 @@ Unicode is a standard for mapping code points to characters. Because it is desig
     
  To use the UTF-16 collations available in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] to improve searching and sorting of some Unicode characters (Windows collations only), you can select either one of the supplementary characters (\_SC) collations or one of the version 140 collations.    
  
- To use the UTF-8 collations available in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] to improve searching and sorting of some Unicode characters (Windows collations only), you must select UTF-8 encoding enabled collations(\_UTF8).
+ To use the UTF-8 collations available in SQL Server 2019 to improve searching and sorting of some Unicode characters (Windows collations only), you must select UTF-8 encoding enabled collations(\_UTF8).
  
  -   The UTF8 flag can be applied to:    
     
@@ -204,7 +204,7 @@ If you use supplementary characters:
     
     -   Version 140 collations (these don't need the SC flag as they already support supplementary characters)    
     
- The following table compares the behavior of some string functions and string operators when they use supplementary characters with and without a supplementary character-aware (SCA) collation:    
+The following table compares the behavior of some string functions and string operators when they use supplementary characters with and without a supplementary character-aware (SCA) collation:    
     
 |String Function or Operator|With a Supplementary Character-Aware (SCA) Collation|Without an SCA Collation|    
 |---------------------------------|--------------------------|-----------------------------|    
@@ -254,7 +254,7 @@ These collations are supported in Database Engine indexes, memory-optimized tabl
     
 ##  <a name="Related_Content"></a> Related Content    
 [SQL Server Best Practices Collation Change](http://go.microsoft.com/fwlink/?LinkId=113891)    
-[Use Unicode Character Format to Import or Export Data &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)
+[Use Unicode Character Format to Import or Export Data &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)        
 ["SQL Server Best Practices Migration to Unicode"](http://go.microsoft.com/fwlink/?LinkId=113890) - No longer maintained   
 [Unicode Consortium Web site](http://go.microsoft.com/fwlink/?LinkId=48619)    
     

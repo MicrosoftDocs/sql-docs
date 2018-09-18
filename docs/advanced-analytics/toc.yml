@@ -10,7 +10,7 @@
     href: java/java-first-sample.md
   - name: Java and SQL data types
     href: java/java-sql-datatypes.md
-- name: R and Python machine learning extensions
+- name: Machine learning extensions (R, Python)
   items:
   - name: Machine Learning Services (R, Python)
     href: what-is-sql-server-machine-learning.md

@@ -40,7 +40,7 @@ To start your new extension, you can use the Azure Data Studio Extension generat
 
 **Extensibility References**
 
-To learn about Azure Data Studio Extensibility see [Extensibility overview](https://github.com/Microsoft/sqlopsstudio/wiki/Getting-started-with-Extensibility). You can also see examples of how to use the API in existing [samples](https://github.com/Microsoft/azuredatastudio/tree/master/samples).
+To learn about Azure Data Studio Extensibility see [Extensibility overview](extensibility.md). You can also see examples of how to use the API in existing [samples](https://github.com/Microsoft/azuredatastudio/tree/master/samples).
 
 
 ## Debug an extension

@@ -16,12 +16,10 @@ manager: craigg
 ---
 # Azure Data Studio extensibility APIs
 
-[!INCLUDE[name-sos](../includes/name-sos.md)] provides an API that extensions can use to interact with other parts of the application, such as Object Explorer. These APIs are available from the [`src/sql/sqlops.d.ts`](https://github.com/Microsoft/sqlopsstudio/blob/master/src/sql/sqlops.d.ts) file and are described below.
+[!INCLUDE[name-sos](../includes/name-sos.md)] provides an API that extensions can use to interact with other parts of Azure Data Studio, such as Object Explorer. These APIs are available from the [`src/sql/sqlops.d.ts`](https://github.com/Microsoft/sqlopsstudio/blob/master/src/sql/sqlops.d.ts) file and are described below.
 
 ## Connection Management
 `sqlops.connection`
-
-_Available starting in version 0.26.7 (February Public Preview)_
 
 ### Top-level Functions
 
@@ -64,7 +62,6 @@ credentials: {
 
 `sqlops.objectexplorer`
 
-_Available starting in version 0.27.3 (March Public Preview)_
 
 ### Top-level Functions
 - `getNode(connectionId: string, nodePath?: string): Thenable<sqlops.objectexplorer.ObjectExplorerNode>`

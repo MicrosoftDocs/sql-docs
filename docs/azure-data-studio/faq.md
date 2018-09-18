@@ -46,7 +46,9 @@ The source code for Azure Data Studio and its data providers is available on Git
 ## Do we plan to open source SSMS?
 
 No. However, next generation multi-OS CLI and GUI tools are open source. For example, the mssql extension for VS Code, mssql-scripter, and msql-CLI are all open source on GitHub. The source code for Azure Data Studo is available on GitHub.  
-Now that there is Azure Data Studio, does Microsoft plan to deprecate SSMS and SSDT? 
+
+## Now that there is Azure Data Studio, does Microsoft plan to deprecate SSMS and SSDT? 
+
 No. Investments in flagship Windows tools (SSMS, SSDT, PowerShell) will continue in addition to the next generation of multi-OS and multi-DB CLI and GUI tools. The goal is to offer customers the choice of using the tools they want on the platforms of their choice for their scenarios. Azure Data Studio is more tightly focused on the experiences around query editing and data development, which research has shown is the most heavily used capability in SQL Server Management Studio by an order of magnitude. Additional high-value administrative features such as backup, restore, agent job management, and server profiling are also available as extensions in Azure Data Studio. Azure Data Studio is also cross-platform, allowing users to work on their platform of choice. However, SQL Server Management Studio still offers the broadest range of administrative functions and remains the flagship tool for platform management tasks. 
 
 ## When Should I Use Azure Data Studio vs SQL Server Management Studio?
@@ -172,7 +174,7 @@ It's on the longer-term roadmap. To help prioritize, file a suggestion on [GitHu
 
 ## Will SQL PowerShell cmdlets be available on Linux and macOS?
 
-SQL PowerShell is available today on the PowerShell gallery and you can use it on Windows to work with SQL Server running anywhere, including SQL on Linux. Offering the SQL PowerShell cmdlets on Linux & macOS is in the roadmap. To help prioritize, file a suggestion on [GitHub](https://github.com/microsoft/sqlopsstudio/issues). 
+SQL PowerShell is available today on the PowerShell gallery and you can use it on Windows to work with SQL Server running anywhere, including SQL on Linux. Offering the SQL PowerShell cmdlets on Linux & macOS is in the roadmap. To help prioritize, file a suggestion on [GitHub](https://github.com/microsoft/sqlopsstudio/issues).
 
 ## Who usually uses Azure Data Studio?
 
@@ -180,7 +182,7 @@ Developers and DBAs are usually the users of Azure Data Studio.
 
 ## Does Azure Data Studio integrate with Azure SQL Data Warehouse?
 
-Yes. Azure Data Studio support for Azure SQL Data Warehouse is current in preview, together with Azure SQL Database Managed Instance and SQL Server 2019 Big Data.
+Yes. Azure Data Studio support for Azure SQL Data Warehouse is currently in preview, together with Azure SQL Database Managed Instance, and SQL Server 2019 Big Data.
 
 ## Why is Azure Data Studio important for the new version of SQL Server?
 

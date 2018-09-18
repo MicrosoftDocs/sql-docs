@@ -55,7 +55,7 @@ A collation specifies the bit patterns that represent each character in a data s
     
 [!INCLUDE[tsql](../../includes/tsql-md.md)] statement results can vary when the statement is run in the context of different databases that have different collation settings. If it is possible, use a standardized collation for your organization. This way, you do not have to explicitly specify the collation in every character or Unicode expression. If you must work with objects that have different collation and code page settings, code your queries to consider the rules of collation precedence. For more information, see [Collation Precedence (Transact-SQL)](../../t-sql/statements/collation-precedence-transact-sql.md).    
     
-The options associated with a collation are case sensitivity, accent sensitivity, Kana-sensitivity, width sensitivity, variation-selector-sensitivity. SQL Server 2019 introduces an additional option for UTF-8 encoding. These options are specified by appending them to the collation name. For example, this collation `Japanese_Bushu_Kakusu_100_CS_AS_KS_WS_UTF8` is case-sensitive, accent-sensitive, Kana-sensitive, width-sensitive, and UTF-8 encoded. As another example, this collation `Japanese_Bushu_Kakusu_140_CI_AI_KS_WS_VSS` is case-insensitive, accent-insensitive, Kana-sensitive, width-sensitive, variation-selector-sensitive and uses non-Unicode encoding. The following table describes the behavior associated with these various options.    
+The options associated with a collation are case sensitivity, accent sensitivity, Kana-sensitivity, width sensitivity, variation-selector-sensitivity. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduces an additional option for UTF-8 encoding. These options are specified by appending them to the collation name. For example, this collation `Japanese_Bushu_Kakusu_100_CS_AS_KS_WS_UTF8` is case-sensitive, accent-sensitive, Kana-sensitive, width-sensitive, and UTF-8 encoded. As another example, this collation `Japanese_Bushu_Kakusu_140_CI_AI_KS_WS_VSS` is case-insensitive, accent-insensitive, Kana-sensitive, width-sensitive, variation-selector-sensitive and uses non-Unicode encoding. The following table describes the behavior associated with these various options.    
     
 |Option|Description|    
 |------------|-----------------|    
@@ -118,10 +118,10 @@ A locale is a set of information that is associated with a location or a culture
  Sort order specifies how data values are sorted. This affects the results of data comparison. Data is sorted by using collations, and it can be optimized by using indexes.    
     
 ##  <a name="Unicode_Defn"></a> Unicode Support    
-Unicode is a standard for mapping code points to characters. Because it is designed to cover all the characters of all the languages of the world, there is no need for different code pages to handle different sets of characters. If you store character data that reflects multiple languages in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), use Unicode (UTF-16) data types (**nchar**, **nvarchar**, and **ntext**) instead of non-Unicode data types (**char**, **varchar**, and **text**). Alternatively, starting with SQL Server 2019, if a UTF-8 enabled collation (\_UTF8) is used, then previously non-Unicode data types (**char** and **varchar**) become Unicode (UTF-8) data types. 
+Unicode is a standard for mapping code points to characters. Because it is designed to cover all the characters of all the languages of the world, there is no need for different code pages to handle different sets of characters. If you store character data that reflects multiple languages in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), use Unicode (UTF-16) data types (**nchar**, **nvarchar**, and **ntext**) instead of non-Unicode data types (**char**, **varchar**, and **text**). Alternatively, starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], if a UTF-8 enabled collation (\_UTF8) is used, then previously non-Unicode data types (**char** and **varchar**) become Unicode (UTF-8) data types. 
 
 > [!NOTE]
-> SQL Server 2019 does not change the behavior of previously existing Unicode (UTF-16) data types (**nchar**, **nvarchar**, and **ntext**).   
+> [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] does not change the behavior of previously existing Unicode (UTF-16) data types (**nchar**, **nvarchar**, and **ntext**).   
     
 Significant limitations are associated with non-Unicode data types. This is because a non-Unicode computer is limited to use of a single code page. You might experience performance gain by using Unicode because fewer code-page conversions are required. Unicode collations must be selected individually at the database, column, or expression level because they are not supported at the server level.    
     
@@ -133,7 +133,7 @@ You can also try to use a different collation for the data on the server. Choose
     
 To use the UTF-16 collations available in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] to improve searching and sorting of some Unicode characters (Windows collations only), you can select either one of the supplementary characters (\_SC) collations or one of the version 140 collations.    
  
-To use the UTF-8 collations available in SQL Server 2019 to improve searching and sorting of some Unicode characters (Windows collations only), you must select UTF-8 encoding enabled collations(\_UTF8).
+To use the UTF-8 collations available in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] to improve searching and sorting of some Unicode characters (Windows collations only), you must select UTF-8 encoding enabled collations(\_UTF8).
  
 -   The UTF8 flag can be applied to:    
    
@@ -177,7 +177,7 @@ The Unicode Consortium allocates each character a unique codepoint, which is a v
     
 Introduced in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], a new family of supplementary character (\_SC) collations can be used with the data types **nchar**, **nvarchar**, and **sql_variant**. For example: `Latin1_General_100_CI_AS_SC`, or if using a Japanese collation, `Japanese_Bushu_Kakusu_100_CI_AS_SC`. 
  
-SQL Server 2019 extends supplementary character support to the data types **char** and **varchar** with the new UTF-8 enabled collations (\_UTF8).   
+[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] extends supplementary character support to the data types **char** and **varchar** with the new UTF-8 enabled collations (\_UTF8).   
 
 Starting in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], all new collations automatically support supplementary characters.
 

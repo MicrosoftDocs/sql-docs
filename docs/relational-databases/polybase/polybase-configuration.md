@@ -22,7 +22,7 @@ manager: craigg
   
  You must configure SQL Server to connect to  either your Hadoop version or Azure Blob storage using **sp_configure**. PolyBase supports two Hadoop distributions: Hortonworks Data Platform (HDP) and Cloudera Distributed Hadoop (CDH).  For a complete list of supported external data sources, see [PolyBase Connectivity Configuration &#40;Transact-SQL&#41;](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).  
 
-Note, PolyBase supports Hadoop encryption zones starting with SQL Server 2016 SP1 CU7 and SQL Server 2017.
+Note, PolyBase supports Hadoop encryption zones starting with SQL Server 2016 SP1 CU7 and SQL Server 2017 CU3.
 
   
 ### Run sp_configure  

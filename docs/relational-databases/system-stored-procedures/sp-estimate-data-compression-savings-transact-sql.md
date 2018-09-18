@@ -113,10 +113,10 @@ sp_estimate_data_compression_savings
 
  |Source Object|Reference Object|
  |-----------------|---------------|
- |Heap|Clustered columnstore|
- |Clustered index|Clustered columnstore|
- |Non-clustered index|Non-clustered columnstore (including the key columns and any included columns of the provided non-clustered index, as well as the partition column of the table, if any)|
- |Non-clustered columnstore index|Non-clustered columnstore (including the same columns as the provided non-clustered columnstore index)|
+ |Heap|Clustered columnstore index|
+ |Clustered index|Clustered columnstore index|
+ |Non-clustered index|Non-clustered columnstore index (including the key columns and any included columns of the provided non-clustered index, as well as the partition column of the table, if any)|
+ |Non-clustered columnstore index|Non-clustered columnstore index (including the same columns as the provided non-clustered columnstore index)|
  |Clustered columnstore index|Clustered columnstore index|
 
 > [!NOTE]  

@@ -90,7 +90,7 @@ sudo service smb status
 
 ### On Host 2 (Subscriber)  Mount the Samba Share
 
-1. Edit the command with the correct paths and run the following command on machine2:
+Edit the command with the correct paths and run the following command on machine2:
 
   ```bash
   sudo mount //<name_of_host_1>/<share_name> </local/path/on/host/2> -o user=mssql,uid=mssql,gid=mssql
@@ -108,7 +108,7 @@ sudo service smb status
 
 ### On Both Hosts  Configure SQL Server on Linux Instances to use Snapshot Share
 
-1. Add the following section to `mssql.conf` on both machines. Use wherever the samba share for the //share/path. In this example, it would be `//host1/mssql_data`
+Add the following section to `mssql.conf` on both machines. Use wherever the samba share for the //share/path. In this example, it would be `//host1/mssql_data`
 
   ```bash
   [uncmapping]

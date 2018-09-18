@@ -32,7 +32,7 @@ To setup Always Encrypted with secure enclaves, use the following workflow:
 
 ## Configure your environment
 
-To use secure enclaves with Always Encrypted, your environment requires Windows Server 2019 Preview, and SQL Server Management Studio (SSMS) 18.0 (preview), .NET Framework, and several other components. The following sections provide specific details and links to get the required components.
+To use secure enclaves with Always Encrypted, your environment requires Windows Server 2019 Preview, and SQL Server Management Studio (SSMS) 18.0 (preview), .NET Framework, and several other components. The following sections provide details and links to get the required components.
 
 ### SQL Server computer requirements
 

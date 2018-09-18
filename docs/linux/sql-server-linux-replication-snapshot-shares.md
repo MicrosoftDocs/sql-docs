@@ -24,7 +24,7 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 
 The snapshot folder is a directory that you have designated as a share; agents that read from andand write to this folder must have enough permissions to access it.
 
-[replication diagram][1]
+![replication diagram][1]
 
 ## Configure a samba share for the snapshot folder 
 

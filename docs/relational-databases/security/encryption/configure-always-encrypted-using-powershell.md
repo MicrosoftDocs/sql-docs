@@ -3,7 +3,7 @@ title: "Configure Always Encrypted using PowerShell | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2017"
 ms.prod: sql
-ms.reviewer: ""
+ms.reviewer: vanto
 ms.suite: "sql"
 ms.technology: security
 ms.tgt_pltfrm: ""

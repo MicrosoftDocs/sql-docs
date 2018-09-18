@@ -1,6 +1,6 @@
 ---
 title: "Getting started with the ReportViewer 2016 control | Microsoft Docs"
-ms.date: 09/18/2017
+ms.date: 09/18/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.technology: application-integration

@@ -1,6 +1,6 @@
 ---
 title: "Integrating Reporting Services Using the Report Viewer Controls | Microsoft Docs"
-ms.date: 09/06/2016
+ms.date: 09/18/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: application-integration

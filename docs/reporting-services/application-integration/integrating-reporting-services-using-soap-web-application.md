@@ -1,6 +1,6 @@
 ---
 title: "Using the SOAP API in a Web Application | Microsoft Docs"
-ms.date: 03/14/2017
+ms.date: 09/18/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: application-integration

@@ -1,6 +1,6 @@
 ---
 title: "Integrating Reporting Services into Applications | Microsoft Docs"
-ms.date: 10/19/2017
+ms.date: 09/18/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: application-integration

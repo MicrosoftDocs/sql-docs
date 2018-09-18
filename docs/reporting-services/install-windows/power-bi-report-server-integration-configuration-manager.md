@@ -48,8 +48,8 @@ Complete the following steps from the [!INCLUDE[ssRSnoversion](../../includes/ss
 
 2. Select **Register with Power BI**.
 
->[!Note]
-> Make sure that port 443 is not blocked.
+    >[!Note]
+    > Make sure that port 443 is not blocked.
 
 3. At the [!INCLUDE[msCoName](../../includes/msconame-md.md)] sign-in dialog, enter the credentials you use to sign into [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)].
 

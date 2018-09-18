@@ -116,7 +116,7 @@ On Linux, the mssql-server-extensibility-java package automatically installs JRE
 
 * Output parameters in sp_execute_external_script are not supported in this version.
 
-* No LOB datatype support for Input and output data sets in this version. See [Java and SQL Server data types](java-sql-datatypes.md) for details about which data types are supported in this CTP. We are working on expanding the data type support in coming CTP releases.
+* No LOB datatype support for input and output data sets in this version. See [Java and SQL Server data types](java-sql-datatypes.md) for details about which data types are supported in this CTP.
 
 * Streaming using the sp_execute_external_script parameter @r_rowsPerRead is not supported in this CTP.
 

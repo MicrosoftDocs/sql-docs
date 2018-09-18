@@ -26,12 +26,14 @@ This article explains implementation details for Java classes and methods that e
 
 * If the class belongs to a package, the "packageName" needs to be provided.
 
-* "params" is used to pass parameters to the Java class. Calling methods that require arguments is not supported, which makes parameters the recommended way to pass argument values. 
+* "params" is used to pass parameters to a Java class. Calling a method that requires arguments is not supported, which makes parameters the only way to pass argument values to your method. 
 
 > [!Note]
->  * On the stored procedure, only input parameters are supported in CTP2.0.
-> * Streaming using the sp_execute_external_script parameter @r_rowsPerRead and partitioning using @input_data_1_partition_by_columns is not supported in CTP2.0.
-> * Parallel processing using @parallel = 1 is supported in CTP2.0
+> This note restates supported and unsupported operations specific to Java in CTP 2.0.
+> * On the stored procedure, input parameters are supported. Output parameters are not.
+> * Streaming using the sp_execute_external_script parameter **@r_rowsPerRead** is not supported.
+> * Partitioning using **@input_data_1_partition_by_columns** is not supported.
+> * Parallel processing using **@parallel=1** is supported.
 
 The following example shows an sp_execute_external_script using the Java extension, with path and API signature specifications.
 
@@ -76,13 +78,11 @@ In order for SQL Server to communicate with the Java runtime, you need to implem
 > Expect the implementation details to change in upcoming CTPs as we work to improve the experience for developers.
 
 ## Method requirements
-Make sure that the method you want to call from SQL Server does NOT have any arguments. The return type must be void.  
+To pass arguments, use the **@param** parameter in sp_execute_external_script. The method itself cannot have any arguments. The return type must be void.  
 
 ```java
 public static void test()  {}
 ```
-
-To pass arguments, use the **@param** parameter in sp_execute_external_script.
 
 ## Data inputs 
 

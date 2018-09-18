@@ -16,6 +16,7 @@ See what’s new in the latest Appliance Updates for Microsoft® Analytics Platf
 ::: moniker range=">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
 <a name="h2-aps-cu7.1"></a>
 ## APS CU7.1
+Release date - July 2018
 
 ### DBCC commands do not consume concurrency slots (behavior change)
 APS supports a subset of the T-SQL [DBCC commands](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-transact-sql) such as [DBCC DROPCLEANBUFFERS](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql). Previously, these commands would consume a [concurrency slot](https://docs.microsoft.com/en-us/sql/analytics-platform-system/workload-management?view=aps-pdw-2016-au7#concurrency-slots) reducing the number of user loads/queries that could be executed. The `DBCC` commands are now run in a local queue that do not consume a user concurrency slot improving overall query execution performance.
@@ -34,7 +35,8 @@ We have upgraded to SQL Server 2016 SP2 CU2 with APS CU7.1. The upgrade fixes so
 
 <a name="h2-aps-au7"></a>
 ## APS AU7
-APS 2016 is a prerequisite to upgrade to AU7. The following are new in APS AU7:
+Release date - May 2018
+APS 2016 is a prerequisite to upgrade to AU7. The following are new features in APS AU7:
 
 ### Auto-create and auto-update statistics
 APS AU7 creates and updates statistics automatically, by default. To update statistics settings, administrators can use a new feature switch menu item in the [Configuration Manager](appliance-configuration.md#CMTasks). The [feature switch](appliance-feature-switch.md) controls the auto-create, auto-update, and asynchronous update behavior of statistics. You can also update statistics settings with the [ALTER DATABASE (Parallel Data Warehouse)](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw) statement.

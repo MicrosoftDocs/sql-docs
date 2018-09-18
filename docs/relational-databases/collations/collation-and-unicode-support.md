@@ -135,8 +135,8 @@ To use the UTF-16 collations available in [!INCLUDE[ssCurrent](../../includes/ss
  
 To use the UTF-8 collations available in SQL Server 2019 to improve searching and sorting of some Unicode characters (Windows collations only), you must select UTF-8 encoding enabled collations(\_UTF8).
  
- -   The UTF8 flag can be applied to:    
-    
+-   The UTF8 flag can be applied to:    
+   
     -   Version 90 collations 
     
         > [!NOTE]

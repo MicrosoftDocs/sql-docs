@@ -1,15 +1,5 @@
 - name: SQL Server ML and Programming Extensions Documentation
   href: index.md
-- name: Java extension
-  items:
-  - name: Run Java code on SQL
-    href: java/extension-java.md
-  - name: How to call Java from SQL
-    href: java/howto-call-java-from-sql.md
-  - name: Java sample
-    href: java/java-first-sample.md
-  - name: Java and SQL data types
-    href: java/java-sql-datatypes.md
 - name: Machine learning extensions (R, Python)
   items:
   - name: Machine Learning Services (R, Python)
@@ -20,6 +10,16 @@
     href: r/r-server-standalone.md
   - name: What's New
     href: what-s-new-in-sql-server-machine-learning-services.md
+- name: Java extension
+  items:
+  - name: Run Java code on SQL
+    href: java/extension-java.md
+  - name: How to call Java from SQL
+    href: java/howto-call-java-from-sql.md
+  - name: Java sample
+    href: java/java-first-sample.md
+  - name: Java and SQL data types
+    href: java/java-sql-datatypes.md
 - name: Install
   items:
   - name: Differences in SQL Server 2019

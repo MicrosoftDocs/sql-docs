@@ -16,9 +16,46 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 
 # Connect to SQL Server Availability Group on Kubernetes
 
+To connect to SQL Server instances in containers on a Kubernetes cluster, create a [load balancer service](http://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer). The load balancer forwards requests for the IP address to the pod running the SQL Server instance.
+
+To connect to an availability group replica, create a service for different replica types. You can see examples of services for different types of replicas in [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability).
+
+* `ag1-primary` points to the primary replica.
+* `ag1-secondary-sync` points to the synchronous secondary replica.
+* `ag1-secondary-async` points to an asynchronous secondary replica.
+
+If more than one secondary replica of the same type exists, Kubernetes routes your connection to the different replicas in a round-robin fashion.
+
+## Create a load balancer service
+
+To create a load balancer service for the primary replica, copy `ag1-primary.yaml` and update it for your availability group.
+
+The following command applies the .yaml file to your cluster:
+
+```kubectl
+kubectl apply -f ag1-primary.yaml
+```
+
+## Get the IP address for your load balancer service
+
+To get the load balancer IP address for your load balancer service, run
+
+```kubectl
+kubectl get services
+```
+
+Identify the IP address of the service you want to connect to.
+
 ## Connect to primary replica
 
-## Connect to secondary replica
+
+To connect to the primary replica with SQL authentication, use the `sa` account, the value for `sapassword` from the secret you created, and this IP address.
+
+For example:
+
+```cmd
+sqlcmd -S 104.42.50.138 -U sa -P "MyC0m9l&xP@ssw0rd"
+```
 
 ## Next steps
 

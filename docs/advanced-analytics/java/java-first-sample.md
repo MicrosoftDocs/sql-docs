@@ -141,6 +141,7 @@ public class Ngram {
                 .mapToObj(i -> text.substring(i, i + n))
                 .collect(Collectors.toList());
     }
+}
 ```
 
 ## 3 - Class InputRow.java
@@ -186,9 +187,9 @@ public class OutputRow {
 
 ## 5 - Compile
 
-Once you have your classes ready, compile them to get ".class" files. You should have three .class files for this sample. (Ngram.class, InputRow.class and OutputRow.class).
+Once you have your classes ready, run javac to compile them into ".class" files. You should have three .class files for this sample. (Ngram.class, InputRow.class and OutputRow.class).
 
-The files should be located in a subfolder called "pkg" in your classpath location. For example, if the classpath location is called '/home/myclasspath/', then the .class files should be in '/home/myclasspath/pkg'.
+Place these file in a subfolder called "pkg" in your classpath location. For example, if the classpath location is called '/home/myclasspath/', then the .class files should be in '/home/myclasspath/pkg'.
 
 In this sample, the CLASSPATH provided in the sp_execute_external_script is '/home/myclasspath/'.
 

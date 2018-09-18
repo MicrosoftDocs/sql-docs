@@ -32,7 +32,7 @@ To setup Always Encrypted with secure enclaves, use the following workflow:
 
 ## Configure your environment
 
-To use secure enclaves with Always Encrypted, your environment requires Windows Server 2019 Preview, and SQL Server Management Studio (SSMS) 18.0 (preview), .NET Framework, and several other components. The following sections provide specific details and links to get the required components.
+To use secure enclaves with Always Encrypted, your environment requires Windows Server 2019 Preview, and SQL Server Management Studio (SSMS) 18.0 (preview), .NET Framework, and several other components. The following sections provide details and links to get the required components.
 
 ### SQL Server computer requirements
 
@@ -49,7 +49,7 @@ The computer running SQL Server needs the following operating system and SQL Ser
 - Windows Server 2019 DataCenter
 
 > [!IMPORTANT]
-> The computer must be configured as a guarded host, attested by HGS. TPM attestation is the recommended enclave attestation method for production environments, and requires SQL Server runs on a physical machine, not in a virtual machine. Virtual machines are adequate for pre-production environments only.
+> The SQL Server computer must be configured as a guarded host, attested by HGS. TPM attestation is the recommended enclave attestation method for production environments, and requires SQL Server runs on a physical machine, not in a virtual machine. Virtual machines are adequate for pre-production environments only.
 
 ### HGS computer requirements
 

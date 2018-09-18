@@ -49,7 +49,7 @@ The computer running SQL Server needs the following operating system and SQL Ser
 - Windows Server 2019 DataCenter
 
 > [!IMPORTANT]
-> The computer must be configured as a guarded host, attested by HGS. TPM attestation is the recommended enclave attestation method for production environments, and requires SQL Server runs on a physical machine, not in a virtual machine. Virtual machines are adequate for pre-production environments only.
+> The SQL Server computer must be configured as a guarded host, attested by HGS. TPM attestation is the recommended enclave attestation method for production environments, and requires SQL Server runs on a physical machine, not in a virtual machine. Virtual machines are adequate for pre-production environments only.
 
 ### HGS computer requirements
 

@@ -36,18 +36,17 @@ The buildout workflow will layout on top of Kubernetes a fully functional SQL Se
 
 ## Managing the cluster through the Controller
 
-Customers are expected to manage the cluster purely through the Controller using either `mssqlctl` APIs or the [administration portal](manage-troubleshooting.md) that is hosted within the cluster. If customers deploy additional Kubernetes objects (pods) into the same namespace, they are not managed or monitored by the Controller.
+Customers are expected to manage the cluster purely through the Controller using either `mssqlctl` APIs or the administration portal that is hosted within the cluster. If customers deploy additional Kubernetes objects (pods) into the same namespace, they are not managed or monitored by the Controller.
 
 The Controller and the Kubernetes objects (stateful sets, pods, secrets, etc.) created for the cluster reside in a dedicated Kubernetes namespace. The Controller service will be granted permission by the Kubernetes cluster administrator to manage all resources within that namespace.  The RBAC policy this scenario is configured automatically as part of initial cluster deployment. 
 
 ### mssqlctl
 
 `mssqlctl` is a command-line utility written in Python that enables cluster administrators to bootstrap and manage the Big Data Cluster via REST APIs.
-You can find details on how to install and use `mssqlctl` in the [Deployment guidance](deployment-guidance.md) and [Install Big Data Tools](deploy-big-data-tools.md) topics.
 
 ### Cluster Admin Portal
 
-Once the Controller service is up and running, cluster administrator can use the [Cluster Admin Portal](manage-monitoring.md) to monitor the deployment progress, detect, and troubleshoot issues with services within the cluster. 
+Once the Controller service is up and running, cluster administrator can use the Cluster Admin Portal to monitor the deployment progress, detect, and troubleshoot issues with services within the cluster. 
 
 ## Monitoring and troubleshooting Controller service
 

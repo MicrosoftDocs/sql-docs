@@ -24,7 +24,7 @@ This example demonstrates a Java class that receives two columns (ID and text) f
 
 + Java SE Development Kit (JDK) 1.10 on Windows, or JDK 1.8 on Linux.
 
-A Java IDE is helpful for creating and compiling classes. If you don't have one, we recommend [Visual Studio Code](https://code.visualstudio.com/download) with the [Java extension](https://code.visualstudio.com/docs/languages/java) (not related to the SQL Server Java extension).
+Command-line compilation using **javac** is sufficient for this tutorial. 
 
 ## 1 - Load sample data
 

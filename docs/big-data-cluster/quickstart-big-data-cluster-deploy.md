@@ -9,23 +9,23 @@ ms.topic: quickstart
 ms.prod: sql
 ---
 
-# Quickstart: Deploy SQL Server Big Data Cluster on Kubernetes
+# Quickstart: Deploy SQL Server Big Data Cluster on Azure Kubernetes Service (AKS)
 
-In this quickstart, you will install SQL Server Big Data Cluster on Kubernetes in a default configuration suitable for dev/test environments. Here is the list of environment variables and their default values you can update to customize your cluster configuration:
-TBD
+In this quickstart, you will install SQL Server Big Data Cluster on AKS in a default configuration suitable for dev/test environments. In addition to SQL Master instance, the cluster will include one compute pool instance, one data pool instance and two storage pool instances. Data will be persisted using Kubernetes persistent volumes that are provisioned on top of AKS default storage classes. In the [deployment guidance](deployment-guidance.md) topic you can find a set of environment variables that you can use to further customize your configuration. Here is the list of environment variables and their default values you can update to customize your cluster configuration. 
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
 ## Prerequisites
 
-This quickstart requires that you have already configured a Kubernetes cluster. For more information, see the Kubernetes section in the deployment guide:
+This quickstart requires that you have already configured an AKS cluster with a minimum version of v1.10. For more information, see the [deploy on AKS](deploy-on-aks.md) guide.
 
-- [Configure a Kubernetes cluster](deployment-guidance.md#kubernetes).
+On your client machine, you need to install [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/). SQL Server Big Data cluster requires a minimum 1.10 version for Kubernetes, for both server and client. To install a specific version on kubectl client, see [Install kubectl binary via curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl). 
 
+To install `mssqlctl` CLI tool on your client, you must install [Python](https://www.python.org/downloads/) minimum version v3.0 and [pip](https://pip.pypa.io/en/stable/installing/). Note that pip is already installed if you are using a Python version of at least 3.4 downloaded from [python.org](https://www.python.org/).
 
-## Verify kubernetes configuration
+## Verify AKS configuration
 
-Execute the below kubectl command to view the cluster configuration. Ensure that kubectl is pointed to the correct cluster context.
+Once you have the cluster deployed, you can execute the below kubectl command to view the cluster configuration. Ensure that kubectl is pointed to the correct cluster context.
 
 ```bash
 kubectl config view
@@ -33,11 +33,11 @@ kubectl config view
 
 ## Install mssqlctl CLI management tool
 
-TBD
+TODO
 
 ## Define environment variables
 
-Setting the environment variables required for deploying Big Data Cluster differs depending on whether you are using Windows or Linux client.  Choose the steps below depending on which operating system you are using.
+Setting the environment variables required for deploying Big Data Cluster slightly differs depending on whether you are using Windows or Linux/Mac OS client.  Choose the steps below depending on which operating system you are using.
 
 > [!IMPORTANT]
 > Make sure you wrap the passwords in double quotes if it contains any special characters.
@@ -54,59 +54,46 @@ Initialize the following environment variables, they are required for deploying 
 Using a CMD window (not PowerShell), configure the following environment variables:
 
 ```cmd
-SET CLUSTER_PLATFORM=<minikube or acs or aks>
-SET CLUSTER_NODE_REPLICAS=<number_of_nodes_excluding_master>
+SET ACCEPT_EULA=Y
+SET CLUSTER_PLATFORM=aks
 
 SET CONTROLLER_USERNAME=<controller_admin_name – can be anything>
 SET CONTROLLER_PASSWORD=<controller_admin_password – can be anything, password complexity compliant>
+SET KNOX_PASSWORD=<knox_password – can be anything, password complexity compliant>
+SET MSSQL_SA_PASSWORD=<sa_password_of_master_sql_instances>
 
 SET DOCKER_REGISTRY=private-repo.microsoft.com
 SET DOCKER_REPOSITORY=mssql-private-preview
-
-SET MSSQL_SA_PASSWORD=<sa_password_of_master_sql_instances>
-
-SET MASTER_SQL_PORT=31433
-SET KNOX_PORT=30443
-SET RANGER_PORT=30680
+SET DOCKER_USERNAME=<your username>
+SET DOCKER_PASSWORD=<your password>
+SET DOCKER_PRIVATE_REGISTRY="1"
 ```
 
-If you are using ACS or AKS, then set the following environment variable also:
-
-```cmd
-SET DOCKER_IMAGE_POLICY=IfNotPresent
-```
-
-### Linux
+### Linux/Mac OS
 
 Initialize the following environment variables:
 
 ```bash
-export CLUSTER_PLATFORM=<minikube or acs or aks>
-export CLUSTER_NODE_REPLICAS=<number_of_nodes_excluding_master>
+export ACCEPT_EULA=Y
+export CLUSTER_PLATFORM=aks
 
 export CONTROLLER_USERNAME=<controller_admin_name – can be anything>
 export CONTROLLER_PASSWORD=<controller_admin_password – can be anything, password complexity compliant>
+export KNOX_PASSWORD=<knox_password – can be anything, password complexity compliant>
+export MSSQL_SA_PASSWORD=<sa_password_of_master_sql_instances>
 
 export DOCKER_REGISTRY=private-repo.microsoft.com
 export DOCKER_REPOSITORY=mssql-private-preview
-
-export MSSQL_SA_PASSWORD=<sa_password_of_master_sql_instances>
-
-export MASTER_SQL_PORT=31433
-export KNOX_PORT=30443
-export RANGER_PORT=30680
+export DOCKER_USERNAME=<your username>
+export DOCKER_PASSWORD=<your password>
+export DOCKER_PRIVATE_REGISTRY="1"
 ```
 
-If you are using ACS or AKS, then set the following environment variable also:
-
-```bash
-export DOCKER_IMAGE_POLICY=IfNotPresent
-```
-
-## Deploy SQL Server 2019 CTP 2.0
+## Deploy SQL Server Big Data CLuster
 
 To deploy SQL Server 2019 CTP 2.0 on your Kubernetes cluster, run the following command:
 
+TODO
 ```bash
 python mssqlctl.py create cluster <name of your cluster>
 ```
@@ -115,7 +102,7 @@ python mssqlctl.py create cluster <name of your cluster>
 > The name of your cluster needs to be only lower case alpha-numeric characters, no spaces. All Kubernetes artifacts for the Big Data Cluster will be created in a namespace with same name as the cluster name specified.
 
 
-The command window will ouput the deployment status. You can also check the deployment status by running these commands in a different cmd window:
+The command window will output the deployment status. You can also check the deployment status by running these commands in a different cmd window:
 
 ```bash
 kubectl get all -n <name of your cluster>
@@ -123,20 +110,21 @@ kubectl get pods -n <name of your cluster>
 kubectl get svc -n <name of your cluster>
 ```
 
-You can see a more granular status and configuration for each pod by runnnig:
+You can see a more granular status and configuration for each pod by running:
 ```bash
 kubectl describe pod <pod name> -n <name of your cluster>
 ```
 
-Once the Controller pod is running, you can use the Cluster Administration Portal to monitor the deployment. The portal will be launched automatically. 
+Once the Controller pod is running, you can use the Cluster Administration Portal to monitor the deployment. You can access the portal using the external IP address and port number for the `service-proxy-lb` (for example: https://<ip-address>:30777). Credentials for accessing the admin portal are the values of `CONTROLLER_USERNAME` and `CONTROLLER_PASSWORD` environment variables provided above.
+> [!NOTE]
+> There is going to be a security warning when accessing the web page since we are using auto-generated SSL certificates. In future releases, we will provide the capability to provide your own signed certificates.
+ 
 
 ## <a id="masterip"></a> Get the master instance IP address
 
 After the deployment script has completed successfully, you can obtain the IP address of the SQL Server master instance using the steps outlined below. You will use this IP address and port number 31433 to connect to the SQL Server master instance (for example: **\<ip-address\>,31433**). Similarly, for the Knox Gateway endpoint. All cluster endpoints are outlined in the Service Endpoints tab in the Cluster Admin Portal as well.
 
-### ACS/AKS
-
-If you are using ACS/AKS, Azure provides the Azure LoadBalancer service to ACS. Run following command:
+Azure provides the Azure LoadBalancer service to AKS. Run following command in a cmd or bash window:
 
 ```bash
 kubectl get svc service-master-lb -n <name of your cluster>
@@ -144,14 +132,6 @@ kubectl get svc service-security-lb -n <name of your cluster>
 ```
 
 Look for the **External-IP** value that is assigned to the service. Then, connect to the SQL Server master instance using the IP address at port 31433 (Ex: **\<ip-address\>,31433**) and to Knox Gateway endpoint using the external-IP for `service-security-lb` service. 
-
-### Minikube
-
-If you are using Minikube, you need to run the following command to get the IP address you need to connect to. In addition to the IP, specify the port for the endpoint you need to connect to.
-
-```bash
-minikube ip
-```
 
 # Next steps
 

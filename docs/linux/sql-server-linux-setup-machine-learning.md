@@ -29,7 +29,7 @@ Machine Learning and programming extensions run on top of the database engine on
 
 After the database engine is installed and configured, you can add the extensions using the commands in this article.
 
-Package locations are in the SQL Server Linux source repositories. Because you already configured source repositories, you should be able to run the package install commands without registering the repo.
+Package locations are in the SQL Server Linux source repositories. If you already configured source repositories for the database engine install, you can run the mlservices package install commands using the same repo registration.
 
 ## Package list
 
@@ -160,9 +160,9 @@ Additional configuration is primarily through the [mssql-conf tool](sql-server-l
     sudo /opt/mssql/bin/mssql-conf set EULA accepteulaml Y
   ```
 
-  An alternative workflow is that if you have not yet accepted the SQL Server database engine licensing agreement, setup detects the mssql-mlservices packages and prompts for EULA acceptance when `mssql-conf setup` is run. For more information about EULA parameters, see [mssql-conf tool](sql-server-linux-configure-mssql-conf.md#mlservices-eula)
+  An alternative workflow is that if you have not yet accepted the SQL Server database engine licensing agreement, setup detects the mssql-mlservices packages and prompts for EULA acceptance when `mssql-conf setup` is run. For more information about EULA parameters, see [Configure SQL Server with the mssql-conf tool](sql-server-linux-configure-mssql-conf.md#mlservices-eula).
 
-2. Configure external script execution. 
+2. Enable external script execution. 
 
   ```bash
   EXEC sp_configure 'external scripts enabled', 1 
@@ -201,7 +201,7 @@ GO
 
 <a name="install-all"></a>
 
-## Install MSSQLSERVER and MLSERVICES
+## Install mssqlserver and mlservices together
 
 You can install and configure the database engine and Machine Learning Services in one procedure by appending the extensibility, R, or Python packages and EULA parameters on a command that installs the database engine. The following example is an illustration using the Yum package manager:
 

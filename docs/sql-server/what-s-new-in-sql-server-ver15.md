@@ -29,31 +29,31 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 
 Community technology preview (CTP) 2.0 is the first public release of [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]. The following features are added or enhanced for [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] CTP 2.0.
 
-- [Database engine](#databaseengine)
-  - Intelligent query processing
-  - Resumable online index create
-  - Database scoped configuration setting for online and resumable DDL operations
-  - Clustered columnstore online index build and rebuild
-  - UTF-8 Support
-  - Lightweight query profiling infrastructure enabled by default
-  - Data Discovery and Classification
-  - Support for columnstore statistics in `DBCC CLONEDATABASE`
-  - New options added to `sp_estimate_data_compression_savings`
-  - New `sys.dm_db_page_info` system function returns page information
-  - Always On Availability Groups
-  - Always Encrypted with secure enclaves
-  - SQL Graph features
-  - Java language programmability extension
-  - SQL Server Machine Learning Services
-  - Polybase
-  - Expanded support for persistent memory devices
-
 - [Big Data Clusters](#bigdatacluster)
   - Deploy a Big Data cluster with SQL and Spark Linux containers on Kubernetes
   - Access your big data from HDFS
   - Run Advanced analytics and machine learning with Spark
   - Use Spark streaming to data to SQL data pools
   - Use Azure Data Studio to run Query books that provide a notebook experience
+
+- [Database engine](#databaseengine)
+  - UTF-8 support
+  - Resumable online index create allows index create to resume after interruption
+  - Clustered columnstore online index build and rebuild
+  - Always Encrypted with secure enclaves
+  - Intelligent query processing
+  - Java language programmability extension
+  - SQL Graph features
+  - Database scoped configuration setting for online and resumable DDL operations
+  - Always On Availability Groups - secondary replica connection redirection
+  - Data discovery and classification - natively built into SQL Server
+  - Expanded support for persistent memory devices
+  - Support for columnstore statistics in `DBCC CLONEDATABASE`
+  - New options added to `sp_estimate_data_compression_savings`
+  - SQL Server Machine Learning Services failover clusters
+  - Lightweight query profiling infrastructure enabled by default
+  - New Polybase connectors
+  - New `sys.dm_db_page_info` system function returns page information
 
 - [SQL Server on Linux](#sqllinux)
   - Replication support
@@ -85,6 +85,61 @@ Continue reading for more details about these features.
    ALTER DATABASE database_name SET COMPATIBILITY_LEVEL =  150;
    ```
 
+### UTF-8 support
+
+Full support for the widely used UTF-8 character encoding as an import or export encoding, or as database-level or column-level collation for text data. UTF-8 is allowed in the CHAR and VARCHAR datatypes, and is enabled when creating or changing an object’s collation to a collation with the `UTF8` suffix. 
+
+For example,`LATIN1_GENERAL_100_CI_AS_SC` to `LATIN1_GENERAL_100_CI_AS_SC_UTF8`. UTF-8 is only available to Windows collations that support supplementary characters, as introduced in SQL Server 2012. `NCHAR` and `NVARCHAR` allow UTF-16 encoding only, and remain unchanged.
+
+This feature may provide significant storage savings, depending on the character set in use. For example, changing an existing column data type with ASCII strings from `NCHAR(10)` to `CHAR(10)` using an UTF-8 enabled collation, translates into nearly 50% reduction in storage requirements. This reduction is because `NCHAR(10)` requires 22 bytes for storage, whereas `CHAR(10)` requires 12 bytes for the same Unicode string.
+
+### Resumable online index create
+
+- **Resumable online index create** allows an index create operation to pause and resume later from where the operation was paused or failed, instead of restarting from the beginning.
+
+  Resumable online index create supports the follow scenarios:
+  - Resume an index create operation after an index create failure, such as after a database failover or after running out of disk space.
+  - Pause an ongoing index create operation and resume it later allowing to temporarily free system resources as required and resume this operation later.
+  - Create large indexes without using as much log space and a long-running transaction that blocks other maintenance activities and allowing log truncation.
+
+  In case of an index create failure, without this feature an online index create operation must be executed again and the operation must be restarted from the beginning.
+
+  With this release, we extend the resumable functionality adding this feature to available [resumable online index rebuild](http://azure.microsoft.com/blog/modernize-index-maintenance-with-resumable-online-index-rebuild/).
+
+  In addition, this feature can be set as the default for a specific database using [database scoped default setting for online and resumable DDL operations](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
+
+  For more information, see [Resumable Online Index Create](../t-sql/statements/create-index-transact-sql.md#resumable-indexes).
+
+### Build and rebuild clustered columnstore indexes online
+
+Convert row-store tables into columnstore format. Creating clustered columnstore indexes (CCI) was an offline process in the previous versions of SQL Server - requiring all changes stop while CCI is created. SQL Server 2019 and Azure SQL Database enable customers to create or re-create CCI online. Workload will not be blocked and all changes made on the underlying data are transparently added into the target columnstore table. Examples of new TSQL statements that can be used are:
+
+  ```sql
+  CREATE CLUSTERED COLUMNSTORE INDEX cci
+    ON <tableName>
+    WITH (ONLINE = ON);
+  ```
+
+  ```sql
+  ALTER INDEX cci
+    ON <tableName>
+    REBUILD WITH (ONLINE = ON);
+  ```
+
+### Always Encrypted with secure enclaves
+
+Expands upon Always Encrypted with in-place encryption and rich computations. The expansions come from the enabling of computations on plaintext data, inside a secure enclave on the server side.
+
+Cryptographic operations include the encryption of columns, and the rotating of column encryption keys. These operations can now be issued by using Transact-SQL, and they do not require that data be moved out of the database. Secure enclaves provide Always Encrypted to a broader set of scenarios that have both of the following requirements: 
+
+- The demand that sensitive data are protected from high-privilege, yet unauthorized users, including database administrators, system administrators,  cloud operators, or malware.
+- The requirement that rich computations on protected data be supported within the database system.
+
+For details, see [Always Encrypted with secure enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md).
+
+> [!NOTE]
+> Always Encrypted with secure enclaves is only available on Windows OS.
+
 ### Intelligent query processing
 
 - **Row mode memory grant feedback** expands on the memory grant feedback feature introduced in SQL Server 2017 by adjusting memory grant sizes for both batch and row mode operators.  For an excessive memory grant condition, if the granted memory is more than two times the size of the actual used memory, memory grant feedback will recalculate the memory grant. Consecutive executions will then request less memory. For an insufficiently sized memory grant that results in a spill to disk, memory grant feedback will trigger a recalculation of the memory grant.  Consecutive executions will then request more memory. This feature is enabled by default under database compatibility level 150.
@@ -108,22 +163,15 @@ Continue reading for more details about these features.
 
 To use intelligent query processing features, set database `COMPATIBILITY_LEVEL = 150`.
 
-### Resumable online index create
+### <a id="programmability"></a> Java language programmability extensions
 
-- **Resumable online index create** allows an index create operation to pause and resume later from where the operation was paused or failed, instead of restarting from the beginning.
+- **Java language extension (preview)**: Use the Java language extension to execute Java code in SQL Server. In CTP2.0, this extension is installed when you add the feature 'Machine Learning Services (in-database)' to your SQL Server instance.
 
-  Resumable online index create supports the follow scenarios:
-  - Resume an index create operation after an index create failure, such as after a database failover or after running out of disk space.
-  - Pause an ongoing index create operation and resume it later allowing to temporarily free system resources as required and resume this operation later.
-  - Create large indexes without using as much log space and a long-running transaction that blocks other maintenance activities and allowing log truncation.
+### <a id="sqlgraph"></a> SQL Graph features
 
-  In case of an index create failure, without this feature an online index create operation must be executed again and the operation must be restarted from the beginning.
+- **Match support in `MERGE` DML** allows you to specify graph relationships in a single statement, instead of separate `INSERT`, `UPDATE`, or `DELETE` statements. Merge your current graph data from node or edge tables with new data using the `MATCH` predicates in the `MERGE` statement. This feature enables `UPSERT` scenarios on edge tables. Users can now use a single merge statement to insert a new edge or update an existing one between two nodes.
 
-  With this release, we extend the resumable functionality adding this feature to available [resumable online index rebuild](http://azure.microsoft.com/blog/modernize-index-maintenance-with-resumable-online-index-rebuild/).
-
-  In addition, this feature can be set as the default for a specific database using [database scoped default setting for online and resumable DDL operations](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
-
-  For more information, see [Resumable Online Index Create](../t-sql/statements/create-index-transact-sql.md#resumable-indexes).
+- **Edge Constraints** are introduced for edge tables in SQL Graph. Edge tables can connect any node to any other node in the database. With introduction of edge constraints, you can now apply some restrictions on this behavior. The new `CONNECTION` constraint can be used to specify the type of nodes a given edge table will be allowed to connect to in the schema.
 
 ### Database scoped default setting for online and resumable DDL operations 
 
@@ -142,35 +190,17 @@ Without this feature you have to specify the online and resumable options direct
 More information:
 For more information on index resumable operations see [Resumable Online Index Create](http://azure.microsoft.com/blog/resumable-online-index-create-is-in-public-preview-for-azure-sql-db/).
 
-### Build and rebuild clustered columnstore indexes online
+### <a id="ha"></a>Always On Availability Groups - more synchronous replicas 
 
-Convert row-store tables into columnstore format. Creating clustered columnstore indexes (CCI) was an offline process in the previous versions of SQL Server - requiring all changes stop while CCI is created. SQL Server 2019 and Azure SQL Database enable customers to create or re-create CCI online. Workload will not be blocked and all changes made on the underlying data are transparently added into the target columnstore table. Examples of new TSQL statements that can be used are:
+- **Up to five synchronous replicas**: SQL Server 2019 preview increases the maximum number of synchronous replicas to 5, up from 3 in SQL Server 2017. You can configure this group of 5 replicas to have automatic failover within the group. There is 1 primary replica, plus 4 synchronous secondary replicas.
 
-  ```sql
-  CREATE CLUSTERED COLUMNSTORE INDEX cci
-    ON <tableName>
-    WITH (ONLINE = ON);
-  ```
+- **Secondary-to-primary replica connection redirection**: Allows client application connections to be directed to the primary replica regardless of the target server specified in the connection string. This capability allows connection redirection without a listener. Use secondary-to-primary replica connection redirection in the following cases:
 
-  ```sql
-  ALTER INDEX cci
-    ON <tableName>
-    REBUILD WITH (ONLINE = ON);
-  ```
+  - The cluster technology does not offer a listener capability.
+  - A multi subnet configuration where redirection becomes complex.
+  - Read scale-out or disaster recovery scenarios where cluster type is `NONE`.
 
-### UTF-8 Support
-
-Full support for the widely used UTF-8 character encoding as an import or export encoding, or as database-level or column-level collation for text data. UTF-8 is allowed in the CHAR and VARCHAR datatypes, and is enabled when creating or changing an object’s collation to a collation with the `UTF8` suffix. 
-
-For example,`LATIN1_GENERAL_100_CI_AS_SC` to `LATIN1_GENERAL_100_CI_AS_SC_UTF8`. UTF-8 is only available to Windows collations that support supplementary characters, as introduced in SQL Server 2012. `NCHAR` and `NVARCHAR` allow UTF-16 encoding only, and remain unchanged.
-
-This feature may provide significant storage savings, depending on the character set in use. For example, changing an existing column data type with ASCII strings from `NCHAR(10)` to `CHAR(10)` using an UTF-8 enabled collation, translates into nearly 50% reduction in storage requirements. This reduction is because `NCHAR(10)` requires 22 bytes for storage, whereas `CHAR(10)` requires 12 bytes for the same Unicode string.
-
-### Lightweight query profiling infrastructure enabled by default
-
-The lightweight query profiling infrastructure provides query performance data more efficiently than standard profiling technologies. Lightweight profiling is now enabled by default. It was introduced in SQL Server 2016 SP1. Lightweight profiling offers a query execution statistics collection mechanism with an expected overhead of 2% CPU, compared with an overhead of up to 75% CPU for the standard query profiling mechanism. On previous versions, it was OFF by default. Database administrators could enable it with [trace flag 7412](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). 
-
-For more information, see [Developers Choice: Query progress – anytime, anywhere](http://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/).
+For details, see [Secondary to primary replica read/write connection redirection (Always On Availability Groups)](../database-engine/availability-groups/windows/secondary-replica-connection-redirection-always-on-availability-groups.md).
 
 ### Data Discovery and Classification
 
@@ -187,6 +217,19 @@ For more information, see [SQL Data Discovery and Classification](../relational-
 >[!NOTE]
 >There are no changes in terms of how audit is enabled. There is a new field added to the audit records, `data_sensitivity_information`, which logs the sensitivity classifications (labels) of the actual data that was returned by the query. See [Auditing access to sensitive data](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-data-discovery-and-classification#subheading-3).
 
+### Expanded support for persistent memory devices
+
+Any SQL Server file that is placed on a persistent memory device operates in *enlightened* mode. SQL Server directly accesses the device, bypassing the storage stack of the operating system. This mode improves performance because it allows low latency input/output against such devices.
+    - Examples of SQL Server files include:
+        - Database files
+        - Transaction log files
+        - In-Memory OLTP checkpoint files
+    - Persistent memory is also known as storage class memory.
+    - Persistent memory is occasionally referred to informally as *pmem* on some non-Microsoft websites.
+
+> [!NOTE]
+> For this preview release, support for persistent memory devices is only available on Linux.
+
 ### Support for columnstore statistics in DBCC CLONEDATABASE
 
 `DBCC CLONEDATABASE` creates a schema-only copy of a database that includes all the elements necessary to troubleshoot query performance issues without copying the data.  In previous versions of SQL Server, the command did not copy the statistics necessary to accurately troubleshoot columnstore index queries and manual steps were required to capture this information. Now in SQL Server 2019, DBCC CLONEDATABASE automatically captures the stats blobs for columnstore indexes, so no manual steps will be required.
@@ -194,6 +237,25 @@ For more information, see [SQL Data Discovery and Classification](../relational-
 ### New options added to sp_estimate_data_compression_savings
 
 `sp_estimate_data_compression_savings` returns the current size of the requested object and estimates the object size for the requested compression state.  Currently this procedure supports three options: `NONE`, `ROW`, and `PAGE`. SQL Server 2019 introduces two new options: `COLUMNSTORE` and `COLUMNSTORE_ARCHIVE`. These new options will allow you to estimate the space savings if a columnstore index is created on the table using either standard or archive columnstore compression.
+
+### <a id="ml"></a> SQL Server Machine Learning Services failover clusters and partition based modeling
+
+- **Partition-based modeling**: Process external scripts per partition of your data using the new parameters added to `sp_execute_external_script`. This functionality supports training many small models (one model per partition of data) instead of one large model.
+
+- **Windows Server Failover Cluster**: Configure high availability for Machine Learning Services on a Windows Server Failover Cluster.
+
+For detailed information, see [What's new in SQL Server Machine Learning Services](../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md).
+
+### Lightweight query profiling infrastructure enabled by default
+
+The lightweight query profiling infrastructure provides query performance data more efficiently than standard profiling technologies. Lightweight profiling is now enabled by default. It was introduced in SQL Server 2016 SP1. Lightweight profiling offers a query execution statistics collection mechanism with an expected overhead of 2% CPU, compared with an overhead of up to 75% CPU for the standard query profiling mechanism. On previous versions, it was OFF by default. Database administrators could enable it with [trace flag 7412](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). 
+
+For more information, see [Developers Choice: Query progress – anytime, anywhere](http://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/).
+
+### <a id="polybase"></a>New Polybase connectors
+
+
+- **New connectors for SQL Server, Oracle, Teradata, and MongoDB**: SQL Server 2019 introduces new connectors to external data for SQL Server, Oracle, Teradata, and MongoDB.
 
 ### New sys.dm_db_page_info system function returns page information
 
@@ -208,67 +270,6 @@ FROM sys.dm_exec_requests AS d
   CROSS APPLY sys.dm_db_page_info(r.db_id, r.file_id, r.page_id,'DETAILED')
     AS page_info;
 ```
-
-### <a id="ha"></a>Always On Availability Groups 
-
-- **Up to five synchronous replicas**: SQL Server 2019 preview increases the maximum number of synchronous replicas to 5, up from 3 in SQL Server 2017. You can configure this group of 5 replicas to have automatic failover within the group. There is 1 primary replica, plus 4 synchronous secondary replicas.
-
-- **Secondary-to-primary replica connection redirection**: Allows client application connections to be directed to the primary replica regardless of the target server specified in the connection string. This capability allows connection redirection without a listener. Use secondary-to-primary replica connection redirection in the following cases:
-
-  - The cluster technology does not offer a listener capability.
-  - A multi subnet configuration where redirection becomes complex.
-  - Read scale-out or disaster recovery scenarios where cluster type is `NONE`.
-
-For details, see [Secondary to primary replica read/write connection redirection (Always On Availability Groups)](../database-engine/availability-groups/windows/secondary-replica-connection-redirection-always-on-availability-groups.md).
-
-### Always Encrypted with secure enclaves
-
-Expands upon Always Encrypted with in-place encryption and rich computations. The expansions come from the enabling of computations on plaintext data, inside a secure enclave on the server side.
-
-Cryptographic operations include the encryption of columns, and the rotating of column encryption keys. These operations can now be issued by using Transact-SQL, and they do not require that data be moved out of the database. Secure enclaves provide Always Encrypted to a broader set of scenarios that have both of the following requirements: 
-
-- The demand that sensitive data are protected from high-privilege, yet unauthorized users, including database administrators, system administrators,  cloud operators, or malware.
-- The requirement that rich computations on protected data be supported within the database system.
-
-For details, see [Always Encrypted with secure enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md).
-
-> [!NOTE]
-> Always Encrypted with secure enclaves is only available on Windows OS.
-
-### <a id="sqlgraph"></a> SQL Graph features
-
-- **Match support in `MERGE` DML** allows you to specify graph relationships in a single statement, instead of separate `INSERT`, `UPDATE`, or `DELETE` statements. Merge your current graph data from node or edge tables with new data using the `MATCH` predicates in the `MERGE` statement. This feature enables `UPSERT` scenarios on edge tables. Users can now use a single merge statement to insert a new edge or update an existing one between two nodes.
-
-- **Edge Constraints** are introduced for edge tables in SQL Graph. Edge tables can connect any node to any other node in the database. With introduction of edge constraints, you can now apply some restrictions on this behavior. The new `CONNECTION` constraint can be used to specify the type of nodes a given edge table will be allowed to connect to in the schema.
-
-### <a id="programmability"></a> Java language programmability extensions
-
-- **Java language extension (preview)**: Use the Java language extension to execute Java code in SQL Server. In CTP2.0, this extension is installed when you add the feature 'Machine Learning Services (in-database)' to your SQL Server instance.
-
-### <a id="ml"></a> SQL Server Machine Learning Services
-
-- **Partition-based modeling**: Process external scripts per partition of your data using the new parameters added to `sp_execute_external_script`. This functionality supports training many small models (one model per partition of data) instead of one large model.
-
-- **Windows Server Failover Cluster**: Configure high availability for Machine Learning Services on a Windows Server Failover Cluster.
-
-For detailed information, see [What's new in SQL Server Machine Learning Services](../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md).
-
-### <a id="polybase"></a> PolyBase
-
-- **New connectors for SQL Server, Oracle, Teradata, and MongoDB**: SQL Server 2019 introduces new connectors to external data for SQL Server, Oracle, Teradata, and MongoDB.
-
-### Expanded support for persistent memory devices
-
-Any SQL Server file that is placed on a persistent memory device operates in *enlightened* mode. SQL Server directly accesses the device, bypassing the storage stack of the operating system. This mode improves performance because it allows low latency input/output against such devices.
-    - Examples of SQL Server files include:
-        - Database files
-        - Transaction log files
-        - In-Memory OLTP checkpoint files
-    - Persistent memory is also known as storage class memory.
-    - Persistent memory is occasionally referred to informally as *pmem* on some non-Microsoft websites.
-
-> [!NOTE]
-> For this preview release, support for persistent memory devices is only available on Linux.
 
 ## <a id="bigdatacluster"></a>Big Data Clusters
 

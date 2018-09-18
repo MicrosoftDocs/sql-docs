@@ -29,7 +29,7 @@ Some of the key extensibility points are:
 
 ## Visual Studio Code extensibility APIs
 
-For details, see [Extension Authoring](https://code.visualstudio.com/docs/extensions/overview) and [Extension API](https://code.visualstudio.com/docs/extensionAPI/overview) documentation on the VS Code website.
+Because the core [!INCLUDE[name-sos](../includes/name-sos.md)] platform is built upon Visual Studio Code, details about the Visual Studio Code extensibility APIs are found in the [Extension Authoring](https://code.visualstudio.com/docs/extensions/overview) and [Extension API](https://code.visualstudio.com/docs/extensionAPI/overview) documentation on the Visual Studio Code website.
 
 ## Manage Dashboard tab panel contributions
 
@@ -44,7 +44,7 @@ For details, see [Extensibility APIs](extensibility-apis.md).
 
 This section covers the various contribution points that are defined in the package.json extension manifest.
 
-The IntelliSense is supported inside sqlopsstudio.
+The IntelliSense is supported inside azuredatastudio.
 
 ## Contributes dashboard
 
@@ -260,7 +260,7 @@ There are currently four supported container types:
 
 ## Context variables
 
-For general information about context in vscode and subsequently Azure Data Studio, see [Extensibility](https://code.visualstudio.com/docs/extensionAPI/extension-points#_example).
+For general information about context in Visual Studio Code and subsequently Azure Data Studio, see [Extensibility](https://code.visualstudio.com/docs/extensionAPI/extension-points#_example).
 
 In Azure Data Studio, we have specific context around database connections available for extensions.
 

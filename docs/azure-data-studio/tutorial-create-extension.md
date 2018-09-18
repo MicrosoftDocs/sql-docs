@@ -172,7 +172,7 @@ In this tutorial, you learned how to:
 > * Publish your extension to the marketplace
 
 
-I hope after reading this you’ll be inspired to build your own extension for Azure Data Studio. We have support for Dashboard Insights (pretty graphs that run against your SQL Server), a number of SQL-specific APIs, and a huge existing set of extension points inherited from Visual Studio Code.
+We hope after reading this you’ll be inspired to build your own extension for Azure Data Studio. We have support for Dashboard Insights (pretty graphs that run against your SQL Server), a number of SQL-specific APIs, and a huge existing set of extension points inherited from Visual Studio Code.
 
 If you have an idea but are not sure how to get started please open an issue or tweet at the team ([azuredatastudio](https://twitter.com/azuredatastudio), [me](https://twitter.com/kevcunnane), [Alan](https://twitter.com/alanyusql), [Abbie](https://twitter.com/ppookpetch)).
 

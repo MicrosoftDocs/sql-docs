@@ -15,7 +15,7 @@ ms.author: maghan
 ---
 # Integrating Reporting Services Using ReportViewer Controls - Get Started
 
-Learn how developers can embed paginated reports in ASP.NET web sites, and Windows Forms apps, through the Reporting Services 2016 ReportViewer Control. You can add the control to a new project, or update an existing project.
+Learn how developers can embed paginated reports in ASP.NET web sites, and Windows Forms apps, through the Reporting Services Report Viewer Control. You can add the control to a new project, or update an existing project.
 
 ## Adding the Report Viewer control to a new web project
 
@@ -23,7 +23,7 @@ Learn how developers can embed paginated reports in ASP.NET web sites, and Windo
 
     ![ssRS-Create-New-ASPNET-Project](../../reporting-services/application-integration/media/ssrs-create-new-aspnet-project.png)
 
-2. Install the Report Viewer control nuget package via the **Nuget package manager console**.
+2. Install the Report Viewer control NuGet package via the **NuGet package manager console**.
 
     ```
     Install-Package Microsoft.ReportingServices.ReportViewerControl.WebForms
@@ -72,7 +72,7 @@ The final page should look like the following.
 
 ## Updating an existing project to use the Report Viewer control
 
-If updating to the latest version of the Report Viewer control make sure to update any assembly references to version *15.0.0.0*. This will include updating the project's web.config and all .aspx pages that reference the Report Viewer control.
+Make sure to update any assembly references to version *15.0.0.0*, including the project's web.config and all .aspx pages that reference the viewer control.
 
 ### Sample web.config changes
 
@@ -138,7 +138,7 @@ If updating to the latest version of the Report Viewer control make sure to upda
 
     ![ssRS-Create-New-winforms-Project](../../reporting-services/application-integration/media/ssrs-create-new-winforms-project.png)
 
-2. Install the ReportViewer 2016 control nuget package via the **Nuget package manager console**.
+2. Install the Report Viewer control NuGet package via the **NuGet package manager console**.
 
     ```
     Install-Package Microsoft.ReportingServices.ReportViewerControl.WinForms
@@ -169,11 +169,9 @@ If updating to the latest version of the Report Viewer control make sure to upda
 
 ## How to set 100% height on the Report Viewer control
 
-The new Report Viewer control is optimized for HTML5 Standards mode pages and works on all modern browsers. In the past, with the old RVC control, when you set the 100% height property, it worked even if none of the ancestors had height specified. This behavior has changed in HTML5. When you set this property on the new RVC control, it will work correctly only if the parent element has a defined height, i.e. not a value of auto, or all the ancestors of RVC have 100% height too.
+If setting the height of the viewer control to 100% the parent element is required to have a defined height, or all ancestors are required to have percentage heights.
 
-Below are the two examples to do this.
-
-### By setting the height of all the parent elements to 100%
+### Setting the height of all the ancestors to 100%
 
 ```
 <!DOCTYPE html>
@@ -199,7 +197,7 @@ Below are the two examples to do this.
 
 ```
 
-### By setting the style height attribute on the parent of the Report Viewer control
+### Setting the parent's height attribute
 
 For more information about viewport percentage lengths, see [Viewport-percentage lengths](https://www.w3.org/TR/css3-values/#viewport-relative-lengths).
 
@@ -224,15 +222,15 @@ For more information about viewport percentage lengths, see [Viewport-percentage
 
 ## Adding control to Visual Studio toolbar
 
-The Report Viewer Control is now shipped as a NuGet package. Because of this, you will not see the Report Viewer Control show up in the Visual Studio toolbox by default. You can add the control to the toolbox by doing the following.
+The Report Viewer Control is now shipped as a NuGet package and no longer shows in the Visual Studio toolbox by default. You can add the control to the toolbox manually.
 
 1. Install the NuGet package for either the WinForms or WebForms as mentioned above.
 
-2. Remove the Report Viewer Control that is listed in the toolbox. This is the the control with a version of 12.x.
+2. Remove the Report Viewer Control that is listed in the toolbox.
 
     ![ssRS-remove-old-rvcontrol-toolbox](../../reporting-services/application-integration/media/ssrs-remove-old-rvcontrol-toolbox.png)
 
-3. Right click in anywhere in the toolbox and then select **Choose Items...**.
+3. Right-click in anywhere in the toolbox and then select **Choose Items...**.
 
     ![ssRS-toolbox-choose-item](../../reporting-services/application-integration/media/ssrs-toolbox-choose-item.png)
     
@@ -249,24 +247,17 @@ The Report Viewer Control is now shipped as a NuGet package. Because of this, yo
 
     ![ssRS-toolbox-rvcontrol](../../reporting-services/application-integration/media/ssrs-toolbox-rvcontrol.png)
 
-### Things to be aware of
-
-- This will add a reference to the installed NuGet package within your current project. The item in the toolbox will persist to other projects. When you install the NuGet package in a new solution/project, the toolbox item may be referencing an older version. 
-
-- The control will remain in the toolbox even if the assembly is not available any longer. If that project was deleted, Visual Studio will throw an error if you try and add the control from the toolbox. To correct this error, remove the control from the toolbox and re-add it using the steps above.
-
-
 ## Common issues
     
-- The Report Viewer control is designed to be used with modern browsers. The control may not function if browsers render the web page in an IE compatibility mode. Intranet sites may require a meta tag to override setting which encourage rendering intranet pages in compatibility mode.
+The viewer control is designed for modern browsers. The control may not work as expected if the browser renders the page using IE compatibility mode. Intranet sites may require a meta tag to override default browser behavior.
 
     ```
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     ```
       
-## Providing feedback
+## Feedback
 
-Let the team know about issues you encounter with the control on the [Reporting Services MSDN forums](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqlreportingservices).
+Let the team know about issues on the [Reporting Services forums](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqlreportingservices).
 
 ## See also
 

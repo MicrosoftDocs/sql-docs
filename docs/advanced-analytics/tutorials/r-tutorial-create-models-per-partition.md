@@ -186,7 +186,9 @@ By default, the query optimizer tends to operate under **@parallel=1** on tables
 
 ## Run the procedure and train the model
 
-In this section, the script trains the model that you created and saved in the previous step. The examples below demonstrate two approaches for training your model: using an entire data set, or a partial data. Training is a resource-intensive operation. If system resources, especially memory, are insufficient for the load, use a subset of the data. The second example provides the syntax.
+In this section, the script trains the model that you created and saved in the previous step. The examples below demonstrate two approaches for training your model: using an entire data set, or a partial data. 
+
+Training is computationally intensive, taking many minutes to complete. On a moderately resourced virtual machine, it can take over 30 minutes to train using the entire data set. If system resources, especially memory, are insufficient for the load, use a subset of the data. The second example provides the syntax.
 
 ```sql
 --Example 1: train on entire dataset
@@ -217,7 +219,6 @@ The result in the models table should be five different models, based on five pa
 SELECT *
 FROM ml_models
 ```
-
  
 ## Define a procedure for predicting outcomes
 

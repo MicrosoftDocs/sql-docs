@@ -49,7 +49,7 @@ To view the SQL resources associated with an Azure account, you must first add t
 
 Multiple Azure accounts are supported in [!INCLUDE [Azure Data Studio](../includes/name-sos-short.md)]. To add more Azure accounts, click the button on the right top of **Linked Accounts** dialog and follow the same steps with Add an Azure account section to add more Azure accounts.
 
-    ![Add more Azure account](media/azure-resource-explorer/add-more-azure-account.png)
+![Add more Azure account](media/azure-resource-explorer/add-more-azure-account.png)
 
 ### Remove an Azure account
 

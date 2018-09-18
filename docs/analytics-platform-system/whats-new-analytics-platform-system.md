@@ -36,6 +36,7 @@ We have upgraded to SQL Server 2016 SP2 CU2 with APS CU7.1. The upgrade fixes so
 <a name="h2-aps-au7"></a>
 ## APS AU7
 Release date - May 2018
+
 APS 2016 is a prerequisite to upgrade to AU7. The following are new features in APS AU7:
 
 ### Auto-create and auto-update statistics

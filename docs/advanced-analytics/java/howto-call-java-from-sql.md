@@ -35,7 +35,9 @@ This article explains implementation details for Java classes and methods that e
 > * Partitioning using **@input_data_1_partition_by_columns** is not supported.
 > * Parallel processing using **@parallel=1** is supported.
 
-The following example shows an sp_execute_external_script using the Java extension, with path and API signature specifications.
+## Call sp_execute_external_script
+
+The [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) system stored procedure is the interface used to call the Java runtime. The following example shows an sp_execute_external_script using the Java extension, and parameters for specifying path, script, and your custom code.
 
 ```sql
 DECLARE @myClassPath nvarchar(30)

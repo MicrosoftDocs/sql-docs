@@ -82,7 +82,7 @@ Nodes in the cluster are arranged into three logical planes: the control plane, 
 
 ### <a id="controlplane"></a> Control plane
 
-The control plane provides management and [security](concept-security.md) for the cluster. It contains the Kubernetes master, the [SQL Server master instance](concept-master-instance.md), and other cluster-level services such as the Hive Metastore and Spark Driver.
+The control plane provides management and security for the cluster. It contains the Kubernetes master, the [SQL Server master instance](concept-master-instance.md), and other cluster-level services such as the Hive Metastore and Spark Driver.
 
 ### <a id="computeplane"></a> Compute plane
 

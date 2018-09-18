@@ -29,7 +29,9 @@ This article explains implementation details for Java classes and methods that e
 * "params" is used to pass parameters to the Java class. Calling methods that require arguments is not supported, which makes parameters the recommended way to pass argument values. 
 
 > [!Note]
->  On the stored procedure, only input parameters are supported in CTP2.0.
+>  * On the stored procedure, only input parameters are supported in CTP2.0.
+> * Streaming using the sp_execute_external_script parameter @r_rowsPerRead and partitioning using @input_data_1_partition_by_columns is not supported in CTP2.0.
+> * Parallel processing using @parallel = 1 is supported in CTP2.0
 
 The following example shows an sp_execute_external_script using the Java extension, with path and API signature specifications.
 
@@ -121,10 +123,10 @@ This section describes **OutputDataSet**, the output data sets returned from Jav
 
 ### outputDataColN
 
-Similar to **inputDataSet**, for every output column your Java program sends back to SQL Server, you must declare an array variable. All **outputDataCol** arrays should have the same length.
+Similar to **inputDataSet**, for every output column your Java program sends back to SQL Server, you must declare an array variable. All **outputDataCol** arrays should have the same length. You need to make sure this is initialized by the time the class execution finishes.
 
 ```java
-public static <type>[] outputDataColN = new <type>[1]
+public static <type>[] outputDataColN = new <type>[]
 ```
 
 ### numberofOutputCols

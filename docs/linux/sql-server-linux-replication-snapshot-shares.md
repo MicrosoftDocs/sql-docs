@@ -17,10 +17,9 @@ ms.assetid:
 ms.workload: "On Demand"
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
+# Configure replication snapshot folder with shares
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
-
-# Configure replication snapshot folder with shares
 
 The snapshot folder is a directory that you have designated as a share; agents that read from and write to this folder must have enough permissions to access it.
 

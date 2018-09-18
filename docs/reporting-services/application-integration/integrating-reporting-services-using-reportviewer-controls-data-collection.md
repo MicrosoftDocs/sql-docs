@@ -1,6 +1,6 @@
 ---
 title: "Data collection in ReportViewer Control 2016 | Microsoft Docs"
-ms.date: 09/06/2016
+ms.date: 09/18/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: application-integration
@@ -22,8 +22,8 @@ For an explanation of the user data collection and use practices for Microsoft S
 Telemetry can be disabled programmatically through the “EnableTelemetry”. This can be done by editing the .aspx page hosting the control
 
 ```
-\<rsweb:ReportViewer ID="ReportViewer1" runat="server" EnableTelemetry="false">
-\</rsweb:ReportViewer>
+<rsweb:ReportViewer ID="ReportViewer1" runat="server" EnableTelemetry="false">
+</rsweb:ReportViewer>
 ```
 
 Or, pragmatically before the control is rendered such as in the hosting page’s Page_Load call.

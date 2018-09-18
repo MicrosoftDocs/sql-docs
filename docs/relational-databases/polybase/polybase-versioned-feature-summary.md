@@ -77,6 +77,14 @@ PolyBase has the following limitations:
 
 ::: moniker-end
 
+- TBD: Row Width
+- TBD: type mapping
+- TBD: Authentication
+- TBD: Collation 
+- TBD: Pushdown  
+
+## Security and Authentication 
+
 ## See Also  
 
 [PolyBase Guide](../../relational-databases/polybase/polybase-guide.md)  

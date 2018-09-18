@@ -103,7 +103,6 @@ If you are accepted into the limited public preview, the next step is to setup a
 
 ## Next steps
 
-After deploying SQL Server 2019 preview Big Data Clusters, explore some of its capabilities with the following quickstarts:
+After deploying SQL Server 2019 preview Big Data Clusters, explore some of its capabilities with the following quickstart:
 
 - [Get started with SQL Server Big Data Cluster on SQL Server 2019 preview](quickstart-big-data-cluster-get-started.md)
-- [Run Jupypter Notebooks on SQL Server 2019 preview](quickstart-big-data-cluster-notebooks.md)

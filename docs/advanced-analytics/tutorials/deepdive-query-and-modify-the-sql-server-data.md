@@ -53,7 +53,7 @@ First, get a list of the columns and their data types.
 
 ## Modify metadata
 
-All the variables are stored as integers, but some variables represent categorical data,called *factor variables* in R. For example, the column *state* contains numbers used as identifiers for the 50 states plus the District of Columbia.  To make it easier to understand the data, you replace the numbers with a list of state abbreviations.
+All the variables are stored as integers, but some variables represent categorical data, called *factor variables* in R. For example, the column *state* contains numbers used as identifiers for the 50 states plus the District of Columbia.  To make it easier to understand the data, you replace the numbers with a list of state abbreviations.
 
 In this step, you create a string vector containing the abbreviations, and then map these categorical values to the original integer identifiers. Then you use the new variable in the *colInfo* argument, to specify that this column be handled as a factor. Whenever you analyze the data or move it, the abbreviations are used and the column is handled as a factor.
 

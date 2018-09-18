@@ -214,6 +214,10 @@
     items:
     - name: Configure
       href: sql-server-linux-replication-configure.md
+    - name: Snapshot folder
+      href: sql-server-linux-replication-snapshot-shares.md
+    - name: Non-default ports
+      href: sql-server-linux-replication-non-default-ports.md
 - name: Samples
   items:
   - name: Unattended install

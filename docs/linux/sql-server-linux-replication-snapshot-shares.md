@@ -22,22 +22,22 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 
 # Configure replication snapshot folder with shares
 
-The snapshot folder is a directory that you have designated as a share; agents that read from and write to this folder must have enough permissions to access it.
+The snapshot folder is a directory that you have designated as a share; agents that read from andand write to this folder must have enough permissions to access it.
 
-[repldiag][1]
+[replication diagram][1]
 
 ## Configure a samba share for the snapshot folder 
 
-Replication agents will need a shared directory between these replication hosts to access snapshot folders on other machines. For example, in a transactional pull replication set up, the distribution agent resides on the subscriber which require access to the distributor to get articles. In this section, we'll go through an example of how to configure a samba share on two replication hosts.
+Replication agents will need a shared directory between replication hosts to access snapshot folders on other machines. For example, a transactional pull replication, the distribution agent resides on the subscriber which requires access to the distributor to get articles. In this section, we'll go through an example of how to configure a samba share on two replication hosts.
 
 ### Replication Snapshot Folder Share Explained
 
-Before we go through the example, let's walk through ho[KT3]w SQL Server uses samba shares in a replication set up. Below is a basic example of how this works.
+Before the examples, walk through how SQL Server uses samba shares in replication. Below is a basic example of how this works.
 
-1. Samba shares are set up so that files written to /local/path1 by the replication agents on publisher can be seen by the subscriber
-2. SQL Server is configured to use share paths when setting up the publisher on the distribution server[PM4][VY5] such that all instances would look at the //share/path
-3. SQL Server finds the local path from the //share/path to know where to look for the files
-4. SQL Server read/writes to local paths backed by a samba share
+1. Samba shares are set up so that files written to `/local/path1` by the replication agents on publisher can be seen by the subscriber
+2. SQL Server is configured to use share paths when setting up the publisher on the distribution server such that all instances would look at the `//share/path`
+3. SQL Server finds the local path from the `//share/path` to know where to look for the files
+4. SQL Server reads/writes to local paths backed by a samba share
 
 ## Steps
 

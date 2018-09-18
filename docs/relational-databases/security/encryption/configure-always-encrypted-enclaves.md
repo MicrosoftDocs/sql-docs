@@ -30,11 +30,11 @@ To setup Always Encrypted with secure enclaves, use the following workflow:
  
 
 
-## Configure your environment 
+## Configure your environment
 
 To use secure enclaves with Always Encrypted, your environment requires Windows Server 2019 Preview, and SQL Server Management Studio (SSMS) 18.0 (preview), .NET Framework, and several other components. The following sections provide specific details and links to get the required components.
 
-### SQL Server computer requirements
+### SQL Server computer
 
 The computer running SQL Server needs the following operating system and SQL Server version:
 
@@ -48,16 +48,14 @@ The computer running SQL Server needs the following operating system and SQL Ser
 - Windows Server DataCenter (Semi-Annual Channel), version 1809
 - Windows Server 2019 DataCenter
 
+> [!IMPORTANT]
+> The computer must be configured as a guarded host, attested by HGS. TPM attestation is the recommended enclave attestation method for production environments, and requires SQL Server runs on a physical machine, not in a virtual machine. Virtual machines are adequate for pre-production environments only.
 
-### HGS computer requirements
+### HGS computer
 
 A single HGS computer is sufficient during testing and prototyping. For production, a Windows failover cluster with 3 computers is strongly recommended.
 
-The computer must be configured as a guarded host, attested by HGS. TPM attestation is the recommended enclave attestation method for production environments, and requires SQL Server runs on a physical machine, not in a virtual machine. Virtual machines are adequate for pre-production environments only. See the following section for details.
-
-### Configure HGS attestation
-
-For details on HGS computer requirements and set up, see [Setting up the Host Guardian Service for Always Encrypted in SQL Server](https://docs.microsoft.com/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server).
+Windows Host Guardian Service (HGS) needs to be installed on separate HGS computers, and not on the same computer as SQL Server. For details on HGS computer requirements and set up, see [Setting up the Host Guardian Service for Always Encrypted in SQL Server](https://docs.microsoft.com/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server).
 
 
 ### Determine your Attestation Service URL
@@ -125,9 +123,11 @@ On the client/development computer:
     | column encryption enclave type | 1     | 1              |
 
 6. To enable rich computations on encrypted columns, run the following query:
+
    ```sql
    DBCC traceon(127,-1)
-   ```     
+   ```
+
     > [!NOTE]
     > Rich computations are disabled by default in [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)]. They need to be enabled using the above statement after each restart of your SQL Server instance.
 
@@ -138,7 +138,7 @@ The introduction of enclave-enabled keys does not fundamentally change the [key 
 - The **ENCLAVE_COMPUTATIONS** property in the column master key metadata in the database is set.
 - The column master key property values (including the setting of **ENCLAVE_COMPUTATIONS**) are digitally signed. The tool adds the signature, which is produced using the actual column master key, to the metadata. The purpose of the signature is to prevent malicious DBAs and computer admins from tampering with the **ENCLAVE_COMPUTATIONS** setting. The SQL client drivers verify the signatures before allowing the enclave use. This provides security administrators with control over which column data can be computed inside the enclave.
 
-The **ENCLAVE_COMPUTATIONS** property of a column master key is immutable – you cannot change it after the key has been provisioned. You can, however, replace the column master key with a new key that has a different value of the **ENCLAVE_COMPUTATIONS** property than the original key, via a process called a [column master key rotation](#initiate-the-rotation-from-the-current-column-master-key-to-the-new-column-master-key). For more information about the ENCLAVE_COMPUTATIONS property, see [CREATE COLUMN MASTER KEY](../../../t-sql/statements/create-column-master-key-transact-sql.md).
+The **ENCLAVE_COMPUTATIONS** property of a column master key is immutable – you cannot change it after the key has been provisioned. You can, however, replace the column master key with a new key that has a different value of the **ENCLAVE_COMPUTATIONS** property than the original key, via a process called a [column master key rotation](#initiate-the-rotation-from-the-current-column-master-key-to-the-new-column-master-key). For more information about the **ENCLAVE_COMPUTATIONS** property, see [CREATE COLUMN MASTER KEY](../../../t-sql/statements/create-column-master-key-transact-sql.md).
 
 To provision an enclave-enabled column encryption key, you need to make sure that the column master key that encrypts the column encryption key, is enclave-enabled.
 
@@ -330,7 +330,7 @@ The below table summarizes the functionality for enclave-enabled string columns,
 
 ### Determining and changing collations
 
-In SQL Server, collations can be set at the server, database, or column level. For general instructions on how to determine the current collation and change a collation at the server, database or column level, see <https://docs.microsoft.com/sql/relational-databases/collations/collation-and-unicode-support>.
+In SQL Server, collations can be set at the server, database, or column level. For general instructions on how to determine the current collation and change a collation at the server, database or column level, see [Collation and Unicode Support](https://docs.microsoft.com/sql/relational-databases/collations/collation-and-unicode-support).
 
 **Special considerations for non-UNICODE string columns**:
 
@@ -413,7 +413,7 @@ ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NULL
 To add the required connection parameters to enable enclave computations:
 
 1. Open SSMS.
-2. After specifying your server name and a database name in the Connect To Server dialog, click **Options**. Navigate to the **Always Encrypted** tab, select **Always Encrypted Enabled**, and specify your enclave attestation URL.
+2. After specifying your server name and a database name in the Connect To Server dialog, click **Options**. Navigate to the **Always Encrypted** tab, select **Enable Always Encrypted**, and specify your enclave attestation URL.
     
     ![Column Encryption Setting](./media/always-encrypted-enclaves/column-encryption-setting.png)
 
@@ -424,7 +424,7 @@ Alternatively, if you already have a query window open, here is how you can upda
 
 1. Right-click anywhere in an existing query window.
 2. Select Connection \> Change Connection.
-3. Click on **Options**. Navigate to the **Always Encrypted** tab, select **Always Encrypted Enabled**, and specify your enclave attestation URL.
+3. Click on **Options**. Navigate to the **Always Encrypted** tab, select **Enable Always Encrypted**, and specify your enclave attestation URL.
 4. Click Connect.
 
 
@@ -448,7 +448,7 @@ To encrypt a column using a key that is not enclave-enabled, you need to use cli
 
 #### Steps
 
-1. Prepare an SSMS query window with Always Encrypted and enclave computations enabled in the database connection. For details, see [Preparing an SSMS Query Window with Always Encrypted Enabled](#prepare-an-ssms-query-window-with-always-encrypted-enabled).
+1. Prepare an SSMS query window with Always Encrypted and enclave computations enabled in the database connection. For details, see [Prepare an SSMS Query Window with Always Encrypted Enabled](#prepare-an-ssms-query-window-with-always-encrypted-enabled).
 2. In the query window, issue the ALTER TABLE statement with the ALTER COLUMN clause, specifying an enclave-enabled column encryption key in the ENCRYPTED WITH clause. If your column is a string column (for example, char, varchar, nchar, nvarchar), you may also need to change the collation to a BIN2 collation. See the Collation Setup section for details.
     
     > [!NOTE]
@@ -458,7 +458,7 @@ To encrypt a column using a key that is not enclave-enabled, you need to use cli
   
     > [!NOTE]
     > If you do not remove the plan for the impacted query from the cache, the first execution of the query after encryption may fail.
-    
+
     > [!NOTE]
     > Use DBCC FREEPROCCACHE to clear the plan cache carefully, as it may result in temporary query performance degradation. To minimize the negative impact of clearing the cache, you can selectively remove the plans for the impacted queries only.
 
@@ -609,7 +609,7 @@ After you have made your column enclave-enabled, you can perform the following o
 
 #### Steps
 
-1. Prepare an SSMS query window with Always Encrypted and enclave computations enabled for the database connection. See Section Preparing an SSMS Query Window with Always Encrypted Enabled.
+1. Prepare an SSMS query window with Always Encrypted and enclave computations enabled for the database connection. For details, see [Prepare an SSMS Query Window with Always Encrypted Enabled](#prepare-an-ssms-query-window-with-always-encrypted-enabled).
 
 2. In the query window, issue the use the [ALTER TABLE (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/alter-table-transact-sql) statement with the ALTER COLUMN clause, specifying the following in the ENCRYPTED WITH clause:
     
@@ -626,7 +626,8 @@ After you have made your column enclave-enabled, you can perform the following o
     
     If you do not remove the plan for the impacted query from the cache, the first execution of the query after re-encryption may fail.
     
-    Note: Use DBCC FREEPROCCACHE to clear the plan cache carefully, as it may result in temporary query performance degradation. To minimize the negative impact of clearing the cache, you can selectively remove the plans for the impacted queries only. See the [DBCC FREEPROCCACHE](../../../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md).aspx) for details.
+    > [!NOTE]
+    > Use DBCC FREEPROCCACHE to clear the plan cache carefully, as it may result in temporary query performance degradation. To minimize the negative impact of clearing the cache, you can selectively remove the plans for the impacted queries only. See the [DBCC FREEPROCCACHE](../../../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md).aspx) for details.
 
 4. (Optionally) call
     [sp_refresh_parameter_encryption](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-refresh-parameter-encryption-transact-sql) to update the metadata for the parameters of each module (stored procedure, function, view, trigger) that may have been invalidated by re-encrypting the columns.
@@ -706,7 +707,7 @@ the online mode.
 
 #### Steps
 
-1.  Prepare an SSMS query window with Always Encrypted and enclave computations enabled for the database connection. See Section Preparing an SSMS Query Window with Always Encrypted Enabled.
+1.  Prepare an SSMS query window with Always Encrypted and enclave computations enabled for the database connection. For details, see [Prepare an SSMS Query Window with Always Encrypted Enabled](#prepare-an-ssms-query-window-with-always-encrypted-enabled).
 
 2.  In the query window, issue the [ALTER TABLE (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/alter-table-transact-sql) statement with the ALTER COLUMN clause, specifying the desired column configuration **without** the ENCRYPTED WITH clause.
     
@@ -718,7 +719,8 @@ the online mode.
     > [!NOTE]
     > If you do not remove the plan for the impacted query from the cache, the first execution of the query after decryption may fail.
     
-    Use DBCC FREEPROCCACHE to clear the plan cache carefully, as it may result in temporary query performance degradation. To minimize the negative impact of clearing the cache, you can selectively remove the plans for the impacted queries only. See the [DBCC FREEPROCCACHE](../../../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md) for details.
+    > [!NOTE]
+    > Use DBCC FREEPROCCACHE to clear the plan cache carefully, as it may result in temporary query performance degradation. To minimize the negative impact of clearing the cache, you can selectively remove the plans for the impacted queries only. See the [DBCC FREEPROCCACHE](../../../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md) for details.
 
 4.  (Optionally) call
     [sp\_refresh\_parameter\_encryption](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-refresh-parameter-encryption-transact-sql) to update the metadata for the parameters of each module (stored procedure, function, view, trigger) that may have been invalidated by decrypting the columns.
@@ -754,7 +756,7 @@ The quickest way to try rich queries against your enclave-enabled columns is fro
 
 ### Steps
 
-1.  Prepare an SSMS query window with Always Encrypted and enclave computations enabled for the database connection. See Section [Preparing an SSMS Query Window with Always Encrypted Enabled](#prepare-an-ssms-query-window-with-always-encrypted-enabled).
+1.  Prepare an SSMS query window with Always Encrypted and enclave computations enabled for the database connection. For details, see [Prepare an SSMS Query Window with Always Encrypted Enabled](#prepare-an-ssms-query-window-with-always-encrypted-enabled).
 
 2.  Enable Parameterization for Always Encrypted.
     

@@ -72,7 +72,17 @@ Graph extensions are fully integrated in [!INCLUDE[ssNoVersion](../../includes/s
  
 ### Tooling and ecosystem  
 Users benefit from existing tools and ecosystem that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offers. Tools like backup and restore, import and export, BCP just work out of the box. Other tools or services like SSIS, SSRS or PowerBI will work with graph tables, just the way they work with relational tables.
- 
+
+## Edge Constraints
+An edge constraint is defined on a graph edge table and is a pair of node table(s) that a given edge type can connect. This gives users a better control over their graph schema. With the help of edge constraints users can restrict the type of nodes a given edge is allowed to connect. 
+
+To learn more about how to create and use edge constraints refer to [Edge Constraints]()
+
+## Merge DML 
+The [MERGE](../../t-sql/statements/merge-transact-sql.md) statement performs insert, update, or delete operations on a target table based on the results of a join with a source table. For example, you can synchronize two tables by inserting, updating, or deleting rows in a target table based on differences between the target table and the source table. Using MATCH predicates in a MERGE statement is now supported on Azure SQL Database and SQL Server vNext. That is, it is now possible to merge your current graph data (node or edge tables) with new data using the MATCH predicates to specify graph relationships in a single statement, instead of separate INSERT/UPDATE/DELETE statements.
+
+To learn more about how match can be used in merge DML refer to [MERGE Statement](../../t-sql/statements/merge-transact-sql.md)
+
  ## Next steps  
 Read the [SQL Graph Database - Architecture](./sql-graph-architecture.md)
    

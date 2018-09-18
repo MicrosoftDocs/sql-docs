@@ -26,7 +26,7 @@ ms.author: shkale
 manager: craigg
 monikerRange: ">=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# sys.key_constraints (Transact-SQL)
+# sys.edge_constraints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx.md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
   Contains a row for each object that is an edge constraint. 

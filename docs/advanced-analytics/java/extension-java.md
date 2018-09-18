@@ -63,7 +63,10 @@ One difference from previous language integrations such as R and Python is that 
 | [Java 1.10](http://jdk.java.net/10/)   | Windows |
 | Java 1.8   | Linux | 
 
-Given that Java is backwards compatible, earlier versions might work, but the supported and tested versions for this early CTP release are listed in the table. 
+Given that Java is backwards compatible, earlier versions might work, but the supported and tested versions for this early CTP release are listed in the table.
+
+> [!Note]
+>To run Java with SQL Server, you technically only need the Java Runtime Environment installed (JRE). The JDK is a development kit including the Java compiler and other development related packages. If you already have a development environment and only need a Java runtime on the server machine, you can ignore the JDK installation instructions and only install JRE.
 
 ## JDK on Windows
 
@@ -76,7 +79,7 @@ Install the JDK under the default /Program Files/ folder if you want to avoid ha
 
 ### Grant access to non-default JDK folder (Windows only)
 
-You can skip this step if you installed the JDK in the default folder. For a non-default folder installation, run the following PowerShell scripts to grant access to the **SQLRUsergroup** and SQL Server service accounts (in ALL_APPLICATION_PACKAGES) for accessing the JVM and the Java classpath.
+You can skip this step if you installed the JDK/JRE in the default folder. For a non-default folder installation, run the following PowerShell scripts to grant access to the **SQLRUsergroup** and SQL Server service accounts (in ALL_APPLICATION_PACKAGES) for accessing the JVM and the Java classpath.
 
 #### SQLRUserGroup permissions
 
@@ -97,7 +100,7 @@ Set-Acl "<YOUR PATH TO JDK / CLASSPATH>" $Acl
 ```
 
 ### Add the JDK path to JAVA_HOME
-You also need to add the JDK installation path (for example, "C:\Program Files\Java\jdk-10.0.2") to a system environment variable that you name "JAVA_HOME". 
+You also need to add the JDK/JRE installation path (for example, "C:\Program Files\Java\jdk-10.0.2") to a system environment variable that you name "JAVA_HOME". 
 
 To create a system variable, use Control Panel > System and Security > System to access **Advanced System Properties**. Click **Environment Variables** and then create a new system variable for JAVA_HOME.
 
@@ -105,7 +108,7 @@ To create a system variable, use Control Panel > System and Security > System to
 
 ## JDK on Linux
 
-On Linux, the mssql-server-extensibility-java package automatically installs OpenJDK 1.8 if it is not already installed. It will also add the JVM path to an environment variable called JAVA_HOME.
+On Linux, the mssql-server-extensibility-java package automatically installs JRE 1.8 if it is not already installed. It will also add the JVM path to an environment variable called JAVA_HOME.
 
 ## Limitations in CTP 2.0
 
@@ -113,8 +116,11 @@ On Linux, the mssql-server-extensibility-java package automatically installs Ope
 
 * Output parameters in sp_execute_external_script are not supported in this version.
 
-* No LOB datatype support for Input and output data sets in this version.
+* No LOB datatype support for input and output data sets in this version. See [Java and SQL Server data types](java-sql-datatypes.md) for details about which data types are supported in this CTP.
 
+* Streaming using the sp_execute_external_script parameter @r_rowsPerRead is not supported in this CTP.
+
+* Partitioning using the sp_execute_external_script parameter @input_data_1_partition_by_columns is not supported in this CTP.
 
 ## Next steps
 

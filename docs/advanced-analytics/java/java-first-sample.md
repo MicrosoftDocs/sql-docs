@@ -80,18 +80,18 @@ public class Ngram {
     //Optional: This is only required if parameters are passed with @params
     // from SQL Server in sp_execute_external_script
     // n is giving us the size of ngram substrings
-    public static int param1; //= 3;
+    public static int param1;
 
-    //The number of rows we will be returning
+    //Optional: The number of rows we will be returning
     public static int numberOfRows;
 
     //Required: Number of output columns returned
     public static short numberOfOutputCols;
 
-    //Java main method
+    /*Java main method - Only for testing purposes outside of SQL Server
     public static void main(String... args) {
         //getNGrams();
-    }
+    }*/
 
     //This is the method we will be calling from SQL Server
     public static void getNGrams() {
@@ -112,7 +112,6 @@ public class Ngram {
                 // Generate ngrams of size n for each incoming string
                 // Each invocation of ngrams returns a list. flatMap flattens
                 // the resulting list-of-lists to a flat list.
-                //.flatMap(inputRow -> ngrams(param1, inputRow.text.trim()).stream()
                 .flatMap(inputRow -> ngrams(param1, inputRow.text).stream().map(s -> new OutputRow(inputRow.id, s)))
                 .collect(Collectors.toList());
 

@@ -96,6 +96,15 @@ This article describes limitations and known issues for the [!INCLUDE[SQL Server
 
 **Workaround**: Execute `DBCC TRACEON (7416,-1)` on the server and try again.
 
+**Issue / customer impact**: After switching SSISDB into single-user mode and switching back to multi-user mode, the following error will be reported when deploying the package.
+
+>Cannot continue the execution because the session is in the kill state.
+
+**Workaround**: Restart the SQL Server after switch back to multi-user mode.
+
+**Applies to**: SQL Server 2019 CTP 2.0.  
+
+
 [!INCLUDE[get-help-options-msft-only](../includes/paragraph-content/get-help-options.md)]
 
 ![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png)

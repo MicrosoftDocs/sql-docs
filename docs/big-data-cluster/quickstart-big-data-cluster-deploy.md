@@ -4,7 +4,7 @@ description:
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 08/27/2018
+ms.date: 10/01/2018
 ms.topic: quickstart
 ms.prod: sql
 ---

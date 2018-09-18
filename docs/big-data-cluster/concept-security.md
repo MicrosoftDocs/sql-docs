@@ -4,7 +4,7 @@ description:
 author: nelgson 
 ms.author: negust 
 manager: craigg
-ms.date: 09/24/2018
+ms.date: 10/01/2018
 ms.topic: conceptual
 ms.prod: sql
 ---

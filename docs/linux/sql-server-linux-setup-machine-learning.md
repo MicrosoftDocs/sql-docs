@@ -67,17 +67,20 @@ zypper ar -f https://packages.microsoft.com/sles/12/prod packages-microsoft-com
 
 On an internet-connected device, packages are downloaded and installed independently of the database engine using the package installer for each operating system. The following table describes all available packages, but you only need *one* R or Python package to get a specific combination of features.
 
+Fully-qualified package names include version information that varies by package installer. See the commands in the following sections for package references that work in an install command.
+
 | Package name | Applies to | Description |
 |--------------|----------|-------------|
-|mssql-server-extensibility-15.0.1000.xxxx-y_amd64 | All | Extensibility framework used to run R, Python, or Java code. |
-|mssql-server-extensibility-java-15.0.1000.xxxx-y_amd64 | Java | Java extension for loading a Java execution environment. There are no additional libraries or packages for Java. |
-| microsoft-openmpi-3.0.0-1_amd64 | All | Message passing interface used by the Revo* libraries for parallelization on Linux. |
-|mssql-mlservices-mlm-py-9.4.5.19_amd64 | Python | Full install. Provides revoscalepy, microsoftml, pre-trained models for image featurization and text sentiment analysis.| 
-|mssql-mlservices-mml-py-9.4.5.19_amd64 | Python | Partial install. Provides revoscalepy, microsoftml. <br/>Excludes pre-trained models. | 
-|mssql-mlservices-packages-py-9.4.5.19_amd64 | Python | Partial install. Provides revoscalepy, revoscalepy. <br/>Excludes pre-trained models and microsoftml. | 
-|mssql-mlservices-mlm-r-9.4.5.19_amd64 | R | Full install. Provides RevoScaleR, MicrosoftML, sqlRUtils, olapR, pre-trained models for image featurization and text sentiment analysis.| 
-|mssql-mlservices-mml-r-9.4.5.19_amd64 | R | Partial install. Provides RevoScaleR, MicrosoftML, sqlRUtils, olapR. <br/>Excludes pre-trained models.  |
-|mssql-mlservices-packages-r-9.4.5.19_amd64 | R | Partial install. Provides RevoScaleR, sqlRUtils, olapR. <br/>Excludes  pre-trained models and MicrosoftML. | 
+|mssql-server-extensibility  | All | Extensibility framework used to run R, Python, or Java code. |
+|mssql-server-extensibility | Java | Java extension for loading a Java execution environment. There are no additional libraries or packages for Java. |
+| microsoft-openmpi  | All | Message passing interface used by the Revo* libraries for parallelization on Linux. |
+| mssql-mlservices-python | Python | Open-source distribution of Anaconda and Python. |
+|mssql-mlservices-mlm-py  | Python | Full install. Provides revoscalepy, microsoftml, pre-trained models for image featurization and text sentiment analysis.| 
+|mssql-mlservices-mml-py  | Python | Partial install. Provides revoscalepy, microsoftml. <br/>Excludes pre-trained models. | 
+|mssql-mlservices-packages-py  | Python | Partial install. Provides revoscalepy, revoscalepy. <br/>Excludes pre-trained models and microsoftml. | 
+|mssql-mlservices-mlm-r  | R | Full install. Provides RevoScaleR, MicrosoftML, sqlRUtils, olapR, pre-trained models for image featurization and text sentiment analysis.| 
+|mssql-mlservices-mml-r  | R | Partial install. Provides RevoScaleR, MicrosoftML, sqlRUtils, olapR. <br/>Excludes pre-trained models.  |
+|mssql-mlservices-packages-r  | R | Partial install. Provides RevoScaleR, sqlRUtils, olapR. <br/>Excludes  pre-trained models and MicrosoftML. | 
 
 <a name="RHEL"></a>
 
@@ -95,11 +98,12 @@ Includes the extensibility framework, R, Python, Java, with machine learning lib
 ```bash
 # Install as root or sudo
 # Add everything
-sudo yum install mssql-server-extensibility-15.0.1000.xxxx-y_amd64.rpm
-sudo yum install microsoft-openmpi-3.0.0-1_amd64.rpm
-sudo yum install mssql-mlservices-mlm-r-9.4.5.19_amd64.rpm
-sudo yum install mssql-mlservices-mlm-py-9.4.5.19_amd64.rpm
-sudo yum install mssql-server-extensibility-java-15.0.1000.xxxx-y_amd64.rpm
+sudo yum install microsoft-openmpi-3.0.0-x86_64.rpm
+sudo yum install mssql-server-extensibility-15.0.1000.xxxx-y.x86_64.rpm
+sudo yum install mssql-server-extensibility-java-15.0.1000.xxxx-y.x86_64.rpm
+sudo yum install mssql-mlservices-mlm-py-9.4.5.x86_64.rpm
+sudo yum install mssql-mlservices-mlm-r-9.4.5.x86_64.rpm
+sudo yum install mssql-mlservices-python-9.4.5.x86_64.rpm
 ```
 
 ### Example 2 - Minimum installation 
@@ -109,11 +113,12 @@ Includes the extensibility framework, and core libraries and extensions. Exclude
 ```bash
 # Install as root or sudo
 # Minimum install of R, Python, Java
-sudo yum install mssql-server-extensibility-15.0.1000.xxxx-y_amd64.rpm
-sudo yum install microsoft-openmpi-3.0.0-1_amd64.rpm
-sudo yum install mssql-mlservices-packages-r-9.4.5.19_amd64.rpm 
-sudo yum install mssql-mlservices-packages-py-9.4.5.19_amd64.rpm
-sudo yum install mssql-server-extensibility-java-15.0.1000.xxxx-y_amd64.rpm
+sudo yum install microsoft-openmpi-3.0.0-x86_64.rpm
+sudo yum install mssql-server-extensibility-15.0.1000.xxxx-y.x86_64.rpm
+sudo yum install mssql-server-extensibility-java-15.0.1000.xxxx-y.x86_64.rpm
+sudo yum install mssql-mlservices-packages-py-9.4.5.x86_64.rpm
+sudo yum install mssql-mlservices-packages-r-9.4.5.x86_64.rpm 
+sudo yum install mssql-mlservices-python-9.4.5.x86_64.rpm
 ```
 
 <a name="ubuntu"></a>
@@ -132,11 +137,12 @@ Includes the extensibility framework, R, Python, Java, with machine learning lib
 ```bash
 # Install as root or sudo
 # Add everything
+sudo apt-get install microsoft-openmpi_3.0.0-1_amd64.deb
 sudo apt-get install mssql-server-extensibility-15.0.1000.xxxx-y_amd64.deb
-sudo apt-get install microsoft-openmpi-3.0.0-1_amd64.deb
-sudo apt-get install mssql-mlservices-mlm-r-9.4.5.19_amd64.deb
-sudo apt-get install mssql-mlservices-mlm-py-9.4.5.19_amd64.deb
 sudo apt-get install mssql-server-extensibility-java-15.0.1000.xxxx-y_amd64.deb
+sudo apt-get install mssql-mlservices-mlm-r_9.4.5.19_amd64.deb
+sudo apt-get install mssql-mlservices-mlm-py_9.4.5.19_amd64.deb
+sudo apt-get install mssql-mlservices-python_9.4.5.19_amd64.deb
 ```
 
 ### Example 2 - Minimum installation 
@@ -146,11 +152,13 @@ Includes the extensibility framework, and core libraries and extensions. Exclude
 ```bash
 # Install as root or sudo
 # Minimum install of R, Python, Java
+sudo apt-get install microsoft-openmpi_3.0.0-1_amd64.deb
 sudo apt-get install mssql-server-extensibility-15.0.1000.xxxx-y_amd64.deb
-sudo apt-get install microsoft-openmpi_3.0.0-1-amd64.deb
+sudo apt-get install mssql-server-extensibility-java-15.0.1000.xxxx-y_amd64.deb
 sudo apt-get install mssql-mlservices-packages-r-9.4.5.19_amd64.deb
 sudo apt-get install mssql-mlservices-packages-py-9.4.5.19_amd64.deb
-sudo apt-get install mssql-server-extensibility-java-15.0.1000.xxxx-y_amd64.deb
+sudo apt-get install mssql-mlservices-python_9.4.5.19_amd64.deb
+
 ```
 
 <a name="suse"></a>
@@ -166,11 +174,13 @@ Includes the extensibility framework, R, Python, Java, with machine learning lib
 ```bash
 # Install as root or sudo
 # Add everything
-sudo zypper install mssql-server-extensibility-15.0.1000.xxxx-y_amd64.rpm
-sudo zypper install microsoft-openmpi-3.0.0-1_amd64.rpm
-sudo zypper install mssql-mlservices-mlm-r-9.4.5.19_amd64.rpm   
-sudo zypper install mssql-mlservices-mlm-py-9.4.5.19_amd64.rpm
-sudo zypper install mssql-server-extensibility-java-15.0.1000.xxxx-y_amd64.rpm
+sudo zypper install microsoft-openmpi-3.0.0-x86_64.rpm
+sudo zypper install mssql-server-extensibility-15.0.1000.xxxx-y.x86_64.rpm
+sudo zypper install mssql-server-extensibility-java-15.0.1000.xxxx-y.x86_64.rpm
+sudo zypper install mssql-mlservices-python-9.4.5.x86_64.rpm
+sudo zypper install mssql-mlservices-mlm-r-9.4.5.x86_64.rpm
+sudo zypper install mssql-mlservices-mlm-py-9.4.5.x86_64.rpm
+
 ```
 
 ### Example 2 - Minimum installation 
@@ -180,11 +190,12 @@ Includes the extensibility framework, and core libraries and extensions. Exclude
 ```bash
 # Install as root or sudo
 # Minimum install of R, Python, Java
-sudo zypper install mssql-server-extensibility-15.0.1000.xxxx-y_amd64.rpm
-sudo zypper install microsoft-openmpi_3.0.0-1_amd64.rpm
-sudo zypper install mssql-mlservices-packages-r-9.4.5.19_amd64.rpm 
-sudo zypper install mssql-mlservices-packages-py-9.4.5.19_amd64.rpm
-sudo zypper install mssql-server-extensibility-java-15.0.1000.xxxx-y_amd64.rpm
+sudo zypper install microsoft-openmpi-3.0.0-x86_64.rpm
+sudo zypper install mssql-server-extensibility-15.0.1000.xxxx-y.x86_64.rpm
+sudo zypper install mssql-server-extensibility-java-15.0.1000.xxxx-y.x86_64.rpm
+sudo zypper nstall mssql-mlservices-packages-py-9.4.5.x86_64.rpm 
+sudo zypper nstall mssql-mlservices-packages-r-9.4.5.x86_64.rpm 
+sudo zypper install mssql-mlservices-python-9.4.5.x86_64.rpm
 ```
 
 ## Post-install config (required)

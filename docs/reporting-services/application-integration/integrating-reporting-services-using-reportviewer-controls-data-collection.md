@@ -14,9 +14,9 @@ ms.author: maghan
 ---
 # Integrating Reporting Services Using ReportViewer Controls - Data Collection
 
-Anonymous usage data is collected by the control to better understand how customers make use of product. Usage data enables future development to be focused on improvements that are most relevant to customers.
+Anonymous usage data is collected by the control to better understand how customers make use of the product. Usage data enables future development to be focused on improvements that are most relevant to customers.
 
-An explanation of the data collection and usage practices of Microsoft SQL Server 2016 and Report Viewer are available in the [privacy statement]((http://go.microsoft.com/fwlink/?LinkID=868444)).
+An explanation of the data collection and usage practices of Microsoft SQL Server and Report Viewer are available in the [privacy statement]((http://go.microsoft.com/fwlink/?LinkID=868444)).
 
 ## Opting out of data collection
 

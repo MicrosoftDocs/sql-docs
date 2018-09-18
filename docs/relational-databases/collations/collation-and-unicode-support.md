@@ -231,7 +231,7 @@ Database applications that interact with [!INCLUDE[ssNoVersion](../../includes/s
 
 ##  <a name="Japanese_Collations"></a> Japanese Collations added in  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]
  
-Starting in [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], two new Japanese collation families are supported, with the permutations of various options (\_CS, \_AS, \_KS, \_WS, \_VSS). 
+Starting in [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], new Japanese collation families are supported, with the permutations of various options (\_CS, \_AS, \_KS, \_WS, \_VSS). 
 
 To list these collations, you can query the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]:      
 

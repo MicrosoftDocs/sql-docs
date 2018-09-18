@@ -14,7 +14,7 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 
 # SQL Server Java sample
 
-This example demonstrates a Java class that receives two columns (ID and text) from SQL Server and returns two columns back to SQL Server (ID and ngram). For a given ID and string combination,the code generates permutations of ngrams (substrings), returning those permutations along with the original ID. The length of the ngram is defined by a parameter sent to the Java class.
+This example demonstrates a Java class that receives two columns (ID and text) from SQL Server and returns two columns back to SQL Server (ID and ngram). For a given ID and string combination, the code generates permutations of ngrams (substrings), returning those permutations along with the original ID. The length of the ngram is defined by a parameter sent to the Java class.
 
 ## Prerequisites
 

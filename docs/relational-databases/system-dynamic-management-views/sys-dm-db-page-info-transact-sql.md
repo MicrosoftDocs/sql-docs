@@ -55,9 +55,9 @@ Determines the level of detail in the output of the function. 'LIMITED' will ret
 
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|database_id |int |Database id |
-|file_id |int |File id |
-|page_id |int |Page id |
+|database_id |int |Database ID |
+|file_id |int |File ID |
+|page_id |int |Page ID |
 |page_type |int |Page Type |
 |page_type_desc |nvarchar(64) |Description of the page type |
 |page_flag_bits |nvarchar(64) |Flag bits in page header |
@@ -69,41 +69,41 @@ Determines the level of detail in the output of the function. 'LIMITED' will ret
 |partition_id |bigint |ID of the partition |
 |alloc_unit_id |bigint |ID of the allocation unit |
 |page_level |int |Level of the page in index (leaf = 0) |
-|slot_count |smallint |Total number of slots (used and unused) <br> For a data page, this is equivalent to the number of rows. |
+|slot_count |smallint |Total number of slots (used and unused) <br> For a data page, this number is equivalent to the number of rows. |
 |ghost_rec_count |smallint |Number of records marked as ghost on the page <br> A ghosted record is one that has been marked for deletion but has yet to be removed. |
-|torn_bits |int |1 bit per sector for detecting torn writes. Used also to store checksum <br> This is used to detect data corruption. |
+|torn_bits |int |1 bit per sector for detecting torn writes. Used also to store checksum <br> This value is used to detect data corruption |
 |is_iam_pg |bit |Bit to indicate whether or not the page is an IAM page  |
 |is_mixed_ext |bit |Bit to indicate if allocated in a mixed extent |
-|pfs_file_id |smallint |File id of corresponding PFS page |
+|pfs_file_id |smallint |File ID of corresponding PFS page |
 |pfs_page_id |int |Page ID of corresponding PFS page |
 |pfs_alloc_percent |int |Allocation percent as indicated by PFS byte |
 |pfs_status |nvarchar(64) |PFS byte |
 |pfs_status_desc |nvarchar(64) |Description of the PFS byte |
-|gam_file_id |smallint |File id of the corresponding GAM page |
-|gam_page_id |int |Page id of the corresponding GAM page |
+|gam_file_id |smallint |File ID of the corresponding GAM page |
+|gam_page_id |int |Page ID of the corresponding GAM page |
 |gam_status |bit |Bit to indicate if allocated in GAM |
 |gam_status_desc |nvarchar(64) |Description of the GAM status bit |
-|sgam_file_id |smallint |File id of the corresponding SGAM page |
-|sgam_page_id |int |Page id of the corresponding SGAM page |
+|sgam_file_id |smallint |File ID of the corresponding SGAM page |
+|sgam_page_id |int |Page ID of the corresponding SGAM page |
 |sgam_status |bit |Bit to indicate if allocated in SGAM |
 |sgam_status_desc |nvarchar(64) |Description of the SGAM status bit |
-|diff_map_file_id |smallint |File id of the corresponding differential bitmap page |
-|diff_map_page_id |int |Page id of the corresponding differential bitmap page |
+|diff_map_file_id |smallint |File ID of the corresponding differential bitmap page |
+|diff_map_page_id |int |Page ID of the corresponding differential bitmap page |
 |diff_status |bit |Bit to indicate if diff status is changed |
 |diff_status_desc |nvarchar(64) |Description of the diff status bit |
-|ml_file_id |smallint |File id of the corresponding minimal logging bitmap page |
-|ml_page_id |int |Page id of the corresponding minimal logging bitmap page |
+|ml_file_id |smallint |File ID of the corresponding minimal logging bitmap page |
+|ml_page_id |int |Page ID of the corresponding minimal logging bitmap page |
 |ml_status |bit |Bit to indicate if the page is minimally logged |
 |ml_status_desc |nvarchar(64) |Description of the minimal logging status bit |
 |free_bytes |smallint |Number of free bytes on the page |
 |free_data_offset |int |Offset of free space at end of data area |
-|reserved_bytes |smallint |Number of free bytes reserved by all transactions (if heap) <br> Number of ghosted rows if an index leaf |
+|reserved_bytes |smallint |Number of free bytes reserved by all transactions (if heap) <br> Number of ghosted rows (if index leaf) |
 |reserved_xdes_id |smallint |Space contributed by m_xdesID to m_reservedCnt <br> For debugging purposes only |
 |xdes_id |nvarchar(64) |Latest transaction contributed by m_reserved <br> For debugging purposes only |
-|prev_page_file_id |smallint |Previous page file id |
-|prev_page_page_id |int |Previous page page id |
-|next_page_file_id |smallint |Next page file id |
-|next_page_page_id |int |Next page page id |
+|prev_page_file_id |smallint |Previous page file ID |
+|prev_page_page_id |int |Previous page page ID |
+|next_page_file_id |smallint |Next page file ID |
+|next_page_page_id |int |Next page page ID |
 |min_len |smallint |Length of fixed size rows |
 |lsn |nvarchar(64) |Log sequence number / timestamp |
 |header_version |int |Page header version |

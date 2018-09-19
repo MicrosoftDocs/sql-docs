@@ -51,7 +51,8 @@ docker run `
 
 In this command, the **RPC Endpoint Mapper** service has been bound to port 13500, and the **MSDTC** service has been bound to port 51000 within docker virtual network. SQL Server TDS communication occurs on port 1433 within docker virtual network. These ports have been externally exposed to host as TDS port 51433, RPC endpoint mapper port 13500, and MSDTC port 51000.
 
-> [!NOTE] The RPC Endpoint Mapper and MSDTC port do not have to be same on host and the container. So while RPC Endpoint Mapper port was configured to be 13500 on container, it could potentially be mapped to port 13501 or any other available port on the host server.
+> [!NOTE]
+> The RPC Endpoint Mapper and MSDTC port do not have to be same on host and the container. So while RPC Endpoint Mapper port was configured to be 13500 on container, it could potentially be mapped to port 13501 or any other available port on the host server.
 
 ## Configure the firewall
 

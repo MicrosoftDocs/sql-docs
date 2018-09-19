@@ -36,7 +36,7 @@ For more information about these settings and other related MSDTC settings, see 
 
 The following MSDTC configurations are supported:
 
-- OLE-TX Distributed transactions against SQL Server on Linux for JDBC providers.
+- OLE-TX Distributed transactions against SQL Server on Linux for JDBC and ODBC providers.
 - XA Distributed transactions against SQL Server on Linux using JDBC providers.
 - Distributed transactions on Linked server.
 

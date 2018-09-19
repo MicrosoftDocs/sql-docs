@@ -77,6 +77,18 @@ Community technology preview (CTP) 2.0 is the first public release of [!INCLUDE[
 
 Continue reading for more details about these features.
 
+## <a id="bigdatacluster"></a>Big Data Clusters
+
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] [Big Data Clusters](../big-data-cluster/big-data-cluster-overview.md) enables new scenarios including the following:
+
+- Deploy a Big Data cluster with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and Spark Linux containers on Kubernetes
+- Access your big data from HDFS
+- Run Advanced analytics and machine learning with Spark
+- Use Spark streaming to data to SQL data pools
+- Run Query books that provide a notebook experience in [**Azure Data Studio (preview)**](../sql-operations-studio/what-is.md).
+  
+[!INCLUDE [Big Data Clusters preview](../includes/big-data-cluster-preview-note.md)]
+
 ## <a id="databaseengine"></a> Database Engine
 
 - Database **COMPATIBILITY_LEVEL 150** is added. To enable for a specific user database, execute:
@@ -141,7 +153,6 @@ For details, see [Always Encrypted with secure enclaves](../relational-databases
 > [!NOTE]
 > Always Encrypted with secure enclaves is only available on Windows OS.
 
-
 ### Intelligent query processing
 
 - **Row mode memory grant feedback** expands on the memory grant feedback feature introduced in [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] by adjusting memory grant sizes for both batch and row mode operators.  For an excessive memory grant condition, if the granted memory is more than two times the size of the actual used memory, memory grant feedback will recalculate the memory grant. Consecutive executions will then request less memory. For an insufficiently sized memory grant that results in a spill to disk, memory grant feedback will trigger a recalculation of the memory grant. Consecutive executions will then request more memory. This feature is enabled by default under database compatibility level 150.
@@ -171,25 +182,7 @@ To use intelligent query processing features, set database `COMPATIBILITY_LEVEL 
 
 - **Java language extension (preview)**: Use the Java language extension to execute Java code in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. In [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], this extension is installed when you add the feature 'Machine Learning Services (in-database)' to your SQL Server instance.
 
-
 ### <a id="sqlgraph"></a> SQL Graph features
-
-### Database scoped default setting for online and resumable DDL operations 
-
-- **Database scoped default setting for online and resumable DDL operations** allows a default behavior setting for `ONLINE` and `RESUMABLE` index operations at the database level, rather than defining these options for each individual index DDL statement such as index create or rebuild.
-
-- Set these defaults using the `ELEVATE_ONLINE` and `ELEVATE_RESUMABLE` database scoped configuration options. Both options will cause the engine to automatically elevate supported operations to index online or resumable execution. You can enable the following behaviors using these options:
-
-  - `FAIL_UNSUPPORTED` option allows all index operations online or resumable and fail index operations that are not supported for online or resumable.
-  - `WHEN_SUPPPORTED` option allows supported operations online or resumable and run index unsupported operations offline or non-resumable.
-  - `OFF` option allows the current behavior of executing all index operations offline and non-resumable unless explicitly specified in the DDL statement.
-
-To override the default setting, include the `ONLINE` or `RESUMABLE` option in the index create and rebuild commands.  
-
-Without this feature you have to specify the online and resumable options directly in the index DDL statement such as index create and rebuild.
-
-For more information on index resumable operations see [Resumable Online Index Create](http://azure.microsoft.com/blog/resumable-online-index-create-is-in-public-preview-for-azure-sql-db/).
-
 
 - **Match support in `MERGE` DML** allows you to specify graph relationships in a single statement, instead of separate `INSERT`, `UPDATE`, or `DELETE` statements. Merge your current graph data from node or edge tables with new data using the `MATCH` predicates in the `MERGE` statement. This feature enables `UPSERT` scenarios on edge tables. Users can now use a single merge statement to insert a new edge or update an existing one between two nodes.
 
@@ -275,7 +268,6 @@ For more information on lightweight profiling, see [Developers Choice: Query pro
 
 ### <a id="polybase"></a>New Polybase connectors
 
-
 - **New connectors for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], Oracle, Teradata, and MongoDB**: [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces new connectors to external data for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], Oracle, Teradata, and MongoDB.
 
 ### New sys.dm_db_page_info system function returns page information
@@ -291,17 +283,6 @@ FROM sys.dm_exec_requests AS d
   CROSS APPLY sys.dm_db_page_info(r.db_id, r.file_id, r.page_id,'DETAILED')
     AS page_info;
 ```
-## <a id="bigdatacluster"></a>Big Data Clusters
-
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] [Big Data Clusters](../big-data-cluster/big-data-cluster-overview.md) enables new scenarios including the following:
-
-- Deploy a Big Data cluster with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and Spark Linux containers on Kubernetes
-- Access your big data from HDFS
-- Run Advanced analytics and machine learning with Spark
-- Use Spark streaming to data to SQL data pools
-- Run Query books that provide a notebook experience in [**Azure Data Studio (preview)**](../sql-operations-studio/what-is.md).
-  
-[!INCLUDE [Big Data Clusters preview](../includes/big-data-cluster-preview-note.md)]
 
 ## <a id="sqllinux"></a> SQL Server on Linux
 

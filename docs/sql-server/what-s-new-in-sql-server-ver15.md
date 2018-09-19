@@ -87,7 +87,7 @@ Continue reading for more details about these features.
 
 ### Intelligent query processing
 
-- **Row mode memory grant feedback** expands on the memory grant feedback feature introduced in SQL Server 2017 by adjusting memory grant sizes for both batch and row mode operators.  For an excessive memory grant condition, if the granted memory is more than two times the size of the actual used memory, memory grant feedback will recalculate the memory grant. Consecutive executions will then request less memory. For an insufficiently sized memory grant that results in a spill to disk, memory grant feedback will trigger a recalculation of the memory grant.  Consecutive executions will then request more memory. This feature is enabled by default under database compatibility level 150.
+- **Row mode memory grant feedback** expands on the memory grant feedback feature introduced in [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] by adjusting memory grant sizes for both batch and row mode operators.  For an excessive memory grant condition, if the granted memory is more than two times the size of the actual used memory, memory grant feedback will recalculate the memory grant. Consecutive executions will then request less memory. For an insufficiently sized memory grant that results in a spill to disk, memory grant feedback will trigger a recalculation of the memory grant. Consecutive executions will then request more memory. This feature is enabled by default under database compatibility level 150.
 
 - **Approximate COUNT DISTINCT** returns the approximate number of unique non-null values in a group. This function is designed for use in big data scenarios. This function is optimized for queries where all the following conditions are true:
    - Accesses data sets of at least millions of rows.
@@ -119,11 +119,11 @@ To use intelligent query processing features, set database `COMPATIBILITY_LEVEL 
 
   In case of an index create failure, without this feature an online index create operation must be executed again and the operation must be restarted from the beginning.
 
-  With this release, we extend the resumable functionality adding this feature to available [resumable online index rebuild](http://azure.microsoft.com/blog/modernize-index-maintenance-with-resumable-online-index-rebuild/).
+With this release, we extend the resumable functionality adding this feature to available [resumable online index rebuild](http://azure.microsoft.com/blog/modernize-index-maintenance-with-resumable-online-index-rebuild/).
 
-  In addition, this feature can be set as the default for a specific database using [database scoped default setting for online and resumable DDL operations](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
+In addition, this feature can be set as the default for a specific database using [database scoped default setting for online and resumable DDL operations](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 
-  For more information, see [Resumable Online Index Create](../t-sql/statements/create-index-transact-sql.md#resumable-indexes).
+For more information, see [Resumable Online Index Create](../t-sql/statements/create-index-transact-sql.md#resumable-indexes).
 
 ### Database scoped default setting for online and resumable DDL operations 
 
@@ -135,16 +135,16 @@ To use intelligent query processing features, set database `COMPATIBILITY_LEVEL 
   - `WHEN_SUPPPORTED` option allows supported operations online or resumable and run index unsupported operations offline or non-resumable.
   - `OFF` option allows the current behavior of executing all index operations offline and non-resumable unless explicitly specified in the DDL statement.
 
-To override the default setting, include the ONLINE or RESUMABLE option in the index create and rebuild commands.  
+To override the default setting, include the `ONLINE` or `RESUMABLE` option in the index create and rebuild commands.  
 
 Without this feature you have to specify the online and resumable options directly in the index DDL statement such as index create and rebuild.
 
-More information:
 For more information on index resumable operations see [Resumable Online Index Create](http://azure.microsoft.com/blog/resumable-online-index-create-is-in-public-preview-for-azure-sql-db/).
 
 ### Build and rebuild clustered columnstore indexes online
 
-Convert row-store tables into columnstore format. Creating clustered columnstore indexes (CCI) was an offline process in the previous versions of SQL Server - requiring all changes stop while CCI is created. SQL Server 2019 and Azure SQL Database enable customers to create or re-create CCI online. Workload will not be blocked and all changes made on the underlying data are transparently added into the target columnstore table. Examples of new TSQL statements that can be used are:
+Convert row-store tables into columnstore format. Creating clustered columnstore indexes (CCI) was an offline process in the previous versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] - requiring all changes stop while the CCI is created. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] and 
+[!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] enable customers to create or re-create CCI online. Workload will not be blocked and all changes made on the underlying data are transparently added into the target columnstore table. Examples of new [!INCLUDE[tsql](../includes/tsql-md.md)] statements that can be used are:
 
   ```sql
   CREATE CLUSTERED COLUMNSTORE INDEX cci
@@ -168,13 +168,13 @@ This feature may provide significant storage savings, depending on the character
 
 ### Lightweight query profiling infrastructure enabled by default
 
-The lightweight query profiling infrastructure provides query performance data more efficiently than standard profiling technologies. Lightweight profiling is now enabled by default. It was introduced in SQL Server 2016 SP1. Lightweight profiling offers a query execution statistics collection mechanism with an expected overhead of 2% CPU, compared with an overhead of up to 75% CPU for the standard query profiling mechanism. On previous versions, it was OFF by default. Database administrators could enable it with [trace flag 7412](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). 
+The lightweight query profiling infrastructure (LWP) provides query performance data more efficiently than standard profiling technologies. Lightweight profiling is now enabled by default. It was introduced in [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1. Lightweight profiling offers a query execution statistics collection mechanism with an expected overhead of 2% CPU, compared with an overhead of up to 75% CPU for the standard query profiling mechanism. On previous versions, it was OFF by default. Database administrators could enable it with [trace flag 7412](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). 
 
-For more information, see [Developers Choice: Query progress – anytime, anywhere](http://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/).
+For more information on lightweight profiling, see [Developers Choice: Query progress – anytime, anywhere](http://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/).
 
 ### Data Discovery and Classification
 
-Data discovery and classification provides advanced capabilities that are natively built into SQL Server. Classifying and labeling your most sensitive data provides the following benefits:
+Data discovery and classification provides advanced capabilities that are natively built into [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Classifying and labeling your most sensitive data provides the following benefits:
 
 - Helps meet data privacy standards and regulatory compliance requirements.
 - Supports security scenarios, such as monitoring (auditing), and alerting on anomalous access to sensitive data.
@@ -184,12 +184,12 @@ For more information, see [SQL Data Discovery and Classification](../relational-
 
 [Auditing](../relational-databases/security/auditing/sql-server-audit-database-engine.md) has also been enhanced to include a new field in the audit log called `data_sensitivity_information`, which logs the sensitivity classifications (labels) of the actual data that was returned by the query. For details and examples, see [Add sensitivity classification](../t-sql/statements/add-sensitivity-classification-transact-sql.md).
 
->[!NOTE]
->There are no changes in terms of how audit is enabled. There is a new field added to the audit records, `data_sensitivity_information`, which logs the sensitivity classifications (labels) of the actual data that was returned by the query. See [Auditing access to sensitive data](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-data-discovery-and-classification#subheading-3).
+> [!NOTE]
+> There are no changes in terms of how audit is enabled. There is a new field added to the audit records, `data_sensitivity_information`, which logs the sensitivity classifications (labels) of the actual data that was returned by the query. See [Auditing access to sensitive data](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-data-discovery-and-classification#subheading-3).
 
 ### Support for columnstore statistics in DBCC CLONEDATABASE
 
-`DBCC CLONEDATABASE` creates a schema-only copy of a database that includes all the elements necessary to troubleshoot query performance issues without copying the data.  In previous versions of SQL Server, the command did not copy the statistics necessary to accurately troubleshoot columnstore index queries and manual steps were required to capture this information. Now in SQL Server 2019, DBCC CLONEDATABASE automatically captures the stats blobs for columnstore indexes, so no manual steps will be required.
+`DBCC CLONEDATABASE` creates a schema-only copy of a database that includes all the elements necessary to troubleshoot query performance issues without copying the data.  In previous versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], the command did not copy the statistics necessary to accurately troubleshoot columnstore index queries and manual steps were required to capture this information. Now in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], DBCC CLONEDATABASE automatically captures the stats blobs for columnstore indexes, so no manual steps will be required.
 
 ### New options added to sp_estimate_data_compression_savings
 
@@ -211,7 +211,7 @@ FROM sys.dm_exec_requests AS d
 
 ### <a id="ha"></a>Always On Availability Groups 
 
-- **Up to five synchronous replicas**: SQL Server 2019 preview increases the maximum number of synchronous replicas to 5, up from 3 in SQL Server 2017. You can configure this group of 5 replicas to have automatic failover within the group. There is 1 primary replica, plus 4 synchronous secondary replicas.
+- **Up to five synchronous replicas**: [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] increases the maximum number of synchronous replicas to 5, up from 3 in [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] . You can configure this group of 5 replicas to have automatic failover within the group. There is 1 primary replica, plus 4 synchronous secondary replicas.
 
 - **Secondary-to-primary replica connection redirection**: Allows client application connections to be directed to the primary replica regardless of the target server specified in the connection string. This capability allows connection redirection without a listener. Use secondary-to-primary replica connection redirection in the following cases:
 
@@ -225,9 +225,9 @@ For details, see [Secondary to primary replica read/write connection redirection
 
 Expands upon Always Encrypted with in-place encryption and rich computations. The expansions come from the enabling of computations on plaintext data, inside a secure enclave on the server side.
 
-Cryptographic operations include the encryption of columns, and the rotating of column encryption keys. These operations can now be issued by using Transact-SQL, and they do not require that data be moved out of the database. Secure enclaves provide Always Encrypted to a broader set of scenarios that have both of the following requirements: 
+Cryptographic operations include the encryption of columns, and the rotating of column encryption keys. These operations can now be issued by using [!INCLUDE[tsql](../includes/tsql-md.md)], and they do not require that data be moved out of the database. Secure enclaves provide Always Encrypted to a broader set of scenarios that have both of the following requirements: 
 
-- The demand that sensitive data are protected from high-privilege, yet unauthorized users, including database administrators, system administrators,  cloud operators, or malware.
+- The demand that sensitive data are protected from high-privilege, yet unauthorized users, including database administrators, system administrators, cloud operators, or malware.
 - The requirement that rich computations on protected data be supported within the database system.
 
 For details, see [Always Encrypted with secure enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md).
@@ -243,7 +243,7 @@ For details, see [Always Encrypted with secure enclaves](../relational-databases
 
 ### <a id="programmability"></a> Java language programmability extensions
 
-- **Java language extension (preview)**: Use the Java language extension to execute Java code in SQL Server. In CTP2.0, this extension is installed when you add the feature 'Machine Learning Services (in-database)' to your SQL Server instance.
+- **Java language extension (preview)**: Use the Java language extension to execute Java code in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. In [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], this extension is installed when you add the feature 'Machine Learning Services (in-database)' to your SQL Server instance.
 
 ### <a id="ml"></a> SQL Server Machine Learning Services
 
@@ -255,12 +255,12 @@ For detailed information, see [What's new in SQL Server Machine Learning Service
 
 ### <a id="polybase"></a> PolyBase
 
-- **New connectors for SQL Server, Oracle, Teradata, and MongoDB**: SQL Server 2019 introduces new connectors to external data for SQL Server, Oracle, Teradata, and MongoDB.
+- **New connectors for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], Oracle, Teradata, and MongoDB**: [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces new connectors to external data for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], Oracle, Teradata, and MongoDB.
 
 ### Expanded support for persistent memory devices
 
-Any SQL Server file that is placed on a persistent memory device can now operate in *enlightened* mode. SQL Server directly accesses the device, bypassing the storage stack of the operating system using efficient memcpy operations. This mode improves performance because it allows low latency input/output against such devices.
-    - Examples of SQL Server files include:
+Any [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] file that is placed on a persistent memory device operates in *enlightened* mode. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] directly accesses the device, bypassing the storage stack of the operating system. This mode improves performance because it allows low latency input/output against such devices.
+    - Examples of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] files include:
         - Database files
         - Transaction log files
         - In-Memory OLTP checkpoint files
@@ -268,13 +268,13 @@ Any SQL Server file that is placed on a persistent memory device can now operate
     - Persistent memory is occasionally referred to informally as *pmem* on some non-Microsoft websites.
 
 > [!NOTE]
-> For this preview release, enlightenment of files on persistent memory devices is only available on Linux. SQL Server on Windows supports persistent memory devices starting with SQL Server 2016.
+> For this preview release, support for persistent memory devices is only available on Linux.
 
 ## <a id="bigdatacluster"></a>Big Data Clusters
 
-SQL Server 2019 [Big Data Clusters](../big-data-cluster/big-data-cluster-overview.md) enables new scenarios including the following:
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] [Big Data Clusters](../big-data-cluster/big-data-cluster-overview.md) enables new scenarios including the following:
 
-- Deploy a Big Data cluster with SQL and Spark Linux containers on Kubernetes
+- Deploy a Big Data cluster with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and Spark Linux containers on Kubernetes
 - Access your big data from HDFS
 - Run Advanced analytics and machine learning with Spark
 - Use Spark streaming to data to SQL data pools
@@ -284,24 +284,24 @@ SQL Server 2019 [Big Data Clusters](../big-data-cluster/big-data-cluster-overvie
 
 ## <a id="sqllinux"></a> SQL Server on Linux
 
-- **Replication support**: CTP 2.0 supports SQL Server Replication on Linux. A Linux virtual machine with SQL Agent can be a publisher, distributor, or subscriber. 
+- **Replication support**: [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] supports SQL Server Replication on Linux. A Linux virtual machine with SQL Agent can be a publisher, distributor, or subscriber. 
 
   Create the following types of publications:
   - Transactional
   - Snapshot
   - Merge
 
-  Configure replication SQL Server Management Studio (SSMS) or use [replication stored procedures](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md).
+  Configure replication [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or use [replication stored procedures](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md).
 
 - **Support for the Microsoft Distributed Transaction Coordinator (MSDTC)**: SQL Server 2019 on Linux supports the Microsoft Distributed Transaction Coordinator (MSDTC). For details, see [How to configure MSDTC on Linux](../linux/sql-server-linux-configure-msdtc.md).
 
-- **Always On Availability Group on Docker containers with Kubernetes**: Kubernetes can orchestrate containers running SQL Server instances to provide a highly available set of databases with SQL Server Always On Availability Groups. A Kubernetes operator deploys a StatefulSet including a container with **mssql-server container** and a health monitor.
+- **Always On Availability Group on Docker containers with Kubernetes**: Kubernetes can orchestrate containers running [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instances to provide a highly available set of databases with SQL Server Always On Availability Groups. A Kubernetes operator deploys a StatefulSet including a container with **mssql-server container** and a health monitor.
 
-- **OpenLDAP support for third-party AD providers**: SQL Server on Linux supports OpenLDAP, which allows third-party providers to join Active Directory.
+- **OpenLDAP support for third-party AD providers**: [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] on Linux supports OpenLDAP, which allows third-party providers to join Active Directory.
 
 - **Machine Learning on Linux**: SQL Server 2019 Machine Learning Services (In-Database) is now supported on Linux. Support includes `sp_execute_external_script` stored procedure. For instructions on how to install Machine Learning Services on Linux, see [Install SQL Server 2019 Machine Learning Services R and Python support on Linux](../linux/sql-server-linux-setup-machine-learning.md).
 
-- **New container registry**: All container images for SQL Server 2019 as well as SQL Server 2017 are now located in the Microsoft Container Registry. Microsoft Container Registry is the official container registry for the distribution of Microsoft product containers. In addition, certified RHEL-based images are now published.
+- **New container registry**: All container images for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] as well as [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] are now located in the Microsoft Container Registry. Microsoft Container Registry is the official container registry for the distribution of Microsoft product containers. In addition, certified RHEL-based images are now published.
 
   - Microsoft Container Registry: `mcr.microsoft.com/mssql/server:vNext-CTP2.0`
   - Certified RHEL-based container images: `mcr.microsoft.com/mssql/rhel/server:vNext-CTP2.0`
@@ -314,7 +314,7 @@ SQL Server 2019 [Big Data Clusters](../big-data-cluster/big-data-cluster-overvie
 
 - **Certificate management in SQL Server Configuration Manager**: SSL/TLS certificates are widely used to secure access to SQL Server instances. Certificate management is now integrated into the SQL Server Configuration Manager, simplifying common tasks such as:
 
-  - Viewing and validating certificates installed in a SQL Server instance. 
+  - Viewing and validating certificates installed in a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance. 
   - Viewing certificates close to expiration.
   - Deploy certificates across machines participating in Always On Availability Groups (from the node holding the primary replica).
   - Deploy certificates across machines participating in a failover cluster instance (from the active node).
@@ -334,11 +334,11 @@ SQL Server 2019 [Big Data Clusters](../big-data-cluster/big-data-cluster-overvie
 
 ## Other services
 
-SQL Server 2019 CTP 2.0 does not introduce new features for the following services:
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.0 does not introduce new features for the following services:
 
-- SQL Server Analysis Services (SSAS)
-- SQL Server Integration Services (SSIS)
-- SQL Server Reporting Services (SSRS)
+- [!INCLUDE[ssAS_md](../includes/ssas-md.md)] (SSAS)
+- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS)
+- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] (SSRS)
 
 ## Next steps
 

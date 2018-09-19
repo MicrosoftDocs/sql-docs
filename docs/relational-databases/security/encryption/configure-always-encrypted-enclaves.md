@@ -21,8 +21,8 @@ monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 
 To setup Always Encrypted with secure enclaves, use the following workflow:
 
-1. Configure HGS attestation.
-2. Install [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)] CTP 2.0 on the SQL Server computer.
+1. Configure Host Guardian Service (HGS) attestation.
+2. Install [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)] on the SQL Server computer.
 3. Install tools on the client/development computer.
 4. Configure the enclave type in your SQL Server instance.
 5. Provision enclave-enabled keys.
@@ -30,9 +30,9 @@ To setup Always Encrypted with secure enclaves, use the following workflow:
  
 
 
-## Configure your environment 
+## Configure your environment
 
-To use secure enclaves with Always Encrypted, your environment requires Windows Server 2019 Preview, and SQL Server Management Studio (SSMS) 18.0 (preview), .NET Framework, and several other components. The following sections provide specific details and links to get the required components.
+To use secure enclaves with Always Encrypted, your environment requires Windows Server 2019 Preview, and SQL Server Management Studio (SSMS) 18.0 (preview), .NET Framework, and several other components. The following sections provide details and links to get the required components.
 
 ### SQL Server computer requirements
 
@@ -40,7 +40,7 @@ The computer running SQL Server needs the following operating system and SQL Ser
 
 *SQL Server*:
 
-- [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)] CTP 2.0 or later
+- [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)] or later
 
 *Windows*:
 
@@ -48,27 +48,24 @@ The computer running SQL Server needs the following operating system and SQL Ser
 - Windows Server DataCenter (Semi-Annual Channel), version 1809
 - Windows Server 2019 DataCenter
 
-The computer must be configured as a guarded host, attested by HGS. See the following section for details.
-
+> [!IMPORTANT]
+> The SQL Server computer must be configured as a guarded host, attested by HGS. TPM attestation is the recommended enclave attestation method for production environments, and requires SQL Server runs on a physical machine, not in a virtual machine. Virtual machines are adequate for pre-production environments only.
 
 ### HGS computer requirements
 
 A single HGS computer is sufficient during testing and prototyping. For production, a Windows failover cluster with 3 computers is strongly recommended.
 
-
-### Configure HGS attestation
-
-For details on HGS computer requirements and set up, see [Setting up the Host Guardian Service for Always Encrypted in SQL Server](https://review.docs.microsoft.com/en-us/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server?branch=hgs2-secure-enclaves)
+Windows Host Guardian Service (HGS) needs to be installed on separate HGS computers, and not on the same computer as SQL Server. For details on HGS computer requirements and set up, see [Setting up the Host Guardian Service for Always Encrypted in SQL Server](https://docs.microsoft.com/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server).
 
 
 ### Determine your Attestation Service URL
 
-To determine an attestation service URL, you need to configure your tools and applications:
+To determine the attestation service URL, you need to configure your tools and applications:
 
 1. Log on to your SQL Server computer as administrator.
 2. Run PowerShell as administrator.
 3. Run [Get-HGSClientConfiguration](https://docs.microsoft.com/powershell/module/hgsclient/get-hgsclientconfiguration).
-4. Write down and save the AttestationServerURL property. It should look like this: *http://x.x.x.x/Attestation*.
+4. Write down and save the AttestationServerURL property. It should look similar to this: `http://x.x.x.x/Attestation`.
 
 
 ### Install tools
@@ -80,10 +77,10 @@ Install the following tools on the client/development computer:
 3. [SQL Server PowerShell module](../../../powershell/download-sql-server-ps-module.md) version 21.5 or later.
 4. [Visual Studio (2017 or later recommended)](https://visualstudio.microsoft.com/downloads/).
 5. [Developer Pack for .NET Framework 4.7.2](https://www.microsoft.com/net/download/visual-studio-sdks).
-6. Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider NuGet package, version 3.0 or later.
-7. Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider NuGet package.
+6. [Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider NuGet package](https://www.nuget.org/packages/Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider), version 2.2.0 or later.
+7. [Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders NuGet package](https://www.nuget.org/packages?q=Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders).
 
-Both NuGet packages listed above are intended to be used in Visual Studio projects for developing  applications using Always Encrypted with secure enclaves. The first package is required only if you store your column master keys in Azure Key Vault. See the Develop Applications issuing Rich Queries in Visual Studio section later in this document.
+The NuGet packages are intended to be used in Visual Studio projects for developing applications using Always Encrypted with secure enclaves. The first package is required only if you store your column master keys in Azure Key Vault. For details, see [Develop applications](#develop-applications-issuing-rich-queries-in-visual-studio).
 
 ### Configure a secure enclave
 
@@ -106,7 +103,7 @@ On the client/development computer:
 3. Configure the secure enclave type to VBS enclaves.
 
    ```sql
-   EXEC sys.sp\_configure 'column encryption enclave type', 1
+   EXEC sys.sp_configure 'column encryption enclave type', 1
    RECONFIGURE
    ```
 
@@ -126,11 +123,13 @@ On the client/development computer:
     | column encryption enclave type | 1     | 1              |
 
 6. To enable rich computations on encrypted columns, run the following query:
+
    ```sql
    DBCC traceon(127,-1)
-   ```     
+   ```
+
     > [!NOTE]
-    > Rich computations are disabled by default in [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)] CTP 2.0. They need to be enabled using the above statement after each restart of your SQL Server instance.
+    > Rich computations are disabled by default in [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)]. They need to be enabled using the above statement after each restart of your SQL Server instance.
 
 ## Provision enclave-enabled keys
 
@@ -139,7 +138,7 @@ The introduction of enclave-enabled keys does not fundamentally change the [key 
 - The **ENCLAVE_COMPUTATIONS** property in the column master key metadata in the database is set.
 - The column master key property values (including the setting of **ENCLAVE_COMPUTATIONS**) are digitally signed. The tool adds the signature, which is produced using the actual column master key, to the metadata. The purpose of the signature is to prevent malicious DBAs and computer admins from tampering with the **ENCLAVE_COMPUTATIONS** setting. The SQL client drivers verify the signatures before allowing the enclave use. This provides security administrators with control over which column data can be computed inside the enclave.
 
-The **ENCLAVE_COMPUTATIONS** property of a column master key is immutable – you cannot change it after the key has been provisioned. You can, however, replace the column master key with a new key that has a different value of the **ENCLAVE_COMPUTATIONS** property than the original key, via a process called a [column master key rotation](#initiate-the-rotation-from-the-current-column-master-key-to-the-new-column-master-key).
+The **ENCLAVE_COMPUTATIONS** property of a column master key is immutable – you cannot change it after the key has been provisioned. You can, however, replace the column master key with a new key that has a different value of the **ENCLAVE_COMPUTATIONS** property than the original key, via a process called a [column master key rotation](#initiate-the-rotation-from-the-current-column-master-key-to-the-new-column-master-key). For more information about the **ENCLAVE_COMPUTATIONS** property, see [CREATE COLUMN MASTER KEY](../../../t-sql/statements/create-column-master-key-transact-sql.md).
 
 To provision an enclave-enabled column encryption key, you need to make sure that the column master key that encrypts the column encryption key, is enclave-enabled.
 
@@ -178,9 +177,9 @@ The following sections provide sample PowerShell scripts for provisioning enclav
 
 **Provisioning Enclave-Enabled Keys – Windows Certificate Store**
 
-On the client/development computer, open Windows PowerShell ISE, copy the following script into Windows PowerShell ISE, customize the script, and run it.
+On the client/development computer, open Windows PowerShell ISE, and run the following script.
 
-Important to note is the use of the `-AllowEnclaveComputations` parameter in the **New-SqlCertificateStoreColumnMasterKeySettings** cmdlet.
+Important to note is the use of the `-AllowEnclaveComputations` parameter in the [**New-SqlCertificateStoreColumnMasterKeySettings**](https://docs.microsoft.com/powershell/module/sqlserver/new-sqlcertificatestorecolumnmasterkeysettings) cmdlet.
 
 ```powershell
 # Create a column master key in Windows Certificate Store.
@@ -209,13 +208,13 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 ```
 
 
-**Provisioning Enclave-Enabled Keys – Azure Key Vault**
+### Provisioning Enclave-Enabled Keys – Azure Key Vault
 
-One the client/development computer, open Windows PowerShell ISE, copy the following script into Windows PowerShell ISE, customize the script and run it.
+On the client/development computer, open Windows PowerShell ISE, and run the following script.
 
-### Step 1: Provision a column master key in Azure Key Vault
+**Step 1: Provision a column master key in Azure Key Vault**
 
-This can be also done using Azure portal. For details, see [Manage your key vaults from Azure portal](https://blogs.technet.microsoft.com/kv/2016/09/12/manage-your-key-vaults-from-new-azure-portal/)
+This can be also done using Azure portal. For details, see [Manage your key vaults from Azure portal](https://blogs.technet.microsoft.com/kv/2016/09/12/manage-your-key-vaults-from-new-azure-portal/).
 
 
 ```powershell
@@ -245,7 +244,7 @@ Set-AzureRmKeyVaultAccessPolicy -VaultName $akvName -ResourceGroupName $resource
 $akvKey = Add-AzureKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destination "Software"
 ```
 
-### Step 2: Create column master key metadata in the database, create a column encryption key, and create column encryption key metadata in the database
+**Step 2: Create column master key metadata in the database, create a column encryption key, and create column encryption key metadata in the database**
 
 
 ```powershell
@@ -285,7 +284,7 @@ SELECT name, allow_enclave_computations
 FROM sys.column_master_keys
 ```
 
-To determine which column encryption keys are encrypted with enclave-enabled column encryption keys (and, thus, are enclave-enabled), you need to join **sys.column_master_keys**, **sys.column_encryption_key_values**, and **sys.column_encryption_keys**.
+To determine which column encryption keys are encrypted with enclave-enabled column encryption keys (and, thus, are enclave-enabled), you need to join [sys.column_master_keys](../../system-catalog-views/sys-column-master-keys-transact-sql.md), [sys.column_encryption_key_values](../../system-catalog-views/sys-column-encryption-key-values-transact-sql.md), and [sys.column_encryption_keys](../../system-catalog-views/sys-column-encryption-keys-transact-sql.md).
 
 
 ```sql
@@ -331,7 +330,7 @@ The below table summarizes the functionality for enclave-enabled string columns,
 
 ### Determining and changing collations
 
-In SQL Server, collations can be set at the server, database, or column level. For general instructions on how to determine the current collation and change a collation at the server, database or column level, see <https://docs.microsoft.com/sql/relational-databases/collations/collation-and-unicode-support>.
+In SQL Server, collations can be set at the server, database, or column level. For general instructions on how to determine the current collation and change a collation at the server, database or column level, see [Collation and Unicode Support](https://docs.microsoft.com/sql/relational-databases/collations/collation-and-unicode-support).
 
 **Special considerations for non-UNICODE string columns**:
 
@@ -414,7 +413,7 @@ ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NULL
 To add the required connection parameters to enable enclave computations:
 
 1. Open SSMS.
-2. After specifying your server name and a database name in the Connect To Server dialog, click the **Additional Connection Parameter** tab and enter: **Column Encryption Setting = Enabled;** **Enclave Attestation Url = \<your attestation URL\>**
+2. After specifying your server name and a database name in the Connect To Server dialog, click **Options**. Navigate to the **Always Encrypted** tab, select **Enable Always Encrypted**, and specify your enclave attestation URL.
     
     ![Column Encryption Setting](./media/always-encrypted-enclaves/column-encryption-setting.png)
 
@@ -425,7 +424,7 @@ Alternatively, if you already have a query window open, here is how you can upda
 
 1. Right-click anywhere in an existing query window.
 2. Select Connection \> Change Connection.
-3. Click on the Additional Connection Parameter tab and enter **Column Encryption Setting = Enabled; Enclave Attestation Url = \<your attestation URL\>**
+3. Click on **Options**. Navigate to the **Always Encrypted** tab, select **Enable Always Encrypted**, and specify your enclave attestation URL.
 4. Click Connect.
 
 
@@ -449,7 +448,7 @@ To encrypt a column using a key that is not enclave-enabled, you need to use cli
 
 #### Steps
 
-1. Prepare an SSMS query window with Always Encrypted and enclave computations enabled in the database connection. For details, see [Preparing an SSMS Query Window with Always Encrypted Enabled](#prepare-an-ssms-query-window-with-always-encrypted-enabled).
+1. Prepare an SSMS query window with Always Encrypted and enclave computations enabled in the database connection. For details, see [Prepare an SSMS Query Window with Always Encrypted Enabled](#prepare-an-ssms-query-window-with-always-encrypted-enabled).
 2. In the query window, issue the ALTER TABLE statement with the ALTER COLUMN clause, specifying an enclave-enabled column encryption key in the ENCRYPTED WITH clause. If your column is a string column (for example, char, varchar, nchar, nvarchar), you may also need to change the collation to a BIN2 collation. See the Collation Setup section for details.
     
     > [!NOTE]
@@ -459,7 +458,7 @@ To encrypt a column using a key that is not enclave-enabled, you need to use cli
   
     > [!NOTE]
     > If you do not remove the plan for the impacted query from the cache, the first execution of the query after encryption may fail.
-    
+
     > [!NOTE]
     > Use DBCC FREEPROCCACHE to clear the plan cache carefully, as it may result in temporary query performance degradation. To minimize the negative impact of clearing the cache, you can selectively remove the plans for the impacted queries only.
 
@@ -610,7 +609,7 @@ After you have made your column enclave-enabled, you can perform the following o
 
 #### Steps
 
-1. Prepare an SSMS query window with Always Encrypted and enclave computations enabled for the database connection. See Section Preparing an SSMS Query Window with Always Encrypted Enabled.
+1. Prepare an SSMS query window with Always Encrypted and enclave computations enabled for the database connection. For details, see [Prepare an SSMS Query Window with Always Encrypted Enabled](#prepare-an-ssms-query-window-with-always-encrypted-enabled).
 
 2. In the query window, issue the use the [ALTER TABLE (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/alter-table-transact-sql) statement with the ALTER COLUMN clause, specifying the following in the ENCRYPTED WITH clause:
     
@@ -627,7 +626,8 @@ After you have made your column enclave-enabled, you can perform the following o
     
     If you do not remove the plan for the impacted query from the cache, the first execution of the query after re-encryption may fail.
     
-    Note: Use DBCC FREEPROCCACHE to clear the plan cache carefully, as it may result in temporary query performance degradation. To minimize the negative impact of clearing the cache, you can selectively remove the plans for the impacted queries only. See the [DBCC FREEPROCCACHE](../../../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md).aspx) for details.
+    > [!NOTE]
+    > Use DBCC FREEPROCCACHE to clear the plan cache carefully, as it may result in temporary query performance degradation. To minimize the negative impact of clearing the cache, you can selectively remove the plans for the impacted queries only. See the [DBCC FREEPROCCACHE](../../../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md).aspx) for details.
 
 4. (Optionally) call
     [sp_refresh_parameter_encryption](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-refresh-parameter-encryption-transact-sql) to update the metadata for the parameters of each module (stored procedure, function, view, trigger) that may have been invalidated by re-encrypting the columns.
@@ -707,7 +707,7 @@ the online mode.
 
 #### Steps
 
-1.  Prepare an SSMS query window with Always Encrypted and enclave computations enabled for the database connection. See Section Preparing an SSMS Query Window with Always Encrypted Enabled.
+1.  Prepare an SSMS query window with Always Encrypted and enclave computations enabled for the database connection. For details, see [Prepare an SSMS Query Window with Always Encrypted Enabled](#prepare-an-ssms-query-window-with-always-encrypted-enabled).
 
 2.  In the query window, issue the [ALTER TABLE (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/alter-table-transact-sql) statement with the ALTER COLUMN clause, specifying the desired column configuration **without** the ENCRYPTED WITH clause.
     
@@ -719,7 +719,8 @@ the online mode.
     > [!NOTE]
     > If you do not remove the plan for the impacted query from the cache, the first execution of the query after decryption may fail.
     
-    Use DBCC FREEPROCCACHE to clear the plan cache carefully, as it may result in temporary query performance degradation. To minimize the negative impact of clearing the cache, you can selectively remove the plans for the impacted queries only. See the [DBCC FREEPROCCACHE](../../../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md) for details.
+    > [!NOTE]
+    > Use DBCC FREEPROCCACHE to clear the plan cache carefully, as it may result in temporary query performance degradation. To minimize the negative impact of clearing the cache, you can selectively remove the plans for the impacted queries only. See the [DBCC FREEPROCCACHE](../../../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md) for details.
 
 4.  (Optionally) call
     [sp\_refresh\_parameter\_encryption](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-refresh-parameter-encryption-transact-sql) to update the metadata for the parameters of each module (stored procedure, function, view, trigger) that may have been invalidated by decrypting the columns.
@@ -755,7 +756,7 @@ The quickest way to try rich queries against your enclave-enabled columns is fro
 
 ### Steps
 
-1.  Prepare an SSMS query window with Always Encrypted and enclave computations enabled for the database connection. See Section [Preparing an SSMS Query Window with Always Encrypted Enabled](#prepare-an-ssms-query-window-with-always-encrypted-enabled).
+1.  Prepare an SSMS query window with Always Encrypted and enclave computations enabled for the database connection. For details, see [Prepare an SSMS Query Window with Always Encrypted Enabled](#prepare-an-ssms-query-window-with-always-encrypted-enabled).
 
 2.  Enable Parameterization for Always Encrypted.
     
@@ -816,7 +817,7 @@ GO;
 
 ### Set up your you Visual Studio Project
 
-To use Always Encrypted with secure enclaves in a .NET Framework application, you need to make sure your application is built against .NET Framework 4.7.2 and is integrated with the Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders NuGet. In addition, if you store you column master key in Azure Key Vault, you also need to integrate your application with the Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider NuGet, version 3.0 or later. 
+To use Always Encrypted with secure enclaves in a .NET Framework application, you need to make sure your application is built against .NET Framework 4.7.2 and is integrated with the Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders NuGet. In addition, if you store you column master key in Azure Key Vault, you also need to integrate your application with the Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider NuGet, version 2.2.0 or later. 
 
 1. Open Visual Studio.
 2. Create a new Visual C\# project, or open an existing project.
@@ -831,7 +832,7 @@ To use Always Encrypted with secure enclaves in a .NET Framework application, yo
 5. If you use Azure Key Vault for storing your column master keys, install the following NuGet packages by going to **Tools** (main menu) > **NuGet Package Manager** > **Package Manager Console**. Run the following code in the Package Manager Console.
 
   ```powershell
-  Install-Package Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider --IncludePrerelease -Version 3.0
+  Install-Package Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider --IncludePrerelease -Version 2.2.0
   Install-Package Microsoft.IdentityModel.Clients.ActiveDirectory
   ```
 

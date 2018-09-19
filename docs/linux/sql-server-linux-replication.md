@@ -21,7 +21,7 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-[!INCLUDE[sqlservervnext](../includes/sssqlv15-md.md)] CTP 2.0 introduces SQL Server Replication for instances of SQL Server on Linux.
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] introduces SQL Server Replication for instances of SQL Server on Linux.
 
 Configure replication on Linux with SQL Server Management Studio (SSMS) [replication stored procedures](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md).
 
@@ -43,7 +43,7 @@ For detailed information about replication, see [SQL Server replication document
 
 ## Supported features
 
-For [!INCLUDE[sqlservervnext](../includes/sssqlv15-md.md)] CTP 2.0 the following replication features are supported:
+For [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] the following replication features are supported:
 
 * Snapshot replication
 * Transactional replication
@@ -56,7 +56,7 @@ For [!INCLUDE[sqlservervnext](../includes/sssqlv15-md.md)] CTP 2.0 the following
 
 ## Limitations
 
-[!INCLUDE[sqlservervnext](../includes/sssqlv15-md.md)] CTP 2.0 does not support the following features:
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] does not support the following features:
 
 * Immediate update subscribers
 

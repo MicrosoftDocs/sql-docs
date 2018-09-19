@@ -35,7 +35,7 @@ This image consists of SQL Server running on Linux based on Ubuntu 16.04. It can
 
 <!--The following H2 is versioned for 2017 and 2019. Much of the content is duplicated, so
 any changes to one section should be duplicated in the other-->
-::: moniker range="= sql-server-linux-2017 || = sql-server-2017 || =sqlallproducts-allversions"
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
 ## <a id="pullandrun2017"></a> Pull and run the container image
 
@@ -117,18 +117,18 @@ Setting `-h` and `--name` to the same value is a good way to easily identify the
 <!--End of 2017 "Pull and run" section-->
 
 <!--This is the 2019 version of the "Pull and run" section-->
-::: moniker range="= sql-server-linux-ver15 || = sql-server-ver15"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
 ## <a id="pullandrun2019"></a> Pull and run the container image
 
 1. Pull the SQL Server 2019 CTP 2.0 Linux container image from Docker Hub.
 
    ```bash
-   sudo docker pull mcr.microsoft.com/mssql/server/mssql-server-linux:2019-latest
+   sudo docker pull mcr.microsoft.com/mssql/server/mssql-server-linux:vNext-CTP2.0
    ```
 
    ```PowerShell
-   docker pull mcr.microsoft.com/mssql/server/mssql-server-linux:2019-latest
+   docker pull mcr.microsoft.com/mssql/server/mssql-server-linux:vNext-CTP2.0
    ```
 
    > [!TIP]
@@ -143,13 +143,13 @@ Setting `-h` and `--name` to the same value is a good way to easily identify the
    ```bash
    sudo docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' \
       -p 1433:1433 --name sql1 \
-      -d mcr.microsoft.com/mssql/server/mssql-server-linux:2019-latest
+      -d mcr.microsoft.com/mssql/server/mssql-server-linux:vNext-CTP2.0
    ```
 
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" `
       -p 1433:1433 --name sql1 `
-      -d mcr.microsoft.com/mssql/server/mssql-server-linux:2019-latest
+      -d mcr.microsoft.com/mssql/server/mssql-server-linux:vNext-CTP2.0
    ```
 
    > [!NOTE]
@@ -166,7 +166,7 @@ Setting `-h` and `--name` to the same value is a good way to easily identify the
    | **-e 'SA_PASSWORD=\<YourStrong!Passw0rd\>'** | Specify your own strong password that is at least 8 characters and meets the [SQL Server password requirements](../relational-databases/security/password-policy.md). Required setting for the SQL Server image. |
    | **-p 1433:1433** | Map a TCP port on the host environment (first value) with a TCP port in the container (second value). In this example, SQL Server is listening on TCP 1433 in the container and this is exposed to the port, 1433, on the host. |
    | **--name sql1** | Specify a custom name for the container rather than a randomly generated one. If you run more than one container, you cannot reuse this same name. |
-   | **microsoft/mssql-server-linux:2019-latest** | The SQL Server 2019 CTP 2.0 Linux container image. |
+   | **microsoft/mssql-server-linux:vNext-CTP2.0** | The SQL Server 2019 CTP 2.0 Linux container image. |
 
 3. To view your Docker containers, use the `docker ps` command.
 
@@ -331,7 +331,7 @@ Other common tools to connect to SQL Server include:
 
 - [Visual Studio Code](sql-server-linux-develop-use-vscode.md)
 - [SQL Server Management Studio (SSMS) on Windows](sql-server-linux-manage-ssms.md)
-- [SQL Server Operations Studio (Preview)](../sql-operations-studio/what-is.md)
+- [Azure Data Studio (Preview)](../azure-data-studio/what-is.md)
 - [mssql-cli (Preview)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)
 
 ## Remove your container

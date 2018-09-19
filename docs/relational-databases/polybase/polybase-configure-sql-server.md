@@ -8,8 +8,8 @@ ms.suite: "sql"
 ms.technology: polybase
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: Abiola
+ms.author: aboke
 manager: craigg
 monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 ---
@@ -25,90 +25,85 @@ If you haven't installed PolyBase, see [PolyBase installation](polybase-installa
 
 ## Configure an External Table
 
-To query the data in your SQL Server data source, you must define an external table to use in Transact-SQL queries. The following steps describe how to configure the external table.
+To query the data from a SQL Server data source, you must create external tables to reference the external data. This section provides sample code to create these external tables. 
+ 
+We recommend creating statistics on external table columns, especially the ones used for joins, filters and aggregates, for optimal query performance.
+
+These objects will create in this section:
+
+- CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL) 
+- CREATE EXTERNAL DATA SOURCE (Transact-SQL) 
+- CREATE EXTERNAL FILE FORMAT (Transact-SQL) 
+- CREATE EXTERNAL TABLE (Transact-SQL) 
+- CREATE STATISTICS (Transact-SQL)
+.
 
 1. Create a master key on the database. This is required to encrypt the credential secret.
-  ```sql
-   CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
-   ```
 
-2. Create a database scoped credential for.
+     ```sql
+      CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
+     ```
 
- ```sql
- /*  specify credentials to external data source
- *  IDENTITY: user name for external source.  
- *  SECRET: password for external source.
- */
-CREATE DATABASE SCOPED CREDENTIAL SqlServerCredentials   
-WITH IDENTITY = 'username', Secret = 'password';
-  ```
+1. Create a database scoped credential for.
 
-3. Create an external data source with [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).Specify external data source location and credentials for SQL Server.
+     ```sql
+     /*  specify credentials to external data source
+     *  IDENTITY: user name for external source.  
+     *  SECRET: password for external source.
+     */
+     CREATE DATABASE SCOPED CREDENTIAL SqlServerCredentials   
+     WITH IDENTITY = 'username', Secret = 'password';
+     ```
 
-  ```sql
- /*  LOCATION: Server DNS name or IP address.
- *  PUSHDOWN: specify whether computation should be pushed down to the source. ON by default.
- *  CREDENTIAL: the database scoped credential, created above.
- */  
-CREATE EXTERNAL DATA SOURCE SqlServerInstance
-WITH ( 
-  LOCATION = 'sqlserver://TestDBs',
-  -- PUSHDOWN = ON | OFF,
-  CREDENTIAL = SqlServerCredentials
-);
+1. Create an external data source with [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).Specify external data source location and credentials for SQL Server.
 
-   ```
+     ```sql
+     /*  LOCATION: Server DNS name or IP address.
+     *  PUSHDOWN: specify whether computation should be pushed down to the source. ON by default.
+     *  CREDENTIAL: the database scoped credential, created above.
+     */  
+     CREATE EXTERNAL DATA SOURCE SqlServerInstance
+     WITH ( 
+     LOCATION = '<vendor>://<server>[:<port>]',
+     -- PUSHDOWN = ON | OFF,
+     CREDENTIAL = SqlServerCredentials
+     );
+     ```
 
-4. Create an external file format with [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md).
+1. Create schemas for external data
 
-  ```sql
-/*  specify external file format
- *  FORMAT TYPE: Type of format in Hadoop - DELIMITEDTEXT, RCFILE, ORC, PARQUET
- *  for compressed Parquet files, specify DATA_COMPRESSION  
- */
-CREATE EXTERNAL FILE FORMAT Parquet
-WITH (
-    FORMAT_TYPE = PARQUET
-    -- , DATA_COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'
-); 
-   ```
+     ```sql
+     CREATE SCHEMA sqlserver;
+     GO
+     ```
 
-5. Create schemas for external data
-
-  ```sql
-CREATE SCHEMA sqlserver;
-GO
+1.  Create external tables that represents data stored in external SQL Server  [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md).
  
-   ```
-6.  Create external tables that represents data stored in external SQL Server  [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md).
- 
- ```sql
-/*  LOCATION: sql server table/view in 'database_name.schema_name.object_name' format
- *  DATA_SOURCE: the external data source, created above.
- */
-CREATE EXTERNAL TABLE sqlserver.customer(
-    C_CUSTKEY INT NOT NULL,
-    C_NAME VARCHAR(25) NOT NULL,
-    C_ADDRESS VARCHAR(40) NOT NULL,
-    C_NATIONKEY INT NOT NULL,
-    C_PHONE CHAR(15) NOT NULL,
-    C_ACCTBAL DECIMAL(15,2) NOT NULL,
-    C_MKTSEGMENT CHAR(10) NOT NULL,
-    C_COMMENT VARCHAR(117) NOT NULL
-)
-WITH (
-    LOCATION='tpch_10.dbo.customer',
-    DATA_SOURCE=SqlServerInstance
-);
+     ```sql
+     /*  LOCATION: sql server table/view in 'database_name.schema_name.object_name' format
+     *  DATA_SOURCE: the external data source, created above.
+     */
+     CREATE EXTERNAL TABLE sqlserver.customer(
+     C_CUSTKEY INT NOT NULL,
+     C_NAME VARCHAR(25) NOT NULL,
+     C_ADDRESS VARCHAR(40) NOT NULL,
+     C_NATIONKEY INT NOT NULL,
+     C_PHONE CHAR(15) NOT NULL,
+     C_ACCTBAL DECIMAL(15,2) NOT NULL,
+     C_MKTSEGMENT CHAR(10) NOT NULL,
+     C_COMMENT VARCHAR(117) NOT NULL
+      )
+      WITH (
+      LOCATION='tpch_10.dbo.customer',
+      DATA_SOURCE=SqlServerInstance
+     );
+      ```
 
-```
 1. Create statistics on an external table.
 
-  ```sql
-    CREATE STATISTICS CustomerCustKeyStatistics ON sqlserver.customer(C_CUSTKEY) WITH FULLSCAN; 
-   ```
-
-
+     ```sql
+      CREATE STATISTICS CustomerCustKeyStatistics ON sqlserver.customer (C_CUSTKEY) WITH FULLSCAN; 
+     ```
 
 ## Next steps
 

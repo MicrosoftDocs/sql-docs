@@ -14,18 +14,18 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 # What's new in SQL Server Machine Learning Services 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Machine learning capabilities are added to SQL Server in each release as we continue to expand, extend, and deepen the integration between the data platform and the data science, analytics, and supervised learning you want to implement over your data. 
+Machine learning capabilities are added to SQL Server in each release as we continue to expand, extend, and deepen the integration between the data platform, advanced analytics, and data science. 
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 ## New in SQL Server 2019 preview
 
-This release adds the top-requested features for R and Python machine learning operations in SQL Server. For more information about other features in this release, see [What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md) and [Release Notes for SQL Server 2019](../sql-server/sql-server-ver15-release-notes.md).
+This release adds the top-requested features for R and Python machine learning operations in SQL Server. For more information about all of the features in this release, see [What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md) and [Release Notes for SQL Server 2019](../sql-server/sql-server-ver15-release-notes.md).
 
-| Release | Date | Feature update |
-|---------|------|----------------|
-| CTP 2.0 | September 2018 | Linux platform support for SQL Server 2019 Machine Learning Services (In-Database). <br/><br/>For instructions on Linux installation, see [Install SQL Server Machine Learning Services on Linux](../linux/sql-server-linux-setup-machine-learning.md). |
-| CTP 2.0 | September 2018 | Partition-based modeling. By setting new parameters on the [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) system stored procedure, you can specify a column in the data set that naturally segments data into partitions (some examples are geographic regions, dates, age or gender, categories). At execution time, individual models are generated for each partition, with external script executing once for every partition. <br/><br/>Learn more in this tutorial, [Create partition-based models in R](tutorials/r-tutorial-create-models-per-partition.md). |
-| CTP 2.0 | September 2018 | Failover cluster support. You can install SQL Server 2019 Machine Learning Services (In-Database) on a Windows failover cluster to meet your SLA requirements if your primary server fails over. Acceptance of the licensing agreements for R and Python distributions is a Setup requirement. <br/><br/> ![](install/media/sql-15-failoverclusterinstall-sqlmls-small.png)|
+| Release | Feature update |
+|---------|----------------|
+| CTP 2.0 | Linux platform support for R and Python machine learning, plus the new Java extension. For help getting started, see [Install SQL Server Machine Learning Services on Linux](../linux/sql-server-linux-setup-machine-learning.md). |
+| CTP 2.0 | The [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) includes two new parameters that enable you to easily generate multiple models from partitioned data. Learn more in this tutorial, [Create partition-based models in R](tutorials/r-tutorial-create-models-per-partition.md). |
+| CTP 2.0 | Failover cluster support is now supported on Windows and Linux, assuming SQL Server Launchpad service is started on all nodes. For more information, see [SQL Server failover cluster installation](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md). |
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
@@ -92,15 +92,15 @@ For feature announcements all-up, see [What's New in SQL Server 2016](../sql-ser
 
 ## Linux support roadmap
 
-SQL Server 2019 CTP 2.0 adds Linux support for **R only** in-database analytics when you install the machine learning packages with a database engine instance. Python support is forthcoming but there is no projected date at this time. For more information, see [Install SQL Server Machine Learning Services on Linux](../linux/sql-server-linux-setup-machine-learning.md).
+SQL Server 2019 CTP 2.0 adds Linux support for R, Python, and Java when you install the machine learning packages with a database engine instance. For more information, see [Install SQL Server Machine Learning Services on Linux](../linux/sql-server-linux-setup-machine-learning.md).
 
-On SQL Server 2017, there is no R or Python in-database support in SQL Server 2017 on Linux, with the exception of [native scoring](sql-native-scoring.md) using the T-SQL PREDICT function. Native scoring lets you score from a pretrained model very fast, without calling or even requiring an R runtime. This means you can use SQL Server on Linux to generate predictions very fast, to serve client applications.
+On Linux, SQL Server 2017 does not have R or Python integration, but you can use [Native scoring](sql-native-scoring.md) on Linux because that functionality is available through T-SQL [PREDICT](), which runs on Linux. Native scoring enables high-performance scoring from a pretrained model, without calling or even requiring an R runtime.
 
 <a name="azure-sql-database-roadmap"></a>
 
 ## Azure SQL Database roadmap
 
-There is limited support for R in Azure SQL Database: available only in West Central US, in services created at the Premium tier. Expanded coverage, including Python support, is likely to follow in a future release. However, there is no projected release date at this time.  
+There is currently no support for Machine Learning Services (R and Python) in Azure SQL Database. Support is on the roadmap but there is no projected release date at this time.  
 
 ## Next steps
 

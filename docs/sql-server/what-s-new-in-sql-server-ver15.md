@@ -12,7 +12,7 @@ ms.topic: "article"
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "craigg"
-monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
+monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
 # What's new in SQL Server 2019
 
@@ -40,18 +40,21 @@ Community technology preview (CTP) 2.0 is the first public release of [!INCLUDE[
   - Support for columnstore statistics in `DBCC CLONEDATABASE`
   - New options added to `sp_estimate_data_compression_savings`
   - New `sys.dm_db_page_info` system function returns page information
-  - Always On Availability Groups secondary to primary replica connection redirection
+  - Always On Availability Groups
   - Always Encrypted with secure enclaves
   - SQL Graph features
   - Java language programmability extension
   - SQL Server Machine Learning Services
   - Polybase
-  - Expanded support for Persistent Memory (PMEM) devices
-- [Big Data Cluster](#bigdatacluster)
-  - Deploy a SQL Server Big Data Cluster with Linux containers on Kubernetes
-  - Use Azure Data Studio to run Jupyter Notebooks
-  - Ingest external data into a data pool
-  - Query HDFS data in the storage pool
+  - Expanded support for persistent memory devices
+
+- [Big Data Clusters](#bigdatacluster)
+  - Deploy a Big Data cluster with SQL and Spark Linux containers on Kubernetes
+  - Access your big data from HDFS
+  - Run Advanced analytics and machine learning with Spark
+  - Use Spark streaming to data to SQL data pools
+  - Use Azure Data Studio to run Query books that provide a notebook experience
+
 - [SQL Server on Linux](#sqllinux)
   - Replication support
   - Support for the Microsoft Distributed Transaction Coordinator (MSDTC)
@@ -60,10 +63,14 @@ Community technology preview (CTP) 2.0 is the first public release of [!INCLUDE[
   - Machine Learning on Linux
   - New container registry
   - New RHEL-based container images
+  - Memory pressure notification
+
 - [Master Data Services](#mds)
   - Silverlight controls replaced
+
 - [Security](#security)
   - Certificate management in SQL Server Configuration Manager
+
 - [Tools](#tools)
   - SQL Server Management Studio (SSMS) 18.0 (preview)
   - Azure Data Studio (preview)
@@ -82,15 +89,20 @@ Continue reading for more details about these features.
 
 - **Row mode memory grant feedback** expands on the memory grant feedback feature introduced in SQL Server 2017 by adjusting memory grant sizes for both batch and row mode operators.  For an excessive memory grant condition, if the granted memory is more than two times the size of the actual used memory, memory grant feedback will recalculate the memory grant. Consecutive executions will then request less memory. For an insufficiently sized memory grant that results in a spill to disk, memory grant feedback will trigger a recalculation of the memory grant.  Consecutive executions will then request more memory. This feature is enabled by default under database compatibility level 150.
 
-- **Approximate COUNT DISTINCT** returns the approximate number of unique non-null values in a group. This function is designed for use in big data scenarios and is optimized for the following conditions:
-  - Access of data sets that are millions of rows or higher AND
-  - Aggregation of a column or columns that have a large number of distinct values AND
-  - Responsiveness is more critical than absolute precision. `APPROXIMATE_COUNT_DISTINCT` yields results typically within 2% of the precise answer in a small fraction of the time.
+- **Approximate COUNT DISTINCT** returns the approximate number of unique non-null values in a group. This function is designed for use in big data scenarios. This function is optimized for queries where all the following conditions are true:
+   - Accesses data sets of at least millions of rows.
+   - Aggregates a column or columns that have a large number of distinct values.
+   - Responsiveness is more critical than absolute precision.
+      - `APPROXIMATE_COUNT_DISTINCT` returns results that are typically within 2% of the precise answer.
+      - And it returns the approximate answer in a small fraction of the time needed for the precise answer.
 
-- **Batch mode on rowstore** enables batch mode without requiring a columnstore index. Batch mode processing allows query operators to process data more efficiently by working on a batch of rows at a time instead of one row at a time. A number of other scalability improvements are tied to batch mode processing.  In earlier versions, batch mode only worked in conjunction with columnstore indexes.  This feature is enabled by default under database compatibility level 150. Workloads that may benefit:
-  - A significant part of the workload consists of analytical queries (as a rule of thumb, queries with operators such as joins or aggregates processing hundreds of thousands of rows or more), AND
-  - The workload is CPU bound AND
-  - Creating a columnstore index adds too much overhead to the transactional part of your workload, OR creating a columnstore index is not feasible because your application depends on a feature that is not yet supported with columnstore indexes.
+- **Batch mode on rowstore** no longer requires a columnstore index to process a query in batch mode. Batch mode allows query operators to work on a set of rows, instead of just one row at a time. This feature is enabled by default under database compatibility level 150. Batch mode improves the speed of queries that access rowstore tables when all the following are true:
+   - The query uses analytic operators such as joins or aggregation operators.
+   - The query involves 100,000 or more rows.
+   - The query is CPU bound, rather than input/output data bound.
+   - Creation and use of a columnstore index would have one of the following drawbacks:
+      - Would add too much overhead to the query.
+      - Or, is not feasible because your application depends on a feature that is not yet supported with columnstore indexes.
 
 - **Table variable deferred compilation** improves plan quality and overall performance for queries referencing table variables. During optimization and initial compilation, this feature will propagate cardinality estimates that are based on actual table variable row counts.  This accurate row count information will be used for optimizing downstream plan operations. This feature is enabled by default under database compatibility level 150.
 
@@ -137,13 +149,13 @@ Convert row-store tables into columnstore format. Creating clustered columnstore
   ```sql
   CREATE CLUSTERED COLUMNSTORE INDEX cci
     ON <tableName>
-    WITH (ONLINE = ON)
+    WITH (ONLINE = ON);
   ```
 
-  ```SQL  
+  ```sql
   ALTER INDEX cci
     ON <tableName>
-    REBUILD WITH (ONLINE = ON)
+    REBUILD WITH (ONLINE = ON);
   ```
 
 ### UTF-8 Support
@@ -152,22 +164,21 @@ Full support for the widely used UTF-8 character encoding as an import or export
 
 For example,`LATIN1_GENERAL_100_CI_AS_SC` to `LATIN1_GENERAL_100_CI_AS_SC_UTF8`. UTF-8 is only available to Windows collations that support supplementary characters, as introduced in SQL Server 2012. `NCHAR` and `NVARCHAR` allow UTF-16 encoding only, and remain unchanged.
 
-This feature may provide significant storage savings, depending on the character set in use. For example, changing an existing column data type from `NCHAR(10)` to `CHAR(10)` using an UTF-8 enabled collation, translates into nearly 50% reduction in storage requirements. This reduction is because `NCHAR(10)` requires 22 bytes for storage, whereas `CHAR(10)` requires 12 bytes for the same Unicode string.
+This feature may provide significant storage savings, depending on the character set in use. For example, changing an existing column data type with ASCII strings from `NCHAR(10)` to `CHAR(10)` using an UTF-8 enabled collation, translates into nearly 50% reduction in storage requirements. This reduction is because `NCHAR(10)` requires 22 bytes for storage, whereas `CHAR(10)` requires 12 bytes for the same Unicode string.
 
 ### Lightweight query profiling infrastructure enabled by default
 
-The lightweight query profiling infrastructure provides query performance data more efficiently than standard profiling technologies. Lightweight profiling is now enabled by default. It was introduced in SQL Server 2016 SP1. Lightweight profiling offers a query execution statistics collection mechanism with an expected overhead of 2% CPU, compared with an overhead of up to 75% CPU for the standard query profiling mechanism. On previous versions,
- it was OFF by default. Database administrators could enable it with [trace flag 7412](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). 
+The lightweight query profiling infrastructure provides query performance data more efficiently than standard profiling technologies. Lightweight profiling is now enabled by default. It was introduced in SQL Server 2016 SP1. Lightweight profiling offers a query execution statistics collection mechanism with an expected overhead of 2% CPU, compared with an overhead of up to 75% CPU for the standard query profiling mechanism. On previous versions, it was OFF by default. Database administrators could enable it with [trace flag 7412](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). 
 
- For more information, see [Developers Choice: Query progress – anytime, anywhere](http://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/).
+For more information, see [Developers Choice: Query progress – anytime, anywhere](http://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/).
 
 ### Data Discovery and Classification
 
-Data discovery and classification provides advanced capabilities natively built into SQL Server for classifying, labeling, and protecting the sensitive data in your databases. Classifying your most sensitive data (business, financial, healthcare, personal information, etc.) can play a pivotal role in your organizational information protection stature. It can serve as infrastructure for:
+Data discovery and classification provides advanced capabilities that are natively built into SQL Server. Classifying and labeling your most sensitive data provides the following benefits:
 
-- Helping meet data privacy standards and regulatory compliance requirements
-- Various security scenarios, such as monitoring (auditing) and alerting on anomalous access to sensitive data
-- Making it easier to identify where sensitive data resides in the enterprise so admins can take the right steps securing the database
+- Helps meet data privacy standards and regulatory compliance requirements.
+- Supports security scenarios, such as monitoring (auditing), and alerting on anomalous access to sensitive data.
+- Makes it easier to identify where sensitive data resides in the enterprise, so that administrators can take the right steps to secure the database.
 
 For more information, see [SQL Data Discovery and Classification](../relational-databases/security/sql-data-discovery-and-classification.md).
 
@@ -178,46 +189,51 @@ For more information, see [SQL Data Discovery and Classification](../relational-
 
 ### Support for columnstore statistics in DBCC CLONEDATABASE
 
-`DBCC CLONEDATABASE` creates a schema-only copy of a database that includes all the elements necessary to troubleshoot query performance issues without copying the data.  In previous versions of SQL Server, the command did not copy the statistics necessary to accurately troubleshoot columnstore index queries and manual steps were required to capture this information.  Now in SQL Server 2019, DBCC CLONEDATABASE automatically captures the stats blobs for columnstore indexes, so no manual steps will be required.
+`DBCC CLONEDATABASE` creates a schema-only copy of a database that includes all the elements necessary to troubleshoot query performance issues without copying the data.  In previous versions of SQL Server, the command did not copy the statistics necessary to accurately troubleshoot columnstore index queries and manual steps were required to capture this information. Now in SQL Server 2019, DBCC CLONEDATABASE automatically captures the stats blobs for columnstore indexes, so no manual steps will be required.
 
 ### New options added to sp_estimate_data_compression_savings
 
-`sp_estimate_data_compression_savings` returns the current size of the requested object and estimates the object size for the requested compression state.  Currently this procedure supports three options: `NONE`, `ROW`, and `PAGE`.  SQL Server 2019 introduces two new options: `COLUMNSTORE` and `COLUMNSTORE_ARCHIVE`.  These new options will allow you to estimate the space savings if a columnstore index is created on the table using either standard or archive columnstore compression.
+`sp_estimate_data_compression_savings` returns the current size of the requested object and estimates the object size for the requested compression state.  Currently this procedure supports three options: `NONE`, `ROW`, and `PAGE`. SQL Server 2019 introduces two new options: `COLUMNSTORE` and `COLUMNSTORE_ARCHIVE`. These new options will allow you to estimate the space savings if a columnstore index is created on the table using either standard or archive columnstore compression.
 
 ### New sys.dm_db_page_info system function returns page information
 
-`sys.dm_db_page_info(database_id, file_id, page_id, mode)` returns information about a page in a database.  The function returns a row that contains the header information from the page, including the `object_id`, `index_id`, and `partition_id`.  This function replaces the need to use `DBCC PAGE` in most cases.  
+`sys.dm_db_page_info(database_id, file_id, page_id, mode)` returns information about a page in a database. The function returns a row that contains the header information from the page, including the `object_id`, `index_id`, and `partition_id`. This function replaces the need to use `DBCC PAGE` in most cases.  
 
-In order to facilitate troubleshooting of page-related waits, a new column called page_resource was also added to `sys.dm_exec_requests` and `sys.sysprocesses`.  This new column allows you to join `sys.dm_db_page_info` to these views via another new system function - `sys.fn_PageResCracker`.  See the following script as an example:
+In order to facilitate troubleshooting of page-related waits, a new column called page_resource was also added to `sys.dm_exec_requests` and `sys.sysprocesses`. This new column allows you to join `sys.dm_db_page_info` to these views via another new system function - `sys.fn_PageResCracker`. See the following script as an example:
 
 ```sql
 SELECT page_info.* 
 FROM sys.dm_exec_requests AS d 
   CROSS APPLY sys.fn_PageResCracker(d.page_resource) AS r
   CROSS APPLY sys.dm_db_page_info(r.db_id, r.file_id, r.page_id,'DETAILED')
-    AS page_info
+    AS page_info;
 ```
 
-### <a id="ha"></a>Always On Availability Groups secondary to primary replica connection redirection
+### <a id="ha"></a>Always On Availability Groups 
 
-- **Secondary to primary replica connection redirection**: Allows client application connections to be directed to the primary replica regardless of the target server specified in the connection string. This capability allows connection redirection without a listener. Use Secondary to primary replica connection redirection in the following cases:
+- **Up to five synchronous replicas**: SQL Server 2019 preview increases the maximum number of synchronous replicas to 5, up from 3 in SQL Server 2017. You can configure this group of 5 replicas to have automatic failover within the group. There is 1 primary replica, plus 4 synchronous secondary replicas.
 
-  - The cluster technology does not offer a listener capability
-  - A multi subnet configuration where redirection becomes complex
-  - Read scale-out or disaster recovery scenarios where cluster type is `NONE`
+- **Secondary-to-primary replica connection redirection**: Allows client application connections to be directed to the primary replica regardless of the target server specified in the connection string. This capability allows connection redirection without a listener. Use secondary-to-primary replica connection redirection in the following cases:
 
-  For details, see [Secondary to primary replica read/write connection redirection (Always On Availability Groups)](../database-engine/availability-groups/windows/secondary-replica-connection-redirection-always-on-availability-groups.md
-).
+  - The cluster technology does not offer a listener capability.
+  - A multi subnet configuration where redirection becomes complex.
+  - Read scale-out or disaster recovery scenarios where cluster type is `NONE`.
+
+For details, see [Secondary to primary replica read/write connection redirection (Always On Availability Groups)](../database-engine/availability-groups/windows/secondary-replica-connection-redirection-always-on-availability-groups.md).
 
 ### Always Encrypted with secure enclaves
 
-Expands upon Always Encrypted with in-place encryption and rich computations by enabling computations on plaintext data inside a secure enclave on the server side.
+Expands upon Always Encrypted with in-place encryption and rich computations. The expansions come from the enabling of computations on plaintext data, inside a secure enclave on the server side.
 
-Cryptographic operations (encrypting columns, rotating columns encryption keys, etc.), can now be issued using Transact-SQL and do not require moving data out of the database. Secure enclaves unlock Always Encrypted to a much broader set of scenarios and applications that demand sensitive data to be protected in use, while also requiring rich computations on protected data to be supported within the database system. For details, see [Always Encrypted with secure enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md).
+Cryptographic operations include the encryption of columns, and the rotating of column encryption keys. These operations can now be issued by using Transact-SQL, and they do not require that data be moved out of the database. Secure enclaves provide Always Encrypted to a broader set of scenarios that have both of the following requirements: 
 
->[!NOTE]
->Always Encrypted with secure enclaves is only available on Windows OS.
->It requires ADO.NET 4.7.2. See [Configure Always Encrypted with secure enclaves](../relational-databases/security/encryption/configure-always-encrypted-enclaves.md) for complete requirements.
+- The demand that sensitive data are protected from high-privilege, yet unauthorized users, including database administrators, system administrators,  cloud operators, or malware.
+- The requirement that rich computations on protected data be supported within the database system.
+
+For details, see [Always Encrypted with secure enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md).
+
+> [!NOTE]
+> Always Encrypted with secure enclaves is only available on Windows OS.
 
 ### <a id="sqlgraph"></a> SQL Graph features
 
@@ -241,29 +257,34 @@ For detailed information, see [What's new in SQL Server Machine Learning Service
 
 - **New connectors for SQL Server, Oracle, Teradata, and MongoDB**: SQL Server 2019 introduces new connectors to external data for SQL Server, Oracle, Teradata, and MongoDB.
 
-### Expanded support for Persistent Memory (PMEM) devices
+### Expanded support for persistent memory devices
 
-Any SQL Server file that is placed on a PMEM device operates in *enlightened* mode. SQL Server directly accesses the device, bypassing the storage stack of the operating system. This mode improves performance because it allows low latency input/output against such devices.
+Any SQL Server file that is placed on a persistent memory device operates in *enlightened* mode. SQL Server directly accesses the device, bypassing the storage stack of the operating system. This mode improves performance because it allows low latency input/output against such devices.
     - Examples of SQL Server files include:
         - Database files
         - Transaction log files
         - In-Memory OLTP checkpoint files
-    - PMEM is also known as storage class memory (SCM)
+    - Persistent memory is also known as storage class memory.
+    - Persistent memory is occasionally referred to informally as *pmem* on some non-Microsoft websites.
 
->[!NOTE]
->For this preview release, support for Persistent Memory (PMEM) devices is only available on Linux.
+> [!NOTE]
+> For this preview release, support for persistent memory devices is only available on Linux.
 
-## <a id="bigdatacluster"></a>Big Data Cluster
+## <a id="bigdatacluster"></a>Big Data Clusters
 
-- Deploy a SQL Server Big Data Cluster with Linux containers on Kubernetes
-- Use Azure Data Studio to run Jupyter Notebooks
-- Ingest external data into a data pool
-- Query HDFS data in the storage pool
-- Access features with [**Azure Data Studio (preview)**](../sql-operations-studio/what-is.md)
+SQL Server 2019 [Big Data Clusters](../big-data-cluster/big-data-cluster-overview.md) enables new scenarios including the following:
+
+- Deploy a Big Data cluster with SQL and Spark Linux containers on Kubernetes
+- Access your big data from HDFS
+- Run Advanced analytics and machine learning with Spark
+- Use Spark streaming to data to SQL data pools
+- Run Query books that provide a notebook experience in [**Azure Data Studio (preview)**](../sql-operations-studio/what-is.md).
+  
+[!INCLUDE [Big Data Clusters preview](../includes/big-data-cluster-preview-note.md)]
 
 ## <a id="sqllinux"></a> SQL Server on Linux
 
-- **Replication support**. CTP 2.0 supports SQL Server Replication on Linux. A Linux virtual machine with SQL Agent can be a publisher, distributor, or subscriber. 
+- **Replication support**: CTP 2.0 supports SQL Server Replication on Linux. A Linux virtual machine with SQL Agent can be a publisher, distributor, or subscriber. 
 
   Create the following types of publications:
   - Transactional
@@ -298,7 +319,8 @@ Any SQL Server file that is placed on a PMEM device operates in *enlightened* mo
   - Deploy certificates across machines participating in Always On Availability Groups (from the node holding the primary replica).
   - Deploy certificates across machines participating in a failover cluster instance (from the active node).
 
-  Note: User must have administrator permissions on all the cluster nodes.
+  > [!NOTE]
+  > User must have administrator permissions on all the cluster nodes.
 
 ## <a id="tools"></a>Tools
 

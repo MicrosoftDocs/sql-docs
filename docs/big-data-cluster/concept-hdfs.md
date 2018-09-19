@@ -4,7 +4,7 @@ description:
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 08/06/2018
+ms.date: 09/24/2018
 ms.topic: conceptual
 ms.prod: sql
 ---
@@ -15,4 +15,6 @@ TBD
 
 ## Next steps
 
-TBD
+To learn more about the SQL Server Big Data Clusters, see the following overview:
+
+- [What is SQL Server 2019 Big Data Clusters?](big-data-cluster-overview.md)

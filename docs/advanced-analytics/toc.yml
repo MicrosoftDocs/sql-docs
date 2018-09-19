@@ -1,5 +1,15 @@
 - name: SQL Server ML and Programming Extensions Documentation
   href: index.md
+- name: Machine learning extensions (R, Python)
+  items:
+  - name: Machine Learning Services (R, Python)
+    href: what-is-sql-server-machine-learning.md
+  - name: R Services
+    href: r/sql-server-r-services.md
+  - name: Standalone server
+    href: r/r-server-standalone.md
+  - name: What's New
+    href: what-s-new-in-sql-server-machine-learning-services.md
 - name: Java extension
   items:
   - name: Run Java code on SQL
@@ -10,16 +20,6 @@
     href: java/java-first-sample.md
   - name: Java and SQL data types
     href: java/java-sql-datatypes.md
-- name: R and Python machine learning extensions
-  items:
-  - name: Machine Learning Services (R, Python)
-    href: what-is-sql-server-machine-learning.md
-  - name: R Services
-    href: r/sql-server-r-services.md
-  - name: Standalone server
-    href: r/r-server-standalone.md
-  - name: What's New
-    href: what-s-new-in-sql-server-machine-learning-services.md
 - name: Install
   items:
   - name: Differences in SQL Server 2019

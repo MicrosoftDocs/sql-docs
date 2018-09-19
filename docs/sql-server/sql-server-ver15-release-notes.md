@@ -88,13 +88,24 @@ This article describes limitations and known issues for the [!INCLUDE[SQL Server
 
 **Applies to**:  [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.0.
 
-### SQL Server Integration Services Transfer Database Task
+### SQL Server Integration Services (SSIS) Transfer Database Task
 
 **Issue and customer impact**:  When a `Transfer Database Task` is configured to transfer a database in `Database Online` mode, it may fail with the following error:
 
 >The Execute method on the task returned error code 0x80131500 (An error occurred while transferring data. See the inner exception for details.). The Execute method must succeed, and indicate the result using an "out" parameter.
 
 **Workaround**: Execute `DBCC TRACEON (7416,-1)` on the server and try again.
+
+### SSIS - Issue after switching SSISDB back to multi-user mode
+
+**Issue / customer impact**: After switching SSISDB into single-user mode and switching back to multi-user mode, the following error will be reported when deploying the package.
+
+>Cannot continue the execution because the session is in the kill state.
+
+**Workaround**: Restart the SQL Server after switch back to multi-user mode.
+
+**Applies to**: SQL Server 2019 CTP 2.0.  
+
 
 [!INCLUDE[get-help-options-msft-only](../includes/paragraph-content/get-help-options.md)]
 

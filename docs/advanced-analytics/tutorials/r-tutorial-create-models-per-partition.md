@@ -186,28 +186,31 @@ By default, the query optimizer tends to operate under **@parallel=1** on tables
 
 ## Run the procedure and train the model
 
-In this section, the script trains the model that you created and saved in the previous step. The examples below demonstrate two approaches for training your model: using an entire data set, or a partial data. Training is a resource-intensive operation. If system resources, especially memory, are insufficient for the load, use a subset of the data. The second example provides the syntax.
+In this section, the script trains the model that you created and saved in the previous step. The examples below demonstrate two approaches for training your model: using an entire data set, or a partial data. 
+
+Expect this step to take awhile. Training is computationally intensive, taking many minutes to complete. If system resources, especially memory, are insufficient for the load, use a subset of the data. You should also subset the training data if you want to complete the tutorial sooner. The second example provides the syntax.
 
 ```sql
 --Example 1: train on entire dataset
 EXEC train_rxLogIt_per_partition N'
 SELECT payment_type, tipped, passenger_count, trip_time_in_secs, trip_distance, d.direct_distance
   FROM dbo.nyctaxi_sample CROSS APPLY [CalculateDistance](pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude) as d
-  OPTION(MAXDOP 2)
 ';
 GO
 ```
 
 ```sql
---Example 2: Train on 80 percent of the dataset.
+--Example 2: Train on 20 percent of the dataset to expedite processing.
 EXEC train_rxLogIt_per_partition N'
   SELECT tipped, payment_type, passenger_count, trip_time_in_secs, trip_distance, d.direct_distance
-  FROM dbo.nyctaxi_sample TABLESAMPLE (80 PERCENT) REPEATABLE (98074)
+  FROM dbo.nyctaxi_sample TABLESAMPLE (20 PERCENT) REPEATABLE (98074)
   CROSS APPLY [CalculateDistance](pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude) as d
-  OPTION(MAXDOP 2)
 ';
 GO
 ```
+
+> [!NOTE]
+> If you are running other workloads, you can append `OPTION(MAXDOP 2)` to the SELECT statement if you want to limit query processing to just 2 cores.
 
 ## Check results
 
@@ -217,7 +220,6 @@ The result in the models table should be five different models, based on five pa
 SELECT *
 FROM ml_models
 ```
-
  
 ## Define a procedure for predicting outcomes
 

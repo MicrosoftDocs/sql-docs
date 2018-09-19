@@ -8,7 +8,7 @@ ms.author: jejiang
 ms.reviewer: jroth
 ms.custom: ""
 ms.topic: conceptual
-ms.date: 09/14/2018
+ms.date: 10/01/2018
 ---
 # Debug and Diagnose Spark Applications on SQL Server Big Data Clusters in Spark History Server
 

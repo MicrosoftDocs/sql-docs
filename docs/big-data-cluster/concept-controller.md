@@ -4,7 +4,7 @@ description:
 author: mihaelablendea 
 ms.author: mihaelab 
 manager: craigg
-ms.date: 09/24/2018
+ms.date: 10/01/2018
 ms.topic: conceptual
 ms.prod: sql
 ---
@@ -36,18 +36,17 @@ The buildout workflow will layout on top of Kubernetes a fully functional SQL Se
 
 ## Managing the cluster through the Controller
 
-Customers are expected to manage the cluster purely through the Controller using either `mssqlctl` APIs or the [administration portal](manage-troubleshooting.md) that is hosted within the cluster. If customers deploy additional Kubernetes objects (pods) into the same namespace, they are not managed or monitored by the Controller.
+Customers are expected to manage the cluster purely through the Controller using either `mssqlctl` APIs or the administration portal that is hosted within the cluster. If customers deploy additional Kubernetes objects (pods) into the same namespace, they are not managed or monitored by the Controller.
 
 The Controller and the Kubernetes objects (stateful sets, pods, secrets, etc.) created for the cluster reside in a dedicated Kubernetes namespace. The Controller service will be granted permission by the Kubernetes cluster administrator to manage all resources within that namespace.  The RBAC policy this scenario is configured automatically as part of initial cluster deployment. 
 
 ### mssqlctl
 
 `mssqlctl` is a command-line utility written in Python that enables cluster administrators to bootstrap and manage the Big Data Cluster via REST APIs.
-You can find details on how to install and use `mssqlctl` in the [Deployment guidance](deployment-guidance.md) and [Install Big Data Tools](deploy-big-data-tools.md) topics.
 
 ### Cluster Admin Portal
 
-Once the Controller service is up and running, cluster administrator can use the [Cluster Admin Portal](manage-monitoring.md) to monitor the deployment progress, detect, and troubleshoot issues with services within the cluster. 
+Once the Controller service is up and running, cluster administrator can use the Cluster Admin Portal to monitor the deployment progress, detect, and troubleshoot issues with services within the cluster. 
 
 ## Monitoring and troubleshooting Controller service
 
@@ -68,7 +67,6 @@ export CONTROLLER_PASSWORD=<your controller password>
 
 ## Next steps
 
-To learn more about the SQL Server Big Data Clusters, see the following articles:
+To learn more about the SQL Server Big Data Clusters, see the following overview:
 
 - [What is SQL Server 2019 Big Data Clusters?](big-data-cluster-overview.md)
-- [Quickstart: Deploy SQL Server Big Data Cluster on Kubernetes](quickstart-big-data-cluster-deploy.md)

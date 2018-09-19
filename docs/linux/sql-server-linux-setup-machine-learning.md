@@ -272,12 +272,12 @@ All possible permutations of EULA acceptance are documented in [Configure SQL Se
 
 ## Offline installation
 
-Locate the repository for package downloads in the [Release notes](sql-server-linux-release-notes-2019.md). Follow the [Offline installation](sql-server-linux-setup.md#offline) instructions using the packages you obtained.
+Locate the repository for package downloads in the [Release notes](sql-server-linux-release-notes-2019.md). Follow the [Offline installation](sql-server-linux-setup.md#offline) instructions for installing the packages.
 
 R, Python, and Java package file names for a full install on RHEL or SUSE:
 
 ```
-microsoft-openmpi-3.0.0-x86_64.rpm`
+microsoft-openmpi-3.0.0-x86_64.rpm
 mssql-server-extensibility-15.0.1000.xxxx-y.x86_64.rpm
 mssql-server-extensibility-java-15.0.1000.xxxx-y.x86_64.rpm
 mssql-mlservices-mlm-py-9.4.5.x86_64.rpm

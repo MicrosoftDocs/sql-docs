@@ -73,7 +73,7 @@ Community technology preview (CTP) 2.0 is the first public release of [!INCLUDE[
 
 - [Tools](#tools)
   - SQL Server Management Studio (SSMS) 18.0 (preview)
-  - Azure Data Studio (preview)
+  - Azure Data Studio
 
 Continue reading for more details about these features.
 
@@ -85,7 +85,7 @@ Continue reading for more details about these features.
 - Access your big data from HDFS
 - Run Advanced analytics and machine learning with Spark
 - Use Spark streaming to data to SQL data pools
-- Run Query books that provide a notebook experience in [**Azure Data Studio (preview)**](../sql-operations-studio/what-is.md).
+- Run Query books that provide a notebook experience in [**Azure Data Studio**](../sql-operations-studio/what-is.md).
   
 [!INCLUDE [Big Data Clusters preview](../includes/big-data-cluster-preview-note.md)]
 
@@ -324,13 +324,25 @@ FROM sys.dm_exec_requests AS d
 
 ## <a id="tools"></a>Tools
 
+- [**Azure Data Studio**](../sql-operations-studio/what-is.md): Azure Data Studio is a lightweight, modern, open source, cross-platform desktop tool for the most common tasks in data development and administration. With Azure Data Studio you can connect to SQL Server on premises and in the cloud on Windows, macOS, and Linux. Azure Data Studio allows you to:
+
+  - Edit and run queries in a modern development environment with lightning fast Intellisense, code snippets, and source control integration.  
+  - Quickly visualize data with built-in charting of your result sets.  
+  - Create custom dashboards for your servers and databases using customizable widgets.  
+  - Easily manage your broader environment with the built-in terminal.  
+  - Analyze data in an integrated notebook experience built on Jupyter.  
+  - Enhance your experience with custom theming and extensions.  
+  - And explore your Azure resources with a built-in subscription and resource browser.
+  - Supports scenarios using SQL Server Big Data Cluster.
+
+
 - [**SQL Server Management Studio (SSMS) 18.0 (preview)**](../ssms/sql-server-management-studio-ssms.md)
 
+  - Support for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
   - Support for Always Encrypted with secure enclaves.
-
-- [**Azure Data Studio (preview)**](../sql-operations-studio/what-is.md)
-
-  - Supports scenarios using SQL Server Big Data Cluster.
+  - Smaller download size.
+  - Now based on the Visual Studio 2017 Isolated Shell.
+  - For a complete list, see the [SSMS changelog](../ssms/sql-server-management-studio-changelog-ssms.md).
 
 ## Other services
 

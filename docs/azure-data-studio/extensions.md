@@ -1,6 +1,6 @@
 ---
-title: Extend the functionality of Azure Data Studio (preview) | Microsoft Docs
-description: Add extensions to Azure Data Studio (preview)
+title: Extend the functionality of Azure Data Studio | Microsoft Docs
+description: Add extensions to Azure Data Studio
 ms.custom: "tools|sos"
 ms.date: "09/24/2018"
 ms.reviewer: "alayu; sstein"

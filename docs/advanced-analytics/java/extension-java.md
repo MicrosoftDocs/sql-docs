@@ -77,6 +77,8 @@ Install the JDK under the default /Program Files/ folder if you want to avoid ha
 > [!Note]
 > The authorization and isolation model for extensions has changed in this release. For more information, see [Differences in a SQL Server Machine 2019 Learning Services installation](../install/sql-machine-learning-services-ver15.md).
 
+<a name="perms-nonwindows"></a>
+
 ### Grant access to non-default JDK folder (Windows only)
 
 You can skip this step if you installed the JDK/JRE in the default folder. For a non-default folder installation, run the following PowerShell scripts to grant access to the **SQLRUsergroup** and SQL Server service accounts (in ALL_APPLICATION_PACKAGES) for accessing the JVM and the Java classpath.

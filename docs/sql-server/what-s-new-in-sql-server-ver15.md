@@ -259,7 +259,7 @@ For detailed information, see [What's new in SQL Server Machine Learning Service
 
 ### Expanded support for persistent memory devices
 
-Any SQL Server file that is placed on a persistent memory device operates in *enlightened* mode. SQL Server directly accesses the device, bypassing the storage stack of the operating system. This mode improves performance because it allows low latency input/output against such devices.
+Any SQL Server file that is placed on a persistent memory device can now operate in *enlightened* mode. SQL Server directly accesses the device, bypassing the storage stack of the operating system using efficient memcpy operations. This mode improves performance because it allows low latency input/output against such devices.
     - Examples of SQL Server files include:
         - Database files
         - Transaction log files
@@ -268,7 +268,7 @@ Any SQL Server file that is placed on a persistent memory device operates in *en
     - Persistent memory is occasionally referred to informally as *pmem* on some non-Microsoft websites.
 
 > [!NOTE]
-> For this preview release, support for persistent memory devices is only available on Linux.
+> For this preview release, enlightenment of files on persistent memory devices is only available on Linux. SQL Server on Windows supports persistent memory devices starting with SQL Server 2016.
 
 ## <a id="bigdatacluster"></a>Big Data Clusters
 

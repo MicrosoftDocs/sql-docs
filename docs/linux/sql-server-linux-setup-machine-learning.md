@@ -17,22 +17,23 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 
 [SQL Server Machine Learning Services](../advanced-analytics/what-is-sql-server-machine-learning.md) runs on Linux operating systems starting in this preview release of SQL Server 2019. Follow these steps to install the Java programming extension, or the machine learning extensions for R and Python. 
 
+Machine learning and programming extensions are an add-on to the database engine. Although you can [install the database engine and Machine Learning Services concurrently](#install-all), it's a best practice to install and configure the SQL Server database engine first so that you can resolve any issues before adding more components. 
+
+Package location of the R, Python, and Java extensions are in the SQL Server Linux source repositories. If you already configured source repositories for the database engine install, you can run the mssql-mlservices package install commands using the same repo registration.
+
 ## Prerequisites
 
-+ A Linux operating system [supported by SQL Server](sql-server-linux-release-notes.md#supported-platforms), including docker:
++ Linux operating system must be [supported by SQL Server](sql-server-linux-release-notes.md#supported-platforms), running on premises or in a Docker container.
+
++ SQL Server 2019 Database Engine instance: 
 
    + [Install SQL Server on Red Hat Enterprise Linux (RHEL)](quickstart-install-connect-red-hat.md)
    + [Install SQL Server on SUSE Enterprise Linux Server](quickstart-install-connect-suse.md)
    + [Install SQL Server on Ubuntu](quickstart-install-connect-ubuntu.md)
 
-+ SQL Server 2019 Database Engine instance. 
++ For R only, [install Microsoft R Open](#mro) as a prerequisite to the mssql-mlsservices R package providing the combination of R features you require. 
 
-   Machine learning and programming extensions are an add-on to the database engine. Although you can [install the database engine and Machine Learning Services concurrently](#install-all), it's a best practice to install and configure the SQL Server database engine first so that you can resolve any issues before adding more components. 
-
-
-+ For R only, install Microsoft R Open as a prerequisite to the mlsservices R package that provides the combination of R features you required. Instructions are provided next.
-
-Package locations are in the SQL Server Linux source repositories. If you already configured source repositories for the database engine install, you can run the mssql-mlservices package install commands using the same repo registration.
+<a name="mro"></a>
 
 ### Microsoft R Open (MRO)
 

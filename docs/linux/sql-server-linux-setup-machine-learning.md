@@ -272,7 +272,10 @@ All possible permutations of EULA acceptance are documented in [Configure SQL Se
 
 ## Offline installation
 
-Locate the repository for package downloads in the [Release notes](sql-server-linux-release-notes-2019.md). Follow the [Offline installation](sql-server-linux-setup.md#offline) instructions for installing the packages.
+> [!NOTE]
+> Download links for package file names are not available at this time. Check back in a few days for links.  
+
+Follow the [Offline installation](sql-server-linux-setup.md#offline) instructions for installing the packages.
 
 R, Python, and Java package file names for a full install on RHEL or SUSE:
 

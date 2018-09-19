@@ -12,7 +12,7 @@ manager: cgronlun
 monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
 
-# SQL Server Java sample
+# SQL Server Java sample walkthrough
 
 This example demonstrates a Java class that receives two columns (ID and text) from SQL Server and returns two columns back to SQL Server (ID and ngram). For a given ID and string combination, the code generates permutations of ngrams (substrings), returning those permutations along with the original ID. The length of the ngram is defined by a parameter sent to the Java class.
 
@@ -165,7 +165,7 @@ public class InputRow {
 
 ## 4 - Class OutputRow.java
 
-The third and final class is called **OutputRow.java**. Copy the code into the class and save it in the same location as the others.
+The third and final class is called **OutputRow.java**. Copy the code and save as OutputRow.java in the same location as the others.
 
 ```java
 package pkg;
@@ -187,13 +187,15 @@ public class OutputRow {
 
 ## 5 - Compile
 
-Once you have your classes ready, run javac to compile them into ".class" files (`javac Ngram.java InputRow.java OutputRow.java). You should get three .class files for this sample (Ngram.class, InputRow.class, and OutputRow.class).
+Once you have your classes ready, run javac to compile them into ".class" files (`javac Ngram.java InputRow.java OutputRow.java`). You should get three .class files for this sample (Ngram.class, InputRow.class, and OutputRow.class).
 
-On the SQL Server computer, place these files in a subfolder called "pkg" in your classpath location. For example, on Linux, if the classpath location is called '/home/myclasspath/', then the .class files should be in '/home/myclasspath/pkg'. In this sample, the CLASSPATH provided in the sp_execute_external_script is '/home/myclasspath/' assuming Linux. 
+Place the compiled code into a subfolder called "pkg" in the classpath location. If you are working on a development workstation, this step is where you copy the files to the SQL Server computer.
 
-On Windows, set the value to a Windows folder path 'C:\myJavaCode' and then create a subfolder called "pkg" to contain the compiled classes. In this CTP, use a relatively shallow folder structure to simplify permissions.
+The classpath is the location of compiled code. For example, on Linux, if the classpath is'/home/myclasspath/', then the .class files should be in '/home/myclasspath/pkg'. In the example script in step 7, the CLASSPATH provided in the sp_execute_external_script is '/home/myclasspath/' (assuming Linux). 
 
-For instructions on how to set the classpath, see [Set CLASSPATH](howto-call-java-from-sql.md#set-classpath). 
+On Windows, we recommend using a relatively shallow folder structure, one or two levels deep, to simplify permissions. For example, your classpath might look like 'C:\myJavaCode' with a subfolder called '\pkg' containing the compiled classes. 
+
+For more information about classpath, see [Set CLASSPATH](howto-call-java-from-sql.md#set-classpath). 
 
 ### Using .jar files
 
@@ -201,7 +203,7 @@ If you plan to package your classes and dependencies into .jar files, provide th
 
 ## 6 - Permissions
 
-Grant permissions on the compiled code so that SQL Server Launchpad service and AppContainers can execute it.
+Script execution only succeeds if you grant permissions allowing the user identities access to your code. 
 
 ### On Linux
 
@@ -220,7 +222,7 @@ Grant 'Read and Execute' permissions to **SQLRUserGroup** and the **All applicat
 5. Enter **SQLRUserGroup**, check the name, and then click OK to add the group.
 6. Enter **all application packages**, check the name, and then click OK to add. If the name doesn't resolve, revisit the Locations step. The SID is local to your machine.
 
-Make sure both security identities have 'Read and Execute' permissions on the folder and on the "pkg" subfolder.
+Make sure both security identities have 'Read and Execute' permissions on the folder and "pkg" subfolder.
 
 <a name="call-method"></a>
 

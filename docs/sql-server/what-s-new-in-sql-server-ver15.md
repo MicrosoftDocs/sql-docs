@@ -324,7 +324,7 @@ FROM sys.dm_exec_requests AS d
 
 ## <a id="tools"></a>Tools
 
-- [**Azure Data Studio**](../sql-operations-studio/what-is.md): Azure Data Studio is a lightweight, modern, open source, cross-platform desktop tool for the most common tasks in data development and administration. With Azure Data Studio you can connect to SQL Server on premises and in the cloud on Windows, macOS, and Linux. Azure Data Studio allows you to:
+- [**Azure Data Studio**](../azure-data-studio/what-is.md): Previously released under the preview name SQL Operations Studio, Azure Data Studio is a lightweight, modern, open source, cross-platform desktop tool for the most common tasks in data development and administration. With Azure Data Studio you can connect to SQL Server on premises and in the cloud on Windows, macOS, and Linux. Azure Data Studio allows you to:
 
   - Edit and run queries in a modern development environment with lightning fast Intellisense, code snippets, and source control integration.  
   - Quickly visualize data with built-in charting of your result sets.  

@@ -41,7 +41,7 @@ The article explains how to use PolyBase on a SQL Server instance to query exter
   > Hadoop follows the "Major.Minor.Version" pattern for its new releases. All versions within a supported Major and Minor release are supported.
 
 > [!NOTE]
-> PolyBase supports Hadoop encryption zones starting with SQL Server 2016 SP1 CU7 and SQL Server 2017.
+> PolyBase supports Hadoop encryption zones starting with SQL Server 2016 SP1 CU7 and SQL Server 2017 CU3.
 
 ### Configure Hadoop connectivity
 

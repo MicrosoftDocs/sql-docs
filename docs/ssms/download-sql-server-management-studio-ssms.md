@@ -1,7 +1,7 @@
 ---
 title: "Download SQL Server Management Studio (SSMS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/04/2018"
+ms.date: "09/24/2018"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.component: "ssms"
@@ -76,96 +76,9 @@ No upgrade option is available at this time.
 
 ## New in this Release
 
-SSMS 18.0 is the latest version of SQL Server Management Studio. The 18.x generation of SSMS provides support for almost all feature areas on SQL Server 2008 through SQL Server 2019. 
+SSMS 18.0 is the latest version of SQL Server Management Studio. The 18.x generation of SSMS provides support for almost all feature areas on SQL Server 2008 through SQL Server 2019 preview.
 
-Version 18.0 includes:
-
-**General SSMS**
-
-Smaller Download Size:
-
-- The current size of the bundle is less than half of what SSMS 17.x is (~400MB). The size will eventually grow a little when the IS components are added back to SSMS, but it should not be as big asit used to be.
-
-SSMS is based on the new VS 2017 Isolated Shell:
-
-- This means a modern shell (we picked up VS 2107 15.6.4). The new shell unlocks all the accessibility fixes that went in  in both SSMS and Visual Studio.
-
-SSMS accessibility improvements:
-
-- A lot of work went in to address Accessibility issues in all the tools (SSMS, DTA, and Profiler)
-
-SSMS can be installed in custom folder:
-
-- Currently, this is only available on the command line setup. Pass this extra argument to the SSMS-Setup-ENU.exe:
-    SSMSInstallRoot=C:\MySSMS18
-    By default, the new install location for SSMS is:
-    %ProgramFiles(x86)%\Microsoft SQL Server Management Studio 18\Common7\IDE\ssms.exe
-    Note: This does not mean that SSMS is multi-instance.
-
-SSMS does not share components with SQL Engine anymore:
-
-- A lot of effort went in to avoid sharing components with SQL Engine, which often resulted in serviceability issues (one clobbering the files installed by the other.
-
-SSMS now requires NetFx 4.7.2 or greater:
-
-- We upgraded our minimum requirement from NetFx4.6.1 to NetFx4.7.2: this will allow us to take advantage of the new functionality exposed by the new framework.
-
-SSMS is not supported on Windows 8 and Windows Server 2012; Windows 10 / Windows Server 2016 will require at least version 1607 (10.0.14393):
-  
-- Due to the new dependency on NetFx 4.7.2, SSMS 18.0 does not install on Windows 8 and Windows Server 2012 and older versions of Windows 10 and Windows Server 2016. SSMS setup will block on those operating systemss. Note: Windows 8.1 is still supported.
-
-SSMS is not added to the PATH environment variable:
-
-- Path to SSMS.EXE (and Tools in general) is not added to the path anymore. The users can either add it themselves or, if on a modern Windows, rely on the Start menu.
-
-Support for [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]
-
-- This is the first release of SSMS that is be fully *aware* of [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] (compatLevel 150, etc…)
-- Support "BATCH_STARTED_GROUP" and "BATCH_COMPLETED_GROUP" in SQLSERVER2018 and managed instance in SSMS
-- SMO support for UDF Inlining
-- GraphDB: Add flag in showplan for Graph TC Sequence
-- Always Encrypted: added support for Always Encrypted with secure enclaves
-
-Package IDs no longer needed to develop SSMS Extensions:
-
-- In the past, SSMS was selectively loading only well-known packages, requiring developers to register their own package. This is no longer the case.
-
-Better Azure SQL support:
-
-- SLO/Edition/MaxSize database properties now accept custom names, making it easier to support future editions of Azure SQL databases.
-
-SMO:
-
-- Extend SMO Support for Resumable Index Creation
-- Added new event on SMO objects ("PropertyMissing") to help application authors to detect SMO performance issues sooner. 
-
-SSMS:
-
-- Exposing AUTOGROW_ALL_FILES config option  for Filegroups in SSMS
-- Removed risky 'lightweight pooling' and 'priority boost' options from SSMS GUI (see https://blogs.msdn.microsoft.com/arvindsh/2010/01/26/priority-boost-details-and-why-its-not-recommended/)
-- SQL Editor honors the CTRL+D shortcut to duplicate lines (see https://feedback.azure.com/forums/908035-sql-server/suggestions/32896594)
-- New menu and key bindings to creates files: CTRL+ALT+N. CTRL+N will continue to create a new query. 
-- **New Firewall Rule** dialog now allow the user to specify a rule name, instead of automatically generating one on behalf of the user (see https://feedback.azure.com/forums/908035-sql-server/suggestions/32902039)
-- Data Classification: updated the recommendations
-- Improved intellisense in Editor especially for v140 T-SQL
-- Support for all Tier-1 language
-- Added support in SSMS UI for UTF-8 on collation dialog.
-- Switched to "Windows Credential Manager" for connection dialog MRU passwords. This will address a long outstanding issue where persistence of passwords was not always reliable. See https://feedback.azure.com/forums/908035-sql-server/suggestions/32896486.
-- Support for High DPI is enabled by default.
-
-
-SSMS / ShowPlan:
-
-- Added actual time elapsed, actual vs estimated rows under ShowPlan operator node if they are available. This will make actual plan look consistent with Live Query Stats plan.
-- Modified tooltip and added comment when clicking on Edit Query Button for a ShowPlan, to indicate to user that the ShowPlan might be truncated by the SQL engine if the query is over 4000 characters.
-
-Always On:
-
-- Rehash RTO (estimated recovery time) and RPO (estimated data loss) in SSMS Always on Dashboard. For details, see [Monitor performance for Always On Availability Groups](../database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups.md).
-
-Audit Files:
-
-- Changed authentication method from Storage Account Key based to Azure AD based authentication.
+For details about what's new in this release, see [the SSMS changelog](sql-server-management-studio-changelog-ssms.md).
 
 
 ## Supported SQL offerings
@@ -176,8 +89,9 @@ Audit Files:
 * SQL Server Integration Services (SSIS) - SSMS version 17.x does not support connecting to the legacy SQL Server Integration Services service. To connect to an earlier version of the legacy Integration Services, use the version of SSMS aligned with the version of SQL Server. For example, use SSMS 16.x to connect to the legacy SQL Server 2016 Integration Services service. SSMS 17.x and SSMS 16.x can be installed side-by-side on the same computer. Since the release of SQL Server 2012, the SSIS Catalog database, SSISDB, is the recommended way to store, manage, run, and monitor Integration Services packages. For details, see [SSIS Catalog](../integration-services/catalog/ssis-catalog.md).
 
 ## Supported Operating systems
-  
+
 This release of SSMS supports the following 64-bit platforms when used with the latest available service pack:
+
 - Windows 10 (64-bit)
 - Windows 8.1 (64-bit)
 - Windows 8 (64-bit)
@@ -186,6 +100,11 @@ This release of SSMS supports the following 64-bit platforms when used with the 
 - Windows Server 2012 R2 (64-bit)
 - Windows Server 2012 (64-bit)
 - Windows Server 2008 R2 (64-bit)
+
+
+> [!NOTE]
+> SSMS runs on Windows only. If you need a tool that runs on platforms other than Windows, take a look at Azure Data Studio. Azure Data Studio is a new cross-platform tool that runs on macOS, Linux, as well as Windows. For details, see [Azure Data Studio](../azure-data-studio/what-is.md).
+  
 
 \* SSMS 17.X is based on the Visual Studio 2015 Isolated shell, which was released before Windows Server 2016. Microsoft takes app compatibility seriously and ensures that already-shipped applications continue to run on the latest Windows releases. To minimize issues running SSMS on Windows Server 2016, ensure SSMS has all of the latest updates applied. If you experience any issues with SSMS on Windows Server 2016, contact support. The support team determines if the issue is with SSMS, Visual Studio, or with Windows compatibility. The support team then routes the issue to the appropriate team for further investigation.
 

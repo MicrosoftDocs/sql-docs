@@ -44,7 +44,7 @@ Accessibility improvements:
 
 SSMS can be installed in a custom folder:
 
-- Currently, this is only available on the command line setup. Pass this extra argument to SSMS-Setup-ENU.exe:
+- Currently, this is only available on the command-line setup. Pass this extra argument to SSMS-Setup-ENU.exe:
 
   `SSMSInstallRoot=C:\MySSMS18`
 
@@ -96,18 +96,18 @@ SMO:
 SSMS:
 
 - Exposing AUTOGROW_ALL_FILES config option  for Filegroups in SSMS
-- Removed risky 'lightweight pooling' and 'priority boost' options from SSMS GUI (see https://blogs.msdn.microsoft.com/arvindsh/2010/01/26/priority-boost-details-and-why-its-not-recommended/)
-- SQL Editor honors the **CTRL+D** shortcut to duplicate lines (see https://feedback.azure.com/forums/908035-sql-server/suggestions/32896594)
+- Removed risky 'lightweight pooling' and 'priority boost' options from SSMS GUI (https://blogs.msdn.microsoft.com/arvindsh/2010/01/26/priority-boost-details-and-why-its-not-recommended).
+- SQL Editor honors the **CTRL+D** shortcut to duplicate lines (https://feedback.azure.com/forums/908035-sql-server/suggestions/32896594).
 - New menu and key bindings to creates files: **CTRL+ALT+N**. **CTRL+N** will continue to create a new query.
-- **New Firewall Rule** dialog now allow the user to specify a rule name, instead of automatically generating one. See https://feedback.azure.com/forums/908035-sql-server/suggestions/32902039.
+- **New Firewall Rule** dialog now allows the user to specify a rule name, instead of automatically generating one (https://feedback.azure.com/forums/908035-sql-server/suggestions/32902039).
 - Data Classification: updated the recommendations.
 - Improved intellisense in Editor especially for v140 T-SQL.
 - Support for all Tier-1 languages.
 - Added support in SSMS UI for UTF-8 on collation dialog.
-- Switched to "Windows Credential Manager" for connection dialog MRU passwords. This will address a long outstanding issue where persistence of passwords was not always reliable. See https://feedback.azure.com/forums/908035-sql-server/suggestions/32896486.
+- Switched to "Windows Credential Manager" for connection dialog MRU passwords. This will address a long outstanding issue where persistence of passwords was not always reliable (https://feedback.azure.com/forums/908035-sql-server/suggestions/32896486).
 - Support for High DPI is enabled by default.
 - Improved support for multi-monitor systems by making sure that more and more dialogs and windows pop up on the expected monitor.
-- Exposed the 'backup checksum default' server configuration in the new Database Settings page of the Server Properties Dialog. See https://feedback.azure.com/forums/908035-sql-server/suggestions/34634974.
+- Exposed the 'backup checksum default' server configuration in the new Database Settings page of the Server Properties Dialog. (https://feedback.azure.com/forums/908035-sql-server/suggestions/34634974).
 
 
 SSMS / ShowPlan:
@@ -123,8 +123,8 @@ Always On:
 
 Audit Files:
 
-- Changed authentication method from Storage Account Key based to Azure AD based authentication.
-
+- Changed authentication method from Storage Account Key based to Azure AD-based authentication.
+AD base
 Always Encrypted:
 
 - Added an Always Encrypted tab with an *Enable Always Encrypted* checkbox (in the *Connect to Server* dialog) that now provides an easy way to enable/disable Always Encrypted for a database connection.
@@ -147,7 +147,7 @@ Crashes / Hangs:
 
 Connection dialog:
 
-- Enabled the removal of usernames from previous username list by pressing the DEL key. See https://feedback.azure.com/forums/908035/suggestions/32897632.
+- Enabled the removal of usernames from previous username list by pressing the DEL key (https://feedback.azure.com/forums/908035/suggestions/32897632).
 
 XEvent:
 
@@ -165,46 +165,46 @@ SSMS Options:
 
 SSMS Editor:
 
-- Fixed an issue where "SQL System Table" where restoring the default colors was chancing the color to lime green, rather than the default green, making it very hard to read on a white background (see https://feedback.azure.com/forums/908035-sql-server/suggestions/32896906)
-- Fixed issue where intellisense was not working when connected to Azure SQLDW using AAD authentication.
+- Fixed an issue where "SQL System Table" where restoring the default colors was chancing the color to lime green, rather than the default green, making it very hard to read on a white background (https://feedback.azure.com/forums/908035-sql-server/suggestions/32896906).
+- Fixed issue where intellisense was not working when connected to Azure SQL DW using AAD authentication.
 - Fixed intellisense in Azure when user lacks master access.
 - Fixed code snippets to create "temporal tables" which were broken when the collation of the target database was case sensitive.
 
 Object Explorer:
 
 - Fixed an issue where SSMS was throwing an "Object cannot be cast from DBNull to other types" exception when trying to expand "Management" node in OE (misconfigured DataCollector)
-- Fixed an issue where the DEL key was not working while renaming a node (see https://feedback.azure.com/forums/908035/suggestions/32910247 and other duplicates)
+- Fixed an issue where the DEL key was not working while renaming a node (https://feedback.azure.com/forums/908035/suggestions/32910247 and other duplicates).
 - Fixed an issue where OE wasn't escaping quotes before invoking the "Edit Top N…" causing the designed to get confused
 - Fixed an issue where the "Import Data-Tier application" wizard was failing to launch from the Azure Storage tree.
-- Fixed an issue in "Database Mail Configuration" where the status of the SSL checkbox was not persisted (see https://feedback.azure.com/forums/908035-sql-server/suggestions/32895541)
+- Fixed an issue in "Database Mail Configuration" where the status of the SSL checkbox was not persisted (https://feedback.azure.com/forums/908035-sql-server/suggestions/32895541).
 - Fixed an issue where SSMS greyed out option to close existing connections when trying to restore database with is_auto_update_stats_async_on
-- Fixed an issue where right clicking on nodes in OE the (e.g. "Tables" and wanting to perform an action such as filtering tables by going to **Filter > Filter Settings**, the filter settings form can appear on the other screen than where SSMS is currently active). See https://feedback.azure.com/forums/908035-sql-server/suggestions/34284106.
-- Fixed a long outstanding issue where the DELETE key was not working in Object Explorer while trying to rename an object. See https://feedback.azure.com/forums/908035-sql-server/suggestions/33073510.
-- When displaying the properties of existing database files, the size appears under a column "Size (MB)" instead of "Initial Size (MB)" which is what is displayed when creating a new database. See https://feedback.azure.com/forums/908035-sql-server/suggestions/32629024.
-- Disabled the "Design" context-menu item on "Graph Tables" since there is no support for those kind of tables in the current version of SSMS.
+- Fixed an issue where right clicking on nodes in OE the (e.g. "Tables" and wanting to perform an action such as filtering tables by going to **Filter > Filter Settings**, the filter settings form can appear on the other screen than where SSMS is currently active) (https://feedback.azure.com/forums/908035-sql-server/suggestions/34284106).
+- Fixed a long outstanding issue where the DELETE key was not working in Object Explorer while trying to rename an object (https://feedback.azure.com/forums/908035-sql-server/suggestions/33073510).
+- When displaying the properties of existing database files, the size appears under a column "Size (MB)" instead of "Initial Size (MB)" which is what is displayed when creating a new database (https://feedback.azure.com/forums/908035-sql-server/suggestions/32629024).
+- Disabled the "Design" context-menu item on "Graph Tables" since there is no support for this kind of table in the current version of SSMS.
 
 		
 Help Viewer:
 
 - Improved logic around honoring the online/offline modes.
-- Fixed the "View Help" to honor the online/offline settings. See https://feedback.azure.com/forums/908035-sql-server/suggestions/32897791.
+- Fixed the "View Help" to honor the online/offline settings (https://feedback.azure.com/forums/908035-sql-server/suggestions/32897791).
 	
 Object Scripting:
 
-- Overall perf improvements - Generate Scripts of WideWorldImporters takes half the time compared to SSMS 17.7
-- When scripting objects, DB Scoped configuration which have default values are omitted 
-- Don't generate dynamic T-SQL when scripting(see https://feedback.azure.com/forums/908035-sql-server/suggestions/32898391)
+- Overall perf improvements - Generate Scripts of WideWorldImporters takes half the time compared to SSMS 17.7.
+- When scripting objects, DB Scoped configuration which have default values are omitted.
+- Don't generate dynamic T-SQL when scripting (https://feedback.azure.com/forums/908035-sql-server/suggestions/32898391).
 - Omit the graph syntax "as edge" and "as node" when scripting a table on SQL Server 2016 and earlier.
 
 
 Table Designer:
 
 - Fixed a crash in "Edit 200 rows".
-- Fixed an issue where the designer was allowing to add a table when connected to a Azure SQL.
+- Fixed an issue where the designer was allowing to add a table when connected to an Azure SQL database.
 
 SMO:
 
-- Fixed an issue where SMO/ServerConnection did not handle SqlCredential-based connections correctly (see https://feedback.azure.com/forums/908035-sql-server/suggestions/33698941)
+- Fixed an issue where SMO/ServerConnection did not handle SqlCredential-based connections correctly (https://feedback.azure.com/forums/908035-sql-server/suggestions/33698941).
 
 AS:
 
@@ -214,7 +214,7 @@ Flat File Import Wizard:
 
 - Fixed an issue where the "Import Flat File Wizard" was not handling double quotes correctly (escaping).
 - Fixed an issue where related to incorrect handling of floating-point types (on locales that use a different delimiter for floating points)
-- Fixed an issue related to importing of bits when values are 0 or 1. See https://feedback.azure.com/forums/908035-sql-server/suggestions/32898535.
+- Fixed an issue related to importing of bits when values are 0 or 1 (https://feedback.azure.com/forums/908035-sql-server/suggestions/32898535).
 - Fixed an issue where floats were entered as nulls.
 		
 Data Classification:
@@ -224,7 +224,7 @@ Data Classification:
 Backup/Restore/Attach/Detach DB:
 
 - Fixed an issue where the user was unable to attach a database when physical filename of .mdf file does not match the original filename.
-- Fixed an issue where SSMS might not find a valid restore plan or might find one which is sub-optimal. See https://feedback.azure.com/forums/908035-sql-server/suggestions/32897752.
+- Fixed an issue where SSMS might not find a valid restore plan or might find one which is sub-optimal  (https://feedback.azure.com/forums/908035-sql-server/suggestions/32897752).
 - Fixed a crash in SSMS when trying to restore a URL backup.
 
 Job Activity Monitor:
@@ -343,7 +343,7 @@ Import Flat File Wizard:
 
 Import/Export Data-Tier Application:
 
-- Fixed an issue (in DacFx) which was causing the import of a .bacpac could fail with a message like "Error SQL72014: .Net SqlClient Data Provider: Msg 9108, Level 16, State 10, Line 1 This type of statistics is not supported to be incremental. " when dealing with tables with partitions defined and no indexes on the table. 
+- Fixed an issue (in DacFx) which was causing the import of a .bacpac could fail with a message like "Error SQL72014: .Net SqlClient Data Provider: Msg 9108, Level 16, State 10, Line 1 This type of statistics is not supported to be incremental. " when dealing with tables with partitions defined and no indexes on the table.
 
 Intellisense:
 
@@ -368,7 +368,7 @@ Activity Monitor:
 Microsoft Azure integration: 
 
 - Fixed an issue where SSMS only shows the first 50 subscriptions (Always Encrypted dialogs, Backup/Restore from URL dialogs, etc…). 
-- Fixed an issue where SSMS was throwing an exception ("Index out of range") while trying to log on to an Microsoft Azure account which did not have any storage account (in Restore Backup from URL dialog). 
+- Fixed an issue where SSMS was throwing an exception ("Index out of range") while trying to sign in to an Microsoft Azure account which did not have any storage account (in Restore Backup from URL dialog). 
 
 Object Scripting: 
 
@@ -411,7 +411,7 @@ Scripting:
 
 - General performance improvements, especially over high-latency connections.
 	
-**Analysis Servics (AS)**
+**Analysis Services (AS)**
 
 - Analysis Services client libraries and data providers updated to the latest version, which added support for the new Azure Government AAD authority (login.microsoftonline.us).
 
@@ -708,7 +708,7 @@ XE Profiler:
 - Added database\_name and client\_hostname actions to appropriate events in XEvent Profiler sessions. For the change to take effect, you may need to delete existing QuickSessionStandard or QuickSessionTSQL session instances on the servers - [Connect 3142981](https://connect.microsoft.com/SQLServer/feedback/details/3142981)
 
 Command line:
-- Added a new command line option ("-G") that can be used to automatically have SSMS connect to a server/database using Active Directory Authentication (either 'Integrated' or 'Password'). For details, see [Ssms utility](ssms-utility.md).
+- Added a new command-line option ("-G") that can be used to automatically have SSMS connect to a server/database using Active Directory Authentication (either 'Integrated' or 'Password'). For details, see [Ssms utility](ssms-utility.md).
 
 Import Flat File Wizard:
 - Added a way to pick a schema name other than the default ("dbo") when creating the table.
@@ -752,7 +752,7 @@ Fixed an issue where an error similar to "Cannot apply value 'null' to property 
 - SSMS Setup:
 Fixed an issue where SSMS setup was incorrectly causing all the installed products on the machine to be reconfigured.
 - User Settings:
-   - With this fix, US Government sovereign cloud users will have uninterrupted access to their Azure SQL Database and ARM resources with SSMS via Universal authentication and Azure Active Directory login.  Users of prior versions of SSMS would need to open Tools|Options|Azure Services and under Resource Management change the configuration of the "Active Directory Authority" property to https://login.microsoftonline.us.
+   - With this fix, US Government sovereign cloud users will have uninterrupted access to their Azure SQL Database and Azure Resource Manager resources with SSMS via Universal authentication and Azure Active Directory login.  Users of prior versions of SSMS would need to open Tools|Options|Azure Services and under Resource Management change the configuration of the "Active Directory Authority" property to https://login.microsoftonline.us.
 
 **Analysis Services (AS)**
 
@@ -848,7 +848,7 @@ Fixed issue where SSMS was not allowing scripting for "Alter" or "Execute" on so
 **Analysis Services (AS)**
 
 - Fixed a number of issues with Deployment Wizard to support tabular 1400 compat-level models and Power Query data sources.
-- Deployment Wizard can now deploy to AS Azure when running from Command line.
+- Deployment Wizard can now deploy to AS Azure when running from command line.
 - When using Windows Auth in AS Azure the user will now see the name of the user account in Object Explorer correctly.
 
 
@@ -1102,7 +1102,7 @@ RestoreDefaultFonts - Revert back to default settings.
 
 ### Bug fixes
 
-- Fixed an issue where SSMS crashed when showplan scrolled via surfacebook touchpad
+- Fixed an issue where SSMS crashed when showplan scrolled via surface book touchpad
 - Fixed an issue where SSMS hangs for a long times while getting the properties of a databases which is being restored or offline 
 - Fixed an issue where "Help viewer" could not be opened in RC builds
 - Fixed an issue where "Maintenance Plans Tasks Toolbox" items may be missing in SSMS.
@@ -1348,7 +1348,7 @@ Generally available | Version number: 13.0.15700.28
 
 * Support for filtering in the 'Databases' node of SSMS Object Explorer. Navigate to the 'Databases' node in Object explorer and click the filter icon in the Object explorer toolbar to filter the list of databases.
 
-* Support for Azure-Resource Manager (ARM) type storage accounts in the Backup and Restore wizards.
+* Support for Azure-Resource Manager type storage accounts in the Backup and Restore wizards.
 
 * [Intial beta support for high-resolution displays](https://blogs.msdn.microsoft.com/sqlreleaseservices/ssms-highdpi-support/).  
 *Linked customer bug requests:*   

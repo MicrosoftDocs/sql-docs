@@ -151,6 +151,6 @@ See one of the following quickstarts to get started:
 - [Connect & Query Azure Data Warehouse](quickstart-sql-dw.md)
 
 Contribute to [!INCLUDE[name-sos](../includes/name-sos-short.md)]:
-- [https://github.com/Microsoft/sqlopsstudio](https://github.com/Microsoft/sqlopsstudio) 
+- [https://github.com/Microsoft/azuredatastudio](https://github.com/Microsoft/azuredatastudio) 
 
 [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=521839) and [usage data collection](usage-data-collection.md).

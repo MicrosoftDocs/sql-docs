@@ -71,10 +71,10 @@
   - name: Transact-SQL Reference
     href: ../t-sql/language-reference.md
   - name: Azure Data Studio GitHub repo
-    href: https://www.github.com/Microsoft/SqlOpsStudio
+    href: https://www.github.com/Microsoft/azuredatastudio
   - name: SQL Server Blog
     href: https://blogs.technet.microsoft.com/dataplatforminsider/
 - name: FAQ
   href: faq.md
 - name: Report issues & make suggestions
-  href: https://github.com/microsoft/sqlopsstudio/issues
+  href: https://github.com/microsoft/azuredatastudio/issues

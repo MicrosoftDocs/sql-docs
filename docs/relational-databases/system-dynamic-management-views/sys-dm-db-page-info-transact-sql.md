@@ -55,9 +55,9 @@ Determines the level of detail in the output of the function. 'LIMITED' will ret
 
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|database_id |int |Database ID |
-|file_id |int |File ID |
-|page_id |int |Page ID |
+|database_id |int |Database id |
+|file_id |int |File id |
+|page_id |int |Page id |
 |page_type |int |Page Type |
 |page_type_desc |nvarchar(64) |Description of the page type |
 |page_flag_bits |nvarchar(64) |Flag bits in page header |

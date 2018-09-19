@@ -73,5 +73,5 @@ The following are the main command-line tools:
 | [Distributed Replay](../tools/distributed-replay/install-distributed-replay-overview.md) | Use the Distributed Replay feature to help you assess the impact of future SQL Server upgrades. Also use Distributed Replay to help assess the impact of hardware and operating system upgrades, and SQL Server tuning. |
 | [ssbdiagnose](../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md) | The ssbdiagnose utility reports issues in Service Broker conversations or the configuration of Service Broker services. |
 
-For information and additional tools, see [SQL Command Prompt Utilities](command-prompt-utility-reference-database-engine.md).
+If you're looking for additional tools that are not mentioned on this page, see [SQL Command Prompt Utilities](command-prompt-utility-reference-database-engine.md).
 

@@ -23,7 +23,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 To manage (query, monitor, etc.) your database you need a tool. While your databases can be running in the cloud, on Windows, or on [Linux](../linux/sql-server-linux-overview.md), your tool doesn't need to run on the same platform as the database. 
 
-There are many database tools available, so this article provides descriptions and pointers to some of the available tools for working with your SQL databases. If you know what tool you want and are simply trying to find it, see the [SQL Tools List](sql-tools-list.md). If you need help deciding which tool you need, see [Which tool should I use?](#which-tool-should-i-choose). 
+There are many database tools available, so this article provides descriptions and pointers to some of the available tools for working with your SQL databases. If you need help deciding which tool you need, see [Which tool should I use?](#which-tool-should-i-choose).
 
 
 ## GUI tools to manage databases  

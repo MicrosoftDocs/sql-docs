@@ -11,17 +11,14 @@ ms.date: 22/07/2018
 
 <a name="introduzione"></a>Introduction
 ============
+This article covers methodology and scripts used to get information about the **performance of queries that use views** in a database object. The intention of these scripts is to provide indicators of use and performance of various views found within a database. 
 
-The performance of a database solution is often the subject of dispute between those who provide the solution and those who personalize. Write T-SQL code optimized, can scale to more data and users, isn't easy and when the complexity increases, code maintenance tasks become difficult to implement by the author.
-
-In this article, I share the methodology of tuning and some scripts that I use to get information about the **performance of queries that use the views** in the database object of the analysis. The presence of nested views that contains non-optimized queries can become the subject of specific analysis. Scripts in this article intent to provide some indicators on the use and performance of the views of a DB.
-
-<a name="alcuni-indicatori-sulle-performance-delle-viste-in-sql-server"></a>Some indicators on the performance of views in SQL Server
+<a name="alcuni-indicatori-sulle-performance-delle-viste-in-sql-server"></a>View performance indicators 
 =============================================================
+The DMV [sys.dm_exec_query_optimizer_info](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-optimizer-info-transact-sql) exposes statistics about the optimizations performed by the SQL Server query optimizer. These values are cumulative and begin recording when SQL Server starts.  
 
-The first interesting fact was obtained by querying the sys.dm [_ _exec_query_optimizer_info DMV](https://docs.microsoft.com/it-it/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-optimizer-info-transact-sql) that exposes statistics about optimizations performed by the Query Optimizer SQL Server instance was started; the values are then cumulative.
+The below common_table_expression (CTE) uses this  DMV to provide information about the workload, such as the percentage of queries that reference a view. The results returned by this query do not indicate a performance problem by themselves, but can expose underlying issues when combined with users' complaints of slow-performing queries. 
 
-The CTE that follows, based on the DMV [sys.dm _ _exec_query_optimizer_info](https://docs.microsoft.com/it-it/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-optimizer-info-transact-sql), provides information about the workload. The interesting fact that you get is the number (percentage) of queries that reference a view. I had the opportunity to examine cases where about 85% of the queries executed referenziava a view. Pure data, by itself, does not necessarily indicate a performance problem, but when combined with users ' complaints about the slowness of the system, suggests at least a feature article.
 
 ```SQL
 WITH CTE_QO AS
@@ -100,10 +97,13 @@ PIVOT (MAX([%]) FOR [counter]
       ,[fast forward cursor request])) AS p;
 GO
 ```
+Combine the results of this query with the results of the system view [sys.views](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-views-transact-sql) to identify query statistics, query text, and the cached execution plan. 
 
-The study can be performed by connecting the system view [sys. views](https://docs.microsoft.com/it-it/sql/relational-databases/system-catalog-views/sys-views-transact-sql) with the DMV that expose the query statistics, query text, and its execution plan in cache.
+The below CTE provides information about the number of executions, total run time, and pages read from memory. The results can be used to identify queries that may be candidates for optimization. 
+  
+  >[NOTE]
+  > The results of this query can vary depending on SQL Server vesrion. 
 
-The following CTE provides detailed statistical information about queries in the cache using the views in the current database. The values for number of executions, total running time, memory pages read and other information dependent on the version of SQL Server. Provide a clear indication about queries to check or optimize; analysis supported by display of the execution plan in cache.
 
 ```SQL
 WITH CTE_VW_STATS AS
@@ -158,6 +158,8 @@ CROSS APPLY
   ) AS t;
 GO
 ```
+
+The below query provides information about unused views by using the DMV [sys.dmv_exec_cached_plans](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql). 
 
 The last query provides information about unused views, pay close attention to data mining, is based on the DMV [sys.dm _ _exec_cached_plans](https://docs.microsoft.com/it-it/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql) that is prone to fluctuate within the plan cache execution plans. If a view isn't in cache when executed the query, it's said that that view is to delete. If you're concerned that your cache is fairly representative of your workload, keep simply account. In the next controls, the view will always be present, you can evaluate to other investigations.
 

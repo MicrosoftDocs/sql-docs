@@ -76,7 +76,7 @@ sp_execute_external_script
   
  For R scripts that do not use RevoScaleR functions, using the  `@parallel` parameter can be beneficial for processing large datasets, assuming the script can be trivially parallelized. For example, when using the R `predict` function with a model to generate new predictions, set `@parallel = 1` as a hint to the query engine. If the query can be parallelized, rows are distributed according to the **MAXDOP** setting.  
   
- If `@parallel = 1` and the output is being streamed directly to the client machine, then the `WITH RESULTS SETS` clause is required and an output schema must be specified.  
+ If `@parallel = 1` and the output is being streamed directly to the client machine, then the `WITH RESULT SETS` clause is required and an output schema must be specified.  
   
  For R scripts that use RevoScaleR functions, parallel processing is handled automatically and you should not specify `@parallel = 1` to the **sp_execute_external_script** call.  
   

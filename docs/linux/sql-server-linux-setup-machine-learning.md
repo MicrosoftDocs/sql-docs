@@ -25,11 +25,11 @@ Package location of the R, Python, and Java extensions are in the SQL Server Lin
 
 + Linux operating system must be [supported by SQL Server](sql-server-linux-release-notes.md#supported-platforms), running on premises or in a Docker container.
 
-+ SQL Server 2019 Database Engine instance: 
++ SQL Server 2019 Database Engine instance on: 
 
-   + [Install SQL Server on Red Hat Enterprise Linux (RHEL)](quickstart-install-connect-red-hat.md)
-   + [Install SQL Server on SUSE Enterprise Linux Server](quickstart-install-connect-suse.md)
-   + [Install SQL Server on Ubuntu](quickstart-install-connect-ubuntu.md)
+   + [Red Hat Enterprise Linux (RHEL)](quickstart-install-connect-red-hat.md)
+   + [SUSE Enterprise Linux Server](quickstart-install-connect-suse.md)
+   + [Ubuntu](quickstart-install-connect-ubuntu.md)
 
 + For R only, [install Microsoft R Open](#mro) as a prerequisite to the mssql-mlsservices R package providing the combination of R features you require. 
 
@@ -69,7 +69,7 @@ zypper ar -f https://packages.microsoft.com/sles/12/prod packages-microsoft-com
 
 On an internet-connected device, packages are downloaded and installed independently of the database engine using the package installer for each operating system. The following table describes all available packages, but you only need *one* R or Python package to get a specific combination of features.
 
-Fully-qualified package names include version information that varies by package installer. See the commands in the following sections for package references that work in an install command.
+Package names are "root" names. Fully-qualified package names include version information that varies by package installer. See the commands in the following sections for package references that work in an install command.
 
 | Package name | Applies to | Description |
 |--------------|----------|-------------|

@@ -215,7 +215,7 @@ For more information on index resumable operations see [Resumable Online Index C
 
 For details, see [Secondary to primary replica read/write connection redirection (Always On Availability Groups)](../database-engine/availability-groups/windows/secondary-replica-connection-redirection-always-on-availability-groups.md).
 
-### Data Discovery and Classification
+### Data discovery and classification
 
 Data discovery and classification provides advanced capabilities that are natively built into [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Classifying and labeling your most sensitive data provides the following benefits:
 - Helps meet data privacy standards and regulatory compliance requirements.

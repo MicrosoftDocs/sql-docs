@@ -89,7 +89,7 @@ On an internet-connected device, packages are downloaded and installed independe
 
 ## RHEL/CentOS commands
 
-Install any *one* R package, plus any *one* Python package, and Java if you want that capability. Each R and Python package includes a bundle of features. Choose the package that provides the feature set yo need. Dependent packages are included automatically.
+Install any *one* R package, plus any *one* Python package, and Java if you want that capability. Each R and Python package includes a bundle of features. Choose the package that provides the feature set you need. Dependent packages are included automatically.
 
 > [!Tip]
 > If possible, run `yum clean all` to refresh packages on the system prior to installation.
@@ -163,7 +163,7 @@ sudo apt-get install mssql-mlservices-python_9.4.5.19_amd64.deb
 
 ## SUSE commands
 
-Install any *one* R package, plus any *one* Python package, and Java if you want that capability. Each R and Python package includes a bundle of features. Choose the package that provides the feature set yo need. Dependent packages are included automatically. 
+Install any *one* R package, plus any *one* Python package, and Java if you want that capability. Each R and Python package includes a bundle of features. Choose the package that provides the feature set you need. Dependent packages are included automatically. 
 
 ### Example 1 -  Full installation 
 

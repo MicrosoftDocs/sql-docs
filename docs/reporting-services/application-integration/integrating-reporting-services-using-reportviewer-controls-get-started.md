@@ -15,7 +15,7 @@ ms.author: maghan
 ---
 # Integrating Reporting Services Using the Report Viewer Controls - Get Started
 
-The Report Viewer controls can be used to integrate Reporting Services RDL reports into WebForms and WinForms apps. For detailed information about recent updates see the [changelog](change-log.md).
+The Report Viewer controls can be used to integrate Reporting Services RDL reports into WebForms and WinForms apps. For detailed information about recent updates see the [changelog](changelog.md).
 
 ## Adding the Report Viewer control to a new web project
 

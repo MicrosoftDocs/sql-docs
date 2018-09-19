@@ -262,13 +262,16 @@ After executing the call, you should get a result set showing the two columns:
 
 ![Results from Java sample](../media/java/java-sample-results.png "Sample results")
 
-## If you get an error
+### If you get an error
 
 Rule out any issues related to the classpath. 
 
 + Classpath should consist of the parent folder and any subfolders, but not the "pkg" subfolder. While the pkg subfolder must exist, it's not supposed to be in classpath value specified in the stored procedure.
+
 + The "pkg" subfolder should contain the compiled code for all three classes.
+
 + The length of classpath cannot exceed the declared value (`DECLARE @myClassPath nvarchar(50)`). If it does, the path is truncated to the first 50 characters and your compiled code will not be loaded. You can do a `SELECT @myClassPath` to check the value. Increase the length if 50 characters is insufficient. 
+
 + Finally, check permissions on *each* folder, from root to "pkg" subfolder, to ensure that the security identities running the external process have permission to read and execute your code.
 
 ## See also

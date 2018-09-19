@@ -13,8 +13,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: aee11dde-daad-439b-b594-9f4aeac94335
 caps.latest.revision: 43
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Configure Distributed Replay

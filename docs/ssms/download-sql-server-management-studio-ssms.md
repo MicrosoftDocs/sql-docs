@@ -37,7 +37,7 @@ Use SQL Server Management Studio (SSMS) to query, design, and manage your databa
 
 **SSMS is free!**
 
-SSMS 18.0 is the latest generation of *SQL Server Management Studio* and provides support for [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)].
+SSMS 18.0 (preview) is the latest generation of *SQL Server Management Studio* and provides support for [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)].
 
 **[![download](../ssdt/media/download.png) Download SQL Server Management Studio 18.0](https://go.microsoft.com/fwlink/?linkid=2014306) (no previous version of SSMS 17.x is required on the computer)**
 
@@ -49,10 +49,9 @@ Build number: 18.0<br>
 Release date: September 24, 2018
 
 The SSMS 18.x installation does not upgrade or replace SSMS versions 17.x or earlier. SSMS 18.x installs side by side with previous versions so both versions are available for use.
-If a computer contains side by side installations of SSMS, verify you start the correct version for your specific needs. The latest version is labeled *Microsoft SQL Server Management Studio 18*, and has a new icon: 
- 
-   ![SSMS 18.x](media/download-sql-server-management-studio-ssms/version-icons.png)
 
+If a computer contains side by side installations of SSMS, verify you start the correct version for your specific needs. The latest version is labeled *Microsoft SQL Server Management Studio 18*:
+ 
 
 ## Available Languages
 
@@ -62,7 +61,7 @@ If a computer contains side by side installations of SSMS, verify you start the 
 
 This release of SSMS can be installed in the following languages:
 
-SQL Server Management Studio 18.0:<br>
+SQL Server Management Studio 18.0 (preview):<br>
 [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x40a)
 
 SQL Server Management Studio 18.0 Upgrade Package (upgrades 18.x to 18.0):<br>
@@ -84,9 +83,9 @@ For details about what's new in this release, see [the SSMS changelog](sql-serve
 ## Supported SQL offerings
 
 * This version of SSMS works with all [supported versions of SQL Server 2008 - SQL Server 2017](https://support.microsoft.com/lifecycle?C2=1044) and provides the greatest level of support for working with the latest cloud features in Azure SQL Database and Azure SQL Data Warehouse.
-* Use SSMS 17.x to connect to [SQL Server on Linux](../linux/sql-server-linux-overview.md).
-* Additionally, SSMS 17.x can be installed side by side with SSMS 16.x or SQL Server 2014 SSMS and earlier.
-* SQL Server Integration Services (SSIS) - SSMS version 17.x does not support connecting to the legacy SQL Server Integration Services service. To connect to an earlier version of the legacy Integration Services, use the version of SSMS aligned with the version of SQL Server. For example, use SSMS 16.x to connect to the legacy SQL Server 2016 Integration Services service. SSMS 17.x and SSMS 16.x can be installed side-by-side on the same computer. Since the release of SQL Server 2012, the SSIS Catalog database, SSISDB, is the recommended way to store, manage, run, and monitor Integration Services packages. For details, see [SSIS Catalog](../integration-services/catalog/ssis-catalog.md).
+* Use SSMS 17.x or later to connect to [SQL Server on Linux](../linux/sql-server-linux-overview.md).
+* Additionally, SSMS 18.x and SSMS 17.x can be installed side by side with SSMS 16.x or SQL Server 2014 SSMS and earlier.
+* SQL Server Integration Services (SSIS) - SSMS version 17.x or later does not support connecting to the legacy SQL Server Integration Services service. To connect to an earlier version of the legacy Integration Services, use the version of SSMS aligned with the version of SQL Server. For example, use SSMS 16.x to connect to the legacy SQL Server 2016 Integration Services service. SSMS 17.x and SSMS 16.x can be installed side-by-side on the same computer. Since the release of SQL Server 2012, the SSIS Catalog database, SSISDB, is the recommended way to store, manage, run, and monitor Integration Services packages. For details, see [SSIS Catalog](../integration-services/catalog/ssis-catalog.md).
 
 ## Supported Operating systems
 

@@ -2,33 +2,11 @@
   items:
   - name: What is SQL Server Big Data Cluster?
     href: big-data-cluster-overview.md
-- name: Concepts
-  items:
-  - name: HDFS
-    href: concept-hdfs.md
-  - name: Spark
-    href: concept-spark.md
-  - name: Controller
-    href: concept-controller.md
-  - name: Master instance
-    href: concept-master-instance.md
-  - name: Data pool
-    href: concept-data-pool.md
-  - name: Storage pool
-    href: concept-storage-pool.md
-  - name: Compute pool
-    href: concept-compute-pool.md
 - name: Resources
   items:
-  - name: SQL Server Documentation
-    href: ../sql-server/sql-server-technical-documentation.md
-  - name: DBA Stack Exchange
-    href: https://dba.stackexchange.com/questions/tagged/sql-server
-  - name: Stack Overflow
-    href: http://stackoverflow.com/questions/tagged/sql-server
-  - name: MSDN Forums
-    href: https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver
-  - name: Submit feedback
-    href: https://feedback.azure.com/forums/908035-sql-server
-  - name: Reddit
-    href: https://www.reddit.com/r/SQLServer
+  - name: SQL Server 2019 preview
+    href: ../sql-server/what-s-new-in-sql-server-ver15.md?toc=%2fsql%2fbig-data-cluster%2ftoc.json
+  - name: PolyBase documentation
+    href: ../relational-databases/polybase/polybase-guide.md
+  - name: Request access to Big Data Clusters
+    href: https://aka.ms/eapsignup

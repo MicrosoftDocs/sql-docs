@@ -22,10 +22,10 @@ monikerRange: "= sql-server-ver15 || = sqlallproducts-allversions"
 This article describes limitations and known issues for the [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] Community Technology Preview (CTP) releases. For related information, see:
 - [What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md)
 
->[!NOTE]
->Preview releases of SQL Server are made available for you to experience the features of the upcoming release. They are not supported or licensed for production use. The following scenarios are explicitly unsupported:
+> [!NOTE]
+> Preview releases of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] are made available for you to experience the features of the upcoming release. They are not supported or licensed for production use. The following scenarios are explicitly unsupported:
 >
-> - Side-by-side installation with other versions of SQL Server
+> - Side-by-side installation with other versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 > - Uninstallation
 > - Upgrade from a previous edition of SQL Server
 
@@ -40,9 +40,9 @@ This article describes limitations and known issues for the [!INCLUDE[SQL Server
 
 ### Documentation (CTP 2.0)
 
-- **Issue and customer impact**: Documentation for SQL Server 2019 (15.x) is limited and content is included with the SQL Server 2017 (14.x) documentation set. Content in articles that is specific to SQL Server 2019 (15.x) is noted with **Applies To**.
+- **Issue and customer impact**: Documentation for SQL Server 2019 (15.x) is limited and content is included with the [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] documentation set. Content in articles that is specific to SQL Server 2019 (15.x) is noted with **Applies To**.
 
-- **Issue and customer impact**: SQL Server documentation can be filtered by version. Use the control at the top left of each documentation page to filter for your requirements. 
+- **Issue and customer impact**: [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] documentation can be filtered by version. Use the control at the top left of each documentation page to filter for your requirements. 
 
 - **Issue and customer impact**: No offline content is available for SQL Server 2019 (15.x).
 
@@ -59,15 +59,15 @@ This article describes limitations and known issues for the [!INCLUDE[SQL Server
 
 ### SQL Graph
 
-**Issue and customer impact**: Tools which have dependency on DacFx like import-export will not work for the new graph features - Edge Constraints or Merge DML. Scripting in SSMS may not work.
+**Issue and customer impact**: Tools which have dependency on DacFx like import-export will not work for the new graph features - Edge Constraints or Merge DML. Scripting in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] may not work.
 
-**Workaround**: Writing T-SQL scripts and running them against the server using SSMS or SQLCMD will work. Exporting or Importing database objects that create Edge constraints, have the new merge DML syntax or create derived tables/views on graph objects will not work. Users will have to manually create such objects in their database using t-sql scripts. 
+**Workaround**: Writing [!INCLUDE[tsql](../includes/tsql-md.md)] scripts and running them against the server using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or SQLCMD will work. Exporting or Importing database objects that create Edge constraints, have the new merge DML syntax or create derived tables/views on graph objects will not work. Users will have to manually create such objects in their database using [!INCLUDE[tsql](../includes/tsql-md.md)] scripts. 
 
-**Applies to**:  [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.0.
+**Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.0.
 
 ### UTF-8 collations
 
-**Issue and customer impact**: UTF-8 enabled collations cannot be used with some other SQL Server features. UTF-8 is not supported when the following SQL Server features are in use:
+**Issue and customer impact**: UTF-8 enabled collations cannot be used with some other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features. UTF-8 is not supported when the following [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features are in use:
 
 - SQL Server Replication
 - Linked Server
@@ -76,7 +76,18 @@ This article describes limitations and known issues for the [!INCLUDE[SQL Server
 
   Also note there is currently no UI support to choose UTF-8 enabled collations in Azure Data Studio or SSDT. The latest SSMS version supports choice of UTF-8 enabled collations in the UI.
 
-**Workaround**: No workaround for SQL Server 2019 CTP 2.0.
+**Workaround**: No workaround for [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.0.
+
+**Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.0.
+
+### Lightweight query profiling infrastructure
+
+**Issue and customer impact**: Executing the command `ALTER DATABASE SCOPED CONFIGURATION SET LIGHTWEIGHT_QUERY_PROFILING = ON` returns a syntax error. Any scenarios that depend on executing this command will fail.
+
+> [!NOTE]
+> Currently, the lightweight query profiling infrastructure (LWP) cannot be controlled at the individual database level, and remains enabled for all databases by default. For more information on LWP, refer to [What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md).
+
+**Workaround**: No workaround for [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.0.
 
 **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.0.
 

@@ -67,7 +67,7 @@ This article describes limitations and known issues for the [!INCLUDE[SQL Server
 
 ### UTF-8 collations
 
-**Issue and customer impact**: UTF-8 enabled collations cannot be used with some other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features. UTF-8 is not supported when the following [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features are in use:
+**Issue and customer impact**: UTF-8 enabled collations cannot be used with some other [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] features. UTF-8 is not supported when the following [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] features are in use:
 
 - SQL Server Replication
 - Linked Server
@@ -97,7 +97,7 @@ This article describes limitations and known issues for the [!INCLUDE[SQL Server
 
 **Workaround**: To enable rich computations, run `DBCC traceon(127,-1)`. For details, see  [Enable rich computations](../relational-databases/security/encryption/configure-always-encrypted-enclaves.md#configure-a-secure-enclave).
 
-**Applies to**:  [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.0.
+**Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.0.
 
 ### SQL Server Integration Services (SSIS) Transfer Database Task
 
@@ -111,11 +111,11 @@ This article describes limitations and known issues for the [!INCLUDE[SQL Server
 
 **Issue / customer impact**: After switching SSISDB into single-user mode and switching back to multi-user mode, the following error will be reported when deploying the package.
 
->Cannot continue the execution because the session is in the kill state.
+`Cannot continue the execution because the session is in the kill state.`
 
-**Workaround**: Restart the SQL Server after switch back to multi-user mode.
+**Workaround**: Restart [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] after switch back to multi-user mode.
 
-**Applies to**: SQL Server 2019 CTP 2.0.  
+**Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.0.  
 
 
 [!INCLUDE[get-help-options-msft-only](../includes/paragraph-content/get-help-options.md)]

@@ -123,40 +123,34 @@ sudo yum install mssql-server-extensibility-java
 
 ## Ubuntu commands
 
-Install the extensibility framework, followed by any *one* R package, plus any *one* Python package, and Java if you want that capability. 
+Install any *one* R package, plus any *one* Python package, and Java if you want that capability. Each R and Python package includes a bundle of features. Choose the package that provides the feature set you need. Dependent packages are included automatically.
 
 > [!Tip]
 > If possible, run `apt-get update` to refresh packages on the system prior to installation. Additionally, some docker images of Ubuntu might not have the https apt transport option. To install it, use `apt-get install apt-transport-https`.
 
 ### Example 1 -  Full installation 
 
-Includes the extensibility framework, R, Python, Java, with machine learning libraries and pre-trained models for both R and Python. For R and Python, if you want something in between full and minimum install - such as machine learning libraries but without the pre-trained models - substitute the R or Python package providing the feature combination you want.
+Includes open-source R and Python, extensibility framework, microsoft-openmpi, extensions (R, Python, Java), with machine learning libraries and pre-trained models for R and Python. For R and Python, if you want something in between full and minimum install - such as machine learning libraries but without the pre-trained models - substitute mssql-mlservices-mml-r and mssql-mlservices-mml-py instead.
 
 ```bash
 # Install as root or sudo
-# Add everything
-sudo apt-get install microsoft-openmpi_3.0.0-1_amd64.deb
-sudo apt-get install mssql-server-extensibility-15.0.1000.xxxx-y_amd64.deb
-sudo apt-get install mssql-server-extensibility-java-15.0.1000.xxxx-y_amd64.deb
-sudo apt-get install mssql-mlservices-mlm-r_9.4.5.19_amd64.deb
-sudo apt-get install mssql-mlservices-mlm-py_9.4.5.19_amd64.deb
-sudo apt-get install mssql-mlservices-python_9.4.5.19_amd64.deb
+# Add everything (all R, Python, Java)
+# There is no asterisk in this full install
+sudo apt-get install mssql-mlservices-mlm-py 
+sudo apt-get install mssql-mlservices-mlm-r 
+sudo apt-get install mssql-server-extensibility-java
 ```
 
 ### Example 2 - Minimum installation 
 
-Includes the extensibility framework, and core libraries and extensions. Excludes pre-trained models and machine learning libraries for R and Python. 
+Includes open-source R and Python, extensibility framework, microsoft-openmpi, core Revo* libraries for R and Python, Java extension. Excludes pre-trained models and machine learning libraries for R and Python. 
 
 ```bash
 # Install as root or sudo
 # Minimum install of R, Python, Java
-sudo apt-get install microsoft-openmpi_3.0.0-1_amd64.deb
-sudo apt-get install mssql-server-extensibility-15.0.1000.xxxx-y_amd64.deb
-sudo apt-get install mssql-server-extensibility-java-15.0.1000.xxxx-y_amd64.deb
-sudo apt-get install mssql-mlservices-packages-r-9.4.5.19_amd64.deb
-sudo apt-get install mssql-mlservices-packages-py-9.4.5.19_amd64.deb
-sudo apt-get install mssql-mlservices-python_9.4.5.19_amd64.deb
-
+sudo apt-get install mssql-mlservices-packages-py
+sudo apt-get install mssql-mlservices-packages-r
+sudo apt-get install mssql-server-extensibility-java
 ```
 
 <a name="suse"></a>

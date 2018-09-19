@@ -23,7 +23,6 @@ This article provides details about updates, improvements, and bug fixes for the
 
 ## [SSMS 18.0](download-sql-server-management-studio-ssms.md)
 
-
 Build number: 18.0<br>
 Release date: September 24, 2018
 
@@ -35,9 +34,9 @@ Smaller Download Size:
 
 - The current size of the bundle is less than half of what SSMS 17.x is (~400MB). The size will eventually grow a little when the IS components are added back to SSMS, but it should not be as big asit used to be.
 
-SSMS is based on the new VS 2017 Isolated Shell:
+SSMS is based on the new Visual Studio 2017 Isolated Shell:
 
-- This means a modern shell (we picked up VS 2107 15.6.4). The new shell unlocks all the accessibility fixes that went in  in both SSMS and Visual Studio.
+- This means a modern shell (we picked up Visual Studio 2107 15.6.4). The new shell unlocks all the accessibility fixes that went in to both SSMS and Visual Studio.
 
 SSMS accessibility improvements:
 
@@ -46,14 +45,17 @@ SSMS accessibility improvements:
 SSMS can be installed in custom folder:
 
 - Currently, this is only available on the command line setup. Pass this extra argument to the SSMS-Setup-ENU.exe:
-    SSMSInstallRoot=C:\MySSMS18
-    By default, the new install location for SSMS is:
-    %ProgramFiles(x86)%\Microsoft SQL Server Management Studio 18\Common7\IDE\ssms.exe
-    Note: This does not mean that SSMS is multi-instance.
 
-SSMS does not share components with SQL Engine anymore:
+  `SSMSInstallRoot=C:\MySSMS18`
 
-- A lot of effort went in to avoid sharing components with SQL Engine, which often resulted in serviceability issues (one clobbering the files installed by the other.
+  By default, the new install location for SSMS is: `%ProgramFiles(x86)%\Microsoft SQL Server Management Studio 18\Common7\IDE\ssms.exe`
+  
+  > [!NOTE]
+  > This does not mean that SSMS is multi-instance.
+
+SSMS no longer shares components with SQL Engine:
+
+- A lot of effort went in to avoid sharing components with SQL Engine, which often resulted in serviceability issues (one clobbering the files installed by the other).
 
 SSMS now requires NetFx 4.7.2 or greater:
 

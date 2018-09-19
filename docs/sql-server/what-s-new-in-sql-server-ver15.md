@@ -259,8 +259,8 @@ For detailed information, see [What's new in SQL Server Machine Learning Service
 
 ### Expanded support for persistent memory devices
 
-Any [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] file that is placed on a persistent memory device operates in *enlightened* mode. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] directly accesses the device, bypassing the storage stack of the operating system. This mode improves performance because it allows low latency input/output against such devices.
-    - Examples of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] files include:
+Any [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] file that is placed on a persistent memory device operates in *enlightened* mode. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] directly accesses the device, bypassing the storage stack of the operating system. This mode improves performance because it allows low latency input/output against such devices.
+    - Examples of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] files include:
         - Database files
         - Transaction log files
         - In-Memory OLTP checkpoint files
@@ -274,7 +274,7 @@ Any [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] file that is place
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] [Big Data Clusters](../big-data-cluster/big-data-cluster-overview.md) enables new scenarios including the following:
 
-- Deploy a Big Data cluster with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and Spark Linux containers on Kubernetes
+- Deploy a Big Data cluster with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and Spark Linux containers on Kubernetes
 - Access your big data from HDFS
 - Run Advanced analytics and machine learning with Spark
 - Use Spark streaming to data to SQL data pools

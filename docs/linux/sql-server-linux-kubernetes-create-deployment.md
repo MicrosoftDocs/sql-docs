@@ -46,7 +46,7 @@ az aks get-credentials --resource-group=<GroupName> --name=<ClusterName>
 ================
 Example 1 -
 ```python
-   python ./deploy-ag.py --help
+   ./deploy-ag.py --help
 		usage: deploy-ag.py [-h] {deploy,failover} ...
 
 		optional arguments:
@@ -62,7 +62,7 @@ Example 1 -
 
 Example 2 -  
 ```python
-python ./deploy-ag.py deploy --help
+./deploy-ag.py deploy --help
 
 usage: deploy-ag.py deploy [-h] [--verbose] [--ag AG] [-n NAMESPACE]
                            [--dry-run] [-s SQL_SERVERS [SQL_SERVERS ...]]
@@ -92,7 +92,7 @@ Deploy SQL Server and k8s Agents in namespace(AG name)
 Example 3 --  
 
 ```python
-python ./deploy-ag.py failover --help
+./deploy-ag.py failover --help
 			usage: deploy-ag.py failover [-h] [--verbose] [--ag AG]
 										 [--namespace NAMESPACE] [--dry-run]
 										 target_replica
@@ -115,7 +115,7 @@ python ./deploy-ag.py failover --help
 ### Create the specs but **NOT** apply
 
 ```python
-	python.exe ./deploy-ag.py deploy --dry-run
+	./deploy-ag.py deploy --dry-run
 	
 	python.exe ./deploy-ag.py deploy --ag ag1 --namespace AG1 --sql-servers ['SQL1', 'SQL2', 'SQL3'] --sa-password 'SAPassword2018' --env AKS --dry-run
 
@@ -141,7 +141,7 @@ python ./deploy-ag.py failover --help
 ### Perform a Manual Failover
 
 ```python
-	python ./deploy-ag.py failover --ag ag1 --namespace ag1 --verbose mssql1-0
+	./deploy-ag.py failover --ag ag1 --namespace ag1 --verbose mssql1-0
 ```
 
   ## Next steps

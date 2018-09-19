@@ -57,11 +57,13 @@ The next step is to Configure Credential, so provide a Credential Name, this is 
 
 In the next window, you will be able to select the tables you want to create external views of. Selecting the Parent databases will include all child tables as well. When the tables are selected, a mapping table can be seen on the right-hand side. Here you can make any 'type' changes or change the name of the selected external table itself.
 
+![External data source credentials](media/data-virtualization/data-table-mapping.png)
+
 > [!NOTE]
-Double clicking another selected table will change the mapping view.
+>Double clicking another selected table will change the mapping view.
 
 > [!IMPORTANT]
-Photo type is not yet supported by the External Table tool. Creating an external view with a photo type in it will throw an error after creation of table. The table will still be created though.
+>Photo type is not yet supported by the External Table tool. Creating an external view with a photo type in it will throw an error after creation of table. The table will still be created though.
 
 ## Summary
 

@@ -27,6 +27,8 @@ For external tables that reference files in external data sources, the column an
 > [!NOTE]  
 > SQL Server does not support the Hive *infinity* data value in any conversion. PolyBase will fail with a data type conversion error.
 
+## Collation
+
 ## Type mapping reference
 
 | SQL Data Type | .NET Data Type            | Hive Data Type | Hadoop/Java Data Type | Comments                       |
@@ -52,6 +54,38 @@ For external tables that reference files in external data sources, the column an
 | datetime      | DateTime                  | timestamp      | TimestampWritable     |
 | time          | TimeSpan                  | timestamp      | TimestampWritable     |
 | decimal       | Decimal                   | decimal        | BigDecimalWritable    | Applies to Hive0.11 and later. |
+
+## ODBC Type
+
+|ODBC Data type|SQL DB type – strict mapping|SQL DB type – permissive mappin|  
+|--------------------------|--------------------------|-----------------|  
+|SQL_NUMERIC|Decimal|Decimal with different precision/scale, Int (if scale = 0)|  
+|SQL_DECIMAL|Decimal|Decimal with different precision/scale, Int (if scale = 0)|  
+|SQL_INTEGER|Int|TinyInt, SmallInt, Int, BigInt, Decimal|  
+|SQL_SMALLINT|SmallInt|TinyInt, SmallInt, Int, BigInt, Decimal|  
+|SQL_BIGINT|BigInt|TinyInt, SmallInt, Int, BigInt, Decimal|  
+|SQL_TINYINT|TinyInt|TinyInt, SmallInt, Int, BigInt, Decimal|  
+|SQL_FLOAT|Float|Float|  
+|SQL_REAL|Real|Float, Real|  
+|SQL_DOUBLE|Float|Float|  
+|SQL_WCHAR|Nchar|Nchar with different length, Nvarchar, Nvarchar (max)  |  
+|SQL_WVARCHAR|NVarchar|NVarchar with different length, Nvarchar(max)|  
+|SQL_WLONGVARCHAR|NText|NText, NVarchar, Nvarchar(max)|  
+|SQL_VARCHAR|VarChar|Varchar with different length, Varchar(max)|
+|SQL_LONGVARCHAR|Text|Text, Varchar, Varchar(max)|  
+|SQL_BIT|Bit|Bit, TinyInt, SmallInt, Int, BigInt|  
+|SQL_BINARY|Binary|Binary, Varbinary, Varbinary(max)|  
+|SQL_VARBINARY|VarBinary|VarBinary with different length, Varbinary(max)|  
+|SQL_SS_VARIANT|Binary|Binary with different length, Varbinary, Varbinary(max)|
+|SQL_SS_XML ,  SQL_TD_XML|Text|XML, Text, Varchar(max)|
+|SQL_DATETIME|Datetime2|Datetime, Datetime2|
+|SQL_TYPE_DATE|Date|Date, Datetime, Datetime2| 
+|SQL_TYPE_TIME|Time|Time, Datetime, Datetime2, Datetimeoffset|
+|SQL_TYPE_TIMESTAMP|DateTime2|Datetime, Datetime2| 
+|SQL_GUID|UniqueIdentifier|UniqueIdentifier| 
+
+
+
 
 ## Next steps
 

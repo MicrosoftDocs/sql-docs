@@ -237,7 +237,7 @@ This example passes the CLASSPATH parameter to provide the path to the Java file
 + On Windows, change **@myClassPath** to N'C:\myJavaCode\' (assuming it's the parent folder of \pkg) before executing the query in SQL Server Management Studio or another tool.
 
 ```sql
-DECLARE @myClassPath nvarchar(30)
+DECLARE @myClassPath nvarchar(50)
 DECLARE @n int 
 --This is where you store your classes or jars.
 --Update this to your own classpath
@@ -261,6 +261,8 @@ GO
 After executing the call, you should get a result set showing the two columns:
 
 ![Results from Java sample](../media/java/java-sample-results.png "Sample results")
+
+If you get an error, check classpath. The path should include a "pkg" subfolder containing the compiled code. The parent folder, not the "pkg" subfolder, should be in classpath. The length of classpath cannot exceed the declared value (`DECLARE @myClassPath nvarchar(50)`). If it does, the path is truncated to the first 50 characters and your compiled code will not be loaded. You can increase the length if 50 characters is insufficinent. Finally, check permissions on each folder, from root to "pkg" subfolder, to ensure that the security identities running the external process have permission to read and execute your code.
 
 ## See also
 

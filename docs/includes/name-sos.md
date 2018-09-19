@@ -1,1 +1,1 @@
-Azure Data Studio (preview)
+Azure Data Studio

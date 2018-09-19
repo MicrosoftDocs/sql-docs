@@ -1,6 +1,6 @@
 ---
-title: Azure Data Studio (preview) release notes| Microsoft Docs
-description: 'Azure Data Studio (preview) release notes'
+title: Azure Data Studio release notes| Microsoft Docs
+description: 'Azure Data Studio release notes'
 ms.custom: "tools|sos"
 ms.date: "08/30/2018"
 ms.prod: sql
@@ -14,7 +14,7 @@ author: "stevestein"
 ms.author: "sstein"
 manager: craigg
 ---
-# Azure Data Studio (preview) release notes
+# Azure Data Studio release notes
 
 **[Download the August Public Preview](download.md)**
 

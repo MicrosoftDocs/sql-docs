@@ -16,7 +16,7 @@ manager: craigg
 ---
 # Extend the functionality of [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
-Extensions in [!INCLUDE[name-sos](../includes/name-sos-short.md)] provide an easy way to add more functionality to the base [!INCLUDE[name-sos](../includes/name-sos-short.md)] installation. 
+Extensions in [!INCLUDE[name-sos](../includes/name-sos-short.md)] provide an easy way to add more functionality to the base [!INCLUDE[name-sos](../includes/name-sos-short.md)] installation.
 
 Extensions are provided by the Azure Data Studio team (Microsoft), as well as the 3rd party community (you!).
 

@@ -71,13 +71,12 @@ zypper ar -f https://packages.microsoft.com/sles/12/prod packages-microsoft-com
 
 On an internet-connected device, packages are downloaded and installed independently of the database engine using the package installer for each operating system. The following table describes all available packages, but you only need *one* R or Python package to get a specific combination of features.
 
-In the table below, package names are "root" names, without the version and platform suffix that varies by package installer. Fully-qualified package names can be found in the commands that appear in the following sections.
-
-| Package name | Applies to | Description |
+| Package name | Applies-to | Description |
 |--------------|----------|-------------|
 |mssql-server-extensibility  | All | Extensibility framework used to run R, Python, or Java code. |
 |mssql-server-extensibility-java | Java | Java extension for loading a Java execution environment. There are no additional libraries or packages for Java. |
-| microsoft-openmpi  | All | Message passing interface used by the Revo* libraries for parallelization on Linux. |
+| microsoft-openmpi  | Python, R | Message passing interface used by the Revo* libraries for parallelization on Linux. |
+| microsoft-r-open | R | Open-source distribution of R. |
 | mssql-mlservices-python | Python | Open-source distribution of Anaconda and Python. |
 |mssql-mlservices-mlm-py  | Python | Full install. Provides revoscalepy, microsoftml, pre-trained models for image featurization and text sentiment analysis.| 
 |mssql-mlservices-mml-py  | Python | Partial install. Provides revoscalepy, microsoftml. <br/>Excludes pre-trained models. | 
@@ -97,32 +96,27 @@ Install the extensibility framework, followed by any *one* R package, plus any *
 
 ### Example 1 -  Full installation 
 
-Includes the extensibility framework, R, Python, Java, with machine learning libraries and pre-trained models for both R and Python. For R and Python, if you want something in between full and minimum install - such as machine learning libraries but without the pre-trained models - substitute the R or Python package providing the feature combination you want.
+Includes open-source R and Python, extensibility framework, microsoft-openmpi, extensions (R, Python, Java), with machine learning libraries and pre-trained models for R and Python. For R and Python, if you want something in between full and minimum install - such as machine learning libraries but without the pre-trained models - substitute mssql-mlservices-mml-r and mssql-mlservices-mml-py instead.
 
 ```bash
 # Install as root or sudo
-# Add everything
-sudo yum install microsoft-openmpi-3.0.0-x86_64.rpm
-sudo yum install mssql-server-extensibility-15.0.1000.xxxx-y.x86_64.rpm
-sudo yum install mssql-server-extensibility-java-15.0.1000.xxxx-y.x86_64.rpm
-sudo yum install mssql-mlservices-mlm-py-9.4.5.x86_64.rpm
-sudo yum install mssql-mlservices-mlm-r-9.4.5.x86_64.rpm
-sudo yum install mssql-mlservices-python-9.4.5.x86_64.rpm
+# Add everything (all R, Python, Java)
+# Be sure to include the asterisk
+sudo yum install mssql-mlservices-mlm-py-9.4.5*
+sudo yum install mssql-mlservices-mlm-r-9.4.5* 
+sudo yum install mssql-server-extensibility-java
 ```
 
 ### Example 2 - Minimum installation 
 
-Includes the extensibility framework, and core libraries and extensions. Excludes pre-trained models and machine learning libraries for R and Python. 
+Includes open-source R and Python, extensibility framework, microsoft-openmpi, core Revo* libraries for R and Python, Java extension. Excludes pre-trained models and machine learning libraries for R and Python. 
 
 ```bash
 # Install as root or sudo
-# Minimum install of R, Python, Java
-sudo yum install microsoft-openmpi-3.0.0-x86_64.rpm
-sudo yum install mssql-server-extensibility-15.0.1000.xxxx-y.x86_64.rpm
-sudo yum install mssql-server-extensibility-java-15.0.1000.xxxx-y.x86_64.rpm
-sudo yum install mssql-mlservices-packages-py-9.4.5.x86_64.rpm
-sudo yum install mssql-mlservices-packages-r-9.4.5.x86_64.rpm 
-sudo yum install mssql-mlservices-python-9.4.5.x86_64.rpm
+# Minimum install of R, Python, Java extensions
+sudo yum install mssql-mlservices-packages-py-9.4.5
+sudo yum install mssql-mlservices-packages-r-9.4.5
+sudo yum install mssql-server-extensibility-java
 ```
 
 <a name="ubuntu"></a>

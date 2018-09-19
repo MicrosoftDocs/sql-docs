@@ -28,18 +28,20 @@ Package location of the R, Python, and Java extensions are in the SQL Server Lin
 + SQL Server 2019 Database Engine instance on: 
 
    + [Red Hat Enterprise Linux (RHEL)](quickstart-install-connect-red-hat.md)
+
    + [SUSE Enterprise Linux Server](quickstart-install-connect-suse.md)
+
    + [Ubuntu](quickstart-install-connect-ubuntu.md)
 
-+ For R only, [install Microsoft R Open](#mro) as a prerequisite to the mssql-mlsservices R package providing the combination of R features you require. 
++ For R only, [Microsoft R Open](#mro) for mssql-mlsservices R packages. 
 
 <a name="mro"></a>
 
 ### Microsoft R Open (MRO)
 
-If you are using R on SQL Server for Linux, Microsoft's base distribution of R is a prerequisite of the mssql-mlservices R packages.
+Microsoft's base distribution of R is a prerequisite for using RevoScaleR, MicrosoftML, and other R packages installed with Machine Learning Services.
 
-The following commands register the repository providing MRO. When the repository is registered, the commands for installing the mssql-mlservices R packages will automatically install MRO as a package dependency.
+The following commands register the repository providing MRO. Post-registration, the commands for installing other R packages will automatically include MRO as a package dependency.
 
 #### On Ubuntu
 
@@ -69,17 +71,17 @@ zypper ar -f https://packages.microsoft.com/sles/12/prod packages-microsoft-com
 
 On an internet-connected device, packages are downloaded and installed independently of the database engine using the package installer for each operating system. The following table describes all available packages, but you only need *one* R or Python package to get a specific combination of features.
 
-Package names are "root" names. Fully-qualified package names include version information that varies by package installer. See the commands in the following sections for package references that work in an install command.
+In the table below, package names are "root" names, without the version and platform suffix that varies by package installer. Fully-qualified package names can be found in the commands that appear in the following sections.
 
 | Package name | Applies to | Description |
 |--------------|----------|-------------|
 |mssql-server-extensibility  | All | Extensibility framework used to run R, Python, or Java code. |
-|mssql-server-extensibility | Java | Java extension for loading a Java execution environment. There are no additional libraries or packages for Java. |
+|mssql-server-extensibility-java | Java | Java extension for loading a Java execution environment. There are no additional libraries or packages for Java. |
 | microsoft-openmpi  | All | Message passing interface used by the Revo* libraries for parallelization on Linux. |
 | mssql-mlservices-python | Python | Open-source distribution of Anaconda and Python. |
 |mssql-mlservices-mlm-py  | Python | Full install. Provides revoscalepy, microsoftml, pre-trained models for image featurization and text sentiment analysis.| 
 |mssql-mlservices-mml-py  | Python | Partial install. Provides revoscalepy, microsoftml. <br/>Excludes pre-trained models. | 
-|mssql-mlservices-packages-py  | Python | Partial install. Provides revoscalepy, revoscalepy. <br/>Excludes pre-trained models and microsoftml. | 
+|mssql-mlservices-packages-py  | Python | Partial install. Provides revoscalepy. <br/>Excludes pre-trained models and microsoftml. | 
 |mssql-mlservices-mlm-r  | R | Full install. Provides RevoScaleR, MicrosoftML, sqlRUtils, olapR, pre-trained models for image featurization and text sentiment analysis.| 
 |mssql-mlservices-mml-r  | R | Partial install. Provides RevoScaleR, MicrosoftML, sqlRUtils, olapR. <br/>Excludes pre-trained models.  |
 |mssql-mlservices-packages-r  | R | Partial install. Provides RevoScaleR, sqlRUtils, olapR. <br/>Excludes  pre-trained models and MicrosoftML. | 
@@ -223,10 +225,9 @@ Additional configuration is primarily through the [mssql-conf tool](sql-server-l
 
 You should now be able to run external scripts on SQL Server with no restart required. 
 
-## Verify external script execution
+## Verify installation
   
-Execute the following SQL command to test R execution in SQL Server. If the script does not run, try a service restart,
-`sudo systemctl restart mssql-server`.
+Execute the following SQL command to test R execution in SQL Server. If the script does not run, try a service restart, `sudo systemctl restart mssql-server`.
 
 ```r
 EXEC sp_execute_external_script   
@@ -253,7 +254,7 @@ GO
 
 <a name="install-all"></a>
 
-## Install mssqlserver and mssql-mlservices together
+## Chained installation
 
 You can install and configure the database engine and Machine Learning Services in one procedure by appending the extensibility, R, or Python packages and EULA parameters on a command that installs the database engine. The following example is a template illustration using the Yum package manager (replace package names with actual names that include version and file extensions valid for your package manager):
 

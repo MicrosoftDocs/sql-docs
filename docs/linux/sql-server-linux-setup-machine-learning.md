@@ -25,7 +25,7 @@ Package location of the R, Python, and Java extensions are in the SQL Server Lin
 
 + Linux operating system must be [supported by SQL Server](sql-server-linux-release-notes.md#supported-platforms), running on premises or in a Docker container.
 
-+ SQL Server 2019 Database Engine instance on: 
++ You must have a SQL Server 2019 Database Engine instance on: 
 
    + [Red Hat Enterprise Linux (RHEL)](quickstart-install-connect-red-hat.md)
 
@@ -273,6 +273,28 @@ All possible permutations of EULA acceptance are documented in [Configure SQL Se
 ## Offline installation
 
 Locate the Machine Learning Services and extensibility package downloads in the [Release notes](sql-server-linux-release-notes-2019.md). Follow the [Offline installation](sql-server-linux-setup.md#offline) instructions using the packages you obtained.
+
+R, Python, and Java package file names for a full install on RHEL or SUSE:
+
+```
+microsoft-openmpi-3.0.0-x86_64.rpm`
+mssql-server-extensibility-15.0.1000.xxxx-y.x86_64.rpm
+mssql-server-extensibility-java-15.0.1000.xxxx-y.x86_64.rpm
+mssql-mlservices-mlm-py-9.4.5.x86_64.rpm
+mssql-mlservices-mlm-r-9.4.5.x86_64.rpm
+mssql-mlservices-python-9.4.5.x86_64.rpm
+```
+
+Equivalent files for Ubuntu:
+
+```
+microsoft-openmpi_3.0.0-1_amd64.deb
+mssql-server-extensibility-15.0.1000.xxxx-y_amd64.deb
+mssql-server-extensibility-java-15.0.1000.xxxx-y_amd64.deb
+mssql-mlservices-mlm-r_9.4.5.19_amd64.deb
+mssql-mlservices-mlm-py_9.4.5.19_amd64.deb
+mssql-mlservices-python_9.4.5.19_amd64.deb
+```
 
 ## Add more R/Python packages 
  

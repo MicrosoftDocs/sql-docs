@@ -1,5 +1,6 @@
 ---
 title: "sys.fn_PageResCracker (Transact-SQL) | Microsoft Docs"
+description: "Documentation for sys.fn_PageResCracker system function."
 ms.custom: ""
 ms.date: "09/18/2018"
 ms.prod: sql
@@ -24,7 +25,7 @@ helpviewer_keywords:
   - "sys.fn_PageResCracker function"
   - "sys.dm_db_page_info"
   - "page info"
-author: ""
+author: "bluefooted"
 ms.author: "pamela"
 manager: "amitban"
 ---

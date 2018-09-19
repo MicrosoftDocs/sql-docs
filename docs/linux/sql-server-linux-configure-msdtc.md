@@ -27,7 +27,7 @@ SQL Server 2019 introduces two configuration parameters for the mssql-conf utili
 
 | mssql-conf setting | Description |
 |---|---|
-| **network.rpcport** | The TCP port that the RPC endpoint manager process binds to. |
+| **network.rpcport** | The TCP port that the RPC endpoint mapper process binds to. |
 | **network.servertcpport** | The port that the MSDTC server listens to. If not set, the MSDTC service uses a random ephemeral port on service restarts, and firewall exceptions will need to be re-configured to ensure that MSDTC service can continue communication. |
 
 For more information about these settings and other related MSDTC settings, see [Configure SQL Server on Linux with the mssql-conf tool](sql-server-linux-configure-mssql-conf.md#msdtc).
@@ -36,7 +36,7 @@ For more information about these settings and other related MSDTC settings, see 
 
 The following MSDTC configurations are supported:
 
-- OLE-TX Distributed transactions against SQL Server on Linux for JDBC providers.
+- OLE-TX Distributed transactions against SQL Server on Linux for JDBC and ODBC providers.
 - XA Distributed transactions against SQL Server on Linux using JDBC providers.
 - Distributed transactions on Linked server.
 

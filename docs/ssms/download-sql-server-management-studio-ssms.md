@@ -39,7 +39,7 @@ Use SQL Server Management Studio (SSMS) to query, design, and manage your databa
 
 SSMS 18.0 (preview) is the latest generation of *SQL Server Management Studio* and provides support for [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)].
 
-**[![download](../ssdt/media/download.png) Download SQL Server Management Studio 18.0](https://go.microsoft.com/fwlink/?linkid=2014306) (no previous version of SSMS 17.x is required on the computer)**
+**[![download](../ssdt/media/download.png) Download SQL Server Management Studio 18.0 (preview)](https://go.microsoft.com/fwlink/?linkid=2014306)**
 
 
 **Version Information**
@@ -64,7 +64,7 @@ This release of SSMS can be installed in the following languages:
 SQL Server Management Studio 18.0 (preview):<br>
 [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x40a)
 
-SQL Server Management Studio 18.0 Upgrade Package (upgrades 18.x to 18.0):<br>
+SQL Server Management Studio 18.0 Upgrade Package (upgrades to 18.0):<br>
 No upgrade option is available at this time.
 
 > [!NOTE]
@@ -75,7 +75,7 @@ No upgrade option is available at this time.
 
 ## New in this Release
 
-SSMS 18.0 is the latest version of SQL Server Management Studio. The 18.x generation of SSMS provides support for almost all feature areas on SQL Server 2008 through SQL Server 2019 preview.
+SSMS 18.0 (preview) is the latest version of SQL Server Management Studio. The 18.x generation of SSMS provides support for almost all feature areas on SQL Server 2008 through SQL Server 2019 preview.
 
 For details about what's new in this release, see [the SSMS changelog](sql-server-management-studio-changelog-ssms.md).
 

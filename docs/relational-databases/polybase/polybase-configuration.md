@@ -12,6 +12,7 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ---
+
 # PolyBase configuration and security for Hadoop
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

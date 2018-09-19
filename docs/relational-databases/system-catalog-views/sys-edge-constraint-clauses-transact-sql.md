@@ -29,7 +29,7 @@ monikerRange: ">=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-curren
 # sys.edge_constraint_clauses (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx.md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-  Contains a row per clause of an edge constraint. 
+Contains one row per clause of an edge constraint.
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

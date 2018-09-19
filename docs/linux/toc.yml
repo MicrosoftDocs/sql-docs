@@ -91,6 +91,8 @@
       href: sql-server-linux-configure-docker.md
     - name: Configure MSDTC
       href: sql-server-linux-configure-msdtc.md
+    - name: Configure persistent memory PMEM
+      href: sql-server-linux-configure-pmem.md
     - name: Customer feedback
       href: sql-server-linux-customer-feedback.md
   - name: Develop

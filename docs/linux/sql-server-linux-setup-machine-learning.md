@@ -4,7 +4,7 @@ description: This article describes how to install SQL Server Machine Learning S
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.date: 09/14/2018
+ms.date: 09/24/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.component: ""
@@ -19,32 +19,69 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 
 ## Prerequisites
 
-Machine learning and programming extensions are an add-on to the database engine. Although you can [install the database engine and Machine Learning Services concurrently](#install-all), it's a best practice to install and configure the SQL Server database engine first so that you can resolve any issues before adding more components. 
++ A Linux operating system [supported by SQL Server](sql-server-linux-release-notes.md#supported-platforms), including docker:
 
-Machine Learning and programming extensions run on top of the database engine on [any supported Linux operating system](sql-server-linux-release-notes.md#supported-platforms), including docker:
+   + [Install SQL Server on Red Hat Enterprise Linux (RHEL)](quickstart-install-connect-red-hat.md)
+   + [Install SQL Server on SUSE Enterprise Linux Server](quickstart-install-connect-suse.md)
+   + [Install SQL Server on Ubuntu](quickstart-install-connect-ubuntu.md)
 
-+ [Install SQL Server on Red Hat Enterprise Linux (RHEL)](quickstart-install-connect-red-hat.md)
-+ [Install SQL Server on SUSE Enterprise Linux Server](quickstart-install-connect-suse.md)
-+ [Install SQL Server on Ubuntu](quickstart-install-connect-ubuntu.md)
++ SQL Server 2019 Database Engine instance. 
 
-After the database engine is installed and configured, you can add the extensions using the commands in this article.
+   Machine learning and programming extensions are an add-on to the database engine. Although you can [install the database engine and Machine Learning Services concurrently](#install-all), it's a best practice to install and configure the SQL Server database engine first so that you can resolve any issues before adding more components. 
 
-Package locations are in the SQL Server Linux source repositories. If you already configured source repositories for the database engine install, you can run the mlservices package install commands using the same repo registration.
+
++ For R only, install Microsoft R Open as a prerequisite to the mlsservices R package that provides the combination of R features you required. Instructions are provided next.
+
+Package locations are in the SQL Server Linux source repositories. If you already configured source repositories for the database engine install, you can run the mssql-mlservices package install commands using the same repo registration.
+
+### Microsoft R Open (MRO)
+
+If you are using R on SQL Server for Linux, Microsoft's base distribution of R is a prerequisite of the mssql-mlservices R packages.
+
+The following commands register the repository providing MRO. When the repository is registered, the commands for installing the mssql-mlservices R packages will automatically install MRO as a package dependency.
+
+#### On Ubuntu
+
+```bash
+# Set the location of the package repo the "prod" directory containing the distribution.
+# This example specifies 16.04. Replace with 18.04 if you want that version
+wget https://packages.microsoft.com/config/ubuntu/16.04/packages-microsoft-prod.deb
+
+# Register the repo
+dpkg -i packages-microsoft-prod.deb
+```
+
+#### On RHEL
+
+```bash
+# Set the location of the package repo at the "prod" directory
+rpm -Uvh https://packages.microsoft.com/config/rhel/7/packages-microsoft-prod.rpm
+```
+#### On SUSE
+
+```bash
+# Set the location of the package repo
+zypper ar -f https://packages.microsoft.com/sles/12/prod packages-microsoft-com
+```
 
 ## Package list
 
 On an internet-connected device, packages are downloaded and installed independently of the database engine using the package installer for each operating system. The following table describes all available packages, but you only need *one* R or Python package to get a specific combination of features.
 
-| Package name | Language | Description |
+Fully-qualified package names include version information that varies by package installer. See the commands in the following sections for package references that work in an install command.
+
+| Package name | Applies to | Description |
 |--------------|----------|-------------|
-|mssql-server-extensibility | All | Extensibility framework used to run R, Python, or Java code. |
-|mssql-server-extensibility-java | Java | Java extension for loading a Java execution environment. There are no additional libraries or packages for Java. |
-|mssql-mlservices-mlm-r | R | Full install. Base R, RevoScaleR, MicrosoftML, sqlRUtils, olapR, pre-trained models for image featurization and text sentiment analysis.| 
-|mssql-mlservices-mml-r | R | Partial install. Provides base R, RevoScaleR, MicrosoftML, sqlRUtils, olapR. <br/>Excludes pre-trained models.  |
-|mssql-mlservices-packages-r | R | Partial install. Provides base R, RevoScaleR, sqlRUtils, olapR. <br/>Excludes  pre-trained models and MicrosoftML. | 
-|mssql-mlservices-mlm-py | Python | Full install. Anaconda, revoscalepy, microsoftml, pre-trained models for image featurization and text sentiment analysis.| 
-|mssql-mlservices-mml-py | Python | Partial install. Provides Anaconda, revoscalepy, microsoftml. <br/>Excludes pre-trained models. | 
-|mssql-mlservices-packages-py | Python | Partial install. Provides Anaconda, revoscalepy. <br/>Excludes pre-trained models and microsoftml. | 
+|mssql-server-extensibility  | All | Extensibility framework used to run R, Python, or Java code. |
+|mssql-server-extensibility | Java | Java extension for loading a Java execution environment. There are no additional libraries or packages for Java. |
+| microsoft-openmpi  | All | Message passing interface used by the Revo* libraries for parallelization on Linux. |
+| mssql-mlservices-python | Python | Open-source distribution of Anaconda and Python. |
+|mssql-mlservices-mlm-py  | Python | Full install. Provides revoscalepy, microsoftml, pre-trained models for image featurization and text sentiment analysis.| 
+|mssql-mlservices-mml-py  | Python | Partial install. Provides revoscalepy, microsoftml. <br/>Excludes pre-trained models. | 
+|mssql-mlservices-packages-py  | Python | Partial install. Provides revoscalepy, revoscalepy. <br/>Excludes pre-trained models and microsoftml. | 
+|mssql-mlservices-mlm-r  | R | Full install. Provides RevoScaleR, MicrosoftML, sqlRUtils, olapR, pre-trained models for image featurization and text sentiment analysis.| 
+|mssql-mlservices-mml-r  | R | Partial install. Provides RevoScaleR, MicrosoftML, sqlRUtils, olapR. <br/>Excludes pre-trained models.  |
+|mssql-mlservices-packages-r  | R | Partial install. Provides RevoScaleR, sqlRUtils, olapR. <br/>Excludes  pre-trained models and MicrosoftML. | 
 
 <a name="RHEL"></a>
 
@@ -62,10 +99,12 @@ Includes the extensibility framework, R, Python, Java, with machine learning lib
 ```bash
 # Install as root or sudo
 # Add everything
-sudo yum install mssql-server-extensibility
-sudo yum install mssql-mlservices-mlm-r   
-sudo yum install mssql-mlservices-mlm-py
-sudo yum install mssql-server-extensibility-java
+sudo yum install microsoft-openmpi-3.0.0-x86_64.rpm
+sudo yum install mssql-server-extensibility-15.0.1000.xxxx-y.x86_64.rpm
+sudo yum install mssql-server-extensibility-java-15.0.1000.xxxx-y.x86_64.rpm
+sudo yum install mssql-mlservices-mlm-py-9.4.5.x86_64.rpm
+sudo yum install mssql-mlservices-mlm-r-9.4.5.x86_64.rpm
+sudo yum install mssql-mlservices-python-9.4.5.x86_64.rpm
 ```
 
 ### Example 2 - Minimum installation 
@@ -75,10 +114,12 @@ Includes the extensibility framework, and core libraries and extensions. Exclude
 ```bash
 # Install as root or sudo
 # Minimum install of R, Python, Java
-sudo yum install mssql-server-extensibility
-sudo yum install mssql-mlservices-packages-r 
-sudo yum install mssql-mlservices-packages-py
-sudo yum install mssql-server-extensibility-java
+sudo yum install microsoft-openmpi-3.0.0-x86_64.rpm
+sudo yum install mssql-server-extensibility-15.0.1000.xxxx-y.x86_64.rpm
+sudo yum install mssql-server-extensibility-java-15.0.1000.xxxx-y.x86_64.rpm
+sudo yum install mssql-mlservices-packages-py-9.4.5.x86_64.rpm
+sudo yum install mssql-mlservices-packages-r-9.4.5.x86_64.rpm 
+sudo yum install mssql-mlservices-python-9.4.5.x86_64.rpm
 ```
 
 <a name="ubuntu"></a>
@@ -97,10 +138,12 @@ Includes the extensibility framework, R, Python, Java, with machine learning lib
 ```bash
 # Install as root or sudo
 # Add everything
-sudo apt-get install mssql-server-extensibility
-sudo apt-get install mssql-mlservices-mlm-r   
-sudo apt-get install mssql-mlservices-mlm-py
-sudo apt-get install mssql-server-extensibility-java
+sudo apt-get install microsoft-openmpi_3.0.0-1_amd64.deb
+sudo apt-get install mssql-server-extensibility-15.0.1000.xxxx-y_amd64.deb
+sudo apt-get install mssql-server-extensibility-java-15.0.1000.xxxx-y_amd64.deb
+sudo apt-get install mssql-mlservices-mlm-r_9.4.5.19_amd64.deb
+sudo apt-get install mssql-mlservices-mlm-py_9.4.5.19_amd64.deb
+sudo apt-get install mssql-mlservices-python_9.4.5.19_amd64.deb
 ```
 
 ### Example 2 - Minimum installation 
@@ -110,10 +153,13 @@ Includes the extensibility framework, and core libraries and extensions. Exclude
 ```bash
 # Install as root or sudo
 # Minimum install of R, Python, Java
-sudo apt-get install mssql-server-extensibility
-sudo apt-get install mssql-mlservices-packages-r 
-sudo apt-get install mssql-mlservices-packages-py
-sudo apt-get install mssql-server-extensibility-java
+sudo apt-get install microsoft-openmpi_3.0.0-1_amd64.deb
+sudo apt-get install mssql-server-extensibility-15.0.1000.xxxx-y_amd64.deb
+sudo apt-get install mssql-server-extensibility-java-15.0.1000.xxxx-y_amd64.deb
+sudo apt-get install mssql-mlservices-packages-r-9.4.5.19_amd64.deb
+sudo apt-get install mssql-mlservices-packages-py-9.4.5.19_amd64.deb
+sudo apt-get install mssql-mlservices-python_9.4.5.19_amd64.deb
+
 ```
 
 <a name="suse"></a>
@@ -129,10 +175,13 @@ Includes the extensibility framework, R, Python, Java, with machine learning lib
 ```bash
 # Install as root or sudo
 # Add everything
-sudo zypper install mssql-server-extensibility
-sudo zypper install mssql-mlservices-mlm-r   
-sudo zypper install mssql-mlservices-mlm-py
-sudo zypper install mssql-server-extensibility-java
+sudo zypper install microsoft-openmpi-3.0.0-x86_64.rpm
+sudo zypper install mssql-server-extensibility-15.0.1000.xxxx-y.x86_64.rpm
+sudo zypper install mssql-server-extensibility-java-15.0.1000.xxxx-y.x86_64.rpm
+sudo zypper install mssql-mlservices-python-9.4.5.x86_64.rpm
+sudo zypper install mssql-mlservices-mlm-r-9.4.5.x86_64.rpm
+sudo zypper install mssql-mlservices-mlm-py-9.4.5.x86_64.rpm
+
 ```
 
 ### Example 2 - Minimum installation 
@@ -142,10 +191,12 @@ Includes the extensibility framework, and core libraries and extensions. Exclude
 ```bash
 # Install as root or sudo
 # Minimum install of R, Python, Java
-sudo zypper install mssql-server-extensibility
-sudo zypper install mssql-mlservices-packages-r 
-sudo zypper install mssql-mlservices-packages-py
-sudo zypper install mssql-server-extensibility-java
+sudo zypper install microsoft-openmpi-3.0.0-x86_64.rpm
+sudo zypper install mssql-server-extensibility-15.0.1000.xxxx-y.x86_64.rpm
+sudo zypper install mssql-server-extensibility-java-15.0.1000.xxxx-y.x86_64.rpm
+sudo zypper nstall mssql-mlservices-packages-py-9.4.5.x86_64.rpm 
+sudo zypper nstall mssql-mlservices-packages-r-9.4.5.x86_64.rpm 
+sudo zypper install mssql-mlservices-python-9.4.5.x86_64.rpm
 ```
 
 ## Post-install config (required)
@@ -201,9 +252,9 @@ GO
 
 <a name="install-all"></a>
 
-## Install mssqlserver and mlservices together
+## Install mssqlserver and mssql-mlservices together
 
-You can install and configure the database engine and Machine Learning Services in one procedure by appending the extensibility, R, or Python packages and EULA parameters on a command that installs the database engine. The following example is an illustration using the Yum package manager:
+You can install and configure the database engine and Machine Learning Services in one procedure by appending the extensibility, R, or Python packages and EULA parameters on a command that installs the database engine. The following example is a template illustration using the Yum package manager (replace package names with actual names that include version and file extensions valid for your package manager):
 
 ```bash
 sudo yum install -y mssql-sqlserver mssql-server-extensibility mssql-server-extensibility-java mssql-mlservices-mlm-py mssql-mlservices-mlm-r   
@@ -211,9 +262,9 @@ sudo yum install -y mssql-sqlserver mssql-server-extensibility mssql-server-exte
 
 ## Unattended installation
 
-Using the [unattended install](https://docs.microsoft.com/sql/linux/sql-server-linux-setup?view=sql-server-2017#unattended) for the Database Engine, add the packages for mlservices and EULAs.
+Using the [unattended install](https://docs.microsoft.com/sql/linux/sql-server-linux-setup?view=sql-server-2017#unattended) for the Database Engine, add the packages for mssql-mlservices and EULAs.
 
-Recall that Setup or the mssql-conf tool prompts for license agreement acceptance. For open-source R and Python components, accepting the mlservices EULA supplement for is required for uninterrupted installation for mlservices packages. This is in addition to the SQL Server EULA. 
+Recall that Setup or the mssql-conf tool prompts for license agreement acceptance. For open-source R and Python components, accepting the mssql-mlservices EULA supplement for is required for uninterrupted installation for mssql-mlservices packages. This is in addition to the SQL Server EULA. 
 
 All possible permutations of EULA acceptance are documented in [Configure SQL Server on Linux with the mssql-conf tool](sql-server-linux-configure-mssql-conf.md#mlservices-eula).
 

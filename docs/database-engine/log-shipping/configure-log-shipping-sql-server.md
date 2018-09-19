@@ -96,6 +96,8 @@ manager: craigg
 16. Note the copy schedule listed in the **Schedule** box under **Copy job**. If you want to customize the schedule for your installation, click **Schedule** and then adjust the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent schedule as needed. This schedule should approximate the backup schedule.  
   
 17. On the **Restore** tab, under **Database state when restoring backups**, choose the **No recovery mode** or **Standby mode** option.  
+    > [!IMPORTANT]  
+    > **Standby mode** is only an option when the version of the primary and secondary server are the same. When the major version of the secondary server is higher than the primary, only **No recovery mode** is allowed
   
 18. If you chose the **Standby mode** option, choose if you want to disconnect users from the secondary database while the restore operation is underway.  
   

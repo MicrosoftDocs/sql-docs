@@ -3,7 +3,7 @@ title: "Configure Always Encrypted using SQL Server Management Studio | Microsof
 ms.custom: ""
 ms.date: "11/30/2016"
 ms.prod: sql
-ms.reviewer: ""
+ms.reviewer: vanto
 ms.suite: "sql"
 ms.technology: security
 ms.tgt_pltfrm: ""

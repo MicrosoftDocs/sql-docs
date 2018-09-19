@@ -34,6 +34,8 @@
     href: integrated-terminal.md
   - name: Keyboard shortcuts
     href: keyboard-shortcuts.md
+  - name: Explorer Azure SQL resources
+    href: azure-resource-explorer.md
   - name: Server groups
     href: server-groups.md
   - name: Source control
@@ -50,6 +52,8 @@
     href: extensions.md
   - name: SQL Server Agent
     href: sql-server-agent-extension.md
+  - name: SQL Server Import
+    href: sql-server-import-extension.md
   - name: SQL Server Profiler
     href: sql-server-profiler-extension.md
 - name: Extension Authoring

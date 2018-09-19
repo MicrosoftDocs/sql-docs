@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: "05/17/2017"
 ms.prod: sql
 ms.prod_service: security, sql-database"
-ms.reviewer: ""
+ms.reviewer: vanto
 ms.suite: "sql"
 ms.technology: security
 ms.tgt_pltfrm: ""

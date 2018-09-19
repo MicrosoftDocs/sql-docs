@@ -95,6 +95,8 @@
         href: sql-server-linux-configure-msdtc.md
       - name: Configure Docker for MSDTC
         href: sql-server-linux-configure-msdtc-docker.md
+    - name: Configure persistent memory PMEM
+      href: sql-server-linux-configure-pmem.md
     - name: Customer feedback
       href: sql-server-linux-customer-feedback.md
   - name: Develop
@@ -218,6 +220,10 @@
     items:
     - name: Configure
       href: sql-server-linux-replication-configure.md
+    - name: Snapshot folder
+      href: sql-server-linux-replication-snapshot-shares.md
+    - name: Non-default ports
+      href: sql-server-linux-replication-non-default-ports.md
 - name: Samples
   items:
   - name: Unattended install

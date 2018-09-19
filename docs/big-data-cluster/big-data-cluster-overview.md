@@ -27,13 +27,13 @@ By leveraging [SQL Server PolyBase](../relational-databases/polybase/polybase-gu
 
 ### Data lake
 
-A SQL Big Data Cluster includes a scalable HDFS [storage pool](concept-storage-pool.md). This can be used to directly store big data, potentially ingested from multiple external sources. Once in the Big Data Cluster, you can analyze and query the data and combine it with your high-value relational data.
+A SQL Big Data Cluster includes a scalable HDFS *storage pool*. This can be used to directly store big data, potentially ingested from multiple external sources. Once in the Big Data Cluster, you can analyze and query the data and combine it with your high-value relational data.
 
 ![Data lake](media/big-data-cluster-overview/data-lake.png)
 
 ### Scale-out data mart
 
-SQL Big Data Clusters provides scale-out compute and storage to improve the performance of analyzing any data. Data from a variety of sources can be ingested and distributed across [data pool](concept-data-pool.md) nodes for further analysis.
+SQL Big Data Clusters provides scale-out compute and storage to improve the performance of analyzing any data. Data from a variety of sources can be ingested and distributed across *data pool* nodes for further analysis.
 
 ![Data mart](media/big-data-cluster-overview/data-mart.png)
 
@@ -60,7 +60,7 @@ You can use Azure Data Studio to perform a variety of tasks on the Big Data Clus
 
 ## <a id="architecture"></a> Architecture
 
-A SQL Big Data Cluster is a cluster of Linux nodes orchestrated by [Kubernetes](https://kubernetes.io/docs/concepts/). 
+A SQL Big Data Cluster is a cluster of Linux nodes orchestrated by [Kubernetes](https://kubernetes.io/docs/concepts/).
 
 ### Kubernetes concepts
 
@@ -82,27 +82,17 @@ Nodes in the cluster are arranged into three logical planes: the control plane, 
 
 ### <a id="controlplane"></a> Control plane
 
-The control plane provides management and [security](concept-security.md) for the cluster. It contains the Kubernetes master, the [SQL Server master instance](concept-master-instance.md), and other cluster-level services such as the Hive Metastore and Spark Driver.
+The control plane provides management and security for the cluster. It contains the Kubernetes master, the *SQL Server master instance*, and other cluster-level services such as the Hive Metastore and Spark Driver.
 
 ### <a id="computeplane"></a> Compute plane
 
-The compute plane provides computational resources to the cluster. It contains nodes running SQL Server on Linux pods. The pods in the compute plane are divided into [compute pools](concept-compute-pool.md) for specific processing tasks. A compute pool can act as a [PolyBase](../relational-databases/polybase/polybase-guide.md) scale-out group for distributed queries over different data sources—such as HDFS, Oracle, MongoDB, or Teradata.
+The compute plane provides computational resources to the cluster. It contains nodes running SQL Server on Linux pods. The pods in the compute plane are divided into *compute pools* for specific processing tasks. A compute pool can act as a [PolyBase](../relational-databases/polybase/polybase-guide.md) scale-out group for distributed queries over different data sources—such as HDFS, Oracle, MongoDB, or Teradata.
 
 ### <a id="dataplane"></a> Data plane
 
-The data plane is used for data persistence and caching. It contains the SQL data pool, and storage nodes.  The SQL [data pool](concept-data-pool.md) consists of one or more nodes running SQL Server on Linux. It is used to ingest data from SQL queries or Spark jobs. SQL Big Data Cluster data marts are persisted in the data pool. The [storage pool](concept-storage-pool.md) consists of storage nodes comprised of SQL Server on Linux, Spark, and HDFS. All the storage nodes in a SQL Big Data cluster are members of an HDFS cluster.
-
-## Get started
-
-SQL Big Data Clusters is first available as a limited public preview through the SQL Server 2019
-Early Adoption Program. To request access, register [here](https://aka.ms/eapsignup), and specify your interest to try Big Data Clusters. Microsoft will triage all requests and respond as soon as possible.
-
-If you are accepted into the limited public preview, the next step is to setup a new Kubernetes cluster (or use an existing one) and then deploy SQL Server 2019 preview Big Data Clusters. For more information, see the following quickstart:
-
-[Deploy SQL Server Big Data Cluster on Kubernetes](quickstart-big-data-cluster-deploy.md)
+The data plane is used for data persistence and caching. It contains the SQL data pool, and storage nodes.  The SQL data pool consists of one or more nodes running SQL Server on Linux. It is used to ingest data from SQL queries or Spark jobs. SQL Big Data Cluster data marts are persisted in the data pool. The storage pool consists of storage nodes comprised of SQL Server on Linux, Spark, and HDFS. All the storage nodes in a SQL Big Data cluster are members of an HDFS cluster.
 
 ## Next steps
 
-After deploying SQL Server 2019 preview Big Data Clusters, explore some of its capabilities with the following quickstart:
-
-- [Get started with SQL Server Big Data Cluster on SQL Server 2019 preview](quickstart-big-data-cluster-get-started.md)
+SQL Big Data Clusters is first available as a limited public preview through the SQL Server 2019
+Early Adoption Program. To request access, register [here](https://aka.ms/eapsignup), and specify your interest to try Big Data Clusters. Microsoft will triage all requests and respond as soon as possible.

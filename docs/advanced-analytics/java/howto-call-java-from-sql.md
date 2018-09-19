@@ -26,12 +26,18 @@ This article explains implementation details for Java classes and methods that e
 
 * If the class belongs to a package, the "packageName" needs to be provided.
 
-* "params" is used to pass parameters to the Java class. Calling methods that require arguments is not supported, which makes parameters the recommended way to pass argument values. 
+* "params" is used to pass parameters to a Java class. Calling a method that requires arguments is not supported, which makes parameters the only way to pass argument values to your method. 
 
 > [!Note]
->  On the stored procedure, only input parameters are supported in CTP2.0.
+> This note restates supported and unsupported operations specific to Java in CTP 2.0.
+> * On the stored procedure, input parameters are supported. Output parameters are not.
+> * Streaming using the sp_execute_external_script parameter **@r_rowsPerRead** is not supported.
+> * Partitioning using **@input_data_1_partition_by_columns** is not supported.
+> * Parallel processing using **@parallel=1** is supported.
 
-The following example shows an sp_execute_external_script using the Java extension, with path and API signature specifications.
+## Call sp_execute_external_script
+
+The [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) system stored procedure is the interface used to call the Java runtime. The following example shows an sp_execute_external_script using the Java extension, and parameters for specifying path, script, and your custom code.
 
 ```sql
 DECLARE @myClassPath nvarchar(30)
@@ -74,13 +80,11 @@ In order for SQL Server to communicate with the Java runtime, you need to implem
 > Expect the implementation details to change in upcoming CTPs as we work to improve the experience for developers.
 
 ## Method requirements
-Make sure that the method you want to call from SQL Server does NOT have any arguments. The return type must be void.  
+To pass arguments, use the **@param** parameter in sp_execute_external_script. The method itself cannot have any arguments. The return type must be void.  
 
 ```java
 public static void test()  {}
 ```
-
-To pass arguments, use the **@param** parameter in sp_execute_external_script.
 
 ## Data inputs 
 
@@ -121,10 +125,10 @@ This section describes **OutputDataSet**, the output data sets returned from Jav
 
 ### outputDataColN
 
-Similar to **inputDataSet**, for every output column your Java program sends back to SQL Server, you must declare an array variable. All **outputDataCol** arrays should have the same length.
+Similar to **inputDataSet**, for every output column your Java program sends back to SQL Server, you must declare an array variable. All **outputDataCol** arrays should have the same length. You need to make sure this is initialized by the time the class execution finishes.
 
 ```java
-public static <type>[] outputDataColN = new <type>[1]
+public static <type>[] outputDataColN = new <type>[]
 ```
 
 ### numberofOutputCols

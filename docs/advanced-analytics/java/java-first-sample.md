@@ -12,7 +12,7 @@ manager: cgronlun
 monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
 
-# SQL Server Java sample
+# SQL Server Java sample walkthrough
 
 This example demonstrates a Java class that receives two columns (ID and text) from SQL Server and returns two columns back to SQL Server (ID and ngram). For a given ID and string combination, the code generates permutations of ngrams (substrings), returning those permutations along with the original ID. The length of the ngram is defined by a parameter sent to the Java class.
 
@@ -24,7 +24,7 @@ This example demonstrates a Java class that receives two columns (ID and text) f
 
 + Java SE Development Kit (JDK) 1.10 on Windows, or JDK 1.8 on Linux.
 
-A Java IDE is helpful for creating and compiling classes. If you don't have one, we recommend [Visual Studio Code](https://code.visualstudio.com/download) with the [Java extension](https://code.visualstudio.com/docs/languages/java) (not related to the SQL Server Java extension).
+Command-line compilation using **javac** is sufficient for this tutorial. 
 
 ## 1 - Load sample data
 
@@ -80,18 +80,18 @@ public class Ngram {
     //Optional: This is only required if parameters are passed with @params
     // from SQL Server in sp_execute_external_script
     // n is giving us the size of ngram substrings
-    public static int param1; //= 3;
+    public static int param1;
 
-    //The number of rows we will be returning
+    //Optional: The number of rows we will be returning
     public static int numberOfRows;
 
     //Required: Number of output columns returned
     public static short numberOfOutputCols;
 
-    //Java main method
+    /*Java main method - Only for testing purposes outside of SQL Server
     public static void main(String... args) {
         //getNGrams();
-    }
+    }*/
 
     //This is the method we will be calling from SQL Server
     public static void getNGrams() {
@@ -112,7 +112,6 @@ public class Ngram {
                 // Generate ngrams of size n for each incoming string
                 // Each invocation of ngrams returns a list. flatMap flattens
                 // the resulting list-of-lists to a flat list.
-                //.flatMap(inputRow -> ngrams(param1, inputRow.text.trim()).stream()
                 .flatMap(inputRow -> ngrams(param1, inputRow.text).stream().map(s -> new OutputRow(inputRow.id, s)))
                 .collect(Collectors.toList());
 
@@ -142,6 +141,7 @@ public class Ngram {
                 .mapToObj(i -> text.substring(i, i + n))
                 .collect(Collectors.toList());
     }
+}
 ```
 
 ## 3 - Class InputRow.java
@@ -165,7 +165,7 @@ public class InputRow {
 
 ## 4 - Class OutputRow.java
 
-The third and final class is called **OutputRow.java**. Copy the code into the class and save it in the same location as the others.
+The third and final class is called **OutputRow.java**. Copy the code and save as OutputRow.java in the same location as the others.
 
 ```java
 package pkg;
@@ -187,27 +187,54 @@ public class OutputRow {
 
 ## 5 - Compile
 
-Once you have your classes ready, compile them to get ".class" files. You should have three .class files for this sample. (Ngram.class, InputRow.class and OutputRow.class).
+Once you have your classes ready, run javac to compile them into ".class" files (`javac Ngram.java InputRow.java OutputRow.java`). You should get three .class files for this sample (Ngram.class, InputRow.class, and OutputRow.class).
 
-The files should be located in a subfolder called "pkg" in your classpath location. For example, if the classpath location is called '/home/myclasspath/', then the .class files should be in '/home/myclasspath/pkg'.
+Place the compiled code into a subfolder called "pkg" in the classpath location. If you are working on a development workstation, this step is where you copy the files to the SQL Server computer.
 
-In this sample, the CLASSPATH provided in the sp_execute_external_script is '/home/myclasspath/'.
+The classpath is the location of compiled code. For example, on Linux, if the classpath is '/home/myclasspath/', then the .class files should be in '/home/myclasspath/pkg'. In the example script in step 7, the CLASSPATH provided in the sp_execute_external_script is '/home/myclasspath/' (assuming Linux). 
 
-### Using jar files
+On Windows, we recommend using a relatively shallow folder structure, one or two levels deep, to simplify permissions. For example, your classpath might look like 'C:\myJavaCode' with a subfolder called '\pkg' containing the compiled classes. 
 
-If you plan to package your classes and dependencies into .jar files, you can do so and provide the full path to the .jar file in the sp_execute_external_script CLASSPATH parameter.
+For more information about classpath, see [Set CLASSPATH](howto-call-java-from-sql.md#set-classpath). 
 
-For example, if the jar file is called 'ngram.jar', the CLASSPATH will be '/home/myclasspath/ngram.jar'
+### Using .jar files
+
+If you plan to package your classes and dependencies into .jar files, provide the full path to the .jar file in the sp_execute_external_script CLASSPATH parameter. For example, if the jar file is called 'ngram.jar', the CLASSPATH will be '/home/myclasspath/ngram.jar' on Linux.
+
+## 6 - Permissions
+
+Script execution only succeeds if the process identities have access to your code. 
+
+### On Linux
+
+Grant read/execute permissions on the classpath to the **mssql-satellite** user.
+
+### On Windows
+
+Grant 'Read and Execute' permissions to **SQLRUserGroup** and the **All application packages** SID on the folder containing your compiled Java code. The entire folder path must have permissions, including parent folders. 
+ 
+1. Right-click the folder (for example, 'C:\myJavaCode'), choose **Properties** > **Security**.
+2. Click **Edit**.
+3. Click **Add**.
+4. In **Select Users, Computer, Service Accounts, or Groups**:
+   + Click **Object Types** and make sure *Built-in security principles* and *Groups* are selected.
+   + Click **Locations** to select the local computer name at the top of the list.
+5. Enter **SQLRUserGroup**, check the name, and then click OK to add the group.
+6. Enter **all application packages**, check the name, and then click OK to add. If the name doesn't resolve, revisit the Locations step. The SID is local to your machine.
+
+Make sure both security identities have 'Read and Execute' permissions on the folder and "pkg" subfolder.
 
 <a name="call-method"></a>
 
-## 6 - Call *getNgrams()*
+## 7 - Call *getNgrams()*
 
-To call the code from SQL Server, specify the Java method *getNgrams()* from the "script" parameter of sp_execute_external_script. This method belongs to a package called "pkg" and a class file called **Ngram.java**.
+To call the code from SQL Server, specify the Java method **getNgrams()** in the "script" parameter of sp_execute_external_script. This method belongs to a package called "pkg" and a class file called **Ngram.java**.
 
-This example passes the CLASSPATH parameter to provide the path to the Java files. It also uses "params" to pass a parameter to the Java class. 
+This example passes the CLASSPATH parameter to provide the path to the Java files. It also uses "params" to pass a parameter to the Java class. Make sure that classpath does not exceed 30 characters. If it does, increase the value in the script below.
 
-Run the following code in SQL Server Management Studio or another tool used for running Transact-SQL.
++ On Linux, run the following code in SQL Server Management Studio or another tool used for running Transact-SQL. 
+
++ On Windows, change **@myClassPath** to N'C:\myJavaCode\' (assuming it's the parent folder of \pkg) before executing the query in SQL Server Management Studio or another tool.
 
 ```sql
 DECLARE @myClassPath nvarchar(30)
@@ -231,7 +258,7 @@ GO
 
 ### Results
 
-After executing the call, you should receive a result set showing the two columns:
+After executing the call, you should get a result set showing the two columns:
 
 ![Results from Java sample](../media/java/java-sample-results.png "Sample results")
 

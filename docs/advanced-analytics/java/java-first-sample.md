@@ -191,7 +191,7 @@ Once you have your classes ready, run javac to compile them into ".class" files 
 
 Place the compiled code into a subfolder called "pkg" in the classpath location. If you are working on a development workstation, this step is where you copy the files to the SQL Server computer.
 
-The classpath is the location of compiled code. For example, on Linux, if the classpath is'/home/myclasspath/', then the .class files should be in '/home/myclasspath/pkg'. In the example script in step 7, the CLASSPATH provided in the sp_execute_external_script is '/home/myclasspath/' (assuming Linux). 
+The classpath is the location of compiled code. For example, on Linux, if the classpath is '/home/myclasspath/', then the .class files should be in '/home/myclasspath/pkg'. In the example script in step 7, the CLASSPATH provided in the sp_execute_external_script is '/home/myclasspath/' (assuming Linux). 
 
 On Windows, we recommend using a relatively shallow folder structure, one or two levels deep, to simplify permissions. For example, your classpath might look like 'C:\myJavaCode' with a subfolder called '\pkg' containing the compiled classes. 
 
@@ -199,11 +199,11 @@ For more information about classpath, see [Set CLASSPATH](howto-call-java-from-s
 
 ### Using .jar files
 
-If you plan to package your classes and dependencies into .jar files, provide the full path to the .jar file in the sp_execute_external_script CLASSPATH parameter. For example, if the jar file is called 'ngram.jar', the CLASSPATH will be '/home/myclasspath/ngram.jar'
+If you plan to package your classes and dependencies into .jar files, provide the full path to the .jar file in the sp_execute_external_script CLASSPATH parameter. For example, if the jar file is called 'ngram.jar', the CLASSPATH will be '/home/myclasspath/ngram.jar' on Linux.
 
 ## 6 - Permissions
 
-Script execution only succeeds if you grant permissions allowing the user identities access to your code. 
+Script execution only succeeds if the process identities have access to your code. 
 
 ### On Linux
 
@@ -228,13 +228,13 @@ Make sure both security identities have 'Read and Execute' permissions on the fo
 
 ## 7 - Call *getNgrams()*
 
-To call the code from SQL Server, specify the Java method *getNgrams()* from the "script" parameter of sp_execute_external_script. This method belongs to a package called "pkg" and a class file called **Ngram.java**.
+To call the code from SQL Server, specify the Java method **getNgrams()** in the "script" parameter of sp_execute_external_script. This method belongs to a package called "pkg" and a class file called **Ngram.java**.
 
 This example passes the CLASSPATH parameter to provide the path to the Java files. It also uses "params" to pass a parameter to the Java class. Make sure that classpath does not exceed 30 characters. If it does, increase the value in the script below.
 
 + On Linux, run the following code in SQL Server Management Studio or another tool used for running Transact-SQL. 
 
-+ On Windows, change **@myClassPath** to N'C:\myJavaCode\' (assuming it's the parent folder of \pkg) before executing the query. 
++ On Windows, change **@myClassPath** to N'C:\myJavaCode\' (assuming it's the parent folder of \pkg) before executing the query in SQL Server Management Studio or another tool.
 
 ```sql
 DECLARE @myClassPath nvarchar(30)

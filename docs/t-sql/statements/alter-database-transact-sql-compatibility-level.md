@@ -167,7 +167,9 @@ For the recommended workflow for upgrading the compatibility level, see [Change 
 ## Differences Between Compatibility Level 140 and Level 150  
 This section describes new behaviors introduced with compatibility level 150.
 
-Database compatibility level 150 is currently in Private Preview for Azure SQL Database.  This database compatibility level will be associated with the next generation of query processing improvements beyond what was introduced in database compatibility level 140.  
+Database compatibility level 150 is currently in Private Preview for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. This database compatibility level will be associated with the next generation of query processing improvements beyond what was introduced in database compatibility level 140.
+
+For more information on query processing features enabled in database compatibility level 150, refer to [What's new in SQL Server 2019](../../sql-server/what-s-new-in-sql-server-ver15.md).
 
 ## Differences Between Compatibility Level 130 and Level 140  
 This section describes new behaviors introduced with compatibility level 140.

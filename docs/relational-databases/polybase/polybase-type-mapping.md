@@ -28,8 +28,8 @@ For external tables that reference files in external data sources, the column an
 > SQL Server does not support the Hive *infinity* data value in any conversion. PolyBase will fail with a data type conversion error.
 
 ## Collation
-
-## Type mapping reference
+TBD
+## Hadoop Type mapping reference
 
 | SQL Data Type | .NET Data Type            | Hive Data Type | Hadoop/Java Data Type | Comments                       |
 | ------------- | ------------------------- | -------------- | --------------------- | ------------------------------ |
@@ -55,37 +55,160 @@ For external tables that reference files in external data sources, the column an
 | time          | TimeSpan                  | timestamp      | TimestampWritable     |
 | decimal       | Decimal                   | decimal        | BigDecimalWritable    | Applies to Hive0.11 and later. |
 
-## ODBC Type
 
-|ODBC Data type|SQL DB type – strict mapping|SQL DB type – permissive mappin|  
-|--------------------------|--------------------------|-----------------|  
-|SQL_NUMERIC|Decimal|Decimal with different precision/scale, Int (if scale = 0)|  
-|SQL_DECIMAL|Decimal|Decimal with different precision/scale, Int (if scale = 0)|  
-|SQL_INTEGER|Int|TinyInt, SmallInt, Int, BigInt, Decimal|  
-|SQL_SMALLINT|SmallInt|TinyInt, SmallInt, Int, BigInt, Decimal|  
-|SQL_BIGINT|BigInt|TinyInt, SmallInt, Int, BigInt, Decimal|  
-|SQL_TINYINT|TinyInt|TinyInt, SmallInt, Int, BigInt, Decimal|  
-|SQL_FLOAT|Float|Float|  
-|SQL_REAL|Real|Float, Real|  
-|SQL_DOUBLE|Float|Float|  
-|SQL_WCHAR|Nchar|Nchar with different length, Nvarchar, Nvarchar (max)  |  
-|SQL_WVARCHAR|NVarchar|NVarchar with different length, Nvarchar(max)|  
-|SQL_WLONGVARCHAR|NText|NText, NVarchar, Nvarchar(max)|  
-|SQL_VARCHAR|VarChar|Varchar with different length, Varchar(max)|
-|SQL_LONGVARCHAR|Text|Text, Varchar, Varchar(max)|  
-|SQL_BIT|Bit|Bit, TinyInt, SmallInt, Int, BigInt|  
-|SQL_BINARY|Binary|Binary, Varbinary, Varbinary(max)|  
-|SQL_VARBINARY|VarBinary|VarBinary with different length, Varbinary(max)|  
-|SQL_SS_VARIANT|Binary|Binary with different length, Varbinary, Varbinary(max)|
-|SQL_SS_XML ,  SQL_TD_XML|Text|XML, Text, Varchar(max)|
-|SQL_DATETIME|Datetime2|Datetime, Datetime2|
-|SQL_TYPE_DATE|Date|Date, Datetime, Datetime2| 
-|SQL_TYPE_TIME|Time|Time, Datetime, Datetime2, Datetimeoffset|
-|SQL_TYPE_TIMESTAMP|DateTime2|Datetime, Datetime2| 
-|SQL_GUID|UniqueIdentifier|UniqueIdentifier| 
+## Oracle Type mapping reference
+
+| Oracle data type | SQL Server type           | 
+| ------------- | ------------------------- |
+|Float |Float|
+|Decimal|Decimal|
+|Int |Int|
+|Long |Ntext|
+|Binary Float|Real| 
+|Char |Nchar|
+|Varchar2|Nvarchar| 
+|Raw |Varbinary|
+|Long Raw|Image| 
+|Bfile |Image|
+|Blob |Image|
+|Clob |Image|
+|Rowid |Varchar|
+|Date |Datetime2|
+|Timestamp|Datetime2| 
+|Timestamp with local timezone|Datetime2| 
+
+**Type mismatch:** 
+
+Float:
+Oracle supports floating point precision of 126, which is considerably lower than what SQL server supports (53). Thus, Float (1-53) can be mapped directly and beyond that, we will experience data loss/truncation. 
+
+Character types: 
+For types, such as Long and Bfile, Oracle supports data type size of 4GB. Wherease, SQL server supports only 2GB. We should expect data truncation. Similarly, for oracle data types Blob and clob, oracle can support upto 128 TB, whereas SQL server LONGVARBINARY or WLONGVARBINARY cannot support more than 2GB.  
+
+Timestamp: 
+Timestamp and Timestamp with local timezone in Oracle supports 9 fractional seconds precision whereas, SQL server DateTime2 supports only 7 fractional seconds precision. 
+
+Driver Configuration option:
+Default buffer size for Long/LOB columns (in Kb): 1024 – Configurable. 
+
+Timestamp:
+Simba maps Date, Timestamp and Timestamp with local zone to ODBC type SQL_TIMESTAMP and eventually SQL Server type Timestamp. Timestamp is an automatically generated unique row id. Ideally, SQL_TIMESTAMP should map to SQL server type DateTime/DateTime2 or Oracle types Date, Timestamp and Timestamp with local zone should map to ODBC type SQL_TYPE_TIMESTAMP. 
+
+## Mongo Type mapping reference
+
+| BSON data type | SQL Server type         | 
+| ------------- | ------------------------- |
+|Double |Float|
+|String|Nvarchar|
+|Object||
+|Array ||
+|Binary data|Nvarchar| 
+|Object ID|Nvarchar|
+|Boolean|Bit| 
+|Date |Datetime2|
+|32-bit integer|Int| 
+|Timestamp |Nvarchar|
+|64-bit integer |BigInt|
+|DBPointer|Nvarchar|
+|Javascript|Nvarchar|
+|Max Key|Nvarchar|
+|Min Key|Nvarchar|
+|Symbol|Nvarchar|
+|Regular Expression|Nvarchar|
+|Undefined/NULL|Nvarchar|
+
+**Javascript (with scope):** 
+
+The driver returns the value as a string containing “Unsupported Javascript with scope”.
+
+**Type mismatch - string:**
+
+MongoDB strings are converted into SQL_WVARCHAR type with a default column size of 255. This column size is tunable as a part of the driver configuration. Despite the ability to configure, SQL_WVARCHAR or SQL Server type Varchar supports only 2GB max and MongoDB can hold data upto 4GB. This might lead to truncation.   
+
+**MongoDB driver options:*
+- Enable double buffering - Selected by default 
+- Documents to fetch per block - Default 4096 
+- Expose strings as SQL_WVARCHAR – selected by default. If unselected, strings are exposed as SQL_VARCHAR. 
+- String column size – Default 255 
+- Expose Binary as SQL_LONGVARBINARY – Default selected. If unselected, Binary is exposed as SQL_VARBINARY. 
+- Binary Column Size – Default 32767. 
+- Enable passdown – Default selected. 
+
+**Schema related driver configurations:**
+
+- LoadMetadataTable - default from database. Can ask the driver to load the schema definition from JSON file specified. 
+- LocalMetadataFile - If we are reading from file, full path must be specified here 
+- Sampling method –  
+     - default forward (Driver samples data from first record) 
+     - backword - driver samples data starting from last record 
+- SamplingLimit - default 100 (Max no of records the driver can sample to generate temp schema def). When set to 0, driver samples every document 
+- SamplingStepSize - default 1 (Interval at which driver samples records when scanning database to generate temp schema def). E.g., when set to 2, it samples every second record in database
 
 
+## Teradata Type mapping reference
 
+| Teradata data type | SQL Server type         | 
+| ------------- | ------------------------- |
+|Int|Int|
+|Small Int|SmallInt|
+|Big Int|BigInt|
+|Byte Int |TinyInt|
+|Decimal|Decimal| 
+|Float|Float|
+|Byte|Binary| 
+|Varbyte|Varbinary|
+|Blob|Image| 
+|Char|Nchar|
+|Clob|Ntext|
+|Varchar|Nvarchar|
+|Graphic|Nchar|
+|JSON|Ntext|
+|Vargraphic|Nvarchar|
+|Date|Date|
+|Time|Time|
+|Time with Time Zone|Time|
+|Timestamp|Datetime2|
+|Interval Year||
+|Interval year to month||
+|Interval Month||
+|Interval Day||
+|Interval Day to Hour||
+|Interval Day to Minute||
+|Interval Day to Second||
+|Interval Hour||
+|Interval Hour to Minute||
+|Interval Hour to Second||
+|Interval Minute||
+|Interval Minute to Second||
+|Interval Second||
+|Period (DATE)||
+|Period (TIME) ||
+|Period (TIME with Timezone)||
+|Period (Timestamp)||
+|Period (Timestamp with Timezone)||
+
+**Period data type:** 
+        
+Period data type represents a duration marked by a beginning bound and ending bound. Essentially, it is a tuple. There is no SQL server equivalent type for period. 
+
+**Time with Timezone and Timestamp:** 
+
+Time with time zone and timestamp contains the timezone offset, which is lost during translation. This can be fixed if we map SQL_Type_Time/SQL_Type_Timestamp to datetimeoffset instead of Time/DateTime2. 
+
+**ByteInt:**
+
+Simba maps Teradata type ByteInt that can hold values between 0-255 into TinyInt that can hold values between -127 to 127. We might expect truncation here.  
+
+**CLOB:**
+
+CLOB data type with LATIN charset should be able to accept 2097088000 characters. However, beyond 1073741823, the buffer size becomes negative.  
+
+**Driver configuration options:**
+
+- Use DATE data for TIMESTAMP parameters 
+- Enable custom catalog mode for 2.X applications 
+- Return Empty string in CREATE_PARAMS column for SQL_TIMESTAMP 
+- Return Max. CHAR/VARCHAR length as 32K
 
 ## Next steps
 

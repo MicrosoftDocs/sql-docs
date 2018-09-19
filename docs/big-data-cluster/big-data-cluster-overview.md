@@ -82,7 +82,7 @@ Nodes in the cluster are arranged into three logical planes: the control plane, 
 
 ### <a id="controlplane"></a> Control plane
 
-The control plane provides management and [security](concept-security.md) for the cluster. It contains the Kubernetes master, the [SQL Server master instance](concept-master-instance.md), and other cluster-level services such as the Hive Metastore and Spark Driver.
+The control plane provides management and security for the cluster. It contains the Kubernetes master, the [SQL Server master instance](concept-master-instance.md), and other cluster-level services such as the Hive Metastore and Spark Driver.
 
 ### <a id="computeplane"></a> Compute plane
 
@@ -97,13 +97,14 @@ The data plane is used for data persistence and caching. It contains the SQL dat
 SQL Big Data Clusters is first available as a limited public preview through the SQL Server 2019
 Early Adoption Program. To request access, register [here](https://aka.ms/eapsignup), and specify your interest to try Big Data Clusters. Microsoft will triage all requests and respond as soon as possible.
 
-If you are accepted into the limited public preview, the next step is to setup a new Kubernetes cluster (or use an existing one) and then deploy SQL Server 2019 preview Big Data Clusters. For more information, see the following quickstart:
-
-[Deploy SQL Server Big Data Cluster on Kubernetes](quickstart-big-data-cluster-deploy.md)
-
 ## Next steps
 
-After deploying SQL Server 2019 preview Big Data Clusters, explore some of its capabilities with the following quickstarts:
+Learn more about SQL Server Big Data Clusters in the following articles:
 
-- [Get started with SQL Server Big Data Cluster on SQL Server 2019 preview](quickstart-big-data-cluster-get-started.md)
-- [Run Jupypter Notebooks on SQL Server 2019 preview](quickstart-big-data-cluster-notebooks.md)
+[HDFS](concept-hdfs.md)
+[Spark](concept-spark.md)
+[Controller](concept-controller.md)
+[Master instance](concept-master-instance.md)
+[Compute pool](concept-compute-pool.md)
+[Data pool](concept-data-pool.md)
+[Storage pool](concept-storage-pool.md)

@@ -55,30 +55,27 @@ In this command, the **RPC Endpoint Mapper** service has been bound to port 1350
 
 ## Configure the firewall
 
-In order to communicate with and through the host, you must also configure the firewall on the host server for the containers. Open the firewall for all ports that docker container exposes for communication. In the previous example, this would be ports 135, 51433, 13500, and 51000. These are the ports on the host itself and not the ports they map to in the container. So, if RPC Endpoint mapper port 13500 of container was mapped to host port 13501, then port 13501 would not be opened in the firewall for communication of the host.  
+In order to communicate with and through the host, you must also configure the firewall on the host server for the containers. Open the firewall for all ports that docker container exposes for communication. In the previous example, this would be ports 135, 51433, 13500, and 51000. These are the ports on the host itself and not the ports they map to in the container. So, if RPC Endpoint mapper port 13500 of container was mapped to host port 13501, then port 13501 (not 13500) should be opened in the firewall for communication with the host.  
 
-The following example shows how to create these rules on Ubuntu. 
+The following example shows how to create these rules on Ubuntu.
 
-sudo ufw allow from any to any port 13500 proto tcp 
+```bash
+sudo ufw allow from any to any port 13500 proto tcp
+sudo ufw allow from any to any port 51433 proto tcp
+sudo ufw allow from any to any port 51000 proto tcp
+sudo ufw allow from any to any port 135 proto tcp
+```
 
-sudo ufw allow from any to any port 51433 proto tcp 
+The following example shows how this could be done on Red Hat Enterprise Linux (RHEL):
 
-sudo ufw allow from any to any port 51000 proto tcp 
-
-sudo ufw allow from any to any port 135 proto tcp 
-
-The following example shows how this could be done on Red Hat Enterprise Linux (RHEL): 
-
-sudo firewall-cmd --zone=public --add-port=51999/tcp --permanent 
-
-sudo firewall-cmd --zone=public --add-port=51433/tcp --permanent 
-
-sudo firewall-cmd --zone=public --add-port=13500/tcp --permanent 
-
-sudo firewall-cmd --zone=public --add-port=135/tcp --permanent 
-
-sudo firewall-cmd --reload 
+```bash
+sudo firewall-cmd --zone=public --add-port=51999/tcp --permanent
+sudo firewall-cmd --zone=public --add-port=51433/tcp --permanent
+sudo firewall-cmd --zone=public --add-port=13500/tcp --permanent
+sudo firewall-cmd --zone=public --add-port=135/tcp --permanent
+sudo firewall-cmd --reload
+```
 
 ## Next steps
 
-TBD
+For more information about MSDTC on Linux, see [How to configure the Microsoft Distributed Transaction Coordinator (MSDTC) on Linux](sql-server-linux-configure-msdtc.md).

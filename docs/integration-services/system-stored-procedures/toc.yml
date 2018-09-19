@@ -116,6 +116,12 @@
   href: catalog-start-execution-ssisdb-database.md
 - name: catalog.stop_operation
   href: catalog-stop-operation-ssisdb-database.md
+- name: Update
+  items:
+  - name: catalog.update_logdb_info (SSISDB Database)
+    href: catalog-update-logdb-info.md
+  - name: catalog.update_master_address (SSISDB Database)
+    href: catalog-update-master-address.md
 - name: Validate
   items:
   - name: catalog.validate_package

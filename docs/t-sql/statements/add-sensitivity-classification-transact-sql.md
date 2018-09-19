@@ -1,13 +1,8 @@
 ---
 title: "ADD SENSITIVITY CLASSIFICATION (Transact-SQL) | Microsoft Docs"
-ms.date: "06/17/2018"
+ms.date: 06/17/2018
 ms.reviewer: ""
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.service: "sql-database"
 ms.technology: t-sql
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 ms.custom: ""
 ms.manager: craigg
@@ -123,6 +118,6 @@ ADD SENSITIVITY CLASSIFICATION TO
 
 [sys.sensitivity_classifications (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sensitivity-classifications-transact-sql.md)
 
-[Permissions (Database Engine)](https://docs.microsoft.com/en-us/sql/relational-databases/security/permissions-database-engine)
+[Permissions (Database Engine)](https://docs.microsoft.com/sql/relational-databases/security/permissions-database-engine)
 
 [Getting started with SQL Information Protection](http://aka.ms/sqlip)

@@ -22,6 +22,9 @@ manager: craigg
 
 The Microsoft ODBC Driver for SQL Server with version 13.1 or above allows ODBC applications to connect to an instance of SQL Azure using a federated identity in Azure Active Directory with a username/password, an Azure Active Directory access token, or Windows Integrated Authentication (_Windows driver only_). For the ODBC Driver version 13.1, the Azure Active Directory access token authentication is _Windows only_. The ODBC Driver version 17 and above support this authentication across all platforms (Windows, Linux and Mac). A new Azure Active Directory interactive authentication with Login ID is introduced in ODBC Driver version 17.1 for Windows. All of these are accomplished through the use of new DSN and connection string keywords, and connection attributes.
 
+> [!NOTE]
+> The ODBC Driver on Linux and macOS does not support Active Directory Federation Services. If you are using Azure Active Directory username/password authentication from a Linux or macOS client and your Active Directory configuration includes Federated Services, authentication may fail.
+
 ## New and/or Modified DSN and Connection String Keywords
 
 The `Authentication` keyword can be used when connecting with a DSN or connection string to control the authentication mode. The value set in the connection string overrides that in the DSN, if provided. The _pre-attribute value_ of the `Authentication` setting is the value computed from the connection string and DSN values.

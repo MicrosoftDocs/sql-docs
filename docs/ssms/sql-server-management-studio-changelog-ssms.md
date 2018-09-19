@@ -21,7 +21,7 @@ manager: craigg
 This article provides details about updates, improvements, and bug fixes for the current and previous versions of SSMS. Download [previous SSMS versions below](#previous-ssms-releases).
 
 
-## [SSMS 18.0](download-sql-server-management-studio-ssms.md)
+## [SSMS 18.0 (preview)](download-sql-server-management-studio-ssms.md)
 
 Build number: 18.0<br>
 Release date: September 24, 2018
@@ -294,11 +294,6 @@ SSIS
 
 - Package can’t be deployed or executed successfully when it targets SQL Server of old version and contains Script Task/Script component at the same time.
 - SSMS can’t connect to remote Integration Services.
-
-
-
-
-
 
 
 

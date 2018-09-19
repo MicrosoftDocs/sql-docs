@@ -201,7 +201,7 @@ For more information about classpath, see [Set CLASSPATH](howto-call-java-from-s
 
 If you plan to package your classes and dependencies into .jar files, provide the full path to the .jar file in the sp_execute_external_script CLASSPATH parameter. For example, if the jar file is called 'ngram.jar', the CLASSPATH will be '/home/myclasspath/ngram.jar' on Linux.
 
-## 6 - Permissions
+## 6 - Set permissions
 
 Script execution only succeeds if the process identities have access to your code. 
 
@@ -211,7 +211,9 @@ Grant read/execute permissions on the classpath to the **mssql-satellite** user.
 
 ### On Windows
 
-Grant 'Read and Execute' permissions to **SQLRUserGroup** and the **All application packages** SID on the folder containing your compiled Java code. The entire folder path must have permissions, including parent folders. 
+Grant 'Read and Execute' permissions to **SQLRUserGroup** and the **All application packages** SID on the folder containing your compiled Java code. 
+
+The entire tree must have permissions, from root parent to the last subfolder. 
  
 1. Right-click the folder (for example, 'C:\myJavaCode'), choose **Properties** > **Security**.
 2. Click **Edit**.

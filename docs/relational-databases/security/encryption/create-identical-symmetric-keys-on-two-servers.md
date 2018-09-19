@@ -3,7 +3,7 @@ title: "Create Identical Symmetric Keys on Two Servers | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.reviewer: ""
+ms.reviewer: vanto
 ms.suite: "sql"
 ms.technology: security
 ms.tgt_pltfrm: ""

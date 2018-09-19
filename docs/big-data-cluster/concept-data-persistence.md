@@ -79,3 +79,4 @@ Here is a comprehensive list of the environment variables related to setting up 
 For complete documentation about volumes in Kubernetes, see the [Kubernetes documentation on Volumes](https://kubernetes.io/docs/concepts/storage/volumes/).
 
 For more information about deploying SQL Server Big Data Cluster, see [How to deploy SQL Server Big Data Cluster on Kubernetes](deployment-guidance.md).
+

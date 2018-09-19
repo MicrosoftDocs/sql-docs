@@ -129,7 +129,7 @@ Monitor and troubleshoot PolyBase queries using the following DMVs.
    ORDER BY total_elapsed_time DESC;  
    ```  
 
-## To view the  PolyBase query plan  
+## To view the  PolyBase query plan (To be changed) 
 
 1. In SSMS, enable **Include Actual Execution Plan** (Ctrl + M) and run the query.
 

@@ -170,7 +170,6 @@ Includes open-source R and Python, extensibility framework, microsoft-openmpi, e
 sudo zypper install mssql-mlservices-mlm-py-9.4.5*
 sudo zypper install mssql-mlservices-mlm-r-9.4.5* 
 sudo zypper install mssql-server-extensibility-java
-
 ```
 
 ### Example 2 - Minimum installation 
@@ -189,7 +188,14 @@ sudo zypper install mssql-server-extensibility-java
 
 Additional configuration is primarily through the [mssql-conf tool](sql-server-linux-configure-mssql-conf.md).
 
-1. Accept the licensing agreements for open-source R and Python. There are several ways to do this. If you previously accepted SQL Server licensing and are now adding the R or Python extensions, the following command is your consent to their terms:
+
+1. Add user accounts.
+
+  ```bash
+  sudo /opt/mssql/bin/mssql-conf setup
+  ```
+
+2. Accept the licensing agreements for open-source R and Python. There are several ways to do this. If you previously accepted SQL Server licensing and are now adding the R or Python extensions, the following command is your consent to their terms:
 
   ```bash
   # Run as SUDO or root
@@ -199,14 +205,20 @@ Additional configuration is primarily through the [mssql-conf tool](sql-server-l
 
   An alternative workflow is that if you have not yet accepted the SQL Server database engine licensing agreement, setup detects the mssql-mlservices packages and prompts for EULA acceptance when `mssql-conf setup` is run. For more information about EULA parameters, see [Configure SQL Server with the mssql-conf tool](sql-server-linux-configure-mssql-conf.md#mlservices-eula).
 
-2. Enable external script execution. 
+3. Restart the SQL Server Launchpad service.
+
+  ```bash
+  systemctl restart mssql-launchpadd
+  ```
+
+4. Enable external script execution in SQL Server Management Studio or another tool that runs Transact-SQL. 
 
   ```bash
   EXEC sp_configure 'external scripts enabled', 1 
   RECONFIGURE WITH OVERRIDE 
   ```
 
-You should now be able to run external scripts on SQL Server with no restart required. 
+
 
 ## Verify installation
   
@@ -239,7 +251,10 @@ GO
 
 ## Chained installation
 
-You can install and configure the database engine and Machine Learning Services in one procedure by appending the extensibility, R, or Python packages and EULA parameters on a command that installs the database engine. The following example is a "template" illustration using the Yum package manager of what a combined package installation looks like:
+You can install and configure the database engine and Machine Learning Services in one procedure by appending the extensibility, R, or Python packages and EULA parameters on a command that installs the database engine. 
+
+<!--
+The following example is a "template" illustration using the Yum package manager of what a combined package installation looks like:
 
 ```bash
 sudo yum install -y mssql-sqlserver mssql-server-extensibility mssql-server-extensibility-java mssql-mlservices-mlm-py mssql-mlservices-mlm-r
@@ -249,6 +264,7 @@ Use the mssql-conf tool to configure the entire installation. EULAs for open-sou
 ```bash
 sudo MSSQL_PID=Developer ACCEPT_EULA=Y MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>'
 ```
+-->
 
 ## Unattended installation
 
@@ -260,12 +276,12 @@ All possible permutations of EULA acceptance are documented in [Configure SQL Se
 
 ## Offline installation
 
-Locate the Machine Learning Services and extensibility package downloads in the [Release notes](sql-server-linux-release-notes-2019.md). Follow the [Offline installation](sql-server-linux-setup.md#offline) instructions using the packages you obtained.
+On an internet-connected machine, locate the package repositories for SQL Server packages in the [Release notes](sql-server-linux-release-notes-2019.md). Find the R, Python, and Java packages using the list below. Follow the [Offline installation](sql-server-linux-setup.md#offline) instructions for the packages you obtained.
 
 R, Python, and Java package file names for a full install on RHEL or SUSE:
 
 ```
-microsoft-openmpi-3.0.0-x86_64.rpm`
+microsoft-openmpi-3.0.0-x86_64.rpm
 mssql-server-extensibility-15.0.1000.xxxx-y.x86_64.rpm
 mssql-server-extensibility-java-15.0.1000.xxxx-y.x86_64.rpm
 mssql-mlservices-mlm-py-9.4.5.x86_64.rpm

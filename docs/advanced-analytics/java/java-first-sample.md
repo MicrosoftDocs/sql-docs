@@ -207,7 +207,7 @@ Script execution only succeeds if the process identities have access to your cod
 
 ### On Linux
 
-Grant read/execute permissions on the classpath to the **mssql-satellite** user.
+Grant read/execute permissions on the classpath to the **mssql_satellite** user.
 
 ### On Windows
 

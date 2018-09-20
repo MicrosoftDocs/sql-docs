@@ -45,14 +45,6 @@ The data set is large and training operations are resource-intensive. If possibl
 
 SQL Server 2019 CTP 2.0 or later, with Machine Learning Services installed and configured, is required. You can check server version in Management Studio by executing `SELECT @@Version` as a T-SQL query. Output should be "Microsoft SQL Server 2019 (CTP 2.0) - 15.0.x".
 
-### Tools for query execution
-
-You can [download and install SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms), or use any tool that connects to a relational database and runs T-SQL script. Make sure you can connect to a database engine instance that has Machine Learning Services.
-
-### Sample data
-
-Data originates from the [NYC Taxi and Limousine Commission](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml) public data set. If you completed other tutorials, you might have the database already. For instructions and script, see [Download NYC Taxi demo data from Github](sqldev-download-the-sample-data.md).
-
 ### R packages
 
 This tutorial uses R installed with Machine Learning Services. You can verify R installation by returning a well-formatted list of all R packages currently installed with your database engine instance:
@@ -68,6 +60,58 @@ EXECUTE sp_execute_external_script
   @input_data_1 = N''
 WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 ```
+
+### Tools for query execution
+
+You can [download and install SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms), or use any tool that connects to a relational database and runs T-SQL script. Make sure you can connect to a database engine instance that has Machine Learning Services.
+
+### Sample data
+
+Data originates from the [NYC Taxi and Limousine Commission](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml) public data set. 
+
+1.  Open a Windows PowerShell command console.
+  
+    Use the **Run as Administrator** option to create the destination directory or to write files to the specified destination.
+  
+2.  Run the following PowerShell commands, changing the value of the parameter *DestDir* to any local directory. The default we've used here is **TempRSQL**.
+  
+    ```ps
+    $source = ‘https://raw.githubusercontent.com/Azure/Azure-MachineLearning-DataScience/master/Misc/RSQL/Download_Scripts_SQL_Walkthrough.ps1’  
+    $ps1_dest = “$pwd\Download_Scripts_SQL_Walkthrough.ps1”
+    $wc = New-Object System.Net.WebClient
+    $wc.DownloadFile($source, $ps1_dest)
+    .\Download_Scripts_SQL_Walkthrough.ps1 –DestDir ‘C:\tempRSQL’
+    ```
+
+3. The folder and scripts are downloaded, but currently an error occurs on the data file download. As a temporary workaround, download [nyctaxi1pct.csv](https://sqlmldoccontent.blob.core.windows.net/sqlml/nyctaxi1pct.csv) as a separate step. Place the file in the tempRSQL folder.
+
+4. Run the following command to review the files that have been downloaded. Your folder should contain the following files.
+  
+    ```
+    ls
+    ```
+  
+    **Results:**
+  
+    ![list of files downloaded by PowerShell script](media/rsql-devtut-filelist.png "list of files downloaded by PowerShell script")
+
+5. On Windows, if you are using trusted authentication and your Windows identity to create the database, edit line 238 of `RunSQL_SQL_Walkthrough.ps1` by adding `-T` after `-P $p` so that the end of the command looks like this: `-P $p -T`. Skip this step if you are using a SQL Server login.
+
+6. From C:\tempRSQL, run the following command.
+  
+	```ps
+	.\RunSQL_SQL_Walkthrough.ps1
+	```
+
+	You are prompted to input the following information:
+
+	+ Server instance where [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] has been installed. On a default instance, this can be as simple as the machine name.
+
+	+ Database name. For this tutorial, scripts assume `NYCTaxi_Sample`.
+
+	+ User name and user password. Enter a SQL Server database login for these values. Alternatively, if you modified the script to accept a trusted Windows identity, press Enter to leave these values blank. Your Windows identity is used on the connection.
+
+	+ Fully qualified file name for the sample data downloaded in the previous lesson. For example: `C:\tempRSQL\nyctaxi1pct.csv`
 
 ## Connect to the database
 

@@ -56,7 +56,7 @@ The following examples demonstrate how to run the scripts.
 ### Help
 
 ```python
-   ./deploy-ag.py --help
+./deploy-ag.py --help
 ```
 
 * **usage**: `deploy-ag.py [-h] {deploy | failover} ...`
@@ -173,13 +173,13 @@ The following examples demonstrate how to run the scripts.
 The following script creates the manifest files but does not apply them.
 
 ```python
-	./deploy-ag.py deploy --dry-run
+python ./deploy-ag.py deploy --dry-run
 ```
 
 The following example creates an availability group with three replicas on instances named SQL1, SQL2, and SQL3. 
 
 ```python
-	python.exe ./deploy-ag.py deploy --ag ag1 --namespace AG1 --sql-servers ['SQL1', 'SQL2', 'SQL3'] --sa-password '<MyC0m91exP@55w0r!>' --env AKS --dry-run
+	python ./deploy-ag.py deploy --ag ag1 --namespace AG1 --sa-password '<MyC0m91exP@55w0r!>' --env AKS --dry-run
 ```
 
 In this case the results are as follows.
@@ -201,13 +201,13 @@ This generates the sample yaml files in the `<path>` directory.
 ### Create the Specs and apply
 
 ```python
-	python.exe ./deploy-ag.py deploy --ag ag1 --namespace ag1 --sa-password '!Locks123' --env AKS --verbose
+	python ./deploy-ag.py deploy --ag ag1 --namespace ag1 --sa-password '!Locks123' --env AKS --verbose
 ```	
 
 ### Perform a Manual Failover
 
 ```python
-	./deploy-ag.py failover --ag ag1 --namespace ag1 --verbose mssql1-0
+python ./deploy-ag.py failover --ag ag1 --namespace ag1 --verbose mssql1-0
 ```
 
   ## Next steps

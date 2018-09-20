@@ -2,7 +2,7 @@
 title: "What's New in SSMA for MySQL (MySQLToSql) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""
-ms.date: "08/14/2018"
+ms.date: "09/22/2018"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: ssma
@@ -19,6 +19,14 @@ manager: craigg
 ---
 # What's New in SSMA for MySQL (MySQLToSql)
 This article lists SSMA for MySQL changes in each release. 
+
+## SSMA v7.10
+The v7.10 release of SSMA for MySQL contains the following changes:
+- Targeted fixes designed to provide additional security and privacy protections to meet changes in global requirements.
+- A fix for conversion of spaces between function name and arguments list.
+
+> [!IMPORTANT]
+> With SSMA v7.4 and later versions, .Net 4.5.2 is an installation pre-requisite.
 
 ## SSMA v7.9
 The v7.9 release of SSMA for MySQL contains the following changes:
@@ -79,7 +87,7 @@ The v7.3 release of SSMA for MySQL contains the following changes:
   - Libraries that can be consumed by SSMA for performing custom conversions.
     - You can now construct code that can handle custom syntax conversions and conversions that weren't previously handled by SSMA.
       - Instructions on how to construct a custom converter are available in this blog post, [Extending SQL Server Migration Assistant's conversion capabilities](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/).
-      - Sample project for conversion can be download this [blog post](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/).
+      - Download a sample project for conversion from this [blog post](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/).
 
 ## SSMA v7.2
 The v7.2 release of SSMA for MySQL contains the following changes:

@@ -1,7 +1,7 @@
 ---
 title: "Configure PolyBase to access external data in Azure Blob Storage | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/24/2018"
+ms.date: 09/24/2018
 ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"

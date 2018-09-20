@@ -1,7 +1,7 @@
 ---
 title: "Install PolyBase on Windows | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/23/2018"
+ms.date: 09/24/2018
 ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"
@@ -83,7 +83,7 @@ Once you have installed PolyBase as either stand alone or in a scale-out group, 
 6. On the **PolyBase Configuration Page**, specify a port range with at least six ports. SQL Server setup will allocate the first six available ports from the range.  
 
 <!--SQL Server 2019-->
-::: moniker range=">= sql-server-ver15"
+::: moniker range=">= sql-server-ver15 || =sqlallproducts-allversions"
 
 After installation, you must [enable the PolyBase feature](#enable).
 
@@ -94,7 +94,7 @@ After installation, you must [enable the PolyBase feature](#enable).
 Use the values in this table to create installation scripts. The two services **SQL Server PolyBase Engine** and **SQL Server PolyBase Data Movement Service** must run under the same account. In a PolyBase scale-out group, PolyBase services on all nodes must run under the same domain account.  
    
 <!--SQL Server 2016/2017-->
-::: moniker range="= sql-server-2016 || = sql-server-2017 || =sqlallproducts-allversions"
+::: moniker range="= sql-server-2016 || = sql-server-2017"
 
 |SQL Server component|Parameter and values|Description|  
 |--------------------------|--------------------------|-----------------|  
@@ -110,7 +110,7 @@ Use the values in this table to create installation scripts. The two services **
 
 ::: moniker-end
 <!--SQL Server 2019-->
-::: moniker range=">= sql-server-ver15"
+::: moniker range=">= sql-server-ver15 || =sqlallproducts-allversions"
 
 |SQL Server component|Parameter and values|Description|  
 |--------------------------|--------------------------|-----------------|  
@@ -127,7 +127,7 @@ Use the values in this table to create installation scripts. The two services **
 ::: moniker-end
 
 <!--SQL Server 2019-->
-::: moniker range=">= sql-server-ver15"
+::: moniker range=">= sql-server-ver15 || =sqlallproducts-allversions"
 
 After installation, you must [enable the PolyBase feature](#enable).
 
@@ -149,7 +149,7 @@ Setup.exe /Q /ACTION=INSTALL /IACCEPTSQLSERVERLICENSETERMS /FEATURES=SQLEngine,P
 ```  
 
 <!--SQL Server 2019-->
-::: moniker range=">= sql-server-ver15"
+::: moniker range=">= sql-server-ver15 || =sqlallproducts-allversions"
 ## <a id="enable"></a> Enable PolyBase
 
 Starting with SQL Server 2019 CTP 2.0, you must enable PolyBase after installation using the following Transact-SQL command:

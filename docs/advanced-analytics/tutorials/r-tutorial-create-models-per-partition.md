@@ -69,49 +69,9 @@ You can [download and install SQL Server Management Studio](https://docs.microso
 
 Data originates from the [NYC Taxi and Limousine Commission](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml) public data set. 
 
-1.  Open a Windows PowerShell command console.
-  
-    Use the **Run as Administrator** option to create the destination directory or to write files to the specified destination.
-  
-2.  Run the following PowerShell commands, changing the value of the parameter *DestDir* to any local directory. The default we've used here is **TempRSQL**.
-  
-    ```ps
-    $source = ‘https://raw.githubusercontent.com/Azure/Azure-MachineLearning-DataScience/master/Misc/RSQL/Download_Scripts_SQL_Walkthrough.ps1’  
-    $ps1_dest = “$pwd\Download_Scripts_SQL_Walkthrough.ps1”
-    $wc = New-Object System.Net.WebClient
-    $wc.DownloadFile($source, $ps1_dest)
-    .\Download_Scripts_SQL_Walkthrough.ps1 –DestDir ‘C:\tempRSQL’
-    ```
+Download the database backup file [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak ) and restore it on the database engine instance.
 
-3. The folder and scripts are downloaded, but currently an error occurs on the data file download. As a temporary workaround, download [nyctaxi1pct.csv](https://sqlmldoccontent.blob.core.windows.net/sqlml/nyctaxi1pct.csv) as a separate step. Place the file in the tempRSQL folder.
-
-4. Run the following command to review the files that have been downloaded. Your folder should contain the following files.
-  
-    ```
-    ls
-    ```
-  
-    **Results:**
-  
-    ![list of files downloaded by PowerShell script](media/rsql-devtut-filelist.png "list of files downloaded by PowerShell script")
-
-5. On Windows, if you are using trusted authentication and your Windows identity to create the database, edit line 238 of `RunSQL_SQL_Walkthrough.ps1` by adding `-T` after `-P $p` so that the end of the command looks like this: `-P $p -T`. Skip this step if you are using a SQL Server login.
-
-6. From C:\tempRSQL, run the following command.
-  
-	```ps
-	.\RunSQL_SQL_Walkthrough.ps1
-	```
-
-	You are prompted to input the following information:
-
-	+ Server instance where [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] has been installed. On a default instance, this can be as simple as the machine name.
-
-	+ Database name. For this tutorial, scripts assume `NYCTaxi_Sample`.
-
-	+ User name and user password. Enter a SQL Server database login for these values. Alternatively, if you modified the script to accept a trusted Windows identity, press Enter to leave these values blank. Your Windows identity is used on the connection.
-
-	+ Fully qualified file name for the sample data downloaded in the previous lesson. For example: `C:\tempRSQL\nyctaxi1pct.csv`
+Database file name must be **NYCTaxi_sample** if you want to run the following scripts as proivded.
 
 ## Connect to the database
 
@@ -232,7 +192,7 @@ By default, the query optimizer tends to operate under **@parallel=1** on tables
 
 In this section, the script trains the model that you created and saved in the previous step. The examples below demonstrate two approaches for training your model: using an entire data set, or a partial data. 
 
-Expect this step to take awhile. Training is computationally intensive, taking many minutes to complete. If system resources, especially memory, are insufficient for the load, use a subset of the data. You should also subset the training data if you want to complete the tutorial sooner. The second example provides the syntax.
+Expect this step to take awhile. Training is computationally intensive, taking many minutes to complete. If system resources, especially memory, are insufficient for the load, use a subset of the data. The second example provides the syntax.
 
 ```sql
 --Example 1: train on entire dataset

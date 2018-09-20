@@ -19,9 +19,23 @@ moniker: ">= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allv
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-In this quickstart, you use Docker to pull and run the SQL Server container image, [mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/). Then connect with **sqlcmd** to create your first database and run queries.
+<!--SQL Server 2017 on Linux-->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
+
+In this quickstart, you use Docker to pull and run the SQL Server 2017 container image, [mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/). Then connect with **sqlcmd** to create your first database and run queries.
+
+> [!TIP]
+> If you want to try the SQL Server 2019 CTP 2.0 image, see the [SQL Server 2019 CTP 2.0 version of this article](quickstart-install-connect-docker.md?view=sql-server-linux-ver15#pullandrun2019).
+
+::: moniker-end
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+In this quickstart, you use Docker to pull and run the SQL Server 2019 preview container image, [mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/). Then connect with **sqlcmd** to create your first database and run queries.
 
 This image consists of SQL Server running on Linux based on Ubuntu 16.04. It can be used with the Docker Engine 1.8+ on Linux or on Docker for Mac/Windows.
+::: moniker-end
+
 
 > [!NOTE]
 > This quick start specifically focuses on using the mssql-server-**linux** image. The Windows image is not covered, but you can learn more about it on the [mssql-server-windows-developer Docker Hub page](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/).
@@ -42,11 +56,11 @@ any changes to one section should be duplicated in the other-->
 1. Pull the SQL Server 2017 Linux container image from Docker Hub.
 
    ```bash
-   sudo docker pull mcr.microsoft.com/mssql/server/mssql-server-linux:2017-latest
+   sudo docker pull mcr.microsoft.com/mssql/server:2017-latest
    ```
 
    ```PowerShell
-   docker pull mcr.microsoft.com/mssql/server/mssql-server-linux:2017-latest
+   docker pull mcr.microsoft.com/mssql/server:2017-latest
    ```
 
    > [!TIP]
@@ -61,13 +75,13 @@ any changes to one section should be duplicated in the other-->
    ```bash
    sudo docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' \
       -p 1433:1433 --name sql1 \
-      -d mcr.microsoft.com/mssql/server/mssql-server-linux:2017-latest
+      -d mcr.microsoft.com/mssql/server:2017-latest
    ```
 
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" `
       -p 1433:1433 --name sql1 `
-      -d mcr.microsoft.com/mssql/server/mssql-server-linux:2017-latest
+      -d mcr.microsoft.com/mssql/server:2017-latest
    ```
 
    > [!NOTE]
@@ -124,18 +138,18 @@ Setting `-h` and `--name` to the same value is a good way to easily identify the
 1. Pull the SQL Server 2019 CTP 2.0 Linux container image from Docker Hub.
 
    ```bash
-   sudo docker pull mcr.microsoft.com/mssql/server/mssql-server-linux:vNext-CTP2.0
+   sudo docker pull mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
    ```
 
    ```PowerShell
-   docker pull mcr.microsoft.com/mssql/server/mssql-server-linux:vNext-CTP2.0
+   docker pull mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
    ```
 
    > [!TIP]
    > This quickstart uses the SQL Server 2019 CTP 2.0 Docker image. If you want to run the SQL Server 2017 image, see the [SQL Server 2017 version of this article](quickstart-install-connect-docker.md?view=sql-server-linux-2017#pullandrun2017).
 
-   The previous command pulls the latest SQL Server 2019 CTP 2.0 container image. If you want to pull a specific image, you add a colon and the tag name (for example, `microsoft/mssql-server-linux:2019-GA`). To see all available images, see [the mssql-server-linux Docker hub page](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/).
-   
+   The previous command pulls the latest SQL Server 2019 CTP 2.0 container image based on Ubuntu. To instead use container images based on RedHat, see [Run RHEL-based container images](sql-server-linux-configure-docker.md#rhel). If you want to pull a specific image, you add a colon and the tag name (for example, `microsoft/mssql-server-linux:2019-GA`). To see all available images, see [the mssql-server-linux Docker hub page](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/).
+
    For the bash commands in this article, `sudo` is used. On MacOS, `sudo` might not be required. On Linux, if you do not want to use `sudo` to run Docker, you can configure a **docker** group and add users to that group. For more information, see [Post-installation steps for Linux](https://docs.docker.com/install/linux/linux-postinstall/).
 
 2. To run the container image with Docker, you can use the following command from a bash shell (Linux/macOS) or elevated PowerShell command prompt.
@@ -143,13 +157,13 @@ Setting `-h` and `--name` to the same value is a good way to easily identify the
    ```bash
    sudo docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' \
       -p 1433:1433 --name sql1 \
-      -d mcr.microsoft.com/mssql/server/mssql-server-linux:vNext-CTP2.0
+      -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
    ```
 
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" `
       -p 1433:1433 --name sql1 `
-      -d mcr.microsoft.com/mssql/server/mssql-server-linux:vNext-CTP2.0
+      -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
    ```
 
    > [!NOTE]

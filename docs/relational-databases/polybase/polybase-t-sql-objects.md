@@ -1,7 +1,7 @@
 ---
 title: "PolyBase Transact-SQL reference | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/15/2017"
+ms.date: 09/24/2018
 ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"

@@ -1,7 +1,7 @@
 ---
 title: "Type mapping with PolyBase | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/24/2018"
+ms.date: 09/24/2018
 ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"
@@ -55,27 +55,29 @@ TBD
 | time          | TimeSpan                  | timestamp      | TimestampWritable     |
 | decimal       | Decimal                   | decimal        | BigDecimalWritable    | Applies to Hive0.11 and later. |
 
+<!--SQL Server 2019-->
+::: moniker range=">= sql-server-ver15 || =sqlallproducts-allversions"
 
 ## Oracle Type mapping reference
 
-| Oracle data type | SQL Server type           | 
-| ------------- | ------------------------- |
-|Float |Float|
-|Decimal|Decimal|
-|Int |Int|
-|Long |Ntext|
-|Binary Float|Real| 
-|Char |Nchar|
-|Varchar2|Nvarchar| 
-|Raw |Varbinary|
-|Long Raw|Image| 
-|Bfile |Image|
-|Blob |Image|
-|Clob |Image|
-|Rowid |Varchar|
-|Date |Datetime2|
-|Timestamp|Datetime2| 
-|Timestamp with local timezone|Datetime2| 
+| Oracle data type              | SQL Server type |
+| ----------------------------- | --------------- |
+| Float                         | Float           |
+| Decimal                       | Decimal         |
+| Int                           | Int             |
+| Long                          | Ntext           |
+| Binary Float                  | Real            |
+| Char                          | Nchar           |
+| Varchar2                      | Nvarchar        |
+| Raw                           | Varbinary       |
+| Long Raw                      | Image           |
+| Bfile                         | Image           |
+| Blob                          | Image           |
+| Clob                          | Image           |
+| Rowid                         | Varchar         |
+| Date                          | Datetime2       |
+| Timestamp                     | Datetime2       |
+| Timestamp with local timezone | Datetime2       |
 
 **Type mismatch:** 
 
@@ -96,26 +98,26 @@ Simba maps Date, Timestamp and Timestamp with local zone to ODBC type SQL_TIMEST
 
 ## Mongo Type mapping reference
 
-| BSON data type | SQL Server type         | 
-| ------------- | ------------------------- |
-|Double |Float|
-|String|Nvarchar|
-|Object||
-|Array ||
-|Binary data|Nvarchar| 
-|Object ID|Nvarchar|
-|Boolean|Bit| 
-|Date |Datetime2|
-|32-bit integer|Int| 
-|Timestamp |Nvarchar|
-|64-bit integer |BigInt|
-|DBPointer|Nvarchar|
-|Javascript|Nvarchar|
-|Max Key|Nvarchar|
-|Min Key|Nvarchar|
-|Symbol|Nvarchar|
-|Regular Expression|Nvarchar|
-|Undefined/NULL|Nvarchar|
+| BSON data type     | SQL Server type |
+| ------------------ | --------------- |
+| Double             | Float           |
+| String             | Nvarchar        |
+| Object             |
+| Array              |
+| Binary data        | Nvarchar        |
+| Object ID          | Nvarchar        |
+| Boolean            | Bit             |
+| Date               | Datetime2       |
+| 32-bit integer     | Int             |
+| Timestamp          | Nvarchar        |
+| 64-bit integer     | BigInt          |
+| DBPointer          | Nvarchar        |
+| Javascript         | Nvarchar        |
+| Max Key            | Nvarchar        |
+| Min Key            | Nvarchar        |
+| Symbol             | Nvarchar        |
+| Regular Expression | Nvarchar        |
+| Undefined/NULL     | Nvarchar        |
 
 **Javascript (with scope):** 
 
@@ -147,45 +149,45 @@ MongoDB strings are converted into SQL_WVARCHAR type with a default column size 
 
 ## Teradata Type mapping reference
 
-| Teradata data type | SQL Server type         | 
-| ------------- | ------------------------- |
-|Int|Int|
-|Small Int|SmallInt|
-|Big Int|BigInt|
-|Byte Int |TinyInt|
-|Decimal|Decimal| 
-|Float|Float|
-|Byte|Binary| 
-|Varbyte|Varbinary|
-|Blob|Image| 
-|Char|Nchar|
-|Clob|Ntext|
-|Varchar|Nvarchar|
-|Graphic|Nchar|
-|JSON|Ntext|
-|Vargraphic|Nvarchar|
-|Date|Date|
-|Time|Time|
-|Time with Time Zone|Time|
-|Timestamp|Datetime2|
-|Interval Year||
-|Interval year to month||
-|Interval Month||
-|Interval Day||
-|Interval Day to Hour||
-|Interval Day to Minute||
-|Interval Day to Second||
-|Interval Hour||
-|Interval Hour to Minute||
-|Interval Hour to Second||
-|Interval Minute||
-|Interval Minute to Second||
-|Interval Second||
-|Period (DATE)||
-|Period (TIME) ||
-|Period (TIME with Timezone)||
-|Period (Timestamp)||
-|Period (Timestamp with Timezone)||
+| Teradata data type               | SQL Server type |
+| -------------------------------- | --------------- |
+| Int                              | Int             |
+| Small Int                        | SmallInt        |
+| Big Int                          | BigInt          |
+| Byte Int                         | TinyInt         |
+| Decimal                          | Decimal         |
+| Float                            | Float           |
+| Byte                             | Binary          |
+| Varbyte                          | Varbinary       |
+| Blob                             | Image           |
+| Char                             | Nchar           |
+| Clob                             | Ntext           |
+| Varchar                          | Nvarchar        |
+| Graphic                          | Nchar           |
+| JSON                             | Ntext           |
+| Vargraphic                       | Nvarchar        |
+| Date                             | Date            |
+| Time                             | Time            |
+| Time with Time Zone              | Time            |
+| Timestamp                        | Datetime2       |
+| Interval Year                    |
+| Interval year to month           |
+| Interval Month                   |
+| Interval Day                     |
+| Interval Day to Hour             |
+| Interval Day to Minute           |
+| Interval Day to Second           |
+| Interval Hour                    |
+| Interval Hour to Minute          |
+| Interval Hour to Second          |
+| Interval Minute                  |
+| Interval Minute to Second        |
+| Interval Second                  |
+| Period (DATE)                    |
+| Period (TIME)                    |
+| Period (TIME with Timezone)      |
+| Period (Timestamp)               |
+| Period (Timestamp with Timezone) |
 
 **Period data type:** 
         
@@ -209,6 +211,8 @@ CLOB data type with LATIN charset should be able to accept 2097088000 characters
 - Enable custom catalog mode for 2.X applications 
 - Return Empty string in CREATE_PARAMS column for SQL_TIMESTAMP 
 - Return Max. CHAR/VARCHAR length as 32K
+
+::: moniker-end
 
 ## Next steps
 

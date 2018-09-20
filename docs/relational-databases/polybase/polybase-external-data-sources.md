@@ -1,7 +1,7 @@
 ---
 title: "External data sources | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/24/2018"
+ms.date: 09/24/2018
 ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"

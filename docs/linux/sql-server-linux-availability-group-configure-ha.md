@@ -63,6 +63,8 @@ The steps to create an AG on Linux servers for high availability are different f
 
 ## Create the AG
 
+This section of the article details how to create the availabity group using transact-SQL. If using the wizard there is a known issue where-by you will get a permissions issue upon joining replicas to the availability group. This is a known issue, and the pacemaker user will need to be granted ALTER, CONTROL and VIEW DEFINITION permissions on the availability group on all replicas. Once it is granted on the primary the nodes can be joined to the availability group through the gui, but for clustering to function properly it needs to be granted on all nodes.
+
 For a high availability configuration that ensures automatic failover, the AG requires at least three replicas. Either of the following configurations can support high availability:
 
 - [Three synchronous replicas](sql-server-linux-availability-group-ha.md#threeSynch)
@@ -186,6 +188,12 @@ Run **only one** of the following scripts:
 You can also configure an AG with `CLUSTER_TYPE=EXTERNAL` using SQL Server Management Studio or PowerShell. 
 
 ### Join secondary replicas to the AG
+
+The pacemaker user will require ALTER, CONTROL and VIEW DEFINITION permissions on the availability group on all replicas. To that end you will want to run the following transact-SQL after the availability group is created on the primary and then on each secondary just after they are added to the availability group:
+   ```Transact-SQL
+   GRANT ALTER, CONTROL, VIEW DEFINITION ON AVAILABILITY GROUP::ag1 TO pacemakerLogin
+   GRANT VIEW SERVER STATE TO pacemakerLogin
+
 
 The following Transact-SQL script joins a SQL Server instance to an AG named `ag1`. Update the script for your environment. On each SQL Server instance that hosts a secondary replica, run the following Transact-SQL to join the AG.
 

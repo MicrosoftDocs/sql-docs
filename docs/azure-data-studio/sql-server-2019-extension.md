@@ -86,7 +86,7 @@ For details, see [Azure Resource Explorer](azure-resource-explorer.md).
 * After creation of the external table, it immediately appears in the object tree of the database where it was created.
 
 
-# Known Issues
+## Known Issues
 
 * If password is not saved when creating a connection, some actions such as submitting Spark Job may not succeed.
 * Existing .ipynb notebooks must be upgraded to version 4 or higher to load contents in the viewer.

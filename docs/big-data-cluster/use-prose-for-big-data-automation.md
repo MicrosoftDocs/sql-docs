@@ -25,7 +25,7 @@ import prose.codeaccelerator as cx
 In the current release, the Code Accelerator can intelligently generate Python code for the following tasks:
 
 - Reading data files to a Pandas or Pyspark dataframe.
-- Fixing datatypes in a dataframe.
+- Fixing data types in a dataframe.
 - Finding regular expressions representing patterns in a list of strings.
 
 To get a general overview of Code Accelerator methods, see the [documentation](https://docs.microsoft.com/python/api/overview/azure/prose/overview?view=azure-accelerator-py).
@@ -47,7 +47,7 @@ builder = cx.ReadCsvBuilder(r'C:/911.txt')
 #Set target to pyspark if generating code to use pyspark library
 #builder.Target = "pyspark"
 
-#Get the code generated to fix the datatypes
+#Get the code generated to fix the data types
 builder.learn().code()
  ```
 
@@ -79,11 +79,11 @@ def read_file(file):
 
 Code Accelerator can generate code to load delimited, JSON, and fixed-width files to a dataframe. For reading fixed-width files, the `ReadFwfBuilder` optionally takes a human-readable schema file that it can parse to get the column positions. To learn more, see the [documentation](https://docs.microsoft.com/python/api/overview/azure/prose/intro?view=azure-accelerator-py).
 
-## Fixing datatypes in a dataframe
+## Fixing data types in a dataframe
 
-It is common to have a pandas or pyspark dataframe with wrong datatypes. Often, this happens because of a few non-conforming values in columns. As a result, Integers are read as Float or Strings, and Dates are read as Strings. On the other hand, values, such as ZIP Codes, that should be read as Strings are read as Integers by default. The effort required to manually fix the datatypes is proportional to the number of columns.
+It is common to have a pandas or pyspark dataframe with wrong data types. Often, this happens because of a few non-conforming values in a column. As a result, Integers are read as Float or Strings, and Dates are read as Strings. The effort required to manually fix the data types is proportional to the number of columns.
 
-You can use the `DetectTypesBuilder` in these situations. It analyzes the data, and rather than fixing the datatypes in a black-box manner, it generates code for fixing the datatypes. The code serves as a starting point. You can review, use, or modify it as needed.
+You can use the `DetectTypesBuilder` in these situations. It analyzes the data, and rather than fixing the data types in a black-box manner, it generates code for fixing the data types. The code serves as a starting point. You can review, use, or modify it as needed.
 
 ```python
 import prose.codeaccelerator as cx
@@ -93,7 +93,7 @@ builder = cx.DetectTypesBuilder(df)
 #Set target to pyspark if working with pyspark
 #builder.Target = "pyspark"
 
-#Get the code generated to fix the datatypes
+#Get the code generated to fix the data types
 builder.learn().code()
 ```
 

@@ -33,6 +33,7 @@ This feature allows your plan to dynamically switch to a better join strategy du
 ### Row and batch mode memory grant feedback
 > [!NOTE]
 > Row mode memory grant feedback is a public preview feature.  
+
 This feature recalculates the actual memory required for a query and then updates the grant value for the cached plan, reducing excessive memory grants that impact concurrency and fixing underestimated memory grants that cause expensive spills to disk.
 
 ### Interleaved execution for multi-statement table-valued functions (MSTVFs)
@@ -43,6 +44,7 @@ For more information, see [Adaptive query processing in SQL databases](../../rel
 ## Table variable deferred compilation
 > [!NOTE]
 > Table variable deferred compilation is a public preview feature.  
+
 Table variable deferred compilation improves plan quality and overall performance for queries referencing table variables. During optimization and initial compilation, this feature will propagate cardinality estimates that are based on actual table variable row counts.  This accurate row count information will be used for optimizing downstream plan operations.
 
 With table variable deferred compilation, compilation of a statement that references a table variable is deferred until the first actual execution of the statement. This deferred compilation behavior is identical to the behavior of temporary tables, and this change results in the use of actual cardinality instead of the original one-row guess. To enable the public preview of table variable deferred compilation in Azure SQL Database, enable database compatibility level 150 for the database you are connected to when executing the query.
@@ -52,6 +54,7 @@ For more information, see [Table variable deferred compilation](../../t-sql/data
 ## Approximate query processing
 > [!NOTE]
 > APPROX_COUNT_DISTINCT is a public preview feature.  
+
 Approximate query processing is a new family of features that are designed to provide aggregations across large data sets where responsiveness is more critical than absolute precision.  An example might be calculating a COUNT(DISTINCT()) across 10 billion rows, for display on a dashboard.  In this case, absolute precision is not important, but responsiveness is critical. The new APPROX_COUNT_DISTINCT aggregate function returns the approximate number of unique non-null values in a group.
 
 For more information, see [APPROX_COUNT_DISTINCT (Transact-SQL)](../../t-sql/functions/approx-count-distinct-transact-sql.md).
@@ -61,4 +64,5 @@ For more information, see [APPROX_COUNT_DISTINCT (Transact-SQL)](../../t-sql/fun
 [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md)    
 [Showplan Logical and Physical Operators Reference](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    
 [Joins](../../relational-databases/performance/joins.md)    
-[Demonstrating Adaptive Query Processing](https://github.com/joesackmsft/Conferences/blob/master/Data_AMP_Detroit_2017/Demos/AQP_Demo_ReadMe.md)        
+[Demonstrating Adaptive Query Processing](https://github.com/joesackmsft/Conferences/blob/master/Data_AMP_Detroit_2017/Demos/AQP_Demo_ReadMe.md)       
+[Demonstrating Intelligent QP](https://github.com/joesackmsft/Conferences/blob/master/IQPDemos/IQP_Demo_ReadMe.md)   

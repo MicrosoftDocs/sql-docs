@@ -57,9 +57,9 @@ The following examples demonstrate how to run the scripts.
    ./deploy-ag.py --help
 ```
 
-* **usage**: deploy-ag.py [-h] {deploy | failover} ...
+* **usage**: `deploy-ag.py [-h] {deploy | failover} ...`
 * **optional arguments**:
-  * -h, --help show this help message and exit
+  * `-h, --help` show this help message and exit
 * **subcommands**:
   * Actions on k8s agent {deploy | failover}
 
@@ -71,16 +71,20 @@ The following examples demonstrate how to run the scripts.
 
    Perform a failover to a target replica.
 
-## Deploy
+### Deploy help
 
 ```python
 ./deploy-ag.py deploy --help
 ```
 
-* **usage**: deploy-ag.py deploy [-h] [--verbose] [--ag AG] [-n NAMESPACE]
-                           [--dry-run] [-s SQL_SERVERS [SQL_SERVERS ...]]
-                           [-p SA_PASSWORD] [-e {ON_PREM,AKS}]
-                           [--skip-create-namespace]
+* **usage**:
+
+  ```python
+  deploy-ag.py deploy [-h] [--verbose] [--ag AG] [-n NAMESPACE]
+    [--dry-run] [-s SQL_SERVERS [SQL_SERVERS ...]]
+    [-p SA_PASSWORD] [-e {ON_PREM,AKS}]
+    [--skip-create-namespace]
+  ```
 
   Deploy SQL Server and k8s Agents in namespace(AG name)
 
@@ -112,7 +116,7 @@ The following examples demonstrate how to run the scripts.
   
   `-p SA_PASSWORD, --sa-password SA_PASSWORD`
   
-  SA Password. Default='SAPassword2018'
+  SA Password. Default='<MyC0m91exP@55w0r!>'
   
   `-e {ON_PREM,AKS}, --env {ON_PREM,AKS}`
   
@@ -120,48 +124,75 @@ The following examples demonstrate how to run the scripts.
   
   Skip namespace creation.
 
-Example 3 --  
+### Failover help
 
 ```python
 ./deploy-ag.py failover --help
-			usage: deploy-ag.py failover [-h] [--verbose] [--ag AG]
-										 [--namespace NAMESPACE] [--dry-run]
-										 target_replica
-
-			Perform a manual failover
-
-			positional arguments:
-			  target_replica        name of target SQL Server replica to failover to
-
-			optional arguments:
-			  -h, --help            show this help message and exit
-			  --verbose, -v         Verbosity of output
-			  --ag AG               name of the Availability Group. Default=ag1
-			  --namespace NAMESPACE
-									name of the k8s namespace. Defaults to AG name if not
-									specified
-			  --dry-run             Perform a dry run and NOT apply the specs							
 ```
+* **usage**: 
 
-### Create the specs but **NOT** apply
+  ```python deploy-ag.py failover [-h] [--verbose] [--ag AG]
+    [--namespace NAMESPACE] [--dry-run]
+    target_replica
+  ```
+
+  Perform a manual failover
+
+* **positional arguments**:
+  `target_replica`
+
+  name of target SQL Server replica to failover to
+
+* **optional arguments**:
+
+  `-h, --help`
+  
+  show this help message and exit
+
+  `--verbose, -v`
+  
+  Verbosity of output
+
+  `--ag AG`
+  
+  name of the Availability Group. Default=ag1
+
+  `--namespace NAMESPACE`
+
+  name of the k8s namespace. Defaults to AG name if not specified
+
+  `--dry-run`
+  
+  Perform a dry run and NOT apply the specs
+
+### Create the manifests but **NOT** apply
+
+The following script creates the manifest files but does not apply them.
 
 ```python
 	./deploy-ag.py deploy --dry-run
-	
-	python.exe ./deploy-ag.py deploy --ag ag1 --namespace AG1 --sql-servers ['SQL1', 'SQL2', 'SQL3'] --sa-password 'SAPassword2018' --env AKS --dry-run
-
-	[ALL] Created the following specs:
-	[ALL]    C:<path>\kube_agent_deploy-uxgte0o9ag1\operator.yaml
-	[ALL]    C:<path>\kube_agent_deploy-uxgte0o9ag1\sql-secrets.yaml
-	[ALL]    C:<path>\kube_agent_deploy-uxgte0o9ag1\pv.yaml
-	[ALL]    C:<path>\kube_agent_deploy-uxgte0o9ag1\sqlserver.yaml
-	[ALL]    C:<path>\kube_agent_deploy-uxgte0o9ag1\ag-services.yaml
-	[ALL]
-	[ALL] Wrote spec paths: 'deploy_ag1_specs'
-	[32m./deploy-ag.py exitcode: 0[0m
 ```
 
-<> This will generate the sample yaml files in the Temp directory. 
+The following example creates an availability group with three replicas on instances named SQL1, SQL2, and SQL3. 
+
+```python
+	python.exe ./deploy-ag.py deploy --ag ag1 --namespace AG1 --sql-servers ['SQL1', 'SQL2', 'SQL3'] --sa-password '<MyC0m91exP@55w0r!>' --env AKS --dry-run
+```
+
+In this case the reults are as follows.
+
+>	[ALL] Created the following specs:
+>	[ALL]    C:<path>\kube_agent_deploy-uxgte0o9ag1\operator.yaml
+>	[ALL]    C:<path>\kube_agent_deploy-uxgte0o9ag1\sql-secrets.yaml
+>	[ALL]    C:<path>\kube_agent_deploy-uxgte0o9ag1\pv.yaml
+>	[ALL]    C:<path>\kube_agent_deploy-uxgte0o9ag1\sqlserver.yaml
+>	[ALL]    C:<path>\kube_agent_deploy-uxgte0o9ag1\ag-services.yaml
+>	[ALL]
+>	[ALL] Wrote spec paths: 'deploy_ag1_specs'
+>	 [32m./deploy-ag.py exitcode: 0[0m
+
+
+This generates the sample yaml files in the `<path>` directory. 
 	
 ### Create the Specs and apply
 

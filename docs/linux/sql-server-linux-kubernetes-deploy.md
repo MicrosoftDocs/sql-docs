@@ -77,6 +77,19 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 
 After you deploy the SQL Server manifest, the operator deploys the instances of SQL Server as pods in containers.
 
+After the script completes, the Kubernetes operator will create the storage, the SQL Server instances, the load balancer services. You can monitor the deployment with [Kubernetes dashboard](http://docs.microsoft.com/azure/aks/kubernetes-dashboard).
+
+After Kubernetes creates the SQL Server containers complete the following steps to add a database to the availability group:
+
+1. [Connect](sql-server-linux-kubernetes-connect.md) to a SQL Server instance in the cluster.
+
+1. Create a database.
+
+1. Take a full backup of the database to start the log chain.
+
+1. Add the database to the availability group.
+
+The availability group is created with automatic seeding so SQL Server will automatically create the secondary replicas.
 
 ## Next steps
 

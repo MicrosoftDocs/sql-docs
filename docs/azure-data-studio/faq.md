@@ -1,6 +1,6 @@
 ---
-title: Azure Data Studio (preview) FAQ | Microsoft Docs
-description: Frequently asked questions (FAQ) for Azure Data Studio (preview).
+title: Azure Data Studio FAQ | Microsoft Docs
+description: Frequently asked questions (FAQ) for Azure Data Studio.
 ms.custom: "tools|sos"
 ms.date: "09/24/2018"
 ms.prod: sql
@@ -162,7 +162,7 @@ No. Investments in flagship Windows tools (SSMS, SSDT, PowerShell) will continue
 
 ## Azure Data Studio is missing a feature that is in SSMS/SSDT. Will you add it?
 
-It depends on the scenario & customer/business need. To help prioritize, file a suggestion on [GitHub](https://github.com/microsoft/sqlopsstudio/issues).
+It depends on the scenario & customer/business need. To help prioritize, file a suggestion on [GitHub](https://github.com/microsoft/azuredatastudio/issues).
 
 ## I understand Azure Data Studio and the mssql extension for VS Code are powered by a new tools service that uses SMO APIs under the covers. Is SMO available on Linux and macOS?
 
@@ -170,11 +170,11 @@ The SMO APIs are not yet available on Linux or macOS in a consumable way. We por
 
 ## Do you plan to port the DACFx APIs and/or sqlpackage.exe and/or SSDT to Linux and macOS?
 
-It's on the longer-term roadmap. To help prioritize, file a suggestion on [GitHub](https://github.com/microsoft/sqlopsstudio/issues).
+It's on the longer-term roadmap. To help prioritize, file a suggestion on [GitHub](https://github.com/microsoft/azuredatastudio/issues).
 
 ## Will SQL PowerShell cmdlets be available on Linux and macOS?
 
-SQL PowerShell is available today on the PowerShell gallery and you can use it on Windows to work with SQL Server running anywhere, including SQL on Linux. Offering the SQL PowerShell cmdlets on Linux & macOS is in the roadmap. To help prioritize, file a suggestion on [GitHub](https://github.com/microsoft/sqlopsstudio/issues).
+SQL PowerShell is available today on the PowerShell gallery and you can use it on Windows to work with SQL Server running anywhere, including SQL on Linux. Offering the SQL PowerShell cmdlets on Linux & macOS is in the roadmap. To help prioritize, file a suggestion on [GitHub](https://github.com/microsoft/azuredatastudio/issues).
 
 ## Who usually uses Azure Data Studio?
 

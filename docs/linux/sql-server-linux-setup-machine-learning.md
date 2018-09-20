@@ -96,12 +96,12 @@ Install any *one* R package, plus any *one* Python package, and Java if you want
 
 ### Example 1 -  Full installation 
 
-Includes open-source R and Python, extensibility framework, microsoft-openmpi, extensions (R, Python, Java), with machine learning libraries and pre-trained models for R and Python. For R and Python, if you want something in between full and minimum install - such as machine learning libraries but without the pre-trained models - substitute mssql-mlservices-mml-r and mssql-mlservices-mml-py instead.
+Includes open-source R and Python, extensibility framework, microsoft-openmpi, extensions (R, Python, Java), with machine learning libraries and pre-trained models for R and Python. For R and Python, if you want something in between full and minimum install - such as machine learning libraries but without the pre-trained models - substitute `mssql-mlservices-mml-r-9.4.5*` and `mssql-mlservices-mml-py-9.4.5*` instead.
 
 ```bash
 # Install as root or sudo
 # Add everything (all R, Python, Java)
-# Be sure to include the asterisk
+# Be sure to include -9.4.5* in mlsservices package names
 sudo yum install mssql-mlservices-mlm-py-9.4.5*
 sudo yum install mssql-mlservices-mlm-r-9.4.5* 
 sudo yum install mssql-server-extensibility-java
@@ -114,8 +114,9 @@ Includes open-source R and Python, extensibility framework, microsoft-openmpi, c
 ```bash
 # Install as root or sudo
 # Minimum install of R, Python, Java extensions
-sudo yum install mssql-mlservices-packages-py-9.4.5
-sudo yum install mssql-mlservices-packages-r-9.4.5
+# Be sure to include -9.4.5* in mlsservices package names
+sudo yum install mssql-mlservices-packages-py-9.4.5*
+sudo yum install mssql-mlservices-packages-r-9.4.5*
 sudo yum install mssql-server-extensibility-java
 ```
 
@@ -127,6 +128,15 @@ Install any *one* R package, plus any *one* Python package, and Java if you want
 
 > [!Tip]
 > If possible, run `apt-get update` to refresh packages on the system prior to installation. Additionally, some docker images of Ubuntu might not have the https apt transport option. To install it, use `apt-get install apt-transport-https`.
+
+### Prerequisite for 18.04
+
+Running mssql-mlservices R libraries on Ubuntu 18.04 requires **libpng12** from the Linux Kernel archives. This package is no longer included in the standard distribution and must be installed manually. To get this library, run the following commands:
+
+```bash
+wget https://mirrors.kernel.org/ubuntu/pool/main/libp/libpng/libpng12-0_1.2.54-1ubuntu1_amd64.deb
+dpkg -i libpng12-01_1.2.54-1ubuntu1_amd64.deb
+```
 
 ### Example 1 -  Full installation 
 
@@ -148,6 +158,7 @@ Includes open-source R and Python, extensibility framework, microsoft-openmpi, c
 ```bash
 # Install as root or sudo
 # Minimum install of R, Python, Java
+# No aasterisk
 sudo apt-get install mssql-mlservices-packages-py
 sudo apt-get install mssql-mlservices-packages-r
 sudo apt-get install mssql-server-extensibility-java
@@ -161,12 +172,12 @@ Install any *one* R package, plus any *one* Python package, and Java if you want
 
 ### Example 1 -  Full installation 
 
-Includes open-source R and Python, extensibility framework, microsoft-openmpi, extensions (R, Python, Java), with machine learning libraries and pre-trained models for R and Python. For R and Python, if you want something in between full and minimum install - such as machine learning libraries but without the pre-trained models - substitute mssql-mlservices-mml-r and mssql-mlservices-mml-py instead.
+Includes open-source R and Python, extensibility framework, microsoft-openmpi, extensions (R, Python, Java), with machine learning libraries and pre-trained models for R and Python. For R and Python, if you want something in between full and minimum install - such as machine learning libraries but without the pre-trained models - substitute `mssql-mlservices-mml-r-9.4.5*` and `mssql-mlservices-mml-py-9.4.5*` instead.
 
 ```bash
 # Install as root or sudo
 # Add everything (all R, Python, Java)
-# Be sure to include the asterisk
+# Be sure to include -9.4.5* in mlsservices package names
 sudo zypper install mssql-mlservices-mlm-py-9.4.5*
 sudo zypper install mssql-mlservices-mlm-r-9.4.5* 
 sudo zypper install mssql-server-extensibility-java
@@ -180,8 +191,9 @@ Includes open-source R and Python, extensibility framework, microsoft-openmpi, c
 ```bash
 # Install as root or sudo
 # Minimum install of R, Python, Java extensions
-sudo zypper install mssql-mlservices-packages-py-9.4.5
-sudo zypper install mssql-mlservices-packages-r-9.4.5
+# Be sure to include -9.4.5* in mlsservices package names
+sudo zypper install mssql-mlservices-packages-py-9.4.5*
+sudo zypper install mssql-mlservices-packages-r-9.4.5*
 sudo zypper install mssql-server-extensibility-java
 ```
 
@@ -260,12 +272,15 @@ All possible permutations of EULA acceptance are documented in [Configure SQL Se
 
 ## Offline installation
 
-Locate the Machine Learning Services and extensibility package downloads in the [Release notes](sql-server-linux-release-notes-2019.md). Follow the [Offline installation](sql-server-linux-setup.md#offline) instructions using the packages you obtained.
+> [!NOTE]
+> Download links for package file names are not available at this time. Check back in a few days for links.  
+
+Follow the [Offline installation](sql-server-linux-setup.md#offline) instructions for installing the packages.
 
 R, Python, and Java package file names for a full install on RHEL or SUSE:
 
 ```
-microsoft-openmpi-3.0.0-x86_64.rpm`
+microsoft-openmpi-3.0.0-x86_64.rpm
 mssql-server-extensibility-15.0.1000.xxxx-y.x86_64.rpm
 mssql-server-extensibility-java-15.0.1000.xxxx-y.x86_64.rpm
 mssql-mlservices-mlm-py-9.4.5.x86_64.rpm

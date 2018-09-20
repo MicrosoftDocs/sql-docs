@@ -1,6 +1,6 @@
 ---
-title: Download and install Azure Data Studio (preview) | Microsoft Docs
-description: 'Download and Install Azure Data Studio (preview) for Windows, macOS, or Linux'
+title: Download and install Azure Data Studio | Microsoft Docs
+description: 'Download and Install Azure Data Studio for Windows, macOS, or Linux'
 ms.custom: "tools|sos"
 ms.date: "09/24/2018"
 ms.prod: sql
@@ -14,7 +14,7 @@ author: "stevestein"
 ms.author: "sstein"
 manager: craigg
 ---
-# Download and install Azure Data Studio (preview)
+# Download and install Azure Data Studio
 
 [!INCLUDE[name-sos](../includes/name-sos.md)] runs on Windows, macOS, and Linux.
 
@@ -28,7 +28,7 @@ Download and install the latest release, the *August Public Preview*:
 
 For details about the latest release, see the [release notes](release-notes.md).
 
-## Get Azure Data Studio (preview) for Windows
+## Get Azure Data Studio for Windows
 
 This release of [!INCLUDE[name-sos](../includes/name-sos-short.md)] includes a standard Windows installer experience, and a .zip: 
 
@@ -45,14 +45,14 @@ This release of [!INCLUDE[name-sos](../includes/name-sos-short.md)] includes a s
 3. Run `\sqlops-windows\sqlops.exe`
 
 
-## Get Azure Data Studio (preview) for macOS
+## Get Azure Data Studio for macOS
 
 1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for macOS](https://go.microsoft.com/fwlink/?linkid=2013715).
 2. To expand the contents of the zip, double-click it.
 3. To make [!INCLUDE[name-sos](../includes/name-sos-short.md)] available in the *Launchpad*, drag *sqlops.app* to the *Applications* folder.
 
 
-## Get Azure Data Studio (preview) for Linux
+## Get Azure Data Studio for Linux
 
 1. Download [!INCLUDE[name-sos](../includes/name-sos-short.md)] for Linux by using one of the installers or the tar.gz archive:
     - [.deb](https://go.microsoft.com/fwlink/?linkid=2013833)
@@ -110,7 +110,7 @@ This release of [!INCLUDE[name-sos](../includes/name-sos-short.md)] includes a s
    ```
 
 
-## Uninstall Azure Data Studio (preview)
+## Uninstall Azure Data Studio
 
 If you installed [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] using the Windows installer, then uninstall the same way you remove any Windows application.
 
@@ -151,6 +151,6 @@ See one of the following quickstarts to get started:
 - [Connect & Query Azure Data Warehouse](quickstart-sql-dw.md)
 
 Contribute to [!INCLUDE[name-sos](../includes/name-sos-short.md)]:
-- [https://github.com/Microsoft/sqlopsstudio](https://github.com/Microsoft/sqlopsstudio) 
+- [https://github.com/Microsoft/azuredatastudio](https://github.com/Microsoft/azuredatastudio) 
 
 [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=521839) and [usage data collection](usage-data-collection.md).

@@ -192,7 +192,6 @@ In this case the reults are as follows.
 >	[ALL] Wrote spec paths: 'deploy_ag1_specs'
 >	 [32m./deploy-ag.py exitcode: 0[0m
 ```
-
 This generates the sample yaml files in the `<path>` directory. 
 	
 ### Create the Specs and apply

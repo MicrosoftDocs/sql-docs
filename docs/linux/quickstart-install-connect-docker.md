@@ -25,7 +25,7 @@ moniker: ">= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allv
 In this quickstart, you use Docker to pull and run the SQL Server 2017 container image, [mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/). Then connect with **sqlcmd** to create your first database and run queries.
 
 > [!TIP]
-> If you want to try the SQL Server 2019 CTP 2.0 image, see the [SQL Server 2019 CTP 2.0 version of this article](quickstart-install-connect-docker.md?view=sql-server-linux-ver15#pullandrun2019).
+> If you want to try the SQL Server 2019 preview image, see the [SQL Server 2019 preview version of this article](quickstart-install-connect-docker.md?view=sql-server-linux-ver15).
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
@@ -33,12 +33,9 @@ In this quickstart, you use Docker to pull and run the SQL Server 2017 container
 
 In this quickstart, you use Docker to pull and run the SQL Server 2019 preview container image, [mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/). Then connect with **sqlcmd** to create your first database and run queries.
 
-This image consists of SQL Server running on Linux based on Ubuntu 16.04. It can be used with the Docker Engine 1.8+ on Linux or on Docker for Mac/Windows.
 ::: moniker-end
 
-
-> [!NOTE]
-> This quick start specifically focuses on using the mssql-server-**linux** image. The Windows image is not covered, but you can learn more about it on the [mssql-server-windows-developer Docker Hub page](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/).
+This image consists of SQL Server running on Linux based on Ubuntu 16.04. It can be used with the Docker Engine 1.8+ on Linux or on Docker for Mac/Windows. This quick start specifically focuses on using the mssql-server-**linux** image. The Windows image is not covered, but you can learn more about it on the [mssql-server-windows-developer Docker Hub page](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/).
 
 ## <a id="requirements"></a> Prerequisites
 
@@ -64,7 +61,7 @@ any changes to one section should be duplicated in the other-->
    ```
 
    > [!TIP]
-   > If you want to try the SQL Server 2019 CTP 2.0 image, see the [SQL Server 2019 CTP 2.0 version of this article](quickstart-install-connect-docker.md?view=sql-server-linux-ver15#pullandrun2019).
+   > If you want to try the SQL Server 2019 preview image, see the [SQL Server 2019 preview version of this article](quickstart-install-connect-docker.md?view=sql-server-linux-ver15#pullandrun2019).
 
    The previous command pulls the latest SQL Server 2017 container image. If you want to pull a specific image, you add a colon and the tag name (for example, `microsoft/mssql-server-linux:2017-GA`). To see all available images, see [the mssql-server-linux Docker hub page](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/).
 

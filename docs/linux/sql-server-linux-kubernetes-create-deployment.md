@@ -13,9 +13,9 @@ ms.custom: "sql-linux"
 ms.technology: linux
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
-# Create deployment script for SQL Server Always On Availability Group 
+# Create deployment script for SQL Server Always On Availability Group
 
-This article describes how to create the `.yaml` files that you can use as manifests to deploy a SQL Server Availability Group on a Kubernetes cluster.
+This article describes how to deploy an availability group on a Kubernetes cluster in a single command with an example deployment script. `deploy-ag.py` is a Python script that creates the `.yaml` files for the cluster and can apply them to a Kubernetes cluster.
 
 Download the solution from [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Linux).
 
@@ -29,9 +29,13 @@ Install the following tools on your workstation.
 
 Add python paths to the enviornment variables (for Windows).
 
-## Install the Required Components
+### Install the Required Components
 
 The following example The above installs the PyYAML and Kubernetes Client packages for Python.
+
+After you install Python, download and extract the sample folder. 
+
+To configure the required files, run the following command. Replace `<path>` with the location of the extracted sample files.
 
 ```cmd
 pip install --user -r "C:\<path>\requirements.txt"
@@ -41,22 +45,25 @@ pip install --user -r "C:\<path>\requirements.txt"
 
 The following example creates the cluster in Azure Kubernetes Service (AKS).
 
-Before you run the script, update the values in angle brackets - `<>`. 
+Before you run the script, update the values in angle brackets - `<>`.
 
 ```azcli
-az aks create  --resource-group <GroupName> --name <ClusterName> --generate-ssh-keys --node-count 4 --node-vm-size "Standard_D4s_v3" --kubernetes-version 1.11.1
+az aks create  --resource-group <GroupName> --name <ClusterName> --generate-ssh-keys --node-count 4 --kubernetes-version 1.11.1
 
 az aks get-credentials --resource-group=<GroupName> --name=<ClusterName>
 ```
 
-## Run the Script
+>[!NOTE]
+>Availability groups requires Kubernetes version 1.11.0 or higher. The example specifies 1.11.1.
 
-The following examples demonstrate how to run the scripts.
+## Run the deployment script
+
+The following examples demonstrate how to run `deploy-ag.py`.
 
 ### Help
 
-```python
-./deploy-ag.py --help
+```cmd
+python ./deploy-ag.py --help
 ```
 
 * **usage**: `deploy-ag.py [-h] {deploy | failover} ...`
@@ -75,14 +82,14 @@ The following examples demonstrate how to run the scripts.
 
 ### Deploy help
 
-```python
-./deploy-ag.py deploy --help
+```cmd
+python ./deploy-ag.py deploy --help
 ```
 
 * **usage**:
 
-  ```python
-  deploy-ag.py deploy [-h] [--verbose] [--ag AG] [-n NAMESPACE]
+  ```
+  python ./deploy-ag.py deploy [-h] [--verbose] [--ag AG] [-n NAMESPACE]
     [--dry-run] [-s SQL_SERVERS [SQL_SERVERS ...]]
     [-p SA_PASSWORD] [-e {ON_PREM,AKS}]
     [--skip-create-namespace]
@@ -118,7 +125,7 @@ The following examples demonstrate how to run the scripts.
   
   `-p SA_PASSWORD, --sa-password SA_PASSWORD`
   
-  SA Password. Default='<MyC0m91exP@55w0r!>'
+  SA Password. Default='SAPassword2018'
   
   `-e {ON_PREM,AKS}, --env {ON_PREM,AKS}`
   
@@ -128,13 +135,13 @@ The following examples demonstrate how to run the scripts.
 
 ### Failover help
 
-```python
-./deploy-ag.py failover --help
+```cmd
+python ./deploy-ag.py failover --help
 ```
 * **usage**: 
 
-  ```python
-  deploy-ag.py failover [-h] [--verbose] [--ag AG]
+  ```cmd
+  python deploy-ag.py failover [-h] [--verbose] [--ag AG]
     [--namespace NAMESPACE] [--dry-run]
     target_replica
   ```
@@ -168,48 +175,56 @@ The following examples demonstrate how to run the scripts.
   
   Perform a dry run and NOT apply the specs
 
-### Create the manifests but **NOT** apply
+### Create the manifests - don't apply
 
 The following script creates the manifest files but does not apply them.
 
-```python
+```cmd
 python ./deploy-ag.py deploy --dry-run
 ```
 
-The following example creates an availability group with three replicas on instances named SQL1, SQL2, and SQL3. 
+The following example creates the manifests for an availability group under namespace `AG1` with three replicas. Before you run the script, replace `<MyC0m91exP@55w0r!>` with a complex password.
 
-```python
-	python ./deploy-ag.py deploy --ag ag1 --namespace AG1 --sa-password '<MyC0m91exP@55w0r!>' --env AKS --dry-run
+```cmd
+python ./deploy-ag.py deploy --ag ag1 --namespace AG1 --sa-password '<MyC0m91exP@55w0r!>' --env AKS --dry-run
 ```
 
 In this case the results are as follows.
 
-```
->	[ALL] Created the following specs:
->	[ALL]    C:<path>\kube_agent_deploy-uxgte0o9ag1\operator.yaml
->	[ALL]    C:<path>\kube_agent_deploy-uxgte0o9ag1\sql-secrets.yaml
->	[ALL]    C:<path>\kube_agent_deploy-uxgte0o9ag1\pv.yaml
->	[ALL]    C:<path>\kube_agent_deploy-uxgte0o9ag1\sqlserver.yaml
->	[ALL]    C:<path>\kube_agent_deploy-uxgte0o9ag1\ag-services.yaml
->	[ALL]
->	[ALL] Wrote spec paths: 'deploy_ag1_specs'
->	 [32m./deploy-ag.py exitcode: 0[0m
-```
+![script output](./media/sql-server-linux-kubernetes-create-deployment/scriptbuild-out.png)
 
 This generates the sample yaml files in the `<path>` directory. 
 	
-### Create the Specs and apply
+### Create the manifests and apply
 
-```python
-	python ./deploy-ag.py deploy --ag ag1 --namespace ag1 --sa-password '!Locks123' --env AKS --verbose
+The following example creates the manifests for an availability group under namespace `ag1` with three replicas and applies it to your Kubernetes cluster. The cluster will then create the availability group. Before you run the script, replace `<MyC0m91exP@55w0r!>` with a complex password.
+
+```
+python ./deploy-ag.py deploy --ag ag1 --namespace ag1 --sa-password '<MyC0m91exP@55w0r!>' --env AKS --verbose
 ```	
+
+After the script completes, the Kubernetes operator will create the storage, the SQL Server instances, the load balancer services. You can monitor the deployment with [Kubernetes dashboard](http://docs.microsoft.com/azure/aks/kubernetes-dashboard).
+
+After Kubernetes creates the SQL Server containers:
+
+1. [Connect](sql-server-linux-kubernetes-connect.md) to a SQL Server instance in the cluster.
+
+1. Create a database.
+
+1. Take a full backup of the database to start the log chain.
+
+1. Add the database to the availability group.
+
+The availability group is created with automatic seeding so SQL Server will automatically create the secondary replicas.
 
 ### Perform a Manual Failover
 
-```python
+The following example fails over the primary replica.
+
+```cmd
 python ./deploy-ag.py failover --ag ag1 --namespace ag1 --verbose mssql1-0
 ```
 
-  ## Next steps
+## Next steps
 
 [SQL Server availability group on Kubernetes cluster](sql-server-ag-kubernetes.md)

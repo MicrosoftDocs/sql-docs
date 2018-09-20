@@ -27,7 +27,7 @@ Install the following tools on your workstation.
 * [PyYAML](https://pyyaml.org/) - Python Packages
 * [Kubernetes Client](https://github.com/kubernetes-client/python) - Python Package
 
-Add python paths to the enviornment variables (for Windows).
+Add python paths to the environment variables (for Windows).
 
 ### Install the Required Components
 
@@ -78,7 +78,7 @@ python ./deploy-ag.py --help
 
   `failover`
 
-   Perform a failover to a target replica.
+   Fail over to a target replica.
 
 ### Deploy help
 
@@ -117,11 +117,11 @@ python ./deploy-ag.py deploy --help
 
   `--dry-run`
   
-  Perform a dry run and not apply the specs.
+  Create the manifests, but do not apply them.
   
   `-s SQL_SERVERS [SQL_SERVERS ...], --sql-servers SQL_SERVERS [SQL_SERVERS ...]`
 
-  names of SQL Server instances(up to 5, separated by spaces)Default=['mssql1', 'mssql2', 'mssql3']
+  names of SQL Server instances (up to 5, separated by spaces) Default=['mssql1', 'mssql2', 'mssql3']
   
   `-p SA_PASSWORD, --sa-password SA_PASSWORD`
   
@@ -146,12 +146,12 @@ python ./deploy-ag.py failover --help
     target_replica
   ```
 
-  Perform a manual failover
+  Manually failover
 
 * **positional arguments**:
   `target_replica`
 
-  name of target SQL Server replica to failover to
+  name of target SQL Server replica for failover
 
 * **optional arguments**:
 
@@ -173,7 +173,7 @@ python ./deploy-ag.py failover --help
 
   `--dry-run`
   
-  Perform a dry run and NOT apply the specs
+  Create, but do not apply the manifests.
 
 ### Create the manifests - don't apply
 
@@ -189,11 +189,11 @@ The following example creates the manifests for an availability group under name
 python ./deploy-ag.py deploy --ag ag1 --namespace AG1 --sa-password '<MyC0m91exP@55w0r!>' --env AKS --dry-run
 ```
 
-In this case the results are as follows.
+The previous command generates the sample yaml files directory.
+
+In this case, the command output shows where the manifest files are created.
 
 ![script output](./media/sql-server-linux-kubernetes-create-deployment/scriptbuild-out.png)
-
-This generates the sample yaml files in the `<path>` directory. 
 	
 ### Create the manifests and apply
 
@@ -217,7 +217,7 @@ After Kubernetes creates the SQL Server containers:
 
 The availability group is created with automatic seeding so SQL Server will automatically create the secondary replicas.
 
-### Perform a Manual Failover
+### Manually failover
 
 The following example fails over the primary replica.
 

@@ -15,7 +15,9 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 ---
 # Create deployment script for SQL Server Always On Availability Group 
 
-This article describes how to create the `.yaml` files that you can use as manifests to deploy a SQL Server Availability Group on a Kubernetes cluster. 
+This article describes how to create the `.yaml` files that you can use as manifests to deploy a SQL Server Availability Group on a Kubernetes cluster.
+
+Download the solution from [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Linux).
 
 ## Before you start
 
@@ -131,7 +133,8 @@ The following examples demonstrate how to run the scripts.
 ```
 * **usage**: 
 
-  ```python deploy-ag.py failover [-h] [--verbose] [--ag AG]
+  ```python
+  deploy-ag.py failover [-h] [--verbose] [--ag AG]
     [--namespace NAMESPACE] [--dry-run]
     target_replica
   ```

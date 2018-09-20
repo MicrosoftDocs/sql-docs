@@ -189,7 +189,7 @@ sudo zypper install mssql-server-extensibility-java
 Additional configuration is primarily through the [mssql-conf tool](sql-server-linux-configure-mssql-conf.md).
 
 
-1. Add user accounts.
+1. Add the mssql user account used to run the SQL Server Launchpad service.
 
   ```bash
   sudo /opt/mssql/bin/mssql-conf setup
@@ -205,10 +205,12 @@ Additional configuration is primarily through the [mssql-conf tool](sql-server-l
 
   An alternative workflow is that if you have not yet accepted the SQL Server database engine licensing agreement, setup detects the mssql-mlservices packages and prompts for EULA acceptance when `mssql-conf setup` is run. For more information about EULA parameters, see [Configure SQL Server with the mssql-conf tool](sql-server-linux-configure-mssql-conf.md#mlservices-eula).
 
-3. Restart the SQL Server Launchpad service.
+3. Restart the SQL Server Launchpad service and the database engine instance.
 
   ```bash
-  systemctl restart mssql-launchpadd
+  systemctl restart mssql-launchpad
+
+  systemctl restart mssql-server.service
   ```
 
 4. Enable external script execution in SQL Server Management Studio or another tool that runs Transact-SQL. 
@@ -217,8 +219,6 @@ Additional configuration is primarily through the [mssql-conf tool](sql-server-l
   EXEC sp_configure 'external scripts enabled', 1 
   RECONFIGURE WITH OVERRIDE 
   ```
-
-
 
 ## Verify installation
   

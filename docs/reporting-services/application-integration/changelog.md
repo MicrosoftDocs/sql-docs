@@ -9,7 +9,7 @@ ms.suite: pro-bi
 
 ms.topic: reference
 ms.assetid: 112e0240-351d-46a9-98c7-2be09f26ac60
-author: rhys
+author: RhysSchmidtke
 ms.author: rhys
 ---
 # Changelog for the Report Viewer controls

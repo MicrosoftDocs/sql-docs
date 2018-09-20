@@ -69,9 +69,9 @@ You can [download and install SQL Server Management Studio](https://docs.microso
 
 Data originates from the [NYC Taxi and Limousine Commission](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml) public data set. 
 
-Download the database backup file [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak ) and restore it on the database engine instance.
++ Download the [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak ) database backup file and restore it on the database engine instance.
 
-Database file name must be **NYCTaxi_sample** if you want to run the following scripts as proivded.
+The database file name must be **NYCTaxi_sample** if you want to run the following scripts with no modification.
 
 ## Connect to the database
 

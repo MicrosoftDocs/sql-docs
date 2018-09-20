@@ -87,7 +87,7 @@ To complete this tutorial, you need SQL Server Management Studio, and access to 
 
 1. If the server is out of compliance and you want to disable Database Mail, click **Apply** in the **Evaluation Results** page.  
   
-10. Close both the **Results Detailed View** and the **Evaluate Policies** dialog boxes.  
+10. Close both the **Results Detailed View** and the **Evaluate Policies** dialog boxes.   
 
    
 ## Next Lesson  

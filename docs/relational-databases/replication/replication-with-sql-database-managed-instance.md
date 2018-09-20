@@ -107,7 +107,7 @@ Supports:
 
    Replace `<SQL_USER>` and `<PASSWORD>` with the SQL Server Account and password.
 
-   Replace `\\<STORAGE_ACCOUNT>.file.core.windows.net\<SHARE>` with the value for your storage account. 
+   Replace `\\<STORAGE_ACCOUNT>.file.core.windows.net\<SHARE>` with the connection string from the access keys tab of your Microsoft Azure storage account. 
 
    Replace `<STORAGE_CONNECTION_STRING>` with the value for your access keys.
 

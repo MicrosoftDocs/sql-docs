@@ -219,8 +219,6 @@ If you followed the steps in this document, you have an AG that is not yet clust
 >[!IMPORTANT]
 >If the AG is a cluster resource, there is a known issue in current release where forced failover with data loss to an asynchronous replica does not work. This will be fixed in the upcoming release. Manual or automatic failover to a synchronous replica succeeds.
 
-testing edit
-
 
 ## Next steps
 

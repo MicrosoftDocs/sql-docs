@@ -1,5 +1,5 @@
 ---
-title: "Changelog for the Report Viewer Controls"
+title: "Changelog for the Report Viewer Controls | SSRS"
 ms.date: 09/19/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

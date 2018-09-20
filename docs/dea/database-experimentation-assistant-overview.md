@@ -1,8 +1,8 @@
 ---
-title: Overview of Database Experimentation Assistant
+title: Overview of Database Experimentation Assistant solution for SQL Server upgrades
 description: Overview of Database Experimentation Assistant
 ms.custom: ""
-ms.date: 10/01/2018
+ms.date: 09/25/2018
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql

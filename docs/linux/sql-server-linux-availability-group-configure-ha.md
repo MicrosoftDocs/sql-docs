@@ -63,7 +63,7 @@ The steps to create an AG on Linux servers for high availability are different f
 
 ## Create the AG
 
-The examples in this section explain how to create the availabity group using Transact-SQL. You can also use the SQL Server Management Studio Availability Group Wizard. When you create an AG with the wizard, it will return an error when you join the replicas to the AG. To fix this, grant `ALTER`, `CONTROL`, and `VIEW DEFINITIONS` to the pacemaker on the AG on all replicas. Once permissions are granted on the primary replica, join the nodes to the AG through the wizard, but for HA to function properly, grant permission on all replicas.
+The examples in this section explain how to create the availability group using Transact-SQL. You can also use the SQL Server Management Studio Availability Group Wizard. When you create an AG with the wizard, it will return an error when you join the replicas to the AG. To fix this, grant `ALTER`, `CONTROL`, and `VIEW DEFINITIONS` to the pacemaker on the AG on all replicas. Once permissions are granted on the primary replica, join the nodes to the AG through the wizard, but for HA to function properly, grant permission on all replicas.
 
 For a high availability configuration that ensures automatic failover, the AG requires at least three replicas. Either of the following configurations can support high availability:
 

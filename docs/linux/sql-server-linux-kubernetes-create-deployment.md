@@ -15,23 +15,31 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 ---
 # Create deployment script for SQL Server Always On Availability Group 
 
+This article describes how to create the `.yaml` files that you can use as manifests to deploy a SQL Server Availability Group on a Kubernetes cluster. 
+
 ## Before you start
 
-1. [Python](https://www.python.org/downloads/) (3.5 or 3.6)
-2. [PyYAML](https://pyyaml.org/) - Python Packages
-3. [Kubernetes Client](https://github.com/kubernetes-client/python) - Python Package
+Install the following tools on your workstation.
 
-Add python paths to the enviornment variables (for Windows)
+* [Python](https://www.python.org/downloads/) (3.5 or 3.6)
+* [PyYAML](https://pyyaml.org/) - Python Packages
+* [Kubernetes Client](https://github.com/kubernetes-client/python) - Python Package
 
-## Installing the Required Components
+Add python paths to the enviornment variables (for Windows).
+
+## Install the Required Components
+
+The following example The above installs the PyYAML and Kubernetes Client packages for Python.
 
 ```cmd
-pip install --user -r "C:\HADR_Testing\Kubernetes\k8s-config\requirements.txt"
+pip install --user -r "C:\<path>\requirements.txt"
 ```
 
-<> The above command will install the PyYAML and Kubernetes Client packages for Python.
-
 ## Create Cluster and download config file
+
+The following example creates the cluster in Azure Kubernetes Service (AKS).
+
+Before you run the script, update the values in angle brackets - `<>`. 
 
 ```azcli
 az aks create  --resource-group <GroupName> --name <ClusterName> --generate-ssh-keys --node-count 4 --node-vm-size "Standard_D4s_v3" --kubernetes-version 1.11.1
@@ -41,26 +49,30 @@ az aks get-credentials --resource-group=<GroupName> --name=<ClusterName>
 
 ## Run the Script
 
-### Examples
+The following examples demonstrate how to run the scripts.
 
-================
-Example 1 -
+### Example - help
+
 ```python
    ./deploy-ag.py --help
-		usage: deploy-ag.py [-h] {deploy,failover} ...
+```
 
-		optional arguments:
-		  -h, --help         show this help message and exit
+**usage**: deploy-ag.py [-h] {deploy,failover} ...
 
-		subcommands:
-		  Actions on k8s agent
+  **optional arguments**:
 
-		  {deploy,failover}
-			deploy           Deploy a set of SQL Servers in an Availability Group
-			failover         Perform a failover to a target replica.
-```			
+    -h, --help show this help message and exit
 
-Example 2 -  
+  **subcommands**:
+    Actions on k8s agent
+
+      {deploy,failover}
+        deploy
+          Deploy a set of SQL Servers in an Availability Group
+        failover
+        Perform a failover to a target replica.
+
+Example  
 ```python
 ./deploy-ag.py deploy --help
 

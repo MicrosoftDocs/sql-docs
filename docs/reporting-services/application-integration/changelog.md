@@ -1,5 +1,5 @@
 ---
-title: "Changelog for the Report Viewer Controls | SSRS"
+title: "Changelog for the Report Viewer Controls | Reporting Services"
 ms.date: 09/19/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -27,3 +27,8 @@ The [WebForms](https://www.nuget.org/packages/Microsoft.ReportingServices.Report
 
 The [WinForms](https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.Winforms/150.900.148) Report Viewer Control
  - Fix for printing when an app is running in a High DPI mode.
+
+## Next steps
+
+[Getting started](integrating-reporting-services-using-reportviewer-controls-get-started.md) with the Report Viewer controls  
+More questions? [Try the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

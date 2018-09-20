@@ -4,7 +4,7 @@ description: This article explains how to manage a SQL Server Always On Availabi
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.date: 08/09/2018
+ms.date: 09/24/2018
 ms.topic: article
 ms.prod: sql
 ms.component: ""
@@ -50,5 +50,8 @@ kubectl apply -f ag-failover.yaml
 ```
 
 ## Next steps
+
+[Access the Kubernetes dashboard with Azure Kubernetes Service (AKS)](https://docs.microsoft.com/azure/aks/kubernetes-dashboard)
+
 
 [SQL Server availability group on Kubernetes cluster](sql-server-ag-kubernetes.md)

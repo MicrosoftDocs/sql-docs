@@ -59,16 +59,22 @@ The following examples demonstrate how to run the scripts.
 
 * **usage**: deploy-ag.py [-h] {deploy,failover} ...
 * **optional arguments**:
-  -h, --help show this help message and exit
-- **subcommands**:
-  Actions on k8s agent
-    {deploy,failover}
-    deploy
-      Deploy a set of SQL Servers in an Availability Group
-    failover
-      Perform a failover to a target replica.
+  * -h, --help show this help message and exit
+* **subcommands**:
+  * Actions on k8s agent
+  
+    * {deploy,failover}
 
-## Example  
+      deploy
+
+        Deploy a set of SQL Servers in an Availability Group
+
+      failover
+
+        Perform a failover to a target replica.
+
+## Example
+
 ```python
 ./deploy-ag.py deploy --help
 

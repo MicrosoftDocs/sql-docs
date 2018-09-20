@@ -217,7 +217,9 @@ If you followed the steps in this document, you have an AG that is not yet clust
 >After you configure the cluster and add the AG as a cluster resource, you cannot use Transact-SQL to fail over the AG resources. SQL Server cluster resources on Linux are not coupled as tightly with the operating system as they are on a Windows Server Failover Cluster (WSFC). SQL Server service is not aware of the presence of the cluster. All orchestration is done through the cluster management tools. In RHEL or Ubuntu use `pcs`. In SLES use `crm`. 
 
 >[!IMPORTANT]
->If the AG is a cluster resource, there is a known issue in current release where forced failover with data loss to an asynchronous replica does not work. This will be fixed in the upcoming release. Manual or automatic failover to a synchronous replica succeeds. 
+>If the AG is a cluster resource, there is a known issue in current release where forced failover with data loss to an asynchronous replica does not work. This will be fixed in the upcoming release. Manual or automatic failover to a synchronous replica succeeds.
+
+testing edit
 
 
 ## Next steps

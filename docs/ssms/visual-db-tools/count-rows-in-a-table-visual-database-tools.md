@@ -44,7 +44,7 @@ The procedures for all three types of counts are similar.
   
 2.  Right-click the background of the Diagram pane, then choose **Add Group By** from the shortcut menu. The [Query and View Designer](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) adds a **Group By** column to the grid in the Criteria pane.  
   
-3.  Select **\&#42; (All Columns)** in the rectangle representing the table or table-valued object.  
+3.  Select **&#42; (All Columns)** in the rectangle representing the table or table-valued object.  
   
     The Query and View Designer automatically fills the term **Count** into the **Group By** column in the Criteria pane and assigns a column alias to the column you are summarizing. You can replace this automatically generated alias with a more meaningful one. For more details, see [Create Column Aliases &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-column-aliases-visual-database-tools.md).  
   
@@ -56,7 +56,7 @@ The procedures for all three types of counts are similar.
   
 2.  Right-click the background of the Diagram pane, then choose **Add Group By** from the shortcut menu. The Query and View Designer adds a **Group By** column to the grid in the Criteria pane.  
   
-3.  Select **\&#42;(All Columns)** in the rectangle representing the table or table-structured object.  
+3.  Select **&#42;(All Columns)** in the rectangle representing the table or table-structured object.  
   
     The Query and View Designer automatically fills the term **Count** into the **Group By** column in the Criteria pane and assigns a column alias to the column you are summarizing. To create a more useful column heading in query output, see [Create Column Aliases &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-column-aliases-visual-database-tools.md).  
   

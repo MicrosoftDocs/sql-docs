@@ -118,10 +118,17 @@ For example, as the database administrator, you may want to ensure that certain 
 
   
  ## Examples
+
  - [Tutorial: Create and apply an off-by-default policy](lesson-1-create-and-apply-an-off-by-default-policy.md)
  - [Tutorial: Create and apply naming standards policy](lesson-2-create-and-apply-a-naming-standards-policy.md)
 
 ## See also  
- [Policy-Based Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
+ 
+ - [Create the Off By Default Policy](lesson-1-1-create-the-off-by-default-policy.md)
+ - [Configure a Server to Run the Off By Default Policy](lesson-1-2-configure-a-server-to-run-the-off-by-default-policy.md)
+ - [Policy-Based Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
+ 
+
+ 
   
   

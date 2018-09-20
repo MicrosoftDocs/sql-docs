@@ -1,9 +1,10 @@
 ---
 title: Install SQL Server 2016 R Services (In-Database) | Microsoft Docs
+description: R in SQL Server is available when you install SQL Server 2016 R Services on Windows.
 ms.prod: sql
 ms.technology: machine-learning
   
-ms.date: 04/15/2018
+ms.date: 09/08/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
@@ -12,11 +13,11 @@ manager: cgronlun
 # Install SQL Server 2016 R Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article explains how to install and configure **SQL Server 2016 R Services (In-Database)**. If you have SQL Server 2016, install this feature to enable execution of R code in SQL Server.
+This article explains how to install and configure **SQL Server 2016 R Services**. If you have SQL Server 2016, install this feature to enable execution of R code in SQL Server.
+
+In SQL Server 2017, R integration is offered in [Machine Learning Services](../r/r-server-standalone.md), reflecting the addition of Python. If you want R integration and have SQL Server 2017 installation media, see [Install SQL Server 2017 Machine Learning Services](sql-machine-learning-services-windows-install.md) to add the feature. 
 
 ## <a name="bkmk_prereqs"> </a> Pre-install checklist
-
-+ SQL Server 2016 setup is required if you want to install R Services. If instead you have SQL Server 2017 installation media, you should install [SQL Server 2017 Machine Learning Services (In-Database)](sql-machine-learning-services-windows-install.md) to get R integration for that version of SQL Server.
 
 + A database engine instance is required. You cannot install just R, although you can add it incrementally to an existing instance.
 
@@ -26,7 +27,7 @@ This article explains how to install and configure **SQL Server 2016 R Services 
 
 + Do not install **Shared Features** > **R Server (Standalone)** on the same computer running an in-database instance. 
 
-+ Side-by-side installation with other versions of R and Python are possible because the SQL Server instance uses its own copies of the open-source R and Anaconda distributions. However, running code that uses R and Python on the SQL Server computer outside SQL Server can lead to various problems:
+  Side-by-side installation with other versions of R and Python are possible because the SQL Server instance uses its own copies of the open-source R and Anaconda distributions. However, running code that uses R and Python on the SQL Server computer outside SQL Server can lead to various problems:
     
   + You use a different library and different executable, and get different results, than you do when you are running in SQL Server.
   + R and Python scripts running in external libraries cannot be managed by SQL Server, leading to resource contention.
@@ -123,7 +124,7 @@ Use the following steps to verify that all components used to launch external sc
 
     The **run_value** should now be set to 1.
 
-2. Open the **Services** panel or SQL Server Configuration Manager, and verify **SQL Server Launchpad service** is running. You should have one service for every database engine instance that has R or Python installed. For more information, see [Components to support Python integration](../python/new-components-in-sql-server-to-support-python-integration.md).
+2. Open the **Services** panel or SQL Server Configuration Manager, and verify **SQL Server Launchpad service** is running. You should have one service for every database engine instance that has R or Python installed. For more information about the service, see [Extensibility framework](../concepts/extensibility-framework.md).
 
 7. If Launchpad is running, you should be able to run simple R to verify that external scripting runtimes can communicate with SQL Server. 
 

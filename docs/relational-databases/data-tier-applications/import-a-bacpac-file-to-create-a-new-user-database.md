@@ -3,13 +3,7 @@ title: "Import a BACPAC File to Create a New User Database | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/31/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.component: "data-tier-applications"
-ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-data-tier-apps"
-ms.tgt_pltfrm: ""
+ms.technology:
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb. importdac.results.f1"
@@ -28,7 +22,6 @@ helpviewer_keywords:
   - "Migrate database"
   - "DAC"
 ms.assetid: 736d8d9a-39f1-4bf8-b81f-2e56c134d12e
-caps.latest.revision: 25
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

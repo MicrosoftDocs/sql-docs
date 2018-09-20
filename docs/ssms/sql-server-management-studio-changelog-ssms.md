@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Management Studio - Changelog (SSMS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/26/2018"
+ms.date: "09/04/2018"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.component: "ssms"
@@ -21,14 +21,95 @@ manager: craigg
 This article provides details about updates, improvements, and bug fixes for the current and previous versions of SSMS. Download [previous SSMS versions below](#previous-ssms-releases).
 
 
+## [SSMS 17.9](download-sql-server-management-studio-ssms.md)
 
 
-## [SSMS 17.8.1](download-sql-server-management-studio-ssms.md)
+Build number: 14.0.17285.0<br>
+Release date: September 04, 2018
+
+### What's new
+
+**General SSMS**
+
+
+ShowPlan:
+
+- Graphical Showplan now shows the new row mode memory grant feedback attributes when the feature is activated for a specific plan: IsMemoryGrantFeedbackAdjusted and LastRequestedMemory added to the MemoryGrantInfo query plan XML element. For more on row mode memory grant feedback, see [Adaptive query processing in SQL databases](https://docs.microsoft.com/sql/relational-databases/performance/adaptive-query-processing).
+
+Azure SQL: 
+
+- Added support for vCore SKUs in Azure DB creation. For more information, see [vCore-based purchasing model](https://docs.microsoft.com/azure/sql-database/sql-database-service-tiers#vcore-based-purchasing-model).
+ 
+
+### Bug fixes
+
+**General SSMS**
+	
+Replication Monitor:
+
+- Fixed an issue that was causing Replication Monitor (SqlMonitor.exe) not to start (User Voice item: https://feedback.azure.com/forums/908035-sql-server/suggestions/34791079) 
+
+Import Flat File Wizard: 
+
+- Fixed the link to the help page for "Flat File Wizard" dialog 
+- Fixed issue where the wizard did not allow changing the destination table when the table already existed: this allows users to retry without having to exit the wizard, delete the failed table, and then reenter the information into the wizard (User Voice item: https://feedback.azure.com/forums/908035-sql-server/suggestions/32896186). 
+
+Import/Export Data-Tier Application:
+
+- Fixed an issue (in DacFx) which was causing the import of a .bacpac could fail with a message like "Error SQL72014: .Net SqlClient Data Provider: Msg 9108, Level 16, State 10, Line 1 This type of statistics is not supported to be incremental. " when dealing with tables with partitions defined and no indexes on the table. 
+
+Intellisense:
+
+- Fixed an issue where intellisense completion was not working when using AAD with MFA. 
+
+Object Explorer: 
+
+- Fixed an issue where the "Filter Dialog" was displayed on random monitors instead of the monitor where SSMS was running (multi-monitor systems).
+
+Azure SQL: 
+
+- Fixed an issue related to enumeration of databases in the "Available Databases" where "master" was not displayed in the dropdown when connected to a specific database. 
+- Fixed an issue where trying to generate a script ("Data" or "Schema and Data") was failing then connected to the SQL Azure DB using AAD with MFA. 
+- Fixed an issue in the View Designer (Views) where it was not possible to select "Add Tables" from the UI when connected to a SQL Azure DB. 
+- Fixed an issue where SSMS Query Editor was silently closing and reopening connections during MFA token renewal. This will prevent side effects unbeknownst to the user (like closing a transaction and never reopening again) from happening. The change adds the token expiration time to the properties window. 
+- Fixed an issue where SSMS was not enforcing password prompts for imported MSA accounts for AAD with MFA login. 
+
+Activity Monitor: 
+
+- Fixed a an issue that was causing "Live Query Statistics" to hang when launched from Activity Monitor and SQL Authentication was used. 
+
+Microsoft Azure integration: 
+
+- Fixed an issue where SSMS only shows the first 50 subscriptions (Always Encrypted dialogs, Backup/Restore from URL dialogs, etc…). 
+- Fixed an issue where SSMS was throwing an exception ("Index out of range") while trying to log on to an Microsoft Azure account which did not have any storage account (in Restore Backup from URL dialog). 
+
+Object Scripting: 
+
+- When scripting "Drop and Create", SSMS now avoids generating dynamic T-SQL.
+- When scripting a database object, SSMS now does not generate script to set database scoped configurations, if they are set to default values.
+
+Help:
+
+- Fixed a long outstanding issue where "Help on Help" was not honoring the online/offline mode.
+- When clicking on "Help | Community Projects and Samples" SSMS now opens the default browser that points to a Git page and shows no errors/warnings due to old browser being used.
+
+### Known issues
+
+- There are currently no known issues in this release.
+
+
+
+## Previous SSMS releases
+
+Download previous SSMS versions by clicking the title links in the following sections.
+
+## ![download](../ssdt/media/download.png) [SSMS 17.8.1](https://go.microsoft.com/fwlink/?linkid=875802)
 *A bug was discovered in 17.8 related to provisioning SQL databases, so SSMS 17.8.1 replaces 17.8.*
-
 
 Build number: 14.0.17277.0<br>
 Release date: June 26, 2018
+
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x40a)
 
 
 ### What's new
@@ -87,10 +168,6 @@ Always Encrypted:
 - Some latency in XEvents viewer may be observed. This is a [known issue in the .Net Framework](https://github.com/Microsoft/dotnet/blob/master/releases/net472/dotnet472-changes.md#sql). Please, consider upgrading to NetFx 4.7.2.
 
 
-
-## Previous SSMS releases
-
-Download previous SSMS versions by clicking the title links in the following sections.
 
 
 ## ![download](../ssdt/media/download.png) [SSMS 17.7](https://go.microsoft.com/fwlink/?linkid=873126)

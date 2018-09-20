@@ -28,7 +28,7 @@ To install DEA, download the latest version of the tool from the [Microsoft Down
 ## Solution architecture for comparing workloads
 The following diagram shows the solution architecture comparing workloads between the different versions of SQL Server using DEA and distributed replay when upgrading from SQL Server 2008 to SQL Server 2016.
 
-![workloadcomparesolutionarchitecture](./media/database-experimentation-assistant-overview/dea-overview-compare-solution-architecture.png.png)
+![workloadcomparesolutionarchitecture](./media/database-experimentation-assistant-overview/dea-overview-compare-solution-architecture.png)
 
 ## Database Experimentation Assistant tool prerequisites
 Following are some prerequisites for running DEA:

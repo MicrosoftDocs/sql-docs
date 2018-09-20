@@ -109,7 +109,7 @@ Supports:
 
    Replace `\\<STORAGE_ACCOUNT>.file.core.windows.net\<SHARE>` with the value for your storage account. 
 
-   Replace `<STORAGE_CONNECTION_STRING>` with connection string from access keys tab of Microsoft Azure storage account.
+   Replace `<STORAGE_CONNECTION_STRING>` with the value for your access keys.
 
    After you update the following query, run it. 
 

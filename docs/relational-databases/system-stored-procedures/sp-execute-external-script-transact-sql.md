@@ -1,7 +1,7 @@
 ---
 title: "sp_execute_external_script (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/12/2018"
+ms.date: "08/14/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.component: "system-stored-procedures"
@@ -30,14 +30,16 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-Executes the script provided as argument at an external location. The script must be written in a supported and registered language (R or Python). To execute **sp_execute_external_script**, you must first enable external scripts by using the statement, `sp_configure 'external scripts enabled', 1;`.  
+Executes a script provided as an input argument to the procedure. Script runs in the [extensibility framework](../../advanced-analytics/concepts/extensibility-framework.md). Script must be written in a supported and registered language, on a database engine having at least one extension: [**R**](../../advanced-analytics/concepts/extension-r.md), [**Python**](../../advanced-analytics/concepts/extension-python.md), or [**Java** (in SQL Server 2019 preview only)](../../advanced-analytics/java/extension-java.md). 
+
+To execute **sp_execute_external_script**, you must first enable external scripts by using the statement, `sp_configure 'external scripts enabled', 1;`.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
-**This topic applies to**:  
-- [SQL Server 2017 Machine Learning Services (In-Database)](https://docs.microsoft.com/sql/advanced-analytics/install/sql-machine-learning-services-windows-install)
-- [SQL Server 2016 R Services](https://docs.microsoft.com/sql/advanced-analytics/install/sql-r-services-windows-install)
+> [!Note]
+> Machine learning (R and Python) and programming extensions are installed as an add-on to the database engine instance. Support for specific extensions vary by SQL Server version.
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ## Syntax
 
 ```
@@ -53,10 +55,26 @@ sp_execute_external_script
     [ , @params = N'@parameter_name data_type [ OUT | OUTPUT ] [ ,...n ]' ] 
     [ , @parameter1 = 'value1' [ OUT | OUTPUT ] [ ,...n ] ]
 ```
+::: moniker-end
+::: moniker range=">=sql-server-2016 <=sql-server-2017||=sqlallproducts-allversions"
+## Syntax for 2017 and earlier
+
+```
+sp_execute_external_script   
+    @language = N'language',   
+    @script = N'script'  
+    [ , @input_data_1 = N'input_data_1' ]   
+    [ , @input_data_1_name = N'input_data_1_name' ]  
+    [ , @output_data_1_name = N'output_data_1_name' ]  
+    [ , @parallel = 0 | 1 ]  
+    [ , @params = N'@parameter_name data_type [ OUT | OUTPUT ] [ ,...n ]' ] 
+    [ , @parameter1 = 'value1' [ OUT | OUTPUT ] [ ,...n ] ]
+```
+::: moniker-end
 
 ## Arguments
  **@language** = N'*language*'  
- Indicates the script language. *language* is **sysname**.  Valid values are `Python` or `R`. 
+ Indicates the script language. *language* is **sysname**.  Depending on your version of SQL Server, valid values are R (SQL Server 2016 and later), Python (SQL Server 2017 and later), and Java (SQL Server 2019 preview). 
   
  **@script** = N'*script*' 
  External language  script specified as a literal or variable input. *script* is **nvarchar(max)**.  
@@ -67,16 +85,18 @@ sp_execute_external_script
  [ **@input_data_1_name** = N'*input_data_1_name*' ]  
  Specifies the name of the variable used to represent the query defined by @input_data_1. The data type of the variable in the external script depends on the language. In case of R, the input variable is a data frame. In the case of Python, input must be tabular. *input_data_1_name* is **sysname**.  Default value is *InputDataSet*.  
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
   [ **@input_data_1_order_by_columns** = N'*input_data_1_order_by_columns*' ]  
- Applies to SQL Server vNext only and is used to build per-partition models. Specifies the name of the column used to order the result set, for example by product name. The data type of the variable in the external script depends on the language. In case of R, the input variable is a data frame. In the case of Python, input must be tabular.
+ Applies to SQL Server 2019 only and is used to build per-partition models. Specifies the name of the column used to order the result set, for example by product name. The data type of the variable in the external script depends on the language. In case of R, the input variable is a data frame. In the case of Python, input must be tabular.
 
   [ **@input_data_1_partition_by_columns** = N'*input_data_1_partition_by_columns*' ]  
- Applies to SQL Server vNext only and is used to build per-partition models. Specifies the name of the column used to segment data, such as geographic region or date. The data type of the variable in the external script depends on the language. In case of R, the input variable is a data frame. In the case of Python, input must be tabular. 
+ Applies to SQL Server 2019 only and is used to build per-partition models. Specifies the name of the column used to segment data, such as geographic region or date. The data type of the variable in the external script depends on the language. In case of R, the input variable is a data frame. In the case of Python, input must be tabular. 
+::: moniker-end
 
  [ **@output_data_1_name** =  N'*output_data_1_name*' ]  
  Specifies the name of the variable in the external script that contains the data to be returned to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] upon completion of the stored procedure call. The data type of the variable in the external script depends on the language. For R, the output must be a data frame. For Python, the output must be a pandas data frame. *output_data_1_name* is **sysname**.  Default value is *OutputDataSet*.  
 
- [ **@parallel** = 0 | 1 ]
+ [ **@parallel** = 0 | 1 ]  
  Enable parallel execution of R scripts by setting the `@parallel` parameter to 1. The default for this parameter is 0 (no parallelism). If `@parallel = 1` and the output is being streamed directly to the client machine, then the `WITH RESULTS SETS` clause is required and an output schema must be specified.  
   
  + For R scripts that do not use RevoScaleR functions, using the  `@parallel` parameter can be beneficial for processing large datasets, assuming the script can be trivially parallelized. For example, when using the R `predict` function with a model to generate new predictions, set `@parallel = 1` as a hint to the query engine. If the query can be parallelized, rows are distributed according to the **MAXDOP** setting.  
@@ -106,9 +126,10 @@ You can control the resources used by external scripts by configuring an externa
 
 Monitor script execution using [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) and [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md). 
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ### Parameters for partition modeling
 
- In SQL Server vNext, currently in public preview, you can set two additional parameters that enable modeling on partitioned data, where partitions are based on one or more columns you provide that naturally segment a data set into logical partitions created and used only during script execution. Columns containing repeating values for age, gender, geographic region, date or time, are a few examples that lend themselves to partitioned data sets.
+ In SQL Server 2019, currently in public preview, you can set two additional parameters that enable modeling on partitioned data, where partitions are based on one or more columns you provide that naturally segment a data set into logical partitions created and used only during script execution. Columns containing repeating values for age, gender, geographic region, date or time, are a few examples that lend themselves to partitioned data sets.
  
  The two parameters are **input_data_1_partition_by_columns** and **input_data_1_order_by_columns**, where the second parameter is used to order the result set. The parameters are passed as inputs to `sp_execute_external_script` with the external script executing once for every partition. For more information and examples, see [Tutorial: Create partition-based models](https://docs.microsoft.com/sql/advanced-analytics/tutorials/r-tutorial-create-models-per-partition.md).
 
@@ -116,6 +137,7 @@ Monitor script execution using [sys.dm_external_script_requests](../../relationa
 
  > [!Tip]
 > For training workoads, you can use `@parallel` with any arbitrary training script, even those using non-Microsoft-rx algorithms. Typically, only RevoScaleR algorithms (with the rx prefix) offer parallelism in training scenarios in SQL Server. But with the new parameters in SQL Server vNext, you can parallelize a script that calls functions not specifically engineered with that capability.
+::: moniker-end
 
 ### Streaming execution for R and Python scripts  
 

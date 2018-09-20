@@ -4,15 +4,15 @@ ms.custom: ""
 ms.date: "07/20/2016"
 ms.prod: sql
 ms.prod_service: security, sql-database"
-ms.reviewer: ""
+ms.reviewer: vanto
 ms.suite: "sql"
 ms.technology: security
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 07a305b1-4110-42f0-b7aa-28a4e32e912a
 caps.latest.revision: 32
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

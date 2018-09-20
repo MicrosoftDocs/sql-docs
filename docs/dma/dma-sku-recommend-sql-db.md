@@ -29,17 +29,20 @@ This article focuses primarily on DMA’s Azure SQL Database SKU recommendations
 > [!NOTE] 
 > This functionality is currently available only via the Command Line Interface (CLI). Support for this feature via the DMA user interface will be added in an upcoming release.
 
+> [!IMPORTANT]
+> SKU recommendations for Azure SQL Database are currently available for migrations from SQL Server 2016 or later.
+
 The following instructions help you determine Azure SQL Database SKU recommendations and provision the associated databases to Azure, by using Data Migration Assistant.
 
 ## Prerequisites
 
-Download Database Migration Assistant v4.0 or later, and then install it. If you already have the tool installed, close and reopen it, and you will be prompted to upgrade the tool.
+Download Database Migration Assistant v4.0 or later, and then install it. If you already have the tool installed, close and reopen it, and you'll be prompted to upgrade the tool.
 
 ## Collect performance counters
 
 The first step in the process is to collect performance counters for your databases. You can collect performance counters by running a PowerShell command on the computer that hosts your databases. DMA provides you with a copy of this PowerShell file, but you can also use your own method to capture performance counters from your computer.
 
-You do not need to perform this task for each database individually. The performance counters collected from a computer can be used to recommend the SKU for all databases hosted on the computer.
+You don't need to perform this task for each database individually. The performance counters collected from a computer can be used to recommend the SKU for all databases hosted on the computer.
 
 > [!IMPORTANT]
 > The computer from which you are running this command requires Administrator permissions to the computer hosting your databases.
@@ -53,7 +56,7 @@ You do not need to perform this task for each database individually. The perform
     - **OutputFilePath**: The output file path to save the collected counters.
     - **CollectionTimeInSeconds**: The amount of time during which you wish to collect performance counter data.
       Capture performance counters for at least 40 minutes to get a meaningful recommendation. The longer the duration of the capture, the more accurate the recommendation will be.
-    - **DbConnectionString**: The Connection string pointing to the master database hosted on the computer from which you are collecting performance counter data.
+    - **DbConnectionString**: The Connection string pointing to the master database hosted on the computer from which you're collecting performance counter data.
      
     Here's a sample invocation:
 
@@ -139,7 +142,7 @@ A description of each column follows.
 - **ExclusionReasons** - This value is blank if a Tier is recommended. For each tier that is not recommended, we provide the reasons why it was not picked.
 - **AppliedRules** - A short notation of the rules that were applied.
 
-Note that the recommended value is the minimum SKU required for your queries to run in Azure with a success rate similar to your on-premises databases. For example, if the recommended minimum SKU is S4 for the standard tier, then choosing S3 or below will cause queries to time out or fail to execute.
+The recommended value is the minimum SKU required for your queries to run in Azure with a success rate similar to your on-premises databases. For example, if the recommended minimum SKU is S4 for the standard tier, then choosing S3 or below will cause queries to time out or fail to execute.
 
 The HTML file contains this information in a graphical format. You can use the HTML file to input Azure subscription information, pick the pricing tier, compute level and Max data size for your databases, and generate a script to provision your databases. This script can be executed using PowerShell.
 

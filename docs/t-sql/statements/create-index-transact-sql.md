@@ -1,7 +1,7 @@
 ---
 title: "CREATE INDEX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/15/2018"
+ms.date: "09/26/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -240,7 +240,7 @@ Creates an index that specifies the logical ordering of a table. With a nonclust
  *column*  
  Is the column or columns on which the index is based. Specify two or more column names to create a composite index on the combined values in the specified columns. List the columns to be included in the composite index, in sort-priority order, inside the parentheses after *table_or_view_name*.  
   
- Up to 32 columns can be combined into a single composite index key. All the columns in a composite index key must be in the same table or view. The maximum allowable size of the combined index values is 900 bytes for a clustered index, or 1,700 for a nonclustered index. The limits are 16 columns and 900 bytes for versions before [!INCLUDE[ssSDS](../../includes/sssds-md.md)] V12 and [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
+ Up to 32 columns can be combined into a single composite index key. All the columns in a composite index key must be in the same table or view. The maximum allowable size of the combined index values is 900 bytes for a clustered index, or 1,700 for a nonclustered index. The limits are 16 columns and 900 bytes for versions before [!INCLUDE[ssSDS](../../includes/sssds-md.md)] and [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
   
  Columns that are of the large object (LOB) data types **ntext**, **text**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, or **image** cannot be specified as key columns for an index. Also, a view definition cannot include **ntext**, **text**, or **image** columns, even if they are not referenced in the CREATE INDEX statement.  
   
@@ -462,7 +462,7 @@ Specifies whether underlying tables and associated indexes are available for que
  
 RESUMABLE **=** { ON | **OFF**}
 
-**Applies to**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] as a public preview feature
+**Applies to**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] and [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] as a public preview feature
 
  Specifies whether an online index operation is resumable.
 
@@ -474,7 +474,7 @@ Index operation is not resumable.
 
 MAX_DURATION **=** *time* [**MINUTES**] used with **RESUMABLE = ON** (requires **ONLINE = ON**).
  
-**Applies to**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] as a public preview feature 
+**Applies to**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] and [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] as a public preview feature
 
 Indicates time (an integer value specified in minutes) that a resumable online index operation is executed before being paused. 
 
@@ -646,7 +646,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  For information about XML indexes see, [CREATE XML INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-xml-index-transact-sql.md) and [XML Indexes &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md).  
   
 ## Index Key Size  
- The maximum size for an index key is 900 bytes for a clustered index and 1,700 bytes for a nonclustered index. (Before [!INCLUDE[ssSDS](../../includes/sssds-md.md)] V12 and [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] the limit was always 900 bytes.) Indexes on **varchar** columns that exceed the byte limit can be created if the existing data in the columns do not exceed the limit at the time the index is created; however, subsequent insert or update actions on the columns that cause the total size to be greater than the limit will fail. The index key of a clustered index cannot contain **varchar** columns that have existing data in the ROW_OVERFLOW_DATA allocation unit. If a clustered index is created on a **varchar** column and the existing data is in the IN_ROW_DATA allocation unit, subsequent insert or update actions on the column that would push the data off-row will fail.  
+ The maximum size for an index key is 900 bytes for a clustered index and 1,700 bytes for a nonclustered index. (Before [!INCLUDE[ssSDS](../../includes/sssds-md.md)] and [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] the limit was always 900 bytes.) Indexes on **varchar** columns that exceed the byte limit can be created if the existing data in the columns do not exceed the limit at the time the index is created; however, subsequent insert or update actions on the columns that cause the total size to be greater than the limit will fail. The index key of a clustered index cannot contain **varchar** columns that have existing data in the ROW_OVERFLOW_DATA allocation unit. If a clustered index is created on a **varchar** column and the existing data is in the IN_ROW_DATA allocation unit, subsequent insert or update actions on the column that would push the data off-row will fail.  
   
  Nonclustered indexes can include non-key columns in the leaf level of the index. These columns are not considered by the [!INCLUDE[ssDE](../../includes/ssde-md.md)] when calculating the index key size . For more information, see [Create Indexes with Included Columns](../../relational-databases/indexes/create-indexes-with-included-columns.md).  
   
@@ -718,7 +718,7 @@ INSERT INTO t1 VALUES (1, 0);
  
 ### <a name="resumable-indexes"></a>Resumable index operations
 
-**Applies to**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] as a public preview feature.
+**Applies to**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] and [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] as a public preview feature
 
 The following guidelines apply for resumable index operations:
 
@@ -730,14 +730,12 @@ The following guidelines apply for resumable index operations:
 - Re-executing the original CREATE INDEX statement for resumable index, automatically resumes a paused index create operation.
 - The SORT_IN_TEMPDB=ON option is not supported for resumable index. 
 - The DDL command with RESUMABLE=ON cannot be executed inside an explicit transaction (cannot be part of begin TRAN … COMMIT block).
-- To resume/abort an index build/rebuild, use the [ALTER INDEX](alter-index-transact-sql.md) T-SQL syntax
+- To resume/abort an index create/rebuild, use the [ALTER INDEX](alter-index-transact-sql.md) T-SQL syntax
 
 > [!NOTE]
 > The DDL command runs until it completes, pauses or fails. In case the command pauses, an error will be issued indicating that the operation was paused and that the index creation did not complete. More information about the current index status can be obtained from [sys.index_resumable_operations](../../relational-databases/system-catalog-views/sys-index-resumable-operations.md). As before in case of a failure an error will be issued as well. 
 
-To indicate that an index create is executed as resumable operation and to check its current execution state, see [sys.index_resumable_operations](../../relational-databases/system-catalog-views/sys-index-resumable-operations.md). For public preview, the following columns in this view are set to 0:
-- total_execution_time
-- percent_complete and page_count
+To indicate that an index create is executed as resumable operation and to check its current execution state, see [sys.index_resumable_operations](../../relational-databases/system-catalog-views/sys-index-resumable-operations.md). 
 
 **Resources**
 The following resources are required for resumable online index create operation
@@ -748,17 +746,12 @@ The following resources are required for resumable online index create operation
 
 **Current functional limitations**
 
-> [!IMPORTANT]
-> **Resumable Online Index Create** is currently only supported for non-clustered index.
-
 The following functionality is disabled for resumable index create operations
-- Resumable Index Create is not supported for a clustered index for public preview.
 - After a resumable online index create operation is paused, the initial value of MAXDOP cannot be changed
-- DROP EXISTING clause is not supported
 - Create an index that contains 
  - Computed or TIMESTAMP column(s) as key columns
  - LOB column as included column for resumable index create
-- Filtered index
+ - Filtered index
  
 ## Row and Page Locks Options  
  When ALLOW_ROW_LOCKS = ON and ALLOW_PAGE_LOCK = ON, row-, page-, and table-level locks are allowed when accessing the index. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] chooses the appropriate lock and can escalate the lock from a row or page lock to a table lock.  
@@ -1048,6 +1041,8 @@ GO
 ```  
 ### M. Create, resume, pause, and abort resumable index operations
 
+**Applies to**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] and [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] as a public preview feature
+
 ```sql
 -- Execute a resumable online index create statement with MAXDOP=1
 CREATE  INDEX test_idx1 on test_table (col1) WITH (ONLINE=ON, MAXDOP=1, RESUMABLE=ON)  
@@ -1074,6 +1069,8 @@ ALTER INDEX test_idx2 on test_table ABORT
   
 ### N. Basic syntax  
   ### Create, resume, pause, and abort resumable index operations
+
+**Applies to**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] and [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] as a public preview feature
 
 ```sql
 -- Execute a resumable online index create statement with MAXDOP=1

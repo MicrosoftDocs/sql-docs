@@ -1,27 +1,21 @@
 ---
 title: "Deprecated features in SQL Server Reporting Services in SQL Server 2016 | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/02/2017"
+ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "reporting-services"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: reporting-services
+ms.suite: pro-bi
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Reporting Services, backward compatibility"
   - "deprecated features [Reporting Services]"
   - "HTML OWC rendering extension [Reporting Services]"
   - "Report Server Web service, endpoints"
 ms.assetid: 3876c01e-f81d-4cce-9104-5106a8c369e6
-caps.latest.revision: 56
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ---
 
 # Deprecated features in SQL Server Reporting Services in SQL Server 2016

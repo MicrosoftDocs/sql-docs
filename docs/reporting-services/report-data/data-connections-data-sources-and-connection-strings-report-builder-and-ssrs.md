@@ -1,20 +1,15 @@
 ---
 title: "Data Connections, Data Sources, Connection Strings-Report Builder-SSRS | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/21/2018"
+ms.date: 08/21/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "report-data"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-data
+ms.suite: pro-bi
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ---
 # Data Connections, Data Sources, and Connection Strings (Report Builder and SSRS)
 

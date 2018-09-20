@@ -3,6 +3,7 @@ layout: HubPage
 hide_bc: true
 title: Microsoft SQL Documentation | Microsoft Docs
 description: Learn about SQL
+ms.date: 09/01/2018
 author: craigg-msft 
 ms.author: craigg
 ms.topic: conceptual
@@ -74,7 +75,7 @@ ms.technology: install
                                                 </ul>
                                                 <h4>Tools</h4>
                                                 <ul class="noBullet">
-                                                    <li><a class="barLink" href="/sql/sql-operations-studio/download">SQL Operations Studio <sup>PREVIEW</sup></a></li>   <li><a class="barLink" href="/sql/ssms/download-sql-server-management-studio-ssms">SQL Server Management Studio (SSMS)</a></li>
+                                                    <li><a class="barLink" href="/sql/azure-data-studio/download">Azure Data Studio <sup>PREVIEW</sup></a></li>   <li><a class="barLink" href="/sql/ssms/download-sql-server-management-studio-ssms">SQL Server Management Studio (SSMS)</a></li>
                                                     <li><a class="barLink" href="/sql/ssdt/download-sql-server-data-tools-ssdt">SQL Server Data Tools (SSDT)</a></li>
                                                     <li><a class="barLink" href="/sql/tools/overview-sql-tools">See all SQL tools</a></li>
                                                 </ul>

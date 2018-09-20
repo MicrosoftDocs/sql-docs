@@ -1,7 +1,7 @@
 ﻿---
 title: "CREATE CREDENTIAL (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/09/2017"
+ms.date: "09/07/2018"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
@@ -34,8 +34,6 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
 
   Creates a server-level credential. A credential is a record that contains the authentication information that is required to connect to a resource outside SQL Server. Most credentials include a Windows user and password. For example, saving a database backup to some location might require SQL Server to provide special credentials to access that location. For more information, see [Credentials (Database Engine)](../../relational-databases/security/authentication-access/credentials-database-engine.md).
 
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
-
 > [!NOTE]  
 >  To make the credential  at the database-level use [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md). Use a server-level credential when you need to use the same credential for multiple databases on the server. Use a database-scoped credential to make the database more portable. When a database is moved to a new server, the database scoped credential will move with it. Use database scoped credentials on [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
@@ -57,7 +55,10 @@ WITH IDENTITY = 'identity_name'
   
  IDENTITY **='***identity_name***'**  
  Specifies the name of the account to be used when connecting outside the server. When the credential is used to access the Azure Key Vault, the **IDENTITY** is the name of the key vault. See example C below. When the credential is using a shared access signature (SAS), the **IDENTITY** is *SHARED ACCESS SIGNATURE*. See example D below.  
-  
+ 
+> [!IMPORTANT]
+> Azure SQL Database only supports Azure Key Vault and Shared Access Signature identities. Windows user identities are not supported.
+ 
  SECRET **='***secret***'**  
  Specifies the secret required for outgoing authentication.  
   

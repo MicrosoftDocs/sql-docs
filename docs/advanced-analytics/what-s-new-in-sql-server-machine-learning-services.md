@@ -1,5 +1,6 @@
 ---
 <<<<<<< HEAD
+<<<<<<< HEAD
 title: What's new in SQL Server Machine Learning Services | Microsoft Docs
 ms.custom: sqlseattle
 ms.prod: sql
@@ -7,42 +8,72 @@ ms.technology: machine-learning
 
 ms.date: 06/25/2018  
 =======
+=======
+>>>>>>> 469f4d6d039bfa0866c573339f78a9ac260e5a47
 title: "What&#39;s new in SQL Server Machine Learning Services | Microsoft Docs"
 description: New feature announcements for each release of SQL Server 2016 R Services, R Server, SQL Server 2017 Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
 
+<<<<<<< HEAD
 ms.date: 08/28/2018  
 >>>>>>> 6ba682b5d1d8d34969cd282777e0e9c4adc5974d
+=======
+ms.date: 09/24/2018  
+>>>>>>> 469f4d6d039bfa0866c573339f78a9ac260e5a47
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # What's new in SQL Server Machine Learning Services 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Machine learning capabilities are added to SQL Server in each release as we continue to expand, extend, and deepen the integration between the data platform and the data science, analytics, and supervised learning you want to implement over your data. 
+Machine learning capabilities are added to SQL Server in each release as we continue to expand, extend, and deepen the integration between the data platform, advanced analytics, and data science. 
 
-## New in SQL Server vNext
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+## New in SQL Server 2019 preview
 
-This release adds the top-requested features for R and Python machine learning operations in SQL Server. For more information about other features in this release, see [What's new in SQL Server vNext](../sql-server/what-s-new-in-sql-server-vnext.md)
+This release adds the top-requested features for R and Python machine learning operations in SQL Server. For more information about all of the features in this release, see [What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md) and [Release Notes for SQL Server 2019](../sql-server/sql-server-ver15-release-notes.md).
 
-| Release | Date | Feature update |
-|---------|------|----------------|
-| CTP 2.0 | September 2018 | Failover cluster support. You can install SQL Server vNext Machine Learning Services (In-Database) on a Windows failover cluster to meet your requirements for redundancy and uptime in the event your primary server fails over. SQL Server Setup provides a workflow for installing features in a failover cluster, and SQL Server Machine Learning Services (In-Database) is now included in that workflow. |
-| CTP 2.0 | September 2018 | Partition-based modeling. One of the more common approaches for executing R or Python code on SQL data is providing script as an input parameter to the [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) system stored procedure. In this CTP release, SQL Server vNext adds new parameters for modeling, training, and scoring over partitioned data. Individual models are generated for each partition, with the external script executing once for every partition. To learn more, see [Tutorial: Create partition-based models in R](tutorials/r-tutorial-create-models-per-partition.md). |
-| CTP 2.0 | September 2018 | Linux platform support for SQL Server vNext Machine Learning Services (In-Database) with R integration. Python parity is projected for an upcoming CTP release. For instructions on Linux installation, see [Install SQL Server Machine Learning Services on Linux](../linux/sql-server-linux-setup-machine-learning.md). |
+| Release | Feature update |
+|---------|----------------|
+| CTP 2.0 | Linux platform support for R and Python machine learning, plus the new Java extension. For help getting started, see [Install SQL Server Machine Learning Services on Linux](../linux/sql-server-linux-setup-machine-learning.md). |
+| CTP 2.0 | The [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) includes two new parameters that enable you to easily generate multiple models from partitioned data. Learn more in this tutorial, [Create partition-based models in R](tutorials/r-tutorial-create-models-per-partition.md). |
+| CTP 2.0 | Failover cluster support is now supported on Windows and Linux, assuming SQL Server Launchpad service is started on all nodes. For more information, see [SQL Server failover cluster installation](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md). |
+::: moniker-end
 
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 ## New in SQL Server 2017
 
 This release adds [Python support and industry-leading machine learning algorithms](https://blogs.technet.microsoft.com/dataplatforminsider/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/). Renamed to reflect the new scope, SQL Server 2017 marks the introduction of [SQL Server Machine Learning Services (In-Database)](what-is-sql-server-machine-learning.md), with language support for both Python and R. 
 
-This release also introduced [SQL Server Machine Learning Server (Standalone)](r/r-server-standalone.md), fully independent of SQL Server, for R and Python workloads that you want to run on a dedicated system. With the standalone server, you can distribute and scale R or Python solutions without using SQL Server.
+For feature announcements all-up, see [What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md).
+
+### R enhancements
+
+The R component of SQL Server 2017 Machine Learning Services is the next generation of SQL Server 2016 R Services, with updated versions of base R, RevoScaler, and other packages.
+
+New capabilities for R include [**package management**](r/install-additional-r-packages-on-sql-server.md), with the following highlights: 
+
++ Database roles help DBAs manage packages and assign permissions for package installation.
++ [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) helps DBAs manage packages in the familiar T-SQL language.
++ [RevoScaleR](r/use-revoscaler-to-manage-r-packages.md) functions help install, remove, or list packages owned by users. For more information, see [How to use RevoScaleR functions to find or install R packages on SQL Server](r/use-revoscaler-to-manage-r-packages.md).
+
+### R libraries
+
+| Package | Description |
+|---------|-------------|
+| [**MicrosoftML**](using-the-microsoftml-package.md) | In this release, MicrosoftML is included in a default R installation, eliminating the upgrade step required in the previous SQL Server 2016 R Services. MicrosoftML provides state-of-the-art machine learning algorithms and data transformations that can be scaled or run in remote compute contexts. Algorithms include customizable deep neural networks, fast decision trees and decision forests, linear regression, and logistic regression.  |
 
 ### Python integration for in-database analytics
 
-T-SQL and Python integration is now supported through the [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) system stored procedure. You can call any Python code using this stored procedure. Code runs in a secure, dual architecture that enables enterprise-grade deployment of Python models and scripts, callable from an application using a simple stored procedure. Additional performance gains are achieved by streaming data from SQL to Python processes and MPI ring parallelization.
+Python is a language that offers great flexibility and power for a variety of machine learning tasks. Open-source libraries for Python include several platforms for customizable neural networks, as well as popular libraries for natural language processing. Now, this widely-used language is supported in SQL Server 2017 Machine Learning.
+
+Because Python is integrated with the database engine, you can keep analytics close to the data and eliminate the costs and security risks associated with data movement. You can deploy machine learning solutions based on Python using tools like Visual Studio. Your production applications can get predictions, models, or visuals from the Python 3.5 runtime using SQL Server data access methods.
+
+T-SQL and Python integration is supported through the [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) system stored procedure. You can call any Python code using this stored procedure. Code runs in a secure, dual architecture that enables enterprise-grade deployment of Python models and scripts, callable from an application using a simple stored procedure. Additional performance gains are achieved by streaming data from SQL to Python processes and MPI ring parallelization.
 
 You can use the T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md) function to perform [native scoring](sql-native-scoring.md) on a pre-trained model that has been previously saved in the required binary format.
 
@@ -53,23 +84,22 @@ You can use the T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md) functi
 [**revoscalepy**](python/what-is-revoscalepy.md)| Python-equivalent of RevoScaleR. You can create Python models for linear and logistic regressions, decision trees, boosted trees, and random forests, all parallelizable, and capable of being run in remote compute contexts. This package supports use of multiple data sources and remote compute contexts. The data scientist or developer can execute Python code on a remote SQL Server, to explore data or build models without moving data. |
 |[**microsoftml**](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) |Python-equivalent of the MicrosoftML R package. |
 
-### R libraries
-
-| Package | Description |
-|---------|-------------|
-| [**MicrosoftML (R)**](using-the-microsoftml-package.md) | State-of-the-art machine learning algorithms and data transformation that can be scaled or run in remote compute contexts. Algorithms include customizable deep neural networks, fast decision trees and decision forests, linear regression, and logistic regression.  |
-| [**R package management**](r/install-additional-r-packages-on-sql-server.md) | Enhanced in this release, with the following highlights: database roles to help the DBA manage packages and assign permissions to install packages, [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) statement in T-SQL to help DBAs manage packages without needing to know R, and a rich set of R functions in [RevoScaleR](r/use-revoscaler-to-manage-r-packages.md) to help install, remove, or list packages owned by users. |
-
 ### Pre-trained models
 
 [**Pre-trained models**](install/sql-pretrained-models-install.md) are available for both Python and R. Use these models for image recognition and positive-negative sentiment analysis, to generate predictions on your own data. 
 
+### Standalone Server as a shared feature in SQL Server Setup
+
+This release also adds [SQL Server Machine Learning Server (Standalone)](r/r-server-standalone.md), a fully independent data science server, supporting statistical and predictive analytics in R and Python. As with R Services, this server is the next version of SQL Server 2016 R Server (Standalone). With the standalone server, you can distribute and scale R or Python solutions with no dependencies on SQL Server.
+::: moniker-end
 
 ## New in SQL Server 2016
 
 This release introduced machine learning capabilities into SQL Server through **SQL Server 2016 R Services**, an in-database analytics engine for processing R script on resident data within a database engine instance.
 
 Additionally, **SQL Server 2016 R Server (Standalone)** was released as a way to install R Server on a Windows server. Initially, SQL Server Setup provided the only way to install R Server for Windows. In later releases, developers and data scientists who wanted R Server on Windows could use another standalone installer to achieve the same goal. The standalone server in SQL Server is functionally equivalent to the standalone server product, [Microsoft R Server for Windows](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows).
+
+For feature announcements all-up, see [What's New in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md).
 
 | Release |Feature update |
 |---------|----------------|
@@ -78,15 +108,15 @@ Additionally, **SQL Server 2016 R Server (Standalone)** was released as a way to
 
 ## Linux support roadmap
 
-Machine learning using R or Python in-database is not currently supported in SQL Server on Linux. Look for announcements in a later release.
+SQL Server 2019 CTP 2.0 adds Linux support for R, Python, and Java when you install the machine learning packages with a database engine instance. For more information, see [Install SQL Server Machine Learning Services on Linux](../linux/sql-server-linux-setup-machine-learning.md).
 
-However, on Linux you can perform [native scoring](sql-native-scoring.md) using the T-SQL PREDICT function. Native scoring lets you score from a pretrained model very fast, without calling or even requiring an R runtime. This means you can use SQL Server on Linux to generate predictions very fast, to serve client applications.
+On Linux, SQL Server 2017 does not have R or Python integration, but you can use [Native scoring](sql-native-scoring.md) on Linux because that functionality is available through T-SQL [PREDICT](), which runs on Linux. Native scoring enables high-performance scoring from a pretrained model, without calling or even requiring an R runtime.
 
 <a name="azure-sql-database-roadmap"></a>
 
 ## Azure SQL Database roadmap
 
-There is limited support for R in Azure SQL Database: available only in West Central US, in services created at the Premium tier. Expanded coverage, including Python support, is likely to follow in a future release. However, there is no projected release date at this time.  
+There is currently no support for Machine Learning Services (R and Python) in Azure SQL Database. Support is on the roadmap but there is no projected release date at this time.  
 
 ## Next steps
 

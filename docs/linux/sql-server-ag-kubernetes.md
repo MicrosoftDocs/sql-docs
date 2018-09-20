@@ -15,7 +15,7 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 ---
 # Always On availability groups for SQL Server containers
 
-SQL Server vNext supports availability groups on containers in a Kubernetes. For availability groups, deploy the SQL Server [Kubernetes operator](http://coreos.com/blog/introducing-operators.html) to your Kubernetes cluster. The operator helps package, deploy, and manage the availability group in a cluster.
+SQL Server 2019 supports availability groups on containers in a Kubernetes. For availability groups, deploy the SQL Server [Kubernetes operator](http://coreos.com/blog/introducing-operators.html) to your Kubernetes cluster. The operator helps package, deploy, and manage the availability group in a cluster.
 
 ![AG in Kubernetes Container](media/tutorial-sql-server-ag-containers-kubernetes/KubernetesCluster.png)
 
@@ -42,7 +42,7 @@ To deploy an availability group in Kubernetes:
 
 1. Create the Kubernetes cluster
 
-   For an availability group, create at least three nodes for SQL Server plus a node for the operator.
+   For an availability group, create at least three nodes for SQL Server plus a node for the master.
 
 1. Deploy the operator
 
@@ -64,11 +64,11 @@ The StatfulSet contains:
 
 * mssql-server container
 
-* AG Agent container
+* mssql-ha-supervisor container
 
-The code for the operator, AG agent, and SQL Server is packaged in a Docker image called `mssql-server-k8s-agents`. This image contains following binaries:
+The code for the operator, HA supervisor, and SQL Server is packaged in a Docker image called `mcr.microsoft.com/mssql/ha`. This image contains following binaries:
 
-* `mssql-server-k8s-operator`
+* `mssql-operator`
 
     This process is deployed as a separate Kubernetes deployment. It registers the custom Kubernetes [custom resource](http://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/) called `SqlServer` (sqlservers.mssql.microsoft.com). Then it listens for such resources being created or updated in the Kubernetes cluster. For every such event, it creates or updates the Kubernetes resources for the corresponding instance (for example the StatefulSet, or `mssql-server-k8s-init-sql` job).
 
@@ -76,13 +76,19 @@ The code for the operator, AG agent, and SQL Server is packaged in a Docker imag
 
     This web server serves Kubernetes [liveness probes](http://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes/) to determine the health of a SQL Server instance. Monitors the health of the local SQL Server instance by calling `sp_server_diagnostics` and comparing the results with your monitor policy.
 
-* `mssql-server-k8s-ag-agent-supervisor`
-  
-    This process spawns `mssql-server-k8s-ag-agent` processes as child processes and terminates them as necessary, based on which AGs the local SQL Server instance is meant to be part of.
+* `mssql-ha-supervisor`
+
+  Contains `mssql-health-monitor`
+
+  This process spawns `mssql-server-k8s-ag-agent` and `mssql-server-k8s-sqlhealth-agent` processes as child processes and terminates them as necessary, based on which AGs the local SQL Server instance is meant to be part of. 
+
+    It also maintains the ag certificate and endpoint. 
 
 * `mssql-server-k8s-ag-agent`
   
     This process monitors the health of an AG replica on a single SQL Server instance and performs failovers.
+
+    It also maintains the leader election.
 
 * `mssql-server-k8s-init-sql`
   
@@ -103,7 +109,7 @@ The code for the operator, AG agent, and SQL Server is packaged in a Docker imag
 
 ### Notes
 
-Regardless of the AG configuration, The operator will always deploy the AG agent. If the SqlServer resource does not list any AG, the operator will still deploy this container.
+Regardless of the AG configuration, The operator will always deploy the HA supervisor. If the SqlServer resource does not list any AG, the operator will still deploy this container.
 
 The version for the operator image is identical to the version for the SQL Server image.
 

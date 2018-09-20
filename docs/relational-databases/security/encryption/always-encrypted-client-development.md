@@ -3,7 +3,7 @@ title: "Always Encrypted (client development) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/21/2018"
 ms.prod: sql
-ms.reviewer: ""
+ms.reviewer: vanto
 ms.suite: "sql"
 ms.technology: security
 ms.tgt_pltfrm: ""
@@ -11,8 +11,8 @@ ms.topic: conceptual
 dev_langs: 
   - "CSharp"
 ms.assetid: 9595eb66-284c-4474-828f-8961a05ce989
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

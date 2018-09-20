@@ -36,7 +36,7 @@ SQL Server 2016 is R only. SQL Server 2017 supports R and Python. The following 
 | Python samples and scripts | As with R, Python includes built-in data sets  and scripts. Find the revoscalepy data at \Program files\Microsoft SQL Server\140\PYTHON_SERVER\lib\site-packages\revoscalepy\data\sample-data. |
 | Pre-trained models in R and Python | Pre-trained models are created for specific use cases and maintained by the data science engineering team at Microsoft. You can use the pre-trained models as-is to score positive-negative sentiment in text, or detect features in images, using new data inputs that you provide. Pre-trained models are supported and usable on a standalone server, but you cannot install them through SQL Server Setup. For more information, see [Install pretrained machine learning models on SQL Server](../install/sql-pretrained-models-install.md). |
 
-## Use cases
+## Using a standalone server
 
 R and Python developers typically choose a standalone server to move beyond the memory and processing constraints of open-source R and Python. R and Python libraries executing on a standalone server can load and process large amounts of data on multiple cores and aggregate the results into a single consolidated output. High-performance functions are engineered for both scale and utility: delivering predictive analytics, statistical modeling, data visualizations, and leading-edge machine learning algorithms in a commercial server product engineered and supported by Microsoft.
 

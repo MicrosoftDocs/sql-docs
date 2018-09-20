@@ -3,7 +3,7 @@ title: "Configure Always Encrypted using SQL Server Management Studio | Microsof
 ms.custom: ""
 ms.date: "11/30/2016"
 ms.prod: sql
-ms.reviewer: ""
+ms.reviewer: vanto
 ms.suite: "sql"
 ms.technology: security
 ms.tgt_pltfrm: ""
@@ -15,8 +15,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Always Encrypted, configure with SSMS"
 ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

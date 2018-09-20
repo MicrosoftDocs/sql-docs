@@ -1,23 +1,17 @@
 ---
 title: "Configure the web portal | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/10/2017"
+ms.date: 05/10/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.component: "report-server"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-server
+ms.suite: pro-bi
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "the web portal [Reporting Services], configuring"
 ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
-caps.latest.revision: 28
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ---
 # Configure the web portal
 

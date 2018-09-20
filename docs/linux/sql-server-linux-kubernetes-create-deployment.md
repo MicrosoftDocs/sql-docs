@@ -179,8 +179,9 @@ The following example creates an availability group with three replicas on insta
 	python.exe ./deploy-ag.py deploy --ag ag1 --namespace AG1 --sql-servers ['SQL1', 'SQL2', 'SQL3'] --sa-password '<MyC0m91exP@55w0r!>' --env AKS --dry-run
 ```
 
-In this case the reults are as follows.
+In this case the results are as follows.
 
+```
 >	[ALL] Created the following specs:
 >	[ALL]    C:<path>\kube_agent_deploy-uxgte0o9ag1\operator.yaml
 >	[ALL]    C:<path>\kube_agent_deploy-uxgte0o9ag1\sql-secrets.yaml
@@ -190,7 +191,7 @@ In this case the reults are as follows.
 >	[ALL]
 >	[ALL] Wrote spec paths: 'deploy_ag1_specs'
 >	 [32m./deploy-ag.py exitcode: 0[0m
-
+```
 
 This generates the sample yaml files in the `<path>` directory. 
 	

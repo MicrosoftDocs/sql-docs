@@ -2,7 +2,7 @@
   href: integrating-reporting-services-into-applications.md
 - name: Integrating using the Report Viewer controls
   items:
-  - name: Geting Started
+  - name: Getting Started
     href: integrating-reporting-services-using-reportviewer-controls-get-started.md
   - name: Integrating Reporting Services using the Report Viewer controls
     href: integrating-reporting-services-using-reportviewer-controls.md

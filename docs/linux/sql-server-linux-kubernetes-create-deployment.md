@@ -51,58 +51,54 @@ az aks get-credentials --resource-group=<GroupName> --name=<ClusterName>
 
 The following examples demonstrate how to run the scripts.
 
-### Example - help
+### Help
 
 ```python
    ./deploy-ag.py --help
 ```
 
-* **usage**: deploy-ag.py [-h] {deploy,failover} ...
+* **usage**: deploy-ag.py [-h] {deploy | failover} ...
 * **optional arguments**:
   * -h, --help show this help message and exit
 * **subcommands**:
-  * Actions on k8s agent
-  
-    * {deploy,failover}
+  * Actions on k8s agent {deploy | failover}
 
-      deploy
+   `deploy`
 
         Deploy a set of SQL Servers in an Availability Group
 
-      failover
+   `failover`
 
         Perform a failover to a target replica.
 
-## Example
+## Deploy
 
 ```python
 ./deploy-ag.py deploy --help
+```
 
-usage: deploy-ag.py deploy [-h] [--verbose] [--ag AG] [-n NAMESPACE]
+* **usage**: deploy-ag.py deploy [-h] [--verbose] [--ag AG] [-n NAMESPACE]
                            [--dry-run] [-s SQL_SERVERS [SQL_SERVERS ...]]
                            [-p SA_PASSWORD] [-e {ON_PREM,AKS}]
                            [--skip-create-namespace]
 
-Deploy SQL Server and k8s Agents in namespace(AG name)
+  Deploy SQL Server and k8s Agents in namespace(AG name)
 
-		optional arguments:
-		  -h, --help            show this help message and exit
-		  --verbose, -v         Verbosity of output
-		  --ag AG               name of the Availability Group. Default=ag1
-		  -n NAMESPACE, --namespace NAMESPACE
-								name of the k8s namespace. Defaults to AG name if not
-								specified.
-		  --dry-run             Perform a dry run and not apply the specs.
-		  -s SQL_SERVERS [SQL_SERVERS ...], --sql-servers SQL_SERVERS [SQL_SERVERS ...]
-								names of SQL Server instances(up to 5, separated by
-								spaces)Default=['mssql1', 'mssql2', 'mssql3']
-		  -p SA_PASSWORD, --sa-password SA_PASSWORD
-								SA Password. Default='SAPassword2018'
-		  -e {ON_PREM,AKS}, --env {ON_PREM,AKS}
-		  --skip-create-namespace
-								Skip namespace creation.
-```
-								
+* **optional arguments**:
+  * -h, --help  --show this help message and exit
+  * --verbose, -v Verbosity of output
+  * --ag AG  name of the Availability Group. Default=ag1
+  * -n NAMESPACE, --namespace NAMESPACE
+    name of the k8s namespace. Defaults to AG name if not specified.
+  * --dry-run             Perform a dry run and not apply the specs.
+  * -s SQL_SERVERS [SQL_SERVERS ...], --sql-servers SQL_SERVERS [SQL_SERVERS ...]
+    names of SQL Server instances(up to 5, separated by spaces)Default=['mssql1', 'mssql2', 'mssql3']
+  * -p SA_PASSWORD, --sa-password SA_PASSWORD
+    SA Password. Default='SAPassword2018'
+  * -e {ON_PREM,AKS}, --env {ON_PREM,AKS}
+  * --skip-create-namespace
+    Skip namespace creation.
+
 Example 3 --  
 
 ```python

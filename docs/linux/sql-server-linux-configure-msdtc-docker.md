@@ -38,7 +38,7 @@ docker run \
    -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
    -e 'MSSQL_RPC_PORT=13500' -e 'MSSQL_DTC_TCP_PORT=51000' \
    -p 51433:1433 -p 13500:13500 -p 51000:51000  \
-   -d mcr.microsoft.com/mssql/server/mssql-server-linux:vNext-CTP2.0
+   -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
 ```
 
 ```PowerShell
@@ -46,7 +46,7 @@ docker run `
    -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
    -e "MSSQL_RPC_PORT=13500" -e "MSSQL_DTC_TCP_PORT=51000" `
    -p 51433:1433 -p 13500:13500 -p 51000:51000 `
-   -d "mcr.microsoft.com/mssql/server/mssql-server-linux:vNext-CTP2.0"
+   -d "mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu"
 ```
 
 In this command, the **RPC Endpoint Mapper** service has been bound to port 13500, and the **MSDTC** service has been bound to port 51000 within docker virtual network. SQL Server TDS communication occurs on port 1433 within docker virtual network. These ports have been externally exposed to host as TDS port 51433, RPC endpoint mapper port 13500, and MSDTC port 51000.

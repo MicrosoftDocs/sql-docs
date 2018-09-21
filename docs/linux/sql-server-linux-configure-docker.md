@@ -32,26 +32,12 @@ To pull and run the Docker container images for SQL Server 2017 and SQL Server 2
 
 This configuration article provides additional usage scenarios in the following sections.
 
-## <a id="rhel"></a> Run RHEL-based container images
-
-All of the documentation on SQL Server Linux container images point to Ubuntu-based containers. If you would rather use containers based on Red Hat Enterprise Linux (RHEL), change the container repository from **mcr.microsoft.com/mssql/server** to **mcr.microsoft.com/mssql/rhel/server** in all of your docker commands.
-
-<!--SQL Server 2017 on Linux-->
-::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
-
-For example, the following command pulls the latest SQL Server 2017 container that uses RHEL:
-
-```bash
-sudo docker pull mcr.microsoft.com/mssql/rhel/server/mssql-server-linux:2017-latest
-```
-
-```PowerShell
-docker pull mcr.microsoft.com/mssql/rhel/server/mssql-server-linux:2017-latest
-```
-
-::: moniker-end
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+## <a id="rhel"></a> Run RHEL-based container images
+
+All of the documentation on SQL Server Linux container images point to Ubuntu-based containers. Beginning with SQL Server 2019 CTP 2.0, you can use containers based on Red Hat Enterprise Linux (RHEL). Change the container repository from **mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu** to **mcr.microsoft.com/mssql/rhel/server:vNext-CTP2.0** in all of your docker commands.
 
 For example, the following command pulls the latest SQL Server 2019 CTP 2.0 container that uses RHEL:
 

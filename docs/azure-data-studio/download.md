@@ -21,7 +21,7 @@ manager: craigg
 Download and install the latest release, the *September GA Release*:
 
 > [!NOTE]
-> If you're updating from SQL Operations Studio and want to keep your settings, keyboard shortcuts, or code snippets, see [Import user settings](#import-user-settings).
+> If you're updating from SQL Operations Studio and want to keep your settings, keyboard shortcuts, or code snippets, see [Move user settings](#Move-user-settings).
 
 |Platform|Download|Release date| Version |
 |:---|:---|:---|:---|
@@ -146,7 +146,7 @@ If you installed [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] with 
 ## Check for updates
 To check for latest updates, click the gear icon on the bottom left of the window and click **Check for Updates**
 
-## Import user settings
+## Move user settings
 
 If you want to move your custom settings, keyboard shortcuts, or code snippets, follow the steps below. This is important to do if you are upgrading from SQL Operations Studio version to Azure Data Studio.
 

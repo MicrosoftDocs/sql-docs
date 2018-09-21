@@ -73,7 +73,7 @@ Community technology preview (CTP) 2.0 is the first public release of [!INCLUDE[
 
 - [Tools](#tools)
   - SQL Server Management Studio (SSMS) 18.0 (preview)
-  - Azure Data Studio (preview)
+  - Azure Data Studio
 
 Continue reading for more details about these features.
 
@@ -85,7 +85,7 @@ Continue reading for more details about these features.
 - Access your big data from HDFS
 - Run Advanced analytics and machine learning with Spark
 - Use Spark streaming to data to SQL data pools
-- Run Query books that provide a notebook experience in [**Azure Data Studio (preview)**](../sql-operations-studio/what-is.md).
+- Run Query books that provide a notebook experience in [**Azure Data Studio**](../sql-operations-studio/what-is.md).
   
 [!INCLUDE [Big Data Clusters preview](../includes/big-data-cluster-preview-note.md)]
 
@@ -99,7 +99,7 @@ Continue reading for more details about these features.
 
 ### UTF-8 support
 
-Full support for the widely used UTF-8 character encoding as an import or export encoding, or as database-level or column-level collation for text data. UTF-8 is allowed in the CHAR and VARCHAR datatypes, and is enabled when creating or changing an object’s collation to a collation with the `UTF8` suffix. 
+Full support for the widely used UTF-8 character encoding as an import or export encoding, or as database-level or column-level collation for text data. UTF-8 is allowed in the `CHAR` and `VARCHAR` datatypes, and is enabled when creating or changing an object’s collation to a collation with the `UTF8` suffix. 
 
 For example,`LATIN1_GENERAL_100_CI_AS_SC` to `LATIN1_GENERAL_100_CI_AS_SC_UTF8`. UTF-8 is only available to Windows collations that support supplementary characters, as introduced in SQL Server 2012. `NCHAR` and `NVARCHAR` allow UTF-16 encoding only, and remain unchanged.
 
@@ -124,8 +124,8 @@ For more information, see [Resumable Online Index Create](../t-sql/statements/cr
 
 ### Build and rebuild clustered columnstore indexes online
 
-Convert row-store tables into columnstore format. Creating clustered columnstore indexes (CCI) was an offline process in the previous versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] - requiring all changes stop while the CCI is created. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] and 
-[!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] enable customers to create or re-create CCI online. Workload will not be blocked and all changes made on the underlying data are transparently added into the target columnstore table. Examples of new [!INCLUDE[tsql](../includes/tsql-md.md)] statements that can be used are:
+Convert row-store tables into columnstore format. Creating clustered columnstore indexes (CCI) was an offline process in the previous versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] - requiring all changes stop while the CCI is created. With [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] and 
+[!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] you can create or re-create CCI online. Workload will not be blocked and all changes made on the underlying data are transparently added into the target columnstore table. Examples of new [!INCLUDE[tsql](../includes/tsql-md.md)] statements that can be used are:
 
   ```sql
   CREATE CLUSTERED COLUMNSTORE INDEX cci
@@ -324,13 +324,25 @@ FROM sys.dm_exec_requests AS d
 
 ## <a id="tools"></a>Tools
 
+- [**Azure Data Studio**](../azure-data-studio/what-is.md): Previously released under the preview name SQL Operations Studio, Azure Data Studio is a lightweight, modern, open source, cross-platform desktop tool for the most common tasks in data development and administration. With Azure Data Studio you can connect to SQL Server on premises and in the cloud on Windows, macOS, and Linux. Azure Data Studio allows you to:
+
+  - Edit and run queries in a modern development environment with lightning fast Intellisense, code snippets, and source control integration.  
+  - Quickly visualize data with built-in charting of your result sets.  
+  - Create custom dashboards for your servers and databases using customizable widgets.  
+  - Easily manage your broader environment with the built-in terminal.  
+  - Analyze data in an integrated notebook experience built on Jupyter.  
+  - Enhance your experience with custom theming and extensions.  
+  - And explore your Azure resources with a built-in subscription and resource browser.
+  - Supports scenarios using SQL Server Big Data Cluster.
+
+
 - [**SQL Server Management Studio (SSMS) 18.0 (preview)**](../ssms/sql-server-management-studio-ssms.md)
 
+  - Support for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
   - Support for Always Encrypted with secure enclaves.
-
-- [**Azure Data Studio (preview)**](../sql-operations-studio/what-is.md)
-
-  - Supports scenarios using SQL Server Big Data Cluster.
+  - Smaller download size.
+  - Now based on the Visual Studio 2017 Isolated Shell.
+  - For a complete list, see the [SSMS changelog](../ssms/sql-server-management-studio-changelog-ssms.md).
 
 ## Other services
 

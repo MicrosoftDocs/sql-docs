@@ -1,4 +1,4 @@
-- name: Azure Data Studio (preview)
+- name: Azure Data Studio
   href: what-is.md
 - name: Install
   href: download.md
@@ -50,11 +50,13 @@
   items:
   - name: Overview
     href: extensions.md
-  - name: SQL Server Agent
+  - name: SQL Server 2019 (preview)
+    href: sql-server-2019-extension.md
+  - name: SQL Server Agent (preview)
     href: sql-server-agent-extension.md
-  - name: SQL Server Import
+  - name: SQL Server Import (preview)
     href: sql-server-import-extension.md
-  - name: SQL Server Profiler
+  - name: SQL Server Profiler (preview)
     href: sql-server-profiler-extension.md
 - name: Extension Authoring
   items:
@@ -70,11 +72,11 @@
   items:
   - name: Transact-SQL Reference
     href: ../t-sql/language-reference.md
-  - name: Azure Data Studio (preview) GitHub repo
-    href: https://www.github.com/Microsoft/SqlOpsStudio
+  - name: Azure Data Studio GitHub repo
+    href: https://www.github.com/Microsoft/azuredatastudio
   - name: SQL Server Blog
     href: https://blogs.technet.microsoft.com/dataplatforminsider/
 - name: FAQ
   href: faq.md
 - name: Report issues & make suggestions
-  href: https://github.com/microsoft/sqlopsstudio/issues
+  href: https://github.com/microsoft/azuredatastudio/issues

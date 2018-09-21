@@ -35,25 +35,25 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 
   In cloud environments like Azure, configure [persistent volumes](http://kubernetes.io/docs/concepts/storage/persistent-volumes/) for each instance of SQL Server.
 
-  To create persistent volumes in Azure, see `pvc.yaml` in [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Linux).
+  To create persistent volumes in Azure, see `k8s-config/pv.yaml` and `k8s-config/pvc.yaml` in [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Linux/k8s-config).
 
   To create the storage run the following command:
 
-  ```kubectl
-  kubectl apply -f <pvc.yaml>
+  ```azurecli
+  kubectl apply -f <pv.yaml>
   ```
 
 1. Create Kubernetes secrets for the SA password and the master key.
 
   The following example creates two secrets. `sapassword` is for the SA password and `masterkeypassword` is for the master key. Before you run this script replace `<MyC0mp13xP@55w04d!>` with different complex password for each secret.
 
-   ```kubectl
+   ```azurecli
    kubectl create secret generic sql-secrets --from-literal='sapassword=<MyC0mp13xP@55w04d!>' --from-literal='masterkeypassword=<MyC0mp13xP@55w04d!>'
    ```
 
 1. Configure and deploy the SQL Server operator manifest.
 
-  Copy the SQL Server operator `operator.yaml` file from [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Linux).
+  Copy the SQL Server operator `operator.yaml` file from [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Linux/k8s-config).
 
   The `operator.yaml` file is the deployment manifiest for the Kubernetes operator.
 
@@ -67,7 +67,7 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 
 1. Configure and deploy the SQL Server manifest.
 
-  Copy the SQL Server manifest `sqlserver.yaml` from [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Linux).
+  Copy the SQL Server manifest `sqlserver.yaml` from [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Linux/k8s-config).
 
   Apply the manifest to the Kubernetes cluster.
 
@@ -77,6 +77,19 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 
 After you deploy the SQL Server manifest, the operator deploys the instances of SQL Server as pods in containers.
 
+After the script completes, the Kubernetes operator will create the storage, the SQL Server instances, the load balancer services. You can monitor the deployment with [Kubernetes dashboard](http://docs.microsoft.com/azure/aks/kubernetes-dashboard).
+
+After Kubernetes creates the SQL Server containers complete the following steps to add a database to the availability group:
+
+1. [Connect](sql-server-linux-kubernetes-connect.md) to a SQL Server instance in the cluster.
+
+1. Create a database.
+
+1. Take a full backup of the database to start the log chain.
+
+1. Add the database to the availability group.
+
+The availability group is created with automatic seeding so SQL Server will automatically create the secondary replicas.
 
 ## Next steps
 

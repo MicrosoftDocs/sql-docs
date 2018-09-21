@@ -27,7 +27,7 @@ To fail over an availability group primary replica to a different node in Kubern
 
 The following example of a manifest file describes a job to manually fail over job for an availability group on a Kubernetes replica. Copy the contents of the example into a new file called `ag-failover.yaml`.
 
-[ag-failover.yaml](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Linux)
+[ag-failover.yaml](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Linux/k8s-config)
 
 To deploy the job, use `Kubectl`.
 
@@ -43,7 +43,7 @@ After you run the job, delete it. The job object in Kubernetes remains after com
 
 Rotate the credentials to update the SA and the master key.
 
-Copy the [rotate-creds.yaml](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Linux) locally use `kubectl` to apply it to your cluster.
+Copy the [rotate-creds.yaml](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Linux/k8s-config) locally use `kubectl` to apply it to your cluster.
 
 ```azurecli
 kubectl apply -f rotate-creds.yaml

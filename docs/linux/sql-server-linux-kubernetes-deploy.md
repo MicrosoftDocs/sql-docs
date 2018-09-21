@@ -35,12 +35,12 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 
   In cloud environments like Azure, configure [persistent volumes](http://kubernetes.io/docs/concepts/storage/persistent-volumes/) for each instance of SQL Server.
 
-  To create persistent volumes in Azure, see `pvc.yaml` in [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Linux).
+  To create persistent volumes in Azure, see `k8s-config/pv.yaml` and `k8s-config/pvc.yaml` in [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Linux/k8s-config).
 
   To create the storage run the following command:
 
   ```azurecli
-  kubectl apply -f <pvc.yaml>
+  kubectl apply -f <pv.yaml>
   ```
 
 1. Create Kubernetes secrets for the SA password and the master key.
@@ -53,7 +53,7 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 
 1. Configure and deploy the SQL Server operator manifest.
 
-  Copy the SQL Server operator `operator.yaml` file from [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Linux).
+  Copy the SQL Server operator `operator.yaml` file from [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Linux/k8s-config).
 
   The `operator.yaml` file is the deployment manifiest for the Kubernetes operator.
 
@@ -67,7 +67,7 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 
 1. Configure and deploy the SQL Server manifest.
 
-  Copy the SQL Server manifest `sqlserver.yaml` from [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Linux).
+  Copy the SQL Server manifest `sqlserver.yaml` from [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Linux/k8s-config).
 
   Apply the manifest to the Kubernetes cluster.
 

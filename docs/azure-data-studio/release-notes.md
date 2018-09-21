@@ -2,7 +2,7 @@
 title: Azure Data Studio release notes| Microsoft Docs
 description: 'Azure Data Studio release notes'
 ms.custom: "tools|sos"
-ms.date: "08/30/2018"
+ms.date: "09/24/2018"
 ms.prod: sql
 ms.reviewer: "alayu; sstein"
 ms.suite: "sql"
@@ -16,7 +16,15 @@ manager: craigg
 ---
 # Azure Data Studio release notes
 
-**[Download the August Public Preview](download.md)**
+**[Download the September GA Release!](download.md)**
+
+## September 2018 (September GA Release)
+
+release date: September 24, 2018  
+version: 0.XX.X
+
+For detailed information, see the [Change Log](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md), and [Releases](https://github.com/Microsoft/azuredatastudio/releases).
+
 
 
 ## August 2018 (August Public Preview)
@@ -69,8 +77,6 @@ The *August Public Preview* focuses on on bug fixes, product stabilization, and 
 
 - [Issue #2371](https://github.com/Microsoft/azuredatastudio/issues/2371) Save As Excel Only Saves First Row of Data
 - [Issue #2150](https://github.com/Microsoft/azuredatastudio/issues/2150): Unable to connect on Ubuntu 16.04 to SQL in a container
-
-For more information, see the [Change Log](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md), and [Releases](https://github.com/Microsoft/azuredatastudio/releases).
 
 
 ## July 2018 (July Public Preview)

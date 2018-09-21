@@ -18,13 +18,16 @@ manager: craigg
 
 [!INCLUDE[name-sos](../includes/name-sos.md)] runs on Windows, macOS, and Linux.
 
-Download and install the latest release, the *August Public Preview*:
+Download and install the latest release, the *September GA Release*:
+
+> [!NOTE]
+> If you're updating from SQL Operations Studio and want to keep your settings, keyboard shortcuts, or code snippets, see [Import user settings](#import-user-settings).
 
 |Platform|Download|Release date| Version |
 |:---|:---|:---|:---|
-|Windows|[Installer](https://go.microsoft.com/fwlink/?linkid=2013365)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2013712)|August 30, 2018 |0.32.8|
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2013715)|August 30, 2018 |0.32.8|
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2013833)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2013830)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2013718)|August 30, 2018 |0.32.8|
+|Windows|[Installer](https://go.microsoft.com/fwlink/?linkid=2013365)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2013712)|September 24, 2018 |0.33.8|
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2013715)|September 24, 2018 |0.33.8|
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2013833)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2013830)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2013718)|September 24, 2018 |0.33.8|
 
 For details about the latest release, see the [release notes](release-notes.md).
 
@@ -142,6 +145,29 @@ If you installed [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] with 
 
 ## Check for updates
 To check for latest updates, click the gear icon on the bottom left of the window and click **Check for Updates**
+
+## Import user settings
+
+If you want to move your custom settings, keyboard shortcuts, or code snippets, follow the steps below. This is important to do if you are upgrading from SQL Operations Studio version to Azure Data Studio.
+
+*If you already have Azure Data Studio, or you've never installed or customized SQL Operations Studio, then you can ignore this section.*
+
+
+1. Open Settings by clicking the gear on the bottom left and clicking **Settings.**
+
+   ![open-settings](./media/importing-custom-environment/open-settings.png)
+
+2. Right-click the **User Settings** tab on top and click **Reveal in Explorer**
+
+   ![reveal-in-explorer](./media/importing-custom-environment/reveal-in-explorer.png)
+
+3. Copy all files in this folder and save in an easy to find location on your local drive, like your Documents folder.
+
+   ![copy-settings](./media/importing-custom-environment/copy-settings.png)
+
+4. In your new version of Azure Data Studio, follow steps 1-2, then for step 3 paste the contents you saved into the folder. You can also manually copy over the settings, keybindings, or snippets in their respective locations.
+
+
 
 ## Next Steps
 

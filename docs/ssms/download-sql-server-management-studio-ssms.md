@@ -39,13 +39,13 @@ Use SQL Server Management Studio (SSMS) to query, design, and manage your databa
 
 SSMS 18.0 (preview) is the latest generation of *SQL Server Management Studio* and provides support for [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)].
 
-**[![download](../ssdt/media/download.png) Download SQL Server Management Studio 18.0 (preview)](https://go.microsoft.com/fwlink/?linkid=2014306)**
+**[![download](../ssdt/media/download.png) Download SQL Server Management Studio 18.0 (preview)](https://go.microsoft.com/fwlink/?linkid=2014662)**
 
 
 **Version Information**
 
 Release number: 18.0<br>
-Build number: 18.0<br>
+Build number: 15.0.18040.0<br>
 Release date: September 24, 2018
 
 The SSMS 18.x installation does not upgrade or replace SSMS versions 17.x or earlier. SSMS 18.x installs side by side with previous versions so both versions are available for use.
@@ -55,14 +55,10 @@ If a computer contains side by side installations of SSMS, verify you start the 
 
 ## Available Languages
 
-> [!NOTE]
-> Non-English localized releases of SSMS require the [KB 2862966 security update package](https://support.microsoft.com/en-us/kb/2862966) if installing on: Windows 8, Windows 7, Windows Server 2012, and Windows Server 2008 R2.
-
-
 This release of SSMS can be installed in the following languages:
 
 SQL Server Management Studio 18.0 (preview):<br>
-[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x40a)
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2014662&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2014662&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2014662&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2014662&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2014662&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2014662&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2014662&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2014662&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2014662&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2014662&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2014662&clcid=0x40a)
 
 SQL Server Management Studio 18.0 Upgrade Package (upgrades to 18.0):<br>
 No upgrade option is available at this time.

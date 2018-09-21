@@ -23,7 +23,7 @@ This article provides details about updates, improvements, and bug fixes for the
 
 ## [SSMS 18.0 (preview)](download-sql-server-management-studio-ssms.md)
 
-Build number: 18.0<br>
+Build number: 15.0.18040.0<br>
 Release date: September 24, 2018
 
 ### What's new
@@ -300,6 +300,9 @@ SSIS
 ## Previous SSMS releases
 
 Download previous SSMS versions by clicking the title links in the following sections.
+
+> [!NOTE]
+> Non-English localized releases of SSMS 17.x require the [KB 2862966 security update package](https://support.microsoft.com/en-us/kb/2862966) if installing on: Windows 8, Windows 7, Windows Server 2012, and Windows Server 2008 R2.
 
 ## ![download](../ssdt/media/download.png) [SSMS 17.9](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x409)
 

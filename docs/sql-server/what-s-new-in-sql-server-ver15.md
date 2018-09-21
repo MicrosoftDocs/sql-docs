@@ -91,7 +91,7 @@ Continue reading for more details about these features.
 
 ## <a id="databaseengine"></a> Database Engine
 
-CTP 2.0 introduces or enhances the following new features for [!INCLUDE [SS DE No Version](../includes/ssdenoversion_md.md).
+CTP 2.0 introduces or enhances the following new features for [!INCLUDE[ssdeNoVersion](../includes/ssdenoversion_md.md)].
 
 ### Database compatibility level
 

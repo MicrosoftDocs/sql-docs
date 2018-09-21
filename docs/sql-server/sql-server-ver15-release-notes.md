@@ -107,16 +107,6 @@ This article describes limitations and known issues for the [!INCLUDE[SQL Server
 
 **Workaround**: Execute `DBCC TRACEON (7416,-1)` on the server and try again.
 
-### SSIS - Issue after switching SSISDB back to multi-user mode
-
-**Issue / customer impact**: After switching SSISDB into single-user mode and switching back to multi-user mode, the following error will be reported when deploying the package.
-
-`Cannot continue the execution because the session is in the kill state.`
-
-**Workaround**: Restart [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] after switch back to multi-user mode.
-
-**Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.0.  
-
 ## SQL Server Machine Learning Services installation failure
 
 **Issue/Customer impact**: SQL Server Machine Learning Services installations fails on machines that have trust relationship issues with the primary domain. The following error will be seen in the logs in this case:

@@ -25,9 +25,9 @@ Download and install the latest release, the *September GA Release*:
 
 |Platform|Download|Release date| Version |
 |:---|:---|:---|:---|
-|Windows|[Installer](https://go.microsoft.com/fwlink/?linkid=2013365)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2013712)|September 24, 2018 |0.33.8|
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2013715)|September 24, 2018 |0.33.8|
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2013833)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2013830)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2013718)|September 24, 2018 |0.33.8|
+|Windows|[Installer](https://go.microsoft.com/fwlink/?linkid=2024683)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2024680)|September 24, 2018 |1.0|
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2024677)|September 24, 2018 |1.0|
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2024668)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2024672)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2024675)|September 24, 2018 |1.0|
 
 For details about the latest release, see the [release notes](release-notes.md).
 
@@ -37,20 +37,20 @@ This release of [!INCLUDE[name-sos](../includes/name-sos-short.md)] includes a s
 
 **Installer**
 
-1. Download and run the [[!INCLUDE[name-sos](../includes/name-sos-short.md)] installer for Windows](https://go.microsoft.com/fwlink/?linkid=2013365).
+1. Download and run the [[!INCLUDE[name-sos](../includes/name-sos-short.md)] installer for Windows](https://go.microsoft.com/fwlink/?linkid=2024683).
 1. Start the [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] app.
 
 
 **.zip file**
 
-1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip for Windows](https://go.microsoft.com/fwlink/?linkid=2013712).
+1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip for Windows](https://go.microsoft.com/fwlink/?linkid=2024680).
 2. Browse to the downloaded file and extract it.
 3. Run `\sqlops-windows\sqlops.exe`
 
 
 ## Get Azure Data Studio for macOS
 
-1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for macOS](https://go.microsoft.com/fwlink/?linkid=2013715).
+1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for macOS](https://go.microsoft.com/fwlink/?linkid=2024677).
 2. To expand the contents of the zip, double-click it.
 3. To make [!INCLUDE[name-sos](../includes/name-sos-short.md)] available in the *Launchpad*, drag *sqlops.app* to the *Applications* folder.
 
@@ -58,9 +58,9 @@ This release of [!INCLUDE[name-sos](../includes/name-sos-short.md)] includes a s
 ## Get Azure Data Studio for Linux
 
 1. Download [!INCLUDE[name-sos](../includes/name-sos-short.md)] for Linux by using one of the installers or the tar.gz archive:
-    - [.deb](https://go.microsoft.com/fwlink/?linkid=2013833)
-    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2013830)
-    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2013718)
+    - [.deb](https://go.microsoft.com/fwlink/?linkid=2024668)
+    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2024672)
+    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2024675)
 1. To extract the file and launch [!INCLUDE[name-sos](../includes/name-sos-short.md)], open a new Terminal window and type the following commands:
 
    **Debian Installation:**

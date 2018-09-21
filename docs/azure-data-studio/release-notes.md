@@ -21,7 +21,7 @@ manager: craigg
 ## September 2018 (September GA Release)
 
 release date: September 24, 2018  
-version: 0.33.8
+version: 1.0
 
 General Availability release of Azure Data Studio (formerly SQL Operations Studio).
 
@@ -46,6 +46,7 @@ General Availability release of Azure Data Studio (formerly SQL Operations Studi
 
 - Fix [issue #2647](https://github.com/Microsoft/azuredatastudio/issues/143): The charts took a big step backwards.
 - Fix [issue #2648](https://github.com/Microsoft/azuredatastudio/issues/143): SELECT that returns a JSON hyperlinks the whole column.
+- ...
 
 For detailed information, see the [Change Log](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md), and [Releases](https://github.com/Microsoft/azuredatastudio/releases).
 

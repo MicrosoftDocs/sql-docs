@@ -38,6 +38,8 @@ This article describes limitations and known issues for the [!INCLUDE[SQL Server
 
 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.0 is the first public release of [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)].
 
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.0 is available is only as Evaluation Edition. No other editions are available. Support for CTP 2.0 is described in license_Eval.rtf with your installation media.
+
 ### Documentation (CTP 2.0)
 
 - **Issue and customer impact**: Documentation for SQL Server 2019 (15.x) is limited and content is included with the [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] documentation set. Content in articles that is specific to SQL Server 2019 (15.x) is noted with **Applies To**.

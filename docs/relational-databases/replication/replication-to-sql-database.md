@@ -1,7 +1,7 @@
 ---
 title: "Replication to SQL Database | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/24/2016"
+ms.date: "09/23/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.component: "replication"
@@ -30,7 +30,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
  - [!INCLUDE[ssSDS](../../includes/sssds-md.md)] must be a push subscriber of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publisher.  
  -  The distribution database and the replication agents cannot be placed on [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
  - Snapshot and one-way transactional replication are supported. Peer-to-peer transactional replication and merge replication are not supported.
- - SQL Database Managed Instance (preview) supports publisher and distributor databases. For more information, see [Replication with SQL Database Managed Instance](replication-with-sql-database-managed-instance.md).
+ - Replication is available for public preview on Azure SQL Database Managed Instance. Managed Instance can host publisher, distributor, and subscriber databases. For more information, see [Replication with SQL Database Managed Instance](replication-with-sql-database-managed-instance.md).
  
  ## Versions  
  - The publisher and distributor must be at least at one of the following versions:  

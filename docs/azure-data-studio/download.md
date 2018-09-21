@@ -21,7 +21,7 @@ manager: craigg
 Download and install the latest release, the *September GA Release*:
 
 > [!NOTE]
-> If you're updating from SQL Operations Studio and want to keep your settings, keyboard shortcuts, or code snippets, see [Move user settings](#Move-user-settings).
+> If you're updating from SQL Operations Studio and want to keep your settings, keyboard shortcuts, or code snippets, see [Move user settings](#move-user-settings).
 
 |Platform|Download|Release date| Version |
 |:---|:---|:---|:---|

@@ -19,7 +19,7 @@ ms.technology: linux
 This article describes how to configure the correct repository for SQL Server 2017 and SQL Server 2019 installations and upgrades on Linux.
 
 > [!TIP]
-> SQL Server nNext CTP 1.4 is now available! To try it, use this article to configure the new **mssql-server-preview** repository. Then upgrade or install using the instructions in the [installation guide](sql-server-linux-setup.md).
+> SQL Server 2019 CTP 2.0 is now available! To try it, use this article to configure the new **mssql-server-preview** repository. Then install using the instructions in the [installation guide](sql-server-linux-setup.md).
 
 ## <a id="repositories"></a> Repositories
 

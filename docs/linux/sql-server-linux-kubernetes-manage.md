@@ -46,12 +46,11 @@ Rotate the credentials to update the SA and the master key.
 Copy the [rotate-creds.yaml](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Linux) locally use `kubectl` to apply it to your cluster.
 
 ```azurecli
-kubectl apply -f ag-failover.yaml
+kubectl apply -f rotate-creds.yaml
 ```
 
 ## Next steps
 
 [Access the Kubernetes dashboard with Azure Kubernetes Service (AKS)](https://docs.microsoft.com/azure/aks/kubernetes-dashboard)
-
 
 [SQL Server availability group on Kubernetes cluster](sql-server-ag-kubernetes.md)

@@ -16,15 +16,38 @@ manager: craigg
 ---
 # Azure Data Studio release notes
 
-**[Download the September GA Release!](download.md)**
+**[Download the September *General Availability* (GA) Release!](download.md)**
 
 ## September 2018 (September GA Release)
 
 release date: September 24, 2018  
-version: 0.XX.X
+version: 0.33.8
+
+General Availability release of Azure Data Studio (formerly SQL Operations Studio).
+
+- Announcing the SQL Server 2019 Preview extension.
+  - Support for SQL Server 2019 preview features including [big data cluster](../big-data-cluster/big-data-cluster-overview.md) support.
+    - Connect to the HDFS/Spark Gateway shipped with SQL Server 2019 preview.
+    - Browse HDFS, upload files, save files, and launch useful actions such as Analyze in Notebook for CSV files.
+    - Submit Spark jobs from the dashboard or right-click on a HDFS/Spark connection in Object Explorer.
+  - Azure Data Studio Notebooks
+    - Create or open Notebooks using an integrated Notebook viewer. In this release the Notebook viewer supports connecting to local kernels and the SQL Server 2019 big data cluster only.
+    - Use the PROSE Code Accelerator libraries in your Notebook to learn file format and data types for fast data preparation.
+  - Azure Resource Explorer
+    - The Azure Resource Explorer view lets you browse data-related endpoints for your Azure accounts and create connections to them in Object Explorer. In this release Azure SQL Databases and servers are supported.
+  - SQL Server Polybase Create External Table Wizard
+    - Create an external table and its supporting metadata structures with an easy to use wizard. In this release, remote SQL Server and Oracle servers are supported.
+- Query Results Grid performance and UX improvements for large number of result sets.
+- Visual Studio Code source code refresh from 1.23 to 1.26.1 with Grid Layout and Improved Settings Editor (preview).
+- Accessibility improvements for screen reader, keyboard navigation and high-contrast.
+- Added `Connection name` option to provide an alternative display name in the Servers view-let.
+
+### Bug Fixes
+
+- Fix [issue #2647](https://github.com/Microsoft/azuredatastudio/issues/143): The charts took a big step backwards.
+- Fix [issue #2648](https://github.com/Microsoft/azuredatastudio/issues/143): SELECT that returns a JSON hyperlinks the whole column.
 
 For detailed information, see the [Change Log](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md), and [Releases](https://github.com/Microsoft/azuredatastudio/releases).
-
 
 
 ## August 2018 (August Public Preview)

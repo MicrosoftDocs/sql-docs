@@ -155,18 +155,17 @@ If you want to move your custom settings, keyboard shortcuts, or code snippets, 
 
 1. Open Settings by clicking the gear on the bottom left and clicking **Settings.**
 
-   ![open-settings](./media/importing-custom-environment/open-settings.png)
+   ![open-settings](./media/download/open-settings.png)
 
 2. Right-click the **User Settings** tab on top and click **Reveal in Explorer**
 
-   ![reveal-in-explorer](./media/importing-custom-environment/reveal-in-explorer.png)
+   ![reveal-in-explorer](./media/download/reveal-in-explorer.png)
 
 3. Copy all files in this folder and save in an easy to find location on your local drive, like your Documents folder.
 
-   ![copy-settings](./media/importing-custom-environment/copy-settings.png)
+   ![copy-settings](./media/download/copy-settings.png)
 
 4. In your new version of Azure Data Studio, follow steps 1-2, then for step 3 paste the contents you saved into the folder. You can also manually copy over the settings, keybindings, or snippets in their respective locations.
-
 
 
 ## Next Steps

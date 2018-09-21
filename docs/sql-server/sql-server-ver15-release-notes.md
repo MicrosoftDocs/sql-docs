@@ -43,14 +43,12 @@ This article describes limitations and known issues for the [!INCLUDE[SQL Server
 Limited support may be found at one of the following locations:
 
 - Forums
-  - [SQL Server Feedback forum](http://aka.ms/sqlfeedback)
+  - [SQL Server Feedback](http://aka.ms/sqlfeedback)
   - [Getting started with SQL Server](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=sqlgetstarted)
-  - [Transact-SQL Forum](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=transactsql)
+  - [Transact-SQL](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=transactsql)
   - [SQL Server Documentation](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=sqldocumentation)
 
 - Or tweet [@SQLServer](http://twitter.com/SQLServer) with [#sqlhelp](https://twitter.com/search?q=%23sqlhelp)
-
-You can post issues or suggestions on UserVoice: <a href=”http://aka.ms/sqlfeedback”>SQL Server</a>.
 
 ### Documentation (CTP 2.0)
 

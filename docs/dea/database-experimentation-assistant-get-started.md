@@ -1,5 +1,5 @@
 ---
-title: Get started with Database Experimentation Assistant
+title: Get started with Database Experimentation Assistant for SQL Server upgrades
 description: Get started with Database Experimentation Assistant
 ms.custom: ""
 ms.date: mm/dd/2018
@@ -17,7 +17,7 @@ manager: craigg
 
 # Get started with Database Experimentation Assistant
 
-The Database Experimentation Assistant (DEA) is an A/B testing solution for changes in SQL Server environments (for example, upgrades, new indexes, etc.). It assists in evaluating how the workload on your source server (current environment) will perform against your new environment. It guides you through performing an A/B test through three steps: 
+The Database Experimentation Assistant (DEA) is an A/B testing solution for changes in SQL Server environments (for example, upgrades, new indexes, etc.). DEA assists in evaluating how the workload on your source server (current environment) will perform against your new environment. DEA guides you through performing an A/B test through three steps: 
 
 - Capture
 - Replay
@@ -27,7 +27,7 @@ This article walks you through these steps.
 
 ## Capture
 
-The first step of SQL Server A/B testing is capturing a trace on your source server, which is typically the production server. Trace files capture the entire query workload on that server as well as their timestamps. Later, this trace will be replayed on your target servers to be used for analysis. The analysis report provides insights on the difference in performance of the workload between your two target servers.
+The first step of SQL Server A/B testing is capturing a trace on your source server, which is typically the production server. Trace files capture the entire query workload on that server as well as their timestamps. Later, this trace is replayed on your target servers to be used for analysis. The analysis report provides insights on the difference in performance of the workload between your two target servers.
 
 Notes:
 
@@ -58,13 +58,13 @@ Check out [this FAQ page](https://blogs.msdn.microsoft.com/datamigration/2017/03
 
 ## Replay
 
-The second step of SQL Server A/B testing is to replay the trace file captured in the first step to your target servers and collect extensive traces from the replays for analysis. You replay on two target servers: one mimicking your source server (Target 1), and one mimicking your proposed change (Target 2). Target 1 and Target 2 should be as similar as possible in hardware configurations so that SQL Server can accurately analyze the performance impact of your proposed changes.
+The second step of SQL Server A/B testing is to replay the trace file captured in the first step to your target servers, and collect extensive traces from the replays for analysis. You replay on two target servers: one mimicking your source server (Target 1), and one mimicking your proposed change (Target 2). Target 1 and Target 2 should be as similar as possible in hardware configurations so that SQL Server can accurately analyze the performance impact of your proposed changes.
 
 Notes:
 
 - To perform replay, your machines must be set up to run Distributed Replay (DReplay) traces. [Read the blog on how to set up Distributed Replay controller and clients](https://blogs.msdn.microsoft.com/datamigration/distributed-replay-controller-and-client-setup/).
 - Make sure to restore the database(s) on your target servers using the backup from the source server.
- Query caching in SQL can affect evaluation results. We recommend restarting the SQL Server service (MSSQLSERVER) in the services application to improve consistency in evaluation results.
+- Query caching in SQL can affect evaluation results. We recommend restarting the SQL Server service (MSSQLSERVER) in the services application to improve consistency in evaluation results.
 
 Follow these steps to replay the trace file:
 
@@ -78,11 +78,11 @@ Follow these steps to replay the trace file:
    - **SQL Server instance name:** target SQL Server to replay source trace.
    - **Path to store target trace file on SQL Server machine:** folder path for the resulting replay trace file.
 
-1. After providing all necessary inputs, make sure that you have restored the backup from the first step, selecting the check box to indicate this.
+1. After providing all necessary inputs, select the check box to restore the backup from the first step.
 
 1. Choose **Start** to start the replay. 
 
-Much like with a new capture, you can view the status of your replay. After replaying the source trace on both of your target servers, you are ready to generate an analysis report.
+Similar to a new capture, you can view the status of your replay. After replaying the source trace on both of your target servers, you are ready to generate an analysis report.
 
 Check out [this FAQ page](https://blogs.msdn.microsoft.com/datamigration/2017/03/24/dea-2-0-replay-faq/) for commonly asked questions about Replay.
 
@@ -92,7 +92,7 @@ The final step is to generate an analysis report, using the replay traces, to ga
 
 Notes:
 
-- If one or more components are missing, a prerequisites page with links for download shows up when you try to generate a new analysis report (internet connection required).
+- If one or more components are missing, a prerequisites page with links for download appears when you try to generate a new analysis report (internet connection required).
 - To view a report generated in the previous version of the tool, you must update the schema first.
 
 Follow these steps to generate an analysis report:
@@ -105,7 +105,7 @@ Follow these steps to generate an analysis report:
    - **Trace for Target 1 SQL Server:** path for the trace file from replaying on Target 1.
    - **Trace for Target 2 SQL Server:** path for the trace file from replaying on Target 2.
 
-1. After providing these inputs, select **Start** to generate the report. Your newly generated report appears on top of the list, and the icon next to it becomes a green checkmark when it is completed.
+1. After providing these inputs, select **Start** to generate the report. Your newly generated report appears at the top of the list, and the icon next to it becomes a green checkmark when completed.
 
 Now you can view the analysis report to gain insights provided by your A/B test.
 
@@ -135,7 +135,7 @@ On the drill-down page for a performance change category, you see a list of quer
 - **Existing Errors:** errors that appeared on both Target 1 and Target 2
 - **Resolved Errors:** errors that appeared on Target 1 but not on Target 2
 
-![errorpage](./media/database-experimentation-assistant-get-started/dea-get-started-errorpage.png)
+   ![errorpage](./media/database-experimentation-assistant-get-started/dea-get-started-errorpage.png)
 
 Selecting a query takes you to a **Comparison Summary** page for that query.
 
@@ -147,7 +147,7 @@ If the query is an error query, the **Error Information** tab shows more informa
 
 ![queryplan](./media/database-experimentation-assistant-get-started/dea-get-started-queryplan.png)
 
-On any page of the analysis report, you can select the **Print** button on the top right to print what is visible on the UI at that moment.
+On any page of the analysis report, you can select the **Print** button on the top right to print everything that is visible on the UI at that moment.
 
 ## Next steps
 For a 19-minute introduction and demonstration of this feature, watch the following video:

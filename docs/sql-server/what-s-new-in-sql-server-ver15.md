@@ -99,7 +99,7 @@ Continue reading for more details about these features.
 
 ### UTF-8 support
 
-Full support for the widely used UTF-8 character encoding as an import or export encoding, or as database-level or column-level collation for text data. UTF-8 is allowed in the CHAR and VARCHAR datatypes, and is enabled when creating or changing an object’s collation to a collation with the `UTF8` suffix. 
+Full support for the widely used UTF-8 character encoding as an import or export encoding, or as database-level or column-level collation for text data. UTF-8 is allowed in the `CHAR` and `VARCHAR` datatypes, and is enabled when creating or changing an object’s collation to a collation with the `UTF8` suffix. 
 
 For example,`LATIN1_GENERAL_100_CI_AS_SC` to `LATIN1_GENERAL_100_CI_AS_SC_UTF8`. UTF-8 is only available to Windows collations that support supplementary characters, as introduced in SQL Server 2012. `NCHAR` and `NVARCHAR` allow UTF-16 encoding only, and remain unchanged.
 
@@ -124,8 +124,8 @@ For more information, see [Resumable Online Index Create](../t-sql/statements/cr
 
 ### Build and rebuild clustered columnstore indexes online
 
-Convert row-store tables into columnstore format. Creating clustered columnstore indexes (CCI) was an offline process in the previous versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] - requiring all changes stop while the CCI is created. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] and 
-[!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] enable customers to create or re-create CCI online. Workload will not be blocked and all changes made on the underlying data are transparently added into the target columnstore table. Examples of new [!INCLUDE[tsql](../includes/tsql-md.md)] statements that can be used are:
+Convert row-store tables into columnstore format. Creating clustered columnstore indexes (CCI) was an offline process in the previous versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] - requiring all changes stop while the CCI is created. With [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] and 
+[!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] you can create or re-create CCI online. Workload will not be blocked and all changes made on the underlying data are transparently added into the target columnstore table. Examples of new [!INCLUDE[tsql](../includes/tsql-md.md)] statements that can be used are:
 
   ```sql
   CREATE CLUSTERED COLUMNSTORE INDEX cci

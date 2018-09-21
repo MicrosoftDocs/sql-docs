@@ -107,7 +107,7 @@ This article describes limitations and known issues for the [!INCLUDE[SQL Server
 
 **Workaround**: Execute `DBCC TRACEON (7416,-1)` on the server and try again.
 
-## SQL Server Machine Learning Services installation failure
+### SQL Server Machine Learning Services installation failure
 
 **Issue/Customer impact**: SQL Server Machine Learning Services installations fails on machines that have trust relationship issues with the primary domain. The following error will be seen in the logs in this case:
  

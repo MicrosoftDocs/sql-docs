@@ -84,7 +84,7 @@ To configure SQL Server on Ubuntu, run the following commands in a terminal to i
    ```
 
    > [!TIP]
-   > If you are trying SQL Server 2017 in this tutorial, the following editions are freely licensed: Evaluation, Developer, and Express.
+   > The following SQL Server 2017 editions are freely licensed: Evaluation, Developer, and Express.
 
    > [!NOTE]
    > Make sure to specify a strong password for the SA account (Minimum length 8 characters, including uppercase and lowercase letters, base 10 digits and/or non-alphanumeric symbols).

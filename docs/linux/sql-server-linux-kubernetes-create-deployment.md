@@ -215,7 +215,7 @@ After Kubernetes creates the SQL Server containers:
 
 1. Add the database to the availability group.
 
-The availability group is created with automatic seeding so SQL Server will automatically create the secondary replicas.
+The availability group is created with automatic seeding so SQL Server will automatically create the secondary databases on the appropriate replicas.
 
 ### Manually failover
 

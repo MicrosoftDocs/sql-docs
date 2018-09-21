@@ -91,7 +91,11 @@ Continue reading for more details about these features.
 
 ## <a id="databaseengine"></a> Database Engine
 
-- Database **COMPATIBILITY_LEVEL 150** is added. To enable for a specific user database, execute:
+CTP 2.0 introduces or enhances the following new features for [!INCLUDE[ssdeNoVersion](../includes/ssdenoversion_md.md)].
+
+### Database compatibility level
+
+Database **COMPATIBILITY_LEVEL 150** is added. To enable for a specific user database, execute:
 
    ```sql
    ALTER DATABASE database_name SET COMPATIBILITY_LEVEL =  150;

@@ -1,6 +1,6 @@
 ---
 title: Connect to SQL Server Always On Availability Group on Kubernetes cluster
-description: This article explains the environment variables for the SQL Server Kubernetes Always On availability group failover job
+description: This article explains how to connect to an Always On Availability Group
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -14,7 +14,7 @@ ms.technology: linux
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 
-# Connect to SQL Server Availability Group on Kubernetes
+# Connect to a SQL Server Always On Availability Group on Kubernetes
 
 To connect to SQL Server instances in containers on a Kubernetes cluster, create a [load balancer service](http://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer). The load balancer forwards requests for the IP address to the pod running the SQL Server instance.
 
@@ -48,13 +48,12 @@ Identify the IP address of the service you want to connect to.
 
 ## Connect to primary replica
 
-
 To connect to the primary replica with SQL authentication, use the `sa` account, the value for `sapassword` from the secret you created, and this IP address.
 
 For example:
 
 ```cmd
-sqlcmd -S 104.42.50.138 -U sa -P "MyC0m9l&xP@ssw0rd"
+sqlcmd -S <0.0.0.0> -U sa -P "<MyC0m9l&xP@ssw0rd>"
 ```
 
 ## Next steps

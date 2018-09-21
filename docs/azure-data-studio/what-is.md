@@ -1,6 +1,6 @@
 ---
-title: What is Azure Data Studio (preview)? | Microsoft Docs
-description: Azure Data Studio (preview) is a free, light-weight tool, that runs on Windows, macOS, and Linux, for managing SQL Server, Azure SQL Database, and Azure SQL Data Warehouse; wherever they're running. 
+title: What is Azure Data Studio? | Microsoft Docs
+description: Azure Data Studio is a free, light-weight tool, that runs on Windows, macOS, and Linux, for managing SQL Server, Azure SQL Database, and Azure SQL Data Warehouse; wherever they're running. 
 ms.custom: "tools|sos"
 ms.date: "09/24/2018"
 ms.prod: sql
@@ -17,7 +17,9 @@ manager: craigg
 
 # What is [!INCLUDE[name-sos](../includes/name-sos.md)]?
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] is a free tool that runs on Windows, macOS, and Linux, for managing SQL Server, Azure SQL Database, and Azure SQL Data Warehouse; wherever they're running.
+Azure Data Studio is a cross-platform database tool for data professionals using the Microsoft family of on-premises and cloud data platforms on Windows, MacOS, and Linux.
+
+Previously released under the preview name SQL Operations Studio, Azure Data Studio offers a modern editor experience with Intellisense, code snippets, source control integration, and an integrated terminal. It is engineered with the data platform user in mind, with built in charting of query result sets and customizable dashboards.
 
 **[Download and Install [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)**
 
@@ -44,6 +46,16 @@ Server groups provide a way to organize connection information for the servers a
 ## Integrated Terminal
 
 Use your favorite command-line tools (for example, Bash, PowerShell, sqlcmd, bcp, and ssh) in the Integrated Terminal window right within the [!INCLUDE[name-sos](../includes/name-sos-short.md)] user interface. To learn about the integrated terminal, see [Integrated terminal] (integrated-terminal.md).
+
+## Extensibility and extension authoring
+
+Enhance the [!INCLUDE[name-sos](../includes/name-sos-short.md)] experience by extending the functionality of the base installation. [!INCLUDE[name-sos](../includes/name-sos-short.md)] provides extensibility points for data management activities, as well as support for extension authoring.
+
+To learn about extensibility in [!INCLUDE[name-sos](../includes/name-sos-short.md)], see [Extensibility](extensibility.md).
+To learn about authoring extensions, see [Extension authoring](extension-authoring.md).
+
+
+
 
 ## Next steps
 - [Download and Install [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)

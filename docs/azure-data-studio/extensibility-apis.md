@@ -1,6 +1,6 @@
 ---
-title: Extensibility APIs for Azure Data Studio (preview) | Microsoft Docs
-description: Extensibility APIs for Azure Data Studio (preview)
+title: Extensibility APIs for Azure Data Studio | Microsoft Docs
+description: Extensibility APIs for Azure Data Studio
 ms.custom: "tools|sos"
 ms.date: "09/24/2018"
 ms.reviewer: "alayu; sstein"
@@ -16,7 +16,7 @@ manager: craigg
 ---
 # Azure Data Studio extensibility APIs
 
-[!INCLUDE[name-sos](../includes/name-sos.md)] provides an API that extensions can use to interact with other parts of Azure Data Studio, such as Object Explorer. These APIs are available from the [`src/sql/sqlops.d.ts`](https://github.com/Microsoft/sqlopsstudio/blob/master/src/sql/sqlops.d.ts) file and are described below.
+[!INCLUDE[name-sos](../includes/name-sos.md)] provides an API that extensions can use to interact with other parts of Azure Data Studio, such as Object Explorer. These APIs are available from the [`src/sql/sqlops.d.ts`](https://github.com/Microsoft/azuredatastudio/blob/master/src/sql/sqlops.d.ts) file and are described below.
 
 ## Connection Management
 `sqlops.connection`
@@ -71,7 +71,7 @@ Get an Object Explorer node corresponding to the given connection and path. If n
 Get all active Object Explorer connection nodes.
 
 - `findNodes(connectionId: string, type: string, schema: string, name: string, database: string, parentObjectNames: string[]): Thenable<sqlops.objectexplorer.ObjectExplorerNode[]>`
-Find all Object Explorer nodes that match the given metadata. The `schema`, `database`, and `parentObjectNames` arguments should be `undefined` when they are not applicable. `parentObjectNames` is a list of non-database parent objects, from highest to lowest level in Object Explorer, that the desired object is under. For example, when searching for a column "column1" that belongs to a table "schema1.table1" and database "database1" with connection ID `connectionId`, call `findNodes(connectionId, 'Column', undefined, 'column1', 'database1', ['schema1.table1'])`. Also see the [list of types that SQL Operations Studio supports by default](https://github.com/Microsoft/sqlopsstudio/wiki/Object-Explorer-types-supported-by-FindNodes-API) for this API call.
+Find all Object Explorer nodes that match the given metadata. The `schema`, `database`, and `parentObjectNames` arguments should be `undefined` when they are not applicable. `parentObjectNames` is a list of non-database parent objects, from highest to lowest level in Object Explorer, that the desired object is under. For example, when searching for a column "column1" that belongs to a table "schema1.table1" and database "database1" with connection ID `connectionId`, call `findNodes(connectionId, 'Column', undefined, 'column1', 'database1', ['schema1.table1'])`. Also see the [list of types that SQL Operations Studio supports by default](https://github.com/Microsoft/azuredatastudio/wiki/Object-Explorer-types-supported-by-FindNodes-API) for this API call.
 
 ### ObjectExplorerNode
 - `connectionId: string`
@@ -176,6 +176,6 @@ vscode.commands.registerCommand('mssql.objectexplorer.interact', () => {
 
 ## Proposed APIs
 
-We have added proposed APIs to allow extensions to display custom UI in dialogs, wizards, and document tabs, among other capabilities. See the [proposed API types file](https://github.com/Microsoft/sqlopsstudio/blob/master/src/sql/sqlops.proposed.d.ts) for more documentation, though be aware that these APIs are subject to change at any time. Examples of how to use some of these APIs can be found in the ["sqlservices" sample extension](https://github.com/Microsoft/sqlopsstudio/tree/master/samples/sqlservices).
+We have added proposed APIs to allow extensions to display custom UI in dialogs, wizards, and document tabs, among other capabilities. See the [proposed API types file](https://github.com/Microsoft/azuredatastudio/blob/master/src/sql/sqlops.proposed.d.ts) for more documentation, though be aware that these APIs are subject to change at any time. Examples of how to use some of these APIs can be found in the ["sqlservices" sample extension](https://github.com/Microsoft/azuredatastudio/tree/master/samples/sqlservices).
 
 

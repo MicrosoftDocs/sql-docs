@@ -1,5 +1,5 @@
 ---
-title: "Changelog for the Report Viewer Controls | Reporting Services"
+title: "Changelog for the Reporting Services Report Viewer controls"
 ms.date: 09/19/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

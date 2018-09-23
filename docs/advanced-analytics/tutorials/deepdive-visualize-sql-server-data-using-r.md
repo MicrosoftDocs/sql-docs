@@ -44,7 +44,7 @@ For this walkthrough, you use the **rxHistogram** function to view the distribut
     cube1 <- rxCube(fraudRisk~F(numTrans):F(numIntlTrans),  data = sqlFraudDS)
     ```
   
-    To specify the groups used to compute group means, use the `F()` notation. In this example, `F(numTrans):F(numIntlTrans)` indicates that the integers in the variables `_numTrans` and `numIntlTrans` should be treated as categorical variables, with a level for each integer value.
+    To specify the groups used to compute group means, use the `F()` notation. In this example, `F(numTrans):F(numIntlTrans)` indicates that the integers in the variables `numTrans` and `numIntlTrans` should be treated as categorical variables, with a level for each integer value.
   
     Because the low and high levels were already added to the data source `sqlFraudDS` (using the `colInfo` parameter), the levels are automatically used in the histogram.
   

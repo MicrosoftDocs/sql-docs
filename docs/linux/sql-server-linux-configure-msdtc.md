@@ -27,7 +27,7 @@ SQL Server 2019 introduces two configuration parameters for the mssql-conf utili
 
 | mssql-conf setting | Description |
 |---|---|
-| **network.rpcport** | The TCP port that the RPC endpoint manager process binds to. |
+| **network.rpcport** | The TCP port that the RPC endpoint mapper process binds to. |
 | **network.servertcpport** | The port that the MSDTC server listens to. If not set, the MSDTC service uses a random ephemeral port on service restarts, and firewall exceptions will need to be re-configured to ensure that MSDTC service can continue communication. |
 
 For more information about these settings and other related MSDTC settings, see [Configure SQL Server on Linux with the mssql-conf tool](sql-server-linux-configure-mssql-conf.md#msdtc).
@@ -36,7 +36,7 @@ For more information about these settings and other related MSDTC settings, see 
 
 The following MSDTC configurations are supported:
 
-- OLE-TX Distributed transactions against SQL Server on Linux for JDBC providers.
+- OLE-TX Distributed transactions against SQL Server on Linux for JDBC and ODBC providers.
 - XA Distributed transactions against SQL Server on Linux using JDBC providers.
 - Distributed transactions on Linked server.
 
@@ -81,7 +81,6 @@ The final step is to configure the firewall to allow communication on **rpcport*
 The following example shows how to create these rules on Ubuntu.
 
 ```bash
-sudo ufw allow from any to any port 13500 proto tcp
 sudo ufw allow from any to any port 51999 proto tcp
 sudo ufw allow from any to any port 135 proto tcp
 ```
@@ -90,7 +89,6 @@ The following example shows how this could be done on Red Hat Enterprise Linux (
 
 ```bash
 sudo firewall-cmd --zone=public --add-port=51999/tcp --permanent
-sudo firewall-cmd --zone=public --add-port=13500/tcp --permanent
 sudo firewall-cmd --zone=public --add-port=135/tcp --permanent
 sudo firewall-cmd --reload
 ```
@@ -124,13 +122,13 @@ Configure the Linux server routing table so that RPC communication on port 135 i
    iptables-save > /etc/iptables.conf
    ```
 
-4. Add the following command to `/etc/rc.local` to reload the rules after a reboot.
+4. To reload the rules after a reboot, add the following command to `/etc/rc.local` (for Ubuntu or RHEL) or to `/etc/init.d/after.local` (for SLES):
 
    ```bash
    iptables-restore < /etc/iptables.conf
    ```
 
-The **iptables-save** and **iptables-restore** commands provide a basic mechanism to save and restore iptables entries. Depending on your Linux distribution, there might be more advanced or automated options available. For example, an Ubuntu alternative is the **iptables-persistent** package to make entries persistent. Or for Red Hat Linux, you might be able to modify the /etc/sysconfig/iptables-config file to make the entries persistent.
+The **iptables-save** and **iptables-restore** commands provide a basic mechanism to save and restore iptables entries. Depending on your Linux distribution, there might be more advanced or automated options available. For example, an Ubuntu alternative is the **iptables-persistent** package to make entries persistent. Or for Red Hat Enterprise Linux, you may be able to use firewalld service (via firewall-cmd configuration utility with –add-forward-port or similar options) to create persistent port forwarding rules instead of using iptables.
 
 > [!IMPORTANT]
 > The previous steps assume a fixed IP address. If the IP address for your SQL Server instance changes (due to manual intervention or DHCP), you must remove and recreate the routing rules. If you need to recreate or delete existing routing rules, you can use the following command to remove old `RpcEndPointMapper` rules:

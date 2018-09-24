@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Enable the five slowest queries sample widget - Azure Data Studio (preview) | Microsoft Docs"
+title: "Tutorial: Enable the five slowest queries sample widget - Azure Data Studio | Microsoft Docs"
 description: This tutorial demonstrates how to enable the five slowest queries sample widget on the database dashboard.
 ms.custom: "tools|sos"
 ms.date: "09/24/2018"

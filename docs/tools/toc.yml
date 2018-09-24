@@ -1,6 +1,6 @@
 - name: Overview of SQL Server Tools and Utilities
   href: ../tools/overview-sql-tools.md
-- name: Azure Data Studio (preview)
+- name: Azure Data Studio
   href: ../azure-data-studio/what-is.md
 - name: SQL Server Management Studio (SSMS)
   href: ../ssms/download-sql-server-management-studio-ssms.md

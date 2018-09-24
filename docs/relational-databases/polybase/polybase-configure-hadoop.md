@@ -1,7 +1,7 @@
 ---
 title: "Configure PolyBase to access external data in Hadoop | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/24/2018"
+ms.date: 09/24/2018
 ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"
@@ -23,7 +23,7 @@ The article explains how to use PolyBase on a SQL Server instance to query exter
 - If you haven't installed PolyBase, see [PolyBase installation](polybase-installation.md). The installation article explains the prerequisites.
 
 <!--SQL Server 2019-->
-::: moniker range=">= sql-server-ver15"
+::: moniker range=">= sql-server-ver15 || =sqlallproducts-allversions"
 
 - Starting with SQL Server 2019, you must also [enable the PolyBase feature](polybase-installation.md#enable).
 

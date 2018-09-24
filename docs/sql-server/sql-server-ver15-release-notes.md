@@ -22,15 +22,15 @@ monikerRange: "= sql-server-ver15 || = sqlallproducts-allversions"
 This article describes limitations and known issues for the [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] Community Technology Preview (CTP) releases. For related information, see:
 - [What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md)
 
->[!NOTE]
->Preview releases of SQL Server are made available for you to experience the features of the upcoming release. They are not supported or licensed for production use. The following scenarios are explicitly unsupported:
+> [!NOTE]
+> Preview releases of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] are made available for you to experience the features of the upcoming release. They are not supported or licensed for production use. The following scenarios are explicitly unsupported:
 >
-> - Side-by-side installation with other versions of SQL Server
+> - Side-by-side installation with other versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 > - Uninstallation
 > - Upgrade from a previous edition of SQL Server
 
 **Try [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]!**
-- [![Download from Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [Download [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] to install on Windows](http://go.microsoft.com/fwlink/?LinkID=829477)
+- [![Download from Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=862101) [Download [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] to install on Windows](http://go.microsoft.com/fwlink/?LinkID=862101)
 - Install on Linux for [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md), [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md), and [Ubuntu](../linux/quickstart-install-connect-ubuntu.md).
 - [Run on SQL Server 2019 on Docker](../linux/quickstart-install-connect-docker.md).
 
@@ -38,11 +38,23 @@ This article describes limitations and known issues for the [!INCLUDE[SQL Server
 
 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.0 is the first public release of [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)].
 
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.0 is available is only as Evaluation Edition. No other editions are available. Support for CTP 2.0 is described in license_Eval.rtf with your installation media.
+
+Limited support may be found at one of the following locations:
+
+- Forums
+  - [SQL Server Feedback](http://aka.ms/sqlfeedback)
+  - [Getting started with SQL Server](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=sqlgetstarted)
+  - [Transact-SQL](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=transactsql)
+  - [SQL Server Documentation](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=sqldocumentation)
+
+- Or tweet [@SQLServer](http://twitter.com/SQLServer) with [#sqlhelp](https://twitter.com/search?q=%23sqlhelp)
+
 ### Documentation (CTP 2.0)
 
-- **Issue and customer impact**: Documentation for SQL Server 2019 (15.x) is limited and content is included with the SQL Server 2017 (14.x) documentation set. Content in articles that is specific to SQL Server 2019 (15.x) is noted with **Applies To**.
+- **Issue and customer impact**: Documentation for SQL Server 2019 (15.x) is limited and content is included with the [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] documentation set. Content in articles that is specific to SQL Server 2019 (15.x) is noted with **Applies To**.
 
-- **Issue and customer impact**: SQL Server documentation can be filtered by version. Use the control at the top left of each documentation page to filter for your requirements. 
+- **Issue and customer impact**: [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] documentation can be filtered by version. Use the control at the top left of each documentation page to filter for your requirements. 
 
 - **Issue and customer impact**: No offline content is available for SQL Server 2019 (15.x).
 
@@ -59,15 +71,15 @@ This article describes limitations and known issues for the [!INCLUDE[SQL Server
 
 ### SQL Graph
 
-**Issue and customer impact**: Tools which have dependency on DacFx like import-export will not work for the new graph features - Edge Constraints or Merge DML. Scripting in SSMS may not work.
+**Issue and customer impact**: Tools which have dependency on DacFx like import-export will not work for the new graph features - Edge Constraints or Merge DML. Scripting in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] may not work.
 
-**Workaround**: Writing T-SQL scripts and running them against the server using SSMS or SQLCMD will work. Exporting or Importing database objects that create Edge constraints, have the new merge DML syntax or create derived tables/views on graph objects will not work. Users will have to manually create such objects in their database using t-sql scripts. 
+**Workaround**: Writing [!INCLUDE[tsql](../includes/tsql-md.md)] scripts and running them against the server using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or SQLCMD will work. Exporting or Importing database objects that create Edge constraints, have the new merge DML syntax or create derived tables/views on graph objects will not work. Users will have to manually create such objects in their database using [!INCLUDE[tsql](../includes/tsql-md.md)] scripts. 
 
-**Applies to**:  [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.0.
+**Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.0.
 
 ### UTF-8 collations
 
-**Issue and customer impact**: UTF-8 enabled collations cannot be used with some other SQL Server features. UTF-8 is not supported when the following SQL Server features are in use:
+**Issue and customer impact**: UTF-8 enabled collations cannot be used with some other [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] features. UTF-8 is not supported when the following [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] features are in use:
 
 - SQL Server Replication
 - Linked Server
@@ -76,7 +88,18 @@ This article describes limitations and known issues for the [!INCLUDE[SQL Server
 
   Also note there is currently no UI support to choose UTF-8 enabled collations in Azure Data Studio or SSDT. The latest SSMS version supports choice of UTF-8 enabled collations in the UI.
 
-**Workaround**: No workaround for SQL Server 2019 CTP 2.0.
+**Workaround**: No workaround for [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.0.
+
+**Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.0.
+
+### Lightweight query profiling infrastructure
+
+**Issue and customer impact**: Executing the command `ALTER DATABASE SCOPED CONFIGURATION SET LIGHTWEIGHT_QUERY_PROFILING = ON` returns a syntax error. Any scenarios that depend on executing this command will fail.
+
+> [!NOTE]
+> Currently, the lightweight query profiling infrastructure (LWP) cannot be controlled at the individual database level, and remains enabled for all databases by default. For more information on LWP, refer to [What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md).
+
+**Workaround**: No workaround for [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.0.
 
 **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.0.
 
@@ -86,7 +109,7 @@ This article describes limitations and known issues for the [!INCLUDE[SQL Server
 
 **Workaround**: To enable rich computations, run `DBCC traceon(127,-1)`. For details, see  [Enable rich computations](../relational-databases/security/encryption/configure-always-encrypted-enclaves.md#configure-a-secure-enclave).
 
-**Applies to**:  [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.0.
+**Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.0.
 
 ### SQL Server Integration Services (SSIS) Transfer Database Task
 
@@ -96,16 +119,19 @@ This article describes limitations and known issues for the [!INCLUDE[SQL Server
 
 **Workaround**: Execute `DBCC TRACEON (7416,-1)` on the server and try again.
 
-### SSIS - Issue after switching SSISDB back to multi-user mode
+### SQL Server Machine Learning Services installation failure
 
-**Issue / customer impact**: After switching SSISDB into single-user mode and switching back to multi-user mode, the following error will be reported when deploying the package.
+**Issue/Customer impact**: SQL Server Machine Learning Services installations fails on machines that have trust relationship issues with the primary domain. The following error will be seen in the logs in this case:
+ 
+>  Error: 0 : System.SystemException:The trust relationship between this workstation and the primary domain failed at System.Security.Principal.NTAccount.TranslateToSids(IdentityReferenceCollection sourceAccounts, Boolean& someFailed) ...
 
->Cannot continue the execution because the session is in the kill state.
+Verify in the logs located at:
 
-**Workaround**: Restart the SQL Server after switch back to multi-user mode.
+* `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\R_SERVICES\library\RevoScaleR\rxLibs\x64\RegisterRExt.log`
+* `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages\revoscalepy\rxLibs\RegisterRExt.log`
+**Workaround**: Resolve the domain trust issues and retry the installation.
 
-**Applies to**: SQL Server 2019 CTP 2.0.  
-
+**Applies to**: SQL Server 2019 CTP 2.0.
 
 [!INCLUDE[get-help-options-msft-only](../includes/paragraph-content/get-help-options.md)]
 

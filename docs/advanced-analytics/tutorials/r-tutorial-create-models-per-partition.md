@@ -45,14 +45,6 @@ The data set is large and training operations are resource-intensive. If possibl
 
 SQL Server 2019 CTP 2.0 or later, with Machine Learning Services installed and configured, is required. You can check server version in Management Studio by executing `SELECT @@Version` as a T-SQL query. Output should be "Microsoft SQL Server 2019 (CTP 2.0) - 15.0.x".
 
-### Tools for query execution
-
-You can [download and install SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms), or use any tool that connects to a relational database and runs T-SQL script. Make sure you can connect to a database engine instance that has Machine Learning Services.
-
-### Sample data
-
-Data originates from the [NYC Taxi and Limousine Commission](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml) public data set. If you completed other tutorials, you might have the database already. For instructions and script, see [Download NYC Taxi demo data from Github](sqldev-download-the-sample-data.md).
-
 ### R packages
 
 This tutorial uses R installed with Machine Learning Services. You can verify R installation by returning a well-formatted list of all R packages currently installed with your database engine instance:
@@ -68,6 +60,18 @@ EXECUTE sp_execute_external_script
   @input_data_1 = N''
 WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 ```
+
+### Tools for query execution
+
+You can [download and install SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms), or use any tool that connects to a relational database and runs T-SQL script. Make sure you can connect to a database engine instance that has Machine Learning Services.
+
+### Sample data
+
+Data originates from the [NYC Taxi and Limousine Commission](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml) public data set. 
+
++ Download the [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak ) database backup file and restore it on the database engine instance.
+
+The database file name must be **NYCTaxi_sample** if you want to run the following scripts with no modification.
 
 ## Connect to the database
 
@@ -188,7 +192,7 @@ By default, the query optimizer tends to operate under **@parallel=1** on tables
 
 In this section, the script trains the model that you created and saved in the previous step. The examples below demonstrate two approaches for training your model: using an entire data set, or a partial data. 
 
-Expect this step to take awhile. Training is computationally intensive, taking many minutes to complete. If system resources, especially memory, are insufficient for the load, use a subset of the data. You should also subset the training data if you want to complete the tutorial sooner. The second example provides the syntax.
+Expect this step to take awhile. Training is computationally intensive, taking many minutes to complete. If system resources, especially memory, are insufficient for the load, use a subset of the data. The second example provides the syntax.
 
 ```sql
 --Example 1: train on entire dataset

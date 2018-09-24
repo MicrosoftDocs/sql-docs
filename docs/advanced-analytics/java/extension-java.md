@@ -66,7 +66,7 @@ One difference from previous language integrations such as R and Python is that 
 Given that Java is backwards compatible, earlier versions might work, but the supported and tested versions for this early CTP release are listed in the table.
 
 > [!Note]
->To run Java with SQL Server, you technically only need the Java Runtime Environment installed (JRE). The JDK is a development kit including the Java compiler and other development related packages. If you already have a development environment and only need a Java runtime on the server machine, you can ignore the JDK installation instructions and only install JRE.
+>To run Java with SQL Server, you technically only need the [Java Runtime Environment](http://www.oracle.com/technetwork/java/javase/downloads/jre10-downloads-4417026.html) installed (JRE). The JDK is a development kit including the Java compiler and other development related packages. If you already have a development environment and only need a Java runtime on the server machine, you can ignore the JDK installation instructions and only install JRE.
 
 ## JDK on Windows
 
@@ -76,6 +76,8 @@ Install the JDK under the default /Program Files/ folder if you want to avoid ha
 
 > [!Note]
 > The authorization and isolation model for extensions has changed in this release. For more information, see [Differences in a SQL Server Machine 2019 Learning Services installation](../install/sql-machine-learning-services-ver15.md).
+
+<a name="perms-nonwindows"></a>
 
 ### Grant access to non-default JDK folder (Windows only)
 

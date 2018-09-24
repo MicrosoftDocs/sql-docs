@@ -1,6 +1,6 @@
 ---
-title: Create extensions for Azure Data Studio (preview) | Microsoft Docs
-description: Add extensions to Azure Data Studio (preview)
+title: Create extensions for Azure Data Studio | Microsoft Docs
+description: Add extensions to Azure Data Studio
 ms.custom: "tools|sos"
 ms.date: "09/24/2018"
 ms.reviewer: "alayu; sstein"
@@ -16,7 +16,7 @@ manager: craigg
 ---
 # Extend the functionality of [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
-Extensions in [!INCLUDE[name-sos](../includes/name-sos-short.md)] provide an easy way to add more functionality to the base [!INCLUDE[name-sos](../includes/name-sos-short.md)] installation. 
+Extensions in [!INCLUDE[name-sos](../includes/name-sos-short.md)] provide an easy way to add more functionality to the base [!INCLUDE[name-sos](../includes/name-sos-short.md)] installation.
 
 Extensions are provided by the Azure Data Studio team (Microsoft), as well as the 3rd party community (you!).
 
@@ -67,10 +67,10 @@ After writing your extension, you need to create a VSIX package to be able to in
 
 To publish your new extension to Azure Data Studio:
 
-1. Add your extension to https://github.com/Microsoft/sqlopsstudio/blob/release/extensions/extensionsGallery.json
+1. Add your extension to https://github.com/Microsoft/azuredatastudio/blob/release/extensions/extensionsGallery.json
 2. We currently don't have support to host third party extensions, so instead of downloading the extension, Azure Data Studio has the option to browse to a download page. To set a download page for your extension, set the value of asset "Microsoft.AzureDataStudio.DownloadPage".
 3. Create a PR against release/extensions branch.
-4. Send a review request to llali.
+4. Send a review request to the team.
 
 Your extension will be reviewed and added to the extension gallery.
 

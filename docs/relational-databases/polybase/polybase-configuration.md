@@ -1,7 +1,7 @@
 ---
 title: "PolyBase configuration and security for Hadoop | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/15/2018"
+ms.date: 09/24/2018
 ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"

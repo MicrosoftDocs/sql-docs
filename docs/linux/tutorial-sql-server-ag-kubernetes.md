@@ -60,46 +60,6 @@ The objects include storage, operators, pods, containers, and services.
 
 The tutorial will show how to apply the .yaml files to your Kubernetes cluster.
 
-## Create storage
-
-To create the storage, create a manifest that describes:
-
-* The [*Storage Class*](http://kubernetes.io/docs/concepts/storage/storage-classes/)
-* Three [*Persistent Volume Claims*](http://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv) as Azure disks
-
-See the example  manifest
-To create the manifest for the storage, make a file named `pvc.yaml`, and copy in the following `.yaml` code.
-
-Next, apply the manifest to the Kubernetes cluster. The following example applies the manifest:
-
-```azurecli
-kubectl apply -f pvc.yaml
-```
-
-AKS creates the persistent volumes automatically as Azure managed storage accounts, and binds them to the persistent volume claims.
-
-### Verify the persistent volume claim
-
-To see all of the PVCs in a Kubernetes cluster, run `kubectl describe pvc`.
-
-```azurecli
-kubectl describe pvc
-```
-
-In the preceding step, the persistent volume claim is named `mssql-data-<x>` where `<x>` is a number. For example, `mssql-data-1`. To see metadata about the persistent volume claim for the SQL Server instance `mssql-data-1`, run the following command: 
-
-```azurecli
-kubectl describe pvc mssql-data-1
-```
-
-### Verify the persistent volumes
-
-```azurecli
-kubectl describe pv
-```
-
-`kubectl` returns metadata about the persistent volumes that were automatically created and bound to the persistent volume claims.
-
 ## Create the secrets
 
 To create Kubernetes secrets to store the passwords for the SQL Server SA account and the SQL Server master key, run the following command.
@@ -109,9 +69,16 @@ kubectl create secret generic sql-secrets --from-literal=sapassword="MyC0m9l&xP@
 ```
 
 In a production environment use a different, complex password.
+
 ## Deploy the operator
 
-`mssql-operator` is a Kubernetes operator that deploys the instances of SQL Server and configures the availability group in the Kubernetes cluster. Deploy the operator as one replica Kubernetes deployment.
+A Kubernetes operator deploys instances of SQL Server and configures the availability group in the Kubernetes cluster. 
+
+See an example operator at [`operator.yaml`](https://github.com/Microsoft/sql-server-samples/blob/master/samples/features/high%20availability/Kubernetes/sample-manifest-files/operator.yaml)
+
+Download `operator.yaml` from [sql-server-samples](https://github.com/Microsoft/sql-server-samples/blob/master/samples/features/high%20availability/Kubernetes/sample-manifest-files/)
+
+Deploy the operator as one replica Kubernetes deployment.
 
 To deploy the operator:
 
@@ -132,7 +99,7 @@ In addition, the deployment describes a load balancer service for the availabili
 
 To deploy mssql-server:
 
-1. Copy [sqlserver.yaml](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Linux) to your computer.
+1. Copy [sqlserver.yaml](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files/sqlserver.yaml) to your computer.
 2. Update `sqlserver.yaml` for your environment.
 
 
@@ -146,7 +113,7 @@ kubectl apply -f sqlserver.yaml
 
 In the Kubernetes cluster create load balancer services to direct calls to replicas in the availability group.
 
-[ag-services.yaml](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Linux) creates four services.
+[ag-services.yaml](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files) creates four services.
 
 * ag1-primary connects to the primary replica.
 * ag1-secondary-sync connects to a synchronous secondary replica.

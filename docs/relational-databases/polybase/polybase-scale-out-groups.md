@@ -1,7 +1,7 @@
 ---
 title: "PolyBase scale-out groups | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/24/2016"
+ms.date: 09/24/2018
 ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"

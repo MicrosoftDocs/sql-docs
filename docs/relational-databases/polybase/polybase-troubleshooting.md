@@ -1,7 +1,7 @@
 ---
 title: "Monitor and troubleshoot PolyBase | Microsoft Docs"
 ms.custom: ""
-ms.date: "8/29/2017"
+ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: polybase
 ms.reviewer: ""

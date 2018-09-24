@@ -89,8 +89,12 @@
       href: sql-server-linux-configure-environment-variables.md
     - name: Configure Docker containers
       href: sql-server-linux-configure-docker.md
-    - name: Configure MSDTC
-      href: sql-server-linux-configure-msdtc.md
+    - name: MSDTC
+      items:
+      - name: Configure MSDTC
+        href: sql-server-linux-configure-msdtc.md
+      - name: Configure Docker for MSDTC
+        href: sql-server-linux-configure-msdtc-docker.md
     - name: Configure persistent memory PMEM
       href: sql-server-linux-configure-pmem.md
     - name: Customer feedback
@@ -194,6 +198,8 @@
             href: sql-server-linux-kubernetes-manage.md
           - name: Connect
             href: sql-server-linux-kubernetes-connect.md
+          - name: Create deployment scripts
+            href: sql-server-linux-kubernetes-create-deployment.md
   - name: Security
     href: sql-server-linux-security-overview.md
     items:

@@ -17,7 +17,7 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 
 This article describes how to deploy an availability group on a Kubernetes cluster in a single command with an example deployment script. `deploy-ag.py` is a Python script that creates the `.yaml` files for the cluster and can apply them to a Kubernetes cluster.
 
-Download the **k8s-config** file from [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Linux).
+Download the files file from [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-deployment-script).
 
 ## Before you start
 

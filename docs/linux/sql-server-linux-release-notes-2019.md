@@ -1,5 +1,5 @@
 ---
-title: Release notes for SQL Server 2019 CTP on Linux | Microsoft Docs
+title: Release notes for SQL Server 2019 preview on Linux | Microsoft Docs
 description: This article contains the release notes and supported features for SQL Server 2019 CTP running on Linux. Release notes are included for the most recent release and several previous releases.
 author: rothja 
 ms.author: jroth 
@@ -13,14 +13,14 @@ ms.custom: "sql-linux"
 ms.technology: linux
 monikerRange: ">= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions"
 ---
-# Release notes for SQL Server 2019 CTP on Linux
+# Release notes for SQL Server 2019 preview on Linux
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx-linuxonly.md](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-linuxonly.md)]
 
 The following release notes apply to SQL Server 2019 CTP running on Linux. This article is broken into sections for each release. Each release has a link to a support article describing the CU changes as well as links to the Linux package downloads.
 
 > [!TIP]
-> To learn about new Linux features in SQL Server 2019, see [What's new in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md).
+> To learn about new Linux features in SQL Server 2019, see [What's new in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sqllinux).
 
 ## Supported platforms
 

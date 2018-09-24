@@ -70,19 +70,15 @@ The code for the operator, HA supervisor, and SQL Server is packaged in a Docker
 
 * `mssql-operator`
 
-    This process is deployed as a separate Kubernetes deployment. It registers the custom Kubernetes [custom resource](http://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/) called `SqlServer` (sqlservers.mssql.microsoft.com). Then it listens for such resources being created or updated in the Kubernetes cluster. For every such event, it creates or updates the Kubernetes resources for the corresponding instance (for example the StatefulSet, or `mssql-server-k8s-init-sql` job).
+    This process is deployed as a separate Kubernetes deployment. It registers the [Kubernetes custom resource](http://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/) called `SqlServer` (sqlservers.mssql.microsoft.com). Then it listens for such resources being created or updated in the Kubernetes cluster. For every such event, it creates or updates the Kubernetes resources for the corresponding instance (for example the StatefulSet, or `mssql-server-k8s-init-sql` job).
 
-* `mssql-server-k8s-sqlhealth-agent`
+* `mssql-server-k8s-health-agent`
 
     This web server serves Kubernetes [liveness probes](http://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes/) to determine the health of a SQL Server instance. Monitors the health of the local SQL Server instance by calling `sp_server_diagnostics` and comparing the results with your monitor policy.
 
 * `mssql-ha-supervisor`
 
-  Contains `mssql-health-monitor`
-
-  This process spawns `mssql-server-k8s-ag-agent` and `mssql-server-k8s-sqlhealth-agent` processes as child processes and terminates them as necessary, based on which AGs the local SQL Server instance is meant to be part of. 
-
-    It also maintains the ag certificate and endpoint. 
+   Maintains the ag certificate and endpoint. 
 
 * `mssql-server-k8s-ag-agent`
   

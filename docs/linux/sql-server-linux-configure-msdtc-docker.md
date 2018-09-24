@@ -41,6 +41,8 @@ docker run \
    -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
 ```
 
+The following command shows the same command for Docker on Windows in PowerShell:
+
 ```PowerShell
 docker run `
    -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
@@ -56,12 +58,11 @@ In this command, the **RPC Endpoint Mapper** service has been bound to port 1350
 
 ## Configure the firewall
 
-In order to communicate with and through the host, you must also configure the firewall on the host server for the containers. Open the firewall for all ports that docker container exposes for communication. In the previous example, this would be ports 135, 51433, 13500, and 51000. These are the ports on the host itself and not the ports they map to in the container. So, if RPC Endpoint mapper port 13500 of container was mapped to host port 13501, then port 13501 (not 13500) should be opened in the firewall for communication with the host.  
+In order to communicate with and through the host, you must also configure the firewall on the host server for the containers. Open the firewall for all ports that docker container exposes for external communication. In the previous example, this would be ports 135, 51433, and 51000. These are the ports on the host itself and not the ports they map to in the container. So, if RPC Endpoint mapper port 51000 of container was mapped to host port 51001, then port 51001 (not 51000) should be opened in the firewall for communication with the host.  
 
 The following example shows how to create these rules on Ubuntu.
 
 ```bash
-sudo ufw allow from any to any port 13500 proto tcp
 sudo ufw allow from any to any port 51433 proto tcp
 sudo ufw allow from any to any port 51000 proto tcp
 sudo ufw allow from any to any port 135 proto tcp
@@ -72,10 +73,13 @@ The following example shows how this could be done on Red Hat Enterprise Linux (
 ```bash
 sudo firewall-cmd --zone=public --add-port=51999/tcp --permanent
 sudo firewall-cmd --zone=public --add-port=51433/tcp --permanent
-sudo firewall-cmd --zone=public --add-port=13500/tcp --permanent
 sudo firewall-cmd --zone=public --add-port=135/tcp --permanent
 sudo firewall-cmd --reload
 ```
+
+## Configure port routing on the host
+
+If the docker container participates in distributed transactions with a server external to the host, then the host must configure port routing. For more information, see [Configure port routing](sql-server-linux-configure-msdtc.md#configure-port-routing).
 
 ## Next steps
 

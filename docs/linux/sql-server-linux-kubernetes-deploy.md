@@ -35,7 +35,7 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 
   In cloud environments like Azure, configure [persistent volumes](http://kubernetes.io/docs/concepts/storage/persistent-volumes/) for each instance of SQL Server.
 
-  To create persistent volumes in Azure, see `k8s-config/pv.yaml` and `k8s-config/pvc.yaml` in [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Linux/k8s-config).
+  To create persistent volumes in Azure, see `pv.yaml` and `pvc.yaml` in [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-deployment-script/templates).
 
   To create the storage run the following command:
 
@@ -53,7 +53,7 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 
 1. Configure and deploy the SQL Server operator manifest.
 
-  Copy the SQL Server operator `operator.yaml` file from [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Linux/k8s-config).
+  Copy the SQL Server operator `operator.yaml` file from [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files).
 
   The `operator.yaml` file is the deployment manifiest for the Kubernetes operator.
 
@@ -65,9 +65,9 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
   kubectl apply -f operator.yaml
   ```
 
-1. Configure and deploy the SQL Server manifest.
+1. Deploy the SQL Server custom resource.
 
-  Copy the SQL Server manifest `sqlserver.yaml` from [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Linux/k8s-config).
+  Copy the SQL Server manifest `sqlserver.yaml` from [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files).
 
   Apply the manifest to the Kubernetes cluster.
 

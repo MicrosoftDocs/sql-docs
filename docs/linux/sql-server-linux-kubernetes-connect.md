@@ -18,7 +18,7 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 
 To connect to SQL Server instances in containers on a Kubernetes cluster, create a [load balancer service](http://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer). The load balancer forwards requests for the IP address to the pod running the SQL Server instance.
 
-To connect to an availability group replica, create a service for different replica types. You can see examples of services for different types of replicas in [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability).
+To connect to an availability group replica, create a service for different replica types. You can see examples of services for different types of replicas in [sql-server-samples](https://github.com/Microsoft/sql-server-samples/blob/master/samples/features/high%20availability/Kubernetes/sample-manifest-files/ag-services.yaml).
 
 * `ag1-primary` points to the primary replica.
 * `ag1-secondary-sync` points to the synchronous secondary replica.
@@ -28,7 +28,7 @@ If more than one secondary replica of the same type exists, Kubernetes routes yo
 
 ## Create a load balancer service
 
-To create a load balancer service for the primary replica, copy `ag1-primary.yaml` and update it for your availability group.
+To create a load balancer service for the primary replica, copy `ag1-primary.yaml` from [sql-server-samples]()and update it for your availability group.
 
 The following command applies the .yaml file to your cluster:
 

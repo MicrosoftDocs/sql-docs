@@ -25,6 +25,8 @@ Ubuntu 18.04
 
 Data Classification for Azure SQL Database and SQL Server, for more information see [Data Classification](../data-classification.md)
 
+Support UTF-8 server encoding
+
 SQLBrowseConnect
 
 Dynamic dependency on `libcurl`:

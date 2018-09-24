@@ -65,7 +65,7 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
   kubectl apply -f operator.yaml
   ```
 
-1. Configure and deploy the SQL Server manifest.
+1. Deploy the SQL Server custom resource.
 
   Copy the SQL Server manifest `sqlserver.yaml` from [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files).
 

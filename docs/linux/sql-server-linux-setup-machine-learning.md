@@ -220,7 +220,7 @@ Additional configuration is primarily through the [mssql-conf tool](sql-server-l
 3. Restart the SQL Server Launchpad service and the database engine instance.
 
   ```bash
-  systemctl restart mssql-launchpad
+  systemctl restart mssql-launchpadd
 
   systemctl restart mssql-server.service
   ```
@@ -233,8 +233,12 @@ Additional configuration is primarily through the [mssql-conf tool](sql-server-l
   ```
 
 ## Verify installation
-  
-Execute the following SQL command to test R execution in SQL Server. If the script does not run, try a service restart, `sudo systemctl restart mssql-server`.
+
+R libraries (MicrosoftML, RevoScaleR, and others) can be found at `/opt/mssql/mlservices/libraries/RServer`.
+
+Python libraries (microsoftml and revoscalepy) can be found at `/opt/mssql/mlservices/libraries/PythonServer`.
+
+Using a SQL Server query tool, execute the following SQL command to test R execution in SQL Server. If the script does not run, try a service restart, `sudo systemctl restart mssql-server`.
 
 ```r
 EXEC sp_execute_external_script   
@@ -294,6 +298,11 @@ All possible permutations of EULA acceptance are documented in [Configure SQL Se
 ## Offline installation
 
 Follow the [Offline installation](sql-server-linux-setup.md#offline) instructions for steps on installing the packages. Find your download site, and then download specific packages using the package list below.
+
+> [!Tip]
+> Several of the package management tools provide commands that can help you determine package dependencies. For yum, use `sudo yum deplist [package]`. For Ubuntu, use `sudo apt-get install --reinstall --download-only [package name]`.
+dpkg -I [package name].deb
+
 
 #### Download site
 

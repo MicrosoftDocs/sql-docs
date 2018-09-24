@@ -27,12 +27,12 @@ SQL Server 2019 CTP 2.0 runs on Linux. It’s the same SQL Server database engin
 
 ::: moniker range="= sql-server-2017"
 > [!TIP]
-> SQL Server 2019 CTP 2.0 has been released! To find out what's new for Linux in the latest release, see [What's new in SQL Server 2019 CTP 2.0 for Linux](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sqllinux).
+> [SQL Server 2019 CTP 2.0](sql-server-linux-overview.md?view=sql-server-ver15) has been released! To find out what's new for Linux in the latest release, see [What's new in SQL Server 2019 CTP 2.0 for Linux](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sqllinux).
 ::: moniker-end
 
 ::: moniker range="= sql-server-linux-2017"
 > [!TIP]
-> SQL Server 2019 CTP 2.0 has been released! To find out what's new for Linux in the latest release, see [What's new in SQL Server 2019 CTP 2.0 for Linux](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-linux-ver15#sqllinux).
+> [SQL Server 2019 CTP 2.0](sql-server-linux-overview.md?view=sql-server-linux-ver15) has been released! To find out what's new for Linux in the latest release, see [What's new in SQL Server 2019 CTP 2.0 for Linux](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-linux-ver15#sqllinux).
 ::: moniker-end
 
 ::: moniker range="= sqlallproducts-allversions"

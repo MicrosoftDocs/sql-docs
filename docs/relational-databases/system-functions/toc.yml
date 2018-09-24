@@ -128,6 +128,8 @@
     href: sys-fn-virtualfilestats-transact-sql.md
   - name: sys.fn_virtualservernodes
     href: sys-fn-virtualservernodes-transact-sql.md
+  - name: sys.fn_PageResCracker
+    href: sys-fn-pagerescracker-transact-sql.md
 - name: System Security
   href: system-security-functions.md
   items:

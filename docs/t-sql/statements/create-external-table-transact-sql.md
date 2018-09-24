@@ -143,37 +143,8 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
  \<column_definition> [ ,...*n* ] 
  CREATE EXTERNAL TABLE allows one or more column definitions. Both CREATE EXTERNAL TABLE and CREATE TABLE use the same syntax for defining a column. An exception to this, you cannot use the DEFAULT CONSTRAINT on external tables. For the full details about column definitions and their data types, see [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) and [CREATE TABLE on Azure SQL Database](http://msdn.microsoft.com/library/d53c529a-1d5f-417f-9a77-64ccc6eddca1).  
   
- The column definitions, including the data types and number of columns must match the data in the external files. If there is a mismatch, the file rows will be rejected when querying the actual data.  
+ The column definitions, including the data types and number of columns, must match the data in the external files. If there is a mismatch, the file rows will be rejected when querying the actual data. For more information on how to map data types for different external data sources, see [Type mapping with PolyBase](../../relational-databases/polybase/polybase-type-mapping.md).  
   
- For external tables that reference files in external data sources, the column and type definitions must map to the exact schema of the external file. When defining data types that reference data stored in Hadoop/Hive, use the following mappings between SQL and Hive data types and cast the type into a SQL data type when selecting from it. The types include all versions of Hive unless stated otherwise.
-
-> [!NOTE]  
->  SQL Server does not support the Hive _infinity_ data value in any conversion. PolyBase will fail with a data type conversion error.
-
-
-|SQL Data Type|.NET Data Type|Hive Data Type|Hadoop/Java Data Type|Comments|  
-|-------------------|--------------------|--------------------|----------------------------|--------------|  
-|tinyint|Byte|tinyint|ByteWritable|For unsigned numbers only.|  
-|smallint|Int16|smallint|ShortWritable||  
-|int|Int32|int|IntWritable||  
-|bigint|Int64|bigint|LongWritable||  
-|bit|Boolean|boolean|BooleanWritable||  
-|float|Double|double|DoubleWritable||  
-|real|Single|float|FloatWritable||  
-|money|Decimal|double|DoubleWritable||  
-|smallmoney|Decimal|double|DoubleWritable||  
-|nchar|String<br /><br /> Char[]|string|text||  
-|nvarchar|String<br /><br /> Char[]|string|Text||  
-|char|String<br /><br /> Char[]|string|Text||  
-|varchar|String<br /><br /> Char[]|string|Text||  
-|binary|Byte[]|binary|BytesWritable|Applies to Hive 0.8 and later.|  
-|varbinary|Byte[]|binary|BytesWritable|Applies to Hive 0.8 and later.|  
-|date|DateTime|timestamp|TimestampWritable||  
-|smalldatetime|DateTime|timestamp|TimestampWritable||  
-|datetime2|DateTime|timestamp|TimestampWritable||  
-|datetime|DateTime|timestamp|TimestampWritable||  
-|time|TimeSpan|timestamp|TimestampWritable||  
-|decimal|Decimal|decimal|BigDecimalWritable|Applies to Hive0.11 and later.|  
   
  LOCATION =  '*folder_or_filepath*'  
  Specifies the folder or the file path and file name for the actual data in Hadoop or Azure blob storage. The location starts from the root folder; the root folder is the data location specified in the external data source.  

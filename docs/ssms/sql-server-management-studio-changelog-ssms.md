@@ -73,7 +73,6 @@ Support for [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]
 
 - This is the first release of SSMS that is be fully *aware* of [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] (compatLevel 150, etc…).
 - Support "BATCH_STARTED_GROUP" and "BATCH_COMPLETED_GROUP" in [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] and SQL Database Managed Instance in SSMS.
-- SMO support for UDF Inlining.
 - GraphDB: Add flag in showplan for Graph TC Sequence.
 - Always Encrypted: Added support for [Always Encrypted with secure enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md).
   - Connection dialog has a new "Always Encrypted" tab when the user clicks on the "Options" button to enable and configure enclave support.

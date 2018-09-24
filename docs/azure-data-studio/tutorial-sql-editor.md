@@ -1,6 +1,6 @@
 ---
-title: "Tutorial: Use the Azure Data Studio (preview) Transact-SQL editor to create database objects | Microsoft Docs"
-description: This tutorial demonstrates the key features in Azure Data Studio (preview) that simplify using T-SQL.
+title: "Tutorial: Use the Azure Data Studio Transact-SQL editor to create database objects | Microsoft Docs"
+description: This tutorial demonstrates the key features in Azure Data Studio that simplify using T-SQL.
 ms.custom: "tools|sos"
 ms.date: "09/24/2018"
 ms.prod: sql

@@ -1,6 +1,6 @@
 ---
-title: "Quickstart: Connect and query SQL Server using Azure Data Studio (preview) | Microsoft Docs"
-description: This quickstart shows how to use Azure Data Studio (preview) to connect to SQL Server and run a query
+title: "Quickstart: Connect and query SQL Server using Azure Data Studio | Microsoft Docs"
+description: This quickstart shows how to use Azure Data Studio to connect to SQL Server and run a query
 ms.custom: "tools|sos"
 ms.date: "09/24/2018"
 ms.prod: sql

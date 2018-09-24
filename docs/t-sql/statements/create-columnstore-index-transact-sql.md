@@ -109,7 +109,19 @@ CREATE CLUSTERED COLUMNSTORE INDEX index_name
 ```  
   
 ## Arguments  
-CREATE CLUSTERED COLUMNSTORE INDEX  
+
+Some of the options are not available in all database engine versions. The following table shows the versions when the options are introduced in CLUSTERED COLUMNSTORE and NONCLUSTERED COLUMNSTORE indexes:
+
+|Option| CLUSTERED | NONCLUSTERED |
+|---|---|---|
+| COMPRESSION_DELAY | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] |
+| DATA_COMPRESSION | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] | 
+| ONLINE | [!INCLUDE[ssSQLv15_md](../../includes/sssqlv15-md.md)] | [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] |
+| WHERE clause | N/A | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] |
+
+All options are available in Azure SQL Database.
+
+### CREATE CLUSTERED COLUMNSTORE INDEX  
 Create a clustered columnstore index in which all of the data is compressed and stored by column. The index includes all of the columns in the table, and stores the entire table. If the existing table is a heap or clustered index, the table is converted to a clustered columnstore index. If the table is already stored as a clustered columnstore index, the existing index is dropped and rebuilt.  
   
 *index_name*  
@@ -120,13 +132,16 @@ If the table already has a clustered columnstore index, you can specify the same
 ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*  
    Specifies the one-, two-, or three-part name of the table to be stored as a clustered columnstore index. If the table is a heap or clustered index the table is converted from rowstore to a columnstore. If the table is already a columnstore, this statement rebuilds the clustered columnstore index.  
   
-WITH  
-DROP_EXISTING = [OFF] | ON  
-   DROP_EXISTING = ON specifies to drop the existing clustered columnstore index, and create a new columnstore index.  
-
+#### WITH options  
+##### DROP_EXISTING = [OFF] | ON  
+   `DROP_EXISTING = ON` specifies to drop the existing index, and create a new columnstore index.  
+```sql
+CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
+       WITH (DROP_EXISTING = ON);
+```
    The default, DROP_EXISTING = OFF expects the index name is the same as the existing name. An error occurs is the specified index name already exists.  
   
-MAXDOP = *max_degree_of_parallelism*  
+##### MAXDOP = *max_degree_of_parallelism*  
    Overrides the existing maximum degree of parallelism server configuration for the duration of the index operation. Use MAXDOP to limit the number of processors used in a parallel plan execution. The maximum is 64 processors.  
   
    *max_degree_of_parallelism* values can be:  
@@ -134,27 +149,44 @@ MAXDOP = *max_degree_of_parallelism*
    - \>1 - Restrict the maximum number of processors used in a parallel index operation to the specified number or fewer based on the current system workload. For example, when MAXDOP = 4, the number of processors used is 4 or less.  
    - 0 (default) - Use the actual number of processors or fewer based on the current system workload.  
   
+```sql
+CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
+       WITH (MAXDOP = 2);
+```
    For more information, see [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md), and [Configure Parallel Index Operations](../../relational-databases/indexes/configure-parallel-index-operations.md).  
  
-COMPRESSION_DELAY = **0** | *delay* [ Minutes ]  
-   Applies to: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
-
-   For a disk-based table, *delay* specifies the minimum number of minutes a  delta rowgroup in the CLOSED state must remain in the delta rowgroup before SQL Server can compress it into the compressed rowgroup. Since disk-based tables don't track insert and update times on individual rows, SQL Server applies the delay to  delta rowgroups in the CLOSED state.  
+###### COMPRESSION_DELAY = **0** | *delay* [ Minutes ]  
+   For a disk-based table, *delay* specifies the minimum number of minutes a  delta rowgroup in the CLOSED state must remain in the delta rowgroup before SQL Server can compress it into the compressed rowgroup. Since disk-based tables don't track insert and update times on individual rows, SQL Server applies the delay to delta rowgroups in the CLOSED state.  
    The default is 0 minutes.  
+   
+```sql
+CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
+       WITH ( COMPRESSION_DELAY = 10 Minutes );
+```
+
    For recommendations on when to use COMPRESSION_DELAY, see [Get started with Columnstore for real time operational analytics](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md).  
   
-DATA_COMPRESSION = COLUMNSTORE | COLUMNSTORE_ARCHIVE  
-   Applies to: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+##### DATA_COMPRESSION = COLUMNSTORE | COLUMNSTORE_ARCHIVE  
    Specifies the data compression option for the specified table, partition number, or range of partitions. The options are as follows:   
-COLUMNSTORE  
-   COLUMNSTORE is the default and specifies to compress with the most performant columnstore compression. This is the typical choice.  
+- `COLUMNSTORE` is the default and specifies to compress with the most performant columnstore compression. This is the typical choice.  
+- `COLUMNSTORE_ARCHIVE` further compresses the table or partition to a smaller size. Use this option for situations such as archival that require a smaller storage size and can afford more time for storage and retrieval.  
   
-COLUMNSTORE_ARCHIVE  
-   COLUMNSTORE_ARCHIVE further compresses the table or partition to a smaller size. Use this option for situations such as archival that require a smaller storage size and can afford more time for storage and retrieval.  
-  
+```sql
+CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
+       WITH ( DATA_COMPRESSION = COLUMNSTORE_ARCHIVE );
+```
    For more information about compression, see [Data Compression](../../relational-databases/data-compression/data-compression.md).  
 
-ON  
+###### ONLINE = [ON | OFF]
+- `ON` specifies that the columnstore index remains online and available while the new copy of the index is being built.
+- `OFF` specifies that the index is not available for use while the new copy is being built.
+
+```sql
+CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
+       WITH ( ONLINE = ON );
+```
+
+#### ON options 
    With the ON options you can specify options for data storage, such as a partition scheme, a specific filegroup, or the default filegroup. If the ON option is not specified, the index uses the settings partition or filegroup settings of the existing table.  
   
    *partition_scheme_name* **(** *column_name* **)**  
@@ -170,7 +202,7 @@ ON
   
    If "default" is specified, the QUOTED_IDENTIFIER option must be ON for the current session. QUOTED_IDENTIFIER is ON by default. For more information, see [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
-CREATE [NONCLUSTERED] COLUMNSTORE INDEX  
+### CREATE [NONCLUSTERED] COLUMNSTORE INDEX  
 Create an in-memory nonclustered columnstore index on a rowstore table stored as a heap or clustered index. The index can have a filtered condition and does not need to include all of the columns of the underlying table. The columnstore index requires enough space to store a copy of the data. It is updateable and is updated as the underlying table is changed. The nonclustered columnstore index on a clustered index enables real-time analytics.  
   
 *index_name*  
@@ -183,13 +215,13 @@ Create an in-memory nonclustered columnstore index on a rowstore table stored as
 ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*  
    Specifies the one-, two-, or three-part name of the table that contains the index.  
 
-WITH
-DROP_EXISTING = [OFF] | ON  
+#### WITH options
+##### DROP_EXISTING = [OFF] | ON  
    DROP_EXISTING = ON The existing index is dropped and rebuilt. The index name specified must be the same as a currently existing index; however, the index definition can be modified. For example, you can specify different columns, or index options.
   
    DROP_EXISTING = OFF An error is displayed if the specified index name already exists. The index type cannot be changed by using DROP_EXISTING. In backward compatible syntax, WITH DROP_EXISTING is equivalent to WITH DROP_EXISTING = ON.  
 
-MAXDOP = *max_degree_of_parallelism*  
+###### MAXDOP = *max_degree_of_parallelism*  
    Overrides the [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) configuration option for the duration of the index operation. Use MAXDOP to limit the number of processors used in a parallel plan execution. The maximum is 64 processors.  
   
    *max_degree_of_parallelism* values can be:  
@@ -202,31 +234,26 @@ MAXDOP = *max_degree_of_parallelism*
 > [!NOTE]  
 >  Parallel index operations are not available in every edition of [!INCLUDE[msC](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
-ONLINE = [ON | OFF]   
-   Applies to: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], in nonclustered columnstore indexes only.
-   ON specifies that the nonclustered columnstore index remains online and available while the new copy of the index is being built.
+###### ONLINE = [ON | OFF]   
+- `ON` specifies that the columnstore index remains online and available while the new copy of the index is being built.
+- `OFF` specifies that the index is not available for use while the new copy is being built. In nonclustered index, the base table remains available, only the nonclustered columnstore index is not used to satisfy queries until the new index is complete. 
 
-   OFF specifies that the index is not available for use while the new copy is being built. As this is a nonclustered index only, the base table remains available, only the nonclustered columnstore index is not used to satisfy queries until the new index is complete. 
+```sql
+CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPrice, TaxRate) WITH ( ONLINE = ON );
+```
 
-COMPRESSION_DELAY = **0** | \<delay>[Minutes]  
-   Applies to: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
-  
+##### COMPRESSION_DELAY = **0** | \<delay>[Minutes]  
    Specifies a lower bound on how long a row should stay in delta rowgroup before it is eligible for migration to compressed rowgroup. For example, a customer can say that if a row is unchanged for  120 minutes, make it  eligible for compressing into columnar storage format. For columnstore index on disk-based tables, we don’t track the time when a row was inserted or updated,  we use the delta rowgroup closed time as a proxy for the row instead. The default duration is 0 minutes. A row is migrated to columnar storage once 1 million rows have been accumulated in delta rowgroup and it has been marked closed.  
   
-DATA_COMPRESSION  
-   Specifies the data compression option for the specified table, partition number, or range of partitions. The options are as follows:  
-COLUMNSTORE  
-   Applies to: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
-   Applies only to columnstore indexes, including both nonclustered columnstore and clustered columnstore indexes. COLUMNSTORE is the default and specifies to compress with the most performant columnstore compression. This is the typical choice.  
-  
-COLUMNSTORE_ARCHIVE  
-   Applies to: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
-   Applies only to columnstore indexes, including both nonclustered columnstore and clustered columnstore indexes. COLUMNSTORE_ARCHIVE further compresses the table or partition to a smaller size. This can be used for archival, or for other situations that require a smaller storage size and can afford more time for storage and retrieval.  
+###### DATA_COMPRESSION  
+   Specifies the data compression option for the specified table, partition number, or range of partitions. Applies only to columnstore indexes, including both nonclustered columnstore and clustered columnstore indexes. The options are as follows:
+   
+- `COLUMNSTORE` - the default and specifies to compress with the most performant columnstore compression. This is the typical choice.  
+- `COLUMNSTORE_ARCHIVE` -  COLUMNSTORE_ARCHIVE further compresses the table or partition to a smaller size. This can be used for archival, or for other situations that require a smaller storage size and can afford more time for storage and retrieval.  
   
  For more information about compression, see [Data Compression](../../relational-databases/data-compression/data-compression.md).  
   
-WHERE \<filter_expression> [ AND \<filter_expression> ]
-   Applies to: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+##### WHERE \<filter_expression> [ AND \<filter_expression> ]
   
    Called a filter predicate, this specifies which rows to include in the index. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] creates filtered statistics on the data rows in the filtered index.  
   
@@ -239,7 +266,7 @@ WHERE \<filter_expression> [ AND \<filter_expression> ]
    
    For guidance on filtered indexes, see [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md).  
   
-ON  
+#### ON options  
    These options specify the filegroups on which the index is created.  
   
 *partition_scheme_name* **(** *column_name* **)**  

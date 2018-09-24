@@ -1,4 +1,4 @@
-- name: Azure Data Studio (preview)
+- name: Azure Data Studio
   href: what-is.md
 - name: Install
   href: download.md
@@ -28,19 +28,14 @@
   items:
   - name: Dashboards & insight widgets
     href: insight-widgets.md
-  - name: Extensions
-    href: extensions.md
-    items:
-    - name: SQL Server Agent
-      href: sql-server-agent-extension.md
-    - name: SQL Server Profiler
-      href: sql-server-profiler-extension.md
   - name: Code snippets
     href: code-snippets.md
   - name: Integrated terminal (PowerShell, Bash)
     href: integrated-terminal.md
   - name: Keyboard shortcuts
     href: keyboard-shortcuts.md
+  - name: Explorer Azure SQL resources
+    href: azure-resource-explorer.md
   - name: Server groups
     href: server-groups.md
   - name: Source control
@@ -51,19 +46,37 @@
     href: enable-kerberos.md
   - name: Usage data collection
     href: usage-data-collection.md
-- name: Extension authoring
+- name: Extensions
   items:
+  - name: Overview
+    href: extensions.md
+  - name: SQL Server 2019 (preview)
+    href: sql-server-2019-extension.md
+  - name: SQL Server Agent (preview)
+    href: sql-server-agent-extension.md
+  - name: SQL Server Import (preview)
+    href: sql-server-import-extension.md
+  - name: SQL Server Profiler (preview)
+    href: sql-server-profiler-extension.md
+- name: Extension Authoring
+  items:
+  - name: Extensibility overview
+    href: extensibility.md
+  - name: Extension authoring
+    href: extension-authoring.md
   - name: Create an extension  
     href: tutorial-create-extension.md
+  - name: Extensibility APIs
+    href: extensibility-apis.md
 - name: Resources
   items:
   - name: Transact-SQL Reference
     href: ../t-sql/language-reference.md
-  - name: SQL Operations Studio (preview) GitHub repo
-    href: https://www.github.com/Microsoft/SqlOpsStudio
+  - name: Azure Data Studio GitHub repo
+    href: https://www.github.com/Microsoft/azuredatastudio
   - name: SQL Server Blog
     href: https://blogs.technet.microsoft.com/dataplatforminsider/
 - name: FAQ
   href: faq.md
 - name: Report issues & make suggestions
-  href: https://github.com/microsoft/sqlopsstudio/issues
+  href: https://github.com/microsoft/azuredatastudio/issues

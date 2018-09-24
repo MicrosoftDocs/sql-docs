@@ -1,6 +1,6 @@
 ---
-title: "Tutorial: Build a custom insight widget in Azure Data Studio (preview) | Microsoft Docs"
-description: This tutorial demonstrates how to build custom insight widgets and add them to database and server dashboards in Azure Data Studio (preview).
+title: "Tutorial: Build a custom insight widget in Azure Data Studio | Microsoft Docs"
+description: This tutorial demonstrates how to build custom insight widgets and add them to database and server dashboards in Azure Data Studio.
 ms.custom: "tools|sos"
 ms.date: "09/24/2018"
 ms.prod: sql

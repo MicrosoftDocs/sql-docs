@@ -21,9 +21,9 @@ The following table summarizes the scoring frameworks for forecasting and predic
 
 | Methodology           | Interface         | Library requirements | Processing speeds |
 |-----------------------|-------------------|----------------------|----------------------|
-| Extensibility framework | R: [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) <br/>Python: [rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) | None. Models can be based on any R or Python function | Hundreds of milliseconds. <br/>Loading a runtime environment has a fixed cost, averaging three to six hundred milliseconds, before any new data is scored. |
-| Real-time scoring CLR extension | [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) on a serialized model | R: RevoScaleR, MicrosoftML <br/>Python: revoscalepy, microsoftml | Tens of milliseconds, on average. |
-| Native scoring C++ extension| [PREDICT T-SQL function](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) on a serialized model | R: RevoScaleR <br/>Python: revoscalepy | Less than 20 milliseconds, on average. | 
+| Extensibility framework | [rxPredict (R)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) <br/>[rx_predict (Python)](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) | None. Models can be based on any R or Python function | Hundreds of milliseconds. <br/>Loading a runtime environment has a fixed cost, averaging three to six hundred milliseconds, before any new data is scored. |
+| [Real-time scoring CLR extension](../real-time-scoring.md) | [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) on a serialized model | R: RevoScaleR, MicrosoftML <br/>Python: revoscalepy, microsoftml | Tens of milliseconds, on average. |
+| [Native scoring C++ extension](../sql-native-scoring.md) | [PREDICT T-SQL function](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) on a serialized model | R: RevoScaleR <br/>Python: revoscalepy | Less than 20 milliseconds, on average. | 
 
 Speed of processing and not substance of the output is the differentiating feature. Assuming the same functions and inputs, the scored output should not vary based on the approach you use.
 
@@ -39,12 +39,13 @@ _Scoring_ is a two-step process. First, you specify an already trained model to 
 
 Taking a step back, the overall process of preparing the model and then generating scores can be summarized this way:
 
-1. Create a model using a supported algorithm.
-2. Serialize the model using a special binary format.
-3. Make the model available to SQL Server. Typically this means storing the serialized model in a SQL Server table.
-4. Call the function or stored procedure, specifying the model and input data as parameters.
+1. Create a model using a supported algorithm. Support varies by the scoring methodology you choose.
+2. Train the model.
+3. Serialize the model using a special binary format.
+3. Save the model to SQL Server. Typically this means storing the serialized model in a SQL Server table.
+4. Call the function or stored procedure, specifying the model and data inputs as parameters.
 
-When the input includes many rows of data, it is usually faster to insert the prediction values into a table as part of the scoring process.  Generating a single score is more typical in a scenario where you get input values from a form or user request, and return the score to a client application. To improve performance when generating successive scores, SQL Server might cache the model so that it can be reloaded into memory.
+When the input includes many rows of data, it is usually faster to insert the prediction values into a table as part of the scoring process. Generating a single score is more typical in a scenario where you get input values from a form or user request, and return the score to a client application. To improve performance when generating successive scores, SQL Server might cache the model so that it can be reloaded into memory.
 
 ## Compare methods
 

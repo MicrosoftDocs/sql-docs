@@ -1,8 +1,8 @@
 ---
-title: Microsoft SQL Operations Studio (preview) release notes| Microsoft Docs
-description: 'Microsoft SQL Operations Studio (preview) release notes'
+title: Azure Data Studio release notes| Microsoft Docs
+description: 'Azure Data Studio release notes'
 ms.custom: "tools|sos"
-ms.date: "08/30/2018"
+ms.date: "09/24/2018"
 ms.prod: sql
 ms.reviewer: "alayu; sstein"
 ms.suite: "sql"
@@ -14,9 +14,41 @@ author: "stevestein"
 ms.author: "sstein"
 manager: craigg
 ---
-# SQL Operations Studio (preview) release notes
+# Azure Data Studio release notes
 
-**[Download the August Public Preview](download.md)**
+**[Download the September *General Availability* (GA) Release!](download.md)**
+
+## September 2018 (September GA Release)
+
+release date: September 24, 2018  
+version: 1.0
+
+General Availability release of Azure Data Studio (formerly SQL Operations Studio).
+
+- Announcing the SQL Server 2019 Preview extension.
+  - Support for SQL Server 2019 preview features including [big data cluster](../big-data-cluster/big-data-cluster-overview.md) support.
+    - Connect to the HDFS/Spark Gateway shipped with SQL Server 2019 preview.
+    - Browse HDFS, upload files, save files, and launch useful actions such as Analyze in Notebook for CSV files.
+    - Submit Spark jobs from the dashboard or right-click on a HDFS/Spark connection in Object Explorer.
+  - Azure Data Studio Notebooks
+    - Create or open Notebooks using an integrated Notebook viewer. In this release the Notebook viewer supports connecting to local kernels and the SQL Server 2019 big data cluster only.
+    - Use the PROSE Code Accelerator libraries in your Notebook to learn file format and data types for fast data preparation.
+  - Azure Resource Explorer
+    - The Azure Resource Explorer view lets you browse data-related endpoints for your Azure accounts and create connections to them in Object Explorer. In this release Azure SQL Databases and servers are supported.
+  - SQL Server Polybase Create External Table Wizard
+    - Create an external table and its supporting metadata structures with an easy to use wizard. In this release, remote SQL Server and Oracle servers are supported.
+- Query Results Grid performance and UX improvements for large number of result sets.
+- Visual Studio Code source code refresh from 1.23 to 1.26.1 with Grid Layout and Improved Settings Editor (preview).
+- Accessibility improvements for screen reader, keyboard navigation and high-contrast.
+- Added `Connection name` option to provide an alternative display name in the Servers view-let.
+
+### Bug Fixes
+
+- Fix [issue #2647](https://github.com/Microsoft/azuredatastudio/issues/143): The charts took a big step backwards.
+- Fix [issue #2648](https://github.com/Microsoft/azuredatastudio/issues/143): SELECT that returns a JSON hyperlinks the whole column.
+- ...
+
+For detailed information, see the [Change Log](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md), and [Releases](https://github.com/Microsoft/azuredatastudio/releases).
 
 
 ## August 2018 (August Public Preview)
@@ -24,7 +56,7 @@ manager: craigg
 release date: August 30, 2018  
 version: 0.32.8
 
-*0.32.8 contains fixes for a couple regressions found in 0.32.7 ([#1971](https://github.com/Microsoft/sqlopsstudio/issues/1971), [#2372](https://github.com/Microsoft/sqlopsstudio/issues/2372)*)
+*0.32.8 contains fixes for a couple regressions found in 0.32.7 ([#1971](https://github.com/Microsoft/azuredatastudio/issues/1971), [#2372](https://github.com/Microsoft/azuredatastudio/issues/2372)*)
 
 The *August Public Preview* focuses on on bug fixes, product stabilization, and filling gaps in existing scenarios.  
 
@@ -38,39 +70,37 @@ The *August Public Preview* focuses on on bug fixes, product stabilization, and 
 ### Bug Fixes
 
 - Parse SQL in a Query Editor window by using the `Parse Syntax` command.
-- Fix [issue #143](https://github.com/Microsoft/sqlopsstudio/issues/143): Double-click not selecting @ in variable name.
-- Fix [issue #387](https://github.com/Microsoft/sqlopsstudio/issues/387): SQL Tab DB Icon is red.
-- Fix [issue #825](https://github.com/Microsoft/sqlopsstudio/issues/825): Request: Auto Connect to current server after Script as... 
-- Fix [issue #1278](https://github.com/Microsoft/sqlopsstudio/issues/1278): sqlops.desktop [Desktop Entry] - redundant value for Name & Comment.
-- Fix [issue #1285](https://github.com/Microsoft/sqlopsstudio/issues/1285): Updating causes application icon to be removed/replaced in Windows.
-- Fix [issue #1317](https://github.com/Microsoft/sqlopsstudio/issues/1317): Fix the decimal separator.
-- Fix [issue #1474](https://github.com/Microsoft/sqlopsstudio/issues/1474): Cancel change connection disconnects current connection.
-- Fix [issue #1497](https://github.com/Microsoft/sqlopsstudio/issues/1497): View as Chart options are cut off at the bottom.
-- Fix [issue #1524](https://github.com/Microsoft/sqlopsstudio/issues/1524): Shell/Dashboard: Main viewlet icons are draggable and can crash the app.
-- Fix [issue #1578](https://github.com/Microsoft/sqlopsstudio/issues/1578): Not able to expand/collapse remote file browser folder by clicking name.
-- Fix [issue #1620](https://github.com/Microsoft/sqlopsstudio/issues/1620): Feature Suggestion: Get Connection String for existing connection.
-- Fix [issue #1624](https://github.com/Microsoft/sqlopsstudio/issues/1624): SelectBox doesn't change color when disabled.
-- Fix [issue #1728](https://github.com/Microsoft/sqlopsstudio/issues/1728): Save as JSON/EXCEL/CSV not work.
-- Fix [issue #1744](https://github.com/Microsoft/sqlopsstudio/issues/1744): Results pane loses its scrolling positions when switching between tabs.
-- Fix [issue #1748](https://github.com/Microsoft/sqlopsstudio/issues/1748): Error message when saving Excel file second (and subsequent) time.
-- Fix [issue #1782](https://github.com/Microsoft/sqlopsstudio/issues/1782): Edit data: cell doesn't revert to original value on hitting Escape key.
-- Fix [issue #1836](https://github.com/Microsoft/sqlopsstudio/issues/1836): .sql files not associated with SQL Operations Studio.
-- Fix [issue #1850](https://github.com/Microsoft/sqlopsstudio/issues/1850): Typing N'' autocompletes to N'''.
-- Fix [issue #1985](https://github.com/Microsoft/sqlopsstudio/issues/1985): Copy from query results grid is off by 1 column.
-- Fix [issue #1998](htpts://github.com/Microsoft/sqlopsstudio/pull/1998): Add VS Code version to About dialog.
-- Fix [issue #2042](https://github.com/Microsoft/sqlopsstudio/pull/2042): Agent: Enabled button to import queries from sql files.
-- Fix [issue #2091](https://github.com/Microsoft/sqlopsstudio/issues/2091): Can't use Ctrl+C shortcut to copy from result pane.
-- Fix [issue #2099](https://github.com/Microsoft/sqlopsstudio/pull/2099): Added more saveAsCsv options.
-- Fix [issue #2107](https://github.com/Microsoft/sqlopsstudio/issues/2107): Update document icon for Dashboard and Profiler documents.
-- Fix [issue #2129](https://github.com/Microsoft/sqlopsstudio/pull/2129): Save edit data scroll position when switching tabs.
-- Fix [issue #2152](https://github.com/Microsoft/sqlopsstudio/issues/2152): Results Grid Row Indicator Zero Based.
+- Fix [issue #143](https://github.com/Microsoft/azuredatastudio/issues/143): Double-click not selecting @ in variable name.
+- Fix [issue #387](https://github.com/Microsoft/azuredatastudio/issues/387): SQL Tab DB Icon is red.
+- Fix [issue #825](https://github.com/Microsoft/azuredatastudio/issues/825): Request: Auto Connect to current server after Script as... 
+- Fix [issue #1278](https://github.com/Microsoft/azuredatastudio/issues/1278): sqlops.desktop [Desktop Entry] - redundant value for Name & Comment.
+- Fix [issue #1285](https://github.com/Microsoft/azuredatastudio/issues/1285): Updating causes application icon to be removed/replaced in Windows.
+- Fix [issue #1317](https://github.com/Microsoft/azuredatastudio/issues/1317): Fix the decimal separator.
+- Fix [issue #1474](https://github.com/Microsoft/azuredatastudio/issues/1474): Cancel change connection disconnects current connection.
+- Fix [issue #1497](https://github.com/Microsoft/azuredatastudio/issues/1497): View as Chart options are cut off at the bottom.
+- Fix [issue #1524](https://github.com/Microsoft/azuredatastudio/issues/1524): Shell/Dashboard: Main viewlet icons are draggable and can crash the app.
+- Fix [issue #1578](https://github.com/Microsoft/azuredatastudio/issues/1578): Not able to expand/collapse remote file browser folder by clicking name.
+- Fix [issue #1620](https://github.com/Microsoft/azuredatastudio/issues/1620): Feature Suggestion: Get Connection String for existing connection.
+- Fix [issue #1624](https://github.com/Microsoft/azuredatastudio/issues/1624): SelectBox doesn't change color when disabled.
+- Fix [issue #1728](https://github.com/Microsoft/azuredatastudio/issues/1728): Save as JSON/EXCEL/CSV not work.
+- Fix [issue #1744](https://github.com/Microsoft/azuredatastudio/issues/1744): Results pane loses its scrolling positions when switching between tabs.
+- Fix [issue #1748](https://github.com/Microsoft/azuredatastudio/issues/1748): Error message when saving Excel file second (and subsequent) time.
+- Fix [issue #1782](https://github.com/Microsoft/azuredatastudio/issues/1782): Edit data: cell doesn't revert to original value on hitting Escape key.
+- Fix [issue #1836](https://github.com/Microsoft/azuredatastudio/issues/1836): .sql files not associated with SQL Operations Studio.
+- Fix [issue #1850](https://github.com/Microsoft/azuredatastudio/issues/1850): Typing N'' autocompletes to N'''.
+- Fix [issue #1985](https://github.com/Microsoft/azuredatastudio/issues/1985): Copy from query results grid is off by 1 column.
+- Fix [issue #1998](htpts://github.com/Microsoft/azuredatastudio/pull/1998): Add VS Code version to About dialog.
+- Fix [issue #2042](https://github.com/Microsoft/azuredatastudio/pull/2042): Agent: Enabled button to import queries from sql files.
+- Fix [issue #2091](https://github.com/Microsoft/azuredatastudio/issues/2091): Can't use Ctrl+C shortcut to copy from result pane.
+- Fix [issue #2099](https://github.com/Microsoft/azuredatastudio/pull/2099): Added more saveAsCsv options.
+- Fix [issue #2107](https://github.com/Microsoft/azuredatastudio/issues/2107): Update document icon for Dashboard and Profiler documents.
+- Fix [issue #2129](https://github.com/Microsoft/azuredatastudio/pull/2129): Save edit data scroll position when switching tabs.
+- Fix [issue #2152](https://github.com/Microsoft/azuredatastudio/issues/2152): Results Grid Row Indicator Zero Based.
 
 ## Known Issues
 
-- [Issue #2371](https://github.com/Microsoft/sqlopsstudio/issues/2371) Save As Excel Only Saves First Row of Data
-- [Issue #2150](https://github.com/Microsoft/sqlopsstudio/issues/2150): Unable to connect on Ubuntu 16.04 to SQL in a container
-
-For more information, see the [Change Log](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md), and [Releases](https://github.com/Microsoft/sqlopsstudio/releases).
+- [Issue #2371](https://github.com/Microsoft/azuredatastudio/issues/2371) Save As Excel Only Saves First Row of Data
+- [Issue #2150](https://github.com/Microsoft/azuredatastudio/issues/2150): Unable to connect on Ubuntu 16.04 to SQL in a container
 
 
 ## July 2018 (July Public Preview)
@@ -95,21 +125,21 @@ The *July Public Preview* focuses on the initial release of the SQL Server Agent
 - Release of Combine Scripts Extension
 - Wizard and Dialog Extensibility points added for Extension Authors
 - Fix GitHub Issues:
- - Fix [issue 728](https://github.com/Microsoft/sqlopsstudio/issues/728): No response to Add Connection on macOS
- - Fix [issue 1612](https://github.com/Microsoft/sqlopsstudio/issues/1612): Results grid text display is messed up by international characters
- - Fix [issue 1693](https://github.com/Microsoft/sqlopsstudio/issues/1693): Backup dialog: File browser UI is broken
- - Fix [issue 1713](https://github.com/Microsoft/sqlopsstudio/issues/1713): Number of rows affected
- - Fix [issue 1718](https://github.com/Microsoft/sqlopsstudio/issues/1718): Unable to connect to any datasource
- - Fix [issue 1719](https://github.com/Microsoft/sqlopsstudio/issues/1719): TypeError when Connecting to Server
- - Fix [issue 1724](https://github.com/Microsoft/sqlopsstudio/issues/1724): Extension dialogs have stopped working
- - Fix [issue 1749](https://github.com/Microsoft/sqlopsstudio/issues/1749): BUG: HTML data in a column gets interpreted
- - Fix [issue 1789](https://github.com/Microsoft/sqlopsstudio/issues/1789): Extensibility: if you add a connection provider uninstall will never remove it from the list
- - Fix [issue 1791](https://github.com/Microsoft/sqlopsstudio/issues/1791): Sqlops Extensions: queryeditor.connect() connects to the target database, but UI does not show the editor is connected
- - Fix [issue 1799](https://github.com/Microsoft/sqlopsstudio/issues/1799): Top 10 DB Size chart does not work on case sensitive instances
- - Fix [issue 1814](https://github.com/Microsoft/sqlopsstudio/issues/1814): sqlops.d.ts typo causing implicit 'any' type definition
- - Fix [issue 1817](https://github.com/Microsoft/sqlopsstudio/issues/1817): Error de Ortografia
- - Fix [issue 1830](https://github.com/Microsoft/sqlopsstudio/issues/1830): Setting iconPath in ButtonComponent after component() is called does not change icon
- - Fix [issue 1843](https://github.com/Microsoft/sqlopsstudio/issues/1843): Better Table organization
+ - Fix [issue 728](https://github.com/Microsoft/azuredatastudio/issues/728): No response to Add Connection on macOS
+ - Fix [issue 1612](https://github.com/Microsoft/azuredatastudio/issues/1612): Results grid text display is messed up by international characters
+ - Fix [issue 1693](https://github.com/Microsoft/azuredatastudio/issues/1693): Backup dialog: File browser UI is broken
+ - Fix [issue 1713](https://github.com/Microsoft/azuredatastudio/issues/1713): Number of rows affected
+ - Fix [issue 1718](https://github.com/Microsoft/azuredatastudio/issues/1718): Unable to connect to any datasource
+ - Fix [issue 1719](https://github.com/Microsoft/azuredatastudio/issues/1719): TypeError when Connecting to Server
+ - Fix [issue 1724](https://github.com/Microsoft/azuredatastudio/issues/1724): Extension dialogs have stopped working
+ - Fix [issue 1749](https://github.com/Microsoft/azuredatastudio/issues/1749): BUG: HTML data in a column gets interpreted
+ - Fix [issue 1789](https://github.com/Microsoft/azuredatastudio/issues/1789): Extensibility: if you add a connection provider uninstall will never remove it from the list
+ - Fix [issue 1791](https://github.com/Microsoft/azuredatastudio/issues/1791): Sqlops Extensions: queryeditor.connect() connects to the target database, but UI does not show the editor is connected
+ - Fix [issue 1799](https://github.com/Microsoft/azuredatastudio/issues/1799): Top 10 DB Size chart does not work on case sensitive instances
+ - Fix [issue 1814](https://github.com/Microsoft/azuredatastudio/issues/1814): sqlops.d.ts typo causing implicit 'any' type definition
+ - Fix [issue 1817](https://github.com/Microsoft/azuredatastudio/issues/1817): Error de Ortografia
+ - Fix [issue 1830](https://github.com/Microsoft/azuredatastudio/issues/1830): Setting iconPath in ButtonComponent after component() is called does not change icon
+ - Fix [issue 1843](https://github.com/Microsoft/azuredatastudio/issues/1843): Better Table organization
 
 
 ## June 2018 (June Public Preview)
@@ -126,14 +156,14 @@ The *June Public Preview* contains the following highlights:
 - Improved **Wizard & Dialog UI Builder Framework** extensibility APIs.
 - Update VS Code Platform source code integrating [March 2018 (1.22)](https://code.visualstudio.com/updates/v1_22) and [April 2018 (1.23)](https://code.visualstudio.com/updates/v1_23) releases.
 - Fix GitHub Issues:
-  - Feature request ([issue 1204](https://github.com/Microsoft/sqlopsstudio/issues/1204)): Please make the results grid auto-fit column width to data, and/or   remember manual changes if the same query is re-run.
-  - Fix [issue 1398](https://github.com/Microsoft/sqlopsstudio/issues/1398): Should show add message and add account account button when linked account is empty.
-  - Fix [issue 1399](https://github.com/Microsoft/sqlopsstudio/issues/1399): Linked account tab is broken when the view is collapsed.
-  - Fix [issue 1374](https://github.com/Microsoft/sqlopsstudio/issues/1374): SQL Tools Service crashes when opening .sql file from disk.
-  - Fix [issue 1372](https://github.com/Microsoft/sqlopsstudio/issues/1372): Missing SQL keyword "BETWEEN".
-  - Fix [issue 1395](https://github.com/Microsoft/sqlopsstudio/issues/1395): 'MATCH' keyword crashes SQL Tools Service.
-  - Fix [issue 1496](https://github.com/Microsoft/sqlopsstudio/issues/1496): "New Profiler" context menu option in Object Explorer does nothing.
-  - Fix [issue 1495](https://github.com/Microsoft/sqlopsstudio/issues/1495): Query editor "Explain" query plan is broken.
+  - Feature request ([issue 1204](https://github.com/Microsoft/azuredatastudio/issues/1204)): Please make the results grid auto-fit column width to data, and/or   remember manual changes if the same query is re-run.
+  - Fix [issue 1398](https://github.com/Microsoft/azuredatastudio/issues/1398): Should show add message and add account account button when linked account is empty.
+  - Fix [issue 1399](https://github.com/Microsoft/azuredatastudio/issues/1399): Linked account tab is broken when the view is collapsed.
+  - Fix [issue 1374](https://github.com/Microsoft/azuredatastudio/issues/1374): SQL Tools Service crashes when opening .sql file from disk.
+  - Fix [issue 1372](https://github.com/Microsoft/azuredatastudio/issues/1372): Missing SQL keyword "BETWEEN".
+  - Fix [issue 1395](https://github.com/Microsoft/azuredatastudio/issues/1395): 'MATCH' keyword crashes SQL Tools Service.
+  - Fix [issue 1496](https://github.com/Microsoft/azuredatastudio/issues/1496): "New Profiler" context menu option in Object Explorer does nothing.
+  - Fix [issue 1495](https://github.com/Microsoft/azuredatastudio/issues/1495): Query editor "Explain" query plan is broken.
 
 
 ## May 2018 (May Public Preview)
@@ -151,12 +181,12 @@ The *May Public Preview* is focused on stabilization and bug fixes. This build c
 - Updates for whoisactive and Server Reports extensions.
 - Improve Manage Dashboard Properties scrolling.
 - Fix GitHub Issues:
-   - Fix [issue 703](https://github.com/Microsoft/sqlopsstudio/issues/703): Entering HTML-like text in edit data causes value to display incorrectly until refresh
-   - Fix [issue 821](https://github.com/Microsoft/sqlopsstudio/issues/821): sqlopsstudio.deb package dependency
-   - Fix [issue 1260](https://github.com/Microsoft/sqlopsstudio/issues/1260): Keyword 'distinct' not highlighted
-   - Fix [issue 1332](https://github.com/Microsoft/sqlopsstudio/issues/1332): Edit data revert row doesn't work
-   - Fix [issue 1215](https://github.com/Microsoft/sqlopsstudio/issues/1215): SQL Agent extension and the status bar
-   - Fix [issue 1316](https://github.com/Microsoft/sqlopsstudio/issues/1316): SQL Agent Don´t resize after change windows size
+   - Fix [issue 703](https://github.com/Microsoft/azuredatastudio/issues/703): Entering HTML-like text in edit data causes value to display incorrectly until refresh
+   - Fix [issue 821](https://github.com/Microsoft/azuredatastudio/issues/821): azuredatastudio.deb package dependency
+   - Fix [issue 1260](https://github.com/Microsoft/azuredatastudio/issues/1260): Keyword 'distinct' not highlighted
+   - Fix [issue 1332](https://github.com/Microsoft/azuredatastudio/issues/1332): Edit data revert row doesn't work
+   - Fix [issue 1215](https://github.com/Microsoft/azuredatastudio/issues/1215): SQL Agent extension and the status bar
+   - Fix [issue 1316](https://github.com/Microsoft/azuredatastudio/issues/1316): SQL Agent Don´t resize after change windows size
 
 
 
@@ -173,22 +203,22 @@ The *April Public Preview* contains bug fixes and improvements.
 - Integrated Terminal splitting to work with multiple open terminals at once.
 - Reduced installation on-disk file count foot print for faster installs and startup times.
 - Continue to fix GitHub issues:
-   - Fix [issue 37](https://github.com/Microsoft/sqlopsstudio/issues/37): When the chart viewer throws an error, unexpected behavior occurs.
-   - Fix [issue 462](https://github.com/Microsoft/sqlopsstudio/issues/462): Feature Request: Option for Server Groups to be expanded by default.
-   - Fix [issue 606](https://github.com/Microsoft/sqlopsstudio/issues/606): intellisense - Bad suggestion for 'update' command.
-   - Fix [issue 967](https://github.com/Microsoft/sqlopsstudio/issues/967): Expect query plan when select XML showplan in the result grid.
-   - Fix [issue 1023](https://github.com/Microsoft/sqlopsstudio/issues/1023): Add square brackets for ms_foreachdb call from flyfishingdba.
-   - Fix [issue 1048](https://github.com/Microsoft/sqlopsstudio/issues/1048): Pre-login SSL/TLS handshake error.
-   - Fix [issue 1050](https://github.com/Microsoft/sqlopsstudio/issues/1050): Clear insights view before showing error.
-   - Fix [issue 1057](https://github.com/Microsoft/sqlopsstudio/issues/1057): Restore and new query actions in explorer-widget are broken.
-   - Fix [issue 1068](https://github.com/Microsoft/sqlopsstudio/issues/1068): Dashboard Output windows pops-up with error message for Azure SQL Database.
-   - Fix [issue 1069](https://github.com/Microsoft/sqlopsstudio/issues/1069): Connection Dialog shows Server Required error when initially displayed.
-   - Fix [issue 1070](https://github.com/Microsoft/sqlopsstudio/issues/1070): Server Groups now require a double-click to expand.
-   - Fix [issue 1072](https://github.com/Microsoft/sqlopsstudio/issues/1072): Select control background is semi-transparent.
-   - Fix [issue 1115](https://github.com/Microsoft/sqlopsstudio/issues/1115): Fix all high contrast accessibility issues in SQL Operations Studio.
-   - Fix [issue 1101](https://github.com/Microsoft/sqlopsstudio/issues/1101): Extension fails to upgrade "Download Manually" link goes to wrong location.
-   - Fix [issue 1103](https://github.com/Microsoft/sqlopsstudio/issues/1103): V Scroll not working on Home Tab.
-   - Fix [issue 1104](https://github.com/Microsoft/sqlopsstudio/issues/1104): SQL extension tabs stopped working.
+   - Fix [issue 37](https://github.com/Microsoft/azuredatastudio/issues/37): When the chart viewer throws an error, unexpected behavior occurs.
+   - Fix [issue 462](https://github.com/Microsoft/azuredatastudio/issues/462): Feature Request: Option for Server Groups to be expanded by default.
+   - Fix [issue 606](https://github.com/Microsoft/azuredatastudio/issues/606): intellisense - Bad suggestion for 'update' command.
+   - Fix [issue 967](https://github.com/Microsoft/azuredatastudio/issues/967): Expect query plan when select XML showplan in the result grid.
+   - Fix [issue 1023](https://github.com/Microsoft/azuredatastudio/issues/1023): Add square brackets for ms_foreachdb call from flyfishingdba.
+   - Fix [issue 1048](https://github.com/Microsoft/azuredatastudio/issues/1048): Pre-login SSL/TLS handshake error.
+   - Fix [issue 1050](https://github.com/Microsoft/azuredatastudio/issues/1050): Clear insights view before showing error.
+   - Fix [issue 1057](https://github.com/Microsoft/azuredatastudio/issues/1057): Restore and new query actions in explorer-widget are broken.
+   - Fix [issue 1068](https://github.com/Microsoft/azuredatastudio/issues/1068): Dashboard Output windows pops-up with error message for Azure SQL Database.
+   - Fix [issue 1069](https://github.com/Microsoft/azuredatastudio/issues/1069): Connection Dialog shows Server Required error when initially displayed.
+   - Fix [issue 1070](https://github.com/Microsoft/azuredatastudio/issues/1070): Server Groups now require a double-click to expand.
+   - Fix [issue 1072](https://github.com/Microsoft/azuredatastudio/issues/1072): Select control background is semi-transparent.
+   - Fix [issue 1115](https://github.com/Microsoft/azuredatastudio/issues/1115): Fix all high contrast accessibility issues in SQL Operations Studio.
+   - Fix [issue 1101](https://github.com/Microsoft/azuredatastudio/issues/1101): Extension fails to upgrade "Download Manually" link goes to wrong location.
+   - Fix [issue 1103](https://github.com/Microsoft/azuredatastudio/issues/1103): V Scroll not working on Home Tab.
+   - Fix [issue 1104](https://github.com/Microsoft/azuredatastudio/issues/1104): SQL extension tabs stopped working.
 
 
 A significant highlight for the April Public Preview is the Visual Studio Code 1.21 platform source code refresh. This brings in several updates to the core editor and workbench from the previous 1.19 sync point. Some examples include the following:
@@ -209,7 +239,7 @@ A significant highlight for the April Public Preview is the Visual Studio Code 1
 
 For additional details, checkout the [Visual Studio Code February Release Notes](https://code.visualstudio.com/updates/v1_21), and the [Visual Studio Code January Release Notes](https://code.visualstudio.com/updates/v1_20).
 
-For more information, see the [Change Log](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md).
+For more information, see the [Change Log](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md).
 
 ## March 2018 (March Public Preview)
 
@@ -222,8 +252,8 @@ The *March Public Preview* continues to address the top GitHub issues and is foc
    - Extension Manager enables simple acquisition of extensions.
    - Dashboard extensions for sp_whoisactive from [whoisactive.com](http://www.whoisactive.com).
    - For details, see [Extend the functionality of SQL Operations Studio](extensions.md).
-- Add additional [extensibility APIs for connection and object explorer](https://github.com/Microsoft/sqlopsstudio/wiki/Extensibility-API) management.
-- Continue to fix important customer impacting [GitHub issues](https://github.com/Microsoft/sqlopsstudio/issues).
+- Add additional [extensibility APIs for connection and object explorer](https://github.com/Microsoft/azuredatastudio/wiki/Extensibility-API) management.
+- Continue to fix important customer impacting [GitHub issues](https://github.com/Microsoft/azuredatastudio/issues).
 
 
 ## February 2018 (February Public Preview)
@@ -235,16 +265,16 @@ The *February Public Preview* includes some feature suggestions and high-priorit
 
 - Introducing Auto-Update Installation, which provides a notification when a new release is available to download 
 - The Connection Dialog 'Database' field is now a dynamically populated drop-down list that will contain a list of databases populated from the specified server.
-- Fix [issue 6](https://github.com/Microsoft/sqlopsstudio/issues/6): Keep connection and selected database when opening new query tabs.
-- Fix [issue 22](https://github.com/Microsoft/sqlopsstudio/issues/22): 'Server Name' and 'Database Name' - Can these be drop downs instead of text boxes?
-- Fix [issue 549](https://github.com/Microsoft/sqlopsstudio/issues/549): Silent/Very Silent Install results in application opening after installation.
-- Fix [issue 481](https://github.com/Microsoft/sqlopsstudio/issues/481): Add "Check for updates" option.
+- Fix [issue 6](https://github.com/Microsoft/azuredatastudio/issues/6): Keep connection and selected database when opening new query tabs.
+- Fix [issue 22](https://github.com/Microsoft/azuredatastudio/issues/22): 'Server Name' and 'Database Name' - Can these be drop downs instead of text boxes?
+- Fix [issue 549](https://github.com/Microsoft/azuredatastudio/issues/549): Silent/Very Silent Install results in application opening after installation.
+- Fix [issue 481](https://github.com/Microsoft/azuredatastudio/issues/481): Add "Check for updates" option.
 - SQL Editor colorization and auto-completion fixes:
-   - Fix [issue 584](https://github.com/Microsoft/sqlopsstudio/issues/584): Keyword "FULL" not highlighted by IntelliSense.
-   - Fix [issue 345](https://github.com/Microsoft/sqlopsstudio/issues/345): Colorize SQL functions within the editor.
-   - Fix [issue 300](https://github.com/Microsoft/sqlopsstudio/issues/300): [#tempData] latest "]" will display green color.
-   - Fix [issue 225](https://github.com/Microsoft/sqlopsstudio/issues/225): Keyword color mismatch.
-   - Fix [issue 60](https://github.com/Microsoft/sqlopsstudio/issues/60): Invalid sql syntax color highlighting when using temporary table in from clause.
+   - Fix [issue 584](https://github.com/Microsoft/azuredatastudio/issues/584): Keyword "FULL" not highlighted by IntelliSense.
+   - Fix [issue 345](https://github.com/Microsoft/azuredatastudio/issues/345): Colorize SQL functions within the editor.
+   - Fix [issue 300](https://github.com/Microsoft/azuredatastudio/issues/300): [#tempData] latest "]" will display green color.
+   - Fix [issue 225](https://github.com/Microsoft/azuredatastudio/issues/225): Keyword color mismatch.
+   - Fix [issue 60](https://github.com/Microsoft/azuredatastudio/issues/60): Invalid sql syntax color highlighting when using temporary table in from clause.
 - Introduce Connection extensibility API.
 - VS Code Editor 1.19 integration.
 - Update JustinPealing/html-query-plan component to pick-up several Query Plan viewer improvements.
@@ -300,4 +330,4 @@ See one of the following quickstarts to get started:
 - [Connect & Query Azure Data Warehouse](quickstart-sql-dw.md)
 
 Contribute to [!INCLUDE[name-sos](../includes/name-sos-short.md)]:
-- [https://github.com/Microsoft/sqlopsstudio](https://github.com/Microsoft/sqlopsstudio)
+- [https://github.com/Microsoft/azuredatastudio](https://github.com/Microsoft/azuredatastudio)

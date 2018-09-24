@@ -48,6 +48,8 @@ Release number: 18.0<br>
 Build number: 15.0.18040.0<br>
 Release date: September 24, 2018
 
+If you have comments or suggestions, or you want to report issues, the best way to reach out to the SSMS Team is at [UserVoice](https://aka.ms/sqlfeedback). SSMS 18.0 is a preview product. Please refrain from adding comments at the bottom of this page!
+
 The SSMS 18.x installation does not upgrade or replace SSMS versions 17.x or earlier. SSMS 18.x installs side by side with previous versions so both versions are available for use.
 
 If a computer contains side by side installations of SSMS, verify you start the correct version for your specific needs. The latest version is labeled *Microsoft SQL Server Management Studio 18*:
@@ -78,31 +80,25 @@ For details about what's new in this release, see [the SSMS changelog](sql-serve
 
 ## Supported SQL offerings
 
-* This version of SSMS works with all [supported versions of SQL Server 2008 - SQL Server 2017](https://support.microsoft.com/lifecycle?C2=1044) and provides the greatest level of support for working with the latest cloud features in Azure SQL Database and Azure SQL Data Warehouse.
-* Use SSMS 17.x or later to connect to [SQL Server on Linux](../linux/sql-server-linux-overview.md).
-* Additionally, SSMS 18.x and SSMS 17.x can be installed side by side with SSMS 16.x or SQL Server 2014 SSMS and earlier.
+* This version of SSMS works with all [supported versions of SQL Server 2008 - [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044) and provides the greatest level of support for working with the latest cloud features in Azure SQL Database and Azure SQL Data Warehouse.
+* Additionally, SSMS 18.x can be installed side by side with SSMS 17.x, SSMS 16.x, or SQL Server 2014 SSMS and earlier.
 * SQL Server Integration Services (SSIS) - SSMS version 17.x or later does not support connecting to the legacy SQL Server Integration Services service. To connect to an earlier version of the legacy Integration Services, use the version of SSMS aligned with the version of SQL Server. For example, use SSMS 16.x to connect to the legacy SQL Server 2016 Integration Services service. SSMS 17.x and SSMS 16.x can be installed side-by-side on the same computer. Since the release of SQL Server 2012, the SSIS Catalog database, SSISDB, is the recommended way to store, manage, run, and monitor Integration Services packages. For details, see [SSIS Catalog](../integration-services/catalog/ssis-catalog.md).
 
 ## Supported Operating systems
 
 This release of SSMS supports the following 64-bit platforms when used with the latest available service pack:
 
-- Windows 10 (64-bit)
-- Windows 8.1 (64-bit)
-- Windows 8 (64-bit)
-- Windows 7 (SP1) (64-bit)
+- Windows 10 (64-bit) *
 - Windows Server 2016 *
 - Windows Server 2012 R2 (64-bit)
 - Windows Server 2012 (64-bit)
 - Windows Server 2008 R2 (64-bit)
 
+\* Requires version 1607 (10.0.14939) or later
 
 > [!NOTE]
 > SSMS runs on Windows only. If you need a tool that runs on platforms other than Windows, take a look at Azure Data Studio. Azure Data Studio is a new cross-platform tool that runs on macOS, Linux, as well as Windows. For details, see [Azure Data Studio](../azure-data-studio/what-is.md).
   
-
-\* SSMS 17.X is based on the Visual Studio 2015 Isolated shell, which was released before Windows Server 2016. Microsoft takes app compatibility seriously and ensures that already-shipped applications continue to run on the latest Windows releases. To minimize issues running SSMS on Windows Server 2016, ensure SSMS has all of the latest updates applied. If you experience any issues with SSMS on Windows Server 2016, contact support. The support team determines if the issue is with SSMS, Visual Studio, or with Windows compatibility. The support team then routes the issue to the appropriate team for further investigation.
-
 ## SSMS installation tips and issues
 
 ### Minimize Installation Reboots
@@ -117,35 +113,20 @@ This release of SSMS supports the following 64-bit platforms when used with the 
 
 ## Release Notes
 
-There are currently no known issues in this release.
+The following are known issues in the current release:
 
+> [!IMPORTANT]
+> When using *Active Directory – Universal with MFA Support* authentication with the SQL query editor, users may experience their connection being closed and reopened with each query invocation. Side effects of such closure include global temporary tables being dropped unexpectedly and sometimes a new SPID being given to the connection. This closure will not occur if there is an open transaction on the connection. To work around this issue, users can set `persist security info=true` in the connection parameters.
 
+SSMS
 
-## Uninstall and reinstall SSMS
+- Double-clicking on a .sql file launches SSMS, but does not open the actual script.
+  - Workaround: drag and drop the .sql file onto the SSMS editor.
 
-If your SSMS installation is having problems, and a standard uninstall and reinstall doesn't resolve them, you can first try [repairing](https://support.microsoft.com/help/4028054/windows-10-repair-or-remove-programs) the Visual Studio 2015 IsoShell. If repairing the Visual Studio 2015 IsoShell doesn't resolve the problem, the following steps have been found to fix many random issues:
+SSIS
 
-1.	Uninstall SSMS the same way you uninstall any application (using *Apps & features*, *Programs and features*, etc. depending on your version of Windows).
-
-2.	Uninstall Visual Studio 2015 IsoShell **from an elevated cmd prompt**:
-   
-    ```PUSHD "C:\ProgramData\Package Cache\FE948F0DAB52EB8CB5A740A77D8934B9E1A8E301\redist"```
-
-    ```vs_isoshell.exe /Uninstall /Force /PromptRestart```
-
-3.	Uninstall Microsoft Visual C++ 2015 Redistributable the same way you uninstall any application. Uninstall both x86 and x64 if they're on your computer.
-
-4.	Reinstall Visual Studio 2015 IsoShell **from an elevated cmd prompt**:  
-
-    ```PUSHD "C:\ProgramData\Package Cache\FE948F0DAB52EB8CB5A740A77D8934B9E1A8E301\redist"```  
- 
-    ```vs_isoshell.exe /PromptRestart```
-
-5.	Reinstall SSMS.
-
-6.	Upgrade to the [latest version of the Visual C++ 2015 Redistributable](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads) if you're not currently up to date.
-
-
+- Package can’t be deployed or executed successfully when it targets SQL Server of old version and contains Script Task/Script component at the same time.
+- SSMS can’t connect to remote Integration Services.
 
 
 ## Previous releases
@@ -166,3 +147,6 @@ If your SSMS installation is having problems, and a standard uninstall and reins
 - [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
+
+
+If you have comments or suggestions, or you want to report issues, the best way to reach out to the SSMS Team is at [UserVoice](https://aka.ms/sqlfeedback). SSMS 18.0 is a preview product. Please refrain from adding comments at the bottom of this page!

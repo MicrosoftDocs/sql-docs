@@ -287,6 +287,11 @@ The following features are no longer available in SSMS:
 
 ### Known issues
 
+The following are known issues in the current release:
+
+> [!IMPORTANT]
+> When using *Active Directory – Universal with MFA Support* authentication with the SQL query editor, users may experience their connection being closed and reopened with each query invocation. Side effects of such closure include global temporary tables being dropped unexpectedly and sometimes a new SPID being given to the connection. This closure will not occur if there is an open transaction on the connection. To work around this issue, users can set `persist security info=true` in the connection parameters.
+
 SSMS
 
 - Double-clicking on a .sql file launches SSMS, but does not open the actual script.

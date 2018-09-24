@@ -67,7 +67,8 @@ manager: craigg
 |sql_handle|**binary(20)**|Represents the currently executing batch or object.<br /><br /> **Note** This value is derived from the batch or memory address of the object. This value is not calculated by using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hash-based algorithm.|  
 |stmt_start|**int**|Starting offset of the current SQL statement for the specified sql_handle.|  
 |stmt_end|**int**|Ending offset of the current SQL statement for the specified sql_handle.<br /><br /> -1 = Current statement runs to the end of the results returned by the fn_get_sql function for the specified sql_handle.|  
-|request_id|**int**|ID of request. Used to identify requests running in a specific session.|  
+|request_id|**int**|ID of request. Used to identify requests running in a specific session.|
+|page_resource |**binary(8)** |**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br /><br /> An 8-byte hexadecimal representation of the page resource if the `waitresource` column contains a page. |  
   
 ## Remarks  
  If a user has VIEW SERVER STATE permission on the server, the user will see all executing sessions in the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; otherwise, the user will see only the current session.  

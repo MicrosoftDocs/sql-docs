@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot SQL Server on Linux | Microsoft Docs
-description: Provides troubleshooting tips for using SQL Server 2017 on Linux.
+description: Provides troubleshooting tips for using SQL Server on Linux.
 author: rothja 
 ms.author: jroth 
 manager: craigg

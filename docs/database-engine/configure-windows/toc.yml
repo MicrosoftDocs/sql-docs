@@ -36,6 +36,8 @@
     href: clr-enabled-server-configuration-option.md
   - name: clr strict security Server Configuration Option
     href: clr-strict-security.md
+  - name: column encryption enclave type Server Configuration Option
+    href: configure-column-encryption-enclave-type.md
   - name: common criteria compliance enabled Server Configuration Option
     href: common-criteria-compliance-enabled-server-configuration-option.md
   - name: contained database authentication Server Configuration Option

@@ -118,6 +118,6 @@ ADD SENSITIVITY CLASSIFICATION TO
 
 [sys.sensitivity_classifications (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sensitivity-classifications-transact-sql.md)
 
-[Permissions (Database Engine)](https://docs.microsoft.com/en-us/sql/relational-databases/security/permissions-database-engine)
+[Permissions (Database Engine)](https://docs.microsoft.com/sql/relational-databases/security/permissions-database-engine)
 
 [Getting started with SQL Information Protection](http://aka.ms/sqlip)

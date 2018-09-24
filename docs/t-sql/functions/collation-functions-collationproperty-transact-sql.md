@@ -46,8 +46,8 @@ The collation property. The *property* argument has a **varchar(128)** data type
   
 |Property name|Description|  
 |---|---|
-|**CodePage**|Non-Unicode code page of the collation. See [Appendix G DBCS/Unicode Mapping Tables](https://msdn.microsoft.com/en-us/library/cc194886.aspx) and [Appendix H Code Pages](https://msdn.microsoft.com/en-us/library/cc195051.aspx) to translate these values, and to see their character mappings.|  
-|**LCID**|Windows LCID of the collation. See [LCID Structure](https://msdn.microsoft.com/en-us/library/cc233968.aspx) to translate these values (you will first need to convert to **varbinary**).|  
+|**CodePage**|Non-Unicode code page of the collation. See [Appendix G DBCS/Unicode Mapping Tables](https://msdn.microsoft.com/library/cc194886.aspx) and [Appendix H Code Pages](https://msdn.microsoft.com/library/cc195051.aspx) to translate these values, and to see their character mappings.|  
+|**LCID**|Windows LCID of the collation. See [LCID Structure](https://msdn.microsoft.com/library/cc233968.aspx) to translate these values (you will first need to convert to **varbinary**).|  
 |**ComparisonStyle**|Windows comparison style of the collation. Returns 0 for all binary collations - both (\_BIN) and (\_BIN2) - as well as when all properties are case sensitive. Bitmask values:<br /><br /> Ignore case : 1<br /><br /> Ignore accent : 2<br /><br /> Ignore Kana : 65536<br /><br /> Ignore width : 131072<br /><br /> Note: the variation-selector-sensitive (\_VSS) option is not represented in this value, even though it affects the comparison behavior.|  
 |**Version**|The version of the collation, derived from the collation ID version field. Returns an integer value between 0 and 3.<br /><br /> Collations with "140" in the name return 3.<br /><br /> Collations with "100" in the name return 2.<br /><br /> Collations with "90" in the name return 1.<br /><br /> All other collations return 0.|  
   

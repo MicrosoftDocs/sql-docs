@@ -3,7 +3,7 @@ title: "Always Encrypted Cryptography | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/29/2016"
 ms.prod: sql
-ms.reviewer: ""
+ms.reviewer: vanto
 ms.suite: "sql"
 ms.technology: security
 ms.tgt_pltfrm: ""

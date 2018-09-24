@@ -39,6 +39,8 @@
   href: use-column-sets.md
 - name: Use Table-Valued Parameters (Database Engine)
   href: use-table-valued-parameters-database-engine.md
+- name: Use graph edge constraints (Database Engine)
+  href: graph-edge-constraints.md
 - name: Primary and Foreign Key Constraints
   href: primary-and-foreign-key-constraints.md
   items:

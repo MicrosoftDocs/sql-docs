@@ -94,7 +94,7 @@ The classification metadata for *Information Types* and *Sensitivity Labels* is 
 * sys_information_type_name
 * sys_sensitivity_label_name
 
-The metadata can be accessed using the Extended Properties catalog view [sys.extended_properties](https://docs.microsoft.com/en-us/sql/relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties).
+The metadata can be accessed using the Extended Properties catalog view [sys.extended_properties](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties).
 
 The following code example returns all classified columns with their corresponding classifications:
 
@@ -144,8 +144,8 @@ For Azure SQL Database, see [Azure SQL Database Data Discovery & Classification]
 
 Consider protecting your sensitive columns by applying column level security mechanisms:
 
-* [Dynamic Data Masking](https://docs.microsoft.com/en-us/sql/relational-databases/security/dynamic-data-masking) for obfuscating sensitive columns in use.
-* [Always Encrypted](https://docs.microsoft.com/en-us/sql/relational-databases/security/encryption/always-encrypted-database-engine) for encrypting sensitive columns at rest.
+* [Dynamic Data Masking](https://docs.microsoft.com/sql/relational-databases/security/dynamic-data-masking) for obfuscating sensitive columns in use.
+* [Always Encrypted](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-database-engine) for encrypting sensitive columns at rest.
 
 <!--Anchors-->
 [SQL Data Discovery & Classification overview]: #subheading-1

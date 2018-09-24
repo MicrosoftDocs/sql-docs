@@ -1,7 +1,7 @@
 ---
 title: "Import data from Excel to SQL | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/29/2018"
+ms.date: "09/23/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.component: "import-export"
@@ -65,7 +65,7 @@ To start learning how to build SSIS packages, see the tutorial [How to Create an
 ## <a name="openrowset"></a> OPENROWSET and linked servers
 
 > [!NOTE]
-> In Azure, the OPENROWSET and OPENDATASOURCE functions are available only on SQL Database Managed Instance (Preview).
+> In Azure, the OPENROWSET and OPENDATASOURCE functions are available only on SQL Database Managed Instance.
 
 > [!NOTE]
 > The ACE provider (formerly the Jet provider) that connects to Excel data sources is intended for interactive client-side use. If you use the ACE provider on the server, especially in automated processes or processes running in parallel, you may see unexpected results.

@@ -90,7 +90,7 @@ sp_setapprole [ @rolename = ] 'role',
  The following example activates an application role named `SalesAppRole`, with the plain-text password `AsDeF00MbXX`, created with permissions specifically designed for the application used by the current user.  
   
 ```  
-EXEC sp_setapprole 'SalesApprole', 'AsDeF00MbXX';  
+EXEC sys.sp_setapprole 'SalesApprole', 'AsDeF00MbXX';  
 GO  
 ```  
   
@@ -99,12 +99,12 @@ GO
   
 ```  
 DECLARE @cookie varbinary(8000);  
-EXEC sp_setapprole 'Sales11', 'fdsd896#gfdbfdkjgh700mM'  
+EXEC sys.sp_setapprole 'Sales11', 'fdsd896#gfdbfdkjgh700mM'  
     , @fCreateCookie = true, @cookie = @cookie OUTPUT;  
 -- The application role is now active.  
 SELECT USER_NAME();  
 -- This will return the name of the application role, Sales11.  
-EXEC sp_unsetapprole @cookie;  
+EXEC sys.sp_unsetapprole @cookie;  
 -- The application role is no longer active.  
 -- The original context has now been restored.  
 GO  

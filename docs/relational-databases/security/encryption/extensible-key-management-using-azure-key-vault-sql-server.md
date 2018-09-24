@@ -3,7 +3,7 @@ title: "Extensible Key Management Using Azure Key Vault (SQL Server) | Microsoft
 ms.custom: ""
 ms.date: "07/22/2016"
 ms.prod: sql
-ms.reviewer: ""
+ms.reviewer: vanto
 ms.suite: "sql"
 ms.technology: security
 ms.tgt_pltfrm: ""

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "sys.pdw_nodes_tables (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -26,7 +26,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
   
 |Column Name|Data Type|Description|Range|  
 |-----------------|---------------|-----------------|-----------|  
-|\<inherited columns>||For a list of columns that this view inherits, see [sys.objects](http://msdn.microsoft.com/en-us/c36fa71e-549a-4533-a6cd-1314d26f533f).||  
+|\<inherited columns>||For a list of columns that this view inherits, see [sys.objects](http://msdn.microsoft.com/c36fa71e-549a-4533-a6cd-1314d26f533f).||  
 |lob_data_space_id|**int**||Always 0.|  
 |filestream_data_space_id|**int**|Data space ID for a FILESTREAM filegroup or [!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|NULL|  
 |max_column_id_used|**int**|Maximum column ID used by this table.||  

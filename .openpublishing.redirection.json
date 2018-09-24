@@ -1327,6 +1327,26 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "docs/relational-database/policy-based-management/lesson-1-1-create-the-off-by-default-policy.md",
+            "redirect_url": "/sql/relational-database/policy-based-management/lesson-1-create-and-apply-an-off-by-default-policy",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-database/policy-based-management/lesson-1-2-configure-a-server-to-run-the-off-by-default-policy.md",
+            "redirect_url": "/sql/relational-database/policy-based-management/lesson-1-create-and-apply-an-off-by-default-policy",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-database/policy-based-management/lesson-2-1-create-the-finance-name-policy.md",
+            "redirect_url": "/sql/relational-database/policy-based-management/lesson-2-create-and-apply-a-naming-standards-policy",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-database/policy-based-management/lesson-2-2-subscribe-to-and-check-the-finance-name-policy.md",
+            "redirect_url": "/sql/relational-database/policy-based-management/lesson-2-2-subscribe-to-and-check-the-finance-name-policy",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/connect/odbc/mac/connection-string-keywords-and-data-source-names-dsns.md",
             "redirect_url": "/sql/connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns",
             "redirect_document_id": false

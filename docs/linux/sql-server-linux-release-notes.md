@@ -19,10 +19,8 @@ ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 
 The following release notes apply to SQL Server 2017 running on Linux. This article is broken into sections for each release. The GA release has detailed supportability and known issues listed. Each cumulative update (CU) or general distribution release (GDR) has a link to a support article describing the CU changes as well as links to the Linux package downloads.
 
-::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 > [!TIP]
-> These release notes are specifically for SQL Server 2017 releases. For more information about the new SQL Server 2019 CTP 2.0 release, see [Release notes for SQL Server 2019 CTP on Linux](sql-server-linux-release-notes-2019.md?view=sql-server-ver15).
-::: moniker-end
+> These release notes are specifically for SQL Server 2017 releases. For more information about the new SQL Server 2019 preview release, see [Release notes for SQL Server 2019 preview on Linux](sql-server-linux-release-notes-2019.md?view=sql-server-ver15).
 
 ## Supported platforms
 

@@ -73,7 +73,6 @@ Support for [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]
 
 - This is the first release of SSMS that is be fully *aware* of [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] (compatLevel 150, etc…).
 - Support "BATCH_STARTED_GROUP" and "BATCH_COMPLETED_GROUP" in [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] and SQL Database Managed Instance in SSMS.
-- SMO support for UDF Inlining.
 - GraphDB: Add flag in showplan for Graph TC Sequence.
 - Always Encrypted: Added support for [Always Encrypted with secure enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md).
   - Connection dialog has a new "Always Encrypted" tab when the user clicks on the "Options" button to enable and configure enclave support.
@@ -266,6 +265,8 @@ XEvent Profiler:
 
 ### Deprecated Features
 
+The following features are no longer available in SSMS:
+
 - T-SQL Debugger
 - Database Diagrams
 - OSQL.EXE
@@ -284,6 +285,11 @@ XEvent Profiler:
 - Removed node "Maintenance | Legacy" in Object Explorer. The phasedundeScripts | Publish to Web Service removed. The *really old* "Database Maintenace Plan" and "SQL Mail" nodes won't be accessible anymore. The modern "Database Mail" and "Maintenance Plans" nodes will continue to work as usual.
 
 ### Known issues
+
+The following are known issues in the current release:
+
+> [!IMPORTANT]
+> When using *Active Directory – Universal with MFA Support* authentication with the SQL query editor, users may experience their connection being closed and reopened with each query invocation. Side effects of such closure include global temporary tables being dropped unexpectedly and sometimes a new SPID being given to the connection. This closure will not occur if there is an open transaction on the connection. To work around this issue, users can set `persist security info=true` in the connection parameters.
 
 SSMS
 
@@ -1221,262 +1227,29 @@ The following issues were fixed this release:
 * SSMS 2016 crashes with error "The process was terminated due to an internal error in the .NET Runtime at IP 71AF8579 (71AE0000) with exit code 80131506"
 
 
-## SSMS 16.5.1
-Generally available | Build number: 13.0.16100.1
+## Uninstall and reinstall SSMS 17.x
 
-* Fixed an issue where Invoke-Sqlcmd erroneously inserts multiple rows when check constraint occurs. [Microsoft Connect Item: 811560](https://connect.microsoft.com/SQLServer/feedback/details/811560)
+If your SSMS installation is having problems, and a standard uninstall and reinstall doesn't resolve them, you can first try [repairing](https://support.microsoft.com/help/4028054/windows-10-repair-or-remove-programs) the Visual Studio 2015 IsoShell. If repairing the Visual Studio 2015 IsoShell doesn't resolve the problem, the following steps have been found to fix many random issues:
 
-* Fixed an issue where non-ENU language versions do not work completely when creating Availability Groups.
+1.	Uninstall SSMS the same way you uninstall any application (using *Apps & features*, *Programs and features*, etc. depending on your version of Windows).
 
-* Fixed an issue where clicking query plan XML does not open the proper SSMS UI.
+2.	Uninstall Visual Studio 2015 IsoShell **from an elevated cmd prompt**:
+   
+    ```PUSHD "C:\ProgramData\Package Cache\FE948F0DAB52EB8CB5A740A77D8934B9E1A8E301\redist"```
 
+    ```vs_isoshell.exe /Uninstall /Force /PromptRestart```
 
-## ![download](../ssdt/media/download.png) [SSMS 16.5](http://go.microsoft.com/fwlink/?LinkID=832812)
-Generally available | Build number: 13.0.16000.28
+3.	Uninstall Microsoft Visual C++ 2015 Redistributable the same way you uninstall any application. Uninstall both x86 and x64 if they're on your computer.
 
+4.	Reinstall Visual Studio 2015 IsoShell **from an elevated cmd prompt**:  
 
-[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x40a)
-
-* Fixed an issue where a crash could occur when a database with table name containing “;:” was clicked on.
-* Fixed an issue where changes made to the Model page in AS Tabular Database Properties window would script out the original definition. 
-[Microsoft Connect Item: 3080744](https://connect.microsoft.com/SQLServer/feedback/details/3080744) 
-* Fixed the issue that temporary files are added to the “Recent Files” list.  
-[Microsoft Connect Item: 2558789](https://connect.microsoft.com/SQLServer/feedback/details/2558789)
-* Fixed the issue that “Manage Compression” menu item is disabled for the user table nodes in object explorer tree.  
-[Microsoft Connect Item: 3104616](https://connect.microsoft.com/SQLServer/feedback/details/3104616)
-
-* Fixed the issue that user is not able to set the font size for object explorer, registered server explorer, template explorer as well as object explorer details. Font for the explorers will be using the Environment font.  
-[Microsoft Connect Item: 691432](https://connect.microsoft.com/SQLServer/feedback/details/691432)
-
-* Fixed the issue that SSMS always reconnect to the default database when connection is lost.  
-[Microsoft Connect Item: 3102337](https://connect.microsoft.com/SQLServer/feedback/details/3102337)
-
-* Fixed many of high dpi issues in policy management and query editor window including the execution plan icons.
-
-* Fixed the issue that option to config font and color for Extended Event is missing.
-
-* Fixed the issue of SSMS crashes that occur when closing the application or when it is trying to show the error dialog.
-
-
-## ![download](../ssdt/media/download.png) [SSMS 16.4.1 (September 2016)](http://go.microsoft.com/fwlink/?LinkID=828615)
-Generally available | Build number: 13.0.15900.1
-
-[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x40a)
-
-*  Fixed an issue where attempting to ALTER/Modify a Stored Procedure fails:  
-[Microsoft Connect item #3103831](https://connect.microsoft.com/SQLServer/feedback/details/3103831)
-
-* New 'Read-SqlTableData', 'Read-SqlViewData', and 'Write-SqlTableData' cmdlets to view and write data using PowerShell.  
-[Trello Read-SqlTableData Card](https://trello.com/c/FXVUNJ8x/131-read-sqltabledata)  
-[Microsoft Connect item #2685363](https://connect.microsoft.com/SQLServer/feedback/details/2685363)
-	
-* New 'Add-SqlLogin' cmdlet to enable new login management scenarios using PowerShell.  
-[Microsoft Connect item #2588952](https://connect.microsoft.com/SQLServer/feedback/details/2588952)
-	
-*  Improved support and usability for users connecting to various national clouds.
-	
-	
-*  Fixed an issue where an Out Of Memory Exceptions were being thrown.  
-[Microsoft Connect item #3062914](https://connect.microsoft.com/SQLServer/feedback/details/3062914)  
-[Microsoft Connect item #3074856](https://connect.microsoft.com/SQLServer/feedback/details/3074856)
-	
-*  Fixed an issue where filtering by schema was not a valid filter option.  
-[Microsoft Connect item #3058105](https://connect.microsoft.com/SQLServer/feedback/details/3058105)  
-[Microsoft Connect item #3101136](https://connect.microsoft.com/SQLServer/feedback/details/3101136)
-	
-*  Fixed an issue where the Monitor window for a stretched database would not be accessible.
-	
-*  Fixed an issue where the F1 Help always opened online content. Users can now select whether they prefer online or offline help via the "Set Help Preference" in the Help menu.   
-[Microsoft Connect item #2826366](https://connect.microsoft.com/SQLServer/feedback/details/2826366)
-	
-*  Fixed an issue where scripting out a 1200-level Analysis Services tabular model wouldn’t strip out the password for scripting, even though the server version had [client model object is now sync’d before scripting].
-	
-*  Fixed an issue where 'SELECT TOP N ROWS' option generated deprecated syntax for the TOP operator.  
-[Microsoft Connect item #3065435](https://connect.microsoft.com/SQLServer/feedback/details/3065435)
-	
-*  Fixed various layout issues throughout SSMS, including the Login Properties page and Advanced Query Execution Options.   
-[Microsoft Connect item #3058199](https://connect.microsoft.com/SQLServer/feedback/details/3058199)  
-[Microsoft Connect item #3079122](https://connect.microsoft.com/SQLServer/feedback/details/3058199)  
-[Microsoft Connect item #3071384](https://connect.microsoft.com/SQLServer/feedback/details/3071384)
-	
-*  Fixed an issue where a solution was created automatically whenever a user opened a new query window.   
-[Microsoft Connect item #2924667](https://connect.microsoft.com/SQLServer/feedback/details/2924667)    
-[Microsoft Connect item #2917742](https://connect.microsoft.com/SQLServer/feedback/details/2917742)   
-[Microsoft Connect item #2612635](https://connect.microsoft.com/SQLServer/feedback/details/2612635)
-	
-*  Fixed an issue where temporal tables could not be expanded in Object Explorer when in system databases.  
-[Microsoft Connect item #2551649](https://connect.microsoft.com/SQLServer/feedback/details/2551649)
-	
-*  Fixed an issue where SSMS runs a query to SELECT @@trancount after executing a batch.    
-[Microsoft Connect item #3042364](https://connect.microsoft.com/SQLServer/feedback/details/3042364)
-	
-*  Fixed an issue in Analysis Services where creating a script from a server's properties page resulted in a hidden connection dialog.
-	
-*  Fixed an issue where Ctrl+Q would not select the Quick Launch toolbar.
-	
-*  Fixed an issue where changing the MaxSize of a database using the Server Properties dialog was broken for databases > 2 TB.  
-[Microsoft Connect item #1231091](https://connect.microsoft.com/SQLServer/feedback/details/1231091)
-	
-*  Fixed an issue where the Restore Database wizard wouldn't accept filenames with leading whitespaces:   
-[Microsoft Connect item #2395147](https://connect.microsoft.com/SQLServer/feedback/details/2395147)
-
-
-
-## ![download](../ssdt/media/download.png) [SSMS 16.3 (August 2016)](http://go.microsoft.com/fwlink/?LinkID=824938)
-Generally available | Version number: 13.0.15700.28
-
-
-[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x40a)
-
-* SSMS monthly releases are now branded numerically.
-
-* [New authentication option **'Active Directory Universal Authentication'**](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/). This is a token-based authentication mechanism driven by Azure Active Directory that supports multi-factor, password, and integrated authentication mechanisms.
-
-* New Extended Events templates matching the functionality of SQL Server Profiler templates [(Microsoft Connect item #2543925).](../tools/sql-server-profiler/sql-server-profiler-templates.md).
-
-* New Create database and database properties dialogs for Azure SQL databases.
-
-* New 'Get-SqlLogin' and 'Remove-SqlLogin' cmdlets to help perform SQL Server login management using PowerShell.  
-*Linked customer bug requests:*   
-[Microsoft Connect item #2588952.](https://connect.microsoft.com/SQLServer/feedback/details/2588952/)
-
-* New PowerShell cmdlet 'New-SqlColumnMasterKeySettings' that adds support for creation of column master keys for arbitrary providers and key paths.
-
-* New 'Create database' dialog to streamline creation of Azure SQL databases in SSMS>
-
-* Support for filtering in the 'Databases' node of SSMS Object Explorer. Navigate to the 'Databases' node in Object explorer and click the filter icon in the Object explorer toolbar to filter the list of databases.
-
-* Support for Azure-Resource Manager type storage accounts in the Backup and Restore wizards.
-
-* [Intial beta support for high-resolution displays](https://blogs.msdn.microsoft.com/sqlreleaseservices/ssms-highdpi-support/).  
-*Linked customer bug requests:*   
-[Microsoft Connect item #1129301](https://connect.microsoft.com/SQLServer/feedback/details/1129301/management-studio-is-unusable-on-a-4k-display), 
-[Microsoft Connect item #1858763](https://connect.microsoft.com/SQLServer/feedback/details/1858763/), [Microsoft Connect item #1852671](https://connect.microsoft.com/SQLServer/feedback/details/1852671/), [Microsoft Connect item #1487643](https://connect.microsoft.com/SQLServer/feedback/details/1487643/),  [Microsoft Connect item #1355641](https://connect.microsoft.com/SQLServer/feedback/details/1355641/), [Microsoft Connect item #2161595](https://connect.microsoft.com/SQLServer/feedback/details/2161595/), [Microsoft Connect item #1854041](https://connect.microsoft.com/SQLServer/feedback/details/1854041/), [Microsoft Connect item #1055617](https://connect.microsoft.com/SQLServer/feedback/details/1055617/), [Microsoft Connect item #2448774](https://connect.microsoft.com/SQLServer/feedback/details/2448774/), [Microsoft Connect item #1521405](https://connect.microsoft.com/SQLServer/feedback/details/1521405/), [Microsoft Connect item #2117853](https://connect.microsoft.com/SQLServer/feedback/details/2117853/), [Microsoft Connect item #2014256](https://connect.microsoft.com/SQLServer/feedback/details/2014256/), [Microsoft Connect item #2162218](https://connect.microsoft.com/SQLServer/feedback/details/2162218/), [Microsoft Connect item #2344551](https://connect.microsoft.com/SQLServer/feedback/details/2344551/), [Microsoft Connect item #1664436](https://connect.microsoft.com/SQLServer/feedback/details/1664436/), [Microsoft Connect item #2554043](https://connect.microsoft.com/SQLServer/feedback/details/2554043/), [Microsoft Connect item #2983216](https://connect.microsoft.com/SQLServer/feedback/details/2983216/), [Microsoft Connect item #2021706](https://connect.microsoft.com/SQLServer/feedback/details/2021706/)
-
-* Improvements in Database Engine Tuning Advisor (DTA) to support automatically reading a workload from the SQL Server Query Store.
-
-* Improvements in Database Engine Tuning Advisor (DTA) to display index recommendations for clustered columnstore indexes, non-clustered columnstore indexes, and rowstore indexes.
-
-* Support for sending Database Console (DBCC) commands using SQL Server Analysis Services PowerShell cmdlets.
-
-* Bug fix to view cleartext of decrypted AlwaysEncrypted large object (LOB) columns in SSMS.  
-*Linked customer bug requests:*   
-[Microsoft Connect item #2413024](https://connect.microsoft.com/SQLServer/feedback/details/2413024/cannot-view-cleartext-of-alwaysencrypted-lob-columns-in-ssms)
-
-* Bug fix in Always Encrypted dialog to fix crash when Windows visual styles aren't enabled (e.g. enabling high contrast display).
-
-* Bug fix for 'Method not found' error preventing connection to SQL Server instances.
-
-* Bug fix for SSMS crash when creating a partition function with datetime offset.
-
-* Bug fix to add remove Microsoft .NET 3.5 requirement for starting Distributed Replay administration tool (DReplay.exe).
-
-* Bug fix in Analysis Services Deployment wizard to support fully-qualified server names.
-
-* Bug fix in SSMS to display partitions in Analysis Services tabular models with a 2016 compatibility model.  
-*Linked customer bug requests:*   
-[Microsoft Connect item #2845053](https://connect.microsoft.com/SQLServer/feedback/details/2845053/ssms-cannot-display-partitions-in-tabular-models-in-2016-compatibility-level) 
-
-* Performance improvements and bug fixes in Analysis services tabular models, and SQL Server Shared Management Objects (SMO). 
-
-
----
-## ![download](../ssdt/media/download.png) [SSMS July 2016 hotfix update](http://go.microsoft.com/fwlink/?LinkID=822301)
-Generally available | Version number: 13.0.15600.2
-
-[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x40a)
-
-* **Bug fix in SSMS to enable missing right-click menu items**.  
-*Linked customer bug requests:*  
-[Microsoft Connect item #2883440](https://connect.microsoft.com/SQLServer/feedback/details/2883440/lost-table-design-and-edit-top-n-rows-in-tables-context-menu)  
-[Microsoft Connect item #2909644](https://connect.microsoft.com/SQLServer/feedback/details/2909644/ssms-2016-is-missing-edit-options-against-sql-express-2014)  
-[Microsoft Connect item #2924345](https://connect.microsoft.com/SQLServer/feedback/details/2924345/some-ssms-object-explorer-right-click-menu-options-missing-in-july-update)
-
----
-## SSMS July 2016 (install the July 2016 hotfix)
-Generally available | Version number: 13.0.15500.91
-
-* *Edit, July 5:* Improved support for SQL Server 2016 (1200 compatibility level) tabular databases in the Analysis Services Process dialog and the Analysis Services deployment wizard.
-
-* *Edit, July 5:* New option in SSMS 'query execution options' dialog to set 'XACT_ABORT'. This option is enabled by default in this release of SSMS and instructs SQL Server to roll back the entire transaction and abort the batch if a run-time error occurs.
-
-* Support for Azure SQL Data Warehouse in SSMS.
-
-* Significant updates to the SQL Server PowerShell module. This includes a new [SQL PowerShell module and new CMDLETs for Always Encrypted, SQL Agent, and SQL Error Logs](https://blogs.technet.microsoft.com/dataplatforminsider/2016/06/30/sql-powershell-july-2016-update).
-
-* Support for PowerShell script generation in the Always Encrypted wizard.
-
-* Significantly improved connection times to Azure SQL databases.
-
-* New "Backup to URL" dialog to support the creation of Azure storage credentials for SQL Server 2016 database backups. This dialog provides a more streamlined experience for storing database backups in an Azure storage account.
+    ```PUSHD "C:\ProgramData\Package Cache\FE948F0DAB52EB8CB5A740A77D8934B9E1A8E301\redist"```  
  
-* New Restore dialog to streamline restoring a SQL Server 2016 database backup from the Microsoft Azure storage service.
- 
-* Bug fix in SSMS query designer to allow adding tables to the designer if a user doesn’t have SELECT permissions on them.
+    ```vs_isoshell.exe /PromptRestart```
 
-* Bug fix to add IntelliSense support for 'TRY_CAST()', and 'TRY_CONVERT()' functions.  
-*Linked customer bug requests:*  
-[Microsoft Connect item #2453461](https://connect.microsoft.com/SQLServer/feedback/details/2453461/sql-server-2012-issue-with-try-cast).
+5.	Reinstall SSMS.
 
-* Bug fix in PowerShell module to enable loading of ‘SQLAS’ Analysis Services extension.  
-*Linked customer bug requests:*  
-[Microsoft Connect item #2544902](https://connect.microsoft.com/SQLServer/feedback/details/2544902/ssms-march-2016-refresh-sqlps-failed-to-load-the-sqlas-extension).
-
-* Bug fix in the SSMS editor window to allow drag-and-drop open of Sql files.  
-*Linked customer bug requests:*  
-[Microsoft Connect item #2690658](https://connect.microsoft.com/SQLServer/feedback/details/2690658/cannot-drag-sql-files-into-management-studios).
-
-* Bug fix in Profiler to fix Profiler crash when exiting.  
-*Linked customer bug requests:*  
-[Microsoft Connect item #2616550](https://connect.microsoft.com/SQLServer/feedback/details/2616550/sql-server-2016-rc2-profiler-version-13-0-1300-275-wont-close-after-trace-is-started-even-after-trace-is-stopped).  
-[Microsoft Connect item #2319968](https://connect.microsoft.com/SQLServer/Feedback/Details/2319968).
-
-* Bug fix in SSMS to prevent crash when trying to edit a join link in the SSMS table designer.  
-*Linked customer bug requests:*  
-[Microsoft Connect item #2721052](https://connect.microsoft.com/SQLServer/feedback/details/2721052/ssms-view-design-mode-right-click-on-join-crashes-ssms).
-
-* Bug fix in SSMS to enable database script generation for db_owner role members.  
-*Linked customer bug requests:*  
-[Microsoft Connect item #2869241](https://connect.microsoft.com/SQLServer/feedback/details/2869241/error-with-script-database-as-create-to-in-ssms-2008r2-and-ssms-2016-june).
-
-* Bug fix in SSMS editor to remove the delay in closing a query tab if the server has gone offline.  
-*Linked customer bug requests:*  
-[Microsoft Connect item #2656058](https://connect.microsoft.com/SQLServer/feedback/details/2656058/ssms-2014-2016-query-tab-takes-significantly-longer-to-close-if-the-instance-it-was-connected-to-is-now-offline).
-
-* Bug fix to enable Backup option in SQL Server Express databases. 
-*Linked customer bug requests:*  
-[Microsoft Connect item #2801910](https://connect.microsoft.com/SQLServer/feedback/details/2801910/ssms-2016-backup-option-not-appearing-in-tasks).  
-[Microsoft Connect item #2874434](https://connect.microsoft.com/SQLServer/feedback/details/2874434/backup-missing-from-tasks-context-menu-in-ssms-2016-when-you-are-connected-to-an-express-instance).
-
-* Bug fix in Analysis Services to correctly show the Data Feed provider for multi-dimensional Analysis Services models.
-
-----
-## ![download](../ssdt/media/download.png) [SSMS June 2016](http://go.microsoft.com/fwlink/?LinkID=799832)
-Generally available | Version number: 13.0.15000.23
-
-[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40a)
-
-* SSMS is generally available starting with the June 2016 release.
-
-* New quick find dialog in SSMS that is better integrated into the current document and allows searching via regular expressions. 
-*Linked customer bug requests:*  
-<https://connect.microsoft.com/SQLServer/feedback/details/2735513/quick-find-replace-in-ssms-2016-rc3/>
-
-* Improvements in SSMS installer to allow you to track installation progress and process exit codes for unattended installations via scripts.
-
-* Bug fix in SSMS context-sensitive F1 help to correctly display help documents and articles.
-
-* Bug fix in Query Data Store 'Regressed Queries' view that caused SSMS to crash when scrolling.
-
-* Bug fix in Excel Analysis Services OLEDB connector to allow connections from Excel 2016 to SQL Server Analysis Services.
-
-* Bug fix in SSMS Connection dialog to show the connection dialog on the same monitor as the main SSMS window in multi-monitor systems.  
-*Linked customer bug requests:*  
-<https://connect.microsoft.com/SQLServer/feedback/details/724909/connection-dialog-appears-off-screen/>
-<https://connect.microsoft.com/SQLServer/feedback/details/755689/sql-server-management-studio-connect-to-server-popup-dialog/>  
-<https://connect.microsoft.com/SQLServer/feedback/details/389165/sql-server-management-studio-gets-confused-dealing-with-multiple-displays/>
-
-* Bug fixes in Always Encrypted experience. Fixed bug where Always Encrypted menu option was not enabled correctly for Stretch databases. Also fixed bug in the Always Encrypted wizard where it was not properly using the SafeNet (Luna SA) HSM provider.
+6.	Upgrade to the [latest version of the Visual C++ 2015 Redistributable](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads) if you're not currently up to date.
 
 
 ## Additional Downloads  

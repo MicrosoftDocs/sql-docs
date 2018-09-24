@@ -70,7 +70,7 @@ To publish your new extension to Azure Data Studio:
 1. Add your extension to https://github.com/Microsoft/azuredatastudio/blob/release/extensions/extensionsGallery.json
 2. We currently don't have support to host third party extensions, so instead of downloading the extension, Azure Data Studio has the option to browse to a download page. To set a download page for your extension, set the value of asset "Microsoft.AzureDataStudio.DownloadPage".
 3. Create a PR against release/extensions branch.
-4. Send a review request to llali.
+4. Send a review request to the team.
 
 Your extension will be reviewed and added to the extension gallery.
 

@@ -13,6 +13,7 @@ ms.topic: conceptual
 author: "yualan"
 ms.author: "alayu"
 manager: craigg
+monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
 # SQL Server 2019 extension (preview)
 

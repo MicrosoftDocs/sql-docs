@@ -1,7 +1,7 @@
 ---
 title: "Pages and Extents Architecture Guide | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/21/2016"
+ms.date: "09/23/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.component: "relational-databases-misc"
@@ -68,14 +68,19 @@ This is done whenever an insert or update operation increases the total size of 
 
 Extents are the basic unit in which space is managed. An extent is eight physically contiguous pages, or 64 KB. This means SQL Server databases have 16 extents per megabyte.
 
-To make its space allocation efficient, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] does not allocate whole extents to tables with small amounts of data. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] has two types of extents: 
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] has two types of extents: 
 
 * **Uniform** extents are owned by a single object; all eight pages in the extent can only be used by the owning object.
 * **Mixed** extents are shared by up to eight objects. Each of the eight pages in the extent can be owned by a different object.
 
-A new table or index is generally allocated pages from mixed extents. When the table or index grows to the point that it has eight pages, it then switches to use uniform extents for subsequent allocations. If you create an index on an existing table that has enough rows to generate eight pages in the index, all allocations to the index are in uniform extents.
+Up to, and including, [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] does not allocate whole extents to tables with small amounts of data. A new table or index is generally allocated pages from mixed extents. When the table or index grows to the point that it has eight pages, it then switches to use uniform extents for subsequent allocations. If you create an index on an existing table that has enough rows to generate eight pages in the index, all allocations to the index are in uniform extents. However, starting with [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], the default for all allocations in the database to use uniform extents.
 
 ![extents](../relational-databases/media/extents.gif)
+
+> [!NOTE]
+> Up to, and including, [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], trace flag 1118 can be used to change the default allocation to always use uniform extents. For more information about this trace flag, see [DBCC TRACEON - Trace Flags](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).   
+>   
+> Starting with [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], the functionality provided by TF 1118 is automatically enabled for TempDB. For user databases, this behavior is controlled by the `SET MIXED_PAGE_ALLOCATION` option of `ALTER DATABASE`, with the default value set to OFF, and trace flag 1118 has no effect. For more information, see [ALTER DATABASE SET Options (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-set-options.md).
 
 ## Managing Extent Allocations and Free Space 
 

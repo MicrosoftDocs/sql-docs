@@ -6,6 +6,8 @@
     href: what-s-new-in-sql-server-2016.md
   - name: What's New in SQL Server 2017
     href: what-s-new-in-sql-server-2017.md
+  - name: What's New in SQL Server 2019
+    href: what-s-new-in-sql-server-ver15.md
   - name: Editions and supported features of SQL Server 2016
     href: editions-and-components-of-sql-server-2016.md
   - name: Editions and supported features of SQL Server 2017
@@ -20,6 +22,8 @@
     href: sql-server-customer-feedback.md
 - name: Release Notes
   items:
+  - name: SQL Server 2019 Notes
+    href: sql-server-ver15-release-notes.md
   - name: SQL Server 2017 Notes
     href: sql-server-2017-release-notes.md
   - name: SQL Server 2016 Notes

@@ -32,6 +32,9 @@ manager: craigg
   
  [fn_virtualfilestats](../../relational-databases/system-functions/sys-fn-virtualfilestats-transact-sql.md)  
   
- [fn_virtualfileservermodes](../../relational-databases/system-functions/sys-fn-virtualservernodes-transact-sql.md)  
+ [fn_virtualfileservermodes](../../relational-databases/system-functions/sys-fn-virtualservernodes-transact-sql.md) 
+
+ [fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md) 
+ 
   
   

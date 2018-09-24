@@ -300,7 +300,8 @@ This section describes the permissions that [!INCLUDE[ssNoVersion](../../include
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client:**|**Log on as a service** (SeServiceLogonRight)|  
 |**PolyBase Engine and DMS**| **Log on as a service** (SeServiceLogonRight)  |   
 |**Launchpad:**|**Log on as a service** (SeServiceLogonRight) <br /><br /> **Replace a process-level token** (SeAssignPrimaryTokenPrivilege)<br /><br />**Bypass traverse checking** (SeChangeNotifyPrivilege)<br /><br />**Adjust memory quotas for a process** (SeIncreaseQuotaPrivilege)|     
-|**R Services:** **SQLRUserGroup**  |**Allow Log on locally** |   
+|**R Services:** **SQLRUserGroup** (SQL 2016 and 2017)  |**Allow Log on locally** |   
+|**Machine Learning** '**All Application Packages' [AppContainer]** (SQL 2019)  |**Read and execute permissions** to the SQL Server 'Binn', R_Services, and PYTHON_Services directories |   
 
  \*The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service is disabled on instances of [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)].  
   

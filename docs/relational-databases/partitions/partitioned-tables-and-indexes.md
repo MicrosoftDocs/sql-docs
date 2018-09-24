@@ -41,37 +41,37 @@ When [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] performs data sor
 In addition, you can improve performance by enabling lock escalation at the partition level instead of a whole table. This can reduce lock contention on the table. To reduce lock contention by allowing lock escalation to the partition, set the `LOCK_ESCALATION` option of the `ALTER TABLE` statement to AUTO. 
   
 ## Components and Concepts  
- The following terms are applicable to table and index partitioning.  
+The following terms are applicable to table and index partitioning.  
   
- **Partition function**  
- A database object that defines how the rows of a table or index are mapped to a set of partitions based on the values of certain column, called a partitioning column. That is, the partition function defines the number of partitions that the table will have and how the boundaries of the partitions are defined. For example, given a table that contains sales order data, you may want to partition the table into twelve (monthly) partitions based on a **datetime** column such as a sales date.  
+### Partition function  
+A database object that defines how the rows of a table or index are mapped to a set of partitions based on the values of certain column, called a partitioning column. That is, the partition function defines the number of partitions that the table will have and how the boundaries of the partitions are defined. For example, given a table that contains sales order data, you may want to partition the table into twelve (monthly) partitions based on a **datetime** column such as a sales date.  
   
- **Partition scheme**  
- A database object that maps the partitions of a partition function to a set of filegroups. The primary reason for placing your partitions on separate filegroups is to make sure that you can independently perform backup operations on partitions. This is because you can perform backups on individual filegroups.  
+### Partition scheme 
+A database object that maps the partitions of a partition function to a set of filegroups. The primary reason for placing your partitions on separate filegroups is to make sure that you can independently perform backup operations on partitions. This is because you can perform backups on individual filegroups.  
   
- **Partitioning column**  
- The column of a table or index that a partition function uses to partition the table or index. Computed columns that participate in a partition function must be explicitly marked PERSISTED. All data types that are valid for use as index columns can be used as a partitioning column, except **timestamp**. The **ntext**, **text**, **image**, **xml**, **varchar(max)**, **nvarchar(max)**, or **varbinary(max)** data types cannot be specified. Also, Microsoft .NET Framework common language runtime (CLR) user-defined type and alias data type columns cannot be specified.  
+### Partitioning column  
+The column of a table or index that a partition function uses to partition the table or index. Computed columns that participate in a partition function must be explicitly marked PERSISTED. All data types that are valid for use as index columns can be used as a partitioning column, except **timestamp**. The **ntext**, **text**, **image**, **xml**, **varchar(max)**, **nvarchar(max)**, or **varbinary(max)** data types cannot be specified. Also, Microsoft .NET Framework common language runtime (CLR) user-defined type and alias data type columns cannot be specified.  
   
- **Aligned index**  
- An index that is built on the same partition scheme as its corresponding table. When a table and its indexes are in alignment, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can switch partitions quickly and efficiently while maintaining the partition structure of both the table and its indexes. An index does not have to participate in the same named partition function to be aligned with its base table. However, the partition function of the index and the base table must be essentially the same, in that:
+### Aligned index  
+An index that is built on the same partition scheme as its corresponding table. When a table and its indexes are in alignment, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can switch partitions quickly and efficiently while maintaining the partition structure of both the table and its indexes. An index does not have to participate in the same named partition function to be aligned with its base table. However, the partition function of the index and the base table must be essentially the same, in that:
  1. The arguments of the partition functions have the same data type.
  2. They define the same number of partitions.
  3. They define the same boundary values for partitions.  
-  
- **Non-aligned index**  
- An index partitioned independently from its corresponding table. That is, the index has a different partition scheme or is placed on a separate filegroup from the base table. Designing an non-aligned partitioned index can be useful in the following cases:  
+
+#### Partitioning Clustered Indexes
+When partitioning a clustered index, the clustering key must contain the partitioning column. When partitioning a nonunique clustered index, and the partitioning column is not explicitly specified in the clustering key, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] adds the partitioning column by default to the list of clustered index keys. If the clustered index is unique, you must explicitly specify that the clustered index key contain the partitioning column.        
+
+#### Partitioning NonClustered Indexes
+When partitioning a unique nonclustered index, the index key must contain the partitioning column. When partitioning a nonunique, nonclustered index, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] adds the partitioning column by default as a nonkey (included) column of the index to make sure the index is aligned with the base table. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not add the partitioning column to the index if it is already present in the index. 
+
+### Non-aligned index  
+An index partitioned independently from its corresponding table. That is, the index has a different partition scheme or is placed on a separate filegroup from the base table. Designing an non-aligned partitioned index can be useful in the following cases:  
 -   The base table has not been partitioned.  
 -   The index key is unique and it does not contain the partitioning column of the table.  
 -   You want the base table to participate in collocated joins with more tables using different join columns.  
 
- **Partition elimination**
- The process by which the query optimizer accesses only the relevant partitions to satisfy the filter criteria of the query.  
-
-## Partitioning Clustered Indexes
-When partitioning a clustered index, the clustering key must contain the partitioning column. When partitioning a nonunique clustered index, and the partitioning column is not explicitly specified in the clustering key, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] adds the partitioning column by default to the list of clustered index keys. If the clustered index is unique, you must explicitly specify that the clustered index key contain the partitioning column.        
-
-## Partitioning NonClustered Indexes
-When partitioning a unique nonclustered index, the index key must contain the partitioning column. When partitioning a nonunique, nonclustered index, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] adds the partitioning column by default as a nonkey (included) column of the index to make sure the index is aligned with the base table. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not add the partitioning column to the index if it is already present in the index.    
+### Partition elimination
+The process by which the query optimizer accesses only the relevant partitions to satisfy the filter criteria of the query.  
 
 ## Performance Guidelines  
  The new, higher limit of 15,000 partitions affects memory, partitioned index operations, DBCC commands, and queries. This section describes the performance implications of increasing the number of partitions above 1,000 and provides workarounds as needed. With the limit on the maximum number of partitions being increased to 15,000, you can store data for a longer time. However, you should retain data only for as long as it is needed and maintain a balance between performance and number of partitions.  

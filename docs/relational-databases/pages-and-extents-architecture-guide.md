@@ -115,7 +115,7 @@ This causes simple extent management algorithms.
 -   To find a mixed extent with free pages, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] searches the SGAM for a 1 bit. 
 -   To allocate a mixed extent, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] searches the GAM for a 1 bit, sets it to 0, and then also sets the corresponding bit in the SGAM to 1. 
 -   To deallocate an extent, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] makes sure that the GAM bit is set to 1 and the SGAM bit is set to 0. 
-The algorithms that are actually used internally by the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] are more sophisticated than what is described in this topic, because the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] distributes data evenly in a database. However, even the real algorithms are simplified by not having to manage chains of extent allocation information.
+The algorithms that are actually used internally by the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] are more sophisticated than what is described in this article, because the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] distributes data evenly in a database. However, even the real algorithms are simplified by not having to manage chains of extent allocation information.
 
 ### Tracking free space
 
@@ -123,7 +123,7 @@ The algorithms that are actually used internally by the [!INCLUDE[ssDEnoversion]
 
 After an extent has been allocated to an object, the Database Engine uses the PFS pages to record which pages in the extent are allocated or free. This information is used when the Database Engine has to allocate a new page. The amount of free space in a page is only maintained for heap and Text/Image pages. It is used when the Database Engine has to find a page with free space available to hold a newly inserted row. Indexes do not require that the page free space be tracked, because the point at which to insert a new row is set by the index key values.
 
-A PFS page is the first page after the file header page in a data file (page id 1). This is followed by a GAM page (page id 2), and then an SGAM page (page id 3). There is a new PFS page approximately 8,000 pages after the first PFS page, and additional PFS pages in subsequent 8,000 page intervals. There is another GAM page 64,000 extents after the first GAM page on page 2, another SGAM page 64,000 extents after the first SGAM page on page 3, and additional GAM and SGAM pages in subsequent 64,000 extent intervals. The following illustration shows the sequence of pages used by the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] to allocate and manage extents.
+A PFS page is the first page after the file header page in a data file (page ID 1). This is followed by a GAM page (page ID 2), and then an SGAM page (page ID 3). There is a new PFS page approximately 8,000 pages after the first PFS page, and additional PFS pages in subsequent 8,000 page intervals. There is another GAM page 64,000 extents after the first GAM page on page 2, another SGAM page 64,000 extents after the first SGAM page on page 3, and additional GAM and SGAM pages in subsequent 64,000 extent intervals. The following illustration shows the sequence of pages used by the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] to allocate and manage extents.
 
 ![manage_extents](../relational-databases/media/manage-extents.gif)
 

@@ -26,6 +26,8 @@ manager: kenvh
 
 Data Classification for Azure SQL Database and SQL Server, for more information see [Data Classification](../data-classification.md)
 
+Support for UTF-8 server encoding
+
 [Bug fixes](../bug-fixes.md)
 
 ## What's New in the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Windows

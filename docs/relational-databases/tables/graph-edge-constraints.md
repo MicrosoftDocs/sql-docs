@@ -22,7 +22,7 @@ ms.author: "shkale"
 manager: craigg
 monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Primary and Foreign Key Constraints
+# Edge Constraints
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx.md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
   Edge constraints can be used to enforce data integrity and  specific semantics on the edge tables in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] graph database. 
@@ -36,9 +36,9 @@ This article contains the following sections.
 [Related Tasks](../../relational-databases/tables/graph-edge-constraints.md#Tasks)  
   
 ##  <a name="Connection"></a> Edge Constraints
- In [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)] and Azure SQL Database, edge tables did not enforce anything for the endpoints of the edge. That is, an edge in a graph database could connect any node to any other node, regardless of the type. An edge could also be inserted using non-existent node IDs. 
+ In the first release of graph features, edge tables did not enforce anything for the endpoints of the edge. That is, an edge in a graph database could connect any node to any other node, regardless of the type. 
 
- [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx.md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)] introduces constraints, which enable users to add constraints to their edge tables, thereby enforcing specific semantics and also maintaining data integrity. When a new edge is added to an edge table with edge constraints, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] enforces that the nodes which the edge is trying to connect, exist in the proper node tables. It is also ensured that a node cannot be dropped, if it is still referenced by an edge. 
+ This release introduces edge constraints, which enable users to add constraints to their edge tables, thereby enforcing specific semantics and also maintaining data integrity. When a new edge is added to an edge table with edge constraints, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] enforces that the nodes which the edge is trying to connect, exist in the proper node tables. It is also ensured that a node cannot be dropped, if it is still referenced by an edge. 
 
  ### Edge Constraint Clauses
  Each edge constraint consists of one or more edge constraint clause(s). An edge constraint clause is the pair of FROM and TO nodes that the given edge could connect. 

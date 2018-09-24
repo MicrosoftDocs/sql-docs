@@ -14,11 +14,11 @@ manager: cgronlun
 # Real-time scoring with sp_rxPredict in SQL Server machine learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Real-time scoring uses the CLR extension capabilities in SQL Server for high-performance predictions or scores in forecasting workloads. Because real-time scoring is language-agnostic, it executes with no dependencies on R or Python run times. Assuming a model created from Microsoft functions, trained, and serialized to a binary format in SQL Server, you can use real-time scoring to generate predicted outcomes on new data inputs on SQL Server instances that do not have the R or Python add-on features installed.
+Real-time scoring uses the [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) system stored procedure and the CLR extension capabilities in SQL Server for high-performance predictions or scores in forecasting workloads. Real-time scoring is language-agnostic and executes with no dependencies on R or Python run times. Assuming a model created and trained using Microsoft functions, and then serialized to a binary format in SQL Server, you can use real-time scoring to generate predicted outcomes on new data inputs on SQL Server instances that do not have the R or Python add-on installed.
 
 ## How real-time scoring works
 
-Real-time scoring is supported in both SQL Server 2017 and SQL Server 2016, on specific model types based on RevoScaleR or MicrosoftML functions such as  [rxLinMod (RevoScaleR)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod) or [rxNeuralNet (MicrosoftML)](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet). It uses native C++ libraries to generate scores, based on user input provided to a machine learning model stored in a special binary format.
+Real-time scoring is supported in both SQL Server 2017 and SQL Server 2016, on [supported model types](#bkmk_py_supported_algos) for linear and logistic regression and decision tree modeling. It uses native C++ libraries to generate scores, based on user input provided to a machine learning model stored in a special binary format.
 
 Because a trained model can be used for scoring without having to call an external language runtime, the overhead of multiple processes is reduced. This supports much faster prediction performance for production scoring scenarios. Because the data never leaves SQL Server, results can be generated and inserted into a new table without any data translation between R and SQL.
 
@@ -26,8 +26,8 @@ Real-time scoring is a multi-step process:
 
 1. The stored procedure that does scoring must be enabled on a per-database basis.
 2. You load the pre-trained model in binary format.
-3. You provide new input data, either tabular or single rows, as input to the model.
-4. To generate scores, call the sp_rxPredict stored procedure.
+3. You provide new input data to be scored, either tabular or single rows, as input to the model.
+4. To generate scores, call the [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) stored procedure.
 
 > [!TIP]
 > For an example of real-time scoring in action, see [End to End Loan ChargeOff Prediction Built Using Azure HDInsight Spark Clusters and SQL Server 2016 R Service](https://blogs.msdn.microsoft.com/rserver/2017/06/29/end-to-end-loan-chargeoff-prediction-built-using-azure-hdinsight-spark-clusters-and-sql-server-2016-r-service/)
@@ -41,6 +41,8 @@ Real-time scoring is a multi-step process:
 + The model must be trained in advance using one of the supported **rx** algorithms. For R, real-time scoring with `sp_rxPredict` works with [RevoScaleR and MicrosoftML supported algorithms](#bkmk_rt_supported_algos). For Python, see [revoscalepy and microsoftml supported algorithms](#bkmk_py_supported_algos)
 
 + Serialize the model using [rxSerialize](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) for R, and [rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model) for Python. These serialization functions have been optimized to support fast scoring.
+
++ Save the model to the database engine instance from which you want to call it. This instance is not required to have the R or Python runtime extension.
 
 > [!Note]
 > Real-time scoring is currently optimized for fast predictions on smaller data sets, ranging from a few rows to hundreds of thousands of rows. On big datasets, using [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) might be faster.

@@ -48,7 +48,7 @@ Release number: 18.0<br>
 Build number: 15.0.18040.0<br>
 Release date: September 24, 2018
 
-This is a preview product! If you have comments or suggestions, or you want to report issues, the best way to reach out to the SSMS Team is at [UserVoice](https://aka.ms/sqlfeedback). Please refrain from adding comments at the bottom of this page. Thanks for helping make SSMS better.
+If you have comments or suggestions, or you want to report issues, the best way to reach out to the SSMS Team is at [UserVoice](https://aka.ms/sqlfeedback). SSMS 18.0 is a preview product. Please refrain from adding comments at the bottom of this page!
 
 The SSMS 18.x installation does not upgrade or replace SSMS versions 17.x or earlier. SSMS 18.x installs side by side with previous versions so both versions are available for use.
 
@@ -149,4 +149,4 @@ SSIS
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
 
 
-The best way to reach out to the SSMS Team is at [UserVoice](https://aka.ms/sqlfeedback).
+If you have comments or suggestions, or you want to report issues, the best way to reach out to the SSMS Team is at [UserVoice](https://aka.ms/sqlfeedback). SSMS 18.0 is a preview product. Please refrain from adding comments at the bottom of this page!

@@ -23,7 +23,7 @@ Package location of the R, Python, and Java extensions are in the SQL Server Lin
 
 ## Prerequisites
 
-+ Linux operating system must be [supported by SQL Server](sql-server-linux-release-notes.md#supported-platforms), running on premises or in a Docker container.
++ Linux operating system must be [supported by SQL Server](sql-server-linux-release-notes-2019.md#supported-platforms), running on premises or in a Docker container.
 
 + You must have a SQL Server 2019 Database Engine instance on: 
 
@@ -69,7 +69,7 @@ zypper ar -f https://packages.microsoft.com/sles/12/prod packages-microsoft-com
 
 ## Package list
 
-On an internet-connected device, packages are downloaded and installed independently of the database engine using the package installer for each operating system. The following table describes all available packages, but you only need *one* R or Python package to get a specific combination of features.
+On an internet-connected device, packages are downloaded and installed independently of the database engine using the package installer for each operating system. The following table describes all available packages, but for internet-connected installs, you only need *one* R or Python package to get a specific combination of features.
 
 | Package name | Applies-to | Description |
 |--------------|----------|-------------|
@@ -87,7 +87,7 @@ On an internet-connected device, packages are downloaded and installed independe
 
 <a name="RHEL"></a>
 
-## RHEL/CentOS commands
+## RHEL commands
 
 Install any *one* R package, plus any *one* Python package, and Java if you want that capability. Each R and Python package includes a bundle of features. Choose the package that provides the feature set you need. Dependent packages are included automatically.
 
@@ -263,56 +263,91 @@ GO
 
 ## Chained installation
 
-You can install and configure the database engine and Machine Learning Services in one procedure by appending the extensibility, R, or Python packages and EULA parameters on a command that installs the database engine. 
+You can install and configure the database engine and Machine Learning Services in one procedure by appending R, Python, or Java packages and parameters on a command that installs the database engine. 
 
-<!--
-The following example is a "template" illustration using the Yum package manager of what a combined package installation looks like:
-
-```bash
-sudo yum install -y mssql-sqlserver mssql-server-extensibility mssql-server-extensibility-java mssql-mlservices-mlm-py mssql-mlservices-mlm-r
-```
-Use the mssql-conf tool to configure the entire installation. EULAs for open-source R and Python components are detected automatically, and you are prompted to accept them, along with the EULA for SQL Server.
+The following example is a "template" illustration of what a combined package installation looks like using the Yum package manager:
 
 ```bash
-sudo MSSQL_PID=Developer ACCEPT_EULA=Y MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>'
+sudo yum install -y mssql-sqlserver mssql-server-extensibility-java 
 ```
--->
+
+The example installs the database engine and adds the Java language extension, which pulls in the extensibility framework package as a dependency. All of the packages used in this example are found at the same path. If you were adding R packages, registration for microsoft-r-open package repository would be required.
+
+Post-installation, remember to use the mssql-conf tool to configure the entire installation and accept licensing agreements. Unaccepted EULAs for open-source R and Python components are detected automatically, and you are prompted to accept them, along with the EULA for SQL Server.
+
+```bash
+sudo /opt/mssql/bin/mssql-conf setup MSSQL_PID=Developer 
+```
 
 ## Unattended installation
 
 Using the [unattended install](https://docs.microsoft.com/sql/linux/sql-server-linux-setup?view=sql-server-2017#unattended) for the Database Engine, add the packages for mssql-mlservices and EULAs.
 
-Recall that Setup or the mssql-conf tool prompts for license agreement acceptance. For open-source R and Python components, accepting the mssql-mlservices EULA supplement for is required for uninterrupted installation for mssql-mlservices packages. This is in addition to the SQL Server EULA. 
+Recall that Setup or the mssql-conf tool prompts for license agreement acceptance. If you already configured SQL Server database engine and accepted its EULA, use one of the mlservices-specific EULA parameters for the open-source R and Python distributions:
+
+```bash
+sudo /opt/mssql/bin/mssql-conf setup accept-eula-ml
+```
 
 All possible permutations of EULA acceptance are documented in [Configure SQL Server on Linux with the mssql-conf tool](sql-server-linux-configure-mssql-conf.md#mlservices-eula).
 
 ## Offline installation
 
-> [!NOTE]
-> Download links for package file names are not available at this time. Check back in a few days for links.  
+Follow the [Offline installation](sql-server-linux-setup.md#offline) instructions for steps on installing the packages. Find your download site, and then download specific packages using the package list below.
 
-Follow the [Offline installation](sql-server-linux-setup.md#offline) instructions for installing the packages.
+#### Download site
 
-R, Python, and Java package file names for a full install on RHEL or SUSE:
+You can download packages from [https://packages.microsoft.com/](https://packages.microsoft.com/). All of the mlservices packages for R, Python, and Java are co-located with database engine package. Base version for the mlservices packages is 9.4.5. The micrososoft-r-open packages are in a different folder.
+
+#### RHEL/7 paths
+
+|||
+|--|----|
+| mssql/mlservices packages | [https://packages.microsoft.com/rhel/7/mssql-server-preview/](https://packages.microsoft.com/rhel/7/mssql-server-preview/) |
+| microsoft-r-open packages | [https://packages.microsoft.com/rhel/7/prod/](https://packages.microsoft.com/rhel/7/prod/) | 
+
+
+#### Ubuntu/16.04 paths
+
+|||
+|--|----|
+| mssql/mlservices packages | [https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/) |
+| microsoft-r-open packages | [https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/) | 
+
+#### SLES/12 paths
+
+|||
+|--|----|
+| mssql/mlservices packages | [ https://packages.microsoft.com/sles/12/mssql-server-preview/](https://packages.microsoft.com/sles/12/mssql-server-preview/) |
+| microsoft-r-open packages | [https://packages.microsoft.com/sles/12/prod/](https://packages.microsoft.com/sles/12/prod/) | 
+
+#### Package list
+
+Depending on which extensions you want to use, download the packages necessary for a specific language. Exact filenames include platform information, but the file names below should be close enough for you to determine which files to get.
 
 ```
-microsoft-openmpi-3.0.0-x86_64.rpm
-mssql-server-extensibility-15.0.1000.xxxx-y.x86_64.rpm
-mssql-server-extensibility-java-15.0.1000.xxxx-y.x86_64.rpm
-mssql-mlservices-mlm-py-9.4.5.x86_64.rpm
-mssql-mlservices-mlm-r-9.4.5.x86_64.rpm
-mssql-mlservices-python-9.4.5.x86_64.rpm
-```
+# Core packages 
+mssql-server-15.0.1000
+mssql-server-extensibility-15.0.1000
 
-Equivalent files for Ubuntu:
+# Java
+mssql-server-extensibility-java-15.0.1000
 
-```
-microsoft-openmpi_3.0.0-1_amd64.deb
-mssql-server-extensibility-15.0.1000.xxxx-y_amd64.deb
-mssql-server-extensibility-java-15.0.1000.xxxx-y_amd64.deb
-mssql-mlservices-mlm-r_9.4.5.19_amd64.deb
-mssql-mlservices-mlm-py_9.4.5.19_amd64.deb
-mssql-mlservices-python_9.4.5.19_amd64.deb
+# R
+microsoft-openmpi-3.0.0
+microsoft-r-open-foreachiterators-3.4.4
+microsoft-r-open-mkl-3.4.4
+microsoft-r-open-mro-3.4.4
+mssql-mlservices-packages-r-9.4.5
+mssql-mlservices-mlm-r-9.4.5
+mssql-mlservices-mml-r-9.4.5
+
+# Python
+microsoft-openmpi-3.0.0
+mssql-mlservices-python-9.4.5
+mssql-mlservices-packages-py-9.4.5
+mssql-mlservices-mlm-py-9.4.5
+mssql-mlservices-mml-py-9.4.5 
 ```
 
 ## Add more R/Python packages 
@@ -337,7 +372,7 @@ You can install other R and Python packages and use them in script that executes
    ```r
    # sudo /opt/mssql/mlservices/bin/R/R CMD INSTALL -l /opt/mssql/mlservices/libraries/RServer glue_1.1.1.tar.gz 
    ```
-  
+
 3. Import the R package in [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
    ```r
@@ -353,7 +388,7 @@ You can install other R and Python packages and use them in script that executes
    ```python
    # sudo /opt/mssql/mlservices/bin/python/python -m pip install httpie 
    ``` 
-     
+
 2. Import the Python package in [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
  
    ```python

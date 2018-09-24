@@ -25,14 +25,14 @@ See an example of the of the end-to-end deployment in [this tutorial](tutorial-s
 
 To fail over an availability group primary replica to a different node in Kubernetes, use a job. This article identifies the environment variables for this job.
 
-The following example of a manifest file describes a job to manually fail over job for an availability group on a Kubernetes replica. Copy the contents of the example into a new file called `ag-failover.yaml`.
+The following example of a manifest file describes a job to manually fail over job for an availability group on a Kubernetes replica. Copy the contents of the example into a new file called `failover.yaml`.
 
-[ag-failover.yaml](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Linux/k8s-config)
+[failover.yaml](https://github.com/Microsoft/sql-server-samples/blob/master/samples/features/high%20availability/Kubernetes/sample-deployment-script/templates/failover.yaml)
 
 To deploy the job, use `Kubectl`.
 
 ```azurecli
-kubectl apply -f ag-failover.yaml
+kubectl apply -f failover.yaml
 ```
 
 When you apply manifest file, Kubernetes runs the job. When the job runs, the supervisor elects a new leader and moves the primary replica to the SQL Server instance of the leader.
@@ -43,7 +43,7 @@ After you run the job, delete it. The job object in Kubernetes remains after com
 
 Rotate the credentials to update the SA and the master key.
 
-Copy the [rotate-creds.yaml](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Linux/k8s-config) locally use `kubectl` to apply it to your cluster.
+Copy the [rotate-creds.yaml](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-deployment-script) locally use `kubectl` to apply it to your cluster.
 
 ```azurecli
 kubectl apply -f rotate-creds.yaml

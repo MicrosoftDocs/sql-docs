@@ -159,9 +159,8 @@ CROSS APPLY
 GO
 ```
 
-The below query provides information about unused views by using the DMV [sys.dmv_exec_cached_plans](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql). 
+The final query provides information about unused views by using the DMV [sys.dmv_exec_cached_plans](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql). However, the execution plan cache is dynamic, and results can vary. As such, use this query over time to determine whether or not a view is actually being used or not. 
 
-The last query provides information about unused views, pay close attention to data mining, is based on the DMV [sys.dm _ _exec_cached_plans](https://docs.microsoft.com/it-it/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql) that is prone to fluctuate within the plan cache execution plans. If a view isn't in cache when executed the query, it's said that that view is to delete. If you're concerned that your cache is fairly representative of your workload, keep simply account. In the next controls, the view will always be present, you can evaluate to other investigations.
 
 ```SQL
 SELECT

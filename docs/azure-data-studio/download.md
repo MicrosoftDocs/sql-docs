@@ -45,14 +45,14 @@ This release of [!INCLUDE[name-sos](../includes/name-sos-short.md)] includes a s
 
 1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip for Windows](https://go.microsoft.com/fwlink/?linkid=2024680).
 2. Browse to the downloaded file and extract it.
-3. Run `\sqlops-windows\sqlops.exe`
+3. Run `\azuredatastudio-windows\azuredatastudio.exe`
 
 
 ## Get Azure Data Studio for macOS
 
 1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for macOS](https://go.microsoft.com/fwlink/?linkid=2024677).
 2. To expand the contents of the zip, double-click it.
-3. To make [!INCLUDE[name-sos](../includes/name-sos-short.md)] available in the *Launchpad*, drag *sqlops.app* to the *Applications* folder.
+3. To make [!INCLUDE[name-sos](../includes/name-sos-short.md)] available in the *Launchpad*, drag *Azure Data Studio.app* to the *Applications* folder.
 
 
 ## Get Azure Data Studio for Linux
@@ -66,7 +66,7 @@ This release of [!INCLUDE[name-sos](../includes/name-sos-short.md)] includes a s
    **Debian Installation:**
    ```bash
    cd ~
-   sudo dpkg -i ./Downloads/sqlops-linux-<version string>.deb
+   sudo dpkg -i ./Downloads/azuredatastudio-linux-<version string>.deb
 
    sqlops
    ```
@@ -74,7 +74,7 @@ This release of [!INCLUDE[name-sos](../includes/name-sos-short.md)] includes a s
    **rpm Installation:**
    ```bash
    cd ~
-   yum install ./Downloads/sqlops-linux-<version string>.rpm
+   yum install ./Downloads/azuredatastudio-linux-<version string>.rpm
 
    sqlops
    ```
@@ -82,11 +82,11 @@ This release of [!INCLUDE[name-sos](../includes/name-sos-short.md)] includes a s
    **tar.gz Installation:**
    ```bash 
    cd ~ 
-   cp ~/Downloads/sqlops-linux-<version string>.tar.gz ~ 
-   tar -xvf ~/sqlops-linux-<version string>.tar.gz 
-   echo 'export PATH="$PATH:~/sqlops-linux-x64"' >> ~/.bashrc
+   cp ~/Downloads/azuredatastudio-linux-<version string>.tar.gz ~ 
+   tar -xvf ~/azuredatastudio-linux-<version string>.tar.gz 
+   echo 'export PATH="$PATH:~/azuredatastudio-linux-x64"' >> ~/.bashrc
    source ~/.bashrc 
-   sqlops 
+   azuredatastudio 
    ``` 
 
    > [!NOTE]

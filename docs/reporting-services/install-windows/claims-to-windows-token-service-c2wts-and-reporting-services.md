@@ -29,7 +29,7 @@ The Report Viewer web part can be used to embed SQL Server Reporting Services na
 2. Follow steps from [Steps needed to configure c2WTS](https://docs.microsoft.com/en-us/sql/reporting-services/install-windows/claims-to-windows-token-service-c2wts-and-reporting-services?view=sql-server-2017#steps-needed-to-configure-c2wts)
  
 
-## SharePoint mode integaration
+## SharePoint mode integration
 
 **This section only applies to SQL Server 2016 Reporting Services and earlier.**
 
@@ -67,7 +67,7 @@ If your environment will use Kerberos constrained delegation, then the SharePoin
 
     * Right-click each service account and open the properties dialog. In the dialog click the **Delegation** tab.
 
-        The delegation tab is only visible if the object has a Service Prinicpal Name (SPN) assigned to it. C2WTS does not require an SPN on the C2WTS Account, however, without an SPN, the **Delegation** tab will not be visible. An alternative way to configure constrained delegation is to use a utility such as **ADSIEdit**.
+        The delegation tab is only visible if the object has a Service Principal Name (SPN) assigned to it. C2WTS does not require an SPN on the C2WTS Account, however, without an SPN, the **Delegation** tab will not be visible. An alternative way to configure constrained delegation is to use a utility such as **ADSIEdit**.
 
     * Key configuration options on the delegation tab are the following:
 

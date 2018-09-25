@@ -71,7 +71,7 @@ SSMS is not added to the PATH environment variable:
 
 Support for [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]
 
-- This is the first release of SSMS that is be fully *aware* of [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] (compatLevel 150, etc…).
+- This is the first release of SSMS that is fully *aware* of [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] (compatLevel 150, etc…).
 - Support "BATCH_STARTED_GROUP" and "BATCH_COMPLETED_GROUP" in [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] and SQL Database Managed Instance in SSMS.
 - GraphDB: Add flag in showplan for Graph TC Sequence.
 - Always Encrypted: Added support for [Always Encrypted with secure enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md).
@@ -84,7 +84,7 @@ Package IDs no longer needed to develop SSMS Extensions:
 Better Azure SQL support:
 
 - SLO/Edition/MaxSize database properties now accept custom names, making it easier to support future editions of Azure SQL Database.
-- Added support for recently added vCore SKUs (General Purpose and Business Critical): Gen4_24 and all the Gen5.
+- Added support for vCore SKUs (General Purpose and Business Critical): Gen4_24 and all the Gen5.
 
 SMO:
 
@@ -129,7 +129,7 @@ Always Encrypted:
 - Added an Always Encrypted tab with an *Enable Always Encrypted* checkbox (in the *Connect to Server* dialog) that now provides an easy way to enable/disable Always Encrypted for a database connection.
 - Several enhancements have been made to support Always Encrypted with secure enclaves:
   - A text field for specifying enclave attestation URL in the Connect to Server dialog (the new Always Encrypted tab).
-  - The new checkbox in the New Column Master Key dialog to control weather a new column master key allows enclave computations.
+  - The new checkbox in the New Column Master Key dialog to control whether a new column master key allows enclave computations.
   - Other Always Encrypted key management dialogs now expose the information on which column master keys allow enclave computations.
   - For details, see [Always Encrypted with secure enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md).
 
@@ -140,7 +140,7 @@ Crashes / Hangs:
 
 - Fixed a source of common SSMS crashes related to GDI objects
 - Fixed a common source of hangs and poor performance when selecting "Script as Create/Update/Drop" (removed unnecessary fetches of SMO objects)
-- Fixed a hang when connecting to an Azure SQL DB using MFA whike ADAL traces are enabled
+- Fixed a hang when connecting to an Azure SQL DB using MFA while ADAL traces are enabled
 - Fixed a hang (or perceived hang) in Live Query Statistics when invoked from Activity Monitor (the issue manifested when using SQL Server authentication with no "Persist Security Info" set).
 - Fixed a hang when selecting "Reports" in Object Explorer which could manifest on high latency connections or temporary non-accessibility of the resources.
 
@@ -191,7 +191,7 @@ Help Viewer:
 Object Scripting:
 
 - Overall perf improvements - Generate Scripts of WideWorldImporters takes half the time compared to SSMS 17.7.
-- When scripting objects, DB Scoped configuration which have default values are omitted.
+- When scripting objects, DB Scoped configuration which has default values are omitted.
 - Don't generate dynamic T-SQL when scripting (https://feedback.azure.com/forums/908035-sql-server/suggestions/32898391).
 - Omit the graph syntax "as edge" and "as node" when scripting a table on SQL Server 2016 and earlier.
 
@@ -232,7 +232,7 @@ Job Activity Monitor:
 		
 Managed Instance support in SSMS:
 
-- Improved/polished the support for Managed Instances: disabled unsupported options in UI and and a fix to the View Audit Logs option to handle URL audit target.
+- Improved/polished the support for Managed Instances: disabled unsupported options in UI and a fix to the View Audit Logs option to handle URL audit target.
 - "Generate and Publish scripts" wizard scripts unsupported CREATE DATABASE clauses.
 - Live Query Statistics was disabled for CL instances.
 - Database properties->Files was incorrectly scripting ALTER DB ADD FILE.
@@ -282,7 +282,7 @@ The following features are no longer available in SSMS:
 
 - Generate Scripts | Publish to Web Service removed. This (deprecated) feature was removed from the SSMS UI.
 
-- Removed node "Maintenance | Legacy" in Object Explorer. In Generate and Publish Scripts | Publish to Web Service option is removed. The *really old* "Database Maintenace Plan" and "SQL Mail" nodes won't be accessible anymore. The modern "Database Mail" and "Maintenance Plans" nodes will continue to work as usual.
+- Removed node "Maintenance | Legacy" in Object Explorer. In Generate and Publish Scripts | Publish to Web Service option is removed. The *really old* "Database Maintenance Plan" and "SQL Mail" nodes won't be accessible anymore. The modern "Database Mail" and "Maintenance Plans" nodes will continue to work as usual.
 
 ### Known issues
 
@@ -363,7 +363,7 @@ Azure SQL:
 
 Activity Monitor: 
 
-- Fixed a an issue that was causing "Live Query Statistics" to hang when launched from Activity Monitor and SQL Authentication was used. 
+- Fixed an issue that was causing "Live Query Statistics" to hang when launched from Activity Monitor and SQL Authentication was used. 
 
 Microsoft Azure integration: 
 
@@ -831,7 +831,7 @@ Fixed issue where SSMS was not allowing scripting for "Alter" or "Execute" on so
 	[Connect item 2845190](https://connect.microsoft.com/SQLServer/feedback/details/2845190), 
 	[Connect item 3123864](https://connect.microsoft.com/SQLServer/feedback/details/3123864).
 - Profiler: 
-   - Fixed issue were Profiler was not working when targeting SQL 2005.
+   - Fixed issue where Profiler was not working when targeting SQL 2005.
    - Fixed issue where Profiler was not honoring the "trust server certificate" connection option.
 - Activity Monitor: fixed an issue where Activity Monitor does not work when pointed at SQL Server running on Linux.
 - Fixed an issue with the SMO Transfer class where it wouldn’t transfer External Data Source or External File Format objects, objects of those types should now correctly be included in the transfer.
@@ -986,7 +986,7 @@ Fixed an issue where some CNG key store providers would not be displayed in the 
 - Fixed an issue in "Database Diagram" where SSMS was throwing an "Index was outside the bounds of the array" error; also, the user was not able to change the "Table View" to anything but standard. https://connect.microsoft.com/SQLServer/feedback/details/3133792 and http://connect.microsoft.com/SQLServer/feedback/details/3135326
 - Fixed an issue in "Backup/Restore to URL" where SSMS was not enumerating classic storage accounts.
 - Fixed an issue where an exception was being thrown when trying to add schema-bound securables to DB Roles. https://connect.microsoft.com/SQLServer/feedback/details/3118143
-- Fixed an issue were SSMS was intermittently showing the error "Data is Null. This method or property cannot be called on Null values." when expanding a table node http://connect.microsoft.com/SQLServer/feedback/details/3136283
+- Fixed an issue where SSMS was intermittently showing the error "Data is Null. This method or property cannot be called on Null values." when expanding a table node http://connect.microsoft.com/SQLServer/feedback/details/3136283
 - DTA: Fixed an issue where DTAEngine.exe terminates with Heap Corruption when evaluating Partition Function with Certain Boundary Values.
 
 
@@ -1149,7 +1149,7 @@ Fixed issue in AE wizard where the Azure Key Vault sign-in page was not showing 
 - Utility Control Point UI removed from SSMS.
 - AD Universal auth connections fail to query data after the initial token expiration.
 - Unable to script Rules from Azure SQL DB to Azure SQL DB.
-- Fixed issue were SQL PowerShell was not able to connect legacy SQL instances (2014 and older). [Connect Item](https://connect.microsoft.com/SQLServer/feedback/details/1138754/sql-server-sqlps-powershell-module-fails-connection-to-sql-2012-instance)
+- Fixed issue where SQL PowerShell was not able to connect legacy SQL instances (2014 and older). [Connect Item](https://connect.microsoft.com/SQLServer/feedback/details/1138754/sql-server-sqlps-powershell-module-fails-connection-to-sql-2012-instance)
 - Fixed an issue that was causing SSMS to crash when failing to import registered servers.
 - Fixed an issue that was causing SSMS to crash if a user has certain permissions an a database. 
 - SSMS - tables disappear from design surface while reviewing views. [Connect Item](https://connect.microsoft.com/SQLServer/feedback/details/2946125/ssms-tables-disappears-from-design-surface-while-reviewing-views) 

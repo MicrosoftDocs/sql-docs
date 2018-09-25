@@ -1,5 +1,5 @@
 ---
-title: "Use Dynamic Management Views (DMVs) to Monitor Analysis Services | Microsoft Docs"
+title: "Dynamic Management Views (DMVs) in Analysis Services | Microsoft Docs"
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,25 +10,49 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ---
-# Use Dynamic Management Views (DMVs) to Monitor Analysis Services
+# Dynamic Management Views (DMVs)
 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
 
-  Analysis Services Dynamic Management Views (DMV) are query structures that expose information about model objects, server operations, and server health. The query structure is an interface to *schema rowsets* that return metadata and monitoring information from a server instance.  
+Analysis Services Dynamic Management Views (DMV) are queries that return information about model objects, server operations, and server health. The query, based on SQL, is an interface to *schema rowsets*. Schema rowsets are predefined tables that contain information about Analysis Services objects and server state, including database schema, active sessions, connections, commands, and jobs that are executing on the server.
 
- DMV queries return information that may not be not available through other means. DMV queries are an alternative to running XML/A Discover commands. For most administrators, writing a DMV query is simpler because the query syntax is based on SQL. In addition, the result set is returned in a tabular format that is easier to read and copy from. 
+DMV queries are an alternative to running XML/A Discover commands. For most administrators, writing a DMV query is simpler because the syntax is based on SQL. In addition, the result is returned in a table format that is easier to read and copy. 
   
- Most DMV queries use a **SELECT** statement and the **$System** schema with an XML/A schema rowset, for example:  
+Most DMV queries use a **SELECT** statement and the **$System** schema with an XML/A schema rowset, for example:  
   
 ```  
 SELECT * FROM $System.<schemaRowset>  
 ```  
   
- DMV queries return information about server and object state at the time the query is run. To monitor operations in real time, use tracing instead. To learn more about real time monitoring using traces, see [Use SQL Server Profiler to Monitor Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md).  
+ DMV queries return information about server and object state at the time the query is run. To monitor operations in real-time, use tracing instead. To learn more about real-time monitoring using traces, see [Use SQL Server Profiler to Monitor Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md).  
+  
+## Query syntax
+
+The query engine for DMVs is the Data Mining parser. The DMV query syntax is based on the SELECT &#40;DMX&#41; statement. Although DMV query syntax is based on a SQL SELECT statement, it does not support the full syntax of a SELECT statement. Notably, JOIN, GROUP BY, LIKE, CAST, and CONVERT are not supported.  
+  
+```  
+SELECT [DISTINCT] [TOP <n>] <select list>  
+FROM $System.<schemaRowset>  
+[WHERE <condition expression>]  
+[ORDER BY <expression>[DESC|ASC]]  
+```  
+  
+The following example for DISCOVER_CALC_DEPENDENCY illustrates the use of the WHERE clause for supplying a parameter to the query:  
+  
+```  
+SELECT * FROM $System.DISCOVER_CALC_DEPENDENCY  
+WHERE OBJECT_TYPE = 'ACTIVE_RELATIONSHIP'  
+```  
+  
+For schema rowsets that have restrictions, the query must include the SYSTEMRESTRICTSCHEMA function. The following example returns CSDL metadata about 1103 compatibility level tabular models. Note that CATALOG_NAME is case-sensitive:  
+  
+```  
+Select * from SYSTEMRESTRICTSCHEMA ($System.Discover_csdl_metadata, [CATALOG_NAME] = 'Adventure Works DW')  
+```  
 
 ## Examples and scenarios
 
- A DMV query can help you answer questions about active sessions and connections, and which objects are consuming the most CPU or memory at a specific point in time. For example,
+A DMV query can help you answer questions about active sessions and connections, and which objects are consuming the most CPU or memory at a specific point in time. For example:
   
  `Select * from $System.discover_object_activity`  
 This query reports on object activity since the service last started. 
@@ -41,44 +65,21 @@ This query reports on active sessions, including session user and duration.
   
  `Select * from $System.discover_locks`   
 This query returns a snapshot of the locks used at a specific point in time.  
-  
-## Query syntax
 
- The query engine for DMVs is the Data Mining parser. The DMV query syntax is based on the SELECT &#40;DMX&#41; statement.  
-  
- Although DMV query syntax is based on a SQL SELECT statement, it does not support the full syntax of a SELECT statement. Notably, JOIN, GROUP BY, LIKE, CAST, and CONVERT are not supported.  
-  
-```  
-SELECT [DISTINCT] [TOP <n>] <select list>  
-FROM $System.<schemaRowset>  
-[WHERE <condition expression>]  
-[ORDER BY <expression>[DESC|ASC]]  
-```  
-  
- The following example for DISCOVER_CALC_DEPENDENCY illustrates the use of the WHERE clause for supplying a parameter to the query:  
-  
-```  
-SELECT * FROM $System.DISCOVER_CALC_DEPENDENCY  
-WHERE OBJECT_TYPE = 'ACTIVE_RELATIONSHIP'  
-```  
-  
- Alternatively, for schema rowsets that have restrictions, the query must include the SYSTEMRESTRICTSCHEMA function. The following example returns CSDL metadata about tabular models running on a tabular mode server. Note that CATALOG_NAME is case-sensitive:  
-  
-```  
-Select * from SYSTEMRESTRICTSCHEMA ($System.Discover_csdl_metadata, [CATALOG_NAME] = 'Adventure Works DW')  
-```  
-  
+
 ## Tools and permissions
 
- You must have server administrator permissions on the Analysis Services instance to query a DMV.  
+You can use any client application that supports MDX or DMX queries. In most cases, it's best to use SQL Server Management Studio. You must have server administrator permissions on the instance to query a DMV.  
   
- You can use any client application that supports MDX or DMX queries, including SQL Server Management Studio, a Reporting Services report, or a PerformancePoint Dashboard.  
-  
- To run a DMV query from SQL Server Management Studio, connect to the instance you want to query, click **New Query**. You can run a query from an MDX or a DMX query window.  
+ **To run a DMV query from SQL Server Management Studio**
+
+1. Connect to the server and model object you want to query. 
+2. Right-click the server or database object > **New Query** > **MDX**.
+3. Type your query, and then click **Execute**, or press F5.
   
 ## Schema rowsets
 
- Not all schema rowsets have a DMV interface. To return a list of all the schema rowsets that can be queried using DMV, run the following query.  
+Not all schema rowsets have a DMV interface. To return a list of all the schema rowsets that can be queried using DMV, run the following query.  
  
 ```  
 SELECT * FROM $System.DBSchema_Tables   
@@ -86,18 +87,15 @@ WHERE TABLE_TYPE = 'SCHEMA'
 ORDER BY TABLE_NAME ASC  
 ```  
   
-If a DMV is not available for a given rowset, the server returns the following error: `The <schemarowset> request type was not recognized by the server.` All other errors point to problems with the syntax.  
-
+If a DMV is not available for a given rowset, the server returns error: `The <schemarowset> request type was not recognized by the server.` All other errors indicate problems with the syntax.  
 
 Schema rowsets are described in two SQL Server Analysis Services protocols:   
 
-[MS-SSAS-T]: SQL Server Analysis Services Tabular Protocol - Describes schema rowsets for tabular models at the 1200 and higher compatibility levels.
+[[MS-SSAS-T]: SQL Server Analysis Services Tabular Protocol](https://msdn.microsoft.com/library/mt719260) - Describes schema rowsets for tabular models at the 1200 and higher compatibility levels.
 
-[MS-SSAS]: SQL Server Analysis Services Protocol - Describes schema rowsets for multidimensional models and tabular models at the 1100 and 1103 compatibility levels.
+[[MS-SSAS]: SQL Server Analysis Services Protocol](https://msdn.microsoft.com/library/ee320606) - Describes schema rowsets for multidimensional models and tabular models at the 1100 and 1103 compatibility levels.
 
-
-
-### Rowsets defined in the [[MS-SSAS-T]: SQL Server Analysis Services Tabular Protocol](https://msdn.microsoft.com/library/mt719260)
+### Rowsets defined in the [MS-SSAS-T]: SQL Server Analysis Services Tabular Protocol
 
 |Rowset  |Description  |
 |---------|---------|
@@ -130,7 +128,7 @@ Schema rowsets are described in two SQL Server Analysis Services protocols:
 |[TMSCHEMA_TABLES](https://msdn.microsoft.com/library/mt719250)     |   Provides information about the Table objects in the model.      |
 |[TMSCHEMA_VARIATIONS](https://msdn.microsoft.com/library/mt825008)|Provides information about the Variation objects in each column.|
 
-### Rowsets defined in the [[MS-SSAS]: SQL Server Analysis Services Protocol](https://msdn.microsoft.com/library/ee320606)
+### Rowsets defined in the [MS-SSAS]: SQL Server Analysis Services Protocol
 
 |Rowset|Description|  
 |------------|-----------------|  
@@ -204,6 +202,7 @@ Schema rowsets are described in two SQL Server Analysis Services protocols:
 |[MDSCHEMA_MEMBERS](https://msdn.microsoft.com/library/ee320960)|Describes the members within a database.|  
 |[MDSCHEMA_PROPERTIES](https://msdn.microsoft.com/library/ee320393)|Describes the properties of members and cell properties.|  
 |[MDSCHEMA_SETS](https://msdn.microsoft.com/library/ee301356)|Describes any sets that are currently defined in a database, including session-scoped sets.|  
-
+> [!IMPORTANT]
+> Schema rowsets can change with releases. Rowsets described here may not be the up-to-date. Always refer to the latest published protocol specification.
 
   

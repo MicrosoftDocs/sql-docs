@@ -1,6 +1,6 @@
 ---
 title: "Use Dynamic Management Views (DMVs) in Analysis Services | Microsoft Docs"
-ms.date: 05/02/2018
+ms.date: 09/25/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom:
@@ -10,7 +10,7 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ---
-# Use Dynamic Management Views (DMVs) 
+# Dynamic Management Views (DMVs) 
 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
 
@@ -202,7 +202,6 @@ Schema rowsets are described in two SQL Server Analysis Services protocols:
 |[MDSCHEMA_MEMBERS](https://msdn.microsoft.com/library/ee320960)|Describes the members within a database.|  
 |[MDSCHEMA_PROPERTIES](https://msdn.microsoft.com/library/ee320393)|Describes the properties of members and cell properties.|  
 |[MDSCHEMA_SETS](https://msdn.microsoft.com/library/ee301356)|Describes any sets that are currently described in a database, including session-scoped sets.|  
-> [!IMPORTANT]
-> Schema rowsets can change with releases. Rowsets described here may not be the up-to-date. Always refer to the latest published protocol specification.
 
-  
+> [!NOTE]
+> STORAGES DMVs do not have a schema rowset described in the the protocol.

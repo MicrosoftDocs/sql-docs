@@ -29,7 +29,7 @@ The article explains how to use PolyBase on a SQL Server instance to query exter
 
 ::: moniker-end
 
-- PolyBase supports two Hadoop providers, Hortonworks Data Platform (HDP) and Cloudera Distributed Hadoop (CDH). The following Hadoop providers are supported (Hadoop follows the "Major.Minor.Version" pattern for its new releases, and all versions within a supported Major and Minor release are supported):
+- PolyBase supports two Hadoop providers, Hortonworks Data Platform (HDP) and Cloudera Distributed Hadoop (CDH). Hadoop follows the "Major.Minor.Version" pattern for its new releases, and all versions within a supported Major and Minor release are supported. The following Hadoop providers are supported:
 
   - Hortonworks HDP 1.3 on Linux/Windows Server  
   - Hortonworks HDP 2.1 – 2.6 on Linux

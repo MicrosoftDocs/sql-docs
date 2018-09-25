@@ -12,8 +12,9 @@ ms.date: 22/07/2018
 This article covers methodology and scripts used to get information about the **performance of queries that use views** in a database object. The intention of these scripts is to provide indicators of use and performance of various views found within a database. 
 
 ## View performance indicators 
-=============================================================
 The DMV [sys.dm_exec_query_optimizer_info](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-optimizer-info-transact-sql) exposes statistics about the optimizations performed by the SQL Server query optimizer. These values are cumulative and begin recording when SQL Server starts.  
+
+### Sys.dm_exec_query_optimizer_info
 
 The below common_table_expression (CTE) uses this  DMV to provide information about the workload, such as the percentage of queries that reference a view. The results returned by this query do not indicate a performance problem by themselves, but can expose underlying issues when combined with users' complaints of slow-performing queries. 
 
@@ -97,6 +98,8 @@ GO
 ```
 Combine the results of this query with the results of the system view [sys.views](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-views-transact-sql) to identify query statistics, query text, and the cached execution plan. 
 
+### Sys.views
+
 The below CTE provides information about the number of executions, total run time, and pages read from memory. The results can be used to identify queries that may be candidates for optimization. 
   
   >[!NOTE]
@@ -157,6 +160,8 @@ CROSS APPLY
 GO
 ```
 
+### Sys.dmv_exec_cached_plans
+
 The final query provides information about unused views by using the DMV [sys.dmv_exec_cached_plans](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql). However, the execution plan cache is dynamic, and results can vary. As such, use this query over time to determine whether or not a view is actually being used or not. 
 
 
@@ -186,7 +191,6 @@ GO
 ```
 
 ## Related external resources
-==========================
 
 - [DMVs for Performance Tuning (Video - SQL Saturday Pordenone)](https://www.youtube.com/watch?v=9FQaFwpt3-k)
 - [DMVs for Performance Tuning (Slide e Demo - SQL Saturday Pordenone)](http://www.sqlsaturday.com/589/Sessions/Details.aspx?sid=57409)

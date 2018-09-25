@@ -101,7 +101,7 @@ Combine the results of this query with the results of the system view [sys.views
 
 The below CTE provides information about the number of executions, total run time, and pages read from memory. The results can be used to identify queries that may be candidates for optimization. 
   
-  >[NOTE]
+  >[!NOTE]
   > The results of this query can vary depending on SQL Server vesrion. 
 
 

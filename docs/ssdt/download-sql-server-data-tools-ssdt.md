@@ -87,8 +87,8 @@ First, complete the following steps while online:
 2. [Download vs_sql.exe](https://aka.ms/vs/15/release/vs_sql.exe).
 3. While still online, execute one of the following commands to download all the files required for installing offline. Using the `--layout` option is the key. Replace <filepath> with the actual path to save the files.
 
-   a.	For a specific language, pass the locale: `vs_sql.exe --layout c:\<filepath> --lang n-us` (a single language is ~1GB)  
-   b. For all languages, omit the `--lang` argument: `vs_sql.exe --layout c:\<filepath>`all languages are ~3.9GB).
+   a.	For a specific language, pass the locale: `vs_sql.exe --layout c:\<filepath> --lang en-us` (a single language is ~1GB)  
+   b. For all languages, omit the `--lang` argument: `vs_sql.exe --layout c:\<filepath>` (all languages are ~3.9GB).
 
 After completing the previous steps, the following can be done while offline:
 

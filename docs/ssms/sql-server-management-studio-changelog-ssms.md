@@ -21,10 +21,12 @@ manager: craigg
 This article provides details about updates, improvements, and bug fixes for the current and previous versions of SSMS. Download [previous SSMS versions below](#previous-ssms-releases).
 
 
-## [SSMS 18.0 (preview)](download-sql-server-management-studio-ssms.md)
+## [SSMS 18.0 (preview 4)](download-sql-server-management-studio-ssms.md)
 
 Build number: 15.0.18040.0<br>
 Release date: September 24, 2018
+
+Preview 4 is the first public preview of SSMS 18.0. For the latest General Availability (GA) version of SSMS, [download and install SSMS 17.9](#ssms-179-latest-ga-release).
 
 ### What's new
 

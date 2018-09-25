@@ -1,5 +1,5 @@
 ---
-title: "Dynamic Management Views (DMVs) in Analysis Services | Microsoft Docs"
+title: "Use Dynamic Management Views (DMVs) in Analysis Services | Microsoft Docs"
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ---
-# Dynamic Management Views (DMVs)
+# Use Dynamic Management Views (DMVs) 
 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
 
-Analysis Services Dynamic Management Views (DMV) are queries that return information about model objects, server operations, and server health. The query, based on SQL, is an interface to *schema rowsets*. Schema rowsets are predefined tables that contain information about Analysis Services objects and server state, including database schema, active sessions, connections, commands, and jobs that are executing on the server.
+Analysis Services Dynamic Management Views (DMV) are queries that return information about model objects, server operations, and server health. The query, based on SQL, is an interface to *schema rowsets*. Schema rowsets are predescribed tables that contain information about Analysis Services objects and server state, including database schema, active sessions, connections, commands, and jobs that are executing on the server.
 
 DMV queries are an alternative to running XML/A Discover commands. For most administrators, writing a DMV query is simpler because the syntax is based on SQL. In addition, the result is returned in a table format that is easier to read and copy. 
   
@@ -95,7 +95,7 @@ Schema rowsets are described in two SQL Server Analysis Services protocols:
 
 [[MS-SSAS]: SQL Server Analysis Services Protocol](https://msdn.microsoft.com/library/ee320606) - Describes schema rowsets for multidimensional models and tabular models at the 1100 and 1103 compatibility levels.
 
-### Rowsets defined in the [MS-SSAS-T]: SQL Server Analysis Services Tabular Protocol
+### Rowsets described in the [MS-SSAS-T]: SQL Server Analysis Services Tabular Protocol
 
 |Rowset  |Description  |
 |---------|---------|
@@ -128,7 +128,7 @@ Schema rowsets are described in two SQL Server Analysis Services protocols:
 |[TMSCHEMA_TABLES](https://msdn.microsoft.com/library/mt719250)     |   Provides information about the Table objects in the model.      |
 |[TMSCHEMA_VARIATIONS](https://msdn.microsoft.com/library/mt825008)|Provides information about the Variation objects in each column.|
 
-### Rowsets defined in the [MS-SSAS]: SQL Server Analysis Services Protocol
+### Rowsets described in the [MS-SSAS]: SQL Server Analysis Services Protocol
 
 |Rowset|Description|  
 |------------|-----------------|  
@@ -172,13 +172,13 @@ Schema rowsets are described in two SQL Server Analysis Services protocols:
 |[DISCOVER_TRACES](https://msdn.microsoft.com/library/ee301643)|Contains the DISCOVER_TRACES schema rowset.|  
 |[DISCOVER_TRANSACTIONS](https://msdn.microsoft.com/library/ee301363)|Returns the current set of pending transactions on the system.|  
 |[DISCOVER_XEVENT_TRACE_DEFINITION](https://msdn.microsoft.com/library/mt704568)|Provides information about the XEvent traces that are currently active on the server.|  
-|[DISCOVER_XEVENT_PACKAGES](https://msdn.microsoft.com/library/mt704569)|Provides information about the XEvent packages that are defined on the server.|
-|[DISCOVER_XEVENT_OBJECTS](https://msdn.microsoft.com/library/mt704543)|Provides information about the XEvent objects that are defined on the server.|
-|[DISCOVER_XEVENT_OBJECT_COLUMNS](https://msdn.microsoft.com/library/mt719352)|Provides information about the schema of XEvent objects that are defined on the server.|
+|[DISCOVER_XEVENT_PACKAGES](https://msdn.microsoft.com/library/mt704569)|Provides information about the XEvent packages that are described on the server.|
+|[DISCOVER_XEVENT_OBJECTS](https://msdn.microsoft.com/library/mt704543)|Provides information about the XEvent objects that are described on the server.|
+|[DISCOVER_XEVENT_OBJECT_COLUMNS](https://msdn.microsoft.com/library/mt719352)|Provides information about the schema of XEvent objects that are described on the server.|
 |[DISCOVER_XEVENT_SESSIONS](https://msdn.microsoft.com/library/mt704397)|Provides information about the current XEvent sessions on the server.|
 |[DISCOVER_XEVENT_SESSION_TARGETS](https://msdn.microsoft.com/library/mt704564)|Provides information about the current XEvent session targets on the server.|
 |[DISCOVER_XML_METADATA](https://msdn.microsoft.com/library/ee301560)|Returns a rowset with one row and one column. |
-|[DMSCHEMA_MINING_COLUMNS](https://msdn.microsoft.com/library/ee301664)|Describes the individual columns of all defined data mining models that are deployed on the server.|  
+|[DMSCHEMA_MINING_COLUMNS](https://msdn.microsoft.com/library/ee301664)|Describes the individual columns of all described data mining models that are deployed on the server.|  
 |[DMSCHEMA_MINING_FUNCTIONS](https://msdn.microsoft.com/library/ee320415)|Describes the data mining functions that are supported by the data mining algorithms that are available on a server that is running Analysis Services.|  
 |[DMSCHEMA_MINING_MODEL_CONTENT](https://msdn.microsoft.com/library/ee302124)|Enables the client application to browse the content of a trained data mining model.|  
 |[DMSCHEMA_MINING_MODEL_CONTENT_PMML](https://msdn.microsoft.com/library/ee320692)|Returns the XML structure of the mining model. The format of the XML string follows the PMML 2.1 standard.|  
@@ -193,7 +193,7 @@ Schema rowsets are described in two SQL Server Analysis Services protocols:
 |[MDSCHEMA_DIMENSIONS](https://msdn.microsoft.com/library/ee301366)|Describes the dimensions within a database.|  
 |[MDSCHEMA_FUNCTIONS](https://msdn.microsoft.com/library/mt719467)|Returns information about the functions that are currently available for use in the DAX and MDX languages.|
 |[MDSCHEMA_HIERARCHIES](https://msdn.microsoft.com/library/ee320250)|Describes each hierarchy within a particular dimension.|  
-|[MDSCHEMA_INPUT_DATASOURCES](https://msdn.microsoft.com/library/ee301386)|Describes the data source objects defined within the database.|  
+|[MDSCHEMA_INPUT_DATASOURCES](https://msdn.microsoft.com/library/ee301386)|Describes the data source objects described within the database.|  
 |[MDSCHEMA_KPIS](https://msdn.microsoft.com/library/ee320406)|Describes the KPIs within a database.|  
 |[MDSCHEMA_LEVELS](https://msdn.microsoft.com/library/ee320746)|Describes each level within a particular hierarchy.|  
 |[MDSCHEMA_MEASUREGROUP_DIMENSIONS](https://msdn.microsoft.com/library/ee320977)|Enumerates the dimensions of measure groups.|  
@@ -201,7 +201,7 @@ Schema rowsets are described in two SQL Server Analysis Services protocols:
 |[MDSCHEMA_MEASURES](https://msdn.microsoft.com/library/ee301871)|Describes each measure.|  
 |[MDSCHEMA_MEMBERS](https://msdn.microsoft.com/library/ee320960)|Describes the members within a database.|  
 |[MDSCHEMA_PROPERTIES](https://msdn.microsoft.com/library/ee320393)|Describes the properties of members and cell properties.|  
-|[MDSCHEMA_SETS](https://msdn.microsoft.com/library/ee301356)|Describes any sets that are currently defined in a database, including session-scoped sets.|  
+|[MDSCHEMA_SETS](https://msdn.microsoft.com/library/ee301356)|Describes any sets that are currently described in a database, including session-scoped sets.|  
 > [!IMPORTANT]
 > Schema rowsets can change with releases. Rowsets described here may not be the up-to-date. Always refer to the latest published protocol specification.
 

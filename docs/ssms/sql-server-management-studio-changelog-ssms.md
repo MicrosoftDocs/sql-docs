@@ -282,7 +282,7 @@ The following features are no longer available in SSMS:
 
 - Generate Scripts | Publish to Web Service removed. This (deprecated) feature was removed from the SSMS UI.
 
-- Removed node "Maintenance | Legacy" in Object Explorer. The phasedundeScripts | Publish to Web Service removed. The *really old* "Database Maintenace Plan" and "SQL Mail" nodes won't be accessible anymore. The modern "Database Mail" and "Maintenance Plans" nodes will continue to work as usual.
+- Removed node "Maintenance | Legacy" in Object Explorer. In Generate and Publish Scripts | Publish to Web Service option is removed. The *really old* "Database Maintenace Plan" and "SQL Mail" nodes won't be accessible anymore. The modern "Database Mail" and "Maintenance Plans" nodes will continue to work as usual.
 
 ### Known issues
 
@@ -301,19 +301,15 @@ SSIS
 - Package can’t be deployed or executed successfully when it targets SQL Server of old version and contains Script Task/Script component at the same time.
 - SSMS can’t connect to remote Integration Services.
 
+## SSMS 17.9 (latest GA release)
 
-
-## Previous SSMS releases
-
-Download previous SSMS versions by clicking the title links in the following sections.
-
-> [!NOTE]
-> Non-English localized releases of SSMS 17.x require the [KB 2862966 security update package](https://support.microsoft.com/en-us/kb/2862966) if installing on: Windows 8, Windows 7, Windows Server 2012, and Windows Server 2008 R2.
-
-## ![download](../ssdt/media/download.png) [SSMS 17.9](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x409)
+![download](../ssdt/media/download.png) [SSMS 17.9](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x409)
 
 Build number: 14.0.17285.0<br>
 Release date: September 04, 2018
+
+> [!NOTE]
+> Non-English localized releases of SSMS 17.x require the [KB 2862966 security update package](https://support.microsoft.com/en-us/kb/2862966) if installing on: Windows 8, Windows 7, Windows Server 2012, and Windows Server 2008 R2.
 
 [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x40a)
 
@@ -389,6 +385,10 @@ Help:
 - There are currently no known issues in this release.
 
 
+
+## Previous SSMS releases
+
+Download previous SSMS versions by clicking the title links in the following sections.
 
 ## ![download](../ssdt/media/download.png) [SSMS 17.8.1](https://go.microsoft.com/fwlink/?linkid=875802)
 *A bug was discovered in 17.8 related to provisioning SQL databases, so SSMS 17.8.1 replaces 17.8.*

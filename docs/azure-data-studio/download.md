@@ -68,7 +68,7 @@ This release of [!INCLUDE[name-sos](../includes/name-sos-short.md)] includes a s
    cd ~
    sudo dpkg -i ./Downloads/azuredatastudio-linux-<version string>.deb
 
-   sqlops
+   azuredatastudio
    ```
 
    **rpm Installation:**
@@ -76,7 +76,7 @@ This release of [!INCLUDE[name-sos](../includes/name-sos-short.md)] includes a s
    cd ~
    yum install ./Downloads/azuredatastudio-linux-<version string>.rpm
 
-   sqlops
+   azuredatastudio
    ```
 
    **tar.gz Installation:**

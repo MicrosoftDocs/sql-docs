@@ -7,13 +7,11 @@ ms.author: craig
 ms.date: 22/07/2018
 ---
 
-# <a name="statistiche-di-utilizzo-e-performance-delle-viste-in-un-database-sql-server"></a>Usage statistics and performance of the views in a SQL Server database
+# Usage statistics and performance of the views in a SQL Server database
 
-<a name="introduzione"></a>Introduction
-============
 This article covers methodology and scripts used to get information about the **performance of queries that use views** in a database object. The intention of these scripts is to provide indicators of use and performance of various views found within a database. 
 
-<a name="alcuni-indicatori-sulle-performance-delle-viste-in-sql-server"></a>View performance indicators 
+## View performance indicators 
 =============================================================
 The DMV [sys.dm_exec_query_optimizer_info](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-optimizer-info-transact-sql) exposes statistics about the optimizations performed by the SQL Server query optimizer. These values are cumulative and begin recording when SQL Server starts.  
 
@@ -187,7 +185,7 @@ WHERE
 GO
 ```
 
-Related external resources
+## Related external resources
 ==========================
 
 - [DMVs for Performance Tuning (Video - SQL Saturday Pordenone)](https://www.youtube.com/watch?v=9FQaFwpt3-k)

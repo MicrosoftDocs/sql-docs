@@ -26,11 +26,11 @@ Use the following instructions to manually deploy the solution package that add 
 
 > [!IMPORTANT]
 > With the latest update you can install this web part side by side you exsiting Reporting Services SharePoint integrated mode shared service applications.
-> With this update of the wsp solution we introduced new files and the previous solution must be retracted and the new wsp redeployed by using the Uninstall-SPSolution and Install-SPSolution cmdlets, respectively.
+> With this update of the .wsp solution we introduced new files and the previous solution must be retracted and the new .wsp redeployed by using the Uninstall-SPSolution and Install-SPSolution cmdlets, respectively.
 >
 
 > [!IMPORTANT]
-> If you uninstall the old wsp solution and install the new one, existing site pages which referenced the old web part will be broken. You should edit the broken pages, remove the old web part reference and fix them by using the new webpart.
+> If you uninstall the old .wsp solution and install the new one, existing site pages which referenced the old web part will be broken. You should edit the broken pages, remove the old web part reference and fix them by using the new webpart.
 >
 
 **Support SharePoint Server versions:**

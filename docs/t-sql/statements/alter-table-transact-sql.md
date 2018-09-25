@@ -1,7 +1,7 @@
 ---
 title: "ALTER TABLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/07/2018"
+ms.date: "09/24/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -459,7 +459,9 @@ Some data type changes may cause a change in the data. For example, changing a *
 >  
 > A column included in a primary key constraint, cannot be changed from **NOT NULL** to **NULL**.  
   
-If the column being modified is encrypted using `ENCRYPTED WITH`, you can change the datatype to a compatible datatype (such as INT to BIGINT) but you cannot change any encryption settings.  
+When using Always Encrypted (without secure enclaves), if the column being modified is encrypted using 'ENCRYPTED WITH', you can change the datatype to a compatible datatype (such as INT to BIGINT) but you cannot change any encryption settings.  
+
+When using Always Encrypted with secure enclaves, you can change any encryption setting, as long as the column encryption key protecting the column (and the new column encryption key, if you are changing the key) support enclave computations (are encrypted with enclave-enabled column master keys). For details, see [Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md).  
   
  *column_name*  
  Is the name of the column to be altered, added, or dropped. *column_name* can be a maximum of 128 characters. For new columns, *column_name* can be omitted for columns created with a **timestamp** data type. The name **timestamp** is used if no *column_name* is specified for a **timestamp** data type column.  
@@ -1444,6 +1446,33 @@ ALTER TABLE T3
 ALTER COLUMN C2 varchar(50) COLLATE Latin1_General_BIN;  
 GO  
 ```  
+#### D. Encrypting a column  
+ The following example shows how to encrypt a column using [Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md). 
+
+First, a table is created without any encrypted columns.  
+  
+```sql  
+CREATE TABLE T3  
+(C1 int PRIMARY KEY,  
+C2 varchar(50) NULL,  
+C3 int NULL,  
+C4 int ) ;  
+GO  
+```  
+  
+ Next, column 'C2' is encrypted with with a column encryption key, named CEK1, and randomized encryption. Note that for the below statement to succeed:
+- The column encryption key must be enclave-enabled, meaning it must be encrypted with a column master key that allows enclave computations.
+- The target SQL Server instance must support Always Encrypted with secure enclaves.
+- The statement must be issued over a connection set up for Always Encrypted with secure enclaves, and using a supported client driver.
+- The calling application must have access to the column master key, protecting CEK1.
+
+```sql  
+ALTER TABLE T3  
+ALTER COLUMN C2 varchar(50) ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCRYPTION_TYPE = Randomized, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NULL;  
+GO  
+```  
+
+
   
 ###  <a name="alter_table"></a> Altering a Table Definition  
  The examples in this section demonstrate how to alter the definition of a table.  

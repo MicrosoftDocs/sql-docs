@@ -123,6 +123,14 @@ The following table summarizes the objects created in the NYC Taxi demo database
 |**PredictTipSingleMode**  |stored procedure| Created by the PredictTipSingleMode.sql script. Calls the trained model to create predictions using the model. This stored procedure accepts a new observation as input, with individual feature values passed as in-line parameters, and returns a value that predicts the outcome for the new observation. This stored procedure is used in [Operationalize the R model](sqldev-operationalize-the-model.md).|
 |**TrainTipPredictionModel**  |stored procedure|Created by the TrainTipPredictionModel.sql script. Trains a logistic regression model by calling an R package. The model predicts the value of the  tipped column, and is trained using a randomly selected 70% of the data. The output of the stored procedure is the trained model, which is saved in the table nyc_taxi_models. This stored procedure is used in [Train and save a model](../r/sqldev-train-and-save-a-model-using-t-sql.md).|
 
+## Query data for verification
+
+As a validation step, run a query to confirm the data was uploaded.
+
+1. In Object Explorer, under Databases, expand the **NYCTaxi_Sample** datatabase, and then open the Tables folder.
+
+2. Right-click the **dbo.nyctaxi_sample** and choose **Select Top 1000 Rows** to return some data.
+
 ## Next steps
 
 NYC Taxi sample data is now available for hands-on learning.

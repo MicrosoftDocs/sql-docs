@@ -37,8 +37,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 -   Asymmetric encryption is slower than symmetric encryption.  
   
--   Block ciphers with long keys are stronger than stream ciphers.  
-  
 -   Long, complex passwords are stronger than short passwords.  
 
 -   Symmetric encryption is generally recommended when they key is only stored locally, assymmetric encryption is recommended when keys need to be shared across the wire.

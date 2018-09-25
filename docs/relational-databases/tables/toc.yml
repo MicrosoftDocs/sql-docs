@@ -39,9 +39,18 @@
   href: use-column-sets.md
 - name: Use Table-Valued Parameters (Database Engine)
   href: use-table-valued-parameters-database-engine.md
-- name: Use graph edge constraints (Database Engine)
+- name: Edge constraints
   href: graph-edge-constraints.md
-- name: Primary and Foreign Key Constraints
+  items:
+  - name: Create
+    href: create-edge-constraints.md
+  - name: Delete
+    href: delete-edge-constraint.md
+  - name: Modify
+    href: modify-edge-constraint.md
+  - name: View 
+    href: view-edge-constraint-properties.md
+- name: Primary and foreign key constraints
   href: primary-and-foreign-key-constraints.md
   items:
   - name: Create Primary Keys

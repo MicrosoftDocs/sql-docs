@@ -45,7 +45,7 @@ This release of [!INCLUDE[name-sos](../includes/name-sos-short.md)] includes a s
 
 1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip for Windows](https://go.microsoft.com/fwlink/?linkid=2024680).
 2. Browse to the downloaded file and extract it.
-3. Run `\sqlops-windows\sqlops.exe`
+3. Run `\azuredatastudio-windows\azuredatastudio.exe`
 
 
 ## Get Azure Data Studio for macOS

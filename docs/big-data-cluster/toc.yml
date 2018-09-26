@@ -70,7 +70,7 @@
       href: data-ingestion-restore-databse.md
   - name: Big Data/Machine Learning
     items:
-    - name: Use Prose for automated big data wrangling
+    - name: Data Wrangling using PROSE Code Accelerator
       href: use-prose-for-big-data-automation.md
     - name: Machine learning with Spark
       href: ml-model-training-scoring-spark.md

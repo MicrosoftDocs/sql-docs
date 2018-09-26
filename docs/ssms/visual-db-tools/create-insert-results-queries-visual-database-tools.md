@@ -77,11 +77,11 @@ When you create an Insert Results query, the Criteria pane changes to reflect op
     > [!NOTE]  
     > The Query and View Designer cannot determine in advance which tables and views you can update. Therefore, the **Table Name** list in the **Choose Table for Insert From Query** dialog box shows all available tables and views in the data connection you are querying, even those that you might not be able to copy rows to.  
   
-4.  In the rectangle representing the table or table-valued object, choose the names of the columns whose contents you want to copy. To copy entire rows, choose **\&#42; (All Columns)**.  
+4.  In the rectangle representing the table or table-valued object, choose the names of the columns whose contents you want to copy. To copy entire rows, choose **&#42; (All Columns)**.  
   
     The Query and View Designer adds the columns you choose to the **Column** column of the Criteriapane.  
   
-5.  In the **Append** column of the Criteria pane, select a target column in the destination table for each column you are copying. Choose *tablename.\&#42;* if you are copying entire rows. The columns in the destination table must have the same (or compatible) data types as the columns in the source table.  
+5.  In the **Append** column of the Criteria pane, select a target column in the destination table for each column you are copying. Choose *tablename.&#42;* if you are copying entire rows. The columns in the destination table must have the same (or compatible) data types as the columns in the source table.  
   
 6.  If you want to copy rows in a particular order, specify a sort order. For details, see [Sort and Group Query Results &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md).  
   

@@ -130,9 +130,9 @@ As mentioned earlier, the query plan no longer has a user-defined function opera
 
 Depending upon the complexity of the logic in the UDF, the resulting query plan might also get bigger and more complex. As we can see, the operations inside the UDF are now no longer a black box, and hence the query optimizer is able to cost and optimize those operations. Also, since the UDF is no longer in the plan, iterative UDF invocation is replaced by a plan that completely avoids function call overhead.
 
-## Inlineability of Scalar UDFs
+## Inline-ability of Scalar UDFs
 
-A scalar T-SQL UDF is inlineable if all of the following conditions hold:
+A scalar T-SQL UDF is inline-able if all of the following conditions hold:
 
 1. The UDF is written using the following constructs:
     - DECLARE, SET: Variable declaration and assignments.
@@ -149,18 +149,18 @@ A scalar T-SQL UDF is inlineable if all of the following conditions hold:
 1. The UDF is not used in a computed column or a check constraint definition.
 1. The UDF does not reference user-defined types.
 1. There are no signatures added to the UDF.
-1. Partition functions are not inlineable.
+1. Partition functions are not inline-able.
 
-<sup>1</sup> SELECT with variable accumulation/aggregation (for example, SELECT @val += col1 FROM table1) is not inlineable.
+<sup>1</sup> SELECT with variable accumulation/aggregation (for example, SELECT @val += col1 FROM table1) is not inline-able.
 <sup>2</sup> Recursive UDFs will be inlined to a certain depth only.
 <sup>3</sup> Intrinsic functions whose results depend upon the current system time are time-dependent. An intrinsic function that may update some internal global state is an example of a function with side effects. Such functions return different results each time they are called, based on the internal state.
 
-### Checking whether a UDF is inlineable or not
+### Checking whether a UDF is inline-able or not
 
-For every T-SQL scalar UDF, the [sys.sql_modules](../system-catalog-views/sys-sql-modules-transact-sql.md) catalog view includes a property called *is_inlineable*, which indicates whether that UDF is inlineable or not. A value of 1 indicates that it is inlineable, and 0 indicates otherwise. This property will have a value of 1 for all 
+For every T-SQL scalar UDF, the [sys.sql_modules](../system-catalog-views/sys-sql-modules-transact-sql.md) catalog view includes a property called `is_inlineable`, which indicates whether that UDF is inline-able or not. A value of 1 indicates that it is inline-able, and 0 indicates otherwise. This property will have a value of 1 for all 
 inline TVFs as well. For all other modules, the value will be 0.
 
-**Note:** If a scalar UDF is inlineable, it does not imply that it will always be inlined. SQL Server will decide (on a per-query, per-UDF basis) whether to inline a UDF or not. For instance, if the UDF definition runs into thousands of lines of code, SQL Server *might* choose not to inline it. Another example would be if an inlineable UDF is present in the GROUP BY clause of a query, it will not be inlined. This decision is made when the query referencing a scalar UDF is compiled.
+**Note:** If a scalar UDF is inline-able, it does not imply that it will always be inlined. SQL Server will decide (on a per-query, per-UDF basis) whether to inline a UDF or not. For instance, if the UDF definition runs into thousands of lines of code, SQL Server *might* choose not to inline it. Another example would be if an inline-able UDF is present in the GROUP BY clause of a query, it will not be inlined. This decision is made when the query referencing a scalar UDF is compiled.
 
 ### Checking whether inlining has happened or not
 
@@ -231,7 +231,7 @@ BEGIN
 END
 ```
 
-**NOTE:** The INLINE clause is not mandatory. If INLINE clause is not specified, it is automatically set to ON/OFF based on whether the UDF is inlineable. If INLINE=ON is specified but the UDF is found to be non-inlineable, an error will be thrown.
+**NOTE:** The INLINE clause is not mandatory. If INLINE clause is not specified, it is automatically set to ON/OFF based on whether the UDF is inline-able. If INLINE=ON is specified but the UDF is found to be non-inline-able, an error will be thrown.
 
 ## Important Notes
 
@@ -240,9 +240,9 @@ As described in this article, scalar UDF inlining transforms a query with scalar
 1. Inlining will result in a different query hash for the same query text.
 1. Certain warnings in statements inside the UDF (such as divide by zero etc.) which might have been hidden earlier, might show up due to inlining.
 1. Query level join hints might not be valid anymore, as inlining may introduce new joins. Local join hints will have to be used instead.
-1. Views that reference inlineable scalar UDFs cannot be indexed. If you need to create an index on such views, disable inlining for the referenced UDFs.
+1. Views that reference inline-able scalar UDFs cannot be indexed. If you need to create an index on such views, disable inlining for the referenced UDFs.
 1. The behavior of [Dynamic Data masking](../security/dynamic-data-masking.md) may not be the same as without inlining. More specifically, the behavior with inlining would be identical to the behavior observed if the UDF was a single scalar subquery.
-1. If a UDF references builtins such as SCOPE_IDENTITY(), the value returned by the builtins will change with inlining. This change in behavior is because inlining changes the scope of statements inside the UDF.
+1. If a UDF references built-in functions such as SCOPE_IDENTITY(), the value returned by the built in function will change with inlining. This change in behavior is because inlining changes the scope of statements inside the UDF.
 
 ## See Also
 

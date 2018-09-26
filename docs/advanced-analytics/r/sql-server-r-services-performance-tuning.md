@@ -86,8 +86,9 @@ Configuration and tuning for performance requires creating a solid base, on whic
 
     Provides specific tips on how to optimize the external script to avoid known problems. It is most useful to **data scientists**.
 
-    [!NOTE]
+    > [!NOTE]
     > While much of the information in this section applies to R in general, some information is specific to RevoScaleR analytic functions. Detailed performance guidance is not available for **revoscalepy** and other supported Python libraries.
+    >
 
 + [Performance tuning for R in SQL Server - methods and results](..\r\performance-case-study-r-services.md)
 

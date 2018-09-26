@@ -37,3 +37,13 @@
     href: ../relational-databases/blob/binary-large-object-blob-data-sql-server.md
   - name: Collations
     href: ../relational-databases/collations/collation-and-unicode-support.md
+  - name: Cursors
+    href: cursors.md
+  - name: Data collection
+    href: ../relational-databases/data-collection/data-collection.md
+  - name: Data compression
+    href: ../relational-databases/data-compression/data-compression.md
+  - name: Database mail
+    href: ../relational-databases/database-mail/database-mail.md
+  - name: Databases
+    href: ../relational-databases/databases/databases.md

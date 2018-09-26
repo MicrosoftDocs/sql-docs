@@ -31,3 +31,9 @@
     href: ../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md
   - name: Log shipping
     href: ../database-engine/log-shipping/about-log-shipping-sql-server.md
+- name: Concepts
+  items:
+  - name: Blob
+    href: ../relational-databases/blob/binary-large-object-blob-data-sql-server.md
+  - name: Collations
+    href: ../relational-databases/collations/collation-and-unicode-support.md

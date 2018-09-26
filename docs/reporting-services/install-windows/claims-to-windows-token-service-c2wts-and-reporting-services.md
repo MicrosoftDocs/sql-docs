@@ -20,9 +20,14 @@ C2WTS is also required with SQL Server Reporting Services SharePoint mode if you
 > [!NOTE]
 > Reporting Services integration with SharePoint is no longer available after SQL Server 2016.
 
-## Report Viewer web part configuration
+## Report Viewer (Native Mode) web part configuration
 
-The Report Viewer web part can be used to embed SQL Server Reporting Services native mode reports within your SharePoint site. This web part is available for SharePoint 2013 and SharePoint 2016. Both SharePoint 2013 and SharePoint 2016 make use of claims authentication. SQL Server Reporting Services (native mode) uses Windows authentication by default. As a result, C2WTS needs to be configured properly for reports to render correctly.
+The Report Viewer web part can be used to embed SQL Server Reporting Services native mode reports within your SharePoint site. This web part is available for SharePoint 2013 and SharePoint 2016. Both SharePoint 2013 and SharePoint 2016 make use of claims authentication. As a result, C2WTS needs to be configured properly and Reporting Services needs to be configured for Kerberos authentication for reports to render correctly.
+
+1. Configure your Reporting Services (Native Mode) instance for Kerberos Authentication by determining the SSRS Service account, setting an SPN, and updating the rsreportserver.config file to use RSWindowsNegotiate Authentication Type. [Register a Service Principal Name (SPN) for a Report Server](https://docs.microsoft.com/en-us/sql/reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server)
+
+2. Follow steps from [Steps needed to configure c2WTS](https://docs.microsoft.com/en-us/sql/reporting-services/install-windows/claims-to-windows-token-service-c2wts-and-reporting-services?view=sql-server-2017#steps-needed-to-configure-c2wts)
+ 
 
 ## SharePoint mode integration
 
@@ -32,14 +37,25 @@ The SharePoint Claims to Windows Token Service (C2WTS) is required with SQL Serv
 
 ## Steps needed to configure c2WTS
 
-The tokens created by C2WTS will only work with constrained delegation (constrains to specific services) and the configuration option "using any authentication protocol". As noted earlier, if your data sources are on the same computer as the shared service, then constrained delegation is not needed.
+The tokens created by C2WTS will only work with constrained delegation (constrains to specific services) and the configuration option "using any authentication protocol"(Protocol Transition).
 
 If your environment will use Kerberos constrained delegation, then the SharePoint Server service and external data sources need to reside in the same Windows domain. Any service that relies on the Claims to Windows token service (c2WTS) must use Kerberos **constrained** delegation to allow c2WTS to use Kerberos protocol transition to translate claims into Windows credentials. These requirements are true for all SharePoint Shared Services. For more information, see [Plan for Kerberos authentication in SharePoint 2013](http://technet.microsoft.com/library/ee806870.aspx).  
 
-1. Configure the C2WTS service account. Add the service account to the local Administrators group on each server that C2WTS will be used.
+1. Configure the C2WTS service domain account. 
 
-    For the **Report Viewer web part**, this will be the Web Front End (WFE) servers. For **SharePoint integrated mode**, this will be the application servers where the Reporting Services service is running.
+    **As a best practice C2WTS should run under its own domain identity.**
 
+    * Create an Active Directory account and register the account as a managed account in SharePoint Server. To learn more about managed accounts, see [Managed Accounts in Sharepoint](https://blogs.technet.microsoft.com/wbaer/2010/04/11/managed-accounts-in-sharepoint-2010/)
+   
+    * Configure C2WTS Service to use the managed account through SharePoint Central Administration > Security > Configure Service Accounts > Windows Service - Claims to Windows Token Service
+
+    Add the C2WTS service account to the local Administrators group on each server that C2WTS will be used. For the **Report Viewer web part**, this will be the Web Front End (WFE) servers. For **SharePoint integrated mode**, this will be the application servers where the Reporting Services service is running.
+    * Grant the C2WTS account the following permissions in the local security policy under Local Policies > User Rights Assignment:
+        * Act as part of the operating system
+        * Impersonate a client after authentication
+        * Log on as a service
+
+	
 2. Configure delegation for the C2WTS service account.
 
     The account needs Constrained Delegation with Protocol Transitioning and permissions to delegate to the services it is required to communicate with (i.e. SQL Server Database Engine, SQL Server Analysis Services). To configure delegation you can use the Active Directory Users and Computer snap-in and will need to be a domain administrator.
@@ -61,8 +77,9 @@ If your environment will use Kerberos constrained delegation, then the SharePoin
     * Select **Add** to add a service to delegate to.
 
     * Select **Users or Computers...*** and enter the account that hosts the service. For example, if a SQL Server is running under an account named *sqlservice*, enter `sqlservice`. 
+	  For the **Report Viewer web part**, this will be the service account for the Reporting Services (Native Mode) Instance.
 
-    * Select the service listing. This will show the SPNs that are available on that account. If you don't see the service listed on that account, it may be missing or placed on a different account. you can use the SetSPN utility to adjust SPNs.
+    * Select the service listing. This will show the SPNs that are available on that account. If you don't see the service listed on that account, it may be missing or placed on a different account. you can use the SetSPN utility to adjust SPNs. For the **Report Viewer web part**, you will see the http SPN configured in [Report Viewer web part configuration](https://docs.microsoft.com/en-us/sql/reporting-services/install-windows/claims-to-windows-token-service-c2wts-and-reporting-services?view=sql-server-2017#report-viewer-web-part-configuration).
 
     * Select OK to get out of the dialogs.
 
@@ -91,6 +108,6 @@ If your environment will use Kerberos constrained delegation, then the SharePoin
     </configuration>
     ```
 
-4. Start the Claims to Windows Token Service through SharePoint Central Administration on the **Manage Services on Server** page. The service should be started on the server that will be performing the action. For example if you have a server that is a WFE and another server that is an Application Server that has the SQL Server Reporting Services shared service running, you only need to start C2WTS on the Application Server. C2WTS is only required on a WFE server if you are running the Report Viewer web part.
+4. Start (stop and start if already started) the Claims to Windows Token Service through SharePoint Central Administration on the **Manage Services on Server** page. The service should be started on the server that will be performing the action. For example if you have a server that is a WFE and another server that is an Application Server that has the SQL Server Reporting Services shared service running, you only need to start C2WTS on the Application Server. C2WTS is only required on a WFE server if you are running the Report Viewer web part.
 
 More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

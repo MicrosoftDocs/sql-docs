@@ -10,6 +10,7 @@ ms.suite: pro-bi
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
+monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Upload documents to a SharePoint library (Reporting Services in SharePoint mode)
 

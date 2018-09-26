@@ -37,16 +37,19 @@ Use SQL Server Management Studio (SSMS) to query, design, and manage your databa
 
 **SSMS is free!**
 
-SSMS 18.0 (preview) is the latest generation of *SQL Server Management Studio* and provides support for [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)].
+SSMS 18.0 (preview 4) is the latest generation of *SQL Server Management Studio* and provides support for [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)].
 
-**[![download](../ssdt/media/download.png) Download SQL Server Management Studio 18.0 (preview)](https://go.microsoft.com/fwlink/?linkid=2014662)**
+**[![download](../ssdt/media/download.png) Download SQL Server Management Studio 18.0 (preview 4)](https://go.microsoft.com/fwlink/?linkid=2014662)**
 
+Preview 4 is the first public preview of SSMS 18.0. For the latest General Availability (GA) version of SSMS, [download and install SSMS 17.9](sql-server-management-studio-changelog-ssms.md#ssms-179-latest-ga-release).
 
 **Version Information**
 
-Release number: 18.0<br>
+Release number: 18.0 (preview 4)<br>
 Build number: 15.0.18040.0<br>
 Release date: September 24, 2018
+
+*Preview 4 is the first public preview of SSMS 18.0*.
 
 If you have comments or suggestions, or you want to report issues, the best way to reach out to the SSMS Team is at [UserVoice](https://aka.ms/sqlfeedback). SSMS 18.0 is a preview product. Please refrain from adding comments at the bottom of this page!
 
@@ -59,7 +62,7 @@ If a computer contains side by side installations of SSMS, verify you start the 
 
 This release of SSMS can be installed in the following languages:
 
-SQL Server Management Studio 18.0 (preview):<br>
+SQL Server Management Studio 18.0 (preview 4):<br>
 [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2014662&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2014662&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2014662&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2014662&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2014662&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2014662&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2014662&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2014662&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2014662&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2014662&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2014662&clcid=0x40a)
 
 SQL Server Management Studio 18.0 Upgrade Package (upgrades to 18.0):<br>

@@ -20,10 +20,10 @@ ms.author: shkale
 manager: craigg
 monikerRange: ">=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# View Foreign Key Properties
+# View Edge Constraint Properties
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx.md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-  You can view the edge constraint properties [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  You can view the edge constraint properties [!INCLUDE[noversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **In This Topic**  
   

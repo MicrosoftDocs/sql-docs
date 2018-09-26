@@ -1,7 +1,7 @@
 ---
 title: "Changelog for SQL Server Data Tools (SSDT) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/05/2018"
+ms.date: "09/28/2018"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.component: "ssdt"
@@ -22,6 +22,23 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 This change log is for [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md).  
   
 For detailed posts about what's new and changed, see [the SSDT Team blog](https://blogs.msdn.microsoft.com/ssdt/)
+
+
+## SSDT for Visual Studio 2017 (15.8.1)
+Build Number: 14.0.16179.0  
+Release date: September 28, 2018  
+
+### What's New?
+
+**SSIS:**
+
+1. Add support for [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)].
+2. Remove support for SQL Server 2012.
+
+### Known issues:
+
+- SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True. This issue only applies to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog is not impacted.
+
 
 ## SSDT for Visual Studio 2017 (15.8)
 Build Number: 14.0.16174.0  

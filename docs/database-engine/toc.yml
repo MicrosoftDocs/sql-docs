@@ -38,7 +38,7 @@
   - name: Collations
     href: ../relational-databases/collations/collation-and-unicode-support.md
   - name: Cursors
-    href: cursors.md
+    href: ../relational-databases/cursors.md
   - name: Data collection
     href: ../relational-databases/data-collection/data-collection.md
   - name: Data compression
@@ -47,3 +47,13 @@
     href: ../relational-databases/database-mail/database-mail.md
   - name: Databases
     href: ../relational-databases/databases/databases.md
+  - name: Errors and events
+    href: ../relational-databases/errors-events/errors-and-events-reference-database-engine.md
+  - name: Event classes
+    href: ../relational-databases/event-classes/sql-server-event-class-reference.md
+  - name: Extended events
+    href: ../relational-databases/extended-events/extended-events.md
+  - name: Graphs
+    href: ../relational-databases/graphs/sql-graph-overview.md
+  - name: Hierarchical Data
+    href: ../relational-databases/hierarchical-data-sql-server.md

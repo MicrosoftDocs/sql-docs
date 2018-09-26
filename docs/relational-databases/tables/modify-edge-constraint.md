@@ -26,7 +26,7 @@ monikerRange: ">=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-curren
 # Modify Edge Constraints
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx.md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-  You can modify an edge constraint in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[tsql](../../includes/tsql-md.md)]. You can modify the edge constraint of an edge table by changing the edge constraint clause order or adding a new clause.  
+  You can modify an edge constraint in [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[tsql](../../includes/tsql-md.md)]. You can modify the edge constraint of an edge table by changing the edge constraint clause order or adding a new clause.  
   
  **In This Topic**  
   

@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: "08/14/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.reviewer: ""
+ms.reviewer: vanto
 ms.suite: "sql"
 ms.technology: security
 ms.tgt_pltfrm: ""
@@ -36,8 +36,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 -   Long keys generally yield stronger encryption than short keys.  
   
 -   Asymmetric encryption is slower than symmetric encryption.  
-  
--   Block ciphers with long keys are stronger than stream ciphers.  
   
 -   Long, complex passwords are stronger than short passwords.  
 

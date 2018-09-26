@@ -24,7 +24,7 @@ C2WTS is also required with SQL Server Reporting Services SharePoint mode if you
 
 The Report Viewer web part can be used to embed SQL Server Reporting Services native mode reports within your SharePoint site. This web part is available for SharePoint 2013 and SharePoint 2016. Both SharePoint 2013 and SharePoint 2016 make use of claims authentication. SQL Server Reporting Services (native mode) uses Windows authentication by default. As a result, C2WTS needs to be configured properly for reports to render correctly.
 
-## SharePoint mode integaration
+## SharePoint mode integration
 
 **This section only applies to SQL Server 2016 Reporting Services and earlier.**
 
@@ -51,7 +51,7 @@ If your environment will use Kerberos constrained delegation, then the SharePoin
 
     * Right-click each service account and open the properties dialog. In the dialog click the **Delegation** tab.
 
-        The delegation tab is only visible if the object has a Service Prinicpal Name (SPN) assigned to it. C2WTS does not require an SPN on the C2WTS Account, however, without an SPN, the **Delegation** tab will not be visible. An alternative way to configure constrained delegation is to use a utility such as **ADSIEdit**.
+        The delegation tab is only visible if the object has a Service Principal Name (SPN) assigned to it. C2WTS does not require an SPN on the C2WTS Account, however, without an SPN, the **Delegation** tab will not be visible. An alternative way to configure constrained delegation is to use a utility such as **ADSIEdit**.
 
     * Key configuration options on the delegation tab are the following:
 

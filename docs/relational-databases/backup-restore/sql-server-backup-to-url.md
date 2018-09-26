@@ -56,6 +56,18 @@ manager: craigg
   
  Creating a Windows Azure Storage account within your Azure subscription is the first step in this process. This storage account is an administrative account that has full administrative permissions on all containers and objects created with the storage account. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can either use the Windows Azure storage account name and its access key value to authenticate and write and read blobs to the Microsoft Azure Blob storage service or use a Shared Access Signature token generated on specific containers granting it read and write rights. For more information on Azure Storage Accounts, see [About Azure Storage Accounts](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/) and for more information about Shared Access Signatures, see [Shared Access Signatures, Part 1: Understanding the SAS Model](http://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/). The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Credential stores this authentication information and is used during the backup or restore operations.  
   
+###  <a name="blockbloborpageblob"></a> Backup to block blob vs. page blob 
+ There are two types of blobs that can be stored in the Microsoft Azure Blob storage service: block and page blobs. SQL Server backup can use either blob type depending upon the Transact-SQL syntax used: If the storage key is used in the credential, page blob will be used; if the Shared Access Signature is used, block blob will be used.
+ 
+ Backup to block blob is only available in SQL Server 2016 or later version. We recommend you to backup to block blob instead of page block if you are running SQL Server 2016 or later version. The main reasons are:
+- Shared Access Signature is a safer way to authorize blob access compared to storage key.
+- You can backup to multiple block blobs to get better backup and restore performance, and support larger database backup.
+- [Block blob](https://azure.microsoft.com/pricing/details/storage/blobs/) is cheaper than [page blob](https://azure.microsoft.com/pricing/details/storage/page-blobs/). 
+
+When you backup to block blob, the maximum block size you can specify is 4MB. The maximum size of a single block blob file is 4MB * 50000 = 195GB. If your database is larger than 195GB, we recommend you:
+- Use backup compression
+- Backup to multiple block blobs
+
 ###  <a name="Blob"></a> Microsoft Azure Blob storage service  
  **Storage Account:** The storage account is the starting point for all storage services. To access the Microsoft Azure Blob storage service, first create a Windows Azure storage account. For more information, see [Create a Storage Account](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/)  
   

@@ -1,11 +1,12 @@
-- name: About this release
+- name: What's new in APS
+  href: whats-new-analytics-platform-system.md
   items:
-  - name: What's new
-    items:
-    - name: APS AU7
-      href: whats-new-analytics-platform-system.md#h2-aps-au7
-    - name: APS 2016
-      href: whats-new-analytics-platform-system.md#h2-aps-au6
+  - name: APS CU7.1
+    href: whats-new-analytics-platform-system.md#h2-aps-cu7.1?view=aps-pdw-2016-au7
+  - name: APS AU7
+    href: whats-new-analytics-platform-system.md#h2-aps-au7?view=aps-pdw-2016-au7
+  - name: APS 2016
+    href: whats-new-analytics-platform-system.md#h2-aps-au6?view=aps-pdw-2016
 - name: Architecture
   items:
   - name: Parallel Data Warehouse overview

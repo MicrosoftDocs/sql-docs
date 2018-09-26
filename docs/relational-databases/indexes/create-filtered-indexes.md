@@ -67,7 +67,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
   
--   You cannot create a filtered index on a view. However, the query optimizer can benefit from a filtered index defined on a table that is referenced in a view. The query optimizer considers a filtered index for a query that selects from a view if the query results will be correct.  
+-   You cannot create a filtered index on a view. However, the query optimizer can benefit from a filtered index defined on a table that is referenced in a view. The query optimizer considers a filtered index for a query that selects from a view if the query results will be correct.
+
+-   You cannot create a filtered index on a table when the column accessed in the filter expression is of a CLR data type.
   
 -   Filtered indexes have the following advantages over indexed views:  
   

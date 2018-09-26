@@ -1,7 +1,7 @@
 ---
 title: "Replication with SQL Database Managed Instance| Microsoft Docs"
 ms.custom: ""
-ms.date: "06/15/2018"
+ms.date: "09/23/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.component: "replication"
@@ -25,7 +25,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-Azure SQL Database Managed Instance (preview) supports transactional replication. Managed Instance can host publisher, distributor, and subscriber databases.
+Replication is available for public preview on Azure SQL Database Managed Instance. Managed Instance can host publisher, distributor, and subscriber databases.
 
 ## Common configurations
 
@@ -107,9 +107,9 @@ Supports:
 
    Replace `<SQL_USER>` and `<PASSWORD>` with the SQL Server Account and password.
 
-   Replace `\\<STORAGE_ACCOUNT>.file.core.windows.net\<SHARE>` with the value for your storage account. 
+   Replace `\\<STORAGE_ACCOUNT>.file.core.windows.net\<SHARE>` with the value of your storage account.  
 
-   Replace `<STORAGE_CONNECTION_STRING>` with the value for your access keys.
+   Replace `<STORAGE_CONNECTION_STRING>` with the connection string from the **Access keys** tab of your Microsoft Azure storage account.
 
    After you update the following query, run it. 
 
@@ -202,4 +202,4 @@ The following features are not supported:
 
 ## See Also
 
-- [What is a Managed Instance (preview)?](http://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)
+- [What is a Managed Instance?](http://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)

@@ -15,7 +15,7 @@ ms.assetid:
 author: "s-r-k"
 ms.author: "karam"
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2018 || = sqlallproducts-allversions"
+monikerRange: "= azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions"
 ---
 # Scalar UDF Inlining
 
@@ -130,12 +130,6 @@ As mentioned earlier, the query plan no longer has a user-defined function opera
 
 Depending upon the complexity of the logic in the UDF, the resulting query plan might also get bigger and more complex. As we can see, the operations inside the UDF are now no longer a black box, and hence the query optimizer is able to cost and optimize those operations. Also, since the UDF is no longer in the plan, iterative UDF invocation is replaced by a plan that completely avoids function call overhead.
 
-The results of running this query are shown in the below table:
-
-| Query: | Query without UDF inlining | Query with scalar UDF inlining |
-| --- | --- | --- |
-| Execution time: | TBD | TBD |
-
 ## Inlineability of Scalar UDFs
 
 A scalar T-SQL UDF is inlineable if all of the following conditions hold:
@@ -145,9 +139,9 @@ A scalar T-SQL UDF is inlineable if all of the following conditions hold:
     - SELECT: SQL query with single/multiple variable assignments<sup>1</sup>.
     - IF/ELSE: Branching with arbitrary levels of nesting.
     - RETURN: Single or multiple return statements.
-    - UDF: Nested/recursive function calls.
+    - UDF: Nested/recursive function calls<sup>2</sup>.
     - Others: Relational operations such as EXISTS, ISNULL.
-1. The UDF does not invoke any intrinsic function that is either time-dependent (such as GETDATE()) or has side effects<sup>2</sup>  (such as NEWSEQUENTIALID()).
+1. The UDF does not invoke any intrinsic function that is either time-dependent (such as GETDATE()) or has side effects<sup>3</sup>  (such as NEWSEQUENTIALID()).
 1. The UDF uses the "EXECUTE AS CALLER" clause (this is the default behavior if the EXECUTE AS clause is not specified).
 1. The UDF does not reference table variables or table valued parameters.
 1. The query invoking a scalar UDF does not reference a scalar UDF call in its GROUP BY clause.
@@ -158,16 +152,15 @@ A scalar T-SQL UDF is inlineable if all of the following conditions hold:
 1. Partition functions are not inlineable.
 
 <sup>1</sup> SELECT with variable accumulation/aggregation (eg. SELECT @val += col1 FROM table1) is not inlineable.
-
-<sup>2</sup> An intrinsic function that may update some internal global state is an example of a function with side effects. Such functions return different results each time they are called, based on the internal state.
+<sup>2</sup> Recursive UDFs will be inlined to a certain depth only.
+<sup>3</sup> Intrinsic functions whose results depend upon the current system time are time-dependent. An intrinsic function that may update some internal global state is an example of a function with side effects. Such functions return different results each time they are called, based on the internal state.
 
 ### Checking whether a UDF is inlineable or not
 
 For every T-SQL scalar UDF, the [sys.sql_modules](../system-catalog-views/sys-sql-modules-transact-sql.md) catalog view includes a property called *is_inlineable*, which indicates whether that UDF is inlineable or not. A value of 1 indicates that it is inlineable, and 0 indicates otherwise. This property will have a value of 1 for all 
 inline TVFs as well. For all other modules, the value will be 0.
 
-**Note:** If a scalar UDF is inlineable, it does not imply that it will always be inlined. SQL Server will decide (on a per-query, per-UDF basis) whether to inline a UDF or not. For instance, if the UDF definition runs into thousands of lines of code, SQL Server *might* choose not to inline it. This decision is made when the query referencing
-a scalar UDF is compiled.
+**Note:** If a scalar UDF is inlineable, it does not imply that it will always be inlined. SQL Server will decide (on a per-query, per-UDF basis) whether to inline a UDF or not. For instance, if the UDF definition runs into thousands of lines of code, SQL Server *might* choose not to inline it. Another example would be if an inlineable UDF is present in the GROUP BY clause of a query, it will not be inlined. This decision is made when the query referencing a scalar UDF is compiled.
 
 ### Checking whether inlining has happened or not
 

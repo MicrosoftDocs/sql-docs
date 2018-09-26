@@ -122,23 +122,12 @@ SET
     <search_condition>  
   
 <search condition> ::=  
-    { [ NOT ] <predicate> | ( <search_condition> ) | ( <graph_search_condition> ) }   
-    [ { AND | OR } [ NOT ] { <predicate> | ( <search_condition> ) } | { AND { <predicate> | ( <search_condition> ) }}]   
-[ ,...n ]   
-
-<graph_search_condition> ::=
-    { <node_alias> { 
-                      { <-( <edge_alias> )- } 
-                    | { -( <edge_alias> )-> }
-                    <node_alias> 
-                   } 
-    }
-  
-<node_alias> ::=
-    node_table_name | node_table_alias 
-
-<edge_alias> ::=
-    edge_table_name | edge_table_alias
+    MATCH(<graph_search_pattern>) | <search_condition_without_match> | <search_condition> AND <search_condition>
+    
+<search_condition_without_match> ::=
+    { [ NOT ] <predicate> | ( <search_condition_without_match> ) 
+    [ { AND | OR } [ NOT ] { <predicate> | ( <search_condition_without_match> ) } ]   
+[ ,...n ]  
 
 <predicate> ::=   
     { expression { = | < > | ! = | > | > = | ! > | < | < = | ! < } expression   
@@ -153,7 +142,21 @@ SET
     | expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }   
   { ALL | SOME | ANY} ( subquery )   
     | EXISTS ( subquery ) }   
+
+<graph_search_pattern> ::=
+    { <node_alias> { 
+                      { <-( <edge_alias> )- } 
+                    | { -( <edge_alias> )-> }
+                    <node_alias> 
+                   } 
+    }
   
+<node_alias> ::=
+    node_table_name | node_table_alias 
+
+<edge_alias> ::=
+    edge_table_name | edge_table_alias
+
 <output_clause>::=  
 {  
     [ OUTPUT <dml_select_list> INTO { @table_variable | output_table }  
@@ -275,8 +278,8 @@ SET
  \<search condition>  
  Specifies the search conditions used to specify \<merge_search_condition> or \<clause_search_condition>. For more information about the arguments for this clause, see [Search Condition &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md).  
 
- \<graph search condition>  
- Specifies the graph match conditions. For more information about the arguments for this clause, see [MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)
+ \<graph search pattern>  
+ Specifies the graph match pattern. For more information about the arguments for this clause, see [MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)
   
 ## Remarks  
  At least one of the three MATCHED clauses must be specified, but they can be specified in any order. A variable cannot be updated more than once in the same MATCHED clause.  

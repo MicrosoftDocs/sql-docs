@@ -75,7 +75,7 @@ In the following row, click whichever product name you are interested in. The cl
 > <tr>
 >   <th><strong><em>* SQL Server *<br />&nbsp;</em></strong></th>
 >   <th><a href="backup-transact-sql.md?view=azuresqldb-mi-current">SQL Database<br />Managed Instance</a></th>
->   <th><a href="backup-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
+>   <th><a href="backup-transact-sql.md?view=aps-pdw-2016">Parallel<br />Data Warehouse</a></th>
 > </tr>
 > </table>
 
@@ -961,7 +961,7 @@ WITH STATS = 5;
 > <tr>
 >   <th><a href="backup-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
 >   <th><strong><em>* SQL Database<br />Managed Instance *</em></strong></th>
->   <th><a href="backup-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
+>   <th><a href="backup-transact-sql.md?view=aps-pdw-2016">Parallel<br />Data Warehouse</a></th>
 > </tr>
 > </table>
 
@@ -1168,7 +1168,7 @@ WITH STATS = 5;
 [Restore database](restore-statements-transact-sql.md)
 
 ::: moniker-end
-::: moniker range="=aps-pdw-2016||=sqlallproducts-allversions"
+::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
 > <table>
@@ -1180,13 +1180,13 @@ WITH STATS = 5;
 > <tr>
 >   <th><a href="backup-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
 >   <th><a href="backup-transact-sql.md?view=azuresqldb-mi-current">SQL Database<br />Managed Instance</a></th>
->   <th><strong><em>* SQL Parallel<br />Data Warehouse *</em></strong></th>
+>   <th><strong><em>* Parallel<br />Data Warehouse *</em></strong></th>
 > </tr>
 > </table>
 
 &nbsp;
 
-# SQL Parallel Data Warehouse
+# Parallel Data Warehouse
 
 Creates a backup of a [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] database and stores the backup off the appliance in a user-specified network location. Use this statement with [RESTORE DATABASE &#40;Parallel Data Warehouse&#41;](../../t-sql/statements/restore-statements-transact-sql.md) for disaster recovery, or to copy a database from one appliance to another.  
   

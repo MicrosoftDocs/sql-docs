@@ -2,7 +2,7 @@
 title: "Assess an enterprise and consolidate assessment reports (SQL Server) | Microsoft Docs"
 description: Learn how to use DMA to assess an enterprise and consolidate assessment reports before upgrading SQL Server or migrating to Azure SQL Database.
 ms.custom: ""
-ms.date: "08/28/2018"
+ms.date: "09/21/2018"
 ms.prod: sql
 ms.prod_service: "dma"
 ms.reviewer: ""
@@ -83,7 +83,7 @@ Create a database called **EstateInventory** and a table called **DatabaseInvent
 
 If this database is not on the tools computer, ensure that the tools computer has network connectivity to this SQL Server instance.
 
-The benefit of using a SQL Server table over a CSV file is that you can use the assessment flag column to control the instance / database that gets picked up for assessment, which makes it easier to separate assessments into smaller chunks.  You can then span multiple assessments (see the section on running an assessment later in this article), (see the section on running an assessment later in this article), which is easier than maintaining multiple CSV files.
+The benefit of using a SQL Server table over a CSV file is that you can use the assessment flag column to control the instance / database that gets picked up for assessment, which makes it easier to separate assessments into smaller chunks.  You can then span multiple assessments (see the section on running an assessment later in this article), which is easier than maintaining multiple CSV files.
 
 Keep in mind that depending on the number of objects and their complexity, an assessment can take an exceptionally long time (hours+), so it is prudent to separate the assessment into manageable chunks.
 

@@ -71,7 +71,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
      Authorized Windows users and members of authorized Windows groups can connect directly to the database and do not need logins in the **master** database. The database trusts the authentication by Windows.  
   
- Users based on logins in the **master** database can be granted access to a contained database, but that would create a dependency on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. Therefore, creating users based on logins see comment for partially contained databases.  
+ Users based on logins in the **master** database can be granted access to a contained database, but that would create a dependency on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. Therefore, creating users based on logins requires partial containment.
   
 > [!IMPORTANT]  
 >  Enabling partially contained databases delegates control over access to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to the owners of the database. For more information, see [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  

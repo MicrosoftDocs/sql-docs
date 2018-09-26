@@ -55,6 +55,11 @@
 - name: Always Encrypted
   href: always-encrypted-database-engine.md
   items:
+  - name: Always Encrypted with Secure Enclaves
+    href: always-encrypted-enclaves.md
+    items:
+    - name: Configure Always Encrypted with Secure Enclaves
+      href: configure-always-encrypted-enclaves.md
   - name: Always Encrypted Wizard
     href: always-encrypted-wizard.md
   - name: Overview of Key Management for Always Encrypted

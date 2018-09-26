@@ -92,7 +92,7 @@
   - name: Service Broker
     href: ../relational-databases/service-broker/event-notifications.md
   - name: Showplan Operators
-    href: showplan-logical-and-physical-operators-reference.md
+    href: ../relational-databases/showplan-logical-and-physical-operators-reference.md
   - name: Spatial
     href: ../relational-databases/spatial/spatial-data-sql-server.md
   - name: SQL Trace

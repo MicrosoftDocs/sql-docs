@@ -2547,13 +2547,13 @@
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/relational-databases/replication/replication-with-sql-database-managed-instance.md",
-            "redirect_url": "/azure/sql-database/replication-to-sql-database",
+            "source_path": "docs/relational-databases/replication/replication-to-sql-database.md",
+            "redirect_url": "https://docs.microsoft.com/en-us/azure/sql-database/replication-to-sql-database",
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/relational-databases/replication/replication-to-sql-database.md",
-            "redirect_url": "/azure/sql-database/replication-with-sql-database-managed-instance",
+            "source_path": "docs/relational-databases/replication/replication-with-sql-database-managed-instance.md",
+            "redirect_url": "https://docs.microsoft.com/en-us/azure/sql-database/replication-with-sql-database-managed-instance",
             "redirect_document_id": false
         },
         {

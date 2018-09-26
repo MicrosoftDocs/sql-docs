@@ -13,7 +13,7 @@
     href: add-analysis-services-connection-manager-dialog-box-ui-reference.md
 - name: Azure Data Lake Analytics Connection Manager
   href: azure-data-lake-analytics-connection-manager.md
-- name: Azure Data Lake Storage Gen1 Connection Manager
+- name: Azure Data Lake Store Connection Manager
   href: azure-data-lake-store-connection-manager.md
 - name: Azure HDInsight Connection Manager
   href: azure-hdinsight-connection-manager.md

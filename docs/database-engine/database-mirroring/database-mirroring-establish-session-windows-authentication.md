@@ -62,9 +62,9 @@ manager: craigg
   
 4.  To set the principal server as partner on the mirror database, connect to the mirror server, and issue the following statement:  
   
-     ALTER DATABASE *\<database_name\>* SET PARTNER **=**_\<server_network_address\>_  
+     ALTER DATABASE *\<database_name\>* SET PARTNER **=**_\<server\_network\_address\>_  
   
-     where _\<database_name\>_ is the name of the database to be mirrored (this name is the same on both partners), and _\<server_network_address\>_ is the server network address of the principal server.  
+     where _\<database\_name\>_ is the name of the database to be mirrored (this name is the same on both partners), and _\<server\_network\_address\>_ is the server network address of the principal server.  
   
      The syntax for a server network address is as follows:  
   

@@ -43,7 +43,7 @@ RECONFIGURE
 ```  
   
 ## Arguments  
- [ **@configname=** ] **'**_option_name_**'**  
+ [ **@configname=** ] **'**_option\_name_**'**  
  Is the name of a configuration option. *option_name* is **varchar(35)**, with a default of NULL. If not specified, the complete list of options is returned.  
   
  [ **@configvalue=** ] **'**_value_**'**  

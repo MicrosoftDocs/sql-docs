@@ -273,10 +273,10 @@ A stored access policy has been created with read, write, and list rights.  The 
          ENCRYPTION (ALGORITHM,  SERVER CERTIFICATE |ASYMMETRIC KEY)  
          In SQL Server 2014 or later only, specify the encryption algorithm to use, and the Certificate or Asymmetric key to use to secure the encryption.  
   
-         DESCRIPTION **=** { **'**_text_**'** | **@**_text_variable_ }  
+         DESCRIPTION **=** { **'**_text_**'** | **@**_text\_variable_ }  
          Specifies the free-form text that describes the backup set. The string can have a maximum of 255 characters.  
   
-         NAME **=** { *backup_set_name* | **@**_backup_set_name_var_ }  
+         NAME **=** { *backup_set_name* | **@**_backup\_set\_name\_var_ }  
          Specifies the name of the backup set. Names can have a maximum of 128 characters. If NAME is not specified, it is blank.  
   
     -   Basic backup set WITH options:  
@@ -285,7 +285,7 @@ A stored access policy has been created with read, write, and list rights.  The 
   
          Alternatively, to format the backup media, use the FORMAT option:  
   
-         FORMAT [ **,** MEDIANAME**=** { *media_name* | **@**_media_name_variable_ } ] [ **,** MEDIADESCRIPTION **=** { *text* | **@**_text_variable_ } ]  
+         FORMAT [ **,** MEDIANAME**=** { *media_name* | **@**_media\_name\_variable_ } ] [ **,** MEDIADESCRIPTION **=** { *text* | **@**_text\_variable_ } ]  
          Use the FORMAT clause when you are using media for the first time or you want to overwrite all existing data. Optionally, assign the new media a media name and description.  
   
         > [!IMPORTANT]  

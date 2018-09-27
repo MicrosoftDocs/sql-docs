@@ -1,7 +1,7 @@
 ---
 title: "Create a New Database Diagram (Visual Database Tools) | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "09/24/2018"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.component: "ssms-visual-db"
@@ -20,7 +20,7 @@ ms.author: "sstein"
 manager: craigg
 ---
 # Create a New Database Diagram (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 You can use Object Explorer to create new database diagrams. Database diagrams graphically show the structure of the database. Using database diagrams you can create and modify tables, columns, relationships, and keys. Additionally, you can modify indexes and constraints.  
   
 ### To create a new database diagram  
@@ -39,5 +39,4 @@ You can continue to add or delete tables, modify the existing tables, and alter 
   
 ## See Also  
 [Work with Database Diagrams &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
-[Understand Database Diagram Ownership &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/understand-database-diagram-ownership-visual-database-tools.md)  
-  
+[Understand Database Diagram Ownership &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/understand-database-diagram-ownership-visual-database-tools.md)

@@ -93,7 +93,7 @@ First, complete the following steps while online:
 After completing the previous steps, the following can be done while offline:
 
 1. Copy the VS2017 payload to the SSDT payload folder. Ensure all files from both are combined into a single layouts folder.
-2. Run `vs_setup.exe –NoWeb` to install the VS2017 Shell and SQL Server Data Project.
+2. Run `vs_setup.exe --NoWeb` to install the VS2017 Shell and SQL Server Data Project.
 3. Run `SSDT-Setup-ENU.exe /install` and select SSIS/SSRS/SSAS.
 
    - Or for an unattended installation, run `SSDT-Setup-ENU.exe /INSTALLALL[:vsinstances] /passive`  

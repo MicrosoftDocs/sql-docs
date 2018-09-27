@@ -27,7 +27,7 @@ To complete this tutorial, you must be familiar with [!INCLUDE[ssNoVersion](../i
 To use this tutorial, you need an Azure storage account, SQL Server Management Studio (SSMS), access to a server that's running SQL Server, and an AdventureWorks database. Additionally, the account used to issue the BACKUP and RESTORE commands should be in the **db_backupoperator** database role with **alter any credential** permissions. 
 
 - Get a free [Azure Account](https://azure.microsoft.com/offers/ms-azr-0044p/).
-- Create an [Azure storage account](https://docs.microsoft.com/en-us/azure/storage/common/storage-quickstart-create-account?tabs=portal).
+- Create an [Azure storage account](https://docs.microsoft.com/azure/storage/common/storage-quickstart-create-account?tabs=portal).
 - Install [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 - Install [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 - Download [AdventureWorks2016 sample databases](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).

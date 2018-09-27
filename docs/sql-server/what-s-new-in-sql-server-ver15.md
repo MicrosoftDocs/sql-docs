@@ -1,7 +1,7 @@
 ---
 title: "What's new in SQL Server 2019 | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/24/2018"
+ms.date: "09/26/2018"
 ms.prod: "sql-server-2018"
 ms.reviewer: ""
 ms.suite: ""
@@ -358,6 +358,9 @@ FROM sys.dm_exec_requests AS d
 
 ## Next steps
 
-See the [SQL Server 2019 Release Notes](sql-server-ver15-release-notes.md).
+- [SQL Server 2019 Release Notes](sql-server-ver15-release-notes.md)
+
+- [Microsoft SQL Server 2019: Technical white paper](https://info.microsoft.com/rs/157-GQE-382/images/EN-US-CNTNT-white-paper-DBMod-Microsoft-SQL-Server-2019-Technical-white-paper.pdf)<br />Published in September 2018. Applies to Microsoft SQL Server 2019 CTP 2.0 for Windows, Linux, and Docker containers.
+
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

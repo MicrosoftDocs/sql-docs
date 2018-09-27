@@ -16,6 +16,7 @@ helpviewer_keywords:
 ms.assetid: dde3664d-90b5-4b12-969e-39152c86e58a
 author: markingmyname
 ms.author: maghan
+monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Edit a Data Alert in Alert Designer
 

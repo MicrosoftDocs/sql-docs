@@ -138,6 +138,8 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
   
  [ **@query_result_header=** ] *query_result_header*  
  Specifies whether the query results include column headers. The query_result_header value is of type **bit**. When the value is 1, query results contain column headers. When the value is 0, query results do not include column headers. This parameter defaults to **1**. This parameter is only applicable if **@query** is specified.  
+ 
+ If you set the @query_result_header to 0 and you set the @query_no_truncate to 1, an error is raised.
   
  [ **@query_result_width** = ] *query_result_width*  
  Is the line width, in characters, to use for formatting the results of the query. The *query_result_width* is of type **int**, with a default of 256. The value provided must be between 10 and 32767. This parameter is only applicable if **@query** is specified.  

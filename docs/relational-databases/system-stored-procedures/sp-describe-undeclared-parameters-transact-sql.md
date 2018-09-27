@@ -1,7 +1,7 @@
 ﻿---
 title: "sp_describe_undeclared_parameters (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/15/2018"
+ms.date: "08/23/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.component: "system-stored-procedures"
@@ -100,7 +100,7 @@ sp_describe_undeclared_parameters
   
 -   If the input [!INCLUDE[tsql](../../includes/tsql-md.md)] batch declares a local variable of the same name as a parameter declared in \@params.  
   
--   If the statement references temporary tables.  
+- If the statement references temporary tables.
   
  If \@tsql has no parameters, other than those declared in \@params, the procedure returns an empty result set.  
   

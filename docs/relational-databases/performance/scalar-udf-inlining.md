@@ -31,7 +31,7 @@ User-Defined Functions that are implemented in Transact-SQL and return a single 
 
 Scalar UDFs typically end up performing poorly due to the following reasons.
 
-- **Iterative invocation:** UDFs are invoked in an iterative manner, once per qualifying tuple. This incurs additional costs of repeated context switching due to function invocation. Especially, UDFs that execute SQL queries in their definition are severely affected. 
+- **Iterative invocation:** UDFs are invoked in an iterative manner, once per qualifying tuple. This incurs additional costs of repeated context switching due to function invocation. Especially, UDFs that execute SQL queries in their definition are severely affected.
 - **Lack of costing:** During optimization, only relational operators are costed, while scalar operators are not. Prior to the introduction of scalar UDFs, other scalar operators were generally cheap and did not require costing. A small CPU cost added for a scalar operation was enough. There are scenarios where the actual cost is significant, and yet still remains underrepresented.
 - **Interpreted execution:** UDFs are evaluated as a batch of statements, executed statement-by-statement. Note that each statement itself is compiled, and the compiled plan is cached. Although this caching strategy saves some time as it avoids recompilations, each statement executes in isolation. No cross-statement optimizations are carried out.
 - **Serial execution:** SQL Server does not allow intra-query parallelism in queries that invoke UDFs. 
@@ -53,7 +53,7 @@ WHERE O_ORDERKEY = L_ORDERKEY
 GROUP BY L_SHIPDATE, O_SHIPPRIORITY ORDER BY L_SHIPDATE;
 ```
 
-This query computes the sum of discounted prices for line items and presents the results grouped by the shipping date and shipping priority. The expression **L_EXTENDEDPRICE \*(1 - L_DISCOUNT)** is the formula for the discounted price for a given line item. Such formulas can be extracted into functions for the benefit of modularity and reuse.
+This query computes the sum of discounted prices for line items and presents the results grouped by the shipping date and shipping priority. The expression `L_EXTENDEDPRICE *(1 - L_DISCOUNT)` is the formula for the discounted price for a given line item. Such formulas can be extracted into functions for the benefit of modularity and reuse.
 
 ```sql
 CREATE FUNCTION dbo.discount_price(@price DECIMAL(12,2), @discount DECIMAL(12,2)) 
@@ -83,7 +83,7 @@ These numbers are based on a 10 GB CCI database (using the TPC-H schema), runnin
 
 ### Example 2 - Multi-statement scalar UDF
 
-Scalar UDFs that are implemented using multiple T-SQL statements such as variable assignments and conditional branching can also be inlined. Consider the following scalar UDF that, given a customer key, determines the service category for that customer. It arrives at the category by first computing the total price of all orders placed by the customer using a SQL query. Then, it uses an IF-ELSE logic to decide the category based on the total price.
+Scalar UDFs that are implemented using multiple T-SQL statements such as variable assignments and conditional branching can also be inlined. Consider the following scalar UDF that, given a customer key, determines the service category for that customer. It arrives at the category by first computing the total price of all orders placed by the customer using a SQL query. Then, it uses an `IF-ELSE` logic to decide the category based on the total price.
 
 ```sql
 CREATE OR ALTER FUNCTION dbo.customer_category(@ckey INT) 
@@ -116,7 +116,7 @@ The execution plan for this query in SQL Server 2017 (compatibility level 140 an
 
 ![Query Plan without inlining](./media/query-plan-without-udf-inlining.png)
 
-As the plan shows, SQL Server adopts a simple strategy here: for every tuple in the CUSTOMER table, invoke the UDF and output the results. This strategy is naïve and inefficient. With inlining, such UDFs are transformed into equivalent scalar subqueries which are substituted in the calling query in place of the UDF.
+As the plan shows, SQL Server adopts a simple strategy here: for every tuple in the `CUSTOMER` table, invoke the UDF and output the results. This strategy is naïve and inefficient. With inlining, such UDFs are transformed into equivalent scalar subqueries which are substituted in the calling query in place of the UDF.
 
 For the same query, the plan with the UDF inlined looks as below.
 
@@ -124,49 +124,48 @@ For the same query, the plan with the UDF inlined looks as below.
 
 As mentioned earlier, the query plan no longer has a user-defined function operator, but its effects are now observable in the plan, like views or inline TVFs. Here are some key observations from the above plan:
 
-1. SQL Server has inferred the implicit join between CUSTOMER and ORDERS and made that explicit via a Join operator.
-2. SQL Server has also inferred the implicit GROUP BY O_CUSTKEY on ORDERS and has used the IndexSpool + StreamAggregate to implement it.
+1. SQL Server has inferred the implicit join between `CUSTOMER` and `ORDERS` and made that explicit via a join operator.
+2. SQL Server has also inferred the implicit `GROUP BY O_CUSTKEY on ORDERS` and has used the IndexSpool + StreamAggregate to implement it.
 3. SQL Server is now using parallelism across all operators.
 
 Depending upon the complexity of the logic in the UDF, the resulting query plan might also get bigger and more complex. As we can see, the operations inside the UDF are now no longer a black box, and hence the query optimizer is able to cost and optimize those operations. Also, since the UDF is no longer in the plan, iterative UDF invocation is replaced by a plan that completely avoids function call overhead.
 
-## Inline-ability of Scalar UDFs
+## Inlineable Scalar UDFs requirements
 
-A scalar T-SQL UDF is inline-able if all of the following conditions hold:
+A scalar T-SQL UDF can be inline if all of the following conditions are true:
 
-1. The UDF is written using the following constructs:
-    - DECLARE, SET: Variable declaration and assignments.
-    - SELECT: SQL query with single/multiple variable assignments<sup>1</sup>.
-    - IF/ELSE: Branching with arbitrary levels of nesting.
-    - RETURN: Single or multiple return statements.
-    - UDF: Nested/recursive function calls<sup>2</sup>.
-    - Others: Relational operations such as EXISTS, ISNULL.
-1. The UDF does not invoke any intrinsic function that is either time-dependent (such as GETDATE()) or has side effects<sup>3</sup>  (such as NEWSEQUENTIALID()).
-1. The UDF uses the "EXECUTE AS CALLER" clause (the default behavior if the EXECUTE AS clause is not specified).
-1. The UDF does not reference table variables or table-valued parameters.
-1. The query invoking a scalar UDF does not reference a scalar UDF call in its GROUP BY clause.
-1. The UDF is not natively compiled (interop is supported).
-1. The UDF is not used in a computed column or a check constraint definition.
-1. The UDF does not reference user-defined types.
-1. There are no signatures added to the UDF.
-1. Partition functions are not inline-able.
+- The UDF is written using the following constructs:
+    - `DECLARE`, `SET`: Variable declaration and assignments.
+    - `SELECT`: SQL query with single/multiple variable assignments<sup>1</sup>.
+    - `IF`/`ELSE`: Branching with arbitrary levels of nesting.
+    - `RETURN`: Single or multiple return statements.
+    - `UDF`: Nested/recursive function calls<sup>2</sup>.
+    - Others: Relational operations such as `EXISTS`, `ISNULL`.
+- The UDF does not invoke any intrinsic function that is either time-dependent (such as `GETDATE()`) or has side effects<sup>3</sup>  (such as `NEWSEQUENTIALID()`).
+- The UDF uses the `EXECUTE AS CALLER` clause (the default behavior if the `EXECUTE AS` clause is not specified).
+- The UDF does not reference table variables or table-valued parameters.
+- The query invoking a scalar UDF does not reference a scalar UDF call in its `GROUP BY` clause.
+- The UDF is not natively compiled (interop is supported).
+- The UDF is not used in a computed column or a check constraint definition.
+- The UDF does not reference user-defined types.
+- There are no signatures added to the UDF.
+- Partition functions can not be inline.
 
-<sup>1</sup> SELECT with variable accumulation/aggregation (for example, SELECT @val += col1 FROM table1) is not inline-able.
+<sup>1</sup> `SELECT` with variable accumulation/aggregation (for example, `SELECT @val += col1 FROM table1`) can not inline.
 <sup>2</sup> Recursive UDFs will be inlined to a certain depth only.
 <sup>3</sup> Intrinsic functions whose results depend upon the current system time are time-dependent. An intrinsic function that may update some internal global state is an example of a function with side effects. Such functions return different results each time they are called, based on the internal state.
 
-### Checking whether a UDF is inline-able or not
+### Checking whether or not a UDF can be inline
 
-For every T-SQL scalar UDF, the [sys.sql_modules](../system-catalog-views/sys-sql-modules-transact-sql.md) catalog view includes a property called `is_inlineable`, which indicates whether that UDF is inline-able or not. A value of 1 indicates that it is inline-able, and 0 indicates otherwise. This property will have a value of 1 for all 
-inline TVFs as well. For all other modules, the value will be 0.
+For every T-SQL scalar UDF, the [sys.sql_modules](../system-catalog-views/sys-sql-modules-transact-sql.md) catalog view includes a property called `is_inlineable`, which indicates whether or not a UDF can be inline or not. A value of 1 indicates that it can be used inline, and 0 indicates otherwise. This property will have a value of 1 for all inline TVFs as well. For all other modules, the value will be 0.
 
-**Note:** If a scalar UDF is inline-able, it does not imply that it will always be inlined. SQL Server will decide (on a per-query, per-UDF basis) whether to inline a UDF or not. For instance, if the UDF definition runs into thousands of lines of code, SQL Server *might* choose not to inline it. Another example would be if an inline-able UDF is present in the GROUP BY clause of a query, it will not be inlined. This decision is made when the query referencing a scalar UDF is compiled.
+**Note:** If a scalar UDF can be inline, it does not imply that it will always be inlined. SQL Server will decide (on a per-query, per-UDF basis) whether to inline a UDF or not. For instance, if the UDF definition runs into thousands of lines of code, SQL Server might choose not to inline it. Another example is a UDF in a `GROUP BY` clause - which will not be inlined. This decision is made when the query referencing a scalar UDF is compiled.
 
 ### Checking whether inlining has happened or not
 
 If all the preconditions are satisfied and SQL Server decides to perform inlining, it transforms the UDF into a relational expression. From the query plan, it is easy to figure out whether inlining has happened or not:
 
-- The plan xml will not have a "\<UserDefinedFunction\>" xml node for a UDF that has been inlined successfully. 
+- The plan xml will not have a `<UserDefinedFunction>` xml node for a UDF that has been inlined successfully. 
 - Certain XEvents are also emitted.
 
 ## Enabling scalar UDF inlining
@@ -194,7 +193,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET TSQL_SCALAR_UDF_INLINING = ON;
 ```
 
 When ON, this setting will appear as enabled in [sys.database_scoped_configurations](../system-catalog-views/sys-database-scoped-configurations-transact-sql.md). 
-You can also disable scalar UDF inlining for a specific query by designating DISABLE_TSQL_SCALAR_UDF_INLINING as a USE HINT query hint. For example:
+You can also disable scalar UDF inlining for a specific query by designating `DISABLE_TSQL_SCALAR_UDF_INLINING` as a `USE HINT` query hint. For example:
 
 ```sql
 SELECT L_SHIPDATE, O_SHIPPRIORITY, SUM (dbo.discount_price(L_EXTENDEDPRICE, L_DISCOUNT)) 
@@ -204,9 +203,9 @@ GROUP BY L_SHIPDATE, O_SHIPPRIORITY ORDER BY L_SHIPDATE
 OPTION (USE HINT('DISABLE_TSQL_SCALAR_UDF_INLINING'));
 ```
 
-A USE HINT query hint takes precedence over the database scoped configuration or compatibility level setting.
+A `USE HINT` query hint takes precedence over the database scoped configuration or compatibility level setting.
 
-Scalar UDF inlining can also be disabled for a specific UDF using the INLINE clause in the CREATE/ALTER FUNCTION statement.
+Scalar UDF inlining can also be disabled for a specific UDF using the INLINE clause in the `CREATE FUNCTION` or `ALTER FUNCTION` statement.
 For example:
 
 ```sql
@@ -231,7 +230,7 @@ BEGIN
 END
 ```
 
-**NOTE:** The INLINE clause is not mandatory. If INLINE clause is not specified, it is automatically set to ON/OFF based on whether the UDF is inline-able. If INLINE=ON is specified but the UDF is found to be non-inline-able, an error will be thrown.
+**NOTE:** The `INLINE` clause is not mandatory. If `INLINE` clause is not specified, it is automatically set to `ON`/`OFF` based on whether the UDF can be inlined. If `INLINE=ON` is specified but the UDF is found inelligible for inlining, an error will be thrown.
 
 ## Important Notes
 
@@ -240,9 +239,9 @@ As described in this article, scalar UDF inlining transforms a query with scalar
 1. Inlining will result in a different query hash for the same query text.
 1. Certain warnings in statements inside the UDF (such as divide by zero etc.) which might have been hidden earlier, might show up due to inlining.
 1. Query level join hints might not be valid anymore, as inlining may introduce new joins. Local join hints will have to be used instead.
-1. Views that reference inline-able scalar UDFs cannot be indexed. If you need to create an index on such views, disable inlining for the referenced UDFs.
+1. Views that reference inline scalar UDFs cannot be indexed. If you need to create an index on such views, disable inlining for the referenced UDFs.
 1. The behavior of [Dynamic Data masking](../security/dynamic-data-masking.md) may not be the same as without inlining. More specifically, the behavior with inlining would be identical to the behavior observed if the UDF was a single scalar subquery.
-1. If a UDF references built-in functions such as SCOPE_IDENTITY(), the value returned by the built in function will change with inlining. This change in behavior is because inlining changes the scope of statements inside the UDF.
+1. If a UDF references built-in functions such as `SCOPE_IDENTITY()`, the value returned by the built in function will change with inlining. This change in behavior is because inlining changes the scope of statements inside the UDF.
 
 ## See Also
 

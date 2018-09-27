@@ -71,7 +71,7 @@ Declares the application workload type when connecting to a server. The only cur
 
 - -m *error_level* Control which error messages are sent to stdout.  
   
-- **-M**_multisubnet_failover_  
+- **-M**_multisubnet\_failover_  
 Always specify **-M** when connecting to the availability group listener of a [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] availability group or a [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Failover Cluster Instance. **-M** provides for faster detection of failovers and connection to the (currently) active server. If **–M** is not specified, **-M** is off. For more information about [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)], see [ODBC Driver on Linux and macOS - High Availability and Disaster Recovery](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
   
 > [!NOTE]  
@@ -207,13 +207,13 @@ The following entries are supported in a DSN on Linux or macOS:
 
 -   **ApplicationIntent=ReadOnly**  
 
--   **Database=**_database_name_  
+-   **Database=**_database\_name_  
   
 -   **Driver=ODBC Driver 11 for SQL Server** or **Driver=ODBC Driver 13 for SQL Server**
   
 -   **MultiSubnetFailover=Yes**  
   
--   **Server=**_server_name_or_IP_address_  
+-   **Server=**_server\_name\_or\_IP\_address_  
   
 -   **Trusted_Connection=yes**|**no**  
   

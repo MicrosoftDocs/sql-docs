@@ -65,6 +65,8 @@
     href: sys-dm-db-log-stats-transact-sql.md
   - name: sys.dm_db_objects_impacted_on_version_change (Azure SQL Database)
     href: sys-dm-db-objects-impacted-on-version-change-azure-sql-database.md
+  - name: sys.dm_db_page_info
+    href: sys-dm-db-page-info-transact-sql.md
   - name: sys.dm_db_partition_stats
     href: sys-dm-db-partition-stats-transact-sql.md
   - name: sys.dm_db_persisted_sku_features

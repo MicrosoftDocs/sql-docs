@@ -1,6 +1,11 @@
 {
     "redirections": [
         {
+            "source_path": "docs/relational-databases/polybase/get-started-with-polybase.md",
+            "redirect_url": "/sql/relational-databases/polybase/polybase-guide",
+            "redirect_document_id": false 
+        },
+        {
             "source_path": "docs/advanced-analytics/architecture-overview-machine-learning.md",
             "redirect_url": "/sql/advanced-analytics/concepts/extensibility-framework",
             "redirect_document_id": false
@@ -1322,6 +1327,26 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "docs/relational-database/policy-based-management/lesson-1-1-create-the-off-by-default-policy.md",
+            "redirect_url": "/sql/relational-database/policy-based-management/lesson-1-create-and-apply-an-off-by-default-policy",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-database/policy-based-management/lesson-1-2-configure-a-server-to-run-the-off-by-default-policy.md",
+            "redirect_url": "/sql/relational-database/policy-based-management/lesson-1-create-and-apply-an-off-by-default-policy",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-database/policy-based-management/lesson-2-1-create-the-finance-name-policy.md",
+            "redirect_url": "/sql/relational-database/policy-based-management/lesson-2-create-and-apply-a-naming-standards-policy",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-database/policy-based-management/lesson-2-2-subscribe-to-and-check-the-finance-name-policy.md",
+            "redirect_url": "/sql/relational-database/policy-based-management/lesson-2-2-subscribe-to-and-check-the-finance-name-policy",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/connect/odbc/mac/connection-string-keywords-and-data-source-names-dsns.md",
             "redirect_url": "/sql/connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns",
             "redirect_document_id": false
@@ -1899,16 +1924,6 @@
         {
             "source_path": "docs/database-engine/configure-windows/what-s-new-in-sql-server-vnext-database-engine.md",
             "redirect_url": "/sql/database-engine/configure-windows/what-s-new-in-sql-server-2017-database-engine",
-            "redirect_document_id": true
-        },
-        {
-            "source_path": "docs/sql-server/sql-server-vnext-release-notes.md",
-            "redirect_url": "/sql/sql-server/sql-server-2017-release-notes",
-            "redirect_document_id": true
-        },
-        {
-            "source_path": "docs/sql-server/what-s-new-in-sql-server-vnext.md",
-            "redirect_url": "/sql/sql-server/what-s-new-in-sql-server-2017",
             "redirect_document_id": true
         },
         {
@@ -2529,6 +2544,16 @@
         {
             "source_path": "docs/relational-databases/system-dynamic-management-views/sys-dm-linux-proc-sql-threads-transact-sql.md",
             "redirect_url": "/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/replication/replication-to-sql-database.md",
+            "redirect_url": "https://docs.microsoft.com/en-us/azure/sql-database/replication-to-sql-database",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/replication/replication-with-sql-database-managed-instance.md",
+            "redirect_url": "https://docs.microsoft.com/en-us/azure/sql-database/replication-with-sql-database-managed-instance",
             "redirect_document_id": false
         },
         {
@@ -4118,6 +4143,131 @@
         "source_path": "docs/relational-databases/databases/deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine.md",
         "redirect_url": "/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision",
         "redirect_document_id": false
+      },
+      {
+        "source_path": "docs/sql-operations-studio/code-snippets.md",
+        "redirect_url": "/sql/azure-data-studio/code-snippets",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "docs/sql-operations-studio/dashboards.md",
+        "redirect_url": "/sql/azure-data-studio/dashboards",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "docs/sql-operations-studio/download.md",
+        "redirect_url": "/sql/azure-data-studio/download",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "docs/sql-operations-studio/enable-kerberos.md",
+        "redirect_url": "/sql/azure-data-studio/enable-kerberos",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "docs/sql-operations-studio/extensions.md",
+        "redirect_url": "/sql/azure-data-studio/extensions",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "docs/sql-operations-studio/faq.md",
+        "redirect_url": "/sql/azure-data-studio/faq",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "docs/sql-operations-studio/insight-widgets.md",
+        "redirect_url": "/sql/azure-data-studio/insight-widgets",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "docs/sql-operations-studio/integrated-terminal.md",
+        "redirect_url": "/sql/azure-data-studio/integrated-terminal",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "docs/sql-operations-studio/keyboard-shortcuts.md",
+        "redirect_url": "/sql/azure-data-studio/keyboard-shortcuts",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "docs/sql-operations-studio/quickstart-sql-database.md",
+        "redirect_url": "/sql/azure-data-studio/quickstart-sql-database",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "docs/sql-operations-studio/quickstart-sql-dw.md",
+        "redirect_url": "/sql/azure-data-studio/quickstart-sql-dw",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "docs/sql-operations-studio/quickstart-sql-server.md",
+        "redirect_url": "/sql/azure-data-studio/quickstart-sql-server",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "docs/sql-operations-studio/release-notes.md",
+        "redirect_url": "/sql/azure-data-studio/release-notes",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "docs/sql-operations-studio/server-groups.md",
+        "redirect_url": "/sql/azure-data-studio/server-groups",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "docs/sql-operations-studio/settings.md",
+        "redirect_url": "/sql/azure-data-studio/settings",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "docs/sql-operations-studio/source-control.md",
+        "redirect_url": "/sql/azure-data-studio/source-control",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "docs/sql-operations-studio/sql-server-agent-extension.md",
+        "redirect_url": "/sql/azure-data-studio/sql-server-agent-extension",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "docs/sql-operations-studio/sql-server-profiler-extension.md",
+        "redirect_url": "/sql/azure-data-studio/sql-server-profiler-extension",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "docs/sql-operations-studio/tutorial-backup-restore-sql-server.md",
+        "redirect_url": "/sql/azure-data-studio/tutorial-backup-restore-sql-server",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "docs/sql-operations-studio/tutorial-build-custom-insight-sql-server.md",
+        "redirect_url": "/sql/azure-data-studio/tutorial-build-custom-insight-sql-server",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "docs/sql-operations-studio/tutorial-qds-sql-server.md",
+        "redirect_url": "/sql/azure-data-studio/tutorial-qds-sql-server",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "docs/sql-operations-studio/tutorial-sql-editor.md",
+        "redirect_url": "/sql/azure-data-studio/tutorial-sql-editor",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "docs/sql-operations-studio/tutorial-table-space-sql-server.md",
+        "redirect_url": "/sql/azure-data-studio/tutorial-table-space-sql-server",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "docs/sql-operations-studio/usage-data-collection.md",
+        "redirect_url": "/sql/azure-data-studio/usage-data-collection",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "docs/sql-operations-studio/what-is.md",
+        "redirect_url": "/sql/azure-data-studio/what-is",
+        "redirect_document_id": true
       }
      
     ]

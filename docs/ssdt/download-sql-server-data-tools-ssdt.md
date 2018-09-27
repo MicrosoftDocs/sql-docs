@@ -77,8 +77,28 @@ This release of **SSDT for VS 2017** can be installed in the following languages
 [Spanish]( https://go.microsoft.com/fwlink/?linkid=2014060&clcid=0x40a)  
 
 
+## Offline install
 
+To install SSDT when you're not connected to the internet follow the steps in this section. For more information, see [Create a network installation of Visual Studio 2017](https://docs.microsoft.com/visualstudio/install/create-a-network-installation-of-visual-studio).
 
+First, complete the following steps while online:
+
+1. [Download the SSDT standalone installer](#ssdt-for-vs-2017-standalone-installer).
+2. [Download vs_sql.exe](https://aka.ms/vs/15/release/vs_sql.exe).
+3. While still online, execute one of the following commands to download all the files required for installing offline. Using the `--layout` option is the key. Replace <filepath> with the actual path to save the files.
+
+   a.	For a specific language, pass the locale: `vs_sql.exe --layout c:\<filepath> --lang en-us` (a single language is ~1GB)  
+   b. For all languages, omit the `--lang` argument: `vs_sql.exe --layout c:\<filepath>` (all languages are ~3.9GB).
+
+After completing the previous steps, the following can be done while offline:
+
+1. Copy the VS2017 payload to the SSDT payload folder. Ensure all files from both are combined into a single layouts folder.
+2. Run `vs_setup.exe --NoWeb` to install the VS2017 Shell and SQL Server Data Project.
+3. Run `SSDT-Setup-ENU.exe /install` and select SSIS/SSRS/SSAS.
+
+   - Or for an unattended installation, run `SSDT-Setup-ENU.exe /INSTALLALL[:vsinstances] /passive`  
+
+For available options, run `SSDT-Setup-ENU.exe /help`
 
 ## Supported SQL versions
   

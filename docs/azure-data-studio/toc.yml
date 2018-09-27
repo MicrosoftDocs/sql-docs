@@ -1,0 +1,82 @@
+- name: Azure Data Studio
+  href: what-is.md
+- name: Install
+  href: download.md
+- name: Release notes
+  href: release-notes.md
+- name: Quickstarts
+  items:
+  - name: Connect & query SQL Server
+    href: quickstart-sql-server.md
+  - name: Connect & query Azure SQL Database
+    href: quickstart-sql-database.md
+  - name: Connect & query Azure SQL Data Warehouse
+    href: quickstart-sql-dw.md
+- name: Tutorials
+  items:
+  - name: T-SQL Editor
+    href: tutorial-sql-editor.md
+  - name: "Sample insight: slow queries"
+    href: tutorial-qds-sql-server.md
+  - name: "Sample insight: table space usage"
+    href: tutorial-table-space-sql-server.md
+  - name: Build a custom insight
+    href: tutorial-build-custom-insight-sql-server.md
+  - name: Backup and restore
+    href: tutorial-backup-restore-sql-server.md
+- name: How-to guides
+  items:
+  - name: Dashboards & insight widgets
+    href: insight-widgets.md
+  - name: Code snippets
+    href: code-snippets.md
+  - name: Integrated terminal (PowerShell, Bash)
+    href: integrated-terminal.md
+  - name: Keyboard shortcuts
+    href: keyboard-shortcuts.md
+  - name: Explorer Azure SQL resources
+    href: azure-resource-explorer.md
+  - name: Server groups
+    href: server-groups.md
+  - name: Source control
+    href: source-control.md
+  - name: Workspace & user settings
+    href: settings.md
+  - name: Windows authentication (Kerberos)
+    href: enable-kerberos.md
+  - name: Usage data collection
+    href: usage-data-collection.md
+- name: Extensions
+  items:
+  - name: Overview
+    href: extensions.md
+  - name: SQL Server 2019 (preview)
+    href: sql-server-2019-extension.md
+  - name: SQL Server Agent (preview)
+    href: sql-server-agent-extension.md
+  - name: SQL Server Import (preview)
+    href: sql-server-import-extension.md
+  - name: SQL Server Profiler (preview)
+    href: sql-server-profiler-extension.md
+- name: Extension Authoring
+  items:
+  - name: Extensibility overview
+    href: extensibility.md
+  - name: Extension authoring
+    href: extension-authoring.md
+  - name: Create an extension  
+    href: tutorial-create-extension.md
+  - name: Extensibility APIs
+    href: extensibility-apis.md
+- name: Resources
+  items:
+  - name: Transact-SQL Reference
+    href: ../t-sql/language-reference.md
+  - name: Azure Data Studio GitHub repo
+    href: https://www.github.com/Microsoft/azuredatastudio
+  - name: SQL Server Blog
+    href: https://blogs.technet.microsoft.com/dataplatforminsider/
+- name: FAQ
+  href: faq.md
+- name: Report issues & make suggestions
+  href: https://github.com/microsoft/azuredatastudio/issues

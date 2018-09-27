@@ -172,7 +172,7 @@ For tips on planning a permissions system, see [Getting Started with Database En
 |DATABASE|ALTER ANY ROUTE|ALRT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SCHEMA|ALSM|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SECURITY POLICY|ALSP<br /><br /> Applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through current), [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|SERVER|CONTROL SERVER|  
-|DATABASE|ALTER ANY SENSITIVITY CLASSIFICATION|ALSP<br />Applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQL Server vNext (15.x) through current), SQL Database.|DATABASE|CONTROL SERVER|
+|DATABASE|ALTER ANY SENSITIVITY CLASSIFICATION|ALSP<br />Applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQL Server 2019 (15.x) through current), SQL Database.|DATABASE|CONTROL SERVER|
 |DATABASE|ALTER ANY SERVICE|ALSV|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SYMMETRIC KEY|ALSK|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY USER|ALUS|SERVER|CONTROL SERVER|  

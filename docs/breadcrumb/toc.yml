@@ -189,6 +189,21 @@
       href: /sql/advanced-analytics/
       homepage: /sql/advanced-analytics/what-is-sql-server-machine-learning
       items:
+      - name: Java
+        href: /sql/advanced-analytics/java/
+        homepage: /sql/advanced-analytics/java/extension-java
+      - name: R
+        href: /sql/advanced-analytics/r/
+        homepage: /sql/advanced-analytics/r/architecture-overview-sql-server-r
+      - name: Python
+        href: /sql/advanced-analytics/python/
+        homepage: /sql/advanced-analytics/python/sql-server-python-services
+      - name: Install
+        href: /sql/advanced-analytics/install/
+        homepage: /sql/advanced-analytics/install/sql-machine-learning-services-windows-install.md
+      - name: Learn
+        href: /sql/advanced-analytics/tutorials/
+        homepage: /sql/advanced-analytics/tutorials/machine-learning-services-tutorials  
       - name: Python
         href: /sql/advanced-analytics/python/
         homepage: /sql/advanced-analytics/python/dmvs-for-python
@@ -1103,9 +1118,9 @@
       href: /sql/tools/
       homepage: /sql/tools/overview-sql-tools
       items:
-      - name: SQL Operations Studio
-        href: /sql/sql-operations-studio/
-        homepage: /sql/sql-operations-studio/what-is
+      - name: Azure Data Studio
+        href: /sql/azure-data-studio/
+        homepage: /sql/azure-data-studio/what-is
       - name: Configuration Manager
         href: /sql/tools/configuration-manager/
         homepage: /sql/tools/configuration-manager/sql-server-configuration-manager-help

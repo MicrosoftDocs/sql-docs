@@ -1,13 +1,13 @@
 ---
-title: Usage statistics and performance of the views in a SQL Server database
-description: Usage statistics and performance of the views in a SQL Server database
+title: Use DMVs to Determine Usage Statistics and Performance of Views
+description: Use DMVs to Determine Usage Statistics and Performance of Views
 manager: craigg
-author: craigg-msft
-ms.author: craig
-ms.date: 22/07/2018
+author: MashaMSFT
+ms.author: mathoma
+ms.date: 09/27/2018
 ---
 
-# Usage statistics and performance of the views in a SQL Server database
+# Use DMVs to Determine Usage Statistics and Performance of Views
 
 This article covers methodology and scripts used to get information about the **performance of queries that use views** in a database object. The intention of these scripts is to provide indicators of use and performance of various views found within a database. 
 

@@ -29,7 +29,7 @@ manager: craigg
 
   To support [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] distributed queries, the OLE DB Driver for SQL Server **IDBSchemaRowset** interface returns metadata on linked servers.  
   
- If the DBPROPSET_SQLSERVERSESSION property SSPROP_QUOTEDCATALOGNAMES is VARIANT_TRUE, a quoted identifier can be specified for the catalog name (for example "my.catalog"). When restricting schema rowset output by catalog, the OLE DB Driver for SQL Server recognizes a two-part name containing the linked server and catalog name. For the schema rowsets in the table below, specifying a two-part catalog name as _linked_server_**.**_catalog_ restricts output to the applicable catalog of the named linked server.  
+ If the DBPROPSET_SQLSERVERSESSION property SSPROP_QUOTEDCATALOGNAMES is VARIANT_TRUE, a quoted identifier can be specified for the catalog name (for example "my.catalog"). When restricting schema rowset output by catalog, the OLE DB Driver for SQL Server recognizes a two-part name containing the linked server and catalog name. For the schema rowsets in the table below, specifying a two-part catalog name as _linked\_server_**.**_catalog_ restricts output to the applicable catalog of the named linked server.  
   
 |Schema rowset|Catalog restriction|  
 |-------------------|-------------------------|  

@@ -44,7 +44,7 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 ## Available Options
 In the current release, the following syntax and options are available:  
 
-[_database_**.**]_schema_**.**_table_ **in** _data_file_ | **out** _data_file_
+[_database_**.**]_schema_**.**_table_ **in** _data\_file_ | **out** _data\_file_
 
 - -a *packet_size*  
 Specifies the number of bytes, per network packet, sent to and from the server.  

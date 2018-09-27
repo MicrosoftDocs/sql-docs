@@ -715,7 +715,7 @@ We recommend that you use a strong password.
  **:Serverlist**  
  Lists the locally configured servers and the names of the servers broadcasting on the network.  
   
- **:Connect**  *server_name*[**\\**_instance_name_] [-l *timeout*] [-U *user_name* [-P *password*]]  
+ **:Connect**  *server_name*[**\\**_instance\_name_] [-l *timeout*] [-U *user_name* [-P *password*]]  
  Connects to an instance of  SQL Server . Also closes the current connection.  
   
  Time-out options:  

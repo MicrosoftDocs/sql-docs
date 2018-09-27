@@ -1,7 +1,7 @@
 ---
 title: "Changelog for SQL Server Data Tools (SSDT) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/28/2018"
+ms.date: "09/27/2018"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.component: "ssdt"
@@ -26,7 +26,7 @@ For detailed posts about what's new and changed, see [the SSDT Team blog](https:
 
 ## SSDT for Visual Studio 2017 (15.8.1)
 Build Number: 14.0.16179.0  
-Release date: September 28, 2018  
+Release date: September 27, 2018  
 
 ### What's New?
 
@@ -38,6 +38,7 @@ Release date: September 28, 2018
 ### Known issues:
 
 - SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True. This issue only applies to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog is not impacted.
+- SSDT 15.8.1 does not currently support Windows 7 SP1, so remain on 15.8.0 if you are using Windows 7 SP1
 
 
 ## SSDT for Visual Studio 2017 (15.8)

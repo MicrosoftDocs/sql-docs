@@ -24,7 +24,7 @@
     href: isolate-performance-problems.md
   - name: Identify Bottlenecks
     href: identify-bottlenecks.md
-  - name: Use DMVs for usage and performance of views
+  - name: Use DMVs to determine use and performance of views
     href: use-dmvs-for-usage-performance-of-views.md
   - name: Server Performance and Activity Monitoring
     href: server-performance-and-activity-monitoring.md

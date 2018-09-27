@@ -87,7 +87,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 4.  Under **Index key columns**, click **Add…**.  
   
-5.  In the **Select Columns from**_table_name_ dialog box, select the check box of the table column to be added to the clustered index.  
+5.  In the **Select Columns from**_table\_name_ dialog box, select the check box of the table column to be added to the clustered index.  
   
 6.  Click **OK**.  
   

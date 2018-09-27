@@ -33,7 +33,7 @@ Scalar UDFs typically end up performing poorly due to the following reasons.
 
 - **Iterative invocation:** UDFs are invoked in an iterative manner, once per qualifying tuple. This incurs additional costs of repeated context switching due to function invocation. Especially, UDFs that execute SQL queries in their definition are severely affected.
 - **Lack of costing:** During optimization, only relational operators are costed, while scalar operators are not. Prior to the introduction of scalar UDFs, other scalar operators were generally cheap and did not require costing. A small CPU cost added for a scalar operation was enough. There are scenarios where the actual cost is significant, and yet still remains underrepresented.
-- **Interpreted execution:** UDFs are evaluated as a batch of statements, executed statement-by-statement. Note that each statement itself is compiled, and the compiled plan is cached. Although this caching strategy saves some time as it avoids recompilations, each statement executes in isolation. No cross-statement optimizations are carried out.
+- **Interpreted execution:** UDFs are evaluated as a batch of statements, executed statement-by-statement. Each statement itself is compiled, and the compiled plan is cached. Although this caching strategy saves some time as it avoids recompilations, each statement executes in isolation. No cross-statement optimizations are carried out.
 - **Serial execution:** SQL Server does not allow intra-query parallelism in queries that invoke UDFs. 
 
 ## Automatic Inlining of Scalar UDFs
@@ -79,7 +79,7 @@ Due to the reasons outlined earlier, the query with the UDF performs poorly. Now
 | --- | --- | --- | --- |
 | Execution time: | 1.6 seconds | 29 minutes 11 seconds | 1.6 seconds |
 
-These numbers are based on a 10 GB CCI database (using the TPC-H schema), running on a machine with dual processor (12 core), 96 GB RAM, backed by SSD. The numbers include compilation and execution time with a cold procedure cache and buffer pool. The default configuration was used, and no other indexes were created.
+These numbers are based on a 10-GB CCI database (using the TPC-H schema), running on a machine with dual processor (12 core), 96-GB RAM, backed by SSD. The numbers include compilation and execution time with a cold procedure cache and buffer pool. The default configuration was used, and no other indexes were created.
 
 ### Example 2 - Multi-statement scalar UDF
 
@@ -106,7 +106,7 @@ END
 
 ```
 
-Now, consider a simple query that invokes this UDF.
+Now, consider a query that invokes this UDF.
 
 ```sql
 SELECT C_NAME, dbo.customer_category(C_CUSTKEY) FROM CUSTOMER;
@@ -116,7 +116,7 @@ The execution plan for this query in SQL Server 2017 (compatibility level 140 an
 
 ![Query Plan without inlining](./media/query-plan-without-udf-inlining.png)
 
-As the plan shows, SQL Server adopts a simple strategy here: for every tuple in the `CUSTOMER` table, invoke the UDF and output the results. This strategy is naïve and inefficient. With inlining, such UDFs are transformed into equivalent scalar subqueries which are substituted in the calling query in place of the UDF.
+As the plan shows, SQL Server adopts a simple strategy here: for every tuple in the `CUSTOMER` table, invoke the UDF and output the results. This strategy is naïve and inefficient. With inlining, such UDFs are transformed into equivalent scalar subqueries, which are substituted in the calling query in place of the UDF.
 
 For the same query, the plan with the UDF inlined looks as below.
 
@@ -149,9 +149,9 @@ A scalar T-SQL UDF can be inline if all of the following conditions are true:
 - The UDF is not used in a computed column or a check constraint definition.
 - The UDF does not reference user-defined types.
 - There are no signatures added to the UDF.
-- Partition functions can not be inline.
+- Partition functions cannot be inline.
 
-<sup>1</sup> `SELECT` with variable accumulation/aggregation (for example, `SELECT @val += col1 FROM table1`) can not inline.
+<sup>1</sup> `SELECT` with variable accumulation/aggregation (for example, `SELECT @val += col1 FROM table1`) cannot inline.
 <sup>2</sup> Recursive UDFs will be inlined to a certain depth only.
 <sup>3</sup> Intrinsic functions whose results depend upon the current system time are time-dependent. An intrinsic function that may update some internal global state is an example of a function with side effects. Such functions return different results each time they are called, based on the internal state.
 
@@ -192,7 +192,7 @@ To re-enable scalar UDF inlining for the database, execute the following stateme
 ALTER DATABASE SCOPED CONFIGURATION SET TSQL_SCALAR_UDF_INLINING = ON;
 ```
 
-When ON, this setting will appear as enabled in [sys.database_scoped_configurations](../system-catalog-views/sys-database-scoped-configurations-transact-sql.md). 
+When ON, this setting will appear as enabled in [`sys.database_scoped_configurations`](../system-catalog-views/sys-database-scoped-configurations-transact-sql.md). 
 You can also disable scalar UDF inlining for a specific query by designating `DISABLE_TSQL_SCALAR_UDF_INLINING` as a `USE HINT` query hint. For example:
 
 ```sql
@@ -230,7 +230,7 @@ BEGIN
 END
 ```
 
-**NOTE:** The `INLINE` clause is not mandatory. If `INLINE` clause is not specified, it is automatically set to `ON`/`OFF` based on whether the UDF can be inlined. If `INLINE=ON` is specified but the UDF is found inelligible for inlining, an error will be thrown.
+**NOTE:** The `INLINE` clause is not mandatory. If `INLINE` clause is not specified, it is automatically set to `ON`/`OFF` based on whether the UDF can be inlined. If `INLINE=ON` is specified but the UDF is found ineligible for inlining, an error will be thrown.
 
 ## Important Notes
 
@@ -241,7 +241,7 @@ As described in this article, scalar UDF inlining transforms a query with scalar
 1. Query level join hints might not be valid anymore, as inlining may introduce new joins. Local join hints will have to be used instead.
 1. Views that reference inline scalar UDFs cannot be indexed. If you need to create an index on such views, disable inlining for the referenced UDFs.
 1. The behavior of [Dynamic Data masking](../security/dynamic-data-masking.md) may not be the same as without inlining. More specifically, the behavior with inlining would be identical to the behavior observed if the UDF was a single scalar subquery.
-1. If a UDF references built-in functions such as `SCOPE_IDENTITY()`, the value returned by the built in function will change with inlining. This change in behavior is because inlining changes the scope of statements inside the UDF.
+1. If a UDF references built-in functions such as `SCOPE_IDENTITY()`, the value returned by the built-in function will change with inlining. This change in behavior is because inlining changes the scope of statements inside the UDF.
 
 ## See Also
 

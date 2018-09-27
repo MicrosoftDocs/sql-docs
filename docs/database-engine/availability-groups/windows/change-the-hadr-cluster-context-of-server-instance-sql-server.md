@@ -107,7 +107,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
   
 2.  Use the SET HADR CLUSTER CONTEXT clause of the [ALTER SERVER CONFIGURATION](../../../t-sql/statements/alter-server-configuration-transact-sql.md) statement, as follows:  
   
-     ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT **=** { **'***windows_cluster***'** | LOCAL }  
+     ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT **=** { **'**_windows_cluster_**'** | LOCAL }  
   
      where,  
   

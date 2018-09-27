@@ -43,10 +43,10 @@ RECONFIGURE
 ```  
   
 ## Arguments  
- [ **@configname=** ] **'***option_name***'**  
+ [ **@configname=** ] **'**_option_name_**'**  
  Is the name of a configuration option. *option_name* is **varchar(35)**, with a default of NULL. If not specified, the complete list of options is returned.  
   
- [ **@configvalue=** ] **'***value***'**  
+ [ **@configvalue=** ] **'**_value_**'**  
  Is the new configuration setting. *value* is **int**, with a default of NULL. The maximum value depends on the individual option.  
   
  **'hadoop connectivity'**  

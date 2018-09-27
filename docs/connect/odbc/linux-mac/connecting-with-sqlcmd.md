@@ -61,7 +61,7 @@ In the current release, the following options are available:
   
 - -k  Remove or replace control characters.  
   
-- **-K***application_intent*  
+- **-K**_application\_intent_  
 Declares the application workload type when connecting to a server. The only currently supported value is **ReadOnly**. If **-K** is not specified, `sqlcmd` does not support connectivity to a secondary replica in an AlwaysOn availability group. For more information, see [ODBC Driver on Linux and macOS - High Availability and Disaster Recovery](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
   
 > [!NOTE]  
@@ -71,7 +71,7 @@ Declares the application workload type when connecting to a server. The only cur
 
 - -m *error_level* Control which error messages are sent to stdout.  
   
-- **-M***multisubnet_failover*  
+- **-M**_multisubnet_failover_  
 Always specify **-M** when connecting to the availability group listener of a [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] availability group or a [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Failover Cluster Instance. **-M** provides for faster detection of failovers and connection to the (currently) active server. If **–M** is not specified, **-M** is off. For more information about [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)], see [ODBC Driver on Linux and macOS - High Availability and Disaster Recovery](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
   
 > [!NOTE]  
@@ -95,7 +95,7 @@ Always specify **-M** when connecting to the availability group listener of a [!
   
 - -s *column_separator_char*  Specify the column-separator character.  
 
-- -S [*protocol*:] *server*[**,***port*]  
+- -S [*protocol*:] *server*[**,**_port_]  
 Specify the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] to connect to, or if -D is used, a DSN. The ODBC driver on Linux and macOS requires -S. Note that **tcp** is the only valid protocol.  
   
 - -t *query_timeout* Specify the number of seconds before a command (or SQL statement) times out.  
@@ -207,13 +207,13 @@ The following entries are supported in a DSN on Linux or macOS:
 
 -   **ApplicationIntent=ReadOnly**  
 
--   **Database=***database_name*  
+-   **Database=**_database_name_  
   
 -   **Driver=ODBC Driver 11 for SQL Server** or **Driver=ODBC Driver 13 for SQL Server**
   
 -   **MultiSubnetFailover=Yes**  
   
--   **Server=***server_name_or_IP_address*  
+-   **Server=**_server_name_or_IP_address_  
   
 -   **Trusted_Connection=yes**|**no**  
   

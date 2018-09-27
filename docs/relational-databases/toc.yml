@@ -190,7 +190,7 @@
       href: lesson-1-connecting-to-the-database-engine.md
     - name: "Lesson 2: Connecting from Another Computer"
       href: lesson-2-connecting-from-another-computer.md
-  - name: Backup & Restore to Azure Blob Storage 
+  - name: Backup and Restore to Azure Blob Storage 
     href: tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md
   - name: Signing Stored Procedures with a Certificate
     href: tutorial-signing-stored-procedures-with-a-certificate.md

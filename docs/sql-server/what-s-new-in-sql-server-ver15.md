@@ -25,6 +25,13 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 - Install on Linux for [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md), [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md), and [Ubuntu](../linux/quickstart-install-connect-ubuntu.md).
 - [Run on SQL Server 2019 on Docker](../linux/quickstart-install-connect-docker.md).
 
+## CTP 2.1
+
+Community technology preview (CTP) 2.1 is the latest public release of [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]. The following features are added or enhanced for [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] CTP 2.1.
+
+- [Database Engine](#databaseengine)
+  - Intelligent query processing adds scalar UDF inlining. 
+
 ## CTP 2.0 
 
 Community technology preview (CTP) 2.0 is the first public release of [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]. The following features are added or enhanced for [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] CTP 2.0.
@@ -81,27 +88,31 @@ Continue reading for more details about these features.
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] [Big Data Clusters](../big-data-cluster/big-data-cluster-overview.md) enables new scenarios including the following:
 
-- Deploy a Big Data cluster with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and Spark Linux containers on Kubernetes
-- Access your big data from HDFS
-- Run Advanced analytics and machine learning with Spark
-- Use Spark streaming to data to SQL data pools
-- Run Query books that provide a notebook experience in [**Azure Data Studio**](../sql-operations-studio/what-is.md).
+- Deploy a Big Data cluster with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and Spark Linux containers on Kubernetes (CTP 2.0)
+- Access your big data from HDFS (CTP 2.0)
+- Run Advanced analytics and machine learning with Spark (CTP 2.0)
+- Use Spark streaming to data to SQL data pools (CTP 2.0)
+- Run Query books that provide a notebook experience in [**Azure Data Studio**](../sql-operations-studio/what-is.md). (CTP 2.0)
   
 [!INCLUDE [Big Data Clusters preview](../includes/big-data-cluster-preview-note.md)]
 
 ## <a id="databaseengine"></a> Database Engine
 
-CTP 2.0 introduces or enhances the following new features for [!INCLUDE[ssdeNoVersion](../includes/ssdenoversion_md.md)].
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces or enhances the following new features for the Database Engine
 
-### Database compatibility level
+### Scalar UDF inlining (CTP 2.1)
 
-Database **COMPATIBILITY_LEVEL 150** is added. To enable for a specific user database, execute:
+Scalar UDF inlining automatically transforms scalar user-defined functions (UDF) into relational expressions and embeds them in the calling SQL query, thereby improving the performance of workloads that leverage scalar UDFs. Scalar UDF inlining facilitates cost-based optimization of operations inside UDFs, and results in efficient plans that are set-oriented and parallel as opposed to inefficient, iterative, serial execution plans. This feature is enabled by default under database compatibility level 150.
+
+### Database compatibility level (CTP 2.0)
+
+Database **COMPATIBILITY_LEVEL 150** is added. To enable for a specific user database, execute: (CTP 2.0)
 
    ```sql
    ALTER DATABASE database_name SET COMPATIBILITY_LEVEL =  150;
    ```
 
-### UTF-8 support
+### UTF-8 support (CTP 2.0)
 
 Full support for the widely used UTF-8 character encoding as an import or export encoding, or as database-level or column-level collation for text data. UTF-8 is allowed in the `CHAR` and `VARCHAR` datatypes, and is enabled when creating or changing an object’s collation to a collation with the `UTF8` suffix. 
 
@@ -109,7 +120,7 @@ For example,`LATIN1_GENERAL_100_CI_AS_SC` to `LATIN1_GENERAL_100_CI_AS_SC_UTF8`.
 
 This feature may provide significant storage savings, depending on the character set in use. For example, changing an existing column data type with ASCII strings from `NCHAR(10)` to `CHAR(10)` using an UTF-8 enabled collation, translates into nearly 50% reduction in storage requirements. This reduction is because `NCHAR(10)` requires 22 bytes for storage, whereas `CHAR(10)` requires 12 bytes for the same Unicode string.
 
-### Resumable online index create
+### Resumable online index create (CTP 2.0)
 
 - **Resumable online index create** allows an index create operation to pause and resume later from where the operation was paused or failed, instead of restarting from the beginning.
 
@@ -126,7 +137,7 @@ In addition, this feature can be set as the default for a specific database usin
 
 For more information, see [Resumable Online Index Create](../t-sql/statements/create-index-transact-sql.md#resumable-indexes).
 
-### Build and rebuild clustered columnstore indexes online
+### Build and rebuild clustered columnstore indexes online (CTP 2.0)
 
 Convert row-store tables into columnstore format. Creating clustered columnstore indexes (CCI) was an offline process in the previous versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] - requiring all changes stop while the CCI is created. With [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] and 
 [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] you can create or re-create CCI online. Workload will not be blocked and all changes made on the underlying data are transparently added into the target columnstore table. Examples of new [!INCLUDE[tsql](../includes/tsql-md.md)] statements that can be used are:
@@ -143,7 +154,7 @@ Convert row-store tables into columnstore format. Creating clustered columnstore
     REBUILD WITH (ONLINE = ON);
   ```
 
-### Always Encrypted with secure enclaves
+### Always Encrypted with secure enclaves (CTP 2.0)
 
 Expands upon Always Encrypted with in-place encryption and rich computations. The expansions come from the enabling of computations on plaintext data, inside a secure enclave on the server side.
 
@@ -157,7 +168,7 @@ For details, see [Always Encrypted with secure enclaves](../relational-databases
 > [!NOTE]
 > Always Encrypted with secure enclaves is only available on Windows OS.
 
-### Intelligent query processing
+### Intelligent query processing (CTP 2.0)
 
 - **Row mode memory grant feedback** expands on the memory grant feedback feature introduced in [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] by adjusting memory grant sizes for both batch and row mode operators.  For an excessive memory grant condition, if the granted memory is more than two times the size of the actual used memory, memory grant feedback will recalculate the memory grant. Consecutive executions will then request less memory. For an insufficiently sized memory grant that results in a spill to disk, memory grant feedback will trigger a recalculation of the memory grant. Consecutive executions will then request more memory. This feature is enabled by default under database compatibility level 150.
 
@@ -180,7 +191,7 @@ For details, see [Always Encrypted with secure enclaves](../relational-databases
 
 To use intelligent query processing features, set database `COMPATIBILITY_LEVEL = 150`.
 
-### <a id="programmability"></a> Java language programmability extensions
+### <a id="programmability"></a> Java language programmability extensions (CTP 2.0)
 
 - **Java language extension (preview)**: Use the Java language extension to execute Java code in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. In [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], this extension is installed when you add the feature 'Machine Learning Services (in-database)' to your SQL Server instance.
 
@@ -190,7 +201,7 @@ To use intelligent query processing features, set database `COMPATIBILITY_LEVEL 
 
 - **Edge Constraints** are introduced for edge tables in SQL Graph. Edge tables can connect any node to any other node in the database. With introduction of edge constraints, you can now apply some restrictions on this behavior. The new `CONNECTION` constraint can be used to specify the type of nodes a given edge table will be allowed to connect to in the schema.
 
-### Database scoped default setting for online and resumable DDL operations 
+### Database scoped default setting for online and resumable DDL operations  (CTP 2.0)
 
 - **Database scoped default setting for online and resumable DDL operations** allows a default behavior setting for `ONLINE` and `RESUMABLE` index operations at the database level, rather than defining these options for each individual index DDL statement such as index create or rebuild.
 
@@ -207,7 +218,7 @@ Without this feature you have to specify the online and resumable options direct
 More information:
 For more information on index resumable operations see [Resumable Online Index Create](http://azure.microsoft.com/blog/resumable-online-index-create-is-in-public-preview-for-azure-sql-db/).
 
-### <a id="ha"></a>Always On Availability Groups - more synchronous replicas 
+### <a id="ha"></a>Always On Availability Groups - more synchronous replicas  (CTP 2.0)
 
 - **Up to five synchronous replicas**: [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] increases the maximum number of synchronous replicas to 5, up from 3 in [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] . You can configure this group of 5 replicas to have automatic failover within the group. There is 1 primary replica, plus 4 synchronous secondary replicas.
 
@@ -219,7 +230,7 @@ For more information on index resumable operations see [Resumable Online Index C
 
 For details, see [Secondary to primary replica read/write connection redirection (Always On Availability Groups)](../database-engine/availability-groups/windows/secondary-replica-connection-redirection-always-on-availability-groups.md).
 
-### Data discovery and classification
+### Data discovery and classification (CTP 2.0)
 
 Data discovery and classification provides advanced capabilities that are natively built into [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Classifying and labeling your most sensitive data provides the following benefits:
 - Helps meet data privacy standards and regulatory compliance requirements.
@@ -233,7 +244,7 @@ For more information, see [SQL Data Discovery and Classification](../relational-
 >[!NOTE]
 >There are no changes in terms of how audit is enabled. There is a new field added to the audit records, `data_sensitivity_information`, which logs the sensitivity classifications (labels) of the actual data that was returned by the query. See [Auditing access to sensitive data](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-data-discovery-and-classification#subheading-3).
 
-### Expanded support for persistent memory devices
+### Expanded support for persistent memory devices (CTP 2.0)
 
 Any [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] file that is placed on a persistent memory device can now operate in *enlightened* mode. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] directly accesses the device, bypassing the storage stack of the operating system using efficient memcpy operations. This mode improves performance because it allows low latency input/output against such devices.
     - Examples of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] files include:
@@ -246,15 +257,15 @@ Any [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] file that is placed o
 > [!NOTE]
 > For this preview release, enlightenment of files on persistent memory devices is only available on Linux. SQL Server on Windows supports persistent memory devices starting with SQL Server 2016.
 
-### Support for columnstore statistics in DBCC CLONEDATABASE
+### Support for columnstore statistics in DBCC CLONEDATABASE (CTP 2.0)
 
 `DBCC CLONEDATABASE` creates a schema-only copy of a database that includes all the elements necessary to troubleshoot query performance issues without copying the data.  In previous versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], the command did not copy the statistics necessary to accurately troubleshoot columnstore index queries and manual steps were required to capture this information. Now in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], DBCC CLONEDATABASE automatically captures the stats blobs for columnstore indexes, so no manual steps will be required.
 
-### New options added to sp_estimate_data_compression_savings
+### New options added to sp_estimate_data_compression_savings (CTP 2.0)
 
 `sp_estimate_data_compression_savings` returns the current size of the requested object and estimates the object size for the requested compression state.  Currently this procedure supports three options: `NONE`, `ROW`, and `PAGE`. SQL Server 2019 introduces two new options: `COLUMNSTORE` and `COLUMNSTORE_ARCHIVE`. These new options will allow you to estimate the space savings if a columnstore index is created on the table using either standard or archive columnstore compression.
 
-### <a id="ml"></a> SQL Server Machine Learning Services failover clusters and partition based modeling
+### <a id="ml"></a> SQL Server Machine Learning Services failover clusters and partition based modeling (CTP 2.0)
 
 - **Partition-based modeling**: Process external scripts per partition of your data using the new parameters added to `sp_execute_external_script`. This functionality supports training many small models (one model per partition of data) instead of one large model.
 
@@ -262,7 +273,7 @@ Any [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] file that is placed o
 
 For detailed information, see [What's new in SQL Server Machine Learning Services](../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md).
 
-### Lightweight query profiling infrastructure enabled by default
+### Lightweight query profiling infrastructure enabled by default (CTP 2.0)
 
 The lightweight query profiling infrastructure (LWP) provides query performance data more efficiently than standard profiling technologies. Lightweight profiling is now enabled by default. It was introduced in [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1. Lightweight profiling offers a query execution statistics collection mechanism with an expected overhead of 2% CPU, compared with an overhead of up to 75% CPU for the standard query profiling mechanism. On previous versions, it was OFF by default. Database administrators could enable it with [trace flag 7412](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). 
 
@@ -272,7 +283,7 @@ For more information on lightweight profiling, see [Developers Choice: Query pro
 
 - **New connectors for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], Oracle, Teradata, and MongoDB**: [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces new connectors to external data for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], Oracle, Teradata, and MongoDB.
 
-### New sys.dm_db_page_info system function returns page information
+### New sys.dm_db_page_info system function returns page information (CTP 2.0)
 
 `sys.dm_db_page_info(database_id, file_id, page_id, mode)` returns information about a page in a database. The function returns a row that contains the header information from the page, including the `object_id`, `index_id`, and `partition_id`. This function replaces the need to use `DBCC PAGE` in most cases.  
 
@@ -287,6 +298,8 @@ FROM sys.dm_exec_requests AS d
 ```
 
 ## <a id="sqllinux"></a> SQL Server on Linux
+
+### CTP 2.0 
 
 - **Replication support**: [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] supports SQL Server Replication on Linux. A Linux virtual machine with SQL Agent can be a publisher, distributor, or subscriber. 
 
@@ -310,11 +323,15 @@ FROM sys.dm_exec_requests AS d
   - Microsoft Container Registry: `mcr.microsoft.com/mssql/server:vNext-CTP2.0`
   - Certified RHEL-based container images: `mcr.microsoft.com/mssql/rhel/server:vNext-CTP2.0`
 
-## <a id="mds"></a> Master Data Services (MDS)
+## <a id="mds"></a> Master Data Services (MDS) \
+
+### CTP 2.0 
 
 - **Silverlight controls replaced with HTML**: The Master Data Services (MDS) portal no longer depends on Silverlight. All the former Silverlight components have been replaced with HTML controls.
 
 ## <a id="security"></a>Security
+
+### (CTP 2.0)
 
 - **Certificate management in SQL Server Configuration Manager**: SSL/TLS certificates are widely used to secure access to SQL Server instances. Certificate management is now integrated into the SQL Server Configuration Manager, simplifying common tasks such as:
 
@@ -326,7 +343,9 @@ FROM sys.dm_exec_requests AS d
   > [!NOTE]
   > User must have administrator permissions on all the cluster nodes.
 
-## <a id="tools"></a>Tools
+## <a id="tools"></a>Tools 
+
+### (CTP 2.0)
 
 - [**Azure Data Studio**](../azure-data-studio/what-is.md): Previously released under the preview name SQL Operations Studio, Azure Data Studio is a lightweight, modern, open source, cross-platform desktop tool for the most common tasks in data development and administration. With Azure Data Studio you can connect to SQL Server on premises and in the cloud on Windows, macOS, and Linux. Azure Data Studio allows you to:
 
@@ -349,6 +368,8 @@ FROM sys.dm_exec_requests AS d
   - For a complete list, see the [SSMS changelog](../ssms/sql-server-management-studio-changelog-ssms.md).
 
 ## Other services
+
+### (CTP 2.0)
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.0 does not introduce new features for the following services:
 

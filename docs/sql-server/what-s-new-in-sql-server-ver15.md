@@ -24,6 +24,7 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 - [![Download from Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=862101) [Download SQL Server 2019 to install on Windows](http://go.microsoft.com/fwlink/?LinkID=862101)
 - Install on Linux for [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md), [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md), and [Ubuntu](../linux/quickstart-install-connect-ubuntu.md).
 - [Run on SQL Server 2019 on Docker](../linux/quickstart-install-connect-docker.md).
+
 ## CTP 2.1
 
 Community technology preview (CTP) 2.1 is the latest public release of [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]. The following features are added or enhanced for [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] CTP 2.1.
@@ -296,8 +297,10 @@ FROM sys.dm_exec_requests AS d
     AS page_info;
 ```
 
-## <a id="sqllinux"></a> SQL Server on Linux (CTP 2.0)
- (CTP 2.0)
+## <a id="sqllinux"></a> SQL Server on Linux
+
+### CTP 2.0 
+
 - **Replication support**: [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] supports SQL Server Replication on Linux. A Linux virtual machine with SQL Agent can be a publisher, distributor, or subscriber. 
 
   Create the following types of publications:
@@ -320,11 +323,15 @@ FROM sys.dm_exec_requests AS d
   - Microsoft Container Registry: `mcr.microsoft.com/mssql/server:vNext-CTP2.0`
   - Certified RHEL-based container images: `mcr.microsoft.com/mssql/rhel/server:vNext-CTP2.0`
 
-## <a id="mds"></a> Master Data Services (MDS) (CTP 2.0)
+## <a id="mds"></a> Master Data Services (MDS) \
+
+### CTP 2.0 
 
 - **Silverlight controls replaced with HTML**: The Master Data Services (MDS) portal no longer depends on Silverlight. All the former Silverlight components have been replaced with HTML controls.
 
-## <a id="security"></a>Security (CTP 2.0)
+## <a id="security"></a>Security
+
+### (CTP 2.0)
 
 - **Certificate management in SQL Server Configuration Manager**: SSL/TLS certificates are widely used to secure access to SQL Server instances. Certificate management is now integrated into the SQL Server Configuration Manager, simplifying common tasks such as:
 
@@ -336,7 +343,9 @@ FROM sys.dm_exec_requests AS d
   > [!NOTE]
   > User must have administrator permissions on all the cluster nodes.
 
-## <a id="tools"></a>Tools (CTP 2.0)
+## <a id="tools"></a>Tools 
+
+### (CTP 2.0)
 
 - [**Azure Data Studio**](../azure-data-studio/what-is.md): Previously released under the preview name SQL Operations Studio, Azure Data Studio is a lightweight, modern, open source, cross-platform desktop tool for the most common tasks in data development and administration. With Azure Data Studio you can connect to SQL Server on premises and in the cloud on Windows, macOS, and Linux. Azure Data Studio allows you to:
 
@@ -359,6 +368,8 @@ FROM sys.dm_exec_requests AS d
   - For a complete list, see the [SSMS changelog](../ssms/sql-server-management-studio-changelog-ssms.md).
 
 ## Other services
+
+### (CTP 2.0)
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.0 does not introduce new features for the following services:
 

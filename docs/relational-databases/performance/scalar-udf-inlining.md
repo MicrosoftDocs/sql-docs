@@ -246,7 +246,11 @@ As described in this article, scalar UDF inlining transforms a query with scalar
 ## See Also
 
 [Performance Center for SQL Server Database Engine and Azure SQL Database](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)
+
 [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md)
+
 [Showplan Logical and Physical Operators Reference](../../relational-databases/showplan-logical-and-physical-operators-reference.md)
+
 [Joins](../../relational-databases/performance/joins.md)
+
 [Demonstrating Adaptive Query Processing](https://github.com/joesackmsft/Conferences/blob/master/Data_AMP_Detroit_2017/Demos/AQP_Demo_ReadMe.md)

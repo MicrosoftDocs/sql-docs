@@ -83,7 +83,7 @@ manager: craigg
   
 5.  To set the mirror server as partner on the principal database, connect to the principal server, and issue the following statement:  
   
-     ALTER DATABASE _\<database_name\>_ SET PARTNER **=**_\<server_network_address\>_  
+     ALTER DATABASE _\<database\_name\>_ SET PARTNER **=**_\<server\_network\_address\>_  
   
      For more information, see step 4.  
   

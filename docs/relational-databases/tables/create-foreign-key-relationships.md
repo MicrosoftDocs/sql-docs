@@ -110,7 +110,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
     ```    
     
 ## Create a foreign key in an existing table 
-#### Using Transasct-SQL   
+#### Using Transact-SQL   
     
 1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].    
     

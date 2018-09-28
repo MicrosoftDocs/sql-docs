@@ -113,5 +113,3 @@
   href: joins.md
 - name: Subqueries
   href: subqueries.md
-- name: Use DMVs for usage and performance of views
-  href: use-dmvs-for-usage-performance-of-views.md

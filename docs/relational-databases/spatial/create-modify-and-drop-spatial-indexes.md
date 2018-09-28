@@ -65,7 +65,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 11. On the **Spatial** page, specify the values that you want to use for the spatial properties of the index.  
   
-     When creating an index on a **geometry** type column, you must specify the **(***X-min***,***Y-min***)** and **(***X-max***,***Y-max***)** coordinates of the bounding box. For an index on a **geography** type column, the bounding-box fields become read-only after you specify the **Geography grid** tessellation scheme, because geography grid tessellation does not use a bounding box.  
+     When creating an index on a **geometry** type column, you must specify the **(**_X-min_**,**_Y-min_**)** and **(**_X-max_**,**_Y-max_**)** coordinates of the bounding box. For an index on a **geography** type column, the bounding-box fields become read-only after you specify the **Geography grid** tessellation scheme, because geography grid tessellation does not use a bounding box.  
   
      Optionally, you can specify nondefault values for the **Cells Per Object** field and for the grid density at any level of the tessellation scheme. The default number of cells per object is 16 for [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or 8 for [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] or higher, and the default grid density is **Medium** for [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   

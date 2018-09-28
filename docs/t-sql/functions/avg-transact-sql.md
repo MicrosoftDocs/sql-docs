@@ -51,7 +51,7 @@ Specifies that AVG operates only on one unique instance of each value, regardles
 *expression*  
 An [expression](../../t-sql/language-elements/expressions-transact-sql.md) of the exact numeric or approximate numeric data type category, except for the **bit** data type. Aggregate functions and subqueries are not permitted.
   
-OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
+OVER **(** [ *partition_by_clause* ] _order\_by\_clause_**)**  
 *partition_by_clause* divides the result set produced by the FROM clause into partitions to which the function is applied. If not specified, the function treats all rows of the query result set as a single group. The *order_by_clause* determines the logical order in which the operation is performed. The *order_by_clause* is required. For more information, see [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).
   
 ## Return types

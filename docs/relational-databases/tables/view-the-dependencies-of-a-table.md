@@ -53,7 +53,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 2.  Right-click a table, and then click **View Dependencies**.  
   
-3.  In the **Object Dependencies***\<object name>* dialog box, select either **Objects that depend on** *\<object name>*, or **Objects on which***\<object name>***depends**.  
+3.  In the **Object Dependencies**_\<object name\>_ dialog box, select either **Objects that depend on** _\<object name\>_, or **Objects on which**_\<object name\>_**depends**.  
   
 4.  Select an object in the **Dependencies** grid. The type of object (such as "Trigger" or "Stored Procedure"), appears in the **Type** box.  
   

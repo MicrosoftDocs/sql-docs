@@ -47,7 +47,7 @@ PRINT msg_str | @local_variable | string_expr
  Is a character string or Unicode string constant. For more information, see [Constants &#40;Transact-SQL&#41;](../../t-sql/data-types/constants-transact-sql.md).  
   
  **@** *local_variable*  
- Is a variable of any valid character data type. **@***local_variable* must be **char**, **nchar**, **varchar**, or **nvarchar**, or it must be able to be implicitly converted to those data types.  
+ Is a variable of any valid character data type. **@**_local\_variable_ must be **char**, **nchar**, **varchar**, or **nvarchar**, or it must be able to be implicitly converted to those data types.  
   
  *string_expr*  
  Is an expression that returns a string. Can include concatenated literal values, functions, and variables. For more information, see [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  

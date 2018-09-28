@@ -43,7 +43,7 @@ manager: craigg
   
 -   **sp_MSdel_\<** *tablename* **>**, which handles deletes.  
   
- The **\<***tablename***>** used in the procedure depends on how the article was added to the publication and whether the subscription database contains a table of the same name with a different owner.  
+ The **\<**_tablename_**>** used in the procedure depends on how the article was added to the publication and whether the subscription database contains a table of the same name with a different owner.  
   
  Any of these procedures can be replaced with a custom procedure that you specify when adding an article to a publication. Custom procedures are used if an application requires custom logic, such as inserting data into an audit table when a row is updated at a Subscriber. For more information about specifying custom stored procedures, see the how to topics listed above.  
   

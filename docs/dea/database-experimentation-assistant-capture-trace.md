@@ -22,7 +22,7 @@ Capture trace lets you easily produce a trace file (.trc) containing a log of ev
 - Before starting your trace capture, make sure you back up all your target databases.
 - Query caching in SQL can affect evaluation results. We recommend restarting the SQL Server service (MSSQLSERVER) in the services application to improve consistency in evaluation results.
 
-## Access Capture Traces
+## Open Capture Traces
 Open the tool and select the menu icon on the left side of the screen. This opens the left side-bar menu. Choose **Capture Traces** next to the camera icon to open Capture Traces.
 
 ![Capture1](./media/database-experimentation-assistant-capture-trace/dea-capture-trace-capture.png)
@@ -52,11 +52,11 @@ After the capture trace has finished running, locate your new trace file in the 
 **Trace File (.trc)** – Capture Trace writes out a .trc file to the location specified. This file contains trace results of the activity of a SQL database. TRC files are designed to provide more information about errors that are detected and reported by SQL Server.
 
 ## Frequently asked questions about Capture Trace
-Following are some frequently asked questions about Capture Trace
+Following are some frequently asked questions about Capture Trace.
 
 ### What events are captured while running trace on a production database?
 
-The following table provides the list of events and the corresponding column data that we collect for the traces
+The following table provides the list of events and the corresponding column data that we collect for the traces:
   
 |Event Name|Text Data (1)|Binary Data (2)|Database ID (3)|Host Name (8)|Application Name (10)|Login Name (11)|SPID (12)|Start Time (14)|End Time (15)|Database Name (35)|Event Sequence (51)|IsSystem (60)|  
 |---|---|---|---|---|---|---|---|---|---|---|---|---|  
@@ -110,7 +110,7 @@ If you receive an error while running Capture Trace, first review the following 
 
 - Confirm the SQL Server name is valid. To confirm, try connecting to the server using SSMS.
 - Confirm your firewall configuration is not blocking connections to SQL Server.
-- Confirm user has the permissions listed in <Link to permissions blog>.
+- Confirm user has the permissions listed in the permissions blog.
 - Confirm that trace name does not follow the standard rollover convention (that is, 'Capture\_1'). You can instead try trace names like 'Capture\_1A' or 'Capture1'.
 
 Following are some possible errors you might encounter and solutions for resolving them:

@@ -23,9 +23,9 @@ PolyBase supports two Hadoop providers, Hortonworks Data Platform (HDP) and Clou
  - Cloudera CDH 4.3 on Linux  
  - Cloudera CDH 5.1 – 5.5, 5.9 - 5.13 on Linux
 
- ### Configure Hadoop connectivity
+### Configure Hadoop connectivity
 
- First, configure APS to use your specific Hadoop provider.
+First, configure APS to use your specific Hadoop provider.
 
 1. Run [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) with 'hadoop connectivity' and set an appropriate value for your provider. To find the value for your provider, see [PolyBase Connectivity Configuration](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md). 
 
@@ -188,7 +188,7 @@ WHERE T2.YearMeasured = 2009 and T2.Speed > 40;
 
 ## View PolyBase objects in SSDT  
 
-In SSDT, external tables are displayed in a separate folder **External Tables**. External data sources and external file formats are in subfolders under **External Resources**.  
+In SQL Server Data Tools, external tables are displayed in a separate folder **External Tables**. External data sources and external file formats are in subfolders under **External Resources**.  
   
 ![PolyBase objects in SSDT](media/polybase/external-tables-datasource.png)  
 

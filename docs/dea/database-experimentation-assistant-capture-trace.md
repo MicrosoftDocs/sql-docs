@@ -37,8 +37,12 @@ Enter the following information in the input fields before starting the capture 
 - **Name for capture:** Name the trace file (.trc) for your capture.
 - **Max file size:** Specify the rollover size for files; a new file will be created, as needed, at the specified file size. Recommended rollover size is 200 MB.
 - **Duration:** Select the length of time (in minutes) you want the capture trace to run.
-- **Path to store output trace file:** Specify the destination path for the trace file.  
-    Note: File path to trace file must be on the machine the SQL instance is on. If SQL Service is not set for a specific account, it may need write permissions to the specified folder in order for the trace file to be written.
+- **Path to store output trace file:** Specify the destination path for the trace file. 
+
+> [!NOTE]
+> File path to trace file must be on the machine the SQL instance is on. If SQL Service is not set for a specific account, it may need write permissions to the specified folder in order for the trace file to be written.
+>
+>
 
 ## Begin capturing traces
 After you have entered all input information, select **Start** to begin capturing traces. If the inputs are valid, the capture trace process begins. Otherwise the fields that contain invalid inputs will be highlighted with red. 
@@ -122,5 +126,5 @@ Following are some possible errors you might encounter and solutions for resolvi
 |A DEA trace is currently running on the target server.|An active trace is already running on the target server, DEA will not allow to multiple traces when a server-wide trace is already running.|  
 |Cannot open database requested for capturing trace. This error may be due to incorrect database name|The database specified doesn’t exists or it’s not accessible to the current user. Correct the database name|  
 
-If you see any other errors with Sql Error Code, see [System Error Messages](https://docs.microsoft.com/en-us/previous-versions/sql/sql-server-2008-r2/cc645603(v=sql.105)) for detailed description and resolution.
+If you see any other errors with Sql Error Code, see [System Error Messages](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/cc645603(v=sql.105)) for detailed description and resolution.
     

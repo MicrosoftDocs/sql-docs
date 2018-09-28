@@ -127,12 +127,12 @@ ALTER LOGIN login_name
  ENABLE | DISABLE  
  Enables or disables this login. Disabling a login does not affect the behavior of logins that are already connected. (Use the `KILL` statement to terminate an existing connections.) Disabled logins retain their permissions and can still be impersonated.  
   
- PASSWORD **='***password***'**  
+ PASSWORD **='**_password_**'**  
  Applies only to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logins. Specifies the password for the login that is being changed. Passwords are case-sensitive.  
   
  Continuously active connections to SQL Database require reauthorization (performed by the Database Engine) at least every 10 hours. The Database Engine attempts reauthorization using the originally submitted password and no user input is required. For performance reasons, when a password is reset in SQL Database, the connection will not be re-authenticated, even if the connection is reset due to connection pooling. This is different from the behavior of on-premises SQL Server. If the password has been changed since the connection was initially authorized, the connection must be terminated and a new connection made using the new password. A user with the KILL DATABASE CONNECTION permission can explicitly terminate a connection to SQL Database by using the KILL command. For more information, see [KILL &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-transact-sql.md).  
   
- PASSWORD **=***hashed_password*  
+ PASSWORD **=**_hashed\_password_  
  **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Applies to the HASHED keyword only. Specifies the hashed value of the password for the login that is being created.  
@@ -146,7 +146,7 @@ ALTER LOGIN login_name
   
  Applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logins only. Specifies that the password entered after the PASSWORD argument is already hashed. If this option is not selected, the password is hashed before being stored in the database. This option should only be used for login synchronization between two servers. Do not use the HASHED option to routinely change passwords.  
   
- OLD_PASSWORD **='***oldpassword***'**  
+ OLD_PASSWORD **='**_oldpassword_**'**  
  Applies only to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logins. The current password of the login to which a new password will be assigned. Passwords are case-sensitive.  
   
  MUST_CHANGE  
@@ -154,12 +154,12 @@ ALTER LOGIN login_name
   
  Applies only to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logins. If this option is included, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will prompt for an updated password the first time the altered login is used.  
   
- DEFAULT_DATABASE **=***database*  
+ DEFAULT_DATABASE **=**_database_  
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Specifies a default database to be assigned to the login.  
   
- DEFAULT_LANGUAGE **=***language*  
+ DEFAULT_LANGUAGE **=**_language_  
  
  **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -294,7 +294,7 @@ GO
 ```  
   
 ### F. Unlocking a login  
- To unlock a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login, execute the following statement, replacing **** with the desired account password.  
+ To unlock a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login, execute the following statement, replacing \*\*\*\* with the desired account password.  
   
   
 ```sql  

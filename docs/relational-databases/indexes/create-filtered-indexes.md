@@ -116,7 +116,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 6.  Under **Index key columns**, click **Add…**.  
   
-7.  In the **Select Columns from***table_name* dialog box, select the check box or check boxes of the table column or columns to be added to the unique index.  
+7.  In the **Select Columns from**_table\_name_ dialog box, select the check box or check boxes of the table column or columns to be added to the unique index.  
   
 8.  Click **OK**.  
   

@@ -40,7 +40,7 @@ manager: craigg
  CLR return type: **SqlString**  
   
 ## Remarks  
- The OGC type names that can be returned by `STGeometryType()` are **Point**, **LineString**, **CircularString**, **CompoundCurve**, **Polygon**, **CurvePolygon**, **GeometryCollection**, **MultiPoint**, **MultiLineString**, and **MultiPolygon**.  
+ The OGC type names that can be returned by `STGeometryType()` are **Point**, **LineString**, **CircularString**, **CompoundCurve**, **Polygon**, **CurvePolygon**, **GeometryCollection**, **MultiPoint**, **MultiLineString**, **MultiPolygon**, and **FullGlobe**.  
   
 ## Examples  
  The following example creates a `Polygon` instance and uses `STGeometryType()` to confirm that it is a polygon.  

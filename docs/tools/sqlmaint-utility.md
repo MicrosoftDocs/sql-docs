@@ -80,8 +80,8 @@ number[minutes | hours | days | weeks | months]
  **-?**  
  Specifies that the syntax diagram for **sqlmaint** be returned. This parameter must be used alone.  
   
- **-S** *server_name*[ **\\***instance_name*]  
- Specifies the target instance of [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Specify *server_name* to connect to the default instance of [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] on that server. Specify *server_name***\\***instance_name* to connect to a named instance of [!INCLUDE[ssDE](../includes/ssde-md.md)] on that server. If no server is specified, **sqlmaint** connects to the default instance of [!INCLUDE[ssDE](../includes/ssde-md.md)] on the local computer.  
+ **-S** *server_name*[ **\\**_instance\_name_]  
+ Specifies the target instance of [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Specify _server\_name_ to connect to the default instance of [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] on that server. Specify _server\_name_**\\**_instance\_name_ to connect to a named instance of [!INCLUDE[ssDE](../includes/ssde-md.md)] on that server. If no server is specified, **sqlmaint** connects to the default instance of [!INCLUDE[ssDE](../includes/ssde-md.md)] on the local computer.  
   
  **-U** *login_ID*  
  Specifies the login ID to use when connecting to the server. If not supplied, **sqlmaint** attempts to use [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows Authentication. If *login_ID* contains special characters, it must be enclosed in double quotation marks ("); otherwise, the double quotation marks are optional.  

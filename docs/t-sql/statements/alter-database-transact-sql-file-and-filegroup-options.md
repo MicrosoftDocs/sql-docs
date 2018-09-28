@@ -184,7 +184,7 @@ Specifies a new logical name for the file.
 *new_logical_file_name*  
 Is the name to replace the existing logical file name. The name must be unique within the database and comply with the rules for [identifiers](../../relational-databases/databases/database-identifiers.md). The name can be a character or Unicode constant, a regular identifier, or a delimited identifier.  
   
-FILENAME { **'***os_file_name***'** | **'***filestream_path***'** | **'***memory_optimized_data_path***'**}  
+FILENAME { **'**_os\_file\_name_**'** | **'**_filestream\_path_**'** | **'**_memory\_optimized\_data\_path_**'**}  
 Specifies the operating system (physical) file name.  
   
 ' *os_file_name* '  
@@ -289,7 +289,7 @@ Removes a filegroup from the database. The filegroup cannot be removed unless it
 > [!NOTE]  
 > Unless the FILESTREAM Garbage Collector has removed all the files from a FILESTREAM container, the ALTER DATABASE REMOVE FILE operation to remove a FILESTREAM container will fail and return an error. See the "Remove FILESTREAM Container" section in Remarks later in this topic.  
   
-MODIFY FILEGROUP *filegroup_name* { \<filegroup_updatability_option> | DEFAULT | NAME **=***new_filegroup_name* }
+MODIFY FILEGROUP *filegroup_name* { \<filegroup_updatability_option> | DEFAULT | NAME **=**_new\_filegroup\_name_ }
 Modifies the filegroup by setting the status to READ_ONLY or READ_WRITE, making the filegroup the default filegroup for the database, or changing the filegroup name.  
   
 \<filegroup_updatability_option>  
@@ -824,7 +824,7 @@ ALTER DATABASE sql_db_mi ADD FILE (NAME='sql_db_mi_mod') TO FILEGROUP sql_db_mi_
 REMOVE FILEGROUP *filegroup_name*  
 Removes a filegroup from the database. The filegroup cannot be removed unless it is empty. Remove all files from the filegroup first. For more information, see "REMOVE FILE *logical_file_name*," earlier in this topic.  
   
-MODIFY FILEGROUP *filegroup_name* { \<filegroup_updatability_option> | DEFAULT | NAME **=***new_filegroup_name* }
+MODIFY FILEGROUP _filegroup\_name_ { \<filegroup_updatability_option> | DEFAULT | NAME **=**_new\_filegroup\_name_ }
 Modifies the filegroup by setting the status to READ_ONLY or READ_WRITE, making the filegroup the default filegroup for the database, or changing the filegroup name.  
   
 \<filegroup_updatability_option>  

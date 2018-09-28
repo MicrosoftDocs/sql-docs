@@ -35,7 +35,7 @@ DECOMPRESS ( expression )
   
 ## Arguments  
  *expression*  
-A **varbinary(***n***)**, **varbinary(max)**, or **binary(***n***)** value. See [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md) for more information.  
+A **varbinary(**_n_**)**, **varbinary(max)**, or **binary(**_n_**)** value. See [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md) for more information.  
   
 ## Return Types  
 A value of data type **varbinary(max)**. `DECOMPRESS` will use the ZIP algorithm to decompress the input argument. The user should explicitly cast result to a target type if necessary.  

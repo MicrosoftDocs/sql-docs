@@ -64,10 +64,10 @@ WITH
  WITH  
  Introduces the clauses that define the route being created.  
   
- SERVICE_NAME = **'***service_name***'**  
+ SERVICE_NAME = **'**_service\_name_**'**  
  Specifies the name of the remote service that this route points to. The *service_name* must exactly match the name the remote service uses. [!INCLUDE[ssSB](../../includes/sssb-md.md)] uses a byte-by-byte comparison to match the *service_name*. In other words, the comparison is case sensitive and does not consider the current collation. If the SERVICE_NAME is omitted, this route matches any service name, but has lower priority for matching than a route that specifies a SERVICE_NAME. A route with a service name of **'SQL/ServiceBroker/BrokerConfiguration'** is a route to a Broker Configuration Notice service. A route to this service might not specify a broker instance.  
   
- BROKER_INSTANCE = **'***broker_instance_identifier***'**  
+ BROKER_INSTANCE = **'**_broker\_instance\_identifier_**'**  
  Specifies the database that hosts the target service. The *broker_instance_identifier* parameter must be the broker instance identifier for the remote database, which can be obtained by running the following query in the selected database:  
   
 ```  
@@ -78,15 +78,15 @@ WHERE database_id = DB_ID()
   
  When the BROKER_INSTANCE clause is omitted, this route matches any broker instance. A route that matches any broker instance has higher priority for matching than routes with an explicit broker instance when the conversation does not specify a broker instance. For conversations that specify a broker instance, a route with a broker instance has higher priority than a route that matches any broker instance.  
   
- LIFETIME **=***route_lifetime*  
+ LIFETIME **=**_route\_lifetime_  
  Specifies the time, in seconds, that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retains the route in the routing table. At the end of the lifetime, the route expires, and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no longer considers the route when choosing a route for a new conversation. If this clause is omitted, the *route_lifetime* is NULL and the route never expires.  
   
- ADDRESS **='***next_hop_address***'**  
+ ADDRESS **='**_next\_hop\_address_**'**  
 For SQL Database Managed Instance, `ADDRESS` must be local. 
 
 Specifies the network address for this route. The *next_hop_address* specifies a TCP/IP address in the following format:  
   
- **TCP://**{ *dns_name* | *netbios_name* | *ip_address* } **:***port_number*  
+ **TCP://**{ *dns_name* | *netbios_name* | *ip_address* } **:**_port\_number_  
   
  The specified *port_number* must match the port number for the [!INCLUDE[ssSB](../../includes/sssb-md.md)] endpoint of an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] at the specified computer. This can be obtained by running the following query in the selected database:  
   
@@ -104,7 +104,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  When a route specifies **'TRANSPORT'** for the *next_hop_address*, the network address is determined based on the network address in the name of the service. A route that specifies **'TRANSPORT'** might not specify a service name or broker instance.  
   
- MIRROR_ADDRESS **='***next_hop_mirror_address***'**  
+ MIRROR_ADDRESS **='**_next\_hop\_mirror\_address_**'**  
  Specifies the network address for a mirrored database with one mirrored database hosted at the *next_hop_address*. The *next_hop_mirror_address* specifies a TCP/IP address in the following format:  
   
  **TCP://**{ *dns_name* | *netbios_name* | *ip_address* } **:** *port_number*  

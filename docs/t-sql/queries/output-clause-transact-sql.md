@@ -131,13 +131,13 @@ DELETE Sales.ShoppingCartItem
 ```  
   
  *column_name*  
- Is an explicit column reference. Any reference to the table being modified must be correctly qualified by either the INSERTED or the DELETED prefix as appropriate, for example: INSERTED**.***column_name*.  
+ Is an explicit column reference. Any reference to the table being modified must be correctly qualified by either the INSERTED or the DELETED prefix as appropriate, for example: INSERTED**.**_column\_name_.  
   
  $action  
  Is available only for the MERGE statement. Specifies a column of type **nvarchar(10)** in the OUTPUT clause in a MERGE statement that returns one of three values for each row: 'INSERT', 'UPDATE', or 'DELETE', according to the action that was performed on that row.  
   
 ## Remarks  
- The OUTPUT \<dml_select_list> clause and the OUTPUT \<dml_select_list> INTO { **\@***table_variable* | *output_table* } clause can be defined in a single INSERT, UPDATE, DELETE, or MERGE statement.  
+ The OUTPUT \<dml_select_list> clause and the OUTPUT \<dml_select_list> INTO { **\@**_table\_variable_ | _output\_table_ } clause can be defined in a single INSERT, UPDATE, DELETE, or MERGE statement.  
   
 > [!NOTE]  
 >  Unless specified otherwise, references to the OUTPUT clause refer to both the OUTPUT clause and the OUTPUT INTO clause.  

@@ -80,7 +80,7 @@ tablediff
  [ **-?** ]  
  Returns the list of supported parameters.  
   
- **-sourceserver** *source_server_name*[**\\***instance_name*]  
+ **-sourceserver** *source_server_name*[**\\**_instance\_name_]  
  Is the name of the source server. Specify *source_server_name* for the default instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Specify *source_server_name***\\***instance_name* for a named instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **-sourcedatabase** *source_database*  

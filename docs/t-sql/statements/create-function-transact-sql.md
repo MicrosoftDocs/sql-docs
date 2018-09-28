@@ -434,7 +434,7 @@ Specifies the security context under which the user-defined function is executed
  For more information, see [EXECUTE AS Clause &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md).  
 
 INLINE = { ON | OFF }  
-Specifies whether this scalar UDF should be inlined or not. This clause applies only to scalar user-defined functions. The INLINE clause is not mandatory. If INLINE clause is not specified, it is automatically set to ON/OFF based on whether the UDF is inlineable. If INLINE=ON is specified but the UDF is found to be non-inlineable, an error will be thrown. For more information, see [Scalar UDF Inlining](../../relational-databases/performance/scalar-udf-inlining.md).
+Specifies whether this scalar UDF should be inlined or not. This clause applies only to scalar user-defined functions. The `INLINE` clause is not mandatory. If `INLINE` clause is not specified, it is automatically set to ON/OFF based on whether the UDF is inlineable. If `INLINE=ON` is specified but the UDF is found to be non-inlineable, an error will be thrown. For more information, see [Scalar UDF Inlining](../../relational-databases/user-defined-functions/scalar-udf-inlining.md).
   
  **\< column_definition >::=** 
   

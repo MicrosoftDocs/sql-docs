@@ -1,6 +1,6 @@
 ---
-title: Azure Data Studio (preview) SQL Server Import Extension | Microsoft Docs
-description: SQL Server Import extension (preview) for Azure Data Studio (preview)
+title: Azure Data Studio SQL Server Import Extension | Microsoft Docs
+description: SQL Server Import extension (preview) for Azure Data Studio
 ms.custom: "tools|sos"
 ms.date: "09/24/2018"
 ms.reviewer: "alayu; sstein"

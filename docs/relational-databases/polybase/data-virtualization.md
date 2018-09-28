@@ -4,7 +4,7 @@ description:
 author: Abiola
 ms.author: aboke
 manager: craigg
-ms.date: 09/07/2018
+ms.date: 09/24/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.suite: "sql"

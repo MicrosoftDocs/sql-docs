@@ -1,7 +1,7 @@
 ---
 title: "Configure PolyBase to access external data in Hadoop | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/24/2018"
+ms.date: 09/24/2018
 ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"
@@ -23,13 +23,13 @@ The article explains how to use PolyBase on a SQL Server instance to query exter
 - If you haven't installed PolyBase, see [PolyBase installation](polybase-installation.md). The installation article explains the prerequisites.
 
 <!--SQL Server 2019-->
-::: moniker range=">= sql-server-ver15"
+::: moniker range=">= sql-server-ver15 || =sqlallproducts-allversions"
 
 - Starting with SQL Server 2019, you must also [enable the PolyBase feature](polybase-installation.md#enable).
 
 ::: moniker-end
 
-- PolyBase supports two Hadoop providers, Hortonworks Data Platform (HDP) and Cloudera Distributed Hadoop (CDH). The following Hadoop providers are supported:
+- PolyBase supports two Hadoop providers, Hortonworks Data Platform (HDP) and Cloudera Distributed Hadoop (CDH). Hadoop follows the "Major.Minor.Version" pattern for its new releases, and all versions within a supported Major and Minor release are supported. The following Hadoop providers are supported:
 
   - Hortonworks HDP 1.3 on Linux/Windows Server  
   - Hortonworks HDP 2.1 – 2.6 on Linux
@@ -37,11 +37,8 @@ The article explains how to use PolyBase on a SQL Server instance to query exter
   - Cloudera CDH 4.3 on Linux  
   - Cloudera CDH 5.1 – 5.5, 5.9 - 5.13 on Linux
 
-  > [!NOTE]
-  > Hadoop follows the "Major.Minor.Version" pattern for its new releases. All versions within a supported Major and Minor release are supported.
-
 > [!NOTE]
-> PolyBase supports Hadoop encryption zones starting with SQL Server 2016 SP1 CU7 and SQL Server 2017 CU3.
+> PolyBase supports Hadoop encryption zones starting with SQL Server 2016 SP1 CU7 and SQL Server 2017 CU3. If you are using [PolyBase scale-out groups](polybase-scale-out-groups.md), all compute nodes must also be on a build that includes support for Haddop encryption zones.
 
 ### Configure Hadoop connectivity
 

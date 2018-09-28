@@ -198,6 +198,8 @@
             href: sql-server-linux-kubernetes-manage.md
           - name: Connect
             href: sql-server-linux-kubernetes-connect.md
+          - name: Create deployment scripts
+            href: sql-server-linux-kubernetes-create-deployment.md
   - name: Security
     href: sql-server-linux-security-overview.md
     items:

@@ -9,7 +9,7 @@ ms.custom: ""
 ms.tgt_pltfrm: na
 ms.devlang: 
 ms.topic: conceptual
-ms.date: 07/19/2017"
+ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: "polybase, sql-data-warehouse, pdw"
 

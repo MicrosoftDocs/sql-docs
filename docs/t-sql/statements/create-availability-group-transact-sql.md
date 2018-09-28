@@ -226,12 +226,12 @@ CREATE AVAILABILITY GROUP group_name
   
  For information about the prerequisites for WSFC nodes and server instances, see [Prerequisites, Restrictions, and Recommendations for Always On Availability Groups &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
- ENDPOINT_URL **='**TCP**://***system-address***:***port***'**  
+ ENDPOINT_URL **='**TCP**://**_system-address_**:**_port_**'**  
  Specifies the URL path for the [database mirroring endpoint](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md) on the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that hosts the availability replica that you are defining in your current REPLICA ON clause.  
   
  The ENDPOINT_URL clause is required. For more information, see [Specify the Endpoint URL When Adding or Modifying an Availability Replica &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md).  
   
- **'**TCP**://***system-address***:***port***'**  
+ **'**TCP**://**_system-address_**:**_port_**'**  
  Specifies a URL for specifying an endpoint URL or read-only routing URL. The URL parameters are as follows:  
   
  *system-address*  
@@ -315,7 +315,7 @@ CREATE AVAILABILITY GROUP group_name
   
  For more information, see [Active Secondaries: Readable Secondary Replicas &#40;Always On Availability Groups&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
- READ_ONLY_ROUTING_URL **='**TCP**://***system-address***:***port***'**  
+ READ_ONLY_ROUTING_URL **='**TCP**://**_system-address_**:**_port_**'**  
  Specifies the URL to be used for routing read-intent connection requests to this availability replica. This is the URL on which the SQL Server Database Engine listens. Typically, the default instance of the SQL Server Database Engine listens on TCP port 1433.  
   
  For a named instance, you can obtain the port number by querying the **port** and **type_desc** columns of the [sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md) dynamic management view. The server instance uses the Transact-SQL listener (**type_desc='TSQL'**).  
@@ -374,12 +374,12 @@ CREATE AVAILABILITY GROUP group_name
  \<ag_name> 
  Specifies the name  of the availability group that makes up one half of the distributed availability group.  
   
- LISTENER **='**TCP**://***system-address***:***port***'**  
+ LISTENER **='**TCP**://**_system-address_**:**_port_**'**  
  Specifies the URL path for the listener associated with the availability group.  
   
  The LISTENER clause is required.  
   
- **'**TCP**://***system-address***:***port***'**  
+ **'**TCP**://**_system-address_**:**_port_**'**  
  Specifies a URL for the listener associated with the availability group. The URL parameters are as follows:  
   
  *system-address*  
@@ -416,7 +416,7 @@ CREATE AVAILABILITY GROUP group_name
  MANUAL  
  Specifies manual seeding (default). This method requires you to create a backup of the database on the primary replica and manually restore that backup on the replica(s) of the secondary availability group.  
   
- LISTENER **‘***dns_name***’(** \<listener_option> **)** 
+ LISTENER **‘**_dns\_name_**’(** \<listener_option\> **)** 
  Defines a new availability group listener for this availability group. LISTENER is an optional argument.  
   
 > [!IMPORTANT]  
@@ -440,7 +440,7 @@ CREATE AVAILABILITY GROUP group_name
  \<listener_option> 
  LISTENER takes one of the following \<listener_option> options: 
   
- WITH DHCP [ ON { **(‘***four_part_ipv4_address***’,‘***four_part_ipv4_mask***’)** } ]  
+ WITH DHCP [ ON { **(‘**_four\_part\_ipv4\_address_**’,‘**_four\_part\_ipv4\_mask_**’)** } ]  
  Specifies that the availability group listener uses the Dynamic Host Configuration Protocol (DHCP).  Optionally, use the ON clause to identify the network on which this listener is created. DHCP is limited to a single subnet that is used for every server instances that hosts a replica in the availability group.  
   
 > [!IMPORTANT]  
@@ -450,7 +450,7 @@ CREATE AVAILABILITY GROUP group_name
   
  `WITH DHCP ON ('10.120.19.0','255.255.254.0')`  
   
- WITH IP **(** { **(‘***four_part_ipv4_address***’,‘***four_part_ipv4_mask***’)** | **(‘***ipv6_address***’)** } [ **,** ...*n* ] **)** [ **,** PORT **=***listener_port* ]  
+ WITH IP **(** { **(‘**_four\_part\_ipv4\_address_**’,‘**_four\_part\_ipv4\_mask_**’)** | **(‘**_ipv6\_address_**’)** } [ **,** ...*n* ] **)** [ **,** PORT **=**_listener\_port_ ]  
  Specifies that, instead of using DHCP, the availability group listener uses one or more static IP addresses. To create an availability group across multiple subnets, each subnet requires one static IP address in the listener configuration. For a given subnet, the static IP address can be either an IPv4 address or an IPv6 address. Contact your network administrator to get a static IP address for each subnet that hosts a replica for the new availability group.  
   
  For example:  

@@ -62,7 +62,7 @@ By default, members of the **sysadmin** fixed server role can view information a
   
 4.  Right-click the alert that has the information you want to view and select **Properties**.  
   
-    For more information on the available options contained in the *alert_name***alert properties** dialog box, see:  
+    For more information on the available options contained in the _alert\_name_**alert properties** dialog box, see:  
   
     -   [Alert Properties - New Alert &#40;General Page&#41;](../../ssms/agent/alert-properties-new-alert-general-page.md)  
   

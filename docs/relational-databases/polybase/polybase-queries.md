@@ -1,7 +1,7 @@
 ---
 title: "PolyBase query scenarios | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/08/2017"
+ms.date: 09/24/2018
 ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"

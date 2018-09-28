@@ -1,7 +1,7 @@
 ---
 title: "PolyBase features and limitations | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/29/2017"
+ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: polybase
 ms.reviewer: ""

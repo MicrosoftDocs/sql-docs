@@ -109,9 +109,9 @@ sqlcmd -v ColumnName ="LastName" -i c:\testscript.sql
   
 |        Variable         | Related option | R/W |         Default         |
 | ----------------------- | -------------- | --- | ----------------------- |
-| SQLCMDUSER*             | -U             | R   | ""                      |
-| SQLCMDPASSWORD*         | -P             | --  | ""                      |
-| SQLCMDSERVER*           | -S             | R   | "DefaultLocalInstance"  |
+| SQLCMDUSER\*             | -U             | R   | ""                      |
+| SQLCMDPASSWORD\*         | -P             | --  | ""                      |
+| SQLCMDSERVER\*           | -S             | R   | "DefaultLocalInstance"  |
 | SQLCMDWORKSTATION       | -H             | R   | "ComputerName"          |
 | SQLCMDDBNAME            | -d             | R   | ""                      |
 | SQLCMDLOGINTIMEOUT      | -l             | R/W | "8" (seconds)           |

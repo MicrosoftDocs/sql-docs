@@ -64,7 +64,7 @@ Character format is supported by the following command options:
   
 |Command|Option|Description|  
 |-------------|------------|-----------------|  
-|bcp|**-c**|Causes the bcp utility to use character data.*|  
+|bcp|**-c**|Causes the bcp utility to use character data.\*|  
 |BULK INSERT|DATAFILETYPE **='char'**|Use character format when bulk importing data.|  
 |OPENROWSET|N/A|Must use a format file|
   

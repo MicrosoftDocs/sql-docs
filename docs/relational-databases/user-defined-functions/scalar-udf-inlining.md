@@ -159,7 +159,8 @@ A scalar T-SQL UDF can be inline if all of the following conditions are true:
 
 For every T-SQL scalar UDF, the [sys.sql_modules](../system-catalog-views/sys-sql-modules-transact-sql.md) catalog view includes a property called `is_inlineable`, which indicates whether or not a UDF can be inline or not. A value of 1 indicates that it can be used inline, and 0 indicates otherwise. This property will have a value of 1 for all inline TVFs as well. For all other modules, the value will be 0.
 
-**Note:** If a scalar UDF can be inline, it does not imply that it will always be inlined. SQL Server will decide (on a per-query, per-UDF basis) whether to inline a UDF or not. For instance, if the UDF definition runs into thousands of lines of code, SQL Server might choose not to inline it. Another example is a UDF in a `GROUP BY` clause - which will not be inlined. This decision is made when the query referencing a scalar UDF is compiled.
+>[!NOTE]
+>If a scalar UDF can be inline, it does not imply that it will always be inlined. SQL Server will decide (on a per-query, per-UDF basis) whether to inline a UDF or not. For instance, if the UDF definition runs into thousands of lines of code, SQL Server might choose not to inline it. Another example is a UDF in a `GROUP BY` clause - which will not be inlined. This decision is made when the query referencing a scalar UDF is compiled.
 
 ### Checking whether inlining has happened or not
 
@@ -230,7 +231,8 @@ BEGIN
 END
 ```
 
-**NOTE:** The `INLINE` clause is not mandatory. If `INLINE` clause is not specified, it is automatically set to `ON`/`OFF` based on whether the UDF can be inlined. If `INLINE=ON` is specified but the UDF is found ineligible for inlining, an error will be thrown.
+>[!NOTE]
+>The `INLINE` clause is not mandatory. If `INLINE` clause is not specified, it is automatically set to `ON`/`OFF` based on whether the UDF can be inlined. If `INLINE=ON` is specified but the UDF is found ineligible for inlining, an error will be thrown.
 
 ## Important Notes
 

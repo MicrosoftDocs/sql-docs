@@ -41,7 +41,7 @@ Wherever you use a column in a query, you can also use an expression that can co
   
 ### To add all columns for one table or table-valued object  
   
--   In the **Diagram Pane**, select the check box next to **\&#42;(All Columns)**.  
+-   In the **Diagram Pane**, select the check box next to **&#42;(All Columns)**.  
   
 ### To add all columns for all tables and table-structured objects  
   

@@ -1,7 +1,7 @@
 ---
 title: "What's new in SQL Server 2019 | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/24/2018"
+ms.date: "09/26/2018"
 ms.prod: "sql-server-2018"
 ms.reviewer: ""
 ms.suite: ""
@@ -165,7 +165,7 @@ For details, see [Always Encrypted with secure enclaves](../relational-databases
    - Accesses data sets of at least millions of rows.
    - Aggregates a column or columns that have a large number of distinct values.
    - Responsiveness is more critical than absolute precision.
-      - `APPROXIMATE_COUNT_DISTINCT` returns results that are typically within 2% of the precise answer.
+      - `APPROX_COUNT_DISTINCT` returns results that are typically within 2% of the precise answer.
       - And it returns the approximate answer in a small fraction of the time needed for the precise answer.
 
 - **Batch mode on rowstore** no longer requires a columnstore index to process a query in batch mode. Batch mode allows query operators to work on a set of rows, instead of just one row at a time. This feature is enabled by default under database compatibility level 150. Batch mode improves the speed of queries that access rowstore tables when all the following are true:
@@ -358,6 +358,9 @@ FROM sys.dm_exec_requests AS d
 
 ## Next steps
 
-See the [SQL Server 2019 Release Notes](sql-server-ver15-release-notes.md).
+- [SQL Server 2019 Release Notes](sql-server-ver15-release-notes.md)
+
+- [Microsoft SQL Server 2019: Technical white paper](https://info.microsoft.com/rs/157-GQE-382/images/EN-US-CNTNT-white-paper-DBMod-Microsoft-SQL-Server-2019-Technical-white-paper.pdf)<br />Published in September 2018. Applies to Microsoft SQL Server 2019 CTP 2.0 for Windows, Linux, and Docker containers.
+
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

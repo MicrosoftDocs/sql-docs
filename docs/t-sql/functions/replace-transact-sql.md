@@ -44,10 +44,10 @@ REPLACE ( string_expression , string_pattern , string_replacement )
  *string_expression*  
  Is the string [expression](../../t-sql/language-elements/expressions-transact-sql.md) to be searched. *string_expression* can be of a character or binary data type.  
   
- *string_*pattern  
+ *string\_pattern*  
  Is the substring to be found. *string_pattern* can be of a character or binary data type. *string_pattern* cannot be an empty string (''), and must not exceed the maximum number of bytes that fits on a page.  
   
- *string_*replacement  
+ *string\_replacement*  
  Is the replacement string. *string_replacement* can be of a character or binary data type.  
   
 ## Return Types  

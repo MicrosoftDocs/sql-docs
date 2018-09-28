@@ -55,7 +55,7 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 ```  
   
 ## Arguments  
- [ **@name=** ] **'***module_name***'**  
+ [ **@name=** ] **'**_module\_name_**'**  
  Is the name of the stored procedure, user-defined function, view, DML trigger, database-level DDL trigger, or server-level DDL trigger. *module_name* cannot be a common language runtime (CLR) stored procedure or a CLR function. *module_name* cannot be schema-bound. *module_name* is **nvarchar**, with no default. *module_name* can be a multi-part identifier, but can only refer to objects in the current database.  
   
  [ **,** @**namespace** = ] **'** \<class> **'**  

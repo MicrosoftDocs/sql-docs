@@ -116,7 +116,7 @@ This table lists all *datepart* arguments, with corresponding return values, for
 ## Week and weekday datepart arguments
 For a **week** (**wk**, **ww**) or **weekday** (**dw**) *datepart*, the `DATEPART` return value depends on the value set by [SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md).
   
-January 1 of any year defines the starting number for the **week***datepart*. For example:
+January 1 of any year defines the starting number for the **week**_datepart_. For example:
 
 DATEPART (**wk**, 'Jan 1, *xxx*x') = 1
 

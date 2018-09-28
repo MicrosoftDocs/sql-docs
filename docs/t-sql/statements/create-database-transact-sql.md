@@ -356,7 +356,7 @@ CREATE DATABASE database_snapshot_name
  *logical_file_name*  
  Is the logical name used in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] when referencing the file. *Logical_file_name* must be unique in the database and comply with the rules for [identifiers](../../relational-databases/databases/database-identifiers.md). The name can be a character or Unicode constant, or a regular or delimited identifier.  
   
- FILENAME { **'***os_file_name***'** | **'***filestream_path***'** }  
+ FILENAME { **'**_os\_file\_name_**'** | **'**_filestream\_path_**'** }  
  Specifies the operating system (physical) file name.  
   
  **'** *os_file_name* **'**  
@@ -441,7 +441,7 @@ CREATE DATABASE database_snapshot_name
  *database_snapshot_name*  
  Is the name of the new database snapshot. Database snapshot names must be unique within an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and comply with the rules for identifiers. *database_snapshot_name* can be a maximum of 128 characters.  
   
- ON **(** NAME **=***logical_file_name***,** FILENAME **='***os_file_name***')** [ **,**... *n* ]  
+ ON **(** NAME **=**_logical\_file\_name_**,** FILENAME **='**_os\_file\_name_**')** [ **,**... *n* ]  
  For creating a database snapshot, specifies a list of files in the source database. For the snapshot to work, all the data files must be specified individually. However, log files are not allowed for database snapshots. FILESTREAM filegroups are not supported by database snapshots. If a FILESTREAM data file is included in a CREATE DATABASE ON clause, the statement will fail and an error will be raised.  
   
  For descriptions of NAME and FILENAME and their values see the descriptions of the equivalent \<filespec> values.  

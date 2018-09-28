@@ -79,13 +79,13 @@ CREATE SYMMETRIC KEY key_name
 > [!NOTE]  
 >  This option is not available in a contained database.  
   
- KEY_SOURCE **='***pass_phrase***'**  
+ KEY_SOURCE **='**_pass\_phrase_**'**  
  Specifies a pass phrase from which to derive the key.  
   
- IDENTITY_VALUE **='***identity_phrase***'**  
+ IDENTITY_VALUE **='**_identity\_phrase_**'**  
  Specifies an identity phrase from which to generate a GUID for tagging data that is encrypted with a temporary key.  
   
- PROVIDER_KEY_NAME**='***key_name_in_provider***'**  
+ PROVIDER_KEY_NAME**='**_key\_name\_in\_provider_**'**  
  Specifies the name referenced in the Extensible Key Management provider.  
   
 > [!NOTE]  

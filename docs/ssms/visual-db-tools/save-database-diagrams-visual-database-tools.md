@@ -27,7 +27,7 @@ By saving a database diagram, you can save all the changes you made to it, inclu
   
 ### To save the database diagram  
   
-1.  From the **File** menu, choose **Save \<***tablename***>**.  
+1.  From the **File** menu, choose **Save \<**_tablename_**>**.  
   
 2.  If this is a new diagram that you have never before saved, the **Save As** dialog box appears. Type a name for the diagram.  
   

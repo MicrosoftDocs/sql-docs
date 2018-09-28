@@ -19,7 +19,7 @@ The article explains how to use PolyBase on a SQL Server instance to query exter
 
 ## Prerequisites
 
-1. Azure Blob Storage in your subscrption.
+1. Azure Blob Storage in your subscription.
 2. A container created in the Azure Blob Storage.
 
 ### Configure Azure blob storage connectivity
@@ -39,13 +39,13 @@ First, configure APS to use Azure blob storage.
    GO
    ```  
 
-2. You must restart APS Region using Service Status page on [Appliance Configuration Manager](launch-the-configuration-manager.md).
+2. Restart APS Region using Service Status page on [Appliance Configuration Manager](launch-the-configuration-manager.md).
   
 ## Configure an external table
 
 To query the data in your Azure Blob Storage, you must define an external table to use in Transact-SQL queries. The following steps describe how to configure the external table.
 
-1. Create a master key on the database. This is required to encrypt the credential secret.
+1. Create a master key on the database. It is required to encrypt the credential secret.
 
    ```sql
    CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
@@ -83,7 +83,7 @@ To query the data in your Azure Blob Storage, you must define an external table 
                USE_TYPE_DEFAULT = TRUE)  
    ```
 
-1. Create an external table pointing to data stored in Azure storage with [CREATE EXTERNAL TABLE](../t-sql/statements/create-external-table-transact-sql.md). In this example, the external data contains car senor data.
+1. Create an external table pointing to data stored in Azure storage with [CREATE EXTERNAL TABLE](../t-sql/statements/create-external-table-transact-sql.md). In this example, the external data contains car sensor data.
 
    ```sql
    -- LOCATION: path to file or directory that contains the data (relative to HDFS root).  
@@ -110,15 +110,15 @@ To query the data in your Azure Blob Storage, you must define an external table 
 
 There are three functions that PolyBase is suited for:  
   
-- Ad-hoc queries against external tables.  
+- Ad hoc queries against external tables.  
 - Importing data.  
 - Exporting data.  
 
 The following queries provide example with fictional car sensor data.
 
-### Ad-hoc queries  
+### Ad hoc queries  
 
-The following ad-hoc query joins relational with data in Azure Blob Storage. It selects customers who drive faster than 35 mph,joining structured customer data stored in SQL Server with car sensor data stored in Azure Blob Storage.  
+The following ad hoc query joins relational with data in Azure Blob Storage. It selects customers who drive faster than 35 mph, joining structured customer data stored in SQL Server with car sensor data stored in Azure Blob Storage.  
 
 ```sql  
 SELECT DISTINCT Insured_Customers.FirstName,Insured_Customers.LastName,

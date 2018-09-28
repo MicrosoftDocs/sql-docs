@@ -40,7 +40,7 @@ PolyBase supports two Hadoop providers, Hortonworks Data Platform (HDP) and Clou
    GO
    ```  
 
-2. You must restart APS Region using Service Status page on [Appliance Configuration Manager](launch-the-configuration-manager.md).
+2. Restart APS Region using Service Status page on [Appliance Configuration Manager](launch-the-configuration-manager.md).
   
 ## <a id="pushdown"></a> Enable pushdown computation  
 
@@ -64,7 +64,7 @@ To improve query performance, enable pushdown computation to your Hadoop cluster
 
 To query the data in your Hadoop data source, you must define an external table to use in Transact-SQL queries. The following steps describe how to configure the external table.
 
-1. Create a master key on the database. This is required to encrypt the credential secret.
+1. Create a master key on the database. It is required to encrypt the credential secret.
 
    ```sql
    CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
@@ -103,7 +103,7 @@ To query the data in your Hadoop data source, you must define an external table 
                USE_TYPE_DEFAULT = TRUE)  
    ```
 
-5. Create an external table pointing to data stored in Hadoop with [CREATE EXTERNAL TABLE](../t-sql/statements/create-external-table-transact-sql.md). In this example, the external data contains car senor data.
+5. Create an external table pointing to data stored in Hadoop with [CREATE EXTERNAL TABLE](../t-sql/statements/create-external-table-transact-sql.md). In this example, the external data contains car sensor data.
 
    ```sql
    -- LOCATION: path to file or directory that contains the data (relative to HDFS root).  
@@ -130,15 +130,15 @@ To query the data in your Hadoop data source, you must define an external table 
 
 There are three functions that PolyBase is suited for:  
   
-- Ad-hoc queries against external tables.  
+- Ad hoc queries against external tables.  
 - Importing data.  
 - Exporting data.  
 
 The following queries provide example with fictional car sensor data.
 
-### Ad-hoc queries  
+### Ad hoc queries  
 
-The following ad-hoc query joins relational with Hadoop data. It selects customers who drive faster than 35 mph,joining structured customer data stored in APS with car sensor data stored in Hadoop.  
+The following ad hoc query joins relational with Hadoop data. It selects customers who drive faster than 35 mph, joining structured customer data stored in APS with car sensor data stored in Hadoop.  
 
 ```sql  
 SELECT DISTINCT Insured_Customers.FirstName,Insured_Customers.LastName,

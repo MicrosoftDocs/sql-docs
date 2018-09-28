@@ -41,8 +41,8 @@ The following table shows how the [!INCLUDE[ssNoVersion](../../includes/ssnovers
   
 |Instance type|Object name|  
 |-----------------|---------------|  
-|Default|**SQLAgent:***object*:*counter*|  
-|Named|**SQLAgent$**<br /> **&#42;instance_name&#42; :***object*:*counter*|  
+|Default|**SQLAgent:**_object_:_counter_|  
+|Named|**SQLAgent$**<br /> **&#42;instance_name&#42; :**_object_:_counter_|  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] includes the following performance objects for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   

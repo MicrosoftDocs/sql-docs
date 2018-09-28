@@ -56,10 +56,10 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 |**2**|Use the **element-centric** mapping. Can be combined with XML_ATTRIBUTES. In this case, **attribute-centric** mapping is applied first, and then **element-centric** mapping is applied for all columns not yet dealt with.|  
 |**8**|Can be combined (logical OR) with XML_ATTRIBUTES or XML_ELEMENTS. In the context of retrieval, this flag indicates that the consumed data should not be copied to the overflow property **\@mp:xmltext**.|  
   
- *SchemaDeclaration*  
- Is the schema definition of the form: *ColName**ColType* [*ColPattern* | *MetaProperty*] [**,***ColNameColType* [*ColPattern* | *MetaProperty*]...]  
+ _SchemaDeclaration_  
+ Is the schema definition of the form: _ColName_*ColType* [_ColPattern_ | _MetaProperty_] [**,**_ColNameColType_ [_ColPattern_ | _MetaProperty_]...]  
   
- *ColName*  
+ _ColName_  
  Is the column name in the rowset.  
   
  *ColType*  

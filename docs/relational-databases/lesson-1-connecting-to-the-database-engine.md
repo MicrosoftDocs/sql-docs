@@ -78,7 +78,7 @@ At least one administrator account was selected when [!INCLUDE[ssNoVersion_md](.
 
 ![object-explorer](../relational-databases/media/object-explorer.png)
 
-3.  In the **Server name** box, type the name of the instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)]. For the default instance of SQL Server, the server name is the computer name. For a named instance of SQL Server, the server name is the *<computer_name>***\\***<instance_name>,* such as **ACCTG_SRVR\SQLEXPRESS**. The following screenshot shows connecting to the default (un-named) instance of [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] on a computer named 'PracticeComputer'. The user logged into Windows is Mary from the Contoso domain. When using Windows Authentication you cannot change the user name. 
+3.  In the **Server name** box, type the name of the instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)]. For the default instance of SQL Server, the server name is the computer name. For a named instance of SQL Server, the server name is the _\<computer_name\>_**\\**_\<instance_name\>_, such as **ACCTG_SRVR\SQLEXPRESS**. The following screenshot shows connecting to the default (un-named) instance of [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] on a computer named 'PracticeComputer'. The user logged into Windows is Mary from the Contoso domain. When using Windows Authentication you cannot change the user name. 
 
 ![connect-to-server](../relational-databases/media/connect-to-server.png)
 

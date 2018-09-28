@@ -53,13 +53,13 @@ WITH IDENTITY = 'identity_name'
  *credential_name*  
  Specifies the name of the credential being created. *credential_name* cannot start with the number (#) sign. System credentials start with ##.  When using a shared access signature (SAS), this name must match the container path, start with https and must not contain a forward slash. See example D below.  
   
- IDENTITY **='***identity_name***'**  
+ IDENTITY **='**_identity\_name_**'**  
  Specifies the name of the account to be used when connecting outside the server. When the credential is used to access the Azure Key Vault, the **IDENTITY** is the name of the key vault. See example C below. When the credential is using a shared access signature (SAS), the **IDENTITY** is *SHARED ACCESS SIGNATURE*. See example D below.  
  
 > [!IMPORTANT]
 > Azure SQL Database only supports Azure Key Vault and Shared Access Signature identities. Windows user identities are not supported.
  
- SECRET **='***secret***'**  
+ SECRET **='**_secret_**'**  
  Specifies the secret required for outgoing authentication.  
   
  When the credential is used to access the Azure Key Vault the **SECRET** argument of **CREATE CREDENTIAL** requires the *\<Client ID>* (without hyphens) and *\<Secret>* of a **Service Principal** in the Azure Active Directory to be passed together without a space between them. See example C below. When the credential is using a shared access signature, the **SECRET** is the shared access signature token. See example D below.  For information about creating a stored access policy and a shared access signature on an Azure container, see [Lesson 1: Create a stored access policy and a shared access signature  on an Azure container](../../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md).  

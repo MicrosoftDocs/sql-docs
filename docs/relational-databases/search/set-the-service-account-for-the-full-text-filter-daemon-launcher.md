@@ -34,7 +34,7 @@ The SQL Full-text Filter Daemon Launcher service is an instance-aware service th
   
 1.  On the **Start** menu, point to **All Programs**, expand [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], and then click **SQL Server 2016 Configuration Manager**.  
   
-2.  In **SQL Server Configuration Manager**, click **SQL Server Services**, right-click **SQL Full-text Filter Daemon Launcher (***instance name***)**, and then click **Properties**.  
+2.  In **SQL Server Configuration Manager**, click **SQL Server Services**, right-click **SQL Full-text Filter Daemon Launcher (**_instance name_**)**, and then click **Properties**.  
   
 3.  Click the **Log On** tab of the dialog box, and then select or enter the account under which to run the processes that the SQL Full-text Filter Daemon Launcher service starts.  
   

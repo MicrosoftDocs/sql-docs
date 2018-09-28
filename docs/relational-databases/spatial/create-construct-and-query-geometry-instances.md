@@ -219,7 +219,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
   
 ###  <a name="empty"></a> Empty  
- An *empty***geometry** instance does not have any points. The length of empty **LineString, CircularString**, **CompoundCurve**, and **MultiLineString** instances is zero. The area of empty **Polygon**, **CurvePolygon**, and **MultiPolygon** instances is 0.  
+ An _empty_**geometry** instance does not have any points. The length of empty **LineString, CircularString**, **CompoundCurve**, and **MultiLineString** instances is zero. The area of empty **Polygon**, **CurvePolygon**, and **MultiPolygon** instances is 0.  
   
  **To determine if an instance is empty**  
  [STIsEmpty](../../t-sql/spatial-geometry/stisempty-geometry-data-type.md).  
@@ -274,7 +274,7 @@ SELECT @g.STBoundary().ToString();
   
   
 ###  <a name="closure"></a> Closure  
- A *closed***geometry** instance is a figure whose start points and end points are the same. **Polygon** instances are considered closed. **Point** instances are not closed.  
+ A _closed_**geometry** instance is a figure whose start points and end points are the same. **Polygon** instances are considered closed. **Point** instances are not closed.  
   
  A ring is a simple, closed **LineString** instance.  
   

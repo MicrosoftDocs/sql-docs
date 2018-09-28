@@ -181,7 +181,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ### Bounding Box  
  The *bounding box* is the perimeter of the top-level grid of a geometric plane. The bounding-box parameters exist only in the geometry grid tessellation. These parameters are unavailable if the **Tessellation Scheme** is **Geography grid**.  
   
- The panel displays the **(***X-min***,***Y-min***)** and **(***X-max***,***Y-max***)** coordinates of the bounding box. There are no default coordinate values. Therefore, when you are creating a new spatial index on a **geometry** type column, you must specify the coordinate values.  
+ The panel displays the **(**_X-min_**,**_Y-min_**)** and **(**_X-max_**,**_Y-max_**)** coordinates of the bounding box. There are no default coordinate values. Therefore, when you are creating a new spatial index on a **geometry** type column, you must specify the coordinate values.  
   
  **X-min**  
  The X-coordinate of the lower-left corner of the bounding box.  

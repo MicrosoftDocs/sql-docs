@@ -19,8 +19,8 @@ The article explains how to use PolyBase on a SQL Server instance to query exter
 
 ## Prerequisites
 
-    - Azure Blob storage in your subscription.
-    - A container created in the Azure Blob storage.
+ - Azure Blob storage in your subscription.
+ - A container created in the Azure Blob storage.
 
 ### Configure Azure Blob storage connectivity
 
@@ -152,7 +152,7 @@ ON Insured_Customers.CustomerKey = SensorD.CustomerKey
 The following query exports data from APS to Azure Blob storage. It can be used to archive relational data to Azure Blob storage while still be able to query it.
 
 ```sql
--- Export data: Move old data to Hadoop while keeping it query-able via an external table.  
+-- Export data: Move old data to Azure Blob storage while keeping it query-able via an external table.  
 CREATE EXTERNAL TABLE [dbo].[FastCustomers2009] 
 WITH (  
       LOCATION='/archive/customer/2009',  

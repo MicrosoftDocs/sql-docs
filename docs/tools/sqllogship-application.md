@@ -63,10 +63,10 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
 |4|Output all debugging and tracing messages.|  
   
  **–logintimeout** *timeout_value*  
- Specifies the amount of time allotted for attempting to log in to the server instance before the attempt times out. The default is 15 seconds. *timeout_value* is **int***.*  
+ Specifies the amount of time allotted for attempting to log in to the server instance before the attempt times out. The default is 15 seconds. *timeout_value* is **int**_._  
   
  **-querytimeout** *timeout_value*  
- Specifies the amount of time allotted for starting the specified operation before the attempt times out. The default is no timeout period. *timeout_value* is **int***.*  
+ Specifies the amount of time allotted for starting the specified operation before the attempt times out. The default is no timeout period. *timeout_value* is **int**_._  
   
 ## Remarks  
  We recommend that you use the backup, copy, and restore jobs to perform the backup, copy and restore when possible. To start these jobs from a batch operation or other application, call the [sp_start_job](../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md) stored procedure.  

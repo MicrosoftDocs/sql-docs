@@ -62,7 +62,7 @@ SET ANSI_PADDING ON
   
 |Setting|char(*n*) NOT NULL or binary(*n*) NOT NULL|char(*n*) NULL or binary(*n*) NULL|varchar(*n*) or varbinary(*n*)|  
 |-------------|----------------------------------------------------|--------------------------------------------|----------------------------------------|  
-|ON|Pad original value (with trailing blanks for **char** columns and with trailing zeros for **binary** columns) to the length of the column.|Follows same rules as for **char(***n***)** or **binary(***n***)** NOT NULL when SET ANSI_PADDING is ON.|Trailing blanks in character values inserted into **varchar** columns are not trimmed. Trailing zeros in binary values inserted into **varbinary** columns are not trimmed. Values are not padded to the length of the column.|  
+|ON|Pad original value (with trailing blanks for **char** columns and with trailing zeros for **binary** columns) to the length of the column.|Follows same rules as for **char(**_n_**)** or **binary(**_n_**)** NOT NULL when SET ANSI_PADDING is ON.|Trailing blanks in character values inserted into **varchar** columns are not trimmed. Trailing zeros in binary values inserted into **varbinary** columns are not trimmed. Values are not padded to the length of the column.|  
 |OFF|Pad original value (with trailing blanks for **char** columns and with trailing zeros for **binary** columns) to the length of the column.|Follows same rules as for **varchar** or **varbinary** when SET ANSI_PADDING is OFF.|Trailing blanks in character values inserted into a **varchar** column are trimmed. Trailing zeros in binary values inserted into a **varbinary** column are trimmed.|  
   
 > [!NOTE]  

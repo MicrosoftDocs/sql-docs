@@ -56,15 +56,15 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## Multipart Names  
  Unless specified otherwise, all [!INCLUDE[tsql](../../includes/tsql-md.md)] references to the name of a database object can be a four-part name in the following form:  
   
-*server_name* **.**[*database_name*]**.**[*schema_name*]**.***object_name*  
+*server_name* **.**[*database_name*]**.**[*schema_name*]**.**_object\_name_  
   
- | *database_name***.**[*schema_name*]**.***object_name*  
+ | _database\_name_**.**[_schema\_name_]**.**_object\_name_  
   
- | *schema_name***.***object_name*  
+ | _schema\_name_**.**_object\_name_  
   
- | *object_name*  
+ | _object\_name_  
   
-*server_name*  
+_server\_name_  
 Specifies a linked server name or remote server name.  
   
 *database_name*  

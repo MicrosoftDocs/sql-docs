@@ -249,7 +249,7 @@ Creates an index that specifies the logical ordering of a table. With a nonclust
  [ **ASC** | DESC ]  
  Determines the ascending or descending sort direction for the particular index column. The default is ASC.  
   
- INCLUDE **(***column* [ **,**... *n* ] **)**  
+ INCLUDE **(**_column_ [ **,**... *n* ] **)**  
  Specifies the non-key columns to be added to the leaf level of the nonclustered index. The nonclustered index can be unique or non-unique.  
   
  Column names cannot be repeated in the INCLUDE list and cannot be used simultaneously as both key and non-key columns. Nonclustered indexes always contain the clustered index columns if a clustered index is defined on the table. For more information, see [Create Indexes with Included Columns](../../relational-databases/indexes/create-indexes-with-included-columns.md).  
@@ -334,9 +334,9 @@ ON *partition_scheme_name* **( *column_name* )**
   
  Beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], the object can be a table stored with a clustered columnstore index.  
   
- [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] supports the three-part name format *database_name***.**[*schema_name*]**.***object_name* when the *database_name* is the current database or the *database_name* is tempdb and the *object_name* starts with #.  
+ [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] supports the three-part name format _database\_name_**.**[*schema_name*]**.**_object\_name_ when the *database_name* is the current database or the *database_name* is tempdb and the *object_name* starts with #.  
   
- **\<relational_index_option>::=**  
+ **\<relational_index_option\>::=**  
   
  Specifies the options to use when you create the index.  
   
@@ -355,7 +355,7 @@ ON *partition_scheme_name* **( *column_name* )**
   
  In backward compatible syntax, WITH PAD_INDEX is equivalent to WITH PAD_INDEX = ON.  
   
- FILLFACTOR **=***fillfactor*  
+ FILLFACTOR **=**_fillfactor_  
  **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Specifies a percentage that indicates how full the [!INCLUDE[ssDE](../../includes/ssde-md.md)] should make the leaf level of each index page during index creation or rebuild. *fillfactor* must be an integer value from 1 to 100. If *fillfactor* is 100, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] creates indexes with leaf pages filled to capacity.  
@@ -690,7 +690,7 @@ INSERT INTO t1 VALUES (1, 0);
 ## Specifying Index Options  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] introduced new index options and also modifies the way in which options are specified. In backward compatible syntax, WITH *option_name* is equivalent to WITH **(** \<option_name> **= ON )**. When you set index options, the following rules apply: 
   
--   New index options can only be specified by using WITH (***option_name* = ON | OFF**).  
+-   New index options can only be specified by using WITH (**_option\_name_ = ON | OFF**).  
 -   Options cannot be specified by using both the backward compatible and new syntax in the same statement. For example, specifying WITH (**DROP_EXISTING, ONLINE = ON**) causes the statement to fail.  
 -   When you create an XML index, the options must be specified by using WITH (***option_name*= ON | OFF**).  
   

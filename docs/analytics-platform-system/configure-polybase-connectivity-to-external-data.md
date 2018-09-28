@@ -14,7 +14,7 @@ ms.reviewer: martinle
 # What is PolyBase?
 PolyBase enables your Analytics Platform System (APS) to process Transact-SQL queries that can read data from and write data to external data sources. The same queries that access external data can also include relation tables in your APS. This allows you to combine data from external sources with high-value relational data in your APS databases.
 
-![PolyBase logical](/media/polybase/polybase-logical.png "PolyBase logical")
+![PolyBase logical](media/polybase/polybase-logical.png)
 
 PolyBase on APS supports reading and writing to Hadoop (HDFS) file system and Azure Blob Storage. PolyBase also has the ability to push some computation to Hadoop nodes as mapreduce jobs to optimize the overall query performance. PolyBase on APS can operate on delimited text, ORC and Parquet files. See [What is PolyBase](https://docs.microsoft.com/en-us/sql/relational-databases/polybase/polybase-guide) for a full description and its capabilities.
 

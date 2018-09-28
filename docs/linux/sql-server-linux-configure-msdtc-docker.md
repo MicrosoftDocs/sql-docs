@@ -27,7 +27,7 @@ Starting with SQL Server 2019 preview, container images support the Microsoft Di
 To enable MSDTC transaction in containers for docker, you must set two new environment variables:
 
 - **MSSQL_RPC_PORT**: the TCP port that RPC endpoint mapper service binds to and listens on.  
-- **MSSQL_DTC_TCP_PORT**  the port that MSDTC service is configured to listen on.
+- **MSSQL_DTC_TCP_PORT**: the port that MSDTC service is configured to listen on.
 
 ### Pull and run
 
@@ -72,9 +72,9 @@ sudo firewall-cmd --reload
 
 ## Configure port routing on the host
 
-In the previous example, because a single Docker container maps RPC port 135 to port 135 on the host, distributed transactions with the host should now work with no further configuration.
+In the previous example, because a single Docker container maps RPC port 135 to port 135 on the host, distributed transactions with the host should now work with no further configuration. Note that it is possible to directly use port 135 in the container, because SQL Server runs with elevated privileges in a container. For SQL Server outside of a container, a different ephemeral port must be used and traffic to port 135 must then be routed to that port.
 
-However, if you mapped the container's port 135 to a different port on the host, such as 13500, then you have to configure port routing on the host. This enables the docker container to participate in distributed transactions with the host and with other external servers. For more information, see [Configure port routing](sql-server-linux-configure-msdtc.md#configure-port-routing).
+However, if you did decide to map the container's port 135 to a different port on the host, such as 13500, then you have to configure port routing on the host. This enables the docker container to participate in distributed transactions with the host and with other external servers. For more information, see [Configure port routing](sql-server-linux-configure-msdtc.md#configure-port-routing).
 
 ## Next steps
 

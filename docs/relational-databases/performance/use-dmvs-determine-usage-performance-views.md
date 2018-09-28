@@ -5,11 +5,6 @@ manager: craigg
 author: MashaMSFT
 ms.author: mathoma
 ms.date: 09/27/2018
-ms.prod: sql
-ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: performance
-ms.topic: conceptual
 ---
 
 # Use DMVs to Determine Usage Statistics and Performance of Views

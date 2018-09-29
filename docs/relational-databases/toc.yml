@@ -2,8 +2,6 @@
   items: 
    - name: Overview
      href: database-features.md
-   - name: New and updated articles
-     href: new-updated-relational-databases.md
 - name: Concepts
   items:
   - name: Backup and restore ->

@@ -3,7 +3,7 @@ title: "Always Encrypted Wizard | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/04/2016"
 ms.prod: sql
-ms.reviewer: ""
+ms.reviewer: vanto
 ms.suite: "sql"
 ms.technology: security
 ms.tgt_pltfrm: ""

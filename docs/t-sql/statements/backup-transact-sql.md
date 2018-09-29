@@ -75,7 +75,7 @@ In the following row, click whichever product name you are interested in. The cl
 > <tr>
 >   <th><strong><em>* SQL Server *<br />&nbsp;</em></strong></th>
 >   <th><a href="backup-transact-sql.md?view=azuresqldb-mi-current">SQL Database<br />Managed Instance</a></th>
->   <th><a href="backup-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
+>   <th><a href="backup-transact-sql.md?view=aps-pdw-2016">Parallel<br />Data Warehouse</a></th>
 > </tr>
 > </table>
 
@@ -207,8 +207,8 @@ You can restore a log backup to a specific time or transaction within the backup
 > [!NOTE]  
 >  After a typical log backup, some transaction log records become inactive, unless you specify `WITH NO_TRUNCATE` or `COPY_ONLY`. The log is truncated after all the records within one or more virtual log files become inactive. If the log is not being truncated after routine log backups, something might be delaying log truncation. For more information, see [Factors that can delay log truncation](../../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation).  
   
-{ *database_name* | **@***database_name_var* }   
-Is the database from which the transaction log, partial database, or complete database is backed up. If supplied as a variable (**@***database_name_var*), this name can be specified either as a string constant (**@***database_name_var***=***database name*) or as a variable of character string data type, except for the **ntext** or **text** data types.  
+{ _database\_name_ | **@**_database\_name\_var_ }   
+Is the database from which the transaction log, partial database, or complete database is backed up. If supplied as a variable (**@**_database\_name\_var_), this name can be specified either as a string constant (**@**_database\_name\_var_**=**_database name_) or as a variable of character string data type, except for the **ntext** or **text** data types.  
   
 > [!NOTE]  
 > The mirror database in a database mirroring partnership cannot be backed up.  
@@ -216,10 +216,10 @@ Is the database from which the transaction log, partial database, or complete da
 \<file_or_filegroup> [ **,**...*n* ]  
 Used only with BACKUP DATABASE, specifies a database file or filegroup to include in a file backup, or specifies a read-only file or filegroup to include in a partial backup.  
   
-FILE **=** { *logical_file_name* | **@***logical_file_name_var* }  
+FILE **=** { *logical_file_name* | **@**_logical\_file\_name\_var_ }  
 Is the logical name of a file or a variable whose value equates to the logical name of a file that is to be included in the backup.  
   
-FILEGROUP **=** { *logical_filegroup_name* | **@***logical_filegroup_name_var* }  
+FILEGROUP **=** { _logical\_filegroup\_name_ | **@**_logical\_filegroup\_name\_var_ }  
 Is the logical name of a filegroup or a variable whose value equates to the logical name of a filegroup that is to be included in the backup. Under the simple recovery model, a filegroup backup is allowed only for a read-only filegroup.  
   
 > [!NOTE]  
@@ -230,7 +230,7 @@ Is a placeholder that indicates that multiple files and filegroups can be specif
   
 For more information, see [Full File Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md) and [Back Up Files and Filegroups &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md).  
   
-READ_WRITE_FILEGROUPS [ **,** FILEGROUP = { *logical_filegroup_name* | **@***logical_filegroup_name_var* } [ **,**...*n* ] ]  
+READ_WRITE_FILEGROUPS [ **,** FILEGROUP = { _logical\_filegroup\_name_ | **@**_logical\_filegroup\_name\_var_ } [ **,**..._n_ ] ]  
 Specifies a partial backup. A partial backup includes all the read/write files in a database: the primary filegroup and any read/write secondary filegroups, and also any specified read-only files or filegroups.  
   
 READ_WRITE_FILEGROUPS  
@@ -239,7 +239,7 @@ Specifies that all read/write filegroups be backed up in the partial backup. If 
 > [!IMPORTANT]  
 > Explicitly listing the read/write filegroups by using FILEGROUP instead of READ_WRITE_FILEGROUPS creates a file backup.  
   
-FILEGROUP = { *logical_filegroup_name* | **@***logical_filegroup_name_var* }  
+FILEGROUP = { *logical_filegroup_name* | **@**_logical\_filegroup\_name\_var_ }  
 Is the logical name of a read-only filegroup or a variable whose value equates to the logical name of a read-only filegroup that is to be included in the partial backup. For more information, see "\<file_or_filegroup>," earlier in this topic.
   
 *n*  
@@ -254,11 +254,11 @@ Indicates that the accompanying set of [backup devices](../../relational-databas
 
 Specifies a logical or physical backup device to use for the backup operation.  
   
-{ *logical_device_name* | **@***logical_device_name_var* }
+{ *logical_device_name* | **@**_logical\_device\_name\_var_ }
 **Applies to:** SQL Server   
-Is the logical name of the backup device to which the database is backed up. The logical name must follow the rules for identifiers. If supplied as a variable (@*logical_device_name_var*), the backup device name can be specified either as a string constant (@*logical_device_name_var***=** logical backup device name) or as a variable of any character string data type except for the **ntext** or **text** data types.  
+Is the logical name of the backup device to which the database is backed up. The logical name must follow the rules for identifiers. If supplied as a variable (@*logical_device_name_var*), the backup device name can be specified either as a string constant (@_logical\_device\_name\_var_**=** logical backup device name) or as a variable of any character string data type except for the **ntext** or **text** data types.  
   
-{ DISK | TAPE | URL} **=** { **'***physical_device_name***'** | **@***physical_device_name_var* | 'NUL' }
+{ DISK | TAPE | URL} **=** { **'**_physical\_device\_name_**'** | **@**_physical\_device\_name\_var_ | 'NUL' }
 **Applies to:** DISK, TAPE, and URL apply to SQL Server. 
 Specifies a disk file or tape device, or a Microsoft Azure Blob storage service. The URL format is used for creating backups to the Microsoft Azure storage service. For more information and examples, see [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). For a tutorial, see [Tutorial: SQL Server Backup and Restore to Microsoft Azure Blob Storage Service](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md). 
 
@@ -374,13 +374,13 @@ Explicitly enables backup compression.
 NO_COMPRESSION  
 Explicitly disables backup compression.  
   
-DESCRIPTION **=** { **'***text***'** | **@***text_variable* }  
+DESCRIPTION **=** { **'**_text_**'** | **@**_text\_variable_ }  
 Specifies the free-form text describing the backup set. The string can have a maximum of 255 characters.  
   
-NAME **=** { *backup_set_name* | **@***backup_set_var* }  
+NAME **=** { *backup_set_name* | **@**_backup\_set\_var_ }  
 Specifies the name of the backup set. Names can have a maximum of 128 characters. If NAME is not specified, it is blank.  
   
-{ EXPIREDATE **='***date***'** | RETAINDAYS **=** *days* }  
+{ EXPIREDATE **='**_date_**'** | RETAINDAYS **=** *days* }  
 Specifies when the backup set for this backup can be overwritten. If these options are both used, RETAINDAYS takes precedence over EXPIREDATE.  
   
 If neither option is specified, the expiration date is determined by the **mediaretention** configuration setting. For more information, see [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).   
@@ -388,10 +388,10 @@ If neither option is specified, the expiration date is determined by the **media
 > [!IMPORTANT]  
 > These options only prevent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from overwriting a file. Tapes can be erased using other methods, and disk files can be deleted through the operating system. For more information about expiration verification, see SKIP and FORMAT in this topic.  
   
-EXPIREDATE **=** { **'***date***'** | **@***date_var* }  
-Specifies when the backup set expires and can be overwritten. If supplied as a variable (@*date_var*), this date must follow the configured system **datetime** format and be specified as one of the following:  
+EXPIREDATE **=** { **'**_date_**'** | **@**_date\_var_ }  
+Specifies when the backup set expires and can be overwritten. If supplied as a variable (@_date\_var_), this date must follow the configured system **datetime** format and be specified as one of the following:  
   
-- A string constant (@*date_var* **=** date)  
+- A string constant (@_date\_var_ **=** date)  
 - A variable of character string data type (except for the **ntext** or **text** data types)  
 - A **smalldatetime**  
 - A **datetime** variable  
@@ -406,8 +406,8 @@ For information about how to specify **datetime** values, see [Date and Time Typ
 > [!NOTE]  
 > To ignore the expiration date, use the `SKIP` option.  
   
-RETAINDAYS **=** { *days* | **@***days_var* }  
-Specifies the number of days that must elapse before this backup media set can be overwritten. If supplied as a variable (**@***days_var*), it must be specified as an integer.  
+RETAINDAYS **=** { *days* | **@**_days\_var_ }  
+Specifies the number of days that must elapse before this backup media set can be overwritten. If supplied as a variable (**@**_days\_var_), it must be specified as an integer.  
   
 **Media Set Options**  
   
@@ -461,13 +461,13 @@ Specifies that a new media set be created. FORMAT causes the backup operation to
   
 Specifying FORMAT implies `SKIP`; `SKIP` does not need to be explicitly stated.  
   
-MEDIADESCRIPTION **=** { *text* | **@***text_variable* }  
+MEDIADESCRIPTION **=** { *text* | **@**_text\_variable_ }  
 Specifies the free-form text description, maximum of 255 characters, of the media set.  
   
-MEDIANAME **=** { *media_name* | **@***media_name_variable* }  
+MEDIANAME **=** { *media_name* | **@**_media\_name\_variable_ }  
 Specifies the media name for the entire backup media set. The media name must be no longer than 128 characters, If `MEDIANAME` is specified, it must match the previously specified media name already existing on the backup volumes. If it is not specified, or if the SKIP option is specified, there is no verification check of the media name.  
   
-BLOCKSIZE **=** { *blocksize* | **@***blocksize_variable* }  
+BLOCKSIZE **=** { *blocksize* | **@**_blocksize\_variable_ }  
 Specifies the physical block size, in bytes. The supported sizes are 512, 1024, 2048, 4096, 8192, 16384, 32768, and 65536 (64 KB) bytes. The default is 65536 for tape devices and 512 otherwise. Typically, this option is unnecessary because BACKUP automatically selects a block size that is appropriate to the device. Explicitly stating a block size overrides the automatic selection of block size.  
   
 If you are taking a backup that you plan to copy onto and restore from a CD-ROM, specify BLOCKSIZE=2048.  
@@ -477,7 +477,7 @@ If you are taking a backup that you plan to copy onto and restore from a CD-ROM,
   
 **Data Transfer Options**  
   
-BUFFERCOUNT **=** { *buffercount* | **@***buffercount_variable* }  
+BUFFERCOUNT **=** { *buffercount* | **@**_buffercount\_variable_ }  
 Specifies the total number of I/O buffers to be used for the backup operation. You can specify any positive integer; however, large numbers of buffers might cause "out of memory" errors because of inadequate virtual address space in the Sqlservr.exe process.  
   
 The total space used by the buffers is determined by: *buffercount/maxtransfersize*.  
@@ -485,7 +485,7 @@ The total space used by the buffers is determined by: *buffercount/maxtransfersi
 > [!NOTE]  
 > For important information about using the `BUFFERCOUNT` option, see the [Incorrect BufferCount data transfer option can lead to OOM condition](http://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx) blog.  
   
-MAXTRANSFERSIZE **=** { *maxtransfersize* | ***@** maxtransfersize_variable* } 
+MAXTRANSFERSIZE **=** { *maxtransfersize* | _**@** maxtransfersize\_variable_ } 
 Specifies the largest unit of transfer in bytes to be used between [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and the backup media. The possible values are multiples of 65536 bytes (64 KB) ranging up to 4194304 bytes (4 MB).  
 
 > [!NOTE]  
@@ -961,7 +961,7 @@ WITH STATS = 5;
 > <tr>
 >   <th><a href="backup-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
 >   <th><strong><em>* SQL Database<br />Managed Instance *</em></strong></th>
->   <th><a href="backup-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
+>   <th><a href="backup-transact-sql.md?view=aps-pdw-2016">Parallel<br />Data Warehouse</a></th>
 > </tr>
 > </table>
 
@@ -1015,8 +1015,8 @@ Specifies a complete database backup. During a database backup, the managed inst
   
 When you restore a backup created by BACKUP DATABASE (a *data backup*), the entire backup is restored. To restore from Azure SQL Database Managed Instance automatic backups, see [SQL Database Restore](https://docs.microsoft.com/azure/sql-database/sql-database-restore)  
   
-{ *database_name* | **@***database_name_var* }   
-Is the database from which the complete database is backed up. If supplied as a variable (**@***database_name_var*), this name can be specified either as a string constant (**@***database_name_var***=***database name*) or as a variable of character string data type, except for the **ntext** or **text** data types.  
+{ *database_name* | **@**_database\_name\_var_ }   
+Is the database from which the complete database is backed up. If supplied as a variable (**@**_database\_name\_var_), this name can be specified either as a string constant (**@**_database\_name\_var_**=**_database name_) or as a variable of character string data type, except for the **ntext** or **text** data types.  
   
 For more information, see [Full File Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md) and [Back Up Files and Filegroups &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md).  
   
@@ -1069,24 +1069,24 @@ Explicitly enables backup compression.
 NO_COMPRESSION  
 Explicitly disables backup compression.  
   
-DESCRIPTION **=** { **'***text***'** | **@***text_variable* }  
+DESCRIPTION **=** { **'**_text_**'** | **@**_text\_variable_ }  
 Specifies the free-form text describing the backup set. The string can have a maximum of 255 characters.  
   
-NAME **=** { *backup_set_name* | **@***backup_set_var* }  
+NAME **=** { *backup_set_name* | **@**_backup\_set\_var_ }  
 Specifies the name of the backup set. Names can have a maximum of 128 characters. If NAME is not specified, it is blank.  
   
-MEDIADESCRIPTION **=** { *text* | **@***text_variable* }  
+MEDIADESCRIPTION **=** { *text* | **@**_text\_variable_ }  
 Specifies the free-form text description, maximum of 255 characters, of the media set.  
   
-MEDIANAME **=** { *media_name* | **@***media_name_variable* }  
+MEDIANAME **=** { *media_name* | **@**_media\_name\_variable_ }  
 Specifies the media name for the entire backup media set. The media name must be no longer than 128 characters, If `MEDIANAME` is specified, it must match the previously specified media name already existing on the backup volumes. If it is not specified, or if the SKIP option is specified, there is no verification check of the media name.  
   
-BLOCKSIZE **=** { *blocksize* | **@***blocksize_variable* }  
+BLOCKSIZE **=** { *blocksize* | **@**_blocksize\_variable_ }  
 Specifies the physical block size, in bytes. The supported sizes are 512, 1024, 2048, 4096, 8192, 16384, 32768, and 65536 (64 KB) bytes. The default is 65536 for tape devices and 512 otherwise. Typically, this option is unnecessary because BACKUP automatically selects a block size that is appropriate to the device. Explicitly stating a block size overrides the automatic selection of block size.  
   
 **Data Transfer Options**  
   
-BUFFERCOUNT **=** { *buffercount* | **@***buffercount_variable* }  
+BUFFERCOUNT **=** { *buffercount* | **@**_buffercount\_variable_ }  
 Specifies the total number of I/O buffers to be used for the backup operation. You can specify any positive integer; however, large numbers of buffers might cause "out of memory" errors because of inadequate virtual address space in the Sqlservr.exe process.  
   
 The total space used by the buffers is determined by: *buffercount/maxtransfersize*.  
@@ -1094,7 +1094,7 @@ The total space used by the buffers is determined by: *buffercount/maxtransfersi
 > [!NOTE]  
 > For important information about using the `BUFFERCOUNT` option, see the [Incorrect BufferCount data transfer option can lead to OOM condition](http://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx) blog.  
   
-MAXTRANSFERSIZE **=** { *maxtransfersize* | ***@** maxtransfersize_variable* } 
+MAXTRANSFERSIZE **=** { *maxtransfersize* | _**@** maxtransfersize\_variable_ } 
 Specifies the largest unit of transfer in bytes to be used between [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and the backup media. The possible values are multiples of 65536 bytes (64 KB) ranging up to 4194304 bytes (4 MB).  
 
 > [!NOTE]  
@@ -1168,7 +1168,7 @@ WITH STATS = 5;
 [Restore database](restore-statements-transact-sql.md)
 
 ::: moniker-end
-::: moniker range="=aps-pdw-2016||=sqlallproducts-allversions"
+::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
 > <table>
@@ -1180,13 +1180,13 @@ WITH STATS = 5;
 > <tr>
 >   <th><a href="backup-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
 >   <th><a href="backup-transact-sql.md?view=azuresqldb-mi-current">SQL Database<br />Managed Instance</a></th>
->   <th><strong><em>* SQL Parallel<br />Data Warehouse *</em></strong></th>
+>   <th><strong><em>* Parallel<br />Data Warehouse *</em></strong></th>
 > </tr>
 > </table>
 
 &nbsp;
 
-# SQL Parallel Data Warehouse
+# Parallel Data Warehouse
 
 Creates a backup of a [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] database and stores the backup off the appliance in a user-specified network location. Use this statement with [RESTORE DATABASE &#40;Parallel Data Warehouse&#41;](../../t-sql/statements/restore-statements-transact-sql.md) for disaster recovery, or to copy a database from one appliance to another.  
   
@@ -1230,12 +1230,12 @@ The network path and directory to which [!INCLUDE[ssPDW](../../includes/sspdw-md
 - The maximum length of the UNC path and backup directory name is 200 characters.  
 - The server or host must be specified as an IP address.  You cannot specify it as the host or server name.  
   
-DESCRIPTION = **'***text***'**  
+DESCRIPTION = **'**_text_**'**  
 Specifies a textual description of the backup. The maximum length of the text is 255 characters.  
   
 The description is stored in the metadata, and will be displayed when the backup header is restored with RESTORE HEADERONLY.  
   
-NAME = **'***backup _name***'**  
+NAME = **'**_backup \_name_**'**  
 Specifies the name of the backup. The backup name can be different from the database name.  
   
 - Names can have a maximum of 128 characters.  

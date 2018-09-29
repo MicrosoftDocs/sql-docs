@@ -65,7 +65,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 4.  Right-click a stored procedure and select **Properties**.  
   
-5.  In the **Stored Procedure Properties –***stored_procedure_name* dialog box, under select a page, select **Permissions**. Use this page to add users or roles to the stored procedure and specify the permissions those users or roles have.  
+5.  In the **Stored Procedure Properties –**_stored\_procedure\_name_ dialog box, under select a page, select **Permissions**. Use this page to add users or roles to the stored procedure and specify the permissions those users or roles have.  
   
 6.  When finished, click **OK**.  
   

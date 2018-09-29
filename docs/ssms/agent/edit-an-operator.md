@@ -71,7 +71,7 @@ Only members of the **sysadmin** fixed server role can edit operators.
   
 4.  Right-click the operator that you want to edit and select **Properties**.  
   
-    For more information on the available options contained in the *operator_name***Properties** dialog box, see:  
+    For more information on the available options contained in the _operator\_name_**Properties** dialog box, see:  
   
     -   [Operator Properties - New Operator &#40;General Page&#41;](../../ssms/agent/operator-properties-new-operator-general-page.md)  
   

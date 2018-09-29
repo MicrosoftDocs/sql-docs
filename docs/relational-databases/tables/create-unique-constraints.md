@@ -58,7 +58,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 4.  In the grid under **General**, click **Type** and choose **Unique Key** from the drop-down list box to the right of the property.  
   
-5.  On the **File** menu, click **Save***table name*.  
+5.  On the **File** menu, click **Save**_table name_.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   

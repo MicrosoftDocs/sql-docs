@@ -2,7 +2,7 @@
 title: "What's New in SSMA for Access(AccessToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""
-ms.date: "08/14/2018"
+ms.date: "09/22/2018"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: ssma
@@ -19,6 +19,12 @@ manager: craigg
 ---
 # What's New in SSMA for Access (AccessToSQL)
 This article lists SSMA for Access changes in each release.  
+
+## SSMA v7.10
+The v7.10 release of SSMA for Access has been enhanced with targeted fixes designed to provide additional security and privacy protections to meet changes in global requirements.
+
+> [!IMPORTANT]
+> With SSMA v7.4 and later versions, .Net 4.5.2 is an installation pre-requisite.
 
 ## SSMA v7.9
 The v7.9 release of SSMA for Access contains the following changes:
@@ -40,7 +46,7 @@ The v7.8 release of SSMA for Access contains the following changes:
 ## SSMA v7.7
 The v7.7 release of SSMA for Access contains the following changes:
 - SSMA for Access has been enhanced with targeted fixes that improve quality and conversion metrics.
-- Based on the popular demand, the 32-bit version of SSMA for Access is back. Compared to the previous implementation (prior to v7.4), there are two installer packages, but they cannot be installed side by side. As a result, you must choose the most appropriate version based on the connectivity components you have. It is always preferable to use the 64-bit version, if possible.
+- Based on the popular demand, the 32-bit version of SSMA for Access is back. Compared to the previous implementation (prior to v7.4), there are two installer packages, but they cannot be installed side by side. As a result, you must choose the most appropriate version based on the connectivity components you have. It's always preferable to use the 64-bit version, if possible.
 
 > [!IMPORTANT]
 > With SSMA v7.4 and later versions, .Net 4.5.2 is an installation pre-requisite.
@@ -78,7 +84,7 @@ The v7.3 release of SSMA for Access contains the following changes:
   - Libraries that can be consumed by SSMA for performing custom conversions.
     - You can now construct code that can handle custom syntax conversions and conversions that weren't previously handled by SSMA.
       - Instructions on how to construct a custom converter are available in this blog post, [Extending SQL Server Migration Assistant's conversion capabilities](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/).
-      - Sample project for conversion can be download this [blog post](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/).
+      - Download a sample project for conversion from this [blog post](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/).
 
 ## SSMA v7.2
 The v7.2 release of SSMA for Access contains the following changes:
@@ -88,7 +94,7 @@ The v7.2 release of SSMA for Access contains the following changes:
 ## SSMA v7.1
 The v7.1 release of SSMA for Access contains the following changes:
 - SQL Server 2017 on Windows and Linux CTP1 is now a supported target platform for migration. This feature is in technical preview and supports schema and data movement to target SQL servers.
-- SSMA now supports automatic updates to download the latest version of SSMA as soon as it is available.
+- SSMA now supports automatic updates to download the latest version of SSMA as soon as it's available.
 - SSMA installable binaries are now delivered through Windows installer package files (.msi).
 
 **Resources**

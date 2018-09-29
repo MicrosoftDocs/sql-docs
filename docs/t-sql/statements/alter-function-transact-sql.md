@@ -230,7 +230,7 @@ RETURNS return_data_type
   
 -   The **dbo** schema in the current database.  
   
- [ **=***default* ]  
+ [ **=**_default_ ]  
  Is a default value for the parameter. If a *default* value is defined, the function can be executed without specifying a value for that parameter.  
   
 > [!NOTE]  
@@ -252,11 +252,11 @@ RETURNS return_data_type
  Specifies that the scalar function returns a scalar value.  
   
  TABLE  
- Specifies that the return value of the table-valued function is a table. Only constants and **@***local_variables* can be passed to table-valued functions.  
+ Specifies that the return value of the table-valued function is a table. Only constants and **@**_local\_variables_ can be passed to table-valued functions.  
   
  In inline table-valued functions, the TABLE return value is defined through a single SELECT statement. Inline functions do not have associated return variables.  
   
- In multistatement table-valued functions, **@***return_variable* is a TABLE variable used to store and accumulate the rows that should be returned as the value of the function. **@***return_variable* can be specified only for [!INCLUDE[tsql](../../includes/tsql-md.md)] functions and not for CLR functions.  
+ In multistatement table-valued functions, **@**_return\_variable_ is a TABLE variable used to store and accumulate the rows that should be returned as the value of the function. **@**_return\_variable_ can be specified only for [!INCLUDE[tsql](../../includes/tsql-md.md)] functions and not for CLR functions.  
   
  *select-stmt*  
  Is the single SELECT statement that defines the return value of an inline table-valued function.  
@@ -272,10 +272,10 @@ RETURNS return_data_type
 > [!NOTE]  
 >  This option is not available in a contained database.  
   
- *\<*table_type_definition*>***(** { \<column_definition> \<column_constraint> | \<computed_column_definition> } [ \<table_constraint> ] [ **,**...*n* ]**)**  
+ _\<_table\_type\_definition_\>_**(** { \<column_definition\> \<column\_constraint\> | \<computed\_column\_definition\> } [ \<table\_constraint\> ] [ **,**...*n* ]**)**  
  Defines the table data type for a [!INCLUDE[tsql](../../includes/tsql-md.md)] function. The table declaration includes column definitions and column or table constraints.  
   
-\< clr_table_type_definition > **(** { *column_name**data_type* } [ **,**...*n* ] **)**
+\< clr_table_type_definition \> **(** { *column_name**data_type* } [ **,**...*n* ] **)**
  **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Preview in some regions](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).  
   
  Defines the table data types for a CLR function. The table declaration includes only column names and data types.  

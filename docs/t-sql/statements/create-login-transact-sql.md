@@ -47,7 +47,7 @@ In the following row, click whichever product name you are interested in. The cl
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |**_\* SQL Server \*_**|[SQL Database<br />logical server](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[SQL Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
+> |**_\* SQL Server \*_**|[SQL Database<br />logical server](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -85,12 +85,12 @@ CREATE LOGIN login_name { WITH <option_list1> | FROM <sources> }
 *login_name*  
 Specifies the name of the login that is created. There are four types of logins: SQL Server logins, Windows logins, certificate-mapped logins, and asymmetric key-mapped logins. When you are creating logins that are mapped from a Windows domain account, you must use the pre-Windows 2000 user logon name in the format [\<domainName>\\<login_name>]. You cannot use a UPN in the format login_name@DomainName. For an example, see example D later in this article. Authentication logins are type **sysname** and must conform to the rules for [Identifiers](../../relational-databases/databases/database-identifiers.md) and cannot contain a '**\\**'. Windows logins can contain a '**\\**'. Logins based on Active Directory users, are limited to names of less than 21 characters. 
 
-PASSWORD **='***password***'*
+PASSWORD **='**_password_**'*
 Applies to SQL Server logins only. Specifies the password for the login that is being created. You should use a strong password. For more information, see [Strong Passwords](../../relational-databases/security/strong-passwords.md) and [Password Policy](../../relational-databases/security/password-policy.md). Beginning with  SQL Server 2012 (11.x),, stored password information is calculated using SHA-512 of the salted password. 
   
 Passwords are case-sensitive. Passwords should always be at least 8 characters long, and cannot exceed 128 characters. Passwords can include a-z, A-Z, 0-9, and most non-alphanumeric characters. Passwords cannot contain single quotes, or the *login_name*. 
   
-PASSWORD **=***hashed_password*  
+PASSWORD **=**_hashed\_password_  
 Applies to the HASHED keyword only. Specifies the hashed value of the password for the login that is being created. 
   
 HASHED
@@ -99,16 +99,16 @@ Applies to SQL Server logins only. Specifies that the password entered after the
 MUST_CHANGE
 Applies to SQL Server logins only. If this option is included, SQL Server prompts the user for a new password the first time the new login is used. 
   
-CREDENTIAL **=***credential_name*  
+CREDENTIAL **=**_credential\_name_  
 The name of a credential to be mapped to the new SQL Server login. The credential must already exist in the server. Currently this option only links the credential to a login. A credential cannot be mapped to the System Administrator (sa) login. 
   
 SID = *sid*  
 Used to recreate a login. Applies to SQL Server authentication logins only, not Windows authentication logins. Specifies the SID of the new SQL Server authentication login. If this option is not used, SQL Server automatically assigns a SID. The SID structure depends on the SQL Server version. SQL Server login SID: a 16 byte (**binary(16)**) literal value based on a GUID. For example, `SID = 0x14585E90117152449347750164BA00A7`. 
   
-DEFAULT_DATABASE **=***database*  
+DEFAULT_DATABASE **=**_database_  
 Specifies the default database to be assigned to the login. If this option is not included, the default database is set to master. 
   
-DEFAULT_LANGUAGE **=***language*  
+DEFAULT_LANGUAGE **=**_language_  
 Specifies the default language to be assigned to the login. If this option is not included, the default language is set to the current default language of the server. If the default language of the server is later changed, the default language of the login remains unchanged. 
   
 CHECK_EXPIRATION **=** { ON | **OFF** }  
@@ -273,7 +273,7 @@ GO
 >   <th><strong><em>* SQL Database<br />logical server *</em></strong></th>
 >   <th><a href="create-login-transact-sql.md?view=azuresqldb-mi-current">SQL Database<br />Managed Instance</a></th>
 >   <th><a href="create-login-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
->   <th><a href="create-login-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
+>   <th><a href="create-login-transact-sql.md?view=aps-pdw-2016">Parallel<br />Data Warehouse</a></th>
 > </tr>
 > </table>
 
@@ -402,7 +402,7 @@ GO
 >   <th><a href="create-login-transact-sql.md?view=azuresqldb-current">SQL Database<br />logical server</a></th>
 >   <th><strong><em>* SQL Database<br />Managed Instance *</em></strong></th>
 >   <th><a href="create-login-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
->   <th><a href="create-login-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
+>   <th><a href="create-login-transact-sql.md?view=aps-pdw-2016">Parallel<br />Data Warehouse</a></th>
 > </tr>
 > </table>
 
@@ -532,7 +532,7 @@ GO
 > <tr>
 >   <th><a href="create-login-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
 >   <th><a href="create-login-transact-sql.md?view=azuresqldb-current">SQL Database<br />logical server</a></th>>   <th><strong><em>* SQL Data<br />Warehouse *</em></strong></th>
->   <th><a href="create-login-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
+>   <th><a href="create-login-transact-sql.md?view=aps-pdw-2016">Parallel<br />Data Warehouse</a></th>
 > </tr>
 > </table>
 
@@ -641,7 +641,7 @@ GO
  [Create a Login](../../relational-databases/security/authentication-access/create-a-login.md)  
   
 ::: moniker-end
-::: moniker range="=aps-pdw-2016||=sqlallproducts-allversions"
+::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
 > <table>
@@ -655,13 +655,13 @@ GO
 >   <th><a href="create-login-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
 >   <th><a href="create-login-transact-sql.md?view=azuresqldb-current">SQL Database<br />logical server</a></th>
 >   <th><a href="create-login-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
->   <th><strong><em>* SQL Parallel<br />Data Warehouse *</em></strong></th>
+>   <th><strong><em>* Parallel<br />Data Warehouse *</em></strong></th>
 > </tr>
 > </table>
 
 &nbsp;
 
-# SQL Parallel Data Warehouse
+# Parallel Data Warehouse
 
   
 ## Syntax 
@@ -683,7 +683,7 @@ CREATE LOGIN loginName { WITH <option_list1> | FROM WINDOWS }
 *login_name*  
 Specifies the name of the login that is created. There are four types of logins: SQL Server logins, Windows logins, certificate-mapped logins, and asymmetric key-mapped logins. When you are creating logins that are mapped from a Windows domain account, you must use the pre-Windows 2000 user logon name in the format [\<domainName>\\<login_name>]. You cannot use a UPN in the format login_name@DomainName. For an example, see example D later in this article. Authentication logins are type **sysname** and must conform to the rules for [Identifiers](../../relational-databases/databases/database-identifiers.md) and cannot contain a '**\\**'. Windows logins can contain a '**\\**'. Logins based on Active Directory users, are limited to names of less than 21 characters. 
 
-PASSWORD **='***password***'*
+PASSWORD **='**_password_**'*
 Applies to SQL Server logins only. Specifies the password for the login that is being created. You should use a strong password. For more information, see [Strong Passwords](../../relational-databases/security/strong-passwords.md) and [Password Policy](../../relational-databases/security/password-policy.md). Beginning with  SQL Server 2012 (11.x),, stored password information is calculated using SHA-512 of the salted password. 
   
 Passwords are case-sensitive. Passwords should always be at least 8 characters long, and cannot exceed 128 characters. Passwords can include a-z, A-Z, 0-9, and most non-alphanumeric characters. Passwords cannot contain single quotes, or the *login_name*. 

@@ -36,7 +36,7 @@ Approximate-number data types for use with floating point numeric data. Floating
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
-**float** [ **(***n***)** ]
+**float** [ **(**_n_**)** ]
 Where *n* is the number of bits that are used to store the mantissa of the **float** number in scientific notation and, therefore, dictates the precision and storage size. If *n* is specified, it must be a value between **1** and **53**. The default value of *n* is **53**.
   
 |*n* value|Precision|Storage size|  

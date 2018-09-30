@@ -26,7 +26,7 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
   >You can use any type of Kubernetes cluster. To create a Kubernetes cluster on Azure Kubernetes Service (AKS), see [Create an AKS cluster](http://docs.microsoft.com/azure/aks/create-cluster.md).
   > The following script creates a four node Kubernetes cluster in Azure.
   >```azure-cli
-  az aks create --resource-group myResourceGroup --name myAKSCluster --node-count 4 --kubernetes-version 1.11.1
+  az aks create --resource-group myResourceGroup --name myAKSCluster --node-count 4 --kubernetes-version 1.11.1 --generate-ssh-keys
   >```
 
 ## Steps
@@ -42,13 +42,18 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
   ```azurecli
   kubectl apply -f <pv.yaml>
   ```
+1. Create Kubernetes Namespace
+  The following command creates a namespace called "ag1"
+  ```azurecli
+  kubectl create namespace ag1
+  ```
 
 1. Create Kubernetes secrets for the SA password and the master key.
 
   The following example creates two secrets. `sapassword` is for the SA password and `masterkeypassword` is for the master key. Before you run this script replace `<MyC0mp13xP@55w04d!>` with different complex password for each secret.
 
    ```azurecli
-   kubectl create secret generic sql-secrets --from-literal='sapassword=<MyC0mp13xP@55w04d!>' --from-literal='masterkeypassword=<MyC0mp13xP@55w04d!>'
+   kubectl create secret generic sql-secrets --from-literal='sapassword=<MyC0mp13xP@55w04d!>' --from-literal='masterkeypassword=<MyC0mp13xP@55w04d!>' --namespace ag1
    ```
 
 1. Configure and deploy the SQL Server operator manifest.
@@ -68,7 +73,7 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 1. Deploy the SQL Server custom resource.
 
   Copy the SQL Server manifest `sqlserver.yaml` from [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files).
-
+  
   Apply the manifest to the Kubernetes cluster.
 
   ```azurecli

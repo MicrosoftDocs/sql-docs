@@ -73,9 +73,8 @@ sudo pip3 install --upgrade pip
 
 Run the below command to install msqlctl:
 
-TODO Fix the right path and name
 ```bash
-pip install mssqlctl-1.0.0-py3-none-any.whl
+pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.0 mssqlctl
 ```
 
 ## Define environment variables
@@ -185,9 +184,9 @@ kubectl describe pod <pod name> -n <name of your cluster>
 
 Once the Controller pod is running, you can leverage the Deployment tab in the Cluster Administration Portal to monitor the deployment.
 
-## <a id="masterip"></a> Get the master instance IP address
+## <a id="masterip"></a> Get the SQL Server Master instance and SQL Server Big Data cluster IP addresses
 
-After the deployment script has completed successfully, you can obtain the IP address of the SQL Server master instance using the steps outlined below. You will use this IP address and port number 31433 to connect to the SQL Server master instance (for example: **\<ip-address\>,31433**). Similarly, for the Knox Gateway endpoint. All cluster endpoints are outlined in the Service Endpoints tab in the Cluster Administration Portal as well.
+After the deployment script has completed successfully, you can obtain the IP address of the SQL Server master instance using the steps outlined below. You will use this IP address and port number 31433 to connect to the SQL Server master instance (for example: **\<ip-address\>,31433**). Similarly, for the SQL Server Big Data cluster IP. All cluster endpoints are outlined in the Service Endpoints tab in the Cluster Administration Portal as well. You can use the Cluster Administration Portal to monitor the deployment. You can access the portal using the external IP address and port number for the `service-proxy-lb` (for example: **https://\<ip-address\>:30777**). Credentials for accessing the admin portal are the values of `CONTROLLER_USERNAME` and `CONTROLLER_PASSWORD` environment variables provided above.
 
 ### AKS
 
@@ -196,9 +195,10 @@ If you are using AKS, Azure provides the Azure LoadBalancer service. Run followi
 ```bash
 kubectl get svc service-master-lb -n <name of your cluster>
 kubectl get svc service-security-lb -n <name of your cluster>
+kubectl get svc service-proxy-lb -n <name of your cluster>
 ```
 
-Look for the **External-IP** value that is assigned to the service. Then, connect to the SQL Server master instance using the IP address at port 31433 (Ex: **\<ip-address\>,31433**) and to Knox/HDFS Gateway endpoint using the external-IP for `service-security-lb` service. 
+Look for the **External-IP** value that is assigned to the service. Then, connect to the SQL Server master instance using the IP address at port 31433 (Ex: **\<ip-address\>,31433**) and to SQL Server Big Data cluster endpoint using the external-IP for `service-security-lb` service. 
 
 ### Minikube
 
@@ -215,4 +215,4 @@ kubectl get svc -n <name of your cluster>
 
 ## Next steps
 
-After successfully deploying SQL Server Big Data cluster to Kubernetes, [install the big data tools](deploy-big-data-tools.md) and learn more in the [getting started quickstart](quickstart-big-data-cluster-deploy.md).
+After successfully deploying SQL Server Big Data cluster to Kubernetes, [install the big data tools](deploy-big-data-tools.md) and try out some of the new capabilities and learn [How to use notebooks in SQL Server 2019 CTP 2.0](notebooks-guidance.md).

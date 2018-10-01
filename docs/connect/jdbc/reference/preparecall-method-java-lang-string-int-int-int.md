@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "SQLServerConnection.prepareCall (java.lang.String, int, int, int)"
@@ -15,7 +13,6 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: 81104fd5-75b0-4540-9f48-c3dbf59a8564
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg

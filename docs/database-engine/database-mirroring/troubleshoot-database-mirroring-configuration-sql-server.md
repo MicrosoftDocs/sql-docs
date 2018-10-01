@@ -5,9 +5,7 @@ ms.date: "05/17/2016"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "database mirroring [SQL Server], deployment"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "database mirroring [SQL Server], troubleshooting"
   - "troubleshooting [SQL Server], database mirroring"
 ms.assetid: 87d3801b-dc52-419e-9316-8b1f1490946c
-caps.latest.revision: 69
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

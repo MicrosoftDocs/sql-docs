@@ -6,14 +6,11 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "ADO MD, objects"
   - "objects [ADO MD]"
 ms.assetid: 2a32e873-3282-4520-a7ed-89493f1da80e
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg

@@ -6,9 +6,7 @@ ms.date: "06/20/2017"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: configuration
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "clr strict security"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "assemblies [CLR integration], strick security"
   - "clr strict security option"
 ms.assetid: 
-caps.latest.revision: 0
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

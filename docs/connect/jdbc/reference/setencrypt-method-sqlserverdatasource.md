@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "setEncrypt Method (SQLServerDataSource)"
@@ -15,7 +13,6 @@ apilocation:
   - "setEncrypt Method (SQLServerDataSource)"
 apitype: "Assembly"
 ms.assetid: 0c85a9c1-f27c-457e-8461-403cc03e2d17
-caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg

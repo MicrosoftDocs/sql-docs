@@ -6,13 +6,10 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Catalog object [ADO MD], members"
 ms.assetid: e9566718-9122-490d-8a8e-da8f605246f2
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg

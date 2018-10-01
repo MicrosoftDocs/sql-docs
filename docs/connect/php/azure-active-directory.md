@@ -3,7 +3,6 @@ title: "Azure Active Directory | Microsoft Docs"
 ms.date: "07/13/2017"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.suite: "sql"
 ms.custom: ""
 ms.technology: connectivity
 ms.topic: conceptual

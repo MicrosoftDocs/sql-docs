@@ -5,16 +5,13 @@ ms.date: "03/02/2017"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: configuration
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "recursive triggers [SQL Server]"
   - "triggers [SQL Server], recursive"
   - "server trigger recursion option"
 ms.assetid: da4c25f5-d04c-4951-a3db-409e71a1b468
-caps.latest.revision: 24
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

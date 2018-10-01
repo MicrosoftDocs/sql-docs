@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "09/25/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
 - "Availability Groups [SQL Server], domain independent"
 ms.assetid: 
-caps.latest.revision: 
 author: "MashaMSFT"
 ms.author: mathoma
 manager: craigg

@@ -6,14 +6,11 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 helpviewer_keywords: 
   - "CancelUpdate method [RDS]"
 ms.assetid: 76d8a6e9-bc6c-4ea0-8e7a-2bae5ed06650
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg

@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "11/15/2016"
 ms.prod: sql
 ms.prod_service: high-availability
-ms.component: "database-engine"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Database Engine [SQL Server], what's new"
   - "breaking changes [SQL Server]"
 ms.assetid: 47edefbd-a09b-4087-937a-453cd5c6e061
-caps.latest.revision: 144
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

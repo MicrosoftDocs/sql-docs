@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.adddatabasewizard.selectinitialdatasync.f1"
   - "sql13.swb.newagwizard.selectinitialdatasync.f1"
   - "sql13.swb.addreplicawizard.selectinitialdatasync.f1"
 ms.assetid: 457b1140-4819-4def-8f7c-54a406e6db12
-caps.latest.revision: 39
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

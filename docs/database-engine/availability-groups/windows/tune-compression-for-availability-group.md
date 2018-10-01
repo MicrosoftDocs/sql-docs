@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "06/22/2016"
 ms.prod: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 7632769c-b246-4766-886f-7c60ec540be8
 author: MashaMSFT

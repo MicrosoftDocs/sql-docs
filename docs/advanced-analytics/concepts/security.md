@@ -86,7 +86,7 @@ When a user sends a machine learning script from an external client, SQL Server 
 However, if you need to run R or Python scripts from a remote data science client, and you are using Windows authentication, you must give these worker accounts permission to sign in to the SQL Server instance on your behalf. For more information about how to give permission, see [Add SQLRUserGroup as a database user](../../advanced-analytics/r/add-sqlrusergroup-to-database.md).
 
 > [!Note]
-> In SQL Server 2019, **SQLRUserGroup** only has one member which is now the single SQL Server Launchpad service account instead of multiple worker accounts. 
+> In SQL Server 2019, **SQLRUserGroup** only has one member which is now the single SQL Server Launchpad service account instead of multiple worker accounts.
 
 ### AppContainer isolation in SQL Server 2019
 
@@ -119,7 +119,7 @@ Parallel queries from the same login are mapped to the same user worker account.
 
 The directories used for the processes are managed by the [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)], and directories are access-restricted. For R, RLauncher performs this task. For Python, PythonLauncher performs this task. Each individual worker account is restricted to its own folder, and cannot access files in folders above its own level. However, the worker account can read, write, or delete children under the session working folder that was created.
 
-For more information about how to change the number of worker accounts, account names, or account passwords, see [Modify the user account pool for SQL Server machine learning](../../advanced-analytics/r/modify-the-user-account-pool-for-sql-server-r-services.md).
+For more information about how to change the number of worker accounts, account names, or account passwords, see [Modify the user account pool for SQL Server machine learning](../../advanced-analytics/security/modify-the-user-account-pool.md).
 
 ## Security isolation for multiple external scripts
 

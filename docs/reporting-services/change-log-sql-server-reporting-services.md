@@ -4,7 +4,6 @@ ms.date: 08/31/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
-ms.suite: ""
 
 ms.topic: conceptual
 author: "casualoak"

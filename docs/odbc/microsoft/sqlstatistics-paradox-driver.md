@@ -5,15 +5,12 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Paradox driver [ODBC], SQLStatistics"
   - "SQLStatistics function [ODBC], Paradox Driver"
 ms.assetid: 886cab83-d599-4fbc-9c88-e8cb833aac4b
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg

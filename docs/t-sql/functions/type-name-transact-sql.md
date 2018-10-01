@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "TYPE_NAME_TSQL"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "data types [SQL Server], names"
   - "TYPE_NAME function"
 ms.assetid: e4075a2e-5f70-440f-986b-9ec8434e07c1
-caps.latest.revision: 42
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

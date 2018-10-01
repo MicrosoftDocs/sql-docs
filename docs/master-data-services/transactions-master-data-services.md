@@ -5,16 +5,13 @@ ms.date: "01/10/2017"
 ms.prod: sql
 ms.prod_service: "mds"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "master-data-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "transactions [Master Data Services], about transactions"
   - "transactions [Master Data Services]"
 ms.assetid: 4cd2fa6f-9c76-4b7a-ae18-d4e5fd2f03f5
-caps.latest.revision: 15
 author: leolimsft
 ms.author: lle
 manager: craigg

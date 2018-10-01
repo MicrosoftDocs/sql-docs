@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Audit Server Object Take Ownership event class"
 ms.assetid: 780fde57-3970-4063-a634-04879b6ef141
-caps.latest.revision: 22
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

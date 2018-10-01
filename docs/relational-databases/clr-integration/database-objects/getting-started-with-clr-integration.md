@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "08/02/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: clr
 ms.topic: quickstart
 dev_langs: 
@@ -23,7 +22,6 @@ helpviewer_keywords:
   - "Hello World example [CLR integration]"
   - "library [CLR integration]"
 ms.assetid: c73e628a-f54a-411a-bfe3-6dae519316cc
-caps.latest.revision: 62
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

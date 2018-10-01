@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "07/18/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 keywords: 
   - "Data Collection"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "data collector [SQL Server], Transact-SQL"
   - "data collector [SQL Server], SQL Server Management Studio"
 ms.assetid: bc137daa-9f37-4c01-9766-8b7350c75af8
-caps.latest.revision: 26
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

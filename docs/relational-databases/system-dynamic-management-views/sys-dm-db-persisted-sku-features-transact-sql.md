@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "08/23/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.dm_db_persisted_sku_features_TSQL"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "editions [SQL Server], feature restrictions"
   - "sys.dm_db_persisted_sku_features dynamic management view"
 ms.assetid: b4b29e97-b523-41b9-9528-6d4e84b89e09
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg

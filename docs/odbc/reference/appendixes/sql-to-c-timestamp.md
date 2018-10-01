@@ -5,16 +5,13 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "timestamp data type [ODBC]"
   - "converting data from SQL to C types [ODBC], timestamp"
   - "data conversions from SQL to C types [ODBC], timestamp"
 ms.assetid: 6a0617cf-d8c0-4316-8bb4-e6ddb45d7bf1
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg

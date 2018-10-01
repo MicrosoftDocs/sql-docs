@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "data types [ODBC], numeric data types"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "numeric literals [ODBC]"
   - "literals [ODBC], numeric"
 ms.assetid: 9dc23656-61e1-4b62-a07f-64ab716e45d2
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg

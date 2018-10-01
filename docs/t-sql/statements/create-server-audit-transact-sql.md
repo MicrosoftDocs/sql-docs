@@ -1,13 +1,11 @@
-﻿---
+---
 title: "CREATE SERVER AUDIT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/07/2018"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "CREATE_SERVER_AUDIT_TSQL"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "CREATE SERVER AUDIT statement"
   - "audits [SQL Server], creating"
 ms.assetid: 1c321680-562e-41f1-8eb1-e7fa5ae45cc5
-caps.latest.revision: 44
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

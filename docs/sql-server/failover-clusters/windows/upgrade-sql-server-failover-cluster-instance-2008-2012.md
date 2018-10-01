@@ -1,10 +1,8 @@
 ---
 title: "Upgrade SQL Server instances running on Windows Server 2008/2008 R2/2012 clusters | Microsoft Docs"
 ms.date: "1/25/2018"
-ms.suite: sql
 ms.prod: sql  
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "upgrading failover clusters"

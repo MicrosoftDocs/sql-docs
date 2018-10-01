@@ -4,22 +4,16 @@ ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "replication"
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_dropsubscription"
   - "sp_dropsubscription_TSQL"
 helpviewer_keywords: 
   - "sp_dropsubscription"
 ms.assetid: 7551f345-5510-4684-ab53-f9057249d13a
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg

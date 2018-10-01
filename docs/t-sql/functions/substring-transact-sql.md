@@ -5,9 +5,7 @@ ms.date: "10/21/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "SUBSTRING"
@@ -23,7 +21,6 @@ helpviewer_keywords:
   - "expressions [SQL Server], part returned"
   - "characters [SQL Server], returning part of"
 ms.assetid: a19c808f-aaf9-4a69-af59-b1a5fc3e5c4c
-caps.latest.revision: 65
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

@@ -5,9 +5,7 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.dataprofileviewer.f1"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "Data Profile Viewer [Integration Services]"
   - "Data Profiling task [Integration Services], output viewer"
 ms.assetid: b9043428-ce26-45bb-910c-588d07579565
-caps.latest.revision: 26
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-visual-db"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "vdt.dlgbox.datatypechangerequired"
   - "vdtsql.chm:65545"
 ms.assetid: 709c9b8e-2f3f-441e-97e1-7fd8341b64b4
-caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

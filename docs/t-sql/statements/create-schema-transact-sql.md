@@ -5,9 +5,7 @@ ms.date: "12/01/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "CREATE_SCHEMA_TSQL"
@@ -23,7 +21,6 @@ helpviewer_keywords:
   - "schemas [SQL Server], creating"
   - "CREATE SCHEMA statement"
 ms.assetid: df74fc36-20da-4efa-b412-c4e191786695
-caps.latest.revision: 60
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

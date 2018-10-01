@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "SQL Server Native Client OLE DB provider, reference"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "SQLNCLI, OLE DB"
   - "SQL Server Native Client, OLE DB"
 ms.assetid: 7c462c92-ad5b-4dd5-817d-2b89c83d8fe4
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg

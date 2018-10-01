@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_OAStop"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_OAStop"
 ms.assetid: aa9eab66-c4f7-4ec7-9f0d-5d24d16da654
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg

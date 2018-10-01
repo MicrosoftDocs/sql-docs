@@ -5,9 +5,7 @@ ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "DM_EXEC_COMPUTE_NODE_STATUS_TSQL"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "dm_exec_compute_node_status"
   - "sys.dm_exec_compute_node_status management view"
 ms.assetid: b606f91f-3a08-4a4f-bb57-32ae155b3738
-caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg

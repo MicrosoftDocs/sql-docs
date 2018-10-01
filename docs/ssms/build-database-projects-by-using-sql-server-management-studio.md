@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "scripts [SQL Server], database projects"
@@ -16,7 +13,6 @@ helpviewer_keywords:
   - "projects [SQL Server Management Studio], about projects"
   - "projects [SQL Server Management Studio]"
 ms.assetid: c2e80045-894d-44cf-b65c-e547ed738947
-caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

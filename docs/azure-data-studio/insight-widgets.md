@@ -6,8 +6,6 @@ ms.date: "09/24/2018"
 ms.prod: sql
 ms.technology: ssops
 ms.reviewer: "alayu; sstein"
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 author: stevestein
 ms.author: sstein

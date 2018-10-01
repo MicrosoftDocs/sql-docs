@@ -1,14 +1,11 @@
-﻿---
+---
 title: "Monitor Job Activity | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-agent"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Agent, monitoring"
@@ -22,7 +19,6 @@ helpviewer_keywords:
   - "performance [SQL Server], jobs"
   - "current activity"
 ms.assetid: 71cb432b-631d-4b8b-9965-e731b3d8266d
-caps.latest.revision: 6
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

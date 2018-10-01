@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-tables"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -17,7 +14,6 @@ helpviewer_keywords:
   - "hobt [SQL Server]"
   - "base tables"
 ms.assetid: 31f2df90-651f-4699-8067-19f59b60904f
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg

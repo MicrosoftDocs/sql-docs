@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "02/19/2018"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
-ms.tgt_pltfrm: ""
 ms.topic: quickstart
 helpviewer_keywords: 
   - "JSON"

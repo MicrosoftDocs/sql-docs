@@ -1,15 +1,12 @@
-﻿---
+---
 title: "Cluster DTC for SQL Server 2016 Availability Groups | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/30/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: a47c5005-20e3-4880-945c-9f78d311af7a
-caps.latest.revision: 3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

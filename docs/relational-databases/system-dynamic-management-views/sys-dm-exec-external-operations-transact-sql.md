@@ -5,9 +5,7 @@ ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "DM_EXEC_EXTERNAL_OPERATIONS_TSQL"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "sys.dm_exec_external_operations management view"
   - "dm_exec_external_operations management view"
 ms.assetid: d268217a-85b8-4b7f-9cd1-87865eba2be1
-caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg

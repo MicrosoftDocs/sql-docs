@@ -5,15 +5,12 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "multiple hstmts [ODBC]"
   - "Paradox driver [ODBC], multiple hstmts"
 ms.assetid: 66aecd94-092d-43d4-9583-74f5e2990eac
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg

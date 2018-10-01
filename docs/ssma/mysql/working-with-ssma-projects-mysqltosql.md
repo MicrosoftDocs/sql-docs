@@ -4,20 +4,14 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 helpviewer_keywords: 
   - "Working with SSMA projects, create new project"
   - "Working with SSMA projects, customize settings"
   - "Working with SSMA projects, Open project"
   - "Working with SSMA projects, Save project"
 ms.assetid: 9e4394e9-f177-41d9-839e-5d53a9c9b840
-caps.latest.revision: 20
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: craigg

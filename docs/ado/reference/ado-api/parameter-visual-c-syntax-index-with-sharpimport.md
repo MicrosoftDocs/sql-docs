@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 dev_langs: 
@@ -15,7 +13,6 @@ dev_langs:
 helpviewer_keywords: 
   - "Parameter collection [ADO], Visual C++ syntax index with #import"
 ms.assetid: 6b43cf70-9695-47b0-9e68-f36898859b6b
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg

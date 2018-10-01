@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "08/08/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "databases"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "static database views"
@@ -20,7 +17,6 @@ helpviewer_keywords:
   - "read-only database views"
   - "database snapshots [SQL Server], about database snapshots"
 ms.assetid: 00179314-f23e-47cb-a35c-da6f180f86d3
-caps.latest.revision: 54
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

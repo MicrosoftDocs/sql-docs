@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "ODBC numeric functions [ODBC]"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "numeric functions [ODBC]"
   - "FoxPro ODBC driver [ODBC], numeric functions"
 ms.assetid: 7caab48e-cbb5-4bbc-a09b-5cf902e5bc45
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg

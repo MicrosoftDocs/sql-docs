@@ -5,9 +5,7 @@ ms.date: "08/07/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "UNION"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "combining query results"
   - "UNION operator [SQL Server]"
 ms.assetid: 607c296f-8a6a-49bc-975a-b8d0c0914df7
-caps.latest.revision: 34
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

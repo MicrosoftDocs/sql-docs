@@ -5,14 +5,11 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: profiler
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "opening trace files"
 ms.assetid: f9ec6032-c961-4b00-ba38-208454fd2bdb
-caps.latest.revision: 24
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

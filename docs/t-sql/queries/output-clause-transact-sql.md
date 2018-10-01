@@ -5,9 +5,7 @@ ms.date: "08/09/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "OUTPUT_TSQL"
@@ -30,7 +28,6 @@ helpviewer_keywords:
   - "displaying deleted rows"
   - "UPDATE statement [SQL Server], OUTPUT clause"
 ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
-caps.latest.revision: 94
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

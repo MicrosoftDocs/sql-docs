@@ -5,9 +5,7 @@ ms.date: "05/23/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "INTO_TSQL"
@@ -28,7 +26,6 @@ helpviewer_keywords:
   - "clauses [SQL Server], INTO"
   - "row additions [SQL Server], INTO clause"
 ms.assetid: b48d69e8-5a00-48bf-b2f3-19278a72dd88
-caps.latest.revision: 63
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

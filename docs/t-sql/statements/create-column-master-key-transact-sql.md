@@ -5,9 +5,7 @@ ms.date: "09/24/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "SQL13.SWB.NEWCOLUMNMASTERKEYDEF.GENERAL.F1"
@@ -26,7 +24,6 @@ helpviewer_keywords:
   - "CREATE COLUMN MASTER KEY statement"
   - "Always Encrypted, create column master key"
 ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
-caps.latest.revision: 32
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

@@ -3,16 +3,13 @@ title: "Microsoft ActiveX Data Objects (ADO) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/25/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "ADO, about"
 ms.assetid: 2fa6237b-44b8-4b6c-9952-5acd80a54e20
-caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg

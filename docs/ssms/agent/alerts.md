@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-agent"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Agent alerts, event types"
@@ -23,7 +20,6 @@ helpviewer_keywords:
   - "SQL Server Agent alerts, about alerts"
   - "alerts [SQL Server], names"
 ms.assetid: 3f57d0f0-4781-46ec-82cd-b751dc5affef
-caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

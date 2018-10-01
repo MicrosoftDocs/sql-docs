@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "dm_db_mirroring_auto_page_repair_TSQL"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "database mirroring [SQL Server], automatic page repair"
   - "sys.dm_db_mirroring_auto_page_repair dynamic management view"
 ms.assetid: 49f0fc2a-e25e-47e1-a135-563adb509af1
-caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg

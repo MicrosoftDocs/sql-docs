@@ -5,9 +5,7 @@ ms.date: "09/15/2017"
 ms.prod: sql
 ms.prod_service: "sql-data-warehouse, database-engine, pdw, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "DROP DATABASE"
@@ -24,7 +22,6 @@ helpviewer_keywords:
   - "DROP DATABASE statement"
   - "database removal [SQL Server], DROP DATABASE statement"
 ms.assetid: 477396a9-92dc-43c9-9b97-42c8728ede8e
-caps.latest.revision: 83
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

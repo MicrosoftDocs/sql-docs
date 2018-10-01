@@ -4,12 +4,9 @@ ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: extensions
-ms.suite: pro-bi
 
 
 ms.topic: reference
-applies_to: 
-  - "SQL Server 2016 Preview"
 helpviewer_keywords: 
   - "security [Reporting Services], extensions"
 ms.assetid: 24ccd795-6506-457c-93ac-6a9dd6bb9a46

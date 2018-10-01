@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "dm_xe_session_object_columns_TSQL"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "xe"
   - "sys.dm_xe_session_object_columns dynamic management view"
 ms.assetid: e97f3307-2da6-4c54-b818-a474faec752e
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg

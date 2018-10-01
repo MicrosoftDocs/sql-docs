@@ -5,16 +5,13 @@ ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "SQL Server Native Client ODBC driver, communicating with SQL Server"
   - "ODBC applications, communicating with SQL Server"
   - "ODBC, communicating with SQL Server"
 ms.assetid: cca3dcf0-2a7e-465a-84de-7ce055360eb6
-caps.latest.revision: 34
 author: MightyPen
 ms.author: genemi
 manager: craigg

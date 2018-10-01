@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "09/12/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "QUERY_STORE_PLAN_TSQL"
@@ -21,7 +18,6 @@ helpviewer_keywords:
   - "query_store_plan catalog view"
   - "sys.query_store_plan catalog view"
 ms.assetid: b4d05439-6360-45db-b1cd-794f4a64935e
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg

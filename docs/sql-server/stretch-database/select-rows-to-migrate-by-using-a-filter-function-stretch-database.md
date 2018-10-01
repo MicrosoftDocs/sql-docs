@@ -4,8 +4,6 @@ ms.custom: ""
 ms.date: "06/27/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Stretch Database, predicates"
@@ -13,7 +11,6 @@ helpviewer_keywords:
   - "Stretch Database, inline table-valued functions"
   - "inline table-valued functions for Stretch Database"
 ms.assetid: 090890ee-7620-4a08-8e15-d2fbc71dd12f
-caps.latest.revision: 43
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

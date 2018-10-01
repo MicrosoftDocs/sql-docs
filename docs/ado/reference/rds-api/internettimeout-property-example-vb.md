@@ -6,15 +6,12 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "VB"
 helpviewer_keywords: 
   - "InternetTimeout property [ADO], Visual Basic example"
 ms.assetid: b35d2f4a-449c-4170-aab6-9ff88c890043
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg

@@ -4,13 +4,8 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 helpviewer_keywords: 
   - "instance of SQL Azure"
   - "metadata, refreshing"
@@ -21,7 +16,6 @@ helpviewer_keywords:
   - "SQL Azure, reconnecting"
   - "SQL Azure, synchronizing metadata"
 ms.assetid: 1ba0d113-dc05-4431-8689-e14a8821bafd
-caps.latest.revision: 21
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: craigg

@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "07/21/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "maintenance-plans"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "reindex"
@@ -17,7 +14,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "Rebuild Index Task dialog box"
 ms.assetid: 33e2940b-139f-4563-b0cb-5683f08bd879
-caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
 manager: craigg

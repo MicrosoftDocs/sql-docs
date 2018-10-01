@@ -3,7 +3,6 @@ title: "Linux and macOS Installation Tutorial for the Microsoft Drivers for PHP 
 ms.date: "07/20/2018"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.suite: "sql"
 ms.custom: ""
 ms.technology: connectivity
 ms.topic: conceptual

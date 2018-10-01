@@ -8,8 +8,6 @@ ms.date: 03/07/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.component: ""
-ms.suite: "sql"
 ms.custom: "sql-linux"
 ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69

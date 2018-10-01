@@ -6,13 +6,10 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "stream not read error in RDS [ADO]"
 ms.assetid: cb5a68f8-dba4-41da-bafd-04efe53706b7
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg

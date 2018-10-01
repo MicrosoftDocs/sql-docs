@@ -6,15 +6,12 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords:
   - "errors [ADO], number reference"
   - "errors [ADO], ErrorValueEnum"
   - "ErrorValueEnum enumeration [ADO]"
 ms.assetid: f653393e-d4b0-4c34-ad5f-2bdf56bc1305
-caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: craigg

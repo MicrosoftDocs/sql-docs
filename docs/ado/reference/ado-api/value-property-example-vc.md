@@ -6,15 +6,12 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "C++"
 helpviewer_keywords: 
   - "Value property [ADO], VC++ example"
 ms.assetid: 2a104245-56df-44f3-b9b7-b3d18643d57b
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg

@@ -6,15 +6,12 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "VB"
 helpviewer_keywords: 
   - "Prepared property [ADO], Visual Basic example"
 ms.assetid: e3a3db2d-7f73-4288-ad08-5468f251d610
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg

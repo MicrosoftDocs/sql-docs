@@ -6,13 +6,10 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "error object [ADO], members"
 ms.assetid: cd69e4b7-82bf-4ffc-bc53-c535ba20161f
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg

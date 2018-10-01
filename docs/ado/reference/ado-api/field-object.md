@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
@@ -15,7 +13,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "Field object [ADO]"
 ms.assetid: b10a72fc-3c4b-4186-a70b-993dc9f7a092
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg

@@ -6,13 +6,10 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "RDS related technologies [ADO]"
 ms.assetid: a98a7245-06a7-455c-82ef-950807b9f1e7
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg

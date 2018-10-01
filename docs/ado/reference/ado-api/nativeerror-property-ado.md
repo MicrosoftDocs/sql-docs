@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
@@ -17,7 +15,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "NativeError property [ADO]"
 ms.assetid: b9b47e57-18a4-4186-aef5-5bd18d7b1d74
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg

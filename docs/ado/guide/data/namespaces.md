@@ -6,13 +6,10 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "namespaces in ADO"
 ms.assetid: efff5569-db52-451d-a039-2e74870534da
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg

@@ -6,15 +6,12 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "02/14/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "VB"
 helpviewer_keywords: 
   - "RDS tutorial [ADO], VBScript"
 ms.assetid: e2a48c4d-88b1-43ff-a202-9cdec54997d2
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg

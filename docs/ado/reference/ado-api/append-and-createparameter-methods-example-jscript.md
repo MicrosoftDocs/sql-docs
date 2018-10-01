@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "JScript"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "CreateParameter method [ADO], JScript example"
   - "Append method [ADO], JScript example"
 ms.assetid: 37000833-68f4-45f1-b2dd-7f75893d09d9
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg

@@ -6,15 +6,12 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "C++"
 helpviewer_keywords: 
   - "ActiveCommand property [ADO], VC++ example"
 ms.assetid: 8269ea29-912a-4d20-9360-f48b3746081f
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg

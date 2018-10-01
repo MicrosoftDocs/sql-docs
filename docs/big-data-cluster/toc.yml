@@ -2,28 +2,12 @@
   items:
   - name: What is SQL Server Big Data Cluster?
     href: big-data-cluster-overview.md
-  - name: Release notes
-    href: big-data-cluster-release-notes.md
 - name: Quickstarts
   items:
   - name: Deploy SQL Server Big Data Cluster
     href: quickstart-big-data-cluster-deploy.md
-  - name: Get started with SQL Server Big Data Cluster
-    href: quickstart-big-data-cluster-get-started.md 
 - name: Concepts
   items:
-  - name: HDFS
-    href: concept-hdfs.md
-  - name: Spark
-    href: concept-spark.md
-  - name: Machine Learning and extensibility
-    items:
-    - name: Java extension
-      href: ml-java-extension.md
-    - name: Spark ML
-      href: ml-spark.md
-    - name: ML services on Master
-      href: ml-on-master.md
   - name: Controller
     href: concept-controller.md
   - name: Master instance
@@ -38,6 +22,10 @@
     href: concept-data-persistence.md
   - name: Security
     href: concept-security.md
+  - name: Machine Learning and extensibility
+    items:
+    - name: ML services on Master
+      href: ml-on-master.md
 - name: How-to-guides
   items:
   - name: Install
@@ -60,71 +48,31 @@
     items:
     - name: Load data with curl
       href: data-ingestion-curl.md
-    - name: Streaming
-      items:
-      - name: Spark streaming
-        href: data-ingestion-streaming-spark.md
-      - name: Stream to data pool
-        href: data-ingestion-streaming-data-pool.md
     - name: Restore a database
       href: data-ingestion-restore-databse.md
   - name: Big Data/Machine Learning
     items:
     - name: Data Wrangling using PROSE Code Accelerator
       href: use-prose-for-big-data-automation.md
-    - name: Machine learning with Spark
-      href: ml-model-training-scoring-spark.md
-    - name: Model training and Export with Spark
-      href: ml-model-training-and-export-spark.md
-    - name: Scoring MLeap exported model with SQL/ML
-      href: mleap-scoring-ml.md
   - name: Query scenarios
     items:
-      - name: Read CSV with OPENROWSET
-        href: query-openrowset.md
-      - name: Create a data pool
-        href: query-create-datapool.md
-      - name: Hive tables
-        href: query-hive-tables.md
-      - name: Define external table over HDFS
-        href: query-define-external-table.md
-      - name: Datamart queries
-        href: query-datamart.md
-      - name: Compex analytical queries
-        href: query-complex-analytical.md
-      - name: Segregate external tables
-        href: query-segregate-external-tables.md
       - name: Monitoring and troubleshooting
         href: query-troubleshooting.md
   - name: Notebooks
     items:
     - name: How to use notebooks in SQL Server 2019 CTP 2.0
       href: notebooks-guidance.md
-  - name: Manage
-    items:
-    - name: Monitoring
-      href: manage-monitoring.md
-    - name: Troubleshooting   
-      href: manage-troubleshooting.md
   - name: Spark jobs
     items:
     - name: Submit Spark Job in Azure Data Studio
-      href: Submit-spark-job.md
+      href: spark-submit-job.md
     - name: Use extended Spark History Server to debug and diagnose Spark applications
-      href: apache-azure-spark-history-server.md
+      href: spark-history-server.md
 - name: Resources
   items:
-  - name: FAQ
-    href: big-data-cluster-faq.md
-  - name: SQL Server Documentation
-    href: ../sql-server/sql-server-technical-documentation.md
-  - name: DBA Stack Exchange
-    href: https://dba.stackexchange.com/questions/tagged/sql-server
-  - name: Stack Overflow
-    href: http://stackoverflow.com/questions/tagged/sql-server
-  - name: MSDN Forums
-    href: https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver
-  - name: Submit feedback
-    href: https://feedback.azure.com/forums/908035-sql-server
-  - name: Reddit
-    href: https://www.reddit.com/r/SQLServer
+  - name: SQL Server 2019 preview
+    href: ../sql-server/what-s-new-in-sql-server-ver15.md?toc=%2fsql%2fbig-data-cluster%2ftoc.json
+  - name: PolyBase documentation
+    href: ../relational-databases/polybase/polybase-guide.md
+  - name: Request access to Big Data Clusters
+    href: https://aka.ms/eapsignup

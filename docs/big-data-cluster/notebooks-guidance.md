@@ -14,6 +14,7 @@ ms.prod: sql
 This how you can launch notebooks on the cluster and start authoring your own Notebooks. It also shows how to submit jobs against the cluster.
 
 ## Connect to the Hadoop Gateway Knox end point
+
 You can connect to different end-points in the cluster. You can connect to the Microsoft SQL Server connection type or to the HDFS/Spark Gateway end-point.
 
 In Azure Data Studio (preview), type **F1** > **New Connection**and you can connect to your HDFS/Spark Gateway end-point.

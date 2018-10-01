@@ -41,4 +41,4 @@ Click Connect, and the **Server Dashboard** will appear.   You are now connected
 
 ## Next steps
 
-To explore different ways to interact with your cluster, see [Quickstart: Get started with big data on SQL Server 2019 CTP 2.0](quickstart-big-data-cluster-get-started.md).
+To run notebooks in Azure Data Studio, see [How to use notebooks in SQL Server 2019 CTP 2.0](notebooks-guidance.md).

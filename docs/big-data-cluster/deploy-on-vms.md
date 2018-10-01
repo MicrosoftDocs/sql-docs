@@ -17,4 +17,4 @@ TODO: Determine if we want to convert the detailed steps from **ctp1.8/documenta
 
 The next step is to deploy SQL Server 2019 CTP 2.0 to the cluster.
 
-[Deploy SQL Server 2019 CTP 2.0 on Kubernetes](quickstart-big-data-cluster-get-started.md)
+[Deploy SQL Server 2019 CTP 2.0 on Kubernetes](quickstart-big-data-cluster-deploy.md)

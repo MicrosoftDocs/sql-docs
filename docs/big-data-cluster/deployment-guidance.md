@@ -183,11 +183,11 @@ You can see a more granular status and configuration for each pod by running:
 kubectl describe pod <pod name> -n <name of your cluster>
 ```
 
-Once the Controller pod is running, you can leverage the Deployment tab in the [Cluster Administration Portal](manage-monitoring.md) to monitor the deployment.
+Once the Controller pod is running, you can leverage the Deployment tab in the Cluster Administration Portal to monitor the deployment.
 
 ## <a id="masterip"></a> Get the master instance IP address
 
-After the deployment script has completed successfully, you can obtain the IP address of the SQL Server master instance using the steps outlined below. You will use this IP address and port number 31433 to connect to the SQL Server master instance (for example: **\<ip-address\>,31433**). Similarly, for the Knox Gateway endpoint. All cluster endpoints are outlined in the Service Endpoints tab in the [Cluster Administration Portal](manage-monitoring.md) as well.
+After the deployment script has completed successfully, you can obtain the IP address of the SQL Server master instance using the steps outlined below. You will use this IP address and port number 31433 to connect to the SQL Server master instance (for example: **\<ip-address\>,31433**). Similarly, for the Knox Gateway endpoint. All cluster endpoints are outlined in the Service Endpoints tab in the Cluster Administration Portal as well.
 
 ### AKS
 
@@ -215,4 +215,4 @@ kubectl get svc -n <name of your cluster>
 
 ## Next steps
 
-After successfully deploying SQL Server Big Data cluster to Kubernetes, [install the big data tools](deploy-big-data-tools.md) and learn more in the [getting started quickstart](quickstart-big-data-cluster-get-started.md).
+After successfully deploying SQL Server Big Data cluster to Kubernetes, [install the big data tools](deploy-big-data-tools.md) and learn more in the [getting started quickstart](quickstart-big-data-cluster-deploy.md).

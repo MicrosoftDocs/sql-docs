@@ -1,1 +1,1 @@
- SQL Server Trusted Launchpad 
+ SQL Server Launchpad 

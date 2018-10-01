@@ -1,12 +1,13 @@
 ---
 title: Add SQLRUserGroup as a database user (SQL Server Machine Learning) | Microsoft Docs
+description: How to add SQLRUserGroup as a database user for SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
+ms.date: 09/26/2018  
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 ---
 # Add SQLRUserGroup as a database user

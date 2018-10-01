@@ -1,16 +1,16 @@
 ---
-title: SQL Server Launchpad service account configuration | Microsoft Docs
-description: How to modify the SQL Server Launchpad service account used for external script execution on SQL Server.
+title: SQL Server Trusted Launchpad service account configuration | Microsoft Docs
+description: How to modify the SQL Server Trusted Launchpad service account used for external script execution on SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 09/05/2018  
+ms.date: 09/27/2018  
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 ---
-# SQL Server Launchpad service configuration
+# SQL Server Trusted Launchpad service configuration
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 A separate [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] service is created for database engine instance to which you have added SQL Server machine learning (R or Python) integration.

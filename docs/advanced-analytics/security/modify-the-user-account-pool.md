@@ -1,12 +1,13 @@
 ---
 title: Modify the user account pool for SQL Server machine learning | Microsoft Docs
+description: How to modify the user account pool for SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
+ms.date: 09/26/2018  
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 ---
 # Modify the user account pool for SQL Server machine learning
@@ -22,8 +23,8 @@ This article describes the default configuration, security and capacity for the 
 
 The Windows account group is created by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup for each instance on which machine learning is installed and enabled.
 
--   In a default instance, the group name is **SQLRUserGroup**. The name is the same whether you use R or Python or both.
--   In a named instance, the default group name is suffixed with the instance name: for example, **SQLRUserGroupMyInstanceName**.
+- In a default instance, the group name is **SQLRUserGroup**. The name is the same whether you use R or Python or both.
+- In a named instance, the default group name is suffixed with the instance name: for example, **SQLRUserGroupMyInstanceName**.
 
 By default, the user account pool contains 20 user accounts. In most cases, 20 is more than adequate to support machine learning tasks, but you can change the number of accounts. The maximum number of accounts is 100.
 -  In a default instance, the individual accounts are named **MSSQLSERVER01** through **MSSQLSERVER20**.

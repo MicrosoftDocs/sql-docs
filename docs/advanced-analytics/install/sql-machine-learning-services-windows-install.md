@@ -194,7 +194,7 @@ If you got an error when running the command, review the additional configuratio
 
 Common scenarios that require additional changes include:
 
-* [Configure Windows firewall for in-bound connections](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)
+* [Firewall configuration for SQL Server Machine Learning Services](../../advanced-analytics/security/firewall-configuration.md)
 * [Enable additional network protocols](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)
 * [Enable remote connections](../../database-engine/configure-windows/configure-the-remote-access-server-configuration-option.md)
 * [Extend built-in permissions to remote users](#bkmk_configureAccounts)

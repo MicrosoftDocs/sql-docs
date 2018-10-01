@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "wmi"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
   - "AdvancedProperties Property (SqlService Class)"
@@ -18,7 +15,6 @@ apilocation:
 helpviewer_keywords: 
   - "AdvancedProperties property"
 ms.assetid: 63bcb7e2-1f78-4961-b4b9-1b635a89079b
-caps.latest.revision: 33
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg

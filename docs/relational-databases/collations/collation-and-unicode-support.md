@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "10/24/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "binary collations [SQL Server]"
@@ -26,7 +24,6 @@ helpviewer_keywords:
   - "SQL Server collations"
   - "server-level collations [SQL Server]"
 ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
-caps.latest.revision: 46
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

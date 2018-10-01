@@ -5,9 +5,7 @@ ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.dataconversiontrans.f1"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "Data Conversion transformation"
   - "data types [Integration Services], converting"
 ms.assetid: fd515bbc-6f49-4d0c-ae7f-6ea3c3f24a1c
-caps.latest.revision: 53
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

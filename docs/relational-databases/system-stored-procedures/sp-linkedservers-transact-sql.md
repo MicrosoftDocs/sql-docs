@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_linkedservers"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_linkedservers"
 ms.assetid: d8f82f78-8a1f-4831-bcee-7c36c6e7dfbb
-caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg

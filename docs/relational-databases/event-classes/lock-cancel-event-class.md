@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Cancel event class"
 ms.assetid: d9203e58-40ba-4712-a918-2c34a5d396d7
-caps.latest.revision: 39
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

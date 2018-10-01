@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 helpviewer_keywords: 
   - "41399 (Database Engine error)"
 ms.assetid: 5e5acb07-16ca-4329-8210-cd2bab0c904f
-caps.latest.revision: 6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

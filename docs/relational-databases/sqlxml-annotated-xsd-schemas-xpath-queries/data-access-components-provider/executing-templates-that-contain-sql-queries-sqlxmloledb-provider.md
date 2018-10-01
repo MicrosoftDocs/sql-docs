@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "sqlxml"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: xml
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "templates [SQLXML]"
@@ -17,7 +14,6 @@ helpviewer_keywords:
   - "XML templates [SQLXML]"
   - "SQL queries [SQLXML]"
 ms.assetid: ff2bc36f-e3fb-4d8f-8e3a-2680a39eda11
-caps.latest.revision: 29
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

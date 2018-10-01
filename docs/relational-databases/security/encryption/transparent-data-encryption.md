@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: sql
 ms.technology: security
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Transparent Data Encryption"

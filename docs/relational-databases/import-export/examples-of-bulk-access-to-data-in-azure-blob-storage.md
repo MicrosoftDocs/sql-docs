@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "01/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "import-export"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "bulk importing [SQL Server], from Azure blob storage"
@@ -17,7 +14,6 @@ helpviewer_keywords:
   - "BULK INSERT, Azure blob storage"
   - "OPENROWSET, Azure blob storage"
 ms.assetid: f7d85db3-7a93-400e-87af-f56247319ecd
-caps.latest.revision: 2
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg

@@ -5,15 +5,12 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.technology: scripting
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "viewing properties"
   - "Properties window [SQL Server Management Studio]"
   - "complex properties [SQL Server Management Studio]"
 ms.assetid: 903d4aca-f57c-43d9-a893-702eceaa7004
-caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg

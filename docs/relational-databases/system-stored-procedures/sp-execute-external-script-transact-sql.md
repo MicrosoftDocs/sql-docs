@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "08/14/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_execute_external_script_TSQL"
@@ -20,7 +17,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_execute_external_script"
 ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
-caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg

@@ -5,9 +5,7 @@ ms.date: "08/01/2016"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: backup-restore
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "backing up [SQL Server], tail of log"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "tail-log backups"
   - "backups [SQL Server], tail-log backups"
 ms.assetid: 313ddaf6-ec54-4a81-a104-7ffa9533ca58
-caps.latest.revision: 55
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

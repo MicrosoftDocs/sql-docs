@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-compatibility-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sysdevices"
@@ -21,7 +18,6 @@ helpviewer_keywords:
   - "sys.sysdevices compatibility view"
   - "sysdevices system table"
 ms.assetid: ac5bcaf4-8fb6-4855-8856-d7643f469361
-caps.latest.revision: 24
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

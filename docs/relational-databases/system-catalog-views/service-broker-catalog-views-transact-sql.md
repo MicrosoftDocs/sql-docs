@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -16,7 +13,6 @@ helpviewer_keywords:
   - "Service Broker, catalog views"
   - "catalog views [SQL Server], Service Broker"
 ms.assetid: 00682b5e-4720-422e-a5ec-4a96f26e1300
-caps.latest.revision: 32
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

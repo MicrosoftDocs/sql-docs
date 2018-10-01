@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.adonetsource.f1"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - ".NET Framework [Integration Services]"
   - "DataReader source"
 ms.assetid: 2a2f1750-2cda-4dda-9dca-623a96a6b3c0
-caps.latest.revision: 101
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

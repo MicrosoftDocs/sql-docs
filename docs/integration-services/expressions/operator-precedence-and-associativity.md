@@ -5,15 +5,12 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "associativity [Integration Services]"
   - "precedence [Integration Services]"
 ms.assetid: 5094164f-dabc-45b5-b611-384feb2b3fe3
-caps.latest.revision: 32
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

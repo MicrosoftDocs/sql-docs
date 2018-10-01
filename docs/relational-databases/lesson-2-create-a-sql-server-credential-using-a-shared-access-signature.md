@@ -4,16 +4,10 @@ ms.custom: ""
 ms.date: "02/25/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "tutorial"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: backup-restore
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "SQL Server 2016"
 ms.assetid: 29e57ebd-828f-4dff-b473-c10ab0b1c597
-caps.latest.revision: 17
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

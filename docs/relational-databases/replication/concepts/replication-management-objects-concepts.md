@@ -4,15 +4,10 @@ ms.custom: ""
 ms.date: "11/08/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
 
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
 dev_langs: 
   - "VB"
   - "CSharp"
@@ -24,7 +19,6 @@ helpviewer_keywords:
   - "Replication Management Objects"
   - "programming [SQL Server replication], RMO"
 ms.assetid: 37476d50-fb47-49e3-9504-3b163ac381d8
-caps.latest.revision: 61
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

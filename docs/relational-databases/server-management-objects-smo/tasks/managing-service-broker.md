@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "smo"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
 
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "Service Broker [SMO]"
 ms.assetid: b29d7432-d1e5-4bb6-b544-57b3a9430f95
-caps.latest.revision: 33
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

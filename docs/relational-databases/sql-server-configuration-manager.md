@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "07/13/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "relational-databases-misc"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "protocols [SQL Server], managing"
@@ -23,7 +20,6 @@ helpviewer_keywords:
   - "tools [SQL Server], SQL Server Configuration Manager"
   - "configuration manager [SQL Server]"
 ms.assetid: e6beaea4-164c-4078-95ae-b9e28b0aefe8
-caps.latest.revision: 58
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

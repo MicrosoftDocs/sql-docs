@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 helpviewer_keywords: 
   - "847 (Database Engine error)"
 ms.assetid: 67208b7c-bd8d-48a1-9f70-a6488e0f5f9b
-caps.latest.revision: 16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

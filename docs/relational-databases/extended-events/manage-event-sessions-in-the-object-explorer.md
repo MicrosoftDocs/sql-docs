@@ -5,12 +5,9 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: xevents
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 16849e38-d3fb-414d-8dcb-797b5ffce6ee
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg

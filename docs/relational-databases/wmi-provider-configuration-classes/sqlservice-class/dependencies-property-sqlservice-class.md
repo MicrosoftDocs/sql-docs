@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "wmi"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
   - "Dependencies Property (SqlService Class)"
@@ -19,7 +16,6 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "Dependencies property"
 ms.assetid: 92d54b7e-de2f-4978-b601-0196e37cbb41
-caps.latest.revision: 35
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg

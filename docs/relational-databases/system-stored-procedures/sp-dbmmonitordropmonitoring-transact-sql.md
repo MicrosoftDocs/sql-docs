@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_dbmmonitordropmonitoring_TSQL"
@@ -19,7 +16,6 @@ helpviewer_keywords:
   - "sp_dbmmonitordropmonitoring"
   - "database mirroring [SQL Server], monitoring"
 ms.assetid: 6f2d552d-bfd7-47a5-8dcb-05560aa1a32d
-caps.latest.revision: 20
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

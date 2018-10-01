@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "09/23/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: replication
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords:
  - "replication [SQL Server], distribution"
  - "distribution configuration [SQL Server replication]"
  - "publishing [SQL Server replication], configuring"
 ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
-caps.latest.revision: 42
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

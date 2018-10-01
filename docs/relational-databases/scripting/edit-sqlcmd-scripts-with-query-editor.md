@@ -6,8 +6,6 @@ ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.technology: scripting
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "scripts [SQL Server], SQLCMD scripts"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "Query Editor [Database Engine], SQLCMD scripts"
   - "scripts [SQL Server], SQL Server Management Studio"
 ms.assetid: f77b866d-c330-47c9-9e74-0b8d8dff4b31
-caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
 manager: craigg

@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "04/08/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: performance
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "Performance (SQL Server)"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "performance (SQL Database)"
   - "database performance (SQL Database)"
 ms.assetid: 301204b2-140d-4495-98ed-021a9b5025f5
-caps.latest.revision: 14
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg

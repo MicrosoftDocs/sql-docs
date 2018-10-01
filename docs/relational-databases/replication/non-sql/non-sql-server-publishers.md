@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "08/29/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: replication
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "heterogeneous database replication, non-SQL Server Publishers"
@@ -16,7 +13,6 @@ helpviewer_keywords:
   - "heterogeneous data sources, non-SQL Server Publishers"
   - "Publishers [SQL Server replication], Oracle"
 ms.assetid: 08a160a6-33be-46b5-bc7b-d53180d8bdf1
-caps.latest.revision: 31
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

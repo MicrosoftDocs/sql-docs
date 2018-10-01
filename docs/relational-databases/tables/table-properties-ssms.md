@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "table-view-index, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: table-view-index
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.tableproperties.storage.f1"
@@ -16,7 +14,6 @@ f1_keywords:
   - "sql12.SWB.SELECTCOLUMNS.F1"
   - "sql13.swb.tableproperties.filetable.f1"
 ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
-caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg

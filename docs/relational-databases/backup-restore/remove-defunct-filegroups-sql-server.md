@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: backup-restore
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "piecemeal restores [SQL Server], defunct filegroups"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "filegroups [SQL Server], defunct"
   - "unrestored filegroups"
 ms.assetid: 055f9c6a-5c18-4942-98e7-ec918f0ff975
-caps.latest.revision: 27
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

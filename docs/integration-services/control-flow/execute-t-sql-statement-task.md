@@ -5,9 +5,7 @@ ms.date: "03/13/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.executetsqlstatementtask.f1"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "statements [Integration Services]"
   - "Execute T-SQL Statement task [Integration Services]"
 ms.assetid: 7e9086ca-d27e-46c0-bfad-d61333ebd55e
-caps.latest.revision: 35
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

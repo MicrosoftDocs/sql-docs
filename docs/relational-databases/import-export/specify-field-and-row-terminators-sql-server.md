@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "07/26/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "import-export"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: data-movement
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "bcp utility [SQL Server], terminators"
@@ -17,7 +14,6 @@ helpviewer_keywords:
   - "row terminators [SQL Server]"
   - "terminators [SQL Server]"
 ms.assetid: f68b6782-f386-4947-93c4-e89110800704
-caps.latest.revision: 39
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

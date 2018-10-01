@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "enumerators [Integration Services]"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "enumerated constants [Integration Services]"
   - "property expressions [Integration Services]"
 ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
-caps.latest.revision: 34
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

@@ -5,15 +5,12 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.technology: scripting
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "vs.debug.breakpt.hitcount"
 helpviewer_keywords: 
   - "Transact-SQL debugger, breakpoint hit count"
 ms.assetid: 24836939-94ed-4e57-aa85-5d6938d859e4
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg

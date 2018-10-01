@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "04/24/2018"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sys.dm_db_log_info"
@@ -18,7 +16,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_db_log_info dynamic management view"
 ms.assetid: f6b40060-c17d-472f-b0a3-3b350275d487
-caps.latest.revision: 4
 author: "savjani"
 ms.author: "pariks"
 manager: "ajayj"

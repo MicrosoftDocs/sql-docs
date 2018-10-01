@@ -4,19 +4,15 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "extended-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
 
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "metadata [SQL Server], stored procedures"
   - "Unicode [SQL Server], extended stored procedures"
   - "extended stored procedures [SQL Server], metadata"
 ms.assetid: 52310260-a892-4b27-ad2e-bf164b98ee80
-caps.latest.revision: 31
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "wmi"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
   - "AcceptPause Property (SqlService Class)"
@@ -18,7 +15,6 @@ apilocation:
 helpviewer_keywords: 
   - "AcceptPause property"
 ms.assetid: 4339e903-35ee-4395-b005-ca58b3a24a84
-caps.latest.revision: 34
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg

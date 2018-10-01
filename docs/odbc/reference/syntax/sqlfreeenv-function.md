@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "SQLFreeEnv"
@@ -19,7 +17,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLFreeEnv function [ODBC]"
 ms.assetid: 32000150-e120-445e-b269-43200f813b2a
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg

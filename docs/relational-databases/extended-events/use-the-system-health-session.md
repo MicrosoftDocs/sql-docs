@@ -5,9 +5,7 @@ ms.date: "06/25/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: xevents
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "extended events [SQL Server], system health session"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "system_health session [SQL Server extended events]"
   - "system health session [SQL Server extended events]"
 ms.assetid: 1e1fad43-d747-4775-ac0d-c50648e56d78
-caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg

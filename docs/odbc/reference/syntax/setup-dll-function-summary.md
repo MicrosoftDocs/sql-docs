@@ -5,14 +5,11 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "functions [ODBC], setup DLL functions"
 ms.assetid: d18169eb-89f7-4079-be70-a85713030191
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg

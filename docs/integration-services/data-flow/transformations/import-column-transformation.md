@@ -5,9 +5,7 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.importcolumntrans.f1"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "importing data, SSIS packages"
   - "inserting data"
 ms.assetid: ac3b74c1-ef54-4297-8062-1734324fffcc
-caps.latest.revision: 44
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

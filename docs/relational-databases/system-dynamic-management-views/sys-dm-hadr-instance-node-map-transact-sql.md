@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.sys.dm_hadr_instance_node_map_TSQL"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], WSFC clusters"
   - "sys.sys.dm_hadr_instance_node_map dynamic management view"
 ms.assetid: ccfaf62c-9f87-43cf-a5e7-8942e91dd041
-caps.latest.revision: 9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

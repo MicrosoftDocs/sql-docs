@@ -4,17 +4,12 @@ ms.custom: ""
 ms.date: "08/23/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "tutorial"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
 ms.topic: quickstart
-applies_to: 
-  - "SQL Server 2016"
 helpviewer_keywords: 
   - "signing stored procedures tutorial [SQL Server]"
 ms.assetid: a4b0f23b-bdc8-425f-b0b9-e0621894f47e
-caps.latest.revision: 11
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

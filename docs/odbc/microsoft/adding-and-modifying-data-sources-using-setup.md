@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "data sources [ODBC], adding"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "data sources [ODBC], ODBC driver for Oracle"
   - "ODBC driver for Oracle [ODBC], adding data sources"
 ms.assetid: 54b2d61d-6ce5-45af-a776-e03180470ecf
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg

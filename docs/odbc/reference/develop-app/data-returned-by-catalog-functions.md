@@ -5,15 +5,12 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "catalog functions [ODBC], result sets"
   - "functions [ODBC], catalog functions"
 ms.assetid: 399e1a64-8766-4c44-81ff-445399b7a1de
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg

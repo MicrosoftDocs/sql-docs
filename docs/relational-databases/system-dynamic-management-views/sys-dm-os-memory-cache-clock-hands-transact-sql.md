@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "12/21/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.dm_os_memory_cache_clock_hands_TSQL"
@@ -18,7 +16,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_os_memory_cache_clock_hands dynamic management view"
 ms.assetid: 0660eddc-691c-425f-9d43-71151d644de7
-caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg

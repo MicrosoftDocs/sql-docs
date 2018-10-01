@@ -5,16 +5,13 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL data types [ODBC], examples"
   - "SQLGetTypeInfo function [ODBC], examples"
   - "data types [ODBC], SQL data types"
 ms.assetid: dc1952cc-7581-4d69-9c72-7dc1cd370836
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg

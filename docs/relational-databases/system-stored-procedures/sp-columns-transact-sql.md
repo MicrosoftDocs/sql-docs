@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "10/17/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_columns_TSQL"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_columns"
 ms.assetid: 2dec79cf-2baf-4c0f-8cbb-afb1a8654e1e
-caps.latest.revision: 45
 author: stevestein
 ms.author: sstein
 manager: craigg

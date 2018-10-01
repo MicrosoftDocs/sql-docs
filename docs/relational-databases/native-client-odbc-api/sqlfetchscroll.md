@@ -5,15 +5,12 @@ ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apitype: "DLLExport"
 helpviewer_keywords: 
   - "SQLFetchScroll function"
 ms.assetid: 524a3985-a08d-4445-99e0-bb551a666615
-caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
 manager: craigg

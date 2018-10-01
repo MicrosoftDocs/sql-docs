@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_addumpdevice_TSQL"
@@ -19,7 +16,6 @@ helpviewer_keywords:
   - "backup devices [SQL Server], defining"
   - "sp_addumpdevice"
 ms.assetid: c2d2ae49-0808-46d8-8444-db69a69d0ec3
-caps.latest.revision: 49
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

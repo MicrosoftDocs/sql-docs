@@ -5,8 +5,6 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.technology: scripting
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "vsregularexpressionhelp"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "Query Editor [SQL Server Management Studio], regular expression searches"
   - "searches [SQL Server Management Studio], regular expressions"
 ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
-caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
 manager: craigg

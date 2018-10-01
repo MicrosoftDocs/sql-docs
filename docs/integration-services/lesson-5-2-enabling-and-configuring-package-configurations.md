@@ -5,12 +5,8 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: tutorial
-applies_to: 
-  - "SQL Server 2016"
 ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
 author: "douglaslMS"
 ms.author: "douglasl"

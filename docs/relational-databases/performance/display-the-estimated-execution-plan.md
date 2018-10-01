@@ -5,9 +5,7 @@ ms.date: "08/21/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: performance
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "zoom [SQL Server]"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "modifying execution plan display"
   - "custom zoom [SQL Server]"
 ms.assetid: e94aa576-4c0c-4c54-ad05-6c3432cc615b
-caps.latest.revision: 26
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

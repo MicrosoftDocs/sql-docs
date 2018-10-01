@@ -4,20 +4,14 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: replication
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "SQL Server 2016"
 helpviewer_keywords: 
   - "tutorials [SQL Server replication]"
   - "replication [SQL Server], tutorials"
   - "wizards [SQL Server replication]"
 ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
-caps.latest.revision: 21
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

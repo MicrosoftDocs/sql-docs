@@ -5,15 +5,12 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLColumns function [ODBC], Paradox Driver"
   - "Paradox driver [ODBC], SQLColumns"
 ms.assetid: d7831c7d-8be9-40a7-bc70-8d89db8fe8c9
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg

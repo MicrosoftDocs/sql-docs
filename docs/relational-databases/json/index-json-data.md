@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/01/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "JSON, indexing JSON data"

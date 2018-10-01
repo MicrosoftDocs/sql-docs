@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "search, sql-database"
-ms.component: "search"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: search
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "full-text catalogs [SQL Server], creating"
   - "full-text search [SQL Server], using SQL Server Management Studio"
 ms.assetid: 824b7131-44a6-4815-89e6-62b7bab060e3
-caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

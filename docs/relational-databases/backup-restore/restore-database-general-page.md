@@ -5,14 +5,11 @@ ms.date: "07/01/2016"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: backup-restore
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.restoredb.general.f1"
 ms.assetid: 160cf58c-b06a-475f-9a69-2b051e5767ab
-caps.latest.revision: 89
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

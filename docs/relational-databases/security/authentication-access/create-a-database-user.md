@@ -5,9 +5,7 @@ ms.date: "04/24/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: security
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.user.securables.f1"
@@ -23,7 +21,6 @@ helpviewer_keywords:
   - "users [SQL Server], adding"
   - "mapping database users"
 ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
-caps.latest.revision: 31
 author: VanMSFT
 ms.author: vanto
 manager: craigg

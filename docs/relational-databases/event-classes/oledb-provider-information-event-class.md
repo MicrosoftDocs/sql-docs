@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "OLEDB Provider Information event class"
 ms.assetid: a0316c4e-4b8c-4754-8a35-222f3c0907d1
-caps.latest.revision: 22
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

@@ -5,16 +5,13 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "backward compatibility [ODBC], loading by ordinal"
   - "compatibility [ODBC], loading by ordinal"
   - "loading by ordinal [ODBC]"
 ms.assetid: 337d90ab-68eb-4940-a2f3-f7d5693ee766
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg

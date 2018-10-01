@@ -5,18 +5,13 @@ ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
 helpviewer_keywords: 
   - "Integration Services packages, running"
   - "packages [Integration Services], running"
   - "packages [Integration Services], troubleshooting"
 ms.assetid: 610ee7d9-4fea-4aba-9395-57add826923b
-caps.latest.revision: 22
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

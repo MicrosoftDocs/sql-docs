@@ -5,15 +5,12 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apitype: "DLLExport"
 helpviewer_keywords: 
   - "SQLGetConnectAttr function"
 ms.assetid: 26e4e69a-44fd-45e3-b47a-ae39184f041b
-caps.latest.revision: 60
 author: MightyPen
 ms.author: genemi
 manager: craigg

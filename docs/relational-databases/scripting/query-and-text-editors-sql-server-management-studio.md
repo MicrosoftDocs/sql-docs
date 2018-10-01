@@ -5,8 +5,6 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.technology: scripting
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "VS.TextEditor"
@@ -26,7 +24,6 @@ helpviewer_keywords:
   - "scripts [SQL Server], SQL Server Management Studio"
   - "queries [SQL Server], SQL Server Management Studio"
 ms.assetid: 062051e4-4b77-4969-98ae-d2547c24ce3e
-caps.latest.revision: 53
 author: MightyPen
 ms.author: genemi
 manager: craigg

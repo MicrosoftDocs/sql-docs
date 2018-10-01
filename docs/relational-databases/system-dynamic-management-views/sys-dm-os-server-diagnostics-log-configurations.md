@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.dm_os_server_diagnostics_log_configurations"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "dm_os_server_diagnostics_log_configurations"
   - "sys.dm_os_server_diagnostics_log_configurations"
 ms.assetid: c09ea433-d283-4f83-af69-d458aad59217
-caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg

@@ -1,14 +1,11 @@
-﻿---
+---
 title: "sys.dm_continuous_copy_status (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: ""
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.service: "sql-database"
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.dm_continuous_copy_status_TSQL"
@@ -21,7 +18,6 @@ helpviewer_keywords:
   - "dm_continuous_copy_status"
   - "sys.dm_continuous_copy_status"
 ms.assetid: 411b2e71-4421-4ef5-900d-5af068750899
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg

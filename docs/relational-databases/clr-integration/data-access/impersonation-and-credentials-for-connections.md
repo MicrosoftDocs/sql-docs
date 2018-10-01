@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: clr
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "credentials [CLR integration]"
   - "database objects [CLR integration], security"
 ms.assetid: 293dce7d-1db2-4657-992f-8c583d6e9ebb
-caps.latest.revision: 31
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

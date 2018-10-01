@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.sqlserverdest.f1"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "inserting data"
   - "bulk load [Integration Services]"
 ms.assetid: a0227cd8-6944-4547-87e8-7b2507e26442
-caps.latest.revision: 65
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

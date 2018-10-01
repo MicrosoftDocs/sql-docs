@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "sqlxml"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: xml
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "IDREF type attribute [SQLXML]"
@@ -27,7 +24,6 @@ helpviewer_keywords:
   - "updg:before attribute"
   - "record updates [SQLXML]"
 ms.assetid: 90ef8a33-5ae3-4984-8259-608d2f1d727f
-caps.latest.revision: 28
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

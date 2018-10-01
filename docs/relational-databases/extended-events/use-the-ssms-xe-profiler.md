@@ -5,9 +5,7 @@ ms.date: "10/02/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: "genemi"
-ms.suite: "sql"
 ms.technology: xevents
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "extended events [SQL Server], system health session"

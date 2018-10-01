@@ -5,9 +5,7 @@ ms.date: "09/27/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: security
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "Security [SQL Server]"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "database security [SQL Server]"
   - "databases [SQL Server], security"
 ms.assetid: dfb39d16-722a-4734-94bb-98e61e014ee7
-caps.latest.revision: 55
 author: VanMSFT
 ms.author: vanto
 manager: craigg

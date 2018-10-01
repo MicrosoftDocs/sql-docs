@@ -5,17 +5,12 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
 helpviewer_keywords: 
   - "custom user interface [Integration Services], custom log providers"
   - "custom log providers [Integration Services], developing custom user interface"
 ms.assetid: 6fd2d269-d87a-4134-82a1-40a09b3b5453
-caps.latest.revision: 18
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

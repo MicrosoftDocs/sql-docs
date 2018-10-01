@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_msx_enlist_TSQL"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_msx_enlist"
 ms.assetid: ceb3b2bc-0cc4-48d8-9bdc-6a809556e35f
-caps.latest.revision: 35
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

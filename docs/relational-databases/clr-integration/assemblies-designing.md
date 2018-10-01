@@ -4,14 +4,12 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: clr
 ms.topic: "reference"
 helpviewer_keywords: 
   - "designing assemblies [SQL Server]"
   - "assemblies [CLR integration], designing"
 ms.assetid: 9c07f706-6508-41aa-a4d7-56ce354f9061
-caps.latest.revision: 29
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

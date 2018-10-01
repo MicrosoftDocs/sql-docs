@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "01/05/2018"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: scripting
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 keywords: 
   - "install sql server powershell, download sql server powershell"
 ms.assetid: 
-caps.latest.revision: 113
 author: stevestein
 ms.author: sstein
 manager: craigg

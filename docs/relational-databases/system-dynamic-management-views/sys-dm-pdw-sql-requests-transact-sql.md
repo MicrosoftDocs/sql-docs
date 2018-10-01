@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: ""
 ms.prod_service: "sql-data-warehouse, pdw"
-ms.service: sql-data-warehouse
 ms.reviewer: ""
-ms.suite: "sql"
-ms.component: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"

@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "11/09/2015"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "databases"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.databaseproperties.querystore.f1"
 ms.assetid: da47d75e-291a-4305-acef-4b0aaf5215da
-caps.latest.revision: 10
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

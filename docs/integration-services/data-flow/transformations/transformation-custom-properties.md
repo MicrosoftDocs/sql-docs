@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "VB"
@@ -41,7 +39,6 @@ helpviewer_keywords:
   - "Copy Column transformation custom properties [Integration Services]"
   - "Character Map transformation custom properties [Integration Services]"
 ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
-caps.latest.revision: 72
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

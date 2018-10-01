@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_db_selective_xml_index_TSQL"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_db_selective_xml_index procedure"
 ms.assetid: 017301a2-4a23-4e68-82af-134f3d4892b3
-caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg

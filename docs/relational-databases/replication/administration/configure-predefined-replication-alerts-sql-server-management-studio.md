@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: replication
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "alerts [SQL Server replication]"
   - "predefined replication alerts [SQL Server replication]"
 ms.assetid: c0414147-7ffe-4f9a-908c-71c1b5201584
-caps.latest.revision: 24
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "07/24/2015"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "system-functions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "CONTAINSTABLE"
@@ -33,7 +30,6 @@ helpviewer_keywords:
   - "rankings [full-text search]"
   - "less precise (fuzzy) searches [full-text search]"
 ms.assetid: e580c210-cf57-419d-9544-7f650f2ab814
-caps.latest.revision: 69
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

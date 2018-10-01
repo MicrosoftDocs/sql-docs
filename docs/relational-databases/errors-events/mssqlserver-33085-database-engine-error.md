@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 helpviewer_keywords: 
   - "33085 (Database Engine error)"
 ms.assetid: c27b8d1d-668a-4ba8-8b61-25a5ebbc5485
-caps.latest.revision: 9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

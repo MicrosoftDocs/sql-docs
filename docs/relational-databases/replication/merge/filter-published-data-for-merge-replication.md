@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: replication
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "merge replication [SQL Server replication], filtering published data"
   - "replication [SQL Server], filtering published data"
 ms.assetid: 46c5023d-7a3b-4455-becc-e159fcb5d6c4
-caps.latest.revision: 34
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

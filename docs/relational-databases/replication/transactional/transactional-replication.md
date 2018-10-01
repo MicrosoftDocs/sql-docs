@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: replication
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "transactional replication, about transactional replication"
   - "transactional replication"
 ms.assetid: 3ca82fb9-81e6-4c3c-94b3-b15f852b18bd
-caps.latest.revision: 38
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

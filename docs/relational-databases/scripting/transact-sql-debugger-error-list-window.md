@@ -5,8 +5,6 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.technology: scripting
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "VS.ErrorList"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "error list window"
   - "SQL Server Management Studio [SQL Server], error list window"
 ms.assetid: fae6327d-e268-44ae-a474-4a8f8f843129
-caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg

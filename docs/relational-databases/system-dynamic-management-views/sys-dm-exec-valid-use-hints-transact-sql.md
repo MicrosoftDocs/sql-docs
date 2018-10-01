@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "11/17/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sys.dm_exec_valid_use_hints"
@@ -18,7 +16,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_exec_valid_use_hints management view"
 ms.assetid: 65d50589-39c2-4046-92b6-0c4587d8c593
-caps.latest.revision: 5
 author: "pmasl"
 ms.author: "pelopes"
 manager: craigg

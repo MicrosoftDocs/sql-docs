@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "xml"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: xml
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "out-of-memory conditions"
   - "XML schema collections [SQL Server], large"
 ms.assetid: 29b9d839-aaaf-48fb-be17-840c751f36f1
-caps.latest.revision: 9
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

@@ -5,15 +5,12 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.ssis.ssms.isprojectvalidate.f1"
   - "sql13.ssis.ssms.ispackagevalidate.f1"
 ms.assetid: 134e14ce-4f8d-4a20-889a-918014c841d8
-caps.latest.revision: 7
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

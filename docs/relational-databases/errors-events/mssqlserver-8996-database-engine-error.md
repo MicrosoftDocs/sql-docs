@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 helpviewer_keywords: 
   - "8996 (Database Engine error)"
 ms.assetid: 4e655cdc-945a-4a18-95dd-75f050563d26
-caps.latest.revision: 17
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

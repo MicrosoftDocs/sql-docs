@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "08/25/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "databases"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.databaseproperties.mirroring.f1"
 ms.assetid: 5bdcd20f-532d-4ee6-b2c7-18dbb7584a87
-caps.latest.revision: 86
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

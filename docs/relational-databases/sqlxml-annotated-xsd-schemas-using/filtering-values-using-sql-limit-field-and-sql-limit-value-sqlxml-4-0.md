@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "sqlxml"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: xml
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "annotated XSD schemas, filtering values"
@@ -19,7 +16,6 @@ helpviewer_keywords:
   - "sql:limit-value"
   - "filtering [SQLXML]"
 ms.assetid: c0f7ae92-eeec-430e-a66a-f22c3ae64a5e
-caps.latest.revision: 30
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

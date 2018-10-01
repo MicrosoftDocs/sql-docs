@@ -4,22 +4,16 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "replication"
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_changedistributor_password"
   - "sp_changedistributor_password_TSQL"
 helpviewer_keywords: 
   - "sp_changedistributor_password"
 ms.assetid: 4a496e60-414a-4026-ba7a-3e89391d39b7
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg

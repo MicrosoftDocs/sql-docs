@@ -5,9 +5,7 @@ ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: backup-restore
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "backup headers [SQL Server]"
@@ -33,7 +31,6 @@ helpviewer_keywords:
   - "restore history tables [SQL Server]"
   - "listing backed up files"
 ms.assetid: 799b9934-0ec2-4f43-960b-5c9653f18374
-caps.latest.revision: 54
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

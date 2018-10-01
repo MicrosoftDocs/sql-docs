@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Audit Add Role event class"
 ms.assetid: 4ea55922-608c-4db2-8b3f-873862755bba
-caps.latest.revision: 30
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

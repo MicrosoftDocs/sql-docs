@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "08/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "smo"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
 
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "indexes [SMO]"
 ms.assetid: ad1befa5-46e0-4895-b9d3-42852e07607b
-caps.latest.revision: 50
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

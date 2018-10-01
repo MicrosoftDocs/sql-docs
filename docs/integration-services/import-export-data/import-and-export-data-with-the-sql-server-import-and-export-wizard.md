@@ -5,9 +5,7 @@ ms.date: "10/17/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "exporting data"
@@ -23,7 +21,6 @@ helpviewer_keywords:
   - "importing data, SSIS packages"
   - "sources [Integration Services], copying data"
 ms.assetid: c0e4d867-b2a9-4b2a-844b-2fe45be88f81
-caps.latest.revision: 160
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

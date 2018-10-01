@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/22/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "QUERY_CONTEXT_SETTINGS_TSQL"
@@ -20,7 +17,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.query_context_settings catalog view"
 ms.assetid: 3c1887df-6bd8-491e-82fc-d25ad9589faf
-caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg

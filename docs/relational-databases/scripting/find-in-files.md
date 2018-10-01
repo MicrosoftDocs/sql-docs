@@ -6,8 +6,6 @@ ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.technology: scripting
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "vs.findreplace.findinfiles"
@@ -15,7 +13,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "Find in Files dialog box"
 ms.assetid: bf92770a-33df-43ef-85ad-5a9223649b98
-caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg

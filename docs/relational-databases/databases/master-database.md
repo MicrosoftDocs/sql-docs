@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "07/30/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "databases"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "master database [SQL Server], about"
   - "master database [SQL Server]"
 ms.assetid: 660e909f-61eb-406b-bbce-8864dd629ba0
-caps.latest.revision: 50
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

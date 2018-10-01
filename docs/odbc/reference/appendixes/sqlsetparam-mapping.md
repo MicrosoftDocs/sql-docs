@@ -5,15 +5,12 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "mapping deprecated functions [ODBC], SQLSetParam"
   - "SQLSetParam function [ODBC], mapping"
 ms.assetid: 022dfbc0-8d18-4c35-8a28-d9eb16063188
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg

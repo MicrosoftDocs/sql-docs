@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "08/12/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "relational-databases-misc"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "multiserver queries"
@@ -19,7 +16,6 @@ helpviewer_keywords:
   - "target configuration [SQL Server]"
   - "server configuration [SQL Server]"
 ms.assetid: 427911a7-57d4-4542-8846-47c3267a5d9c
-caps.latest.revision: 27
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "sqlxml"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: xml
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "SQLXML, XML Bulk Load"
@@ -16,7 +13,6 @@ helpviewer_keywords:
   - "security [SQLXML], XML Bulk Load"
   - "XML Bulk Load [SQLXML], security"
 ms.assetid: 192fc6d4-ecbc-4a4d-a5cb-55e1f64af318
-caps.latest.revision: 24
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

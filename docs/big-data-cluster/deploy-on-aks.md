@@ -99,4 +99,4 @@ An Azure resource group is a logical group in which Azure resources are deployed
 
 The steps in this article configured a Kubernetes cluster in AKS. The next step is to deploy SQL Server 2019 Big Data to the cluster.
 
-[Deploy SQL Server 2019 Big Data cluster on Kubernetes](quickstart-big-data-cluster-get-started.md)
+[Deploy SQL Server 2019 Big Data cluster on Kubernetes](quickstart-big-data-cluster-deploy.md)

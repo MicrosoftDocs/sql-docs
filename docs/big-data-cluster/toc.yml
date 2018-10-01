@@ -2,8 +2,6 @@
   items:
   - name: What is SQL Server Big Data Cluster?
     href: big-data-cluster-overview.md
-  - name: Release notes
-    href: big-data-cluster-release-notes.md
 - name: Quickstarts
   items:
   - name: Deploy SQL Server Big Data Cluster
@@ -50,12 +48,6 @@
     items:
     - name: Load data with curl
       href: data-ingestion-curl.md
-    - name: Streaming
-      items:
-      - name: Spark streaming
-        href: data-ingestion-streaming-spark.md
-      - name: Stream to data pool
-        href: data-ingestion-streaming-data-pool.md
     - name: Restore a database
       href: data-ingestion-restore-databse.md
   - name: Big Data/Machine Learning

@@ -215,4 +215,4 @@ kubectl get svc -n <name of your cluster>
 
 ## Next steps
 
-After successfully deploying SQL Server Big Data cluster to Kubernetes, [install the big data tools](deploy-big-data-tools.md) and learn more in the [getting started quickstart](quickstart-big-data-cluster-get-started.md).
+After successfully deploying SQL Server Big Data cluster to Kubernetes, [install the big data tools](deploy-big-data-tools.md) and learn more in the [getting started quickstart](quickstart-big-data-cluster-deploy.md).

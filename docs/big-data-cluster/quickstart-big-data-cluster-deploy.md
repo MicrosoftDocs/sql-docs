@@ -138,4 +138,4 @@ Look for the **External-IP** value that is assigned to the service. Then, connec
 Now that SQL Server Big Data Cluster is deployed, try out some of the new capabilities:
 
 > [!div class="nextstepaction"]
-> [Get started with SQL Server Big Data Cluster](quickstart-big-data-cluster-get-started.md)
+> [How to use notebooks in SQL Server 2019 CTP 2.0](notebooks-guidance.md)

@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "persisting data [ADO]"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "data persistence [ADO]"
   - "updating data [ADO], persisting data"
 ms.assetid: 21c162ca-2845-4dd8-a49d-e715aba8c461
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg

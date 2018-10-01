@@ -5,9 +5,7 @@ ms.date: "10/24/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: filestream
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "FileTables [SQL Server], overview"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "FileTable [SQL Server], see FileTables [SQL Server]"
   - "FileTable [SQL Server]"
 ms.assetid: a57b629c-e9ed-48fd-9a48-ed3787d80c8f
-caps.latest.revision: 20
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

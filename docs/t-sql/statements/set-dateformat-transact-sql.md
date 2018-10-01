@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "DATEFORMAT"
@@ -26,7 +24,6 @@ helpviewer_keywords:
   - "date and time [SQL Server], DATEFORMAT"
   - "dateparts [SQL Server], dateformat"
 ms.assetid: da217878-7ec4-477e-aa13-604073c948f8
-caps.latest.revision: 49
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

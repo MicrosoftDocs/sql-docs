@@ -5,9 +5,7 @@ ms.date: "08/02/2016"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "modifying registered server or server group names"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "renaming registered server or server group"
   - "names [SQL Server], registered server or server group"
 ms.assetid: 10e1546b-9edb-400c-8676-2ea1192d6134
-caps.latest.revision: 25
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

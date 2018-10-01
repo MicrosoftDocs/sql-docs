@@ -5,9 +5,7 @@ ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "FILE_IDEX"
@@ -22,7 +20,6 @@ helpviewer_keywords:
   - "identification numbers [SQL Server], files"
   - "file names [SQL Server], FILE_IDEX"
 ms.assetid: 7532fea5-ee5e-4edd-b98b-111a7ba56c8e
-caps.latest.revision: 35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

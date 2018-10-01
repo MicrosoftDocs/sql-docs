@@ -5,16 +5,13 @@ ms.date: "09/18/2018"
 ms.prod: sql
 ms.prod_service: "table-view-index, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: table-view-index
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "edge constraints [SQL Server], attributes"
   - "displaying edge constraint attributes"
   - "viewing edge constraint attributes"
 ms.assetid: b0e57cb7-9b26-4b96-b76a-1f59f5f498c5
-caps.latest.revision: 1
 author: shkale-msft
 ms.author: shkale
 manager: craigg

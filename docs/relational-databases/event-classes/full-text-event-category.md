@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "event classes [SQL Server], Full Text event category"
   - "Full Text event category [SQL Server]"
   - "SQL Server event classes, Full Text event category"
 ms.assetid: 8107a3ea-f891-4134-946b-c64e3a8e92e8
-caps.latest.revision: 27
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

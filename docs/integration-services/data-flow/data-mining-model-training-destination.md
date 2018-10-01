@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.dataminingmodeltrainingdest.f1"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "mining models [Analysis Services], training"
   - "training mining models"
 ms.assetid: 6bc8cbe2-46af-4f7b-93d6-86779313c9d7
-caps.latest.revision: 46
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

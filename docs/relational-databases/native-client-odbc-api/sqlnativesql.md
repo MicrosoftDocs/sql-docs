@@ -5,15 +5,12 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apitype: "DLLExport"
 helpviewer_keywords: 
   - "SQLNativeSql function"
 ms.assetid: 2d999fec-9e22-4514-ad5f-22a64b82f95b
-caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg

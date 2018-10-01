@@ -2,21 +2,17 @@
 title: "ADO Dynamic Properties | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.service: 
 ms.technology: connectivity
 ms.custom: 
 ms.date: "01/19/2017"
 ms.reviewer: 
-ms.suite: sql
 ms.prod: sql  
 ms.prod_service: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "dynamic properties [ADO]"
   - "properties [ADO], dynamic"
 ms.assetid: d7b06d72-f792-4328-93a2-5006b9e2c581
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg

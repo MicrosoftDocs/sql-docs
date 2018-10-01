@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "default subkey [ODBC]"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "subkeys [ODBC], default subkey"
   - "drivers subkey [ODBC]"
 ms.assetid: 9e58b24f-ebfc-4286-a272-0843b4d6f2d5
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg

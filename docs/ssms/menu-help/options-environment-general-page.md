@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-menu"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "VS.TOOLSOPTIONSPAGES.ENVIRONMENT.GENERAL"
   - "VS.ToolsOptionsPages.Environment.SQLEnvironmentOptions"
   - "DevLang-TSQL"
 ms.assetid: c32ccdb8-2cf8-4c78-b474-a3abd3dbbd13
-caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

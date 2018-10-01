@@ -5,9 +5,7 @@ ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "CLOSE_TSQL"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "cursors [SQL Server], closing"
   - "CLOSE statement"
 ms.assetid: 21546874-97e3-4b93-970f-87c27f6b78c7
-caps.latest.revision: 32
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

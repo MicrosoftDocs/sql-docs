@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -14,7 +12,6 @@ helpviewer_keywords:
   - "dynamic management objects [SQL Server], full-text search"
   - "full-text search [SQL Server], dynamic management views"
 ms.assetid: 199dbd5a-29f6-4ef0-8e65-86e32c0aaa3a
-caps.latest.revision: 23
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

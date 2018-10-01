@@ -5,9 +5,7 @@ ms.date: "01/04/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "STATISTICS"
@@ -25,7 +23,6 @@ helpviewer_keywords:
   - "creating statistics [SQL Server]"
   - "NORECOMPUTE clause"
 ms.assetid: b23e2f6b-076c-4e6d-9281-764bdb616ad2
-caps.latest.revision: 105
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

@@ -5,9 +5,7 @@ ms.date: "02/13/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.dm_os_nodes"
@@ -19,7 +17,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_os_nodes dynamic management view"
 ms.assetid: c768b67c-82a4-47f5-850b-0ea282358d50
-caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg

@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "converting data from SQL to c types [ODBC], about converting"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "intervals [ODBC], converting"
   - "year-month intervals [ODBC]"
 ms.assetid: 1233634b-8214-420f-b872-3b2630105ba4
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg

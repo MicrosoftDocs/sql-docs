@@ -3,7 +3,6 @@ title: "Where to find the Reporting Services add-in for SharePoint Products | Mi
 ms.date: 05/30/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint"
-ms.suite: pro-bi
 
 ms.topic: conceptual
 helpviewer_keywords: 

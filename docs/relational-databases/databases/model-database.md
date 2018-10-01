@@ -4,19 +4,15 @@ ms.custom: ""
 ms.date: "03/04/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "databases"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "template databases [SQL Server]"
   - "model database [SQL Server], about model databases"
   - "model database [SQL Server]"
 ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
-caps.latest.revision: 52
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

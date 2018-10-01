@@ -4,15 +4,11 @@ ms.custom: ""
 ms.date: "02/05/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "tutorial"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: quickstart
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
-caps.latest.revision: 26
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

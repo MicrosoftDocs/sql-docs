@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
@@ -15,7 +13,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "ConnectOptionEnum enumeration [ADO]"
 ms.assetid: bff07eeb-dee3-4e4e-9b2d-d56061ea744d
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg

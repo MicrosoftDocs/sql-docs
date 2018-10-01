@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "08/23/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: install
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "firewall systems [SQL Server]"
@@ -25,7 +23,6 @@ helpviewer_keywords:
   - "file system security [SQL Server]"
   - "installing SQL Server, security"
 ms.assetid: cf96155f-30a8-48b7-8d6b-24ce90dafdc7
-caps.latest.revision: 48
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

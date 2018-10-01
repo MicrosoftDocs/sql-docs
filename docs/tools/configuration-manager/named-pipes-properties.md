@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: configuration
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "pipes [SQL Server]"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "pipes [SQL Server], listening on pipes"
   - "Named Pipes [SQL Server], listening on pipes"
 ms.assetid: a5fd5b8e-f889-485b-89e3-d4010ec4c6ec
-caps.latest.revision: 32
 author: "stevestein"
 ms.author: "sstein"
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"

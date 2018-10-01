@@ -5,12 +5,8 @@ ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
 dev_langs: 
   - "VB"
 helpviewer_keywords: 
@@ -22,7 +18,6 @@ helpviewer_keywords:
   - "running packages [Integration Services]"
   - "programmatically load and run packages [SSIS]"
 ms.assetid: 2f9fc1a8-a001-4c54-8c64-63b443725422
-caps.latest.revision: 60
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

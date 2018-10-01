@@ -5,15 +5,12 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "stored procedures [ODBC]"
   - "ODBC CALL syntax"
 ms.assetid: 921a24d1-ea09-4a3c-980a-4dcbd0a43d31
-caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg

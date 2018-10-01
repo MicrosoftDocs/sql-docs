@@ -6,8 +6,6 @@ ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.technology: scripting
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "vs.findresults1"
@@ -16,7 +14,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "Find Results Windows dialog box"
 ms.assetid: 3b68dbb7-26d6-4bc9-bd2c-c27e5dc385c3
-caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg

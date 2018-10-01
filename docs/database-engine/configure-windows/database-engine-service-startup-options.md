@@ -5,9 +5,7 @@ ms.date: "11/23/2017"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: configuration
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "single-user mode [SQL Server], startup option"
@@ -25,7 +23,6 @@ helpviewer_keywords:
   - "startup parameters [SQL Server]"
   - "starting SQL Server, parameters"
 ms.assetid: d373298b-f6cf-458a-849d-7083ecb54ef5
-caps.latest.revision: 80
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "backward compatibility [ODBC], new features in release"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "compatibility [ODBC], new features in release"
   - "ODBC [ODBC], new features"
 ms.assetid: a8fcdd00-6cb3-4871-9489-6018b3d0d65f
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg

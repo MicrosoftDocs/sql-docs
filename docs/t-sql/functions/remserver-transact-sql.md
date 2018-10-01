@@ -5,9 +5,7 @@ ms.date: "09/18/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "@@REMSERVER"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "remote servers [SQL Server], logins"
   - "@@REMSERVER function"
 ms.assetid: 0bb451a9-3866-4064-963d-b74a2f864049
-caps.latest.revision: 23
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

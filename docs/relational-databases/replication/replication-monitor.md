@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "03/20/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: replication
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.rep.monitor.beta2.f1"
 helpviewer_keywords: 
   - "Replication Monitor, help"
 ms.assetid: 39b92198-c3f6-4f25-8560-095848ad652d
-caps.latest.revision: 26
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

@@ -5,9 +5,7 @@ ms.date: "06/25/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "CONCAT_WS"
@@ -17,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "CONCAT_WS function"
 ms.assetid: f1375fd7-a2fd-48bf-922a-4f778f0deb1f
-caps.latest.revision: 5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

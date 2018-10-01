@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Server Memory Change event class"
 ms.assetid: c9836484-39c5-4a89-b080-3567783b6fff
-caps.latest.revision: 29
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

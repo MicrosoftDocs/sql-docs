@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "xml"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: xml
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "unique particle attribution"
@@ -18,7 +15,6 @@ helpviewer_keywords:
   - "UPA constraint rule"
   - "unique particle attribution constraint rule"
 ms.assetid: 6bb879e9-a5ee-402e-94e4-fe8cec5966b0
-caps.latest.revision: 14
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

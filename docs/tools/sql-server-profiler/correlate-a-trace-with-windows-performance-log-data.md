@@ -5,9 +5,7 @@ ms.date: "07/12/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: profiler
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "correlating trace with log data"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "traces [SQL Server], logs"
   - "SQL Server Profiler, correlating trace with log data"
 ms.assetid: 1e4412c8-d27c-4aae-9b35-214128d1d00a
-caps.latest.revision: 10
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

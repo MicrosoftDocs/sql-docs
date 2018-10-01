@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-enginel, sql-data-warehouse, pdw"
-ms.component: "system-compatibility-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.syscolumns"
@@ -21,7 +18,6 @@ helpviewer_keywords:
   - "syscolumns system table"
   - "sys.syscolumns compatibility view"
 ms.assetid: 863fd87b-ff33-4ac5-9aa9-df21140681da
-caps.latest.revision: 32
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

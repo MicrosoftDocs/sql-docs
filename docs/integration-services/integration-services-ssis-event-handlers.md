@@ -5,9 +5,7 @@ ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Integration Services packages, events"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "containers [Integration Services], events"
   - "events [Integration Services], about events"
 ms.assetid: 6f60cf93-35dc-431c-908d-2049c4ab66ba
-caps.latest.revision: 52
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

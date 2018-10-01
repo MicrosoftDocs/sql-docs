@@ -5,16 +5,13 @@ ms.date: "03/02/2017"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: configuration
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "distributed transactions [SQL Server], unresolved transactions"
   - "unresolved transactions"
   - "in-doubt xact resolution option"
 ms.assetid: 3426fd32-cad2-4f2f-8ca9-e0296cc12703
-caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

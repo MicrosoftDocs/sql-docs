@@ -1,15 +1,12 @@
-﻿---
+---
 title: "What's new in Database Engine - SQL Server 2017 | Microsoft Docs"
 ms.custom: ""
 ms.date: 10/24/2017
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: release-landing
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 42f45b23-6509-45e8-8ee7-76a78f99a920
-caps.latest.revision: 15
 author: rothja
 ms.author: jroth
 manager: craigg

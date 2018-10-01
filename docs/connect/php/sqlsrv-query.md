@@ -5,9 +5,7 @@ ms.date: "08/01/2018"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "sqlsrv_query"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "executing queries"
   - "API Reference, sqlsrv_query"
 ms.assetid: 9fa7c4c8-4da8-4299-9893-f61815055aa3
-caps.latest.revision: 46
 author: MightyPen
 ms.author: genemi
 manager: craigg

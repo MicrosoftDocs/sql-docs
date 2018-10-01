@@ -5,9 +5,7 @@ ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "DM_EXEC_EXTERNAL_WORK"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "PolyBase,views"
   - "PolyBase"
 ms.assetid: 7597d97b-1fde-4135-ac35-4af12968f300
-caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg

@@ -1,21 +1,17 @@
-﻿---
+---
 title: "Define Transact-SQL Job Step Options | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-agent"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Transact-SQL job step"
   - "job steps [Transact-SQL]"
   - "SQL Server Agent jobs, Transact-SQL step"
 ms.assetid: b2a47057-f6fb-432b-a7b6-5d61f33a5d9c
-caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

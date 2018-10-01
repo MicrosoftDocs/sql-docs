@@ -5,9 +5,7 @@ ms.date: "10/23/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "WRITETEXT_TSQL"
@@ -23,7 +21,6 @@ helpviewer_keywords:
   - "overwriting data"
   - "data updates [SQL Server], WRITETEXT statement"
 ms.assetid: 80c252fd-a8b8-4a2e-888a-059081ed4109
-caps.latest.revision: 52
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "05/24/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: install
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Enterprise Edition [SQL Server]"

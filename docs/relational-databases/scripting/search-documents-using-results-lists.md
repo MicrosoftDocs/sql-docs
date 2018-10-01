@@ -5,8 +5,6 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.technology: scripting
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "searches [SQL Server Management Studio], result lists"
@@ -14,7 +12,6 @@ helpviewer_keywords:
   - "searches [SQL Server Management Studio], multiple files"
   - "Query Editor [SQL Server Management Studio], search multiple files"
 ms.assetid: 275e1b6c-fbd0-4408-af77-35903f90657c
-caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg

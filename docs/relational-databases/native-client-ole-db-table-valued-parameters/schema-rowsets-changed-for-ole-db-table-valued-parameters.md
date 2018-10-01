@@ -5,15 +5,12 @@ ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "schema rowsets [OLE DB]"
   - "table-valued parameters (OLE DB), schema rowsets changed for (OLE DB)"
 ms.assetid: 581e3ead-53db-44da-8718-f3fc4b5108f1
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg

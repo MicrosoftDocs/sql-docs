@@ -6,9 +6,7 @@ ms.date: "08/08/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -28,7 +26,6 @@ helpviewer_keywords:
   - "auto_create_statistics"
   - "auto_update_statistics"
 ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
-caps.latest.revision: 159
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

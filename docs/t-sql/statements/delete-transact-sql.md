@@ -5,9 +5,7 @@ ms.date: "05/10/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "DELETE"
@@ -25,7 +23,6 @@ helpviewer_keywords:
   - "row removal [SQL Server], DELETE statement"
   - "deleting data"
 ms.assetid: ed6b2105-0f35-408f-ba51-e36ade7ad5b2
-caps.latest.revision: 78
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

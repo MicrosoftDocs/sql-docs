@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "sqlsrv_fetch_object"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "API Reference, sqlsrv_fetch_object"
   - "retrieving data, as an object"
 ms.assetid: 4ce2df2c-083a-4a4d-a1e2-e866e63707d5
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg

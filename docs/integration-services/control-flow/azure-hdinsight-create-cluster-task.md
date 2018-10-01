@@ -5,15 +5,12 @@ ms.date: "02/28/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.afpcreatecltask.f1"
   - "sql14.dts.designer.afpcreatecltask.f1"
 ms.assetid: a8ec413a-38d3-45df-887e-6f5f4d9f8465
-caps.latest.revision: 11
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

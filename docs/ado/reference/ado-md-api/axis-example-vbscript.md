@@ -6,15 +6,12 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "VB"
 helpviewer_keywords: 
   - "ADO MD code examples, VBScript"
 ms.assetid: b4647211-2566-4657-ae7b-3dd761457d7b
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg

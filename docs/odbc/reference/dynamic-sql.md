@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL [ODBC], embedded SQL"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "SQL [ODBC], dynamic SQL"
   - "embedded SQL [ODBC]"
 ms.assetid: 0bfb9ab7-9c15-4433-93bc-bad8b6c9d287
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg

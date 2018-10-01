@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "07/22/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_filestream_force_garbage_collection"
@@ -19,7 +16,6 @@ helpviewer_keywords:
   - "FILESTREAM [SQL Server]"
   - "sp_filestream_force_garbage_collection"
 ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
-caps.latest.revision: 28
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "08/15/2018"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "sqlcmd"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: "database-engine"
-caps.latest.revision: 155
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "08/30/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], PowerShell cmdlets"
   - "Availability Groups [SQL Server], about"
   - "PowerShell [SQL Server], cmdlets"
 ms.assetid: b3fef0d5-b6d7-4386-a0f0-d06c165ad4de
-caps.latest.revision: 36
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

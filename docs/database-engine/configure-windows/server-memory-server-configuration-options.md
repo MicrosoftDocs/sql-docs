@@ -5,9 +5,7 @@ ms.date: "11/27/2017"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: configuration
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Virtual Memory Manager"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "manual memory options [SQL Server]"
   - "memory [SQL Server], servers"
 ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
-caps.latest.revision: 78
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

@@ -5,9 +5,7 @@ ms.date: "09/24/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "FILESTREAM_TSQL"
@@ -46,7 +44,6 @@ helpviewer_keywords:
   - "number of columns per table"
   - "maximum number of bytes per row"
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
-caps.latest.revision: 256
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

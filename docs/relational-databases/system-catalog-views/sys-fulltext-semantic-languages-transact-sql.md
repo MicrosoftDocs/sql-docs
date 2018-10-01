@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "fulltext_semantic_languages"
@@ -20,7 +17,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.fulltext_semantic_languages catalog view"
 ms.assetid: b42a85e6-1db9-4a22-8a70-014574c95198
-caps.latest.revision: 14
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

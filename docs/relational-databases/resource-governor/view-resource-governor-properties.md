@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "07/18/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: performance
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.rg.properties.f1"

@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "linked-servers"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "OLE DB, linked servers"
@@ -21,7 +18,6 @@ helpviewer_keywords:
   - "remote servers [SQL Server], linked servers"
   - "linked servers [SQL Server], about linked servers"
 ms.assetid: 6ef578bf-8da7-46e0-88b5-e310fc908bb0
-caps.latest.revision: 36
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

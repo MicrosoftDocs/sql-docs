@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "cursor library [ODBC], functions"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "ODBC functions [ODBC], cursor library"
   - "ODBC cursor library [ODBC], functions"
 ms.assetid: 2f1d3386-7e59-4d55-a5b4-3440b61343a3
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg

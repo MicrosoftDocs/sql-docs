@@ -3,7 +3,6 @@ title: "Claims to Windows Token Service (c2WTS) and Reporting Services | Microso
 ms.date: 09/15/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint"
-ms.suite: pro-bi
 
 ms.topic: conceptual
 author: markingmyname

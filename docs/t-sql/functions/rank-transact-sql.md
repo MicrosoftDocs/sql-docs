@@ -5,9 +5,7 @@ ms.date: "10/25/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "RANK"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "ranking rows"
   - "RANK function [Transact-SQL]"
 ms.assetid: 2d96f6d2-5db7-4b3c-a63e-213c58e4af55
-caps.latest.revision: 62
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

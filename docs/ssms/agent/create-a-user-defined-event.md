@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-agent"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Agent alerts, user-defined events"
@@ -24,7 +21,6 @@ helpviewer_keywords:
   - "custom events [SQL Server Agent]"
   - "international considerations [SQL Server], alerts"
 ms.assetid: 03d71a35-97fa-4bba-aa9a-23ac9c9cf879
-caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

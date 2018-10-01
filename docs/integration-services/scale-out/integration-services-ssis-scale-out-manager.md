@@ -5,11 +5,8 @@ ms.custom: performance
 ms.date: "12/19/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-caps.latest.revision: 1
 author: "haoqian"
 ms.author: "haoqian"
 manager: craigg

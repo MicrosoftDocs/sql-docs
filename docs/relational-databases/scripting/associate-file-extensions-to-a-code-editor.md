@@ -6,15 +6,12 @@ ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.technology: scripting
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "file extensions [SQL Server]"
   - "associating file extensions [SQL Server]"
   - "Query Editor [SQL Server Management Studio], associating file extensions"
 ms.assetid: 193630f4-93de-4950-8f36-68702531f925
-caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg

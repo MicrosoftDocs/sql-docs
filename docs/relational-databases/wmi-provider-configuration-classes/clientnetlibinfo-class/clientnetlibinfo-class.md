@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "wmi"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
 
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
   - "ClientNetLibInfo Class"
@@ -18,7 +15,6 @@ apilocation:
 helpviewer_keywords: 
   - "ClientNetLibInfo class"
 ms.assetid: 29f7c88d-31a4-49fe-ba21-2642bd9f4d04
-caps.latest.revision: 33
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg

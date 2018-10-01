@@ -4,15 +4,12 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Oracle Data Migration, Client-Side Migration"
   - "Oracle Data Migration,Server-Side Migration"
 ms.assetid: e23c5268-41ed-4e55-9fe7-a11376202a13
-caps.latest.revision: 13
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "v-thobro"

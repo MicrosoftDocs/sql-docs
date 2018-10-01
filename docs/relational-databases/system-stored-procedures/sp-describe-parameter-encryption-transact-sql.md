@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "07/27/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_describe_parameter_encryption"
@@ -18,7 +15,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_describe_parameter_encryption"
 ms.assetid: 706ed441-2881-4934-8d5e-fb357ee067ce
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg

@@ -5,9 +5,7 @@ ms.date: "08/15/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "string functions"
   - "strings [SQL Server]"
 ms.assetid: 6940a83d-5374-4af3-bb27-5d89c8af83ac
-caps.latest.revision: 29
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "03/17/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: performance
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Resource Governor, resource pool alter"
   - "resource pools [SQL Server], alter"
 ms.assetid: 49438285-a011-4dac-bd4f-f35cd90fda61
-caps.latest.revision: 15
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

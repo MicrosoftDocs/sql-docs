@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 ms.assetid: 5d4be07a-38a5-4b25-819c-4dcb4636cc15
-caps.latest.revision: 11
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

@@ -4,7 +4,6 @@ ms.date: 10/19/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: application-integration
-ms.suite: pro-bi
 
 
 ms.topic: reference

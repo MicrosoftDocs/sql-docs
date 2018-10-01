@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "08/12/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "performance-monitor"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "facet See facets"
@@ -22,7 +19,6 @@ helpviewer_keywords:
   - "facets [Policy-Based Management], about facets"
   - "PolicyAdministratorRole role"
 ms.assetid: ef2a7b3b-614b-405d-a04a-2464a019df40
-caps.latest.revision: 76
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

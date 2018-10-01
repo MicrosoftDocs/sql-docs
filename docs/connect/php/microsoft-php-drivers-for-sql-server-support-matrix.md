@@ -5,11 +5,8 @@ ms.date: "07/20/2018"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-caps.latest.revision: 1
 author: "David-Engel"
 ms.author: "v-daveng"
 manager: ""

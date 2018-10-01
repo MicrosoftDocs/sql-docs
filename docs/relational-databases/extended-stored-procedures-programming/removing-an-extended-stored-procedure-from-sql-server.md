@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "extended-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
 
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "deleting extended stored procedures"
@@ -17,7 +14,6 @@ helpviewer_keywords:
   - "extended stored procedures [SQL Server], removing"
   - "dropping extended stored procedures"
 ms.assetid: 7827e574-3f59-4279-9a9b-532582e041cb
-caps.latest.revision: 37
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

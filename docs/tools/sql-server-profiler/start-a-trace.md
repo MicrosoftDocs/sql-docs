@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: profiler
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Profiler, stopping traces"
@@ -23,7 +21,6 @@ helpviewer_keywords:
   - "stopping traces"
   - "starting traces"
 ms.assetid: aeeb38eb-229a-4c8b-ad66-57e9ce45fb6a
-caps.latest.revision: 24
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

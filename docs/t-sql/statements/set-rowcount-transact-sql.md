@@ -5,9 +5,7 @@ ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "SET_ROWCOUNT_TSQL"
@@ -26,7 +24,6 @@ helpviewer_keywords:
   - "limiting rows returned"
   - "queries [SQL Server], stopping"
 ms.assetid: c6966fb7-6421-47ef-98f3-82351f2f6bdc
-caps.latest.revision: 43
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

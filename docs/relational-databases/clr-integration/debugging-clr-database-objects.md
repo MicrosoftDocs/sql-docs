@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: clr
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -14,7 +13,6 @@ helpviewer_keywords:
   - "building database objects [CLR integration], debugging"
   - "common language runtime [SQL Server], debugging"
 ms.assetid: 1332035c-d6ed-424d-8234-46ad21168319
-caps.latest.revision: 46
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

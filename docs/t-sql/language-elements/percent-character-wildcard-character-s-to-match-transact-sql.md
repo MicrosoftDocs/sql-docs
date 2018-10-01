@@ -5,14 +5,8 @@ ms.date: "12/06/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
-applies_to: 
-  - "Azure SQL Data Warehouse"
-  - "Azure SQL Database"
-  - "SQL Server (starting with 2008)"
 f1_keywords: 
   - "%"
   - "%_TSQL"
@@ -26,7 +20,6 @@ helpviewer_keywords:
   - "wildcard characters [SQL Server]"
   - "characters [SQL Server], wildcard"
 ms.assetid: d4cbc1a9-37e1-4101-97fb-e6ac30c1223e
-caps.latest.revision: 23
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

@@ -5,9 +5,7 @@ ms.date: "01/02/2018"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "ALTER_AVAILABILITY_GROUP_TSQL"
@@ -22,7 +20,6 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], configuring"
   - "Availability Groups [SQL Server], Transact-SQL statements"
 ms.assetid: f039d0de-ade7-4aaf-8b7b-d207deb3371a
-caps.latest.revision: 152
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: craigg

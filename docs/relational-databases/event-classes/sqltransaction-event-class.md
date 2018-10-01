@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLTransaction event class"
 ms.assetid: 4e175aa3-4f3d-4b23-a423-4a7a1bd4e84e
-caps.latest.revision: 36
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

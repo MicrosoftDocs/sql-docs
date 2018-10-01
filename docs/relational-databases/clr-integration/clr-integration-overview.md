@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "04/19/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: clr
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -16,7 +15,6 @@ helpviewer_keywords:
   - "managed code [SQL Server], vs. extended stored procedures"
   - "execution at client vs. execution at server [CLR integration]"
 ms.assetid: 5aa176da-3652-4afa-a742-4c40c77ce5c3
-caps.latest.revision: 50
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

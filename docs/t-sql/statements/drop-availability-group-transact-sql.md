@@ -5,9 +5,7 @@ ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "DROP_AVAILABILITY_GROUP_TSQL"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "DROP AVAILABILITY GROUP statement"
   - "Availability Groups [SQL Server], dropping"
 ms.assetid: c1600289-c990-454a-b279-dba0ebd5d63e
-caps.latest.revision: 44
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: craigg

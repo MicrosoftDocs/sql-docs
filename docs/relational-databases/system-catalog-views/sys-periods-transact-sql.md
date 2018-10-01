@@ -4,16 +4,12 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 25e66ed3-2270-4c5c-9f5a-2c0f165a57ca
-caps.latest.revision: 6
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

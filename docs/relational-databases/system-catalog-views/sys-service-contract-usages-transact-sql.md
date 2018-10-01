@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "service_contract_usages"
@@ -20,7 +17,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.service_contract_usages catalog view"
 ms.assetid: 20af425e-1152-4a46-b1ac-94cff5fc9f02
-caps.latest.revision: 29
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

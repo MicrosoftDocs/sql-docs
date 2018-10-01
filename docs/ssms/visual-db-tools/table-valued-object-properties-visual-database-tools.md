@@ -4,16 +4,12 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-visual-db"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "vdt.designers.properties.TVO"
 ms.assetid: eaf06cbf-8242-4483-894f-80ae02a4840e
-caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

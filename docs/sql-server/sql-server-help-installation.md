@@ -5,13 +5,7 @@ ms.date: "12/15/2017"
 ms.prod: sql
 ms.technology: 
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "SQL Server 2014"
-  - "SQL Server 2016"
-  - "SQL Server 2017"
 ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: MightyPen
 ms.author: genemi

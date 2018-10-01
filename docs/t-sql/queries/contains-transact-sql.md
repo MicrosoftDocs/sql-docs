@@ -5,9 +5,7 @@ ms.date: "08/23/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "CONTAINS_TSQL"
@@ -34,7 +32,6 @@ helpviewer_keywords:
   - "inflectional forms [full-text search]"
   - "prefix searches [full-text search]"
 ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
-caps.latest.revision: 117
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/28/2018"
 ms.prod: ""
 ms.prod_service: "sql-database"
-ms.component: 
 ms.reviewer: carlrab, edmaca
-ms.suite: "sql"
 ms.technology: 
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "resource_stats"

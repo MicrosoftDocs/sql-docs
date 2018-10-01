@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "packages [Integration Services], expressions"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "expressions [Integration Services], property expressions"
   - "property expressions [Integration Services]"
 ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
-caps.latest.revision: 69
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

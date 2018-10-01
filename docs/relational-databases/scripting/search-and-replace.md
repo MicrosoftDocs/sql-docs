@@ -5,8 +5,6 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.technology: scripting
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "match case [SQL Server]"
@@ -27,7 +25,6 @@ helpviewer_keywords:
   - "match whole word [SQL Server]"
   - "searches [SQL Server Management Studio], replacing"
 ms.assetid: 3641c7b3-3e3e-4ddd-af82-c15b50004f94
-caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg

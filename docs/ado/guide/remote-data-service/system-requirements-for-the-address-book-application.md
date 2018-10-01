@@ -6,14 +6,11 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "address book application scenario [ADO]"
   - "RDS scenarios [ADO]"
 ms.assetid: da385405-1c9a-478b-9bf6-fba70015324c
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg

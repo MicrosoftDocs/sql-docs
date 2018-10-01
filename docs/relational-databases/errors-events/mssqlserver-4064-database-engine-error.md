@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 helpviewer_keywords: 
   - "4064 (Database Engine error)"
 ms.assetid: 32112b90-0a2f-4834-a027-756811732be7
-caps.latest.revision: 19
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

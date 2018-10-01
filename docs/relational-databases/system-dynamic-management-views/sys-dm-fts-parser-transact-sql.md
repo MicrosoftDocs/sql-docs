@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.dm_fts_parser_TSQL"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "sys.dm_fts_parser dynamic management function"
   - "troubleshooting [SQL Server], full-text search"
 ms.assetid: 2736d376-fb9d-4b28-93ef-472b7a27623a
-caps.latest.revision: 37
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

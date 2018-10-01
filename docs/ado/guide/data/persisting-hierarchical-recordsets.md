@@ -6,15 +6,12 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "hierarchical Recordsets [ADO], persisting"
   - "persisting hierarchical Recordsets [ADO]"
   - "data shaping [ADO], hierarchical Recordsets"
 ms.assetid: 43798bb5-98a6-4ad6-9bf8-78154b3a1827
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg

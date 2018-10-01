@@ -5,16 +5,13 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: profiler
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "events [SQL Server], replaying single event at a time"
   - "traces [SQL Server], replaying"
   - "replaying traces"
 ms.assetid: 220fb192-9636-41a2-b15c-62af6cab8fff
-caps.latest.revision: 21
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

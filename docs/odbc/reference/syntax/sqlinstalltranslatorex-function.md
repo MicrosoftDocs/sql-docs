@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "SQLInstallTranslatorEx"
@@ -19,7 +17,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLInstallTranslatorEx function [ODBC]"
 ms.assetid: a0630602-53c1-4db0-98ce-70d160aedf8d
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg

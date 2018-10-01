@@ -5,9 +5,7 @@ ms.date: "08/09/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "WITH common_table_expression"
@@ -26,7 +24,6 @@ helpviewer_keywords:
   - "MAXRECURSION hint"
   - "clauses [SQL Server], WITH common_table_expression"
 ms.assetid: 27cfb819-3e8d-4274-8bbe-cbbe4d9c2e23
-caps.latest.revision: 60
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

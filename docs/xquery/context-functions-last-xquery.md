@@ -4,22 +4,16 @@ ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: sql
 ms.prod_service: sql
-ms.component: "xquery"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 dev_langs: 
   - "XML"
 helpviewer_keywords: 
   - "last function [XQuery]"
   - "fn:last function"
 ms.assetid: dc92086e-3b01-4b0b-9f54-3bbf306cf7ae
-caps.latest.revision: 25
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

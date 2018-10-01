@@ -1,14 +1,11 @@
-﻿---
+---
 title: "sys.dm_geo_replication_link_status (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/13/2016"
 ms.prod: ""
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.service: "sql-database"
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "dm_geo_replication_link_status"
@@ -20,7 +17,6 @@ helpviewer_keywords:
   - "sys.dm_geo_replication_link_status dynamic management view"
 
 ms.assetid: d763d679-470a-4c21-86ab-dfe98d37e9fd
-caps.latest.revision: 15
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg

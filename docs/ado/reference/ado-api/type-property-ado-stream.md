@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
@@ -17,7 +15,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "Type property [ADO Stream]"
 ms.assetid: f6a17e8c-7a28-48d0-bded-76b9e0cf7639
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg

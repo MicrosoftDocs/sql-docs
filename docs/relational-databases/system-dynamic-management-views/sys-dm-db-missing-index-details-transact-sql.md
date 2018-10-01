@@ -5,9 +5,7 @@ ms.date: "03/20/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.dm_db_missing_index_details"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "missing indexes feature [SQL Server], sys.dm_db_missing_index_details dynamic management view"
   - "sys.dm_db_missing_index_details dynamic management view"
 ms.assetid: ced484ae-7c17-4613-a3f9-6d8aba65a110
-caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg

@@ -5,14 +5,11 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "errors and warnings"
 ms.assetid: fa231d60-4c06-4137-89e8-097c28638c5d
-caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg

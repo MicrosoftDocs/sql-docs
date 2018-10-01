@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "02/01/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: performance
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "viewing logs"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "monitoring [SQL Server], events"
   - "logs [SQL Server], viewing"
 ms.assetid: 168a6c6e-12df-46a9-9904-55d63ca8fe14
-caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

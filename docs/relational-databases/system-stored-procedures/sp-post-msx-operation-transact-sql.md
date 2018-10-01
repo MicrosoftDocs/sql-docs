@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_post_msx_operation"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_post_msx_operation"
 ms.assetid: 085deef8-2709-4da9-bb97-9ab32effdacf
-caps.latest.revision: 29
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

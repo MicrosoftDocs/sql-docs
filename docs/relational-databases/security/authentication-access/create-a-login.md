@@ -5,9 +5,7 @@ ms.date: "08/01/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: security
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.login.status.f1"
@@ -22,7 +20,6 @@ helpviewer_keywords:
   - "Create login [SQL Server]"
   - "SQL Server logins"
 ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
-caps.latest.revision: 29
 author: VanMSFT
 ms.author: vanto
 manager: craigg

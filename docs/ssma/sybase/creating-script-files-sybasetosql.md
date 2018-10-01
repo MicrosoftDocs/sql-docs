@@ -4,20 +4,14 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 helpviewer_keywords: 
   - "Sybase Console,Configuring Settings"
   - "Sybase Console,Script Commands"
   - "Sybase Console,Script File Validation"
   - "Sybase Console,Server Connection Parameters"
 ms.assetid: e6baf106-abbd-4200-b3de-33b4b4f1b294
-caps.latest.revision: 24
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: craigg

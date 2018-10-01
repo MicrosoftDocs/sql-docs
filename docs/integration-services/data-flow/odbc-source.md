@@ -5,9 +5,7 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.ssis.designer.odbcsource.f1"
@@ -15,7 +13,6 @@ f1_keywords:
   - "sql13.ssis.designer.odbcsource.columns.f1"
   - "sql13.ssis.designer.odbcsource.errorhandling.f1"
 ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
-caps.latest.revision: 9
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

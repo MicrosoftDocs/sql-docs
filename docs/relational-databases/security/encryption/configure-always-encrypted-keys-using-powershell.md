@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "05/17/2017"
 ms.prod: sql
 ms.reviewer: vanto
-ms.suite: "sql"
 ms.technology: security
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 3bdf8629-738c-489f-959b-2f5afdaf7d61
 author: VanMSFT

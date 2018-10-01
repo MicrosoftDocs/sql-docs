@@ -1,14 +1,11 @@
-﻿---
+---
 title: "sys.geo_replication_links (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/18/2016"
 ms.prod: ""
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.service: "sql-database"
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "dm_geo_replication_links_TSQL"
@@ -19,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_geo_replication_links dynamic management view"
   - "dm_geo_replication_links dynamic management view"
 ms.assetid: 58911798-1d60-4f28-87ab-2def2bfc3de7
-caps.latest.revision: 14
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg

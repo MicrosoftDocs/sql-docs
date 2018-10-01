@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-visual-db"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "outer joins"
   - "joins [SQL Server], outer"
 ms.assetid: 18de47b1-f936-427d-b852-fe6d20334f71
-caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

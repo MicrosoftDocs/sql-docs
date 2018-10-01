@@ -4,19 +4,13 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 helpviewer_keywords: 
   - "Sybase Console,generating reports"
   - "Sybase Console,refresh-from-database report"
   - "Sybase Console,synchronize-target report"
 ms.assetid: 19278f6a-6d58-4867-9d71-c6228040466e
-caps.latest.revision: 6
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: craigg

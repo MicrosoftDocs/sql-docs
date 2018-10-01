@@ -6,15 +6,12 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "C++"
 helpviewer_keywords: 
   - "Refresh method [ADO], VC++ example"
 ms.assetid: 3dc3443b-a1b0-4fbd-908a-6e274dec981c
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg

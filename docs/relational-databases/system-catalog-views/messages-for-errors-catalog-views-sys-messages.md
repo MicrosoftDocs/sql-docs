@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "messages_TSQL"
@@ -22,7 +19,6 @@ helpviewer_keywords:
   - "sys.messages catalog view"
   - "error numbers [SQL Server]"
 ms.assetid: 8c16ecdf-68f4-4a2a-b594-086e3344e58a
-caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg

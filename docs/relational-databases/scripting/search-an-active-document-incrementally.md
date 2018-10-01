@@ -5,15 +5,12 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.technology: scripting
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "searches [SQL Server Management Studio], incremental"
   - "Query Editor [SQL Server Management Studio], incremental search"
   - "incremental searches [SQL Server Management Studio]"
 ms.assetid: 490bb36c-dd43-4219-9e2a-ff27046b9395
-caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg

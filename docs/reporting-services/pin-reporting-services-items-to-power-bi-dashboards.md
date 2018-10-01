@@ -4,7 +4,6 @@ ms.date: 09/16/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
-ms.suite: pro-bi
 
 ms.topic: conceptual
 helpviewer_keywords: 

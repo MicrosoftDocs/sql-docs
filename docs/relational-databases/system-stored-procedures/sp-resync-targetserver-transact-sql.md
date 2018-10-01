@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "08/09/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_resync_targetserver"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_resync_targetserver"
 ms.assetid: 40e44df7-d3e3-44ee-b149-08aba629a21f
-caps.latest.revision: 31
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

@@ -5,9 +5,7 @@ ms.date: "07/24/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "DECLARE"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "DECLARE statement"
   - "declaring variables"
 ms.assetid: d1635ebb-f751-4de1-8bbc-cae161f90821
-caps.latest.revision: 76
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

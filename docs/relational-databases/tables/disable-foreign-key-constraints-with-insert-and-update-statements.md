@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "table-view-index, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: table-view-index
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "constraints [SQL Server], foreign keys"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "UPDATE statement [SQL Server], foreign key constraints"
   - "INSERT statement [SQL Server], foreign key constraints"
 ms.assetid: 029168d7-085e-4b13-9b86-5644b67c6e24
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg

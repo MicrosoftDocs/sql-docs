@@ -5,9 +5,7 @@ ms.date: "04/11/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sql13.swb.sysdatatype.properties.f1"
@@ -26,7 +24,6 @@ helpviewer_keywords:
   - "alias data types [SQL Server], creating"
   - "data types [SQL Server], creating"
 ms.assetid: 2202236b-e09f-40a1-bbc7-b8cff7488905
-caps.latest.revision: 92
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: backup-restore
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "restoring tables [SQL Server]"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "restoring databases [SQL Server], about restoring databases"
   - "database restores [SQL Server], scenarios"
 ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
-caps.latest.revision: 46
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

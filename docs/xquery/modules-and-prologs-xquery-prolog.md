@@ -4,15 +4,10 @@ ms.custom: ""
 ms.date: "08/09/2016"
 ms.prod: sql
 ms.prod_service: sql
-ms.component: "xquery"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 dev_langs: 
   - "XML"
 helpviewer_keywords: 
@@ -21,7 +16,6 @@ helpviewer_keywords:
   - "namespaces [XQuery]"
   - "default namespace declarations"
 ms.assetid: 03924684-c5fd-44dc-8d73-c6ab90f5e069
-caps.latest.revision: 26
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

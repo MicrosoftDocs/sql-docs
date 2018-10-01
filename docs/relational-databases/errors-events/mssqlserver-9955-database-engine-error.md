@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 helpviewer_keywords: 
   - "9955 (Database Engine error)"
 ms.assetid: 77f30570-7790-4747-b372-eac71c036e19
-caps.latest.revision: 26
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

@@ -5,16 +5,13 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "error messages [ODBC], Visual FoxPro ODBC driver"
   - "Visual FoxPro ODBC driver [ODBC], error messages"
   - "FoxPro ODBC driver [ODBC], error messages"
 ms.assetid: 7b2622e8-ccee-4853-9171-4fb10de0461d
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg

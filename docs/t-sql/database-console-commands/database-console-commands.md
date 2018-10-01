@@ -5,14 +5,11 @@ ms.date: "07/16/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 02265d6f-44fb-4e28-af58-115ba1ef6c75
-caps.latest.revision: 5
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

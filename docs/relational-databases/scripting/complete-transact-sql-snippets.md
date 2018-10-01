@@ -6,15 +6,12 @@ ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.technology: scripting
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "IntelliSense [SQL Server], completing snippets"
   - "snippets [Transact-SQL], completing"
   - "Transact-SQL snippets, completing"
 ms.assetid: a8316a58-bb57-485e-845f-84c23360314c
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg

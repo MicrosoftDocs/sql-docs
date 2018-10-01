@@ -4,16 +4,12 @@ ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: replication
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "MSSQL_REPL020011 error"
 ms.assetid: f72072d7-bbb6-48ad-ac88-afa74aeb4d58
-caps.latest.revision: 16
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

@@ -5,9 +5,7 @@ ms.date: "02/17/2017"
 ms.prod: sql
 ms.prod_service: "table-view-index, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: table-view-index
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "indexes [SQL Server], enabling"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "constraints [SQL Server], enabling"
   - "clustered indexes, enabling disabled indexes"
 ms.assetid: c55c8865-322e-4ab0-ba04-ea1f56735353
-caps.latest.revision: 27
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

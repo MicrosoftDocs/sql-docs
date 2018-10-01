@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
@@ -15,7 +13,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "StringFormatEnum enumeration [ADO]"
 ms.assetid: 28f7d1ec-092b-4323-a39d-d3f882c6c81a
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg

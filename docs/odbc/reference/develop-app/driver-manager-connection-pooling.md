@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "connection pooling [ODBC]"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "connecting to driver [ODBC], connection pooling"
   - "connecting to data source [ODBC], connection pooling"
 ms.assetid: ee95ffdb-5aa1-49a3-beb2-7695b27c3df9
-caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg

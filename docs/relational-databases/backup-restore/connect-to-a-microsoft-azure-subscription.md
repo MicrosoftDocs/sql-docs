@@ -5,7 +5,6 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.technology: backup-restore
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: cca5a270-643f-4677-8802-98464f19f82a
 author: MashaMSFT

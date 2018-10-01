@@ -5,9 +5,7 @@ ms.date: "06/12/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "GRANT_TSQL"
@@ -24,7 +22,6 @@ helpviewer_keywords:
   - "database-level securables [SQL Server]"
   - "permissions [SQL Server], granting"
 ms.assetid: a760c16a-4d2d-43f2-be81-ae9315f38185
-caps.latest.revision: 64
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

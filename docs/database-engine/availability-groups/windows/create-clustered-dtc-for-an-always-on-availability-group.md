@@ -1,15 +1,12 @@
-﻿---
+---
 title: "Create Clustered DTC for an Always On Availability Group | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/30/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 0e332aa4-2c48-4bc4-a404-b65735a02cea
-caps.latest.revision: 2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

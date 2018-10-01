@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "search"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: search
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "full-text indexes [SQL Server], backing up"
@@ -18,7 +15,6 @@ helpviewer_keywords:
   - "full-text indexes [SQL Server], restoring"
   - "restore operations [full-text search]"
 ms.assetid: 6a4080d9-e43f-4b7b-a1da-bebf654c1194
-caps.latest.revision: 62
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

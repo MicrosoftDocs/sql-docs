@@ -5,9 +5,7 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.unionalltrans.f1"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "Union All transformation"
   - "datasets [Integration Services], merging"
 ms.assetid: 942e4b90-9c41-4e9c-a6f3-80b3afe57f2f
-caps.latest.revision: 39
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

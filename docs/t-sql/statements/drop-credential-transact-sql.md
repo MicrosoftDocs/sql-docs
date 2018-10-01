@@ -5,9 +5,7 @@ ms.date: "08/19/2015"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "DROP CREDENTIAL"
@@ -22,7 +20,6 @@ helpviewer_keywords:
   - "deleting credentials"
   - "dropping credentials"
 ms.assetid: df22c826-317d-45a6-b078-186acb65f71e
-caps.latest.revision: 31
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

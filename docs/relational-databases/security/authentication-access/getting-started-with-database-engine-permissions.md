@@ -5,14 +5,11 @@ ms.date: "01/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: security
-ms.tgt_pltfrm: ""
 ms.topic: quickstart
 helpviewer_keywords: 
   - "permissions [SQL Server], getting started"
 ms.assetid: 051af34e-bb5b-403e-bd33-007dc02eef7b
-caps.latest.revision: 15
 author: VanMSFT
 ms.author: vanto
 manager: craigg

@@ -6,15 +6,12 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "C++"
 helpviewer_keywords: 
   - "Cancel method [ADO], VC++ example"
 ms.assetid: 7e0eaa39-0c24-4d8c-87e8-f9c4fd3455e7
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg

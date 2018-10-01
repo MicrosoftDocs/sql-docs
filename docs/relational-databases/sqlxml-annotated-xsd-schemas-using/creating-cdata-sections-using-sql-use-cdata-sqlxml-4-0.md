@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "sqlxml"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: xml
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "markup characters [SQLXML]"
@@ -20,7 +17,6 @@ helpviewer_keywords:
   - "annotated XSD schemas, CDATA sections"
   - "sql:use-cdata"
 ms.assetid: 26d2b9dc-f857-44ff-bcd4-aaf64ff809d0
-caps.latest.revision: 26
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

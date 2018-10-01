@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
@@ -15,7 +13,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "Position property [ADO]"
 ms.assetid: daa8319a-49aa-4c1c-9af6-0b01e9ab2f9d
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg

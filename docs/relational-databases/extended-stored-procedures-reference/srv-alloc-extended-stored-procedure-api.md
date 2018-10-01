@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "extended-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
   - "srv_alloc"
@@ -21,7 +18,6 @@ dev_langs:
 helpviewer_keywords: 
   - "srv_alloc"
 ms.assetid: 91505c59-a273-452f-b71d-5e8205c21863
-caps.latest.revision: 32
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

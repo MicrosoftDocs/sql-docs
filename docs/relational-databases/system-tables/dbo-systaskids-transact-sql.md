@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "08/09/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-tables"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "systaskids_TSQL"
@@ -20,7 +17,6 @@ dev_langs:
 helpviewer_keywords: 
   - "systaskids system table"
 ms.assetid: 45c56d89-4160-4d84-80bf-a7a05488792d
-caps.latest.revision: 24
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

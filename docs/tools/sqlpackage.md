@@ -4,11 +4,8 @@ ms.prod: sql
 ms.technology: ssdt
 ms.date: "2018-06-27"
 ms.reviewer: "alayu; sstein"
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
-caps.latest.revision: 53
 author: "pensivebrian"
 ms.author: "broneill"
 manager: "craigg"

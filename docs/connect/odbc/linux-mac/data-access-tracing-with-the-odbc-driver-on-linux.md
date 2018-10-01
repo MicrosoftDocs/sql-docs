@@ -5,15 +5,12 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "data access tracing"
   - "tracing"
 ms.assetid: 3149173a-588e-47a0-9f50-edb8e9adf5e8
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg

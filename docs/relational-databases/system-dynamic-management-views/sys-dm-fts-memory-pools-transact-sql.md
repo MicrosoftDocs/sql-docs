@@ -5,9 +5,7 @@ ms.date: "03/29/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "dm_fts_memory_pools_TSQL"
@@ -19,7 +17,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_fts_memory_pools dynamic management view"
 ms.assetid: 24747239-cd78-4d55-a00a-19233a457f42
-caps.latest.revision: 29 
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

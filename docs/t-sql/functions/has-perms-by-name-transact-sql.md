@@ -5,9 +5,7 @@ ms.date: "07/29/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "HAS_PERMS_BY_NAME"
@@ -22,7 +20,6 @@ helpviewer_keywords:
   - "testing permissions"
   - "HAS_PERMS_BY_NAME function"
 ms.assetid: eaf8cc82-1047-4144-9e77-0e1095df6143
-caps.latest.revision: 40
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

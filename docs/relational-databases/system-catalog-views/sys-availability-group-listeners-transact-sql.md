@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "availability_group_listeners_TSQL"
@@ -22,7 +19,6 @@ helpviewer_keywords:
   - "sys.availability_group_listeners catalog view"
   - "Availability Groups [SQL Server], listeners"
 ms.assetid: b5e7d1fb-3ffb-4767-8135-604c575016b1
-caps.latest.revision: 19
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

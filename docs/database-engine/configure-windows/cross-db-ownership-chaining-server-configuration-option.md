@@ -5,16 +5,13 @@ ms.date: "08/15/2017"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: configuration
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "cross-database ownership chaining"
   - "cross db ownership chaining option"
   - "chaining ownership"
 ms.assetid: 7b2d49f2-b91c-4aee-a52b-6cc49bed03af
-caps.latest.revision: 27
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

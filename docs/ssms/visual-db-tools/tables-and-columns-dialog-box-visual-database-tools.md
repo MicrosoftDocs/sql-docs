@@ -4,16 +4,12 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-visual-db"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "vdt.dlgbox.tablesandcolumns"
 ms.assetid: 8cf27be1-e66d-4735-a428-9ab4b33af4f5
-caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

@@ -5,9 +5,7 @@ ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "TOP_TSQL"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "TOP clause, about TOP clause"
   - "queries [SQL Server], results"
 ms.assetid: da983c0a-06c5-4cf8-a6a4-7f9d66f34f2c
-caps.latest.revision: 60
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

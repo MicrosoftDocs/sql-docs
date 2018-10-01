@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "08/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "smo"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
 
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "granting permissions [SMO]"
@@ -17,7 +14,6 @@ helpviewer_keywords:
   - "permissions [SMO]"
   - "revoking permissions [SMO]"
 ms.assetid: b0eb0f60-3e56-4880-b645-138832b38a1e
-caps.latest.revision: 24
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

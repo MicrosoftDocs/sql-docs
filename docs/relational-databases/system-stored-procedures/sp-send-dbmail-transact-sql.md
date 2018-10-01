@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "08/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sendmail_sp_TSQL"
@@ -19,7 +16,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_send_dbmail"
 ms.assetid: f1d7a795-a3fd-4043-ac4b-c781e76dab47
-caps.latest.revision: 72
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

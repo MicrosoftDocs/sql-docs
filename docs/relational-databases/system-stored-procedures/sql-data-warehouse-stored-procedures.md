@@ -5,8 +5,6 @@ ms.date: "03/15/2017"
 ms.service: sql-data-warehouse
 ms.component: system-objects
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"

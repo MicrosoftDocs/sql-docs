@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "11/20/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "databases"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "databases [SQL Server], renaming"
   - "renaming databases"
 ms.assetid: 44c69d35-abcb-4da3-9370-5e0bc9a28496
-caps.latest.revision: 19
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

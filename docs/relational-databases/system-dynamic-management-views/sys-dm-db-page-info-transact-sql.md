@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "09/18/2018"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sys.dm_db_page_info"

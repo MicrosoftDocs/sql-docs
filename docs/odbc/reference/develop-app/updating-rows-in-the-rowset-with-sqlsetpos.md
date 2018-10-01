@@ -5,16 +5,13 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "updating data [ODBC], SQLSetPos"
   - "data updates [ODBC], SQLSetPos"
   - "SQLSetPos function [ODBC], updating rows"
 ms.assetid: d83a8c2a-5aa8-4f19-947c-79a817167ee1
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg

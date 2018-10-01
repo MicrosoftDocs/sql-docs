@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
@@ -15,7 +13,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "BookMarkEnum enumeration [ADO]"
 ms.assetid: 55d273c4-ccee-48ef-ba90-8893d04313c8
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg

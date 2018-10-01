@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-compatibility-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.sysmembers_TSQL"
@@ -21,7 +18,6 @@ helpviewer_keywords:
   - "sysmembers system table"
   - "sys.sysmembers compatibility view"
 ms.assetid: ceb18341-f985-4849-ac83-21d67ab7b980
-caps.latest.revision: 38
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

@@ -5,9 +5,7 @@ ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -30,7 +28,6 @@ helpviewer_keywords:
   - "computed sums"
   - "WHERE clause, SELECT statement"
 ms.assetid: 9b9caa3d-e7d0-42e1-b60b-a5572142186c
-caps.latest.revision: 45
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

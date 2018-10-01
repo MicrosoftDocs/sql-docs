@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "ODBC [ODBC], database access"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "standardizing database access [ODBC], data stream protocol"
   - "standard data stream protocol [ODBC]"
 ms.assetid: 1d234d17-2927-4c98-9fae-550c1370f829
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg

@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "time data type [ODBC]"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "compatibility [ODBC], datetime data types"
   - "data types [ODBC], time"
 ms.assetid: 6b9363c9-04bf-4492-a210-7aa15dea4af8
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg

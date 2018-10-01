@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_dbmmonitordropalert_TSQL"
@@ -19,7 +16,6 @@ helpviewer_keywords:
   - "database mirroring [SQL Server], monitoring"
   - "sp_dbmmonitordropalert"
 ms.assetid: fe4a134b-25bf-464e-a5c4-358de215b65a
-caps.latest.revision: 38
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

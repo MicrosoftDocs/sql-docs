@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-functions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "fn_syscollector_get_execution_stats"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "fn_syscollector_get_execution_stats function"
 ms.assetid: 793ad72c-a992-4a8d-8584-bcb6b3b476f1
-caps.latest.revision: 18
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_create_plan_guide"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_create_plan_guide"
 ms.assetid: 5a8c8040-4f96-4c74-93ab-15bdefd132f0
-caps.latest.revision: 82
 author: stevestein
 ms.author: sstein
 manager: craigg

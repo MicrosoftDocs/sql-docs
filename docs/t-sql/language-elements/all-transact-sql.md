@@ -5,13 +5,8 @@ ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server (starting with 2008)"
 f1_keywords: 
   - "ALL_TSQL"
   - "ALL"
@@ -21,7 +16,6 @@ helpviewer_keywords:
   - "single-column set of values [SQL Server]"
   - "ALL (Transact-SQL)"
 ms.assetid: 4b0c002e-1ffd-4425-a980-11fdc1f24af7
-caps.latest.revision: 40
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

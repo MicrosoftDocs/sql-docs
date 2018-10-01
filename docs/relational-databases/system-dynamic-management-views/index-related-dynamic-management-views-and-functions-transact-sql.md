@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/20/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -14,7 +12,6 @@ helpviewer_keywords:
   - "index dynamic management objects [SQL Server]"
   - "dynamic management objects [SQL Server], index"
 ms.assetid: ad9ad40f-b018-4bae-b003-691f08dcefdf
-caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg

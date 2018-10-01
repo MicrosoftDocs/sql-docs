@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "04/12/2018"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "stored procedure support"
 ms.assetid: 9a7c5f60-67f9-4968-a3a8-c256ee481da2
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "sqlxml"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: xml
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "NESTED mode"
@@ -18,7 +15,6 @@ helpviewer_keywords:
   - "AUTO mode"
   - "security [SQLXML], FOR XML"
 ms.assetid: facba279-df93-475b-ad43-0043dc5bae03
-caps.latest.revision: 23
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

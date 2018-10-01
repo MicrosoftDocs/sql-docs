@@ -5,9 +5,7 @@ ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "TRY_CAST_TSQL"
@@ -17,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "TRY_CAST function"
 ms.assetid: ea3a16de-995b-415c-b5f0-9355cf7bb401
-caps.latest.revision: 10
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

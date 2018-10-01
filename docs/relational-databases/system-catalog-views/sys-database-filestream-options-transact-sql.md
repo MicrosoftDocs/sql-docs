@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "database_filestream_options"
@@ -20,7 +17,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.database_filestream_options catalog view"
 ms.assetid: 3383c607-0bbc-456a-ab37-7230f4cbf0e9
-caps.latest.revision: 14
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

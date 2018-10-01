@@ -4,14 +4,10 @@ ms.custom: ""
 ms.date: "08/02/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "relational-databases-misc"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: performance
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 32bd8af8-a832-4dc8-afff-01668e6b2b51
-caps.latest.revision: 14
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

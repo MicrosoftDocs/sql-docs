@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "07/21/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: install
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "query plans [SQL Server], migrating"
   - "upgrading SQL Server, migrating query plans"
   - "plan guides [SQL Server], migrating query plans"
 ms.assetid: 7e02a137-6867-4f6a-a45a-2b02674f7e65
-caps.latest.revision: 19
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"

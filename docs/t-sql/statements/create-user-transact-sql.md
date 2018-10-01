@@ -5,9 +5,7 @@ ms.date: "07/28/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "WITHOUT_LOGIN_TSQL"
@@ -28,7 +26,6 @@ helpviewer_keywords:
   - "users [SQL Server], adding"
   - "users [SQL Server]"
 ms.assetid: 01de7476-4b25-4d58-85b7-1118fe64aa80
-caps.latest.revision: 111
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

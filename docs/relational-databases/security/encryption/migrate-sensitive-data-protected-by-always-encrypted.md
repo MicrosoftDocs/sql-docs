@@ -5,14 +5,11 @@ ms.date: "11/04/2015"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: vanto
-ms.suite: "sql"
 ms.technology: security
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Always Encrypted, bulk import"
 ms.assetid: b2ca08ed-a927-40fb-9059-09496752595e
-caps.latest.revision: 11
 author: aliceku
 ms.author: aliceku
 manager: craigg

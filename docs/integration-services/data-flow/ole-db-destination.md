@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.oledbdest.f1"
@@ -23,7 +21,6 @@ helpviewer_keywords:
   - "fast load data access mode [Integration Services]"
   - "inserting data"
 ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
-caps.latest.revision: 79
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

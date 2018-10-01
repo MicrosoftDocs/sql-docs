@@ -5,14 +5,11 @@ ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "bcp_setbulkmode function"
 ms.assetid: de56f206-1f7e-4c03-bf22-da9c7f9f4433
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg

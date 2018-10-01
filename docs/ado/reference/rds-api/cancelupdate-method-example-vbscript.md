@@ -6,15 +6,12 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "VB"
 helpviewer_keywords: 
   - "CancelUpdate method [ADO], VBScript example"
 ms.assetid: c23912f0-1288-4727-8fb4-f643b8811cf7
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg

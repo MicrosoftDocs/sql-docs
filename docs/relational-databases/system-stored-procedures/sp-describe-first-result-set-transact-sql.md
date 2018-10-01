@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/17/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_describe_first_result_set"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_describe_first_result_set"
 ms.assetid: f2355a75-3a8e-43e6-96ad-4f41038f6d22
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg

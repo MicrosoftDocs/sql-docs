@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_help_spatial_geometry_index"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_help_spatial_geometry_index procedure"
 ms.assetid: f1bcefb1-09c8-4b49-8c51-5d471065849f
-caps.latest.revision: 13
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

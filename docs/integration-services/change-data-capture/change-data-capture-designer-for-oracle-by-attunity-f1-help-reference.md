@@ -5,14 +5,11 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "f1Help"
 ms.assetid: aa2ec095-6a32-44a8-9069-41759d087162
-caps.latest.revision: 7
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

@@ -5,9 +5,7 @@ ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.dm_exec_describe_first_result_set_for_object_TSQL"
@@ -17,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_exec_describe_first_result_set_for_object catalog view"
 ms.assetid: 63b0fde7-95d7-4ad7-a219-a9feacf1bd89
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg

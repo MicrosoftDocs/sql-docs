@@ -1,14 +1,11 @@
-﻿---
+---
 title: "Automated Administration Across an Enterprise | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-agent"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "enterprise automatic administration [SQL Server]"
@@ -21,7 +18,6 @@ helpviewer_keywords:
   - "multiple instances of SQL Server"
   - "target servers [SQL Server]"
 ms.assetid: 44d8365b-42bd-4955-b5b2-74a8a9f4a75f
-caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

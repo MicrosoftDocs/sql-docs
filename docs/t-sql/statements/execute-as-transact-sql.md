@@ -5,9 +5,7 @@ ms.date: "08/10/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "EXECUTE AS"
@@ -22,7 +20,6 @@ helpviewer_keywords:
   - "execution context [SQL Server]"
   - "switching execution context"
 ms.assetid: 613b8271-7f7d-4378-b7a2-5a7698551dbd
-caps.latest.revision: 39
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

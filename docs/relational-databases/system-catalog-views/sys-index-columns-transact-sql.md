@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.index_columns"
@@ -20,7 +17,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.index_columns catalog view"
 ms.assetid: 211471aa-558a-475c-9b94-5913c143ed12
-caps.latest.revision: 47
 author: stevestein
 ms.author: sstein
 manager: craigg

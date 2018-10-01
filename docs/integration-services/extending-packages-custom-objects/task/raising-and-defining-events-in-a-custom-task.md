@@ -5,12 +5,8 @@ ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
 dev_langs: 
   - "VB"
   - "CSharp"
@@ -26,7 +22,6 @@ helpviewer_keywords:
   - "SSIS events, runtime"
   - "IDTSEvents interface"
 ms.assetid: e0898aa1-e90c-4c4e-99d4-708a76efddfd
-caps.latest.revision: 53
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

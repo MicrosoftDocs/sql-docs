@@ -6,14 +6,11 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 helpviewer_keywords: 
   - "IRDSService interface [ADO]"
 ms.assetid: 01044c3a-ed38-4144-bc43-fe38a6d22d04
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg

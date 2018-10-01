@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Audit Backup/Restore event class"
 ms.assetid: 08b0b5fe-298a-483f-b50a-73919a2513ce
-caps.latest.revision: 29
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

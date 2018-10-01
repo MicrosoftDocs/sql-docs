@@ -5,9 +5,7 @@ ms.date: "7/7/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: profiler
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Profiler [SQL Server Profiler], starting"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "SQL Server Profiler, running"
   - "running SQL Server Profiler"
 ms.assetid: 22e57ffa-63b0-4de3-b92e-df297dda1226
-caps.latest.revision: 25
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

@@ -36,8 +36,6 @@
       href: deploy-on-minikube.md
     - name: Deploy on AKS
       href: deploy-on-aks.md
-    - name: Deploy on Multiple VMs
-      href: deploy-on-vms.md
     - name: Install big data tools
       href: deploy-big-data-tools.md
   - name: Data virtualization

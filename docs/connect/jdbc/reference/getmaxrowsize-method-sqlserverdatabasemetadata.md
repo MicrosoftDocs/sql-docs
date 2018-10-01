@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "SQLServerDatabaseMetaData.getMaxRowSize"
@@ -15,7 +13,6 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: abb5a204-76ff-4381-ab2b-896a19b202f3
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg

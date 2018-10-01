@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "SQLServerDataSource.getResponseBuffering()"
@@ -15,7 +13,6 @@ apilocation:
   - "SQLServerDataSource.getResponseBuffering()"
 apitype: "Assembly"
 ms.assetid: 19585a93-88a4-415e-a20e-12ba58cddeaa
-caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg

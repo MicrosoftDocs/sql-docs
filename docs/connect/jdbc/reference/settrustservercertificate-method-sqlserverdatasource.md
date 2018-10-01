@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "setTrustServerCertificate Method (SQLServerDataSource)"
@@ -15,7 +13,6 @@ apilocation:
   - "setTrustServerCertificate Method (SQLServerDataSource)"
 apitype: "Assembly"
 ms.assetid: 6c37b518-147e-4cd9-9eff-b48a3f5888c6
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg

@@ -5,14 +5,11 @@ ms.date: "03/07/2017"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.configdbmsecurwiz.inclwitness.f1"
 ms.assetid: f04b38a4-f4e2-4d4c-bdac-7cc70e5a5684
-caps.latest.revision: 32
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

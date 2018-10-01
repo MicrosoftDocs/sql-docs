@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "SQLServerCallableStatement.getBigDecimal (int, int)"
@@ -15,7 +13,6 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: d9351b35-7046-4852-a612-72d4c46b2bbb
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg

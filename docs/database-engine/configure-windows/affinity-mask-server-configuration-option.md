@@ -5,9 +5,7 @@ ms.date: "03/02/2017"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: configuration
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "default affinity mask option"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "SMP"
   - "DPC"
 ms.assetid: 5823ba29-a75d-4b3e-ba7b-421c07ab3ac1
-caps.latest.revision: 52
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

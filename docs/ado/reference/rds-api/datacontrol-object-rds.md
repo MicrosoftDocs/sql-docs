@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
@@ -16,7 +14,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "DataControl object [ADO]"
 ms.assetid: d85ea4fc-451c-436e-97b8-58f92b149dd0
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg

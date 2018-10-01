@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "10/16/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], availability replicas"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "asynchronous-commit availability mode"
   - "Availability Groups [SQL Server], availability modes"
 ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
-caps.latest.revision: 41
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

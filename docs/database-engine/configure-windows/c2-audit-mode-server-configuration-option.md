@@ -5,9 +5,7 @@ ms.date: "03/02/2017"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: configuration
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "auditing [SQL Server]"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "C2 Audit Mode option"
   - "recording attempts"
 ms.assetid: 5a8d73a6-c4f6-4967-ba11-ecbcfc90b9cc
-caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

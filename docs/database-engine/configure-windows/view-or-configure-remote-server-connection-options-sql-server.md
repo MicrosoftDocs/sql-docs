@@ -5,16 +5,13 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: configuration
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "remote servers [SQL Server], connection options"
   - "servers [SQL Server], remote"
   - "connections [SQL Server], remote servers"
 ms.assetid: 356d3e6b-8514-4bd2-a683-9de147949b2b
-caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

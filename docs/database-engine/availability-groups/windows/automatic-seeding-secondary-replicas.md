@@ -6,14 +6,11 @@ ms.custom: ""
 ms.date: "09/25/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
 - "Automatic seeding [SQL Server], secondary replica"
 ms.assetid: 
-caps.latest.revision: 
 author: "MashaMSFT"
 ms.author: mathoma
 manager: craigg

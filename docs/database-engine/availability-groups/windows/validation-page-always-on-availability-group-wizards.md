@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.addreplicawizard.validation.f1"
@@ -15,7 +13,6 @@ f1_keywords:
 helpviewer_keywords: 
   - ", listeners"
 ms.assetid: c8971556-240c-491a-bc86-9cc72f71a3dd
-caps.latest.revision: 16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "5/4/2018"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daveng

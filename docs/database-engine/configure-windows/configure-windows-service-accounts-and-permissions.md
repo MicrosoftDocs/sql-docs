@@ -5,9 +5,7 @@ ms.date: "05/08/2018"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: configuration
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "startup service states [SQL Server]"
@@ -50,7 +48,6 @@ helpviewer_keywords:
   - "manual startup state [SQL Server]"
   - "accounts [SQL Server], user"
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
-caps.latest.revision: 207
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

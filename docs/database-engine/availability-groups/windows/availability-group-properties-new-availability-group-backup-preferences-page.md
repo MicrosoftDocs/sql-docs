@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.availabilitygroupproperties.backuppreferences.f1"
 helpviewer_keywords: 
   - "read-only routing"
 ms.assetid: 65fff22d-5963-4a8c-8b31-fe9ab247a03e
-caps.latest.revision: 7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

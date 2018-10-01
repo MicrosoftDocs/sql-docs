@@ -9,9 +9,7 @@ ms.date: 05/24/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ---
 # Configure a SQL Server availability group for read-scale on Windows
 

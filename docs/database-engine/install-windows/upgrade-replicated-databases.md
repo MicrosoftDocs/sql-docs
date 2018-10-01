@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "07/24/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: install
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "merge replication database upgrades [SQL Server replication]"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "snapshot replication [SQL Server], upgrading databases"
   - "upgrading replicated databases"
 ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
-caps.latest.revision: 74
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"

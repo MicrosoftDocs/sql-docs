@@ -21,7 +21,7 @@ This quickstart requires that you have already configured an AKS cluster with a 
 
 On your client machine, you need to install [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/). SQL Server Big Data cluster requires a minimum 1.10 version for Kubernetes, for both server and client. To install a specific version on kubectl client, see [Install kubectl binary via curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl). 
 
-To install `mssqlctl` CLI tool on your client, you must install [Python](https://www.python.org/downloads/) minimum version v3.0 and [pip](https://pip.pypa.io/en/stable/installing/). Note that pip is already installed if you are using a Python version of at least 3.4 downloaded from [python.org](https://www.python.org/).
+To install `mssqlctl` CLI tool to manage the SQL Server Big Data cluster on your client machine, you must install [Python](https://www.python.org/downloads/) minimum version v3.0 and [pip3](https://pip.pypa.io/en/stable/installing/). Note that pip is already installed if you are using a Python version of at least 3.4 downloaded from [python.org](https://www.python.org/).
 
 ## Verify AKS configuration
 
@@ -33,7 +33,11 @@ kubectl config view
 
 ## Install mssqlctl CLI management tool
 
-TODO
+Run below command to install `mssqlctl` tool on your client machine.
+
+```bash
+pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.0 mssqlctl  
+```
 
 ## Define environment variables
 
@@ -60,12 +64,12 @@ SET CLUSTER_PLATFORM=aks
 SET CONTROLLER_USERNAME=<controller_admin_name – can be anything>
 SET CONTROLLER_PASSWORD=<controller_admin_password – can be anything, password complexity compliant>
 SET KNOX_PASSWORD=<knox_password – can be anything, password complexity compliant>
-SET MSSQL_SA_PASSWORD=<sa_password_of_master_sql_instances>
+SET MSSQL_SA_PASSWORD=<sa_password_of_master_sql_instance, password complexity compliant>
 
 SET DOCKER_REGISTRY=private-repo.microsoft.com
 SET DOCKER_REPOSITORY=mssql-private-preview
-SET DOCKER_USERNAME=<your username>
-SET DOCKER_PASSWORD=<your password>
+SET DOCKER_USERNAME=<your username, credentials provided by Microsoft>
+SET DOCKER_PASSWORD=<your password, credentials provided by Microsoft>
 SET DOCKER_PRIVATE_REGISTRY="1"
 ```
 
@@ -80,14 +84,17 @@ export CLUSTER_PLATFORM=aks
 export CONTROLLER_USERNAME=<controller_admin_name – can be anything>
 export CONTROLLER_PASSWORD=<controller_admin_password – can be anything, password complexity compliant>
 export KNOX_PASSWORD=<knox_password – can be anything, password complexity compliant>
-export MSSQL_SA_PASSWORD=<sa_password_of_master_sql_instances>
+export MSSQL_SA_PASSWORD=<sa_password_of_master_sql_instance, password complexity compliant>
 
 export DOCKER_REGISTRY=private-repo.microsoft.com
 export DOCKER_REPOSITORY=mssql-private-preview
-export DOCKER_USERNAME=<your username>
-export DOCKER_PASSWORD=<your password>
+export DOCKER_USERNAME=<your username, credentials provided by Microsoft>
+export DOCKER_PASSWORD=<your password, credentials provided by Microsoft>
 export DOCKER_PRIVATE_REGISTRY="1"
 ```
+
+> [!NOTE]
+> During the limited public preview, Docker credentials to download the SQL Server Big Data cluster images are provided to each customer by Microsoft. To request access, register [here](https://aka.ms/eapsignup), and specify your interest to try SQL Server big data clusters.
 
 ## Deploy SQL Server Big Data CLuster
 
@@ -95,7 +102,7 @@ To deploy SQL Server 2019 CTP 2.0 on your Kubernetes cluster, run the following 
 
 TODO
 ```bash
-python mssqlctl.py create cluster <name of your cluster>
+mssqlctl create cluster <name of your cluster>
 ```
 
 > [!NOTE]
@@ -115,14 +122,14 @@ You can see a more granular status and configuration for each pod by running:
 kubectl describe pod <pod name> -n <name of your cluster>
 ```
 
-Once the Controller pod is running, you can use the Cluster Administration Portal to monitor the deployment. You can access the portal using the external IP address and port number for the `service-proxy-lb` (for example: https://<ip-address>:30777). Credentials for accessing the admin portal are the values of `CONTROLLER_USERNAME` and `CONTROLLER_PASSWORD` environment variables provided above.
+Once the Controller pod is running, you can use the Cluster Administration Portal to monitor the deployment. You can access the portal using the external IP address and port number for the `service-proxy-lb` (for example: **https://\<ip-address\>:30777**). Credentials for accessing the admin portal are the values of `CONTROLLER_USERNAME` and `CONTROLLER_PASSWORD` environment variables provided above.
 > [!NOTE]
 > There is going to be a security warning when accessing the web page since we are using auto-generated SSL certificates. In future releases, we will provide the capability to provide your own signed certificates.
  
 
-## <a id="masterip"></a> Get the master instance IP address
+## Connect to SQL Server Master instance and SQL Server Big Data cluster
 
-After the deployment script has completed successfully, you can obtain the IP address of the SQL Server master instance using the steps outlined below. You will use this IP address and port number 31433 to connect to the SQL Server master instance (for example: **\<ip-address\>,31433**). Similarly, for the Knox Gateway endpoint. All cluster endpoints are outlined in the Service Endpoints tab in the Cluster Admin Portal as well.
+After the deployment script has completed successfully, you can obtain the IP address of the SQL Server master instance using the steps outlined below. You will use this IP address and port number 31433 to connect to the SQL Server master instance (for example: **\<ip-address\>,31433**). Similarly, for the SQL Server Big Data endpoint. All cluster endpoints are outlined in the Service Endpoints tab in the Cluster Admin Portal as well.
 
 Azure provides the Azure LoadBalancer service to AKS. Run following command in a cmd or bash window:
 

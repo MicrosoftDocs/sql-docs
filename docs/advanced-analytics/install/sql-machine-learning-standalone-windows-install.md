@@ -131,6 +131,47 @@ The following table lists the paths for R and Python distributions created by Mi
 |SQL Server 2016 R Server (Standalone) |  SQL Server 2016 setup wizard |`C:\Program Files\Microsoft SQL Server\130\R_SERVER`|
 |SQL Server 2016 R Services (In-Database) |SQL Server 2016 setup wizard|`C:\Program Files\Microsoft SQL Server\MSSQL13.<instance_name>\R_SERVICES`|
 
+<a name="apply-cu"></a>
+
+## Apply cumulative updates
+
+We recommend that you apply the latest cumulative update to both the database engine and machine learning components.
+
+Cumulative updates are installed through the Setup program. On an internet-connected device, Setup retrieves cumulative updates for any R or Python features you installed on the standalone server. For an offline device, you must download and transfer the .cab files providing the updates.
+
+1. Start with a baseline instance. You can only apply cumulative updates to existing installations:
+
+  + Machine Learning Server (Standalone) from SQL Server 2017 initial release
+  + R Server (Standalone) from SQL Server 2016 initial release, SQL Server 2016 SP 1, or SQL Server 2016 SP 2
+
+2. On an internet connected device, go to the cumulative update list for your version of SQL Server.
+
+  + [SQL Server 2017 updates](https://sqlserverupdates.com/sql-server-2017-updates/)
+  + [SQL Server 2016 updates](https://sqlserverupdates.com/sql-server-2016-updates/)
+
+3. Download the latest cumulative update. 
+
+4. On an internet-connected device, you can run Setup.
+
+5. For a server without internet connectivity:
+
+   + Get corresponding CAB files for R and Python. For download links, see [CAB downloads for cumulative updates on SQL Server in-database analytics instances](sql-ml-cab-downloads.md).
+
+   + Transfer all files to the same folder on the offline computer.
+
+   + Run Setup. During installation, you are prompted to select the location of the .cab files for R and Python.
+
+6. On a server for which you have enabled operationalization with web nodes and compute nodes, edit **appsettings.json** by adding an "MMLResourcePath" entry, directly under "MMLNativePath":
+
+    ```json
+    "ScorerParameters": {
+        "MMLNativePath": "C:\\Program Files\\Microsoft SQL Server\\140\\R_SERVER\\library\\MicrosoftML\\mxLibs\\x64\\",
+        "MMLResourcePath": "C:\\Program Files\\Microsoft SQL Server\\140\\R_SERVER\\library\\MicrosoftML\\mxLibs\\x64\\"
+    }
+    ```
+
+7. [Run the admin CLI utility](https://docs.microsoft.com/machine-learning-server/operationalize/configure-admin-cli-launch) to restart the web and compute nodes. For steps and syntax, see [Monitor, start, and stop web and compute nodes](https://docs.microsoft.com/machine-learning-server/operationalize/configure-admin-cli-stop-start).
+
 ## Development tools
 
 A development IDE is not installed as part of setup. For more information on how to configure a development environment, see [Set up R tools](../r/set-up-a-data-science-client.md) and [Set up Python tools](../python/setup-python-client-tools-sql.md).

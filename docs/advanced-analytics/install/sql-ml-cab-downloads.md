@@ -4,7 +4,7 @@ description: CAB downloads for SQL Server 2017 Machine Learning Services and SQL
 ms.prod: sql
 ms.technology: machine-learning
   
-ms.date: 08/28/2018
+ms.date: 10/01/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
@@ -13,11 +13,9 @@ manager: cgronlun
 
 # CAB downloads for cumulative updates of SQL Server in-database analytics instances
 
-SQL Server instances configured for in-database analytics include R and Python features that ship in CAB files, installed and serviced through SQL Server Setup. 
+SQL Server instances configured for in-database analytics include R and Python features that ship in CAB files, installed and serviced through SQL Server Setup. On internet-connected devices, CAB updates are typically applied through Windows Update. On disconnected servers, updates must be applied manually. 
 
-On servers connected to the internet, CAB updates are typically applied through Windows Update. Disconnected servers must be updated manually. For instructions about offline installs, see [Install SQL Server machine learning components without internet access](sql-ml-component-install-without-internet-access.md).
-
-This article provides download links to CAB files for each cumulative update of SQL Server 2017 Machine Learning Services (R and Python) - or SQL Server 2016 R Services - so that you can manually update servers disconnected from the internet. 
+This article provides download links to CAB files for each cumulative update of SQL Server 2017 Machine Learning Services (R and Python) - or SQL Server 2016 R Services - so that you can manually update servers disconnected from the internet. For more information about offline installs, see [Install SQL Server machine learning components without internet access](sql-ml-component-install-without-internet-access.md#apply-cu).
 
 ## Prerequisites
 
@@ -26,13 +24,11 @@ Start with a baseline installation.
 + On SQL Server 2017 Machine Learning Services, the initial release is the baseline installation. 
 + On SQL Server 2016 R Services, you can start with the initial release, SP1, or SP2. 
 
-Next, apply [cumulative updates](https://support.microsoft.com/help/4047329) for SQL Server database engine instance.
-
-After you have a baseline installation and have applied cumulative updates to SQL Server, you can perform a [slipstream upgrade](sql-ml-component-install-without-internet-access.md#slipstream-upgrades) to install CAB files with updated machine learning features.
-
-CAB files are listed in reverse chronological order. When you download the CAB files and transfer them to the target computer, place them in a convenient folder such as **Downloads** or the setup user's %temp% folder.
+You can also apply cumulative updates to a standalone server.
 
 ## SQL Server 2017 CABs
+
+CAB files are listed in reverse chronological order. When you download the CAB files and transfer them to the target computer, place them in a convenient folder such as **Downloads** or the setup user's %temp% folder.
 
 Release  |Download link  | Issues addressed | 
 ---------|---------------|-------|
@@ -119,4 +115,8 @@ If you would like to view the source code for Microsoft R, it is available for d
 
 # See also
 
-[Install SQL Server machine learning components without internet access](sql-ml-component-install-without-internet-access.md)
+[Apply cumulative updates on computers without internet access](sql-ml-component-install-without-internet-access.md#apply-cu)
+
+[Apply cumulative updates on computers having internet connectivity](sql-ml-component-install-without-internet-access.md#apply-cu)
+
+[Apply cumulative updates to a standalone server](sql-machine-learning-standalone-windows-install.md#apply-cu)

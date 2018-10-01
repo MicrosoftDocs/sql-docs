@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: stored-procedures
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.executeprocedure.general.f1"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "stored procedures [SQL Server], executing"
   - "user-defined stored procedures [SQL Server]"
 ms.assetid: a0b1337d-2059-4872-8c62-3f967d8b170f
-caps.latest.revision: 38
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

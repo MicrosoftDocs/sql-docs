@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 helpviewer_keywords: 
   - "824 (Database Engine error)"
 ms.assetid: 2aa22246-2712-4fdb-9744-36e7e6f3175e
-caps.latest.revision: 17
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

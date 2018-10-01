@@ -4,16 +4,12 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "xml"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: xml
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "business logic [XML]"
 ms.assetid: 0877fb38-f1a2-43d8-86cf-4754be224dc1
-caps.latest.revision: 18
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

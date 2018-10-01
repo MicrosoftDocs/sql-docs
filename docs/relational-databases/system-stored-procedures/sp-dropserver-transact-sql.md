@@ -1,14 +1,11 @@
-﻿---
+---
 title: "sp_dropserver (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/07/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_dropserver_TSQL"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_dropserver"
 ms.assetid: 0fc83e35-0caa-49a3-a4b6-a1890d4f46ef
-caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg

@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "descriptors [ODBC]"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "descriptor handles [ODBC]"
   - "handles [ODBC], descriptor"
 ms.assetid: ef2cbb93-cd00-40f8-b1d2-5f5723a991aa
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg

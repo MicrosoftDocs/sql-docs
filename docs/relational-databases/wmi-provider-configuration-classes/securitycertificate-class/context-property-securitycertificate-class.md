@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "wmi"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
   - "Context Property (SecurityCertificate Class)"
@@ -19,7 +16,6 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "Context property"
 ms.assetid: 65dd737f-81ce-479e-8219-7b1b4d8f57c7
-caps.latest.revision: 32
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg

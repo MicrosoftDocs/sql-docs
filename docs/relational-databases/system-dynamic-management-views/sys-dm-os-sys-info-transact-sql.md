@@ -5,9 +5,7 @@ ms.date: "04/24/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.dm_os_sys_info_TSQL"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "time [SQL Server], instance started"
   - "starting time"
 ms.assetid: 20f6bc9c-839a-4fa4-b3f3-a6c47d1b69af
-caps.latest.revision: 57
 author: stevestein
 ms.author: sstein
 manager: craigg

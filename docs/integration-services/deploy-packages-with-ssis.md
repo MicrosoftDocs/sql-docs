@@ -5,9 +5,7 @@ ms.date: "08/20/2018"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: quickstart
 helpviewer_keywords: 
   - "deployment tutorial [Integration Services]"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "deployment utility [Integration Services]"
   - "deploying packages [Integration Services], configurations"
 ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
-caps.latest.revision: 27
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

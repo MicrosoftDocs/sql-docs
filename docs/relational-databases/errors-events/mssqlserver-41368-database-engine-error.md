@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 helpviewer_keywords: 
   - "41368 (Database Engine error)"
 ms.assetid: abc71559-4c4d-4cce-a08f-3299dd167842
-caps.latest.revision: 9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

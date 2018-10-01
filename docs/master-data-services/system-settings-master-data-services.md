@@ -5,16 +5,13 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "mds"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "master-data-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Master Data Services, system settings"
   - "system settings [Master Data Services]"
 ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
-caps.latest.revision: 17
 author: leolimsft
 ms.author: lle
 manager: craigg

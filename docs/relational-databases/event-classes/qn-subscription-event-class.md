@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "event classes [SQL Server], QN:Subscription"
 ms.assetid: 4916167e-8541-43b4-900e-ec8e6adcbc34
-caps.latest.revision: 20
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

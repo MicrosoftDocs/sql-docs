@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: replication
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "modifying subscriptions"
@@ -19,7 +16,6 @@ helpviewer_keywords:
   - "pull subscriptions [SQL Server replication], properties"
   - "modifying subscriptions, SQL Server Management Studio"
 ms.assetid: 1601e54f-86f0-49e8-b023-87a5d1def033
-caps.latest.revision: 37
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

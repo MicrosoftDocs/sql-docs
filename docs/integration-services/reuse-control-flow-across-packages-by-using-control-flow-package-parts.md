@@ -5,9 +5,7 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.toolboxcontrolflowtemplate.f1"
@@ -15,7 +13,6 @@ f1_keywords:
   - "sql13.dts.designer.addcopyexistingpackagepart.f1"
   - "sql13.dts.designer.packagepart.general.f1"
 ms.assetid: 1edc91d9-1fab-4fe5-aed3-6f581fe32c18
-caps.latest.revision: 14
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

@@ -4,15 +4,10 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "replication"
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -26,7 +21,6 @@ helpviewer_keywords:
   - "subscriptions [SQL Server replication], system views"
   - "system views [SQL Server], replication"
 ms.assetid: 93e5056d-0d93-4a48-ba33-72762eb995d8
-caps.latest.revision: 14
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

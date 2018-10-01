@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "08/08/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "track-changes"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "change data capture [SQL Server], compared to change tracking"
@@ -21,7 +18,6 @@ helpviewer_keywords:
   - "change data capture [SQL Server], security"
   - "change data capture [SQL Server], other SQL Server features and"
 ms.assetid: 7a34be46-15b4-4b6b-8497-cfd8f9f14234
-caps.latest.revision: 39
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

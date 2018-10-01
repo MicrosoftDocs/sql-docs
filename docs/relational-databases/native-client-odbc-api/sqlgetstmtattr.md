@@ -5,15 +5,12 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apitype: "DLLExport"
 helpviewer_keywords: 
   - "SQLGetStmtAttr function"
 ms.assetid: e64f4f94-eb73-4477-9745-080b6cbdc751
-caps.latest.revision: 43
 author: MightyPen
 ms.author: genemi
 manager: craigg

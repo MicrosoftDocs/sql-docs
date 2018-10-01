@@ -5,14 +5,11 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Data Profiling Task Editor"
 ms.assetid: 6eb853aa-8016-490c-be4f-06ab8d7f5021
-caps.latest.revision: 24
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

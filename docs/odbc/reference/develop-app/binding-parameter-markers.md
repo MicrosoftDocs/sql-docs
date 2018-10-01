@@ -5,15 +5,12 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "parameter markers [ODBC]"
   - "binding parameter markers [ODBC]"
 ms.assetid: fe88c1c2-4ee4-45e0-8500-b8c25c047815
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg

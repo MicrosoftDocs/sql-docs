@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-functions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "smart_admin.fn_backup_db_config"
@@ -21,7 +18,6 @@ helpviewer_keywords:
   - "smart_admin.fn_backup_db_config"
   - "fn_backup_db_config"
 ms.assetid: 7c755d8a-64dd-44b2-be5e-735d30758900
-caps.latest.revision: 14
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

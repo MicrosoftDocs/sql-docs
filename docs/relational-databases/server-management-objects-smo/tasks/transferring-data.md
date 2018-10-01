@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "08/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "smo"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
 
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "data transfers [SMO]"
   - "transferring data"
 ms.assetid: eea255c3-8251-40f0-973b-fe4ef6cb5261
-caps.latest.revision: 50
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

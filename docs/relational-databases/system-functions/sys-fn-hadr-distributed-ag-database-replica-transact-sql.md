@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/14/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-functions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.fn_hadr_distributed_ag_database_replica"
@@ -20,7 +17,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.fn_hadr_distributed_ag_database_replica"
 ms.assetid: 0e6202a1-e872-4f53-99d7-c16b6f712efc
-caps.latest.revision: 9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

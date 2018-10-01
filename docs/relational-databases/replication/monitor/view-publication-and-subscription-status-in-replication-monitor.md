@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: replication
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Log Reader Agent, monitoring"
@@ -22,7 +19,6 @@ helpviewer_keywords:
   - "subscriptions [SQL Server replication], viewing status"
   - "Replication Monitor, publication and subscription status"
 ms.assetid: 16590771-9867-463e-a973-36a5c145ac16
-caps.latest.revision: 34
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

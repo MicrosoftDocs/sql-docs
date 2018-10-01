@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "maintenance-plans"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.SWB.UE.ReduceNoise.F1"
 ms.assetid: 94bf4d93-c0ff-4869-bde7-80c24866092e
-caps.latest.revision: 7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

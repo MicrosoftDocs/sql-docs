@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: clr
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -13,7 +12,6 @@ helpviewer_keywords:
   - "common language runtime [SQL Server], security"
   - "database objects [CLR integration], security"
 ms.assetid: 05d7a471-c5d5-4730-b903-e4edc8157bb4
-caps.latest.revision: 55
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

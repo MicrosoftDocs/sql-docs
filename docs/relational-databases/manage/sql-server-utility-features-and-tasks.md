@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "maintenance-plans"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server utility [SQL Server]"
@@ -19,7 +16,6 @@ helpviewer_keywords:
   - "UCP"
   - "Multi-server management [SQL Server]"
 ms.assetid: 6e6cbd25-6b1c-4e21-9ade-4584e243fd8f
-caps.latest.revision: 10
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

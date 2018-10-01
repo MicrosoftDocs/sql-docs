@@ -5,9 +5,7 @@ ms.date: "01/04/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "dm_exec_query_stats_TSQL"
@@ -19,7 +17,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_exec_query_stats dynamic management view"
 ms.assetid: eb7b58b8-3508-4114-97c2-d877bcb12964
-caps.latest.revision: 64
 author: stevestein
 ms.author: sstein
 manager: craigg

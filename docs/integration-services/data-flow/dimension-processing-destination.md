@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.dimensionprocessingdest.f1"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "destinations [Integration Services], Dimension Processing"
   - "dimensions [Analysis Services], processing"
 ms.assetid: 4c49bb95-7259-42f4-a785-bb6aaf5f8566
-caps.latest.revision: 40
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

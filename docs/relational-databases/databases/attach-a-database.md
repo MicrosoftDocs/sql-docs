@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "10/24/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "databases"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.attachdatabase.f1"
@@ -17,7 +14,6 @@ helpviewer_keywords:
   - "database attaching [SQL Server]"
   - "attaching databases [SQL Server]"
 ms.assetid: b4efb0ae-cfe6-4d81-a4b4-6e4916885caa
-caps.latest.revision: 52
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

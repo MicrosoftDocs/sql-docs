@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: vanto
-ms.suite: "sql"
 ms.technology: security
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "database master key [SQL Server], importing"
 ms.assetid: 16897cc5-db8f-43bb-a38e-6855c82647cf
-caps.latest.revision: 16
 author: aliceku
 ms.author: aliceku
 manager: craigg

@@ -5,12 +5,8 @@ ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
 dev_langs: 
   - "VB"
 helpviewer_keywords: 
@@ -18,7 +14,6 @@ helpviewer_keywords:
   - "transformation components [Integration Services]"
   - "Script component [Integration Services], transformation components"
 ms.assetid: aa1bee1a-ab06-44d8-9944-4bff03d73016
-caps.latest.revision: 64
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

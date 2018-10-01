@@ -5,8 +5,6 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.technology: scripting
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Transact-SQL debugger, Locals Window"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "Transact-SQL debugger, QuickWatch"
   - "Transact-SQL debugger, viewing information"
 ms.assetid: b99819cc-f388-41a1-b304-36e78ce24147
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg

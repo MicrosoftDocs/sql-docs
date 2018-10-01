@@ -4,14 +4,10 @@ ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "in-memory-oltp"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: f43faad4-2182-4b43-a76a-0e3b405816d1
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg

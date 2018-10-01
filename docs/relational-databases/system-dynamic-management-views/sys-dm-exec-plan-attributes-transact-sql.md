@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "10/20/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.dm_exec_plan_attributes_TSQL"
@@ -18,7 +16,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_exec_plan_attributes dynamic management function"
 ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
-caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg

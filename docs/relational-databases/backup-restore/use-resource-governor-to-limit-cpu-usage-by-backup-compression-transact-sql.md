@@ -5,9 +5,7 @@ ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: backup-restore
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "backup compression [SQL Server], Resource Governor"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "backups [SQL Server], compression"
   - "Resource Governor, backup compression"
 ms.assetid: 01796551-578d-4425-9b9e-d87210f7ba72
-caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

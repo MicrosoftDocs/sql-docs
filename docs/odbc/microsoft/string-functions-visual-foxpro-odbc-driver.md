@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "ODBC string functions [ODBC]"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "Visual FoxPro ODBC driver [ODBC], string functions"
   - "FoxPro ODBC driver [ODBC], string functions"
 ms.assetid: 1974fd26-ef0d-45d5-860b-298917c8e9c3
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg

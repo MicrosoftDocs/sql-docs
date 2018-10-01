@@ -4,14 +4,12 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: clr
 ms.topic: "reference"
 helpviewer_keywords: 
   - "context connections [CLR integration]"
   - "regular connections [CLR integration]"
 ms.assetid: 0c6fe4cb-d846-40b5-8884-35a9c770f5e8
-caps.latest.revision: 24
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

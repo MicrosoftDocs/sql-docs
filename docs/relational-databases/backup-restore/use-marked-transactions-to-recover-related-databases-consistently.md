@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: backup-restore
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "transaction marks [SQL Server]"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "BEGIN TRAN...WITH MARK statement"
   - "two-phase commit"
 ms.assetid: 50a73574-1a69-448e-83dd-9abcc7cb7e1a
-caps.latest.revision: 45
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

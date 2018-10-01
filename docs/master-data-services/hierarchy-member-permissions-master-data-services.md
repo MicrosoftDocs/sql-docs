@@ -5,16 +5,13 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "mds"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "master-data-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "members [Master Data Services], permissions"
   - "permissions [Master Data Services], members"
 ms.assetid: b3880eed-1bf6-4f65-ab23-b08c194cc858
-caps.latest.revision: 11
 author: leolimsft
 ms.author: lle
 manager: craigg

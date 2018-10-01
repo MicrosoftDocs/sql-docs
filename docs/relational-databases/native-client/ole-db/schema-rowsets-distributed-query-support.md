@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "native-client-ole-db"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "DBPROPSET_SQLSERVERSESSION property"
@@ -18,7 +15,6 @@ helpviewer_keywords:
   - "OLE DB rowsets, schema"
   - "rowsets [OLE DB], schema"
 ms.assetid: 11354bb6-be42-4d8d-854c-42dd3dc38656
-caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg

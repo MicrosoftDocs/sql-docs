@@ -5,15 +5,12 @@ ms.date: "03/20/2017"
 ms.prod: sql
 ms.prod_service: "mds"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "master-data-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.mds.configmanager.srvconnect.f1"
 ms.assetid: b2f8c9b9-c31e-4f0d-9095-978709423190
-caps.latest.revision: 10
 author: leolimsft
 ms.author: lle
 manager: craigg

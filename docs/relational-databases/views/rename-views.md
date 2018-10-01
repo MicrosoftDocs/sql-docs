@@ -5,15 +5,12 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "table-view-index, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: table-view-index
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "views [SQL Server], renaming"
   - "renaming views"
 ms.assetid: 5eed0488-81d2-40e8-8fdf-b0a640a591d0
-caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 ms.manager: craigg

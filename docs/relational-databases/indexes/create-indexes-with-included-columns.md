@@ -5,9 +5,7 @@ ms.date: "03/09/2017"
 ms.prod: sql
 ms.prod_service: "table-view-index, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: table-view-index
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "index size [SQL Server]"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "designing indexes [SQL Server], included columns"
   - "nonkey columns"
 ms.assetid: d198648d-fea5-416d-9f30-f9d4aebbf4ec
-caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

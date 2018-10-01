@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_update_data_source"
@@ -21,7 +18,6 @@ helpviewer_keywords:
   - "core.sp_update_data_source stored procedure"
   - "data collector [SQL Server], stored procedures"
 ms.assetid: 66b95f96-6df7-4657-9b3c-86a58c788ca5
-caps.latest.revision: 24
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

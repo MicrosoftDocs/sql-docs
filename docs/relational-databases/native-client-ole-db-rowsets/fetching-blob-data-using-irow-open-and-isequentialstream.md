@@ -5,9 +5,7 @@ ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "fetching BLOB data"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "ISequentialStream interface"
   - "BLOBs, fetching"
 ms.assetid: 439b3976-84e7-4d11-8dba-f668adbc9159
-caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg

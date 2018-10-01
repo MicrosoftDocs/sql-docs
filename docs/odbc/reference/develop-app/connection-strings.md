@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "data sources [ODBC], connection functions"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "connection functions [ODBC]"
   - "ODBC drivers [ODBC], connection functions"
 ms.assetid: 724c7b86-300a-4fa9-ad96-4afa0fdcb3e9
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg

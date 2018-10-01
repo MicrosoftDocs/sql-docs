@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.dm_repl_tranhash"
@@ -18,7 +16,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_repl_tranhash dynamic management view"
 ms.assetid: 0cc52338-e805-4ed4-9835-b19bbf72448e
-caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg

@@ -5,15 +5,12 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 helpviewer_keywords: 
   - "executions view [Integration Services]"
   - "catalog.executions view [Integration Services]"
 ms.assetid: 879f13b0-331d-4dee-a079-edfaca11ae5b
-caps.latest.revision: 32
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

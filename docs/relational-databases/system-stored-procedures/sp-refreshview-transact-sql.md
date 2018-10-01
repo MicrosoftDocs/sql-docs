@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_refreshview"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_refreshview"
 ms.assetid: 9ce1d07c-ee66-4a83-8c73-cd2cc104dd08
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "08/09/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_help_targetservergroup_TSQL"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_help_targetservergroup"
 ms.assetid: ec3a4a68-b591-431c-9518-053ede522d0c
-caps.latest.revision: 37
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

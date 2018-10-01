@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Audit Database Management event class"
 ms.assetid: 3e3de528-c3f8-413f-a6b9-d324ca95ad8e
-caps.latest.revision: 19
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

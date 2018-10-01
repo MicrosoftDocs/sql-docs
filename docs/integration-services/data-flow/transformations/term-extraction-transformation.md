@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.termextractiontrans.f1"
@@ -28,7 +26,6 @@ helpviewer_keywords:
   - "term extractions [Integration Services]"
   - "stemming words [Integration Services]"
 ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
-caps.latest.revision: 61
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

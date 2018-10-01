@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "sqlxml"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: xml
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "ASP applications [SQLXML]"
   - "Active Server Pages"
   - "updategrams [SQLXML], ASP applications"
 ms.assetid: 10eff799-4c39-4b52-8b38-7ea6f68454a8
-caps.latest.revision: 26
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

@@ -5,12 +5,9 @@ ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 ms.assetid: dcbbb714-a051-4805-9e2b-2c2fb647c890
-caps.latest.revision: 19
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

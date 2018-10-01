@@ -5,12 +5,9 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: filestream
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 9ecb49ee-f64e-4d30-a803-e4064a21950a
-caps.latest.revision: 7
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

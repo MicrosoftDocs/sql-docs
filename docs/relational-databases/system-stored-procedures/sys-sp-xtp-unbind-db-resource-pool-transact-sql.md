@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_xtp_unbind_db_resource_pool_TSQL"
@@ -21,7 +18,6 @@ helpviewer_keywords:
   - "sp_xtp_unbind_db_resource_pool"
   - "sys.sp_xtp_unbind_db_resource_pool"
 ms.assetid: 695a796d-087e-4bc8-99d0-ddc342604c75
-caps.latest.revision: 7
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

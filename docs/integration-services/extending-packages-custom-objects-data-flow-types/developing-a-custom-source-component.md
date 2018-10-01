@@ -5,12 +5,8 @@ ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
 dev_langs: 
   - "VB"
   - "CSharp"
@@ -23,7 +19,6 @@ helpviewer_keywords:
   - "custom sources [Integration Services]"
   - "source components [Integration Services]"
 ms.assetid: 4dc0f631-8fd6-4007-b573-ca67f58ca068
-caps.latest.revision: 64
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

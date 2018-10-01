@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "sqlxml"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: xml
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "XPath operators [SQLXML]"
@@ -17,7 +14,6 @@ helpviewer_keywords:
   - "XPath queries [SQLXML], Boolean operators"
   - "operators [SQLXML]"
 ms.assetid: 9928cff5-62ac-42aa-96bf-2e09a1df0bc3
-caps.latest.revision: 25
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

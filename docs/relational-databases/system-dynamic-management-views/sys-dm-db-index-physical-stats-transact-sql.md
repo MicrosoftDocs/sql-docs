@@ -5,9 +5,7 @@ ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "dm_db_index_physical_stats"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "sys.dm_db_index_physical_stats dynamic management function"
   - "fragmentation [SQL Server]"
 ms.assetid: d294dd8e-82d5-4628-aa2d-e57702230613
-caps.latest.revision: 95
 author: stevestein
 ms.author: sstein
 manager: craigg

@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "absolute scrolling [ODBC]"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "scrollable cursors [ODBC]"
   - "cursors [ODBC], scrollable"
 ms.assetid: 3d0ff48d-fef5-4c01-bb1d-a583e6269b66
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg

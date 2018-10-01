@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.xml_schema_namespaces_TSQL"
@@ -20,7 +17,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.xml_schema_namespaces catalog view"
 ms.assetid: 3ed42dd6-929a-41de-80e8-d3a0a488bc7a
-caps.latest.revision: 19
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

@@ -5,9 +5,7 @@ ms.date: "03/13/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "dm_os_memory_clerks"
@@ -19,7 +17,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_os_memory_clerks dynamic management view"
 ms.assetid: 1d556c67-5c12-46d5-aa8c-7ec1bb858df7
-caps.latest.revision: 47
 author: stevestein
 ms.author: sstein
 manager: craigg

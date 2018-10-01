@@ -5,8 +5,6 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.technology: scripting
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "searches [SQL Server Management Studio], incremental"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "navigating code"
   - "Go To command"
 ms.assetid: f63247ff-9751-4e99-8ee3-0772ad4009d0
-caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg

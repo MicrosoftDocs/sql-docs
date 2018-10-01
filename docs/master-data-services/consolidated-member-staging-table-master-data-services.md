@@ -5,16 +5,13 @@ ms.date: "04/01/2016"
 ms.prod: sql
 ms.prod_service: "mds"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "master-data-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "database [Master Data Services], attributes staging table"
   - "attributes staging table [Master Data Services]"
 ms.assetid: 070681ed-be99-49ae-93bd-6402f2134ace
-caps.latest.revision: 14
 author: leolimsft
 ms.author: lle
 manager: craigg

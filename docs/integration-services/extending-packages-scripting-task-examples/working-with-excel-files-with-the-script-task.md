@@ -5,12 +5,8 @@ ms.date: "05/15/2018"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
 dev_langs: 
   - "VB"
 helpviewer_keywords: 
@@ -18,7 +14,6 @@ helpviewer_keywords:
   - "Script task [Integration Services], examples"
   - "Excel [Integration Services]"
 ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
-caps.latest.revision: 35
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

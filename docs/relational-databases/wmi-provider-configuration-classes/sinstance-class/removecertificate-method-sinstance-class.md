@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "wmi"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
   - "RemoveCertificate Method (SInstance Class)"
@@ -19,7 +16,6 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "RemoveCertificate method"
 ms.assetid: 7e5dbafa-a634-4617-9622-510514fce0ce
-caps.latest.revision: 14
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg

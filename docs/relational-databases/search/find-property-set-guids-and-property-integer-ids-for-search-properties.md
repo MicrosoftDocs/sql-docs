@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "search, sql-database"
-ms.component: "search"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: search
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "full-text search [SQL Server], search property lists"
   - "search property lists [SQL Server], configuring"
 ms.assetid: 7db79165-8bcc-4be6-8d40-12d44deda79f
-caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

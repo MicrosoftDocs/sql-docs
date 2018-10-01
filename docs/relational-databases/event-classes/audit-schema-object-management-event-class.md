@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Audit Schema Object Management event class"
 ms.assetid: f38c2380-24e0-4484-806c-d076f4f194cf
-caps.latest.revision: 20
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

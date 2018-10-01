@@ -5,15 +5,12 @@ ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apitype: "DLLExport"
 helpviewer_keywords: 
   - "SQLDrivers function"
 ms.assetid: 775bbbef-3d34-4b1c-b494-73ddad83206f
-caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg

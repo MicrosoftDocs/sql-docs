@@ -4,14 +4,10 @@ ms.custom: ""
 ms.date: "06/01/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "in-memory-oltp"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 38512a22-7e63-436f-9c13-dde7cf5c2202
-caps.latest.revision: 20
 author: Jodebrui
 ms.author: jodebrui
 manager: craigg

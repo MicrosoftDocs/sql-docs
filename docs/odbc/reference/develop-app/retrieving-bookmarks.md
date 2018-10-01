@@ -5,16 +5,13 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "retrieving bookmarks [ODBC]"
   - "result sets [ODBC], bookmarks"
   - "bookmarks [ODBC]"
 ms.assetid: a34c8f09-b786-4835-a44b-b7294c970aff
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg

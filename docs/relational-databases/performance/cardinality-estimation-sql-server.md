@@ -5,16 +5,13 @@ ms.date: "09/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: performance
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "cardinality estimator"
   - "CE (cardinality estimator)"
   - "estimating cardinality"
 ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
-caps.latest.revision: 11
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

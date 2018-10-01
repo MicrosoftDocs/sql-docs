@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: replication
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "replication [SQL Server], distribution"
@@ -21,7 +18,6 @@ helpviewer_keywords:
   - "distribution databases [SQL Server replication]"
   - "merge replication [SQL Server replication], configuring distribution"
 ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
-caps.latest.revision: 44
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

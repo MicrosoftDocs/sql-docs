@@ -5,9 +5,7 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.mergetrans.f1"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "combining datasets"
   - "datasets [Integration Services], merging"
 ms.assetid: cff8690c-07ac-46a0-aab5-20bd4848c677
-caps.latest.revision: 43
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

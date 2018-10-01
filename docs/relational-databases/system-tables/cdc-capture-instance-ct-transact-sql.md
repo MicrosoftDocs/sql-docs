@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "05/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-tables"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "cdc"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "cdc.<capture_instance>_CT"
 ms.assetid: 979c8110-3c54-4e76-953c-777194bc9751
-caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg

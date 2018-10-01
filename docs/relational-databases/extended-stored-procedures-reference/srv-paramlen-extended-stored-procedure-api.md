@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "extended-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
   - "srv_paramlen"
@@ -21,7 +18,6 @@ dev_langs:
 helpviewer_keywords: 
   - "srv_paramlen"
 ms.assetid: d1fe92ff-cad6-4396-8216-125e5642e81e
-caps.latest.revision: 32
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

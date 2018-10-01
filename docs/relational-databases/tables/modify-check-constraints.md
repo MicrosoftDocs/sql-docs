@@ -5,9 +5,7 @@ ms.date: "06/28/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: table-view-index
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "CHECK constraints, modifying"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "constraints [SQL Server], check"
   - "constraints [SQL Server], modifying"
 ms.assetid: f22daef8-e350-40ef-8ff0-b5f87d1d9e56
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg

@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Audit Addlogin event class"
 ms.assetid: 6e0633dc-889e-49ef-bace-3c50958db2dd
-caps.latest.revision: 31
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

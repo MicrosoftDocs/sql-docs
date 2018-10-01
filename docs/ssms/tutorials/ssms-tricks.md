@@ -78,16 +78,19 @@ You can comment and uncomment portions of your text by using the **Comment** but
 7. Highlight everything except for the **Alter Database** command, and then select the **Comment** button:
 
     ![Comment everything](media/ssms-tricks/commenteverything.png)
+    
+    >[NOTE]
+    > The keyboard shortcut to comment text is **CTRL + K, CTRL + C**. 
 
 8. Highlight the **Alter Database** portion of the text, and then select the **Uncomment** button to uncomment it:
 
     ![Uncomment text](media/ssms-tricks/uncomment.png)
     
+    >[!NOTE]
+    > The keyboard shortcut to uncomment text is **CTRL + K, CTRL + U**. 
+    
 9. Select **Execute** to run the uncommented portion of the text. 
 
-Note: Similarly, you can use a keyboard shortcut to replicate the above steps easily. 
-To comment text, type **CTRL + K, CTRL + C**.
-To uncomment text, type **CTRL + K, CTRL + U**.
 
 ## Indent your text
 You can use the indentation buttons on the toolbar to increase or decrease the indent of your text. 

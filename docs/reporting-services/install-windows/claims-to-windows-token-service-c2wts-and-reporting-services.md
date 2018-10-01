@@ -76,7 +76,7 @@ If your environment will use Kerberos constrained delegation, then the SharePoin
 
     * Select **Add** to add a service to delegate to.
 
-    * Select **Users or Computers...*** and enter the account that hosts the service. For example, if a SQL Server is running under an account named *sqlservice*, enter `sqlservice`. 
+    * Select **Users or Computers...&#42;** and enter the account that hosts the service. For example, if a SQL Server is running under an account named *sqlservice*, enter `sqlservice`. 
 	  For the **Report Viewer web part**, this will be the service account for the Reporting Services (Native Mode) Instance.
 
     * Select the service listing. This will show the SPNs that are available on that account. If you don't see the service listed on that account, it may be missing or placed on a different account. you can use the SetSPN utility to adjust SPNs. For the **Report Viewer web part**, you will see the http SPN configured in [Report Viewer web part configuration](https://docs.microsoft.com/en-us/sql/reporting-services/install-windows/claims-to-windows-token-service-c2wts-and-reporting-services?view=sql-server-2017#report-viewer-web-part-configuration).

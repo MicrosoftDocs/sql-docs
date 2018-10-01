@@ -5,9 +5,7 @@ ms.date: "05/01/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "ALTER SERVER AUDIT SPECIFICATION"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "audits [SQL Server], specification"
   - "ALTER SERVER AUDIT SPECIFICATION statement"
 ms.assetid: 9cac288b-940e-4c16-88d6-de06aeed2b47
-caps.latest.revision: 19
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

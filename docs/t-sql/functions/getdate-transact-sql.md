@@ -5,9 +5,7 @@ ms.date: "09/07/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "GETDATE_TSQL"
@@ -29,7 +27,6 @@ helpviewer_keywords:
   - "dates [SQL Server], system date and time"
   - "time [SQL Server], system"
 ms.assetid: bebe3b65-2b3e-4c73-bf80-ff1132c680a7
-caps.latest.revision: 46
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

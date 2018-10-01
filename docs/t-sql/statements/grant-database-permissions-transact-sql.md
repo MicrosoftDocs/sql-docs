@@ -5,9 +5,7 @@ ms.date: "03/05/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "database permissions [SQL Server], granting"
   - "GRANT statement, databases"
 ms.assetid: 499e5ed6-945c-4791-ab45-68dec0b9c289
-caps.latest.revision: 43
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

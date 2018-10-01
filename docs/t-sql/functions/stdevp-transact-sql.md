@@ -5,9 +5,7 @@ ms.date: "03/13/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "STDEVP"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "expressions [SQL Server], statistical standard deviation"
   - "statistical standard deviation"
 ms.assetid: 29f2a906-d084-4464-abc3-4b275ed19442
-caps.latest.revision: 45
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

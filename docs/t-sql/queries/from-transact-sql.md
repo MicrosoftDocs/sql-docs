@@ -5,9 +5,7 @@ ms.date: "03/16/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "JOIN"
@@ -33,7 +31,6 @@ helpviewer_keywords:
   - "UPDATE statement [SQL Server], FROM clause"
   - "derived tables"
 ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
-caps.latest.revision: 97
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

@@ -4,12 +4,9 @@ ms.date: 09/18/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: application-integration
-ms.suite: pro-bi
 
 
 ms.topic: reference
-applies_to: 
-  - "SQL Server 2016 Preview"
 author: markingmyname
 ms.author: maghan
 monikerRange: "= sql-server-2016 || = sqlallproducts-allversions"

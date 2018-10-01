@@ -5,9 +5,7 @@ ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "ERROR_NUMBER_TSQL"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "ERROR_NUMBER function"
   - "CATCH block"
 ms.assetid: 1de85fff-1ca2-4b31-841b-926e571cb150
-caps.latest.revision: 50
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

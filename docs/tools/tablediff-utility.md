@@ -1,15 +1,12 @@
-﻿---
+---
 title: "tablediff Utility | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "tabledif"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "comparing data"
@@ -20,7 +17,6 @@ helpviewer_keywords:
   - "troubleshooting [SQL Server replication], non-convergence"
   - "non-convergence [SQL Server]"
 ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
-caps.latest.revision: 30
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

@@ -3,7 +3,6 @@ title: "Backup and Restore Operations for Reporting Services | Microsoft Docs"
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.suite: pro-bi
 
 
 ms.topic: conceptual

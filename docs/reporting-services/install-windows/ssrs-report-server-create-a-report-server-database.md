@@ -3,7 +3,6 @@ title: "Create a Report Server Database  (SSRS Configuration Manager) | Microsof
 ms.date: 09/20/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.suite: pro-bi
 
 ms.topic: conceptual
 author: markingmyname

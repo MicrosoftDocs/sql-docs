@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "10/31/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: performance
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
-caps.latest.revision: 40
 author: "craigg-msft"
 ms.author: "craigg"
 manager: craigg

@@ -4,17 +4,11 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 helpviewer_keywords: 
   - "Installing SSMA 2008, Upgrading"
 ms.assetid: e89b45bd-59c1-4d23-8bd7-3dafc1947448
-caps.latest.revision: 11
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: craigg

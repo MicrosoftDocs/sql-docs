@@ -5,9 +5,7 @@ ms.date: "08/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "STTouches (geometry Data Type)"
@@ -17,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "STTouches (geometry Data Type)"
 ms.assetid: af3650b4-26da-4600-9cc2-1be71dd76a14
-caps.latest.revision: 24
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

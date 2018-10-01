@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "08/09/2016"
 ms.prod: sql
 ms.prod_service: sql
-ms.component: "xquery"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "XML"
@@ -21,7 +18,6 @@ helpviewer_keywords:
   - "comparison operators [XQuery]"
   - "value comparison operators"
 ms.assetid: dc671348-306f-48ef-9e6e-81fc3c7260a6
-caps.latest.revision: 40
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

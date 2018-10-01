@@ -3,7 +3,6 @@ title: "Supported combinations of SharePoint and Reporting Services server | Mic
 ms.date: 07/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint"
-ms.suite: pro-bi
 
 ms.topic: conceptual
 helpviewer_keywords: 

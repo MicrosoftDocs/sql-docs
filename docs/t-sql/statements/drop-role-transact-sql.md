@@ -5,9 +5,7 @@ ms.date: "05/11/2017"
 ms.prod: sql
 ms.prod_service: "sql-data-warehouse, pdw, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "DROP ROLE"
@@ -22,7 +20,6 @@ helpviewer_keywords:
   - "roles [SQL Server], removing"
   - "dropping roles"
 ms.assetid: 1f6f13ae-56a2-4ef1-93f5-8e6151b83e1d
-caps.latest.revision: 50
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

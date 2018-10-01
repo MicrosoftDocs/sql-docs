@@ -5,9 +5,7 @@ ms.date: "09/07/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "COLLATE"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "collations [SQL Server], COLLATE clause"
   - "COLLATE clause"
 ms.assetid: 76763ac8-3e0d-4bbb-aa53-f5e7da021daa
-caps.latest.revision: 25
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

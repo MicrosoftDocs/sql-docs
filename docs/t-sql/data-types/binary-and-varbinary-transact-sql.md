@@ -5,9 +5,7 @@ ms.date: "8/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "binary_TSQL"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "varbinary data type"
   - "binary [SQL Server], about binary data type"
 ms.assetid: bcce65f9-10db-4b3e-bfaf-dfc06c6f820f
-caps.latest.revision: 27
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

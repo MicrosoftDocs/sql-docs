@@ -5,9 +5,7 @@ ms.date: "08/10/2017"
 ms.prod_service: "sql-data-warehouse, pdw"
 ms.reviewer: ""
 ms.service: sql-data-warehouse
-ms.suite: "sql"
 ms.component: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "CREATE EXTERNAL TABLE AS SELECT"

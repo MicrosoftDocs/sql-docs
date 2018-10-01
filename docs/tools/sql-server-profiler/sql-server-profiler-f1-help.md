@@ -5,9 +5,7 @@ ms.date: "07/07/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: profiler
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "sql13.pro.traceproperties.general.f1;"
@@ -41,7 +39,6 @@ helpviewer_keywords:
   - "Replay Configuration dialog box"
   - "Find dialog box"
 ms.assetid: e57b9160-4b78-4353-abb2-bfdbdf523d7a
-caps.latest.revision: 23
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

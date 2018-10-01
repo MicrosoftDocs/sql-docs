@@ -6,15 +6,12 @@ ms.date: "02/09/2017"
 ms.prod: "sql"
 ms.technology: ssdt
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql.data.tools.datacompare.connection.datasources.f1"
   - "sql.data.tools.datacompare.watermark.f1"
   - "sql.data.tools.datacompare.connection.objectselection.f1"
 ms.assetid: 2148e517-ed42-41c6-b753-1ac625f594c8
-caps.latest.revision: 10
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"

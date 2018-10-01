@@ -5,9 +5,7 @@ ms.date: "10/24/2016"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: profiler
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Profiler [SQL Server Profiler], about SQL Server Profiler"
@@ -25,7 +23,6 @@ helpviewer_keywords:
   - "database performance [SQL Server], SQL Server Profiler"
   - "trace [SQL Server]"
 ms.assetid: 3ad5f33d-559e-41a4-bde6-bb98792f7f1a
-caps.latest.revision: 46
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

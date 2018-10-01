@@ -1,15 +1,12 @@
-﻿---
+---
 title: "bcp Utility | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/12/2018"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "bcp"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "bcp utility [SQL Server]"
@@ -29,7 +26,6 @@ helpviewer_keywords:
   - "file importing [SQL Server]"
   - "column exporting [SQL Server]"
 ms.assetid: c0af54f5-ca4a-4995-a3a4-0ce39c30ec38
-caps.latest.revision: 222
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

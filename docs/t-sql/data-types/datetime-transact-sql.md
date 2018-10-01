@@ -5,9 +5,7 @@ ms.date: "7/23/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "datetime_TSQL"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "datetime data type [SQL Server]"
   - "data types [SQL Server], date and time"
 ms.assetid: 9bd1cc5b-227b-4032-95d6-7581ddcc9924
-caps.latest.revision: 64
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

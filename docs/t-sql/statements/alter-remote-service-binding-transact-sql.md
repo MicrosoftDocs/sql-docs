@@ -5,9 +5,7 @@ ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "ALTER REMOTE SERVICE BINDING"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "ALTER REMOTE SERVICE BINDING statement"
   - "modifying remote service bindings"
 ms.assetid: ee620b4a-9375-4eaa-a016-69916c9e1e68
-caps.latest.revision: 37
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

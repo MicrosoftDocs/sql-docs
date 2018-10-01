@@ -5,15 +5,12 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apitype: "DLLExport"
 helpviewer_keywords: 
   - "SQLRowCount function"
 ms.assetid: 967ed3d4-3d31-4485-ac92-027076ebc829
-caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg

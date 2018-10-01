@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "125"
 helpviewer_keywords: 
   - "125 (Database Engine error)"
 ms.assetid: 0f58338d-2ea0-48b8-8a20-c438b0940433
-caps.latest.revision: 11
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "setHostNameInCertificate Method (SQLServerDataSource)"
@@ -15,7 +13,6 @@ apilocation:
   - "setHostNameInCertificate Method (SQLServerDataSource)"
 apitype: "Assembly"
 ms.assetid: 2bcf4f2e-a103-4374-abc4-ffad4ce8e3c0
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg

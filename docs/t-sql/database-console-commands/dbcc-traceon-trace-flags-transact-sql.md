@@ -5,9 +5,7 @@ ms.date: "06/09/2018"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "performance [SQL Server], trace"
   - "debugging [SQL Server], trace flags"
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
-caps.latest.revision: 171
 author: "pmasl"
 ms.author: "pelopes"
 manager: craigg

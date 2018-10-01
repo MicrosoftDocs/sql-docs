@@ -1,20 +1,16 @@
-﻿---
+---
 title: "Choose the Agent Service Account for Multiserver Environments | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-agent"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Agent, service accounts"
   - "multiserver environments [SQL Server], SQL Server Agent service account behavior"
 ms.assetid: a07e2f38-281c-495b-965b-13fad03ba548
-caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

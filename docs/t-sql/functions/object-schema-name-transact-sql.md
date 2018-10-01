@@ -5,9 +5,7 @@ ms.date: "06/25/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "OBJECT_SCHEMA_NAME"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "database objects [SQL Server], names"
   - "OBJECT_SCHEMA_NAME function"
 ms.assetid: 5ba90bb9-d045-4164-963e-e9e96c0b1e8b
-caps.latest.revision: 11
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

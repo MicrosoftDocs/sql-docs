@@ -7,7 +7,6 @@ ms.assetid: 89c2a155-c2fb-4b67-bc19-9b4e03c6d3bc
 ms.service: sql-database
 ms.prod_service: sql-database,sql
 ms.custom: security
-ms.tgt_pltfrm: na
 ms.topic: conceptual
 ms.date: 02/13/2018
 ms.author: giladm

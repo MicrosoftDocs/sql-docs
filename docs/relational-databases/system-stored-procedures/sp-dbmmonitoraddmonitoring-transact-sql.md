@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_dbmmonitoraddmonitoring"
@@ -19,7 +16,6 @@ helpviewer_keywords:
   - "database mirroring [SQL Server], monitoring"
   - "sp_dbmmonitoraddmonitoring"
 ms.assetid: 9489dc30-af29-4363-a172-4645947fc95e
-caps.latest.revision: 36
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

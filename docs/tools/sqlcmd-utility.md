@@ -1,15 +1,12 @@
-﻿---
+---
 title: "sqlcmd Utility | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/12/2018"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "sqlcmd"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "statements [SQL Server], command prompt"
@@ -28,7 +25,6 @@ helpviewer_keywords:
   - "RESET command"
   - "GO command"
 ms.assetid: e1728707-5215-4c04-8320-e36f161b834a
-caps.latest.revision: 155
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

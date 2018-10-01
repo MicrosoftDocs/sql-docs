@@ -5,9 +5,7 @@ ms.date: "12/01/2015"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "SYSUTCDATETIME"
@@ -23,7 +21,6 @@ helpviewer_keywords:
   - "SYSUTCDATETIME function [SQL Server]"
   - "time [SQL Server], system"
 ms.assetid: f14fc2cd-9ea8-4daf-88f4-418cf523ab55
-caps.latest.revision: 39
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

@@ -5,8 +5,6 @@ ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: polybase
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 6591994d-6109-4285-9c5b-ecb355f8a111
 author: rothja

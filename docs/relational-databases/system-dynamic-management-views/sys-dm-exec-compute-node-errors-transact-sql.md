@@ -5,9 +5,7 @@ ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "SYS.DM_EXEC_COMPUTE_NODE_ERRORS_TSQL"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "dm_exec_compute_node_errors"
   - "sys.dm_exec_compute_node_errors management view"
 ms.assetid: 9a03c039-70e4-4974-95d8-d3fa45984ffb
-caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg

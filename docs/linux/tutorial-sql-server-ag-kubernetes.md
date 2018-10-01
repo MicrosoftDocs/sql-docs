@@ -7,8 +7,6 @@ manager: craigg
 ms.date: 08/09/2018
 ms.topic: tutorial
 ms.prod: sql
-ms.component: ""
-ms.suite: "sql"
 ms.custom: "sql-linux,mvc"
 ms.technology: linux
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"

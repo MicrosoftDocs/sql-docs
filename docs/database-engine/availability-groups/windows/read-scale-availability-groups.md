@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "10/24/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid:
-caps.latest.revision: 9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

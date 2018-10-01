@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "mapping replacement functions [ODBC]"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "application upgrades [ODBC], mapping replacement functions"
   - "backward compatibility [ODBC], mapping replacement functions"
 ms.assetid: f5e6d9da-76ef-42cb-b3f5-f640857df732
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg

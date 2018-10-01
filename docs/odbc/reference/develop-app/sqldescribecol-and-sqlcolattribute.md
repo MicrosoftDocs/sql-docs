@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLColAttribute function [ODBC], and SQLDescribeCol"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "retrieving result set meta data [ODBC]"
   - "metadata [ODBC], result set"
 ms.assetid: c2ca442c-03a8-4e0f-9e67-b300bb15962f
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg

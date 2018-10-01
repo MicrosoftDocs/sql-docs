@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "setTrustStorePassword Method (SQLServerDataSource)"
@@ -15,7 +13,6 @@ apilocation:
   - "setTrustStorePassword Method (SQLServerDataSource)"
 apitype: "Assembly"
 ms.assetid: fa87cbde-71cc-4f21-bc07-f8ba2b6a0a3f
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg

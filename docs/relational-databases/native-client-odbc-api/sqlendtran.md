@@ -5,15 +5,12 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apitype: "DLLExport"
 helpviewer_keywords: 
   - "SQLEndTran function"
 ms.assetid: 95cff841-c2d5-4e1e-a18d-f3d4696a5b85
-caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg

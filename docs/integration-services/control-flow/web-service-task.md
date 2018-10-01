@@ -5,9 +5,7 @@ ms.date: "03/02/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.webservicetask.f1"
@@ -17,7 +15,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "Web Service task [Integration Services]"
 ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
-caps.latest.revision: 57
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

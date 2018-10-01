@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "result-generating statements [ODBC]"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "SQL statements [ODBC], batches"
   - "result-free statements [ODBC]"
 ms.assetid: 2f3475d1-3999-4dd8-aba2-a6e1299c95f8
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg

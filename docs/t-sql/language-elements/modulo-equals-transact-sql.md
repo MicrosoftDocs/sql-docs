@@ -5,9 +5,7 @@ ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "%=_TSQL"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "assignment operators, %="
   - "augmented operators, %="
 ms.assetid: 45e35516-1f4c-406b-a580-70a14b087847
-caps.latest.revision: 13
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.parameters_TSQL"
@@ -21,7 +18,6 @@ helpviewer_keywords:
   - "sys.parameters catalog view"
   - "table-valued parameters,sys.parameters"
 ms.assetid: 24e2764b-c8e5-4322-97a4-7407d8b8a92b
-caps.latest.revision: 49
 author: stevestein
 ms.author: sstein
 manager: craigg

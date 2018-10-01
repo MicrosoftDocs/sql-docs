@@ -5,16 +5,13 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "terminating threads [ODBC]"
   - "threads [ODBC]"
   - "multithreaded applications [ODBC]"
 ms.assetid: a2cf98ef-1c71-4742-8ee2-b53fd8e04333
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg

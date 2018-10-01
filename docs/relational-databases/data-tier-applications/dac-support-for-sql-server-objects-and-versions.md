@@ -3,7 +3,6 @@ title: "DAC Support For SQL Server Objects and Versions | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/13/2018"
 ms.prod: sql
-ms.component: "data-tier-applications"
 ms.reviewer: ""
 ms.technology: 
 ms.topic: conceptual

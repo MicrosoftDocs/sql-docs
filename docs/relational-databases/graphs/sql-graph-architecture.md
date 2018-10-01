@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "09/24/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "graphs"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 helpviewer_keywords: 
   - "SQL graph"
   - "SQL graph, architecture"
 ms.assetid: 
-caps.latest.revision: 1
 author: "shkale-msft"
 ms.author: "shkale"
 manager: craigg

@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.dc.collectionsetprop.uploads.f1"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "collection sets [SQL Server], viewing schedules"
   - "schedules [SQL Server], viewing collection set"
 ms.assetid: 26336c98-78c5-414f-8d6a-574fc3af60c4
-caps.latest.revision: 26
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

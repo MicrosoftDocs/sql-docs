@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-compatibility-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sysindexes"
@@ -21,7 +18,6 @@ helpviewer_keywords:
   - "sysindexes system table"
   - "sys.sysindexes compatibility view"
 ms.assetid: f483d89c-35c4-4a08-8f8b-737fd80d13f5
-caps.latest.revision: 57
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

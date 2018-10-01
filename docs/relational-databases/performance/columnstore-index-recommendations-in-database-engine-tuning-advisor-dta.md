@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "01/09/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: performance
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Database Engine Tuning Advisor, columnstore index"
   - "Database Engine Tuning Advisor, columnstore and rowstore indexes"
 ms.assetid: 9fba1139-82cb-4244-a41f-4337a7d0c132
-caps.latest.revision: 9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

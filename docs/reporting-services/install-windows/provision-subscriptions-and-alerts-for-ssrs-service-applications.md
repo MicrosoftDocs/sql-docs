@@ -3,7 +3,6 @@ title: "Provision Subscriptions and Alerts for SSRS Service Applications | Micro
 ms.date: 06/03/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint"
-ms.suite: pro-bi
 
 ms.topic: conceptual
 helpviewer_keywords: 

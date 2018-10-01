@@ -3,7 +3,6 @@ title: "Configure a URL  (SSRS Configuration Manager) | Microsoft Docs"
 ms.date: 05/26/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.suite: pro-bi
 
 ms.topic: conceptual
 helpviewer_keywords: 

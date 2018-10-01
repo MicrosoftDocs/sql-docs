@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "05/31/2018"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssdt
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 author: stevestein
 ms.author: sstein

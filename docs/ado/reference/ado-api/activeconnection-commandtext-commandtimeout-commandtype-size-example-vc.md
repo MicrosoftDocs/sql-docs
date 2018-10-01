@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "C++"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "Direction property [ADO], VC++ example"
   - "ActiveConnection property [ADO], VC++ example"
 ms.assetid: 0d9917c4-9ef0-4d7a-b4ce-4f1fa6ce1817
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg

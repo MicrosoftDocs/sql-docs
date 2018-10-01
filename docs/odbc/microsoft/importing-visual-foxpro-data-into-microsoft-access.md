@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "importing data [ODBC]"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "Visual FoxPro ODBC driver [ODBC], Access"
   - "Visual FoxPro data [ODBC], importing"
 ms.assetid: a3591295-0a76-4e3c-b4fa-8bd4f1cde705
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg

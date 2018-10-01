@@ -3,7 +3,6 @@ title: "Add an Additional Reporting Services Web Front-end to a Farm | Microsoft
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint"
-ms.suite: pro-bi
 
 ms.topic: conceptual
 ms.assetid: d7a11bda-ae26-49ac-b071-37d83cae5afe

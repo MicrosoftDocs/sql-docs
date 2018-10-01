@@ -6,11 +6,8 @@ ms.technology: samples
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 06f89721-8478-4abc-8ada-e9c73b08bf51
-caps.latest.revision: 2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.sequences_TSQL"
@@ -21,7 +18,6 @@ helpviewer_keywords:
   - "sequence number object, sys. sequences catalog view"
   - "sys.sequences catalog view"
 ms.assetid: 0e1b0e32-1cce-40f7-83c8-860ec660138a
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg

@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "02/10/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
   - "dynamic management views [SQL Server], object"
 ms.assetid: f9dfff29-2e68-4c76-9460-c46085dca2e8
-caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg

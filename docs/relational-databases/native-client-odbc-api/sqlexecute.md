@@ -5,14 +5,11 @@ ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "SQLExecute function"
 ms.assetid: 4d7db8b6-611f-4fe4-be85-2a407059de45
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg

@@ -5,12 +5,8 @@ ms.custom: "P360"
 ms.date: "07/17/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: 
-ms.component: "databases"
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: 
 ms.topic: conceptual
 helpviewer_keywords: 
   - "temporary tables [SQL Server], tempdb database"

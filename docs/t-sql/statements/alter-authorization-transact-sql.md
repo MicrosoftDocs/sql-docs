@@ -5,9 +5,7 @@ ms.date: "08/07/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "ALTER_AUTHORIZATION_TSQL"
@@ -25,7 +23,6 @@ helpviewer_keywords:
   - "search property lists [SQL Server], permissions"
   - "TAKE OWNERSHIP"
 ms.assetid: 8c805ae2-91ed-4133-96f6-9835c908f373
-caps.latest.revision: 84
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

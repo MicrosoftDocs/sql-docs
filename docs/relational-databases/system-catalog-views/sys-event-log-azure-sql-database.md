@@ -5,9 +5,6 @@ ms.date: "06/10/2016"
 ms.prod:
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.service: sql-database
-ms.component: 
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "event_log"

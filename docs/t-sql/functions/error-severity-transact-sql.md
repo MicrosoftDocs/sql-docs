@@ -5,9 +5,7 @@ ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "ERROR_SEVERITY_TSQL"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "CATCH block"
   - "ERROR_SEVERITY function"
 ms.assetid: 50228f2f-6949-4d2e-8e43-fad11bf973ab
-caps.latest.revision: 41
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

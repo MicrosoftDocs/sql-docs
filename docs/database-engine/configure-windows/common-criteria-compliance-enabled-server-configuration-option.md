@@ -5,7 +5,6 @@ ms.date: "08/21/2018"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: configuration
 ms.topic: conceptual
 f1_keywords: 

@@ -4,16 +4,9 @@ ms.custom: ""
 ms.date: "08/06/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Data Warehouse"
-  - "SQL Server (starting with 2016)"
 f1_keywords: 
   - "sys.time_zone_info"
   - "sys.time_zone_info_TSQL"
@@ -22,7 +15,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "sys.time_zone_info system table"
 ms.assetid: 3f51a9a4-75f8-4a11-9552-8bf6118b68da
-caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg

@@ -3,7 +3,6 @@ title: "Delete a Data-tier Application | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.component: "data-tier-applications"
 ms.technology: 
 ms.topic: conceptual
 f1_keywords: 

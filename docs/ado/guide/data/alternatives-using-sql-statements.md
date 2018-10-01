@@ -6,15 +6,12 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL statements [ADO]"
   - "editing data [ADO], sql statements"
   - "ADO, SQL statements"
 ms.assetid: 8b528b23-063d-45ea-8dea-6a90d4060b20
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg

@@ -5,9 +5,7 @@ ms.date: "08/11/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "OVER_TSQL"
@@ -24,7 +22,6 @@ helpviewer_keywords:
   - "rowsets [SQL Server], ordering"
   - "OVER clause"
 ms.assetid: ddcef3a6-0341-43e0-ae73-630484b7b398
-caps.latest.revision: 75
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

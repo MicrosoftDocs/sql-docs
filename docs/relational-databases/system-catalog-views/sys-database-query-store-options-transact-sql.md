@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "10/25/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "DATABASE_QUERY_STORE_OPTIONS_TSQL"
@@ -21,7 +18,6 @@ helpviewer_keywords:
   - "database_query_store_options catalog view"
   - "sys.database_query_store_options catalog view"
 ms.assetid: 16b47d55-8019-41ff-ad34-1e0112178067
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg

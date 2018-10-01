@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "collations [SQL Server], view"
 ms.assetid: 1338b4ea-7142-44bc-a3b9-44e54431405f
-caps.latest.revision: 11
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

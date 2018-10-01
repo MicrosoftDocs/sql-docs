@@ -5,9 +5,7 @@ ms.date: "08/28/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "BETWEEN"
@@ -22,7 +20,6 @@ helpviewer_keywords:
   - "BETWEEN operator"
   - "range to test [SQL Server]"
 ms.assetid: a5d5b050-203e-4355-ac85-e08ef5ca7823
-caps.latest.revision: 34
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

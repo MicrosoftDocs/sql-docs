@@ -5,9 +5,7 @@ ms.date: "08/24/2016"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.digitalsigning.f1"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "security [Integration Services], certificates"
   - "signing policies [Integration Services]"
 ms.assetid: a433fbef-1853-4740-9d5e-8a32bc4ffbb2
-caps.latest.revision: 46
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

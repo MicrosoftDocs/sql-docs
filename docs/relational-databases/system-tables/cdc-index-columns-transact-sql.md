@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-tables"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "cdc.index_columns_TSQL"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "cdc.index_columns"
 ms.assetid: 256ec8a5-3031-40a8-9fdb-99db42ea453d
-caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg

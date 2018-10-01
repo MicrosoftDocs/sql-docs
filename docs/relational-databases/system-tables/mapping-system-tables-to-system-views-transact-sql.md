@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-tables"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -17,7 +14,6 @@ helpviewer_keywords:
   - "mapping system tables to system views [SQL Server]"
   - "system tables [SQL Server], mapping to catalog views"
 ms.assetid: a616fce9-b4c1-49da-87a7-9d6f74911d8f
-caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg

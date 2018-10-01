@@ -4,9 +4,7 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Command Line Options, Help Option"
@@ -14,7 +12,6 @@ helpviewer_keywords:
   - "Command Line Options, Variable Value File Option"
   - "Command Line Options,Script File Option"
 ms.assetid: bf4a9313-349e-4ebf-9c89-9f5bb515f9ff
-caps.latest.revision: 12
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "v-thobro"

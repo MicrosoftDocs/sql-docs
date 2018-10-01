@@ -5,15 +5,12 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "retrieving data, as a character stream"
   - "streaming data"
 ms.assetid: 3c0dbca4-abfc-4449-b133-66c819681840
-caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg

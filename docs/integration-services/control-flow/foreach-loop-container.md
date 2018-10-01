@@ -5,9 +5,7 @@ ms.date: "08/22/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.foreachloopcontainer.f1"
@@ -30,7 +28,6 @@ helpviewer_keywords:
   - "foreach enumerators [Integration Services]"
   - "containers [Integration Services], Foreach Loop"
 ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
-caps.latest.revision: 73
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

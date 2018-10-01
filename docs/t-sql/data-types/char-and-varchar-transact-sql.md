@@ -5,9 +5,7 @@ ms.date: "7/23/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "varchar"
@@ -22,7 +20,6 @@ helpviewer_keywords:
   - "variable-length data types [SQL Server]"
   - "varchar data type"
 ms.assetid: 282cd982-f4fb-4b22-b2df-9e8478f13f6a
-caps.latest.revision: 48
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

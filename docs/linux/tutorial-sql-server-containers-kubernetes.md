@@ -7,8 +7,6 @@ manager: craigg
 ms.date: 01/10/2018
 ms.topic: tutorial
 ms.prod: sql
-ms.component: ""
-ms.suite: "sql"
 ms.custom: "sql-linux,mvc"
 ms.technology: linux
 ---

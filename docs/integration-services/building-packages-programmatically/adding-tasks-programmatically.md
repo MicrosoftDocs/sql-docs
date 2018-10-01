@@ -5,12 +5,8 @@ ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services 
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
 dev_langs: 
   - "VB"
   - "CSharp"
@@ -18,7 +14,6 @@ helpviewer_keywords:
   - "tasks [Integration Services], packages"
   - "adding package tasks"
 ms.assetid: 5d4652d5-228c-4238-905c-346dd8503fdf
-caps.latest.revision: 54
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

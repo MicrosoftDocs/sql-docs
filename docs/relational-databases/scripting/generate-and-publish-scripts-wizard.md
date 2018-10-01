@@ -6,8 +6,6 @@ ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.technology: scripting
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql9.swb.generatescriptswizard.chooseviews.f1"
@@ -42,7 +40,6 @@ helpviewer_keywords:
   - "databases [SQL Server], generating scripts"
   - "Publish Database Wizard"
 ms.assetid: 5ee520ba-ec7e-4199-a441-189e9e264b37
-caps.latest.revision: 45
 author: MightyPen
 ms.author: genemi
 manager: craigg

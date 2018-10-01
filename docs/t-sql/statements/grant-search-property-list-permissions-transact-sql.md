@@ -5,9 +5,7 @@ ms.date: "07/26/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "granting permissions [SQL Server], search property lists"
   - "GRANT statement, search property list permissions"
 ms.assetid: bb2d2550-9c0e-4a88-b50c-12e481d4d3ae
-caps.latest.revision: 10
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

@@ -6,11 +6,8 @@ ms.date: "02/09/2017"
 ms.prod: "sql"
 ms.technology: ssdt
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: fe2064bb-e01e-4a12-9f12-a99aa9a5203f
-caps.latest.revision: 6
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"

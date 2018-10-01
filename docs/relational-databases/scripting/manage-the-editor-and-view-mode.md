@@ -5,9 +5,7 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.technology: scripting
 ms.reviewer: ""
-ms.suite: "sql"
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Query Editor [SQL Server Management Studio], managing window behavior"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "displaying line numbers"
   - "view modes [SQL Server Management Studio]"
 ms.assetid: 25c58a14-9f94-4296-9770-7d84c6bc3969
-caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg

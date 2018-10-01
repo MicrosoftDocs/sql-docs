@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "dm_clr_appdomains"
@@ -18,7 +16,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_clr_appdomains dynamic management dynamic management view"
 ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg

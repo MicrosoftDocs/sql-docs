@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "SQLSetConnectAttr"
@@ -19,7 +17,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLSetConnectAttr function [ODBC]"
 ms.assetid: 97fc7445-5a66-4eb9-8e77-10990b5fd685
-caps.latest.revision: 83
 author: MightyPen
 ms.author: genemi
 manager: craigg

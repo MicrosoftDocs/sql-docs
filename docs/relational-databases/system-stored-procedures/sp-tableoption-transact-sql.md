@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "09/11/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_tableoption_TSQL"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_tableoption"
 ms.assetid: 0a57462c-1057-4c7d-bce3-852cc898341d
-caps.latest.revision: 60
 author: stevestein
 ms.author: sstein
 manager: craigg

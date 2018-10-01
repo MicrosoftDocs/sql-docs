@@ -4,13 +4,8 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 helpviewer_keywords: 
   - "creating projects"
   - "new projects"
@@ -20,7 +15,6 @@ helpviewer_keywords:
   - "saving metadata"
   - "saving projects"
 ms.assetid: f2d1f0b0-5394-4adb-b3f3-abd71eb68ca7
-caps.latest.revision: 22
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: craigg

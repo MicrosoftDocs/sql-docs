@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.oledbsource.f1"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "sources [Integration Services], OLE DB"
   - "OLE DB source [Integration Services]"
 ms.assetid: f87cc5f6-b078-40f3-9d87-7a65e13e4c86
-caps.latest.revision: 69
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

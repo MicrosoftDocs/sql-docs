@@ -6,13 +6,10 @@ ms.date: "02/09/2017"
 ms.prod: "sql"
 ms.technology: ssdt
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql.data.tools.commitpreview.dialog"
 ms.assetid: 4048b7f8-71a9-47ad-b812-3fc1e8066240
-caps.latest.revision: 26
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"

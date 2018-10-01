@@ -5,9 +5,7 @@ ms.date: "04/23/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "DATABASEPROPERTYEX"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "displaying database properties"
   - "database properties [SQL Server]"
 ms.assetid: 8a9e0ffb-28b5-4640-95b2-a54e3e5ad941
-caps.latest.revision: 84
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

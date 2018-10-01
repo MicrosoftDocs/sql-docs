@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "10/24/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "import-export"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: data-movement
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "field terminators [SQL Server]"
@@ -19,7 +16,6 @@ helpviewer_keywords:
   - "bulk exporting [SQL Server], data formats"
   - "XML bulk load [SQL Server]"
 ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
-caps.latest.revision: 65
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

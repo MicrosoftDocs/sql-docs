@@ -5,11 +5,8 @@ ms.date: "03/14/2018"
 ms.prod: sql
 ms.technology: install
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: bf4c4922-80b3-4be3-bf71-228247f97004
-caps.latest.revision: 100
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard

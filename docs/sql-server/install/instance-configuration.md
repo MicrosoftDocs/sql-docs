@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "2017-04-21"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: install
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "instance configuration, Setup"

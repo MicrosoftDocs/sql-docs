@@ -1,13 +1,11 @@
-﻿---
+---
 title: "OPENDATASOURCE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/07/2018"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "OPENDATASOURCE"
@@ -22,7 +20,6 @@ helpviewer_keywords:
   - "OLE DB data sources [SQL Server]"
   - "ad hoc connection information"
 ms.assetid: 5510b846-9cde-4687-8798-be9a273aad31
-caps.latest.revision: 41
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

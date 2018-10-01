@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_helpconstraint"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_helpconstraint"
 ms.assetid: 29d6cd36-535d-4765-bca8-62f9d9886ff5
-caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg

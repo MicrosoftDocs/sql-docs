@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "08/09/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_delete_jobschedule"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_delete_jobschedule"
 ms.assetid: 82fbb48b-603a-4016-a7fb-1ce17fb76919
-caps.latest.revision: 38
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

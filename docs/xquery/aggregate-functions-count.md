@@ -4,22 +4,16 @@ ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: sql
 ms.prod_service: sql
-ms.component: "xquery"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 dev_langs: 
   - "XML"
 helpviewer_keywords: 
   - "fn:count function"
   - "count function [XQuery]"
 ms.assetid: a9f7131f-23e1-4d4d-a36c-180447543926
-caps.latest.revision: 27
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

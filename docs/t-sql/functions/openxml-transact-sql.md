@@ -5,9 +5,7 @@ ms.date: "03/20/2018"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "OPENXML_TSQL"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "rowsets [SQL Server], XML documents"
   - "XML [SQL Server], rowset views"
 ms.assetid: 8088b114-7d01-435a-8e0d-b81abacc86d6
-caps.latest.revision: 24
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

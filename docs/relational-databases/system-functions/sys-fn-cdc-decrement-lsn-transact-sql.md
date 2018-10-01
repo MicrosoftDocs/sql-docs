@@ -4,14 +4,9 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-functions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server (starting with 2008)"
 f1_keywords: 
   - "fn_cdc_decrement_lsn"
   - "sys.fn_cdc_decrement_lsn_TSQL"
@@ -23,7 +18,6 @@ helpviewer_keywords:
   - "fn_cdc_decrement_lsn"
   - "sys.fn_cdc_decrement_lsn"
 ms.assetid: 83c182ad-4713-439b-8769-9b7408aec8b4
-caps.latest.revision: 18
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

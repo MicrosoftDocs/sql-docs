@@ -5,15 +5,12 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.technology: scripting
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "interactive searches [SQL Server Management Studio]"
   - "searches [SQL Server Management Studio], interactive"
   - "Query Editor [SQL Server Management Studio], interactive search"
 ms.assetid: dae65ac5-67af-45c6-a6e0-952fea26d680
-caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg

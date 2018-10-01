@@ -3,9 +3,7 @@ title: "Changing Passwords Programmatically | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "data access [SQL Server Native Client], password expiration"

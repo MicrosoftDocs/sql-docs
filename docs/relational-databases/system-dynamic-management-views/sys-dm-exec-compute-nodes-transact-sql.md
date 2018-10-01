@@ -5,9 +5,7 @@ ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "DM_EXEC_COMPUTE_NODES_TSQL"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "PolyBase management views"
   - "dm_exec_compute_nodes management view"
 ms.assetid: 0de4b7a4-401f-4e2d-9ab0-c54587e05154
-caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg

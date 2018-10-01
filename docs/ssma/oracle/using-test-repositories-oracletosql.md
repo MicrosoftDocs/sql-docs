@@ -4,15 +4,12 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Test Cases Repository"
   - "Test Results Repository"
 ms.assetid: f941cce4-d3e3-4aeb-a88a-4f101a97a9f4
-caps.latest.revision: 8
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "v-thobro"

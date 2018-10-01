@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "extended-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
 
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "extended stored procedures [SQL Server], executing"
   - "executing extended stored procedures [SQL Server]"
 ms.assetid: 6fe1f7e8-cc02-49df-8a2a-d47a96ec3567
-caps.latest.revision: 33
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

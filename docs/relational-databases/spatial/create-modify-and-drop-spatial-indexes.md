@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "spatial"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "dbe-spatial"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "indexes [SQL Server], creating"
@@ -19,7 +16,6 @@ helpviewer_keywords:
   - "indexes [SQL Server], modifying"
   - "spatial indexes [SQL Server], modifying"
 ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
-caps.latest.revision: 23
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

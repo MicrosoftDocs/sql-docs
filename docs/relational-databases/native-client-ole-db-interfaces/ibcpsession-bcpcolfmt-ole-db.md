@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
   - "IBCPSession::BCPColFmt (OLE DB)"
@@ -15,7 +13,6 @@ apitype: "COM"
 helpviewer_keywords: 
   - "BCPColFmt method"
 ms.assetid: 2852f4ba-f1c6-4c4c-86b2-b77e4abe70de
-caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg

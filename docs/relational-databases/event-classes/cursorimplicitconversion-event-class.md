@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "CursorImplicitConversion event class"
 ms.assetid: 44d12e23-146a-42e6-bb38-1f2f6a035bad
-caps.latest.revision: 34
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

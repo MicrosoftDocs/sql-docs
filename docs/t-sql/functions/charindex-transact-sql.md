@@ -5,9 +5,7 @@ ms.date: "07/24/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "CHARINDEX"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "pattern searching [SQL Server]"
   - "starting point of expression in character string"
 ms.assetid: 78c10341-8373-4b30-b404-3db20e1a3ac4
-caps.latest.revision: 52
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

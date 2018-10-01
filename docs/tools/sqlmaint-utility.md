@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "sqlmaint"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "database maintenance plans [SQL Server]"
@@ -20,7 +17,6 @@ helpviewer_keywords:
   - "maintenance plans [SQL Server], command prompt"
   - "backing up [SQL Server], sqlmaint utility"
 ms.assetid: 937a9932-4aed-464b-b97a-a5acfe6a50de
-caps.latest.revision: 47
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

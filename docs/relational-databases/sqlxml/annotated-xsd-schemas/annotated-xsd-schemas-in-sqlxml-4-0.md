@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "sqlxml"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: xml
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "annotated XSD schemas"
@@ -18,7 +15,6 @@ helpviewer_keywords:
   - "XSD schemas [SQLXML], annotations"
   - "schemas [SQLXML]"
 ms.assetid: eecd0d5f-d3dd-4d20-9586-19820410ad47
-caps.latest.revision: 11
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

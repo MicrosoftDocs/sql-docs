@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: replication
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "publications [SQL Server replication], creating"
@@ -16,7 +13,6 @@ helpviewer_keywords:
   - "adding articles"
   - "articles [SQL Server replication], adding"
 ms.assetid: 52ee6de9-1d58-4cb9-8711-372bddbe7154
-caps.latest.revision: 44
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

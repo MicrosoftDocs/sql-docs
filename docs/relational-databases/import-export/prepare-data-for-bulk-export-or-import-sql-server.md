@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "import-export"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: data-movement
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "bulk importing [SQL Server], planning"
@@ -17,7 +14,6 @@ helpviewer_keywords:
   - "CSV files [SQL Server]"
   - "quoted fields in CSV files [SQL Server]"
 ms.assetid: 783fd581-2e5f-496b-b79c-d4de1e09ea30
-caps.latest.revision: 52
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "native-client-ole-db-date-time"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
 
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "conversions [OLE DB], client to server"
 ms.assetid: 6bb24928-0f3e-4119-beda-cfd04a44a3eb
-caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: craigg

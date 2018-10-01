@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "04/04/2018"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 2b06186b-4090-4728-b96b-90d6ebd9f66f
 author: MightyPen

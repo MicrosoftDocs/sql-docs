@@ -4,15 +4,9 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 ms.assetid: fe086e53-e2a9-4bb8-9534-94369d32ab41
-caps.latest.revision: 7
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: craigg

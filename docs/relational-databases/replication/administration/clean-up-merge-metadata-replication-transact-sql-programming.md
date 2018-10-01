@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: replication
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "TSQL"
@@ -16,7 +13,6 @@ helpviewer_keywords:
   - "metadata [SQL Server replication]"
   - "sp_mergemetadataretentioncleanup"
 ms.assetid: 9b88baea-b7c6-4e5d-88f9-93d6a0ff0368
-caps.latest.revision: 33
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

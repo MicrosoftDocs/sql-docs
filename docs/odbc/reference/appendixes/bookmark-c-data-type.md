@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "C data types [ODBC], bookmark C data type"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "bookmarks [ODBC]"
   - "bookmark C data type [ODBC]"
 ms.assetid: add88e48-ada3-4c0c-a5ac-e78903d3ff41
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg

@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.dm_filestream_file_io_requests"
@@ -18,7 +16,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_filestream_file_io_requests catalog view"
 ms.assetid: d41e39a5-14d5-4f3d-a2e3-a822b454c1ed
-caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg

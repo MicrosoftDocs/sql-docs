@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: stored-procedures
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "modifying stored procedures"
   - "editing stored procedures"
   - "stored procedures [SQL Server], modifying"
 ms.assetid: 13396239-6100-48ce-aa34-461358d99c92
-caps.latest.revision: 30
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

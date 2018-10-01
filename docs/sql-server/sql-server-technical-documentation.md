@@ -3,10 +3,8 @@ title: "SQL Server Documentation | Microsoft Docs"
 ms.date: "08/10/2018"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.custom: ""
 ms.technology: ""
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.portal.f1"

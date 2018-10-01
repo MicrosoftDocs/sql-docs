@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "wmi"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
 
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
   - "SqlServerAlias Class"
@@ -19,7 +16,6 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "SqlServerAlias class"
 ms.assetid: 475662b9-6985-45bf-b1e9-b0f26ef50443
-caps.latest.revision: 33
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg

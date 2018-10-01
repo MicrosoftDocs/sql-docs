@@ -4,12 +4,9 @@ ms.date: 09/06/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: application-integration
-ms.suite: pro-bi
 
 
 ms.topic: reference
-applies_to: 
-  - "SQL Server 2016 Preview"
 helpviewer_keywords: 
   - "ReportViewer controls"
 ms.assetid: 29fb9f7d-ba65-49fd-9cbc-4c380869de96

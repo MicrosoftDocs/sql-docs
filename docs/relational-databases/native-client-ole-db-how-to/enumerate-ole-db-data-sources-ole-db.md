@@ -5,14 +5,11 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "data sources [OLE DB]"
 ms.assetid: ba240060-3237-4fb8-b2fb-b87fda2b1e7a
-caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg

@@ -4,14 +4,9 @@ ms.custom: ""
 ms.date: "06/02/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-functions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server (starting with 2008)"
 f1_keywords: 
   - "fn_all_changes"
   - "sys.fn_all_changes"
@@ -23,7 +18,6 @@ helpviewer_keywords:
   - "fn_all_changes_<capture_instance>"
   - "sys.fn_all_changes_<capture_instance>"
 ms.assetid: 564fae96-b88c-4f22-9338-26ec168ba6f5
-caps.latest.revision: 15
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

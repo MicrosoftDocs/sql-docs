@@ -5,9 +5,7 @@ ms.date: "09/07/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "BULK_TSQL"
@@ -26,7 +24,6 @@ helpviewer_keywords:
   - "bulk importing [SQL Server], BULK INSERT statement"
   - "file importing [SQL Server]"
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
-caps.latest.revision: 153
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

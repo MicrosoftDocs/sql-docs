@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "04/26/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: replication
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Snapshot Agent, security"
@@ -21,7 +18,6 @@ helpviewer_keywords:
   - "Merge Agent, security"
   - "replication [SQL Server], agents and profiles"
 ms.assetid: 6d09fc8d-843a-4a7a-9812-f093d99d8192
-caps.latest.revision: 72
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

@@ -6,8 +6,6 @@ ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.technology: scripting
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "vs.debug.error.sqlde_register_failed"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "ports [SQL Server], Transact-SQL debugger"
   - "TCP/IP [SQL Server], port numbers"
 ms.assetid: f50e0b0d-eaf0-4f4a-be83-96f5be63e7ea
-caps.latest.revision: 43
 author: MightyPen
 ms.author: genemi
 manager: craigg

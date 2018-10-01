@@ -6,14 +6,11 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 helpviewer_keywords: 
   - "FetchOptions property [ADO]"
 ms.assetid: 7b2e254a-9354-4541-bc98-bb185276388f
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg

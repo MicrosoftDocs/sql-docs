@@ -5,9 +5,7 @@ ms.date: "08/29/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.dm_db_xtp_table_memory_stats_TSQL"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "sys.dm_db_xtp_table_memory_stats"
   - "dm_db_xtp_table_memory_stats"
 ms.assetid: ad0efc06-3d9c-4861-9dfa-a7a87822d0c8
-caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg

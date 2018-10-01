@@ -5,9 +5,7 @@ ms.date: "06/28/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "CASE_TSQL"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "comparing expressions"
   - "searched CASE expression"
 ms.assetid: 658039ec-8dc2-4251-bc82-30ea23708cee
-caps.latest.revision: 59
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

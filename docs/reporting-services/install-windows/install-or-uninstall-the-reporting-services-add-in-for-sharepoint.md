@@ -3,7 +3,6 @@ title: "Install or Uninstall the Reporting Services Add-in for SharePoint | Micr
 ms.date: 08/17/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint"
-ms.suite: pro-bi
 
 ms.topic: conceptual
 ms.assetid: c2804a9a-08ea-4f4a-805d-a2c19c68733d

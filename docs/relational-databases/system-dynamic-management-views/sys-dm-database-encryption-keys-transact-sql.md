@@ -5,9 +5,7 @@ ms.date: "03/20/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.dm_database_encryption_keys"
@@ -19,7 +17,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_database_encryption_keys dynamic management view"
 ms.assetid: 56fee8f3-06eb-4fff-969e-abeaa0c4b8e4
-caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg

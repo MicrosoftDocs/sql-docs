@@ -5,15 +5,12 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: profiler
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "scripts [SQL Server], traces"
   - "extracting script from trace [SQL Server]"
 ms.assetid: 431126a6-ff91-4818-8763-4442152bd571
-caps.latest.revision: 20
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

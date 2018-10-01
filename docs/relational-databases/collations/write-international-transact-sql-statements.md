@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "writing international statements"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "database international considerations [SQL Server], Transact-SQL"
   - "dates [SQL Server], international considerations"
 ms.assetid: f0b10fee-27f7-45fe-aece-ccc3f63bdcdb
-caps.latest.revision: 35
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

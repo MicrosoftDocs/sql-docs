@@ -5,9 +5,7 @@ ms.date: "07/30/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "STLineFromText (geography Data Type)"
@@ -17,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "STLineFromText method"
 ms.assetid: e0c05bde-077d-4ce2-b4ec-8861db9b996d
-caps.latest.revision: 13
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

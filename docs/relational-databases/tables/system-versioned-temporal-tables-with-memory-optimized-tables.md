@@ -5,12 +5,9 @@ ms.date: "07/12/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: table-view-index
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 23274522-e5cf-4095-bed8-bf986d6342e0
-caps.latest.revision: 16
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg

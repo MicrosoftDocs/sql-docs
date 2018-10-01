@@ -5,9 +5,7 @@ ms.date: "05/11/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "DROP PROCEDURE"
@@ -24,7 +22,6 @@ helpviewer_keywords:
   - "stored procedures [SQL Server], removing"
   - "removing procedure groups"
 ms.assetid: 1c2d7235-7b9b-4336-8f17-429e7d82c2c3
-caps.latest.revision: 51
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

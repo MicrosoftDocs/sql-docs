@@ -5,15 +5,12 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLSetConnectOption function [ODBC], Excel Driver"
   - "Excel driver [ODBC], SQLSetConnectOption"
 ms.assetid: 528d21d1-4516-4497-9da4-7b87d77e622a
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg

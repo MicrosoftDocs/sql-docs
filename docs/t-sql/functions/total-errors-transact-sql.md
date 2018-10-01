@@ -5,9 +5,7 @@ ms.date: "09/18/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "@@TOTAL_ERRORS"
@@ -23,7 +21,6 @@ helpviewer_keywords:
   - "write errors [SQL Server]"
   - "read/write errors"
 ms.assetid: 09e62428-ee0e-4ef5-b969-da9d255f1199
-caps.latest.revision: 18
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

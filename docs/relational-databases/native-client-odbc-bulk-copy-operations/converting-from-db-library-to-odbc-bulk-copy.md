@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "native-client-odbc-bulk-copy-operations"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "converting DB-Library to ODBC bulk copy"
@@ -17,7 +14,6 @@ helpviewer_keywords:
   - "ODBC, bulk copy operations"
   - "DB-Library bulk copy"
 ms.assetid: 0bc15bdb-f19f-4537-ac6c-f249f42cf07f
-caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg

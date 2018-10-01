@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Object:Created event class"
 ms.assetid: 57536924-5e66-4b09-a76d-8fcea2131771
-caps.latest.revision: 32
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

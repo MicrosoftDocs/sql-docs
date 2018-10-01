@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
@@ -16,7 +14,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "GetString method [ADO]"
 ms.assetid: 92452940-b2a7-456e-94fc-3780c71da33c
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg

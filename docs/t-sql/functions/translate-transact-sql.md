@@ -5,9 +5,7 @@ ms.date: "12/16/2016"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "TRANSLATE"
@@ -15,7 +13,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "TRANSLATE function"
 ms.assetid: 0426fa90-ef6d-4d19-8207-02ee59f74aec
-caps.latest.revision: 5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

@@ -5,9 +5,7 @@ ms.date: "09/07/2018"
 ms.prod: sql
 ms.prod_service: "sql-data-warehouse, pdw, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "DUMP_CERTIFICATE_TSQL"
@@ -27,7 +25,6 @@ helpviewer_keywords:
   - "decryption [SQL Server]"
   - "cryptography [SQL Server], certificates"
 ms.assetid: 509b9462-819b-4c45-baae-3d2d90d14a1c
-caps.latest.revision: 40
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

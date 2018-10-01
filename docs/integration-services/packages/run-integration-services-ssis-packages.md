@@ -5,9 +5,7 @@ ms.date: 06/04/2018
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.ssis.ssms.ispackageexecute.f1"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "running packages [Integration Services]"
   - "Integration Services, (See also Integration Services packages)"
 ms.assetid: c5fecc23-6f04-4fb2-9a29-01492ea41404
-caps.latest.revision: 65
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "03/20/2018"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
@@ -17,7 +15,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "NextRecordset method [ADO]"
 ms.assetid: ab1fa449-a695-4987-b1ee-bc68f89418dd
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg

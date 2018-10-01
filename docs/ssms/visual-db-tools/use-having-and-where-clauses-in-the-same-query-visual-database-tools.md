@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-visual-db"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "search criteria [SQL Server], excluding rows"
@@ -21,7 +18,6 @@ helpviewer_keywords:
   - "WHERE clause, search criteria"
   - "excluding rows"
 ms.assetid: 1e07cf56-b4b7-4c49-8ddd-c276812a7148
-caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

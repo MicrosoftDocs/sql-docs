@@ -6,13 +6,10 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "DataFactory handler in RDS [ADO]"
 ms.assetid: e776b4e3-fcc4-4bfb-a7e8-5ffae1d83833
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg

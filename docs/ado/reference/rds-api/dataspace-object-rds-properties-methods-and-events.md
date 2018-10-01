@@ -6,14 +6,11 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 helpviewer_keywords: 
   - "DataSpace object [RDS], members"
 ms.assetid: c4a1f2e7-19ff-465e-9d9a-275ac0f4dc6a
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg

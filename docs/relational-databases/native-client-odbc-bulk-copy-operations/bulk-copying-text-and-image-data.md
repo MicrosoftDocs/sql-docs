@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "native-client-odbc-bulk-copy-operations"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "bulk copy [ODBC], text data"
@@ -16,7 +13,6 @@ helpviewer_keywords:
   - "bulk copy [ODBC], image data"
   - "ODBC, bulk copy operations"
 ms.assetid: 87155bfa-3a73-4158-9d4d-cb7435dac201
-caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg

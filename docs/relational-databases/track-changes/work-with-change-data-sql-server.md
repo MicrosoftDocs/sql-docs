@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "track-changes"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "change data [SQL Server]"
@@ -17,7 +14,6 @@ helpviewer_keywords:
   - "change data capture [SQL Server], LSN boundaries"
   - "change data capture [SQL Server], query functions"
 ms.assetid: 5346b852-1af8-4080-b278-12efb9b735eb
-caps.latest.revision: 19
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

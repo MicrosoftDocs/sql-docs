@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: replication
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "snapshots [SQL Server replication], alternate folder locations"
   - "snapshot replication [SQL Server], alternate folder locations"
   - "alternate snapshot folders [SQL Server replication]"
 ms.assetid: 437553b0-19df-4522-8f27-06b5bc747c69
-caps.latest.revision: 36
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

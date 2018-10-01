@@ -5,8 +5,6 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.technology: scripting
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.editor.xml.f1"
@@ -16,7 +14,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "XML Designer [SQL Server Management Studio]"
 ms.assetid: 0824a5ce-e67b-4b53-98d9-d371faf2d23c
-caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg

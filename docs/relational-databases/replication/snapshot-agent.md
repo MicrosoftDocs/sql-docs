@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: replication
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.rep.monitor.snapshotagent.f1"
 helpviewer_keywords: 
   - "Snapshot Agent dialog box"
 ms.assetid: b715e621-2cd5-4a15-8f58-a341aa8ef5e4
-caps.latest.revision: 20
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

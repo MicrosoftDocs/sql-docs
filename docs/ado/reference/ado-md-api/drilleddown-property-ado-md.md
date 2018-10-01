@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
@@ -16,7 +14,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "DrilledDown property [ADO MD]"
 ms.assetid: bf39dd36-fc7a-4f6e-86c0-fa71430c0d86
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg

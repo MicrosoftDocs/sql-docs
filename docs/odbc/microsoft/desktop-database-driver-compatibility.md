@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "compatibility [ODBC], Unicode"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "desktop database drivers [ODBC], Unicode"
   - "Jet-based ODBC drivers [ODBC], Unicode"
 ms.assetid: dd695638-1a0b-4e27-8a6a-9510ebb5a5ee
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg

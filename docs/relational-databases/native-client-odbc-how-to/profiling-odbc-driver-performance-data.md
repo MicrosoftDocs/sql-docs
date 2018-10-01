@@ -5,14 +5,11 @@ ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "driver performance data [ODBC]"
 ms.assetid: b997790a-8cc6-4800-8867-74c1bef07be3
-caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg

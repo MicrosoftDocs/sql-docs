@@ -4,12 +4,9 @@ ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: custom-report-items
-ms.suite: pro-bi
 
 
 ms.topic: reference
-applies_to: 
-  - "SQL Server 2016 Preview"
 helpviewer_keywords: 
   - "custom report items, architecture"
 ms.assetid: 2a88ea46-c9f8-4dd7-aad1-16de11da4f06

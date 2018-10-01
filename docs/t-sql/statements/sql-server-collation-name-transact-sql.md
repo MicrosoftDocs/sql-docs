@@ -5,9 +5,7 @@ ms.date: "05/11/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "SQL collations"
   - "names [SQL Server], collations"
 ms.assetid: 56483d24-add7-483d-9b96-c6fda460ddbc
-caps.latest.revision: 30
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

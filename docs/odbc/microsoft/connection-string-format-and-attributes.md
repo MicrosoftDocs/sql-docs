@@ -5,15 +5,12 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "connection strings [ODBC], ODBC driver for Oracle"
   - "ODBC driver for Oracle [ODBC], connection strings"
 ms.assetid: 0c360112-8720-4e54-a1a6-b9b18d943557
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg

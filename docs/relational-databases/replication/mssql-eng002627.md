@@ -4,16 +4,12 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: replication
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "MSSQL_ENG002627 error"
 ms.assetid: 7f4136ac-3784-4a41-a98c-8a02308e4883
-caps.latest.revision: 14
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

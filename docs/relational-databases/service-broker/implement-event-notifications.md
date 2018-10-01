@@ -4,19 +4,15 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "service-broker"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "event notifications [SQL Server], target service"
   - "target service [SQL Server]"
   - "event notifications [SQL Server], creating"
 ms.assetid: 29ac8f68-a28a-4a77-b67b-a8663001308c
-caps.latest.revision: 34
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

@@ -4,14 +4,10 @@ ms.custom: ""
 ms.date: "03/20/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "in-memory-oltp"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 83d47694-e56d-4dae-b54e-14945bf8ba31
-caps.latest.revision: 18
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg

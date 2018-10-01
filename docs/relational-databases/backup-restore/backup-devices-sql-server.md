@@ -5,9 +5,7 @@ ms.date: "08/12/2016"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: backup-restore
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "tape backup devices, about tape backup devices"
@@ -25,7 +23,6 @@ helpviewer_keywords:
   - "backing up databases [SQL Server], backup devices"
   - "devices [SQL Server]"
 ms.assetid: 35a8e100-3ff2-4844-a5da-dd088c43cba4
-caps.latest.revision: 93
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

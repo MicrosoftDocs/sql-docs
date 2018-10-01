@@ -5,15 +5,12 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "table-view-index, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: table-view-index
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "tables [SQL Server]"
   - "table components [SQL Server]"
 ms.assetid: 82d7819c-b801-4309-a849-baa63083e83f
-caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg

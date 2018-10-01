@@ -5,14 +5,11 @@ ms.date: "08/11/2017"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: configuration
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "remote servers [SQL Server], stored procedure execution"
 ms.assetid: f5de748d-1c55-4714-9661-38fe62e5095f
-caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

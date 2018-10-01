@@ -4,14 +4,9 @@ ms.custom: ""
 ms.date: "02/21/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "SQL Server (starting with 2016 CTP3)"
 f1_keywords: 
   - "sp_xtp_flush_temporal_history"
   - "sp_xtp_flush_temporal_history_TSQL"
@@ -20,7 +15,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_xtp_flush_temporal_history"
 ms.assetid: 322e3170-93f8-468a-a123-104ce7bd7fad
-caps.latest.revision: 7
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg

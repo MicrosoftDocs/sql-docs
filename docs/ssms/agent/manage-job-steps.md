@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-agent"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "job steps [SQL Server replication]"
@@ -25,7 +22,6 @@ helpviewer_keywords:
   - "ActiveX scripting jobs [SQL Server]"
   - "job steps [Analysis Services]"
 ms.assetid: 51352afc-a0a4-428b-8985-f9e58bb57c31
-caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "table-view-index, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: table-view-index
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "table dependencies [SQL Server]"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "displaying dependences"
   - "viewing dependencies"
 ms.assetid: c4351ef5-e7d0-46e7-8367-88695e9974f8
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg

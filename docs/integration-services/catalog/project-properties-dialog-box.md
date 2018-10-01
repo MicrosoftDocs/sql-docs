@@ -5,15 +5,12 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.ssis.ssms.isprojectprop.general.f1"
   - "sql13.ssis.ssms.isprojectprop.permissions.f1"
 ms.assetid: d5cf52f5-1fe2-438a-98a3-fe117360acf8
-caps.latest.revision: 9
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

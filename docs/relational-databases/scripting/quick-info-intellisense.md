@@ -5,8 +5,6 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.technology: scripting
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Quick Info option [IntelliSense]"
@@ -14,7 +12,6 @@ helpviewer_keywords:
   - "IntelliSense [SQL Server], Quick Info"
   - "identifier declarations [IntelliSense]"
 ms.assetid: 3c8b59f4-1922-4bde-844f-5f2306514d96
-caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg

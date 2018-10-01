@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "driver manager [ODBC], role in connection process"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "connecting to driver [ODBC], driver manager"
   - "ODBC driver manager [ODBC]"
 ms.assetid: 77c05630-5a8b-467d-b80e-c705dc06d601
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg

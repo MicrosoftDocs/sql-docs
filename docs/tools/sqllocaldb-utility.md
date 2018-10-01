@@ -4,19 +4,15 @@ ms.custom: ""
 ms.date: "08/09/2016"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "sqllocaldb"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SqlLocalDB utility [SQL Server]"
   - "local database runtime utility"
   - "LocalDB, SqlLocalDB Utility"
 ms.assetid: d785cdb7-1ea0-4871-bde9-1ae7881190f5
-caps.latest.revision: 19
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

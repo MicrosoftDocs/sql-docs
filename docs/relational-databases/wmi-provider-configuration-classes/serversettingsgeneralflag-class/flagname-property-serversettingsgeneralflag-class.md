@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "wmi"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
   - "FlagName Property (ServerSettingsGeneralFlag Class)"
@@ -19,7 +16,6 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "FlagName property"
 ms.assetid: 108c13aa-da9c-4908-b0a3-a9460806819c
-caps.latest.revision: 30
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg

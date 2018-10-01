@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-objects"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "hiding system objects"
@@ -16,7 +13,6 @@ helpviewer_keywords:
   - "objects [SQL Server], hiding"
   - "Object Explorer, hiding objects"
 ms.assetid: c01d8804-838c-4f75-b78c-80e41e4fffdc
-caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

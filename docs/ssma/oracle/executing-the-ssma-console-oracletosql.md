@@ -4,18 +4,13 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "SQL Server 2016 Preview"
 helpviewer_keywords: 
   - "Oracle SSMA Console"
   - "Script File Commands, Script Generation Commands,Manageability Commands"
   - "Script File Commands,Project Commands"
 ms.assetid: 7228ccba-c69f-4b4c-8664-01a2750183c5
-caps.latest.revision: 43
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "v-thobro"

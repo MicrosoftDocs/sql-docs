@@ -5,9 +5,7 @@ ms.date: "12/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "ROUND_TSQL"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "rounding expressions"
   - "ROUND function [Transact-SQL]"
 ms.assetid: 23921ed6-dd6a-4c9e-8c32-91c0d44fe4b7
-caps.latest.revision: 40
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

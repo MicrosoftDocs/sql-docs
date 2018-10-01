@@ -5,9 +5,7 @@ ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "XACT_STATE"
@@ -22,7 +20,6 @@ helpviewer_keywords:
   - "transactions [SQL Server], state"
   - "active transactions"
 ms.assetid: e9300827-e793-4eb6-9042-ffa0204aeb50
-caps.latest.revision: 41
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

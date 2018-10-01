@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "performance-monitor"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLServer:FileTable"
 ms.assetid: 325f5e58-1095-450f-9321-dfacfe6fd55f
-caps.latest.revision: 3
 author: "dagiro"
 ms.author: "v-dagir"
 manager: craigg

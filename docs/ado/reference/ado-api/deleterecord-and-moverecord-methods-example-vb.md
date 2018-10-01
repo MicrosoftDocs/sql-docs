@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "VB"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "MoveRecord method [ADO], Visual Basic example"
   - "DeleteRecord method [ADO], Visual Basic example"
 ms.assetid: c3937d1e-9872-47e5-a22e-b147637f2388
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg

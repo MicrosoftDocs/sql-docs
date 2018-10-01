@@ -5,9 +5,7 @@ ms.custom: ""
 ms.date: "01/04/2018"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 author: "jovanpop-msft"
 ms.author: "jovanpop"

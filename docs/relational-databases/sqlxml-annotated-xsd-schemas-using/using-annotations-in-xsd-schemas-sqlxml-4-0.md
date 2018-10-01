@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "sqlxml"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: xml
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "annotated XSD schemas, about annotated XSD schemas"
@@ -18,7 +15,6 @@ helpviewer_keywords:
   - "hierarchical relationships [SQLXML]"
   - "mapping schema [SQLXML], scenarios for using"
 ms.assetid: 78f318a4-7a36-473b-9852-a4bae6940ce5
-caps.latest.revision: 26
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

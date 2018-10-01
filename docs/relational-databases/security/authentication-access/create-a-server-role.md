@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: security
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "SQL13.SWB.SERVERROLE.GENERAL.F1"
@@ -16,7 +14,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "SERVER ROLE, creating"
 ms.assetid: 74f19992-8082-4ed7-92a1-04fe676ee82d
-caps.latest.revision: 13
 author: VanMSFT
 ms.author: vanto
 manager: craigg

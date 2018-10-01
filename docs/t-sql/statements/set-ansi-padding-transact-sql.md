@@ -5,9 +5,7 @@ ms.date: "12/04/2017"
 ms.prod: sql
 ms.prod_service: "sql-data-warehouse, pdw, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "ANSI_PADDING_TSQL"
@@ -23,7 +21,6 @@ helpviewer_keywords:
   - "SET ANSI_PADDING statement"
   - "trailing blanks"
 ms.assetid: 92bd29a3-9beb-410e-b7e0-7bc1dc1ae6d0
-caps.latest.revision: 47
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

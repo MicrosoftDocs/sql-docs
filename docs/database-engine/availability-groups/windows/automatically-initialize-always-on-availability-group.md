@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "03/26/2018"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 67c6a601-677a-402b-b3d1-8c65494e9e96
-caps.latest.revision: 18
 author: MashaMSFT
 ms.author: "v-saume"
 manager: craigg

@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-visual-db"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "table aliases [SQL Server]"
   - "aliases [SQL Server], tables"
 ms.assetid: 49e61e85-8abf-4ca7-8c70-7e9f8f1078bd
-caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

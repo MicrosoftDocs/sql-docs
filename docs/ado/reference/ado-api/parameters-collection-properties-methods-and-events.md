@@ -6,13 +6,10 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Parameters collection [ADO], members"
 ms.assetid: 63b3f9a3-1c36-4d06-a6b0-49b5eb5adf06
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg

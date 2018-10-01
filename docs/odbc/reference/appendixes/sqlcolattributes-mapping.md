@@ -5,15 +5,12 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "mapping deprecated functions [ODBC], SQLColAttributes"
   - "SQLColAttribute function [ODBC], mapping"
 ms.assetid: 30e25719-176b-4c48-97d4-920766b22412
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg

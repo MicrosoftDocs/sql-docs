@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: backup-restore
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "full backups [SQL Server]"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "READ_WRITE_FILEGROUPS option"
   - "database backups [SQL Server], about backing up databases"
 ms.assetid: fe6b6bb1-38d0-46c4-bab8-31df14e8999c
-caps.latest.revision: 46
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

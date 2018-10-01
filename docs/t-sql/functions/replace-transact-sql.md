@@ -5,9 +5,7 @@ ms.date: "08/23/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "REPLACE_TSQL"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "second string expressions [SQL Server]"
   - "REPLACE function"
 ms.assetid: 8a7aaaf2-62e3-46c0-8e44-fa22290dd86b
-caps.latest.revision: 39
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

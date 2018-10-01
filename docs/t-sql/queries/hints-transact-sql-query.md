@@ -5,9 +5,7 @@ ms.date: "09/24/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "Query_Hint_TSQL"
@@ -55,7 +53,6 @@ helpviewer_keywords:
   - "USE HINT query hint"
   - "QUERY_PLAN_PROFILE query hint"
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
-caps.latest.revision: 136
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

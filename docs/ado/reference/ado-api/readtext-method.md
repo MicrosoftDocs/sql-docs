@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
@@ -16,7 +14,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "ReadText method [ADO]"
 ms.assetid: be5a409e-cf87-4859-9ea5-713401755a77
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg

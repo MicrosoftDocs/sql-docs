@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "ToString (geography Data Type)"
@@ -16,7 +14,6 @@ dev_langs:
 helpviewer_keywords: 
   - "ToString method"
 ms.assetid: 045c12fa-8fc6-441a-9500-7021cb4ff13e
-caps.latest.revision: 18
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

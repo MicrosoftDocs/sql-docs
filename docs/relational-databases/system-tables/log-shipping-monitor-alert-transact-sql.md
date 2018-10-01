@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-tables"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "log_shipping_monitor_alert"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "log_shipping_monitor_alert system table"
 ms.assetid: 1c775e48-9898-4149-b9d1-04d465f23438
-caps.latest.revision: 20
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

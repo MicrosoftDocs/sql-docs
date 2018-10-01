@@ -5,16 +5,13 @@ ms.date: "03/07/2017"
 ms.prod: sql
 ms.prod_service: "mds"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "master-data-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "e-mail [Master Data Services], configuring"
   - "notifications [Master Data Services], configuring notifications"
 ms.assetid: 4241a6ab-7465-471b-9890-57c6b572037e
-caps.latest.revision: 7
 author: leolimsft
 ms.author: lle
 manager: craigg

@@ -5,9 +5,7 @@ ms.date: "09/18/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "@@PACK_SENT"
@@ -22,7 +20,6 @@ helpviewer_keywords:
   - "connections [SQL Server], packets"
   - "output packets written to network [SQL Server]"
 ms.assetid: 8a322162-24c9-48e9-bfa4-c060e4e11dba
-caps.latest.revision: 23
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

@@ -4,13 +4,9 @@ ms.custom: ""
 ms.date: "08/09/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "availability-groups"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "dbe-high-availability"
-ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
   - "connection access to availability replicas"
@@ -20,7 +16,6 @@ helpviewer_keywords:
   - "readable secondary replicas"
   - "Availability Groups [SQL Server], active secondary replicas"
 ms.assetid:
-caps.latest.revision: 80
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "craigg"

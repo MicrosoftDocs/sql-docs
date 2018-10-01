@@ -3,7 +3,6 @@ title: "E-Mail Settings - Reporting Services Native mode (Configuration Manager)
 ms.date: 06/01/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.suite: pro-bi
 
 ms.topic: conceptual
 f1_keywords: 

@@ -4,13 +4,8 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 helpviewer_keywords: 
   - "Script file commands, Database connection commands"
   - "Script file commands, Manageability commands"
@@ -20,7 +15,6 @@ helpviewer_keywords:
   - "Script file commands, Report commands"
   - "Script file commands, Script generation commands"
 ms.assetid: e3e9f7e4-0619-4861-a202-3d5d39953b26
-caps.latest.revision: 25
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: craigg

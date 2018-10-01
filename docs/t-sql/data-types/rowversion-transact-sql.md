@@ -5,9 +5,7 @@ ms.date: "7/22/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "timestamp_TSQL"
@@ -26,7 +24,6 @@ helpviewer_keywords:
   - "timestamp columns"
   - "size [SQL Server], timestamp"
 ms.assetid: 65c9cf0e-3e8a-45f8-87b3-3460d96afb0b
-caps.latest.revision: 57
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-visual-db"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Delete query"
@@ -23,7 +20,6 @@ helpviewer_keywords:
   - "Diagram pane [Visual Database Tools]"
   - "View Designer, query types"
 ms.assetid: 72b9116c-c128-4078-a78d-257a2955a3f6
-caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

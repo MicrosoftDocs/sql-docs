@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "C++"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "AbsolutePage property [ADO], VC++ example"
   - "PageSize property [ADO], VC++ example"
 ms.assetid: 38ca4e1b-c109-4fba-b590-bdd6994f770e
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg

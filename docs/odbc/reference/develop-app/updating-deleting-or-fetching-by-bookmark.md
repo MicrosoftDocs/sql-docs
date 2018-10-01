@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "updating by bookmarks [ODBC]"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "deleting by bookmarks [ODBC]"
   - "bookmarks [ODBC]"
 ms.assetid: e2ee58d7-c28f-435f-b537-06207215dd2f
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg

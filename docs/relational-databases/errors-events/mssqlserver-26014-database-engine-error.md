@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 helpviewer_keywords: 
   - "26014 (Database Engine error)"
 ms.assetid: e2b0dfc7-0681-4e5d-8875-1d5f63534086
-caps.latest.revision: 10
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

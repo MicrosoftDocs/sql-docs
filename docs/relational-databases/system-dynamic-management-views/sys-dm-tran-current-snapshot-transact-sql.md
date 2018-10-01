@@ -5,9 +5,7 @@ ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.dm_tran_current_snapshot_TSQL"
@@ -19,7 +17,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_tran_current_snapshot dynamic management view"
 ms.assetid: 7509d595-c0e1-4237-a5ac-b41ad934544c
-caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg

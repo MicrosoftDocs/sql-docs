@@ -5,15 +5,12 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apitype: "DLLExport"
 helpviewer_keywords: 
   - "SQLNumResultCols function"
 ms.assetid: f79d8b3c-521e-4e50-a564-21d73ae5767b
-caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg

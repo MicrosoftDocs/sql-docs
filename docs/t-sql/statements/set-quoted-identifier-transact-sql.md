@@ -5,9 +5,7 @@ ms.date: "02/03/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "QUOTED_IDENTIFIER_TSQL"
@@ -24,7 +22,6 @@ helpviewer_keywords:
   - "ISO delimited identifiers rules"
   - "SET QUOTED_IDENTIFIER statement"
 ms.assetid: 10f66b71-9241-4a3a-9292-455ae7252565
-caps.latest.revision: 48
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

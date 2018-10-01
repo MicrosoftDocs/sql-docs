@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "04/12/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_updateextendedproperty_TSQL"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_updateextendedproperty"
 ms.assetid: 7f02360f-cb9e-48b4-b75f-29b4bc9ea304
-caps.latest.revision: 41
 author: stevestein
 ms.author: sstein
 manager: craigg

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-tables"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "dbo.sysproxysubsystem_TSQL"
@@ -20,7 +17,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sysproxysubsystem system table"
 ms.assetid: 6d7713f5-1253-4a19-b1fb-635c377c95c1
-caps.latest.revision: 13
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

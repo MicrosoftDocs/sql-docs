@@ -5,9 +5,7 @@ ms.date: "06/12/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "asymmetric keys [SQL Server], permissions"
   - "GRANT statement, asymmetric keys"
 ms.assetid: a70e2ee6-59b0-4543-b883-e9cbae6199be
-caps.latest.revision: 14
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

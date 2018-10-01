@@ -5,9 +5,7 @@ ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.sorttrans.f1"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "multiple sorts"
   - "duplicate data [Integration Services]"
 ms.assetid: 728c9351-84a8-4a89-be4d-d50d4adc04e0
-caps.latest.revision: 50
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

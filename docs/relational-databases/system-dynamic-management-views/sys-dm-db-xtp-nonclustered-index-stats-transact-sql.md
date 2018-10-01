@@ -5,9 +5,7 @@ ms.date: "08/29/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "dm_db_xtp_nonclustered_index_stats_TSQL"
@@ -19,7 +17,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_db_xtp_nonclustered_index_stats"
 ms.assetid: d55ba31c-296c-419b-9c4b-c126e0a3d156
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg

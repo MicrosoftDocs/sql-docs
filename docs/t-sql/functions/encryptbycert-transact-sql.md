@@ -5,9 +5,7 @@ ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "ENCRYPTBYCERT"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "encryption [SQL Server], certificates"
   - "ENCRYPTBYCERT function"
 ms.assetid: ab66441f-e2d2-4e3a-bcae-bcc09e12f3c1
-caps.latest.revision: 25
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

@@ -5,9 +5,7 @@ ms.date: "08/10/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "CREATE_COLUMNSTORE_INDEX_TSQL"
@@ -28,7 +26,6 @@ helpviewer_keywords:
   - "CREATE COLUMNSTORE INDEX statement"
   - "CREATE INDEX statement"
 ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
-caps.latest.revision: 76
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

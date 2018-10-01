@@ -5,15 +5,12 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apitype: "DLLExport"
 helpviewer_keywords: 
   - "SQLCloseCursor function"
 ms.assetid: e7134d65-5c1c-4ae2-b119-d9b4b9a42483
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg

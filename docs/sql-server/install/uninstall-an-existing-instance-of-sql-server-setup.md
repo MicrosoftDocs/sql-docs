@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "01/27/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: install
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "removing instances of SQL Server"

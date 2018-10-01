@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "VB"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "Skipline method [ADO], Visual Basic example"
   - "EOS property [ADO], Visual Basic example"
 ms.assetid: 77ce3042-9ebc-44ba-a4ff-0f1b1fd4a9c4
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg

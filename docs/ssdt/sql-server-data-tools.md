@@ -6,13 +6,10 @@ ms.date: "02/09/2017"
 ms.prod: "sql"
 ms.technology: ssdt
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql.data.tools.errortask.generichelp"
 ms.assetid: 5f08f15a-851d-4026-a557-28b3c6492efe
-caps.latest.revision: 30
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"

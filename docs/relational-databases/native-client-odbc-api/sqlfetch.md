@@ -5,14 +5,11 @@ ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "SQLFetch function"
 ms.assetid: 69f0ec68-5857-4aec-9fbf-4bf592d3ab39
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg

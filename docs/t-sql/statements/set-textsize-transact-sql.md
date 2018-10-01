@@ -5,9 +5,7 @@ ms.date: "04/12/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "TEXTSIZE_TSQL"
@@ -23,7 +21,6 @@ helpviewer_keywords:
   - "TEXTSIZE option"
   - "text size returned [SQL Server]"
 ms.assetid: 787154a6-39a6-4dd6-a6d0-67b4364f95d5
-caps.latest.revision: 38
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

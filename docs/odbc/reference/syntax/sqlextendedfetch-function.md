@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "SQLExtendedFetch"
@@ -19,7 +17,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLExtendedFetch function [ODBC]"
 ms.assetid: 940b5cf7-581c-4ede-8533-c67d5e9ef488
-caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg

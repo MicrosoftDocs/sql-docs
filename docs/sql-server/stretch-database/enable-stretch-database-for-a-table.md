@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "08/05/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Stretch Database, enabling table"
   - "enabling table for Stretch Database"
 ms.assetid: de4ac0c5-46ef-4593-a11e-9dd9bcd3ccdc
-caps.latest.revision: 44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

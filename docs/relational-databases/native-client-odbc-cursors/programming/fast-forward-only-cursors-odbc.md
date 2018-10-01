@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "fast forward-only cursors"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "cursors [ODBC], fast forward-only"
   - "ODBC cursors, fast forward-only"
 ms.assetid: 0707d07e-fc95-42ed-9280-b7e508ac8c62
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg

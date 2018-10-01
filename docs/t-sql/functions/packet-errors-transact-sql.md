@@ -5,9 +5,7 @@ ms.date: "09/18/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "@@PACKET_ERRORS"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "networking [SQL Server], packet errors"
   - "connections [SQL Server], packets"
 ms.assetid: f7da1b80-5cbe-42fa-be71-40c6af16383a
-caps.latest.revision: 31
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

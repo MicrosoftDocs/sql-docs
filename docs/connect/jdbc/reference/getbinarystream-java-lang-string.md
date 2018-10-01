@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "SQLServerCallableStatement.getBinaryStream(String paramName)"
@@ -15,7 +13,6 @@ apilocation:
   - "SQLServerCallableStatement.getBinaryStream(String paramName)"
 apitype: "Assembly"
 ms.assetid: 17f1ea5d-47f8-4a66-a0fc-d6554b8e3866
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg

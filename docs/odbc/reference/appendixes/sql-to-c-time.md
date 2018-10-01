@@ -5,16 +5,13 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "converting data from SQL to C types [ODBC], time"
   - "time data type [ODBC]"
   - "data conversions from SQL to C types [ODBC], time"
 ms.assetid: 6dc59973-7bb5-40f1-87c8-5bf68b3bf2ee
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg

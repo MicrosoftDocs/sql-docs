@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "05/22/2018"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "database mirroring [SQL Server], interoperability"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], interoperability"
   - "troubleshooting [SQL Server], cross-database transactions"
 ms.assetid: 
-caps.latest.revision: 33
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

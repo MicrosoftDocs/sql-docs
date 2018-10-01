@@ -5,9 +5,7 @@ ms.date: "05/01/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "ALTER SERVER CONFIGURATION"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "ALTER SERVER CONFIGURATION statement"
   - "setting process affinity"
 ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
-caps.latest.revision: 72
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

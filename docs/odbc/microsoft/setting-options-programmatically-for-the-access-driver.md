@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Access driver [ODBC], setting options programmatically"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "Jet-based ODBC drivers [ODBC], Access driver"
   - "desktop database drivers [ODBC], Access driver"
 ms.assetid: 1690eb71-0cd3-4c00-9e15-f6a3ac5316dd
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg

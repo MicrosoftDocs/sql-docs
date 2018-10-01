@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "dm_xe_sessions_TSQL"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "sys.dm_xe_sessions dynamic management view"
   - "extended events [SQL Server], views"
 ms.assetid: defd6efb-9507-4247-a91f-dc6ff5841e17
-caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg

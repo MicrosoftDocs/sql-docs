@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "08/08/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "system-functions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "WITH_CHANGE_TRACKING_CONTEXT_TSQL"
@@ -19,7 +16,6 @@ helpviewer_keywords:
   - "WITH CHANGE_TRACKING_CONTEXT"
   - "change tracking [SQL Server], WITH CHANGE_TRACKING_CONTEXT"
 ms.assetid: 885e33a1-602a-4b94-8380-a63ac935a683
-caps.latest.revision: 15
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

@@ -5,9 +5,7 @@ ms.date: "12/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "SET ANSI_WARNINGS"
@@ -22,7 +20,6 @@ helpviewer_keywords:
   - "SET ANSI_WARNINGS statement"
   - "ANSI_WARNINGS option"
 ms.assetid: f82aaab0-334f-427b-89b0-de4af596b4fa
-caps.latest.revision: 33
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.dm_io_cluster_valid_path_names"
@@ -22,7 +20,6 @@ helpviewer_keywords:
   - "csv name"
   - "cluster shared volume names"
 ms.assetid: 5bc8a0e5-6c72-425b-8c58-f276eb9add2c
-caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: craigg

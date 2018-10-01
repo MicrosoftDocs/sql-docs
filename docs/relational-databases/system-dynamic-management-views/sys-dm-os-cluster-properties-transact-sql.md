@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "08/09/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.dm_os_cluster_properties_TSQL"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "dm_os_cluster_properties"
   - "sys.dm_os_cluster_properties"
 ms.assetid: 6d82e770-fba7-49e0-9a0c-3b34b393e4a7
-caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg

@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 helpviewer_keywords: 
   - "32042 (Database Engine error)"
 ms.assetid: 53a51c7a-dcd4-4c15-b4d2-6aaa9dce76da
-caps.latest.revision: 16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

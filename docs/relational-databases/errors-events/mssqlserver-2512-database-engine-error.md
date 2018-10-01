@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 helpviewer_keywords: 
   - "2512 (Database Engine error)"
 ms.assetid: 989b527f-5b02-403c-9b7f-51580f4e7688
-caps.latest.revision: 17
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

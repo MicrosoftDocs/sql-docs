@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 helpviewer_keywords: 
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "MoveFirst method [RDS]"
   - "MoveNext method [RDS]"
 ms.assetid: 45c80bb5-136f-4204-9df2-78740fa55574
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg

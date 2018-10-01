@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "04/28/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to:
-  - "SQL Server 2016"
 helpviewer_keywords:
   - "AlwaysOn"
   - "DB_FAILOVER"
@@ -17,7 +13,6 @@ helpviewer_keywords:
   - "High Availability"
   - "SQL Server"
 ms.assetid: d74afd28-25c3-48a1-bc3f-e353bee615c2
-caps.latest.revision: 4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

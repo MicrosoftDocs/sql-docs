@@ -1,13 +1,11 @@
-﻿---
+---
 title: "CREATE ROUTE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/30/2018"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "CREATE_ROUTE_TSQL"
@@ -26,7 +24,6 @@ helpviewer_keywords:
   - "activating routes"
   - "CREATE ROUTE statement"
 ms.assetid: 7e695364-1a98-4cfd-8ebd-137ac5a425b3
-caps.latest.revision: 42
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

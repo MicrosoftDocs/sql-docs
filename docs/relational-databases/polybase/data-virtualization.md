@@ -7,7 +7,6 @@ manager: craigg
 ms.date: 09/24/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.suite: "sql"
 ms.technology: polybase
 monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 ---

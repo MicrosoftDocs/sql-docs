@@ -4,14 +4,9 @@ ms.custom: ""
 ms.date: "02/21/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server (starting with 2016 CTP3)"
 f1_keywords: 
   - "sql13.TSQLSysNoExpandPortal.f1"
   - "sql13.TSQLSysNoExpandPortal.f1_TSQL"

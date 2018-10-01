@@ -5,9 +5,7 @@ ms.date: "08/24/2016"
 ms.prod: sql
 ms.prod_service: "pdw, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "DATABASE_ENCRYPTION_KEY_TSQL"
@@ -27,7 +25,6 @@ helpviewer_keywords:
   - "CREATE DATABASE ENCRYPTION KEY statement"
   - "database encryption key, create"
 ms.assetid: 2ee95a32-5140-41bd-9ab3-a947b9990688
-caps.latest.revision: 30
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

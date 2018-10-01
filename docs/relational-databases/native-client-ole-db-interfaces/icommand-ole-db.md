@@ -5,14 +5,11 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "ICommand [SQL Server Native Client]"
 ms.assetid: 5e24b3a0-0658-44fc-b653-f4c52f9eb328
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg

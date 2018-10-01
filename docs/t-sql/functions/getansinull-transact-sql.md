@@ -5,9 +5,7 @@ ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "GETANSINULL"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "default nullability"
   - "database nullability [SQL Server]"
 ms.assetid: 189399e4-428d-4902-b3a8-94f07fdefc6a
-caps.latest.revision: 29
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

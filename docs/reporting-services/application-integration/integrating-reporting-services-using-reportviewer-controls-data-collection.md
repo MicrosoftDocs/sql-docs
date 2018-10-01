@@ -4,7 +4,6 @@ ms.date: 09/18/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: application-integration
-ms.suite: pro-bi
 
 
 ms.topic: reference
@@ -16,7 +15,7 @@ ms.author: maghan
 
 Anonymous usage data is collected by the control to better understand how customers make use of the product. Usage data enables future development to be focused on improvements that are most relevant to customers.
 
-An explanation of the data collection and usage practices of Microsoft SQL Server and Report Viewer are available in the [privacy statement]((http://go.microsoft.com/fwlink/?LinkID=868444)).
+An explanation of the data collection and usage practices of Microsoft SQL Server and Report Viewer are available in the [privacy statement](http://go.microsoft.com/fwlink/?LinkID=868444).
 
 ## Opting out of data collection
 

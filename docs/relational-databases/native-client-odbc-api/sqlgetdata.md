@@ -5,15 +5,12 @@ ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apitype: "DLLExport"
 helpviewer_keywords: 
   - "SQLGetData function"
 ms.assetid: 204848be-8787-45b4-816f-a60ac9d56fcf
-caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
 manager: craigg

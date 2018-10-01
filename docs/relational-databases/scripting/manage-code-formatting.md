@@ -5,8 +5,6 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.technology: scripting
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "indenting code [SQL Server]"
@@ -25,7 +23,6 @@ helpviewer_keywords:
   - "text [SQL Server]"
   - "unindenting code"
 ms.assetid: ddbac4d2-6bdc-4467-a352-e869ec880eed
-caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg

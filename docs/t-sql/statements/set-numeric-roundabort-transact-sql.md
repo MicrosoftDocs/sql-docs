@@ -5,9 +5,7 @@ ms.date: "12/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "NUMERIC_ROUNDABORT"
@@ -23,7 +21,6 @@ helpviewer_keywords:
   - "NUMERIC_ROUNDABORT"
   - "SET NUMERIC_ROUNDABORT statement"
 ms.assetid: d20e74f1-b8da-466c-b180-9d8a8b851a77
-caps.latest.revision: 33
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

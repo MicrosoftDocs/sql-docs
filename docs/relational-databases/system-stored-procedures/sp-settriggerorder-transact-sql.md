@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_settriggerorder"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_settriggerorder"
 ms.assetid: 8b75c906-7315-486c-bc59-293ef12078e8
-caps.latest.revision: 54
 author: stevestein
 ms.author: sstein
 manager: craigg

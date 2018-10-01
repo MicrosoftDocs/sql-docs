@@ -1,12 +1,10 @@
-﻿---
+---
 title: "Failover Clustering and Always On Availability Groups (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/02/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "clustering [SQL Server]"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "failover clustering [SQL Server], AlwaysOn Availability Groups"
   - "Availability Groups [SQL Server], Failover Cluster Instances"
 ms.assetid: 613bfbf1-9958-477b-a6be-c6d4f18785c3
-caps.latest.revision: 48
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -31,13 +28,6 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 > [!NOTE]  
 >  For information about [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] concepts, see [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
   
- **In This Topic:**  
-  
--   [Windows Server Failover Clustering](#WSFC)  
-  
--   [SQL Server Failover Clustering](#SQLServerFC)  
-  
--   [Restrictions on Using The WSFC Failover Cluster Manager with Availability Groups](#FCMrestrictions)  
   
 ##  <a name="WSFC"></a> Windows Server Failover Clustering and Availability Groups  
  Deploying [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] requires a Windows Server Failover Clustering (WSFC) cluster. To be enabled for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] must reside on a WSFC node, and the WSFC cluster and node must be online. Furthermore, each availability replica of a given availability group must reside on a different node of the same WSFC cluster. The only exception is that while being migrated to another WSFC cluster, an availability group can temporarily straddle two clusters.  
@@ -108,7 +98,10 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
   
 -   Do not change any availability group properties, such as the possible owners and preferred owners. These properties are set automatically by the availability group.  
   
--   Do not use the Failover Cluster Manager to move availability groups to different nodes or to fail over availability groups. The Failover Cluster Manager is not aware of the synchronization status of the availability replicas, and doing so can lead to extended downtime. You must use [!INCLUDE[tsql](../../../includes/tsql-md.md)] or [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
+-   **Do not use the Failover Cluster Manager to move availability groups to different nodes or to fail over availability groups.** The Failover Cluster Manager is not aware of the synchronization status of the availability replicas, and doing so can lead to extended downtime. You must use [!INCLUDE[tsql](../../../includes/tsql-md.md)] or [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
+
+  >[!WARNING]
+  > Using the Failover Cluster Manager to move a *failover cluster instance* hosting an availability group to a node that is *already* hosting a replica of the same availability group may result in the loss of the availability group replica, preventing it from being brought online on the target node. A single node of a failover cluster cannot host more than one replica for the same availability group. For more information on  how this occurs, and how to recover, see the blog [Replica unexpectedly dropped in availability group](https://blogs.msdn.microsoft.com/alwaysonpro/2014/02/03/issue-replica-unexpectedly-dropped-in-availability-group/). 
   
 ##  <a name="RelatedContent"></a> Related Content  
   

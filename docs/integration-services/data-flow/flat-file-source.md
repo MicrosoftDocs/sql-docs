@@ -5,9 +5,7 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.flatfilesource.f1"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "flat files"
   - "Flat File source"
 ms.assetid: 4a64f7f3-f25d-4db0-93b3-a29496030e58
-caps.latest.revision: 50
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

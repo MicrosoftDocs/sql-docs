@@ -7,7 +7,6 @@ manager: craigg
 ms.date: 07/12/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.suite: "sql"
 ms.custom: ""
 ms.technology: configuration
 ---

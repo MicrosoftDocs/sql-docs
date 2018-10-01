@@ -7,8 +7,6 @@ manager: craigg
 ms.date: 07/02/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ""
-ms.suite: "sql"
 ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: "sql-linux"

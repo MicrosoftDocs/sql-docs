@@ -5,9 +5,7 @@ ms.date: "03/20/2017"
 ms.prod: sql
 ms.prod_service: "sql-data-warehouse, pdw, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "DROP DATABASE ENCRYPTION KEY"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "database encryption key, drop"
   - "DROP DATABASE ENCRYPTION KEY statement"
 ms.assetid: 9231bd89-75e1-45c4-b4c8-13f08695af68
-caps.latest.revision: 22
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

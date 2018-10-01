@@ -5,9 +5,7 @@ ms.date: "09/26/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "CREATE INDEX"
@@ -53,7 +51,6 @@ helpviewer_keywords:
   - "secondary indexes [SQL Server]"
   - "XML indexes [SQL Server], creating"
 ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
-caps.latest.revision: 223
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

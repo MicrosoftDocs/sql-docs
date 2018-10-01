@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "08/09/2016"
 ms.prod: sql
 ms.prod_service: sql
-ms.component: "xquery"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "XML"
@@ -18,7 +15,6 @@ helpviewer_keywords:
   - "expressions [XQuery], sequence"
   - "filtering sequences [XQuery]"
 ms.assetid: 41e18b20-526b-45d2-9bd9-e3b7d7fbce4e
-caps.latest.revision: 22
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

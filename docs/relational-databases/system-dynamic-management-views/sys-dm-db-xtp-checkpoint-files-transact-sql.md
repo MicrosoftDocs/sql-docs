@@ -4,10 +4,8 @@ ms.date: "03/20/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.custom: ""
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "dm_db_xtp_checkpoint_files"
@@ -19,7 +17,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_db_xtp_checkpoint_files dynamic management view"
 ms.assetid: ac8e6333-7a9f-478a-b446-5602283e81c9
-caps.latest.revision: 49
 author: stevestein
 ms.author: sstein
 manager: craigg

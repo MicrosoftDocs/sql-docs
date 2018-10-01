@@ -5,7 +5,6 @@ ms.author: maghan
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.technology: tools
-ms.suite: "reporting-services"
 ms.topic: conceptual
 ms.date: 08/16/2018
 ---

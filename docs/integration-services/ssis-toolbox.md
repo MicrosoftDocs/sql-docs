@@ -5,16 +5,13 @@ ms.date: "11/16/2016"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.toolboxfavorites.F1"
   - "sql13.dts.designer.toolbox.F1"
   - "sql13.dts.designer.toolboxcommon.F1"
 ms.assetid: 552ff592-eeef-46e8-b4a2-9b2384c869aa
-caps.latest.revision: 16
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

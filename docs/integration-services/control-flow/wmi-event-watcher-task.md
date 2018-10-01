@@ -5,9 +5,7 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.wmieventwatchertask.f1"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "WQL [Integration Services]"
   - "WMI Event Watcher task [Integration Services]"
 ms.assetid: b5bb52e9-a77e-41e1-93f9-d4c3bc6b2c9a
-caps.latest.revision: 53
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.shrinkdatabasetask.f1"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "database shrinking [Integration Services]"
   - "shrinking databases"
 ms.assetid: e66286f8-97b1-4e5a-86b4-e56f1932b7d5
-caps.latest.revision: 42
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

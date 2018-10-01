@@ -7,7 +7,6 @@ manager: v-thobro
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.suite: "sql"
 ms.custom: ""
 ms.technology: ssma
 ---

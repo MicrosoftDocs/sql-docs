@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "replication"
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_changemergesubscription_TSQL"
@@ -17,7 +14,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_changemergesubscription"
 ms.assetid: fd820f35-c189-4e2d-884d-b60c1c469f58
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg

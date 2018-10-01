@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-visual-db"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Query Designer [SQL Server], Diagram pane"
@@ -16,7 +13,6 @@ helpviewer_keywords:
   - "joins [SQL Server], Query and View Designer"
   - "Diagram pane [Visual Database Tools]"
 ms.assetid: 399dfc7b-e2e7-47d3-bd11-163cbe0ce13c
-caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

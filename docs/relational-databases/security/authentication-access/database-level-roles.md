@@ -5,9 +5,7 @@ ms.date: "06/29/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: security
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.roleproperties.database.f1"
@@ -37,7 +35,6 @@ helpviewer_keywords:
   - "authentication [SQL Server], roles"
   - "groups [SQL Server], roles"
 ms.assetid: 7f3fa5f6-6b50-43bb-9047-1544ade55e39
-caps.latest.revision: 49
 author: VanMSFT
 ms.author: vanto
 manager: craigg

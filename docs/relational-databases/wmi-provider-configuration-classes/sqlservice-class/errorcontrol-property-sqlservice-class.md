@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "wmi"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
   - "ErrorControl Property (SqlService Class)"
@@ -19,7 +16,6 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "ErrorControl property"
 ms.assetid: cbb1e0fa-5bfc-4b1b-a6ed-f7d5cfad4d73
-caps.latest.revision: 34
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg

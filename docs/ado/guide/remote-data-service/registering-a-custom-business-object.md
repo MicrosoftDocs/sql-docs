@@ -6,15 +6,12 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "custom business object in RDS [ADO]"
   - "registering custom business objects in RDS [ADO]"
   - "business objects in RDS [ADO]"
 ms.assetid: e9032ad8-d14c-42e3-ba13-cb5f00084a79
-caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg

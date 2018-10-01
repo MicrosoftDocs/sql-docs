@@ -4,12 +4,9 @@ ms.custom: "ag-guide"
 ms.date: "06/13/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 47bb7a1a-c0a5-473c-a7db-d9f4bf3ee650
-caps.latest.revision: 7
 author: rothja
 ms.author: jroth
 manager: craigg

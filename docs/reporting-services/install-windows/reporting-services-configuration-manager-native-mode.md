@@ -3,7 +3,6 @@ title: "Reporting Services Configuration Manager (Native Mode) | Microsoft Docs"
 ms.date: 09/20/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.suite: pro-bi
 
 ms.topic: conceptual
 helpviewer_keywords: 

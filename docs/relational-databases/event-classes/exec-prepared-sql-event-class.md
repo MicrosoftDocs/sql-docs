@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Exec Prepared SQL event class"
 ms.assetid: 2c61859b-00c9-4267-aef3-bc3ad075db69
-caps.latest.revision: 31
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

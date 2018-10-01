@@ -5,9 +5,7 @@ ms.date: "08/10/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "servers [SQL Server], permissions"
   - "granting permissions [SQL Server], servers"
 ms.assetid: 7e880a5a-3bdc-491f-a167-7a9ed338be7f
-caps.latest.revision: 36
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

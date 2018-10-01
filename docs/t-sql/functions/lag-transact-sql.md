@@ -5,9 +5,7 @@ ms.date: "11/09/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "LAG_TSQL"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "LAG function"
   - "analytic functions, LAG"
 ms.assetid: a9a90bdb-3f80-4c97-baca-b7407bcdc7f0
-caps.latest.revision: 23
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

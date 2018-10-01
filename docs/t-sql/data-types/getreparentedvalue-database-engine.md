@@ -5,9 +5,7 @@ ms.date: "7/22/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "Reparent_TSQL"
@@ -17,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "Reparent [Database Engine]"
 ms.assetid: f47f8e25-08ef-498b-84f4-a317aca1f358
-caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

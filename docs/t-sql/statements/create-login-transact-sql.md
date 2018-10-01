@@ -5,9 +5,7 @@ ms.date: "08/10/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "CREATE_LOGIN_TSQL"
@@ -26,7 +24,6 @@ helpviewer_keywords:
   - "re-hashing passwords"
   - "certificates [SQL Server], logins"
 ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
-caps.latest.revision: 101
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

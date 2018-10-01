@@ -6,7 +6,6 @@ author: MashaMSFT
 ms.author: mathoma
 ms.date: 03/13/2018
 ms.topic: tutorial
-ms.suite: "sql"
 ms.prod_service: sql-tools
 ms.reviewer: sstein
 manager: craigg

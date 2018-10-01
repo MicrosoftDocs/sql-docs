@@ -5,9 +5,7 @@ ms.date: "11/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "DBCC_OPENTRAN_TSQL"
@@ -25,7 +23,6 @@ helpviewer_keywords:
   - "checking open transactions"
   - "oldest transactions [SQL Server]"
 ms.assetid: 63163843-226f-42d3-9e2c-b634fbf06943
-caps.latest.revision: 40
 author: uc-msft
 ms.author: umajay
 manager: craigg

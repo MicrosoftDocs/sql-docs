@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "08/25/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: install
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 463c570e-9f75-4653-b3b8-4d61753b0013
-caps.latest.revision: 16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

@@ -5,9 +5,7 @@ ms.date: "08/09/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "FOR"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "BROWSE option"
   - "FOR clause [Transact-SQL]"
 ms.assetid: 08a6f084-8f73-4f2a-bae4-3c7513dc99b9
-caps.latest.revision: 54
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

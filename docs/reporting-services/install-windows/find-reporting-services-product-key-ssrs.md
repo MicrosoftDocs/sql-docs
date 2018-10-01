@@ -3,7 +3,6 @@ title: "Find the product key for SQL Server 2017 Reporting Services (SSRS) | Mic
 ms.date: 12/20/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.suite: pro-bi
 
 ms.topic: conceptual
 author: maggiesMSFT

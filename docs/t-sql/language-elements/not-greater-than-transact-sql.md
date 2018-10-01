@@ -5,13 +5,8 @@ ms.date: "03/13/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server (starting with 2008)"
 f1_keywords: 
   - "Not Greater"
   - "Greater"
@@ -24,7 +19,6 @@ helpviewer_keywords:
   - "!> (not greater than)"
   - "not greater than operator (!>)"
 ms.assetid: 71a413ed-64f1-4ab9-9c52-c5959a77d00f
-caps.latest.revision: 27
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

@@ -5,9 +5,7 @@ ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "SET_STATISTICS_XML_TSQL"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "statements [SQL Server], statistical information"
   - "XML [SQL Server], statement execution information"
 ms.assetid: 2b6d4c5a-a7f5-4dd1-b10a-7632265b1af7
-caps.latest.revision: 40
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

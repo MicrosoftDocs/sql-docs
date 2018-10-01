@@ -5,9 +5,7 @@ ms.date: "07/26/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "DIALOG CONVERSATION"
@@ -30,7 +28,6 @@ helpviewer_keywords:
   - "encryption [SQL Server], conversations"
   - "starting conversations"
 ms.assetid: 8e814f9d-77c1-4906-b8e4-668a86fc94ba
-caps.latest.revision: 47
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

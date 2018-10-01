@@ -4,20 +4,14 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 helpviewer_keywords: 
   - "Creating script files, configuring console settings"
   - "Creating script files, Script commands"
   - "Creating script files, script file validation"
   - "Creating script files, server connection parameters"
 ms.assetid: b4608fe7-c777-4ba5-b853-4402f02109e3
-caps.latest.revision: 22
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: craigg

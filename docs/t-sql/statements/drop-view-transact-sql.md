@@ -5,9 +5,7 @@ ms.date: "05/12/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "DROP_VIEW_TSQL"
@@ -22,7 +20,6 @@ helpviewer_keywords:
   - "views [SQL Server], removing"
   - "removing views"
 ms.assetid: 03cea355-e39c-46e1-b7db-8832038669dd
-caps.latest.revision: 42
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

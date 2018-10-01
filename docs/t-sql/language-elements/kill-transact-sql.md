@@ -5,9 +5,7 @@ ms.date: "08/31/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "KILL_TSQL"
@@ -33,7 +31,6 @@ helpviewer_keywords:
   - "KILL statement"
   - "terminating process"
 ms.assetid: 071cf260-c794-4b45-adc0-0e64097938c0
-caps.latest.revision: 61
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

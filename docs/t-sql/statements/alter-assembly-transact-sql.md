@@ -5,9 +5,7 @@ ms.date: "09/07/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "ALTER_ASSEMBLY_TSQL"
@@ -23,7 +21,6 @@ helpviewer_keywords:
   - "adding files"
   - "ALTER ASSEMBLY statement"
 ms.assetid: 87bca678-4e79-40e1-bb8b-bd5ed8f34853
-caps.latest.revision: 76
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

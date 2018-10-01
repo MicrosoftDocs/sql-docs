@@ -5,9 +5,7 @@ ms.date: "09/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "UPDATE_TSQL"
@@ -37,7 +35,6 @@ helpviewer_keywords:
   - "FROM clause, UPDATE statement"
   - "WHERE clause, UPDATE statement"
 ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
-caps.latest.revision: 91
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

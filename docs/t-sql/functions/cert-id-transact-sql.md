@@ -5,9 +5,7 @@ ms.date: "07/24/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "CERT_ID"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "IDs [SQL Server], certificates"
   - "certificates [SQL Server], IDs"
 ms.assetid: 59cc06f5-272e-4936-8afe-afba7aba8eea
-caps.latest.revision: 23
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

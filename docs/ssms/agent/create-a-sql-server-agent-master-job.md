@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-agent"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "jobs [SQL Server Agent], master jobs"
   - "jobs [SQL Server Agent], creating"
   - "master SQL Server Agent job [SQL Server]"
 ms.assetid: c12ab23f-d7ee-43a5-8cd2-0a9121292bcd
-caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

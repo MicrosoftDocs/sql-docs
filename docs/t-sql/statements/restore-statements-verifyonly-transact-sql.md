@@ -1,13 +1,11 @@
-﻿---
+---
 title: "RESTORE VERIFYONLY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/30/2018"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "VERIFYONLY"
@@ -22,7 +20,6 @@ helpviewer_keywords:
   - "verifying backups"
   - "checking backups"
 ms.assetid: cba3b6a0-b48e-4c94-812b-5b3cbb408bd6
-caps.latest.revision: 64
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

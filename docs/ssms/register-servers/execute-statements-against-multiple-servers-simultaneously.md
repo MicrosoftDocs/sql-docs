@@ -5,16 +5,13 @@ ms.date: "07/18/2016"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "multiserver queries"
   - "executing queries against multiple servers"
   - "queries [SQL Server], multiserver"
 ms.assetid: 197760f3-0a06-43de-8162-69c27d3fbe56
-caps.latest.revision: 21
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

@@ -5,9 +5,7 @@ ms.date: "09/26/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "ALTER_DATABASE_SCOPED_CONFIGURATION"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "ALTER DATABASE SCOPED CONFIGURATION statement"
   - "configuration [SQL Server], ALTER DATABASE SCOPED CONFIGURATION statement"
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
-caps.latest.revision: 32
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg

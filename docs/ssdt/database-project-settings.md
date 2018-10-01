@@ -6,8 +6,6 @@ ms.date: "02/09/2017"
 ms.prod: "sql"
 ms.technology: ssdt
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql.data.tools.DebugProperties"
@@ -40,7 +38,6 @@ f1_keywords:
   - "sql.data.tools.dbassemblyinfo"
   - "sql.data.tools.extendedpropertieseditor.dialog"
 ms.assetid: 34418730-1aaa-4948-aee2-8f1e62cda85c
-caps.latest.revision: 26
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"

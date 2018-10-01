@@ -4,14 +4,9 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "SQL Server 2016 Preview"
 ms.assetid: a98a5e07-eb5e-47b9-a6f2-e2cb3a18309c
-caps.latest.revision: 15
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "v-thobro"

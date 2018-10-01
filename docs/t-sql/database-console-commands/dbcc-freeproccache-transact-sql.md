@@ -5,9 +5,7 @@ ms.date: "10/13/2017"
 ms.prod: sql
 ms.prod_service: "sql-data-warehouse, pdw, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "FREEPROCCACHE_TSQL"
@@ -24,7 +22,6 @@ helpviewer_keywords:
   - "procedure cache [SQL Server]"
   - "clearing procedure cache"
 ms.assetid: 0e09d210-6f23-4129-aedb-3d56b2980683
-caps.latest.revision: 61
 author: uc-msft
 ms.author: umajay
 manager: craigg

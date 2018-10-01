@@ -5,9 +5,7 @@ ms.date: "05/12/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "DROP_TABLE_TSQL"
@@ -36,7 +34,6 @@ helpviewer_keywords:
   - "dropping constraints"
   - "dropping permissions"
 ms.assetid: 0b6f2b6f-3aa3-4767-943f-43df3c3c5cfd
-caps.latest.revision: 61
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

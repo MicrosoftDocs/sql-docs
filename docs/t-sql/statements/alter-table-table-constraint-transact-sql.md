@@ -5,9 +5,7 @@ ms.date: "09/11/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "CONSTRAINT_TSQL"
@@ -16,7 +14,6 @@ dev_langs:
 helpviewer_keywords: 
   - "table_constraint"
 ms.assetid: ac2a11e0-cc77-4e27-b107-4fe5bc6f5195
-caps.latest.revision: 59
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

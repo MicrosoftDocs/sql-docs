@@ -5,9 +5,7 @@ ms.date: "07/29/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "DATEPART_TSQL"
@@ -26,7 +24,6 @@ helpviewer_keywords:
   - "DATEPART function [SQL Server]"
   - "dates [SQL Server], dateparts"
 ms.assetid: 15f1a5bc-4c0c-4c48-848d-8ec03473e6c1
-caps.latest.revision: 57
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

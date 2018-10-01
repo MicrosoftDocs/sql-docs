@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "PWDCOMPARE"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "passwords [SQL Server], blank"
   - "PWDCOMPARE function [Transact-SQL]"
 ms.assetid: 5f84ff9e-c1ec-46aa-8501-50f854ebcc3a
-caps.latest.revision: 15
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

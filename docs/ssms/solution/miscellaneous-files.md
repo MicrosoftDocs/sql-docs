@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-solutions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "files [SQL Server Management Studio], miscellaneous"
@@ -16,7 +13,6 @@ helpviewer_keywords:
   - "solutions [SQL Server Management Studio], files"
   - "miscellaneous files folder [SQL Server]"
 ms.assetid: 3c952b0b-8f5f-4d86-9e5d-616c10b9df0d
-caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

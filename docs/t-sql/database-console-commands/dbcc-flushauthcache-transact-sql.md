@@ -1,4 +1,4 @@
-﻿---
+---
 title: "DBCC FLUSHAUTHCACHE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/16/2017"
@@ -6,9 +6,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "DBCC FLUSHAUTHCACHE"
@@ -18,7 +16,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "DBCC FLUSHAUTHCACHE"
 ms.assetid: 681ef31d-ceb9-4da5-86bf-bf1240df950f
-caps.latest.revision: 11
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

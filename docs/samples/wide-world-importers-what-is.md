@@ -6,8 +6,6 @@ ms.technology: samples
 ms.custom: ""
 ms.date: "04/04/2018"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma

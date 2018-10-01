@@ -4,13 +4,8 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 helpviewer_keywords: 
   - "bulk loading data"
   - "data, loading into SQL Azure"
@@ -21,7 +16,6 @@ helpviewer_keywords:
   - "SQL Azure, migrating data into"
   - "SQL Server, migrating data into"
 ms.assetid: f3b18af7-1af0-499d-a00d-a0af94895625
-caps.latest.revision: 17
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: craigg

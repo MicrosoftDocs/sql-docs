@@ -4,18 +4,12 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 helpviewer_keywords: 
   - "Project Settings dialog box, SQL Azure"
   - "SQL Azure settings"
 ms.assetid: bbb8a204-d0e4-4f0b-9709-271feb1f136e
-caps.latest.revision: 11
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: craigg

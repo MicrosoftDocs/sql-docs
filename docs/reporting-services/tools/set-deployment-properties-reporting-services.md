@@ -3,7 +3,6 @@ title: "Set Deployment Properties (Reporting Services) | Microsoft Docs"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.technology: tools
-ms.suite: "reporting-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "reports [Reporting Services], deploying"

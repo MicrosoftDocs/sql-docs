@@ -5,9 +5,7 @@ ms.date: "06/02/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 ms.assetid: 96bc8255-a037-4907-aec4-1a9c30814651
 author: "jovanpop-msft"

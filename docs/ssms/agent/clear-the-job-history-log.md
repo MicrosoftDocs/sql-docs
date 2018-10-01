@@ -1,14 +1,11 @@
-﻿---
+---
 title: "Clear the Job History Log | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-agent"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "jobs [SQL Server Agent], history"
@@ -17,7 +14,6 @@ helpviewer_keywords:
   - "SQL Server Agent jobs, history"
   - "historical information [SQL Server], jobs"
 ms.assetid: 34b9398a-c409-4040-8ea1-0deceb18f961
-caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-agent"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "jobs [SQL Server Agent], history"
@@ -17,7 +14,6 @@ helpviewer_keywords:
   - "historical information [SQL Server], jobs"
   - "displaying job history"
 ms.assetid: 3bbd1556-abdb-48a3-b249-546eace76343
-caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

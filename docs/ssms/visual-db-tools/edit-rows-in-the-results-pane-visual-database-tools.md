@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-visual-db"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "vdt.pane.results"
@@ -18,7 +15,6 @@ helpviewer_keywords:
   - "Query Designer [SQL Server], Results pane"
   - "Results pane"
 ms.assetid: de36f636-cfe9-4ae6-a474-06e9c51f9f0c
-caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

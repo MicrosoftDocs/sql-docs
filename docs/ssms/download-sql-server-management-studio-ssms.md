@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "09/24/2018"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 keywords: 
   - "install ssms, download ssms, latest ssms"
@@ -24,7 +21,6 @@ keywords:
   - "sql server ssms"
   - "ssms express"
 ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
-caps.latest.revision: 145
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

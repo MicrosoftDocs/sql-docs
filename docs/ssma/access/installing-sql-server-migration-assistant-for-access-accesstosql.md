@@ -4,13 +4,8 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "08/15/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 helpviewer_keywords: 
   - "installing SSMA"
   - "instructions, installation"
@@ -25,7 +20,6 @@ helpviewer_keywords:
   - "uninstalling SSMA"
   - "upgrading SSMA"
 ms.assetid: dd50eebd-75df-4e0d-8c4d-88b511aae4c7
-caps.latest.revision: 31
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: craigg

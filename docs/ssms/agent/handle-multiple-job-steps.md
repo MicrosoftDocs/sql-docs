@@ -1,14 +1,11 @@
-﻿---
+---
 title: "Handle Multiple Job Steps | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-agent"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "job steps [SQL Server Agent]"
@@ -17,7 +14,6 @@ helpviewer_keywords:
   - "SQL Server Agent jobs, job steps"
   - "control of flow for jobs [SQL Server]"
 ms.assetid: 7aba19ff-72b3-45f6-8e54-23f4988d63a8
-caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

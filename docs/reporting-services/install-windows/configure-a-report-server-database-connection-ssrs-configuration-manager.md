@@ -3,7 +3,6 @@ title: "Configure a Report Server Database Connection  (SSRS Configuration Manag
 ms.date: 09/20/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.suite: pro-bi
 
 ms.topic: conceptual
 

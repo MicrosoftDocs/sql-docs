@@ -5,8 +5,6 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.technology: scripting
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Query Editor [SQL Server Management Studio], printing"
@@ -14,7 +12,6 @@ helpviewer_keywords:
   - "text printing [SQL Server Management Studio]"
   - "printing code and text"
 ms.assetid: 6e60173f-77fb-4a3e-a561-62c4d0128b95
-caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg

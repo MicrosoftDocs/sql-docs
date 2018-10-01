@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "02/29/2016"
 ms.prod: sql
 ms.reviewer: vanto
-ms.suite: "sql"
 ms.technology: security
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Always Encrypted, cryptography system"

@@ -4,14 +4,9 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-functions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server (starting with 2008)"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -19,7 +14,6 @@ helpviewer_keywords:
   - "change data capture [SQL Server], querying metadata"
   - "cdc.fn_cdc_get_all_changes_<capture_instance>"
 ms.assetid: c6bad147-1449-4e20-a42e-b51aed76963c
-caps.latest.revision: 31
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

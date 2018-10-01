@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "subkeys [ODBC], driver specification subkeys"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "registry entries for components [ODBC], driver specification subkeys"
   - "drivers subkey [ODBC]"
 ms.assetid: b4d802ef-b199-4e64-b7a5-6f2b3e5e2c80
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg

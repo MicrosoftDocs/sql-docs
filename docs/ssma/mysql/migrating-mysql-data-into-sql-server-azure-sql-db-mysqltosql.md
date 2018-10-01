@@ -4,18 +4,12 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 helpviewer_keywords: 
   - "Data Migration, server side data migration"
   - "Data Migration,client side data migration"
 ms.assetid: a6a7f4d6-68aa-4a38-93bf-53eba0d7dc82
-caps.latest.revision: 24
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: craigg

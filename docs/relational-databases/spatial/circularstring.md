@@ -4,15 +4,11 @@ ms.custom: ""
 ms.date: "06/02/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "spatial"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "dbe-spatial"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 9fe06b03-d98c-4337-9f89-54da98f49f9f
-caps.latest.revision: 27
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

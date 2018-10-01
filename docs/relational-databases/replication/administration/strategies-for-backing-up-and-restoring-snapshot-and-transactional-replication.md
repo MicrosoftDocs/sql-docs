@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: replication
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "backups [SQL Server replication], snapshot replication"
@@ -21,7 +18,6 @@ helpviewer_keywords:
   - "sync with backup [SQL Server replication]"
   - "backups [SQL Server replication], transactional replication"
 ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
-caps.latest.revision: 59
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

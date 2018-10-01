@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "native-client|ODBC"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "SQL Server Native Client ODBC driver, transactions"
   - "transactions [ODBC]"
   - "ODBC, transactions"
 ms.assetid: c5a87fa5-827a-4e6f-a0d9-924bac881eb0
-caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg

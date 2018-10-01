@@ -5,9 +5,7 @@ ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "revoking permissions [SQL Server]"
   - "REVOKE statement, search property list permissions"
 ms.assetid: a6b8b37c-0015-4596-898c-51a567659e2e
-caps.latest.revision: 11
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

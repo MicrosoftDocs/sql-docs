@@ -6,15 +6,12 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "VB"
 helpviewer_keywords: 
   - "Sort property [ADO], Visual Basic example"
 ms.assetid: fc2fd40b-65d6-4023-90a3-90c9a88ef6cf
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg

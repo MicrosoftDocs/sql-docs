@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: clr
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -20,7 +19,6 @@ helpviewer_keywords:
   - "common language runtime [SQL Server], attributes"
   - "SqlUserDefinedTypeAttribute attribute"
 ms.assetid: 95069d22-b05d-4670-b053-15ee2a664e33
-caps.latest.revision: 82
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

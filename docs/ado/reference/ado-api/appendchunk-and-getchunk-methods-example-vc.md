@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "C++"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "GetChunk method [ADO], VC++ example"
   - "AppendChunk method [ADO], VC++ example"
 ms.assetid: 51aa99be-d5ca-46ac-8b3f-1b03ce4f0b2a
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg

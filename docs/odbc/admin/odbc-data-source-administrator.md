@@ -5,15 +5,12 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "ODBC data source administrator [ODBC], about ODBC data source administrator"
   - "ODBC data source administrator [ODBC]"
 ms.assetid: a2f66b4c-a4ac-401b-8e95-d8f96332e0b5
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg

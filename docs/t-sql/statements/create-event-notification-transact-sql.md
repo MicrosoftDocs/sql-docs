@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "CREATE_EVENT_NOTIFICATION_TSQL"
@@ -23,7 +21,6 @@ helpviewer_keywords:
   - "events [SQL Server], notifications"
   - "event notifications [SQL Server], creating"
 ms.assetid: dbbff0e8-9e25-4f12-a1ba-e12221d16ac2
-caps.latest.revision: 64
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

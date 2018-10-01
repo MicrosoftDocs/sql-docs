@@ -6,15 +6,12 @@ ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.technology: scripting
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Options [SQL Server Management Studio], IntelliSense"
   - "modifying IntelliSense options"
   - "IntelliSense [SQL Server], modifying options"
 ms.assetid: 3ffc9f31-4efa-4c1a-a033-ed1dc48b065f
-caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg

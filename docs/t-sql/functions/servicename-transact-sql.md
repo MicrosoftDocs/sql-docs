@@ -1,13 +1,11 @@
-﻿---
+---
 title: "@@SERVICENAME (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/18/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "@@SERVICENAME_TSQL"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "names [SQL Server], registry keys"
   - "registry keys [SQL Server]"
 ms.assetid: 5b0b35be-50ae-411d-a607-bf7464b73624
-caps.latest.revision: 23
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

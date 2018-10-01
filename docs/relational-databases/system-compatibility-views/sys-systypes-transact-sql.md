@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "system-compatibility-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.systypes_TSQL"
@@ -21,7 +18,6 @@ helpviewer_keywords:
   - "sys.systypes compatibility view"
   - "systypes system table"
 ms.assetid: 1b0b1d0c-5f7b-470b-bd52-8bfa922d7889
-caps.latest.revision: 50
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

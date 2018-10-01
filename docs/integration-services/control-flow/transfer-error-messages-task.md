@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.transfererrormessagestask.f1"
@@ -16,7 +14,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "Transfer Error Messages task [Integration Services]"
 ms.assetid: da702289-035a-4d14-bd74-04461fbfee1b
-caps.latest.revision: 31
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

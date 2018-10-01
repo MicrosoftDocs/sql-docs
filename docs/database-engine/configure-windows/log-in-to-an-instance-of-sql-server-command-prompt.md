@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: configuration
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "logins [SQL Server], named instance of SQL Server"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "command prompt [SQL Server], logins"
   - "logging in [SQL Server]"
 ms.assetid: f67c11e3-c519-40c9-82c1-07efa9d9985e
-caps.latest.revision: 26
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

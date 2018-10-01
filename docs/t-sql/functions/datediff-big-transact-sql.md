@@ -5,9 +5,7 @@ ms.date: "07/29/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "DATEDIFF_BIG"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "functions [SQL Server], date and time"
   - "time [SQL Server], functions"
 ms.assetid: 19ac1693-3cfa-400d-bf83-20a9cb46599a
-caps.latest.revision: 7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

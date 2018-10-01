@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "localdb"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
   - "LocalDBGetVersionInfo"
@@ -17,7 +14,6 @@ apilocation:
   - "sqluserinstance.dll"
 apitype: "DLLExport"
 ms.assetid: d4aaea30-1d0d-4436-bcdc-5c101d27b1c1
-caps.latest.revision: 10
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg

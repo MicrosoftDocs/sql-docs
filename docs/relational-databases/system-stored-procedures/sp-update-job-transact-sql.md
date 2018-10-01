@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "08/09/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_update_job"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_update_job"
 ms.assetid: cbdfea38-9e42-47f3-8fc8-5978b82e2623
-caps.latest.revision: 39
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

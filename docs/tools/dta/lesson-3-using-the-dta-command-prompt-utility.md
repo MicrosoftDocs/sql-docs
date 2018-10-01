@@ -4,18 +4,12 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "dta"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: performance
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "SQL Server 2016"
 helpviewer_keywords: 
   - "Database Engine [SQL Server], tutorials"
 ms.assetid: 30f27f4d-8852-4b12-ba62-57f63e496f1d
-caps.latest.revision: 26
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

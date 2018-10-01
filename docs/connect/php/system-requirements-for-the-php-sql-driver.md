@@ -5,14 +5,11 @@ ms.date: "03/23/2018"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords:
   - "requirements"
 ms.assetid: 5db4b75f-c605-4785-9560-399a533c0fc9
-caps.latest.revision: 93
 author: MightyPen
 ms.author: genemi
 manager: craigg

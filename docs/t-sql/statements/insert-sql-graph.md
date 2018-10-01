@@ -5,10 +5,8 @@ ms.date: "05/12/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.custom: ""
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "INSERT statement [SQL Server], SQL graph"
   - "SQL graph, INSERT statement"
 ms.assetid: 
-caps.latest.revision: 1
 author: "shkale-msft"
 ms.author: "shkale"
 manager: craigg

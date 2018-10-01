@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "07/02/2018"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: t-sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "PREDICT"

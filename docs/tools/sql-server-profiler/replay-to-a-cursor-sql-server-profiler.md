@@ -5,16 +5,13 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: profiler
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "replaying cursors"
   - "traces [SQL Server], replaying"
   - "replaying traces"
 ms.assetid: 89eadc41-4424-4a1c-ba61-0b52c851cdb1
-caps.latest.revision: 22
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

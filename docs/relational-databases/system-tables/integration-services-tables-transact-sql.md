@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-tables"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -18,7 +15,6 @@ helpviewer_keywords:
   - "system tables [Integration Services]"
   - "SSIS, system tables"
 ms.assetid: 683b181b-0091-4a9c-86db-bc577af43cec
-caps.latest.revision: 21
 author: "douglasl"
 ms.author: "douglasl"
 manager: craigg

@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "VB"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "CommitTrans method [ADO], Visual Basic example"
   - "BeginTrans method [ADO], Visual Basic example"
 ms.assetid: aa7de324-cd71-4bd0-8043-24229f4a785e
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg

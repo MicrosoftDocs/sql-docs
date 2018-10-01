@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
   - "bcp_bind"
@@ -17,7 +15,6 @@ apitype: "DLLExport"
 helpviewer_keywords: 
   - "bcp_bind function"
 ms.assetid: 6e335a5c-64b2-4bcf-a88f-35dc9393f329
-caps.latest.revision: 47
 author: MightyPen
 ms.author: genemi
 manager: craigg

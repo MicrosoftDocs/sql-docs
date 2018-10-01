@@ -5,9 +5,7 @@ ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "/"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "division [SQL Server]"
   - "divide operator (/)"
 ms.assetid: 1d69893b-e5c3-441d-8dd8-0e5eb872ecfc
-caps.latest.revision: 45
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

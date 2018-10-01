@@ -4,12 +4,9 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "09/22/2018"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
-caps.latest.revision: 24
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: craigg

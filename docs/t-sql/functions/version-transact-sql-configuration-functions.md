@@ -5,9 +5,7 @@ ms.date: "03/20/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "@@VERSION"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "versions [SQL Server], @@VERSION"
   - "processors [SQL Server], types"
 ms.assetid: 385ba80e-7c28-41a5-9cdb-5648f3785983
-caps.latest.revision: 40
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

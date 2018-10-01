@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: replication
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "viewing alerts"
@@ -22,7 +19,6 @@ helpviewer_keywords:
   - "displaying alerts"
   - "Snapshot Agent, alerts"
 ms.assetid: 8c42e523-7020-471d-8977-a0bd044b9471
-caps.latest.revision: 39
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

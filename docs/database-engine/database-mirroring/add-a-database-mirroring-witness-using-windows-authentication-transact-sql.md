@@ -5,16 +5,13 @@ ms.date: "03/07/2017"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "witness [SQL Server], establishing"
   - "Windows authentication [SQL Server]"
   - "database mirroring [SQL Server], witness"
 ms.assetid: bf5e87df-91a4-49f9-ae88-2a6dcf644510
-caps.latest.revision: 51
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

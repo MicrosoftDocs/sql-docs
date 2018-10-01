@@ -5,9 +5,7 @@ ms.date: "07/24/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "CEILING_TSQL"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "integers [SQL Server]"
   - "CEILING function [Transact-SQL]"
 ms.assetid: e736b43a-9457-4781-95a4-4bcf9d4fc46a
-caps.latest.revision: 34
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

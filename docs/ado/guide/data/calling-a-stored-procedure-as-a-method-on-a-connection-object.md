@@ -6,15 +6,12 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "calling stored procedures [ADO]"
   - "stored procedures [ADO]"
   - "commands [ADO]"
 ms.assetid: 35ffdb79-a931-4271-a3bb-0cd804cf173e
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg

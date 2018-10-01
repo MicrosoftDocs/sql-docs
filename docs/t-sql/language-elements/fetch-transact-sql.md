@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "FETCH"
@@ -23,7 +21,6 @@ helpviewer_keywords:
   - "SCROLL option"
   - "row fetching [SQL Server]"
 ms.assetid: 5d68dac2-f91b-4342-bb4e-209ee132665f
-caps.latest.revision: 43
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

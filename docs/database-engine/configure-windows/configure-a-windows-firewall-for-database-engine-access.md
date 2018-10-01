@@ -5,16 +5,13 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: configuration
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "connections [SQL Server], firewall systems"
   - "firewall systems, [Database Engine]"
   - "security [SQL Server], firewalls"
 ms.assetid: 0093b43c-c6b5-4574-9b30-3a0e91e1a1f9
-caps.latest.revision: 57
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

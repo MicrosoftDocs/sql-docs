@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: configuration
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.browseservers.local.f1"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "Browser Service"
   - "SQL Server Browser service"
 ms.assetid: 3cc00d3a-487c-4cd9-a155-655f02485fa0
-caps.latest.revision: 61
 author: "stevestein"
 ms.author: "sstein"
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"

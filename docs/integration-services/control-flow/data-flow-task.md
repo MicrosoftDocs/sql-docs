@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.dataflowtask.f1"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "data flow [Integration Services], Data Flow task"
   - "Integration Services, performance"
 ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
-caps.latest.revision: 75
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

@@ -5,12 +5,8 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
 dev_langs: 
   - "VB"
   - "CSharp"
@@ -21,7 +17,6 @@ helpviewer_keywords:
   - "data flow components [Integration Services]"
   - "data flow components [Integration Services], developing"
 ms.assetid: 9d96bcf5-eba8-44bd-b113-ed51ad0d0521
-caps.latest.revision: 28
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

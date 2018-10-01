@@ -5,9 +5,7 @@ ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "permissions [SQL Server], certificates"
   - "REVOKE statement, certificates"
 ms.assetid: 2272324a-98f2-42c6-88b1-96a99020c9e9
-caps.latest.revision: 24
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

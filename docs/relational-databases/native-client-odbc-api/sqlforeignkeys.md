@@ -5,15 +5,12 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apitype: "DLLExport"
 helpviewer_keywords: 
   - "SQLForeignKeys function"
 ms.assetid: 6c01ce0d-30d7-4c86-8705-3ab254d8a845
-caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg

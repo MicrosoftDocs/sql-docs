@@ -4,22 +4,16 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: sql
-ms.component: "xquery"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 dev_langs: 
   - "XML"
 helpviewer_keywords: 
   - "contains function (XQuery)"
   - "fn:contains function"
 ms.assetid: 2c88c015-04fc-429b-84b2-835596a28b65
-caps.latest.revision: 42
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

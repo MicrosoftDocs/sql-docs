@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "11/09/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "udf"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SCHEMABINDING clause"
@@ -17,7 +14,6 @@ helpviewer_keywords:
   - "CREATE FUNCTION statement"
   - "valid statements [SQL Server]"
 ms.assetid: f0d5dd10-73fd-4e05-9177-07f56552bdf7
-caps.latest.revision: 38
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

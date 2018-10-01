@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.availabilitygroup.resumedatamove.f1"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "primary databases [SQL Server], in availability group"
   - "Availability Groups [SQL Server], databases"
 ms.assetid: 20e9147b-e985-4caa-910e-fc4b38dbf9a1
-caps.latest.revision: 38
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

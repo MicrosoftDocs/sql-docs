@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "08/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "smo"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
 
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "Visual C# [SMO]"
 ms.assetid: 1e7abb16-23a0-4a18-91ad-253261e6bf84
-caps.latest.revision: 43
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

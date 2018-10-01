@@ -5,9 +5,7 @@ ms.date: "04/15/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: vanto
-ms.suite: "sql"
 ms.technology: security
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "encryption [SQL Server], TDE using an EKM"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "EKM, TDE how to"
   - "Transparent Data Encryption, using EKM"
 ms.assetid: b892e7a7-95bd-4903-bf54-55ce08e225af
-caps.latest.revision: 26
 author: aliceku
 ms.author: aliceku
 manager: craigg

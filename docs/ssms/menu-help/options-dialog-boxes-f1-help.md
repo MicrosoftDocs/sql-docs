@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-menu"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Options [SQL Server Management Studio], dialog boxes"
   - "Options [SQL Server Management Studio]"
 ms.assetid: b98d2631-530a-43b4-8491-f724f8e4a23a
-caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

@@ -4,13 +4,8 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 helpviewer_keywords: 
   - "Access databases, loading converted objects into SQL Azure"
   - "Access databases, loading converted objects into SQL Server"
@@ -32,7 +27,6 @@ helpviewer_keywords:
   - "uploading objects into SQL Azure"
   - "uploading objects into SQL Server"
 ms.assetid: 4e854eee-b10c-4f0b-9d9e-d92416e6f2ba
-caps.latest.revision: 16
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: craigg

@@ -26,6 +26,8 @@
     href: identify-bottlenecks.md
   - name: Scalar User-defined function inlining
     href: ../user-defined-functions/scalar-udf-inlining.md
+  - name: Use DMVs to determine use and performance of views
+    href: use-dmvs-determine-usage-performance-views.md
   - name: Server Performance and Activity Monitoring
     href: server-performance-and-activity-monitoring.md
     items:

@@ -4,12 +4,9 @@ ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: report-server-web-service-net-framework-exception-handling
-ms.suite: pro-bi
 
 
 ms.topic: reference
-applies_to: 
-  - "SQL Server 2016 Preview"
 helpviewer_keywords: 
   - "exceptions [Reporting Services], best practices"
 ms.assetid: 72fecf28-f02e-4338-b50f-0b21f520302d

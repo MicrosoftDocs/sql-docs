@@ -6,14 +6,11 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords:
   - "providers [ADO], data shaping service for OLE DB"
   - "data shaping service for OLE DB [ADO]"
 ms.assetid: 523009ce-e01b-4e2d-a7df-816d7688aff0
-caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg

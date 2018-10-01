@@ -5,9 +5,7 @@ ms.date: "09/08/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "NULLIF"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "NULLIF function"
   - "equivalent expressions [SQL Server]"
 ms.assetid: 44c7b67e-74c7-4bb9-93a4-7a3016bd2feb
-caps.latest.revision: 48
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

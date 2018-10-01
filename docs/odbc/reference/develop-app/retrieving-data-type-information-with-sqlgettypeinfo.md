@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL data types [ODBC], identifiers"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "identifiers [ODBC], SQL type"
   - "SQL type identifiers [ODBC]"
 ms.assetid: d4f8b152-ab9e-4d05-a720-d10a08a6df81
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg

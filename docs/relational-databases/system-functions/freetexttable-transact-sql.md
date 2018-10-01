@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "system-functions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "FREETEXTTABLE_TSQL"
@@ -22,7 +19,6 @@ helpviewer_keywords:
   - "ranked results [full-text search]"
   - "column searches [full-text search]"
 ms.assetid: 4523ae15-4260-40a7-a53c-8df15e1fee79
-caps.latest.revision: 51
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

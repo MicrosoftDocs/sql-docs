@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 helpviewer_keywords: 
   - "17828 (Database Engine error)"
@@ -14,7 +12,6 @@ helpviewer_keywords:
   - "17832 (Database Engine error)"
   - "login packet (bad)"
 ms.assetid: bd56ffe4-0855-4ada-8aca-251fbc6ff2ce
-caps.latest.revision: 16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

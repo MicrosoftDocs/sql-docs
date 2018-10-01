@@ -5,9 +5,7 @@ ms.date: "09/18/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.dm_exec_cached_plans"
@@ -19,7 +17,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_exec_cached_plans dynamic management view"
 ms.assetid: 95b707d3-3a93-407f-8e88-4515d4f2039d
-caps.latest.revision: 44
 author: stevestein
 ms.author: sstein
 manager: craigg

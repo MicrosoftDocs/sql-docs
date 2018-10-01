@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-menu"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.aboutsqlserverworkbench.f1"
 helpviewer_keywords: 
   - "SQL Server Management Studio dialog box"
 ms.assetid: b3568e0f-3227-45a0-ad6d-997ee87cdf0f
-caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

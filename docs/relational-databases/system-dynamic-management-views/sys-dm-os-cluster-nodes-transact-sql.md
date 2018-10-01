@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "08/18/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.dm_os_cluster_nodes_TSQL"
@@ -18,7 +16,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_os_cluster_nodes dynamic management view"
 ms.assetid: 92fa804e-2d08-42c6-a36f-9791544b1d42
-caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg

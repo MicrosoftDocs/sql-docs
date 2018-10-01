@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "05/31/2016"
 ms.prod: sql  
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 92a44d4d-0e53-4fb0-b890-de264c65c95a
-caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg

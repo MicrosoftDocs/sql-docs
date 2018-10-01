@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "sqlxml"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: xml
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "examples [SQLXML]"
@@ -16,7 +13,6 @@ helpviewer_keywords:
   - "SQLXML, samples"
   - "examples [SQLXML], requirements"
 ms.assetid: acfee2eb-cf35-4377-9fde-82ad1d938011
-caps.latest.revision: 17
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

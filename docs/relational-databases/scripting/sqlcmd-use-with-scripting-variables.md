@@ -5,8 +5,6 @@ ms.date: "08/09/2016"
 ms.prod: sql
 ms.technology: scripting
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "TSQL"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "sqlcmd utility, scripts"
   - "setvar command"
 ms.assetid: 793495ca-cfc9-498d-8276-c44a5d09a92c
-caps.latest.revision: 47
 author: MightyPen
 ms.author: genemi
 manager: craigg

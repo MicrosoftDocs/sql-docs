@@ -5,15 +5,12 @@ ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apitype: "DLLExport"
 helpviewer_keywords: 
   - "SQLDescribeCol function"
 ms.assetid: ffbf34c6-8268-434f-829a-82009a6cda59
-caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
 manager: craigg

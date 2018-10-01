@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-compatibility-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.syspermissions_TSQL"
@@ -21,7 +18,6 @@ helpviewer_keywords:
   - "syspermissions system table"
   - "sys.syspermissions compatibility view"
 ms.assetid: ba9a9a88-55d2-41a7-b09b-342e8b9a54c5
-caps.latest.revision: 36
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

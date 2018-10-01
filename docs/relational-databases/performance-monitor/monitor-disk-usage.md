@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "performance-monitor"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "database monitoring [SQL Server], disk usage"
@@ -25,7 +22,6 @@ helpviewer_keywords:
   - "database performance [SQL Server], disk usage"
   - "monitoring server performance [SQL Server], disk usage"
 ms.assetid: 1525449c-ea7d-4222-b294-1ba1fe99c9ac
-caps.latest.revision: 23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

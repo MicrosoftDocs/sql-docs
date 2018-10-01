@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: replication
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.rep.configdistwizard.distproperties.general.f1"
 helpviewer_keywords: 
   - "Distributor Properties dialog box"
 ms.assetid: ab4120ec-e524-4c0c-8b48-f2f40adb1a3b
-caps.latest.revision: 22
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

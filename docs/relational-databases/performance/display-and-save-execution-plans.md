@@ -5,9 +5,7 @@ ms.date: "08/21/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: performance
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Showplan results"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "SQL Server Management Studio [SQL Server], execution plans"
   - "tuning queries [SQL Server]"
 ms.assetid: bcd6f094-c613-4835-ae19-4caaadb4bb17
-caps.latest.revision: 24
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

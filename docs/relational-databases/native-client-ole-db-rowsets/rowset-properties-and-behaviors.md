@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "rowsets [OLE DB], properties"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "properties [OLE DB]"
   - "OLE DB rowsets, properties"
 ms.assetid: 9baabcb6-0114-42f2-89f8-d8d66b3c8c14
-caps.latest.revision: 47
 author: MightyPen
 ms.author: genemi
 manager: craigg

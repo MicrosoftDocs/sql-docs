@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Timeout event class"
 ms.assetid: d755833a-d7eb-4973-9352-67a2fba2442a
-caps.latest.revision: 38
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

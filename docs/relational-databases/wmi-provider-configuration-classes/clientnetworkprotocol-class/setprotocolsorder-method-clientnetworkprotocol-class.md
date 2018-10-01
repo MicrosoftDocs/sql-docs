@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "wmi"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
   - "SetProtocolsOrder Method (ClientNetworkProtocol Class)"
@@ -19,7 +16,6 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "SetProtocolsOrder method"
 ms.assetid: b86d98b9-aae4-4e74-b4da-1ec984d5c8b4
-caps.latest.revision: 33
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg

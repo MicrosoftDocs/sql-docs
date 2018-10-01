@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "wmi"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
   - "InstanceName Property (ServerSettingsGeneralFlag Class)"
@@ -19,7 +16,6 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "InstanceName property"
 ms.assetid: b5da398c-9697-4f67-b4c8-3fdd56a404ec
-caps.latest.revision: 30
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg

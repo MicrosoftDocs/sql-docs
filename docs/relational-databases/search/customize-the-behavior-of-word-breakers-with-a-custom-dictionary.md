@@ -4,14 +4,10 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "search, sql-database"
-ms.component: "search"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: search
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: a8e278d1-aeaa-48f1-a0c6-5de232c983e4
-caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

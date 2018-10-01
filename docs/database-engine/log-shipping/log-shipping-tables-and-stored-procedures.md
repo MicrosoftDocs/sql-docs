@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "secondary servers [SQL Server]"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "log shipping [SQL Server], stored procedures"
   - "primary servers [SQL Server]"
 ms.assetid: 03420810-4c38-4c0c-adf0-913eb044c50a
-caps.latest.revision: 20
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

@@ -5,9 +5,7 @@ ms.date: "08/23/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "MAX"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "values [SQL Server], maximum"
   - "maximum values [SQL Server]"
 ms.assetid: 9b002b69-ab5e-472d-b12e-dc2fbe35ef42
-caps.latest.revision: 38
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

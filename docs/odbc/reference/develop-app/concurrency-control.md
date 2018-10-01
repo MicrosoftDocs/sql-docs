@@ -5,15 +5,12 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "transactions [ODBC], concurrency control"
   - "concurrency control [ODBC]"
 ms.assetid: 75e4adb3-3d43-49c5-8c5e-8df96310d912
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg

@@ -4,16 +4,12 @@ ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: replication
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.rep.monitor.subscription.synchhistory.f1"
 ms.assetid: 85f666f6-14ee-4f19-b385-e5cc508aabe4
-caps.latest.revision: 20
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

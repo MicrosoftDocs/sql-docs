@@ -5,9 +5,7 @@ ms.date: "7/23/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "datetimeoffset_TSQL"
@@ -22,7 +20,6 @@ helpviewer_keywords:
   - "data types [SQL Server], date and time"
   - "time zones [SQL Server]"
 ms.assetid: a0455b71-ca25-476e-a7a8-0770f1860bb7
-caps.latest.revision: 41
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

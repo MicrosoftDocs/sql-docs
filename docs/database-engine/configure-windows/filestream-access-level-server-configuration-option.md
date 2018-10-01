@@ -5,15 +5,12 @@ ms.date: "03/02/2017"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: configuration
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "FILESTREAM [SQL Server], access level"
   - "filestream access level"
 ms.assetid: b88f6ff2-795e-4730-bfb8-dbc6a958f2ad
-caps.latest.revision: 15
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

@@ -5,8 +5,6 @@ ms.date: "06/06/2017"
 ms.prod: sql
 ms.technology: scripting
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "TSQL"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "statements [SQL Server], executing"
   - "sqlcmd utility, about sqlcmd utility"
 ms.assetid: 3ec89119-7314-43ef-9e91-12e72bb63d62
-caps.latest.revision: 50
 author: MightyPen
 ms.author: genemi
 manager: craigg

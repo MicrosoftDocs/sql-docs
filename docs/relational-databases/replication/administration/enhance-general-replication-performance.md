@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: replication
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "publications [SQL Server replication], design and performance"
@@ -22,7 +19,6 @@ helpviewer_keywords:
   - "performance [SQL Server replication], general considerations"
   - "transactional replication, performance"
 ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
-caps.latest.revision: 45
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

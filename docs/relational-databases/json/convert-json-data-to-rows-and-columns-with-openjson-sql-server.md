@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "07/18/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "OPENJSON"

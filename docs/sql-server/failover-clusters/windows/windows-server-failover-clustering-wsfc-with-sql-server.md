@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "01/18/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], WSFC clusters"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "quorum [SQL Server]"
   - "failover clustering [SQL Server], Always On Availability Groups"
 ms.assetid: 79d2ea5a-edd8-4b3b-9502-96202057b01a
-caps.latest.revision: 35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

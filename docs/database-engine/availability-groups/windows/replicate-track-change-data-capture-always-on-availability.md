@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "08/21/2018"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "change tracking [SQL Server], AlwaysOn Availability Groups"
@@ -14,7 +12,6 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], interoperability"
   - "replication [SQL Server], AlwaysOn Availability Groups"
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
-caps.latest.revision: 37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

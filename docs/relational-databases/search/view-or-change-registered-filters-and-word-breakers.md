@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "search, sql-database"
-ms.component: "search"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: search
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "full-text search [SQL Server], word breakers"
@@ -16,7 +13,6 @@ helpviewer_keywords:
   - "filters [full-text search]"
   - "word breakers [full-text search]"
 ms.assetid: f88c54df-b1aa-4701-807f-dc92c32363fd
-caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

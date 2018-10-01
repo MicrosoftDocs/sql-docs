@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: performance
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Resource Governor, templates"
 ms.assetid: f342dec2-d1d6-483e-b44e-98eb7d168b5e
-caps.latest.revision: 15
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

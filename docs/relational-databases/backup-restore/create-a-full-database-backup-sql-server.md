@@ -5,9 +5,7 @@ ms.date: "06/13/2017"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: backup-restore
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "backing up databases [SQL Server], full backups"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "backups [SQL Server], creating"
   - "database backups [SQL Server], SQL Server Management Studio"
 ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
-caps.latest.revision: 63
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

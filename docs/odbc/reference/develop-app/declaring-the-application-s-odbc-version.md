@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "declaring ODBC version [ODBC]"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "connecting to data source [ODBC], declaring ODBC version"
   - "version declaration [ODBC]"
 ms.assetid: 083a1ef5-580a-4979-9cf3-50f4549a080a
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg

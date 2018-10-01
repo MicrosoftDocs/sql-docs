@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "events [ADO], about event handlers"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "event handlers [ADO]"
   - "multiple object event handlers [ADO]"
 ms.assetid: a86c8a02-dd69-420d-8a47-0188b339858d
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg

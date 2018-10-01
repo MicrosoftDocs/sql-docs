@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "row status array [ODBC]"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "result sets [ODBC], block cursors"
   - "rowset status [ODBC]"
 ms.assetid: 4b69f189-2722-4314-8a02-f4ffecd6dabd
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg

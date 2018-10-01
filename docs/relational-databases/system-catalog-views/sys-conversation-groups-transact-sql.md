@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "conversation_groups_TSQL"
@@ -20,7 +17,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.conversation_groups catalog view"
 ms.assetid: 3f35815e-2de4-42a2-a972-8f0141dad0b3
-caps.latest.revision: 29
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

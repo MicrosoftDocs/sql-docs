@@ -6,13 +6,10 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "RDS configuration [ADO], Windows 2000"
 ms.assetid: ef37e858-c05f-4f52-a65f-3ce6037e0d03
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg

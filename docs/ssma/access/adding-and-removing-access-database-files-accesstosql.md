@@ -4,13 +4,8 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 helpviewer_keywords: 
   - "Access databases"
   - "adding Access files"
@@ -31,7 +26,6 @@ helpviewer_keywords:
   - "scanning for database files"
   - "searching for database files"
 ms.assetid: e944c740-4c8a-4bc1-b0ed-be57bc06dced
-caps.latest.revision: 15
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: craigg

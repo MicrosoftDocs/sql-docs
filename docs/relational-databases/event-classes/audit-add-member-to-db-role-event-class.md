@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Audit Add Member to DB Role event class"
 ms.assetid: a5ac46b6-765b-4424-b6c7-4d5a1b898d65
-caps.latest.revision: 31
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "VB"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "UpdateBatch method [ADO]"
   - "CancelBatch method [ADO]"
 ms.assetid: 41625f6f-e12d-4d8d-9f60-0729ce64c31e
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg

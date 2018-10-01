@@ -1,13 +1,11 @@
-﻿---
+---
 title: "BACKUP (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/08/2018"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "BACKUP_TSQL"
@@ -45,7 +43,6 @@ helpviewer_keywords:
   - "stripe sets [SQL Server]"
   - "cross-platform backups"
 ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
-caps.latest.revision: 275
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

@@ -5,9 +5,7 @@ ms.date: "07/16/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "COMPATIBILITY_LEVEL_TSQL"
@@ -23,7 +21,6 @@ helpviewer_keywords:
   - "db compatibility level"
   - "db compat level"
 ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
-caps.latest.revision: 89
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg'

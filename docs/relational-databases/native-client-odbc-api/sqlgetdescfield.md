@@ -5,15 +5,12 @@ ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apitype: "DLLExport"
 helpviewer_keywords: 
   - "SQLGetDescField function"
 ms.assetid: 3e59a37a-28ee-4c91-8968-7fe3b966739d
-caps.latest.revision: 52
 author: MightyPen
 ms.author: genemi
 manager: craigg

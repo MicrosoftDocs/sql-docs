@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords:
   - "data providers [ADO]"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "service providers [ADO]"
   - "service components [ADO]"
 ms.assetid: e2581b47-b11e-4e1e-b96c-d39c77c5b48a
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg

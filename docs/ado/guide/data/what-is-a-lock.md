@@ -6,14 +6,11 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "cursors [ADO], locking"
   - "locks [ADO], about locking"
 ms.assetid: f8989555-28c6-4c17-9bf8-7f44a8a5c407
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg

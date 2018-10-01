@@ -5,9 +5,7 @@ ms.date: "08/07/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "EXEC"
@@ -30,7 +28,6 @@ helpviewer_keywords:
   - "switching execution context"
   - "EXECUTE statement"
 ms.assetid: bc806b71-cc55-470a-913e-c5f761d5c4b7
-caps.latest.revision: 104
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

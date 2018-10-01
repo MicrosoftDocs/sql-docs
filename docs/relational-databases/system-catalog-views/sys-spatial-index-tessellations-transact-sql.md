@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "spatial_index_tessellations"
@@ -20,7 +17,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.spatial_index_tessellations catalog view"
 ms.assetid: 8b17a9a4-b57f-4220-8138-fc73581b1670
-caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg

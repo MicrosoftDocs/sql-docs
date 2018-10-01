@@ -4,16 +4,12 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-menu"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "VS.ToolsOptionsPages.Environment.Help.General"
 ms.assetid: deaf23d6-6cbe-4984-ab09-71d2a7ba06c8
-caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

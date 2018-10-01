@@ -5,9 +5,7 @@ ms.date: "05/22/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: vanto
-ms.suite: "sql"
 ms.technology: security
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "encryption [SQL Server], columns"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "column level encryption"
   - "cell level encryption"
 ms.assetid: 38e9bf58-10c6-46ed-83cb-e2d76cda0adc
-caps.latest.revision: 27
 author: aliceku
 ms.author: aliceku
 manager: craigg

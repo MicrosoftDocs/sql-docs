@@ -1,13 +1,11 @@
-﻿---
+---
 title: "ALTER ROUTE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/30/2018"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "ALTER_ROUTE_TSQL"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "removing routes"
   - "routes [Service Broker], modifying"
 ms.assetid: 8dfb7b16-3dac-4e1e-8c97-adf2aad07830
-caps.latest.revision: 33
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

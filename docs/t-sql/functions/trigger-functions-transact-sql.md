@@ -5,14 +5,11 @@ ms.date: "03/08/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 3d77ac6d-5eb5-4cd6-ab60-46290ac4d9ce
-caps.latest.revision: 5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

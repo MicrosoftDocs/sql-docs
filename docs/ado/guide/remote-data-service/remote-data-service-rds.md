@@ -6,14 +6,11 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Remote Data Service (RDS)"
   - "RDS"
 ms.assetid: 63a5f26b-e7ca-47d9-a004-59eaad6052b4
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg

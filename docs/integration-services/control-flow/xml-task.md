@@ -5,9 +5,7 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.xmltask.f1"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "XML [Integration Services]"
   - "XML task [Integration Services]"
 ms.assetid: 9f761846-390e-46d5-9db7-858943d40849
-caps.latest.revision: 59
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

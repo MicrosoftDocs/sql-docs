@@ -5,9 +5,7 @@ ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "DM_EXEC_DMS_SERVICES_TSQL"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "dm_exec_dms_services management view"
   - "sys.dm_exec_dms_services management view"
 ms.assetid: 6ac47eef-4293-46b8-8555-07a614837504
-caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg

@@ -6,15 +6,12 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "VB"
 helpviewer_keywords: 
   - "CacheSize property [ADO], Visual Basic example"
 ms.assetid: a237ffdb-6e5b-47c6-9901-d5cdbe8625f3
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg

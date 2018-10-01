@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.asvs.connectionmanager.f1"
@@ -23,7 +21,6 @@ helpviewer_keywords:
   - "connections [Integration Services]"
   - "SQL Server Integration Services packages, connections"
 ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
-caps.latest.revision: 92
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

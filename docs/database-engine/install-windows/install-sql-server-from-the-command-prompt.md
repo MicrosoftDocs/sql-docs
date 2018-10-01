@@ -5,8 +5,6 @@ ms.date: "01/17/2018"
 ms.prod: sql
 ms.technology: install
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "installing SQL Server, command prompt"

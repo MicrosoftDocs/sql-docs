@@ -5,9 +5,7 @@ ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
   - "ISQLServerErrorInfo::GetErrorInfo (OLE DB)"
@@ -15,7 +13,6 @@ apitype: "COM"
 helpviewer_keywords: 
   - "GetErrorInfo method"
 ms.assetid: 83265c9c-eaf9-41f0-9f73-b0ae0972f0d5
-caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg

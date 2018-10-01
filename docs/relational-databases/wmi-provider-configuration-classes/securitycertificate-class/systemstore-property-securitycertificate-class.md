@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "wmi"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
   - "SystemStore Property (SecurityCertificate Class)"
@@ -19,7 +16,6 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "SystemStore property"
 ms.assetid: 5d2a6ee2-d975-4fd6-adb5-ed43d0cc7fdd
-caps.latest.revision: 32
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg

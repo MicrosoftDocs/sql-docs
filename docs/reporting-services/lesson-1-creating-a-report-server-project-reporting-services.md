@@ -4,7 +4,6 @@ ms.date: 11/30/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
-ms.suite: pro-bi
 
 ms.topic: conceptual
 ms.assetid: 675671ca-e6c9-48a2-82e9-386778f3a49f

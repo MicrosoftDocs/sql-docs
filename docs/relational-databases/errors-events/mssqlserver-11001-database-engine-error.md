@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "12001"
 helpviewer_keywords: 
   - "11001 (Database Engine error)"
 ms.assetid: 53d4d63a-61e3-441f-bfe9-9d44f7a05fd4
-caps.latest.revision: 10
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

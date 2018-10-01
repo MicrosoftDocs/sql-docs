@@ -4,14 +4,9 @@ ms.custom: ""
 ms.date: "01/25/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-functions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server (starting with 2008)"
 f1_keywords: 
   - "sys.fn_cdc_get_column_ordinal"
   - "fn_cdc_get_column_ordinal_TSQL"
@@ -23,7 +18,6 @@ helpviewer_keywords:
   - "fn_cdc_get_column_ordinal"
   - "sys.fn_cdc_get_column_ordinal"
 ms.assetid: 4bb21a57-2b94-4208-8bdf-6a3e2681d881
-caps.latest.revision: 16
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

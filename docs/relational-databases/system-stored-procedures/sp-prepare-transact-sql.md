@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "02/28/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-data-warehouse, pdw"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords:
   - "sp_cursor_prepare_TSQL"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_prepare"
 ms.assetid: f328c9eb-8211-4863-bafa-347e1bf7bb3f
-caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg

@@ -5,17 +5,12 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
 helpviewer_keywords: 
   - "custom user interface [Integration Services]"
   - "custom objects [Integration Services]"
 ms.assetid: ca1929a6-0ae6-47d7-b65f-08173b143720
-caps.latest.revision: 31
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

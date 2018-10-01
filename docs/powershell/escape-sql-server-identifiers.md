@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: scripting
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 8a73e945-daa6-4e5d-93da-10f000f1f3a2
-caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg

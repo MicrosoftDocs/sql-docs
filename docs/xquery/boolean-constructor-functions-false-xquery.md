@@ -4,22 +4,16 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: sql
-ms.component: "xquery"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 dev_langs: 
   - "XML"
 helpviewer_keywords: 
   - "false function"
   - "fn:false function"
 ms.assetid: 577d84c1-9285-4580-b6f5-86fbc4827547
-caps.latest.revision: 14
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

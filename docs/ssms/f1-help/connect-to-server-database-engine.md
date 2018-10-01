@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "08/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-f1"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.connectoserverunknownservertype.f1"
@@ -18,7 +15,6 @@ f1_keywords:
   - "sql13.swb.connection.login.sqlserver.f1"
   - "sql13.swb.manageSS2k.f1"
 ms.assetid: ee9017b4-8a19-4360-9003-9e6484082d41
-caps.latest.revision: 6
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

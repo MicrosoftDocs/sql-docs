@@ -5,9 +5,7 @@ ms.date: "7/23/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "Write_TSQL"
@@ -17,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "Write [Database Engine]"
 ms.assetid: 7c554334-d2d9-4eae-a4ae-097aa4020e1a
-caps.latest.revision: 13
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

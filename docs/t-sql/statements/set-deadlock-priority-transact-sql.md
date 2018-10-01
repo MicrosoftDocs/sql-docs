@@ -5,9 +5,7 @@ ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "sql-data-warehouse, database-engine, pdw, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "SET DEADLOCK_PRIORITY"
@@ -23,7 +21,6 @@ helpviewer_keywords:
   - "priority deadlock settings [SQL Server]"
   - "SET DEADLOCK_PRIORITY statement"
 ms.assetid: 810a3a8e-3da3-4bf9-bb15-7b069685a1b6
-caps.latest.revision: 35
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

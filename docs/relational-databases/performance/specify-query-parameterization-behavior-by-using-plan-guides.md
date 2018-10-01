@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: performance
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "TEMPLATE plan guide"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "plan guides [SQL Server], parameterization"
   - "parameterized queries [SQL Server]"
 ms.assetid: f0f738ff-2819-4675-a8c8-1eb6c210a7e6
-caps.latest.revision: 35
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "11/30/2016"
 ms.prod: sql
 ms.reviewer: vanto
-ms.suite: "sql"
 ms.technology: security
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "SQL13.SWB.COLUMNMASTERKEY.PAGE.F1"

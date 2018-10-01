@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.addreplicawizard.f1"
@@ -14,7 +12,6 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], availability replicas"
   - "Availability Groups [SQL Server], wizards"
 ms.assetid: 60d962b6-2af4-4394-9190-61939a102bc0
-caps.latest.revision: 24
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

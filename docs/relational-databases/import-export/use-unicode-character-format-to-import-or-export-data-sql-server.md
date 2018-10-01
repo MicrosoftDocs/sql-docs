@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "09/30/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "import-export"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: data-movement
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "data formats [SQL Server], Unicode character"
   - "Unicode [SQL Server], bulk importing and exporting"
 ms.assetid: 74342a11-c1c0-4746-b482-7f3537744a70
-caps.latest.revision: 37
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

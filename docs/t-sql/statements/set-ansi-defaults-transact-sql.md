@@ -5,9 +5,7 @@ ms.date: "12/04/2017"
 ms.prod: sql
 ms.prod_service: "sql-data-warehouse, pdw, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "SET ANSI_DEFAULTS"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "ANSI_DEFAULTS option"
   - "SET ANSI_DEFAULTS statement"
 ms.assetid: bd721d97-6e23-488b-8c8c-c0453d5b3b86
-caps.latest.revision: 30
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

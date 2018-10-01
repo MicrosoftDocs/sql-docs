@@ -6,8 +6,6 @@ ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.technology: scripting
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "vs.findreplace.quickfind"
@@ -16,7 +14,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "Find and Replace dialog box"
 ms.assetid: 09297893-d80b-4c88-86b4-52bfb639e521
-caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg

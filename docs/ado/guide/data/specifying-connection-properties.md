@@ -6,14 +6,11 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "connection properties [ADO]"
   - "connections [ADO]"
 ms.assetid: 49456201-b085-4851-9686-e814136b07be
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg

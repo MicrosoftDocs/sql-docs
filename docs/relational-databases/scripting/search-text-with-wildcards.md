@@ -5,8 +5,6 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.technology: scripting
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "vs.wildcards"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "Query Editor [SQL Server Management Studio], wildcard searches"
   - "wildcard options [SQL Server Management Studio]"
 ms.assetid: 449600f8-cc87-4b3f-878a-59c158a88a40
-caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg

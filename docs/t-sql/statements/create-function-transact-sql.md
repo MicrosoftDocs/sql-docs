@@ -5,9 +5,7 @@ ms.date: "06/25/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "FUNCTION"
@@ -35,7 +33,6 @@ helpviewer_keywords:
   - "scalar-valued functions"
   - "functions [SQL Server], invoking"
 ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
-caps.latest.revision: 162
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

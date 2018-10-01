@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "sqlxml"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: xml
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "nesting XML results"
@@ -22,7 +19,6 @@ helpviewer_keywords:
   - "hierarchical relationships [SQLXML]"
   - "key-fields annotation"
 ms.assetid: 1a5ad868-8602-45c4-913d-6fbb837eebb0
-caps.latest.revision: 27
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

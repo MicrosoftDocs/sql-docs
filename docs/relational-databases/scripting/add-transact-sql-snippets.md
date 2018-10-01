@@ -6,11 +6,8 @@ ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.technology: scripting
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 901c7995-8eb5-4d12-8bb0-de0a922b48f8
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg

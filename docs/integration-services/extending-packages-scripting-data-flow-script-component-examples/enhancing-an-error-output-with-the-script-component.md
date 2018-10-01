@@ -5,19 +5,14 @@ ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
 helpviewer_keywords: 
   - "transformations [Integration Services], components"
   - "Script component [Integration Services], examples"
   - "error outputs [Integration Services], enhancing"
   - "Script component [Integration Services], transformation components"
 ms.assetid: f7c02709-f1fa-4ebd-b255-dc8b81feeaa5
-caps.latest.revision: 41
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

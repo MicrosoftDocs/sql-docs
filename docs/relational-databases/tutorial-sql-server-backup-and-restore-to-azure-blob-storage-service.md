@@ -4,16 +4,10 @@ ms.custom: ""
 ms.date: "04/09/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "tutorial"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: performance
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "SQL Server 2016 Preview"
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
-caps.latest.revision: 11
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

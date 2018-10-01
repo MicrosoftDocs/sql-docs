@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: clr
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -12,7 +11,6 @@ helpviewer_keywords:
   - "assemblies [CLR integration], about assemblies"
   - "managed code [SQL Server], assemblies"
 ms.assetid: 4b146437-3061-47f6-9e8c-26eeea10b54e
-caps.latest.revision: 28
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

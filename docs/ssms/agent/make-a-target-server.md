@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-agent"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.ag.tsxwiz.complete.f1"
@@ -20,7 +17,6 @@ helpviewer_keywords:
   - "SQL Server Agent jobs, target servers"
   - "target servers [SQL Server], creating"
 ms.assetid: 13aabe2d-67fe-4c67-8d49-2928dd705b7a
-caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

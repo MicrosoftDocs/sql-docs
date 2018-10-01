@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "SQLGetCursorName"
@@ -19,7 +17,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLGetCursorName function [ODBC]"
 ms.assetid: e6e92199-7bb6-447c-8987-049a4c6ce05d
-caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg

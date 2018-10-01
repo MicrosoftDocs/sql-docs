@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.packageconfigurationorganizer.f1"
@@ -31,7 +29,6 @@ helpviewer_keywords:
   - "packages [Integration Services], deploying"
   - "SSIS packages, deploying"
 ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
-caps.latest.revision: 46
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

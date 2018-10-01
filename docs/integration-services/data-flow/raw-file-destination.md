@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.rawfiledest.f1"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "writing raw data"
   - "Raw File destination"
 ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
-caps.latest.revision: 59
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

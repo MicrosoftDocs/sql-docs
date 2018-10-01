@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "connecting to driver [ODBC], selecting driver"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "data sources [ODBC], selecting"
   - "ODBC drivers [ODBC], selecting"
 ms.assetid: 10aaf570-01ab-4478-8339-bdde2a5e3dd1
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg

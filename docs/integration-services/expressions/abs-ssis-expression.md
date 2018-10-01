@@ -5,15 +5,12 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "ABS function"
   - "absolute positive value"
 ms.assetid: 156747f6-e016-44cf-9a9f-ae8e4a1b4f17
-caps.latest.revision: 28
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

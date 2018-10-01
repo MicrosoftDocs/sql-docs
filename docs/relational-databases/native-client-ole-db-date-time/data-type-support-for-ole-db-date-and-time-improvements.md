@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "native-client-ole-db-date-time"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
 
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "date/time [OLE DB], data type support"
   - "OLE DB, date/time improvements"
 ms.assetid: d40e3fd6-9057-4371-8236-95cef300603e
-caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg

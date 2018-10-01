@@ -5,9 +5,7 @@ ms.date: "08/10/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "CREATE RESOURCE POOL"
@@ -19,7 +17,6 @@ dev_langs:
 helpviewer_keywords: 
   - "CREATE RESOURCE POOL"
 ms.assetid: 82712505-c6f9-4a65-a469-f029b5a2d6cd
-caps.latest.revision: 42
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

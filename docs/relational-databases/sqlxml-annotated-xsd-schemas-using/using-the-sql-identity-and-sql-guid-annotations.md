@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "sqlxml"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: xml
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "sql:guid"
@@ -24,7 +21,6 @@ helpviewer_keywords:
   - "XSD schemas [SQLXML], IDENTITY-type columns"
   - "updategrams [SQLXML], GUID values"
 ms.assetid: 7661dfd0-6573-4692-a8f1-3597adcd33c4
-caps.latest.revision: 24
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

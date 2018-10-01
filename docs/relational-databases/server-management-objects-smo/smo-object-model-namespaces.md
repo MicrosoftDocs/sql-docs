@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "08/02/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "smo"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
 
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "object models [SMO]"
@@ -17,7 +14,6 @@ helpviewer_keywords:
   - "namespaces [SMO]"
   - "SQL Server Management Objects, namespaces"
 ms.assetid: 7bfabe4d-9f4c-4bc9-b998-93bd2b50ee8a
-caps.latest.revision: 39
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

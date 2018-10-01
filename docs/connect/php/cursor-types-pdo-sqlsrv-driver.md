@@ -5,12 +5,9 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 49ea6a6e-78d4-40f8-85eb-180b527f0537
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg

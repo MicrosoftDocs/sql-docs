@@ -26,7 +26,6 @@ helpviewer_keywords:
 # Tutorial: Additional tips and tricks for using SSMS
 This tutorial gives you some additional tricks for using SQL Server Management Studio (SSMS). This article shows you how to: 
 
-> [!div class="checklist"]
 > * Comment/uncomment your Transact-SQL (T-SQL) text
 > * Indent your text
 > * Filter objects in Object Explorer

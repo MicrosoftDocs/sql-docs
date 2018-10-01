@@ -6,13 +6,10 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "RDS security [ADO]"
 ms.assetid: 82fb1330-d6c6-4c17-ad3e-d417ff822b25
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg

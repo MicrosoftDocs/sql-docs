@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.lookuptrans.f1"
@@ -23,7 +21,6 @@ helpviewer_keywords:
   - "lookups [Integration Services]"
   - "exact matches [Integration Services]"
 ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
-caps.latest.revision: 106
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

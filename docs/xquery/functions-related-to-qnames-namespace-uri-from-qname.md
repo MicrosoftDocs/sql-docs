@@ -4,22 +4,16 @@ ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: sql
-ms.component: "xquery"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 dev_langs: 
   - "XML"
 helpviewer_keywords: 
   - "fn:namespace-uri-from-QName function"
   - "namespace-uri-from-QName function"
 ms.assetid: 4ab3f003-2a3b-4268-9e88-b615e35701b2
-caps.latest.revision: 13
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

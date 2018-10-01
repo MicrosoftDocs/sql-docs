@@ -5,9 +5,7 @@ ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "SCHEMA_ID"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "IDs [SQL Server], schemas"
   - "default schema IDs"
 ms.assetid: c8e34df5-3eea-459f-ae40-050909ce9fda
-caps.latest.revision: 39
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

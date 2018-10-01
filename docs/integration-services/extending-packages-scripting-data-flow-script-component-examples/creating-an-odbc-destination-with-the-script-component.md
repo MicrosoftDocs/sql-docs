@@ -5,19 +5,14 @@ ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
 helpviewer_keywords: 
   - "Script component [Integration Services], destination components"
   - "ODBC destination [Integration Services]"
   - "destinations [Integration Services], components"
   - "Script component [Integration Services], examples"
 ms.assetid: d198c866-78f4-4a50-ae15-333160645815
-caps.latest.revision: 42
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

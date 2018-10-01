@@ -5,14 +5,11 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "table-view-index, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: table-view-index
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "views [SQL Server], creating"
 ms.assetid: 0b7bd2a1-544c-42ba-8e7b-4822f34d7b64
-caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -70,7 +67,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 6.  In the **Criteria Pane**, select additional sort or filter criteria for the columns.  
   
-7.  On the **File** menu, click **Save***view name*.  
+7.  On the **File** menu, click **Save**_view name_.  
   
 8.  In the **Choose Name** dialog box, enter a name for the new view and click **OK**.  
   

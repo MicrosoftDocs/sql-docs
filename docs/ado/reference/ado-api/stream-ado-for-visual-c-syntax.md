@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 dev_langs: 
@@ -15,7 +13,6 @@ dev_langs:
 helpviewer_keywords: 
   - "Stream collection [ADO]"
 ms.assetid: dddcceef-9296-4fb3-8eca-94b17d0148de
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg

@@ -1,19 +1,15 @@
-﻿---
+---
 title: "Job Properties - New Job (General Page) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-agent"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.ag.job.general.f1"
 ms.assetid: b6832840-1c18-4db8-94fc-080db880ae9f
-caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

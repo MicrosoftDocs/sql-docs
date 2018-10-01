@@ -5,9 +5,7 @@ ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "GROUP"
@@ -340,7 +338,7 @@ The GROUP BY clause supports all GROUP BY features that are included in the SQL-
 |Feature|SQL Server Integration Services|SQL Server compatibility level 100 or higher|SQL Server 2008 or later with compatibility level 90.|  
 |-------------|-------------------------------------|--------------------------------------------------|-----------------------------------------------------------|  
 |DISTINCT aggregates|Not supported for WITH CUBE or WITH ROLLUP.|Supported for WITH CUBE, WITH ROLLUP, GROUPING SETS, CUBE, or ROLLUP.|Same as compatibility level 100.|  
-|User-defined function with CUBE or ROLLUP name in the GROUP BY clause|User-defined function **dbo.cube(***arg1***,***...argN***)** or **dbo.rollup(***arg1***,**...*argN***)** in the GROUP BY clause is allowed.<br /><br /> For example: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|User-defined function **dbo.cube (***arg1***,**...argN**)** or **dbo.rollup(**arg1**,***...argN***)** in the GROUP BY clause is not allowed.<br /><br /> For example: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> The following error message is returned: "Incorrect syntax near the keyword 'cube'&#124;'rollup'."<br /><br /> To avoid this problem, replace `dbo.cube` with `[dbo].[cube]` or `dbo.rollup` with `[dbo].[rollup]`.<br /><br /> The following example is allowed: `SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|User-defined function **dbo.cube (***arg1***,***...argN*) or **dbo.rollup(***arg1***,***...argN***)** in the GROUP BY clause is allowed<br /><br /> For example: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
+|User-defined function with CUBE or ROLLUP name in the GROUP BY clause|User-defined function **dbo.cube(**_arg1_**,**_...argN_**)** or **dbo.rollup(**_arg1_**,**..._argN_**)** in the GROUP BY clause is allowed.<br /><br /> For example: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|User-defined function **dbo.cube (**_arg1_**,**...argN**)** or **dbo.rollup(**arg1**,**_...argN_**)** in the GROUP BY clause is not allowed.<br /><br /> For example: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> The following error message is returned: "Incorrect syntax near the keyword 'cube'&#124;'rollup'."<br /><br /> To avoid this problem, replace `dbo.cube` with `[dbo].[cube]` or `dbo.rollup` with `[dbo].[rollup]`.<br /><br /> The following example is allowed: `SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|User-defined function **dbo.cube (**_arg1_**,**_...argN_) or **dbo.rollup(**_arg1_**,**_...argN_**)** in the GROUP BY clause is allowed<br /><br /> For example: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
 |GROUPING SETS|Not supported|Supported|Supported|  
 |CUBE|Not supported|Supported|Not supported|  
 |ROLLUP|Not supported|Supported|Not supported|  

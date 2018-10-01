@@ -5,9 +5,7 @@ ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "ISNULL"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "null values [SQL Server], replacement values"
   - "ISNULL function"
 ms.assetid: 6f3e5802-864b-4e77-9862-657bb5430b68
-caps.latest.revision: 42
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

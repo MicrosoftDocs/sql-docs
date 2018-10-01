@@ -5,14 +5,11 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "select [ODBC]"
 ms.assetid: 2149c3ca-3a71-446d-8d53-3d056e2f301a
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg

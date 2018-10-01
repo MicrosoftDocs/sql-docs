@@ -5,14 +5,11 @@ ms.date: "04/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "50000 [SQL Server Native Client setup error]"
 ms.assetid: 5426d87a-d5d9-4984-b211-b07d69e834a2
-caps.latest.revision: 16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

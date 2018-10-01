@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "retrieving data [ADO]"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "data retrieval [ADO]"
   - "ADO, examining data"
 ms.assetid: de1d74af-89b6-4f3f-a8c9-07c3e2b3c9a5
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg

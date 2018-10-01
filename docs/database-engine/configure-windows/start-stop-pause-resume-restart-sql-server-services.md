@@ -5,9 +5,7 @@ ms.date: "02/26/2016"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: configuration
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Configuration Manager, start and stop services"
@@ -40,7 +38,6 @@ helpviewer_keywords:
   - "administering SQL Server, starting and stopping services"
   - "Management Studio [SQL Server], starting or stopping services"
 ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
-caps.latest.revision: 20
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

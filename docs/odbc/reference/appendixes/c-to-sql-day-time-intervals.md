@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "day-time intervals [ODBC]"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "converting data from c to SQL types [ODBC], day-time intervals"
   - "intervals [ODBC], converting"
 ms.assetid: f9ee1ddb-dec7-4f78-b6e2-5ba34e7d6f59
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg

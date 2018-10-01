@@ -6,8 +6,6 @@ ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.technology: scripting
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "size [SQL Server], fonts"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "Query Editor [SQL Server Management Studio], managing fonts"
   - "text fonts [SQL Server Management Studio]"
 ms.assetid: 5c3061db-23c5-4d9f-a6ab-6b53a1a83f88
-caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg

@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "wmi"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
 
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
   - "ClientSettingsGeneralFlag Class"
@@ -18,7 +15,6 @@ apilocation:
 helpviewer_keywords: 
   - "ClientSettingsGeneralFlag class"
 ms.assetid: 8a0291a8-e8ef-42f6-a521-079410c5eeb1
-caps.latest.revision: 15
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg

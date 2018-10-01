@@ -1,13 +1,11 @@
-﻿---
+---
 title: "ALTER SERVER AUDIT  (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/07/2018"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "ALTER_SERVER_AUDIT_TSQL"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "audits [SQL Server], specification"
   - "ALTER SERVER AUDIT statement"
 ms.assetid: 63426d31-7a5c-4378-aa9e-afcf4f64ceb3
-caps.latest.revision: 43
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
@@ -79,13 +76,13 @@ ALTER SERVER AUDIT audit_name
 > [!IMPORTANT]
 > In Azure SQL Database Managed Instance, SQL Audit works at the server level and stores `.xel` files in Azure blob storage.
   
- FILEPATH **= '***os_file_path***'**  
+ FILEPATH **= '**_os\_file\_path_**'**  
  The path of the audit trail. The file name is generated based on the audit name and audit GUID.  
   
- MAXSIZE **=***max_size*  
+ MAXSIZE **=**_max\_size_  
  Specifies the maximum size to which the audit file can grow. The *max_size* value must be an integer followed by **MB**, **GB**, **TB**, or **UNLIMITED**. The minimum size that you can specify for *max_size* is 2 **MB** and the maximum is 2,147,483,647 **TB**. When **UNLIMITED** is specified, the file grows until the disk is full. Specifying a value lower than 2 MB raises MSG_MAXSIZE_TOO_SMALL the error. The default value is **UNLIMITED**.  
   
- MAX_ROLLOVER_FILES **=***integer* | **UNLIMITED**  
+ MAX_ROLLOVER_FILES **=**_integer_ | **UNLIMITED**  
  Specifies the maximum number of files to retain in the file system. When the setting of MAX_ROLLOVER_FILES=0, there is no limit imposed on the number of rollover files that are created. The default value is 0. The maximum number of files that can be specified is 2,147,483,647.  
   
  MAX_FILES =*integer*  
@@ -95,7 +92,7 @@ ALTER SERVER AUDIT audit_name
  RESERVE_DISK_SPACE **=** { ON | OFF }  
  This option pre-allocates the file on the disk to the MAXSIZE value. Only applies if MAXSIZE is not equal to UNLIMITED. The default value is OFF.  
   
- QUEUE_DELAY **=***integer*  
+ QUEUE_DELAY **=**_integer_  
  Determines the time in milliseconds that can elapse before audit actions are forced to be processed. A value of 0 indicates synchronous delivery. The minimum settable query delay value is 1000 (1 second), which is the default. The maximum is 2,147,483,647 (2,147,483.647 seconds or 24 days, 20 hours, 31 minutes, 23.647 seconds). Specifying an invalid number, raises the error MSG_INVALID_QUEUE_DELAY.  
   
  ON_FAILURE **=** { CONTINUE | SHUTDOWN | FAIL_OPERATION}  

@@ -5,9 +5,7 @@ ms.date: "11/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "SET_STATISTICS_IO_TSQL"
@@ -25,7 +23,6 @@ helpviewer_keywords:
   - "SET STATISTICS IO statement"
   - "statistical information [SQL Server], disk activity"
 ms.assetid: 7033aac9-a944-4156-9ff4-6ef65717a28b
-caps.latest.revision: 40
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

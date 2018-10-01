@@ -5,14 +5,11 @@ ms.date: "02/16/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.impexpwizard.saveschedule.f1"
 ms.assetid: b582c462-3d7a-4a4c-a2a2-2c79fedab75a
-caps.latest.revision: 69
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

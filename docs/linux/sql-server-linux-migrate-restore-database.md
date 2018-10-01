@@ -1,14 +1,12 @@
 ---
 title: Migrate a SQL Server database from Windows to Linux | Microsoft Docs
-description: This tutorial shows how to take a SQL Server database backup on Windows and restore it to a Linux machine running SQL Server 2017.
+description: This tutorial shows how to take a SQL Server database backup on Windows and restore it to a Linux machine running SQL Server.
 author: MikeRayMSFT 
 ms.author: mikeray 
 manager: craigg
 ms.date: 08/16/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ""
-ms.suite: "sql"
 ms.custom: "sql-linux"
 ms.technology: linux
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
@@ -17,7 +15,7 @@ ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-SQL Server's backup and restore feature is the recommended way to migrate a database from SQL Server on Windows to SQL Server 2017 on Linux. In this tutorial, you will walk through the steps required to move a database to Linux with backup and restore techniques.
+SQL Server's backup and restore feature is the recommended way to migrate a database from SQL Server on Windows to SQL Server on Linux. In this tutorial, you will walk through the steps required to move a database to Linux with backup and restore techniques.
 
 > [!div class="checklist"]
 > * Create a backup file on Windows with SSMS
@@ -38,7 +36,7 @@ The following prerequisites are required to complete this tutorial:
   * Target database to migrate.
 
 * Linux machine with the following installed:
-  * SQL Server 2017 ([RHEL](quickstart-install-connect-red-hat.md), [SLES](quickstart-install-connect-suse.md), or [Ubuntu](quickstart-install-connect-ubuntu.md)) with command-line tools.
+  * SQL Server ([RHEL](quickstart-install-connect-red-hat.md), [SLES](quickstart-install-connect-suse.md), or [Ubuntu](quickstart-install-connect-ubuntu.md)) with command-line tools.
 
 ## Create a backup on Windows
 
@@ -218,7 +216,7 @@ To restore the database backup, you can use the **RESTORE DATABASE** Transact-SQ
 
 ## Next steps
 
-In this tutorial, you learned how to back up a database on Windows and move it to a Linux server running SQL Server 2017. You learned how to:
+In this tutorial, you learned how to back up a database on Windows and move it to a Linux server running SQL Server. You learned how to:
 > [!div class="checklist"]
 > * Use SSMS and Transact-SQL to create a backup file on Windows
 > * Install a Bash shell on Windows

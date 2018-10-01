@@ -6,8 +6,6 @@ ms.date: "02/09/2017"
 ms.prod: "sql"
 ms.technology: ssdt
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "VS.TOOLSOPTIONSPAGES.SQL_SERVER_TOOLS.TRANSACT-SQL_EDITOR.QUERY_RESULTS.RESULTS_TO_GRID"
@@ -27,7 +25,6 @@ f1_keywords:
   - "VS.TOOLSOPTIONSPAGES.SQL_SERVER_TOOLS.ONLINE_EDITING"
   - "VS.TOOLSOPTIONSPAGES.SQL_SERVER_TOOLS.TRANSACT-SQL_EDITOR.QUERY_EXECUTION.ADVANCED"
 ms.assetid: fa9a250f-7feb-433e-91bd-a09779d74c8b
-caps.latest.revision: 11
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"

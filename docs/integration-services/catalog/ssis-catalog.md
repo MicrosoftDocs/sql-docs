@@ -5,16 +5,13 @@ ms.date: 06/04/2018
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.ssis.ssms.iscreatecatalog.f1"
   - "sql13.ssis.ssms.iscatalogprop.general.f1"
   - "sql13.ssis.dbupgradewizard.f1"
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
-caps.latest.revision: 28
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

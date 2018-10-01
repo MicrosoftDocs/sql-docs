@@ -5,16 +5,13 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL statements [ODBC], interoperability"
   - "parameter markers [ODBC]"
   - "interoperability of SQL statements [ODBC], parameter markers"
 ms.assetid: cda56f2b-6eec-4cbc-8dbb-36d8fa9f9216
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg

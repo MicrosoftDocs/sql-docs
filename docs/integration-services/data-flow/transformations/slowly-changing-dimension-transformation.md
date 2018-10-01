@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.slowlychangingdimtrans.f1"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "SCD transformation"
   - "updating slowly changing dimensions"
 ms.assetid: f8849151-c171-4725-bd25-f2c33a40f4fe
-caps.latest.revision: 55
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

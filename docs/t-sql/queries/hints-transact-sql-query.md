@@ -1,13 +1,11 @@
 ---
 title: "Query Hints (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/29/2018"
+ms.date: "09/24/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "Query_Hint_TSQL"
@@ -53,8 +51,8 @@ helpviewer_keywords:
   - "MIN_GRANT_PERCENT query hint"
   - "EXTERNALPUSHDOWN query hint"
   - "USE HINT query hint"
+  - "QUERY_PLAN_PROFILE query hint"
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
-caps.latest.revision: 136
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
@@ -100,7 +98,7 @@ manager: craigg
   | NO_PERFORMANCE_SPOOL   
   | OPTIMIZE FOR ( @variable_name { UNKNOWN | = literal_constant } [ , ...n ] )  
   | OPTIMIZE FOR UNKNOWN  
-  | PARAMETERIZATION { SIMPLE | FORCED }  
+  | PARAMETERIZATION { SIMPLE | FORCED }   
   | RECOMPILE  
   | ROBUST PLAN   
   | USE HINT ( '<hint_name>' [ , ...n ] )
@@ -149,7 +147,7 @@ manager: craigg
   
  This query hint virtually disallows direct use of indexed views and indexes on indexed views in the query plan.  
   
- The indexed view is not expanded only if the view is directly referenced in the SELECT part of the query and WITH (NOEXPAND) or WITH (NOEXPAND, INDEX( *index_value* [ **,***...n* ] ) ) is specified. For more information about the query hint WITH (NOEXPAND), see [FROM](../../t-sql/queries/from-transact-sql.md).  
+ The indexed view is not expanded only if the view is directly referenced in the SELECT part of the query and WITH (NOEXPAND) or WITH (NOEXPAND, INDEX( *index_value* [ **,**_...n_ ] ) ) is specified. For more information about the query hint WITH (NOEXPAND), see [FROM](../../t-sql/queries/from-transact-sql.md).  
   
  Only the views in the SELECT part of statements, including those in INSERT, UPDATE, MERGE, and DELETE statements are affected by the hint.  
   
@@ -235,7 +233,7 @@ manager: craigg
 > For more information, see [Specify Query Parameterization Behavior by Using Plan Guides](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md).
   
  SIMPLE instructs the query optimizer to attempt simple parameterization. FORCED instructs the query optimizer to attempt forced parameterization. For more information, see [Forced Parameterization in the Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md#ForcedParam), and [Simple Parameterization in the Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md#SimpleParam).  
-  
+
  RECOMPILE  
  Instructs the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] to generate a new, temporary plan for the query and immediately discard that plan after the query completes execution. The generated query plan does not replace a plan stored in cache when the the same query is executed without the RECOMPILE hint. Without specifying RECOMPILE, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] caches query plans and reuses them. When compiling query plans, the RECOMPILE query hint uses the current values of any local variables in the query and, if the query is inside a stored procedure, the current values passed to any parameters.  
   
@@ -246,7 +244,7 @@ manager: craigg
   
  If such a plan is not possible, the query optimizer returns an error instead of deferring error detection to query execution. Rows may contain variable-length columns; the [!INCLUDE[ssDE](../../includes/ssde-md.md)] allows for rows to be defined that have a maximum potential size beyond the ability of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to process them. Generally, despite the maximum potential size, an application stores rows that have actual sizes within the limits that the [!INCLUDE[ssDE](../../includes/ssde-md.md)] can process. If the [!INCLUDE[ssDE](../../includes/ssde-md.md)] encounters a row that is too long, an execution error is returned.  
  
-<a name="use_hint"></a> USE HINT ( **'***hint_name***'** )    
+<a name="use_hint"></a> USE HINT ( **'**_hint\_name_**'** )    
  **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1) and [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
  
  Provides one or more additional hints to the query processor as specified by a hint name **inside single quotation marks**.   
@@ -279,13 +277,23 @@ manager: craigg
  Disables batch mode adaptive joins. For more information, see [Batch mode Adaptive Joins
 ](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-adaptive-joins).
 *  'QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n'       
- Forces the query optimizer behavior at a query level, as if the query was compiled with database compatibility level *n*, where *n* is a supported database compatibility level. Refer to [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md) for a list of currently supported values for *n*. **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU10).   
+ Forces the query optimizer behavior at a query level, as if the query was compiled with database compatibility level *n*, where *n* is a supported database compatibility level. Refer to [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md) for a list of currently supported values for *n*. **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU10).    
  
-    > [!NOTE]
-    > The QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n hint does not override default or legacy cardinality estimation setting, if it is forced through database scoped configuration, trace flag or another query hint such as QUERYTRACEON.   
-    > This hint only affects the behavior of the query optimizer. It does not affect other features of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that may depend on the [database compatibility level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md), such as the availability of certain database features.   
-  
-  The list of all supported USE HINT names can be queried using the dynamic management view [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md).    
+   > [!NOTE]
+   > The QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n hint does not override default or legacy cardinality estimation setting, if it is forced through database scoped configuration, trace flag or another query hint such as QUERYTRACEON.   
+   > This hint only affects the behavior of the query optimizer. It does not affect other features of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that may depend on the [database compatibility level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md), such as the availability of certain database features.  
+   > To learn more about this hint, see [Developer’s Choice: Hinting Query Execution model](http://blogs.msdn.microsoft.com/sql_server_team/developers-choice-hinting-query-execution-model).
+    
+*  'QUERY_PLAN_PROFILE'      
+ Enables lightweight profiling for the query. When a query that contains this new hint finishes, a new Extended Event, query_plan_profile, is fired. This extended event exposes execution statistics and actual execution plan XML similar to the query_post_execution_showplan extended event but only for queries that contains the new hint. **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11). 
+ 
+  > [!NOTE]
+  > If you enable collecting the query_post_execution_showplan extended event, this will add standard profiling infrastructure to every query that is running on the server and therefore may affect overall server performance.      
+  > If you enable the collection of *query_thread_profile* extended event to use lightweight profiling infrastructure instead, this will result in much less performance overhead but will still affect overall server performance.       
+  > If you enable the query_plan_profile extended event, this will only enable the lightweight profiling infrastructure for a query that executed with the QUERY_PLAN_PROFILE and therefore will not affect other workloads on the server. Use this hint to profile a specific query without affecting other parts of the server workload.
+  > To learn more about lightweight profiling, see [Developers Choice: Query progress – anytime, anywhere](http://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/).
+ 
+The list of all supported USE HINT names can be queried using the dynamic management view [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md).    
 
 > [!TIP]
 > Hint names are case-insensitive.   
@@ -293,10 +301,10 @@ manager: craigg
 > [!IMPORTANT] 
 > Some USE HINT hints may conflict with trace flags enabled at the global or session level, or database scoped configuration settings. In this case, the query level hint (USE HINT) always takes precedence. If a USE HINT conflicts with another query hint, or a trace flag enabled at the query level (such as by QUERYTRACEON), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will generate an error when trying to execute the query. 
 
- USE PLAN N**'***xml_plan***'**     
- Forces the query optimizer to use an existing query plan for a query that is specified by **'***xml_plan***'**. USE PLAN cannot be specified with INSERT, UPDATE, MERGE, or DELETE statements.  
+ USE PLAN N**'**_xml\_plan_**'**     
+ Forces the query optimizer to use an existing query plan for a query that is specified by **'**_xml\_plan_**'**. USE PLAN cannot be specified with INSERT, UPDATE, MERGE, or DELETE statements.  
   
-TABLE HINT **(***exposed_object_name* [ **,** \<table_hint> [ [**,** ]...*n* ] ] **)**
+TABLE HINT **(**_exposed\_object\_name_ [ **,** \<table_hint> [ [**,** ]..._n_ ] ] **)**
  Applies the specified table hint to the table or view that corresponds to *exposed_object_name*. We recommend using a table hint as a query hint only in the context of a [plan guide](../../relational-databases/performance/plan-guides.md).  
   
  *exposed_object_name* can be one of the following references:  
@@ -307,7 +315,7 @@ TABLE HINT **(***exposed_object_name* [ **,** \<table_hint> [ [**,** ]...*n* ] ]
   
  When *exposed_object_name* is specified without also specifying a table hint, any indexes specified in the query as part of a table hint for the object are disregarded and index usage is determined by the query optimizer. You can use this technique to eliminate the effect of an INDEX table hint when you cannot modify the original query. See Example J.  
   
-**\<table_hint> ::=** { [ NOEXPAND ] { INDEX ( *index_value* [ ,...*n* ] ) | INDEX = ( *index_value* ) | FORCESEEK [**(***index_value***(***index_column_name* [**,**... ] **))** ]| FORCESCAN | HOLDLOCK | NOLOCK | NOWAIT | PAGLOCK | READCOMMITTED | READCOMMITTEDLOCK | READPAST | READUNCOMMITTED | REPEATABLEREAD | ROWLOCK | SERIALIZABLE | SNAPSHOT | SPATIAL_WINDOW_MAX_CELLS | TABLOCK | TABLOCKX | UPDLOCK | XLOCK }
+**\<table_hint> ::=** { [ NOEXPAND ] { INDEX ( *index_value* [ ,...*n* ] ) | INDEX = ( *index_value* ) | FORCESEEK [**(**_index\_value_**(**_index\_column\_name_ [**,**... ] **))** ]| FORCESCAN | HOLDLOCK | NOLOCK | NOWAIT | PAGLOCK | READCOMMITTED | READCOMMITTEDLOCK | READPAST | READUNCOMMITTED | REPEATABLEREAD | ROWLOCK | SERIALIZABLE | SNAPSHOT | SPATIAL_WINDOW_MAX_CELLS | TABLOCK | TABLOCKX | UPDLOCK | XLOCK }
  Is the table hint to apply to the table or view that corresponds to *exposed_object_name* as a query hint. For a description of these hints, see [Table Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
  Table hints other than INDEX, FORCESCAN, and FORCESEEK are disallowed as query hints unless the query already has a WITH clause specifying the table hint. For more information, see Remarks.  

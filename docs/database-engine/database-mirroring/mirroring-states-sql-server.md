@@ -5,9 +5,7 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "states [SQL Server], database mirroring"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "SUSPENDED state"
   - "database mirroring [SQL Server], states"
 ms.assetid: 90062917-74f9-471b-b49e-bc153ae1a468
-caps.latest.revision: 39
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

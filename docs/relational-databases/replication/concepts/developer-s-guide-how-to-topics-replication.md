@@ -4,17 +4,11 @@ ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
 
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
 ms.assetid: c6c15ae6-da52-4638-93d3-61c7242e8a0b
-caps.latest.revision: 12
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

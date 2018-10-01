@@ -6,15 +6,12 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "locks [ADO], characteristics"
   - "adOpenDynamic [ADO]"
   - "cursors [ADO], characteristics"
 ms.assetid: 459c29cb-4230-42bf-8cc2-f3132ccc7aba
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg

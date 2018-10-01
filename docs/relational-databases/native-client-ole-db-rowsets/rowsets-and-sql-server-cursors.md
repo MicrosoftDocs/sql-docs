@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "OLE DB rowsets, cursors"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "properties [OLE DB]"
   - "cursors [OLE DB]"
 ms.assetid: 26a11e26-2a3a-451e-8f78-fba51e330ecb
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg

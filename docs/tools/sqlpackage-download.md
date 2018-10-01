@@ -5,10 +5,7 @@ ms.custom: "tools|sos"
 ms.date: "06/18/2018"
 ms.prod: sql
 ms.reviewer: "alayu; sstein"
-ms.suite: "sql"
 ms.prod_service: sql-tools
-ms.component: sqlpackage
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 author: "pensivebrian"
 ms.author: "broneill"

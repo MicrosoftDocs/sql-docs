@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-objects"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.summary.new.custom.report.f1"
 helpviewer_keywords: 
   - "SQL Server Management Studio [SQL Server], custom reports"
 ms.assetid: 1ba3f758-f39b-4f5f-91ca-516cedc78979
-caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

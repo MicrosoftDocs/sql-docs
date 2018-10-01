@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "C++"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "Seek method [ADO], VC++ example"
   - "index property [ADO]"
 ms.assetid: 57bda520-e98b-443c-a8bc-d8430e89a383
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg

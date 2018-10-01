@@ -5,9 +5,7 @@ ms.date: "02/17/2017"
 ms.prod: sql
 ms.prod_service: "table-view-index, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: table-view-index
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "ALLOW_ROW_LOCKS option"
@@ -23,7 +21,6 @@ helpviewer_keywords:
   - "ALLOW_PAGE_LOCKS option"
   - "ONLINE"
 ms.assetid: 7969af33-e94c-41f7-ab89-9d9a2747cd5c
-caps.latest.revision: 44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

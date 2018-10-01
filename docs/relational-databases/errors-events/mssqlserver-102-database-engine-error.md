@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 helpviewer_keywords: 
   - "102 (Database Engine error)"
 ms.assetid: 264dc1a2-c8a0-4c89-b5f6-951baf950299
-caps.latest.revision: 8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

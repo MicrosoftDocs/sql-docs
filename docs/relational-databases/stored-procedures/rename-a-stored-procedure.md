@@ -5,8 +5,6 @@ ms.date: "07/06/2017"
 ms.prod: sql
 ms.technology: stored-procedures
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "stored procedures [SQL Server], renaming"

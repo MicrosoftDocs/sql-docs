@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "SQLServerResultSet.updateArray (java.lang.String, java.sql.Array)"
@@ -15,7 +13,6 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: 6f2ced5a-1c7d-439a-aaa5-472b9f4fdeab
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg

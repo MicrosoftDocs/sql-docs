@@ -7,8 +7,6 @@ manager: craigg
 ms.date: 07/24/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ""
-ms.suite: "sql"
 ms.custom: "sql-linux"
 ms.technology: linux
 ---
@@ -55,7 +53,7 @@ The following sections provide common questions and answers for SQL Server runni
 
    No. Linux running on Windows 10 is currently not a supported platform for SQL Server and related tools.
 
-1. **Which Linux file systems can SQL Server 2017 use for data files?**
+1. **Which Linux file systems can SQL Server use for data files?**
 
    Currently SQL Server on Linux supports ext4 and XFS. Support for other file systems will be added as needed in the future.
 
@@ -75,7 +73,7 @@ The following sections provide common questions and answers for SQL Server runni
 
 1. **Is there a tool like SSMS that runs on Linux?**
 
-   The new Microsoft SQL Operations Studio (preview) is a cross-platform tool for managing SQL Server. For more information, see [What is Microsoft SQL Operations Studio (preview)](../sql-operations-studio/what-is.md).
+   The new Azure Data Studio (preview) is a cross-platform tool for managing SQL Server. For more information, see [What is Azure Data Studio (preview)](../azure-data-studio/what-is.md).
 
 1. **Are commands like sqlcmd and bcp available on Linux?**
 
@@ -120,7 +118,7 @@ The following sections provide common questions and answers for SQL Server runni
 
 1. **Can I migrate my data from Oracle and other database engines to SQL Server on Linux?**
 
-   Yes. SSMA supports migration from several types of database engines: Microsoft Access, DB2, MySQL, Oracle, and SAP ASE (formerly SAP Sybase ASE). For an example of how to use SSMA, see [Migrate an Oracle schema to SQL Server 2017 on Linux with the SQL Server Migration Assistant](../ssma/oracle/sql-server-linux-convert-from-oracle.md?toc=%2fsql%2flinux%2ftoc.json).
+   Yes. SSMA supports migration from several types of database engines: Microsoft Access, DB2, MySQL, Oracle, and SAP ASE (formerly SAP Sybase ASE). For an example of how to use SSMA, see [Migrate an Oracle schema to SQL Server on Linux with the SQL Server Migration Assistant](../ssma/oracle/sql-server-linux-convert-from-oracle.md?toc=%2fsql%2flinux%2ftoc.json).
 
 1. **What permissions are required for SQL Server files?**
 

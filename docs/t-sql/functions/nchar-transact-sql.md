@@ -5,9 +5,7 @@ ms.date: "03/13/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "nchar"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "NCHAR function"
   - "Unicode [SQL Server], NCHAR function"
 ms.assetid: 68cefc68-7c4f-4326-80c1-300f90cf19db
-caps.latest.revision: 43
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

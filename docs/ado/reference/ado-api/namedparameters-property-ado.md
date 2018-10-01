@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
@@ -15,7 +13,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "NamedParameters property [ADO]"
 ms.assetid: 42409387-026c-435f-a9b1-bf4167095875
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg

@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.technology: report-server
-ms.suite: pro-bi
 
 
 ms.topic: conceptual
@@ -30,7 +29,7 @@ ms.author: maghan
   
      The **New Folder** page opens.  
   
-3.  Type a folder name. A folder name can include spaces, but cannot include reserved characters that are used for URL encoding: ; ? : \@ & = + , $ / * < > |. You cannot type a series of folder names to create several folders at once.  
+3.  Type a folder name. A folder name can include spaces, but cannot include reserved characters that are used for URL encoding: \; \? \: \@ \& \= \+ \, \$ \/ \* \< \> \|. You cannot type a series of folder names to create several folders at once.  
   
 4.  Optionally type a description.  
   

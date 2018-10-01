@@ -5,16 +5,13 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "backward compatibility [ODBC], behavioral changes"
   - "behavioral changes [ODBC]"
   - "compatibility [ODBC], behavioral changes"
 ms.assetid: a17ae701-6ab6-4eaf-9e46-d3b9cd0a3a67
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg

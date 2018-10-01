@@ -4,7 +4,6 @@ ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.technology: reporting-services
-ms.suite: pro-bi
 
 
 ms.topic: conceptual
@@ -18,6 +17,7 @@ helpviewer_keywords:
 ms.assetid: b2018116-cf1a-4e54-b29c-39e0ca2bda77
 author: markingmyname
 ms.author: maghan
+monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Data Alert Designer
 

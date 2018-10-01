@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "troubleshooting [SQL Server], deploying"
   - "Availability Groups [SQL Server], troubleshooting"
   - "Availability Groups [SQL Server], configuring"
 ms.assetid: 8c222f98-7392-4faf-b7ad-5fb60ffa237e
-caps.latest.revision: 39
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

@@ -3,7 +3,6 @@ title: "Automatic Matching of Syntax Pairs | Microsoft Docs"
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.technology: scripting
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "IntelliSense [SQL Server], delimiter highlighting"

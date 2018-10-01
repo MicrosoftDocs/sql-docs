@@ -5,9 +5,7 @@ ms.date: "01/09/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "ALTER SCHEMA"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "schemas [SQL Server], modifying"
   - "modifying schemas"
 ms.assetid: 0a760138-460e-410a-a3c1-d60af03bf2ed
-caps.latest.revision: 43
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

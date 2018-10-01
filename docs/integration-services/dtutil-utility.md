@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "verifying packages"
@@ -25,7 +23,6 @@ helpviewer_keywords:
   - "removing packages"
   - "relocating packages"
 ms.assetid: 6c7975ff-acec-4e6e-82e5-a641e3a98afe
-caps.latest.revision: 114
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

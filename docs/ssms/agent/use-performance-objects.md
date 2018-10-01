@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-agent"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Agent, monitoring"
@@ -21,7 +18,6 @@ helpviewer_keywords:
   - "performance counters [SQL Server], SQL Server Agent"
   - "counters [SQL Server], SQL Server Agent"
 ms.assetid: 830b843a-6b2a-4620-a51b-98358e9fc54b
-caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -41,8 +37,8 @@ The following table shows how the [!INCLUDE[ssNoVersion](../../includes/ssnovers
   
 |Instance type|Object name|  
 |-----------------|---------------|  
-|Default|**SQLAgent:***object*:*counter*|  
-|Named|**SQLAgent$**<br /> **&#42;instance_name&#42; :***object*:*counter*|  
+|Default|**SQLAgent:**_object_:_counter_|  
+|Named|**SQLAgent$**<br /> **&#42;instance_name&#42; :**_object_:_counter_|  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] includes the following performance objects for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   

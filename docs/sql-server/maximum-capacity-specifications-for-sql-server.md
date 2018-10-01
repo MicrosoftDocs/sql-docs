@@ -3,10 +3,8 @@ title: "Maximum Capacity Specifications for SQL Server | Microsoft Docs"
 ms.date: "11/6/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.custom: ""
 ms.technology: install
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "objects [SQL Server]"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "objects [SQL Server], capacity specifications"
   - "Database Engine [SQL Server], capacity specifications"
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
-caps.latest.revision: 88
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: craigg

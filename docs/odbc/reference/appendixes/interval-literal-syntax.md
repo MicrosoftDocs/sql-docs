@@ -5,16 +5,13 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "literals [ODBC], interval"
   - "interval literals [ODBC]"
   - "ODBC literals [ODBC], interval"
 ms.assetid: 2f2d22c1-51d6-4055-9f5a-53bc31e9fea0
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg

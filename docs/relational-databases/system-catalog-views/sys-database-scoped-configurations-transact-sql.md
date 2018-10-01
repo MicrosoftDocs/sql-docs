@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "05/14/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "database_scoped_configurations"

@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "03/17/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: performance
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Resource Governor, workload group create"
   - "workload groups [SQL Server], create"
 ms.assetid: 072868ec-ceff-4db6-941b-281af731a067
-caps.latest.revision: 15
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

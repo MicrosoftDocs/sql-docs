@@ -5,15 +5,12 @@ ms.date: "10/23/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: xevents
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "extended events [SQL Server]"
   - "xe"
 ms.assetid: bf3b98a6-51ed-4f2d-9c26-92f07f1fa947
-caps.latest.revision: 48
 author: MightyPen
 ms.author: genemi
 manager: craigg

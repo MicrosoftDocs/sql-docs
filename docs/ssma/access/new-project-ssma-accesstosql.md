@@ -4,17 +4,11 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 helpviewer_keywords: 
   - "New Project dialog box"
 ms.assetid: ca294f6d-eeb5-42ca-9306-156281a3f0f3
-caps.latest.revision: 15
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: craigg

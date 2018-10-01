@@ -3,9 +3,7 @@ title: "SQL Server privacy supplement | Microsoft Docs"
 ms.date: 4/24/2018
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.custom: ""
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
 helpviewer_keywords: 
@@ -21,7 +19,7 @@ This article summarizes the behavior of different data objects used within SQL S
 - Azure SQL Database
 - SQL Server Management Studio (SSMS)
 - SQL Server Data Tools (SSDT)
-- SQL Operations Studio
+- Azure Data Studio
 - Database Migration Assistant
 - SQL Server Migration Assistant
 - MS-SQL Extension

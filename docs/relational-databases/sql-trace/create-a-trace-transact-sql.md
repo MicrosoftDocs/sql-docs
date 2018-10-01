@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "sql-trace"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "traces [SQL Server], example"
   - "traces [SQL Server], creating"
 ms.assetid: 79dd4254-e3c6-467a-bb6f-f99e51757e99
-caps.latest.revision: 19
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

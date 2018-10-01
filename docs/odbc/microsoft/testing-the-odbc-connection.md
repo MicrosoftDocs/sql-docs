@@ -5,15 +5,12 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "testing connections [ODBC]"
   - "ODBC driver for Oracle [ODBC], testing connections"
 ms.assetid: 5e671665-2aba-49a7-8871-70784d8b3cc9
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg

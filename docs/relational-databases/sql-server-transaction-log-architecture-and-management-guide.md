@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "01/05/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "relational-databases-misc"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "transaction log architecture guide"
@@ -22,7 +19,6 @@ helpviewer_keywords:
   - "vlf size"
   - "transaction log internals"
 ms.assetid: 88b22f65-ee01-459c-8800-bcf052df958a
-caps.latest.revision: 3
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

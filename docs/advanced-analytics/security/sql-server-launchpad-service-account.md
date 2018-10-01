@@ -13,18 +13,22 @@ manager: cgronlun
 # SQL Server Trusted Launchpad service configuration
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-A separate [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] service is created for database engine instance to which you have added SQL Server machine learning (R or Python) integration.
+A separate [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] service is created for each database engine instance to which you have added SQL Server machine learning (R or Python) integration.
 
-## Service account configuration
+## Account permissions
 
 By default, SQL Server Launchpad is configured to run under **NT Service\MSSQLLaunchpad**, which is provisioned with all necessary permissions to run external scripts. Stripping permissions from this account can result in Launchpad failing to start or to access the SQL Server instance where external scripts should be run.
 
-Permission required for this account are listed below. If you modify the service account, be sure to use the **Local Security Policy** application to include these permissions:
+If you modify the service account, be sure to use the **Local Security Policy** application (**All apps** > **Windows Administrative Tools** > **Local Security Policy**).
 
-+ Adjust memory quotas for a process (SeIncreaseQuotaPrivilege)
-+ Bypass traverse checking (SeChangeNotifyPrivilege)
-+ Log on as a service (SeServiceLogonRight)
-+ Replace a process-level token (SeAssignPrimaryTokenPrivilege)
+Permissions required for this account are listed in the following table.
+
+| Group policy setting | Constant name |
+|----------------------|---------------|
+| [Adjust memory quotas for a process](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/adjust-memory-quotas-for-a-process) | SeIncreaseQuotaPrivilege | 
+| [Bypass traverse checking](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/bypass-traverse-checking) | SeChangeNotifyPrivilege | 
+| [Log on as a service](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/log-on-as-a-service) | SeServiceLogonRight | 
+| [Replace a process-level token](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/replace-a-process-level-token) | SeAssignPrimaryTokenPrivilege | 
 
 For more information about permissions required to run SQL Server services, see [Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).
 
@@ -32,9 +36,14 @@ For more information about permissions required to run SQL Server services, see 
 
 ## Configuration properties
 
+Typically, there is no reason to modify service configuration. Properties that could be changed include the service account, the count of external processes (20 by default), or the password reset policy for worker accounts.
+
 1. Open [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md). 
 
-2. Right-click SQL Server Launchpad and select **Properties**.
+  + On the Start page, enter **MMC** to open the Microsoft Management Console.
+  + On **File** > **Add/Remove Snap-in**, move **SQL Server Configuration Manager** from Available to Selected Snap-ins.
+
+2. In SQL Server Configuration Manager under SQL Server Services, right-click SQL Server Launchpad and select **Properties**.
 
     + To change the service account, click the **Log On** tab.
 
@@ -43,7 +52,7 @@ For more information about permissions required to run SQL Server services, see 
 > [!Note]
 > In early versions of SQL Server 2016 R Services, you could change some properties of the service by editing the [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] configuration file. This file is no longer used for changing configurations. SQL Server Configuration Manager is the right approach for changes to service configuration, such as the service account and number of users.
 
-#### Debug settings
+## Debug settings
 
 A few properties can only be changed by using the Launchpad's configuration file, which might be useful in limited cases, such as debugging. The configuration file is created during [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup and by default is saved as a plain text file in the following location: `<instance path>\binn\rlauncher.config`
 

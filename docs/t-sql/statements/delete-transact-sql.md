@@ -5,9 +5,7 @@ ms.date: "05/10/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "DELETE"
@@ -25,7 +23,6 @@ helpviewer_keywords:
   - "row removal [SQL Server], DELETE statement"
   - "deleting data"
 ms.assetid: ed6b2105-0f35-408f-ba51-e36ade7ad5b2
-caps.latest.revision: 78
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
@@ -92,7 +89,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
   
  Common table expressions can also be used with the SELECT, INSERT, UPDATE, and CREATE VIEW statements. For more information, see [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
- TOP **(***expression***)** [ PERCENT ]  
+ TOP **(**_expression_**)** [ PERCENT ]  
  Specifies the number or percent of random rows that will be deleted. *expression* can be either a number or a percent of the rows. The rows referenced in the TOP expression used with INSERT, UPDATE, or DELETE are not arranged in any order. For more information, see [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md).  
   
  FROM  

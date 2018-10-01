@@ -5,14 +5,11 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: table-view-index
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "computed columns, define"
 ms.assetid: 731a4576-09c1-47f0-a8f6-edd0b55679f4
-caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -67,7 +64,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 5.  Indicate whether the data is persisted by choosing **Yes** or **No** from the drop-down for the **Is Persisted** child property.  
   
-6.  On the **File** menu, click **Save***table name*.  
+6.  On the **File** menu, click **Save**_table name_.  
   
 #### To add a computed column definition to an existing column  
   

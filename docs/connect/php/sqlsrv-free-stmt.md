@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "sqlsrv_free_stmt"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "sqlsrv_free_stmt"
   - "API Reference, sqlsrv_free_stmt"
 ms.assetid: 3c71f432-36ad-41e1-8ac7-587c82539448
-caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg

@@ -3,10 +3,8 @@ title: "SQL Server Documentation | Microsoft Docs"
 ms.date: "08/10/2018"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.custom: ""
 ms.technology: ""
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.portal.f1"
@@ -42,16 +40,26 @@ SQL Server is a central part of the Microsoft data platform. SQL Server is an in
 ::: moniker range="= sqlallproducts-allversions"
 |What's new  | Release notes  |
 |---------|---------|
+|[What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md)     | [SQL Server 2019 Release Notes](../sql-server/sql-server-ver15-release-notes.md)        |
 |[What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)     | [SQL Server 2017 Release Notes](../sql-server/sql-server-2017-release-notes.md)        |
 |[What's New in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)     | [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md)        |
 
 ![info_tip](../sql-server/media/info-tip.png) The SQL Server **2014** documentation is available [here](https://docs.microsoft.com/sql/2014-toc/index?view=sql-server-2014).
 ::: moniker-end
 
+::: moniker range="= sql-server-ver15"
+|What's new  | Release notes  |
+|---------|---------|
+|[What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md)     | [SQL Server 2019 Release Notes](../sql-server/sql-server-ver15-release-notes.md)        |
+::: moniker-end
+
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 |What's new  | Release notes  |
 |---------|---------|
 |[What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)     | [SQL Server 2017 Release Notes](../sql-server/sql-server-2017-release-notes.md)        |
+
+> [!NOTE]
+> SQL Server 2019 preview is now available. For more information, see [What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15).
 ::: moniker-end
 
 ::: moniker range="=sql-server-2016"

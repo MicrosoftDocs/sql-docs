@@ -5,15 +5,12 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "table-view-index, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: table-view-index
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "columns [SQL Server], defaults"
   - "default values"
 ms.assetid: 64514aed-b846-407b-992e-cf813f9a1a91
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -72,7 +69,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
     > [!NOTE]  
     >  To enter a numeric default value, enter the number. For an object or function enter its name. For an alphanumeric default enter the value inside single quotes.  
   
-4.  On the **File** menu, click **Save***table name*.  
+4.  On the **File** menu, click **Save**_table name_.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   

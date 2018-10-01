@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
   - "IRowsetFastLoad::InsertRow (OLE DB)"
@@ -15,7 +13,6 @@ apitype: "COM"
 helpviewer_keywords: 
   - "InsertRow method"
 ms.assetid: 594d3461-34d2-41e7-8ad4-bd2753601ab6
-caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: craigg

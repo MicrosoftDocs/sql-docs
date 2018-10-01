@@ -4,15 +4,12 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Managing Passwords in Oracle, Exporting or Importing Encrypted Password"
   - "Managing passwords in Oracle, Securing Password"
 ms.assetid: 8c7d9f8e-06bb-476c-bbd2-15b61d5bba3c
-caps.latest.revision: 24
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "v-thobro"

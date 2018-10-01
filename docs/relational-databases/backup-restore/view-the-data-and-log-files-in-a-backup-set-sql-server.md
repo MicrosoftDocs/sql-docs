@@ -5,9 +5,7 @@ ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: backup-restore
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "database backups [SQL Server], viewing backup sets"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "transaction log backups [SQL Server], viewing backup sets"
   - "backing up [SQL Server], viewing backup sets"
 ms.assetid: abb6420c-f809-426e-aeb4-d0a74989cf39
-caps.latest.revision: 23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

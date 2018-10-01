@@ -5,13 +5,10 @@ ms.date: "01/01/2012"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "data-quality-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
-caps.latest.revision: 17
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

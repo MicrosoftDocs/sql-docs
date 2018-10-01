@@ -4,7 +4,6 @@ ms.date: 09/18/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.technology: application-integration
-ms.suite: pro-bi
 
 
 
@@ -13,9 +12,9 @@ ms.assetid: 01a821c4-2920-400c-be03-93d26c749bb1
 author: markingmyname
 ms.author: maghan
 ---
-# Integrating Reporting Services Using ReportViewer Controls - Get Started
+# Integrating Reporting Services Using the Report Viewer Controls - Get Started
 
-Learn how developers can embed paginated reports in ASP.NET web sites, and Windows Forms apps, through the Reporting Services Report Viewer Control. You can add the control to a new project, or update an existing project.
+The Report Viewer controls can be used to integrate Reporting Services RDL reports into WebForms and WinForms apps. For detailed information about recent updates see the [changelog](changelog.md).
 
 ## Adding the Report Viewer control to a new web project
 
@@ -36,7 +35,7 @@ Learn how developers can embed paginated reports in ASP.NET web sites, and Windo
     
 4. Add a **ScriptManagerControl** to the page.
 
-5. Add the ReportViewer control to the page. The snippet below can be updated to reference a report hosted on a remote report server.
+5. Add the Report Viewer control to the page. The snippet below can be updated to reference a report hosted on a remote report server.
 
     ```
     <rsweb:ReportViewer ID="ReportViewer1" runat="server" ProcessingMode="Remote">

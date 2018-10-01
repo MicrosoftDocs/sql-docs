@@ -6,15 +6,12 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "VB"
 helpviewer_keywords: 
   - "ActiveCommand property [ADO], Visual Basic example"
 ms.assetid: 23b06499-62df-4f46-88eb-6da392f9b456
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg

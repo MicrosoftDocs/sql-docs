@@ -5,9 +5,7 @@ ms.date: "08/17/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "ALTER DATABASE statement, database mirroring"
   - "database mirroring [SQL Server], Transact-SQL"
 ms.assetid: 27a032ef-1cf6-4959-8e67-03d28c4b3465
-caps.latest.revision: 22
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

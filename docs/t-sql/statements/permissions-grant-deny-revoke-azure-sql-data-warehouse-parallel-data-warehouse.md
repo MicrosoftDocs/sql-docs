@@ -1,18 +1,15 @@
-﻿---
+---
 title: "GRANT-DENY-REVOKE Perms-Azure SQL Data and Parallel Data Warehouses | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/10/2017"
 ms.prod: sql
 ms.prod_service: "sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 5a3b7424-408e-4cb0-8957-667ebf4596fc
-caps.latest.revision: 9
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
@@ -82,7 +79,7 @@ REVOKE
  The **ON** clause describes the securable parameter on which to grant, deny, or revoke permissions.  
   
  \<class_type> 
- The class type of the securable. This can be **LOGIN**, **DATABASE**, **OBJECT**, **SCHEMA**, **ROLE**, or **USER**. Permissions can also be granted to the **SERVER***class_type*, but **SERVER** is not specified for those permissions. **DATABASE** is not specified when the permission includes the word **DATABASE** (for example **ALTER ANY DATABASE**). When no *class_type* is specified and the permission type is not restricted to the server or database class, the class is assumed to be **OBJECT**.  
+ The class type of the securable. This can be **LOGIN**, **DATABASE**, **OBJECT**, **SCHEMA**, **ROLE**, or **USER**. Permissions can also be granted to the **SERVER**_class\_type_, but **SERVER** is not specified for those permissions. **DATABASE** is not specified when the permission includes the word **DATABASE** (for example **ALTER ANY DATABASE**). When no *class_type* is specified and the permission type is not restricted to the server or database class, the class is assumed to be **OBJECT**.  
   
  *securable*  
  The name of the login, database, table, view, schema, procedure, role, or user on which to grant, deny, or revoke permissions. The object name can be specified with the three-part naming rules that are described in [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  

@@ -5,9 +5,7 @@ ms.date: "08/30/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.tutorialstart.ssms.f1"
@@ -22,7 +20,6 @@ helpviewer_keywords:
   - "SQL Server Management Studio [SQL Server], tutorials"
   - "scripts [SQL Server], SQL Server Management Studio"
 ms.assetid: d2bade70-07cf-4d94-b5d2-88aecb538ed1
-caps.latest.revision: 22
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

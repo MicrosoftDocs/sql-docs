@@ -5,14 +5,11 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "bcp"
 ms.assetid: 3eca5717-e50f-40db-be16-a1cebbdfee70
-caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -44,7 +41,7 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 ## Available Options
 In the current release, the following syntax and options are available:  
 
-[*database***.**]*schema***.***table* **in** *data_file* | **out** *data_file*
+[_database_**.**]_schema_**.**_table_ **in** _data\_file_ | **out** _data\_file_
 
 - -a *packet_size*  
 Specifies the number of bytes, per network packet, sent to and from the server.  

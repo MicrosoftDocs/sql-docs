@@ -5,9 +5,7 @@ ms.date: "07/18/2016"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: backup-restore
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "media sets [SQL Server], about media sets"
@@ -23,7 +21,6 @@ helpviewer_keywords:
   - "backups [SQL Server], backup sets"
   - "backup sets [SQL Server]"
 ms.assetid: 2b8f19a2-ee9d-4120-b194-fbcd2076a489
-caps.latest.revision: 59
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

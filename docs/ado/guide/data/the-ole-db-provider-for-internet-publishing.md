@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "OLE DB provider for Internet publishing [ADO]"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "Internet publishing [ADO]"
   - "providers [ADO], OLE DB provider for Internet publishing"
 ms.assetid: 4869aafa-7401-4ce1-93ce-45406a60274f
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg

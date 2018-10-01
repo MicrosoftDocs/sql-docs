@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "02/23/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: replication
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Distribution Agent, executables"
@@ -16,7 +13,6 @@ helpviewer_keywords:
   - "Distribution Agent, parameter reference"
   - "command prompt [SQL Server replication]"
 ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
-caps.latest.revision: 64
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-agent"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "ActiveX scripting jobs [SQL Server]"
   - "job steps [Analysis Services]"
 ms.assetid: e6c46c6b-2d61-4571-bc8e-a831cd6e6302
-caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

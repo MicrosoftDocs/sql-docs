@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: sql
-ms.component: "xquery"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "XML"
@@ -17,7 +14,6 @@ helpviewer_keywords:
   - "axis step [XQuery]"
   - "node test [XQuery]"
 ms.assetid: ffe27a4c-fdf3-4c66-94f1-7e955a36cadd
-caps.latest.revision: 24
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

@@ -5,9 +5,7 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SSIS, operators"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "operators [Integration Services]"
   - "expressions [Integration Services], operators"
 ms.assetid: 33df3a3d-1f5c-429b-a3b9-52b7d8689089
-caps.latest.revision: 35
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

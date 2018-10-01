@@ -1,19 +1,16 @@
-﻿---
+---
 title: "Specify Fill Factor for an Index | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/17/2017"
 ms.prod: sql
 ms.prod_service: "table-view-index, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: table-view-index
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "fill factor [SQL Server]"
   - "page splits [SQL Server]"
 ms.assetid: 237a577e-b42b-4adb-90cf-aa7fb174f3ab
-caps.latest.revision: 45
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

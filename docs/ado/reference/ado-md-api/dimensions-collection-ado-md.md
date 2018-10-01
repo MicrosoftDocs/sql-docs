@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
@@ -16,7 +14,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "Dimensions collection [ADO MD]"
 ms.assetid: eaf6f4e7-2ea0-49a3-89ee-e219e025257c
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg

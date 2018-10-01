@@ -5,15 +5,12 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "installing ODBC components [ODBC], setup program"
   - "ODBC [ODBC], component installation"
 ms.assetid: 9de15ca0-fe6a-4634-8709-a928d3c9cc73
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg

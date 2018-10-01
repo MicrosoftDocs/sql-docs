@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "08/24/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: replication
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Merge Agent, executables"
@@ -16,7 +13,6 @@ helpviewer_keywords:
   - "agents [SQL Server replication], Merge Agent"
   - "command prompt [SQL Server replication]"
 ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
-caps.latest.revision: 64
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

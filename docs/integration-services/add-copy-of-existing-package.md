@@ -5,16 +5,13 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.addcopyexistingpackage.f1"
 helpviewer_keywords: 
   - "Add Copy of Existing Package dialog box"
 ms.assetid: ed530b0d-438d-4c93-8e91-13f2b2b6a8b2
-caps.latest.revision: 13
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

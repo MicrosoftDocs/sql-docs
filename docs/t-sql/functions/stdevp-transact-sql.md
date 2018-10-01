@@ -5,9 +5,7 @@ ms.date: "03/13/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "STDEVP"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "expressions [SQL Server], statistical standard deviation"
   - "statistical standard deviation"
 ms.assetid: 29f2a906-d084-4464-abc3-4b275ed19442
-caps.latest.revision: 45
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -61,7 +58,7 @@ STDEVP (expression) OVER ( [ partition_by_clause ] order_by_clause)
  *expression*  
  Is a numeric [expression](../../t-sql/language-elements/expressions-transact-sql.md). Aggregate functions and subqueries are not permitted. *expression* is an expression of the exact numeric or approximate numeric data type category, except for the **bit** data type.  
   
- OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
+ OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_**)**  
  *partition_by_clause* divides the result set produced by the FROM clause into partitions to which the function is applied. If not specified, the function treats all rows of the query result set as a single group. *order_by_clause* determines the logical order in which the operation is performed. *order_by_clause* is required. For more information, see [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## Return Types  

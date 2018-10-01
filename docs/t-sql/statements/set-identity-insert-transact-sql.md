@@ -5,9 +5,7 @@ ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "SET IDENTITY_INSERT"
@@ -22,7 +20,6 @@ helpviewer_keywords:
   - "identity values [SQL Server], explicit values"
   - "identity columns [SQL Server], explicit values"
 ms.assetid: a5dd49f2-45c7-44a8-b182-e0a5e5c373ee
-caps.latest.revision: 26
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

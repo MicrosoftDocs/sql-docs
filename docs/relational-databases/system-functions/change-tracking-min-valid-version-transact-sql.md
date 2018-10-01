@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "08/08/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "system-functions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "CHANGE_TRACKING_CLEANUP_VERSION"
@@ -19,7 +16,6 @@ helpviewer_keywords:
   - "CHANGE_TRACKING_MIN_VALID_VERSION"
   - "change tracking [SQL Server], CHANGE_TRACKING_MIN_VALID_VERSION"
 ms.assetid: 5a43d23f-adcf-4c0b-95ad-07cee03c1f9d
-caps.latest.revision: 16
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

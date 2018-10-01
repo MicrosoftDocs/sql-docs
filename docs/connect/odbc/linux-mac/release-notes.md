@@ -5,9 +5,7 @@ ms.date: "06/29/2018"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 author: MightyPen
 ms.author: v-jizho2
@@ -24,6 +22,8 @@ Ubuntu 18.04
 **Features Added**:
 
 Data Classification for Azure SQL Database and SQL Server, for more information see [Data Classification](../data-classification.md)
+
+Support UTF-8 server encoding
 
 SQLBrowseConnect
 

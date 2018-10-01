@@ -4,16 +4,12 @@ ms.custom: ""
 ms.date: "02/23/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "import-export"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: data-movement
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "format files [SQL Server], creating"
 ms.assetid: f680b4a0-630f-4052-9c79-d348c1076f7b
-caps.latest.revision: 57
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

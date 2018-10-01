@@ -4,14 +4,9 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-functions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server (starting with 2008)"
 f1_keywords: 
   - "sys.fn_net_changes_TSQL"
   - "fn_net_changes_TSQL"
@@ -23,7 +18,6 @@ helpviewer_keywords:
   - "fn_net_changes_<capture_instance>"
   - "sys.fn_net_changes_<capture_instance>"
 ms.assetid: 342fa030-9fd9-4b74-ae4d-49f6038a5073
-caps.latest.revision: 16
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

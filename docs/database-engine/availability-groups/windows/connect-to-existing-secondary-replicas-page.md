@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.adddatabasewizard.connecttoreplicas.f1"
   - "sql13.swb.addreplicawizard.connecttoreplicas.f1"
 ms.assetid: 850f1bc8-d7d0-425c-bd7b-03f0e9d3348e
-caps.latest.revision: 7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

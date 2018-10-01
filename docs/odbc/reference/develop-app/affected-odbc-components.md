@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "upgrading applications [ODBC], affected components"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "ODBC drivers [ODBC], backward compatibility"
   - "backward compatibility [ODBC], affected components"
 ms.assetid: 71fa6ea4-007c-4c2b-b5af-2cec6ea79b58
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg

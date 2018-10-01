@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "AdLockBatchOptimistic [ADO]"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "AdLockOptimistic [ADO]"
   - "AdLockPessimistic [ADO]"
 ms.assetid: 12a978c0-b8a0-4ef0-87f0-a43c13659272
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg

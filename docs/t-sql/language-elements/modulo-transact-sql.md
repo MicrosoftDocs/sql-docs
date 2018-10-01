@@ -5,9 +5,7 @@ ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "modulo"
@@ -24,7 +22,6 @@ helpviewer_keywords:
   - "modulo operator (%)"
   - "modulus operator (%)"
 ms.assetid: f93c662e-f405-486e-bf23-a2d03907b5bd
-caps.latest.revision: 42
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

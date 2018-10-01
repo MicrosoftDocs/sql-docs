@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.transferjobstask.f1"
@@ -16,7 +14,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "Transfer Jobs task [Integration Services]"
 ms.assetid: 1bf33885-9c5b-47e4-a549-f5920b66a1de
-caps.latest.revision: 28
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

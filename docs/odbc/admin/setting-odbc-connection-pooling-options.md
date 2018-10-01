@@ -5,16 +5,13 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "connection pooling [ODBC]"
   - "ODBC data source administrator [ODBC], connection pooling options"
   - "ODBC data source administrator [ODBC], performance monitoring"
 ms.assetid: 037e2f78-f204-40f4-b4ab-d9cdf562012b
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg

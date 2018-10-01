@@ -4,12 +4,12 @@ ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.technology: report-server-sharepoint
-ms.suite: pro-bi
 
 
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
+monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Configuration and administration of a SQL Server Reporting Services (SSRS) report server
 

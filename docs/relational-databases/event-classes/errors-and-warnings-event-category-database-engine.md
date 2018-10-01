@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Errors and Warnings event category [SQL Server]"
   - "SQL Server event classes, Errors and Warnings event category"
   - "event classes [SQL Server], Errors and Warnings event category"
 ms.assetid: 249c19b5-af68-4433-80f6-337395176641
-caps.latest.revision: 28
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

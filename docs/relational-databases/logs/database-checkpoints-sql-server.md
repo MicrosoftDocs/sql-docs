@@ -4,10 +4,8 @@ ms.date: "09/23/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.custom: ""
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "automatic checkpoints"
@@ -26,7 +24,6 @@ helpviewer_keywords:
   - "flushing pages"
   - "active logs"
 ms.assetid: 98a80238-7409-4708-8a7d-5defd9957185
-caps.latest.revision: 74
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg
@@ -44,8 +41,8 @@ For performance reasons, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] perform
   
 |Name|[!INCLUDE[tsql](../../includes/tsql-md.md)] Interface|Description|  
 |----------|----------------------------------|-----------------|  
-|Automatic|EXEC sp_configure **'**recovery interval**','***seconds***'**|Issued automatically in the background to meet the upper time limit suggested by the **recovery interval** server configuration option. Automatic checkpoints run to completion.  Automatic checkpoints are throttled based on the number of outstanding writes and whether the [!INCLUDE[ssDE](../../includes/ssde-md.md)] detects an increase in write latency above 50 milliseconds.<br /><br /> For more information, see [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md).|  
-|Indirect|ALTER DATABASE … SET TARGET_RECOVERY_TIME **=***target_recovery_time* { SECONDS &#124; MINUTES }|Issued in the background to meet a user-specified target recovery time for a given database. Beginning with [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)], the default value is 1 minute. The default is 0 for older versions, which indicates that the database will use automatic checkpoints, whose frequency depends on the recovery interval setting of the server instance.<br /><br /> For more information, see [Change the Target Recovery Time of a Database &#40;SQL Server&#41;](../../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md).|  
+|Automatic|EXEC sp_configure **'**recovery interval**','**_seconds_**'**|Issued automatically in the background to meet the upper time limit suggested by the **recovery interval** server configuration option. Automatic checkpoints run to completion.  Automatic checkpoints are throttled based on the number of outstanding writes and whether the [!INCLUDE[ssDE](../../includes/ssde-md.md)] detects an increase in write latency above 50 milliseconds.<br /><br /> For more information, see [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md).|  
+|Indirect|ALTER DATABASE … SET TARGET_RECOVERY_TIME **=**_target\_recovery\_time_ { SECONDS &#124; MINUTES }|Issued in the background to meet a user-specified target recovery time for a given database. Beginning with [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)], the default value is 1 minute. The default is 0 for older versions, which indicates that the database will use automatic checkpoints, whose frequency depends on the recovery interval setting of the server instance.<br /><br /> For more information, see [Change the Target Recovery Time of a Database &#40;SQL Server&#41;](../../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md).|  
 |Manual|CHECKPOINT [*checkpoint_duration*]|Issued when you execute a [!INCLUDE[tsql](../../includes/tsql-md.md)] CHECKPOINT command. The manual checkpoint occurs in the current database for your connection. By default, manual checkpoints run to completion. Throttling works the same way as for automatic checkpoints.  Optionally, the *checkpoint_duration* parameter specifies a requested amount of time, in seconds, for the checkpoint to complete.<br /><br /> For more information, see [CHECKPOINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md).|  
 |Internal|None.|Issued by various server operations such as backup and database-snapshot creation to guarantee that disk images match the current state of the log.|  
   

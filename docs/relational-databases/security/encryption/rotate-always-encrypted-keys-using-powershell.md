@@ -5,12 +5,9 @@ ms.date: "05/17/2017"
 ms.prod: sql
 ms.prod_service: security, sql-database"
 ms.reviewer: vanto
-ms.suite: "sql"
 ms.technology: security
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 5117b4fd-c8d3-48d5-87c9-756800769f31
-caps.latest.revision: 19
 author: VanMSFT
 ms.author: vanto
 manager: craigg

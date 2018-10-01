@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: security
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: security
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.SWB.SQLAUDIT.FILTER.F1"
@@ -93,7 +91,7 @@ manager: craigg
      Specifies the location of the folder where audit data is written when the **Audit destination** is a file.  
   
      **Ellipsis (…)**  
-     Opens the **Locate Folder –***server_name* dialog box to specify a file path or create a folder where the audit file is written.  
+     Opens the **Locate Folder –**_server\_name_ dialog box to specify a file path or create a folder where the audit file is written.  
   
      **Audit File Maximum Limit:**  
      **Maximum rollover files**  

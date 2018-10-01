@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "5/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "relational-databases-misc"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "post-migration validation and optimization"
   - "guide, post-migration validation and optimization"
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
-caps.latest.revision: 3
 author: "pelopes"
 ms.author: "harinid"
 manager: ""

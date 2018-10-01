@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: install
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "clusters [SQL Server], virtual servers"
@@ -14,7 +12,6 @@ helpviewer_keywords:
   - "virtual servers [SQL Server], failover clustering"
   - "failover clustering [SQL Server], virtual servers"
 ms.assetid: 2a49d417-25fb-4760-8ae5-5871bfb1e6f3
-caps.latest.revision: 16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

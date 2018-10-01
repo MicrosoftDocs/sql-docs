@@ -5,9 +5,7 @@ ms.date: "10/23/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "UPDATETEXT"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "data updates [SQL Server], UPDATETEXT statement"
   - "UPDATETEXT statement"
 ms.assetid: d73c28ee-3972-4afd-af8d-ebbbd9e50793
-caps.latest.revision: 34
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

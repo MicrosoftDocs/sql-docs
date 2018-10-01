@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "server_event_notifications"
@@ -20,7 +17,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.server_event_notifications catalog view"
 ms.assetid: 1a83a044-3130-4551-95ca-162525846ff5
-caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg

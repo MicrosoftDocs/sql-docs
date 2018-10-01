@@ -5,9 +5,7 @@ ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
   - "ISSAsynchStatus::GetStatus (OLE DB)"
@@ -15,7 +13,6 @@ apitype: "COM"
 helpviewer_keywords: 
   - "GetStatus method"
 ms.assetid: 354b6ee4-b5a1-48f6-9403-da3bdc911067
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg

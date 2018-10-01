@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: clr
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -13,7 +12,6 @@ helpviewer_keywords:
   - "programming model restrictions [CLR integration]"
   - "assemblies [CLR integration], runtime checks"
 ms.assetid: 2446afc2-9d21-42d3-9847-7733d3074de9
-caps.latest.revision: 22
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

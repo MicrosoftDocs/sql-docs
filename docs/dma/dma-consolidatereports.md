@@ -6,15 +6,12 @@ ms.date: "09/21/2018"
 ms.prod: sql
 ms.prod_service: "dma"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: dma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 keywords: ""
 helpviewer_keywords: 
   - "Data Migration Assistant, Assess"
 ms.assetid: ""
-caps.latest.revision: ""
 author: HJToland3
 ms.author: rajpo
 manager: craigg

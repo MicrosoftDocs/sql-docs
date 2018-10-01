@@ -5,9 +5,7 @@ ms.date: "04/27/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "ALTER FULLTEXT INDEX"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "search property lists [SQL Server], associating with full-text indexes"
   - "ALTER FULLTEXT INDEX statement"
 ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
-caps.latest.revision: 95
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

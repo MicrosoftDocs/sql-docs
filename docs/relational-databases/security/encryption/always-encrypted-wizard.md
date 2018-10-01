@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "05/04/2016"
 ms.prod: sql
 ms.reviewer: vanto
-ms.suite: "sql"
 ms.technology: security
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.alwaysencryptedwizard.encryption.f1"

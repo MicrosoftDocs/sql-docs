@@ -1,13 +1,11 @@
-﻿---
+---
 title: "Delete an Index | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/17/2017"
 ms.prod: sql
 ms.prod_service: "table-view-index, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: table-view-index
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "removing indexes"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "indexes [SQL Server], dropping"
   - "index deletions [SQL Server]"
 ms.assetid: fd38a0ed-26c4-4c76-9ef7-e0a16147329d
-caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

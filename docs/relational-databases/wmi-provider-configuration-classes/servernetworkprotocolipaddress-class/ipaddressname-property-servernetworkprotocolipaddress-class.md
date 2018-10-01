@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "wmi"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
   - "IpAddressName Property (ServerNetworkProtocolIPAddress Class)"
@@ -19,7 +16,6 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "IpAddressName property"
 ms.assetid: 1df24fe2-0873-4cd1-9151-2306d08418bc
-caps.latest.revision: 31
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg

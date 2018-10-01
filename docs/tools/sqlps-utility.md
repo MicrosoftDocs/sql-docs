@@ -1,21 +1,17 @@
-﻿---
+---
 title: "sqlps Utility | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "sqlps"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "sqlps utility"
   - "PowerShell [SQL Server], sqlps utility"
 ms.assetid: 4b2515a6-12c3-44fb-b263-1c567681cd2b
-caps.latest.revision: 22
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -67,11 +63,11 @@ sqlps
  **-**  
  **-Command-** specifies that the **sqlps** utility read the input from the standard input.  
   
- *script_block* [ **-args***argument_array* ]  
+ *script_block* [ **-args**_argument\_array_ ]  
  Specifies a block of PowerShell commands to run, the block must be enclosed in braces: {}. *Script_block* can only be specified when the **sqlps** utility is called from either **PowerShell** or another **sqlps** utility session. The *argument_array* is an array of PowerShell variables containing the arguments for the PowerShell commands in the *script_block*.  
   
  *string* [ *command_parameters* ]  
- Specifies a string that contains the PowerShell commands to be run. Use the format **"&{***command***}"**. The quotation marks indicate a string, and the invoke operator (&) causes the **sqlps** utility to run the command.  
+ Specifies a string that contains the PowerShell commands to be run. Use the format **"&{**_command_**}"**. The quotation marks indicate a string, and the invoke operator (&) causes the **sqlps** utility to run the command.  
   
  [ **-?** | **-Help** ]  
  Shows the syntax summary of the **sqlps** utility options.  

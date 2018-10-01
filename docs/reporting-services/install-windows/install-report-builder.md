@@ -3,7 +3,6 @@ title: "Install Report Builder | Microsoft Docs"
 ms.date: 09/22/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.suite: pro-bi
 
 ms.topic: conceptual
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf

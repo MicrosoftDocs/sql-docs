@@ -4,7 +4,6 @@ ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.technology: reporting-services
-ms.suite: pro-bi
 
 
 ms.topic: conceptual
@@ -14,6 +13,7 @@ helpviewer_keywords:
 ms.assetid: 7b9281c8-2f8b-48f7-85d8-7a7a596e3c82
 author: markingmyname
 ms.author: maghan
+monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
 ---
 
 # Data Alert Manager for SharePoint Users

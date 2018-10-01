@@ -5,9 +5,7 @@ ms.date: "03/13/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "LEFT"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "LEFT function"
   - "leftmost character of expression"
 ms.assetid: 44a8c71b-63d8-458b-8b5d-99d570067c3c
-caps.latest.revision: 48
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

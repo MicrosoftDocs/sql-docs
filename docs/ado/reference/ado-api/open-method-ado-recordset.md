@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
@@ -16,7 +14,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "Open method [ADO]"
 ms.assetid: 3236749c-4b71-4235-89e2-ccdfaaa9319d
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg

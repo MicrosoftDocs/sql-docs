@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "server-side cursors [ADO]"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "client-side cursors [ADO]"
   - "cursors [ADO], server-side"
 ms.assetid: 70ef5b1c-0459-41a1-b796-031f61a29a8a
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg

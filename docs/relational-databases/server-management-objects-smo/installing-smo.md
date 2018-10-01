@@ -4,19 +4,15 @@ ms.custom: ""
 ms.date: "08/06/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.prod_service: "database-engine"
-ms.component: "smo"
 ms.technology: 
 
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "installing SMO"
   - "SMO [SQL Server], installing"
   - "SQL Server Management Objects, installing"
 ms.assetid: 140e9971-4940-4866-89b9-5cec938e2a16
-caps.latest.revision: 46
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

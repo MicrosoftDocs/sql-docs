@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "wmi"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
   - "SetDisable Method (ServerNetworkProtocol Class)"
@@ -19,7 +16,6 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "SetDisable method"
 ms.assetid: 0ebbe0c5-07ad-4a76-a918-e379930adf71
-caps.latest.revision: 30
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg

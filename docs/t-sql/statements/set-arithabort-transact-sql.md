@@ -5,9 +5,7 @@ ms.date: "12/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "ARITHABORT_TSQL"
@@ -26,7 +24,6 @@ helpviewer_keywords:
   - "ending queries [SQL Server]"
   - "stopping queries"
 ms.assetid: f938a666-fdd1-4233-b97f-719f27b1a0e6
-caps.latest.revision: 46
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

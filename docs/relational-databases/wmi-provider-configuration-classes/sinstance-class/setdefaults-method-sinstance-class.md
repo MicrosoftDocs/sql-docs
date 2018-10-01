@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "wmi"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
   - "SetDefaults Method (SInstance Class)"
@@ -19,7 +16,6 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "SetDefaults method"
 ms.assetid: dc3c6a85-0711-4688-bf4f-91168c57af28
-caps.latest.revision: 30
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg

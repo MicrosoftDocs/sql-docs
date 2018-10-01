@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "11/10/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: install
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Enterprise Edition [SQL Server]"
@@ -32,7 +30,6 @@ helpviewer_keywords:
   - "editions [SQL Server], about edition options"
   - "Setup [SQL Server]"
 ms.assetid: 
-caps.latest.revision: 121
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: craigg
@@ -400,6 +397,6 @@ For information about the Business Intelligence Client features supported by the
  [Product Specifications for SQL Server](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)   
  [Installation for SQL Server](../database-engine/install-windows/installation-for-sql-server-2016.md)  
  
- [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

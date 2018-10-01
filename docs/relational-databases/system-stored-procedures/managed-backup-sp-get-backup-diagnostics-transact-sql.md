@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_get_backup_diagnostics_TSQL"
@@ -21,7 +18,6 @@ helpviewer_keywords:
   - "sp_get_backup_diagnostics"
   - "smart_admin.sp_get_backup_diagnostics"
 ms.assetid: 2266a233-6354-464b-91ec-824ca4eb9ceb
-caps.latest.revision: 12
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

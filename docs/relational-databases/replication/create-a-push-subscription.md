@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "08/25/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: replication
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "push subscriptions [SQL Server replication], creating"
@@ -17,7 +14,6 @@ helpviewer_keywords:
   - "snapshot replication [SQL Server], subscribing"
   - "transactional replication, subscribing"
 ms.assetid: adfbbc61-58d1-4330-9ad6-b14ab1142e2b
-caps.latest.revision: 41
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

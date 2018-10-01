@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "05/02/2018"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid:
 author: MashaMSFT

@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "08/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "read-only routing"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], client connectivity"
   - "Availability Groups [SQL Server], active secondary replicas"
 ms.assetid: 7bd89ddd-0403-4930-a5eb-3c78718533d4
-caps.latest.revision: 34
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

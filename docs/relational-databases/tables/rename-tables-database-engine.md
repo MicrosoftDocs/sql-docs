@@ -5,9 +5,7 @@ ms.date: "02/23/2018"
 ms.prod: sql
 ms.prod_service: "table-view-index, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: table-view-index
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "table renaming [SQL Server]"
@@ -65,7 +63,7 @@ To rename a table in Azure SQL Data Warehouse or Parallel Data Warehouse, use th
   
 4.  To cancel this action, press the ESC key before leaving this field.  
   
-5.  From the **File** menu choose **Save***table name*.  
+5.  From the **File** menu choose **Save** _table name_.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   

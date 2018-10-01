@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "08/08/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "track-changes"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "tracking data changes [SQL Server]"
@@ -17,7 +14,6 @@ helpviewer_keywords:
   - "change tracking [SQL Server]"
   - "change tracking [SQL Server], managing"
 ms.assetid: 94a8d361-e897-4d6d-9a8f-1bb652e7a850
-caps.latest.revision: 9
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

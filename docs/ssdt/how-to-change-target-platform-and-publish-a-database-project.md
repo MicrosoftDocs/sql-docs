@@ -6,14 +6,11 @@ ms.date: "02/09/2017"
 ms.prod: "sql"
 ms.technology: ssdt
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql.data.tools.publish.dialog"
   - "sql.data.tools.publishdacproject"
 ms.assetid: 6012e120-5f72-4f4f-ae6e-f9a57ae1dea7
-caps.latest.revision: 25
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"

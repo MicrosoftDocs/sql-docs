@@ -5,16 +5,13 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: configuration
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "pipes [SQL Server], connecting to"
   - "Named Pipes [SQL Server], default pipe"
   - "client protocols [SQL Server]"
 ms.assetid: 30fbae62-2f2e-4d36-9c6e-3444fff68781
-caps.latest.revision: 23
 author: "stevestein"
 ms.author: "sstein"
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"

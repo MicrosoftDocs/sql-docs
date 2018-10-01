@@ -4,16 +4,12 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: replication
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Oracle publishing [SQL Server replication], glossary"
 ms.assetid: e21dfa4b-6144-4be7-9cbf-ca2709b2bd9f
-caps.latest.revision: 32
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

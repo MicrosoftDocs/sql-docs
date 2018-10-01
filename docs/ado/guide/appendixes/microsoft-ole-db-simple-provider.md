@@ -6,15 +6,12 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords:
   - "simple provider [ADO]"
   - "providers [ADO], OLE DB simple provider"
   - "OLE DB simple provider [ADO]"
 ms.assetid: 1e7dc6f0-482c-4103-8187-f890865e40fc
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg

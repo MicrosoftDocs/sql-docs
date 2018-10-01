@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "event classes [SQL Server], QN:Parameter Table"
 ms.assetid: 292da1ed-4c7e-4bd2-9b84-b9ee09917724
-caps.latest.revision: 21
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

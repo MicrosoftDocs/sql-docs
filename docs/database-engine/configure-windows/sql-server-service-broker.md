@@ -1,13 +1,11 @@
-﻿---
+---
 title: "SQL Server Service Broker | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/07/2018"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: configuration
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - SQL13.SWB.SSBMSGTYPEPROPERTIES.GENERAL.F1
@@ -22,7 +20,6 @@ helpviewer_keywords:
   - "SQL Server Service Broker"
   - "Service Broker"
 ms.assetid: 8b8b3b57-fd46-44de-9a4e-e3a8e3999c1e
-caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

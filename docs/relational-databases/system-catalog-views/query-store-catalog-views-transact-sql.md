@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/29/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -16,7 +13,6 @@ helpviewer_keywords:
   - "query store [SQL Server], catalog views"
   - "catalog views [SQL Server], query store"
 ms.assetid: 43d5466a-89e2-4e59-b87e-a2a78e59a1de
-caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg

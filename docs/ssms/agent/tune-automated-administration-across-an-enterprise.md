@@ -1,21 +1,17 @@
-﻿---
+---
 title: "Tune Automated Administration Across an Enterprise | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-agent"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "performance [SQL Server], automated administration"
   - "tuning automated administration [SQL Server]"
   - "monitoring performance [SQL Server], automated administration"
 ms.assetid: 671fed35-3859-4b0d-8f38-4dd07436857e
-caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

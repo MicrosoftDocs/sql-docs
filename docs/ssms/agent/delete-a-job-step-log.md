@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-agent"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "job steps [SQL Server Agent]"
@@ -16,7 +13,6 @@ helpviewer_keywords:
   - "logs [SQL Server], jobs"
   - "removing job step logs"
 ms.assetid: ee20c6cd-0258-4550-bdb0-71e86a0fb330
-caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

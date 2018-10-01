@@ -5,16 +5,13 @@ ms.date: "05/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: vanto
-ms.suite: "sql"
 ms.technology: security
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "encryption [SQL Server], about encryption"
   - "security [SQL Server], encryption"
   - "cryptography [SQL Server], about cryptography"
 ms.assetid: ead0150e-4943-4ad5-84c8-36f85c7278f4
-caps.latest.revision: 21
 author: aliceku
 ms.author: aliceku
 manager: craigg

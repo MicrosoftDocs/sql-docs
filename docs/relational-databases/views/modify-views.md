@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "table-view-index, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: table-view-index
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "views [SQL Server], renaming"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "modifying views"
   - "renaming views"
 ms.assetid: 2d3c14dc-43e5-4324-b8fb-f2692d330b16
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -70,7 +67,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
     3.  Right-click the title bar of the table you wish to remove and select **Remove**.  
   
-4.  On the **File** menu, click **Save***view name*.  
+4.  On the **File** menu, click **Save**_view name_.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   

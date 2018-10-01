@@ -1,12 +1,10 @@
-﻿---
+---
 title: "What's new in SQL Server 2017 | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/19/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: install
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 0b57f375-9242-4bb2-9d4b-c560d5a93524
 author: MikeRayMSFT

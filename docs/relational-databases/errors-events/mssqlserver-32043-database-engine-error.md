@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 helpviewer_keywords: 
   - "32043 (Database Engine error)"
 ms.assetid: a0c48ae3-4c8c-419c-afb5-579fcefac01d
-caps.latest.revision: 14
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

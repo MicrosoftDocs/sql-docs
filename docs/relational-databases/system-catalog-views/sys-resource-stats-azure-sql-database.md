@@ -1,15 +1,11 @@
-﻿---
+---
 title: "sys.resource_stats (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/13/2018"
 ms.prod: ""
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.service: "sql-database"
-ms.component: "system-catalog-views"
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - resource_stats
@@ -22,7 +18,6 @@ helpviewer_keywords:
   - "sys.resource_stats"
   - "resource_stats"
 ms.assetid: 02379a1b-3622-4578-8c59-a1b8f1a17914
-caps.latest.revision: 28
 author: CarlRabeler
 ms.author: "carlrab"
 manager: craigg

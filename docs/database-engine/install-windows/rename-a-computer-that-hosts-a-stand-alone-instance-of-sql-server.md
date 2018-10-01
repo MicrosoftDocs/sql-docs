@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "09/08/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: install
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "remote login errors [SQL Server]"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "deleting remote logins"
   - "dropping remote logins"
 ms.assetid: bbaf1445-b8a2-4ebf-babe-17d8cf20b037
-caps.latest.revision: 31
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"

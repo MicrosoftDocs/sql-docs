@@ -6,15 +6,12 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "VB"
 helpviewer_keywords: 
   - "State property [ADO], Visual Basic example"
 ms.assetid: 9da6db50-d9bb-47e1-ae8b-be3c9b88cf9a
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg

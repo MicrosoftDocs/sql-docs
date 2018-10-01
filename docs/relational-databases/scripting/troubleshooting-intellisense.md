@@ -5,8 +5,6 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.technology: scripting
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "unavailable options [IntelliSense]"
@@ -14,7 +12,6 @@ helpviewer_keywords:
   - "IntelliSense [SQL Server], unavailable options"
   - "troubleshooting [IntelliSense]"
 ms.assetid: 4b72ffc6-aea2-4e11-ab36-fa2de4d7bcc5
-caps.latest.revision: 41
 author: MightyPen
 ms.author: genemi
 manager: craigg

@@ -1,24 +1,22 @@
 ---
-title: Configure a SQL Server container in Kubernetes for high availability | Microsoft Docs
-description: This tutorial shows how to deploy a SQL Server high availability solution with Kubernetes on Azure Container Service.
+title: Deploy a SQL Server container in Kubernetes with Azure Kubernetes Services (AKS) | Microsoft Docs
+description: This tutorial shows how to deploy a SQL Server high availability solution with Kubernetes on Azure Kubernetes Service.
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 01/10/2018
 ms.topic: tutorial
 ms.prod: sql
-ms.component: ""
-ms.suite: "sql"
 ms.custom: "sql-linux,mvc"
 ms.technology: linux
 ---
-# Configure a SQL Server container in Kubernetes for high availability
+# Deploy a SQL Server container in Kubernetes with Azure Kubernetes Services (AKS)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Learn how to configure a SQL Server instance on Kubernetes in Azure Container Service (AKS), with persistent storage for high availability (HA). The solution provides resiliency. If the SQL Server instance fails, Kubernetes automatically re-creates it in a new pod. AKS provides resiliency against a Kubernetes node failure. 
+Learn how to configure a SQL Server instance on Kubernetes in Azure Kubernetes Service (AKS), with persistent storage for high availability (HA). The solution provides resiliency. If the SQL Server instance fails, Kubernetes automatically re-creates it in a new pod. Kubernetes also provides resiliency against a node failure.
 
-This tutorial demonstrates how to configure a highly available SQL Server instance in containers that use AKS. 
+This tutorial demonstrates how to configure a highly available SQL Server instance in a container on AKS. You can also [create a SQL Server availability group on Kubernetes](tutorial-sql-server-ag-kubernetes.md). To compare the two different Kubernetes solutions, see [High availability for SQL Server containers](sql-server-linux-container-ha-overview.md).
 
 > [!div class="checklist"]
 > * Create an SA password
@@ -27,7 +25,7 @@ This tutorial demonstrates how to configure a highly available SQL Server instan
 > * Connect with SQL Server Management Studio (SSMS)
 > * Verify failure and recovery
 
-## HA solution that uses Kubernetes running in Azure Container Service
+## HA solution on Kubernetes running in Azure Kubernetes Service
 
 Kubernetes 1.6 and later has support for [storage classes](http://kubernetes.io/docs/concepts/storage/storage-classes/), [persistent volume claims](http://kubernetes.io/docs/concepts/storage/storage-classes/#persistentvolumeclaims), and the [Azure disk volume type](https://github.com/kubernetes/examples/tree/master/staging/volumes/azure_disk). You can create and manage your SQL Server instances natively in Kubernetes. The example in this article shows how to create a [deployment](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) to achieve a high availability configuration similar to a shared disk failover cluster instance. In this configuration, Kubernetes plays the role of the cluster orchestrator. When a SQL Server instance in a container fails, the orchestrator bootstraps another instance of the container that attaches to the same persistent storage.
 
@@ -37,11 +35,11 @@ In the preceding diagram, `mssql-server` is a container in a [pod](http://kubern
 
 In the following diagram, the `mssql-server` container has failed. As the orchestrator, Kubernetes guarantees the correct count of healthy instances in the replica set, and starts a new container according to the configuration. The orchestrator starts a new pod on the same node, and `mssql-server` reconnects to the same persistent storage. The service connects to the re-created `mssql-server`.
 
-![Diagram of Kubernetes SQL Server cluster](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-pod-fail.png)
+![Diagram of Kubernetes SQL Server cluster](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-node-fail.png)
 
 In the following diagram, the node hosting the `mssql-server` container has failed. The orchestrator starts the new pod on a different node, and `mssql-server` reconnects to the same persistent storage. The service connects to the re-created `mssql-server`.
 
-![Diagram of Kubernetes SQL Server cluster](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-node-fail.png)
+![Diagram of Kubernetes SQL Server cluster](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-pod-fail.png)
 
 ## Prerequisites
 
@@ -170,7 +168,7 @@ In this step, create a manifest to describe the container based on the SQL Serve
          terminationGracePeriodSeconds: 10
          containers:
          - name: mssql
-           image: microsoft/mssql-server-linux
+           image: mcr.microsoft.com/mssql/server/mssql-server-linux
            ports:
            - containerPort: 1433
            env:

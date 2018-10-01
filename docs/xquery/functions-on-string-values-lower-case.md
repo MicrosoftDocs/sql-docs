@@ -4,22 +4,16 @@ ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: sql
 ms.prod_service: sql
-ms.component: "xquery"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 dev_langs: 
   - "XML"
 helpviewer_keywords: 
   - "lower-case Function (XQuery)"
   - "lower-case"
 ms.assetid: 5222c4ff-890c-4d57-8506-c065a5ebfd3e
-caps.latest.revision: 11
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

@@ -4,12 +4,10 @@ ms.custom: ""
 ms.date: "07/15/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "SQL Server Native Client, uninstalling"

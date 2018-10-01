@@ -6,15 +6,12 @@ ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.technology: scripting
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "VS.BookmarkWindow"
 helpviewer_keywords: 
   - "bookmarks [SQL Server Management Studio]"
 ms.assetid: 67cc3fd6-3238-4c58-a3ec-2d3b0438143a
-caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg

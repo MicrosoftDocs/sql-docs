@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Aggregate transformation [Integration Services]"
@@ -23,7 +21,6 @@ helpviewer_keywords:
   - "sorting data [Integration Services]"
   - "aggregations [Integration Services]"
 ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
-caps.latest.revision: 69
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

@@ -5,9 +5,7 @@ ms.date: "10/12/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: table-view-index
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "modifying constraints"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "constraints [SQL Server], modifying"
   - "constraints [SQL Server], unique"
 ms.assetid: fddbdc9e-958b-4614-8e88-6ca205d64a4e
-caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -64,7 +61,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
     |Set the clustered option|In the grid under **Table Designer**, select **Create As Clustered** and from the dropdown choose Yes to create a clustered index and No to create a non-clustered one. Only one clustered index can exist per table. If a clustered index already exists in this table, you must clear this setting on the original index.|  
     |Define a fill factor|In the grid under **Table Designer**, expand the **Fill Specification** category and type an integer from 0 to 100 in the **Fill Factor** box.|  
   
-5.  On the **File** menu, click **Save***table name*.  
+5.  On the **File** menu, click **Save**_table name_.  
   
 ##  <a name="TsqlProcedure"></a> **To modify a unique constraint**  
   

@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "C++"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "Name property [ADOX], VC++ example"
   - "Append method [ADOX], VC++ example"
 ms.assetid: 2b6dfef9-bcdf-483d-a164-2fa3ec81a43f
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg

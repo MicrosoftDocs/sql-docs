@@ -4,13 +4,8 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 helpviewer_keywords: 
   - "Access databases"
   - "Access databases, features incompatible with SQL Azure"
@@ -30,7 +25,6 @@ helpviewer_keywords:
   - "unique indexes"
   - "validation rules"
 ms.assetid: 99d45b9c-e3b9-4d56-8c25-b594b887ace1
-caps.latest.revision: 18
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: craigg

@@ -4,14 +4,10 @@ ms.custom: ""
 ms.date: "09/05/2018"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssdt"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssdt
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 5d32e301-0f44-4916-b0db-76e8322c0ab7
-caps.latest.revision: 23
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -32,6 +28,7 @@ The last few downloads are provided for the unlikely event that you experience i
 
 |SSDT release| Visual Studio 2017|
 |:---|:---|
+|15.8.0|[SSDT for VS2017 15.8.0](https://go.microsoft.com/fwlink/?linkid=2014060)|
 |15.7.1|[SSDT for VS2017 15.7.1](https://go.microsoft.com/fwlink/?LinkId=875613)|
 |15.7.0|[SSDT for VS2017 15.7.0](https://go.microsoft.com/fwlink/?LinkId=874716)|
 |15.6.0|[SSDT for VS2017 15.6.0](https://go.microsoft.com/fwlink/?LinkId=871368)|

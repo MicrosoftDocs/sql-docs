@@ -5,9 +5,7 @@ ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "cryptography [SQL Server], database mirroring"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "mirror database [SQL Server]"
   - "database mirroring [SQL Server], security"
 ms.assetid: 7329a575-be29-46e0-abc6-1344db37920c
-caps.latest.revision: 24
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

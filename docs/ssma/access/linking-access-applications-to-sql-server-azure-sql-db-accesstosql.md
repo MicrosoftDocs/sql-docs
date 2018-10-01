@@ -4,13 +4,8 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "08/17/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 helpviewer_keywords: 
   - "Access databases, linking to SQL Azure"
   - "Access databases, linking to SQL Server"
@@ -25,7 +20,6 @@ helpviewer_keywords:
   - "slow performance"
   - "unlinking tables"
 ms.assetid: 82374ad2-7737-4164-a489-13261ba393d4
-caps.latest.revision: 19
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "murato"

@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "data buffers [ODBC], length"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "buffers [ODBC], length"
   - "C strings and buffers [ODBC]"
 ms.assetid: 3a141cb4-229d-4027-9349-615cb2995e36
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg

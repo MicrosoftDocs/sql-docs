@@ -5,9 +5,7 @@ ms.date: "01/07/2018"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "SQLPERF"
@@ -22,7 +20,6 @@ helpviewer_keywords:
   - "space [SQL Server], transaction logs"
   - "DBCC SQLPERF statement"
 ms.assetid: ec9225ce-e20f-4b03-8b3a-7bcad8a649df
-caps.latest.revision: 43
 author: uc-msft
 ms.author: umajay
 manager: craigg

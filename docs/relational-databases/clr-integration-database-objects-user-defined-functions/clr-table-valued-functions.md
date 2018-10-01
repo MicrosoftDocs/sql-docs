@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: clr
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 dev_langs: 
   - "TSQL"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "table-valued functions [CLR integration]"
   - "TVFs [CLR integration]"
 ms.assetid: 9a6133ea-36e9-45bf-b572-1c0df3d6c194
-caps.latest.revision: 88
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

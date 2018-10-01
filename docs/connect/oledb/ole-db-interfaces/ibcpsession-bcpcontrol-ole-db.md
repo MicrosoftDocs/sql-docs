@@ -5,12 +5,9 @@ ms.custom: ""
 ms.date: "07/03/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "oledb|ole-db-interfaces"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
   - "IBCPSession::BCPControl (OLE DB)"

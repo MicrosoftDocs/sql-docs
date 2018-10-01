@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "xml"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: xml
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "FOR XML clause, application code usage"
@@ -19,7 +16,6 @@ helpviewer_keywords:
   - "XML data islands [SQL Server]"
   - "data islands [SQL Server]"
 ms.assetid: 41ae67bd-ece9-49ea-8062-c8d658ab4154
-caps.latest.revision: 23
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

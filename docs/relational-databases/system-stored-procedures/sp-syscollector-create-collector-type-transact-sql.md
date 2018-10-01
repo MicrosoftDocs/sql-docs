@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_syscollector_create_collector_type"
@@ -19,7 +16,6 @@ helpviewer_keywords:
   - "sp_syscollector_create_collector_type"
   - "data collector [SQL Server], stored procedures"
 ms.assetid: 568e9119-b9b0-4284-9cef-3878c691de5f
-caps.latest.revision: 23
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

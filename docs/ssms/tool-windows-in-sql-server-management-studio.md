@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Management Studio [SQL Server], tool windows"
   - "tool windows [SQL Server Management Studio]"
 ms.assetid: d3be5062-234c-43a8-8d47-cce111dd3c25
-caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

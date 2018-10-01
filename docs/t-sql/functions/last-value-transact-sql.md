@@ -5,9 +5,7 @@ ms.date: "10/20/2015"
 ms.prod: sql
 ms.prod_service: "sql-data-warehouse, database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "LAST_VALUE"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "analytic functions, LAST_VALUE"
   - "LAST_VALUE function"
 ms.assetid: fd833e34-8092-42b7-80fc-95ca6b0eab6b
-caps.latest.revision: 16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

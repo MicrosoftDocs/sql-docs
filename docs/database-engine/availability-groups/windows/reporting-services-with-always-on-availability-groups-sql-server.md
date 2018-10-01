@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Reporting Services, AlwaysOn Availability Groups"
   - "Availability Groups [SQL Server], interoperability"
 ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
-caps.latest.revision: 22
 author: MashaMSFT
 ms.author: mathoma
 manager: "erikre"
@@ -47,7 +44,7 @@ manager: "erikre"
     -   [Report Server Behavior When a Failover Occurs](#bkmk_failover_behavior)  
   
 ##  <a name="bkmk_requirements"></a> Requirements for using Reporting Services and Always On Availability Groups  
- [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] uses the .Net framework 4.0 and supports [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] connection string properties for use with data sources.  
+ [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] and Power BI Report Server uses the .Net framework 4.0 and supports [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] connection string properties for use with data sources.  
   
  To use [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] with  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 2014, and earlier, you need to download and install a hotfix for .Net 3.5 SP1. The hotfix adds support to SQL Client for AG features and support of the connection string properties **ApplicationIntent** and **MultiSubnetFailover**. If the Hotfix is not installed on each computer that hosts a report server, then users attempting to preview reports will see an error message similar to the following, and the error message will be written to the report server trace log:  
   
@@ -117,7 +114,7 @@ manager: "erikre"
 > **Error message:** “Keyword not supported ‘applicationintent’”  
   
 ##  <a name="bkmk_reportserverdatabases"></a> Report Server Databases and Availability Groups  
- Reporting Services offers limited support for using [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] with report server databases. The report server databases can be configured in AG to be part of a replica; however [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] will not automatically use a different replica for the report server databases when a failover occurs. The use of MultiSubnetFailover, with the report server databases, is not supported.  
+ Reporting Services and Power BI Report Server offers limited support for using [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] with report server databases. The report server databases can be configured in AG to be part of a replica; however [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] will not automatically use a different replica for the report server databases when a failover occurs. The use of MultiSubnetFailover, with the report server databases, is not supported.  
   
  Manual actions or custom automation scripts need to be used to complete the failover and recovery. Until these actions are completed, some features of the report server may not work correctly after the [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] failover.  
   

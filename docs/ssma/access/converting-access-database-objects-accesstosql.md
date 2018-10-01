@@ -4,13 +4,8 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 helpviewer_keywords: 
   - "Access databases"
   - "Access databases, converting schemas"
@@ -32,7 +27,6 @@ helpviewer_keywords:
   - "translating Access to SQL Azure"
   - "translating Access to SQL Server"
 ms.assetid: e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c
-caps.latest.revision: 22
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: craigg

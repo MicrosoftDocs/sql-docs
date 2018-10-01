@@ -5,9 +5,7 @@ ms.date: "10/16/2015"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: configuration
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "server management [SQL Server], connections"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "ports [SQL Server]"
   - "dedicated administrator connections [SQL Server]"
 ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
-caps.latest.revision: 65
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

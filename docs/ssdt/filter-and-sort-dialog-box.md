@@ -6,13 +6,10 @@ ms.date: "02/09/2017"
 ms.prod: "sql"
 ms.technology: ssdt
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql.data.tools.datafilterdialog.dialog"
 ms.assetid: f81ce28b-eaad-4c47-9efd-8f23f0f25870
-caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"

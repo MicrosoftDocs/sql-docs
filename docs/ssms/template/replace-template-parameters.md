@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-templates"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.templates.replaceparameters.f1"
@@ -18,7 +15,6 @@ helpviewer_keywords:
   - "Replace (Query) Template Parameters dialog box"
   - "replacing template parameters"
 ms.assetid: 1234aa14-3464-4a3e-922a-5cfb8fb23627
-caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

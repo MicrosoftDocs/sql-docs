@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "08/12/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
 ms.topic: conceptual
 helpviewer_keywords: 

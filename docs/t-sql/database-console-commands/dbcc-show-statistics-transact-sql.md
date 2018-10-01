@@ -5,9 +5,7 @@ ms.date: "12/18/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "SHOW_STATISTICS_TSQL"
@@ -32,7 +30,6 @@ helpviewer_keywords:
   - "densities [SQL Server]"
   - "displaying distribution statistics"
 ms.assetid: 12be2923-7289-4150-b497-f17e76a50b2e
-caps.latest.revision: 75
 author: uc-msft
 ms.author: umajay
 manager: craigg

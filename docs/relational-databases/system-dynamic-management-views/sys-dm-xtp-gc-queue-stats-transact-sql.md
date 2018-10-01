@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "08/02/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "dm_xtp_gc_stats"
@@ -18,7 +16,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_xtp_gc_stats dynamic management view"
 ms.assetid: addef774-318d-46a7-85df-f93168a800cb
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "sqlxml"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: xml
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "XPath queries [SQLXML], axes"
@@ -19,7 +16,6 @@ helpviewer_keywords:
   - "parent axis"
   - "axes [SQLXML]"
 ms.assetid: d17b8278-da58-4576-95b4-7a92772566d8
-caps.latest.revision: 25
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

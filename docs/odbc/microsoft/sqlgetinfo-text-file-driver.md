@@ -5,15 +5,12 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLGetInfo function [ODBC], Text File Driver"
   - "text file driver [ODBC], SQLGetInfo"
 ms.assetid: 6b7a630e-47f8-4ee1-b2a7-476bc1d0b0d4
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg

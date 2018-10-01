@@ -5,9 +5,7 @@ ms.date: "11/30/2015"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "DECOMPRESS"
@@ -15,7 +13,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "DECOMPRESS function"
 ms.assetid: 738d56be-3870-4774-b112-3dce27becc11
-caps.latest.revision: 8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

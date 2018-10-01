@@ -1,14 +1,11 @@
-﻿---
+---
 title: "Specify Job Responses | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-agent"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "jobs [SQL Server Agent], responses"
@@ -16,7 +13,6 @@ helpviewer_keywords:
   - "actions [SQL Server Agent jobs]"
   - "responding to jobs"
 ms.assetid: 050242e1-9b79-4ade-91a9-580707b9d2d9
-caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

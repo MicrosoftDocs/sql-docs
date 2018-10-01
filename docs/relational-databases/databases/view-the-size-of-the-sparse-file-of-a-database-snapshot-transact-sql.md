@@ -3,13 +3,10 @@ title: "View the Size of the Sparse File of a Database Snapshot (Transact-SQL) |
 ms.date: "07/28/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "databases"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.custom: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "snapshots [SQL Server database snapshots], sparse files"
@@ -20,7 +17,6 @@ helpviewer_keywords:
   - "database snapshots [SQL Server], sparse files"
   - "space [SQL Server], database snapshots"
 ms.assetid: 1867c5f8-d57c-46d3-933d-3642ab0a8e24
-caps.latest.revision: 41
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

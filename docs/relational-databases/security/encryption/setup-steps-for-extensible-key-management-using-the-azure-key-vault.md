@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "08/24/2018"
 ms.prod: sql
 ms.reviewer: vanto
-ms.suite: "sql"
 ms.technology: security
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "EKM, with key vault setup"
   - "SQL Server Connector, setup"
   - "SQL Server Connector"
 ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
-caps.latest.revision: 34
 author: aliceku
 ms.author: aliceku
 manager: craigg

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-objects"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.objectexplorer.scriptingoptions"
@@ -27,7 +24,6 @@ helpviewer_keywords:
   - "filtering objects [SQL Server]"
   - "Object Explorer, about Object Explorer"
 ms.assetid: 469ea8e2-79b9-44c8-bb6f-f0e1c5dbf0f2
-caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

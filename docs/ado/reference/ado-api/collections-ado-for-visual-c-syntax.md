@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 dev_langs: 
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "syntax indexes [ADO], ADO for Visual C++ syntax"
   - "collections [ADO], ADO for Visual C++ syntax"
 ms.assetid: 6a0109a0-f2d9-4f7c-8e1e-42763f9acaea
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg

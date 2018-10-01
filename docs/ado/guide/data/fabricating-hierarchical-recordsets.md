@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Recordset fabrication [ADO]"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "fabricating hierarchical Recordsets [ADO]"
   - "data shaping [ADO], hierarchical Recordsets"
 ms.assetid: a584e642-a4a3-418e-bc20-3aff81a5625a
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg

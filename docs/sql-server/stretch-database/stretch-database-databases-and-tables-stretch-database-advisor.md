@@ -4,8 +4,6 @@ ms.custom: ""
 ms.date: "10/30/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Stretch Database, identifying databases"

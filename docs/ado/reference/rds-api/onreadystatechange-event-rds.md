@@ -6,14 +6,11 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 helpviewer_keywords: 
   - "onReadyStateChange event [ADO]"
 ms.assetid: bf2ae3ac-bfe4-4709-b50a-ea7c282c3164
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg

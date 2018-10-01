@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "08/09/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "dm_xtp_transaction_stats_TSQL"
@@ -18,7 +16,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_xtp_transaction_stats dynamic management view"
 ms.assetid: 9389f48d-0de5-47bd-9821-4db8f04504e4
-caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg

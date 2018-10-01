@@ -5,9 +5,7 @@ ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "DROP EVENT NOTIFICATION"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "DROP EVENT NOTIFICATION statement"
   - "removing event notifications"
 ms.assetid: 0ffd8f47-4ea3-4238-9e73-c318df710cf7
-caps.latest.revision: 33
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

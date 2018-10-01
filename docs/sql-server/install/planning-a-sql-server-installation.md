@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "08/23/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: install
 ms.topic: quickstart
 helpviewer_keywords: 

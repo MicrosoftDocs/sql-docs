@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-compatibility-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sysremotelogins"
@@ -21,7 +18,6 @@ helpviewer_keywords:
   - "sysremotelogins system table"
   - "sys.sysremotelogins compatibility view"
 ms.assetid: b7ffcfa6-aed8-41d4-8b70-845439ab813d
-caps.latest.revision: 35
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

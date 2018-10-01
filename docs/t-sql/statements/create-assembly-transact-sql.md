@@ -1,13 +1,11 @@
-﻿---
+---
 title: "CREATE ASSEMBLY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/07/2018"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "ASSEMBLY"
@@ -22,7 +20,6 @@ helpviewer_keywords:
   - "CREATE ASSEMBLY statement"
   - "assemblies [CLR integration], creating"
 ms.assetid: d8d1d245-c2c3-4325-be52-4fc1122c2079
-caps.latest.revision: 94
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

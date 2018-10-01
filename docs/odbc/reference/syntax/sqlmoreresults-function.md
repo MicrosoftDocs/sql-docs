@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "SQLMoreResults"
@@ -19,7 +17,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLMoreResults function [ODBC]"
 ms.assetid: bf169ed5-4d55-412c-b184-12065a726e89
-caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -16,7 +13,6 @@ helpviewer_keywords:
   - "scalar types catalog views"
   - "catalog views [SQL Server], scalar types"
 ms.assetid: f7688ba3-aa6e-41b1-811e-f70212029f4f
-caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg

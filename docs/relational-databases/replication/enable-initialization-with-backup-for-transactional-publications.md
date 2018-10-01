@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: replication
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "manual subscription initialization [SQL Server replication]"
@@ -17,7 +14,6 @@ helpviewer_keywords:
   - "transactional replication, backup and restore"
   - "backups [SQL Server replication], transactional replication"
 ms.assetid: 9df00514-aa9d-4ac6-9766-d226c9958175
-caps.latest.revision: 30
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "events [SQL Server], event classes"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "SQL Server event classes, listed"
   - "SQL Server event classes"
 ms.assetid: 0f0fe567-e115-4ace-b63c-73dc3428c0f6
-caps.latest.revision: 34
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

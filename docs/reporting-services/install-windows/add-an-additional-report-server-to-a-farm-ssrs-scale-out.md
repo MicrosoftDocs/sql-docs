@@ -3,7 +3,6 @@ title: "Add an Additional Report Server to a Farm (SSRS Scale-out) | Microsoft D
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint"
-ms.suite: pro-bi
 
 ms.topic: conceptual
 ms.assetid: c1a6b683-15cf-44ae-ac60-ceee63a60aaf

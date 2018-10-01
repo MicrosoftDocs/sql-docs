@@ -4,10 +4,8 @@ ms.date: "09/17/2018"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.custom: ""
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.DTS.DESIGNER.ODATASOURCE.F1"
@@ -15,7 +13,6 @@ f1_keywords:
   - "sql13.dts.designer.odatasource.columns.f1"
   - "sql13.dts.designer.odatasource.erroroutput.f1"
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
-caps.latest.revision: 14
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

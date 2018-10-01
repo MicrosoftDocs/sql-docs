@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "07/25/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_refreshsqlmodule_TSQL"
@@ -26,7 +23,6 @@ helpviewer_keywords:
   - "stored procedures [SQL Server], refreshing metadata"
   - "user-defined functions [SQL Server], refreshing metadata"
 ms.assetid: f0022a05-50dd-4620-961d-361b1681d375
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg

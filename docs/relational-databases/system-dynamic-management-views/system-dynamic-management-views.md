@@ -5,9 +5,7 @@ ms.date: "06/29/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -23,7 +21,6 @@ helpviewer_keywords:
   - "server scoped dynamic management objects [SQL Server]"
   - "dynamic management objects [SQL Server]"
 ms.assetid: cf893ecb-0bf6-4cbf-ac00-8a1099e405b1
-caps.latest.revision: 41
 author: stevestein
 ms.author: sstein
 manager: craigg

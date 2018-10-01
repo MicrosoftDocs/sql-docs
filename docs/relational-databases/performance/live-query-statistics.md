@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "10/28/2015"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: performance
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "query statistics [SQL Server] live query stats"
@@ -14,7 +12,6 @@ helpviewer_keywords:
   - "debugging [SQL Server], live query stats"
   - "statistics [SQL Server], live query statistics"
 ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
-caps.latest.revision: 16
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

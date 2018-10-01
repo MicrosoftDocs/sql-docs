@@ -5,16 +5,13 @@ ms.date: "01/05/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "transaction logs [SQL Server], size management"
   - "manage log size"
   - "log size, manage"
 ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
-caps.latest.revision: 23
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

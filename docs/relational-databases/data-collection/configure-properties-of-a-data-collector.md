@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.dc.datacollectionprop.general.f1"
   - "sql13.swb.dc.datacollectionprop.advanced.f1"
 ms.assetid: cf98f57d-5a6d-4bc3-bf10-783e460fc63d
-caps.latest.revision: 5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

@@ -5,15 +5,12 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apitype: "DLLExport"
 helpviewer_keywords: 
   - "SQLPrimaryKeys function"
 ms.assetid: bc61cd5b-d2f4-4f87-abc7-743cf9ea772d
-caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: craigg

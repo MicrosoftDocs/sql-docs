@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "SSTRANSTIGHTLYCPLD Field (SQLServerXAResource)"
@@ -15,7 +13,6 @@ apilocation:
   - "SSTRANSTIGHTLYCPLD Field (SQLServerXAResource)"
 apitype: "Assembly"
 ms.assetid: 379857c3-9de1-4964-8782-32df317cbfbb
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg

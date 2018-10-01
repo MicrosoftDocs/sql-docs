@@ -5,9 +5,7 @@ ms.date: "12/02/2015"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "SWITCHTZ"
@@ -23,7 +21,6 @@ helpviewer_keywords:
   - "date and time [SQL Server], SWITCHOFFSET"
   - "time zones [SQL Server]"
 ms.assetid: 32a48e36-0aa4-4260-9fe9-cae9197d16c5
-caps.latest.revision: 26
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

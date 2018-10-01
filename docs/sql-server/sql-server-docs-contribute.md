@@ -1,11 +1,9 @@
-﻿---
+---
 title: How to Contribute to SQL Server Documentation | Microsoft Docs
 ms.date: "08/13/2018"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.custom: ""
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 author: "rothja"
 ms.author: "jroth"

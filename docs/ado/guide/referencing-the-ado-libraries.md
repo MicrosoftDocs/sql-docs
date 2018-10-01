@@ -3,8 +3,6 @@ title: "Referencing the ADO Libraries | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,7 +12,6 @@ helpviewer_keywords:
   - "referencing libraries [ADO]"
   - "ADO, libraries"
 ms.assetid: 573f8f27-babd-4e2f-bf9a-270ee7024975
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg

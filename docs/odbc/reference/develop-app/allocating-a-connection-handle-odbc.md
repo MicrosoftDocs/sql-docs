@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "allocating connection handles [ODBC]"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "connection handles [ODBC]"
   - "handles [ODBC], connection"
 ms.assetid: c99a8159-7693-4f97-8dcf-401336550e77
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg

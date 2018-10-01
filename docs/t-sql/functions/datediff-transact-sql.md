@@ -5,9 +5,7 @@ ms.date: "07/29/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "DATEDIFF_TSQL"
@@ -30,7 +28,6 @@ helpviewer_keywords:
   - "crossing date time boundaries [SQL Server]"
   - "calculating dates times [SQL Server]"
 ms.assetid: eba979f2-1a8d-4cce-9d75-b74f9b519b37
-caps.latest.revision: 52
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/02/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: replication
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "transactional replication, backward compatibility"
@@ -19,7 +16,6 @@ helpviewer_keywords:
   - "snapshot replication [SQL Server], backward compatibility"
   - "compatibility [SQL Server replication]"
 ms.assetid: 091c51dc-8b32-4b4f-847e-b317456c8394
-caps.latest.revision: 56
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

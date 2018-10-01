@@ -5,9 +5,7 @@ ms.date: "12/16/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "REVOKE DATABASE SCOPED CREDENTIAL"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "REVOKE statements, database scoped credentials"
   - "revoking permissions [SQL Server], database scoped credentials"
 ms.assetid: b73233c5-9afa-48ca-ba34-a9f86b9b1d2e
-caps.latest.revision: 2
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

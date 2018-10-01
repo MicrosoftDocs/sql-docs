@@ -5,9 +5,7 @@ ms.date: "05/05/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "column_constraint"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "constraints [SQL Server], definitions"
   - "column_constraint"
 ms.assetid: 8119b7c7-e93b-4de5-8f71-c3b7c70b993c
-caps.latest.revision: 54
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

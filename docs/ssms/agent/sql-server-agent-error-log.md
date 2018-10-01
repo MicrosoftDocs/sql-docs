@@ -1,14 +1,11 @@
-﻿---
+---
 title: "SQL Server Agent Error Log | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-agent"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "logs [SQL Server], SQL Server Agent"
@@ -16,7 +13,6 @@ helpviewer_keywords:
   - "errors [SQL Server], logs"
   - "SQL Server Agent, errors"
 ms.assetid: 0b2d6e6e-cd2d-4b8b-9fa2-2bbd2fc0da41
-caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

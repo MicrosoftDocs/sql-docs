@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "track-changes"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "change data capture [SQL Server], enabling tables"
@@ -17,7 +14,6 @@ helpviewer_keywords:
   - "change data capture [SQL Server], disabling databases"
   - "change data capture [SQL Server], disabling tables"
 ms.assetid: b741894f-d267-4b10-adfe-cbc14aa6caeb
-caps.latest.revision: 13
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

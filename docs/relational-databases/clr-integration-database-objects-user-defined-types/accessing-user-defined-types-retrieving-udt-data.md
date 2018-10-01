@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: clr
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 dev_langs: 
   - "VB"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "user-defined types [CLR integration], ADO.NET"
   - "bytes [CLR integration]"
 ms.assetid: 6a98ac8c-0e69-4c03-83a4-2062cb782049
-caps.latest.revision: 17
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

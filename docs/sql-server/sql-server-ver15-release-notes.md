@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "09/24/2018"
 ms.prod: "sql-server-2018"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "server-general"
-ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: "MikeRayMSFT"

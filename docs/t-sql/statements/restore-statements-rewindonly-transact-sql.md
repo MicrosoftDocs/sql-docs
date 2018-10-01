@@ -5,9 +5,7 @@ ms.date: "08/10/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "RESTORE_REWINDONLY_TSQL"
@@ -22,7 +20,6 @@ helpviewer_keywords:
   - "rewinding backup devices"
   - "RESTORE REWINDONLY statement"
 ms.assetid: 7f825b40-2264-4608-9809-590d0f09d882
-caps.latest.revision: 50
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

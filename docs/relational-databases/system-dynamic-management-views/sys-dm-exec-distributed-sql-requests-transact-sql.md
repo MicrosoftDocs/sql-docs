@@ -5,9 +5,7 @@ ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "DM_EXEC_DISTRIBUTED_SQL_REQUESTS_TSQL"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "sys.dm_exec_distributed_requests management view"
   - "dm_exec_distributed_requests management view"
 ms.assetid: d065dc01-35d4-472f-9554-53ac41e7d104
-caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg

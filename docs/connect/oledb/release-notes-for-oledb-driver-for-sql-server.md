@@ -2,7 +2,6 @@
 title: "Release Notes (OLE DB Driver for SQL Server) | Microsoft Docs"
 ms.date: "07/03/2018"
 ms.prod: sql
-ms.suite: sql
 ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel

@@ -5,9 +5,7 @@ ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "pdw, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "DROP SERVER ROLE"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "SERVER ROLE, DROP"
   - "DROP SERVER ROLE statement"
 ms.assetid: a2a1e6e6-e40c-4d6a-81be-d197b80bf226
-caps.latest.revision: 13
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

@@ -5,9 +5,7 @@ ms.date: "03/13/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "<>"
@@ -23,7 +21,6 @@ helpviewer_keywords:
   - "not equal to operator (<>)"
   - "<> (not equal to operator)"
 ms.assetid: 34cf9b38-d589-4be9-925a-116e224609a0
-caps.latest.revision: 39
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

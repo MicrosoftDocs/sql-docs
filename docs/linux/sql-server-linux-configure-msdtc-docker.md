@@ -7,8 +7,6 @@ manager: craigg
 ms.date: 09/25/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ""
-ms.suite: "sql"
 ms.custom: "sql-linux"
 ms.technology: linux
 monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"

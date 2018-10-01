@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "ODBC cursor library [ODBC], cache"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "row status [ODBC]"
   - "cache [ODBC]"
 ms.assetid: 0f0b1fb6-f697-4ced-811c-2908e210bc71
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg

@@ -5,16 +5,13 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "ODBC drivers [ODBC], thread-safe"
   - "thread-safe drivers [ODBC]"
   - "multithreaded applications [ODBC]"
 ms.assetid: cdfebdf5-12ff-4e28-8055-41f49b77f664
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg

@@ -5,16 +5,13 @@ ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: xevents
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Trace, extended events equivalents"
   - "extended events [SQL Server], SQL Trace equivalents"
   - "extended events [SQL Server], user configurable events"
 ms.assetid: 7f24104c-201d-4361-9759-f78a27936011
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg

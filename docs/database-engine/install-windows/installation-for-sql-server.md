@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "09/06/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: install
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.portal.Installation.f1"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "installation [SQL Server]"
   - "initial installation [SQL Server]"
 ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
-caps.latest.revision: 34
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"

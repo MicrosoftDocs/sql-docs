@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "ADO, deleting records"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "editing data [ADO], Delete method"
   - "Delete method [ADO]"
 ms.assetid: bfed5cfa-7f57-463b-9da2-0c612a079d30
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg

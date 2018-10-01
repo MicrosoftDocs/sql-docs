@@ -5,9 +5,7 @@ ms.date: "05/12/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "DROP_USER_TSQL"
@@ -22,7 +20,6 @@ helpviewer_keywords:
   - "removing users"
   - "users [SQL Server], removing"
 ms.assetid: d6e0e21a-7568-4321-b6d6-bcfba183a719
-caps.latest.revision: 43
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

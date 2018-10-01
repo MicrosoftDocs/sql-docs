@@ -1,19 +1,15 @@
-﻿---
+---
 title: "Manage Schedules | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-agent"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.ag.job.manageschedules.f1"
 ms.assetid: f56c0736-dccc-41d2-afcf-71344aff143a
-caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

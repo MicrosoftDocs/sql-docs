@@ -6,14 +6,11 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "logs section in RDS [ADO]"
   - "customization file in RDS [ADO]"
 ms.assetid: a368e264-865c-41ee-be00-d9097255c2ea
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg

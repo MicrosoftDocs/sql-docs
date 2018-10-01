@@ -5,16 +5,13 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "translator subkey [ODBC]"
   - "subkeys [ODBC], translator subkey"
   - "registry entries for components [ODBC], translator subkey"
 ms.assetid: 6b170f1f-e263-4aac-9d49-8d0ca0470ca2
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg

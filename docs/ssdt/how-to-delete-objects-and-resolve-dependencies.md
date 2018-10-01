@@ -6,15 +6,12 @@ ms.date: "02/09/2017"
 ms.prod: "sql"
 ms.technology: ssdt
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "Microsoft.VisualStudio.Data.Tools.Project.HelpKeywords.SqlProjectDropDatabaseConfirmationDialog"
   - "sql.data.tools.dropdatabaseconfirmation.dialog"
   - "sql.data.tools.dropmultipledatabasesconfirmation.dialog"
 ms.assetid: fb31c2b1-ca4f-4e11-a0b6-5c26430f1c8c
-caps.latest.revision: 20
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"

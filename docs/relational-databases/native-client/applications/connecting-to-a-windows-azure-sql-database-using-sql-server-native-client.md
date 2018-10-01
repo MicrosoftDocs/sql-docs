@@ -3,13 +3,10 @@ title: "Connecting to a Windows Azure SQL Database Using SQL Server Native Clien
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.prod: sql
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 0dc20bb6-b142-4259-b87b-427d2ba798af
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg

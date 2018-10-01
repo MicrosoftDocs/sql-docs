@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-agent"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Agent jobs, target servers"
@@ -17,7 +14,6 @@ helpviewer_keywords:
   - "synchronization [SQL Server], target server clocks"
   - "target servers [SQL Server], clock synchronization"
 ms.assetid: 4fb80502-d271-4d06-bcbc-bfbbceb5f2a2
-caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

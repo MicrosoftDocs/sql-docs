@@ -187,13 +187,15 @@ This example adds a new distributor to an existing replication configuration wit
    sp_adddistributiondb 'distribution'
    ```
 
-1. On DIST3, run: 
+4. On DIST3, run: 
 
    ```sql
    sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'
    ```
 
    The value of `@working_directory` should be the same as what was specified for DIST1 and DIST2.
+
+4. On DIST3, you must recreate Linked Servers to the subscribers.
 
 ## Remove a replica from distribution database AG
 

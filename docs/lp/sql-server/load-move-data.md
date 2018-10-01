@@ -69,7 +69,7 @@ featureFlags:
         </ul>
     </div>
     <div class="container">
-        <h1>SQL Server: Migrate, Load and Move Data</h1>
+        <h1>SQL Server: Migrate, Load, and Move Data</h1>
         <ul class="pivots tabLess">
             <li class="pivotItem" style="display: list-item;" data-id="#products">
                 <a href="#products" data-linktype="self-bookmark"></a>

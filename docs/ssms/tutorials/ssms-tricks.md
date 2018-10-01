@@ -85,6 +85,10 @@ You can comment and uncomment portions of your text by using the **Comment** but
     
 9. Select **Execute** to run the uncommented portion of the text. 
 
+Note: Similarly, you can use a keyboard shortcut to replicate the above steps easily. 
+To comment text, type **CTRL + K, CTRL + C**.
+To uncomment text, type **CTRL + K, CTRL + U**.
+
 ## Indent your text
 You can use the indentation buttons on the toolbar to increase or decrease the indent of your text. 
 

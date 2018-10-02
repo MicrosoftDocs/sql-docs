@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "CreatedTimestamp Element"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "CreatedTimestamp element"
 ms.assetid: 35f5dd33-ea82-4be3-a117-69136aa9d1a4
-caps.latest.revision: 40
 author: minewiskan
 ms.author: owend
 manager: craigg

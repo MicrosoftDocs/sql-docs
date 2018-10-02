@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "MemberUniqueNameStyle Element"
@@ -19,7 +17,6 @@ topic_type:
 helpviewer_keywords: 
   - "MemberUniqueNameStyle element"
 ms.assetid: f0771c81-0127-4203-9501-ae4f864730fa
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg

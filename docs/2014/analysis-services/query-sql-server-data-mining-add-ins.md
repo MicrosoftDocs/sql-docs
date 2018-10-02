@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "queries [data mining]"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "query builder [data mining]"
   - "DMX"
 ms.assetid: 16af4a6f-18d4-496a-a304-7a13aa32ee76
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg

@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "measure groups [Analysis Services]"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "aggregations [Analysis Services], measures"
   - "fact tables [Analysis Services]"
 ms.assetid: 4f0122f9-c3a5-4172-ada3-5bc5f7b1cc9a
-caps.latest.revision: 42
 author: minewiskan
 ms.author: owend
 manager: craigg

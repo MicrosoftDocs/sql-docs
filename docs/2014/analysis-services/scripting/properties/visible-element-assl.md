@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "Visible Element"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "Visible element"
 ms.assetid: 3e9baf1b-351f-4ebf-b57d-13d561f72d6f
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg

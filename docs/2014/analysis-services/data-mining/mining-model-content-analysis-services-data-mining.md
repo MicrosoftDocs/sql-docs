@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "algorithms [data mining]"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "support [data mining]"
   - "node distribution"
 ms.assetid: e7c039f6-3266-4d84-bfbd-f99b6858acf4
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg

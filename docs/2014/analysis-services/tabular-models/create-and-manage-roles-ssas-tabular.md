@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.bidtoolset.rolemanager.f1"
   - "sql12.asvs.bidtoolset.roledb.f1"
 ms.assetid: e23d27a8-e968-4082-9dbe-963fc724b5d9
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg

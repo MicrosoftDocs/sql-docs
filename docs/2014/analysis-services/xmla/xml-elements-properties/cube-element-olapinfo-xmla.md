@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "Cube Element (OlapInfo)"
@@ -23,7 +21,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "Cube element"
 ms.assetid: c2b6fe41-6ad4-4181-98a9-3a2517f0b7cc
-caps.latest.revision: 10
 author: minewiskan
 ms.author: owend
 manager: craigg

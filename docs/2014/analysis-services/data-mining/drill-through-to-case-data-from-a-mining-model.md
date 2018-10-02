@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "drillthrough [Analysis Services]"
 ms.assetid: b4d3f350-e543-4ea9-b3a2-b4f7c0a9ae27
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg

@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "ARTXP"
@@ -27,7 +25,6 @@ helpviewer_keywords:
   - "COMPLEXITY_PENALTY parameter"
   - "PREDICTION_SMOOTHING parameter"
 ms.assetid: 7ab203fa-b044-47e8-b485-c8e59c091271
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg

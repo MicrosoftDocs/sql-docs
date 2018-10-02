@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "intrinsic cell properties [MDX]"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "cell properties [MDX]"
   - "CELL PROPERTIES keyword"
 ms.assetid: a593c74d-8c5e-485e-bd92-08f9d22451d4
-caps.latest.revision: 36
 author: minewiskan
 ms.author: owend
 manager: craigg

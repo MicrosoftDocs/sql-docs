@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "unattended data refresh [Analysis Services with SharePoint]"
   - "scheduled data refresh [Analysis Services with SharePoint]"
   - "data refresh [Analysis Services with SharePoint]"
 ms.assetid: 01b54e6f-66e5-485c-acaa-3f9aa53119c9
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg

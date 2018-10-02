@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "10/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "connection access to availability replicas"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "readable secondary replicas"
   - "Availability Groups [SQL Server], active secondary replicas"
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
-caps.latest.revision: 75
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

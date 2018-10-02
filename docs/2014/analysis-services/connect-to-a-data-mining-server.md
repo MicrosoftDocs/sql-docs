@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "12/29/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "connections"
   - "getting started"
 ms.assetid: 85962ad6-d840-4bc6-905e-c667c3276944
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg

@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "return Element"
@@ -23,7 +21,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "return element"
 ms.assetid: 3cfe8b74-fec3-4987-a74a-5f731444e024
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg

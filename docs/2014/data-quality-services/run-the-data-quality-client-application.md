@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "data-quality-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dqs.browseforservers.f1"
   - "sql12.dqs.connecttoserver.f1"
 ms.assetid: 0b2aa202-7ab2-4c9d-b0f1-802588053a1e
-caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

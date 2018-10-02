@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "04/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "DISCOVER_DB_CONNECTIONS rowset"
 ms.assetid: 12a51a4e-5f3d-4449-9d94-7836fea1bc8b
-caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
 manager: craigg

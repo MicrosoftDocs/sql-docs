@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "ProcessingQuery Element"
@@ -19,7 +17,6 @@ topic_type:
 helpviewer_keywords: 
   - "ProcessingQuery element"
 ms.assetid: d18e6f4b-c24c-4f73-8b85-4b6e8a82a695
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg

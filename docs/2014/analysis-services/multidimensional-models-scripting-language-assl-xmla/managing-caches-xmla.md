@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "XMLA, cache"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "clearing cache"
   - "cache [Analysis Services]"
 ms.assetid: afad5c39-d4c3-4307-b3b9-a06617da0028
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg

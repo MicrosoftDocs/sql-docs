@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "AggregationStorage Element"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "AggregationStorage element"
 ms.assetid: dd082388-534d-4847-9232-8f80fc9fe96e
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg

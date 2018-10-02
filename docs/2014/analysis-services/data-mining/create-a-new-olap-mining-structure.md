@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "mining structures [Analysis Services], OLAP"
   - "mining structures [Analysis Services], creating"
   - "OLAP [Analysis Services], mining models"
 ms.assetid: 368f4273-a016-4748-bcb6-505a3e745af3
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg

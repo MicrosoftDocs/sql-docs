@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.partitiondesigner.writebackenabledisable.f1"
 ms.assetid: 2d254393-3f0d-4b70-8b98-87159f9f3639
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg

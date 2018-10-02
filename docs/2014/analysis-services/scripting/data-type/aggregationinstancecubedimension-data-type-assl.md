@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "AggregationInstanceCubeDimension Data Type"
@@ -19,7 +17,6 @@ topic_type:
 helpviewer_keywords: 
   - "AggregationInstanceCubeDimension data type"
 ms.assetid: b321ad9e-f034-4a7b-b0b7-8ba5fb162e7e
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg

@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "calculations [Analysis Services], named sets"
   - "named sets [Analysis Services]"
   - "members [Analysis Services], named sets"
 ms.assetid: 03cf97a4-1a18-45f3-acb0-35123bd619be
-caps.latest.revision: 30
 author: minewiskan
 ms.author: owend
 manager: craigg

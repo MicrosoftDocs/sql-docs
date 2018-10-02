@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "filtering rules [Analysis Services]"
   - "Mining Model Viewer [Analysis Services], rules"
   - "Rules Viewer"
 ms.assetid: 26cdba5b-5bf1-439e-80a3-8759774e918b
-caps.latest.revision: 27
 author: minewiskan
 ms.author: owend
 manager: craigg

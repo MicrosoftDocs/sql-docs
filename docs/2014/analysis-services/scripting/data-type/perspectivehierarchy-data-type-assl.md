@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "PerspectiveHierarchy Data Type"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "PerspectiveHierarchy data type"
 ms.assetid: 30366bd0-ee1c-4940-8c1f-ca5e0dd5fe4b
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg

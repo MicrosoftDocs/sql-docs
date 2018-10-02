@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "Type Element (ClrAssemblyFile)"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "Type element"
 ms.assetid: ab9e1e2c-ab06-4cd1-b007-16d738dc5604
-caps.latest.revision: 38
 author: minewiskan
 ms.author: owend
 manager: craigg

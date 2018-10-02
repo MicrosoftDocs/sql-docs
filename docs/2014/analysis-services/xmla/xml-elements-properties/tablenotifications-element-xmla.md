@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "TableNotifications Element"
@@ -23,7 +21,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "TableNotifications element"
 ms.assetid: 650f307d-1f11-47ce-9d0e-19cf3b1835b7
-caps.latest.revision: 10
 author: minewiskan
 ms.author: owend
 manager: craigg

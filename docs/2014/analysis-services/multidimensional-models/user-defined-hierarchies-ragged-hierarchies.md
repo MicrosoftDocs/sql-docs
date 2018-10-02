@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "ragged hierarchies [Analysis Services]"
 ms.assetid: e40a5788-7ede-4b0f-93ab-46ca33d0cace
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg

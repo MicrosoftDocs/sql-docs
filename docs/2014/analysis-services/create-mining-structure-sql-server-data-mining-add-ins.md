@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "12/29/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "mining structures, creating"
 ms.assetid: b8b1eedc-4d6d-4429-a578-e629ec573934
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg

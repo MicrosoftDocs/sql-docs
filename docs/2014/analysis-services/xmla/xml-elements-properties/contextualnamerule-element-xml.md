@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: eb567ef8-f412-4d34-837a-75e53b88b3ce
-caps.latest.revision: 7
 author: minewiskan
 ms.author: owend
 manager: craigg

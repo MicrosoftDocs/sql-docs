@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "TabularBinding Data Type"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "TabularBinding data type"
 ms.assetid: 24587e34-20be-4693-81d8-038a6fc4e8ee
-caps.latest.revision: 39
 author: minewiskan
 ms.author: owend
 manager: craigg

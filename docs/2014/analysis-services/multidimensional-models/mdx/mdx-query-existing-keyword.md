@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "EXISTING"
 helpviewer_keywords: 
   - "Existing keyword"
 ms.assetid: 651ee9ac-04ef-4316-87c9-a3df5ac27d22
-caps.latest.revision: 38
 author: minewiskan
 ms.author: owend
 manager: craigg

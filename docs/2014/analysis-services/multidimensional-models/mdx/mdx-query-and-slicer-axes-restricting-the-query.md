@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Multidimensional Expressions [Analysis Services], axes"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "axes [MDX]"
   - "MDX [Analysis Services], axes"
 ms.assetid: a64b8172-cd73-42f9-8847-52e967b9697a
-caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
 manager: craigg

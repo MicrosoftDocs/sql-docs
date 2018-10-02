@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "10/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "connection access to availability replicas"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], read-only routing"
   - "Availability Groups [SQL Server], client connectivity"
 ms.assetid: 22387419-22c4-43fa-851c-5fecec4b049b
-caps.latest.revision: 31
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

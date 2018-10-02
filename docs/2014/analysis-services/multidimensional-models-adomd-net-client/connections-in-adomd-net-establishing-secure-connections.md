@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "connections [ADOMD.NET]"
   - "security [ADOMD.NET]"
 ms.assetid: b084d447-1456-45a4-8e0e-746c07d7d6fd
-caps.latest.revision: 40
 author: minewiskan
 ms.author: owend
 manager: craigg

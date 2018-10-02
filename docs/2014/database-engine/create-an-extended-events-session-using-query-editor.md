@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "create extended events session"
   - "extended events [SQL Server], create session"
 ms.assetid: cba0e02b-b201-4863-bf1b-9164e68e5fa8
-caps.latest.revision: 19
 author: mashamsft
 ms.author: mathoma
 manager: craigg

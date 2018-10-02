@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "MiningStructureColumn Data Type"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "MiningStructureColumn data type"
 ms.assetid: b6d6e7a5-9c48-40c4-b147-8fcd5e429ae3
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg

@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "segmentation"
@@ -23,7 +21,6 @@ helpviewer_keywords:
   - "Naive Bayes"
   - "time series [data mining]"
 ms.assetid: 3a1a62e4-9fb5-4cdb-a6c6-1b8b30d417ef
-caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
 manager: craigg

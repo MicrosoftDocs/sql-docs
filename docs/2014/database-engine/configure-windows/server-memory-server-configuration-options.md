@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Virtual Memory Manager"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "manual memory options [SQL Server]"
   - "memory [SQL Server], servers"
 ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
-caps.latest.revision: 76
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

@@ -47,7 +47,7 @@ SQL Server big data clusters enable AI and machine learning tasks on the data st
 
 Management and monitoring are provided through a combination of open-source components, SQL Server tools, and Dynamic Management Views.
 
-The cluster Admin portal is a web interface that displays the status and health of the pods in the cluster. It also provides links to other dashboards provided by Grafana and Kibana.
+The [Cluster Admin Portal](cluster-admin-portal.md) is a web interface that displays the status and health of the pods in the cluster. It also provides links to other dashboards provided by Grafana and Kibana.
 
 You can use Azure Data Studio to perform a variety of tasks on the big data cluster. This is enabled by the new **SQL Server 2019 Extension (Preview)**. This extension provides:
 

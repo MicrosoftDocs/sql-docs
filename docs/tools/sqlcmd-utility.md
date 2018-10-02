@@ -142,7 +142,7 @@ Sets the Column Encryption Setting to `Enabled`. For more information, see [Alwa
 
 > [!IMPORTANT]
 > The **-G** option only applies to Azure SQL Database and Azure Data Warehouse.
-> AAD Integrated Authentication is not currently supported on Linux or macOS. 
+> AAD Integrated and Interactive Authentication is not currently supported on Linux or macOS.
 
 - **Azure Active Directory Username and Password:** 
 
@@ -174,6 +174,37 @@ Sets the Column Encryption Setting to `Enabled`. For more information, see [Alwa
 
     > [!NOTE] 
     > The -E option (Trusted_Connection) cannot be used along with the -G option).
+
+
+- **Azure Active Directory Interactive**  
+ 
+   The Azure AD Interactive authentication for Azure SQL Database and SQL Data Warehouse, allows you to use an interactive method supporting multi-factor authentication. For more information, see [Active Directory Interactive Authentication](../ssdt/azure-active-directory.md#active-directory-interactive-authentication). 
+
+   Azure AD interactive requires **sqlcmd** [version 15.0.0500.17 or later](http://go.microsoft.com/fwlink/?LinkID=825643) as well as [ODBC version 17.2 or later](https://www.microsoft.com/download/details.aspx?id=56567).  
+
+   To enable interactive authentication, provide -G option with user name (-U) only, without a password.
+
+   The following example exports data using Azure AD interactive mode indicating username where user represents an AAD account. This is the same example used in the previous section: *Azure Active Directory Username and Password*.  
+
+   Interactive mode requires a password to be manually entered, or for accounts with multi-factor authentication enabled, complete your configured MFA authentication method.
+
+   ``` 
+   sqlcmd -S testsrv.database.windows.net -d Target_DB_or_DW -U alice@aadtest.onmicrosoft.com -G  
+   ```
+
+   The previous command generates the following connection string in the backend:  
+
+   ```
+   SERVER = Target_DB_or_DW.testsrv.database.windows.net;UID=alice@aadtest.onmicrosoft.com; AUTHENTICATION = ActiveDirectoryInteractive   
+   ```
+
+   In case an Azure AD user is a domain federated user using a Windows account, the user name required in the command-line, contains its domain account (for example,  joe@contoso.com see below):
+
+   ```
+   sqlcmd -S testsrv.database.windows.net -d Target_DB_or_DW -U joe@contoso.com  -G  
+   ```
+ 
+   If guest users exist in a specific Azure AD and are part of a group that exist in SQL DB that has database permissions to execute the sqlcmd command, their guest user alias is used (for example, *keith0@adventure-works.com*). 
 
     
  **-H** *workstation_name*  

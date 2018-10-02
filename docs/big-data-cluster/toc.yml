@@ -52,6 +52,10 @@
     items:
     - name: Data Wrangling using PROSE Code Accelerator
       href: use-prose-for-big-data-automation.md
+  - name: Big Data Cluster Management
+    items:
+    - name: Cluster Admin Portal
+      href: cluster-admin-portal.md
   - name: Query scenarios
     items:
       - name: Monitoring and troubleshooting

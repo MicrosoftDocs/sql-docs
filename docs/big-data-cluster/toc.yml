@@ -52,7 +52,7 @@
     items:
     - name: Data Wrangling using PROSE Code Accelerator
       href: use-prose-for-big-data-automation.md
-  - name: Big Data Cluster Management
+  - name: Manage SQL Server Big Data Cluster
     items:
     - name: Cluster Admin Portal
       href: cluster-admin-portal.md

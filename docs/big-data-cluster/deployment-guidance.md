@@ -214,4 +214,4 @@ kubectl get svc -n <name of your cluster>
 
 ## Next steps
 
-After successfully deploying SQL Server Big Data cluster to Kubernetes, [install the big data tools](deploy-big-data-tools.md) and try out some of the new capabilities and learn [How to use notebooks in SQL Server 2019 CTP 2.0](notebooks-guidance.md).
+After successfully deploying SQL Server Big Data cluster to Kubernetes, [install the big data tools](deploy-big-data-tools.md) and try out some of the new capabilities and learn [How to use notebooks in SQL Server 2019 preview](notebooks-guidance.md).

@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 topic_type: 
   - "apiref"
 helpviewer_keywords: 
   - "SQLFetchScroll function"
 ms.assetid: 524a3985-a08d-4445-99e0-bb551a666615
-caps.latest.revision: 34
 author: MightyPen
 ms.author: genemi
 manager: craigg

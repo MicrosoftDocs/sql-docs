@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "DISCOVER_XML_METADATA"
@@ -17,7 +15,6 @@ topic_type:
 helpviewer_keywords: 
   - "DISCOVER_XML_METADATA rowset"
 ms.assetid: 0befd026-db1b-43ac-b0e6-734abb56a4b1
-caps.latest.revision: 40
 author: minewiskan
 ms.author: owend
 manager: craigg

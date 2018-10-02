@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 topic_type: 
   - "apiref"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "schema rowsets [Analysis Services], XML for Analysis"
   - "schema rowsets [XML for Analysis]"
 ms.assetid: 36e3ecfd-fcc3-415a-9c43-f59921d2468a
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg

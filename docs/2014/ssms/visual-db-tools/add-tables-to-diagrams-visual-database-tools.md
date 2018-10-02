@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology:
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "inserting tables"
   - "adding tables"
 ms.assetid: 5440fdf7-ac04-4325-9f32-181f4cd402e5
-caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg

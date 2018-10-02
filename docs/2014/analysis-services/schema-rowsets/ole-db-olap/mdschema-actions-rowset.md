@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "MDSCHEMA_ACTIONS"
@@ -17,7 +15,6 @@ topic_type:
 helpviewer_keywords: 
   - "MDSCHEMA_ACTIONS rowset"
 ms.assetid: f73081f8-ac51-4286-b46e-2b34e792c3e0
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg

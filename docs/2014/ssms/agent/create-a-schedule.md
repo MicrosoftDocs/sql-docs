@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology:
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "scheduling jobs [SQL Server]"
@@ -14,7 +12,6 @@ helpviewer_keywords:
   - "jobs [SQL Server Agent], scheduling"
   - "schedules [SQL Server], jobs"
 ms.assetid: 8c7ef3b3-c06d-4a27-802d-ed329dc86ef3
-caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg

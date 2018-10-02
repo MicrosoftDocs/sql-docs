@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Discover Server State event category"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "discover server state events"
   - "event classes [Analysis Services], discover server state"
 ms.assetid: b62ebf66-d090-4f74-8c83-11ed518b2018
-caps.latest.revision: 24
 author: minewiskan
 ms.author: owend
 manager: craigg

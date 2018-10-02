@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 topic_type: 
   - "apiref"
 helpviewer_keywords: 
   - "SQLFreeHandle function"
 ms.assetid: d374e5c8-ed35-43bf-8dd6-c37e38d9b5f1
-caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg

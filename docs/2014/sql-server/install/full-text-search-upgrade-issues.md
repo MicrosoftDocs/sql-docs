@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "upgrading Full-Text Search"
   - "full-text search [SQL Server], upgrading"
 ms.assetid: d104a0c3-0492-4de6-8ce5-eacee47c978f
-caps.latest.revision: 29
 author: mashamsft
 ms.author: mathoma
 manager: craigg

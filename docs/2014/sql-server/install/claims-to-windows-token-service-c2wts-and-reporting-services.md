@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/25/2016"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "c2wts.exe.config"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "C2WTS"
   - "WSS_WPG"
 ms.assetid: 4d380509-deed-4b4b-a9c1-a9134cc40641
-caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
 manager: craigg

@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "601"
 helpviewer_keywords: 
   - "601 (Database Engine error)"
 ms.assetid: 2039cc0a-9a43-4369-a04a-935e384388b6
-caps.latest.revision: 10
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

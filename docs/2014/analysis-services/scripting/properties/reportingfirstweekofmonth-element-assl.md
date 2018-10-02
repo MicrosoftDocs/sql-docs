@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "04/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "ReportingFirstWeekOfMonth Element"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "ReportingFirstWeekOfMonth element"
 ms.assetid: 29818404-ad45-403f-8fd9-3e3246d301ad
-caps.latest.revision: 31
 author: minewiskan
 ms.author: owend
 manager: craigg

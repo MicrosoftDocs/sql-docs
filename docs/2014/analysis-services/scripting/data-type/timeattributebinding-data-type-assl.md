@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "TimeAttributeBinding Data Type"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "TimeAttributeBinding data type"
 ms.assetid: e8317b1c-a83a-4074-9538-400792500985
-caps.latest.revision: 38
 author: minewiskan
 ms.author: owend
 manager: craigg

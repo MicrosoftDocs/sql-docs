@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "MembersWithData Element"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "MembersWithData element"
 ms.assetid: 845087a2-b12d-4344-a8be-85ca61155296
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg

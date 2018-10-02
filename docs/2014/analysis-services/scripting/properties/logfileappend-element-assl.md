@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "LogFileAppend Element"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "LogFileAppend element"
 ms.assetid: f85e94a9-e5c5-478a-a5a0-fc99ed19b582
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg

@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "docset-sql-devref"
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "developer's guide [Reporting Services]"
   - "Reporting Services, programming"
   - "programming [Reporting Services]"
 ms.assetid: d8afa405-1012-4349-a72d-e10d94f8453d
-caps.latest.revision: 21
 author: markingmyname
 ms.author: maghan
 manager: craigg

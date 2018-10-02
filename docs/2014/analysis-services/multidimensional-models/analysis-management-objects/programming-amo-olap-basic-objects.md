@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "programming [AMO]"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "OLAP [AMO]"
   - "AMO, OLAP"
 ms.assetid: ad1c970e-c0cb-4687-9563-56ab62c2db5f
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg

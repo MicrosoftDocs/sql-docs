@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 439cfab5-c049-43a8-8617-59eaa8d24873
-caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg

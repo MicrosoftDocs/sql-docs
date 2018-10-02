@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology:
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.registerserver.general.analysisservices.f1"
 ms.assetid: ca6aed42-8940-4f41-beb7-619e084cd850
-caps.latest.revision: 28
 author: mashamsft
 ms.author: mathoma
 manager: craigg

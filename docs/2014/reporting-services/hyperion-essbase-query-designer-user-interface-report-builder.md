@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "10013"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "Hyperion Essbase query designer"
   - "query designers, Hyperion"
 ms.assetid: d89a6773-dbe5-48e5-bda9-db0e67100696
-caps.latest.revision: 13
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg

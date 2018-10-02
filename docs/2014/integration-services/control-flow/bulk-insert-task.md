@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.bulkinserttask.f1"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "Bulk Insert task"
   - "copying data [Integration Services]"
 ms.assetid: c5166156-6b4c-4369-81ed-27c4ce7040ae
-caps.latest.revision: 62
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

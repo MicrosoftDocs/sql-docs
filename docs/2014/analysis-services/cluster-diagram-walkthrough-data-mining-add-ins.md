@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Visio shapes, cluster"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "shapes, cluster"
   - "data mining layout toolbar"
 ms.assetid: 761bef6a-37d4-4b19-944e-f2aadc75a242
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg

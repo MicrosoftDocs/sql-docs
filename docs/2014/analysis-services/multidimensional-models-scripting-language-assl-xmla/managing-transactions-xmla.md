@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "XML for Analysis, transactions"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "committing transactions"
   - "starting transactions"
 ms.assetid: f5112e01-82f8-4870-bfb7-caa00182c999
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg

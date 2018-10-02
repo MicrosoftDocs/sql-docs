@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "administering Reporting Services"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "report servers [Reporting Services], content management"
   - "content management [Reporting Services]"
 ms.assetid: 641961ac-53a5-4997-9d42-cf4ecce1f892
-caps.latest.revision: 48
 author: markingmyname
 ms.author: maghan
 manager: craigg

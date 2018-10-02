@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "tables [OLE DB]"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "removing tables"
   - "dropping tables"
 ms.assetid: b6d6c4de-43c6-473e-92aa-34ffddd58cbe
-caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg

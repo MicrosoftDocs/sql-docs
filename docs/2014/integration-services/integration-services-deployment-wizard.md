@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.ssis.deploymentwizard.f1"
 ms.assetid: f3d93e13-2d85-47ff-a913-cda4046491c4
-caps.latest.revision: 10
 author: douglaslms
 ms.author: douglasl
 manager: craigg

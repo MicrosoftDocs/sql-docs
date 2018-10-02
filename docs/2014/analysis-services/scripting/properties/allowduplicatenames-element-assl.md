@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "AllowDuplicateNames Element"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "AllowDuplicateNames element"
 ms.assetid: d0a80040-115f-4490-926f-4d64d8977e67
-caps.latest.revision: 38
 author: minewiskan
 ms.author: owend
 manager: craigg

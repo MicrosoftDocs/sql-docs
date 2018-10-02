@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "rowsets [ODBC]"
 ms.assetid: cf0eb3b4-8b72-49fc-a845-95edc360cf93
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg

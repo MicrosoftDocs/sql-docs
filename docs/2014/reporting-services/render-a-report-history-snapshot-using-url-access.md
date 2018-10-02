@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "URL access [Reporting Services], report history"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "snapshots [Reporting Services], URL access"
   - "snapshots [Reporting Services], rendering report history"
 ms.assetid: 3f87f82d-0e61-4492-9c4b-f5238c39e8cd
-caps.latest.revision: 32
 author: markingmyname
 ms.author: maghan
 manager: craigg

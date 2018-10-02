@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 topic_type: 
   - "apiref"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "XML for Analysis, headers"
   - "headers [XML for Analysis]"
 ms.assetid: 36407b5c-d98d-47e4-8d36-d8896e15a748
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg

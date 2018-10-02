@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Table Analysis tools"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "mining model, decision tree"
   - "category detection"
 ms.assetid: 3c7e9ebb-d0c9-498e-a9ba-cc13eaa43520
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg

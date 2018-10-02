@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Discover Events event category"
   - "discover events [Analysis Services]"
   - "event classes [Analysis Services], discover events"
 ms.assetid: fb964bac-dc68-4ad0-80f5-aeb677277169
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg

@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "large reports"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "reports [Reporting Services], size"
   - "denial of service attacks [Reporting Services]"
 ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
-caps.latest.revision: 50
 author: markingmyname
 ms.author: maghan
 manager: craigg

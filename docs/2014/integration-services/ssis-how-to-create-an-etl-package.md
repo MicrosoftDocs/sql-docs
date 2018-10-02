@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SSIS, tutorials"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "logs [Integration Services], tutorials"
   - "walkthroughs [Integration Services]"
 ms.assetid: d6d5bb1f-4cb1-4605-9cd6-f60b858382c4
-caps.latest.revision: 37
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "schema rowsets [OLE DB]"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "SQL Server Native Client OLE DB provider, schema rowsets"
   - "rowsets [OLE DB], schema"
 ms.assetid: a75b4b69-b095-4690-9b31-a2b32a67489e
-caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
 manager: craigg

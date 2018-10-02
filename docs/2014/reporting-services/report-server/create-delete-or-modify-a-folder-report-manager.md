@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "removing folders"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "folders [Reporting Services], deleting"
   - "folders [Reporting Services], modifying"
 ms.assetid: d62159a8-ec67-4e28-a9f1-05a9250065bb
-caps.latest.revision: 48
 author: markingmyname
 ms.author: maghan
 manager: craigg

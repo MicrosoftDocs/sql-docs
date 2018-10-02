@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Errors and Warnings event category [SQL Server]"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "errors events [Analysis Services]"
   - "warnings events [Analysis Services]"
 ms.assetid: cf7fd5a7-b189-47c3-8e5c-3195897c7eab
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg

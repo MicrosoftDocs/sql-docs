@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.cubeeditor.newmeasuregroupdialog.f1"
 helpviewer_keywords: 
   - "New Measure Group dialog box"
 ms.assetid: 5f21b865-8030-4371-b16b-430a12fcb997
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg

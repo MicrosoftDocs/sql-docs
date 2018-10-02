@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "RefreshPolicy Element"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "RefreshPolicy element"
 ms.assetid: f4c36280-1a39-4f1c-a3ab-fbeb81742d6d
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg

@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "replication"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "subscriptions [SQL Server replication], synchronizing"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "synchronization [SQL Server replication], schedules"
   - "replication [SQL Server], synchronization"
 ms.assetid: 97f2535b-ec19-4973-823d-bcf3d5aa0216
-caps.latest.revision: 39
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

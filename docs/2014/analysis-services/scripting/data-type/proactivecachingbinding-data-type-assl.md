@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "ProactiveCachingBinding Data Type"
@@ -19,7 +17,6 @@ topic_type:
 helpviewer_keywords: 
   - "ProactiveCachingBinding data type"
 ms.assetid: 02e6ff2f-2f18-4607-9198-bb46f113f9ac
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg

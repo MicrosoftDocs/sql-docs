@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "Write Element"
@@ -19,7 +17,6 @@ topic_type:
 helpviewer_keywords: 
   - "Write element"
 ms.assetid: d8f7a367-d7bf-4b40-acb4-19c8bc8c6c20
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg

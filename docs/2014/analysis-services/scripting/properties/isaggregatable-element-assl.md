@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "IsAggregatable Element"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "IsAggregatable element"
 ms.assetid: ed7dbe89-259c-4c5c-9660-b965c3af1573
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg

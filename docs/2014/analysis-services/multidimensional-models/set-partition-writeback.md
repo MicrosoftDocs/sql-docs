@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "write-enabled partitions [Analysis Services]"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "partitions [Analysis Services], write-enabled"
   - "writeback [Analysis Services], partitions"
 ms.assetid: 38bb09cc-2652-4971-8373-0cf468cdc7a6
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg

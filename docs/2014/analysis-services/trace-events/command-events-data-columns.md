@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Command Events event category"
 ms.assetid: 7169f1e2-c6be-4d8c-b147-25719b84bc2c
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg

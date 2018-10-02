@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: xml
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "PATH FOR XML mode, namespace support"
   - "namespaces [XML in SQL Server]"
 ms.assetid: 5f128ea2-0ceb-4b23-bce7-c8b3fd615466
-caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

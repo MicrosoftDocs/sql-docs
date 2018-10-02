@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "columns [Integration Services]"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "columns [Integration Services], values"
   - "Derived Column transformation"
 ms.assetid: 28b07746-fc6f-42b2-b741-9de6fac3f29c
-caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

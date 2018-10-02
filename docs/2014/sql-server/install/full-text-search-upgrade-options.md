@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "Full-Text Search"
   - "Upgrade options, Full-Text Search"
 ms.assetid: 16c9376b-5fbb-4495-a429-06a2493849c9
-caps.latest.revision: 18
 author: craigg-msft
 ms.author: craigg
 manager: craigg

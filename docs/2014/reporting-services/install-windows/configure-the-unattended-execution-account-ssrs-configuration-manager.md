@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "no credentials option [Reporting Services]"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "accounts [Reporting Services]"
   - "reports [Reporting Services], processing"
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
-caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
 manager: craigg

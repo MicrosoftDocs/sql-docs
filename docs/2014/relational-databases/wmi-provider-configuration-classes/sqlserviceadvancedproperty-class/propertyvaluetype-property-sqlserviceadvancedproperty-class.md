@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "PropertyValueType Property (SqlServiceAdvancedProperty Class)"
@@ -19,7 +17,6 @@ topic_type:
 helpviewer_keywords: 
   - "PropertyValueType property"
 ms.assetid: f1b1dcc6-6d44-4ad2-8c2e-4fd48c2c8086
-caps.latest.revision: 33
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

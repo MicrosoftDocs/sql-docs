@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "AttributeRelationship Element"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "AttributeRelationship element"
 ms.assetid: 2e786109-b8bf-4295-b0fe-9c1997349993
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg

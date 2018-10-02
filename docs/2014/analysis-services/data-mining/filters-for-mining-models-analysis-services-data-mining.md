@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "attributes [data mining]"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "filters [data mining]"
   - "filtering data [Analysis Services]"
 ms.assetid: 0f29c19c-4be3-4bc7-ab60-f4130a10d59c
-caps.latest.revision: 27
 author: minewiskan
 ms.author: owend
 manager: craigg

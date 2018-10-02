@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "DISCOVER_PROPERTIES"
@@ -17,7 +15,6 @@ topic_type:
 helpviewer_keywords: 
   - "DISCOVER_PROPERTIES rowset"
 ms.assetid: 3e2b50e2-3855-4091-8b02-4968e8e57d4c
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg

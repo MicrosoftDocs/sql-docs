@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "5245 (Database Engine error)"
 ms.assetid: 6005c9ec-ccdd-4def-9eb4-37cdb599ddb3
-caps.latest.revision: 17
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

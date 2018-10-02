@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology:
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Agent jobs, operators"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "jobs [SQL Server Agent], operators"
   - "operators (users) [Database Engine], deleting with Management Studio"
 ms.assetid: 2b7b8627-082d-4189-8584-abd3a9b604cf
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg

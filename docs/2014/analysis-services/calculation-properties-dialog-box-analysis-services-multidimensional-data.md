@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.cubeeditor.calculationsview.calculationpropertiesdialog.f1"
 helpviewer_keywords: 
   - "Calculation Properties dialog box"
 ms.assetid: eb5e1179-b0e6-4ec8-bf4c-d67a1e329117
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg

@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "ADOMD.NET, object model"
   - "object model [ADOMD.NET]"
 ms.assetid: bdc81de9-b390-4654-b62a-cd6c0c9ca10d
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg

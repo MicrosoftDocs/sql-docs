@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: backup-restore
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.restorefilesandfilegrps.general.f1"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "SQL Server Management Studio [SQL Server], restoring files and filegroups"
   - "restoring [SQL Server], files"
 ms.assetid: 72603b21-3065-4b56-8b01-11b707911b05
-caps.latest.revision: 24
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "MS DTC, performing distributed transactions"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "transactions [ODBC]"
   - "ODBC, transactions"
 ms.assetid: 2c17fba0-7a3c-453c-91b7-f801e7b39ccb
-caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
 manager: craigg

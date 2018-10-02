@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "04/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: search
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "index populations [full-text search]"
@@ -23,7 +21,6 @@ helpviewer_keywords:
   - "full populations [full-text search]"
   - "full-text indexes [SQL Server], populations"
 ms.assetid: 76767b20-ef55-49ce-8dc4-e77cb8ff618a
-caps.latest.revision: 74
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

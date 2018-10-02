@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "logistic regression [Analysis Services]"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "regression algorithms [Analysis Services]"
   - "HOLDOUT_SEED parameter"
 ms.assetid: cf32f1f3-153e-476f-91a4-bb834ec7c88d
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg

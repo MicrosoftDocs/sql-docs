@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "PropertyList Element"
@@ -23,7 +21,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "PropertyList element"
 ms.assetid: 58e63bd9-8aac-438d-adba-1868b4d123f5
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg

@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "12/29/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Table Analysis tools"
   - "getting started"
 ms.assetid: 6d9d1481-18e4-4108-9efa-68152b0940c9
-caps.latest.revision: 17
 author: minewiskan
 ms.author: owend
 manager: craigg

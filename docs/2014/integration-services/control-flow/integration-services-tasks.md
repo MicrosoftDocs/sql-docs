@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "08/22/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "scripts [Integration Services], tasks"
@@ -26,7 +24,6 @@ helpviewer_keywords:
   - "data preparation tasks [Integration Services]"
   - "directory operations [Integration Services]"
 ms.assetid: 75c8901d-6966-4af3-abe5-10af6dd9313b
-caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

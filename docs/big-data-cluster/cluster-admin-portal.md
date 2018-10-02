@@ -89,8 +89,3 @@ To learn more about each pool:
 ![about](./media/cluster-admin-portal/portal-about.png)
 
 Here you can view information about your cluster such as the different version numbers, containers, and a link to our documentation.
-
-## Next Steps
-- Learn more to troubleshoot queries [here](query-troubleshooting.md)
-
-

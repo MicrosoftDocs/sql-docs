@@ -50,11 +50,11 @@
       href: data-ingestion-restore-databse.md
   - name: Big Data/Machine Learning
     items:
-    - name: Data Wrangling using PROSE Code Accelerator
+    - name: Data wrangling using PROSE Code Accelerator
       href: use-prose-for-big-data-automation.md
   - name: Manage SQL Server big data cluster
     items:
-    - name: Cluster Admin Portal
+    - name: Cluster administration portal
       href: cluster-admin-portal.md
   - name: Notebooks
     items:

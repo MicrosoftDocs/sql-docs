@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "MeasureQualificaton Element"
@@ -19,7 +17,6 @@ topic_type:
 helpviewer_keywords: 
   - "MeasureQualification element"
 ms.assetid: 754a037c-f20b-4717-a6e8-12f495e8e3b4
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg

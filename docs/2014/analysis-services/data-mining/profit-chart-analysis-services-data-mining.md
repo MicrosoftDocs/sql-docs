@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "accuracy, charting"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "charts [Analysis Services]"
   - "profit charts [Analysis Services]"
 ms.assetid: 760ee051-6fd8-48e3-8d2e-82db3ab45e45
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg

@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "CustomRollupPropertiesColumn Element"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "CustomRollupPropertiesColumn element"
 ms.assetid: 7f4a9825-c768-4523-acb3-511a5160fd44
-caps.latest.revision: 39
 author: minewiskan
 ms.author: owend
 manager: craigg

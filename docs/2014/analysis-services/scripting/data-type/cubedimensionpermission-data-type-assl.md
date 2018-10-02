@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "CubeDimensionPermission Data Type"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "CubeDimensionPermission data type"
 ms.assetid: d9d39859-5f33-48bc-a402-0071755918de
-caps.latest.revision: 38
 author: minewiskan
 ms.author: owend
 manager: craigg

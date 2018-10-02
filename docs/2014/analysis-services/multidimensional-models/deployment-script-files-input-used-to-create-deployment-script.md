@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "input files [Analysis Services]"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "Analysis Services deployments, input files"
   - "modifying input files"
 ms.assetid: 20e080cd-6a0e-4591-b022-ea4cd3638e36
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg

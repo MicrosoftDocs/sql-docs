@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.mdxbuilderdialof.f1"
 helpviewer_keywords: 
   - "MDX Builder dialog box"
 ms.assetid: fecbf093-65ea-4e1b-b637-f04876f1cb0f
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg

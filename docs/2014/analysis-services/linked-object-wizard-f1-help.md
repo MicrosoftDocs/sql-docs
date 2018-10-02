@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Linked Object Wizard"
 ms.assetid: af7df609-5e38-40c5-b176-28450792409f
-caps.latest.revision: 24
 author: minewiskan
 ms.author: owend
 manager: craigg

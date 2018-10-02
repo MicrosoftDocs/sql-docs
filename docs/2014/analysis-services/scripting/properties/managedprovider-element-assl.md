@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "ManagedProvider Element"
@@ -19,7 +17,6 @@ topic_type:
 helpviewer_keywords: 
   - "ManagedProvider element"
 ms.assetid: ed5a1077-20a4-40b9-b62d-0db0d53b9624
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg

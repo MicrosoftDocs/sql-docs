@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "12/29/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "data modeling [data mining]"
   - "classification [data mining]"
 ms.assetid: 409c5076-c4c3-4f09-8f30-d3297df45f13
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg

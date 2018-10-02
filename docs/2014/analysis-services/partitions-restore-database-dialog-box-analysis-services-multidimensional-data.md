@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.restoredbdialog.partitions.f1"
 ms.assetid: 1ad4dde5-4651-4069-875c-7ab73cd8b4f4
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg

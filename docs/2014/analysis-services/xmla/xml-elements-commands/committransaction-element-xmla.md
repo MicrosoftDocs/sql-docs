@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "CommitTransaction Element"
@@ -23,7 +21,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "CommitTransaction command"
 ms.assetid: 1cd814dc-a0be-4305-b44d-faf15e843f7d
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg

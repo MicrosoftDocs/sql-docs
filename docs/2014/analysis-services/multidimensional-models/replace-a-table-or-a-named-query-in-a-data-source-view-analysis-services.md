@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "replacing tables"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "tables [Analysis Services], data source views"
   - "partitions [Analysis Services], named queries"
 ms.assetid: 60c2a018-1299-4915-b60e-e73316524def
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg

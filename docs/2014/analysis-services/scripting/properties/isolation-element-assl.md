@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "Isolation Element"
@@ -19,7 +17,6 @@ topic_type:
 helpviewer_keywords: 
   - "Isolation element"
 ms.assetid: 28c98c6f-668e-4547-8d25-127cc3995a7d
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg

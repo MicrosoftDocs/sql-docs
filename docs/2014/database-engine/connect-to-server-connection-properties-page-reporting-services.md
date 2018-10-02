@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology:
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.connecttors.connectionproperties.f1"
 ms.assetid: 66761a14-d646-44bb-9dff-be5ab2c40e88
-caps.latest.revision: 21
 author: mashamsft
 ms.author: mathoma
 manager: craigg

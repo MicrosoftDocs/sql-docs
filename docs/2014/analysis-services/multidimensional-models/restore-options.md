@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "databases [Analysis Services], restoring"
   - "restoring databases [Analysis Services]"
 ms.assetid: 75c73802-f321-4671-afc7-54505d62c013
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg

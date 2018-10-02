@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "input row filtering [SQL Server]"
   - "filtering input rows [Analysis Services]"
   - "Mining Accuracy Chart [Analysis Services], filtering input rows"
 ms.assetid: 9ccc9a23-5597-4b35-a05f-2fc8eb885147
-caps.latest.revision: 43
 author: minewiskan
 ms.author: owend
 manager: craigg

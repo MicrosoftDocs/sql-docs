@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dm.miningmodeleditor.structure.addnestedtable.f1"
 helpviewer_keywords: 
   - "Select a Nested Table Key Column dialog box"
 ms.assetid: f68b89a7-17df-45f8-ba7f-b458cd9b1ec3
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg

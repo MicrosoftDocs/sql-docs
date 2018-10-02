@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "DBSCHEMA_COLUMNS"
@@ -17,7 +15,6 @@ topic_type:
 helpviewer_keywords: 
   - "DBSCHEMA_COLUMNS rowset"
 ms.assetid: 653bdd07-a533-4a99-8b6a-6e5c7322e1f3
-caps.latest.revision: 40
 author: minewiskan
 ms.author: owend
 manager: craigg

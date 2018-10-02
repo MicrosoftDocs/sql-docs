@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "table-access links [CLR integration]"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "invocation links [CLR integration]"
   - "gated links [CLR integration]"
 ms.assetid: 168efd01-d12e-4bdf-a1b3-0b5c76474eaf
-caps.latest.revision: 37
 author: mashamsft
 ms.author: mathoma
 manager: craigg

@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "FontSize Element"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "FontSize element"
 ms.assetid: 49f66a73-946a-4fbd-9749-a3ca1b717ff3
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg

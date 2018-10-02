@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "ManyToManyMeasureGroupDimension Data Type"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "ManyToManyMeasureGroupDimension data type"
 ms.assetid: f2b914cb-c817-43ff-9cb4-ac8d326136b5
-caps.latest.revision: 36
 author: minewiskan
 ms.author: owend
 manager: craigg

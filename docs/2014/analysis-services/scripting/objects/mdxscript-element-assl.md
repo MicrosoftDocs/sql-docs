@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "MdxScript Element"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "MdxScript element"
 ms.assetid: 0c59a550-dc95-4d50-948a-bb99348bdd86
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg

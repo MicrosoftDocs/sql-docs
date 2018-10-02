@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "testing data mining models"
@@ -28,7 +26,6 @@ helpviewer_keywords:
   - "CRISP-DM"
   - "accuracy testing [data mining]"
 ms.assetid: 197144f5-21ed-4009-b448-fe412fb3916c
-caps.latest.revision: 60
 author: minewiskan
 ms.author: owend
 manager: craigg

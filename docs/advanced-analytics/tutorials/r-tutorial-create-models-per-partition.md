@@ -38,7 +38,7 @@ To complete this tutorial, you must have the following:
 
 + A tool for T-SQL query execution, such as [SQL Server Management Studio].(https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)
 
-+ [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak), which can [download and restore](sqldev-download-the-sample-data.md) to your local database engine instance. File size is approximatley 90 MB.
++ [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak), which can [download and restore](sqldev-download-the-sample-data.md) to your local database engine instance. File size is approximately 90 MB.
 
 + SQL Server 2019 preview database engine instance, with Machine Learning Services and R integration.
 

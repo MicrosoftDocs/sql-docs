@@ -21,7 +21,7 @@ When you are finished with the steps in this article, the **NYCTaxi_Sample** dat
 
 ## Prerequisites
 
-You need an internet connection, local administrative rights on the computer, and a database engine inststance.
+You need an internet connection, local administrative rights on the computer, and a database engine instance.
 
 It helps to have [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) or another tool to verify object creation.
 
@@ -29,7 +29,7 @@ It helps to have [SQL Server Management Studio](https://docs.microsoft.com/sql/s
 
 The sample database is a backup file hosted by Microsoft. File download begins immediately when you click the link. 
 
-File size is approximatley 90 MB.
+File size is approximately 90 MB.
 
 1. Click [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak) to download the database backup file.
 
@@ -69,9 +69,9 @@ The following table summarizes the objects created in the NYC Taxi demo database
 
 As a validation step, run a query to confirm the data was uploaded.
 
-1. In Object Explorer, under Databases, right-click the **NYCTaxi_Sample** datatabase, and start a new query.
+1. In Object Explorer, under Databases, right-click the **NYCTaxi_Sample** database, and start a new query.
 
-2. Run **`select * from dbo.nyctaxi_sample`** to return all rows, which is over 1.7 million rows.
+2. Run **`select * from dbo.nyctaxi_sample`** to return all 1.7 million rows.
 
 ## Next steps
 

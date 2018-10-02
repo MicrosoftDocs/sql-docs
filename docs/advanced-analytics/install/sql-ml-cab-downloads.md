@@ -113,7 +113,7 @@ Microsoft R Server     |[SRS_8.0.3.0_1033.cab](https://go.microsoft.com/fwlink/?
 
 If you would like to view the source code for Microsoft R, it is available for download as an archive in .tar format: [Download R Server installers](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows#download)
 
-# See also
+## See also
 
 [Apply cumulative updates on computers without internet access](sql-ml-component-install-without-internet-access.md#apply-cu)
 

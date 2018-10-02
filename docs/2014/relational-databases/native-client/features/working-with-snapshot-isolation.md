@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "data access [SQL Server Native Client], snapshot isolation"
@@ -22,7 +20,6 @@ helpviewer_keywords:
   - "concurrency [SQL Server Native Client]"
   - "SQLSetConnectAttr function"
 ms.assetid: 39e87eb1-677e-45dd-bc61-83a4025a7756
-caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg

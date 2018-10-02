@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "docset-sql-devref"
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 dev_langs: 
   - "VB"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "precedence constraints [Integration Services], connecting tasks"
   - "constraints [Integration Services]"
 ms.assetid: 23668e88-cef4-4009-a9cf-38e607eab7a2
-caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

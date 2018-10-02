@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SSIS"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "data integration [Integration Services]"
   - "Data Transformation Services"
 ms.assetid: c4398655-5657-4ae4-a690-a380790fe84f
-caps.latest.revision: 47
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

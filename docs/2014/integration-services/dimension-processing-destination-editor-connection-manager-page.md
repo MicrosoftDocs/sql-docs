@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.dimprocessingtransformation.connection.f1"
 helpviewer_keywords: 
   - "Dimension Processing Destination Editor"
 ms.assetid: 44aab631-d62d-4895-8fc7-7f1f3b1b68ce
-caps.latest.revision: 28
 author: douglaslms
 ms.author: douglasl
 manager: craigg

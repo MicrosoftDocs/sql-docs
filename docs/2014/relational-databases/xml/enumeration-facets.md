@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: xml
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "enumeration facets"
 ms.assetid: dec23a79-ddd6-4701-9721-55a2c435a34d
-caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

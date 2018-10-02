@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "04/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "docset-sql-devref"
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "custom data flow components [Integration Services], mapping data types"
   - "data flow components [Integration Services], mapping data types"
   - "data types [Integration Services], converting"
 ms.assetid: 941260d0-4ec3-4bf0-ab48-2b26733e6b24
-caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

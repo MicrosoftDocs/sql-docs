@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "database attaching [SQL Server]"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "detaching databases [SQL Server]"
   - "attaching databases [SQL Server]"
 ms.assetid: 99f66ed9-3a75-4e38-ad7d-6c27cc3529a9
-caps.latest.revision: 72
 author: stevestein
 ms.author: sstein
 manager: craigg

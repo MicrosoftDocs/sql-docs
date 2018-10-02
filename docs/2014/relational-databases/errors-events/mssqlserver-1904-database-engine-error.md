@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "1904 (Database Engine error)"
 ms.assetid: 2a35d57d-74e2-45a2-8f67-3f2e51d69712
-caps.latest.revision: 8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

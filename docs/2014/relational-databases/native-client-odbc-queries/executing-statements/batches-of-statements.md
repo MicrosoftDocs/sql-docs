@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "statements [ODBC], batches"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "SQLMoreResults function"
   - "SQLExecDirect function"
 ms.assetid: 057d7c1c-1428-4780-9447-a002ea741188
-caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
 manager: craigg

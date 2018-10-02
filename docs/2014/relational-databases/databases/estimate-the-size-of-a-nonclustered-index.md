@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "space allocation [SQL Server], index size"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "designing databases [SQL Server], estimating size"
   - "calculating table size"
 ms.assetid: c183b0e4-ef4c-4bfc-8575-5ac219c25b0a
-caps.latest.revision: 39
 author: stevestein
 ms.author: sstein
 manager: craigg

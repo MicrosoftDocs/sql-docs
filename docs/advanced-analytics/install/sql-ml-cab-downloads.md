@@ -32,7 +32,7 @@ CAB files are listed in reverse chronological order. When you download the CAB f
 
 Release  |Download link  | Issues addressed | 
 ---------|---------------|-------|
-**[SQL Server 2017 CU10](https://support.microsoft.com/help/4342123)** |  |  |
+**[SQL Server 2017 CU10](https://support.microsoft.com/help/4342123)-[CU11](https://support.microsoft.com/help/4462262)** |  |  |
 Microsoft R Open     | [SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)| No change from previous versions. |
 R Server      |[SRS_9.2.0.1000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2006287&clcid=1033)| Minor fixes.|
 Microsoft Python Open     | [SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| No change from previous versions. |

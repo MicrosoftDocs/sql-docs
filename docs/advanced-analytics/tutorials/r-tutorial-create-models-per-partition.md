@@ -1,10 +1,11 @@
 ---
 title: Tutorial on creating, training and scoring partition-based models in R (SQL Server Machine Learning Services) | Microsoft Docs
+description: Learn how to model, train, and use partitioned data that is created dynamically when using the partition-based modeling capabilites of SQL Server machine learning.
 ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
   
-ms.date: 09/24/2018
+ms.date: 10/02/2018
 ms.topic: tutorial
 ms.author: heidist
 author: HeidiSteen
@@ -33,17 +34,13 @@ In this tutorial, learn partition-based modeling using the classic NYC taxi samp
  
 To complete this tutorial, you must have the following:
 
-+ SQL Server 2019 database engine instance, with Machine Learning Services and the R feature
-+ Sample data
-+ A tool for T-SQL query execution, such as SQL Server Management Studio
++ SQL Server 2019 preview database engine instance, with Machine Learning Services and R integration. Run `SELECT @@Version` as a T-SQL query to check the version. Output should be "Microsoft SQL Server 2019 (CTP 2.0) - 15.0.x".
++ [Sample data](#sample-data)
++ A tool for T-SQL query execution, such as [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)
 
 ### System resources
 
 The data set is large and training operations are resource-intensive. If possible, use a system having at least 8 GB RAM. Alternatively, you can use smaller data sets to work around resource constraints. Instructions for reducing the data set are inline. 
-
-### SQL Server database engine with Machine Learning Services
-
-SQL Server 2019 CTP 2.0 or later, with Machine Learning Services installed and configured, is required. You can check server version in Management Studio by executing `SELECT @@Version` as a T-SQL query. Output should be "Microsoft SQL Server 2019 (CTP 2.0) - 15.0.x".
 
 ### R packages
 
@@ -61,9 +58,7 @@ EXECUTE sp_execute_external_script
 WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 ```
 
-### Tools for query execution
-
-You can [download and install SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms), or use any tool that connects to a relational database and runs T-SQL script. Make sure you can connect to a database engine instance that has Machine Learning Services.
+<a name="sample-data"></a>
 
 ### Sample data
 

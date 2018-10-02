@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "12300 (Database Engine error)"
 ms.assetid: ac71e2e1-5857-4115-a720-7dae08769926
-caps.latest.revision: 6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

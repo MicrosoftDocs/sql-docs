@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.rawfiledestinationcolumns.f1"
 ms.assetid: 37f61d0b-1269-42ee-94ab-011cbaac63e9
-caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg

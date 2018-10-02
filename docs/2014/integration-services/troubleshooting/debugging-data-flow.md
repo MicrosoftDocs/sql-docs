@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "progress reporting [Integration Services]"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "debugging [Integration Services], data flow"
   - "counting rows"
 ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
-caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

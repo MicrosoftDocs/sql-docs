@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "data-quality-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dqs.dqproject.map.f1"
@@ -15,7 +13,6 @@ f1_keywords:
   - "sql12.dqs.dqproject.correction.f1"
   - "sql12.dqs.dqproject.interactivecleansing.f1"
 ms.assetid: c96b13ad-02a6-4646-bcc7-b4a8d490f5cc
-caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "MaxActiveConnections Element"
@@ -19,7 +17,6 @@ topic_type:
 helpviewer_keywords: 
   - "MaxActiveConnections element"
 ms.assetid: 0dc5b64d-061d-409f-95c0-4c63f87f5ee4
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg

@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "New Element"
@@ -23,7 +21,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "New element"
 ms.assetid: 1321adcb-67f7-40f0-8f20-b17c1d3e3f17
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg

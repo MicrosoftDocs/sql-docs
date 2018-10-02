@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.cubewizard.missingdimkeyselection.f1"
 ms.assetid: 58e15293-94e2-4163-a0f2-758d1440b82c
-caps.latest.revision: 7
 author: minewiskan
 ms.author: owend
 manager: craigg

@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "AllowPartiallyTrustedCallers attribute"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "common language runtime [SQL Server], security"
   - "partially trusted callers [CLR integration]"
 ms.assetid: 20b0248f-36da-4fc3-97d2-3789fcf6e084
-caps.latest.revision: 20
 author: mashamsft
 ms.author: mathoma
 manager: craigg

@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "Update Element"
@@ -23,7 +21,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "Update command [XMLA]"
 ms.assetid: 324dcc16-865d-4d0a-b393-2b06c18ac807
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg

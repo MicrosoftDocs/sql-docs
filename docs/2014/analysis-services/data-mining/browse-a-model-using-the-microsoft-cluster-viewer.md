@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "clusters [Analysis Services]"
@@ -22,7 +20,6 @@ helpviewer_keywords:
   - "Cluster Viewer [Analysis Services]"
   - "mining models [Analysis Services], clusters"
 ms.assetid: 591fe30b-d88f-4a71-94d4-4a3907fc275d
-caps.latest.revision: 41
 author: minewiskan
 ms.author: owend
 manager: craigg

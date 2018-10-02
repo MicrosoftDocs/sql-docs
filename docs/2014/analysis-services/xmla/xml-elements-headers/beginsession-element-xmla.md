@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "BeginSession Element"
@@ -23,7 +21,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "BeginSession element"
 ms.assetid: 49873a97-58d7-42a9-ab7f-e045e2856737
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg

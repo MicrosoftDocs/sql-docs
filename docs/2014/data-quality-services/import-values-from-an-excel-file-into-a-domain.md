@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "data-quality-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dqs.kb.failingvalues.f1"
   - "sql12.dqs.kb.importfailing.f1"
   - "sql12.dqs.kb.importselect.f1"
 ms.assetid: 04cde693-2043-477f-8417-fcc463ca7195
-caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

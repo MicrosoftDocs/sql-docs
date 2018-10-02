@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "XML for Analysis, scripts"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "databases [Analysis Services], documenting"
   - "databases [Analysis Services], scripts"
 ms.assetid: 125044e2-8d36-4733-8743-8bb68ff9aa4e
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg

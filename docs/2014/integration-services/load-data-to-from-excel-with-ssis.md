@@ -5,10 +5,8 @@ ms.date: "04/10/2018"
 ms.prod: sql-server-2014
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
 ms.custom: ""
 ms.technology: "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 author: douglaslMS
 ms.author: douglasl

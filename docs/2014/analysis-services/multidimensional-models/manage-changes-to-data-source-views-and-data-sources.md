@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "modifying data sources"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "data source views [Analysis Services], schema updates"
   - "data sources [Analysis Services], schema updates"
 ms.assetid: 928c9f63-365a-43fd-9bbd-78828cc7e54d
-caps.latest.revision: 24
 author: minewiskan
 ms.author: owend
 manager: craigg

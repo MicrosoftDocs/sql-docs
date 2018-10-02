@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "ProactiveCaching Element"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "ProactiveCaching element"
 ms.assetid: 85f9ed44-2ede-406f-b0ca-237ab2f49722
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg

@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "extended events [SQL Server], getting fields"
   - "xe"
 ms.assetid: 4e4ee03f-5bca-42ed-a37c-db1c82e3aad2
-caps.latest.revision: 11
 author: mashamsft
 ms.author: mathoma
 manager: craigg

@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "DMX [Analysis Services], tutorials"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "tutorials [Data Mining]"
   - "tutorials [DMX]"
 ms.assetid: 6e262a1d-c89e-4033-8368-46cf25168ef5
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg

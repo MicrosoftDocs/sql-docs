@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "ReadDefinition Element"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "ReadDefinition element"
 ms.assetid: 1f250129-13b2-41b9-b083-b5aacddf0060
-caps.latest.revision: 36
 author: minewiskan
 ms.author: owend
 manager: craigg

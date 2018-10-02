@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology:
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Agent jobs, categories"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "categories [SQL Server Agent jobs]"
   - "removing job category"
 ms.assetid: 47a7640b-20b3-4639-ab37-b6fc73575e6c
-caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg

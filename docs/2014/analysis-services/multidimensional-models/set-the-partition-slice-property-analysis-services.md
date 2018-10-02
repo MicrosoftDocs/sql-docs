@@ -4,18 +4,13 @@ ms.custom: ""
 ms.date: "08/05/2015"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "SQL Server 2014"
 helpviewer_keywords: 
   - "partitions [Analysis Services], data slices"
   - "data slices [Analysis Services]"
 ms.assetid: 507b91e5-7f85-4c22-be97-4d7a676e6667
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg

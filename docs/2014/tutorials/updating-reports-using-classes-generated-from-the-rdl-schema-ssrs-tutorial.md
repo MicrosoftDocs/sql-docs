@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "RDL [Reporting Services], generating"
   - "RDL [Reporting Services], tutorials"
   - "RDL [Reporting Services], serializing"
 ms.assetid: 8f81d48f-7ab9-4ef8-bce0-7d16d9a47fbd
-caps.latest.revision: 26
 author: craigg-msft
 ms.author: douglasl
 manager: craigg

@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.ssdqs.designer.cleansing.f1"
   - "SQL12.SSDQS.DESIGNER.DQCONNECTION.F1"
 ms.assetid: 07e79641-71ee-45d0-a9ba-ed6f9f68f333
-caps.latest.revision: 15
 author: douglaslms
 ms.author: douglasl
 manager: craigg

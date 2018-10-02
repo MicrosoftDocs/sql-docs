@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Analysis Services Deployment Wizard"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "Analysis Services deployments, Analysis Services Deployment Wizard"
   - "Analysis Services Deployment Wizard, about Analysis Services Deployment Wizard"
 ms.assetid: ff711e8e-971c-43ba-b479-effc034af4a4
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg

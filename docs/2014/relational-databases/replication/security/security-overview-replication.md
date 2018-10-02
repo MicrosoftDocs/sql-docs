@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "replication"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "authorization [SQL Server replication]"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "security [SQL Server replication], about security"
   - "authentication [SQL Server replication]"
 ms.assetid: 27828fe4-3b54-4c33-886e-08e8279e34b5
-caps.latest.revision: 44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

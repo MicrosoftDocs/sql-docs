@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "dimensions [Analysis Services], objects"
 ms.assetid: 7f3d55c7-cccb-4ad0-b6cb-3a2c9992dd68
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg

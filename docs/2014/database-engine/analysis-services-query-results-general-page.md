@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.asquery.resultgeneral.f1"
 ms.assetid: 68e967fd-ae8d-4f02-bfb3-9ce301276b73
-caps.latest.revision: 19
 author: mashamsft
 ms.author: mathoma
 manager: craigg

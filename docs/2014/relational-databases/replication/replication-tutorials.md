@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "replication"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "tutorials [SQL Server replication]"
   - "walkthroughs [SQL Server replication]"
   - "replication [SQL Server], tutorials"
 ms.assetid: 19fbd10e-5b59-4cd0-a988-52d5d9206242
-caps.latest.revision: 12
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

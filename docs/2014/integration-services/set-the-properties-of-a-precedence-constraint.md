@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Precedence Constraint Editor dialog box"
   - "precedence constraints [Integration Services], properties"
 ms.assetid: d990f600-5c09-4cd5-8528-0a58d79dc9f2
-caps.latest.revision: 47
 author: douglaslms
 ms.author: douglasl
 manager: craigg

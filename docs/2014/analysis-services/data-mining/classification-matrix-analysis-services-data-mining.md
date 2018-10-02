@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "mining models [Analysis Services], validating"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "classification matrix [Analysis Services]"
   - "accuracy testing [data mining]"
 ms.assetid: 5c12f202-2ed9-41fa-bee2-0f7ab3ff058a
-caps.latest.revision: 42
 author: minewiskan
 ms.author: owend
 manager: craigg

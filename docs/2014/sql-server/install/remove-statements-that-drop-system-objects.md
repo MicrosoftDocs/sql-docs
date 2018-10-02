@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "drop system objects [SQL Server]"
 ms.assetid: cdfc3c50-c801-4039-a4bf-b35f876f1c61
-caps.latest.revision: 18
 author: mashamsft
 ms.author: mathoma
 manager: craigg

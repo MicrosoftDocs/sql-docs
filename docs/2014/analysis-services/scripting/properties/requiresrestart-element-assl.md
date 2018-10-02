@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "RequiresRestart Element"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "RequiresRestart element"
 ms.assetid: 9e98f956-c41e-4e15-a7bd-e17c10ee6fc6
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg

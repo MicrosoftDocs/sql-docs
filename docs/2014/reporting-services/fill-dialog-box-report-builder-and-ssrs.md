@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.rtp.rptdesigner.reportbody.fill.f1"
@@ -19,7 +17,6 @@ f1_keywords:
   - "sql12.rtp.rptdesigner.textboxproperties.fill.f1"
   - "10124"
 ms.assetid: 93a91d02-d558-4a0e-8d17-3fdf21e208d3
-caps.latest.revision: 11
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg

@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "04/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "SQL12.rsconfigtool.reportservervirtualdirectory.F1"
 helpviewer_keywords: 
   - "Reporting Services, Web service"
 ms.assetid: 9d210b5d-2a08-4e56-a4f5-c16715b00d79
-caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
 manager: craigg

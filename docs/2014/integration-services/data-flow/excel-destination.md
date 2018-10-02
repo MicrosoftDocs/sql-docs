@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.exceldest.f1"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "destinations [Integration Services], Excel"
   - "Excel [Integration Services]"
 ms.assetid: 37c07446-1264-4814-b4f5-9c66d333bb24
-caps.latest.revision: 49
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

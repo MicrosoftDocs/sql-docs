@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Winsock proxy configuration [SQL Server]"
 ms.assetid: abf71f7b-8bd7-49d2-92f7-9ddf72924d8c
-caps.latest.revision: 20
 author: mashamsft
 ms.author: mathoma
 manager: craigg

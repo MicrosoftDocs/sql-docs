@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.dataprofilingtask.f1"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "data profiling"
   - "profiling data"
 ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
-caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

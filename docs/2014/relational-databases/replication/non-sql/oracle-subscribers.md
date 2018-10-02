@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "replication"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "data types [SQL Server replication], non-SQL Server Subscribers"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "heterogeneous Subscribers, Oracle"
   - "mapping data types [SQL Server replication]"
 ms.assetid: 591c0313-82ce-4689-9fc1-73752ff122cf
-caps.latest.revision: 55
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

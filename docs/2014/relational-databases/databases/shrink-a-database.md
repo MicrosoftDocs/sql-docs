@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.shrinkdatabase.f1"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "database shrinking [SQL Server]"
   - "reducing database size"
 ms.assetid: 83afbf74-fd50-4c39-831c-b1f473a50620
-caps.latest.revision: 42
 author: stevestein
 ms.author: sstein
 manager: craigg

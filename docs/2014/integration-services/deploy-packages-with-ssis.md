@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/14/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "deployment tutorial [Integration Services]"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "deployment utility [Integration Services]"
   - "deploying packages [Integration Services], configurations"
 ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
-caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

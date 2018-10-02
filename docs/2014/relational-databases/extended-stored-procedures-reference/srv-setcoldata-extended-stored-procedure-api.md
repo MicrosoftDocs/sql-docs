@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "srv_setcoldata"
@@ -21,7 +19,6 @@ dev_langs:
 helpviewer_keywords: 
   - "srv_setcoldata"
 ms.assetid: 2e19205a-25ca-4d4a-916b-d591cf2c892b
-caps.latest.revision: 33
 author: rothja
 ms.author: jroth
 manager: craigg

@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "0xFFFF character [SQL Server]"
 ms.assetid: b2c9c8cf-9194-45e0-be6b-2d5ec52e8153
-caps.latest.revision: 16
 author: mashamsft
 ms.author: mathoma
 manager: craigg

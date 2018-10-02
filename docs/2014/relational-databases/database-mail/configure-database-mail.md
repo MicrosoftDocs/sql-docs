@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "04/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "Sql12.swb.sqlimail.newaccount.f1"
@@ -39,7 +37,6 @@ f1_keywords:
   - "Sql12.swb.sqlimail.manageprofilesecurity.principalview.f1"
   - "Sql12.swb.dbmail.manageprofilesecurity.principalview.f1"
 ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
-caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg

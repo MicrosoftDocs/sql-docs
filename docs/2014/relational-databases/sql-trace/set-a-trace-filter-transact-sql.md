@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "SetBoolValue Method (SqlServiceAdvancedProperty Class)"
@@ -19,7 +17,6 @@ topic_type:
 helpviewer_keywords: 
   - "SetBoolValue method"
 ms.assetid: 5252b439-fce5-446a-8e57-99e3054bee69
-caps.latest.revision: 33
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

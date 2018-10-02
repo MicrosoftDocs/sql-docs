@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "supLog"
 ms.assetid: 6e940d93-12c6-4cda-9333-5489b245f0e4
-caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

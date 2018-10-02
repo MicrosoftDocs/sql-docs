@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "41333 (Database Engine error)"
 ms.assetid: c3c3ae9a-1e4c-4de6-ba72-2f393375b053
-caps.latest.revision: 7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

@@ -4,18 +4,13 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "master-data-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "SQL Server 2014"
 helpviewer_keywords: 
   - "members staging table [Master Data Services]"
   - "database [Master Data Services], members staging table"
 ms.assetid: a8c953da-ec20-47dc-8656-ed5f0dfed89b
-caps.latest.revision: 15
 author: leolimsft
 ms.author: lle
 manager: craigg

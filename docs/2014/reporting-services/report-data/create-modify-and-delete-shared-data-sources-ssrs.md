@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "modifying data source properties"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "data sources [Reporting Services], modifying properties"
   - "deleting shared data sources"
 ms.assetid: 1e58c1c2-5ecf-4ce6-9d04-0a8acfba17be
-caps.latest.revision: 50
 author: markingmyname
 ms.author: maghan
 manager: craigg

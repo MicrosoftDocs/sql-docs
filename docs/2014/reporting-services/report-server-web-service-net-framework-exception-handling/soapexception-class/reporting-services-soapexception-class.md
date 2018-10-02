@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "docset-sql-devref"
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "exceptions [Reporting Services], SoapException class"
   - "SoapException class"
 ms.assetid: 2cec49ee-20b1-40eb-a75b-0908d9c05b34
-caps.latest.revision: 32
 author: markingmyname
 ms.author: maghan
 manager: craigg

@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.selectvariables.f1"
 helpviewer_keywords: 
   - "Select Variables dialog box"
 ms.assetid: 7069a82b-905b-47a5-aee4-6fba24204979
-caps.latest.revision: 14
 author: douglaslms
 ms.author: douglasl
 manager: craigg

@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 topic_type: 
   - "apiref"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "Database event category [SQL Server]"
   - "SQL Server event classes, Database event category"
 ms.assetid: b61af738-f144-4992-b0b2-d44cb7240991
-caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg

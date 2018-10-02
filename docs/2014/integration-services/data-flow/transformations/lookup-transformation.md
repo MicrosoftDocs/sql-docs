@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.lookuptrans.f1"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "lookups [Integration Services]"
   - "exact matches [Integration Services]"
 ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
-caps.latest.revision: 104
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

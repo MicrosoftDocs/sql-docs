@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "tables [OLE DB]"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "adding tables"
   - "CreateTable function"
 ms.assetid: a7b8d142-d76a-44d9-a583-86ac5109fbe8
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg

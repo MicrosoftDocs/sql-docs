@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "08/10/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "report servers [Reporting Services], databases"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "reportservertempdb"
   - "reportserver database"
 ms.assetid: 97b2e1b5-3869-4766-97b9-9bf206b52262
-caps.latest.revision: 63
 author: markingmyname
 ms.author: maghan
 manager: craigg

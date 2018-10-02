@@ -5,8 +5,6 @@ ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.technology: filestream
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Remote Blob Store (RBS) [SQL Server]"

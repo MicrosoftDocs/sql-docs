@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "replication"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "MSSQL_ENG018752 error"
 ms.assetid: 405b2655-acb4-4e15-bcc6-b8f86bb22b37
-caps.latest.revision: 14
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

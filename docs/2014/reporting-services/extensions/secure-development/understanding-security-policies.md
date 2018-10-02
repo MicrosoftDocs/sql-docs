@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "docset-sql-devref"
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "code groups [Reporting Services]"
@@ -22,7 +20,6 @@ helpviewer_keywords:
   - "security policies [Reporting Services]"
   - "named permission sets [Reporting Services]"
 ms.assetid: a9bf043a-139a-4929-9a58-244815323df0
-caps.latest.revision: 31
 author: markingmyname
 ms.author: maghan
 manager: craigg

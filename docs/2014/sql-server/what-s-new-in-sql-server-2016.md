@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "05/25/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "database-engine"
@@ -12,7 +11,6 @@ ms.technology:
   - "master-data-services"
   - "replication"
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "new features [SQL Server]"
@@ -22,7 +20,6 @@ helpviewer_keywords:
   - "sql server 2014 sp1"
   - "sql server 2014 sp2"
 ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
-caps.latest.revision: 70
 author: craigg-msft
 ms.author: craigg
 manager: craigg

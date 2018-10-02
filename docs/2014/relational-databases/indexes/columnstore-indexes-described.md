@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: table-view-index
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "indexes creation, columnstore"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "columnstore index, described"
   - "xVelocity, columnstore indexes"
 ms.assetid: f98af4a5-4523-43b1-be8d-1b03c3217839
-caps.latest.revision: 50
 author: mikeraymsft
 ms.author: mikeray
 manager: craigg

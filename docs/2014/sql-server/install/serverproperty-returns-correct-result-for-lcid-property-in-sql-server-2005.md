@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SERVERPROPERTY function"
 ms.assetid: 833a2fc9-b480-4697-aa7b-9677e78ee0b4
-caps.latest.revision: 17
 author: mashamsft
 ms.author: mathoma
 manager: craigg

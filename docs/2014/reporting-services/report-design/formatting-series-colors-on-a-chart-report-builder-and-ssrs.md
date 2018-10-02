@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "10245"
@@ -15,7 +13,6 @@ f1_keywords:
   - "sql12.rtp.rptdesigner.serieslabelproperties.borders.f1"
   - "sql12.rtp.rptdesigner.seriesproperties.borders.f1"
 ms.assetid: fe541501-cac5-47b1-b95f-c410db789190
-caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg

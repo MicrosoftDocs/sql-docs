@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: clr
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "ADO.NET [CLR integration]"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "System.Transactions namespace"
   - "transactions [CLR integration]"
 ms.assetid: 381d206e-06e2-48d0-8206-295fcf06ac98
-caps.latest.revision: 19
 author: rothja
 ms.author: jroth
 manager: craigg

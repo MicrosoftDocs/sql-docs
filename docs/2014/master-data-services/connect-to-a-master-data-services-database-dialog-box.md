@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "master-data-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.mds.configmanager.srvconnect.f1"
 ms.assetid: b2f8c9b9-c31e-4f0d-9095-978709423190
-caps.latest.revision: 7
 author: leolimsft
 ms.author: lle
 manager: craigg

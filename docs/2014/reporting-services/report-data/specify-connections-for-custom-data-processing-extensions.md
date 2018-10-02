@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "custom data processing extensions [Reporting Services]"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "external data sources [Reporting Services]"
   - "data processing extensions [Reporting Services], connections"
 ms.assetid: 2cddc9ea-0e28-4350-80ae-332412908e47
-caps.latest.revision: 20
 author: markingmyname
 ms.author: maghan
 manager: craigg

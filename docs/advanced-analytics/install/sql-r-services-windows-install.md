@@ -161,7 +161,9 @@ Use the following steps to verify that all components used to launch external sc
 
 We recommend that you apply the latest cumulative update to both the database engine and machine learning components.
 
-Cumulative updates are installed through the Setup program. On an internet-connected device, use the following steps to update to an existing installed instance. For an offline device, see [Install on computers with no internet access > Apply cumulative updates](sql-ml-component-install-without-internet-access.md#apply-cu).
+On internet-connected devices, cumulative updates are typically applied through Windows Update, but you can also use the steps below for controlled updates. When you apply the update for the database engine, Setup pulls in the cumulative updates for R libraries you installed on the same instance. 
+
+On disconnected servers, extra steps are required. For more information, see [Install on computers with no internet access > Apply cumulative updates](sql-ml-component-install-without-internet-access.md#apply-cu).
 
 1. Start with a baseline instance already installed: SQL Server 2016 initial release, SQL Server 2016 SP 1, or SQL Server 2016 SP 2.
 
@@ -169,11 +171,9 @@ Cumulative updates are installed through the Setup program. On an internet-conne
 
 3. Select the latest cumulative update. An executable is downloaded and extracted automatically.
 
-4. Run Setup. Accept the licensing terms, and on the Feature selection page, review the features for which cumulative updates are applied. You should see every feature installed for the current instance, including machine learning features.
+4. Run Setup. Accept the licensing terms, and on the Feature selection page, review the features for which cumulative updates are applied. You should see every feature installed for the current instance, including R Services. Setup downloads the CAB files necessary to update all features.
 
-  ![](media/cumulative-update-feature-selection.png)
-
-5. Continue through the wizard, accepting the licensing terms for R and Python distributions. 
+5. Continue through the wizard, accepting the licensing terms for the R distribution. 
 
 <a name="bkmk_FollowUp"></a> 
 

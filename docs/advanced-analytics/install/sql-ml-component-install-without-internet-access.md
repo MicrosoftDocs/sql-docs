@@ -98,7 +98,7 @@ When you run SQL Server Setup on a computer disconnected from the internet, Setu
 
 We recommend that you apply the latest cumulative update to both the database engine and machine learning components. Cumulative updates are installed through the Setup program. 
 
-1. Start with a baseline instance. You can only apply cumulative updates on existing installations of SQL Server:
+1. Start with a baseline instance. You can only apply cumulative updates to existing installations of SQL Server:
 
   + SQL Server 2017 initial release
   + SQL Server 2016 initial release, SQL Server 2016 SP 1, or SQL Server 2016 SP 2
@@ -108,11 +108,11 @@ We recommend that you apply the latest cumulative update to both the database en
   + [SQL Server 2017 updates](https://sqlserverupdates.com/sql-server-2017-updates/)
   + [SQL Server 2016 updates](https://sqlserverupdates.com/sql-server-2016-updates/)
 
-3. Select the latest cumulative update. An executable is downloaded and extracted automatically.
+3. Select the latest cumulative update to download the executable.
 
 4. Get corresponding CAB files for R and Python. For download links, see [CAB downloads for cumulative updates on SQL Server in-database analytics instances](sql-ml-cab-downloads.md).
 
-5. Transfer all files to the same folder on the offline computer.
+5. Transfer all files, executable and CAB files, to the same folder on the offline computer.
 
 6. Run Setup. Accept the licensing terms, and on the Feature selection page, review the features for which cumulative updates are applied. You should see every feature installed for the current instance, including machine learning features.
 

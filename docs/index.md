@@ -69,7 +69,7 @@ ms.technology:
         </ul>
     </div>
     <div class="container">
-        <h1 class="screenReader">Microsoft SQL Documentation</h1>
+        <h1 class="screenReader">Microsoft SQL documentation</h1>
         <ul class="pivots">
             <li>
                 <a href="#sqlserver">SQL Server</a>

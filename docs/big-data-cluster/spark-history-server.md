@@ -12,19 +12,18 @@ ms.date: 10/01/2018
 ---
 # Debug and Diagnose Spark Applications on SQL Server Big Data Clusters in Spark History Server
 
-This article provides guidance on how to use extended Spark History Server to debug and diagnose Spark applications in a SQL Server 2019 Big Data Cluster. These debug and diagnosis capabilities are built into Spark History Server and powered by Microsoft. The extension includes data tab and graph tab and diagnosis tab. In data tab, users can check the input and output data of the Spark job. In graph tab, users can check the data flow and replay the job graph. In diagnosis tab, user can refer to Data skew, Time skew, and Executor Usage analysis.
+This article provides guidance on how to use extended Spark History Server to debug and diagnose Spark applications in a SQL Server 2019 (preview) Big Data Cluster. These debug and diagnosis capabilities are built into Spark History Server and powered by Microsoft. The extension includes data tab and graph tab and diagnosis tab. In data tab, users can check the input and output data of the Spark job. In graph tab, users can check the data flow and replay the job graph. In diagnosis tab, user can refer to Data skew, Time skew, and Executor Usage analysis.
 
 ## Get access to Spark History Server
 
 The Spark history server user experience from open source is enhanced with information, which includes job-specific data and interactive visualization of job graph and data flows for big data cluster. 
 
 ### Open the Spark History Server Web UI by URL
-Open the Spark History Server by browsing to the following URL, replace <Ipaddress> and <Port> with Big Data Cluster specific information. More information can be referred to: [Deploy SQL Server Big Data Cluster](quickstart-big-data-cluster-deploy.md)
+Open the Spark History Server by browsing to the following URL, replace `<Ipaddress>` and `<Port>` with Big Data Cluster specific information. More information can be referred to: [Deploy SQL Server Big Data Cluster](quickstart-big-data-cluster-deploy.md)
 
-
-   ```
-   https://<Ipaddress>:<Port>/gateway/default/sparkhistory
-   ```
+```
+https://<Ipaddress>:<Port>/gateway/default/sparkhistory
+```
 
 The Spark History Server web UI looks like:
 
@@ -74,8 +73,8 @@ Select job ID then click **Data** on the tool menu to get the data view.
 
     ![graph feedback](./media/apache-azure-spark-history-server/sparkui-graph-feedback.png)
 
-
 ## Graph tab in Spark History Server
+
 Select job ID then click **Graph** on the tool menu to get the job graph view.
 
 + Check overview of your job by the generated job graph. 

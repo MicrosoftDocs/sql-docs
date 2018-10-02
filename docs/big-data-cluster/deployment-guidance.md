@@ -41,7 +41,6 @@ For guidance on configuring one of these Kubernetes cluster options for SQL Serv
 
    - [Configure Minikube](deploy-on-minikube.md)
    - [Configure Kubernetes on Azure Kubernetes Service](deploy-on-aks.md)
-   - [Configure Kubernetes on multiple VMs](deploy-on-vms.md)
 
 ## <a id="deploy"></a> Deploy SQL Server Big Data cluster
 

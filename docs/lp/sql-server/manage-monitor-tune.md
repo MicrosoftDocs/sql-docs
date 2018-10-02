@@ -31,7 +31,7 @@ featureFlags:
                 </a>
             </li>
             <li>
-                <a href="https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm">
+                <a href="https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">

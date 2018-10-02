@@ -1,5 +1,5 @@
 ---
-title: How to use notebooks in SQL Server 2019 CTP 2.0 | Microsoft Docs
+title: How to use notebooks in SQL Server 2019 preview | Microsoft Docs
 description:
 author: rothja 
 ms.author: jroth 
@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.prod: sql
 ---
 
-# How to use notebooks in SQL Server 2019 CTP 2.0
+# How to use notebooks in SQL Server 2019 preview
 
 This how you can launch notebooks on the cluster and start authoring your own Notebooks. It also shows how to submit jobs against the cluster.
 

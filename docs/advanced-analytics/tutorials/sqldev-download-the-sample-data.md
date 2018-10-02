@@ -15,7 +15,7 @@ manager: cgronlun
 
 This article explains how to obtain sample data for R and Python tutorials for in-database analytics in SQL Server.
 
-Data originates from the [NYC Taxi and Limousine Commission](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml) public data set. 
+Data originates from the [NYC Taxi and Limousine Commission](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml) public data set. We took a snaphot of the dataset and captured one percent of available data for our demo database. On your system, the database backup file is slightly over 90 MB, providing 1.7 million rows in the primary data table.
 
 When you are finished with the steps in this article, the **NYCTaxi_Sample** database is available on your local instance, providing demo data for hands-on learning. The database name must be **NYCTaxi_Sample** if you want to run the demo scripts with no modification.
 

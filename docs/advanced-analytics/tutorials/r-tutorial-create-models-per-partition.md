@@ -26,7 +26,7 @@ Partition-based modeling is enabled through two new parameters on [sp_execute_ex
 In this tutorial, learn partition-based modeling using the classic NYC taxi sample data and R script. The partition column is the payment method.
 
 > [!div class="checklist"]
-> * Partition based on a payment_type column. Values in this column segment data, one partition for each payment types.
+> * Partitions are based on payment types (5).
 > * Create and train models on each partition and store the objects in the database.
 > * Predict the probability of tip outcomes over each partition model, using sample data reserved for that purpose.
 
@@ -36,16 +36,15 @@ To complete this tutorial, you must have the following:
 
 + Sufficient system resources. The data set is large and training operations are resource-intensive. If possible, use a system having at least 8 GB RAM. Alternatively, you can use smaller data sets to work around resource constraints. Instructions for reducing the data set are inline. 
 
-+ A tool for T-SQL query execution, such as [SQL Server Management Studio].(https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)
++ A tool for T-SQL query execution, such as [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
-+ [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak), which can [download and restore](sqldev-download-the-sample-data.md) to your local database engine instance. File size is approximately 90 MB.
++ [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak), which you can [download and restore](sqldev-download-the-sample-data.md) to your local database engine instance. File size is approximately 90 MB.
 
 + SQL Server 2019 preview database engine instance, with Machine Learning Services and R integration.
 
-> [!Tip] 
-> Check version by executing `SELECT @@Version` as a T-SQL query in a query tool. Output should be "Microsoft SQL Server 2019 (CTP 2.0) - 15.0.x".
+Check version by executing **`SELECT @@Version`** as a T-SQL query in a query tool. Output should be "Microsoft SQL Server 2019 (CTP 2.0) - 15.0.x".
 
-This tutorial uses R installed with Machine Learning Services. You can verify R installation by returning a well-formatted list of all R packages currently installed with your database engine instance:
+Check availability of R packages by returning a well-formatted list of all R packages currently installed with your database engine instance:
 
 ```sql
 EXECUTE sp_execute_external_script

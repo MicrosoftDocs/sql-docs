@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "2016-10-18"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.reportserver.serverproperties.advanced.f1"
 ms.assetid: 07b78a84-a6aa-4502-861d-349720ef790e
-caps.latest.revision: 16
 author: markingmyname
 ms.author: maghan
 manager: craigg

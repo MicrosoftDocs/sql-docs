@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "parameters [Reporting Services], DMX"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "data mining [Reporting Services]"
   - "passing parameters [Reporting Services]"
 ms.assetid: 2de825e9-6d8a-4128-add0-da15dc6cea3e
-caps.latest.revision: 62
 author: markingmyname
 ms.author: maghan
 manager: craigg

@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "system functions [SQL Server]"
   - "user-defined functions [SQL Server], system"
 ms.assetid: 3cb54053-ef65-4558-ae96-8686b6b22f4f
-caps.latest.revision: 17
 author: mashamsft
 ms.author: mathoma
 manager: craigg

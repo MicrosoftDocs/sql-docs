@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "upgrading clusters"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "clusters [SQL Server], creating"
   - "failover clustering [SQL Server], upgrading"
 ms.assetid: ea8b7d66-e5a1-402f-9928-8f7310e84f5c
-caps.latest.revision: 59
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

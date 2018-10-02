@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "report models [Reporting Services], creating"
   - "Report Manager [Reporting Services], model creation"
 ms.assetid: 8e5d2bd3-48ec-45f3-afee-6d86797c8f28
-caps.latest.revision: 28
 author: markingmyname
 ms.author: maghan
 manager: craigg

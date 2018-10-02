@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "10526"
@@ -27,7 +25,6 @@ f1_keywords:
   - "10527"
   - "sql12.rtp.rptdesigner.maplayerproperties.analyticaldata.f1"
 ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
-caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg

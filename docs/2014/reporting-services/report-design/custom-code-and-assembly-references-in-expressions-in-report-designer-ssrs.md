@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "items [Reporting Services], expressions"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "data manipulation [Reporting Services]"
   - "SQL Server Reporting Services, expressions"
 ms.assetid: ae8a0166-2ccc-45f4-8d28-c150da7b73de
-caps.latest.revision: 76
 author: markingmyname
 ms.author: maghan
 manager: craigg

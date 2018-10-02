@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "08/10/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "manual Reporting Services migrations"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "upgrading Reporting Services"
   - "migrating Reporting Services"
 ms.assetid: a6fc56c1-c504-438d-a2b0-5ed29c24e7d6
-caps.latest.revision: 51
 author: markingmyname
 ms.author: maghan
 manager: craigg

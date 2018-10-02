@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "report servers [Reporting Services], properties"
 ms.assetid: 1ed0f84b-b12a-4e49-b65c-a11a99f9093f
-caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
 manager: craigg

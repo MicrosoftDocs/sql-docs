@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.rtp.rptdesigner.rowvisibility.f1"
   - "10126"
 ms.assetid: 557ecf70-62b1-47f5-9322-0ebdc809d018
-caps.latest.revision: 12
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg

@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "time zones [Reporting Services]"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "schedules [Reporting Services], clock settings"
   - "schedules [Reporting Services], time zones"
 ms.assetid: 69a19468-baa1-40f6-b158-8afdab0f8968
-caps.latest.revision: 21
 author: markingmyname
 ms.author: maghan
 manager: craigg

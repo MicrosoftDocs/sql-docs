@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "10435"
 helpviewer_keywords: 
   - "Report Data pane"
 ms.assetid: 1492aa39-aeb1-4509-ab97-b9edd0901b7e
-caps.latest.revision: 11
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg

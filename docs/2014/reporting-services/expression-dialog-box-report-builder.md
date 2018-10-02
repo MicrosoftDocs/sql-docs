@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "10040"
 helpviewer_keywords: 
   - "expressions"
 ms.assetid: e89c4d97-5d41-4b55-8695-79329edac15d
-caps.latest.revision: 16
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg

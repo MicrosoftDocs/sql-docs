@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology:
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.connecttosqlserver.connectionproperties.f1"
 ms.assetid: edc1143c-6a47-4b02-92ab-441bdea8ea8a
-caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg

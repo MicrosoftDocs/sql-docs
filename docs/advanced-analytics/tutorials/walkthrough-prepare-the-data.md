@@ -261,9 +261,9 @@ When you download the files from the GitHub repository, you get the following:
 
 The data is a representative sampling of the New York City taxi data set, which contains records of over 173 million individual trips in 2013, including the fares and tip amounts paid for each trip. To make the data easier to work with, the Microsoft data science team performed downsampling to get just 1% of the data.  This data has been shared in a public blob storage container in Azure, in .CSV format. The source data is an uncompressed file, just under 350 MB.
 
-+ Public dataset: [NYC Taxi and Limousine Commission] (http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)
++ Public dataset: [NYC Taxi and Limousine Commission](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)
 
-+ [Building Azure ML Models on the NYC Taxi Dataset](https://blogs.technet.microsoft.com/machinelearning/2015/04/02/building-azure-ml-models-on-the-nyc-taxi-dataset/.
++ [Building Azure ML Models on the NYC Taxi Dataset](https://blogs.technet.microsoft.com/machinelearning/2015/04/02/building-azure-ml-models-on-the-nyc-taxi-dataset/).
 
 ### PowerShell and R script files
 

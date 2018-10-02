@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 topic_type: 
   - "apiref"
 helpviewer_keywords: 
   - "ISSAbort interface"
 ms.assetid: 7c4df482-4a83-4da0-802b-3637b507693a
-caps.latest.revision: 11
 author: mashamsft
 ms.author: mathoma
 manager: craigg

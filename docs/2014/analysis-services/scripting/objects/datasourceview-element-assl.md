@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "DataSourceView Element"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "DataSourceView element"
 ms.assetid: cda26126-8af2-4519-8237-f4a57976a284
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg

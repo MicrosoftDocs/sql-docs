@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "ReadSourceData Element"
@@ -19,7 +17,6 @@ topic_type:
 helpviewer_keywords: 
   - "ReadSourceData element"
 ms.assetid: 7da4665a-fba3-4aae-8dee-678dc14d3b05
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg

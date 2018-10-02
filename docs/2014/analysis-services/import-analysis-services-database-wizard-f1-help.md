@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.importdbwizard.f1"
 helpviewer_keywords: 
   - "Import Analysis Services Database Wizard"
 ms.assetid: 42f67aa9-4898-4f13-afd5-cf3711d5e5e0
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg

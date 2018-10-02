@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "04/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "docset-sql-devref"
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 dev_langs: 
   - "VB"
@@ -25,7 +23,6 @@ helpviewer_keywords:
   - "tasks [Integration Services], events"
   - "IDTSEvents interface"
 ms.assetid: 0f00bd66-efd5-4f12-9e1c-36195f739332
-caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

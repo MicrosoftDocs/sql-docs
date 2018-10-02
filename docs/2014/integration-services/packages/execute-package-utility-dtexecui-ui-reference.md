@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.dtexecui.general.f1"
@@ -23,7 +21,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "DTExecUI utility"
 ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
-caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

@@ -4,7 +4,7 @@ description: Overview introduction to standalone R Server and Machine Learning S
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 08/27/2018  
+ms.date: 10/01/2018  
 ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
@@ -18,7 +18,7 @@ SQL Server provides installation support for a standalone R Server or Machine Le
 In SQL Server 2016, this feature is called **R Server (Standalone)** and is R-only. In SQL Server 2017, it's called **Machine Learning Server (Standalone)** and includes both R and Python.  
 
 > [!Note]
-> As installed by SQL Server Setup, a standalone server is functionally equivalent to the non-SQL-branded versions of [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), supporting the same user scenarios, including remote execution, operationalization and web services, and the complete collection of RevoScaleR and revoscalepy functions.
+> As installed by SQL Server Setup, a standalone server is functionally equivalent to the non-SQL-branded versions of [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), supporting the same user scenarios, including remote execution, operationalization and web services, and the complete collection of R and Python libraries.
 
 ## Components
 

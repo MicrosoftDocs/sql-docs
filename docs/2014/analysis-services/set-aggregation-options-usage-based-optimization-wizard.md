@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.storagedesignwizard.setaggregateoptions.f1"
 ms.assetid: 5e5c59f3-5a2d-44de-b1ba-2c56b76d3c8d
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg

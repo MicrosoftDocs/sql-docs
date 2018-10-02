@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "MoveWithDescendants Element"
@@ -23,7 +21,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "MoveWithDescendants element"
 ms.assetid: d02285b6-1801-4da9-8e2b-9ab008e25558
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg

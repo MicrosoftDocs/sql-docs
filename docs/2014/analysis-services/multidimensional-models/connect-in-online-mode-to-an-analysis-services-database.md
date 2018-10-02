@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Analysis Services, connecting"
 ms.assetid: 33041234-7106-404f-a289-8e904f32aff2
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg

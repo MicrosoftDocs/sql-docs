@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.asprocessingtask.f1"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "Analysis Services Processing task"
   - "processing objects [Integration Services]"
 ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
-caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

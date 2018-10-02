@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "Insert Element"
@@ -23,7 +21,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "Insert command"
 ms.assetid: d1137033-cc19-4bcb-b93d-8575f17bea6b
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg

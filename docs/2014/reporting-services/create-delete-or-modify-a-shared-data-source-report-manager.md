@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "shared data sources [Reporting Services]"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "deleting shared data sources"
   - "modifying shared data sources"
 ms.assetid: cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2
-caps.latest.revision: 47
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg

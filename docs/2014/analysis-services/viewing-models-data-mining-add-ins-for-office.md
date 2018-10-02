@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "templates [Visio]"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "diagram, creating"
   - "shapes, creating"
 ms.assetid: 2054d1b0-3828-443e-b60e-529adb9afa7f
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg

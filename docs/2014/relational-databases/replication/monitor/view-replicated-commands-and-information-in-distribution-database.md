@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "replication"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "TSQL"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "distribution databases [SQL Server replication], viewing replicated commands"
   - "viewing replicated commands"
 ms.assetid: 9c20acec-8fab-4483-b9c1-dfe3768f85dd
-caps.latest.revision: 30
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

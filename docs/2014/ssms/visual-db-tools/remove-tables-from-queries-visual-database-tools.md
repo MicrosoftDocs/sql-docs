@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology:
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "deleting tables"
@@ -14,7 +12,6 @@ helpviewer_keywords:
   - "dropping tables"
   - "queries [SQL Server], tables"
 ms.assetid: 8fea0b4f-99b7-4050-8d6f-a97ffb839619
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg

@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "input files [Analysis Services]"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "deploying [Analysis Services], installation targets"
   - "modifying installation targets"
 ms.assetid: cb706817-6f63-4771-92c3-b70030bbce3d
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg

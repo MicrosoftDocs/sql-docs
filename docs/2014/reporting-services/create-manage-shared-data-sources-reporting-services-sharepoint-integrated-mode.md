@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SharePoint integration [Reporting Services], shared data sources"
   - "shared data sources [Reporting Services]"
 ms.assetid: 2d3428e4-a810-4e66-a287-ff18e57fad76
-caps.latest.revision: 12
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg

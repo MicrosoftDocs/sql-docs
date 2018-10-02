@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "CubeHierarchy Data Type"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "CubeHierarchy data type"
 ms.assetid: cd633409-0c14-4dd9-97cc-3d30e25df24f
-caps.latest.revision: 44
 author: minewiskan
 ms.author: owend
 manager: craigg

@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "viewing Key Performance Indicators"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "parent KPIs [Analysis Services]"
   - "child KPIs"
 ms.assetid: 73aee2da-da30-44f1-829c-0a4c078a7768
-caps.latest.revision: 42
 author: minewiskan
 ms.author: owend
 manager: craigg

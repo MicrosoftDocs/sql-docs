@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/14/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Cube Wizard"
 ms.assetid: 2a500f75-6cb7-42bc-8d98-019841fa924b
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg

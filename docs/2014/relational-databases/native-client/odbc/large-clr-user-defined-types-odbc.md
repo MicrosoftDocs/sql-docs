@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "ODBC, large user-defined types"
   - "large user-defined types [ODBC]"
 ms.assetid: ddce337e-bb6e-4a30-b7cc-4969bb1520a9
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg

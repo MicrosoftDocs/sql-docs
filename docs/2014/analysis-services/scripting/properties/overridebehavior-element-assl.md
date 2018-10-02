@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "OverrideBehavior Element"
@@ -19,7 +17,6 @@ topic_type:
 helpviewer_keywords: 
   - "OverrideBehavior element"
 ms.assetid: 6a5b361a-6061-4b73-b1a7-1237fb77606c
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg

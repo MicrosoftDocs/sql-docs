@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "Analysis Services Scripting Language XML Element Hierarchy"
@@ -23,7 +21,6 @@ helpviewer_keywords:
   - "objects [Analysis Services Scripting Language]"
   - "hierarchies [Analysis Services Scripting Language]"
 ms.assetid: 343dbab9-4c2c-49b9-8f35-efc65f2216f1
-caps.latest.revision: 31
 author: minewiskan
 ms.author: owend
 manager: craigg

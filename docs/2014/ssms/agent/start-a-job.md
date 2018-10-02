@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology:
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "jobs [SQL Server Agent], starting"
   - "SQL Server Agent jobs, starting"
   - "starting jobs"
 ms.assetid: cec9f7f7-d0a7-4239-9dc5-a69c011ebaa0
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg

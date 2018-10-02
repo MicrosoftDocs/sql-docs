@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "3181 (Database Engine error)"
 ms.assetid: e6d2e716-5263-477c-ad0e-7bcbfef4c1f3
-caps.latest.revision: 13
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

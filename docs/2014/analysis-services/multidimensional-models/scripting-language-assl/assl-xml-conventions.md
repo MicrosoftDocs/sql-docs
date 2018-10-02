@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "whitespace [Analysis Services Scripting Language]"
@@ -25,7 +23,6 @@ helpviewer_keywords:
   - "hierarchies [Analysis Services Scripting Language]"
   - "inherited defaults [Analysis Services Scripting Language]"
 ms.assetid: bce4edad-4420-41ce-9672-8c00c5c0dec6
-caps.latest.revision: 24
 author: minewiskan
 ms.author: owend
 manager: craigg

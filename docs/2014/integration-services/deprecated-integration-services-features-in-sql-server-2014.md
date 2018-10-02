@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "deprecated features [Integration Services]"
   - "Integration Services, backward compatibility"
 ms.assetid: 7e0a28b1-324b-4a0b-862b-aabe476f06e5
-caps.latest.revision: 31
 author: douglaslms
 ms.author: douglasl
 manager: craigg

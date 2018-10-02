@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.ins.instwizard.reportserverinstoptions.f1"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "report servers [Reporting Services], installing"
   - "SQL Server Installation Wizard, Report Server Installation Options page"
 ms.assetid: e4561f6c-bc7f-467e-821a-cde8e5cd7391
-caps.latest.revision: 43
 author: markingmyname
 ms.author: maghan
 manager: craigg

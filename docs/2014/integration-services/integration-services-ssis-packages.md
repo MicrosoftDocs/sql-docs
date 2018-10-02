@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/14/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Integration Services packages, about packages"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "Integration Services packages, about packages"
   - "Integration Services packages"
 ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
-caps.latest.revision: 68
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

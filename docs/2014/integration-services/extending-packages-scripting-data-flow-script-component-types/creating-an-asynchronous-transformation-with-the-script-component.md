@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "docset-sql-devref"
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 dev_langs: 
   - "VB"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "transformation components [Integration Services]"
   - "Script component [Integration Services], transformation components"
 ms.assetid: 0d814404-21e4-4a68-894c-96fa47ab25ae
-caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

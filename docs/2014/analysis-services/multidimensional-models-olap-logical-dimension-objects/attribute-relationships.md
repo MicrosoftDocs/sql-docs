@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "04/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "member properties [Analysis Services], attribute relationships"
@@ -25,7 +23,6 @@ helpviewer_keywords:
   - "storing data [Analysis Services], attribute relationships"
   - "relationships [Analysis Services], attributes"
 ms.assetid: 2491422a-4cf5-4b23-b6ab-289222b22ce8
-caps.latest.revision: 46
 author: minewiskan
 ms.author: owend
 manager: craigg

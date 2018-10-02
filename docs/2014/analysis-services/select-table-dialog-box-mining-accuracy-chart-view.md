@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dm.miningmodeleditor.accuracychart.selecttable.f1"
 helpviewer_keywords: 
   - "Select Table dialog box"
 ms.assetid: 5694d3fe-52e8-4fb7-a1f1-22629151b618
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg

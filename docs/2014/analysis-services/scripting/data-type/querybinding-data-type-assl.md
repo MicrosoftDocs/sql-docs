@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "QueryBinding Data Type"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "QueryBinding data type"
 ms.assetid: 7b58fc89-0060-4e56-ad99-6f74fe8cfc6d
-caps.latest.revision: 38
 author: minewiskan
 ms.author: owend
 manager: craigg

@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "KeyColumns Element"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "KeyColumns element"
 ms.assetid: 03f3ad21-25cb-4afd-9287-cbf942ac1ad9
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg

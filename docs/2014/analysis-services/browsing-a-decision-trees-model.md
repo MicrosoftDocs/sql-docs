@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "mining models, browsing"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "decision tree [data mining]"
   - "dependency network"
 ms.assetid: 6b3dd1ae-caff-41c3-817b-802dc020ff88
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg

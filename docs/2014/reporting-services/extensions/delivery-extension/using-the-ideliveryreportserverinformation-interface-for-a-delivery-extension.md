@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "docset-sql-devref"
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "IDeliveryReportServerInformation interface"
   - "delivery extensions [Reporting Services], retrieving report server information"
 ms.assetid: adbce647-18f3-470c-8114-42f8bcc95dc2
-caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
 manager: craigg

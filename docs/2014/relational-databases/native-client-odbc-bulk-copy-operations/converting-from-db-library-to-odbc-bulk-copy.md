@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "converting DB-Library to ODBC bulk copy"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "ODBC, bulk copy operations"
   - "DB-Library bulk copy"
 ms.assetid: 0bc15bdb-f19f-4537-ac6c-f249f42cf07f
-caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg

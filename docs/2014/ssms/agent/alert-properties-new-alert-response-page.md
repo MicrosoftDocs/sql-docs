@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology:
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.ag.alert.response.f1"
 ms.assetid: 72daf008-f9ea-4077-b217-5048e7759d3e
-caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg

@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "CubeDimensionID Element"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "CubeDimensionID element"
 ms.assetid: d1341fb2-9afe-40f1-a704-ce548bce48fc
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg

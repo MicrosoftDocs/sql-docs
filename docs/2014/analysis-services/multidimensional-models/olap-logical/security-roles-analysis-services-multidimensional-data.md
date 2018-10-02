@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "storage [Analysis Services], roles"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "storing data [Analysis Services], roles"
   - "access rights [Analysis Services], roles"
 ms.assetid: 5b7e9cef-ff68-4d8e-99bc-e0094ced1baa
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg

@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/14/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: data-movement
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "field terminators [SQL Server]"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "bulk exporting [SQL Server], data formats"
   - "XML bulk load [SQL Server]"
 ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
-caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

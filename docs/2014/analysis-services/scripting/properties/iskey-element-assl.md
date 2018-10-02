@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "IsKey Element"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "IsKey element"
 ms.assetid: 523b26c8-5cce-415d-a360-9a0d8724b872
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg

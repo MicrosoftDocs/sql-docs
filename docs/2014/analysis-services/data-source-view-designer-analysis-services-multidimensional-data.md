@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.dsvdesigner.f1"
 helpviewer_keywords: 
   - "Data Source View Designer"
 ms.assetid: 6f40a074-761f-440b-a999-09b755bd86ce
-caps.latest.revision: 24
 author: minewiskan
 ms.author: owend
 manager: craigg

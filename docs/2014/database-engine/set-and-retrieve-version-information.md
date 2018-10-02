@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology:
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "historical information [SQL Server]"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "status information [SQL Server], source control files"
   - "historical information [SQL Server], source control files"
 ms.assetid: c3f253c4-4e3d-48e8-8d90-bd6ee899faf7
-caps.latest.revision: 22
 author: mashamsft
 ms.author: mathoma
 manager: craigg

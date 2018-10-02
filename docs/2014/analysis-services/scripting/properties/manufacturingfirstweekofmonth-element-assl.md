@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "ManufacturingFirstWeekOfMonth Element"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "ManufacturingFirstWeekOfMonth element"
 ms.assetid: adb76a2f-c6c3-459e-a441-e80adad76ff1
-caps.latest.revision: 26
 author: minewiskan
 ms.author: owend
 manager: craigg

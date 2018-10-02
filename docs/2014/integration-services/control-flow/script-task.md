@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.scripttask.f1"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "Script task [Integration Services], about Script task"
   - "Script task [Integration Services]"
 ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
-caps.latest.revision: 67
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

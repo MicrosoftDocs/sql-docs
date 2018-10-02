@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Mining Accuracy Chart [Analysis Services], nested tables"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "nested tables"
   - "adding nested tables"
 ms.assetid: 162e0686-ada3-4dd3-9151-9589926e6613
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg

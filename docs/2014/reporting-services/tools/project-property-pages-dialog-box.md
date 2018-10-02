@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.rpt.rptdesigner.projectpropertypages.general.f1"
 helpviewer_keywords: 
   - "Project Property Pages dialog box"
 ms.assetid: 209d9e22-37fc-418f-8739-83adcf447d3f
-caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
 manager: craigg

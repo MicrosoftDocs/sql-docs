@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology:
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Agent jobs, operators"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "jobs [SQL Server Agent], operators"
   - "notifications [SQL Server], job status"
 ms.assetid: aa818155-6fa2-4565-a09f-5c7e31c89754
-caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg

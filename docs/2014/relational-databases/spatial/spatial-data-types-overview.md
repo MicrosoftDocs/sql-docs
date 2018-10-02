@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/14/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "dbe-spatial"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "geometry data type [SQL Server], understanding"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "planar spatial data [SQL Server], geometry data type"
   - "spatial data types [SQL Server]"
 ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
-caps.latest.revision: 48
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

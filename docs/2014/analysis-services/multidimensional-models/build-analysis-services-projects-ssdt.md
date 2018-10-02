@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "projects [Analysis Services], building"
   - "Business Intelligence Development Studio, project building [Analysis Services]"
 ms.assetid: caac03cb-b2b4-4652-8913-3dd39c4b0127
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg

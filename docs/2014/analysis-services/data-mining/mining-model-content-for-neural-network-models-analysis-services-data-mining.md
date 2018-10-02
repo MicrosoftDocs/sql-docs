@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "output neurons [Analysis Services]"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "mining model content, neural network models"
   - "neural network model [Analysis Services]"
 ms.assetid: ea21ff9d-857f-475c-bd3d-6d1405bad069
-caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
 manager: craigg

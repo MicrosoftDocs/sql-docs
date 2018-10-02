@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 topic_type: 
   - "apiref"
 helpviewer_keywords: 
   - "SQLNativeSql function"
 ms.assetid: 2d999fec-9e22-4514-ad5f-22a64b82f95b
-caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg

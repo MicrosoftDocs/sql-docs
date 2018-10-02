@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "UpdateCells Element"
@@ -23,7 +21,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "UpdateCells command"
 ms.assetid: 18336a35-8a46-4532-9ee7-71828b2982af
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg

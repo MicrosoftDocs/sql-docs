@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "mapped annotation"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "sql:mapped"
   - "column mapping [SQLXML]"
 ms.assetid: 7042741e-ce4d-4912-9c4a-d77194a028fc
-caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "replication"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "snapshots [SQL Server replication], creating"
   - "snapshot replication [SQL Server], initial snapshots"
 ms.assetid: 742727a1-5189-44ec-b3ae-6fd7aa1f5347
-caps.latest.revision: 42
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

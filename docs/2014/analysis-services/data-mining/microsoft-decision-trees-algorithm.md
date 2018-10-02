@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "predictions [Analysis Services], discrete attributes"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "continuous columns"
   - "regression algorithms [Analysis Services]"
 ms.assetid: 95ffe66f-c261-4dc5-ad57-14d2d73205ff
-caps.latest.revision: 70
 author: minewiskan
 ms.author: owend
 manager: craigg

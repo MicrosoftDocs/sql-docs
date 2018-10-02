@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "security [Reporting Services], reports"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "confidential reports [Reporting Services]"
   - "resources [Reporting Services], security"
 ms.assetid: 63cd55c7-fd2a-49e3-a3f8-59eb1a1c6e83
-caps.latest.revision: 46
 author: markingmyname
 ms.author: maghan
 manager: craigg

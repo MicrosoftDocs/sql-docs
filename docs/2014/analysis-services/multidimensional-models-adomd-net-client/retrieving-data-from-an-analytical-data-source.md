@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "data retrieval [ADOMD.NET]"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "ADOMD.NET, data retrieval"
   - "data retrieval [ADOMD.NET], about retrieving data"
 ms.assetid: 88358189-28aa-4bc7-8dda-5a92e3a012b8
-caps.latest.revision: 41
 author: minewiskan
 ms.author: owend
 manager: craigg

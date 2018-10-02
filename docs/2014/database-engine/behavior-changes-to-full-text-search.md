@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: search
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "full-text search [SQL Server], breaking changes"
   - "behavior changes [full-text search]"
   - "full-text indexes [SQL Server], breaking changes"
 ms.assetid: 573444e8-51bc-4f3d-9813-0037d2e13b8f
-caps.latest.revision: 39
 author: craigg-msft
 ms.author: craigg
 manager: craigg

@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "DMSCHEMA_MINING_FUNCTIONS"
@@ -17,7 +15,6 @@ topic_type:
 helpviewer_keywords: 
   - "DMSCHEMA_MINING_FUNCTIONS rowset"
 ms.assetid: 9ace7493-a7b1-45ca-93de-3cb2f3597017
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg

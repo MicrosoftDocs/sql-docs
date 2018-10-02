@@ -4,13 +4,10 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "master-data-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: cab1c662-5d40-4c16-9f5c-36ff9608810b
-caps.latest.revision: 5
 author: leolimsft
 ms.author: lle
 manager: craigg

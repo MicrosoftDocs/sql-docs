@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "mining models, browsing"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "clustering [data mining]"
   - "mining model, clustering"
 ms.assetid: 7f3f0949-d791-403a-88e2-54cb1a803dae
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg

@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "DMSCHEMA_MINING_SERVICE_PARAMETERS"
@@ -17,7 +15,6 @@ topic_type:
 helpviewer_keywords: 
   - "DMSCHEMA_MINING_SERVICE_PARAMETERS rowset"
 ms.assetid: 5994e66b-84d0-4279-9f50-d92fd829dd83
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg

@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "vs.debug.callstack"
 helpviewer_keywords: 
   - "Call Stack Window [Transact-SQL]"
 ms.assetid: ddb0b19c-87cd-4883-bcb8-ec09ffb30369
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg

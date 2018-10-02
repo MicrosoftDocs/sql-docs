@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Errors and Warnings event category [SQL Server]"
 ms.assetid: f375d303-7aab-4c51-a955-05a2762cc4d1
-caps.latest.revision: 24
 author: minewiskan
 ms.author: owend
 manager: craigg

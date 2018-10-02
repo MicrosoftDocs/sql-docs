@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "10/14/2015"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: security
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "SQL Server 2014"
 f1_keywords: 
   - "sql12.swb.databaseuser.permissions.database.f1--May use common.permissions"
   - "sql12.swb.databaseuser.permissions.object.f1--May use common.permissions"

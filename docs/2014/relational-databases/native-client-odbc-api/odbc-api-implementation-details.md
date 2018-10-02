@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "ODBC, functions"
@@ -14,7 +12,6 @@ helpviewer_keywords:
   - "ODBC, SQL Server-specific behaviors"
   - "functions [ODBC]"
 ms.assetid: dca92489-f179-4b1f-997c-adcc46aa17a3
-caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
 manager: craigg

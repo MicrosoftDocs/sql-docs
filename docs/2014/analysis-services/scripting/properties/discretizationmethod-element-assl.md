@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "DiscretizationMethod Element"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "DiscretizationMethod element"
 ms.assetid: 4cfe015f-ad6c-47e1-8aff-c9c7677867b1
-caps.latest.revision: 31
 author: minewiskan
 ms.author: owend
 manager: craigg

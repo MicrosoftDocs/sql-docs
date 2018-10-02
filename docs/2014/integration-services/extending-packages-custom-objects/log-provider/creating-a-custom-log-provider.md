@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "docset-sql-devref"
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 dev_langs: 
   - "VB"
@@ -16,7 +14,6 @@ dev_langs:
 helpviewer_keywords: 
   - "custom log providers [Integration Services], creating"
 ms.assetid: fc20af96-9eb8-4195-8d3f-8a4d7c753f24
-caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "scripts [Reporting Services], running"
 ms.assetid: 0de4995c-85ec-4d4c-aaef-fbd30edfb20f
-caps.latest.revision: 35
 author: markingmyname
 ms.author: maghan
 manager: craigg

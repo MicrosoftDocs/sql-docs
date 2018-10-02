@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Security Audit event category [SQL Server]"
   - "event classes [Analysis Services], security audit"
   - "security events [Analysis Services]"
 ms.assetid: 9686a495-68d7-4137-8e30-2655aa519f6c
-caps.latest.revision: 24
 author: minewiskan
 ms.author: owend
 manager: craigg

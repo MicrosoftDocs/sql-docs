@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "SqlServiceType Property (SqlService Class)"
@@ -19,7 +17,6 @@ topic_type:
 helpviewer_keywords: 
   - "SqlServiceType property"
 ms.assetid: dbff2968-3011-41d6-a141-52d814af0213
-caps.latest.revision: 43
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/14/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "ISSAsynchStatus::GetStatus (OLE DB)"
@@ -15,7 +13,6 @@ topic_type:
 helpviewer_keywords: 
   - "GetStatus method"
 ms.assetid: 354b6ee4-b5a1-48f6-9403-da3bdc911067
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg

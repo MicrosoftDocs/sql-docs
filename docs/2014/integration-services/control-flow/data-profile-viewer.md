@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Data Profile Viewer [Integration Services]"
   - "Data Profiling task [Integration Services], output viewer"
 ms.assetid: b9043428-ce26-45bb-910c-588d07579565
-caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

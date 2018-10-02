@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.adonetsource.erroroutput.f1"
 ms.assetid: 4dd9d129-a95c-4d3a-bbbf-e84a39089950
-caps.latest.revision: 13
 author: douglaslms
 ms.author: douglasl
 manager: craigg

@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql.asvs.dimensiondesigner.dbv.objectbinding.f1"
 helpviewer_keywords: 
   - "Object Binding dialog box"
 ms.assetid: 2bb5ad7c-2962-4559-8c95-cf7148bd2e72
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg

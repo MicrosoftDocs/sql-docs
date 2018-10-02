@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "report servers [Reporting Services], encryption"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "rskeymgmt utility"
   - "scale-out deployments [Reporting Services]"
 ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
-caps.latest.revision: 55
 author: markingmyname
 ms.author: maghan
 manager: craigg

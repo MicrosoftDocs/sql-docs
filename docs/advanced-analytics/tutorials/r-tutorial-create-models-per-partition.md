@@ -34,15 +34,16 @@ In this tutorial, learn partition-based modeling using the classic NYC taxi samp
  
 To complete this tutorial, you must have the following:
 
-+ SQL Server 2019 preview database engine instance, with Machine Learning Services and R integration. Run `SELECT @@Version` as a T-SQL query to check the version. Output should be "Microsoft SQL Server 2019 (CTP 2.0) - 15.0.x".
-+ [Sample data](#sample-data)
-+ A tool for T-SQL query execution, such as [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)
++ Sufficient system resources. The data set is large and training operations are resource-intensive. If possible, use a system having at least 8 GB RAM. Alternatively, you can use smaller data sets to work around resource constraints. Instructions for reducing the data set are inline. 
 
-### System resources
++ A tool for T-SQL query execution, such as [SQL Server Management Studio].(https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)
 
-The data set is large and training operations are resource-intensive. If possible, use a system having at least 8 GB RAM. Alternatively, you can use smaller data sets to work around resource constraints. Instructions for reducing the data set are inline. 
++ [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak), which can [download and restore](sqldev-download-the-sample-data.md) to your local database engine instance. File size is approximatley 90 MB.
 
-### R packages
++ SQL Server 2019 preview database engine instance, with Machine Learning Services and R integration.
+
+> [!Tip] 
+> Check version by executing `SELECT @@Version` as a T-SQL query in a query tool. Output should be "Microsoft SQL Server 2019 (CTP 2.0) - 15.0.x".
 
 This tutorial uses R installed with Machine Learning Services. You can verify R installation by returning a well-formatted list of all R packages currently installed with your database engine instance:
 
@@ -57,16 +58,6 @@ EXECUTE sp_execute_external_script
   @input_data_1 = N''
 WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 ```
-
-<a name="sample-data"></a>
-
-### Sample data
-
-Data originates from the [NYC Taxi and Limousine Commission](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml) public data set. 
-
-+ Download the [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak ) database backup file and restore it on the database engine instance.
-
-The database file name must be **NYCTaxi_sample** if you want to run the following scripts with no modification.
 
 ## Connect to the database
 

@@ -17,7 +17,7 @@ This article explains how to obtain sample data for R and Python tutorials for i
 
 Data originates from the [NYC Taxi and Limousine Commission](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml) public data set. 
 
-When you are finished with the steps in this article, an **NYCTaxi_Sample** database is available on your local instance, providing demo data for hands-on learning. The database file name must be **NYCTaxi_Sample** if you want to run the demo scripts with no modification.
+When you are finished with the steps in this article, the **NYCTaxi_Sample** database is available on your local instance, providing demo data for hands-on learning. The database name must be **NYCTaxi_Sample** if you want to run the demo scripts with no modification.
 
 ## Prerequisites
 
@@ -27,17 +27,19 @@ It helps to have [SQL Server Management Studio](https://docs.microsoft.com/sql/s
 
 ## Download demo database
 
-The sample database is a backup file hosted by Microsoft. File download begins immediately when you click the link. File size is approximatley 90 MB.
+The sample database is a backup file hosted by Microsoft. File download begins immediately when you click the link. 
+
+File size is approximatley 90 MB.
 
 1. Click [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak) to download the database backup file.
 
-2. Copy the file to C:\Program files\Microsoft SQL Server\MSSQL<instance-name>\MSSQL\Backup folder.
+2. Copy the file to C:\Program files\Microsoft SQL Server\MSSQL-instance-name\MSSQL\Backup folder.
 
-3. In Management Studio, right-click **Databases** and select **Restore Files and File Groups**
+3. In Management Studio, right-click **Databases** and select **Restore Files and File Groups**.
 
-4. Enter *NYCTaxi_Sample* in the database name.
+4. Enter *NYCTaxi_Sample* as the database name.
 
-5. Click **From device** and then open the file selection page to add the backup file. Click **Add** to select NYCTaxi_Sample.bak.
+5. Click **From device** and then open the file selection page to select the backup file. Click **Add** to select NYCTaxi_Sample.bak.
 
 6. Select the **Restore** checkbox and click **OK** to restore the database.
 
@@ -46,7 +48,6 @@ The sample database is a backup file hosted by Microsoft. File download begins i
 Confirm the database objects exist on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. You should see the database, tables, functions, and stored procedures.
   
    ![rsql_devtut_BrowseTables](media/rsql-devtut-browsetables.png "rsql_devtut_BrowseTables")
-
 
 ### Objects in NYCTaxi_Sample database
 

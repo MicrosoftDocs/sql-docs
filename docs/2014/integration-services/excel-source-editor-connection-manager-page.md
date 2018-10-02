@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.excelsourceadapter.connection.f1"
 helpviewer_keywords: 
   - "Excel Source Editor"
 ms.assetid: 428e04e0-ad98-45d0-8345-12ec1b67b2eb
-caps.latest.revision: 39
 author: douglaslms
 ms.author: douglasl
 manager: craigg

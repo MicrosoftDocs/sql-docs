@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.ssmsimbi.Backup.f1"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "restoring databases [Analysis Services]"
   - "recovery [Analysis Services]"
 ms.assetid: 947eebd2-3622-479e-8aa6-57c11836e4ec
-caps.latest.revision: 52
 author: minewiskan
 ms.author: owend
 manager: craigg

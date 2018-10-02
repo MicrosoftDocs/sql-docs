@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "06/30/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "docset-sql-devref"
   - "replication"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: c6c15ae6-da52-4638-93d3-61c7242e8a0b
-caps.latest.revision: 12
 author: craigg-msft
 ms.author: craigg
 manager: craigg

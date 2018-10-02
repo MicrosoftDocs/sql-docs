@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "forecasting [data mining]"
   - "time series [data mining]"
 ms.assetid: c5b33f75-42d4-4598-89e7-94815c142ce6
-caps.latest.revision: 17
 author: minewiskan
 ms.author: owend
 manager: craigg

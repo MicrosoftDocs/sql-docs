@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Table Analysis tools"
   - "key influencers"
   - "factor analysis"
 ms.assetid: 54d7b4ce-7b79-407a-985c-aa655ad19280
-caps.latest.revision: 26
 author: minewiskan
 ms.author: owend
 manager: craigg

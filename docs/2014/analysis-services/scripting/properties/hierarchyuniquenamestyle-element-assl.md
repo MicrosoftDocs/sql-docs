@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "HierarchyUniqueNameStyle Element"
@@ -19,7 +17,6 @@ topic_type:
 helpviewer_keywords: 
   - "HierarchyUniqueNameStyle element"
 ms.assetid: 2ac57825-e9e5-4ec4-9856-fa2326d2c43f
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg

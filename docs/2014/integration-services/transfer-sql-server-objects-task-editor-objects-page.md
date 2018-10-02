@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.transfersqlserverobjects.objects.f1"
 helpviewer_keywords: 
   - "Transfer SQL Server Objects Task Editor"
 ms.assetid: 8cc09118-70ac-4013-8308-d87f8411ca0c
-caps.latest.revision: 28
 author: douglaslms
 ms.author: douglasl
 manager: craigg

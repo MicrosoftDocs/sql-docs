@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.synchdbwizard.finish.f1"
 ms.assetid: 1c88608a-5408-4ac0-aea8-5abb977f32ca
-caps.latest.revision: 10
 author: minewiskan
 ms.author: owend
 manager: craigg

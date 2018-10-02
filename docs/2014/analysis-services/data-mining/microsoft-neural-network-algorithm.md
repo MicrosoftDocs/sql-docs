@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "training neural networks"
@@ -23,7 +21,6 @@ helpviewer_keywords:
   - "input neurons [Analysis Services]"
   - "regression algorithms [Analysis Services]"
 ms.assetid: 61eb4861-8a6a-4214-a4b8-1dd278ad7a68
-caps.latest.revision: 44
 author: minewiskan
 ms.author: owend
 manager: craigg

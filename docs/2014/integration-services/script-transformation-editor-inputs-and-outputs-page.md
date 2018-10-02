@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.scriptcomponent.columnproperties.f1"
 helpviewer_keywords: 
   - "Script Transformation Editor"
 ms.assetid: 9659d2d2-5d73-4470-9768-e07b77142fc9
-caps.latest.revision: 26
 author: douglaslms
 ms.author: douglasl
 manager: craigg

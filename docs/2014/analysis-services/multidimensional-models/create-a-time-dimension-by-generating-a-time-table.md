@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "time dimensions [Analysis Services]"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "calendars [Analysis Services]"
   - "table-based time dimensions [Analysis Services]"
 ms.assetid: 58303326-1361-4c0e-9f3d-642ce69c4f6a
-caps.latest.revision: 41
 author: minewiskan
 ms.author: owend
 manager: craigg

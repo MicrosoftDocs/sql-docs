@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "tables [Analysis Services], nested"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "mining structures [Analysis Services], nested tables"
   - "adding nested tables"
 ms.assetid: 6cf9c701-9cff-4fae-94c2-73796c24ef59
-caps.latest.revision: 26
 author: minewiskan
 ms.author: owend
 manager: craigg

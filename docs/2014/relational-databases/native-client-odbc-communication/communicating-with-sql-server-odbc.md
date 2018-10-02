@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "SQL Server Native Client ODBC driver, communicating with SQL Server"
   - "ODBC applications, communicating with SQL Server"
   - "ODBC, communicating with SQL Server"
 ms.assetid: cca3dcf0-2a7e-465a-84de-7ce055360eb6
-caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg

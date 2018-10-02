@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "AggregationInstances Element"
@@ -19,7 +17,6 @@ topic_type:
 helpviewer_keywords: 
   - "AggregationInstances element"
 ms.assetid: e8321aa8-361b-4d8a-bd89-a596eeb814b1
-caps.latest.revision: 10
 author: minewiskan
 ms.author: owend
 manager: craigg

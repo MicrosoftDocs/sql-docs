@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "5237 (Database Engine error)"
 ms.assetid: 9ff28935-d1eb-47ee-99b3-1a65cb948ce7
-caps.latest.revision: 17
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

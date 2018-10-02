@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "predictions [Analysis Services], DMX prediction queries"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "queries [DMX], prediction queries"
   - "mining models [Analysis Services], DMX"
 ms.assetid: a8952427-fd8c-4300-8f62-25f57ac1be0c
-caps.latest.revision: 49
 author: minewiskan
 ms.author: owend
 manager: craigg

@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "testing data mining models"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "profit charts [Analysis Services]"
   - "accuracy testing [data mining]"
 ms.assetid: ab77eca1-bd48-4fef-b27f-ff5b648e0501
-caps.latest.revision: 53
 author: minewiskan
 ms.author: owend
 manager: craigg

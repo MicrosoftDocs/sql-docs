@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "Source Element (Measure)"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "Source element"
 ms.assetid: 9bae7ba4-3065-4623-b3e0-d54cebea7503
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg

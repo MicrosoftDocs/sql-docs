@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "mining model, regression"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "logistic regression"
   - "prediction calculator"
 ms.assetid: 8bb8c318-e85f-4fd6-b32b-4cdfb13ca1b5
-caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
 manager: craigg

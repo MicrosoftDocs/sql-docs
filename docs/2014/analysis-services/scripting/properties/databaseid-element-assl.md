@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "DatabaseID Element"
@@ -19,7 +17,6 @@ topic_type:
 helpviewer_keywords: 
   - "DatabaseID element"
 ms.assetid: 6bcf2bd5-b037-4964-bc72-42e0c89f9716
-caps.latest.revision: 8
 author: minewiskan
 ms.author: owend
 manager: craigg

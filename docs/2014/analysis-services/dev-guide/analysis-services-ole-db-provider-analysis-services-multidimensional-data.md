@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "Analysis Services OLE DB Provider"
 ms.assetid: cdeecd50-1d91-4162-a4a2-01c7799b02a8
-caps.latest.revision: 31
 author: minewiskan
 ms.author: owend
 manager: craigg

@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "replication"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Log Reader Agent, executables"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "agents [SQL Server replication], Log Reader Agent"
   - "command prompt [SQL Server replication]"
 ms.assetid: 5487b645-d99b-454c-8bd2-aff470709a0e
-caps.latest.revision: 50
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

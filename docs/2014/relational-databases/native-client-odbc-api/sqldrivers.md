@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 topic_type: 
   - "apiref"
 helpviewer_keywords: 
   - "SQLDrivers function"
 ms.assetid: 775bbbef-3d34-4b1c-b494-73ddad83206f
-caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg

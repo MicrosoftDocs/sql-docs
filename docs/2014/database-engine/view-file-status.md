@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology:
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "file status information [SQL Server]"
   - "file history [SQL Server]"
   - "version control services [SQL Server], file status"
 ms.assetid: 96601fc3-64b8-4dd8-9b73-cc6710293eb9
-caps.latest.revision: 22
 author: mashamsft
 ms.author: mathoma
 manager: craigg

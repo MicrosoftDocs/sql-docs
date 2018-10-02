@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dm.dmwizard.addnestedtable.selectnestedtablekey.f1"
 ms.assetid: c715ac28-3c5d-4e4b-8104-f97b79150654
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg

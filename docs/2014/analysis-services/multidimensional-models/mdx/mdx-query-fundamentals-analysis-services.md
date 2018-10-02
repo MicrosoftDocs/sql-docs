@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "statements [MDX]"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "MDX [Analysis Services], queries"
   - "queries [MDX]"
 ms.assetid: a560383b-bb58-472e-95f5-65d03d8ea08b
-caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
 manager: craigg

@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "IdleConnectionTimeout property"
@@ -38,7 +36,6 @@ helpviewer_keywords:
   - "StatisticsStoreSize property"
   - "RepositoryConnectionString property"
 ms.assetid: 88a8117c-396a-469f-a62d-c6f262504021
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg

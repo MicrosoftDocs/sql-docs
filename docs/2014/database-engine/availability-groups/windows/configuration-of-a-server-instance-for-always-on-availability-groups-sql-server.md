@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], server instance"
   - "Availability Groups [SQL Server], about"
 ms.assetid: fad8db32-593e-49d5-989c-39eb8399c416
-caps.latest.revision: 16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

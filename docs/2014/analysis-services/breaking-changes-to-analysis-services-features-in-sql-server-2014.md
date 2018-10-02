@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "breaking changes [Analysis Services]"
   - "upgrading Analysis Services"
 ms.assetid: aeb02542-5a6c-458c-a110-13413dd3e9d9
-caps.latest.revision: 46
 author: minewiskan
 ms.author: owend
 manager: craigg

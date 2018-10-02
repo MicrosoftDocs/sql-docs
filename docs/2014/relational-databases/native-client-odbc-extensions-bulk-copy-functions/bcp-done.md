@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "bcp_done"
@@ -17,7 +15,6 @@ topic_type:
 helpviewer_keywords: 
   - "bcp_done function"
 ms.assetid: e59b3f16-5b59-40da-880f-f3edf657d1ee
-caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg

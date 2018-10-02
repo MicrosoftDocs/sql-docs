@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "17083 (Database Engine error)"
 ms.assetid: 6c83737d-0531-4fd9-88f6-2da5a150532d
-caps.latest.revision: 8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "7711 (Database Engine error)"
 ms.assetid: a5c7cd6e-18d6-47ef-902b-db9dd64bba34
-caps.latest.revision: 8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

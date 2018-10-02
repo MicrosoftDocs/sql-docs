@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "BeginTransaction Element"
@@ -23,7 +21,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "BeginTransaction command"
 ms.assetid: fca122fc-b57c-4ba6-849b-ca8c93cf64e9
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg

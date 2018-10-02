@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "schema rowsets [Analysis Services], OLE DB for OLAP"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "schema rowsets [OLE DB for OLAP]"
   - "rowsets [Analysis Services], OLE DB for OLAP"
 ms.assetid: 5fad3ecc-407c-4148-862e-ea6119cc7480
-caps.latest.revision: 31
 author: minewiskan
 ms.author: owend
 manager: craigg

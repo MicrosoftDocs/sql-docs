@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "PerspectiveKpi Data Type"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "PerspectiveKpi data type"
 ms.assetid: e8d19ec8-70d3-4947-904a-fb81fcac9afd
-caps.latest.revision: 31
 author: minewiskan
 ms.author: owend
 manager: craigg

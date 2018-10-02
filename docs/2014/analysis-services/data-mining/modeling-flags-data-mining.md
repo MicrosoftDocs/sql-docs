@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "attributes [data mining]"
@@ -22,7 +20,6 @@ helpviewer_keywords:
   - "MODEL_EXISTENCE_ONLY column"
   - "coding [Data Mining]"
 ms.assetid: 8826d5ce-9ba8-4490-981b-39690ace40a4
-caps.latest.revision: 48
 author: minewiskan
 ms.author: owend
 manager: craigg

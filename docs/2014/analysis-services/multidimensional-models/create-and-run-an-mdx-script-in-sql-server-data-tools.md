@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "MDX [Analysis Services], scripts"
   - "scripts [Analysis Services], creating"
   - "scripts [MDX], creating"
 ms.assetid: aa54b8cc-ff3b-4ef6-a64e-11b9e9d7fa11
-caps.latest.revision: 30
 author: minewiskan
 ms.author: owend
 manager: craigg

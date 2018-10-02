@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "07/17/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "contained database"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "partially contained database"
   - "contained database, understanding"
 ms.assetid: 36af59d7-ce96-4a02-8598-ffdd78cdc948
-caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg

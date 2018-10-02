@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 8e0c7d87-d7f2-455a-bfb8-67066adc04f9
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg

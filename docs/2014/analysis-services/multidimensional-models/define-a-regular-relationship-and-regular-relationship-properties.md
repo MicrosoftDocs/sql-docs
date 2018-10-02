@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "granularity attribute"
   - "relationships [Analysis Services], regular relationships"
 ms.assetid: 840280d8-20c3-46c0-99ea-62479469c36b
-caps.latest.revision: 9
 author: minewiskan
 ms.author: owend
 manager: craigg

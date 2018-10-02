@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "09/23/2015"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: security
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "Security [SQL Server]"

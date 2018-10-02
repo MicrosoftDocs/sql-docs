@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.biwizard.currencyconversion.calculationsettings.f1"
 ms.assetid: a49d4e1f-bdda-4a83-ab4f-ce8c500e1d6d
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg

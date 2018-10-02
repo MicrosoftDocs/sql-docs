@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "ImpersonationInfoSecurity Element"
@@ -19,7 +17,6 @@ topic_type:
 helpviewer_keywords: 
   - "ImpersonationInfoSecurity element"
 ms.assetid: 583fec36-90ef-4d6a-9888-ece6ae865c53
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg

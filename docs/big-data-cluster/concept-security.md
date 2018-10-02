@@ -27,6 +27,8 @@ There are three entry points to the big data cluster
 
 * Master Instance  - TDS endpoint for database tools and applications to connect to SQL Server Master Instance in the cluster.
 
+![Cluster endpoints](media/concept-security/cluster_endpoints.png)
+
 Currently, there is no option of opening up additional ports for accessing the cluster from the outside.
 
 ### How endpoints are secured

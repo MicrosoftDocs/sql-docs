@@ -52,7 +52,7 @@ SUM ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
  Applies the aggregate function to all values. ALL is the default.  
   
  DISTINCT  
- Specifies that SUM return the sum of unique values.  
+ Specifies that SUM returns the sum of unique values.  
   
  *expression*  
  Is a constant, column, or function, and any combination of arithmetic, bitwise, and string operators. *expression* is an expression of the exact numeric or approximate numeric data type category, except for the **bit** data type. Aggregate functions and subqueries are not permitted. For more information, see [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  

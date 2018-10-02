@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Session Events event category"
 ms.assetid: 35853451-6768-4a02-8b8f-81a8ae37a333
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg

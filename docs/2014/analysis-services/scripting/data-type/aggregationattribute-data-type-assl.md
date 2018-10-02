@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "AggregationAttribute Data Type"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "AggregationAttribute data type"
 ms.assetid: 636827c7-938d-4b7d-9827-46da3bc60d9a
-caps.latest.revision: 41
 author: minewiskan
 ms.author: owend
 manager: craigg

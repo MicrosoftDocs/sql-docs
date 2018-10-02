@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "xe"
   - "sessions"
   - "extend events [SQL Server]"
 ms.assetid: c3c92544-351a-4bce-a06a-1f2a47e494e9
-caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg

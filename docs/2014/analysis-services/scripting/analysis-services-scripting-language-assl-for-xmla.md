@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "Analysis Services Scripting Language Reference"
@@ -23,7 +21,6 @@ helpviewer_keywords:
   - "scripts [Analysis Services Scripting Language]"
   - "object definition language [Analysis Services Scripting Language]"
 ms.assetid: ca0e852e-9002-4224-a0f0-bd96f2fc5c65
-caps.latest.revision: 31
 author: minewiskan
 ms.author: owend
 manager: craigg

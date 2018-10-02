@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 topic_type: 
   - "apiref"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "XML for Analysis, properties"
   - "XMLA, properties"
 ms.assetid: 5745f7b4-6b96-44d5-b77c-f2831a898e5e
-caps.latest.revision: 24
 author: minewiskan
 ms.author: owend
 manager: craigg

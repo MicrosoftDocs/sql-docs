@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "9532 (Database Engine error)"
 ms.assetid: ab95cce8-4f97-4aea-a746-a73eea7c9aab
-caps.latest.revision: 10
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

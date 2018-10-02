@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "ColumnBinding Data Type"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "ColumnBinding data type"
 ms.assetid: 3ab1bac1-6716-4b17-a107-d5f9c744c5e6
-caps.latest.revision: 40
 author: minewiskan
 ms.author: owend
 manager: craigg

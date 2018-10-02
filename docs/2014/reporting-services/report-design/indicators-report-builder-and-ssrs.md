@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "04/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "10545"
@@ -17,7 +15,6 @@ f1_keywords:
   - "10546"
   - "sql12.rtp.rptdesigner.indicatorproperties.validateandstates.f1"
 ms.assetid: 2edbd279-be39-4d97-b1b6-ddbc5b17c422
-caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg

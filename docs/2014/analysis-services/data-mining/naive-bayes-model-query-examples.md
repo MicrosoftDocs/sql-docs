@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "naive bayes model [Analysis Services]"
   - "naive bayes algorithms [Analysis Services]"
   - "content queries [DMX]"
 ms.assetid: e642bd7d-5afa-4dfb-8cca-4f84aadf61b0
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg

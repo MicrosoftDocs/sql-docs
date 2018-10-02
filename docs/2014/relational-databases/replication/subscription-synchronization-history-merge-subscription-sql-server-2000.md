@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "replication"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.rep.monitor.subscription.downlevelsynchhistory.f1"
 ms.assetid: 0a0deab2-1c08-4371-9681-d9403e0236cc
-caps.latest.revision: 18
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

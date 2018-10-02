@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "calculated members [Analysis Services]"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "members [Analysis Services], calculated"
   - "calculations [Analysis Services], calculated members"
 ms.assetid: 820e4b18-9c3a-4b12-a126-ca16d8364a00
-caps.latest.revision: 26
 author: minewiskan
 ms.author: owend
 manager: craigg

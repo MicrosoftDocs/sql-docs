@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "12/29/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "10426"

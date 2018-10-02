@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "queries [MDX], subcubes"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "Multidimensional Expressions [Analysis Services], subcubes"
   - "CREATE SUBCUBE statement"
 ms.assetid: 5403a62b-99ac-4d83-b02a-89bf78bf0f46
-caps.latest.revision: 31
 author: minewiskan
 ms.author: owend
 manager: craigg

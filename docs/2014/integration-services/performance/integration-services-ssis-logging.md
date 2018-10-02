@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "containers [Integration Services], logs"
@@ -24,7 +22,6 @@ helpviewer_keywords:
   - "Text File log provider"
   - "SQL Server log provider"
 ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
-caps.latest.revision: 64
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

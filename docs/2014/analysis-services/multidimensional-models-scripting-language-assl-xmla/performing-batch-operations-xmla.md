@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "multiple projects"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "batches [XML for Analysis]"
   - "nontransactional batches"
 ms.assetid: 731c70e5-ed51-46de-bb69-cbf5aea18dda
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg

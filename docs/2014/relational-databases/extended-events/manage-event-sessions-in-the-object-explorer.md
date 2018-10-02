@@ -4,13 +4,10 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 16849e38-d3fb-414d-8dcb-797b5ffce6ee
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg

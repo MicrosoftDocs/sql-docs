@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: search
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "semantic search [SQL Server], enabling"
 ms.assetid: 895d220c-6749-4954-9dd3-2ea4c6a321ff
-caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

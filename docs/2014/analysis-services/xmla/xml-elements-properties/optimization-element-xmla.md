@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "Optimization Element"
@@ -23,7 +21,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "Optimization element"
 ms.assetid: fb9ff737-59e2-4d8b-9f0e-af392eb25d08
-caps.latest.revision: 10
 author: minewiskan
 ms.author: owend
 manager: craigg

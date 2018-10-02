@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.variables.f1"
 helpviewer_keywords: 
   - "Variables Window dialog box"
 ms.assetid: f405e5ce-ef69-4c58-8c7d-a3d44dfe9ab0
-caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

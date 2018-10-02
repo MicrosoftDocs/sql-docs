@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "7908 (Database Engine error)"
 ms.assetid: 470045b0-ebe9-44a7-b456-480e7a516a2c
-caps.latest.revision: 16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

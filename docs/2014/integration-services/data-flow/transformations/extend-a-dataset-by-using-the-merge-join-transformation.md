@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Merge Join transformation"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "datasets [Integration Services], extending"
   - "joining datasets [Integration Services]"
 ms.assetid: 9e512c3c-f89b-45f3-8281-cdb8f35a2b1f
-caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

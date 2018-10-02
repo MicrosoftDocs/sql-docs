@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "MDSCHEMA_MEASURES"
@@ -17,7 +15,6 @@ topic_type:
 helpviewer_keywords: 
   - "MDSCHEMA_MEASURES rowset"
 ms.assetid: 6ff5bd1a-aad0-49b8-9f8d-7df2637caacf
-caps.latest.revision: 30
 author: minewiskan
 ms.author: owend
 manager: craigg

@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "getting started"
   - "report design"
 ms.assetid: 79113505-1ce8-4f8c-9260-d861838f7813
-caps.latest.revision: 17
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg

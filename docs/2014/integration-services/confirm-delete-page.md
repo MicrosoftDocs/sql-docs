@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "VS.ToolsOptionsPages.Business_Intelligence_Designers.Data_Transformation_Designers.Comfirm_Delete"
 ms.assetid: 091def94-6c9c-4afc-92dc-4c2f4c2cafa0
-caps.latest.revision: 8
 author: douglaslms
 ms.author: douglasl
 manager: craigg

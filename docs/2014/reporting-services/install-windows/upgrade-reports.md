@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "reports [Reporting Services], upgrading"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "report definition files [Reporting Services]"
   - ".rdl files"
 ms.assetid: a1a10c67-7462-4562-9b07-a8822188a161
-caps.latest.revision: 65
 author: markingmyname
 ms.author: maghan
 manager: craigg

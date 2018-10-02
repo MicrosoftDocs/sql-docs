@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "logs [Reporting Services], execution"
   - "execution logs [Reporting Services]"
 ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
-caps.latest.revision: 40
 author: markingmyname
 ms.author: maghan
 manager: craigg

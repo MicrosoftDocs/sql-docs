@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "Status Element"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "Status element"
 ms.assetid: 4938465e-7876-43e2-9d03-70dcc9b7b749
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg

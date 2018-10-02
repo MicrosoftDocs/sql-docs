@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "MiningStructurePermissions Element"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "MiningStructurePermissions element"
 ms.assetid: 4db9a9b2-8525-441f-a202-fd253282f540
-caps.latest.revision: 31
 author: minewiskan
 ms.author: owend
 manager: craigg

@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "05/24/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "local partitions [Analysis Services]"
   - "partitions [Analysis Services], local"
   - "partitions [Analysis Services], creating"
 ms.assetid: eaa95278-9ce9-47d5-a6b6-1046e7076599
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg

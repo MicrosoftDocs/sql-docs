@@ -4,13 +4,10 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: afb445b5-bdbe-4bfe-844f-344766cdc2b2
-caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

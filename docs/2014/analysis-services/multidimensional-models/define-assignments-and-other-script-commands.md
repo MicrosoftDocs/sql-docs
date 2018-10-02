@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "empty scripts [Analysis Services]"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "MDX [Analysis Services], scripts"
   - "scripts [Analysis Services], calculations"
 ms.assetid: f28b9b22-3dc7-4a45-b4eb-2d023f2c94b8
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg

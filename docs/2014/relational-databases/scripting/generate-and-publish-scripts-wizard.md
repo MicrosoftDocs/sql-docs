@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.generatescriptswizard.setscriptingoptions.f1"
@@ -42,7 +40,6 @@ helpviewer_keywords:
   - "databases [SQL Server], generating scripts"
   - "Publish Database Wizard"
 ms.assetid: 5ee520ba-ec7e-4199-a441-189e9e264b37
-caps.latest.revision: 44
 author: MightyPen
 ms.author: genemi
 manager: craigg

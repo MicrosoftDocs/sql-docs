@@ -4,13 +4,10 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 62a22ab9-1eb4-4ce5-8dd7-06b5ed2d9a2a
-caps.latest.revision: 26
 author: markingmyname
 ms.author: maghan
 manager: craigg

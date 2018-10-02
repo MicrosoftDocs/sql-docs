@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.messagequeuetask.f1"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "messages [Integration Services]"
   - "sending messages"
 ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
-caps.latest.revision: 68
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "SolveOrder Element"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "SolveOrder element"
 ms.assetid: ec43e055-97dd-4f2a-9a7c-2df2e1119e56
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg

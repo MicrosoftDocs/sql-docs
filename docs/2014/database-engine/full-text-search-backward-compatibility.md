@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: search
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "backward compatibility [full-text search]"
   - "backward compatibility [SQL Server], Database Engine"
   - "full-text search [SQL Server], backward compatibility"
 ms.assetid: 1b5a9bbc-beb8-44fd-ab03-4c14908c604c
-caps.latest.revision: 16
 author: craigg-msft
 ms.author: craigg
 manager: craigg

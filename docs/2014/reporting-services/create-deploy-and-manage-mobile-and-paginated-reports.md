@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "reports [Reporting Services]"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "Reporting Services"
   - "SQL Server Reporting Services"
 ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
-caps.latest.revision: 51
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg

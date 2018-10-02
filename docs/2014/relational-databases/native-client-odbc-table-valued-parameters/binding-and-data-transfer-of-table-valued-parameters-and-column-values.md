@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "table-valued parameters (ODBC), binding and data transfer"
 ms.assetid: 0a2ea462-d613-42b6-870f-c7fa086a6b42
-caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg

@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "connections [SQL Server], other computers"
 ms.assetid: c4c1e94f-4f5f-431e-8b5b-d5ff97baf723
-caps.latest.revision: 38
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

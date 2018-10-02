@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "repeating workflows"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "iterations [Integration Services]"
   - "For Loop containers"
 ms.assetid: eb3a7494-88ae-4165-9d0f-58715eb1734a
-caps.latest.revision: 42
 author: douglaslms
 ms.author: douglasl
 manager: craigg

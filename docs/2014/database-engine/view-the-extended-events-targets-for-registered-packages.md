@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "targets [SQL Server extended events]"
   - "viewing event targets"
   - "extended events [SQL Server], viewing targets"
 ms.assetid: 4985aa5f-ac99-49f6-852c-9d25916549e9
-caps.latest.revision: 12
 author: mashamsft
 ms.author: mathoma
 manager: craigg

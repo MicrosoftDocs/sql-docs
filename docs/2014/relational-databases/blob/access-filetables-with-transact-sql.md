@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: filestream
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "FileTables [SQL Server], accessing files with T-SQL"
 ms.assetid: 3c4a5ffb-c521-4696-99cb-2b03cffc9c02
-caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

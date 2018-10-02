@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "05/24/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "data-quality-services"
@@ -13,10 +12,8 @@ ms.technology:
   - "master-data-services"
   - "replication"
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 73ab6859-9605-419e-bd78-798f68cc66f8
-caps.latest.revision: 31
 author: mightypen
 ms.author: genemi
 manager: craigg

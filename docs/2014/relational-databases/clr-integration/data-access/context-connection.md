@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: clr
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 dev_langs: 
   - "VB"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "connections [CLR integration]"
   - "context [CLR integration]"
 ms.assetid: 67dd1925-d672-4986-a85f-bce4fe832ef7
-caps.latest.revision: 13
 author: rothja
 ms.author: jroth
 manager: craigg

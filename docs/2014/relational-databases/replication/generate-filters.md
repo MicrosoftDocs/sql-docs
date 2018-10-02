@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/14/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "replication"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.rep.newpubwizard.generatefilters.f1"
 ms.assetid: be28515c-5d6d-467b-b933-d7c8d97a45b4
-caps.latest.revision: 25
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

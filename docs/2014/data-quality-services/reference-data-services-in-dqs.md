@@ -4,13 +4,10 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "data-quality-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
-caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

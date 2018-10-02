@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "tables [Analysis Services], prediction queries"
   - "Mining Model Prediction [Analysis Services], input tables"
 ms.assetid: 00d330a0-879d-4da0-9f29-53c288116f4d
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg

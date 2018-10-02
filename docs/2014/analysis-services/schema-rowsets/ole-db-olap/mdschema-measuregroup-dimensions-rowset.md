@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "MDSCHEMA_MEASUREGROUP_DIMENSIONS"
@@ -17,7 +15,6 @@ topic_type:
 helpviewer_keywords: 
   - "MDSCHEMA_MEASUREGROUP_DIMENSIONS rowset"
 ms.assetid: c731c06a-7382-4e50-ba0e-d8cee3ab4f28
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg

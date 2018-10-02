@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "10/13/2015"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "automatic checkpoints"
@@ -26,7 +24,6 @@ helpviewer_keywords:
   - "flushing pages"
   - "active logs"
 ms.assetid: 98a80238-7409-4708-8a7d-5defd9957185
-caps.latest.revision: 65
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

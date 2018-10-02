@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "metadata [ODBC]"
 ms.assetid: 1518e6e5-a6a8-4489-b779-064c5624df53
-caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg

@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.rtp.rptdesigner.selectcolor.f1"
@@ -15,7 +13,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "Select Color dialog box"
 ms.assetid: ac7089a3-5c7b-4f53-8348-180610e86da2
-caps.latest.revision: 10
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg

@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 topic_type: 
   - "apiref"
@@ -17,7 +15,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "HoldoutMaxPercent element"
 ms.assetid: e375cc51-5f9d-4252-98a1-326ca0dbbf83
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg

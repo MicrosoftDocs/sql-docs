@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "rows [OLE DB]"
 ms.assetid: 8e9916a5-61e1-468e-8a5c-1ab8b5110737
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg

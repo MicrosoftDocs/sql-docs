@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "mining models [Analysis Services], copying"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "mining models [Analysis Services], how-to topics"
   - "copying mining models"
 ms.assetid: 7975bb02-f188-49a0-b7de-5b9b216254ad
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg

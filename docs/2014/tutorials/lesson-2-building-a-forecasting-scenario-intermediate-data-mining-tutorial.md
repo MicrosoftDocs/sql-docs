@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "time series [Analysis Services]"
   - "data mining [Analysis Services], tutorials"
   - "tutorials [Data Mining]"
 ms.assetid: 9a988156-c900-4c22-97fa-f6b0c1aea9e2
-caps.latest.revision: 31
 author: minewiskan
 ms.author: owend
 manager: craigg

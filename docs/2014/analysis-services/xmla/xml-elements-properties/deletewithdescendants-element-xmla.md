@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "DeleteWithDescendants Element"
@@ -23,7 +21,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "DeleteWithDescendants element"
 ms.assetid: adfc9437-aaa7-4364-bcdb-128fcc9a410d
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg

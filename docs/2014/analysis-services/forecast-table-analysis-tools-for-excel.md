@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Table Analysis tools"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "mining model, time series"
   - "time series [data mining]"
 ms.assetid: 22bb0b5e-78f5-484e-883d-2b5985a12749
-caps.latest.revision: 17
 author: minewiskan
 ms.author: owend
 manager: craigg

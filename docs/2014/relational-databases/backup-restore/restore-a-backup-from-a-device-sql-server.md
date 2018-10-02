@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: backup-restore
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "restoring databases [SQL Server], device restores"
@@ -14,7 +12,6 @@ helpviewer_keywords:
   - "database restores [SQL Server], device restores"
   - "devices [SQL Server]"
 ms.assetid: 6e139de7-7de2-4d18-9df0-beac31ba7ff1
-caps.latest.revision: 26
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

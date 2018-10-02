@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "large value data types"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "SQL Server Native Client ODBC driver, large value data types"
   - "SQL Server Native Client OLE DB provider, large value data types"
 ms.assetid: 4a58b05c-8848-44bb-8704-f9f409efa5af
-caps.latest.revision: 52
 author: MightyPen
 ms.author: genemi
 manager: craigg

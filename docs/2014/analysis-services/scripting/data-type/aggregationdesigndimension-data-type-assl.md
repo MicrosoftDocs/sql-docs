@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "AggregationDesignDimension Data Type"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "AggregationDesignDimension data type"
 ms.assetid: 06a0d418-014c-4f40-a63a-5cfeee3f6a41
-caps.latest.revision: 38
 author: minewiskan
 ms.author: owend
 manager: craigg

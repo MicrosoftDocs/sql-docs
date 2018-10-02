@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "QueryDefinition Element"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "QueryDefinition element"
 ms.assetid: 25bf0e93-d5c5-41df-b310-a253a4ace80e
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg

@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "MDSCHEMA_LEVELS"
@@ -17,7 +15,6 @@ topic_type:
 helpviewer_keywords: 
   - "MDSCHEMA_LEVELS rowset"
 ms.assetid: 4313e268-33f4-4e99-96d7-2ec26775c580
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg

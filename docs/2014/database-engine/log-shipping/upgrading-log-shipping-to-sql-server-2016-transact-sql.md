@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "log shipping [SQL Server], upgrading"
 ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
-caps.latest.revision: 57
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

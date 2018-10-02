@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "conversions [ODBC], SQL to C"
 ms.assetid: 059431e2-a65c-4587-ba4a-9929a1611e96
-caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
 manager: craigg

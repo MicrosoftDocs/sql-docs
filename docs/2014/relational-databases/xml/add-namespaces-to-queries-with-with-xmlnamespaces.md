@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: xml
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "ELEMENTS XSINIL directive"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "xml data type [SQL Server], WITH XMLNAMESPACES clause"
   - "WITH XMLNAMESPACES clause"
 ms.assetid: 2189cb5e-4460-46c5-a254-20c833ebbfec
-caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

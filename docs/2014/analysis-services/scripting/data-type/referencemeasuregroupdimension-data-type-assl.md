@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "ReferenceMeasureGroupDimension Data Type"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "ReferenceMeasureGroupDimension data type"
 ms.assetid: 81f7b83e-71a3-4eab-b291-0500d05903dc
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg

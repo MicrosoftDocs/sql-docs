@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "table dependencies [SQL Server]"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "displaying dependences"
   - "viewing dependencies"
 ms.assetid: c4351ef5-e7d0-46e7-8367-88695e9974f8
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg

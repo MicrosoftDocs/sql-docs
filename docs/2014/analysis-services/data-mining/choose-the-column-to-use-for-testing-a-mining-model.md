@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "columns [data mining], predictable mining columns"
   - "Mining Accuracy Chart [Analysis Services], columns"
   - "predictable mining columns [Analysis Services]"
 ms.assetid: c6a8f23a-da21-4f31-9521-99460d624649
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg

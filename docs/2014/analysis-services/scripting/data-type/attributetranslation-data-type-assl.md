@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "AttributeTranslation Data Type"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "AttributeTranslation data type"
 ms.assetid: a0e29941-ef08-42ad-ab9c-b2efd7910895
-caps.latest.revision: 40
 author: minewiskan
 ms.author: owend
 manager: craigg

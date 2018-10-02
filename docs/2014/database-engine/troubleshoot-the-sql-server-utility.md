@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology:
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: f5f47c2a-38ea-40f8-9767-9bc138d14453
-caps.latest.revision: 8
 author: mashamsft
 ms.author: mathoma
 manager: craigg

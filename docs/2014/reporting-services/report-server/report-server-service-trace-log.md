@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "logs [Reporting Services], trace"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "system information [Reporting Services]"
   - "versions [Reporting Services]"
 ms.assetid: 2fde08b2-137d-4f4b-88e5-216030216e0d
-caps.latest.revision: 49
 author: markingmyname
 ms.author: maghan
 manager: craigg

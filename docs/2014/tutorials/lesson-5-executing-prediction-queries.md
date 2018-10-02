@@ -4,13 +4,10 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 0037bd2f-aa2d-464b-bf86-b0210f0438b1
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg

@@ -4,14 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "SQL Server 2014"
 ms.assetid: 47d9a7e8-c597-4b95-a58a-dcf66df8e572
-caps.latest.revision: 53
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

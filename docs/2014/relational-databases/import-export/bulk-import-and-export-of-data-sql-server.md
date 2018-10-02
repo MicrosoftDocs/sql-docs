@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/14/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: data-movement
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "exporting data"
@@ -23,7 +21,6 @@ helpviewer_keywords:
   - "bulk importing [SQL Server]"
   - "importing data"
 ms.assetid: 19049021-c048-44a2-b38d-186d9f9e4a65
-caps.latest.revision: 56
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

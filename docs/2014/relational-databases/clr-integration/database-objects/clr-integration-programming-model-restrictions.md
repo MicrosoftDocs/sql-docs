@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: clr
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "common language runtime [SQL Server], programming model restrictions"
@@ -14,7 +12,6 @@ helpviewer_keywords:
   - "programming model restrictions [CLR integration]"
   - "assemblies [CLR integration], runtime checks"
 ms.assetid: 2446afc2-9d21-42d3-9847-7733d3074de9
-caps.latest.revision: 21
 author: rothja
 ms.author: jroth
 manager: craigg

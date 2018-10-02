@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Database Mail [SQL Server], public profiles"
   - "profiles [SQL Server], Database Mail"
   - "public profiles [Database Mail]"
 ms.assetid: 58ae749d-6ada-4f9c-bf00-de7c7a992a2d
-caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg

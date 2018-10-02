@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "docset-sql-devref"
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 dev_langs: 
   - "VB"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "components [Integration Services], data flow"
   - "data flow [Integration Services], components"
 ms.assetid: 404ecab7-7698-447b-93d6-dd256beb11ff
-caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

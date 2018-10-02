@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "replication"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "security [SQL Server replication], Distributors"
   - "Distributors [SQL Server replication], security"
 ms.assetid: 76d78229-0ff2-4aa4-9b4e-ad97534c5296
-caps.latest.revision: 37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

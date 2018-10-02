@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: table-view-index
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.viewproperties.general.f1"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "status information [SQL Server], views"
   - "view dependencies"
 ms.assetid: 05a73e33-8f85-4fb6-80c1-1b659e753403
-caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg

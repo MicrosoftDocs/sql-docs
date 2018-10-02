@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "incremental generation [Analysis Services]"
   - "Schema Generation Wizard, incremental generation"
   - "relational schema [Analysis Services], incremental generation"
 ms.assetid: 3ca0aa63-3eb5-4fe9-934f-8e96dee84eaa
-caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
 manager: craigg

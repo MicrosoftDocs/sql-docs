@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "updating resources"
   - "resources [Reporting Services], updating"
 ms.assetid: d21f7493-bcf7-4e9e-9886-55ebdc1f1037
-caps.latest.revision: 16
 author: markingmyname
 ms.author: maghan
 manager: craigg

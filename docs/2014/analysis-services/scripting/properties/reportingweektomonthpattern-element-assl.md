@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "04/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "ReportingWeekToMonthPattern Element"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "ReportingWeekToMonthPattern element"
 ms.assetid: 8d7c694d-d5c5-4faa-af78-155779e84fe9
-caps.latest.revision: 31
 author: minewiskan
 ms.author: owend
 manager: craigg

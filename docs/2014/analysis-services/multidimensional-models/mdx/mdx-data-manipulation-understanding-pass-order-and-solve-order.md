@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "evaluation order [MDX]"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "pass orders [MDX]"
   - "expressions [MDX], solve orders"
 ms.assetid: 7ed7d4ee-4644-4c5d-99a4-c4b429d0203c
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg

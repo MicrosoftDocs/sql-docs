@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: clr
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 dev_langs: 
   - "VB"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "Dispose method"
   - "System.Transactions namespace"
 ms.assetid: 79656ce5-ce46-4c5e-9540-cf9869bd774b
-caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg

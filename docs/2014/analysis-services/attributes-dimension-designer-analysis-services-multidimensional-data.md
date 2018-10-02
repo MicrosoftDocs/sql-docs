@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql.asvs.dimensiondesigner.dbv.attributespane.f1"
 ms.assetid: 627eaa08-7638-4edd-bdfa-0d8175a7cde5
-caps.latest.revision: 31
 author: minewiskan
 ms.author: owend
 manager: craigg

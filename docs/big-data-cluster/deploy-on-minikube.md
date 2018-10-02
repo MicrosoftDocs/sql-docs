@@ -39,7 +39,7 @@ Minikube is a tool that makes it easy to run Kubernetes on a single machine like
 
 ## Install Minikube
 
-Install Minikube according to the instructions for the [v0.28.2 release](https://github.com/kubernetes/minikube/releases/tag/v0.28.2). The SQL Server 2019 CTP 2.0 Big Data Cluster only works with version v0.24.1 and up.
+Install Minikube according to the instructions for the [v0.28.2 release](https://github.com/kubernetes/minikube/releases/tag/v0.28.2). The SQL Server 2019 CTP 2.0 big data cluster only works with version v0.24.1 and up.
 
 ## Create a Minikube cluster
 

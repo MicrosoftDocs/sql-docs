@@ -1,8 +1,8 @@
 ---
-title: Debug and Diagnose Spark Applications on SQL Server Big Data Clusters in Spark History Server 
-description: Debug and Diagnose Spark Applications on SQL Server Big Data Clusters in Spark History Server
-services: SQL Server 2019 Big Data Cluster spark
-ms.service: SQL Server 2019 Big Data Cluster spark
+title: Debug and Diagnose Spark Applications on SQL Server big data clusters in Spark History Server 
+description: Debug and Diagnose Spark Applications on SQL Server big data clusters in Spark History Server
+services: SQL Server 2019 big data cluster spark
+ms.service: SQL Server 2019 big data cluster spark
 author: jejiang
 ms.author: jejiang
 ms.reviewer: jroth
@@ -10,16 +10,16 @@ ms.custom: ""
 ms.topic: conceptual
 ms.date: 10/01/2018
 ---
-# Debug and Diagnose Spark Applications on SQL Server Big Data Clusters in Spark History Server
+# Debug and Diagnose Spark Applications on SQL Server big data clusters in Spark History Server
 
-This article provides guidance on how to use extended Spark History Server to debug and diagnose Spark applications in a SQL Server 2019 (preview) Big Data Cluster. These debug and diagnosis capabilities are built into Spark History Server and powered by Microsoft. The extension includes data tab and graph tab and diagnosis tab. In data tab, users can check the input and output data of the Spark job. In graph tab, users can check the data flow and replay the job graph. In diagnosis tab, user can refer to Data skew, Time skew, and Executor Usage analysis.
+This article provides guidance on how to use extended Spark History Server to debug and diagnose Spark applications in a SQL Server 2019 (preview) big data cluster. These debug and diagnosis capabilities are built into Spark History Server and powered by Microsoft. The extension includes data tab and graph tab and diagnosis tab. In data tab, users can check the input and output data of the Spark job. In graph tab, users can check the data flow and replay the job graph. In diagnosis tab, user can refer to Data skew, Time skew, and Executor Usage analysis.
 
 ## Get access to Spark History Server
 
 The Spark history server user experience from open source is enhanced with information, which includes job-specific data and interactive visualization of job graph and data flows for big data cluster. 
 
 ### Open the Spark History Server Web UI by URL
-Open the Spark History Server by browsing to the following URL, replace `<Ipaddress>` and `<Port>` with Big Data Cluster specific information. More information can be referred to: [Deploy SQL Server Big Data Cluster](quickstart-big-data-cluster-deploy.md)
+Open the Spark History Server by browsing to the following URL, replace `<Ipaddress>` and `<Port>` with big data cluster specific information. More information can be referred to: [Deploy SQL Server big data cluster](quickstart-big-data-cluster-deploy.md)
 
 ```
 https://<Ipaddress>:<Port>/gateway/default/sparkhistory

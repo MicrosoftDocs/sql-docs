@@ -60,4 +60,4 @@ curl -i -L -k -u root:root-password -X PUT 'https://<service-security-lb IP exte
 
 ## Next steps
 
-For more information about SQL Server Big Data Cluster, see [What is SQL Server Big Data Cluster?](big-data-cluster-overview.md).
+For more information about SQL Server big data cluster, see [What is SQL Server big data cluster?](big-data-cluster-overview.md).

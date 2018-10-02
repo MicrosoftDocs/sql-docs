@@ -1,5 +1,5 @@
 ---
-title: Security concepts for SQL Server Big Data Cluster | Microsoft Docs
+title: Security concepts for SQL Server big data cluster | Microsoft Docs
 description:
 author: nelgson 
 ms.author: negust 
@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.prod: sql
 ---
 
-# Security concepts for SQL Server Big Data Cluster
+# Security concepts for SQL Server big data cluster
 
 A secure Big Data cluster implies consistent and coherent support for authentication and authorization scenarios, across both SQL Server and HDFS/Spark. Authentication is the process of verifying the identity of a user or service and ensuring they are who they are claiming to be. Authorization refers to granting or denying of access to specific resources based on the requesting user's identity. This step is performed after a user is identified through authentication.
 
@@ -19,11 +19,11 @@ This article will cover the key security-related concepts in the Big Data cluste
 
 ## Cluster Endpoints
 
-There are three entry points to the Big Data Cluster
+There are three entry points to the big data cluster
 
 * HDFS/Spark (Knox) gateway – This is an HTTPS-based endpoint. Other endpoints are proxied through this. HDFS/Spark gateway is used for accessing services like webHDFS and Livy. Wherever you see references to Knox, this is the endpoint.
 
-* Controller endpoint – Big Data Cluster  management service that exposes REST APIs for managing the cluster. Some tools, such as the Admin portal, are also accessed through this endpoint.
+* Controller endpoint – big data cluster  management service that exposes REST APIs for managing the cluster. Some tools, such as the Admin portal, are also accessed through this endpoint.
 
 * Master Instance  - TDS endpoint for database tools and applications to connect to SQL Server Master Instance in the cluster.
 
@@ -31,7 +31,7 @@ Currently, there is no option of opening up additional ports for accessing the c
 
 ### How endpoints are secured
 
-Securing endpoints in the Big Data Cluster is done using passwords that can be set/updated either using environment variables or CLI commands. All cluster internal passwords are stored as Kubernetes secrets.  
+Securing endpoints in the big data cluster is done using passwords that can be set/updated either using environment variables or CLI commands. All cluster internal passwords are stored as Kubernetes secrets.  
 
 # Authentication
 
@@ -63,15 +63,15 @@ Password for accessing the HDFS/Spark endpoint:
 * A sysadmin login is created in all SQL instances in the cluster, that Controller owns and manages. It is required for Controller to perform administrative tasks, such as HA setup or upgrade, on these instances. These logins are also used for intra-cluster communication between SQL instances, such as the SQL master instance communicating with a data pool.
 
 > [!NOTE]
-> In CTP2.0, only basic authentication is supported. Fine-grained access control to HDFS objects, and SQL Big Data Cluster compute and data pools, is not yet available.
+> In CTP2.0, only basic authentication is supported. Fine-grained access control to HDFS objects, and SQL big data cluster compute and data pools, is not yet available.
 
 ## Intra cluster communication
 
-Communication with non-SQL services within the Big Data Cluster, such as Livy to Spark or Spark to the storage pool, is secured using certificates. All SQL Server to SQL Server communication is secured using SQL logins.
+Communication with non-SQL services within the big data cluster, such as Livy to Spark or Spark to the storage pool, is secured using certificates. All SQL Server to SQL Server communication is secured using SQL logins.
 
 ## Next steps
 
-To learn more about the SQL Server Big Data Clusters, see the following articles:
+To learn more about the SQL Server big data clusters, see the following articles:
 
-- [What is SQL Server 2019 Big Data Clusters?](big-data-cluster-overview.md)
-- [Quickstart: Deploy SQL Server Big Data Cluster on Kubernetes](quickstart-big-data-cluster-deploy.md)
+- [What is SQL Server 2019 big data clusters?](big-data-cluster-overview.md)
+- [Quickstart: Deploy SQL Server big data cluster on Kubernetes](quickstart-big-data-cluster-deploy.md)

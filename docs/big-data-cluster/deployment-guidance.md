@@ -59,7 +59,7 @@ kubectl config view
 ```
 
 ## Install mssqlctl CLI management tool for SQL Server Big Data cluster
-`mssqlctl` is a command line utility written in Python that enables cluster administrators to bootstrap and manage the Big Data Cluster via REST APIs. The minimum Python version required is v3.5. You must also have `pip` that is used to download and install `mssqlctl` tool. 
+`mssqlctl` is a command line utility written in Python that enables cluster administrators to bootstrap and manage the big data cluster via REST APIs. The minimum Python version required is v3.5. You must also have `pip` that is used to download and install `mssqlctl` tool. 
 On a Windows client, you can download the necessary Python package from [https://www.python.org/downloads/](https://www.python.org/downloads/). For python3.5.3 and later, pip3 is also installed when you install Python. When you install it you may not select the add to path. Then you can find where the pip3 located and add it to path manually.
 On Linux (WSL or Ubuntu client for example), these commands will install the latest 3.5 version of Python and pip:
 

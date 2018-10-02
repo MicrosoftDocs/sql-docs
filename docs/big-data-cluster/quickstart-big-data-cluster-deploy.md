@@ -1,5 +1,5 @@
 ---
-title: Deploy SQL Server Big Data Cluster | Microsoft Docs
+title: Deploy SQL Server big data cluster | Microsoft Docs
 description:
 author: rothja 
 ms.author: jroth 
@@ -9,9 +9,9 @@ ms.topic: quickstart
 ms.prod: sql
 ---
 
-# Quickstart: Deploy SQL Server Big Data Cluster on Azure Kubernetes Service (AKS)
+# Quickstart: Deploy SQL Server big data cluster on Azure Kubernetes Service (AKS)
 
-In this quickstart, you will install SQL Server Big Data Cluster on AKS in a default configuration suitable for dev/test environments. In addition to SQL Master instance, the cluster will include one compute pool instance, one data pool instance and two storage pool instances. Data will be persisted using Kubernetes persistent volumes that are provisioned on top of AKS default storage classes. In the [deployment guidance](deployment-guidance.md) topic you can find a set of environment variables that you can use to further customize your configuration.
+In this quickstart, you will install SQL Server big data cluster on AKS in a default configuration suitable for dev/test environments. In addition to SQL Master instance, the cluster will include one compute pool instance, one data pool instance and two storage pool instances. Data will be persisted using Kubernetes persistent volumes that are provisioned on top of AKS default storage classes. In the [deployment guidance](deployment-guidance.md) topic you can find a set of environment variables that you can use to further customize your configuration.
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
@@ -41,7 +41,7 @@ pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.0 mss
 
 ## Define environment variables
 
-Setting the environment variables required for deploying Big Data Cluster slightly differs depending on whether you are using Windows or Linux/macOS client.  Choose the steps below depending on which operating system you are using.
+Setting the environment variables required for deploying big data cluster slightly differs depending on whether you are using Windows or Linux/macOS client.  Choose the steps below depending on which operating system you are using.
 
 > [!IMPORTANT]
 > Make sure you wrap the passwords in double quotes if it contains any special characters.
@@ -105,7 +105,7 @@ mssqlctl create cluster <name of your cluster>
 ```
 
 > [!NOTE]
-> The name of your cluster needs to be only lower case alpha-numeric characters, no spaces. All Kubernetes artifacts for the Big Data Cluster will be created in a namespace with same name as the cluster name specified.
+> The name of your cluster needs to be only lower case alpha-numeric characters, no spaces. All Kubernetes artifacts for the big data cluster will be created in a namespace with same name as the cluster name specified.
 
 
 The command window will output the deployment status. You can also check the deployment status by running these commands in a different cmd window:

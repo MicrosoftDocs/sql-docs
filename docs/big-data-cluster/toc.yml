@@ -1,10 +1,10 @@
 - name: Overview
   items:
-  - name: What is SQL Server Big Data Cluster?
+  - name: What is SQL Server big data cluster?
     href: big-data-cluster-overview.md
 - name: Quickstarts
   items:
-  - name: Deploy SQL Server Big Data Cluster
+  - name: Deploy SQL Server big data cluster
     href: quickstart-big-data-cluster-deploy.md
 - name: Concepts
   items:
@@ -52,7 +52,7 @@
     items:
     - name: Data Wrangling using PROSE Code Accelerator
       href: use-prose-for-big-data-automation.md
-  - name: Manage SQL Server Big Data Cluster
+  - name: Manage SQL Server big data cluster
     items:
     - name: Cluster Admin Portal
       href: cluster-admin-portal.md
@@ -72,5 +72,5 @@
     href: ../sql-server/what-s-new-in-sql-server-ver15.md?toc=%2fsql%2fbig-data-cluster%2ftoc.json
   - name: PolyBase documentation
     href: ../relational-databases/polybase/polybase-guide.md
-  - name: Request access to Big Data Clusters
+  - name: Request access to big data clusters
     href: https://aka.ms/eapsignup

@@ -1,8 +1,8 @@
 ---
-title: Submit Spark Job on SQL Server Big Data Clusters in Azure Data Studio 
-description: Submit Spark Job on SQL Server Big Data Clusters in Azure Data Studio
-services: SQL Server 2019 Big Data Cluster spark
-ms.service: SQL Server 2019 Big Data Cluster spark
+title: Submit Spark Job on SQL Server big data clusters in Azure Data Studio 
+description: Submit Spark Job on SQL Server big data clusters in Azure Data Studio
+services: SQL Server 2019 big data cluster spark
+ms.service: SQL Server 2019 big data cluster spark
 author: jejiang
 ms.author: jejiang
 ms.reviewer: jroth
@@ -10,9 +10,9 @@ ms.custom: ""
 ms.topic: conceptual
 ms.date: 10/01/2018
 ---
-# Submit Spark Job on SQL Server Big Data Clusters in Azure Data Studio
+# Submit Spark Job on SQL Server big data clusters in Azure Data Studio
 
-One of the key scenarios is the ability to submit Spark job for SQL Server 2019 CTP 2.0. The Spark job submission feature allows you to submit a local Jar or Py files with references to SQL Server 2019 Big Data Cluster. It also enables you to execute a Jar or Py files, which are already located in the HDFS file system. 
+One of the key scenarios is the ability to submit Spark job for SQL Server 2019 CTP 2.0. The Spark job submission feature allows you to submit a local Jar or Py files with references to SQL Server 2019 big data cluster. It also enables you to execute a Jar or Py files, which are already located in the HDFS file system. 
 
 ## Prerequisite 
 Install big data tools for SQL Server and connect to a Big Data cluster before you can submit Spark job. For installation details, refer to link [Deploy Big Data Tools](deploy-big-data-tools.md).
@@ -57,5 +57,5 @@ After the Spark job is submitted, the Spark job submission and execution status 
 ![Spark job link in output](./media/submit-spark-job/monitor-spark-job-submission-2.png)
 
 ## Next steps
-For more information on SQL Server Big Data Cluster and related scenarios, see [What is SQL Server Big Data Cluster](big-data-cluster-overview.md)?
+For more information on SQL Server big data cluster and related scenarios, see [What is SQL Server big data cluster](big-data-cluster-overview.md)?
 

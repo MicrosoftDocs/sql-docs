@@ -153,4 +153,4 @@ If you like to uninstall a package, then please use the following command from y
 
 ## Next steps
 
-For more information about SQL Server Big Data Clusters, see [What is SQL Server 2019 Big Data Clusters?](big-data-cluster-overview.md).
+For more information about SQL Server big data clusters, see [What is SQL Server 2019 big data clusters?](big-data-cluster-overview.md).

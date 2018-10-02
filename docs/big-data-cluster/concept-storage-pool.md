@@ -1,5 +1,5 @@
 ---
-title: What is the SQL Server Big Data Clusters storage pool? | Microsoft Docs
+title: What is the SQL Server big data clusters storage pool? | Microsoft Docs
 description:
 author: rothja 
 ms.author: jroth 
@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.prod: sql
 ---
 
-# What is the SQL Server Big Data Clusters storage pool?
+# What is the SQL Server big data clusters storage pool?
 
 This article describes the role of the *SQL Server storage pool* in a SQL Server 2019 preview Big Data cluster. The following sections describe the architecture and functionality of a SQL storage pool.
 
@@ -29,6 +29,6 @@ Storage nodes are responsible for:
 
 ## Next steps
 
-To learn more about the SQL Server Big Data Clusters, see the following overview:
+To learn more about the SQL Server big data clusters, see the following overview:
 
-- [What is SQL Server 2019 Big Data Clusters?](big-data-cluster-overview.md)
+- [What is SQL Server 2019 big data clusters?](big-data-cluster-overview.md)

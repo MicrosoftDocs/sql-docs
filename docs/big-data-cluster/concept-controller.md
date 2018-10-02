@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.prod: sql
 ---
 
-# What is the SQL Server Big Data Clusters controller?
+# What is the SQL Server big data clusters controller?
 
 The controller hosts the core logic for deploying and managing a big data cluster. It takes care of all interactions with Kubernetes, SQL Server instances that are part of the cluster and other components like HDFS and Spark. 
 
@@ -62,6 +62,6 @@ Authentication to the controller service endpoint is based on username and passw
 
 ## Next steps
 
-To learn more about the SQL Server Big Data Clusters, see the following overview:
+To learn more about the SQL Server big data clusters, see the following overview:
 
-- [What is SQL Server 2019 Big Data Clusters?](big-data-cluster-overview.md)
+- [What is SQL Server 2019 big data clusters?](big-data-cluster-overview.md)

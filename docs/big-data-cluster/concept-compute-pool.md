@@ -1,5 +1,5 @@
 ---
-title: What is a SQL Big Data Clusters compute pool? | Microsoft Docs
+title: What is a SQL big data clusters compute pool? | Microsoft Docs
 description:
 author: rothja 
 ms.author: jroth 
@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.prod: sql
 ---
 
-# What is a SQL Big Data Clusters compute pool?
+# What is a SQL big data clusters compute pool?
 
 This article describes the role of *SQL Server compute pools* in a SQL Server 2019 preview Big Data cluster. Compute pools provide scale-out computational resources for a Big Data cluster. The following sections describe the architecture and functionality of a compute pool.
 
@@ -22,10 +22,10 @@ A compute pool is made of one or more compute pods running in Kubernetes. The au
 
 ## Scale-out groups
 
-A compute pool can act as a PolyBase scale-out group for distributed queries over different data sources--such as HDFS, Oracle, MongoDB, or Terradata. By using compute pods in Kubernetes, Big Data Clusters can automate creating and configuring compute pods for PolyBase scale-out groups.
+A compute pool can act as a PolyBase scale-out group for distributed queries over different data sources--such as HDFS, Oracle, MongoDB, or Terradata. By using compute pods in Kubernetes, big data clusters can automate creating and configuring compute pods for PolyBase scale-out groups.
 
 ## Next steps
 
-To learn more about the SQL Server Big Data Clusters, see the following overview:
+To learn more about the SQL Server big data clusters, see the following overview:
 
-- [What is SQL Server 2019 Big Data Clusters?](big-data-cluster-overview.md)
+- [What is SQL Server 2019 big data clusters?](big-data-cluster-overview.md)

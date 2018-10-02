@@ -1,5 +1,5 @@
 ---
-title: Restore a database into SQL Server Big Data Cluster | Microsoft Docs
+title: Restore a database into SQL Server big data cluster | Microsoft Docs
 description:
 author: rothja
 ms.author: jroth
@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.prod: sql
 ---
 
-# Restore a database into the SQL Server Big Data Cluster master instance
+# Restore a database into the SQL Server big data cluster master instance
 
 To bring an existing SQL Server database into the master instance, we recommend using a backup, copy and restore approach.  In this example we will show how to restore the AdventureWorks database, but you can use any database backup that you have.  You can download the AdventureWorks backup [here](https://www.microsoft.com/en-us/download/details.aspx?id=49502).
 

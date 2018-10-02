@@ -14,16 +14,22 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 # Install Machine Learning Server (Standalone) or R Server (Standalone) using SQL Server Setup
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server setup includes a **shared feature** option for installing a non-instance-aware, standalone machine learning server that runs outside of SQL Server. In SQL Server 2016, this feature is called **R Server (Standalone)**. In SQL Server 2017, it's called **Machine Learning Server (Standalone)** and includes R and Python. 
+SQL Server Setup includes a **shared feature** option for installing a non-instance-aware, standalone machine learning server that runs outside of SQL Server. In SQL Server 2016, this feature is called **R Server (Standalone)**. In SQL Server 2017, it's called **Machine Learning Server (Standalone)** and includes R and Python. 
 
-A standalone server as installed by SQL Server Setup is functionally equivalent to the non-SQL-branded versions of [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), supporting the same use cases and scenarios, including remote execution, operationalization and web services, and the complete collection of RevoScaleR and revoscalepy functions.
+A standalone server as installed by SQL Server Setup is functionally equivalent to the non-SQL-branded versions of [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), supporting the same use cases and scenarios, including:
+
++ Remote execution, switching between local and remote sessions in the same console
++ Operationalization with web nodes and compute nodes
++ Web service deployment: the ability to package R and Python script into web services
++ Complete collection of R and Python function libraries
 
 As an independent server decoupled from SQL Server, the R and Python environment is configured, secured, and accessed using the underlying operating system and tools provided in the standalone server, not SQL Server.
 
-As an adjunct to SQL Server, a standalone server is useful if you need to develop high-performance machine learning solutions that can use remote compute contexts, switching interchangeably between the local server and a remote Machine Learning Server on a Spark cluster or on another SQL Server instance.
-  
+As an adjunct to SQL Server, a standalone server is useful if you need to develop high-performance machine learning solutions that can use remote compute contexts to the full range of supported data platforms. You can shift execution from the local server to a remote Machine Learning Server on a Spark cluster or on another SQL Server instance.
 
-## <a name="bkmk_prereqs"> </a> Pre-install checklist
+<a name="bkmk_prereqs"> </a>
+
+## Pre-install checklist
 
 If you installed a previous version, such as SQL Server 2016 R Server (Standalone) or Microsoft R Server, uninstall the existing installation before continuing.
 
@@ -32,7 +38,9 @@ As a general rule, we recommend that you treat standalone server and database en
 You can only have one standalone server on the computer: either SQL Server 2017 Machine Learning Server or SQL Server 2016 R Server (Standalone). You must manually uninstall one version before installing a different version.
 
 ::: moniker range="=sql-server-2016"
- ###  <a name="bkmk_ga_instalpatch"></a> Install patch requirement 
+<a name="bkmk_ga_instalpatch"></a> 
+
+ ###  Install patch requirement 
 
 For SQL Server 2016 only: Microsoft has identified a problem with the specific version of Microsoft VC++ 2013 Runtime binaries that are installed as a prerequisite by SQL Server. If this update to the VC runtime binaries is not installed, SQL Server may experience stability issues in certain scenarios. Before you install SQL Server follow the instructions at [SQL Server Release Notes](../../sql-server/sql-server-2016-release-notes.md#bkmk_ga_instalpatch) to see if your computer requires a patch for the VC runtime binaries.  
 ::: moniker-end
@@ -133,7 +141,7 @@ The following table lists the paths for R and Python distributions created by Mi
 
 <a name="apply-cu"></a>
 
-## Apply cumulative updates
+## Apply updates
 
 We recommend that you apply the latest cumulative update to both the database engine and machine learning components.
 

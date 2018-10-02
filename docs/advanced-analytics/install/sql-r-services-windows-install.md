@@ -4,7 +4,7 @@ description: R in SQL Server is available when you install SQL Server 2016 R Ser
 ms.prod: sql
 ms.technology: machine-learning
   
-ms.date: 09/08/2018
+ms.date: 10/01/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
@@ -17,7 +17,9 @@ This article explains how to install and configure **SQL Server 2016 R Services*
 
 In SQL Server 2017, R integration is offered in [Machine Learning Services](../r/r-server-standalone.md), reflecting the addition of Python. If you want R integration and have SQL Server 2017 installation media, see [Install SQL Server 2017 Machine Learning Services](sql-machine-learning-services-windows-install.md) to add the feature. 
 
-## <a name="bkmk_prereqs"> </a> Pre-install checklist
+<a name="bkmk_prereqs"> </a> 
+
+## Pre-install checklist
 
 + A database engine instance is required. You cannot install just R, although you can add it incrementally to an existing instance.
 
@@ -41,11 +43,15 @@ If you used any earlier versions of the Revolution Analytics development environ
 
 [!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
 
- ###  <a name="bkmk_ga_instalpatch"></a> Install patch requirement 
+<a name="bkmk_ga_instalpatch"></a>
+
+ ### Install patch requirement 
 
 Microsoft has identified a problem with the specific version of Microsoft VC++ 2013 Runtime binaries that are installed as a prerequisite by SQL Server. If this update to the VC runtime binaries is not installed, SQL Server may experience stability issues in certain scenarios. Before you install SQL Server follow the instructions at [SQL Server Release Notes](../../sql-server/sql-server-2016-release-notes.md#bkmk_ga_instalpatch) to see if your computer requires a patch for the VC runtime binaries.  
 
-## <a name="bkmk2016top"></a>Run Setup
+<a name="bkmk2016top"></a>
+
+## Run Setup
 
 For local installations, you must run Setup as an administrator. If you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from a remote share, you must use a domain account that has read and execute permissions on the remote share.
 
@@ -80,8 +86,9 @@ For local installations, you must run Setup as an administrator. If you install 
 
 7. After setup is complete, if you are instructed to restart the computer, do so now. It is important to read the message from the Installation Wizard when you have finished with Setup. For more information, see [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files).
 
+<a name="bkmk_enableFeature"></a>
 
-##  <a name="bkmk_enableFeature"></a>Enable script execution
+##  Enable script execution
 
 1. Open [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 
 
@@ -113,6 +120,8 @@ Restarting the service also automatically restarts the related [!INCLUDE[rsql_la
 You can restart the service using the right-click **Restart** command for the instance in SSMS, or by using the **Services** panel in Control Panel, or by using [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).
 
 ## Verify installation
+
+Check the installation status of the instance using [custom reports](../r/monitor-r-services-using-custom-reports-in-management-studio.md).
 
 Use the following steps to verify that all components used to launch external script are running.
 
@@ -146,7 +155,29 @@ Use the following steps to verify that all components used to launch external sc
     |----|
     | 1|
 
-## <a name="bkmk_FollowUp"></a> Additional configuration
+<a name="apply-cu"></a>
+
+## Apply updates
+
+We recommend that you apply the latest cumulative update to both the database engine and machine learning components.
+
+Cumulative updates are installed through the Setup program. On an internet-connected device, use the following steps to update to an existing installed instance. For an offline device, see [Install on computers with no internet access > Apply cumulative updates](sql-ml-component-install-without-internet-access.md#apply-cu).
+
+1. Start with a baseline instance already installed: SQL Server 2016 initial release, SQL Server 2016 SP 1, or SQL Server 2016 SP 2.
+
+2. Go to the cumulative update list: [SQL Server 2016 updates](https://sqlserverupdates.com/sql-server-2016-updates/)
+
+3. Select the latest cumulative update. An executable is downloaded and extracted automatically.
+
+4. Run Setup. Accept the licensing terms, and on the Feature selection page, review the features for which cumulative updates are applied. You should see every feature installed for the current instance, including machine learning features.
+
+  ![](media/cumulative-update-feature-selection.png)
+
+5. Continue through the wizard, accepting the licensing terms for R and Python distributions. 
+
+<a name="bkmk_FollowUp"></a> 
+
+## Additional configuration
 
 If the external script verification step was successful, you can run Python commands from SQL Server Management Studio, Visual Studio Code, or any other client that can send T-SQL statements to the server.
 
@@ -164,7 +195,9 @@ Common scenarios that require additional changes include:
 > [!NOTE]
 > Not all the listed changes are required, and none might be required. Requirements depend on your security schema, where you installed SQL Server, and how you expect users to connect to the database and run external scripts. Additional troubleshooting tips can be found here: [Upgrade and installation FAQ](../r/upgrade-and-installation-faq-sql-server-r-services.md)
 
-### <a name="bkmk_configureAccounts"></a>Enable implied authentication for the Launchpad account group
+<a name="bkmk_configureAccounts"></a>
+
+### Enable implied authentication for the Launchpad account group
 
 During setup, some new Windows user accounts are created for running tasks under the security token of the [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] service. When a user sends an R script from an external client, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] activates an available worker account, maps it to the identity of the calling user, and runs the R script on behalf of the user. This new service of the database engine supports the secure execution of external scripts, called *implied authentication*.
 
@@ -184,7 +217,9 @@ However, if you need to run R scripts from a remote data science client and are 
 6. Click **OK** once more to close the **Select User or Group** dialog box.
 7. In the **Login - New** dialog box, click **OK**. By default, the login is assigned to the **public** role and has permission to connect to the database engine.
 
-### <a name="bkmk_AllowLogon"></a>Give users permission to run external scripts
+<a name="bkmk_AllowLogon"></a>
+
+### Give users permission to run external scripts
 
 > [!NOTE]
 > If you use a SQL login for running R scripts in a SQL Server compute context, this step is not required.
@@ -204,7 +239,9 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT  TO [UserName]
 > 
 > [Monitor Machine Learning Services using Custom Reports](../r/monitor-r-services-using-custom-reports-in-management-studio.md).
 
-### <a name="permissions-db"></a> Give your users read, write, or DDL permissions to the database
+<a name="permissions-db"></a>
+
+###  Give your users read, write, or DDL permissions to the database
 
 The user account that is used to run R might need to read data from other databases, create new tables to store results, and write data into tables. Therefore, for each user who will be executing R scripts, ensure that the user has the appropriate permissions on the database: *db_datareader*, *db_datawriter*, or *db_ddladmin*.
 
@@ -235,7 +272,9 @@ Now that you have everything working, you might also want to optimize the server
 
 If you think you might use R heavily, or if you expect many users to be running scripts concurrently, you can increase the number of worker accounts that are assigned to the Launchpad service. For more information, see [Modify the user account pool for SQL Server Machine Learning Services](../r/modify-the-user-account-pool-for-sql-server-r-services.md).
 
-### <a name="bkmk_optimize"></a>Optimize the server for external script execution
+<a name="bkmk_optimize"></a>
+
+### Optimize the server for external script execution
 
 The default settings for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup are intended to optimize the balance of the server for a variety of services that are supported by the database engine, which might include extract, transform, and load (ETL) processes, reporting, auditing, and applications that use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data. Therefore, under the default settings, you might find that resources for machine learning are sometimes restricted or throttled, particularly in memory-intensive operations.
 
@@ -257,17 +296,6 @@ Packages that you want to use from SQL Server must be installed in the default l
 
 The process for installing and managing R packages is different in SQL Server 2016 and SQL Server 2017. In SQL Server 2016, a database administrator must install R packages that users need. In SQL Server 2017, you can set up user groups to share packages on a per-database level, or configure database roles to enable users to install their own packages. For more information, see [Install new R packages](../r/install-additional-r-packages-on-sql-server.md).
 
-
-## Get help
-
-Need help with installation or upgrade? For answers to common questions and known issues, see the following article:
-
-* [Upgrade and installation FAQ - Machine Learning Services](../r/upgrade-and-installation-faq-sql-server-r-services.md)
-
-To check the installation status of the instance and fix common issues, try these custom reports.
-
-* [Custom reports for SQL Server R Services](../r/monitor-r-services-using-custom-reports-in-management-studio.md)
-
 ## Next steps
 
 R developers can get started with some simple examples, and learn the basics of how R works with SQL Server. For your next step, see the following links:
@@ -276,5 +304,3 @@ R developers can get started with some simple examples, and learn the basics of 
 + [Tutorial: In-database analytics for R developers](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
 To view examples of machine learning that are based on real-world scenarios, see [Machine learning tutorials](../tutorials/machine-learning-services-tutorials.md).
-
-

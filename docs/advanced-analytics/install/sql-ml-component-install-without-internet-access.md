@@ -103,22 +103,22 @@ We recommend that you apply the latest cumulative update to both the database en
   + SQL Server 2017 initial release
   + SQL Server 2016 initial release, SQL Server 2016 SP 1, or SQL Server 2016 SP 2
 
-2. On an internet connected device, go to the cumulative update list for your version of SQL Server.
+2. On an internet connected device, go to the cumulative update list for your version of SQL Server:
 
   + [SQL Server 2017 updates](https://sqlserverupdates.com/sql-server-2017-updates/)
   + [SQL Server 2016 updates](https://sqlserverupdates.com/sql-server-2016-updates/)
 
-3. Download the latest cumulative update. It is a self-exracting .exe file that launches Setup.
+3. Select the latest cumulative update. An executable is downloaded and extracted automatically.
 
 4. Get corresponding CAB files for R and Python. For download links, see [CAB downloads for cumulative updates on SQL Server in-database analytics instances](sql-ml-cab-downloads.md).
 
 5. Transfer all files to the same folder on the offline computer.
 
-6. Run Setup. 
+6. Run Setup. Accept the licensing terms, and on the Feature selection page, review the features for which cumulative updates are applied. You should see every feature installed for the current instance, including machine learning features.
 
-In SQL Server Setup, accept the licensing terms, and on the Feature selection page, review the features for which cumulative updates are applied.
+  ![](media/cumulative-update-feature-selection.png)
 
-During installation, you are prompted to choose the folder location for the updated CAB files.
+5. Continue through the wizard, accepting the licensing terms for R and Python distributions. During installation, you are prompted to choose the folder location containing the updated CAB files.
 
 ## Post-install configuration
 

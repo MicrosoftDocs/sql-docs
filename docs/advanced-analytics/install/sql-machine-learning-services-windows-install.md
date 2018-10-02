@@ -192,25 +192,19 @@ Use the following steps to verify that all components used to launch external sc
 
 <a name="apply-cu"></a>
 
-## Apply cumulative updates
+## Apply updates
 
 We recommend that you apply the latest cumulative update to both the database engine and machine learning components.
 
 Cumulative updates are installed through the Setup program. On an internet-connected device, use the following steps to update to an existing installed instance. For an offline device, see [Install on computers with no internet access > Apply cumulative updates](sql-ml-component-install-without-internet-access.md#apply-cu).
 
-1. Start with a baseline instance. You can only apply cumulative updates to existing installations of SQL Server:
+1. Start with a baseline instance already installed: SQL Server 2017 initial release
 
-  + SQL Server 2017 initial release
-  + SQL Server 2016 initial release, SQL Server 2016 SP 1, or SQL Server 2016 SP 2
+2. Go to the cumulative update list: [SQL Server 2017 updates](https://sqlserverupdates.com/sql-server-2017-updates/)
 
-2. Go to the cumulative update list for your version of SQL Server.
+3. Select the latest cumulative update. An executable is downloaded and extracted automatically.
 
-  + [SQL Server 2017 updates](https://sqlserverupdates.com/sql-server-2017-updates/)
-  + [SQL Server 2016 updates](https://sqlserverupdates.com/sql-server-2016-updates/)
-
-3. Select the latest cumulative update. A self-executing cumulative update is downloaded and extracted.
-
-4. In SQL Server Setup, accept the licensing terms, and on the Feature selection page, review the features for which cumulative updates are applied. You should see every feature installed for the current instance, including machine learning features.
+4. Run Setup. Accept the licensing terms, and on the Feature selection page, review the features for which cumulative updates are applied. You should see every feature installed for the current instance, including machine learning features.
 
   ![](media/cumulative-update-feature-selection.png)
 

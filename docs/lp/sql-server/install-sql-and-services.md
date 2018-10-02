@@ -69,7 +69,7 @@ featureFlags:
         </ul>
     </div>
     <div class="container">
-        <h1>SQL Server: Installation</h1>
+        <h1>SQL Server: Install or Upgrade</h1>
         <ul class="pivots tabLess">
             <li class="pivotItem" style="display: list-item;" data-id="#products">
                 <a href="#products" data-linktype="self-bookmark"></a>
@@ -306,7 +306,7 @@ featureFlags:
                 </a>
             </li>
            <li>
-                <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR7y_maOEfTBMj0E3nehXKj9UQjIxMzJORE1BTVk4WU9YSlNaWVVIRElPRC4u" data-linktype="external">
+                <a href="http://aka.ms/sqldocsurvey" data-linktype="external">
                     SQL Docs Feedback
                 </a>
             </li>

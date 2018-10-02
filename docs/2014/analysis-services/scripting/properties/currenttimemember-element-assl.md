@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "CurrentTimeMember Element"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "CurrentTimeMember element"
 ms.assetid: 2e73009c-9f2b-441c-bdf0-ca19b160da4f
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg

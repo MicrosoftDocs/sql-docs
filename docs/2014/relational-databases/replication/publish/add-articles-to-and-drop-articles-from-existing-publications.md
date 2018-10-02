@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "replication"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "articles [SQL Server replication], dropping"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "publications [SQL Server replication], adding and dropping articles"
   - "articles [SQL Server replication], adding"
 ms.assetid: b148e907-e1f2-483b-bdb2-59ea596efceb
-caps.latest.revision: 44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

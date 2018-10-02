@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "MAXIMUM_SEQUENCE_STATES parameter"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "sequence clustering algorithms [Analysis Services]"
   - "CLUSTER_COUNT parameter"
 ms.assetid: 251c369d-6b02-4687-964e-39bf55c9b009
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg

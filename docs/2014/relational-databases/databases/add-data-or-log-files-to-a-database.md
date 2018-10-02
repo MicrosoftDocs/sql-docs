@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "logs [SQL Server], files"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "files [SQL Server], adding"
   - "data additions [SQL Server]"
 ms.assetid: 8ead516a-1334-4f40-84b2-509d0a8ffa45
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg

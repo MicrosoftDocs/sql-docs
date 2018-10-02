@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "DesignAggregations Element"
@@ -23,7 +21,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "DesignAggregations command"
 ms.assetid: 4c419dbc-7405-40aa-8ddd-6b46685a297d
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg

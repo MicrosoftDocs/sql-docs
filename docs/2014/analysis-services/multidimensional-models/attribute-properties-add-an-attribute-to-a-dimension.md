@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "adding attributes"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "attributes [Analysis Services], adding"
   - "manual attribute creation [Analysis Services]"
 ms.assetid: 25826ba1-2b38-4b34-bd3a-7eba116093ae
-caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
 manager: craigg

@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "8974 (Database Engine error)"
 ms.assetid: 52098678-0858-4a14-ad07-37ebbafca5fc
-caps.latest.revision: 18
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

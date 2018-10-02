@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "NamingTemplateTranslations Element"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "NamingTemplateTranslations element"
 ms.assetid: fde65778-1fa3-490a-9874-8bf2052ef25c
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg

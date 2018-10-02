@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.deleteobjects.f1"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "deleting data sources"
   - "removing data sources"
 ms.assetid: b45441ef-f909-4736-98b9-cc80d0acac99
-caps.latest.revision: 45
 author: minewiskan
 ms.author: owend
 manager: craigg

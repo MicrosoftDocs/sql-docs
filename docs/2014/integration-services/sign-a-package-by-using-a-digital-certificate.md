@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "digital signatures [Integration Services]"
   - "signing packages [Integration Services]"
   - "signatures [Integration Services]"
 ms.assetid: 182b115e-0fe2-4717-8dff-183f9eb6e397
-caps.latest.revision: 59
 author: douglaslms
 ms.author: douglasl
 manager: craigg

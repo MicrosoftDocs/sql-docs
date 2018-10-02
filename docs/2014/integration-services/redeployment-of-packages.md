@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "redeploying packages [Integration Services]"
   - "deploying packages [Integration Services], redeploying"
 ms.assetid: 86806efb-8cf4-4f9d-9824-1152cb4c495c
-caps.latest.revision: 35
 author: douglaslms
 ms.author: douglasl
 manager: craigg

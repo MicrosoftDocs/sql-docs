@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.is.upgradewizard.completewizard.f1"
 ms.assetid: e07bd68e-4dc8-41f0-acfe-059e77688cfa
-caps.latest.revision: 16
 author: douglaslms
 ms.author: douglasl
 manager: craigg

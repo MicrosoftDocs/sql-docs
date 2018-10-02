@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "04/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "objects [XML for Analysis]"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "object definitions [XML for Analysis]"
   - "XMLA, objects"
 ms.assetid: 43b65f6d-0123-4556-81f0-c7a0b84361e5
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg

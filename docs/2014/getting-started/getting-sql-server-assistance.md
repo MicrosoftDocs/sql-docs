@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "05/25/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "offline resources [SQL Server]"
@@ -41,7 +39,6 @@ helpviewer_keywords:
   - "SQL Server assistance"
   - "SQL Server Solution Center"
 ms.assetid: 619facba-5cf4-4474-9577-9e2d82a851fb
-caps.latest.revision: 40
 author: mightypen
 ms.author: genemi
 manager: craigg

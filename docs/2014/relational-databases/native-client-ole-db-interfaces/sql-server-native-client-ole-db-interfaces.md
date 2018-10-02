@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "04/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "SQL Server Native Client OLE DB provider, reference"
@@ -14,7 +12,6 @@ helpviewer_keywords:
   - "SQLNCLI, OLE DB"
   - "SQL Server Native Client, OLE DB"
 ms.assetid: 7c462c92-ad5b-4dd5-817d-2b89c83d8fe4
-caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg

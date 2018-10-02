@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "04/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "TargetType Element"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "TargetType element"
 ms.assetid: 2c69ea6e-2af7-435b-9841-86117d5554a7
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg

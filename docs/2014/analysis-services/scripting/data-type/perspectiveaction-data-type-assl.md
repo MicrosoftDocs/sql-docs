@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "PerspectiveAction Data Type"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "PerspectiveAction data type"
 ms.assetid: a0e4a545-688c-4d4e-b05f-0008d3503349
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg

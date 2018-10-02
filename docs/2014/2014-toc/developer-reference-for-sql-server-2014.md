@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "06/14/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-ms.tgt_pltfrm: ""
 ms.topic: reference
 f1_keywords: 
   - "sql12.portal.DevRef.f1"
 ms.assetid: e60866bf-c726-479e-8a38-6bced16f527c
-caps.latest.revision: 13
 author: mightypen
 ms.author: genemi
 manager: craigg

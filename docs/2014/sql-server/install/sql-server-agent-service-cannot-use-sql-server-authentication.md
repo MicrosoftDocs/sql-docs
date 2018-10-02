@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "authentication [SQL Server Agent]"
   - "SQL Server Authentication [SQL Server Agent]"
 ms.assetid: c39f3ec3-fc2c-4c12-940f-60d8d3d17660
-caps.latest.revision: 19
 author: mashamsft
 ms.author: mathoma
 manager: craigg

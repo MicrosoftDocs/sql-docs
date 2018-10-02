@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "07/14/2016"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: security
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "SQL12.SWB.DATABASEUSER.MEMBERSHIP.F1"

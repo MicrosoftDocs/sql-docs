@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "01/07/2016"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "parameters [SQL Server], startup options"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "startup options [SQL Server]"
   - "SQL Server services, setting startup options"
 ms.assetid: 7a94643c-6460-4baf-bb31-0cb99eaf970d
-caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

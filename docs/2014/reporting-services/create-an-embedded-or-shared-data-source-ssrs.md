@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "data sources [Reporting Services], creating"
 ms.assetid: b111a8d0-a60d-4c8b-b00a-51644b19c34b
-caps.latest.revision: 40
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg

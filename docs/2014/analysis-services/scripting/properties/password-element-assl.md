@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "Password Element"
@@ -19,7 +17,6 @@ topic_type:
 helpviewer_keywords: 
   - "Password element"
 ms.assetid: ee756b01-fb08-4a9a-8c2a-7c04af0f8658
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg

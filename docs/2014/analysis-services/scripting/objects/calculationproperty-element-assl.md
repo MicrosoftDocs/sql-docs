@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "CalculationProperty Element"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "CalculationProperty element"
 ms.assetid: 5f0b4cfc-7d25-4c01-a517-cc2e89859be3
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg

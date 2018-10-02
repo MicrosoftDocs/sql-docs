@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "10/26/2015"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.memoryoptimizationwizard.f1"
   - "swb.memoryoptimizationwizard.f1"
 ms.assetid: 181989c2-9636-415a-bd1d-d304fc920b8a
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg

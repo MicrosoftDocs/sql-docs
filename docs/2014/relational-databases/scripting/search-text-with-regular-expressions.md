@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "vsregularexpressionhelp"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "Query Editor [SQL Server Management Studio], regular expression searches"
   - "searches [SQL Server Management Studio], regular expressions"
 ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
-caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg

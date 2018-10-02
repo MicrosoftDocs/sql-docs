@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 api_name: 
   - "InstanceName Property (WMI MSReportServer_Instance)"
@@ -18,7 +16,6 @@ topic_type:
 helpviewer_keywords: 
   - "InstanceName property"
 ms.assetid: 98ab86fd-ed94-4cda-9c68-047d589bdea6
-caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
 manager: craigg

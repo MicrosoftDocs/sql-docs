@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "12/29/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "mining models, browsing"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "neural networks"
   - "dependency network"
 ms.assetid: e4224cb7-115b-4889-ac07-03f096fb55fc
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg

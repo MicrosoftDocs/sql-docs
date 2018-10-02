@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "04/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "modifying cells"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "cells [Analysis Services]"
   - "XML for Analysis, cells"
 ms.assetid: a1c61496-36ee-4bce-98d9-d13440d349aa
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg

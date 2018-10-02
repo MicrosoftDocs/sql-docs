@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "permissions [Reporting Services], SharePoint integrated mode"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "permissions [Reporting Services], native mode"
   - "security [Reporting Services], SharePoint integrated mode"
 ms.assetid: 0eb2f34a-3643-4b03-81c2-5741ba7ebefd
-caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
 manager: craigg

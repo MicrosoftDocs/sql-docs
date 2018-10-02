@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "installation progress, Setup"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "Installation Progress page [SQL Server Installation Wizard]"
   - "SQL Server Installation Wizard, Installation Progress page"
 ms.assetid: 326f675a-bead-48d3-9088-539e9f9c3fc9
-caps.latest.revision: 28
 author: mashamsft
 ms.author: mathoma
 manager: craigg

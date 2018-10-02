@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "12/29/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Data Mining Client"
   - "wizards"
   - "getting started"
 ms.assetid: e075e2de-11cc-4f71-9603-0b161bca8a24
-caps.latest.revision: 27
 author: minewiskan
 ms.author: owend
 manager: craigg

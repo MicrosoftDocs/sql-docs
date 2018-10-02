@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "AUTO_DETECT_PERIODICITY parameter"
   - "linear regression algorithms [Analysis Services]"
   - "regression algorithms [Analysis Services]"
 ms.assetid: 7807b5ff-8e0d-418d-a05b-b1a9644536d2
-caps.latest.revision: 24
 author: minewiskan
 ms.author: owend
 manager: craigg

@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "Type Element (Dimension)"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "Type element"
 ms.assetid: 6a2798b1-26c7-49d8-b556-e681c69d9574
-caps.latest.revision: 36
 author: minewiskan
 ms.author: owend
 manager: craigg

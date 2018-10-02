@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.roledesignerdialog.dimensions.f1"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "user access rights [Analysis Services], dimensions"
   - "permissions [Analysis Services], dimensions"
 ms.assetid: be5b2746-0336-4b12-827e-131462bdf605
-caps.latest.revision: 39
 author: minewiskan
 ms.author: owend
 manager: craigg

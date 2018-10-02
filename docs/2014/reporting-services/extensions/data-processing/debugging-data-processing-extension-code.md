@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "docset-sql-devref"
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "debugging data processing extensions [Reporting Services]"
   - "troubleshooting [Reporting Services], data processing extensions"
   - "data processing extensions [Reporting Services], debugging"
 ms.assetid: e963e205-9ae0-446d-97df-028a1d2727d9
-caps.latest.revision: 40
 author: markingmyname
 ms.author: maghan
 manager: craigg

@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "reusing packages"
   - "templates [Integration Services]"
 ms.assetid: efe66cec-3933-4f6e-8d35-fe3d300de66c
-caps.latest.revision: 16
 author: douglaslms
 ms.author: douglasl
 manager: craigg

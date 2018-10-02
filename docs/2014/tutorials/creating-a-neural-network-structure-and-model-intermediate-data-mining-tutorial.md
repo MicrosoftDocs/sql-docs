@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "12/29/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "discretization [Analysis Services]"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "DiscretizationMethod property"
   - "EQUAL_AREAS method"
 ms.assetid: 3f16215c-531e-4ecf-a11f-ee7c6a764463
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg

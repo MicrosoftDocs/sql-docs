@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dm.miningmodeleditor.clustering.discrimination.f1"
 ms.assetid: ae7cfff7-ab1c-4cf5-9a91-97b21d15d85f
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg

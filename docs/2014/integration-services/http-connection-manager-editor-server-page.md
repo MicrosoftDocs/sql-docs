@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.httpconnection.server.f1"
 helpviewer_keywords: 
   - "HTTP Connection Manager Editor"
 ms.assetid: 774778a0-ece6-4971-b93f-b121d8fc1fc1
-caps.latest.revision: 31
 author: douglaslms
 ms.author: douglasl
 manager: craigg

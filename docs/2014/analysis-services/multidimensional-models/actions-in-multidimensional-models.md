@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "actions [Analysis Services], creating"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "drillthrough actions [Analysis Services]"
   - "cubes [Analysis Services], actions"
 ms.assetid: b9fee2b9-05a5-4077-848d-d8457326dc27
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg

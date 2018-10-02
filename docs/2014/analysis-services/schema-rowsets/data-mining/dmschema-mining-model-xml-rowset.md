@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "DMSCHEMA_MINING_MODEL_XML"
@@ -17,7 +15,6 @@ topic_type:
 helpviewer_keywords: 
   - "DMSCHEMA_MINING_MODEL_XML rowset"
 ms.assetid: f58b00e9-3f72-4cff-b448-21a9fb529772
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg

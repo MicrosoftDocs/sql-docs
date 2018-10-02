@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Reporting Services, backward compatibility"
@@ -23,7 +21,6 @@ helpviewer_keywords:
   - "initializing installations [Reporting Services]"
   - "behavior changes [Reporting Services]"
 ms.assetid: 2a767f0f-84f2-4099-8784-1e37790f858e
-caps.latest.revision: 63
 author: markingmyname
 ms.author: maghan
 manager: craigg

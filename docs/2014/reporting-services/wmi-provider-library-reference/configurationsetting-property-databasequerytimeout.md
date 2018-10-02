@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 api_name: 
   - "DatabaseQueryTimeout Property"
@@ -18,7 +16,6 @@ topic_type:
 helpviewer_keywords: 
   - "DatabaseQueryTimeout property"
 ms.assetid: 96faed97-9799-4bbf-a66f-fdd532d3eace
-caps.latest.revision: 35
 author: markingmyname
 ms.author: maghan
 manager: craigg

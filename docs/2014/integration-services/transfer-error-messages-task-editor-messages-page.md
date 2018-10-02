@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.transfererrormessagestask.errormessages.F1"
 helpviewer_keywords: 
   - "Transfer Error Messages Task Editor"
 ms.assetid: cb2226a0-3037-4fdf-966f-81eabc0da9cf
-caps.latest.revision: 20
 author: douglaslms
 ms.author: douglasl
 manager: craigg

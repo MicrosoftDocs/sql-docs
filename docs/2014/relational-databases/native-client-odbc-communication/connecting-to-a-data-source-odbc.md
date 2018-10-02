@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "checking connection states"
@@ -22,7 +20,6 @@ helpviewer_keywords:
   - "SQL Server Native Client ODBC driver, data sources"
   - "SQL Server Native Client ODBC driver, connections"
 ms.assetid: ae30dd1d-06ae-452b-9618-8fd8cd7ba074
-caps.latest.revision: 36
 author: MightyPen
 ms.author: genemi
 manager: craigg

@@ -4,13 +4,9 @@ ms.custom: ""
 ms.date: "11/20/2015"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "SQL Server (starting with 2008)"
 f1_keywords: 
   - "sql12.swb.linkedserver.properties.general.f1"
   - "sql12.swb.linkedserver.properties.security.f1"
@@ -19,7 +15,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "linked servers [SQL Server], creating"
 ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
-caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg

@@ -40,7 +40,7 @@ ms.technology: install
                                                     <li><a class="barLink" href="/sql/sql-server/sql-server-technical-documentation?view=sql-server-2017">SQL Server 2017</a></li>
                                                     <li><a class="barLink" href="/sql/sql-server/sql-server-technical-documentation?view=sql-server-2016">SQL Server 2016</a></li>
                                                     <li><a class="barLink" href="/sql/2014-toc/books-online-for-sql-server-2014?view=sql-server-2014">SQL Server 2014</a></li>
-                                                    <li><a class="barLink" href="https://docs.microsoft.com/en-us/previous-versions/sql/">Previous SQL Server Versions (2005 - 2012)</a></li>
+                                                    <li><a class="barLink" href="https://docs.microsoft.com/previous-versions/sql/">Previous SQL Server Versions (2005 - 2012)</a></li>
                                                     <li><a class="barLink" href="/sql/analytics-platform-system/index">Analytics Platform System - Parallel Data Warehouse</a><li>
                                                 </ul>
                                                 <h4>Run on Windows or Linux</h4>
@@ -91,7 +91,7 @@ ms.technology: install
                                                 <h4>Samples</h4>
                                                 <ul class="noBullet">
                                                     <li><a class="barLink" href="https://github.com/Microsoft/sql-server-samples/tree/master/samples">Code samples on GitHub</a></li>
-                                                    <li><a class="barLink" href="https://docs.microsoft.com/en-us/sql/samples/wide-world-importers-what-is?view=sql-server-2017">Wide World Importers DB</a></li>
+                                                    <li><a class="barLink" href="https://docs.microsoft.com/sql/samples/wide-world-importers-what-is?view=sql-server-2017">Wide World Importers DB</a></li>
                                                     <li><a class="barLink" href="https://docs.microsoft.com/sql/samples/sql-samples-where-are?view=sql-server-2017">AdventureWorks DB</a></li>
                                                 </ul>
                                             </div>
@@ -108,8 +108,8 @@ ms.technology: install
                                                 <h4>Analysis</h4>
                                                 <ul class="noBullet">
                                                     <li><a class="barLink" href="/sql/analysis-services/analysis-services">SQL Server Analysis Services (2016, 2017)</a></li>
-                                                    <li><a class="barLink" href="https://msdn.microsoft.com/en-us/library/bb522607(v=sql.120).aspx">SQL Server 2014 Analysis Services</a></li>
-                                                    <li><a class="barLink" href="https://msdn.microsoft.com/en-us/library/bb522607(v=sql.110).aspx">SQL Server 2012 Analysis Services</a></li>
+                                                    <li><a class="barLink" href="https://msdn.microsoft.com/library/bb522607(v=sql.120).aspx">SQL Server 2014 Analysis Services</a></li>
+                                                    <li><a class="barLink" href="https://msdn.microsoft.com/library/bb522607(v=sql.110).aspx">SQL Server 2012 Analysis Services</a></li>
                                                     <li><a class="barLink" href="/azure/analysis-services/">Azure Analysis Services</a></li>
                                                     <li><a class="barLink" href="https://docs.microsoft.com/azure/machine-learning/">Azure Machine Learning</a></li>
                                                     <li><a class="barLink" href="https://docs.microsoft.com/sql/advanced-analytics/r/r-services">SQL Server Machine Learning Services</a></li>
@@ -118,9 +118,9 @@ ms.technology: install
                                                 <h4>Reporting</h4>
                                                 <ul class="noBullet">
                                                     <li><a class="barLink" href="/sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports">SQL Server Reporting Services (2016, 2017)</a></li>
-                                                    <li><a class="barLink" href="https://msdn.microsoft.com/en-us/library/ms159106(v=sql.120).aspx">SQL Server 2014 Reporting Services</a></li>
-                                                    <li><a class="barLink" href="https://msdn.microsoft.com/en-us/library/ms159106(v=sql.110).aspx">SQL Server 2012 Reporting Services</a></li>
-                                                    <li><a class="barLink" href="https://powerbi.microsoft.com/en-us/documentation/powerbi-service-get-started/">Power BI Service</a></li>
+                                                    <li><a class="barLink" href="https://msdn.microsoft.com/library/ms159106(v=sql.120).aspx">SQL Server 2014 Reporting Services</a></li>
+                                                    <li><a class="barLink" href="https://msdn.microsoft.com/library/ms159106(v=sql.110).aspx">SQL Server 2012 Reporting Services</a></li>
+                                                    <li><a class="barLink" href="https://powerbi.microsoft.com/documentation/powerbi-service-get-started/">Power BI Service</a></li>
                                                 </ul>
                                             </div>
                                         </div>

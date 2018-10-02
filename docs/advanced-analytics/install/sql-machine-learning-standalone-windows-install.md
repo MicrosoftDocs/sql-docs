@@ -152,29 +152,29 @@ Cumulative updates are installed through the Setup program. On an internet-conne
   + Machine Learning Server (Standalone) from SQL Server 2017 initial release
   + R Server (Standalone) from SQL Server 2016 initial release, SQL Server 2016 SP 1, or SQL Server 2016 SP 2
 
-2. On an internet connected device, go to the cumulative update list for your version of SQL Server.
+2. On an internet connected device, Windows Update provides cumulative updates. Alternatively, you can go to the cumulative update list for your version of SQL Server.
 
   + [SQL Server 2017 updates](https://sqlserverupdates.com/sql-server-2017-updates/)
   + [SQL Server 2016 updates](https://sqlserverupdates.com/sql-server-2016-updates/)
 
-3. Download the latest cumulative update. 
+3. Download the latest cumulative update. It is an executable file.
 
-4. On an internet-connected device, you can run Setup.
+4. On an internet-connected device, double-click the .exe to run Setup.
 
-5. For a server without internet connectivity:
+5. On a server with no internet connectivity:
 
    + Get corresponding CAB files for R and Python. For download links, see [CAB downloads for cumulative updates on SQL Server in-database analytics instances](sql-ml-cab-downloads.md).
 
-   + Transfer all files to the same folder on the offline computer.
+   + Transfer all files to a folder on the offline computer.
 
-   + Run Setup. During installation, you are prompted to select the location of the .cab files for R and Python.
+   + Double-click the .exe to run Setup. When installing a cumulate update on a server with no internet connectivity, you are prompted to select the location of the .cab files for R and Python.
 
-6. On a server for which you have enabled operationalization with web nodes and compute nodes, edit **appsettings.json** by adding an "MMLResourcePath" entry, directly under "MMLNativePath":
+6. On a server for which you have enabled operationalization with web nodes and compute nodes, edit **appsettings.json**, adding an "MMLResourcePath" entry, directly under "MMLNativePath":
 
     ```json
     "ScorerParameters": {
-        "MMLNativePath": "C:\\Program Files\\Microsoft SQL Server\\140\\R_SERVER\\library\\MicrosoftML\\mxLibs\\x64\\",
-        "MMLResourcePath": "C:\\Program Files\\Microsoft SQL Server\\140\\R_SERVER\\library\\MicrosoftML\\mxLibs\\x64\\"
+        "MMLNativePath": "C:\Program Files\Microsoft SQL Server\140\R_SERVER\library\MicrosoftML\mxLibs\x64\",
+        "MMLResourcePath": "C:\Program Files\Microsoft SQL Server\140\R_SERVER\library\MicrosoftML\mxLibs\x64\"
     }
     ```
 
@@ -182,7 +182,7 @@ Cumulative updates are installed through the Setup program. On an internet-conne
 
 ## Development tools
 
-A development IDE is not installed as part of setup. For more information on how to configure a development environment, see [Set up R tools](../r/set-up-a-data-science-client.md) and [Set up Python tools](../python/setup-python-client-tools-sql.md).
+A development IDE is not installed as part of setup. For more information about configuring a development environment, see [Set up R tools](../r/set-up-a-data-science-client.md) and [Set up Python tools](../python/setup-python-client-tools-sql.md).
 
 ## Next steps
 

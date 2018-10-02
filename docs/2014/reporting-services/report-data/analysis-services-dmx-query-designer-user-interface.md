@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "10012"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "DMX [Analysis Services], user interface"
   - "query designers [DMX]"
 ms.assetid: 5fd726a4-aed7-4e6c-9404-ccb2db66cf26
-caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
 manager: craigg

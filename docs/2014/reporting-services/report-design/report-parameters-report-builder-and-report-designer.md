@@ -4,13 +4,9 @@ ms.custom: ""
 ms.date: "07/27/2016"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "SQL Server 2014"
 f1_keywords: 
   - "sql12.rtp.rptdesigner.subreportproperties.parameters.f1"
   - "sql12.rtp.rptdesigner.reportparameters.general.f1"
@@ -19,7 +15,6 @@ f1_keywords:
   - "10070"
   - "sql12.rtp.rptdesigner.reportparameters.advanced.f1"
 ms.assetid: 58b96555-d876-4f61-bff8-db5764b9f5f9
-caps.latest.revision: 36
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg

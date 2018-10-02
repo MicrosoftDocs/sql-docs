@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "docset-sql-devref"
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "deleting rendering extensions"
   - "removing rendering extensions"
   - "rendering extensions [Reporting Services], removing"
 ms.assetid: 2abfebfb-065f-45cc-a904-c914394cf900
-caps.latest.revision: 37
 author: markingmyname
 ms.author: maghan
 manager: craigg

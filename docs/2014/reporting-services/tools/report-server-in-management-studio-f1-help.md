@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Object Explorer, help"
 ms.assetid: 982e8c03-7341-4895-8a95-a12d52c564ea
-caps.latest.revision: 36
 author: markingmyname
 ms.author: maghan
 manager: craigg

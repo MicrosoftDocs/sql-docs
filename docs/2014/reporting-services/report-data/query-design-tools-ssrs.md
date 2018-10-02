@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "graphical query designer [Reporting Services]"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "semantic queries [Reporting Services]"
   - "Report Model Query Designer"
 ms.assetid: a8139a9d-4aeb-4e64-96f3-564edf60479f
-caps.latest.revision: 35
 author: markingmyname
 ms.author: maghan
 manager: craigg

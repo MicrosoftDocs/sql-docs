@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology:
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Agent jobs, operators"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "disabling operators"
   - "operators (users) [Database Engine], changing availability with Management Studio"
 ms.assetid: 10d58b92-b67b-47e2-af9c-9f9fd6968bba
-caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg

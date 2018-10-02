@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "installing Upgrade Advisor"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "prerequisites [Upgrade Advisor]"
   - "Upgrade Advisor [SQL Server], prerequisites"
 ms.assetid: d21a39e5-5f81-4096-a7dd-f244e4779992
-caps.latest.revision: 60
 author: mashamsft
 ms.author: mathoma
 manager: craigg

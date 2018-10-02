@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "05/24/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Windows authentication [SQL Server]"
   - "database mirroring [SQL Server], security"
 ms.assetid: 143c68a5-589f-4e7f-be59-02707e1a430a
-caps.latest.revision: 74
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

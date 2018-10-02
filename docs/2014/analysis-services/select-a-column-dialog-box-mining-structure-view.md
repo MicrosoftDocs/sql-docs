@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dm.miningmodeleditor.structure.addacolumn.f1"
 helpviewer_keywords: 
   - "Select a Column dialog box"
 ms.assetid: 6f73a7dc-5401-40c3-8f1d-b41fc1dd91c2
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg

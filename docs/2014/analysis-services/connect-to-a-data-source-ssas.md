@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.bidtoolset.conndatasource.f1"
 ms.assetid: 1e2b17e9-092b-4af1-8a58-c52b8fe10ff1
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg

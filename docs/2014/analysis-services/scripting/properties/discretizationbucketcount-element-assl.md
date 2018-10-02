@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "DiscretizationBucketCount Element"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "DiscretizationBucketCount element"
 ms.assetid: 551a73ae-59e1-4079-a2d9-988df96b5e07
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg

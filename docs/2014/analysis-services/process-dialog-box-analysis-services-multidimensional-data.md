@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.processdialog.f1"
 ms.assetid: c065248c-9001-4f0c-928f-9c59eccb618b
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg

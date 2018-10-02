@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "transactions [ADOMD.NET]"
   - "ADOMD.NET, transactions"
   - "AdomdTransaction object"
 ms.assetid: 7978c28b-c255-43c0-ad05-f38604d4d8fe
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg

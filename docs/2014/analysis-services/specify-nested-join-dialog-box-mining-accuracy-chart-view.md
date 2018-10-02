@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dm.miningmodeleditor.accuracychart.specifynestedjoin.f1"
 helpviewer_keywords: 
   - "Specify Nested Join dialog box"
 ms.assetid: e6dd5c26-d6ba-4fcb-8c03-c012fea760f1
-caps.latest.revision: 27
 author: minewiskan
 ms.author: owend
 manager: craigg

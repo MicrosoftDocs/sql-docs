@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "local mining models [Analysis Services]"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "client architecture [Analysis Services]"
   - "local cubes [Analysis Services]"
 ms.assetid: 03a8eb6b-159f-4a0a-afbe-06a2424b6090
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg

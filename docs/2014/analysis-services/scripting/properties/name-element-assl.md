@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "Name Element"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "Name element"
 ms.assetid: caf2af86-5f9c-4e14-8168-f3a79248b4fe
-caps.latest.revision: 39
 author: minewiskan
 ms.author: owend
 manager: craigg

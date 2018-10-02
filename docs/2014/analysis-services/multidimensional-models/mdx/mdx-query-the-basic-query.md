@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "queries [MDX], SELECT statement"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "SELECT statement [MDX]"
   - "cubes [Analysis Services], SELECT statement"
 ms.assetid: 4fa5a95a-fec9-4584-875c-dbf030c53e82
-caps.latest.revision: 30
 author: minewiskan
 ms.author: owend
 manager: craigg

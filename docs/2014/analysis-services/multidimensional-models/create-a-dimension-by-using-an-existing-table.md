@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "hierarchies [Analysis Services], dimensions"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "dimensions [Analysis Services], standard"
   - "standard dimensions [Analysis Services]"
 ms.assetid: edd96fbe-1b1c-445a-95d6-7a025e0ee868
-caps.latest.revision: 52
 author: minewiskan
 ms.author: owend
 manager: craigg

@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "Analysis Management Objects, OLAP"
   - "OLAP [AMO]"
   - "AMO, OLAP"
 ms.assetid: 397509b7-a4fb-40de-aa30-c66dc9ed2105
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg

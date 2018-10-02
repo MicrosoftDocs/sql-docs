@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "scripts [Analysis Services]"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "Analysis Server Scripts project"
   - "items [Analysis Services]"
 ms.assetid: c4f5a06b-e2e4-4660-a3a8-6fd356742c02
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg

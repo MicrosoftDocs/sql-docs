@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Profiler, Analysis Services"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "performance [Analysis Services], replays"
   - "traces [Analysis Services]"
 ms.assetid: 93b2fc46-7cfb-4ab5-abeb-1475a7d6f0f2
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg

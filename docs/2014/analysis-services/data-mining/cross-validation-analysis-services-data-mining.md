@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "stored procedures [Analysis Services], data mining"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "scoring [data mining]"
   - "accuracy testing [data mining]"
 ms.assetid: 718b9072-0f35-482a-a803-9178002ff5b9
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg

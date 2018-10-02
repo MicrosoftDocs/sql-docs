@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "2015-12-07"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "Parallel Element"
@@ -23,7 +21,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "Parallel element"
 ms.assetid: 04726d94-37ee-460b-9744-d62b45f536b9
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg

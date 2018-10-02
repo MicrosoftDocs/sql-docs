@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "partitions [Analysis Services], merging"
   - "merging partitions [Analysis Services]"
 ms.assetid: b3857b9b-de43-4911-989d-d14da0196f89
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg

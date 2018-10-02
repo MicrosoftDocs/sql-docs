@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "hierarchies [Analysis Services], multilevel"
   - "hierarchies [Analysis Services], cubes"
 ms.assetid: 819d0a4e-7815-4332-a605-b07ca2ade6ac
-caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
 manager: craigg

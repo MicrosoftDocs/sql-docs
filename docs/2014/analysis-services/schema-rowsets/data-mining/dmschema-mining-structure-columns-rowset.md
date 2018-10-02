@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "DMSCHEMA_MINING_STRUCTURE_COLUMNS"
@@ -17,7 +15,6 @@ topic_type:
 helpviewer_keywords: 
   - "DMSCHEMA_MINING_STRUCTURE_COLUMNS rowset"
 ms.assetid: 81f25502-ac90-42f1-8ddf-7b0f9752ebfd
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg

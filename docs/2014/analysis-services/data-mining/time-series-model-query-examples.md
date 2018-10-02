@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "time series algorithms [Analysis Services]"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "PREDICTION_SMOOTHING"
   - "content queries [DMX]"
 ms.assetid: 9a1c527e-2997-493b-ad6a-aaa71260b018
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg

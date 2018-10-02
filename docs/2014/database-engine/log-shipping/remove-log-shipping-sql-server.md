@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "log shipping [SQL Server], removing"
   - "removing log shipping"
   - "deleting log shipping"
 ms.assetid: 859373db-c744-4a4b-8479-45163f61e8cb
-caps.latest.revision: 17
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

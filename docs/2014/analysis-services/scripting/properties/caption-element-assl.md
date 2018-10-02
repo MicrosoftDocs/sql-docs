@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "Caption Element"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "Caption element"
 ms.assetid: ed2be851-0ddc-4fa5-8aee-b2acb2e6d25e
-caps.latest.revision: 36
 author: minewiskan
 ms.author: owend
 manager: craigg

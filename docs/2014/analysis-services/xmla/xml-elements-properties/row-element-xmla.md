@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "row Element"
@@ -23,7 +21,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "row element"
 ms.assetid: 4d9977a0-c396-44c7-9fd4-97f4c3d643aa
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg

@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "Analysis Services Scripting Language"
   - "ASSL"
 ms.assetid: ce9aca4d-b7ad-451e-bb7f-20c2b0c03f29
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg

@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.sqlserverstudio.datasourceproperties.f1"
 helpviewer_keywords: 
   - "Data Source Properties dialog box"
 ms.assetid: bf8b600f-5b99-4f7d-908b-8a391721e9dd
-caps.latest.revision: 24
 author: minewiskan
 ms.author: owend
 manager: craigg

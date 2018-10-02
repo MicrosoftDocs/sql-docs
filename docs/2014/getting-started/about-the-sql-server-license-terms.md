@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "05/24/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "licenses [SQL Server]"
   - "end user license agreement [SQL Server]"
 ms.assetid: 51d130a1-2b48-439e-9447-783e1fc3f4fb
-caps.latest.revision: 55
 author: mightypen
 ms.author: genemi
 manager: craigg

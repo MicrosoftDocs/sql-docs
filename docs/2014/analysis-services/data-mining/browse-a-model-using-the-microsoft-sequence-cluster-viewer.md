@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Sequence Cluster Viewer"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "sequence [Analysis Services]"
   - "transitions [Analysis Services]"
 ms.assetid: 3ada00aa-da9e-488a-9f53-c3e188f81f84
-caps.latest.revision: 36
 author: minewiskan
 ms.author: owend
 manager: craigg

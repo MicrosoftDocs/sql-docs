@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "MDX [Analysis Services], calculated members"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "Multidimensional Expressions [Analysis Services], calculated members"
   - "queries [MDX], calculated members"
 ms.assetid: 9322e8b8-43e1-4e02-a7d1-e41a586a5bb8
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg

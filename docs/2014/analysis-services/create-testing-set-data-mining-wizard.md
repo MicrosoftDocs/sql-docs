@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dm.dmwizard.holdout.f1"
 ms.assetid: d0a44b59-ffbd-45fc-baa8-6b8046b1a2f5
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg

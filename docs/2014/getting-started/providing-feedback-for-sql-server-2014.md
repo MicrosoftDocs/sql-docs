@@ -4,8 +4,6 @@ ms.custom: ""
 ms.date: "05/24/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "sending feedback to Microsoft"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "product feedback [SQL Server]"
   - "automatic error or usage reporting"
 ms.assetid: 28f3ebf0-ad71-4816-86a6-18a46f023cfe
-caps.latest.revision: 26
 author: mightypen
 ms.author: genemi
 manager: craigg

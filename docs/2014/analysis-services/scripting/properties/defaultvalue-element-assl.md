@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "DefaultValue Element"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "DefaultValue element"
 ms.assetid: 87e964a3-f317-46c3-98c7-b3621765c77b
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg

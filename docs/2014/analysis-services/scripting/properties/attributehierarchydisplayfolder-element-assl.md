@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "AttributeHierarchyDisplayFolder Element"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "AttributeHierarchyDisplayFolder element"
 ms.assetid: d4a3aff7-553e-416c-9c42-819a96ae264d
-caps.latest.revision: 36
 author: minewiskan
 ms.author: owend
 manager: craigg

@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "LogFileSize Element"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "LogFileSize element"
 ms.assetid: d2135e68-57a9-4144-8403-9627041f2a58
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg

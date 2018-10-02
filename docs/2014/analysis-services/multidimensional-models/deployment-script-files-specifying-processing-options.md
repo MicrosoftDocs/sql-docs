@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Analysis Services deployments, processing options"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "modifying processing options"
   - "Analysis Services Deployment Wizard, processing options"
 ms.assetid: e9e50817-908e-4210-bc3d-8e2957568241
-caps.latest.revision: 31
 author: minewiskan
 ms.author: owend
 manager: craigg

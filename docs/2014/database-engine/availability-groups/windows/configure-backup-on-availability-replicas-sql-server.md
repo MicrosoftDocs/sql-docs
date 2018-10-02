@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/14/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "backup priority"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "automated backup preference"
   - "Availability Groups [SQL Server], active secondary replicas"
 ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
-caps.latest.revision: 30
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

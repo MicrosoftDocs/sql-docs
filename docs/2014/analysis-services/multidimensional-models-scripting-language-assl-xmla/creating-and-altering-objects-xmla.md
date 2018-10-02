@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "objects [XML for Analysis]"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "deleting objects"
   - "XMLA, objects"
 ms.assetid: a2080867-e130-440c-92eb-f768869f34a8
-caps.latest.revision: 17
 author: minewiskan
 ms.author: owend
 manager: craigg

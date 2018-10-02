@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "Analysis Management Objects, programming"
 ms.assetid: 91d846cf-704d-409a-9198-87674a8fb49a
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg

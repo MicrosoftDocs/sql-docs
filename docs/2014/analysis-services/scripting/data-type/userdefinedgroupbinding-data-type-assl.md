@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "04/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "UserDefinedGroupBinding Data Type"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "UserDefinedGroupBinding data type"
 ms.assetid: 70149929-0ff7-4a67-84bf-e94908ae7611
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg

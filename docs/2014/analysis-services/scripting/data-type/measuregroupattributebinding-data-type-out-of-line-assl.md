@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "MeasureGroupAttributeBinding Data Type (out-of-line)"
@@ -19,7 +17,6 @@ topic_type:
 helpviewer_keywords: 
   - "MeasureGroupAttributeBinding data type"
 ms.assetid: bfe09a95-4e04-4f93-9389-7dd0b4c8f5e4
-caps.latest.revision: 8
 author: minewiskan
 ms.author: owend
 manager: craigg

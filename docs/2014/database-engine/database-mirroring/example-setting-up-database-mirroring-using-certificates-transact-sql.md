@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "database mirroring [SQL Server], deployment"
@@ -14,7 +12,6 @@ helpviewer_keywords:
   - "authentication [SQL Server], database mirroring"
   - "database mirroring [SQL Server], security"
 ms.assetid: df489ecd-deee-465c-a26a-6d1bef6d7b66
-caps.latest.revision: 48
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

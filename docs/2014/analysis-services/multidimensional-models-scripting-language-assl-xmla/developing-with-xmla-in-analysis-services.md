@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "XML for Analysis, data mining"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "XML for Analysis, Analysis Services tasks"
   - "XMLA, Analysis Services tasks"
 ms.assetid: 54445ee7-720c-4683-99a6-e75b3dcca904
-caps.latest.revision: 31
 author: minewiskan
 ms.author: owend
 manager: craigg

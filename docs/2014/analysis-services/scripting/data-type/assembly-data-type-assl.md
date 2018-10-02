@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "Assembly Data Type"
@@ -19,7 +17,6 @@ topic_type:
 helpviewer_keywords: 
   - "Assembly data type"
 ms.assetid: 0a381322-9509-4579-a754-c6cdd0a70cc9
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg

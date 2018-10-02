@@ -79,7 +79,7 @@ SUM ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
 ## Examples  
   
 ### A. Using SUM to return summary data  
- The following examples shows using the SUM function to return summary data in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
+ The following examples show using the SUM function to return summary data in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
 ```  
 SELECT Color, SUM(ListPrice), SUM(StandardCost)  
@@ -105,7 +105,7 @@ White           19.00                 6.7926
  ```  
   
 ### B. Using the OVER clause  
- The following example uses the SUM function with the OVER clause to provide a cumulative total of yearly sales for each territory in the `Sales.SalesPerson` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. The data is partitioned by `TerritoryID` and logically ordered by `SalesYTD`. This means that the SUM function is computed for each territory based on the sales year. Notice that for `TerritoryID` 1, there are two rows for sales year 2005 representing the two sales people with sales that year. The cumulative sales for these two rows is computed and then the third row representing sales for the year 2006 is included in the computation.  
+ The following example uses the SUM function with the OVER clause to provide a cumulative total of yearly sales for each territory in the `Sales.SalesPerson` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. The data is partitioned by `TerritoryID` and logically ordered by `SalesYTD`. This means that the SUM function is computed for each territory based on the sales year. Notice that for `TerritoryID` 1, there are two rows for sales year 2005 representing the two sales people with sales that year. The cumulative sales total for these two rows is computed and then the third row representing sales for the year 2006 is included in the computation.  
   
 ```  
 SELECT BusinessEntityID, TerritoryID   

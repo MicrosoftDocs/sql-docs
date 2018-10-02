@@ -13,16 +13,16 @@ ms.prod: sql
 
 This how you can launch notebooks on the cluster and start authoring your own Notebooks. It also shows how to submit jobs against the cluster.
 
-## Connect to the Hadoop Gateway Knox end point
+## Connect to the SQL Server big data cluster end-point
 
-You can connect to different end-points in the cluster. You can connect to the Microsoft SQL Server connection type or to the HDFS/Spark Gateway end-point.
+You can connect to different end-points in the cluster. You can connect to the Microsoft SQL Server connection type or to the SQL Server big data cluster end-point.
 
-In Azure Data Studio (preview), type **F1** > **New Connection**and you can connect to your HDFS/Spark Gateway end-point.
+In Azure Data Studio (preview), type **F1** > **New Connection**, and connect to your SQL Server big data cluster end-point.
 
 ![image1](media/notebooks-guidance/image1.png)
 
 ## Browse HDFS
-Once you connect you will be able to browse your HDFS folder. WebHDFS is started when the deployment is completed, and you will be able to **Refresh**, add **New Directory**,**Upload** files and **Delete**.
+Once you connect, you will be able to browse your HDFS folder. WebHDFS is started when the deployment is completed, and you will be able to **Refresh**, add **New Directory**, **Upload** files, and **Delete**.
 
 ![image2](media/notebooks-guidance/image2.png)
 
@@ -30,9 +30,9 @@ These simple operations let you bring your own data into HDFS.
 
 ## Launch new Notebooks
 
-You can launch a new notebook multiple ways:
+There are multiple ways to launch a new notebook.
 
-1. From the Manage Dashboard. On making a new connection you will see a Dashboard. Click on New Notebook task from the Dashboard.
+1. From the Manage Dashboard. On making a new connection, you will see a Dashboard. Click on New Notebook task from the Dashboard.
 
   ![image3](media/notebooks-guidance/image3.png)
 
@@ -40,25 +40,25 @@ You can launch a new notebook multiple ways:
 
 ![image4](media/notebooks-guidance/image4.png)
 
-Please provide a name of your Notebook (Example: *Test.ipynb*) and click **Save**.
+Provide a name of your Notebook (Example: *Test.ipynb*) and click **Save**.
 
 ![image5](media/notebooks-guidance/image5.png)
 
 ## Supported kernels and attach to context
 
-In our Notebook Installation we support the PySpark and Spark, Spark Magic kernels which would allow users to write Python and Scala code using Spark. We also allow users to choose Python for their local development purposes.
+In our Notebook Installation, we support the PySpark and Spark, Spark Magic kernels that allow users to write Python and Scala code using Spark. We also allow users to choose Python for their local development purposes.
 
 ![image6](media/notebooks-guidance/image6.png)
 
-When you select one of these kernels we will install that kernel in the virtual environment and you can start writing code in the supported language.
+When you select one of these kernels, we will install that kernel in the virtual environment and you can start writing code in the supported language.
 
 | Kernel | Description
 |---- |----
-|PySpark Kernel| For writing Python code using Spark compute from the cluster.
-|Spark Kernel|For writing Scala code using Spark compute from the cluster.
+|PySpark Kernel| For writing Python code using Spark, compute from the cluster.
+|Spark Kernel|For writing Scala code using Spark, compute from the cluster.
 |Python Kernel|For writing Python code for local development.
 
-The Attach to provides the context for the Kernel to attach. When you are connected to the HDFS/Spark Gateway (Knox) end-point the default Attach to will be that end-point of the cluster.
+The Attach-to selection provides the context for the Kernel to attach. When you are connected to the SQL Server big data cluster end-point, the default Attach-to selection will be that end-point of the cluster.
 
 ![image7](media/notebooks-guidance/image7.png)
 
@@ -83,11 +83,11 @@ Add a new code cell by clicking the +Code command in the toolbar.
 
 ![image11](media/notebooks-guidance/image11.png)
 
-Choose the Spark Kernel in the drop down for the kernels and in the cell type/paste in 
+Choose the Spark Kernel in the drop-down for the kernels and in the cell type/paste in 
 
 ![image12](media/notebooks-guidance/image12.png)
 
-Click **Run**  you should see the Spark Application being started and this will create the Sparksession  **spark** and will define the **HelloWorld** object.
+Click **Run**  you should see the Spark Application being started and this will create the Spark session  **spark** and will define the **HelloWorld** object.
 
 The Notebook should look similar to the following image.
 
@@ -106,7 +106,7 @@ Choose the local Python Kernel and in the cell type in **
 
 ![image16](media/notebooks-guidance/image16.png)
 
-This should simply output
+You should see the following output:
 
 ![image17](media/notebooks-guidance/image17.png)
 
@@ -124,28 +124,29 @@ Click on the preview icon again to toggle to see just the markdown
 ![image20](media/notebooks-guidance/image20.png)
 
 ## Manage Packages
-One of the things we optimized for local Python development was to include the ability to install packages which customers would need for their scenarios. By default, we include the common packages like pandas, numpy etc., but if you are expecting a package which is not included then write the following code in the Notebook cell
+One of the things we optimized for local Python development was to include the ability to install packages which customers would need for their scenarios. By default, we include the common packages like pandas, numpy etc., but if you are expecting a package that is not included then write the following code in the Notebook cell
 
 ```python
 import <package-name>
 ```
 
-Run this command. You will be getting a Module not Found error. If your package exists, then you will not get this error.
+When you run this command, you will get a `Module not found` error. If your package exists, then you will not get the error.
 
-If you find a `Module not Found` error, then please click on the **Manage Packages** and this will launch the terminal with the path for your Virtualenv identified and will let you install packages locally. Please use the following command to install the packages **
+If you find a `Module not Found` error, then click on the **Manage Packages** to launch the terminal with the path for your Virtualenv identified. You can now install packages locally. Use the following command to install the packages:
 
 ```
 ./pip install <package-name>
 ```
 
-Once the package is installed, you should be able to go in the Notebook cell and type in
+After the package is installed, you should be able to go in the Notebook cell and type in the following command:
 
 ```python
 import <package-name>
 ```
 
-and Run the cell and you should no longer get the Module not found error.
-If you like to uninstall a package, then please use the following command from your terminal **
+Now when you run the cell, you should no longer get the `Module not found` error.
+
+If you want to uninstall a package, use the following command from your terminal:
 
 ```
 ./pip uninstall <package-name>

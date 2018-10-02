@@ -76,9 +76,12 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ```sql  
 USE master;  
 GO  
-ALTER DATABASE AdventureWorks2012  
-Modify Name = Northwind ;  
+ALTER DATABASE AdventureWorks2012 SET SINGLE_USER WITH ROLLBACK IMMEDIATE
+GO
+ALTER DATABASE AdventureWorks2012 MODIFY NAME = Northwind ;
 GO  
+ALTER DATABASE Northwind SET MULTI_USER
+GO
 ```  
   
 ###  <a name="TsqlExample"></a>   

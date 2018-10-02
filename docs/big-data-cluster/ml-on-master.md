@@ -15,7 +15,7 @@ SQL Server Machine Learning Services is an add-on feature to the database engine
 
 As part of SQL Server Big Data Cluster, this feature will be available from the Master Instance by default. This means that once external script execution is enabled on the Master Instance, it is going to be possible to execute R and Python scripts using sp_execute_external_script.
 
-To read more about SQL Server Machine Learning Services, please visit the existing documentation on the topic here. TODO: LINK
+To read more about SQL Server Machine Learning Services, see [SQL Server Machine Learning and Programming Extensions Documentation](../advanced-analytics/index.md).
 
 ## Advantages of Machine Learning Services in Big Data Cluster
 

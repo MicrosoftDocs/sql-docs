@@ -46,7 +46,7 @@ Setting the environment variables required for deploying Big Data Cluster slight
 > [!IMPORTANT]
 > Make sure you wrap the passwords in double quotes if it contains any special characters.
 >
-> You can set the MSSQL passwords to whatever you like, but make sure they are sufficiently complex and don’t use the ! & or ‘ characters.
+> You can set the MSSQL passwords to whatever you like, but make sure they are sufficiently complex and don’t use the `!`, `&`, or `‘` characters.
 
 > [!NOTE]
 > For the CTP 2.0 release do not change the default ports.
@@ -100,7 +100,6 @@ export DOCKER_PRIVATE_REGISTRY="1"
 
 To deploy SQL Server 2019 CTP 2.0 on your Kubernetes cluster, run the following command:
 
-TODO
 ```bash
 mssqlctl create cluster <name of your cluster>
 ```

@@ -166,7 +166,7 @@ export DOCKER_PRIVATE_REGISTRY="1"
 The create cluster API is used to initialize the Kubernetes namespace and deploy all the application pods into the namespace. To deploy SQL Server Big Data cluster on your Kubernetes cluster, run the following command:
 
 ```bash
-TODO mssqlctl create cluster <name of your cluster>
+mssqlctl create cluster <name of your cluster>
 ```
 
 During cluster bootstrap, the client command window will ouput the deployment status. You can also check the deployment status by running these commands in a different cmd window:

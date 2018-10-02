@@ -1,5 +1,5 @@
 ---
-title: Monitoring Cluster using Cluster Admin Portal | Microsoft Docs
+title: Monitoring Cluster using Cluster Administration Portal | Microsoft Docs
 description:
 author: yualan
 ms.author: alayu
@@ -8,20 +8,20 @@ ms.date: 10/01/2018
 ms.topic: conceptual
 ms.prod: sql
 ---
-# Introduction to the Cluster Admin Portal
-If you want to monitor or troubleshoot your SQL Server big data cluster, use the Cluster Admin Portal. 
+# Introduction to the Cluster Administration Portal
+If you want to monitor or troubleshoot your SQL Server big data cluster, use the cluster administration portal. 
 
-The Cluster Admin Portal allows you to:
+The cluster administration portal allows you to:
 - Quickly view number of pods running and any issues
 - Monitor deployment status
 - View available service endpoints
-- View Controller and Master Instance
+- View controller and SQL Server master instance
 - Drill down information on pods, including accessing Grafana dashboards and Kibana logs
 
-## Access Cluster Admin Portal
-Follow the [quickstart to deploy your big data cluster](quickstart-big-data-cluster-deploy.md) until you get to the **Cluster Administration Portal** section. Once you have the big data cluster running with mssqlctl, follow these instructions:
+## Access the cluster administration portal
+Follow the [quickstart to deploy your big data cluster](quickstart-big-data-cluster-deploy.md) until you get to the **cluster administration portal** section. Once you have the big data cluster running with mssqlctl, follow these instructions:
 
-Once the Controller pod is running, you can use the Cluster Administration Portal to monitor the deployment. You can access the portal using the external IP address and port number for the `service-proxy-lb` (for example: **https://\<ip-address\>:30777**). Credentials for accessing the admin portal are the values of `CONTROLLER_USERNAME` and `CONTROLLER_PASSWORD` environment variables provided above.
+Once the controller pod is running, you can use the cluster administration portal to monitor the deployment. You can access the portal using the external IP address and port number for the `service-proxy-lb` (for example: **https://\<ip-address\>:30777**). Credentials for accessing the admin portal are the values of `CONTROLLER_USERNAME` and `CONTROLLER_PASSWORD` environment variables provided above.
 > [!NOTE]
 > There is going to be a security warning when accessing the web page since we are using auto-generated SSL certificates. In future releases, we will provide the capability to provide your own signed certificates.
 
@@ -61,7 +61,7 @@ To learn about logs for pods with issues, you can click on the **Logs** column.
 ## Master Instance
 ![endpoints](./media/cluster-admin-portal/portal-master.png)
 
-The Master Instance shows all pods related to the SQL Server in master. You can learn more about the Master Instance [here.](concept-master-instance.md)
+The Master Instance shows all pods related to the SQL Server master instance. You can learn more about the SQL Server master instance [here.](concept-master-instance.md)
 
 To learn more additional information on each pod, you can click on **Metrics** column to view Grafana dashboards.
 
@@ -88,4 +88,4 @@ To learn more about each pool:
 ## About Page
 ![about](./media/cluster-admin-portal/portal-about.png)
 
-Here you can view information about your cluster such as the different version numbers, containers, and a link to our documentation.
+Here you can view information about your cluster such as the different version numbers, containers, and a link to the documentation.

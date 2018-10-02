@@ -22,10 +22,6 @@
     href: concept-data-persistence.md
   - name: Security
     href: concept-security.md
-  - name: Machine Learning and extensibility
-    items:
-    - name: ML services on Master
-      href: ml-on-master.md
 - name: How-to-guides
   items:
   - name: Install

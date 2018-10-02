@@ -334,7 +334,7 @@ RETURNS return_data_type
  Is the single SELECT statement that defines the return value of an inline table-valued function.  
   
  ORDER (\<order_clause>) 
- Specifies the order in which results are being returned from the table-valued function. For more information, see the section, "Guidance on Using Sort Order," later in this topic.  
+ Specifies the order in which results are being returned from the table-valued function. For more information, see the section, "[Using Sort Order in CLR Table-valued Functions](#using-sort-order-in-clr-table-valued-functions)", later in this topic.  
   
  EXTERNAL NAME \<method_specifier> *assembly_name*.*class_name*.*method_name* 
  **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  

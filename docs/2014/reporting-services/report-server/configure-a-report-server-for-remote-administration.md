@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Reporting Services Configuration tool"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "report servers [Reporting Services], configuring"
   - "remote server administration [Reporting Services]"
 ms.assetid: 8c7f145f-3ac2-4203-8cd6-2a4694395d09
-caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
 manager: craigg

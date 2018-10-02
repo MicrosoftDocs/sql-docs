@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "docset-sql-devref"
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "reports [Reporting Services], delivering"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "methods [Reporting Services], subscription and delivery"
   - "subscriptions [Reporting Services], about subscriptions"
 ms.assetid: a8637501-1817-4ccc-b07d-dd9ed5608805
-caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
 manager: craigg

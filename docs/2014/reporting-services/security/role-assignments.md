@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "users [Reporting Services]"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "groups [Reporting Services]"
   - "security [Reporting Services], role assignments"
 ms.assetid: 600e112c-1897-48a6-93c0-6e9f3f12dc01
-caps.latest.revision: 36
 author: markingmyname
 ms.author: maghan
 manager: craigg

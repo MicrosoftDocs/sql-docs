@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Report Designer [Reporting Services], dialog boxes"
 ms.assetid: 7c1bc931-d1ec-47fc-8f82-55560ddaf776
-caps.latest.revision: 59
 author: markingmyname
 ms.author: maghan
 manager: craigg

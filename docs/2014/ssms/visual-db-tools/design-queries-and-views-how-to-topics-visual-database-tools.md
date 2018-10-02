@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology:
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "• vs.solutionexplorer.file.query"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "Query Designer [SQL Server], about Query Designer"
   - "Visual Database Tools [SQL Server], queries"
 ms.assetid: 200903f4-1208-4563-9dca-26aabaacfa20
-caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg

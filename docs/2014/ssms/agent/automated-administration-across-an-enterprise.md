@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology:
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "enterprise automatic administration [SQL Server]"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "multiple instances of SQL Server"
   - "target servers [SQL Server]"
 ms.assetid: 44d8365b-42bd-4955-b5b2-74a8a9f4a75f
-caps.latest.revision: 40
 author: stevestein
 ms.author: sstein
 manager: craigg

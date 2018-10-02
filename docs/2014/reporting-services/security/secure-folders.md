@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "high-security folders [Reporting Services]"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "folders [Reporting Services], security"
   - "security [Reporting Services], folders"
 ms.assetid: 0fd91f77-0143-476b-9af0-87293be78e44
-caps.latest.revision: 33
 author: markingmyname
 ms.author: maghan
 manager: craigg

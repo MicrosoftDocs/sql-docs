@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.rtp.rptdesigner.axisproperties.axisoptions.f1"
   - "10138"
 ms.assetid: b276e210-7a12-48ae-971b-7dabae51df11
-caps.latest.revision: 10
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg

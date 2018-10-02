@@ -51,9 +51,6 @@ Controller password:
 SQL Master SA password: 
  + MSSQL_SA_PASSWORD=<controller_sa_password>
 
-Username for accessing the HDFS/Spark endpoint:
- + KNOX_USERNAME=<know_username> 
-
 Password for accessing the HDFS/Spark endpoint:
  + KNOX_PASSWORD=<knox_password>
 

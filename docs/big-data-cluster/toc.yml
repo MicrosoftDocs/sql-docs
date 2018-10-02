@@ -56,10 +56,6 @@
     items:
     - name: Cluster Admin Portal
       href: cluster-admin-portal.md
-  - name: Query scenarios
-    items:
-      - name: Monitoring and troubleshooting
-        href: query-troubleshooting.md
   - name: Notebooks
     items:
     - name: How to use notebooks in SQL Server 2019 CTP 2.0

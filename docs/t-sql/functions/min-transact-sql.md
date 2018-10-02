@@ -31,21 +31,13 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
--- Syntax for SQL Server and Azure SQL Database  
-    
-MIN ( [ ALL | DISTINCT ] expression )
-   [ OVER ( [ partition_by_clause ] order_by_clause ) ]
-```  
-  
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+```sql  
   
 -- Aggregation Function Syntax  
 MIN ( [ ALL | DISTINCT ] expression )  
   
--- Aggregation Function Syntax   
-MIN ( expression ) OVER ( [ <partition_by_clause> ] [ <order_by_clause> ] )  
+-- Analytic Function Syntax   
+MIN ( [ ALL ] expression ) OVER ( [ <partition_by_clause> ] [ <order_by_clause> ] )  
 ```  
   
 ## Arguments  

@@ -54,13 +54,15 @@
       href: cluster-admin-portal.md
   - name: Notebooks
     items:
-    - name: How to use notebooks in SQL Server 2019 preview
+    - name: Notebooks overview
       href: notebooks-guidance.md
+    - name: Manage existing notebooks
+      href: notebooks-how-to-manage.md
   - name: Spark jobs
     items:
-    - name: Submit Spark Job in Azure Data Studio
+    - name: Submit Spark jobs
       href: spark-submit-job.md
-    - name: Use extended Spark History Server to debug and diagnose Spark applications
+    - name: Use extended Spark History Server
       href: spark-history-server.md
 - name: Resources
   items:

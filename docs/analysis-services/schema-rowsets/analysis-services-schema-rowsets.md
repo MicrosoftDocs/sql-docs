@@ -17,8 +17,6 @@ manager: kfile
   
 > [!NOTE]  
 >  If you are using schema rowsets in XML/A script, the information that is returned in the *Result* parameter of the [Discover](../../analysis-services/xmla/xml-elements-methods-discover.md) method is structured according to the rowset column layouts described in this section. The [!INCLUDE[msCoName](../../includes/msconame-md.md)] XML for Analysis (XMLA) provider supports rowsets required by the XML for Analysis Specification. The XMLA provider also supports some of the standard schema rowsets for OLE DB, OLE DB for OLAP, and OLE DB for Data Mining data source providers. The supported rowsets are described in the following topics.  
-  
-## Schema rowsets
 
 Schema rowsets are described in two SQL Server Analysis Services protocols:   
 
@@ -26,7 +24,7 @@ Schema rowsets are described in two SQL Server Analysis Services protocols:
 
 [[MS-SSAS]: SQL Server Analysis Services Protocol](https://msdn.microsoft.com/library/ee320606) - Describes schema rowsets for multidimensional models and tabular models at the 1100 and 1103 compatibility levels.
 
-### Rowsets described in the [MS-SSAS-T]: SQL Server Analysis Services Tabular Protocol
+## Rowsets described in the [MS-SSAS-T]: SQL Server Analysis Services Tabular Protocol
 
 |Rowset  |Description  |
 |---------|---------|
@@ -59,7 +57,7 @@ Schema rowsets are described in two SQL Server Analysis Services protocols:
 |[TMSCHEMA_TABLES](https://msdn.microsoft.com/library/mt719250)     |   Provides information about the Table objects in the model.      |
 |[TMSCHEMA_VARIATIONS](https://msdn.microsoft.com/library/mt825008)|Provides information about the Variation objects in each column.|
 
-### Rowsets described in the [MS-SSAS]: SQL Server Analysis Services Protocol
+## Rowsets described in the [MS-SSAS]: SQL Server Analysis Services Protocol
 
 |Rowset|Description|  
 |------------|-----------------|  

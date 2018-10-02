@@ -4,7 +4,7 @@ description: Instructions for downloading New York City taxi sample data and cre
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 08/22/2018  
+ms.date: 10/02/2018  
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
@@ -13,103 +13,45 @@ manager: cgronlun
 # NYC Taxi demo data for SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article prepares your system for tutorials on how to use R and Python for in-database analytics in SQL Server.
+This article explains how to obtain sample data for R and Python tutorials for in-database analytics in SQL Server.
 
-In this exercise, you will download sample data, a PowerShell script for preparing the environment, and [!INCLUDE[tsql](../../includes/tsql-md.md)] script files used in several tutorials. When you are finished, an **NYCTaxi_Sample** database is available on your local instance, providing demo data for hands-on learning. 
+Data originates from the [NYC Taxi and Limousine Commission](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml) public data set. We took a snapshot of the dataset and captured one percent of the available data for our demo database. On your system, the database backup file is slightly over 90 MB, providing 1.7 million rows in the primary data table.
+
+When you are finished with the steps in this article, the **NYCTaxi_Sample** database is available on your local instance, providing demo data for hands-on learning. The database name must be **NYCTaxi_Sample** if you want to run the demo scripts with no modification.
 
 ## Prerequisites
 
-You will need an internet connection, PowerShell, and local administrative rights on the computer. You should have [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) or another tool to verify object creation.
+You need an internet connection, local administrative rights on the computer, and a database engine instance.
 
-## Download NYC Taxi demo data and scripts from Github
+It helps to have [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) or another tool to verify object creation.
 
-1.  Open a Windows PowerShell command console.
-  
-    Use the **Run as Administrator** option to create the destination directory or to write files to the specified destination.
-  
-2.  Run the following PowerShell commands, changing the value of the parameter *DestDir* to any local directory. The default we've used here is **TempRSQL**.
-  
-    ```ps
-    $source = ‘https://raw.githubusercontent.com/Azure/Azure-MachineLearning-DataScience/master/Misc/RSQL/Download_Scripts_SQL_Walkthrough.ps1’  
-    $ps1_dest = “$pwd\Download_Scripts_SQL_Walkthrough.ps1”
-    $wc = New-Object System.Net.WebClient
-    $wc.DownloadFile($source, $ps1_dest)
-    .\Download_Scripts_SQL_Walkthrough.ps1 –DestDir ‘C:\tempRSQL’
-    ```
-  
-    If the folder you specify in *DestDir* does not exist, it will be created by the PowerShell script.
-  
-    > [!TIP]
-    > If you get an error, you can temporarily set the policy for execution of PowerShell scripts to **unrestricted** only for this walkthrough by using the Bypass argument and scoping the changes to the current session.
-    >   
-    >````
-    > Set\-ExecutionPolicy Bypass \-Scope Process
-    >````
-    > Running this command does not result in a configuration change.
-  
-    Depending on your Internet connection, the download might take a while.
-  
-3.  When all files have been downloaded, the PowerShell script opens to the *DestDir* folder. In the PowerShell command prompt, run the following command and review the files that have been downloaded.
-  
-    ```
-    ls
-    ```
-  
-    **Results:**
-  
-    ![list of files downloaded by PowerShell script](media/rsql-devtut-filelist.png "list of files downloaded by PowerShell script")
+## Download demo database
 
-## Create NYCTaxi_Sample database
+The sample database is a backup file hosted by Microsoft. File download begins immediately when you click the link. 
 
-Among the downloaded files, you should see a PowerShell script (**RunSQL_SQL_Walkthrough.ps1**) that creates a database and bulk loads data. Actions performed by the script include:
+File size is approximately 90 MB.
 
-+ Installs the SQL Native Client and SQL command-line utilities, if not already installed. These utilities are required for bulk-loading the data to the database using **bcp**.
+1. Click [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak) to download the database backup file.
 
-+ Create a database and tables on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance, and bulk-insert data sourced from a .csv file.
+2. Copy the file to C:\Program files\Microsoft SQL Server\MSSQL-instance-name\MSSQL\Backup folder.
 
-+ Create multiple SQL functions and stored procedures used in several tutorials.
+3. In Management Studio, right-click **Databases** and select **Restore Files and File Groups**.
 
-### Modify the script to use a trusted Windows identity
+4. Enter *NYCTaxi_Sample* as the database name.
 
-By default, the script assumes a SQL Server database user login and password. If you are db_owner under your Windows user account, you can use your Windows identity to create the objects. To do so, open `RunSQL_SQL_Walkthrough.ps1` in a code editor and append **`-T`** to the bcp bulk insert command (line 238):
+5. Click **From device** and then open the file selection page to select the backup file. Click **Add** to select NYCTaxi_Sample.bak.
 
-```text
-bcp $db_tb in $csvfilepath -t ',' -S $server -f taxiimportfmt.xml -F 2 -C "RAW" -b 200000 -U $u -P $p -T
-```
-
-### Run the script to create objects
-
-Using an Administrator PowerShell command prompt at C:\tempRSQL, run the following command.
-  
-```ps
-.\RunSQL_SQL_Walkthrough.ps1
-```
-You are prompted to input the following information:
-
-- Server instance where [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] has been installed. On a default instance, this can be as simple as the machine name.
-
-- Database name. For this tutorial, scripts assume `NYCTaxi_Sample`.
-
-- User name and user password. Enter a SQL Server database login for these values. Alternatively, if you modified the script to accept a trusted Windows identity, press Enter to leave these values blank. Your Windows identity is used on the connection.
-
-- Fully qualified file name for the sample data downloaded in the previous lesson. For example: `C:\tempRSQL\nyctaxi1pct.csv`
-
-After you provide these values, the script executes immediately. During script execution, all placeholder names in the [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts are updated to use the inputs you provide.
+6. Select the **Restore** checkbox and click **OK** to restore the database.
 
 ## Review database objects
    
-When script execution is finished, confirm the database objects exist on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. You should see the database, tables, functions, and stored procedures.
+Confirm the database objects exist on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. You should see the database, tables, functions, and stored procedures.
   
    ![rsql_devtut_BrowseTables](media/rsql-devtut-browsetables.png "rsql_devtut_BrowseTables")
 
-> [!NOTE]
-> If the database objects already exist, they cannot be created again.
->   
-> If the table already exists, the data will be appended, not overwritten. Therefore, be sure to drop any existing objects before running the script.
-
 ### Objects in NYCTaxi_Sample database
 
-The following table summarizes the objects created in the NYC Taxi demo database. Although you only run one PowerShell script (`RunSQL_SQL_Walkthrough.ps1`), that script calls other SQL scripts in turn to create the objects in your database. Scripts used to create each object are mentioned in the description.
+The following table summarizes the objects created in the NYC Taxi demo database.
 
 |**Object name**|**Object type**|**Description**|
 |----------|------------------------|---------------|
@@ -127,9 +69,9 @@ The following table summarizes the objects created in the NYC Taxi demo database
 
 As a validation step, run a query to confirm the data was uploaded.
 
-1. In Object Explorer, under Databases, expand the **NYCTaxi_Sample** datatabase, and then open the Tables folder.
+1. In Object Explorer, under Databases, right-click the **NYCTaxi_Sample** database, and start a new query.
 
-2. Right-click the **dbo.nyctaxi_sample** and choose **Select Top 1000 Rows** to return some data.
+2. Run **`select * from dbo.nyctaxi_sample`** to return all 1.7 million rows.
 
 ## Next steps
 

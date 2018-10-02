@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.rtp.rptdesigner.datasetproperties.fields.f1"
   - "10140"
 ms.assetid: e1367556-736e-4a6b-b9e7-10432a3e50b5
-caps.latest.revision: 36
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg

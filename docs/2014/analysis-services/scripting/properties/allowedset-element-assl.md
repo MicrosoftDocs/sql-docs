@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "AllowedSet Element"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "AllowedSet element"
 ms.assetid: 4aff2e03-6e1f-4f1a-b99d-d86bba25ab9b
-caps.latest.revision: 36
 author: minewiskan
 ms.author: owend
 manager: craigg

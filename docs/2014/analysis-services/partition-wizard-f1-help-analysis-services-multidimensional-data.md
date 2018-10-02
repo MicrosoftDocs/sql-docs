@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Partition Wizard"
 ms.assetid: 3b6d7053-aeef-4d9e-af70-f5b40256e859
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg

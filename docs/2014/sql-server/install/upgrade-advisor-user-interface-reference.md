@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Upgrade Advisor Analysis Wizard"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "user interface reference [Upgrade Advisor]"
   - "SQL Server Upgrade Advisor, user interface reference"
 ms.assetid: 9375e3d0-c193-4714-96bb-7effd8f4bf18
-caps.latest.revision: 27
 author: mashamsft
 ms.author: mathoma
 manager: craigg

@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "properties [Analysis Services], databases"
 ms.assetid: a8be5b3f-3148-448a-976c-7222705155d9
-caps.latest.revision: 24
 author: minewiskan
 ms.author: owend
 manager: craigg

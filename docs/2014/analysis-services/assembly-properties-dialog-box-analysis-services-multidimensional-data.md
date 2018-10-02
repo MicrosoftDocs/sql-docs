@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.sqlserverstudio.assemblyproperties.f1"
 ms.assetid: da1174d6-d82b-4337-ac19-7368dbd95a84
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg

@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "XML"
 helpviewer_keywords: 
   - "TuningOptions element"
 ms.assetid: 58a22ba1-8e03-411f-bd46-85e4540f217a
-caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg

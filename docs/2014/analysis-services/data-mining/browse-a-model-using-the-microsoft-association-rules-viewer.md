@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "itemsets [Analysis Services]"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "Microsoft Association Rules Viewer"
   - "dependencies [Analysis Services]"
 ms.assetid: 538fc01b-8eb1-467a-9b66-3cd57cf7489f
-caps.latest.revision: 38
 author: minewiskan
 ms.author: owend
 manager: craigg

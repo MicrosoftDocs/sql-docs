@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "RestrictionList Element"
@@ -23,7 +21,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "RestrictionList element"
 ms.assetid: 2297c005-381e-49a4-a207-826f7f9ea93a
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg

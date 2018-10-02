@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Schema Generation Wizard, F1 Help"
 ms.assetid: 41e5e3d1-cc45-4bb0-ac09-4639d2ffc0ea
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg

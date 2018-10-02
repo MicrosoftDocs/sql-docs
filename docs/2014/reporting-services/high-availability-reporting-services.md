@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "high availability [SQL Server], Reporting Services"
   - "high availability [Reporting Services]"
   - "Reporting Services, high availability"
 ms.assetid: 50e0813f-f591-4688-9cd1-e6389a3808e5
-caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
 manager: craigg

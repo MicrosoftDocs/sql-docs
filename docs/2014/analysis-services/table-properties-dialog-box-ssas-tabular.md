@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.ssmsimbi.TableProperties.f1"
 ms.assetid: 77571ccd-bdba-4e07-af55-465509dc6a33
-caps.latest.revision: 4
 author: minewiskan
 ms.author: owend
 manager: craigg

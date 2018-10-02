@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "MiningModelingFlag Data Type"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "MiningModelingFlag data type"
 ms.assetid: aaa72ba8-051e-4b01-b1e9-9c8d83b8b752
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg

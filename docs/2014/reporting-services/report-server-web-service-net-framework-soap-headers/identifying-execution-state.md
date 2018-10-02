@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "docset-sql-devref"
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "session states [Reporting Services]"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "sessions [Reporting Services]"
   - "SessionHeader SOAP header"
 ms.assetid: d8143a4b-08a1-4c38-9d00-8e50818ee380
-caps.latest.revision: 45
 author: markingmyname
 ms.author: maghan
 manager: craigg

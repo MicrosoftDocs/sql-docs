@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "Traces Element"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "Traces element"
 ms.assetid: 7ca2c7d1-fda3-4c76-9e32-fd9b5dda56e9
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg

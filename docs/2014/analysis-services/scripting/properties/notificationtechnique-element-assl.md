@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "NotificationTechnique Element"
@@ -19,7 +17,6 @@ topic_type:
 helpviewer_keywords: 
   - "NotificationTechnique element"
 ms.assetid: 80c43de3-f147-4bf5-bb85-da9d182ce415
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg

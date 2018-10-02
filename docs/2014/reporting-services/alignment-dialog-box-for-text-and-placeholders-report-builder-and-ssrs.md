@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "10136"
@@ -15,7 +13,6 @@ f1_keywords:
   - "sql12.rtp.rptdesigner.placeholderproperties.alignment.f1"
   - "sql12.rtp.rptdesigner.textproperties.alignment.f1"
 ms.assetid: ea2bbcec-03d8-42e7-8f8e-3cccd9548586
-caps.latest.revision: 9
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg

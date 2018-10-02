@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "04/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "merging partitions [XMLA]"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "partitions [Analysis Services], XML for Analysis"
   - "XML for Analysis, partitions"
 ms.assetid: 657e1d4d-6d50-40f8-a771-7b20c9d865f8
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg

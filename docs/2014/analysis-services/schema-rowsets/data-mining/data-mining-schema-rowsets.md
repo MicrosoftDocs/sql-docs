@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 topic_type: 
   - "apiref"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "rowsets [Analysis Services], data mining"
   - "data mining [Analysis Services], schema rowsets"
 ms.assetid: bd7d5df5-500b-4159-8467-880e141bc043
-caps.latest.revision: 43
 author: minewiskan
 ms.author: owend
 manager: craigg

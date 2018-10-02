@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "data access [SQL Server Native Client], encryption"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "encryption [SQL Server Native Client]"
   - "SQL Server Native Client, encryption"
 ms.assetid: f4c63206-80bb-4d31-84ae-ccfcd563effa
-caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg

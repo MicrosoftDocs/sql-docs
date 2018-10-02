@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "IBCPSession::BCPControl (OLE DB)"
@@ -15,7 +13,6 @@ topic_type:
 helpviewer_keywords: 
   - "BCPControl method"
 ms.assetid: d58f3fe1-45e3-4e46-8e9c-000971829d99
-caps.latest.revision: 49
 author: MightyPen
 ms.author: genemi
 manager: craigg

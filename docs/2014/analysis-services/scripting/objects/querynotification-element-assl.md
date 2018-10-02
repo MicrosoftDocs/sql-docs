@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "QueryNotification Element"
@@ -19,7 +17,6 @@ topic_type:
 helpviewer_keywords: 
   - "QueryNotification element"
 ms.assetid: 0ee06730-81ff-4913-96e6-f39b6f181650
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg

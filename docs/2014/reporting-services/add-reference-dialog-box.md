@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.rtp.rptdesigner.addreference.f1"
 helpviewer_keywords: 
   - "Edit References dialog box"
 ms.assetid: 7bdd2eee-195a-4a2f-a0aa-56f7e90c1fb4
-caps.latest.revision: 27
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg

@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "8712 (Database Engine error)"
 ms.assetid: 292fb3bc-062e-41e4-a566-b5d3d0b21977
-caps.latest.revision: 12
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

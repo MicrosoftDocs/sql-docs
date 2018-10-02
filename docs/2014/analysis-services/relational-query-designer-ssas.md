@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.bidtoolset.relquerydesginer.f1"
 ms.assetid: 9399b1d1-1ad2-44df-bd11-bef60fbf01ec
-caps.latest.revision: 10
 author: minewiskan
 ms.author: owend
 manager: craigg

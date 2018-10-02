@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "time-outs [Reporting Services]"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "report processing [Reporting Services], time-outs"
   - "report execution time-outs [Reporting Services]"
 ms.assetid: 0f9dc61d-d03c-4bbf-8090-7a53844350f8
-caps.latest.revision: 38
 author: markingmyname
 ms.author: maghan
 manager: craigg

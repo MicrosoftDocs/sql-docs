@@ -4,8 +4,6 @@ ms.date: "05/25/2017"
 ms.prod: "sql-server-2014"
 ms.technology: release-landing
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: "index-page "
 f1_keywords: 
   - "sql12.portal.f1"

@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.rtp.rptwizard.designtable.f1"
 ms.assetid: c64c659b-2926-4773-8cbb-0d8d22b640f3
-caps.latest.revision: 26
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg

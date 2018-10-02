@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "MiningModelColumn Data Type"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "MiningModelColumn data type"
 ms.assetid: de8bf815-43b4-4983-bdb9-b67e8563be0e
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg

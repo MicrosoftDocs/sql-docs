@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "pairing target [SQL Server extended events]"
   - "event pairing target"
   - "targets [SQL Server extended events], pairing target"
 ms.assetid: 3c87dcfb-543a-4bd8-a73d-1390bdf4ffa3
-caps.latest.revision: 14
 author: mashamsft
 ms.author: mathoma
 manager: craigg

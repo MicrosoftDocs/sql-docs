@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "docset-sql-devref"
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "data processing extensions [Reporting Services], deploying"
   - "Extension element"
   - "deploying [Reporting Services], extensions"
 ms.assetid: e5c0b5a9-1386-47cb-aade-96653ecfaa54
-caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
 manager: craigg

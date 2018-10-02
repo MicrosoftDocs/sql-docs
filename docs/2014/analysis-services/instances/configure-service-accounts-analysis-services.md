@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "security [Analysis Services], logon accounts"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "accounts [Analysis Services]"
   - "logon accounts [Analysis Services], about logon accounts"
 ms.assetid: b481bd51-e077-42f6-8598-ce08c1a38716
-caps.latest.revision: 52
 author: minewiskan
 ms.author: owend
 manager: craigg

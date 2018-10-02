@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: filestream
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "FILESTREAM [SQL Server], FSCTL_SQL_FILESTREAM_FETCH_OLD_CONTENT"
   - "FSCTL_SQL_FILESTREAM_FETCH_OLD_CONTENT"
 ms.assetid: d6f7661e-6c14-4d31-9541-4520ca0f82b2
-caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

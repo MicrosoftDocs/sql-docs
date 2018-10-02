@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "10001 (Database Engine error)"
 ms.assetid: f8fd2d8d-a4af-4b6a-ba51-9123b7e4c9bf
-caps.latest.revision: 16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

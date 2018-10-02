@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "605 (Database Engine error)"
 ms.assetid: d8d3a22e-1ff8-48a4-891f-4c8619437e24
-caps.latest.revision: 33
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

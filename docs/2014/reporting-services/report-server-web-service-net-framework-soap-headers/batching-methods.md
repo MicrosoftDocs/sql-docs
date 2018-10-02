@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "docset-sql-devref"
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "methods [Reporting Services], batches"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "locking [Reporting Services]"
   - "multiple Web service methods"
 ms.assetid: 86435534-c9fe-4b49-b88c-7fb6d21976b0
-caps.latest.revision: 35
 author: markingmyname
 ms.author: maghan
 manager: craigg

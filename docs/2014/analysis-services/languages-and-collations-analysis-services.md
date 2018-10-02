@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Windows collations [Analysis Services]"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "default languages"
   - "collations [Analysis Services]"
 ms.assetid: 666cf8a7-223b-4be5-86c0-7fe2bcca0d09
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg

@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "replication"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Publishers [SQL Server replication], Replication Monitor tasks"
   - "viewing Publisher information"
   - "Publishers [SQL Server replication], viewing information"
 ms.assetid: 1e777e95-377a-4de3-b965-867464aadaaf
-caps.latest.revision: 36
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

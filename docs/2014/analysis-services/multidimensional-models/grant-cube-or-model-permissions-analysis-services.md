@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.roledesignerdialog.cubes.f1"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "read/write permissions"
   - "permissions [Analysis Services], cubes"
 ms.assetid: 55b1456e-2f6b-4101-b316-c926f40304e3
-caps.latest.revision: 30
 author: minewiskan
 ms.author: owend
 manager: craigg

@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "ExpirationDate Property (SecurityCertificate Class)"
@@ -19,7 +17,6 @@ topic_type:
 helpviewer_keywords: 
   - "ExpirationDate property"
 ms.assetid: b7fbb9e9-85c1-475b-8e49-7c82fb3740aa
-caps.latest.revision: 33
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

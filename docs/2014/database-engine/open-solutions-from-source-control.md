@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology:
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "opening solutions"
   - "solutions [SQL Server Management Studio], opening"
 ms.assetid: a96a1f0d-0183-4587-a3b0-4598309cbdd2
-caps.latest.revision: 21
 author: mashamsft
 ms.author: mathoma
 manager: craigg

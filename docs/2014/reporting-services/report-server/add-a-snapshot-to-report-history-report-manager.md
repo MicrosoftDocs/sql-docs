@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "report history [Reporting Services], adding snapshots"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "adding snapshots to report history"
   - "report snapshots [Reporting Services], adding"
 ms.assetid: 3aafb183-789e-46ac-966c-881dc549b31d
-caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
 manager: craigg

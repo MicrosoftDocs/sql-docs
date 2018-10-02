@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "LogFileName Element"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "LogFileName element"
 ms.assetid: 80c7530d-ef73-44c3-88b5-c11c0f290946
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg

@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "State Property (SqlService Class)"
@@ -19,7 +17,6 @@ topic_type:
 helpviewer_keywords: 
   - "State property"
 ms.assetid: 9e09f419-947c-4d4b-9a49-2d3396c847cd
-caps.latest.revision: 36
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

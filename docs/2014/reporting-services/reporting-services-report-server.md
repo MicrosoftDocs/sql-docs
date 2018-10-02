@@ -4,13 +4,9 @@ ms.custom: ""
 ms.date: "08/12/2015"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "SQL Server 2014"
 helpviewer_keywords: 
   - "security [Reporting Services], extensions"
   - "report servers [Reporting Services], about report server"
@@ -26,7 +22,6 @@ helpviewer_keywords:
   - "Web service [Reporting Services], report server"
   - "storage [Reporting Services]"
 ms.assetid: 88ed5b97-1d28-4980-80e4-b36761f3c03a
-caps.latest.revision: 89
 author: markingmyname
 ms.author: maghan
 manager: craigg

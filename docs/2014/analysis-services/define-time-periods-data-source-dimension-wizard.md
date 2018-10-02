@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.dimensionwizard.timeperioddefinition.f1"
 ms.assetid: a5e6b9ff-69fa-4896-a840-de2b3e063ca9
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg

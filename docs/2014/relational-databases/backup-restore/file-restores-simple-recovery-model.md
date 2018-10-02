@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: backup-restore
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "file restores [SQL Server]"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "file restores [SQL Server], simple recovery model"
   - "file restores [SQL Server], Transact-SQL restore sequence"
 ms.assetid: b6d07386-7c6f-4cc6-be32-93289adbd3d6
-caps.latest.revision: 45
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

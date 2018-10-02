@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "discretization [Analysis Services]"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "discretized columns [data mining]"
   - "bucketing problems [Analysis Services]"
 ms.assetid: 3c49862b-595d-4fa4-b890-e2e1bde1d74f
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg

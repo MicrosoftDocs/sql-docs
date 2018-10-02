@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "mining models, validating"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "partitioning data [data mining]"
   - "mining models, testing"
 ms.assetid: 35907ae6-887f-4cb3-a750-cff3d7683d90
-caps.latest.revision: 26
 author: minewiskan
 ms.author: owend
 manager: craigg

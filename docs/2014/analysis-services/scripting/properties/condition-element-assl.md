@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "Condition Element"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "Condition element"
 ms.assetid: 9c3cb31c-4aa1-49e4-aeb2-6cab54db0be3
-caps.latest.revision: 36
 author: minewiskan
 ms.author: owend
 manager: craigg

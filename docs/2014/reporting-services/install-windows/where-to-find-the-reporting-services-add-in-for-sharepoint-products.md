@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "11/16/2015"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "rsSharePoint"
 ms.assetid: 069ac476-6336-44a9-a0e7-db1c4888948f
-caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
 manager: craigg

@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "cursors [ODBC], library"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "SQLSetConnectAttr function"
   - "SQL_CUR_USE_ODBC option"
 ms.assetid: 3c610d3d-6e06-49cf-9a40-05b6a1c83a32
-caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg

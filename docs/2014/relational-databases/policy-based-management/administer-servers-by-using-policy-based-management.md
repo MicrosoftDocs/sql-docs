@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology:
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "facet See facets"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "facets [Policy-Based Management], about facets"
   - "PolicyAdministratorRole role"
 ms.assetid: ef2a7b3b-614b-405d-a04a-2464a019df40
-caps.latest.revision: 75
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

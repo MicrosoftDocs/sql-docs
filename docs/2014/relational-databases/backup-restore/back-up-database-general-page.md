@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: backup-restore
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.backupdatabase.general.f1"
 ms.assetid: 5c344dfd-1ad3-41cc-98cd-732973b4a162
-caps.latest.revision: 59
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

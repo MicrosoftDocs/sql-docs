@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "SQL Server Native Client ODBC driver, statements"
   - "statements [ODBC], constructing"
   - "ODBC applications, statements"
 ms.assetid: 0acc71e2-8004-4dd8-8592-05c022bdd692
-caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg

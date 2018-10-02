@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "srv_describe"
@@ -21,7 +19,6 @@ dev_langs:
 helpviewer_keywords: 
   - "srv_describe"
 ms.assetid: 2115600e-5ce7-4be0-9cd3-a1dd1fab0729
-caps.latest.revision: 33
 author: rothja
 ms.author: jroth
 manager: craigg

@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "error numbers [Integration Services]"
   - "hresults [Integration Services]"
   - "errors [Integration Services], listed"
 ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
-caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

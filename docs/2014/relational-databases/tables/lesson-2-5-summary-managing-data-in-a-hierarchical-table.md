@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "managing data in a table"
 ms.assetid: a0fd21fc-87fa-42c3-a3ae-1fed24cdd692
-caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg

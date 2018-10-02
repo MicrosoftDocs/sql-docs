@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "Clustered Property (SqlService Class)"
@@ -19,7 +17,6 @@ topic_type:
 helpviewer_keywords: 
   - "Clustered property"
 ms.assetid: f714e7f5-c2db-45c6-9536-6ca2cb5b42aa
-caps.latest.revision: 35
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

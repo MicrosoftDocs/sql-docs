@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: clr
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 dev_langs: 
   - "TSQL"
@@ -32,7 +30,6 @@ helpviewer_keywords:
   - "UDTs [CLR integration], registering"
   - "ADD FILE clause"
 ms.assetid: f7da3e92-e407-4f0b-b3a3-f214e442b37d
-caps.latest.revision: 25
 author: rothja
 ms.author: jroth
 manager: craigg

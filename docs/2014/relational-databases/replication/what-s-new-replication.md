@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "replication"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "replication [SQL Server], what's new"
   - "what's new [SQL Server replication]"
 ms.assetid: 130a760a-4162-4d7d-b266-453eb5759d7a
-caps.latest.revision: 37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

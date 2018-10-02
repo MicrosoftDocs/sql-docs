@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "processing results [ODBC]"
 ms.assetid: 4810fe3f-78ee-4f0d-8bcc-a4659fbcf46f
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg

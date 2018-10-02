@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "docset-sql-devref"
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 dev_langs: 
   - "VB"
@@ -22,7 +20,6 @@ helpviewer_keywords:
   - "SSIS Script component, coding"
   - "VSTA"
 ms.assetid: c3913c15-66aa-4b61-89b5-68488fa5f0a4
-caps.latest.revision: 64
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

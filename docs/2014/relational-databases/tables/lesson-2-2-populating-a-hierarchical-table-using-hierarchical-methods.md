@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "HierarchyID"
 helpviewer_keywords: 
   - "HierarchyID"
 ms.assetid: 2c95fa60-5b8e-4a05-ac09-cffe2b05900a
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg

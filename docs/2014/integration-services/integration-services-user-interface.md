@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Integration Services, SSIS Designer"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "SSIS, SSIS Designer"
   - "Integration Services, SSIS Designer"
 ms.assetid: d2c48cff-46f4-4c70-b1f3-c88f9b8757f3
-caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

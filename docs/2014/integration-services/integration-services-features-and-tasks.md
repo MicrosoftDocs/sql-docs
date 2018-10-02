@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "08/21/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "development [Integration Services]"
   - "Integration Services, programming"
 ms.assetid: c0b3f4c2-b77c-4485-be77-cec5fd382c86
-caps.latest.revision: 15
 author: douglaslms
 ms.author: douglasl
 manager: craigg

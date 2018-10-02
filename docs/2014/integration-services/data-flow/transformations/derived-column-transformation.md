@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.derivedcolumntrans.f1"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "columns [Integration Services], derivations"
   - "Derived Column transformation"
 ms.assetid: 8eba755e-8e48-4233-bd1e-09a46bf2692f
-caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

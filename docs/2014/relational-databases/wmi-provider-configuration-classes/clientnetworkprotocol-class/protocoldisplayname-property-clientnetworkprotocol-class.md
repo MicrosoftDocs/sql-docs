@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "ProtocolDisplayName Property (ClientNetworkProtocol Class)"
@@ -19,7 +17,6 @@ topic_type:
 helpviewer_keywords: 
   - "ProtocolDisplayName property"
 ms.assetid: af194304-5600-48b5-9e93-c2fa95594909
-caps.latest.revision: 35
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

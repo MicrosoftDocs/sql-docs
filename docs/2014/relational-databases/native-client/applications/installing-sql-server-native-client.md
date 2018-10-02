@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "SQL Server Native Client, uninstalling"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "data access [SQL Server Native Client], installing SQL Server Native Client"
   - "removing SQL Server Native Client"
 ms.assetid: c6abeab2-0052-49c9-be79-cfbc50bff5c1
-caps.latest.revision: 43
 author: MightyPen
 ms.author: genemi
 manager: craigg

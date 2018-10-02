@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "04/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "docset-sql-devref"
   - "replication"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "developer's guide [SQL Server replication]"
   - "programming [SQL Server replication]"
   - "replication [SQL Server], development"
 ms.assetid: 7ee134ae-1cab-4a35-8017-8ac6d8fc64b6
-caps.latest.revision: 39
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

@@ -4,17 +4,12 @@ ms.custom: ""
 ms.date: "07/20/2016"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "replication"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "SQL Server 2014"
 helpviewer_keywords: 
   - "updatable transactional subscriptions, T-SQL"
 ms.assetid: 670e1ea0-ffda-4d84-b4cd-f15a331035b9
-caps.latest.revision: 3
 author: craigg-msft
 ms.author: craigg
 manager: craigg

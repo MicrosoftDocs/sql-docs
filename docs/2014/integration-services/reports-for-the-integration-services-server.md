@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "SQL12.SWB.SUMMARY.RENDER.CUSTOM.REPORT.F1"
 ms.assetid: e976e7c0-a805-4370-bf73-356c8e3becfb
-caps.latest.revision: 14
 author: douglaslms
 ms.author: douglasl
 manager: craigg

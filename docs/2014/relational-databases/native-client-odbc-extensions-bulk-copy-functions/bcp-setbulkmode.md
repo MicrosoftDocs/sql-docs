@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "bcp_setbulkmode function"
 ms.assetid: de56f206-1f7e-4c03-bf22-da9c7f9f4433
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg

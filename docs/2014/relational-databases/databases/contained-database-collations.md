@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "07/17/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "contained database, collations"
 ms.assetid: 4b44f6b9-2359-452f-8bb1-5520f2528483
-caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg

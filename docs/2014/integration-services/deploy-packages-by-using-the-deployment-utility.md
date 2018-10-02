@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "packages [Integration Services], installing"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "dependencies [Integration Services]"
   - "deploying packages [Integration Services], installing"
 ms.assetid: eaf4b56e-2023-4d17-971c-703031da758c
-caps.latest.revision: 56
 author: douglaslms
 ms.author: douglasl
 manager: craigg

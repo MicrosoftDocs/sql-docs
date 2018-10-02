@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: xml
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "RAW mode, specifying XSINIL example"
 ms.assetid: 07c873ff-1f9d-480e-8536-862c39eb8249
-caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

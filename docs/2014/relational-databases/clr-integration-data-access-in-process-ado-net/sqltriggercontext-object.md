@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: clr
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "SqlTriggerContext object"
   - "triggers [CLR integration]"
   - "context [CLR integration]"
 ms.assetid: 472a2d0b-64ae-4877-8f11-a5620aa698b7
-caps.latest.revision: 18
 author: rothja
 ms.author: jroth
 manager: craigg

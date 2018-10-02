@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "unconsumed data"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "overflow data [SQLXML]"
   - "sql:overflow-field"
 ms.assetid: 8526998d-b47d-4a32-8dc2-7f50a8d11097
-caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

@@ -151,4 +151,4 @@ Look for the **External-IP** value that is assigned to the services. Connect to 
 Now that the SQL Server big data cluster is deployed, try out some of the new capabilities:
 
 > [!div class="nextstepaction"]
-> [How to use notebooks in SQL Server 2019 CTP 2.0](notebooks-guidance.md)
+> [How to use notebooks in SQL Server 2019 preview](notebooks-guidance.md)

@@ -23,7 +23,9 @@ See an example of the complete deployment in [Always On availability groups for 
 
 To fail over an availability group primary replica to a different node in Kubernetes, use a job. This article identifies the environment variables for this job.
 
-The following example of a manifest file describes a job to manually fail over job for an availability group on a Kubernetes replica. Copy the contents of the example into a new file called `failover.yaml`.
+The following manifest file describes a job to manually fail over an availability group. 
+
+Copy the contents of the example into a new file called `failover.yaml`.
 
 [failover.yaml](https://github.com/Microsoft/sql-server-samples/blob/master/samples/features/high%20availability/Kubernetes/sample-deployment-script/templates/failover.yaml)
 

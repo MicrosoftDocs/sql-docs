@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 298 110">
+  <title>6 - statistics</title>
+  <g id="background_blue" data-name="background blue">
+    <rect width="298" height="110" fill="#e4edf1"/>
+  </g>
+  <g id="Shapes">
+    <g>
+      <polyline points="190.922 38.973 190.922 94.869 107.078 94.869 107.078 38.973" fill="none" stroke="#2e6ca4" stroke-miterlimit="10" stroke-width="2"/>
+      <rect x="142.789" y="71.579" width="12.421" height="12.421" fill="#2e6ca4"/>
+      <rect x="162.974" y="71.579" width="12.421" height="12.421" fill="#2e6ca4"/>
+      <rect x="122.605" y="71.579" width="12.421" height="12.421" fill="#2e6ca4"/>
+      <polygon points="135.026 71.579 135.026 84.001 122.605 71.579 135.026 71.579" fill="#fff" opacity="0.2" style="isolation: isolate"/>
+      <polygon points="155.211 71.579 155.211 84.001 142.789 71.579 155.211 71.579" fill="#fff" opacity="0.2" style="isolation: isolate"/>
+      <polygon points="175.395 71.579 175.395 84.001 162.974 71.579 175.395 71.579" fill="#fff" opacity="0.2" style="isolation: isolate"/>
+      <rect x="142.789" y="51.395" width="12.421" height="12.421" fill="#2e6ca4"/>
+      <rect x="162.974" y="51.395" width="12.421" height="12.421" fill="#2e6ca4"/>
+      <rect x="122.605" y="51.395" width="12.421" height="12.421" fill="#2e6ca4"/>
+      <polygon points="135.026 51.395 135.026 63.816 122.605 51.395 135.026 51.395" fill="#fff" opacity="0.2" style="isolation: isolate"/>
+      <polygon points="155.211 51.395 155.211 63.816 142.789 51.395 155.211 51.395" fill="#fff" opacity="0.2" style="isolation: isolate"/>
+      <polygon points="175.395 51.395 175.395 63.816 162.974 51.395 175.395 51.395" fill="#fff" opacity="0.2" style="isolation: isolate"/>
+      <rect x="142.789" y="31.21" width="12.421" height="12.421" fill="#2e6ca4"/>
+      <rect x="122.605" y="31.21" width="12.421" height="12.421" fill="#2e6ca4"/>
+      <polygon points="135.026 31.21 135.026 43.631 122.605 31.21 135.026 31.21" fill="#fff" opacity="0.2" style="isolation: isolate"/>
+      <polygon points="155.211 31.21 155.211 43.631 142.789 31.21 155.211 31.21" fill="#fff" opacity="0.2" style="isolation: isolate"/>
+      <rect x="176.948" y="14.131" width="12.421" height="12.421" fill="#2e6ca4"/>
+      <polygon points="189.369 14.131 189.369 26.552 176.948 14.131 189.369 14.131" fill="#fff" opacity="0.2" style="isolation: isolate"/>
+    </g>
+  </g>
+</svg>

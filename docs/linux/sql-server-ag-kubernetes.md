@@ -52,7 +52,7 @@ To deploy an availability group in Kubernetes:
 
 1. Create the databases and attach them to the availability group
 
-For detailed steps, see [Configure a SQL Server Always On availability group in Kubernetes for high availability](tutorial-sql-server-ag-kubernetes.md).
+For detailed steps, see [Always On availability groups for SQL Server containers](sql-server-ag-kubernetes.md).
 
 ## SQL Server Kubernetes operator
 

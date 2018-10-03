@@ -4,7 +4,7 @@ description: This article explains the parameters for the SQL Server Kubernetes 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.date: 08/09/2018
+ms.date: 10/02/2018
 ms.topic: article
 ms.prod: sql
 ms.custom: "sql-linux"
@@ -19,6 +19,7 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 - Kubernetes version 1.11.0 or higher
 - Four or more nodes
 - [kubectl](http://kubernetes.io/docs/tasks/tools/install-kubectl/).
+- Access to the [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files) github repository
 
   >[!NOTE]
   >You can use any type of Kubernetes cluster. To create a Kubernetes cluster on Azure Kubernetes Service (AKS), see [Create an AKS cluster](http://docs.microsoft.com/azure/aks/create-cluster).
@@ -29,33 +30,29 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 
 ## Steps
 
-1. Configure storage
+1. Create a [namespace](https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/).
 
-  In cloud environments like Azure, configure [persistent volumes](http://kubernetes.io/docs/concepts/storage/persistent-volumes/) for each instance of SQL Server.
-
-  To create persistent volumes in Azure, see `pv.yaml` and `pvc.yaml` in [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-deployment-script/templates).
-
-  To create the storage run the following command:
+  This example uses a namespace called `ag1`. Run the following command to create the namespace.
 
   ```azurecli
-  kubectl apply -f <pv.yaml>
+  kubectl create namespace ag1
   ```
 
-1. Create Kubernetes secrets for the SA password and the master key.
+1. Create Kubernetes a secret for the SA password.
 
-  The following example creates two secrets. `sapassword` is for the SA password and `masterkeypassword` is for the master key. Before you run this script replace `<MyC0mp13xP@55w04d!>` with different complex password for each secret.
+  Create the secret with  `kubectl`. The folliwng script creates a secret named `sql-secrets` in the `ag1` namespace. The secret stores a password named `sapassword`.
 
-   ```azurecli
-   kubectl create secret generic sql-secrets --from-literal='sapassword=<MyC0mp13xP@55w04d!>' --from-literal='masterkeypassword=<MyC0mp13xP@55w04d!>'
-   ```
+  Copy the script to your terminal. Replace `<>` with a complex password, and run the script to create the secret with the complex password.
+
+  ```azurecli
+  kubectl create secret generic sql-secrets --from-literal=sapassword="<>" --namespace ag1
+  ```
 
 1. Configure and deploy the SQL Server operator manifest.
 
-  Copy the SQL Server operator `operator.yaml` file from [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files).
+  Copy the SQL Server [`operator.yaml`](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files/operator.yaml) file from [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files).
 
   The `operator.yaml` file is the deployment manifiest for the Kubernetes operator.
-
-  To configure the manifest, update the `operator.yaml` file for your environment.
 
   Apply the manifest to the Kubernetes cluster.
 
@@ -65,7 +62,10 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 
 1. Deploy the SQL Server custom resource.
 
-  Copy the SQL Server manifest `sqlserver.yaml` from [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files).
+  Copy the SQL Server manifest [`sqlserver.yaml`](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files/sqlserver.yaml) from [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files).
+
+  >[!NOTE]
+  >The `sqlserver.yaml` file describes the SQL Server containers and the persistent volume claims that are required for the storage for each SQL Server instance. 
 
   Apply the manifest to the Kubernetes cluster.
 
@@ -73,11 +73,49 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
   kubectl apply -f sqlserver.yaml
   ```
 
-After you deploy the SQL Server manifest, the operator deploys the instances of SQL Server as pods in containers.
+  After you deploy the SQL Server manifest, the operator deploys the instances of SQL Server as pods in containers.
 
-After the script completes, the Kubernetes operator will create the storage, the SQL Server instances, the load balancer services. You can monitor the deployment with [Kubernetes dashboard](http://docs.microsoft.com/azure/aks/kubernetes-dashboard).
+### Monitor the deployment
 
-After Kubernetes creates the SQL Server containers complete the following steps to add a database to the availability group:
+You can use [Kubernetes dashboard with Azure Kubernetes Service (AKS)](https://docs.microsoft.com/en-us/azure/aks/kubernetes-dashboard) to monitor the deployment. 
+
+Use `az aks browse` to launch the dashboard. 
+
+After deployment, only AG membership list and post-init T-SQL script can be updated. Other properties cannot be updated - the resource must be deleted and recreated. Credentials for the auto-generated users can be rotated using a `mssql-server-k8s-rotate-creds` job.
+
+## Create load balancer services to allow connection to replicas
+
+The [`ag-services.yaml`](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files/ag-services.yaml) from [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files) example describes load balancing services that can connect to availability group replicas. 
+
+- `ag1-primary` connects to the primary replica.
+- `ag1-secondary-sync` connects to a secondary replica in synchronous commit mode.
+- `ag1-secondary-async` connects to a secondary replica in asynchronous commit mode.
+- `ag1-secondary-config` connects to a configuration only replica.
+
+You can apply the manifest file in the example, and it will create the load balancing services that will connect to availability group replicas. However, if the specific replica type does not exist, a connection attempt to that service, will fail. For example, if you create the load balancer for `ag1-secondary-async`, but do not have a secondary replica in asynchronous commit mode, the connection will not succeed. 
+
+To deploy the service, run the following command.
+
+```azurecli
+kubectl apply -f ag-services.yaml
+```
+
+Kubernetes creates a load balancer service for each replica type. The load balancer service stores an IP address for its replica type, as described in the manifest.
+
+After you deploy the services, use `kubectl get services --namespace ag1` to identify the IP address for the services.
+
+With the IP address, you can connect to the SQL Server instance that hosts each type of replica.
+
+The following image shows:
+
+1. The output from `kubectl get services` for the namespace `ag1`.
+1. The connection to the replica, with `sqlcmd`, and the `sa` account.
+
+![connect](./media/sql-server-linux-kubernetes-deploy/connect.png)
+
+### Add a database to the availability group
+
+After Kubernetes creates the SQL Server containers, complete the following steps to add a database to the availability group:
 
 1. [Connect](sql-server-linux-kubernetes-connect.md) to a SQL Server instance in the cluster.
 

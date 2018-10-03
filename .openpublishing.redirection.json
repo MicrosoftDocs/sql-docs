@@ -4268,6 +4268,11 @@
         "source_path": "docs/sql-operations-studio/what-is.md",
         "redirect_url": "/sql/azure-data-studio/what-is",
         "redirect_document_id": true
+      },
+      {
+        "source_path": "docs/linux/tutorial-sql-server-containers-kubernetes.md",
+        "redirect_url": "/sql/linux/sql-server-ag-kubernetes",
+        "redirect_document_id": true
       }
      
     ]

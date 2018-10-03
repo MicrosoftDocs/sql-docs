@@ -13,7 +13,7 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 ---
 # SQL Server Always On availability group Kubernetes operator parameters
 
-An Always On availability group on Kubernetes requires an operator. The operator is described in a .yaml file.  See an example of the specification in [this tutorial](tutorial-sql-server-ag-kubernetes.md).
+An Always On availability group on Kubernetes requires an operator. The operator is described in a .yaml file.  See an example of the specification in [Always On availability groups for SQL Server containers](sql-server-ag-kubernetes.md).
 
 This article explains the operator global environment variables.
 

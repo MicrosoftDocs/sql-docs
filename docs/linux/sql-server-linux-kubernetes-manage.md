@@ -17,7 +17,7 @@ To manage an Always On Availability Group on Kubernetes, create a manifest and a
 
 The examples in this article apply to all Kubernetes cluster. The scenarios in these examples are applied against a cluster on Azure Kubernetes Service.
 
-See an example of the of the end-to-end deployment in [this tutorial](tutorial-sql-server-ag-kubernetes.md).
+See an example of the of the end-to-end deployment in [Always On availability groups for SQL Server containers](sql-server-ag-kubernetes.md).
 
 ## Fail over - SQL Server availability group on Kubernetes
 

@@ -6,7 +6,7 @@ manager: kfile
 ms.prod: reporting-services, reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
-ms.date: 10/02/2018
+ms.date: 10/32/2018
 ---
 
 # Configure a Report Server on a Network Load Balancing Cluster

@@ -84,9 +84,9 @@ Generally, the failover time for an availability group is measured in seconds, w
 
 ## Next steps
 
-To deploy SQL Server containers in Azure Kubernetes Service (AKS), follow one of these tutorials:
+To deploy SQL Server containers in Azure Kubernetes Service (AKS), see these examples:
 
 * [Deploy SQL Server in Docker container](sql-server-linux-configure-docker.md)
 * [Deploy a SQL Server container in Kubernetes](tutorial-sql-server-containers-kubernetes.md)
-* [Deploy a SQL Server Always On availability group Kubernetes](tutorial-sql-server-ag-kubernetes.md)
+* [Always On availability groups for SQL Server containers](sql-server-ag-kubernetes.md)
 

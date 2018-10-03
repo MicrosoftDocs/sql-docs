@@ -1,6 +1,6 @@
 ---
 title: "Memory Properties | Microsoft Docs"
-ms.date: 06/07/2018
+ms.date: 10/03/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: 
@@ -13,13 +13,13 @@ manager: kfile
 # Memory Properties
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] preallocates a modest amount of memory at startup so that requests can be handled immediately. Additional memory is allocated as query and processing workloads increase. 
+  Analysis Services pre-allocates a modest amount of memory at startup so requests can be handled immediately. Additional memory is allocated as query and processing workloads increase. 
   
   By specifying configuration settings, you can control the thresholds at which memory is released. For example, the **HardMemoryLimit** setting specifies a self-imposed out-of-memory condition (by default, this threshold is not enabled), where new requests are rejected outright until more resources become available.
 
-To learn more about maximum memory utilized per Analysis Services instance by edition, see [Editions and supported features of SQL Server](../../sql-server/editions-and-components-of-sql-server-2017.md#Cross-BoxScaleLimits).
+To learn more about maximum memory utilized per SQL Server Analysis Services instance by edition, see [Editions and supported features of SQL Server](../../sql-server/editions-and-components-of-sql-server-2017.md#Cross-BoxScaleLimits).
   
- The following settings apply to both tabular and multidimensional server mode unless noted otherwise.  
+ The following settings apply to both tabular and multidimensional servers unless noted otherwise.  
  
 ## Default memory configuration
 
@@ -60,12 +60,10 @@ Azure Analysis Services only. An advanced property to control how much memory ca
  **VertiPaqPagingPolicy**  
   For tabular instances only, specifies the paging behavior in the event the server runs low on memory. Valid values are as follows:  
   
-  
-
 Setting  |Description  
 ---------|---------
-**0**     |  Disables paging. If memory is insufficient, processing fails with an out-of-memory error. If you disable paging, you must grant Windows privileges to the service account. See [Configure Service Accounts &#40;Analysis Services&#41;](../../analysis-services/instances/configure-service-accounts-analysis-services.md) for instructions. 
-**1**     |  (default) This property enables paging to disk using the operating system page file (pagefile.sys).   
+**0**     |  (default for Azure Analysis Services) Disables paging. If memory is insufficient, processing fails with an out-of-memory error. If you disable paging, you must grant Windows privileges to the service account. See [Configure Service Accounts &#40;Analysis Services&#41;](../../analysis-services/instances/configure-service-accounts-analysis-services.md) for instructions. 
+**1**     |  (default for SQL Server Analysis Services) This property enables paging to disk using the operating system page file (pagefile.sys).   
   
 When set to 1, processing is less likely to fail due to memory constraints because the server will try to page to disk using the method that you specified. Setting the **VertiPaqPagingPolicy** property does not guarantee that memory errors will never happen. Out of memory errors can still occur under the following conditions:  
   

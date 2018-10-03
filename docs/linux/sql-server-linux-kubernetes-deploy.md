@@ -40,7 +40,7 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 
 1. Create Kubernetes a secret for the SA password.
 
-  Create the secret with  `kubectl`. The folliwng script creates a secret named `sql-secrets` in the `ag1` namespace. The secret stores a password named `sapassword`.
+  Create the secret with  `kubectl`. The following script creates a secret named `sql-secrets` in the `ag1` namespace. The secret stores a password named `sapassword`.
 
   Copy the script to your terminal. Replace `<>` with a complex password, and run the script to create the secret with the complex password.
 
@@ -52,7 +52,7 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 
   Copy the SQL Server [`operator.yaml`](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files/operator.yaml) file from [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files).
 
-  The `operator.yaml` file is the deployment manifiest for the Kubernetes operator.
+  The `operator.yaml` file is the deployment manifest for the Kubernetes operator.
 
   Apply the manifest to the Kubernetes cluster.
 
@@ -77,24 +77,25 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 
 ### Monitor the deployment
 
-You can use [Kubernetes dashboard with Azure Kubernetes Service (AKS)](https://docs.microsoft.com/en-us/azure/aks/kubernetes-dashboard) to monitor the deployment. 
+You can use [Kubernetes dashboard with Azure Kubernetes Service (AKS)](https://docs.microsoft.com/en-us/azure/aks/kubernetes-dashboard) to monitor the deployment.
 
 Use `az aks browse` to launch the dashboard. 
 
-After deployment, only AG membership list and post-init T-SQL script can be updated. Other properties cannot be updated - the resource must be deleted and recreated. Credentials for the auto-generated users can be rotated using a `mssql-server-k8s-rotate-creds` job.
-
 ## Create load balancer services to allow connection to replicas
 
-The [`ag-services.yaml`](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files/ag-services.yaml) from [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files) example describes load balancing services that can connect to availability group replicas. 
+The [`ag-services.yaml`](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files/ag-services.yaml) from [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files) example describes load-balancing services that can connect to availability group replicas. 
 
 - `ag1-primary` connects to the primary replica.
 - `ag1-secondary-sync` connects to a secondary replica in synchronous commit mode.
 - `ag1-secondary-async` connects to a secondary replica in asynchronous commit mode.
 - `ag1-secondary-config` connects to a configuration only replica.
 
-You can apply the manifest file in the example, and it will create the load balancing services that will connect to availability group replicas. However, if the specific replica type does not exist, a connection attempt to that service, will fail. For example, if you create the load balancer for `ag1-secondary-async`, but do not have a secondary replica in asynchronous commit mode, the connection will not succeed. 
+When you apply the manifest file in the example, Kubernetes creates the load-balancing services for each type of replica. The load-balancing service includes an IP address. Use this IP address to connect to the type of replica you need.
 
-To deploy the service, run the following command.
+>[!NOTE]
+>If the specific replica type does not exist, connection attempts to that service fail. For example, if you create the load balancer for `ag1-secondary-async`, but do not have a secondary replica in asynchronous commit mode, the connection does not succeed.
+
+To deploy the services, run the following command.
 
 ```azurecli
 kubectl apply -f ag-services.yaml

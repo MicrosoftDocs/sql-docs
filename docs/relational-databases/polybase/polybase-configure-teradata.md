@@ -35,7 +35,6 @@ These objects will create in this section:
 
 - CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL) 
 - CREATE EXTERNAL DATA SOURCE (Transact-SQL) 
-- CREATE EXTERNAL FILE FORMAT (Transact-SQL) 
 - CREATE EXTERNAL TABLE (Transact-SQL) 
 - CREATE STATISTICS (Transact-SQL)
 
@@ -60,16 +59,17 @@ These objects will create in this section:
 1. Create an external data source with [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).Specify external data source location and credentials for Teradata.
 
      ```sql
-      /*  LOCATION: Server DNS name or IP address.
-     *  PUSHDOWN: specify whether computation should be pushed down to the source. ON by default.
-     *  CREDENTIAL: the database scoped credential, created above.
-     */  
-     CREATE EXTERNAL DATA SOURCE TeradataInstance
-     WITH ( 
-     LOCATION = '<vendor>://<server>[:<port>]',
-     -- PUSHDOWN = ON | OFF,
-       CREDENTIAL = TeradataCredentials
-     );
+    /*  LOCATION: Location string should be of format '<vendor>://<server>[:<port>]'.
+    *  PUSHDOWN: specify whether computation should be pushed down to the source. ON by default.
+    *  CREDENTIAL: the database scoped credential, created above.
+    */  
+    CREATE EXTERNAL DATA SOURCE TeradataInstance
+    WITH ( 
+    LOCATION = teradata://TeradataServer,
+    -- PUSHDOWN = ON | OFF,
+      CREDENTIAL = TeradataCredentials
+    );
+
      ```
 
 1. Create schemas for external data

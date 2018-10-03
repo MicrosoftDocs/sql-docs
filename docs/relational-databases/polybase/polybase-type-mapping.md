@@ -20,7 +20,7 @@ This article describes the mapping between PolyBase external data sources and SQ
 
 ## Overview
 
-When creating and external table with PolyBase, the column definitions, including the data types and number of columns, must match the data in the external files. If there is a mismatch, the file rows is rejected when querying the actual data.  
+When creating and external table with PolyBase, the column definitions, including the data types and number of columns, must match the data in the external files. If there is a mismatch, the file rows are rejected when querying the actual data.  
   
 For external tables that reference files in external data sources, the column and type definitions must map to the exact schema of the external file. When defining data types that reference data stored in Hadoop/Hive, use the following mappings between SQL and Hive data types and cast the type into a SQL data type when selecting from it. The types include all versions of Hive unless stated otherwise.
 
@@ -42,10 +42,10 @@ TBD
 | real          | Single                    | float          | FloatWritable         |
 | money         | Decimal                   | double         | DoubleWritable        |
 | smallmoney    | Decimal                   | double         | DoubleWritable        |
-| nchar         | String<br /><br /> Char[] | string         | text                  |
-| nvarchar      | String<br /><br /> Char[] | string         | Text                  |
-| char          | String<br /><br /> Char[] | string         | Text                  |
-| varchar       | String<br /><br /> Char[] | string         | Text                  |
+| nchar         | String<br /><br /> Char[] | string         | --text                  |
+| nvarchar      | String<br /><br /> Char[] | string         | --Text                  |
+| char          | String<br /><br /> Char[] | string         | --Text                  |
+| varchar       | String<br /><br /> Char[] | string         | --Text                  |
 | binary        | Byte[]                    | binary         | BytesWritable         | Applies to Hive 0.8 and later. |
 | varbinary     | Byte[]                    | binary         | BytesWritable         | Applies to Hive 0.8 and later. |
 | date          | DateTime                  | timestamp      | TimestampWritable     |
@@ -58,20 +58,20 @@ TBD
 
 ## Oracle Type mapping reference
 
-| Oracle data type | SQL Server type           | 
+| Oracle data type | SQL Server type | 
 | ------------- | ------------------------- |
 |Float |Float|
 |Decimal|Decimal|
 |Int |Int|
-|Long |Ntext|
+|Long |--Ntext|
 |Binary Float|Real| 
 |Char |Nchar|
 |Varchar2|Nvarchar| 
 |Raw |Varbinary|
-|Long Raw|Image| 
-|Bfile |Image|
-|Blob |Image|
-|Clob |Image|
+|Long Raw|--Image| 
+|Bfile |--Image|
+|Blob |--Image--|
+|Clob | --Image-- |
 |Rowid |Varchar|
 |Date |Datetime2|
 |Timestamp|Datetime2| 
@@ -123,46 +123,46 @@ The driver returns the value as a string containing “Unsupported Javascript wi
 
 **Type mismatch - string:**
 
-MongoDB strings are converted into SQL_WVARCHAR type with a default column size of 255. This column size is tunable as a part of the driver configuration. Despite the ability to configure, SQL_WVARCHAR or SQL Server type Varchar supports only 2GB max and MongoDB can hold data upto 4GB. This might lead to truncation.   
+MongoDB strings are converted into SQL_WVARCHAR type with a default column size of 255. This column size is tunable as a part of the driver configuration. Despite the ability to configure, SQL_WVARCHAR or SQL Server type Varchar supports only 2GB max and MongoDB can hold data upto 4GB. This might lead to truncation.
 
 **MongoDB driver options:*
-- Enable double buffering - Selected by default 
-- Documents to fetch per block - Default 4096 
-- Expose strings as SQL_WVARCHAR – selected by default. If unselected, strings are exposed as SQL_VARCHAR. 
-- String column size – Default 255 
+- Enable double buffering - Selected by default
+- Documents to fetch per block - Default 4096
+- Expose strings as SQL_WVARCHAR – selected by default. If unselected, strings are exposed as SQL_VARCHAR.
+- String column size – Default 255
 - Expose Binary as SQL_LONGVARBINARY – Default selected. If unselected, Binary is exposed as SQL_VARBINARY. 
-- Binary Column Size – Default 32767. 
-- Enable passdown – Default selected. 
+- Binary Column Size – Default 32767.
+- Enable passdown – Default selected.
 
 **Schema related driver configurations:**
 
-- LoadMetadataTable - default from database. Can ask the driver to load the schema definition from JSON file specified. 
-- LocalMetadataFile - If we are reading from file, full path must be specified here 
+- LoadMetadataTable - default from database. Can ask the driver to load the schema definition from JSON file specified.
+- LocalMetadataFile - If we are reading from file, full path must be specified here.
 - Sampling method –  
-     - default forward (Driver samples data from first record) 
-     - backword - driver samples data starting from last record 
-- SamplingLimit - default 100 (Max no of records the driver can sample to generate temp schema def). When set to 0, driver samples every document 
+     - default forward (Driver samples data from first record)
+     - backword - driver samples data starting from last record
+- SamplingLimit - default 100 (Max no of records the driver can sample to generate temp schema def). When set to 0, driver samples every document
 - SamplingStepSize - default 1 (Interval at which driver samples records when scanning database to generate temp schema def). E.g., when set to 2, it samples every second record in database
 
 
 ## Teradata Type mapping reference
 
-| Teradata data type | SQL Server type         | 
+| Teradata data type | SQL Server type | 
 | ------------- | ------------------------- |
 |Int|Int|
 |Small Int|SmallInt|
 |Big Int|BigInt|
 |Byte Int |TinyInt|
-|Decimal|Decimal| 
+|Decimal|Decimal|
 |Float|Float|
-|Byte|Binary| 
+|Byte|Binary|
 |Varbyte|Varbinary|
-|Blob|Image| 
+|Blob|--Image|
 |Char|Nchar|
-|Clob|Ntext|
+|Clob|--Ntext|
 |Varchar|Nvarchar|
 |Graphic|Nchar|
-|JSON|Ntext|
+|JSON|--Ntext|
 |Vargraphic|Nvarchar|
 |Date|Date|
 |Time|Time|
@@ -187,11 +187,11 @@ MongoDB strings are converted into SQL_WVARCHAR type with a default column size 
 |Period (Timestamp)||
 |Period (Timestamp with Timezone)||
 
-**Period data type:** 
-        
+**Period data type:**
+
 Period data type represents a duration marked by a beginning bound and ending bound. Essentially, it is a tuple. There is no SQL server equivalent type for period. 
 
-**Time with Timezone and Timestamp:** 
+**Time with Timezone and Timestamp:**
 
 Time with time zone and timestamp contains the timezone offset, which is lost during translation. This can be fixed if we map SQL_Type_Time/SQL_Type_Timestamp to datetimeoffset instead of Time/DateTime2. 
 
@@ -205,9 +205,9 @@ CLOB data type with LATIN charset should be able to accept 2097088000 characters
 
 **Driver configuration options:**
 
-- Use DATE data for TIMESTAMP parameters 
-- Enable custom catalog mode for 2.X applications 
-- Return Empty string in CREATE_PARAMS column for SQL_TIMESTAMP 
+- Use DATE data for TIMESTAMP parameters
+- Enable custom catalog mode for 2.X applications
+- Return Empty string in CREATE_PARAMS column for SQL_TIMESTAMP
 - Return Max. CHAR/VARCHAR length as 32K
 
 ## Next steps

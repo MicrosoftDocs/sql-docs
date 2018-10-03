@@ -23,11 +23,11 @@ To learn more about maximum memory utilized per SQL Server Analysis Services ins
  
 ## Default memory configuration
 
-Under the default configuration, each Analysis Services instance allocates a small amount of RAM (40MB to 50 MB) at startup, even if the instance is idle. 
+Under the default configuration, each Analysis Services instance allocates a small amount of RAM (40 MB to 50 MB) at startup, even if the instance is idle. 
 
 Recall that configuration settings are per instance. If you are running multiple instances of Analysis Services, such as a tabular and multidimensional instance on the same hardware, each instance will allocate its own memory independently of other instances.
 
-The table below briefly describes the more commonly used memory settings (with more detail in the reference section). You should configure these setting only if Analysis Services is competing for memory with other applications on the same server:
+The table below briefly describes the more commonly used memory settings (with more detail in the reference section). Configure these settings only if Analysis Services is competing for memory with other applications on the same server:
 
 Setting | Description
 --------|------------
@@ -87,7 +87,7 @@ When set to 1, processing is less likely to fail due to memory constraints becau
 **-1** | (default) Automatic. The engine will decide which one to use.
 **1** | Analysis Services HEAP.
 **2** | Windows LFH.
-**5** | Hybrid allocator. This allocator will use Windows LFH for \<= 16KB allocations and the AS Heap for >16KB allocations. 
+**5** | Hybrid allocator. This allocator will use Windows LFH for \<= 16 KB allocations and the AS Heap for >16 KB allocations. 
 **6** | Intel TBB allocator. Available in SQL Server 2016 SP1 (and later) Analysis Services.
   
   

@@ -13,7 +13,7 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 ---
 # SQL Server Always On availability group Kubernetes operator parameters
 
-An Always On availability group on Kubernetes requires an operator. The operator is described in a .yaml file.  See an example of the specification in [Always On availability groups for SQL Server containers](sql-server-ag-kubernetes.md).
+An Always On availability group on Kubernetes requires an operator. A manifest describes the operator. The manifest is a `.yaml` file. See an example of the specification in [Always On availability groups for SQL Server containers](sql-server-ag-kubernetes.md).
 
 This article explains the operator global environment variables.
 
@@ -29,11 +29,11 @@ The following example describes a deployment for the `mssql-operator`.
 
 * `MSSQL_K8S_SQL_WRITE_LEASE_PERIOD_SECONDS`
   * Optional
-  * **Description**: The duration of the sql server external write lease to keep the sql server writable and prevent split-brain scenarios. Secondary replicas wait for this expiration after electing a new leader.
+  * **Description**: the duration of the sql server external write lease. Used to keep the sql server writable and prevent split-brain scenarios. Secondary replicas wait for this amount of seconds after selecting a new leader.
 
 * `MSSQL_K8S_MONITOR_PERIOD_SECONDS`
   * Optional
-  * **Description**: The period to monitor if the state of the availability group. Determines how quickly replicas are added and dropped. Must be less than `MSSQL_K8S_SQL_WRITE_LEASE_PERIOD_SECONDS`.
+  * **Description**: the period to monitor if the state of the availability group. Determines how quickly replicas are added and dropped. Must be less than `MSSQL_K8S_SQL_WRITE_LEASE_PERIOD_SECONDS`.
   * **Default**: 1
 
 * `MSSQL_K8S_LEASE_DURATION_SECONDS`

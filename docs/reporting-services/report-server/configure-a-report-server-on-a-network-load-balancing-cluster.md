@@ -53,7 +53,7 @@ To run a scale-out deployment on an NLB cluster, you must configure view state v
 
 1. Generate a validation key and decryption key by using the autogenerate functionality provided by the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. In the end, you must have a single <`MachineKey`> entry that you can paste into the Web.config file for each Report Server instance in the scale-out deployment.  
   
-     The following example provides an illustration of the value you must obtain. Do not copy the example into your configuration files; the key values are not valid.  
+    The following example provides an illustration of the value you must obtain. Do not copy the example into your configuration files;the key values are not valid.  
   
     ```xml
     <machineKey validationKey="123455555" decryptionKey="678999999" validation="SHA1" decryption="AES"/>  
@@ -73,11 +73,11 @@ To run a scale-out deployment on an NLB cluster, you must configure view state v
 
 1. Generate a validation key and decryption key by using the autogenerate functionality provided by the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. In the end, you must have a single \<**MachineKey**> entry that you can paste into the RSReportServer.config file for each report server instance in the scale-out deployment.
 
-The following example provides an illustration of the value you must obtain. Do not copy the example into your configuration files; the key values are not valid. Report server requires the correct casing.
+    The following example provides an illustration of the value you must obtain. Do not copy the example into your configuration files; the key values are not valid. Report server requires the correct casing.
 
-   ```xml
-   <machineKey validationKey="123455555" decryptionKey="678999999" validation="SHA1" decryption="AES"/>  
-   ```
+    ```xml
+    <machineKey validationKey="123455555" decryptionKey="678999999" validation="SHA1" decryption="AES"/>
+    ```
 
 2. Save the file.
 

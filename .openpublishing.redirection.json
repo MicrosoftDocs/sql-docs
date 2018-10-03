@@ -4270,7 +4270,7 @@
         "redirect_document_id": true
       },
       {
-        "source_path": "docs/linux/tutorial-sql-server-containers-kubernetes.md",
+        "source_path": "docs/linux/tutorial-sql-server-ag-kubernetes.md",
         "redirect_url": "/sql/linux/sql-server-ag-kubernetes",
         "redirect_document_id": true
       }

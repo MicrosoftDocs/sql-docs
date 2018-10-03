@@ -23,7 +23,7 @@ This article describes the steps to deploy Kubernetes on AKS using Azure CLI. If
 
 - This section requires that you be running the Azure CLI version 2.0.4 or later. If you need to install or upgrade, see [Install Azure CLI 2.0](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli). Run `az --version` to find the version if needed.
 
-- Install [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/). SQL Server Big Data cluster requires a minimum 1.10 version for Kubernetes, for both server and client. To install a specific version on kubectl client, see [Install kubectl binary via curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl). For AKS you will need to use `--kubernetes-version` parameter to specify a version different than default.
+- Install [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/). SQL Server Big Data cluster requires any minor version within the 1.10 version range for Kubernetes, for both server and client. To install a specific version on kubectl client, see [Install kubectl binary via curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl). For AKS you will need to use `--kubernetes-version` parameter to specify a version different than default. Note that at the CTP2.0 release timeframe, AKS only supports 1.10.7 and 1.10.8 versions. 
 
 
 > [!NOTE]
@@ -72,10 +72,10 @@ An Azure resource group is a logical group in which Azure resources are deployed
     --generate-ssh-keys \
     --node-vm-size Standard_DS3_v2 \
     --node-count 2 \
-    --kubernetes-version 1.10.3
+    --kubernetes-version 1.10.7
     ```
 
-    You can increase or decrease the default agent count by adding `--agent-count <n>` to the az aks create command where `<n>` is the number of agent nodes you want to have.
+    You can increase or decrease the default agent count by adding `--node-count <n>` to the az aks create command where `<n>` is the number of agent nodes you want to have.
 
     After several minutes, the command completes and returns JSON-formatted information about the cluster.
 

@@ -75,9 +75,9 @@ To run a scale-out deployment on an NLB cluster, you must configure view state v
 
 The following example provides an illustration of the value you must obtain. Do not copy the example into your configuration files; the key values are not valid. Report server requires the correct casing.
 
-    ```xml
-    <machineKey validationKey="123455555" decryptionKey="678999999" validation="SHA1" decryption="AES"/>  
-    ```
+   ```xml
+   <machineKey validationKey="123455555" decryptionKey="678999999" validation="SHA1" decryption="AES"/>  
+   ```
 
 2. Save the file.
 

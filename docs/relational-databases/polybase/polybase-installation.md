@@ -62,6 +62,8 @@ Once you have installed PolyBase as either stand alone or in a scale-out group, 
 2. Click **Installation**, then click **New Standalone SQL Server installation or add features**.  
    
 3. On the feature selection page, select **PolyBase Query Service for External Data**.  
+
+ ![PolyBase services](../../relational-databases/polybase/media/install-wizard.png "PolyBase services")  
    
 4. On the Server Configuration Page, configure the **SQL Server PolyBase Engine Service** and SQL Server PolyBase Data Movement Service to run under the same account.  
    
@@ -83,7 +85,9 @@ Once you have installed PolyBase as either stand alone or in a scale-out group, 
 <!--SQL Server 2019-->
 ::: moniker range=">= sql-server-ver15 || =sqlallproducts-allversions"
 
-After installation, you must [enable the PolyBase feature](#enable).
+  > **IMPORTANT!**
+  >
+  > After installation, you must [enable the PolyBase feature](#enable).
 
 ::: moniker-end
 
@@ -150,11 +154,15 @@ Setup.exe /Q /ACTION=INSTALL /IACCEPTSQLSERVERLICENSETERMS /FEATURES=SQLEngine,P
 ::: moniker range=">= sql-server-ver15 || =sqlallproducts-allversions"
 ## <a id="enable"></a> Enable PolyBase
 
-Starting with SQL Server 2019 CTP 2.0, you must enable PolyBase after installation using the following Transact-SQL command:
+Once you are done with the installation, Polybase must be enabled to access it's features. connect to SQL Server 2019 CTP 2.0, you must enable PolyBase after installation using the following Transact-SQL command:
+
 
 ```sql
-sp_configure @configname = 'polybase enabled', @configvalue = 1;
+exec sp_configure @configname = 'polybase enabled', @configvalue = 1;
+RECONFIGURE;
 ```
+The instance then needs to be **restarted** 
+
 
 ::: moniker-end
 

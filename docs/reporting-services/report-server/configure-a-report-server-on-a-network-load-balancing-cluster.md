@@ -3,8 +3,7 @@ title: "Configure a Report Server on a Network Load Balancing Cluster | Microsof
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod: reporting-services, reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 ms.date: 10/02/2018
@@ -38,17 +37,25 @@ ms.date: 10/02/2018
   
 ## <a name="ViewState"></a> How to Configure View State Validation
 
- To run a scale-out deployment on an NLB cluster, you must configure view state validation so that users can view interactive HTML reports. You must do this for the Report Server Web Service.  
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+To run a scale-out deployment on an NLB cluster, you must configure view state validation so that users can view interactive HTML reports.  You must do this for the Report Server Web Service.
+::: moniker-end
+
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+To run a scale-out deployment on an NLB cluster, you must configure view state validation so that users can view interactive HTML reports.
+::: moniker-end
   
  View state validation is controlled by the ASP.NET. By default, view state validation is enabled and uses the identity of the Web service to perform the validation. However, in an NLB cluster scenario, there are multiple service instances and web service identities that run on different computers. Because the service identity varies for each node, you cannot rely on a single process identity to perform the validation.  
   
  To work around this issue, you can generate an arbitrary validation key to support view state validation, and then manually configure each report server node to use the same key. You can use any randomly generated hexadecimal sequence. The validation algorithm (such as SHA1) determines how long the hexadecimal sequence must be.  
-  
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+
 1. Generate a validation key and decryption key by using the autogenerate functionality provided by the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. In the end, you must have a single <`MachineKey`> entry that you can paste into the Web.config file for each Report Server instance in the scale-out deployment.  
   
      The following example provides an illustration of the value you must obtain. Do not copy the example into your configuration files; the key values are not valid.  
   
-    ```  
+    ```xml
     <machineKey validationKey="123455555" decryptionKey="678999999" validation="SHA1" decryption="AES"/>  
     ```  
   
@@ -59,7 +66,27 @@ ms.date: 10/02/2018
 4. Repeat the previous step for each report server in the scale-out deployment.  
   
 5. Verify that all Web.Config files in the \Reporting Services\Reportserver folders contain identical <`machineKey`> elements in the <`system.web`> section.  
-  
+
+::: moniker-end
+
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+
+1. Generate a validation key and decryption key by using the autogenerate functionality provided by the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. In the end, you must have a single \<**MachineKey**> entry that you can paste into the RSReportServer.config file for each report server instance in the scale-out deployment.
+
+The following example provides an illustration of the value you must obtain. Do not copy the example into your configuration files; the key values are not valid. Report server requires the correct casing.
+
+    ```xml
+    <machineKey validationKey="123455555" decryptionKey="678999999" validation="SHA1" decryption="AES"/>  
+    ```
+
+2. Save the file.
+
+3. Repeat the previous step for each report server in the scale-out deployment.  
+
+4. Verify that all RSReportServer.config files in the \Reporting Services\Report Server folders contain identical \<**MachineKey**> elements.
+
+::: moniker-end
+
 ## <a name="SpecifyingVirtualServerName"></a> How to Configure Hostname and UrlRoot
 
  To configure a report server scale-out deployment on an NLB cluster, you must define a single virtual server name that provides a single point of access to the server cluster. Then register this virtual server name with the Domain Name Server (DNS) in your environment.  
@@ -78,7 +105,7 @@ ms.date: 10/02/2018
   
 2. Find the **\<Service>** section, and add the following information to the configuration file, replacing the **Hostname** value with the virtual server name for your NLB server:  
   
-    ```  
+    ```xml
     <Hostname>virtual_server</Hostname>  
     ```  
   

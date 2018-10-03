@@ -33,9 +33,9 @@ kubectl config view
 
 ## Install mssqlctl CLI management tool
 
-Run below command to install `mssqlctl` tool on your client machine.
+Run below command to install `mssqlctl` tool on your client machine. Same command works from both a Windows and a Linux client, but make sure you are running it from a cmd window that runs with administrative priviledges on Windows or you prefix it with `sudo` on Linux:
 
-```bash
+```
 pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.0 mssqlctl  
 ```
 

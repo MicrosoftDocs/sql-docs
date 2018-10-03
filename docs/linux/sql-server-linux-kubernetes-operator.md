@@ -25,15 +25,15 @@ The following example describes a deployment for the `mssql-operator`.
 
 * `MSSQL_K8S_POD_NAMESPACE` 
   * Required
-  * **Description**: the Kubernetes namespace of the operator.
+  * **Description**: The Kubernetes namespace of the operator.
 
 * `MSSQL_K8S_SQL_WRITE_LEASE_PERIOD_SECONDS`
   * Optional
-  * **Description**: the duration of the sql server external write lease. Used to keep the sql server writable and prevent split-brain scenarios. Secondary replicas wait for this amount of seconds after selecting a new leader.
+  * **Description**: The duration of the sql server write-lease. Used to keep the sql server writable and prevent split-brain scenarios. Secondary replicas wait for this number of seconds after selecting a new leader.
 
 * `MSSQL_K8S_MONITOR_PERIOD_SECONDS`
   * Optional
-  * **Description**: the period to monitor if the state of the availability group. Determines how quickly replicas are added and dropped. Must be less than `MSSQL_K8S_SQL_WRITE_LEASE_PERIOD_SECONDS`.
+  * **Description**: The period to monitor the state of the availability group. Determines how quickly replicas are added and dropped. Must be less than `MSSQL_K8S_SQL_WRITE_LEASE_PERIOD_SECONDS`.
   * **Default**: 1
 
 * `MSSQL_K8S_LEASE_DURATION_SECONDS`

@@ -128,3 +128,10 @@ Following are some possible errors you might encounter and solutions for resolvi
 
 If you see any other errors with Sql Error Code, see [System Error Messages](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/cc645603(v=sql.105)) for detailed description and resolution.
     
+## Next steps
+
+- [Configure replay](database-experimentation-assistant-configure-replay.md) shows you how to configure the Distributed Replay tools in SQL before replaying a captured trace.
+
+- For a 19-minute introduction and demonstration of DEA, watch the following video:
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-Database-Experimentation-Assistant/player]

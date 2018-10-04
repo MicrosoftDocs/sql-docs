@@ -17,7 +17,7 @@ manager: craigg
 
 # Configure replay for Database Experimentation Assistant
 
-Database Experimentation Assistant uses the Distributed Replay tools from the SQL Server installation. We recommend doing a test run with a small trace file before doing a full replay to make sure proper replay of queries.
+Database Experimentation Assistant uses the Distributed Replay tools from the SQL Server installation to replay a captured trace against an upgraded test environment. We recommend doing a test run with a small trace file before doing a full replay to make sure proper replay of queries.
 
 ## Distributed Replay requirements
 
@@ -36,7 +36,7 @@ Distributed Replay requires usage of common accounts between machines. For this 
 - Distributed Replay client machines must have connectivity to the replay target SQL server.
 
 ## Set up controller service
-Follow these steps to set up th controller service:
+Follow these steps to set up the controller service:
 
 1. Install the Distributed Replay controller using the SQL Server installer. If you didn't see the SQL Server Installer wizard step that configures the Distributed Replay controller, you can configure it through the configuration file. For a typical installation, it's located at `C:\Program Files (x86)\Microsoft SQL Server\<version>\Tools\DReplayController\DReplayController.config`
 1. Distributed Replay controller logs are present at `C:\Program Files (x86)\Microsoft SQL Server\<version>\Tools\DReplayController\Log`.
@@ -112,3 +112,11 @@ The following steps must be performed for each replay.
 1. Restore the backup of the database.
 1. Provide permission to the client service account user to access the databases under the SQL Server instance. This is required for the queries to be executed on the SQL Server instance.
 1. Start the replay.
+
+## Next steps
+
+- [Replay trace](database-experimentation-assistant-replay-trace.md) shows you how to replay a captured trace against an upgraded test environment.
+
+- For a 19-minute introduction and demonstration of DEA, watch the following video:
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-Database-Experimentation-Assistant/player]

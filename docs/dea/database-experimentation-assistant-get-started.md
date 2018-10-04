@@ -150,6 +150,9 @@ If the query is an error query, the **Error Information** tab shows more informa
 On any page of the analysis report, you can select the **Print** button on the top right to print everything that is visible on the UI at that moment.
 
 ## Next steps
-For a 19-minute introduction and demonstration of this feature, watch the following video:
+
+- [Capture trace](database-experimentation-assistant-capture-trace.md) shows you how to produce a trace file that contains a log of events that occur on a server.
+
+- For a 19-minute introduction and demonstration of DEA, watch the following video:
 
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-Database-Experimentation-Assistant/player]

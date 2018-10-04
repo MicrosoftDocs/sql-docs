@@ -97,7 +97,7 @@ export DOCKER_REGISTRY=private-repo.microsoft.com
 export DOCKER_REPOSITORY=mssql-private-preview
 export DOCKER_USERNAME=<your username, credentials provided by Microsoft>
 export DOCKER_PASSWORD=<your password, credentials provided by Microsoft>
-SET DOCKER_EMAIL=<your Docker email, use the username provided by Microsoft>
+export DOCKER_EMAIL=<your Docker email, use the username provided by Microsoft>
 export DOCKER_PRIVATE_REGISTRY="1"
 ```
 

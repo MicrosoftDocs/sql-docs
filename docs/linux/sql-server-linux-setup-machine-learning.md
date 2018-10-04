@@ -267,13 +267,19 @@ GO
 
 You can install and configure the database engine and Machine Learning Services in one procedure by appending R, Python, or Java packages and parameters on a command that installs the database engine. 
 
-The following example is a "template" illustration of what a combined package installation looks like using the Yum package manager:
+The following example is a "template" illustration of what a combined package installation looks like using the Yum package manager. It installs the database engine and adds the Java language extension, which pulls in the extensibility framework package as a dependency.
 
 ```bash
-sudo yum install -y mssql-sqlserver mssql-server-extensibility-java 
+sudo yum install -y mssql-server mssql-server-extensibility-java 
 ```
 
-The example installs the database engine and adds the Java language extension, which pulls in the extensibility framework package as a dependency. All of the packages used in this example are found at the same path. If you were adding R packages, registration for microsoft-r-open package repository would be required.
+An expanded example that includes the database engine and all three extensions (Java, R, Python) would look like this:
+
+```bash
+sudo yum install -y mssql-server mssql-server-extensibility-java mssql-mlservices-packages-r-9.4.5* mssql-mlservices-packages-py-9.4.5*
+```
+
+All of the packages used in this example are found at the same path, except for the R prerequisites. If you add R integration, you must register the microsoft-r-open package repository to get MRO. MRO is a requirement for R extensibility. On a computer connected to the internet, the package is retrieved and installed automatically, assuming you configured the repository.
 
 Post-installation, remember to use the mssql-conf tool to configure the entire installation and accept licensing agreements. Unaccepted EULAs for open-source R and Python components are detected automatically, and you are prompted to accept them, along with the EULA for SQL Server.
 

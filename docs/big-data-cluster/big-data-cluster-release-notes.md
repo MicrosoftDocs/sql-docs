@@ -21,24 +21,23 @@ The following sections describe the new features and known issues for big data c
 
 ### What's New?
 
-- Rearchitected for separating out compute pools, data pools, and storage pools is complete.
-- Updated Spark version to latest version (2.3)
-- Creating external tables over HDFS and reading the data natively from parquet and CSV files using the SQL Server instance collocated on the HDFS data node in the storage pool
-- Data virtualization/PolyBase connectors for Oracle, SQL Server, Teradata, MongoDB, and Generic ODBC
-- External table wizard in Azure Data Studio (this will be announced as the new name for SQL Operations Studio) for creating connectors to Oracle and SQL Server (other data sources coming in the future)
-- New native notebook experience in Azure Data Studio. Jupyter is still used under the covers as the engine, but the notebook experience is native to Azure Data Studio.  (this is just the first release; we will continue to make improvements here)
-- New deployment engine that uses the control plane technology from Azure’s data services
-- Create data caches in the data pools
-- Load data into data pools using the new .jar from Spark/HDFS
-- Predicate pushdown to data pools and storage pools
-- Administration portal
+- Architecture changes to separate out compute pools, data pools, and storage pools.
+- Update to use the latest Spark version (2.3).
+- Ability to create external tables over HDFS to natively parquet and CSV files using the SQL Server instance collocated on the HDFS data node in the storage pool.
+- Data virtualization (PolyBase) connectors for Oracle, SQL Server, Teradata, MongoDB, and Generic ODBC.
+- External table wizard in [Azure Data Studio](../azure-data-studio/what-is.md) to create connectors to Oracle and SQL Server.
+- New native [notebook experience](notebooks-guidance.md) in Azure Data Studio.
+- New deployment engine that uses the control plane technology from Azure's data services.
+- Ability to create data caches in the data pools.
+- Ability to load data into data pools using the new .jar from Spark/HDFS.
+- Predicate pushdown to data pools and storage pools.
+- Cluster Administration portal:
   - Deployment status view
   - Grafana for viewing monitoring data about SQL Server and Kubernetes
   - Kibana for log analytics of all the logs that are collected across the cluster
   - Status views of each of the pools
   - Service end points view
-  - More to come here in future…
-- New mssqlctl .whl package so you can easily install it using pip install mssqlctl.
+- mssqlctl .whl package to support installing with `pip install mssqlctl`.
 
 ### Known issues
 

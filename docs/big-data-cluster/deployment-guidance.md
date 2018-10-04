@@ -70,6 +70,9 @@ sudo apt-get install python3-pip
 sudo pip3 install --upgrade pip
 ```
 
+> [!NOTE]
+If your Python installation is missing the `requests` package, you must install `requests` using `python -m pip install requests`.
+
 Run the below command to install msqlctl:
 
 ```bash
@@ -114,7 +117,7 @@ The cluster configuration can be customized using a set of environment variables
 >1. For an on-premises cluster built with kubeadm, the value for environment variable `CLUSTER_PLATFORM` is `kubernetes`. Also, when USE_PERSISTENT_STORAGE=true, you must pre-provision a Kubernetes storage class and pass it through using the STORAGE_CLASS_NAME.
 >1. Make sure you wrap the passwords in double quotes if it contains any special characters. You can set the MSSQL_SA_PASSWORD to whatever you like, but make sure they are sufficiently complex and don’t use the `!`, `&` or `‘` characters.
 >1. The name of your cluster must be only lower case alpha-numeric characters, no spaces. All Kubernetes artifacts (containers, pods, statefull sets, services) for the cluster will be created in a namespace with same name as the cluster name specified.
-
+>1. The **SA** account is a system administrator on the SQL Server Master instance that gets created during setup. After creating your SQL Server container, the MSSQL_SA_PASSWORD environment variable you specified is discoverable by running echo $MSSQL_SA_PASSWORD in the container. For security purposes, change your SA password as per best practices documented [here](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password).
 
 Setting the environment variables required for deploying Aris cluster differs depending on whether you are using Windows or Linux client.  Choose the steps below depending on which operating system you are using.
 

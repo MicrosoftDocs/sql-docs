@@ -87,7 +87,7 @@ To create the plot, use [rxHistogram](https://docs.microsoft.com/machine-learnin
     GO
     ```
 
-The stored procedure **PlotHistogram2** is identical to a pre-existing stored procedure **PlotHistogram** created by the `RunSQL_SQL_Walkthrough.ps1` script. 
+The stored procedure **PlotHistogram2** is identical to a pre-existing stored procedure **PlotHistogram** found in the NYCTaxi_sample database. 
   
 + The variable `@query` defines the query text (`'SELECT tipped FROM nyctaxi_sample'`), which is passed to the R script as the argument to the script input variable, `@input_data_1`.
   
@@ -159,7 +159,7 @@ The stored procedure returns the image as a stream of varbinary data, which obvi
 
 Typically, data scientists generate multiple data visualizations to get insights into the data from different perspectives. In this example, the stored procedure uses the Hist function to create the histogram, exporting the binary data to popular formats such as .JPG, .PDF, and .PNG. 
 
-1. Use the existing stored procedure, **PlotInOutputFiles**, to write histograms, scatterplots, and other R graphics to .JPG and .PDF format. The `RunSQL_SQL_Walkthrough.ps1` creates **PlotInOutputFiles** and adds it the database. Use right-click **Modify** to view the source.
+1. Use the existing stored procedure, **PlotInOutputFiles**, to write histograms, scatterplots, and other R graphics to .JPG and .PDF format. Use right-click **Modify** to view the source.
 
 2. Optionally, as a learning exercise, create your own copy of the procedure as **PlotInOutputFiles2**, with a unique name to avoid a naming conflict.
 

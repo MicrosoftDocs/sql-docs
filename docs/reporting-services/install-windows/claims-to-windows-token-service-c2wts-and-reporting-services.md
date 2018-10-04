@@ -1,13 +1,14 @@
 ---
 title: "Claims to Windows Token Service (c2WTS) and Reporting Services | Microsoft Docs"
-ms.date: 09/15/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint"
-
-ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
+manager: kfile
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint"
+ms.topic: conceptual
+ms.date: 09/15/2017
 ---
+
 # Claims to Windows Token Service (C2WTS) and Reporting Services
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]

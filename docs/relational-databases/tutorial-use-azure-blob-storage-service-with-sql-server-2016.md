@@ -39,7 +39,7 @@ To use this tutorial, you need an Azure storage account, SQL Server Management S
 - Download [AdventureWorks2016 sample databases](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).
 - Assign the user account to the role of [db_backupoperator](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) and grant [alter any credential](https://docs.microsoft.com/sql/t-sql/statements/alter-credential-transact-sql) permissions. 
  
- ## 1 - Create stored access policy and shared access storage
+## 1 - Create stored access policy and shared access storage
 In this section, you will use an [Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) script to create a shared access signature on an Azure Blob container using a stored access policy.  
   
 > [!NOTE]  
@@ -82,8 +82,7 @@ To create a policy on the container and generate a Shared Access Signature (SAS)
     $storageAccountName= $prefixName + 'storage' # the storage account name you will create or use  
     $containerName= $prefixName + 'container'  # the storage container name to which you will attach the SAS policy with its SAS token  
     $policyName = $prefixName + 'policy' # the name of the SAS policy 
-    
-  
+
     <#   
     This section is for the Azure Resource Manager deployment model  
     Comment out this entire section and use the classic storage account name to use an existing classic storage account  
@@ -143,6 +142,7 @@ To create a policy on the container and generate a Shared Access Signature (SAS)
     Write-Host $tSql   
     ```  
   
+
 3.  After the script completes, the CREATE CREDENTIAL statement will be in your clipboard for use in the next section.  
 
 
@@ -465,40 +465,3 @@ To delete a file-snapshot backup set, follow these steps:
 [sp_delete_backup &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md)  
 [sys.fn_db_backup_file_snapshots &#40;Transact-SQL&#41;](../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md)  
 [sp_delete_backup_file_snapshot &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md) [File-Snapshot Backups for Database Files in Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
-
-<div class="container centered pageFooter">
-        <h2>Keep in touch with us</h2>
-        <ul class="links">
-           <li>
-                <a href="http://aka.ms/editsqldocs" data-linktype="external">
-                    Contribute to SQL docs
-                </a>
-            </li>
-           <li>
-                <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR7y_maOEfTBMj0E3nehXKj9UQjIxMzJORE1BTVk4WU9YSlNaWVVIRElPRC4u" data-linktype="external">
-                    SQL Docs Feedback
-                </a>
-            </li>
-           <li>
-                <a href="https://cloudblogs.microsoft.com/sqlserver/" data-linktype="external">
-                    Blog
-                </a>
-            </li>
-            <li>
-                <a href="https://twitter.com/sqldocs" data-linktype="external">
-                    Twitter
-                </a>
-            </li>
-            <li>
-                <a href="https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqldatabaseengine&filter=alltypes&sort=lastpostdesc" data-linktype="external">
-                    MSDN Forum
-                </a>
-            </li>
-            <li>
-                <a href="https://feedback.azure.com/forums/908035-sql-server" data-linktype="external">
-                    User Voice
-                </a>
-            </li>
-        </ul>
-    </div>
-

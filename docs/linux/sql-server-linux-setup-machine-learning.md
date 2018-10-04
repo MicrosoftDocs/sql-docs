@@ -273,13 +273,13 @@ The following example is a "template" illustration of what a combined package in
 sudo yum install -y mssql-server mssql-server-extensibility-java 
 ```
 
-An expanded example that includes the database engine and all three extensions (Java, R, Python) would look like this:
+An expanded example with all extensions (Java, R, Python) looks like this:
 
 ```bash
 sudo yum install -y mssql-server mssql-server-extensibility-java mssql-mlservices-packages-r-9.4.5* mssql-mlservices-packages-py-9.4.5*
 ```
 
-All of the packages used in this example are found at the same path, except for the R prerequisites. If you add R integration, you must register the microsoft-r-open package repository to get MRO. MRO is a requirement for R extensibility. On a computer connected to the internet, the package is retrieved and installed automatically, assuming you configured the repository.
+Except for the R prerequisites, all of the packages used in this example are found at the same path. Adding R requires that you [register the microsoft-r-open package repository](#mro) as an extra step to get MRO. MRO is a prerequisite for R extensibility. On a computer connected to the internet, MRO is retrieved and installed automatically as part of the R extension, assuming you configured both repositories.
 
 Post-installation, remember to use the mssql-conf tool to configure the entire installation and accept licensing agreements. Unaccepted EULAs for open-source R and Python components are detected automatically, and you are prompted to accept them, along with the EULA for SQL Server.
 

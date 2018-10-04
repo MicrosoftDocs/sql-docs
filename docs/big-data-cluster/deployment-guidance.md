@@ -71,7 +71,7 @@ sudo pip3 install --upgrade pip
 ```
 
 > [!NOTE]
-If your Python installation is missing the `requests` package, you must install `requests` using `python -m pip install requests`.
+If your Python installation is missing the `requests` package, you must install `requests` using `python -m pip install requests`. If you already have a `requests` package installed, make sure you have the latest version by running `python -m pip install requests --upgrade`.
 
 Run the below command to install msqlctl:
 
@@ -140,6 +140,7 @@ SET DOCKER_REGISTRY=private-repo.microsoft.com
 SET DOCKER_REPOSITORY=mssql-private-preview
 SET DOCKER_USERNAME=<your username>
 SET DOCKER_PASSWORD=<your password>
+SET DOCKER_EMAIL=<your Docker email, use same as username provided>
 SET DOCKER_PRIVATE_REGISTRY="1"
 ```
 
@@ -160,6 +161,7 @@ export DOCKER_REGISTRY=private-repo.microsoft.com
 export DOCKER_REPOSITORY=mssql-private-preview
 export DOCKER_USERNAME=<your username>
 export DOCKER_PASSWORD=<your password>
+export DOCKER_EMAIL=<your Docker email, use same as username provided>
 export DOCKER_PRIVATE_REGISTRY="1"
 ```
 

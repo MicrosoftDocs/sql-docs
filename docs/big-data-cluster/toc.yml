@@ -2,6 +2,8 @@
   items:
   - name: What is SQL Server big data cluster?
     href: big-data-cluster-overview.md
+  - name: Release notes
+    href: big-data-cluster-release-notes.md
 - name: Quickstarts
   items:
   - name: Deploy SQL Server big data cluster

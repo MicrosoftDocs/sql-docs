@@ -283,7 +283,7 @@
     - name: Monitor Machine Learning Services using custom reports in Management Studio
       href: r/monitor-r-services-using-custom-reports-in-management-studio.md
     - name: Scale concurrent execution of external scripts
-      href: administration/modify-the-user-account-pool.md
+      href: administration/modify-user-account-pool.md
 - name: Reference
   href: r/machine-learning-services-r-reference.md
   items:

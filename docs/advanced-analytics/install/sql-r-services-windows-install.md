@@ -270,7 +270,7 @@ Now that you have everything working, you might also want to optimize the server
 
 ### Add more worker accounts
 
-If you think you might use R heavily, or if you expect many users to be running scripts concurrently, you can increase the number of worker accounts that are assigned to the Launchpad service. For more information, see [Modify the user account pool for SQL Server Machine Learning Services](../r/modify-the-user-account-pool-for-sql-server-r-services.md).
+If you think you might use R heavily, or if you expect many users to be running scripts concurrently, you can increase the number of worker accounts that are assigned to the Launchpad service. For more information, see [Modify the user account pool for SQL Server Machine Learning Services](../administration/modify-user-account-pool.md).
 
 <a name="bkmk_optimize"></a>
 
@@ -284,7 +284,7 @@ To ensure that machine learning jobs are prioritized and resourced appropriately
   
 - To change the amount of memory reserved for the database, see [Server memory configuration options](../../database-engine/configure-windows/server-memory-server-configuration-options.md).
   
-- To change the number of R accounts that can be started by [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)], see [Modify the user account pool for machine learning](../r/modify-the-user-account-pool-for-sql-server-r-services.md).
+- To change the number of R accounts that can be started by [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)], see [Modify the user account pool for machine learning](../administration/modify-user-account-pool.md).
 
 If you are using Standard Edition and do not have Resource Governor, you can use Dynamic Management Views (DMVs) and Extended Events, as well as Windows event monitoring, to help manage the server resources that are used by R. For more information, see [Monitoring and managing R Services](../r/managing-and-monitoring-r-solutions.md).
 

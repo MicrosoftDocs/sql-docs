@@ -1,5 +1,5 @@
 ---
-title: Security configuration for SQLRUserGroupdd | Microsoft Docs
+title: Security configuration for SQLRUserGroup | Microsoft Docs
 description: How to configure security for SQLRUserGroup for SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning

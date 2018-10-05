@@ -116,7 +116,10 @@ To create a policy on the container and generate a Shared Access Signature (SAS)
     Write-Host 'Credential T-SQL'  
     $tSql = "CREATE CREDENTIAL [{0}] WITH IDENTITY='Shared Access Signature', SECRET='{1}'" -f $cbc.Uri,$sas.Substring(1)   
     $tSql | clip  
-    Write-Host $tSql   
+    Write-Host $tSql 
+
+    # Once you're done with the tutorial, remove the resource group to clean up the resources. 
+    # Remove-AzureRmResourceGroup -Name $resourceGroupName  
     ```  
 
 3.  After the script completes, the CREATE CREDENTIAL statement will be in your clipboard for use in the next section.  
@@ -432,6 +435,30 @@ To delete a file-snapshot backup set, follow these steps:
     SELECT * from sys.fn_db_backup_file_snapshots ('AdventureWorks2016');   
     ```  
     ![Results pane showing 2 file snapshots deleted](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/results-of-two-deleted-snapshot-files.png)
+
+## 10 - Remove resources
+Once you're done with this tutorial, and to conserve resources, be sure to delete the resource group created in this tutorial. 
+
+To delete the resource group, run the following powershell code:
+
+  ```powershell
+  # Define global variables for the script  
+  $prefixName = '<prefix name>'  # should be the same as the beginning of the tutorial
+  
+  # Set a variable for the name of the resource group you will create or use  
+  $resourceGroupName=$prefixName + 'rg'   
+  
+  # Adds an authenticated Azure account for use in the session   
+  Login-AzureRmAccount    
+  
+   # set the tenant, subscription and environment for use in the rest of   
+   Set-AzureRmContext -SubscriptionId $subscriptionID    
+    
+   # Remove the resource group
+   Remove-AzureRmResourceGroup -Name $resourceGroupName   
+   ```
+
+
   
 ## See Also  
 [SQL Server Data Files in Microsoft Azure](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)  

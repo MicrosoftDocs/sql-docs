@@ -79,11 +79,11 @@ For more information about the service, see [Extensibility framework](../concept
 
 In SQL Server 2016 and 2017, during setup of Machine Learning Services, new local Windows user accounts (MSSQLSERVER00-MSSQLSERVER20) are created and used for isolating and running external processes under the security token of the [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] service. When an external process was needed, SQL Server Launchpad service would take an available account and use it to run a process.
 
-You can view these accounts in the Windows user group **SQLRUserGroup**. By default, 20 accounts are created, which supports 20 concurrent sessions. Parallelized tasks do not consume additional accounts. For example, if a user runs a scoring task that uses parallel processing, the same worker account is reused for all threads. If you intend to make heavy use of machine learning, you can increase the number of accounts used to run external scripts. For more information, see [Modify the user account pool for machine learning](../../advanced-analytics/r/modify-the-user-account-pool-for-sql-server-r-services.md).
+You can view these accounts in the Windows user group **SQLRUserGroup**. By default, 20 accounts are created, which supports 20 concurrent sessions. Parallelized tasks do not consume additional accounts. For example, if a user runs a scoring task that uses parallel processing, the same worker account is reused for all threads. If you intend to make heavy use of machine learning, you can increase the number of accounts used to run external scripts. For more information, see [Modify the user account pool for machine learning](../../advanced-analytics/security/modify-user-account-pool.md).
 
 When a user sends a machine learning script from an external client, SQL Server activates an available worker account, maps it to the identity of the calling user, and runs the script on behalf of the user. This new service of the database engine supports the secure execution of external scripts, called **implied authentication**.
 
-However, if you need to run R or Python scripts from a remote data science client, and you are using Windows authentication, you must give these worker accounts permission to sign in to the SQL Server instance on your behalf. For more information about how to give permission, see [Add SQLRUserGroup as a database user](../../advanced-analytics/r/add-sqlrusergroup-to-database.md).
+However, if you need to run R or Python scripts from a remote data science client, and you are using Windows authentication, you must give these worker accounts permission to sign in to the SQL Server instance on your behalf. For more information about how to give permission, see [Add SQLRUserGroup as a database user](../../advanced-analytics/security/add-sqlrusergroup-to-database.md).
 
 > [!Note]
 > In SQL Server 2019, **SQLRUserGroup** only has one member which is now the single SQL Server Launchpad service account instead of multiple worker accounts.
@@ -119,7 +119,7 @@ Parallel queries from the same login are mapped to the same user worker account.
 
 The directories used for the processes are managed by the [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)], and directories are access-restricted. For R, RLauncher performs this task. For Python, PythonLauncher performs this task. Each individual worker account is restricted to its own folder, and cannot access files in folders above its own level. However, the worker account can read, write, or delete children under the session working folder that was created.
 
-For more information about how to change the number of worker accounts, account names, or account passwords, see [Modify the user account pool for SQL Server machine learning](../../advanced-analytics/security/modify-the-user-account-pool.md).
+For more information about how to change the number of worker accounts, account names, or account passwords, see [Modify the user account pool for SQL Server machine learning](../../advanced-analytics/security/modify-user-account-pool.md).
 
 ## Security isolation for multiple external scripts
 

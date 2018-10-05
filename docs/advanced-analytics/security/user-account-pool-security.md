@@ -1,16 +1,16 @@
 ---
-title: Modify the user account pool for SQL Server machine learning | Microsoft Docs
-description: How to modify the user account pool for SQL Server Machine Learning Services.
+title: Security configuration for SQLRUserGroupdd | Microsoft Docs
+description: How to configure security for SQLRUserGroup for SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 09/26/2018  
+ms.date: 10/05/2018  
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
 ---
-# Security for SQLRUserGroup
+# Security configuration for SQLRUserGroup
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 As part of the installation process for [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)], a new Windows *user account pool* is created to support execution of tasks by the [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] service. The purpose of these worker accounts is to isolate concurrent execution of external scripts by different SQL users.

@@ -65,6 +65,6 @@ However, if you need to run R or Python scripts from a remote data science clien
 
 If you intend to make heavy use of machine learning, you can increase the number of accounts used to run external scripts, as described in this article: 
 
-+ [Modify the user account pool for machine learning](modify-the-user-account-pool-for-sql-server-r-services.md)
++ [Modify the user account pool for machine learning](../../advanced-analytics/administration/modify-user-account-pool.md)
 
 By default, 20 accounts are created, which supports 20 concurrent sessions. Parallelized tasks do not consume additional accounts. For example, if a user runs a scoring task that uses parallel processing, the same worker account is reused for all threads.

@@ -234,73 +234,13 @@ On the database, you might need the following configuration updates:
 > Whether additional configuration is required depends on your security schema, where you installed SQL Server, and how you expect users to connect to the database and run external scripts. 
 
 <a name="bkmk_configureAccounts"></a> 
-
-###  Enable implied authentication for SQL Restricted User Group (SQLRUserGroup) account group
-
-If you need to run scripts from a remote data science client, and you are using Windows authentication, additional configuration is required to give worker accounts running R and Python processes permission to sign in to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance on your behalf. This behavior is called *implied authentication*, and is implemented by the database engine to support secure execution of external scripts in SQL Server 2016 and SQL Server 2017.
-
-> [!NOTE]
-> If you use a **SQL login** for running scripts in a SQL Server compute context, this extra step is not required.
-
-1. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], in Object Explorer, expand **Security**. Then right-click **Logins**, and select **New Login**.
-2. In the **Login - New** dialog box, select **Search**.
-3. Select **Object Types**, and select **Groups**. Clear everything else.
-4. In **Enter the object name to select**, type *SQLRUserGroup*,  and select **Check Names**.
-5. The name of the local group associated with the instance's Launchpad service should resolve to something like *instancename\SQLRUserGroup*. Select **OK**.
-6. By default, the group is assigned to the **public** role, and has permission to connect to the database engine.
-7. Select **OK**.
-
-In SQL Server 2017 and earlier, a number of local Windows user accounts are created for the purpose of running tasks under the security token of the [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] service. You can view these accounts in the Windows user group, **SQLRUserGroup**. By default, 20 worker accounts are created, which is usually more than enough for running external script jobs. 
-
-These accounts are used as follows. When a user sends a Python or R script from an external client, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] activates an available worker account, maps it to the identity of the calling user, and runs the script on behalf of the user. If the script, which is executing external to SQL Server, has to retrieve data or resources from SQL Server, the connection back to SQL Server requires a log in. Creating a database login for **SQLRUserGroup** also the connection to succeed.
-
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
-In SQL Server 2019, worker accounts are replaced with AppContainers, with processes executing under the SQL Server Launchpad service. Although the worker accounts are no longer used, you are still required to add a database login for **SQLRUsergroup** if implied authentication is needed. Just as the worker accounts did not have login permission, the Launchpad service identity does not either. Creating a login for **SQLRUserGroup**, which consists of the Launchpad service in this release, allows implied authentication to work.
-::: moniker-end
-
 <a name="permissions-external-script"></a> 
 
-### Give users permission to run external scripts
+For user security and connectivity, additional configuration might include:
 
-If you installed [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] yourself, and you are running R or Python scripts in your own instance, you typically execute scripts as an administrator. Thus, you have implicit permission over various operations and all data in the database.
-
-Most users, however, do not have such elevated permissions. For example, users in an organization who use SQL logins to access the database generally do not have elevated permissions. Therefore, for each user who is using R or Python, you must grant users of Machine Learning Services the permission to run external scripts in each database where the language is used. Here's how:
-
-```SQL
-USE <database_name>
-GO
-GRANT EXECUTE ANY EXTERNAL SCRIPT  TO [UserName]
-```
-
-> [!NOTE]
-> Permissions are not specific to the supported script language. In other words, there are not separate permission levels for R script versus Python script. If you need to maintain separate permissions for these languages, install R and Python on separate instances.
-
-<a name="permissions-db"></a> 
-
-### Give your users read, write, or data definition language (DDL) permissions to databases
-
-While a user is running scripts, the user might need to read data from other databases. The user might also need to create new tables to store results, and write data into tables.
-
-For each Windows user account or SQL login that is running R or Python scripts, ensure that it has the appropriate permissions on the specific database:  `db_datareader`, `db_datawriter`, or `db_ddladmin`.
-
-For example, the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement gives the SQL login *MySQLLogin* the rights to run T-SQL queries in the *ML_Samples* database. To run this statement, the SQL login must already exist in the security context of the server.
-
-```SQL
-USE ML_Samples
-GO
-EXEC sp_addrolemember 'db_datareader', 'MySQLLogin'
-```
-
-For more information about the permissions included in each role, see [Database-level roles](../../relational-databases/security/authentication-access/database-level-roles.md).
-
-
-### Create an ODBC data source for the instance on your data science client
-
-You might create a machine learning solution on a data science client computer. If you need to run code by using the SQL Server computer as the compute context, you have two options: access the instance by using a SQL login, or by using a Windows account.
-
-+ For SQL logins: Ensure that the login has appropriate permissions on the database where you are reading data. You can do this by adding *Connect to* and *SELECT* permissions, or by adding the login to the `db_datareader` role. To create objects, assign `DDL_admin` rights. If you must save data to tables, add to the `db_datawriter` role.
-
-+ For Windows authentication: You might need to create an ODBC data source on the data science client that specifies the instance name and other connection information. For more information, see [ODBC data source administrator](https://docs.microsoft.com/sql/odbc/admin/odbc-data-source-administrator).
+* [Security configuration for SQLRUserGroup](../../advanced-analytics/security/firewall-configuration.md)
+* [Give users permission to SQL Server Machine Learning Services](../../advanced-analytics/security/user-permission.md)
+* [Connect to SQL Server Machine Learning Services from your data science client computer](../../advanced-analytics/security/connect-from-client-computer.md)
 
 ## Suggested optimizations
 
@@ -308,7 +248,7 @@ Now that you have everything working, you might also want to optimize the server
 
 ### Add more worker accounts
 
-If you expect many users to be running scripts concurrently, you can increase the number of worker accounts that are assigned to the Launchpad service. For more information, see [Modify the user account pool for SQL Server Machine Learning Services](../r/modify-the-user-account-pool-for-sql-server-r-services.md).
+If you expect many users to be running scripts concurrently, you can increase the number of worker accounts that are assigned to the Launchpad service. For more information, see [Modify the user account pool for SQL Server Machine Learning Services](../administration/modify-user-account-pool.md).
 
 ### Optimize the server for script execution
 
@@ -320,7 +260,7 @@ To ensure that machine learning jobs are prioritized and resourced appropriately
   
 - To change the amount of memory reserved for the database, see [Server memory configuration options](../../database-engine/configure-windows/server-memory-server-configuration-options.md).
   
-- To change the number of R accounts that can be started by [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)], see [Modify the user account pool for machine learning](../r/modify-the-user-account-pool-for-sql-server-r-services.md).
+- To change the number of R accounts that can be started by [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)], see [Modify the user account pool for machine learning](../administration/modify-user-account-pool.md).
 
 If you are using Standard Edition and do not have Resource Governor, you can use Dynamic Management Views (DMVs) and Extended Events, as well as Windows event monitoring, to help manage the server resources. For more information, see [Monitoring and managing R Services](../r/managing-and-monitoring-r-solutions.md) and [Monitoring and managing Python Services](../python/managing-and-monitoring-python-solutions.md).
 

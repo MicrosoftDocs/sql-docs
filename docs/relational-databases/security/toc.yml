@@ -44,3 +44,11 @@
   href: dynamic-data-masking.md
 - name: SQL Server Certificates and Asymmetric Keys
   href: sql-server-certificates-and-asymmetric-keys.md
+- name: Tutorials
+  items:
+    - name: Always encrypted
+      items:
+        - name: Getting Started with Always Encrypted with Secure Enclaves
+          href: tutorial-getting-started-with-always-encrypted-enclaves.md
+
+

@@ -66,29 +66,19 @@ To create a policy on the container and generate a Shared Access Signature (SAS)
   
 1.  Open Window PowerShell or Windows PowerShell ISE (see version requirements above).  
   
-2.  Edit and then execute the b script:  
+2.  Edit and then execute the script:  
   
- Use this code block for the Azure Resource Manager deployment model
 
     ```powershell     
-    <#   
-    This script uses the Azure Resource model (ARM) and creates a new ARM storage account.  
-    Modify this script to use an existing ARM or classic storage account using the instructions in comments within this script  
-    #>  
     # Define global variables for the script  
-    $prefixName = '<a prefix name>'  # used as the prefix for the name for various objects  
+    $prefixName = '<prefix name>'  # used as the prefix for the name for various objects  
     $subscriptionID=='<your subscription ID>'   # the ID  of subscription name you will use  
     $locationName = '<a data center location>'  # the data center region you will use  
     $storageAccountName= $prefixName + 'storage' # the storage account name you will create or use  
     $containerName= $prefixName + 'container'  # the storage container name to which you will attach the SAS policy with its SAS token  
     $policyName = $prefixName + 'policy' # the name of the SAS policy 
 
-    <#   
-    This section is for the Azure Resource Manager deployment model  
-    Comment out this entire section and use the classic storage account name to use an existing classic storage account  
-    #>  
-  
-    # Set a variable for the name of the resource group you will create or use  
+      # Set a variable for the name of the resource group you will create or use  
     $resourceGroupName=$prefixName + 'rg'   
   
     # Add an authenticated Azure account for use in the session   
@@ -100,27 +90,15 @@ To create a policy on the container and generate a Shared Access Signature (SAS)
     # Create a new resource group - comment out this line to use an existing resource group  
     New-AzureRmResourceGroup -Name $resourceGroupName -Location $locationName   
   
-    # Create a new ARM storage account - comment out this line to use an existing ARM storage account  
+    # Create a new Azure Resource model storage account - comment out this line to use an existing Azure Resource model storage account  
     New-AzureRmStorageAccount -Name $storageAccountName -ResourceGroupName $resourceGroupName -Type Standard_RAGRS -Location $locationName   
   
-    # Get the access keys for the ARM storage account  
+    # Get the access keys for the Azure Resource model storage account  
     $accountKeys = Get-AzureRmStorageAccountKey -ResourceGroupName $resourceGroupName -Name $storageAccountName  
   
-    # Create a new storage account context using an ARM storage account  
+    # Create a new storage account context using an Azure Resource model storage account  
     $storageContext = New-AzureStorageContext -StorageAccountName $storageAccountName -StorageAccountKey $accountKeys[0].Value 
-  
-    <#  
-    This section is for the Classic deployment model  
-    Use the following four lines to use an existing classic storage account  
-    #>  
-    #Classic storage account name  
-    #Add-AzureAccount  
-    #Select-AzureSubscription -SubscriptionName $subscriptionName #provide an existing classic storage account  
-    #$accountKeys = Get-AzureStorageKey -StorageAccountName $storageAccountName  
-    #$storageContext = New-AzureStorageContext -StorageAccountName $storageAccountName -StorageAccountKey $accountKeys.Primary  
-  
-    # The remainder of this script works with either the ARM or classic resource model
-  
+    
     # Creates a new container in blob storage  
     $container = New-AzureStorageContainer -Context $storageContext -Name $containerName  
   
@@ -139,7 +117,10 @@ To create a policy on the container and generate a Shared Access Signature (SAS)
     Write-Host 'Credential T-SQL'  
     $tSql = "CREATE CREDENTIAL [{0}] WITH IDENTITY='Shared Access Signature', SECRET='{1}'" -f $cbc.Uri,$sas.Substring(1)   
     $tSql | clip  
-    Write-Host $tSql   
+    Write-Host $tSql  
+    
+    # When you're done with this tutorial, uncomment this section and delete the resource group you've created
+    # Remove-AzureRmResourceGroup -Name "$resourceGroupName"  
     ```  
   
 
@@ -162,8 +143,8 @@ To create a SQL Server credential, follow these steps:
   
     ```sql   
     USE master  
-    CREATE CREDENTIAL [https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>] -- this name must match the container path, start with https and must not contain a forward slash at the end.  
-       WITH IDENTITY='SHARED ACCESS SIGNATURE' -- this is a mandatory string and do not change it.   
+    CREATE CREDENTIAL [https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>] -- this name must match the container path, start with https and must not contain a forward slash at the end, the general format 
+       WITH IDENTITY='SHARED ACCESS SIGNATURE' -- this is a mandatory string; do not change it.   
        , SECRET = 'sharedaccesssignature' -- this is the shared access signature key that you obtained in section 1.   
     GO   
     ```  
@@ -204,6 +185,13 @@ To back up a database to Blob storage, follow these steps:
        TO URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>/AdventureWorks2016_onprem.bak'  
   
     ```  
+
+    ```  
+   >[!NOTE]
+   >If you receive the below error message, ensure that the name of the credential is the correct storage account and blob container:
+   > ```
+   > Msg 3201, Level 16, State 1, Line 12: Cannot open backup device 'https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>'. Operating system error 50(The request is not supported.).
+   >```
   
 4.  Open Object Explorer and connect to Azure storage using your storage account and account key. 
     1.  Expand Containers,  expand the container that you created in section 1 and verify that the backup from step 3 above appears in this container.  
@@ -450,6 +438,15 @@ To delete a file-snapshot backup set, follow these steps:
     SELECT * from sys.fn_db_backup_file_snapshots ('AdventureWorks2016');   
     ```  
     ![Results pane showing 2 file snapshots deleted](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/results-of-two-deleted-snapshot-files.png)
+
+## 10 - Remove up resources
+Once you're done with this tutorial, and to conserve resources, be sure to delete the resource group created in this tutorial. 
+
+To delete the resource group, run the following powershell code:
+
+  ```powershell
+  Remove-AzureRmResourceGroup -Name "sqlblobtutorialrg" 
+  ```
   
 ## See Also  
 [SQL Server Data Files in Microsoft Azure](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)  

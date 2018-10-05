@@ -23,7 +23,7 @@ On the computer you are using to run the commands to install the SQL Server big 
 
 To install the `mssqlctl` CLI tool to manage the SQL Server Big Data cluster on your client machine, you must first install [Python](https://www.python.org/downloads/) minimum version v3.0 and [pip3](https://pip.pypa.io/en/stable/installing/). Note that pip is already installed if you are using a Python version of at least 3.4 downloaded from [python.org](https://www.python.org/).
 
-If your Python installation is missing the `requests` package, you must install `requests` using `python -m pip install requests`.
+If your Python installation is missing the `requests` package, you must install `requests` using `python -m pip install requests`. If you already have a `requests` package upgrade it to latest version using `python -m pip install requests --upgrade`.
 
 ## Verify AKS configuration
 
@@ -46,7 +46,7 @@ pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.0 mss
 Setting the environment variables required for deploying big data cluster slightly differs depending on whether you are using Windows or Linux/macOS client.  Choose the steps below depending on which operating system you are using.
 
 > [!IMPORTANT]
-> Make sure you wrap the passwords in double quotes if it contains any special characters.
+> Make sure you wrap the passwords in double quotes if it contains any special characters. Note that double quotes delimiters work only in bash commands.
 >
 > You can set the password environment variables to whatever you like, but make sure they are sufficiently complex and don’t use the `!`, `&`, or `‘` characters.
 
@@ -76,6 +76,7 @@ SET DOCKER_REGISTRY=private-repo.microsoft.com
 SET DOCKER_REPOSITORY=mssql-private-preview
 SET DOCKER_USERNAME=<your username, credentials provided by Microsoft>
 SET DOCKER_PASSWORD=<your password, credentials provided by Microsoft>
+SET DOCKER_EMAIL=<your Docker email, use the username provided by Microsoft>
 SET DOCKER_PRIVATE_REGISTRY="1"
 ```
 
@@ -96,6 +97,7 @@ export DOCKER_REGISTRY=private-repo.microsoft.com
 export DOCKER_REPOSITORY=mssql-private-preview
 export DOCKER_USERNAME=<your username, credentials provided by Microsoft>
 export DOCKER_PASSWORD=<your password, credentials provided by Microsoft>
+export DOCKER_EMAIL=<your Docker email, use the username provided by Microsoft>
 export DOCKER_PRIVATE_REGISTRY="1"
 ```
 

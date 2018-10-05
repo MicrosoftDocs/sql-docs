@@ -89,7 +89,7 @@ On Kubernetes the deployment includes a SQL Server operator, the SQL Server cont
   kubectl apply -f sqlserver.yaml --namespace ag1
   ```
 
-  After you deploy the SQL Server manifest, the operator deploys the instances of SQL Server as pods in containers.
+  After you deploy the SQL Server manifest, the operator deploys the SQL Server containers.
 
 ### Monitor the deployment
 

@@ -1,7 +1,7 @@
 ---
 title: "Configure SQL Server distribution database in availability group | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/23/2018"
+ms.date: "10/04/2018"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: replication
@@ -25,7 +25,7 @@ manager: craigg
 
 This article explains how to set up a SQL Server replication distribution databases in an Always On availability group (AG).
 
-SQL Server 2017 CU 6 introduces support for replication distribution database in an AG through the following mechanisms:
+SQL Server 2017 CU6 and SQL Server 2016 SP2-CU3 introduces support for replication distribution database in an AG through the following mechanisms:
 
 - The distribution database AG needs to have a listener. When the publisher adds the distributor, it uses the listener name as the distributor name.
 - The replication jobs are created with the listener name as the distributor name.

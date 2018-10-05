@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "MAXIMUM_INPUT_ATTRIBUTES parameter"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "COMPLEXITY_PENALTY parameter"
   - "SCORE_METHOD parameter"
 ms.assetid: 1e9f7969-0aa6-465a-b3ea-57b8d1c7a1fd
-caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
 manager: craigg

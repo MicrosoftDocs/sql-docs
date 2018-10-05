@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "multiple language support [Analysis Services]"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "SQL Server Analysis Services, international considerations"
   - "Analysis Services, international considerations"
 ms.assetid: e8af85ff-ef33-4659-a003-bb34578eb2a2
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg

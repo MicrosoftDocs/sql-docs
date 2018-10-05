@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "DataMiningMeasureGroupDimension Data Type"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "DataMiningMeasureGroupDimension data type"
 ms.assetid: 56d5c2ec-7e03-4dc7-a668-c8d598d59e55
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg

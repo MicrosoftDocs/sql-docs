@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "XML for Analysis, traces"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "monitoring traces [XMLA]"
   - "traces [Analysis Services]"
 ms.assetid: cdbfb984-18bd-4c4e-8fb7-d64ce298ed35
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg

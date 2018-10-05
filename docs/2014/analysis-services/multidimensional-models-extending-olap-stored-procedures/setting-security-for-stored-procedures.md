@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "stored procedures [Analysis Services], security"
   - "PermissionSet property"
 ms.assetid: 6364b125-7d72-4312-9677-56c62e22461e
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg

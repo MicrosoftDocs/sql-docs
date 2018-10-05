@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "Usage Element (MiningModelColumn)"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "Usage element"
 ms.assetid: 435a857e-37a9-434e-9de1-354f1ff2993f
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg

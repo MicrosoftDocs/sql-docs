@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "9992 (Database Engine error)"
 ms.assetid: 188e5bde-6865-4740-a2b2-582be8f55c77
-caps.latest.revision: 16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

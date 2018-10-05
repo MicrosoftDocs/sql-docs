@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.ssis.designer.cdcsource.columns.f1"
 ms.assetid: bcf3030e-98d8-4445-967c-33c3f8ecb4fc
-caps.latest.revision: 9
 author: douglaslms
 ms.author: douglasl
 manager: craigg

@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology:
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "opening View Designer"
@@ -14,7 +12,6 @@ helpviewer_keywords:
   - "Query Designer [SQL Server], opening"
   - "opening Query Designer"
 ms.assetid: b473f258-d53c-41c0-9ad9-528a2ff141f4
-caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg

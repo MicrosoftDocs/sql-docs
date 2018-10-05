@@ -4,7 +4,7 @@ description: R in SQL Server or Python on SQL Server is available when you insta
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 09/14/2018  
+ms.date: 10/01/2018  
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
@@ -96,7 +96,9 @@ For local installations, you must run Setup as an administrator. If you install 
 
 7. After setup is complete, if you are instructed to restart the computer, do so now. It is important to read the message from the Installation Wizard when you have finished with Setup. For more information, see [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files).
 
-## <a name="bkmk_enableFeature"></a>Enable script execution
+<a name="bkmk_enableFeature"></a>
+
+## Enable script execution
 
 1. Open [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 
 
@@ -131,6 +133,8 @@ Restarting the service also automatically restarts the related [!INCLUDE[rsql_la
 You can restart the service using the right-click **Restart** command for the instance in SSMS, or by using the **Services** panel in Control Panel, or by using [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).
 
 ## Verify installation
+
+Check the installation status of the instance in [custom reports](../r/monitor-r-services-using-custom-reports-in-management-studio.md) or setup logs.
 
 Use the following steps to verify that all components used to launch external script are running.
 
@@ -186,6 +190,28 @@ Use the following steps to verify that all components used to launch external sc
 > 
 > For example, you can add the following line to generate an arbitrary column name: `WITH RESULT SETS ((Col1 AS int))`
 
+<a name="apply-cu"></a>
+
+## Apply updates
+
+We recommend that you apply the latest cumulative update to both the database engine and machine learning components.
+
+On internet-connected devices, cumulative updates are typically applied through Windows Update, but you can also use the steps below for controlled updates. When you apply the update for the database engine, Setup pulls cumulative updates for any R or Python features you installed on the same instance. 
+
+On disconnected servers, extra steps are required. For more information, see [Install on computers with no internet access > Apply cumulative updates](sql-ml-component-install-without-internet-access.md#apply-cu).
+
+1. Start with a baseline instance already installed: SQL Server 2017 initial release
+
+2. Go to the cumulative update list: [SQL Server 2017 updates](https://sqlserverupdates.com/sql-server-2017-updates/)
+
+3. Select the latest cumulative update. An executable is downloaded and extracted automatically.
+
+4. Run Setup. Accept the licensing terms, and on the Feature selection page, review the features for which cumulative updates are applied. You should see every feature installed for the current instance, including machine learning features. Setup downloads the CAB files necessary to update all features.
+
+  ![](media/cumulative-update-feature-selection.png)
+
+5. Continue through the wizard, accepting the licensing terms for R and Python distributions. 
+
 ## Additional configuration
 
 If the external script verification step was successful, you can run R or Python commands from SQL Server Management Studio, Visual Studio Code, or any other client that can send T-SQL statements to the server.
@@ -207,7 +233,9 @@ On the database, you might need the following configuration updates:
 > [!NOTE]
 > Whether additional configuration is required depends on your security schema, where you installed SQL Server, and how you expect users to connect to the database and run external scripts. 
 
-###  <a name="bkmk_configureAccounts"></a> Enable implied authentication for SQL Restricted User Group (SQLRUserGroup) account group
+<a name="bkmk_configureAccounts"></a> 
+
+###  Enable implied authentication for SQL Restricted User Group (SQLRUserGroup) account group
 
 If you need to run scripts from a remote data science client, and you are using Windows authentication, additional configuration is required to give worker accounts running R and Python processes permission to sign in to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance on your behalf. This behavior is called *implied authentication*, and is implemented by the database engine to support secure execution of external scripts in SQL Server 2016 and SQL Server 2017.
 
@@ -230,7 +258,9 @@ These accounts are used as follows. When a user sends a Python or R script from 
 In SQL Server 2019, worker accounts are replaced with AppContainers, with processes executing under the SQL Server Launchpad service. Although the worker accounts are no longer used, you are still required to add a database login for **SQLRUsergroup** if implied authentication is needed. Just as the worker accounts did not have login permission, the Launchpad service identity does not either. Creating a login for **SQLRUserGroup**, which consists of the Launchpad service in this release, allows implied authentication to work.
 ::: moniker-end
 
-### <a name="permissions-external-script"></a> Give users permission to run external scripts
+<a name="permissions-external-script"></a> 
+
+### Give users permission to run external scripts
 
 If you installed [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] yourself, and you are running R or Python scripts in your own instance, you typically execute scripts as an administrator. Thus, you have implicit permission over various operations and all data in the database.
 
@@ -245,7 +275,9 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT  TO [UserName]
 > [!NOTE]
 > Permissions are not specific to the supported script language. In other words, there are not separate permission levels for R script versus Python script. If you need to maintain separate permissions for these languages, install R and Python on separate instances.
 
-### <a name="permissions-db"></a> Give your users read, write, or data definition language (DDL) permissions to databases
+<a name="permissions-db"></a> 
+
+### Give your users read, write, or data definition language (DDL) permissions to databases
 
 While a user is running scripts, the user might need to read data from other databases. The user might also need to create new tables to store results, and write data into tables.
 
@@ -300,16 +332,6 @@ Packages that you want to use from SQL Server must be installed in the default l
 
 The process for installing and managing R packages is different in SQL Server 2016 and SQL Server 2017. In SQL Server 2016, a database administrator must install R packages that users need. In SQL Server 2017, you can set up user groups to share packages on a per-database level, or configure database roles to enable users to install their own packages. For more information, see [Install new R packages in SQL Server](../r/install-additional-r-packages-on-sql-server.md).
 
-
-## Get help
-
-Need help with installation or upgrade? For answers to common questions and known issues, see the following article:
-
-* [Upgrade and installation FAQ - Machine Learning Services](../r/upgrade-and-installation-faq-sql-server-r-services.md)
-
-To check the installation status of the instance and fix common issues, try these custom reports.
-
-* [Custom reports for SQL Server R Services](../r/monitor-r-services-using-custom-reports-in-management-studio.md)
 
 ## Next steps
 

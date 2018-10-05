@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "storage [Analysis Services], partitions"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "writeback [Analysis Services], partitions"
   - "storing data [Analysis Services], partitions"
 ms.assetid: 46e7683f-03ce-4af2-bd99-a5203733d723
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg

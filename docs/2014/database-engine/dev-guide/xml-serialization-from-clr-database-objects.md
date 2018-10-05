@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "serialization"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "common language runtime [SQL Server], XML serialization"
   - "XmlSerializer class"
 ms.assetid: ac84339b-9384-4710-bebc-01607864a344
-caps.latest.revision: 19
 author: mashamsft
 ms.author: mathoma
 manager: craigg

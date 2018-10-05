@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "logs [Integration Services], viewing"
   - "Integration Services packages, logs"
   - "packages [Integration Services], logs"
 ms.assetid: c02123c3-67fc-4370-ad14-91ed259f1873
-caps.latest.revision: 20
 author: douglaslms
 ms.author: douglasl
 manager: craigg

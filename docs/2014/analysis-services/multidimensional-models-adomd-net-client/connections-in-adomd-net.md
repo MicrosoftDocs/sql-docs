@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "opening connections"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "connections [ADOMD.NET]"
   - "ADOMD.NET, connections"
 ms.assetid: 7b9610f5-6641-42cc-af4e-bd35771913d1
-caps.latest.revision: 40
 author: minewiskan
 ms.author: owend
 manager: craigg

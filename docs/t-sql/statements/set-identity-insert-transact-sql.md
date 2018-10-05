@@ -35,7 +35,7 @@ manager: craigg
   
 ```  
   
-SET IDENTITY_INSERT [ [ database_name . ] schema_name . ] table { ON | OFF }  
+SET IDENTITY_INSERT [ [ database_name . ] schema_name . ] table_name { ON | OFF }  
 ```  
   
 ## Arguments  
@@ -45,7 +45,7 @@ SET IDENTITY_INSERT [ [ database_name . ] schema_name . ] table { ON | OFF }
  *schema_name*  
  Is the name of the schema to which the table belongs.  
   
- *table*  
+ *table_name*  
  Is the name of a table with an identity column.  
   
 ## Remarks  

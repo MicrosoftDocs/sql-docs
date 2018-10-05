@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Bayesian classifiers"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "classification algorithms [Analysis Services]"
   - "naive bayes algorithms [Analysis Services]"
 ms.assetid: 3b53e011-3b1a-4cd1-bdc2-456768ba31b5
-caps.latest.revision: 55
 author: minewiskan
 ms.author: owend
 manager: craigg

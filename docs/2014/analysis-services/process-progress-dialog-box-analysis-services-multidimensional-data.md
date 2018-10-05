@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.processprogress.f1"
 ms.assetid: f3bd5278-3a83-4fd9-9903-e81bdd4b6892
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg

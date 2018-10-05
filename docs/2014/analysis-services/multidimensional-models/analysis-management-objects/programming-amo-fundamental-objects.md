@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "server objects [AMO]"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "database objects [AMO]"
   - "Analysis Management Objects, database objects"
 ms.assetid: 3f1ab656-f3bc-432d-8b6d-cdf204e5be10
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg

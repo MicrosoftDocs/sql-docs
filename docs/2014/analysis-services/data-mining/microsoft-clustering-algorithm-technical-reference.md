@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "clustering [Data Mining]"
@@ -23,7 +21,6 @@ helpviewer_keywords:
   - "clustering algorithms [Analysis Services]"
   - "CLUSTER_COUNT parameter"
 ms.assetid: ec40868a-6dc7-4dfa-aadc-dedf69e555eb
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg

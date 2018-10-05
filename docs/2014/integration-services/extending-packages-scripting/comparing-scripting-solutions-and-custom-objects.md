@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "docset-sql-devref"
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 dev_langs: 
   - "VB"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "SSIS Script task, vs. custom managed tasks"
   - "custom tasks [Integration Services], scripts"
 ms.assetid: c0aea822-a21e-44e1-a3d3-8777bd0a1c34
-caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "replication"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "TSQL"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "coordinated backups [SQL Server replication]"
   - "backups [SQL Server replication], transactional replication"
 ms.assetid: 73a914ba-8b2d-4f4d-ac1b-db9bac676a30
-caps.latest.revision: 30
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

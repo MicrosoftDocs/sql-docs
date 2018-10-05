@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "bcp_init"
@@ -17,7 +15,6 @@ topic_type:
 helpviewer_keywords: 
   - "bcp_init function"
 ms.assetid: 6a25862c-7f31-4873-ab65-30f3abde89d2
-caps.latest.revision: 38
 author: MightyPen
 ms.author: genemi
 manager: craigg

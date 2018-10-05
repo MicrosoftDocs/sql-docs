@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "replication"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.rep.configdistwizard.distdbproperties.f1"
 helpviewer_keywords: 
   - "Distribution Database Properties dialog box"
 ms.assetid: 0f404ab9-1237-4936-8df5-888baab6a245
-caps.latest.revision: 21
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

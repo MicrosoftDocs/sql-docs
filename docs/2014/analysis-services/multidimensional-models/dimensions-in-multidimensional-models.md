@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "OLAP [Analysis Services], dimensions"
   - "dimensions [Analysis Services], about dimensions"
   - "OLAP objects [Analysis Services], dimensions"
 ms.assetid: 2b62b05c-00fd-4e60-b77f-f707ba83a19b
-caps.latest.revision: 45
 author: minewiskan
 ms.author: owend
 manager: craigg

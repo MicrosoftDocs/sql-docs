@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "match case [SQL Server]"
@@ -28,7 +26,6 @@ helpviewer_keywords:
   - "match whole word [SQL Server]"
   - "searches [SQL Server Management Studio], replacing"
 ms.assetid: 3641c7b3-3e3e-4ddd-af82-c15b50004f94
-caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg

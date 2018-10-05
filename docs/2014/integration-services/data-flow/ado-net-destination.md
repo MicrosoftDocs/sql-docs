@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.adonetdest.f1"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "destinations [Integration Services], ADO.NET"
   - "ADO.NET destination"
 ms.assetid: cb883990-d875-4d8b-b868-45f9f15ebeae
-caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

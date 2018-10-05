@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/30/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "replication"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "publications [SQL Server replication], creating"
   - "articles [SQL Server replication], defining"
 ms.assetid: e66d06ec-a12b-444d-875b-77f958af2f21
-caps.latest.revision: 35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

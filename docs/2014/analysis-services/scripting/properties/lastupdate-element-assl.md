@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "LastUpdate Element"
@@ -19,7 +17,6 @@ topic_type:
 helpviewer_keywords: 
   - "LastUpdate element"
 ms.assetid: 639db733-a082-4f57-868d-a3bcd5e7a4f6
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg

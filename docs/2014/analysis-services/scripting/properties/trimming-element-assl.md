@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "Trimming Element"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "Trimming element"
 ms.assetid: 8b3bbf89-8309-4d00-9aea-a5918f0c7027
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg

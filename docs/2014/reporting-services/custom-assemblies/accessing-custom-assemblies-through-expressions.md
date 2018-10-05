@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "docset-sql-devref"
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "expressions [Reporting Services], custom assemblies"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "calling class members"
   - "custom assemblies [Reporting Services], expressions"
 ms.assetid: 917c4d47-1a95-4f54-98b1-e8cb2165d90f
-caps.latest.revision: 31
 author: markingmyname
 ms.author: maghan
 manager: craigg

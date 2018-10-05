@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.cubeeditor.dimensionusage.definerelationship.measuregroupbindings.f1"
 helpviewer_keywords: 
   - "Measure Group Bindings dialog box"
 ms.assetid: ed642780-5350-438e-af73-b9ceab3f876d
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg

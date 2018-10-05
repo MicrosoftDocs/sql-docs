@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 api_name: 
   - "DatabaseServerName Property"
@@ -18,7 +16,6 @@ topic_type:
 helpviewer_keywords: 
   - "DatabaseServerName property"
 ms.assetid: 57d09ad0-66a8-44f2-a81f-736217e3815c
-caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
 manager: craigg

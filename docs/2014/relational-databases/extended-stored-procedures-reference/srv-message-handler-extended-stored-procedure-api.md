@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "srv_message_handler"
@@ -21,7 +19,6 @@ dev_langs:
 helpviewer_keywords: 
   - "srv_message_handler"
 ms.assetid: 41bcd057-436f-4fa8-8293-fc8057a30877
-caps.latest.revision: 31
 author: rothja
 ms.author: jroth
 manager: craigg

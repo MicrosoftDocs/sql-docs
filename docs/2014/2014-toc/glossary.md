@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "analysis-services/data-mining"
@@ -16,14 +15,12 @@ ms.technology:
   - "replication"
   - "reporting-services-native"
   - "reporting-services-sharepoint"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "definitions [SQL Server]"
   - "glossary [SQL Server]"
   - "terminology [SQL Server]"
 ms.assetid: 0e8a7967-b407-4e01-b8c4-3eabe2820df5
-caps.latest.revision: 1952
 author: heidisteen
 ms.author: heidist
 manager: craigg

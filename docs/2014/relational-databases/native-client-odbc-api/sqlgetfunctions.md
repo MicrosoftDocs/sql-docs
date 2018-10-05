@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 topic_type: 
   - "apiref"
 helpviewer_keywords: 
   - "SQLGetFunctions function"
 ms.assetid: d42349c4-0a3c-4bd1-9d10-0fe53f699924
-caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg

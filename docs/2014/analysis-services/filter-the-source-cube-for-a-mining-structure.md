@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "slice cubes [Analysis Services]"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "cubes [Analysis Services], slicing"
   - "filtering data [Analysis Services]"
 ms.assetid: 05dce7e1-2fe5-4500-bacf-c1a8a76e1424
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg

@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "connection managers [Integration Services], Flat File"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "flat files"
   - "flat file connections [Integration Services]"
 ms.assetid: 7830f80d-af32-4e8f-a6fc-f03af6bc1946
-caps.latest.revision: 48
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

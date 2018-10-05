@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "foreign keys [SQL Server], cascading referential integrity"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "foreign keys [SQL Server]"
   - "foreign keys [SQL Server], about foreign key constraints"
 ms.assetid: 31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd
-caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg

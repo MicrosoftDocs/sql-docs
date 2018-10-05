@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology:
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "vdt.dlgbox.columnlist"
 ms.assetid: 9ebd08b6-fa93-4581-bb6c-96b51d2c895c
-caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg

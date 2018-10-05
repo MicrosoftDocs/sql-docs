@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "09/07/2018"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "replication"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Snapshot Agent, executables"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "command prompt [SQL Server replication]"
   - "Snapshot Agent, parameter reference"
 ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
-caps.latest.revision: 40
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

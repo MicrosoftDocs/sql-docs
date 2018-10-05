@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Upgrade Advisor, components"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "analyzing system [Upgrade Advisor], component list"
   - "identifying components to analyze"
 ms.assetid: 539b9525-ce3f-4950-9146-5527a5a297ee
-caps.latest.revision: 41
 author: mashamsft
 ms.author: mathoma
 manager: craigg

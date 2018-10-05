@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Table Analysis tools"
   - "scenario analysis"
   - "goal seek scenario"
 ms.assetid: efe50306-cf7c-46b3-9cc4-e7f0b6968b0c
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg

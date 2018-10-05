@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Analysis Services configuration"
   - "account provisioning"
 ms.assetid: 169b1af2-6fe2-467f-8ca4-919f24c620ce
-caps.latest.revision: 28
 author: heidisteen
 ms.author: heidist
 manager: craigg

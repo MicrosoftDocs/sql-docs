@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "Exception Element"
@@ -23,7 +21,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "Exception element"
 ms.assetid: 0be4cc2f-c03e-490a-a6f7-8b1ede5d09ba
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg

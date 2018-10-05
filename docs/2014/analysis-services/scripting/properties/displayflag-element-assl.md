@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "DisplayFlag Element"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "DisplayFlag element"
 ms.assetid: a6750477-0763-46da-9add-1f4448146a6b
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg

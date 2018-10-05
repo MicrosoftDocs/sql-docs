@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "memory [Analysis Services]"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "system requirements [Analysis Services]"
   - "availability [Analysis Services]"
 ms.assetid: ef1387a5-5137-4ef4-b731-fec347e5f5ed
-caps.latest.revision: 24
 author: minewiskan
 ms.author: owend
 manager: craigg

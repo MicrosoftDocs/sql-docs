@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.rtp.rptdesigner.dataview.vdtquerydesigner.f1"
@@ -15,7 +13,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "Query Builder [Reporting Services]"
 ms.assetid: 1b0904ea-28c1-448e-b56c-c0fdfbc8b222
-caps.latest.revision: 21
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg

@@ -42,7 +42,7 @@ These articles describe how to install new R packages on the SQL Server instance
 These articles describe how to make changes to the underlying service architecture and how to manage security principals associated with the extensibility service.
 
 + [Security Considerations](security-considerations-for-the-r-runtime-in-sql-server.md)
-+ [Modify the User Account Pool for SQL Server R Services](../../advanced-analytics/r/modify-the-user-account-pool-for-sql-server-r-services.md)
++ [Scale concurrent execution of external scripts in SQL Server Machine Learning Services](../../advanced-analytics/administration/modify-user-account-pool.md) 
 + [Configure and Manage Advanced Analytics Extensions](../../advanced-analytics/r/configure-and-manage-advanced-analytics-extensions.md)
 + [Enable Package Management for an Instance using Database Roles](r-package-how-to-enable-or-disable.md)
 + [Performance Tuning for R Services](sql-server-r-services-performance-tuning.md)

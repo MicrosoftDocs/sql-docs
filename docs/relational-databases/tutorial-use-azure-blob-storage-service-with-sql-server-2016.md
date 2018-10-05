@@ -68,7 +68,7 @@ To create a policy on the container and generate a Shared Access Signature (SAS)
   
 2.  Edit and then execute the b script:  
   
-   ```powershell
+    ```powershell
     # Define global variables for the script  
     $prefixName = '<a prefix name>'  # used as the prefix for the name for various objects  
     $subscriptionID=='<your subscription ID>'   # the ID  of subscription name you will use  
@@ -77,7 +77,6 @@ To create a policy on the container and generate a Shared Access Signature (SAS)
     $containerName= $prefixName + 'container'  # the storage container name to which you will attach the SAS policy with its SAS token  
     $policyName = $prefixName + 'policy' # the name of the SAS policy 
 
-   
     # Set a variable for the name of the resource group you will create or use  
     $resourceGroupName=$prefixName + 'rg'   
   
@@ -118,9 +117,7 @@ To create a policy on the container and generate a Shared Access Signature (SAS)
     $tSql = "CREATE CREDENTIAL [{0}] WITH IDENTITY='Shared Access Signature', SECRET='{1}'" -f $cbc.Uri,$sas.Substring(1)   
     $tSql | clip  
     Write-Host $tSql   
-   ```  
-  
-
+    ```  
 
 3.  After the script completes, the CREATE CREDENTIAL statement will be in your clipboard for use in the next section.  
 

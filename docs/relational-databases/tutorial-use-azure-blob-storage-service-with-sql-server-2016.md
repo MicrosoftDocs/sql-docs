@@ -451,12 +451,12 @@ To delete the resource group, run the following powershell code:
   # Adds an authenticated Azure account for use in the session   
   Login-AzureRmAccount    
   
-   # set the tenant, subscription and environment for use in the rest of   
-   Set-AzureRmContext -SubscriptionId $subscriptionID    
+  # Set the tenant, subscription and environment for use in the rest of   
+  Set-AzureRmContext -SubscriptionId $subscriptionID    
     
-   # Remove the resource group
-   Remove-AzureRmResourceGroup -Name $resourceGroupName   
-   ```
+  # Remove the resource group
+  Remove-AzureRmResourceGroup -Name $resourceGroupName   
+  ```
 
 
   

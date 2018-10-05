@@ -81,7 +81,7 @@ On Kubernetes the deployment includes a SQL Server operator, the SQL Server cont
   Copy the SQL Server manifest [`sqlserver.yaml`](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files/sqlserver.yaml) from [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files).
 
   >[!NOTE]
-  >The `sqlserver.yaml` file describes the SQL Server containers and the persistent volume claims that are required for the storage for each SQL Server instance. 
+  >The `sqlserver.yaml` file describes the SQL Server containers, persistent volume claims, and persistent volumes that are required for the storage for each SQL Server instance.
 
   Apply the manifest to the Kubernetes cluster.
 

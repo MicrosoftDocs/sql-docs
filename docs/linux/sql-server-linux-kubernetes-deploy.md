@@ -94,7 +94,7 @@ On Kubernetes the deployment includes a SQL Server operator, the SQL Server cont
   The following image shows successful application of `kubectl apply` for this example.
 
   ![create sqlservers](./media/sql-server-linux-kubernetes-deploy/create-sqlservers.png)
-  
+
   After you apply the SQL Server manifest, the operator deploys the SQL Server containers.
 
   Kubernetes places the containers in pods. Use `kubectl get pods --namespace ag1` to see the status of the pods. The following image shows the example deployment after the SQL Server pods are deployed. 
@@ -169,6 +169,8 @@ After Kubernetes creates the SQL Server containers, complete the following steps
 The availability group is created with automatic seeding so SQL Server will automatically create the secondary replicas.
 
 You can view the state of the availability group from the SQL Server Management Studio Availability Group dashboard.
+
+![dashboard](./media/sql-server-linux-kubernetes-deploy/dashboard.png)
 
 ## Next steps
 

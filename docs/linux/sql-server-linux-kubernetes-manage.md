@@ -17,27 +17,61 @@ To manage an Always On Availability Group on Kubernetes, create a manifest and a
 
 The examples in this article apply to all Kubernetes cluster. The scenarios in these examples are applied against a cluster on Azure Kubernetes Service.
 
-See an example of the complete deployment in [Always On availability groups for SQL Server containers](sql-server-ag-kubernetes.md).
+See an example of the complete deployment in [Deploy a SQL Server Always On Availability Group on Kubernetes Cluster](sql-server-linux-kubernetes-deploy.md).
 
 ## Fail over - SQL Server availability group on Kubernetes
 
-To fail over an availability group primary replica to a different node in Kubernetes, use a job. This article identifies the environment variables for this job.
+To fail over or move a primary replica to a different node in an availability group, complete the following steps:
 
-The following manifest file describes a job to manually fail over an availability group. 
+1. Define a job in a manifest file.
 
-Copy the contents of the example into a new file called `failover.yaml`.
+  [`failover.yaml`](https://github.com/Microsoft/sql-server-samples/blob/master/samples/features/high%20availability/Kubernetes/sample-deployment-script/templates/failover.yaml) - in the [sql-server-samples](https://github.com/Microsoft/sql-server-samples/blob/master/samples/features/high%20availability/Kubernetes/sample-deployment-script/templates) github repository describes a failover job.
 
-[failover.yaml](https://github.com/Microsoft/sql-server-samples/blob/master/samples/features/high%20availability/Kubernetes/sample-deployment-script/templates/failover.yaml)
+  Copy the manifest file to your administration terminal.
 
-To deploy the job, use `Kubectl`.
+  Update the file for you environment.
 
-```azurecli
-kubectl apply -f failover.yaml
-```
+  - Replace `ag1` with the name of the availability group namespace.
+  - Replace `<containerName>` with the name of the expected availability group target.
 
-After you apply manifest file, Kubernetes runs the job. The job makes the supervisor elect a new leader and moves the primary replica to the SQL Server instance of the leader.
+  This file defines a failover job named `manual-failover`.
 
-After you run the job, delete it. The job object in Kubernetes stays after completion so you can view its status. You need to manually delete old jobs after noting their status. Deleting the job also deletes the Kubernetes logs. If you don't delete the job, future failover jobs will fail unless you change the job name and the pod selector. For more information, see [Jobs - Run to Completion](https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/).
+1. To deploy the job, use `kubectl apply`. The following script deploys the job.
+
+  ```azurecli
+  kubectl apply -f failover.yaml
+  ```
+
+  After the job is deployed, kubernetes, with the SQL Server Operator, does the following:
+  
+  - Demotes the primary replica to secondary
+  
+  - Promotes the designated replica to primary
+  
+  After you apply manifest file, Kubernetes runs the job. The job makes the supervisor elect a new leader and moves the primary replica to the SQL Server instance of the leader.
+
+1. Verify the job is completed.
+  
+  After Kubernetes runs the job, you can review the log.
+  
+  The following example returns the status of the job named `manual-failover`.
+
+  ```azurecli
+  kubectl describe jobs/manual-failover –namespace ag1
+  ```
+
+1. Delete the manual failover job. 
+
+  >[IMPORTANT]
+  >You must delete the job manually before you issue another manual failover.
+  > 
+  >The job object in Kubernetes stays after completion so you can view its status. You need to manually delete old jobs after noting their status. Deleting the job also deletes the Kubernetes logs. If you don't delete the job, future failover jobs will fail unless you change the job name and the pod selector. For more information, see [Jobs - Run to Completion](https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/).
+
+  The following command deletes the job.
+
+  ```azurecli
+  kubectl delete jobs manual-failover –namespace ag1
+  ```
 
 ## Rotate credentials
 

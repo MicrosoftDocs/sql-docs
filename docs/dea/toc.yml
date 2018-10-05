@@ -6,3 +6,5 @@
   href: database-experimentation-assistant-capture-trace.md
 - name: Configure replay
   href: database-experimentation-assistant-configure-replay.md
+- name: Replay trace
+  href: database-experimentation-assistant-replay-trace.md

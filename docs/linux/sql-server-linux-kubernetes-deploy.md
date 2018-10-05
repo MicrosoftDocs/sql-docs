@@ -17,7 +17,7 @@ The example in this article deploys a SQL Server Always On availability group on
 
 On Kubernetes the deployment includes a SQL Server operator, the SQL Server containers, and load balancer services. The operator orchestrates the availability group automatically. This article explains how to:
 
-- Deploy the operator, SQL Server containers, and load balancing services
+- Deploy the operator, SQL Server containers, and load-balancing services
 - Connect to the availability group with the services
 - Add a database to the availability group
 
@@ -36,7 +36,7 @@ On Kubernetes the deployment includes a SQL Server operator, the SQL Server cont
   az aks create --resource-group myResourceGroup --name myAKSCluster --node-count 4 --kubernetes-version 1.11.1
   >```
 
-## Deploy the operator, SQL Server containers, and load balancing services 
+## Deploy the operator, SQL Server containers, and load-balancing services 
 
 1. Create a [namespace](https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/).
 

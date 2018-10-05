@@ -39,7 +39,7 @@ Follow these steps to capture a trace on your source server:
 
 1. In DEA, go to **All Captures** by selecting the camera icon on the left navigation.
 
-   ![leftnav](./media/database-experimentation-assistant-get-started/dea-get-started-leftnav.png)
+   ![left nav](./media/database-experimentation-assistant-get-started/dea-get-started-leftnav.png)
 
 1. Provide necessary inputs to begin capture.
 
@@ -125,7 +125,7 @@ Two pie charts demonstrate the performance implications of the difference betwee
 - **Cannot Evaluate:** the sample size for the query is too small for statistical analysis. For A/B testing analysis, DEA requires the same queries to have at least 30 executions on each target.
 - **Error:** the query errored out at least once on one of the targets.
 
-![piechart](./media/database-experimentation-assistant-get-started/dea-get-started-piechart.png)
+![pie chart](./media/database-experimentation-assistant-get-started/dea-get-started-piechart.png)
 
 Selecting a slice lets you drill down into a particular category and get performance metrics, even **Cannot Evaluate**.
 
@@ -135,17 +135,17 @@ On the drill-down page for a performance change category, you see a list of quer
 - **Existing Errors:** errors that appeared on both Target 1 and Target 2
 - **Resolved Errors:** errors that appeared on Target 1 but not on Target 2
 
-   ![errorpage](./media/database-experimentation-assistant-get-started/dea-get-started-errorpage.png)
+   ![error page](./media/database-experimentation-assistant-get-started/dea-get-started-errorpage.png)
 
 Selecting a query takes you to a **Comparison Summary** page for that query.
 
 On the **Comparison Summary** page, you see summary statistics for that query, such as the number of executions, mean duration, mean CPU, mean reads/writes, and error count.
 
-![summarystats](./media/database-experimentation-assistant-get-started/dea-get-started-summarystats.png)
+![summary stats](./media/database-experimentation-assistant-get-started/dea-get-started-summarystats.png)
 
 If the query is an error query, the **Error Information** tab shows more information about the error. On the **Query Plan Information** tab, you see information about the query plans used for the query on Target 1 and Target 2.
 
-![queryplan](./media/database-experimentation-assistant-get-started/dea-get-started-queryplan.png)
+![query plan](./media/database-experimentation-assistant-get-started/dea-get-started-queryplan.png)
 
 On any page of the analysis report, select the **Print** button on the top right to print everything that is visible on the UI at that moment.
 

@@ -133,25 +133,27 @@ After Kubernetes creates the SQL Server containers, complete the following steps
 1. Create a database.
 
   ```sql
-  CREATE DATABASE [TestDB]
+  CREATE DATABASE [demodb]
   ```
 
 1. Take a full backup of the database to start the log chain.
 
   ```sql
-  BACKUP DATABASE [TestDB]
+  USE MASTER
+  GO
+  BACKUP DATABASE [demodb] 
+  TO DISK = N'/var/opt/mssql/data/demodb.bak'
   ```
 
 1. Add the database to the availability group.
 
   ```sql
-  USE MASTER
-  GO
-  ALTER AVAILABILITY GROUP [ag1]
-  ADD DATABASE [TestDB]
+  ALTER AVAILABILITY GROUP [ag1] ADD DATABASE [demodb]
   ```
 
 The availability group is created with automatic seeding so SQL Server will automatically create the secondary replicas.
+
+You can view the state of the availability group from the SQL Server Management Studio Availability Group dashboard.
 
 ## Next steps
 

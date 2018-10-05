@@ -71,7 +71,7 @@ sudo pip3 install --upgrade pip
 ```
 
 > [!NOTE]
-If your Python installation is missing the `requests` package, you must install `requests` using `python -m pip install requests`.
+If your Python installation is missing the `requests` package, you must install `requests` using `python -m pip install requests`. If you already have a `requests` package installed, make sure you have the latest version by running `python -m pip install requests --upgrade`.
 
 Run the below command to install msqlctl:
 
@@ -115,7 +115,7 @@ The cluster configuration can be customized using a set of environment variables
 > [!IMPORTANT]
 >1. For the duration of the limited private preview, credentials for the private Docker registry will be provided to you upon triaging your [EAP registration](https://aka.ms/eapsignup).
 >1. For an on-premises cluster built with kubeadm, the value for environment variable `CLUSTER_PLATFORM` is `kubernetes`. Also, when USE_PERSISTENT_STORAGE=true, you must pre-provision a Kubernetes storage class and pass it through using the STORAGE_CLASS_NAME.
->1. Make sure you wrap the passwords in double quotes if it contains any special characters. You can set the MSSQL_SA_PASSWORD to whatever you like, but make sure they are sufficiently complex and don’t use the `!`, `&` or `‘` characters.
+>1. Make sure you wrap the passwords in double quotes if it contains any special characters. You can set the MSSQL_SA_PASSWORD to whatever you like, but make sure they are sufficiently complex and don’t use the `!`, `&` or `‘` characters. Note that double quotes delimiters work only in bash commands.
 >1. The name of your cluster must be only lower case alpha-numeric characters, no spaces. All Kubernetes artifacts (containers, pods, statefull sets, services) for the cluster will be created in a namespace with same name as the cluster name specified.
 >1. The **SA** account is a system administrator on the SQL Server Master instance that gets created during setup. After creating your SQL Server container, the MSSQL_SA_PASSWORD environment variable you specified is discoverable by running echo $MSSQL_SA_PASSWORD in the container. For security purposes, change your SA password as per best practices documented [here](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password).
 
@@ -140,6 +140,7 @@ SET DOCKER_REGISTRY=private-repo.microsoft.com
 SET DOCKER_REPOSITORY=mssql-private-preview
 SET DOCKER_USERNAME=<your username>
 SET DOCKER_PASSWORD=<your password>
+SET DOCKER_EMAIL=<your Docker email, use same as username provided>
 SET DOCKER_PRIVATE_REGISTRY="1"
 ```
 
@@ -160,6 +161,7 @@ export DOCKER_REGISTRY=private-repo.microsoft.com
 export DOCKER_REPOSITORY=mssql-private-preview
 export DOCKER_USERNAME=<your username>
 export DOCKER_PASSWORD=<your password>
+export DOCKER_EMAIL=<your Docker email, use same as username provided>
 export DOCKER_PRIVATE_REGISTRY="1"
 ```
 
@@ -195,7 +197,7 @@ After the deployment script has completed successfully, you can obtain the IP ad
 If you are using AKS, Azure provides the Azure LoadBalancer service. Run following command:
 
 ```bash
-kubectl get svc service-master-lb -n <name of your cluster>
+kubectl get svc service-master-pool-lb -n <name of your cluster>
 kubectl get svc service-security-lb -n <name of your cluster>
 kubectl get svc service-proxy-lb -n <name of your cluster>
 ```

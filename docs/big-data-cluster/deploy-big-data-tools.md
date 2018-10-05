@@ -31,4 +31,4 @@ Click Connect, and the **Server Dashboard** will appear.   You are now connected
 
 ## Next steps
 
-To run notebooks in Azure Data Studio, see [How to use notebooks in SQL Server 2019 CTP 2.0](notebooks-guidance.md).
+To run notebooks in Azure Data Studio, see [How to use notebooks in SQL Server 2019 preview](notebooks-guidance.md).

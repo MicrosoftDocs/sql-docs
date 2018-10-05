@@ -171,6 +171,8 @@
     href: concepts/extension-r.md
   - name: Python extension
     href: concepts/extension-python.md
+  - name: Security
+    href: concepts/security.md
 - name: How-to guides
   href: r/sql-server-machine-learning-tasks.md
   items:
@@ -242,18 +244,18 @@
       href: r/using-r-code-profiling-functions.md
   - name: Security
     items:
-    - name: Security considerations
-      href: r/security-considerations-for-the-r-runtime-in-sql-server.md
-    - name: Security for R 
-      href: r/security-overview-sql-server-r.md
-    - name: Security for Python
-      href: python/security-overview-sql-server-python-services.md
     - name: SQL Server Launchpad account
-      href: general/sql-server-launchpad-service-account.md
-    - name: Modify SQLRUserGroup
-      href: r/modify-the-user-account-pool-for-sql-server-r-services.md
+      href: security/sql-server-launchpad-service-account.md
+    - name: SQLRUserGroup security
+      href: security/user-account-pool-security.md
     - name: Add SQLRUserGroup as a database user
-      href: r/add-sqlrusergroup-to-database.md
+      href: security/add-sqlrusergroup-to-database.md
+    - name: Firewall configuration
+      href: security/firewall-configuration.md
+    - name: Give users permission
+      href: security/user-permission.md
+    - name: Connect from client computer
+      href: security/connect-from-client-computer.md
   - name: Administration
     items:
     - name: Configure and manage R
@@ -280,6 +282,8 @@
       href: r/using-r-code-profiling-functions.md
     - name: Monitor Machine Learning Services using custom reports in Management Studio
       href: r/monitor-r-services-using-custom-reports-in-management-studio.md
+    - name: Scale concurrent execution of external scripts
+      href: administration/modify-the-user-account-pool.md
 - name: Reference
   href: r/machine-learning-services-r-reference.md
   items:

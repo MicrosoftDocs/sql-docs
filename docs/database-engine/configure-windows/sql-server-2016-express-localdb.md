@@ -31,7 +31,7 @@ Microsoft SQL Server 2016 Express **LocalDB** is a feature of [SQL Server Expres
   
 -   To download and install SQL Server 2016 Express, go to **[SQL Server downloads](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)**. LocalDB is a feature you select during installation, and is available when you download the media. If you download the media, either choose **Express Advanced** or the **LocalDB** package.through the **Visual Studio Installer**. In the **Visual Studio Installer**, you can install SQL Server Express LocalDB as part of the **.NET desktop development** workload or as an individual component.
 
-   > [!TIP
+   > [!TIP]
    > You can also install LocalDB as part of Visual Studio 2017. During Visual Studio installation, select the **.NET desktop development** workload, which includes SQL Server Express LocalDB.
   
 -   Have an Azure account?  Then go **[here](https://azure.microsoft.com/services/virtual-machines/sql-server/)** to spin up a Virtual Machine with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] already installed.  

@@ -15,7 +15,11 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 
 The example in this article deploys a SQL Server Always On availability group on a Kubernetes cluster with three replicas. The secondary replicas are in synchronous commit mode.
 
-On Kubernetes the deployment includes a SQL Server operator, the SQL Server containers, and load balancer services. The operator orchestrates the availability group automatically. This article explains how to deploy these objects, and then add a database to the availability group that is deployed.
+On Kubernetes the deployment includes a SQL Server operator, the SQL Server containers, and load balancer services. The operator orchestrates the availability group automatically. This article explains how to:
+
+- Deploy the operator, SQL Server containers, and load balancing services
+- Connect to the availability group with the services
+- Add a database to the availability group
 
 ## Requirements
 
@@ -32,7 +36,7 @@ On Kubernetes the deployment includes a SQL Server operator, the SQL Server cont
   az aks create --resource-group myResourceGroup --name myAKSCluster --node-count 4 --kubernetes-version 1.11.1
   >```
 
-## Steps to deploy SQL Server 
+## Deploy the operator, SQL Server containers, and load balancing services 
 
 1. Create a [namespace](https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/).
 
@@ -93,7 +97,7 @@ You can use [Kubernetes dashboard with Azure Kubernetes Service (AKS)](https://d
 
 Use `az aks browse` to launch the dashboard. 
 
-## Create load balancer services to allow connection to replicas
+## Connect to the availability group with the services
 
 The [`ag-services.yaml`](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files/ag-services.yaml) from [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files) example describes load-balancing services that can connect to availability group replicas. 
 

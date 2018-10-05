@@ -33,10 +33,10 @@ On Kubernetes the deployment includes a SQL Server operator, the SQL Server cont
   >You can use any type of Kubernetes cluster. To create a Kubernetes cluster on Azure Kubernetes Service (AKS), see [Create an AKS cluster](http://docs.microsoft.com/azure/aks/create-cluster).
   > The following script creates a four node Kubernetes cluster in Azure.
   >```azure-cli
-  az aks create --resource-group myResourceGroup --name myAKSCluster --node-count 4 --kubernetes-version 1.11.1
+  az aks create --resource-group myResourceGroup --name myAKSCluster --node-count 4 --kubernetes-version 1.11.3
   >```
 
-## Deploy the operator, SQL Server containers, and load-balancing services 
+## Deploy the operator, SQL Server containers, and load-balancing services
 
 1. Create a [namespace](https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/).
 
@@ -45,6 +45,8 @@ On Kubernetes the deployment includes a SQL Server operator, the SQL Server cont
   ```azurecli
   kubectl create namespace ag1
   ```
+
+  All objects belonging to this solution are in the `ag1` namespace.
 
 1. Configure and deploy the SQL Server operator manifest.
 
@@ -88,8 +90,15 @@ On Kubernetes the deployment includes a SQL Server operator, the SQL Server cont
   ```azurecli
   kubectl apply -f sqlserver.yaml --namespace ag1
   ```
+  
+  The following image shows successful application of `kubectl apply` for this example.
 
-  After you deploy the SQL Server manifest, the operator deploys the SQL Server containers.
+  ![create sqlservers](./media/sql-server-linux-kubernetes-deploy/create-sqlservers.png) 
+  After you apply the SQL Server manifest, the operator deploys the SQL Server containers.
+
+  Kubernetes places the containers in pods. Use `kubectl get pods --namespace ag1` to see the status of the pods. The following image shows the example deployment after the SQL Server pods are deployed. 
+
+  ![built pods](./media/sql-server-linux-kubernetes-deploy/builtpods.png)
 
 ### Monitor the deployment
 
@@ -104,15 +113,13 @@ The [`ag-services.yaml`](https://github.com/Microsoft/sql-server-samples/tree/ma
 - `ag1-primary` provides an endpoint to connect to the primary replica.
 - `ag1-secondary` provides an endpoint to connect to any secondary replica.
 
-When you apply the manifest file in the example, Kubernetes creates the load-balancing services for each type of replica. The load-balancing service includes an IP address. Use this IP address to connect to the type of replica you need.
+When you apply the manifest file, Kubernetes creates the load-balancing services for each type of replica. The load-balancing service includes an IP address. Use this IP address to connect to the type of replica you need.
 
 To deploy the services, run the following command.
 
 ```azurecli
 kubectl apply -f ag-services.yaml --namespace ag1
 ```
-
-Kubernetes creates a load balancer service for each replica type. The load balancer service stores an IP address for its replica type, as described in the manifest.
 
 After you deploy the services, use `kubectl get services --namespace ag1` to identify the IP address for the services.
 

@@ -51,27 +51,22 @@ On Kubernetes the deployment includes a SQL Server operator, the SQL Server cont
   Apply the manifest to the Kubernetes cluster.
 
   ```azurecli
-  kubectl apply -f operator.yaml
+  kubectl apply -f operator.yaml --namespace ag1
   ```
 
-1. Create Kubernetes a secret for the SA password.
+1. Create Kubernetes a secret with passwords for the `sa` account, and the SQL Server instance master key.
 
-  Create the secret with  `kubectl`. The following script creates a secret named `sql-secrets` in the `ag1` namespace. The secret stores a password named `sapassword`.
-
-  Copy the script to your terminal. Replace `<>` with a complex password, and run the script to create the secret with the complex password.
-
-  ```azurecli
-  kubectl create secret generic sql-secrets --from-literal=sapassword="<>" --namespace ag1
-  ```
-
-1. Create a Kubernetes secret for the SA password.
-
-  Create the secret with  `kubectl`. The following script creates a secret named `sql-secrets` in the `ag1` namespace. The stores two passwords: 
+  Create the secret with  `kubectl`.
+  
+  The following example creates a secret named `sql-secrets` in the `ag1` namespace. The secret stores two passwords:
   
   - `sapassword` stores the password for the SQL Server `sa` account.
   - `masterkeypassword` stores the password used to create the SQL Server master key. 
 
-  Copy the script to your terminal. Replace `<>` with complex passwords, and run the script to create the secrets with passwords.
+  Copy the script to your terminal. Replace each `<>` with a complex password, and run the script to create the secret.
+
+  >[!NOTE]
+  >The password cannot use `&`,`!`, or `` ` `` characters.
 
   ```azurecli
   kubectl create secret generic sql-secrets --from-literal=sapassword="<>" --from-literal=masterkeypassword="<>"  --namespace ag1
@@ -87,7 +82,7 @@ On Kubernetes the deployment includes a SQL Server operator, the SQL Server cont
   Apply the manifest to the Kubernetes cluster.
 
   ```azurecli
-  kubectl apply -f sqlserver.yaml
+  kubectl apply -f sqlserver.yaml --namespace ag1
   ```
 
   After you deploy the SQL Server manifest, the operator deploys the instances of SQL Server as pods in containers.
@@ -103,19 +98,14 @@ Use `az aks browse` to launch the dashboard.
 The [`ag-services.yaml`](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files/ag-services.yaml) from [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files) example describes load-balancing services that can connect to availability group replicas. 
 
 - `ag1-primary` connects to the primary replica.
-- `ag1-secondary-sync` connects to a secondary replica in synchronous commit mode.
-- `ag1-secondary-async` connects to a secondary replica in asynchronous commit mode.
-- `ag1-secondary-config` connects to a configuration only replica.
+- `ag1-secondary` connects to any secondary replica.
 
 When you apply the manifest file in the example, Kubernetes creates the load-balancing services for each type of replica. The load-balancing service includes an IP address. Use this IP address to connect to the type of replica you need.
-
->[!NOTE]
->If the specific replica type does not exist, connection attempts to that service fail. For example, if you create the load balancer for `ag1-secondary-async`, but do not have a secondary replica in asynchronous commit mode, the connection does not succeed.
 
 To deploy the services, run the following command.
 
 ```azurecli
-kubectl apply -f ag-services.yaml
+kubectl apply -f ag-services.yaml --namespace ag1
 ```
 
 Kubernetes creates a load balancer service for each replica type. The load balancer service stores an IP address for its replica type, as described in the manifest.
@@ -133,15 +123,33 @@ The following image shows:
 
 ### Add a database to the availability group
 
+>[!NOTE]
+>At this time, SQL Server Management Studios cannot add a database to an availability group. Use Transact-SQL.
+
 After Kubernetes creates the SQL Server containers, complete the following steps to add a database to the availability group:
 
 1. [Connect](sql-server-linux-kubernetes-connect.md) to a SQL Server instance in the cluster.
 
 1. Create a database.
 
+  ```sql
+  CREATE DATABASE [TestDB]
+  ```
+
 1. Take a full backup of the database to start the log chain.
 
+  ```sql
+  BACKUP DATABASE [TestDB]
+  ```
+
 1. Add the database to the availability group.
+
+  ```sql
+  USE MASTER
+  GO
+  ALTER AVAILABILITY GROUP [ag1]
+  ADD DATABASE [TestDB]
+  ```
 
 The availability group is created with automatic seeding so SQL Server will automatically create the secondary replicas.
 

@@ -13,11 +13,15 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 ---
 # Deploy a SQL Server Always On Availability Group on Kubernetes Cluster
 
+The example in this article deploys a SQL Server Always On availability group on a Kubernetes cluster with three replicas. The secondary replicas are in synchronous commit mode.
+
+On Kubernetes the deployment includes a SQL Server operator, the SQL Server containers, and load balancer services. The operator orchestrates the availability group automatically. This article explains how to deploy these objects, and then add a database to the availability group that is deployed.
+
 ## Requirements
 
 - A Kubernetes cluster
 - Kubernetes version 1.11.0 or higher
-- Four or more nodes
+- At least three nodes
 - [kubectl](http://kubernetes.io/docs/tasks/tools/install-kubectl/).
 - Access to the [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files) github repository
 
@@ -28,7 +32,7 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
   az aks create --resource-group myResourceGroup --name myAKSCluster --node-count 4 --kubernetes-version 1.11.1
   >```
 
-## Steps
+## Steps to deploy SQL Server 
 
 1. Create a [namespace](https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/).
 
@@ -36,16 +40,6 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 
   ```azurecli
   kubectl create namespace ag1
-  ```
-
-1. Create Kubernetes a secret for the SA password.
-
-  Create the secret with  `kubectl`. The following script creates a secret named `sql-secrets` in the `ag1` namespace. The secret stores a password named `sapassword`.
-
-  Copy the script to your terminal. Replace `<>` with a complex password, and run the script to create the secret with the complex password.
-
-  ```azurecli
-  kubectl create secret generic sql-secrets --from-literal=sapassword="<>" --namespace ag1
   ```
 
 1. Configure and deploy the SQL Server operator manifest.
@@ -58,6 +52,29 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 
   ```azurecli
   kubectl apply -f operator.yaml
+  ```
+
+1. Create Kubernetes a secret for the SA password.
+
+  Create the secret with  `kubectl`. The following script creates a secret named `sql-secrets` in the `ag1` namespace. The secret stores a password named `sapassword`.
+
+  Copy the script to your terminal. Replace `<>` with a complex password, and run the script to create the secret with the complex password.
+
+  ```azurecli
+  kubectl create secret generic sql-secrets --from-literal=sapassword="<>" --namespace ag1
+  ```
+
+1. Create a Kubernetes secret for the SA password.
+
+  Create the secret with  `kubectl`. The following script creates a secret named `sql-secrets` in the `ag1` namespace. The stores two passwords: 
+  
+  - `sapassword` stores the password for the SQL Server `sa` account.
+  - `masterkeypassword` stores the password used to create the SQL Server master key. 
+
+  Copy the script to your terminal. Replace `<>` with complex passwords, and run the script to create the secrets with passwords.
+
+  ```azurecli
+  kubectl create secret generic sql-secrets --from-literal=sapassword="<>" --from-literal=masterkeypassword="<>"  --namespace ag1
   ```
 
 1. Deploy the SQL Server custom resource.

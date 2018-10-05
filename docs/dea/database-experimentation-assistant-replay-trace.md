@@ -110,7 +110,7 @@ Open a target trace file and view it in SQL Profiler. Or, if you wish to make mo
 
 ### Which trace events does DEA collect during Replay?
 
-The trace events captured include performance-related information. The capture configuration is present in the StartReplayCaptureTrace.sql script. These events are typical SQL Trace Events that are listed here: https://msdn.microsoft.com/en-us/library/ms186265.aspx.
+The trace events captured include performance-related information. The capture configuration is present in the StartReplayCaptureTrace.sql script. These events are typical SQL Trace Events that are listed here: https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.
 
 ## Troubleshooting Replay Trace
 ### I'm unable to connect to the SQL Server.
@@ -146,9 +146,9 @@ This issue can happen because the trace file doesn't have replayable events or d
 
 ### I'm getting an "Unexpected error occurred!" while trying to preprocess my trace files using SQL Server 2017 Distributed Replay controller.
 
-This issue is known in the RTM version of SQL Server 2017. For more information, see [https://support.microsoft.com/en-us/help/4045678/fix-unexpected-error-when-you-use-the-dreplay-feature-to-replay-a](https://support.microsoft.com/en-us/help/4045678/fix-unexpected-error-when-you-use-the-dreplay-feature-to-replay-a).  
+This issue is known in the RTM version of SQL Server 2017. For more information, see [https://support.microsoft.com/help/4045678/fix-unexpected-error-when-you-use-the-dreplay-feature-to-replay-a](https://support.microsoft.com/help/4045678/fix-unexpected-error-when-you-use-the-dreplay-feature-to-replay-a).  
   
-The issue has been addressed in the latest Cumulative Update 1 for SQL Server 2017. Download the latest CU from [https://support.microsoft.com/en-us/help/4038634/cumulative-update-1-for-sql-server-2017](https://support.microsoft.com/en-us/help/4038634/cumulative-update-1-for-sql-server-2017).
+The issue has been addressed in the latest Cumulative Update 1 for SQL Server 2017. Download the latest CU from [https://support.microsoft.com/help/4038634/cumulative-update-1-for-sql-server-2017](https://support.microsoft.com/help/4038634/cumulative-update-1-for-sql-server-2017).
 
 ## Next steps
 For a 19-minute introduction and demonstration of this feature, watch the following video:

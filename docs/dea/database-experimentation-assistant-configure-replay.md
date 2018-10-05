@@ -119,4 +119,4 @@ The following steps must be performed for each replay.
 
 - For a 19-minute introduction and demonstration of DEA, watch the following video:
 
-> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-Database-Experimentation-Assistant/player]
+  > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-Database-Experimentation-Assistant/player]

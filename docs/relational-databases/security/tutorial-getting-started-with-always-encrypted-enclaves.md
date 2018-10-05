@@ -1,5 +1,5 @@
 ---
-title: "Getting Started with Always Encrypted with Secure Enclaves | Microsoft Docs"
+title: "Tutorial: Getting Started with Always Encrypted with secure enclaves using SSMS | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/04/2018"
 ms.prod: sql
@@ -14,12 +14,12 @@ ms.author: jaszymas
 manager: craigg
 monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 ---
-# Getting started with Always Encrypted with secure enclaves
+# Tutorial: Getting started with Always Encrypted with secure enclaves using SSMS
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-This article is a tutorial on how to get started with  [Always Encrypted with secure enclaves](encryption/always-encrypted-enclaves.md). It will show you:
+This tutorial teaches you how to get started with [Always Encrypted with secure enclaves](encryption/always-encrypted-enclaves.md). It will show you:
 - How to create a simple environment for testing and evaluating Always Encrypted with secure enclaves.
-- How to encrypt data in-place and issue rich queries against encrypted columns using SSMS.
+- How to encrypt data in-place and issue rich queries against encrypted columns using SQL Server Management Studio (SSMS).
 
 ## Prerequisites
 
@@ -32,7 +32,7 @@ To get started with Always Encrypted with secure enclaves, you need at least two
 
 - [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] or later
 - Windows 10 Enterprise version 1809, or Windows Server 2019 Datacenter
-- [SSMS 18.0 or later](../../ssms/download-sql-server-management-studio-ssms.md).
+- [SQL Server Management Studio (SSMS) 18.0 or later](../../ssms/download-sql-server-management-studio-ssms.md).
 
 Alternatively, you can install SSMS on another machine.
 
@@ -131,7 +131,7 @@ If all else fails, run Clear-HgsClientHostKey and repeat steps 4-7.
 
 In this step, you will enable the functionality of Always Encrypted using enclaves in your SQL Server instance.
 
-1. Open SSMS and connect to your SQL Server instance and open a new query window.
+1. Open SSMS, connect to your SQL Server instance as sysadmin, and open a new query window.
 2. Configure the secure enclave type to VBS.
 
    ```sql
@@ -303,7 +303,7 @@ Now, you can run rich queries against the encrypted columns. Some query processi
     ```
 
 ## Next Steps
-See [Configure Always Encrypted with secure enclaves](encryption/configure-always-encrypted-enclaves.md) for ideas about other use cases, you can try, including:
+See [Configure Always Encrypted with secure enclaves](encryption/configure-always-encrypted-enclaves.md) for ideas about other use cases, you can try the following:
 
 - Configuring TPM attestation.
 - Configuring HTTPS for your HGS instance.

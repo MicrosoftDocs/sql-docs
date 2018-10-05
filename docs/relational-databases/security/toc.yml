@@ -46,9 +46,9 @@
   href: sql-server-certificates-and-asymmetric-keys.md
 - name: Tutorials
   items:
-    - name: Always encrypted
+    - name: Always Encrypted
       items:
-        - name: Getting Started with Always Encrypted with Secure Enclaves
+        - name: Getting Started with Always Encrypted with secure enclaves using SSMS
           href: tutorial-getting-started-with-always-encrypted-enclaves.md
 
 

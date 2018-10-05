@@ -15,9 +15,9 @@ manager: craigg
 monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 ---
 # Getting started with Always Encrypted with secure enclaves
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-This article is a tutorial on how to get started with  [Always Encrypted with secure enclaves](always-encrypted-enclaves.md). It will show you:
+This article is a tutorial on how to get started with  [Always Encrypted with secure enclaves](encryption/always-encrypted-enclaves.md). It will show you:
 - How to create a simple environment for testing and evaluating Always Encrypted with secure enclaves.
 - How to encrypt data in-place and issue rich queries against encrypted columns using SSMS.
 
@@ -28,9 +28,9 @@ To get started with Always Encrypted with secure enclaves, you need at least two
 
 ### SQL Server computer requirements
 
-  - [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)] or later
+  - [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] or later
   - Windows 10 Enterprise, version 1809 or Windows Server 2019 Datacenter
-  - [SSMS 18.0 or later](../../../ssms/download-sql-server-management-studio-ssms.md).
+  - [SSMS 18.0 or later](../../ssms/download-sql-server-management-studio-ssms.md).
 
 Alternatively, you can install SSMS on another machine.
 >[!NOTE] 
@@ -147,7 +147,7 @@ In this step, you will enable the functionality of Always Encrypted using enclav
    ```
 
     > [!NOTE]
-    > Rich computations are disabled by default in [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)]. They need to be enabled using the above statement after each restart of your SQL Server instance.
+    > Rich computations are disabled by default in [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)]. They need to be enabled using the above statement after each restart of your SQL Server instance.
 
 ## Step 4: Create a sample database
 In this step, you will create a database with some sample data, which you will encrypt later.
@@ -281,7 +281,7 @@ SELECT * FROM [dbo].[Employees]
 WHERE SSN LIKE @SSNPattern AND [Salary] >= @MinSalary;
 ```
 ## Next Steps
-See [Configure Always Encrypted with secure enclaves](configure-always-encrypted-enclaves.md) for ideas about other use cases, you can try, including:
+See [Configure Always Encrypted with secure enclaves](encryption/configure-always-encrypted-enclaves.md) for ideas about other use cases, you can try, including:
 - Configuring TPM attestation.
 - Configuring HTTPS for your HGS instance.
 - Developing applications that issue rich queries against encrypted columns.

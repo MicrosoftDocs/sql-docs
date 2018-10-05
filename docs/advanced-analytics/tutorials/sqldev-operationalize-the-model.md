@@ -187,7 +187,7 @@ In this section, you learn how to create single predictions using a stored proce
     EXEC [dbo].[PredictTipSingleMode] 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
-3. The results indicate that the probability of getting a tip is low on these top 10 trips, since all are single-passenger trips over a relatively short distance.
+3. The results indicate that the probability of getting a tip is low (zero) on these top 10 trips, since all are single-passenger trips over a relatively short distance.
 
 ## Conclusions
 

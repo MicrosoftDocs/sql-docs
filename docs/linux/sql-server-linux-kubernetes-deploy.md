@@ -81,7 +81,7 @@ On Kubernetes the deployment includes a SQL Server operator, the SQL Server cont
   Copy the SQL Server manifest [`sqlserver.yaml`](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files/sqlserver.yaml) from [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files).
 
   >[!NOTE]
-  >The `sqlserver.yaml` file describes the SQL Server containers, persistent volume claims, and persistent volumes that are required for the storage for each SQL Server instance.
+  >The `sqlserver.yaml` file describes the SQL Server containers, persistent volume claims, persistent volumes, and load-balancing services that are required for each SQL Server instance.
 
   Apply the manifest to the Kubernetes cluster.
 
@@ -101,8 +101,8 @@ Use `az aks browse` to launch the dashboard.
 
 The [`ag-services.yaml`](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files/ag-services.yaml) from [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files) example describes load-balancing services that can connect to availability group replicas. 
 
-- `ag1-primary` connects to the primary replica.
-- `ag1-secondary` connects to any secondary replica.
+- `ag1-primary` provides an endpoint to connect to the primary replica of the AG.
+- `ag1-secondary` provides an endpoint to connect to any secondary replica.
 
 When you apply the manifest file in the example, Kubernetes creates the load-balancing services for each type of replica. The load-balancing service includes an IP address. Use this IP address to connect to the type of replica you need.
 
@@ -120,8 +120,11 @@ With the IP address, you can connect to the SQL Server instance that hosts each 
 
 The following image shows:
 
-1. The output from `kubectl get services` for the namespace `ag1`.
-1. The connection to the replica, with `sqlcmd`, and the `sa` account.
+- The output from `kubectl get services` for the namespace `ag1`.
+
+ This includes the load-balancing services that are created for each SQL Server container. You can use these IP addresses as endpoints to connect directly to the instances of SQL Server in the cluster.
+
+- The `sqlcmd` connection to the primary replica, with the `sa` account via the load-balancer endpoint.
 
 ![connect](./media/sql-server-linux-kubernetes-deploy/connect.png)
 

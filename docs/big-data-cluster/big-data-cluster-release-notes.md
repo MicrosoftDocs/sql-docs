@@ -41,7 +41,31 @@ The following sections describe the new features and known issues for big data c
 
 ### Known issues
 
-TBD 
+The following sections provide known issues for SQL Server big data clusters in CTP 2.0.
+
+#### Kubernetes
+
+- SQL Server big data clusters have only been tested with Kubernetes version 1.10.*. If you are using Azure Kubernetes Service (AKS), note that disk resizing is not available for version 1.10*.
+
+#### External tables
+
+- It is possible to create a data pool external table for a table that has unsupported column types. If you query the external table, you get a message similar to the following:
+
+   `Msg 7320, Level 16, State 110, Line 44 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 105079; Columns with large object types are not supported for external generic tables.`
+
+- If you query a storage pool external table, you might get an error if the underlying file is being copied into HDFS at the same time.
+
+   `Msg 7320, Level 16, State 110, Line 157 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 110806;A distributed query failed: One or more errors occurred.`
+
+#### Spark
+
+- If a storage node goes down and gets recreated, Spark might crash.
+
+#### Security
+
+- The SA_PASSWORD is part of the environment and discoverable (for example in a cord dump file). You must reset the SA_PASSWORD on the master instance after deployment. This is not a bug but an important security step.
+
+- AKS logs may contain SA password for big data cluster deployments.
 
 ## Next steps
 

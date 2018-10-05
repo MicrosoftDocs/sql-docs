@@ -101,7 +101,7 @@ Use `az aks browse` to launch the dashboard.
 
 The [`ag-services.yaml`](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files/ag-services.yaml) from [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files) example describes load-balancing services that can connect to availability group replicas. 
 
-- `ag1-primary` provides an endpoint to connect to the primary replica of the AG.
+- `ag1-primary` provides an endpoint to connect to the primary replica.
 - `ag1-secondary` provides an endpoint to connect to any secondary replica.
 
 When you apply the manifest file in the example, Kubernetes creates the load-balancing services for each type of replica. The load-balancing service includes an IP address. Use this IP address to connect to the type of replica you need.
@@ -122,7 +122,7 @@ The following image shows:
 
 - The output from `kubectl get services` for the namespace `ag1`.
 
- This includes the load-balancing services that are created for each SQL Server container. You can use these IP addresses as endpoints to connect directly to the instances of SQL Server in the cluster.
+ The services the load-balancing services that are created for each SQL Server container. Use these IP addresses as endpoints to connect directly to the instances of SQL Server in the cluster.
 
 - The `sqlcmd` connection to the primary replica, with the `sa` account via the load-balancer endpoint.
 

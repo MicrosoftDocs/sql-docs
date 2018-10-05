@@ -70,7 +70,7 @@ On Kubernetes the deployment includes a SQL Server operator, the SQL Server cont
   Copy the script to your terminal. Replace each `<>` with a complex password, and run the script to create the secret.
 
   >[!NOTE]
-  >The password cannot use `&`,`!`, or `` ` `` characters.
+  >The password cannot use `&`, or `` ` `` characters.
 
   ```azurecli
   kubectl create secret generic sql-secrets --from-literal=sapassword="<>" --from-literal=masterkeypassword="<>"  --namespace ag1

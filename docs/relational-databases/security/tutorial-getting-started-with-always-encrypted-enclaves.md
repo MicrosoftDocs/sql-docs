@@ -29,7 +29,7 @@ To get started with Always Encrypted with secure enclaves, you need at least two
 ### SQL Server computer requirements
 
   - [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] or later
-  - Windows 10 Enterprise, version 1809 or Windows Server 2019 Datacenter
+  - Windows 10 Enterprise version 1809, or Windows Server 2019 Datacenter
   - [SSMS 18.0 or later](../../ssms/download-sql-server-management-studio-ssms.md).
 
 Alternatively, you can install SSMS on another machine.
@@ -40,31 +40,31 @@ Alternatively, you can install SSMS on another machine.
 
   - Windows Server 2019 Standard or Datacenter edition
   - 2 CPUs
-  - 8GB RAM
-  - 100GB storage
+  - 8 GB RAM
+  - 100 GB storage
 >[!NOTE] 
 >The HGS computer should not be joined to a domain before you start. 
 
 ## Step 1: Configure the HGS computer
 In this step, you will configure the HGS computer to run Host Guardian Service supporting host key attestation.
 
-1. Log in to the HGS computer as an administrator (local admin), open an elevated Windows PowerShell console and add the Host Guardian Service role by running the following command:
+1. Sign in to the HGS computer as an administrator (local admin), open an elevated Windows PowerShell console and add the Host Guardian Service role by running the following command:
 
    ```powershell
    Install-WindowsFeature -Name HostGuardianServiceRole -IncludeManagementTools -Restart 
    ```
 
-2. After the HGS computer reboots, log in with you admin account again, open an elevated Windows PowerShell console and run the following commands to install the Host Guardian Service and configure its domain. The password you specify here will only apply to the Directory Services Repair Mode password for Active Directory; it will not change your admin account's login password. You may provide any domain name of your choosing for -HgsDomainName.
+2. After the HGS computer reboots, sign in with your admin account again, open an elevated Windows PowerShell console and run the following commands to install the Host Guardian Service and configure its domain. The password you specify here will only apply to the Directory Services Repair Mode password for Active Directory; it will not change your admin account's login password. You may provide any domain name of your choosing for -HgsDomainName.
 
    ```powershell
    $adminPassword = ConvertTo-SecureString -AsPlainText '<password>' -Force
    Install-HgsServer -HgsDomainName 'bastion.local' -SafeModeAdministratorPassword $adminPassword -Restart
    ```
-3. After the computer reboots again, log in with your admin account (which now also a Domain Admin), open an elevated Windows PowerShell console, and configure host key attestation for your HGS instance. 
+3. After the computer reboots again, sign in with your admin account (which is now also a Domain Admin), open an elevated Windows PowerShell console, and configure host key attestation for your HGS instance. 
    ```powershell
    Initialize-HgsAttestation -HgsServiceName 'hgs' -TrustHostKey  
    ```
-4. Find an IP address of the HGS computer, e.g. by running the following command. You will need  the IP address of the HGS computer in later steps.
+4. Find an IP address of the HGS computer, for example, by running the following command. You will need the IP address of the HGS computer in later steps.
    ```powershell
    Get-NetIPAddress  
    ```
@@ -76,7 +76,7 @@ In this step, you will configure the SQL Server computer as a guarded host, regi
 >[!NOTE] 
 >Host key attestation is only recommended for use in test environments. You should use TPM attestation for production environments. 
 
-1. Log in to your SQL Server computer as an administrator, open an elevated Windows PowerShell console, and install the Guarded Host feature, which will also install Hyper-V (if it is not not installed already).
+1. Sign in to your SQL Server computer as an administrator, open an elevated Windows PowerShell console, and install the Guarded Host feature, which will also install Hyper-V (if it is not installed already).
 
    ```powershell
    Enable-WindowsOptionalFeature -Online -FeatureName HostGuardian -All 
@@ -86,7 +86,7 @@ In this step, you will configure the SQL Server computer as a guarded host, regi
    ```powershell
    $env:computername 
    ```
-4. Log in to the SQL Server computer as an administrator again, open an elevated Windows PowerShell console, generate a unique host key, and export the resulting public key to a file. 
+4. Sign in to the SQL Server computer as an administrator again, open an elevated Windows PowerShell console, generate a unique host key, and export the resulting public key to a file. 
 
    ```powershell
    Set-HgsClientHostKey 
@@ -203,7 +203,7 @@ In this step, you will create a column master key and a column encryption key th
 2. In **Object Explorer**, expand your database and navigate to **Security** > **Always Encrypted Keys**.
 3. Provision a new enclave-enabled column master key:
 
-    1. Right click **Always Encrypted Keys** and select **New Column Master Key…**.
+    1. Right-click **Always Encrypted Keys** and select **New Column Master Key…**.
     2. Select your column master key name: CMK1.
     3. Make sure you select either **Windows Certificate Store (Current User or Local Machine)** or **Azure Key Vault**.
     4. Select **Allow enclave computations**.
@@ -215,13 +215,13 @@ In this step, you will create a column master key and a column encryption key th
 
 4. Create a new enclave-enabled column encryption key:
 
-    1. Right click **Always Encrypted Keys** and select **New Column Encryption Key**.
+    1. Right-click **Always Encrypted Keys** and select **New Column Encryption Key**.
     2. Enter a name for the new column encryption key: CEK1.
     3. In the **Column master key** dropdown, select the column master key you created in the previous steps.
     4. Click **OK**.
 
 ## Step 6: Encrypt some columns in place
-In this step, you will encrypt the data stored in the SSN and Salary columns in-place, i.e. inside the server-side enclave. 
+In this step, you will encrypt the data stored in the SSN and Salary columns in-place, that is, inside the server-side enclave. 
 
 1. In SSMS, configure a new query window with Always Encrypted enabled for the database connection.
     1. In SSMS, open a new query window.
@@ -256,14 +256,14 @@ DBCC FREEPROCCACHE
 GO
 ```
 
-4. To verify the SSN and Salary columns are now encrypted, paste in and execute the below statement in the query window with Always Encrypted disabled. The query window should resturn encrypted values in the SSN and Salary columns.
+4. To verify the SSN and Salary columns are now encrypted, paste in and execute the below statement in the query window with Always Encrypted disabled. The query window should return encrypted values in the SSN and Salary columns.
 ```sql
 SELECT * FROM [dbo].[Employees]
 ```
     
 
 ## Step 7: Run rich queries against encrypted columns
-Now, you can run rich queries against the encrypted columns. Some query processing will be performed inside your server-sie enclave. 
+Now, you can run rich queries against the encrypted columns. Some query processing will be performed inside your server-side enclave. 
 1.  Enable Parameterization for Always Encrypted.
     
     1.  Select **Query** from the main menu of SSMS.
@@ -272,7 +272,7 @@ Now, you can run rich queries against the encrypted columns. Some query processi
     4.  Select or unselect Enable Parameterization for Always Encrypted.
     5.  Click OK.
 
-2.  In the the query window with Always Encrypted enabled, paste in and execute the below query. The query should return plaintext values and rows meeting the specified search criteria.
+2.  In the query window with Always Encrypted enabled, paste in and execute the below query. The query should return plaintext values and rows meeting the specified search criteria.
 
 ```sql
 DECLARE @SSNPattern [char](11) = '%6818'

@@ -169,51 +169,51 @@ In this step, you will create a database with some sample data, which you will e
 1. Connect to your SQL Server instance using SSMS.
 2. Create a new database, named ContosoHR.
 
-```sql
-CREATE DATABASE [ContosoHR] COLLATE Latin1_General_BIN2
-```
+    ```sql
+    CREATE DATABASE [ContosoHR] COLLATE Latin1_General_BIN2
+    ```
 
 3. Make sure you are connected to the newly created database. Create a new table, named Employees.
 
-```sql
-CREATE TABLE [dbo].[Employees]
-(
-    [EmployeeID] [int] IDENTITY(1,1) NOT NULL,
-    [SSN] [char](11) NOT NULL,
-    [FirstName] [nvarchar](50) NOT NULL,
-    [LastName] [nvarchar](50) NOT NULL,
-    [Salary] [money] NOT NULL
-) ON [PRIMARY]
-GO
-```
+    ```sql
+    CREATE TABLE [dbo].[Employees]
+    (
+        [EmployeeID] [int] IDENTITY(1,1) NOT NULL,
+        [SSN] [char](11) NOT NULL,
+        [FirstName] [nvarchar](50) NOT NULL,
+        [LastName] [nvarchar](50) NOT NULL,
+        [Salary] [money] NOT NULL
+    ) ON [PRIMARY]
+    GO
+    ```
 
 4. Add a few employee records to the Employees table.
 
-```sql
-INSERT INTO [dbo].[Employees]
-           ([SSN]
-           ,[FirstName]
-           ,[LastName]
-           ,[Salary])
-     VALUES
-           ('795-73-9838'
-		   , N'Catherine'
-		   , N'Abel'
-		   , $31692)
-GO
+    ```sql
+    INSERT INTO [dbo].[Employees]
+            ([SSN]
+            ,[FirstName]
+            ,[LastName]
+            ,[Salary])
+        VALUES
+            ('795-73-9838'
+            , N'Catherine'
+            , N'Abel'
+            , $31692)
+    GO
 
-INSERT INTO [dbo].[Employees]
-           ([SSN]
-           ,[FirstName]
-           ,[LastName]
-           ,[Salary])
-     VALUES
-           ('990-00-6818'
-		   , N'Kim'
-		   , N'Abercrombie'
-		   , $55415)
-GO
-```
+    INSERT INTO [dbo].[Employees]
+            ([SSN]
+            ,[FirstName]
+            ,[LastName]
+            ,[Salary])
+        VALUES
+            ('990-00-6818'
+            , N'Kim'
+            , N'Abercrombie'
+            , $55415)
+    GO
+    ```
 
 ## Step 5: Provision enclave-enabled keys
 
@@ -222,7 +222,6 @@ In this step, you will create a column master key and a column encryption key th
 1. Connect to your database using SSMS.
 2. In **Object Explorer**, expand your database and navigate to **Security** > **Always Encrypted Keys**.
 3. Provision a new enclave-enabled column master key:
-
     1. Right-click **Always Encrypted Keys** and select **New Column Master Key…**.
     2. Select your column master key name: CMK1.
     3. Make sure you select either **Windows Certificate Store (Current User or Local Machine)** or **Azure Key Vault**.
@@ -231,7 +230,7 @@ In this step, you will create a column master key and a column encryption key th
     6. Select your key if it already exists, or follow the directions on the form to create a new key.
     7. Click **OK**.
 
-        ![Allow enclave computations](./media/always-encrypted-enclaves/allow-enclave-computations.png)
+        ![Allow enclave computations](encryption/media/always-encrypted-enclaves/allow-enclave-computations.png)
 
 4. Create a new enclave-enabled column encryption key:
 
@@ -258,31 +257,31 @@ In this step, you will encrypt the data stored in the SSN and Salary columns in-
     5. Click **Connect**.
 3. Encrypt the SSN and Salary columns. In the query window with Always Encrypted enabled, paste in and execute the below statements:
 
-```sql
-ALTER TABLE [dbo].[Employees]
-ALTER COLUMN [SSN] [char] (11)
-ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCRYPTION_TYPE = Randomized, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL
-WITH
-(ONLINE = ON)
-GO
-DBCC FREEPROCCACHE
-GO
+    ```sql
+    ALTER TABLE [dbo].[Employees]
+    ALTER COLUMN [SSN] [char] (11)
+    ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCRYPTION_TYPE = Randomized, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL
+    WITH
+    (ONLINE = ON)
+    GO
+    DBCC FREEPROCCACHE
+    GO
 
-ALTER TABLE [dbo].[Employees]
-ALTER COLUMN [Salary] [money]
-ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCRYPTION_TYPE = Randomized, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL
-WITH
-(ONLINE = ON)
-GO
-DBCC FREEPROCCACHE
-GO
-```
+    ALTER TABLE [dbo].[Employees]
+    ALTER COLUMN [Salary] [money]
+    ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCRYPTION_TYPE = Randomized, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL
+    WITH
+    (ONLINE = ON)
+    GO
+    DBCC FREEPROCCACHE
+    GO
+    ```
 
 4. To verify the SSN and Salary columns are now encrypted, paste in and execute the below statement in the query window with Always Encrypted disabled. The query window should return encrypted values in the SSN and Salary columns.
 
-```sql
-SELECT * FROM [dbo].[Employees]
-```
+    ```sql
+    SELECT * FROM [dbo].[Employees]
+    ```
 
 ## Step 7: Run rich queries against encrypted columns
 
@@ -294,15 +293,14 @@ Now, you can run rich queries against the encrypted columns. Some query processi
     3. Navigate to **Execution** > **Advanced**.
     4. Select or unselect Enable Parameterization for Always Encrypted.
     5. Click OK.
-
 2. In the query window with Always Encrypted enabled, paste in and execute the below query. The query should return plaintext values and rows meeting the specified search criteria.
 
-```sql
-DECLARE @SSNPattern [char](11) = '%6818'
-DECLARE @MinSalary [money] = $1000
-SELECT * FROM [dbo].[Employees]
-WHERE SSN LIKE @SSNPattern AND [Salary] >= @MinSalary;
-```
+    ```sql
+    DECLARE @SSNPattern [char](11) = '%6818'
+    DECLARE @MinSalary [money] = $1000
+    SELECT * FROM [dbo].[Employees]
+    WHERE SSN LIKE @SSNPattern AND [Salary] >= @MinSalary;
+    ```
 
 ## Next Steps
 See [Configure Always Encrypted with secure enclaves](encryption/configure-always-encrypted-enclaves.md) for ideas about other use cases, you can try, including:

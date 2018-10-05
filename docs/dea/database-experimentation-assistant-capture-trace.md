@@ -17,7 +17,7 @@ manager: craigg
 
 # Capture a trace with Database Experimentation Assistant
 
-Capture trace lets you easily produce a trace file (.trc) containing a log of events that occurred on a specified server within a given period of time. This action must be performed once per server.
+Capture Traces lets you produce a trace file (.trc) that includes a log of captured server events. These are events that occurred on a specified server within a specified time period. Capture trace must be run once per server.
 
 - Before starting your trace capture, make sure you back up all your target databases.
 - Query caching in SQL can affect evaluation results. We recommend restarting the SQL Server service (MSSQLSERVER) in the services application to improve consistency in evaluation results.
@@ -33,7 +33,7 @@ Enter the following information in the input fields before starting the capture 
 ![CaptureTraceInputs](./media/database-experimentation-assistant-capture-trace/dea-capture-trace-inputs.png)
 
 - **Server name:** Provide a SQL server name where the server trace you want captured is running.
-- **Database name:** Provide a Database name to start the trace on it. If you do not specify a database, trace will be captured on all the databases on the server.
+- **Database name:** Provide a Database name to start the trace on it. If you don't specify a database, trace will be captured on all the databases on the server.
 - **Name for capture:** Name the trace file (.trc) for your capture.
 - **Max file size:** Specify the rollover size for files; a new file will be created, as needed, at the specified file size. Recommended rollover size is 200 MB.
 - **Duration:** Select the length of time (in minutes) you want the capture trace to run.
@@ -45,15 +45,15 @@ Enter the following information in the input fields before starting the capture 
 >
 
 ## Begin capturing traces
-After you have entered all input information, select **Start** to begin capturing traces. If the inputs are valid, the capture trace process begins. Otherwise the fields that contain invalid inputs will be highlighted with red. 
+After you enter all input information, select **Start** to begin capturing traces. If the inputs are valid, the capture trace process begins. Otherwise the fields that have invalid inputs are highlighted with red. 
 
-Make sure the entered values are accurate, and again select **Start**.
+Make sure the entered values are correct, and again select **Start**.
 
-After the capture trace has finished running, locate your new trace file in the file location you specified. You can monitor the progress of the capture by selecting the bell icon at the bottom left of the navigation pane.
+After the capture trace has finished running, locate your new trace file in the file location you specified. Select the bell icon at the bottom left of the navigation pane to monitor the progress of the capture.
 
 ![ProgressOnCapture](./media/database-experimentation-assistant-capture-trace/dea-capture-trace-progress.png)
 
-**Trace File (.trc)** – Capture Trace writes out a .trc file to the location specified. This file contains trace results of the activity of a SQL database. TRC files are designed to provide more information about errors that are detected and reported by SQL Server.
+**Trace File (.trc)** – Capture Trace writes out a .trc file to the location specified. This file includes trace results of the activity of a SQL database. TRC files are designed to provide more information about errors that are detected and reported by SQL Server.
 
 ## Frequently asked questions about Capture Trace
 Following are some frequently asked questions about Capture Trace.
@@ -82,28 +82,28 @@ The following table provides the list of events and the corresponding column dat
 
 ### Will there be any performance impact on my production server while capturing traces?
     
-Yes, there will be minimal performance impact during the period of trace collection. Based on our tests we have found about 3% memory pressure.
+Yes, there will be minimal performance impact during trace collection. Based on our tests we have found about 3% memory pressure.
     
 ### What kind of permissions are required for capturing traces from production workload?
     
-- The Windows user performing the trace operation in the DEA Application must have sysadmin privileges in the target SQL Server.
+- The Windows user running the trace operation in the DEA Application must have sysadmin privileges in the target SQL Server.
 - The service account under which the SQL Server is running must have write access to the specified trace file path.
 
 ### Can I capture trace for the entire server vs one single database?
     
-Yes, DEA lets you capture traces for both the server level (for all the databases in the server) or one single database.
+Yes, DEA lets you capture traces for all databases in the server or for one single database.
     
 ### I have a linked server configured in my production environment. Do those queries show up in the traces?
     
-If you are running capture for the entire server (by not providing any value in the Database name field in the capture screen), the trace will capture all the queries including the linked server queries.
+If you're running capture for the entire server, the trace captures all queries, including the linked server queries. To run capture for the entire server, leave the Database name field in the capture screen empty.
     
 ### What is the minimum recommended time for production workload traces?
     
-The general recommendation we offer is to choose a time that best represents the entirety of your workload so that we can run the analysis on all the queries in your workload.
+We recommend that you choose a time that best represents the entirety of your workload. That way, the analysis runs on all the queries in your workload.
     
 ### How important is to take database backup right before the start of the trace capture?
     
-It is important to take backup right before you start the capture. We will be replaying the captured trace in Target 1 and Target 2 and if the database state is not the same, the results of the experimentation will be skewed.
+Before starting your trace capture, make sure you back up all your target databases. The captured trace in Target 1 and Target 2 is replayed, and if the database state is not the same, the results of the experimentation are skewed.
 
 ### Can we collect XEvents instead of traces and replay the same?
     
@@ -113,18 +113,18 @@ Yes. XEvents support is available in DEA. Download the latest version and give i
 If you receive an error while running Capture Trace, first review the following prerequsites to see if it resolves the error:
 
 - Confirm the SQL Server name is valid. To confirm, try connecting to the server using SSMS.
-- Confirm your firewall configuration is not blocking connections to SQL Server.
+- Confirm your firewall configuration isn't blocking connections to SQL Server.
 - Confirm user has the permissions listed in the permissions blog.
-- Confirm that trace name does not follow the standard rollover convention (that is, 'Capture\_1'). You can instead try trace names like 'Capture\_1A' or 'Capture1'.
+- Confirm that trace name doesn't follow the standard rollover convention (that is, 'Capture\_1'). You can instead try trace names like 'Capture\_1A' or 'Capture1'.
 
-Following are some possible errors you might encounter and solutions for resolving them:
+Following are some possible errors you might see and solutions for resolving them:
 
 |Possible Errors|Solution|  
 |---|---|  
 |Unable to start the trace on the target SQL Server, check if you have required permissions and SQL Server account has write access to the specified trace file path Sql Error Code (53)|The user running the DEA Tool should have access to SQL Server and have 'sysadmin' role assigned to the user|  
 |Unable to start the trace on the target SQL Server, check if you have required permissions and SQL Server account has write access to the specified trace file path Sql Error Code (19062)|The trace path specified might not exist or the folder doesn't have write permissions for the account under which SQL Server services are running (for example, NETWORK SERVICE). The path should exist with right permissions in order for the trace to start.|  
 |A DEA trace is currently running on the target server.|An active trace is already running on the target server, DEA will not allow to multiple traces when a server-wide trace is already running.|  
-|Cannot open database requested for capturing trace. This error may be due to incorrect database name|The database specified doesn’t exists or it’s not accessible to the current user. Correct the database name|  
+|Can't open database requested for capturing trace. This error may be due to incorrect database name|The database specified doesn’t exist or it’s not accessible to the current user. Correct the database name|  
 
 If you see any other errors with Sql Error Code, see [System Error Messages](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/cc645603(v=sql.105)) for detailed description and resolution.
     

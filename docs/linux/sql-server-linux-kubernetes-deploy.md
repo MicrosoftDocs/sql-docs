@@ -93,7 +93,8 @@ On Kubernetes the deployment includes a SQL Server operator, the SQL Server cont
   
   The following image shows successful application of `kubectl apply` for this example.
 
-  ![create sqlservers](./media/sql-server-linux-kubernetes-deploy/create-sqlservers.png) 
+  ![create sqlservers](./media/sql-server-linux-kubernetes-deploy/create-sqlservers.png)
+  
   After you apply the SQL Server manifest, the operator deploys the SQL Server containers.
 
   Kubernetes places the containers in pods. Use `kubectl get pods --namespace ag1` to see the status of the pods. The following image shows the example deployment after the SQL Server pods are deployed. 

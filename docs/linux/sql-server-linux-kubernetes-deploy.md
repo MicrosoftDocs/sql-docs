@@ -136,7 +136,7 @@ The following image shows:
 
 ![connect](./media/sql-server-linux-kubernetes-deploy/connect.png)
 
-### Add a database to the availability group
+## Add a database to the availability group
 
 >[!NOTE]
 >At this time, SQL Server Management Studios cannot add a database to an availability group. Use Transact-SQL.

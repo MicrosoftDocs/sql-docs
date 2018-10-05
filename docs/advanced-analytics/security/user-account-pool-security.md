@@ -25,7 +25,7 @@ For more information, see [Security Overview](../../advanced-analytics/concepts/
 
 **Applies to:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)], [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
-## Enable implied authentication for SQL Restricted User Group (SQLRUserGroup) account group
+## Enable implied authentication
 
 If you need to run scripts from a remote data science client, and you are using Windows authentication, additional configuration is required to give worker accounts running R and Python processes permission to sign in to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance on your behalf. This behavior is called *implied authentication*, and is implemented by the database engine to support secure execution of external scripts in SQL Server 2016 and SQL Server 2017.
 
@@ -57,27 +57,11 @@ To enable this setting and force password refresh, open the **Properties** pane 
 
 To reset passwords at regular intervals, you can either set this flag manually or use a script.
 
-## Additional permission required to support remote compute contexts
+## Permission for remote compute contexts
 
 By default, the group of worker accounts does **not** have login permissions on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance with which it is associated. This can be a problem if any R users connect to SQL Server from a remote client to run R scripts, or if a script uses ODBC to get additional data.
 
 To ensure that these scenarios are supported, the database administrator must provide the group of worker accounts with permission to log into the SQL Server instance where the external scripts will be run (**Connect to** permissions). This is referred to as *implied authentication*, and enables SQL Server to run the R scripts using the credentials of the remote user.
 
 > [!NOTE]
-> This limitation does not apply if you use SQL logins to run R scripts from a remote workstation, because the SQL login credentials are explicitly passed from the R client to the SQL Server instance and then to ODBC.
-
-
-### How to enable implied authentication
-
-1. Open SQL Server Management Studio as an administrator on the instance where you will run R or Python code.
-
-2. Run the following script. Be sure to edit the user group name, if you changed the default, and the computer and instance name.
-
-    ```sql
-    USE [master]
-    GO
-    
-    CREATE LOGIN [computername\SQLRUserGroup] FROM WINDOWS WITH DEFAULT_DATABASE=[master], DEFAULT_LANGUAGE=[language]
-    GO
-    ````
-
+> This limitation does not apply if you use SQL logins to run external scripts from a remote workstation, because the SQL login credentials are explicitly passed from the R or Python client to the SQL Server instance and then to ODBC.

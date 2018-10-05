@@ -34,7 +34,7 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT  TO [UserName]
 
 <a name="permissions-db"></a> 
 
-## Give your users read, write, or data definition language (DDL) permissions to databases
+## Give your users permissions to databases
 
 While a user is running scripts, the user might need to read data from other databases. The user might also need to create new tables to store results, and write data into tables.
 

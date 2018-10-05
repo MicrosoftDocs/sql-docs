@@ -15,7 +15,7 @@ manager: cgronlun
 
 This article lists firewall configuration considerations that the administrator or architect should bear in mind when using machine learning services.
 
-## Use a firewall to restrict network access
+## Restrict network access
 
 In a default installation, a Windows firewall rule is used to block all outbound network access from external runtime processes. Firewall rules should be created to prevent the external runtime processes from downloading packages or from making other network calls that could potentially be malicious.
 

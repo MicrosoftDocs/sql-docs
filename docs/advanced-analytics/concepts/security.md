@@ -20,7 +20,7 @@ This article describes the overall security architecture that is used to connect
 + Running external scripts (such as R or Python) directly from SQL Server using stored procedures
 + Running Python with the SQL Server as the remote compute context
 
-## Security overview
+## User security
 
 A SQL Server login or Windows user account is required to run external scripts that use SQL Server data or that run with SQL Server as the compute context.
 
@@ -32,7 +32,7 @@ The login or user account identifies the *security principal*, who might need mu
 + The ability to create new objects, such as tables, stored procedures that use the external script, or custom functions that use R or Python job.
 + The right to install new packages on the SQL Server computer, or use packages provided to a group of users.
 
-Therefore, each person who runs an external script using SQL Server as the execution context must be mapped to a login in the database. Under SQL Server security, it is easiest to create roles to manage sets of permissions, and assign users to those roles, rather than individually set user permissions.
+Therefore, each person who runs an external script using SQL Server as the execution context must be mapped to a user in the database. Under SQL Server security, it is easiest to create roles to manage sets of permissions, and assign users to those roles, rather than individually set user permissions.
 
 Even users who are using R or Python in an external tool must be mapped to a login or account in the database if the user needs to run an external script in-database, or access database objects and data. The same permissions are required whether the external script is sent from a remote data science client or started using a T-SQL stored procedure.
 
@@ -60,7 +60,7 @@ By default, [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] i
 
 For how to configure the [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] service, see [[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] service configuration](../security/sql-server-launchpad-service-account.md).
 
-## Interaction of SQL Server security and Launchpad security
+### Interaction of SQL Server security and Launchpad security
 
 When an external script is executed in the context of the SQL Server computer, the [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] service gets an available worker account (a local user account) from a pool of worker accounts established for external processes and uses that worker account to perform the related tasks.
 
@@ -103,11 +103,13 @@ For such loopback calls to succeed, the group that contains the worker accounts,
 > [!IMPORTANT]
 > For implied authentication to succeed, **SQLRUserGroup** must have an account in the master database for the instance, and this account must be given permissions to connect to the instance.
 
-#### Implied authentication for R
+#### Implied authentication for R and Python
+
+The following diagrams shows the interaction of SQL Server components with the R runtime and how it does implied authentication for R.
 
 ![Implied authentication for R](../security/media/implied-auth-rsql.png)
 
-#### Implied authentication for Python
+The following diagrams shows the interaction of SQL Server components with the Python runtime and how it does implied authentication for Python.
 
 ![Implied authentication for Python](../security/media/implied-auth-python2.png)
 
@@ -121,7 +123,7 @@ The directories used for the processes are managed by the [!INCLUDE[rsql_launchp
 
 For more information about how to change the number of worker accounts, account names, or account passwords, see [Modify the user account pool for SQL Server machine learning](../../advanced-analytics/administration/modify-user-account-pool.md) and [Security configuration for SQLRUserGroup](../../advanced-analytics/security/user-account-pool-security.md).
 
-## Security isolation for multiple external scripts
+## Security for multiple scripts
 
 The isolation mechanism is based on physical user accounts. As satellite processes are started for a specific language runtime, each satellite task uses the worker account specified by the [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]. If a task requires multiple satellites, for example, in the case of parallel queries, a single worker account is used for all related tasks.
 

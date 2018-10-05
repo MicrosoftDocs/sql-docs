@@ -15,7 +15,7 @@ manager: cgronlun
 
 This article describes how you can connect to SQL Server Machine Learning Services from your data science client computer.
 
-## Create an ODBC data source for the instance on your data science client
+## Create an ODBC data source on your data science client
 
 You might create a machine learning solution on a data science client computer. If you need to run code by using the SQL Server computer as the compute context, you have two options: access the instance by using a SQL login, or by using a Windows account.
 

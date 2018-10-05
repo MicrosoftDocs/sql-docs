@@ -94,4 +94,4 @@ All settings take the form of a key-value pair, with each setting on a separate 
 
 ## See Also
 
-[Security considerations](security-considerations-for-the-r-runtime-in-sql-server.md)
+[Security overview for the extensibility framework in SQL Server Machine Learning Services](../../advanced-analytics/concepts/security.md)

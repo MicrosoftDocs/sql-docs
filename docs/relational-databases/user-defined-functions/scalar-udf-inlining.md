@@ -149,25 +149,27 @@ A scalar T-SQL UDF can be inline if all of the following conditions are true:
 - The UDF is not used in a computed column or a check constraint definition.
 - The UDF does not reference user-defined types.
 - There are no signatures added to the UDF.
-- Partition functions cannot be inline.
+- The UDF is not a partition function.
 
-<sup>1</sup> `SELECT` with variable accumulation/aggregation (for example, `SELECT @val += col1 FROM table1`) cannot inline.
+<sup>1</sup> `SELECT` with variable accumulation/aggregation (for example, `SELECT @val += col1 FROM table1`) is not supported for inlining.
+
 <sup>2</sup> Recursive UDFs will be inlined to a certain depth only.
+
 <sup>3</sup> Intrinsic functions whose results depend upon the current system time are time-dependent. An intrinsic function that may update some internal global state is an example of a function with side effects. Such functions return different results each time they are called, based on the internal state.
 
-### Checking whether or not a UDF can be inline
+### Checking whether or not a UDF can be inlined
 
-For every T-SQL scalar UDF, the [sys.sql_modules](../system-catalog-views/sys-sql-modules-transact-sql.md) catalog view includes a property called `is_inlineable`, which indicates whether or not a UDF can be inline or not. A value of 1 indicates that it can be used inline, and 0 indicates otherwise. This property will have a value of 1 for all inline TVFs as well. For all other modules, the value will be 0.
+For every T-SQL scalar UDF, the [sys.sql_modules](../system-catalog-views/sys-sql-modules-transact-sql.md) catalog view includes a property called `is_inlineable`, which indicates whether a UDF is inlineable or not. A value of 1 indicates that it is inlineable, and 0 indicates otherwise. This property will have a value of 1 for all inline TVFs as well. For all other modules, the value will be 0.
 
 >[!NOTE]
->If a scalar UDF can be inline, it does not imply that it will always be inlined. SQL Server will decide (on a per-query, per-UDF basis) whether to inline a UDF or not. For instance, if the UDF definition runs into thousands of lines of code, SQL Server might choose not to inline it. Another example is a UDF in a `GROUP BY` clause - which will not be inlined. This decision is made when the query referencing a scalar UDF is compiled.
+>If a scalar UDF is inlineable, it does not imply that it will always be inlined. SQL Server will decide (on a per-query, per-UDF basis) whether to inline a UDF or not. For instance, if the UDF definition runs into thousands of lines of code, SQL Server might choose not to inline it. Another example is a UDF in a `GROUP BY` clause - which will not be inlined. This decision is made when the query referencing a scalar UDF is compiled.
 
 ### Checking whether inlining has happened or not
 
 If all the preconditions are satisfied and SQL Server decides to perform inlining, it transforms the UDF into a relational expression. From the query plan, it is easy to figure out whether inlining has happened or not:
 
 - The plan xml will not have a `<UserDefinedFunction>` xml node for a UDF that has been inlined successfully. 
-- Certain XEvents are also emitted.
+- Certain XEvents are emitted.
 
 ## Enabling scalar UDF inlining
 
@@ -242,7 +244,8 @@ As described in this article, scalar UDF inlining transforms a query with scalar
 1. Certain warnings in statements inside the UDF (such as divide by zero etc.) which might have been hidden earlier, might show up due to inlining.
 1. Query level join hints might not be valid anymore, as inlining may introduce new joins. Local join hints will have to be used instead.
 1. Views that reference inline scalar UDFs cannot be indexed. If you need to create an index on such views, disable inlining for the referenced UDFs.
-1. The behavior of [Dynamic Data masking](../security/dynamic-data-masking.md) may not be the same as without inlining. More specifically, the behavior with inlining would be identical to the behavior observed if the UDF was a single scalar subquery.
+1. There might be some differences in the behavior of [Dynamic Data masking](../security/dynamic-data-masking.md) with UDF inlining. 
+In certain situations (depending upon the logic in the UDF), inlining might be more conservative w.r.t masking output columns. In scenarios where the columns referenced in a UDF are not output columns, they will not be masked. 
 1. If a UDF references built-in functions such as `SCOPE_IDENTITY()`, the value returned by the built-in function will change with inlining. This change in behavior is because inlining changes the scope of statements inside the UDF.
 
 ## See Also

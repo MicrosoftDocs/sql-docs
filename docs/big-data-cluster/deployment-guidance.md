@@ -44,11 +44,11 @@ For guidance on configuring one of these Kubernetes cluster options for SQL Serv
 
 ## <a id="deploy"></a> Deploy SQL Server Big Data cluster
 
-After you have configured your Kubernetes cluster, you can proceed with the deployment for SQL Server Big Data cluster. To deploy an Aris cluster with all default configurations for a dev/test environment, follow the instructions in this article:
+After you have configured your Kubernetes cluster, you can proceed with the deployment for SQL Server Big Data cluster. To deploy a big data cluster with all default configurations for a dev/test environment, follow the instructions in this article:
 
-[Quickstart: Deploy SQL Server Aris on Kubernetes](quickstart-big-data-cluster-deploy.md)
+[Quickstart: Deploy SQL Server Big Data Cluster on Kubernetes](quickstart-big-data-cluster-deploy.md)
 
-If you want to customize your Aris configuration, according to your workload needs, follow the next set of instructions.
+If you want to customize your big data cluster configuration, according to your workload needs, follow the next set of instructions.
 
 ## Verify kubernetes configuration
 

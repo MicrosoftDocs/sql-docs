@@ -75,13 +75,29 @@ To fail over or move a primary replica to a different node in an availability gr
 
 ## Rotate credentials
 
-Rotate the credentials to update the SA and the master key.
+Rotate credentials to reset the password for the SQL Server `sa` account and the SQL Server [service master key](../relational-databases/security/encryption/service-master-key.md).
 
-Copy the [rotate-creds.yaml](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-deployment-script) locally use `kubectl` to apply it to your cluster.
+Use a Kubernetes job to rotate the credentials. Describe the job in a manifest. [`rotate-creds.yaml`](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-deployment-script/rotate-creds.yaml) in the [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-deployment-script/) github repository is an example of a manifest for this job.
 
-```azurecli
-kubectl apply -f rotate-creds.yaml
-```
+1. Copy [`rotate-creds.yaml`](https://github.com/Microsoft/sql-server-samples/blob/master/samples/features/high%20availability/Kubernetes/sample-manifest-files/rotate-creds.yaml) to your administration terminal. 
+
+1. Update `rotate-creds.yaml` for your environment.
+
+  Set the namespace for the Kubernetes namespace of your availability group. In the example the namespace is `ag1`. 
+
+1. Create a new secret for the password and the master key.
+
+  The following script creates a secret named `new-sql-secrets`. Before you run the script, replace `<>` with complex passwords for the `sapassword` and the `masterkeypassword`. Use different passwords for each respective value.
+
+  ```azurecli
+  kubectl create secret generic new-sql-secrets --from-literal=sapassword="<>" --from-literal=masterkeypassword="<>"  --namespace ag1
+  ```
+
+1. Use `kubectl` to deploy the job.
+
+  ```azurecli
+  kubectl apply -f rotate-creds.yaml
+  ```
 
 ## Next steps
 

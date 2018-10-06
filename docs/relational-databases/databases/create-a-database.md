@@ -50,13 +50,13 @@ manager: craigg
   
 ###  <a name="Prerequisites"></a> Prerequisites  
   
--   The CREATE DATABASE statement must run in autocommit mode (the default transaction management mode) and is not allowed in an explicit or implicit transaction.  
+-   The CREATE DATABASE statement must run in autocommit mode (the default transaction management mode) which will automatically commit ( save changes by making checkpoints ) your changes and this statement is not allowed in an explicit or implicit transaction.  
   
 ###  <a name="Recommendations"></a> Recommendations  
   
--   The [master](../../relational-databases/databases/master-database.md) database should be backed up whenever a user database is created, modified, or dropped.  
+-   The [master](../../relational-databases/databases/master-database.md) database should be backed up whenever a user database is created, altered, or dropped.  
   
--   When you create a database, make the data files as large as possible based on the maximum amount of data you expect in the database.  
+-   When you create a database, make the data files as large as possible based on the maximum amount of data you expect in the database. But do not waste the data space by making large data files and not using it properly. 
   
 ###  <a name="Security"></a> Security  
   

@@ -11,9 +11,9 @@ ms.prod: sql
 
 # Restore a database into the SQL Server big data cluster master instance
 
-To bring an existing SQL Server database into the master instance, we recommend using a backup, copy and restore approach.  In this example we will show how to restore the AdventureWorks database, but you can use any database backup that you have.  You can download the AdventureWorks backup [here](https://www.microsoft.com/en-us/download/details.aspx?id=49502).
+To bring an existing SQL Server database into the master instance, we recommend using a backup, copy, and restore approach.  This article shows how to restore the AdventureWorks database. You can use any database backup. You can download the AdventureWorks backup [here](https://www.microsoft.com/en-us/download/details.aspx?id=49502).
 
-First, backup your existing SQL Server database on either SQL Server on Windows or Linux using any of the usual methods of creating a database backup.
+First, backup your existing SQL Server database from either SQL Server on Windows or Linux. Use any of the usual database backup methods.
 
 Copy the backup file to the SQL Server container in the master instance pod of the Kubernetes cluster.
 
@@ -56,7 +56,7 @@ RESTORE FILELISTONLY FROM DISK='/tmp/AdventureWorks2016CTP3.bak'
 
 ![Backup file list](media/restore-database/database-restore-file-list.png)
 
-Now, restore the database with a script like this, substituting the names/paths as needed depending on your database backup.
+Now, restore the database. The following script is an example. Replace the names/paths as needed depending on your database backup.
 
 ```sql
 RESTORE DATABASE AdventureWorks2016CTP3
@@ -66,7 +66,7 @@ WITH MOVE 'AdventureWorks2016CTP3_Data' TO '/var/opt/mssql/data/AdventureWorks20
         MOVE 'AdventureWorks2016CTP3_mod' TO '/var/opt/mssql/data/AdventureWorks2016CTP3_mod'
 ```
 
-Now, if you want to have your database in SQL Server master instance be able to access data pools and/or HDFS, you will need to setup the data pool and storage pool stored procedures by running these T-SQL scripts against your newly restored database:
+Now, for the SQL Server master instance to access data pools and HDFS, setup the data pool and storage pool stored procedure. Run the following Transact-SQL scripts against your newly restored database:
 
 ```sql
 USE AdventureWorks2016CTP3

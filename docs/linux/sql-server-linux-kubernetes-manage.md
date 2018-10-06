@@ -25,14 +25,14 @@ To fail over or move a primary replica to a different node in an availability gr
 
 1. Define a job in a manifest file.
 
-  [`failover.yaml`](https://github.com/Microsoft/sql-server-samples/blob/master/samples/features/high%20availability/Kubernetes/sample-deployment-script/templates/failover.yaml) - in the [sql-server-samples](https://github.com/Microsoft/sql-server-samples/blob/master/samples/features/high%20availability/Kubernetes/sample-deployment-script/templates) github repository describes a failover job.
+  [`failover.yaml`](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files/failover.yaml) - in the [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files) github repository describes a failover job.
 
   Copy the manifest file to your administration terminal.
 
   Update the file for your environment.
 
-  - Replace `ag1` with the name of the availability group namespace.
   - Replace `<containerName>` with the name of the expected availability group target.
+  - If the availability group is not in the `ag1` namespace, replace `ag1` with the namespace of the availability group throughout the file.
 
   This file defines a failover job named `manual-failover`.
 

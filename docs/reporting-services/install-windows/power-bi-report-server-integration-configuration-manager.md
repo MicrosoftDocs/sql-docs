@@ -5,7 +5,6 @@ ms.author: maghan
 manager: kfile
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.date: 09/17/2017
 ---

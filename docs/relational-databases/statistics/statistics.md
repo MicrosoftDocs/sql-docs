@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "12/18/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: performance
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "statistical information [SQL Server], query optimization"

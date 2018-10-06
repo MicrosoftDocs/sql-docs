@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "modifying variables"
   - "variables [Integration Services], properties"
 ms.assetid: f98ddbec-f668-4dba-a768-44ac3ae0536f
-caps.latest.revision: 26
 author: douglaslms
 ms.author: douglasl
 manager: craigg

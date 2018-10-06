@@ -6,13 +6,10 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "enumerated constants [ADO MD]"
 ms.assetid: d9e66999-96f3-48ec-93b2-d9442da56d9b
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg

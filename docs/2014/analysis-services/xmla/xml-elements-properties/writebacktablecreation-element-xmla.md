@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "WritebackTableCreation Element"
@@ -23,7 +21,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "WritebackTableCreation element"
 ms.assetid: e9579d63-e28c-4d4e-9f4a-21c5da24c276
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg

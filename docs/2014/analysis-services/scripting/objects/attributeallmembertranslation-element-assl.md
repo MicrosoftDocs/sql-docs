@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "AttributeAllMemberTranslation Element"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "AttributeAllMemberTranslation element"
 ms.assetid: 4b0c61dd-6666-4bf4-9b23-c9d8e315c414
-caps.latest.revision: 30
 author: minewiskan
 ms.author: owend
 manager: craigg

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -20,7 +17,6 @@ helpviewer_keywords:
   - "troubleshooting [SQL Server], Database Mail"
   - "status information [SQL Server], Database Mail"
 ms.assetid: ab8728e0-803f-4b6f-b66f-9880ec37a49e
-caps.latest.revision: 15
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

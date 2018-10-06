@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Business Intelligence enhancements [Analysis Services], dimension intelligence"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "dimension intelligence [Analysis Services]"
   - "Type property"
 ms.assetid: b64fa386-eac2-4286-a320-0631a1887aac
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg

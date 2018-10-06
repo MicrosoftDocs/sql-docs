@@ -5,9 +5,7 @@ ms.date: "05/15/2018"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.excelsource.f1"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "Excel [Integration Services]"
   - "sources [Integration Services], Excel"
 ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
-caps.latest.revision: 60
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

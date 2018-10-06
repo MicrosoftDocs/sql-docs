@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/29/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "QUERY_STORE_RUNTIME_STATS_INTERVAL"
@@ -21,7 +18,6 @@ helpviewer_keywords:
   - "sys.query_store_runtime_stats_interval catalog view"
   - "query_store_runtime_stats_interval catalog view"
 ms.assetid: 2be83785-0569-41a3-88c8-59bfa0932e6e
-caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg

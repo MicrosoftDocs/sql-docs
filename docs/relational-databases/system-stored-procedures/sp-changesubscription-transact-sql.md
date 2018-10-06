@@ -4,15 +4,10 @@ ms.custom: ""
 ms.date: "10/28/2015"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "replication"
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "changesubscription"
   - "sp_changesubscription"
@@ -21,7 +16,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_changesubscription"
 ms.assetid: f9d91fe3-47cf-4915-b6bf-14c9c3d8a029
-caps.latest.revision: 40
 author: stevestein
 ms.author: sstein
 manager: craigg

@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "FirstDayOfWeek Element"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "FirstDayOfWeek element"
 ms.assetid: d3c92fa3-b293-43b5-806e-cd1c146a3a7c
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg

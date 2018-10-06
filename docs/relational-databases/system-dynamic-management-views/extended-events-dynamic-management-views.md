@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -14,7 +12,6 @@ helpviewer_keywords:
   - "extended events [SQL Server], dynamic management objects"
   - "dynamic management objects (SQL Server)"
 ms.assetid: 6d337c2f-71e9-4e0c-8877-9780baa7699d
-caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg

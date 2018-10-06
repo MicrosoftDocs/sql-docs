@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-functions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "GetFileNamespacePath"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "GetFileNamespacePath function"
 ms.assetid: b393ecef-baa8-4d05-a268-b2f309fce89a
-caps.latest.revision: 16
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

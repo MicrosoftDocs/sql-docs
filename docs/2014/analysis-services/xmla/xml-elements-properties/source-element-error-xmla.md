@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "Source Element (Error)"
@@ -23,7 +21,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "Source element"
 ms.assetid: eed47b9f-0501-4baf-8cac-3ea839a859c3
-caps.latest.revision: 9
 author: minewiskan
 ms.author: owend
 manager: craigg

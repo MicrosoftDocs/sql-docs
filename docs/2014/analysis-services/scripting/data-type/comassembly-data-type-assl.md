@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "ComAssembly Data Type"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "ComAssembly data type"
 ms.assetid: 23c0f4b3-b6ac-4ec8-9254-74d2f84f5244
-caps.latest.revision: 49
 author: minewiskan
 ms.author: owend
 manager: craigg

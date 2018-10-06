@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-agent"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Agent jobs, operators"
@@ -16,7 +13,6 @@ helpviewer_keywords:
   - "jobs [SQL Server Agent], operators"
   - "operators (users) [Database Engine], modifying with Management Studio"
 ms.assetid: b2ba2168-ca0b-4b59-9007-4e1e4c30679e
-caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

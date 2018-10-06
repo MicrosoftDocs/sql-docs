@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Analysis Services, technical reference"
   - "multidimensional data [Analysis Services], technical reference"
   - "technical reference [Analysis Services - multidimensional data]"
 ms.assetid: 1226c5a4-fd88-469c-81fe-3f664ab66e5e
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg

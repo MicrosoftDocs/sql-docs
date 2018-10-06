@@ -5,9 +5,7 @@ ms.date: "10/24/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "COLLATIONPROPERTY_TSQL"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "collations [SQL Server], properties"
   - "COLLATIONPROPERTY function"
 ms.assetid: f5029e74-a1db-4f69-b0f5-5ee920c3311d
-caps.latest.revision: 44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

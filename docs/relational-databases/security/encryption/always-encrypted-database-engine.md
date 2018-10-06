@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "04/24/2017"
 ms.prod: sql
 ms.reviewer: vanto
-ms.suite: "sql"
 ms.technology: security
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "encryption [SQL Server], Always Encrypted"
@@ -68,7 +66,7 @@ Here's an example of an update that attempts to move data from an encrypted colu
 update dbo.Patients set testssn = SSN
 ```
 
-If SSN is a column encrypted using Always Encryption, the above update statement will fail with an error similar to:
+If SSN is a column encrypted using Always Encrypted, the above update statement will fail with an error similar to:
 
 ```
 Msg 206, Level 16, State 2, Line 89

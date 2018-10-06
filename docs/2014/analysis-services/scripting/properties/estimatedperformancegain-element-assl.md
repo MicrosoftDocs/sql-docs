@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "EstimatedPerformanceGain Element"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "EstimatedPerformanceGain element"
 ms.assetid: d7487977-73c3-4244-ad5d-3c357b219db4
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg

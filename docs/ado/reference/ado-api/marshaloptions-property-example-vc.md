@@ -6,15 +6,12 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "C++"
 helpviewer_keywords: 
   - "MarshalOptions property [ADO], VC++ example"
 ms.assetid: a3b6fc09-ce21-450d-9063-bac505208d31
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg

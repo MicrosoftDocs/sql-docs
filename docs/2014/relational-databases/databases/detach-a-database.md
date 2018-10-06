@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.detachdatabase.f1"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "database detaching [SQL Server]"
   - "detaching databases [SQL Server]"
 ms.assetid: f63d4107-13e4-4bfe-922d-5e4f712e472d
-caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg

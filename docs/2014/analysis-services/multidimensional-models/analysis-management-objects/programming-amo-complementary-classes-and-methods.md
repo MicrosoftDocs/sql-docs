@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "restores [AMO]"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "traces [AMO]"
   - "backups [AMO]"
 ms.assetid: 14aed554-d2e2-49e5-9c72-26660759bce2
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg

@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "viewing logs"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "errors [SQL Server], Setup"
   - "logs [SQL Server], Setup"
 ms.assetid: 9d77af64-9084-4375-908a-d90f99535062
-caps.latest.revision: 50
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

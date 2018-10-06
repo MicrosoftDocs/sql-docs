@@ -1,14 +1,11 @@
-﻿---
+---
 title: "Monitor and Respond to Events | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-agent"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "notifications [SQL Server], alert"
@@ -22,7 +19,6 @@ helpviewer_keywords:
   - "monitoring [SQL Server], events"
   - "responding to events automatically"
 ms.assetid: f7fbe155-5b68-4777-bc71-a47637471f32
-caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

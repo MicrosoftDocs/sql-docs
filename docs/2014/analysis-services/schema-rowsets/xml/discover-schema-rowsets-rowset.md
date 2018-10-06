@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "DISCOVER_SCHEMA_ROWSETS"
@@ -17,7 +15,6 @@ topic_type:
 helpviewer_keywords: 
   - "DISCOVER_SCHEMA_ROWSETS rowset"
 ms.assetid: e5012aa0-6ef8-497f-96c1-2772e2394f62
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg

@@ -7,8 +7,6 @@ manager: craigg
 ms.date: 09/24/2018
 ms.topic: article
 ms.prod: sql
-ms.component: ""
-ms.suite: "sql"
 ms.custom: "sql-linux"
 ms.technology: linux
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
@@ -19,13 +17,15 @@ To manage an Always On Availability Group on Kubernetes, create a manifest and a
 
 The examples in this article apply to all Kubernetes cluster. The scenarios in these examples are applied against a cluster on Azure Kubernetes Service.
 
-See an example of the of the end-to-end deployment in [this tutorial](tutorial-sql-server-ag-kubernetes.md).
+See an example of the complete deployment in [Always On availability groups for SQL Server containers](sql-server-ag-kubernetes.md).
 
 ## Fail over - SQL Server availability group on Kubernetes
 
 To fail over an availability group primary replica to a different node in Kubernetes, use a job. This article identifies the environment variables for this job.
 
-The following example of a manifest file describes a job to manually fail over job for an availability group on a Kubernetes replica. Copy the contents of the example into a new file called `failover.yaml`.
+The following manifest file describes a job to manually fail over an availability group. 
+
+Copy the contents of the example into a new file called `failover.yaml`.
 
 [failover.yaml](https://github.com/Microsoft/sql-server-samples/blob/master/samples/features/high%20availability/Kubernetes/sample-deployment-script/templates/failover.yaml)
 
@@ -35,9 +35,9 @@ To deploy the job, use `Kubectl`.
 kubectl apply -f failover.yaml
 ```
 
-When you apply manifest file, Kubernetes runs the job. When the job runs, the supervisor elects a new leader and moves the primary replica to the SQL Server instance of the leader.
+After you apply manifest file, Kubernetes runs the job. The job makes the supervisor elect a new leader and moves the primary replica to the SQL Server instance of the leader.
 
-After you run the job, delete it. The job object in Kubernetes remains after completion so you can view its status. You have to manually delete old jobs after noting their status. Deleting the job also deletes the Kubernetes logs. If you do not delete the job, future failover jobs will fail unless you change the job name and the pod selector. For more information, see [Jobs - Run to Completion](https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/).
+After you run the job, delete it. The job object in Kubernetes stays after completion so you can view its status. You need to manually delete old jobs after noting their status. Deleting the job also deletes the Kubernetes logs. If you don't delete the job, future failover jobs will fail unless you change the job name and the pod selector. For more information, see [Jobs - Run to Completion](https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/).
 
 ## Rotate credentials
 

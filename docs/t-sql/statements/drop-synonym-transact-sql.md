@@ -5,9 +5,7 @@ ms.date: "07/26/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "DROP SYNONYM"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "DROP SYNONYM statement"
   - "dropping synonyms"
 ms.assetid: 23578932-e4de-4c39-a5a0-ce45139c4269
-caps.latest.revision: 24
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

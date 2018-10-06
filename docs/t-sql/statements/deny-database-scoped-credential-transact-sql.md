@@ -5,9 +5,7 @@ ms.date: "12/16/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "DENY DATABASE SCOPED CREDENTIAL"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "DENY statement, database scoped credentials"
   - "denying permissions [SQL Server], database scoped credential"
 ms.assetid: c508b1c9-169e-4e7a-9a49-7ddf2ca8f848
-caps.latest.revision: 2
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

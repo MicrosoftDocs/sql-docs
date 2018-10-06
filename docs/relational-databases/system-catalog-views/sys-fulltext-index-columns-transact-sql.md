@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.fulltext_index_columns"
@@ -22,7 +19,6 @@ helpviewer_keywords:
   - "sys.fulltext_index_columns catalog view"
   - "full-text indexes [SQL Server], properties"
 ms.assetid: c34b8625-e53c-4281-ace6-d46230d5cb84
-caps.latest.revision: 27
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

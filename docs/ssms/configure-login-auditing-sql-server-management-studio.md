@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "auditing [SQL Server]"
   - "audits [SQL Server], logins"
   - "logins [SQL Server], auditing"
 ms.assetid: 16961116-57ac-4eef-8037-791b26ade548
-caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

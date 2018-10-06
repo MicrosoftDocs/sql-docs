@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "VS.ToolsOptionsPages.Text_Editor.SQL.Tabs"
 dev_langs: 
   - "TSQL"
 ms.assetid: a4499784-67f7-46ef-9f7c-2d0fdd117a52
-caps.latest.revision: 10
 author: craigg-msft
 ms.author: craigg
 manager: craigg

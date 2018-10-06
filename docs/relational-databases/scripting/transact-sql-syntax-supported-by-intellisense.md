@@ -5,8 +5,6 @@ ms.date: "03/16/2017"
 ms.prod: sql
 ms.technology: scripting
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "TSQL"
@@ -14,7 +12,6 @@ helpviewer_keywords:
   - "Transact-SQL IntelliSense"
   - "IntelliSense [SQL Server], Transact-SQL syntax"
 ms.assetid: 194e8f4f-fd7e-4f32-a169-f23531128004
-caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg

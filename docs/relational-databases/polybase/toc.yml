@@ -4,8 +4,6 @@
     href: polybase-guide.md
 - name: Concepts
   items:
-  - name: External data sources
-    href: polybase-external-data-sources.md
   - name: Query scenarios
     href: polybase-queries.md
   - name: Push-down computation

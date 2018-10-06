@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "DimensionAttributeBinding Data Type (out-of-line)"
@@ -19,7 +17,6 @@ topic_type:
 helpviewer_keywords: 
   - "DimensionAttributeBinding data type"
 ms.assetid: d8ec77a9-749f-4b08-8d56-8b6514a70248
-caps.latest.revision: 8
 author: minewiskan
 ms.author: owend
 manager: craigg

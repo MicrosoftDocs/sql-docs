@@ -5,9 +5,7 @@ ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "INDEXPROPERTY"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "indexes [SQL Server], viewing"
   - "indexes [SQL Server], properties"
 ms.assetid: 998d5788-4871-44a8-8125-0d9390868b84
-caps.latest.revision: 56
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

@@ -5,8 +5,6 @@ ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: polybase
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
    - "PolyBase, monitoring"

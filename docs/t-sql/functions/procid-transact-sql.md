@@ -5,9 +5,7 @@ ms.date: "09/18/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "@@PROCID"
@@ -24,7 +22,6 @@ helpviewer_keywords:
   - "IDs [SQL Server], modules"
   - "module object identifiers [SQL Server]"
 ms.assetid: 0d4882c7-edb8-49b1-a470-2c7497b8998f
-caps.latest.revision: 43
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

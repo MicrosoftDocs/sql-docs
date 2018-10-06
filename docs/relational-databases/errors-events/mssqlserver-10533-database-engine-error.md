@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 helpviewer_keywords: 
   - "10533 (Database Engine error)"
 ms.assetid: cc2fbdab-7b90-415f-a1f9-066824344283
-caps.latest.revision: 10
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

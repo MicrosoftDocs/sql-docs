@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "filtered Recordset persistence [ADO]"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "data persistence [ADO]"
   - "updating data [ADO], persisting data"
 ms.assetid: d01aeb4d-4e43-450b-b3f2-0c27eaaf9f86
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg

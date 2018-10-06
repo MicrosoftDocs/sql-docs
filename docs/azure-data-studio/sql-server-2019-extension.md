@@ -5,10 +5,7 @@ ms.custom: "tools|sos"
 ms.date: "09/24/2018"
 ms.reviewer: "alayu; sstein"
 ms.prod: sql
-ms.suite: "sql"
 ms.prod_service: sql-tools
-ms.component: sos
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 author: "yualan"
 ms.author: "alayu"
@@ -17,8 +14,7 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
 # SQL Server 2019 extension (preview)
 
-The SQL Server 2019 extension (preview) provides preview support for new features and tools shipping in support of [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]. This includes preview support for SQL Server 2019 [Big Data Clusters](../big-data-cluster/big-data-cluster-overview.md), an integrated Notebook, Polybase Create External Table wizard for SQL Server, and [Azure Resource Explorer](azure-resource-explorer.md).
-
+The SQL Server 2019 extension (preview) provides preview support for new features and tools shipping in support of [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]. This includes preview support for [SQL Server 2019 big data clusters](../big-data-cluster/big-data-cluster-overview.md), an integrated [notebook experience](../big-data-cluster/notebooks-guidance.md), a PolyBase [Create External Table wizard](../relational-databases/polybase/data-virtualization.md?toc=%2fsql%2fbig-data-cluster%2ftoc.json), and [Azure Resource Explorer](azure-resource-explorer.md).
 
 ## Install the SQL Server 2019 extension (preview)
 

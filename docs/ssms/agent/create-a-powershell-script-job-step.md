@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-agent"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "PowerShell [SQL Server], job steps"
@@ -16,7 +13,6 @@ helpviewer_keywords:
   - "job steps [PowerShell]"
   - "SQL Server Agent jobs, PowerShell steps"
 ms.assetid: 50afcf84-fae0-4eb5-9b0f-f2cf144c1433
-caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

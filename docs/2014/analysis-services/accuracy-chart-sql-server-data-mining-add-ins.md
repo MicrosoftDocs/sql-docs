@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "accuracy chart"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "mining models, testing"
   - "lift [data mining]"
 ms.assetid: 303973b4-71c0-4cfc-b7bc-92218b52509d
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg

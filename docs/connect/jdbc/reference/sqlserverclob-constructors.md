@@ -5,13 +5,10 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "Assembly"
 ms.assetid: 287d261a-0527-4890-b0d9-49d5645b41ae
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-functions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.fn_hadr_is_primary_replica"
@@ -21,7 +18,6 @@ helpviewer_keywords:
   - "fn_hadr_is_primary_replica"
   - "sys.fn_hadr_is_primary_replica"
 ms.assetid: c9b1969f-be1d-4dfb-a33d-551f380b9e27
-caps.latest.revision: 7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

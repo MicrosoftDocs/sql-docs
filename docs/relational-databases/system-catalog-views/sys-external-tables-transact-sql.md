@@ -4,12 +4,10 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: fac4720c-b679-4ab2-864b-ff7810a9b559
-caps.latest.revision: 7
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

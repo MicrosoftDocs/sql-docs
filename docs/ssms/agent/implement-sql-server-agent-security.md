@@ -1,14 +1,11 @@
-﻿---
+---
 title: "Implement SQL Server Agent Security | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-agent"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Agent, security"
@@ -16,7 +13,6 @@ helpviewer_keywords:
   - "security [SQL Server Agent]"
   - "security [SQL Server], SQL Server Agent"
 ms.assetid: d770d35c-c8de-4e00-9a85-7d03f45a0f0d
-caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

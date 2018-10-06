@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "Sql12.ssms.XeWizard.Summary.f1"
@@ -31,7 +29,6 @@ helpviewer_keywords:
   - "Sql11.ssms.XeWizard.Summary.f1"
   - "Sql11.ssms.XeWizard.SelectEvents.f1"
 ms.assetid: 80c0456f-17c0-41d8-b2aa-502a2f3bb6de
-caps.latest.revision: 28
 author: mashamsft
 ms.author: mathoma
 manager: craigg

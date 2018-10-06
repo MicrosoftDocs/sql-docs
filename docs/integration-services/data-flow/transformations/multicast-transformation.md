@@ -5,9 +5,7 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.multicasttrans.f1"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "datasets [Integration Services], multiple outputs"
   - "multiple transformations"
 ms.assetid: 32194784-1684-40cd-9f91-1aba4d8360d3
-caps.latest.revision: 45
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

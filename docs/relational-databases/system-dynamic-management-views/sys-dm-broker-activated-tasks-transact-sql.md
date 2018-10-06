@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.dm_broker_activated_tasks"
@@ -18,7 +16,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_broker_activated_tasks dynamic management view"
 ms.assetid: 17e6f87f-8f56-489d-9aed-216afc8ef310
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg

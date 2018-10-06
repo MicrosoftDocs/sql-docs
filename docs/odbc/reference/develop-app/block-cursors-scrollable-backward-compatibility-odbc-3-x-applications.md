@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "compatibility [ODBC], cursors"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "cursors [ODBC], compatibility issues"
   - "SQLFetchScroll function [ODBC], block cursors"
 ms.assetid: 82f6cf68-cfde-4417-9788-d6382ca14bf8
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg

@@ -4,13 +4,8 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "08/15/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 helpviewer_keywords: 
   - "Access databases, versions"
   - "Access databases, when to migrate"
@@ -23,7 +18,6 @@ helpviewer_keywords:
   - "versions of Access"
   - "workgroup security"
 ms.assetid: 9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114
-caps.latest.revision: 20
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "murato"

@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "10/21/2015"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "troublshooting, failover clustering"

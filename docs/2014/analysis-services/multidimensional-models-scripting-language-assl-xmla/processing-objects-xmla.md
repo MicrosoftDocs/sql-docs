@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "errors [XML for Analysis]"
@@ -22,7 +20,6 @@ helpviewer_keywords:
   - "processing objects [XML for Analysis]"
   - "XMLA, objects"
 ms.assetid: a65b3249-303d-49c6-98af-6ac6eed11a03
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg

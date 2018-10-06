@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "MinimumProbability property"
@@ -30,7 +28,6 @@ helpviewer_keywords:
   - "MINIMUM_ITEMSET_SIZE"
   - "MaximumItemsetSize property"
 ms.assetid: 8b6b8247-62f9-4f6f-b1af-d01dab290e4c
-caps.latest.revision: 53
 author: minewiskan
 ms.author: owend
 manager: craigg

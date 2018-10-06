@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "08/25/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: install
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "concurrent installations [SQL Server]"

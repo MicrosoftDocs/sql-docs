@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.bidtoolset.deployment.f1"
@@ -15,7 +13,6 @@ f1_keywords:
   - "sql12.asvs.bidtoolset.asoptions.f1"
   - "VS.TOOLSOPTIONSPAGES.ANALYSIS_SERVICES.DEPLOYMENT"
 ms.assetid: 140d0c4e-943c-4387-a8d2-6e066c7e4e75
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg

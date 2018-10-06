@@ -5,10 +5,7 @@ ms.date: "07/10/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.component: "system-catalog-views"
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.index_resumable_operations_TSQL"
@@ -19,7 +16,6 @@ helpviewer_keywords:
   - "sys.indexes"
   - "sys.index_resumable_operations"
 ms.assetid: 
-caps.latest.revision: 1
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg

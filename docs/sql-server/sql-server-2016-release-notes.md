@@ -3,10 +3,8 @@ title: "SQL Server 2016 Release Notes | Microsoft Docs"
 ms.date: "04/24/2018"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.custom: ""
 ms.technology: install
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "build notes"

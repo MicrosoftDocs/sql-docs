@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 helpviewer_keywords: 
   - "2576 (Database Engine error)"
 ms.assetid: b727cc2f-c76c-46f8-bbbe-5e7a05a6eabf
-caps.latest.revision: 19
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

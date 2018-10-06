@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "ALTER SYMMETRIC KEY"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "cryptography [SQL Server], symmetric keys"
   - "ALTER SYMMETRIC KEY statement"
 ms.assetid: d3c776a4-7d71-4e6f-84fc-1db47400c465
-caps.latest.revision: 44
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

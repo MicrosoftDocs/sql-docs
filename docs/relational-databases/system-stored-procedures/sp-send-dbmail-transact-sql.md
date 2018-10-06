@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "08/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sendmail_sp_TSQL"
@@ -19,7 +16,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_send_dbmail"
 ms.assetid: f1d7a795-a3fd-4043-ac4b-c781e76dab47
-caps.latest.revision: 72
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -138,6 +134,10 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
   
  [ **@query_result_header=** ] *query_result_header*  
  Specifies whether the query results include column headers. The query_result_header value is of type **bit**. When the value is 1, query results contain column headers. When the value is 0, query results do not include column headers. This parameter defaults to **1**. This parameter is only applicable if **@query** is specified.  
+ 
+   >[!NOTE]
+   > The following error may occur when setting @query_result_header to 0 and setting @query_no_truncate to 1: 
+   > <br> Msg 22050, Level 16, State 1, Line 12: Failed to initialize sqlcmd library with error number -2147024809.
   
  [ **@query_result_width** = ] *query_result_width*  
  Is the line width, in characters, to use for formatting the results of the query. The *query_result_width* is of type **int**, with a default of 256. The value provided must be between 10 and 32767. This parameter is only applicable if **@query** is specified.  
@@ -161,6 +161,10 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
  The type is bit. The default is 0. When you set to 1, the query results are not padded, possibly reducing the file size.If you set @query_result_no_padding to 1 and you set the @query_result_width parameter, the @query_result_no_padding parameter overwrites the @query_result_width parameter.  
   
  In this case no error occurs.  
+ 
+  >[!NOTE]
+  > The following error may occur when setting @query_result_no_padding to 1 and providing a parameter for @query_no_truncate: 
+  > <br> Msg 22050, Level 16, State 1, Line 0: Failed to execute the query because the @query_result_no_append and @query_no_truncate    options are mutually exclusive. 
   
  If you set the @query_result_no_padding to 1 and you set the @query_no_truncate parameter, an error is raised.  
   

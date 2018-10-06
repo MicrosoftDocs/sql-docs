@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-solutions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "solutions [SQL Server Management Studio], renaming"
@@ -16,7 +13,6 @@ helpviewer_keywords:
   - "projects [SQL Server Management Studio], renaming"
   - "renaming solutions"
 ms.assetid: 2adca850-58a2-4ed5-bded-9dd091fc33f2
-caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

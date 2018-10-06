@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "12/29/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Report Builder 1.0, locating and starting tool"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "tutorials [Reporting Services]"
   - "Report Manager [Reporting Services]"
 ms.assetid: 51ad69d8-fe92-4662-a7cd-d235692f0c03
-caps.latest.revision: 54
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg

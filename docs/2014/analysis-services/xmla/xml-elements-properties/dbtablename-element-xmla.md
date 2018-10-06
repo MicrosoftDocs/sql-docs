@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "DbTableName Element"
@@ -23,7 +21,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "DbTableName element"
 ms.assetid: 0ffda645-2a88-4f42-8929-9d7385c19a74
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg

@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "07/26/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "databases"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.cdw.packageconfiguration.f1"
@@ -27,7 +24,6 @@ helpviewer_keywords:
   - "Copy Database Wizard"
   - "starting Copy Database Wizard"
 ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
-caps.latest.revision: 64
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

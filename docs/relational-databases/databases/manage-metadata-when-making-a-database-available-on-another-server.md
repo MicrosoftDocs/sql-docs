@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "08/24/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "databases"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "cross-database queries [SQL Server]"
@@ -36,7 +33,6 @@ helpviewer_keywords:
   - "credentials [SQL Server], metadata"
   - "copying databases"
 ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
-caps.latest.revision: 84
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

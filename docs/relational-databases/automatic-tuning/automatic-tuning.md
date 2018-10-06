@@ -5,17 +5,13 @@ ms.custom: ""
 ms.date: "08/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "automatic-tuning"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "performance tuning [SQL Server]"
 ms.assetid: 
-caps.latest.revision: 
 author: "jovanpop-msft"
 ms.author: "jovanpop"
 manager: craigg

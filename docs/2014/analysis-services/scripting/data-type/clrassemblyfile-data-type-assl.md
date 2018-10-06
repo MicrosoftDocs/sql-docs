@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "ClrAssemblyFile Data Type"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "ClrAssemblyFile data type"
 ms.assetid: 91074677-c149-483b-a56d-0e35d959d9eb
-caps.latest.revision: 41
 author: minewiskan
 ms.author: owend
 manager: craigg

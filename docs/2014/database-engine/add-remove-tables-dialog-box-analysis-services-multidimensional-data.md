@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.dsvdesigner.addremoveobjects.f1"
 helpviewer_keywords: 
   - "Add/Remove Tables dialog box"
 ms.assetid: b2760517-b0cb-4268-905d-bb1e1f9d902a
-caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
 manager: craigg

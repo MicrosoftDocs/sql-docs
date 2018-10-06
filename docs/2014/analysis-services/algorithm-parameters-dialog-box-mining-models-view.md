@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dm.miningmodeleditor.models.algorithmparameters.f1"
 helpviewer_keywords: 
   - "Algorithm Parameters dialog box"
 ms.assetid: 57f9f6f8-8ca4-4a6e-8f18-85f0571b7060
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg

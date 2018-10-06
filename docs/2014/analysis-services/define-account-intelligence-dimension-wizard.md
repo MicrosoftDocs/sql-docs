@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.dimensionwizard.accountintelligencetypemapping.f1"
 ms.assetid: cbcff072-3a7e-4e98-858f-1b4265461561
-caps.latest.revision: 26
 author: minewiskan
 ms.author: owend
 manager: craigg

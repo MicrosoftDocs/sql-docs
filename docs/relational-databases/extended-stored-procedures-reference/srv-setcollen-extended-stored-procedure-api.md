@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "extended-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
   - "srv_setcollen"
@@ -21,7 +18,6 @@ dev_langs:
 helpviewer_keywords: 
   - "srv_setcollen"
 ms.assetid: 3c60f1c3-4562-463a-a259-12df172788bd
-caps.latest.revision: 30
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

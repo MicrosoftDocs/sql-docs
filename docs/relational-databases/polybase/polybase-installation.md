@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: 09/24/2018
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: polybase
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
    - "PolyBase, installation"
@@ -152,10 +150,12 @@ Setup.exe /Q /ACTION=INSTALL /IACCEPTSQLSERVERLICENSETERMS /FEATURES=SQLEngine,P
 ::: moniker range=">= sql-server-ver15 || =sqlallproducts-allversions"
 ## <a id="enable"></a> Enable PolyBase
 
-Starting with SQL Server 2019 CTP 2.0, you must enable PolyBase after installation using the following Transact-SQL command:
+Starting with SQL Server 2019 CTP 2.0, you must enable PolyBase after installation using the following Transact-SQL command and restart the SQL Server service:
 
 ```sql
-sp_configure @configname = 'polybase enabled', @configvalue = 1;
+exe sp_configure @configname = 'polybase enabled', @configvalue = 1;
+reconfigure with override;
+
 ```
 
 ::: moniker-end

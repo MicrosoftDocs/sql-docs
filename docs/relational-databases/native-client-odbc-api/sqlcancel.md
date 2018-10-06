@@ -5,14 +5,11 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "SQLCancel function"
 ms.assetid: d4c965ae-c1ac-4e9d-b4b9-32b561401106
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg

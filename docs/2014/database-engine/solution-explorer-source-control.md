@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology:
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Visual SourceSafe"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "file source control services [SQL Server]"
   - "VSS [Visual SourceSafe]"
 ms.assetid: 6373adb8-3d81-4945-a9fc-1d0d5799d29a
-caps.latest.revision: 28
 author: mashamsft
 ms.author: mathoma
 manager: craigg

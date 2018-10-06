@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: data-movement
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "identity values [SQL Server], bulk imports"
   - "data formats [SQL Server], identity values"
   - "bulk importing [SQL Server], identity values"
 ms.assetid: 45894a3f-2d8a-4edd-9568-afa7d0d3061f
-caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

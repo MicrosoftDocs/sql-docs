@@ -1,24 +1,13 @@
 ---
 title: "Backup and Restore Operations for Reporting Services | Microsoft Docs"
-ms.date: 05/24/2018
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.suite: pro-bi
-
-
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "databases [Reporting Services], backing up"
-  - "databases [Reporting Services], restoring"
-  - "databases [Reporting Services], moving"
-  - "backing up databases [Reporting Services]"
-  - "moving databases"
-  - "restoring databases [Reporting Services]"
-  - "files [Reporting Services], restoring"
-  - "files [Reporting Services], backing up"
-ms.assetid: 157bc376-ab72-4c99-8bde-7b12db70843a
 author: markingmyname
 ms.author: maghan
+manager: kfile
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.topic: conceptual
+ms.assetid: 157bc376-ab72-4c99-8bde-7b12db70843a
+ms.date: 05/24/2018
 ---
 
 # Backup and Restore Operations for Reporting Services

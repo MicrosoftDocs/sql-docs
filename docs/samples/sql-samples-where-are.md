@@ -1,10 +1,8 @@
-﻿---
+---
 title: "Microsoft SQL samples | Microsoft Docs"
 description: Documentation for sample databases and links to samples for Microsoft SQL products.
 ms.date: "04/04/2018"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples

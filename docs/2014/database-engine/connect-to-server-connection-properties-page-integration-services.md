@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology:
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.connecttodts.connectionproperties.f1"
   - "sql12.ssiseditserverregistration.connectionproperties.f1"
 ms.assetid: c2513dab-8415-4e0c-9475-6d4ab97fea7c
-caps.latest.revision: 18
 author: mashamsft
 ms.author: mathoma
 manager: craigg

@@ -6,8 +6,6 @@ ms.date: "02/09/2017"
 ms.prod: "sql"
 ms.technology: ssdt
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql.data.tools.DacTableChooser"
@@ -16,7 +14,6 @@ f1_keywords:
   - "sql.data.tools.publishdacproject"
   - "sql.data.tools.DacExtractDialog"
 ms.assetid: ed900f93-d3df-40f5-8e62-4d722595e041
-caps.latest.revision: 12
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"

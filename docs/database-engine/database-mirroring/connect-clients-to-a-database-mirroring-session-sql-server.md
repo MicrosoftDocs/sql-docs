@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "partners [SQL Server], connecting clients to"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "client connections [SQL Server], database mirroring"
   - "connections [SQL Server], database mirroring"
 ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
-caps.latest.revision: 95
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

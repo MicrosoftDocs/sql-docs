@@ -4,14 +4,9 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-functions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server (starting with 2008)"
 f1_keywords: 
   - "sys.fn_cdc_map_time_to_lsn"
   - "fn_cdc_map_time_to_lsn_TSQL"
@@ -23,7 +18,6 @@ helpviewer_keywords:
   - "fn_cdc_map_time_to_lsn"
   - "sys.fn_cdc_map_time_to_lsn"
 ms.assetid: 6feb051d-77ae-4c93-818a-849fe518d1d4
-caps.latest.revision: 23
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

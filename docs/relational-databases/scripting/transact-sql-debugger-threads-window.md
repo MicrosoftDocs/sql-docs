@@ -5,15 +5,12 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.technology: scripting
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "vs.debug.threads"
 helpviewer_keywords: 
   - "Threads Window [Transact-SQL]"
 ms.assetid: e153f619-0049-4162-9076-c24a454f3278
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg

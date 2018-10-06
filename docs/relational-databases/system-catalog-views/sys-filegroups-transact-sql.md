@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "05/24/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.filegroups_TSQL"
@@ -20,7 +17,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.filegroups catalog view"
 ms.assetid: 9e851f72-1f8e-4515-a25d-152ebc12ed56
-caps.latest.revision: 54
 author: stevestein
 ms.author: sstein
 manager: craigg

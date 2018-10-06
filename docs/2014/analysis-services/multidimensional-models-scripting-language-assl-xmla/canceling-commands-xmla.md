@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "connections [XML for Analysis]"
@@ -23,7 +21,6 @@ helpviewer_keywords:
   - "server process IDs [XML for Analysis]"
   - "sessions [XML for Analysis]"
 ms.assetid: b59f8197-c33d-4e65-9022-848ccba540f5
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg

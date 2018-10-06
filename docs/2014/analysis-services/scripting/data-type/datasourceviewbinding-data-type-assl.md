@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "DataSourceViewBinding Data Type"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "DataSourceViewBinding data type"
 ms.assetid: 1f08e2d8-b279-4181-9257-e56f9fcbd9bf
-caps.latest.revision: 38
 author: minewiskan
 ms.author: owend
 manager: craigg

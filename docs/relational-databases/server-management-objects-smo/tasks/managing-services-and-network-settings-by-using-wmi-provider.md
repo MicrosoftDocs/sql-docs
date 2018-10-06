@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "08/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "smo"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
 
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "WMI provider [SMO]"
@@ -17,7 +14,6 @@ helpviewer_keywords:
   - "network settings [SMO]"
   - "monitoring [SMO]"
 ms.assetid: ef8c3986-1098-4f21-b03a-f1f6bdb51c26
-caps.latest.revision: 40
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

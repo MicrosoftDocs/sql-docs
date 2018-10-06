@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "ColumnID Element (ColumnBinding)"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "ColumnID element"
 ms.assetid: f4edf532-7e40-4ee2-9b5e-48b3c3de7a74
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg

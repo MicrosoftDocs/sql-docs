@@ -5,9 +5,7 @@ ms.date: "03/09/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sql13.TSQLExpandPortal.f1"
@@ -27,7 +25,6 @@ helpviewer_keywords:
   - "naming conventions [SQL Server]"
   - "syntax [SQL Server], Transact-SQL"
 ms.assetid: 35fbcf7f-8b55-46cd-a957-9b8c7b311241
-caps.latest.revision: 55
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

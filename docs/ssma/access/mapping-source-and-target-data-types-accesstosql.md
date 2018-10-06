@@ -4,13 +4,8 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 helpviewer_keywords: 
   - "customizing data type mappings"
   - "data types, mapping"
@@ -18,7 +13,6 @@ helpviewer_keywords:
   - "source data types"
   - "target data types"
 ms.assetid: b362a075-16e7-423f-b63f-e1e9f02844a9
-caps.latest.revision: 14
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: craigg

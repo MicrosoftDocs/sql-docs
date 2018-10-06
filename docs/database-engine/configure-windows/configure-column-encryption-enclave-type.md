@@ -5,11 +5,8 @@ ms.date: "09/24/2018"
 ms.prod: sql
 ms.prod_service: security
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: configuration
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-caps.latest.revision: 11
 author: jaszymas
 ms.author: jaszymas
 manager: craigg

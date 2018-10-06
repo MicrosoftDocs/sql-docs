@@ -3,7 +3,6 @@ title: "Upgrade a Report Server Database | Microsoft Docs"
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.suite: pro-bi
 
 
 ms.topic: conceptual

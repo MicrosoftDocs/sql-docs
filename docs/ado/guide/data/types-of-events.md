@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "EventComplete event [ADO]"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "complete events [ADO]"
   - "WillEvent event [ADO]"
 ms.assetid: f3327ea0-635a-43d4-bd78-c1674f62f1a2
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg

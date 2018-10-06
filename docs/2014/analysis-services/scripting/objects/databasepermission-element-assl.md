@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "DatabasePermission Element"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "DatabasePermission element"
 ms.assetid: 6dcb9136-a40d-42e3-ad3b-b8ce8c7ca78c
-caps.latest.revision: 39
 author: minewiskan
 ms.author: owend
 manager: craigg

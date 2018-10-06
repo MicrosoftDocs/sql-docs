@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "04/26/2018"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: replication
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "SQL Server 2016"
 helpviewer_keywords: 
   - "replication [SQL Server], tutorials"
 author: MashaMSFT

@@ -5,9 +5,7 @@ ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "system statistical functions [SQL Server]"
   - "functions [SQL Server], statistical"
 ms.assetid: 45828c67-1b9a-4653-bb24-86246084d8ba
-caps.latest.revision: 24
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

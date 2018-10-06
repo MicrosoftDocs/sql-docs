@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "MAXIMUM_STATES"
@@ -47,7 +45,6 @@ helpviewer_keywords:
   - "CLUSTER_COUNT"
   - "COMPLEXITY_PENALTY"
 ms.assetid: fcdc3f85-813d-4279-90b0-16e26edd008d
-caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
 manager: craigg

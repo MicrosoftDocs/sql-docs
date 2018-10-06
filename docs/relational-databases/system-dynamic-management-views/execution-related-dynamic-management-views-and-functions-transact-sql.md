@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "04/24/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -14,7 +12,6 @@ helpviewer_keywords:
   - "dynamic management objects [SQL Server], execution"
   - "execution-related dynamic management objects [SQL Server]"
 ms.assetid: aea07b33-f715-4b61-9d1e-8c77b03e9578
-caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg

@@ -1,13 +1,11 @@
-﻿---
+---
 title: "Enable Compression on a Table or Index | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql  
 ms.reviewer: ""
-ms.suite: "SQL"
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.technology: performance
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.compwiz.compressiontype.f1"
@@ -22,7 +20,6 @@ helpviewer_keywords:
   - "data compression wizard"
   - "compression [SQL Server], enable"
 ms.assetid: b7442cff-e616-475a-9c5a-5a765089e5f2
-caps.latest.revision: 10
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

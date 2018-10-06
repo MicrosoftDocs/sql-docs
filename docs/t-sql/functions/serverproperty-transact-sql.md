@@ -5,9 +5,7 @@ ms.date: "09/07/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "SERVERPROPERTY_TSQL"
@@ -22,7 +20,6 @@ helpviewer_keywords:
   - "instances of SQL Server, property information"
   - "server properties [SQL Server]"
 ms.assetid: 11e166fa-3dd2-42d8-ac4b-04f18c612c4a
-caps.latest.revision: 128
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

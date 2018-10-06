@@ -5,13 +5,10 @@ ms.date: "07/15/2016"
 ms.prod: sql
 ms.technology: scripting
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "transact sql scripts"
 ms.assetid: 90067eb8-ca3e-44e8-bb1a-bf7d1a359423
-caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
 manager: craigg

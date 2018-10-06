@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.agdashboard.agp3autofailover.issues.f1"
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], policies"
 ms.assetid: 28261014-342c-442a-bd89-6d04b8d4e8b7
-caps.latest.revision: 10
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

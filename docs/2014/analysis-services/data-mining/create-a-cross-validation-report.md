@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "validating data mining models"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "cross-validation [data mining]"
   - "statistical standard deviation"
 ms.assetid: 7b1fec4c-7053-41eb-b030-5179257967a4
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg

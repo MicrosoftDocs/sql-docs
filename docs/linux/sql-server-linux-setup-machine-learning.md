@@ -7,8 +7,6 @@ manager: cgronlun
 ms.date: 09/24/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ""
-ms.suite: "sql"
 ms.custom: "sql-linux"
 ms.technology: machine-learning
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
@@ -135,7 +133,7 @@ Running mssql-mlservices R libraries on Ubuntu 18.04 requires **libpng12** from 
 
 ```bash
 wget https://mirrors.kernel.org/ubuntu/pool/main/libp/libpng/libpng12-0_1.2.54-1ubuntu1_amd64.deb
-dpkg -i libpng12-01_1.2.54-1ubuntu1_amd64.deb
+dpkg -i libpng12-0_1.2.54-1ubuntu1_amd64.deb
 ```
 
 ### Example 1 -  Full installation 
@@ -269,13 +267,19 @@ GO
 
 You can install and configure the database engine and Machine Learning Services in one procedure by appending R, Python, or Java packages and parameters on a command that installs the database engine. 
 
-The following example is a "template" illustration of what a combined package installation looks like using the Yum package manager:
+The following example is a "template" illustration of what a combined package installation looks like using the Yum package manager. It installs the database engine and adds the Java language extension, which pulls in the extensibility framework package as a dependency.
 
 ```bash
-sudo yum install -y mssql-sqlserver mssql-server-extensibility-java 
+sudo yum install -y mssql-server mssql-server-extensibility-java 
 ```
 
-The example installs the database engine and adds the Java language extension, which pulls in the extensibility framework package as a dependency. All of the packages used in this example are found at the same path. If you were adding R packages, registration for microsoft-r-open package repository would be required.
+An expanded example with all extensions (Java, R, Python) looks like this:
+
+```bash
+sudo yum install -y mssql-server mssql-server-extensibility-java mssql-mlservices-packages-r-9.4.5* mssql-mlservices-packages-py-9.4.5*
+```
+
+Except for the R prerequisites, all of the packages used in this example are found at the same path. Adding R requires that you [register the microsoft-r-open package repository](#mro) as an extra step to get MRO. MRO is a prerequisite for R extensibility. On a computer connected to the internet, MRO is retrieved and installed automatically as part of the R extension, assuming you configured both repositories.
 
 Post-installation, remember to use the mssql-conf tool to configure the entire installation and accept licensing agreements. Unaccepted EULAs for open-source R and Python components are detected automatically, and you are prompted to accept them, along with the EULA for SQL Server.
 

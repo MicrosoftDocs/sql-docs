@@ -5,9 +5,7 @@ ms.date: "07/16/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "FREESYSTEMCACHE_TSQL"
@@ -24,7 +22,6 @@ helpviewer_keywords:
   - "freeing unused cache entries"
   - "cleaning unused cache entries"
 ms.assetid: 4b5c460b-e4ad-404a-b4ca-d65aba38ebbb
-caps.latest.revision: 35
 author: uc-msft
 ms.author: umajay
 manager: craigg

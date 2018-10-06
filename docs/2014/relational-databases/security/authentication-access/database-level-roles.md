@@ -4,13 +4,8 @@ ms.custom: ""
 ms.date: "09/22/2015"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: security
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server 2014"
 f1_keywords: 
   - "sql12.swb.roleproperties.database.f1"
   - "sql12.swb.roleproperties.general.f1"

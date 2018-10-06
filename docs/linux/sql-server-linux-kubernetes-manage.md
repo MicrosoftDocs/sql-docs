@@ -62,7 +62,7 @@ To fail over or move a primary replica to a different node in an availability gr
 
 1. Delete the manual failover job. 
 
-  >[IMPORTANT]
+  >[!IMPORTANT]
   >You must delete the job manually before you issue another manual failover.
   > 
   >The job object in Kubernetes stays after completion so you can view its status. You need to manually delete old jobs after noting their status. Deleting the job also deletes the Kubernetes logs. If you don't delete the job, future failover jobs will fail unless you change the job name and the pod selector. For more information, see [Jobs - Run to Completion](https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/).

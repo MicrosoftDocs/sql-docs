@@ -66,10 +66,20 @@ WITH MOVE 'AdventureWorks2016CTP3_Data' TO '/var/opt/mssql/data/AdventureWorks20
         MOVE 'AdventureWorks2016CTP3_mod' TO '/var/opt/mssql/data/AdventureWorks2016CTP3_mod'
 ```
 
-Now, if you want to have your high value database be able to access data pools you will need to setup the data pool stored procedures by opening and running these scripts from the GitHub repository.
+Now, if you want to have your database in SQL Server master instance be able to access data pools and/or HDFS, you will need to setup the data pool and storage pool stored procedures by running these T-SQL scripts against your newly restored database:
 
-Execute the **high-value-db-configuration\data_pool_ddl_install.SQL** script.
+```sql
+USE AdventureWorks2016CTP3
+GO 
+IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
+    CREATE EXTERNAL DATA SOURCE SqlDataPool
+    WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
 
-- Setup supportability stored procedures
+IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
+    CREATE EXTERNAL DATA SOURCE SqlStoragePool
+    WITH (LOCATION = 'sqlhdfs://service-mssql-controller:8080');
+GO
+```
 
-Execute the **high-value-db-configuration\supportability.SQL** script.
+> [!NOTE]
+> You will have to run through these setup scripts only for databases restored from older versions of SQL Server. If you create a new database in SQL Server master instance, data pool and storage pool store procedures are already setup!

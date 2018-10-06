@@ -29,7 +29,7 @@ To fail over or move a primary replica to a different node in an availability gr
 
   Copy the manifest file to your administration terminal.
 
-  Update the file for you environment.
+  Update the file for your environment.
 
   - Replace `ag1` with the name of the availability group namespace.
   - Replace `<containerName>` with the name of the expected availability group target.
@@ -42,13 +42,13 @@ To fail over or move a primary replica to a different node in an availability gr
   kubectl apply -f failover.yaml
   ```
 
-  After the job is deployed, kubernetes, with the SQL Server Operator, does the following:
+  After the job is deployed, kubernetes, with the SQL Server Operator, does the following tasks:
   
   - Demotes the primary replica to secondary
   
-  - Promotes the designated replica to primary
+  - Promotes the specified replica to primary
   
-  After you apply manifest file, Kubernetes runs the job. The job makes the supervisor elect a new leader and moves the primary replica to the SQL Server instance of the leader.
+  After you apply manifest file, Kubernetes runs the job. The job makes the supervisor select a new leader and moves the primary replica to the SQL Server instance of the leader.
 
 1. Verify the job is completed.
   
@@ -83,7 +83,7 @@ Use a Kubernetes job to rotate the credentials. Describe the job in a manifest. 
 
 1. Update `rotate-creds.yaml` for your environment.
 
-  Set the namespace for the Kubernetes namespace of your availability group. In the example the namespace is `ag1`. 
+  Set the namespace for the Kubernetes namespace of your availability group. In the example, the namespace is `ag1`.
 
 1. Create a new secret for the password and the master key.
 

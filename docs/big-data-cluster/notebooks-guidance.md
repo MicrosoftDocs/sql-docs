@@ -4,14 +4,24 @@ description:
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 10/01/2018
+ms.date: 10/05/2018
 ms.topic: conceptual
 ms.prod: sql
 ---
 
 # How to use notebooks in SQL Server 2019 preview
 
-This how you can launch notebooks on the cluster and start authoring your own Notebooks. It also shows how to submit jobs against the cluster.
+This article shows how to launch notebooks on a SQL Server 2019 big data cluster. It also shows how to start authoring your own notebooks and how to submit jobs against the cluster.
+
+## Prerequisites
+
+To use notebooks, you must install the following prerequisites:
+
+- [A SQL Server 2019 big data cluster](deployment-guidance.md)
+- [Azure Data Studio](../azure-data-studio/what-is.md)
+- [The SQL Server 2019 extension (preview)](../azure-data-studio/sql-server-2019-extension.md).
+
+[!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
 ## Connect to the SQL Server big data cluster end-point
 

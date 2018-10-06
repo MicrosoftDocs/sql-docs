@@ -77,7 +77,7 @@ To fail over or move a primary replica to a different node in an availability gr
 
 Rotate credentials to reset the password for the SQL Server `sa` account and the SQL Server [service master key](../relational-databases/security/encryption/service-master-key.md).
 
-Use a Kubernetes job to rotate the credentials. Describe the job in a manifest. [`rotate-creds.yaml`](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-deployment-script/rotate-creds.yaml) in the [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-deployment-script/) github repository is an example of a manifest for this job.
+Use a Kubernetes job to rotate the credentials. Describe the job in a manifest. [`rotate-creds.yaml`](https://github.com/Microsoft/sql-server-samples/blob/master/samples/features/high%20availability/Kubernetes/sample-manifest-files/rotate-creds.yaml) in the [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-deployment-script/) github repository is an example of a manifest for this job.
 
 1. Copy [`rotate-creds.yaml`](https://github.com/Microsoft/sql-server-samples/blob/master/samples/features/high%20availability/Kubernetes/sample-manifest-files/rotate-creds.yaml) to your administration terminal. 
 

@@ -121,7 +121,7 @@ Always On:
 Audit Files:
 
 - Changed authentication method from Storage Account Key based to Azure AD-based authentication.
-AD base
+
 Always Encrypted:
 
 - Added an Always Encrypted tab with an *Enable Always Encrypted* checkbox (in the *Connect to Server* dialog) that now provides an easy way to enable/disable Always Encrypted for a database connection.

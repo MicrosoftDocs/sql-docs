@@ -22,6 +22,15 @@ This article provides directions for installing the **SqlServer** PowerShell mod
 > There are two SQL Server PowerShell modules; **SqlServer** and **SQLPS**. The **SQLPS** module is included with the SQL Server installation (for backwards compatibility), but is no longer being updated. The most up-to-date PowerShell module is the **SqlServer** module. The **SqlServer** module contains updated versions of the cmdlets in **SQLPS**, and also includes new cmdlets to support the latest SQL features. 
 > Previous versions of the **SqlServer** module *were* included with SQL Server Management Studio (SSMS), but only with the 16.x versions of SSMS. To use PowerShell with SSMS 17.0 and later, the **SqlServer** module must be installed from the PowerShell Gallery.
 
+> [!NOTE]
+> 
+> The currenly released version of the module is 21.0.17279. This is based on version v140 of Microsoft.SQLServer.SMO. 
+>
+> If you are looking for a version of the module that supports the next version of SQL Server (based on version v150 of Microsoft.SQLServer.SMO),
+> please refer to the section at the bottom of this page on how to get prerelease versions on the module. The latest prerelease version of the 
+> module is 21.1.18040-preview.
+
+
 To install the **SqlServer** module from the PowerShell Gallery, start a [PowerShell](https://docs.microsoft.com/powershell/scripting/powershell-scripting) session and use the following commands. If you run into problems installing, see the [Install-Module documentation](https://docs.microsoft.com/powershell/gallery/psget/module/psget_install-module) and [Install-Module reference](https://docs.microsoft.com/powershell/module/powershellget/Install-Module).
 
 To install the **SqlServer** module:
@@ -48,6 +57,19 @@ To use a specific version of the module, you can import it with a specific versi
 
 ```Import-Module SqlServer -Version 21.0.17178```
 
+> [!NOTE]
+> Prerelease (or "preview") versions of the module may be available on the PowerShell Gallery. They may be discovered and installed
+> by using the updated *Find-Module* and *Install-Module* cmdlets that are part of the [PowerShellGet](https://www.powershellgallery.com/packages/PowerShellGet)
+> module) by passing the *-AllowPrerelease* switch.
+>
+> To discover the prerelease/preview version of the module, you can run the following command:
+>
+> ```Find-Module SqlServer -AllowPrerelease```
+>
+> To install a specific prerelease/preview version of the module, you can install it with a specific version number similar to the following:
+>
+> ```Install-Module SqlServer -RequiredVersion 21.1.18040-preview -AllowPrerelease```
+> 
 
 The versions of the **SqlServer** module in the PowerShell Gallery support versioning and require PowerShell version 5.0 or greater. 
 

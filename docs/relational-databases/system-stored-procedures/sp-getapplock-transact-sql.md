@@ -56,7 +56,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
  Is the owner of the lock, which is the *lock_owner* value when the lock was requested. *lock_owner* is **nvarchar(32)**. The value can be **Transaction** (the default) or **Session**. When the *lock_owner* value is **Transaction**, by default or specified explicitly, sp_getapplock must be executed from within a transaction.  
   
  [ @LockTimeout= ] '*value*'  
- Is a lock time-out value in milliseconds. The default value is the same as the value returned by @@LOCK_TIMEOUT. To indicate that a lock request should return an error instead of wait for the lock when the request cannot be granted immediately, specify 0.  
+ Is a lock time-out value in milliseconds. The default value is the same as the value returned by @@LOCK_TIMEOUT. To indicate that a lock request should return a Return Code of -1 instead of wait for the lock when the request cannot be granted immediately, specify 0.  
   
  [ @DbPrincipal= ] '*database_principal*'  
  Is the user, role, or application role that has permissions to an object in a database. The caller of the function must be a member of *database_principal*, dbo, or the db_owner fixed database role to call the function successfully. The default is public.  

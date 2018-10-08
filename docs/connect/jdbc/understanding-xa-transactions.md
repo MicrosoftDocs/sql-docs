@@ -53,7 +53,17 @@ The following steps are required if you want to use XA data sources together wit
 
 > [!NOTE]  
 > The JDBC distributed transaction components are included in the xa directory of the JDBC driver installation. These components include the xa_install.sql and sqljdbc_xa.dll files.  
-  
+
+> [!NOTE]  
+> Starting with SQL Server 2019 public preview CTP 2.0, the JDBC XA distributed transaction components are included in the SQL Server engine which can be enabled or disabled with a system stored procedure. 
+> To enable the required components to perform XA distributed transactions using the JDBC driver, execute following stored procedure.
+>
+> EXEC sp_sqljdbc_xa_install
+>
+> To disable the previously installed components, execute following stored procedure. 
+>
+> EXEC sp_sqljdbc_xa_uninstall
+
 ### Running the MS DTC Service
 
 The MS DTC service should be marked **Automatic** in Service Manager to make sure that it is running when the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service is started. To enable MS DTC for XA transactions, you must follow these steps:  

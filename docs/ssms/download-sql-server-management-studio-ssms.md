@@ -148,4 +148,4 @@ SSIS
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
 
 
-If you have comments or suggestions, or you want to report issues, the best way to reach out to the SSMS Team is at [UserVoice](https://aka.ms/sqlfeedback). SSMS 18.0 is a preview product. Please refrain from adding comments at the bottom of this page!
+If you have comments or suggestions, or you want to report issues, the best way to reach out to the SSMS Team is at [UserVoice](https://aka.ms/sqlfeedback).

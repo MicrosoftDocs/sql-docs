@@ -72,12 +72,12 @@
         },
         {
             "source_path": "docs/relational-databases/lesson-3-database-backup-to-url.md",
-            "redirect_url": "/sql/relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016#3---database-backup-to-URL",
+            "redirect_url": "/sql/relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016#3---database-backup-to-url",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/relational-databases/lesson-4-restore-database-to-virtual-machine-from-url.md",
-            "redirect_url": "/sql/relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016#4---restore-database-to-virtual-machine-from-URL",
+            "redirect_url": "/sql/relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016#4----restore-database-to-virtual-machine-from-url",
             "redirect_document_id": false
         },
         {
@@ -87,7 +87,7 @@
         },
         {
             "source_path": "docs/relational-databases/lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md",
-            "redirect_url": "/sql/relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016#6---generate-activity-and-backup-log-using-file-snapshot-backup",
+            "redirect_url": "/sql/relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016#6----generate-activity-and-backup-log-using-file-snapshot-backup",
             "redirect_document_id": false
         },
         {
@@ -97,7 +97,7 @@
         },
         {
             "source_path": "docs/relational-databases/lesson-8-restore-as-new-database-from-log-backup.md",
-            "redirect_url": "/sql/relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016#8---restore-as-new-database-from-log-backup",
+            "redirect_url": "/sql/relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016#8----restore-as-new-database-from-log-backup",
             "redirect_document_id": false
         },
         {

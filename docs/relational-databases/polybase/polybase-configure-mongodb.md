@@ -62,7 +62,7 @@ These objects will create in this section:
     WITH (
     LOCATION = mongodb://MongoServer,
     -- PUSHDOWN = ON | OFF,
-      CREDENTIAL = TeradataCredentials
+      CREDENTIAL = MongoDBCredentials
     );
      ```
 

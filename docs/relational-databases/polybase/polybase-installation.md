@@ -159,7 +159,7 @@ Once you are done with the installation, Polybase must be enabled to access it's
 
 ```sql
 exec sp_configure @configname = 'polybase enabled', @configvalue = 1;
-RECONFIGURE;
+RECONFIGURE [ WITH OVERRIDE ]  ;
 ```
 The instance then needs to be **restarted** 
 

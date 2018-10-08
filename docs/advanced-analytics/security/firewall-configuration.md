@@ -15,14 +15,6 @@ manager: cgronlun
 
 This article lists firewall configuration considerations that the administrator or architect should bear in mind when using machine learning services.
 
-## Restrict network access
-
-In a default installation, a Windows firewall rule is used to block all outbound network access from external runtime processes. Firewall rules should be created to prevent the external runtime processes from downloading packages or from making other network calls that could potentially be malicious.
-
-If you are using a different firewall program, you can also create rules to block outbound network connection for external runtimes, by setting rules for the local user accounts or for the group represented by the user account pool.
-
-We strongly recommend that you turn on Windows Firewall (or another firewall of your choice) to prevent unrestricted network access by the R or Python runtimes.
-
 ## Firewall rules created by Setup
 
 By default, the SQL Server Setup disables outbound connections by creating firewall rules. 
@@ -33,6 +25,14 @@ In SQL Server 2019, as part of the move to AppContainers, there are new firewall
 
 > [!Note]
 > If network calls are required, you can disable the outbound rules in Windows Firewall.
+
+## Restrict network access
+
+In a default installation, a Windows firewall rule is used to block all outbound network access from external runtime processes. Firewall rules should be created to prevent the external runtime processes from downloading packages or from making other network calls that could potentially be malicious.
+
+If you are using a different firewall program, you can also create rules to block outbound network connection for external runtimes, by setting rules for the local user accounts or for the group represented by the user account pool.
+
+We strongly recommend that you turn on Windows Firewall (or another firewall of your choice) to prevent unrestricted network access by the R or Python runtimes.
 
 ## See also
 

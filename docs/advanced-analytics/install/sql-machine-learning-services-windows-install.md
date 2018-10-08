@@ -224,23 +224,17 @@ At the instance level, additional configuration might include:
 * [Enable additional network protocols](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)
 * [Enable remote connections](../../database-engine/configure-windows/configure-the-remote-access-server-configuration-option.md)
 
-On the database, you might need the following configuration updates:
-
-* [Extend built-in permissions to remote users](#bkmk_configureAccounts)
-* [Grant permission to run external scripts](#permissions-external-script)
-* [Grant access to individual databases](#permissions-db)
-
-> [!NOTE]
-> Whether additional configuration is required depends on your security schema, where you installed SQL Server, and how you expect users to connect to the database and run external scripts. 
-
 <a name="bkmk_configureAccounts"></a> 
 <a name="permissions-external-script"></a> 
 
-For user security and connectivity, additional configuration might include:
+On the database, you might need the following configuration updates:
 
 * [Security configuration for SQLRUserGroup](../../advanced-analytics/security/firewall-configuration.md)
 * [Give users permission to SQL Server Machine Learning Services](../../advanced-analytics/security/user-permission.md)
 * [Connect to SQL Server Machine Learning Services from your data science client computer](../../advanced-analytics/security/connect-from-client-computer.md)
+
+> [!NOTE]
+> Whether additional configuration is required depends on your security schema, where you installed SQL Server, and how you expect users to connect to the database and run external scripts.
 
 ## Suggested optimizations
 

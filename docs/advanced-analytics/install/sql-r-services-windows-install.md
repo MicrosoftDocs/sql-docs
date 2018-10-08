@@ -183,86 +183,23 @@ If the external script verification step was successful, you can run Python comm
 
 If you got an error when running the command, review the additional configuration steps in this section. You might need to make additional appropriate configurations to the service or database.
 
-Common scenarios that require additional changes include:
+At the instance level, additional configuration might include:
 
-* [Configure Windows firewall for in-bound connections](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)
+* [Firewall configuration for SQL Server Machine Learning Services](../../advanced-analytics/security/firewall-configuration.md)
 * [Enable additional network protocols](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)
 * [Enable remote connections](../../database-engine/configure-windows/configure-the-remote-access-server-configuration-option.md)
-* [Extend built-in permissions to remote users](#bkmk_configureAccounts)
-* [Grant permission to run external scripts](#bkmk_AllowLogon)
-* [Grant access to individual databases](#permissions-db)
+
+<a name="bkmk_configureAccounts"></a>
+<a name="bkmk_AllowLogon"></a>
+
+On the database, you might need the following configuration updates:
+
+* [Security configuration for SQLRUserGroup](../../advanced-analytics/security/firewall-configuration.md)
+* [Give users permission to SQL Server Machine Learning Services](../../advanced-analytics/security/user-permission.md)
+* [Connect to SQL Server Machine Learning Services from your data science client computer](../../advanced-analytics/security/connect-from-client-computer.md)
 
 > [!NOTE]
 > Not all the listed changes are required, and none might be required. Requirements depend on your security schema, where you installed SQL Server, and how you expect users to connect to the database and run external scripts. Additional troubleshooting tips can be found here: [Upgrade and installation FAQ](../r/upgrade-and-installation-faq-sql-server-r-services.md)
-
-<a name="bkmk_configureAccounts"></a>
-
-### Enable implied authentication for the Launchpad account group
-
-During setup, some new Windows user accounts are created for running tasks under the security token of the [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] service. When a user sends an R script from an external client, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] activates an available worker account, maps it to the identity of the calling user, and runs the R script on behalf of the user. This new service of the database engine supports the secure execution of external scripts, called *implied authentication*.
-
-You can view these accounts in the Windows user group **SQLRUserGroup**. By default, 20 worker accounts are created, which is usually more than enough for running R jobs.
-
-However, if you need to run R scripts from a remote data science client and are using Windows authentication, you must grant these worker accounts permission to sign in to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance on your behalf.
-
-1. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], in Object Explorer, expand **Security**, right-click **Logins**, and select **New Login**.
-2. In the **Login - New** dialog box, select **Search**.
-3. Select the **Object Types** and **Groups** check boxes, and clear all other check boxes.
-4. Click **Advanced**, verify that the location to search is the current computer, and then click **Find Now**.
-5. Scroll through the list of group accounts on the server until you find one beginning with `SQLRUserGroup`.
-    
-    + The name of the group that's associated with the Launchpad service for the _default instance_ is always just **SQLRUserGroup**. Select this account only for the default instance.
-    + If you are using a _named instance_, the instance name is appended to the default name, `SQLRUserGroup`. Hence, if your instance is named "MLTEST", the default user group name for this instance would be **SQLRUserGroupMLTest**.
-5. Click **OK** to close the advanced search dialog box, and verify that you've selected the correct account for the instance. Each instance can use only its own Launchpad service and the group created for that service.
-6. Click **OK** once more to close the **Select User or Group** dialog box.
-7. In the **Login - New** dialog box, click **OK**. By default, the login is assigned to the **public** role and has permission to connect to the database engine.
-
-<a name="bkmk_AllowLogon"></a>
-
-### Give users permission to run external scripts
-
-> [!NOTE]
-> If you use a SQL login for running R scripts in a SQL Server compute context, this step is not required.
-
-If you installed [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in your own instance, you are usually executing scripts as an administrator, or at least as a database owner, and thus have implicit permissions for various operations, all data in the database, and the ability to install new packages as needed.
-
-However, in an enterprise scenario, most users, including users who access the database by using SQL logins, do not have such elevated permissions. Therefore, for each user who will be running R scripts, you must grant the user permissions to run scripts in each database where external scripts will be used.
-
-```SQL
-USE <database_name>
-GO
-GRANT EXECUTE ANY EXTERNAL SCRIPT  TO [UserName]
-```
-
-> [!TIP]
-> Need help with setup? Not sure you have run all the steps? Use these custom reports to check installation status and run additional steps. 
-> 
-> [Monitor Machine Learning Services using Custom Reports](../r/monitor-r-services-using-custom-reports-in-management-studio.md).
-
-<a name="permissions-db"></a>
-
-###  Give your users read, write, or DDL permissions to the database
-
-The user account that is used to run R might need to read data from other databases, create new tables to store results, and write data into tables. Therefore, for each user who will be executing R scripts, ensure that the user has the appropriate permissions on the database: *db_datareader*, *db_datawriter*, or *db_ddladmin*.
-
-For example, the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement gives the SQL login *MySQLLogin* the rights to run T-SQL queries in the *RSamples* database. To run this statement, the SQL login must already exist in the security context of the server.
-
-```SQL
-USE RSamples
-GO
-EXEC sp_addrolemember 'db_datareader', 'MySQLLogin'
-```
-
-For more information about the permissions included in each role, see [Database-level roles](../../relational-databases/security/authentication-access/database-level-roles.md).
-
-
-### Create an ODBC data source for the instance on your data science client
-
-If you create an R solution on a data science client computer and need to run code by using the SQL Server computer as the compute context, you can use either a SQL login or integrated Windows authentication.
-
-* For SQL logins: Ensure that the login has appropriate permissions on the database where you will be reading data. You can do so by adding *Connect to* and *SELECT* permissions, or by adding the login to the *db_datareader* role. For logins that need to create objects, add *DDL_admin* rights. For logins that must save data to tables, add the login to the *db_datawriter* role.
-
-* For Windows authentication: You might need to configure an ODBC data source on the data science client that specifies the instance name and other connection information. For more information, see [ODBC data source administrator](https://docs.microsoft.com/sql/odbc/admin/odbc-data-source-administrator).
 
 ## Suggested optimizations
 

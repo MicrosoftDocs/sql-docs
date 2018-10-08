@@ -244,18 +244,14 @@
       href: r/using-r-code-profiling-functions.md
   - name: Security
     items:
-    - name: SQL Server Launchpad account
-      href: security/sql-server-launchpad-service-account.md
-    - name: SQLRUserGroup security
-      href: security/user-account-pool-security.md
-    - name: Add SQLRUserGroup as a database user
-      href: security/add-sqlrusergroup-to-database.md
-    - name: Firewall configuration
-      href: security/firewall-configuration.md
     - name: Give users permission
       href: security/user-permission.md
-    - name: Connect from client computer
-      href: security/connect-from-client-computer.md
+    - name: Configure Launchpad
+      href: security/sql-server-launchpad-service-account.md
+    - name: Configure firewall
+      href: security/firewall-configuration.md
+    - name: Add SQLRUserGroup as a database user
+      href: security/add-sqlrusergroup-to-database.md
   - name: Administration
     items:
     - name: Configure and manage R

@@ -34,7 +34,7 @@
       href: deploy-on-minikube.md
     - name: Deploy on AKS
       href: deploy-on-aks.md
-    - name: Install big data tools
+    - name: Connect with Azure Data Studio
       href: deploy-big-data-tools.md
   - name: Data virtualization
     items:

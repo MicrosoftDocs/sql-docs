@@ -33,7 +33,7 @@ On Kubernetes the deployment includes a SQL Server operator, the SQL Server cont
   >You can use any type of Kubernetes cluster. To create a Kubernetes cluster on Azure Kubernetes Service (AKS), see [Create an AKS cluster](http://docs.microsoft.com/azure/aks/create-cluster).
   > The following script creates a four node Kubernetes cluster in Azure.
   >```azure-cli
-  az aks create --resource-group myResourceGroup --name myAKSCluster --node-count 4 --kubernetes-version 1.11.3
+  az aks create --resource-group myResourceGroup --name myAKSCluster --node-count 4 --kubernetes-version 1.11.1 --generate-ssh-keys
   >```
 
 ## Deploy the operator, SQL Server containers, and load-balancing services

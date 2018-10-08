@@ -272,7 +272,6 @@ featureFlags:
                                 </a>
                             </li>
                         </ul>
-                    </li>
                      <li class="fullSpan">
                                 <div class="container intro">
                                 <h2>SQL Internals Guides</h2>

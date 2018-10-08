@@ -19,7 +19,9 @@ This article describes the steps to deploy Kubernetes on AKS using Azure CLI. If
 
 ## Prerequisites
 
-- For an AKS environment, the minimum VM requirement is at least two agent VMs (in addition to master) of a minimum size Standard_DS3_V2. Minimum resources required per VM are 4 CPUs and 14 GB of memory.
+- For an AKS environment, the minimum cluster memory size is 64 GB, and the minimum VM count is at least two agent VMs (in addition to master). For example, two VMs of size **Standard_DS8_V3** or 4 VMs of size **Standard_D4_v2** both fulfill this requirement.
+
+- The minimum resources required per VM are 4 CPUs and 28 GB of memory.
 
 - This section requires that you be running the Azure CLI version 2.0.4 or later. If you need to install or upgrade, see [Install Azure CLI 2.0](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli). Run `az --version` to find the version if needed.
 
@@ -44,19 +46,19 @@ An Azure resource group is a logical group in which Azure resources are deployed
     az login
     ```
 
-1. If you have multiple subscriptions you can view all of your subscriptions by running the following command:
+2. If you have multiple subscriptions you can view all of your subscriptions by running the following command:
 
    ```bash
    az account list
    ```
 
-1. If you want to change to a different subscription you can run this command:
+3. If you want to change to a different subscription you can run this command:
 
    ```bash
    az account set --subscription <subscription id>
    ```
 
-1. Create a resource group with the **az group create** command. The following example creates a resource group named `sqlbigdatagroup` in the `westus2` location.
+4. Create a resource group with the **az group create** command. The following example creates a resource group named `sqlbigdatagroup` in the `westus2` location.
 
    ```bash
    az group create --name sqlbigdatagroup --location westus2
@@ -64,22 +66,22 @@ An Azure resource group is a logical group in which Azure resources are deployed
 
 ## Create a Kubernetes cluster
 
-1. Create a Kubernetes cluster in AKS with the [az aks create](https://docs.microsoft.com/cli/azure/aks) command. The following example creates a Kubernetes cluster named *kubcluster* with one Linux master node and two Linux agent nodes. Make sure you create the AKS cluster in the same resource group that you used in the previous sections.
+1. Create a Kubernetes cluster in AKS with the [az aks create](https://docs.microsoft.com/cli/azure/aks) command. The following example creates a Kubernetes cluster named *kubcluster* with one Linux master node and four Linux agent nodes. Make sure you create the AKS cluster in the same resource group that you used in the previous sections.
 
     ```bash
    az aks create --name kubcluster \
     --resource-group sqlbigdatagroup \
     --generate-ssh-keys \
-    --node-vm-size Standard_DS3_v2 \
-    --node-count 2 \
+    --node-vm-size Standard_DS4_v2 \
+    --node-count 4 \
     --kubernetes-version 1.10.7
     ```
 
-    You can increase or decrease the default agent count by adding `--node-count <n>` to the az aks create command where `<n>` is the number of agent nodes you want to have.
+    You can increase or decrease the default agent count by changing the `--node-count <n>` where `<n>` is the number of agent nodes you want to have.
 
     After several minutes, the command completes and returns JSON-formatted information about the cluster.
 
-1. Save the JSON output from the previous command for later use.
+2. Save the JSON output from the previous command for later use.
 
 ## Connect to the cluster
 

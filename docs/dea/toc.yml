@@ -8,3 +8,5 @@
   href: database-experimentation-assistant-configure-replay.md
 - name: Replay trace
   href: database-experimentation-assistant-replay-trace.md
+- name: Create reports
+  href: database-experimentation-assistant-create-report.md

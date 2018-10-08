@@ -19,9 +19,9 @@ This article describes the default configuration and capacity for the worker acc
 
 **Applies to:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)], [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
-## Worker accounts used for external script execution
+## Worker account group
 
-The Windows account group is created by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup for each instance on which machine learning is installed and enabled.
+A Windows account group is created by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup for each instance on which machine learning is installed and enabled.
 
 - In a default instance, the group name is **SQLRUserGroup**. The name is the same whether you use R or Python or both.
 - In a named instance, the default group name is suffixed with the instance name: for example, **SQLRUserGroupMyInstanceName**.
@@ -38,7 +38,7 @@ If more than one instance uses machine learning, the computer will have multiple
 
 <a name = "HowToChangeGroup"> </a>
 
-## How to change the number of worker accounts
+## Number of worker accounts
 
 To modify the number of users in the account pool, you must edit the properties of the [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] service as described below.
 
@@ -51,7 +51,7 @@ Passwords associated with each user account are generated at random, but you can
 5. Optionally, you can set the option **Reset External Users Password** to _Yes_ if your organization has a policy that requires changing passwords on a regular basis. Doing this will regenerate the encrypted passwords that Launchpad maintains for the user accounts. For more information, see [Enforcing Password Policy](#bkmk_EnforcePolicy).
 6.  Restart the Launchpad service.
 
-## Managing machine learning workloads
+## Managing workloads
 
 The number of accounts in this pool determines how many external script sessions can be active simultaneously.  By default, 20 accounts are created, meaning that 20 different users can have active R or Python sessions at one time. You can increase the number of worker accounts, if you expect to run more than 20 concurrent scripts.
 

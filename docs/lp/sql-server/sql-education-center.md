@@ -77,7 +77,7 @@ featureFlags:
                     <li class="panelItem" data-index="0">
                         <a class="singlePanelNavItem selected" href="#products1" data-linktype="self-bookmark"></a>
                         <ul class="cardsD panelContent singlePanelContent" id="products1" style="margin-top: 0px; display: flex;">
-                            <li class="fullSpan">
+                           <li class="fullSpan">
                                 <div class="container intro">
                                 <h2>Tutorials</h2>
                             </li>
@@ -270,9 +270,8 @@ featureFlags:
                                         </div>
                                     </div>
                                 </a>
-                            </li>
-                        </ul>
-                     <li class="fullSpan">
+                            </li>  
+                            <li class="fullSpan">
                                 <div class="container intro">
                                 <h2>SQL Internals Guides</h2>
                             </li>
@@ -446,8 +445,10 @@ featureFlags:
                                         </div>
                                     </div>
                                 </a>
-                            </li>
-                   </ul>
+                            </li>                            
+                        </ul>
+                    </li>
+                </ul>
             </li>
         </ul>
     </div>

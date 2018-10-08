@@ -194,8 +194,8 @@ At the instance level, additional configuration might include:
 
 On the database, you might need the following configuration updates:
 
-* [Security configuration for SQLRUserGroup](../../advanced-analytics/security/firewall-configuration.md)
 * [Give users permission to SQL Server Machine Learning Services](../../advanced-analytics/security/user-permission.md)
+* [Add SQLRUserGroup as a database user](../../advanced-analytics/security/add-sqlrusergroup-to-database.md)
 
 > [!NOTE]
 > Not all the listed changes are required, and none might be required. Requirements depend on your security schema, where you installed SQL Server, and how you expect users to connect to the database and run external scripts. Additional troubleshooting tips can be found here: [Upgrade and installation FAQ](../r/upgrade-and-installation-faq-sql-server-r-services.md)

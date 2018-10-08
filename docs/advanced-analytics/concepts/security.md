@@ -74,6 +74,8 @@ In SQL Server 2019, Setup no longer creates local Windows user accounts. Instead
 
 As implemented by SQL Server, AppContainers are an internal mechanism. While you won't see physical evidence of AppContainers in Process Monitor, you can find them in outbound firewall rules created by Setup to prevent processes from making network calls.
 
+<a name="implied-authentication"></a>
+
 ### Implied authentication
 
 **Implied authentication** is the term used for the process under which SQL Server gets the user credentials and then executes all external script tasks on behalf of the users, assuming the user has the correct permissions in the database. Implied authentication is important if the external script needs to make an ODBC call outside the SQL Server database. For example, the code might retrieve a shorter list of factors from a spreadsheet or other source.
@@ -81,7 +83,7 @@ As implemented by SQL Server, AppContainers are an internal mechanism. While you
 For such loopback calls to succeed, the group that contains the worker accounts, SQLRUserGroup, must have "Allow Log on locally" permissions. By default, this right is given to all new local users, but in some organizations stricter group policies might be enforced.
 
 > [!IMPORTANT]
-> For implied authentication to succeed, **SQLRUserGroup** must have an account in the master database for the instance, and this account must be given permissions to connect to the instance.
+> For implied authentication to succeed, **SQLRUserGroup** must have an [account in the master database](../../advanced-analytics/security/user-permission.md) for the instance, and this account must be given permissions to connect to the instance. 
 
 #### Implied authentication for R and Python
 
@@ -111,7 +113,7 @@ No worker account can see or manipulate files used by other worker accounts.
 
 If you are an administrator on the computer, you can view the directories created for each process. Each directory is identified by its session GUID.
 
-## No support for encryption at rest
+## No support for Transparent Data Encryption at rest
 
 [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) is not supported for data sent to or received from the external script runtime. The reason is that the external process (R or Python) runs outside the SQL Server process. Therefore, data used by the external runtime is not protected by the encryption features of the database engine. This behavior is no different than any other client running on the SQL Server computer that reads data from the database and makes a copy.
 

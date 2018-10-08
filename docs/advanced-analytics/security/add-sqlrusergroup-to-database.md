@@ -13,20 +13,20 @@ manager: cgronlun
 # Add SQLRUserGroup as a database user
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article explains how to give the group of worker accounts used by machine learning services in SQL Server the permissions required to connect to the database and run R or Python jobs on behalf of the user.
-
-As part of the installation process for [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)], a new Windows *user account pool* is created to support execution of tasks by the [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] service. The purpose of these worker accounts is to isolate concurrent execution of external scripts by different SQL users.
-
-For more information, see the Launchpad section in [Security overview](../../advanced-analytics/concepts/security.md#launchpad).
-
-## Add SQLRUserGroup
-
-By default, the group of worker accounts does **not** have login permissions on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance with which it is associated. This can be a problem if any R or Python users connect to SQL Server from a remote client to run external scripts, or if a script uses ODBC to get additional data.
-
-If you need to run scripts from a remote data science client, and you are using Windows authentication, additional configuration is required to give worker accounts running R and Python processes permission to sign in to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance on your behalf. 
+If you are using Windows authentication and your script calls resources or operations in SQL Server, additional configuration is required to give worker accounts running R and Python processes permission to sign back in to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance on your behalf. This is referred to as [*implied authentication*](../../advanced-analytics/concepts/security.md#implied-authentication).
 
 > [!NOTE]
 > If you use a **SQL login** for running scripts in a SQL Server compute context, this extra step is not required.
+
+As part of the installation process for [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)], a new Windows *user account pool* is created to support execution of tasks by the [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] service. The purpose of these worker accounts is to isolate concurrent execution of external scripts by different SQL users.
+
+By default, the group of worker accounts does **not** have login permissions on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance with which it is associated. This can be a problem if any R or Python users connect to SQL Server from a remote client to run external scripts, or if a script uses ODBC to get additional data.
+
+This article explains how to give the group of worker accounts used by machine learning services in SQL Server the permissions required to connect to the database and run R or Python jobs on behalf of the user.
+
+For more information, see the Launchpad section in [Security overview](../../advanced-analytics/concepts/security.md#launchpad).
+
+## Create a login
 
 1. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], in Object Explorer, expand **Security**, right-click **Logins**, and select **New Login**.
 
@@ -61,11 +61,3 @@ If you need to run scripts from a remote data science client, and you are using 
 6. Click **OK** once more to close the **Select User or Group** dialog box.
 
 7. In the **Login - New** dialog box, click **OK**. By default, the login is assigned to the **public** role and has permission to connect to the database engine.
-
-## Number of worker accounts
-
-If you intend to make heavy use of machine learning, you can increase the number of accounts used to run external scripts, as described in this article: 
-
-+ [Modify the user account pool for machine learning](../../advanced-analytics/administration/modify-user-account-pool.md)
-
-By default, 20 accounts are created, which supports 20 concurrent sessions. Parallelized tasks do not consume additional accounts. For example, if a user runs a scoring task that uses parallel processing, the same worker account is reused for all threads.

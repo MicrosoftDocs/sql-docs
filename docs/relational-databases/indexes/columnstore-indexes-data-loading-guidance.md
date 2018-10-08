@@ -59,7 +59,7 @@ These scenarios describe when loaded rows go directly to the columnstore or when
   
 ```sql  
 SELECT object_id, index_id, partition_number, row_group_id, delta_store_hobt_id, 
-  state state_desc, total_rows, deleted_rows, size_in_bytes   
+  state, state_desc, total_rows, deleted_rows, size_in_bytes   
 FROM sys.dm_db_column_store_row_group_physical_stats  
 ```  
   

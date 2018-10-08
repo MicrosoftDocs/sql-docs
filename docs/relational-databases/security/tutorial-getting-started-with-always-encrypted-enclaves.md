@@ -277,7 +277,7 @@ In this step, you will encrypt the data stored in the SSN and Salary columns ins
     GO
     ```
 
-4. To verify the SSN and Salary columns are now encrypted, paste in and execute the below statement in the query window with Always Encrypted disabled. The query window should return encrypted values in the SSN and Salary columns. With the Always Encrypted query window, try the same query to see the data decrypted.
+4. To verify the SSN and Salary columns are now encrypted, paste in and execute the below statement in the query window with Always Encrypted disabled. The query window should return encrypted values in the SSN and Salary columns. With the Always Encrypted enabled query window, try the same query to see the data decrypted.
 
     ```sql
     SELECT * FROM [dbo].[Employees]

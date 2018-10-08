@@ -18,7 +18,7 @@ manager: craigg
 # Create Analysis Reports with Database Experimentation Assistant
 After replaying the source trace on both of your target servers, you can generate an analysis report. Analysis reports help you gain insights about the performance implications of proposed changes.
 
-## Open a new analysis report  
+## Create a new analysis report  
 Open the tool and select the menu icon on the left side of the screen. This action opens the left side-bar menu. Choose **Analysis Reports** next to the checklist icon to open the Analysis Reports section.
 
 ![Analysis Menu](./media/database-experimentation-assistant-create-report/dea-create-reports-menu.png)

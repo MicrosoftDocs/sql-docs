@@ -303,8 +303,8 @@ Now, you can run rich queries against the encrypted columns. Some query processi
     ```
 
 ## Next Steps
-See [Configure Always Encrypted with secure enclaves](encryption/configure-always-encrypted-enclaves.md) for ideas about other use cases, you can try the following:
+See [Configure Always Encrypted with secure enclaves](encryption/configure-always-encrypted-enclaves.md) for ideas about other use cases. You can also try the following:
 
-- Configuring TPM attestation.
-- Configuring HTTPS for your HGS instance.
+- [Configuring TPM attestation.](https://docs.microsoft.com/en-us/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-initialize-hgs-tpm-mode)
+- [Configuring HTTPS for your HGS instance.](https://docs.microsoft.com/en-us/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-configure-hgs-https)
 - Developing applications that issue rich queries against encrypted columns.

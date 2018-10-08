@@ -89,13 +89,13 @@ To create a policy on the container and generate a Shared Access Signature (SAS)
     # Create a new resource group - comment out this line to use an existing resource group  
     New-AzureRmResourceGroup -Name $resourceGroupName -Location $locationName   
   
-    # Create a new ARM storage account - comment out this line to use an existing ARM storage account  
+    # Create a new Azure Resource Manager storage account - comment out this line to use an existing Azure Resource Manager storage account  
     New-AzureRmStorageAccount -Name $storageAccountName -ResourceGroupName $resourceGroupName -Type Standard_RAGRS -Location $locationName   
   
-    # Get the access keys for the ARM storage account  
+    # Get the access keys for the Azure Resource Manager storage account  
     $accountKeys = Get-AzureRmStorageAccountKey -ResourceGroupName $resourceGroupName -Name $storageAccountName  
   
-    # Create a new storage account context using an ARM storage account  
+    # Create a new storage account context using an Azure Resource Manager storage account  
     $storageContext = New-AzureStorageContext -StorageAccountName $storageAccountName -StorageAccountKey $accountKeys[0].Value
 
     # Creates a new container in blob storage  

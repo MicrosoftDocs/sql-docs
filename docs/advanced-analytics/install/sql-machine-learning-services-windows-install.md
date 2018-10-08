@@ -231,7 +231,6 @@ On the database, you might need the following configuration updates:
 
 * [Security configuration for SQLRUserGroup](../../advanced-analytics/security/firewall-configuration.md)
 * [Give users permission to SQL Server Machine Learning Services](../../advanced-analytics/security/user-permission.md)
-* [Connect to SQL Server Machine Learning Services from your data science client computer](../../advanced-analytics/security/connect-from-client-computer.md)
 
 > [!NOTE]
 > Whether additional configuration is required depends on your security schema, where you installed SQL Server, and how you expect users to connect to the database and run external scripts.

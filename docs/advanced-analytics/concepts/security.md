@@ -28,7 +28,7 @@ A SQL Server login or Windows user account is required to run external scripts t
 
 + For Windows authentication: You might need to create an ODBC data source on the data science client that specifies the instance name and other connection information. For more information, see [ODBC data source administrator](../../odbc/admin/odbc-data-source-administrator.md).
 
-For more information, see [Give users permission to SQL Server Machine Learning Services](../../advanced-analytics/administration/user-permission.md).
+For more information, see [Give users permission to SQL Server Machine Learning Services](../../advanced-analytics/security/user-permission.md).
 
 <a name="launchpad"></a>
 
@@ -101,7 +101,7 @@ Parallel queries from the same login are mapped to the same user worker account.
 
 The directories used for the processes are managed by the [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)], and directories are access-restricted. For R, RLauncher performs this task. For Python, PythonLauncher performs this task. Each individual worker account is restricted to its own folder, and cannot access files in folders above its own level. However, the worker account can read, write, or delete children under the session working folder that was created.
 
-For more information about how to change the number of worker accounts, account names, or account passwords, see [Modify the user account pool for SQL Server machine learning](../../advanced-analytics/administration/modify-user-account-pool.md) and [Security configuration for SQLRUserGroup](../../advanced-analytics/security/user-account-pool-security.md).
+For more information about how to change the number of worker accounts, account names, or account passwords, see [Modify the user account pool for SQL Server machine learning](../../advanced-analytics/administration/modify-user-account-pool.md).
 
 ## Security for multiple scripts
 

@@ -112,6 +112,7 @@ ms.technology:
                                               <ul class="noBullet">
                                                   <li><a class="barLink" href="/azure/sql-database/"><strong>Azure SQL Database</strong></a></li>
                                                   <li><a class="barLink" href="/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is/"> <strong>Azure SQL Data Warehouse</strong></a></li>
+                                                  <li><a class="barLink" href="https://azure.microsoft.com/en-us/updates/?status=all&product=sql-database/"><strong>What's new</strong></a></li>
                                               </ul>
                                           </div>
                                       </div>
@@ -138,67 +139,6 @@ ms.technology:
                                         </div>
                                     </div>
                                 </div>
-                            </li>
-                            <li class="fullSpan">
-                                <ul class="cardsL panelContent singlePanelContent" style="display:flex!important;">
-                                    <li>
-                                        <div class="cardSize">
-                                            <div class="cardPadding">
-                                                <div class="card">
-                                                  <div class="cardText">
-                                                        <h3>Design</h3>
-                                                        <ul class="noBullet">
-                                                          <li><a class="barLink" href="/sql/relational-databases/database-features/">Relational database concepts</a></li>
-                                                            <li><a class="barLink" href="/sql/connect/homepage-sql-connection-programming/">Connect with client applications on premises</a></li>
-                                                            <li><a class="barLink" href="/azure/sql-database/sql-database-libraries">Azure SQL DB connectivity libraries</a></li>
-                                                            <li><a class="barLink" href="/sql/relational-databases/sql-database-develop-overview/">Azure SQL DB applications</a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="cardSize">
-                                            <div class="cardPadding">
-                                                <div class="card">
-                                                  <div class="cardText">
-                                                        <h3>Tools</h3>
-                                                        <ul class="noBullet">
-                                                            <li><a class="barLink" href="/sql/ssms/download-sql-server-management-studio-ssms">SQL Server Management Studio (SSMS)</a></li>
-                                                            <li><a class="barLink" href="/sql/azure-data-studio/download/">Azure Data Studio</a></li> 
-                                                            <li><a class="barLink" href="/sql/ssdt/download-sql-server-data-tools-ssdt">SQL Server Data Tools (SSDT)</a></li>
-                                                            <li><a class="barLink" href="/sql/tools/overview-sql-tools">Other SQL Tools</a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="cardSize">
-                                            <div class="cardPadding">
-                                                <div class="card">
-                                                    <div class="cardText">
-                                                        <h3>Reference</h3>
-                                                <table cellpadding="0" cellspacing="0" border="0"><tr><td style="border-top-color:transparent!important;padding-left:0;">
-                                                <ul class="noBullet">
-                                                    <li><a class="barLink" href="/sql/xquery/xquery-language-reference-sql-server">xQuery</a></li>
-                                                    <li><a class="barLink" href="/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views/">DMVs</a></li>
-                                                    <li><a class="barLink" href="/sql/powershell/sql-server-powershell">Powershell</a></li>
-                                                </ul></td>
-                                                <td style="border-top-color:transparent!important;padding-left:0;">
-                                                <ul class="noBullet">
-                                                     <li><a class="barLink" href="/sql/t-sql/language-reference">Transact-SQL (T-SQL)</a></li>
-                                                     <li><a class="barLink" href="/sql/samples/sql-samples-where-are/">Database Samples</a></li>
-                                                     <li><a class="barLink" href="/previous-versions/sql/">Archived Content (SQL 2005-2012)</a></li>
-                                                </ul></td></tr></table>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
                             </li>
                             <li class="fullSpan">
                                 <ul class="cardsC panelContent singlePanelContent cols cols4" style="display:flex!important;">
@@ -363,11 +303,72 @@ ms.technology:
                                             <div class="cardPadding">
                                                 <div class="card">
                                                   <div class="cardText">
+                                                        <h3>Design</h3>
+                                                        <ul class="noBullet">
+                                                          <li><a class="barLink" href="/sql/relational-databases/database-features/">Relational database concepts</a></li>
+                                                            <li><a class="barLink" href="/sql/connect/homepage-sql-connection-programming/">Connect with client applications on premises</a></li>
+                                                            <li><a class="barLink" href="/azure/sql-database/sql-database-libraries">Azure SQL DB connectivity libraries</a></li>
+                                                            <li><a class="barLink" href="/sql/relational-databases/sql-database-develop-overview/">Azure SQL DB applications</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="cardSize">
+                                            <div class="cardPadding">
+                                                <div class="card">
+                                                  <div class="cardText">
+                                                        <h3>Tools</h3>
+                                                        <ul class="noBullet">
+                                                            <li><a class="barLink" href="/sql/ssms/download-sql-server-management-studio-ssms">SQL Server Management Studio (SSMS)</a></li>
+                                                            <li><a class="barLink" href="/sql/azure-data-studio/download/">Azure Data Studio</a></li> 
+                                                            <li><a class="barLink" href="/sql/ssdt/download-sql-server-data-tools-ssdt">SQL Server Data Tools (SSDT)</a></li>
+                                                            <li><a class="barLink" href="/sql/tools/overview-sql-tools">Other SQL Tools</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="cardSize">
+                                            <div class="cardPadding">
+                                                <div class="card">
+                                                    <div class="cardText">
+                                                        <h3>Reference</h3>
+                                                <table cellpadding="0" cellspacing="0" border="0"><tr><td style="border-top-color:transparent!important;padding-left:0;">
+                                                <ul class="noBullet">
+                                                    <li><a class="barLink" href="/sql/xquery/xquery-language-reference-sql-server">xQuery</a></li>
+                                                    <li><a class="barLink" href="/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views/">DMVs</a></li>
+                                                    <li><a class="barLink" href="/sql/powershell/sql-server-powershell">Powershell</a></li>
+                                                </ul></td>
+                                                <td style="border-top-color:transparent!important;padding-left:0;">
+                                                <ul class="noBullet">
+                                                     <li><a class="barLink" href="/sql/t-sql/language-reference">Transact-SQL (T-SQL)</a></li>
+                                                     <li><a class="barLink" href="/sql/samples/sql-samples-where-are/">Database Samples</a></li>
+                                                     <li><a class="barLink" href="/previous-versions/sql/">Archived Content (SQL 2005-2012)</a></li>
+                                                </ul></td></tr></table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="fullSpan">
+                                <ul class="cardsL panelContent singlePanelContent" style="display:flex!important;">
+                                    <li>
+                                        <div class="cardSize">
+                                            <div class="cardPadding">
+                                                <div class="card">
+                                                  <div class="cardText">
                                                         <h3>Reporting</h3>
                                                         <ul class="noBullet">
                                                              <li><a class="barLink" href="/sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports/">SQL Server Reporting Services</a></li>
                                                             <li><a class="barLink" href="/power-bi/service-get-started/">Power BI Service</a></li>
-                                                            <li><a class="barLink" href="/power-bi/report-server/get-started/">PowerBI Report Server</a></li>
+                                                            <li><a class="barLink" href="/power-bi/report-server/get-started/">Power BI Report Server</a></li>
                                                         </ul>
                                                     </div>
                                                 </div>

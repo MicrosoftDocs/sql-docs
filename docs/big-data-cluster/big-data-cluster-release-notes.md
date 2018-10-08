@@ -19,33 +19,38 @@ This article provides the latest updates and known issues for the latest release
 
 The following sections describe the new features and known issues for big data clusters in SQL Server 2019 CTP 2.0.
 
-### What's New?
+### What's in the CTP 2.0 release?
 
-- Architecture changes to separate out compute pools, data pools, and storage pools.
-- Update to use the latest Spark version (2.3).
-- Ability to create external tables over HDFS to natively parquet and CSV files using the SQL Server instance collocated on the HDFS data node in the storage pool.
-- Data virtualization (PolyBase) connectors for Oracle, SQL Server, Teradata, MongoDB, and Generic ODBC.
-- External table wizard in [Azure Data Studio](../azure-data-studio/what-is.md) to create connectors to Oracle and SQL Server.
-- New native [notebook experience](notebooks-guidance.md) in Azure Data Studio.
-- New deployment engine that uses the control plane technology from Azure's data services.
-- Ability to create data caches in the data pools.
-- Ability to load data into data pools using the new .jar from Spark/HDFS.
-- Predicate pushdown to data pools and storage pools.
-- Cluster Administration portal:
-  - Deployment status view
-  - Grafana for viewing monitoring data about SQL Server and Kubernetes
-  - Kibana for log analytics of all the logs that are collected across the cluster
-  - Status views of each of the pools
-  - Service end points view
-- mssqlctl .whl package to support installing with `pip install mssqlctl`.
+- Simple deployment experience using mssqlctl management tool
+- Native notebook experience in Azure Data Studio
+- Query HDFS files via Storage Instance of SQL Server
+- Data virtualization via master to SQL Server, Oracle, MongoDB, and HDFS
+- Data virtualization wizard for SQL Server and Oracle in Azure Data Studio
+- ML Services on master
+- Cluster administration portal that you can use for monitoring and troubleshooting
+- Spark job submit in Azure Data Studio 
+- Spark UI in the cluster administration portal
+- Volume mounting to storage classes
+- Queries over data pools from master
+- Show plan for distributed queries in SSMS
+- Pip package for mssqlctl management tool
+- Built-in deployment engine through controller service
 
 ### Known issues
 
 The following sections provide known issues for SQL Server big data clusters in CTP 2.0.
 
-#### Kubernetes
+#### Deployment
 
-- SQL Server big data clusters have only been tested with Kubernetes version 1.10.*. If you are using Azure Kubernetes Service (AKS), note that disk resizing is not available for version 1.10*.
+- If you are using Azure Kubernetes Service (AKS), the recommended version of Kubernetes is 1.10.*, which does not support disk resizing. For Kubernetes deployed on VMs, the recommended version is 1.11.
+
+- After deploying on AKS, you might see the following two warning events from the deployment. Both of these events are known issues, but they do not prevent you from successfully deploying the big data cluster on AKS.
+
+   `Warning  FailedMount: Unable to mount volumes for pod "mssql-storage-pool-default-1_sqlarisaksclus(c83eae70-c81b-11e8-930f-f6b6baeb7348)": timeout expired waiting for volumes to attach or mount for pod "sqlarisaksclus"/"mssql-storage-pool-default-1". list of unmounted volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs]. list of unattached volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs storage-pool-java-storage secrets default-token-q9mlx]`
+
+   `Warning  Unhealthy: Readiness probe failed: cat: /tmp/provisioner.done: No such file or directory`
+
+- If a big data cluster deployment fails, the associated namespace is not removed. This could result in an orphaned namespace on the cluster.
 
 #### External tables
 
@@ -57,9 +62,21 @@ The following sections provide known issues for SQL Server big data clusters in 
 
    `Msg 7320, Level 16, State 110, Line 157 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 110806;A distributed query failed: One or more errors occurred.`
 
-#### Spark
+#### Spark and notebooks
 
 - If a storage node goes down and gets recreated, Spark might crash.
+
+- If you have Jupyter already installed and a separate Python on Windows, Spark notebooks might fail. To work around this issue, upgrade Jupyter to the latest version.
+
+- In a notebook, if you click the **Add Text** command, the text cell is added in preview mode rather than edit mode. You can click on the preview icon to toggle to edit mode and edit the cell.
+
+#### HDFS
+
+- If you right-click on a file in HDFS to preview it, you might see the following error:
+
+   `Error previewing file: File exceeds max size of 30MB`
+
+   Currently there is no way to preview files larger than 30 MB in Azure Data Studio.
 
 #### Security
 

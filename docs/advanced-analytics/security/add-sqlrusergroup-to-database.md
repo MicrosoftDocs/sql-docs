@@ -19,7 +19,7 @@ As part of the installation process for [!INCLUDE[rsql-productnamenew-md](../../
 
 For more information, see the Launchpad section in [Security overview](../../advanced-analytics/concepts/security.md#launchpad).
 
-## Add SQLRUserGroup as a SQL Server login
+## Add SQLRUserGroup
 
 By default, the group of worker accounts does **not** have login permissions on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance with which it is associated. This can be a problem if any R or Python users connect to SQL Server from a remote client to run external scripts, or if a script uses ODBC to get additional data.
 
@@ -62,7 +62,7 @@ If you need to run scripts from a remote data science client, and you are using 
 
 7. In the **Login - New** dialog box, click **OK**. By default, the login is assigned to the **public** role and has permission to connect to the database engine.
 
-## Change the number of worker accounts in SQLRUserGroup
+## Number of worker accounts
 
 If you intend to make heavy use of machine learning, you can increase the number of accounts used to run external scripts, as described in this article: 
 

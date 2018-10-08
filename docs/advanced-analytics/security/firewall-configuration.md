@@ -15,7 +15,7 @@ manager: cgronlun
 
 This article lists firewall configuration considerations that the administrator or architect should bear in mind when using machine learning services.
 
-## Firewall rules created by Setup
+## Default firewall rules
 
 By default, the SQL Server Setup disables outbound connections by creating firewall rules. 
 

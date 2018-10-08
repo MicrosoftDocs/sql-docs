@@ -47,7 +47,7 @@ Therefore, all external scripts that are initiated from a remote client must spe
 
 <a name="permissions-external-script"></a> 
 
-## Grant permission to run external scripts
+## Permission to run scripts
 
 If you installed [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] yourself, and you are running R or Python scripts in your own instance, you typically execute scripts as an administrator. Thus, you have implicit permission over various operations and all data in the database.
 

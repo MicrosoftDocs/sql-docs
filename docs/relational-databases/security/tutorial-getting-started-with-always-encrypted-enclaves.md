@@ -36,7 +36,7 @@ To get started with Always Encrypted with secure enclaves, you need at least two
 
 Alternatively, you can install SSMS on another machine.
 
->[!NOTE] 
+>[!WARNING] 
 >In production environments, you should never use SSMS or other tools to manage Always Encrypted keys or run queries on encrypted data on the SQL Server computer, as this may reduce or completely defeat the purpose of using Always Encrypted.
 
 ### HGS computer requirements
@@ -72,7 +72,7 @@ In this step, you will configure the HGS computer to run Host Guardian Service s
    Initialize-HgsAttestation -HgsServiceName 'hgs' -TrustHostKey  
    ```
 
-4. Find an IP address of the HGS computer, for example, by running the following command. You will need the IP address of the HGS computer in later steps.
+4. Find the IP address of the HGS computer by running the following command. Save this IP address for later steps.
 
    ```powershell
    Get-NetIPAddress  
@@ -82,7 +82,7 @@ In this step, you will configure the HGS computer to run Host Guardian Service s
 >Alternatively, if you want to reference your HGS computer by a DNS name, you can set up a forwarder from your corporate DNS servers to the new HGS domain controller.  
 
 ## Step 2: Configure the SQL Server computer as a guarded host
-In this step, you will configure the SQL Server computer as a guarded host, registered with the HGS and using host key attestation.
+In this step, you will configure the SQL Server computer as a guarded host registered with HGS using host key attestation.
 >[!NOTE]
 >Host key attestation is only recommended for use in test environments. You should use TPM attestation for production environments.
 
@@ -241,7 +241,7 @@ In this step, you will create a column master key and a column encryption key th
 
 ## Step 6: Encrypt some columns in place
 
-In this step, you will encrypt the data stored in the SSN and Salary columns in-place, that is, inside the server-side enclave.
+In this step, you will encrypt the data stored in the SSN and Salary columns inside the server-side enclave, and then test a SELECT query of the data.
 
 1. In SSMS, configure a new query window with Always Encrypted enabled for the database connection.
     1. In SSMS, open a new query window.
@@ -277,7 +277,7 @@ In this step, you will encrypt the data stored in the SSN and Salary columns in-
     GO
     ```
 
-4. To verify the SSN and Salary columns are now encrypted, paste in and execute the below statement in the query window with Always Encrypted disabled. The query window should return encrypted values in the SSN and Salary columns.
+4. To verify the SSN and Salary columns are now encrypted, paste in and execute the below statement in the query window with Always Encrypted disabled. The query window should return encrypted values in the SSN and Salary columns. With the Always Encrypted query window, try the same query to see the data decrypted.
 
     ```sql
     SELECT * FROM [dbo].[Employees]

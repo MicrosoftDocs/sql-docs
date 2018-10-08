@@ -14,11 +14,11 @@ manager: cgronlun
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article describes the overall security architecture that is used to connect the SQL Server database engine and related components to the extensibility framework. Examples of the security process are provided for these common scenarios for using machine learning extensions in an enterprise environment:
+This article describes the overall security architecture that is used to connect the SQL Server database engine and related components to the extensibility framework. For example, these are common scenarios for using machine learning extensions in an enterprise environment:
 
 + Executing RevoScaleR or MicrosoftML functions in SQL Server from a data science client
 + Running external scripts (such as R or Python) directly from SQL Server using stored procedures
-+ Running Python with the SQL Server as the remote compute context
++ Running R or Python with the SQL Server as the remote compute context
 
 ## User security
 
@@ -54,13 +54,13 @@ Therefore, all external scripts that are initiated from a remote client must spe
 
 ## SQL Server Launchpad service
 
-A separate [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] service is created for database engine instance to which you have added SQL Server machine learning (R or Python) integration.
+A separate [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] service is created for the database engine instance to which you have added SQL Server machine learning (R or Python) integration.
 
 By default, [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] is configured to run under **NT Service\MSSQLLaunchpad**, which is provisioned with all necessary permissions to run external scripts. Stripping permissions from this account can result in [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] failing to start or to access the SQL Server instance where external scripts should be run.
 
 For how to configure the [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] service, see [[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] service configuration](../security/sql-server-launchpad-service-account.md).
 
-### Interaction of SQL Server security and Launchpad security
+### Interaction between SQL Server security and Launchpad security
 
 When an external script is executed in the context of the SQL Server computer, the [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] service gets an available worker account (a local user account) from a pool of worker accounts established for external processes and uses that worker account to perform the related tasks.
 
@@ -75,7 +75,7 @@ When all SQL Server operations are completed, the user worker account is marked 
 
 For more information about the service, see [Extensibility framework](../concepts/extensibility-framework.md).
 
-### What is SQLRUserGroup?
+### Windows user group SQLRUserGroup
 
 In SQL Server 2016 and 2017, during setup of Machine Learning Services, new local Windows user accounts (MSSQLSERVER00-MSSQLSERVER20) are created and used for isolating and running external processes under the security token of the [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] service. When an external process was needed, SQL Server Launchpad service would take an available account and use it to run a process.
 

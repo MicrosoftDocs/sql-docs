@@ -32,7 +32,7 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sql
 ## Granting Server Permissions in Visual Basic  
  This code example grants the Create Endpoint and Alter Any Endpoint permissions to the specified login, and then enumerates and displays the permissions. One of the permissions is revoked, and then the permissions are enumerated again. This example assumes that the specified login has the specified permissions to start with.  
   
-```  
+```VBNET  
 ' compile with: /r:Microsoft.SqlServer.Smo.dll /r:Microsoft.SqlServer.ConnectionInfo.dll   
 ' /r:Microsoft.SqlServer.Management.Sdk.Sfc.dll /r:Microsoft.SqlServer.SqlEnum.dll  
 Imports Microsoft.SqlServer.Management.Smo  
@@ -111,7 +111,7 @@ End Class
 ## Granting Server Permissions in Visual C#  
  This code example grants the Create Endpoint and Alter Any Endpoint permissions to the specified login, and then enumerates and displays the permissions. One of the permissions is revoked, and then the permissions are enumerated again. This example assumes that the specified login has the specified permissions to start with.  
   
-```  
+```csharp  
 // compile with: /r:Microsoft.SqlServer.Smo.dll /r:Microsoft.SqlServer.ConnectionInfo.dll   
 // /r:Microsoft.SqlServer.Management.Sdk.Sfc.dll /r:Microsoft.SqlServer.SqlEnum.dll  
 using System;  
@@ -191,7 +191,7 @@ public class A {
 ## Granting Server Permissions in PowerShell  
  This code example grants the Create Endpoint and Alter Any Endpoint permissions to the specified login, and then enumerates and displays the permissions. One of the permissions is revoked, and then the permissions are enumerated again. This example assumes that the specified login has the specified permissions to start with.  
   
-```  
+```powershell  
 # Set the path context to the local, default instance of SQL Server.  
 CD \sql\localhost\  
 $srv = get-item default  

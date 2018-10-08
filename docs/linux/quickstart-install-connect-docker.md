@@ -48,7 +48,7 @@ any changes to one section should be duplicated in the other-->
 
 ## <a id="pullandrun2017"></a> Pull and run the container image
 
-1. Pull the SQL Server 2017 Linux container image from Docker Hub.
+1. Pull the SQL Server 2017 Linux container image from Microsoft Container Registry.
 
    ```bash
    sudo docker pull mcr.microsoft.com/mssql/server:2017-latest

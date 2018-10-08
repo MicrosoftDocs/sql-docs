@@ -154,6 +154,7 @@ Setup.exe /Q /ACTION=INSTALL /IACCEPTSQLSERVERLICENSETERMS /FEATURES=SQLEngine,P
 ::: moniker range=">= sql-server-ver15 || =sqlallproducts-allversions"
 ## <a id="enable"></a> Enable PolyBase
 
+
 Once you are done with the installation, Polybase must be enabled to access it's features. connect to SQL Server 2019 CTP 2.0, you must enable PolyBase after installation using the following Transact-SQL command:
 
 

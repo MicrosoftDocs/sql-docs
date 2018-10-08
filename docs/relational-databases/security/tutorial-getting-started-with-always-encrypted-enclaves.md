@@ -228,7 +228,7 @@ In this step, you will create a column master key and a column encryption key th
     4. Select **Allow enclave computations**.
     5. If you selected Azure Key Vault, sign in to Azure and select your key vault. For more information on how to create a key vault for Always Encrypted, see [Manage your key vaults from Azure portal](https://blogs.technet.microsoft.com/kv/2016/09/12/manage-your-key-vaults-from-new-azure-portal/).
     6. Select your key if it already exists, or follow the directions on the form to create a new key.
-    7. Click **OK**.
+    7. Select **OK**.
 
         ![Allow enclave computations](encryption/media/always-encrypted-enclaves/allow-enclave-computations.png)
 
@@ -237,7 +237,7 @@ In this step, you will create a column master key and a column encryption key th
     1. Right-click **Always Encrypted Keys** and select **New Column Encryption Key**.
     2. Enter a name for the new column encryption key: CEK1.
     3. In the **Column master key** dropdown, select the column master key you created in the previous steps.
-    4. Click **OK**.
+    4. Select **OK**.
 
 ## Step 6: Encrypt some columns in place
 
@@ -247,14 +247,14 @@ In this step, you will encrypt the data stored in the SSN and Salary columns in-
     1. In SSMS, open a new query window.
     2. Right-click anywhere in the new query window.
     3. Select Connection \> Change Connection.
-    4. Click on **Options**. Navigate to the **Always Encrypted** tab, select **Enable Always Encrypted**, and specify your enclave attestation URL.
-    5. Click **Connect**.
+    4. Select **Options**. Navigate to the **Always Encrypted** tab, select **Enable Always Encrypted**, and specify your enclave attestation URL.
+    5. Select **Connect**.
 2. In SSMS, configure another query window with Always Encrypted disabled for the database connection.
     1. In SSMS, open a new query window.
     2. Right-click anywhere in the new query window.
     3. Select Connection \> Change Connection.
-    4. Click on **Options**. Navigate to the **Always Encrypted** tab, make sure **Enable Always Encrypted** is not selected.
-    5. Click **Connect**.
+    4. Select on **Options**. Navigate to the **Always Encrypted** tab, make sure **Enable Always Encrypted** is not selected.
+    5. Select **Connect**.
 3. Encrypt the SSN and Salary columns. In the query window with Always Encrypted enabled, paste in and execute the below statements:
 
     ```sql
@@ -292,7 +292,7 @@ Now, you can run rich queries against the encrypted columns. Some query processi
     2. Select **Query Options…**.
     3. Navigate to **Execution** > **Advanced**.
     4. Select or unselect Enable Parameterization for Always Encrypted.
-    5. Click OK.
+    5. Select OK.
 2. In the query window with Always Encrypted enabled, paste in and execute the below query. The query should return plaintext values and rows meeting the specified search criteria.
 
     ```sql

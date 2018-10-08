@@ -151,6 +151,9 @@ This issue is known in the RTM version of SQL Server 2017. For more information,
 The issue has been addressed in the latest Cumulative Update 1 for SQL Server 2017. Download the latest CU from [https://support.microsoft.com/help/4038634/cumulative-update-1-for-sql-server-2017](https://support.microsoft.com/help/4038634/cumulative-update-1-for-sql-server-2017).
 
 ## Next steps
-For a 19-minute introduction and demonstration of this feature, watch the following video:
 
-> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-Database-Experimentation-Assistant/player]
+- [Create reports](database-experimentation-assistant-create-report.md) shows you how to create a report.
+
+- For a 19-minute introduction and demonstration of DEA, watch the following video:
+
+  > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-Database-Experimentation-Assistant/player]

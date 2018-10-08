@@ -46,19 +46,19 @@ An Azure resource group is a logical group in which Azure resources are deployed
     az login
     ```
 
-2. If you have multiple subscriptions you can view all of your subscriptions by running the following command:
+1. If you have multiple subscriptions you can view all of your subscriptions by running the following command:
 
    ```bash
    az account list
    ```
 
-3. If you want to change to a different subscription you can run this command:
+1. If you want to change to a different subscription you can run this command:
 
    ```bash
    az account set --subscription <subscription id>
    ```
 
-4. Create a resource group with the **az group create** command. The following example creates a resource group named `sqlbigdatagroup` in the `westus2` location.
+1. Create a resource group with the **az group create** command. The following example creates a resource group named `sqlbigdatagroup` in the `westus2` location.
 
    ```bash
    az group create --name sqlbigdatagroup --location westus2
@@ -81,7 +81,7 @@ An Azure resource group is a logical group in which Azure resources are deployed
 
     After several minutes, the command completes and returns JSON-formatted information about the cluster.
 
-2. Save the JSON output from the previous command for later use.
+1. Save the JSON output from the previous command for later use.
 
 ## Connect to the cluster
 

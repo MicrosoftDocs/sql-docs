@@ -19,7 +19,7 @@ manager: craigg
 After replaying the source trace on both of your target servers, you can generate an analysis report. Analysis reports help you gain insights about the performance implications of proposed changes.
 
 ## Open a new analysis report  
-Open the tool and select the menu icon on the left side of the screen. This opens the left side-bar menu. Choose **Analysis Reports** next to the checklist icon to open the Analysis Reports section.
+Open the tool and select the menu icon on the left side of the screen. This action opens the left side-bar menu. Choose **Analysis Reports** next to the checklist icon to open the Analysis Reports section.
 
 ![Analysis Menu](./media/database-experimentation-assistant-create-report/dea-create-reports-menu.png)
 
@@ -35,8 +35,8 @@ Enter the following information in the input fields before starting the New anal
 
 ![New Analysis Report Inputs](./media/database-experimentation-assistant-create-report/dea-create-reports-inputs.png)
 
-- **Report name**: Provide a friendly or recognizable name that you want to call your report. This is the name used for both A and B databases, for example, **A (or B)** + **Report name** + **Unique Identifier**. 
-- **Server name**: Provide the name of the server that you'd like to contain A, B, and Analysis databases.
+- **Report name**: Provide a friendly or recognizable name that you want to call your report. This name is used for both A and B databases, for example, **A (or B)** + **Report name** + **Unique Identifier**. 
+- **Server name**: Provide the name of the server that you'd like to include A, B, and Analysis databases.
 - **SQL Server instance name**: Provide a SQL server where you want the report.
 - **Trace for source server**: Provide the SQL server (2008 R2) first trace file (.trc).
 - **Trace for target server**: Provide the target SQL server (2014) first trace file (.trc).
@@ -51,7 +51,7 @@ A new analysis report is generated. The analysis database follows the naming sch
 
 ### What does my analysis report tell me?
     
-Using statistical tests, DEA analyzes your workload and determines how each query performed from Target 1 to Target 2, with performance details for each query. Learn more about DEA at [Get started](database-experimentation-assistant-get-started.md).
+Using statistical tests, DEA analyzes your workload and determines how each query ran from Target 1 to Target 2, with performance details for each query. Learn more about DEA at [Get started](database-experimentation-assistant-get-started.md).
     
 ### Can I create a new analysis report while another report is being generated?
     
@@ -72,11 +72,11 @@ The current logged in user in DEA should have sysadmin privilege to the analysis
 
 |Possible Errors|Solution|  
 |---|---|  
-|Unable to connect to the database. Please ensure you have sysadmin privileges for analyzing and viewing the reports.|You might not have access or sysadmin permissions to the server and/or database.  Confirm your login permissions and privileges and try again|  
+|Unable to connect to the database. Make sure you have sysadmin privileges for analyzing and viewing the reports.|You might not have access or sysadmin permissions to the server or database.  Confirm your login permissions and privileges and try again|  
 |Unable to generate Report Name on server Server Name. For details, check the Report Name report.|You might not have sysadmin privileges needed to generate a new report. Detailed errors can be found by clicking on the errored out report (see #4) and by checking the logs found at %temp%\\DEA.|  
-|The current user doesn't have the required permissions to perform the operation. Please ensure you have sysadmin privileges for performing trace and analyzing the reports.|You don't have sysadmin privileges needed to generate a new report.|  
+|The current user doesn't have the required permissions to run the operation. Make sure you have sysadmin privileges for performing trace and analyzing the reports.|You don't have sysadmin privileges needed to generate a new report.|  
 
-### I am unable to connect to the SQL Server.
+### I'm unable to connect to the SQL Server.
     
 - Confirm the SQL Server name is valid.  To confirm, try connecting to the server using SSMS.
 - Confirm your firewall configuration isn't blocking connections to SQL Server.
@@ -92,9 +92,9 @@ If an error occurs during creation of the report, the progress page shows the sp
 
 |Possible Errors|Solution|  
 |---|---|  
-|RInterop hit an error on startup. Please check RInterop logs and try again.|DEA requires internet access to download dependent R packages. Check RInterop logs at %temp%\\RInterop and DEA logs at %temp%\\DEA.  If RInterop was initialized incorrectly and/or without the correct R packages, you might see an exception "Failed to generate new analysis report." after the InitializeRInterop step in the DEA logs.<br><br>The RInterop logs can also show an error similar to "there is no jsonlite package available". If your machine doesn't have internet access, you can manually download the needed jsonlite R package with the following steps:<br><br><li>Navigate to the %userprofile%\\DEARPackages folder on the machine's filesystem.  This folder consists of the packages used by R for DEA.</li><br><li>If the jsonlite folder is missing in the list of installed packages, you'll need a machine with internet access to download the release version of jsonlite\_1.4.zip from [https://cran.r-project.org/web/packages/jsonlite/index.html](https://cran.r-project.org/web/packages/jsonlite/index.html).</li><br><li>Copy the zip to the machine where you are running DEA.  Extract the jsonlite folder and copy it over to %userprofile%\\DEARPackages.  This step automatically installs the jsonlite package in R. Note that the folder should be named 'jsonlite' and the contents should be directly inside the folder, not one level below.</li><br><li>Close the DEA app, reopen, and try analysis again.</li><br>Alternatively, you can use the RGUI. Navigate to packages -> install from zip.  Navigate to package you downloaded earlier and install.<br><br>If RInterop was initialized and set up correctly, you should see "Installing dependent R package "jsonlite"" in the RInterop logs.|  
-|Unable to connect to the SQL Server instance, please ensure the server name is correct and have required access for the current logged in user.|You might not have access/privileges to server or the server name might be incorrect.|  
-|RInterop process timed out. Check DEA and RInterop logs, kill RInterop process from task manager and try again.<br><br>or<br><br>RInterop is in faulted state. Kill RInterop from task manager and try again.|Check logs at %temp%\\RInterop to confirm the error and remove RInterop process from the Task Manager before trying again.  If problem persists, contact the product team.| 
+|RInterop hit an error on startup. Check RInterop logs and try again.|DEA requires internet access to download dependent R packages. Check RInterop logs at %temp%\\RInterop and DEA logs at %temp%\\DEA.  If RInterop was initialized incorrectly or without the correct R packages, you might see an exception "Failed to generate new analysis report." after the InitializeRInterop step in the DEA logs.<br><br>The RInterop logs can also show an error similar to "there's no jsonlite package available". If your machine doesn't have internet access, you can manually download the needed jsonlite R package with the following steps:<br><br><li>Navigate to the %userprofile%\\DEARPackages folder on the machine's filesystem.  This folder consists of the packages used by R for DEA.</li><br><li>If the jsonlite folder is missing in the list of installed packages, you'll need a machine with internet access to download the release version of jsonlite\_1.4.zip from [https://cran.r-project.org/web/packages/jsonlite/index.html](https://cran.r-project.org/web/packages/jsonlite/index.html).</li><br><li>Copy the zip to the machine where you're running DEA.  Extract the jsonlite folder and copy it over to %userprofile%\\DEARPackages.  This step automatically installs the jsonlite package in R. The folder should be named 'jsonlite' and the contents should be directly inside the folder, not one level below.</li><br><li>Close the DEA app, reopen, and try analysis again.</li><br>You can also use the RGUI. Navigate to packages -> install from zip.  Navigate to package you downloaded earlier and install.<br><br>If RInterop was initialized and set up correctly, you should see "Installing dependent R package "jsonlite"" in the RInterop logs.|  
+|Unable to connect to the SQL Server instance, make sure the server name is correct and have required access for the current logged in user.|You might not have access/privileges to server or the server name might be incorrect.|  
+|RInterop process timed out. Check DEA and RInterop logs, kill RInterop process from task manager and try again.<br><br>or<br><br>RInterop is in faulted state. Kill RInterop from task manager and try again.|Check logs at %temp%\\RInterop to confirm the error and remove RInterop process from the Task Manager before trying again. Contact the product team if problem persists.| 
 
 ### The report is generated, but data appears to be missing.
     

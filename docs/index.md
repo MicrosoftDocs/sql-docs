@@ -230,7 +230,7 @@ ms.technology:
                                                       </div>
                                                       <div class="cardText">
                                                           <h3>Migrate, load, and move data</h3>
-                                                          <p><b>Migration Assistants, Integration Services, Import Export Wizard, Replication </b> </p>
+                                                          <p><b>Migration Assistants, Integration Services (SSIS), Import Export Wizard, Replication </b> </p>
                                                       </div>
                                                   </div>
                                               </div>

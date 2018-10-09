@@ -363,7 +363,7 @@ event_session_test3   7_WITH_STARTUP_STATE   startup_state                   1
 ```
 
 
-This completes the the section on catalog views.
+This completes the section on catalog views.
 
 
 

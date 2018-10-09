@@ -45,7 +45,7 @@ manager: craigg
  Displays the **New Operator** dialog box, which you can use to create a new operator.  
   
  **View operator**  
- Displays the **Properties** dialog box for the currently selected operator. You can view and modified operator properties on the the **Operator Properties** dialog box.  
+ Displays the **Properties** dialog box for the currently selected operator. You can view and modified operator properties on the **Operator Properties** dialog box.  
   
 ## See Also  
  [Alerts](alerts.md)   

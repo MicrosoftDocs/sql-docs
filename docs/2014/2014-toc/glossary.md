@@ -1466,7 +1466,7 @@ manager: craigg
 |smart card profile|A Certificate Lifecycle Manager (CLM) profile created when a request is performed using a profile template that only includes smart card-based certificate templates.|  
 |smart card reader|A device that is installed in computers to enable the use of smart cards for enhanced security features.|  
 |Smart Card Self Service Control|Software installed on a client computer that enables end users and administrators to manage smart cards by providing a connection from the client computer to the smart card.|  
-|smart card unblocking|The action of binding a smart card with administrative credentials to reset the the personal identification number (PIN) attempt counter.|  
+|smart card unblocking|The action of binding a smart card with administrative credentials to reset the personal identification number (PIN) attempt counter.|  
 |SMO|An application programming interface that supports the incorporation of SQL Server administration into any COM or OLE Automation application.|  
 |SMTP|A member of the TCP/IP suite of protocols that governs the exchange of electronic mail between message transfer agents.|  
 |snap-in|A type of tool that you can add to a console supported by Microsoft Management Console (MMC). A stand-alone snap-in can be added by itself; an extension snap-in can be added only to extend the function of another snap-in.|  

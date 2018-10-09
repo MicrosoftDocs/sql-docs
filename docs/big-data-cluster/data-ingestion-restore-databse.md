@@ -39,7 +39,8 @@ kubectl cp ~/Downloads/AdventureWorks2016CTP3.bak mssql-master-pool-0:/tmp -c ms
 Then, verify that the backup file was copied to the pod container.
 
 ```bash
-kubectl exec -it mssql-master-pool-0 -n <name of your cluster> -c mssql-master-pool-0 -- bin/bash
+kubectl exec -it mssql-master-pool-0 -n <name of your cluster> -c mssql-server -- bin/bash
+cd /var/
 ls /tmp
 exit
 ```
@@ -47,8 +48,9 @@ exit
 Example:
 
 ```bash
-kubectl exec -it mssql-master-pool-0 -n clustertest -c mssql-master-pool-0 -- bin/bash
+kubectl exec -it mssql-master-pool-0 -n clustertest -c mssql-server -- bin/bash
 ls /tmp
+exit
 ```
 
 ## Restore the backup file

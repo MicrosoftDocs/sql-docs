@@ -133,7 +133,7 @@ Running mssql-mlservices R libraries on Ubuntu 18.04 requires **libpng12** from 
 
 ```bash
 wget https://mirrors.kernel.org/ubuntu/pool/main/libp/libpng/libpng12-0_1.2.54-1ubuntu1_amd64.deb
-dpkg -i libpng12-01_1.2.54-1ubuntu1_amd64.deb
+dpkg -i libpng12-0_1.2.54-1ubuntu1_amd64.deb
 ```
 
 ### Example 1 -  Full installation 

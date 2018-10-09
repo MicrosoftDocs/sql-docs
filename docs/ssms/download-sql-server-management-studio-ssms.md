@@ -40,7 +40,7 @@ Use SQL Server Management Studio (SSMS) to query, design, and manage your databa
 
 For additional details about SSMS 17.9, please see the [SSMS 17.9 changelog](sql-server-management-studio-changelog-ssms.md#ssms-179-latest-ga-release).
 
-## SSMS 18.0 (preview 4) is the latest generation of *SQL Server Management Studio* and provides support for [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)].
+## SSMS 18.0 (preview 4) is the latest generation of *SQL Server Management Studio* and provides support for [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]
 
 **SSMS 18.0 Public Preview is now available!**
 

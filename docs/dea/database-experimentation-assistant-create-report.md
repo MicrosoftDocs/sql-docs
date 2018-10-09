@@ -15,7 +15,7 @@ ms.reviewer: douglasl
 manager: craigg
 ---
 
-# Create Analysis Reports with Database Experimentation Assistant
+# Create analysis reports with Database Experimentation Assistant
 After replaying the source trace on both of your target servers, you can generate an analysis report. Analysis reports help you gain insights about the performance implications of proposed changes.
 
 ## Create a new analysis report  
@@ -37,9 +37,9 @@ Enter the following information in the input fields before starting the New anal
 
 - **Report name**: Provide a friendly or recognizable name that you want to call your report. This name is used for both A and B databases, for example, **A (or B)** + **Report name** + **Unique Identifier**. 
 - **Server name**: Provide the name of the server that you'd like to include A, B, and Analysis databases.
-- **SQL Server instance name**: Provide a SQL server where you want the report.
-- **Trace for source server**: Provide the SQL server (2008 R2) first trace file (.trc).
-- **Trace for target server**: Provide the target SQL server (2014) first trace file (.trc).
+- **SQL Server instance name**: Provide a SQL Server where you want the report.
+- **Trace for source server**: Provide the SQL Server (2008 R2) first trace file (.trc).
+- **Trace for target server**: Provide the target SQL Server (2014) first trace file (.trc).
 
 ## Begin generating a report
 
@@ -105,6 +105,9 @@ If data doesn't exist, the data might not have copied over correctly or the data
 Further questions or feedback? Submit feedback through the DEA tool by choosing the 'smiley' in the lower-left corner.  
 
 ## Next steps
-For a 19-minute introduction and demonstration of this feature, watch the following video:
 
-> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-Database-Experimentation-Assistant/player]
+- [View reports](database-experimentation-assistant-view-report.md) shows you how to view the analysis report you just created.
+
+- For a 19-minute introduction and demonstration of DEA, watch the following video:
+
+  > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-Database-Experimentation-Assistant/player]

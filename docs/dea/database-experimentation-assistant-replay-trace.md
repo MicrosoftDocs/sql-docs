@@ -152,7 +152,7 @@ The issue has been addressed in the latest Cumulative Update 1 for SQL Server 20
 
 ## Next steps
 
-- [Create reports](database-experimentation-assistant-create-report.md) shows you how to create a report.
+- [Create reports](database-experimentation-assistant-create-report.md) shows you how to create an analysis report that helps you gain insights about proposed changes.
 
 - For a 19-minute introduction and demonstration of DEA, watch the following video:
 

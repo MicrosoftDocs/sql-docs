@@ -44,6 +44,7 @@ You can get insights into how well your workload is represented, as shown in thi
 
 This section walks you through viewing and understanding the report.
 
+### Query categories
 Select different slices of the left pie chart to show only the queries that fall under that category.
 
 ![Report Pie Slices](./media/database-experimentation-assistant-view-report/dea-view-report-pie-slices.png)
@@ -54,7 +55,8 @@ Select different slices of the left pie chart to show only the queries that fall
 - **Indeterminate queries**: queries whose performance change was uncertain.  
 - **Same**: queries whose performance stayed the same across instances A and B.
 
-**Individual Query Drilldown** - You can select the query template links to see more detailed information about specific queries.
+### Individual query drilldown
+You can select the query template links to see more detailed information about specific queries.
 
 ![Query Drilldown](./media/database-experimentation-assistant-view-report/dea-view-report-drilldown.png)
 
@@ -62,9 +64,12 @@ Select a specific query to open that query’s comparison summary.
 
 ![Comparison Summary](./media/database-experimentation-assistant-view-report/dea-view-report-comparison-summary.png)
 
-You can also see the A and B instance the specific query ran on, as well as a template of what the query might look like. Also, a table displays query information specific to instances A and B. The comparison summary report has an expandable section for **Error Information** and **Query Plan Information**, which shows the errors and plan information for both instances.
+You can also see the A and B instance the specific query ran on, as well as a template of what the query might look like. Also, a table displays query information specific to instances A and B.
 
-**Error Queries** - Select the error (red) pie to show these types of errors:
+### Error queries
+The comparison summary report has an expandable section for **Error Information** and **Query Plan Information**, which shows the errors and plan information for both instances.
+
+Select the error (red) pie to show these types of errors:
 - **Existing errors**: errors that were in A
 - **New errors**: errors that were shown in B
 - **Resolved errors**: errors that were in A but not in B

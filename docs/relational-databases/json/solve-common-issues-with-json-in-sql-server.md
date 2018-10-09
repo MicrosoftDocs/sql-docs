@@ -30,7 +30,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ### Create a nested JSON structure  
  **Question.** I want to produce complex JSON with several arrays on the same level. FOR JSON PATH can create nested objects using paths, and FOR JSON AUTO creates additional nesting level for each table. Neither one of these two options lets me generate the output I want. How can I create a custom JSON format that the existing options don't directly support?  
   
- **Answer.** You can create any data structure by adding FOR JSON queries as column expressions that return JSON text. You can also create JSON manually by using the JSON_QUERY function. The the following example demonstrates these techniques.  
+ **Answer.** You can create any data structure by adding FOR JSON queries as column expressions that return JSON text. You can also create JSON manually by using the JSON_QUERY function. The following example demonstrates these techniques.  
   
 ```sql  
 SELECT col1, col2, col3,  

@@ -169,7 +169,7 @@ One advantage of list data regions is that you can add report items such as rect
   
 1.  On the **Insert** tab, select **Rectangle**. 
 
-2. Click in the the upper left corner of the list and drag to make the rectangle 7 inches tall and 3.5 inches wide. Again, to get the exact size, in the **Properties** pane under **Position**, type values for **Width** and **Height**.
+2. Click in the upper left corner of the list and drag to make the rectangle 7 inches tall and 3.5 inches wide. Again, to get the exact size, in the **Properties** pane under **Position**, type values for **Width** and **Height**.
   
 2.  Right-click the rectangle > **Rectangle Properties**.  
   

@@ -21,10 +21,10 @@ SQL Server Big Data cluster can be deployed as docker containers on a Kubernetes
 
 ## <a id="prereqs"></a> Kubernetes cluster prerequisites
 
-- SQL Server Big Data cluster requires a minimum v1.10 version for Kubernetes, for both server and client. To install a specific version on kubectl client, see [Install kubectl binary via curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl).  Latest versions of minikube and AKS are at least 1.10. For AKS you will need to use `--kubernetes-version` parameter to specify a version different than default.
+SQL Server Big Data cluster requires a minimum v1.10 version for Kubernetes, for both server and client. To install a specific version on kubectl client, see [Install kubectl binary via curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl).  Latest versions of minikube and AKS are at least 1.10. For AKS you will need to use `--kubernetes-version` parameter to specify a version different than default.
 
-   > [!NOTE]
-   > Note that the client and server Kubernetes versions should be +1 or -1 minor version. For more information, see [Kubernetes supported releases and component skew](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew).
+> [!NOTE]
+> Note that the client and server Kubernetes versions should be +1 or -1 minor version. For more information, see [Kubernetes supported releases and component skew](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew).
 
 ## <a id="kubernetes"></a> Kubernetes cluster setup
 

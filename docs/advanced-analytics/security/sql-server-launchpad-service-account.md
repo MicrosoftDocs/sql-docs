@@ -1,19 +1,23 @@
 ---
-title: SQL Server Launchpad service account configuration | Microsoft Docs
-description: How to modify the SQL Server Launchpad service account used for external script execution on SQL Server.
+title: SQL Server Trusted Launchpad service account configuration | Microsoft Docs
+description: How to modify the SQL Server Trusted Launchpad service account used for external script execution on SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 09/05/2018  
+ms.date: 09/27/2018  
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 ---
 # SQL Server Launchpad service configuration
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
+The [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] is a service that manages and executes external scripts, similar to the way that the full-text indexing and query service launches a separate host for processing full-text queries.
+
 A separate [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] service is created for each database engine instance to which you have added SQL Server machine learning (R or Python) integration.
+
+For more information, see the Launchpad sections in [Extensibility architecture in SQL Server Machine Learning Services](../../advanced-analytics/concepts/extensibility-framework.md#launchpad) and [Security overview for the extensibility framework in SQL Server Machine Learning Services](../../advanced-analytics/concepts/security.md#launchpad).
 
 ## Account permissions
 
@@ -67,6 +71,16 @@ The following table lists the advanced settings for [!INCLUDE[ssCurrent](../../i
 
 All settings take the form of a key-value pair, with each setting on a separate line. For example, to change the trace level, you would add the line `Default: TRACE_LEVEL=4`.
 
+## Enforcing password policy
+
+If your organization has a policy that requires changing passwords on a regular basis,  you may need to force the Launchpad service to regenerate the encrypted passwords that Launchpad maintains for its worker accounts.
+
+To enable this setting and force password refresh, open the **Properties** pane for the Launchpad service in SQL Server Configuration Manager, click **Advanced**, and change **Reset External Users Password** to **Yes**. When you apply this change, the passwords will immediately be regenerated for all user accounts. To use R script after this change, you must restart the Launchpad service, at which time it will read the newly generated passwords.
+
+To reset passwords at regular intervals, you can either set this flag manually or use a script.
+
 ## See also
 
 [Extensibility framework](../concepts/extensibility-framework.md)
+
+[Security overview](../concepts/security.md)

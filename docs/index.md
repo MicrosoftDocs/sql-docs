@@ -112,6 +112,7 @@ ms.technology:
                                               <ul class="noBullet">
                                                   <li><a class="barLink" href="/azure/sql-database/"><strong>Azure SQL Database</strong></a></li>
                                                   <li><a class="barLink" href="/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is/"> <strong>Azure SQL Data Warehouse</strong></a></li>
+                                                  <li><a class="barLink" href="https://azure.microsoft.com/updates/?status=all&product=sql-database"><strong>What's new</strong></a></li>
                                               </ul>
                                           </div>
                                       </div>
@@ -229,7 +230,7 @@ ms.technology:
                                                       </div>
                                                       <div class="cardText">
                                                           <h3>Migrate, load, and move data</h3>
-                                                          <p><b>Migration Assistants, Integration Services, Import Export Wizard, Replication </b> </p>
+                                                          <p><b>Migration Assistants, Integration Services (SSIS), Import Export Wizard, Replication </b> </p>
                                                       </div>
                                                   </div>
                                               </div>
@@ -366,8 +367,8 @@ ms.technology:
                                                         <h3>Reporting</h3>
                                                         <ul class="noBullet">
                                                              <li><a class="barLink" href="/sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports/">SQL Server Reporting Services</a></li>
-                                                            <li><a class="barLink" href="/power-bi/service-get-started/">PowerBI Service</a></li>
-                                                            <li><a class="barLink" href="/power-bi/report-server/get-started/">PowerBI Report Server</a></li>
+                                                            <li><a class="barLink" href="/power-bi/service-get-started/">Power BI Service</a></li>
+                                                            <li><a class="barLink" href="/power-bi/report-server/get-started/">Power BI Report Server</a></li>
                                                         </ul>
                                                     </div>
                                                 </div>

@@ -26,7 +26,7 @@
             "redirect_document_id": false
         }, 
         {
-            "source_path": "docs/advanced-analytics/python/resource-governance-for-python",
+            "source_path": "docs/advanced-analytics/python/resource-governance-for-python.md",
             "redirect_url": "/sql/advanced-analytics/r/resource-governance-for-r-services",
             "redirect_document_id": false
         },

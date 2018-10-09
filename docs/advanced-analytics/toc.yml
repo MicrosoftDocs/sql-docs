@@ -260,15 +260,15 @@
     items:
     - name: Configure and manage R
       href: r/configuration-sql-server-r-services.md
-    - name: Advanced configuration options for Machine Learning Services
+    - name: Advanced configuration options
       href: r/configure-and-manage-advanced-analytics-extensions.md
     - name: Deploy and consume models using web services
       href: operationalization-with-mrsdeploy.md
     - name: Manage and monitor solutions
       href: r/managing-and-monitoring-r-solutions.md
-    - name: Resource governance for Machine Learning Services
+    - name: Use Resource Governance
       href: r/resource-governance-for-r-services.md
-    - name: Create a resource pool for machine learning
+    - name: Create a resource pool
       href: r/how-to-create-a-resource-pool-for-r.md
     - name: Extended events for Machine Learning Services
       href: r/extended-events-for-sql-server-r-services.md
@@ -276,8 +276,6 @@
       href: xe-event-predict-tsql.md
     - name: DMVs for Machine Learning Services
       href: r/dmvs-for-sql-server-r-services.md
-    - name: DMVs for Python
-      href: python/dmvs-for-python.md
     - name: Using R code profiling functions
       href: r/using-r-code-profiling-functions.md
     - name: Monitor Machine Learning Services using custom reports in Management Studio

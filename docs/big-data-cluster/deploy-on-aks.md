@@ -19,7 +19,7 @@ This article describes the steps to deploy Kubernetes on AKS using Azure CLI. If
 
 ## Prerequisites
 
-- For an AKS environment, the minimum VM requirement is at least two agent VMs (in addition to master) of a minimum size [Standard_DS3_V2](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-general#dsv2-series). Minimum resources required per VM are 4 CPUs and 14 GB of memory.
+- For an AKS environment, the minimum VM requirement is at least two agent VMs (in addition to master) of a minimum size [Standard_DS3_v2](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-general#dsv2-series). Minimum resources required per VM are 4 CPUs and 14 GB of memory.
   
    > [!NOTE]
    > If you plan to run big data jobs or multiple Spark applications, the minimum size is [Standard_D8_v3](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-general#dv3-series-sup1sup), and the minimum resources required per VM are 8 CPUs and 32 GB of memory.
@@ -73,7 +73,7 @@ An Azure resource group is a logical group in which Azure resources are deployed
    az aks create --name kubcluster \
     --resource-group sqlbigdatagroup \
     --generate-ssh-keys \
-    --node-vm-size Standard_DS3_V2 \
+    --node-vm-size Standard_DS3_v2 \
     --node-count 2 \
     --kubernetes-version 1.10.7
     ```

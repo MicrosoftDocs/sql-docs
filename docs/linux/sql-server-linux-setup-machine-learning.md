@@ -4,7 +4,7 @@ description: This article describes how to install SQL Server Machine Learning S
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.date: 09/24/2018
+ms.date: 10/09/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: "sql-linux"
@@ -39,13 +39,33 @@ Package location of the R, Python, and Java extensions are in the SQL Server Lin
 
 Microsoft's base distribution of R is a prerequisite for using RevoScaleR, MicrosoftML, and other R packages installed with Machine Learning Services.
 
-The following commands register the repository providing MRO. Post-registration, the commands for installing other R packages will automatically include MRO as a package dependency.
+The required version is MRO 3.4.4.
+
+There are two ways to install MRO. You can download the MRO tarball from MRAN, unpack it, and run its install.sh script. You can follow the installation instructions on MRAN if you want tis approach.
+
+Alternatively, you can register the **packages.microsoft.com** repo as described below to install the three packages: microsoft-r-open-mro, microsoft-r-open-mkl, and microsoft-r-open-foreachiterators. For an offline install, be sure you have all three.
+
+> [!Note]
+> Only the microsoft-r-open-mro is strictly required, but since there isn't a dedicated repo for just that package, all three packages are typically installed together.
+
+The following commands register the repository providing MRO. Post-registration, the commands for installing other R packages, such as mssql-mlservices-mml-r, will automatically include MRO as a package dependency.
 
 #### On Ubuntu
 
 ```bash
+# Install as root
+sudo su
+
+# Optionally, if your system does not have the https apt transport option
+apt-get install apt-transport-https
+
+# Add the **azure-cli** repo to your apt sources list
+AZ_REPO=$(lsb_release -cs)
+
+echo "deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ $AZ_REPO main" | sudo tee /etc/apt/sources.list.d/azure-cli.list
+
 # Set the location of the package repo the "prod" directory containing the distribution.
-# This example specifies 16.04. Replace with 18.04 if you want that version
+# This example specifies 16.04. Replace with 14.04 if you want that version
 wget https://packages.microsoft.com/config/ubuntu/16.04/packages-microsoft-prod.deb
 
 # Register the repo
@@ -55,14 +75,29 @@ dpkg -i packages-microsoft-prod.deb
 #### On RHEL
 
 ```bash
+# Import the Microsoft repository key
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+
+# Create local `azure-cli` repository
+sudo sh -c 'echo -e "[azure-cli]\nname=Azure CLI\nbaseurl=https://packages.microsoft.com/yumrepos/azure-cli\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/azure-cli.repo'
+
 # Set the location of the package repo at the "prod" directory
+# The following command is for version 7.x
+# For 6.x, replace 7 with 6 to get that version
 rpm -Uvh https://packages.microsoft.com/config/rhel/7/packages-microsoft-prod.rpm
 ```
 #### On SUSE
 
 ```bash
-# Set the location of the package repo
+# Install as root
+sudo su
+
+# Set the location of the package repo at the "prod" directory containing the distribution
+# This example is for SLES12, the only supported version of SUSE in Machine Learning Server
 zypper ar -f https://packages.microsoft.com/sles/12/prod packages-microsoft-com
+
+# Update packages on your system:
+zypper update
 ```
 
 ## Package list
@@ -74,7 +109,7 @@ On an internet-connected device, packages are downloaded and installed independe
 |mssql-server-extensibility  | All | Extensibility framework used to run R, Python, or Java code. |
 |mssql-server-extensibility-java | Java | Java extension for loading a Java execution environment. There are no additional libraries or packages for Java. |
 | microsoft-openmpi  | Python, R | Message passing interface used by the Revo* libraries for parallelization on Linux. |
-| microsoft-r-open | R | Open-source distribution of R. |
+| [microsoft-r-open*](#mro) | R | Open-source distribution of R, composed of three packages. |
 | mssql-mlservices-python | Python | Open-source distribution of Anaconda and Python. |
 |mssql-mlservices-mlm-py  | Python | Full install. Provides revoscalepy, microsoftml, pre-trained models for image featurization and text sentiment analysis.| 
 |mssql-mlservices-mml-py  | Python | Partial install. Provides revoscalepy, microsoftml. <br/>Excludes pre-trained models. | 

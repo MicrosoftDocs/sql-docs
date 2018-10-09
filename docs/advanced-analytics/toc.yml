@@ -57,10 +57,16 @@
       href: tutorials/rtsql-working-with-inputs-and-outputs.md
     - name: Handle data types and objects
       href: tutorials/rtsql-r-and-sql-data-types-and-data-objects.md
+    - name: Using R functions
+      href: tutorials/rtsql-using-r-functions-with-sql-server-data.md
     - name: Create a predictive model
       href: tutorials/rtsql-create-a-predictive-model-r.md
     - name: Predict and plot from model
       href: tutorials/rtsql-predict-and-plot-from-model.md
+  - name: Python
+    items:
+    - name: Wrap Python in a stored procedure
+      href: tutorials/wrap-python-in-tsql-stored-procedure.md
 - name: Tutorials
   href: tutorials/machine-learning-services-tutorials.md
   items:
@@ -138,8 +144,6 @@
     - name: Run Python using T-SQL
       href: tutorials/run-python-using-t-sql.md
       items:
-      - name: Wrap Python in a stored procedure
-        href: tutorials/wrap-python-in-tsql-stored-procedure.md
       - name: Train and score from a Python model in SQL Server
         href: tutorials/train-score-using-python-in-tsql.md
       - name: Create a model using revoscalepy in a SQL Server compute context

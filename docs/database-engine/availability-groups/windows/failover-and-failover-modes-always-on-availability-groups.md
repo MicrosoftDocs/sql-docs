@@ -246,7 +246,7 @@ manager: craigg
 ###  <a name="ForcedFailoverRisks"></a> Risks of Forcing Failover  
  It is essential to understand that forcing failover can cause data loss. Data loss is possible because the target replica cannot communicate with the primary replica and, therefore, cannot guarantee that the databases are synchronized. Forcing failover starts a new recovery fork. Because the original primary databases and secondary databases are on different recovery forks, each of them now contains data that the other database does not contain: each original primary database contains whatever changes were not yet sent from its send queue to the former secondary database (the unsent log); the former secondary databases contain whatever changes occur after failover was forced.  
   
- If failover is forced because the primary replica has failed, potential data loss depends on whether or not any transaction logs had been sent to the secondary replica before the failure. Under the asynchronous-commit mode, accumulated unsent log is always a possibility. Under synchronous-commit mode, this is possible only until the secondary databases becomes synchronized.  
+ If failover is forced because the primary replica has failed, potential data loss depends on whether or not any transaction logs had been sent to the secondary replica before the failure. Under the asynchronous-commit mode, accumulated unsent log is always a possibility. Under synchronous-commit mode, this is possible only until the secondary databases become synchronized.  
   
  The following table summarizes the possibility of data loss for a particular database on the replica to which you force failover.  
   

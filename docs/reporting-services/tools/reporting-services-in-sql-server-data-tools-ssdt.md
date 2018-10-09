@@ -40,7 +40,7 @@ ms.author: maggies
   
   
 ##  <a name="bkmk_ReportDesignerWindowsandPanes"></a> Report Designer Windows and Panes  
- Report Designer supports two views: **Design** to define the report data and report layout, and **Preview** to display a rendered view of the the report. In each view, you can display multiple windows to help you design or view a rendered report.  
+ Report Designer supports two views: **Design** to define the report data and report layout, and **Preview** to display a rendered view of the report. In each view, you can display multiple windows to help you design or view a rendered report.  
   
 ###  <a name="bkmk_ReportDataPane"></a> Report Data Pane  
  The Report Data pane displays built-in fields, data sources, datasets, field collections, report parameters, and images.  

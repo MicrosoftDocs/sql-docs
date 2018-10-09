@@ -33,7 +33,7 @@ Here are the steps for this example.
 
    ![01-Sales-Mobile-Report-Publisher](../../reporting-services/mobile-reports/media/01-sales-mobile-report-publisher.png)
     
-2. Set **Accent** to **On** for the Sales gauge, so it will contrast with the the rest of the report--in this case, white on black.
+2. Set **Accent** to **On** for the Sales gauge, so it will contrast with the rest of the report--in this case, white on black.
 
     ![01a-Sales-Accent-Mobile-Report-Publisher](../../reporting-services/mobile-reports/media/01a-sales-accent-mobile-report-publisher.png)
     
@@ -76,7 +76,7 @@ In this section, you set each gauge (other than the Sales gauge) as a drillthrou
 
 1.  Open the Transportation report, set the Sales gauge as a drillthrough to the Sales report, and the other three gauges as drillthroughs to their respective reports.
 
-2. Still in the Transportation report, set **Accent** for the Transportation gauge to **On**, contrast with the the rest of the report.
+2. Still in the Transportation report, set **Accent** for the Transportation gauge to **On**, contrast with the rest of the report.
 
 3. Repeat these steps for the Fuel, Storage, and Misc Expenses reports. 
 

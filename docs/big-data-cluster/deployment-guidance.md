@@ -26,10 +26,6 @@ SQL Server Big Data cluster can be deployed as docker containers on a Kubernetes
    > [!NOTE]
    > Note that the client and server Kubernetes versions should be +1 or -1 minor version. For more information, see [Kubernetes supported releases and component skew](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew).
 
-- The minimum cluster memory size is 64 GB.
-
-- The minimum number of nodes is 2, but 4 nodes are recommended.
-
 ## <a id="kubernetes"></a> Kubernetes cluster setup
 
 If you already have a Kubernetes cluster that meets above prerequisites, then you can skip directly to the [deployment step](#deploy). This section assumes a basic understanding of Kubernetes concepts.  For detailed information on Kubernetes, see the [Kubernetes documentation](https://kubernetes.io/docs/home).

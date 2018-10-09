@@ -72,6 +72,9 @@ The Attach-to selection provides the context for the Kernel to attach. When you 
 
 ![image7](media/notebooks-guidance/image7.png)
 
+> [!NOTE]
+> By default, the Spark application is configured with 1 driver and 3 executors that will take approximately 8.5 GB of memory. The recommended configuration to run multiple spark sessions is for each server in the cluster to have at least 32 GB of memory (for example, in an AKS environment use **Standard_D8_v3** VM sizes, which have 32GB of memory).
+
 ## Hello world in the different contexts
 
 ### Pyspark kernel

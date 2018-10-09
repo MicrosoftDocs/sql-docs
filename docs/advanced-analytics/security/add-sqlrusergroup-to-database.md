@@ -1,30 +1,32 @@
 ---
 title: Add SQLRUserGroup as a database user (SQL Server Machine Learning) | Microsoft Docs
+description: How to add SQLRUserGroup as a database user for SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
+ms.date: 09/26/2018  
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 ---
 # Add SQLRUserGroup as a database user
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
+If you are using Windows authentication and your script calls resources or operations in SQL Server, additional configuration is required to give worker accounts running R and Python processes permission to sign back in to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance on your behalf. This is referred to as [*implied authentication*](../../advanced-analytics/concepts/security.md#implied-authentication).
+
+> [!NOTE]
+> If you use a **SQL login** for running scripts in a SQL Server compute context, this extra step is not required.
+
+As part of the installation process for [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)], a new Windows *user account pool* is created to support execution of tasks by the [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] service. The purpose of these worker accounts is to isolate concurrent execution of external scripts by different SQL users.
+
+By default, the group of worker accounts does **not** have login permissions on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance with which it is associated. This can be a problem if any R or Python users connect to SQL Server from a remote client to run external scripts, or if a script uses ODBC to get additional data.
+
 This article explains how to give the group of worker accounts used by machine learning services in SQL Server the permissions required to connect to the database and run R or Python jobs on behalf of the user.
 
-## What is SQLRUserGroup?
+For more information, see the Launchpad section in [Security overview](../../advanced-analytics/concepts/security.md#launchpad).
 
-During setup of [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] or [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)], new Windows user accounts are created to support execution of R or Python script tasks under the security token of the [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] service.
-
-You can view these accounts in the Windows user group **SQLRUserGroup**. By default, 20 worker accounts are created, which is usually more than enough for running machine learning jobs.
-
-When a user sends a machine learning script from an external client, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] activates an available worker account, maps it to the identity of the calling user, and runs the script on behalf of the user. This new service of the database engine supports the secure execution of external scripts, called *implied authentication*.
-
-However, if you need to run R or Python scripts from a remote data science client, and you are using Windows authentication, you must give these worker accounts permission to sign in to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance on your behalf.
-
-## Add SQLRUserGroup as a SQL Server login
+## Create a login
 
 1. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], in Object Explorer, expand **Security**, right-click **Logins**, and select **New Login**.
 
@@ -59,11 +61,3 @@ However, if you need to run R or Python scripts from a remote data science clien
 6. Click **OK** once more to close the **Select User or Group** dialog box.
 
 7. In the **Login - New** dialog box, click **OK**. By default, the login is assigned to the **public** role and has permission to connect to the database engine.
-
-## Change the number of worker accounts in SQLRUserGroup
-
-If you intend to make heavy use of machine learning, you can increase the number of accounts used to run external scripts, as described in this article: 
-
-+ [Modify the user account pool for machine learning](modify-the-user-account-pool-for-sql-server-r-services.md)
-
-By default, 20 accounts are created, which supports 20 concurrent sessions. Parallelized tasks do not consume additional accounts. For example, if a user runs a scoring task that uses parallel processing, the same worker account is reused for all threads.

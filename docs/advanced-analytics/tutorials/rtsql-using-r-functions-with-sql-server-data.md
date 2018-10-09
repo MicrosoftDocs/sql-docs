@@ -4,7 +4,7 @@ description: In this quickstart, learn how to write an R function that uses SQL 
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 07/15/2018  
+ms.date: 10/08/2018  
 ms.topic: quickstart
 author: HeidiSteen
 ms.author: heidist

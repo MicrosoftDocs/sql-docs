@@ -19,7 +19,10 @@ This article describes the steps to deploy Kubernetes on AKS using Azure CLI. If
 
 ## Prerequisites
 
-- For an AKS environment, the minimum VM requirement is at least two agent VMs (in addition to master) of a minimum size Standard_DS3_V2. Minimum resources required per VM are 4 CPUs and 14 GB of memory.
+- For an AKS environment, the minimum VM requirement is at least two agent VMs (in addition to master) of a minimum size [Standard_DS3_v2](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-general#dsv2-series). Minimum resources required per VM are 4 CPUs and 14 GB of memory.
+  
+   > [!NOTE]
+   > If you plan to run big data jobs or multiple Spark applications, the minimum size is [Standard_D8_v3](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-general#dv3-series-sup1sup), and the minimum resources required per VM are 8 CPUs and 32 GB of memory.
 
 - This section requires that you be running the Azure CLI version 2.0.4 or later. If you need to install or upgrade, see [Install Azure CLI 2.0](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli). Run `az --version` to find the version if needed.
 
@@ -75,7 +78,7 @@ An Azure resource group is a logical group in which Azure resources are deployed
     --kubernetes-version 1.10.7
     ```
 
-    You can increase or decrease the default agent count by adding `--node-count <n>` to the az aks create command where `<n>` is the number of agent nodes you want to have.
+    You can increase or decrease the default agent count by changing the `--node-count <n>` where `<n>` is the number of agent nodes you want to have.
 
     After several minutes, the command completes and returns JSON-formatted information about the cluster.
 

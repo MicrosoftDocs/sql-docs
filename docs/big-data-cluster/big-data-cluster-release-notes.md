@@ -42,7 +42,7 @@ The following sections provide known issues for SQL Server big data clusters in 
 
 #### Deployment
 
-- If you are using Azure Kubernetes Service (AKS), the recommended version of Kubernetes is 1.10.*, which does not support disk resizing. For Kubernetes deployed on VMs, the recommended version is 1.11.
+- If you are using Azure Kubernetes Service (AKS), the recommended version of Kubernetes is 1.10.*, which does not support disk resizing. You should make sure you are sizing the storage accordingly at deployment time. For more information on how to adjust storage sizes, see the [Data persistence](concept-data-persistence.md) article. For Kubernetes deployed on VMs, the recommended version is 1.11.
 
 - After deploying on AKS, you might see the following two warning events from the deployment. Both of these events are known issues, but they do not prevent you from successfully deploying the big data cluster on AKS.
 
@@ -50,7 +50,7 @@ The following sections provide known issues for SQL Server big data clusters in 
 
    `Warning  Unhealthy: Readiness probe failed: cat: /tmp/provisioner.done: No such file or directory`
 
-- If a big data cluster deployment fails, the associated namespace is not removed. This could result in an orphaned namespace on the cluster.
+- If a big data cluster deployment fails, the associated namespace is not removed. This could result in an orphaned namespace on the cluster. A workaround is to delete the namespace manually before deploying a cluster with the same name.
 
 #### External tables
 
@@ -64,7 +64,7 @@ The following sections provide known issues for SQL Server big data clusters in 
 
 #### Spark and notebooks
 
-- If a storage node goes down and gets recreated, Spark might crash.
+- POD IP addresses may change in the Kubernetes environment as PODs restarts. In the scenario where the master-pod restarts, the Spark session may fail with `NoRoteToHostException`. This is caused by JVM caches that don't get refreshed with new IP addresses.
 
 - If you have Jupyter already installed and a separate Python on Windows, Spark notebooks might fail. To work around this issue, upgrade Jupyter to the latest version.
 

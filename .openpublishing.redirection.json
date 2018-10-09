@@ -56,6 +56,11 @@
             "redirect_document_id": false
         }, 
         {
+            "source_path": "docs/advanced-analytics/r/security-considerations-for-the-r-runtime-in-sql-server.md",
+            "redirect_url": "/sql/advanced-analytics/concepts/security",
+            "redirect_document_id": false
+        }, 
+        {
             "source_path": "docs/advanced-analytics/general/sql-server-launchpad-service-account.md",
             "redirect_url": "/sql/advanced-analytics/security/sql-server-launchpad-service-account",
             "redirect_document_id": true

@@ -34,6 +34,6 @@ If you are using a different firewall program, you can also create rules to bloc
 
 We strongly recommend that you turn on Windows Firewall (or another firewall of your choice) to prevent unrestricted network access by the R or Python runtimes.
 
-## See also
+## Next steps
 
 [Configure Windows firewall for in-bound connections](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)

@@ -128,7 +128,7 @@ In the case of [Always Encrypted](../../relational-databases/security/encryption
 > [!Note]
 > In SQL Server 2019, the only member of **SQLRUserGroup** is the SQL Server Launchpad service account. When Launchpad service starts an R, Python, or Java execution environment, the process runs as LaunchPad service.
 
-## See Also
+## Next steps
 
-[Extensibility architecture](../../advanced-analytics/concepts/extensibility-framework.md)
-[Configure and manage Advanced Analytics Extensions](../../advanced-analytics/r/configure-and-manage-advanced-analytics-extensions.md)
++ [Extensibility architecture](../../advanced-analytics/concepts/extensibility-framework.md)
++ [Configure and manage Advanced Analytics Extensions](../../advanced-analytics/r/configure-and-manage-advanced-analytics-extensions.md)

@@ -81,7 +81,7 @@ Type and execute the following statements (replacing `computer_name` with the na
 ## Create views and stored procedures
 As an administrator, you can execute the SELECT from the **Products** table and the **vw_Names** view, and execute the **pr_Names** procedure; however, Mary cannot. To grant Mary the necessary permissions, use the GRANT statement.  
 
-### Grant permission to stored prcoedure  
+### Grant permission to stored procedure  
 Execute the following statement to give `Mary` the `EXECUTE` permission for the `pr_Names` stored procedure.
   
   ```sql  

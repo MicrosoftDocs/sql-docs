@@ -84,7 +84,7 @@ In this section, you will use a T-SQL statement to perform a full database backu
 1. Copy and paste the following example into the query window, modifying as needed: 
 
  ```sql
- BACKUP DATABASE[AdventureWorks2016] 
+ BACKUP DATABASE [AdventureWorks2016] 
  TO URL = 'https://msftutorialstorage.blob.core.windows.net/sql-backup/AdventureWorks2016.bak' 
  /* URL includes the endpoint for the BLOB service, followed by the container name, and the name of the backup file*/ 
  WITH CREDENTIAL = 'mycredential';

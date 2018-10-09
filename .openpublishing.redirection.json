@@ -6,6 +6,16 @@
             "redirect_document_id": false 
         },
         {
+            "source_path": "docs/advanced-analytics/r/how-to-create-a-resource-pool-for-r.md",
+            "redirect_url": "/sql/advanced-analytics/administration/how-to-create-a-resource-pool-for-r",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/advanced-analytics/r/resource-governance-for-r-services.md",
+            "redirect_url": "/sql/advanced-analytics/administration/resource-governance-for-r-services",
+            "redirect_document_id": true
+        },
+        {
             "source_path": "docs/advanced-analytics/python/machine-learning-services-python-reference.md",
             "redirect_url": "/sql/advanced-analytics/r/machine-learning-services-r-reference",
             "redirect_document_id": false

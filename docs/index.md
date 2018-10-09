@@ -112,7 +112,7 @@ ms.technology:
                                               <ul class="noBullet">
                                                   <li><a class="barLink" href="/azure/sql-database/"><strong>Azure SQL Database</strong></a></li>
                                                   <li><a class="barLink" href="/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is/"> <strong>Azure SQL Data Warehouse</strong></a></li>
-                                                  <li><a class="barLink" href="https://azure.microsoft.com/en-us/updates/?status=all&product=sql-database/"><strong>What's new</strong></a></li>
+                                                  <li><a class="barLink" href="https://azure.microsoft.com/updates/?status=all&product=sql-database"><strong>What's new</strong></a></li>
                                               </ul>
                                           </div>
                                       </div>

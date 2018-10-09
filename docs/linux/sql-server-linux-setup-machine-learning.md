@@ -35,22 +35,24 @@ Package location of the R, Python, and Java extensions are in the SQL Server Lin
 
 <a name="mro"></a>
 
-### Microsoft R Open (MRO)
+### Microsoft R Open (MRO) installation
 
 Microsoft's base distribution of R is a prerequisite for using RevoScaleR, MicrosoftML, and other R packages installed with Machine Learning Services.
 
 The required version is MRO 3.4.4.
 
-There are two ways to install MRO. You can download the MRO tarball from MRAN, unpack it, and run its install.sh script. You can follow the installation instructions on MRAN if you want tis approach.
+Choose from the following two approaches to install MRO:
 
-Alternatively, you can register the **packages.microsoft.com** repo as described below to install the three packages: microsoft-r-open-mro, microsoft-r-open-mkl, and microsoft-r-open-foreachiterators. For an offline install, be sure you have all three.
++ Download the MRO tarball from MRAN, unpack it, and run its install.sh script. You can follow the [installation instructions on MRAN](https://mran.microsoft.com/releases/3.4.4) if you want this approach.
+
++ Alternatively, register the **packages.microsoft.com** repo as described below to install the three packages: microsoft-r-open-mro, microsoft-r-open-mkl, and microsoft-r-open-foreachiterators. 
 
 > [!Note]
 > Only the microsoft-r-open-mro is strictly required, but since there isn't a dedicated repo for just that package, all three packages are typically installed together.
 
 The following commands register the repository providing MRO. Post-registration, the commands for installing other R packages, such as mssql-mlservices-mml-r, will automatically include MRO as a package dependency.
 
-#### On Ubuntu
+#### MRO on Ubuntu
 
 ```bash
 # Install as root
@@ -72,7 +74,7 @@ wget https://packages.microsoft.com/config/ubuntu/16.04/packages-microsoft-prod.
 dpkg -i packages-microsoft-prod.deb
 ```
 
-#### On RHEL
+#### MRO on RHEL
 
 ```bash
 # Import the Microsoft repository key
@@ -86,7 +88,7 @@ sudo sh -c 'echo -e "[azure-cli]\nname=Azure CLI\nbaseurl=https://packages.micro
 # For 6.x, replace 7 with 6 to get that version
 rpm -Uvh https://packages.microsoft.com/config/rhel/7/packages-microsoft-prod.rpm
 ```
-#### On SUSE
+#### MRO on SUSE
 
 ```bash
 # Install as root

@@ -65,7 +65,7 @@ After running SQL Server setup, you might need to perform some additional steps 
 + Enable the external script execution feature by running `sp_configure 'external scripts enabled', 1`.
 + Restart the server. 
 + Open the **Services** panel to check whether Launchpad has started. 
-+ Ensure that the service that calls the external runtime has necessary permissions. For more information, see [Enable implied authentication](../r/add-sqlrusergroup-to-database.md).
++ Ensure that the service that calls the external runtime has necessary permissions. For more information, see [Enable implied authentication](../security/add-sqlrusergroup-to-database.md).
 + Open a port on the firewall for SQL Server, and enable required network protocols.
 + Ensure that your SQL login or Windows user account has necessary permissions to connect to the server, to read data, and to create any database objects required by the sample.
 

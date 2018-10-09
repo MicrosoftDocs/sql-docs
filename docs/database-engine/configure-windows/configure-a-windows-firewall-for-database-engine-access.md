@@ -45,7 +45,7 @@ manager: craigg
   
      [Security](#Security)  
   
--   **To configure a Widows Firewall for Database Engine access, using:**  
+-   **To configure a Windows Firewall for Database Engine access, using:**  
   
      [SQL Server Configuration Manager](#SSMSProcedure)  
   

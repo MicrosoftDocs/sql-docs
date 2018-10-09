@@ -164,6 +164,7 @@ Install any *one* R package, plus any *one* Python package, and Java if you want
 > [!Tip]
 > If possible, run `apt-get update` to refresh packages on the system prior to installation. Additionally, some docker images of Ubuntu might not have the https apt transport option. To install it, use `apt-get install apt-transport-https`.
 
+<!---
 ### Prerequisite for 18.04
 
 Running mssql-mlservices R libraries on Ubuntu 18.04 requires **libpng12** from the Linux Kernel archives. This package is no longer included in the standard distribution and must be installed manually. To get this library, run the following commands:
@@ -171,7 +172,7 @@ Running mssql-mlservices R libraries on Ubuntu 18.04 requires **libpng12** from 
 ```bash
 wget https://mirrors.kernel.org/ubuntu/pool/main/libp/libpng/libpng12-0_1.2.54-1ubuntu1_amd64.deb
 dpkg -i libpng12-0_1.2.54-1ubuntu1_amd64.deb
-```
+```--->
 
 ### Example 1 -  Full installation 
 

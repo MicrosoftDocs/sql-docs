@@ -61,7 +61,7 @@ Additional Python samples specific to SQL Server 2017 are provided here: [SQL Se
 
 3. If you get errors, there are a variety of things you can do to ensure that the server and Python can communicate. 
 
-    You must add the Windows user group `SQLRUserGroup` as a login on the instance, to ensure that Launchpad can provide communication between Python and SQL Server. (The same group is used for both R and Python code execution.) For more information, see [Enabled implied authentication](../r/add-sqlrusergroup-to-database.md).
+    You must add the Windows user group `SQLRUserGroup` as a login on the instance, to ensure that Launchpad can provide communication between Python and SQL Server. (The same group is used for both R and Python code execution.) For more information, see [Enabled implied authentication](../security/add-sqlrusergroup-to-database.md).
     
     Additionally, you might need to enable network protocols that have been disabled, or open the firewall so that SQL Server can communicate with external clients. For more information, see [Troubleshooting setup](../common-issues-external-script-execution.md).
 

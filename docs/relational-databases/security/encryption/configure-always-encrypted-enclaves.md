@@ -72,7 +72,7 @@ Install the following tools on the client/development computer:
 
 1. [.NET Framework 4.7.2](https://www.microsoft.com/net/download/dotnet-framework-runtime).
 2. [SSMS 18.0 or later](../../../ssms/download-sql-server-management-studio-ssms.md).
-3. [SQL Server PowerShell module](../../../powershell/download-sql-server-ps-module.md) version 21.5 or later.
+3. [SQL Server PowerShell module](../../../powershell/download-sql-server-ps-module.md) version 21.1 or later.
 4. [Visual Studio (2017 or later recommended)](https://visualstudio.microsoft.com/downloads/).
 5. [Developer Pack for .NET Framework 4.7.2](https://www.microsoft.com/net/download/visual-studio-sdks).
 6. [Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider NuGet package](https://www.nuget.org/packages/Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider), version 2.2.0 or later.

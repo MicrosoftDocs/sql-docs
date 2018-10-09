@@ -106,7 +106,7 @@ Further questions or feedback? Submit feedback through the DEA tool by choosing 
 
 ## Next steps
 
-- [View reports](database-experimentation-assistant-create-report.md) shows you how to view the analysis report you just created.
+- [View reports](database-experimentation-assistant-view-report.md) shows you how to view the analysis report you just created.
 
 - For a 19-minute introduction and demonstration of DEA, watch the following video:
 

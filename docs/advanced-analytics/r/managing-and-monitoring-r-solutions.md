@@ -1,49 +1,46 @@
 ---
-title: Manage and monitor machine learning solutions in SQL Server | Microsoft Docs
+title: Manage and integrate machine learning workloads in SQL Server | Microsoft Docs
+description: As a SQL Server DBA, review the administrative tasks for deploying a machine learning R and Python subsystem on a database engine instance.
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
+ms.date: 10/10/2018  
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-# Managing and monitoring machine learning solutions
+# Manage and integrate machine learning workloads on SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article describes features in SQL Server Machine Learning Services that are relevant to database administrators who need to begin working with R and Python solutions.
+This article is for SQL Server database administrators who are responsible for deploying an efficient infrastructure for data science onto a system that simultaneously serves other data and computating needs across an organization. It describes administrative operations relevant to database administrators who need to manage R and Python code execution on SQL Server.
 
-**Applies to:** SQL Server 2016 R Services, SQL Server 2017 Machine Learning Services
+## Provide isolation and containment
 
-## Security
+The extensibility framework supporting R and Python machine learning processes is engineered for both integration and isolation. 
 
-Database administrators must provide data access not just to data scientists but to a variety of report developers, business analysts, and business data consumers. The integration of R (and now Python) into SQL Server  provides many benefits to the database administrator who supports the data science role.
+Integration is through T-SQL's data definition language that equips stored procedures that the ability to accept R and Python code as input paramters, and provides built-in functions like PREDICT that can consume a previously trained data model. Likewise, the data security model with database logins and roles, is another layer of integration. The same permssions on data access apply to scripts utilizing that same data.
 
-+ The architecture of [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] keeps your databases secure and isolates the execution of R sessions from the operation of the database instance.
+Isolation is equally essential, and a dual architecture separating external processing from core processing ensures that R and Python scripts don't interfer directly with OLTP functions. In Task Manager, you can monitor R and Python processes, executing as least-priviledged worker identities, separate from the SQL Server service account.
 
-+ You can specify who has permission to execute the R scripts and ensure that the data used in R jobs is managed using the same security roles that are defined in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+To summarize the architectural features that provide isolation measures:
 
-+ The database administrator can use roles to manage the installation of R packages and the execution of R and Python scripts.
++ The extensibility framework runs R and Python processes separately. Low privilege physical user accounts are used to contain and isolate external script activity. You can terminate an R or Python process without impacting core database operations. 
 
-For more information, see these resources:
++ The database administrator can specify who has permission to install and manage packages, execute scripts, and that data used in jobs is managed under the same security roles that control access through T-SQL queries.
 
-+ [Security overview for the extensibility framework in SQL Server Machine Learning Services](../../advanced-analytics/concepts/security.md)
+## Allocate system resources
 
-+ [Default R and Python packages in SQL Server](installing-and-managing-r-packages.md)
+By default, the R and Python sessions are allowed up to 20% of memory usage on the host system. To re-adjust memory, CPU, and I/O allocations, you can create resource pools to precisely articulate the levels of computing power assigned to external script execution. For more information, see [Resource governance to modify resource levels for R and Python execution](resource-governance.md).
 
-## Configuration and management
+## Adapations/extensions
 
-Database administrators must integrate competing projects and priorities into a single point of contact: the database server. They must support analytics while maintaining the health of operational and reporting data stores. The integration of machine learning with SQL Server provides many benefits to the database administrator, who increasingly serves a critical role in deploying an efficient infrastructure for data science.
+Data science introduces requirements for package deployment and administration. For a data scientist, it's common practice to include open-source and third-party packages providing function libraries used for solving specific problems. Some of those packages will have dependencies on other packages, in which case you might to evaluate and install multiple packages to get the required functionality.
 
-+ R and Python sessions are executed in a separate process to ensure that your server continues to run as usual even if the external script runtime has problems.
+As a DBA responsible for a server asset, deploying arbitrary R and Python packages into a production server represents an unfamiliar challenge. Before adding packages, you should assess whether the functionality provided by the external package is truly required, with no equivalent in the built-in R libraries and Python libraries installed by SQL Server Setup. In some cases, a data scientist might be able to [build and run solutions on an external workstation](../r/set-up-a-data-science-client.md), retrieving data from SQL Server, but with all analysis performed locally on the workstation instead of on the server itself. 
 
-+ Low privilege physical user accounts are used to contain and isolate external script activity.
+If you subsequently determine that external library functions are necessary and do not pose a risk to server operations or data as a whole, you can choose from multiple methodologies to add packages. To learn more, see [Install Python packages in SQL Server](../python/install-additional-python-packages-on-sql-server.md) and [Install R packages in SQL Server](install-additional-r-packages-on-sql-server.md).
 
-+ The DBA can use standard SQL Server resource management tools to control the amount of resources allocated to the R runtime, to prevent massive computations from jeopardizing the overall server performance.
+## Next steps
 
-For more information, see these resources:
-
-+ [Resource governance for R Services](../r/resource-governance-for-r-services.md)
-
-+ [Configure and manage Advanced Analytics Extensions](../r/configure-and-manage-advanced-analytics-extensions.md)
+Review the concepts and components of the [extensibility architecture](../concepts/extensibility-framework.md) and [security](../concepts/security.md). As part of feature installation, you might already be familiar with end-user data access control, but if not, see [Grant user permissions to SQL Server machine learning](../security/user-permissions.md) for details. Finally, for information on how to adjust the system resources for computation-intensive machine learning workloads, see [How to create a resource pool](../administration/how-to-create-a-resource-pool.md).

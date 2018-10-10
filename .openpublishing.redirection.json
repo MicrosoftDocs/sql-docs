@@ -6,6 +6,16 @@
             "redirect_document_id": false 
         },
         {
+            "source_path": "docs/advanced-analytics/r/configuration-sql-server-r-services.md",
+            "redirect_url": "/sql/advanced-analytics/r/managing-and-monitoring-r-solutions",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "docs/advanced-analytics/r/configure-and-manage-advanced-analytics-extensions.md",
+            "redirect_url": "/sql/advanced-analytics/r/managing-and-monitoring-r-solutions",
+            "redirect_document_id": false
+        }, 
+        {
             "source_path": "docs/advanced-analytics/r/how-to-create-a-resource-pool-for-r.md",
             "redirect_url": "/sql/advanced-analytics/administration/how-to-create-a-resource-pool",
             "redirect_document_id": true

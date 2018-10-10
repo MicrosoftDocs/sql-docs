@@ -20,27 +20,43 @@ This article describes the overall security architecture that is used to connect
 + Running external scripts (such as R or Python) directly from SQL Server using stored procedures
 + Running R or Python with the SQL Server as the remote compute context
 
+## SQL Server Launchpad service
+
+To instantiate external processes, the database engine provides the SQL Server Launchpad service to create an R or Python session. A separate [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] service is created for the database engine instance to which you have added SQL Server machine learning (R or Python) integration, one service per instance.
+
+By default, [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] is configured to run under **NT Service\MSSQLLaunchpad**, which is provisioned with all necessary permissions to run external scripts. Stripping permissions from this account can result in [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] failing to start or to access the SQL Server instance where external scripts should be run. Launchpad service is generally used as-is. For more information about configurable options, see [SQL Server Launchpad service configuration](../security/sql-server-launchpad-service-account.md).
+
 ## User security
 
-A SQL Server login or Windows user account is required to run external scripts that use SQL Server data or that run with SQL Server as the compute context. 
+SQL Server's data security model of database logins and roles extend to R and Python script. As a database user, if you have data permissions to execute a particular query, any R or Python script that you run on SQL Server also has permission to retrieve the same data. 
 
-+ For SQL logins: Ensure that the login has appropriate permissions on the database where you are reading data. You can do this by adding *Connect to* and *SELECT* permissions, or by adding the login to the `db_datareader` role. To create objects, assign `DDL_admin` rights. If you must save data to tables, add to the `db_datawriter` role.
+You can use Windows authentication or SQL Server authentication. Permission requirements vary depending on whether you need to create and save database objects, or simply consume objects created by others. For more information, see [Give users permission to SQL Server Machine Learning Services](../../advanced-analytics/security/user-permission.md).
 
-+ For Windows authentication: You might need to create an ODBC data source on the data science client that specifies the instance name and other connection information. For more information, see [ODBC data source administrator](../../odbc/admin/odbc-data-source-administrator.md).
 
-For more information, see [Give users permission to SQL Server Machine Learning Services](../../advanced-analytics/security/user-permission.md).
+
+## Mapping user identities to worker accounts
+
+The mapping of an external Windows user or valid SQL login to a worker account is valid only for the lifetime of the SQL stored procedure that executes the external script.
+
+Parallel queries from the same login are mapped to the same user worker account.
+
+The directories used for the processes are managed by the [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)], and directories are access-restricted. For R, RLauncher performs this task. For Python, PythonLauncher performs this task. Each individual worker account is restricted to its own folder, and cannot access files in folders above its own level. However, the worker account can read, write, or delete children under the session working folder that was created.
+
+For more information about how to change the number of worker accounts, account names, or account passwords, see [Modify the user account pool for SQL Server machine learning](../../advanced-analytics/administration/modify-user-account-pool.md).
+
+## Security for multiple scripts
+
+The isolation mechanism is based on physical user accounts. As satellite processes are started for a specific language runtime, each satellite task uses the worker account specified by the [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]. If a task requires multiple satellites, for example, in the case of parallel queries, a single worker account is used for all related tasks.
+
+No worker account can see or manipulate files used by other worker accounts.
+
+If you are an administrator on the computer, you can view the directories created for each process. Each directory is identified by its session GUID.
 
 <a name="launchpad"></a>
 
-## SQL Server Launchpad service
 
-A separate [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] service is created for the database engine instance to which you have added SQL Server machine learning (R or Python) integration.
 
-By default, [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] is configured to run under **NT Service\MSSQLLaunchpad**, which is provisioned with all necessary permissions to run external scripts. Stripping permissions from this account can result in [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] failing to start or to access the SQL Server instance where external scripts should be run.
-
-For how to configure the [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] service, see [[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] service configuration](../security/sql-server-launchpad-service-account.md).
-
-### Interaction between SQL Server security and Launchpad security
+## Interaction between SQL Server security and Launchpad security
 
 When an external script is executed in the context of the SQL Server computer, the [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] service gets an available worker account (a local user account) from a pool of worker accounts established for external processes and uses that worker account to perform the related tasks.
 
@@ -55,13 +71,32 @@ When all SQL Server operations are completed, the user worker account is marked 
 
 For more information about the service, see [Extensibility framework](../concepts/extensibility-framework.md).
 
-### Windows user group SQLRUserGroup
+## Implied authentication for connecting back to SQL Server
 
-In SQL Server 2016 and 2017, during setup of Machine Learning Services, new local Windows user accounts (MSSQLSERVER00-MSSQLSERVER20) are created and used for isolating and running external processes under the security token of the [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] service. When an external process was needed, SQL Server Launchpad service would take an available account and use it to run a process.
+If your script contains a connection string to SQL Server, the type of user identity and how it is specified has an impact on whether that connection succeeds. Using a SQL login with a user name and password providing on the connection string, the connection is expected to succeed. However, if you are using Windows integrated security (with **-T** on connection string) the connection can be expected to fail. The connection fails because the script is actually executing under the identity of a worker account, which is unknown to the server. If you want to use 
 
-You can view these accounts in the Windows user group **SQLRUserGroup**. By default, 20 accounts are created, which supports 20 concurrent sessions. Parallelized tasks do not consume additional accounts. For example, if a user runs a scoring task that uses parallel processing, the same worker account is reused for all threads. If you intend to make heavy use of machine learning, you can increase the number of accounts used to run external scripts. For more information, see [Modify the user account pool for machine learning](../../advanced-analytics/administration/modify-user-account-pool.md).
 
-When a user sends a machine learning script from an external client, SQL Server activates an available worker account, maps it to the identity of the calling user, and runs the script on behalf of the user. This new service of the database engine supports the secure execution of external scripts, called **implied authentication**.
+In the extensibility framework, R or Python script executes as a worker account. Although the system maintains an association between the worker account and the database user invoking the script, the worker account itself does not have permission to loop back to database engine. To allow 
+
+with SQL logins having a slight edge over Windows integrated security for scripts that connect back to SQL Server for data operations.
+
++ For SQL logins: Ensure that the login has appropriate permissions on the database where you are reading data. You can do this by adding *Connect to* and *SELECT* permissions, or by adding the login to the `db_datareader` role. To create objects, assign `DDL_admin` rights. If you must save data to tables, add to the `db_datawriter` role.
+
++ For Windows authentication: You might need to create an ODBC data source on the data science client that specifies the instance name and other connection information. For more information, see [ODBC data source administrator](../../odbc/admin/odbc-data-source-administrator.md).
+
+
+
+## Worker accounts in SQLRUserGroup
+
+In SQL Server 2016 and 2017, during setup of Machine Learning Services, local Windows user accounts (MSSQLSERVER00-MSSQLSERVER20) are created and used for isolating and running external processes under the security token of the [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] service. When an external process is needed, SQL Server Launchpad service takes an available account and uses it to run a process.
+
+You can view these accounts in the Windows user group **SQLRUserGroup**. When a user sends a machine learning script from an external client, SQL Server activates an available worker account, maps it to the identity of the calling user, and runs the script on behalf of the user. 
+
+By default, 20 accounts are created, which supports 20 concurrent sessions. Parallelized tasks do not consume additional accounts. For example, if a user runs a scoring task that uses parallel processing, the same worker account is reused for all threads. If you intend to make heavy use of machine learning, you can increase the number of accounts used to run external scripts. For more information, see [Modify the user account pool for machine learning](../../advanced-analytics/administration/modify-user-account-pool.md).
+
+SQL Server maintains the association between the identity of the calling user and the worker account running an external process. However, if your R or Python script makes in-flight requests to data or resources, the worker account lacks permissions to connect back to SQL Server to retrieve data or resources required by the script. To allow 
+
+This new service of the database engine supports the secure execution of external scripts, called **implied authentication**.
 
 However, if you need to run R or Python scripts from a remote data science client, and you are using Windows authentication, you must give these worker accounts permission to sign in to the SQL Server instance on your behalf. For more information about how to give permission, see [Add SQLRUserGroup as a database user](../../advanced-analytics/security/add-sqlrusergroup-to-database.md).
 
@@ -70,7 +105,7 @@ However, if you need to run R or Python scripts from a remote data science clien
 
 ### AppContainer isolation in SQL Server 2019
 
-In SQL Server 2019, Setup no longer creates local Windows user accounts. Instead, isolation is achieved through [AppContainers](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation). At run time, when embedded script or code is detected in a stored procedure or query, SQL Server calls Launchpad with a request for an extension-specific launcher. Launchpad invokes the appropriate runtime environment in a process under its identity, and instantiates an AppContainer to contain it. This change is beneficial because local account and password management is no longer required. Also, on installations where local user accounts are prohibited, elimination of the local user account dependency means you can now use this feature.
+In SQL Server 2019, Setup no longer creates worker accounts for **SQLRUserGroup**. Instead, isolation is achieved through [AppContainers](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation). At run time, when embedded script or code is detected in a stored procedure or query, SQL Server calls Launchpad with a request for an extension-specific launcher. Launchpad invokes the appropriate runtime environment in a process under its identity, and instantiates an AppContainer to contain it. This change is beneficial because local account and password management is no longer required. Also, on installations where local user accounts are prohibited, elimination of the local user account dependency means you can now use this feature.
 
 As implemented by SQL Server, AppContainers are an internal mechanism. While you won't see physical evidence of AppContainers in Process Monitor, you can find them in outbound firewall rules created by Setup to prevent processes from making network calls.
 
@@ -95,23 +130,7 @@ The following diagrams shows the interaction of SQL Server components with the P
 
 ![Implied authentication for Python](../security/media/implied-auth-python2.png)
 
-## Security of worker accounts
 
-The mapping of an external Windows user or valid SQL login to a worker account is valid only for the lifetime of the SQL stored procedure that executes the external script.
-
-Parallel queries from the same login are mapped to the same user worker account.
-
-The directories used for the processes are managed by the [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)], and directories are access-restricted. For R, RLauncher performs this task. For Python, PythonLauncher performs this task. Each individual worker account is restricted to its own folder, and cannot access files in folders above its own level. However, the worker account can read, write, or delete children under the session working folder that was created.
-
-For more information about how to change the number of worker accounts, account names, or account passwords, see [Modify the user account pool for SQL Server machine learning](../../advanced-analytics/administration/modify-user-account-pool.md).
-
-## Security for multiple scripts
-
-The isolation mechanism is based on physical user accounts. As satellite processes are started for a specific language runtime, each satellite task uses the worker account specified by the [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]. If a task requires multiple satellites, for example, in the case of parallel queries, a single worker account is used for all related tasks.
-
-No worker account can see or manipulate files used by other worker accounts.
-
-If you are an administrator on the computer, you can view the directories created for each process. Each directory is identified by its session GUID.
 
 ## No support for Transparent Data Encryption at rest
 

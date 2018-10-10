@@ -186,7 +186,7 @@ GO
 ## Examples: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### D. DBCC FREEPROCCACHE Basic Syntax Examples  
-The following example removes all existing query plan caches from the Compute nodes. Although the context is set to UserDbSales, the Compute node query plan caches for all databases will will be removed. The WITH NO_INFOMSGS clause prevents informational messages from appearing in the results.  
+The following example removes all existing query plan caches from the Compute nodes. Although the context is set to UserDbSales, the Compute node query plan caches for all databases will be removed. The WITH NO_INFOMSGS clause prevents informational messages from appearing in the results.  
   
 ```sql
 USE UserDbSales;  

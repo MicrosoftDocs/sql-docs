@@ -53,7 +53,7 @@ You can also get sqlncli.msi from the SQL Server 2012 Feature Pack web page. To 
   
  The x64 and Itanium versions of sqlncli.msi also install the 32-bit version of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. If your application targets a platform other than the one it was developed on, you can download versions of sqlncli.msi for x64, Itanium, and x86 from the Microsoft Download Center.  
   
- When you invoke sqlncli.msi, only the client components are installed by default. The client components are are files that support running an application that was developed using [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. To also install the SDK components, specify `ADDLOCAL=All` on the command line. For example:  
+ When you invoke sqlncli.msi, only the client components are installed by default. The client components are files that support running an application that was developed using [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. To also install the SDK components, specify `ADDLOCAL=All` on the command line. For example:  
   
  `msiexec /i sqlncli.msi ADDLOCAL=ALL APPGUID={0CC618CE-F36A-415E-84B4-FB1BFF6967E1}`  
   

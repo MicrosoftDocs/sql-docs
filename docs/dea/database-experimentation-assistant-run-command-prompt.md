@@ -16,12 +16,7 @@ manager: craigg
 ---
 
 # Run Database Experimentation Assistant at a command prompt
-This article describes how you can use the Command Prompt window to capture trace and then analyze the results. 
-
-> [!NOTE]
-> Although the process can't yet be run at a command prompt, for convenience we included the steps to replay the workload.
->
->
+This article describes how you can use the Command Prompt window to capture a trace and then analyze the results. 
 
 ## Start a new workload capture using the DEA command
 
@@ -60,7 +55,7 @@ To start a new workload capture, run `Deacmd.exe -o startcapturetrace -s <SQLSer
 
 ## Analyze traces using the DEA command
 
-To start a new workload capture, run  `Deacmd.exe -o analysis -a <Target1 trace filepath> -b <Target2 trace filepath> -r reportname -s <SQLserverInstance> -e <encryptconnection> -u <trustservercertificate>`
+To start a new trace analysis, run  `Deacmd.exe -o analysis -a <Target1 trace filepath> -b <Target2 trace filepath> -r reportname -s <SQLserverInstance> -e <encryptconnection> -u <trustservercertificate>`
 
 **For example**: `Deacmd.exe -o analysis -a C:\Trace\SQL2008Source\Trace.trc -b C:\ Trace\SQL2014Trace\Trace.trc -r upgrade20082014 -s localhost -e`
 

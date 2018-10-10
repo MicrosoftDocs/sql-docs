@@ -29,9 +29,11 @@ If the feature is enabled, the EXECUTE ANY EXTERNAL SCRIPT permission and standa
 
 ## Resource allocation
 
-By default, the R and Python sessions are allowed up to 20% of total memory on the host system. For resource-intensive workloads, this might not be enough.
+Stored procedures and T-SQL queries that invoke external processing use the resources available to the default resource pool. As part of the default configuration, external processes like R and Python sessions are allowed up to 20% of total memory on the host system. 
 
-To readjust memory, CPU, and I/O allocations, you can create resource pools to precisely articulate the levels of computing power assigned to external script execution. For more information, see [Resource governance to modify resource levels for R and Python execution](../administration/resource-governance.md) and [How to create a resource pool](../administration/how-to-create-a-resource-pool.md) for step-by-step instructions.
+If you want to readjust resourcing, you can modify the default pool, with corresponding effect on machine learning workloads running on that system.
+
+Another option is create a custom external resource pool to capture sessions originating from specific programs, hosts, or activity occuring during specific time intervals. For more information, see [Resource governance to modify resource levels for R and Python execution](../administration/resource-governance.md) and [How to create a resource pool](../administration/how-to-create-a-resource-pool.md) for step-by-step instructions.
 
 ## Isolation and containment
 

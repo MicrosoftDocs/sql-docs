@@ -75,14 +75,13 @@ During execution, Launchpad creates temporary folders to store session data, del
 
 ### Implied authentication
 
-**Implied authentication** describes the process under which SQL Server gets the user credentials and then executes all external script tasks on behalf of the users, assuming the user has the correct permissions in the database. Most of the time, implied authentication is an implementation detail, but in the case of loopback connections to SQL Server, you might need additional configuration to support that connection.
+*Implied authentication* describes connection request behavior under which external processes running as low-privilege worker accounts are presented as a trusted user identity to SQL Server on loop back requests for data or operations. As a concept, implied authentication is unique to Windows authentication, in SQL Server connection strings specifying a trusted connection, on requests originating from external processes such as R or Python script. It is sometimes also referred to as a *loop back*.
 
-However, Implied authentication is important if the external script needs to make an ODBC call outside the SQL Server database. For example, the code might retrieve a shorter list of factors from a spreadsheet or other source.
+Trusted connections are workable from R and Python script, but only with additional configuration. In the extensibility architecture, R and Python processes run under worker accounts, inheriting permissions from the parent **SQLRUserGroup**. When a connection string specifies "Trusted_Connection=True", the identity of the worker account is presented on the connection request, which is unknown by default to SQL Server. 
 
-For such loopback calls to succeed, the group that contains the worker accounts, SQLRUserGroup, must have "Allow Log on locally" permissions. By default, this right is given to all new local users, but in some organizations stricter group policies might be enforced.
+To make trusted connections successful, you must create a database login for the **SQLRUserGroup**. After doing so, any trusted connection from any member of **SQLRUserGroup** has login rights to SQL Server. For step-by-step instructions, see [Add SQLRUserGroup to a database login](../../advanced-analytics/security/add-sqlrusergroup-to-database.md).
 
-> [!IMPORTANT]
-> For implied authentication to succeed, **SQLRUserGroup** must have an [account in the master database](../../advanced-analytics/security/add-sqlrusergroup-to-database.md) for the instance, and this account must be given permissions to connect to the instance. 
+Trusted connections are not the most widely used formulation of a connection request. When R or Python script specifies a connection, it can be more common to use a SQL login, or a fully-specified user name and password if the connection is to an ODBC data source.
 
 #### How implied authentication works for R and Python sessions
 
@@ -93,18 +92,6 @@ The following diagram shows the interaction of SQL Server components with the R 
 The next diagram shows the interaction of SQL Server components with the Python runtime and how it does implied authentication for Python.
 
 ![Implied authentication for Python](../security/media/implied-auth-python2.png)
-
-#### Implied authentication for connecting back to SQL Server
-
-If your script contains a connection string to SQL Server, the type of user identity and how it is specified has an impact on whether that connection succeeds. Using a SQL login with a user name and password providing on the connection string, the connection is expected to succeed. However, if you are using Windows integrated security (with **-T** on connection string) the connection will fail by default. The connection fails because the script is actually executing under the identity of a worker account, which is unknown to the server. 
-
-In the extensibility framework, R or Python script executes as a worker account. Although the system maintains an association between the worker account and the database user invoking the script, the worker account itself does not have permission to loop back to database engine. To allow 
-
-with SQL logins having a slight edge over Windows integrated security for scripts that connect back to SQL Server for data operations.
-
-+ For SQL logins: Ensure that the login has appropriate permissions on the database where you are reading data. You can do this by adding *Connect to* and *SELECT* permissions, or by adding the login to the `db_datareader` role. To create objects, assign `DDL_admin` rights. If you must save data to tables, add to the `db_datawriter` role.
-
-+ For Windows authentication: You might need to create an ODBC data source on the data science client that specifies the instance name and other connection information. For more information, see [ODBC data source administrator](../../odbc/admin/odbc-data-source-administrator.md).
 
 ## No support for Transparent Data Encryption at rest
 

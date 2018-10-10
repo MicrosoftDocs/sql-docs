@@ -26,7 +26,8 @@ To setup Always Encrypted with secure enclaves, use the following workflow:
 5. Provision enclave-enabled keys.
 6. Encrypt columns that contain sensitive data.
  
-
+[!NOTE]
+For a step-by-step tutorial on how to set up a test environment and try the functionality of Always Encrypted with secure enclaves in SSMS, see [Tutorial: Getting started with Always Encrypted with secure enclaves using SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md).
 
 ## Configure your environment
 

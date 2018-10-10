@@ -4,12 +4,9 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 91f7f558-025d-4f4d-ac2c-aa095e7d1ace
-caps.latest.revision: 3
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "v-thobro"
@@ -50,5 +47,5 @@ There are two buttons present viz.:
 -   **Cancel:** Click **Cancel** to restore the settings present before the changes were being made.  
   
 ## See Also  
-[Migrating Oracle Data to SQL Server](http://msdn.microsoft.com/e23c5268-41ed-4e55-9fe7-a11376202a13)  
+[Migrating Oracle Data to SQL Server](migrating-oracle-data-into-sql-server-oracletosql.md)  
   

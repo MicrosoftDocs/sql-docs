@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-cross-instance"
-ms.tgt_pltfrm: ""
+ms.technology:
 ms.topic: conceptual
 helpviewer_keywords: 
   - "projects [SQL Server Management Studio], source controls"
@@ -15,7 +12,6 @@ helpviewer_keywords:
   - "source controls [SQL Server Management Studio], solutions"
   - "source controls [SQL Server Management Studio], projects"
 ms.assetid: 3eaed80e-6f55-42ea-a964-aca31c09d055
-caps.latest.revision: 21
 author: mashamsft
 ms.author: mathoma
 manager: craigg

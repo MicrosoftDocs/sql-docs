@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_changedbowner"
@@ -18,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_changedbowner"
 ms.assetid: 516ef311-e83b-45c9-b9cd-0e0641774c04
-caps.latest.revision: 35
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # sp_changedbowner (Transact-SQL)

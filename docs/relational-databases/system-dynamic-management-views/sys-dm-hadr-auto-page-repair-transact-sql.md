@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "dm_hadr_auto_page_repair_TSQL"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "automatic page repair"
   - "sys.dm_hadr_auto_page_repair dynamic management view"
 ms.assetid: d7840adf-4a1b-41ac-bc94-102c07ad1c79
-caps.latest.revision: 8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

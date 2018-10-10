@@ -1,0 +1,15 @@
+- name: Troubleshooting Tools for Package Development
+  href: troubleshooting-tools-for-package-development.md
+  items:
+  - name: Debugging Control Flow
+    href: debugging-control-flow.md
+  - name: Debugging Script
+    href: debugging-script.md
+  - name: Debugging Data Flow
+    href: debugging-data-flow.md
+  - name: Debug a Package by Setting Breakpoints on a Task or a Container
+    href: ../debug-a-package-by-setting-breakpoints-on-a-task-or-a-container.md
+  - name: Add a Data Viewer to a Data Flow
+    href: ../add-a-data-viewer-to-a-data-flow.md
+  - name: Configure an Error Output in a Data Flow Component
+    href: ../configure-an-error-output-in-a-data-flow-component.md

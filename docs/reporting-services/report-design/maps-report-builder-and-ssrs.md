@@ -1,16 +1,11 @@
 ---
 title: "Maps (Report Builder and SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "report-design"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-design
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "10508"
@@ -20,10 +15,8 @@ f1_keywords:
   - "10500"
   - "sql13.rtp.rptdesigner.maptitleproperties.general.f1"
 ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
-caps.latest.revision: 30
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Maps (Report Builder and SSRS)
   To visualize business data against a geographical background, you can add a map to your [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated report. The type of map that you select depends on what information that you want to communicate in your report. You can add a map that displays locations only, or a bubble map that varies bubble size based on number of households for an area, or a marker map that varies marker style based on the most profitable product for each store, or a line map that displays routes between stores.  
@@ -80,7 +73,7 @@ manager: "kfile"
   
 -   **ESRI Shapefiles.** ESRI Shapefiles contain data that complies with the Environmental Systems Research Institute, Inc. (ESRI) Shapefile spatial data format. ESRI Shapefiles refer to a set of files. Data in the .shp file specifies the geographical or geometrical shapes. Data in the .dbf file provides attributes for the shapes. To view a map in design view or to run a map from the report server, both files must be in the same folder. When you add spatial data from a .shp file on your local file system, the spatial data is embedded in your report. To retrieve spatial data dynamically at run time, upload the Shapefiles to your report server, and then specify them as the source for spatial data. For more information, see [Finding ESRI Shapefiles for a Map](http://go.microsoft.com/fwlink/?linkid=178814).  
   
--   **SQL Server spatial data stored in a database.** You can use a query that specifies **SQLGeometry** or **SQLGeography** data types from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] relational database. For more information, see [Spatial Data Types Overview](../../relational-databases/spatial/spatial-data-types-overview.md) in [SQL Server Books Online](http://go.microsoft.com/fwlink/?linkid=98335).  
+-   **SQL Server spatial data stored in a database.** You can use a query that specifies **SQLGeometry** or **SQLGeography** data types from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] relational database. For more information, see [Spatial Data Types Overview](../../relational-databases/spatial/spatial-data-types-overview.md).  
   
      In the result set that you see in the query designer, each row of spatial data is treated as a unit and stored in a single map element. For example, if there are multiple points that are defined in one row in the result set, display properties apply to all points in that map element.  
   

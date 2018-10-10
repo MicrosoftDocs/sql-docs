@@ -1,0 +1,28 @@
+- name: Microsoft ODBC Driver for SQL Server on Windows
+  href: microsoft-odbc-driver-for-sql-server-on-windows.md
+- name: Features of the Microsoft ODBC Driver for SQL Server on Windows
+  href: features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md
+- name: Release Notes
+  href: release-notes.md
+- name: System Requirements, Installation, and Driver Files
+  href: system-requirements-installation-and-driver-files.md
+- name: Feature Guides
+  items:
+  - name: Connection Resiliency in the Windows ODBC Driver
+    href: connection-resiliency-in-the-windows-odbc-driver.md
+  - name: Driver-Aware Connection Pooling in the ODBC Driver for SQL Server
+    href: driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md
+- name: Asynchronous Execution (Notification Method) Sample
+  href: asynchronous-execution-notification-method-sample.md
+- name: Help Topics
+  items:
+  - name: Data Source Wizard screen 1
+    href: dsn-wizard-1.md
+  - name: Data Source Wizard screen 2
+    href: dsn-wizard-2.md
+  - name: Data Source Wizard screen 3
+    href: dsn-wizard-3.md
+  - name: Data Source Wizard screen 4
+    href: dsn-wizard-4.md
+  - name: SQL Server Login dialog
+    href: sql-server-login-dialog.md

@@ -1,13 +1,11 @@
 ---
 title: "ALTER ASSEMBLY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/19/2017"
+ms.date: "09/07/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "ALTER_ASSEMBLY_TSQL"
@@ -23,13 +21,12 @@ helpviewer_keywords:
   - "adding files"
   - "ALTER ASSEMBLY statement"
 ms.assetid: 87bca678-4e79-40e1-bb8b-bd5ed8f34853
-caps.latest.revision: 76
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ---
 # ALTER ASSEMBLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Alters an assembly by modifying the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] catalog properties of an assembly. ALTER ASSEMBLY refreshes it to the latest copy of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] modules that hold its implementation and adds or removes files associated with it. Assemblies are created by using [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md).  
 
@@ -73,6 +70,9 @@ ALTER ASSEMBLY assembly_name
  Updates an assembly to the latest copy of the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] modules that hold its implementation. This option can only be used if there are no associated files with the specified assembly.  
   
  \<client_assembly_specifier> specifies the network or local location where the assembly being refreshed is located. The network location includes the computer name, the share name and a path within that share. *manifest_file_name* specifies the name of the file that contains the manifest of the assembly.  
+
+> [!IMPORTANT]
+> Azure SQL Database does not support refereencing a file.
   
  \<assembly_bits> is the binary value for the assembly.  
   
@@ -112,13 +112,13 @@ ALTER ASSEMBLY assembly_name
  Removes the file name associated with the assembly, or all files associated with the assembly, from the database. If used with ADD FILE that follows, DROP FILE executes first. This lets you to replace a file with the same file name.  
   
 > [!NOTE]  
->  This option is not available in a contained database.  
+>  This option is not available in a contained database or Azure SQL Database.  
   
  [ ADD FILE FROM { *client_file_specifier* [ AS *file_name*] | *file_bits*AS *file_name*}  
  Uploads a file to be associated with the assembly, such as source code, debug files or other related information, into the server and made visible in the **sys.assembly_files** catalog view. *client_file_specifier* specifies the location from which to upload the file. *file_bits* can be used instead to specify the list of binary values that make up the file. *file_name* specifies the name under which the file should be stored in the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *file_name* must be specified if *file_bits* is specified, and is optional if *client_file_specifier* is specified. If *file_name* is not specified, the file_name part of *client_file_specifier* is used as *file_name*.  
   
 > [!NOTE]  
->  This option is not available in a contained database.  
+>  This option is not available in a contained database or Azure SQL Database.  
   
 ## Remarks  
  ALTER ASSEMBLY does not disrupt currently running sessions that are running code in the assembly being modified. Current sessions complete execution by using the unaltered bits of the assembly.  
@@ -199,6 +199,10 @@ The following permissions required to alter a CLR assembly when `CLR strict secu
  ALTER ASSEMBLY ComplexNumber 
  FROM 'C:\Program Files\Microsoft SQL Server\130\Tools\Samples\1033\Engine\Programmability\CLR\UserDefinedDataType\CS\ComplexNumber\obj\Debug\ComplexNumber.dll' 
   ```
+
+> [!IMPORTANT]
+> Azure SQL Database does not support refereencing a file.
+
 ### B. Adding a file to associate with an assembly  
  The following example uploads the source code file `Class1.cs` to be associated with assembly `MyClass`. This example assumes assembly `MyClass` is already created in the database.  
   
@@ -206,7 +210,10 @@ The following permissions required to alter a CLR assembly when `CLR strict secu
 ALTER ASSEMBLY MyClass   
 ADD FILE FROM 'C:\MyClassProject\Class1.cs';  
 ```  
-  
+
+> [!IMPORTANT]
+> Azure SQL Database does not support refereencing a file.
+
 ### C. Changing the permissions of an assembly  
  The following example changes the permission set of assembly `ComplexNumber` from SAFE to `EXTERNAL ACCESS`.  
   

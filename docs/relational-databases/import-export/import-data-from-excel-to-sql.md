@@ -1,20 +1,17 @@
-﻿---
+---
 title: "Import data from Excel to SQL | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/29/2018"
+ms.date: "09/23/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "import-export"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Import data from Excel to SQL Server or Azure SQL Database
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -24,7 +21,7 @@ There are several ways to import data from Excel files to SQL Server or to Azure
 
 -   You can import data in a single step, directly from Excel to SQL, by using one of the following tools:
     -   The [SQL Server Import and Export Wizard](#wiz)
-    -   ]SQL Server Integration Services (SSIS)](#ssis)
+    -   [SQL Server Integration Services (SSIS)](#ssis)
     -   The [OPENROWSET](#openrowset) function
 -   You can import data in two steps, by exporting your data from Excel as text, and then using one of the following tools to import the text file:
     -   The [Import Flat File Wizard](#import-wiz)
@@ -65,7 +62,7 @@ To start learning how to build SSIS packages, see the tutorial [How to Create an
 ## <a name="openrowset"></a> OPENROWSET and linked servers
 
 > [!NOTE]
-> In Azure, the OPENROWSET and OPENDATASOURCE functions are available only on SQL Database Managed Instance (Preview).
+> In Azure, the OPENROWSET and OPENDATASOURCE functions are available only on SQL Database Managed Instance.
 
 > [!NOTE]
 > The ACE provider (formerly the Jet provider) that connects to Excel data sources is intended for interactive client-side use. If you use the ACE provider on the server, especially in automated processes or processes running in parallel, you may see unexpected results.

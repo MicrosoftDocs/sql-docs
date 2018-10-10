@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "07/02/2018"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: t-sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "PREDICT"
@@ -20,7 +17,7 @@ helpviewer_keywords:
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
-monikerRange: ">= sql-server-2017 || = azuresqldb-current || = sqlallproducts-allversions"
+monikerRange: ">=sql-server-2017||=azuresqldb-current||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # PREDICT (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]

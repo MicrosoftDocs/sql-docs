@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "10214"
@@ -51,7 +49,6 @@ f1_keywords:
   - "sql12.rtp.rptdesigner.charttitleproperties.font.f1"
   - "10247"
 ms.assetid: d3984300-c766-42f8-b7c4-863123d67c99
-caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg

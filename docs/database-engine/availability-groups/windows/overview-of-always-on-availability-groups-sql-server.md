@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "secondary databases [SQL Server], in availability group"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], data movement"
   - "Availability Groups [SQL Server]"
 ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
-caps.latest.revision: 121
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

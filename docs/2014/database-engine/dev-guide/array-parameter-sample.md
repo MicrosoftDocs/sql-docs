@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 5d7034ca-ce88-4a7e-8dd9-82f867479e7f
-caps.latest.revision: 14
 author: mashamsft
 ms.author: mathoma
 manager: craigg

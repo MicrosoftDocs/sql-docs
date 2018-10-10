@@ -1,22 +1,15 @@
 ---
 title: "Oracle Connection Type (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/11/2017"
+ms.date: 01/11/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "report-data"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-data
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 9db86dd2-beda-42d8-8af7-2629d58a8e3d
-caps.latest.revision: 10
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ---
 # Oracle Connection Type (SSRS)
 To use data from an Oracle database in your report, you must you must have a dataset that is based on a report data source of type Oracle. This built-in data source type uses the Oracle Data Provider directly and requires an Oracle client software component.

@@ -5,9 +5,7 @@ ms.date: "05/10/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "DROP ASSEMBLY"
@@ -22,7 +20,6 @@ helpviewer_keywords:
   - "dropping assemblies"
   - "WITH NO DEPENDENTS option"
 ms.assetid: 452d181a-a8e6-44a3-975d-29966d01b18d
-caps.latest.revision: 32
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

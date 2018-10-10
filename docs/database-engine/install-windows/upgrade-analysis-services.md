@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "09/12/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "upgrading databases"
@@ -20,9 +18,9 @@ helpviewer_keywords:
   - "installing Analysis Services, upgrading"
   - "SSAS, upgrading"
 ms.assetid: a131d329-386e-4470-aaa9-ffcde4e5ec0c
-caps.latest.revision: 79
 author: "Minewiskan"
 ms.author: "owend"
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 manager: "erikre"
 ---
 # Upgrade Analysis Services

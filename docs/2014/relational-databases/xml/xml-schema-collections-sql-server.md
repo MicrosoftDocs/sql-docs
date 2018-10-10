@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: conceptual
 helpviewer_keywords: 
   - "XSD schemas [SQL Server]"
@@ -21,7 +18,6 @@ helpviewer_keywords:
   - "XML schema collections [SQL Server]"
   - "schema collections [SQL Server], about XML schema collections"
 ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
-caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

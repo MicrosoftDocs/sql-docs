@@ -27,7 +27,7 @@ manager: kfile
 ## Logon account recommendations  
  In a failover cluster, all instances of Analysis Services should be configured to use a Windows domain user account. Assign the same account to all instances. See [How to Cluster Analysis Services](http://msdn.microsoft.com/library/dn736073.aspx) for details.  
   
- Standalone instances should use the default virtual account, **NT Service\MSSQLServerOLAPService** for the default instance, or **NT Service\MSOLAP$***instance-name* for a named instance. This recommendation applies to Analysis Services instances in all server modes, assuming Windows Server 2008 R2 and later for the operating system, and SQL Server 2012 and later for Analysis Services.  
+ Standalone instances should use the default virtual account, **NT Service\MSSQLServerOLAPService** for the default instance, or **NT Service\MSOLAP$**_instance-name_ for a named instance. This recommendation applies to Analysis Services instances in all server modes, assuming Windows Server 2008 R2 and later for the operating system, and SQL Server 2012 and later for Analysis Services.  
   
 ## Granting permissions to Analysis Services  
  This section explains the permissions that Analysis Services requires for local, internal operations, such as starting the executable, reading the configuration file, and loading databases from the data directory. If instead you're looking for guidance on setting permissions for external data access and interoperability with other services and applications, see [Granting additional permissions for specific server operations](#bkmk_tasks) further on in this topic.  
@@ -45,7 +45,7 @@ manager: kfile
  The sole member of the group is the per-service SID. Right next to it is the logon account. The logon account name is cosmetic, there to provide context to the per-service SID. If you subsequently change the logon account and then return to this page, you'll notice that the security group and per-service SID do not change, but the logon account label is different.  
   
 ##  <a name="bkmk_winpriv"></a> Windows privileges assigned to the Analysis Services service account  
- Analysis Services needs permissions from the operating system for service startup and to request system resources. Requirements vary by server mode and whether the instance is clustered. If you are unfamiliar with Windows privileges, see [Privileges](http://msdn.microsoft.com/library/windows/desktop/aa379306\(v=vs.85\).aspx) and [Privilege Constants (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb530716\(v=vs.85\).aspx) for details.  
+ Analysis Services needs permissions from the operating system for service startup and to request system resources. Requirements vary by server mode and whether the instance is clustered. If you are unfamiliar with Windows privileges, see [Privileges](http://msdn.microsoft.com/library/windows/desktop/aa379306\(v=vs.85\).aspx) and [Privilege Constants (Windows)](/windows/desktop/SecAuthZ/privilege-constants) for details.  
   
  All instances of Analysis Services require the **Log on as a service** (SeServiceLogonRight) privilege. SQL Server Setup assigns the privilege for you on the service account specified during installation. For servers running in Multidimensional and Data Mining mode, this is the only Windows privilege required by the Analysis Services service account for standalone server installations, and it is the only privilege that Setup configures for Analysis Services. For clustered and tabular instances, additional Windows privileges must be added manually.  
   
@@ -141,8 +141,8 @@ manager: kfile
  [Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
  [SQL Server Service Account and Per-Service SID (Blog)](http://www.travisgan.com/2013/06/sql-server-service-account-and-per.html)   
  [SQL Server uses a service SID to provide service isolation (KB Article)](http://support.microsoft.com/kb/2620201)   
- [Access Token (MSDN)](http://msdn.microsoft.com/library/windows/desktop/aa374909\(v=vs.85\).aspx)   
- [Security Identifiers (MSDN)](http://msdn.microsoft.com/library/windows/desktop/aa379571\(v=vs.85\).aspx)   
+ [Access Token (MSDN)](/windows/desktop/SecAuthZ/access-tokens)   
+ [Security Identifiers (MSDN)](/windows/desktop/SecAuthZ/security-identifiers)   
  [Access Token (Wikipedia)](http://en.wikipedia.org/wiki/Access_token)   
  [Access Control Lists (Wikipedia)](http://en.wikipedia.org/wiki/Access_control_list)  
   

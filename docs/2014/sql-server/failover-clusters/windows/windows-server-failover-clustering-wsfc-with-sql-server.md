@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], WSFC clusters"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "quorum [SQL Server]"
   - "failover clustering [SQL Server], AlwaysOn Availability Groups"
 ms.assetid: 79d2ea5a-edd8-4b3b-9502-96202057b01a
-caps.latest.revision: 34
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -59,7 +56,7 @@ manager: craigg
  Forced quorum  
  The process to start the cluster even though only a minority of the elements that are required for quorum are in communication.  
   
- For more information, see: [Failover Cluster Glossary](http://msdn.microsoft.com/library/aa372869\(VS.85\).aspx)  
+ For more information, see: [Failover Cluster Glossary](/previous-versions/windows/desktop/MsCS/server-cluster-glossary)  
   
 ##  <a name="Overview"></a> Overview of Windows Server Failover Clustering  
  Windows Server Failover Clustering provides infrastructure features that support the high-availability and disaster recovery scenarios of hosted server applications such as Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and Microsoft Exchange. If a cluster node or service fails, the services that were hosted on that node can be automatically or manually transferred to another available node in a process known as *failover*.  

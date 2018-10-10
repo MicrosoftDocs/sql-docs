@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "ProactiveCachingObjectNotificationBinding Data Type"
@@ -19,7 +17,6 @@ topic_type:
 helpviewer_keywords: 
   - "ProactiveCachingObjectNotificationBinding data type"
 ms.assetid: b3cf5fb6-6121-4f25-8de6-f171792c440d
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg

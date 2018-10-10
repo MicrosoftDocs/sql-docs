@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "attributes [Analysis Services], relationships"
   - "relationships [Analysis Services], attributes"
 ms.assetid: 9184d344-e96d-4025-ad6f-3f75129746df
-caps.latest.revision: 31
 author: minewiskan
 ms.author: owend
 manager: craigg

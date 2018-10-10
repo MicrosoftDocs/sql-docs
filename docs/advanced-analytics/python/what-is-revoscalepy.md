@@ -47,7 +47,7 @@ For the latest list of functions in the Python libraries released to date, see t
 
 ### Data types, data sources, and compute contexts
 
-SQL Server and Python use different data types in some cases. For a list of mappings between SQL and Python data types, see [Python libraries and data Types](python-libraries-and-data-types.md).
+SQL Server and Python use different data types in some cases. For a list of mappings between SQL and Python data types, see [Python extension](../concepts/extension-python.md).
 
 Data sources supported for machine learning with Python in SQL Server includes ODBC data sources, SQL Server database, and local files, including XDF files.
 

@@ -4,18 +4,16 @@ ms.custom: ""
 ms.date: "07/18/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: install
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "compatibility [SQL Server], databases"
   - "compatibility levels [SQL Server], after upgrade"
   - "Database Engine [SQL Server], upgrading"
 ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433859
-caps.latest.revision: 62
 author: MashaMSFT
 ms.author: mathoma
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 manager: craigg
 ---
 # Upgrade Database Engine

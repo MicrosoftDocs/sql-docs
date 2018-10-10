@@ -5,8 +5,6 @@ ms.technology: install
 ms.custom: ""
 ms.date: "2/26/2018"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
 author: craigg-msft
@@ -52,7 +50,7 @@ The Service Packs are available online only, not on the installation media, and 
 - **New DMF to replace DBCC INPUTBUFFER** -  A new Dynamic Management Function sys.dm_input_buffer that takes the session_id as parameter is introduced to replace DBCC INPUTBUFFER
 - **XEvents enhancement for read routing failure for an Availability Group** - Currently the read_only_rout_fail XEvent only gets fired if there is a routing list present, but none of the servers in the routing list is available for connections. This improvement includes additional information to assist with troubleshooting and it also expands on the code points where the XEvent gets fired. 
 - **Improved handling of Service Broker with Availability group failover** - Currently when Service Broker is enabled on an Availability Group Databases, during an AG failover all Service broker connections that originated on the Primary Replica are left open. The improvement closes all such open connections during an AG failover.
-- **Automatic Soft-NUMA partitioning** – With SQL 2014 SP2, Automatic [Soft-NUMA](https://msdn.microsoft.com/library/ms345357(SQL.120).aspx) partitioning is introduced when Trace Flag 8079 is enabled at the server level. When Trace Flag 8079 is enabled during startup, SQL Server 2014 SP2 interrogates the hardware layout and automatically configures Soft NUMA on systems reporting 8 or more CPUs per NUMA node. The automatic soft NUMA behavior is Hyperthread (HT/logical processor) aware. The partitioning and creation of additional nodes scales background processing by increasing the number of listeners, scaling, and network and encryption capabilities. It is recommended to first test the performance of the workload with Auto-Soft NUMA before it is turned ON in production.
+- **Automatic Soft-NUMA partitioning** – With SQL 2014 SP2, Automatic [Soft-NUMA](../database-engine/configure-windows/soft-numa-sql-server.md) partitioning is introduced when Trace Flag 8079 is enabled at the server level. When Trace Flag 8079 is enabled during startup, SQL Server 2014 SP2 interrogates the hardware layout and automatically configures Soft NUMA on systems reporting 8 or more CPUs per NUMA node. The automatic soft NUMA behavior is Hyperthread (HT/logical processor) aware. The partitioning and creation of additional nodes scales background processing by increasing the number of listeners, scaling, and network and encryption capabilities. It is recommended to first test the performance of the workload with Auto-Soft NUMA before it is turned ON in production.
 
 ## Service Pack 3 release notes
 
@@ -127,7 +125,7 @@ For a complete list of bugs and known issues fixed in this service pack, see [th
 ### Reinstalling  instances of SQL Server Failover Cluster fails if you use the same IP address  
 **Issue:** If you specify an incorrect IP address during an installation of a SQL Server Failover Cluster instance, the installation fails. After you uninstall the failed instance, and if you try to reinstall the SQL Server failover cluster instance with the same instance name, and correct IP address, the installation fails. The failure is because of the duplicate resource group left behind by the previous installation.  
   
-**Workaround:** To resolve this issue, use a different instance name during the reinstallation, or manually delete the resource group before reinstalling. For more information, see [Add or Remove Nodes in a SQL Server Failover Cluster](http://msdn.microsoft.com/library/ms191545). 
+**Workaround:** To resolve this issue, use a different instance name during the reinstallation, or manually delete the resource group before reinstalling. For more information, see [Add or Remove Nodes in a SQL Server Failover Cluster](failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md). 
   
 ### Analysis Services and PowerPivot  
   

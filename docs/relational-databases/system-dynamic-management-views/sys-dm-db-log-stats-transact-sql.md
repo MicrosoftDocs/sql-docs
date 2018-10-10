@@ -1,12 +1,10 @@
-﻿---
+---
 title: "sys.dm_db_log_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "dm_db_log_stats_TSQL"
@@ -18,11 +16,10 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_db_log_stats dynamic management function"
 ms.assetid: 
-caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
+monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_log_stats (Transact-SQL)   
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
@@ -69,6 +66,9 @@ The built-in function [DB_ID](../../t-sql/functions/db-id-transact-sql.md) can b
 |log_recovery_size_mb	|**float**	|	Log size in MB since log recovery [log sequence number (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch).|  
 |recovery_vlf_count	|**bigint**	|	Total number of [virtual log files (VLFs)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) to be recovered, if there was failover or server restart. |  
 
+
+## Remarks
+When running `sys.dm_db_log_stats` against a database that is participating in an Availability Group as a secondary replica, only a subset of the fields described above will be returned.  Currently, only `database_id`, `recovery_model`, and `log_backup_time` will be returned when run against a secondary database.   
 
 ## Permissions  
 Requires the `VIEW DATABASE STATE` permission in the database.   

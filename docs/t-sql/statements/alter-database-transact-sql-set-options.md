@@ -2,13 +2,11 @@
 title: "ALTER DATABASE SET Options (Transact-SQL) | Microsoft Docs"
 description: Learn about how to set database options such as automatic tuning, encryption, query store in a SQL Server and Azure SQL Database
 ms.custom: ""
-ms.date: "07/03/2018"
+ms.date: "10/02/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -28,11 +26,10 @@ helpviewer_keywords:
   - "auto_create_statistics"
   - "auto_update_statistics"
 ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
-caps.latest.revision: 159
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ALTER DATABASE SET Options (Transact-SQL) 
 
@@ -40,9 +37,22 @@ Sets database options in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md
 
 Click one of the following tabs for the syntax, arguments, remarks, permissions, and examples for a particular SQL version with which you are working.
 
-For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md). 
+For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
-# [SQL Server](#tab/sqlserver)
+## Click a product!
+
+In the following row, click whichever product name you are interested in. The click displays different content here on this webpage, appropriate for whichever product you click.
+
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+
+> [!div class="mx-tdCol2BreakAll"]  
+> |||
+> |---|---| 
+> |**_\* SQL Server \*_** &nbsp;|[SQL Database<br />logical server](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[SQL Database<br />Managed Instance](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|||  
+
+&nbsp;
+
+## SQL Server
   
 Database mirroring, [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], and compatibility levels are `SET` options but are described in separate articles because of their length. For more information, see [ALTER DATABASE Database Mirroring](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md), [ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md), and [ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
@@ -83,7 +93,7 @@ SET
   | <service_broker_option>  
   | <snapshot_option>  
   | <sql_option>   
-  | <target_recovery_time_option>   
+  | <target_recovery_time_option> 
   | <termination>  
 }  
 ;
@@ -112,7 +122,7 @@ SET
    }  
 }  
   
-   <change_tracking_option_list> ::=  
+<change_tracking_option_list> ::=  
    {  
        AUTO_CLEANUP = { ON | OFF }   
      | CHANGE_RETENTION = retention_period { DAYS | HOURS | MINUTES }  
@@ -356,7 +366,7 @@ Setting this option to ON has no effect unless AUTO_UPDATE_STATISTICS is set to 
 By default, the AUTO_UPDATE_STATISTICS_ASYNC option is set to OFF, and the query optimizer updates statistics synchronously.  
   
 OFF  
-Specifies that statistics updates for the AUTO_UPDATE_STATISTICS option are synchronous. The query optimizer waits for statistcs updates to complete before it compiles queries.  
+Specifies that statistics updates for the AUTO_UPDATE_STATISTICS option are synchronous. The query optimizer waits for statistics updates to complete before it compiles queries.  
   
 Setting this option to OFF has no effect unless AUTO_UPDATE_STATISTICS is set to ON.  
   
@@ -371,15 +381,15 @@ Enables or disables `FORCE_LAST_GOOD_PLAN` [automatic tuning](../../relational-d
   
 FORCE_LAST_GOOD_PLAN = { ON | OFF }  
 ON  
-The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] automatically forces the last known good plan on the [!INCLUDE[tsql_md](../../includes/tsql_md.md)] queries where new SQL plan causes performance regressions. The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] continously monitors query performance of the [!INCLUDE[tsql_md](../../includes/tsql_md.md)] query with the forced plan. If there are performance gains, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will keep using last known good plan. If performance gains are not detected, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will produce a new SQL plan. The statement will fail if Query Store is not enabled or if it is not in *Read-Write* mode.   
+The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] automatically forces the last known good plan on the [!INCLUDE[tsql-md](../../includes/tsql-md.md)] queries where new SQL plan causes performance regressions. The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] continuously monitors query performance of the [!INCLUDE[tsql-md](../../includes/tsql-md.md)] query with the forced plan. If there are performance gains, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will keep using last known good plan. If performance gains are not detected, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will produce a new SQL plan. The statement will fail if Query Store is not enabled or if it is not in *Read-Write* mode.   
 OFF  
-The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] reports potential query performance regressions caused by SQL plan changes in [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) view. However, these recommendations are not automatically applied. User can monitor active recomendations and fix identified problems by applying [!INCLUDE[tsql_md](../../includes/tsql_md.md)] scripts that are shown in the view. This is the default value.
+The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] reports potential query performance regressions caused by SQL plan changes in [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) view. However, these recommendations are not automatically applied. User can monitor active recommendations and fix identified problems by applying [!INCLUDE[tsql-md](../../includes/tsql-md.md)] scripts that are shown in the view. This is the default value.
 
 **\<change_tracking_option> ::=**  
   
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSFull](../../includes/sssds-md.md)].  
   
-Controls change tracking options. You can enable change tracking, set options, change options, and disable change tracking. For examples, see the Examples section later in this topic.  
+Controls change tracking options. You can enable change tracking, set options, change options, and disable change tracking. For examples, see the Examples section later in this article.  
   
 ON  
 Enables change tracking for the database. When you enable change tracking, you can also set the AUTO CLEANUP and CHANGE RETENTION options.  
@@ -1084,7 +1094,7 @@ For more information about indirect checkpoints, see [Database Checkpoints](../.
 Specifies when to roll back incomplete transactions when the database is transitioned from one state to another. If the termination clause is omitted, the ALTER DATABASE statement waits indefinitely if there is any lock on the database. Only one termination clause can be specified, and it follows the SET clauses.  
   
 > [!NOTE]  
->  Not all database options use the WITH \<termination> clause. For more information, see the table under "[Setting Options](#SettingOptions) of the "Remarks" section of this topic.  
+>  Not all database options use the WITH \<termination> clause. For more information, see the table under "[Setting Options](#SettingOptions) of the "Remarks" section of this article.  
   
 ROLLBACK AFTER *integer* [SECONDS] | ROLLBACK IMMEDIATE  
 Specifies whether to roll back after the specified number of seconds or immediately.  
@@ -1261,7 +1271,17 @@ SET QUERY_STORE = ON
 [sys.data_spaces](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
 [Best Practice with the Query Store](../../relational-databases/performance/best-practice-with-the-query-store.md) 
   
-# [SQL DB logical server](#tab/sqldbls)
+::: moniker-end
+::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+
+> [!div class="mx-tdCol2BreakAll"]  
+> |||
+> |---|---| 
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2016)|**_\* SQL Database<br />logical server \*_** &nbsp;|[SQL Database<br />Managed Instance](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|
+
+&nbsp;
+
+## Azure SQL Database logical server
 
 Compatibility levels are `SET` options but are described in [ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
@@ -1280,19 +1300,20 @@ SET
 
 <option_spec> ::=
 {  
-    <auto_option>   
-  | <change_tracking_option>   
-  | <cursor_option>   
-  | <db_encryption_option>  
-  | <db_update_option>   
-  | <db_user_access_option>   
-  | <delayed_durability_option>  
-  | <parameterization_option>  
-  | <query_store_options>  
-  | <snapshot_option>  
-  | <sql_option>   
-  | <target_recovery_time_option>   
-  | <termination>  
+    <auto_option>
+  | <automatic_tuning_option>
+  | <change_tracking_option>
+  | <cursor_option>
+  | <db_encryption_option>
+  | <db_update_option>
+  | <db_user_access_option>
+  | <delayed_durability_option>
+  | <parameterization_option>
+  | <query_store_options>
+  | <snapshot_option>
+  | <sql_option>
+  | <target_recovery_time_option>
+  | <termination>
   | <temporal_history_retention>
 }  
 ;  
@@ -1302,7 +1323,14 @@ SET
   | AUTO_SHRINK { ON | OFF } 
   | AUTO_UPDATE_STATISTICS { ON | OFF } 
   | AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF }  
-}  
+}
+
+<automatic_tuning_option> ::=  
+{   AUTOMATIC_TUNING = { AUTO | INHERIT | CUSTOM } 
+  | AUTOMATIC_TUNING ( CREATE_INDEX = { DEFAULT | ON | OFF } )
+  | AUTOMATIC_TUNING ( DROP_INDEX = { DEFAULT | ON | OFF } )
+  | AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = { DEFAULT | ON | OFF } )
+}
 
 <change_tracking_option> ::=  
 {  
@@ -1314,7 +1342,7 @@ SET
    }  
 }  
 
-   <change_tracking_option_list> ::=  
+<change_tracking_option_list> ::=  
    {  
        AUTO_CLEANUP = { ON | OFF } 
      | CHANGE_RETENTION = retention_period { DAYS | HOURS | MINUTES }  
@@ -1435,7 +1463,7 @@ The status of this option can be determined by examining the is_auto_shrink_on c
   
 > [!NOTE]  
 > The AUTO_SHRINK option is not available in a Contained Database.  
-  
+
 <a name="auto_update_statistics"></a> AUTO_UPDATE_STATISTICS { ON | OFF }  
 ON  
 Specifies that the query optimizer updates statistics when they are used by a query and when they might be out-of-date. Statistics become out-of-date after insert, update, delete, or merge operations change the data distribution in the table or indexed view. The query optimizer determines when statistics might be out-of-date by counting the number of data modifications since the last statistics update and comparing the number of modifications to a threshold. The threshold is based on the number of rows in the table or indexed view.  
@@ -1464,13 +1492,64 @@ Setting this option to ON has no effect unless AUTO_UPDATE_STATISTICS is set to 
 By default, the AUTO_UPDATE_STATISTICS_ASYNC option is set to OFF, and the query optimizer updates statistics synchronously.  
   
 OFF  
-Specifies that statistics updates for the AUTO_UPDATE_STATISTICS option are synchronous. The query optimizer waits for statistcs updates to complete before it compiles queries.  
+Specifies that statistics updates for the AUTO_UPDATE_STATISTICS option are synchronous. The query optimizer waits for statistics updates to complete before it compiles queries.  
   
 Setting this option to OFF has no effect unless AUTO_UPDATE_STATISTICS is set to ON.  
   
 The status of this option can be determined by examining the is_auto_update_stats_async_on column in the sys.databases catalog view.  
   
 For more information that describes when to use synchronous or asynchronous statistics updates, see the section "Using the Database-Wide Statistics Options" in [Statistics](../../relational-databases/statistics/statistics.md).  
+
+<a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**  
+**Applies to**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
+  
+Controls automatic options for [automatic tuning](../../relational-databases/automatic-tuning/automatic-tuning.md).  
+  
+AUTOMATIC_TUNING = { AUTO | INHERIT | CUSTOM }  
+AUTO  
+Setting the automatic tuning value to AUTO will apply Azure configuration defaults for automatic tuning.  
+    
+INHERIT  
+Using the value INHERIT will inherit the default configuration from the parent server. This is especially useful if you would like to customize automatic tuning configuration on a parent server, and have all the databases on such server INHERIT these custom settings. Please note that in order for the inheritance to work, the three individual tuning options FORCE_LAST_GOOD_PLAN, CREATE_INDEX and DROP_INDEX need to be set to DEFAULT on databases.  
+  
+CUSTOM  
+Using the value CUSTOM, you will need to manually custom configure each of the automatic tuning options available on databases.  
+  
+Enables or disables automatic index management `CREATE_INDEX` option of [automatic tuning](../../relational-databases/automatic-tuning/automatic-tuning.md).  
+  
+CREATE_INDEX = { DEFAULT | ON | OFF }  
+DEFALT  
+Inherits default settings from the server. In this case, options of enabling or disabling individual Automatic tuning features are defined at the server level.  
+  
+ON  
+When enabled, missing indexes are automatically generated on a database. Following the index creation, gains to the performance of the workload are verified. When such created index no longer provides benefits to the workload performance, it is automatically reverted. Indexes automatically created are flagged as a system generated indexed.  
+  
+OFF  
+Does not automatically generate missing indexes on the database.  
+  
+Enables or disables automatic index management `DROP_INDEX` option of [automatic tuning](../../relational-databases/automatic-tuning/automatic-tuning.md).  
+  
+DROP_INDEX = { DEFAULT | ON | OFF }  
+DEFALT  
+Inherits default settings from the server. In this case, options of enabling or disabling individual Automatic tuning features are defined at the server level.  
+  
+ON  
+Automatically drops duplicate or no longer useful indexes to the performance workload.   
+  
+OFF  
+Does not automatically drop missing indexes on the database.  
+  
+Enables or disables automatic plan correction `FORCE_LAST_GOOD_PLAN` option of [automatic tuning](../../relational-databases/automatic-tuning/automatic-tuning.md).  
+  
+FORCE_LAST_GOOD_PLAN = { DEFAULT | ON | OFF }  
+DEFAULT  
+Inherits default settings from the server. In this case, options of enabling or disabling individual Automatic tuning features are defined at the server level.  
+  
+ON  
+The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] automatically forces the last known good plan on the [!INCLUDE[tsql-md](../../includes/tsql-md.md)] queries where new SQL plan causes performance regressions. The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] continuously monitors query performance of the [!INCLUDE[tsql-md](../../includes/tsql-md.md)] query with the forced plan. If there are performance gains, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will keep using last known good plan. If performance gains are not detected, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will produce a new SQL plan. The statement will fail if Query Store is not enabled or if it is not in *Read-Write* mode.   
+  
+OFF  
+The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] reports potential query performance regressions caused by SQL plan changes in [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) view. However, these recommendations are not automatically applied. User can monitor active recommendations and fix identified problems by applying [!INCLUDE[tsql-md](../../includes/tsql-md.md)] scripts that are shown in the view. This is the default value.  
   
 **\<change_tracking_option> ::=**  
   
@@ -1982,18 +2061,30 @@ SET QUERY_STORE = ON
 [sys.data_spaces](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
 [Best Practice with the Query Store](../../relational-databases/performance/best-practice-with-the-query-store.md) 
   
-# [SQL DB Managed Instance](#tab/sqldbmi)
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+
+> [!div class="mx-tdCol2BreakAll"]  
+> |||
+> |---|---|
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2016)|[SQL Database<br />logical server](alter-database-transact-sql-set-options.md?view=azuresqldb-current) |**_\* SQL Database<br />Managed Instance \*_** &nbsp;|
+
+
+
+&nbsp;
+
+## Azure SQL Database Managed Instance
 
 Compatibility levels are `SET` options but are described in [ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
 > [!NOTE]  
 > Many database set options can be configured for the current session by using [SET Statements](../../t-sql/statements/set-statements-transact-sql.md) and are often configured by applications when they connect. Session level set options override the **ALTER DATABASE SET** values. The database options described below are values that can be set for sessions that do not explicitly provide other set option values.  
   
-## Syntax  
+## Syntax
   
-```  
+```
 ALTER DATABASE { database_name | Current }  
-SET   
+SET
 {  
     <optionspec> [ ,...n ] 
 }  
@@ -2023,6 +2114,11 @@ SET
   | AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF }  
 }  
 
+<automatic_tuning_option> ::=  
+{  
+  AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = { ON | OFF } )
+}  
+
 <change_tracking_option> ::=  
 {  
   CHANGE_TRACKING 
@@ -2033,7 +2129,7 @@ SET
    }  
 }  
 
-   <change_tracking_option_list> ::=  
+<change_tracking_option_list> ::=  
    {  
        AUTO_CLEANUP = { ON | OFF } 
      | CHANGE_RETENTION = retention_period { DAYS | HOURS | MINUTES }  
@@ -2170,7 +2266,7 @@ Setting this option to ON has no effect unless AUTO_UPDATE_STATISTICS is set to 
 By default, the AUTO_UPDATE_STATISTICS_ASYNC option is set to OFF, and the query optimizer updates statistics synchronously.  
   
 OFF  
-Specifies that statistics updates for the AUTO_UPDATE_STATISTICS option are synchronous. The query optimizer waits for statistcs updates to complete before it compiles queries.  
+Specifies that statistics updates for the AUTO_UPDATE_STATISTICS option are synchronous. The query optimizer waits for statistics updates to complete before it compiles queries.  
   
 Setting this option to OFF has no effect unless AUTO_UPDATE_STATISTICS is set to ON.  
   
@@ -2178,6 +2274,17 @@ The status of this option can be determined by examining the is_auto_update_stat
   
 For more information that describes when to use synchronous or asynchronous statistics updates, see the section "Using the Database-Wide Statistics Options" in [Statistics](../../relational-databases/statistics/statistics.md).  
   
+<a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**  
+**Applies to**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
+
+Enables or disables `FORCE_LAST_GOOD_PLAN` [automatic tuning](../../relational-databases/automatic-tuning/automatic-tuning.md) option.  
+  
+FORCE_LAST_GOOD_PLAN = { ON | OFF }  
+ON  
+The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] automatically forces the last known good plan on the [!INCLUDE[tsql-md](../../includes/tsql-md.md)] queries where new SQL plan causes performance regressions. The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] continuously monitors query performance of the [!INCLUDE[tsql-md](../../includes/tsql-md.md)] query with the forced plan. If there are performance gains, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will keep using last known good plan. If performance gains are not detected, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will produce a new SQL plan. The statement will fail if Query Store is not enabled or if it is not in *Read-Write* mode.   
+OFF  
+The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] reports potential query performance regressions caused by SQL plan changes in [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) view. However, these recommendations are not automatically applied. User can monitor active recommendations and fix identified problems by applying [!INCLUDE[tsql-md](../../includes/tsql-md.md)] scripts that are shown in the view. This is the default value.
+
 **\<change_tracking_option> ::=**  
   
 Controls change tracking options. You can enable change tracking, set options, change options, and disable change tracking. For examples, see the Examples section later in this article.  
@@ -2659,3 +2766,4 @@ SET QUERY_STORE = ON
 [sys.data_spaces](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
 [Best Practice with the Query Store](../../relational-databases/performance/best-practice-with-the-query-store.md) 
   
+::: moniker-end

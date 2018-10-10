@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "07/11/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: replication
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+ms.topic: quickstart
 helpviewer_keywords: 
   - "development [SQL Server replication]"
   - "replication [SQL Server], development"
   - "replication [SQL Server], interoperability"
 ms.assetid: 47c613e4-7fe9-462a-89b4-659b14825b70
-caps.latest.revision: 21
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

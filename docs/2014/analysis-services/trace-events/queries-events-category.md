@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Queries Events event category"
   - "query events [Analysis Services]"
   - "event classes [Analysis Services], queries events"
 ms.assetid: 99e1d1d6-f03f-4dd0-b467-ea915aea7667
-caps.latest.revision: 26
 author: minewiskan
 ms.author: owend
 manager: craigg

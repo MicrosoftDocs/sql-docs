@@ -1,25 +1,18 @@
 ---
 title: "Configure Custom or Forms Authentication on the Report Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/18/2017"
+ms.date: 04/18/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "security"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: security
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Forms authentication, configuring"
   - "custom authentication [Reporting Services]"
 ms.assetid: e8601a8f-e66d-4649-8e4d-a46ca20ec7d0
-caps.latest.revision: 20
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ---
 # Configure Custom or Forms Authentication on the Report Server
 

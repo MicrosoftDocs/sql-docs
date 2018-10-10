@@ -5,10 +5,8 @@ ms.date: "06/29/2018"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.custom: ""
 ms.technology: "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 author: "douglaslMS"
 ms.author: "douglasl"
@@ -24,7 +22,7 @@ The following sections contain the information you need to use Excel successfull
 
 2.  The [files](#files-you-need) you need.
 
-3.  The connection information that you have to provide, and the settings that you have to configure, when you load data from or to Excel.
+3.  The connection information that you have to provide, and the settings that you have to configure, when you load data from or to Excel with SSIS.
     -   [Specify Excel](#specify-excel) as your data source.
     -   Provide the [Excel file name and path](#excel-file).
     -   Select the [Excel version](#excel-version).
@@ -38,15 +36,15 @@ The following sections contain the information you need to use Excel successfull
 
 ## <a name="tools"></a> Tools you can use
 
-You can import data from Excel or export data to Excel by using one of the following tools:
+You can import data from Excel or export data to Excel with SSIS by using one of the following tools:
 
--   **SQL Server Integration Services (SSIS)**. Create an SSIS package that uses the Excel Source or the Excel Destination with the Excel Connection Manager. (This article does not describe how to design SSIS packages.)
+-   **SQL Server Integration Services (SSIS)**. Create an SSIS package that uses the Excel Source or the Excel Destination with the Excel Connection Manager. (This article does not describe how to create SSIS packages.)
 
 -   The **SQL Server Import and Export Wizard**, which is built on SSIS. For more info, see [Import and Export Data with the SQL Server Import and Export Wizard](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md) and [Connect to an Excel Data Source (SQL Server Import and Export Wizard)](import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md).
 
 ## <a name="files-you-need"></a> Get the files you need to connect to Excel
 
-Before you can import data from Excel or export data to Excel, you may have to download the connectivity components for Excel if they're not already installed. The connectivity components for Excel are not installed by default.
+Before you can import data from Excel or export data to Excel with SSIS, you may have to download the connectivity components for Excel if they're not already installed. The connectivity components for Excel are not installed by default.
 
 Download the latest version of the connectivity components for Excel here: [Microsoft Access Database Engine 2016 Redistributable](https://www.microsoft.com/download/details.aspx?id=54920). The latest version of the components can open files created by earlier versions of Excel.
 

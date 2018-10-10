@@ -14,7 +14,7 @@ manager: cgronlun
 
 The [**MicrosoftML**](https://msdn.microsoft.com/microsoft-r/microsoftml-introduction) package that is provided with Microsoft R Server and SQL Server 2017 includes multiple machine learning algorithms. These APIs were developed by Microsoft for internal machine learning applications, and have been refined over the years to support high performance on big data, using multicore processing and fast data streaming. MicrosoftML also includes numerous transformations for text and image processing.
 
-In SQL Server 2017 CTP 2.0, support was added for the Python language. The **microsoftml** package for Python contains functions equivalent to those in the MicrosoftML package for R. 
+In SQL Server 2017, support was added for the Python language. The **microsoftml** package for Python contains functions equivalent to those in the MicrosoftML package for R. 
 
 + **MicrosoftML for R**
 

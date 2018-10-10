@@ -4,24 +4,18 @@ ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "replication"
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_droppublication_TSQL"
   - "sp_droppublication"
 helpviewer_keywords: 
   - "sp_droppublication"
 ms.assetid: b52b37e6-4fec-40cf-abba-7dce4ff395fd
-caps.latest.revision: 35
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_droppublication (Transact-SQL)

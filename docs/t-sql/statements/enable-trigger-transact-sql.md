@@ -5,9 +5,7 @@ ms.date: "05/12/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "ENABLE TRIGGER"
@@ -22,7 +20,6 @@ helpviewer_keywords:
   - "DML triggers, enabling"
   - "ENABLE TRIGGER statement"
 ms.assetid: 6e21f0ad-68d0-432f-9c7c-a119dd2d3fc9
-caps.latest.revision: 39
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

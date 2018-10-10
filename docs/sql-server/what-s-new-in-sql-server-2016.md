@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "07/21/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: install
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 keywords: 
   - "new sql server"

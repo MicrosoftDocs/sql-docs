@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "PriorityRatio property"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "MaxThreads property"
   - "Concurrency property"
 ms.assetid: e2697bb6-6d3f-4621-b9fd-575ac39c2185
-caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -273,9 +270,9 @@ manager: craigg
 >  For instructions on how to set properties, see [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
   
 ## See Also  
- [About Processes and Threads](http://msdn.microsoft.com/library/windows/desktop/ms681917\(v=vs.85\).aspx)   
- [Multiple Processors](http://msdn.microsoft.com/library/windows/desktop/ms684251\(v=vs.85\).aspx)   
- [Processor Groups](http://msdn.microsoft.com/library/windows/desktop/dd405503\(v=vs.85\).aspx)   
+ [About Processes and Threads](/windows/desktop/ProcThread/about-processes-and-threads)   
+ [Multiple Processors](/windows/desktop/ProcThread/multiple-processors)   
+ [Processor Groups](/windows/desktop/ProcThread/processor-groups)   
  [Analysis Services Thread Pool Changes in SQL Server 2012](http://blogs.msdn.com/b/psssql/archive/2012/01/31/analysis-services-thread-pool-changes-in-sql-server-2012.aspx)   
  [Analysis Services 2012 Configuration settings (Wordpress Blog)](http://go.microsoft.com/fwlink/?LinkId=330387)   
  [Supporting Systems That Have More Than 64 Processors](http://msdn.microsoft.com/library/windows/hardware/gg463349.aspx)   

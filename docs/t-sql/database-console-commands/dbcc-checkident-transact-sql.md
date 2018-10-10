@@ -5,9 +5,7 @@ ms.date: "05/10/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "CHECKIDENT"
@@ -28,7 +26,6 @@ helpviewer_keywords:
   - "identity values [SQL Server], reseeding"
   - "reporting current identity values"
 ms.assetid: 2c00ee51-2062-4e47-8b19-d90f524c6427
-caps.latest.revision: 63
 author: uc-msft
 ms.author: umajay
 manager: craigg

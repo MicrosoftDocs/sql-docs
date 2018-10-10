@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "MDSCHEMA_KPIS"
@@ -17,7 +15,6 @@ topic_type:
 helpviewer_keywords: 
   - "MDSCHEMA_KPIS rowset"
 ms.assetid: 40fb5112-6a90-4455-82b3-8b6322490222
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg

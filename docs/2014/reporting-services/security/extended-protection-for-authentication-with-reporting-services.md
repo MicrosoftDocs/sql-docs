@@ -4,13 +4,10 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
-caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
 manager: craigg
@@ -88,14 +85,14 @@ manager: craigg
 |Scenario|Scenario Diagram|How to secure|  
 |--------------|----------------------|-------------------|  
 |Indirect HTTP communication.<br /><br /> Gateway will enforce Client to Gateway channel binding. There is a Gateway to report server Service Binding.|![RS_ExtendedProtection_Indirect_SSL](../media/rs-extendedprotection-indirect-ssl.gif "RS_ExtendedProtection_Indirect_SSL")<br /><br /> 1) Client application<br /><br /> 2) Report server<br /><br /> 3) Gateway device|Channel Binding from client to report server is not possible because the gateway impersonates a context and therefore creates a new NTLM token.<br /><br /> There is no SSL from the Gateway to report server therefore channel binding cannot be enforced.<br /><br /> Service Binding can be enforced.<br /><br /> Set `RSWindowsExtendedProtectionLevel` to `Allow` or `Require`.<br /><br /> Set `RSWindowsExtendedProtectionScenario` to `Any`.<br /><br /> The Gateway device should be configured by your administrator to enforce channel binding.|  
-|Indirect HTTPS communication with a Secure Gateway. The Gateway will enforce Client to Gateway Channel Binding and the report server will enforce Gateway to report server Channel Binding.|![RS_ExtendedProtection_IndirectSSLandHTTPS](../media/rs-extendedprotection-indirectsslandhttps.gif "RS_ExtendedProtection_IndirectSSLandHTTPS")<br /><br /> 1) Client application<br /><br /> 2) Report server<br /><br /> 3) Gateway device|Channel Binding from client to report server is not possible because the gateway impersonates a context and therefore creates a new NTLM token.<br /><br /> SSL from Gateway to the report sever means channel binding can be enforced.<br /><br /> Service Binding is not required.<br /><br /> Set `RSWindowsExtendedProtectionLevel` to `Allow` or `Require`.<br /><br /> Set `RSWindowsExtendedProtectionScenario` to `Direct`.<br /><br /> The Gateway device should be configured by your administrator to enforce channel binding.|  
+|Indirect HTTPS communication with a Secure Gateway. The Gateway will enforce Client to Gateway Channel Binding and the report server will enforce Gateway to report server Channel Binding.|![RS_ExtendedProtection_IndirectSSLandHTTPS](../media/rs-extendedprotection-indirectsslandhttps.gif "RS_ExtendedProtection_IndirectSSLandHTTPS")<br /><br /> 1) Client application<br /><br /> 2) Report server<br /><br /> 3) Gateway device|Channel Binding from client to report server is not possible because the gateway impersonates a context and therefore creates a new NTLM token.<br /><br /> SSL from Gateway to the report server means channel binding can be enforced.<br /><br /> Service Binding is not required.<br /><br /> Set `RSWindowsExtendedProtectionLevel` to `Allow` or `Require`.<br /><br /> Set `RSWindowsExtendedProtectionScenario` to `Direct`.<br /><br /> The Gateway device should be configured by your administrator to enforce channel binding.|  
   
 ### Combination  
  This scenario describes Extranet or Internet environments where the client connects a Proxy. This is in combination with an intranet environment where a client connects to report server.  
   
 |Scenario|Scenario Diagram|How to secure|  
 |--------------|----------------------|-------------------|  
-|Indirect and direct access from client to report server service without SSL on either of the client to proxy or client to report sever connections.|1) Client application<br /><br /> 2) Report server<br /><br /> 3) Proxy<br /><br /> 4) Client application|Service Binding from client to report server can be enforced.<br /><br /> The Proxy name must be known to the report server and the report server administrator should either create a URL reservation for it, with a host header or configure the Proxy name in the Windows registry entry `BackConnectionHostNames`.<br /><br /> Set `RSWindowsExtendedProtectionLevel` to `Allow` or `Require`.<br /><br /> Set `RSWindowsExtendedProtectionScenario` to `Any`.|  
+|Indirect and direct access from client to report server service without SSL on either of the client to proxy or client to report server connections.|1) Client application<br /><br /> 2) Report server<br /><br /> 3) Proxy<br /><br /> 4) Client application|Service Binding from client to report server can be enforced.<br /><br /> The Proxy name must be known to the report server and the report server administrator should either create a URL reservation for it, with a host header or configure the Proxy name in the Windows registry entry `BackConnectionHostNames`.<br /><br /> Set `RSWindowsExtendedProtectionLevel` to `Allow` or `Require`.<br /><br /> Set `RSWindowsExtendedProtectionScenario` to `Any`.|  
 |Indirect and direct access from client to report server where the client establishes an SSL connection to the proxy or report server.|![RS_ExtendedProtection_CombinationSSL](../media/rs-extendedprotection-combinationssl.gif "RS_ExtendedProtection_CombinationSSL")<br /><br /> 1) Client application<br /><br /> 2) Report server<br /><br /> 3) Proxy<br /><br /> 4) Client application|Channel Binding can be used<br /><br /> The Proxy name must be known to the report server and the report server administrator should either create a URL reservation for the proxy, with a host header or configure the Proxy name in the Windows registry entry `BackConnectionHostNames`.<br /><br /> Set `RSWindowsExtendedProtectionLevel` to `Allow` or `Require`.<br /><br /> Set `RSWindowsExtendedProtectionScenario` to `Proxy`.|  
   
 ## Configuring Reporting Rervices extended protection  

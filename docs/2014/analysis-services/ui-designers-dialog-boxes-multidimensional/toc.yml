@@ -1,0 +1,307 @@
+- name: UI Designers and Dialog Boxes for Multidimensional Analysis
+  href: ui-designers-dialog-boxes-multidimensional.md
+- name: Analysis Services Designers and Dialog Boxes (Multidimensional)
+  href: ../analysis-services-designers-and-dialog-boxes-multidimensional-data.md
+- name: Add Cube Dimension Dialog Box
+  href: ../add-cube-dimension-dialog-box-analysis-services-multidimensional-data.md
+- name: Add Reference Dialog Box
+  href: ../add-reference-dialog-box-analysis-services-multidimensional-data.md
+- name: Add Table Dialog Box
+  href: ../add-table-dialog-box-analysis-services-multidimensional-data.md
+- name: Add/Remove Tables Dialog Box
+  href: ../../database-engine/add-remove-tables-dialog-box-analysis-services-multidimensional-data.md
+- name: Analysis Server Properties Dialog Box
+  href: ../analysis-server-properties-dialog-box-analysis-services.md
+- name: Analysis Services MDX Query Designer (PowerPivot)
+  href: ../analysis-services-mdx-query-designer-powerpivot.md
+- name: Assembly Properties Dialog Box
+  href: ../assembly-properties-dialog-box-analysis-services-multidimensional-data.md
+- name: Assign Aggregation Design Dialog Box
+  href: ../assign-aggregation-design-dialog-box-analysis-services-multidimensional-data.md
+- name: Attribute Data Translation Dialog Box
+  href: ../attribute-data-translation-dialog-box-analysis-services-multidimensional-data.md
+- name: Backup Database Dialog Box
+  href: ../backup-database-dialog-box-analysis-services-multidimensional-data.md
+- name: Browse Data Source Dialog Box
+  href: ../browse-data-source-dialog-box-analysis-services-multidimensional-data.md
+- name: Browse Data Source View Dialog Box
+  href: ../browse-data-source-view-dialog-box-analysis-services-multidimensional-data.md
+- name: Browse for Remote Folder Dialog Box
+  href: ../browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md
+- name: Calculated Member Builder Dialog Box
+  href: ../calculated-member-builder-dialog-box-analysis-services-multidimensional-data.md
+- name: Calculation Properties Dialog Box
+  href: ../calculation-properties-dialog-box-analysis-services-multidimensional-data.md
+- name: Change Settings Dialog Box
+  href: ../change-settings-dialog-box-analysis-services-multidimensional-data.md
+- name: Connect To Database Dialog Box
+  href: ../connect-to-database-dialog-box.md
+- name: Create Attribute Relationship and Edit Attribute Relationship Dialog Boxes
+  href: ../create-edit-attribute-relationships-dialog-boxes-analysis-services-multidimensional-data.md
+- name: Create/Edit Named Calculation Dialog Box
+  href: ../create-edit-named-calculation-dialog-box-analysis-services.md
+- name: Create/Edit Named Query Dialog Box
+  href: ../create-or-edit-named-query-dialog-box-analysis-services-multidimensional-data.md
+- name: Create or Edit Relationship Dialog Box
+  href: ../create-or-edit-relationship-dialog-box-analysis-services-multidimensional-data.md
+- name: Create Polling Query Dialog Box
+  href: ../create-polling-query-dialog-box-analysis-services-multidimensional-data.md
+- name: Create Processing Query Dialog Box
+  href: ../create-processing-query-dialog-box-analysis-services-multidimensional-data.md
+- name: Cube Designer
+  href: ../cube-designer-analysis-services-multidimensional-data.md
+  items:
+  - name: Cube Structure (Cube Designer)
+    href: ../cube-structure-cube-designer-analysis-services-multidimensional-data.md
+  - name: Toolbar (Cube Structure Tab, Cube Designer)
+    href: ../toolbar-cube-structure-cube-designer-analysis-services-multidimensional-data.md
+  - name: Data Source View (Cube Structure Tab, Cube Designer)
+    href: ../data-source-view-cube-designer-analysis-services-multidimensional-data.md
+  - name: Measures (Cube Structure Tab, Cube Designer)
+    href: ../measures-cube-structure-cube-designer-analysis-services-multidimensional-data.md
+  - name: Dimensions (Cube Structure Tab, Cube Designer)
+    href: ../dimensions-cube-structure-cube-designer-analysis-services-multidimensional-data.md
+  - name: Dimension Usage (Cube Designer)
+    href: ../dimension-usage-cube-designer-analysis-services-multidimensional-data.md
+  - name: Toolbar (Dimension Usage Tab, Cube Designer)
+    href: ../toolbar-dimension-usage-cube-designer-analysis-services-multidimensional-data.md
+  - name: Grid (Dimension Usage Tab, Cube Designer)
+    href: ../grid-dimension-usage-tab-cube-designer-analysis-services-multidimensional-data.md
+  - name: Calculations (Cube Designer)
+    href: ../calculations-cube-designer-analysis-services-multidimensional-data.md
+  - name: Toolbar (Calculations Tab, Cube Designer)
+    href: ../toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md
+  - name: Script Organizer (Calculations Tab, Cube Designer)
+    href: ../script-organizer-cube-designer-analysis-services-multidimensional-data.md
+  - name: Calculation Tools (Calculations Tab, Cube Designer)
+    href: ../calculation-tools-cube-designer-analysis-services-multidimensional-data.md
+  - name: Calculated Member Form Editor (Calculations Tab, Cube Designer)
+    href: ../calculated-member-form-editor-cube-designer-analysis-services-multidimensional-data.md
+  - name: Named Set Form Editor (Calculations Tab, Cube Designer)
+    href: ../named-set-form-editor-cube-designer-analysis-services-multidimensional-data.md
+  - name: Script Editor (Calculations Tab, Cube Designer)
+    href: ../script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md
+  - name: KPIs (Cube Designer)
+    href: ../kpis-cube-designer-analysis-services-multidimensional-data.md
+  - name: Toolbar (KPIs Tab, Cube Designer)
+    href: ../toolbar-kpis-tab-cube-designer-analysis-services-multidimensional-data.md
+  - name: KPI Organizer (KPIs Tab, Cube Designer)
+    href: ../kpi-organizer-kpis-tab-cube-designer-analysis-services-multidimensional-data.md
+  - name: Calculation Tools (KPIs Tab, Cube Designer)
+    href: ../calculation-tools-kpis-cube-designer-analysis-services-multidimensional-data.md
+  - name: KPI Form Editor (KPIs Tab, Cube Designer)
+    href: ../kpi-form-editor-kpis-tab-cube-designer-analysis-services-multidimensional-data.md
+  - name: KPI Browser (KPIs Tab, Cube Designer)
+    href: ../kpi-browser-kpis-tab-cube-designer-analysis-services-multidimensional-data.md
+  - name: Actions (Cube Designer)
+    href: ../actions-cube-designer-analysis-services-multidimensional-data.md
+  - name: Toolbar (Actions Tab, Cube Designer)
+    href: ../toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md
+  - name: Action Organizer (Actions Tab, Cube Designer)
+    href: ../action-organizer-cube-designer-analysis-services-multidimensional-data.md
+  - name: Calculation Tools (Actions Tab, Cube Designer)
+    href: ../calculation-tools-actions-cube-designer-analysis-services-multidimensional-data.md
+  - name: Action Form Editor (Actions Tab, Cube Designer)
+    href: ../action-form-editor-cube-designer-analysis-services-multidimensional-data.md
+  - name: Drillthrough Action Form Editor (Actions Tab, Cube Designer)
+    href: ../drillthrough-action-form-editor-cube-designer-analysis-services-multidimensional-data.md
+  - name: Report Action Form Editor (Actions Tab, Cube Designer)
+    href: ../report-action-form-editor-cube-designer-analysis-services-multidimensional-data.md
+  - name: Partitions (Cube Designer)
+    href: ../partitions-cube-designer-analysis-services-multidimensional-data.md
+  - name: Toolbar (Partitions Tab, Cube Designer)
+    href: ../toolbar-partitions-tab-cube-designer-analysis-services-multidimensional-data.md
+  - name: Measure Groups (Partitions Tab, Cube Designer)
+    href: ../measure-groups-partitions-cube-designer-analysis-services-multidimensional-data.md
+  - name: Aggregations (Cube Design)
+    href: ../aggregations-cube-design.md
+  - name: Toolbar (Aggregations Tab, Cube Designer)
+    href: ../toolbar-aggregations-tab-cube-designer.md
+  - name: Standard View (Aggregations Tab, Cube Designer)
+    href: ../standard-view-aggregations-tab-cube-designer.md
+  - name: Advanced View (Aggregations Tab, Cube Designer)
+    href: ../advanced-view-aggregations-tab-cube-designer.md
+  - name: Perspectives (Cube Designer)
+    href: ../perspectives-cube-designer-analysis-services-multidimensional-data.md
+  - name: Toolbar (Perspectives Tab, Cube Designer)
+    href: ../toolbar-perspectives-tab-cube-designer-analysis-services-multidimensional-data.md
+  - name: Perspective Details (Perspectives Tab, Cube Designer)
+    href: ../perspective-details-cube-designer-analysis-services-multidimensional-data.md
+  - name: Translations (Cube Designer)
+    href: ../translations-cube-designer-analysis-services-multidimensional-data.md
+  - name: Toolbar (Translations Tab, Cube Designer)
+    href: ../toolbar-translations-tab-cube-designer-analysis-services-multidimensional-data.md
+  - name: Translation Details (Translations Tab, Cube Designer)
+    href: ../translation-details-cube-designer-analysis-services-multidimensional-data.md
+  - name: Browser (Cube Designer)
+    href: ../browser-cube-designer-analysis-services-multidimensional-data.md
+  - name: Toolbar (Browser Tab, Cube Designer)
+    href: ../toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md
+  - name: Analyze in Excel (Browser Tab, Cube Designer)
+    href: ../analyze-in-excel-browser-cube-designer-analysis-services-multidimensional-data.md
+  - name: Metadata (Browser Tab, Cube Designer)
+    href: ../metadata-browser-tab-cube-designer-analysis-services-multidimensional-data.md
+  - name: Query and Filter (Browser Tab, Cube Designer)
+    href: ../query-filter-browser-cube-designer-analysis-services-multidimensional-data.md
+  - name: Query Parameters Dialog Box (MDX)
+    href: ../query-parameters-dialog-box-mdx.md
+- name: Cube or Model Properties Dialog Box
+  href: ../cube-or-model-properties-dialog-box-ssas.md
+- name: Data Exploration Options Dialog Box
+  href: ../data-exploration-options-dialog-box-analysis-services-data-mining.md
+- name: Data Sample Viewer Dialog Box
+  href: ../data-sample-viewer-dialog-box-analysis-services-multidimensional-data.md
+- name: Data Source View Designer
+  href: ../data-source-view-designer-analysis-services-multidimensional-data.md
+- name: Data Source View Properties Dialog Box
+  href: ../data-source-view-properties-dialog-box-ssas.md
+- name: Database Designer
+  href: ../database-designer-analysis-services-multidimensional-data.md
+  items:
+  - name: General (Database Designer)
+    href: ../general-database-designer-analysis-services-multidimensional-data.md
+  - name: Warnings (Database Designer)
+    href: ../warnings-database-designer-analysis-services-multidimensional-data.md
+- name: Database Properties Dialog Box
+  href: ../database-properties-dialog-box-ssas-multidimensional.md
+- name: Define Relationship Dialog Box
+  href: ../define-relationship-dialog-box-analysis-services-multidimensional-data.md
+- name: Dimension Designer
+  href: ../dimension-designer-analysis-services-multidimensional-data.md
+  items:
+  - name: Dimension Structure (Dimension Designer)
+    href: ../dimension-structure-dimension-designer-analysis-services-multidimensional-data.md
+  - name: Toolbar (Dimension Structure Tab, Dimension Designer)
+    href: ../toolbar-dimension-structure-designer-analysis-services-multidimensional-data.md
+  - name: Data Source View (Dimension Structure, Dimension Designer)
+    href: ../datasource-view-dimension-designer-analysis-services-multidimensional-data.md
+  - name: Hierarchies (Dimension Structure Tab, Dimension Designer)
+    href: ../hierarchies-dimension-designer-analysis-services-multidimensional-data.md
+  - name: Attributes (Dimension Structure Tab, Dimension Designer)
+    href: ../attributes-dimension-designer-analysis-services-multidimensional-data.md
+  - name: Attribute Relationships (Dimension Designer)
+    href: ../attribute-relationships-dimension-designer-analysis-services-multidimensional-data.md
+  - name: Toolbar (Attribute Relationship Designer Tab, Dimension Designer)
+    href: ../toolbar-attribute-relationship-dimension-designer-analysis-services-multidimensional-data.md
+  - name: Attribute Relationship Diagram (Attribute Relationship Designer Tab, Dimension Designer)
+    href: ../attribute-relationship-diagram-analysis-services-multidimensional-data.md
+  - name: Attributes (Attribute Relationship Designer Tab, Dimension Designer)
+    href: ../attributes-designer-tab-dimension-designer-analysis-services-multidimensional-data.md
+  - name: Attribute Relationships (Attribute Relationship Designer Tab, Dimension Designer)
+    href: ../attribute-relationships-designer-tab-dimension-designer-analysis-services-multidimensional-data.md
+  - name: Translations (Dimension Designer)
+    href: ../translations-dimension-designer-analysis-services-multidimensional-data.md
+  - name: Toolbar (Translations Tab, Dimension Designer)
+    href: ../toolbar-translations-dimension-designer-analysis-services-multidimensional-data.md
+  - name: Translation Details (Translations Tab, Dimension Designer)
+    href: ../translation-details-dimension-designer-analysis-services-multidimensional-data.md
+  - name: Browser (Dimension Designer)
+    href: ../browser-dimension-designer-analysis-services-multidimensional-data.md
+  - name: Toolbar (Browser Tab, Dimension Designer)
+    href: ../toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md
+  - name: Level and Members (Browser Tab, Dimension Designer)
+    href: ../level-members-dimension-designer-analysis-services-multidimensional-data.md
+- name: Dimension Properties Dialog Box
+  href: ../dimension-properties-dialog-box-analysis-services-multidimensional-data.md
+- name: Dismiss Warning Dialog Box
+  href: ../dismiss-warning-dialog-box-analysis-services-multidimensional-data.md
+- name: Duplicate Role Dialog Box
+  href: ../duplicate-security-role-dialog-box-analysis-services-multidimensional-data.md
+- name: Enable/Disable Writeback Dialog Box
+  href: ../enable-disable-writeback-dialog-box-analysis-services-multidimensional-data.md
+- name: Filter Members Dialog Box
+  href: ../filter-members-dialog-box-analysis-services-multidimensional-data.md
+- name: Find Table Dialog Box
+  href: ../find-table-dialog-box-analysis-services-multidimensional-data.md
+- name: Generate Named Query Dialog Box
+  href: ../generate-named-query-dialog-box-analysis-services-multidimensional-data.md
+- name: Impact Analysis Dialog Box
+  href: ../impact-analysis-dialog-box-analysis-services-multidimensional-data.md
+- name: Incremental Update Dialog Box
+  href: ../incremental-update-dialog-box-analysis-services-multidimensional-data.md
+- name: Key Columns Dialog Box
+  href: ../key-columns-dialog-box-analysis-services-multidimensional-data.md
+- name: Level Naming Template Dialog Box
+  href: ../level-naming-template-dialog-box-analysis-services-multidimensional-data.md
+- name: Locate Database Files Dialog Box
+  href: ../locate-database-files-dialog-box-analysis-services-multidimensional-data.md
+- name: MDX Builder
+  href: ../mdx-builder-analysis-services-multidimensional-data.md
+- name: MDX Query Editor
+  href: ../mdx-query-editor-analysis-services-multidimensional-data.md
+- name: Measure Group Bindings Dialog Box
+  href: ../measure-group-bindings-dialog-box-analysis-services-multidimensional-data.md
+- name: Merge Partition Dialog Box
+  href: ../merge-partition-dialog-box-analysis-services-multidimensional-data.md
+- name: New Database Dialog Box
+  href: ../new-database-dialog-box-analysis-services.md
+- name: New Measure Dialog Box
+  href: ../new-measure-dialog-box-analysis-services-multidimensional-data.md
+- name: New Measure Group Dialog Box (Cube Designer)
+  href: ../new-measure-group-dialog-box-cube-designer.md
+- name: Object Binding Dialog Box
+  href: ../object-binding-dialog-box.md
+- name: Partition Properties Dialog Box
+  href: ../partition-properties-dialog-box-ssms.md
+  items:
+  - name: Selection (Partition Properties Dialog Box)
+    href: ../selection-partition-properties-dialog-box-ssms.md
+  - name: General (Partition Properties Dialog Box)
+    href: ../general-partition-properties-dialog-box-ssms.md
+  - name: Proactive Caching (Partition Properties Dialog Box)
+    href: ../proactive-caching-partition-properties-dialog-box-ssms.md
+- name: Partition Source Dialog Box
+  href: ../partition-source-dialog-box-analysis-services-multidimensional-data.md
+  items:
+  - name: Table Binding Detail (Partition Source Dialog Box)
+    href: ../table-binding-partition-source-dialog-analysis-services-multidimensional-data.md
+  - name: Query Binding Detail (Partition Source Dialog Box)
+    href: ../query-binding-partition-source-dialog-analysis-services-multidimensional-data.md
+- name: Process Dialog Box
+  href: ../process-dialog-box-analysis-services-multidimensional-data.md
+- name: Process Progress Dialog Box
+  href: ../process-progress-dialog-box-analysis-services-multidimensional-data.md
+- name: Refresh Data Source View Dialog Box
+  href: ../refresh-data-source-view-dialog-box.md
+- name: Register Database Assembly Dialog Box
+  href: ../register-database-assembly-dialog-box-analysis-services-multidimensional-data.md
+- name: Relational Objects Dialog Box
+  href: ../relational-objects-dialog-box-analysis-services-multidimensional-data.md
+- name: Remote Partitions - Advanced Settings Dialog Box
+  href: ../remote-partitions-advanced-settings-dialog-analysis-services-multidimensional-data.md
+- name: Rename Instance Dialog Box
+  href: ../rename-instance-dialog-box-analysis-services.md
+- name: Replace Table with Other Table Dialog Box
+  href: ../replace-table-with-other-table-dialog-box.md
+- name: Restore Database Dialog Box
+  href: ../restore-database-dialog-box-analysis-services-multidimensional-data.md
+  items:
+  - name: General (Restore Database Dialog Box)
+    href: ../general-restore-database-dialog-box-analysis-services-multidimensional-data.md
+  - name: Partitions (Restore Database Dialog Box)
+    href: ../partitions-restore-database-dialog-box-analysis-services-multidimensional-data.md
+- name: Save File As Dialog Box
+  href: ../save-file-as-dialog-box-analysis-services-multidimensional-data.md
+- name: Security Context Dialog Box
+  href: ../security-context-dialog-box-analysis-services-multidimensional-data.md
+- name: Select Language Dialog Box
+  href: ../select-language-dialog-box-analysis-services-multidimensional-data.md
+- name: Select Parent Member Dialog Box
+  href: ../select-parent-member-dialog-box-analysis-services-multidimensional-data.md
+- name: Show Table Dialog Box
+  href: ../show-table-dialog-box-analysis-services-multidimensional-data.md
+- name: Storage Options Dialog Box
+  href: ../storage-options-dialog-box-analysis-services-multidimensional-data.md
+  items:
+  - name: General (Storage Options Dialog Box)
+    href: ../general-storage-options-dialog-box-analysis-services-multidimensional-data.md
+  - name: Notifications (Storage Options Dialog Box)
+    href: ../notifications-storage-options-dialog-analysis-services-multidimensional-data.md
+- name: Storage Settings Dialog Box
+  href: ../storage-settings-dialog-box-analysis-services-multidimensional-data.md
+- name: User Selection Dialog Box
+  href: ../user-selection-dialog-box-analysis-services-multidimensional-data.md
+- name: View Details Dialog Box
+  href: ../view-details-dialog-box-analysis-services-multidimensional-data.md
+- name: XMLA Query Editor
+  href: ../xmla-query-editor-analysis-services-multidimensional-data.md

@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "01/07/2016"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-cross-instance"
-ms.tgt_pltfrm: ""
+ms.technology:
 ms.topic: conceptual
 helpviewer_keywords: 
   - "protocols [SQL Server], managing"
@@ -21,7 +18,6 @@ helpviewer_keywords:
   - "tools [SQL Server], SQL Server Configuration Manager"
   - "configuration manager [SQL Server]"
 ms.assetid: e6beaea4-164c-4078-95ae-b9e28b0aefe8
-caps.latest.revision: 43
 author: rothja
 ms.author: jroth
 manager: craigg

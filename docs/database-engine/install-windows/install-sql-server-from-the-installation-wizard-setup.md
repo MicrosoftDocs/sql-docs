@@ -4,25 +4,23 @@ ms.custom: ""
 ms.date: "09/06/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: install
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "installing SQL Server, steps"
   - "Setup [SQL Server], steps"
   - "SQL Server, installing"
 ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
-caps.latest.revision: 91
 author: MashaMSFT
 ms.author: mathoma
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 manager: craigg
 ---
 # Install SQL Server from the Installation Wizard (Setup)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
  
-This article explains how to install SQL Server with the Installation Wizard. It applies to [!INCLUDE[SQLServer2016](../../includes/sssql15-md.md)], and [!INCLUDE[SQLServer2017](../../includes/sssqlv14-md.md)]. For content related to previous versions of SQL Server, see [Install SQL Server 2014 from the Installation Wizard (Setup)](http://msdn.microsoft.com/library/ms143219(SQL.120).aspx).
+This article explains how to install SQL Server with the Installation Wizard. It applies to [!INCLUDE[SQLServer2016](../../includes/sssql15-md.md)], and [!INCLUDE[SQLServer2017](../../includes/sssqlv14-md.md)]. For content related to previous versions of SQL Server, see [Install SQL Server 2014 from the Installation Wizard (Setup)](install-sql-server-from-the-installation-wizard-setup.md).
 
 This article provides a step-by-step procedure for installing a new instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup installation wizard. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Wizard provides a single feature tree for installation of all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components so that you do not have to install them individually. For more information about how to install the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components individually, see [Install SQL Server](../../database-engine/install-windows/install-sql-server.md#how-to-install-individual-components).  
 

@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "11/16/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sys.dm_exec_query_statistics_xml"
@@ -16,7 +14,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "sys.dm_exec_query_statistics_xml management view"
 ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfecb
-caps.latest.revision: 6
 author: "pmasl"
 ms.author: "pelopes"
 manager: craigg

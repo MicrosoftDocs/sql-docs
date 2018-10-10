@@ -1,14 +1,11 @@
 ---
 title: "Replication Snapshot Agent | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "09/07/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: replication
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Snapshot Agent, executables"
@@ -16,7 +13,6 @@ helpviewer_keywords:
   - "command prompt [SQL Server replication]"
   - "Snapshot Agent, parameter reference"
 ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
-caps.latest.revision: 41
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg
@@ -59,6 +55,7 @@ snapshot [ -?]
 [-Output output_path_and_file_name]  
 [-OutputVerboseLevel [0|1|2] ]  
 [-PacketSize packet_size]  
+[-PrefetchTables [0|1] ]  
 [-ProfileName profile_name]  
 [-PublisherDB publisher_database]  
 [-PublisherDeadlockPriority [-1|0|1] ]  
@@ -196,7 +193,15 @@ snapshot [ -?]
   
 > [!NOTE]  
 >  Do not change the packet size unless you are certain that it will improve performance. For most applications, the default packet size is best.  
+
+**-PrefetchTables** [ **0**| **1**]  
+ Optional parameter that specifies if the table objects will be prefetched and cached.  The default behavior is to prefetch certain table properties using SMO component based on an internal calculation.  This parameter can be helpful in scenarions where SMO prefetch operation takes considerable longer to run. If this parameter is not used, this decision is made at runtime based on the percentage of tables that are added as articles to the publication.  
   
+|OutputVerboseLevel value|Description|  
+|------------------------------|-----------------|  
+|**0**|Call to Prefetch method of SMO component is disabled.|  
+|**1**|Snapshot Agent will call Prefetch method to cache some table properties using SMO|  
+
  **-ProfileName** *profile_name*  
  Specifies an agent profile to use for agent parameters. If **ProfileName** is NULL, the agent profile is disabled. If **ProfileName** is not specified, the default profile for the agent type is used. For information, see [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
   

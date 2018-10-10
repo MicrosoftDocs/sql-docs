@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "06/20/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: clr
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -16,7 +15,6 @@ helpviewer_keywords:
   - "code access security [CLR integration]"
   - "managed code [SQL Server], CLR integration"
 ms.assetid: 7be9e644-36a2-48fc-9206-faf59fdff4d7
-caps.latest.revision: 64
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: configuration
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Configuration Manager, accessing"
@@ -24,7 +22,6 @@ helpviewer_keywords:
   - "administering SQL Server, services"
   - "SQL Server services"
 ms.assetid: aa732e43-53ba-4eea-bb9b-089da0766fc1
-caps.latest.revision: 43
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -68,7 +65,7 @@ manager: craigg
 |[Set an Instance of SQL Server to Start Automatically &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/scm-services-set-an-instance-to-start-automatically.md)|[Configure File System Permissions for Database Engine Access](../../database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access.md)|  
   
 ## Related Content  
- [Configure SQL Server Agent](http://msdn.microsoft.com/library/2e361a62-9e92-4fcd-80d7-d6960f127900)  
+ [Configure SQL Server Agent](../../ssms/agent/configure-sql-server-agent.md)  
   
  [Logging In to SQL Server](../../database-engine/configure-windows/logging-in-to-sql-server.md)  
   

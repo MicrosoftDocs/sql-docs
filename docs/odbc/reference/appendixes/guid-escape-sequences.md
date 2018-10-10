@@ -5,16 +5,13 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "ODBC escape sequences [ODBC], GUID"
   - "escape sequences [ODBC], guid"
   - "guid escape sequence [ODBC]"
 ms.assetid: 71d43ef9-4a31-493e-b9e0-f864e9ef3ce6
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg

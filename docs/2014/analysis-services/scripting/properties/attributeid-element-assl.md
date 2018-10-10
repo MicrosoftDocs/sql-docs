@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "04/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "AttributeID Element"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "AttributeID element"
 ms.assetid: 13d2e92b-e4bf-4f2d-b34c-a6f483da3a9e
-caps.latest.revision: 43
 author: minewiskan
 ms.author: owend
 manager: craigg

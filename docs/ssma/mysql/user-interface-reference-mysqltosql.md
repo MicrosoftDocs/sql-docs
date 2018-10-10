@@ -4,15 +4,9 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 ms.assetid: 2fad3fa2-5729-4b96-99d4-2c6edfab0a54
-caps.latest.revision: 18
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: craigg
@@ -33,7 +27,7 @@ The following table lists the SSMA dialog boxes:
 |[Connect to Azure SQL DB &#40;MySQLToSQL&#41;](../../ssma/mysql/connect-to-azure-sql-db-mysqltosql.md)|Use the **Connect to SQL Azure** dialog box to connect to the instance of SQL Azure to which you want to migrate.|  
 |[Conversion Settings (MySQL)](http://msdn.microsoft.com/f551cf6e-1575-4206-9cca-975b5b43a6b8)|Use the **Settings** tab to set node level settings.|  
 |[Data Migration Report  &#40;MySQLToSQL&#41;](../../ssma/mysql/data-migration-report-mysqltosql.md)|Displays the results of migrating data from MySQL to SQL Server or SQL Azure.|  
-|[Data Migration Settings](http://msdn.microsoft.com/9c396df4-5676-4f32-9c57-70d4f15f9b7a)|Use the **Extended Data Migration Settings** tab to write custom queries for data migration.|  
+|[Data Migration Settings](data-migration-settings-mysqltosql.md)|Use the **Extended Data Migration Settings** tab to write custom queries for data migration.|  
 |[Edit Type Mapping &#40;MySQLToSQL&#41;](../../ssma/mysql/edit-type-mapping-mysqltosql.md)|Use the **Edit Type Mapping** dialog box to create or modify the mapping of data types between the source and target databases and database objects.|  
 |[Global Settings &#40;Editor&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/global-settings-editor-mysqltosql.md)|Use the Editor page of the **Global Settings** dialog box to configure code editor options.|  
 |[Global Settings &#40;Dialogs&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/global-settings-dialogs-mysqltosql.md)|Use the Dialogs page of the **Global Settings** dialog box to configure default dialog box and warning settings.|  

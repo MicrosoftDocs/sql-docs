@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "reports [Reporting Services], data"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "shared data sources [Reporting Services]"
   - "data sources [Reporting Services], managing"
 ms.assetid: 0475aded-c8fe-4337-a2b5-4df0ec4c46af
-caps.latest.revision: 51
 author: markingmyname
 ms.author: maghan
 manager: craigg

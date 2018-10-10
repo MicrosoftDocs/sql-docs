@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "10/14/2015"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: security
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.roleproperties.selectobject.f1"
@@ -17,9 +15,8 @@ helpviewer_keywords:
   - "hierarchies [SQL Server], securables"
   - "server securables [SQL Server]"
 ms.assetid: bfa748f0-70b0-453c-870a-04b7b205b9ff
-caps.latest.revision: 36
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Securables

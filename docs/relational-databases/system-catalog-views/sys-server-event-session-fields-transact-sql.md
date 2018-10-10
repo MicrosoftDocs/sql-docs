@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "server_event_session_fields"
@@ -21,9 +18,8 @@ helpviewer_keywords:
   - "sys.server_event_session_fields catalog view"
   - "xe"
 ms.assetid: 7109f9fb-8a1f-432c-92d1-6f8af3e96af1
-caps.latest.revision: 13
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sys.server_event_session_fields (Transact-SQL)

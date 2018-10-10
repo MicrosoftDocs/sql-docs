@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "docset-sql-devref"
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "management endpoints [Reporting Services]"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "execution endpoints [Reporting Services]"
   - "Report Server Web service, endpoints"
 ms.assetid: f3f5d85f-9359-4508-bc5a-7f78a3cf7421
-caps.latest.revision: 25
 author: markingmyname
 ms.author: maghan
 manager: craigg

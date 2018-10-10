@@ -5,18 +5,15 @@ ms.date: "12/21/2016"
 ms.prod: sql
 ms.prod_service: "table-view-index, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: table-view-index
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "index types [SQL Server]"
 ms.assetid: 00863b10-e77c-44c5-8ac2-bb4ac454eec6
-caps.latest.revision: 45
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Indexes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -40,16 +37,15 @@ The following table lists the types of indexes available in [!INCLUDE[ssNoVersio
 |Full-text|A special type of token-based functional index that is built and maintained by the Microsoft Full-Text Engine for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. It provides efficient support for sophisticated word searches in character string data.|[Populate Full-Text Indexes](../../relational-databases/search/populate-full-text-indexes.md)|  
   
 ## Related Content  
- [SQL Server Index Design Guide](../../relational-databases/sql-server-index-design-guide.md)
- [SORT_IN_TEMPDB Option For Indexes](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md)  
- [Disable Indexes and Constraints](../../relational-databases/indexes/disable-indexes-and-constraints.md)  
- [Enable Indexes and Constraints](../../relational-databases/indexes/enable-indexes-and-constraints.md)  
- [Rename Indexes](../../relational-databases/indexes/rename-indexes.md)  
- [Set Index Options](../../relational-databases/indexes/set-index-options.md)  
- [Disk Space Requirements for Index DDL Operations](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)  
- [Reorganize and Rebuild Indexes](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)  
- [Specify Fill Factor for an Index](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)  
- [Pages and Extents Architecture Guide](../../relational-databases/pages-and-extents-architecture-guide.md)
- [Clustered and Nonclustered Indexes Described](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)  
-  
+ [SQL Server Index Design Guide](../../relational-databases/sql-server-index-design-guide.md)      
+ [SORT_IN_TEMPDB Option For Indexes](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md)     
+ [Disable Indexes and Constraints](../../relational-databases/indexes/disable-indexes-and-constraints.md)     
+ [Enable Indexes and Constraints](../../relational-databases/indexes/enable-indexes-and-constraints.md)    
+ [Rename Indexes](../../relational-databases/indexes/rename-indexes.md)     
+ [Set Index Options](../../relational-databases/indexes/set-index-options.md)     
+ [Disk Space Requirements for Index DDL Operations](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)     
+ [Reorganize and Rebuild Indexes](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)     
+ [Specify Fill Factor for an Index](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)     
+ [Pages and Extents Architecture Guide](../../relational-databases/pages-and-extents-architecture-guide.md)     
+ [Clustered and Nonclustered Indexes Described](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)     
   

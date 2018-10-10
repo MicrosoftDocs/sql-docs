@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "05/17/2017"
 ms.prod: sql
 ms.prod_service: security, sql-database"
-ms.reviewer: ""
-ms.suite: "sql"
+ms.reviewer: vanto
 ms.technology: security
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 5117b4fd-c8d3-48d5-87c9-756800769f31
-caps.latest.revision: 19
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Rotate Always Encrypted Keys using PowerShell
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,7 +32,7 @@ The method of rotating a column master key described in this section does not su
 
 | Task | Article | Accesses plaintext keys/keystore| Accesses database
 |:---|:---|:---|:---
-|Step 1. Create a new column master key in a key store.<br><br>**Note:** The SqlServer PowerShell module does not support this step. To accomplish this task from the command-line, you need to use tools that are specific for your key store. | Create and Store Column Master Keys (Always Encrypted)| Yes | No
+|Step 1. Create a new column master key in a key store.<br><br>**Note:** The SqlServer PowerShell module does not support this step. To accomplish this task from the command-line, you need to use tools that are specific for your key store. | [Create and Store Column Master Keys (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)| Yes | No
 |Step 2. Start a PowerShell environment and import the SqlServer module | [Import the SqlServer module](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | No | No
 |Step 3. Connect to your server and database. | [Connecting to a Database](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | No | Yes
 |Step 4. Create a SqlColumnMasterKeySettings object that contains information about the location of your new column master key. SqlColumnMasterKeySettings is an object that exists in memory (in PowerShell). To create it, you need to use the cmdlet that is specific to your key store. |[New-SqlAzureKeyVaultColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlazurekeyvaultcolumnmasterkeysettings)<br><br>[New-SqlCertificateStoreColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcertificatestorecolumnmasterkeysettings)<br><br>[New-SqlCngColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcngcolumnmasterkeysettings)<br><br>[New-SqlCspColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcspcolumnmasterkeysettings)<br> | No | No

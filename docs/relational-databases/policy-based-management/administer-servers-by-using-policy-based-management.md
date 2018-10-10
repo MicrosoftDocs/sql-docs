@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "08/12/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "performance-monitor"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "facet See facets"
@@ -22,7 +19,6 @@ helpviewer_keywords:
   - "facets [Policy-Based Management], about facets"
   - "PolicyAdministratorRole role"
 ms.assetid: ef2a7b3b-614b-405d-a04a-2464a019df40
-caps.latest.revision: 76
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -116,11 +112,14 @@ For example, as the database administrator, you may want to ensure that certain 
  - [Work with Policy-Based Management Facets](../../relational-databases/policy-based-management/working-with-policy-based-management-facets.md)|  
  - [Monitor and Enforce Best Practices Using Policy-Based Management](../../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)
 
-  
- ## Examples
- - [Create the Off By Default Policy](lesson-1-1-create-the-off-by-default-policy.md)
-  - [Configure a Server to Run the Off By Default Policy](lesson-1-2-configure-a-server-to-run-the-off-by-default-policy.md)
+
 ## See also  
- [Policy-Based Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
+ 
+ - [Tutorial: Create and apply an off-by-default policy](lesson-1-create-and-apply-an-off-by-default-policy.md)
+ - [Tutorial: Create and apply naming standards policy](lesson-2-create-and-apply-a-naming-standards-policy.md)
+ - [Policy-Based Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
+ 
+
+ 
   
   

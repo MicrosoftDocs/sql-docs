@@ -3,13 +3,8 @@ title: "Deploy a Data-tier Application | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/31/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: "data-tier-applications"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
-  - "dbe-data-tier-apps"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.deploydacwizard.introduction.f1"
@@ -24,7 +19,6 @@ helpviewer_keywords:
   - "How to [DAC], deploy"
   - "wizard [DAC], deploy"
 ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
-caps.latest.revision: 33
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

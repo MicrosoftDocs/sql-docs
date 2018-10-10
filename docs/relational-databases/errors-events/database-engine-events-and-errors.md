@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "06/27/2018"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
-caps.latest.revision: 20
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -1373,6 +1370,7 @@ The table contains error message numbers and the description, which is the text 
 |	2812	|	16	|	No	|	Could not find stored procedure '%.*ls'.	|
 |	2813	|	16	|	No	|	%.*ls is not supported on this edition of SQL Server.	|
 |	[2814](mssqlserver-2814-database-engine-error.md)	|	10	|	No	|	A possible infinite recompile was detected for SQLHANDLE %hs, PlanHandle %hs, starting offset %d, ending offset %d. The last recompile reason was %d.	|
+|	2628	|	16	|	No	|	String or binary data would be truncated in table '%.*ls', column '%.*ls'. Truncated value: '%.*ls'.	|
 |	&nbsp;	|	&nbsp;	|&nbsp;		|	&nbsp;	|
 
 ## Errors 3000 - 3999
@@ -8204,7 +8202,7 @@ The table contains error message numbers and the description, which is the text 
 |	22831	|	16	|	No	|	Could not update the metadata that indicates database %s is not enabled for Change Data Capture. The failure occurred when executing the command '%s'. The error returned was %d: '%s'. Use the action and error to determine the cause of the failure and resubmit the request.	|
 |	22832	|	16	|	No	|	Could not update the metadata that indicates table %s is enabled for Change Data Capture. The failure occurred when executing the command '%s'. The error returned was %d: '%s'. Use the action and error to determine the cause of the failure and resubmit the request.	|
 |	22833	|	16	|	No	|	Could not update the metadata that indicates table %s is not enabled for Change Data Capture. The failure occurred when executing the command '%s'. The error returned was %d: '%s'. Use the action and error to determine the cause of the failure and resubmit the request.	|
-|	22834	|	16	|	No	|	Could not modify the the verbose logging status for table %s. The failure occurred when executing the command '%s'. The error returned was %d: '%s'. Use the action and error to determine the cause of the failure and resubmit the request.	|
+|	22834	|	16	|	No	|	Could not modify the verbose logging status for table %s. The failure occurred when executing the command '%s'. The error returned was %d: '%s'. Use the action and error to determine the cause of the failure and resubmit the request.	|
 |	22835	|	16	|	No	|	Could not update the metadata for database %s to indicate that a Change Data Capture job has been dropped. The failure occurred when executing the command '%s'. The error returned was %d: '%s'. Use the action and error to determine the cause of the failure and resubmit the request.	|
 |	22836	|	16	|	No	|	Could not update the metadata for database %s to indicate that a Change Data Capture job has been added. The failure occurred when executing the command '%s'. The error returned was %d: '%s'. Use the action and error to determine the cause of the failure and resubmit the request.	|
 |	22837	|	16	|	No	|	Could not delete table entries or drop objects associated with capture instance '%s'. The failure occurred when executing the command '%s'. The error returned was %d: '%s'. Use the action and error to determine the cause of the failure and resubmit the request.	|

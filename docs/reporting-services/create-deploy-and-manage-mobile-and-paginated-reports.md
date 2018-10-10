@@ -1,18 +1,13 @@
 ---
 title: "What is SQL Server Reporting Services (SSRS) | Microsoft Docs"
 description: "Learn about tools and services for mobile and paginated Reporting Services reports on premises."
-ms.custom: ""
-ms.date: "05/25/2018"
+ms.date: 05/25/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "reporting-services"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: reporting-services
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "reports [Reporting Services]"
   - "SSRS"
@@ -20,17 +15,15 @@ helpviewer_keywords:
   - "Reporting Services"
   - "SQL Server Reporting Services"
 ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
-caps.latest.revision: 70
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
 ---
 
 # What is SQL Server Reporting Services (SSRS)?
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
-[!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)] Looking for Power BI Report Server? See [What is Power BI Report Server?](https://docs.microsoft.com/power-bi/report-server/get-started).
+Looking for Power BI Report Server? See [What is Power BI Report Server?](https://docs.microsoft.com/power-bi/report-server/get-started).
 
 Create, deploy, and manage mobile and paginated Reporting Services reports on premises with the range of ready-to-use tools and services that SQL Server Reporting Services (SSRS) provides.
 

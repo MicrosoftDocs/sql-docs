@@ -1,16 +1,11 @@
 ---
 title: "Using Always Encrypted with the ODBC Driver for SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/01/2018"
+ms.date: 09/01/2018
 ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
-caps.latest.revision: 3
 ms.author: "v-chojas"
 manager: craigg
 author: MightyPen

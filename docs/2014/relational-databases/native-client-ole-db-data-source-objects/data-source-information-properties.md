@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "SQL Server Native Client OLE DB provider, data source properties"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "information properties [OLE DB]"
   - "OLE DB data source properties [SQL Server Native Client]"
 ms.assetid: 7fd80e47-5bd9-41e2-a3d3-091a7c8c5f2b
-caps.latest.revision: 36
 author: MightyPen
 ms.author: genemi
 manager: craigg

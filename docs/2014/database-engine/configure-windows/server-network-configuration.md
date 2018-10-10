@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/22/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Named Pipes [SQL Server], configuring"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "ports [SQL Server], changing"
   - "server configuration [SQL Server]"
 ms.assetid: 890c09a1-6dad-4931-aceb-901c02ae34c5
-caps.latest.revision: 47
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

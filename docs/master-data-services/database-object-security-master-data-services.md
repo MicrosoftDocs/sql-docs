@@ -5,16 +5,13 @@ ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "mds"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "master-data-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "database [Master Data Services], object security"
   - "security [Master Data Services], database objects"
 ms.assetid: dd5ba503-7607-45d9-ad0d-909faaade179
-caps.latest.revision: 10
 author: leolimsft
 ms.author: lle
 manager: craigg

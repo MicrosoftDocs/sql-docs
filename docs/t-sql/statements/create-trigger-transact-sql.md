@@ -5,9 +5,7 @@ ms.date: "08/10/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "CREATE TRIGGER"
@@ -28,7 +26,6 @@ helpviewer_keywords:
   - "triggers [SQL Server], creating"
   - "database-scoped triggers [SQL Server]"
 ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
-caps.latest.revision: 140
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
@@ -554,7 +551,7 @@ END;
 ```  
   
 ### G. Viewing the events that cause a trigger to fire  
- The following example queries the `sys.triggers` and `sys.trigger_events` catalog views to determine which [!INCLUDE[tsql](../../includes/tsql-md.md)] language events cause trigger `safety` to fire. `safety` is created in the previous example.  
+ The following example queries the `sys.triggers` and `sys.trigger_events` catalog views to determine which [!INCLUDE[tsql](../../includes/tsql-md.md)] language events cause trigger `safety` to fire. The trigger, `safety`, is created in example 'D', found above.  
   
 ```sql  
 SELECT TE.*  

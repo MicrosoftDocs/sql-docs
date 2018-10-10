@@ -1,0 +1,714 @@
+- name: Overview
+  href: statements.md
+- name: ADD
+  items:
+  - name: SENSITIVITY CLASSIFICATION
+    href: add-sensitivity-classification-transact-sql.md
+- name: ALTER
+  items:
+  - name: APPLICATION ROLE
+    href: alter-application-role-transact-sql.md
+  - name: ASSEMBLY
+    href: alter-assembly-transact-sql.md
+  - name: ASYMMETRIC KEY
+    href: alter-asymmetric-key-transact-sql.md
+  - name: AUTHORIZATION
+    href: alter-authorization-transact-sql.md
+  - name: AVAILABILITY GROUP
+    href: alter-availability-group-transact-sql.md
+  - name: BROKER PRIORITY
+    href: alter-broker-priority-transact-sql.md
+  - name: CERTIFICATE
+    href: alter-certificate-transact-sql.md
+  - name: COLUMN ENCRYPTION KEY
+    href: alter-column-encryption-key-transact-sql.md
+  - name: CREDENTIAL
+    href: alter-credential-transact-sql.md
+  - name: CRYPTOGRAPHIC PROVIDER
+    href: alter-cryptographic-provider-transact-sql.md
+  - name: DATABASE
+    href: alter-database-transact-sql.md
+  - name: DATABASE AUDIT SPECIFICATION
+    href: alter-database-audit-specification-transact-sql.md
+  - name: DATABASE compatibility level
+    href: alter-database-transact-sql-compatibility-level.md
+  - name: DATABASE database mirroring
+    href: alter-database-transact-sql-database-mirroring.md
+  - name: DATABASE ENCRYPTION KEY
+    href: alter-database-encryption-key-transact-sql.md
+  - name: DATABASE file and filegroup options
+    href: alter-database-transact-sql-file-and-filegroup-options.md
+  - name: DATABASE HADR
+    href: alter-database-transact-sql-set-hadr.md
+  - name: DATABASE SCOPED CREDENTIAL
+    href: alter-database-scoped-credential-transact-sql.md
+  - name: DATABASE SCOPED CONFIGURATION
+    href: alter-database-scoped-configuration-transact-sql.md
+  - name: DATABASE SET Options
+    href: alter-database-transact-sql-set-options.md
+  - name: ENDPOINT
+    href: alter-endpoint-transact-sql.md
+  - name: EVENT SESSION
+    href: alter-event-session-transact-sql.md
+  - name: EXTERNAL DATA SOURCE
+    href: alter-external-data-source-transact-sql.md
+  - name: EXTERNAL LIBRARY
+    href: alter-external-library-transact-sql.md
+  - name: EXTERNAL RESOURCE POOL
+    href: alter-external-resource-pool-transact-sql.md
+  - name: FULLTEXT CATALOG
+    href: alter-fulltext-catalog-transact-sql.md
+  - name: FULLTEXT INDEX
+    href: alter-fulltext-index-transact-sql.md
+  - name: FULLTEXT STOPLIST
+    href: alter-fulltext-stoplist-transact-sql.md
+  - name: FUNCTION
+    href: alter-function-transact-sql.md
+  - name: INDEX
+    href: alter-index-transact-sql.md
+  - name: INDEX (Selective XML Indexes)
+    href: alter-index-selective-xml-indexes.md
+  - name: LOGIN
+    href: alter-login-transact-sql.md
+  - name: MASTER KEY
+    href: alter-master-key-transact-sql.md
+  - name: MESSAGE TYPE
+    href: alter-message-type-transact-sql.md
+  - name: PARTITION FUNCTION
+    href: alter-partition-function-transact-sql.md
+  - name: PARTITION SCHEME
+    href: alter-partition-scheme-transact-sql.md
+  - name: PROCEDURE
+    href: alter-procedure-transact-sql.md
+  - name: QUEUE
+    href: alter-queue-transact-sql.md
+  - name: REMOTE SERVICE BINDING
+    href: alter-remote-service-binding-transact-sql.md
+  - name: RESOURCE GOVERNOR
+    href: alter-resource-governor-transact-sql.md
+  - name: RESOURCE POOL
+    href: alter-resource-pool-transact-sql.md
+  - name: ROLE
+    href: alter-role-transact-sql.md
+  - name: ROUTE
+    href: alter-route-transact-sql.md
+  - name: SCHEMA
+    href: alter-schema-transact-sql.md
+  - name: SEARCH PROPERTY LIST
+    href: alter-search-property-list-transact-sql.md
+  - name: SECURITY POLICY
+    href: alter-security-policy-transact-sql.md
+  - name: SEQUENCE
+    href: alter-sequence-transact-sql.md
+  - name: SERVER AUDIT 
+    href: alter-server-audit-transact-sql.md
+  - name: SERVER AUDIT SPECIFICATION
+    href: alter-server-audit-specification-transact-sql.md
+  - name: SERVER CONFIGURATION
+    href: alter-server-configuration-transact-sql.md
+  - name: SERVER ROLE
+    href: alter-server-role-transact-sql.md
+  - name: SERVICE
+    href: alter-service-transact-sql.md
+  - name: SERVICE MASTER KEY
+    href: alter-service-master-key-transact-sql.md
+  - name: SYMMETRIC KEY
+    href: alter-symmetric-key-transact-sql.md
+  - name: TABLE
+    href: alter-table-transact-sql.md
+  - name: TABLE column_constraint
+    href: alter-table-column-constraint-transact-sql.md
+  - name: TABLE column_definition
+    href: alter-table-column-definition-transact-sql.md
+  - name: TABLE computed_column_definition
+    href: alter-table-computed-column-definition-transact-sql.md
+  - name: TABLE index_option
+    href: alter-table-index-option-transact-sql.md
+  - name: TABLE table_constraint
+    href: alter-table-table-constraint-transact-sql.md
+  - name: TRIGGER
+    href: alter-trigger-transact-sql.md
+  - name: USER
+    href: alter-user-transact-sql.md
+  - name: VIEW
+    href: alter-view-transact-sql.md
+  - name: WORKLOAD GROUP
+    href: alter-workload-group-transact-sql.md
+  - name: XML SCHEMA COLLECTION
+    href: alter-xml-schema-collection-transact-sql.md
+- name: Backup and restore
+  items:
+  - name: BACKUP
+    href: backup-transact-sql.md
+  - name: BACKUP CERTIFICATE
+    href: backup-certificate-transact-sql.md
+  - name: BACKUP MASTER KEY
+    href: backup-master-key-transact-sql.md
+  - name: BACKUP SERVICE MASTER KEY
+    href: backup-service-master-key-transact-sql.md
+  - name: RESTORE
+    href: restore-statements-transact-sql.md
+  - name: RESTORE statements
+    href: restore-statements-for-restoring-recovering-and-managing-backups-transact-sql.md
+  - name: RESTORE arguments
+    href: restore-statements-arguments-transact-sql.md
+  - name: RESTORE FILELISTONLY
+    href: restore-statements-filelistonly-transact-sql.md
+  - name: RESTORE HEADERONLY
+    href: restore-statements-headeronly-transact-sql.md
+  - name: RESTORE LABELONLY
+    href: restore-statements-labelonly-transact-sql.md
+  - name: RESTORE MASTER KEY
+    href: restore-master-key-transact-sql.md
+  - name: RESTORE REWINDONLY
+    href: restore-statements-rewindonly-transact-sql.md
+  - name: RESTORE VERIFYONLY
+    href: restore-statements-verifyonly-transact-sql.md
+- name: BULK INSERT
+  href: bulk-insert-transact-sql.md
+- name: CREATE
+  items:
+  - name: AGGREGATE
+    href: create-aggregate-transact-sql.md
+  - name: APPLICATION ROLE
+    href: create-application-role-transact-sql.md
+  - name: ASSEMBLY
+    href: create-assembly-transact-sql.md
+  - name: ASYMMETRIC KEY
+    href: create-asymmetric-key-transact-sql.md
+  - name: AVAILABILITY GROUP
+    href: create-availability-group-transact-sql.md
+  - name: BROKER PRIORITY
+    href: create-broker-priority-transact-sql.md
+  - name: CERTIFICATE
+    href: create-certificate-transact-sql.md
+  - name: COLUMNSTORE INDEX
+    href: create-columnstore-index-transact-sql.md
+  - name: COLUMN ENCRYPTION KEY
+    href: create-column-encryption-key-transact-sql.md
+  - name: COLUMN MASTER KEY
+    href: create-column-master-key-transact-sql.md
+  - name: CONTRACT
+    href: create-contract-transact-sql.md
+  - name: CREDENTIAL
+    href: create-credential-transact-sql.md
+  - name: CRYPTOGRAPHIC PROVIDER
+    href: create-cryptographic-provider-transact-sql.md
+  - name: DATABASE
+    href: create-database-transact-sql.md
+  - name: DATABASE AUDIT SPECIFICATION
+    href: create-database-audit-specification-transact-sql.md
+  - name: DATABASE ENCRYPTION KEY
+    href: create-database-encryption-key-transact-sql.md
+  - name: DATABASE SCOPED CREDENTIAL
+    href: create-database-scoped-credential-transact-sql.md
+  - name: DEFAULT
+    href: create-default-transact-sql.md
+  - name: ENDPOINT
+    href: create-endpoint-transact-sql.md
+  - name: EVENT NOTIFICATION
+    href: create-event-notification-transact-sql.md
+  - name: EVENT SESSION
+    href: create-event-session-transact-sql.md
+  - name: EXTERNAL DATA SOURCE
+    href: create-external-data-source-transact-sql.md
+  - name: EXTERNAL LIBRARY
+    href: create-external-library-transact-sql.md
+  - name: EXTERNAL FILE FORMAT
+    href: create-external-file-format-transact-sql.md
+  - name: EXTERNAL RESOURCE POOL
+    href: create-external-resource-pool-transact-sql.md
+  - name: EXTERNAL TABLE
+    href: create-external-table-transact-sql.md
+  - name: EXTERNAL TABLE AS SELECT
+    href: create-external-table-as-select-transact-sql.md
+  - name: FULLTEXT CATALOG
+    href: create-fulltext-catalog-transact-sql.md
+  - name: FULLTEXT INDEX
+    href: create-fulltext-index-transact-sql.md
+  - name: FULLTEXT STOPLIST
+    href: create-fulltext-stoplist-transact-sql.md
+  - name: FUNCTION
+    href: create-function-transact-sql.md
+  - name: FUNCTION (SQL Data Warehouse)
+    href: create-function-sql-data-warehouse.md
+  - name: INDEX
+    href: create-index-transact-sql.md
+  - name: LOGIN
+    href: create-login-transact-sql.md
+  - name: MASTER KEY
+    href: create-master-key-transact-sql.md
+  - name: MESSAGE TYPE
+    href: create-message-type-transact-sql.md
+  - name: PARTITION FUNCTION
+    href: create-partition-function-transact-sql.md
+  - name: PARTITION SCHEME
+    href: create-partition-scheme-transact-sql.md
+  - name: PROCEDURE
+    href: create-procedure-transact-sql.md
+  - name: QUEUE
+    href: create-queue-transact-sql.md
+  - name: REMOTE SERVICE BINDING
+    href: create-remote-service-binding-transact-sql.md
+  - name: REMOTE TABLE AS SELECT (Parallel Data Warehouse)
+    href: create-remote-table-as-select-parallel-data-warehouse.md
+  - name: RESOURCE POOL
+    href: create-resource-pool-transact-sql.md
+  - name: ROLE
+    href: create-role-transact-sql.md
+  - name: ROUTE
+    href: create-route-transact-sql.md
+  - name: RULE
+    href: create-rule-transact-sql.md
+  - name: SCHEMA
+    href: create-schema-transact-sql.md
+  - name: SEARCH PROPERTY LIST
+    href: create-search-property-list-transact-sql.md
+  - name: SECURITY POLICY
+    href: create-security-policy-transact-sql.md
+  - name: SELECTIVE XML INDEX
+    href: create-selective-xml-index-transact-sql.md
+  - name: SEQUENCE
+    href: create-sequence-transact-sql.md
+  - name: SERVER AUDIT
+    href: create-server-audit-transact-sql.md
+  - name: SERVER AUDIT SPECIFICATION
+    href: create-server-audit-specification-transact-sql.md
+  - name: SERVER ROLE
+    href: create-server-role-transact-sql.md
+  - name: SERVICE
+    href: create-service-transact-sql.md
+  - name: SPATIAL INDEX
+    href: create-spatial-index-transact-sql.md
+  - name: STATISTICS
+    href: create-statistics-transact-sql.md
+  - name: SYMMETRIC KEY
+    href: create-symmetric-key-transact-sql.md
+  - name: SYNONYM
+    href: create-synonym-transact-sql.md
+  - name: TABLE
+    href: create-table-transact-sql.md
+  - name: TABLE (Azure SQL Data Warehouse)
+    href: create-table-azure-sql-data-warehouse.md
+  - name: TABLE (SQL Graph)
+    href: create-table-sql-graph.md
+  - name: TABLE AS SELECT (Azure SQL Data Warehouse)
+    href: create-table-as-select-azure-sql-data-warehouse.md
+  - name: TABLE IDENTITY (Property)
+    href: create-table-transact-sql-identity-property.md
+  - name: TRIGGER
+    href: create-trigger-transact-sql.md
+  - name: TYPE
+    href: create-type-transact-sql.md
+  - name: USER
+    href: create-user-transact-sql.md
+  - name: VIEW
+    href: create-view-transact-sql.md
+  - name: WORKLOAD GROUP
+    href: create-workload-group-transact-sql.md
+  - name: XML INDEX
+    href: create-xml-index-transact-sql.md
+  - name: XML INDEX (Selective XML Indexes)
+    href: create-xml-index-selective-xml-indexes.md
+  - name: XML SCHEMA COLLECTION
+    href: create-xml-schema-collection-transact-sql.md
+- name: Collations
+  items:
+  - name: COLLATE clause
+    href: collations.md
+  - name: SQL Server Collation Name
+    href: sql-server-collation-name-transact-sql.md
+  - name: Windows Collation Name
+    href: windows-collation-name-transact-sql.md
+  - name: Collation Precedence
+    href: collation-precedence-transact-sql.md
+- name: DELETE
+  href: delete-transact-sql.md
+- name: DISABLE TRIGGER
+  href: disable-trigger-transact-sql.md
+- name: DROP
+  items:
+  - name: AGGREGATE
+    href: drop-aggregate-transact-sql.md
+  - name: APPLICATION ROLE
+    href: drop-application-role-transact-sql.md
+  - name: ASSEMBLY
+    href: drop-assembly-transact-sql.md
+  - name: ASYMMETRIC KEY
+    href: drop-asymmetric-key-transact-sql.md
+  - name: AVAILABILITY GROUP
+    href: drop-availability-group-transact-sql.md
+  - name: BROKER PRIORITY
+    href: drop-broker-priority-transact-sql.md
+  - name: CERTIFICATE
+    href: drop-certificate-transact-sql.md
+  - name: COLUMN ENCRYPTION KEY
+    href: drop-column-encryption-key-transact-sql.md
+  - name: COLUMN MASTER KEY
+    href: drop-column-master-key-transact-sql.md
+  - name: CONTRACT
+    href: drop-contract-transact-sql.md
+  - name: CREDENTIAL
+    href: drop-credential-transact-sql.md
+  - name: CRYPTOGRAPHIC PROVIDER
+    href: drop-cryptographic-provider-transact-sql.md
+  - name: DATABASE
+    href: drop-database-transact-sql.md
+  - name: DATABASE AUDIT SPECIFICATION
+    href: drop-database-audit-specification-transact-sql.md
+  - name: DATABASE ENCRYPTION KEY
+    href: drop-database-encryption-key-transact-sql.md
+  - name: DATABASE SCOPED CREDENTIAL
+    href: drop-database-scoped-credential-transact-sql.md
+  - name: DEFAULT
+    href: drop-default-transact-sql.md
+  - name: ENDPOINT
+    href: drop-endpoint-transact-sql.md
+  - name: EXTERNAL DATA SOURCE
+    href: drop-external-data-source-transact-sql.md
+  - name: EXTERNAL FILE FORMAT
+    href: drop-external-file-format-transact-sql.md
+  - name: EXTERNAL LIBRARY
+    href: drop-external-library-transact-sql.md
+  - name: EXTERNAL RESOURCE POOL
+    href: drop-external-resource-pool-transact-sql.md
+  - name: EXTERNAL TABLE
+    href: drop-external-table-transact-sql.md
+  - name: EVENT NOTIFICATION
+    href: drop-event-notification-transact-sql.md
+  - name: EVENT SESSION
+    href: drop-event-session-transact-sql.md
+  - name: FULLTEXT CATALOG
+    href: drop-fulltext-catalog-transact-sql.md
+  - name: FULLTEXT INDEX
+    href: drop-fulltext-index-transact-sql.md
+  - name: FULLTEXT STOPLIST
+    href: drop-fulltext-stoplist-transact-sql.md
+  - name: FUNCTION
+    href: drop-function-transact-sql.md
+  - name: INDEX
+    href: drop-index-transact-sql.md
+  - name: INDEX (Selective XML Indexes)
+    href: drop-index-selective-xml-indexes.md
+  - name: LOGIN
+    href: drop-login-transact-sql.md
+  - name: MASTER KEY
+    href: drop-master-key-transact-sql.md
+  - name: MESSAGE TYPE
+    href: drop-message-type-transact-sql.md
+  - name: PARTITION FUNCTION
+    href: drop-partition-function-transact-sql.md
+  - name: PARTITION SCHEME
+    href: drop-partition-scheme-transact-sql.md
+  - name: PROCEDURE
+    href: drop-procedure-transact-sql.md
+  - name: QUEUE
+    href: drop-queue-transact-sql.md
+  - name: REMOTE SERVICE BINDING
+    href: drop-remote-service-binding-transact-sql.md
+  - name: RESOURCE POOL
+    href: drop-resource-pool-transact-sql.md
+  - name: ROLE
+    href: drop-role-transact-sql.md
+  - name: ROUTE
+    href: drop-route-transact-sql.md
+  - name: RULE
+    href: drop-rule-transact-sql.md
+  - name: SCHEMA
+    href: drop-schema-transact-sql.md
+  - name: SEARCH PROPERTY LIST
+    href: drop-search-property-list-transact-sql.md
+  - name: SECURITY POLICY
+    href: drop-security-policy-transact-sql.md
+  - name: SENSITIVITY CLASSIFICATION
+    href: drop-sensitivity-classification-transact-sql.md
+  - name: SEQUENCE
+    href: drop-sequence-transact-sql.md
+  - name: SERVER AUDIT 
+    href: drop-server-audit-transact-sql.md
+  - name: SERVER AUDIT SPECIFICATION
+    href: drop-server-audit-specification-transact-sql.md
+  - name: SERVER ROLE
+    href: drop-server-role-transact-sql.md
+  - name: SERVICE
+    href: drop-service-transact-sql.md
+  - name: SIGNATURE
+    href: drop-signature-transact-sql.md
+  - name: STATISTICS
+    href: drop-statistics-transact-sql.md
+  - name: SYMMETRIC KEY
+    href: drop-symmetric-key-transact-sql.md
+  - name: SYNONYM
+    href: drop-synonym-transact-sql.md
+  - name: TABLE
+    href: drop-table-transact-sql.md
+  - name: TRIGGER
+    href: drop-trigger-transact-sql.md
+  - name: TYPE
+    href: drop-type-transact-sql.md
+  - name: USER
+    href: drop-user-transact-sql.md
+  - name: VIEW
+    href: drop-view-transact-sql.md
+  - name: WORKLOAD GROUP
+    href: drop-workload-group-transact-sql.md
+  - name: XML SCHEMA COLLECTION
+    href: drop-xml-schema-collection-transact-sql.md
+- name: ENABLE TRIGGER
+  href: enable-trigger-transact-sql.md
+- name: INSERT
+  href: insert-transact-sql.md
+- name: INSERT (SQL Graph)
+  href: insert-sql-graph.md
+- name: MERGE
+  href: merge-transact-sql.md
+- name: RENAME
+  href: rename-transact-sql.md
+- name: Permissions
+  items:
+  - name: ADD SIGNATURE
+    href: add-signature-transact-sql.md
+  - name: CLOSE MASTER KEY
+    href: close-master-key-transact-sql.md
+  - name: CLOSE SYMMETRIC KEY
+    href: close-symmetric-key-transact-sql.md
+  - name: DENY
+    href: deny-transact-sql.md
+  - name: DENY Assembly Permissions
+    href: deny-assembly-permissions-transact-sql.md
+  - name: DENY Asymmetric Key Permissions
+    href: deny-asymmetric-key-permissions-transact-sql.md
+  - name: DENY Availability Group Permissions
+    href: deny-availability-group-permissions-transact-sql.md
+  - name: DENY Certificate Permissions
+    href: deny-certificate-permissions-transact-sql.md
+  - name: DENY Database Permissions
+    href: deny-database-permissions-transact-sql.md
+  - name: DENY Database Principal Permissions
+    href: deny-database-principal-permissions-transact-sql.md
+  - name: DENY Database Scoped Credential
+    href: deny-database-scoped-credential-transact-sql.md
+  - name: DENY Endpoint Permissions
+    href: deny-endpoint-permissions-transact-sql.md
+  - name: DENY Full-Text Permissions
+    href: deny-full-text-permissions-transact-sql.md
+  - name: DENY Object Permissions
+    href: deny-object-permissions-transact-sql.md
+  - name: DENY Schema Permissions
+    href: deny-schema-permissions-transact-sql.md
+  - name: DENY Search Property List Permissions
+    href: deny-search-property-list-permissions-transact-sql.md
+  - name: DENY Server Permissions
+    href: deny-server-permissions-transact-sql.md
+  - name: DENY Server Principal Permissions
+    href: deny-server-principal-permissions-transact-sql.md
+  - name: DENY Service Broker Permissions
+    href: deny-service-broker-permissions-transact-sql.md
+  - name: DENY Symmetric Key Permissions
+    href: deny-symmetric-key-permissions-transact-sql.md
+  - name: DENY System Object Permissions
+    href: deny-system-object-permissions-transact-sql.md
+  - name: DENY Type Permissions
+    href: deny-type-permissions-transact-sql.md
+  - name: DENY XML Schema Collection Permissions
+    href: deny-xml-schema-collection-permissions-transact-sql.md
+  - name: EXECUTE AS
+    href: execute-as-transact-sql.md
+  - name: EXECUTE AS Clause
+    href: execute-as-clause-transact-sql.md
+  - name: GRANT
+    href: grant-transact-sql.md
+  - name: GRANT Assembly Permissions
+    href: grant-assembly-permissions-transact-sql.md
+  - name: GRANT Asymmetric Key Permissions
+    href: grant-asymmetric-key-permissions-transact-sql.md
+  - name: GRANT Availability Group Permissions
+    href: grant-availability-group-permissions-transact-sql.md
+  - name: GRANT Certificate Permissions
+    href: grant-certificate-permissions-transact-sql.md
+  - name: GRANT Database Permissions
+    href: grant-database-permissions-transact-sql.md
+  - name: GRANT Database Principal Permissions
+    href: grant-database-principal-permissions-transact-sql.md
+  - name: GRANT Database Scoped Credential
+    href: grant-database-scoped-credential-transact-sql.md
+  - name: GRANT Endpoint Permissions
+    href: grant-endpoint-permissions-transact-sql.md
+  - name: GRANT Full-Text Permissions
+    href: grant-full-text-permissions-transact-sql.md
+  - name: GRANT Object Permissions
+    href: grant-object-permissions-transact-sql.md
+  - name: GRANT Schema Permissions
+    href: grant-schema-permissions-transact-sql.md
+  - name: GRANT Search Property List Permissions
+    href: grant-search-property-list-permissions-transact-sql.md
+  - name: GRANT Server Permissions
+    href: grant-server-permissions-transact-sql.md
+  - name: GRANT Server Principal Permissions
+    href: grant-server-principal-permissions-transact-sql.md
+  - name: GRANT Service Broker Permissions
+    href: grant-service-broker-permissions-transact-sql.md
+  - name: GRANT Symmetric Key Permissions
+    href: grant-symmetric-key-permissions-transact-sql.md
+  - name: GRANT System Object Permissions
+    href: grant-system-object-permissions-transact-sql.md
+  - name: GRANT Type Permissions
+    href: grant-type-permissions-transact-sql.md
+  - name: GRANT XML Schema Collection Permissions
+    href: grant-xml-schema-collection-permissions-transact-sql.md
+  - name: OPEN MASTER KEY
+    href: open-master-key-transact-sql.md
+  - name: OPEN SYMMETRIC KEY
+    href: open-symmetric-key-transact-sql.md
+  - name: "Permissions: GRANT, DENY, REVOKE (Azure SQL Data Warehouse, Parallel Data Warehouse)"
+    href: permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse.md
+  - name: REVERT
+    href: revert-transact-sql.md
+  - name: REVOKE
+    href: revoke-transact-sql.md
+  - name: REVOKE Assembly Permissions
+    href: revoke-assembly-permissions-transact-sql.md
+  - name: REVOKE Asymmetric Key Permissions
+    href: revoke-asymmetric-key-permissions-transact-sql.md
+  - name: REVOKE Availability Group Permissions
+    href: revoke-availability-group-permissions-transact-sql.md
+  - name: REVOKE Certificate Permissions
+    href: revoke-certificate-permissions-transact-sql.md
+  - name: REVOKE Database Permissions
+    href: revoke-database-permissions-transact-sql.md
+  - name: REVOKE Database Principal Permissions
+    href: revoke-database-principal-permissions-transact-sql.md
+  - name: REVOKE Database Scoped Credential
+    href: revoke-database-scoped-credential-transact-sql.md
+  - name: REVOKE Endpoint Permissions
+    href: revoke-endpoint-permissions-transact-sql.md
+  - name: REVOKE Full-Text Permissions
+    href: revoke-full-text-permissions-transact-sql.md
+  - name: REVOKE Object Permissions
+    href: revoke-object-permissions-transact-sql.md
+  - name: REVOKE Schema Permissions
+    href: revoke-schema-permissions-transact-sql.md
+  - name: REVOKE Search Property List Permissions
+    href: revoke-search-property-list-permissions-transact-sql.md
+  - name: REVOKE Server Permissions
+    href: revoke-server-permissions-transact-sql.md
+  - name: REVOKE Server Principal Permissions
+    href: revoke-server-principal-permissions-transact-sql.md
+  - name: REVOKE Service Broker Permissions
+    href: revoke-service-broker-permissions-transact-sql.md
+  - name: REVOKE Symmetric Key Permissions
+    href: revoke-symmetric-key-permissions-transact-sql.md
+  - name: REVOKE System Object Permissions
+    href: revoke-system-object-permissions-transact-sql.md
+  - name: REVOKE Type Permissions
+    href: revoke-type-permissions-transact-sql.md
+  - name: REVOKE XML Schema Collection Permissions
+    href: revoke-xml-schema-collection-permissions-transact-sql.md
+  - name: SETUSER
+    href: setuser-transact-sql.md
+- name: Service Broker
+  items:
+  - name: BEGIN CONVERSATION TIMER
+    href: begin-conversation-timer-transact-sql.md
+  - name: BEGIN DIALOG CONVERSATION
+    href: begin-dialog-conversation-transact-sql.md
+  - name: END CONVERSATION
+    href: end-conversation-transact-sql.md
+  - name: GET CONVERSATION GROUP
+    href: get-conversation-group-transact-sql.md
+  - name: GET_TRANSMISSION_STATUS
+    href: get-transmission-status-transact-sql.md
+  - name: MOVE CONVERSATION
+    href: move-conversation-transact-sql.md
+  - name: RECEIVE
+    href: receive-transact-sql.md
+  - name: SEND
+    href: send-transact-sql.md
+- name: SET
+  items:
+  - name: Overview
+    href: set-statements-transact-sql.md
+  - name: ANSI_DEFAULTS
+    href: set-ansi-defaults-transact-sql.md
+  - name: ANSI_NULL_DFLT_OFF
+    href: set-ansi-null-dflt-off-transact-sql.md
+  - name: ANSI_NULL_DFLT_ON
+    href: set-ansi-null-dflt-on-transact-sql.md
+  - name: ANSI_NULLS
+    href: set-ansi-nulls-transact-sql.md
+  - name: ANSI_PADDING
+    href: set-ansi-padding-transact-sql.md
+  - name: ANSI_WARNINGS
+    href: set-ansi-warnings-transact-sql.md
+  - name: ARITHABORT
+    href: set-arithabort-transact-sql.md
+  - name: ARITHIGNORE
+    href: set-arithignore-transact-sql.md
+  - name: CONCAT_NULL_YIELDS_NULL
+    href: set-concat-null-yields-null-transact-sql.md
+  - name: CONTEXT_INFO
+    href: set-context-info-transact-sql.md
+  - name: CURSOR_CLOSE_ON_COMMIT
+    href: set-cursor-close-on-commit-transact-sql.md
+  - name: DATEFIRST
+    href: set-datefirst-transact-sql.md
+  - name: DATEFORMAT
+    href: set-dateformat-transact-sql.md
+  - name: DEADLOCK_PRIORITY
+    href: set-deadlock-priority-transact-sql.md
+  - name: FIPS_FLAGGER
+    href: set-fips-flagger-transact-sql.md
+  - name: FMTONLY
+    href: set-fmtonly-transact-sql.md
+  - name: FORCEPLAN
+    href: set-forceplan-transact-sql.md
+  - name: IDENTITY_INSERT
+    href: set-identity-insert-transact-sql.md
+  - name: IMPLICIT_TRANSACTIONS
+    href: set-implicit-transactions-transact-sql.md
+  - name: LANGUAGE
+    href: set-language-transact-sql.md
+  - name: LOCK_TIMEOUT
+    href: set-lock-timeout-transact-sql.md
+  - name: NOCOUNT
+    href: set-nocount-transact-sql.md
+  - name: NOEXEC
+    href: set-noexec-transact-sql.md
+  - name: NUMERIC_ROUNDABORT
+    href: set-numeric-roundabort-transact-sql.md
+  - name: OFFSETS
+    href: set-offsets-transact-sql.md
+  - name: PARSEONLY
+    href: set-parseonly-transact-sql.md
+  - name: QUERY_GOVERNOR_COST_LIMIT
+    href: set-query-governor-cost-limit-transact-sql.md
+  - name: QUOTED_IDENTIFIER
+    href: set-quoted-identifier-transact-sql.md
+  - name: REMOTE_PROC_TRANSACTIONS
+    href: set-remote-proc-transactions-transact-sql.md
+  - name: ROWCOUNT
+    href: set-rowcount-transact-sql.md
+  - name: SHOWPLAN_ALL
+    href: set-showplan-all-transact-sql.md
+  - name: SHOWPLAN_TEXT
+    href: set-showplan-text-transact-sql.md
+  - name: SHOWPLAN_XML
+    href: set-showplan-xml-transact-sql.md
+  - name: STATISTICS IO
+    href: set-statistics-io-transact-sql.md
+  - name: STATISTICS PROFILE
+    href: set-statistics-profile-transact-sql.md
+  - name: STATISTICS TIME
+    href: set-statistics-time-transact-sql.md
+  - name: STATISTICS XML
+    href: set-statistics-xml-transact-sql.md
+  - name: TEXTSIZE
+    href: set-textsize-transact-sql.md
+  - name: TRANSACTION ISOLATION LEVEL
+    href: set-transaction-isolation-level-transact-sql.md
+  - name: XACT_ABORT
+    href: set-xact-abort-transact-sql.md
+- name: TRUNCATE TABLE
+  href: truncate-table-transact-sql.md
+- name: UPDATE STATISTICS
+  href: update-statistics-transact-sql.md

@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "Tuples Element"
@@ -23,7 +21,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "Tuples element"
 ms.assetid: 5494bbaa-c1aa-43fa-b3e0-83befb2bccdd
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg

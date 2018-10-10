@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 topic_type: 
   - "apiref"
 helpviewer_keywords: 
   - "Showplan XML For Query Compile event class"
 ms.assetid: 48919fcb-3a22-43ca-a63c-b210cf2c32d5
-caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg

@@ -4,13 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
+ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
-caps.latest.revision: 15
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
@@ -74,7 +70,7 @@ manager: craigg
 ###  <a name="bkmk_openDAC"></a> Open a DAC (Dedicated Administrator Connection)  
  Microsoft SQL Server provides a dedicated administrator connection (DAC). The DAC allows an administrator to access a running instance of SQL Server Database Engine to troubleshoot problems on the server—even when the server is unresponsive to other client connections. The DAC is available through the `sqlcmd` utility and SQL Server Management Studio (SSMS).  
   
- For guidance on using `sqlcmd` and DAC see [Using a Dedicated Administrator Connection](http://msdn.microsoft.com/library/ms189595\(v=sql.100\).aspx/css). For guidance on using DAC through SSMS see [How to: Use the Dedicated Administrator Connection with SQL Server Management Studio](http://msdn.microsoft.com/library/ms178068.aspx).  
+ For guidance on using `sqlcmd` and DAC see [Using a Dedicated Administrator Connection](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md). For guidance on using DAC through SSMS see [How to: Use the Dedicated Administrator Connection with SQL Server Management Studio](http://msdn.microsoft.com/library/ms178068.aspx).  
   
 ###  <a name="bkmk_takeCorrectiveAction"></a> Take corrective action  
  To resolve your OOM condition you need to either free up existing memory by reducing usage, or make more memory available to your in-memory tables.  

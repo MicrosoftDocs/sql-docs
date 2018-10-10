@@ -4,16 +4,13 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Script File Creation, Configuring Oracle Console Settings"
   - "Script File Creation, Non-Configurable option"
   - "Script File Creation, Script File Validation"
 ms.assetid: 55e5bc68-3040-4f07-bb00-0408a17c9821
-caps.latest.revision: 37
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "v-thobro"

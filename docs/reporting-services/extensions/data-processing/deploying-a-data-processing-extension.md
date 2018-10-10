@@ -1,28 +1,19 @@
 ---
 title: "Deploying a Data Processing Extension | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/18/2017"
+ms.date: 03/18/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.component: "extensions"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: extensions
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
+ms.topic: reference
 helpviewer_keywords: 
   - "data processing extensions [Reporting Services], deploying"
   - "Extension element"
   - "deploying [Reporting Services], extensions"
 ms.assetid: e5c0b5a9-1386-47cb-aade-96653ecfaa54
-caps.latest.revision: 34
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ---
 # Deploying a Data Processing Extension
   Once you have written and compiled your [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] data processing extension into a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] library, you need to make it discoverable by the report server and by Report Designer. This is as easy as copying the extension to the appropriate directories and adding entries to the appropriate [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] configuration files.  

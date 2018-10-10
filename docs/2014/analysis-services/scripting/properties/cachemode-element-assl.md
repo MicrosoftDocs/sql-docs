@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "CacheMode Element"
@@ -19,7 +17,6 @@ topic_type:
 helpviewer_keywords: 
   - "CacheMode element"
 ms.assetid: bfb8f7bb-ccd3-4dfe-a36a-1cea15edfe40
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg

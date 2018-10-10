@@ -1,22 +1,16 @@
 ---
 title: "Create a Data Alert in Data Alert Designer | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/17/2017"
+ms.date: 08/17/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "reporting-services"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: reporting-services
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
-caps.latest.revision: 13
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
+monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Create a Data Alert in Data Alert Designer
 
@@ -61,7 +55,7 @@ You create data alert definitions in Data Alert Designer. After you save the ale
   
      The default name of the alert definition is the name of the report. Alert definition names do not have to be unique, which can make it difficult to tell them apart when you later view the list of your alerts in Data Alert Manager. It is recommended that you use meaningful and unique names for your alert definitions.  
   
-6.  Optionally, change the default data option from **any data in in the data feed has** to **no data in the data feed has**.  
+6.  Optionally, change the default data option from **any data in the data feed has** to **no data in the data feed has**.  
   
 7.  Click **Add rule**.  
   

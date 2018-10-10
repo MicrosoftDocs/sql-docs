@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-cross-instance"
-ms.tgt_pltfrm: ""
+ms.technology:
 ms.topic: conceptual
 helpviewer_keywords: 
   - "opening tables"
@@ -15,7 +12,6 @@ helpviewer_keywords:
   - "tables [SQL Server], opening"
   - "Table Designer, opening"
 ms.assetid: 2a8c0a59-71c4-4280-824c-2dc17999532e
-caps.latest.revision: 14
 author: mashamsft
 ms.author: mathoma
 manager: craigg

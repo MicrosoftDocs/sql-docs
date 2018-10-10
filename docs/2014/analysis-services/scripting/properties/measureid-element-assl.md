@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "MeasureID Element"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "MeasureID element"
 ms.assetid: 8457aebc-8fdd-4683-8640-baaf9d89b2a2
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg

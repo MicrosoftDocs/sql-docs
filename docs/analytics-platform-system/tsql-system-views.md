@@ -128,7 +128,7 @@ The following DMVs are applicable to Parallel Data Warehouse, but must be execut
 ## SQL Server DMVs available in Parallel Data Warehouse
 Parallel Data Warehouse exposes many of the SQL Server dynamic management views (DMVs). These views, when queried in Parallel Data Warehouse, are reporting the state of SQL  Server databases running on the distributions.
 
-Each of these DMV's has a specific column called pdw_node_id. This is the the identifier for the Compute node. 
+Each of these DMV's has a specific column called pdw_node_id. This is the identifier for the Compute node. 
 
 > [!NOTE]
 > To use these view, insert ‘pdw_nodes_’ into the name, as shown in the following table.
@@ -209,15 +209,15 @@ Each of these DMV's has a specific column called pdw_node_id. This is the the id
 * [sys.dm_exec_external_work](../relational-databases/system-dynamic-management-views/sys-dm-exec-external-work-transact-sql.md)
 
 ## SQL Server INFORMATION_SCHEMA views
-* [CHECK_CONSTRAINTS](http://msdn.microsoft.com/library/ms189772.aspx)
-* [COLUMNS](http://msdn.microsoft.com/library/ms188348.aspx)
-* [PARAMETERS](http://msdn.microsoft.com/library/ms173796.aspx)
+* [CHECK_CONSTRAINTS](../relational-databases/system-information-schema-views/check-constraints-transact-sql.md)
+* [COLUMNS](../relational-databases/system-information-schema-views/columns-transact-sql.md)
+* [PARAMETERS](../relational-databases/system-information-schema-views/parameters-transact-sql.md)
 * [ROUTINES](../relational-databases/system-information-schema-views/routines-transact-sql.md)
 * [SCHEMATA](../relational-databases/system-information-schema-views/schemata-transact-sql.md)
-* [TABLES](http://msdn.microsoft.com/library/ms186224.aspx)
+* [TABLES](../relational-databases/system-information-schema-views/tables-transact-sql.md)
 * [VIEW_COLUMN_USAGE](../relational-databases/system-information-schema-views/view-column-usage-transact-sql.md)
 * [VIEW_TABLE_USAGE](../relational-databases/system-information-schema-views/view-table-usage-transact-sql.md)
-* [VIEWS](http://msdn.microsoft.com/library/ms181381.aspx)
+* [VIEWS](../relational-databases/system-information-schema-views/views-transact-sql.md)
 
 ## Next steps
 For more reference information, see [T-SQL language elements](tsql-language-elements.md) and [T-SQL statements](tsql-statements.md).

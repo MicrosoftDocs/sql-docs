@@ -1,0 +1,14 @@
+- name: CLR User-Defined Functions
+  href: clr-user-defined-functions.md
+  items:
+  - name: CLR Scalar-Valued Functions
+    href: clr-scalar-valued-functions.md
+  - name: CLR Table-Valued Functions
+    href: clr-table-valued-functions.md
+  - name: CLR User-Defined Aggregates
+    href: clr-user-defined-aggregates.md
+    items:
+    - name: CLR User-Defined Aggregates - Requirements
+      href: clr-user-defined-aggregates-requirements.md    
+    - name: CLR User-Defined Aggregate - Invoking Functions
+      href: clr-user-defined-aggregate-invoking-functions.md

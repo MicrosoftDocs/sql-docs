@@ -5,9 +5,7 @@ ms.date: "07/16/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "COMPATIBILITY_LEVEL_TSQL"
@@ -23,11 +21,10 @@ helpviewer_keywords:
   - "db compatibility level"
   - "db compat level"
 ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
-caps.latest.revision: 89
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg'
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ALTER DATABASE (Transact-SQL) Compatibility Level
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,7 +49,8 @@ SET COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 | 90 }
   
 |Product|Database Engine Version|Compatibility Level Designation|Supported Compatibility Level Values|  
 |-------------|-----------------------------|-------------------------------------|------------------------------------------|  
-|[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]|14|140|140, 130, 120, 110, 100|
+|[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|15|150|150, 140, 130, 120, 110, 100| 
+|[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|14|140|140, 130, 120, 110, 100|
 |[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] logical server|12|130|150, 140, 130, 120, 110, 100|  
 |[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Managed Instance|12|130|150, 140, 130, 120, 110, 100|  
 |[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|13|130|130, 120, 110, 100|  
@@ -145,7 +143,7 @@ For more details, including the recommended workflow for upgrading database comp
 > Discontinued functionality introduced in a given [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version is not protected by compatibility level. This refers to functionality that was removed from the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].
 > 
 > For example, the `FASTFIRSTROW` hint was discontinued in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and replaced with the `OPTION (FAST n )` hint. Setting the database compatibility level to 110 will not restore the discontinued hint.
-> For more information on discontinued functionality, see [Discontinued Database Engine Functionality in SQL Server 2016](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md), [Discontinued Database Engine Functionality in SQL Server 2014](http://msdn.microsoft.com/library/ms144262(v=sql.120)), [Discontinued Database Engine Functionality in SQL Server 2012](http://msdn.microsoft.com/library/ms144262(v=sql.110)), and [Discontinued Database Engine Functionality in SQL Server 2008](http://msdn.microsoft.com/library/ms144262(v=sql.100)).
+> For more information on discontinued functionality, see [Discontinued Database Engine Functionality in SQL Server 2016](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md), [Discontinued Database Engine Functionality in SQL Server 2014](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)), [Discontinued Database Engine Functionality in SQL Server 2012](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)), and [Discontinued Database Engine Functionality in SQL Server 2008](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)).
 
 > [!IMPORTANT]
 > Breaking changes introduced in a given [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version **may** not be protected by compatibility level. This refers to behavior changes between versions of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. [!INCLUDE[tsql](../../includes/tsql-md.md)] behavior is usually protected by compatibility level. However, changed or removed system objects are **not** protected by compatibility level.
@@ -156,7 +154,7 @@ For more details, including the recommended workflow for upgrading database comp
 > -  Changed column names in system objects. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] the column *single_pages_kb* in sys.dm_os_sys_info was renamed to *pages_kb*. Regardless of the compatibility level, the query `SELECT single_pages_kb FROM sys.dm_os_sys_info` will produce error 207 (Invalid column name).
 > -  Removed system objects. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] the `sp_dboption` was removed. Regardless of the compatibility level, the statement `EXEC sp_dboption 'AdventureWorks2016CTP3', 'autoshrink', 'FALSE';` will produce error 2812 (Could not find stored procedure 'sp_dboption').
 >
-> For more information on breaking changes, see [Breaking Changes to Database Engine Features in SQL Server 2017](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md), [Breaking Changes to Database Engine Features in SQL Server 2016](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md), [Breaking Changes to Database Engine Features in SQL Server 2014](http://msdn.microsoft.com/library/ms143179(v=sql.120)), [Breaking Changes to Database Engine Features in SQL Server 2012](http://msdn.microsoft.com/library/ms143179(v=sql.110)), and [Breaking Changes to Database Engine Features in SQL Server 2008](http://msdn.microsoft.com/library/ms143179(v=sql.100)).
+> For more information on breaking changes, see [Breaking Changes to Database Engine Features in SQL Server 2017](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md), [Breaking Changes to Database Engine Features in SQL Server 2016](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md), [Breaking Changes to Database Engine Features in SQL Server 2014](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)), [Breaking Changes to Database Engine Features in SQL Server 2012](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)), and [Breaking Changes to Database Engine Features in SQL Server 2008](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)).
   
 ## Best Practices for upgrading Database Compatibility Level 
 For the recommended workflow for upgrading the compatibility level, see [Change the Database Compatibility Mode and Use the Query Store](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md).  
@@ -167,7 +165,9 @@ For the recommended workflow for upgrading the compatibility level, see [Change 
 ## Differences Between Compatibility Level 140 and Level 150  
 This section describes new behaviors introduced with compatibility level 150.
 
-Database compatibility level 150 is currently in Private Preview for Azure SQL Database.  This database compatibility level will be associated with the next generation of query processing improvements beyond what was introduced in database compatibility level 140.  
+Database compatibility level 150 is currently in Private Preview for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. This database compatibility level will be associated with the next generation of query processing improvements beyond what was introduced in database compatibility level 140.     
+
+For more information on query processing features enabled in database compatibility level 150, refer to [What's new in SQL Server 2019](../../sql-server/what-s-new-in-sql-server-ver15.md).     
 
 ## Differences Between Compatibility Level 130 and Level 140  
 This section describes new behaviors introduced with compatibility level 140.

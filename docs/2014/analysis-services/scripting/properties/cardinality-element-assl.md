@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "04/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "Cardinality Element"
@@ -19,7 +17,6 @@ topic_type:
 helpviewer_keywords: 
   - "Cardinality element"
 ms.assetid: 60ac8a26-7c8b-4011-9b9b-a29863779428
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg

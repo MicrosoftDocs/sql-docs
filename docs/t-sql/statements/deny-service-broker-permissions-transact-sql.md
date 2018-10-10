@@ -5,9 +5,7 @@ ms.date: "06/09/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -23,7 +21,6 @@ helpviewer_keywords:
   - "contracts [Service Broker], permissions"
   - "services [Service Broker], permissions"
 ms.assetid: 7c6de71b-865c-41db-9413-ad9b3562e579
-caps.latest.revision: 22
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

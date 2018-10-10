@@ -6,15 +6,12 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords:
   - "Indexing Service provider [ADO]"
   - "providers [ADO], OLE DB provider for Microsoft Indexing service"
   - "OLE DB provider for Microsoft Indexing service [ADO]"
 ms.assetid: f86a0598-5097-471b-8318-d2c859d085f2
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg

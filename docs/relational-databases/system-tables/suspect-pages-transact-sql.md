@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-tables"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "suspect_page_table"
@@ -19,7 +16,6 @@ helpviewer_keywords:
   - "suspect_pages system table"
   - "suspect pages [SQL Server]"
 ms.assetid: 119c8d62-eea8-44fb-bf72-de469c838c50
-caps.latest.revision: 46
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

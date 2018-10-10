@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "wmi"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
 
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "queries [WMI]"
@@ -20,7 +17,6 @@ helpviewer_keywords:
   - "WMI Provider for Configuration Management, WQL"
   - "WMI Provider for Configuration Management, scripts"
 ms.assetid: c1e64905-3c2b-4974-88f4-abf17cf7e289
-caps.latest.revision: 18
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg

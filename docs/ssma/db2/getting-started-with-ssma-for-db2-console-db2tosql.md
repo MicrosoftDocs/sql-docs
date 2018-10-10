@@ -4,15 +4,9 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 ms.assetid: f245c017-023e-4880-8721-8908d339525e
-caps.latest.revision: 5
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: craigg
@@ -25,7 +19,7 @@ Use the following steps to start the SSMA console application:
   
 1.  Go to **Start** and point to **All Programs**.  
   
-2.  Click the **[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant for DB2 Command Prompt** shortcut.  
+2.  Click the **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant for DB2 Command Prompt** shortcut.  
   
     It displays the SSMA Console usage menu and `(/? Help)`, to help you get started with the console application.  
   

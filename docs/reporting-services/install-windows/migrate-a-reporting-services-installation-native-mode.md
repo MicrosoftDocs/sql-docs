@@ -1,15 +1,10 @@
 ---
 title: "Migrate a Reporting Services Installation (Native Mode) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/24/2018"
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "manual Reporting Services migrations"
@@ -20,10 +15,8 @@ helpviewer_keywords:
   - "upgrading Reporting Services"
   - "migrating Reporting Services"
 ms.assetid: a6fc56c1-c504-438d-a2b0-5ed29c24e7d6
-caps.latest.revision: 54
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ---
 
 # Migrate a Reporting Services Installation (Native Mode)

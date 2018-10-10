@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "08/09/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: performance
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "activity monitoring [SQL Server]"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "SQL Server Management Studio [SQL Server], monitoring system"
   - "Profiler [SQL Server Profiler], how-to topics"
 ms.assetid: f9abe48d-d6e9-4c38-a355-fc5eb5a95a25
-caps.latest.revision: 18
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -17,9 +14,8 @@ helpviewer_keywords:
   - "system stored procedures [SQL Server], cursors"
   - "server cursors [SQL Server]"
 ms.assetid: a4b6955b-9cae-40fb-99a1-2931e17a8e74
-caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # Cursor Stored Procedures (Transact-SQL)

@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "SQLGetDiagRec"
@@ -19,7 +17,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLGetDiagRec function [ODBC]"
 ms.assetid: ebdbac93-3d68-438f-8416-ef1f08e04269
-caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg

@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "IntelliSense [SQL Server], completing snippets"
   - "snippets [Transact-SQL], completing"
   - "Transact-SQL snippets, completing"
 ms.assetid: a8316a58-bb57-485e-845f-84c23360314c
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg

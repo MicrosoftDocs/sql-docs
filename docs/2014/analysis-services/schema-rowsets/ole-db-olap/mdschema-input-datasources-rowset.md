@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "MDSCHEMA_INPUT_DATASOURCES"
@@ -17,7 +15,6 @@ topic_type:
 helpviewer_keywords: 
   - "MDSCHEMA_INPUT_DATASOURCES rowset"
 ms.assetid: 12482fd5-16e3-4171-9cb0-76d0d4f5308e
-caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
 manager: craigg

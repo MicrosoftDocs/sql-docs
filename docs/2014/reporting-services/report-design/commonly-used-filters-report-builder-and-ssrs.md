@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "multivalued parameters [Reporting Services]"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "parameters [Reporting Services], multivalued"
   - "valid values [Reporting Services]"
 ms.assetid: cb70d0cd-707b-4de5-b39f-e4eb57d316aa
-caps.latest.revision: 36
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg

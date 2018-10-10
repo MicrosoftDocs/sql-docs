@@ -1,0 +1,240 @@
+- name: Integration Services Transformations
+  href: integration-services-transformations.md
+- name: Aggregate Transformation
+  href: aggregate-transformation.md
+  items:
+  - name: Aggregate Transformation Editor (Aggregations Tab)
+    href: ../../aggregate-transformation-editor-aggregations-tab.md
+  - name: Aggregate Transformation Editor (Advanced Tab)
+    href: ../../aggregate-transformation-editor-advanced-tab.md
+  - name: Aggregate Values in a Dataset by Using the Aggregate Transformation
+    href: aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md
+- name: Audit Transformation
+  href: audit-transformation.md
+  items:
+  - name: Audit Transformation Editor
+    href: ../../audit-transformation-editor.md
+- name: Balanced Data Distributor Transformation
+  href: balanced-data-distributor-transformation.md
+- name: Character Map Transformation
+  href: character-map-transformation.md
+  items:
+  - name: Character Map Transformation Editor
+    href: ../../character-map-transformation-editor.md
+- name: Conditional Split Transformation
+  href: conditional-split-transformation.md
+  items:
+  - name: Conditional Split Transformation Editor
+    href: ../../conditional-split-transformation-editor.md
+  - name: Split a Dataset by Using the Conditional Split Transformation
+    href: split-a-dataset-by-using-the-conditional-split-transformation.md
+- name: Copy Column Transformation
+  href: copy-column-transformation.md
+  items:
+  - name: Copy Column Transformation Editor
+    href: ../../copy-column-transformation-editor.md
+- name: Data Conversion Transformation
+  href: data-conversion-transformation.md
+  items:
+  - name: Data Conversion Transformation Editor
+    href: ../../data-conversion-transformation-editor.md
+  - name: Convert Data to a Different Data Type by Using the Data Conversion Transformation
+    href: convert-data-type-by-using-data-conversion-transformation.md
+- name: Data Mining Query Transformation
+  href: data-mining-query-transformation.md
+  items:
+  - name: Data Mining Query Transformation Editor (Mining Model Tab)
+    href: ../../data-mining-query-transformation-editor-mining-model-tab.md
+  - name: Data Mining Query Transformation Editor (Query Tab)
+    href: ../../data-mining-query-transformation-editor-query-tab.md
+- name: DQS Cleansing Transformation
+  href: dqs-cleansing-transformation.md
+  items:
+  - name: DQS Cleansing Transformation Editor Dialog Box
+    href: ../../dqs-cleansing-transformation-editor-dialog-box.md
+  - name: DQS Cleansing Connection Manager
+    href: ../../connection-manager/dqs-cleansing-connection-manager.md
+  - name: Apply Data Quality Rules to Data Source
+    href: apply-data-quality-rules-to-data-source.md
+  - name: Map Columns to Composite Domains
+    href: map-columns-to-composite-domains.md
+- name: Derived Column Transformation
+  href: derived-column-transformation.md
+  items:
+  - name: Derived Column Transformation Editor
+    href: ../../derived-column-transformation-editor.md
+  - name: Derive Column Values by Using the Derived Column Transformation
+    href: derive-column-values-by-using-the-derived-column-transformation.md
+- name: Export Column Transformation
+  href: export-column-transformation.md
+  items:
+  - name: Export Column Transformation Editor (Columns Page)
+    href: ../../export-column-transformation-editor-columns-page.md
+  - name: Export Column Transformation Editor (Error Output Page)
+    href: ../../export-column-transformation-editor-error-output-page.md
+- name: Fuzzy Grouping Transformation
+  href: fuzzy-grouping-transformation.md
+  items:
+  - name: Fuzzy Grouping Transformation Editor (Connection Manager Tab)
+    href: ../../fuzzy-grouping-transformation-editor-connection-manager-tab.md
+  - name: Fuzzy Grouping Transformation Editor (Columns Tab)
+    href: ../../fuzzy-grouping-transformation-editor-columns-tab.md
+  - name: Fuzzy Grouping Transformation Editor (Advanced Tab)
+    href: ../../fuzzy-grouping-transformation-editor-advanced-tab.md
+  - name: Identify Similar Data Rows by Using the Fuzzy Grouping Transformation
+    href: identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md
+- name: Fuzzy Lookup Transformation
+  href: fuzzy-lookup-transformation.md
+  items:
+  - name: Fuzzy Lookup Transformation Editor (Reference Table Tab)
+    href: ../../fuzzy-lookup-transformation-editor-reference-table-tab.md
+  - name: Fuzzy Lookup Transformation Editor (Columns Tab)
+    href: ../../fuzzy-lookup-transformation-editor-columns-tab.md
+  - name: Fuzzy Lookup Transformation Editor (Advanced Tab)
+    href: ../../fuzzy-lookup-transformation-editor-advanced-tab.md
+- name: Import Column Transformation
+  href: import-column-transformation.md
+- name: Lookup Transformation
+  href: lookup-transformation.md
+  items:
+  - name: Lookup Transformation Editor (Connection Page)
+    href: ../../lookup-transformation-editor-connection-page.md
+  - name: Lookup Transformation Editor (Advanced Page)
+    href: ../../lookup-transformation-editor-advanced-page.md
+  - name: Lookup Transformation Editor (Columns Page)
+    href: ../../lookup-transformation-editor-columns-page.md
+  - name: Lookup Transformation Editor (General Page)
+    href: ../../lookup-transformation-editor-general-page.md
+  - name: Lookup Transformation Editor (Error Output Page)
+    href: ../../lookup-transformation-editor-error-output-page.md
+  - name: Implement a Lookup in No Cache or Partial Cache Mode
+    href: implement-a-lookup-in-no-cache-or-partial-cache-mode.md
+  - name: Implement a Lookup Transformation in Full Cache Mode Using the Cache Connection Manager
+    href: ../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md
+  - name: Implement a Lookup Transformation in Full Cache Mode Using the OLE DB Connection Manager
+    href: ../../connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md
+  - name: Create and Deploy a Cache for the Lookup Transformation
+    href: create-and-deploy-a-cache-for-the-lookup-transformation.md
+  - name: Create Relationships
+    href: create-relationships.md
+  - name: Cache Transform
+    href: cache-transform.md
+  - name: Cache Connection Manager
+    href: ../../connection-manager/cache-connection-manager.md
+  - name: Cache Connection Manager Editor
+    href: ../../cache-connection-manager-editor.md
+  - name: Cache Transformation Editor (Connection Manager Page)
+    href: ../../cache-transformation-editor-connection-manager-page.md
+  - name: Cache Transformation Editor (Mappings Page)
+    href: ../../cache-transformation-editor-mappings-page.md
+- name: Merge Transformation
+  href: merge-transformation.md
+  items:
+  - name: Merge Transformation Editor
+    href: ../../merge-transformation-editor.md
+- name: Merge Join Transformation
+  href: merge-join-transformation.md
+  items:
+  - name: Merge Join Transformation Editor
+    href: ../../merge-join-transformation-editor.md
+  - name: Extend a Dataset by Using the Merge Join Transformation
+    href: extend-a-dataset-by-using-the-merge-join-transformation.md
+  - name: Sort Data for the Merge and Merge Join Transformations
+    href: sort-data-for-the-merge-and-merge-join-transformations.md
+- name: Multicast Transformation
+  href: multicast-transformation.md
+  items:
+  - name: Multicast Transformation Editor
+    href: ../../multicast-transformation-editor.md
+- name: OLE DB Command Transformation
+  href: ole-db-command-transformation.md
+  items:
+  - name: Configure the OLE DB Command Transformation
+    href: ../../configure-the-ole-db-command-transformation.md
+- name: Percentage Sampling Transformation
+  href: percentage-sampling-transformation.md
+  items:
+  - name: Percentage Sampling Transformation Editor
+    href: ../../percentage-sampling-transformation-editor.md
+- name: Pivot Transformation
+  href: pivot-transformation.md
+- name: Row Count Transformation
+  href: row-count-transformation.md
+- name: Row Sampling Transformation
+  href: row-sampling-transformation.md
+  items:
+  - name: Row Sampling Transformation Editor (Sampling Page)
+    href: ../../row-sampling-transformation-editor-sampling-page.md
+- name: Script Component
+  href: script-component.md
+  items:
+  - name: Script Transformation Editor (Input Columns Page)
+    href: ../../script-transformation-editor-input-columns-page.md
+  - name: Script Transformation Editor (Inputs and Outputs Page)
+    href: ../../script-transformation-editor-inputs-and-outputs-page.md
+  - name: Script Transformation Editor (Script Page)
+    href: ../../script-transformation-editor-script-page.md
+  - name: Script Transformation Editor (Connection Managers Page)
+    href: ../../script-transformation-editor-connection-managers-page.md
+  - name: Select Script Component Type
+    href: ../../select-script-component-type.md
+- name: Slowly Changing Dimension Transformation
+  href: slowly-changing-dimension-transformation.md
+  items:
+  - name: Configure Outputs Using the Slowly Changing Dimension Wizard
+    href: configure-outputs-using-the-slowly-changing-dimension-wizard.md
+  - name: Slowly Changing Dimension Wizard F1 Help
+    href: slowly-changing-dimension-wizard-f1-help.md
+  - name: Welcome to the Slowly Changing Dimension Wizard
+    href: welcome-to-the-slowly-changing-dimension-wizard.md
+  - name: Select a Dimension Table and Keys (Slowly Changing Dimension Wizard)
+    href: select-a-dimension-table-and-keys-slowly-changing-dimension-wizard.md
+  - name: Slowly Changing Dimension Columns (Slowly Changing Dimension Wizard)
+    href: slowly-changing-dimension-columns-slowly-changing-dimension-wizard.md
+  - name: Fixed and Changing Attribute Options (Slowly Changing Dimension Wizard
+    href: fixed-and-changing-attribute-options-slowly-changing-dimension-wizard.md
+  - name: Historical Attribute Options (Slowly Changing Dimension Wizard)
+    href: historical-attribute-options-slowly-changing-dimension-wizard.md
+  - name: Inferred Dimension Members (Slowly Changing Dimension Wizard)
+    href: inferred-dimension-members-slowly-changing-dimension-wizard.md
+  - name: Finish the Slowly Changing Dimension Wizard
+    href: finish-the-slowly-changing-dimension-wizard.md
+- name: Sort Transformation
+  href: sort-transformation.md
+  items:
+  - name: Sort Transformation Editor
+    href: ../../sort-transformation-editor.md
+- name: Term Extraction Transformation
+  href: term-extraction-transformation.md
+  items:
+  - name: Term Extraction Transformation Editor (Term Extraction Tab)
+    href: ../../term-extraction-transformation-editor-term-extraction-tab.md
+  - name: Term Extraction Transformation Editor (Exclusion Tab)
+    href: ../../term-extraction-transformation-editor-exclusion-tab.md
+  - name: Term Extraction Transformation Editor (Advanced Tab)
+    href: ../../term-extraction-transformation-editor-advanced-tab.md
+- name: Term Lookup Transformation
+  href: term-lookup-transformation.md
+  items:
+  - name: Term Lookup Transformation Editor (Reference Table Tab)
+    href: ../../term-lookup-transformation-editor-reference-table-tab.md
+  - name: Term Lookup Transformation Editor (Term Lookup Tab)
+    href: ../../term-lookup-transformation-editor-term-lookup-tab.md
+  - name: Term Lookup Transformation Editor (Advanced Tab)
+    href: ../../term-lookup-transformation-editor-advanced-tab.md
+- name: Union All Transformation
+  href: union-all-transformation.md
+  items:
+  - name: Union All Transformation Editor
+    href: ../../union-all-transformation-editor.md
+  - name: Merge Data by Using the Union All Transformation
+    href: merge-data-by-using-the-union-all-transformation.md
+- name: Unpivot Transformation
+  href: unpivot-transformation.md
+  items:
+  - name: Unpivot Transformation Editor
+    href: ../../unpivot-transformation-editor.md
+- name: Transform Data with Transformations
+  href: transform-data-with-transformations.md
+- name: Transformation Custom Properties
+  href: transformation-custom-properties.md

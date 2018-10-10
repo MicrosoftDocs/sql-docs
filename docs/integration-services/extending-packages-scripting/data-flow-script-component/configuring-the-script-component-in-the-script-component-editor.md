@@ -4,14 +4,9 @@ ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.component: "extending-packages-scripting"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
 dev_langs: 
   - "VB"
 helpviewer_keywords: 
@@ -20,7 +15,6 @@ helpviewer_keywords:
   - "SSIS Script component, configuring"
   - "Script component [Integration Services], configuring"
 ms.assetid: 586dd799-f383-4d6d-b1a1-f09233d14f0a
-caps.latest.revision: 46
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
@@ -31,7 +25,7 @@ manager: craigg
 ## Selecting the Type of Component to Create  
  When you add a Script component to the Data Flow pane of [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer, the **Select Script Component Type** dialog box appears. You preconfigure the component as a source, transformation, or destination. After you make this initial selection, you can continue to configure the component in the **Script Transformation Editor**.  
   
- To set the default script language for the Script component, use the **Scripting language** option on the **General** page of the **Options** dialog box. For more information, see [General Page](https://msdn.microsoft.com/library/ms189436(v=sql.110).aspx).  
+ To set the default script language for the Script component, use the **Scripting language** option on the **General** page of the **Options** dialog box. For more information, see [General Page](../../general-page-of-integration-services-designers-options.md).  
   
 ## Understanding the Two Design-Time Modes  
  In [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer, the Script component has two modes: metadata design mode and code design mode.  

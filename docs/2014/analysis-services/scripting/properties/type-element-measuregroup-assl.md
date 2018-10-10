@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "Type Element (MeasureGroup)"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "Type element"
 ms.assetid: 3a584baf-36bb-4e1d-9128-c4758c0b8f06
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg

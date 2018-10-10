@@ -1,14 +1,11 @@
-﻿---
+---
 title: "sp_describe_first_result_set (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_describe_first_result_set"
@@ -18,11 +15,10 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_describe_first_result_set"
 ms.assetid: f2355a75-3a8e-43e6-96ad-4f41038f6d22
-caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -111,7 +107,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
  The name, nullability, and data type can differ. If **sp_describe_first_result_set** returns an empty result set, the guarantee is that the batch execution will return no-result sets.  
   
- This guarantee presumes there are are no relevant schema changes on the server. Relevant schema changes on the server do not include creating a temporary tables or table variables in the batch A between the time that **sp_describe_first_result_set** is called and the time that the result set is returned during execution, including schema changes made by batch B.  
+ This guarantee presumes there are no relevant schema changes on the server. Relevant schema changes on the server do not include creating a temporary tables or table variables in the batch A between the time that **sp_describe_first_result_set** is called and the time that the result set is returned during execution, including schema changes made by batch B.  
   
  **sp_describe_first_result_set** returns an error in any of the following cases.  
   

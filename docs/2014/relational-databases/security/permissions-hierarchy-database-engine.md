@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: security
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.server.permissions.f1--May use common.permissions"
@@ -18,9 +16,8 @@ helpviewer_keywords:
   - "permissions [SQL Server], hierarchy"
   - "security [SQL Server], granting access"
 ms.assetid: f6d20a55-ef03-4e14-85f9-009902889866
-caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Permissions Hierarchy (Database Engine)

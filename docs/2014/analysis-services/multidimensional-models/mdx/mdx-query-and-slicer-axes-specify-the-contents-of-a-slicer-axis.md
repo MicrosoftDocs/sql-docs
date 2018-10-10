@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "slicer axis"
   - "filtering data [MDX]"
 ms.assetid: c56b0a70-cdec-427f-990e-425290344e7d
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg

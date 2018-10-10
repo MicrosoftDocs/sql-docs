@@ -4,34 +4,28 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 helpviewer_keywords: 
   - "Data Migration, server side data migration"
   - "Data Migration,client side data migration"
 ms.assetid: a6a7f4d6-68aa-4a38-93bf-53eba0d7dc82
-caps.latest.revision: 24
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: craigg
 ---
 # Migrating MySQL Data into SQL Server - Azure SQL DB (MySQLToSQL)
-After you have successfully synchronized the converted objects with [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure, you can migrate data from MySQL to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure.  
+After you have successfully synchronized the converted objects with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure, you can migrate data from MySQL to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure.  
   
 > [!IMPORTANT]  
-> If the engine being used is Server Side Data Migration Engine, then, before migrating data, you must install the SSMA for MySQL Extension Pack and the MySQL providers on the computer that is running SSMA. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent service must also be running. For more information about how to install the extension pack, see [Installing SSMA Components on SQL Server (MySQL to SQL)](http://msdn.microsoft.com/6772d0c5-258f-4d7b-afb0-b5f810e71af1)  
+> If the engine being used is Server Side Data Migration Engine, then, before migrating data, you must install the SSMA for MySQL Extension Pack and the MySQL providers on the computer that is running SSMA. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service must also be running. For more information about how to install the extension pack, see [Installing SSMA Components on SQL Server (MySQL to SQL)](http://msdn.microsoft.com/6772d0c5-258f-4d7b-afb0-b5f810e71af1)  
   
 ## Setting Migration Options  
-Before migrating data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure, review the project migration options in the **Project Settings** dialog box.  
+Before migrating data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure, review the project migration options in the **Project Settings** dialog box.  
   
 -   By using this dialog box you can set options such as migration batch size, table locking, constraint checking, null value handling and identity value-handling. For more information about the Project Migration Settings, see [Project Settings (Migration)](http://msdn.microsoft.com/2a3cba9e-cd54-4a8b-b858-8fc4cf2580d9).  
   
-    For more information on **Extended Data Migration Settings**, see [Data Migration Settings](http://msdn.microsoft.com/9c396df4-5676-4f32-9c57-70d4f15f9b7a)  
+    For more information on **Extended Data Migration Settings**, see [Data Migration Settings](data-migration-settings-mysqltosql.md)  
   
 -   The **Migration Engine** in the **Project Settings** dialog box, allows the user to perform the migration process using two types of data migration engines:  
   
@@ -58,7 +52,7 @@ Before migrating data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md
 > **Client Side Data Migration** option is available for SQL Azure only.  
   
 ## Migrating Data to SQL Server or SQL Azure  
-Migrating data is a bulk-load operation that moves rows of data from MySQL tables into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure tables in transactions. The number of rows loaded into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] in each transaction is configured in the project settings.  
+Migrating data is a bulk-load operation that moves rows of data from MySQL tables into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure tables in transactions. The number of rows loaded into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in each transaction is configured in the project settings.  
   
 To view migration messages, make sure that the Output pane is visible. Otherwise, from the **View** menu, select **Output**.  
   
@@ -88,7 +82,7 @@ To view migration messages, make sure that the Output pane is visible. Otherwise
   
         1.  The SSMA for MySQL Extension Pack is installed on the instance of SQL Server.  
   
-        2.  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent service is running on the instance of SQL Server  
+        2.  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service is running on the instance of SQL Server  
   
     -   For performing **Server Side Data Migration**, select the **Server Side Data Migration Engine** option in the **Project Settings** dialog box.  
   

@@ -1,28 +1,163 @@
 {
     "redirections": [
         {
+            "source_path": "docs/relational-databases/polybase/get-started-with-polybase.md",
+            "redirect_url": "/sql/relational-databases/polybase/polybase-guide",
+            "redirect_document_id": false 
+        },
+        {
+            "source_path": "docs/advanced-analytics/architecture-overview-machine-learning.md",
+            "redirect_url": "/sql/advanced-analytics/concepts/extensibility-framework",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "docs/advanced-analytics/r/architecture-overview-sql-server-r.md",
+            "redirect_url": "/sql/advanced-analytics/concepts/extensibility-framework",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "docs/advanced-analytics/r/r-interoperability-in-sql-server.md",
+            "redirect_url": "/sql/advanced-analytics/concepts/extension-r",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "docs/advanced-analytics/r/new-components-in-sql-server-to-support-r.md",
+            "redirect_url": "/sql/advanced-analytics/concepts/extension-r",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "docs/advanced-analytics/python/architecture-overview-sql-server-python.md",
+            "redirect_url": "/sql/advanced-analytics/concepts/extensibility-framework",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "docs/advanced-analytics/python/sql-server-python-services.md",
+            "redirect_url": "/sql/advanced-analytics/concepts/extension-py",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "docs/advanced-analytics/python/python-interoperability.md",
+            "redirect_url": "/sql/advanced-analytics/concepts/extension-py",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "docs/advanced-analytics/python/new-components-in-sql-server-to-support-python-integration.md",
+            "redirect_url": "/sql/advanced-analytics/concepts/extension-py",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "docs/advanced-analytics/r/security-overview-sql-server-r.md",
+            "redirect_url": "/sql/advanced-analytics/concepts/security",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "docs/advanced-analytics/python/security-overview-sql-server-python-services.md",
+            "redirect_url": "/sql/advanced-analytics/concepts/security",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "docs/advanced-analytics/r/security-considerations-for-the-r-runtime-in-sql-server.md",
+            "redirect_url": "/sql/advanced-analytics/concepts/security",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "docs/advanced-analytics/general/sql-server-launchpad-service-account.md",
+            "redirect_url": "/sql/advanced-analytics/security/sql-server-launchpad-service-account",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/advanced-analytics/r/add-sqlrusergroup-to-database.md",
+            "redirect_url": "/sql/advanced-analytics/security/add-sqlrusergroup-to-database",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/advanced-analytics/r/modify-the-user-account-pool-for-sql-server-r-services.md",
+            "redirect_url": "/sql/advanced-analytics/security/add-sqlrusergroup-to-database",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "docs/advanced-analytics/r/differences-in-r-features-between-editions-of-sql-server.md",
+            "redirect_url": "/sql/sql-server/editions-and-components-of-sql-server-2017",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "docs/advanced-analytics/install/sql-r-standalone-windows-install.md",
+            "redirect_url": "/sql/advanced-analytics/install/sql-machine-learning-standalone-windows-install",
+            "redirect_document_id": false
+        },   
+        {
             "source_path": "docs/linux/sql-server-linux-develop-use-ssms.md",
             "redirect_url": "/sql/linux/sql-server-linux-manage-ssms",
             "redirect_document_id": false
         },
         {
+            "source_path": "docs/relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md",
+            "redirect_url": "/sql/relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016#1---create-stored-access-policy-and-shared-access-storage",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md",
+            "redirect_url": "/sql/relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016#2---create-a-sql-server-credential-using-a-shared-access-signature",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/lesson-3-database-backup-to-url.md",
+            "redirect_url": "/sql/relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016#3---database-backup-to-url",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/lesson-4-restore-database-to-virtual-machine-from-url.md",
+            "redirect_url": "/sql/relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016#4----restore-database-to-virtual-machine-from-url",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/lesson-5-backup-database-using-file-snapshot-backup.md",
+            "redirect_url": "/sql/relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016#5---backup-database-using-file-snapshot-backup",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md",
+            "redirect_url": "/sql/relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016#6----generate-activity-and-backup-log-using-file-snapshot-backup",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/lesson-7-restore-a-database-to-a-point-in-time.md",
+            "redirect_url": "/sql/relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016#7---restore-a-database-to-a-point-in-time",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/lesson-8-restore-as-new-database-from-log-backup.md",
+            "redirect_url": "/sql/relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016#8----restore-as-new-database-from-log-backup",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/lesson-9-manage-backup-sets-and-file-snapshot-backups.md",
+            "redirect_url": "/sql/relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016#9---manage-backup-sets-and-file-snapshot-backups",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/advanced-analytics/r/install-pretrained-models-sql-server.md",
-            "redirect_url": "https://docs.microsoft.com/sql/advanced-analytics/install/sql-pretrained-models-install",
+            "redirect_url": "/sql/advanced-analytics/install/sql-pretrained-models-install",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "docs/advanced-analytics/r/sqldev-import-data-to-sql-server-using-powershell.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/sqldev-download-the-sample-data",
             "redirect_document_id": false
         }, 
         {
             "source_path": "docs/advanced-analytics/tutorials/walkthrough-prerequisites-for-data-science-walkthroughs.md",
-            "redirect_url": "https://docs.microsoft.com/sql/advanced-analytics/tutorials/walkthrough-data-science-end-to-end-walkthrough",
+            "redirect_url": "/sql/advanced-analytics/tutorials/walkthrough-data-science-end-to-end-walkthrough",
             "redirect_document_id": false
         }, 
         {
             "source_path": "docs/advanced-analytics/r/r-package-management-for-sql-server-r-services.md",
-            "redirect_url": "https://docs.microsoft.com/sql/advanced-analytics/r/install-additional-r-packages-on-sql-server",
+            "redirect_url": "/sql/advanced-analytics/r/install-additional-r-packages-on-sql-server",
             "redirect_document_id": false
         },  
         {
             "source_path": "docs/advanced-analytics/r/using-r-in-azure-sql-database.md",
-            "redirect_url": "https://docs.microsoft.com/sql/advanced-analytics/what-s-new-in-sql-server-machine-learning-services#azure-sql-database-roadmap",
+            "redirect_url": "/sql/advanced-analytics/what-s-new-in-sql-server-machine-learning-services#azure-sql-database-roadmap",
             "redirect_document_id": false
         },        
         {
@@ -33,11 +168,6 @@
         {
             "source_path": "docs/advanced-analytics/r/setup-or-configure-r-tools.md",
             "redirect_url": "/sql/advanced-analytics/r/set-up-a-data-science-client",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "docs/advanced-analytics/python/index.md",
-            "redirect_url": "/sql/advanced-analytics/what-is-sql-server-machine-learning",
             "redirect_document_id": false
         },
         {
@@ -116,6 +246,52 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "docs/relational-databases/tables/lesson-1-1-examining-the-current-structure-of-the-employee-table.md",
+            "redirect_url": "/sql/relational-databases/tables/lesson-1-converting-a-table-to-a-hierarchical-structure",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/tables/lesson-1-2-populating-a-table-with-existing-hierarchical-data.md",
+            "redirect_url": "/sql/relational-databases/tables/lesson-1-converting-a-table-to-a-hierarchical-structure",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/tables/lesson-1-3-optimizing-the-neworg-table.md",
+            "redirect_url": "/sql/relational-databases/tables/lesson-1-converting-a-table-to-a-hierarchical-structure",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/tables/lesson-1-4-summary-converting-a-table-to-a-hierarchical-structure.md",
+            "redirect_url": "/sql/relational-databases/tables/lesson-1-converting-a-table-to-a-hierarchical-structure",
+            "redirect_document_id": false
+        },
+
+        {
+            "source_path": "docs/relational-databases/tables/lesson-2-1-creating-a-table-using-the-hierarchyid-data-type.md",
+            "redirect_url": "/sql/relational-databases/tables/lesson-2-creating-and-managing-data-in-a-hierarchical-table",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/tables/lesson-2-2-populating-a-hierarchical-table-using-hierarchical-methods.md",
+            "redirect_url": "/sql/relational-databases/tables/lesson-2-creating-and-managing-data-in-a-hierarchical-table",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/tables/lesson-2-3-querying-a-hierarchical-table-using-hierarchy-methods.md",
+            "redirect_url": "/sql/relational-databases/tables/lesson-2-creating-and-managing-data-in-a-hierarchical-table",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/tables/lesson-2-4-reordering-data-in-a-hierarchical-table-using-hierarchical-methods.md",
+            "redirect_url": "/sql/relational-databases/tables/lesson-2-creating-and-managing-data-in-a-hierarchical-table",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/tables/lesson-2-5-summary-managing-data-in-a-hierarchical-table.md",
+            "redirect_url": "/sql/relational-databases/tables/lesson-2-creating-and-managing-data-in-a-hierarchical-table",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/linux/sql-server-linux-azure-virtual-machine.md",
             "redirect_url": "/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine",
             "redirect_document_id": false
@@ -166,9 +342,39 @@
             "redirect_document_id": true
         },
         {
-            "source_path": "docs/sql/reporting-services/report-server/configure-report-builder-access.md",
-            "redirect_url": "/sql/reporting-services/report-server/configure-web-portal",
+            "source_path": "docs/reporting-services/report-builder/report-sections-dialog-box-report-builder.md",
+            "redirect_url": "/sql/reporting-services/report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs",
             "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/reporting-services/report-builder/reporting-services-login-dialog-box-report-builder.md",
+            "redirect_url": "/sql/reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/reporting-services/report-data/dataset-properties-dialog-box-filters.md",
+            "redirect_url": "/sql/reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/reporting-services/report-data/enter-data-source-credentials-dialog-box-report-builder.md",
+            "redirect_url": "/sql/reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/reporting-services/extensions/data-processing/removing-a-data-processing-extension.md",
+            "redirect_url": "/sql/reporting-services/extensions/reporting-services-extensions",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/reporting-services/extensions/delivery-extension/implementing-the-isubscriptionbaseuiusercontrol-interface.md",
+            "redirect_url": "/sql/reporting-services/extensions/delivery-extension/implementing-a-delivery-extension",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/reporting-services/extensions/delivery-extension/using-the-ideliveryreportserverinformation-interface-for-a-delivery-extension.md",
+            "redirect_url": "/sql/reporting-services/extensions/delivery-extension/implementing-a-delivery-extension",
+            "redirect_document_id": false
         },
         {
             "source_path": "docs/sql-server/sql-server-new-updated-sql-docs-pr.md",
@@ -1001,6 +1207,91 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "docs/t-sql/lesson-1-1-creating-a-database.md",
+            "redirect_url": "/sql/t-sql/lesson-1-creating-database-objects",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/t-sql/lesson-1-2-creating-a-table.md",
+            "redirect_url": "/sql/t-sql/lesson-1-creating-database-objects",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/t-sql/lesson-1-3-inserting-and-updating-data-in-a-table.md",
+            "redirect_url": "/sql/t-sql/lesson-1-creating-database-objects",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/t-sql/lesson-1-4-reading-the-data-in-a-table.md",
+            "redirect_url": "/sql/t-sql/lesson-1-creating-database-objects",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/t-sql/lesson-1-5-summary-creating-database-objects.md",
+            "redirect_url": "/sql/t-sql/lesson-1-creating-database-objects",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/t-sql/lesson-2-1-creating-a-login.md",
+            "redirect_url": "/sql/t-sql/lesson-2-configuring-permissions-on-database-objects",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/t-sql/lesson-2-2-granting-access-to-a-database.md",
+            "redirect_url": "/sql/t-sql/lesson-2-configuring-permissions-on-database-objects",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/t-sql/lesson-2-3-creating-views-and-stored-procedures.md",
+            "redirect_url": "/sql/t-sql/lesson-1-creating-database-objects",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/t-sql/lesson-2-4-granting-access-to-a-database-object.md",
+            "redirect_url": "/sql/t-sql/lesson-2-configuring-permissions-on-database-objects",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/t-sql/lesson-2-5-summary-configuring-permissions-on-database-objects.md",
+            "redirect_url": "/sql/t-sql/lesson-2-configuring-permissions-on-database-objects",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/t-sql/lesson-3-1-deleting-database-objects.md",
+            "redirect_url": "/sql/t-sql/lesson-3-deleting-database-objects",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/dta/lesson-1-1-launching-database-engine-tuning-advisor.md",
+            "redirect_url": "/sql/tools/dta/lesson-1-basic-navigation-in-database-engine-tuning-advisor",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/dta/lesson-1-2-setting-tool-options-and-layout.md",
+            "redirect_url": "/sql/tools/dta/lesson-1-basic-navigation-in-database-engine-tuning-advisor",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/dta/lesson-1-1-tuning-a-workload.md",
+            "redirect_url": "/sql/tools/dta/lesson-2-using-database-engine-tuning-advisor",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/dta/lesson-1-2-viewing-tuning-recommendations.md",
+            "redirect_url": "/sql/tools/dta/lesson-2-using-database-engine-tuning-advisor",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/dta/lesson-1-3-viewing-tuning-reports.md",
+            "redirect_url": "/sql/tools/dta/lesson-2-using-database-engine-tuning-advisor",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/dta/ lesson-3-1-starting-the-dta-command-prompt-utility-and-tuning-a-workload.md",
+            "redirect_url": "/sql/tools/dta/lesson-3-using-the-dta-command-prompt-utility",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/connect/php/download-microsoft-php-driver-for-sql-server.md",
             "redirect_url": "/sql/connect/php/microsoft-php-driver-for-sql-server",
             "redirect_document_id": false
@@ -1111,6 +1402,26 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "docs/relational-database/policy-based-management/lesson-1-1-create-the-off-by-default-policy.md",
+            "redirect_url": "/sql/relational-database/policy-based-management/lesson-1-create-and-apply-an-off-by-default-policy",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-database/policy-based-management/lesson-1-2-configure-a-server-to-run-the-off-by-default-policy.md",
+            "redirect_url": "/sql/relational-database/policy-based-management/lesson-1-create-and-apply-an-off-by-default-policy",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-database/policy-based-management/lesson-2-1-create-the-finance-name-policy.md",
+            "redirect_url": "/sql/relational-database/policy-based-management/lesson-2-create-and-apply-a-naming-standards-policy",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-database/policy-based-management/lesson-2-2-subscribe-to-and-check-the-finance-name-policy.md",
+            "redirect_url": "/sql/relational-database/policy-based-management/lesson-2-2-subscribe-to-and-check-the-finance-name-policy",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/connect/odbc/mac/connection-string-keywords-and-data-source-names-dsns.md",
             "redirect_url": "/sql/connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns",
             "redirect_document_id": false
@@ -1181,6 +1492,16 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "docs/t-sql/statements/restore-database-parallel-data-warehouse.md",
+            "redirect_url": "/sql/t-sql/statements/restore-statements-transact-sql",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/t-sql/statements/backup-database-parallel-data-warehouse.md",
+            "redirect_url": "/sql/t-sql/statements/backup-transact-sql",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/t-sql/statements/backup-and-restore-statements-transact-sql.md",
             "redirect_url": "/sql/t-sql/statements/statements",
             "redirect_document_id": false
@@ -1232,17 +1553,17 @@
         },
         {
             "source_path": "docs/t-sql/statements/alter-database-azure-sql-database.md",
-            "redirect_url": "/sql/t-sql/alter-database-transact-sql",
+            "redirect_url": "/sql/t-sql/statements/alter-database-transact-sql",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/t-sql/statements/alter-database-azure-sql-data-warehouse.md",
-            "redirect_url": "/sql/t-sql/alter-database-transact-sql",
+            "redirect_url": "/sql/t-sql/statements/alter-database-transact-sql",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/t-sql/statements/alter-database-parallel-data-warehouse.md",
-            "redirect_url": "/sql/t-sql/alter-database-transact-sql",
+            "redirect_url": "/sql/t-sql/statements/alter-database-transact-sql",
             "redirect_document_id": false
         },
         {
@@ -1678,16 +1999,6 @@
         {
             "source_path": "docs/database-engine/configure-windows/what-s-new-in-sql-server-vnext-database-engine.md",
             "redirect_url": "/sql/database-engine/configure-windows/what-s-new-in-sql-server-2017-database-engine",
-            "redirect_document_id": true
-        },
-        {
-            "source_path": "docs/sql-server/sql-server-vnext-release-notes.md",
-            "redirect_url": "/sql/sql-server/sql-server-2017-release-notes",
-            "redirect_document_id": true
-        },
-        {
-            "source_path": "docs/sql-server/what-s-new-in-sql-server-vnext.md",
-            "redirect_url": "/sql/sql-server/what-s-new-in-sql-server-2017",
             "redirect_document_id": true
         },
         {
@@ -2161,6 +2472,31 @@
             "redirect_document_id":false
         },
         {
+            "source_path": "docs/relational-databases/security/encryption/transparent-data-encryption-azure-sql.md",
+            "redirect_url": "/azure/sql-database/transparent-data-encryption-azure-sql",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/security/encryption/transparent-data-encryption-byok-azure-sql-configure.md",
+            "redirect_url": "/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/security/encryption/transparent-data-encryption-byok-azure-sql-key-rotation.md",
+            "redirect_url": "/azure/sql-database/transparent-data-encryption-byok-azure-sql-key-rotation",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/security/encryption/transparent-data-encryption-byok-azure-sql-remove-tde-protector.md",
+            "redirect_url": "/azure/sql-database/transparent-data-encryption-byok-azure-sql-remove-tde-protector",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/security/encryption/transparent-data-encryption-byok-azure-sql.md",
+            "redirect_url": "/azure/sql-database//transparent-data-encryption-byok-azure-sql",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/relational-databases/security/encryption/transparent-data-encryption-with-azure-sql-database.md",
             "redirect_url": "/sql/relational-databases/security/encryption/transparent-data-encryption-azure-sql",
             "redirect_document_id": false
@@ -2283,6 +2619,16 @@
         {
             "source_path": "docs/relational-databases/system-dynamic-management-views/sys-dm-linux-proc-sql-threads-transact-sql.md",
             "redirect_url": "/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/replication/replication-to-sql-database.md",
+            "redirect_url": "https://docs.microsoft.com/en-us/azure/sql-database/replication-to-sql-database",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/replication/replication-with-sql-database-managed-instance.md",
+            "redirect_url": "https://docs.microsoft.com/en-us/azure/sql-database/replication-with-sql-database-managed-instance",
             "redirect_document_id": false
         },
         {
@@ -3872,6 +4218,136 @@
         "source_path": "docs/relational-databases/databases/deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine.md",
         "redirect_url": "/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision",
         "redirect_document_id": false
+      },
+      {
+        "source_path": "docs/sql-operations-studio/code-snippets.md",
+        "redirect_url": "/sql/azure-data-studio/code-snippets",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "docs/sql-operations-studio/dashboards.md",
+        "redirect_url": "/sql/azure-data-studio/dashboards",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "docs/sql-operations-studio/download.md",
+        "redirect_url": "/sql/azure-data-studio/download",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "docs/sql-operations-studio/enable-kerberos.md",
+        "redirect_url": "/sql/azure-data-studio/enable-kerberos",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "docs/sql-operations-studio/extensions.md",
+        "redirect_url": "/sql/azure-data-studio/extensions",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "docs/sql-operations-studio/faq.md",
+        "redirect_url": "/sql/azure-data-studio/faq",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "docs/sql-operations-studio/insight-widgets.md",
+        "redirect_url": "/sql/azure-data-studio/insight-widgets",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "docs/sql-operations-studio/integrated-terminal.md",
+        "redirect_url": "/sql/azure-data-studio/integrated-terminal",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "docs/sql-operations-studio/keyboard-shortcuts.md",
+        "redirect_url": "/sql/azure-data-studio/keyboard-shortcuts",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "docs/sql-operations-studio/quickstart-sql-database.md",
+        "redirect_url": "/sql/azure-data-studio/quickstart-sql-database",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "docs/sql-operations-studio/quickstart-sql-dw.md",
+        "redirect_url": "/sql/azure-data-studio/quickstart-sql-dw",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "docs/sql-operations-studio/quickstart-sql-server.md",
+        "redirect_url": "/sql/azure-data-studio/quickstart-sql-server",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "docs/sql-operations-studio/release-notes.md",
+        "redirect_url": "/sql/azure-data-studio/release-notes",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "docs/sql-operations-studio/server-groups.md",
+        "redirect_url": "/sql/azure-data-studio/server-groups",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "docs/sql-operations-studio/settings.md",
+        "redirect_url": "/sql/azure-data-studio/settings",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "docs/sql-operations-studio/source-control.md",
+        "redirect_url": "/sql/azure-data-studio/source-control",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "docs/sql-operations-studio/sql-server-agent-extension.md",
+        "redirect_url": "/sql/azure-data-studio/sql-server-agent-extension",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "docs/sql-operations-studio/sql-server-profiler-extension.md",
+        "redirect_url": "/sql/azure-data-studio/sql-server-profiler-extension",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "docs/sql-operations-studio/tutorial-backup-restore-sql-server.md",
+        "redirect_url": "/sql/azure-data-studio/tutorial-backup-restore-sql-server",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "docs/sql-operations-studio/tutorial-build-custom-insight-sql-server.md",
+        "redirect_url": "/sql/azure-data-studio/tutorial-build-custom-insight-sql-server",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "docs/sql-operations-studio/tutorial-qds-sql-server.md",
+        "redirect_url": "/sql/azure-data-studio/tutorial-qds-sql-server",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "docs/sql-operations-studio/tutorial-sql-editor.md",
+        "redirect_url": "/sql/azure-data-studio/tutorial-sql-editor",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "docs/sql-operations-studio/tutorial-table-space-sql-server.md",
+        "redirect_url": "/sql/azure-data-studio/tutorial-table-space-sql-server",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "docs/sql-operations-studio/usage-data-collection.md",
+        "redirect_url": "/sql/azure-data-studio/usage-data-collection",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "docs/sql-operations-studio/what-is.md",
+        "redirect_url": "/sql/azure-data-studio/what-is",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "docs/linux/tutorial-sql-server-ag-kubernetes.md",
+        "redirect_url": "/sql/linux/sql-server-ag-kubernetes",
+        "redirect_document_id": true
       }
      
     ]

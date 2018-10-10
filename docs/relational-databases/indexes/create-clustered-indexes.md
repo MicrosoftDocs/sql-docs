@@ -1,13 +1,11 @@
-﻿---
+---
 title: "Create Clustered Indexes | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/17/2017"
 ms.prod: sql
 ms.prod_service: "table-view-index, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: table-view-index
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "index creation [SQL Server], clustered indexes"
@@ -16,11 +14,10 @@ helpviewer_keywords:
   - "clustered indexes, UNIQUE constraint"
   - "indexes [SQL Server], clustered"
 ms.assetid: 47148383-c2c7-4f08-a9e4-7016bf2d1d13
-caps.latest.revision: 33
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create Clustered Indexes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -87,7 +84,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
   
 4.  Under **Index key columns**, click **Add…**.  
   
-5.  In the **Select Columns from***table_name* dialog box, select the check box of the table column to be added to the clustered index.  
+5.  In the **Select Columns from**_table\_name_ dialog box, select the check box of the table column to be added to the clustered index.  
   
 6.  Click **OK**.  
   
@@ -113,7 +110,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
   
 9. Click **Close**.  
   
-10. On the **File** menu, click **Save***table_name*.  
+10. On the **File** menu, click **Save**_table\_name_.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/28/2018"
 ms.prod: ""
 ms.prod_service: "sql-database"
-ms.component: 
 ms.reviewer: carlrab, edmaca
-ms.suite: "sql"
 ms.technology: 
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "resource_stats"
@@ -53,7 +50,7 @@ The **sys.server_resource_stats** view has different definitions depending on th
 
  
 > [!TIP]  
->  For more context about these limits and service tiers, see the topics [Managed Instance service tiers](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-managed-instance#managed-instance-service-tier).  
+>  For more context about these limits and service tiers, see the topics [Managed Instance service tiers](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-service-tier).  
     
 ## Permissions  
  This view is available to all user roles with permissions to connect to the **master** database.  
@@ -77,4 +74,4 @@ HAVING AVG(avg_cpu_percent) >= 80
 ```  
     
 ## See Also  
- [Managed Instance service tiers](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-managed-instance#managed-instance-service-tier)
+ [Managed Instance service tiers](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-service-tier)

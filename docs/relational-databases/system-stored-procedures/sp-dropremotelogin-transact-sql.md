@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_dropremotelogin"
@@ -18,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_dropremotelogin"
 ms.assetid: 9f097652-a286-40b2-be73-568d77ada698
-caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+ms.author: vanto
+manager: craigg
 manager: craigg
 ---
 # sp_dropremotelogin (Transact-SQL)

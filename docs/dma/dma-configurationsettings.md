@@ -2,21 +2,18 @@
 title: "Configure settings for Data Migration Assistant (SQL Server) | Microsoft Docs"
 description: Learn how to configure settings for the Data Migration Assistant by updating values in the configuration file
 ms.custom: ""
-ms.date: "08/31/2017"
+ms.date: "08/29/2018"
 ms.prod: sql
 ms.prod_service: "dma"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: dma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 keywords: ""
 helpviewer_keywords: 
   - "Data Migration Assistant, Assess"
 ms.assetid: ""
-caps.latest.revision: ""
 author: HJToland3
-ms.author: jtoland
+ms.author: rajpo
 manager: craigg
 ---
 

@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "checkpoints [Integration Services]"
   - "restarting packages"
   - "starting packages"
 ms.assetid: 9afffa5a-d803-4653-8afc-386453fc163f
-caps.latest.revision: 25
 author: douglaslms
 ms.author: douglasl
 manager: craigg

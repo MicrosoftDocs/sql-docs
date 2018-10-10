@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: native-client  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "profiling ODBC driver performance data [SQL Server Native Client]"
@@ -19,7 +16,6 @@ helpviewer_keywords:
   - "SQLPERF data structure"
   - "statistical information [ODBC]"
 ms.assetid: 8f44e194-d556-4119-a759-4c9dec7ecead
-caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
 manager: craigg

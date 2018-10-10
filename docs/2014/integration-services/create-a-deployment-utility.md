@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "deploying packages [Integration Services], deployment utility"
   - "deployment utility [Integration Services]"
 ms.assetid: 354322a4-ae8c-4d92-8e71-42d29dbd0614
-caps.latest.revision: 49
 author: douglaslms
 ms.author: douglasl
 manager: craigg

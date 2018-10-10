@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "report servers [Reporting Services], encryption"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "encryption [Reporting Services]"
   - "databases [Reporting Services], encryption"
 ms.assetid: ac0f4d4d-fc4b-4c62-a693-b86e712e75f2
-caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
 manager: craigg

@@ -5,12 +5,9 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 7f83b514-6e76-4f37-baf3-a10db2010e7c
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -18,7 +15,7 @@ manager: craigg
 # ISQLServerStatement Interface
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Represents the basic implementation of JDBC statement functionality. This interface was added in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] JDBC Driver 3.0.  
+  Represents the basic implementation of JDBC statement functionality. This interface was added in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0.  
   
  **Package:** com.microsoft.sqlserver.jdbc  
   

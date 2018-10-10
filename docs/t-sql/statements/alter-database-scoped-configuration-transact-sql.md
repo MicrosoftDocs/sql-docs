@@ -1,13 +1,11 @@
 ---
 title: "ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/23/2018"
+ms.date: "09/26/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "ALTER_DATABASE_SCOPED_CONFIGURATION"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "ALTER DATABASE SCOPED CONFIGURATION statement"
   - "configuration [SQL Server], ALTER DATABASE SCOPED CONFIGURATION statement"
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
-caps.latest.revision: 32
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg
@@ -186,7 +183,7 @@ This value elevates operations that support ONLINE. Operations that do not suppo
  
 ELEVATE_RESUMABLE= { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
 
-**Applies to**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (feature is in public preview)
+***Applies to**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] and [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] as a public preview feature
 
 Allows you to select options to cause the engine to automatically elevate supported operations to resumable. The default is OFF, which means operations are not be elevated to resumable unless specified in the statement. [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) reflects the current value of ELEVATE_RESUMABLE. These options only apply to operations that are supported for resumable. 
 
@@ -250,7 +247,7 @@ on the database. This permission can be granted by a user with CONTROL permissio
   
 **DacFx**  
   
- Since ALTER DATABASE SCOPED CONFIGURATION is a new feature in Azure SQL Database and SQL Server beginning with SQL Server 2016 that affects the database schema, exports of the schema (with or without data) are not able to be imported into an older version of SQL Server, such as [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] or [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)]. For example, an export to a [DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) or a [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4) from an [!INCLUDE[ssSDS](../../includes/sssds-md.md)] or [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] database that used this new feature would not be able to be imported into a down-level server.  
+Since ALTER DATABASE SCOPED CONFIGURATION is a new feature in Azure SQL Database and SQL Server beginning with SQL Server 2016 that affects the database schema, exports of the schema (with or without data) are not able to be imported into an older version of SQL Server, such as [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] or [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)]. For example, an export to a [DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) or a [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4) from an [!INCLUDE[ssSDS](../../includes/sssds-md.md)] or [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] database that used this new feature would not be able to be imported into a down-level server.  
 
 **ELEVATE_ONLINE** 
 
@@ -258,8 +255,7 @@ This option only applies to DDL statements that support the WITH(ONLINE= syntax)
 
 **ELEVATE_RESUMABLE**
 
-This option only applies to DDL statements that support the WITH(ONLINE= syntax). XML indexes are not affected 
-
+This option only applies to DDL statements that support the WITH(RESUMABLE= syntax). XML indexes are not affected 
   
 ## Metadata  
 
@@ -364,7 +360,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZE_FOR_AD_HOC_WORKLOADS = ON;
 
 ### I.  Set ELEVATE_ONLINE 
 
-**Applies to**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (feature is in public preview)
+**Applies to**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] and  as a public preview feature
  
 This example sets ELEVATE_ONLINE to FAIL_UNSUPPORTED.  tsqlCopy 
 
@@ -374,7 +370,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE=FAIL_UNSUPPORTED ;
 
 ### J. Set ELEVATE_RESUMABLE 
 
-**Applies to**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (feature is in public preview)
+**Applies to**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] and [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] as a public preview feature
 
 This example sets ELEVEATE_RESUMABLE to WHEN_SUPPORTED.  tsqlCopy 
 
@@ -409,9 +405,13 @@ ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE=WHEN_SUPPORTED ;
 - [Guidelines for Online Index Operations](../../relational-databases/indexes/guidelines-for-online-index-operations.md) 
  
 ## More information  
- [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)   
- [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
- [Databases and Files Catalog Views](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
- [Server Configuration Options](../../database-engine/configure-windows/server-configuration-options-sql-server.md) 
- [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)  
+- [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)   
+- [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
+- [Databases and Files Catalog Views](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
+- [Server Configuration Options](../../database-engine/configure-windows/server-configuration-options-sql-server.md) 
+- [How Online Index Operations Work](../../relational-databases/indexes/how-online-index-operations-work.md)  
+- [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)  
+- [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)  
+- [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
+  
  

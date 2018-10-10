@@ -98,7 +98,7 @@ This section lists some common issues that you might run across in the course of
   
     When the schema is associated with one particular user name, the user is the _schema owner_. When you create an object, you always create it in your own schema, unless you specifically ask it to be created in another schema.
   
-    For example, if you create a table with the name `*`TestData`, and your default schema is **db\_datareader**, the table is created with the name `<database_name>.db_datareader.TestData`.
+    For example, if you create a table with the name **TestData**, and your default schema is **db_datareader**, the table is created with the name `<database_name>.db_datareader.TestData`.
   
     For this reason, a database can contain multiple tables with the same names, as long as the tables belong to different schemas.
    

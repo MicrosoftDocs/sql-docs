@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "SQLServerDatabaseMetaData.getIdentifierQuoteString"
@@ -15,7 +13,6 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: 6dea35a0-56a8-412c-8cd3-6539527ff597
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -41,7 +38,7 @@ public java.lang.String getIdentifierQuoteString()
 ## Remarks  
  This getIdentifierQuoteString method is specified by the getIdentifierQuoteString method in the java.sql.DatabaseMetaData interface.  
   
- When using the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] JDBC Driver with a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] database, this method returns **double** quotation marks ("").  
+ When using the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] JDBC Driver with a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database, this method returns **double** quotation marks ("").  
   
 ## See Also  
  [SQLServerDatabaseMetaData Methods](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

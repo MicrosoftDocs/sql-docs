@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.asexecuteddltask.ddl.f1"
 helpviewer_keywords: 
   - "Analysis Services Execute DDL Task Editor"
 ms.assetid: f21bf8d0-ec5f-4c18-9de0-8875addb927b
-caps.latest.revision: 29
 author: douglaslms
 ms.author: douglasl
 manager: craigg

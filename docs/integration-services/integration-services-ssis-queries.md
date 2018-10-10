@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.querybuilder.f1"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "statements [Integration Services]"
   - "queries [Integration Services], about queries in packages"
 ms.assetid: 8822bd29-4575-46c8-92a0-1a39bc2604c1
-caps.latest.revision: 58
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

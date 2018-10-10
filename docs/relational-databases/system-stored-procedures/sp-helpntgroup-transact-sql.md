@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_helpntgroup"
@@ -18,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_helpntgroup"
 ms.assetid: 02b4f7c1-480a-436c-8bae-7a2488be45d2
-caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_helpntgroup (Transact-SQL)

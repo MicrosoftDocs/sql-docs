@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: backup-restore
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "database backups [SQL Server], recovery models"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "database restores [SQL Server], recovery models"
   - "modifying database recovery models"
 ms.assetid: 94918d1d-7c10-4be7-bf9f-27e00b003a0f
-caps.latest.revision: 36
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -155,7 +152,7 @@ ALTER DATABASE model SET RECOVERY FULL ;
   
 ##  <a name="RelatedContent"></a> Related Content  
   
--   [Database Maintenance Plans](http://msdn.microsoft.com/library/ms187658.aspx) (in [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Books Online)  
+-   [Database Maintenance Plans](../maintenance-plans/maintenance-plans.md) (in [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Books Online)  
   
 ## See Also  
  [Recovery Models &#40;SQL Server&#41;](recovery-models-sql-server.md)   

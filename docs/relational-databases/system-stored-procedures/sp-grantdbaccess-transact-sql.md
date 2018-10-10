@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_grantdbaccess"
@@ -18,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_grantdbaccess"
 ms.assetid: 3eb09513-03f1-42f8-9917-3a1f3a579bec
-caps.latest.revision: 33
-author: edmacauley
-ms.author: edmaca
+ms.author: vanto
+manager: craigg
 manager: craigg
 ---
 # sp_grantdbaccess (Transact-SQL)

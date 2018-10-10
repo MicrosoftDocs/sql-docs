@@ -5,9 +5,7 @@ ms.date: "12/21/2017"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: configuration
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "connections [SQL Server], encrypted"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "installing certificates"
   - "security [SQL Server], encryption"
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
-caps.latest.revision: 48
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -91,7 +88,7 @@ manager: craigg
 ### Wildcard Certificates  
 Beginning with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client support wildcard certificates. Other clients might not support wildcard certificates. For more information, see the client documentation. Wildcard certificate cannot be selected by using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. To use a wildcard certificate, you must edit the `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQLServer\SuperSocketNetLib` registry key, and enter the thumbprint of the certificate, without spaces, to the **Certificate** value.  
 > [!WARNING]  
-> [!INCLUDE[ssnoteregistry_md](../../includes/ssnoteregistry_md.md)]  
+> [!INCLUDE[ssnoteregistry_md](../../includes/ssnoteregistry-md.md)]  
 
 <a name="client-request-encrypt-connect-23h"/>
 ##  <a name="ConfigureClientConnections"></a> To configure the client to request encrypted connections  

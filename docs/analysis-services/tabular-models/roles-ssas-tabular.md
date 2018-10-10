@@ -1,6 +1,6 @@
 ---
 title: "Roles | Microsoft Docs"
-ms.date: 05/07/2018
+ms.date: 09/17/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -15,7 +15,10 @@ manager: kfile
   Roles, in tabular models, define member permissions for a model. Members of the role can perform actions on the model as defined by the role permission. Roles defined with read permissions can also provide additional security at the row-level by using row-level filters. 
   
  For SQL Server Analysis Services, roles contain user members by Windows username or by Windows group, and permissions (read, process, administrator). For Azure Analysis Services, users must be in your Azure Active Directory and usernames and groups specified must be by organizational email address or UPN. 
-  
+
+> [!IMPORTANT]  
+>  When using SSDT to create roles and add organizational users to a tabular model project that will be deployed to Azure Analysis Services, use [Integrated workspace](workspace-database-ssas-tabular.md).
+
 > [!IMPORTANT]  
 >  For users to connect to a deployed model by using a reporting client application, you must create at least one role with at least Read permission to which those users are members.  
   

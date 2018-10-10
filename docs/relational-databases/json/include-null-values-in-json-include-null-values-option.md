@@ -1,12 +1,10 @@
-﻿---
+---
 title: "Include Null Values in JSON - INCLUDE_NULL_VALUES Option | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/02/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "INCLUDE_NULL_VALUES (FOR JSON)"
@@ -15,7 +13,7 @@ author: "jovanpop-msft"
 ms.author: "jovanpop"
 ms.reviewer: douglasl
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Include Null Values in JSON - INCLUDE_NULL_VALUES Option
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

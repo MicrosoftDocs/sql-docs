@@ -1,26 +1,17 @@
 ---
 title: "Authorization in Reporting Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
+ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.component: "extensions"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: extensions
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
+ms.topic: reference
 helpviewer_keywords: 
   - "authorization [Reporting Services]"
 ms.assetid: 15fc1c7b-560c-4737-b126-e0d428a1b530
-caps.latest.revision: 20
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ---
 # Authorization in Reporting Services
   Authorization is the process of determining whether an identity should be granted the requested type of access to a given resource in the report server database. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] uses a role-based authorization architecture that grants a user access to a given resource based on the user's role assignment for the application. Security extensions for [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] contain an implementation of an authorization component that is used to grant access to users once they are authenticated on the report server. Authorization is invoked when a user attempts to perform an operation on the system or a report server item through the SOAP API and via URL access. This is made possible through the security extension interface **IAuthorizationExtension2**. As stated previously, all extensions inherit from **IExtension** the base interface for any extension that you deploy. **IExtension** and **IAuthorizationExtension2** are members of the **Microsoft.ReportingServices.Interfaces** namespace.  

@@ -5,16 +5,14 @@ ms.date: "02/28/2017"
 ms.prod: sql
 ms.prod_service: security
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: security
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Local Audit"
 ms.assetid: a0665916-7789-4f94-9086-879275802cf3
-caps.latest.revision: 8
 author: MashaMSFT
 ms.author: mathoma
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 manager: craigg
 ---
 # Local Audit for SQL Server Usage Feedback Collection

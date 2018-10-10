@@ -1,0 +1,54 @@
+- name: SQL Server Native Client (ODBC)
+  href: sql-server-native-client-odbc.md
+- name: Specific Areas
+  items:
+  - name: Native client ODBC API +
+    href: ../../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md
+  - name: ODBC extensions bulk copy functions +
+    href: ../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md
+  - name: Bulk copy operations +
+    href: ../../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md
+  - name: Communication +
+    href: ../../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md
+  - name: Queries +
+    href: ../../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md
+  - name: Results +
+    href: ../../../relational-databases/native-client-odbc-results/processing-results-odbc.md
+  - name: Cursors +
+    href: ../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md
+  - name: Error messages +
+    href: ../../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md
+  - name: Stored procedures +
+    href: ../../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md
+  - name: Text and image columns +
+    href: ../../../relational-databases/native-client-odbc-text-image-columns/managing-text-and-image-columns.md
+  - name: Table-valued parameters +
+    href: ../../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md
+  - name: Date time +
+    href: ../../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md
+  - name: How to +
+    href: ../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md
+- name: Creating a Driver Application - Asynchronous Mode and SQLCancel
+  href: creating-a-driver-application-asynchronous-mode-and-sqlcancel.md
+- name: Creating a Driver Application - Multithreaded Applications
+  href: creating-a-driver-application-multithreaded-applications.md
+- name: Creating a Driver Application
+  href: creating-a-driver-application.md
+- name: Data Source Names and 64-Bit Operating Systems
+  href: data-source-names-and-64-bit-operating-systems.md
+- name: FILESTREAM Support (ODBC)
+  href: filestream-support-odbc.md
+- name: Large CLR User-Defined Types (ODBC)
+  href: large-clr-user-defined-types-odbc.md
+- name: Performing Transactions - Distributed Transactions
+  href: performing-transactions-distributed-transactions.md
+- name: Performing Transactions in ODBC
+  href: performing-transactions-in-odbc.md
+- name: Profiling ODBC Driver Performance
+  href: profiling-odbc-driver-performance.md
+- name: Service Principal Names (SPNs) in Client Connections (ODBC)
+  href: service-principal-names-spns-in-client-connections-odbc.md
+- name: Sparse Columns Support (ODBC)
+  href: sparse-columns-support-odbc.md
+- name: Using Catalog Functions
+  href: using-catalog-functions.md

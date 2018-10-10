@@ -1,0 +1,201 @@
+- name: XML Data
+  href: xml-data-sql-server.md
+- name: XML Data Type and Columns
+  href: xml-data-type-and-columns-sql-server.md
+  items:
+  - name: Compare Typed XML to Untyped XML
+    href: compare-typed-xml-to-untyped-xml.md
+  - name: Create Instances of XML Data
+    href: create-instances-of-xml-data.md
+  - name: Create XML Data Type Variables and Columns
+    href: create-xml-data-type-variables-and-columns.md
+  - name: Change Existing Columns to XML Columns
+    href: change-existing-columns-to-xml-columns.md
+  - name: Load XML Data
+    href: load-xml-data.md
+  - name: Create Views over XML Columns
+    href: create-views-over-xml-columns.md
+  - name: Use XML in Computed Columns
+    href: use-xml-in-computed-columns.md
+  - name: Retrieve and Query XML Data
+    href: retrieve-and-query-xml-data.md
+  - name: Add Namespaces to Queries with WITH XMLNAMESPACES
+    href: add-namespaces-to-queries-with-with-xmlnamespaces.md
+  - name: Promote Frequently Used XML Values with Computed Columns
+    href: promote-frequently-used-xml-values-with-computed-columns.md
+  - name: Define the Serialization of XML Data
+    href: define-the-serialization-of-xml-data.md
+  - name: Use Full-Text Search with XML Columns
+    href: use-full-text-search-with-xml-columns.md
+  - name: Add Business Logic to XML Data
+    href: add-business-logic-to-xml-data.md
+  - name: Use XML Data in Applications
+    href: use-xml-data-in-applications.md
+- name: XML Indexes
+  href: xml-indexes-sql-server.md
+  items:
+  - name: Create XML Indexes
+    href: create-xml-indexes.md
+  - name: Modify XML Indexes
+    href: modify-xml-indexes.md
+  - name: Drop XML Indexes
+    href: drop-xml-indexes.md
+  - name: Selective XML Indexes (SXI)
+    href: selective-xml-indexes-sxi.md
+  - name: Specify Paths and Optimization Hints for Selective XML Indexes
+    href: specify-paths-and-optimization-hints-for-selective-xml-indexes.md
+  - name: Create, Alter, and Drop Selective XML Indexes
+    href: create-alter-and-drop-selective-xml-indexes.md
+  - name: Create, Alter, and Drop Secondary Selective XML Indexes
+    href: create-alter-and-drop-secondary-selective-xml-indexes.md
+- name: XML Schema Collections
+  href: xml-schema-collections-sql-server.md
+  items:
+  - name: Reference the Built-in XML Schema Collection (sys)
+    href: reference-the-built-in-xml-schema-collection-sys.md
+  - name: View a Stored XML Schema Collection
+    href: view-a-stored-xml-schema-collection.md
+  - name: Grant Permissions on an XML Schema Collection
+    href: grant-permissions-on-an-xml-schema-collection.md
+  - name: Revoke Permissions on an XML Schema Collection
+    href: revoke-permissions-on-an-xml-schema-collection.md
+  - name: Deny Permissions on an XML Schema Collection
+    href: deny-permissions-on-an-xml-schema-collection.md
+  - name: Preprocess a Schema to Merge Included Schemas
+    href: preprocess-a-schema-to-merge-included-schemas.md
+  - name: Requirements and Limitations for XML Schema Collections on the Server
+    href: requirements-and-limitations-for-xml-schema-collections-on-the-server.md
+  - name: Canonical Forms and Pattern Restrictions
+    href: canonical-forms-and-pattern-restrictions.md
+  - name: Wildcard Components and Content Validation
+    href: wildcard-components-and-content-validation.md
+  - name: "The <xsd:redefine> Element"
+    href: the-xsd-redefine-element.md
+  - name: "The xs:QName Type"
+    href: the-xs-qname-type.md
+  - name: "Values for <xsd:simpleType> Declarations"
+    href: values-for-xsd-simpletype-declarations.md
+  - name: Enumeration Facets
+    href: enumeration-facets.md
+  - name: Mixed Type and Simple Content
+    href: mixed-type-and-simple-content.md
+  - name: Large XML Schema Collections and Out-of-Memory Conditions
+    href: large-xml-schema-collections-and-out-of-memory-conditions.md
+  - name: Non-Deterministic Content Models
+    href: non-deterministic-content-models.md
+  - name: Unique Particle Attribution Constraint
+    href: unique-particle-attribution-constraint.md
+- name: FOR XML
+  href: for-xml-sql-server.md
+  items:
+  - name: Basic Syntax of the FOR XML Clause
+    href: basic-syntax-of-the-for-xml-clause.md
+  - name: Invalid Characters and Escape Rules
+    href: invalid-characters-and-escape-rules.md
+  - name: Use RAW Mode with FOR XML
+    href: use-raw-mode-with-for-xml.md
+  - name: "Example: Retrieving Product Model Information as XML"
+    href: example-retrieving-product-model-information-as-xml.md
+  - name: "Example: Specifying XSINIL with the ELEMENTS Directive"
+    href: example-specifying-xsinil-with-the-elements-directive.md
+  - name: "Example: Requesting Schemas as Results with the XMLDATA and XMLSCHEMA Options"
+    href: example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md
+  - name: "Example: Retrieving Binary Data"
+    href: example-retrieving-binary-data.md
+  - name: "Example: Renaming the <row> Element"
+    href: example-renaming-the-row-element.md
+  - name: "Example: Specifying a Root Element for the XML Generated by FOR XML"
+    href: example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md
+  - name: "Example: Querying XMLType Columns"
+    href: example-querying-xmltype-columns.md
+  - name: Use AUTO Mode with FOR XML
+    href: use-auto-mode-with-for-xml.md
+  - name: Use the BINARY BASE64 Option
+    href: use-the-binary-base64-option.md
+  - name: AUTO Mode Heuristics in Shaping Returned XML
+    href: auto-mode-heuristics-in-shaping-returned-xml.md
+  - name: "Examples: Using AUTO Mode"
+    href: examples-using-auto-mode.md
+  - name: Use EXPLICIT Mode with FOR XML
+    href: use-explicit-mode-with-for-xml.md
+  - name: "Example: Retrieving Employee Information"
+    href: example-retrieving-employee-information.md
+  - name: "Example: Specifying the ELEMENT Directive"
+    href: example-specifying-the-element-directive.md
+  - name: "Example: Specifying the ELEMENTXSINIL Directive"
+    href: example-specifying-the-elementxsinil-directive.md
+  - name: "Example: Constructing Siblings with EXPLICIT Mode"
+    href: example-constructing-siblings-with-explicit-mode.md
+  - name: "Example: Specifying the ID and IDREF Directives"
+    href: example-specifying-the-id-and-idref-directives.md
+  - name: "Example: Specifying the ID and IDREFS Directives"
+    href: example-specifying-the-id-and-idrefs-directives.md
+  - name: "Example: Specifying the HIDE Directive"
+    href: example-specifying-the-hide-directive.md
+  - name: "Example: Specifying the ELEMENT Directive and Entity Encoding"
+    href: example-specifying-the-element-directive-and-entity-encoding.md
+  - name: "Example: Specifying the CDATA Directive"
+    href: example-specifying-the-cdata-directive.md
+  - name: "Example: Specifying the XMLTEXT Directive"
+    href: example-specifying-the-xmltext-directive.md
+  - name: Use PATH Mode with FOR XML
+    href: use-path-mode-with-for-xml.md
+  - name: Columns without a Name
+    href: columns-without-a-name.md
+  - name: Columns with a Name
+    href: columns-with-a-name.md
+  - name: Columns with a Name Specified as a Wildcard Character
+    href: columns-with-a-name-specified-as-a-wildcard-character.md
+  - name: Columns with the Name of an XPath Node Test
+    href: columns-with-the-name-of-an-xpath-node-test.md
+  - name: Column Names with the Path Specified as data()
+    href: column-names-with-the-path-specified-as-data.md
+  - name: Columns that Contain a Null Value By Default
+    href: columns-that-contain-a-null-value-by-default.md
+  - name: Namespace Support in PATH Mode
+    href: namespace-support-in-path-mode.md
+  - name: "Examples: Using PATH Mode"
+    href: examples-using-path-mode.md
+  - name: TYPE Directive in FOR XML Queries
+    href: type-directive-in-for-xml-queries.md
+  - name: Generate XML from Rowsets with FOR XML
+    href: generate-xml-from-rowsets-with-for-xml.md
+  - name: Use FOR XML Results in Application Code
+    href: use-for-xml-results-in-application-code.md
+  - name: Use Nested FOR XML Queries
+    href: use-nested-for-xml-queries.md
+  - name: FOR XML Query Compared to Nested FOR XML Query
+    href: for-xml-query-compared-to-nested-for-xml-query.md
+  - name: Generate Siblings with a Nested AUTO Mode Query
+    href: generate-siblings-with-a-nested-auto-mode-query.md
+  - name: Use Nested FOR XML Queries in ASP.NET
+    href: use-nested-for-xml-queries-in-asp-net.md
+  - name: Shape XML with Nested FOR XML Queries
+    href: shape-xml-with-nested-for-xml-queries.md
+  - name: Generate Elements for NULL Values with the XSINIL Parameter
+    href: generate-elements-for-null-values-with-the-xsinil-parameter.md
+  - name: FOR XML Support for Various SQL Server Data Types
+    href: for-xml-support-for-various-sql-server-data-types.md
+  - name: FOR XML Support for the xml Data Type
+    href: for-xml-support-for-the-xml-data-type.md
+  - name: FOR XML Support for the User-Defined Data Types (UDT)
+    href: for-xml-support-for-the-user-defined-data-types-udt.md
+  - name: FOR XML Support for String Data Types
+    href: for-xml-support-for-string-data-types.md
+  - name: FOR XML Support for the timestamp Data Type
+    href: for-xml-support-for-the-timestamp-data-type.md
+  - name: Generate an Inline XSD Schema
+    href: generate-an-inline-xsd-schema.md
+  - name: Generate an Inline XDR Schema
+    href: generate-an-inline-xdr-schema.md
+- name: OPENXML
+  href: openxml-sql-server.md
+  items:
+  - name: "Examples: Using OPENXML"
+    href: examples-using-openxml.md
+  - name: Specify Metaproperties in OPENXML
+    href: specify-metaproperties-in-openxml.md
+  - name: XML System Stored Procedures
+    href: xml-system-stored-procedures.md
+  - name: Use the value() and nodes() Methods with OPENXML
+    href: use-the-value-and-nodes-methods-with-openxml.md

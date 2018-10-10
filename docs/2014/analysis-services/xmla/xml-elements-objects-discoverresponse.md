@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "DiscoverResponse Element"
@@ -23,7 +21,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "DiscoverResponse element"
 ms.assetid: 20e10a82-dbd1-4ead-b92d-f84b4b2f10c6
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg

@@ -1,26 +1,19 @@
 ---
 title: "Open and Close a Report (Report Manager) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "reports"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: reports
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "opening reports"
   - "closing reports"
   - "reports [Reporting Services], opening"
 ms.assetid: a9db1caf-1e7d-41ee-9aed-e09fd0712f9b
-caps.latest.revision: 51
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ---
 # Open and Close a Report (Report Manager)
   You can use Report Manager to view reports that have been published to a report server. By default, all reports open in HTML. After a report is open, you can export it to view it in other application formats. If the report contains interactive features or if it is a Report Builder report that contains interactive data, you can click the links to view additional reports or data.  

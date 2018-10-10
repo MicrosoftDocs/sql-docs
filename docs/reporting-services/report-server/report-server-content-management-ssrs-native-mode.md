@@ -1,16 +1,11 @@
 ---
 title: "Report Server Content Management (SSRS Native Mode) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "report-server"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-server
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "administering Reporting Services"
@@ -18,10 +13,8 @@ helpviewer_keywords:
   - "report servers [Reporting Services], content management"
   - "content management [Reporting Services]"
 ms.assetid: 641961ac-53a5-4997-9d42-cf4ecce1f892
-caps.latest.revision: 50
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ---
 # Report Server Content Management (SSRS Native Mode)
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], content management refers to the management of report server items. All items can be managed independently of each other through properties and security settings. Any item can be moved to a different location in the report server folder namespace. To manage items effectively, you need to know which tasks a content manager performs. Starting in [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] CTP 3.2, the  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] web portal is available. This article will look at Report Manager and the new web portal experience.  

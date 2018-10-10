@@ -1,14 +1,12 @@
-﻿---
+---
 title: "INSERT (SQL Graph) | Microsoft Docs"
 description: INSERT syntax for SQL Graph node or edge tables. 
 ms.date: "05/12/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.custom: ""
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -16,11 +14,10 @@ helpviewer_keywords:
   - "INSERT statement [SQL Server], SQL graph"
   - "SQL graph, INSERT statement"
 ms.assetid: 
-caps.latest.revision: 1
 author: "shkale-msft"
 ms.author: "shkale"
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # INSERT (SQL Graph)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]

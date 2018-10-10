@@ -4,20 +4,17 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 372e2c13-ec38-4bb1-981c-50758d59a1da
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
 ---
 # EntityType Element (CSDLBI)
-  The `EntityType` element is a complex type that represents the structure of a high-level entity, such as a customer or order, in a data model. The `bi:EntityType` element extends the definition of [EntityType](http://msdn.microsoft.com/library/bb399206.aspx) used in the [Entity Data Framework](http://msdn.microsoft.com/library/bb399567.aspx).  
+  The `EntityType` element is a complex type that represents the structure of a high-level entity, such as a customer or order, in a data model. The `bi:EntityType` element extends the definition of [EntityType](http://msdn.microsoft.com/library/bb399206.aspx) used in the [Entity Data Framework](/dotnet/framework/data/adonet/ef/overview).  
   
  An EntityType element must be specified for each of the entities that are included in the data model. The subelements of the EntityType describe the columns and measures in the table. Relationships among tables are included in the `EntityContainer`.  
   

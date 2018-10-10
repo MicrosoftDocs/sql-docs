@@ -1,0 +1,90 @@
+- name: SQL Server Native Client Programming
+  href: sql-server-native-client-programming.md
+  items:
+  - name: What's New in SQL Server Native Client
+    href: sql-server-native-client.md
+  - name: When to Use SQL Server Native Client
+    href: when-to-use-sql-server-native-client.md
+- name: SQL Server Native Client Features
+  href: features/sql-server-native-client-features.md
+  items:
+  - name: ODBC Driver Behavior Change When Handling Character Conversions
+    href: features/odbc-driver-behavior-change-when-handling-character-conversions.md
+  - name: Using Database Mirroring
+    href: features/using-database-mirroring.md
+  - name: Performing Asynchronous Operations
+    href: features/performing-asynchronous-operations.md
+  - name: Using Multiple Active Result Sets (MARS)
+    href: features/using-multiple-active-result-sets-mars.md
+  - name: Using XML Data Types
+    href: features/using-xml-data-types.md
+  - name: Using User-Defined Types
+    href: features/using-user-defined-types.md
+  - name: Using Large Value Types
+    href: features/using-large-value-types.md
+  - name: Changing Passwords Programmatically
+    href: features/changing-passwords-programmatically.md
+  - name: Working with Snapshot Isolation
+    href: features/working-with-snapshot-isolation.md
+  - name: Working with Query Notifications
+    href: features/working-with-query-notifications.md
+  - name: Performing Bulk Copy Operations
+    href: features/performing-bulk-copy-operations.md
+  - name: Using Encryption Without Validation
+    href: features/using-encryption-without-validation.md
+  - name: Table-Valued Parameters
+    href: features/table-valued-parameters-sql-server-native-client.md
+  - name: Large CLR User-Defined Types
+    href: features/large-clr-user-defined-types.md
+  - name: FILESTREAM Support
+    href: features/filestream-support.md
+  - name: Service Principal Name (SPN) Support in Client Connections
+    href: features/service-principal-name-spn-support-in-client-connections.md
+  - name: Sparse Columns Support in SQL Server Native Client
+    href: features/sparse-columns-support-in-sql-server-native-client.md
+  - name: Date/Time Improvements
+    href: features/date-and-time-improvements.md
+  - name: Metadata Discovery
+    href: features/metadata-discovery.md
+  - name: UTF-16 Support in SQL Server Native Client 11.0
+    href: features/utf-16-support-in-sql-server-native-client-11-0.md
+  - name: SQL Server Native Client Support for High Availability, Disaster Recovery
+    href: features/sql-server-native-client-support-for-high-availability-disaster-recovery.md
+  - name: Accessing Diagnostic Information in the Extended Events Log
+    href: features/accessing-diagnostic-information-in-the-extended-events-log.md
+  - name: SQL Server Native Client Support for LocalDB
+    href: features/sql-server-native-client-support-for-localdb.md
+- name: Building Applications with SQL Server Native Client
+  href: applications/building-applications-with-sql-server-native-client.md
+  items:
+  - name: Installing SQL Server Native Client
+    href: applications/installing-sql-server-native-client.md
+  - name: Components of SQL Server Native Client
+    href: applications/components-of-sql-server-native-client.md
+  - name: Using Connection String Keywords with SQL Server Native Client
+    href: applications/using-connection-string-keywords-with-sql-server-native-client.md
+  - name: Using the SQL Server Native Client Header and Library Files
+    href: applications/using-the-sql-server-native-client-header-and-library-files.md
+  - name: Updating an Application to SQL Server Native Client from MDAC
+    href: applications/updating-an-application-to-sql-server-native-client-from-mdac.md
+  - name: Updating an Application from SQL Server 2005 Native Client
+    href: applications/updating-an-application-from-sql-server-2005-native-client.md
+  - name: Using ADO with SQL Server Native Client
+    href: applications/using-ado-with-sql-server-native-client.md
+  - name: Support Policies for SQL Server Native Client
+    href: applications/support-policies-for-sql-server-native-client.md
+  - name: Connecting to a Azure SQL Database Using SQL Server Native Client
+    href: applications/connecting-to-a-windows-azure-sql-database-using-sql-server-native-client.md
+- name: System Requirements for SQL Server Native Client
+  href: system-requirements-for-sql-server-native-client.md
+- name: SQL Server Native Client (OLE DB) +
+  href: ole-db/sql-server-native-client-ole-db.md
+- name: SQL Server Native Client (ODBC) +
+  href: odbc/sql-server-native-client-odbc.md
+- name: Finding More SQL Server Native Client Information
+  href: finding-more-sql-server-native-client-information.md
+- name: SQL Server Native Client Errors
+  href: ../../database-engine/dev-guide/sql-server-native-client-errors.md
+  items:
+  - name: MSSQLSERVER_50000
+    href: ../errors-events/sql-server-native-client-error-mssqlserver-50000.md

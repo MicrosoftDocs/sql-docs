@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "IdleConnectionTimeout property"
@@ -38,7 +36,6 @@ helpviewer_keywords:
   - "StatisticsStoreSize property"
   - "RepositoryConnectionString property"
 ms.assetid: 88a8117c-396a-469f-a62d-c6f262504021
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -58,7 +55,7 @@ manager: craigg
  A string property that specifies in a delimited list the folders that can be browsed when saving, opening, and finding files in Analysis Services dialog boxes. The Analysis Services service account must have read and write permissions to any folders that you add to the list.  
   
  `BackupDir`  
- A string property that identifies the name of the directory where backup files are stored by default, in the event a path is not specified as part of the the Backup command.  
+ A string property that identifies the name of the directory where backup files are stored by default, in the event a path is not specified as part of the Backup command.  
   
  `CollationName`  
  A string property that identifies the server collation. For more information, see [Languages and Collations &#40;Analysis Services&#41;](../languages-and-collations-analysis-services.md).  

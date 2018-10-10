@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.reportserver.modelproperties.modelitemsecurity.f1"
 ms.assetid: 8c5b29ae-1f17-41f2-ab59-97899b8fb4fc
-caps.latest.revision: 20
 author: markingmyname
 ms.author: maghan
 manager: craigg

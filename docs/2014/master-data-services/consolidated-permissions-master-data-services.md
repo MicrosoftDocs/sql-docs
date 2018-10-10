@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "master-data-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "attributes [Master Data Services], consolidated member attribute permissions"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "permissions [Master Data Services], consolidated members"
   - "members [Master Data Services], consolidated member permissions"
 ms.assetid: 084055a3-5fd3-43f3-b620-ac6afab42a3d
-caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg

@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: security
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "SQL12.SWB.DATABASEUSER.GENERAL.F1"
@@ -22,9 +20,8 @@ helpviewer_keywords:
   - "users [SQL Server], adding"
   - "mapping database users"
 ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
-caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Create a Database User
@@ -104,7 +101,7 @@ manager: craigg
      View or specify the extended properties for the object. Each extended property consists of a name/value pair of metadata associated with the object.  
   
      **Ellipsis (…)**  
-     Click the ellipsis **(…)** after **Value** to open the **Value for Extended Property** dialog box. Type or view the value of the extended property in this larger location. For more information, see [Value for Extended Property Dialog Box](http://msdn.microsoft.com/library/ms189353.aspx).  
+     Click the ellipsis **(…)** after **Value** to open the **Value for Extended Property** dialog box. Type or view the value of the extended property in this larger location. For more information, see [Value for Extended Property Dialog Box](../../databases/value-for-extended-property-dialog-box.md).  
   
      **Delete**  
      Removes the selected extended property.  

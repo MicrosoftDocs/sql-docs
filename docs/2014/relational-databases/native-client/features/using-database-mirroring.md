@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: native-client  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "database mirroring [SQL Server], interoperability"
@@ -18,7 +15,6 @@ helpviewer_keywords:
   - "SQL Server Native Client ODBC driver, database mirroring"
   - "SQL Server Native Client OLE DB provider, database mirroring"
 ms.assetid: 71b15712-7972-4465-9274-e0ddc271eedc
-caps.latest.revision: 55
 author: MightyPen
 ms.author: genemi
 manager: craigg

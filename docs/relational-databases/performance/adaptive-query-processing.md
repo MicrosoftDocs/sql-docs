@@ -1,21 +1,19 @@
-﻿---
+---
 title: "Adaptive query processing in Microsoft SQL databases | Microsoft Docs | Microsoft Docs"
 description: "Adaptive query processing features to improve query performance in SQL Server (2017 and later), and Azure SQL Database."
 ms.custom: ""
-ms.date: "07/16/2018"
+ms.date: "09/07/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
 ms.assetid: 
 author: "joesackmsft"
 ms.author: "josack"
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Adaptive query processing in SQL databases
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -105,6 +103,9 @@ A USE HINT query hint takes precedence over a database scoped configuration or t
 ## Row mode memory grant feedback
 **Applies to:** SQL Database as a public preview feature
 
+> [!NOTE]
+> Row mode memory grant feedback is a public preview feature.  
+
 Row mode memory grant feedback expands on the batch mode memory grant feedback feature by adjusting memory grant sizes for both batch and row mode operators.  
 
 To enable the public preview of row mode memory grant feedback in Azure SQL Database, enable database compatibility level 150 for the database you are connected to when executing the query.
@@ -123,7 +124,8 @@ LastRequestedMemory shows the granted memory in Kilobytes (KB) from the prior qu
 | Yes: Adjusting | Memory grant feedback has been applied and may be further adjusted for the next execution. |
 | Yes: Stable | Memory grant feedback has been applied and granted memory is now stable, meaning that what was last granted for the previous execution is what was granted for the current execution. |
 
-The memory grant feedback plan attributes are not currently visible in SQL Server Management Studio graphical query execution plans, but for early testing you can view them using SET STATISTICS XML ON or the query_post_execution_showplan XEvent.  
+> [!NOTE]
+> The public preview row mode memory grant feedback plan attributes are visible in SQL Server Management Studio graphical query execution plans in versions 17.9 and higher. 
 
 ## Batch mode Adaptive Joins
 The batch mode Adaptive Joins feature enables the choice of a [Hash Join or Nested Loops Join](../../relational-databases/performance/joins.md) method to be deferred until **after** the first input has been scanned. The Adaptive Join operator defines a threshold that is used to decide when to switch to a Nested Loops plan. Your plan can therefore dynamically switch to a better join strategy during execution.

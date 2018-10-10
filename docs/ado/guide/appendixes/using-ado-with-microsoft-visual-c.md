@@ -6,15 +6,12 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "C++"
 helpviewer_keywords: 
   - "ADO, using with Visual C++"
 ms.assetid: 07d25fc0-4958-4e12-b616-36257ead812b
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg

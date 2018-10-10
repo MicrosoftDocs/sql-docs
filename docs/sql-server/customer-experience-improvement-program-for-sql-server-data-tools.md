@@ -1,12 +1,10 @@
-﻿---
+---
 title: "Customer Experience Improvement Program for SQL Server Data Tools | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/21/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssdt
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: baf3a205-a6bb-4564-8b64-3a0475bb9273
 author: "stevestein"

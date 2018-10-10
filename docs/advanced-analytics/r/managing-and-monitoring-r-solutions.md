@@ -28,11 +28,7 @@ Database administrators must provide data access not just to data scientists but
 
 For more information, see these resources:
 
-+ [Security Considerations for the R Runtime in SQL Server](../../advanced-analytics/r/security-considerations-for-the-r-runtime-in-sql-server.md)
-
-+ [R security overview](../r/security-overview-sql-server-r.md)
-
-+ [Python security overview](../python/security-overview-sql-server-python-services.md)
++ [Security overview for the extensibility framework in SQL Server Machine Learning Services](../../advanced-analytics/concepts/security.md)
 
 + [Default R and Python packages in SQL Server](installing-and-managing-r-packages.md)
 

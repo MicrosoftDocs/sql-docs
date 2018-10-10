@@ -5,15 +5,12 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "DROP INDEX [ODBC]"
   - "SQL grammar [ODBC], DROP INDEX"
 ms.assetid: cd0ff767-9254-413b-bd1a-bed26c6774f5
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg

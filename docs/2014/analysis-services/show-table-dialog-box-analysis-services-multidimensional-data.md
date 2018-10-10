@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.cubeeditor.cubebuilder.showtabledialog.f1"
 helpviewer_keywords: 
   - "Show Table dialog box"
 ms.assetid: 4c0bf4fa-5685-4269-bf7d-f0e9802ab4bf
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg

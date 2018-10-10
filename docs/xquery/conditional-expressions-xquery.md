@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "08/09/2016"
 ms.prod: sql
 ms.prod_service: sql
-ms.component: "xquery"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "XML"
@@ -21,7 +18,6 @@ helpviewer_keywords:
   - "conditional expressions [XQuery]"
   - "EBV"
 ms.assetid: b280dd96-c80f-4c51-bc06-a88d42174acb
-caps.latest.revision: 27
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

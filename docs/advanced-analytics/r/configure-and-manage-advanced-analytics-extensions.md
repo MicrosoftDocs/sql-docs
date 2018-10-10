@@ -25,7 +25,7 @@ External script processes in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-m
 
 As part of setup, a new Windows *user account pool* is created that contains the local user accounts required for running external runtime processes, such as R or Python. You can modify the number of users as needed to support machine learning tasks. 
 
-Additionally, your database administrator must give this group permission to connect to any instance where machine learning has been enabled. For more information, see [Modify the user account pool for SQL Server Machine Learning Services](../../advanced-analytics/r/modify-the-user-account-pool-for-sql-server-r-services.md).
+Additionally, your database administrator must give this group permission to connect to any instance where machine learning has been enabled. For more information, see [Security configuration for SQLRUserGroup](../../advanced-analytics/security/add-sqlrusergroup-to-database.md).
 
 To protext sensitive resources on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can define an access control list (ACL) for this group. By specifying resources that the group is denied access to, you can prevent access by external processes such as the R or Python runtimes.
 
@@ -35,7 +35,7 @@ To protext sensitive resources on the [!INCLUDE[ssNoVersion](../../includes/ssno
 
 + The size of the user account pool is static and the default value is 20. The number of external runtime sessions that can be launched simultaneously is limited by the size of this user account pool. To change this limit, an administrator should use SQL Server Configuration Manager.
 
-For more information about how to make changes to the user account pool, see [Modify the user account pool for SQL Server Machine Learning Services](../../advanced-analytics/r/modify-the-user-account-pool-for-sql-server-r-services.md).
+For more information about how to make changes to the user account pool, see [Scale concurrent execution of external scripts in SQL Server Machine Learning Services](../../advanced-analytics/administration/modify-user-account-pool.md).
 
 ##  <a name="bkmk_ManagingMemory"></a> Manage memory used by external script processes
 
@@ -59,7 +59,7 @@ If you modify the service account, be sure to use the **Local Security Policy** 
 + Log on as a service (SeServiceLogonRight)
 + Replace a process-level token (SeAssignPrimaryTokenPrivilege)
 
-For more information about permissions required to run SQL Server services, see [Configure Windows Service Accounts and Permissions](https://msdn.microsoft.com/library/ms143504.aspx#Windows).
+For more information about permissions required to run SQL Server services, see [Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).
 
 ##  <a name="bkmk_ChangingConfig"></a> Change advanced service options
 
@@ -94,4 +94,4 @@ All settings take the form of a key-value pair, with each setting on a separate 
 
 ## See Also
 
-[Security considerations](security-considerations-for-the-r-runtime-in-sql-server.md)
+[Security overview for the extensibility framework in SQL Server Machine Learning Services](../../advanced-analytics/concepts/security.md)

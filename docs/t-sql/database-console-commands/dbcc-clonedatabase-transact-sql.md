@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "05/01/2018"
 ms.prod: "sql"
 ms.prod_service: "sql-database"
-ms.service: ""
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "CLONEDATABASE"
@@ -37,7 +34,6 @@ helpviewer_keywords:
   - "database cloning [SQL Server]"
   - "DBCC CLONEDATABASE statement"
 ms.assetid: 
-caps.latest.revision: 
 author: "pamela" 
 ms.author: "pamela"
 manager: "amitban"
@@ -109,7 +105,7 @@ Cannot insert duplicate key row in object <system table> with unique index 'inde
 ```
 
 > [!IMPORTANT]
-> If you have columnstore indexes, see [Considerations when you tune the queries with Columnstore indexes on clone databases](https://blogs.msdn.microsoft.com/sql_server_team/considerations-when-tuning-your-queries-with-columnstore-indexes-on-clone-databases/) to update columnstore index statistics before you run the **DBCC CLONEDATABASE** command.
+> If you have columnstore indexes, see [Considerations when you tune the queries with Columnstore indexes on clone databases](https://blogs.msdn.microsoft.com/sql_server_team/considerations-when-tuning-your-queries-with-columnstore-indexes-on-clone-databases/) to update columnstore index statistics before you run the **DBCC CLONEDATABASE** command.  Starting with SQL Server 2019, the manual steps outlined in the article above will no longer be required as the **DBCC CLONEDATABASE** command gathers this information automatically.
 
 For information related to data security on cloned databases, see [Understanding data security in cloned databases](https://blogs.msdn.microsoft.com/sql_server_team/understanding-data-security-in-cloned-databases-created-using-dbcc-clonedatabase/).
 

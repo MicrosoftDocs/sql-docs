@@ -6,15 +6,12 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords:
   - "Jet provider for OLE DB [ADO]"
   - "providers [ADO], OLE DB provider for Microsoft Jet"
   - "OLE DB provider for Microsoft Jet [ADO]"
 ms.assetid: fd956da1-5203-40af-aa7e-fc13a6c6581f
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg

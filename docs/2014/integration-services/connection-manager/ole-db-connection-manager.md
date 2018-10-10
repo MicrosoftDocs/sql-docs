@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "OLE DB connection manager"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "connection managers [Integration Services], OLE DB"
   - "connections [Integration Services], OLE DB"
 ms.assetid: 91e3622e-4b1a-439a-80c7-a00b90d66979
-caps.latest.revision: 56
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

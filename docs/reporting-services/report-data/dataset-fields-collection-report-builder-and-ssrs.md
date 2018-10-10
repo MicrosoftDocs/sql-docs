@@ -1,22 +1,15 @@
 ---
 title: "Dataset Fields Collection (Report Builder and SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "report-data"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-data
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: b3884576-1f7e-4d40-bb7d-168312333bb3
-caps.latest.revision: 13
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ---
 # Dataset Fields Collection (Report Builder and SSRS)
   Dataset fields represent the data from a data connection. A field can represent either numeric or non-numeric data. Examples include sales amounts, total sales, customer names, database identifiers, URLs, images, spatial data, and e-mail addresses. On the design surface, fields appear as expressions in report items such as text boxes, tables, and charts.  

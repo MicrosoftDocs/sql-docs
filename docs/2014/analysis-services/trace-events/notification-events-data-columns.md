@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Notification Events event category"
 ms.assetid: 0ecf06da-1586-415a-9da8-60d4c634f030
-caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
 manager: craigg

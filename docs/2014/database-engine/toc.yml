@@ -1,0 +1,151 @@
+- name: Database Engine
+  href: sql-server-database-engine-overview.md
+  items:
+  - name: What's New (Database Engine)
+    href: whats-new-in-sql-server-2016.md
+  - name: SQL Server Database Engine Backward Compatibility
+    href: sql-server-database-engine-backward-compatibility.md
+    items:
+    - name: Deprecated Database Engine Features in SQL Server 2014
+      href: deprecated-database-engine-features-in-sql-server-2016.md
+    - name: Discontinued Database Engine Functionality in SQL Server 2014
+      href: discontinued-database-engine-functionality-in-sql-server-2016.md
+    - name: Breaking Changes to Database Engine Features in SQL Server 2014
+      href: breaking-changes-to-database-engine-features-in-sql-server-2016.md
+    - name: Behavior Changes to Database Engine Features in SQL Server 2014
+      href: behavior-changes-to-database-engine-features-in-sql-server-2014.md
+    - name: Full-Text Search Backward Compatibility
+      href: full-text-search-backward-compatibility.md
+      items:
+      - name: Discontinued Full-Text Search Features in SQL Server 2014
+        href: discontinued-full-text-search-features-in-sql-server-2014.md
+      - name: Breaking Changes to Full-Text Search
+        href: breaking-changes-to-full-text-search.md
+      - name: Behavior Changes to Full-Text Search
+        href: behavior-changes-to-full-text-search.md
+  - name: SQL Server Management Tools Backward Compatibility
+    href: sql-server-management-tools-backward-compatibility.md
+    items:
+    - name: Deprecated Management Tools Features in SQL Server 2014
+      href: deprecated-management-tools-features-in-sql-server-2014.md
+    - name: Discontinued Management Tools Features in SQL Server 2014
+      href: discontinued-management-tools-features-in-sql-server-2014.md
+    - name: Breaking Changes to Management Tools Features in SQL Server 2014
+      href: breaking-changes-to-management-tools-features-in-sql-server-2014.md
+    - name: Behavior Changes to Management Tools Features in SQL Server 2014
+      href: behavior-changes-to-management-tools-features-in-sql-server-2014.md
+- name: Database Engine Features and Tasks
+  href: database-engine-features-and-tasks.md
+- name: Database Engine Instances (SQL Server)
+  href: configure-windows/database-engine-instances-sql-server.md
+  items:
+  - name: Configure Database Engine Instances +
+    href: configure-windows/configure-database-engine-instances-sql-server.md
+  - name: Collation and Unicode Support +
+    href: ../relational-databases/collations/collation-and-unicode-support.md
+  - name: Linked Servers (Database Engine)
+    href: ../relational-databases/linked-servers/linked-servers-database-engine.md
+    items:
+    - name: Create Linked Servers (SQL Server Database Engine)
+      href: ../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md
+  - name: Logon Triggers
+    href: ../relational-databases/triggers/logon-triggers.md
+    items:
+    - name: Capture Logon Trigger Event Data
+      href: ../relational-databases/triggers/capture-logon-trigger-event-data.md
+  - name: Manage the Database Engine Services +
+    href: configure-windows/manage-the-database-engine-services.md
+  - name: Server Network Configuration +
+    href: configure-windows/server-network-configuration.md
+  - name: Client Network Configuration +
+    href: configure-windows/client-network-configuration.md
+  - name: Database Engine Scripting +
+    href: ../relational-databases/scripting/database-engine-scripting.md
+  - name: Maintenance Plans +
+    href: ../relational-databases/maintenance-plans/maintenance-plans.md
+  - name: Resource Governor +
+    href: ../relational-databases/resource-governor/resource-governor.md
+  - name: Database Mail +
+    href: ../relational-databases/database-mail/database-mail.md
+  - name: Extended Events +
+    href: ../relational-databases/extended-events/extended-events.md
+  - name: SQL Trace +
+    href: ../relational-databases/sql-trace/sql-trace.md
+  - name: SQL Server Profiler +
+    href: ../tools/sql-server-profiler/sql-server-profiler.md
+  - name: Track Data Changes +
+    href: ../relational-databases/track-changes/track-data-changes-sql-server.md
+  - name: Log File Viewer +
+    href: ../relational-databases/logs/log-file-viewer.md
+  - name: Database Engine Tuning Advisor +
+    href: ../relational-databases/performance/database-engine-tuning-advisor.md
+  - name: Diagnostic Connection for Database Administrators
+    href: configure-windows/diagnostic-connection-for-database-administrators.md
+  - name: Cloud Adapter for SQL Server
+    href: cloud-adapter-for-sql-server.md
+  - name: SQL Server 2014 Express LocalDB
+    href: configure-windows/sql-server-2016-express-localdb.md
+  - name: Remote Servers
+    href: configure-windows/remote-servers.md
+  - name: SQL Server Monitor Overview
+    href: configure-windows/sql-server-monitor-overview.md
+  - name: Service Broker
+    href: configure-windows/sql-server-service-broker.md
+  - name: Buffer Pool Extension
+    href: configure-windows/buffer-pool-extension.md
+- name: Database Features +
+  href: ../relational-databases/database-features.md
+- name: Database Engine Cross-Instance Features
+  href: database-engine-cross-instance-features.md
+  items:
+  - name: SQL Server Management Studio +
+    href: ../ssms/sql-server-management-studio-ssms.md
+  - name: Database Lifecycle Management
+    href: ../relational-databases/database-lifecycle-management.md
+  - name: SQL Server Utility Features and Tasks +
+    href: ../relational-databases/manage/sql-server-utility-features-and-tasks.md
+  - name: Administer Servers by Using Policy-Based Management +
+    href: ../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md
+  - name: Register Servers +
+    href: ../ssms/register-servers/register-servers.md
+  - name: SQL Server Distributed Replay +
+    href: ../tools/distributed-replay/sql-server-distributed-replay.md
+  - name: Data Collection +
+    href: ../relational-databases/data-collection/data-collection.md
+  - name: Monitor Resource Usage (System Monitor) +
+    href: ../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md
+  - name: Administer Multiple Servers Using Central Management Servers
+    href: ../relational-databases/administer-multiple-servers-using-central-management-servers.md
+  - name: SQL Server Configuration Manager
+    href: ../relational-databases/sql-server-configuration-manager.md
+  - name: Activity Monitor
+    href: ../relational-databases/performance-monitor/activity-monitor.md
+    items:
+    - name: Open Activity Monitor (SQL Server Management Studio)
+      href: ../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md
+- name: Always On Availability Groups +
+  href: availability-groups/windows/always-on-availability-groups-sql-server.md
+- name: The Database Mirroring Endpoint +
+  href: database-mirroring/the-database-mirroring-endpoint-sql-server.md
+- name: About Log Shipping +
+  href: log-shipping/about-log-shipping-sql-server.md
+- name: Security Center for SQL Server Database Engine and Azure SQL Database +
+  href: ../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md
+- name: Technical Reference
+  href: technical-reference-database-engine.md
+  items:
+  - name: Feature Reference
+    href: feature-reference-database-engine.md
+  - name: Command Prompt Utility Reference (Database Engine) +
+    href: ../tools/command-prompt-utility-reference-database-engine.md
+  - name: Database Engine PowerShell Reference
+    href: database-engine-powershell-reference.md
+    items:
+    - name: Invoke-PolicyEvaluation cmdlet
+      href: invoke-policyevaluation-cmdlet.md
+    - name: Invoke-Sqlcmd cmdlet
+      href: invoke-sqlcmd-cmdlet.md
+    - name: Query Expressions and Uniform Resource Names
+      href: ../powershell/query-expressions-and-uniform-resource-names.md
+- name: Errors and Events Reference +
+  href: ../relational-databases/errors-events/errors-and-events-reference-database-engine.md

@@ -1,23 +1,20 @@
-﻿---
+---
 title: "Modify Primary Keys | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/25/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: table-view-index
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "modifying primary keys"
   - "primary keys [SQL Server], modifying"
 ms.assetid: 8e2a15ba-1cd1-4408-b860-16c3ee37d635
-caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Modify Primary Keys
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -60,7 +57,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
     |Define a fill factor|Expand the **Fill Specification** category and type an integer from 0 to 100 in the **Fill factor** box. For more information about fill factors and their uses, see [Specify Fill Factor for an Index](../../relational-databases/indexes/specify-fill-factor-for-an-index.md).|  
     |Change the column order|Select **Columns**, and then click the ellipses **(…)** to the right of the property. In the  **Index Columns** dialog box, remove the columns from the primary key. Then add the columns back in the order you want. To remove a column from the key, simply remove the column name from the **Column** name list.|  
   
-4.  On the **File** menu, click **Save***table name*.  
+4.  On the **File** menu, click **Save**_table name_.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
  **To modify a primary key**  

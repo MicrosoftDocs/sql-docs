@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "KeyErrorLogFile Element"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "KeyErrorLogFile element"
 ms.assetid: 1455bb54-03f7-4f25-9d4d-ab75231dd958
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg

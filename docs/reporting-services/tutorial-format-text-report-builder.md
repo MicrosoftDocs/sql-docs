@@ -1,23 +1,14 @@
 ---
 title: "Tutorial: Format Text (Report Builder) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/30/2017"
+ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.component: "reporting-services"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: reporting-services
 
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+ms.topic: conceptual
 ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
-caps.latest.revision: 16
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
 ---
 
 # Tutorial: Format Text (Report Builder)
@@ -202,7 +193,7 @@ Create this table so you'll have a place to put hyperlinks and rotated text.
   
 8.  Click **Design** to return to design view.  
   
-9. Select the the **Total** cell in the **LinkText** column, then hold down the SHIFT key and select the two cells to its right: and the empty cell in the **Product** column and the `[Sum(Sales)]` cell in the **Sales** column.  
+9. Select the **Total** cell in the **LinkText** column, then hold down the SHIFT key and select the two cells to its right: and the empty cell in the **Product** column and the `[Sum(Sales)]` cell in the **Sales** column.  
   
 11. With those three cells selected, right-click one of those cells and click **Delete Rows**.  
 

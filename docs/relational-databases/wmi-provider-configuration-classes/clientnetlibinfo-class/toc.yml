@@ -1,0 +1,14 @@
+- name: ClientNetLibInfo Class
+  href: clientnetlibinfo-class.md
+- name: Date Property (ClientNetLibInfo Class)
+  href: date-property-clientnetlibinfo-class.md
+- name: FileName Property (ClientNetLibInfo Class)
+  href: filename-property-clientnetlibinfo-class.md
+- name: ProtocolDisplayName Property (ClientNetLibInfo Class)
+  href: protocoldisplayname-property-clientnetlibinfo-class.md
+- name: ProtocolName Property (ClientNetLibInfo Class)
+  href: protocolname-property-clientnetlibinfo-class.md
+- name: Size Property (ClientNetLibInfo Class)
+  href: size-property-clientnetlibinfo-class.md
+- name: Version Property (ClientNetLibInfo Class)
+  href: version-property-clientnetlibinfo-class.md

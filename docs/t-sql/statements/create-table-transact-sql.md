@@ -1,13 +1,11 @@
 ---
 title: "CREATE TABLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/10/2017"
+ms.date: "09/24/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "FILESTREAM_TSQL"
@@ -46,7 +44,6 @@ helpviewer_keywords:
   - "number of columns per table"
   - "maximum number of bytes per row"
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
-caps.latest.revision: 256
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
@@ -56,8 +53,6 @@ manager: craigg
 
   Creates a new table in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
-
 > [!NOTE]   
 >  For [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] syntax, see [CREATE TABLE (Azure SQL Data Warehouse)](../../t-sql/statements/create-table-azure-sql-data-warehouse.md).
   
@@ -83,7 +78,7 @@ CREATE TABLE
     ( {   <column_definition>   
         | <computed_column_definition>    
         | <column_set_definition>   
-        | [ <table_constraint> ]   
+        | [ <table_constraint> ] [ ,... n ] 
         | [ <table_index> ] }  
           [ ,...n ]    
           [ PERIOD FOR SYSTEM_TIME ( system_start_time_column_name   
@@ -116,7 +111,7 @@ column_name <data_type>
           ENCRYPTION_TYPE = { DETERMINISTIC | RANDOMIZED } ,   
           ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256'  
         ) ]  
-    [ <column_constraint> [ ...n ] ]   
+    [ <column_constraint> [, ...n ] ]   
     [ <column_index> ]  
   
 <data type> ::=   
@@ -263,7 +258,8 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
 ```  
   
 ```  
---Memory optimized CREATE TABLE Syntax  
+--Memory optimized 
+LE Syntax  
 CREATE TABLE  
     [database_name . [schema_name ] . | schema_name . ] table_name  
     ( { <column_definition>  
@@ -406,7 +402,7 @@ column_name <data_type>
   
  FILESTREAM_ON { *partition_scheme_name* | filegroup | **"**default**"** } 
  
- **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Azure SQL Database does not support `FILESTREAM`.
  
  Specifies the filegroup for FILESTREAM data.  
   
@@ -426,7 +422,7 @@ column_name <data_type>
   
  For related FILESTREAM topics, see [Binary Large Object &#40;Blob&#41; Data &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
   
- [ *type_schema_name***.** ] *type_name*  
+ [ _type\_schema\_name_**.** ] *type_name*  
  Specifies the data type of the column, and the schema to which it belongs. For disk-based tables, the data type can be one of the following:  
   
 -   A system data type.  
@@ -492,7 +488,7 @@ column_name <data_type>
   
  Specifies that a specified datetime2 column will be used by the system to record either the start time for which a record is valid or the end time for which a record is valid. The column must be defined as NOT NULL. If you attempt to specify them as NULL, the system will throw an error. If you do not explicitly specify NOT NULL for a period column, the system will define the column as NOT NULL by default. Use this argument in conjunction with the PERIOD FOR SYSTEM_TIME and WITH SYSTEM_VERSIONING = ON arguments to enable system versioning on a table. For more information, see [Temporal Tables](../../relational-databases/tables/temporal-tables.md).  
   
- You can mark one or both period columns with **HIDDEN** flag to implicitly hide these columns such that **SELECT \* FROM***`<table>`* does not return a value for those columns. By default, period columns are not hidden. In order to be used, hidden columns must be explicitly included in all queries that directly reference the temporal table. To change the **HIDDEN** attribute for an existing period column, **PERIOD** must be dropped and recreated with a different hidden flag.  
+ You can mark one or both period columns with **HIDDEN** flag to implicitly hide these columns such that **SELECT \* FROM**_`<table>`_ does not return a value for those columns. By default, period columns are not hidden. In order to be used, hidden columns must be explicitly included in all queries that directly reference the temporal table. To change the **HIDDEN** attribute for an existing period column, **PERIOD** must be dropped and recreated with a different hidden flag.  
   
  `INDEX *index_name* [ CLUSTERED | NONCLUSTERED ] (*column_name* [ ASC | DESC ] [ ,... *n* ] )`  
      
@@ -514,7 +510,7 @@ Specifies to create an index on the table. This can be a clustered index, or a n
   
  The nonclustered columnstore index is stored and managed as a clustered columnstore index. It is called a nonclustered columnstore index to because the columns can be limited and it exists as a secondary index on a table.  
   
- ON *partition_scheme_name***(***column_name***)**  
+ ON _partition\_scheme\_name_**(**_column\_name_**)**  
  Specifies the partition scheme that defines the filegroups onto which the partitions of a partitioned index will be mapped. The partition scheme must exist within the database by executing either [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) or [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md). *column_name* specifies the column against which a partitioned index will be partitioned. This column must match the data type, length, and precision of the argument of the partition function that *partition_scheme_name* is using. *column_name* is not restricted to the columns in the index definition. Any column in the base table can be specified, except when partitioning a UNIQUE index, *column_name* must be chosen from among those used as the unique key. This restriction allows the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to verify uniqueness of key values within a single partition only.  
   
 > [!NOTE]  
@@ -537,7 +533,7 @@ Specifies to create an index on the table. This can be a clustered index, or a n
   
  [ FILESTREAM_ON { *filestream_filegroup_name* | *partition_scheme_name* | "NULL" } ]  
    
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion.md)].
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
  Specifies the placement of FILESTREAM data for the table when a clustered index is created. The FILESTREAM_ON clause allows FILESTREAM data to be moved to a different FILESTREAM filegroup or partition scheme.  
   
@@ -565,9 +561,11 @@ Specifies to create an index on the table. This can be a clustered index, or a n
  ENCRYPTION_TYPE = { DETERMINISTIC | RANDOMIZED }  
  **Deterministic encryption** uses a method which always generates the same encrypted value for any given plain text value. Using deterministic encryption allows searching using equality comparison, grouping, and joining tables using equality joins based on encrypted values, but can also allow unauthorized users to guess information about encrypted values by examining patterns in the encrypted column. Joining two tables on columns encrypted deterministically is only possible if both columns are encrypted using the same column encryption key. Deterministic encryption must use a column collation with a binary2 sort order for character columns.  
   
- **Randomized encryption** uses a method that encrypts data in a less predictable manner. Randomized encryption is more secure, but prevents equality searches, grouping, and joining on encrypted columns. Columns using randomized encryption cannot be indexed.  
+ **Randomized encryption** uses a method that encrypts data in a less predictable manner. Randomized encryption is more secure, but it prevents any computations and indexing on encrypted columns, unless your SQL Server instance supports Always Encrypted with secure enclaves. Please see [Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md) for details.
   
- Use deterministic encryption for columns that will be search parameters or grouping parameters, for example a government ID number. Use randomized encryption, for data such as a credit card number, which is not grouped with other records, or used to join tables, and which is not searched for because you use other columns (such as a transaction number) to find the row which contains the encrypted column of interest.  
+ If you are using Always Encrypted (without secure enclaves), use deterministic encryption for columns that will be searched with parameters or grouping parameters, for example a government ID number. Use randomized encryption, for data such as a credit card number, which is not grouped with other records or used to join tables, and which is not searched for because you use other columns (such as a transaction number) to find the row which contains the encrypted column of interest.
+
+ If you are using Always Encrypted with secure enclaves, randomized encryption is a recommended encryption type.
   
  Columns must be of a qualifying data type.  
   
@@ -600,7 +598,7 @@ Specifies to create an index on the table. This can be a clustered index, or a n
   
  FILESTREAM  
    
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion.md)].
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
  Valid only for **varbinary(max)** columns. Specifies FILESTREAM storage for the **varbinary(max)** BLOB data.  
   
@@ -649,7 +647,7 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
  FOREIGN KEY REFERENCES  
  Is a constraint that provides referential integrity for the data in the column or columns. FOREIGN KEY constraints require that each value in the column exists in the corresponding referenced column or columns in the referenced table. FOREIGN KEY constraints can reference only columns that are PRIMARY KEY or UNIQUE constraints in the referenced table or columns referenced in a UNIQUE INDEX on the referenced table. Foreign keys on computed columns must also be marked PERSISTED.  
   
- [ *schema_name***.**] *referenced_table_name*]  
+ [ _schema\_name_**.**] *referenced_table_name*]  
  Is the name of the table referenced by the FOREIGN KEY constraint, and the schema to which it belongs.  
   
  **(** *ref_column* [ **,**... *n* ] **)**  
@@ -720,13 +718,13 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
  *partition_scheme_name*  
  Is the name of the partition scheme that defines the filegroups onto which the partitions of a partitioned table will be mapped. The partition scheme must exist within the database.  
   
- [ *partition_column_name***.** ]  
+ [ _partition\_column\_name_**.** ]  
  Specifies the column against which a partitioned table will be partitioned. The column must match that specified in the partition function that *partition_scheme_name* is using in terms of data type, length, and precision. A computed columns that participates in a partition function must be explicitly marked PERSISTED.  
   
 > [!IMPORTANT]  
 >  We recommend that you specify NOT NULL on the partitioning column of partitioned tables, and also nonpartitioned tables that are sources or targets of ALTER TABLE...SWITCH operations. Doing this makes sure that any CHECK constraints on partitioning columns do not have to check for null values.  
   
- WITH FILLFACTOR **=***fillfactor*  
+ WITH FILLFACTOR **=**_fillfactor_  
  Specifies how full the [!INCLUDE[ssDE](../../includes/ssde-md.md)] should make each index page that is used to store the index data. User-specified *fillfactor* values can be from 1 through 100. If a value is not specified, the default is 0. Fill factor values 0 and 100 are the same in all respects.  
   
 > [!IMPORTANT]  
@@ -812,7 +810,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  PAD_INDEX = { ON | **OFF** }  
  When ON, the percentage of free space specified by FILLFACTOR is applied to the intermediate level pages of the index. When OFF or a FILLFACTOR value it not specified, the intermediate level pages are filled to near capacity leaving enough space for at least one row of the maximum size the index can have, considering the set of keys on the intermediate pages. The default is OFF.  
   
- FILLFACTOR **=***fillfactor*  
+ FILLFACTOR **=**_fillfactor_  
  Specifies a percentage that indicates how full the [!INCLUDE[ssDE](../../includes/ssde-md.md)] should make the leaf level of each index page during index creation or alteration. *fillfactor* must be an integer value from 1 to 100. The default is 0. Fill factor values 0 and 100 are the same in all respects.  
   
  IGNORE_DUP_KEY = { ON | **OFF** }  
@@ -847,7 +845,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  FILETABLE_COLLATE_FILENAME = { *collation_name* | database_default }  
    
-**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Azure SQL Database does not support `FILETABLE`. 
   
  Specifies the name of the collation to be applied to the **Name** column in the FileTable. The collation must be case-insensitive to comply with Windows file naming semantics. If this value is not specified, the database default collation is used. If the database default collation is case-sensitive, an error is raised and the CREATE TABLE operation fails.  
   
@@ -922,7 +920,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  MEMORY_OPTIMIZED  
    
-**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Azure SQL Database Managed Instance does not support memory optiimized tables. 
   
  The value  ON indicates that the table is memory optimized. Memory-optimized tables are part of the In-Memory OLTP feature, which is used to optimized the performance of transaction processing. To get started with In-Memory OLTP see [Quick Start 1: In-Memory OLTP Technologies for Faster Transact-SQL Performance](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md). For more in-depth information about memory-optimized tables see [Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   

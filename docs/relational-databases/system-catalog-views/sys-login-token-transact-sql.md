@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "login_token_TSQL"
@@ -22,9 +19,8 @@ helpviewer_keywords:
   - "logins [SQL Server], security tokens"
   - "tokens [SQL Server]"
 ms.assetid: 86e06938-9d0a-44e5-99e2-55c8ef5f2f84
-caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # sys.login_token (Transact-SQL)

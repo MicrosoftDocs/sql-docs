@@ -1,17 +1,12 @@
 ---
 title: "Browser Support for Reporting Services and Power View | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/02/2017"
+ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "reporting-services"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: reporting-services
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "displaying reports"
   - "scripts [Reporting Services], requirements"
@@ -22,10 +17,8 @@ helpviewer_keywords:
   - "components [Reporting Services], browsers"
   - "Web browsers [Reporting Services]"
 ms.assetid: 48a75bbb-0029-4c43-891d-dc8f4fc0ebe1
-caps.latest.revision: 121
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ---
 # Browser Support for Reporting Services and Power View
 

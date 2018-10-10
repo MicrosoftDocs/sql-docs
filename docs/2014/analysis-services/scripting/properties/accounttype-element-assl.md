@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "AccountType Element"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "AccountType element"
 ms.assetid: 4fdf17d3-cd84-4bf6-9baf-21e15d4bf71e
-caps.latest.revision: 39
 author: minewiskan
 ms.author: owend
 manager: craigg

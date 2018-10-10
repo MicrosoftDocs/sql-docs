@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "wmi"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
   - "HostName Property (SqlService Class)"
@@ -19,7 +16,6 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "HostName property"
 ms.assetid: 3df0ca15-9eca-4cbd-8c39-cb00be6a0215
-caps.latest.revision: 34
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg

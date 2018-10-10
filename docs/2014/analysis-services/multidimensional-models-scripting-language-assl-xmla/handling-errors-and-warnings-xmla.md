@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "errors [XML for Analysis]"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "warnings [XML for Analysis]"
   - "inline warnings [XMLA]"
 ms.assetid: ab895282-098d-468e-9460-032598961f45
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg

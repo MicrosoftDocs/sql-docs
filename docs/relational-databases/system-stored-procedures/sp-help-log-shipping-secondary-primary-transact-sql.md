@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_help_log_shipping_secondary_primary"
@@ -18,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_help_log_shipping_secondary_primary"
 ms.assetid: 1310fdaf-edb5-4294-9739-7fb37c2c2cb5
-caps.latest.revision: 19
-author: "stevestein"
-ms.author: "sstein"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # sp_help_log_shipping_secondary_primary (Transact-SQL)

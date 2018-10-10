@@ -1,14 +1,11 @@
-﻿---
+---
 title: "sys.query_store_wait_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/21/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.query_store_wait_stats"
@@ -19,11 +16,10 @@ helpviewer_keywords:
   - "query_store_wait_stats catalog view"
   - "sys.query_store_wait_stats catalog view"
 ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
-caps.latest.revision: 18
 author: "AndrejsAnt"
 ms.author: "AndrejsAnt"
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.query_store_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]

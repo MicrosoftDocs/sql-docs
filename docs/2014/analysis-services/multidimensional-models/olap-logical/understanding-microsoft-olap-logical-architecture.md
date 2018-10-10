@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "Analysis Services, architecture"
   - "logical architecture [Analysis Services Multidimensional Data]"
 ms.assetid: 1b9cae0a-8990-4194-af5f-a1ea5f2aff06
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -47,7 +44,7 @@ manager: craigg
  [Cube Objects &#40;Analysis Services - Multidimensional Data&#41;](../../multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)  
   
  **User Access Security**  
- [User Access Security Architecture](https://msdn.microsoft.com/library/bb522595(SQL.120).aspx)  
+ [User Access Security Architecture](understanding-microsoft-olap-logical-architecture.md)  
   
 ## See Also  
  [Understanding Microsoft OLAP Architecture](../olap-physical/understanding-microsoft-olap-architecture.md)   

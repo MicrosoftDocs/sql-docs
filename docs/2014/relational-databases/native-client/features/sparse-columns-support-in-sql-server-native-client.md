@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: native-client  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "sparse columns, ODBC"
   - "sparse columns, SQL Server Native Client"
   - "sparse columns, OLE DB"
 ms.assetid: aee5ed81-7e23-42e4-92d3-2da7844d9bc3
-caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg

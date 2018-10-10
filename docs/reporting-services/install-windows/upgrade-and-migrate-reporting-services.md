@@ -1,15 +1,10 @@
 ---
 title: "Upgrade and Migrate Reporting Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/17/2017"
+ms.date: 08/17/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SSRS, upgrading"
@@ -17,10 +12,8 @@ helpviewer_keywords:
   - "SQL Server Reporting Services, upgrading"
   - "upgrading Reporting Services"
 ms.assetid: 851a19a8-07ab-4d42-992f-1986c4c8df55
-caps.latest.revision: 92
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ---
 
 # Upgrade and Migrate Reporting Services

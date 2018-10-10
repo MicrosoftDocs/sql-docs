@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "SQL12.rsconfigtool.serverstatus.F1"
 ms.assetid: 2f63ad1c-1bc2-449d-b451-fb39a0060838
-caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
 manager: craigg

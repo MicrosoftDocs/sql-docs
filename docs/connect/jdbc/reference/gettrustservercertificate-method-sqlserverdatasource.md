@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "getTrustServerCertificate Method (SQLServerDataSource)"
@@ -15,7 +13,6 @@ apilocation:
   - "getTrustServerCertificate Method (SQLServerDataSource)"
 apitype: "Assembly"
 ms.assetid: e4f443cc-b5d7-4859-81df-836a8642ed07
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -36,7 +33,7 @@ public boolean getTrustServerCertificate()
  **true** if trustServerCertificate is enabled. Otherwise, **false**.  
   
 ## Remarks  
- If the trustServerCertificate property is set to **true**, the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Secure Sockets Layer (SSL) certificate is automatically trusted when the communication layer is encrypted using SSL. In other words, the [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] will not validate the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] SSL certificate. The default value is **false**.  
+ If the trustServerCertificate property is set to **true**, the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Secure Sockets Layer (SSL) certificate is automatically trusted when the communication layer is encrypted using SSL. In other words, the [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] will not validate the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SSL certificate. The default value is **false**.  
   
  If the trustServerCertificate property is set to **false**, the [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] will validate the server SSL certificate.  
   

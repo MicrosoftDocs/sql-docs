@@ -39,7 +39,7 @@ After upgrading to APS AU7, auto statistics is enabled by default. The system ad
 Changing any feature switch values requires a service restart on APS.
 
 ## Change auto statistics settings on a database
-When auto statistics is enabled by the system administrator, you can use [ALTER DATABASE (Parallel Data Warehouse)](/sql/t-sql/statements/alter-database-parallel-data-warehouse) to change the statistics settings on a database. If auto statistics feature switch is enabled by the system administrator, any new databases created after the upgrade to AU7 will have auto statistics enabled. All databases that existed before the upgrade to AU7 have auto statistics disabled. 
+When auto statistics is enabled by the system administrator, you can use [ALTER DATABASE (Parallel Data Warehouse)](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw) to change the statistics settings on a database. If auto statistics feature switch is enabled by the system administrator, any new databases created after the upgrade to AU7 will have auto statistics enabled. All databases that existed before the upgrade to AU7 have auto statistics disabled. 
 The following example enables auto statistics on the existing database myPDW.
 
 ```sql

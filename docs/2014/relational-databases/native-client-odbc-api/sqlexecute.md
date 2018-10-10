@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "SQLExecute function"
 ms.assetid: 4d7db8b6-611f-4fe4-be85-2a407059de45
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg

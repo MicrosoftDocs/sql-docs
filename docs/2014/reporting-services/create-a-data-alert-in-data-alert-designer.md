@@ -4,13 +4,10 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
-caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
 manager: craigg
@@ -52,7 +49,7 @@ manager: craigg
   
      The default name of the alert definition is the name of the report. Alert definition names do not have to be unique, which can make it difficult to tell them apart when you later view the list of your alerts in Data Alert Manager. It is recommended that you use meaningful and unique names for your alert definitions.  
   
-6.  Optionally, change the default data option from **any data in in the data feed has** to **no data in the data feed has**.  
+6.  Optionally, change the default data option from **any data in the data feed has** to **no data in the data feed has**.  
   
 7.  Click **Add rule**.  
   

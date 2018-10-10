@@ -4,34 +4,28 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 helpviewer_keywords: 
   - "Migrating data,Client Side Data Migration"
   - "Migrating data,Server Side Data Migration"
 ms.assetid: 54a39f5e-9250-4387-a3ae-eae47c799811
-caps.latest.revision: 15
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: craigg
 ---
 # Migrating Sybase ASE Data into SQL Server - Azure SQL DB  (SybaseToSQL)
-After you have successfully loaded the Sybase Adaptive Server Enterprise (ASE) database objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL DB, you can migrate data from ASE to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL DB.  
+After you have successfully loaded the Sybase Adaptive Server Enterprise (ASE) database objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL DB, you can migrate data from ASE to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL DB.  
   
 > [!IMPORTANT]  
 > If the engine being used is Server Side Data Migration Engine, then before you migrate data, you must install the SSMA for Sybase ASE Extension Pack and the Sybase ASE providers on the computer that is running SSMA. The SQL Server Agent service must also be running. For more information about how to install the extension pack, see [Installing SSMA Components on SQL Server (SybaseToSQL)](http://msdn.microsoft.com/5ad9e12c-2cdb-4dd2-8703-05a23242d19d)  
   
 ## Setting Migration Options  
-Before migrating data into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL DB, review the project migration options in the **Project Settings** dialog box.  
+Before migrating data into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL DB, review the project migration options in the **Project Settings** dialog box.  
   
 -   By using this dialog box you can set options such as migration batch size, table locking, constraint checking, null value handling and identity value handling. For more information about the Project Migration Settings, see [Project Settings (Migration) (Sybase)](http://msdn.microsoft.com/82f8857f-7ab1-4738-ab6e-b1e95ea94924).  
   
-    For more information on **Extended Data Migration Settings**, see [Data Migration Settings](http://msdn.microsoft.com/94d7a083-2dbc-4e3d-94dd-92b7ff9d0c2d)  
+    For more information on **Extended Data Migration Settings**, see [Data Migration Settings](data-migration-settings-sybasetosql.md)  
   
 -   The **Migration Engine** in the **Project Settings** dialog box, allows the user to perform the migration process using two types of data migration engines, viz.:  
   

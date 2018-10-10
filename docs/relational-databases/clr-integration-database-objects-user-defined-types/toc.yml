@@ -1,0 +1,26 @@
+- name: CLR User-Defined Types
+  href: clr-user-defined-types.md
+  items:
+  - name: Creating User-Defined Types
+    href: creating-user-defined-types.md
+    items:
+    - name: Creating User-Defined Types - Requirements
+      href: creating-user-defined-types-requirements.md
+    - name: Creating User-Defined Types - Coding
+      href: creating-user-defined-types-coding.md
+  - name: Registering User-Defined Types in SQL Server
+    href: registering-user-defined-types-in-sql-server.md
+  - name: Working with User-Defined Types in SQL Server
+    href: working-with-user-defined-types-in-sql-server.md
+    items:
+    - name: Working with User-Defined Types - Defining UDT Tables and Columns
+      href: working-with-user-defined-types-defining-udt-tables-and-columns.md
+    - name: Working with User-Defined Types - Manipulating UDT Data
+      href: working-with-user-defined-types-manipulating-udt-data.md
+  - name: Accessing User-Defined Types in ADO.NET
+    href: accessing-user-defined-types-in-ado-net.md
+    items:
+    - name: Accessing User-Defined Types - Retrieving UDT Data
+      href: accessing-user-defined-types-retrieving-udt-data.md
+    - name: Accessing User-Defined Types - Updating UDT Columns with DataAdapters
+      href: accessing-user-defined-types-updating-udt-columns-with-dataadapters.md

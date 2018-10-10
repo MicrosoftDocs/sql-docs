@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "syscollector_execution_log_TSQL"
@@ -19,7 +16,6 @@ helpviewer_keywords:
   - "data collector view"
   - "syscollector_execution_log view"
 ms.assetid: 11554d64-0426-42ce-b7ce-5591f67864d2
-caps.latest.revision: 18
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

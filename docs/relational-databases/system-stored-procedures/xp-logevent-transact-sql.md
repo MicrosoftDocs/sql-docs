@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "xp_logevent"
@@ -18,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "xp_logevent"
 ms.assetid: 7b379ad0-5b12-4d2e-9c52-62465df1fdbd
-author: CarlRabeler
-ms.author: carlrab
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # xp_logevent (Transact-SQL)

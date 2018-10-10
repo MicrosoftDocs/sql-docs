@@ -5,9 +5,7 @@ ms.date: "07/29/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "DATEDIFF_TSQL"
@@ -30,11 +28,10 @@ helpviewer_keywords:
   - "crossing date time boundaries [SQL Server]"
   - "calculating dates times [SQL Server]"
 ms.assetid: eba979f2-1a8d-4cce-9d75-b74f9b519b37
-caps.latest.revision: 52
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DATEDIFF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -98,7 +95,7 @@ If *startdate* and *enddate* are both assigned only a time value, and the *datep
   
 `DATEDIFF` does not use a time zone offset component of *startdate* or *enddate* to calculate the return value.
   
-Because [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) has accurate only to the minute, seconds and milliseconds are always set to 0 in the return value when *startdate* or *enddate* have a **smalldatetime** value.
+Because [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) is accurate only to the minute, seconds and milliseconds are always set to 0 in the return value when *startdate* or *enddate* have a **smalldatetime** value.
   
 If only a time value is assigned to a date data type variable, `DATEDIFF` sets the value of the missing date part to the default value: 1900-01-01. If only a date value is assigned to a variable of a time or date data type, `DATEDIFF` sets the value of the missing time part to the default value: 00:00:00. If either *startdate* or *enddate* have only a time part and the other only a date part, `DATEDIFF` sets the missing time and date parts to the default values.
   

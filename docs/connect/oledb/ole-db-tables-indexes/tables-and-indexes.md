@@ -5,11 +5,8 @@ ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "oledb|ole-db-tables-indexes"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "OLE DB, indexes"
@@ -20,8 +17,8 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, tables"
   - "OLE DB Driver for SQL Server, indexes"
   - "indexes [OLE DB]"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Tables and Indexes

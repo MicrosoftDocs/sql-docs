@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "10/19/2016"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: security
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "audit"
@@ -20,9 +18,8 @@ helpviewer_keywords:
   - "audit action groups [SQL Server]"
   - "audits [SQL Server], actions"
 ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
-caps.latest.revision: 40
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # SQL Server Audit Action Groups and Actions

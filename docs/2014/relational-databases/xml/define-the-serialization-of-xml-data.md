@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: conceptual
 helpviewer_keywords: 
   - "entitization rules [XML in SQL Server]"
@@ -18,7 +15,6 @@ helpviewer_keywords:
   - "xml data type [SQL Server], serialization"
   - "typed XML"
 ms.assetid: 42b0b5a4-bdd6-4a60-b451-c87f14758d4b
-caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

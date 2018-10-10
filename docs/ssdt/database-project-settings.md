@@ -6,8 +6,6 @@ ms.date: "02/09/2017"
 ms.prod: "sql"
 ms.technology: ssdt
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql.data.tools.DebugProperties"
@@ -40,7 +38,6 @@ f1_keywords:
   - "sql.data.tools.dbassemblyinfo"
   - "sql.data.tools.extendedpropertieseditor.dialog"
 ms.assetid: 34418730-1aaa-4948-aee2-8f1e62cda85c
-caps.latest.revision: 26
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
@@ -102,7 +99,7 @@ The settings in the following table apply to all configurations of this database
 Extended Transact-SQL Verification is a feature within the database project system that allows developers to submit their database project to the Transact-SQL Compiler Service at build time to validate their code against the SQL Server Engine’s parser and interpreter.  
   
 ### Transact-SQL Compiler Service  
-Transact-SQL Compiler Service is a component based on the Microsoft SQL Server 2012 Database Engine. This service can validate the syntax and semantics of DDL statements with the same fidelity as a Microsoft SQL Server 2012 Database engine. This inherently means that the Compiler Service does not support syntax or features that have been deprecated in Microsoft SQL Server 2012. For more information about deprecated features, see [Discontinued Database Engine Functionality in SQL Server 2012](http://msdn.microsoft.com/en-us/library/ms144262%28v=sql.110%29.aspx).  
+Transact-SQL Compiler Service is a component based on the Microsoft SQL Server 2012 Database Engine. This service can validate the syntax and semantics of DDL statements with the same fidelity as a Microsoft SQL Server 2012 Database engine. This inherently means that the Compiler Service does not support syntax or features that have been deprecated in Microsoft SQL Server 2012. For more information about deprecated features, see [Discontinued Database Engine Functionality in SQL Server 2012](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md).  
   
 For purpose of validation of the database project, the Compiler Service creates a partially contained database and simulates execution of the DDL statements against that database. For more information, see [Partially Contained Databases](http://msdn.microsoft.com/en-us/library/ff929071%28v=SQL.110%29.aspx).  
   

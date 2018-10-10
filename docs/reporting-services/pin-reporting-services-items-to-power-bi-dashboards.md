@@ -1,16 +1,11 @@
 ---
 title: "Pin Reporting Services items to Power BI Dashboards | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/16/2016"
+ms.date: 09/16/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.component: "reporting-services"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: reporting-services
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "pbi"
   - "dashboard"
@@ -18,10 +13,8 @@ helpviewer_keywords:
   - "powerbi"
   - "power bi integration"
 ms.assetid: 1d96c3f7-2fd4-40f7-8d1c-14a7f54cdb15
-caps.latest.revision: 23
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ---
 # Pin Reporting Services items to Power BI Dashboards
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] enables users to pin [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report items from the report viewer toolbar to a [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] dashboard as a new tile.   To pin, your administrator needs to first integrate your report server with Azure Active Directory and [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].  
@@ -36,7 +29,7 @@ manager: "kfile"
   
      ![ssRS_Report_PowerBI](../reporting-services/media/ssrs-report-powerbi.png)  
   
--   You pin from the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report viewer in t[!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]he , for example `http://myserver/Reports`.  You cannot pin from [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)], from report designer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], or from a report server url.  For example  `http://myserver/ReportServer`.  
+-   You pin from the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report viewer in t[!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]he , for example `http://myserver/Reports`.  You cannot pin from [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)], from report designer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], or from a report server url.  For example  `http://myserver/ReportServer`.  
   
 -   Your browser needs to be configured to allow pop-ups from your report server site.  
   

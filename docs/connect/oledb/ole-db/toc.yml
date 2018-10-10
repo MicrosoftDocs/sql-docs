@@ -1,0 +1,48 @@
+- name: OLE DB Driver for SQL Server Programming
+  href: oledb-driver-for-sql-server-programming.md
+- name: Specific Areas
+  items:
+  - name: Creating OLE DB Driver for SQL Server applications +
+    href: ../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md
+  - name: OLE DB data source objects +
+    href: ../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md
+  - name: Commands +
+    href: ../../oledb/ole-db-commands/commands.md
+  - name: Rowsets +
+    href: ../../oledb/ole-db-rowsets/rowsets.md
+  - name: Blobs +
+    href: ../../oledb/ole-db-blobs/blobs-and-ole-objects.md
+  - name: Tables indexes +
+    href: ../../oledb/ole-db-tables-indexes/tables-and-indexes.md
+  - name: Data types +
+    href: ../../oledb/ole-db-data-types/data-types-ole-db.md
+  - name: Table-valued parameters +
+    href: ../../oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db.md
+  - name: Date time +
+    href: ../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md
+  - name: Transactions +
+    href: ../../oledb/ole-db-transactions/transactions.md
+  - name: Errors +
+    href: ../../oledb/ole-db-errors/errors.md
+  - name: Interfaces +
+    href: ../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md
+  - name: How to +
+    href: ../../oledb/ole-db-how-to/ole-db-how-to-topics.md
+- name: Large CLR User-Defined Types
+  href: large-clr-user-defined-types-ole-db.md
+- name: Schema Rowset Support
+  href: schema-rowset-support-ole-db.md
+- name: Schema Rowsets - Distributed Query Support
+  href: schema-rowsets-distributed-query-support.md
+- name: Schema Rowsets - LINKEDSERVERS Rowset
+  href: schema-rowsets-linkedservers-rowset.md
+- name: Service Principal Names (SPNs) in Client Connections
+  href: service-principal-names-spns-in-client-connections-ole-db.md
+- name: Sparse Columns Support
+  href: sparse-columns-support-ole-db.md
+- name: Stored Procedures - Calling
+  href: stored-procedures-calling.md
+- name: Stored Procedures - Running
+  href: stored-procedures-running.md
+- name: Stored Procedures
+  href: stored-procedures.md

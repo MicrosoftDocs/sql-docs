@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-cross-instance"
-ms.tgt_pltfrm: ""
+ms.technology:
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Delete query"
@@ -22,7 +19,6 @@ helpviewer_keywords:
   - "Diagram pane [Visual Database Tools]"
   - "View Designer, query types"
 ms.assetid: 72b9116c-c128-4078-a78d-257a2955a3f6
-caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg

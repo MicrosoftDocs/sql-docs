@@ -1,12 +1,10 @@
-﻿---
+---
 title: "Always Encrypted Wizard | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/04/2016"
 ms.prod: sql
-ms.reviewer: ""
-ms.suite: "sql"
+ms.reviewer: vanto
 ms.technology: security
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.alwaysencryptedwizard.encryption.f1"
@@ -18,7 +16,7 @@ ms.assetid: 68daddc9-ce48-49aa-917f-6dec86ad5af5
 author: aliceku
 ms.author: aliceku
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Always Encrypted Wizard
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,7 +47,7 @@ Use the **Always Encrypted Wizard** to help protect sensitive data  stored in a 
  
  - Choose where the column master key will be stored.  
  
-   - **Storing a master key in Windows cert** For more information, see [Using Certificate Stores](https://msdn.microsoft.com/library/windows/desktop/aa388160.aspx)  
+   - **Storing a master key in Windows cert** For more information, see [Using Certificate Stores](/windows/desktop/SecCrypto/using-certificate-stores)  
  
    - **Storing a master key in AKV** For more information, see [Get Started with Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-get-started/).  
  

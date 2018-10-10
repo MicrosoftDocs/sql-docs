@@ -1,0 +1,29 @@
+- name: Integration Services (SSIS) Server
+  href: integration-services-ssis-server-and-catalog.md
+- name: Project Properties Dialog Box
+  href: project-properties-dialog-box.md
+- name: Validate Dialog Box
+  href: validate-dialog-box.md
+- name: Package Properties Dialog Box
+  href: package-properties-dialog-box.md
+- name: Configure Dialog Box
+  href: configure-dialog-box.md
+- name: Browse All Principals Dialog Box
+  href: browse-all-principals-dialog-box.md
+- name: Folder Properties Dialog Box
+  href: folder-properties-dialog-box.md
+- name: Project Versions Dialog Box
+  href: project-versions-dialog-box.md
+- name: SSIS Catalog
+  href: ssis-catalog.md
+  items:
+  - name: Create the SSIS Catalog
+    href: ../create-the-ssis-catalog.md
+  - name: Catalog Properties Dialog Box
+    href: ../catalog-properties-dialog-box.md
+  - name: Backup, Restore, and Move the SSIS Catalog
+    href: ../backup-restore-and-move-the-ssis-catalog.md
+- name: View the List of Packages on the Integration Services Server
+  href: view-the-list-of-packages-on-the-integration-services-server.md
+- name: Set Parameter Value Dialog Box
+  href: set-parameter-value-dialog-box.md

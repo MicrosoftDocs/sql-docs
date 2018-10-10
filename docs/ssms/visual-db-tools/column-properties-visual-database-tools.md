@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-visual-db"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "vdt.designers.properties.Column.ColumnIdentitySpec"
@@ -17,7 +14,6 @@ f1_keywords:
   - "vdt.designers.properties.Column.ColumnComputedColumnSpec"
   - "vdt.designers.properties.Column.ColumnFulltextSpec"
 ms.assetid: e549a2a8-4154-4ec8-b146-614564169b39
-caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -25,7 +21,7 @@ manager: craigg
 ---
 # Column Properties (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-There are two sets of properties for columns: a full set that you can see in the **Column Properties** tab within Table Designer (available only for [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] databases) and a subset you can see in the Properties window using Server Explorer.  
+There are two sets of properties for columns: a full set that you can see in the **Column Properties** tab within Table Designer (available only for [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases) and a subset you can see in the Properties window using Server Explorer.  
   
 > [!NOTE]  
 > The properties in this topic are ordered by category rather than alphabet.  
@@ -37,7 +33,7 @@ There are two sets of properties for columns: a full set that you can see in the
 These properties appear in the Properties window when you select a column in Server Explorer.  
   
 > [!NOTE]  
-> These properties, accessed using Server Explorer, are read-only. To edit column properties for [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] databases, select the column in Table Designer. Those properties are described later in this topic.  
+> These properties, accessed using Server Explorer, are read-only. To edit column properties for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases, select the column in Table Designer. Those properties are described later in this topic.  
   
 **Identity Category**  
 Expands to show the **Name** and **Database** properties.  
@@ -55,13 +51,13 @@ Expands to show the remaining properties.
 Shows the data type of the selected column. For more information, see [Data Types (Transact-SQL)](http://msdn.microsoft.com/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4).  
   
 **Identity Increment**  
-Shows the increment that will be added to the **Identity Seed** for each subsequent row of the identity column. (Applies only to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].)  
+Shows the increment that will be added to the **Identity Seed** for each subsequent row of the identity column. (Applies only to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].)  
   
 **Identity Seed**  
-Shows the seed value assigned to the first row in the table for the identity column. (Applies only to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].)  
+Shows the seed value assigned to the first row in the table for the identity column. (Applies only to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].)  
   
 **Is Identity**  
-Shows whether the selected column is the identity column for the table. (Applies only to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].)  
+Shows whether the selected column is the identity column for the table. (Applies only to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].)  
   
 **Length**  
 Shows the number of characters allowed for character-based data types.  
@@ -79,7 +75,7 @@ Shows the maximum number of digits that can appear to the right of the decimal p
 To access these properties, in Server Explorer right-click the table to which the column belongs, choose **Open Table Definition**, and select the row in the table grid in Table Designer.  
   
 > [!NOTE]  
-> These properties apply only to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+> These properties apply only to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 **General Category**  
 Expands to show **Name**, **Allow Nulls**, **Data Type**, **Default Value or Binding**, **Length**, **Precision**, and **Scale**.  
@@ -180,11 +176,11 @@ Indicates whether original identity values are preserved during replication. To 
 Shows whether this column is replicated in another location.  
   
 **Is RowGuid**  
-Indicates whether [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] uses the column as a ROWGUID. You can set this value to **Yes** only for a column with the data type of **uniqueidentifier**. To edit this property, click its value, expand the drop-down list, and choose another value.  
+Indicates whether [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses the column as a ROWGUID. You can set this value to **Yes** only for a column with the data type of **uniqueidentifier**. To edit this property, click its value, expand the drop-down list, and choose another value.  
   
 **Size**  
 Shows the size in bytes allowed by column's data type. For example, a **nchar** data type may have a length of 10 (the number of characters) but it would have a size of 20 to account for Unicode character sets.  
   
 > [!NOTE]  
-> The length of a **varchar(max)** data type varies for each row. sp_help returns (-1) as the length of **varchar(max)** column. [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] displays -1 as the column size.  
+> The length of a **varchar(max)** data type varies for each row. sp_help returns (-1) as the length of **varchar(max)** column. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] displays -1 as the column size.  
   

@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "04/03/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sql13.tsqlref.f1"
@@ -17,7 +15,7 @@ ms.assetid: dbba47d7-e08e-4435-b876-35dced1f325d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Transact-SQL Reference (Database Engine)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -31,7 +29,7 @@ Some of the Microsoft tools that issue T-SQL commands are:
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)
 - [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md).  
 - [sqlcmd](../tools/sqlcmd-utility.md).  
-- [SQL Operations Studio (preview)](https://docs.microsoft.com/sql/sql-operations-studio/download).  
+- [Azure Data Studio (preview)](../azure-data-studio/what-is.md).  
   
  
 ## Locate the Transact-SQL reference topics  

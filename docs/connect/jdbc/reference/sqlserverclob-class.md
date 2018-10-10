@@ -5,12 +5,9 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 24170524-e1ab-4e80-8fd1-6688efacfbde
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -34,7 +31,7 @@ public class SQLServerClob
 ```  
   
 ## Remarks  
- A CLOB is stored in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] as a TEXT or NTEXT data type.  
+ A CLOB is stored in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] as a TEXT or NTEXT data type.  
   
 ## See Also  
  [SQLServerClob Members](../../../connect/jdbc/reference/sqlserverclob-members.md)   

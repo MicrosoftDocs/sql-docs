@@ -1,11 +1,10 @@
 ---
 title: "Deploy and run SSIS packages in Azure | Microsoft Docs"
 description: Learn how you can move your SQL Server Integration Services (SSIS) projects, packages, and workloads to the Microsoft Azure cloud.
-ms.date: "07/01/2018"
+ms.date: "09/23/2018"
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.suite: "sql"
 ms.custom: ""
 ms.technology: integration-services
 author: swinarko
@@ -14,7 +13,7 @@ ms.reviewer: douglasl
 manager: craigg
 ---
 # Lift and shift SQL Server Integration Services workloads to the cloud
-You can now move your SQL Server Integration Services (SSIS) projects, packages, and workloads to the Azure cloud. Deploy, run, and manage SSIS projects and packages in the SSIS Catalog (SSISDB) on Azure SQL Database or SQL Database Managed Instance (Preview) with familiar tools such as SQL Server Management Studio (SSMS).
+You can now move your SQL Server Integration Services (SSIS) projects, packages, and workloads to the Azure cloud. Deploy, run, and manage SSIS projects and packages in the SSIS Catalog (SSISDB) on Azure SQL Database or SQL Database Managed Instance with familiar tools such as SQL Server Management Studio (SSMS).
 
 ## Benefits
 Moving your on-premises SSIS workloads to Azure has the following potential benefits:
@@ -30,7 +29,7 @@ The most significant difference is the separation of storage from runtime. Azure
 | Location | Storage | Runtime | Scalability |
 |---|---|---|---|
 | On premises | SQL Server | SSIS runtime hosted by SQL Server | SSIS Scale Out (in SQL Server 2017 and later)<br/><br/>Custom solutions (in prior versions of SQL Server) |
-| On Azure | SQL Database or SQL Database Managed Instance (Preview) | Azure-SSIS Integration Runtime, a component of Azure Data Factory | Scaling options for the Azure-SSIS Integration Runtime |
+| On Azure | SQL Database or SQL Database Managed Instance | Azure-SSIS Integration Runtime, a component of Azure Data Factory | Scaling options for the Azure-SSIS Integration Runtime |
 | | | | |
 
 ## Provision SSIS on Azure
@@ -69,7 +68,7 @@ To connect to files and file shares, see [Open and save files on premises and in
 
 When you provision an instance of SQL Database to host SSISDB, the Azure Feature Pack for SSIS and the Access Redistributable are also installed. These components provide connectivity to various **Azure** data sources and to **Excel and Access** files, in addition to the data sources supported by the built-in components.
 
-You can also install additional components - for example, you can install a driver that's not installed by default. For more info, see [Customize setup for the Azure-SSIS integration runtime](/azure/articles/data-factory/how-to-configure-azure-ssis-ir-custom-setup).
+You can also install additional components - for example, you can install a driver that's not installed by default. For more info, see [Customize setup for the Azure-SSIS integration runtime](/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup).
 
 If you have an Enterprise Edition license, additional components are available. For more info, see [Provision Enterprise Edition for the Azure-SSIS Integration Runtime](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-enterprise-edition).
 

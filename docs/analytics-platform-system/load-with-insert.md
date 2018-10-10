@@ -13,7 +13,7 @@ ms.reviewer: martinle
 
 # Load data with INSERT into Parallel Data Warehouse
 
-You can use the tsql INSERT statement to load data into a SQL Server Parallel Data Warehouse (PDW) distributed or replicated table. For more information about INSERT, see [INSERT](../t-sql/statements/insert-transact-sql.md). For replicated tables and all non-distribution columns in a distributed table, PDW uses SQL Server to implicitly convert the data values specified in the statement to the data type of the destination column. For more information about SQL Server data conversion rules, see [Data type conversion for SQL](http://msdn.microsoft.com/library/ms191530\(v=sql11\).aspx). However, for distribution columns, PDW supports only a subset of implicit conversions that SQL Server supports. Therefore, when you use the INSERT statement to load data into a distribution column, the source data must be specified in one of the formats defined in the following tables.  
+You can use the tsql INSERT statement to load data into a SQL Server Parallel Data Warehouse (PDW) distributed or replicated table. For more information about INSERT, see [INSERT](../t-sql/statements/insert-transact-sql.md). For replicated tables and all non-distribution columns in a distributed table, PDW uses SQL Server to implicitly convert the data values specified in the statement to the data type of the destination column. For more information about SQL Server data conversion rules, see [Data type conversion for SQL](../t-sql/data-types/data-type-conversion-database-engine.md). However, for distribution columns, PDW supports only a subset of implicit conversions that SQL Server supports. Therefore, when you use the INSERT statement to load data into a distribution column, the source data must be specified in one of the formats defined in the following tables.  
   
   
 ## <a name="InsertingLiteralsBinary"></a>Insert literals into binary types  
@@ -93,7 +93,7 @@ The following table defines the accepted formats and rules for inserting literal
 |Decimal literal|nnnnn.nnnn<br /><br />Example: 1234.5678|A value larger than 1 or less than 0 is converted to 1. For example, the values 123.45 and -123.45 are converted to 1.|  
   
 ### decimal data type  
-The following table defines the accepted formats and rules for inserting literal values into a distribution column of type **decimal** (*p,s*). The data conversion rules are the same as for SQL Server. For more information, see [Data type conversion](http://msdn.microsoft.com/library/ms191530&#40;v=sql11&#40;.aspx) on MSDN.  
+The following table defines the accepted formats and rules for inserting literal values into a distribution column of type **decimal** (*p,s*). The data conversion rules are the same as for SQL Server. For more information, see [Data type conversion](../t-sql/data-types/data-type-conversion-database-engine.md) on MSDN.  
   
 |Literal type|Format|  
 |----------------|----------|  
@@ -103,7 +103,7 @@ The following table defines the accepted formats and rules for inserting literal
 |Decimal literal|nnnnnn.nnnnn<br /><br />Example: '123344.34455'|  
   
 ### float and real data types  
-The following table defines the accepted formats and rules for inserting literal values into a distribution column of type **float** or **real**. Data conversion rules are the same as for SQL Server. For more information, see [Data type conversion](http://msdn.microsoft.com/library/ms191530&#40;v=sql11&#40;.aspx) on MSDN.  
+The following table defines the accepted formats and rules for inserting literal values into a distribution column of type **float** or **real**. Data conversion rules are the same as for SQL Server. For more information, see [Data type conversion](../t-sql/data-types/data-type-conversion-database-engine.md) on MSDN.  
   
 |Literal type|Format|  
 |----------------|----------|  

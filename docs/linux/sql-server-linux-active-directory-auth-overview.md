@@ -8,8 +8,6 @@ manager: craigg
 ms.topic: conceptual
 ms.prod: sql
 
-ms.component: ""
-ms.suite: "sql"
 ms.custom: "sql-linux"
 ms.technology: linux
 helpviewer_keywords: 
@@ -47,7 +45,6 @@ The details for how to configure AD authentication are provided in the tutorial,
 ## Known issues
 
 - At this time, the only authentication method supported for database mirroring endpoint is CERTIFICATE. WINDOWS authentication method will be enabled in a future release.
-- Third-party AD tools like Centrify, Powerbroker, and Vintela are not supported.
 
 ## Next Steps
 

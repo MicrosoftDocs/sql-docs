@@ -6,13 +6,10 @@ ms.date: "02/09/2017"
 ms.prod: "sql"
 ms.technology: ssdt
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "SQL.DATA.TOOLS.SQLSERVEROBJECTEXPLORER"
 ms.assetid: 21f7f959-7b8e-4335-8681-bebcd957692c
-caps.latest.revision: 27
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"

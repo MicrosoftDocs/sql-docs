@@ -5,9 +5,7 @@ ms.date: "04/11/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "SEQUENCE"
@@ -22,7 +20,6 @@ helpviewer_keywords:
   - "sequence object"
   - "number, sequence"
 ms.assetid: 419f907b-8a72-4d6c-80cb-301df44c24c1
-caps.latest.revision: 40
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

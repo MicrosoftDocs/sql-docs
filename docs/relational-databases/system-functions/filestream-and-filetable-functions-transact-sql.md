@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-functions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
   - "FileTables [SQL Server], system functions"
 ms.assetid: 71f729df-d340-4cf9-9a6d-305fcb39b009
-caps.latest.revision: 8
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

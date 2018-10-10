@@ -6,19 +6,16 @@ ms.date: "02/09/2017"
 ms.prod: "sql"
 ms.technology: ssdt
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql.data.tools.allowsqlclrdebugging"
 ms.assetid: 4a28d43d-eb5e-444d-aace-5df691f38709
-caps.latest.revision: 21
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
 ---
 # How to: Work with CLR Database Objects
-In addition to the Transact\-SQL programming language, you can use .NET Framework languages to create database objects that retrieve and update data. Database objects that are written in managed code are called SQL Server Common Language Run (CLR) database objects. For an explanation of the advantages of using CLR database objects hosted in SQL Server, as well as how to choose between Transact\-SQL and CLR, see [Advantages of CLR Integration](http://msdn.microsoft.com/en-us/library/ms131045.aspx) and [Advantages of Using Managed Code to Create Database Objects](http://msdn.microsoft.com/en-us/library/k2e1fb36.aspx).  
+In addition to the Transact\-SQL programming language, you can use .NET Framework languages to create database objects that retrieve and update data. Database objects that are written in managed code are called SQL Server Common Language Run (CLR) database objects. For an explanation of the advantages of using CLR database objects hosted in SQL Server, as well as how to choose between Transact\-SQL and CLR, see [Advantages of CLR Integration](../relational-databases/clr-integration/clr-integration-overview.md) and [Advantages of Using Managed Code to Create Database Objects](http://msdn.microsoft.com/en-us/library/k2e1fb36.aspx).  
   
 To create a CLR database object using SQL Server Data Tools, you create a database project and then add a CLR database object to it. Unlike in previous versions of Visual Studio, you do not need to create a separate CLR project and then add a reference to it from the database project. When you build and publish the database project, you automatically publish the CLR objects in the project at the same time. After you publish these CLR objects, they can be called and executed like any other database objects.  
   
@@ -80,7 +77,7 @@ For more information on the requirements of building CLR database objects, see [
   
 1.  In **SQL Server Object Explorer**, navigate to the local database where you deploy your project to.  
   
-2.  By default, CLR integration is turned off in SQL Server. To use CLR database objects, you must enable CLR integration. To do this, use the “clr enabled” option of the sp_configure stored procedure. For more information, see the [clr enabled Option topic](http://msdn.microsoft.com/en-us/library/ms131048.aspx).  
+2.  By default, CLR integration is turned off in SQL Server. To use CLR database objects, you must enable CLR integration. To do this, use the “clr enabled” option of the sp_configure stored procedure. For more information, see the [clr enabled Option topic](../relational-databases/clr-integration/clr-integration-enabling.md).  
   
     Right-click the database and select **New Query**. In the query pane, paste the following code and press the **Execute Query** button.  
   
@@ -99,7 +96,7 @@ For more information on the requirements of building CLR database objects, see [
 5.  Change your input to **425 312 1222** and tab away. Notice that the input is accepted this time.  
   
 ## See Also  
-[Advantages of CLR Integration](http://msdn.microsoft.com/en-us/library/ms131045.aspx)  
+[Advantages of CLR Integration](../relational-databases/clr-integration/clr-integration-overview.md)  
 [Advantages of Using Managed Code to Create Database Objects](http://msdn.microsoft.com/en-us/library/k2e1fb36.aspx)  
 [Building Database Objects with Common Language Runtime (CLR) Integration](http://msdn.microsoft.com/en-us/library/ms131046.aspx)  
   

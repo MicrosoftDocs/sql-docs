@@ -1,21 +1,14 @@
 ---
 title: "Treemap and sunburst charts in SQL Server Reporting Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/31/2015"
+ms.date: 08/31/2015
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.component: "report-design"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-design
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 12307c8f-bca7-4d21-8ad5-0c07d819865b
-caps.latest.revision: 17
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Treemap and sunburst charts in Reporting Services
 [!INCLUDE[feedback-stackoverflow-msdn-connect-md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
@@ -110,7 +103,7 @@ In a sunburst chart, the hierarchy is represented by a series of  circles. The h
   
   
 ##  <a name="bkmk_sample_data"></a> Sample AdventureWorks data  
- This section includes a sample query and the basic steps for creating a data source and dataset in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]. If your report already contains a data source and dataset, you can skip this section.  
+ This section includes a sample query and the basic steps for creating a data source and dataset in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. If your report already contains a data source and dataset, you can skip this section.  
   
  The query returns AdventureWorks sales order detail data with sales territory, product category,  product subcategory, and sales reason data.  
   

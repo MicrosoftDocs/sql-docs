@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "clusters [Analysis Services]"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "sequence clustering algorithms [Analysis Services]"
   - "sequence [Analysis Services]"
 ms.assetid: ae779a1f-0adb-4857-afbd-a15543dff299
-caps.latest.revision: 48
 author: minewiskan
 ms.author: owend
 manager: craigg

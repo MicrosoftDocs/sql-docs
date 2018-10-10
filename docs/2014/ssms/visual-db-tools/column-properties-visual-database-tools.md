@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-cross-instance"
-ms.tgt_pltfrm: ""
+ms.technology:
 ms.topic: conceptual
 f1_keywords: 
   - "vdt.designers.properties.Column.ColumnIdentitySpec"
@@ -16,7 +13,6 @@ f1_keywords:
   - "vdt.designers.properties.Column.ColumnComputedColumnSpec"
   - "vdt.designers.properties.Column.ColumnFulltextSpec"
 ms.assetid: e549a2a8-4154-4ec8-b146-614564169b39
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg

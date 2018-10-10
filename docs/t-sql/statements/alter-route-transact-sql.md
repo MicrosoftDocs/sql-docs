@@ -1,13 +1,11 @@
-﻿---
+---
 title: "ALTER ROUTE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/30/2018"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "ALTER_ROUTE_TSQL"
@@ -21,19 +19,16 @@ helpviewer_keywords:
   - "removing routes"
   - "routes [Service Broker], modifying"
 ms.assetid: 8dfb7b16-3dac-4e1e-8c97-adf2aad07830
-caps.latest.revision: 33
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # ALTER ROUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Modifies route information for an existing route in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 
-
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)] 
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -83,7 +78,7 @@ WHERE database_id = DB_ID();
   
  ADDRESS **='***next_hop_address'*  
 
- For SQL Database Managed Instance, `ADDRESS` must be local.
+ For Azure SQL Database Managed Instance, `ADDRESS` must be local.
 
  Specifies the network address for this route. The *next_hop_address* specifies a TCP/IP address in the following format:  
   

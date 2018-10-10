@@ -5,8 +5,6 @@ ms.technology: install
 ms.custom: ""
 ms.date: "01/31/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Release Notes, SQL Server"
@@ -66,7 +64,7 @@ or
 <pre>The following error has occurred:  
 SQL Server Browser configuration for feature 'SQL_Browser_Redist_SqlBrowser_Cpu32' was cancelled by user after a previous installation failure. The last attempted step: Starting the SQL Server Browser service 'SQLBrowser', and waiting for up to '900' seconds for the process to complete.</pre>  
   
-**Workaround:** This can happen when SQL Server Engine or Analysis Services fails to install. To fix this issue, refer the SQL Server Setup logs, and troubleshoot the SQL Server Engine and Analysis Services failures. For more information, see View and Read SQL Server Setup Log Files. For more information, see [View and Read SQL Server Setup Log Files](http://msdn.microsoft.com/library/ms143702(SQL.110).aspx).  
+**Workaround:** This can happen when SQL Server Engine or Analysis Services fails to install. To fix this issue, refer the SQL Server Setup logs, and troubleshoot the SQL Server Engine and Analysis Services failures. For more information, see View and Read SQL Server Setup Log Files. For more information, see [View and Read SQL Server Setup Log Files](../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
 ### 1.4 SQL Server 2008, 2008 R2 Analysis Services Failover Cluster upgrade to SQL Server 2012 might fail after renaming the network name  
 **Issue:** After you change the network name of a Microsoft SQL Server 2008, or 2008 R2 Analysis Services failover cluster instance using the Windows Cluster Administrator tool, the upgrade operation might fail.  
@@ -219,7 +217,7 @@ SQL Server 2012 is supported on the Windows Vista SP2, Windows Server 2008 SP2, 
   
 8.  The **Repair Progress** page shows the status of the repair operation. The **Complete** page indicates that the operation is finished.  
   
-For more information on how to repair an instance of SQL Server, see [Repair a Failed SQL Server 2012 Installation](http://msdn.microsoft.com/library/cc646006(SQL.110).aspx).  
+For more information on how to repair an instance of SQL Server, see [Repair a Failed SQL Server 2012 Installation](../database-engine/install-windows/repair-a-failed-sql-server-installation.md).  
   
 ### 1.11 An instance of SQL Server 2012 might fail after an OS upgrade  
 **Issue:** An instance of SQL Server 2012 might fail with the following error after you upgrade the operating system to Windows 7 SP1 from Windows Vista.  
@@ -231,7 +229,7 @@ For more information on how to repair an instance of SQL Server, see [Repair a F
 ### 1.12 SQL Server Edition upgrade requires a restart  
 **Issue**: When you edition upgrade an instance of SQL Server 2012, some of the functionalities associated with the new edition might not be activated immediately.  
   
-**Workaround**: Restart the machine after the edition upgrade of an instance of SQL Server 2012. For more information about supported upgrades in SQL Server 2012, see [Supported Version and Edition Upgrades](http://msdn.microsoft.com/library/ms143393.aspx).  
+**Workaround**: Restart the machine after the edition upgrade of an instance of SQL Server 2012. For more information about supported upgrades in SQL Server 2012, see [Supported Version and Edition Upgrades](../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md).  
   
 ### 1.13 Database with read-only filegroup or files cannot be upgraded  
 **Issue**:  You cannot upgrade a database by either attaching the database or restoring the database from backup if the database or its files/filegroups are set to read-only.  Error 3415 is returned.  This issue also applies when performing an in-place upgrade of an instance of SQL Server. That is, you attempt to replace an existing instance of SQL Server by installing SQL Server 2012 and one or more of the existing databases is set to read-only.  
@@ -241,7 +239,7 @@ For more information on how to repair an instance of SQL Server, see [Repair a F
 ### 1.14 Reinstalling an instance of SQL Server Failover Custer fails if you use the same IP address  
 **Issue:** If you specify an incorrect IP address during an installation of a SQL Server Failover Cluster instance, the installation fails. After you uninstall the failed instance, and if you try to reinstall the SQL Server failover cluster instance with the same instance name, and correct IP address, the installation fails. The failure is because of the duplicate resource group left behind by the previous installation.  
   
-**Workaround:** To resolve this issue, use a different instance name during the reinstallation, or manually delete the resource group before reinstalling. For more information, see [Add or Remove Nodes in a SQL Server Failover Cluster](http://msdn.microsoft.com/library/ms191545).  
+**Workaround:** To resolve this issue, use a different instance name during the reinstallation, or manually delete the resource group before reinstalling. For more information, see [Add or Remove Nodes in a SQL Server Failover Cluster](failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
   
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   

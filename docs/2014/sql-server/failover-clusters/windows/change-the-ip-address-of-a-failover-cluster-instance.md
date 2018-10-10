@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "modifying IP addresses"
@@ -14,7 +12,6 @@ helpviewer_keywords:
   - "IP addresses [SQL Server]"
   - "clusters [SQL Server], IP addresses"
 ms.assetid: b685f400-cbfe-4c5d-a070-227a1123dae4
-caps.latest.revision: 32
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

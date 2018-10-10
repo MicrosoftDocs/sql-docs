@@ -5,9 +5,7 @@ ms.date: "11/25/2015"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "CREATE XML SCHEMA COLLECTION"
@@ -25,7 +23,6 @@ helpviewer_keywords:
   - "multiple schema namespaces"
   - "XML schema collections [SQL Server], creating"
 ms.assetid: 350684e8-b3f6-4b58-9dbc-0f05cc776ebb
-caps.latest.revision: 30
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

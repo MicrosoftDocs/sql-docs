@@ -58,7 +58,7 @@ In the original dataset, the taxi identifiers and trip records were provided in 
 
 To create the plot, use [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram), one of the enhanced R functions provided in [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler). This step plots a histogram based on data from a [!INCLUDE[tsql](../../includes/tsql-md.md)] query. You can wrap this function in a stored procedure, **PlotHistogram**.
 
-1. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], in Object Explorer, right-click the **TaxiNYC_Sample** database, expand **Programmability**, and then expand **Stored Procedures** to view the procedures created in lesson 2.
+1. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], in Object Explorer, right-click the **NYCTaxi_Sample** database, expand **Programmability**, and then expand **Stored Procedures** to view the procedures created in lesson 2.
 
 2. Right-click **PlotHistogram** and select **Modify** to view the source. You can execute this procedure to call **rxHistogram** on data contained in the tipped column of nyctaxi_sample table.
 
@@ -87,7 +87,7 @@ To create the plot, use [rxHistogram](https://docs.microsoft.com/machine-learnin
     GO
     ```
 
-The stored procedure **PlotHistogram2** is identical to a pre-existing stored procedure **PlotHistogram** created by the `RunSQL_SQL_Walkthrough.ps1` script. 
+The stored procedure **PlotHistogram2** is identical to a pre-existing stored procedure **PlotHistogram** found in the NYCTaxi_sample database. 
   
 + The variable `@query` defines the query text (`'SELECT tipped FROM nyctaxi_sample'`), which is passed to the R script as the argument to the script input variable, `@input_data_1`.
   
@@ -115,13 +115,15 @@ The stored procedure returns the image as a stream of varbinary data, which obvi
 2.  Open a PowerShell command prompt and run the following command, providing the appropriate instance name, database name, username, and credentials as arguments. For those using Windows identities, you can replace **-U** and **-P** with **-T**.
   
      ```text
-     bcp "exec PlotHistogram" queryout "plot.jpg" -S <SQL Server instance name> -d  TaxiNYC_Sample  -U <user name> -P <password>
+     bcp "exec PlotHistogram" queryout "plot.jpg" -S <SQL Server instance name> -d  NYCTaxi_Sample  -U <user name> -P <password>
      ```
 
     > [!NOTE]
     > Command switches for bcp are case-sensitive.
   
-3.  If the connection is successful, you will be prompted to enter more information about the graphic file format. Press ENTER at each prompt to accept the defaults, except for these changes:
+3.  If the connection is successful, you will be prompted to enter more information about the graphic file format. 
+
+   Press ENTER at each prompt to accept the defaults, except for these changes:
     
     -   For **prefix-length of field plot**, type 0
   
@@ -157,7 +159,7 @@ The stored procedure returns the image as a stream of varbinary data, which obvi
 
 Typically, data scientists generate multiple data visualizations to get insights into the data from different perspectives. In this example, the stored procedure uses the Hist function to create the histogram, exporting the binary data to popular formats such as .JPG, .PDF, and .PNG. 
 
-1. Use the existing stored procedure, **PlotInOutputFiles**, to write histograms, scatterplots, and other R graphics to .JPG and .PDF format. The `RunSQL_SQL_Walkthrough.ps1` creates **PlotInOutputFiles** and adds it the database. Use right-click **Modify** to view the source.
+1. Use the existing stored procedure, **PlotInOutputFiles**, to write histograms, scatterplots, and other R graphics to .JPG and .PDF format. Use right-click **Modify** to view the source.
 
 2. Optionally, as a learning exercise, create your own copy of the procedure as **PlotInOutputFiles2**, with a unique name to avoid a naming conflict.
 
@@ -272,8 +274,8 @@ To view the plot, open the destination folder and review the files that were cre
 
 ## Next lesson
 
-[Lesson 4: Create data features using T-SQL](../tutorials/sqldev-create-data-features-using-t-sql.md)
+[Lesson 3: Create data features using T-SQL](sqldev-create-data-features-using-t-sql.md)
 
 ## Previous lesson
 
-[Lesson 2: Prepare the tutorial environment using PowerShell](../r/sqldev-import-data-to-sql-server-using-powershell.md)
+[Lesson 1: Set up NYC Taxi demo data](sqldev-download-the-sample-data.md)

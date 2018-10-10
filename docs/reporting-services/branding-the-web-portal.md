@@ -1,19 +1,13 @@
 ---
 title: "Branding the web portal | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/17/2017"
+ms.date: 11/17/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.component: "reporting-services"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: reporting-services
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+ms.topic: conceptual
+author: markingmyname
+ms.author: maghan
 ---
 
 # Branding the web portal

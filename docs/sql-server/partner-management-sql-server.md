@@ -1,15 +1,11 @@
 ---
 title: Managing SQL Server partners | Microsoft Docs
-description: Lists of third-party partners with solutions to monitor Server.
-services: sql-server
-documentationcenter: NA
-ms.suite: "sql"
-ms.devlang: NA
+description: Lists of third-party partners with solutions to monitor SQL Server.
 ms.topic: conceptual
-ms.tgt_pltfrm: NA
 ms.custom: ""
-ms.date: 17/09/2017    
+ms.date: 09/17/2017    
 ms.prod: sql
+ms.technology:
 ms.author: mikeray
 author: MikeRayMSFT
 manager: craigg

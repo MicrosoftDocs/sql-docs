@@ -2,21 +2,18 @@
 title: "Analyze consolidated Data Migration Assistant assessment reports with Power BI (SQL Server) | Microsoft Docs"
 description: Learn how to use Power BI to analyze Data Migration Assessment reports that you've imported and consolidated in SQL Server
 ms.custom: ""
-ms.date: "09/07/2017"
+ms.date: "08/29/2018"
 ms.prod: sql
 ms.prod_service: "dma"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: dma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 keywords: ""
 helpviewer_keywords: 
   - "Data Migration Assistant, Assess"
 ms.assetid: ""
-caps.latest.revision: ""
 author: HJToland3
-ms.author: jtoland
+ms.author: rajpo
 manager: craigg
 
 ---

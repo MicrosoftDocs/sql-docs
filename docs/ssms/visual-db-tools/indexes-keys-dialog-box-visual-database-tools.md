@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-visual-db"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "vdtsql.chm:65539"
   - "vdt.ppg.indexeskeys"
 ms.assetid: 9e4060ba-80c3-468f-bccb-e12e99f672c2
-caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -25,7 +21,7 @@ manager: craigg
 Use this dialog box to create or modify indexes, primary keys, and unique keys. To access this dialog box, open the table definition for the table with the index or key, right-click the table definition grid, and then click **Indexes/Keys**.  
   
 > [!NOTE]  
-> If the table is published for replication, you must make schema changes using the Transact-SQL statement [ALTER TABLE](http://msdn.microsoft.com/f1745145-182d-4301-a334-18f799d361d1) or SQL Server Management Objects (SMO). When schema changes are made using the Table Designer or the Database Diagram Designer, it attempts to drop and recreate the table. You cannot drop published objects, therefore the schema change will fail.  
+> If the table is published for replication, you must make schema changes using the Transact-SQL statement [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) or SQL Server Management Objects (SMO). When schema changes are made using the Table Designer or the Database Diagram Designer, it attempts to drop and recreate the table. You cannot drop published objects, therefore the schema change will fail.  
   
 ## Options  
 **Selected Primary/Unique Key or Index**  
@@ -62,7 +58,7 @@ Provides a place to describe the key or index. To write a more detailed descript
 When expanded, shows information for **Create as Clustered**.  
   
 **Create as Clustered**  
-Make the key or index clustered. Only one clustered index is allowed on a table. Data in the table is stored in the order of the clustered index. For more information, see [Create Clustered Indexes](http://msdn.microsoft.com/47148383-c2c7-4f08-a9e4-7016bf2d1d13) and [Create Nonclustered Indexes](http://msdn.microsoft.com/9402029a-1227-46c4-93aa-c2122eb1b943).  
+Make the key or index clustered. Only one clustered index is allowed on a table. Data in the table is stored in the order of the clustered index. For more information, see [Create Clustered Indexes](../../relational-databases/indexes/create-clustered-indexes.md) and [Create Nonclustered Indexes](../../relational-databases/indexes/create-nonclustered-indexes.md).  
   
 **Data Space Specification**  
 When expanded, shows information for **(Data Space Type)**, **Filegroup or Partition Scheme Name**, and **Partition Column List**.  
@@ -92,9 +88,9 @@ Indicate whether intermediate pages in this index are provided the same percenta
 **Ignore Duplicate Keys**  
 Specify what happens when a row is inserted during a bulk insert operation whose key value equals an existing key value. If you choose:  
   
--   **Yes** [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] issues a warning, ignores the offending incoming row, and tries to insert the remaining rows.  
+-   **Yes** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] issues a warning, ignores the offending incoming row, and tries to insert the remaining rows.  
   
--   **No** [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] issues an error message and rolls back the entire bulk insert operation.  
+-   **No** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] issues an error message and rolls back the entire bulk insert operation.  
   
 **Included Columns**  
 Displays a comma-separated list of the names of all the columns that constitute the index key. Subkey columns can only be specified for nonclustered indexes. This property is hidden for XML indexes.  

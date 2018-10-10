@@ -1,14 +1,11 @@
-﻿---
+---
 title: "sp_describe_undeclared_parameters (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/28/2017"
+ms.date: "09/24/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_describe_undeclared_parameters"
@@ -18,11 +15,10 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_describe_undeclared_parameters"
 ms.assetid: 6f016da6-dfee-4228-8b0d-7cd8e7d5a354
-caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_describe_undeclared_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -41,11 +37,11 @@ sp_describe_undeclared_parameters
 ```  
   
 ## Arguments  
- [ **\@tsql =** ] **'***Transact-SQL_batch***'**  
- One or more [!INCLUDE[tsql](../../includes/tsql-md.md)] statements. *Transact-SQL_batch* may be **nvarchar(***n***)** or **nvarchar(max)**.  
+ [ **\@tsql =** ] **'**_Transact-SQL\_batch_**'**  
+ One or more [!INCLUDE[tsql](../../includes/tsql-md.md)] statements. *Transact-SQL_batch* may be **nvarchar(**_n_**)** or **nvarchar(max)**.  
   
- [ **\@params =** ] **N'***parameters***'**  
- \@params provides a declaration string for parameters for the [!INCLUDE[tsql](../../includes/tsql-md.md)] batch, similarly to the way sp_executesql works. *Parameters* may be **nvarchar(***n***)** or **nvarchar(max)**.  
+ [ **\@params =** ] **N'**_parameters_**'**  
+ \@params provides a declaration string for parameters for the [!INCLUDE[tsql](../../includes/tsql-md.md)] batch, similarly to the way sp_executesql works. *Parameters* may be **nvarchar(**_n_**)** or **nvarchar(max)**.  
   
  Is one string that contains the definitions of all parameters that have been embedded in *Transact-SQL_batch*. The string must be either a Unicode constant or a Unicode variable. Each parameter definition consists of a parameter name and a data type. n is a placeholder that indicates additional parameter definitions. If the Transact-SQL statement or batch in the statement does not contain parameters, \@params is not required. The default value for this parameter is NULL.  
   
@@ -100,7 +96,7 @@ sp_describe_undeclared_parameters
   
 -   If the input [!INCLUDE[tsql](../../includes/tsql-md.md)] batch declares a local variable of the same name as a parameter declared in \@params.  
   
--   If the statement creates any temporary tables.  
+- If the statement references temporary tables.
   
  If \@tsql has no parameters, other than those declared in \@params, the procedure returns an empty result set.  
   

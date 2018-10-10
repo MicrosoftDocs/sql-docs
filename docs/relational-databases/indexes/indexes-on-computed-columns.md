@@ -1,13 +1,11 @@
-﻿---
+---
 title: "Indexes on Computed Columns | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/21/2017"
 ms.prod: sql
 ms.prod_service: "table-view-index, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: table-view-index
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "computed columns, index creation"
@@ -16,11 +14,10 @@ helpviewer_keywords:
   - "persisted computed columns"
   - "precise [SQL Server]"
 ms.assetid: 8d17ac9c-f3af-4bbb-9cc1-5cf647e994c4
-caps.latest.revision: 41
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Indexes on Computed Columns
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,7 +39,7 @@ All function references in the computed column must have the same owner as the t
 > [!IMPORTANT]  
 >  Expressions are deterministic if they always return the same result for a specified set of inputs. The **IsDeterministic** property of the [COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md) function reports whether a *computed_column_expression* is deterministic.  
   
- The *computed_column_expression* must be deterministic. A *computed_column_expression* is deterministic when one or more of the following is true:  
+ The *computed_column_expression* must be deterministic. A *computed_column_expression* is deterministic when all of the following are true:  
   
 -   All functions that are referenced by the expression are deterministic and precise. These functions include both user-defined and built-in functions. For more information, see [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md). Functions might be imprecise if the computed column is PERSISTED. For more information, see [Creating Indexes on Persisted Computed Columns](#BKMK_persisted) later in this topic.  
   

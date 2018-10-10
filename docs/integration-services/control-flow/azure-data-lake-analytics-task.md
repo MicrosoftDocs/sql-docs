@@ -5,12 +5,9 @@ ms.custom: ""
 ms.date: "05/18/2018"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.component: "control-flow"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "SQL13.DTS.DESIGNER.AFPADLSTASK.F1"
@@ -84,7 +81,7 @@ Use the **Parameter Mapping** page of the **Azure Data Lake Analytics Task Edito
 
 - **Variable Name:** After you have added a parameter mapping by selecting **Add**, select a system or user-defined variable from the list. Alternatively, you can select <**New variable...**> to add a new variable by using the **Add Variable** dialog box. For related information, see [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md).  
 
-- **Parameter Name:** Provide a parameter/variable name in U-SQL script. Make sure the the parameter name starts with the \@ sign, like \@Param1. 
+- **Parameter Name:** Provide a parameter/variable name in U-SQL script. Make sure the parameter name starts with the \@ sign, like \@Param1. 
 
 Here is an example of how to pass parameters to U-SQL script.
 

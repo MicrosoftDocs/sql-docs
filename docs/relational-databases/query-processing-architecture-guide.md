@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "06/06/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "relational-databases-misc"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "guide, query processing architecture"
@@ -17,7 +14,6 @@ helpviewer_keywords:
   - "row mode execution"
   - "batch mode execution"
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
-caps.latest.revision: 5
 author: "rothja"
 ms.author: "jroth"
 manager: craigg
@@ -1022,7 +1018,7 @@ To improve the performance of queries that access a large amount of data from la
 * Use a server with fast processors and as many processor cores as you can afford, to take advantage of parallel query processing capability.
 * Ensure the server has sufficient I/O controller bandwidth. 
 * Create a clustered index on every large partitioned table to take advantage of B-tree scanning optimizations.
-* Follow the best practice recommendations in the white paper, [The Data Loading Performance Guide](http://msdn.microsoft.com/en-us/library/dd425070.aspx), when bulk loading data into partitioned tables.
+* Follow the best practice recommendations in the white paper, [The Data Loading Performance Guide](http://msdn.microsoft.com/library/dd425070.aspx), when bulk loading data into partitioned tables.
 
 ### Example
 

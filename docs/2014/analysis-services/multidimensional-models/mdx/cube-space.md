@@ -4,13 +4,10 @@ ms.custom: ""
 ms.date: "07/17/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: c3a012b4-9ca0-4fb8-9c26-5ecc0e2e2b2b
-caps.latest.revision: 6
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -53,7 +50,7 @@ WHERE Measures.[Internet Sales Amount]
 > [!NOTE]  
 >  Notice that 0 is used to designate the column axis, which is shorthand for axis(0) - which is the column axis.  
   
- The previous query only returns cells for members from each attribute hierarchy in the query that exist with each other. The previous query can also be written using the new * variant of the [* (Crossjoin) (MDX)](/sql/mdx/crossjoin-mdx) function.  
+ The previous query only returns cells for members from each attribute hierarchy in the query that exist with each other. The previous query can also be written using the new * variant of the [\* (Crossjoin) (MDX)](/sql/mdx/crossjoin-mdx) function.  
   
 ```  
 SELECT   

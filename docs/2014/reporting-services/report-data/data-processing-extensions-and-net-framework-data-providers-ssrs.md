@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "reports [Reporting Services], data"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "Reporting Services, data sources"
   - "report data [Report Builder], accessing"
 ms.assetid: 42a5afb5-f4c8-4957-b1fd-77bf39afa5be
-caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
 manager: craigg

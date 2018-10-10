@@ -5,9 +5,7 @@ ms.date: "08/10/2016"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: configuration
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "user instances"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "file database"
   - "LocalDB"
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
-caps.latest.revision: 42
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -25,14 +22,17 @@ manager: craigg
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
  > For content related to previous versions of SQL Server, see [SQL Server 2014 Express LocalDB](https://msdn.microsoft.com/library/hh510202(SQL.120).aspx).
 
-Microsoft SQL Server 2016 Express **LocalDB** is a feature of [SQL Server Express](https://msdn.microsoft.com/library/ms144275(SQL.130).aspx) targeted to developers. It is available on SQL Server 2016 Express with Advanced Services.  
+Microsoft SQL Server 2016 Express **LocalDB** is a feature of [SQL Server Express](../../sql-server/editions-and-components-of-sql-server-2016.md) targeted to developers. It is available on SQL Server 2016 Express with Advanced Services.  
 
  **LocalDB** installation copies a minimal set of files necessary to start the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Once LocalDB is installed, you can initiate a connection using a special connection string. When connecting, the necessary [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] infrastructure is automatically created and started, enabling the application to use the database without complex configuration tasks. Developer Tools can provide developers with a [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] that lets them write and test [!INCLUDE[tsql](../../includes/tsql-md.md)] code without having to manage a full server instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
  
  
  ## Try it out! 
   
--   To download and install SQL Server 2016 Express, go to **[SQL Server downloads](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)**. LocalDB is a feature you select during installation, and is available when you download the media. If you download the media, either choose **Express Advanced** or the **LocalDB** package. 
+-   To download and install SQL Server 2016 Express, go to **[SQL Server downloads](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)**. LocalDB is a feature you select during installation, and is available when you download the media. If you download the media, either choose **Express Advanced** or the **LocalDB** package.through the **Visual Studio Installer**. In the **Visual Studio Installer**, you can install SQL Server Express LocalDB as part of the **.NET desktop development** workload or as an individual component.
+
+   > [!TIP]
+   > You can also install LocalDB as part of Visual Studio 2017. During Visual Studio installation, select the **.NET desktop development** workload, which includes SQL Server Express LocalDB.
   
 -   Have an Azure account?  Then go **[here](https://azure.microsoft.com/services/virtual-machines/sql-server/)** to spin up a Virtual Machine with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] already installed.  
   
@@ -126,6 +126,5 @@ REM Gather information about the instance of LocalDB
 >  **LocalDB** always runs under the users security context; that is, **LocalDB** never runs with credentials from the local Administrator’s group. This means that all database files used by a **LocalDB** instance must be accessible using the owning user’s Windows account, without considering membership in the local Administrators group.  
   
 ## See Also  
- [SqlLocalDB Utility](../../tools/sqllocaldb-utility.md)  
-  
-  
+
+[SqlLocalDB Utility](../../tools/sqllocaldb-utility.md)

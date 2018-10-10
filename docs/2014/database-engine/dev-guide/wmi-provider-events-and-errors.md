@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "WMI errors"
 ms.assetid: 8d17d074-9937-422c-965a-0f0b31a30d37
-caps.latest.revision: 5
 author: mashamsft
 ms.author: mathoma
 manager: craigg

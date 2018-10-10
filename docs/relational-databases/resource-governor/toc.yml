@@ -1,0 +1,35 @@
+- name: Overview
+  href: resource-governor.md
+- name: Enable Resource Governor
+  href: enable-resource-governor.md
+- name: Disable Resource Governor
+  href: disable-resource-governor.md
+- name: Resource Governor Resource Pool
+  href: resource-governor-resource-pool.md
+  items:
+  - name: Create a Resource Pool
+    href: create-a-resource-pool.md
+  - name: Change Resource Pool Settings
+    href: change-resource-pool-settings.md
+  - name: Delete a Resource Pool
+    href: delete-a-resource-pool.md
+- name: Resource Governor Workload Group
+  href: resource-governor-workload-group.md
+  items:
+  - name: Create a Workload Group
+    href: create-a-workload-group.md
+  - name: Change Workload Group Settings
+    href: change-workload-group-settings.md
+  - name: Move a Workload Group
+    href: move-a-workload-group.md
+  - name: Delete a Workload Group
+    href: delete-a-workload-group.md
+- name: Resource Governor Classifier Function
+  href: resource-governor-classifier-function.md
+  items:
+  - name: Create and Test a Classifier User-Defined Function
+    href: create-and-test-a-classifier-user-defined-function.md
+- name: Configure Resource Governor Using a Template
+  href: configure-resource-governor-using-a-template.md
+- name: View Resource Governor Properties
+  href: view-resource-governor-properties.md

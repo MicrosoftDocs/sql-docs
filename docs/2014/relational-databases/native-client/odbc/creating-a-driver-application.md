@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: native-client  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "ODBC, architecture"
@@ -23,7 +20,6 @@ helpviewer_keywords:
   - "ODBC, driver extensions"
   - "function calls [ODBC]"
 ms.assetid: c83c36e2-734e-4960-bc7e-92235910bc6f
-caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
 manager: craigg

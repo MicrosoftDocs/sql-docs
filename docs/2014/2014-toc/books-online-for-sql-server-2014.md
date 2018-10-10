@@ -4,8 +4,6 @@ ms.date: "05/25/2017"
 ms.prod: "sql-server-2014"
 ms.technology: release-landing
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: "index-page "
 f1_keywords: 
   - "sql12.portal.f1"
@@ -23,7 +21,7 @@ ms.author: craigg
 manager: craigg
 ---
 # Books Online for SQL Server 2014
-  Welcome to [!INCLUDE[msCoName](../includes/msconame-md.md)]® Books Online for [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]®. Books Online contains the task descriptions and reference documentation that describes how to perform data management and business intelligence work by using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+  Welcome to [!INCLUDE[msCoName](../includes/msconame-md.md)]® Books Online for [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]®. Books Online contains the task descriptions and reference documentation that describes how to perform data management and business intelligence work by using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **Try it out:**  
  ![Azure Virtual Machine small](../sql-server/media/what-s-new-in-sql-server-2016/azure-virtual-machine-small.png) Have an Azure account?  Then go **[Here](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** to spin up a Virtual Machine with SQL Server 2014 Service Pack 1 (SP1) already installed. For more information on SQL Server 2014 (SP1), see [SQL Server 2014 Service Pack 1 release information ](https://support.microsoft.com/en-us/kb/3058865). 

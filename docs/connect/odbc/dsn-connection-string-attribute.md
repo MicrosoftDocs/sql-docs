@@ -5,9 +5,7 @@ ms.date: "03/21/2018"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 author: MightyPen
 ms.author: "v-jizho2"
@@ -23,8 +21,7 @@ This page lists the keywords for connection strings and DSNs, and connection att
 
 ## Supported DSN/Connection String Keywords and Connection Attributes
 
-The following table lists the available keywords and the attributes for each platform (L: Linux ; M: Mac ; W: Windows).
-Click the keyword or attribute for more details.
+The following table lists the available keywords and the attributes for each platform (L: Linux ; M: Mac ; W: Windows). Click the keyword or attribute for more details.
 
 | DSN / Connection String Keyword | Connection Attribute | Platform | 
 |-|-|-|

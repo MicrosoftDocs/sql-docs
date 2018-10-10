@@ -5,12 +5,9 @@ ms.date: "01/18/2018"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
-caps.latest.revision: 57
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -29,7 +26,7 @@ manager: craigg
 |[Download Microsoft JDBC Driver for SQL Server](../../connect/jdbc/download-microsoft-jdbc-driver-for-sql-server.md)|Download links for Microsoft JDBC driver for SQL Server|  
 |[Release Notes for the JDBC Driver](../../connect/jdbc/release-notes-for-the-jdbc-driver.md)|Describes the features that have been added to the current release of the Microsoft JDBC driver.|  
 |[System Requirements for the JDBC Driver](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)|Describes the system requirements needed to use the Microsoft JDBC driver.|  
-|[Using the JDBC Driver](../../connect/jdbc/using-the-jdbc-driver.md)|Describes how to configure your environment to use the Microsoft JDBC driver and how to make a simple connection to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database.|  
+|[Using the JDBC Driver](../../connect/jdbc/using-the-jdbc-driver.md)|Describes how to configure your environment to use the Microsoft JDBC driver and how to make a simple connection to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.|  
 |[Understanding Java EE Support](../../connect/jdbc/understanding-java-ee-support.md)|Describes how to use the Microsoft JDBC driver within a Java Platform, Enterprise Edition (Java EE) environment.|  
 |[Deploying the JDBC Driver](../../connect/jdbc/deploying-the-jdbc-driver.md)|Describes how to deploy the Microsoft JDBC driver on Windows and Unix operating systems.|  
 |[Redistributing the Microsoft JDBC Driver](../../connect/jdbc/redistributing-the-microsoft-jdbc-driver.md)|Describes how to register to redistribute the Microsoft JDBC driver.|  

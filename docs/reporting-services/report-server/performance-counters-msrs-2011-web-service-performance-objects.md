@@ -1,16 +1,11 @@
 ---
 title: "Performance Counters MSRS 2011 Web Service, Performance Objects | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "report-server"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-server
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "performance counters [Reporting Services]"
@@ -20,10 +15,8 @@ helpviewer_keywords:
   - "counters [Reporting Services]"
   - "performance [Reporting Services]"
 ms.assetid: c642fc4f-8734-4626-a194-42ac9cd8e2ef
-caps.latest.revision: 50
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ---
 # Performance Counters MSRS 2011 Web Service, Performance Objects
   This topic describes performance counters for the **MSRS 2011 Web Service** and **MSRS 2011 Windows Service** performance objects. These objects are part of a [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] Native Mode deployment.  

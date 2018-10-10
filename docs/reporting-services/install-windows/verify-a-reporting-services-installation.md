@@ -1,14 +1,9 @@
 ---
 title: "Verify a Reporting Services Installation | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/03/2016"
+ms.date: 06/03/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "checking report server installations"
@@ -18,10 +13,8 @@ helpviewer_keywords:
   - "report servers [Reporting Services], verifying installations"
   - "Setup [Reporting Services], verifying installations"
 ms.assetid: 82a51a99-66f0-4b0c-b05b-07d22387adb0
-caps.latest.revision: 45
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ---
 # Verify a Reporting Services Installation
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report servers can be installed in one of two modes, Native or SharePoint. The steps you should follow for verifying the installation depend on the report server mode.  
@@ -34,7 +27,7 @@ manager: "kfile"
   
 2.  Verify the **SQL Server Reporting Services Service** is installed and in the **Running** state.  
   
-     If you do not see the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service in the list, verify the service is installed. For more information, see [Install The First Report Server in SharePoint Mode](http://msdn.microsoft.com/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538).  
+     If you do not see the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service in the list, verify the service is installed. For more information, see [Install the first Report Server in SharePoint mode](install-the-first-report-server-in-sharepoint-mode.md).  
   
 ### To verify the Service Application  
   
@@ -66,7 +59,7 @@ manager: "kfile"
   
 1.  In a SharePoint document library, create a basic [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report that only contains a text box, for example a title. The report does not contain any data sources or datasets. The goal is to verify you can open Report Builder and a basic report will preview.  
   
-2.  Save the report to the document library and the run the report from the library. For more information on creating reports with Report Builder, see [Start Report Builder](http://msdn.microsoft.com/8c8c7d2e-b315-418d-bf65-90e7685e4259).  
+2.  Save the report to the document library and the run the report from the library. For more information on creating reports with Report Builder, see [Start Report Builder](../report-builder/start-report-builder.md).  
   
 ### Reporting Services samples  
   

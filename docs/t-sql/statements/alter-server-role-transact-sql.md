@@ -1,13 +1,11 @@
-﻿---
+---
 title: "ALTER SERVER ROLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/06/2016"
 ms.prod: sql
 ms.prod_service: "pdw, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "ALTER_SERVER_ROLE_TSQL"
@@ -18,11 +16,10 @@ helpviewer_keywords:
   - "SERVER ROLE, ALTER"
   - "ALTER SERVER ROLE statement"
 ms.assetid: 7a4db7bb-c442-4e12-9a8a-114da5bc7710
-caps.latest.revision: 19
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ALTER SERVER ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-pdw-md.md)]

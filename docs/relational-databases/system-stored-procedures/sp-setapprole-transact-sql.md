@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_setapprole"
@@ -18,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_setapprole"
 ms.assetid: cf0901c0-5f90-42d4-9d5b-8772c904062d
-caps.latest.revision: 42
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # sp_setapprole (Transact-SQL)
@@ -91,7 +87,7 @@ sp_setapprole [ @rolename = ] 'role',
  The following example activates an application role named `SalesAppRole`, with the plain-text password `AsDeF00MbXX`, created with permissions specifically designed for the application used by the current user.  
   
 ```  
-EXEC sp_setapprole 'SalesApprole', 'AsDeF00MbXX';  
+EXEC sys.sp_setapprole 'SalesApprole', 'AsDeF00MbXX';  
 GO  
 ```  
   
@@ -100,12 +96,12 @@ GO
   
 ```  
 DECLARE @cookie varbinary(8000);  
-EXEC sp_setapprole 'Sales11', 'fdsd896#gfdbfdkjgh700mM'  
+EXEC sys.sp_setapprole 'Sales11', 'fdsd896#gfdbfdkjgh700mM'  
     , @fCreateCookie = true, @cookie = @cookie OUTPUT;  
 -- The application role is now active.  
 SELECT USER_NAME();  
 -- This will return the name of the application role, Sales11.  
-EXEC sp_unsetapprole @cookie;  
+EXEC sys.sp_unsetapprole @cookie;  
 -- The application role is no longer active.  
 -- The original context has now been restored.  
 GO  

@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Upgrade Advisor Report Viewer"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "starting Upgrade Advisor"
   - "SQL Server Upgrade Advisor, running"
 ms.assetid: 7f47c9b3-88d3-43d6-837e-f157b49a55ac
-caps.latest.revision: 40
 author: mashamsft
 ms.author: mathoma
 manager: craigg
@@ -26,7 +23,7 @@ manager: craigg
   You can run Upgrade Advisor to analyze local or remote components during upgrade planning. Upgrade Advisor produces a report for each component and instance that is analyzed.  
   
 > [!IMPORTANT]  
->  Upgrade Advisor does not analyze remote instances of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. To analyze an instance of [!INCLUDE[ssRS](../../includes/ssrs-md.md)], Upgrade Advisor must be installed on the computer where [!INCLUDE[ssRS](../../includes/ssrs-md.md)] is installed.  
+>  Upgrade Advisor does not analyze remote instances of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. To analyze an instance of [!INCLUDE[ssRS](../../includes/ssrs.md)], Upgrade Advisor must be installed on the computer where [!INCLUDE[ssRS](../../includes/ssrs.md)] is installed.  
 >   
 >  To analyze [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Integration Services, you must have the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)] installed and [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installed on the same computer.  
   

@@ -1,27 +1,64 @@
-﻿---
+---
 title: "Changelog for SQL Server Data Tools (SSDT) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/02/2018"
+ms.date: "09/27/2018"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssdt"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssdt
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: b071f8b8-c8e5-44e0-bbb6-04804dd1863a
-caps.latest.revision: 31
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current"
 ---
 # Changelog for SQL Server Data Tools (SSDT)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 This change log is for [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md).  
   
 For detailed posts about what's new and changed, see [the SSDT Team blog](https://blogs.msdn.microsoft.com/ssdt/)
+
+
+## SSDT for Visual Studio 2017 (15.8.1)
+Build Number: 14.0.16179.0  
+Release date: September 27, 2018  
+
+### What's New?
+
+**SSIS:**
+
+1. Add support for [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)].
+2. Remove support for SQL Server 2012.
+
+### Known issues:
+
+- SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True. This issue only applies to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog is not impacted.
+- SSDT 15.8.1 does not currently support Windows 7 SP1, so remain on 15.8.0 if you are using Windows 7 SP1
+
+
+## SSDT for Visual Studio 2017 (15.8)
+Build Number: 14.0.16174.0  
+Release date: September 05, 2018  
+
+### What's New?
+
+**SSIS:**
+
+1. Fix regression in VS 15.8 that saving Script Task/Component will hit compile error.
+1. Fix regression in VS 15.8 that deployment wizard doesn’t work.
+1. Fix an issue that ADO.NET connection manager doesn't support 3rd party ADO.NET provider.
+
+**Installer:**
+
+- Implement reboot-in-the-middle when installing SSDT on Windows 10.
+
+
+### Known issues:
+
+- SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True. This issue only applies to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog is not impacted.
+
+
 
 
 ## SSDT for Visual Studio 2017 (15.7.1)
@@ -722,7 +759,7 @@ Build number: 14.0.60629.0
 * **Database tools:**
     * From now on SSDT will never disable Transparent Data Encryption (TDE) on a database. Previously since the default encryption option in a project’s database settings was disabled, it would turn off encryption. With this fix encryption can be enabled but never disabled during publish. 
     * Increased the retry count and resiliency for Azure SQL DB connections during initial connection.
-    * If the default filegroup is not PRIMARY, Import/Publish to to Azure V12 would fail. Now this setting is ignored when publishing.
+    * If the default filegroup is not PRIMARY, Import/Publish to Azure V12 would fail. Now this setting is ignored when publishing.
     * Fixed an issue where when exporting a database with an object with Quoted Identifier on, export validation could fail in some instances.
     * Fixed an issue where the TEXTIMAGE_ON option was incorrectly added for Hekaton table creations where it is not allowed.
     * Fixed an issue where Export took a long time exporting with large amount of data due to a write to the model.xml file after data phase completed caused contents of the .bacpac file to be rewritten.

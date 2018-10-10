@@ -1,24 +1,20 @@
-﻿---
+---
 title: "Set the Service Account for the Full-text Filter Daemon Launcher | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "search, sql-database"
-ms.component: "search"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: search
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "full-text search [SQL Server], FDHOST Launcher (MSSQLFDLauncher) service account"
   - "FDHOST Launcher (MSSQLFDLauncher) [SQL Server]"
 ms.assetid: 3ab1d101-7ae0-488f-9b57-468e2517b737
-caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Set the Service Account for the Full-text Filter Daemon Launcher
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +30,7 @@ The SQL Full-text Filter Daemon Launcher service is an instance-aware service th
   
 1.  On the **Start** menu, point to **All Programs**, expand [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], and then click **SQL Server 2016 Configuration Manager**.  
   
-2.  In **SQL Server Configuration Manager**, click **SQL Server Services**, right-click **SQL Full-text Filter Daemon Launcher (***instance name***)**, and then click **Properties**.  
+2.  In **SQL Server Configuration Manager**, click **SQL Server Services**, right-click **SQL Full-text Filter Daemon Launcher (**_instance name_**)**, and then click **Properties**.  
   
 3.  Click the **Log On** tab of the dialog box, and then select or enter the account under which to run the processes that the SQL Full-text Filter Daemon Launcher service starts.  
   

@@ -1,23 +1,14 @@
 ---
 title: "Tutorial: Creating a Free Form Report (Report Builder) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/02/2016"
+ms.date: 09/02/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.component: "reporting-services"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: reporting-services
 
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+ms.topic: conceptual
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
-caps.latest.revision: 17
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Tutorial: Creating a Free Form Report (Report Builder)
 In this tutorial, you create a paginated report that acts as a newsletter. Each page displays static text, summary visuals, and detailed sample sales data.
@@ -178,7 +169,7 @@ One advantage of list data regions is that you can add report items such as rect
   
 1.  On the **Insert** tab, select **Rectangle**. 
 
-2. Click in the the upper left corner of the list and drag to make the rectangle 7 inches tall and 3.5 inches wide. Again, to get the exact size, in the **Properties** pane under **Position**, type values for **Width** and **Height**.
+2. Click in the upper left corner of the list and drag to make the rectangle 7 inches tall and 3.5 inches wide. Again, to get the exact size, in the **Properties** pane under **Position**, type values for **Width** and **Height**.
   
 2.  Right-click the rectangle > **Rectangle Properties**.  
   

@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "dbe-data-tier-apps"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.deletedacwizard.introduction.f1"
@@ -20,7 +17,6 @@ helpviewer_keywords:
   - "wizard [DAC], delete"
   - "delete DAC"
 ms.assetid: 16fe1c18-4486-424d-81d6-d276ed97482f
-caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg

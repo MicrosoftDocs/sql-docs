@@ -1,12 +1,10 @@
-﻿---
+---
 title: "Use sqlcmd with Scripting Variables | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
 ms.prod: sql
 ms.technology: scripting
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "TSQL"
@@ -17,11 +15,10 @@ helpviewer_keywords:
   - "sqlcmd utility, scripts"
   - "setvar command"
 ms.assetid: 793495ca-cfc9-498d-8276-c44a5d09a92c
-caps.latest.revision: 47
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sqlcmd - Use with Scripting Variables
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -109,9 +106,9 @@ sqlcmd -v ColumnName ="LastName" -i c:\testscript.sql
   
 |        Variable         | Related option | R/W |         Default         |
 | ----------------------- | -------------- | --- | ----------------------- |
-| SQLCMDUSER*             | -U             | R   | ""                      |
-| SQLCMDPASSWORD*         | -P             | --  | ""                      |
-| SQLCMDSERVER*           | -S             | R   | "DefaultLocalInstance"  |
+| SQLCMDUSER\*             | -U             | R   | ""                      |
+| SQLCMDPASSWORD\*         | -P             | --  | ""                      |
+| SQLCMDSERVER\*           | -S             | R   | "DefaultLocalInstance"  |
 | SQLCMDWORKSTATION       | -H             | R   | "ComputerName"          |
 | SQLCMDDBNAME            | -d             | R   | ""                      |
 | SQLCMDLOGINTIMEOUT      | -l             | R/W | "8" (seconds)           |

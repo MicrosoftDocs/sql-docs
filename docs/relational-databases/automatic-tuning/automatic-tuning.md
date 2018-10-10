@@ -5,21 +5,17 @@ ms.custom: ""
 ms.date: "08/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "automatic-tuning"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "performance tuning [SQL Server]"
 ms.assetid: 
-caps.latest.revision: 
 author: "jovanpop-msft"
 ms.author: "jovanpop"
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Automatic tuning
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -37,11 +33,11 @@ Automatic tuning in [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] enabl
 
 ## Why automatic tuning?
 
-One of the main tasks in classic database administration is monitoring the workload, identifying critical [!INCLUDE[tsql_md](../../includes/tsql_md.md)] queries, indexes that should be added to improve performance, and rarely used indexes. [!INCLUDE[ssde_md](../../includes/ssde_md.md)] provides detailed insight into the queries and indexes that you need to monitor. However, constantly monitoring database is a hard and tedious task, especially when dealing with many databases. Managing a huge number of databases might be impossible to do efficiently. Instead of monitoring and tuning your database manually, you might consider delegating some of the monitoring and tuning actions to [!INCLUDE[ssde_md](../../includes/ssde_md.md)] using automatic tuning feature.
+Three of the main tasks in classic database administration are monitoring the workload, identifying critical [!INCLUDE[tsql_md](../../includes/tsql-md.md)] queries, indexes that should be added to improve performance, and identifying rarely used. [!INCLUDE[ssde_md](../../includes/ssde_md.md)] provides detailed insight into the queries and indexes that you need to monitor. However, constantly monitoring a database is a hard and tedious task, especially when dealing with many databases. Managing a huge number of databases might be impossible to do efficiently. Instead of monitoring and tuning your database manually, you might consider delegating some of the monitoring and tuning actions to [!INCLUDE[ssde_md](../../includes/ssde_md.md)] using automatic tuning feature.
 
-### How does automatic tuning works?
+### How does automatic tuning work?
 
-Automatic tuning is a continuous monitoring and analysis process that constantly learns about the characteristic of your workload and identify potential issues and improvements.
+Automatic tuning is a continuous monitoring and analysis process that constantly learns about the characteristics of your workload and identify potential issues and improvements.
 
 ![Automatic tuning process](./media/tuning-process.png)
 
@@ -53,8 +49,8 @@ Automatic plan correction is an automatic tuning feature that identifies **SQL p
 
 ### What is SQL plan choice regression?
 
-[!INCLUDE[ssdenoversion_md](../../includes/ssdenoversion_md.md)] may use different SQL plans to execute the [!INCLUDE[tsql_md](../../includes/tsql_md.md)] queries. Query plans
-depend on the statistics, indexes, and other factors. The optimal plan that should be used to execute some [!INCLUDE[tsql_md](../../includes/tsql_md.md)] query might be changed
+[!INCLUDE[ssdenoversion_md](../../includes/ssdenoversion_md.md)] may use different SQL plans to execute the [!INCLUDE[tsql_md](../../includes/tsql-md.md)] queries. Query plans
+depend on the statistics, indexes, and other factors. The optimal plan that should be used to execute some [!INCLUDE[tsql_md](../../includes/tsql-md.md)] query might be changed
 over time. In some cases, the new plan might not be better than the previous one, and the new plan might cause a performance regression.
 
  ![SQL plan choice regression](media/plan-choice-regression.png "SQL plan choice regression") 
@@ -101,7 +97,7 @@ unforce the plan using `sp_query_store_unforce_plan` procedure, and let the [!IN
 In [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], you can find plan choice regressions using Query Store system views. In [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] detects and shows potential plan choice regressions and the recommended
 actions that should be applied in the [sys.dm_db_tuning_recommendations &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)
 view. The view shows information about the problem, the importance of the issue, and details such as the
-identified query, the ID of the regressed plan, the ID of the plan that was used as baseline for comparison, and the [!INCLUDE[tsql_md](../../includes/tsql_md.md)] statement that can
+identified query, the ID of the regressed plan, the ID of the plan that was used as baseline for comparison, and the [!INCLUDE[tsql_md](../../includes/tsql-md.md)] statement that can
 be executed to fix the problem.
 
 | type | description | datetime | score | details | … |
@@ -114,7 +110,7 @@ Some columns from this view are described in the following list:
  - Description that contains information why [!INCLUDE[ssde_md](../../includes/ssde_md.md)] thinks that this plan change is a potential performance regression.
  - Datetime when the potential regression is detected.
  - Score of this recommendation. 
- - Details about the issues such as ID of the detected plan, ID of the regressed plan, ID of the plan that should be forced to fix the issue, [!INCLUDE[tsql_md](../../includes/tsql_md.md)]
+ - Details about the issues such as ID of the detected plan, ID of the regressed plan, ID of the plan that should be forced to fix the issue, [!INCLUDE[tsql_md](../../includes/tsql-md.md)]
  script that might be applied to fix the issue, etc. Details are stored in [JSON format](../../relational-databases/json/index.md).
 
 Use the following query to obtain a script that fixes the issue and additional information about the estimated gain:

@@ -4,14 +4,9 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-functions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server (starting with 2008)"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -19,7 +14,6 @@ helpviewer_keywords:
   - "change data capture [SQL Server], querying metadata"
   - "cdc.fn_cdc_get_all_changes_<capture_instance>"
 ms.assetid: c6bad147-1449-4e20-a42e-b51aed76963c
-caps.latest.revision: 31
 author: "rothja"
 ms.author: "jroth"
 manager: craigg
@@ -86,7 +80,7 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
  Columns of data type **image**, **text**, and **ntext** are always assigned a NULL value when **__$operation** = 1 or **__$operation** = 3. Columns of data type **varbinary(max)**, **varchar(max)**, or **nvarchar(max)** are assigned a NULL value when **__$operation** = 3 unless the column changed during the update. When **__$operation** = 1, these columns are assigned their value at the time of the delete. Computed columns that are included in a capture instance always have a value of NULL.  
   
 ## Examples  
- Several [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] templates are available that show how to use the change data capture query functions. These templates are available on the **View** menu in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. For more information, see [Template Explorer](http://msdn.microsoft.com/library/b9ee55c5-bb44-4f76-90ac-792d8d83b4c8).  
+ Several [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] templates are available that show how to use the change data capture query functions. These templates are available on the **View** menu in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. For more information, see [Template Explorer](../../ssms/template/template-explorer.md).  
   
  This example shows the `Enumerate All Changes for Valid Range Template`. It uses the function `cdc.fn_cdc_get_all_changes_HR_Department` to report all the currently available changes for the capture instance `HR_Department`, which is defined for the source table HumanResources.Department in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  
   

@@ -3,16 +3,13 @@ title: "Service Master Key | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.reviewer: ""
-ms.suite: "sql"
+ms.reviewer: vanto
 ms.technology: security
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "service master key [SQL Server]"
   - "service master key [SQL Server], about service master key"
 ms.assetid: 85f2095d-2590-4f59-8a29-7e100edd02bb
-caps.latest.revision: 18
 author: aliceku
 ms.author: aliceku
 manager: craigg

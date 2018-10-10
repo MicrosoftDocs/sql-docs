@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SSRS, upgrading"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "SQL Server Reporting Services, upgrading"
   - "upgrading Reporting Services"
 ms.assetid: 851a19a8-07ab-4d42-992f-1986c4c8df55
-caps.latest.revision: 97
 author: markingmyname
 ms.author: maghan
 manager: craigg

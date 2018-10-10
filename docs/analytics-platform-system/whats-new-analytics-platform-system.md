@@ -14,12 +14,33 @@ ms.reviewer: "martinle"
 See what’s new in the latest Appliance Updates for Microsoft® Analytics Platform System (APS). APS is a scale-out on-premises appliance that hosts MPP SQL Server Parallel Data Warehouse. 
 
 ::: moniker range=">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
+<a name="h2-aps-cu7.1"></a>
+## APS CU7.1
+Release date - July 2018
 
+### DBCC commands do not consume concurrency slots (behavior change)
+APS supports a subset of the T-SQL [DBCC commands](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-transact-sql) such as [DBCC DROPCLEANBUFFERS](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql). Previously, these commands would consume a [concurrency slot](https://docs.microsoft.com/en-us/sql/analytics-platform-system/workload-management?view=aps-pdw-2016-au7#concurrency-slots) reducing the number of user loads/queries that could be executed. The `DBCC` commands are now run in a local queue that do not consume a user concurrency slot improving overall query execution performance.
+
+### Replaces some metadata calls with catalog objects
+Using catalog objects for metadata calls instead of using SMO has shown performance improvement in APS. Starting from CU7.1, some of these metadata calls now use catalog objects by default. This behavior can be turned off by [feature switch](appliance-feature-switch.md) if customers using metadata queries run into any issues.
+
+### Bug fixes
+We have upgraded to SQL Server 2016 SP2 CU2 with APS CU7.1. The upgrade fixes some issues described below.
+
+| Title | Description |
+|:---|:---|
+| **Potential tuple mover deadlock** |The upgrade fixes a long standing possibility of deadlock in a distributed transaction and tuple mover background thread. After installing CU7.1, customers who used TF634 to stop tuple mover as SQL Server startup parameter or global trace flag can safely remove it. | 
+| **Certain lag/lead query fails** |Certain queries on CCI tables with nested lag/lead functions that would error is now fixed with this upgrade. | 
+
+
+<a name="h2-aps-au7"></a>
 ## APS AU7
-APS 2016 is a prerequisite to upgrade to AU7. The following are new in APS AU7:
+Release date - May 2018
+
+APS 2016 is a prerequisite to upgrade to AU7. The following are new features in APS AU7:
 
 ### Auto-create and auto-update statistics
-APS AU7 creates and updates statistics automatically, by default. To update statistics settings, administrators can use a new feature switch menu item in the [Configuration Manager](appliance-configuration.md#CMTasks). The [feature switch](appliance-feature-switch.md) controls the auto-create, auto-update, and asynchronous update behavior of statistics. You can also update statistics settings with the [ALTER DATABASE (Parallel Data Warehouse)](/sql/t-sql/statements/alter-database-parallel-data-warehouse) statement.
+APS AU7 creates and updates statistics automatically, by default. To update statistics settings, administrators can use a new feature switch menu item in the [Configuration Manager](appliance-configuration.md#CMTasks). The [feature switch](appliance-feature-switch.md) controls the auto-create, auto-update, and asynchronous update behavior of statistics. You can also update statistics settings with the [ALTER DATABASE (Parallel Data Warehouse)](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw) statement.
 
 ### T-SQL
 Select @var is now supported. For more information, see [select local variable] (/sql/t-sql/language-elements/select-local-variable-transact-sql) 
@@ -36,7 +57,7 @@ Microsoft advises all customers to install the BIOS updated. Microsoft has measu
 
 ::: moniker-end
 ::: moniker range=">= aps-pdw-2016 || = sqlallproducts-allversions"
-
+<a name="h2-aps-au6"></a>
 ## APS 2016
 This section described the new features for APS 2016-AU6.
 

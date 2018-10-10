@@ -32,7 +32,7 @@ Workload Management
 Resource Class  
 In SQL Server PDW, a *resource class* is a built-in server role that has pre-assigned limits for memory and concurrency. SQL Server PDW allocates resources to requests according to the resource class server role membership of the login that submits the requests.  
   
-On the Compute nodes, the implementation of resource classes uses the Resource Governor feature in SQL Server. For more information about Resource Governor, see [Resource Governor](http://msdn.microsoft.com/library/bb933866(v=sql.11).aspx) on MSDN.  
+On the Compute nodes, the implementation of resource classes uses the Resource Governor feature in SQL Server. For more information about Resource Governor, see [Resource Governor](../relational-databases/resource-governor/resource-governor.md) on MSDN.  
   
 ### Understand Current Resource Utilization  
 To understand system resource utilization for the currently running requests, use the SQL Server PDW dynamic management views. For example, you can use DMVs to understand if a slow-running large hash join could benefit by having more memory.  

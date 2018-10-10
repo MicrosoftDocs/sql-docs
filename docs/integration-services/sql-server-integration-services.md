@@ -6,9 +6,7 @@ ms.date: "07/06/2018"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 keywords: 
   - "SSIS"
@@ -26,7 +24,7 @@ manager: craigg
 ---
 # SQL Server Integration Services
 
- > For content related to previous versions of SQL Server, see [SQL Server Integration Services](https://msdn.microsoft.com/library/ms141026(SQL.120).aspx).
+ > For content related to previous versions of SQL Server, see [SQL Server Integration Services](sql-server-integration-services.md).
 
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] is a platform for building enterprise-level data integration and data transformations solutions. Use [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] to solve complex business problems by copying or downloading files, loading data warehouses, cleansing and mining data, and managing [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] objects and data.
 

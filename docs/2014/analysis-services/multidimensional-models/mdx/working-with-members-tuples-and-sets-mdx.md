@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "MDX [Analysis Services], tuples"
@@ -27,7 +25,6 @@ helpviewer_keywords:
   - "tuples"
   - "set functions [MDX]"
 ms.assetid: b6ec2439-caef-46d3-9fd7-5f4526cee334
-caps.latest.revision: 41
 author: minewiskan
 ms.author: owend
 manager: craigg

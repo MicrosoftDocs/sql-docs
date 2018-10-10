@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "10014"
 helpviewer_keywords: 
   - "query designers, SAP"
 ms.assetid: 8edda06d-1608-498b-bd50-10905e54f6ce
-caps.latest.revision: 13
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg

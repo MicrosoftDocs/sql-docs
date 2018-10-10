@@ -1,16 +1,11 @@
 ---
 title: "Verifying a Report Run | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "report-server"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-server
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "auditing [Reporting Services]"
@@ -21,10 +16,8 @@ helpviewer_keywords:
   - "report processing [Reporting Services], verifying execution"
   - "checking report execution"
 ms.assetid: 18a98f2f-6b40-454e-9b37-568ed1a96458
-caps.latest.revision: 37
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ---
 # Verifying a Report Run
   To view information about the status of report processing, you can use log files or refer to status information that is displayed with the report in Report Manager.  

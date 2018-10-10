@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "01/30/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-agent"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Agent, multiserver environments"
@@ -16,7 +13,6 @@ helpviewer_keywords:
   - "target servers [SQL Server], about target servers"
   - "multiserver environments [SQL Server]"
 ms.assetid: edc2b60d-15da-40a1-8ba3-f1d473366ee6
-caps.latest.revision: 6
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -32,10 +28,10 @@ Multiserver administration requires that you set up a master server (MSX) and on
   
 By default, full Secure Sockets Layer (SSL) encryption and certificate validation are enabled for connections between master servers and target servers. For more information, see [Set Encryption Options on Target Servers](../../ssms/agent/set-encryption-options-on-target-servers.md).  
   
-If you have a large number of target servers, avoid defining your master server on a production server that has significant performance requirements from other [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] functionality, because target server traffic can slow performance on your production server. If you also forward events to a dedicated master server, you can centralize administration on one server. For more information, see [Manage Events](../../ssms/agent/manage-events.md).  
+If you have a large number of target servers, avoid defining your master server on a production server that has significant performance requirements from other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] functionality, because target server traffic can slow performance on your production server. If you also forward events to a dedicated master server, you can centralize administration on one server. For more information, see [Manage Events](../../ssms/agent/manage-events.md).  
   
 > [!NOTE]  
-> To use multiserver job processing, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent service account must be a member of the **msdb** database role **TargetServersRole** on the master server. The Master Server Wizard automatically adds the service account to this role as part of the enlistment process  
+> To use multiserver job processing, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service account must be a member of the **msdb** database role **TargetServersRole** on the master server. The Master Server Wizard automatically adds the service account to this role as part of the enlistment process  
   
 ## Considerations for Multiserver Environments  
   

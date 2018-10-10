@@ -5,9 +5,7 @@ ms.date: "10/23/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "FREETEXT"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "words in predicate [full-text search]"
   - "column searches [full-text search]"
 ms.assetid: 2f199d3c-440e-4bcf-bdb5-82bb3994005d
-caps.latest.revision: 44
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

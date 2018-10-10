@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.dsvdesigner.replacetable.f1"
 helpviewer_keywords: 
   - "Replace Table with Other Table dialog box"
 ms.assetid: 7ca304bf-a01f-43db-bbbc-0572976425b2
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg

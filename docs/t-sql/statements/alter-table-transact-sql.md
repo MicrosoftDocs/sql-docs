@@ -1,13 +1,11 @@
 ---
 title: "ALTER TABLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/01/2018"
+ms.date: "09/24/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "WAIT_AT_LOW_PRIORITY"
@@ -58,18 +56,15 @@ helpviewer_keywords:
   - "dropping columns"
   - "table changes [SQL Server]"
 ms.assetid: f1745145-182d-4301-a334-18f799d361d1
-caps.latest.revision: 281
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ALTER TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Modifies a table definition by altering, adding, or dropping columns and constraints, reassigning and rebuilding partitions, or disabling or enabling constraints and triggers.  
-
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
 
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -238,7 +233,7 @@ ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
 ```  
   
 ```  
--- Memory optimized ALTER TABLE Syntax for SQL Server and Azure SQL Database
+-- Memory optimized ALTER TABLE Syntax for SQL Server and Azure SQL Database. Azure SQL Database Managed Instance does not support memory optiimized tables.
   
 ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name   
 {   
@@ -461,12 +456,14 @@ Some data type changes may cause a change in the data. For example, changing a *
 >  
 > A column included in a primary key constraint, cannot be changed from **NOT NULL** to **NULL**.  
   
-If the column being modified is encrypted using `ENCRYPTED WITH`, you can change the datatype to a compatible datatype (such as INT to BIGINT) but you cannot change any encryption settings.  
+When using Always Encrypted (without secure enclaves), if the column being modified is encrypted using 'ENCRYPTED WITH', you can change the datatype to a compatible datatype (such as INT to BIGINT) but you cannot change any encryption settings.  
+
+When using Always Encrypted with secure enclaves, you can change any encryption setting, as long as the column encryption key protecting the column (and the new column encryption key, if you are changing the key) support enclave computations (are encrypted with enclave-enabled column master keys). For details, see [Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md).  
   
  *column_name*  
  Is the name of the column to be altered, added, or dropped. *column_name* can be a maximum of 128 characters. For new columns, *column_name* can be omitted for columns created with a **timestamp** data type. The name **timestamp** is used if no *column_name* is specified for a **timestamp** data type column.  
   
- [ *type_schema_name***.** ] *type_name*  
+ [ _type\_schema\_name_**.** ] _type\_name_  
  Is the new data type for the altered column, or the data type for the added column. *type_name* cannot be specified for existing columns of partitioned tables. *type_name* can be any one of the following:  
   
 -   A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system data type.  
@@ -626,13 +623,13 @@ Specifies that one or more column definitions, computed column definitions, or t
 > Without using an ALTER TABLE statement, the statements CREATE INDEX and DROP INDEX and ALTER INDEX are not supported for indexes on memory-optimized tables. 
   
 PERIOD FOR SYSTEM_TIME ( system_start_time_column_name, system_end_time_column_name )  
-**Applies to**:  [!INCLUDE[ssCurrentLong](../../includes/sscurrentlong-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Applies to**:  [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Specifies the names of the columns that the system will use to record the period for which a record is valid. You can specify existing columns or create new columns as part of the ADD PERIOD FOR SYSTEM_TIME argument. The columns must have the datatype of datetime2 and must be defined as NOT NULL. If a period column is defined as NULL, an error will be thrown. You can define a [column_constraint &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-column-constraint-transact-sql.md) and/or  [Specify Default Values for Columns](../../relational-databases/tables/specify-default-values-for-columns.md) for the system_start_time and system_end_time columns. See Example A in the [System Versioning](#system_versioning) examples below demonstrating the use of a default value for the system_end_time column.  
   
  Use this argument in conjunction with the SET SYSTEM_VERSIONING argument to enable system versioning on an existing table. For more information, see [Temporal Tables](../../relational-databases/tables/temporal-tables.md) and [Getting Started with Temporal Tables in Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-temporal-tables/).  
   
- As of [!INCLUDE[ssCurrentLong](../../includes/sscurrentlong-md.md)], users will be able to mark one or both period columns with **HIDDEN** flag to implicitly hide these columns such that **SELECT \* FROM***\<table>* does not return a value for those columns. By default, period columns are not hidden. In order to be used, hidden columns must be explicitly included in all queries that directly reference the temporal table.  
+ As of [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)], users will be able to mark one or both period columns with **HIDDEN** flag to implicitly hide these columns such that **SELECT \* FROM**_\<table/>_ does not return a value for those columns. By default, period columns are not hidden. In order to be used, hidden columns must be explicitly included in all queries that directly reference the temporal table.  
   
 DROP  
 Specifies that one or more column definitions, computed column definitions, or table constraints are dropped, or to drop the specification for the columns that the system will use for system versioning.  
@@ -715,7 +712,7 @@ Specifies that *constraint_name* or *column_name* is removed from the table. Mul
 > [!NOTE]  
 > Online index operations are not available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
- MOVE TO { *partition_scheme_name***(***column_name* [ 1**,** ... *n*] **)** | *filegroup* | **"**default**"** }  
+ MOVE TO { _partition\_scheme\_name_**(**_column\_name_ [ 1**,** ... *n*] **)** | *filegroup* | **"**default**"** }  
  **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Specifies a location to move the data rows currently in the leaf level of the clustered index. The table is moved to the new location. This option applies only to constraints that create a clustered index.  
@@ -752,7 +749,7 @@ Specifies that *constraint_name* or *column_name* is removed from the table. Mul
   
  Specifies whether the [!INCLUDE[ssDE](../../includes/ssde-md.md)] tracks which change tracked columns were updated. The default value is OFF.  
   
- SWITCH [ PARTITION *source_partition_number_expression* ] TO [ *schema_name***.** ] *target_table* [ PARTITION *target_partition_number_expression* ]  
+ SWITCH [ PARTITION *source_partition_number_expression* ] TO [ _schema\_name_**.** ] *target_table* [ PARTITION *target_partition_number_expression* ]  
  **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Switches a block of data in one of the following ways:  
@@ -782,7 +779,7 @@ For **SWITCH** restriction when using replication, see [Replicate Partitioned Ta
  Nonclustered columnstore indexes built for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  CTP1, and for SQL Database before version V12 were in a read-only format. Nonclustered columnstore indexes must be rebuilt to the current format (which is updatable) before any PARTITION operations can be performed.  
   
  SET **(** FILESTREAM_ON = { *partition_scheme_name* | *filestream_filegroup_name* |         **"**default**"** | **"**NULL**"** }**)**  
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Azure SQL Database does not support `FILESTREAM`.  
   
  Specifies where FILESTREAM data is stored.  
   
@@ -890,7 +887,7 @@ TABLE
  Enables or disables the system-defined constraints on a FileTable. Can only be used with a FileTable.  
   
  SET ( FILETABLE_DIRECTORY = *directory_name* )  
- **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  Azure SQL Database does not support `FILETABLE`.  
   
  Specifies the Windows-compatible FileTable directory name. This name should be unique among all the FileTable directory names in the database. Uniqueness comparison is case-insensitive, regardless of SQL collation settings. Can only be used with a FileTable.  
 ```    
@@ -1371,12 +1368,12 @@ CREATE TABLE Person.ContactBackup
 GO  
   
 ALTER TABLE Person.ContactBackup  
-ADD CONSTRAINT FK_ContactBacup_Contact FOREIGN KEY (ContactID)  
+ADD CONSTRAINT FK_ContactBackup_Contact FOREIGN KEY (ContactID)  
     REFERENCES Person.Person (BusinessEntityID) ;  
 GO  
   
 ALTER TABLE Person.ContactBackup  
-DROP CONSTRAINT FK_ContactBacup_Contact ;  
+DROP CONSTRAINT FK_ContactBackup_Contact ;  
 GO  
   
 DROP TABLE Person.ContactBackup ;  
@@ -1446,6 +1443,33 @@ ALTER TABLE T3
 ALTER COLUMN C2 varchar(50) COLLATE Latin1_General_BIN;  
 GO  
 ```  
+#### D. Encrypting a column  
+ The following example shows how to encrypt a column using [Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md). 
+
+First, a table is created without any encrypted columns.  
+  
+```sql  
+CREATE TABLE T3  
+(C1 int PRIMARY KEY,  
+C2 varchar(50) NULL,  
+C3 int NULL,  
+C4 int ) ;  
+GO  
+```  
+  
+ Next, column 'C2' is encrypted with with a column encryption key, named CEK1, and randomized encryption. Note that for the below statement to succeed:
+- The column encryption key must be enclave-enabled, meaning it must be encrypted with a column master key that allows enclave computations.
+- The target SQL Server instance must support Always Encrypted with secure enclaves.
+- The statement must be issued over a connection set up for Always Encrypted with secure enclaves, and using a supported client driver.
+- The calling application must have access to the column master key, protecting CEK1.
+
+```sql  
+ALTER TABLE T3  
+ALTER COLUMN C2 varchar(50) ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCRYPTION_TYPE = Randomized, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NULL;  
+GO  
+```  
+
+
   
 ###  <a name="alter_table"></a> Altering a Table Definition  
  The examples in this section demonstrate how to alter the definition of a table.  

@@ -23,7 +23,7 @@ manager: kfile
  The type of DataSource. At present, the only valid value is Provider (1) - Normal connection string.  
   
  connectionString  
- The connection string that minimally specifies the server and database, but can also include other properties supported by the external RDBMS, such as a data provider or user account. This value is required. See [SqlConnectionStringBuilder Class](https://msdn.microsoft.com/library/ms254500\(v=vs.110\).aspx) for details about SQL Server database connection string properties.  
+ The connection string that minimally specifies the server and database, but can also include other properties supported by the external RDBMS, such as a data provider or user account. This value is required. See [SqlConnectionStringBuilder Class](/dotnet/framework/data/adonet/connection-string-syntax) for details about SQL Server database connection string properties.  
   
  impersonationMode  
  Specifies whether Analysis Services should impersonate the identity of the user requesting the query. This property is a numeric value that specifies the credentials to use for impersonation. The enumeration values are as follows:  

@@ -1,26 +1,17 @@
 ---
 title: "Custom Report Item Implementation Requirements | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.component: "custom-report-items"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: custom-report-items
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
+ms.topic: reference
 helpviewer_keywords: 
   - "custom report items"
 ms.assetid: cfacd816-00d6-4a3d-be72-1bba6f7f6886
-caps.latest.revision: 22
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ---
 # Custom Report Item Implementation Requirements
   This topic will discuss the prerequisites for developing and deploying custom report items.  

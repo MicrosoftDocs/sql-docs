@@ -1,25 +1,18 @@
 ---
 title: "Configure the Web Portal to Pass Custom Authentication Cookies | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/18/2017"
+ms.date: 04/18/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "security"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: security
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "authentication [Reporting Services]"
   - "extensions [Reporting Services], custom security"
 ms.assetid: 91aeb053-149e-4562-ae4c-a688d0e1b2ba
-caps.latest.revision: 18
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ---
 # Configure the Web Portal to Pass Custom Authentication Cookies
 

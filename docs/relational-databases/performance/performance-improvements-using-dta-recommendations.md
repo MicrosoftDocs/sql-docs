@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: performance
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Database Engine Tuning Advisor, performance improvements"
 ms.assetid: 2e51ea06-81cb-4454-b111-da02808468e6
-caps.latest.revision: 3
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

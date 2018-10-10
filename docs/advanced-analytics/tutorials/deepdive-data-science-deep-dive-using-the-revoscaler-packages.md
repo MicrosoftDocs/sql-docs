@@ -55,7 +55,7 @@ You should also be comfortable with [!INCLUDE[tsql](../../includes/tsql-md.md)] 
   
     To switch back and forth between local and remote compute contexts, you need two systems. Local is typically a development workstation with sufficent power for data science workloads. Remote in this case is SQL Server 2017 or SQL Server 2016 with the R feature enabled. 
     
-    Switching compute contexts is predicated on having the same-version RevoScaleR on both local and remote systems. On a local workstation, you can get the RevoScaleR packages and related providers by installing or using any one of the following: [Data Science VM on Azure](https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/overview), [Microsoft R Client (free)](https://docs.microsoft.com/en-us/machine-learning-server/r-client/what-is-microsoft-r-client), or [Microsoft Machine Learning Server (Standalone)](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-install). For the standalone server option, install the free developer edition, using either Linux or Windows installers. You can also use SQL Server Setup to install a standalone server.
+    Switching compute contexts is predicated on having the same-version RevoScaleR on both local and remote systems. On a local workstation, you can get the RevoScaleR packages and related providers by installing or using any one of the following: [Data Science VM on Azure](https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/overview), [Microsoft R Client (free)](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client), or [Microsoft Machine Learning Server (Standalone)](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-install). For the standalone server option, install the free developer edition, using either Linux or Windows installers. You can also use SQL Server Setup to install a standalone server.
       
 -   **Additional R Packages**
   
@@ -69,7 +69,7 @@ You should also be comfortable with [!INCLUDE[tsql](../../includes/tsql-md.md)] 
 
 R developers typically use IDEs for writing and debugging R code. Here are some suggestions:
 
-- **R Tools for Visual Studio** (RTVS) is a free plug-in that provides Intellisense, debugging, and support for Microsoft R. YOu can use it with both R Server and SQL Server Machine Learning Services. To download, see [R Tools for Visual Studio](https://www.visualstudio.com/vs/rtvs/).
+- **R Tools for Visual Studio** (RTVS) is a free plug-in that provides Intellisense, debugging, and support for Microsoft R. You can use it with both R Server and SQL Server Machine Learning Services. To download, see [R Tools for Visual Studio](https://www.visualstudio.com/vs/rtvs/).
 
 - **RStudio** is one of the more popular environments for R development. For more information, see [https://www.rstudio.com/products/RStudio/](https://www.rstudio.com/products/RStudio/).
 

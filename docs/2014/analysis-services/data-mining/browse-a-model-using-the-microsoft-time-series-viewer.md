@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/14/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "data mining [Analysis Services], continuous columns"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "continuous columns"
   - "regression algorithms [Analysis Services]"
 ms.assetid: a77c16cd-1cd0-4fc5-afeb-d1dab30d1e25
-caps.latest.revision: 43
 author: minewiskan
 ms.author: owend
 manager: craigg

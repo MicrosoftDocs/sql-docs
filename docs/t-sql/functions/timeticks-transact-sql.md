@@ -5,9 +5,7 @@ ms.date: "09/18/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "@@TIMETICKS_TSQL"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "time [SQL Server], ticks"
   - "number of microseconds per tick"
 ms.assetid: 9d036633-837f-4309-9c45-3d9600258018
-caps.latest.revision: 28
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

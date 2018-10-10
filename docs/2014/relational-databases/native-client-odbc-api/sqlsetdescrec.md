@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "SQLSetDescRec function"
 ms.assetid: 203d02a2-aa09-462b-a489-a2cdd6f6023b
-caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg

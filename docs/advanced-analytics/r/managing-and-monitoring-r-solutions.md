@@ -13,7 +13,7 @@ manager: cgronlun
 # Manage and integrate machine learning workloads on SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article is for SQL Server database administrators who are responsible for deploying an efficient infrastructure for data science on a shared SQL Server database engine asset. It frames the administrative operations relevant to database administrators who need to manage R and Python code execution on SQL Server.
+This article is for SQL Server database administrators who are responsible for deploying an efficient data science infrastructure on a shared server asset. It frames the administrative operations relevant to database administrators who need to manage R and Python code execution on SQL Server.
 
 ## Isolation and containment
 
@@ -21,11 +21,11 @@ As a DBA, understanding the mechanisms by which isolation and integration of R a
 
 Integration is primarily through the data definition language and the data security model:
 
-+ Stored procedures are equipped with the ability to accept R and Python code as input parameters. 
-+ Built-in functions (namely, PREDICT) can consume a previously trained data model. 
++ [Stored procedures](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql?view=sql-server-2017) equipped with the ability to accept R and Python code as input parameters. 
++ Built-in functions (namely, [PREDICT](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)) that can consume a previously trained data model. 
 + Security integration. Database logins and data access permissions apply to user-invoked scripts utilizing that same data. If users cannot access data through a query, they can't access it through script either.
 
-Understanding the isolation mechanism also has practical implications for the DBA. Isolation is implemented primarily through a dual processing architecture, separating external processing from core processing to ensure that R and Python scripts don't interfer directly with OLTP functions. In Task Manager, you can monitor R and Python processes, executing as least-priviledged worker identities, separate from the SQL Server service account.
+Understanding the isolation mechanism also has practical implications for the DBA. Isolation is implemented primarily through a dual processing architecture, separating external processing from core processing to ensure that R and Python scripts don't interfere directly with OLTP functions. In Task Manager, you can monitor R and Python processes, executing as least-priviledged worker identities, separate from the SQL Server service account.
 
 Running R and Python processes in individual low-privilege accounts has the following benefits:
 
@@ -42,7 +42,7 @@ As a DBA, you can use SQL Server data security to specify who has permission to 
 
 ## Adapations/extensions
 
-Data science introduces requirements for package deployment and administration. For a data scientist, it's common practice to include open-source and third-party packages providing function libraries used for solving specific problems. Some of those packages will have dependencies on other packages, in which case you might to evaluate and install multiple packages to get the required functionality.
+Data science introduces requirements for package deployment and administration. For a data scientist, it's common practice to include open-source and third-party packages providing function libraries used for solving specific problems. Some of those packages will have dependencies on other packages, in which case you might need to evaluate and install multiple packages to get the required functionality.
 
 As a DBA responsible for a server asset, deploying arbitrary R and Python packages into a production server represents an unfamiliar challenge. Before adding packages, you should assess whether the functionality provided by the external package is truly required, with no equivalent in the built-in R libraries and Python libraries installed by SQL Server Setup. In some cases, a data scientist might be able to [build and run solutions on an external workstation](../r/set-up-a-data-science-client.md), retrieving data from SQL Server, but with all analysis performed locally on the workstation instead of on the server itself. 
 
@@ -50,7 +50,7 @@ If you subsequently determine that external library functions are necessary and 
 
 ## Allocate system resources
 
-By default, the R and Python sessions are allowed up to 20% of memory usage on the host system. To re-adjust memory, CPU, and I/O allocations, you can create resource pools to precisely articulate the levels of computing power assigned to external script execution. For more information, see [Resource governance to modify resource levels for R and Python execution](resource-governance.md).
+By default, the R and Python sessions are allowed up to 20% of memory usage on the host system. To readjust memory, CPU, and I/O allocations, you can create resource pools to precisely articulate the levels of computing power assigned to external script execution. For more information, see [Resource governance to modify resource levels for R and Python execution](resource-governance.md).
 
 ## Next steps
 

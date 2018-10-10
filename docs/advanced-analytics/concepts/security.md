@@ -42,7 +42,7 @@ Parallelized tasks do not consume additional accounts. For example, if a user ru
 
 ### Permissions granted to SQLRUserGroup
 
-By default, **SQLRUserGroup** has read and execute permissions on executables in the SQL Server **Binn**, **R_SERVICES**, and **PYTHON_SERVICES** directories, wiht access to executables, libraries, and built-in datasets in the R and Python distributions installed with SQL Server. 
+By default, **SQLRUserGroup** has read and execute permissions on executables in the SQL Server **Binn**, **R_SERVICES**, and **PYTHON_SERVICES** directories, with access to executables, libraries, and built-in datasets in the R and Python distributions installed with SQL Server. 
 
 To protect sensitive resources on SQL Server, you can define an access control list (ACL) that denies access to **SQLRUserGroup**. Conversely, you could also grant permissions to local data resources that exist on host computer, apart from SQL Server itself. 
 
@@ -86,11 +86,11 @@ For such loopback calls to succeed, the group that contains the worker accounts,
 
 #### How implied authentication works for R and Python sessions
 
-The following diagrams shows the interaction of SQL Server components with the R runtime and how it does implied authentication for R.
+The following diagram shows the interaction of SQL Server components with the R runtime and how it does implied authentication for R.
 
 ![Implied authentication for R](../security/media/implied-auth-rsql.png)
 
-The following diagrams shows the interaction of SQL Server components with the Python runtime and how it does implied authentication for Python.
+The next diagram shows the interaction of SQL Server components with the Python runtime and how it does implied authentication for Python.
 
 ![Implied authentication for Python](../security/media/implied-auth-python2.png)
 

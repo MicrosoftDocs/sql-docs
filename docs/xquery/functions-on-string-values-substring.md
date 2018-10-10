@@ -28,7 +28,7 @@ manager: craigg
 ```  
   
 fn:substring($sourceString as xs:string?,  
-                          $startingLoc  as as xs:decimal?) as xs:string?  
+                          $startingLoc as xs:decimal?) as xs:string?  
   
 fn:substring($sourceString as xs:string?,  
                           $startingLoc as xs:decimal?,  

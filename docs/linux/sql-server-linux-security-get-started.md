@@ -61,7 +61,7 @@ Now the login Larry can create more logins, and the user Jerry can create more u
 
 ## Granting access with least privileges
 
-The first people to connect to a user-database will be the administrator and database owner accounts. However these users have all the the permissions available on the database. This is more permission than most users should have. 
+The first people to connect to a user-database will be the administrator and database owner accounts. However these users have all the permissions available on the database. This is more permission than most users should have. 
 
 When you are just getting started, you can assign some general categories of permissions by using the built-in *fixed database roles*. For example, the `db_datareader` fixed database role can read all tables in the database, but make no changes. Grant membership in a fixed database role by using the [ALTER ROLE](../t-sql/statements/alter-role-transact-sql.md) statement. The following example add the user `Jerry` to the `db_datareader` fixed database role.   
    

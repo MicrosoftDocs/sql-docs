@@ -12,7 +12,7 @@ manager: cgronlun
 # Resource governance for Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Because Python is enabled through the the same extensibility architecture that was implemented for the R language in SQL Server 2016, you can use existing tools in SQL Server such as Resource Governor, DMVs, and extended events, to monitor the execution of Python scripts in SQL Server.
+Because Python is enabled through the same extensibility architecture that was implemented for the R language in SQL Server 2016, you can use existing tools in SQL Server such as Resource Governor, DMVs, and extended events, to monitor the execution of Python scripts in SQL Server.
 
 Resource governance in particular is important because analyzing large amounts of data in production can tax even advanced hardware.  To prevent data from being moved outside the database to computers that might not be managed or audited, it is important that the database administrator allocate sufficient resources for advanced analytics operations.
 

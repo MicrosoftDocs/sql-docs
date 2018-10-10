@@ -25,7 +25,7 @@ manager: craigg
  
 In this example, you see the following things.
 -   The `PersonID` column in the source SQL Server table is of type `int`. The wizard maps this type to the SQL Server Integration Services (SSIS) `DT_I4` data type, which is a four-byte signed integer, by referring to the data type mapping file MSSQLToSSIS10.xml.
--   The `PersonID` column in the destination SQL Server table is also of type `int`. The wizard maps this type to the the same SSIS data type.
+-   The `PersonID` column in the destination SQL Server table is also of type `int`. The wizard maps this type to the same SSIS data type.
 -   The wizard concludes, *This column does not need conversion*.
  
   

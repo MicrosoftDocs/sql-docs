@@ -214,7 +214,7 @@ A gauge depicts a single value in a dataset. This tutorial uses a horizontal lin
   
     A gauge is added to the design surface.  
   
-7.  From the the dataset in the Report Data pane, drag the `Sales` field to the gauge. The **Gauge Data** pane opens.  
+7.  From the dataset in the Report Data pane, drag the `Sales` field to the gauge. The **Gauge Data** pane opens.  
   
     When you drop the `Sales` field onto the gauge, it goes to the **Values** list and is aggregated by using the built-in Sum function.  
    

@@ -14,7 +14,7 @@ manager: cgronlun
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article describes the overall security architecture that is used to connect the SQL Server database engine and related components to the extensibility framework. It describes component parts of the architecture, and how each part integrates with the next. 
+This article describes the overall security architecture that is used to connect the SQL Server database engine and related components to the extensibility framework. It describes component parts and interactions. 
 
 <a name="launchpad"></a>
 
@@ -63,34 +63,17 @@ SQL Server's data security model of database logins and roles extend to R and Py
 
 You can use Windows authentication or SQL Server authentication. Permission requirements vary depending on whether you need to create and save database objects, or simply consume objects created by others. For more information, see [Give users permission to SQL Server Machine Learning Services](../../advanced-analytics/security/user-permission.md).
 
-## Mapping user identities to worker accounts
+### Mapping user identities to worker accounts
 
 When a session is started, Launchpad maps the identity of the calling user to a worker account. The mapping of an external Windows user or valid SQL login to a worker account is valid only for the lifetime of the SQL stored procedure that executes the external script. Parallel queries from the same login are mapped to the same user worker account.
 
 During execution, Launchpad creates temporary folders to store session data, deleting them when the session concludes. The directories are access-restricted. For R, RLauncher performs this task. For Python, PythonLauncher performs this task. Each individual worker account is restricted to its own folder, and cannot access files in folders above its own level. However, the worker account can read, write, or delete children under the session working folder that was created. If you are an administrator on the computer, you can view the directories created for each process. Each directory is identified by its session GUID.
 
-
-
 <a name="implied-authentication"></a>
-
-
-## Implied authentication for connecting back to SQL Server
-
-If your script contains a connection string to SQL Server, the type of user identity and how it is specified has an impact on whether that connection succeeds. Using a SQL login with a user name and password providing on the connection string, the connection is expected to succeed. However, if you are using Windows integrated security (with **-T** on connection string) the connection will fail by default. The connection fails because the script is actually executing under the identity of a worker account, which is unknown to the server. 
-
-In the extensibility framework, R or Python script executes as a worker account. Although the system maintains an association between the worker account and the database user invoking the script, the worker account itself does not have permission to loop back to database engine. To allow 
-
-with SQL logins having a slight edge over Windows integrated security for scripts that connect back to SQL Server for data operations.
-
-+ For SQL logins: Ensure that the login has appropriate permissions on the database where you are reading data. You can do this by adding *Connect to* and *SELECT* permissions, or by adding the login to the `db_datareader` role. To create objects, assign `DDL_admin` rights. If you must save data to tables, add to the `db_datawriter` role.
-
-+ For Windows authentication: You might need to create an ODBC data source on the data science client that specifies the instance name and other connection information. For more information, see [ODBC data source administrator](../../odbc/admin/odbc-data-source-administrator.md).
-
-
 
 ### Implied authentication
 
-**Implied authentication** describes the process under which SQL Server gets the user credentials and then executes all external script tasks on behalf of the users, assuming the user has the correct permissions in the database. Most of the time, implied authentication is an implementation detail
+**Implied authentication** describes the process under which SQL Server gets the user credentials and then executes all external script tasks on behalf of the users, assuming the user has the correct permissions in the database. Most of the time, implied authentication is an implementation detail, but in the case of loopback connections to SQL Server, you might need additional configuration to support that connection.
 
 However, Implied authentication is important if the external script needs to make an ODBC call outside the SQL Server database. For example, the code might retrieve a shorter list of factors from a spreadsheet or other source.
 
@@ -109,8 +92,17 @@ The following diagrams shows the interaction of SQL Server components with the P
 
 ![Implied authentication for Python](../security/media/implied-auth-python2.png)
 
+#### Implied authentication for connecting back to SQL Server
 
+If your script contains a connection string to SQL Server, the type of user identity and how it is specified has an impact on whether that connection succeeds. Using a SQL login with a user name and password providing on the connection string, the connection is expected to succeed. However, if you are using Windows integrated security (with **-T** on connection string) the connection will fail by default. The connection fails because the script is actually executing under the identity of a worker account, which is unknown to the server. 
 
+In the extensibility framework, R or Python script executes as a worker account. Although the system maintains an association between the worker account and the database user invoking the script, the worker account itself does not have permission to loop back to database engine. To allow 
+
+with SQL logins having a slight edge over Windows integrated security for scripts that connect back to SQL Server for data operations.
+
++ For SQL logins: Ensure that the login has appropriate permissions on the database where you are reading data. You can do this by adding *Connect to* and *SELECT* permissions, or by adding the login to the `db_datareader` role. To create objects, assign `DDL_admin` rights. If you must save data to tables, add to the `db_datawriter` role.
+
++ For Windows authentication: You might need to create an ODBC data source on the data science client that specifies the instance name and other connection information. For more information, see [ODBC data source administrator](../../odbc/admin/odbc-data-source-administrator.md).
 
 ## No support for Transparent Data Encryption at rest
 

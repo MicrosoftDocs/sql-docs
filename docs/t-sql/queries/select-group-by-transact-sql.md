@@ -304,19 +304,19 @@ For a GROUP BY clause that uses ROLLUP, CUBE, or GROUPING SETS, the maximum numb
  
 -   The following example generates 4097 (2<sup>12</sup> + 1) grouping sets and will fail.  
   
-    ```  
+    ```sql
     GROUP BY GROUPING SETS( CUBE(a1, ..., a12), b )  
     ```  
   
 -   The following example generates 4097 (2<sup>12</sup> + 1) groups and will fail. Both `CUBE ()` and the `()` grouping set produce a grand total row and duplicate grouping sets are not eliminated.  
   
-    ```  
+    ```sql
     GROUP BY GROUPING SETS( CUBE(a1, ..., a12), ())  
     ```  
 
 -   This example uses the backwards compatible syntax. It generates 8192 (2<sup>13</sup>) grouping sets and will fail.  
   
-    ```  
+    ```sql
     GROUP BY CUBE (a1, ..., a13)   
     GROUP BY a1, ..., a13 WITH CUBE   
     ```    

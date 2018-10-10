@@ -25,7 +25,7 @@ manager: craigg
   
 -   Execute the package in SSMS.  
   
-### To Locate or add the the SSISDB catalog  
+### To Locate or add the SSISDB catalog  
   
 1.  Click Start, point to All Programs, point to Microsoft SQL Server 2012, and then click SQL Management Studio.  
   

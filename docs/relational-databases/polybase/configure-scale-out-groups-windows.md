@@ -52,9 +52,9 @@ This walks through the steps of configuring a PolyBase Group using:
 
 1. Run setup.exe.
   
-2. On the the Feature Selection page, select **PolyBase Query Service for External Data**.
+2. On the Feature Selection page, select **PolyBase Query Service for External Data**.
   
-3. On the the Server Configuration page, use the **domain account** PQTH4A\PolybaseUser for SQL Server PolyBase Engine and SQL Server PolyBase Data Movement Service.
+3. On the Server Configuration page, use the **domain account** PQTH4A\PolybaseUser for SQL Server PolyBase Engine and SQL Server PolyBase Data Movement Service.
   
 4. On the PolyBase Configuration page, select the option **Use the SQL Server instance as part of a PolyBase scale-out group**. This opens  the firewall  to allow incoming connections to the PolyBase services.
   

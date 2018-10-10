@@ -19,7 +19,7 @@ manager: craigg
   
  ![Tablix data region areas](../media/rs-tablixareas.gif "Tablix data region areas")  
   
- Row and column group headers are created automatically when you add groups by using the New Table or Matrix wizard or the the New Chart wizard, by adding fields to the Grouping pane, or by using context menus. If the tablix data region has only a tablix body area and no group headers, the rows and columns are tablix members.  
+ Row and column group headers are created automatically when you add groups by using the New Table or Matrix wizard or the New Chart wizard, by adding fields to the Grouping pane, or by using context menus. If the tablix data region has only a tablix body area and no group headers, the rows and columns are tablix members.  
   
  For static members, you can display the top adjacent rows or the side adjacent columns on multiple pages.  
   

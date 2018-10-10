@@ -126,7 +126,7 @@ manager: craigg
   
  This query uses the `LIKE` clause in the `HAVING` clause.  
   
-```  
+```sql
 USE AdventureWorks2012 ;  
 GO  
 SELECT SalesOrderID, CarrierTrackingNumber   

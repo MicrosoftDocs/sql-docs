@@ -48,7 +48,7 @@ ms.author: maghan
   
  URLs are unregistered if you stop the service or recycle the Web service or the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] application domain. If you modify a URL reservation while the service is running, the report server will recycle the application domain immediately so that the old URL can be unregistered and the new one put into use.  
   
- A few simple examples illustrate the concept of a URL reservation and how it relates to URL addresses used for [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] applications. A key point to notice is that the URL reservation has different syntax than the the URL you use to access the application:  
+ A few simple examples illustrate the concept of a URL reservation and how it relates to URL addresses used for [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] applications. A key point to notice is that the URL reservation has different syntax than the URL you use to access the application:  
   
 |URL Reservation in HTTP.SYS|URL|Explanation|  
 |---------------------------------|---------|-----------------|  

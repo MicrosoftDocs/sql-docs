@@ -12,14 +12,20 @@ manager: cgronlun
 # Resource governance for machine learning in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Data science and machine learning algorithms are computationally intensive, with the potential for undermining the performance of other services running at the same time. If you need a balanced distribution of system resources across multiple workloads, you can use [Resource Governor](../../relational-databases/resource-governor/resource-governor.md) to allocate CPU, physical IO, and memory resources consumed by the external runtimes for R and Python. 
+Data science and machine learning algorithms are computationally intensive. Depending on workload priorities, you might need to increase the resources available for data science, or decrease resourcing if R and Python script execution undermines the performance of other services running concurrently. 
 
-## How to use Resource Governor to manage machine learning
- 
-For R or Python sessions, set up one or more *external resource pools* and assign workgroups accordingly. An external resource pool is a new type of resource pool introduced in [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] to help manage the R and Python processes external to the database engine.
+When you need to rebalance the distribution of system resources across multiple workloads, you can use [Resource Governor](../../relational-databases/resource-governor/resource-governor.md) to allocate CPU, physical IO, and memory resources consumed by the external runtimes for R and Python. If you do so, you might need to reduce the amount of memory reserved for other workloads and services. 
 
 > [!NOTE] 
 > Resource Governor is an Enterprise Edition feature.
+
+## Default allocations
+
+By default, the external script runtimes for machine learning are limited to no more than 20% of total machine memory. It depends on your system, but in general, you might find this limit inadequate for serious machine learning tasks such as training a model or predicting on many rows of data. 
+
+## Using Resource Governor to manage machine learning resourcing
+ 
+For R and Python sessions, set up one or more *external resource pools* and assign workgroups accordingly. An external resource pool is a type of resource pool introduced in [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] to help manage the R and Python processes external to the database engine.
 
 1. [Enable resource governance](https://docs.microsoft.com/sql/relational-databases/resource-governor/enable-resource-governor) (it is off by default).
 
@@ -58,6 +64,6 @@ Once you resolve the issue, remember to re-enable script execution on the instan
   
 ## See also
 
-+ [Managing and monitoring machine learning solutions](../../advanced-analytics/r/managing-and-monitoring-r-solutions.md)
-+ [Create a resource pool for machine learning](../../advanced-analytics/r/how-to-create-a-resource-pool-for-r.md)
++ [Manage machine learning integration](../r/managing-and-monitoring-r-solutions.md)
++ [Create a resource pool for machine learning](../r/how-to-create-a-resource-pool-for-r.md)
 + [Resource Governor resource pools](../../relational-databases/resource-governor/resource-governor-resource-pool.md)

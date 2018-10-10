@@ -256,7 +256,7 @@
       href: security/add-sqlrusergroup-to-database.md
   - name: Administration
     items:
-    - name: Manage and monitor solutions
+    - name: Manage machine learning integration
       href: r/managing-and-monitoring-r-solutions.md
     - name: Monitor using custom reports in SSMS
       href: r/monitor-r-services-using-custom-reports-in-management-studio.md

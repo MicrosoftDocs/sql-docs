@@ -245,8 +245,18 @@ featureFlags:
                 </a>
             </li>
            <li>
-                <a href="http://aka.ms/sqldocsurvey" data-linktype="external">
+                <a href="https://docs.microsoft.com/sql/sql-server/sql-server-get-help" data-linktype="external">
+                    Get help
+                </a>
+            </li>
+           <li>
+                <a href="http://aka.ms/sqldocfeedback" data-linktype="external">
                     SQL Docs Feedback
+                </a>
+            </li>
+           <li>
+                <a href="http://aka.ms/sqldocsurvey" data-linktype="external">
+                    SQL Docs Survey
                 </a>
             </li>
            <li>

@@ -44,6 +44,8 @@ Parallelized tasks do not consume additional accounts. For example, if a user ru
 
 By default, **SQLRUserGroup** has read and execute permissions on executables in the SQL Server **Binn**, **R_SERVICES**, and **PYTHON_SERVICES** directories, wiht access to executables, libraries, and built-in datasets in the R and Python distributions installed with SQL Server. 
 
+To protect sensitive resources on SQL Server, you can define an access control list (ACL) that denies access to **SQLRUserGroup**. Conversely, you could also grant permissions to local data resources that exist on host computer, apart from SQL Server itself. 
+
 By design, this group does not have a database login or permissions to any data. Under certain circumstances, you might want to create a login to allow loop back connections, particularly when a trusted Windows identity is the calling user. This capability is called [*implied authentication*](#implied-authentication). For more information, see [Add SQLRUserGroup as a database user](../../advanced-analytics/security/add-sqlrusergroup-to-database.md).
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"

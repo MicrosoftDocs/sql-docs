@@ -263,9 +263,9 @@
     - name: Scale concurrent execution of external scripts
       href: administration/modify-user-account-pool.md
     - name: Use resource governance
-      href: r/resource-governance-for-r-services.md
+      href: administration/resource-governance.md
     - name: Create a resource pool
-      href: r/how-to-create-a-resource-pool-for-r.md
+      href: administration/how-to-create-a-resource-pool-for-r.md
     - name: Extended events for Machine Learning Services
       href: r/extended-events-for-sql-server-r-services.md
     - name: Extended events PREDICT T-SQL

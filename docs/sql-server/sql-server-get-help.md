@@ -41,7 +41,7 @@ There are a few SQL Server blogs that can bring you the latest information about
 - [SQL Server Blog](https://cloudblogs.microsoft.com/sqlserver/)
 - [SQL Repl Talk](https://blogs.msdn.microsoft.com/repltalk/)
 - [SQL Tiger Team](https://blogs.msdn.microsoft.com/sql_server_team/)
-- 
+
 
 ### MSDN Forums
 There are many MSDN forums that can help you with your SQL Server questions. 
@@ -68,9 +68,9 @@ There are a few social media outlets that can reach the SQL team as well.
 
 - [Reddit](https://www.reddit.com/r/SQLServer/)
 - [SQL Docs Twitter](https://twitter.com/sqldocs)
-- [SQL Tiger Team](https://twitter.com/mssqltiger)
+- [SQL Tiger Team Twitter](https://twitter.com/mssqltiger)
 - [MashaMSFT Twitter](https://twitter.com/mashamsft)
-- [MikeRayMSFT](https://twitter.com/mncray)
+- [MikeRayMSFT Twitter](https://twitter.com/mncray)
 
 
 ## I want to provide feedback for SQL Docs content 

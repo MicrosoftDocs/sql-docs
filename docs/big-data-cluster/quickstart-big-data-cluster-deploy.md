@@ -45,17 +45,12 @@ pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.0 mss
 
 Setting the environment variables required for deploying big data cluster slightly differs depending on whether you are using Windows or Linux/macOS client.  Choose the steps below depending on which operating system you are using.
 
-> [!IMPORTANT]
-> Make sure you wrap the passwords in double quotes if it contains any special characters. Note that double quotes delimiters work only in bash commands.
->
-> You can set the password environment variables to whatever you like, but make sure they are sufficiently complex and don’t use the `!`, `&`, or `‘` characters.
+Before continuing, note the following important guidelines:
 
-[!IMPORTANT]
-The **SA** account is a system administrator on the SQL Server Master instance that gets created during setup. After creating your SQL Server container, the MSSQL_SA_PASSWORD environment variable you specified is discoverable by running echo $MSSQL_SA_PASSWORD in the container. For security purposes, change your SA password as per best practices documented [here](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password).
-
-
-> [!NOTE]
-> For the CTP 2.0 release do not change the default ports.
+- Make sure you wrap the passwords in double quotes if it contains any special characters. Note that double quotes delimiters work only in bash commands.
+- You can set the password environment variables to whatever you like, but make sure they are sufficiently complex and don’t use the `!`, `&`, or `‘` characters.
+- For the CTP 2.0 release, do not change the default ports.
+- The **SA** account is a system administrator on the SQL Server Master instance that gets created during setup. After creating your SQL Server container, the MSSQL_SA_PASSWORD environment variable you specified is discoverable by running echo $MSSQL_SA_PASSWORD in the container. For security purposes, change your SA password as per best practices documented [here](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password).
 
 Initialize the following environment variables.  They are required for deploying a big data cluster:
 

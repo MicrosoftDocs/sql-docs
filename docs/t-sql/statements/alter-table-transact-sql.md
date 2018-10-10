@@ -1457,7 +1457,7 @@ C4 int ) ;
 GO  
 ```  
   
- Next, column 'C2' is encrypted with with a column encryption key, named CEK1, and randomized encryption. Note that for the below statement to succeed:
+ Next, column 'C2' is encrypted with a column encryption key, named CEK1, and randomized encryption. Note that for the below statement to succeed:
 - The column encryption key must be enclave-enabled, meaning it must be encrypted with a column master key that allows enclave computations.
 - The target SQL Server instance must support Always Encrypted with secure enclaves.
 - The statement must be issued over a connection set up for Always Encrypted with secure enclaves, and using a supported client driver.

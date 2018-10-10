@@ -75,29 +75,66 @@ To fail over or move a primary replica to a different node in an availability gr
 
 ## Rotate credentials
 
-Rotate credentials to reset the password for the SQL Server `sa` account and the SQL Server [service master key](../relational-databases/security/encryption/service-master-key.md).
+Rotate credentials to reset the password for the SQL Server `sa` account and the SQL Server [service master key](../relational-databases/security/encryption/service-master-key.md). To complete this task you will create new secrets in the Kubernetes cluster and then create a job to rotate the credentials.
 
-Use a Kubernetes job to rotate the credentials. Describe the job in a manifest. [`rotate-creds.yaml`](https://github.com/Microsoft/sql-server-samples/blob/master/samples/features/high%20availability/Kubernetes/sample-manifest-files/rotate-creds.yaml) in the [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-deployment-script/) github repository is an example of a manifest for this job.
+Before rotating credentials, make a new secret for the password and the master key.
 
-1. Copy [`rotate-creds.yaml`](https://github.com/Microsoft/sql-server-samples/blob/master/samples/features/high%20availability/Kubernetes/sample-manifest-files/rotate-creds.yaml) to your administration terminal. 
+The following script creates a secret named `new-sql-secrets`. Before you run the script, replace `<>` with complex passwords for the `sapassword` and the `masterkeypassword`. Use different passwords for each respective value.
 
-1. Update `rotate-creds.yaml` for your environment.
+```azurecli
+kubectl create secret generic new-sql-secrets --from-literal=sapassword="<>" --from-literal=masterkeypassword="<>"  --namespace ag1
+```
 
-  Set the namespace for the Kubernetes namespace of your availability group. In the example, the namespace is `ag1`.
+Complete the following steps for every instance of SQL Server that needs the master key or `sa` password.
 
-1. Create a new secret for the password and the master key.
+1. Copy [`rotate-creds.yaml`](https://github.com/Microsoft/sql-server-samples/blob/master/samples/features/high%20availability/Kubernetes/sample-manifest-files/rotate-creds.yaml) to your administration terminal.
 
-  The following script creates a secret named `new-sql-secrets`. Before you run the script, replace `<>` with complex passwords for the `sapassword` and the `masterkeypassword`. Use different passwords for each respective value.
+  [`rotate-creds.yaml`](https://github.com/Microsoft/sql-server-samples/blob/master/samples/features/high%20availability/Kubernetes/sample-manifest-files/rotate-creds.yaml) in the [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-deployment-script/) github repository is an example of a manifest for this job.
 
-  ```azurecli
-  kubectl create secret generic new-sql-secrets --from-literal=sapassword="<>" --from-literal=masterkeypassword="<>"  --namespace ag1
-  ```
+  Before you apply this manifest, update the manifest for your environment. Review and change the following settings, as required.
+
+  - Verify the namespace. Update if necessary. The following example in a manifest applies to a namespace named `ag1`.
+
+    ```yaml
+    metadata:
+      name: rotate-creds
+      namespace: ag1
+    ```
+
+  - Verify the name of the SQL Server instance. Update if necessary. The following example in a manifest spec applies to a SQL Server instance named `mssql1`.
+
+    ```yaml
+    env:
+      - name: MSSQL_K8S_SQL_SERVER_NAME
+        value: mssql1
+    ```
+
+  Save the updated manifest file to your workstation.
 
 1. Use `kubectl` to deploy the job.
 
   ```azurecli
   kubectl apply -f rotate-creds.yaml
   ```
+
+  Kubernetes updates the master key and `sa` password for one instance of SQL Server in an availability group.
+
+1. Verify that the job is completed. Run the following command: To verify that the job is completed, run 
+
+  ```azcli
+  kubectl describe job rotate-creds --namespace ag1
+  ```
+
+  After the job succeeds, the master key and `sa` password for one instance of SQL Server are updated.
+
+
+1. Before you run the job again, delete the job. Each job name must be unique.
+
+  ```azurecli
+  kubectl delete job rotate-creds --namespace ag1
+  ```
+
+In order to make sure all instances of SQL Server have the same master key and `sa` account, repeat the steps above for each instance of SQL Server.
 
 ## Next steps
 

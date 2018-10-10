@@ -28,7 +28,7 @@ By default, the external script runtimes for machine learning are limited to no 
  
 By default, external processes use up to 20% of total host memory on the local server. You can modify the default resource pool to make server-wide changes, with R and Python processes utilizing whatever capacity you make available to external processes.
 
-Alternatively, you can construct custom *external resource pools*, with associated workload groups and classifiers, to determine resource allocation for requests originating from specific programs, hosts, or other criteria that your provide. An external resource pool is a type of resource pool introduced in [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] to help manage the R and Python processes external to the database engine.
+Alternatively, you can construct custom *external resource pools*, with associated workload groups and classifiers, to determine resource allocation for requests originating from specific programs, hosts, or other criteria that you provide. An external resource pool is a type of resource pool introduced in [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] to help manage the R and Python processes external to the database engine.
 
 1. [Enable resource governance](https://docs.microsoft.com/sql/relational-databases/resource-governor/enable-resource-governor) (it is off by default).
 

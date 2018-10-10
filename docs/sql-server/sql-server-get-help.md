@@ -1,5 +1,5 @@
 ---
-title: SQL Server Feedback | Microsoft Docs
+title: SQL Server help and feedback | Microsoft Docs
 ms.date: "10/10/2018"
 ms.prod: sql
 ms.reviewer: ""
@@ -11,7 +11,7 @@ manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
 ---
 
-# SQL Server Feedback
+# SQL Server help and feedback
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 We're interested in your ideas for improving our products and documentation. We can't always respond personally, but we'll make sure that your feedback gets to the right person or team. 
@@ -51,7 +51,7 @@ There are many MSDN forums that can help you with your SQL Server questions.
 - [SQL Server Tools](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools%2Cssdt&filter=alltypes&sort=lastpostdesc) 
 - [Security](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsecurity&filter=alltypes&sort=lastpostdesc)
 - [Replication](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlreplication&filter=alltypes&sort=lastpostdesc)
-- [Transact-SQL(T-SQL)](https://social.msdn.microsoft.com/Forums/en-US/home?forum=transactsql)
+- [Transact-SQL (T-SQL)](https://social.msdn.microsoft.com/Forums/en-US/home?forum=transactsql)
 - [SQL Server Integration Services (SSIS)](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlintegrationservices&filter=alltypes&sort=lastpostdesc)
 - [SQL Server Reporting Services (SSRS)](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlreportingservices&filter=alltypes&sort=lastpostdesc)
 - [SQL Server Analysis Services (SSAS)](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlanalysisservices&filter=alltypes&sort=lastpostdesc)

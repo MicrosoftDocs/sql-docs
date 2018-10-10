@@ -204,4 +204,4 @@ Schema rowsets are described in two SQL Server Analysis Services protocols:
 |[MDSCHEMA_SETS](https://msdn.microsoft.com/library/ee301356)|Describes any sets that are currently described in a database, including session-scoped sets.|  
 
 > [!NOTE]
-> STORAGES DMVs do not have a schema rowset described in the the protocol.
+> STORAGES DMVs do not have a schema rowset described in the protocol.

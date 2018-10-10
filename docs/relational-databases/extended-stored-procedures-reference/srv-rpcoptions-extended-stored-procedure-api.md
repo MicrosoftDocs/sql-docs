@@ -41,7 +41,7 @@ srvproc
   
 ## Arguments  
  *srvproc*  
- Is a pointer to the SRV_PROC structure that is the handle for a particular client connection (in this case, the handle that received the remote stored procedure). The structure contains information the the Extended Stored Procedure API library uses to manage communication and data between the application and the client.  
+ Is a pointer to the SRV_PROC structure that is the handle for a particular client connection (in this case, the handle that received the remote stored procedure). The structure contains information the Extended Stored Procedure API library uses to manage communication and data between the application and the client.  
   
 ## Returns  
  A bitmap that contains the run-time flags joined in a logical OR for the current remote stored procedure. If there is not a current remote stored procedure, 0 is returned and a message is generated.  

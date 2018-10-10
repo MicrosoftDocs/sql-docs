@@ -116,7 +116,7 @@ Complete the following steps for every instance of SQL Server that needs the mas
 1. Use `kubectl` to deploy the job.
 
   ```azurecli
-  kubectl apply -f rotate-creds.yaml
+  kubectl apply -f rotate-creds.yaml --namespace ag1
   ```
 
   Kubernetes updates the master key and `sa` password for one instance of SQL Server in an availability group.

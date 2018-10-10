@@ -302,7 +302,7 @@ featureFlags:
         <ul class="links">
            <li>
                 <a href="http://aka.ms/editsqldocs" data-linktype="external">
-                    Contribute to SQL docs
+                    Contribute
                 </a>
             </li>
            <li>
@@ -311,13 +311,13 @@ featureFlags:
                 </a>
             </li>
            <li>
-                <a href="http://aka.ms/sqldocfeedback" data-linktype="external">
-                    SQL Docs Feedback
+                <a href="http://aka.ms/sqldocsfeedback" data-linktype="external">
+                    Feedback
                 </a>
             </li>
            <li>
                 <a href="http://aka.ms/sqldocsurvey" data-linktype="external">
-                    SQL Docs Survey
+                    Survey
                 </a>
             </li>
            <li>

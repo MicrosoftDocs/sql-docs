@@ -44,6 +44,8 @@ The architecture is designed such that external scripts run in a separate proces
 
 Components include a **Launchpad** service used to invoke language-specific launchers (R or Python), language and library-specific logic for loading interpreters and libraries. The Launcher loads a language run time, plus any proprietary modules. For example, if your code includes RevoScaleR functions, a RevoScaleR interpreter would load. **BxlServer** and **SQL Satellite** manage communication and data transfer with SQL Server.
 
+<a name="launchpad"></a>
+
 ## Launchpad
 
 The SQL Server Trusted Launchpad is a service that manages and executes external scripts, similar to the way that the full-text indexing and query service launches a separate host for processing full-text queries. The Launchpad service can start only trusted launchers that are published by Microsoft, or that have been certified by Microsoft as meeting requirements for performance and resource management.

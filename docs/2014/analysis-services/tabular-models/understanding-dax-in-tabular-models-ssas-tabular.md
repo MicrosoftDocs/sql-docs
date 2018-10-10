@@ -176,7 +176,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 |`[Date]`|Specifies the Date column in the Date table. Columns are in brackets.|  
 |`,`||  
 |`STARTOFQUARTER`|The STARTOFQUARTER function returns the date of the start of the quarter.|  
-|`LASTDATE`|The LASTDATE function returns the the last date of the quarter.|  
+|`LASTDATE`|The LASTDATE function returns the last date of the quarter.|  
 |`'Date'`|Specifies the Date table.|  
 |`[Date]`|Specifies the Date column in the Date table.|  
 |`,`||  

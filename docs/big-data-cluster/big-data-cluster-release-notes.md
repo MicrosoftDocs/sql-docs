@@ -78,9 +78,11 @@ The following sections provide known issues for SQL Server big data clusters in 
 
    Currently there is no way to preview files larger than 30 MB in Azure Data Studio.
 
+- Configuration changes to HDFS that involve changes to hdfs-site.xml are not supported.
+
 #### Security
 
-- The SA_PASSWORD is part of the environment and discoverable (for example in a cord dump file). You must reset the SA_PASSWORD on the master instance after deployment. This is not a bug but an important security step.
+- The SA_PASSWORD is part of the environment and discoverable (for example in a cord dump file). You must reset the SA_PASSWORD on the master instance after deployment. This is not a bug but a security step. For more information on how to change the SA_PASSWORD in a Linux container, see [Change the SA password](../linux/quickstart-install-connect-docker.md#sapassword).
 
 - AKS logs may contain SA password for big data cluster deployments.
 

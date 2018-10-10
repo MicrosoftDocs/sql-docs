@@ -46,6 +46,36 @@
             "redirect_document_id": false
         }, 
         {
+            "source_path": "docs/advanced-analytics/r/security-overview-sql-server-r.md",
+            "redirect_url": "/sql/advanced-analytics/concepts/security",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "docs/advanced-analytics/python/security-overview-sql-server-python-services.md",
+            "redirect_url": "/sql/advanced-analytics/concepts/security",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "docs/advanced-analytics/r/security-considerations-for-the-r-runtime-in-sql-server.md",
+            "redirect_url": "/sql/advanced-analytics/concepts/security",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "docs/advanced-analytics/general/sql-server-launchpad-service-account.md",
+            "redirect_url": "/sql/advanced-analytics/security/sql-server-launchpad-service-account",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/advanced-analytics/r/add-sqlrusergroup-to-database.md",
+            "redirect_url": "/sql/advanced-analytics/security/add-sqlrusergroup-to-database",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/advanced-analytics/r/modify-the-user-account-pool-for-sql-server-r-services.md",
+            "redirect_url": "/sql/advanced-analytics/security/add-sqlrusergroup-to-database",
+            "redirect_document_id": false
+        }, 
+        {
             "source_path": "docs/advanced-analytics/r/differences-in-r-features-between-editions-of-sql-server.md",
             "redirect_url": "/sql/sql-server/editions-and-components-of-sql-server-2017",
             "redirect_document_id": false
@@ -315,6 +345,16 @@
             "source_path": "docs/reporting-services/report-builder/report-sections-dialog-box-report-builder.md",
             "redirect_url": "/sql/reporting-services/report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs",
             "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/reporting-services/report-builder/using-my-reports-report-builder-and-ssrs.md",
+            "redirect_url": "/sql/reporting-services/report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/reporting-services/report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md",
+            "redirect_url": "/sql/reporting-services/report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs",
+            "redirect_document_id": false
         },
         {
             "source_path": "docs/reporting-services/report-builder/reporting-services-login-dialog-box-report-builder.md",

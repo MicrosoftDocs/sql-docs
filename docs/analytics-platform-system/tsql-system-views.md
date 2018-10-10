@@ -128,7 +128,7 @@ The following DMVs are applicable to Parallel Data Warehouse, but must be execut
 ## SQL Server DMVs available in Parallel Data Warehouse
 Parallel Data Warehouse exposes many of the SQL Server dynamic management views (DMVs). These views, when queried in Parallel Data Warehouse, are reporting the state of SQL  Server databases running on the distributions.
 
-Each of these DMV's has a specific column called pdw_node_id. This is the the identifier for the Compute node. 
+Each of these DMV's has a specific column called pdw_node_id. This is the identifier for the Compute node. 
 
 > [!NOTE]
 > To use these view, insert ‘pdw_nodes_’ into the name, as shown in the following table.

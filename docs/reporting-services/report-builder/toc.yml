@@ -23,10 +23,6 @@
     href: finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md
   - name: Finding and Viewing Reports with a Browser
     href: finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md
-  - name: Searching for Reports and Other Items
-    href: searching-for-reports-and-other-items-report-builder-and-ssrs.md
-  - name: Using My Reports
-    href: using-my-reports-report-builder-and-ssrs.md
   - name: Convert CRI Dialog Box
     href: convert-cri-dialog-box-report-builder.md
 - name: Hide an Item (Report Builder and SSRS)
@@ -34,7 +30,7 @@
 - name: Export Reports
   href: export-reports-report-builder-and-ssrs.md
   items:
-  - name: Interactive Functionality for Different Report Rendering Extensions
+  - name: Interactive Functionality for Report Rendering Extensions
     href: interactive-functionality-different-report-rendering-extensions.md
   - name: Exporting to a CSV File
     href: exporting-to-a-csv-file-report-builder-and-ssrs.md

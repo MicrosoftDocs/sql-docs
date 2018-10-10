@@ -193,7 +193,7 @@ Create this table so you'll have a place to put hyperlinks and rotated text.
   
 8.  Click **Design** to return to design view.  
   
-9. Select the the **Total** cell in the **LinkText** column, then hold down the SHIFT key and select the two cells to its right: and the empty cell in the **Product** column and the `[Sum(Sales)]` cell in the **Sales** column.  
+9. Select the **Total** cell in the **LinkText** column, then hold down the SHIFT key and select the two cells to its right: and the empty cell in the **Product** column and the `[Sum(Sales)]` cell in the **Sales** column.  
   
 11. With those three cells selected, right-click one of those cells and click **Delete Rows**.  
 

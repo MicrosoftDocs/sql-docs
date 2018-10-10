@@ -16,7 +16,7 @@ ms.author: douglasl
 manager: craigg
 ---
 # Report Properties Dialog Box, Page Setup
-  Select **Page Setup** on the the **Report Properties**, dialog box to set page options for the entire report.  
+  Select **Page Setup** on the **Report Properties**, dialog box to set page options for the entire report.  
   
 ## Options  
  **Inches**  

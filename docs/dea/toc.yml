@@ -12,3 +12,5 @@
   href: database-experimentation-assistant-create-report.md
 - name: View reports
   href: database-experimentation-assistant-view-report.md
+- name: Run at command prompt
+  href: database-experimentation-assistant-run-command-prompt.md

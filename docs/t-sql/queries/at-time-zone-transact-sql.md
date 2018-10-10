@@ -142,7 +142,7 @@ FROM Sales.SalesOrderHeader;
 ```  
   
 ### C. Query Temporal Tables using local time zone  
- The following example example selects data from a temporal table.  
+ The following example selects data from a temporal table.  
   
 ```  
 USE AdventureWorks2016;  

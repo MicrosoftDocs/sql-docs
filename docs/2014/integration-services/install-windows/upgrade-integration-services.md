@@ -31,7 +31,7 @@ manager: craigg
  We recommended that you run Upgrade Advisor before you upgrade to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Upgrade Advisor reports issues that you might encounter if you migrate existing [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages to the new package format that [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] uses. For more information, see [Use Upgrade Advisor to Prepare for Upgrades](../../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
   
 > [!NOTE]  
->  Support for migrating or running Data Transformation Services (DTS) packages has been discontinued in in the current release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. The following DTS functionality has been discontinued.  
+>  Support for migrating or running Data Transformation Services (DTS) packages has been discontinued in the current release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. The following DTS functionality has been discontinued.  
 >   
 >  -   DTS runtime  
 > -   DTS API  

@@ -397,7 +397,7 @@ After succesfully running the script, copy the `CREATE CREDENTIAL` command to a 
   
   
 ###  <a name="PITR"></a> Restoring to a point-in-time using STOPAT  
- The following example restores the AdventureWorks2016 sample database database to its state at a point in time, and shows a restore operation.  
+ The following example restores the AdventureWorks2016 sample database to its state at a point in time, and shows a restore operation.  
   
 1.  **From URL using Shared Access Signature**  
   

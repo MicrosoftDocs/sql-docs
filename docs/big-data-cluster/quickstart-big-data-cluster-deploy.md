@@ -152,7 +152,7 @@ kubectl get svc service-master-pool-lb -n <name of your cluster>
 kubectl get svc service-security-lb -n <name of your cluster>
 ```
 
-Look for the **External-IP** value that is assigned to the services. Connect to the SQL Server master instance using the IP address for the `service-master-pool-lb` at port 31433 (Ex: **\<ip-address\>,31433**) and to the SQL Server big data cluster endpoint using the external-IP for the `service-security-lb` service.   That big data cluster end point is where you you can interact with HDFS and submit Spark jobs through Knox.
+Look for the **External-IP** value that is assigned to the services. Connect to the SQL Server master instance using the IP address for the `service-master-pool-lb` at port 31433 (Ex: **\<ip-address\>,31433**) and to the SQL Server big data cluster endpoint using the external-IP for the `service-security-lb` service.   That big data cluster end point is where you can interact with HDFS and submit Spark jobs through Knox.
 
 # Next steps
 

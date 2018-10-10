@@ -143,7 +143,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 ## Remarks  
  **sp_changemergepublication** is used in merge replication.  
   
- Changing the following properties requires that a new snapshot be generated. You you must specify a value of **1** for the *force_invalidate_snapshot* parameter.  
+ Changing the following properties requires that a new snapshot be generated. You must specify a value of **1** for the *force_invalidate_snapshot* parameter.  
   
 -   **alt_snapshot_folder**  
   

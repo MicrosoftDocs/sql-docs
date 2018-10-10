@@ -19,7 +19,7 @@ To have sufficient permissions to configure all APS nodes, the user running the 
   
 #### To add a user to the Domain Admins group  
   
-1.  Log into the active AD node **(*appliance_domain*-AD01** or ***appliance_domain*-AD02**) using an existing appliance domain administrator account.  
+1.  Log into the active AD node **(_appliance\_domain_-AD01** or **_appliance\_domain_-AD02**) using an existing appliance domain administrator account.  
   
 2.  On the Start menu, click **Run**. In the **Open** box, type **dsa.msc**. Click **OK**.  
   

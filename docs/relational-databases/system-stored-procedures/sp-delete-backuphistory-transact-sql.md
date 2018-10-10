@@ -37,7 +37,7 @@ sp_delete_backuphistory [ @oldest_date = ] 'oldest_date'
 ```  
   
 ## Arguments  
- [ **@oldest_date=** ] **'***oldest_date***'**  
+ [ **@oldest_date=** ] **'**_oldest\_date_**'**  
  Is the oldest date retained in the backup and restore history tables. *oldest_date* is **datetime**, with no default.  
   
 ## Return Code Values  

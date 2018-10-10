@@ -63,4 +63,4 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 -   Opening and closing quotes on attributes.  
   
 ## MDX and DMX Editor Parenthesis Matching  
- The Multi-Dimensional Expressions (MDX) and and Data Mining Expressions (DMX) Editors automatically match parenthesis pairs in functions.
+ The Multi-Dimensional Expressions (MDX) and Data Mining Expressions (DMX) Editors automatically match parenthesis pairs in functions.

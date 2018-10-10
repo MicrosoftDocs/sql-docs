@@ -64,7 +64,7 @@ The Reporting Services Configuration Manager is installed automatically when you
 
 1.  Use the following step that is appropriate for your version of Microsoft Windows:
 
-    - From the Windows start screen, type **Reporting** and select **Reporting Services Configuration Manager** from the earch results.
+    - From the Windows start screen, type **Reporting** and select **Reporting Services Configuration Manager** from the search results.
 
     - Select **Start**, point to **All Programs**, point to [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], and then point to **Configuration Tools**.
 

@@ -72,7 +72,7 @@ manager: craigg
      Specifies that you prefer that backup jobs ignore the role of the availability replicas when choosing the replica to perform backups. Note backup jobs might evaluate other factors such as backup priority of each availability replica in combination with its operational state and connected state.  
   
     > [!IMPORTANT]  
-    >  There is no enforcement of the automated backup preference setting. The interpretation of this preference depends on the logic, if any, that you script into backup jobs for the databases in a given availability group. The automated backup preference setting has no impact on ad-hoc backups. For more information, see see [Follow Up: After Configuring Backup on Secondary Replicas](#FollowUp) later in this topic.  
+    >  There is no enforcement of the automated backup preference setting. The interpretation of this preference depends on the logic, if any, that you script into backup jobs for the databases in a given availability group. The automated backup preference setting has no impact on ad-hoc backups. For more information, see [Follow Up: After Configuring Backup on Secondary Replicas](#FollowUp) later in this topic.  
   
 6.  Use the **Replica backup priorities** grid to change the backup priority of the availability replicas. This grid displays the current backup priority of each server instance that hosts a replica for the availability group. The grid columns are as follows:  
   

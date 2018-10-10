@@ -59,7 +59,7 @@ manager: craigg
   
 10. Right-click **SQL Server Configuration Manager**, and then click **New Window from here**.  
   
-11. On the **Window** menu, click **Console Root**, to switch back to the first widow, and delete the window.  
+11. On the **Window** menu, click **Console Root**, to switch back to the first window, and delete the window.  
   
 12. On the **File** menu, click **Save As**, and save the file in the desired folder, with an appropriate name with the **.msc** file extension. Close the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console.  
   

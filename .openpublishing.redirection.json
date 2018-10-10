@@ -272,6 +272,16 @@
             "redirect_document_id": true
         },
         {
+            "source_path": "docs/reporting-services/report-builder/using-my-reports-report-builder-and-ssrs.md",
+            "redirect_url": "/sql/reporting-services/report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/reporting-services/report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md",
+            "redirect_url": "/sql/reporting-services/report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/reporting-services/report-builder/reporting-services-login-dialog-box-report-builder.md",
             "redirect_url": "/sql/reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources",
             "redirect_document_id": true

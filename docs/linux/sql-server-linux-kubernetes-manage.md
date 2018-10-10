@@ -32,7 +32,7 @@ To fail over or move a primary replica to a different node in an availability gr
   Update the file for your environment.
 
   - Replace `<containerName>` with the name of the expected availability group target.
-  - If the availability group is not in the `ag1` namespace, replace `ag1` with the namespace of the availability group throughout the file.
+  - If the availability group isn't in the `ag1` namespace, replace `ag1` with the namespace.
 
   This file defines a failover job named `manual-failover`.
 
@@ -75,7 +75,9 @@ To fail over or move a primary replica to a different node in an availability gr
 
 ## Rotate credentials
 
-Rotate credentials to reset the password for the SQL Server `sa` account and the SQL Server [service master key](../relational-databases/security/encryption/service-master-key.md). To complete this task you will create new secrets in the Kubernetes cluster and then create a job to rotate the credentials.
+Rotate credentials to reset the password for the SQL Server `sa` account and the SQL Server [service master key](../relational-databases/security/encryption/service-master-key.md). 
+
+To complete this task, you will create new secrets in the Kubernetes cluster and then create a job to rotate the credentials.
 
 Before rotating credentials, make a new secret for the password and the master key.
 
@@ -134,7 +136,7 @@ Complete the following steps for every instance of SQL Server that needs the mas
   kubectl delete job rotate-creds --namespace ag1
   ```
 
-In order to make sure all instances of SQL Server have the same master key and `sa` account, repeat the steps above for each instance of SQL Server.
+To set the same `sa` password for all instances of SQL Server, repeat the steps above for each instance of SQL Server.
 
 ## Next steps
 

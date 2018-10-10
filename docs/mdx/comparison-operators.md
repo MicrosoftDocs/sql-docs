@@ -27,7 +27,7 @@ manager: kfile
 |[<> (Not Equal To)](../mdx/not-equal-to-mdx.md)|For non-null arguments, returns TRUE if the left argument is not equal to the right argument; otherwise, FALSE.<br /><br /> If either or both arguments evaluate to a null value, the operator returns a null value.|  
 |[> (Greater Than)](../mdx/greater-than-mdx.md)|For non-null arguments, returns TRUE if the left argument has a value that is greater than the right argument; otherwise, FALSE.<br /><br /> If either or both arguments evaluate to a null value, the operator returns a null value.|  
 |[>= (Greater Than or Equal To)](../mdx/greater-than-or-equal-to-mdx.md)|For non-null arguments, returns TRUE if the left argument has a value that is higher than or equal to the right argument; otherwise, FALSE.<br /><br /> If either or both arguments evaluate to a null value, the operator returns a null value.|  
-|[< (Less Than)](../mdx/less-than-mdx.md)|For non-null arguments, returns TRUE if the left argument has a value that is less than than the right argument; otherwise, FALSE.<br /><br /> If either or both arguments evaluate to a null value, the operator returns a null value.|  
+|[< (Less Than)](../mdx/less-than-mdx.md)|For non-null arguments, returns TRUE if the left argument has a value that is less than the right argument; otherwise, FALSE.<br /><br /> If either or both arguments evaluate to a null value, the operator returns a null value.|  
 |[<= (Less Than or Equal To)](../mdx/less-than-or-equal-to-mdx.md)|For non-null arguments, returns TRUE if the left argument has a value that is lower than or equal to the right argument; otherwise, FALSE.<br /><br /> If either or both arguments evaluate to a null value, the operator returns a null value.|  
   
 ## See Also  

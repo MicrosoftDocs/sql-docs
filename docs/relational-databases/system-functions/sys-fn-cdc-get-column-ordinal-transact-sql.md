@@ -50,7 +50,7 @@ sys.fn_cdc_get_column_ordinal ( 'capture_instance','column_name')
  This function is used to identify the ordinal position of a captured column within the change data capture update mask. It is principally used in conjunction with the function [sys.fn_cdc_is_bit_set](../../relational-databases/system-functions/sys-fn-cdc-is-bit-set-transact-sql.md) to extract information from the update mask when querying for change data.  
   
 ## Permissions  
- Requires SELECT permission on on all captured columns of the source table. If a database role for the change data capture component is specified for the capture instance, membership in that role is also required.  
+ Requires SELECT permission on all captured columns of the source table. If a database role for the change data capture component is specified for the capture instance, membership in that role is also required.  
   
 ## Examples  
  The following example obtains the ordinal position of the `VacationHours` column in the update mask for the `HumanResources_Employee` capture instance. That value is then used in the call to `sys.fn_cdc_is_bit_set` to extract information from the returned update mask.  

@@ -48,7 +48,7 @@ By default, Database Engine Tuning Advisor opens to the configuration in the fol
 ![Database Engine Tuning Advisor default window](media/dta-tutorials/dta-default-gui.png)
   
 > [!NOTE]  
-> The **Session Monitor** tab displays displays the session name, which is the name of the connected user and current data. 
+> The **Session Monitor** tab displays the session name, which is the name of the connected user and current data. 
   
 Two main panes are displayed in the Database Engine Tuning Advisor GUI when it is first opened.  
   

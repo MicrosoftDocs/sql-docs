@@ -104,7 +104,7 @@ manager: craigg
   
  ![note](media/rs-fyinote.png "note")A good practice is to verify that the data source connections continue to connect successfully after you publish a report. If you need to change the credentials, you can modify them directly on the report server.  
   
- To change the data sources that a report uses, you can modify the report properties in in Native mode Report Manager or from document libraries in SharePoint mode. For more information, see the following:  
+ To change the data sources that a report uses, you can modify the report properties in Native mode Report Manager or from document libraries in SharePoint mode. For more information, see the following:  
   
 -   [Store Credentials in a Reporting Services Data Source](report-data/store-credentials-in-a-reporting-services-data-source.md) [Store Credentials in a Reporting Services Data Source](report-data/store-credentials-in-a-reporting-services-data-source.md)  
   

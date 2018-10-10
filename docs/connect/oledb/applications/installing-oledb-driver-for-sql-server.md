@@ -42,7 +42,7 @@ You can distribute OLE DB Driver for SQL Server through msoledbsql.msi. You migh
   
 The x64 msoledbsql.msi also installs the 32-bit version of OLE DB Driver for SQL Server. If your application targets a platform other than the one it was developed on, you can download versions of msoledbsql.msi for x64 and x86.
 
-When you invoke msoledbsql.msi, only the client components are installed by default. The client components are are files that support running an application that was developed using OLE DB Driver for SQL Server. To also install the SDK components, specify `ADDLOCAL=All` on the command line. For example:  
+When you invoke msoledbsql.msi, only the client components are installed by default. The client components are files that support running an application that was developed using OLE DB Driver for SQL Server. To also install the SDK components, specify `ADDLOCAL=All` on the command line. For example:  
 
 `msiexec /i msoledbsql.msi ADDLOCAL=ALL`  
 

@@ -425,13 +425,13 @@ ms.technology:
                 </a>
             </li>
            <li>
-                <a href="https://docs.microsoft.com/en-us/sql/sql-server/sql-server-get-help" data-linktype="external">
+                <a href="https://docs.microsoft.com/sql/sql-server/sql-server-get-help" data-linktype="external">
                     Get help
                 </a>
             </li>
            <li>
                 <a href="http://aka.ms/sqldocfeedback" data-linktype="external">
-                    SQL Docs Survey
+                    SQL Docs Feedback
                 </a>
             </li>
            <li>

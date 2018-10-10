@@ -82,7 +82,7 @@ However, Implied authentication is important if the external script needs to mak
 For such loopback calls to succeed, the group that contains the worker accounts, SQLRUserGroup, must have "Allow Log on locally" permissions. By default, this right is given to all new local users, but in some organizations stricter group policies might be enforced.
 
 > [!IMPORTANT]
-> For implied authentication to succeed, **SQLRUserGroup** must have an [account in the master database](add-sqlrusergroup-to-database.md) for the instance, and this account must be given permissions to connect to the instance. 
+> For implied authentication to succeed, **SQLRUserGroup** must have an [account in the master database](../../advanced-analytics/security/add-sqlrusergroup-to-database.md) for the instance, and this account must be given permissions to connect to the instance. 
 
 #### How implied authentication works for R and Python sessions
 
@@ -119,4 +119,4 @@ In the case of [Always Encrypted](../../relational-databases/security/encryption
 
 In this article, you learned the components and interaction model of the security architecture built into the [extensibility framework](../../advanced-analytics/concepts/extensibility-framework.md). Key points covered in this article include the purpose of Launchpad, SQLRUserGroup and worker accounts, process isolation of R and Python, and how user identities are mapped to worker accounts. 
 
-As a next step, review the instructions for [granting permissions](../../advanced-analytics/security/user-permission.md). For servers that use Windows authentication, you should also review [Add SQLRUserGroup to a database login](add-sqlrusergroup-to-database.md) to learn when additional configuration is required.
+As a next step, review the instructions for [granting permissions](../../advanced-analytics/security/user-permission.md). For servers that use Windows authentication, you should also review [Add SQLRUserGroup to a database login](../../advanced-analytics/security/add-sqlrusergroup-to-database.md) to learn when additional configuration is required.

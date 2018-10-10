@@ -265,7 +265,7 @@
     - name: Use resource governance
       href: administration/resource-governance.md
     - name: Create a resource pool
-      href: administration/how-to-create-a-resource-pool-for-r.md
+      href: administration/how-to-create-a-resource-pool.md
     - name: Extended events for Machine Learning Services
       href: r/extended-events-for-sql-server-r-services.md
     - name: Extended events PREDICT T-SQL

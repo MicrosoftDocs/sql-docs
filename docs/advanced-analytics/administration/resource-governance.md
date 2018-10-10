@@ -34,7 +34,7 @@ For R and Python sessions, set up one or more *external resource pools*, with as
 
 3. Create a workload group for granular allocations, for example between training and scoring.
 
-4. Create a classifer to intercept calls for external processing.
+4. Create a classifier to intercept calls for external processing.
 
 5. Execute queries and procedures using the objects you created.
 

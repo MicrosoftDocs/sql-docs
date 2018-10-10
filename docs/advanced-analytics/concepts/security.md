@@ -22,7 +22,7 @@ This article describes the overall security architecture that is used to connect
 
 To instantiate external processes, the database engine provides the SQL Server Launchpad service to create an R or Python session. A separate [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] service is created for the database engine instance to which you have added SQL Server machine learning (R or Python) integration, one service per instance.
 
-By default, [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] is configured to run under **NT Service\MSSQLLaunchpad**, which is provisioned with all necessary permissions to run external scripts. Stripping permissions from this account can result in [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] failing to start or to access the SQL Server instance where external scripts should be run. Launchpad service is generally used as-is. For more information about configurable options, see [SQL Server Launchpad service configuration](../security/sql-server-launchpad-service-account.md).
+By default, [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] is configured to run under **NT Service\MSSQLLaunchpad**, which is provisioned with all necessary permissions to run external scripts. Stripping permissions from this account can result in [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] failing to start or to access the SQL Server instance where external scripts should be run. Launchpad service is generally used as-is, but for more information about configurable options, see [SQL Server Launchpad service configuration](../security/sql-server-launchpad-service-account.md).
 
 <a name="sqlrusergroup"></a>
 
@@ -34,7 +34,7 @@ External scripts run in external processes, under the identity of least-privileg
 
 + **SQLRUserGroup** is linked to a specific instance. A separate pool of worker accounts is needed for each instance on which machine learning has been enabled. Accounts cannot be shared between instances.
 
-+ Worker account names in the pool are of the format SQLInstanceName*nn*. For example, if you are using the default instance for machine learning, the user account pool supports account names such as MSSQLSERVER01, MSSQLSERVER02, and so forth.
++ Worker account names in the pool are of the format SQLInstanceName*nn*. For example, on a default instance, **SQLRUserGroup** contains accounts named MSSQLSERVER01, MSSQLSERVER02, and so forth on up to MSSQLSERVER20.
 
 + The size of the user account pool is static and the default value is 20, which supports 20 concurrent sessions. The number of external runtime sessions that can be launched simultaneously is limited by the size of this user account pool. 
 
@@ -42,11 +42,11 @@ Parallelized tasks do not consume additional accounts. For example, if a user ru
 
 ### Permissions granted to SQLRUserGroup
 
-By default, **SQLRUserGroup** has read and execute permissions on executables in the SQL Server **Binn**, **R_SERVICES**, and **PYTHON_SERVICES** directories, with access to executables, libraries, and built-in datasets in the R and Python distributions installed with SQL Server. 
+By default, members of **SQLRUserGroup** have read and execute permissions on executables in the SQL Server **Binn**, **R_SERVICES**, and **PYTHON_SERVICES** directories, with access to executables, libraries, and built-in datasets in the R and Python distributions installed with SQL Server. 
 
 To protect sensitive resources on SQL Server, you can define an access control list (ACL) that denies access to **SQLRUserGroup**. Conversely, you could also grant permissions to local data resources that exist on host computer, apart from SQL Server itself. 
 
-By design, this group does not have a database login or permissions to any data. Under certain circumstances, you might want to create a login to allow loop back connections, particularly when a trusted Windows identity is the calling user. This capability is called [*implied authentication*](#implied-authentication). For more information, see [Add SQLRUserGroup as a database user](../../advanced-analytics/security/add-sqlrusergroup-to-database.md).
+By design, **SQLRUserGroup** does not have a database login or permissions to any data. Under certain circumstances, you might want to create a login to allow loop back connections, particularly when a trusted Windows identity is the calling user. This capability is called [*implied authentication*](#implied-authentication). For more information, see [Add SQLRUserGroup as a database user](../../advanced-analytics/security/add-sqlrusergroup-to-database.md).
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 ### AppContainer isolation in SQL Server 2019
@@ -61,9 +61,9 @@ As implemented by SQL Server, AppContainers are an internal mechanism. While you
 
 ## User security
 
-SQL Server's data security model of database logins and roles extend to R and Python script. As a database user, if you have data permissions to execute a particular query, any R or Python script that you run on SQL Server also has permission to retrieve the same data. 
+SQL Server's data security model of database logins and roles extend to R and Python script. Database logins can be based on Windows identities or a SQL Server database user. 
 
-You can use Windows authentication or SQL Server authentication. Permission requirements vary depending on whether you need to create and save database objects, or simply consume objects created by others. For more information, see [Give users permission to SQL Server Machine Learning Services](../../advanced-analytics/security/user-permission.md).
+As a database user, if you have permissions to execute a particular query, any R or Python script that you run on SQL Server also has permission to retrieve the same data. The ability to consume, create, and save database objects depends on database permissions. For more information, see [Give users permission to SQL Server Machine Learning Services](../../advanced-analytics/security/user-permission.md).
 
 ### Mapping user identities to worker accounts
 

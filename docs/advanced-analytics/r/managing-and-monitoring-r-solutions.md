@@ -29,7 +29,7 @@ If the feature is enabled, the EXECUTE ANY EXTERNAL SCRIPT permission and standa
 
 ## Resource allocation
 
-By default, the R and Python sessions are allowed up to 20% of total memory on the host system. For resource-intensive workloads, this might not be enought.
+By default, the R and Python sessions are allowed up to 20% of total memory on the host system. For resource-intensive workloads, this might not be enough.
 
 To readjust memory, CPU, and I/O allocations, you can create resource pools to precisely articulate the levels of computing power assigned to external script execution. For more information, see [Resource governance to modify resource levels for R and Python execution](../administration/resource-governance.md) and [How to create a resource pool](../administration/how-to-create-a-resource-pool.md) for step-by-step instructions.
 
@@ -66,11 +66,11 @@ Once you resolve the issue, remember to re-enable script execution on the instan
 
 ## Extend functionality
 
-Data science introduces requirements for package deployment and administration. For a data scientist, it's common practice to include open-source and third-party packages providing function libraries used for solving specific problems. Some of those packages will have dependencies on other packages, in which case you might need to evaluate and install multiple packages to reach your objective.
+Data science often introduces new requirements for package deployment and administration. For a data scientist, it's common practice to leverage open-source and third-party packages in custom solutions. Some of those packages will have dependencies on other packages, in which case you might need to evaluate and install multiple packages to reach your objective.
 
 As a DBA responsible for a server asset, deploying arbitrary R and Python packages onto a production server represents an unfamiliar challenge. Before adding packages, you should assess whether the functionality provided by the external package is truly required, with no equivalent in the built-in [R language](r-libraries-and-data-types.md) and [Python libraries](../python/python-libraries-and-data-types.md) installed by SQL Server Setup. 
 
-In some cases, as an alternative to server package installation, a data scientist might be able to [build and run solutions on an external workstation](../r/set-up-a-data-science-client.md), retrieving data from SQL Server, but with all analysis performed locally on the workstation instead of on the server itself. 
+As an alternative to server package installation, a data scientist might be able to [build and run solutions on an external workstation](../r/set-up-a-data-science-client.md), retrieving data from SQL Server, but with all analysis performed locally on the workstation instead of on the server itself. 
 
 If you subsequently determine that external library functions are necessary and do not pose a risk to server operations or data as a whole, you can choose from multiple methodologies to add packages. In most cases, administrator rights are required to add packages to SQL Server. To learn more, see [Install Python packages in SQL Server](../python/install-additional-python-packages-on-sql-server.md) and [Install R packages in SQL Server](install-additional-r-packages-on-sql-server.md).
 

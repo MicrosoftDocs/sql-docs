@@ -78,6 +78,8 @@ Select the error (red) pie to show these types of errors:
 
 ## Next steps
 
-For a 19-minute introduction and demonstration of DEA, watch the following video:
+- [Run at command prompt](database-experimentation-assistant-run-command-prompt.md) shows you how you can generate an analysis report from the command prompt.
 
-> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-Database-Experimentation-Assistant/player]
+- For a 19-minute introduction and demonstration of DEA, watch the following video:
+
+  > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-Database-Experimentation-Assistant/player]

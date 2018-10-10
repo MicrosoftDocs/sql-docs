@@ -63,7 +63,7 @@ Yes. To view previously generated reports, you must update the schema of the rep
     
 ### Can I generate an analysis report using command line?
     
-Yes. You can generate an analysis report on the command line. You can then view it using the UI. Learn more [here](https://blogs.msdn.microsoft.com/datamigration/2016/10/25/database-experimentation-assistant-command-line/).
+Yes. You can generate an analysis report on the command line. You can then view it using the UI. For more information, see [Run at command prompt](database-experimentation-assistant-run-command-prompt.md).
     
 ## Troubleshooting analysis reports
 ###  What security permissions do I need to generate and view an analysis report on my server?

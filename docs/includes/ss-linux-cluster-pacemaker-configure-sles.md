@@ -28,7 +28,7 @@
 
    ​
 
-2. Set the password for for the default user that is created when installing Pacemaker and Corosync packages. Use the same password on all nodes. 
+2. Set the password for the default user that is created when installing Pacemaker and Corosync packages. Use the same password on all nodes. 
 
    ```bash
    sudo passwd hacluster

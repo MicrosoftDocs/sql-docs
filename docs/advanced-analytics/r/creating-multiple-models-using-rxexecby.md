@@ -22,7 +22,7 @@ Typical applications of this approach include forecasting for individual househo
 
 ## How rxExec Works
 
-The rxExecBy function in RevoScaleR is designed for for high-volume parallel processing over a large number of small data sets.
+The rxExecBy function in RevoScaleR is designed for high-volume parallel processing over a large number of small data sets.
 
 1. You call the rxExecBy function as part of your R code, and pass a dataset of unordered data.
 2. Specify the partition by which the data should be grouped and sorted.

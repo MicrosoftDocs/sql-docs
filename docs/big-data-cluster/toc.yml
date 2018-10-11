@@ -8,6 +8,10 @@
   items:
   - name: Deploy SQL Server big data cluster
     href: quickstart-big-data-cluster-deploy.md
+- name: Tutorials
+  items:
+  - name: 1_Query storage pool
+    href: tutorial-query-hdfs-storage-pool.md
 - name: Concepts
   items:
   - name: Controller

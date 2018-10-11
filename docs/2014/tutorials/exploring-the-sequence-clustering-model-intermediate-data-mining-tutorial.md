@@ -41,7 +41,7 @@ manager: craigg
   
 2.  Select **Cycling Cap** in the **State** list.  
   
-     The diagram updates to show the concentration of the selected product in each of the clusters. The cluster that has the darkest shading contains the highest density of cycling caps. You can change the shading variable to use any any state of any input column.  
+     The diagram updates to show the concentration of the selected product in each of the clusters. The cluster that has the darkest shading contains the highest density of cycling caps. You can change the shading variable to use any state of any input column.  
   
 3.  In the **Shading Variable** list, select **Population**.  
   

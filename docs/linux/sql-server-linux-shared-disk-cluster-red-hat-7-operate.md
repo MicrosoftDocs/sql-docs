@@ -147,7 +147,7 @@ View the resource agent logs at `/var/log/cluster/corosync.log`
    sudo yum install pacemaker pcs fence-agents-all resource-agents
    ```
  
-2. Set the password for for the default user that is created when installing Pacemaker and Corosync packages. Use the same password as the existing nodes. 
+2. Set the password for the default user that is created when installing Pacemaker and Corosync packages. Use the same password as the existing nodes. 
 
    ```bash
    sudo passwd hacluster

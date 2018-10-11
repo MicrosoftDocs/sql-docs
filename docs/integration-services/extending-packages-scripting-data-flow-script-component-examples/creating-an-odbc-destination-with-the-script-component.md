@@ -32,7 +32,7 @@ manager: craigg
   
 -   The **OdbcCommand** expects positional parameters. The positions of the parameters are indicated by the question marks (?) in the text of the command. (In contrast, a **SqlCommand** expects named parameters.)  
   
- This example uses the **Person.Address** table in the **AdventureWorks** sample database. The example passes the first and fourth columns, the **int _AddressID_** and **nvarchar(30) City** columns, of this table through the data flow. This same data is used in the source, transformation, and destination samples in the topic, [Developing Specific Types of Script Components](../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md).  
+ This example uses the **Person.Address** table in the **AdventureWorks** sample database. The example passes the first and fourth columns, the **int _AddressID_** and **nvarchar(30) _City_** columns, of this table through the data flow. This same data is used in the source, transformation, and destination samples in the topic, [Developing Specific Types of Script Components](../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md).  
   
 #### To configure this Script Component example  
   

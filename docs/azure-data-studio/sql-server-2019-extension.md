@@ -39,8 +39,10 @@ To install the SQL Server 2019 extension (preview), download and install the ass
 ##  SQL Server 2019 Big Data Cluster support
 
 * Click **Add Connection** in *Object Explorer* and choose **SQL Server big data cluster** as the connection type.
+
    > [!TIP]
    > If you do not see the **SQL Server big data cluster** connection type, restart Azure Data Studio.
+
 * Enter the host name or IP address of the cluster endpoint plus the username & password used to connect.
 * Optionally, include a friendly display name in the **Name** field.
 * Click **Connect** and you can then launch common tasks from the Dashboard, browse **HDFS** in Object Explorer, and run in-context tasks from there.

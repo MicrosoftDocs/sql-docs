@@ -96,6 +96,7 @@
       "monikerRange": {
 
         "ado/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || = sqlallproducts-allversions",
+        "big-data-cluster/**/*.md": ">= sql-server-ver15 || >= sql-server-linux-ver15 || = sqlallproducts-allversions",
         "connect/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || = sqlallproducts-allversions",
         "dma/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || = sqlallproducts-allversions",
         "odbc/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || = sqlallproducts-allversions",

@@ -68,7 +68,7 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT  TO [UserName]
 
 While a user is running scripts, the user might need to read data from other databases. The user might also need to create new tables to store results, and write data into tables.
 
-For each Windows user account or SQL login that is running R or Python scripts, ensure that it has the appropriate permissions on the specific database:  `db_datareader`, `db_datawriter`, or `db_ddladmin`.
+For each Windows user account or SQL login that is running R or Python scripts, ensure that it has the appropriate permissions on the specific database:  `db_datareader` to read data, `db_datawriter` to save objects to the database, or `db_ddladmin` to create objects such as stored procedures or tables containing trained and serialized data.
 
 For example, the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement gives the SQL login *MySQLLogin* the rights to run T-SQL queries in the *ML_Samples* database. To run this statement, the SQL login must already exist in the security context of the server.
 

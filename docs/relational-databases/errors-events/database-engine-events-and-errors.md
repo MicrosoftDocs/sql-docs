@@ -841,7 +841,7 @@ The table contains error message numbers and the description, which is the text 
 |	1732	|	16	|	No	|	Cannot create the sparse column set '%.*ls' in the table '%.*ls' because a table cannot have more than one sparse column set. Modify the statement so that only one column is specified as COLUMN_SET FOR ALL_SPARSE_COLUMNS.	|
 |	1733	|	16	|	No	|	Cannot create the sparse column set '%.*ls' in the table '%.*ls' because a sparse column set must be a nullable xml column. Modify the column definition to allow null values.	|
 |	1734	|	16	|	No	|	Cannot create the sparse column set '%.*ls' in the table '%.*ls' because the table already contains one or more sparse columns. A sparse column set cannot be added to a table if the table contains a sparse column.	|
-|	1736	|	16	|	No	|	The column '%.*ls' in the table '%.*ls' cannot be referenced in a CHECK constraint or computed column definition because the column is a sparse column set. A sparse column set cannot be referenced in a a CHECK constraint or computed column definition.	|
+|	1736	|	16	|	No	|	The column '%.*ls' in the table '%.*ls' cannot be referenced in a CHECK constraint or computed column definition because the column is a sparse column set. A sparse column set cannot be referenced in a CHECK constraint or computed column definition.	|
 |	1738	|	10	|	No	|	Cannot create table '%.*ls' with only a column set column and without any non-computed columns in the table.	|
 |	1750	|	10	|	No	|	Could not create constraint. See previous errors.	|
 |	1752	|	16	|	No	|	Column '%.*ls' in table '%.*ls' is invalid for creating a default constraint.	|

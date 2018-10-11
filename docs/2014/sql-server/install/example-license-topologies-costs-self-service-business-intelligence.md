@@ -72,11 +72,7 @@ This topic focuses on SQL Server and SharePoint server technologies. The costs a
   
  For more information on sample [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] license prices, see:  
   
-- [Licensing for Virtual Environments](http://www.microsoft.com/licensing/about-licensing/virtualization.aspx) (http://www.microsoft.com/licensing/about-licensing/virtualization.aspx).  
-  
-- [SQL Server 2014 Licensing Datasheet - Microsoft Home Page](http://download.microsoft.com/download/6/6/F/66FF3259-1466-4BBA-A505-2E3DA5B2B1FA/SQL_Server_2014_Licensing_Datasheet.pdf) (http://download.microsoft.com/download/6/6/F/66FF3259-1466-4BBA-A505-2E3DA5B2B1FA/SQL_Server_2014_Licensing_Datasheet.pdf).  
-  
-- [SQL server 2014 editions and licensing](http://www.microsoft.com/licensing/about-licensing/sql2014.aspx#tab=2)  
+- [SQL Server 2014 Licensing Datasheet - Microsoft Home Page](http://download.microsoft.com/download/6/6/F/66FF3259-1466-4BBA-A505-2E3DA5B2B1FA/SQL_Server_2014_Licensing_Datasheet.pdf)
   
 1. **SQL Server Assumptions and more licensing information:**  
   
@@ -112,7 +108,7 @@ The following list summarizes the license model used for deployment design and l
   
  The sample deployments are all intranet environments, therefore SharePoint CAL licensing is required.  
   
-- [SharePoint full list of Licensing](http://technet.microsoft.com/en-in/library/jj819267.aspx#bkmk_FeaturesOnPremise) (http://technet.microsoft.com/en-in/library/jj819267.aspx#bkmk_FeaturesOnPremise).
+- [SharePoint full list of Licensing](http://technet.microsoft.com/en-in/library/jj819267.aspx#bkmk_FeaturesOnPremise).
   
 - [How to Buy SharePoint](http://sharepoint.microsoft.com/en-in/Pages/buy.aspx) (http://sharepoint.microsoft.com/en-in/Pages/buy.aspx).
   
@@ -179,8 +175,6 @@ This example illustrates that with 100 or less users, it is less expensive to us
 - [Microsoft License Advisor](http://mla.microsoft.com/default.aspx).
   
 ### Microsoft License information  
-  
-- [About Licensing: Client Access Licenses and Management Licenses](http://www.microsoft.com/licensing/about-licensing/client-access-license.aspx).
   
 - [About Licensing: Product Licensing Search](http://www.microsoftvolumelicensing.com/default.aspx).
   

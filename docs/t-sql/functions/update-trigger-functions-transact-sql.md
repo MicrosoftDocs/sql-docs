@@ -36,7 +36,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```sql  
   
 UPDATE ( column )   
 ```  
@@ -63,7 +63,7 @@ UPDATE ( column )
 ## Examples  
  The following example creates a trigger that prints a message to the client when anyone tries to update the `StateProvinceID` or `PostalCode` columns of the `Address` table.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF EXISTS (SELECT name FROM sys.objects  

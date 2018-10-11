@@ -1364,7 +1364,7 @@ CREATE DATABASE TestDW
 ```  
   
 ### B. Create a data warehouse database with all the options  
-An example of creating a a 10 terabyte data warehouse using all the options.  
+An example of creating a 10 terabyte data warehouse using all the options.  
   
 ```  
 CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS  

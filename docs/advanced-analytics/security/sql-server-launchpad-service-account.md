@@ -44,14 +44,15 @@ Typically, there is no reason to modify service configuration. Properties that c
 
 1. Open [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md). 
 
-  + On the Start page, enter **MMC** to open the Microsoft Management Console.
+  + On the Start page, type **MMC** to open the Microsoft Management Console.
+
   + On **File** > **Add/Remove Snap-in**, move **SQL Server Configuration Manager** from Available to Selected Snap-ins.
 
 2. In SQL Server Configuration Manager under SQL Server Services, right-click SQL Server Launchpad and select **Properties**.
 
-    + To change the service account, click the **Log On** tab.
+  + To change the service account, click the **Log On** tab.
 
-    + To increase the number of users, click the **Advanced** tab.
+  + To increase the number of users, click the **Advanced** tab.
 
 > [!Note]
 > In early versions of SQL Server 2016 R Services, you could change some properties of the service by editing the [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] configuration file. This file is no longer used for changing configurations. SQL Server Configuration Manager is the right approach for changes to service configuration, such as the service account and number of users.

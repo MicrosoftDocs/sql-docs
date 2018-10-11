@@ -48,7 +48,7 @@ sql:column("columnName")
   
  The query constructs XML that has the following form:  
   
-```  
+```xml
 <Product ProductID="771" ProductName="Mountain-100 Silver, 38" ProductPrice="3399.99" ProductModelID="19"   
   ProductModelName="Mountain 100" />  
 ```  
@@ -61,7 +61,7 @@ sql:column("columnName")
   
 -   To make the query more interesting, the **ProductModelName** attribute value is obtained from the **CatalogDescription** column of **xml type**. Because the XML product model catalog information is not stored for all the product models, the `if` statement is used to retrieve the value only if it exists.  
   
-    ```  
+    ```sql
     SELECT P.ProductID, CatalogDescription.query('  
     declare namespace pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
            <Product   
@@ -103,7 +103,7 @@ ProductID               Result
   
  The following query constructs XML that contains product-specific information. This information includes the ProductID, ProductName, ProductPrice, and, if available, the ProductModelName for all products that belong to a specific product model, ProductModelID=19. The XML is then assigned to the @x variable of **xml** type.  
   
-```  
+```sql
 declare @x xml  
 SELECT @x = CatalogDescription.query('  
 declare namespace pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  

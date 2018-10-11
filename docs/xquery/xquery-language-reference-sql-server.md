@@ -32,7 +32,7 @@ manager: craigg
   
  To query an XML instance stored in a variable or column of **xml** type, you use the [xml Data Type Methods](../t-sql/xml/xml-data-type-methods.md). For example, you can declare a variable of **xml** type and query it by using the **query()** method of the **xml** data type.  
   
-```  
+```sql
 DECLARE @x xml  
 SET @x = '<ROOT><a>111</a></ROOT>'  
 SELECT @x.query('/ROOT/a')  
@@ -40,7 +40,7 @@ SELECT @x.query('/ROOT/a')
   
  In the following example, the query is specified against the Instructions column of **xml** type in ProductModel table in the AdventureWorks database.  
   
-```  
+```sql
 SELECT Instructions.query('declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";           
     /AWMI:root/AWMI:Location[@LocationID=10]  
 ') as Result   

@@ -121,7 +121,7 @@ manager: craigg
 > [!NOTE]  
 >  SharePoint mode report servers use a synchronization process between the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] service application databases and the SharePoint content databases. It is important to maintain the report server databases and content databases together. You should consider configuring them in the same availability groups so they failover and recover as a set. Consider the following scenario:  
 >   
->  -   You restore or failover to a copy of the content database that has not received the same recent updates that that the report server database has received.  
+>  -   You restore or failover to a copy of the content database that has not received the same recent updates that the report server database has received.  
 > -   The [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] synchronization process will detect differences between the list of items in the content database and the report server databases.  
 > -   The synchronization process will delete or update items in the content database.  
   

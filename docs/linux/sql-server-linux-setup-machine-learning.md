@@ -45,10 +45,7 @@ Choose from the following two approaches to install MRO:
 
 + Download the MRO tarball from MRAN, unpack it, and run its install.sh script. You can follow the [installation instructions on MRAN](https://mran.microsoft.com/releases/3.4.4) if you want this approach.
 
-+ Alternatively, register the **packages.microsoft.com** repo as described below to install the three packages: microsoft-r-open-mro, microsoft-r-open-mkl, and microsoft-r-open-foreachiterators. 
-
-> [!Note]
-> Only the microsoft-r-open-mro is strictly required, but since there isn't a dedicated repo for just that package, all three packages are typically installed together.
++ Alternatively, register the **packages.microsoft.com** repo as described below to install the three packages comprising the MRO distribution: microsoft-r-open-mro, microsoft-r-open-mkl, and microsoft-r-open-foreachiterators. 
 
 The following commands register the repository providing MRO. Post-registration, the commands for installing other R packages, such as mssql-mlservices-mml-r, will automatically include MRO as a package dependency.
 

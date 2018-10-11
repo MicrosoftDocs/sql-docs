@@ -13,7 +13,9 @@ manager: cgronlun
 # Add SQLRUserGroup as a database user
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Use the steps in this article to allow trusted connections from in-resident R and Python scripts to SQL Server. For scripts containing connection strings with SQL Server logins or a fully-specified user name and password, this step is not required.
+Create a database login for the [SQLRUserGroup](../concepts/security.md#sqlrusergroup) to allow trusted connections originating from R and Python scripts when the target is data or operations on the SQL Server instance. 
+
+For scripts containing connection strings with SQL Server logins or a fully-specified user name and password, creating a login is not required.
 
 ## When a SQLRUserGroup login is required
 

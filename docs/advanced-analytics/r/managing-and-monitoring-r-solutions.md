@@ -17,7 +17,7 @@ This article is for SQL Server database administrators who are responsible for d
 
 ## About feature integration
 
-R and Python machine learning is provided by [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md) that you include or add to a database engine instance during setup. Once [installed and enabled](../install/sql-machine-learning-services-windows-install.md), integration is primarily through the security layer and the data definition language, summarized as follows:
+R and Python machine learning is provided by [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md) as an extension to a database engine instance. Integration is primarily through the security layer and the data definition language, summarized as follows:
 
 + Existing database logins and role-based permissions apply to user-invoked scripts utilizing that same data. If users cannot access data through a query, they can't access it through script either.
 + Stored procedures equipped with the ability to accept R and Python code as input parameters. You can use a [system stored procedure](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql?view=sql-server-2017) or create a custom procedure that wraps your code.
@@ -25,7 +25,11 @@ R and Python machine learning is provided by [SQL Server Machine Learning Servic
 
 ## Feature availability
 
-If the feature is enabled, the EXECUTE ANY EXTERNAL SCRIPT permission and standard [database permissions](../security/user-permission.md) determine whether users can create and run scripts. 
+Feature availability is a multi-tiered exercise. Starting with setup, [include or add the **Machine Learning Services**](../install/sql-machine-learning-services-windows-install.md) feature to a database engine instance. Next, enable external scripting on the database engine instance (it's off by default).
+
+At this point, database administrators implicitly have full permission to create and run external scripts, add or delete packages, and create stored procedures and other objects.
+
+All other users must be granted EXECUTE ANY EXTERNAL SCRIPT permission. Additional [standard database permissions](../security/user-permission.md) determine whether users can create and run scripts. 
 
 ## Resource allocation
 

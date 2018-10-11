@@ -54,7 +54,7 @@ sql:variable("variableName") as xdt:anyAtomicType?
   
  This is the query:  
   
-```  
+```sql
 DECLARE @price money  
   
 SET @price=2500.00  
@@ -82,7 +82,7 @@ WHERE ProductID=771
   
  This is the result:  
   
-```  
+```xml
 <Product ProductID="771" ProductModelID="19"   
          ProductModelName="Mountain 100"   
          ListPrice="3399.99" DiscountPrice="2500" />  

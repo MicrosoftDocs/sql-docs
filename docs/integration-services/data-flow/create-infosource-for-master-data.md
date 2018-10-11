@@ -42,7 +42,7 @@ manager: craigg
  After you select an InfoObject, the component populates the **InfoObject name** text box with the name of the selected InfoObject.  
   
  **New**  
- Create a new InfoObject. This option option opens the **Create New InfoObject** dialog box in which you can create the new InfoObject. For more information about this dialog box, see [Create New InfoObject](../../integration-services/data-flow/create-new-infoobject.md).  
+ Create a new InfoObject. This option opens the **Create New InfoObject** dialog box in which you can create the new InfoObject. For more information about this dialog box, see [Create New InfoObject](../../integration-services/data-flow/create-new-infoobject.md).  
   
  After you create an InfoObject, the component populates the **InfoObject name** text box with the name of the new InfoObject.  
   

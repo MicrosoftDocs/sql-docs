@@ -55,7 +55,7 @@ manager: craigg
  Before you run the installation wizard, be sure that the [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] is closed. Then follow the directions in the installation wizard.  
   
 ### Restart SSIS  
- After you install the CDC components, you must restart the SSIS service to be sure that that the components work correctly when developing packages in the SQL [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)].  
+ After you install the CDC components, you must restart the SSIS service to be sure that the components work correctly when developing packages in the SQL [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)].  
   
  A message is displayed after you install the components. Click **Yes** when prompted.  
   

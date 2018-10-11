@@ -16,7 +16,7 @@ ms.reviewer: martinle
 Analytics Platform System (APS) uses scalable components so that you can buy the right amount of processing and storage according to your business requirements. When you order APS, you will need a combination of these core hardware components. Specific hardware vendors might use different naming conventions or have additional components.  
  
   
-## <a name="rackandnetwork"></a>Rack and Network 
+## <a name="rackandnetwork"></a>Rack and network 
  
 APS components are all stored in one or more racks that fit into your data center. Each rack comes with power distribution units (PDUs), two InfiniBand switches, and two Ethernet switches.  
   
@@ -24,7 +24,7 @@ APS components are all stored in one or more racks that fit into your data cente
   
 ## <a name="datascaleunit"></a>Data Scale unit
  
-A Data Scale unit contains the data hosts and direct attached storage (DAS) for processing and storing user data. To add capacity you add Data Scale units according to configurations that are supported by your hardware vendor. As the number of Data Scale units grow, you need to add additional Rack & Network components, as necessary, to provide more power, network, and rack infrastructure.  
+A Data Scale unit contains the data hosts and direct attached storage (DAS) for processing and storing user data. To add capacity you add Data Scale units according to configurations that are supported by your hardware vendor. As the number of Data Scale units grows, you need to add additional Rack & Network components, as necessary, to provide more power, network, and rack infrastructure.  
   
 ### Data host  
 
@@ -62,7 +62,7 @@ The total number of disks for the Compute nodes:
   
 ## <a name="basescaleunit"></a>Base Scale unit 
  
-The Base Scale unit contains the minimum number of brain-power hosts, data hosts, and direct attached storage that is required for the appliance. It includes the following components:  
+The Base Scale unit contains the minimum number of brain-power hosts, data hosts, and direct attached storage that is required for the appliance. It includes the following components. 
   
 ### Orchestration host  
 This server runs the brains of PDW.
@@ -70,7 +70,7 @@ This server runs the brains of PDW.
 ### Passive host  
 This server provides high availability. It is online and ready to run jobs in case there is a failure on the orchestration or data host. The orchestration host, passive host, and Data Scale unit servers are configured as a Windows failover cluster. Each rack in the appliance requires one passive host.  
   
-### Optional Passive host  
+### Optional passive host  
 To add further redundancy, you have the option to add a second passive host to the Base Scale unit.  
   
 ### Data Scale unit  

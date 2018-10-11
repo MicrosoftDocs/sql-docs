@@ -319,9 +319,9 @@ The **Availability replica** pane displays the following columns:
  Indicates the time when the last log record was redone on the secondary database. This value is hidden by default.  
  
 
-    > [!NOTE]  
-    >  Most data is based on sys.dm_hadr_database_replica_states, so some restriction may apply. 
-    >  For more information, please see [sys.dm_hadr_database_replica_states (Transact-SQL)](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md).
+   > [!NOTE]  
+   >  Most data is based on sys.dm_hadr_database_replica_states, so some restriction may apply. 
+   >  For more information, please see [sys.dm_hadr_database_replica_states (Transact-SQL)](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md).
 
 
 ## Always On Availability Group latency reports

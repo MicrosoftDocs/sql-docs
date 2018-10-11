@@ -124,7 +124,7 @@ manager: craigg
     -   \<drive>:\inetpub\wwwroot\OLAP\Resources  
   
 ##  <a name="bkmk_appPool"></a> Step 2: Create an application pool and virtual directory in IIS  
- Next, create an application pool and an an endpoint to the pump.  
+ Next, create an application pool and an endpoint to the pump.  
   
 #### Create an application pool  
   

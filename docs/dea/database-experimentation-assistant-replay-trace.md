@@ -2,7 +2,7 @@
 title: Replay a trace with Database Experimentation Assistant for SQL Server upgrades
 description: Replay a trace with Database Experimentation Assistant
 ms.custom: ""
-ms.date: 10/05/2018
+ms.date: 10/12/2018
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -44,14 +44,14 @@ Open the tool and select the menu icon on the left side of screen. This action o
 1. On the **Security** tab, select **Edit** to add the user account.
 1. Select **OK**.
 
-### Verify Setup
+### Verify setup
 
 - **SQL Server install path:** Provide the path to where SQL Server is installed. For example, [C:\\Program](/Program) Files (x86)\\Microsoft SQL Server\\120.
 - **Controller machine name:** Provide the name of the machine that has been set up as the controller. This machine is the one running the Windows service named SQL Server Distributed Replay controller. The Distributed Replay controller orchestrates the actions of the Distributed Replay clients. There can only be one controller instance in each Distributed Replay environment.
 - **Client machine names:** Provide the name for each client machine, separated by commas, for example client1, client2. You can have up to five client controllers. Clients are one or more machines, physical or virtual, running the Windows service named SQL Server Distributed Replay client. The Distributed Replay clients work together to simulate workloads against an instance of SQL Server. There can be one or more clients in each Distributed Replay environment.
 - Select **Next**.
 
-### Select Trace
+### Select trace
 
 - **Path to trace file:** Provide the path to the input trace (.trc) file.
 - **Path to store replay preprocess output:**  
@@ -59,7 +59,7 @@ Open the tool and select the menu icon on the left side of screen. This action o
     \- If you already have the IRF file, provide its path.
 - Select **Next**.
 
-### Replay Trace
+### Replay trace
 
 - **Trace file name:** Provide a trace file name.
 - **Max file size (MB):** Provide the trace file roll-over size value. The default is 200 MB. The dropdown is also editable to enter a custom value.
@@ -73,7 +73,7 @@ Wait until the replay has finished running to see the location you specified. Se
 
 ![ReplayProgress](./media/database-experimentation-assistant-replay-trace/dea-replay-trace-progress.png)
 
-## Frequently asked questions about Replay Trace
+## Frequently asked questions about replay trace
 ### What security permissions do I need to start a replay capture on my target server?
 
 - The Windows user running the trace operation in the DEA Application must have sysadmin privileges in the target SQL Server. These permissions are needed to start a trace.
@@ -100,19 +100,19 @@ The target trace files can be anywhere from 5 to 15 times the size of the source
 
 SQL Server is a stateful relational database management system. To properly run an A/B test, the state of the database must be retained at all times. Otherwise, you might see errors in queries during replay that won't appear in production. To prevent such errors, we recommend taking a backup right before the source capture. Similarly, restoring of the backup on the target SQL Server is required to prevent errors during replay.
 
-### What does Pass % on the Replay screen mean?
+### What does Pass % on the replay screen mean?
 
 Pass % means that only a percentage of queries passed. It lets you diagnose whether the number of errors is expected or not. The errors could be expected or could occur because the database has lost its integrity. If the pass % isn't what you expect, you can stop the trace and look at the trace file in SQL Profiler to see which queries didn't succeed.
 
-### How can I look at the trace events collected during Replay?
+### How can I look at the trace events collected during replay?
 
 Open a target trace file and view it in SQL Profiler. Or, if you wish to make modifications to the replay capture, all the SQL scripts are available at C:\\Program Files (x86)\\Microsoft Corporation\\Database Experimentation Assistant\\Scripts\\StartReplayCapture.sql.
 
-### Which trace events does DEA collect during Replay?
+### Which trace events does DEA collect during replay?
 
 The trace events captured include performance-related information. The capture configuration is present in the StartReplayCaptureTrace.sql script. These events are typical SQL Trace Events that are listed here: https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.
 
-## Troubleshooting Replay Trace
+## Troubleshooting replay trace
 ### I'm unable to connect to the SQL Server.
 
 - Confirm that the SQL Server name is valid. To confirm, try connecting to the server using SSMS.

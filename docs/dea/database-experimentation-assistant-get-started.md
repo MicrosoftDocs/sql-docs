@@ -2,7 +2,7 @@
 title: Get started with Database Experimentation Assistant for SQL Server upgrades
 description: Get started with Database Experimentation Assistant
 ms.custom: ""
-ms.date: 09/25/2018
+ms.date: 10/12/2018
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -54,7 +54,7 @@ Follow these steps to capture a trace on your source server:
 
 You can view the progress of your capture, including start time, duration, and time remaining. You can start a new capture while waiting for this capture to finish. Once your capture is completed, use the output trace file to start the second phase: replaying the trace file on your target servers.
 
-Check out [this FAQ page](https://blogs.msdn.microsoft.com/datamigration/2017/03/24/dea-2-0-capture-trace-faq/) for commonly asked questions about Capture.
+Check out [this FAQ page](database-experimentation-assistant-capture-trace.md#frequently-asked-questions-about-capture-trace) for commonly asked questions about Capture.
 
 ## Replay
 
@@ -84,7 +84,7 @@ Follow these steps to replay the trace file:
 
 Similar to a new capture, you can view the status of your replay. After replaying the source trace on both of your target servers, you're ready to generate an analysis report.
 
-Check out [this FAQ page](https://blogs.msdn.microsoft.com/datamigration/2017/03/24/dea-2-0-replay-faq/) for commonly asked questions about Replay.
+Check out [this FAQ page](database-experimentation-assistant-replay-trace.md#frequently-asked-questions-about-replay-trace) for commonly asked questions about Replay.
 
 ## Analysis
 
@@ -109,9 +109,9 @@ Follow these steps to generate an analysis report:
 
 Now view the analysis report to gain insights provided by your A/B test.
 
-Check out [this FAQ page](https://blogs.msdn.microsoft.com/datamigration/2017/03/24/dea-2-0-analysis-faq/) for commonly asked questions about Analysis.
+Check out [this FAQ page](database-experimentation-assistant-create-report.md#frequently-asked-questions-about-analysis-reports) for commonly asked questions about Analysis.
 
-### Analysis Report
+### Analysis report
 
 On the first page of your report, you see the version and build information for the target servers on which the experiment was run. Threshold lets you adjust the sensitivity or tolerance of your A/B Test analysis. By default, it's set at 5%. Any improvement in performance that is >= 5% is categorized as ‘Improved’.  The dropdown lets you evaluate the report with different performance thresholds.
 

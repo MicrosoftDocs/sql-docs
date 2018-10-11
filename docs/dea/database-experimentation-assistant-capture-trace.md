@@ -2,7 +2,7 @@
 title: Capture a trace with Database Experimentation Assistant for SQL Server upgrades
 description: Capture a trace with Database Experimentation Assistant
 ms.custom: ""
-ms.date: 09/25/2018
+ms.date: 10/12/2018
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql

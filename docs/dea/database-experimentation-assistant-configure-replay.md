@@ -2,7 +2,7 @@
 title: Configure replay for Database Experimentation Assistant for SQL Server upgrades
 description: Configure replay for Database Experimentation Assistant
 ms.custom: ""
-ms.date: 10/05/2018
+ms.date: 10/12/2018
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -48,7 +48,7 @@ Follow these steps to set up the controller service:
    - `NET START "SQL Server Distributed Replay Controller"`
 1. For additional configuration options, see [SQL Server Distributed Replay](https://docs.microsoft.com/sql/tools/distributed-replay/configure-distributed-replay).
 
-## DCOM Configuration
+## DCOM configuration
 
 This configuration is required only on the controller machine.
 
@@ -103,7 +103,7 @@ Remotely accessing Distributed Replay requires opening ports that are visible wi
 
 ## Set up target SQL Servers
 
-Two Replays are required for running an A/B test or an experiment. That is, you might need two separate instances of SQL Server installations for a migration scenario.
+Two replays are required for running an A/B test or an experiment. That is, you might need two separate instances of SQL Server installations for a migration scenario.
 
 Installing the two versions of SQL Server instances on the same machine also works. One caveat though is to make sure that the instances are isolated completely when a replay is in progress.
 

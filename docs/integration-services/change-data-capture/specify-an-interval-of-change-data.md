@@ -95,7 +95,7 @@ manager: craigg
 3.  On the **Result Set** page of the **Execute SQL Task Editor**, map the ExtractStartTime result to the ExtractStartTime package variable, and map the ExtractEndTime result to the ExtractEndTime package variable.  
   
     > [!NOTE]  
-    >  When you use an expression to set the value of an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] variable, the expression is evaluated every time that that the value of the variable is accessed.  
+    >  When you use an expression to set the value of an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] variable, the expression is evaluated every time that the value of the variable is accessed.  
   
 ## Next Step  
  After you calculate the starting point and ending point for a range of changes, the next step is to determine whether the change data is ready.  

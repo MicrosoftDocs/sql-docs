@@ -16,14 +16,6 @@ This topic illustrates high-level considerations for selecting the [!INCLUDE[ssN
   
 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] is available in the Business Intelligence edition and offers per core licensing for some editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-- SharePoint 2013 simplified SharePoint Server licensing for extranet and internet scenarios as well as options for SharePoint Online.  
-  
- Before purchasing, visit the "How to Buy" section for each product and consult your Microsoft representative or local reseller, regarding your specific licensing requirements. For information on the most recent licensing plans and costs, see the following:  
-  
-- [About Licensing – SQL Server 2014](http://www.microsoft.com/licensing/about-licensing/sql2014.aspx) 
-
-- [SharePoint 2016 Licensing](http://office.microsoft.com/sharepoint/sharepoint-licensing-overview-collaboration-software-FX103789438.aspx).  
-  
  **In this topic:**  
   
 - [SQL Server Business Intelligence components](#bkmk_bi_components)

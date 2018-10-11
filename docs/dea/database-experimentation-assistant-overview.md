@@ -2,7 +2,7 @@
 title: Overview of Database Experimentation Assistant solution for SQL Server upgrades
 description: Overview of Database Experimentation Assistant
 ms.custom: ""
-ms.date: 09/25/2018
+ms.date: 10/12/2018
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -30,7 +30,7 @@ The following diagram shows the solution architecture comparing workloads betwee
 
 ![workloadcomparesolutionarchitecture](./media/database-experimentation-assistant-overview/dea-overview-compare-solution-architecture.png)
 
-## Database Experimentation Assistant tool prerequisites
+## Database Experimentation Assistant prerequisites
 Following are some prerequisites for running DEA:
 - A minimum hardware requirement of single core 3.5-GB RAM machines.
 - An ideal hardware requirement of an 8-core CPU (with RAM 3.5 GB or higher). More than eight cores do not help DEA runtimes.
@@ -42,13 +42,13 @@ In the above environment architecture, we recommended that you install **DEA on 
 ### Configuration requirement for workload comparison using DEA
 DEA connects to database servers using Windows authentication. Ensure that a user running DEA can connect to database servers (source/target/analysis) using Windows authentication.
 
-Capture: [Learn More](https://blogs.msdn.microsoft.com/datamigration/2017/03/24/dea-2-0-capture-trace-faq/)
+Capture: [Learn More](database-experimentation-assistant-capture-trace.md#frequently-asked-questions-about-capture-trace)
 
 *   User running DEA can connect to source database server using *Windows authentication.*
 *   User running DEA has *sysadmin* rights on the source database server.
 *   Service account running source database server has *write access* to the trace folder path.
 
-Replay: [Learn More](https://blogs.msdn.microsoft.com/datamigration/2017/03/24/dea-2-0-replay-faq/)
+Replay: [Learn More](database-experimentation-assistant-replay-trace.md#frequently-asked-questions-about-replay-trace)
 
 *   User running DEA can connect to target database server using *Windows authentication*.
 *   User running DEA has *sysadmin* rights on the target database server.
@@ -56,7 +56,7 @@ Replay: [Learn More](https://blogs.msdn.microsoft.com/datamigration/2017/03/24/d
 *   Service account running Distributed Replay clients can connect to target database server using *Windows authentication*.
 *   DEA communicates with Distributed Replay controller using COM interfaces. Ensure that TCP ports are opened for incoming requests on the distributed replay controller.
 
-Analysis: [Learn More](https://blogs.msdn.microsoft.com/datamigration/2017/03/24/dea-2-0-analysis-faq/)
+Analysis: [Learn More](database-experimentation-assistant-create-report.md#frequently-asked-questions-about-analysis-reports)
 
 *   User running DEA can connect to the analysis database server using *Windows authentication.*
 *   User running DEA has *sysadmin* rights on the source database server.
@@ -80,3 +80,7 @@ These steps show you how to choose which events are collected, and whether they 
 5.  To stop sending events to Microsoft, set the value of AppInsightsLoggerEnabled to “false”. To start sending events to Microsoft again, set the value to “true”.
 
 DEA is governed by [Microsoft's Online Privacy Policy](https://go.microsoft.com/fwlink/?LinkId=521839​).
+
+## Next steps
+
+[Get started](database-experimentation-assistant-get-started.md) walks you through the steps required to capture, replay, and analyze a trace.

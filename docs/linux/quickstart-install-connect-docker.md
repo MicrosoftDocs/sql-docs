@@ -207,7 +207,7 @@ Setting `-h` and `--name` to the same value is a good way to easily identify the
 ::: moniker-end
 <!--End of 2019 "Pull and run" section-->
 
-## Change the SA password
+## <a id="sapassword"></a> Change the SA password
 
 [!INCLUDE [Change docker password](../includes/sql-server-linux-change-docker-password.md)]
 

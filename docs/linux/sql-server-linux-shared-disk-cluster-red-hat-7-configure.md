@@ -281,7 +281,7 @@ At this point both instances of SQL Server are configured to run with the databa
 
    ​
 
-2. Set the password for for the default user that is created when installing Pacemaker and Corosync packages. Use the same password on both nodes. 
+2. Set the password for the default user that is created when installing Pacemaker and Corosync packages. Use the same password on both nodes. 
 
    ```bash
    sudo passwd hacluster

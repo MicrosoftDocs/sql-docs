@@ -17,9 +17,11 @@ Create a database login for the [SQLRUserGroup](../concepts/security.md#sqlruser
 
 For scripts containing connection strings with SQL Server logins or a fully-specified user name and password, creating a login is not required.
 
-## When a SQLRUserGroup login is required
+## When a login is required
 
 If R or Python script includes a connection string specifying a trusted connection (for example, "Trusted_Connection=True"), additional configuration is necessary for the correct presentation of the user identity to SQL Server. For external processes running under a **SQLRUserGroup** worker account, such as MSSQLSERVER01, the trusted user is presented as the worker identity. Because this identity has no login rights to SQL Server, trusted connections will fail unless you add **SQLRUserGroup** as a database user. For more information, see [*implied authentication*](../../advanced-analytics/concepts/security.md#implied-authentication).
+
+Recall that Launchpad retains a mapping of the original user who invoked the script and the worker account running the process. Once the trusted connection succeeds for the worker account, the identity of the original calling user takes over and is used to retrieve the data. You do not need to grant db_datareader permissions to **SQLRUserGroup**.
 
 > [!Note]
 >  Make sure that **SQLRUserGroup** has "Allow Log on locally" permissions. By default, this right is given to all new local users, but in some organizations stricter group policies might be enforced.

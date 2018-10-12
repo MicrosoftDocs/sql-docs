@@ -13,7 +13,7 @@ manager: cgronlun
 # Manage and integrate machine learning workloads on SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article is for SQL Server database administrators who are responsible for deploying an efficient data science infrastructure on a server asset supporting multiple workloads. It frames the administrative problem space relevent to the management of R and Python code execution on SQL Server. 
+This article is for SQL Server database administrators who are responsible for deploying an efficient data science infrastructure on a server asset supporting multiple workloads. It frames the administrative problem space relevant to the management of R and Python code execution on SQL Server. 
 
 ## What is feature integration
 

@@ -132,6 +132,10 @@ The following limitations apply to the current Preview, but are on the roadmap t
 
 - Tooling support for Always Encrypted with secure enclaves is currently incomplete. To trigger an in-place cryptographic operation via an ALTER TABLE Transact-SQL statement, you need to issue the statement using a query window in SSMS, or you can write your own program that issues the statement. The Set-SqlColumnEncryption cmdlet in the SqlServer PowerShell module and the Always Encrypted wizard in SQL Server Management Studio do not support in-place encryption yet - both tools currently move the data out of the database for cryptographic operations, even if the column encryption keys used for the operations are enclave-enabled. 
 
-## Known issues
+## Known Issues
 
 - Rich computations on non-UNICODE (char, varchar) string columns require a BIN2 collation is set at the database level. Please see Special considerations for non-UNICODE string columns in [Manage Collations](configure-always-encrypted-enclaves.md#manage-collations).
+
+## Next Steps
+
+- Set up your test environment and try the functionality of Always Encrypted with secure enclaves in SSMS – see [Tutorial: Getting started with Always Encrypted with secure enclaves using SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md).

@@ -67,9 +67,9 @@ To meet your own business requirements, you can also join the client server to y
   
     ![InfiniBand connections on the Management node](media/network-teamib.png "InfiniBand connections on the Management node")  
   
-4.  From the Internet Protocol Version 4 (TCP/IPv4) Properties window, write down the values for the **IP address** and **Subnet mask**.  The IP address of the ***appliance_domain*-AD01** node is the IP address of the Analytics Platform System DNS server.  
+4.  From the Internet Protocol Version 4 (TCP/IPv4) Properties window, write down the values for the **IP address** and **Subnet mask**.  The IP address of the **_appliance\_domain_-AD01** node is the IP address of the Analytics Platform System DNS server.  
   
-5.  Repeat steps 1-5 above for the TeamIB1 adapter on ***appliance_domain*-AD02** server.  
+5.  Repeat steps 1-5 above for the TeamIB1 adapter on **_appliance\_domain_-AD02** server.  
   
     ![PDW Management node InfiniBand 1 properties](media/network-ip1-properties.png "PDW Management node InfiniBand 1 properties")  
   

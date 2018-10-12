@@ -13,23 +13,23 @@ manager: cgronlun
 # Manage and integrate machine learning workloads on SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article is for SQL Server database administrators who are responsible for deploying an efficient data science infrastructure on a shared server asset. It frames the administrative operations relevant to database administrators who need to manage R and Python code execution on SQL Server.
+This article is for SQL Server database administrators who are responsible for deploying an efficient data science infrastructure on a server asset supporting multiple workloads. It frames the administrative problem space relevent to the management of R and Python code execution on SQL Server. 
 
-## About feature integration
+## What is feature integration
 
 R and Python machine learning is provided by [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md) as an extension to a database engine instance. Integration is primarily through the security layer and the data definition language, summarized as follows:
 
-+ Existing database logins and role-based permissions apply to user-invoked scripts utilizing that same data. If users cannot access data through a query, they can't access it through script either.
-+ Stored procedures equipped with the ability to accept R and Python code as input parameters. You can use a [system stored procedure](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql?view=sql-server-2017) or create a custom procedure that wraps your code.
-+ T-SQL functions (namely, [PREDICT](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)) that can consume a previously trained data model. 
++ Stored procedures are equipped with the ability to accept R and Python code as input parameters. Developers and data scientists can use a [system stored procedure](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql?view=sql-server-2017) or create a custom procedure that wraps their code.
++ T-SQL functions (namely, [PREDICT](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)) that can consume a previously trained data model. This capability is available through T-SQL. As such, it can called on a system that does not specifically have the machine learning extensions installed.
++ Existing database logins and role-based permissions cover the user-invoked scripts utilizing that same data. As a general rule, if users cannot access data through a query, they can't access it through script either.
 
 ## Feature availability
 
-Feature availability is a multi-tiered exercise. Starting with setup, [include or add the **Machine Learning Services**](../install/sql-machine-learning-services-windows-install.md) feature to a database engine instance. Next, enable external scripting on the database engine instance (it's off by default).
+R and Python integration becomes available through a succession of steps. The first one is setup, when you [include or add the **Machine Learning Services**](../install/sql-machine-learning-services-windows-install.md) feature to a database engine instance. As a subsequent step, you must enable external scripting on the database engine instance (it's off by default).
 
-At this point, database administrators implicitly have full permission to create and run external scripts, add or delete packages, and create stored procedures and other objects.
+At this point, only database administrators have full permission to create and run external scripts, add or delete packages, and create stored procedures and other objects.
 
-All other users must be granted EXECUTE ANY EXTERNAL SCRIPT permission. Additional [standard database permissions](../security/user-permission.md) determine whether users can create and run scripts. 
+All other users must be granted EXECUTE ANY EXTERNAL SCRIPT permission. Additional [standard database permissions](../security/user-permission.md) determine whether users can create objects, run scripts, consume serialized and trained models, and so forth. 
 
 ## Resource allocation
 
@@ -41,15 +41,15 @@ Another option is to create a custom external resource pool to capture sessions 
 
 ## Isolation and containment
 
-The processing architecture is engineered to isolate external scripts from core engine processing. As such, direct interventions are rarely required. 
+The processing architecture is engineered to isolate external scripts from core engine processing. R and Python scripts run as separate processes, under local worker accounts. In Task Manager, you can monitor R and Python processes, executing under a low-privileged local user account, distinct from the SQL Server service account. 
 
-R and Python scripts run as separate processes, under local worker accounts. In Task Manager, you can monitor R and Python processes, executing as low-privileged local user account, separate from the SQL Server service account. Running R and Python processes in individual low-privilege accounts has the following benefits:
+Running R and Python processes in individual low-privilege accounts has the following benefits:
 
 + Isolates core engine processes from R and Python sessions You can terminate an R or Python process without impacting core database operations. 
 
 + Reduces privileges of the external script runtime processes on the host computer.
 
-Least-privilege accounts are created during setup and placed in a Windows *user account pool* called **SQLRUserGroup**. By default, this group has permissions to use executables, libraries, and built-in datasets in the program folder for R and Python under SQL Server. 
+Least-privilege accounts are created during setup and placed in a Windows *user account pool* called **SQLRUserGroup**. By default, this group has permission to use executables, libraries, and built-in datasets in the program folder for R and Python under SQL Server. 
 
 As a DBA, you can use SQL Server data security to specify who has permission to execute scripts, and that data used in jobs is managed under the same security roles that control access through T-SQL queries. As a system administrator, you can explicitly deny **SQLRUserGroup** access to sensitive data on the local server by creating ACLs.
 

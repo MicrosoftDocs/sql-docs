@@ -74,14 +74,14 @@ ColNameHeader=True
 MaxScanRows=0  
 ```  
   
- The next entry designates fields in a table by using the column number (**Col***n*) option, which is optional for character-delimited files and required for fixed-length files. The example shows the Schema.ini entries for two fields, a 10-character CustomerNumber text field and a 30-character CustomerName text field:  
+ The next entry designates fields in a table by using the column number (**Col**_n_) option, which is optional for character-delimited files and required for fixed-length files. The example shows the Schema.ini entries for two fields, a 10-character CustomerNumber text field and a 30-character CustomerName text field:  
   
 ```  
 Col1=CustomerNumber Text Width 10  
 Col2=CustomerName Text Width 30  
 ```  
   
- The syntax of **Col***n* is:  
+ The syntax of **Col**_n_ is:  
   
 ```  
   

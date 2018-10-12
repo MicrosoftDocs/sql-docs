@@ -9,7 +9,7 @@ Okay folks, we need to have a conversation about [SYSTEM](https://msdn.microsoft
 
 While these reasons are legitimate, there are better ways to grant permissions. This article will discuss what SYSTEM is, why granting SYSTEM additional permissions in SQL Server is bad, and the appropriate methods to grant permission to system resources.
 
-## What is SYSTEM?
+## What is SYSTEM
 
 [SYSTEM](https://msdn.microsoft.com/en-us/library/windows/desktop/ms684190) (NT AUTHORITY\SYSTEM in en-us) is the account the operating system runs as. Any process that is executed as SYSTEM is running in the highest level permissions that can be granted.
 
@@ -26,7 +26,7 @@ Prior to SQL Server 2012, SYSTEM was a member of the sysadmin server-level role.
 
 As you can see, the only changes SYSTEM can make in SQL is to Availability Groups. This is far more restrictive than it used to be.
 
-## Why Were the Permissions Changed?
+## Why Were the Permissions Changed
 
 A large portion of the running processes on a server are executing with SYSTEM as the owner. When a process is executing as SYSTEM, the process can do anything on the server.
 
@@ -142,7 +142,7 @@ USE AccessDemo;
 GO
 CREATE TABLE dbo.Employee
 (
-    EmployeeID int 
+    EmployeeID int
     PRIMARY KEY CLUSTERED
 );
 GO

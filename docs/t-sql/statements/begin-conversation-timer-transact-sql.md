@@ -51,7 +51,7 @@ BEGIN CONVERSATION TIMER ( conversation_handle )
 ```  
   
 ## Arguments  
- BEGIN CONVERSATION TIMER **(***conversation_handle***)**  
+ BEGIN CONVERSATION TIMER **(**_conversation\_handle_**)**  
  Specifies the conversation to time. The *conversation_handle* must be of type **uniqueidentifier**.  
   
  TIMEOUT  

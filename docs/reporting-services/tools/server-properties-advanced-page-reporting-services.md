@@ -53,7 +53,7 @@ The name of the report server site displayed in the page title of the web portal
 Specifies the maximum number of days that a stored parameter can be stored. Valid values are **-1**, **+1** through **2,147,483,647**. The default value is **180** days.  
 
 **StoredParametersThreshold**  
-Specifies the maximum number of parameter values that that can be stored by the report server. Valid values are **-1**, **+1** through **2,147,483,647**. The default value is **1500**.  
+Specifies the maximum number of parameter values that can be stored by the report server. Valid values are **-1**, **+1** through **2,147,483,647**. The default value is **1500**.  
 
 **UseSessionCookies**  
 Indicates whether the report server should use session cookies when communicating with client browsers. The default value is **true**.  

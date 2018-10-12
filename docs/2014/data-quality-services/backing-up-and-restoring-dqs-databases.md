@@ -19,7 +19,7 @@ manager: craigg
   
 ###  <a name="Prerequisites"></a> Prerequisites  
   
--   You must know or remember the password for the database master key that that you provided during the DQS server installation.  
+-   You must know or remember the password for the database master key that you provided during the DQS server installation.  
   
 -   Ensure that there are no running activities or processes in DQS. This can be verified using the **Activity Monitoring** screen. For detailed information about working in this screen, see [Monitor DQS Activities](../../2014/data-quality-services/monitor-dqs-activities.md).  
   

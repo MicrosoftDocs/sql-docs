@@ -169,7 +169,7 @@ manager: craigg
   
     -   Table Columns. Use this option to search all visible columns in the trace window.  
   
-    -   Details. Use this option to search all columns (promoted and non-promoted) in the trace window that that were selected before opening the **Find in Extended Events** dialog box.  
+    -   Details. Use this option to search all columns (promoted and non-promoted) in the trace window that were selected before opening the **Find in Extended Events** dialog box.  
   
     -   *Event_column_name*. Use this option to search in a specific event column from the drop-down list.  
   

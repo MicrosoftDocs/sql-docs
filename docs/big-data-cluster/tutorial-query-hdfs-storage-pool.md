@@ -13,22 +13,45 @@ ms.prod: sql
 
 This tutorial demonstrates how to Query HDFS data in a SQL Server 2019 big data cluster.
 
-In SQL Server 2019 big data clusters, the SQL Server engine has gained the ability to natively read HDFS files, such as CSV and parquet files, by using SQL Server instances collocated on each of the HDFS data nodes. This enables SQL Server to filter and aggregate data locally in parallel across all of the HDFS data nodes.
-
-In this example, you are going to create an external table in the SQL Server Master instance that points to data in HDFS within the SQL Server Big data cluster. Then you will join the data in the external table with high value data in SQL Master instance.
-
 In this tutorial, you learn how to:
 
 > [!div class="checklist"]
-> * Create an external table to HDFS data in the storage pool
-> * Run a Transact-SQL query to join this data with relational SQL Server data
+> * Create an external table pointing to data in HDFS within the SQL Server big data cluster.
+> * Run a Transact-SQL query to join this data with high-value data in the SQL Server master instance.
 
-[!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
+If you prefer, you can download and run a script for the commands in this tutorial. For instructions, see the [Sample script](#script) section.
 
 ## Prerequisites
 
 - [Deploy a big data cluster on Kubernetes](deployment-guidance.md).
-- [Azure Data Studio and the SQL Server 2019 extension](deploy-big-data-tools.md).
+- [Install Azure Data Studio and the SQL Server 2019 extension](deploy-big-data-tools.md).
+- [Load sample data into the cluster](#sampledata).
+
+### <a id="sampledata"></a> Load sample data
+
+SQL Server big data cluster tutorials use a common set of sample data. You can load this sample data into your cluster with the following steps:
+
+1. Download the sample backup file [tpcxbb_1gb.bak](https://sqlchoice.blob.core.windows.net/sqlchoice/static/tpcxbb_1gb.bak) to your machine.
+
+1. Navigate to the SQL Server 2019 big data cluster [samples directory](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster).
+
+1. Download the [bootstrap-sample-db.sql](https://github.com/Microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/bootstrap-sample-db.sql) Transact-SQL script.
+
+1. Download and run one of the following two sample scripts from the command line:
+
+   * **Windows**: [bootstrap-sample-db.cmd](https://github.com/Microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/bootstrap-sample-db.cmd)
+   * **Linux**: [bootstrap-sample-db.sh](https://github.com/Microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/bootstrap-sample-db.sh)
+
+   > [!TIP]
+   > You can get usage instructions by running the script with no parameters.
+
+The script performs the following actions:
+
+* Restores the sample database on the SQL Server master instance.
+* Executes the **bootstrap-sample-db.sql** script.
+* Creates the necessary database objects
+* Exports the web_clickstreams and inventory tables to CSV files.
+* Uploads the web_clickstreams CSV file to HDFS inside the SQL Server 2019 big data cluster.
 
 ## Create an external table to HDFS
 
@@ -36,16 +59,16 @@ The storage pool contains web clickstream data in a CSV file stored in HDFS. Use
 
 1. In Azure Data Studio, connect to the SQL Server master instance of your big data cluster. For more information, see [Connect to the SQL Server master instance](deploy-big-data-tools.md#master).
 
-1. In the server dashboard, select **New Query**.
+2. In the server dashboard, select **New Query**.
 
-1. Run the following Transact-SQL command to change the context to the **Sales** database in the master instance.
+3. Run the following Transact-SQL command to change the context to the **Sales** database in the master instance.
 
    ```sql
    USE Sales
    GO
    ```
 
-1. Define the format of the CSV file to read from HDFS. Press F5 to run the statement.
+4. Define the format of the CSV file to read from HDFS. Press F5 to run the statement.
 
    ```sql
    CREATE EXTERNAL FILE FORMAT csv_file
@@ -59,7 +82,7 @@ The storage pool contains web clickstream data in a CSV file stored in HDFS. Use
    );
    ```
 
-1. Create an external table that can read the `/clickstream_data` from the storage pool. The **SqlStoragePool** is accessible from the master instance of a big data cluster.
+5. Create an external table that can read the `/clickstream_data` from the storage pool. The **SqlStoragePool** is accessible from the master instance of a big data cluster.
 
    ```sql
    CREATE EXTERNAL TABLE [web_clickstreams_hdfs]
@@ -106,9 +129,9 @@ DROP EXTERNAL TABLE [dbo].[web_clickstreams_hdfs];
 GO
 ```
 
-## Sample script
+## <a id="script"></a> Sample script
 
-To download a sample script of the commands in this tutorial, go to TBD-LINK.
+To download a sample script of the commands in this tutorial, see the [Data virtualization samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-virtualization) on GitHub.
 
 ## Next steps
 

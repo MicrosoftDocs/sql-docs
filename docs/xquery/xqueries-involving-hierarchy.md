@@ -30,7 +30,7 @@ manager: craigg
   
  Each <`Location`> element has its own set of attributes and one <`step`> child element. This <`step`> child element is the first manufacturing step at the work center location.  
   
-```  
+```sql
 SELECT Instructions.query('  
      declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
    \<ManuInstr  ProdModelID = "{sql:column("Production.ProductModel.ProductModelID") }"   
@@ -63,7 +63,7 @@ WHERE ProductModelID=7
   
  This is a partial result:  
   
-```  
+```xml
 <ManuInstr ProdModelID="7" ProductModelName="HL Touring Frame">  
    <Location LocationID="10" SetupHours="0.5"   
             MachineHours="3" LaborHours="2.5" LotSize="100">  
@@ -82,7 +82,7 @@ WHERE ProductModelID=7
 ### B. Find all telephone numbers in the AdditionalContactInfo column  
  The following query retrieves additional telephone numbers for a specific customer contact by searching the whole hierarchy for the <`telephoneNumber`> element. Because the <`telephoneNumber`> element can appear anywhere in the hierarchy, the query uses the descendant and self operator (//) in the search.  
   
-```  
+```sql
 SELECT AdditionalContactInfo.query('  
  declare namespace ci="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo";  
  declare namespace act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";  
@@ -96,7 +96,7 @@ WHERE ContactID = 1
   
  This is the result:  
   
-```  
+```xml
 \<act:number   
   xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">  
   111-111-1111  

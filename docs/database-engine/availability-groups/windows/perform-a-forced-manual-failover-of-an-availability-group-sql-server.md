@@ -154,7 +154,7 @@ manager: craigg
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
  **To force failover (with possible data loss)**  
   
-1.  Connect to a server instance that hosts a replica whose role is in the SECONDARY or RESOLVING state in the availability group that that needs to be failed over.  
+1.  Connect to a server instance that hosts a replica whose role is in the SECONDARY or RESOLVING state in the availability group that needs to be failed over.  
   
 2.  Use the [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md) statement, as follows:  
   
@@ -173,7 +173,7 @@ manager: craigg
 ##  <a name="PowerShellProcedure"></a> Using PowerShell  
  **To force failover (with possible data loss)**  
   
-1.  Change directory (**cd**) to a server instance that hosts a replica whose role is in the SECONDARY or RESOLVING state in the availability group that that needs to be failed over.  
+1.  Change directory (**cd**) to a server instance that hosts a replica whose role is in the SECONDARY or RESOLVING state in the availability group that needs to be failed over.  
   
 2.  Use the **Switch-SqlAvailabilityGroup** cmdlet with the **AllowDataLoss** parameter in one of the following forms:  
   

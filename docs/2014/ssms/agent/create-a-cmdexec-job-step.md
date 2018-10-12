@@ -71,7 +71,7 @@ manager: craigg
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
     ```  
-    -- creates a job step that that uses CmdExec  
+    -- creates a job step that uses CmdExec  
     USE msdb;  
     GO  
     EXEC sp_add_jobstep  

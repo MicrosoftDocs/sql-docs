@@ -80,7 +80,7 @@ manager: craigg
     > [!NOTE]  
     >  If the instance of **SQL Server** is the default instance, enter the name of the computer that hosts the instance of **SQL Server**. If the **SQL Server** is a named instance, enter the name of the computer and the name of the instance, such as **Accounting\SQLExpress**.  
   
-3.  In the **Server type** area, select **SQL Server** to indicate that that the linked server is another instance of **SQL Server**.  
+3.  In the **Server type** area, select **SQL Server** to indicate that the linked server is another instance of **SQL Server**.  
   
 4.  On the **Security** page, specify the security context that will be used when the original [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connects to the linked server. In a domain environment where users are connecting by using their domain logins, selecting **Be made using the login’s current security context** is often the best choice. When users connect to the original **SQL Server** by using a **SQL Server** login, the best choice is often to select **By using this security context**, and then providing the necessary credentials to authenticate at the linked server.  
   

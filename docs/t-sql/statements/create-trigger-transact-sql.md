@@ -325,7 +325,7 @@ SELECT * FROM deleted;
 ### Optimizing DML Triggers
  Triggers work in transactions (implied, or otherwise) and while they are open, they lock resources. The lock will remain in place until the transaction is confirmed (with COMMIT) or rejected (with a ROLLBACK). The longer a trigger runs, the higher the probability that another process will be blocked. Therefore, triggers should be written in a way to decrease their duration whenever possible. One way to achieve this is to release a trigger when a DML statement changes 0 rows. 
 
-To release the trigger for a command that that does not change any rows, employ the system variable  [ROWCOUNT_BIG](https://docs.microsoft.com/it-it/sql/t-sql/functions/rowcount-big-transact-sql). 
+To release the trigger for a command that does not change any rows, employ the system variable  [ROWCOUNT_BIG](../functions/rowcount-big-transact-sql.md). 
 
 The following T-SQL code snippet will achieve this, and should be present at the beginning of each DML trigger:
 

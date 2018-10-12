@@ -50,7 +50,7 @@ manager: craigg
   
 1.  **Errors when enabling or configuring [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]:**  
   
-     Error: “ Failed to access the storage URL…. Provide a valid SQL Credential…” : You may see this and other similar errors referring to SQL Credentials.  In such cases, review the name of the SQL Credential you provided, and also the information stored in the SQL Credential – the storage account name, and the storage access key and make sure that that they are current and valid.  
+     Error: “ Failed to access the storage URL…. Provide a valid SQL Credential…” : You may see this and other similar errors referring to SQL Credentials.  In such cases, review the name of the SQL Credential you provided, and also the information stored in the SQL Credential – the storage account name, and the storage access key and make sure that they are current and valid.  
   
      Error: “… cannot configure the database….because it is a system database”: You will see this error if you try to enable [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] for a system database.  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] does not support backups for system databases.  To configure backup for a system database use other SQL Server Backup technologies such as maintenance plans.  
   

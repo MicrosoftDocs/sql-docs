@@ -60,6 +60,8 @@
   href: ../ssma/sql-server-migration-assistant.md
 - name: Data Migration Assistant
   href: ../dma/dma-overview.md
+- name: Database Experimentation Assistant
+  href: ../dea/database-experimentation-assistant-overview.md
 - name: Stretch Database
   href: ../sql-server/stretch-database/stretch-database.md
 - name: Tutorials for SQL Server

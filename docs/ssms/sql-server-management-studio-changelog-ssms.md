@@ -162,7 +162,7 @@ SSMS Options:
 
 SSMS Editor:
 
-- Fixed an issue where "SQL System Table" where restoring the default colors was chancing the color to lime green, rather than the default green, making it very hard to read on a white background (https://feedback.azure.com/forums/908035-sql-server/suggestions/32896906).
+- Fixed an issue in "SQL System Table" where restoring the default colors was changing the color to lime green, rather than the default green, making it very hard to read on a white background (https://feedback.azure.com/forums/908035-sql-server/suggestions/32896906).
 - Fixed issue where intellisense was not working when connected to Azure SQL DW using AAD authentication.
 - Fixed intellisense in Azure when user lacks master access.
 - Fixed code snippets to create "temporal tables" which were broken when the collation of the target database was case sensitive.

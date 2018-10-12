@@ -27,7 +27,7 @@ manager: craigg
   >[!IMPORTANT]
   > To uninstall an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you must be a local administrator with permission to log on as a service.  
   
- > [!NOTE}
+ > [!NOTE]
  > To uninstall a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster, use the Remove Node functionality provided by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup to remove each node individually. For more information, see [Add or Remove Nodes in a SQL Server Failover Cluster &#40;Setup&#41;](../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)  
   
  Note the following important scenarios before you uninstall [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  

@@ -20,7 +20,7 @@ In this tutorial, you learn how to:
 > * Join this data with high-value data in the master instance.
 
 > [!TIP]
-> If you prefer, you can download and run a script for the commands in this tutorial. For instructions, see the [Sample script](#script) section.
+> If you prefer, you can download and run a script for the commands in this tutorial. For instructions, see the [Data virtualization samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-virtualization) on GitHub.
 
 ## Prerequisites
 
@@ -120,10 +120,6 @@ Use the following command to remove the external table used in this tutorial.
 DROP EXTERNAL TABLE [dbo].[web_clickstreams_hdfs];
 GO
 ```
-
-## <a id="script"></a> Sample script
-
-To download a sample script of the commands in this tutorial, see the [Data virtualization samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-virtualization) on GitHub.
 
 ## Next steps
 

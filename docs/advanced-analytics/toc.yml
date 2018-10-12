@@ -256,23 +256,23 @@
       href: security/add-sqlrusergroup-to-database.md
   - name: Administration
     items:
-    - name: Manage machine learning integration
+    - name: Manage integration
       href: r/managing-and-monitoring-r-solutions.md
-    - name: Monitor using custom reports in SSMS
+    - name: Monitor using SSMS reports
       href: r/monitor-r-services-using-custom-reports-in-management-studio.md
-    - name: Scale concurrent execution of external scripts
+    - name: Scale script execution
       href: administration/modify-user-account-pool.md
     - name: Use resource governance
       href: administration/resource-governance.md
     - name: Create a resource pool
       href: administration/how-to-create-a-resource-pool.md
-    - name: Extended events for Machine Learning Services
+    - name: Extended events 
       href: r/extended-events-for-sql-server-r-services.md
     - name: Extended events PREDICT T-SQL
       href: xe-event-predict-tsql.md
-    - name: DMVs for Machine Learning Services
+    - name: Data Management Views (DMV)
       href: r/dmvs-for-sql-server-r-services.md
-    - name: Using R code profiling functions
+    - name: R code profiling functions
       href: r/using-r-code-profiling-functions.md
 - name: Reference
   href: r/machine-learning-services-r-reference.md

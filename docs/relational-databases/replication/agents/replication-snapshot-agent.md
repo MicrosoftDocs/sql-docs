@@ -74,8 +74,8 @@ snapshot [ -?]
  **-?**  
  Prints all available parameters.  
   
- **-Publisher**  *server_name*[**\\***instance_name*]  
- Is the name of the Publisher. Specify server_name for the default instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on that server. Specify *server_name***\\***instance_name* for a named instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on that server.  
+ **-Publisher**  *server_name*[**\\**_instance\_name_]  
+ Is the name of the Publisher. Specify server_name for the default instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on that server. Specify _server\_name_**\\**_instance\_name_ for a named instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on that server.  
   
  **-Publication** *publication*  
  Is the name of the publication. This parameter is only valid if the publication is set to always have a snapshot available for new or reinitialized subscriptions.  
@@ -89,8 +89,8 @@ snapshot [ -?]
  **-DefinitionFile** *def_path_and_file_name*  
  Is the path of the agent definition file. An agent definition file contains command line arguments for the agent. The content of the file is parsed as an executable file. Use double quotation marks (") to specify argument values containing arbitrary characters.  
   
- **-Distributor** *server_name*[**\\***instance_name*]  
- Is the Distributor name. Specify *server_name* for the default instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on that server. Specify *server_name***\\***instance_name* for a named instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on that server.  
+ **-Distributor** *server_name*[**\\**_instance\_name_]  
+ Is the Distributor name. Specify *server_name* for the default instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on that server. Specify _server\_name_**\\**_instance\_name_ for a named instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on that server.  
   
  **-DistributorDeadlockPriority** [**-1**|**0**|**1**]  
  Is the priority of the Snapshot Agent connection to the Distributor when a deadlock occurs. This parameter is specified to resolve deadlocks that may occur between the Snapshot Agent and user applications during snapshot generation.  
@@ -149,7 +149,7 @@ snapshot [ -?]
 > [!NOTE]  
 >  This parameter is used for performance tuning of **bcp** performance from an Oracle Publisher.  
   
- -**HRBcpBlockSize***block_size*  
+ -**HRBcpBlockSize**_block\_size_  
  Is the size, in kilobytes (KB), of each **bcp** data block. The default value is 64 KB. **HRBcpBlocks** is only used with Oracle publications.  
   
 > [!NOTE]  
@@ -217,7 +217,7 @@ snapshot [ -?]
 |**0** (Default)|Priority is not assigned.|  
 |**1**|Snapshot Agent has priority when a deadlock occurs at the Publisher.|  
   
- **-PublisherFailoverPartner** *server_name*[**\\***instance_name*]  
+ **-PublisherFailoverPartner** *server_name*[**\\**_instance\_name_]  
  Specifies the failover partner instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] participating in a database mirroring session with the publication database. For more information, see [Database Mirroring and Replication &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md).  
   
  **-PublisherLogin** *publisher_login*  

@@ -123,7 +123,7 @@ Note that SQL Server 2008 R2 grants everything to SYSTEM by default and SQL Serv
 
 |   |   |
 | - | - |
-| [![SQL Server 2008 R2 SYSTEM Default Permissions](.\media\grant-permissions-to-system-SQL-Server-2008-R2-SYSTEM-Default-Permissions.png)](.\media\grant-permissions-to-system-SQL-Server-2008-R2-SYSTEM-Default-Permissions.png) | [![SQL Server 2017 SYSTEM Default Permissions](.\media\grant-permissions-to-system-SQL-Server-2017-SYSTEM-Default-Permissions.png)](.\media\grant-permissions-to-system-SQL-Server-2017-SYSTEM-Default-Permissions.png) |
+| [![SQL Server 2008 R2 SYSTEM Default Permissions](./media/grant-permissions-to-system-SQL-Server-2008-R2-SYSTEM-Default-Permissions.png)](./media/grant-permissions-to-system-SQL-Server-2008-R2-SYSTEM-Default-Permissions.png) | [![SQL Server 2017 SYSTEM Default Permissions](./media/grant-permissions-to-system-SQL-Server-2017-SYSTEM-Default-Permissions.png)](./media/grant-permissions-to-system-SQL-Server-2017-SYSTEM-Default-Permissions.png) |
 
 ### Create a Database
 
@@ -165,7 +165,7 @@ GO
 
 - Note the session_server_principal_name and the server_principal_name are the SQL Server login account used to log into the instance.
 
-[![Query Audit Log for CREATE Statements](.\media\grant-permissions-to-system-Query-Audit-Log-for-CREATE-Statements.png)](.\media\grant-permissions-to-system-Query-Audit-Log-for-CREATE-Statements.png)
+[![Query Audit Log for CREATE Statements](./media/grant-permissions-to-system-Query-Audit-Log-for-CREATE-Statements.png)](./media/grant-permissions-to-system-Query-Audit-Log-for-CREATE-Statements.png)
 
 ### Delete a Table Using SYSTEM
 
@@ -183,7 +183,7 @@ sqlcmd -Q 'SELECT name FROM sys.databases'
 
 This will return a list of all the databases in both SQL Server 2008 R2 and SQL Server 2017.
 
-[![SQLCMD SELECT Database Names](.\media\grant-permissions-to-system-SQLCMD-SELECT-Database-Names.png)](.\media\grant-permissions-to-system-SQLCMD-SELECT-Database-Names.png)
+[![SQLCMD SELECT Database Names](./media/grant-permissions-to-system-SQLCMD-SELECT-Database-Names.png)](./media/grant-permissions-to-system-SQLCMD-SELECT-Database-Names.png)
 
 Now try dropping the Employee table from the AccessDemo database
 
@@ -193,11 +193,11 @@ sqlcmd -d AccessDemo -Q 'DROP TABLE Employee'
 
 SQL Server 2008 R2 provides no feedback, indicating a successful operation.
 
-[![SQL Server 2008 R2 SYSTEM DROP TABLE](.\media\grant-permissions-to-system-SQL-Server-2008-R2-SYSTEM-DROP-TABLE.png)](.\media\grant-permissions-to-system-SQL-Server-2008-R2-SYSTEM-DROP-TABLE.png)
+[![SQL Server 2008 R2 SYSTEM DROP TABLE](./media/grant-permissions-to-system-SQL-Server-2008-R2-SYSTEM-DROP-TABLE.png)](./media/grant-permissions-to-system-SQL-Server-2008-R2-SYSTEM-DROP-TABLE.png)
 
 SQL Server 2017, on the other hand, throws a "Login failed for user" error message.
 
-[![SQL Server 2017 SYSTEM DROP TABLE](.\media\grant-permissions-to-system-SQL-Server-2017-SYSTEM-DROP-TABLE.png)](.\media\grant-permissions-to-system-SQL-Server-2017-SYSTEM-DROP-TABLE.png)
+[![SQL Server 2017 SYSTEM DROP TABLE](./media/grant-permissions-to-system-SQL-Server-2017-SYSTEM-DROP-TABLE.png)](./media/grant-permissions-to-system-SQL-Server-2017-SYSTEM-DROP-TABLE.png)
 
 To validate the table has been deleted from the AccessDemo database in SQL Server 2008 R2, execute the following query:
 
@@ -214,7 +214,7 @@ Note the Employee table is not returned in SQL Server 2008 R2 and it is returned
 
 |   |   |
 | - | - |
-| [![SQL Server 2008 R2 SELECT tables](.\media\grant-permissions-to-system-SQL-Server-2008-R2-SELECT-tables.png)](.\media\grant-permissions-to-system-SQL-Server-2008-R2-SELECT-tables.png) | [![SQL Server 2017 SELECT tables](.\media\grant-permissions-to-system-SQL-Server-2017-SELECT-tables.png)](.\media\grant-permissions-to-system-SQL-Server-2017-SELECT-tables.png) |
+| [![SQL Server 2008 R2 SELECT tables](./media/grant-permissions-to-system-SQL-Server-2008-R2-SELECT-tables.png)](./media/grant-permissions-to-system-SQL-Server-2008-R2-SELECT-tables.png) | [![SQL Server 2017 SELECT tables](./media/grant-permissions-to-system-SQL-Server-2017-SELECT-tables.png)](./media/grant-permissions-to-system-SQL-Server-2017-SELECT-tables.png) |
 
 Execute the following query to see what actions SYSTEM performed:
 
@@ -238,7 +238,7 @@ The audit log clearly shows in SQL Server 2008 R2 that SYSTEM was able to drop t
 
 |   |   |
 | - | - |
-| [![SQL Server 2008 R2 SYSTEM Audit Result](.\media\grant-permissions-to-system-SQL-Server-2008-R2-SYSTEM-Audit-Result.png)](.\media\grant-permissions-to-system-SQL-Server-2008-R2-SYSTEM-Audit-Result.png) | [![SQL Server 2017 SYSTEM Audit Result](.\media\grant-permissions-to-system-SQL-Server-2017-SYSTEM-Audit-Result.png)](.\media\grant-permissions-to-system-SQL-Server-2017-SYSTEM-Audit-Result.png) |
+| [![SQL Server 2008 R2 SYSTEM Audit Result](./media/grant-permissions-to-system-SQL-Server-2008-R2-SYSTEM-Audit-Result.png)](./media/grant-permissions-to-system-SQL-Server-2008-R2-SYSTEM-Audit-Result.png) | [![SQL Server 2017 SYSTEM Audit Result](./media/grant-permissions-to-system-SQL-Server-2017-SYSTEM-Audit-Result.png)](./media/grant-permissions-to-system-SQL-Server-2017-SYSTEM-Audit-Result.png) |
 
 Note, if the investigation into the audit logs is done forensically after-the-fact, the investigator would not know who or what initiated the DROP TABLE command when executed as SYSTEM.
 

@@ -37,7 +37,7 @@ sp_delete_database_firewall_rule [@name =] [N]'name'
 ```  
   
 ## Arguments  
- [**@name =**] **'***name***'**  
+ [**@name =**] **'**_name_**'**  
  The name of the database-level firewall setting that will be removed. *name* is **nvarchar(128)** with no default value. The Unicode identifier `N` is optional for [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. 
   
 ## Permissions  

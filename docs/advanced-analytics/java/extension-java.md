@@ -57,6 +57,8 @@ sudo zypper install mssql-server-extensibility-java
 
 When you install **mssql-server-extensibility-java**, the package automatically installs JRE 1.8 if it is not already installed. It will also add the JVM path to an environment variable called JAVA_HOME.
 
+After completing installation, your next step is [Configure external script execution](#configure-script-execution).
+
 > [!Note]
 > On an internet-connected device, package dependencies are downloaded and installed as part of the main package installation. For more detailed setup instructions, including instructions for offline setup, see [Install SQL Server Machine Learning Services on Linux](../../linux/sql-server-linux-setup-machine-learning.md).
 
@@ -68,7 +70,7 @@ When you install **mssql-server-extensibility-java**, the package automatically 
 
 2. When you get to Feature Selection, choose **Machine Learning Services (in-database)**. Although Java integration does not come with machine learning libraries, this is the option in setup that provides the extensibility framework. You can omit R and Python if you wish.
 
-3. Finish the installation wizard, and then continue with the next steps.
+3. Finish the installation wizard, and then continue with the next two tasks.
 
 ### Add the JAVA_HOME variable
 
@@ -117,9 +119,11 @@ By default, the account under which external processes run does not have access 
 
 5. Repeat the previous two steps on any Java classpath folders containing the .class or .jar files that you want to run on SQL Server. For example, if you keep your compiled programs in a path like C:\JavaPrograms\my-app, grant **SQLRUserGroup** and **ALL APPLICATION PACKAGES** permission on that folder so that the programs can be loaded.
 
+<a name="configure-script-execution"></a>
+
 ## Configure script execution
 
-You are almost ready to run Java code on Linux or Windows. As a last step, switch to SQL Server Management Studio or another tool that runs Transact-SQL script to enable external script execution.
+At this point, you are almost ready to run Java code on Linux or Windows. As a last step, switch to SQL Server Management Studio or another tool that runs Transact-SQL script to enable external script execution.
 
   ```sql
   EXEC sp_configure 'external scripts enabled', 1

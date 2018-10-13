@@ -43,10 +43,10 @@ sp_delete_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
 ```  
   
 ## Arguments  
- [ **@plan_id =**] **'***plan_id***'**  
+ [ **@plan_id =**] **'**_plan\_id_**'**  
  Specifies the maintenance plan ID. *plan_id* is **uniqueidentifier**.  
   
- [ **@db_name =**] **'***database_name***'**  
+ [ **@db_name =**] **'**_database\_name_**'**  
  Specifies the database name to be deleted from the maintenance plan. *database_name* is **sysname**.  
   
 ## Return Code Values  

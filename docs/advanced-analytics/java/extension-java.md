@@ -24,9 +24,7 @@ As with any programming language extension, the system stored procedure [sp_exec
 
 A SQL Server 2019 is required. Earlier versions do not have Java integration. 
 
-Java version requirements vary across Windows and Linux. The Java Runtime Environment (JRE) is the minimum requirement, but JDKs are useful if you need the Java compiler or development packages. 
-
-The JDK provides components for both runtime and development. If you install the JDK, the JRE is not ncessary.
+Java version requirements vary across Windows and Linux. The Java Runtime Environment (JRE) is the minimum requirement, but JDKs are useful if you need the Java compiler or development packages. Because the JDK is all inclusive, if you install the JDK, the JRE is not necessary.
 
 | Operating System | Java version | JRE download | JDK download |
 |------------------|--------------|--------------|--------------|
@@ -35,10 +33,10 @@ The JDK provides components for both runtime and development. If you install the
 
 On Linux, the **mssql-server-extensibility-java** package automatically installs JRE 1.8 if it is not already installed. Installation scripts also add the JVM path to an environment variable called JAVA_HOME.
 
-On Windows, install the JDK under the default /Program Files/ folder if possible. Otherwise, extra configuration is required to grant permissions to executables. For more information, see [Install on Windows](#install-on-linux).
+On Windows, we recommend installing the JDK under the default /Program Files/ folder if possible. Otherwise, extra configuration is required to grant permissions to executables. For more information, see [Install on Windows](#install-on-windows).
 
 > [!Note]
-> Given that Java is backwards compatible, earlier versions might work, but the supported and tested versions for this early CTP release are listed in the table. If your Java code needs to run on both operating systems, you can install Java 1.8 instead of 1.10 on Windows. The links for 1.8 include downloads for Windows.
+> Given that Java is backwards compatible, earlier versions might work, but the supported and tested versions for this early CTP release are listed in the table.
 
 <a name="install-on-linux"></a>
 
@@ -76,7 +74,7 @@ When you install **mssql-server-extensibility-java**, the package automatically 
 
 JAVA_HOME is an environment variable that specifies the location of the Java interpreter. In this step, create a system environment variable for it on Windows. 
 
-1. Find and copy the JDK/JRE installation path (for example, "C:\Program Files\Java\jdk-10.0.2") .
+1. Find and copy the JDK/JRE installation path (for example, C:\Program Files\Java\jdk-10.0.2) .
 
 2. In Control Panel, open **System and Security**, open **System**, and click **Advanced System Properties**.
 

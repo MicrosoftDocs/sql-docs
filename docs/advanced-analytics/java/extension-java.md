@@ -22,23 +22,23 @@ As with any programming language extension, the system stored procedure [sp_exec
 
 ## Prerequisites
 
-A SQL Server 2019 is required. You cannot add Java integration to earlier versions. 
+A SQL Server 2019 is required. Earlier versions do not have Java integration. 
 
-Java requirements vary across Windows and Linux. The Java Runtime Environment (JRE) is the minimum requirement, but JDKs are useful if you need the Java compiler or development packages. 
+Java version requirements vary across Windows and Linux. The Java Runtime Environment (JRE) is the minimum requirement, but JDKs are useful if you need the Java compiler or development packages. 
+
+The JDK provides components for both runtime and development. If you install the JDK, the JRE is not ncessary.
 
 | Operating System | Java version | JRE download | JDK download |
 |------------------|--------------|--------------|--------------|
 | Windows          | 1.10         | [JRE 10](http://www.oracle.com/technetwork/java/javase/downloads/jre10-downloads-4417026.html) | [JDK 10](http://www.oracle.com/technetwork/java/javase/downloads/jdk10-downloads-4416644.html)  |
-| Linux            | 1.8          |  [JRE 8](https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) | [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)  | 
+| Linux            | 1.8          |  [JRE 8](https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) | [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)  |  
 
-You should install Java 1.8 on Windows if your code needs to run on both operating systems. 
-
-On Linux, the **mssql-server-extensibility-java** package automatically installs JRE 1.8 if it is not already installed. It will also add the JVM path to an environment variable called JAVA_HOME.
+On Linux, the **mssql-server-extensibility-java** package automatically installs JRE 1.8 if it is not already installed. Installation scripts also add the JVM path to an environment variable called JAVA_HOME.
 
 On Windows, install the JDK under the default /Program Files/ folder if possible. Otherwise, extra configuration is required to grant permissions to executables. For more information, see [Install on Windows](#install-on-linux).
 
 > [!Note]
-> Given that Java is backwards compatible, earlier versions might work, but the supported and tested versions for this early CTP release are listed in the table.
+> Given that Java is backwards compatible, earlier versions might work, but the supported and tested versions for this early CTP release are listed in the table. If your Java code needs to run on both operating systems, you can install Java 1.8 instead of 1.10 on Windows. The links for 1.8 include downloads for Windows.
 
 <a name="install-on-linux"></a>
 
@@ -57,8 +57,10 @@ sudo apt-get install mssql-server-extensibility-java
 sudo zypper install mssql-server-extensibility-java
 ```
 
-> ][!Note]
-> On an internet-connected device, the mssql-server-extensibility-java package pulls in the dependencies required for installation on Linux. For more detailed setup instructions, including instructions for offline setup, see [Install SQL Server Machine Learning Services on Linux](../../linux/sql-server-linux-setup-machine-learning.md).
+When you install **mssql-server-extensibility-java**, the package automatically installs JRE 1.8 if it is not already installed. It will also add the JVM path to an environment variable called JAVA_HOME.
+
+> [!Note]
+> On an internet-connected device, package dependencies are downloaded and installed as part of the main package installation. For more detailed setup instructions, including instructions for offline setup, see [Install SQL Server Machine Learning Services on Linux](../../linux/sql-server-linux-setup-machine-learning.md).
 
 <a name="install-on-windows"></a>
 
@@ -72,11 +74,11 @@ sudo zypper install mssql-server-extensibility-java
 
 ### Add the JAVA_HOME variable
 
-JAVA_HOME is an environment variable that specifies the lcoation of the Java interpreter. In this step, create a system environment variable for it on Windows. 
+JAVA_HOME is an environment variable that specifies the location of the Java interpreter. In this step, create a system environment variable for it on Windows. 
 
 1. Find and copy the JDK/JRE installation path (for example, "C:\Program Files\Java\jdk-10.0.2") .
 
-2. In Control Panel, open System and Security, open System, and click **Advanced System Properties**.
+2. In Control Panel, open **System and Security**, open **System**, and click **Advanced System Properties**.
 
 3. Click **Environment Variables**.
 
@@ -94,8 +96,9 @@ By default, the account under which external processes run does not have access 
 
 2. Open PowerShell with administrator rights. If you are unfamiliar with this task, see [this article](https://www.top-password.com/blog/5-ways-to-run-powershell-as-administrator-in-windows-10/) for tips.
 
+3. Run the following script to grant **SQLRUserGroup** permissions to the Java executables. 
 
-3. Grant **SQLRUserGroup** permissions to the Java executables. **SQLRUserGroup** specifies the permissions under which external processes run. By default, members of this group have permission to the R and Python program files installed by SQL Server. To run programs in other locations, you must give **SQLRUserGroup** permission to do so.
+  **SQLRUserGroup** specifies the permissions under which external processes run. By default, members of this group have permission to the R and Python program files installed by SQL Server. To run programs in other locations, you must give **SQLRUserGroup** permission to do so.
 
    ```powershell
    $Acl = Get-Acl "<YOUR PATH TO JDK / CLASSPATH>"
@@ -103,7 +106,9 @@ By default, the account under which external processes run does not have access 
    $Acl.SetAccessRule($Ar)
    Set-Acl ""<YOUR PATH TO JDK / CLASSPATH>" $Acl 
    ```
-4. Grant **ALL APPLICATION PACKAGES** permissions as well. In SQL Server 2019, containers replace worker accounts as the isolation mechanism, with processes running inside containers, under the identity of Launchpad service account, which is member the **SQLRUserGroup**. For more information, see [Differences in a SQL Server 2019 install](../install/sql-machine-learning-services-ver15.md).
+4. Run the following script to grant **ALL APPLICATION PACKAGES** permissions as well. 
+
+  In SQL Server 2019, containers replace worker accounts as the isolation mechanism, with processes running inside containers, under the identity of Launchpad service account, which is member the **SQLRUserGroup**. For more information, see [Differences in a SQL Server 2019 install](../install/sql-machine-learning-services-ver15.md).
 
    ```powershell
    $Acl = Get-Acl "<YOUR PATH TO JDK / CLASSPATH>" 
@@ -112,11 +117,11 @@ By default, the account under which external processes run does not have access 
    Set-Acl "<YOUR PATH TO JDK / CLASSPATH>" $Acl 
    ```
 
-5. Repeat the previous two steps on any Java classpath folders containng the .class or .jar files that you want to run on SQL Server. For example, if you keep your compiled programs in a path like C:\JavaPrograms\my-app, grant **SQLRUserGroup** and **ALL APPLICATION PACKAGES** permission on that folder so that the programs can be loaded.
+5. Repeat the previous two steps on any Java classpath folders containing the .class or .jar files that you want to run on SQL Server. For example, if you keep your compiled programs in a path like C:\JavaPrograms\my-app, grant **SQLRUserGroup** and **ALL APPLICATION PACKAGES** permission on that folder so that the programs can be loaded.
 
 ## Configure script execution
 
-You are almost ready to run Java code on Linux or Windows. As a last step, use SQL Server Management Studio or another tool that runs Transact-SQL script to configure external script execution on the database engine instance.
+You are almost ready to run Java code on Linux or Windows. As a last step, switch to SQL Server Management Studio or another tool that runs Transact-SQL script to enable external script execution.
 
   ```sql
   EXEC sp_configure 'external scripts enabled', 1
@@ -136,7 +141,7 @@ If you are already familiar with Machine Learning Services, the authorization an
 
 * The number of values in input and output buffers cannot exceed `MAX_INT (2^31-1)` since that is the maximum number of elements that can be allocated in an array in Java.
 
-* Output parameters in sp_execute_external_script are not supported in this version.
+* Output parameters in [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) are not supported in this version.
 
 * No LOB datatype support for input and output data sets in this version. See [Java and SQL Server data types](java-sql-datatypes.md) for details about which data types are supported in this CTP.
 

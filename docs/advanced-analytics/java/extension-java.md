@@ -60,7 +60,7 @@ When you install **mssql-server-extensibility-java**, the package automatically 
 After completing installation, your next step is [Configure external script execution](#configure-script-execution).
 
 > [!Note]
-> On an internet-connected device, package dependencies are downloaded and installed as part of the main package installation. For more detailed setup instructions, including instructions for offline setup, see [Install SQL Server Machine Learning Services on Linux](../../linux/sql-server-linux-setup-machine-learning.md).
+> On an internet-connected device, package dependencies are downloaded and installed as part of the main package installation. For more details, including offline setup, see [Install SQL Server Machine Learning on Linux](../../linux/sql-server-linux-setup-machine-learning.md).
 
 <a name="install-on-windows"></a>
 
@@ -68,7 +68,9 @@ After completing installation, your next step is [Configure external script exec
 
 1. [Run Setup](../install/sql-machine-learning-services-windows-install.md) to install SQL Server 2019.
 
-2. When you get to Feature Selection, choose **Machine Learning Services (in-database)**. Although Java integration does not come with machine learning libraries, this is the option in setup that provides the extensibility framework. You can omit R and Python if you wish.
+2. When you get to Feature Selection, choose **Machine Learning Services (in-database)**. 
+
+   Although Java integration does not come with machine learning libraries, this is the option in setup that provides the extensibility framework. You can omit R and Python if you wish.
 
 3. Finish the installation wizard, and then continue with the next two tasks.
 
@@ -98,7 +100,7 @@ By default, the account under which external processes run does not have access 
 
 3. Run the following script to grant **SQLRUserGroup** permissions to the Java executables. 
 
-  **SQLRUserGroup** specifies the permissions under which external processes run. By default, members of this group have permission to the R and Python program files installed by SQL Server. To run programs in other locations, you must give **SQLRUserGroup** permission to do so.
+  **SQLRUserGroup** specifies the permissions under which external processes run. By default, members of this group have permission to the R and Python program files installed by SQL Server, but not Java. To run Java executables, you must give **SQLRUserGroup** permission to do so.
 
    ```powershell
    $Acl = Get-Acl "<YOUR PATH TO JDK / CLASSPATH>"

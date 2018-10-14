@@ -14,17 +14,60 @@ manager: cgronlun
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article describes the overall security architecture that is used to connect the SQL Server database engine and related components to the extensibility framework. Assuming you are already familiar with the [key concepts and components of extensibility](extensibility-framework.md) in SQL Server, this article goes one step deeper by examining the securables, services, process identity, and permissions.
+This article describes the overall security architecture that is used to integrate the SQL Server database engine and related components with the extensibility framework. Assuming you are already familiar with the [key concepts and components of extensibility](extensibility-framework.md) in SQL Server, this article goes one step deeper by examining the securables, services, process identity, and permissions.
+
+## Securables in context
+
+R and Python integration introduces no new [securables](https://docs.microsoft.com/sql/relational-databases/security/securables), as defined by SQL Server. Script is submitted as an input parameter to [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) or wrapped in a stored procedure that you define. Models can be pretrained and stored in a binary format in a database table, callable in a T-SQL PREDICT function. Regardless of how you are using script or what they consist of, database objects will be created and probably saved, but no new object type is introduced.
 
 <a name="launchpad"></a>
 
-## SQL Server Launchpad service
+## Services used in external processing (Launchpad)
 
-To instantiate external processes, the database engine provides the SQL Server Launchpad service to create an R or Python session. A separate SQL Server Launchpad service is created for the database engine instance to which you have added SQL Server machine learning (R or Python) integration, one service per instance.
+The extensibility framework adds one new service to the [list of services](https://docs.microsoft.com/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions#Service_Details) in a SQL Server installation: [**SQL Server Launchpad (MSSSQLSERVER)**](extensibility-framework.md#launchpad).
 
-The [SQL Server Launchpad service](extensibility-framework.md#launchpad) starts the R or Python session for SQL Server. Setup provisions Launchpad when you add a machine learning feature to the database engine. There is one Launchpad service for each database engine instance, so if you have multiple instances with R or Python support, you will have a Launchpad service for each one. A database engine instance is bound to the Launchpad service created for it. All invocations of external script in a stored procedure or T-SQL result in the SQL Server service calling Launchpad.
+The database engine uses the SQL Server Launchpad service to instantiate an R or Python session as a separate process, running under a low-privilege account that is distinct from SQL Server, Launchpad itself, and the user identity under which the stored procedure or host query is running. Running script in a separate process, under low-privilege account, is the basis of the security and isolation model for R and Python in SQL Server. 
 
-By default, [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] is configured to run under **NT Service\MSSQLLaunchpad**, which is provisioned with all necessary permissions to run external scripts. Stripping permissions from this account can result in [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] failing to start or to access the SQL Server instance where external scripts should be run. Launchpad service is generally used as-is, but for more information about configurable options, see [SQL Server Launchpad service configuration](../security/sql-server-launchpad-service-account.md).
+In addition to launching external processes, Launchpad is also responsible for tracking the identity of the calling user, and mapping that identity to the low-privilege worker account used to start the process. In some scenarios, where script or code calls back to SQL Server for data and operations, Launchpad is usually able to manage identity transfer seamlessly. Script containing SELECT statements or calling functions and other programming objects will typically succeed if the calling user has sufficient permissions.
+
+> [!NOTE]
+> By default, [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] is configured to run under **NT Service\MSSQLLaunchpad**, which is provisioned with all necessary permissions to run external scripts. For more information about configurable options, see [SQL Server Launchpad service configuration](../security/sql-server-launchpad-service-account.md).
+
+## Process identities
+
+
+## Identity management
+
+As noted, Launchpad keeps track of which user identity requested the database object, and which worker account it used to start the external process.
+
+
+
+
+## User security
+
+SQL Server's data security model of database logins and roles extend to R and Python script. Database logins can be based on Windows identities or a SQL Server database user. 
+
+As a database user, if you have permissions to execute a particular query, any R or Python script that you run on SQL Server also has permission to retrieve the same data. The ability to consume, create, and save database objects depends on database permissions. For more information, see [Give users permission to SQL Server Machine Learning Services](../../advanced-analytics/security/user-permission.md).
+
+### Mapping user identities to worker accounts
+
+When a session is started, Launchpad maps the identity of the calling user to a worker account. The mapping of an external Windows user or valid SQL login to a worker account is valid only for the lifetime of the SQL stored procedure that executes the external script. Parallel queries from the same login are mapped to the same user worker account.
+
+During execution, Launchpad creates temporary folders to store session data, deleting them when the session concludes. The directories are access-restricted. For R, RLauncher performs this task. For Python, PythonLauncher performs this task. Each individual worker account is restricted to its own folder, and cannot access files in folders above its own level. However, the worker account can read, write, or delete children under the session working folder that was created. If you are an administrator on the computer, you can view the directories created for each process. Each directory is identified by its session GUID.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <a name="sqlrusergroup"></a>
 
@@ -61,18 +104,6 @@ As implemented by SQL Server, AppContainers are an internal mechanism. While you
 > In SQL Server 2019, **SQLRUserGroup** only has one member which is now the single SQL Server Launchpad service account instead of multiple worker accounts.
 ::: moniker-end
 
-## User security
-
-SQL Server's data security model of database logins and roles extend to R and Python script. Database logins can be based on Windows identities or a SQL Server database user. 
-
-As a database user, if you have permissions to execute a particular query, any R or Python script that you run on SQL Server also has permission to retrieve the same data. The ability to consume, create, and save database objects depends on database permissions. For more information, see [Give users permission to SQL Server Machine Learning Services](../../advanced-analytics/security/user-permission.md).
-
-### Mapping user identities to worker accounts
-
-When a session is started, Launchpad maps the identity of the calling user to a worker account. The mapping of an external Windows user or valid SQL login to a worker account is valid only for the lifetime of the SQL stored procedure that executes the external script. Parallel queries from the same login are mapped to the same user worker account.
-
-During execution, Launchpad creates temporary folders to store session data, deleting them when the session concludes. The directories are access-restricted. For R, RLauncher performs this task. For Python, PythonLauncher performs this task. Each individual worker account is restricted to its own folder, and cannot access files in folders above its own level. However, the worker account can read, write, or delete children under the session working folder that was created. If you are an administrator on the computer, you can view the directories created for each process. Each directory is identified by its session GUID.
-
 <a name="implied-authentication"></a>
 
 ### Implied authentication (loop back requests)
@@ -94,6 +125,10 @@ The following diagram shows the interaction of SQL Server components with the R 
 The next diagram shows the interaction of SQL Server components with the Python runtime and how it does implied authentication for Python.
 
 ![Implied authentication for Python](../security/media/implied-auth-python2.png)
+
+
+
+
 
 ## No support for Transparent Data Encryption at rest
 

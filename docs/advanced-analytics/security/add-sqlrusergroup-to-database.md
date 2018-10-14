@@ -13,14 +13,14 @@ manager: cgronlun
 # Add SQLRUserGroup as a database user
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Create a database login for the [SQLRUserGroup](../concepts/security.md#sqlrusergroup) when connection strings in your script specify a *trusted connection* and the identity used to execute the stored procedure or query providing your code is a Windows account.
+Create a database login for the [SQLRUserGroup](../concepts/security.md#sqlrusergroup) when a loopback connection in your script specify a *trusted connection* and the identity used to execute the stored procedure or query providing your code is a Windows account.
 
 Trusted connections are those having `Trusted_Connection=True` in the connection string. When SQL Server receives a request specifying a trusted connection, it checks whether the identity of the current user has a login. For external satellite processes executing as a worker account (such as MSSQLSERVER01 from **SQLRUserGroup**), the request fails because those accounts have no login by default. 
 
-You can workaround the connection error by giving **SQLServerRUserGroup** a database login on your server. For more information about how process identites work for external processes, see [Security overview for the extensibility framework](../concepts/security.md).
+You can workaround the connection error by giving **SQLServerRUserGroup** a database login on your server. For more information about identities and external processes, see [Security overview for the extensibility framework](../concepts/security.md).
 
 > [!Note]
->  Make sure that **SQLRUserGroup** has "Allow Log on locally" permissions. By default, this right is given to all new local users, but in some organizations stricter group policies might be enforced.
+>  Make sure that **SQLRUserGroup** has "Allow Log on locally" permissions. By default, this right is given to all new local users, but in some organizations stricter group policies might disable this right.
 
 ## Create a login
 
@@ -57,3 +57,8 @@ You can workaround the connection error by giving **SQLServerRUserGroup** a data
 6. Click **OK** once more to close the **Select User or Group** dialog box.
 
 7. In the **Login - New** dialog box, click **OK**. By default, the login is assigned to the **public** role and has permission to connect to the database engine.
+
+# See also
+
++ [Security overview](../concepts/security.md)
++ [Extensibility framework](../concepts/extensibility-framework.md)

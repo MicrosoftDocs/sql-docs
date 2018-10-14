@@ -1,6 +1,6 @@
 ---
 title: Add SQLRUserGroup as a database user (SQL Server Machine Learning) | Microsoft Docs
-description: How to add SQLRUserGroup as a database user for SQL Server Machine Learning Services.
+description: For loopback connections using implied authentication, add SQLRUserGroup as a database user so that a worker account can log in to the server, for identity conversion back to the calling user.
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -13,15 +13,11 @@ manager: cgronlun
 # Add SQLRUserGroup as a database user
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Create a database login for the [SQLRUserGroup](../concepts/security.md#sqlrusergroup) to allow trusted connections originating from R and Python scripts when the target is data or operations on the SQL Server instance. 
+Create a database login for the [SQLRUserGroup](../concepts/security.md#sqlrusergroup) when connection strings in your script specify a *trusted connection* and the identity used to execute the stored procedure or query providing your code is a Windows account.
 
-For scripts containing connection strings with SQL Server logins or a fully-specified user name and password, creating a login is not required.
+Trusted connections are those having `Trusted_Connection=True` in the connection string. When SQL Server receives a request specifying a trusted connection, it checks whether the identity of the current user has a login. For external satellite processes executing as a worker account (such as MSSQLSERVER01 from **SQLRUserGroup**), the request fails because those accounts have no login by default. 
 
-## When a login is required
-
-If R or Python script includes a connection string specifying a trusted connection (for example, "Trusted_Connection=True"), additional configuration is necessary for the correct presentation of the user identity to SQL Server. For external processes running under a **SQLRUserGroup** worker account, such as MSSQLSERVER01, the trusted user is presented as the worker identity. Because this identity has no login rights to SQL Server, trusted connections will fail unless you add **SQLRUserGroup** as a database user. For more information, see [*implied authentication*](../../advanced-analytics/concepts/security.md#implied-authentication).
-
-Recall that Launchpad retains a mapping of the original user who invoked the script and the worker account running the process. Once the trusted connection succeeds for the worker account, the identity of the original calling user takes over and is used to retrieve the data. You do not need to grant db_datareader permissions to **SQLRUserGroup**.
+You can workaround the connection error by giving **SQLServerRUserGroup** a database login on your server. For more information about how process identites work for external processes, see [Security overview for the extensibility framework](../concepts/security.md).
 
 > [!Note]
 >  Make sure that **SQLRUserGroup** has "Allow Log on locally" permissions. By default, this right is given to all new local users, but in some organizations stricter group policies might be enforced.

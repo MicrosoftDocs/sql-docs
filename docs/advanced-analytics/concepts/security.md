@@ -14,13 +14,15 @@ manager: cgronlun
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article describes the overall security architecture that is used to connect the SQL Server database engine and related components to the extensibility framework. It describes component parts and interactions. 
+This article describes the overall security architecture that is used to connect the SQL Server database engine and related components to the extensibility framework. Assuming you are already familiar with the [key concepts and components of extensibility](extensibility-framework.md) in SQL Server, this article goes one step deeper by examining the securables, services, process identity, and permissions.
 
 <a name="launchpad"></a>
 
 ## SQL Server Launchpad service
 
-To instantiate external processes, the database engine provides the SQL Server Launchpad service to create an R or Python session. A separate [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] service is created for the database engine instance to which you have added SQL Server machine learning (R or Python) integration, one service per instance.
+To instantiate external processes, the database engine provides the SQL Server Launchpad service to create an R or Python session. A separate SQL Server Launchpad service is created for the database engine instance to which you have added SQL Server machine learning (R or Python) integration, one service per instance.
+
+The [SQL Server Launchpad service](extensibility-framework.md#launchpad) starts the R or Python session for SQL Server. Setup provisions Launchpad when you add a machine learning feature to the database engine. There is one Launchpad service for each database engine instance, so if you have multiple instances with R or Python support, you will have a Launchpad service for each one. A database engine instance is bound to the Launchpad service created for it. All invocations of external script in a stored procedure or T-SQL result in the SQL Server service calling Launchpad.
 
 By default, [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] is configured to run under **NT Service\MSSQLLaunchpad**, which is provisioned with all necessary permissions to run external scripts. Stripping permissions from this account can result in [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] failing to start or to access the SQL Server instance where external scripts should be run. Launchpad service is generally used as-is, but for more information about configurable options, see [SQL Server Launchpad service configuration](../security/sql-server-launchpad-service-account.md).
 
@@ -73,7 +75,7 @@ During execution, Launchpad creates temporary folders to store session data, del
 
 <a name="implied-authentication"></a>
 
-### Implied authentication
+### Implied authentication (loop back requests)
 
 *Implied authentication* describes connection request behavior under which external processes running as low-privilege worker accounts are presented as a trusted user identity to SQL Server on loop back requests for data or operations. As a concept, implied authentication is unique to Windows authentication, in SQL Server connection strings specifying a trusted connection, on requests originating from external processes such as R or Python script. It is sometimes also referred to as a *loop back*.
 

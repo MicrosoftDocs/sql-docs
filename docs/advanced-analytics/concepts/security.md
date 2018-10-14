@@ -16,15 +16,19 @@ manager: cgronlun
 
 This article describes the overall security architecture that is used to integrate the SQL Server database engine and related components with the extensibility framework. Assuming you are already familiar with the [key concepts and components of extensibility](extensibility-framework.md) in SQL Server, this article goes one step deeper by examining the securables, services, process identity, and permissions.
 
-## Securables in context
+## Securables for external code
 
-R and Python integration introduces no new [securables](https://docs.microsoft.com/sql/relational-databases/security/securables), as defined by SQL Server. Script is submitted as an input parameter to a [system stored procedure](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) created for this purpose, or script wrapped in a stored procedure that you define. Another approach: models can be pretrained and stored in a binary format in a database table, callable in a T-SQL PREDICT function. Regardless of how you are using script or what they consist of, database objects will be created and probably saved, but no new object type is introduced for storing script. The ability to consume, create, and save database objects depends on database permissions. For more information, see [Give users permission to SQL Server Machine Learning Services](../../advanced-analytics/security/user-permission.md).
+External code written in R or Python is provided through existing database schema objects: stored procedures and tables. There are no new [securables](https://docs.microsoft.com/sql/relational-databases/security/securables), as defined by SQL Server. 
+
+Script is submitted as an input parameter to a [system stored procedure](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) created for this purpose, or script is wrapped in a stored procedure that you define. Alternatively, you might have models that are pretrained and stored in a binary format in a database table, callable in a T-SQL PREDICT function. 
+
+Regardless of how you are using script or, what they consist of, database objects will be created and probably saved, but no new object type is introduced for storing script. As a result, the ability to consume, create, and save database objects depends largely on database permissions already defined for your users. For more information, see [Give users permission to SQL Server Machine Learning Services](../../advanced-analytics/security/user-permission.md).
 
 <a name="launchpad"></a>
 
 ## Services used in external processing (Launchpad)
 
-The extensibility framework adds one new service to the [list of services](https://docs.microsoft.com/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions#Service_Details) in a SQL Server installation: [**SQL Server Launchpad (MSSSQLSERVER)**](extensibility-framework.md#launchpad).
+The extensibility framework adds one new NT service to the [list of services](https://docs.microsoft.com/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions#Service_Details) in a SQL Server installation: [**SQL Server Launchpad (MSSSQLSERVER)**](extensibility-framework.md#launchpad).
 
 The database engine uses the SQL Server Launchpad service to instantiate an R or Python session as a separate process. The process runs under a low-privilege account; distinct from SQL Server, Launchpad itself, and the user identity under which the stored procedure or host query was executed. Running script in a separate process, under low-privilege account, is the basis of the security and isolation model for R and Python in SQL Server. 
 

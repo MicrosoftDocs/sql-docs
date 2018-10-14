@@ -13,11 +13,11 @@ manager: cgronlun
 # Add SQLRUserGroup as a database user
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Create a database login for the [SQLRUserGroup](../concepts/security.md#sqlrusergroup) when a loopback connection in your script specifes a *trusted connection*, and the identity used to execute whatever object contains your code is a Windows account.
+Create a database login for the [SQLRUserGroup](../concepts/security.md#sqlrusergroup) when a loopback connection in your script specifies a *trusted connection*, and the identity used to execute whatever object contains your code is a Windows account.
 
 Trusted connections are those having `Trusted_Connection=True` in the connection string. When SQL Server receives a request specifying a trusted connection, it checks whether the identity of the current user has a login. For external satellite processes executing as a worker account (such as MSSQLSERVER01 from **SQLRUserGroup**), the request fails because those accounts do not have a login by default. 
 
-You can workaround the connection error by giving **SQLServerRUserGroup** a database login on your server. For more information about identities and external processes, see [Security overview for the extensibility framework](../concepts/security.md).
+You can work around the connection error by giving **SQLServerRUserGroup** a database login on your server. For more information about identities and external processes, see [Security overview for the extensibility framework](../concepts/security.md).
 
 > [!Note]
 >  Make sure that **SQLRUserGroup** has "Allow Log on locally" permissions. By default, this right is given to all new local users, but in some organizations stricter group policies might disable this right.

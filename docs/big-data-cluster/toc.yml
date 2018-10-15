@@ -10,7 +10,7 @@
     href: quickstart-big-data-cluster-deploy.md
 - name: Tutorials
   items:
-  - name: 1_Query storage pool
+  - name: 1_Query HDFS data
     href: tutorial-query-hdfs-storage-pool.md
   - name: 2_Query Oracle data
     href: tutorial-query-oracle.md

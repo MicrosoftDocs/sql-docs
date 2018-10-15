@@ -58,7 +58,7 @@ You can work around the connection error by giving **SQLServerRUserGroup** a dat
 
 7. In the **Login - New** dialog box, click **OK**. By default, the login is assigned to the **public** role and has permission to connect to the database engine.
 
-# See also
+## See also
 
 + [Security overview](../concepts/security.md)
 + [Extensibility framework](../concepts/extensibility-framework.md)

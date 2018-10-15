@@ -348,7 +348,7 @@ GO
 ```  
   
 ### C. Using OUTPUT INTO with an UPDATE statement  
- The following example updates the `VacationHours` column in the `Employee` table by 25 percent for the first 10 rows. The `OUTPUT` clause returns the `VacationHours` value that exists before applying the `UPDATE` statement in the column `deleted.VacationHours`, and the updated value in the column `inserted.VacationHours` to the `@MyTableVar``table` variable.  
+ The following example updates the `VacationHours` column in the `Employee` table by 25 percent for the first 10 rows. The `OUTPUT` clause returns the `VacationHours` value that exists before applying the `UPDATE` statement in the column `deleted.VacationHours`, and the updated value in the column `inserted.VacationHours` to the `@MyTableVar` table variable.  
   
  Two `SELECT` statements follow that return the values in `@MyTableVar` and the results of the update operation in the `Employee` table.  
   

@@ -39,10 +39,6 @@
   href: build-database-projects-by-using-sql-server-management-studio.md
 - name: Understand SSMS Windows Management
   href: understand-sql-server-management-studio-windows-management.md
-- name: External Tools Dialog Box
-  href: external-tools-dialog-box.md
-- name: Arguments Dialog Box
-  href: arguments-dialog-box.md
 - name: Administer Servers with SSMS
   href: administer-servers-with-sql-server-management-studio.md
 - name: Configure WMI to Show Server Status in SQL Server Tools
@@ -52,8 +48,14 @@
   items:
   - name: General User Interface Elements
     href: general-user-interface-elements.md
+  - name: Arguments Dialog Box
+    href: arguments-dialog-box.md
   - name: About Dialog Box
     href: about-dialog-box.md
+  - name: SSMS Web Browser
+    href: sql-server-management-studio-web-browser.md
+  - name: External Tools Dialog Box
+    href: external-tools-dialog-box.md
   - name: Property Pages in SSMS
     href: property-pages-in-sql-server-management-studio.md
   - name: Properties Window in SSMS
@@ -62,14 +64,14 @@
     href: output-window.md
   - name: SSMS Web Browser
     href: sql-server-management-studio-web-browser.md
+  - name: Use the Toolbox
+    href: use-the-toolbox.md
 - name: Arguments for External Tools
   href: use-of-sql-server-features-and-capabilities-wwi-oltp.md
 - name: Add an External Tool to the Tools Menu
   href: add-an-external-tool-to-the-tools-menu-sql-server-management-studio.md
 - name: Configure Login Auditing
   href: configure-login-auditing-sql-server-management-studio.md
-- name: Use the Toolbox
-  href: use-the-toolbox.md
 - name: SSMS Utility
   href: ssms-utility.md
 - name: SSMS Keyboard Shortcuts

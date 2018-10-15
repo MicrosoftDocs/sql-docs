@@ -34,7 +34,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 ## Query for a specific time using the AS OF sub-clause  
  Use the **AS OF** sub-clause when you need to reconstruct state of data as it was at any specific time in the past. You can reconstruct the data with the precision of datetime2 type that was specified in **PERIOD** column definitions.    
-The **AS OF** sub-clause clause can be used with constant literals or with variables, which allows you to dynamically specify time condition. The values provided values are interpreted as UTC time.  
+The **AS OF** sub-clause clause can be used with constant literals or with variables, which allows you to dynamically specify time condition. The values provided are interpreted as UTC time.  
   
  This first example returns the state of the dbo.Department table AS OF a specific date in the past.  
   

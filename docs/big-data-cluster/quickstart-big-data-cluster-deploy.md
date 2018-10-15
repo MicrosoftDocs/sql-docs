@@ -48,10 +48,7 @@ Setting the environment variables required for deploying big data cluster slight
 Before continuing, note the following important guidelines:
 
 - In the [Command Window](http://docs.microsoft.com/visualstudio/ide/reference/command-window), quotes are included in the environment variables. If you use quotes to wrap a password, the quotes are included in the password.
-- In bash, quotes are not included in the password. Wrap the password in single quotes if it contains any special characters. The examples use single-quote delimiters `'`.
-- In bash, quotes encapsulate the string as explained in the bash manual:
-  - [single quotes](http://www.gnu.org/software/bash/manual/html_node/Single-Quotes.html) `'` preserve the literal value of a string.
-  - [double quotes](http://www.gnu.org/software/bash/manual/html_node/Double-Quotes.html) `"` encapsulate the string with exceptions for special characters.
+- In bash, quotes are not included in the variable. Our examples use double quotes `"`.
 - You can set the password environment variables to whatever you like, but make sure they are sufficiently complex and don’t use the `!`, `&`, or `'` characters.
 - For the CTP 2.0 release, do not change the default ports.
 - The `sa` account is a system administrator on the SQL Server Master instance that gets created during setup. After creating your SQL Server container, the `MSSQL_SA_PASSWORD` environment variable you specified is discoverable by running `echo $MSSQL_SA_PASSWORD` in the container. For security purposes, change your `sa` password as per best practices documented [here](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password).
@@ -60,7 +57,7 @@ Initialize the following environment variables.  They are required for deploying
 
 ### Windows
 
-Using a Command window (not PowerShell), configure the following environment variables:
+Using a Command Window (not PowerShell), configure the following environment variables:
 
 ```cmd
 SET ACCEPT_EULA=Y
@@ -115,7 +112,7 @@ mssqlctl create cluster <name of your cluster>
 > The name of your cluster needs to be only lower case alpha-numeric characters, no spaces. All Kubernetes artifacts for the big data cluster will be created in a namespace with same name as the cluster name specified.
 
 
-The command window will output the deployment status. You can also check the deployment status by running these commands in a different cmd window:
+The command window or shell returns the deployment status. You can also check the deployment status by running these commands in a different cmd window:
 
 ```bash
 kubectl get all -n <name of your cluster>

@@ -4,8 +4,8 @@ description: This quickstart shows how to use Azure Data Studio to connect to a 
 ms.custom: "tools|sos"
 ms.date: "09/24/2018"
 ms.prod: sql
+ms.technology: azure-data-studio
 ms.reviewer: "alayu; sstein"
-ms.prod_service: sql-tools
 ms.topic: "quickstart"
 author: "yualan"
 ms.author: "alayu"

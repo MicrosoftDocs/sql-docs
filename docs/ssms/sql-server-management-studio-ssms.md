@@ -1,11 +1,9 @@
 ---
 title: "SQL Server Management Studio (SSMS) | Microsoft Docs"
-ms.date: "02/02/2017"
+ms.date: "10/15/2018"
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
-ms.custom: ""
 ms.technology: ssms
+ms.reviewer: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.ssms.viewhelp.f1"
@@ -27,7 +25,6 @@ manager: craigg
  - [**Download SQL Server 2016 Developer**](https://my.visualstudio.com/Downloads?q=SQL%20Server%20Developer)
  - [**Download Visual Studio**](https://www.visualstudio.com/downloads/)
 
-  
 ## SQL Server Management Studio components  
   
 |Description|Component|  
@@ -38,7 +35,16 @@ manager: craigg
 |How to use the visual design tools included in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].|[Visual Database Tools](../ssms/visual-db-tools/visual-database-tools.md)|  
 |How to use the [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] language editors to interactively build and debug queries and scripts.|[Query and Text Editors (SQL Server Management Studio)](../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)|  
 
+##
+
+- Starting with SSMS 17.0, the SQL Tools team has adopted the [Microsoft Modern Lifecycle Policy](https://support.microsoft.com/help/30881/modern-lifecycle-policy).
+- Read the original [Modern Lifecycle Policy announcement](https://support.microsoft.com/help/447912/announcing-microsoft-modern-lifecycle-policy).
+- For additional infomrmation, see [Modern Policy FAQs](https://support.microsoft.com/help/30882/modern-lifecycle-policy-faq).
 
 ## Next steps  
 [Tutorial: SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)  
 [Tutorial: Writing Transact-SQL Statements](http://msdn.microsoft.com/en-us/2addc9be-67d0-423d-a457-192fe9d7d058)  
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
+
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

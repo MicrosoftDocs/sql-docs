@@ -11,7 +11,7 @@ ms.prod: sql
 
 # Quickstart: Deploy SQL Server big data cluster on Azure Kubernetes Service (AKS)
 
-In this quickstart, you will install SQL Server big data cluster on AKS in a default configuration suitable for dev/test environments. In addition to SQL Master instance, the cluster will include one compute pool instance, one data pool instance and two storage pool instances. Data will be persisted using Kubernetes persistent volumes that are provisioned on top of AKS default storage classes. In the [deployment guidance](deployment-guidance.md) topic you can find a set of environment variables that you can use to further customize your configuration.
+In this quickstart, you will install SQL Server big data cluster on AKS in a default configuration suitable for dev/test environments. In addition to SQL Master instance, the cluster includes one compute pool instance, one data pool instance, and two storage pool instances. Data is persisted using Kubernetes persistent volumes that are provisioned on top of AKS default storage classes. To further customize your configuration, see the environment variables at [deployment guidance](deployment-guidance.md).
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
@@ -19,11 +19,11 @@ In this quickstart, you will install SQL Server big data cluster on AKS in a def
 
 This quickstart requires that you have already configured an AKS cluster with a minimum version of v1.10. For more information, see the [deploy on AKS](deploy-on-aks.md) guide.
 
-On the computer you are using to run the commands to install the SQL Server big data cluster, you need to install [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/). SQL Server big data cluster requires a minimum 1.10 version for Kubernetes, for both server and client (kubectl). To install kubectl, see [Install kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl). 
+On the computer you are using to run the commands to install the SQL Server big data cluster, install [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/). SQL Server big data cluster requires a minimum 1.10 version for Kubernetes, for both server and client (kubectl). To install kubectl, see [Install kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl). 
 
-To install the `mssqlctl` CLI tool to manage the SQL Server Big Data cluster on your client machine, you must first install [Python](https://www.python.org/downloads/) minimum version v3.0 and [pip3](https://pip.pypa.io/en/stable/installing/). Note that pip is already installed if you are using a Python version of at least 3.4 downloaded from [python.org](https://www.python.org/).
+To install the `mssqlctl` CLI tool to manage the SQL Server Big Data cluster on your client machine, you must first install [Python](https://www.python.org/downloads/) minimum version v3.0 and [pip3](https://pip.pypa.io/en/stable/installing/). `pip` is already installed if you are using a Python version of at least 3.4 downloaded from [python.org](https://www.python.org/).
 
-If your Python installation is missing the `requests` package, you must install `requests` using `python -m pip install requests`. If you already have a `requests` package upgrade it to latest version using `python -m pip install requests --upgrade`.
+If your Python installation is missing the `requests` package, you must install `requests` using `python -m pip install requests`. If you already have a `requests` package, upgrade it to latest version using `python -m pip install requests --upgrade`.
 
 ## Verify AKS configuration
 
@@ -35,7 +35,7 @@ kubectl config view
 
 ## Install mssqlctl CLI management tool
 
-Run below command to install `mssqlctl` tool on your client machine. Same command works from both a Windows and a Linux client, but make sure you are running it from a cmd window that runs with administrative priviledges on Windows or you prefix it with `sudo` on Linux:
+Run below command to install `mssqlctl` tool on your client machine. The command works from both a Windows and a Linux client, but make sure you are running it from a cmd window that runs with administrative privileges on Windows or prefix it with `sudo` on Linux:
 
 ```
 pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.0 mssqlctl  

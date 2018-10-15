@@ -12,6 +12,8 @@
   items:
   - name: 1_Query storage pool
     href: tutorial-query-hdfs-storage-pool.md
+  - name: 2_Query Oracle data
+    href: tutorial-query-oracle.md
 - name: Concepts
   items:
   - name: Controller

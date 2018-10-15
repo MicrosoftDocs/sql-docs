@@ -4,8 +4,8 @@ description: This tutorial demonstrates how to create an extension for Azure Dat
 ms.custom: "tools|sos"
 ms.date: "09/24/2018"
 ms.prod: sql
+ms.technology: azure-data-studio
 ms.reviewer: "alayu; sstein"
-ms.prod_service: sql-tools
 ms.topic: "tutorial"
 author: "kevcunnane"
 ms.author: "kcunnane"

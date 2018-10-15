@@ -11,7 +11,7 @@ ms.prod: sql
 
 # Quickstart: Deploy SQL Server big data cluster on Azure Kubernetes Service (AKS)
 
-In this quickstart, you will install SQL Server big data cluster on AKS in a default configuration suitable for dev/test environments. In addition to SQL Master instance, the cluster includes one compute pool instance, one data pool instance, and two storage pool instances. Data is persisted using Kubernetes persistent volumes that are provisioned on top of AKS default storage classes. To further customize your configuration, see the environment variables at [deployment guidance](deployment-guidance.md).
+Install SQL Server big data cluster on AKS in a default configuration suitable for dev/test environments. In addition to a SQL Master instance, the cluster includes one compute pool instance, one data pool instance, and two storage pool instances. Data is persisted using Kubernetes persistent volumes that use AKS default storage classes. To further customize your configuration, see the environment variables at [deployment guidance](deployment-guidance.md).
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
@@ -51,7 +51,7 @@ Before continuing, note the following important guidelines:
 - In bash, quotes are not included in the password. Wrap the password in single quotes if it contains any special characters. The examples use single-quote delimiters `'`.
 - In bash, quotes encapsulate the string as explained in the bash manual:
   - [single quotes](http://www.gnu.org/software/bash/manual/html_node/Single-Quotes.html) `'` preserve the literal value of a string.
-  - [double quotes](www.gnu.org/software/bash/manual/html_node/Double-Quotes.html) `"` encapsulate the string with exceptions for special characters.
+  - [double quotes](http://www.gnu.org/software/bash/manual/html_node/Double-Quotes.html) `"` encapsulate the string with exceptions for special characters.
 - You can set the password environment variables to whatever you like, but make sure they are sufficiently complex and don’t use the `!`, `&`, or `'` characters.
 - For the CTP 2.0 release, do not change the default ports.
 - The `sa` account is a system administrator on the SQL Server Master instance that gets created during setup. After creating your SQL Server container, the `MSSQL_SA_PASSWORD` environment variable you specified is discoverable by running `echo $MSSQL_SA_PASSWORD` in the container. For security purposes, change your `sa` password as per best practices documented [here](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password).

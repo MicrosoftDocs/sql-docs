@@ -87,6 +87,7 @@
     - name: SQL on Channel 9
       href: https://channel9.msdn.com/Search?term=sql#ch9Search&lang-en=en&pubDate=year
   - name: Feedback and help
+    href: sql-server-get-help.md
     items:
     - name: Contribute to SQL Documentation!
       href: sql-server-docs-contribute.md

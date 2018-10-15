@@ -15,7 +15,7 @@ manager: cgronlun
 
 The [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] is a service that manages and executes external scripts, similar to the way that the full-text indexing and query service launches a separate host for processing full-text queries.
 
-A separate [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] service is created for each database engine instance to which you have added SQL Server machine learning (R or Python) integration.
+A separate [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] service is created for each database engine instance to which you have added SQL Server machine learning (R or Python) integration. There is one Launchpad service for each database engine instance, so if you have multiple instances with R or Python support, you will have a Launchpad service for each one. A database engine instance is bound to the Launchpad service created for it. All invocations of external script in a stored procedure or T-SQL result in the SQL Server service calling the Launchpad service created for the same instance.
 
 For more information, see the Launchpad sections in [Extensibility architecture in SQL Server Machine Learning Services](../../advanced-analytics/concepts/extensibility-framework.md#launchpad) and [Security overview for the extensibility framework in SQL Server Machine Learning Services](../../advanced-analytics/concepts/security.md#launchpad).
 

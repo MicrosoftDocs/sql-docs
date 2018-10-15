@@ -2,7 +2,7 @@
 title: "Adaptive query processing in Microsoft SQL databases | Microsoft Docs | Microsoft Docs"
 description: "Adaptive query processing features to improve query performance in SQL Server (2017 and later), and Azure SQL Database."
 ms.custom: ""
-ms.date: "09/07/2018"
+ms.date: "10/15/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -75,7 +75,7 @@ You can track memory grant feedback events using the *memory_grant_updated_by_fe
 ### Memory grant feedback, resource governor and query hints
 The actual memory granted honors the query memory limit determined by the resource governor or query hint.
 
-### Disabling memory grant feedback without changing the compatibility level
+### Disabling batch mode memory grant feedback without changing the compatibility level
 Memory grant feedback can be disabled at the database or statement scope while still maintaining database compatibility level 140 and higher. To disable batch mode memory grant feedback for all query executions originating from the database, execute the following within the context of the applicable database:
 
 ```sql
@@ -126,6 +126,30 @@ LastRequestedMemory shows the granted memory in Kilobytes (KB) from the prior qu
 
 > [!NOTE]
 > The public preview row mode memory grant feedback plan attributes are visible in SQL Server Management Studio graphical query execution plans in versions 17.9 and higher. 
+
+### Disabling row mode memory grant feedback without changing the compatibility level
+Row mode memory grant feedback can be disabled at the database or statement scope while still maintaining database compatibility level 150 and higher. To disable row mode memory grant feedback for all query executions originating from the database, execute the following within the context of the applicable database:
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET ROW_MODE_MEMORY_GRANT_FEEDBACK = OFF;
+```
+
+To re-enable row mode memory grant feedback for all query executions originating from the database, execute the following within the context of the applicable database:
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET ROW_MODE_MEMORY_GRANT_FEEDBACK = ON;
+```
+
+You can also disable row mode memory grant feedback for a specific query by designating DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK as a USE HINT query hint.  For example:
+
+```sql
+SELECT * FROM Person.Address  
+WHERE City = 'SEATTLE' AND PostalCode = 98104
+OPTION (USE HINT ('DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK')); 
+```
+
+A USE HINT query hint takes precedence over a database scoped configuration or trace flag setting.
+
 
 ## Batch mode Adaptive Joins
 The batch mode Adaptive Joins feature enables the choice of a [Hash Join or Nested Loops Join](../../relational-databases/performance/joins.md) method to be deferred until **after** the first input has been scanned. The Adaptive Join operator defines a threshold that is used to decide when to switch to a Nested Loops plan. Your plan can therefore dynamically switch to a better join strategy during execution.

@@ -3,8 +3,8 @@ layout: HubPage
 hide_bc: true
 experimental: true
 experiment_id: "81ba5f65-59fb-4d"
-title: Microsoft SQL Server Documentation
-description: Learn how to move and migrate databases and data using a variety of tools and services. Get documentation, example code, tutorials, and more.
+title: SQL Server - Load and move data
+description: Explore the features that help you move, load, and manage your data with SQL Server. 
 ms.topic: hub-page
 featureFlags:
 - clicktale

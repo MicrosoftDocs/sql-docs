@@ -8,7 +8,7 @@ ms.technology: high-availability
 ms.topic: conceptual
 ms.assetid: 67c6a601-677a-402b-b3d1-8c65494e9e96
 author: MashaMSFT
-ms.author: "v-saume"
+ms.author: "mathoma"
 manager: craigg
 ---
 # Automatically initialize Always On Availability group

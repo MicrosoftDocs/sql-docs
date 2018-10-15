@@ -3,8 +3,8 @@ layout: HubPage
 hide_bc: true
 experimental: true
 experiment_id: "81ba5f65-59fb-4d"
-title: Microsoft Azure Documentation
-description: Learn how to build and manage powerful applications using Microsoft Azure cloud services. Get documentation, example code, tutorials, and more.
+title: SQL Server Business Continuity
+description: Explore the different SQL Server features for high availability, disaster recovery, and keeping your business running, no matter the circumstance. 
 ms.topic: hub-page
 featureFlags:
 - clicktale

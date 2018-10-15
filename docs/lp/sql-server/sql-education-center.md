@@ -458,12 +458,22 @@ featureFlags:
         <ul class="links">
            <li>
                 <a href="http://aka.ms/editsqldocs" data-linktype="external">
-                    Contribute to SQL docs
+                    Contribute
                 </a>
             </li>
            <li>
-                <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR7y_maOEfTBMj0E3nehXKj9UQjIxMzJORE1BTVk4WU9YSlNaWVVIRElPRC4u" data-linktype="external">
-                    SQL Docs Feedback
+                <a href="https://docs.microsoft.com/sql/sql-server/sql-server-get-help" data-linktype="external">
+                    Get help
+                </a>
+            </li>
+           <li>
+                <a href="http://aka.ms/sqldocsfeedback" data-linktype="external">
+                    Feedback
+                </a>
+            </li>
+           <li>
+                <a href="http://aka.ms/sqldocsurvey" data-linktype="external">
+                    Survey
                 </a>
             </li>
            <li>

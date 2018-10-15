@@ -121,7 +121,7 @@ By default, the account under which external processes run does not have access 
 
 5. Repeat the previous two steps on any Java classpath folders containing the .class or .jar files that you want to run on SQL Server. For example, if you keep your compiled programs in a path like C:\JavaPrograms\my-app, grant **SQLRUserGroup** and **ALL APPLICATION PACKAGES** permission on the folder so that the programs can be loaded.
 
-  Be sure to grant permissions on the full path, starting at the root folder. Permission on the containing folder won't be sufficient for loading your code.
+  Be sure to grant permissions on the full path, starting at the root folder. Permission on just the containing folder won't be sufficient for loading your code.
 
 <a name="configure-script-execution"></a>
 

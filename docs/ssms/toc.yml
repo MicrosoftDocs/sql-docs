@@ -45,26 +45,23 @@
   href: arguments-dialog-box.md
 - name: Administer Servers with SSMS
   href: administer-servers-with-sql-server-management-studio.md
-- name: License Terms
-  href: sql-server-management-studio-license-terms.md
 - name: Configure WMI to Show Server Status in SQL Server Tools
   href: configure-wmi-to-show-server-status-in-sql-server-tools.md
 - name: The SSMS Environment
   href: the-sql-server-management-studio-environment.md
-- name: Property Pages in SSMS
-  href: property-pages-in-sql-server-management-studio.md
-- name: Properties Window in SSMS
-  href: properties-window-management-studio.md
-- name: Output Window in SSMS
-  href: output-window.md
-- name: About Dialog Box
-  href: about-dialog-box.md
-- name: SSMS Web Browser
-  href: sql-server-management-studio-web-browser.md
-- name: General User Interface Elements
-  href: general-user-interface-elements.md
-- name: User Assistance in SSMS
-  href: user-assistance-in-sql-server-management-studio.md
+  items:
+  - name: General User Interface Elements
+    href: general-user-interface-elements.md
+  - name: About Dialog Box
+    href: about-dialog-box.md
+  - name: Property Pages in SSMS
+    href: property-pages-in-sql-server-management-studio.md
+  - name: Properties Window in SSMS
+    href: properties-window-management-studio.md
+  - name: Output Window in SSMS
+    href: output-window.md
+  - name: SSMS Web Browser
+    href: sql-server-management-studio-web-browser.md
 - name: Arguments for External Tools
   href: use-of-sql-server-features-and-capabilities-wwi-oltp.md
 - name: Add an External Tool to the Tools Menu
@@ -73,9 +70,15 @@
   href: configure-login-auditing-sql-server-management-studio.md
 - name: Use the Toolbox
   href: use-the-toolbox.md
-- name: Ssms Utility
+- name: SSMS Utility
   href: ssms-utility.md
 - name: SSMS Keyboard Shortcuts
   href: sql-server-management-studio-keyboard-shortcuts.md
-- name: Anonymous Usage Data
-  href: sql-server-management-studio-telemetry-ssms.md
+- name: Resources
+  items:
+  - name: License Terms
+    href: sql-server-management-studio-license-terms.md
+  - name: User Assistance in SSMS
+    href: user-assistance-in-sql-server-management-studio.md
+  - name: Anonymous Usage Data
+    href: sql-server-management-studio-telemetry-ssms.md

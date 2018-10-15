@@ -47,16 +47,20 @@ Setting the environment variables required for deploying big data cluster slight
 
 Before continuing, note the following important guidelines:
 
-- Make sure you wrap the passwords in double quotes if it contains any special characters. Note that double quotes delimiters work only in bash commands.
-- You can set the password environment variables to whatever you like, but make sure they are sufficiently complex and don’t use the `!`, `&`, or `‘` characters.
+- In the [Command Window](http://docs.microsoft.com/visualstudio/ide/reference/command-window), quotes are included in the environment variables. If you use quotes to wrap a password, the quotes are included in the password.
+- In bash, quotes are not included in the password. Wrap the password in single quotes if it contains any special characters. The examples use single-quote delimiters `'`.
+- In bash, quotes encapsulate the string as explained in the bash manual:
+  - [single quotes](http://www.gnu.org/software/bash/manual/html_node/Single-Quotes.html) `'` preserve the literal value of a string.
+  - [double quotes](www.gnu.org/software/bash/manual/html_node/Double-Quotes.html) `"` encapsulate the string with exceptions for special characters.
+- You can set the password environment variables to whatever you like, but make sure they are sufficiently complex and don’t use the `!`, `&`, or `'` characters.
 - For the CTP 2.0 release, do not change the default ports.
-- The **SA** account is a system administrator on the SQL Server Master instance that gets created during setup. After creating your SQL Server container, the MSSQL_SA_PASSWORD environment variable you specified is discoverable by running echo $MSSQL_SA_PASSWORD in the container. For security purposes, change your SA password as per best practices documented [here](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password).
+- The `sa` account is a system administrator on the SQL Server Master instance that gets created during setup. After creating your SQL Server container, the `MSSQL_SA_PASSWORD` environment variable you specified is discoverable by running `echo $MSSQL_SA_PASSWORD` in the container. For security purposes, change your `sa` password as per best practices documented [here](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password).
 
 Initialize the following environment variables.  They are required for deploying a big data cluster:
 
 ### Windows
 
-Using a CMD window (not PowerShell), configure the following environment variables:
+Using a Command window (not PowerShell), configure the following environment variables:
 
 ```cmd
 SET ACCEPT_EULA=Y
@@ -84,16 +88,16 @@ export ACCEPT_EULA=Y
 export CLUSTER_PLATFORM=aks
 
 export CONTROLLER_USERNAME=<controller_admin_name – can be anything>
-export CONTROLLER_PASSWORD=<controller_admin_password – can be anything, password complexity compliant>
-export KNOX_PASSWORD=<knox_password – can be anything, password complexity compliant>
-export MSSQL_SA_PASSWORD=<sa_password_of_master_sql_instance, password complexity compliant>
+export CONTROLLER_PASSWORD='<controller_admin_password – can be anything, password complexity compliant>'
+export KNOX_PASSWORD='<knox_password – can be anything, password complexity compliant>'
+export MSSQL_SA_PASSWORD='<sa_password_of_master_sql_instance, password complexity compliant>'
 
 export DOCKER_REGISTRY=private-repo.microsoft.com
 export DOCKER_REPOSITORY=mssql-private-preview
-export DOCKER_USERNAME=<your username, credentials provided by Microsoft>
-export DOCKER_PASSWORD=<your password, credentials provided by Microsoft>
+export DOCKER_USERNAME='<your username, credentials provided by Microsoft>'
+export DOCKER_PASSWORD='<your password, credentials provided by Microsoft>'
 export DOCKER_EMAIL=<your Docker email, use the username provided by Microsoft>
-export DOCKER_PRIVATE_REGISTRY="1"
+export DOCKER_PRIVATE_REGISTRY='1'
 ```
 
 > [!NOTE]

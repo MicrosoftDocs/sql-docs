@@ -3,8 +3,8 @@ layout: HubPage
 hide_bc: true
 experimental: true
 experiment_id: "81ba5f65-59fb-4d"
-title: Microsoft Azure Documentation
-description: Learn how to build and manage powerful applications using Microsoft Azure cloud services. Get documentation, example code, tutorials, and more.
+title: SQL Server Database Design
+description: Discover the features of SQL Server that help you design the database that best suits your business needs. 
 ms.topic: hub-page
 featureFlags:
 - clicktale

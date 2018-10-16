@@ -14,8 +14,6 @@ manager: cgronlun
 
 This article provides a comprehensive list of the tutorials, demos, and sample applications that use machine learning features in SQL Server 2016 or SQL Server 2017. Start here to learn how to run R or Python from T-SQL, how to use remote and local compute contexts, and how to optimize your R and Python code for a SQL production environment.
 
-## Start here
-
 + [Python tutorials](../tutorials/sql-server-python-tutorials.md)
 
 + [R tutorials](../tutorials/sql-server-r-tutorials.md)
@@ -36,33 +34,13 @@ For more information about requirements and how to get set up, see [Prerequisite
 
 These samples and demos provided by the SQL Server and R Server development team highlight ways that you can use embedded analytics in real-world applications.
 
-+ [Perform customer clustering using R and SQL Server](https://microsoft.github.io/sql-ml-tutorials/R/customerclustering/)
-
-  Use unsupervised learning to segment customers based on sales data. This example uses the scalable rxKmeans algorithm from Microsoft R to build the clustering model. 
-  
-  Applies to: SQL Server 2016 or SQL Server 2017
-
-+ [NEW! Perform customer clustering using Python and SQL Server](https://microsoft.github.io/sql-ml-tutorials/python/customerclustering/)
-
-    Learn how to use the Kmeans algorithm to perform unsupervised clustering of customers. This example uses the Python language in-database.
-    
-    Applies to: SQL Server 2017
-
-+ [Build a predictive model using R and SQL Server](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction)
-
-  Learn how a ski rental business might use machine learning to predict future rentals, which helps the business plan and staff to meet future demand. This example uses the Microsoft algorithms to build logistic regression and decision trees models. 
-  
-  Applies to: SQL Server 2016 or SQL Server 2017
-
-+ [Build a predictive model using Python and SQL Server](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/)
-
-   Build the ski rental analysis application using Python, to help plan for future demand. This example uses the new Python library, **revoscalepy**, to create a linear regression model.
-   
-   Applies to: SQL Server 2017
-
-+ [How to use Tableau with SQL Server Machine Learning Services](https://blogs.msdn.microsoft.com/mlserver/2017/12/14/how-to-use-tableau-with-sql-server-machine-learning-services-with-r-and-python/)
-
-    Analyze social media and create Tableau graphs, using SQL Server and R.
+| Link | Description | Applies to |
+|------|-------------|------------|
+| [Perform customer clustering using R and SQL Server](https://microsoft.github.io/sql-ml-tutorials/R/customerclustering/) | Use unsupervised learning to segment customers based on sales data. This example uses the scalable rxKmeans algorithm from Microsoft R to build the clustering model. | SQL Server 2016 or SQL Server 2017 |
+| [Perform customer clustering using Python and SQL Server](https://microsoft.github.io/sql-ml-tutorials/python/customerclustering/) | Learn how to use the Kmeans algorithm to perform unsupervised clustering of customers. This example uses the Python language in-database.| SQL Server 2017 |
+| [Build a predictive model using R and SQL Server](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction) | Learn how a ski rental business might use machine learning to predict future rentals, which helps the business plan and staff to meet future demand. This example uses the Microsoft algorithms to build logistic regression and decision trees models. | SQL Server 2016 or SQL Server 2017 |
+| [Build a predictive model using Python and SQL Server](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/) | Build the ski rental analysis application using Python, to help plan for future demand. This example uses the new Python library, **revoscalepy**, to create a linear regression model. | SQL Server 2017 |
+| [How to use Tableau with SQL Server Machine Learning Services](https://blogs.msdn.microsoft.com/mlserver/2017/12/14/how-to-use-tableau-with-sql-server-machine-learning-services-with-r-and-python/) | Analyze social media and create Tableau graphs, using SQL Server and R. | SQL Server 2016 or SQL Server 2017 |
 
 ### <a name="bkmk_solutions"></a>Solution templates
 
@@ -88,23 +66,3 @@ For more information, see [Machine Learning Templates with SQL Server 2016 R Ser
 + [Get started with MicrosoftML](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-the-microsoftml-package)
 
   Learn how to use the new algorithms in the MicrosoftML package for advanced modeling and scalable data transformations, optimized for multiple compute contexts.
-
-## <a name="bkmk_Prerequisites"></a>Prerequisites
-
-To run these tutorials, you must download and install the SQL Server machine learning components, as described here:
-
-+ [Install SQL Server 2017 Machine Learning Services (In-Database)](../install/sql-machine-learning-services-windows-install.md)
-+ [Install SQL Server 2016 R Services (In-Database)](../install/sql-r-services-windows-install.md)
-
-With SQL Server 2017, you can install either R or Python, or both. Otherwise the overall setup process, architecture, and requirements are the same.
-
-After running SQL Server setup, don't forget these important steps:
-
-1. Enable the external script execution feature by running `sp_configure 'external scripts enabled', 1`. Follow the instructions to reconfigure and restart SQL Server.
-2. Ensure that the Launchpad service is running, and that the Launchpad worker accounts can connect to the SQL Server instance.
-3. Review the permissions associated with the users who must run R or Python scripts. Regardless of whether you use SQL logins or Windows user accounts, the user must have permission to run R or Python scripts, and must be able to connect to the instance. Depending on the tutorial, the user might also require permission to write data, create database objects, or do a bulk import of data.
-
-For details, see this article for some common setup and configuration issues: [Troubleshooting Machine Learning Services](../machine-learning-troubleshooting-faq.md)
-
-> [!NOTE]
-> You cannot run these tutorials using another open source R or Python tool. Both your development environment and the SQL Server computer with machine learning must have the R or Python libraries provided by Microsoft, which support integration with SQL Server and use of remote compute contexts.

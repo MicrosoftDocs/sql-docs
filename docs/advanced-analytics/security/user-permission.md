@@ -4,7 +4,7 @@ description: How to give users permission to SQL Server Machine Learning Service
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 10/05/2018  
+ms.date: 10/16/2018  
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph

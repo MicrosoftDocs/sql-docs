@@ -75,13 +75,13 @@ In this section, you use this same pattern to train a model on the data you've a
     ```sql
     DECLARE @model varbinary(max);
     DECLARE @new_model_name varchar(50)
-    SET @new_model_name = 'Naive Bayes'
+    SET @new_model_name = 'Naive Bayes ' + CAST(GETDATE()as varchar)
     SELECT @new_model_name 
     EXEC generate_iris_model @model OUTPUT;
     INSERT INTO iris_models (model_name, model) values(@new_model_name, @model);
     ```
 
-7. To view the models, run a simple SELECT statement.
+7. To view the models, run a simple SELECT statement. You should now see a model with the current timestamp, as created by the `SET @new_model_name = 'Naive Bayes ' + CAST(GETDATE()as varchar)` statement in the previous stored procedure.
 
     ```sql
     SELECT * FROM iris_models;
@@ -129,12 +129,16 @@ Finally, let's load this model from the table into a variable, and pass it back 
 
 2. Run the following lines to pass the model name "Naive Bayes" to the stored procedure that executes the scoring code. 
 
+   Be sure to specify a valid Naive Bayes model name. On your system, the timestamp indicates when the model was created.
+
     ```sql
-    EXEC predict_species 'Naive Bayes';
+    EXEC predict_species 'Naive Bayes <timestamp>';
     GO
     ```
 
     When you run the stored procedure, it returns a Python data.frame. This line of T-SQL specifies the schema for the returned results: `WITH RESULT SETS ( ("id" int, "SpeciesId" int, "SpeciesId.Predicted" int));`
+
+    ![Result set from running stored procedure](media/train-score-using-python-NB-model-results.png)
 
     You can insert the results into a new table, or return them to an application.
 

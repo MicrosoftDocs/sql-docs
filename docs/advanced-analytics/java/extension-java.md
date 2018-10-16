@@ -33,7 +33,7 @@ Java version requirements vary across Windows and Linux. The Java Runtime Enviro
 
 On Linux, the **mssql-server-extensibility-java** package automatically installs JRE 1.8 if it is not already installed. Installation scripts also add the JVM path to an environment variable called JAVA_HOME.
 
-On Windows, we recommend installing the JDK under the default /Program Files/ folder if possible. Otherwise, extra configuration is required to grant permissions to executables. For more information, see [Install on Windows](#install-on-windows).
+On Windows, we recommend installing the JDK under the default /Program Files/ folder if possible. Otherwise, extra configuration is required to grant permissions to executables. For more information, see the [grant permissions (Windows)](#perms-nonwindows) section in this document.
 
 > [!Note]
 > Given that Java is backwards compatible, earlier versions might work, but the supported and tested versions for this early CTP release are listed in the table.
@@ -76,9 +76,13 @@ After completing installation, your next step is [Configure external script exec
 
 ### Add the JAVA_HOME variable
 
-JAVA_HOME is an environment variable that specifies the location of the Java interpreter. In this step, create a system environment variable for it on Windows. 
+JAVA_HOME is an environment variable that specifies the location of the Java interpreter. In this step, create a system environment variable for it on Windows.
 
-1. Find and copy the JDK/JRE installation path (for example, C:\Program Files\Java\jdk-10.0.2) .
+1. Find and copy the JDK/JRE installation path (for example, C:\Program Files\Java\jdk-10.0.2).
+
+  In CTP 2.0, setting JAVA_HOME to the base jdk folder only works for Java 1.10. 
+
+  For Java 1.8, extend the path to reach the jvm.dll on Windows in their JDK (for example, "C:\Program Files\Java\jdk1.8.0_181\bin\server". Alternatively, you can point to a JRE base folder: "C:\Program Files\Java\jre1.8.0_181".
 
 2. In Control Panel, open **System and Security**, open **System**, and click **Advanced System Properties**.
 

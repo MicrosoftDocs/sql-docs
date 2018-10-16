@@ -1,6 +1,6 @@
 ---
 title: SQL Server help and feedback | Microsoft Docs
-ms.date: "10/10/2018"
+ms.date: 10/10/2018
 ms.prod: sql
 ms.reviewer: ""
 ms.custom: ""
@@ -72,10 +72,9 @@ There are a few social media outlets that can reach the SQL team as well.
 - [MashaMSFT Twitter](https://twitter.com/mashamsft)
 - [MikeRayMSFT Twitter](https://twitter.com/mncray)
 
+## I want to provide feedback for SQL Docs content
 
-## I want to provide feedback for SQL Docs content 
-
-### Editing content
+### ![edit content](../media/edit-topic-pencil.png) Editing content
 Did you find something wrong with our documentation? Did you know that you could edit the content yourself? If you do so, not only will our documentation improve, but you'll also be credited as a contributor to the page! Find out more information at [http://aka.ms/editsqldocs](http://aka.ms/editsqldocs). 
 
 ### Surveys

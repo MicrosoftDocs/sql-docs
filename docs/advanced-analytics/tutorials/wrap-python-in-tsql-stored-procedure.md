@@ -12,7 +12,7 @@ manager: cgronlun
 # Wrap Python code in a stored procedure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In this lesson, learn how to embed Python code in a stored procedure, tget data from the Python sample datasets, and write that data to a SQL Server table.
+In this lesson, learn how to embed Python code in a stored procedure, get data from the Python sample datasets, and write that data to a SQL Server table.
 
 The system stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) provides the wrapper that passes SQL variables and SQL datasets into Python. It also handles the results output by Python and passes them to SQL Server in a format compatible with SQL data types.
 

@@ -3,7 +3,7 @@ title: Run Python using T-SQL | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
+ms.date: 10/15/2018  
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
@@ -12,26 +12,15 @@ manager: cgronlun
 # Run Python using T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This tutorial explains how you can run Python code in SQL Server 2017. It walks you through the process of moving data between SQL Server and Python, and explains how to wrap well-formed Python code in a stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) to build, train, and use machine learning models in SQL Server.
+This article explains how you can run Python code in SQL Server 2017. It walks you through the basics f moving data between SQL Server and Python: requirements, data structures, inputs, and outputs. It also explains how to wrap well-formed Python code in a stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) to build, train, and use machine learning models in SQL Server.
 
 ## Prerequisites
 
-To complete this tutorial, you must first install SQL Server 2017 and enable Machine Learning Services on the instance, as described in [Install SQL Server 2017 Machine Learning Services (In-Database)](../install/sql-machine-learning-services-windows-install.md). 
+To run the example code in these exercises, you must first install SQL Server 2017 and enable Machine Learning Services on the instance, as described in [Install SQL Server 2017 Machine Learning Services (In-Database)](../install/sql-machine-learning-services-windows-install.md). 
 
 You should also install [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms). Alternatively, you can use another database management or query tool, as long as it can connect to a server and database, and run a T-SQL query or stored procedure.
 
-After you have completed setup, return to this tutorial, to learn how to execute Python code in the context of a stored procedure. 
-
-## Overview
-
-This tutorial includes four lessons:
-
-+ The basics of moving data between SQL Server and Python: learn the basic requirements, data structures, inputs, and outputs.
-+ Practice using stored procedures for simple Python tasks, like loading sample data.
-+ Use stored procedures to create a Python machine learning model, and generate scores from the model.
-+ An optional lesson for users who intend to run Python from a remote client, using SQL Server as the _compute context_. Includes code for building a model; however, requires that you are already somewhat familiar with Python environments and Python tools.
-
-Additional Python samples specific to SQL Server 2017 are provided here: [SQL Server Python tutorials](../tutorials/sql-server-python-tutorials.md)
+When your environment is ready, return to this page to learn how to execute Python code in the context of a stored procedure. 
 
 ## Verify that Python is enabled and the Launchpad is running
 
@@ -116,27 +105,27 @@ For now, let's look at just the default input and output variables, `InputDataSe
 
 1. Run the following code to do some math and output the results.
 
-        ```sql
-        execute sp_execute_external_script 
-        @language = N'Python', 
-        @script = N'
-        a = 1
-        b = 2
-        c = a/b
-        print(c)
-        OutputDataSet = c
-        '
-        WITH RESULT SETS ((ResultValue float))
-        ```
+    ```sql
+    execute sp_execute_external_script 
+    @language = N'Python', 
+    @script = N'
+    a = 1
+    b = 2
+    c = a/b
+    print(c)
+    OutputDataSet = c
+    '
+    WITH RESULT SETS ((ResultValue float))
+    ```
 
 2. You should get an error, because the Python code generates a scalar, not a data frame.
 
-        **Results**
+    **Results**
 
-        ```text
-        line 43, in transform
-            raise TypeError('OutputDataSet should be of type pandas.DataFrame')
-        ```
+    ```text
+    line 43, in transform
+        raise TypeError('OutputDataSet should be of type pandas.DataFrame')
+    ```
 
 3. Now see what happens when you pass a tabular dataset to Python, using the default input variable `InputDataSet`. 
 

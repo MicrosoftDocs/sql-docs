@@ -4,7 +4,7 @@ How many times have you clicked through the SQL Server installation interface ju
 
 Enter PowerShell Desired State Configuration (DSC). Using DSC I can build one configuration template that can be reused over hundreds and thousands of servers. Depending on the build, I may have to tweak a few of the setup parameters, but that's not a big deal because I can still keep all of the standard settings in place. The beautiful thing is it eliminates the possibility that will forget to enter an important parameter after spending a sleepless night caring for my kids.
 
-In this article I will explore the initial setup of a standalone instance of SQL Server 2017 on Windows Server 2016 using the SqlServerDsc DSC resource. Some prior knowledge of DSC will be helpful as I will not explore the hows and whys of how DSC works.
+In this article, I will explore the initial setup of a standalone instance of SQL Server 2017 on Windows Server 2016 using the SqlServerDsc DSC resource. Some prior knowledge of DSC will be helpful as I will not explore the hows and whys of how DSC works.
 
 The following items are required for this walkthrough:
 
@@ -14,7 +14,7 @@ The following items are required for this walkthrough:
 
 ## Prerequisites
 
-In most cases DSC will be used to handle the prerequisite requirements. However, for the purposes of this demo, I will handle the prerequisites manually.
+In most cases, DSC will be used to handle the prerequisite requirements. However, for the purposes of this demo, I will handle the prerequisites manually.
 
 ## Install the SqlServerDsc DSC Resource
 
@@ -42,7 +42,7 @@ Dismount-DiskImage -ImagePath 'C:\en_sql_server_2017_enterprise_x64_dvd_11293666
 
 ### Configuration
 
-Create the configuration function which will be called to generate the MOF document(s).
+Create the configuration function that will be called to generate the MOF document(s).
 
 ```PowerShell
 Configuration SQLInstall
@@ -51,7 +51,7 @@ Configuration SQLInstall
 
 ### Modules
 
-Import the modules into the current session. These tell the configuration document how to build the MOF document(s) and tells the DSC engine how to apply the MOF document(s) to the server.
+Import the modules into the current session. These modules tell the configuration document how to build the MOF document(s) and tells the DSC engine how to apply the MOF document(s) to the server.
 
 ```PowerShell
 Import-DscResource -ModuleName SqlServerDsc
@@ -61,7 +61,7 @@ Import-DscResource -ModuleName SqlServerDsc
 
 #### .NET Framework
 
-SQL Server relies on the .NET framework, therefore we need to ensure it is installed prior to installing SQL Server. In order to accomplish this, the WindowsFeature resource is utilized to install the Net-Framework-45-Core Windows Feature.
+SQL Server relies on the .NET framework, therefore we need to ensure it is installed prior to installing SQL Server. The WindowsFeature resource is utilized to install the Net-Framework-45-Core Windows Feature.
 
 ```PowerShell
 WindowsFeature 'NetFramework45'
@@ -76,9 +76,9 @@ WindowsFeature 'NetFramework45'
 The SqlSetup resource is used to tell DSC how to install SQL Server. The parameters required for a basic installation are:
 
 - **InstanceName**: The name of the instance. Utilize MSSQLSERVER for a default instance.
-- **Features** The features to install. In this example I am only installing the SQLEngine feature.
-- **SourcePath**: The path to the SQL installation media. In this example I stored the SQL installation media in "C:\SQL2017". A network share can be utilized to minimize the space used on the server.
-- **SQLSysAdminAccounts**: The users or groups who are to be a member of the sysadmin role. In this example I am granting the local Administrators group sysadmin access. _Note: This configuration is not recommended in a high security environment._
+- **Features** The features to install. In this example, I am only installing the SQLEngine feature.
+- **SourcePath**: The path to the SQL installation media. In this example, I stored the SQL installation media in "C:\SQL2017". A network share can be utilized to minimize the space used on the server.
+- **SQLSysAdminAccounts**: The users or groups who are to be a member of the sysadmin role. In this example, I am granting the local Administrators group sysadmin access. _Note: This configuration is not recommended in a high security environment._
 
 A full list and description of the parameters available on SqlSetup are available on the [SqlServerDsc GitHub respository](https://github.com/PowerShell/SqlServerDsc/tree/master#sqlsetup).
 
@@ -133,7 +133,7 @@ A directory will be created in the working directory called "SQLInstall" and wil
 
 To start the DSC deployment of SQL Server, call the Start-DscConfiguration cmdlet. The parameters provided to the cmdlet are:
 
-- **Path**: The path to the folder containing the MOF documents to deploy. (eg. "C:\SQLInstall")
+- **Path**: The path to the folder containing the MOF documents to deploy. (for example "C:\SQLInstall")
 - **Wait**: Wait for the configuration job to complete.
 - **Force**: Override any existing DSC configurations.
 - **Verbose**: Show the verbose output. This is handy when pushing a configuration for the first time to aid in troubleshooting.

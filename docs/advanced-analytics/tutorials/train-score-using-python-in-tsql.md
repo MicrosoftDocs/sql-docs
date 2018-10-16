@@ -81,7 +81,7 @@ In this section, you use this same pattern to train a model on the data you've a
     INSERT INTO iris_models (model_name, model) values(@new_model_name, @model);
     ```
 
-7. To view the models, run a simple SELECT statement.
+7. To view the models, run a simple SELECT statement. You should now see a model with the current timestamp, as created by the `SET @new_model_name = 'Naive Bayes ' + CAST(GETDATE()as varchar)` statement in the previous stored procedure.
 
     ```sql
     SELECT * FROM iris_models;
@@ -129,12 +129,16 @@ Finally, let's load this model from the table into a variable, and pass it back 
 
 2. Run the following lines to pass the model name "Naive Bayes" to the stored procedure that executes the scoring code. 
 
+   Be sure to specify a valid Naive Bayes model name. On your system, the timestamp indicates when the model was created.
+
     ```sql
-    EXEC predict_species 'Naive Bayes';
+    EXEC predict_species 'Naive Bayes <timestamp>';
     GO
     ```
 
     When you run the stored procedure, it returns a Python data.frame. This line of T-SQL specifies the schema for the returned results: `WITH RESULT SETS ( ("id" int, "SpeciesId" int, "SpeciesId.Predicted" int));`
+
+    ![Result set from running stored procedure](media/train-score-using-python-NB-model-results.png)
 
     You can insert the results into a new table, or return them to an application.
 
@@ -150,8 +154,8 @@ Moreover, you can generally improve performance by separating the data explorati
 
 Scoring and training processes can often be optimized by leveraging features of SQL Server, such as parallel processing, or by using algorithms in [revoscalepy](../python/what-is-revoscalepy.md) or [MicrosoftML](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) that support streaming and parallel execution, rather than using standard Python libraries. 
 
-## Next lesson
+## Next steps
 
-In the final lesson, you run Python code from a remote client, using SQL Server as the compute context. This step is optional, if you don't have a Python client, or don't intend to run Python outside a stored procedure.
+Previous tutorials focused on local execution. However, you can also run Python code from a client workstation, using SQL Server as the remote compute context. For more information about setting up a client workstation that connects to SQL Server, see [Set up Python client tools](../python/setup-python-client-tools-sql.md).
 
 + [Create a revoscalepy model from a Python client](use-python-revoscalepy-to-create-model.md)

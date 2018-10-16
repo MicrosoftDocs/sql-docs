@@ -3,7 +3,7 @@ title: Wrap Python code in a stored procedure | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
+ms.date: 10/15/2018  
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
@@ -12,7 +12,7 @@ manager: cgronlun
 # Wrap Python code in a stored procedure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In a [previous lesson](run-python-using-t-sql.md), you learned how to make Python talk to SQL Server. In this lesson, you learn how to embed Python code in a stored procedure, to get data from the Python sample datasets, and write that data to a SQL Server table.
+In this lesson, learn how to embed Python code in a stored procedure, get data from the Python sample datasets, and write that data to a SQL Server table.
 
 The system stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) provides the wrapper that passes SQL variables and SQL datasets into Python. It also handles the results output by Python and passes them to SQL Server in a format compatible with SQL data types.
 
@@ -118,23 +118,7 @@ To move the training data from Python into a SQL Server table is a multistep pro
     SELECT COUNT(*) FROM iris_data;
     ```
 
-In the [next lesson](../tutorials/train-score-using-python-in-tsql.md), you create a machine learning model and save it to a table.
-
-### Further reading about stored procedures
-
-If you are new to SQL Server, you might find stored procedures complicated at first. But a stored procedure is a powerful and flexible interface for passing data between applications and the server. By using a stored procedure, you can dynamically define inputs, which makes it easy to pass in new model names, new parameters, and new data, without altering your Python code.
-
-For an overview of how stored procedures work, see [Stored Procedures (Database Engine)](https://docs.microsoft.com/sql/relational-databases/stored-procedures/stored-procedures-database-engine), or this tutorial: [Writing Transact-SQL Statements](https://docs.microsoft.com/sql/t-sql/tutorial-writing-transact-sql-statements).
-
-There are also some good tutorials at community sites such as [SQL Server Central](http://www.sqlservercentral.com/) or [SQL Team](http://www.sqlteam.com/).
-
-As you think about how you can best encapsulate Python code in T-SQL, also consider using these features:
-
-+ Defining default values for the stored procedure
-+ Using the OUTPUT keyword to pass through input variables
-+ Creating schema definitions using WITH RESULTS to ensure that data consumed by applications has the right data types and column names
-+ Providing hints to improve batch processing
-+ Impersonating a different user to test your code, using the EXECUTE AS clause
+In the next lesson, you create a machine learning model and save it to a table.
 
 ## Next lesson
 

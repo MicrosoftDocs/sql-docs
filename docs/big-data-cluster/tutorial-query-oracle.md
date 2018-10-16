@@ -123,6 +123,6 @@ DROP DATABASE SCOPED CREDENTIAL [OracleCredential];
 
 ## Next steps
 
-Advance to the next article to learn how to TBD.
+Learn about how to use notebooks in Azure Data Studio:
 > [!div class="nextstepaction"]
-> [TBD](big-data-cluster-overview.md)
+> [Learn about notebooks](notebooks-guidance.md)

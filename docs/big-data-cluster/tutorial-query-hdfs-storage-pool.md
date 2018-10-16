@@ -110,4 +110,4 @@ GO
 
 Advance to the next article to learn how to query Oracle from a big data cluster.
 > [!div class="nextstepaction"]
-> [Learn about notebooks](notebooks-guidance.md)
+> [Query external data in Oracle](tutorial-query-oracle.md)

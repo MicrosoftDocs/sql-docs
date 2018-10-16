@@ -82,7 +82,7 @@ JAVA_HOME is an environment variable that specifies the location of the Java int
 
   In CTP 2.0, setting JAVA_HOME to the base jdk folder only works for Java 1.10. 
 
-  For Java 1.8, extend the path to reach the jvm.dll on Windows in their JDK (for example, "C:\Program Files\Java\jdk1.8.0_181\bin\server". Alternatively, you can point to a JRE base folder: "C:\Program Files\Java\jre1.8.0_181".
+  For Java 1.8, extend the path to reach the jvm.dll on Windows in your JDK (for example, "C:\Program Files\Java\jdk1.8.0_181\bin\server". Alternatively, you can point to a JRE base folder: "C:\Program Files\Java\jre1.8.0_181".
 
 2. In Control Panel, open **System and Security**, open **System**, and click **Advanced System Properties**.
 

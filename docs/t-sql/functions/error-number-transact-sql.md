@@ -57,7 +57,7 @@ In a nested `CATCH` block, `ERROR_NUMBER` returns the error number specific to t
 ### A. Using ERROR_NUMBER in a CATCH block  
 This example shows a `SELECT` statement that generates a divide-by-zero error. The `CATCH` block returns the error number.  
   
-```  
+```sql  
 BEGIN TRY  
     -- Generate a divide-by-zero error.  
     SELECT 1/0;  
@@ -66,7 +66,9 @@ BEGIN CATCH
     SELECT ERROR_NUMBER() AS ErrorNumber;  
 END CATCH;  
 GO  
-
+```
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+```
 -----------
 
 (0 row(s) affected)

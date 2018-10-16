@@ -49,7 +49,7 @@ manager: craigg
   
  Referring to the preceding illustration, note that:  
   
--   The mapping between package objects and sessions is many to many, which means that that an object can appear in several sessions, and a session can contain several objects.  
+-   The mapping between package objects and sessions is many to many, which means that an object can appear in several sessions, and a session can contain several objects.  
   
 -   The same event (Event 1) or target (Target 1) can be enabled in more than one session.  
   

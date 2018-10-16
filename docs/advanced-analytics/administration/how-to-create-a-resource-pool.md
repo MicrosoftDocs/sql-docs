@@ -1,5 +1,5 @@
 ---
-title: Create a resource pool for SQL Server Machine Learning | Microsoft Docs
+title: How to create a resource pool for SQL Server Machine Learning | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -9,10 +9,10 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-# Create a resource pool for machine learning in SQL Server
+# How to create a resource pool for machine learning in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article describes how you can create a resource pool specifically for managing machine learning workloads in SQL Server. It assumes that you have already installed and enabled the machine learning features, and want to reconfigure the instance to support more fine-grained management of the resources used by external process such as R or Python.
+This article describes how you can create and use a resource pool specifically for managing R and Python machine learning workloads in SQL Server. It assumes that you have already installed and enabled the machine learning features, and want to reconfigure the instance to support more fine-grained management of the resources used by external process such as R or Python.
 
 The process includes multiple steps:
 

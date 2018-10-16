@@ -99,7 +99,7 @@ export DOCKER_PRIVATE_REGISTRY="1"
 > [!NOTE]
 > During the limited public preview, Docker credentials to download the SQL Server Big Data cluster images are provided to each customer by Microsoft. To request access, register [here](https://aka.ms/eapsignup), and specify your interest to try SQL Server big data clusters.
 
-## Deploy SQL Server Big Data CLuster
+## Deploy a big data cluster
 
 To deploy a SQL Server 2019 CTP 2.0 big data cluster on your Kubernetes cluster, run the following command:
 
@@ -136,7 +136,7 @@ kubectl get svc service-proxy-lb -n <name of your cluster>
 > You will see a security warning when accessing the web page since we are using auto-generated SSL certificates. In future releases, we will provide the capability to provide your own signed certificates.
  
 
-## Connect to SQL Server master instance and SQL Server big data cluster HDFS/Spark end points
+## Connect to the big data cluster
 
 After the deployment script has completed successfully, you can obtain the IP address of the SQL Server master instance and the Spark/HDFS end points using the steps outlined below. All cluster endpoints are displayed in the Service Endpoints section in the Cluster Administration Portal as well for easy reference.
 
@@ -149,7 +149,7 @@ kubectl get svc service-security-lb -n <name of your cluster>
 
 Look for the **External-IP** value that is assigned to the services. Connect to the SQL Server master instance using the IP address for the `service-master-pool-lb` at port 31433 (Ex: **\<ip-address\>,31433**) and to the SQL Server big data cluster endpoint using the external-IP for the `service-security-lb` service.   That big data cluster end point is where you can interact with HDFS and submit Spark jobs through Knox.
 
-# Next steps
+## Next steps
 
 Now that the SQL Server big data cluster is deployed, try out some of the new capabilities:
 

@@ -202,7 +202,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
 ###  <a name="PScmd3Procedure"></a> Using SQL Server PowerShell  
  **To disable Always On**  
   
-1.  Change directory (**cd**) to a currently-enabled server instance that that you want to disenable for Always On Availability Groups.  
+1.  Change directory (**cd**) to a currently-enabled server instance that you want to disenable for Always On Availability Groups.  
   
 2.  Use the **Disable-SqlAlwaysOn** cmdlet to enable Always On Availability Groups.  
   

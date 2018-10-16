@@ -27,7 +27,7 @@ manager: craigg
  A WSFC is a group of independent servers that work together to increase the availability of applications and services.  
   
  Node  
- A server that that is participating in a WSFC.
+ A server that is participating in a WSFC.
   
  Cluster resource  
  A physical or logical entity that can be owned by a node, brought online and taken offline, moved between nodes, and managed as a cluster object. A cluster resource can be owned by only a single node at any point in time.  

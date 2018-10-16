@@ -1,10 +1,10 @@
 ---
 title: Add SQLRUserGroup as a database user (SQL Server Machine Learning) | Microsoft Docs
-description: How to add SQLRUserGroup as a database user for SQL Server Machine Learning Services.
+description: For loopback connections using implied authentication, add SQLRUserGroup as a database user so that a worker account can log in to the server, for identity conversion back to the calling user.
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 09/26/2018  
+ms.date: 10/10/2018  
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
@@ -13,18 +13,14 @@ manager: cgronlun
 # Add SQLRUserGroup as a database user
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-If you are using Windows authentication and your script calls resources or operations in SQL Server, additional configuration is required to give worker accounts running R and Python processes permission to sign back in to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance on your behalf. This is referred to as [*implied authentication*](../../advanced-analytics/concepts/security.md#implied-authentication).
+Create a database login for the [SQLRUserGroup](../concepts/security.md#sqlrusergroup) when a loopback connection in your script specifies a *trusted connection*, and the identity used to execute whatever object contains your code is a Windows account.
 
-> [!NOTE]
-> If you use a **SQL login** for running scripts in a SQL Server compute context, this extra step is not required.
+Trusted connections are those having `Trusted_Connection=True` in the connection string. When SQL Server receives a request specifying a trusted connection, it checks whether the identity of the current user has a login. For external satellite processes executing as a worker account (such as MSSQLSERVER01 from **SQLRUserGroup**), the request fails because those accounts do not have a login by default. 
 
-As part of the installation process for [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)], a new Windows *user account pool* is created to support execution of tasks by the [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] service. The purpose of these worker accounts is to isolate concurrent execution of external scripts by different SQL users.
+You can work around the connection error by giving **SQLServerRUserGroup** a database login on your server. For more information about identities and external processes, see [Security overview for the extensibility framework](../concepts/security.md).
 
-By default, the group of worker accounts does **not** have login permissions on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance with which it is associated. This can be a problem if any R or Python users connect to SQL Server from a remote client to run external scripts, or if a script uses ODBC to get additional data.
-
-This article explains how to give the group of worker accounts used by machine learning services in SQL Server the permissions required to connect to the database and run R or Python jobs on behalf of the user.
-
-For more information, see the Launchpad section in [Security overview](../../advanced-analytics/concepts/security.md#launchpad).
+> [!Note]
+>  Make sure that **SQLRUserGroup** has "Allow Log on locally" permissions. By default, this right is given to all new local users, but in some organizations stricter group policies might disable this right.
 
 ## Create a login
 
@@ -61,3 +57,8 @@ For more information, see the Launchpad section in [Security overview](../../adv
 6. Click **OK** once more to close the **Select User or Group** dialog box.
 
 7. In the **Login - New** dialog box, click **OK**. By default, the login is assigned to the **public** role and has permission to connect to the database engine.
+
+## See also
+
++ [Security overview](../concepts/security.md)
++ [Extensibility framework](../concepts/extensibility-framework.md)

@@ -343,9 +343,11 @@ ms.technology:
                                                     <li><a class="barLink" href="/sql/xquery/xquery-language-reference-sql-server">xQuery</a></li>
                                                     <li><a class="barLink" href="/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views/">DMVs</a></li>
                                                     <li><a class="barLink" href="/sql/powershell/sql-server-powershell">Powershell</a></li>
+                                                    <li><a class="barLink" href="/rest/api/sql/">SQL Rest API</a></li>
                                                 </ul></td>
                                                 <td style="border-top-color:transparent!important;padding-left:0;">
                                                 <ul class="noBullet">
+                                                     <li><a class="barLink" href="/dotnet/api/?view=sqlserver-2017">SQL .NET SDK API</a></li>
                                                      <li><a class="barLink" href="/sql/t-sql/language-reference">Transact-SQL (T-SQL)</a></li>
                                                      <li><a class="barLink" href="/sql/samples/sql-samples-where-are/">Database Samples</a></li>
                                                      <li><a class="barLink" href="/previous-versions/sql/">Archived Content (SQL 2005-2012)</a></li>
@@ -421,12 +423,22 @@ ms.technology:
         <ul class="links">
            <li>
                 <a href="http://aka.ms/editsqldocs" data-linktype="external">
-                    Contribute to SQL docs
+                    Contribute
+                </a>
+            </li>
+           <li>
+                <a href="https://docs.microsoft.com/sql/sql-server/sql-server-get-help" data-linktype="external">
+                    Get help
+                </a>
+            </li>
+           <li>
+                <a href="http://aka.ms/sqldocsfeedback" data-linktype="external">
+                    Feedback
                 </a>
             </li>
            <li>
                 <a href="http://aka.ms/sqldocsurvey" data-linktype="external">
-                    SQL Docs Feedback
+                    Survey
                 </a>
             </li>
            <li>
@@ -451,4 +463,3 @@ ms.technology:
             </li>
         </ul>
     </div>
-

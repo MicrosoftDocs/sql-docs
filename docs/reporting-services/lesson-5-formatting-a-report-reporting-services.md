@@ -1,25 +1,14 @@
 ---
 title: "Lesson 5: Formatting a Report (Reporting Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/23/2016"
+ms.date: 05/23/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.service: ""
-ms.component: "reporting-services"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: reporting-services
 
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+ms.topic: conceptual
 ms.assetid: ae46efa9-6e04-48ec-afb4-5a2314dcb05a
-caps.latest.revision: 20
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "kfile"
-ms.workload: "On Demand"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Lesson 5: Formatting a Report (Reporting Services)
 Now that you've added a data region and some fields to the Sales Orders report, you can format the date and currency fields and the column headers.  

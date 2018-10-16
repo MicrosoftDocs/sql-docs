@@ -1,22 +1,17 @@
 ---
 title: "Run an SSIS project with .NET code (C#) | Microsoft Docs"
-ms.date: "09/25/2017"
-ms.topic: "article"
-ms.prod: "sql-non-specified"
+ms.date: "05/21/2018"
+ms.topic: quickstart
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "quick-start"
-ms.suite: "sql"
 ms.custom: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Run an SSIS package with C# code in a .NET app
-This quick start tutorial demonstrates how to write C# code to connect to a database server and run an SSIS package.
+This quickstart demonstrates how to write C# code to connect to a database server and run an SSIS package.
 
 You can use Visual Studio, Visual Studio Code, or another tool of your choice to create a C# app.
 
@@ -24,19 +19,18 @@ You can use Visual Studio, Visual Studio Code, or another tool of your choice to
 
 Before you start, make sure you have Visual Studio or Visual Studio Code installed. Download the free Community edition of Visual Studio, or the free Visual Studio Code, from [Visual Studio Downloads](https://www.visualstudio.com/downloads/).
 
-> [!NOTE]
-> An Azure SQL Database server listens on port 1433. If you're trying to connect to an Azure SQL Database server from within a corporate firewall, this port must be open in the corporate firewall for you to connect successfully.
+An Azure SQL Database server listens on port 1433. If you're trying to connect to an Azure SQL Database server from within a corporate firewall, this port must be open in the corporate firewall for you to connect successfully.
 
-## Get the connection info if deployed to SQL Database
+## For Azure SQL Database, get the connection info
 
-If your packages are deployed to an Azure SQL Database, get the connection information you need to connect to the SSIS Catalog database (SSISDB). You need the fully qualified server name and login information in the procedures that follow.
+To run the package on Azure SQL Database, get the connection information you need to connect to the SSIS Catalog database (SSISDB). You need the fully qualified server name and login information in the procedures that follow.
 
 1. Log in to the [Azure portal](https://portal.azure.com/).
-2. Select **SQL Databases** from the left-hand menu, and click the SSISDB database on the **SQL databases** page. 
-3. On the **Overview** page for your database, review the fully qualified server name. To bring up the **Click to copy** option, hover over the server name. 
+2. Select **SQL Databases** from the left-hand menu, and then select the SSISDB database on the **SQL databases** page. 
+3. On the **Overview** page for your database, review the fully qualified server name. To see the **Click to copy** option, hover over the server name. 
 4. If you forget your Azure SQL Database server login information, navigate to the SQL Database server page to view the server admin name. You can reset the password if necessary.
 5. Click **Show database connection strings**.
-6. Review the complete **ADO.NET** connection string. The sample code uses a `SqlConnectionStringBuilder` to recreate this connection string with the individual parameter values that you provide.
+6. Review the complete **ADO.NET** connection string. Optionally, your code can use a `SqlConnectionStringBuilder` to recreate this connection string with the individual parameter values that you provide.
 
 ## Create a new Visual Studio project
 
@@ -62,7 +56,7 @@ If your packages are deployed to an Azure SQL Database, get the connection infor
 2. Replace the contents of **Program.cs** with the following code. Add the appropriate values for your server, database, user, and password.
 
 > [!NOTE]
-> The following example uses Windows Authentication. To use SQL Server authentication, replace the `Integrated Security=SSPI;` argument with `User ID=<user name>;Password=<password>;`.
+> The following example uses Windows Authentication. To use SQL Server authentication, replace the `Integrated Security=SSPI;` argument with `User ID=<user name>;Password=<password>;`. If you're connecting to an Azure SQL Database server, you can't use Windows authentication.
 
 
 ```csharp

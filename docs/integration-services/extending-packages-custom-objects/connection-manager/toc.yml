@@ -1,0 +1,8 @@
+- name: Developing a Custom Connection Manager
+  href: developing-a-custom-connection-manager.md
+- name: Creating a Custom Connection Manager
+  href: creating-a-custom-connection-manager.md
+- name: Coding a Custom Connection Manager
+  href: coding-a-custom-connection-manager.md
+- name: Developing a User Interface for a Custom Connection Manager
+  href: developing-a-user-interface-for-a-custom-connection-manager.md

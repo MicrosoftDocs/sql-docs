@@ -1,16 +1,11 @@
 ---
 title: "Collections (ADO for Visual C++ Syntax) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 dev_langs: 
@@ -20,11 +15,9 @@ helpviewer_keywords:
   - "syntax indexes [ADO], ADO for Visual C++ syntax"
   - "collections [ADO], ADO for Visual C++ syntax"
 ms.assetid: 6a0109a0-f2d9-4f7c-8e1e-42763f9acaea
-caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Collections (ADO for Visual C++ Syntax)
 ## Parameters  

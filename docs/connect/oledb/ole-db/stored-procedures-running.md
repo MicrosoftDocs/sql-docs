@@ -2,28 +2,24 @@
 title: "Running Stored Procedures (OLE DB) | Microsoft Docs"
 description: "Running Stored Procedures (OLE DB)"
 ms.custom: ""
-ms.date: "03/26/2018"
-ms.prod: "sql"
+ms.date: "06/12/2018"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "ole-db"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
+ms.technology: connectivity
 ms.topic: "reference"
 helpviewer_keywords: 
   - "stored procedures [OLE DB], executing"
   - "OLE DB, stored procedures"
   - "OLE DB Driver for SQL Server, stored procedures"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Stored Procedures - Running
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   When executing statements, calling a stored procedure on the data source (instead of executing or preparing a statement in the client application directly) can provide:  
   

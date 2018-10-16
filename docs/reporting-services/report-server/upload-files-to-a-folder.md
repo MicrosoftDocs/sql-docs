@@ -1,18 +1,12 @@
 ---
 title: "Upload Files to a Folder | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
-ms.component: "report-server"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-server
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "publishing reports [Reporting Services], uploading files"
   - "reports [Reporting Services], publishing"
@@ -22,11 +16,8 @@ helpviewer_keywords:
   - "files [Reporting Services]"
   - "folders [Reporting Services], uploading files to"
 ms.assetid: 2f99a288-d4aa-4c64-b310-e457a2aef2c5
-caps.latest.revision: 42
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
-ms.workload: "Inactive"
+author: markingmyname
+ms.author: maghan
 ---
 # Upload Files to a Folder
   You can upload files from the file system and store them as managed items in a report server database. What happens when you upload a file depends on the file type.  

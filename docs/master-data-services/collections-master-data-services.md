@@ -2,25 +2,19 @@
 title: "Collections (Master Data Services) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/01/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "mds"
-ms.service: ""
-ms.component: "non-specific"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "collections [Master Data Services]"
   - "collections [Master Data Services], about collections"
 ms.assetid: 5aa1d1e0-b4e5-4897-8e74-01dcf418df73
-caps.latest.revision: 14
-author: "leolimsft"
-ms.author: "lle"
-manager: "craigg"
-ms.workload: "Inactive"
+author: leolimsft
+ms.author: lle
+manager: craigg
 ---
 # Collections (Master Data Services)
 

@@ -2,24 +2,17 @@
 title: "Logging Activity | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/26/2018"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "php"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "logging activity"
 ms.assetid: a777b3d9-2262-4e82-bc82-b62ad60d0e55
-caps.latest.revision: 32
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Logging Activity
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

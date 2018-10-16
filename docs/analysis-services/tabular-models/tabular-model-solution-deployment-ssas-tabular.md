@@ -1,25 +1,14 @@
 ---
 title: "Tabular model solution deployment | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/13/2018"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services, azure-analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: aff96558-e5e5-4b95-8ddf-ee0709c842fb
-caps.latest.revision: 22
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "On Demand"
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Tabular model solution deployment 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -60,7 +49,7 @@ ms.workload: "On Demand"
   
 |Property|Default setting|Description|  
 |--------------|---------------------|-----------------|  
-|**Impersonation Settings**|**Default**|This property specifies the impersonation settings used when a model running in DirectQuery mode connects to data sources. Impersonation credentials are not used when querying the in-memory cache. This property setting has the following options:<br /><br /> **Default** – This setting specifies Analysis Services will use the option specified on the Impersonation Information page when the data source connection was created by using the Table Import Wizard.<br /><br /> **ImpersonateCurrentUser** – This setting specifies the the user account of the user currently logged on will be used when connecting to all data sources.|  
+|**Impersonation Settings**|**Default**|This property specifies the impersonation settings used when a model running in DirectQuery mode connects to data sources. Impersonation credentials are not used when querying the in-memory cache. This property setting has the following options:<br /><br /> **Default** – This setting specifies Analysis Services will use the option specified on the Impersonation Information page when the data source connection was created by using the Table Import Wizard.<br /><br /> **ImpersonateCurrentUser** – This setting specifies the user account of the user currently logged on will be used when connecting to all data sources.|  
   
 ##  <a name="bkmk_meth"></a> Deployment methods  
  There are several methods you can use to deploy a tabular model project. Most of the deployment methods that can be used for other Analysis Services projects, such as multidimensional, can also be used to deploy tabular model projects.  

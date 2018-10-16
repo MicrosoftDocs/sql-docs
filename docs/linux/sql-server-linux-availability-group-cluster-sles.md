@@ -4,17 +4,12 @@ description:
 author: MikeRayMSFT 
 ms.author: mikeray 
 manager: craigg
-ms.date: 05/17/2017
-ms.topic: article
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: ""
-ms.suite: "sql"
+ms.date: 04/30/2018
+ms.topic: conceptual
+ms.prod: sql
 ms.custom: "sql-linux"
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.workload: "Inactive"
 ---
 # Configure SLES Cluster for SQL Server Availability Group
 
@@ -184,20 +179,36 @@ If you have configured the existing cluster nodes with the `YaST` cluster module
 
 After adding all nodes, check if you need to adjust the no-quorum-policy in the global cluster options. This is especially important for two-node clusters. For more information,see Section 4.1.2, Option no-quorum-policy. 
 
-## Set cluster property start-failure-is-fatal to false
+## Set cluster property cluster-recheck-interval
 
-`Start-failure-is-fatal` indicates whether a failure to start a resource on a node prevents further start attempts on that node. When set to `false`, the cluster decides whether to try starting on the same node again based on the resource's current failure count and migration threshold. So, after failover occurs, Pacemaker retries starting the availability group resource on the former primary once the SQL instance is available. Pacemaker takes care of demoting the replica to secondary and it automatically rejoins the availability group. Also, if `start-failure-is-fatal` is set to `false`, the cluster falls back to the configured failcount limits configured with migration-threshold. Make sure default for migration threshold is updated accordingly.
+`cluster-recheck-interval` indicates the polling interval at which the cluster checks for changes in the resource parameters, constraints or other cluster options. If a replica goes down, the cluster tries to restart the replica at an interval that is bound by the `failure-timeout` value and the `cluster-recheck-interval` value. For example, if `failure-timeout` is set to 60 seconds and `cluster-recheck-interval` is set to 120 seconds, the restart is tried at an interval that is greater than 60 seconds but less than 120 seconds. We recommend that you set failure-timeout to 60s and cluster-recheck-interval to a value that is greater than 60 seconds. Setting cluster-recheck-interval to a small value is not recommended.
 
-To update the property value to false run:
+To update the property value to `2 minutes` run:
+
 ```bash
-sudo crm configure property start-failure-is-fatal=false
-sudo crm configure rsc_defaults migration-threshold=5000
+crm configure property cluster-recheck-interval=2min
 ```
-If the property has the default value of `true`, if first attempt to start the resource fails, user intervention is required after an automatic failover to clean up the resource failure count and reset the configuration using: `sudo crm resource cleanup <resourceName>` command.
+
+> [!IMPORTANT] 
+> If you already have an availability group resource managed by a Pacemaker cluster, note that all distributions that use the latest available Pacemaker package 1.1.18-11.el7 introduce a behavior change for the start-failure-is-fatal cluster setting when its value is false. This change affects the failover workflow. If a primary replica experiences an outage, the cluster is expected to failover to one of the available secondary replicas. Instead, users will notice that the cluster keeps trying to start the failed primary replica. If that primary never comes online (because of a permanent outage), the cluster never fails over to another available secondary replica. Because of this change, a previously recommended configuration to set start-failure-is-fatal is no longer valid and the setting needs to be reverted back to its default value of `true`. 
+> Additionally, the AG resource needs to be updated to include the `failover-timeout` property. 
+>
+>To update the property value to `true` run:
+>
+>```bash
+>crm configure property start-failure-is-fatal=true
+>```
+>
+>Update your existing AG resource property `failure-timeout` to `60s` run (replace `ag1` with the name of your availability group resource): 
+>
+>```bash
+>crm configure edit ag1
+># In the text editor, add `meta failure-timeout=60s` after any `param`s and before any `op`s
+>```
 
 For more information on Pacemaker cluster properties, see [Configuring Cluster Resources](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_config_crm_resources.html).
 
-# Configure fencing (STONITH)
+## Configure fencing (STONITH)
 Pacemaker cluster vendors require STONITH to be enabled and a fencing device configured for a supported cluster setup. When the cluster resource manager cannot determine the state of a node or of a resource on a node, fencing is used to bring the cluster to a known state again.
 
 Resource level fencing ensures mainly that there is no data corruption during an outage by configuring a resource. You can use resource level fencing, for instance, with DRBD (Distributed Replicated Block Device) to mark the disk on a node as outdated when the communication link goes down.
@@ -220,6 +231,16 @@ sudo crm configure property stonith-enabled=true
 
 Refer to [SLES Administration Guid](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.manual_config)
 
+## Enable Pacemaker
+
+Enable Pacemaker so that it automatically starts.
+
+Run the following command on every node in the cluster.
+
+```bash
+systemctl enable pacemaker
+```
+
 ### Create availability group resource
 
 The following command creates and configures the availability group resource for three replicas of availability group [ag1]. The monitor operations and timeouts have to be specified explicitly in SLES based on the fact that timeouts are highly workload-dependent and need to be carefully adjusted for each deployment.
@@ -234,22 +255,23 @@ Run the command on one of the nodes in the cluster:
 1. In the crm prompt, run the following command to configure the resource properties.
 
    ```bash
-primitive ag_cluster \
-   ocf:mssql:ag \
-   params ag_name="ag1" \
-   op start timeout=60s \
-   op stop timeout=60s \
-   op promote timeout=60s \
-   op demote timeout=10s \
-   op monitor timeout=60s interval=10s \
-   op monitor timeout=60s interval=11s role="Master" \
-   op monitor timeout=60s interval=12s role="Slave" \
-   op notify timeout=60s
-ms ms-ag_cluster ag_cluster \
-   meta master-max="1" master-node-max="1" clone-max="3" \
-  clone-node-max="1" notify="true" \
-commit
-   ```
+   primitive ag_cluster \
+      ocf:mssql:ag \
+      params ag_name="ag1" \
+      meta failure-timeout=60s \
+      op start timeout=60s \
+      op stop timeout=60s \
+      op promote timeout=60s \
+      op demote timeout=10s \
+      op monitor timeout=60s interval=10s \
+      op monitor timeout=60s interval=11s role="Master" \
+      op monitor timeout=60s interval=12s role="Slave" \
+      op notify timeout=60s
+   ms ms-ag_cluster ag_cluster \
+      meta master-max="1" master-node-max="1" clone-max="3" \
+     clone-node-max="1" notify="true" \
+   commit
+      ```
 
 [!INCLUDE [required-synchronized-secondaries-default](../includes/ss-linux-cluster-required-synchronized-secondaries-default.md)]
 

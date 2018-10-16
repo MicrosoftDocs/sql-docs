@@ -2,18 +2,11 @@
 title: "Execution Plan and Buffer Allocation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "extending-packages-custom-objects"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
 dev_langs: 
   - "VB"
   - "CSharp"
@@ -25,11 +18,9 @@ helpviewer_keywords:
   - "data flow components [Integration Services], execution plans"
   - "execution plans [Integration Services]"
 ms.assetid: 679d9ff0-641e-47c3-abb8-d1a7dcb279dd
-caps.latest.revision: 40
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Execution Plan and Buffer Allocation
   Before execution, the data flow task examines its components and generates an execution plan for each sequence of components. This section provides details about the execution plan, how to view the plan, and how input and output buffers are allocated based on the execution plan.  

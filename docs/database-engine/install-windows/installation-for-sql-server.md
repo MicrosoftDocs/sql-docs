@@ -2,16 +2,10 @@
 title: "SQL Server Installation | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/06/2017"
-ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "install-windows"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: install
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.portal.Installation.f1"
 helpviewer_keywords: 
@@ -19,10 +13,10 @@ helpviewer_keywords:
   - "installation [SQL Server]"
   - "initial installation [SQL Server]"
 ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
-caps.latest.revision: 34
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MashaMSFT
+ms.author: mathoma
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+manager: craigg
 ---
 # SQL Server Installation
 
@@ -78,7 +72,7 @@ Describes how to prepare your computer for [!INCLUDE[ssNoVersion](../../includes
 [Install SQL Server BI Features with SharePoint &#40;Power Pivot and Reporting Services&#41;](http://msdn.microsoft.com/library/3166107c-30c2-468e-bb1b-bb42b79b37c3)  
  This section explains how to install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features in a SharePoint environment. It identifies which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features are available given a specific version and edition of SharePoint. It also includes installation procedures for [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint and Reporting Services in SharePoint mode.  
   
-![ssrs_fyi_note](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png) Install the new sample database, [Wide World Importers](https://msdn.microsoft.com/library/mt734199(v=sql.1).aspx). 
+![ssrs_fyi_note](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png) Install the new sample database, [Wide World Importers](../../sample/world-wide-importers/wide-world-importers-documentation.md). 
   
 [Additional SQL Server Samples and Sample Databases](http://sqlserversamples.codeplex.com/)  
  Describes how to install and configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] samples and sample databases.  

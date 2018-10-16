@@ -2,16 +2,11 @@
 title: "Excel Destination | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/02/2018"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "data-flow"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.exceldest.f1"
   - "sql13.dts.designer.exceldestadapter.connection.f1"
@@ -21,11 +16,9 @@ helpviewer_keywords:
   - "destinations [Integration Services], Excel"
   - "Excel [Integration Services]"
 ms.assetid: 37c07446-1264-4814-b4f5-9c66d333bb24
-caps.latest.revision: 49
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # Excel Destination
   The Excel destination loads data into worksheets or ranges in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel workbooks.  

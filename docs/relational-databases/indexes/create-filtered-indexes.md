@@ -1,17 +1,12 @@
-﻿---
+---
 title: "Create Filtered Indexes | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/02/2016"
-ms.prod: "sql"
-ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "indexes"
+ms.prod: sql
+ms.prod_service: "table-view-index, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: table-view-index
+ms.topic: conceptual
 helpviewer_keywords: 
   - "filtered indexes [SQL Server], about filtered indexes"
   - "designing indexes [SQL Server], filtered"
@@ -19,12 +14,10 @@ helpviewer_keywords:
   - "nonclustered indexes [SQL Server], filtered"
   - "indexes [SQL Server], filtered"
 ms.assetid: 25e1fcc5-45d7-4c53-8c79-5493dfaa1c74
-caps.latest.revision: 73
-author: "barbkess"
-ms.author: "barbkess"
-manager: "craigg"
-ms.workload: "On Demand"
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create Filtered Indexes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -71,7 +64,9 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
   
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
   
--   You cannot create a filtered index on a view. However, the query optimizer can benefit from a filtered index defined on a table that is referenced in a view. The query optimizer considers a filtered index for a query that selects from a view if the query results will be correct.  
+-   You cannot create a filtered index on a view. However, the query optimizer can benefit from a filtered index defined on a table that is referenced in a view. The query optimizer considers a filtered index for a query that selects from a view if the query results will be correct.
+
+-   You cannot create a filtered index on a table when the column accessed in the filter expression is of a CLR data type.
   
 -   Filtered indexes have the following advantages over indexed views:  
   
@@ -118,7 +113,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
   
 6.  Under **Index key columns**, click **Add…**.  
   
-7.  In the **Select Columns from***table_name* dialog box, select the check box or check boxes of the table column or columns to be added to the unique index.  
+7.  In the **Select Columns from**_table\_name_ dialog box, select the check box or check boxes of the table column or columns to be added to the unique index.  
   
 8.  Click **OK**.  
   

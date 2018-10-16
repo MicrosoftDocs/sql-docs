@@ -1,15 +1,11 @@
 ---
 title: "RDS Code Examples in Visual Basic | Microsoft Docs"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: 
-ms.suite: sql
 ms.prod: sql  
-ms.prod_service: drivers
-ms.component: reference
-ms.tgt_pltfrm: ""
+ms.prod_service: connectivity
 ms.topic: conceptual
 dev_langs: 
   - "VB"
@@ -17,11 +13,9 @@ helpviewer_keywords:
   - "Visual Basic RDS examples [ADO]"
   - "RDS samples [ADO], Visual Basic"
 ms.assetid: d9cb84a1-4ec2-4d41-8f92-dec2e17cde67
-caps.latest.revision: 13
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # RDS Code Examples in Visual Basic
 > [!IMPORTANT]

@@ -1,16 +1,11 @@
-﻿---
+---
 title: "sys.index_resumable_operations (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/10/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.service: ""
-ms.component: "system-catalog-views"
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.index_resumable_operations_TSQL"
@@ -21,13 +16,11 @@ helpviewer_keywords:
   - "sys.indexes"
   - "sys.index_resumable_operations"
 ms.assetid: 
-caps.latest.revision: 1
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "craigg"
+manager: craigg
 
-ms.workload: "Inactive"
-monikerRange: "= azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # index_resumable_operations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]

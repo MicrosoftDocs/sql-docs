@@ -2,16 +2,11 @@
 title: "Debug a Business Logic Handler (Replication Programming) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: replication
+ms.topic: conceptual
 dev_langs: 
   - "VB"
   - "CSharp"
@@ -20,11 +15,9 @@ helpviewer_keywords:
   - "business logic handlers [SQL Server replication]"
   - "BusinessLogicModule class"
 ms.assetid: edd0d17a-0e9c-4c28-8395-a7d47e8ce3d6
-caps.latest.revision: 34
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Debug a Business Logic Handler (Replication Programming)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

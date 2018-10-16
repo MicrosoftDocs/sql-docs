@@ -1,24 +1,16 @@
-﻿---
+---
 title: "SQL Server Shared Management Objects (SMO) - License Terms | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/06/2017"
-ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "smo"
+ms.date: "08/08/2018"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "tools-ssms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssms
+ms.topic: conceptual
 ms.assetid: 8f3d273c-c663-4341-aa2f-5ed8ebcba5b0
-caps.latest.revision: 9
-author: "stevestein"
-ms.author: "sstein"
-manager: "craigg"
-ms.workload: "On Demand"
-monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+author: stevestein
+ms.author: sstein
+manager: craigg
+monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server Shared Management Objects (SMO) License Terms
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -67,14 +59,13 @@ for this software, unless other terms accompany those items. If so, those terms 
   * the code be disclosed or distributed in source code form; or
   * others have the right to modify it.
 
-**3.	SCOPE OF LICENSE.** The software is licensed, not sold. Unless applicable law gives you more rights, Microsoft reserves all other rights not expressly granted under this agreement, whether by implication, estoppel or otherwise. You may use the software only as expressly permitted in this agreement. In doing so, you must comply with any technical limitations in the software that only allow you to use it in certain ways. You may not
-* work around any technical limitations in the software;
-* reverse engineer, decompile or disassemble the software, except and only to the extent that applicable law expressly permits, despite this limitation;
-* make more copies of the software than specified in this agreement or allowed by applicable law, despite this limitation;
-* publish the software for others to copy;
-* rent, lease or lend the software;
-* transfer the software or this agreement to any third party; or
-* use the software for commercial software hosting services.
+
+**3. SCOPE OF LICENSE.** The software is licensed, not sold. Unless applicable law gives you more rights, Microsoft reserves all other rights not expressly granted under this agreement, whether by implication, estoppel or otherwise. You may use the software only as expressly permitted in this agreement. In doing so, you must comply with any technical limitations in the software that only allow you to use it in certain ways. You may not do any of the following:
+
+- Work around any technical limitations in the software.
+- Reverse engineer, decompile or disassemble the software, except and only to the extent that applicable law expressly permits despite this limitation.
+- Make more copies of the software than are specified in this agreement, or allowed by applicable law despite this limitation.
+- Share, publish, rent or lease the software, or provide the software as a stand-alone hosted solution for others to use.
 
 **4.	THIRD PARTY NOTICES.** The software may include third party components with separate legal notices or governed by other agreements, as may be described in the ThirdPartyNotices file accompanying the software.  Even if such components are governed by other agreements, the disclaimers and the limitations on and exclusions of damages below also apply.
 
@@ -106,3 +97,7 @@ This limitation applies to
 * claims for breach of contract, breach of warranty, guarantee or condition, strict liability, negligence, or other tort to the extent permitted by applicable law.
 
 It also applies even if Microsoft knew or should have known about the possibility of the damages. The above limitation or exclusion may not apply to you because your country may not allow the exclusion or limitation of incidental, consequential or other damages.
+
+> [!NOTE]
+> Section 3 was updated on August 8, 2018.
+

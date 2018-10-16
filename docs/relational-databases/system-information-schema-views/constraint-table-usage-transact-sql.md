@@ -1,16 +1,11 @@
-﻿---
+---
 title: "CONSTRAINT_TABLE_USAGE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "system-information-schema-views"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "CONSTRAINT_TABLE_USAGE_TSQL"
@@ -21,12 +16,10 @@ helpviewer_keywords:
   - "CONSTRAINT_TABLE_USAGE view"
   - "INFORMATION_SCHEMA.CONSTRAINT_TABLE_USAGE view"
 ms.assetid: 5770b696-6c04-4d5c-a8db-9eb92022fa42
-caps.latest.revision: 37
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CONSTRAINT_TABLE_USAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

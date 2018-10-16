@@ -1,16 +1,11 @@
 ---
 title: "Description Property | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
@@ -20,11 +15,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "Description property"
 ms.assetid: 4b5d6790-6c29-42aa-bf78-d9cfb8ad7965
-caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Description Property
 Describes an [Error](../../../ado/reference/ado-api/error-object.md) object.  

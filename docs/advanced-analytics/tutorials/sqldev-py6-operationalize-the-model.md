@@ -361,4 +361,4 @@ In this tutorial, you've learned how to work with Python code embedded in stored
 
 ## See also
 
-[Machine Learning Services with Python](../python/sql-server-python-services.md)
+[Python extension in SQL Server](../concepts/extension-python.md)

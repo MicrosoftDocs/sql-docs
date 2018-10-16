@@ -2,15 +2,11 @@
 title: "srv_sendmsg (Extended Stored Procedure API) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "extended-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
   - "srv_sendmsg"
@@ -22,11 +18,9 @@ dev_langs:
 helpviewer_keywords: 
   - "srv_sendmsg"
 ms.assetid: efcb50b9-f8ff-4121-bf67-05830171b928
-caps.latest.revision: 30
 author: "rothja"
 ms.author: "jroth"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # srv_sendmsg (Extended Stored Procedure API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

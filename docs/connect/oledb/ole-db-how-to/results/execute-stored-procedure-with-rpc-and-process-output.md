@@ -2,27 +2,23 @@
 title: "Execute Stored Procedure with RPC and Process Output | Microsoft Docs"
 description: "Execute Stored Procedure with RPC and process output"
 ms.custom: ""
-ms.date: "03/26/2018"
-ms.prod: "sql"
+ms.date: "06/14/2018"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "ole-db-how-to"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
+ms.technology: connectivity
 ms.topic: "reference"
 helpviewer_keywords: 
   - "RPC syntax"
   - "stored procedures [SQL Server], RPC syntax"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Execute Stored Procedure with RPC and Process Output
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../../includes/driver_oledb_download.md)]
 
   [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] stored procedures can have integer return codes and output parameters. The return codes and output parameters are sent in the last packet from the server and are therefore not available to the application until the rowset is completely released. If the command returns multiple results, output parameter data is available when **IMultipleResults::GetResult** returns DB_S_NORESULT, or when the **IMultipleResults** interface is completely released, whichever occurs first.  
   

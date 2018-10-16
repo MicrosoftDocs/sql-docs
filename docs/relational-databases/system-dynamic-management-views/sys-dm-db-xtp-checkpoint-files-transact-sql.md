@@ -1,16 +1,11 @@
-﻿---
+---
 title: "sys.dm_db_xtp_checkpoint_files (Transact-SQL) | Microsoft Docs"
 ms.date: "03/20/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "dmv's"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.custom: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
+ms.technology: in-memory-oltp
 ms.topic: "language-reference"
 f1_keywords: 
   - "dm_db_xtp_checkpoint_files"
@@ -22,12 +17,10 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_db_xtp_checkpoint_files dynamic management view"
 ms.assetid: ac8e6333-7a9f-478a-b446-5602283e81c9
-caps.latest.revision: 49
-author: "stevestein"
-ms.author: "sstein"
-manager: "craigg"
-ms.workload: "Inactive"
-monikerRange: "= azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+author: stevestein
+ms.author: sstein
+manager: craigg
+monikerRange: "=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_xtp_checkpoint_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]

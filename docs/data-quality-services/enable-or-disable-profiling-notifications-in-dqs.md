@@ -2,26 +2,20 @@
 title: "Enable or Disable Profiling Notifications in DQS | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "data-quality-services"
-ms.service: ""
-ms.component: "data-quality-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "enable notifications"
   - "notifications,enable"
   - "notifications,disable"
 ms.assetid: e439bb29-60cc-4afd-a79a-f629b8d843c1
-caps.latest.revision: 8
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Enable or Disable Profiling Notifications in DQS
 

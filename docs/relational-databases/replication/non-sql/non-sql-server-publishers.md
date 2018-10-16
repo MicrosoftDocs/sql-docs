@@ -2,27 +2,20 @@
 title: "Non-SQL Server Publishers | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/29/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: replication
+ms.topic: conceptual
 helpviewer_keywords: 
   - "heterogeneous database replication, non-SQL Server Publishers"
   - "non-SQL Server Publishers"
   - "heterogeneous data sources, non-SQL Server Publishers"
   - "Publishers [SQL Server replication], Oracle"
 ms.assetid: 08a160a6-33be-46b5-bc7b-d53180d8bdf1
-caps.latest.revision: 31
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Non-SQL Server Publishers  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

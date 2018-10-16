@@ -2,16 +2,12 @@
 title: "Use the Copy Database Wizard | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/26/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "databases"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.cdw.packageconfiguration.f1"
   - "sql13.swb.cdw.schedule.f1"
@@ -28,11 +24,9 @@ helpviewer_keywords:
   - "Copy Database Wizard"
   - "starting Copy Database Wizard"
 ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
-caps.latest.revision: 64
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
-ms.workload: "Active"
+manager: craigg
 ---
 # Use the Copy Database Wizard
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -402,7 +396,7 @@ In this example the `Sales` database will be copied and created as `SalesCopy` o
   
 ## More information! 
  [Upgrade a Database Using Detach and Attach &#40;Transact-SQL&#41;](../../relational-databases/databases/upgrade-a-database-using-detach-and-attach-transact-sql.md)   
- [Create a SQL Server Agent Proxy](http://msdn.microsoft.com/library/142e0c55-a8b9-4669-be49-b9dc602d5988)  
+ [Create a SQL Server Agent Proxy](../../ssms/agent/create-a-sql-server-agent-proxy.md)  
   
   
 

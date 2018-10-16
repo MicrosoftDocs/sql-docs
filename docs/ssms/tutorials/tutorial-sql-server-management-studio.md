@@ -2,16 +2,11 @@
 title: "Tutorial: SQL Server Management Studio (SSMS) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/30/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssms-tutorial"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "tools-ssms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssms
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.tutorialstart.ssms.f1"
 helpviewer_keywords: 
@@ -25,12 +20,10 @@ helpviewer_keywords:
   - "SQL Server Management Studio [SQL Server], tutorials"
   - "scripts [SQL Server], SQL Server Management Studio"
 ms.assetid: d2bade70-07cf-4d94-b5d2-88aecb538ed1
-caps.latest.revision: 22
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: "craigg"
+manager: craigg
 ms.reviewer: "sstein"
-ms.workload: "Active"
 ---
 # Tutorials for SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -80,12 +73,12 @@ You must have the following installed to use this tutorial:
 
   -   Install the latest version of [SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md).  
 
-The first section walks you through creating a database but other sample databases can be found here: [AdventureWorks Sample Databases](https://github.com/Microsoft/sql-server-samples/releases). Instructions for restoring databases in SSMS can be found here: [Restoring a Database](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
+The first section walks you through creating a database but other sample databases can be found here: [AdventureWorks Sample Databases](https://github.com/Microsoft/sql-server-samples/releases). Instructions for restoring databases in SSMS can be found here: [Restoring a Database](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
 
 
   
 ## See Also  
-[Database Engine Tutorials](../../relational-databases/database-engine-tutorials.md)  
+[Database Engine Tutorials](../../relational-databases/database-engine-tutorials.md)          
   
   
   

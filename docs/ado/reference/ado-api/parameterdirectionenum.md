@@ -1,16 +1,11 @@
 ---
 title: "ParameterDirectionEnum | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
@@ -18,11 +13,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "ParameterDirectionEnum enumeration [ADO]"
 ms.assetid: c66aa6e6-d4f0-4f0f-9640-e08ae6cfdef3
-caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # ParameterDirectionEnum
 Specifies whether the [Parameter](../../../ado/reference/ado-api/parameter-object.md) represents an input parameter, an output parameter, both an input and an output parameter, or the return value from a stored procedure.  

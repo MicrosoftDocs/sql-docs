@@ -2,16 +2,12 @@
 title: "Leaf Permissions (Master Data Services) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "mds"
-ms.service: ""
-ms.component: "non-specific"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "attribute groups [Master Data Services], permissions"
   - "members [Master Data Services], leaf member permissions"
@@ -19,11 +15,9 @@ helpviewer_keywords:
   - "leaf members [Master Data Services], attribute permissions"
   - "attributes [Master Data Services], leaf member attribute permissions"
 ms.assetid: bde16e8c-bcd4-4041-8130-55c5450e5f72
-caps.latest.revision: 9
-author: "leolimsft"
-ms.author: "lle"
-manager: "craigg"
-ms.workload: "Inactive"
+author: leolimsft
+ms.author: lle
+manager: craigg
 ---
 # Leaf Permissions (Master Data Services)
 

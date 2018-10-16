@@ -1,37 +1,54 @@
 ---
 title: "Query Processing Architecture Guide | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/16/2018"
-ms.prod: "sql"
+ms.date: "06/06/2018"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "relational-databases-misc"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "guide, query processing architecture"
   - "query processing architecture guide"
+  - "row mode execution"
+  - "batch mode execution"
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
-caps.latest.revision: 5
 author: "rothja"
 ms.author: "jroth"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Query Processing Architecture Guide
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] processes queries on various data storage architectures such as local tables, partitioned tables, and tables distributed across multiple servers. The following topics cover how [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] processes queries and optimizes query reuse through execution plan caching.
 
+## Execution modes
+The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] can process SQL statements using two distinct processing modes:
+- Row mode execution
+- Batch mode execution
+
+### Row mode execution
+*Row mode execution* is a query processing method used with traditional RDMBS tables, where data is stored in row format. When a query is executed and accesses data in row store tables, the execution tree operators and child operators read each required row, accross all the columns specified in the table schema. From each row that is read, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] then retrieves the columns that are required for the result set, as referenced by a SELECT statement, JOIN predicate, or filter predicate.
+
+> [!NOTE]
+> Row mode execution is very efficient for OLTP scenarios, but can be less efficient when scanning large amounts of data, for example in Data Warehousing scenarios.
+
+### Batch mode execution  
+*Batch mode execution* is a query processing method used to process multiple rows together (hence the term batch). Each column within a batch is stored as a vector in a separate area of memory, so batch mode processing is vector-based. Batch mode processing also uses algorithms that are optimized for the multi-core CPUs and increased memory throughput that are found on modern hardware.      
+
+Batch mode execution is closely integrated with, and optimized around, the columnstore storage format. Batch mode processing operates on compressed data when possible, and eliminates the [exchange operator](../relational-databases/showplan-logical-and-physical-operators-reference.md#exchange) used by row mode execution. The result is better parallelism and faster performance.    
+
+When a query is executed in batch mode, and accesses data in columnstore indexes, the execution tree operators and child operators read multiple rows together in column segments. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] reads only the columns required for the result, as referenced by a SELECT statement, JOIN predicate, or filter predicate.    
+For more information on columnstore indexes, see [Columnstore Index Architecture](../relational-databases/sql-server-index-design-guide.md#columnstore_index).  
+
+> [!NOTE]
+> Batch mode execution is very efficient Data Warehousing scenarios, where large amounts of data are read and aggregated.
+
 ## SQL Statement Processing
+Processing a single [!INCLUDE[tsql](../includes/tsql-md.md)] statement is the most basic way that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] executes SQL statements. The steps used to process a single `SELECT` statement that references only local base tables (no views or remote tables) illustrates the basic process.
 
-Processing a single SQL statement is the most basic way that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] executes SQL statements. The steps used to process a single `SELECT` statement that references only local base tables (no views or remote tables) illustrates the basic process.
-
-#### Logical Operator Precedence
+### Logical Operator Precedence
 
 When more than one logical operator is used in a statement, `NOT` is evaluated first, then `AND`, and finally `OR`. Arithmetic, and bitwise, operators are handled before logical operators. For more information, see [Operator Precedence](../t-sql/language-elements/operator-precedence-transact-sql.md).
 
@@ -65,7 +82,7 @@ WHERE ProductModelID = 20 OR (ProductModelID = 21
 GO
 ```
 
-#### Optimizing SELECT statements
+### Optimizing SELECT statements
 
 A `SELECT` statement is non-procedural; it does not state the exact steps that the database server should use to retrieve the requested data. This means that the database server must analyze the statement to determine the most efficient way to extract the requested data. This is referred to as optimizing the `SELECT` statement. The component that does this is called the Query Optimizer. The input to the Query Optimizer consists of the query, the database schema (table and index definitions), and the database statistics. The output of the Query Optimizer is a query execution plan, sometimes referred to as a query plan or just a plan. The contents of a query plan are described in more detail later in this topic.
 
@@ -101,7 +118,7 @@ The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer relie
 
 The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer is important because it enables the database server to adjust dynamically to changing conditions in the database without requiring input from a programmer or database administrator. This enables programmers to focus on describing the final result of the query. They can trust that the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer will build an efficient execution plan for the state of the database every time the statement is run.
 
-#### Processing a SELECT Statement
+### Processing a SELECT Statement
 
 The basic steps that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses to process a single SELECT statement include the following: 
 
@@ -111,7 +128,7 @@ The basic steps that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses
 4. The relational engine starts executing the execution plan. As the steps that require data from the base tables are processed, the relational engine requests that the storage engine pass up data from the rowsets requested from the relational engine.
 5. The relational engine processes the data returned from the storage engine into the format defined for the result set and returns the result set to the client.
 
-#### Processing Other Statements
+### Processing Other Statements
 
 The basic steps described for processing a `SELECT` statement apply to other SQL statements such as `INSERT`, `UPDATE`, and `DELETE`. `UPDATE` and `DELETE` statements both have to target the set of rows to be modified or deleted. The process of identifying these rows is the same process used to identify the source rows that contribute to the result set of a `SELECT` statement. The `UPDATE` and `INSERT` statements may both contain embedded `SELECT statements that provide the data values to be updated or inserted.
 
@@ -167,7 +184,7 @@ WHERE OrderDate > '20020531';
 
 The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio Showplan feature shows that the relational engine builds the same execution plan for both of these `SELECT` statements.
 
-#### Using Hints with Views
+### Using Hints with Views
 
 Hints that are placed on views in a query may conflict with other hints that are discovered when the view is expanded to access its base tables. When this occurs, the query returns an error. For example, consider the following view that contains a table hint in its definition:
 
@@ -547,7 +564,7 @@ Additionally, the following query clauses are not parameterized. Note that in th
   * The expression contains a `CASE` clause.  
 * Arguments to query hint clauses. These include the `number_of_rows` argument of the `FAST` query hint, the `number_of_processors` argument of the `MAXDOP` query hint, and the number argument of the `MAXRECURSION` query hint.
 
-Parameterization occurs at the level of individual Transact-SQL statements. In other words, individual statements in a batch are parameterized. After compiling, a parameterized query is executed in the context of the batch in which it was originally submitted. If an execution plan for a query is cached, you can determine whether the query was parameterized by referencing the sql column of the sys.syscacheobjects dynamic management view. If a query is parameterized, the names and data types of parameters come before the text of the submitted batch in this column, such as (@1 tinyint).
+Parameterization occurs at the level of individual Transact-SQL statements. In other words, individual statements in a batch are parameterized. After compiling, a parameterized query is executed in the context of the batch in which it was originally submitted. If an execution plan for a query is cached, you can determine whether the query was parameterized by referencing the sql column of the sys.syscacheobjects dynamic management view. If a query is parameterized, the names and data types of parameters come before the text of the submitted batch in this column, such as (\@1 tinyint).
 
 > [!NOTE]
 > Parameter names are arbitrary. Users or applications should not rely on a particular naming order. Also, the following can change between versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and Service Pack upgrades: Parameter names, the choice of literals that are parameterized, and the spacing in the parameterized text.
@@ -1001,7 +1018,7 @@ To improve the performance of queries that access a large amount of data from la
 * Use a server with fast processors and as many processor cores as you can afford, to take advantage of parallel query processing capability.
 * Ensure the server has sufficient I/O controller bandwidth. 
 * Create a clustered index on every large partitioned table to take advantage of B-tree scanning optimizations.
-* Follow the best practice recommendations in the white paper, [The Data Loading Performance Guide](http://msdn.microsoft.com/en-us/library/dd425070.aspx), when bulk loading data into partitioned tables.
+* Follow the best practice recommendations in the white paper, [The Data Loading Performance Guide](http://msdn.microsoft.com/library/dd425070.aspx), when bulk loading data into partitioned tables.
 
 ### Example
 

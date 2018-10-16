@@ -1,34 +1,28 @@
 ---
 title: "Overview of Data Migration Assistant (SQL Server) | Microsoft Docs"
+description: Learn how to use Data Migration Assistant to migrate SQL Server databases to other SQL Server or Azure databases
 ms.custom: ""
-ms.date: "03/15/2018"
-ms.prod: "sql-non-specified"
+ms.date: "08/29/2018"
+ms.prod: sql
 ms.prod_service: "dma"
-ms.service: ""
-ms.component:
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "sql-dma"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: dma
+ms.topic: conceptual
 keywords: ""
 helpviewer_keywords: 
   - "Data Migration Assistant, overview"
 ms.assetid: ""
-caps.latest.revision: ""
-author: "HJToland3"
-ms.author: "jtoland"
-manager: "craigg"
-ms.workload: "Inactive"
+author: HJToland3
+ms.author: rajpo
+manager: craigg
 ---
 
 # Overview of Data Migration Assistant
 
-The Data Migration Assistant (DMA) enables you to upgrade to a modern data platform by detecting compatibility issues that can impact database functionality in your new version of SQL Server and Azure SQL Database. DMA recommends performance and reliability improvements for your target environment and allows you to move your schema, data, and uncontained objects from your source server to your target server.
+The Data Migration Assistant (DMA) helps you upgrade to a modern data platform by detecting compatibility issues that can impact database functionality in your new version of SQL Server or of Azure SQL Database. DMA recommends performance and reliability improvements for your target environment and allows you to move your schema, data, and uncontained objects from your source server to your target server.
 
 > [!NOTE] 
-> For large (in terms of number and size of databases) migrations, it is recommended to use the [Azure Database Migration Service](https://docs.microsoft.com/en-us/azure/dms/dms-overview), which can migrate databases at scale.
+> For large migrations (in terms of number and size of databases), we recommend that you use the [Azure Database Migration Service](https://docs.microsoft.com/azure/dms/dms-overview), which can migrate databases at scale.
   
 ## Capabilities
 
@@ -36,7 +30,7 @@ The Data Migration Assistant (DMA) enables you to upgrade to a modern data platf
 
   - Migration blocking issues: Discovers the compatibility issues that block migrating on-premises SQL Server database(s)s to Azure SQL Database(s). DMA provides recommendations to help you address those issues.
 
-  - Partially supported or unsupported features: Detects partially supported or unsupported features that are currently in use on the source SQL Server instance. DMA provides a comprehensive set of recommendations, alternative approaches available in Azure, and mitigating steps so that you can incorporate into your migration projects.
+  - Partially supported or unsupported features: Detects partially supported or unsupported features that are currently in use on the source SQL Server instance. DMA provides a comprehensive set of recommendations, alternative approaches available in Azure, and mitigating steps so that you can incorporate them into your migration projects.
 
 - Discover issues that can affect an upgrade to an on-premises SQL Server. These are described as compatibility issues and are organized in the following categories:
 
@@ -50,14 +44,14 @@ The Data Migration Assistant (DMA) enables you to upgrade to a modern data platf
   - Security
   - Storage
 
-- Migrate an on-premises SQL Server instance to a modern SQL Server instance, hosted on premises or on an Azure virtual machine (VM) that is accessible from your on-premises network. The Azure VM can be accessed using VPN or other technologies. The migration workflow helps you to migrate the following components:
+- Migrate an on-premises SQL Server instance to a modern SQL Server instance hosted on premises or on an Azure virtual machine (VM) that is accessible from your on-premises network. The Azure VM can be accessed using VPN or other technologies. The migration workflow helps you to migrate the following components:
 
   - Schema of databases
   - Data and users
   - Server roles
   - SQL Server and Windows logins
 
-- After the successful migration, applications can connect to the target SQL server databases seamlessly.
+- After a successful migration, applications can connect to the target SQL server databases seamlessly.
 
 ## Supported source and target versions
 

@@ -2,16 +2,10 @@
 title: "Work with Multiple Versions and Instances of SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/25/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "install"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: install
+ms.topic: conceptual
 helpviewer_keywords: 
   - "concurrent installations [SQL Server]"
   - "versions [SQL Server], multiple"
@@ -23,11 +17,9 @@ helpviewer_keywords:
   - "32-bit edition [SQL Server]"
   - "editions [SQL Server], side-by-side installations"
 ms.assetid: 93acefa8-bb41-4ccc-b763-7801f51134e0
-caps.latest.revision: 67
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: "Active"
 ---
 # Work with Multiple Versions and Instances of SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

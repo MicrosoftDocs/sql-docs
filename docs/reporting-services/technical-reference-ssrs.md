@@ -1,17 +1,11 @@
 ---
 title: "Technical Reference (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/30/2017"
+ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.service: ""
-ms.component: "reporting-services"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: reporting-services
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Reporting Services, technical reference"
   - "technical reference [Reporting Services]"
@@ -19,11 +13,8 @@ helpviewer_keywords:
   - "tools [Reporting Services]"
   - "user interface reference [Reporting Services]"
 ms.assetid: 4876bee2-071f-4a8d-ab8a-b03337625b74
-caps.latest.revision: 23
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
-ms.workload: "On Demand"
+author: markingmyname
+ms.author: maghan
 ---
 
 # Technical Reference (SSRS)

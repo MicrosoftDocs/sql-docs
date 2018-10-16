@@ -2,25 +2,18 @@
 title: "SQLConfigDataSource (Paradox Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLConfigDataSource function [ODBC], Paradox Driver"
   - "Paradox driver [ODBC], SQLConfigDataSource"
 ms.assetid: 59e84c4e-debe-49d7-b97b-84c736b0c793
-caps.latest.revision: 7
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.workload: "Inactive"
 ---
 # SQLConfigDataSource (Paradox Driver)
 > [!NOTE]  

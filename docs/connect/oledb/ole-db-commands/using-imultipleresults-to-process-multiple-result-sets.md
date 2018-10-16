@@ -2,29 +2,25 @@
 title: "Using IMultipleResults to Process Multiple Result Sets | Microsoft Docs"
 description: "Using IMultipleResults to process multiple result sets"
 ms.custom: ""
-ms.date: "03/26/2018"
-ms.prod: "sql"
+ms.date: "06/14/2018"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "ole-db-commands"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
+ms.technology: connectivity
 ms.topic: "reference"
 helpviewer_keywords: 
   - "multiple rowsets"
   - "rowsets [OLE DB], multiple"
   - "IMultipleResults interface"
   - "multiple-rowset results"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Using IMultipleResults to Process Multiple Result Sets
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Consumers use the **IMultipleResults** interface to process results returned by OLE DB Driver for SQL Server command execution. When the OLE DB Driver for SQL Server submits a command for execution, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] executes the statements and returns any results.  
   

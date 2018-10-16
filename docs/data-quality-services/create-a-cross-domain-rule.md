@@ -2,25 +2,19 @@
 title: "Create a Cross-Domain Rule | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/22/2011"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "data-quality-services"
-ms.service: ""
-ms.component: "data-quality-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dqs.dm.testcdrule.f1"
   - "sql13.dqs.dm.cdrules.f1"
 ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
-caps.latest.revision: 13
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Create a Cross-Domain Rule
 

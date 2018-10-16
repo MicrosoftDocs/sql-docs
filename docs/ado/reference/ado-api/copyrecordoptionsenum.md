@@ -1,16 +1,11 @@
 ---
 title: "CopyRecordOptionsEnum | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
@@ -18,11 +13,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "CopyRecordOptionsEnum enumeration [ADO]"
 ms.assetid: 2fa4eec5-d50b-4fd3-8ae7-40af441ba12b
-caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # CopyRecordOptionsEnum
 Specifies the behavior of the [CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md) method.  

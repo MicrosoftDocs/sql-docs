@@ -2,15 +2,10 @@
 title: "FORMATMESSAGE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/12/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "FORMATMESSAGE"
@@ -24,11 +19,9 @@ helpviewer_keywords:
   - "messages [SQL Server], formats"
   - "errors [SQL Server], formats"
 ms.assetid: 83f18102-2035-4a87-acd0-8d96d03efad5
-caps.latest.revision: 39
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "On Demand"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # FORMATMESSAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -1,32 +1,30 @@
 ---
 title: "SSIS Catalog | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.date: 06/04/2018
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "service"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.ssis.ssms.iscreatecatalog.f1"
   - "sql13.ssis.ssms.iscatalogprop.general.f1"
   - "sql13.ssis.dbupgradewizard.f1"
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
-caps.latest.revision: 28
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "Active"
+manager: craigg
 ---
 
 # SSIS Catalog
   The **SSISDB** catalog is the central point for working with [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) projects that you’ve deployed to the [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] server. For example, you set project and package parameters, configure environments to specify runtime values for packages, execute and troubleshoot packages, and manage [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] server operations.  
-  
+ 
+> [!NOTE]
+> This article describes the SSIS Catalog in general, and the SSIS Catalog running on premises. You can also create the SSIS Catalog in Azure SQL Database, and deploy and run SSIS packages in Azure. For more info, see [Lift and shift SQL Server Integration Services workloads to the cloud](../lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
+>
+> Although you can also run SSIS packages on Linux, the SSIS Catalog is not supported on Linux. For more info, see [Extract, transform, and load data on Linux with SSIS](../../linux/sql-server-linux-migrate-ssis.md).
+ 
  The objects that are stored in the **SSISDB** catalog include projects, packages, parameters, environments, and operational history.  
   
  You inspect objects, settings, and operational data that are stored in the **SSISDB** catalog, by querying the views in the **SSISDB** database. You manage the objects by calling stored procedures in the **SSISDB** database or by using the UI of the **SSISDB** catalog. In many cases, the same task can be performed in the UI or by calling a stored procedure.  
@@ -85,7 +83,7 @@ ms.workload: "Active"
   
 -   The name might not contain leading or trailing spaces.  
   
--   @ is not allowed as the first character, but subsequent characters might use @.  
+-   \@ is not allowed as the first character, but subsequent characters might use \@.  
   
 -   The length of the name must be greater than 0 and less than or equal to 128.  
   
@@ -103,7 +101,7 @@ ms.workload: "Active"
   
 -   The name might not contain leading or trailing spaces.  
   
--   @ is not allowed as the first character, but subsequent characters might use @.  
+-   \@ is not allowed as the first character, but subsequent characters might use \@.  
   
 -   The length of the name must be greater than 0 and less than or equal to 128.  
   
@@ -219,7 +217,7 @@ To run the **SSIS Server Maintenance Job**, SSIS creates the SQL Server login **
   
 -   [catalog.get_project &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-get-project-ssisdb-database.md)  
   
--   [catalog.move_project &#40;&#40;SSISDB Database&#41;](../Topic/catalog.move_project%20\(\(SSISDB%20Database\).md)  
+-   [catalog.move_project &#40;&#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-move-project-ssisdb-database.md)  
   
 -   [catalog.restore_project &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-restore-project-ssisdb-database.md)  
   
@@ -596,7 +594,7 @@ Do the following prerequisite steps before enabling Always On support for the SS
 > -   You must enable **SSIS support for Always On** *after* you add SSISDB to an Always On Availability Group.  
 
 > [!NOTE]
-> For more info about this procedure, see the following walkthrough with additional screen shots by SQL Server MVP Marcos Freccia: [Adding SSISDB to AG for SQL Server 2016](https://marcosfreccia.wordpress.com/2017/04/28/adding-ssisdb-to-ag-for-sql-server-2016/).
+> For more info about this procedure, see the following walkthrough with additional screen shots by Data Platform MVP Marcos Freccia: [Adding SSISDB to AG for SQL Server 2016](https://marcosfreccia.com/2017/04/28/adding-ssisdb-to-ag-for-sql-server-2016/).
 
 ####  <a name="Step1"></a> Step 1: Create Integration Services Catalog  
   
@@ -615,9 +613,7 @@ Adding the SSISDB database to an Always On Availability Group is almost same as 
   
 Provide the password that you specified while creating the SSIS Catalog in the **Select Databases** page of the **New Availability Group** wizard.
 
-When you're prompted to **Select your data synchronization preference**, select **Skip initial data synchronization**.
-  
- ![New Availability Group](../../integration-services/service/media/ssis-newavailabilitygroup.png "New Availability Group")  
+![New Availability Group](../../integration-services/service/media/ssis-newavailabilitygroup.png "New Availability Group")  
   
 ####  <a name="Step3"></a> Step 3: Enable SSIS support for Always On  
  After you create the Integration Service Catalog, right-click the **Integration Service Catalogs** node, and click **Enable Always On Support.** You should see the following **Enable Support for Always On** dialog box. If this menu item is disabled, confirm that you have all the prerequisites installed and click **Refresh**.  

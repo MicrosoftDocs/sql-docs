@@ -2,29 +2,21 @@
 title: "sp_helppublication (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "replication"
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_helppublication_TSQL"
   - "sp_helppublication"
 helpviewer_keywords: 
   - "sp_helppublication"
 ms.assetid: e801c3f0-dcbd-4b4a-b254-949a05f63518
-caps.latest.revision: 49
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sp_helppublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +97,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |enabled_for_p2p_conflictdetection|**int**|Specifies whether the Distribution Agent detects conflicts for a publication that is enabled for peer-to-peer replication. A value of **1** means that conflicts are detected. For more information, see [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
 |originator_id|**int**|Specifies an ID for a node in a peer-to-peer topology. This ID is used for conflict detection if **enabled_for_p2p_conflictdetection** is set to **1**. For a list of IDs that have already been used, query the [Mspeer_originatorid_history](../../relational-databases/system-tables/mspeer-originatorid-history-transact-sql.md) system table.|  
 |p2p_continue_onconflict|**int**|Specifies whether The Distribution Agent continues to process changes when a conflict is detected. A value of **1** means that the agent continues to process changes.<br /><br /> **\*\* Caution \*\*** We recommend that you use the default value of **0**. When this option is set to **1**, the Distribution Agent tries to converge data in the topology by applying the conflicting row from the node that has the highest originator ID. This method does not guarantee convergence. You should make sure that the topology is consistent after a conflict is detected. For more information, see "Handling Conflicts" in [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
-|alllow_partition_switch|**int**|Specifies whether ALTER TABLE…SWITCH statements can be executed against the published database. For more information, see [Replicate Partitioned Tables and Indexes](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md).|  
+|allow_partition_switch|**int**|Specifies whether ALTER TABLE…SWITCH statements can be executed against the published database. For more information, see [Replicate Partitioned Tables and Indexes](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md).|  
 |replicate_partition_switch|**int**|Specifies whether ALTER TABLE…SWITCH statements that are executed against the published database should be replicated to Subscribers. This option is valid only if *allow_partition_switch* is set to **1**.|  
   
 ## Return Code Values  

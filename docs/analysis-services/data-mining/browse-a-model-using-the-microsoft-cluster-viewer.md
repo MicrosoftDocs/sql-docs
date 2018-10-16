@@ -1,36 +1,14 @@
 ---
 title: "Browse a Model Using the Microsoft Cluster Viewer | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "clusters [Analysis Services]"
-  - "discrimination [Analysis Services]"
-  - "names [Analysis Services], clusters"
-  - "Microsoft Cluster Viewer"
-  - "mining model content, viewing"
-  - "comparing clusters"
-  - "viewing clusters"
-  - "displaying clusters"
-  - "data mining [Analysis Services], clusters"
-  - "Cluster Viewer [Analysis Services]"
-  - "mining models [Analysis Services], clusters"
-ms.assetid: 591fe30b-d88f-4a71-94d4-4a3907fc275d
-caps.latest.revision: 42
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Browse a Model Using the Microsoft Cluster Viewer
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

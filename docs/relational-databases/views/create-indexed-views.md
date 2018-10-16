@@ -1,17 +1,12 @@
-﻿---
+---
 title: "Create Indexed Views | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/22/2018"
-ms.prod: "sql"
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "views"
+ms.prod: sql
+ms.prod_service: "table-view-index, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-views"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: table-view-index
+ms.topic: conceptual
 helpviewer_keywords: 
   - "indexed views [SQL Server], creating"
   - "clustered indexes, views"
@@ -20,12 +15,10 @@ helpviewer_keywords:
   - "indexed views [SQL Server]"
   - "views [SQL Server], indexed views"
 ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
-caps.latest.revision: 79
-author: "stevestein"
-ms.author: "sstein"
-manager: "craigg"
-ms.workload: "Active"
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+author: stevestein
+ms.author: sstein
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create Indexed Views
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -90,11 +83,11 @@ In addition to the SET options and deterministic function requirements, the foll
   
 -   When you create the index, the `IGNORE_DUP_KEY` option must be set to OFF (the default setting).    
   
--   Tables must be referenced by two-part names, *schema***.***tablename* in the view definition.    
+-   Tables must be referenced by two-part names, _schema_**.**_tablename_ in the view definition.    
   
 -   User-defined functions referenced in the view must be created by using the `WITH SCHEMABINDING` option.    
   
--   Any user-defined functions referenced in the view must be referenced by two-part names, *\<schema>***.***\<function>*.   
+-   Any user-defined functions referenced in the view must be referenced by two-part names, _\<schema\>_**.**_\<function\>_.   
   
 -   The data access property of a user-defined function must be `NO SQL`, and external access property must be `NO`.   
   

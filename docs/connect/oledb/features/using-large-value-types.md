@@ -2,16 +2,11 @@
 title: "Using Large Value Types | Microsoft Docs"
 description: "Using large value types with OLE DB Driver for SQL Server"
 ms.custom: ""
-ms.date: "03/26/2018"
-ms.prod: "sql"
+ms.date: "06/12/2018"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "oledb|features"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
+ms.technology: connectivity
 ms.topic: "reference"
 helpviewer_keywords: 
   - "large value data types"
@@ -19,13 +14,14 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, large value types"
   - "data access [OLE DB Driver for SQL Server], large value types"
   - "OLE DB Driver for SQL Server, large value data types"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Using Large Value Types
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Before [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], working with large value data types required special handling. Large value data types are the types that exceed the maximum row size of 8 KB. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] introduced a **max** specifier for **varchar**, **nvarchar**, and **varbinary** data types to allow storage of values as large as 2^31 -1 bytes. Table columns and [!INCLUDE[tsql](../../../includes/tsql-md.md)] variables may specify **varchar(max)**, **nvarchar(max)**, or **varbinary(max)** data types.  
   

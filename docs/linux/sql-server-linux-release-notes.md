@@ -4,23 +4,21 @@ description: This article contains the release notes and supported features for 
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 04/20/2018
-ms.topic: article
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: ""
-ms.suite: "sql"
+ms.date: 08/14/2018
+ms.topic: conceptual
+ms.prod: sql
 ms.custom: "sql-linux"
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.workload: "Active"
 ---
 # Release notes for SQL Server 2017 on Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-The following release notes apply to SQL Server 2017 running on Linux. This article is broken into sections for each release. The GA release has detailed supportability and known issues listed. Each Cumulative Update (CU) release has a link to a support article describing the CU changes as well as links to the Linux package downloads.
+The following release notes apply to SQL Server 2017 running on Linux. This article is broken into sections for each release. The GA release has detailed supportability and known issues listed. Each cumulative update (CU) or general distribution release (GDR) has a link to a support article describing the CU changes as well as links to the Linux package downloads.
+
+> [!TIP]
+> These release notes are specifically for SQL Server 2017 releases. For more information about the new SQL Server 2019 preview release, see [Release notes for SQL Server 2019 preview on Linux](sql-server-linux-release-notes-2019.md?view=sql-server-ver15).
 
 ## Supported platforms
 
@@ -42,26 +40,132 @@ Most existing client tools that target SQL Server can seamlessly target SQL Serv
 
 The following table lists the release history for SQL Server 2017.
 
-| Release | Version | Release date |
-|-----|-----|-----|
-| [CU6](#CU6) | 14.0.3025.34 | 4-2018 |
-| [CU5](#CU5) | 14.0.3023.8 | 3-2018 |
-| [CU4](#CU4) | 14.0.3022.28 | 2-2018 |
-| [CU3](#CU3) | 14.0.3015.40 | 1-2018 |
-| [CU2](#CU2) | 14.0.3008.27 | 11-2017 |
-| [CU1](#CU1) | 14.0.3006.16 | 10-2017 |
-| [GA](#GA) | 14.0.1000.169 | 10-2017 |
+| Release               | Version       | Release date |
+|-----------------------|---------------|--------------|
+| [CU11](#CU11)         | 14.0.3038.14  | 2018-09-20   |
+| [CU10](#CU10)         | 14.0.3037.1   | 2018-08-27   |
+| [CU9-GDR2](#CU9-GDR2) | 14.0.3035.2   | 2018-08-18   |
+| [GDR2](#GDR2)         | 14.0.2002.14  | 2018-08-18   |
+| [CU9](#CU9)           | 14.0.3030.27  | 2018-07-18   |
+| [CU8](#CU8)           | 14.0.3029.16  | 2018-06-21   |
+| [CU7](#CU7)           | 14.0.3026.27  | 2018-05-24   |
+| [CU6](#CU6)           | 14.0.3025.34  | 2018-04-19   |
+| [CU5](#CU5)           | 14.0.3023.8   | 2018-03-20   |
+| [CU4](#CU4)           | 14.0.3022.28  | 2018-02-20   |
+| [CU3](#CU3)           | 14.0.3015.40  | 2018-01-03   |
+| [GDR1](#GDR1)         | 14.0.2000.63  | 2018-01-03   |
+| [CU2](#CU2)           | 14.0.3008.27  | 2017-11-28   |
+| [CU1](#CU1)           | 14.0.3006.16  | 2017-10-24   |
+| [GA](#GA)             | 14.0.1000.169 | 2017-10-02   |
 
-## <a id="cuinstall"></a> How to install cumulative updates
+## <a id="cuinstall"></a> How to install updates
 
-If you have configured the Cumulative Update repository, then you will get the latest cumulative update of SQL Server packages when you perform new installations. The Cumulative Update repository is the default for all package installation articles for SQL Server on Linux. For more information about repository configuration, see [Configure repositories for SQL Server on Linux](sql-server-linux-change-repo.md).
+If you have configured the CU repository (**mssql-server-2017**), then you will get the latest CU of SQL Server packages when you perform new installations. The CU repository is the default for all package installation articles for SQL Server on Linux. If you have configured the GDR repository (**mssql-server-2017-gdr**), you will only get critical security updates released since GA. If you require Docker container CU or GDR updates, please see official images for [Microsoft SQL Server on Linux for Docker Engine](https://hub.docker.com/r/microsoft/mssql-server). For more information about repository configuration, see [Configure repositories for SQL Server on Linux](sql-server-linux-change-repo.md).
 
-If you are updating existing SQL Server packages, run the appropriate update command for each package to get the latest cumulative update. For specific update instructions for each package, see the following installation guides:
+If you are updating existing SQL Server packages, run the appropriate update command for each package to get the latest CU. For specific update instructions for each package, see the following installation guides:
 
 - [Install SQL Server package](sql-server-linux-setup.md#upgrade)
 - [Install Full-text Search package](sql-server-linux-setup-full-text-search.md)
 - [Install SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 - [Enable SQL Server Agent](sql-server-linux-setup-sql-agent.md)
+
+## <a id="CU11"></a> CU11 (September 2018)
+
+This is the Cumulative Update 11 (CU11) release of SQL Server 2017. The SQL Server engine version for this release is 14.0.3038.14. For information about the fixes and improvements in this release, see [https://support.microsoft.com/en-us/help/4462262](https://support.microsoft.com/en-us/help/4462262).
+
+### Package details
+
+For manual or offline package installations, you can download the RPM and Debian packages with the information in the following table:
+
+| Package | Package version | Downloads |
+|-----|-----|-----|
+| Red Hat RPM package | 14.0.3038.14-2 | [Engine RPM package](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3038.14-2.x86_64.rpm)</br>[High Availability RPM package](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3038.14-2.x86_64.rpm)</br>[Full-text Search RPM package](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3038.14-2.x86_64.rpm)</br>[SSIS package](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| SLES RPM package | 14.0.3038.14-2 | [mssql-server Engine RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3038.14-2.x86_64.rpm)</br>[High Availability RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3038.14-2.x86_64.rpm)</br>[Full-text Search RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3038.14-2.x86_64.rpm) | 
+| Ubuntu 16.04 Debian package | 14.0.3038.14-2 | [Engine Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3038.14-2_amd64.deb)</br>[High Availability Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3037.1-2_amd64.deb)</br>[Full-text Search Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3037.1-2_amd64.deb)<br/>[SSIS package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
+
+## <a id="CU10"></a> CU10 (August 2018)
+
+This is the Cumulative Update 10 (CU10) release of SQL Server 2017. The SQL Server engine version for this release is 14.0.3037.1. For information about the fixes and improvements in this release, see [https://support.microsoft.com/en-us/help/4342123](https://support.microsoft.com/en-us/help/4342123).
+
+### Package details
+
+For manual or offline package installations, you can download the RPM and Debian packages with the information in the following table:
+
+| Package | Package version | Downloads |
+|-----|-----|-----|
+| Red Hat RPM package | 14.0.3037.1-2 | [Engine RPM package](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3037.1-2.x86_64.rpm)</br>[High Availability RPM package](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3037.1-2.x86_64.rpm)</br>[Full-text Search RPM package](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3037.1-2.x86_64.rpm)</br>[SSIS package](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| SLES RPM package | 14.0.3037.1-2 | [mssql-server Engine RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3037.1-2.x86_64.rpm)</br>[High Availability RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3037.1-2.x86_64.rpm)</br>[Full-text Search RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3037.1-2.x86_64.rpm) | 
+| Ubuntu 16.04 Debian package | 14.0.3037.1-2 | [Engine Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3037.1-2_amd64.deb)</br>[High Availability Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3037.1-2_amd64.deb)</br>[Full-text Search Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3037.1-2_amd64.deb)<br/>[SSIS package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
+
+## <a id="CU9-GDR2"></a> CU9-GDR2 (August 2018)
+
+This is a security update that also includes the previously released CU (CU9) for SQL Server 2017. The SQL Server engine version for this release is 14.0.3035.2. For information about the fixes and improvements in this release, see [https://support.microsoft.com/en-us/help/4293805](https://support.microsoft.com/en-us/help/4293805).
+
+### Package details
+
+For manual or offline package installations, you can download the RPM and Debian packages with the information in the following table:
+
+| Package | Package version | Downloads |
+|-----|-----|-----|
+| Red Hat RPM package | 14.0.3035.2-1 | [Engine RPM package](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3035.2-1.x86_64.rpm)</br>[High Availability RPM package](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3035.2-1.x86_64.rpm)</br>[Full-text Search RPM package](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3035.2-1.x86_64.rpm)| 
+| SLES RPM package | 14.0.3035.2-1 | [mssql-server Engine RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3035.2-1.x86_64.rpm)</br>[High Availability RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3035.2-1.x86_64.rpm)</br>[Full-text Search RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3035.2-1.x86_64.rpm) | 
+| Ubuntu 16.04 Debian package | 14.0.3035.2-1 | [Engine Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3035.2-1_amd64.deb)</br>[High Availability Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3035.2-1_amd64.deb)</br>[Full-text Search Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3035.2-1_amd64.deb)<br/> |
+
+## <a id="GDR2"></a> GDR2 (August 2018)
+
+This is a security update that only includes the GDR2 (and GDR1) security fixes for SQL Server 2017.  The SQL Server engine version for this release is 14.0.2002.14. For information about the fixes and improvements in this release, see [https://support.microsoft.com/en-us/help/4293803](https://support.microsoft.com/en-us/help/4293803).
+
+### Package details
+
+For manual or offline package installations, you can download the RPM and Debian packages with the information in the following table:
+
+| Package | Package version | Downloads |
+|-----|-----|-----|
+| Red Hat RPM package | 14.0.2002.14-1 | [Engine RPM package](https://packages.microsoft.com/rhel/7/mssql-server-2017-gdr/mssql-server-14.0.2002.14-1.x86_64.rpm)</br>[High Availability RPM package](https://packages.microsoft.com/rhel/7/mssql-server-2017-gdr/mssql-server-ha-14.0.2002.14-1.x86_64.rpm)</br>[Full-text Search RPM package](https://packages.microsoft.com/rhel/7/mssql-server-2017-gdr/mssql-server-fts-14.0.2002.14-1.x86_64.rpm) | 
+| SLES RPM package | 14.0.2002.14-1 | [mssql-server Engine RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017-gdr/mssql-server-14.0.2002.14-1.x86_64.rpm)</br>[High Availability RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017-gdr/mssql-server-ha-14.0.2002.14-1.x86_64.rpm)</br>[Full-text Search RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017-gdr/mssql-server-fts-14.0.2002.14-1.x86_64.rpm) | 
+| Ubuntu 16.04 Debian package | 14.0.2002.14-1 | [Engine Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr/pool/main/m/mssql-server/mssql-server_14.0.2002.14-1_amd64.deb)</br>[High Availability Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.2002.14-1_amd64.deb)</br>[Full-text Search Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.2002.14-1_amd64.deb) |
+
+## <a id="CU9"></a> CU9 (July 2018)
+
+This is the Cumulative Update 9 (CU9) release of SQL Server 2017. The SQL Server engine version for this release is 14.0.3030.27. For information about the fixes and improvements in this release, see [https://support.microsoft.com/en-us/help/4341265](https://support.microsoft.com/en-us/help/4341265).
+
+### Package details
+
+For manual or offline package installations, you can download the RPM and Debian packages with the information in the following table:
+
+| Package | Package version | Downloads |
+|-----|-----|-----|
+| Red Hat RPM package | 14.0.3030.27-1 | [Engine RPM package](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3030.27-1.x86_64.rpm)</br>[High Availability RPM package](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3030.27-1.x86_64.rpm)</br>[Full-text Search RPM package](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3030.27-1.x86_64.rpm)</br>[SSIS package](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| SLES RPM package | 14.0.3030.27-1 | [mssql-server Engine RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3030.27-1.x86_64.rpm)</br>[High Availability RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3030.27-1.x86_64.rpm)</br>[Full-text Search RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3030.27-1.x86_64.rpm) | 
+| Ubuntu 16.04 Debian package | 14.0.3030.27-1 | [Engine Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3030.27-1_amd64.deb)</br>[High Availability Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3030.27-1_amd64.deb)</br>[Full-text Search Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3030.27-1_amd64.deb)<br/>[SSIS package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
+
+## <a id="CU8"></a> CU8 (June 2018)
+
+This is the Cumulative Update 8 (CU8) release of SQL Server 2017. The SQL Server engine version for this release is 14.0.3029.16. For information about the fixes and improvements in this release, see [https://support.microsoft.com/en-us/help/4338363](https://support.microsoft.com/en-us/help/4338363).
+
+### Package details
+
+For manual or offline package installations, you can download the RPM and Debian packages with the information in the following table:
+
+| Package | Package version | Downloads |
+|-----|-----|-----|
+| Red Hat RPM package | 14.0.3029.16-1 | [Engine RPM package](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3029.16-1.x86_64.rpm)</br>[High Availability RPM package](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3029.16-1.x86_64.rpm)</br>[Full-text Search RPM package](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3029.16-1.x86_64.rpm)</br>[SSIS package](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| SLES RPM package | 14.0.3029.16-1 | [mssql-server Engine RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3029.16-1.x86_64.rpm)</br>[High Availability RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3029.16-1.x86_64.rpm)</br>[Full-text Search RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3029.16-1.x86_64.rpm) | 
+| Ubuntu 16.04 Debian package | 14.0.3029.16-1 | [Engine Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3029.16-1_amd64.deb)</br>[High Availability Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3029.16-1_amd64.deb)</br>[Full-text Search Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3029.16-1_amd64.deb)<br/>[SSIS package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
+
+## <a id="CU7"></a> CU7 (May 2018)
+
+This is the Cumulative Update 7 (CU7) release of SQL Server 2017. The SQL Server engine version for this release is 14.0.3026.27. For information about the fixes and improvements in this release, see [https://support.microsoft.com/en-us/help/4229789](https://support.microsoft.com/en-us/help/4229789).
+
+### Package details
+
+For manual or offline package installations, you can download the RPM and Debian packages with the information in the following table:
+
+| Package | Package version | Downloads |
+|-----|-----|-----|
+| Red Hat RPM package | 14.0.3026.27-2 | [Engine RPM package](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3026.27-2.x86_64.rpm)</br>[High Availability RPM package](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3026.27-2.x86_64.rpm)</br>[Full-text Search RPM package](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3026.27-2.x86_64.rpm)</br>[SSIS package](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| SLES RPM package | 14.0.3026.27-2 | [mssql-server Engine RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3026.27-2.x86_64.rpm)</br>[High Availability RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3026.27-2.x86_64.rpm)</br>[Full-text Search RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3026.27-2.x86_64.rpm) | 
+| Ubuntu 16.04 Debian package | 14.0.3026.27-2 | [Engine Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3026.27-2_amd64.deb)</br>[High Availability Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3026.27-2_amd64.deb)</br>[Full-text Search Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3026.27-2_amd64.deb)<br/>[SSIS package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
 ## <a id="CU6"></a> CU6 (April 2018)
 
@@ -125,6 +229,20 @@ For manual or offline package installations, you can download the RPM and Debian
 | Red Hat RPM package | 14.0.3022.28-2 | [Engine RPM package](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3022.28-2.x86_64.rpm)</br>[High Availability RPM package](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3022.28-2.x86_64.rpm)</br>[Full-text Search RPM package](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3022.28-2.x86_64.rpm)</br>[SSIS package](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
 | SLES RPM package | 14.0.3022.28-2 | [mssql-server Engine RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3022.28-2.x86_64.rpm)</br>[High Availability RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3022.28-2.x86_64.rpm)</br>[Full-text Search RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3022.28-2.x86_64.rpm) | 
 | Ubuntu 16.04 Debian package | 14.0.3022.28-2 | [Engine Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3022.28-2_amd64.deb)</br>[High Availability Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3022.28-2_amd64.deb)</br>[Full-text Search Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3022.28-2_amd64.deb)<br/>[SSIS package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
+
+## <a id="GDR1"></a> GDR1 (January 2018)
+
+This is a security update that only includes the GDR1 security fixes for SQL Server 2017. The SQL Server engine version for this release is 14.0.2000.63. For information about the fixes and improvements in this release, see [https://support.microsoft.com/en-us/help/4057122](https://support.microsoft.com/en-us/help/4057122).
+
+### Package details
+
+For manual or offline package installations, you can download the RPM and Debian packages with the information in the following table:
+
+| Package | Package version | Downloads |
+|-----|-----|-----|
+| Red Hat RPM package | 14.0.2000.63-3 | [Engine RPM package](https://packages.microsoft.com/rhel/7/mssql-server-2017-gdr/mssql-server-14.0.2000.63-3.x86_64.rpm)</br>[High Availability RPM package](https://packages.microsoft.com/rhel/7/mssql-server-2017-gdr/mssql-server-ha-14.0.2000.63-3.x86_64.rpm)</br>[Full-text Search RPM package](https://packages.microsoft.com/rhel/7/mssql-server-2017-gdr/mssql-server-fts-14.0.2000.63-3.x86_64.rpm) | 
+| SLES RPM package | 14.0.2000.63-3 | [mssql-server Engine RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017-gdr/mssql-server-14.0.2000.63-3.x86_64.rpm)</br>[High Availability RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017-gdr/mssql-server-ha-14.0.2000.63-3.x86_64.rpm)</br>[Full-text Search RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017-gdr/mssql-server-fts-14.0.2000.63-3.x86_64.rpm) | 
+| Ubuntu 16.04 Debian package | 14.0.2000.63-3 | [Engine Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr/pool/main/m/mssql-server/mssql-server_14.0.2000.63-3_amd64.deb)</br>[High Availability Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.2000.63-3_amd64.deb)</br>[Full-text Search Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.2000.63-3_amd64.deb) |
 
 ## <a id="CU3"></a> CU3 (January 2018)
 
@@ -198,6 +316,7 @@ The following features and services are not available on Linux at the time of th
 | &nbsp; | Stretch DB |
 | &nbsp; | Polybase |
 | &nbsp; | Distributed query with 3rd-party connections |
+| &nbsp; | Linked Servers to data sources other than SQL Server |
 | &nbsp; | System extended stored procedures (XP_CMDSHELL, etc.) |
 | &nbsp; | Filetable, FILESTREAM |
 | &nbsp; | CLR assemblies with the EXTERNAL_ACCESS or UNSAFE permission set |
@@ -350,7 +469,7 @@ For more info about SSIS on Linux, see the following articles:
 -   [Install SQL Server Integration Services (SSIS) on Linux](sql-server-linux-setup-ssis.md)
 -   [Extract, transform, and load data on Linux with SSIS](sql-server-linux-migrate-ssis.md)
 
-#### SQL Server Management Studio (SSMS)
+#### < a id="ssms"></a> SQL Server Management Studio (SSMS)
 
 The following limitations apply to SSMS on Windows connected to SQL Server on Linux.
 

@@ -1,0 +1,48 @@
+- name: SQL Server Native Client Features
+  href: sql-server-native-client-features.md
+- name: Accessing Diagnostic Information in the Extended Events Log
+  href: accessing-diagnostic-information-in-the-extended-events-log.md
+- name: Changing Passwords Programmatically
+  href: changing-passwords-programmatically.md
+- name: Date and Time Improvements
+  href: date-and-time-improvements.md
+- name: FILESTREAM Support
+  href: filestream-support.md
+- name: Large CLR User-Defined Types
+  href: large-clr-user-defined-types.md
+- name: Metadata Discovery
+  href: metadata-discovery.md
+- name: ODBC Driver Behavior Change When Handling Character Conversions
+  href: odbc-driver-behavior-change-when-handling-character-conversions.md
+- name: Performing Asynchronous Operations
+  href: performing-asynchronous-operations.md
+- name: Performing Bulk Copy Operations
+  href: performing-bulk-copy-operations.md
+- name: Service Principal Name (SPN) Support in Client Connections
+  href: service-principal-name-spn-support-in-client-connections.md
+- name: Sparse Columns Support in SQL Server Native Client
+  href: sparse-columns-support-in-sql-server-native-client.md
+- name: SQL Server Native Client Support for High Availability, Disaster Recovery
+  href: sql-server-native-client-support-for-high-availability-disaster-recovery.md
+- name: SQL Server Native Client Support for LocalDB
+  href: sql-server-native-client-support-for-localdb.md
+- name: Table-Valued Parameters (SQL Server Native Client)
+  href: table-valued-parameters-sql-server-native-client.md
+- name: Using Database Mirroring
+  href: using-database-mirroring.md
+- name: Using Encryption Without Validation
+  href: using-encryption-without-validation.md
+- name: Using Large Value Types
+  href: using-large-value-types.md
+- name: Using Multiple Active Result Sets (MARS)
+  href: using-multiple-active-result-sets-mars.md
+- name: Using User-Defined Types
+  href: using-user-defined-types.md
+- name: Using XML Data Types
+  href: using-xml-data-types.md
+- name: UTF-16 Support in SQL Server Native Client 11.0
+  href: utf-16-support-in-sql-server-native-client-11-0.md
+- name: Working with Query Notifications
+  href: working-with-query-notifications.md
+- name: Working with Snapshot Isolation
+  href: working-with-snapshot-isolation.md

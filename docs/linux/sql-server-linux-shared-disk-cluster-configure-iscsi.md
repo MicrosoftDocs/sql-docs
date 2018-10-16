@@ -5,15 +5,10 @@ author: MikeRayMSFT
 ms.author: mikeray 
 manager: craigg
 ms.date: 08/28/2017
-ms.topic: article
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: ""
-ms.suite: "sql"
+ms.topic: conceptual
+ms.prod: sql
 ms.custom: "sql-linux"
-ms.technology: database-engine
-ms.workload: "Inactive"
+ms.technology: linux
 ---
 # Configure failover cluster instance - iSCSI - SQL Server on Linux
 

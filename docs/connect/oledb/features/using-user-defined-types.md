@@ -2,16 +2,11 @@
 title: "Using User-Defined Types | Microsoft Docs"
 description: "Using User-Defined Types with OLE DB Driver for SQL Server"
 ms.custom: ""
-ms.date: "03/26/2018"
-ms.prod: "sql"
+ms.date: "06/12/2018"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "oledb|features"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
+ms.technology: connectivity
 ms.topic: "reference"
 helpviewer_keywords: 
   - "DBPROPSET_DATASOURCEINFO property set"
@@ -24,13 +19,14 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, user-defined types"
   - "data access [OLE DB Driver for SQL Server], user-defined types"
   - "ISSCommandWithParameters interface"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Using User-Defined Types
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] introduced user-defined types (UDTs). UDTs extend the SQL type system by allowing you to store objects and custom data structures in a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database. UDTs can contain multiple data types and can have behaviors, differentiating them from the traditional alias data types that consist of a single [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] system data type. UDTs are defined using any of the languages supported by the .NET common language runtime (CLR) that produce verifiable code. This includes Microsoft Visual C#<sup>®</sup> and Visual Basic<sup>®</sup> .NET. The data is exposed as fields and properties of a .NET class or structure, and behaviors are defined by methods of the class or structure.  
   

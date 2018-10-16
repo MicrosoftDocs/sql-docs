@@ -1,16 +1,11 @@
-﻿---
+---
 title: "sys.columns (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/21/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.columns_TSQL"
@@ -22,12 +17,10 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.columns catalog view"
 ms.assetid: 323ac9ea-fc52-4b8c-8a7e-e0e44f8ed86c
-caps.latest.revision: 57
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "On Demand"
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+author: stevestein
+ms.author: sstein
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -82,8 +75,8 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 |encryption_algorithm_name|**sysname**|**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Name of encryption algorithm.<br /><br /> Only AEAD_AES_256_CBC_HMAC_SHA_512 is supported.|  
 |column_encryption_key_id|**int**|**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> ID of the CEK.|  
 |column_encryption_key_database_name|**sysname**|**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDW_md](../../includes/sssds-md.md)].<br /><br /> The name of the database where the column encryption key exists if different than the database of the column. NULL if the key exists in the same database as the column.|  
-|is_hidden|**bit**|**Applies to**: [!INCLUDE[ssCurrentLong](../../includes/sscurrentlong-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Indicates if the column is hidden:<br /><br /> 0 = regular, not-hidden, visible column<br /><br /> 1 = hidden column|  
-|is_masked|**bit**|**Applies to**: [!INCLUDE[ssCurrentLong](../../includes/sscurrentlong-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Indicates if the column is masked by a dynamic data masking:<br /><br /> 0 = regular, not-masked column<br /><br /> 1 = column is masked|  
+|is_hidden|**bit**|**Applies to**: [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Indicates if the column is hidden:<br /><br /> 0 = regular, not-hidden, visible column<br /><br /> 1 = hidden column|  
+|is_masked|**bit**|**Applies to**: [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Indicates if the column is masked by a dynamic data masking:<br /><br /> 0 = regular, not-masked column<br /><br /> 1 = column is masked|  
 
 
  

@@ -2,25 +2,19 @@
 title: "Post-migration Validation and Optimization Guide | Microsoft Docs"
 ms.custom: ""
 ms.date: "5/03/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "relational-databases-misc"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "post-migration validation and optimization"
   - "guide, post-migration validation and optimization"
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
-caps.latest.revision: 3
 author: "pelopes"
 ms.author: "harinid"
 manager: ""
-ms.workload: "Inactive"
 ---
 # Post-migration Validation and Optimization Guide
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +28,7 @@ Below are some of the common performance scenarios encountered after migrating t
 ​
 **Applies to:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] migration.
 
-When migrating from an older versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] or newer, and upgrading the [database compatibility level](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) to the latest one, a workload may be exposed to the risk of performance regression.
+When migrating from an older version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] or newer, and upgrading the [database compatibility level](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) to the latest available, a workload may be exposed to the risk of performance regression.
 
 This is because starting with [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], all Query Optimizer changes are tied to the latest [database compatibility level](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md), so plans are not changed right at point of upgrade but rather when a user changes the `COMPATIBILITY_LEVEL` database option to the latest one. This capability, in combination with Query Store gives you a great level of control over the query performance in the upgrade process. 
 
@@ -67,7 +61,7 @@ A potential problem arises when that first compilation may not have used the mos
 5.	Rewrite the query to use the hint `DISABLE_PARAMETER_SNIFFING`. Same effect as using the local variable technique by totally disabling parameter sniffing, unless `OPTION(RECOMPILE)`, `WITH RECOMPILE` or `OPTIMIZE FOR <value>` is used.
 
 > [!TIP] 
-> Leverage the [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] Plan Analysis feature to quickly identify if this is an issue. More information available [here](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-query-performance-troubleshooting-made-easier/).
+> Leverage the [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Plan Analysis feature to quickly identify if this is an issue. More information available [here](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-query-performance-troubleshooting-made-easier/).
 
 ## <a name="MissingIndexes"></a> Missing indexes
 

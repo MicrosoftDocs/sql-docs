@@ -1,16 +1,8 @@
 ---
 title: "ALTER ASYMMETRIC KEY (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
 ms.date: "04/12/2017"
-ms.prod: "sql"
-ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "t-sql|statements"
-ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.prod: sql
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "ALTER_ASYMMETRIC_KEY_TSQL"
@@ -25,11 +17,9 @@ helpviewer_keywords:
   - "ALTER ASYMMETRIC KEY statement"
   - "asymmetric keys [SQL Server], modifying"
 ms.assetid: 958e95d6-fbe6-43e8-abbd-ccedbac2dbac
-caps.latest.revision: 29
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
 ---
 # ALTER ASYMMETRIC KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

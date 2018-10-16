@@ -1,23 +1,16 @@
 ---
 title: "SQL Server Integration Services (SSIS) Scale Out Support for High Availability | Microsoft Docs"
-ms.description: "This article describes how to configure SSIS Scale Out for high availability"
-ms.custom: ""
-ms.date: "12/19/2017"
-ms.prod: "sql-non-specified"
+description: "This article describes how to configure SSIS Scale Out for high availability"
+ms.custom: performance
+ms.date: "05/23/2018"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "scale-out"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-caps.latest.revision: 1
+ms.technology: integration-services
+ms.topic: conceptual
 author: "haoqian"
 ms.author: "haoqian"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Scale Out support for high availability
 
@@ -44,7 +37,7 @@ This account must be able to access SSISDB on the secondary node in the Windows 
 
 ### 2.2 Include the DNS host name for the Scale Out Master service in the CNs of the Scale Out Master certificate
 
-This host name is used in the Scale Out Master endpoint. 
+This host name is used in the Scale Out Master endpoint. (Be sure to provide a DNS host name and not a server name.)
 
 ![HA master configuration](media/ha-master-config.PNG)
 
@@ -58,9 +51,9 @@ Use the same Scale Out Master certificate that you used on the primary node. Exp
 > [!NOTE]
 > You can set up multiple backup Scale Out Masters by repeating these operations for Scale Out Master on other secondary nodes.
 
-## 4. Set up SSISDB Always On
+## 4. Set up and configure SSISDB support for Always On
 
-Follow the instructions to set up Always On for SSISDB in [Always On for SSIS Catalog (SSISDB)](../catalog/ssis-catalog.md#always-on-for-ssis-catalog-ssisdb).
+Follow the instructions to set up and configure SSISDB support for Always On in [Always On for SSIS Catalog (SSISDB)](../catalog/ssis-catalog.md#always-on-for-ssis-catalog-ssisdb).
 
 In addition, you have to create an availability group listener for the availability group to which you add SSISDB. See [Create or Configure an Availability Group Listener](../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).
 
@@ -82,7 +75,7 @@ Call the stored procedure `[catalog].[update_logdb_info]` with the following par
 
 -   `@connection_string = 'Data Source=[Availability Group Listener DNS name],[Port];Initial Catalog=SSISDB;User Id=##MS_SSISLogDBWorkerAgentLogin##;Password=[Password]];'`
 
-## 7. Configure the Scale Out Master service role of the Windows failover cluster
+## 7. Configure the Scale Out Master service role of the Windows Server failover cluster
 
 1.  In Failover Cluster Manager, connect to the cluster for Scale Out. Select the cluster. Select **Action** in the menu and then select **Configure Role**.
 
@@ -94,6 +87,12 @@ Call the stored procedure `[catalog].[update_logdb_info]` with the following par
 
 4.  Finish the wizard.
 
+On Azure virtual machines, this configuration step requires additional steps. A full explanation of these concepts and these steps is beyond the scope of this article.
+
+1.  You have to set up an Azure domain. Windows Server Failover Clustering requires all computers in the cluster to be members of the same domain. For more info, see [Enable Azure Active Directory Domain Services using the Azure portal](https://docs.microsoft.com/azure/active-directory-domain-services/active-directory-ds-getting-started).
+
+2. You have to set up an Azure load balancer. This is a requirement for the availability group listener. For more info, see [Tutorial: Load balance internal traffic with Basic Load Balancer to VMs using the Azure portal](https://docs.microsoft.com/azure/load-balancer/tutorial-load-balancer-basic-internal-portal).
+
 ## 8. Update the Scale Out Master address in SSISDB
 
 On the primary SQL Server, run the stored procedure `[catalog].[update_master_address]` with the parameter value `@MasterAddress = N'https://[Scale Out Master service DNS host name]:[Master Port]'`. 
@@ -101,6 +100,9 @@ On the primary SQL Server, run the stored procedure `[catalog].[update_master_ad
 ## 9. Add the Scale Out Workers
 
 Now, you can add Scale Out Workers with the help of [Integration Services Scale Out Manager](integration-services-ssis-scale-out-manager.md). Enter `[SQL Server Availability Group Listener DNS name],[Port]` on the connection page.
+
+# Upgrade Scale Out in high availability environment
+To upgrade Scale Out in high availability environment, follow the [upgrade steps of Always On for SSIS catalog](../catalog/ssis-catalog.md#Upgrade), upgrade Scale Out Master and Scale Out Worker on each machine, and recreate Windows Server failover cluster role in above step 7 with new version of Scale Out Master service.
 
 ## Next steps
 For more info, see the following articles:

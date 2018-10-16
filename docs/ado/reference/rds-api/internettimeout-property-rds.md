@@ -1,26 +1,19 @@
 ---
 title: "InternetTimeout Property (RDS) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 helpviewer_keywords: 
   - "InternetTimeout property [ADO]"
 ms.assetid: 4d1c8892-4bbc-4e71-bf4b-ba52c0ea9549
-caps.latest.revision: 15
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # InternetTimeout Property (RDS)
 Indicates the number of milliseconds to wait before a request times out.  

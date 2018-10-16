@@ -2,27 +2,18 @@
 title: "Unpack a DAC Package | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "data-tier-applications"
-ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-data-tier-apps"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.prod: sql
+ms.technology:
+ms.topic: conceptual
 helpviewer_keywords: 
   - "wizard [DAC], unpack"
   - "data-tier application [SQL Server], unpack"
   - "How to [DAC], unpack"
   - "unpack DAC"
 ms.assetid: 697b69b3-f157-4e22-ac4e-f65c5fc2d0ad
-caps.latest.revision: 11
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Unpack a DAC Package
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

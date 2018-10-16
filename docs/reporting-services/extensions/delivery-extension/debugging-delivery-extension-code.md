@@ -1,30 +1,19 @@
 ---
 title: "Debugging Delivery Extension Code | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
+ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.service: ""
-ms.component: "extensions"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: extensions
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
+ms.topic: reference
 helpviewer_keywords: 
   - "delivery extensions [Reporting Services], debugging"
   - "debugging delivery extensions [Reporting Services]"
   - "troubleshooting [Reporting Services], delivery extensions"
 ms.assetid: a7d959da-5005-4a50-aca7-2cef36aa9947
-caps.latest.revision: 35
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
-ms.workload: "Inactive"
+author: markingmyname
+ms.author: maghan
 ---
 # Debugging Delivery Extension Code
   The [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] provides several debugging tools that can help you analyze your delivery extension code and locate errors in it. The tool that works best will depend on what you are trying to accomplish. This example uses [!INCLUDE[vsOrcas](../../../includes/vsorcas-md.md)].  

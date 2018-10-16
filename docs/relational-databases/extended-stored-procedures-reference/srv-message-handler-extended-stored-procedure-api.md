@@ -2,15 +2,11 @@
 title: "srv_message_handler (Extended Stored Procedure API) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "extended-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
   - "srv_message_handler"
@@ -22,11 +18,9 @@ dev_langs:
 helpviewer_keywords: 
   - "srv_message_handler"
 ms.assetid: 41bcd057-436f-4fa8-8293-fc8057a30877
-caps.latest.revision: 31
 author: "rothja"
 ms.author: "jroth"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # srv_message_handler (Extended Stored Procedure API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

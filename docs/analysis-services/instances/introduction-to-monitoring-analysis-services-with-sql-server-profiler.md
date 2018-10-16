@@ -1,31 +1,14 @@
 ---
 title: "Introduction to Monitoring Analysis Services with SQL Server Profiler | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/23/2018"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL Server Profiler, Analysis Services"
-  - "monitoring Analysis Services [SQL Server]"
-  - "performance [Analysis Services]"
-  - "performance [Analysis Services], SQL Server Profiler"
-  - "Profiler [SQL Server Profiler], Analysis Services"
-ms.assetid: 568ec549-5ddc-493a-b9f8-3bdc548b562e
-caps.latest.revision: 28
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom:
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Introduction to Monitoring Analysis Services with SQL Server Profiler
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]

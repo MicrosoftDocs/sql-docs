@@ -2,16 +2,11 @@
 title: "Web Service Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/02/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "control-flow"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.webservicetask.f1"
   - "sql13.dts.designer.webservicestask.general.f1"
@@ -20,11 +15,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "Web Service task [Integration Services]"
 ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
-caps.latest.revision: 57
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # Web Service Task
   The Web Service task executes a Web service method. You can use the Web Service task for the following purposes:  

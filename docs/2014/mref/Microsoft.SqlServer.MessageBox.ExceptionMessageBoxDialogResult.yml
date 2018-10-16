@@ -1,0 +1,11 @@
+### YamlMime:XRefMap
+sorted: true
+hrefUpdated: true
+references:
+- uid: Microsoft.SqlServer.MessageBox.ExceptionMessageBoxDialogResult
+  commentId: T:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxDialogResult
+  href: https://msdn.microsoft.com/library/microsoft.sqlserver.messagebox.exceptionmessageboxdialogresult(v=sql.120).aspx
+  name: ExceptionMessageBoxDialogResult
+  name.vb: ExceptionMessageBoxDialogResult
+  fullName: MessageBox.ExceptionMessageBoxDialogResult
+  fullName.vb: MessageBox.ExceptionMessageBoxDialogResult

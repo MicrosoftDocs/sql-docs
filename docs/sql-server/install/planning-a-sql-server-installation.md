@@ -2,22 +2,15 @@
 title: "Planning a SQL Server Installation | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/23/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "install"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+ms.technology: install
+ms.topic: quickstart
 helpviewer_keywords: 
   - "installing SQL Server, planning"
 ms.assetid: b1d56f2f-603f-48f2-b902-c715f14a6db9
-caps.latest.revision: 36
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Planning a SQL Server Installation

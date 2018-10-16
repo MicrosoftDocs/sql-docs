@@ -1,16 +1,11 @@
 ---
 title: "WillExecute Event (ADO) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
@@ -19,11 +14,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "WillExecute event [ADO]"
 ms.assetid: dd755e46-f589-48a3-93a9-51ff998d44b5
-caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # WillExecute Event (ADO)
 The **WillExecute** event is called just before a pending command executes on a connection.  

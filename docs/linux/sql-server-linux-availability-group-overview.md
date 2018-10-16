@@ -5,16 +5,11 @@ author: MikeRayMSFT
 ms.author: mikeray 
 manager: craigg
 ms.date: 11/27/2017
-ms.topic: article
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: ""
-ms.suite: "sql"
+ms.topic: conceptual
+ms.prod: sql
 ms.custom: "sql-linux"
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1 
-ms.workload: "On Demand"
 ---
 
 # Always On Availability Groups on Linux

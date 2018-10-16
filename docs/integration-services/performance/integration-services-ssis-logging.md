@@ -1,17 +1,12 @@
 ---
 title: "Integration Services (SSIS) Logging | Microsoft Docs"
-ms.custom: ""
+ms.custom: supportability
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "performance"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.configuredtslogs.containers.f1"
   - "sql13.dts.designer.configuredtslogs.loggingdetails.f1"
@@ -32,11 +27,9 @@ helpviewer_keywords:
   - "Text File log provider"
   - "SQL Server log provider"
 ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
-caps.latest.revision: 69
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "Active"
+manager: craigg
 ---
 # Integration Services (SSIS) Logging
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] includes log providers that you can use to implement logging in packages, containers, and tasks. With logging, you can capture run-time information about a package, helping you audit and troubleshoot a package every time it is run. For example, a log can capture the name of the operator who ran the package and the time the package began and finished.  

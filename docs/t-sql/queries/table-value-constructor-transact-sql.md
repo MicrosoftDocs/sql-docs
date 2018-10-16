@@ -2,15 +2,10 @@
 title: "Table Value Constructor (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/15/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "t-sql|queries"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -20,11 +15,9 @@ helpviewer_keywords:
   - "row constructor [SQL Server]"
   - "table value constructor [SQL Server]"
 ms.assetid: e57cd31d-140e-422f-8178-2761c27b9deb
-caps.latest.revision: 14
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "Active"
+manager: craigg
 ---
 # Table Value Constructor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

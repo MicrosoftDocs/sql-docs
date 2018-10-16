@@ -2,26 +2,20 @@
 title: "Import Values from an Excel File into a Domain | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "data-quality-services"
-ms.service: ""
-ms.component: "data-quality-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dqs.kb.importfailing.f1"
   - "sql13.dqs.kb.importselect.f1"
   - "sql13.dqs.kb.failingvalues.f1"
 ms.assetid: 04cde693-2043-477f-8417-fcc463ca7195
-caps.latest.revision: 26
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Import Values from an Excel File into a Domain
 

@@ -2,26 +2,19 @@
 title: "Manage Partitions for a Merge Publication with Parameterized Filters | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: replication
+ms.topic: conceptual
 helpviewer_keywords: 
   - "partitions [SQL Server replication]"
   - "merge replication partitions [SQL Server replication], SQL Server Management Studio"
   - "parameterized filters [SQL Server replication], partition management"
 ms.assetid: fb5566fe-58c5-48f7-8464-814ea78e6221
-caps.latest.revision: 22
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Manage Partitions for a Merge Publication with Parameterized Filters
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

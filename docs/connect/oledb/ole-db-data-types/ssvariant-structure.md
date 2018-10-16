@@ -2,28 +2,25 @@
 title: "SSVARIANT Structure | Microsoft Docs"
 description: "SSVARIANT structure in OLE DB Driver for SQL Server"
 ms.custom: ""
-ms.date: "03/26/2018"
-ms.prod: "sql"
+ms.date: "06/14/2018"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "ole-db-data-types"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "SSVARIANT"
 helpviewer_keywords: 
   - "SSVARIANT struct"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
-ms.workload: "Inactive"
 ---
 # SSVARIANT Structure
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   The **SSVARIANT** structure, which is defined in msoledbsql.h, corresponds to a DBTYPE_SQLVARIANT value in the OLE DB Driver for SQL Server.  
   
@@ -73,7 +70,7 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
 |Time2Val|DBTYPE_DBTIME2|**DBTIME2**|**VT_SS_TIME2**|Supports the **time**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] data type.<br /><br /> Includes the following members:<br /><br /> *tTime2Val* (**DBTIME2**)<br /><br /> *bScale* (**BYTE**) Specifies the scale for *tTime2Val* value.|  
 |DateTimeVal|DBTYPE_DBTIMESTAMP|**DBTIMESTAMP**|**VT_SS_DATETIME2**|Supports the **datetime2**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] data type.<br /><br /> Includes the following members:<br /><br /> *tsDataTimeVal* (DBTIMESTAMP)<br /><br /> *bScale* (**BYTE**) Specifies the scale for *tsDataTimeVal* value.|  
 |DateTimeOffsetVal|DBTYPE_DBTIMESTAMPOFSET|**DBTIMESTAMPOFFSET**|**VT_SS_DATETIMEOFFSET**|Supports the **datetimeoffset**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] data type.<br /><br /> Includes the following members:<br /><br /> *tsoDateTimeOffsetVal* (**DBTIMESTAMPOFFSET**)<br /><br /> *bScale* (**BYTE**) Specifies the scale for *tsoDateTimeOffsetVal* value.|  
-|NCharVal|No corresponding OLE DB type indicator.|**struct _NCharVal**|**VT_SS_WVARSTRING,**<br /><br /> **VT_SS_WSTRING**|Supports the **nchar** and **nvarchar**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] data types.<br /><br /> Includes the following members:<br /><br /> *sActualLength* (**SHORT**) Specifies the actual length for for the string to which *pwchNCharVal* points. Does not include terminating zero.<br /><br /> *sMaxLength* (**SHORT**) Specifies the maximum length for for the string to which *pwchNCharVal* points.<br /><br /> *pwchNCharVal* (**WCHAR** \*) Pointer to the string.<br /><br /> Unused members: *rgbReserved*, *dwReserved*, and *pwchReserved*.|  
+|NCharVal|No corresponding OLE DB type indicator.|**struct _NCharVal**|**VT_SS_WVARSTRING,**<br /><br /> **VT_SS_WSTRING**|Supports the **nchar** and **nvarchar**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] data types.<br /><br /> Includes the following members:<br /><br /> *sActualLength* (**SHORT**) Specifies the actual length for the string to which *pwchNCharVal* points. Does not include terminating zero.<br /><br /> *sMaxLength* (**SHORT**) Specifies the maximum length for the string to which *pwchNCharVal* points.<br /><br /> *pwchNCharVal* (**WCHAR** \*) Pointer to the string.<br /><br /> Unused members: *rgbReserved*, *dwReserved*, and *pwchReserved*.|  
 |CharVal|No corresponding OLE DB type indicator.|**struct _CharVal**|**VT_SS_STRING,**<br /><br /> **VT_SS_VARSTRING**|Supports the **char** and **varchar**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] data types.<br /><br /> Includes the following members:<br /><br /> *sActualLength* (**SHORT**) Specifies the actual length for the string to which *pchCharVal* points. Does not include terminating zero.<br /><br /> *sMaxLength* (**SHORT**) Specifies the maximum length for the string to which *pchCharVal* points.<br /><br /> *pchCharVal* (**CHAR** \*) Pointer to the string.<br /><br /> Unused members:<br /><br /> *rgbReserved*, *dwReserved*, and *pwchReserved*.|  
 |BinaryVal|No corresponding OLE DB type indicator.|**struct _BinaryVal**|**VT_SS_VARBINARY,**<br /><br /> **VT_SS_BINARY**|Supports the **binary** and **varbinary**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] data types.<br /><br /> Includes the following members:<br /><br /> *sActualLength* (**SHORT**) Specifies the actual length for the data to which *prgbBinaryVal* points.<br /><br /> *sMaxLength* (**SHORT**) Specifies the maximum length for the data to which *prgbBinaryVal* points.<br /><br /> *prgbBinaryVal* (**BYTE** \*) Pointer to the binary data.<br /><br /> Unused member: *dwReserved*.|  
 |UnknownType|UNUSED|UNUSED|UNUSED|UNUSED|  

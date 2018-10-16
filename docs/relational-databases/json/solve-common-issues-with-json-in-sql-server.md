@@ -1,26 +1,19 @@
-﻿---
+---
 title: "Solve common issues with JSON in SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/07/2016"
-ms.prod: "sql"
-ms.prod_service: "database-engine, sql-database"
-ms.component: "json"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
-  - "dbe-json"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "JSON, FAQ"
 ms.assetid: feae120b-55cc-4601-a811-278ef1c551f9
-caps.latest.revision: 9
 author: "jovanpop-msft"
 ms.author: "jovanpop"
 ms.reviewer: douglasl
-manager: "craigg"
-ms.workload: "On Demand"
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Solve common issues with JSON in SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +30,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
 ### Create a nested JSON structure  
  **Question.** I want to produce complex JSON with several arrays on the same level. FOR JSON PATH can create nested objects using paths, and FOR JSON AUTO creates additional nesting level for each table. Neither one of these two options lets me generate the output I want. How can I create a custom JSON format that the existing options don't directly support?  
   
- **Answer.** You can create any data structure by adding FOR JSON queries as column expressions that return JSON text. You can also create JSON manually by using the JSON_QUERY function. The the following example demonstrates these techniques.  
+ **Answer.** You can create any data structure by adding FOR JSON queries as column expressions that return JSON text. You can also create JSON manually by using the JSON_QUERY function. The following example demonstrates these techniques.  
   
 ```sql  
 SELECT col1, col2, col3,  

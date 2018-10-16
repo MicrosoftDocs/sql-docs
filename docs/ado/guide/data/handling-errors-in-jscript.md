@@ -1,16 +1,11 @@
 ---
 title: "Handling Errors in JScript | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "JScript"
@@ -18,11 +13,9 @@ helpviewer_keywords:
   - "errors [ADO], JScript"
   - "JScript error handling [ADO]"
 ms.assetid: 3de527e5-2e65-4ab0-9b7f-6d317c4478de
-caps.latest.revision: 4
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Handling Errors in JScript
 Your Microsoft® JScript® code must check the **Count** property of the **Connection** object's **Errors** collection. If the value is greater than 0, iterate through the collection and print the values as you would in any of the other languages.  

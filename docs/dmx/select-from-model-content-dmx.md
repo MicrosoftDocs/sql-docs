@@ -1,33 +1,14 @@
 ---
 title: "SELECT FROM &lt;model&gt;.CONTENT (DMX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "SELECT"
-  - "FROM"
-  - "Content"
-dev_langs: 
-  - "DMX"
-helpviewer_keywords: 
-  - "schema rowsets [Analysis Services], data mining"
-  - "SELECT FROM <model>.CONTENT statement"
-ms.assetid: a270b33f-77be-41fa-9340-2f6cb0dd75e5
-caps.latest.revision: 43
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-ms.workload: "Inactive"
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # SELECT FROM &lt;model&gt;.CONTENT (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]

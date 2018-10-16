@@ -1,36 +1,14 @@
 ---
 title: "Multidimensional Model Assemblies Management | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "permissions [Analysis Services], assemblies"
-  - "calling user-defined functions"
-  - "user impersonation [Analysis Services]"
-  - "impersonation [Analysis Services]"
-  - "Data Mining Extensions [Analysis Services], assemblies"
-  - "MDX [Analysis Services], assemblies"
-  - "user-defined functions [Analysis Services]"
-  - "Analysis Services objects, assemblies"
-  - "assemblies [Analysis Services]"
-  - "application domains [Analysis Services]"
-ms.assetid: b2645d10-6d17-444e-9289-f111ec48bbfb
-caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Multidimensional Model Assemblies Management
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

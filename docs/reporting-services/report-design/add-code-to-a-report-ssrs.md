@@ -1,18 +1,12 @@
 ---
 title: "Add Code to a Report (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
-ms.component: "report-design"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-design
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "code [Reporting Services]"
   - "custom code [Reporting Services]"
@@ -20,11 +14,8 @@ helpviewer_keywords:
   - "adding code"
   - "reports [Reporting Services], code"
 ms.assetid: 00ef8fc6-99fe-49b2-8a22-7eb475881dc4
-caps.latest.revision: 41
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "kfile"
-ms.workload: "On Demand"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Add Code to a Report (SSRS)
   In any expression, you can call your own custom code. You can provide code in the following two ways:  

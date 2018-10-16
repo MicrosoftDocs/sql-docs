@@ -1,27 +1,18 @@
 ---
 title: "RSReportDesigner Configuration File | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
+ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
-ms.component: "report-server"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-server
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Report Designer [Reporting Services], configuration file"
   - "RSReportDesigner configuration file"
 ms.assetid: fdcc9c58-3bad-45b3-ba8e-c7816d64f14c
-caps.latest.revision: 47
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
-ms.workload: "Inactive"
+author: markingmyname
+ms.author: maghan
 ---
 # RSReportDesigner Configuration File
   The RSReportDesigner.config file stores settings about the rendering and data processing extensions available to Report Designer. Data processing extension information is stored in the **Data** element. Rendering extension information is stored in the **Render** element. The **Designer** element enumerates the query builders that are used in Report Designer.  

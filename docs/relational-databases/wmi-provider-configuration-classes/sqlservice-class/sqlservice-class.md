@@ -2,15 +2,11 @@
 title: "SqlService Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "wmi"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
 
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
   - "SqlService Class"
@@ -20,11 +16,9 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "SqlService class"
 ms.assetid: ecac7a16-c638-4703-ab08-753b63295f3a
-caps.latest.revision: 31
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # SqlService Class
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

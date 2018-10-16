@@ -2,15 +2,10 @@
 title: "DBCC INPUTBUFFER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/04/2018"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "sql-database"
-ms.service: ""
-ms.component: "t-sql|database-console-commands"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "DBCC INPUTBUFFER"
@@ -26,11 +21,9 @@ helpviewer_keywords:
   - "statements [SQL Server], last statement"
   - "DBCC INPUTBUFFER statement"
 ms.assetid: a44d702b-b3fb-4950-8c8f-1adcf3f514ba
-caps.latest.revision: 51
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "craigg"
-ms.workload: "On Demand"
+author: uc-msft
+ms.author: umajay
+manager: craigg
 ---
 # DBCC INPUTBUFFER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

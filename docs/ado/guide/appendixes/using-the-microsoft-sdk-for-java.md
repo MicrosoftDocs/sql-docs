@@ -1,26 +1,19 @@
 ---
 title: "Using the Microsoft SDK for Java | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "02/15/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Java (Microsoft SDK for)"
   - "Microsoft SDK for Java [ADO]"
 ms.assetid: 2d7cb5b5-8307-49dd-b07e-c07069bb1626
-caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Using the Microsoft SDK for Java
 

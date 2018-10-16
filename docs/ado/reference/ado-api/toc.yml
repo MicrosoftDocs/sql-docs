@@ -1,0 +1,834 @@
+- name: ADO Code Examples
+  href: ado-code-examples.md
+- name: Type Property (ADO Stream)
+  href: type-property-ado-stream.md
+- name: Prepared Property Example (VC++)
+  href: prepared-property-example-vc.md
+- name: ObjectProxy (ADO - WFC Syntax)
+  href: objectproxy-ado-wfc-syntax.md
+- name: Connection Object Properties, Methods, Events
+  href: connection-object-properties-methods-and-events.md
+- name: RecordTypeEnum
+  href: recordtypeenum.md
+- name: MoveRecordOptionsEnum
+  href: moverecordoptionsenum.md
+- name: Refresh Method Example (VB)
+  href: refresh-method-example-vb.md
+- name: CompareBookmarks Method Example (VB)
+  href: comparebookmarks-method-example-vb.md
+- name: SeekEnum
+  href: seekenum.md
+- name: ADCPROP_ASYNCTHREADPRIORITY_ENUM
+  href: adcprop-asyncthreadpriority-enum.md
+- name: Connection Object (ADO)
+  href: connection-object-ado.md
+- name: Recordset Object (ADO)
+  href: recordset-object-ado.md
+- name: Execute, Requery, Clear Example (VB)
+  href: execute-requery-and-clear-methods-example-vb.md
+- name: Save Method
+  href: save-method.md
+- name: Begin, Commit, Rollback - TransComplete
+  href: begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md
+- name: EventStatusEnum
+  href: eventstatusenum.md
+- name: PersistFormatEnum
+  href: persistformatenum.md
+- name: AddNew Method Example (JScript)
+  href: addnew-method-example-jscript.md
+- name: CancelUpdate Method (ADO)
+  href: cancelupdate-method-ado.md
+- name: Number Property (ADO)
+  href: number-property-ado.md
+- name: Append Method (ADO)
+  href: append-method-ado.md
+- name: Execute Method (ADO Command)
+  href: execute-method-ado-command.md
+- name: CommandStream Property (ADO)
+  href: commandstream-property-ado.md
+- name: Open and Close Methods Example (VC++)
+  href: open-and-close-methods-example-vc.md
+- name: IsolationLevel Property
+  href: isolationlevel-property.md
+- name: ActiveConnection, CommandText, CommandTimeout (JScript)
+  href: activeconnection-commandtext-timeout-type-size-example-jscript.md
+- name: Filter and RecordCount Properties Example (VB)
+  href: filter-and-recordcount-properties-example-vb.md
+- name: XactAttributeEnum
+  href: xactattributeenum.md
+- name: Size Property (ADO Parameter)
+  href: size-property-ado-parameter.md
+- name: PositionEnum
+  href: positionenum.md
+- name: Stream (Visual C++ Syntax Index with import)
+  href: stream-visual-c-syntax-index-with-sharpimport.md
+- name: PageSize Property (ADO)
+  href: pagesize-property-ado.md
+- name: Charset Property (ADO)
+  href: charset-property-ado.md
+- name: Prepared Property Example (VB)
+  href: prepared-property-example-vb.md
+- name: Status Property Example (Recordset) (VB)
+  href: status-property-example-recordset-vb.md
+- name: Item Property (ADO)
+  href: item-property-ado.md
+- name: Source Property Example (VC++)
+  href: source-property-example-vc.md
+- name: CacheSize Property Example (VC++)
+  href: cachesize-property-example-vc.md
+- name: Cancel Method (ADO)
+  href: cancel-method-ado.md
+- name: FieldStatusEnum
+  href: fieldstatusenum.md
+- name: Parameter Object
+  href: parameter-object.md
+- name: ADCPROP_AUTORECALC_ENUM
+  href: adcprop-autorecalc-enum.md
+- name: Stream (ADO for Visual C++ Syntax)
+  href: stream-ado-for-visual-c-syntax.md
+- name: Save and Open Methods Example (VB)
+  href: save-and-open-methods-example-vb.md
+- name: AbsolutePage Property (ADO)
+  href: absolutepage-property-ado.md
+- name: WillExecute Event (ADO)
+  href: willexecute-event-ado.md
+- name: ConnectionEvents (Visual C++ Syntax Index with import)
+  href: connectionevents-visual-c-syntax-index-with-sharpimport.md
+- name: AddNew Method Example (VBScript)
+  href: addnew-method-example-vbscript.md
+- name: CancelBatch Method (ADO)
+  href: cancelbatch-method-ado.md
+- name: Record Object (ADO)
+  href: record-object-ado.md
+- name: Version Property (ADO)
+  href: version-property-ado.md
+- name: ActiveConnection, CommandText, CommandTimeout (VB)
+  href: activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md
+- name: Record Object Properties, Methods, and Events
+  href: record-object-properties-methods-and-events.md
+- name: Position Property (ADO)
+  href: position-property-ado.md
+- name: Count Property (ADO)
+  href: count-property-ado.md
+- name: WillConnect Event (ADO)
+  href: willconnect-event-ado.md
+- name: Provider and DefaultDatabase Properties Example (VC++)
+  href: provider-and-defaultdatabase-properties-example-vc.md
+- name: Requery Method
+  href: requery-method.md
+- name: ADO Dynamic Properties
+  href: ado-dynamic-properties.md
+- name: WillChangeRecordset and RecordsetChangeComplete Events (ADO)
+  href: willchangerecordset-and-recordsetchangecomplete-events-ado.md
+- name: Direction Property
+  href: direction-property.md
+- name: BeginTrans, CommitTrans, and RollbackTrans Methods (ADO)
+  href: begintrans-committrans-and-rollbacktrans-methods-ado.md
+- name: AddNew Method Example (VB)
+  href: addnew-method-example-vb.md
+- name: ResyncEnum
+  href: resyncenum.md
+- name: Resync Method Example (VC++)
+  href: resync-method-example-vc.md
+- name: GetRows Method Example (JScript)
+  href: getrows-method-example-jscript.md
+- name: LockTypeEnum
+  href: locktypeenum.md
+- name: Open Method (ADO Stream)
+  href: open-method-ado-stream.md
+- name: Unique Table, Unique Schema, Unique Catalog)
+  href: unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md
+- name: ADO Objects and Interfaces
+  href: ado-objects-and-interfaces.md
+- name: CompareBookmarks Method (ADO)
+  href: comparebookmarks-method-ado.md
+- name: ADO for Visual C++ Syntax Index for COM
+  href: ado-for-visual-c-syntax-index-for-com.md
+- name: Parameter (ADO - WFC Syntax)
+  href: parameter-ado-wfc-syntax.md
+- name: Name Property (ADO)
+  href: name-property-ado.md
+- name: StreamReadEnum
+  href: streamreadenum.md
+- name: Command (ADO for Visual C++ Syntax)
+  href: command-ado-for-visual-c-syntax.md
+- name: Error Object Properties, Methods, and Events
+  href: error-object-properties-methods-and-events.md
+- name: Command (Visual C++ Syntax Index with import)
+  href: command-visual-c-syntax-index-with-sharpimport.md
+- name: Update and CancelUpdate Methods Example (VC++)
+  href: update-and-cancelupdate-methods-example-vc.md
+- name: WillChangeRecord and RecordChangeComplete Events (ADO)
+  href: willchangerecord-and-recordchangecomplete-events-ado.md
+- name: Connection (ADO for Visual C++ Syntax)
+  href: connection-ado-for-visual-c-syntax.md
+- name: Optimize Property Example (VC++)
+  href: optimize-property-example-vc.md
+- name: put_OLEDBCommand Method
+  href: put-oledbcommand-method.md
+- name: CommandType Property (ADO)
+  href: commandtype-property-ado.md
+- name: ADO Enumerated Constants
+  href: ado-enumerated-constants.md
+- name: ConnectionString, ConnectionTimeout Example (VC++)
+  href: connectionstring-connectiontimeout-and-state-properties-example-vc.md
+- name: ParameterDirectionEnum
+  href: parameterdirectionenum.md
+- name: AppendChunk Method (ADO)
+  href: appendchunk-method-ado.md
+- name: CommandTimeout Property (ADO)
+  href: commandtimeout-property-ado.md
+- name: OriginalValue and UnderlyingValue Example (VC++)
+  href: originalvalue-and-underlyingvalue-properties-example-vc.md
+- name: Prompt Property-Dynamic (ADO)
+  href: prompt-property-dynamic-ado.md
+- name: Record (ADO for Visual C++ Syntax)
+  href: record-ado-for-visual-c-syntax.md
+- name: AbsolutePosition and CursorLocation Example (VB)
+  href: absoluteposition-and-cursorlocation-properties-example-vb.md
+- name: DeleteRecord and MoveRecord Example (VB)
+  href: deleterecord-and-moverecord-methods-example-vb.md
+- name: AppendChunk and GetChunk Example (VB)
+  href: appendchunk-and-getchunk-methods-example-vb.md
+- name: AbsolutePosition and CursorLocation Example (JScript)
+  href: absoluteposition-and-cursorlocation-properties-example-jscript.md
+- name: ActualSize and DefinedSize Example (VB)
+  href: actualsize-and-definedsize-properties-example-vb.md
+- name: ConnectOptionEnum
+  href: connectoptionenum.md
+- name: ADO API Reference
+  href: ado-api-reference.md
+- name: ReadText Method
+  href: readtext-method.md
+- name: FieldEnum
+  href: fieldenum.md
+- name: ActiveCommand Property Example (JScript)
+  href: activecommand-property-example-jscript.md
+- name: StreamWriteEnum
+  href: streamwriteenum.md
+- name: BOF, EOF, and Bookmark Example (VC++)
+  href: bof-eof-and-bookmark-properties-example-vc.md
+- name: Recordset (ADO - WFC Syntax)
+  href: recordset-ado-wfc-syntax.md
+- name: UpdateBatch and CancelBatch Methods Example (VC++)
+  href: updatebatch-and-cancelbatch-methods-example-vc.md
+- name: ADCPROP_UPDATERESYNC_ENUM
+  href: adcprop-updateresync-enum.md
+- name: CompareEnum
+  href: compareenum.md
+- name: Find Method Example (VB)
+  href: find-method-example-vb.md
+- name: Record (Visual C++ Syntax Index with import)
+  href: record-visual-c-syntax-index-with-sharpimport.md
+- name: CopyRecord Method (ADO)
+  href: copyrecord-method-ado.md
+- name: NativeError Property (ADO)
+  href: nativeerror-property-ado.md
+- name: Filter and RecordCount Example (VC++)
+  href: filter-and-recordcount-properties-example-vc.md
+- name: RecordsetEvents (Visual C++ Syntax Index with import)
+  href: recordsetevents-visual-c-syntax-index-with-sharpimport.md
+- name: StayInSync Property Example (VB)
+  href: stayinsync-property-example-vb.md
+- name: BOF, EOF, and Bookmark Properties Example (VB)
+  href: bof-eof-and-bookmark-properties-example-vb.md
+- name: CursorType Property (ADO)
+  href: cursortype-property-ado.md
+- name: PageCount Property (ADO)
+  href: pagecount-property-ado.md
+- name: ADO Collections
+  href: ado-collections.md
+- name: Append and CreateParameter Example (VC++)
+  href: append-and-createparameter-methods-example-vc.md
+- name: CopyTo Method (ADO)
+  href: copyto-method-ado.md
+- name: Item Property Example (VB)
+  href: item-property-example-vb.md
+- name: GetChildren Method (ADO)
+  href: getchildren-method-ado.md
+- name: CursorType, LockType,Edit Mode Example (VC++)
+  href: cursortype-locktype-and-editmode-properties-example-vc.md
+- name: Property Object (ADO)
+  href: property-object-ado.md
+- name: FilterGroupEnum
+  href: filtergroupenum.md
+- name: LoadFromFile Method (ADO)
+  href: loadfromfile-method-ado.md
+- name: NextRecordset Method Example (VB)
+  href: nextrecordset-method-example-vb.md
+- name: Field Object
+  href: field-object.md
+- name: Recordset (ADO for Visual C++ Syntax)
+  href: recordset-ado-for-visual-c-syntax.md
+- name: MaxRecords Property Example (VC++)
+  href: maxrecords-property-example-vc.md
+- name: ADO Code Examples in Visual C++
+  href: ado-code-examples-in-visual-c.md
+- name: MarshalOptions Property Example (VB)
+  href: marshaloptions-property-example-vb.md
+- name: GetRowsOptionEnum
+  href: getrowsoptionenum.md
+- name: Find Method Example (JScript)
+  href: find-method-example-jscript.md
+- name: Execute, Requery, and Clear Example (VC++)
+  href: execute-requery-and-clear-methods-example-vc.md
+- name: IDSOShapeExtensions Interface
+  href: idsoshapeextensions-interface.md
+- name: Clone Method (ADO)
+  href: clone-method-ado.md
+- name: Type Property Example (Field) (VB)
+  href: type-property-example-field-vb.md
+- name: Attributes Property (ADO)
+  href: attributes-property-ado.md
+- name: CursorLocationEnum
+  href: cursorlocationenum.md
+- name: Resync Method Example (VB)
+  href: resync-method-example-vb.md
+- name: Open Method (ADO Record)
+  href: open-method-ado-record.md
+- name: NextRecordset Method (ADO)
+  href: nextrecordset-method-ado.md
+- name: BeginTrans, CommitTrans, and RollbackTrans Example (VB)
+  href: begintrans-committrans-and-rollbacktrans-methods-example-vb.md
+- name: AddNew Method (ADO)
+  href: addnew-method-ado.md
+- name: MoveFirst, MoveLast, MoveNext, MovePrevious Methods (ADO)
+  href: movefirst-movelast-movenext-and-moveprevious-methods-ado.md
+- name: Type Property Example (Property) (VC++)
+  href: type-property-example-property-vc.md
+- name: Optimize Property-Dynamic (ADO)
+  href: optimize-property-dynamic-ado.md
+- name: Size Property (ADO Stream)
+  href: size-property-ado-stream.md
+- name: MarshalOptions Property Example (VC++)
+  href: marshaloptions-property-example-vc.md
+- name: ADO Methods
+  href: ado-methods.md
+- name: FetchComplete Event (ADO)
+  href: fetchcomplete-event-ado.md
+- name: CacheSize Property Example (VB)
+  href: cachesize-property-example-vb.md
+- name: Error (ADO - WFC Syntax)
+  href: error-ado-wfc-syntax.md
+- name: EditMode Property
+  href: editmode-property.md
+- name: Error Object
+  href: error-object.md
+- name: ADO - WFC Syntax Index
+  href: ado-wfc-syntax-index.md
+- name: Source Property (ADO Recordset)
+  href: source-property-ado-recordset.md
+- name: Command Object (ADO)
+  href: command-object-ado.md
+- name: GetRows Method Example (VB)
+  href: getrows-method-example-vb.md
+- name: State Property Example (VB)
+  href: state-property-example-vb.md
+- name: RowPosition Property (ADO)
+  href: rowposition-property-ado.md
+- name: AddNew Method Example (VC++)
+  href: addnew-method-example-vc.md
+- name: NumericScale and Precision Example (VB)
+  href: numericscale-and-precision-properties-example-vb.md
+- name: Stream Object Properties, Methods, Events
+  href: stream-object-properties-methods-and-events.md
+- name: Stat Method
+  href: stat-method.md
+- name: LockType Property (ADO)
+  href: locktype-property-ado.md
+- name: PropertyAttributesEnum
+  href: propertyattributesenum.md
+- name: CreateParameter Method (ADO)
+  href: createparameter-method-ado.md
+- name: DataSpace (ADO - WFC Syntax)
+  href: dataspace-ado-wfc-syntax.md
+- name: ErrorValueEnum
+  href: errorvalueenum.md
+- name: Flush Method (ADO)
+  href: flush-method-ado.md
+- name: ADOStreamConstruction Interface
+  href: adostreamconstruction-interface.md
+- name: IsolationLevel and Mode Example (VC++)
+  href: isolationlevel-and-mode-properties-example-vc.md
+- name: GetString Method (ADO)
+  href: getstring-method-ado.md
+- name: MoveFirst, MoveLast, MoveNext Example (VBScript)
+  href: movefirst-movelast-movenext-and-moveprevious-methods-example-vbscript.md
+- name: Field (Visual C++ Syntax Index with import)
+  href: field-visual-c-syntax-index-with-sharpimport.md
+- name: RecordOpenOptionsEnum
+  href: recordopenoptionsenum.md
+- name: IsolationLevelEnum
+  href: isolationlevelenum.md
+- name: Connection (ADO - WFC Syntax)
+  href: connection-ado-wfc-syntax.md
+- name: Status Property (ADO Field)
+  href: status-property-ado-field.md
+- name: Fields Collection Properties, Methods, Events
+  href: fields-collection-properties-methods-and-events.md
+- name: NextRecordset Method Example (VC++)
+  href: nextrecordset-method-example-vc.md
+- name: Chapter Property (ADO)
+  href: chapter-property-ado.md
+- name: SaveToFile Method
+  href: savetofile-method.md
+- name: Type Property (ADO)
+  href: type-property-ado.md
+- name: Update Resync Property-Dynamic (ADO)
+  href: update-resync-property-dynamic-ado.md
+- name: ConnectionTimeout Property (ADO)
+  href: connectiontimeout-property-ado.md
+- name: StreamOpenOptionsEnum
+  href: streamopenoptionsenum.md
+- name: OpenSchema Method
+  href: openschema-method.md
+- name: Read Method
+  href: read-method.md
+- name: RecordCount Property (ADO)
+  href: recordcount-property-ado.md
+- name: ActiveCommand Property Example (VC++)
+  href: activecommand-property-example-vc.md
+- name: SearchDirectionEnum
+  href: searchdirectionenum.md
+- name: ADO Dynamic Property Index
+  href: ado-dynamic-property-index.md
+- name: Property (Visual C++ Syntax Index with import)
+  href: property-visual-c-syntax-index-with-sharpimport.md
+- name: Mode Property (ADO)
+  href: mode-property-ado.md
+- name: Filter Property
+  href: filter-property.md
+- name: MoveFirst, MoveLast, MoveNext, MovePrevious Example (VC++)
+  href: movefirst-movelast-movenext-and-moveprevious-methods-example-vc.md
+- name: ParameterAttributesEnum
+  href: parameterattributesenum.md
+- name: Cancel Method Example (VC++)
+  href: cancel-method-example-vc.md
+- name: Field (ADO - WFC Syntax)
+  href: field-ado-wfc-syntax.md
+- name: EventReasonEnum
+  href: eventreasonenum.md
+- name: Rowset Property (ADO)
+  href: rowset-property-ado.md
+- name: Delete Method Example (VC++)
+  href: delete-method-example-vc.md
+- name: Source Property Example (VB)
+  href: source-property-example-vb.md
+- name: Fields Collection (ADO)
+  href: fields-collection-ado.md
+- name: Clone Method Example (VC++)
+  href: clone-method-example-vc.md
+- name: WriteText Method
+  href: writetext-method.md
+- name: AbsolutePosition Property (ADO)
+  href: absoluteposition-property-ado.md
+- name: RecordType Property (ADO)
+  href: recordtype-property-ado.md
+- name: ADO Code Examples VBScript
+  href: ado-code-examples-vbscript.md
+- name: Delete Method Example (VBScript)
+  href: delete-method-example-vbscript.md
+- name: EOS and LineSeparator Properties Example (VB)
+  href: eos-and-lineseparator-properties-and-skipline-method-example-vb.md
+- name: Parameter (ADO for Visual C++ Syntax)
+  href: parameter-ado-for-visual-c-syntax.md
+- name: Resync Method
+  href: resync-method.md
+- name: ActualSize Property (ADO)
+  href: actualsize-property-ado.md
+- name: Version Property Example (VB)
+  href: version-property-example-vb.md
+- name: SetEOS Method
+  href: seteos-method.md
+- name: OpenSchema Method Example (VC++)
+  href: openschema-method-example-vc.md
+- name: FieldAttributeEnum
+  href: fieldattributeenum.md
+- name: OriginalValue Property (ADO)
+  href: originalvalue-property-ado.md
+- name: Supports Method Example (VC++)
+  href: supports-method-example-vc.md
+- name: RecordCreateOptionsEnum
+  href: recordcreateoptionsenum.md
+- name: MoveRecord Method (ADO)
+  href: moverecord-method-ado.md
+- name: Parameter (Visual C++ Syntax Index with import)
+  href: parameter-visual-c-syntax-index-with-sharpimport.md
+- name: Update Method
+  href: update-method.md
+- name: Collections (ADO for Visual C++ Syntax)
+  href: collections-ado-for-visual-c-syntax.md
+- name: Read, ReadText, Write, WriteText Methods Example (VB)
+  href: read-readtext-write-and-writetext-methods-example-vb.md
+- name: Reshape Name Property-Dynamic (ADO)
+  href: reshape-name-property-dynamic-ado.md
+- name: ExecuteOptionEnum
+  href: executeoptionenum.md
+- name: Filter and RecordCount Example (JScript)
+  href: filter-and-recordcount-properties-example-jscript.md
+- name: Provider and DefaultDatabase Example (VB)
+  href: provider-and-defaultdatabase-properties-example-vb.md
+- name: Open and Close Methods Example (VBScript)
+  href: open-and-close-methods-example-vbscript.md
+- name: Open Method (ADO Connection)
+  href: open-method-ado-connection.md
+- name: Optimize Property Example (VB)
+  href: optimize-property-example-vb.md
+- name: ParentURL Property (ADO)
+  href: parenturl-property-ado.md
+- name: Clone Method Example (VB)
+  href: clone-method-example-vb.md
+- name: Parameters Collection Properties, Events
+  href: parameters-collection-properties-methods-and-events.md
+- name: MaxRecords Property Example (VB)
+  href: maxrecords-property-example-vb.md
+- name: ExecuteComplete Event (ADO)
+  href: executecomplete-event-ado.md
+- name: CopyRecord, CopyTo, and SaveToFile Example (VB)
+  href: copyrecord-copyto-and-savetofile-methods-example-vb.md
+- name: Errors Collection Properties, Methods, aEvents
+  href: errors-collection-properties-methods-and-events.md
+- name: ParentRow Property (ADO)
+  href: parentrow-property-ado.md
+- name: Description, HelpContext, HelpFile, NativeError Example (VB)
+  href: description-helpcontext-helpfile-nativeerror-number-source-example-vb.md
+- name: Cancel Method Example (VB)
+  href: cancel-method-example-vb.md
+- name: AbsolutePage, PageCount, PageSize Example (VB)
+  href: absolutepage-pagecount-and-pagesize-properties-example-vb.md
+- name: GetDataProviderDSO Method
+  href: getdataproviderdso-method.md
+- name: Find Method Example (VC++)
+  href: find-method-example-vc.md
+- name: SaveOptionsEnum
+  href: saveoptionsenum.md
+- name: ADO for Visual C++ Syntax Index with import
+  href: ado-for-visual-c-syntax-index-with-sharpimport.md
+- name: Sort Property Example (VC++)
+  href: sort-property-example-vc.md
+- name: EOS Property
+  href: eos-property.md
+- name: Seek Method and Index Property Example (VC++)
+  href: seek-method-and-index-property-example-vc.md
+- name: ConnectComplete and Disconnect Events (ADO)
+  href: connectcomplete-and-disconnect-events-ado.md
+- name: Move Method Example (VB)
+  href: move-method-example-vb.md
+- name: NumericScale and Precision Properties Example (VC++)
+  href: numericscale-and-precision-properties-example-vc.md
+- name: BookmarkEnum
+  href: bookmarkenum.md
+- name: Find Method (ADO)
+  href: find-method-ado.md
+- name: Update and CancelUpdate Methods Example (VB)
+  href: update-and-cancelupdate-methods-example-vb.md
+- name: Count Property Example (VC++)
+  href: count-property-example-vc.md
+- name: Parameter Object Properties, Methods
+  href: parameter-object-properties-methods-and-events.md
+- name: Description, HelpContext, HelpFile Example (VC++)
+  href: description-helpcontext-helpfile-nativeerror-number-source-example-vc.md
+- name: ActiveConnection Property (ADO)
+  href: activeconnection-property-ado.md
+- name: ADORecordConstruction Interface
+  href: adorecordconstruction-interface.md
+- name: AppendChunk and GetChunk Methods Example (VC++)
+  href: appendchunk-and-getchunk-methods-example-vc.md
+- name: Execute, Requery, and Clear Example (JScript)
+  href: execute-requery-and-clear-methods-example-jscript.md
+- name: RecordStatusEnum
+  href: recordstatusenum.md
+- name: StayInSync Property
+  href: stayinsync-property.md
+- name: Resync Command Property-Dynamic (ADO)
+  href: resync-command-property-dynamic-ado.md
+- name: CursorOptionEnum
+  href: cursoroptionenum.md
+- name: ConnectionString, ConnectionTimeout Example (VB)
+  href: connectionstring-connectiontimeout-and-state-properties-example-vb.md
+- name: CommandText Property (ADO)
+  href: commandtext-property-ado.md
+- name: GetString Method Example (VC++)
+  href: getstring-method-example-vc.md
+- name: Description Property
+  href: description-property.md
+- name: CommandTypeEnum
+  href: commandtypeenum.md
+- name: ADO Object Model
+  href: ado-object-model.md
+- name: BeginTrans, CommitTrans, and RollbackTrans (VC++)
+  href: begintrans-committrans-and-rollbacktrans-methods-example-vc.md
+- name: Stream Property
+  href: stream-property.md
+- name: CacheSize Property (ADO)
+  href: cachesize-property-ado.md
+- name: Parameters Collection (ADO)
+  href: parameters-collection-ado.md
+- name: AbsolutePosition and CursorLocation Example (VC++)
+  href: absoluteposition-and-cursorlocation-properties-example-vc.md
+- name: Value Property (ADO)
+  href: value-property-ado.md
+- name: Bookmark Property (ADO)
+  href: bookmark-property-ado.md
+- name: EndOfRecordset Event (ADO)
+  href: endofrecordset-event-ado.md
+- name: Append and CreateParameter Methods Example (VB)
+  href: append-and-createparameter-methods-example-vb.md
+- name: InfoMessage Event (ADO)
+  href: infomessage-event-ado.md
+- name: EditModeEnum
+  href: editmodeenum.md
+- name: OpenSchema Method Example (VB)
+  href: openschema-method-example-vb.md
+- name: Type Property Example (Field) (VC++)
+  href: type-property-example-field-vc.md
+- name: Recordset Object Properties, Methods, Events
+  href: recordset-object-properties-methods-and-events.md
+- name: NamedParameters Property (ADO)
+  href: namedparameters-property-ado.md
+- name: DefaultDatabase Property
+  href: defaultdatabase-property.md
+- name: Status Property (ADO Recordset)
+  href: status-property-ado-recordset.md
+- name: UpdateBatch and CancelBatch Example (VB)
+  href: updatebatch-and-cancelbatch-methods-example-vb.md
+- name: Source Property (ADO Error)
+  href: source-property-ado-error.md
+- name: MarshalOptionsEnum
+  href: marshaloptionsenum.md
+- name: DefinedSize Property
+  href: definedsize-property.md
+- name: WillChangeField and FieldChangeComplete Events (ADO)
+  href: willchangefield-and-fieldchangecomplete-events-ado.md
+- name: Refresh Method Example (VC++)
+  href: refresh-method-example-vc.md
+- name: Close Method (ADO)
+  href: close-method-ado.md
+- name: ConnectionString Property (ADO)
+  href: connectionstring-property-ado.md
+- name: Execute, Requery, and Clear Example (VBScript)
+  href: execute-requery-and-clear-methods-example-vbscript.md
+- name: StayInSync Property Example (VC++)
+  href: stayinsync-property-example-vc.md
+- name: Command (ADO - WFC Syntax)
+  href: command-ado-wfc-syntax.md
+- name: CursorLocation Property (ADO)
+  href: cursorlocation-property-ado.md
+- name: MarshalOptions Property (ADO)
+  href: marshaloptions-property-ado.md
+- name: AbsolutePage, PageCount, PageSize Example (VC++)
+  href: absolutepage-pagecount-and-pagesize-properties-example-vc.md
+- name: ConnectModeEnum
+  href: connectmodeenum.md
+- name: Append and CreateParameter Example (JScript)
+  href: append-and-createparameter-methods-example-jscript.md
+- name: Collections (Visual C++ Syntax Indeximport)
+  href: collections-visual-c-syntax-index-with-sharpimport.md
+- name: BOF, EOF Properties (ADO)
+  href: bof-eof-properties-ado.md
+- name: Clone Method Example (VBScript)
+  href: clone-method-example-vbscript.md
+- name: Sort Property
+  href: sort-property.md
+- name: CacheSize Property Example (JScript)
+  href: cachesize-property-example-jscript.md
+- name: Count Property Example (VB)
+  href: count-property-example-vb.md
+- name: ADCPROP_UPDATECRITERIA_ENUM
+  href: adcprop-updatecriteria-enum.md
+- name: IsolationLevel and Mode PExample (VB)
+  href: isolationlevel-and-mode-properties-example-vb.md
+- name: Seek Method and Index Example (VB)
+  href: seek-method-and-index-property-example-vb.md
+- name: Save and Open Example (VC++)
+  href: save-and-open-methods-example-vc.md
+- name: Dialect Property
+  href: dialect-property.md
+- name: ObjectStateEnum
+  href: objectstateenum.md
+- name: Open Method (ADO Recordset)
+  href: open-method-ado-recordset.md
+- name: MoveFirst, MoveLast, MoveNext Example (VB)
+  href: movefirst-movelast-movenext-and-moveprevious-methods-example-vb.md
+- name: ConvertToString Method Example (VB)
+  href: converttostring-method-example-vb.md
+- name: FetchProgress Event (ADO)
+  href: fetchprogress-event-ado.md
+- name: DataSource Property (ADO)
+  href: datasource-property-ado.md
+- name: CopyRecordOptionsEnum
+  href: copyrecordoptionsenum.md
+- name: Type Property Example (Property) (VB)
+  href: type-property-example-property-vb.md
+- name: CreateRecordset Method Example (VB)
+  href: createrecordset-method-example-vb.md
+- name: Attributes and Name Example (VC++)
+  href: attributes-and-name-properties-example-vc.md
+- name: AbsolutePage, PageCount, PageSize Example (JScript)
+  href: absolutepage-pagecount-and-pagesize-properties-example-jscript.md
+- name: Value Property Example (VB)
+  href: value-property-example-vb.md
+- name: CursorType, LockType, EditMode Example (VB)
+  href: cursortype-locktype-and-editmode-properties-example-vb.md
+- name: DataMember Property
+  href: datamember-property.md
+- name: DataTypeEnum
+  href: datatypeenum.md
+- name: Source Property (ADO Record)
+  href: source-property-ado-record.md
+- name: HelpContext, HelpFile Properties
+  href: helpcontext-helpfile-properties.md
+- name: Value Property Example (VC++)
+  href: value-property-example-vc.md
+- name: Move Method Example (VBScript)
+  href: move-method-example-vbscript.md
+- name: NumericScale Property (ADO)
+  href: numericscale-property-ado.md
+- name: Supports Method
+  href: supports-method.md
+- name: ADO Events Model Example (VC++)
+  href: ado-events-model-example-vc.md
+- name: Errors Collection (ADO)
+  href: errors-collection-ado.md
+- name: StringFormatEnum
+  href: stringformatenum.md
+- name: DeleteRecord Method (ADO)
+  href: deleterecord-method-ado.md
+- name: Delete Method (ADO Fields Collection)
+  href: delete-method-ado-fields-collection.md
+- name: Attributes and Name Properties Example (VB)
+  href: attributes-and-name-properties-example-vb.md
+- name: CompareBookmarks Method Example (VC++)
+  href: comparebookmarks-method-example-vc.md
+- name: Version Property Example (VC++)
+  href: version-property-example-vc.md
+- name: UpdateBatch Method
+  href: updatebatch-method.md
+- name: get_OLEDBCommand Method
+  href: get-oledbcommand-method.md
+- name: ActiveCommand Property Example (VB)
+  href: activecommand-property-example-vb.md
+- name: ActualSize and DefinedSize Properties Example (JScript)
+  href: actualsize-and-definedsize-properties-example-jscript.md
+- name: ADO Code Examples in Microsoft JScript
+  href: ado-code-examples-in-microsoft-jscript.md
+- name: StreamTypeEnum
+  href: streamtypeenum.md
+- name: Property Object Properties, Methods
+  href: property-object-properties-methods-and-events.md
+- name: SchemaEnum
+  href: schemaenum.md
+- name: ConnectPromptEnum
+  href: connectpromptenum.md
+- name: Row Property (ADO)
+  href: row-property-ado.md
+- name: MaxRecords Property (ADO)
+  href: maxrecords-property-ado.md
+- name: Precision Property (ADO)
+  href: precision-property-ado.md
+- name: Error (Visual C++ Syntax Index with import)
+  href: error-visual-c-syntax-index-with-sharpimport.md
+- name: Delete Method (ADO Recordset)
+  href: delete-method-ado-recordset.md
+- name: Field Object Properties, Methods Events
+  href: field-object-properties-methods-and-events.md
+- name: Properties Collection (ADO)
+  href: properties-collection-ado.md
+- name: Index Property
+  href: index-property.md
+- name: Error (ADO for Visual C++ Syntax)
+  href: error-ado-for-visual-c-syntax.md
+- name: State Property Example (VC++)
+  href: state-property-example-vc.md
+- name: AffectEnum
+  href: affectenum.md
+- name: WillMove and MoveComplete Events (ADO)
+  href: willmove-and-movecomplete-events-ado.md
+- name: Status Property Example (VC++)
+  href: status-property-example-vc.md
+- name: OriginalValue and UnderlyingValue Example (VB)
+  href: originalvalue-and-underlyingvalue-properties-example-vb.md
+- name: Delete Method (ADO Parameters Collection)
+  href: delete-method-ado-parameters-collection.md
+- name: GetString Method Example (VB)
+  href: getstring-method-example-vb.md
+- name: GetRows Method (ADO)
+  href: getrows-method-ado.md
+- name: Move Method (ADO)
+  href: move-method-ado.md
+- name: Supports Method Example (VB)
+  href: supports-method-example-vb.md
+- name: Open and Close Methods Example (VB)
+  href: open-and-close-methods-example-vb.md
+- name: Seek Method
+  href: seek-method.md
+- name: Prepared Property (ADO)
+  href: prepared-property-ado.md
+- name: ADO Code Examples in Visual Basic
+  href: ado-code-examples-in-visual-basic.md
+- name: Provider Property (ADO)
+  href: provider-property-ado.md
+- name: Move Method Example (VC++)
+  href: move-method-example-vc.md
+- name: ADO Events
+  href: ado-events.md
+- name: ActiveConnection, CommandText Example (VC++)
+  href: activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md
+- name: Delete Method Example (VB)
+  href: delete-method-example-vb.md
+- name: State Property (ADO)
+  href: state-property-ado.md
+- name: LineSeparator Property (ADO)
+  href: lineseparator-property-ado.md
+- name: ADO Properties
+  href: ado-properties.md
+- name: SkipLine Method
+  href: skipline-method.md
+- name: Clear Method (ADO)
+  href: clear-method-ado.md
+- name: GetRows Method Example (VC++)
+  href: getrows-method-example-vc.md
+- name: CursorTypeEnum
+  href: cursortypeenum.md
+- name: Recordset (Visual C++ Syntax Index with import)
+  href: recordset-visual-c-syntax-index-with-sharpimport.md
+- name: Status Property Example (Field) (VB)
+  href: status-property-example-field-vb.md
+- name: Sort Property Example (VB)
+  href: sort-property-example-vb.md
+- name: GetChunk Method (ADO)
+  href: getchunk-method-ado.md
+- name: ActiveCommand Property (ADO)
+  href: activecommand-property-ado.md
+- name: ADO Syntax Indexes
+  href: ado-syntax-indexes.md
+- name: SQLState Property
+  href: sqlstate-property.md
+- name: Refresh Method (ADO)
+  href: refresh-method-ado.md
+- name: ADORecordsetConstruction Interface
+  href: adorecordsetconstruction-interface.md
+- name: Collections (ADO - WFC Syntax)
+  href: collections-ado-wfc-syntax.md
+- name: ActualSize and DefinedSize Example (VC++)
+  href: actualsize-and-definedsize-properties-example-vc.md
+- name: Item Property Example (VC++)
+  href: item-property-example-vc.md
+- name: Stream Object (ADO)
+  href: stream-object-ado.md
+- name: Field (ADO for Visual C++ Syntax)
+  href: field-ado-for-visual-c-syntax.md
+- name: LineSeparatorsEnum
+  href: lineseparatorsenum.md
+- name: Connection (Visual C++ Syntax Index with import)
+  href: connection-visual-c-syntax-index-with-sharpimport.md
+- name: Properties Collection Properties, Methods, Events
+  href: properties-collection-properties-methods-and-events.md
+- name: Execute Method (ADO Connection)
+  href: execute-method-ado-connection.md
+- name: Command Object Properties, Methods, Events
+  href: command-object-properties-methods-and-events.md
+- name: Write Method
+  href: write-method.md
+- name: UnderlyingValue Property
+  href: underlyingvalue-property.md

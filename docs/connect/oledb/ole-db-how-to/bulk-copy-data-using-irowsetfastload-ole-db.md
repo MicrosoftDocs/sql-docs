@@ -2,29 +2,25 @@
 title: "Bulk Copy Data Using IRowsetFastLoad (OLE DB) | Microsoft Docs"
 description: "Bulk copy data into a SQL Server table Using IRowsetFastLoad interface of OLE DB Driver for SQL Server"
 ms.custom: ""
-ms.date: "03/26/2018"
-ms.prod: "sql"
+ms.date: "06/14/2018"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "ole-db-how-to"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
+ms.technology: connectivity
 ms.topic: "reference"
 helpviewer_keywords: 
   - "bulk copy [OLE DB], text data"
   - "bulk copy [OLE DB]"
   - "bulk copy [OLE DB], data files"
   - "bulk copy [OLE DB], about bulk copy"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Bulk Copy Data Using IRowsetFastLoad (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   This sample shows the use of IRowsetFastLoad for bulk copying of records into a table.  
   

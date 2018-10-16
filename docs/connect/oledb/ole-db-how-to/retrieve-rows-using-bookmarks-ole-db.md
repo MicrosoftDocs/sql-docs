@@ -2,27 +2,23 @@
 title: "Retrieve Rows Using Bookmarks (OLE DB) | Microsoft Docs"
 description: "Retrieve rows using bookmarks (OLE DB)"
 ms.custom: ""
-ms.date: "03/26/2018"
-ms.prod: "sql"
+ms.date: "06/14/2018"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "ole-db-how-to"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
+ms.technology: connectivity
 ms.topic: "reference"
 helpviewer_keywords: 
   - "bookmarks [OLE DB]"
   - "rows [OLE DB]"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Retrieve Rows Using Bookmarks (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   The consumer sets the **dwFlag** field value of the binding structure to DBCOLUMNSINFO_ISBOOKMARK to indicate that the column is used as bookmark. The consumer also sets the rowset property DBPROP_BOOKMARKS to VARIANT_TRUE. This allows column 0 to be present in the rowset. **IRowsetLocate::GetRowsAt** is then used to fetch rows starting with the row specified an offset from a bookmark.  
   

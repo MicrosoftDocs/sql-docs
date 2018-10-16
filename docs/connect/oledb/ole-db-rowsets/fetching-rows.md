@@ -2,16 +2,11 @@
 title: "Fetching Rows | Microsoft Docs"
 description: "Fetching rows using the IRowset interface"
 ms.custom: ""
-ms.date: "03/26/2018"
-ms.prod: "sql"
+ms.date: "06/14/2018"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "ole-db-rowsets"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
+ms.technology: connectivity
 ms.topic: "reference"
 helpviewer_keywords: 
   - "fetching rows"
@@ -19,13 +14,14 @@ helpviewer_keywords:
   - "rowsets [OLE DB], fetching"
   - "IRowset interface"
   - "OLE DB Driver for SQL Server, fetching"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Fetching Rows
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   The **IRowset** interface is the base rowset interface. The **IRowset** interface provides methods for fetching rows sequentially, getting the data from those rows, and managing rows. Consumers use the methods in **IRowset** for all basic rowset operations. This includes fetching and releasing rows and getting column values.  
   

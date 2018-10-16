@@ -1,9 +1,10 @@
 ---
 title: Enable or disable remote R package management for SQL Server Machine Learning | Microsoft Docs
+description: Enable remote R package management on SQL Server 2016 R Services or SQL Server 2017 Machine Learning Services (In-Database)
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
+ms.date: 05/10/2018  
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
@@ -12,16 +13,16 @@ manager: cgronlun
 # Enable or disable remote package management for SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article describes how to enable management of R packages from a remote instance of Machine Learning Server. After the package management feature has been enabled, you can use RevoScaleR commands to install packages on a database from a remote client.
+This article describes how to enable remote management of R packages from a client workstation or a different Machine Learning Server. After the package management feature has been enabled on SQL Server, you can use RevoScaleR commands on a client to install packages on SQL Server.
 
 > [!NOTE]
 > Currently management of R libraries is supported; support for Python is on the roadmap.
 
-By default, the external package management feature for SQL Server is disabled, even if machine learning features have been installed. You must run a separate script to enable the feature as described in the next section.
+By default, the external package management feature for SQL Server is disabled. You must run a separate script to enable the feature as described in the next section.
 
 ## Overview of process and tools
 
-To enable or disable package management, use the command-line utility **RegisterRExt.exe**, which is included with the **RevoScaleR** package.
+To enable or disable package management on SQL Server, use the command-line utility **RegisterRExt.exe**, which is included with the **RevoScaleR** package.
 
 [Enabling](#bkmk_enable) this feature is a two-step process, requiring a database administrator: you enable package management on the SQL Server instance (once per SQL Server instance), and then enable package management on the SQL database (once per SQL Server database).
 
@@ -29,7 +30,7 @@ To enable or disable package management, use the command-line utility **Register
 
 ## <a name="bkmk_enable"></a> Enable package management
 
-1. Open an elevated command prompt and navigate to the folder containing the utility, RegisterRExt.exe. The default location is `<SQLInstancePath>\R_SERVICES\library\RevoScaleR\rxLibs\x64\RegisterRExe.exe`.
+1. On SQL Server, open an elevated command prompt and navigate to the folder containing the utility, RegisterRExt.exe. The default location is `<SQLInstancePath>\R_SERVICES\library\RevoScaleR\rxLibs\x64\RegisterRExe.exe`.
 
 2. Run the following command, providing appropriate arguments for your environment:
 
@@ -88,3 +89,8 @@ After you have enabled this feature, you can use RevoScaleR function to install 
 
     This command removes the package management feature from the instance. You might need to manually restart the Launchpad service once more to see changes.
 
+## Next steps
+
++ [Use RevoScaleR to install new R packages](use-revoscaler-to-manage-r-packages.md)
++ [Tips for installing R packages](packages-installed-in-user-libraries.md)
++ [Default packages](installing-and-managing-r-packages.md)

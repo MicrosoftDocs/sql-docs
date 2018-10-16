@@ -2,27 +2,19 @@
 title: "Failover and Failover Modes (Always On Availability Groups) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
-ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "availability-groups"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: high-availability
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], availability replicas"
   - "Availability Groups [SQL Server], failover"
   - "Availability Groups [SQL Server], failover modes"
   - "failover [SQL Server], AlwaysOn Availability Groups"
 ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
-caps.latest.revision: 75
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
-ms.workload: "On Demand"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # Failover and Failover Modes (Always On Availability Groups)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -254,7 +246,7 @@ ms.workload: "On Demand"
 ###  <a name="ForcedFailoverRisks"></a> Risks of Forcing Failover  
  It is essential to understand that forcing failover can cause data loss. Data loss is possible because the target replica cannot communicate with the primary replica and, therefore, cannot guarantee that the databases are synchronized. Forcing failover starts a new recovery fork. Because the original primary databases and secondary databases are on different recovery forks, each of them now contains data that the other database does not contain: each original primary database contains whatever changes were not yet sent from its send queue to the former secondary database (the unsent log); the former secondary databases contain whatever changes occur after failover was forced.  
   
- If failover is forced because the primary replica has failed, potential data loss is depends on whether any transaction logs had not been sent to the secondary replica before the failure. Under the asynchronous-commit mode, accumulated unsent log is always a possibility. Under synchronous-commit mode, this is possible only until the secondary databases becomes synchronized.  
+ If failover is forced because the primary replica has failed, potential data loss depends on whether or not any transaction logs had been sent to the secondary replica before the failure. Under the asynchronous-commit mode, accumulated unsent log is always a possibility. Under synchronous-commit mode, this is possible only until the secondary databases become synchronized.  
   
  The following table summarizes the possibility of data loss for a particular database on the replica to which you force failover.  
   
@@ -264,7 +256,7 @@ ms.workload: "On Demand"
 |Synchronous-commit|No|Yes|  
 |Asynchronous-commit|No|Yes|  
   
- Secondary databases track only two recovery forks, so if you perform multiple forced failovers, any secondary database that did start data synchronization with the previous force failover might not be able to resume. If this occurs, any secondary databases that cannot be resumed will need to be removed from the availability group, restored to the correct point in time, and rejoined to the availability group. A restore will not work across multiple recovery forks, therefore, be sure to perform a log backup after performing more than one forced failover.  
+ Secondary databases track only two recovery forks, so if you perform multiple forced failovers, any secondary database that did start data synchronization with the previous force failover might not be able to resume. If this occurs, any secondary databases that cannot be resumed will need to be removed from the availability group, restored to the correct point in time, and rejoined to the availability group. Error 1408 with state 103 may be observed in this scenario (Error: 1408, Severity: 16, State: 103). A restore will not work across multiple recovery forks, therefore, be sure to perform a log backup after performing more than one forced failover.  
   
 ###  <a name="WhyFFoPostForcedQuorum"></a> Why Forced Failover is Required After Forcing Quorum  
  After quorum is forced on the WSFC cluster (*forced quorum*) you need to perform a forced failover (with possible data loss) on each availability group. The forced failover is required because the real state of the WSFC cluster values might have been lost. Preventing normal failovers after a forced quorum is required because of the possibility than an unsynchronized secondary replica would appear to be synchronized on the reconfigured WSFC cluster.  

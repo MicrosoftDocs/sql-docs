@@ -6,10 +6,11 @@ author: MashaMSFT
 ms.author: mathoma
 ms.date: 03/13/2018
 ms.topic: tutorial
-ms.suite: "sql"
 ms.prod_service: sql-tools
 ms.reviewer: sstein
 manager: craigg
+ms.prod: sql
+ms.technology: ssms
 ---
 
 # Tutorial: Connect to and query a SQL Server instance by using SQL Server Management Studio
@@ -27,17 +28,16 @@ This tutorial teaches you how to use SQL Server Management Studio (SSMS) to conn
 ## Prerequisites
 To complete this tutorial, you need SQL Server Management Studio and access to a SQL Server instance. 
 
-- Install [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).
+- Install [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
 If you don't have access to a SQL Server instance, select your platform from the following links. If you choose SQL Authentication, use your SQL Server login credentials.
-- **Windows**: [Download SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads).
-- **macOS**: [Download SQL Server 2017 on Docker](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker).
+- **Windows**: [Download SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
+- **macOS**: [Download SQL Server 2017 on Docker](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker).
 
 
 ## Connect to a SQL Server instance
 
-1. Start SQL Server Management Studio.  
-    The first time you run SSMS, the **Connect to Server** window opens. If it doesn't open, you can open it manually by selecting **Object Explorer** > **Connect** > **Database Engine**.
+1. Start SQL Server Management Studio. The first time you run SSMS, the **Connect to Server** window opens. If it doesn't open, you can open it manually by selecting **Object Explorer** > **Connect** > **Database Engine**.
 
     ![The Connect link in Object Explorer](media/connect-query-sql-server/connectobjexp.png)
 
@@ -46,19 +46,25 @@ If you don't have access to a SQL Server instance, select your platform from the
     - For **Server type**, select **Database Engine** (usually the default option).
     - For **Server name**, enter the name of your SQL Server instance. (This article uses the instance name SQL2016ST on the hostname NODE5 [NODE5\SQL2016ST].) If you're unsure how to determine your SQL Server instance name, see [Additional tips and tricks for using SSMS](ssms-tricks.md#determine-sql-server-name).  
 
-    !["Server name" field with example instance name](media/connect-query-sql-server/connection.png)
-
     !["Server name" field with option of using SQL Server instance](media/connect-query-sql-server/connection2.png)
 
-    - For **Authentication**, select **Windows Authentication**. This article uses Windows Authentication, but SQL Server login is also supported. If you select **SQL Login**, you will be prompted for a username and password. For more information about authentication types, see [Connect to server (database engine)](https://docs.microsoft.com/en-us/sql/ssms/f1-help/connect-to-server-database-engine).
+    - For **Authentication**, select **Windows Authentication**. This article uses Windows Authentication, but SQL Server login is also supported. If you select **SQL Login**, you will be prompted for a username and password. For more information about authentication types, see [Connect to server (database engine)](https://docs.microsoft.com/sql/ssms/f1-help/connect-to-server-database-engine).
 
     You can also modify additional connection options by selecting **Options**. Examples of connection options are the database you're connecting to, the connection timeout value, and the network protocol. This article uses the default values for all the options. 
 
 3. After you've completed all the fields, select **Connect**. 
 
-4. Verify that the connection to your SQL Server instance is successful by exploring the objects in Object Explorer, as shown here: 
+### Examples of successful connections
+To verify that your SQL Server connection succeeded, expand and explore the objects within **Object Explorer**. These objects will be different depending on the type of server you're connected to. 
 
-   ![Successful connection](media/connect-query-sql-server/successfulconnection.png)
+- Connecting to an on-prem SQL server - in this case NODE5\SQL2016ST: 
+  ![Connecting to an on-prem server](media/connect-query-sql-server/connect-on-prem.png)
+
+- Connecting to SQL Azure DB - in this case msftestserver.database.windows.net:
+  ![Connecting to a SQL Azure DB](media/connect-query-sql-server/connect-sql-azure.png)
+
+  >[!NOTE]
+  > In this tutorial, you previously used *Windows Authentication* to connect to your on-prem SQL server, but this method is not supported for SQL Azure DB. As such, this image shows using SQL Authentication to connect to the SQL Azure DB. For more information, see [SQL on-prem authentication](../../relational-databases/security/choose-an-authentication-mode.md) and [SQL Azure authentication](https://docs.microsoft.com/azure/sql-database/sql-database-security-overview#control-access). 
 
 ## Create a database
 Create a database named TutorialDB by doing the following: 
@@ -166,8 +172,7 @@ You can find information about the connection properties under the results of yo
 ## Change the server that the query window is connected to
 You can change the server that your current query window is connected to by doing the following:
 
-1. Right-click in the query window, and then select **Connection** > **Change connection**.  
-    The **Connect to Server** window opens again.
+1. Right-click in the query window, and then select **Connection** > **Change connection**. The **Connect to Server** window opens again.
 2. Change the server that your query is connected to. 
  
    ![The Change Connection command](media/connect-query-sql-server/changeconnection.png)
@@ -175,5 +180,11 @@ You can change the server that your current query window is connected to by doin
     > [!NOTE]
     > This action changes only the server that the query window is connected to, not the server that Object Explorer is connected to. 
 
+## Next steps
+The next article teaches you how to script various objects within SQL Server Managment Studio. 
+
+Go to the next article to learn more:
+> [!div class="nextstepaction"]
+> [Next steps](scripting-ssms.md)
 
 

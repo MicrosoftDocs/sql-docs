@@ -5,16 +5,11 @@ author: rothja
 ms.author: jroth 
 manager: craigg
 ms.date: 02/20/2018
-ms.topic: article
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: ""
-ms.suite: "sql"
+ms.topic: conceptual
+ms.prod: sql
 ms.custom: "sql-linux"
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: 77f16adc-e6cb-4a57-82f3-7b9780369868
-ms.workload: "On Demand"
 ---
 # Install SQL Server Agent on Linux
 
@@ -42,7 +37,7 @@ sudo systemctl restart mssql-server
 ## <a name="InstallAgentBelowCU4">For Versions 2017 CU3 and Below, Install the SQL Server Agent</a>
 
 > [!NOTE]
-> The install instructions below apply to SQL Server Versions 2017 CU3 and below. Before installing SQL Server Agent, first [install SQL Server 2017](sql-server-linux-setup.md#platforms). This configures the keys and repositories that you use when you install the **mssql-server-agent** package.
+> The install instructions below apply to SQL Server Versions 2017 CU3 and below. Before installing SQL Server Agent, first [install SQL Server](sql-server-linux-setup.md#platforms). This configures the keys and repositories that you use when you install the **mssql-server-agent** package.
 
 Install the SQL Server Agent for your platform:
 - [Red Hat Enterprise Linux](#RHEL)

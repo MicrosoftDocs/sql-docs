@@ -2,26 +2,19 @@
 title: "Reinitialize a Subscription | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: replication
+ms.topic: conceptual
 helpviewer_keywords: 
   - "initializing subscriptions [SQL Server replication], reinitializing"
   - "subscriptions [SQL Server replication], reinitializing"
   - "reinitializing subscriptions"
 ms.assetid: ca3625c5-c62e-4ab7-9829-d511f838e385
-caps.latest.revision: 37
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: "craigg"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # Reinitialize a Subscription
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

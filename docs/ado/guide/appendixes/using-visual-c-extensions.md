@@ -1,16 +1,11 @@
 ---
 title: "Using Visual C++ Extensions | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs:
   - "C++"
@@ -18,11 +13,9 @@ helpviewer_keywords:
   - "Visual C++ [ADO], using VC++ extensions"
   - "ADO, Visual C++"
 ms.assetid: ff759185-df41-4507-8d12-0921894ffbd9
-caps.latest.revision: 15
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Visual C++ Extensions
 ## The IADORecordBinding Interface
@@ -35,7 +28,7 @@ ms.workload: "Inactive"
 ## Binding Entries
  The Visual C++ Extensions for ADO map fields of a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object to C/C++ variables. The definition of a mapping between a field and a variable is called a *binding entry*. Macros provide binding entries for numeric, fixed-length, and variable-length data. The binding entries and C/C++ variables are declared in a class derived from the Visual C++ Extensions class, **CADORecordBinding**. The **CADORecordBinding** class is defined internally by the binding entry macros.
 
- ADO internally maps the parameters in these macros to an OLE DB **DBBINDING** structure and creates an OLE DB **Accessor** object to manage the movement and conversion of data between fields and variables. OLE DB defines data as consisting of three parts: A *buffer* where the data is stored; a *status* that indicates whether a field was successfully stored in the buffer, or how the variable should be restored to the field; and the *length* of the data. (See [Getting and Setting Data (OLE DB)](http://msdn.microsoft.com/en-us/4369708b-c9fb-4d48-a321-bf949b41a369)in the OLE DB Programmer's Reference, for more information.)
+ ADO internally maps the parameters in these macros to an OLE DB **DBBINDING** structure and creates an OLE DB **Accessor** object to manage the movement and conversion of data between fields and variables. OLE DB defines data as consisting of three parts: A *buffer* where the data is stored; a *status* that indicates whether a field was successfully stored in the buffer, or how the variable should be restored to the field; and the *length* of the data. (See [Getting and Setting Data (OLE DB)](http://msdn.microsoft.com/4369708b-c9fb-4d48-a321-bf949b41a369)in the OLE DB Programmer's Reference, for more information.)
 
 ## Header File
  Include the following file in your application in order to use the Visual C++ Extensions for ADO:
@@ -85,7 +78,7 @@ Update(CADORecordBinding *binding)
 
  Families of macros are provided for fixed-length data, such as **adDate** or **adBoolean**; numeric data, such as **adTinyInt**, **adInteger**, or **adDouble**; and variable-length data, such as **adChar**, **adVarChar** or **adVarBinary**. All numeric types, except for **adVarNumeric**, are also fixed-length types. Each family has differing sets of parameters so that you can exclude binding information that is of no interest.
 
- For more information, see [Appendix A: Data Types](http://msdn.microsoft.com/en-us/e3a0533a-2196-4eb0-a31e-92fe9556ada6), of the OLE DB Programmer's Reference.
+ For more information, see [Appendix A: Data Types](http://msdn.microsoft.com/e3a0533a-2196-4eb0-a31e-92fe9556ada6), of the OLE DB Programmer's Reference.
 
 ### Begin Binding Entries
  **BEGIN_ADO_BINDING**(*Class*)

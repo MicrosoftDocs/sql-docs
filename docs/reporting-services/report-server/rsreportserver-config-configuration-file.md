@@ -1,24 +1,15 @@
 ---
 title: "RsReportServer.config Configuration File | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/12/2017"
+ms.date: 06/12/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
-ms.component: "report-server"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-server
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
-caps.latest.revision: 20
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
-ms.workload: "Active"
+author: markingmyname
+ms.author: maghan
 ---
 # RsReportServer.config Configuration File
 The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**RsReportServer.config** file stores settings that are used by the Report Server Web service and background processing. All [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] applications run within a single process that reads configuration settings stored in the RSReportServer.config file. Both Native mode and SharePoint mode report servers use the RSReportServer.config, however the two modes do not use all of the same settings in the configuration file. The SharePoint mode version of the file is smaller as many of the settings for SharePoint mode are stored in SharePoint configuration databases rather than the file. This topic describes the default configuration file that is installed for Native mode and SharePoint mode and some of the important settings and behaviors that are controlled by the configuration file.  
@@ -181,7 +172,7 @@ For more information on editing the file, see [Modify a Reporting Services Confi
 |Setting|Description|Mode|  
 |-------------|-----------------|----------|  
 |**ReportServerUrl**|Specifies the URL of the report server that the web portal connects to. Only modify this value if you are configuring the web portal to connect to a report server in another instance or on a remote computer.|N,S|  
-|**ReportBuilderTrustLevel**|Do not modify this value; it is not configurable. In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] and later versions, Report Builder runs only in **FullTrust**. For more information, see [Configure Report Builder Access](../../reporting-services/report-server/configure-report-builder-access.md) . For more information about discontinuing partial trust mode, see [Discontinued Functionality to SQL Server Reporting Services in SQL Server 2016](../../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md).|N,S|  
+|**ReportBuilderTrustLevel**|Do not modify this value; it is not configurable. In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] and later versions, Report Builder runs only in **FullTrust**. For more information about discontinuing partial trust mode, see [Discontinued Functionality to SQL Server Reporting Services in SQL Server 2016](../../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md).|N,S|  
 |**PageCountMode**|For the web portal only, this setting specifies whether the report server calculates a page count value before the report is rendered, or as the report is viewed. Valid values are **Estimate** (default) and **Actual**. Use **Estimate** to calculate page count information as the user views the report. Initially, the page count is set to 2 (for the current page plus one additional page), but adjusts upwards as the user pages through the report. Use **Actual** if you want to calculate page count in advance before the report is displayed. **Actual** is provided for backward compatibility. Note that if you set **PageCountMode** to **Actual**, the entire report must be processed to get a valid page count, increasing wait time before the report is displayed.|N,S|  
   
 ##  <a name="bkmk_extensions"></a> Extensions (RSReportServer.config file) Native Mode  
@@ -241,7 +232,7 @@ For more information on editing the file, see [Modify a Reporting Services Confi
 |**ExcludedRenderFormats**, **RenderingExtension**|These settings are used to intentionally exclude export formats that do not work well with file share delivery. These formats are typically used for interactive reporting, preview, or to preload the report cache. They do not produce application files that can be easily viewed from a desktop application.<br /><br /> HTMLOWC<br /><br /> RGDI<br /><br /> Null|  
   
 ####  <a name="bkmk_email_extension"></a> Report Server E-mail Extension Configuration Settings  
- Report Server Email uses an SMTP network device to send reports to e-mail addresses. This delivery extension must be configured before it can be used. For more information, see [Configure a Report Server for E-Mail Delivery (SSRS Configuration Manager)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83) and [E-Mail Delivery in Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md).  
+ Report Server Email uses an SMTP network device to send reports to e-mail addresses. This delivery extension must be configured before it can be used. For more information, see [Configure a Report Server for E-Mail Delivery (SSRS Configuration Manager)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83) and [E-Mail Delivery in Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md).  
   
 |Setting|Description|  
 |-------------|-----------------|  

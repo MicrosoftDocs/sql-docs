@@ -1,24 +1,15 @@
 ---
 title: "Create a Document Map (Report Builder and SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/30/2017"
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
-ms.component: "report-design"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-design
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: c200a97b-67f2-499f-8374-3ed1ebe3f33c
-caps.latest.revision: 13
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "kfile"
-ms.workload: "On Demand"
+author: maggiesMSFT
+ms.author: maggies
 ---
 
 # Create a Document Map (Report Builder and SSRS)
@@ -83,7 +74,7 @@ A document map provides a set of navigational links to report items in a rendere
 ##  <a name="HideMapWhenViewRpt"></a>   
 #### To hide the document map when you view a report  
   
-1.  In Report Manager, browse to the report that has the document map.  
+1.  In the web portal, browse to the report that has the document map.  
   
      For example, for the [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] sample reports, the following URL specifies the report named Product Catalog.  
   
@@ -111,7 +102,7 @@ A document map provides a set of navigational links to report items in a rendere
   
      To use this URL, copy it and remove all line breaks.  
   
-4.  Paste the URL in Report Manager, and then press ENTER. The report runs, and the document map is hidden.  
+4.  Paste the URL in the web portal, and then press ENTER. The report runs, and the document map is hidden.  
   
 > [!NOTE]  
 >  For more information about downloading sample reports, see [Report Builder and Report Designer sample reports](http://go.microsoft.com/fwlink/?LinkId=198283).  

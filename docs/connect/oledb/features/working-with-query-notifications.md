@@ -2,16 +2,11 @@
 title: "Working with Query Notifications | Microsoft Docs"
 description: "Working with query notifications in OLE DB Driver for SQL Server"
 ms.custom: ""
-ms.date: "03/26/2018"
-ms.prod: "sql"
+ms.date: "06/12/2018"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "oledb|features"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
+ms.technology: connectivity
 ms.topic: "reference"
 helpviewer_keywords: 
   - "data access [OLE DB Driver for SQL Server], query notifications"
@@ -24,13 +19,14 @@ helpviewer_keywords:
   - "MSOLEDBSQL, query notifications"
   - "OLE DB Driver for SQL Server, query notifications"
   - "consumer notification for rowset changes [OLE DB Driver for SQL Server]"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Working with Query Notifications
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Query notifications were introduced in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] and OLE DB Driver for SQL Server. Built upon the Service Broker infrastructure introduced in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], query notifications allow applications to be notified when data has changed. This feature is particularly useful for applications that provide a cache of information from a database, such as a Web application, and need to be notified when the source data is changed.  
   
@@ -78,8 +74,8 @@ CREATE SERVICE myService ON QUEUE myQueue
   
 |Name|Type|Description|  
 |----------|----------|-----------------|  
-|SSPROP_QP_NOTIFICATION_TIMEOUT|VT_UI4|The number of seconds that the query notification is to remain active.<br /><br /> The default is 432000 seconds (5 days). The minimum value is 1 second, and the maximum value is 2^31-1 seconds.|  
-|SSPROP_QP_NOTIFICATION_MSGTEXT|VT_BSTR|The message text of the notification. This is user defined, and has no predefined format.<br /><br /> By default, the string is empty. You can specify a message using 1-2000 characters.|  
+|SSPROP_QP_NOTIFICATION_TIMEOUT|VT_UI4|The number of seconds that the query notification is to remain active.<br /><br /> The default is 432,000 seconds (5 days). The minimum value is 1 second, and the maximum value is 2^31-1 seconds.|  
+|SSPROP_QP_NOTIFICATION_MSGTEXT|VT_BSTR|The message text of the notification. This is user-defined, and has no predefined format.<br /><br /> By default, the string is empty. You can specify a message using 1-2000 characters.|  
 |SSPROP_QP_NOTIFICATION_OPTIONS|VT_BSTR|The query notification options. These are specified in a string with *name*=*value* syntax. The user is responsible for creating the service and reading notifications off of the queue.<br /><br /> The default is an empty string.|  
   
  The notification subscription is always committed, regardless of whether the statement ran in a user transaction or in auto commit or whether the transaction in which the statement ran committed or rolled back. The server notification fires upon any of the following invalid notification conditions: change of underlying data or schema, or when the timeout period is reached; whichever is first. Notification registrations are deleted as soon as they are fired. Hence upon receiving notifications, the application must subscribe again in case they want to get further updates.  

@@ -1,0 +1,101 @@
+- name: Data Access with MDX
+  href: multidimensional-model-data-access-analysis-services-multidimensional-data.md
+- name: Querying Multidimensional Data with MDX
+  href: querying-multidimensional-data-with-mdx.md
+- name: Key Concepts in MDX
+  href: key-concepts-in-mdx-analysis-services.md
+  items:
+  - name: Autoexists
+    href: autoexists.md
+  - name: Calculation Context
+    href: calculation-context.md
+  - name: Calculated Members in Subselects and Subcubes
+    href: calculated-members-in-subselects-and-subcubes.md
+  - name: Cube Space
+    href: cube-space.md
+  - name: Subselects in Queries
+    href: subselects-in-queries.md
+  - name: Tuples
+    href: tuples.md
+  - name: Visual Totals and Non Visual Totals
+    href: visual-totals-and-non-visual-totals.md
+  - name: Working with Members, Tuples, and Sets (MDX)
+    href: working-with-members-tuples-and-sets-mdx.md
+- name: MDX Query Fundamentals
+  href: mdx-query-fundamentals-analysis-services.md
+  items:
+  - name: MDX Query - The Basic Query
+    href: mdx-query-the-basic-query.md
+  - name: MDX Query - EXISTING Keyword
+    href: mdx-query-existing-keyword.md
+  - name: MDX Query and Slicer Axes - Restricting the Query
+    href: mdx-query-and-slicer-axes-restricting-the-query.md
+  - name: MDX Query and Slicer Axes - Specify the Contents of a Query Axis
+    href: mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md
+  - name: MDX Query and Slicer Axes - Specify the Contents of a Slicer Axis
+    href: mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md
+  - name: MDX Query and Slicer Axes - Using Axes in a Simple Example
+    href: mdx-query-and-slicer-axes-using-axes-in-a-simple-example.md
+  - name: Establishing Cube Context in a Query
+    href: establishing-cube-context-in-a-query-mdx.md
+  - name: Building Subcubes in MDX
+    href: building-subcubes-in-mdx-mdx.md
+  - name: MDX Named Sets - Building
+    href: mdx-named-sets-building-named-sets.md
+  - name: MDX Named Sets - Creating Query-Scoped Sets
+    href: mdx-named-sets-creating-query-scoped-named-sets.md
+  - name: MDX Named Sets - Creating Session-Scoped Sets
+    href: mdx-named-sets-creating-session-scoped-named-sets.md
+  - name: MDX Calculated Members - Building Calculated Members
+    href: mdx-calculated-members-building-calculated-members.md
+  - name: MDX Calculated Members - Query-Scoped
+    href: mdx-calculated-members-query-scoped-calculated-members.md
+  - name: MDX Calculated Members - Session-Scoped
+    href: mdx-calculated-members-session-scoped-calculated-members.md
+  - name: MDX Cell Calculations - Build
+    href: mdx-cell-calculations-build-cell-calculations.md
+  - name: MDX Cell Calculations - Query-Scoped
+    href: mdx-cell-calculations-query-scoped-cell-calculations.md
+  - name: MDX Cell Calculations - Session-Scoped
+    href: mdx-cell-calculations-session-scoped-calculated-cells.md
+  - name: MDX Building Measures
+    href: mdx-building-measures.md
+  - name: MDX Member Properties
+    href: mdx-member-properties.md
+  - name: MDX Member Properties - Intrinsic
+    href: mdx-member-properties-intrinsic-member-properties.md
+  - name: MDX Member Properties - User-Defined
+    href: mdx-member-properties-user-defined-member-properties.md
+  - name: MDX Cell Properties - Using
+    href: mdx-cell-properties-using-cell-properties.md
+  - name: MDX Cell Properties - FORMAT_STRING Contents
+    href: mdx-cell-properties-format-string-contents.md
+  - name: MDX Cell Properties - FORE_COLOR and BACK_COLOR Contents
+    href: mdx-cell-properties-fore-color-and-back-color-contents.md
+  - name: MDX Cell Properties - FORMATTED_VALUE
+    href: mdx-cell-properties-formatted-value-property.md
+  - name: MDX Data Manipulation
+    href: mdx-data-manipulation-manipulating-data.md
+  - name: MDX Data Manipulation - Retrieve Source Data Using DRILLTHROUGH
+    href: mdx-data-manipulation-retrieve-source-data-using-drillthrough.md
+  - name: MDX Data Manipulation - RollupChildren Function
+    href: mdx-data-manipulation-rollupchildren-function.md
+  - name: MDX Data Manipulation - Understanding Pass and Solve Orders
+    href: mdx-data-manipulation-understanding-pass-order-and-solve-order.md
+  - name: MDX Data Modification
+    href: mdx-data-modification-modifying-data.md
+  - name: MDX Data Modification - Using Cube Writebacks
+    href: mdx-data-modification-using-cube-writebacks.md
+  - name: Using Variables and Parameters
+    href: using-variables-and-parameters-mdx.md
+- name: MDX Scripting Fundamentals
+  href: mdx-scripting-fundamentals-analysis-services.md
+  items:
+  - name: The Basic MDX Script
+    href: the-basic-mdx-script-mdx.md
+  - name: Managing Scope and Context
+    href: managing-scope-and-context-mdx.md
+  - name: Error Handling
+    href: error-handling-mdx.md
+  - name: Supported MDX
+    href: supported-mdx-mdx.md

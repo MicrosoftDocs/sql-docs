@@ -5,22 +5,17 @@ author: rothja
 ms.author: jroth 
 manager: craigg
 ms.date: 01/30/2018
-ms.topic: article
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: ""
-ms.suite: "sql"
+ms.topic: conceptual
+ms.prod: sql
 ms.custom: "sql-linux"
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: 7b93d0d7-7946-4b78-b33a-57d6307cdfa9
-ms.workload: "On Demand"
 ---
 # Bulk copy data with bcp to SQL Server on Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-This article shows how to use the [bcp](../tools/bcp-utility.md) command-line utility to bulk copy data between an instance of SQL Server 2017 on Linux and a data file in a user-specified format.
+This article shows how to use the [bcp](../tools/bcp-utility.md) command-line utility to bulk copy data between an instance of SQL Server on Linux and a data file in a user-specified format.
 
 You can use `bcp` to import large numbers of rows into SQL Server tables or to export data from SQL Server tables into data files. Except when used with the queryout option, `bcp` requires no knowledge of Transact-SQL. The `bcp` command-line utility works with Microsoft SQL Server running on-premises or in the cloud, on Linux, Windows or Docker and Azure SQL Database and Azure SQL Data Warehouse.
 
@@ -117,7 +112,7 @@ Id          Name                Location
 
 In this tutorial, you use `bcp` to export data from the sample table we created earlier to a new data file.
 
-Copy and paste the followikng commands into the terminal window. These commands use the `bcp` command-line utility to export data from the table **TestEmployees** in the database **BcpSampleDB** to a new data file called **~/test_export.txt**.  Remember to replace the username and `<your_password>` as necessary before running the command.
+Copy and paste the following commands into the terminal window. These commands use the `bcp` command-line utility to export data from the table **TestEmployees** in the database **BcpSampleDB** to a new data file called **~/test_export.txt**.  Remember to replace the username and `<your_password>` as necessary before running the command.
 
 ```bash 
 bcp TestEmployees out ~/test_export.txt -S localhost -U sa -P <your_password> -d BcpSampleDB -c -t ','

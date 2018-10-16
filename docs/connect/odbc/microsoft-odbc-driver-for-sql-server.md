@@ -2,25 +2,19 @@
 title: "Microsoft ODBC Driver for SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2017"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology:
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 ms.assetid: 9f2ae91b-06af-4c9a-9d24-062df7bc4662
-caps.latest.revision: 12
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Active"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Microsoft ODBC Driver for SQL Server
 
-![Download-DownArrow-Circled](../../ssdt/media/download.png)[To download ODBC driver](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
 ODBC is the primary native data access API for applications written in C and C++ for SQL Server. There is an ODBC driver for most data sources. Other languages that can use ODBC include COBOL, Perl, PHP, and Python. ODBC is widely used in data integration scenarios.
 
@@ -28,15 +22,15 @@ The ODBC driver comes with tools such as [**sqlcmd**](../../tools/sqlcmd-utility
 
 ## Code example in C++
 
-We have a small .zip file that contains the source code of a C++ program which uses ODBC:
+The following C++ sample demonstrates how to use the ODBC APIs to connect to and access a database:
 
 - [C++ code example, using ODBC](../../odbc/reference/sample-odbc-program.md)
 
 ## Download
 
-- ![Download-DownArrow-Circled](../../ssdt/media/download.png)[To download ODBC driver](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+- ![Download-DownArrow-Circled](../../ssdt/media/download.png)[To download ODBC driver](download-odbc-driver-for-sql-server.md)
 
-## Documentation  
+## Documentation
 
 ### Features
 

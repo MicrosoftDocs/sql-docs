@@ -1,29 +1,23 @@
 ---
 title: "Configure Replication for Always On Availability Groups (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "availability-groups"
+ms.date: "07/09/2018"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: high-availability
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], interoperability"
   - "replication [SQL Server], AlwaysOn Availability Groups"
 ms.assetid: 4e001426-5ae0-4876-85ef-088d6e3fb61c
-caps.latest.revision: 17
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
-ms.workload: "On Demand"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Configure Replication for Always On Availability Groups (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
   Configuring [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] replication and Always On availability groups involves seven steps. Each step is described in more detail in the following sections.  
   
@@ -125,6 +119,9 @@ ALTER AVAILABILITY GROUP 'MyAG'
 ```  
   
  For more information, see [Creation and Configuration of Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md).  
+ 
+> [!NOTE]  
+>  Replication cannot be enabled on databases in an Availability Group with DTC_Support enabled using Per_DB option.  
   
 ##  <a name="step3"></a> 3. Insure that all of the Secondary Replica Hosts are Configured for Replication  
  At each secondary replica host, verify that [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] has been configured to support replication. The following query can be run at each secondary replica host to determine whether replication is installed:  

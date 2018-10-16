@@ -1,25 +1,14 @@
 ---
 title: "Prerequisites for Tutorials (Report Builder) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/30/2017"
+ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.service: ""
-ms.component: "reporting-services"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: reporting-services
 
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+ms.topic: conceptual
 ms.assetid: 9b8346a6-f4f4-4ad3-bc98-8f2be342ef2d
-caps.latest.revision: 11
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "kfile"
-ms.workload: "On Demand"
+author: maggiesMSFT
+ms.author: maggies
 ---
 
 # Prerequisites for Tutorials (Report Builder)
@@ -42,7 +31,7 @@ You must have the following prerequisites to complete Report Builder tutorials:
   
 -   The name of a SQL Server instance and credentials sufficient for read-only access to any database. The dataset queries in the tutorials use literal data, but each query must be processed by a SQL Server instance to return the metadata that is required for a report dataset. For example, the following connection string specifies only a server: `data source=<servername>`. You must have read access to the default database that is assigned to you by the system administrator who grants you permission to access the server. You can also specify a database, as shown in the following connection string: `data source=<servername>;initial catalog=<database>`.  
   
--   For the [Tutorial: Map Report (Report Builder)](Tutorial:%20Map%20Report%20\(Report%20Builder\).md), the report server must be configured to support Bing maps as a background. For more information, see [Plan for Map Report Support](http://msdn.microsoft.com/en-us/5ddc97a7-7ee5-475d-bc49-3b814dce7e19).   
+-   For the [Tutorial: Map Report (Report Builder)](Tutorial:%20Map%20Report%20\(Report%20Builder\).md), the report server must be configured to support Bing maps as a background. For more information, see [Plan for Map Report Support](http://msdn.microsoft.com/5ddc97a7-7ee5-475d-bc49-3b814dce7e19).   
 
 -   The [Tutorial: Creating Drillthrough and Main Reports (Report Builder)](Tutorial:%20Creating%20Drillthrough%20and%20Main%20Reports%20\(Report%20Builder\).md) tutorial requires access to the Contoso Sales cube. See the tutorial for more information. 
   

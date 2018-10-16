@@ -1,17 +1,11 @@
-﻿---
+---
 title: "Create DML Triggers to Handle Multiple Rows of Data | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
-ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "triggers"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-dml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology:
+ms.topic: conceptual
 helpviewer_keywords: 
   - "multiple row DML triggers"
   - "UPDATE statement [SQL Server], DML triggers"
@@ -20,12 +14,10 @@ helpviewer_keywords:
   - "INSERT statement [SQL Server], DML triggers"
   - "DML triggers, multirow"
 ms.assetid: d476c124-596b-4b27-a883-812b6b50a735
-caps.latest.revision: 25
 author: "rothja"
 ms.author: "jroth"
-manager: "craigg"
-ms.workload: "On Demand"
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create DML Triggers to Handle Multiple Rows of Data
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

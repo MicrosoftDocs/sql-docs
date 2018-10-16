@@ -3,16 +3,11 @@ title: "CLR strict security | Microsoft Docs"
 description: How to configure CLR strict security in SQL Server
 ms.custom: ""
 ms.date: "06/20/2017"
-ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "configure-windows"
+ms.prod: sql
+ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: configuration
+ms.topic: conceptual
 f1_keywords: 
   - "clr strict security"
   - "clr_strict_security_TSQL"
@@ -22,11 +17,9 @@ helpviewer_keywords:
   - "assemblies [CLR integration], strick security"
   - "clr strict security option"
 ms.assetid: 
-caps.latest.revision: 0
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # CLR strict security   
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

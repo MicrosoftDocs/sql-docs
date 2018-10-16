@@ -2,27 +2,20 @@
 title: "PDO Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/26/2018"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "php"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 ms.assetid: 9c77b68d-0649-44af-96fa-586cbb319f5f
-caps.latest.revision: 20
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.workload: "Inactive"
 ---
 # PDO Class
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-The PDO class contains methods that allow your PHP application to connect to an [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] instance.  
+The PDO class contains methods that allow your PHP application to connect to an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.  
   
 ## Syntax  
   

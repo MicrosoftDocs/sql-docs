@@ -2,15 +2,10 @@
 title: "SQL Server Profiler dialog boxes | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/07/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "sql-server-profiler"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: profiler
 ms.topic: "reference"
 f1_keywords: 
   - "sql13.pro.traceproperties.general.f1;"
@@ -44,11 +39,9 @@ helpviewer_keywords:
   - "Replay Configuration dialog box"
   - "Find dialog box"
 ms.assetid: e57b9160-4b78-4353-abb2-bfdbdf523d7a
-caps.latest.revision: 23
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # SQL Server Profiler dialog boxes
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

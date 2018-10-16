@@ -1,22 +1,15 @@
-﻿---
+---
 title: "catalog.update_logdb_info (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/18/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: "language-reference"
-caps.latest.revision: 1
 author: "haoqian"
 ms.author: "haoqian"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # catalog.update_logdb_info (SSISDB Database)

@@ -1,25 +1,17 @@
-﻿---
+---
 title: "CREATE TABLE (Azure SQL Data Warehouse) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/14/2017"
 ms.prod: ""
 ms.prod_service: "sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.service: "sql-data-warehouse"
-ms.component: "t-sql|statements"
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
-caps.latest.revision: 59
-author: "barbkess"
-ms.author: "barbkess"
-manager: "craigg"
-ms.workload: "On Demand"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # CREATE TABLE (Azure SQL Data Warehouse)
@@ -108,7 +100,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
 ### <a name="ColumnOptions"></a> Column options
 
  `COLLATE` *Windows_collation_name*  
- Specifies the collation for the expression. The collation must be one of the Windows collations supported by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of Windows collations supported by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Windows Collation Name (Transact-SQL)](http://msdn.microsoft.com/library/ms188046\(v=sql11\)/).  
+ Specifies the collation for the expression. The collation must be one of the Windows collations supported by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of Windows collations supported by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Windows Collation Name (Transact-SQL)](windows-collation-name-transact-sql.md)/).  
   
  `NULL` | `NOT NULL`  
  Specifies whether `NULL` values are allowed in the column. The default is `NULL`.  
@@ -119,7 +111,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
  | Argument | Explanation |
  | -------- | ----------- |
  | *constraint_name* | The optional name for the constraint. The constraint name is unique within the database. The name can be re-used in other databases. |
- | *constant_expression* | The default value for the column. The expression must be a literal value or a  a constant. For example, these constant expressions are allowed: `'CA'`, `4`. These are not allowed: `2+3`, `CURRENT_TIMESTAMP`. |
+ | *constant_expression* | The default value for the column. The expression must be a literal value or a constant. For example, these constant expressions are allowed: `'CA'`, `4`. These are not allowed: `2+3`, `CURRENT_TIMESTAMP`. |
   
 
 ### <a name="TableOptions"></a> Table structure options

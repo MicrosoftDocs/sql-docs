@@ -2,16 +2,10 @@
 title: "Rename a Computer that Hosts a Stand-Alone Instance of SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/08/2017"
-ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "install-windows"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: install
+ms.topic: conceptual
 helpviewer_keywords: 
   - "remote login errors [SQL Server]"
   - "standalone computer names [SQL Server]"
@@ -22,10 +16,10 @@ helpviewer_keywords:
   - "deleting remote logins"
   - "dropping remote logins"
 ms.assetid: bbaf1445-b8a2-4ebf-babe-17d8cf20b037
-caps.latest.revision: 31
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MashaMSFT
+ms.author: mathoma
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+manager: craigg
 ---
 # Rename a Computer that Hosts a Stand-Alone Instance of SQL Server
 

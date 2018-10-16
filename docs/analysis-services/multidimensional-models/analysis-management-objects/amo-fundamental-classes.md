@@ -1,35 +1,14 @@
 ---
 title: "AMO Fundamental Classes | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/14/2018"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
-helpviewer_keywords: 
-  - "data sources [AMO]"
-  - "AMO, database objects"
-  - "AMO, server objects"
-  - "Analysis Management Objects, server objects"
-  - "database objects [AMO]"
-  - "Analysis Management Objects, database objects"
-  - "AMO, data sources"
-  - "Analysis Management Objects, data sources"
-ms.assetid: 440e9287-53a2-4db3-9481-1d2ceb6e5b5a
-caps.latest.revision: 28
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: amo
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # AMO Fundamental Classes
   Fundamental classes are the starting point for working with Analysis Management Objects (AMO). Through these classes you establish your environment for the rest of the objects that will be used in your application. Fundamental classes include the following objects: <xref:Microsoft.AnalysisServices.Server>, <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.DataSource>, and <xref:Microsoft.AnalysisServices.DataSourceView>.  

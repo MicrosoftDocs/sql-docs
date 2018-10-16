@@ -2,26 +2,20 @@
 title: "Create a Version Flag (Master Data Services) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "mds"
-ms.service: ""
-ms.component: "non-specific"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "creating version flags [Master Data Services]"
   - "version flags [Master Data Services], creating"
   - "versions [Master Data Services], creating flags"
 ms.assetid: 3067e1e3-05b7-4f11-9206-c612ef4e7e42
-caps.latest.revision: 7
-author: "leolimsft"
-ms.author: "lle"
-manager: "craigg"
-ms.workload: "Inactive"
+author: leolimsft
+ms.author: lle
+manager: craigg
 ---
 # Create a Version Flag (Master Data Services)
 

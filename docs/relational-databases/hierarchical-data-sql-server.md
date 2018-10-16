@@ -1,17 +1,13 @@
-﻿---
+---
 title: "Hierarchical Data (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/01/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "relational-databases-misc"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "hierarchies [SQL Server], tables to support"
   - "hierarchyid [Database Engine], concepts"
@@ -20,12 +16,10 @@ helpviewer_keywords:
   - "hierarchyid [Database Engine]"
   - "hierarchical queries [SQL Server], using hierarchyid data type"
 ms.assetid: 19aefa9a-fbc2-4b22-92cf-67b8bb01671c
-caps.latest.revision: 40
 author: "rothja"
 ms.author: "jroth"
-manager: "craigg"
-ms.workload: "On Demand"
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Hierarchical Data (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

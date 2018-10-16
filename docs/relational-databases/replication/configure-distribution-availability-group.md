@@ -1,17 +1,11 @@
 ---
 title: "Configure SQL Server distribution database in availability group | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/27/2018"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "replication"
+ms.date: "10/04/2018"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: replication
+ms.topic: conceptual
 helpviewer_keywords: 
   - "replication [SQL Server], distribution"
   - "distribution configuration [SQL Server replication]"
@@ -23,17 +17,15 @@ helpviewer_keywords:
   - "distribution databases [SQL Server replication]"
   - "merge replication [SQL Server replication], configuring distribution"
 ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
-caps.latest.revision: 44
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
-ms.workload: "On Demand"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Set up replication distribution database in Always On availability group
 
 This article explains how to set up a SQL Server replication distribution databases in an Always On availability group (AG).
 
-SQL Server 2017 CU 6 introduces support for replication distribution database in an AG through the following mechanisms:
+SQL Server 2017 CU6 and SQL Server 2016 SP2-CU3 introduces support for replication distribution database in an AG through the following mechanisms:
 
 - The distribution database AG needs to have a listener. When the publisher adds the distributor, it uses the listener name as the distributor name.
 - The replication jobs are created with the listener name as the distributor name.
@@ -76,7 +68,6 @@ After a distribution database in the AG is configured based on the steps describ
 - Make changes to distributor or distribution database properties in all replicas participating in distribution database AG.
 - Make replication jobs changes through msdb stored procedures or SQL Server Management Studio in all replicas participating in distribution database AG.
 - Configuring distributor on the publisher needs to be done with scripts. The replication wizard cannot be used. Replication wizards and property sheets for other purposes are supported.
-- Replication monitor and other replication UI that connects using the AG listener name, are not supported as of SQL Server 2017 CU 6. To administer replication agents associated with the distribution database in an AG, use job property and job history.
 - Configuring the AG for distribution databases can only be done through scripts.
 - Setting up distribution databases in an AG needs to be a new replication configuration. Switching an existing distribution database to an AG is not supported. Also once a distribution database is taken out an AG, it can no longer function as a valid distribution database and should be dropped.
 
@@ -193,13 +184,15 @@ This example adds a new distributor to an existing replication configuration wit
    sp_adddistributiondb 'distribution'
    ```
 
-1. On DIST3, run: 
+4. On DIST3, run: 
 
    ```sql
    sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'
    ```
 
    The value of `@working_directory` should be the same as what was specified for DIST1 and DIST2.
+
+4. On DIST3, you must recreate Linked Servers to the subscribers.
 
 ## Remove a replica from distribution database AG
 

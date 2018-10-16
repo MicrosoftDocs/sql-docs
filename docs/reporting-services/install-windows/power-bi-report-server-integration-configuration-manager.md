@@ -1,25 +1,12 @@
 ---
 title: "Power BI Report Server Integration (Configuration Manager) | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/05/2017"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.service: ""
-ms.component: "install-windows"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "pbi"
-  - "power bi"
-  - "power bi integration"
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
-ms.workload: "On Demand"
+ms.topic: conceptual
+ms.date: 09/17/2017
 ---
 
 # Power BI Report Server Integration (Configuration Manager)
@@ -59,6 +46,9 @@ Complete the following steps from the [!INCLUDE[ssRSnoversion](../../includes/ss
 1. Select the [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] integration page.
 
 2. Select **Register with Power BI**.
+
+    >[!Note]
+    > Make sure that port 443 is not blocked.
 
 3. At the [!INCLUDE[msCoName](../../includes/msconame-md.md)] sign-in dialog, enter the credentials you use to sign into [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)].
 

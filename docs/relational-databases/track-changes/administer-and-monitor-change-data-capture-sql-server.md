@@ -2,26 +2,20 @@
 title: "Administer and Monitor Change Data Capture (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "track-changes"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "change data capture [SQL Server], monitoring"
   - "change data capture [SQL Server], administering"
   - "change data capture [SQL Server], jobs"
 ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
-caps.latest.revision: 15
 author: "rothja"
 ms.author: "jroth"
-manager: "craigg"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # Administer and Monitor Change Data Capture (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

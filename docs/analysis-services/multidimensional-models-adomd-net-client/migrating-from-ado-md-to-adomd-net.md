@@ -1,30 +1,14 @@
 ---
 title: "Migrating From ADO MD To ADOMD.NET | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/14/2018"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
-helpviewer_keywords: 
-  - "ADOMD.NET, migrating to"
-  - "migrating ADO MD to ADOMD.NET"
-  - "ADO MD migration [ADOMD.NET]"
-ms.assetid: 8c760db3-c475-468e-948d-e5f599d985ad
-caps.latest.revision: 39
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: adomd
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Migrating From ADO MD To ADOMD.NET
   The ADOMD.NET library is similar to the ActiveX Data Objects Multidimensional (ADO MD) library, an extension of the ActiveX Data Objects (ADO) library that is used to access multidimensional data in Component Object Model (COM)–based client applications. ADO MD provides easy access to multidimensional data from unmanaged languages such as C++ and [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic. ADOMD.NET provides easy access to analytical (both multidimensional and data mining) data from managed languages such as [!INCLUDE[msCoName](../../includes/msconame-md.md)] C# and [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET. Additionally, ADOMD.NET provides an enhanced metadata object model.  

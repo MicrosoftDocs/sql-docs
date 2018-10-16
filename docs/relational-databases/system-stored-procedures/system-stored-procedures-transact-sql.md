@@ -1,19 +1,12 @@
-﻿---
+---
 title: "System Stored Procedures (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/21/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server (starting with 2016 CTP3)"
 f1_keywords: 
   - "sql13.TSQLSysNoExpandPortal.f1"
   - "sql13.TSQLSysNoExpandPortal.f1_TSQL"
@@ -26,12 +19,10 @@ helpviewer_keywords:
   - "system stored procedures [SQL Server], categories"
   - "system stored procedures [SQL Server]"
 ms.assetid: a5c4d5b8-5a24-4a2d-99b4-d003b546ee3a
-caps.latest.revision: 49
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "On Demand"
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # System Stored Procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

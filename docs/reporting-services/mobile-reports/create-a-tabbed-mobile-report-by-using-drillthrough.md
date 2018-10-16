@@ -1,23 +1,14 @@
 ---
 title: "Create a tabbed mobile report by using drillthrough | Reporting Services mobile reports | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
+ms.date: 03/30/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.service: ""
-ms.component: "mobile-reports"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: mobile-reports
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: c4d5d80d-370a-4a6d-8b76-698bd5ba5ba6
-caps.latest.revision: 9
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "kfile"
-ms.workload: "Inactive"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Create a tabbed mobile report by using drillthrough
 Learn how to create a [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] mobile report that looks and acts like a tabbed report by using drillthrough and parameters.
@@ -42,7 +33,7 @@ Here are the steps for this example.
 
    ![01-Sales-Mobile-Report-Publisher](../../reporting-services/mobile-reports/media/01-sales-mobile-report-publisher.png)
     
-2. Set **Accent** to **On** for the Sales gauge, so it will contrast with the the rest of the report--in this case, white on black.
+2. Set **Accent** to **On** for the Sales gauge, so it will contrast with the rest of the report--in this case, white on black.
 
     ![01a-Sales-Accent-Mobile-Report-Publisher](../../reporting-services/mobile-reports/media/01a-sales-accent-mobile-report-publisher.png)
     
@@ -85,7 +76,7 @@ In this section, you set each gauge (other than the Sales gauge) as a drillthrou
 
 1.  Open the Transportation report, set the Sales gauge as a drillthrough to the Sales report, and the other three gauges as drillthroughs to their respective reports.
 
-2. Still in the Transportation report, set **Accent** for the Transportation gauge to **On**, contrast with the the rest of the report.
+2. Still in the Transportation report, set **Accent** for the Transportation gauge to **On**, contrast with the rest of the report.
 
 3. Repeat these steps for the Fuel, Storage, and Misc Expenses reports. 
 

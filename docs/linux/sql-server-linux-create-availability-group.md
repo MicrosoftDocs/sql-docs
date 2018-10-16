@@ -4,16 +4,11 @@ description: This tutorial shows how to create and configure availability groups
 author: MikeRayMSFT 
 ms.author: mikeray 
 manager: craigg
-ms.date: 12/11/2017
-ms.topic: article
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: ""
-ms.suite: "sql"
+ms.date: 06/28/2018
+ms.topic: conceptual
+ms.prod: sql
 ms.custom: "sql-linux"
-ms.technology: database-engine
-ms.workload: "On Demand"
+ms.technology: linux
 ---
 
 # Create and configure an availability group for SQL Server on Linux
@@ -588,12 +583,12 @@ The AG resource that is created is a special kind of resource called a clone. Th
     **Red Hat Enterprise Linux (RHEL) and Ubuntu**
     
     ```bash
-    sudo pcs resource create <NameForAGResource> ocf:mssql:ag ag_name=<AGName> --master meta notify=true
+    sudo pcs resource create <NameForAGResource> ocf:mssql:ag ag_name=<AGName> meta failure-timeout=30s --master meta notify=true
     ```
 
     >[!NOTE]
     >On RHEL 7.4, you may encounter a warning with the use of --master. To avoid this, use
-    >`sudo pcs resource create <NameForAGResource> ocf:mssql:ag ag_name=<AGName> master notify=true`
+    >`sudo pcs resource create <NameForAGResource> ocf:mssql:ag ag_name=<AGName> meta failover-timeout=30s master notify=true`
    
     **SUSE Linux Enterprise Server (SLES)**
     
@@ -601,6 +596,7 @@ The AG resource that is created is a special kind of resource called a clone. Th
     primitive <NameForAGResource> \
     ocf:mssql:ag \
     params ag_name="<AGName>" \
+    meta failure-timeout=60s \
     op start timeout=60s \
     op stop timeout=60s \
     op promote timeout=60s \

@@ -1,26 +1,18 @@
-﻿---
+---
 title: "Always Encrypted Cryptography | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/29/2016"
-ms.prod: "sql"
-ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "security"
-ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.prod: sql
+ms.reviewer: vanto
+ms.technology: security
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Always Encrypted, cryptography system"
 ms.assetid: ae8226ff-0853-4716-be7b-673ce77dd370
-caps.latest.revision: 11
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+author: aliceku
+ms.author: aliceku
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Always Encrypted Cryptography
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,11 +22,11 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
 ## Keys, Key Stores and Key Encryption Algorithms  
  Always Encrypted uses two types of keys: Column master keys and column encryption keys.  
   
- A column master key (CMK) is a key encrypting key (i.e. a key used to encrypt other keys) that is always in client’s control and is stored in an external key store. An Always Encrypted-enabled client driver interacts with the key store via a CMK store provider, which can be either part of the driver library (a [!INCLUDE[msCoName](../../../includes/msconame-md.md)]/system provider) or part of the client application (a custom provider). Client driver libraries currently include [!INCLUDE[msCoName](../../../includes/msconame-md.md)] key store providers for [Windows Certificate Store](https://msdn.microsoft.com/library/windows/desktop/aa388160) and hardware security modules (HSMs).  (For the current list of providers, see [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md).) An application developer can supply a custom provider for an arbitrary store.  
+ A column master key (CMK) is a key encrypting key (i.e. a key used to encrypt other keys) that is always in client’s control and is stored in an external key store. An Always Encrypted-enabled client driver interacts with the key store via a CMK store provider, which can be either part of the driver library (a [!INCLUDE[msCoName](../../../includes/msconame-md.md)]/system provider) or part of the client application (a custom provider). Client driver libraries currently include [!INCLUDE[msCoName](../../../includes/msconame-md.md)] key store providers for [Windows Certificate Store](/windows/desktop/SecCrypto/using-certificate-stores) and hardware security modules (HSMs).  (For the current list of providers, see [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md).) An application developer can supply a custom provider for an arbitrary store.  
   
  A column encryption key (CEK), is a content encryption key (i.e. a key used to protect data) that is protected by a CMK.  
   
- All [!INCLUDE[msCoName](../../../includes/msconame-md.md)] CMK store providers encrypt CEKs by using RSA with Optimal Asymmetric Encryption Padding (RSA-OAEP) with the default parameters specified by RFC 3447 in Section A.2.1. Those default parameters are using a hash function of SHA-1 and a mask generation function of MGF1 with SHA-1.  
+ All [!INCLUDE[msCoName](../../../includes/msconame-md.md)] CMK store providers encrypt CEKs by using RSA with Optimal Asymmetric Encryption Padding (RSA-OAEP) with the default parameters specified by RFC 8017 in Section A.2.1. Those default parameters are using a hash function of SHA-1 and a mask generation function of MGF1 with SHA-1.  
   
 ## Data Encryption Algorithm  
  Always Encrypted uses the **AEAD_AES_256_CBC_HMAC_SHA_256** algorithm to encrypt data in the database.  

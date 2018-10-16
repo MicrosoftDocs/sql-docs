@@ -1,28 +1,17 @@
 ---
 title: "Using the WinForms ReportViewer Control | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/06/2016"
+ms.date: 09/06/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.service: ""
-ms.component: "application-integration"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: application-integration
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
+ms.topic: reference
 helpviewer_keywords: 
   - "ReportViewer controls"
 ms.assetid: 29fb9f7d-ba65-49fd-9cbc-4c380869de96
-caps.latest.revision: 28
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
-ms.workload: "Active"
+author: markingmyname
+ms.author: maghan
 ---
 # Using the WinForms ReportViewer Control
   To view reports that have been deployed to a report server or reports that exist on the local file system, you can use the WinForms ReportViewer control to render them in a Windows application.  

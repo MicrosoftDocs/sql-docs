@@ -1,25 +1,18 @@
 ---
 title: "XSLT Transformations | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "XSLT transformations in ADO"
 ms.assetid: 1a46196e-839f-4734-a59e-2c64609ffb9e
-caps.latest.revision: 3
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # XSLT Transformations
 XSLT can be applied to the generated XML to transform it into another format. Understanding the XML format in ADO helps in developing XSLT templates that can transform it into a more user-friendly form.  

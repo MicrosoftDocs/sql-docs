@@ -1,26 +1,18 @@
-﻿---
+---
 title: "sys.pdw_nodes_column_store_segments (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/28/2018"
 ms.prod: ""
 ms.prod_service: "sql-data-warehouse, pdw"
-ms.service: "sql-data-warehouse"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: e2fdf8e9-1b74-4682-b2d4-c62aca053d7f
-caps.latest.revision: 9
 author: "hirokib"
-ms.author: "elbutter;barbkess"
-manager: "jrj"
+ms.author: elbutter
+manager: jrj
 
-ms.workload: "Inactive"
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sys.pdw_nodes_column_store_segments (Transact-SQL)

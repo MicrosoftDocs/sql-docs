@@ -2,26 +2,19 @@
 title: "View Information and Perform Tasks for a Publication (Replication Monitor) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: replication
+ms.topic: conceptual
 helpviewer_keywords: 
   - "viewing publication information"
   - "publications [SQL Server replication], viewing information"
   - "publications [SQL Server replication], Replication Monitor tasks"
 ms.assetid: 92e28a07-d6a7-461b-a0b3-bd9bc6afcbe5
-caps.latest.revision: 39
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # View Information and Perform Tasks for a Publication (Replication Monitor)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

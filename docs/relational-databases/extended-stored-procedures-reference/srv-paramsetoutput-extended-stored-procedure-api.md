@@ -2,15 +2,11 @@
 title: "srv_paramsetoutput (Extended Stored Procedure API) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "extended-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
   - "srv_paramsetoutput"
@@ -22,11 +18,9 @@ dev_langs:
 helpviewer_keywords: 
   - "srv_paramsetoutput"
 ms.assetid: f2810e19-e513-458b-8925-5756b6ee1313
-caps.latest.revision: 29
 author: "rothja"
 ms.author: "jroth"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # srv_paramsetoutput (Extended Stored Procedure API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -1,20 +1,15 @@
 ---
 title: Troubleshoot SQL Server on Linux | Microsoft Docs
-description: Provides troubleshooting tips for using SQL Server 2017 on Linux.
-author: annashres 
-ms.author: anshrest 
+description: Provides troubleshooting tips for using SQL Server on Linux.
+author: rothja 
+ms.author: jroth 
 manager: craigg
-ms.date: 02/22/2018
-ms.topic: article
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: ""
-ms.suite: "sql"
+ms.date: 04/30/2018
+ms.topic: conceptual
+ms.prod: sql
 ms.custom: "sql-linux"
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
-ms.workload: "On Demand"
 ---
 # Troubleshoot SQL Server on Linux
 
@@ -109,7 +104,7 @@ If you prefer, you can also convert the files to UTF-8 to read them with ‘more
    ```
 ## Extended events
 
-Extended events can be queried via a SQL command.  More information about extended events can be found [here](https://technet.microsoft.com/en-us/library/bb630282.aspx):
+Extended events can be queried via a SQL command.  More information about extended events can be found [here](https://technet.microsoft.com/library/bb630282.aspx):
 
 ## Crash dumps 
 
@@ -156,6 +151,49 @@ If you have accidentally started SQL Server with another user, you must change o
    chown -R mssql:mssql /var/opt/mssql/
    ```
 
+## Rebuild system databases
+As a last resort, you can choose to rebuild the master and model databases back to default versions.
+
+> [!WARNING]
+> These steps will **DELETE all SQL Server system data** that you have configured! This includes information about your user databases (but not the user databases themselves). It will also delete other information stored in the system databases, including the following: master key information, any certs loaded in master, the SA Login password, job-related information from msdb, DB Mail information from msdb, and sp_configure options. Only use if you understand the implications!
+
+1. Stop SQL Server.
+
+   ```bash
+   sudo systemctl stop mssql-server
+   ```
+
+1. Run **sqlservr** with the **force-setup** parameter. 
+
+   ```bash
+   sudo -u mssql /opt/mssql/bin/sqlservr --force-setup
+   ```
+   
+   > [!WARNING]
+   > See the previous warning! Also, you must run this as the **mssql** user as shown here.
+
+1. After you see the message "Recovery is complete", press CTRL+C. This will shut down SQL Server
+
+1. Reconfigure the SA password.
+
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf set-sa-password
+   ```
+   
+1. Start SQL Server and reconfigure the server. This includes restoring or re-attaching any user databases.
+
+   ```bash
+   sudo systemctl start mssql-server
+   ```
+
+## Improve performance
+
+There are many factors that affect performance, including database design, hardware, and workload demands. If you are looking to improve performance, start by reviewing the best practices in the article, [Performance best practices and configuration guidelines for SQL Server on Linux](sql-server-linux-performance-best-practices.md). Then explore some of the avilable tools for troubleshooting performance problems.
+
+- [Query Store](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
+- [System dynamic management views (DMVs)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
+- [Performance Dashboard in SQL Server Management Studio](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-performance-dashboard-built-in/)
+
 ## Common issues
 
 1. You cannot connect to your remote SQL Server instance.
@@ -182,7 +220,7 @@ If you have accidentally started SQL Server with another user, you must change o
 
 4. Using special characters in password.
 
-   If you use some characters in the SQL Server login password you may need to escape them when using them in the Linux terminal. You must escape the $ anytime using the backslash character you are using it in a terminal command/shell script:
+   If you use some characters in the SQL Server login password, you might need to escape them with a backslash when you use them in a Linux command in the terminal. For example, you must escape the dollar sign ($) anytime you use it in a terminal command/shell script:
 
    Does not work:
 

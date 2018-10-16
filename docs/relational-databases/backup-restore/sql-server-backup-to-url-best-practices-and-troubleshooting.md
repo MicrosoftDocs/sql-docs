@@ -2,22 +2,15 @@
 title: "SQL Server Backup to URL Best Practices and Troubleshooting | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2018"
-ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "backup-restore"
+ms.prod: sql
+ms.prod_service: backup-restore
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: backup-restore
+ms.topic: conceptual
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
-caps.latest.revision: 26
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
-ms.workload: "On Demand"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # SQL Server Backup to URL Best Practices and Troubleshooting
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +21,7 @@ ms.workload: "On Demand"
   
 -   [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
   
--   [Tutorial: SQL Server Backup and Restore to Windows Azure Blob Storage Service](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [Tutorial: SQL Server Backup and Restore to Windows Azure Blob Storage Service](../../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
 ## Managing Backups  
  The following list includes general recommendations to manage backups:  
@@ -91,7 +84,24 @@ ms.workload: "On Demand"
         -   **VERIFYONLY**  
   
     -   You can also find information by reviewing the Windows Event Log - Under Application logs with the name `SQLBackupToUrl`.  
+
+    -   Consider COMPRESSION, MAXTRANSFERSIZE, BLOCKSIZE and multiple URL arguments when backing up large databases.  See [Backing up a VLDB to Azure Blob Storage](https://blogs.msdn.microsoft.com/sqlcat/2017/03/10/backing-up-a-vldb-to-azure-blob-storage/)
   
+		```
+		Msg 3202, Level 16, State 1, Line 1
+		Write on "https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak" failed: 1117(The request could not be performed because of an I/O device error.)
+		Msg 3013, Level 16, State 1, Line 1
+		BACKUP DATABASE is terminating abnormally.
+		```
+
+        ```sql  
+        BACKUP DATABASE TestDb
+        TO URL = 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak',
+        URL = 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_1.bak',
+        URL = 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_2.bak'
+        WITH COMPRESSION, MAXTRANSFERSIZE = 4194304, BLOCKSIZE = 65536;  
+        ```  
+
 -   When restoring from a compressed backup, you might see the following error:  
   
     -   `SqlException 3284 occurred. Severity: 16 State: 5  

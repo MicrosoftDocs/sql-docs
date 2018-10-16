@@ -2,25 +2,18 @@
 title: "SQLConfigDataSource (Access Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLConfigDataSource function [ODBC], Access Driver"
   - "Access driver [ODBC], SQLConfigDataSource"
 ms.assetid: 1b152fb7-fa12-46b9-b168-006bb1355e77
-caps.latest.revision: 6
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.workload: "Inactive"
 ---
 # SQLConfigDataSource (Access Driver)
 > [!NOTE]  

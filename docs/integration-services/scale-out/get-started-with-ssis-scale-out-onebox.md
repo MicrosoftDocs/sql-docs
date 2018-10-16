@@ -1,24 +1,17 @@
 ---
 title: "Get Started with SSIS Scale Out on a Single Computer| Microsoft Docs"
-ms.description: "This article shows you everything you need to know to get started with SSIS Scale Out on a single computer"
-ms.custom: ""
+description: "This article shows you everything you need to know to get started with SSIS Scale Out on a single computer"
+ms.custom: performance
 ms.date: "12/13/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "scale-out"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-caps.latest.revision: 1
+ms.technology: integration-services
+ms.topic: conceptual
 author: "haoqian"
 ms.author: "haoqian"
 ms.reviewer: "douglasl"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Get started with Integration Services (SSIS) Scale Out on a single computer
 This section provides guidance for setting up Integration Services Scale Out in a single-computer environment with the default settings.

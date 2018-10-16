@@ -1,16 +1,11 @@
-﻿---
+---
 title: "LAST_VALUE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/20/2015"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "sql-data-warehouse, database-engine, sql-database"
-ms.service: ""
-ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "LAST_VALUE"
@@ -21,12 +16,10 @@ helpviewer_keywords:
   - "analytic functions, LAST_VALUE"
   - "LAST_VALUE function"
 ms.assetid: fd833e34-8092-42b7-80fc-95ca6b0eab6b
-caps.latest.revision: 16
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Active"
-monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # LAST_VALUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
@@ -39,7 +32,7 @@ monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-201
   
 ```  
   
-LAST_VALUE ( [scalar_expression )   
+LAST_VALUE ( [ scalar_expression ] )   
     OVER ( [ partition_by_clause ] order_by_clause rows_range_clause )   
 ```  
   

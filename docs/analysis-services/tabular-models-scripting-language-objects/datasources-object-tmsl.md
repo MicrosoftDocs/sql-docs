@@ -1,24 +1,14 @@
 ---
 title: "DataSources object (TMSL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/30/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services, azure-analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-ms.assetid: 1357ae7e-30a4-481a-831c-7b046fe15aa4
-caps.latest.revision: 9
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tmsl
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # DataSources object (TMSL)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -33,7 +23,7 @@ ms.workload: "Inactive"
  The type of DataSource. At present, the only valid value is Provider (1) - Normal connection string.  
   
  connectionString  
- The connection string that minimally specifies the server and database, but can also include other properties supported by the external RDBMS, such as a data provider or user account. This value is required. See [SqlConnectionStringBuilder Class](https://msdn.microsoft.com/en-us/library/ms254500\(v=vs.110\).aspx) for details about SQL Server database connection string properties.  
+ The connection string that minimally specifies the server and database, but can also include other properties supported by the external RDBMS, such as a data provider or user account. This value is required. See [SqlConnectionStringBuilder Class](/dotnet/framework/data/adonet/connection-string-syntax) for details about SQL Server database connection string properties.  
   
  impersonationMode  
  Specifies whether Analysis Services should impersonate the identity of the user requesting the query. This property is a numeric value that specifies the credentials to use for impersonation. The enumeration values are as follows:  

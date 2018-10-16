@@ -2,20 +2,14 @@
 title: "SQL Server 2014 Release Notes | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2018"
-ms.prod: "sql"
-ms.prod_service: "sql-non-specified"
-ms.component: "sql-non-specified"
-ms.technology: "server-general"
+ms.prod: sql
+ms.technology: install
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: bf4c4922-80b3-4be3-bf71-228247f97004
-caps.latest.revision: 100
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
-ms.workload: "Inactive"
 monikerRange: "= sql-server-2014 || = sqlallproducts-allversions"
 ---
 # SQL Server 2014 Release Notes

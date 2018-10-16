@@ -2,15 +2,11 @@
 title: "NumberOfFlags Property (SInstance Class) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "wmi"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
   - "NumberOfFlags Property (SInstance Class)"
@@ -20,11 +16,9 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "NumberOfFlags property"
 ms.assetid: b62005f8-9af3-4fc8-9344-a1ccdb713053
-caps.latest.revision: 30
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # NumberOfFlags Property (SInstance Class)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

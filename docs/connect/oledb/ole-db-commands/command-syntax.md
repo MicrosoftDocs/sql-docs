@@ -2,29 +2,25 @@
 title: "Command Syntax | Microsoft Docs"
 description: "Command syntax and Stored Procedures"
 ms.custom: ""
-ms.date: "03/26/2018"
-ms.prod: "sql"
+ms.date: "06/14/2018"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "ole-db-commands"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
+ms.technology: connectivity
 ms.topic: "reference"
 helpviewer_keywords: 
   - "OLE DB Driver for SQL Server, commands"
   - "commands [OLE DB]"
   - "OLE DB Driver for SQL Server, stored procedures"
   - "stored procedures [OLE DB], command syntax"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Command Syntax
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   The OLE DB Driver for SQL Server recognizes command syntax specified by the DBGUID_SQL macro. For the OLE DB Driver for SQL Server, the specifier indicates that an amalgam of ODBC SQL, ISO, and [!INCLUDE[tsql](../../../includes/tsql-md.md)] is valid syntax. For example, the following SQL statement uses an ODBC SQL escape sequence to specify the LCASE string function:  
   

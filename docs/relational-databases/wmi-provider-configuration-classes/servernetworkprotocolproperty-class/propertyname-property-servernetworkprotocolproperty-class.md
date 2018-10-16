@@ -2,15 +2,11 @@
 title: "PropertyName Property (ServerNetworkProtocolProperty Class) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "wmi"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
   - "PropertyName Property (ServerNetworkProtocolProperty Class)"
@@ -20,11 +16,9 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "PropertyName property"
 ms.assetid: 0175ce3c-e07e-4710-a2f9-a26dface6eb3
-caps.latest.revision: 31
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # PropertyName Property (ServerNetworkProtocolProperty Class)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

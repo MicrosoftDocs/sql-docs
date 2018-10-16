@@ -2,22 +2,14 @@
 title: "Remove Data Quality Server Objects | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "install"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: install
+ms.topic: conceptual
 ms.assetid: 1b7c6dbb-b40e-4822-9caa-608e1056af8e
-caps.latest.revision: 14
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Remove Data Quality Server Objects
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

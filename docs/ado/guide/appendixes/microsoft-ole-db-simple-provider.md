@@ -1,30 +1,23 @@
 ---
 title: "Microsoft OLE DB Simple Provider | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords:
   - "simple provider [ADO]"
   - "providers [ADO], OLE DB simple provider"
   - "OLE DB simple provider [ADO]"
 ms.assetid: 1e7dc6f0-482c-4103-8187-f890865e40fc
-caps.latest.revision: 15
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Microsoft OLE DB Simple Provider Overview
-The Microsoft OLE DB Simple Provider (OSP) allows ADO to access any data for which a provider has been written using the [OLE DB Simple Provider (OSP) Toolkit](http://msdn.microsoft.com/en-us/6e7b7931-9e4a-4151-ae51-672abd3f84a6). Simple providers are intended to access data sources that require only fundamental OLE DB support, such as in-memory arrays or XML documents.
+The Microsoft OLE DB Simple Provider (OSP) allows ADO to access any data for which a provider has been written using the [OLE DB Simple Provider (OSP) Toolkit](http://msdn.microsoft.com/6e7b7931-9e4a-4151-ae51-672abd3f84a6). Simple providers are intended to access data sources that require only fundamental OLE DB support, such as in-memory arrays or XML documents.
 
 ## Connection String Parameters
  To connect to the OLE DB Simple Provider DLL, set the *Provider* argument to the [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) property to:
@@ -138,7 +131,7 @@ adoRS.Open "C:\Directory\portfolio.xml", adoConn
 
 -   The XMLDSO adds an additional column of Data ($Text) to each **Recordset** in the Hierarchy.
 
- For more information about the OLE DB Simple Provider, see [Building a Simple Provider](http://msdn.microsoft.com/en-us/b31a6cba-58ae-4ee8-9039-700973d354d6).
+ For more information about the OLE DB Simple Provider, see [Building a Simple Provider](http://msdn.microsoft.com/b31a6cba-58ae-4ee8-9039-700973d354d6).
 
 ## Code Example
  The following Visual Basic code demonstrates opening an arbitrary XML file, constructing a hierarchical **Recordset**, and recursively writing each record of each **Recordset** to the debug window.

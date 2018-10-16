@@ -2,16 +2,10 @@
 title: "Always On Availability Groups (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
-ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "availability-groups"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: high-availability
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], about"
   - "secondary replicas, see Availability Groups [SQL Server]"
@@ -19,11 +13,9 @@ helpviewer_keywords:
   - "AlwaysOn [SQL Server], see Availability Groups [SQL Server]"
   - "Availability Groups [SQL Server]"
 ms.assetid: aa427606-8422-4656-b205-c9e665ddc8c1
-caps.latest.revision: 35
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
-ms.workload: "Active"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # Always On Availability Groups (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +24,7 @@ ms.workload: "Active"
   
  An availability group fails over at the level of an availability replica. Failovers are not caused by database issues such as a database becoming suspect due to a loss of a data file, deletion of a database, or corruption of a transaction log.  
  
- >[NOTE]
+ >[!NOTE]
  >Always On availability groups is the full, formal name for this availability feature. The abbreviation is AG, not AOAG or AAG. 
   
 ##  <a name="Benefits"></a> Benefits  
@@ -142,7 +134,7 @@ ms.workload: "Active"
   
 -   [Service Broker](../../../database-engine/configure-windows/sql-server-service-broker.md)  
   
--   [SQL Server Agent](http://msdn.microsoft.com/library/8d1dc600-aabb-416f-b3af-fbc9fccfd0ec)  
+-   [SQL Server Agent](../../../ssms/agent/sql-server-agent.md)  
   
 -   [Reporting Services](../../../database-engine/availability-groups/windows/reporting-services-with-always-on-availability-groups-sql-server.md)  
   

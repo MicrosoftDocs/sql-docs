@@ -1,26 +1,18 @@
 ---
 title: "Running Test Cases (OracleToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssma-oracle"
+ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "sql-ssma"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssma
+ms.topic: conceptual
 ms.assetid: fc208cdb-7373-4f6b-8f6c-cdff9d3dcd02
-caps.latest.revision: 6
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "v-thobro"
-ms.workload: "Inactive"
 ---
 # Running Test Cases (OracleToSQL)
-When SSMA Tester runs a Test Case, it executes the objects selected for testing and creates a report about verification results. If the results are identical on both platforms, the test was successful. The correspondence of objects between Oracle and [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] is determined according to the schema-mapping settings for the current SSMA project.  
+When SSMA Tester runs a Test Case, it executes the objects selected for testing and creates a report about verification results. If the results are identical on both platforms, the test was successful. The correspondence of objects between Oracle and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is determined according to the schema-mapping settings for the current SSMA project.  
   
 A necessary requirement for a successful test is that all Oracle objects are converted and loaded into the target database. Also, the table data should be migrated so that the contents of the tables on both platforms are synchronized.  
   
@@ -31,7 +23,7 @@ To run the prepared Test Case:
   
 2.  In the **Connect to Oracle** dialog box, enter the connection information, and then click **Connect**.  
   
-When the test is complete, the Test Case Report is created. Click the **Report** button to view the [Test Case Report](http://msdn.microsoft.com/en-us/8da14323-9dd6-4019-bf79-3e8b972a9bc0). The result of the test (Test Case Report) is automatically stored in the [Test Results Repository](http://msdn.microsoft.com/en-us/f941cce4-d3e3-4aeb-a88a-4f101a97a9f4) for later use.  
+When the test is complete, the Test Case Report is created. Click the **Report** button to view the [Test Case Report](viewing-test-case-reports-oracletosql.md). The result of the test (Test Case Report) is automatically stored in the [Test Results Repository](using-test-repositories-oracletosql.md) for later use.  
   
 ## Test Case Execution Steps  
   
@@ -54,14 +46,14 @@ Assume that the verified table is named USER_TABLE. For such a table, the follow
 |USER_TABLE$NEW_ID|view|Identification of inserted and changed rows.|  
 |USER_TABLE$OLD|view|Simplified representation of deleted and overwritten rows.|  
   
-The following object is created in the schema of verified table at [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+The following object is created in the schema of verified table at [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ||||  
 |-|-|-|  
 |Name|Type|Description|  
 |USER_TABLE$Trg|trigger|Trigger auditing the changes in the verified table.|  
   
-And the following objects are created at [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]in the ssmatesterdb database.  
+And the following objects are created at [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]in the ssmatesterdb database.  
   
 ||||  
 |-|-|-|  

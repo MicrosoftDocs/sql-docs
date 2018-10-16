@@ -2,16 +2,11 @@
 title: "Data Mining Model Training Destination | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "data-flow"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.dataminingmodeltrainingdest.f1"
   - "sql13.dts.designer.dmmtrainingtransformation.connection.f1"
@@ -22,11 +17,9 @@ helpviewer_keywords:
   - "mining models [Analysis Services], training"
   - "training mining models"
 ms.assetid: 6bc8cbe2-46af-4f7b-93d6-86779313c9d7
-caps.latest.revision: 46
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Data Mining Model Training Destination
   The Data Mining Model Training destination trains data mining models by passing the data that the destination receives through the data mining model algorithms. Multiple data mining models can be trained by one destination if the models are built on the same data mining structure. For more information, see [Mining Structure Columns](../../analysis-services/data-mining/mining-structure-columns.md) and [Mining Model Columns](../../analysis-services/data-mining/mining-model-columns.md).  

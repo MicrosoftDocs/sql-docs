@@ -1,0 +1,11 @@
+### YamlMime:XRefMap
+sorted: true
+hrefUpdated: true
+references:
+- uid: System.Xml.Serialization.XmlSerializer
+  commentId: T:System.Xml
+  href: https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx
+  name: XmlSerializer
+  name.vb: XmlSerializer
+  fullName: Serialization.XmlSerializer
+  fullName.vb: Serialization.XmlSerializer

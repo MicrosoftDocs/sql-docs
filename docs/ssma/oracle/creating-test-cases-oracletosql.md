@@ -1,25 +1,17 @@
 ---
 title: "Creating Test Cases (OracleToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssma-oracle"
+ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "sql-ssma"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssma
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Test Case Wizard"
 ms.assetid: 22f38901-ec35-4707-a911-784e6ad8dafb
-caps.latest.revision: 7
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "v-thobro"
-ms.workload: "Inactive"
 ---
 # Creating Test Cases (OracleToSQL)
 Use the Test Case Wizard to create a test. This wizard lets you create test cases by choosing tested and verified objects and by specifying the testing parameters.  

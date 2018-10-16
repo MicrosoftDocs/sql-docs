@@ -2,21 +2,14 @@
 title: "Install SQL Server 2016 Business Intelligence Features | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/02/2016"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "install"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: install
+ms.topic: conceptual
 ms.assetid: 67399b24-e48a-49f3-9dd4-32d78c6a2ece
-caps.latest.revision: 27
 author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
-ms.workload: "On Demand"
 ---
 # Install SQL Server Business Intelligence Features
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

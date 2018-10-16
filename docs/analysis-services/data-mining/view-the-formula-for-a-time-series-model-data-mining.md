@@ -1,31 +1,14 @@
 ---
 title: "View the Formula for a Time Series Model (Data Mining) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "data mining [Analysis Services], how-to topics"
-  - "ARTXP"
-  - "time series algorithms [Analysis Services]"
-  - "ARIMA"
-  - "time series [Analysis Services]"
-  - "Time Series Viewer [Analysis Services]"
-ms.assetid: 825ef719-2f44-4979-be01-5a81f54e1a53
-caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # View the Formula for a Time Series Model (Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

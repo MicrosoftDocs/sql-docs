@@ -1,27 +1,20 @@
-﻿---
+---
 title: "SQLSetConnectAttr | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "native-client-odbc-api"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 apitype: "DLLExport"
 helpviewer_keywords: 
   - "SQLSetConnectAttr function"
 ms.assetid: d21b5cf1-3724-43f7-bc96-5097df0677b4
-caps.latest.revision: 106
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQLSetConnectAttr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,7 +52,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 |SQL_COPT_SS_FAILOVER_PARTNER|Before|  
 |SQL_COPT_SS_INTEGRATED_SECURITY|Before|  
 |SQL_COPT_SS_MARS_ENABLED|Before|  
-|SQL_COPT_SS_MULTISUBMIT_FAILOVER|Before|  
+|SQL_COPT_SS_MULTISUBNET_FAILOVER|Before|  
 |SQL_COPT_SS_OLDPWD|Before|  
 |SQL_COPT_SS_PERF_DATA|After|  
 |SQL_COPT_SS_PERF_DATA_LOG|After|  
@@ -196,7 +189,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
  If your application is connecting to a [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] availability group (AG) on different subnets, this connection property configures [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client to provide faster detection of and connection to the (currently) active server. For example:  
   
 ```  
-SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBMIT_FAILOVER, SQL_IS_ON, SQL_IS_INTEGER)  
+SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBNET_FAILOVER, SQL_IS_ON, SQL_IS_INTEGER)  
 ```  
   
  For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client's support for [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] AGs, see [SQL Server Native Client Support for High Availability, Disaster Recovery](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  

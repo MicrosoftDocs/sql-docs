@@ -2,24 +2,17 @@
 title: "Enable Semantic Search on Tables and Columns | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
-ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "search"
+ms.prod: sql
+ms.prod_service: "search, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: search
+ms.topic: conceptual
 helpviewer_keywords: 
   - "semantic search [SQL Server], enabling"
 ms.assetid: 895d220c-6749-4954-9dd3-2ea4c6a321ff
-caps.latest.revision: 22
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "Inactive"
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ---
 # Enable Semantic Search on Tables and Columns
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -160,7 +153,7 @@ GO
 You can drop semantic indexing when you alter an existing full-text index with the **ALTER FULLTEXT INDEX** statement. You can also drop semantic indexing by using various dialog boxes in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  ### Drop a semantic index by using Transact-SQL  
-To drop semantic indexing only from a column or columns, call the **ALTER FULLTEXT INDEX** statement with the **ALTER COLUMN***column_name***DROP STATISTICAL_SEMANTICS** option. You can drop the indexing from multiple columns in a single **ALTER** statement.  
+To drop semantic indexing only from a column or columns, call the **ALTER FULLTEXT INDEX** statement with the **ALTER COLUMN**_column\_name_**DROP STATISTICAL_SEMANTICS** option. You can drop the indexing from multiple columns in a single **ALTER** statement.  
   
 ```sql  
 USE database_name  
@@ -172,7 +165,7 @@ ALTER FULLTEXT INDEX
 GO  
 ```  
   
-To drop both full-text and semantic indexing from a column, call the **ALTER FULLTEXT INDEX** statement with the **ALTER COLUMN***column_name***DROP** option.  
+To drop both full-text and semantic indexing from a column, call the **ALTER FULLTEXT INDEX** statement with the **ALTER COLUMN**_column\_name_**DROP** option.  
   
 ```sql  
 USE database_name  

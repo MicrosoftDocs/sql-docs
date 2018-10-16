@@ -1,16 +1,11 @@
-﻿---
+---
 title: "sys.bandwidth_usage (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: ""
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.service: "sql-database"
-ms.component: "system-catalog-views"
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "bandwidth_usage"
@@ -23,11 +18,9 @@ helpviewer_keywords:
   - "sys.bandwidth_usage"
   - "bandwidth_usage"
 ms.assetid: 43ed8435-f059-4907-b5c0-193a258b394a
-caps.latest.revision: 21
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sys.bandwidth_usage (Azure SQL Database)

@@ -2,19 +2,10 @@
 title: "Executing the SSMA Console (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/27/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssma-sybase"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "sql-ssma"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
+ms.technology: ssma
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Sybase Console,Database Connection Commands"
   - "Sybase Console,Manageability Commands"
@@ -25,11 +16,9 @@ helpviewer_keywords:
   - "Sybase Console,Script File Commands"
   - "Sybase Console,Script Generation Commands"
 ms.assetid: ea8950b7-fabc-4aa4-89f8-9573a2617d70
-caps.latest.revision: 22
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Executing the SSMA Console (SybaseToSQL)
 Microsoft provides you with a robust set of script file commands to execute and control SSMA activities. The ensuing sections detail the same.  

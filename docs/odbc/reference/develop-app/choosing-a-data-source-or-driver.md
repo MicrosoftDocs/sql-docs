@@ -2,27 +2,20 @@
 title: "Choosing a Data Source or Driver | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "connecting to driver [ODBC], selecting driver"
   - "connecting to data source [ODBC], selecting data source"
   - "data sources [ODBC], selecting"
   - "ODBC drivers [ODBC], selecting"
 ms.assetid: 10aaf570-01ab-4478-8339-bdde2a5e3dd1
-caps.latest.revision: 7
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Choosing a Data Source or Driver
 The data source or driver used by an application is sometimes hard-coded in the application. For example, a custom application written by an MIS department to transfer data from one data source to another would contain the names of those data sources—the application simply would not work with any other data sources. Another example is a vertical application, such as one used for order entry. Such an application always uses the same data source, which has a predefined schema known by the application.  

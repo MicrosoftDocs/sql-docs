@@ -1,29 +1,18 @@
 ---
 title: "Managing Passwords (MySQLToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssma-mysql"
+ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "sql-ssma"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
+ms.technology: ssma
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Password management, importing or exporting encrypted password"
   - "Password management, securing password"
 ms.assetid: 4ffbc587-ea3f-49ad-bc42-a654f672325e
-caps.latest.revision: 13
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Managing Passwords (MySQLToSQL)
 This section is about securing database passwords and the procedure to import or export them across servers:  

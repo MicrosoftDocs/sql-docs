@@ -1,24 +1,14 @@
 ---
 title: "Roles object (TMSL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/30/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services, azure-analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-ms.assetid: 1812f60b-bd5f-417c-96bc-3d834bdb4d3c
-caps.latest.revision: 6
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tmsl
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Roles object (TMSL)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -35,7 +25,7 @@ ms.workload: "Inactive"
                   and administrator. See [Roles and Permissions &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md) for information about database permissions.  
   
  members  
- Members consist of both a member name and ID, where member name is the alias or friendly name of a Windows security principle, and the ID is the security identifier. Both are specified in  role definition.See [SID components](https://msdn.microsoft.com/en-us/library/windows/desktop/aa379597\(v=vs.85\).aspx) for details about identifiers.  
+ Members consist of both a member name and ID, where member name is the alias or friendly name of a Windows security principle, and the ID is the security identifier. Both are specified in  role definition.See [SID components](/windows/desktop/SecAuthZ/sid-components) for details about identifiers.  
   
  tablePermissions  
  A table permission is a named object with permissions defined via a DAX expression. This property is optional, used to apply a security filter.  

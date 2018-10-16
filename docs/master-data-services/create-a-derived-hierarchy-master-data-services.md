@@ -2,25 +2,19 @@
 title: "Create a Derived Hierarchy (Master Data Services) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "mds"
-ms.service: ""
-ms.component: "non-specific"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "derived hierarchies, creating"
   - "creating derived hierarchies [Master Data Services]"
 ms.assetid: fec653c4-11cc-46a2-8dd8-b605341ebb40
-caps.latest.revision: 7
-author: "leolimsft"
-ms.author: "lle"
-manager: "craigg"
-ms.workload: "Inactive"
+author: leolimsft
+ms.author: lle
+manager: craigg
 ---
 # Create a Derived Hierarchy (Master Data Services)
 

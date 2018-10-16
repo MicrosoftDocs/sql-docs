@@ -1,21 +1,15 @@
-﻿---
+---
 title: "Microsoft SQL samples | Microsoft Docs"
 description: Documentation for sample databases and links to samples for Microsoft SQL products.
 ms.date: "04/04/2018"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
-ms.service: ""
-ms.component: "samples"
-ms.technology: ""
-ms.topic: "article"
-author: "BarbKess"
-ms.author: "barbkess"
-manager: "craigg"
-robots: noindex,nofollow
-ms.workload: "On Demand"
+ms.prod: sql
+ms.prod_service: sql
+ms.technology: samples
+ms.topic: conceptual
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # SQL samples
 

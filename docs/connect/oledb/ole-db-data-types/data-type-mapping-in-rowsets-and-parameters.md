@@ -2,16 +2,11 @@
 title: "Data Type Mapping in Rowsets and Parameters | Microsoft Docs"
 description: "Data Type mapping in rowsets and parameters"
 ms.custom: ""
-ms.date: "03/26/2018"
-ms.prod: "sql"
+ms.date: "06/14/2018"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "ole-db-data-types"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
+ms.technology: connectivity
 ms.topic: "reference"
 helpviewer_keywords: 
   - "mapping data types [OLE DB]"
@@ -24,13 +19,14 @@ helpviewer_keywords:
   - "SSPROP_ALLOWNATIVEVARIANT property"
   - "GetParameterInfo function"
   - "OLE DB, data types"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Data Type Mapping in Rowsets and Parameters
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   In rowsets and as parameter values, the OLE DB Driver for SQL Server represents [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] data by using the following OLE DB defined data types, reported in the functions **IColumnsInfo::GetColumnInfo** and **ICommandWithParameters::GetParameterInfo**.  
   

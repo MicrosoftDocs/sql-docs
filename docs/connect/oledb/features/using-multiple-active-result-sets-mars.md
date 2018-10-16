@@ -2,16 +2,11 @@
 title: "Using Multiple Active Result Sets (MARS) | Microsoft Docs"
 description: "Using Multiple Active Result Sets (MARS)"
 ms.custom: ""
-ms.date: "03/26/2018"
-ms.prod: "sql"
+ms.date: "06/12/2018"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "oledb|features"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
+ms.technology: connectivity
 ms.topic: "reference"
 helpviewer_keywords: 
   - "OLE DB Driver for SQL Server, MARS"
@@ -20,13 +15,14 @@ helpviewer_keywords:
   - "Multiple Active Result Sets"
   - "OLE DB Driver for SQL Server, MARS"
   - "MARS [SQL Server]"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
-ms.workload: "On Demand"
 ---
 # Using Multiple Active Result Sets (MARS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] introduced support for multiple active result sets (MARS) in applications accessing the [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. In earlier versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], database applications could not maintain multiple active statements on a connection. When using [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] default result sets, the application had to process or cancel all result sets from one batch before it could execute any other batch on that connection. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] introduced a new connection attribute that allows applications to have more than one pending request per connection, and in particular, to have more than one active default result set per connection.  
   
@@ -53,11 +49,11 @@ ms.workload: "On Demand"
   
  OLE DB Driver for SQL Server does not limit the number of active statements on a connection.  
   
- Typical applications which do not need to have more than a single multistatement batch or stored procedure executing at the same time will benefit from MARS without having to understand how MARS is implemented. However, applications with more complex requirements do need to take account of this.  
+ Typical applications that do not need to have more than a single multistatement batch or stored procedure executing at the same time will benefit from MARS without having to understand how MARS is implemented. However, applications with more complex requirements do need to take account of this.  
   
  MARS enables the interleaved execution of multiple requests within a single connection. That is, it allows a batch to run, and within its execution, it allows other requests to execute. Note, however, that MARS is defined in terms of interleaving, not in terms of parallel execution.  
   
- The MARS infrastructure allows multiple batches to execute in an interleaved fashion, though execution can only be switched at well defined points. In addition, most statements must run atomically within a batch. Statements which return rows to the client, which are sometimes referred to as *yield points*, are allowed to interleave execution before completion while rows are being sent to the client, for example:  
+ The MARS infrastructure allows multiple batches to execute in an interleaved fashion, though execution can only be switched at well-defined points. In addition, most statements must run atomically within a batch. Statements that return rows to the client, which are sometimes referred to as *yield points*, are allowed to interleave execution before completion while rows are being sent to the client, for example:  
   
 -   SELECT  
   
@@ -77,7 +73,7 @@ ms.workload: "On Demand"
  For an example of using MARS from ADO, see [Using ADO with OLE DB Driver for SQL Server](../../oledb/applications/using-ado-with-oledb-driver-for-sql-server.md).  
   
 ## In-Memory OLTP  
- In-memory OLTP supports MARS using queries and natively compiled stored procedures. MARS enables requesting data from multiple queries without the need to completely retrieve each result set before sending a request to fetch rows from a new result set. To successfully read from multiple open result sets you must use a MARS enabled connection.  
+ In-memory OLTP supports MARS using queries and natively compiled stored procedures. MARS enables requesting data from multiple queries without the need to completely retrieve each result set before sending a request to fetch rows from a new result set. To successfully read from multiple open result sets, you must use a MARS enabled connection.  
   
  MARS is disabled by default so you must explicitly enable it by adding `MultipleActiveResultSets=True` to a connection string. The following example demonstrates how to connect to an instance of SQL Server and specify that MARS is enabled:  
   
@@ -105,7 +101,7 @@ Data Source=MSSQL; Initial Catalog=AdventureWorks; Integrated Security=SSPI; Mul
   
  Changes made by statements and atomic blocks that are interleaved are isolated from each other. For example, if one statement or atomic block makes some changes, and then yields execution to another statement, the new statement will not see changes made by the first statement. In addition, when first statement resumes execution, it will not see any changes made by any other statements. Statements will only see changes that are finished and committed before the statement starts.  
   
- A new user transaction can be started within the current user transaction using the BEGIN TRANSACTION statement – this is supported only in interop mode so the BEGIN TRANSACTION can only be called from a T-SQL statement, and not from within a natively compiled stored procedure.You can create a save point in a transaction using SAVE TRANSACTION or an API call to transaction.Save(save_point_name) to rollback to the savepoint. This feature is also enabled only from T-SQL statements, and not from within natively compiled stored procedures.  
+ A new user transaction can be started within the current user transaction using the BEGIN TRANSACTION statement – this is supported only in interop mode so the BEGIN TRANSACTION can only be called from a T-SQL statement, and not from within a natively compiled stored procedure. You can create a save point in a transaction using SAVE TRANSACTION or an API call to transaction.Save(save_point_name) to rollback to the savepoint. This feature is also enabled only from T-SQL statements, and not from within natively compiled stored procedures.  
   
  **MARS and columnstore indexes**  
   

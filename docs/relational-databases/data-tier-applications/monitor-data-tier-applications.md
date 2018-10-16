@@ -2,26 +2,17 @@
 title: "Monitor Data-tier Applications | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "data-tier-applications"
-ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-data-tier-apps"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.prod: sql
+ms.technology:
+ms.topic: conceptual
 helpviewer_keywords: 
   - "monitoring [SQL Server], data-tier applications"
   - "monitoring server performance [SQL Server], DACs"
   - "data-tier application [SQL Server], monitor"
 ms.assetid: d2765828-2385-4019-aef2-1de3ab7d1b26
-caps.latest.revision: 11
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Monitor Data-tier Applications
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

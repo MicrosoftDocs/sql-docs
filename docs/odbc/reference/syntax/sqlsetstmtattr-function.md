@@ -2,16 +2,11 @@
 title: "SQLSetStmtAttr Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 apiname: 
   - "SQLSetStmtAttr"
 apilocation: 
@@ -22,11 +17,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLSetStmtAttr function [ODBC]"
 ms.assetid: 7abc5260-733a-48d4-9974-2d1a6a9ea5f6
-caps.latest.revision: 32
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.workload: "On Demand"
 ---
 # SQLSetStmtAttr Function
 **Conformance**  

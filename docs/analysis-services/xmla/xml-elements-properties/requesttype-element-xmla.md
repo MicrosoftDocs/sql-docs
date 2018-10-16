@@ -1,37 +1,14 @@
 ---
 title: "RequestType Element (XMLA) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services, azure-analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-apiname: 
-  - "RequestType Element"
-apilocation: 
-  - "http://schemas.microsoft.com/analysisservices/2003/engine"
-apitype: "Schema"
-applies_to: 
-  - "SQL Server 2016 Preview"
-f1_keywords: 
-  - "http://schemas.microsoft.com/analysisservices/2003/engine#RequestType"
-  - "urn:schemas-microsoft-com:xml-analysis#RequestType"
-  - "microsoft.xml.analysis.requesttype"
-helpviewer_keywords: 
-  - "RequestType element"
-ms.assetid: 54270a57-e327-4233-b4b2-d85b44652ac5
-caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: xmla
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # RequestType Element (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -48,7 +25,7 @@ ms.workload: "Inactive"
 </Discover>  
 ```  
   
-## Element Characteristics  
+## Element characteristics  
   
 |Characteristic|Description|  
 |--------------------|-----------------|  
@@ -56,7 +33,7 @@ ms.workload: "Inactive"
 |Default value|None|  
 |Cardinality|1-1: Required element that occurs once and only once.|  
   
-## Element Relationships  
+## Element relationships  
   
 |Relationship|Element|  
 |------------------|-------------|  
@@ -64,12 +41,12 @@ ms.workload: "Inactive"
 |Child elements|None|  
   
 ## Remarks  
- The **RequestType** element determines the schema rowset from which the **Discover** method returns data. This enumeration is limited to the names of the schema rowsets supported by [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. For more information about schema rowsets, see [Analysis Services Schema Rowsets](../../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md).  
+ The **RequestType** element determines the schema rowset from which the **Discover** method returns data. This enumeration is limited to the names of the schema rowsets supported by Analysis Services. For more information about schema rowsets, see [Analysis Services Schema Rowsets](../../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md).  
   
 > [!NOTE]  
 >  The **RequestType** element enumerates only schema rowset names. An error occurs if the schema rowset GUID is used.  
   
-## See Also  
+## See also
  [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

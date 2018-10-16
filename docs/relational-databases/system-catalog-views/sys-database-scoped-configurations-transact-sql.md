@@ -1,17 +1,12 @@
-﻿---
+---
 title: "sys.database_scoped_configurations (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/16/2018"
-ms.prod: "sql"
+ms.date: "05/14/2018"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: system-objects
+ms.topic: conceptual
 f1_keywords: 
   - "database_scoped_configurations"
   - "database_scoped_configurations_TSQL"
@@ -20,12 +15,10 @@ f1_keywords:
 helpviewer_keywords: 
   - "sys.database_scoped_configurations catalog view"
 ms.assetid: 8899310a-3464-4d38-9f2f-88396c4e7dc2
-caps.latest.revision: 13
-author: "CarlRabeler"
-ms.author: "carlrab"
-manager: "craigg"
-ms.workload: "Inactive"
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.database_scoped_configurations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -38,6 +31,8 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
 |**name**|**nvarchar(60)**|The name of the configuration option. For information about the possible configurations, see [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).|  
 |**value**|**sqlvariant**|The value set for this configuration option for the primary replica.|  
 |**value_for_secondary**|**sqlvariant**|The value set for this configuration option for the secondary replicas.|  
+|**elevate_online**|**nvarchar(60)** |The db scoped default set for the online option for index operations |
+|**elevate_resumable**|nvarchar(60)|The db scoped default set for the resumable option for index operations| 
   
 ##  <a name="Permissions"></a> Permissions  
  Requires membership in the **public** role.  

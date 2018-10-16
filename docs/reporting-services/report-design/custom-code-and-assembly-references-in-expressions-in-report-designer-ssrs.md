@@ -1,18 +1,12 @@
 ---
 title: "Custom Code and Assembly References in Expressions in Report Designer (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
-ms.component: "report-design"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-design
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "items [Reporting Services], expressions"
   - "data [Reporting Services], expressions"
@@ -23,11 +17,8 @@ helpviewer_keywords:
   - "data manipulation [Reporting Services]"
   - "SQL Server Reporting Services, expressions"
 ms.assetid: ae8a0166-2ccc-45f4-8d28-c150da7b73de
-caps.latest.revision: 77
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
-ms.workload: "On Demand"
+author: markingmyname
+ms.author: maghan
 ---
 # Custom Code and Assembly References in Expressions in Report Designer (SSRS)
   You can add references to custom code embedded in a report or to custom assemblies that you build and save to your computer and deploy to the report server. Use embedded code for custom constants, complex functions or functions that are used multiple times in a single report. Use custom code assemblies to maintain code in a single place and share it for use by multiple reports. Custom code can include new custom constants, variables, functions, or subroutines. You can include read-only references to built-in collections such as the Parameters collection. However, you cannot pass sets of report data values to custom functions; specifically, custom aggregates are not supported.  

@@ -1,26 +1,18 @@
 ---
 title: "Using Test Repositories (OracleToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssma-oracle"
+ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "sql-ssma"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssma
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Test Cases Repository"
   - "Test Results Repository"
 ms.assetid: f941cce4-d3e3-4aeb-a88a-4f101a97a9f4
-caps.latest.revision: 8
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "v-thobro"
-ms.workload: "Inactive"
 ---
 # Using Test Repositories (OracleToSQL)
 The SSMA Test Repository stores SSMA Tester test cases and test results for later use. The Repository data are saved in the SQL Server tables **TestCaseRepository** and **RunTestCaseResultRepository** in the schema **ssma_oracle_utilities** of **ssmatesterdb** database.  
@@ -52,7 +44,7 @@ The following buttons are available on Test Cases page:
   
 -   Click the **Edit** button to run the Test Case Wizard and change the selected test.  
   
--   Click the **Run** button to open the [Running Test Cases (OracleToSQL)](http://msdn.microsoft.com/en-us/fc208cdb-7373-4f6b-8f6c-cdff9d3dcd02) dialog and execute the selected test.  
+-   Click the **Run** button to open the [Running Test Cases (OracleToSQL)](http://msdn.microsoft.com/fc208cdb-7373-4f6b-8f6c-cdff9d3dcd02) dialog and execute the selected test.  
   
 ## Test Results Repository  
 You can view the Test Results Repository on the **Test Results** page of the **Repository of Test Cases** window. Open it by clicking **Test Results…** from the **Tester** menu.  

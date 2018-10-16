@@ -1,35 +1,14 @@
 ---
 title: "Create Profiler Traces for Replay (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/23/2018"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL Server Profiler, Analysis Services"
-  - "monitoring Analysis Services [SQL Server]"
-  - "replaying queries"
-  - "replaying discovers"
-  - "events [Analysis Services]"
-  - "replaying commands"
-  - "Profiler [SQL Server Profiler], Analysis Services"
-  - "performance [Analysis Services], replays"
-  - "traces [Analysis Services]"
-ms.assetid: 93b2fc46-7cfb-4ab5-abeb-1475a7d6f0f2
-caps.latest.revision: 33
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom:
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Create Profiler Traces for Replay (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]

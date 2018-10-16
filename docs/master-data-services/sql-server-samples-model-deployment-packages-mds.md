@@ -2,25 +2,19 @@
 title: "SQL Server Examples: Model Deployment Packages (MDS) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/28/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "mds"
-ms.service: ""
-ms.component: "non-specific"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 keywords: 
   - "master data services"
   - "sample"
 ms.assetid: 9b31b7b6-319b-4840-b67d-eb383e7762b1
-caps.latest.revision: 21
-author: "leolimsft"
-ms.author: "lle"
-manager: "craigg"
-ms.workload: "Inactive"
+author: leolimsft
+ms.author: lle
+manager: craigg
 ---
 # SQL Server Examples: Model Deployment Packages (MDS)
 

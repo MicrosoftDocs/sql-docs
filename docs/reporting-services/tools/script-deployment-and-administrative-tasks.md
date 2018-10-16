@@ -1,18 +1,12 @@
 ---
 title: "Script Deployment and Administrative Tasks | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/30/2017"
+ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
-ms.component: "tools"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: tools
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "scripts [Reporting Services]"
   - "moving reports"
@@ -26,11 +20,8 @@ helpviewer_keywords:
   - "transferrng reports"
   - "reports [Reporting Services], migrating"
 ms.assetid: d0416c9e-e3f9-456d-9870-2cfd2c49039b
-caps.latest.revision: 62
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
-ms.workload: "Inactive"
+author: markingmyname
+ms.author: maghan
 ---
 
 # Script Deployment and Administrative Tasks
@@ -57,7 +48,7 @@ ms.workload: "Inactive"
 |Configure the report server database connection.|If you are changing the connection string, account or password, or the authentication type, run the **rsconfig** utility to configure the connection. For more information, see [Configure a Report Server Database Connection  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md) and [rsconfig Utility &#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md).<br /><br /> You cannot use rsconfig.exe to create or upgrade the database. The database and RSExecRole must already exist.|  
 |Configure a scale-out deployment.|Choose from the following approaches to automate scale-out deployment:<br /><br /> -   Run the rskeymgmt.exe utility to join report server instances to an existing installation. For more information, see [Add and Remove Encryption Keys for Scale-Out Deployment &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md).<br />-   Write custom code that runs against the Report Server WMI provider.|  
 |Backup encryption keys.|Choose from the following approaches to automate encryption key backup:<br /><br /> -   Run the rskeymgmt.exe utility to back up the keys. For more information, see [Back Up and Restore Reporting Services Encryption Keys](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md).<br />-   Write custom code that runs against the Report Server WMI provider.|  
-|Configure Report Server E-mail.|Write custom code that runs against the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI provider. The provider supports a subset of the e-mail configuration settings.<br /><br /> Although the RSReportServer.config file includes all the settings, do not use the file in an automated manner. Specifically, do not use a batch file to copy the file to another report server. Each configuration file includes values that are specific to the current instance. Those values will not be valid on other report server instances.<br /><br /> For more information about the settings, see [Configure a Report Server for E-Mail Delivery (SSRS Configuration Manager)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83).|  
+|Configure Report Server E-mail.|Write custom code that runs against the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI provider. The provider supports a subset of the e-mail configuration settings.<br /><br /> Although the RSReportServer.config file includes all the settings, do not use the file in an automated manner. Specifically, do not use a batch file to copy the file to another report server. Each configuration file includes values that are specific to the current instance. Those values will not be valid on other report server instances.<br /><br /> For more information about the settings, see [Configure a Report Server for E-Mail Delivery (SSRS Configuration Manager)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83).|  
 |Configure the unattended execution account.|Choose from the following approaches to automate unattended processing account configuration:<br /><br /> -   Run the rsconfig.exe utility to configure the account. For more information, see [Configure the Unattended Execution Account &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).<br />-   Write custom code that makes calls into the Report Server WMI provider.|  
 |Deploy existing content on another report server, including the folder hierarchy, role assignments, reports, subscriptions, schedules, data sources, and resources.|The best way to re-create an existing report server environment is to copy the report server database to a new report server instance.<br /><br /> An alternative approach is to write custom code that recreates existing report server content programmatically. However, be aware that subscriptions, report snapshots, and report history cannot be recreated programmatically.<br /><br /> Some deployments can benefit from using both techniques together (that is, restore a report server database, and then run custom code that modifies the report server database for a specific installation).<br /><br /> For a detailed example, see [Sample Reporting Services rs.exe Script to Copy Content between Report Servers](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).<br /><br /> For more information about relocating a report server database, see [Moving the Report Server Databases to Another Computer &#40;SSRS Native Mode&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md). For more information about creating report serer environment programmatically, see the section "Using Script to Migrate Report Server Content and Folders" in this topic.|  
   

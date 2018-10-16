@@ -1,0 +1,24 @@
+- name: Overview
+  href: database-mail.md
+- name: Database Mail Configuration Objects
+  href: database-mail-configuration-objects.md
+  items:
+  - name: Create a Database Mail Profile
+    href: create-a-database-mail-profile.md
+  - name: Create a Database Mail Account
+    href: create-a-database-mail-account.md
+  - name: Configure Database Mail
+    href: configure-database-mail.md
+- name: Database Mail Messaging Objects
+  href: database-mail-messaging-objects.md
+- name: Database Mail External Program
+  href: database-mail-external-program.md
+- name: Database Mail Log and Audits
+  href: database-mail-log-and-audits.md
+  items:
+  - name: Create a SQL Server Agent Job to Archive Database Mail Messages and Event Logs
+    href: create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md
+  - name: Check the Status of E-Mail Messages Sent With Database Mail
+    href: check-the-status-of-e-mail-messages-sent-with-database-mail.md
+- name: Configure SQL Server Agent Mail to Use Database Mail
+  href: configure-sql-server-agent-mail-to-use-database-mail.md

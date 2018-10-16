@@ -3,23 +3,14 @@ title: Monitor SQL Server partners | Microsoft Docs
 description: Lists of third-party partners with solutions to monitor Server.
 services: sql-server
 documentationcenter: NA
-author: MikeRayMSFT
-manager: craigg
-editor: ''
-ms.assetid: 
-ms.service: ""
-ms.component: "sql-non-specified"
-ms.suite: "sql"
 ms.devlang: NA
-ms.topic: article
-ms.tgt_pltfrm: NA
-ms.workload: sql-server
+ms.topic: conceptual
 ms.custom: ""
 ms.date: 11/02/2017 
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
+ms.prod: sql
 ms.author: mikeray
-
+author: MikeRayMSFT
+manager: craigg
 ---
 # SQL Server monitoring partners
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

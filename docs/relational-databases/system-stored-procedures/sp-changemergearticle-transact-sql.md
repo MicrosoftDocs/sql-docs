@@ -2,29 +2,21 @@
 title: "sp_changemergearticle (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/09/2015"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "replication"
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_changemergearticle_TSQL"
   - "sp_changemergearticle"
 helpviewer_keywords: 
   - "sp_changemergearticle"
 ms.assetid: 0dc3da5c-4af6-45be-b5f0-074da182def2
-caps.latest.revision: 74
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sp_changemergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

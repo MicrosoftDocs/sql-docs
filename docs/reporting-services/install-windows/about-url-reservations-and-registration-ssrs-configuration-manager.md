@@ -1,27 +1,17 @@
 ---
 title: "About URL Reservations and Registration  (SSRS Configuration Manager) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/18/2016"
+ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.service: ""
-ms.component: "install-windows"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "URL reservations"
   - "URL registration"
   - "Report Server service, URL reservations"
 ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
-caps.latest.revision: 15
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
-ms.workload: "On Demand"
+author: markingmyname
+ms.author: maghan
 ---
 # About URL Reservations and Registration  (SSRS Configuration Manager)
   URLs for Reporting Services applications are defined as URL reservations in HTTP.SYS. A URL reservation defines the syntax of a URL endpoint to a Web application. URL reservations are defined for both the Report Server Web service and Report Manager when you configure the applications on the report server. URL reservations are created for you automatically when configure URLs through Setup or the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool:  
@@ -58,7 +48,7 @@ ms.workload: "On Demand"
   
  URLs are unregistered if you stop the service or recycle the Web service or the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] application domain. If you modify a URL reservation while the service is running, the report server will recycle the application domain immediately so that the old URL can be unregistered and the new one put into use.  
   
- A few simple examples illustrate the concept of a URL reservation and how it relates to URL addresses used for [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] applications. A key point to notice is that the URL reservation has different syntax than the the URL you use to access the application:  
+ A few simple examples illustrate the concept of a URL reservation and how it relates to URL addresses used for [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] applications. A key point to notice is that the URL reservation has different syntax than the URL you use to access the application:  
   
 |URL Reservation in HTTP.SYS|URL|Explanation|  
 |---------------------------------|---------|-----------------|  

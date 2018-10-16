@@ -2,18 +2,12 @@
 title: "MSpeer_conflictdetectionconfigresponse (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "system-tables"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "replication"
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "MSpeer_conflictdetectionconfigresponse"
   - "MSpeer_conflictdetectionconfigresponse_TSQL"
@@ -22,11 +16,9 @@ dev_langs:
 helpviewer_keywords: 
   - "MSpeer_conflictdetectionconfigureresponse"
 ms.assetid: 2685fb66-731d-40f7-af4b-596b9222c5d4
-caps.latest.revision: 11
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # MSpeer_conflictdetectionconfigresponse (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

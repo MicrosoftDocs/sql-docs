@@ -1,0 +1,16 @@
+- name: Reporting Services Extension Library
+  href: reporting-services-extension-library.md
+- name: Data processing +
+  href: ../../reporting-services/extensions/data-processing/creating-a-data-processing-extension-library.md
+- name: Delivery extension +
+  href: ../../reporting-services/extensions/delivery-extension/creating-a-delivery-extension-library.md
+- name: Rendering extension +
+  href: ../../reporting-services/extensions/rendering-extension/deploying-a-rendering-extension.md
+- name: Security extension +
+  href: ../../reporting-services/extensions/security-extension/authentication-in-reporting-services.md
+- name: Secure development +
+  href: ../../reporting-services/extensions/secure-development/code-access-security-in-reporting-services.md
+- name: Reporting Services Extensions
+  href: reporting-services-extensions.md
+- name: Security Considerations for Extensions
+  href: security-considerations-for-extensions.md

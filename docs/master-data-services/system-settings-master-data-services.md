@@ -2,25 +2,19 @@
 title: "System Settings (Master Data Services) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "mds"
-ms.service: ""
-ms.component: "non-specific"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Master Data Services, system settings"
   - "system settings [Master Data Services]"
 ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
-caps.latest.revision: 17
-author: "leolimsft"
-ms.author: "lle"
-manager: "craigg"
-ms.workload: "Inactive"
+author: leolimsft
+ms.author: lle
+manager: craigg
 ---
 # System Settings (Master Data Services)
 
@@ -102,6 +96,7 @@ ms.workload: "Inactive"
 |-----------------------------------|--------------------|-----------------|  
 |**Number to increment new business rules by**|**BusinessRuleDefaultPriorityIncrement**|In the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **System Administration** functional area, the number the priority of each new business rule is incremented by. The default value is **10**.|  
 |**Number of members to apply business rules to**|**BusinessRuleRealtimeMemberCount**|In the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **Explorer** functional area, the maximum number of members in the grid to apply business rules to. In the [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)], the maximum number of members in the active worksheet to apply business rules to. The default value is **10000**.|  
+|**Business Rule User Script Execute First**|**BusinessRuleUserScriptExecuteFirst**|Normally, business rule action executes with sequence "Default Value", "Change Value", "Validation", "External Action", "User Defined Action Script". If this setting is changed to **1**, "User Defined Action Script" will be the first step for business rule action execution. This setting is a hidden setting. The default value is **0**.|  
   
  For more information, see [Business Rules &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md).  
   

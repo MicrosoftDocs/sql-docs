@@ -2,16 +2,9 @@
 title: "Register a Database As a DAC | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "data-tier-applications"
-ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-data-tier-apps"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.prod: sql
+ms.technology:
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.registerdacwizard.summary.f1"
   - "sql13.swb.registerdacwizard.introduction.f1"
@@ -23,11 +16,9 @@ helpviewer_keywords:
   - "register DAC"
   - "data-tier application [SQL Server], register"
 ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
-caps.latest.revision: 22
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Register a Database As a DAC
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

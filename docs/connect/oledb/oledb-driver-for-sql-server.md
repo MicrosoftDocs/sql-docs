@@ -1,17 +1,12 @@
 ---
-title: "OLE DB Driver for SQL Server | Microsoft Docs"
-description: "OLE DB Driver for SQL Server"
+title: "Microsoft OLE DB Driver for SQL Server | Microsoft Docs"
+description: "Microsoft OLE DB Driver for SQL Server"
 ms.custom: ""
-ms.date: "03/26/2018"
-ms.prod: "sql"
+ms.date: "06/14/2018"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "OLE DB Driver"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
+ms.technology: connectivity
 ms.topic: "reference"
 helpviewer_keywords: 
   - "MSOLEDBSQL, about OLE DB Driver for SQL Server"
@@ -21,12 +16,11 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server"
   - "MSOLEDBSQL"
   - "native data access [OLE DB Driver for SQL Server]"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
-ms.workload: "On Demand"
 ---
-# OLE DB Driver for SQL Server
+# Microsoft OLE DB Driver for SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
@@ -49,7 +43,7 @@ ms.workload: "On Demand"
 There are three distinct generations of Microsoft OLE DB providers for SQL Server.
 
 ### 1. Microsoft OLE DB Provider for SQL Server (SQLOLEDB)
-The [Microsoft OLE DB Provider for SQL Server](../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) (SQLOLEDB) still ships as part of [Windows Data Access Components](https://msdn.microsoft.com/en-us/library/ms692897.aspx). It is not maintained anymore and it is not recommended to use this driver for new development.
+The [Microsoft OLE DB Provider for SQL Server](../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) (SQLOLEDB) still ships as part of [Windows Data Access Components](https://msdn.microsoft.com/library/ms692897.aspx). It is not maintained anymore and it is not recommended to use this driver for new development.
 
 ### 2. SQL Server Native Client (SNAC)
 Starting in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], the [SQL Server Native Client (SNAC)](../../relational-databases/native-client/sql-server-native-client.md) includes an OLE DB provider interface (SQLNCLI) and is the OLE DB provider that shipped with [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] through [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].

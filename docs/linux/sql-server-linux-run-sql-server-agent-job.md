@@ -5,16 +5,11 @@ author: rothja
 ms.author: jroth 
 manager: craigg
 ms.date: 02/20/2018
-ms.topic: article
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: ""
-ms.suite: "sql"
+ms.topic: conceptual
+ms.prod: sql
 ms.custom: "sql-linux"
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
-ms.workload: "Inactive"
 ---
 # Create and run SQL Server Agent jobs on Linux
 
@@ -35,7 +30,7 @@ For known issues with SQL Server Agent on Linux, see the [Release Notes](sql-ser
 The following prerequisites are required to complete this tutorial:
 
 * Linux machine with the following prerequisites:
-  * SQL Server 2017 ([RHEL](quickstart-install-connect-red-hat.md), [SLES](quickstart-install-connect-suse.md), or [Ubuntu](quickstart-install-connect-ubuntu.md)) with command-line tools.
+  * SQL Server ([RHEL](quickstart-install-connect-red-hat.md), [SLES](quickstart-install-connect-suse.md), or [Ubuntu](quickstart-install-connect-ubuntu.md)) with command-line tools.
 
 The following prerequisites are optional:
 
@@ -44,7 +39,7 @@ The following prerequisites are optional:
 
 ## Enable SQL Server Agent
 
-To use SQL Server Agent on Linux, you must first enable SQL Server Agent on a machine that already has SQL Server 2017 installed.
+To use SQL Server Agent on Linux, you must first enable SQL Server Agent on a machine that already has SQL Server installed.
 
 1. To enable SQL Server Agent, follow the step below.
   ```bash
@@ -154,7 +149,7 @@ The following steps create a SQL Server Agent job on Linux with Transact-SQL com
 
 You can also create and manage jobs remotely using SQL Server Management Studio (SSMS) on Windows.
 
-1. Start SSMS on Windows and connect to your Linux SQL Server instance. For more information, see [Manage SQL Server on Linux with SSMS](sql-server-linux-develop-use-ssms.md).
+1. Start SSMS on Windows and connect to your Linux SQL Server instance. For more information, see [Manage SQL Server on Linux with SSMS](sql-server-linux-manage-ssms.md).
 
 1. Verify that you have created a sample database named **SampleDB**.
 

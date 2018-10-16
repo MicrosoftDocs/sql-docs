@@ -2,27 +2,20 @@
 title: "Upgrade Integration Services | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "install-windows"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Integration Services, upgrading"
   - "SSIS, upgrading"
   - "SQL Server Integration Services, upgrading"
   - "upgrading Integration Services"
 ms.assetid: 04f9863c-ba0b-47c5-af91-f2d41b078a23
-caps.latest.revision: 53
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "erikre"
-ms.workload: "On Demand"
 ---
 # Upgrade Integration Services
   If [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] or later is currently installed on your computer, you can upgrade to [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)].  

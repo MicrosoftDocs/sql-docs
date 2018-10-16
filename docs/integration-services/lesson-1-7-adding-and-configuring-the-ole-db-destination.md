@@ -2,24 +2,15 @@
 title: "Step 7: Adding and Configuring the OLE DB Destination | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "tutorial"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+ms.technology: integration-services
+ms.topic: tutorial
 ms.assetid: 442c841d-d528-4bf0-8724-7156f909ee50
-caps.latest.revision: 24
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # Lesson 1-7 - Adding and Configuring the OLE DB Destination
 Your package now can extract data from the flat file source and transform that data into a format that is compatible with the destination. The next task is to actually load the transformed data into the destination. To load the data, you must add an OLE DB destination to the data flow. The OLE DB destination can use a database table, view, or an SQL command to load data into a variety of OLE DB-compliant databases.  

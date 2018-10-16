@@ -1,24 +1,15 @@
 ---
 title: "Interactive Sort, Document Maps, and Links (Report Builder and SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
-ms.component: "report-design"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-design
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: cc6ef408-4a76-408a-9d3f-033481fe21cf
-caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "kfile"
-ms.workload: "Inactive"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Interactive Sort, Document Maps, and Links (Report Builder and SSRS)
   In Web-based environments, you can add a number of features that let your users interact with reports. Your users can change the sort order of values in your report, show or hide items in the report, or click links that go to other reports or Web pages. You can also add a table of contents or document map. Your report users can click items in the table of contents or document map to jump to areas within a report.  

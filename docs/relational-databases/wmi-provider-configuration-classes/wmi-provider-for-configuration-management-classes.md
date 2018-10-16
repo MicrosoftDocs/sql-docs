@@ -2,15 +2,11 @@
 title: "WMI Provider for Configuration Management Classes | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "wmi"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
   - "WMI Classes"
@@ -20,11 +16,9 @@ helpviewer_keywords:
   - "WMI Provider for Configuration Management, classes"
   - "classes [WMI]"
 ms.assetid: cb3311bd-394e-4a5e-a693-7b326f9ac777
-caps.latest.revision: 28
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # WMI Provider for Configuration Management Classes
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

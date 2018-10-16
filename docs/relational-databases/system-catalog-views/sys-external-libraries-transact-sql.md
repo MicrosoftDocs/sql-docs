@@ -1,16 +1,10 @@
-﻿---
+---
 title: "sys.external_libraries (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/05/2017"
-ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "system-catalog-views"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "external_libraries"
@@ -21,10 +15,10 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "sys.external_libraries catalog view"
-author: "jeannt"
-ms.author: "jeannt"
-manager: "craigg"
-monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.external_libraries (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]

@@ -1,28 +1,21 @@
-﻿---
+---
 title: "Configure IntelliSense (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/02/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssms-scripting"
+ms.technology: scripting
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Options [SQL Server Management Studio], IntelliSense"
   - "modifying IntelliSense options"
   - "IntelliSense [SQL Server], modifying options"
 ms.assetid: 3ffc9f31-4efa-4c1a-a033-ed1dc48b065f
-caps.latest.revision: 30
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Active"
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Configure IntelliSense (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,6 +25,11 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 >  Some changes will not take effect in your current editor session.  You must open a new Transact-SQL editor session to see the change.
   
 ### To turn statement completion options off by default  
+
+> [!NOTE]
+> SQL Data Warehouse does not support IntelliSense.
+>
+>
   
 1.  On the **Tools** menu, click **Options**.  
   

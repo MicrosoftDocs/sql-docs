@@ -1,31 +1,14 @@
 ---
 title: "Set Custom Member Formulas for Attributes in a Dimension | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Business Intelligence enhancements [Analysis Services], custom member formulas"
-  - "member formulas [Analysis Services]"
-  - "dimensions [Analysis Services], Business Intelligence enhancements"
-  - "custom member formulas [Analysis Services]"
-  - "CustomRollupColumn property"
-ms.assetid: c4467b08-ce59-4de7-a2d9-c22e246bdd52
-caps.latest.revision: 25
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # BI Wizard - Custom Member Formulas for Attributes in a Dimension
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

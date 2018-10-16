@@ -2,15 +2,10 @@
 title: "INTO Clause (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/23/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "t-sql|queries"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "INTO_TSQL"
@@ -31,12 +26,10 @@ helpviewer_keywords:
   - "clauses [SQL Server], INTO"
   - "row additions [SQL Server], INTO clause"
 ms.assetid: b48d69e8-5a00-48bf-b2f3-19278a72dd88
-caps.latest.revision: 63
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "Active"
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SELECT - INTO Clause (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -230,7 +223,7 @@ ORDER BY YearlyIncome;
 ### F. Creating a new table as a copy of another table and loading it a specified filegroup
 The following example demonstrates creating a new table as a copy of another table and loading it into a specified filegroup different from the default filegroup of the user.
 
- **Applies to:** [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]
+ **Applies to:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
 
 ```sql
 ALTER DATABASE [AdventureWorksDW2016] ADD FILEGROUP FG2;

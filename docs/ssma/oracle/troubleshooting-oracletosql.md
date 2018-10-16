@@ -1,23 +1,15 @@
 ---
 title: "Troubleshooting (OracleToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssma-oracle"
+ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "sql-ssma"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssma
+ms.topic: conceptual
 ms.assetid: 1dfd6ebb-9fcc-4588-8052-7b8219602132
-caps.latest.revision: 7
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "v-thobro"
-ms.workload: "Inactive"
 ---
 # Troubleshooting (OracleToSQL)
 It is not uncommon to run into migration issues midway executing the console scripts or commands.  

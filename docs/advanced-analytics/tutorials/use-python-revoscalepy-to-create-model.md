@@ -78,7 +78,6 @@ from revoscalepy import RxComputeContext, RxInSqlServer, RxSqlServerData
 from revoscalepy import rx_lin_mod, rx_predict, rx_summary
 from revoscalepy import RxOptions, rx_import
 
-from pandas import Categorical
 import os
 
 def test_linmod_sql():

@@ -2,22 +2,14 @@
 title: "Run Windows PowerShell Steps in SQL Server Agent | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "powershell"
-ms.service: ""
-ms.component: "powershell"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: scripting
+ms.topic: conceptual
 ms.assetid: f25f7549-c9b3-4618-85f2-c9a08adbe0e3
-caps.latest.revision: 10
-author: "stevestein"
-ms.author: "sstein"
-manager: "craigg"
-ms.workload: "On Demand"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # Run Windows PowerShell Steps in SQL Server Agent
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +38,7 @@ There are several types of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)
 ##  <a name="PShellJob"></a> Create a PowerShell Job Step  
  **To create a PowerShell job step**  
   
-1.  Expand **SQL Server Agent**, create a new job or right-click an existing job, and then click **Properties**. For more information about creating a job, see [Creating Jobs](http://msdn.microsoft.com/library/465fb7fc-7622-4252-a178-ea51691c935b).  
+1.  Expand **SQL Server Agent**, create a new job or right-click an existing job, and then click **Properties**. For more information about creating a job, see [Creating Jobs](../ssms/agent/create-jobs.md).  
   
 2.  In the **Job Properties** dialog, click the **Steps** page, and then click **New**.  
   
@@ -63,7 +55,7 @@ There are several types of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)
 ##  <a name="CmdExecJob"></a> Create a Command Prompt Job Step  
  **To create a CmdExec job step**  
   
-1.  Expand **SQL Server Agent**, create a new job or right-click an existing job, and then click **Properties**. For more information about creating a job, see [Creating Jobs](http://msdn.microsoft.com/library/465fb7fc-7622-4252-a178-ea51691c935b).  
+1.  Expand **SQL Server Agent**, create a new job or right-click an existing job, and then click **Properties**. For more information about creating a job, see [Creating Jobs](../ssms/agent/create-jobs.md).  
   
 2.  In the **Job Properties** dialog, click the **Steps** page, and then click **New**.  
   

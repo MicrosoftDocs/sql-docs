@@ -1,0 +1,50 @@
+- name: Create mobile reports with SQL Server Mobile Report Publisher
+  href: create-mobile-reports-with-sql-server-mobile-report-publisher.md
+- name: "SQL Server mobile reports: End-to-end walk-through"
+  href: sql-server-mobile-reports-end-to-end-walk-through.md
+- name: Create a Reporting Services mobile report
+  href: create-a-reporting-services-mobile-report.md
+- name: Design first or data first when creating in Reporting Services mobile reports
+  href: design-first-or-data-first-when-creating-in-reporting-services-mobile-reports.md
+- name: Data for Reporting Services mobile reports
+  href: data-for-reporting-services-mobile-reports.md
+  items:
+  - name: Work with simulated data
+    href: work-with-simulated-data-in-reporting-services-mobile-reports.md
+  - name: Get data from shared datasets
+    href: get-data-from-shared-datasets-in-reporting-services-mobile-reports.md
+  - name: Prepare data for Reporting Services mobile reports
+    href: prepare-data-for-reporting-services-mobile-reports.md
+  - name: Prepare Excel data for Reporting Services mobile reports
+    href: prepare-excel-data-for-reporting-services-mobile-reports.md
+  - name: Retain date formatting for Analysis Services in mobile reports
+    href: retain-date-formatting-for-analysis-services-in-mobile-reports.md
+- name: Add parameters to a mobile report
+  href: add-parameters-to-a-mobile-report-reporting-services.md
+  items:
+  - name: Open a mobile report with specific query string parameters
+    href: open-a-mobile-report-with-specific-query-string-parameters-reporting-services.md
+- name: Add drillthrough from a mobile report to other mobile reports or URLs
+  href: add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls.md
+- name: Create a tabbed mobile report by using drillthrough | Reporting Services mobile reports
+  href: create-a-tabbed-mobile-report-by-using-drillthrough.md
+- name: Add navigators to mobile reports
+  href: add-navigators-to-reporting-services-mobile-reports.md
+- name: Add visualizations to mobile reports
+  href: add-visualizations-to-reporting-services-mobile-reports.md
+  items:
+  - name: Group data by columns or rows in a mobile report
+    href: group-data-by-columns-or-rows-in-a-mobile-report-reporting-services.md
+- name: Add data grids (tables) to mobile reports
+  href: add-data-grids-to-mobile-reports-reporting-services.md
+- name: Add gauges to mobile reports | Reporting Services
+  href: add-gauges-to-mobile-reports-reporting-services.md
+- name: Lay out a mobile report for phone or tablet
+  href: lay-out-a-reporting-services-mobile-report-for-phone-or-tablet.md
+- name: Maps in Reporting Services mobile reports
+  href: maps-in-reporting-services-mobile-reports.md
+  items:
+  - name: Custom maps in Reporting Services mobile reports
+    href: custom-maps-in-reporting-services-mobile-reports.md
+  - name: Add a custom map to a Reporting Services mobile report
+    href: add-a-custom-map-to-a-reporting-services-mobile-report.md

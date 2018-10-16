@@ -2,24 +2,17 @@
 title: "Incorporate a Data Profiling Task in Package Workflow | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "control-flow"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Data Profiling task [Integration Services], using output in workflow"
 ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
-caps.latest.revision: 24
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Incorporate a Data Profiling Task in Package Workflow
   Data profiling and cleanup are not candidates for an automated process in their early stages. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], the output of the Data Profiling task usually requires visual analysis and human judgment to determine whether reported violations are meaningful or excessive. Even after recognizing data quality problems, there still has to be a carefully thought-out plan that addresses the best approach for cleanup.  
@@ -266,7 +259,7 @@ ms.workload: "Inactive"
 8.  Close the script development environment, and then close the Script Task Editor.  
   
 #### Alternative Code—Reading the Profile Output from a Variable  
- The previous procedure shows how to load the output of the Data Profiling task from from a file. However, an alternative method would be to load this output from a package variable. To load the output from a variable, you have to make the following changes to the sample code:  
+ The previous procedure shows how to load the output of the Data Profiling task from a file. However, an alternative method would be to load this output from a package variable. To load the output from a variable, you have to make the following changes to the sample code:  
   
 -   Call the **LoadXml** method of the **XmlDocument** class instead of the **Load** method.  
   

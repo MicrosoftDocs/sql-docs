@@ -2,25 +2,18 @@
 title: "Outer Joins | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "outer join escape sequences [ODBC]"
   - "escape sequences [ODBC], outer join"
 ms.assetid: be1a0203-5da9-4871-9566-4bd3fbc0895c
-caps.latest.revision: 6
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Outer Joins
 ODBC supports the SQL-92 left, right, and full outer join syntax. The escape sequence for outer joins is  

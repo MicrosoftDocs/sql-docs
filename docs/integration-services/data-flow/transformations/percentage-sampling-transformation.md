@@ -2,16 +2,11 @@
 title: "Percentage Sampling Transformation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "data-flow"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.percentagesamplingtrans.f1"
   - "sql13.dts.designer.percentagesamplingtransformation.f1"
@@ -24,11 +19,9 @@ helpviewer_keywords:
   - "datasets [Integration Services], sample"
   - "training mining models"
 ms.assetid: 59767e52-f732-4b3f-8602-be50d0a64ef2
-caps.latest.revision: 46
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Percentage Sampling Transformation
   The Percentage Sampling transformation creates a sample data set by selecting a percentage of the transformation input rows. The sample data set is a random selection of rows from the transformation input, to make the resultant sample representative of the input.  

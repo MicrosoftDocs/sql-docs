@@ -1,17 +1,12 @@
-﻿---
+---
 title: "Strong Passwords | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "security"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: security
+ms.topic: conceptual
 helpviewer_keywords: 
   - "logins [SQL Server], passwords"
   - "passwords [SQL Server], strong"
@@ -21,12 +16,10 @@ helpviewer_keywords:
   - "characters [SQL Server], password policies"
   - "strong passwords [SQL Server]"
 ms.assetid: 338548f4-c4d8-47ca-b597-5c9c0f2fa205
-caps.latest.revision: 30
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "On Demand"
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Strong Passwords
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -54,9 +47,9 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
   
 -   Contains or starts with a space character.  
   
--   Starts with the $ or @ character.  
+-   Starts with the $ or \@ character.  
   
- If used in an OLE DB or ODBC connection string, a login or password must not contain the following characters: [] {}() , ; ? * ! @. These characters are used to either initialize a connection or separate connection values.  
+ If used in an OLE DB or ODBC connection string, a login or password must not contain the following characters: [] {}() , ; ? * ! \@. These characters are used to either initialize a connection or separate connection values.  
   
 ## Related Content  
  [Password Policy](../../relational-databases/security/password-policy.md)  

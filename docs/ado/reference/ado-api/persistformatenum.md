@@ -1,16 +1,11 @@
 ---
 title: "PersistFormatEnum | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
@@ -18,11 +13,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "PersistFormatEnum enumeration [ADO]"
 ms.assetid: ebe1a2ab-e9f1-43a2-8f94-b190c9613d70
-caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # PersistFormatEnum
 Specifies the format in which to save a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  

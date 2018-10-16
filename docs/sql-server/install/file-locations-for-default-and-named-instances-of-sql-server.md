@@ -2,20 +2,13 @@
 title: "File Locations for Default and Named Instances of SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/25/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "install"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: install
+ms.topic: conceptual
 ms.assetid: 463c570e-9f75-4653-b3b8-4d61753b0013
-caps.latest.revision: 16
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # File Locations for Default and Named Instances of SQL Server

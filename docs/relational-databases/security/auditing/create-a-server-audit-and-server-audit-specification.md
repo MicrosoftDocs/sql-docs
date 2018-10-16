@@ -2,16 +2,11 @@
 title: "Create a Server Audit and Server Audit Specification | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "security"
+ms.prod: sql
+ms.prod_service: security
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: security
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.SWB.SQLAUDIT.FILTER.F1"
   - "sql13.swb.sqlaudit.general.f1"
@@ -20,11 +15,9 @@ helpviewer_keywords:
   - "server audit [SQL Server]"
   - "audits [SQL Server], specification"
 ms.assetid: 6624b1ab-7ec8-44ce-8292-397edf644394
-caps.latest.revision: 21
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "On Demand"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
 ---
 # Create a Server Audit and Server Audit Specification
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -98,7 +91,7 @@ ms.workload: "On Demand"
      Specifies the location of the folder where audit data is written when the **Audit destination** is a file.  
   
      **Ellipsis (…)**  
-     Opens the **Locate Folder –***server_name* dialog box to specify a file path or create a folder where the audit file is written.  
+     Opens the **Locate Folder –**_server\_name_ dialog box to specify a file path or create a folder where the audit file is written.  
   
      **Audit File Maximum Limit:**  
      **Maximum rollover files**  

@@ -1,23 +1,14 @@
 ---
 title: "Get data from shared datasets in Reporting Services mobile reports | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
+ms.date: 03/30/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.service: ""
-ms.component: "mobile-reports"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: mobile-reports
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 0b846451-c8d0-412c-802d-a42bb1ff8c63
-caps.latest.revision: 18
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "kfile"
-ms.workload: "Inactive"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Get data from shared datasets in Reporting Services mobile reports
 Besides [loading data from Excel files](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md), SQL Server Mobile Report Publisher can also access data from almost any source. Accessing data requires a shared data source, configured on a Reporting Services web portal. Read more about [creating shared data sources](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) and [creating shared datasets](../../reporting-services/report-data/manage-shared-datasets.md).  

@@ -1,0 +1,64 @@
+- name: Integration Services (SSIS) Connections
+  href: integration-services-ssis-connections.md
+- name: Analysis Services Connection Manager
+  href: analysis-services-connection-manager.md
+  items:
+  - name: Add Analysis Services Connection Manager Dialog Box UI Reference
+    href: add-analysis-services-connection-manager-dialog-box-ui-reference.md
+- name: FTP Connection Manager
+  href: ftp-connection-manager.md
+  items:
+  - name: FTP Connection Manager Editor
+    href: ../ftp-connection-manager-editor.md
+- name: HTTP Connection Manager
+  href: http-connection-manager.md
+  items:
+  - name: HTTP Connection Manager Editor (Server Page)
+    href: ../http-connection-manager-editor-server-page.md
+  - name: HTTP Connection Manager Editor (Proxy Page)
+    href: ../http-connection-manager-editor-proxy-page.md
+- name: MSMQ Connection Manager
+  href: msmq-connection-manager.md
+  items:
+  - name: MSMQ Connection Manager Editor
+    href: ../msmq-connection-manager-editor.md
+- name: SMTP Connection Manager
+  href: smtp-connection-manager.md
+  items:
+  - name: SMTP Connection Manager Editor
+    href: ../smtp-connection-manager-editor.md
+- name: SMO Connection Manager
+  href: smo-connection-manager.md
+  items:
+  - name: SMO Connection Manager Editor
+    href: ../smo-connection-manager-editor.md
+- name: WMI Connection Manager
+  href: wmi-connection-manager.md
+  items:
+  - name: WMI Connection Manager Editor
+    href: ../wmi-connection-manager-editor.md
+- name: Create Connection Managers
+  href: ../create-connection-managers.md
+- name: Multiple Files Connection Manager
+  href: multiple-files-connection-manager.md
+- name: Connection Managers Area
+  href: ../connection-managers-area.md
+- name: Troubleshooting Tools Package Connectivity
+  href: ../troubleshooting/troubleshooting-tools-for-package-connectivity.md
+- name: Add, Delete, or Share a Connection Manager in a Package
+  href: ../add-delete-or-share-a-connection-manager-in-a-package.md
+  items:
+  - name: Add SSIS Connection Manager
+    href: ../add-ssis-connection-manager.md
+- name: Set the Properties of a Connection Manager
+  href: ../set-the-properties-of-a-connection-manager.md
+- name: Azure Data Lake Store Connection Manager
+  href: ../azure-data-lake-store-connection-manager.md
+- name: Azure HDInsight Connection Manager
+  href: ../azure-hdinsight-connection-manager.md
+- name: Azure Resource Manager Connection Manager
+  href: ../azure-resource-manager-connection-manager.md
+- name: Azure Storage Connection Manager
+  href: azure-storage-connection-manager.md
+- name: Azure Subscription Connection Manager
+  href: azure-subscription-connection-manager.md

@@ -2,25 +2,19 @@
 title: "Configure Email Notifications (Master Data Services) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "mds"
-ms.service: ""
-ms.component: "non-specific"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "e-mail [Master Data Services], configuring"
   - "notifications [Master Data Services], configuring notifications"
 ms.assetid: 4241a6ab-7465-471b-9890-57c6b572037e
-caps.latest.revision: 7
-author: "leolimsft"
-ms.author: "lle"
-manager: "craigg"
-ms.workload: "Inactive"
+author: leolimsft
+ms.author: lle
+manager: craigg
 ---
 # Configure Email Notifications (Master Data Services)
 

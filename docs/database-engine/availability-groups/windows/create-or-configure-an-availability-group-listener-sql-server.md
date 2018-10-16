@@ -2,34 +2,26 @@
 title: "Create or Configure an Availability Group Listener (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
-ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "availability-groups"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: high-availability
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.availabilitygroup.newaglistener.general.f1"
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], listeners"
   - "Availability Groups [SQL Server], client connectivity"
 ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
-caps.latest.revision: 52
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: MashaMSFT
+ms.author: mathoma
 manager: "erikre"
-ms.workload: "Active"
 ---
 # Create or Configure an Availability Group Listener (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This topic describes how to create or configure a single *availability group listener* for an Always On availability group by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
 > [!IMPORTANT]  
->  To create the first availability group listener of an availability group, we strongly recommend that you [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Avoid creating a listener directly in the WSFC cluster except when necessary, for example, to create an additional listener.  
+>  To create the first availability group listener of an availability group, we strongly recommend that you use [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Avoid creating a listener directly in the WSFC cluster except when necessary, for example, to create an additional listener.  
   
 -   **Before you begin:**  
   
@@ -100,7 +92,7 @@ ms.workload: "Active"
 >  Before you create your first listener, we strongly recommend that you read [Always On Client Connectivity &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md).  
   
 ###  <a name="DNSnameReqs"></a> Requirements for the DNS Name of an Availability Group Listener  
- Each availability group listener requires a DNS host name that is unique in the domain and in NetBIOS. The DNS name is a string value. This name can contain only alphanumeric characters, dashes (-), and hyphens (_), in any order. DNS host names are case insensitive. The maximum length is 63 characters, however, in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], the maximum length you can specify is 15 characters.  
+ Each availability group listener requires a DNS host name that is unique in the domain and in NetBIOS. The DNS name is a string value. This name can contain only alphanumeric characters, dashes/hyphens (-), and underscores (_), in any order. DNS host names are case insensitive. The maximum length is 63 characters, however, in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], the maximum length you can specify is 15 characters.  
   
  We recommend that you specify a meaningful string. For example, for an availability group named `AG1`, a meaningful DNS host name would be `ag1-listener`.  
   
@@ -148,7 +140,7 @@ ms.workload: "Active"
  For more information, see [Requirements for the DNS Name of an Availability Group Listener](#DNSnameReqs), earlier in this topic.  
   
  **Port**  
- The TPC port used by this listener.  
+ The TCP port used by this listener.  
   
  **Network Mode**  
  Indicates the TCP protocol used by the listener, one of:  
@@ -305,7 +297,7 @@ ms.workload: "Active"
   
 -   Connection strings that do not set **MultiSubnetFailover** to true  
   
-     When `RegisterAllProvidersIP = 1`, any clients whose connection strings do not use `MultiSubnetFailover = True`, will experience high latency connections. This occurs because these clients attempt connections to all IPs sequentially. In contrast, if **RegisterAllProvidersIP** is changed to 0, the active IP address is registered in the Client Access Point in the WSFC cluster, reducing latency for legacy clients. Therefore, if you have legacy clients that that need to connect to an availability group listener and cannot use the **MultiSubnetFailover** property, we recommend that you change **RegisterAllProvidersIP** to 0.  
+     When `RegisterAllProvidersIP = 1`, any clients whose connection strings do not use `MultiSubnetFailover = True`, will experience high latency connections. This occurs because these clients attempt connections to all IPs sequentially. In contrast, if **RegisterAllProvidersIP** is changed to 0, the active IP address is registered in the Client Access Point in the WSFC cluster, reducing latency for legacy clients. Therefore, if you have legacy clients that need to connect to an availability group listener and cannot use the **MultiSubnetFailover** property, we recommend that you change **RegisterAllProvidersIP** to 0.  
   
     > [!IMPORTANT]  
     >  When you create an availability group listener through the WSFC cluster (Failover Cluster Manager GUI), **RegisterAllProvidersIP** will be 0 (false) by default.  

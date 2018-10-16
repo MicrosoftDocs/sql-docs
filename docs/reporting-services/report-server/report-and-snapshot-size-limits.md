@@ -1,18 +1,12 @@
 ---
 title: "Report and Snapshot Size Limits | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
-ms.component: "report-server"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-server
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "large reports"
   - "maximum report size"
@@ -21,11 +15,8 @@ helpviewer_keywords:
   - "reports [Reporting Services], size"
   - "denial of service attacks [Reporting Services]"
 ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
-caps.latest.revision: 48
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
-ms.workload: "Inactive"
+author: markingmyname
+ms.author: maghan
 ---
 # Report and Snapshot Size Limits
   Administrators who manage a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] deployment can use the information in this topic to understand report size limits when the report is published to a report server, rendered at run time, and saved to the file system. This topic also provides practical guidance on how to measure the size of a report server database, and describes the effect of snapshot size on server performance.  
@@ -62,7 +53,7 @@ ms.workload: "Inactive"
   
  By default, both the **reportserver** and **reportservertempdb** databases are set to autogrow. Although the database size can increase automatically, it is never decreased automatically. If the **reportserver** database has excess capacity because you deleted snapshots, you must manually reduce it to recover disk space. Similarly, if the **reportservertempdb** grew to accommodate an unusually high volume of interactive reporting, the disk space allocation will remain at that setting until you reduce it.  
   
- To measure the size of the report server databases, you can run the following [!INCLUDE[tsql](../../includes/tsql-md.md)] commands. Calculating total database size at regular intervals can help you develop reasonable estimates of how to allocate space for the report server database over time. The following statements measure the amount of space that that is currently used (the statements assume you are using default database names):  
+ To measure the size of the report server databases, you can run the following [!INCLUDE[tsql](../../includes/tsql-md.md)] commands. Calculating total database size at regular intervals can help you develop reasonable estimates of how to allocate space for the report server database over time. The following statements measure the amount of space that is currently used (the statements assume you are using default database names):  
   
 ```  
 USE ReportServer  

@@ -2,16 +2,10 @@
 title: "SQL Server PowerShell Provider | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "powershell"
-ms.service: ""
-ms.component: "powershell"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: scripting
+ms.topic: conceptual
 helpviewer_keywords: 
   - "PowerShell [SQL Server], provider"
   - "PowerShell [SQL Server], SQL Server PowerShell Provider"
@@ -20,11 +14,9 @@ helpviewer_keywords:
   - "PowerShell [SQL Server], SMO"
   - "SQL Server Management Objects, PowerShell"
 ms.assetid: b97acc43-fcd2-4ae5-b218-e183bab916f9
-caps.latest.revision: 61
-author: "stevestein"
-ms.author: "sstein"
-manager: "craigg"
-ms.workload: "On Demand"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # SQL Server PowerShell Provider
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

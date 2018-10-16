@@ -2,16 +2,11 @@
 title: "For Loop Container | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "control-flow"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.forloopcontainerdetails.f1"
   - "sql13.dts.designer.forloopcontainer.f1"
@@ -20,11 +15,9 @@ helpviewer_keywords:
   - "containers [Integration Services], For Loop"
   - "For Loop containers"
 ms.assetid: 44cf7355-992b-4bbf-a28c-bfb012de06f6
-caps.latest.revision: 55
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # For Loop Container
   The For Loop container defines a repeating control flow in a package. The loop implementation is similar to the **For** looping structure in programming languages. In each repeat of the loop, the For Loop container evaluates an expression and repeats its workflow until the expression evaluates to **False**.  

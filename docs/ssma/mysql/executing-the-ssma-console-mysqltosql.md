@@ -1,20 +1,11 @@
 ---
 title: "Executing the SSMA Console (MySQLToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssma-mysql"
+ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "sql-ssma"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
+ms.technology: ssma
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Script file commands, Database connection commands"
   - "Script file commands, Manageability commands"
@@ -24,11 +15,9 @@ helpviewer_keywords:
   - "Script file commands, Report commands"
   - "Script file commands, Script generation commands"
 ms.assetid: e3e9f7e4-0619-4861-a202-3d5d39953b26
-caps.latest.revision: 25
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Executing the SSMA Console (MySQLToSQL)
 Microsoft provides you with a robust set of script file commands to execute and control SSMA activities.  

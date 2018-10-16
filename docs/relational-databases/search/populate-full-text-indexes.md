@@ -1,17 +1,12 @@
-﻿---
+---
 title: "Populate Full-Text Indexes | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
-ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "search"
+ms.prod: sql
+ms.prod_service: "search, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: search
+ms.topic: conceptual
 helpviewer_keywords: 
   - "index populations [full-text search]"
   - "incremental populations [full-text search]"
@@ -27,12 +22,10 @@ helpviewer_keywords:
   - "full populations [full-text search]"
   - "full-text indexes [SQL Server], populations"
 ms.assetid: 76767b20-ef55-49ce-8dc4-e77cb8ff618a
-caps.latest.revision: 78
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "On Demand"
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Populate Full-Text Indexes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -205,7 +198,7 @@ In some cases, the request for an incremental population results in a full popul
          This opens the **New Full-Text Indexing Table Schedule** dialog box, where you can modify the schedule.  
   
         > [!NOTE]  
-        >  For information about modifying a SQL Server Agent job, see [Modify a Job](http://msdn.microsoft.com/library/dd5e5f20-20c4-4ab9-a19a-db87577dcd43).  
+        >  For information about modifying a SQL Server Agent job, see [Modify a Job](../../ssms/agent/modify-a-job.md).  
   
     -   To **remove** an existing schedule, select the existing schedule and click **Delete**.  
   

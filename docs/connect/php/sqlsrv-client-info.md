@@ -2,16 +2,11 @@
 title: "sqlsrv_client_info | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "php"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 apiname: 
   - "sqlsrv_client_info"
 apitype: "NA"
@@ -19,11 +14,9 @@ helpviewer_keywords:
   - "API Reference, sqlsrv_client_info"
   - "sqlsrv_client_info"
 ms.assetid: 3e2d3679-436a-45d8-8bdc-7c633b65a720
-caps.latest.revision: 47
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.workload: "Inactive"
 ---
 # sqlsrv_client_info
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

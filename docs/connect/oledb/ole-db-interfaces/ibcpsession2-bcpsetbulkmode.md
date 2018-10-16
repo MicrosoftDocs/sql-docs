@@ -2,32 +2,29 @@
 title: "IBCPSession2::BCPSetBulkMode | Microsoft Docs"
 description: "Using IBCPSession2::BCPSetBulkMode to create bulk copy out of either a query or a table"
 ms.custom: ""
-ms.date: "03/26/2018"
-ms.prod: "sql"
+ms.date: "06/14/2018"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "ole-db-interfaces"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "BCPSetBulkMode function"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
-ms.workload: "Inactive"
 ---
 # IBCPSession2::BCPSetBulkMode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   IBCPSession2::BCPSetBulkMode provides an alternative to [IBCPSession::BCPColFmt &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) for specifying the column format. Unlike IBCPSession::BCPColFmt, which sets individual column format attributes, IBCPSession2::BCPSetBulkMode sets all attributes.  
   
 ## Syntax  
   
-```  
+```cpp  
   
 HRESULT BCPSetBulkMode (  
       int property,  
@@ -87,37 +84,37 @@ HRESULT BCPSetBulkMode (
   
  Below are some examples of function calls that result in a function sequence error:  
   
-```  
+```cpp  
 BCPInit("table", "dataFile", "errorFile", BCP_DIRECTION_IN);  
 BCPSetBulkMode();  
 ```  
   
-```  
+```cpp  
 BCPInit("table", "dataFile", "errorFile", BCP_DIRECTION_OUT);  
 BCPSetBulkMode();  
 BCPReadFmt();  
 ```  
   
-```  
+```cpp  
 BCPInit(NULL, "dataFile", "errorFile", BCP_DIRECTION_OUT);  
 BCPControl(BCP_OPTION_HINTS, "select …");  
 BCPSetBulkMode();  
 ```  
   
-```  
+```cpp  
 BCPInit("table", "dataFile", "errorFile", BCP_DIRECTION_OUT);  
 BCPSetBulkMode();  
 BCPColFmt();  
 ```  
   
-```  
+```cpp  
 BCPInit("table", "dataFile", "errorFile", BCP_DIRECTION_OUT);  
 BCPControl(BCP_OPTION_DELAYREADFMT, true);  
 BCPReadFmt();  
 BCPColFmt();  
 ```  
   
-```  
+```cpp  
 BCPInit(NULL, "dataFile", "errorFile", BCP_DIRECTION_OUT);  
 BCPControl(BCP_OPTION_DELAYREADFMT, true);  
 BCPSetBulkMode();  
@@ -125,13 +122,13 @@ BCPControl(BCP_OPTION_HINTS, "select …");
 BCPReadFmt();  
 ```  
   
-```  
+```cpp  
 BCPInit("table", "dataFile", "errorFile", BCP_DIRECTION_OUT);  
 BCPControl(BCP_OPTION_DELAYREADFMT, true);  
 BCPColumns();  
 ```  
   
-```  
+```cpp  
 BCPInit("table", "dataFile", "errorFile", BCP_DIRECTION_OUT);  
 BCPControl(BCP_OPTION_DELAYREADFMT, true);  
 BCPSetColFmt();  
@@ -140,9 +137,9 @@ BCPSetColFmt();
 ## Example  
  The following sample creates four files using different settings of IBCPSession2::BCPSetBulkMode.  
   
-```  
+```cpp  
   
-// compile with: msoledbsql.lib oleaut32.lib ole32.lib  
+// compile with: oleaut32.lib ole32.lib  
   
 #include <stdio.h>  
 #include "msoledbsql.h"  

@@ -2,22 +2,15 @@
 title: "Direct Statement - Prepared Statement Execution PDO_SQLSRV Driver | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/26/2018"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "php"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 ms.assetid: 05544ca6-1e07-486c-bf03-e8c2c25b3024
-caps.latest.revision: 14
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Direct Statement Execution and Prepared Statement Execution in the PDO_SQLSRV Driver
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -25,7 +18,7 @@ ms.workload: "Inactive"
 This topic discusses the use of the PDO::SQLSRV_ATTR_DIRECT_QUERY attribute to specify direct statement execution instead of the default, which is prepared statement execution. Using a prepared statement can result in better performance if the statement is executed more than once using parameter binding.  
   
 ## Remarks  
-If you want to send a [!INCLUDE[tsql](../../includes/tsql_md.md)] statement directly to the server without statement preparation by the driver, you can set the PDO::SQLSRV_ATTR_DIRECT_QUERY attribute with [PDO::setAttribute](../../connect/php/pdo-setattribute.md) (or as a driver option passed to [PDO::__construct](../../connect/php/pdo-construct.md)) or when you call [PDO::prepare](../../connect/php/pdo-prepare.md). By default, the value of PDO::SQLSRV_ATTR_DIRECT_QUERY is False (use prepared statement execution).  
+If you want to send a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement directly to the server without statement preparation by the driver, you can set the PDO::SQLSRV_ATTR_DIRECT_QUERY attribute with [PDO::setAttribute](../../connect/php/pdo-setattribute.md) (or as a driver option passed to [PDO::__construct](../../connect/php/pdo-construct.md)) or when you call [PDO::prepare](../../connect/php/pdo-prepare.md). By default, the value of PDO::SQLSRV_ATTR_DIRECT_QUERY is False (use prepared statement execution).  
   
 If you use [PDO::query](../../connect/php/pdo-query.md), you might want direct execution. Before calling [PDO::query](../../connect/php/pdo-query.md), call [PDO::setAttribute](../../connect/php/pdo-setattribute.md) and set PDO::SQLSRV_ATTR_DIRECT_QUERY to True.  Each call to [PDO::query](../../connect/php/pdo-query.md) can be executed with a different setting for PDO::SQLSRV_ATTR_DIRECT_QUERY.  
   

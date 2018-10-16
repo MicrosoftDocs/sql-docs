@@ -1,24 +1,15 @@
 ---
 title: "Add or Delete a Group in a Chart (Report Builder and SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
+ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
-ms.component: "report-design"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-design
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 0445b0ac-acae-4462-80fb-fe9735ac66db
-caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "kfile"
-ms.workload: "Inactive"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Add or Delete a Group in a Chart (Report Builder and SSRS)
 In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated reports, click in the chart data region to display the **Chart Data** pane. Create groups by dragging dataset fields to the **Category Groups** and **Series Groups** areas. To add nested groups, add multiple fields to the area.  

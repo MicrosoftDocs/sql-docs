@@ -1,15 +1,16 @@
 ---
-title: Lesson 4 Ceate data features using T-SQL  | Microsoft Docs
+title: Lesson 4 Ceate data features using T-SQL functions (SQL Server Machine Learning) | Microsoft Docs
+description: Tutorial showing how to embed R in SQL Server stored procedures and T-SQL functions 
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
+ms.date: 06/07/2018  
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-# Lesson 4: Create data features using T-SQL
+# Lesson 4: Create data features using R and T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This article is part of a tutorial for SQL developers on how to use R in SQL Server.
@@ -121,4 +122,4 @@ To add the computed values to a table that can be used for training the model, y
 
 ## Previous lesson
 
-[Lesson 3: Explore and visualize the data](../tutorials/sqldev-explore-and-visualize-the-data.md)
+[Lesson 3: Explore and visualize the data using R and stored procedures](../tutorials/sqldev-explore-and-visualize-the-data.md)

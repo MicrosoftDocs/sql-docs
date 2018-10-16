@@ -2,15 +2,10 @@
 title: "DROP ASSEMBLY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/10/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "sql-database"
-ms.service: ""
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "DROP ASSEMBLY"
@@ -25,11 +20,9 @@ helpviewer_keywords:
   - "dropping assemblies"
   - "WITH NO DEPENDENTS option"
 ms.assetid: 452d181a-a8e6-44a3-975d-29966d01b18d
-caps.latest.revision: 32
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "craigg"
-ms.workload: "Inactive"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ---
 # DROP ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -2,18 +2,11 @@
 title: "Coding and Debugging the Script Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "extending-packages-scripting"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
 dev_langs: 
   - "VB"
 helpviewer_keywords: 
@@ -26,11 +19,9 @@ helpviewer_keywords:
   - "VSTA"
   - "SSIS Script task, coding"
 ms.assetid: 687c262f-fcab-42e8-92ae-e956f3d92d69
-caps.latest.revision: 81
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # Coding and Debugging the Script Task
   After configuring the Script task in the **Script Task Editor**, you write your custom code in the Script task development environment.  

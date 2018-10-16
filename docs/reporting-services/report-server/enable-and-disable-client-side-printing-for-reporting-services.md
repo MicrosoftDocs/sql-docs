@@ -1,29 +1,20 @@
 ---
 title: "Enable and Disable Client-Side Printing for Reporting Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/30/2017"
+ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
-ms.component: "report-server"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-server
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "pdf"
   - "viewer"
   - "reportviewer"
   - "toolbar"
 ms.assetid: 0e709c96-7517-4547-8ef6-5632f8118524
-caps.latest.revision: 14
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
-ms.workload: "On Demand"
+author: markingmyname
+ms.author: maghan
 ---
 
 # Enable and Disable Client-Side Printing for Reporting Services

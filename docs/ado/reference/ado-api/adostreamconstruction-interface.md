@@ -1,16 +1,11 @@
 ---
 title: "ADOStreamConstruction Interface | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
@@ -18,11 +13,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "ADOStreamConstruction interface [ADO]"
 ms.assetid: 92f5a939-3e1a-4b14-a9dd-90e6ce2dec74
-caps.latest.revision: 9
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # ADOStreamConstruction Interface
 The **ADOStreamConstruction** interface is used to construct an ADO **Stream** object from an OLE DB **IStream** object in a C/C++ application.  

@@ -1,16 +1,11 @@
-﻿---
+---
 title: "sys.database_connection_stats (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/25/2016"
 ms.prod: ""
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.service: "sql-database"
-ms.component: "system-catalog-views"
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.database_connection_stats"
@@ -23,11 +18,9 @@ helpviewer_keywords:
   - "sys.database_connection_stats"
   - "database_connection_stats"
 ms.assetid: 5c8cece0-63b0-4dee-8db7-6b43d94027ec
-caps.latest.revision: 13
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: stevestein
+ms.author: sstein
+manager: craigg
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sys.database_connection_stats (Azure SQL Database)

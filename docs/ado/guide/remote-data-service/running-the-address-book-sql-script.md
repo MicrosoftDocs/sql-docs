@@ -1,26 +1,19 @@
 ---
 title: "Running the Address Book SQL Script | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "address book application scenario [ADO]"
   - "RDS scenarios [ADO]"
 ms.assetid: 409b3f8b-0ced-4867-acbe-b245dcdf6702
-caps.latest.revision: 14
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Running the Address Book SQL Script
 > [!IMPORTANT]

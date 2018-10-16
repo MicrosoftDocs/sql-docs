@@ -2,30 +2,24 @@
 title: "Spatial Indexes Dialog Box (Visual Database Tools) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssms-visual-db"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "tools-ssms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssms
+ms.topic: conceptual
 f1_keywords: 
   - "vdt.dlgbox.spatialindexes"
 ms.assetid: 4d84239a-68c7-4aa2-8602-2b51dd07260f
-caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
+
 ---
 # Spatial Indexes Dialog Box (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Use the **Spatial Indexes** dialog box to create indexes for columns of the **geometry** or **geography** data type (*spatial columns*), which cannot be indexed using the **Index/Keys** dialog box. Each spatial column can have more than one spatial index, but they must be created one at a time.  
   
-For information about restrictions on spatial index creation, see [Spatial Indexes Overview](http://msdn.microsoft.com/en-us/b1ae7b78-182a-459e-ab28-f743e43f8293).  
+For information about restrictions on spatial index creation, see [Spatial Indexes Overview](../../relational-databases/spatial/spatial-indexes-overview.md).  
   
 ## Options  
 **Selected Spatial Index**  
@@ -119,5 +113,5 @@ Specifies whether to compute new statistics when the index is created. Recomputi
 Specifies whether row-level locking is allowed on this index. Allowing or disallowing row-level locking affects database performance.  
   
 ## See Also  
-[Spatial Indexes Overview](http://msdn.microsoft.com/en-us/b1ae7b78-182a-459e-ab28-f743e43f8293)  
+[Spatial Indexes Overview](../../relational-databases/spatial/spatial-indexes-overview.md)  
   

@@ -2,15 +2,11 @@
 title: "srv_rpcoptions (Extended Stored Procedure API) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "extended-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
   - "srv_rpcoptions"
@@ -22,11 +18,9 @@ dev_langs:
 helpviewer_keywords: 
   - "srv_rpcoptions"
 ms.assetid: dbcce5d1-d5a1-4379-9597-04e43af5923d
-caps.latest.revision: 30
 author: "rothja"
 ms.author: "jroth"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # srv_rpcoptions (Extended Stored Procedure API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +41,7 @@ srvproc
   
 ## Arguments  
  *srvproc*  
- Is a pointer to the SRV_PROC structure that is the handle for a particular client connection (in this case, the handle that received the remote stored procedure). The structure contains information the the Extended Stored Procedure API library uses to manage communication and data between the application and the client.  
+ Is a pointer to the SRV_PROC structure that is the handle for a particular client connection (in this case, the handle that received the remote stored procedure). The structure contains information the Extended Stored Procedure API library uses to manage communication and data between the application and the client.  
   
 ## Returns  
  A bitmap that contains the run-time flags joined in a logical OR for the current remote stored procedure. If there is not a current remote stored procedure, 0 is returned and a message is generated.  

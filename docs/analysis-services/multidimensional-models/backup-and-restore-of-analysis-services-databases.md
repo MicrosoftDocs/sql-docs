@@ -1,36 +1,14 @@
 ---
 title: "Backup and Restore of Analysis Services Databases | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.ssmsimbi.Restore.f1"
-  - "sql13.asvs.ssmsimbi.Backup.f1"
-helpviewer_keywords: 
-  - "backing up databases [Analysis Services]"
-  - "encryption [Analysis Services]"
-  - "databases [Analysis Services], restoring"
-  - "cryptography [Analysis Services]"
-  - "databases [Analysis Services], backing up"
-  - "restoring databases [Analysis Services]"
-  - "recovery [Analysis Services]"
-ms.assetid: 947eebd2-3622-479e-8aa6-57c11836e4ec
-caps.latest.revision: 54
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "On Demand"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Backup and Restore of Analysis Services Databases
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

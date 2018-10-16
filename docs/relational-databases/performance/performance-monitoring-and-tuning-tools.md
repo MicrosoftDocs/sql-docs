@@ -2,16 +2,10 @@
 title: "Performance Monitoring and Tuning Tools | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "performance"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: performance
+ms.topic: conceptual
 helpviewer_keywords: 
   - "tools [SQL Server], monitoring performance"
   - "monitoring server performance [SQL Server], tools"
@@ -22,11 +16,9 @@ helpviewer_keywords:
   - "performance [SQL Server], monitoring tools"
   - "server performance [SQL Server], tools"
 ms.assetid: 31529dfe-68e7-49f7-b3c2-39fcecf33a95
-caps.latest.revision: 37
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
-ms.workload: "On Demand"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Performance Monitoring and Tuning Tools
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,6 +33,8 @@ ms.workload: "On Demand"
 |[Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)|System Monitor primarily tracks resource usage, such as the number of buffer manager page requests in use, enabling you to monitor server performance and activity using predefined objects and counters or user-defined counters to monitor events. System Monitor (Performance Monitor in Microsoft Windows NT 4.0) collects counts and rates rather than data about the events (for example, memory usage, number of active transactions, number of blocked locks, or CPU activity). You can set thresholds on specific counters to generate alerts that notify operators.<br /><br /> System Monitor works on Microsoft Windows Server and Windows operating systems. It can monitor (remotely or locally) an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on Windows NT 4.0 or later.<br /><br /> The key difference between [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] and System Monitor is that [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] monitors Database Engine events, whereas System Monitor monitors resource usage associated with server processes.|  
 |[Open Activity Monitor &#40;SQL Server Management Studio&#41;](../../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md)|The Activity Monitor in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] is useful for ad hoc views of current activity and graphically displays information about:<br /><br /> Processes running on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Blocked processes.<br /><br /> Locks.<br /><br /> User activity.|  
 |[Live Query Statistics](../../relational-databases/performance/live-query-statistics.md)|Displays real-time statistics about query execution steps. Because this data is available while the query is executing, these execution statistics are extremely useful for debugging query performance issues.|  
+|[Extended Events](../../relational-databases/extended-events/extended-events.md)|Extended Events is a light weight performance monitoring system that uses very few performance resources. Extended Events provides two graphical user interfaces (New Session Wizard and New Session) to create, modify, display, and analyze your session data.|  
+|[Execution Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)|Execution related DMVs enable you to check execution related information.|
 |[SQL Trace](../../relational-databases/sql-trace/sql-trace.md)|[!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedures that create, filter, and define tracing:<br /><br /> [sp_trace_create &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)<br /><br /> [sp_trace_generateevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)<br /><br /> [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)<br /><br /> [sp_trace_setfilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)<br /><br /> [sp_trace_setstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)|  
 |Error Logs|The Windows application event log provides an overall picture of events occurring on the Windows Server and Windows operating systems as a whole, as well as events in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, and full-text search. It contains information about events in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that is not available elsewhere. You can use the information in the error log to troubleshoot [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-related problems.|  
 |[System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)|The following [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system stored procedures provide a powerful alternative for many monitoring tasks:<br /><br /> [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md):<br />                    Reports snapshot information about current [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] users and processes, including the currently executing statement and whether the statement is blocked.<br /><br /> [sp_lock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md):<br />                    Reports snapshot information about locks, including the object ID, index ID, type of lock, and type or resource to which the lock applies.<br /><br /> [sp_spaceused &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md): <br />                    Displays an estimate of the current amount of disk space used by a table (or a whole database).<br /><br /> [sp_monitor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md):<br />                    Displays statistics, including CPU usage, I/O usage, and the amount of time idle since **sp_monitor** was last executed.|  
@@ -52,14 +46,14 @@ ms.workload: "On Demand"
 ## Choosing a Monitoring Tool  
  The choice of a monitoring tool depends on the event or activity to be monitored.  
   
-|Event or activity|SQL Server Profiler|Distributed Replay|System Monitor|Activity Monitor|Transact-SQL|Error logs|  
-|-----------------------|-------------------------|------------------------|--------------------|----------------------|-------------------|----------------|  
-|Trend analysis|Yes||Yes||||  
-|Replaying captured events|Yes (From a single computer)|Yes (From multiple computers)|||||  
-|Ad hoc monitoring|Yes|||Yes|Yes|Yes|  
-|Generating alerts|||Yes||||  
-|Graphical interface|Yes||Yes|Yes||Yes|  
-|Using within custom application|Yes*||||Yes||  
+|Event or activity|Extended Events|SQL Server Profiler|Distributed Replay|System Monitor|Activity Monitor|Transact-SQL|Error logs|  
+|-----------------------|-----------------------|-------------------------|------------------------|--------------------|----------------------|-------------------|----------------|  
+|Trend analysis|Yes|Yes||Yes||||  
+|Replaying captured events||Yes (From a single computer)|Yes (From multiple computers)|||||  
+|Ad hoc monitoring||Yes|||Yes|Yes|Yes|  
+|Generating alerts||||Yes||||  
+|Graphical interface|Yes|Yes||Yes|Yes||Yes|  
+|Using within custom application|Yes|Yes*||||Yes||  
   
  *Using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] system stored procedures.  
   

@@ -1,34 +1,14 @@
 ---
 title: "Classified Columns (Data Mining) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "content types [data mining]"
-  - "STDEV column"
-  - "VARIANCE column"
-  - "PROBABLILITY column"
-  - "PROBABILITY_STDEV column"
-  - "columns [data mining], classified"
-  - "classified columns [data mining]"
-  - "PROBABILITY_VARIANCE column"
-  - "SUPPORT column"
-ms.assetid: 68bf3b78-dc12-497c-898f-b43a45646123
-caps.latest.revision: 26
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Classified Columns (Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

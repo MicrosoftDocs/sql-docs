@@ -2,27 +2,19 @@
 title: "Tutorial: Database Engine Tuning Advisor | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "dta"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Database Engine Tuning Advisor [SQL Server], tutorials"
   - "tutorials [Database Engine Tuning Advisor]"
 ms.assetid: 3b54cbbe-d8c6-424d-92f1-aa58179f4da8
-caps.latest.revision: 38
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # Tutorial: Database Engine Tuning Advisor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

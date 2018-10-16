@@ -122,4 +122,4 @@ rxSyncPackages(computeContext=computeContext, scope="private", owner = "user1", 
 
 ## Related resources
 
-[R package management for SQL Server](r-package-management-for-sql-server-r-services.md)
+[R package management for SQL Server](install-additional-r-packages-on-sql-server.md)

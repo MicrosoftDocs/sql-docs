@@ -1,35 +1,18 @@
 ---
 title: "Supported XMLA Properties (XMLA) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services, azure-analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-apitype: "Schema"
-applies_to: 
-  - "SQL Server 2016 Preview"
-helpviewer_keywords: 
-  - "properties [XML for Analysis]"
-  - "XML for Analysis, properties"
-  - "XMLA, properties"
-ms.assetid: 5745f7b4-6b96-44d5-b77c-f2831a898e5e
-caps.latest.revision: 27
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: xmla
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # PropertyList Element - Supported XMLA Properties
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] supports the properties listed in the following table. You use these listed properties in the [Properties](../../../analysis-services/xmla/xml-elements-properties/properties-element-xmla.md) element of the [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) and [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) methods.  
+  Analysis Services supports the properties listed in the following table. You use these listed properties in the [Properties](../../../analysis-services/xmla/xml-elements-properties/properties-element-xmla.md) element of the [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) and [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) methods.  
   
 |Name|Description|Type|Values|  
 |----------|-----------------|----------|------------|  
@@ -145,7 +128,7 @@ ms.workload: "Inactive"
 |UserName|This property is no longer supported.<br /><br /> Specifies a string that returns the user name that the [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance associates with the command. For backward compatibility, this property is ignored without generating an error when used with the **Execute** or **Discover** method. This property is equivalent to the OLE DB property, DBPROP_USERNAME.<br /><br /> The default value for this property is the user name that opened the current session or connection.<br /><br /> This property can be used with the **Execute** method.|Optional, read-only **String** property||  
 |VisualMode|This property is equivalent to the OLE DB property, MDPROP_VISUALMODE.<br /><br /> The default value for this property is zero (0), equivalent to DBPROPVAL_VISUAL_MODE_DEFAULT.<br /><br /> This property can be used with the **Discover** and **Execute** methods.|Optional, write-only **Integer** property||  
   
-## See Also  
+## See also
  [PropertyList Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-xmla.md)  
   
   

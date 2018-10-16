@@ -1,26 +1,20 @@
 ---
 title: "Refresh Method Example (VBScript) | Microsoft Docs"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: 
-ms.suite: sql
 ms.prod: sql  
-ms.prod_service: drivers
-ms.component: reference
-ms.tgt_pltfrm: ""
+ms.prod_service: connectivity
 ms.topic: conceptual
 dev_langs: 
   - "VB"
 helpviewer_keywords: 
   - "Refresh method [ADO], VBScript example"
 ms.assetid: f2926578-bc60-464b-916e-ddfdb8014253
-caps.latest.revision: 14
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Refresh Method Example (VBScript)
 > [!IMPORTANT]

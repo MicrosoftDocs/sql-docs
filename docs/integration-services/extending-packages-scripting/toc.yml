@@ -1,0 +1,14 @@
+- name: Extending Packages with Scripting
+  href: extending-packages-with-scripting.md
+- name: Comparing the Script Task and the Script Component
+  href: comparing-the-script-task-and-the-script-component.md
+- name: Comparing Scripting Solutions and Custom Objects
+  href: comparing-scripting-solutions-and-custom-objects.md
+- name: Referencing Other Assemblies in Scripting Solutions
+  href: referencing-other-assemblies-in-scripting-solutions.md
+- name: Debug a Script by Setting Breakpoints in a Script Task and Script Component
+  href: debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component.md
+- name: Extending the Package with the Script Task
+  href: ../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md
+- name: Extending the Data Flow with the Script Component
+  href: ../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md

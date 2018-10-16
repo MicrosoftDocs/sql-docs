@@ -2,15 +2,9 @@
 title: "Common Language Runtime (CLR) Integration Programming Concepts | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "clr"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: clr
 ms.topic: "reference"
 helpviewer_keywords: 
   - "CLR [SQL Server] See common language runtime [SQL Server]"
@@ -19,11 +13,9 @@ helpviewer_keywords:
   - "common language runtime [SQL Server]"
   - ".NET Framework [SQL Server]"
 ms.assetid: 951bf851-3e6e-4361-ae6a-2bcd5b837ebd
-caps.latest.revision: 59
 author: "rothja"
 ms.author: "jroth"
-manager: "craigg"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # Common Language Runtime (CLR) Integration Programming Concepts
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

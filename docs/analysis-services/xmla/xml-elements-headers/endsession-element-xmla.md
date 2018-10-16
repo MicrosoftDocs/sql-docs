@@ -1,41 +1,18 @@
 ---
 title: "EndSession Element (XMLA) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services, azure-analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-apiname: 
-  - "EndSession Element"
-apilocation: 
-  - "http://schemas.microsoft.com/analysisservices/2003/engine"
-apitype: "Schema"
-applies_to: 
-  - "SQL Server 2016 Preview"
-f1_keywords: 
-  - "http://schemas.microsoft.com/analysisservices/2003/engine#EndSession"
-  - "urn:schemas-microsoft-com:xml-analysis#EndSession"
-  - "microsoft.xml.analysis.endsession"
-helpviewer_keywords: 
-  - "EndSession element"
-ms.assetid: e64f1da4-5c83-40a2-b15e-837f5451bafa
-caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: xmla
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # EndSession Element (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Uses the SOAP header in a SOAP request message to end an existing session on an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+  Uses the SOAP header in a SOAP request message to end an existing session on an instance of Analysis Services.  
   
  **Namespace** urn:schemas-microsoft-com:xml-analysis  
   
@@ -57,7 +34,7 @@ ms.workload: "Inactive"
 </soap:Envelope>  
 ```  
   
-## Element Characteristics  
+## Element characteristics  
   
 |Characteristic|Description|  
 |--------------------|-----------------|  
@@ -65,7 +42,7 @@ ms.workload: "Inactive"
 |Default value|None|  
 |Cardinality|0-1: Optional element that can occur once and only once.|  
   
-## Element Relationships  
+## Element relationships  
   
 |Relationship|Element|  
 |------------------|-------------|  
@@ -81,7 +58,7 @@ ms.workload: "Inactive"
 ## Remarks  
  The **EndSession** header element is part of the SOAP request sent to an existing, explicitly started session on an [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance. If the **EndSession** header element is sent, but contains a session identifier that is no longer valid, a SOAP fault is returned that indicates that the session cannot be found.  
   
-## See Also  
+## See also
  [BeginSession Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-headers/beginsession-element-xmla.md)   
  [Session Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-headers/session-element-xmla.md)   
  [Managing Connections and Sessions &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   

@@ -2,15 +2,9 @@
 title: "Impersonation and Credentials for Connections | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "clr"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: clr
 ms.topic: "reference"
 helpviewer_keywords: 
   - "impersonation [CLR integration]"
@@ -22,11 +16,9 @@ helpviewer_keywords:
   - "credentials [CLR integration]"
   - "database objects [CLR integration], security"
 ms.assetid: 293dce7d-1db2-4657-992f-8c583d6e9ebb
-caps.latest.revision: 31
 author: "rothja"
 ms.author: "jroth"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Impersonation and Credentials for Connections
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

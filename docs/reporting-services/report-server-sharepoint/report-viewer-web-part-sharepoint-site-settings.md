@@ -1,20 +1,13 @@
 ---
 title: "SharePoint site settings for the Report Viewer web part - SSRS | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/31/2017"
+ms.date: 10/31/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
-ms.component: "report-server-sharepoint"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
+ms.technology: report-server-sharepoint
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 author: "jt000"
 ms.author: "jasontre"
-ms.workload: "Inactive"
 ---
 # SharePoint site settings for the Report Viewer web part - Reporting Services
 
@@ -39,5 +32,5 @@ The site settings can be accessed by:
 
 |Setting|Comments|  
 |-------------|--------------|  
-|Collect usage data|Enables error and usage information to be sent to Microsoft to help improve our products. For the Microsoft error reporting data collection policy, see the [Microsoft SQL Server Privacy Statement](https://go.microsoft.com/fwlink/?linkid=860782&clcid=0x409).|  
+|Collect usage data|Enables error and usage information to be sent to Microsoft to help improve our products. For the Microsoft error reporting data collection policy, see the [Microsoft SQL Server Privacy Statement](http://go.microsoft.com/fwlink/?LinkID=868444).|  
 |Enable Accessibility Metadata for Reports|Sets the [`AccessibleTablix` device info](../html-device-information-settings.md) for rendered reports.| 

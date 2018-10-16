@@ -93,8 +93,8 @@ Typically, database servers block Internet access. This can be inconvenient when
 
 ## Next lesson
 
-[Create data features using R and SQL](/walkthrough-create-data-features.md)
+[Create data features using R and SQL](walkthrough-create-data-features.md)
 
 ## Previous lesson
 
-[Summarize data using R](/walkthrough-view-and-summarize-data-using-r.md)
+[Summarize data using R](walkthrough-view-and-summarize-data-using-r.md)

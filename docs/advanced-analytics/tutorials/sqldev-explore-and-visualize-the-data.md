@@ -1,9 +1,10 @@
 ---
-title: Lesson 3 Explore and visualize the data | Microsoft Docs
+title: Lesson 3 Explore and visualize data using R and T-SQL (SQL Server Machine Learning) | Microsoft Docs
+description: Tutorial showing how to embed R in SQL Server stored procedures and T-SQL functions 
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
+ms.date: 06/07/2018  
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
@@ -14,7 +15,15 @@ manager: cgronlun
 
 This article is part of a tutorial for SQL developers on how to use R in SQL Server.
 
-In this lesson, you'll review the sample data, and then generate some plots using R functions. These R functions are already included in [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]. You can call the R functions from [!INCLUDE[tsql](../../includes/tsql-md.md)].
+In this lesson, you'll review the sample data, and then generate some plots using [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram) from [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) and the generic [Hist](https://www.rdocumentation.org/packages/graphics/versions/3.5.0/topics/hist) function in base R. These R functions are already included in [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)].
+
+A key objective is showing how to call R functions from [!INCLUDE[tsql](../../includes/tsql-md.md)] in stored procedures and save the results in application file formats:
+
++ Create a stored procedure using **RxHistogram** to generate an R plot as varbinary data. Use **bcp** to export the binary stream to an image file.
++ Create a stored procedure using **Hist** to generate a plot, saving results as JPG and PDF output.
+
+> [!NOTE]
+> Because visualization is such a powerful tool for understanding data shape and distribution, R provides a range of functions and packages for generating histograms, scatter plots, box plots, and other data exploration graphs. R typically creates images using an R device for graphical output, which you can capture and store as a **varbinary** data type for rendering in application. You can also save the images to any of the support file formats (.JPG, .PDF, etc.).
 
 ## Review the data
 
@@ -34,7 +43,7 @@ In the original dataset, the taxi identifiers and trip records were provided in 
   
 -   Each fare record includes payment information such as the payment type, total amount of payment, and the tip amount.
   
--   The last three columns can be used for various machine learning tasks.  The _tip\_amount_ column contains continuous numeric values and can be used as the **label** column for regression analysis. The _tipped_ column has only yes/no values and is used for binary classification. The _tip\_class_ column has multiple **class labels** and therefore can be used as the label for multi-class classification tasks.
+-   The last three columns can be used for various machine learning tasks. The _tip\_amount_ column contains continuous numeric values and can be used as the **label** column for regression analysis. The _tipped_ column has only yes/no values and is used for binary classification. The _tip\_class_ column has multiple **class labels** and therefore can be used as the label for multi-class classification tasks.
   
     This walkthrough demonstrates only the binary classification task; you are welcome to try building models for the other two machine learning tasks, regression and multiclass classification.
   
@@ -45,30 +54,18 @@ In the original dataset, the taxi identifiers and trip records were provided in 
      |tipped|If tip_amount > 0, tipped = 1, otherwise tipped = 0|
     |tip_class|Class 0: tip_amount = $0<br /><br />Class 1: tip_amount > $0 and tip_amount <= $5<br /><br />Class 2: tip_amount > $5 and tip_amount <= $10<br /><br />Class 3: tip_amount > $10 and tip_amount <= $20<br /><br />Class 4: tip_amount > $20|
 
-## Create plots using R in T-SQL
+## Create a stored procedure using rxHistogram to plot the data
 
-Because visualization is such a powerful tool for understanding the distribution of the data and outliers, R provides many packages for visualizing data. The standard open-source distribution of R also includes many functions for crating histograms, scatter plots, box plots,  and other data exploration graphs.
+To create the plot, use [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram), one of the enhanced R functions provided in [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler). This step plots a histogram based on data from a [!INCLUDE[tsql](../../includes/tsql-md.md)] query. You can wrap this function in a stored procedure, **PlotHistogram**.
 
-R typically creates images using an R device for graphical output. You can capture the output of this device and store the image in a **varbinary** data type for rendering in application, or you can save the images to any of the support file formats (.JPG, .PDF, etc.).
+1. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], in Object Explorer, right-click the **NYCTaxi_Sample** database, expand **Programmability**, and then expand **Stored Procedures** to view the procedures created in lesson 2.
 
-In this section, you'll learn how to work with each type of output using stored procedures. The overall process is as follows:
+2. Right-click **PlotHistogram** and select **Modify** to view the source. You can execute this procedure to call **rxHistogram** on data contained in the tipped column of nyctaxi_sample table.
 
-- Create a stored procedure to generate an R plot as varbinary data
-
-- Generate the plot and save it to an image file
-
-- Use a stored procedure to convert the binary plot data to a JPG or PDF file
-
-### Create the stored procedure PlotHistogram
-
-1. To create the plot, use `rxHistogram`, one of the enhanced R functions provided in [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], to plot a histogram based on data from a [!INCLUDE[tsql](../../includes/tsql-md.md)] query. To make it easier to call the R function, you will wrap it in a stored procedure, _PlotHistogram_.
-
-    In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], open a new **Query** window.
-
-2. In the database that contains the tutorial data, create the procedure using this statement:
+3. Optionally, as a learning exercise, create your own copy of this stored procedure using the following example. Open a new query window and paste in the following script to create a stored procedure that plots the histogram. This example is named **PlotHistogram2** to avoid naming collisions with the pre-existing procedure.
 
     ```SQL
-    CREATE PROCEDURE [dbo].[PlotHistogram]
+    CREATE PROCEDURE [dbo].[PlotHistogram2]
     AS
     BEGIN
       SET NOCOUNT ON;
@@ -90,19 +87,17 @@ In this section, you'll learn how to work with each type of output using stored 
     GO
     ```
 
-    Be sure to modify the code to use the correct table name, if needed.
+The stored procedure **PlotHistogram2** is identical to a pre-existing stored procedure **PlotHistogram** found in the NYCTaxi_sample database. 
   
-    -   The variable `@query` defines the query text (`'SELECT tipped FROM nyctaxi_sample'`), which is passed to the R script as the argument to the script input variable, `@input_data_1`.
++ The variable `@query` defines the query text (`'SELECT tipped FROM nyctaxi_sample'`), which is passed to the R script as the argument to the script input variable, `@input_data_1`.
   
-    -   The R script is fairly simple: an R variable (`image_file`) is defined to store the image, and then the `rxHistogram` function is called to generate the plot.
++ The R script is fairly simple: an R variable (`image_file`) is defined to store the image, and then the **rxHistogram** function is called to generate the plot.
   
-    -   The R device is set to **off**.
++ The R device is set to **off** because you are running this command as an external script in SQL Server. Typically in R, when you issue a high-level plotting command, R opens a graphics window, called a *device*. You can change the size and colors and other aspects of the window, or you can turn the device off if you are writing to a file or handling the output some other way.
   
-        In R, when you issue a high-level plotting command, R will open a graphics window, called a *device*. You can change the size and colors and other aspects of the window, or you can turn the device off if you are writing to a file or handling the output some other way.
-  
-    -   The R graphics object is serialized to an R data.frame for output.
++ The R graphics object is serialized to an R data.frame for output.
 
-### Generate the graphics data and save to file
+### Execute the stored procedure and use bcp to export binary data to an image file
 
 The stored procedure returns the image as a stream of varbinary data, which obviously you cannot view directly. However, you can use the **bcp** utility to get the varbinary data and save it as an image file on a client computer.
   
@@ -117,23 +112,25 @@ The stored procedure returns the image as a stream of varbinary data, which obvi
     *plot*
     *0xFFD8FFE000104A4649...*
   
-2.  Open a PowerShell command prompt and run the following command, providing the appropriate instance name, database name, username, and credentials as arguments:
+2.  Open a PowerShell command prompt and run the following command, providing the appropriate instance name, database name, username, and credentials as arguments. For those using Windows identities, you can replace **-U** and **-P** with **-T**.
   
-     ```
-     bcp "exec PlotHistogram" queryout "plot.jpg" -S <SQL Server instance name> -d  <database name>  -U <user name> -P <password>
+     ```text
+     bcp "exec PlotHistogram" queryout "plot.jpg" -S <SQL Server instance name> -d  NYCTaxi_Sample  -U <user name> -P <password>
      ```
 
     > [!NOTE]
     > Command switches for bcp are case-sensitive.
   
-3.  If the connection is successful, you will be prompted to enter more information about the graphic file format. Press ENTER at each prompt to accept the defaults, except for these changes:
-  
+3.  If the connection is successful, you will be prompted to enter more information about the graphic file format. 
+
+   Press ENTER at each prompt to accept the defaults, except for these changes:
+    
     -   For **prefix-length of field plot**, type 0
   
     -   Type **Y** if you want to save the output parameters for later reuse.
   
     ```
-    Enter the file storage type of field plot [varbinary(max)]:
+    Enter the file storage type of field plot [varbinary(max)]: 
     Enter prefix-length of field plot [8]: 0
     Enter length of field plot [0]:
     Enter field terminator [none]:
@@ -158,18 +155,18 @@ The stored procedure returns the image as a stream of varbinary data, which obvi
   
     ![taxi trips with and without tips](media/rsql-devtut-tippedornot.jpg "taxi trips with and without tips")  
   
-### Export the plot data to a viewable file
+## Create a stored procedure using Hist and multiple output formats
 
-Outputting an R plot to a binary data type might be convenient for consumption by applications, but it is not very useful to a data scientist who needs the rendered plot during the data exploration stage. Typically the data scientist will generate multiple data visualizations, to get insights into the data from different perspectives.
+Typically, data scientists generate multiple data visualizations to get insights into the data from different perspectives. In this example, the stored procedure uses the Hist function to create the histogram, exporting the binary data to popular formats such as .JPG, .PDF, and .PNG. 
 
-To generate graphs for users, you can use a stored procedure that creates the output of R in popular formats such as .JPG, .PDF, and .PNG. After the stored procedure creates the graphic, simply open the file to visualize the plot.
+1. Use the existing stored procedure, **PlotInOutputFiles**, to write histograms, scatterplots, and other R graphics to .JPG and .PDF format. Use right-click **Modify** to view the source.
 
-1. Create a new stored procedure, _PlotInOutputFiles_, that demonstrates how to write histograms, scatterplots, and other R graphics to .JPG and .PDF format.
+2. Optionally, as a learning exercise, create your own copy of the procedure as **PlotInOutputFiles2**, with a unique name to avoid a naming conflict.
 
     In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], open a new **Query** window, and paste in the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement.
   
     ```SQL
-    CREATE PROCEDURE [dbo].[PlotInOutputFiles]  
+    CREATE PROCEDURE [dbo].[PlotInOutputFiles2]  
     AS  
     BEGIN  
       SET NOCOUNT ON;  
@@ -232,49 +229,53 @@ To generate graphs for users, you can use a stored procedure that creates the ou
      END
     ```
   
-    -   The output of the SELECT query within the stored procedure is stored in the default R data frame, `InputDataSet`. Various R plotting functions can then be called to generate the actual graphics files.
++ The output of the SELECT query within the stored procedure is stored in the default R data frame, `InputDataSet`. Various R plotting functions can then be called to generate the actual graphics files. Most of the embedded R script represents options for these graphics functions,  such as `plot` or `hist`.
   
-        Most of the embedded R script represents options for these graphics functions,  such as `plot` or `hist`.
-  
-    -   All files are saved to the local folder _C:\temp\Plots\\_. The destination folder is defined by the arguments provided to the R script as part of the stored procedure.  You can change the destination folder by changing the value of the variable, `mainDir`.
-  
-2.  Run the statement to create the stored procedure.
++ All files are saved to the local folder _C:\temp\Plots\\_. The destination folder is defined by the arguments provided to the R script as part of the stored procedure.  You can change the destination folder by changing the value of the variable, `mainDir`.
 
-    ```SQL
-    EXEC PlotInOutputFiles
-    ```
++ To output the files to a different folder, change the value of the `mainDir` variable in the R script embedded in the stored procedure. You can also modify the script to output different formats, more files, and so on.
 
-    **Results**
+### Execute the stored procedure
+
+Run the following statement to export binary plot data to JPEG and PDF file formats.
+
+```SQL
+EXEC PlotInOutputFiles
+```
+
+**Results**
     
-    ```
-    STDOUT message(s) from external script:
-    [1] Creating output plot files:[1] C:\temp\plots\rHistogram_Tipped_18887f6265d4.jpg[1] 
+```
+STDOUT message(s) from external script:
+[1] Creating output plot files:[1] C:\temp\plots\rHistogram_Tipped_18887f6265d4.jpg[1] 
+
+C:\temp\plots\rHistograms_Tip_and_Fare_Amount_1888441e542c.pdf[1]
+
+C:\temp\plots\rXYPlots_Tip_vs_Fare_Amount_18887c9d517b.pdf
+```
+
+The numbers in the file names are randomly generated to ensure that you don't get an error when trying to write to an existing file.
+
+### View output 
+
+To view the plot, open the destination folder and review the files that were created by the R code in the stored procedure.
+
+1. Go the folder indicated in the STDOUT message (in the example, this is C:\temp\plots\)
+
+2. Open `rHistogram_Tipped.jpg` to show the number of trips that got a tip vs. the trips that got no tip. (This histogram is much like the one you generated in the previous step.)
+
+3. Open `rHistograms_Tip_and_Fare_Amount.pdf` to view distribution of tip amounts, plotted against the fare amounts.
     
-    C:\temp\plots\rHistograms_Tip_and_Fare_Amount_1888441e542c.pdf[1]
-    
-    C:\temp\plots\rXYPlots_Tip_vs_Fare_Amount_18887c9d517b.pdf
-    ```
+  ![histogram showing tip_amount and fare_amount](media/rsql-devtut-tipamtfareamt.PNG "histogram showing tip_amount and fare_amount")
 
-    The numbers in the file names are randomly generated to ensure that you don't get an error when trying to write to an existing file.
+4. Open `rXYPlots_Tip_vs_Fare_Amount.pdf` to view a scatterplot with the fare amount on the x-axis and the tip amount on the y-axis.
 
-3. To view the plot, open the destination folder and review the files that were created by the R code in the stored procedure.
-
-    + The file `rHistogram_Tipped.jpg` shows the number of trips that got a tip vs. the trips that got no tip. (This histogram is much like the one you generated in the previous step.)
-
-    + The file `rHistograms_Tip_and_Fare_Amount.pdf` shows the distribution of tip amounts, plotted against the fare amounts.
-    
-    ![histogram showing tip_amount and fare_amount](media/rsql-devtut-tipamtfareamt.PNG "histogram showing tip_amount and fare_amount")
-
-    + The file `rXYPlots_Tip_vs_Fare_Amount.pdf` contains a scatterplot with the fare amount on the x-axis and the tip amount on the y-axis.
-
-    ![tip amount plotted over fare amount](media/rsql-devtut-tipamtbyfareamt.PNG "tip amount plotted over fare amount")
-
-2.  To output the files to a different folder, change the value of the `mainDir` variable in the R script embedded in the stored procedure. You can also modify the script to output different formats, more files, and so on.
+   ![tip amount plotted over fare amount](media/rsql-devtut-tipamtbyfareamt.PNG "tip amount plotted over fare amount")
 
 ## Next lesson
 
-[Lesson 4: Create data features using T-SQL](../tutorials/sqldev-create-data-features-using-t-sql.md)
+[Lesson 3: Create data features using T-SQL](sqldev-create-data-features-using-t-sql.md)
 
 ## Previous lesson
 
-[Lesson 2: Import data to SQL Server using PowerShell](../r/sqldev-import-data-to-sql-server-using-powershell.md)
+[Lesson 1: Set up NYC Taxi demo data](sqldev-download-the-sample-data.md)

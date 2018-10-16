@@ -2,15 +2,11 @@
 title: "local-name-from-QName (XQuery) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
-ms.service: ""
-ms.component: "xquery"
+ms.prod: sql
+ms.prod_service: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "XML"
@@ -18,11 +14,9 @@ helpviewer_keywords:
   - "fn:local-name-from-QName function"
   - "local-name-from-QName function"
 ms.assetid: fafed718-8c3c-403f-93ee-ec51fc157a6e
-caps.latest.revision: 16
 author: "rothja"
 ms.author: "jroth"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Functions Related to QNames - local-name-from-QName
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

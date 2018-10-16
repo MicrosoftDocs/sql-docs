@@ -2,27 +2,20 @@
 title: "View and Modify Distributor and Publisher Properties | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: replication
+ms.topic: conceptual
 helpviewer_keywords: 
   - "viewing replication properties"
   - "Distributors [SQL Server replication], modifying"
   - "modifying replication properties, Distributors"
   - "Distributors [SQL Server replication], properties"
 ms.assetid: 5dae1d59-c377-4c6e-adc9-b68c5b328f79
-caps.latest.revision: 43
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # View and Modify Distributor and Publisher Properties
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -2,25 +2,18 @@
 title: "Frequently Asked Questions for Replication Administrators | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: replication
+ms.topic: conceptual
 helpviewer_keywords: 
   - "administering replication, frequently asked questions"
   - "replication [SQL Server], administering"
 ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
-caps.latest.revision: 59
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: "craigg"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # Frequently Asked Questions for Replication Administrators
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -161,7 +154,7 @@ ms.workload: "On Demand"
 ## Database Maintenance  
   
 ### Why can't I run TRUNCATE TABLE on a published table?  
- TRUNCATE TABLE is a non-logged operation that does not fire triggers. It is not permitted because replication cannot track the changes caused by the operation: transactional replication tracks changes through the transaction log; merge replication tracks changes through triggers on published tables.  
+ TRUNCATE TABLE is a DDL statement that does not log individual row deletions and does not fire DML triggers. It is not permitted because replication cannot track the changes caused by the operation: transactional replication tracks changes through the transaction log; merge replication tracks changes through DML triggers on published tables.  
   
 ### What is the effect of running a bulk insert command on a replicated database?  
  For transactional replication, bulk inserts are tracked and replicated like other inserts. For merge replication, you must ensure that change tracking metadata is updated properly.  

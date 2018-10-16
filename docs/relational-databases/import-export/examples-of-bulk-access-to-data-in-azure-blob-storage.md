@@ -1,29 +1,23 @@
-﻿---
+---
 title: "Examples of Bulk Access to Data in Azure Blob Storage | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/04/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "import-export"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "bulk importing [SQL Server], from Azure blob storage"
   - "Azure blob storage, bulk import to SQL Server"
   - "BULK INSERT, Azure blob storage"
   - "OPENROWSET, Azure blob storage"
 ms.assetid: f7d85db3-7a93-400e-87af-f56247319ecd
-caps.latest.revision: 2
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "craigg"
-ms.workload: "On Demand"
-monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
+manager: craigg
+monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Examples of Bulk Access to Data in Azure Blob Storage
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]

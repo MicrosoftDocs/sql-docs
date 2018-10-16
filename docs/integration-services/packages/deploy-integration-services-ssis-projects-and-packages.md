@@ -1,17 +1,12 @@
 ---
 title: "Deploy Integration Services (SSIS) Projects and Packages | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.date: 06/04/2018
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "packages"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.ssis.bids.converttolegacydeployment.f1"
   - "sql13.ssis.deploymentwizard.f1"
@@ -21,11 +16,9 @@ f1_keywords:
   - "sql13.ssis.ssms.isenvprop.variables.f1"
   - "sql13.ssis.migrationwizard.f1"
 ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
-caps.latest.revision: 21
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "Active"
+manager: craigg
 ---
 # Deploy Integration Services (SSIS) Projects and Packages
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] supports two deployment models, the project deployment model and the legacy package deployment model. The project deployment model enables you to deploy your projects to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server.  
@@ -33,8 +26,13 @@ ms.workload: "Active"
 For more information about the legacy package deployment model, see [Legacy Package Deployment &#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md).  
   
 > [!NOTE]  
->  The project deployment model was introduced in [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]. If you used this model, you were not able to deploy one or more packages without deploying the whole project. The [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] introduced the Incremental Package Deployment feature that allows you to deploy one or more packages without deploying the whole project.  
-  
+>  The project deployment model was introduced in [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]. With this deployment model, you were not able to deploy one or more packages without deploying the whole project. [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] introduced the package deployment model, which lets you deploy one or more packages without deploying the whole project.  
+
+> [!NOTE]
+> This article describes how to deploy SSIS packages in general, and how to deploy packages on premises. You can also deploy SSIS packages to the following platforms:
+> - **The Microsoft Azure cloud**. For more info, see [Lift and shift SQL Server Integration Services workloads to the cloud](../lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
+> - **Linux**. For more info, see [Extract, transform, and load data on Linux with SSIS](../../linux/sql-server-linux-migrate-ssis.md).
+
 ## Compare Project Deployment Model and legacy Package Deployment Model  
  The type of deployment model that you choose for a project determines which development and administrative options are available for that project. The following table shows the differences and similarities between using the project deployment model and using the package deployment model.  
   
@@ -144,7 +142,7 @@ For more info about the error described in this section and about the permission
   
      -or-  
   
-     From the command prompt, run **isdeploymentwizard.exe** from **%ProgramFiles%\Microsoft SQL Server\110\DTS\Binn**. On 64-bit computers, there is also a 32-bit version of the tool in **%ProgramFiles(x86)%\Microsoft SQL Server\100\DTS\Binn**.  
+     From the command prompt, run **isdeploymentwizard.exe** from **%ProgramFiles%\Microsoft SQL Server\130\DTS\Binn**. On 64-bit computers, there is also a 32-bit version of the tool in **%ProgramFiles(x86)%\Microsoft SQL Server\130\DTS\Binn**.  
   
 2.  On the **Select Source** page, click **Project deployment file** to select the deployment file for the project.  
   

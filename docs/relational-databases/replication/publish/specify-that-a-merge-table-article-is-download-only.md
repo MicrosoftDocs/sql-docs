@@ -2,26 +2,19 @@
 title: "Specify That a Merge Table Article is Download-Only | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: replication
+ms.topic: conceptual
 helpviewer_keywords: 
   - "merge replication [SQL Server replication], download-only articles"
   - "articles [SQL Server replication], download-only"
   - "download-only articles"
 ms.assetid: 14839cec-6dbf-49c2-aa27-56847b09b4db
-caps.latest.revision: 40
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Specify That a Merge Table Article is Download-Only
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

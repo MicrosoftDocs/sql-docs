@@ -2,16 +2,11 @@
 title: "Register a Service Principal Name for Kerberos Connections | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/20/2017"
-ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "configure-windows"
+ms.prod: sql
+ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: configuration
+ms.topic: conceptual
 helpviewer_keywords: 
   - "connections [SQL Server], SPNs"
   - "network connections [SQL Server], SPNs"
@@ -19,11 +14,9 @@ helpviewer_keywords:
   - "Server Principal Names"
   - "SPNs [SQL Server]"
 ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
-caps.latest.revision: 59
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
-ms.workload: "Active"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Register a Service Principal Name for Kerberos Connections
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

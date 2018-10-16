@@ -2,15 +2,10 @@
 title: "PUBLISHINGSERVERNAME (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "sql-database"
-ms.service: ""
-ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "PUBLISHINGSERVERNAME_TSQL"
@@ -21,11 +16,9 @@ helpviewer_keywords:
   - "PUBLISHINGSERVERNAME function"
   - "Publishers [SQL Server replication], names"
 ms.assetid: e7c278e5-ab23-419e-ab3e-3bb20b0636df
-caps.latest.revision: 16
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # Replication Functions - PUBLISHINGSERVERNAME
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

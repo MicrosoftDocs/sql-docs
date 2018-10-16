@@ -1,18 +1,12 @@
 ---
 title: "Authentication with the Report Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/30/2017"
+ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
-ms.component: "security"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: security
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "connections [Reporting Services], configuring"
   - "connections [Reporting Services], accounts"
@@ -20,10 +14,8 @@ helpviewer_keywords:
   - "authentication [Reporting Services]"
   - "Forms authentication"
 ms.assetid: 753c2542-0e97-4d8f-a5dd-4b07a5cd10ab
-caps.latest.revision: 34
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ---
 
 # Authentication with the Report Server
@@ -78,7 +70,7 @@ manager: "kfile"
 |Configure the Windows Integrated authentication type.|[Configure Windows Authentication on the Report Server](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)|  
 |Configure the Basic authentication type.|[Configure Basic Authentication on the Report Server](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)|  
 |Configure forms authentication or otherwise a Custom authentication type.|[Configure Custom or Forms Authentication on the Report Server](../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)|  
-|Enable the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] to handle the custom authentication scenario.|[Configure the Web Portal to Pass Custom Authentication Cookies](http://msdn.microsoft.com/en-us/91aeb053-149e-4562-ae4c-a688d0e1b2ba)|  
+|Enable the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] to handle the custom authentication scenario.|[Configure the Web Portal to Pass Custom Authentication Cookies](configure-the-web-portal-to-pass-custom-authentication-cookies.md)|  
 
 ## Next steps
 
@@ -88,7 +80,6 @@ manager: "kfile"
 [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
 [Implementing a Security Extension](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)   
 [Configure SSL Connections on a Native Mode Report Server](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)   
-[Configure Report Builder Access](../../reporting-services/report-server/configure-report-builder-access.md)   
 [Security Extensions Overview](../../reporting-services/extensions/security-extension/security-extensions-overview.md)   
 [Authentication in Reporting Services](../../reporting-services/extensions/security-extension/authentication-in-reporting-services.md)   
 [Authorization in Reporting Services](../../reporting-services/extensions/security-extension/authorization-in-reporting-services.md)  

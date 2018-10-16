@@ -1,32 +1,17 @@
 ---
 title: "Ancestor (MDX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "ANCESTOR"
-dev_langs: 
-  - "kbMDX"
-helpviewer_keywords: 
-  - "Ancestor function"
-ms.assetid: b5bf2ce4-20df-4ebc-97eb-e44a6f64cc50
-caps.latest.revision: 46
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-ms.workload: "Inactive"
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Ancestor (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   A function that returns the ancestor of a specified member at a specified level or at a specified distance from the member.  
   

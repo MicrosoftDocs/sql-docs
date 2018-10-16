@@ -2,16 +2,10 @@
 title: "Extensible Key Management Using Azure Key Vault (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/22/2016"
-ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "security"
-ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.prod: sql
+ms.reviewer: vanto
+ms.technology: security
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Extensible Key Management with key vault"
   - "Transparent Data Encryption, using EKM and key vault"
@@ -20,11 +14,9 @@ helpviewer_keywords:
   - "Key Management with key vault"
   - "SQL Server Connector, about"
 ms.assetid: 3efdc48a-8064-4ea6-a828-3fbf758ef97c
-caps.latest.revision: 66
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "On Demand"
+author: aliceku
+ms.author: aliceku
+manager: craigg
 ---
 # Extensible Key Management Using Azure Key Vault (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

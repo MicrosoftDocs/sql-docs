@@ -2,16 +2,11 @@
 title: "XML Schema Collections (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "xml"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: xml
+ms.topic: conceptual
 helpviewer_keywords: 
   - "XSD schemas [SQL Server]"
   - "xml_schema_namespace function"
@@ -24,11 +19,9 @@ helpviewer_keywords:
   - "XML schema collections [SQL Server]"
   - "schema collections [SQL Server], about XML schema collections"
 ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
-caps.latest.revision: 31
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # XML Schema Collections (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

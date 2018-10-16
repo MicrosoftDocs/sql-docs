@@ -1,37 +1,14 @@
 ---
 title: "EnumString Data Type (XMLA) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services, azure-analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-apiname: 
-  - "EnumString Data Type"
-apilocation: 
-  - "http://schemas.microsoft.com/analysisservices/2003/engine"
-apitype: "Schema"
-applies_to: 
-  - "SQL Server 2016 Preview"
-f1_keywords: 
-  - "EnumString"
-  - "urn:schemas-microsoft-com:xml-analysis#EnumString"
-  - "http://schemas.microsoft.com/analysisservices/2003/engine#EnumString"
-helpviewer_keywords: 
-  - "EnumString data type"
-ms.assetid: 9214195e-4539-419b-95ec-b7aa75e033ab
-caps.latest.revision: 29
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: xmla
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # EnumString Data Type (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -44,14 +21,14 @@ ms.workload: "Inactive"
 <EnumString>...</EnumString>  
 ```  
   
-## Data Type Characteristics  
+## Data type characteristics  
   
 |Characteristic|Description|  
 |--------------------|-----------------|  
 |Base data types|**string**|  
 |Derived data types|None|  
   
-## Data Type Relationships  
+## Data type relationships  
   
 |Relationship|Element|  
 |------------------|-------------|  
@@ -62,7 +39,7 @@ ms.workload: "Inactive"
 ## Remarks  
  XML for Analysis (XMLA) uses enumerations to limit string values to a set of verifiable settings. **EnumString** uses the standard XML **string** data type. The specific values for each of the named constants are specified with the enumerator definition. Enumerators are defined by adding them to the [DISCOVER_ENUMERATORS](../../../analysis-services/schema-rowsets/xml/discover-enumerators-rowset.md) schema rowset, and can be retrieved by using the [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) method with the DISCOVER_ENUMERATORS request type.  
   
- The following table describes the enumerators supported by an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+ The following table describes the enumerators supported by an instance of Analysis Services.  
   
 |Enumerator|Description|  
 |----------------|-----------------|  
@@ -76,7 +53,7 @@ ms.workload: "Inactive"
 |ResultsetContents|Supports the XMLA property, **Content**, which determines whether metadata or data is returned in a **root** element.<br /><br /> For more information about **Content**, see [Supported XMLA Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md).|  
 |MDXSupportLevel|Supports the XMLA property, **MDXSupport**, which indicates the level of Multidimensional Expressions (MDX) support available on an [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance.<br /><br /> For more information about **MDXSupport**, see [Supported XMLA Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md).|  
   
-## See Also  
+## See also
  [XML Data Types &#40;XMLA&#41;](../../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)  
   
   

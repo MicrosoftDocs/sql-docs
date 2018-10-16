@@ -1,17 +1,12 @@
-﻿---
+---
 title: "Create a Server Role | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, pdw"
-ms.service: ""
-ms.component: "security"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: security
+ms.topic: conceptual
 f1_keywords: 
   - "SQL13.SWB.SERVERROLE.GENERAL.F1"
   - "sql13.swb.serverrole.memberships.f1"
@@ -19,12 +14,10 @@ f1_keywords:
 helpviewer_keywords: 
   - "SERVER ROLE, creating"
 ms.assetid: 74f19992-8082-4ed7-92a1-04fe676ee82d
-caps.latest.revision: 13
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
-monikerRange: ">= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
+monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create a Server Role
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -73,7 +66,7 @@ monikerRange: ">= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allvers
   
 3.  Right-click the **Server Roles** folder and select **New Server Role…**.  
   
-4.  In the **New Server Role –***server_role_name* dialog box, on the **General** page, enter a name for the new server role in the **Server role name** box.  
+4.  In the **New Server Role –**_server\_role\_name_ dialog box, on the **General** page, enter a name for the new server role in the **Server role name** box.  
   
 5.  In the **Owner** box, enter the name of the server principal that will own the new role. Alternately, click the ellipsis **(…)** to open the **Select Server Login or Role** dialog box.  
   

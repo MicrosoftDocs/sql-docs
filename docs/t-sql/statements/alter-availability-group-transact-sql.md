@@ -2,15 +2,10 @@
 title: "ALTER AVAILABILITY GROUP (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/02/2018"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "sql-database"
-ms.service: ""
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "ALTER_AVAILABILITY_GROUP_TSQL"
@@ -25,11 +20,9 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], configuring"
   - "Availability Groups [SQL Server], Transact-SQL statements"
 ms.assetid: f039d0de-ade7-4aaf-8b7b-d207deb3371a
-caps.latest.revision: 152
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "craigg"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # ALTER AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +49,8 @@ ALTER AVAILABILITY GROUP group_name
    | GRANT CREATE ANY DATABASE  
    | DENY CREATE ANY DATABASE  
    | FAILOVER  
-   | FORCE_FAILOVER_ALLOW_DATA_LOSS   | ADD LISTENER ‘dns_name’ ( <add_listener_option> )  
+   | FORCE_FAILOVER_ALLOW_DATA_LOSS   
+   | ADD LISTENER ‘dns_name’ ( <add_listener_option> )  
    | MODIFY LISTENER ‘dns_name’ ( <modify_listener_option> )  
    | RESTART LISTENER ‘dns_name’  
    | REMOVE LISTENER ‘dns_name’  
@@ -84,17 +78,18 @@ ALTER AVAILABILITY GROUP group_name
     )   
   
   <add_replica_option>::=  
-       SEEDING_MODE = { AUTOMATIC | MANUAL }   
+       SEEDING_MODE = { AUTOMATIC | MANUAL }  
      | BACKUP_PRIORITY = n  
      | SECONDARY_ROLE ( {   
-          ALLOW_CONNECTIONS = { NO | READ_ONLY | ALL }   
-        | READ_ONLY_ROUTING_URL = 'TCP://system-address:port'   
-          } )  
+            [ ALLOW_CONNECTIONS = { NO | READ_ONLY | ALL } ]   
+        [,] [ READ_ONLY_ROUTING_URL = 'TCP://system-address:port' ]  
+     } )  
      | PRIMARY_ROLE ( {   
-          ALLOW_CONNECTIONS = { READ_WRITE | ALL }   
-        | READ_ONLY_ROUTING_LIST = { ( ‘<server_instance>’ [ ,...n ] ) | NONE }   
-          } )  
-     | SESSION_TIMEOUT = seconds  
+            [ ALLOW_CONNECTIONS = { READ_WRITE | ALL } ]   
+        [,] [ READ_ONLY_ROUTING_LIST = { ( ‘<server_instance>’ [ ,...n ] ) | NONE } ]  
+        [,] [ READ_WRITE_ROUTING_URL = { ( ‘<server_instance>’ ) ] 
+     } )  
+     | SESSION_TIMEOUT = integer
   
 <modify_replica_spec>::=  
   <server_instance> WITH  
@@ -272,7 +267,7 @@ ALTER AVAILABILITY GROUP group_name
   
  ENDPOINT_URL is required in the ADD REPLICA ON clause and optional in the MODIFY REPLICA ON clause.  For more information, see [Specify the Endpoint URL When Adding or Modifying an Availability Replica &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md).  
   
- **'**TCP**://***system-address***:***port***'**  
+ **'**TCP**://**_system-address_**:**_port_**'**  
  Specifies a URL for specifying an endpoint URL or read-only routing URL. The URL parameters are as follows:  
   
  *system-address*  
@@ -328,7 +323,7 @@ ALTER AVAILABILITY GROUP group_name
  MANUAL  
  Specifies manual seeding (default). This method requires you to create a backup of the database on the primary replica and manually restore that backup on the secondary replica.  
   
- BACKUP_PRIORITY **=***n*  
+ BACKUP_PRIORITY **=**_n_  
  Specifies your priority for performing backups on this replica relative to the other replicas in the same availability group. The value is an integer in the range of 0..100. These values have the following meanings:  
   
 -   1..100 indicates that the availability replica could be chosen for performing backups. 1 indicates the lowest priority, and 100 indicates the highest priority. If BACKUP_PRIORITY = 1, the availability replica would be chosen for performing backups only if no higher priority availability replicas are currently available.  
@@ -356,7 +351,7 @@ ALTER AVAILABILITY GROUP group_name
   
  For more information, see [Active Secondaries: Readable Secondary Replicas &#40;Always On Availability Groups&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
- READ_ONLY_ROUTING_URL **='**TCP**://***system-address***:***port***'**  
+ READ_ONLY_ROUTING_URL **='**TCP**://**_system-address_**:**_port_**'**  
  Specifies the URL to be used for routing read-intent connection requests to this availability replica. This is the URL on which the SQL Server Database Engine listens. Typically, the default instance of the SQL Server Database Engine listens on TCP port 1433.  
   
  For a named instance, you can obtain the port number by querying the **port** and **type_desc** columns of the [sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md) dynamic management view. The server instance uses the Transact-SQL listener (**type_desc='TSQL'**).  
@@ -399,7 +394,7 @@ ALTER AVAILABILITY GROUP group_name
  NONE  
  Specifies that when this availability replica is the primary replica, read-only routing will not be supported. This is the default behavior. When used with MODIFY REPLICA ON, this value disables an existing list, if any.  
   
- SESSION_TIMEOUT **=***seconds*  
+ SESSION_TIMEOUT **=**_seconds_  
  Specifies the session-timeout period in seconds. If you do not specify this option, by default, the time period is 10 seconds. The minimum value is 5 seconds.  
   
 > [!IMPORTANT]  
@@ -428,7 +423,7 @@ ALTER AVAILABILITY GROUP group_name
  For more information, see [Join a Secondary Replica to an Availability Group &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md).  
   
  FAILOVER  
- Initiates a manual failover of the availability group without data loss to the secondary replica to which you are connected. The replica on which you enter a failover target failover command is known as the .  The failover target will take over the primary role and recover its copy of each database and bring them online as the new primary databases. The former primary replica concurrently transitions to the secondary role, and its databases become secondary databases and are immediately suspended. Potentially, these roles can be switched back and forth by a series of failures.  
+Initiates a manual failover of the availability group without data loss to the secondary replica to which you are connected. The replica that will host the primary replica is the *failover target*.  The failover target will take over the primary role and recover its copy of each database and bring them online as the new primary databases. The former primary replica concurrently transitions to the secondary role, and its databases become secondary databases and are immediately suspended. Potentially, these roles can be switched back and forth by a series of failures.  
   
  Supported only on a synchronous-commit secondary replica that is currently synchronized with the primary replica. Note that for a secondary replica to be synchronized the primary replica must also be running in synchronous-commit mode.  
   
@@ -450,7 +445,7 @@ ALTER AVAILABILITY GROUP group_name
   
  For information about the limitations, prerequisites and recommendations for forcing failover and the effect of a forced failover on the former primary databases in the availability group, see [Perform a Forced Manual Failover of an Availability Group &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).  
   
- ADD LISTENER **‘***dns_name***’(** \<add_listener_option> **)**  
+ ADD LISTENER **‘**_dns\_name_**’(** \<add_listener_option> **)**  
  Defines a new availability group listener for this availability group. Supported only on the primary replica.  
   
 > [!IMPORTANT]  
@@ -477,12 +472,12 @@ ALTER AVAILABILITY GROUP group_name
  \<ag_name>  
  Specifies the name  of the availability group that makes up one half of the distributed availability group.  
   
- LISTENER **='**TCP**://***system-address***:***port***'**  
+ LISTENER **='**TCP**://**_system-address_**:**_port_**'**  
  Specifies the URL path for the listener associated with the availability group.  
   
  The LISTENER clause is required.  
   
- **'**TCP**://***system-address***:***port***'**  
+ **'**TCP**://**_system-address_**:**_port_**'**  
  Specifies a URL for the listener associated with the availability group. The URL parameters are as follows:  
   
  *system-address*  
@@ -534,7 +529,7 @@ ALTER AVAILABILITY GROUP group_name
  \<add_listener_option>  
  ADD LISTENER takes one of the following options:  
   
- WITH DHCP [ ON { **(‘***four_part_ipv4_address***’,‘***four_part_ipv4_mask***’)** } ]  
+ WITH DHCP [ ON { **(‘**_four\_part\_ipv4\_address_**’,‘**_four\_part\_ipv4\_mask_**’)** } ]  
  Specifies that the availability group listener will use the Dynamic Host Configuration Protocol (DHCP).  Optionally, use the ON clause to identify the network on which this listener will be created. DHCP is limited to a single subnet that is used for every server instances that hosts an availability replica in the availability group.  
   
 > [!IMPORTANT]  
@@ -544,7 +539,7 @@ ALTER AVAILABILITY GROUP group_name
   
  `WITH DHCP ON ('10.120.19.0','255.255.254.0')`  
   
- WITH IP **(** { **(‘***four_part_ipv4_address***’,‘***four_part_ipv4_mask***’)** | **(‘***ipv6_address***’)** } [ **,** ...*n* ] **)** [ **,** PORT **=***listener_port* ]  
+ WITH IP **(** { **(‘**_four\_part\_ipv4\_address_**’,‘**_four\_part\_ipv4\_mask_**’)** | **(‘**_ipv6\_address_**’)** } [ **,** ..._n_ ] **)** [ **,** PORT **=**_listener\_port_ ]  
  Specifies that, instead of using DHCP, the availability group listener will use one or more static IP addresses. To create an availability group across multiple subnets, each subnet requires one static IP address in the listener configuration. For a given subnet, the static IP address can be either an IPv4 address or an IPv6 address. Contact your network administrator to get a static IP address for each subnet that will host an availability replica for the new availability group.  
   
  For example:  
@@ -567,22 +562,22 @@ ALTER AVAILABILITY GROUP group_name
   
  For example: `WITH IP ( ('2001::4898:23:1002:20f:1fff:feff:b3a3') ) , PORT = 7777`  
   
- MODIFY LISTENER **‘***dns_name***’(** \<modify_listener_option> **)**  
+ MODIFY LISTENER **‘**_dns\_name_**’(** \<modify\_listener\_option\> **)**  
  Modifies an existing availability group listener for this availability group. Supported only on the primary replica.  
   
- \<modify_listener_option>  
+ \<modify\_listener\_option\>  
  MODIFY LISTENER takes one of the following options:  
   
- ADD IP { **(‘***four_part_ipv4_address***’,‘***four_part_ipv4_mask***’)** | **(‘**dns_name*ipv6_address***’)** }  
- Adds the specified IP address to the availability group listener specified by *dns_name*.  
+ ADD IP { **(‘**_four\_part\_ipv4\_address_**’,‘**_four\_part\_ipv4_mask_**’)** \| <b>(‘</b>dns\_name*ipv6\_address*__’)__ }  
+ Adds the specified IP address to the availability group listener specified by *dns\_name*.  
   
  PORT **=** *listener_port*  
  See the description of this argument earlier in this section.  
   
- RESTART LISTENER **‘***dns_name***’**  
+ RESTART LISTENER **‘**_dns\_name_**’**  
  Restarts the listener that is associated with the specified DNS name. Supported only on the primary replica.  
   
- REMOVE LISTENER **‘***dns_name***’**  
+ REMOVE LISTENER **‘**_dns\_name_**’**  
  Removes the listener that is associated with the specified DNS name. Supported only on the primary replica.  
   
  OFFLINE  

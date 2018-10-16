@@ -1,15 +1,11 @@
 ---
 title: "Recordset and SourceRecordset Properties Example (VBScript) | Microsoft Docs"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: 
-ms.suite: sql
 ms.prod: sql  
-ms.prod_service: drivers
-ms.component: reference
-ms.tgt_pltfrm: ""
+ms.prod_service: connectivity
 ms.topic: conceptual
 dev_langs: 
   - "VB"
@@ -17,11 +13,9 @@ helpviewer_keywords:
   - "Source property [ADO], VBScript example"
   - "Recordset property [ADO], VBScript example"
 ms.assetid: 95175316-cd10-4cf7-96ba-2a226fd97701
-caps.latest.revision: 16
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Recordset and SourceRecordset Properties Example (VBScript)
 > [!IMPORTANT]

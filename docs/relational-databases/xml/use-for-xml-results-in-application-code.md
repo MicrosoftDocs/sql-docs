@@ -2,16 +2,11 @@
 title: "Use FOR XML Results in Application Code | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "xml"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: xml
+ms.topic: conceptual
 helpviewer_keywords: 
   - "FOR XML clause, application code usage"
   - "XML [SQL Server], FOR XML clause"
@@ -21,11 +16,9 @@ helpviewer_keywords:
   - "XML data islands [SQL Server]"
   - "data islands [SQL Server]"
 ms.assetid: 41ae67bd-ece9-49ea-8062-c8d658ab4154
-caps.latest.revision: 23
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Use FOR XML Results in Application Code
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -142,7 +135,7 @@ ms.workload: "Inactive"
  The generated HTML page results that appear will be similar to the following sample output:  
   
 ##### Server-side processing  
- Page Generated @ 3/11/2006 3:36:02 PM  
+ Page Generated \@ 3/11/2006 3:36:02 PM  
   
  Connect String = Provider=SQLOLEDB;Data Source=MyServer;Initial Catalog=AdventureWorks;Integrated Security=SSPI;  
   

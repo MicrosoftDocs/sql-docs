@@ -2,15 +2,11 @@
 title: "sp_table_validation (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/08/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "replication"
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_table_validation_TSQL"
@@ -18,11 +14,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_table_validation"
 ms.assetid: 31b25f9b-9b62-496e-a97e-441d5fd6e767
-caps.latest.revision: 33
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sp_table_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]

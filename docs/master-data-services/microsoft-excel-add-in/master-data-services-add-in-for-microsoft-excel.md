@@ -1,23 +1,16 @@
 ---
 title: "Master Data Services Add-in for Microsoft Excel | Microsoft Docs"
-ms.custom: ""
+ms.custom: microsoft-excel-add-in
 ms.date: "07/25/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "mds"
-ms.service: ""
-ms.component: "microsoft-excel-add-in"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: master-data-services
+ms.topic: conceptual
 ms.assetid: 33d9c8fc-9602-494d-b9ab-8f0f42785974
-caps.latest.revision: 30
-author: "leolimsft"
-ms.author: "lle"
-manager: "craigg"
-ms.workload: "On Demand"
+author: leolimsft
+ms.author: lle
+manager: craigg
 ---
 # Master Data Services Add-in for Microsoft Excel
 

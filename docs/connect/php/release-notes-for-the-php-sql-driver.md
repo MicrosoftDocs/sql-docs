@@ -1,30 +1,31 @@
 ---
 title: "Release Notes for the Microsoft Drivers for PHP for SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/26/2018"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "php"
+ms.date: "07/20/2018"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology:
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords:
   - "what's new in version 1.1"
 ms.assetid: 91cca3d2-ba99-4a6d-b0de-beb9699cb3f8
-caps.latest.revision: 37
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Release Notes for the Microsoft Drivers for PHP for SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 This page discusses what was added in each version of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
+
+## What's New in Version 5.3
+
+- Support for Microsoft ODBC Driver 17.2 on all platforms
+- Support for macOS High Sierra (requires ODBC Driver 17 and above)
+- Support for Azure Key Vault for Always Encrypted for basic CRUD functionalities such that Always Encrypted feature is available to all supported Windows, Linux or macOS platforms [Using Always Encrypted with the PHP Drivers for SQL Server](../../connect/php/using-always-encrypted-php-drivers.md)
+- Support Ubuntu 18.04 LTS (requires ODBC Driver 17.2)
+- Support for Connection Resiliency in Linux or macOS as well (requires ODBC Driver 17.2)
 
 ## What's New in Version 5.2
 
@@ -75,7 +76,7 @@ This page discusses what was added in each version of the [!INCLUDE[ssDriverPHP]
 
 - Support for PHP 5.4.  PHP 5.2 is not supported in version 3 of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
 - AttachDBFileName connection option is added. For more information, see [Connection Options](../../connect/php/connection-options.md).  
-- Support for LocalDB, which was added in [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]. For more information, see [Support for LocalDB](../../connect/php/php-driver-for-sql-server-support-for-localdb.md).
+- Support for LocalDB, which was added in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. For more information, see [Support for LocalDB](../../connect/php/php-driver-for-sql-server-support-for-localdb.md).
 - AttachDBFileName connection option is added. For more information, see [Connection Options](../../connect/php/connection-options.md).  
 - Support for the high-availability, disaster recovery features. For more information, see [Support for High Availability, Disaster Recovery](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).
 - Support for client-side cursors (caching a result set in-memory). For more information, see [Cursor Types &#40;SQLSRV Driver&#41;](../../connect/php/cursor-types-sqlsrv-driver.md) and [Cursor Types &#40;PDO_SQLSRV Driver&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).

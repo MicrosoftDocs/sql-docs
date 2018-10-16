@@ -2,15 +2,9 @@
 title: "SQL Server Operating System Related Dynamic Management Views (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/17/2018"
-ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "dmv's"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -20,11 +14,9 @@ helpviewer_keywords:
   - "SQL OS dynamic management objects [SQL Server]"
   - "dynamic management objects [SQL Server], SQL OS"
 ms.assetid: 3030c86a-0a74-4fed-ac0f-392e244cb965
-caps.latest.revision: 29
-author: "stevestein"
-ms.author: "sstein"
-manager: "craigg"
-ms.workload: "On Demand"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # SQL Server Operating System Related Dynamic Management Views (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

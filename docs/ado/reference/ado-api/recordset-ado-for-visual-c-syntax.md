@@ -1,16 +1,11 @@
 ---
 title: "Recordset (ADO for Visual C++ Syntax) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 dev_langs: 
@@ -18,11 +13,9 @@ dev_langs:
 helpviewer_keywords: 
   - "Recordset collection [ADO], ADO for Visual C++ syntax"
 ms.assetid: affc847c-a533-4c8a-bdff-3682fdb5df5f
-caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Recordset (ADO for Visual C++ Syntax)
 ## Methods  

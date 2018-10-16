@@ -1,17 +1,12 @@
-﻿---
+---
 title: "Data Compression | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/31/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "compression"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-data-compression"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: performance
+ms.topic: conceptual
 helpviewer_keywords: 
   - "page compression [Database Engine]"
   - "indexes [SQL Server], compressed"
@@ -25,12 +20,10 @@ helpviewer_keywords:
   - "data compression [Database Engine]"
   - "compressed tables [SQL Server]"
 ms.assetid: 5f33e686-e115-4687-bd39-a00c48646513
-caps.latest.revision: 60
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
-ms.workload: "On Demand"
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Data Compression
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -91,7 +84,7 @@ For columnstore tables and indexes, all columnstore tables and indexes always us
 -   Use **COLUMNSTORE_ARCHIVE** data compression to compress columnstore data with archival compression.  
 -   Use **COLUMNSTORE** data compression to decompress archival compression. The resulting data continue to be compressed with columnstore compression.  
   
-To add archival compression, use [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md) or [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) with the REBUILD option and DATA COMPRESSION = COLUMNSTORE.  
+To add archival compression, use [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md) or [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) with the REBUILD option and DATA COMPRESSION = COLUMNSTORE_ARCHIVE.  
   
 #### Examples:  
 ```  

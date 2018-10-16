@@ -2,15 +2,10 @@
 title: "DROP TYPE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/12/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "DROP TYPE"
@@ -23,11 +18,9 @@ helpviewer_keywords:
   - "alias data types [SQL Server], removing"
   - "DROP TYPE statement"
 ms.assetid: 11bf83f9-0718-4238-a835-83d2eb14ae7b
-caps.latest.revision: 41
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "On Demand"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ---
 # DROP TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -1,27 +1,18 @@
 ---
 title: "Define Query Parameters Dialog Box | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
-ms.component: "report-data"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-data
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+ms.topic: reference
 f1_keywords: 
   - "sql13.rtp.rptdesigner.definequeryparameters.f1"
   - "10026"
 ms.assetid: a9697101-aa52-4a62-8f33-fad8f5bc2a0c
-caps.latest.revision: 12
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
-ms.workload: "Inactive"
+author: markingmyname
+ms.author: maghan
 ---
 # Define Query Parameters Dialog Box
   Use the **Define Query Parameters** dialog box to specify parameter values when you run a query in a query designer at design time to see sample data. Query parameters filter data on the data source and help to limit the amount of data that a report processes. These values are not saved in the report definition.  

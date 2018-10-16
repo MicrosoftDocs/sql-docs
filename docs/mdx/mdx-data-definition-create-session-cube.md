@@ -1,39 +1,17 @@
 ---
 title: "CREATE SESSION CUBE Statement  (MDX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "CREATE_SESSION_CUBE"
-  - "SESSION"
-  - "CUBE"
-  - "SESSION CUBE"
-  - "CREATE SESSION CUBE"
-  - "CREATE SESSION"
-  - "CREATE"
-dev_langs: 
-  - "kbMDX"
-helpviewer_keywords: 
-  - "CREATE SESSION CUBE"
-  - "statements [MDX], CREATE SESSION CUBE"
-ms.assetid: 06b90f44-d943-4a52-b0d8-4bcbc57ed6ec
-caps.latest.revision: 17
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-ms.workload: "Inactive"
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # MDX Data Definition - CREATE SESSION CUBE
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Creates and populates a session cube from an existing server cube. The session cube is only visible within the current session; it cannot be browsed or queried from any other session. The session cube is implicitly deleted when the session is closed.  
   

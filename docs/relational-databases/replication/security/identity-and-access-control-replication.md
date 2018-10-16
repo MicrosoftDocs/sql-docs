@@ -2,27 +2,20 @@
 title: "Identity and Access Control (Replication) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: replication
+ms.topic: conceptual
 helpviewer_keywords: 
   - "access controls [SQL Server replication]"
   - "security [SQL Server replication], identity and access control"
   - "authentication [SQL Server replication]"
   - "identity [Replication]"
 ms.assetid: 4da0e793-1ee4-4f69-a80b-45c6732a238d
-caps.latest.revision: 8
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Identity and Access Control (Replication)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

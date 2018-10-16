@@ -5,16 +5,11 @@ author: MikeRayMSFT
 ms.author: mikeray 
 manager: craigg
 ms.date: 03/17/2017
-ms.topic: article
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: ""
-ms.suite: "sql"
+ms.topic: conceptual
+ms.prod: sql
 ms.custom: "sql-linux"
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.workload: "On Demand"
 ---
 # Configure Red Hat Enterprise Linux shared disk cluster for SQL Server
 
@@ -286,7 +281,7 @@ At this point both instances of SQL Server are configured to run with the databa
 
    ​
 
-2. Set the password for for the default user that is created when installing Pacemaker and Corosync packages. Use the same password on both nodes. 
+2. Set the password for the default user that is created when installing Pacemaker and Corosync packages. Use the same password on both nodes. 
 
    ```bash
    sudo passwd hacluster

@@ -2,16 +2,11 @@
 title: "Monitoring (Replication) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: replication
+ms.topic: conceptual
 helpviewer_keywords: 
   - "monitoring performance [SQL Server replication], about monitoring replication"
   - "transactional replication, monitoring"
@@ -21,11 +16,9 @@ helpviewer_keywords:
   - "replication [SQL Server], monitoring"
   - "administering replication, monitoring"
 ms.assetid: f182f43a-6af8-45bc-a708-08d5f7a6984a
-caps.latest.revision: 39
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Monitoring (Replication)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -2,15 +2,10 @@
 title: "ALTER SEARCH PROPERTY LIST (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/10/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "sql-database"
-ms.service: ""
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "ALTER_SEARCH_PROPERTY_TSQL"
@@ -26,11 +21,9 @@ helpviewer_keywords:
   - "search property lists [SQL Server], altering"
   - "ALTER SEARCH PROPERTY LIST statement"
 ms.assetid: 0436e4a8-ca26-4d23-93f1-e31e2a1c8bfb
-caps.latest.revision: 55
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ---
 # ALTER SEARCH PROPERTY LIST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

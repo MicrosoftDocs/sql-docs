@@ -5,16 +5,11 @@ author: MikeRayMSFT
 ms.author: mikeray 
 manager: craigg
 ms.date: 03/17/2017
-ms.topic: article
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: ""
-ms.suite: "sql"
+ms.topic: conceptual
+ms.prod: sql
 ms.custom: "sql-linux"
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
-ms.workload: "Inactive"
 ---
 # Configure SLES shared disk cluster for SQL Server
 

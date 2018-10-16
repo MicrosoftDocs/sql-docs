@@ -28,7 +28,7 @@ For the most part, SQL Server consumes the same R and Python libraries that are 
 
     Scalable algorithms that support remote compute contexts and multiple data sources.
 
-+ [MicrosoftML](https://docs.microsoft.com/machine-learning-serverr-reference/microsoftml/microsoftml-package)
++ [MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)
 
     Fast, scalable machine learning algorithms and transforms for R. Requires RevoScaleR.
 

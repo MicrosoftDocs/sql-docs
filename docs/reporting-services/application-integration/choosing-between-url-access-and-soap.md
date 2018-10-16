@@ -1,22 +1,15 @@
 ---
 title: "Choosing between URL access and SOAP in Reporting Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/19/2017"
+ms.date: 10/19/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.service: ""
-ms.component: "application-integration"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: application-integration
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.topic: reference
+author: markingmyname
+ms.author: maghan
+monikerRange: "= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Choosing between URL access and SOAP in Reporting Services
 

@@ -1,31 +1,24 @@
-﻿---
+---
 title: "Creating Natively Compiled Stored Procedures | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "in-memory-oltp"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: in-memory-oltp
+ms.topic: conceptual
 ms.assetid: e6b34010-cf62-4f65-bbdf-117f291cde7b
-caps.latest.revision: 15
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "craigg"
-ms.workload: "On Demand"
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Creating Natively Compiled Stored Procedures
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  Natively compiled stored procedures do not implement the full [!INCLUDE[tsql](../../includes/tsql-md.md)] programmability and query surface area. There are certain [!INCLUDE[tsql](../../includes/tsql-md.md)] constructs that cannot be used inside natively compiled stored procedures. For more information, see [Supported Features for Natively Compiled T-SQL Modules](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md).  
+Natively compiled stored procedures do not implement the full [!INCLUDE[tsql](../../includes/tsql-md.md)] programmability and query surface area. There are certain [!INCLUDE[tsql](../../includes/tsql-md.md)] constructs that cannot be used inside natively compiled stored procedures. For more information, see [Supported Features for Natively Compiled T-SQL Modules](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md).  
   
- There are, however, several [!INCLUDE[tsql](../../includes/tsql-md.md)] features that are only supported for natively compiled stored procedures:  
+There are, however, several [!INCLUDE[tsql](../../includes/tsql-md.md)] features that are only supported for natively compiled stored procedures:  
   
 -   Atomic blocks. For more information, see [Atomic Blocks](../../relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md).  
   
@@ -39,30 +32,30 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
   
 -   Schema binding of natively compiled stored procedures.  
   
- Natively compiled stored procedures are created using [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md). The following example shows a memory-optimized table and a natively compiled stored procedure used for inserting rows into the table.  
+Natively compiled stored procedures are created using [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md). The following example shows a memory-optimized table and a natively compiled stored procedure used for inserting rows into the table.  
   
 ```sql  
-create table dbo.Ord  
-(OrdNo integer not null primary key nonclustered,   
- OrdDate datetime not null,   
- CustCode nvarchar(5) not null)   
- with (memory_optimized=on)  
-go  
+CREATE TABLE [dbo].[T2] (  
+  [c1] [int] NOT NULL, 
+  [c2] [datetime] NOT NULL,
+  [c3] nvarchar(5) NOT NULL, 
+  CONSTRAINT [PK_T1] PRIMARY KEY NONCLUSTERED ([c1])  
+  ) WITH ( MEMORY_OPTIMIZED = ON , DURABILITY = SCHEMA_AND_DATA )  
+GO  
   
-create procedure dbo.OrderInsert(@OrdNo integer, @CustCode nvarchar(5))  
-with native_compilation, schemabinding  
-as   
-begin atomic with  
-(transaction isolation level = snapshot,  
-language = N'English')  
-  
-  declare @OrdDate datetime = getdate();  
-  insert into dbo.Ord (OrdNo, CustCode, OrdDate) values (@OrdNo, @CustCode, @OrdDate);  
-end  
-go  
+CREATE PROCEDURE [dbo].[usp_2] (@c1 int, @c3 nvarchar(5)) 
+WITH NATIVE_COMPILATION, SCHEMABINDING  
+AS BEGIN ATOMIC WITH  
+(  
+ TRANSACTION ISOLATION LEVEL = SNAPSHOT, LANGUAGE = N'us_english'  
+)  
+  DECLARE @c2 datetime = GETDATE();  
+  INSERT INTO [dbo].[T2] (c1, c2, c3) values (@c1, @c2, @c3);  
+END  
+GO  
 ```  
-  
- In the code sample, **NATIVE_COMPILATION** indicates that this [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure is a natively compiled stored procedure. The following options are required:  
+ 
+In the code sample, **NATIVE_COMPILATION** indicates that this [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure is a natively compiled stored procedure. The following options are required:  
   
 |Option|Description|  
 |------------|-----------------|  

@@ -1,16 +1,10 @@
 ---
 title: "sys.dm_hadr_database_replica_states (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/11/2018"
-ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "dmv's"
+ms.date: "06/26/2018"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.dm_hadr_database_states_TSQL"
@@ -23,11 +17,9 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], monitoring"
   - "sys.dm_hadr_database_replica_states dynamic management view"
 ms.assetid: 1a17b0c9-2535-4f3d-8013-cd0a6d08f773
-caps.latest.revision: 84
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
-ms.workload: "On Demand"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # sys.dm_hadr_database_replica_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -68,11 +60,11 @@ ms.workload: "On Demand"
 |**log_send_queue_size**|**bigint**|Amount of log records of the primary database that has not been sent to the secondary databases, in kilobytes (KB).|  
 |**log_send_rate**|**bigint**|Average rate at which primary replica instance sent data during last active period, in kilobytes (KB)/second.|  
 |**redo_queue_size**|**bigint**|Amount of log records in the log files of the secondary replica that has not yet been redone, in kilobytes (KB).|  
-|**redo_rate**|**bigint**|Rate at which the log records are being redone on a given secondary database, in kilobytes (KB)/second.|  
+|**redo_rate**|**bigint**|Average Rate at which the log records are being redone on a given secondary database, in kilobytes (KB)/second.|  
 |**filestream_send_rate**|**bigint**|The rate at which the FILESTREAM files are shipped to the secondary replica, in kilobytes (KB)/second.|  
 |**end_of_log_lsn**|**numeric(25,0)**|Local end of log LSN. Actual LSN corresponding to the last log record in the log cache on the primary and secondary databases. On the primary replica, the secondary rows reflect the end of log LSN from the latest progress messages that the secondary replicas have sent to the primary replica.<br /><br /> **end_of_log_lsn** reflects a log-block ID padded with zeroes. It is not an actual log sequence number. For more information, see [Understanding the LSN Column Values](#LSNcolumns), later in this topic.|  
 |**last_commit_lsn**|**Numeric(25,0)**|Actual log sequence number corresponding to the last commit record in the transaction log.<br /><br /> On the primary database, this corresponds to the last commit record processed. Rows for secondary databases show the log sequence number that the secondary replica has sent to the primary replica.<br /><br /> On the secondary replica, this is the last commit record that was redone.|  
-|**last_commit_time**|**datetime**|Time corresponding to the last commit record.<br /><br /> On the secondary database, this time is the same as on the primary database.<br /><br /> On the primary replica, each secondary database row displays the time that the secondary replica that hosts that secondary database has reported back to the primary replica. The difference in time between the primary-database row and a given secondary-database row represents approximately the recovery time objective (RPO), assuming that the redo process is caught up and that the progress has been reported back to the primary replica by the secondary replica.|  
+|**last_commit_time**|**datetime**|Time corresponding to the last commit record.<br /><br /> On the secondary database, this time is the same as on the primary database.<br /><br /> On the primary replica, each secondary database row displays the time that the secondary replica that hosts that secondary database has reported back to the primary replica. The difference in time between the primary-database row and a given secondary-database row represents approximately the recovery point objective (RPO), assuming that the redo process is caught up and that the progress has been reported back to the primary replica by the secondary replica.|  
 |**low_water_mark_for_ghosts**|**bigint**|A monotonically increasing number for the database indicating a low water mark used by ghost cleanup on the primary database. If this number is not increasing over time, it implies that ghost cleanup might not happen. To decide which ghost rows to clean up, the primary replica uses the minimum value of this column for this database across all availability replicas (including the primary replica).|  
 |**secondary_lag_seconds**|**bigint**|The number of seconds that the secondary replica is behind the primary replica during synchronization.<br /><br />**Applies to:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
   

@@ -2,27 +2,23 @@
 title: "IRowsetFastLoad (OLE DB) | Microsoft Docs"
 description: "IRowsetFastLoad (OLE DB)"
 ms.custom: ""
-ms.date: "03/26/2018"
-ms.prod: "sql"
+ms.date: "06/14/2018"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "ole-db-interfaces"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
+ms.technology: connectivity
 ms.topic: "reference"
 apitype: "COM"
 helpviewer_keywords: 
   - "IRowsetFastLoad interface"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
-ms.workload: "Inactive"
 ---
 # IRowsetFastLoad (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   The **IRowsetFastLoad** interface exposes support for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] memory-based bulk-copy operations. OLE DB Driver for SQL Server consumers use the interface to rapidly add data to an existing [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] table.  
   

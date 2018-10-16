@@ -2,29 +2,26 @@
 title: "ISSCommandWithParameters::GetParameterProperties (OLE DB) | Microsoft Docs"
 description: "ISSCommandWithParameters::GetParameterProperties (OLE DB)"
 ms.custom: ""
-ms.date: "03/26/2018"
-ms.prod: "sql"
+ms.date: "06/14/2018"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "ole-db-interfaces"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
   - "ISSCommandWithParameters::GetParameterProperties (OLE DB)"
 apitype: "COM"
 helpviewer_keywords: 
   - "GetParameterProperties method"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
-ms.workload: "Inactive"
 ---
 # ISSCommandWithParameters::GetParameterProperties (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Returns an array of SSPARAMPROPS property set structures, one SSPARAMPROPS property set for each UDT or XML parameter.  
   
@@ -42,7 +39,7 @@ HRESULT GetParameterProperties(
  A pointer to memory that contains the number of SSPARAMPROPS structures returned in *prgParamProperties*.  
   
  *prgParamProperties*[out]  
- A pointer to memory in which an array of SSPARAMPROPS structures is returned. The provider allocates memory for the structures and returns the address to this memory, the consumer releases this memory with **IMalloc::Free** when it no longer needs the structures. Before calling **IMalloc::Free** for *prgParamProperties*, the consumer must also call **VariantClear** for the *vValue* property of each DBPROP structure in order to prevent a memory leak in cases where the variant contains a reference type such as a BSTR. If *pcParams* is zero on output or an error other than DB_E_ERRORSOCCURRED occurs, the provider doesn't allocate any memory and ensures *prgParamProperties* is a null pointer on output.  
+ A pointer to memory in which an array of SSPARAMPROPS structures is returned. The provider allocates memory for the structures and returns the address to this memory, the consumer releases this memory with **IMalloc::Free** when it no longer needs the structures. Before calling **IMalloc::Free** for *prgParamProperties*, the consumer must also call **VariantClear** for the *vValue* property of each DBPROP structure to prevent a memory leak in cases where the variant contains a reference type such as a BSTR. If *pcParams* is zero on output or an error other than DB_E_ERRORSOCCURRED occurs, the provider doesn't allocate any memory and makes sure *prgParamProperties* is a null pointer on output.  
   
 ## Return Code Values  
  The **GetParameterProperties** method returns the same error codes as the core OLE DB **ICommandProperties::GetProperties** method, except that DB_S_ERRORSOCCURRED and DB_E_ERRORSOCCURED can't be raised.  

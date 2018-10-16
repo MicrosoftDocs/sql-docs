@@ -1,20 +1,21 @@
 ---
-title: Lesson 6 Operationalize the R model| Microsoft Docs
+title: Lesson 6 Predict potential outcomes using R models (SQL Server Machine Learning) | Microsoft Docs
+description: Tutorial showing how to embed R in SQL Server stored procedures and T-SQL functions 
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
+ms.date: 06/08/2018  
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-# Lesson 6: Operationalize the R model
+# Lesson 6: Predict potential outcomes using an R model in a stored procedure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This article is part of a tutorial for SQL developers on how to use R in SQL Server.
 
-In this step, you learn to *operationalize* the model using a stored procedure. This stored procedure can be called directly by other applications, to make predictions on new observations. The walkthrough demonstrates two ways to perform scoring using an R model in a stored procedure:
+In this step, you learn to use the model against new observations to predict potential outcomes. The model is wrapped in a stored procedure which can be called directly by other applications. The walkthrough demonstrates several ways to perform scoring:
 
 - **Batch scoring mode**: Use a SELECT query as an input to the stored procedure. The stored procedure returns a table of observations corresponding to the input cases.
 
@@ -24,7 +25,7 @@ First, let's see how scoring works in general.
 
 ## Basic scoring
 
-The stored procedure _PredictTip_ illustrates the basic syntax for wrapping a prediction call in a stored procedure.
+The stored procedure **PredictTip** illustrates the basic syntax for wrapping a prediction call in a stored procedure.
 
 ```SQL
 CREATE PROCEDURE [dbo].[PredictTip] @inquery nvarchar(max) 
@@ -50,7 +51,7 @@ GO
 
 + The SELECT statement gets the serialized model from the database, and stores the model in the R variable `mod` for further processing using R.
 
-+ The new cases for scoring are obtained from the [!INCLUDE[tsql](../../includes/tsql-md.md)] query specified in `@inquery`, the first parameter to the stored procedure. As the query data is read, the rows are saved in the default data frame, `InputDataSet`. This data frame is passed to the `rxPredict` function in R, which generates the scores.
++ The new cases for scoring are obtained from the [!INCLUDE[tsql](../../includes/tsql-md.md)] query specified in `@inquery`, the first parameter to the stored procedure. As the query data is read, the rows are saved in the default data frame, `InputDataSet`. This data frame is passed to the [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) function in [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler), which generates the scores.
   
     `OutputDataSet<-rxPredict(modelObject = mod, data = InputDataSet, outData = NULL, predVarNames = "Score", type = "response", writeModelVars = FALSE, overwrite = TRUE);`
   
@@ -87,13 +88,13 @@ Now let's see how batch scoring works.
     1  214 0.7 2013-06-26 13:28:10.000   0.6970098661
     ```
 
-    This query can be used as input to the stored procedure, _PredictTipBatchMode_, provided as part of the download.
+    This query can be used as input to the stored procedure, **PredictTipMode**, provided as part of the download.
 
-2. Take a minute to review the code of the stored procedure _PredictTipBatchMode_ in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
+2. Take a minute to review the code of the stored procedure **PredictTipMode** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
 
     ```SQL
-    /****** Object:  StoredProcedure [dbo].[PredictTipBatchMode]  ******/
-    CREATE PROCEDURE [dbo].[PredictTipBatchMode] @inquery nvarchar(max)
+    /****** Object:  StoredProcedure [dbo].[PredictTipMode]  ******/
+    CREATE PROCEDURE [dbo].[PredictTipMode] @inquery nvarchar(max)
     AS
     BEGIN
     DECLARE @lmodel2 varbinary(max) = (SELECT TOP 1 model FROM nyc_taxi_models);
@@ -137,7 +138,7 @@ Sometimes you want to pass in individual values from an application and get a si
 
 In this section, you learn how to create single predictions using a stored procedure.
 
-1. Take a minute to review the code of the stored procedure _PredictTipSingleMode_, which was included as part of the download.
+1. Take a minute to review the code of the stored procedure **PredictTipSingleMode**, which is included as part of the download.
   
     ```SQL
     CREATE PROCEDURE [dbo].[PredictTipSingleMode] @passenger_count int = 0, @trip_distance float = 0, @trip_time_in_secs int = 0, @pickup_latitude float = 0, @pickup_longitude float = 0, @dropoff_latitude float = 0, @dropoff_longitude float = 0
@@ -186,7 +187,7 @@ In this section, you learn how to create single predictions using a stored proce
     EXEC [dbo].[PredictTipSingleMode] 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
-3. The results indicate that the probability of getting a tip is low on these top 10 trips, since all are single-passenger trips over a relatively short distance.
+3. The results indicate that the probability of getting a tip is low (zero) on these top 10 trips, since all are single-passenger trips over a relatively short distance.
 
 ## Conclusions
 

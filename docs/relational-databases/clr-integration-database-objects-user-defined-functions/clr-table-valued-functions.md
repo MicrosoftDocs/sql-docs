@@ -2,15 +2,9 @@
 title: "CLR Table-Valued Functions | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "clr"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: clr
 ms.topic: "reference"
 dev_langs: 
   - "TSQL"
@@ -21,11 +15,9 @@ helpviewer_keywords:
   - "table-valued functions [CLR integration]"
   - "TVFs [CLR integration]"
 ms.assetid: 9a6133ea-36e9-45bf-b572-1c0df3d6c194
-caps.latest.revision: 88
 author: "rothja"
 ms.author: "jroth"
-manager: "craigg"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # CLR Table-Valued Functions
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

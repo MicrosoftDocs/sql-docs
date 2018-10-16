@@ -2,17 +2,13 @@
 title: "Always On Availability Groups policies (SQL Server) | Microsoft Docs"
 ms.custom: "ag-guide"
 ms.date: "06/13/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: high-availability
+ms.topic: conceptual
 ms.assetid: 26bf8f71-c2b8-45ef-b3a3-372b96c9e6e3
-caps.latest.revision: 7
-author: "rothja"
-ms.author: "jroth"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Always On Availability Groups policies

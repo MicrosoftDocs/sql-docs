@@ -5,16 +5,11 @@ author: MikeRayMSFT
 ms.author: mikeray 
 manager: craigg
 ms.date: 08/28/2017
-ms.topic: article
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: ""
-ms.suite: "sql"
+ms.topic: conceptual
+ms.prod: sql
 ms.custom: "sql-linux"
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85 
-ms.workload: "Inactive"
 ---
 # Configure failover cluster instance - SQL Server on Linux (RHEL)
 
@@ -140,7 +135,7 @@ You need to provide storage that both nodes can access. You can use iSCSI, NFS, 
    ```bash
    sudo yum install pacemaker pcs fence-agents-all resource-agents
    ```
-1. Set the password for for the default user that is created when installing Pacemaker and Corosync packages. Use the same password on both nodes. 
+1. Set the password for the default user that is created when installing Pacemaker and Corosync packages. Use the same password on both nodes. 
 
    ```bash
    sudo passwd hacluster

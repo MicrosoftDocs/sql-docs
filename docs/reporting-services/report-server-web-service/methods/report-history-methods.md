@@ -1,30 +1,19 @@
 ---
 title: "Report History Methods | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
+ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.service: ""
-ms.component: "report-server-web-service"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-server-web-service
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
+ms.topic: reference
 helpviewer_keywords: 
   - "report history [Reporting Services], methods"
   - "historical data [Reporting Services]"
   - "methods [Reporting Services], report history"
 ms.assetid: ebfb4834-5445-480c-9a51-6868c60308af
-caps.latest.revision: 35
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
-ms.workload: "Inactive"
+author: markingmyname
+ms.author: maghan
 ---
 # Report History Methods
   You can use these methods to create and manage item history snapshots.  

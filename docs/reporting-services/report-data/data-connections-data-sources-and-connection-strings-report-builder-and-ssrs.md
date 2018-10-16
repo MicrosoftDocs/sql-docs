@@ -1,22 +1,14 @@
 ---
 title: "Data Connections, Data Sources, Connection Strings-Report Builder-SSRS | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/20/2017"
+ms.date: 08/21/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
-ms.component: "report-data"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-data
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
-ms.workload: "Active"
+ms.topic: conceptual
+author: markingmyname
+ms.author: maghan
 ---
 # Data Connections, Data Sources, and Connection Strings (Report Builder and SSRS)
 
@@ -24,11 +16,23 @@ ms.workload: "Active"
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-  To include data in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] and  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated reports, you must first create *data sources* and *datasets*. This topic explains the type of data sources, how to create data sources, and important information related to data source credentials. A data source includes the data source type, connection information, and the type of credentials to use. There are two types of data sources: embedded and shared. An embedded data source is defined in the report and used only by that report. A shared data source is defined independently from a report and can be used by multiple reports. For more information, see [Embedded and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md).  
+  To include data in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] and  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated reports, you must first create *data sources* and *datasets*. This topic explains the type of data sources, how to create data sources, and important information related to data source credentials. A data source includes the data source type, connection information, and the type of credentials to use. There are two types of data sources: embedded and shared. An embedded data source is defined in the report and used only by that report. A shared data source is defined independently from a report and can be used by multiple reports. For more information, see [Embedded and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md).  
 
-> [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]
+## Data in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]  
+ ![rs_DataSourcesStory](../../reporting-services/report-data/media/rs-datasourcesstory.gif "rs_DataSourcesStory")  
   
+1.  **Data sources in the Report Data pane** A data source appears in the Report Data pane after you create an embedded data source or add a shared data source.  
+  
+2.  **Connection Dialog Box** Use the Connection Dialog Box to build a connection string or to paste a connection string.  
+  
+3.  **Data connection information** The connection string is passed to the data extension.  
+  
+4.  **Credentials** Credentials are managed separately from the connection string.  
+  
+5.  **Data Extension/Data Provider** Connecting to the data can be through multiple data access layers.  
+  
+6.  **External data sources** Retrieve data from relational databases, multidimensional data bases, SharePoint lists, Web services, or report models.  
+
 ##  <a name="bkmk_data_sources"></a> Embedded and shared data sources  
  Shared data sources are useful when you have data sources that you use often. It is recommended that you use shared data sources as much as possible. They make reports and report access easier to manage, and help to keep reports and the data sources they access more secure. If you need a shared data source, ask your system administrator to create one for you.  
   
@@ -42,7 +46,7 @@ ms.workload: "Active"
   
      Developers can use the <xref:Microsoft.ReportingServices.DataProcessing> API to create data processing extensions to support additional types of data sources.  
   
--   In [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)], browse to a report server or SharePoint site and select shared data sources or create embedded data sources in the report. You cannot create a shared data source in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]. You cannot use custom data extensions in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)].  
+-   In [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], browse to a report server or SharePoint site and select shared data sources or create embedded data sources in the report. You cannot create a shared data source in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. You cannot use custom data extensions in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)].  
   
  The following table summarizes the differences between embedded and shared data sources.  
   
@@ -84,21 +88,6 @@ ms.workload: "Active"
 -   Microsoft BI Semantic Model for Power View: On a SharePoint site that has been configured for a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] gallery and [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], this data source type is available. This data source type is used only for [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] presentations. For more information, see [Building the Perfect BI Semantic Tabular Models for Power View](http://technet.microsoft.com/video/building-the-perfect-bi-semantic-tabular-models-for-power-view.aspx).  
   
  For a full list of data sources and versions [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] supports, see [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
-  
-## Data in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]  
- ![rs_DataSourcesStory](../../reporting-services/report-data/media/rs-datasourcesstory.gif "rs_DataSourcesStory")  
-  
-1.  **Data sources in the Report Data pane** A data source appears in the Report Data pane after you create an embedded data source or add a shared data source.  
-  
-2.  **Connection Dialog Box** Use the Connection Dialog Box to build a connection string or to paste a connection string.  
-  
-3.  **Data connection information** The connection string is passed to the data extension.  
-  
-4.  **Credentials** Credentials are managed separately from the connection string.  
-  
-5.  **Data Extension/Data Provider** Connecting to the data can be through multiple data access layers.  
-  
-6.  **External data sources** Retrieve data from relational databases, multidimensional data bases, SharePoint lists, Web services, or report models.  
   
 ##  <a name="bkmk_connection_examples"></a> Common connection string examples  
  Connection strings are the text representation of connection properties for a data provider. The following table lists examples of connections strings for various data connection types.  

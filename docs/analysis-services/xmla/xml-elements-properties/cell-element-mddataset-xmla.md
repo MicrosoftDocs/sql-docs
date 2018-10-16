@@ -1,37 +1,14 @@
 ---
 title: "Cell Element (MDDataSet) (XMLA) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services, azure-analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-apiname: 
-  - "Cell Element (MDDataSet)"
-apilocation: 
-  - "http://schemas.microsoft.com/analysisservices/2003/engine"
-apitype: "Schema"
-applies_to: 
-  - "SQL Server 2016 Preview"
-f1_keywords: 
-  - "microsoft.xml.analysis.cell"
-  - "http://schemas.microsoft.com/analysisservices/2003/engine#Cell"
-  - "urn:schemas-microsoft-com:xml-analysis#Cell"
-helpviewer_keywords: 
-  - "Cell element"
-ms.assetid: c4ea08a4-f653-4ade-be07-b91eb5b1ef32
-caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: xmla
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Cell Element (MDDataSet) (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -50,7 +27,7 @@ ms.workload: "Inactive"
 </CellData>  
 ```  
   
-## Element Characteristics  
+## Element characteristics  
   
 |Characteristic|Description|  
 |--------------------|-----------------|  
@@ -58,7 +35,7 @@ ms.workload: "Inactive"
 |Default value|None|  
 |Cardinality|0-n: Optional element that can occur more than once.|  
   
-## Element Relationships  
+## Element relationships  
   
 |Relationship|Element|  
 |------------------|-------------|  
@@ -83,7 +60,7 @@ ms.workload: "Inactive"
  The data type of a cell property value is specified only for the VALUE cell property. The data types of other cell properties are determined by the cell property definition included in the **CellInfo** element. A cell property value element can be excluded if a default value has been specified (by including a **Default** element for a cell property definition contained in the **CellInfo** element) for a cell property, or if no default value has been specified and the value of the cell property is null.  
   
 ## Cell Property Errors  
- If a cell property cannot be returned due to an error that occurs on the instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], such as a calculation error that prevents the value from being returned for a given cell, an **Error** element replaces the contents of the cell property in question. The following XML example describes a cell property error:  
+ If a cell property cannot be returned due to an error that occurs on the instance of Analysis Services, such as a calculation error that prevents the value from being returned for a given cell, an **Error** element replaces the contents of the cell property in question. The following XML example describes a cell property error:  
   
 ```  
 <Cell CellOrdinal="0">  
@@ -143,7 +120,7 @@ ms.workload: "Inactive"
 </CellData>  
 ```  
   
-## See Also  
+## See also
  [MDDataSet Data Type &#40;XMLA&#41;](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)   
  [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   

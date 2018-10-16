@@ -2,16 +2,12 @@
 title: "Open, Unlock, Rename, and Delete a Data Quality Project | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "data-quality-services"
-ms.service: ""
-ms.component: "data-quality-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dqs.dqproject.opendqproject.f1"
 helpviewer_keywords: 
@@ -20,11 +16,9 @@ helpviewer_keywords:
   - "data quality project,unlock"
   - "data quality project,open"
 ms.assetid: de8a2b04-4673-4beb-b4cf-96a28cdf3a93
-caps.latest.revision: 9
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Open, Unlock, Rename, and Delete a Data Quality Project
 

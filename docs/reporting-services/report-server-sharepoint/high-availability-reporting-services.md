@@ -1,22 +1,14 @@
 ---
 title: "High availability in SQL Server Reporting Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/05/2017"
+ms.date: 10/05/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
-ms.component: "report-server-sharepoint"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-server-sharepoint
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
-ms.workload: "On Demand"
+ms.topic: conceptual
+author: markingmyname
+ms.author: maghan
 ---
 # High availability in SQL Server Reporting Services
 

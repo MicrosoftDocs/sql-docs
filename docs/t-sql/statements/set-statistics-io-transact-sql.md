@@ -2,15 +2,10 @@
 title: "SET STATISTICS IO (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/10/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "SET_STATISTICS_IO_TSQL"
@@ -28,11 +23,9 @@ helpviewer_keywords:
   - "SET STATISTICS IO statement"
   - "statistical information [SQL Server], disk activity"
 ms.assetid: 7033aac9-a944-4156-9ff4-6ef65717a28b
-caps.latest.revision: 40
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "On Demand"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ---
 # SET STATISTICS IO (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

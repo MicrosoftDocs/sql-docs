@@ -2,23 +2,16 @@
 title: "Known Issues in this Version of the Driver for SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/14/2018"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology:
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords:
   - "known issues"
-caps.latest.revision: 30
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Known Issues in this Version of the Driver
 
@@ -28,7 +21,7 @@ This article contains a list of known issues with the Microsoft ODBC Driver 13, 
 
 Additional issues will be posted on the [Microsoft ODBC driver team blog](http://blogs.msdn.com/b/sqlnativeclient/).  
 
-- Windows, Linux, and macOS convert characters from the Private Use Area (PUA) or End User-Defined Characters (EUDC) differently. Conversions performed on the server within [!INCLUDE[tsql](../../../includes/tsql_md.md)] use the Windows conversion library. Conversions in the driver use the Windows, Linux, or macOS conversion libraries. Each library may produce different results when performing these conversions. For more information, see [End-User-Defined and Private Use Area Characters](http://msdn.microsoft.com/library/dd317802.aspx).
+- Windows, Linux, and macOS convert characters from the Private Use Area (PUA) or End User-Defined Characters (EUDC) differently. Conversions performed on the server within [!INCLUDE[tsql](../../../includes/tsql-md.md)] use the Windows conversion library. Conversions in the driver use the Windows, Linux, or macOS conversion libraries. Each library may produce different results when performing these conversions. For more information, see [End-User-Defined and Private Use Area Characters](/windows/desktop/Intl/end-user-defined-characters).
 
 - If the client encoding is UTF-8, the driver manager does not always correctly convert from UTF-8 to UTF-16. Currently, data corruption occurs when one or more characters in the string are not valid UTF-8 characters. ASCII characters are mapped correctly. The driver manager attempts this conversion when calling the SQLCHAR versions of the ODBC API (for example, SQLDriverConnectA). The driver manager will not attempt this conversion when calling the SQLWCHAR versions of the ODBC API (for example, SQLDriverConnectW).  
 

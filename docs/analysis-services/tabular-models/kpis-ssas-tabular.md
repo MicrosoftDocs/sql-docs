@@ -1,25 +1,14 @@
 ---
 title: "KPIs | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/10/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services, azure-analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: a0524602-5239-45a7-8c44-2477302a3637
-caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # KPIs
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -40,7 +29,7 @@ ms.workload: "Inactive"
  A Status threshold is defined by the range between a low and high threshold or by a fixed value. The Status threshold displays with a graphic to help users easily determine the status of the Base value compared to the Target value.  
   
 ##  <a name="bkmk_example"></a> Example  
- The sales manager at Adventure Works wants to create a PivotTable that she can use to quickly display whether or not sales employees are meeting their sales quota for a given period (year). For each sales employee, she wants the PivotTable to display the the actual sales amount in dollars, the sales quota amount in dollars, and a simple graphic display showing the status of whether or not each sales employee is below, at, or above their sales quota. She wants to be able to slice the data by year.  
+ The sales manager at Adventure Works wants to create a PivotTable that she can use to quickly display whether or not sales employees are meeting their sales quota for a given period (year). For each sales employee, she wants the PivotTable to display the actual sales amount in dollars, the sales quota amount in dollars, and a simple graphic display showing the status of whether or not each sales employee is below, at, or above their sales quota. She wants to be able to slice the data by year.  
   
  To do this, the sales manager enlists the help of her organization’s BI solution developer to add a Sales KPI to the AdventureWorks Tabular Model. The sales manager will then use Excel to connect to the Adventure Works Tabular Model as a data source and create a PivotTable with the fields (measures and KPI) and slicers to analyze whether or not the sales force is meeting their quotas.  
   

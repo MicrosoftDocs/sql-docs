@@ -1,29 +1,20 @@
 ---
 title: "Feature Reference (Reporting Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
-ms.component: "reporting-services"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: reporting-services
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Report Builder 2.0, F1 help"
   - "Reporting Services, getting assistance"
   - "tools [Reporting Services]"
   - "F1 Help [Reporting Services]"
 ms.assetid: 01daf21c-19c6-448d-ac30-accb54ad83da
-caps.latest.revision: 28
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
-ms.workload: "Inactive"
+author: markingmyname
+ms.author: maghan
 ---
 # Feature Reference (Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] includes several tools and applications that you can use to create, manage, and view reports. This section provides specific topics describing the dialog boxes, Web pages, and wizards of these tools and applications.  
@@ -33,9 +24,6 @@ ms.workload: "Inactive"
 ## In This Section  
  [Report Designer F1 Help](../reporting-services/tools/report-designer-f1-help.md)  
  Provides help for Report Designer and its related dialog boxes, Report Wizard, and Image Wizard.  
-  
- [Report Manager F1 Help](http://msdn.microsoft.com/library/e0137273-85b8-45f0-83e5-38a50481768f)  
- Provides help for Report Manager, a Web application used to manage a single report server instance  
   
  [Reporting Services Configuration Manager Help Topics](http://msdn.microsoft.com/library/7b6fb18e-ec39-4661-88e3-977ed64e2c82)  
  Provides help for the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Configuration tool used for deploying and managing report server instances.  

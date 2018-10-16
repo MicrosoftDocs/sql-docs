@@ -2,27 +2,18 @@
 title: "Developing Custom Objects for Integration Services | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "extending-packages-custom-objects"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
 helpviewer_keywords: 
   - "custom user interface [Integration Services]"
   - "custom objects [Integration Services]"
 ms.assetid: ca1929a6-0ae6-47d7-b65f-08173b143720
-caps.latest.revision: 31
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Developing Custom Objects for Integration Services
   When the control flow and data flow objects that are included with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] do not completely meet your requirements, you can develop many types of custom objects on your own including:  

@@ -1,25 +1,19 @@
 ---
 title: "RDS Events | Microsoft Docs"
-ms.technology:
-  - "drivers"
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: 
-ms.suite: sql
 ms.prod: sql  
-ms.prod_service: drivers
-ms.component: reference
-ms.tgt_pltfrm: ""
+ms.prod_service: connectivity
 ms.topic: conceptual
 helpviewer_keywords: 
   - "events [ADO], RDS"
   - "RDS events [ADO]"
 ms.assetid: e03739e0-8169-46d6-9956-556b644a7645
-caps.latest.revision: 14
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # RDS Events
 > [!IMPORTANT]

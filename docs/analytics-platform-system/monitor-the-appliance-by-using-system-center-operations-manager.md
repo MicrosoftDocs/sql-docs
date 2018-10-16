@@ -22,7 +22,7 @@ Use System Center Operations Manager (SCOM) to monitor the Analytics Platform Sy
   
 2.  SQL Server 2008 R2 Native Client or SQL Server 2012 Native Client must be installed.  
   
-3.  The management packs to monitor SQL Server PDW and HDInsight must be installed, imported, and configured. Use the following articles for instructions to perform these tasks.  
+3.  The management packs to monitor SQL Server PDW must be installed, imported, and configured. Use the following articles for instructions to perform these tasks.  
   
     -   [Install the SCOM Management Packs &#40;Analytics Platform System&#41;](install-the-scom-management-packs.md)  
   

@@ -2,22 +2,15 @@
 title: "SQL Statements | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 ms.assetid: 78133ee0-1e2f-4dc8-81f6-3bac8eb21332
-caps.latest.revision: 5
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.workload: "Inactive"
 ---
 # SQL Statements
 ODBC applications perform almost all database access by executing SQL statements. The form of these statements — hard-coded or constructed at run time, interoperable or data source–specific, and so on — depends on the needs of the application.  

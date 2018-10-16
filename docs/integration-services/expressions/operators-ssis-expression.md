@@ -2,27 +2,20 @@
 title: "Operators (SSIS Expression) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "expressions"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SSIS, operators"
   - "SQL Server Integration Services, operators"
   - "operators [Integration Services]"
   - "expressions [Integration Services], operators"
 ms.assetid: 33df3a3d-1f5c-429b-a3b9-52b7d8689089
-caps.latest.revision: 35
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # Operators (SSIS Expression)
   This section describes the operators the expression language provides and the operator precedence and associativity that the expression evaluator uses.  

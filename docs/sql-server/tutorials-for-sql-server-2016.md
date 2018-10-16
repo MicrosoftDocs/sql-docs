@@ -2,22 +2,14 @@
 title: "Tutorials for SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/31/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
-ms.service: ""
-ms.component: "sql-non-specified"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-query-tuning"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: performance
+ms.topic: conceptual
 ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
-caps.latest.revision: 40
 author: "craigg-msft"
 ms.author: "craigg"
 manager: craigg
-ms.workload: "Active"
 ---
 # Tutorials for SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -25,7 +17,7 @@ ms.workload: "Active"
      
 -   If a tutorial uses one of the [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] databases, you should download and use the most recent version from CodePlex. For more information, see [AdventureWorks Databases and Scripts for SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502).    
 -   Download a [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] workbook and [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] reports to use with [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] tutorials, go to [Power View Samples for SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=220734).  
-- Check out the new [Wide World Importers](https://msdn.microsoft.com/library/mt734199(SQL.1).aspx) sample available on the [sql-server-samples](https://github.com/Microsoft/sql-server-samples) GitHub repository. 
+- Check out the new [Wide World Importers](../sample/world-wide-importers/wide-world-importers-documentation.md) sample available on the [sql-server-samples](https://github.com/Microsoft/sql-server-samples) GitHub repository. 
 
  
 ## Current tutorials  

@@ -2,27 +2,21 @@
 title: "Versions (Master Data Services) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "mds"
-ms.service: ""
-ms.component: "non-specific"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "version flags [Master Data Services], about version flags"
   - "versions [Master Data Services]"
   - "version flags [Master Data Services]"
   - "versions [Master Data Services], version flags"
 ms.assetid: 752ec96d-53d7-4160-8ed2-92e0324645f3
-caps.latest.revision: 9
-author: "leolimsft"
-ms.author: "lle"
-manager: "craigg"
-ms.workload: "Inactive"
+author: leolimsft
+ms.author: lle
+manager: craigg
 ---
 # Versions (Master Data Services)
 

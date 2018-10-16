@@ -2,25 +2,19 @@
 title: "Delete a Subscription View (Master Data Services) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "mds"
-ms.service: ""
-ms.component: "non-specific"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "deleting subscription views [Master Data Services]"
   - "subscription views [Master Data Services], deleting"
 ms.assetid: 14b09c81-1297-48b0-8fe5-991414b930e0
-caps.latest.revision: 6
-author: "leolimsft"
-ms.author: "lle"
-manager: "craigg"
-ms.workload: "Inactive"
+author: leolimsft
+ms.author: lle
+manager: craigg
 ---
 # Delete a Subscription View (Master Data Services)
 

@@ -1,0 +1,14 @@
+- name: Tables and Indexes
+  href: tables-and-indexes.md
+- name: Adding a Column to a SQL Server Table
+  href: adding-a-column-to-a-sql-server-table.md
+- name: Creating SQL Server Indexes
+  href: creating-sql-server-indexes.md
+- name: Creating SQL Server Tables
+  href: creating-sql-server-tables.md
+- name: Dropping a SQL Server Index
+  href: dropping-a-sql-server-index.md
+- name: Dropping a SQL Server Table
+  href: dropping-a-sql-server-table.md
+- name: Removing a Column from a SQL Server Table
+  href: removing-a-column-from-a-sql-server-table.md

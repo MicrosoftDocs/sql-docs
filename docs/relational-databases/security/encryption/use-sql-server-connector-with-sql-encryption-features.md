@@ -1,26 +1,18 @@
-﻿---
+---
 title: "Use SQL Server Connector with SQL Encryption Features | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/04/2017"
-ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "security"
-ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.prod: sql
+ms.reviewer: vanto
+ms.technology: security
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Connector, using"
   - "EKM, with SQL Server Connector"
 ms.assetid: 58fc869e-00f1-4d7c-a49b-c0136c9add89
-caps.latest.revision: 14
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: aliceku
+ms.author: aliceku
+manager: craigg
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # Use SQL Server Connector with SQL Encryption Features

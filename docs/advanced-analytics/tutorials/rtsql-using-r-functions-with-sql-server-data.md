@@ -1,24 +1,29 @@
 ---
-title: Using R functions with SQL Server data (R in SQL quickstart) | Microsoft Docs
+title: Quickstart showing R functions with SQL Server data (SQL Server Machine Learning) | Microsoft Docs
+description: In this quickstart, learn how to write an R function that uses SQL Server data.
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
-ms.topic: tutorial
+ms.date: 10/08/2018  
+ms.topic: quickstart
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-# Using R functions with SQL Server data (R in SQL quickstart)
+# Quickstart: Using R functions with SQL Server data
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Now that you're familiar with basic operations, it's time to have some fun with R. For example, many advanced statistical functions might be complicated to implement using T-SQL, but require only a single line of R code.  With R Services, it's easy to embed R utility scripts in a stored procedure.
+If you completed the previous quickstarts, you're familiar with basic operations and ready for something more complex, such as statistical functions. Advanced statistical functions that are complicated to implement in T-SQL can be done in R with only a single line of code.
 
-In these examples, you'll embed R mathematical and utility functions in a SQL Server stored procedure.
+In this quickstart, you'll embed R mathematical and utility functions in a SQL Server stored procedure.
+
+## Prerequisites
+
+A previous quickstart, [Hello World in R and SQL](rtsql-using-r-code-in-transact-sql-quickstart.md), provides information and links for setting up the R environment required for this quickstart.
 
 ## Create a stored procedure to generate random numbers
 
-For simplicity, let's use the R `stats` package, which is installed and loaded by default with R Services. The package contains hundreds of functions for common statistical tasks, among them the `rnorm` function, which generates a specified number of random numbers using the normal distribution, given a standard deviation and mean.
+For simplicity, let's use the R `stats` package, which is installed and loaded by default when you install R feature support in SQL Server. The package contains hundreds of functions for common statistical tasks, among them the `rnorm` function, which generates a specified number of random numbers using the normal distribution, given a standard deviation and mean.
 
 For example, this R code returns 100 numbers on a mean of 50, given a standard deviation of 3.
 
@@ -68,12 +73,6 @@ Now that you've wrapped the R function in a stored procedure, you can easily cal
 EXEC MyRNorm @param1 = 100,@param2 = 50, @param3 = 3
 ```
 
-## Related resources
-
-+ Would you like to install more R packages, to get more advanced statistical functions? See [Installing and managing R packages](../r/installing-and-managing-r-packages.md).
-
-+ To help you convert your standalone R code to a format that can be easily parameterized using SQL Server stored procedures, the Microsoft R team has provided a new R package, **sqlrutils**. For more information, see [How to Create a stored procedure using sqlrutils](../r/how-to-create-a-stored-procedure-using-sqlrutils.md).
-
 ## Use R utility functions for troubleshooting
 
 By default, an installation of R includes the `utils` package, which provides a variety of utility functions for investigating the current R environment. This can be useful if you are finding discrepancies in the way your R code performs in SQL Server and in outside environments.
@@ -95,8 +94,9 @@ Many users like to use the system timing functions in R, such as `system.time` a
 
 For an example, see this tutorial: [Create Data Features](../tutorials/walkthrough-create-data-features.md). In this walkthrough, R timing functions are embedded in the solution to compare the performance of two methods for creating features from data: R functions vs. T-SQL functions.
 
-## Next lesson
+## Next steps
 
 Next, you'll build a predictive model using R in SQL Server.
 
-[Create a predictive model](../tutorials/rtsql-create-a-predictive-model-r.md)
+> [!div class="nextstepaction"]
+> [Quickstart: Create a predictive model](rtsql-create-a-predictive-model-r.md)

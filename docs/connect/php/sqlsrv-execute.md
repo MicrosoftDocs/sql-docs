@@ -2,16 +2,11 @@
 title: "sqlsrv_execute | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "php"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 apiname: 
   - "sqlsrv_execute"
 apitype: "NA"
@@ -20,11 +15,9 @@ helpviewer_keywords:
   - "executing queries"
   - "API Reference, sqlsrv_execute"
 ms.assetid: 38331bc2-4391-4f9f-aa83-9873dad605a0
-caps.latest.revision: 24
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.workload: "Inactive"
 ---
 # sqlsrv_execute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

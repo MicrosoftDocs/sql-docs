@@ -2,29 +2,21 @@
 title: "substring Function (XQuery) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/09/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
-ms.service: ""
-ms.component: "xquery"
+ms.prod: sql
+ms.prod_service: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 dev_langs: 
   - "XML"
 helpviewer_keywords: 
   - "substring function [XQuery]"
   - "fn:substring function"
 ms.assetid: 2b3b8651-de51-46dc-af82-c86c45eac871
-caps.latest.revision: 42
 author: "rothja"
 ms.author: "jroth"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Functions on String Values - substring
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +28,7 @@ ms.workload: "Inactive"
 ```  
   
 fn:substring($sourceString as xs:string?,  
-                          $startingLoc  as as xs:decimal?) as xs:string?  
+                          $startingLoc as xs:decimal?) as xs:string?  
   
 fn:substring($sourceString as xs:string?,  
                           $startingLoc as xs:decimal?,  

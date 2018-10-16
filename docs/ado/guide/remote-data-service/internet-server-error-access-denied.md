@@ -1,25 +1,18 @@
 ---
 title: "Internet Server Error: Access Denied | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "access denied error in RDS [ADO]"
 ms.assetid: e5b43cfa-da8d-430d-a2ab-5443dda47a16
-caps.latest.revision: 15
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Internet Server Error: Access Denied
 If you get this error, it usually means that Microsoft Internet Information Services (IIS) returned the following status:  

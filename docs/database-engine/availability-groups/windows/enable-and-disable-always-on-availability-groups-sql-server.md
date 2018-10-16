@@ -2,27 +2,19 @@
 title: "Enable and Disable Always On Availability Groups (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/30/2017"
-ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "availability-groups"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: high-availability
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], server instance"
   - "Availability Groups [SQL Server], deploying"
   - "Availability Groups [SQL Server], disabling"
   - "Availability Groups [SQL Server], enabling"
 ms.assetid: 7c326958-5ae9-4761-9c57-905972276a8f
-caps.latest.revision: 60
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
-ms.workload: "On Demand"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # Enable and Disable Always On Availability Groups (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -210,7 +202,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
 ###  <a name="PScmd3Procedure"></a> Using SQL Server PowerShell  
  **To disable Always On**  
   
-1.  Change directory (**cd**) to a currently-enabled server instance that that you want to disenable for Always On Availability Groups.  
+1.  Change directory (**cd**) to a currently-enabled server instance that you want to disenable for Always On Availability Groups.  
   
 2.  Use the **Disable-SqlAlwaysOn** cmdlet to enable Always On Availability Groups.  
   

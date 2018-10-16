@@ -2,15 +2,10 @@
 title: "DBCC FREESYSTEMCACHE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/16/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "sql-database"
-ms.service: ""
-ms.component: "t-sql|database-console-commands"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "FREESYSTEMCACHE_TSQL"
@@ -27,11 +22,9 @@ helpviewer_keywords:
   - "freeing unused cache entries"
   - "cleaning unused cache entries"
 ms.assetid: 4b5c460b-e4ad-404a-b4ca-d65aba38ebbb
-caps.latest.revision: 35
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "craigg"
-ms.workload: "On Demand"
+author: uc-msft
+ms.author: umajay
+manager: craigg
 ---
 # DBCC FREESYSTEMCACHE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

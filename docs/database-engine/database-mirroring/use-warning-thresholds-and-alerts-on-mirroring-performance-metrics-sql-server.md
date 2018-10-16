@@ -2,16 +2,11 @@
 title: "Use Warning Thresholds and Alerts on Mirroring Performance Metrics | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "database-mirroring"
+ms.prod: sql
+ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: high-availability
+ms.topic: conceptual
 helpviewer_keywords: 
   - "monitoring database mirroring [SQL Server]"
   - "thresholds [SQL Server]"
@@ -20,11 +15,9 @@ helpviewer_keywords:
   - "database mirroring [SQL Server], monitoring"
   - "warnings [database mirroring]"
 ms.assetid: 8cdd1515-0bd7-4f8c-a7fc-a33b575e20f6
-caps.latest.revision: 40
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Use Warning Thresholds and Alerts on Mirroring Performance Metrics (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -116,9 +109,9 @@ ms.workload: "Inactive"
 ##  <a name="RelatedTasks"></a> Related Tasks  
  **To create an alert using SQL Server Management Studio**  
   
--   [Create an Alert Using an Error Number](http://msdn.microsoft.com/library/03dd7fac-5073-4f86-babd-37e45a86023c)  
+-   [Create an Alert Using an Error Number](../../ssms/agent/create-an-alert-using-an-error-number.md)  
   
--   [Create a WMI Event Alert](http://msdn.microsoft.com/library/b8c46db6-408b-484e-98f0-a8af3e7ec763)  
+-   [Create a WMI Event Alert](../../ssms/agent/create-a-wmi-event-alert.md)  
   
  **To monitor database mirroring**  
   

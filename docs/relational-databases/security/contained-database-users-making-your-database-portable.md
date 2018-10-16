@@ -1,27 +1,20 @@
-﻿---
+---
 title: "Contained Database Users - Making Your Database Portable | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/05/2018"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "security"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: security
+ms.topic: conceptual
 helpviewer_keywords: 
   - "contained database, users"
   - "user [SQL Server], about contained database users"
 ms.assetid: e57519bb-e7f4-459b-ba2f-fd42865ca91d
-caps.latest.revision: 33
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "On Demand"
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Contained Database Users - Making Your Database Portable
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -52,7 +45,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
  Windows firewall rules apply to all connections and have the same effects on logins (traditional model connections) and contained database users. For more information about the Windows firewall, see [Configure a Windows Firewall for Database Engine Access](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).  
   
 ### [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Firewalls  
- [!INCLUDE[ssSDS](../../includes/sssds-md.md)] allows separate firewall rules for sever level connections (logins) and for database level connections (contained database users). When connecting to a user database, first database firewall rules are checked. If there is no rule that allows access to the database, the server level firewall rules are checked, which requires access to the logical server master database. Database level firewall rules combined with contained database users can eliminate necessity to access master database of the server during connection providing improved connection scalability.  
+ [!INCLUDE[ssSDS](../../includes/sssds-md.md)] allows separate firewall rules for server level connections (logins) and for database level connections (contained database users). When connecting to a user database, first database firewall rules are checked. If there is no rule that allows access to the database, the server level firewall rules are checked, which requires access to the logical server master database. Database level firewall rules combined with contained database users can eliminate necessity to access master database of the server during connection providing improved connection scalability.  
   
  For more information about [!INCLUDE[ssSDS](../../includes/sssds-md.md)] firewall rules, see the following topics:  
   

@@ -1,16 +1,11 @@
-﻿---
+---
 title: "UPDATE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/06/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "t-sql|queries"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "UPDATE_TSQL"
@@ -40,12 +35,10 @@ helpviewer_keywords:
   - "FROM clause, UPDATE statement"
   - "WHERE clause, UPDATE statement"
 ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
-caps.latest.revision: 91
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "Active"
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # UPDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -122,7 +115,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
   
  Common table expressions can also be used with the SELECT, INSERT, DELETE, and CREATE VIEW statements. For more information, see [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
- TOP **(** *expression***)** [ PERCENT ]  
+ TOP **(** _expression_**)** [ PERCENT ]  
  Specifies the number or percent of rows that are updated. *expression* can be either a number or a percent of the rows.  
   
  The rows referenced in the TOP expression used with INSERT, UPDATE, or DELETE are not arranged in any order.  
@@ -141,7 +134,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  *schema_name*  
  Is the name of the schema to which the table or view belongs.  
   
- *table_or view_name*  
+ *table_or_view_name*  
  Is the name of the table or view from which the rows are to be updated. The view referenced by *table_or_view_name* must be updatable and reference exactly one base table in the FROM clause of the view. For more information about updatable views, see [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
  *rowset_function_limited*  
@@ -188,7 +181,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  *method_name* **(** *argument* [ **,**... *n*] **)**  
  Is a nonstatic public mutator method of *udt_column_name* that takes one or more arguments.  
   
- **.**WRITE **(***expression***,***@Offset***,***@Length***)**  
+ **.**WRITE **(**_expression_**,**_@Offset_**,**_@Length_**)**  
  Specifies that a section of the value of *column_name* is to be modified. *expression* replaces *@Length* units starting from *@Offset* of *column_name*. Only columns of **varchar(max)**, **nvarchar(max)**, or **varbinary(max)** can be specified with this clause. *column_name* cannot be NULL and cannot be qualified with a table name or table alias.  
   
  *expression* is the value that is copied to *column_name*. *expression* must evaluate to or be able to be implicitly cast to the *column_name* type. If *expression* is set to NULL, *@Length* is ignored, and the value in *column_name* is truncated at the specified *@Offset*.  
@@ -202,7 +195,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  **@** *variable*  
  Is a declared variable that is set to the value returned by *expression*.  
   
- SET **@***variable* = *column* = *expression* sets the variable to the same value as the column. This differs from SET **@***variable* = *column*, *column* = *expression*, which sets the variable to the pre-update value of the column.  
+ SET **@**_variable_ = *column* = *expression* sets the variable to the same value as the column. This differs from SET **@**_variable_ = _column_, _column_ = _expression_, which sets the variable to the pre-update value of the column.  
   
  \<OUTPUT_Clause>  
  Returns updated data or expressions based on it as part of the UPDATE operation. The OUTPUT clause is not supported in any DML statements that target remote tables or views. For more information, see [OUTPUT Clause &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).  
@@ -332,7 +325,7 @@ GO
 >  The **ntext**, **text**, and **image** data types will be removed in a future version of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Avoid using these data types in new development work, and plan to modify applications that currently use them. Use [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md), and [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) instead.  
   
 ### Updating Large Value Data Types  
- Use the **.**WRITE (*expression***,** *@Offset***,***@Length*) clause to perform a partial or full update of **varchar(max)**, **nvarchar(max)**, and **varbinary(max)** data types. For example, a partial update of a **varchar(max)** column might delete or modify only the first 200 characters of the column, whereas a full update would delete or modify all the data in the column. **.**WRITE updates that insert or append new data are minimally logged if the database recovery model is set to bulk-logged or simple. Minimal logging is not used when existing values are updated. For more information, see [The Transaction Log &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
+ Use the **\.**WRITE (_expression_**,** _@Offset_**,**_@Length_) clause to perform a partial or full update of **varchar(max)**, **nvarchar(max)**, and **varbinary(max)** data types. For example, a partial update of a **varchar(max)** column might delete or modify only the first 200 characters of the column, whereas a full update would delete or modify all the data in the column. **.**WRITE updates that insert or append new data are minimally logged if the database recovery model is set to bulk-logged or simple. Minimal logging is not used when existing values are updated. For more information, see [The Transaction Log &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
   
  The [!INCLUDE[ssDE](../../includes/ssde-md.md)] converts a partial update to a full update when the UPDATE statement causes either of these actions:  
 -   Changes a key column of the partitioned view or table.  
@@ -344,7 +337,7 @@ You cannot use the **.**WRITE clause to update a NULL column or set the value of
   
 For best performance, we recommend that data be inserted or updated in chunk sizes that are multiples of 8040 bytes.  
   
-If the column modified by the **.**WRITE clause is referenced in an OUTPUT clause, the complete value of the column, either the before image in **deleted.***column_name* or the after image in **inserted.***column_name*, is returned to the specified column in the table variable. See example R that follows.  
+If the column modified by the **.**WRITE clause is referenced in an OUTPUT clause, the complete value of the column, either the before image in **deleted.**_column\_name_ or the after image in **inserted.**_column\_name_, is returned to the specified column in the table variable. See example R that follows.  
   
 To achieve the same functionality of **.**WRITE with other character or binary data types, use the [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md).  
   

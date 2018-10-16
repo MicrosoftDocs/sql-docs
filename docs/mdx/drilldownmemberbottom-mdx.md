@@ -1,32 +1,17 @@
 ---
 title: "DrilldownMemberBottom (MDX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "DRILLDOWNMEMBERBOTTOM"
-dev_langs: 
-  - "kbMDX"
-helpviewer_keywords: 
-  - "DrilldownMemberBottom function"
-ms.assetid: 603927ba-68f6-4e7a-b17f-44cad33bdfb0
-caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-ms.workload: "Inactive"
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # DrilldownMemberBottom (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Drills down the members in a specified set that are present in a second specified set, limiting the result set to a specified number of members. Alternatively, this function also drills down on a set of tuples by using the first tuple hierarchy or the optionally specified hierarchy.  
   

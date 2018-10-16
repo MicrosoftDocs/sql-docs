@@ -54,7 +54,7 @@ In this section, you use this same pattern to train a model on the data you've a
 
     You should get an error, because you haven't provided the input the stored procedure requires.
 
-    "Procedure or function 'generate_iris_model' expects parameter '@trained_model', which was not supplied."
+    "Procedure or function 'generate_iris_model' expects parameter '\@trained_model', which was not supplied."
 
 4. To generate the model with the required inputs and save it to a table requires some additional statements:
 

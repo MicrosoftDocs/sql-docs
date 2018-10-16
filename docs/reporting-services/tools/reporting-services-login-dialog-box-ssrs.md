@@ -1,26 +1,17 @@
 ---
 title: "Reporting Services Login Dialog Box (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
-ms.component: "tools"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: tools
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+ms.topic: reference
 f1_keywords: 
   - "sql13.rtp.rptdesigner.reportservicelogin.f1"
 ms.assetid: 2037d797-0b61-44c7-931f-6c689c3fc733
-caps.latest.revision: 31
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
-ms.workload: "Inactive"
+author: markingmyname
+ms.author: maghan
 ---
 # Reporting Services Login Dialog Box (SSRS)
   Use the **Reporting Services Login** dialog box to provide credentials to publish reports to the report server.  

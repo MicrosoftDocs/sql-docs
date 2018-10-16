@@ -1,25 +1,16 @@
 ---
 title: "Configure the web portal | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/10/2017"
+ms.date: 05/10/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.service: ""
-ms.component: "report-server"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-server
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "the web portal [Reporting Services], configuring"
 ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
-caps.latest.revision: 28
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
-ms.workload: "Inactive"
+author: markingmyname
+ms.author: maghan
 ---
 # Configure the web portal
 
@@ -39,7 +30,7 @@ To use the web portal, you must satisfy the following prerequisites:
 
 The web portal is a Web application that users access in a Web browser. Minimally, you must define the URL used to open the application in a browser window. The URL consists of a host name, port, and virtual directory. Default values for this URL include the host name and port values that you defined for the Report Server Web service URL, plus the **reports** virtual directory name. If you have a named instance, the virtual directory is **reports_instance**, where **instance** is the name of your [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instance.
 
-By default, the the web portal URL consists of a unique virtual directory name, plus the port and host name that is defined for the Report Server Web service that runs in the same instance. In most cases, the host name is the network name of the report server computer, but it can also be an IP address or host header that resolves the computer. To configure the web portal to use the default URL, use the **Web Portal URL** page in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool.
+By default, the web portal URL consists of a unique virtual directory name, plus the port and host name that is defined for the Report Server Web service that runs in the same instance. In most cases, the host name is the network name of the report server computer, but it can also be an IP address or host header that resolves the computer. To configure the web portal to use the default URL, use the **Web Portal URL** page in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool.
 
 > [!TIP]
 > If you try to access the web portal on a remote computer and you receive connection error messages in your browser, a common cause is Firewall settings. For more information, see [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md).

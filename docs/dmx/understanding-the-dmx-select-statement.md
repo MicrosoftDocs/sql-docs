@@ -1,35 +1,14 @@
 ---
 title: "Understanding the DMX Select Statement | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "DMX"
-helpviewer_keywords: 
-  - "browsing mining model [Analysis Services]"
-  - "Data Mining Extensions [Analysis Services], statements"
-  - "DMX [Analysis Services], statements"
-  - "predictions [DMX]"
-  - "queries [DMX], Select statement"
-  - "SELECT statement [DMX]"
-  - "statements [DMX], SELECT statement"
-  - "copying mining models"
-ms.assetid: 61e97285-4a06-4434-9a40-38cde5af7c3f
-caps.latest.revision: 40
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-ms.workload: "Inactive"
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Understanding the DMX Select Statement
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]

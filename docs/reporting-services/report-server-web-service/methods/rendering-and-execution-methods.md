@@ -1,31 +1,20 @@
 ---
 title: "Rendering and Execution Methods | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
+ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.service: ""
-ms.component: "report-server-web-service"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-server-web-service
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
+ms.topic: reference
 helpviewer_keywords: 
   - "rendered reports [Reporting Services]"
   - "reports [Reporting Services], execution options"
   - "methods [Reporting Services], execution options"
   - "methods [Reporting Services], rendering"
 ms.assetid: 12626aad-f0be-4653-87d0-60eb3a3fff78
-caps.latest.revision: 36
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
-ms.workload: "Inactive"
+author: markingmyname
+ms.author: maghan
 ---
 # Rendering and Execution Methods
   You can use these methods to manage item execution and caching, and report rendering.  

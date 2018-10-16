@@ -1,18 +1,12 @@
 ---
 title: "Reporting Services Log Files and Sources | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
+ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
-ms.component: "report-server"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-server
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "troubleshooting [Reporting Services], log files"
   - "logs [Reporting Services]"
@@ -21,11 +15,8 @@ helpviewer_keywords:
   - "report server log files"
   - "files [Reporting Services], logs"
 ms.assetid: 80ef0acc-cbef-49d0-87e7-844e3ce19604
-caps.latest.revision: 49
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
-ms.workload: "On Demand"
+author: markingmyname
+ms.author: maghan
 ---
 # Reporting Services Log Files and Sources
   A report server and report server environment uses a variety of log destinations to record information about server operations and status. There are two basic categories of logging, execution logging and trace logging. Execution logging includes information about report execution statistics, auditing, performance diagnosis and optimization. Trace logging is information about error messages and general diagnostics.  
@@ -37,7 +28,7 @@ ms.workload: "On Demand"
 |Log|Description|  
 |---------|-----------------|  
 |[Report Server ExecutionLog and the ExecutionLog3 View](../../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md)|The execution log is a SQL Server view stored in the report server database.<br /><br /> The report server execution log contains data about specific reports, including when a report was run, who ran it, where it was delivered, and which rendering format was used.|  
-|SharePoint trace log|For report servers running in SharePoint, the SharePoint trace logs contains [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] information. You can also configure [!INCLUDE[ssRS](../../includes/ssrs-md.md)] specific information for the SharePoint Unified Logging service. For more information, see [Turn on Reporting Services events for the SharePoint trace log &#40;ULS&#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)|  
+|SharePoint trace log|For report servers running in SharePoint, the SharePoint trace logs contains [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] information. You can also configure [!INCLUDE[ssRS](../../includes/ssrs.md)] specific information for the SharePoint Unified Logging service. For more information, see [Turn on Reporting Services events for the SharePoint trace log &#40;ULS&#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)|  
 |[Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)|The service trace log contains very detailed information that is useful if you are debugging an application or investigating an issue or event. The trace log files are ReportServerService_\<timestamp>.log and are located in the following folder:<br /><br /> `C:\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\LogFiles`|  
 |[Report Server HTTP Log](../../reporting-services/report-server/report-server-http-log.md)|The HTTP log file contains a record of all HTTP requests and responses handled by the Report Server Web service and Report Manager.|  
 |[Windows Application Log](../../reporting-services/report-server/windows-application-log.md)|The Microsoft Windows Application log contains information about report server events.|  

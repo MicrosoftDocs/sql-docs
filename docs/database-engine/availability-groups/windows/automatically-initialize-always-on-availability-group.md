@@ -2,21 +2,14 @@
 title: "Automatically initialize Always On availability group | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/26/2018"
-ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "availability-groups"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: high-availability
+ms.topic: conceptual
 ms.assetid: 67c6a601-677a-402b-b3d1-8c65494e9e96
-caps.latest.revision: 18
-author: "MikeRayMSFT"
-ms.author: "v-saume"
-manager: "craigg"
+author: MashaMSFT
+ms.author: "mathoma"
+manager: craigg
 ---
 # Automatically initialize Always On Availability group
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

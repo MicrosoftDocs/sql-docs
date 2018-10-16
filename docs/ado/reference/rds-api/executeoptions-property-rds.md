@@ -1,26 +1,19 @@
 ---
 title: "ExecuteOptions Property (RDS) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 helpviewer_keywords: 
   - "ExecuteOptions property [ADO], VBScript example"
 ms.assetid: 62a4fd88-afc3-4f1f-b978-40710a30c4e9
-caps.latest.revision: 15
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # ExecuteOptions Property (RDS)
 Indicates whether asynchronous execution is enabled.  

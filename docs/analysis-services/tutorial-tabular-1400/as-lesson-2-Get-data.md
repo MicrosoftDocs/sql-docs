@@ -1,24 +1,14 @@
 ﻿---
 title: "Analysis Services tutorial lesson 2: Get data | Microsoft Docs"
-description: Describes how to get and import data in the Analysis Services tutorial project. 
-ms.prod_service: "analysis-services, azure-analysis-services"
-services: analysis-services
-ms.suite: "pro-bi"
-documentationcenter: ''
-author: Minewiskan
-manager: kfile
-editor: ''
-tags: ''
-
-ms.assetid: 
-ms.service: analysis-services
-ms.devlang: NA
-ms.topic: get-started-article
-ms.tgt_pltfrm: NA
-ms.workload: na
-ms.date: 02/20/2018
+ms.date: 08/27/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: tutorial
 ms.author: owend
-monikerRange: ">= sql-analysis-services-2017 || = sqlallproducts-allversions"
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 
 # Get data
@@ -27,7 +17,7 @@ monikerRange: ">= sql-analysis-services-2017 || = sqlallproducts-allversions"
 
 In this lesson, you use **Get Data** to connect to the AdventureWorksDW sample database, select data, preview and filter, and then import into your model workspace.  
   
-By using Get Data, you can import data from a wide variety of sources. Data can also be queried using a Power Query M formula expression or a [native SQL query expression](../tabular-models/ssas-import-query.md).
+Under the hood, Get Data is Power Query, which provides a vast array of tools for connecting to and reshaping data for modeling and analysis. To learn more, see [Power Query Documentation](https://docs.microsoft.com/power-query/). 
 
 > [!NOTE]
 > Tasks and images in this tutorial show connecting to an AdventureWorksDW2014 database on an on-premises server. In some cases, an AdventureWorksDW database on Azure SQL Data Warehouse may show different objects; however, they are fundamentally the same.

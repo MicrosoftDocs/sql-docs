@@ -1,22 +1,15 @@
 ---
 title: "Microsoft Drivers for PHP for SQL Server Support Matrix | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/26/2018"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "php"
+ms.date: "07/20/2018"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology:
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-caps.latest.revision: 1
+ms.technology: connectivity
+ms.topic: conceptual
 author: "David-Engel"
 ms.author: "v-daveng"
 manager: ""
-ms.workload: "On Demand"
 ---
 
 # Microsoft PHP Drivers for SQL Server Support Matrix
@@ -33,6 +26,7 @@ ms.workload: "On Demand"
 
 |Driver Name|Driver Package Version|End of Mainstream Support|
 |-|-|-|
+|Microsoft PHP Drivers 5.3 for SQL Server|5.3|July 20, 2023|
 |Microsoft PHP Drivers 5.2 for SQL Server|5.2|February 9, 2023|
 |Microsoft PHP Drivers 4.3 for SQL Server|4.3|July 6, 2022|
 |Microsoft PHP Drivers 4.0 for SQL Server|4.0|July 11, 2021|
@@ -50,7 +44,7 @@ ms.workload: "On Demand"
 ## SQL Server Version Certified Compatibility
  The following matrix lists SQL Server versions that have been tested and certified as compatible with the corresponding driver version. We strive to maintain backward compatibility with previous driver versions, but only the latest supported driver is tested and certified with new SQL Server versions as SQL Server is released.
 
-|PHP for SQL Server driver version &#8594;<br />&#8595; SQL Server version|5.2<br />&nbsp;|4.3<br />&nbsp;|4.0<br />&nbsp;|3.2<br />&nbsp;|3.1<br />&nbsp;|3.0<br />&nbsp;|2.0<br />&nbsp;|
+|PHP for SQL Server driver version &#8594;<br />&#8595; SQL Server version|5.3 and 5.2<br />&nbsp;|4.3<br />&nbsp;|4.0<br />&nbsp;|3.2<br />&nbsp;|3.1<br />&nbsp;|3.0<br />&nbsp;|2.0<br />&nbsp;|
 |---|---|---|---|---|---|---|---|
 |Azure SQL Managed Instance<br/> (Extended Private Preview)|Y|Y| | | | | |
 |Azure SQL Data Warehouse|Y|Y| | | | | |
@@ -64,7 +58,7 @@ ms.workload: "On Demand"
 ## PHP Version Support
  The following versions of PHP are supported with the listed version of the Microsoft PHP Drivers:
 
-|PHP for SQL Server driver version &#8594;<br />&#8595; PHP version|5.2<br />&nbsp;|4.3<br />&nbsp;|4.0<br />&nbsp;|3.2<br />&nbsp;|3.1<br />&nbsp;|3.0<br />&nbsp;|2.0<br />&nbsp;|
+|PHP for SQL Server driver version &#8594;<br />&#8595; PHP version|5.3 and 5.2<br />&nbsp;|4.3<br />&nbsp;|4.0<br />&nbsp;|3.2<br />&nbsp;|3.1<br />&nbsp;|3.0<br />&nbsp;|2.0<br />&nbsp;|
 |---|---|---|---|---|---|---|---|
 |7.2|7.2.1+ on Windows<br/>7.2.0+ on other platforms| | | | | | |
 |7.1|7.1.0+ |7.1.0+ |       |        |        |        |        |
@@ -78,7 +72,7 @@ ms.workload: "On Demand"
 ## Supported Operating Systems
  The following Windows operating system versions are supported with the listed version of the Microsoft PHP Drivers:
 
-|PHP for SQL Server driver version &#8594;<br />&#8595; Operating system|5.2<br />&nbsp;|4.3<br />&nbsp;|4.0<br />&nbsp;|3.2<br />&nbsp;|3.1<br />&nbsp;|3.0<br />&nbsp;|2.0<br />&nbsp;|
+|PHP for SQL Server driver version &#8594;<br />&#8595; Operating system|5.3 and 5.2<br />&nbsp;|4.3<br />&nbsp;|4.0<br />&nbsp;|3.2<br />&nbsp;|3.1<br />&nbsp;|3.0<br />&nbsp;|2.0<br />&nbsp;|
 |---|---|---|---|---|---|---|---|
 |Windows Server 2016                 |Y  |Y  |   |   |   |   |   |
 |Windows Server 2012 R2              |Y  |Y  |Y  |Y  |Y  |   |   |
@@ -97,18 +91,20 @@ ms.workload: "On Demand"
 
  The following Linux and Mac operating system versions (64-bit only) are supported with the listed version of the Microsoft PHP Drivers:
 
-|PHP for SQL Server driver version &#8594;<br />&#8595; Operating system|5.2<br />&nbsp;|4.3<br />&nbsp;|4.0<br />&nbsp;|3.2<br />&nbsp;|3.1<br />&nbsp;|3.0<br />&nbsp;|2.0<br />&nbsp;|
-|---|---|---|---|---|---|---|---|
-|Ubuntu 17.10 (64-bit)               |Y  |   |   |   |   |   |   |
-|Ubuntu 16.04 (64-bit)               |Y  |Y  |Y  |   |   |   |   |
-|Ubuntu 15.10 (64-bit)               |   |Y  |   |   |   |   |   |
-|Ubuntu 15.04 (64-bit)               |   |   |Y  |   |   |   |   |
-|Debian 9 (64-bit)                   |Y  |   |   |   |   |   |   |
-|Debian 8 (64-bit)                   |Y  |Y  |   |   |   |   |   |
-|Red Hat Enterprise Linux 7 (64-bit) |Y  |Y  |Y  |   |   |   |   |
-|Suse Enterprise Linux 12 (64-bit)   |Y  |   |   |   |   |   |   |
-|macOS Sierra (64-bit)               |Y  |Y  |   |   |   |   |   |
-|macOS El Capitan (64-bit)           |Y  |Y  |   |   |   |   |   |
+|PHP for SQL Server driver version &#8594;<br />&#8595; Operating system|5.3<br />&nbsp;|5.2<br />&nbsp;|4.3<br />&nbsp;|4.0<br />&nbsp;|3.2<br />&nbsp;|3.1<br />&nbsp;|3.0<br />&nbsp;|2.0<br />&nbsp;|
+|--|---|---|---|---|---|---|---|---|
+|Ubuntu 18.04 (64-bit)               |Y  |   |   |   |   |   |   |   |
+|Ubuntu 17.10 (64-bit)               |Y  |Y  |   |   |   |   |   |   |
+|Ubuntu 16.04 (64-bit)               |Y  |Y  |Y  |Y  |   |   |   |   |
+|Ubuntu 15.10 (64-bit)               |   |   |Y  |   |   |   |   |   |
+|Ubuntu 15.04 (64-bit)               |   |   |   |Y  |   |   |   |   |
+|Debian 9 (64-bit)                   |Y  |Y  |   |   |   |   |   |   |
+|Debian 8 (64-bit)                   |Y  |Y  |Y  |   |   |   |   |   |
+|Red Hat Enterprise Linux 7 (64-bit) |Y  |Y  |Y  |Y  |   |   |   |   |
+|Suse Enterprise Linux 12 (64-bit)   |Y  |Y  |   |   |   |   |   |   |
+|macOS High Sierra (64-bit)          |Y  |   |   |   |   |   |   |   |
+|macOS Sierra (64-bit)               |Y  |Y  |Y  |   |   |   |   |   |
+|macOS El Capitan (64-bit)           |Y  |Y  |Y  |   |   |   |   |   |
 
 ## See Also  
 [Release Notes](../../connect/php/release-notes-for-the-php-sql-driver.md)

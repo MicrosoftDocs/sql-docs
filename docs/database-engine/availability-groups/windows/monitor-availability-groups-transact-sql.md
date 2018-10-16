@@ -2,16 +2,10 @@
 title: "Monitor Availability Groups (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
-ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "availability-groups"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: high-availability
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], monitoring"
   - "dynamic management views [SQL Server], AlwaysOn Availability Groups"
@@ -20,11 +14,9 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], databases"
   - "catalog views [SQL Server], AlwaysOn Availability Groups"
 ms.assetid: 881a34de-8461-4811-8c62-322bf7226bed
-caps.latest.revision: 49
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
-ms.workload: "On Demand"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # Monitor Availability Groups (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

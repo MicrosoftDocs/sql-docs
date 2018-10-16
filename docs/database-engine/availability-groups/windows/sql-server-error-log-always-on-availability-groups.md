@@ -2,17 +2,13 @@
 title: "SQL Server error log (Always On Availability Groups) (SQL Server) | Microsoft Docs"
 ms.custom: "ag-guide"
 ms.date: "06/13/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: high-availability
+ms.topic: conceptual
 ms.assetid: 39d0c98d-75af-4dd1-b908-30d31af56f2a
-caps.latest.revision: 4
-author: "rothja"
-ms.author: "jroth"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # SQL Server error log (Always On Availability Groups)

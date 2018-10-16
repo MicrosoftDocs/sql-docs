@@ -1,20 +1,11 @@
 ---
 title: "Command Line Options in SSMA Console (MySQLToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssma-mysql"
+ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "sql-ssma"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
+ms.technology: ssma
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Command line options, help option"
   - "Command line options, log file option"
@@ -26,11 +17,9 @@ helpviewer_keywords:
   - "Command line options, variable value file option"
   - "Command line options, XML output option"
 ms.assetid: a2310b10-68ad-4285-a08b-c8694cf84416
-caps.latest.revision: 12
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Command Line Options in SSMA Console (MySQLToSQL)
 Microsoft provides you with a robust set command line options to execute and control SSMA activities. The ensuing sections detail the same.  
@@ -135,7 +124,7 @@ This denotes the project environment settings folder for the current SSMA projec
 ### Secure Password Option: –p/securepassword  
 This option indicates the encrypted password for server connections. It differs from all other options: the option neither executes any script nor helps in any migration-related activities but helps manage password-encryption for the server connections used in the migration project.  
   
-You cannot enter any other option or password as the command line parameter. Otherwise, it results in an error. For more information, refer to the [Managing Passwords](http://msdn.microsoft.com/en-us/4ffbc587-ea3f-49ad-bc42-a654f672325e) section.  
+You cannot enter any other option or password as the command line parameter. Otherwise, it results in an error. For more information, refer to the [Managing Passwords](managing-passwords-mysqltosql.md) section.  
   
 The following sub-options are supported for `–p/securepassword`:  
   

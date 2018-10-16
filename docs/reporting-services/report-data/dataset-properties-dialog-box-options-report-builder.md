@@ -1,31 +1,22 @@
 ---
 title: "Dataset Properties Dialog Box, Options (Report Builder) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
-ms.component: "report-data"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-data
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+ms.topic: reference
 f1_keywords: 
   - "10020"
   - "sql13.rtp.rptdesigner.datasetproperties.options.f1"
   - "10130"
 ms.assetid: 43e50133-45ef-47a2-b575-34dfcc28ec98
-caps.latest.revision: 15
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
-ms.workload: "Inactive"
+author: markingmyname
+ms.author: maghan
 ---
 # Dataset Properties Dialog Box, Options (Report Builder)
-  Select **Options** on the **DatasetProperties** dialog box to change data options, such as collation options and treating subtotals as detail data, for the query. For more information about collations, see [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md) in [SQL Server Books Online](http://go.microsoft.com/fwlink/?linkid=98335).  
+  Select **Options** on the **DatasetProperties** dialog box to change data options, such as collation options and treating subtotals as detail data, for the query. For more information about collations, see [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
   
  Data options that are part of a shared dataset definition on the report server affect all reports that use the shared dataset. You can override options for the shared dataset after it is added to a report. These changes affect only the report in which they are defined.  
   
@@ -53,7 +44,6 @@ ms.workload: "Inactive"
  Select a value that indicates whether you want subtotal rows to be interpreted as detail rows instead of aggregate rows. The default value, **Auto**, indicates that the subtotal rows should be treated as detail rows if the report does not use the **Aggregate**() function to access any fields in the data set. If you want subtotal rows to be interpreted as aggregate rows, choose **False**. If you want the subtotal rows to be interpreted as detail rows and you know that they do not use the **Aggregate**() function, choose **True**.  
   
 ## See Also  
- [Report Builder Help for Dialog Boxes, Panes, and Wizards](http://msdn.microsoft.com/en-us/2da24891-0b6d-4d3c-8b18-81b98752642f)   
  [Aggregate Function &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-function.md)   
  [Filter, Group, and Sort Data &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   

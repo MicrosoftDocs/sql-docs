@@ -2,15 +2,10 @@
 title: "DBCC CHECKCONSTRAINTS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "sql-database"
-ms.service: ""
-ms.component: "t-sql|database-console-commands"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "DBCC CHECKCONSTRAINTS"
@@ -26,11 +21,9 @@ helpviewer_keywords:
   - "constraints [SQL Server], consistency checks"
   - "integrity [SQL Server], constraints"
 ms.assetid: da6c9cee-6687-46e8-b504-738551f9068b
-caps.latest.revision: 45
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "craigg"
-ms.workload: "On Demand"
+author: uc-msft
+ms.author: umajay
+manager: craigg
 ---
 # DBCC CHECKCONSTRAINTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

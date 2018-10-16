@@ -1,28 +1,20 @@
 ---
 title: "Command Line Options in SSMA Console (OracleToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssma-oracle"
+ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "sql-ssma"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssma
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Command Line Options, Help Option"
   - "Command Line Options, SecurePassword Help Option"
   - "Command Line Options, Variable Value File Option"
   - "Command Line Options,Script File Option"
 ms.assetid: bf4a9313-349e-4ebf-9c89-9f5bb515f9ff
-caps.latest.revision: 12
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "v-thobro"
-ms.workload: "Inactive"
 ---
 # Command Line Options in SSMA Console (OracleToSQL)
 Microsoft provides you with a robust set command line options to execute and control SSMA activities. The ensuing sections detail the same.  
@@ -127,7 +119,7 @@ This denotes the project environment settings folder for the current SSMA projec
 ### Secure Password Option: –p/securepassword  
 This option indicates the encrypted password for server connections. It differs from all other options: the option neither executes any script nor helps in any migration-related activities but helps manage password-encryption for the server connections used in the migration project.  
   
-You cannot enter any other option or password as the command line parameter. Otherwise, it results in an error. For more information, refer to the [Managing Passwords](http://msdn.microsoft.com/en-us/8c7d9f8e-06bb-476c-bbd2-15b61d5bba3c) section.  
+You cannot enter any other option or password as the command line parameter. Otherwise, it results in an error. For more information, refer to the [Managing Passwords](managing-passwords-oracletosql.md) section.  
   
 The following sub-options are supported for `–p/securepassword`:  
   

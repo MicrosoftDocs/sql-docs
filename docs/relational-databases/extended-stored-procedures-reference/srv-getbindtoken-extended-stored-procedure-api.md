@@ -2,15 +2,11 @@
 title: "srv_getbindtoken (Extended Stored Procedure API) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "extended-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
   - "srv_getbindtoken"
@@ -22,11 +18,9 @@ dev_langs:
 helpviewer_keywords: 
   - "srv_getbindtoken"
 ms.assetid: c947d011-08ac-4fb8-b925-3da6e0999277
-caps.latest.revision: 36
 author: "rothja"
 ms.author: "jroth"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # srv_getbindtoken (Extended Stored Procedure API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

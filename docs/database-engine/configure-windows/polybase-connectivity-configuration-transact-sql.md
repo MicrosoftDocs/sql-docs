@@ -2,25 +2,18 @@
 title: "PolyBase Connectivity Configuration (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, pdw"
-ms.service: ""
-ms.component: "configure-windows"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: configuration
+ms.topic: conceptual
 helpviewer_keywords: 
   - "PolyBase"
 ms.assetid: 82252e4f-b1d0-49e5-aa0b-3624aade2add
-caps.latest.revision: 14
-author: "barbkess"
-ms.author: "barbkess"
-manager: "craigg"
-ms.workload: "Inactive"
-monikerRange: ">= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # PolyBase Connectivity Configuration (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -47,10 +40,10 @@ RECONFIGURE
 ```  
   
 ## Arguments  
- [ **@configname=** ] **'***option_name***'**  
+ [ **@configname=** ] **'**_option\_name_**'**  
  Is the name of a configuration option. *option_name* is **varchar(35)**, with a default of NULL. If not specified, the complete list of options is returned.  
   
- [ **@configvalue=** ] **'***value***'**  
+ [ **@configvalue=** ] **'**_value_**'**  
  Is the new configuration setting. *value* is **int**, with a default of NULL. The maximum value depends on the individual option.  
   
  **'hadoop connectivity'**  

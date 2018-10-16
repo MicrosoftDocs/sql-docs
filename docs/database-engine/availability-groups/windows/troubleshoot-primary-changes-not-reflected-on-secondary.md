@@ -2,17 +2,13 @@
 title: "Troubleshoot: Changes on primary not reflected on secondary replica (Always On Availability Groups-SQL Server) | Microsoft Docs"
 ms.custom: "ag-guide"
 ms.date: "06/13/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: high-availability
+ms.topic: conceptual
 ms.assetid: c602fd39-db93-4717-8f3a-5a98b940f9cc
-caps.latest.revision: 9
-author: "rothja"
-ms.author: "jroth"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Troubleshoot: Changes on the primary replica are not reflected on the secondary replica

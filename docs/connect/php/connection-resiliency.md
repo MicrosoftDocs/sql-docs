@@ -1,19 +1,14 @@
 ---
 title: "Idle Connection Resiliency"
 ms.date: "07/13/2017"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "php"
-ms.suite: "sql"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.custom: ""
-ms.technology:
-  - "drivers"
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 author: "david-puglielli"
 ms.author: "v-dapugl"
 manager: "v-hakaka"
-ms.workload: "Inactive"
 ---
 # Idle Connection Resiliency
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

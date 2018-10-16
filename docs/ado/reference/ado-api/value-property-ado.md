@@ -1,16 +1,11 @@
 ---
 title: "Value Property (ADO) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "03/20/2018"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
@@ -19,11 +14,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "Value property [ADO]"
 ms.assetid: 48919c74-86d4-462e-99b9-8854ceb8d683
-caps.latest.revision: 8
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Value Property (ADO)
 

@@ -1,31 +1,14 @@
 ---
 title: "OLE DB for OLAP Schema Rowsets | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
-helpviewer_keywords: 
-  - "schema rowsets [Analysis Services], OLE DB for OLAP"
-  - "OLE DB for OLAP schema rowsets"
-  - "schema rowsets [OLE DB for OLAP]"
-  - "rowsets [Analysis Services], OLE DB for OLAP"
-ms.assetid: 5fad3ecc-407c-4148-862e-ea6119cc7480
-caps.latest.revision: 31
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: schema-rowsets
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # OLE DB for OLAP Schema Rowsets
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]

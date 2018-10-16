@@ -2,16 +2,11 @@
 title: "Execute Package Utility (dtexecui) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "packages"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.dtexecui.setvalues.f1"
   - "sql13.dts.dtexecui.reporting.f1"
@@ -26,11 +21,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "DTExecUI utility"
 ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
-caps.latest.revision: 39
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # Execute Package Utility (dtexecui)
   Use the **Execute Package Utility** to run [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages. The utility runs packages that are stored in one of three locations: [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, the [!INCLUDE[ssIS](../../includes/ssis-md.md)] Package Store, and the file system. This user interface, which can be opened from [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or by typing **dtexecui** at a command prompt, is an alternative to running packages by using the **DTExec** command prompt tool.  
@@ -284,7 +277,7 @@ ms.workload: "On Demand"
  Click to close the **Execute Package Utility** dialog box.  
   
 ## Logging Page  
- Use the **Logging** page of the **Execute Package Utility** dialog box to make log providers available to the package at run time. Provide the package log provider type and the connection string for connecting to the log. Each log provider entry adds a **/LOGGER***classid* option to the command prompt.  
+ Use the **Logging** page of the **Execute Package Utility** dialog box to make log providers available to the package at run time. Provide the package log provider type and the connection string for connecting to the log. Each log provider entry adds a **/LOGGER**_classid_ option to the command prompt.  
   
 ### Options  
  **Log Provider**  
@@ -303,7 +296,7 @@ ms.workload: "On Demand"
  Click to close the **Execute Package Utility** dialog box.  
   
 ## Set Values Page  
- Use the **Set Values** page of the **Execute Package Utility** dialog box to set the property values of packages, executables, connections, variables, and log providers by typing the paths of properties and the property values. Each path entry adds a **/SET***propertypath;value* option to the command prompt.  
+ Use the **Set Values** page of the **Execute Package Utility** dialog box to set the property values of packages, executables, connections, variables, and log providers by typing the paths of properties and the property values. Each path entry adds a **/SET**_propertypath;value_ option to the command prompt.  
   
 ### Options  
  **Property Path**  

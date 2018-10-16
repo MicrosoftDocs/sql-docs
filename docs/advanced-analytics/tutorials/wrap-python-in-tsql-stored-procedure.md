@@ -27,10 +27,10 @@ Although it is possible to set up a remote client and run Python code using Visu
 2. Create a new database for this project, and change the context of your **Query** window to use the new database.
 
     ```sql
-    CREATE DATABASE sqlpy;
-    GO;
-    USE sqlpy;
-    GO;
+    CREATE DATABASE sqlpy
+    GO
+    USE sqlpy
+    GO
     ```
 
     > [!TIP] 

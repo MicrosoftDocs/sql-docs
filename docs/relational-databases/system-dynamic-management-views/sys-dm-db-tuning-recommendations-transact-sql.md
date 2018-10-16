@@ -1,17 +1,12 @@
-﻿---
+---
 title: "sys.dm_db_tuning_recommendations (Transact-SQL) | Microsoft Docs"
 description: Learn how to find potential performance issues and recommended fixes in SQL Server and Azure SQL Database
 ms.custom: ""
 ms.date: "07/20/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "dmv's"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.dm_db_tuning_recommendations"
@@ -24,12 +19,10 @@ helpviewer_keywords:
   - "database tuning recommendations feature [SQL Server], sys.dm_db_tuning_recommendations dynamic management view"
   - "sys.dm_db_tuning_recommendations dynamic management view"
 ms.assetid: ced484ae-7c17-4613-a3f9-6d8aba65a110
-caps.latest.revision: 37
 author: "jovanpop-msft"
 ms.author: "jovanpop"
-manager: "craigg"
-ms.workload: "Inactive"
-monikerRange: "= azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions"
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm\_db\_tuning\_recommendations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -46,7 +39,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2017 || = sqlallproducts-al
 | **valid\_since** | **datetime2** | The first time this recommendation was generated. |
 | **last\_refresh** | **datetime2** | The last time this recommendation was generated. |
 | **state** | **nvarchar(4000)** | JSON document that describes the state of the recommendation. Following fields are available:<br />-   `currentValue` - current state of the recommendation.<br />-   `reason` – constant that describes why the recommendation is in the current state.|
-| **is\_executable\_action** | **bit** | 1 = The recommendation can be executed against the database via [!INCLUDE[tsql_md](../../includes/tsql_md.md)] script.<br />0 = The recommendation cannot be executed against the database (for example: information only or reverted recommendation) |
+| **is\_executable\_action** | **bit** | 1 = The recommendation can be executed against the database via [!INCLUDE[tsql_md](../../includes/tsql-md.md)] script.<br />0 = The recommendation cannot be executed against the database (for example: information only or reverted recommendation) |
 | **is\_revertable\_action** | **bit** | 1 = The recommendation can be automatically monitored and reverted by Database engine.<br />0 = The recommendation cannot be automatically monitored and reverted. Most &quot;executable&quot; actions will be &quot;revertable&quot;. |
 | **execute\_action\_start\_time** | **datetime2** | Date the recommendation is applied. |
 | **execute\_action\_duration** | **time** | Duration of the execute action. |
@@ -57,7 +50,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2017 || = sqlallproducts-al
 | **revert\_action\_initiated\_by** | **nvarchar(4000)** | `User` = User manually unforced recommended plan. <br /> `System` = System automatically reverted recommendation. |
 | **revert\_action\_initiated\_time** | **datetime2** | Date the recommendation was reverted. |
 | **score** | **int** | Estimated value/impact for this recommendation on the 0-100 scale (the larger the better) |
-| **details** | **nvarchar(max)** | JSON document that contains more details about the recommendation. Following fields are available:<br /><br />`planForceDetails`<br />-    `queryId` - query\_id of the regressed query.<br />-    `regressedPlanId` - plan_id of the regressed plan.<br />-   `regressedPlanExecutionCount` - Number of executions of the query with regressed plan before the regression is detected.<br />-    `regressedPlanAbortedCount` - Number of detected errors during the execution of the regressed plan.<br />-    `regressedPlanCpuTimeAverage` - Average CPU time consumed by the regressed query before the regression is detected.<br />-    `regressedPlanCpuTimeStddev` - Standard deviation of CPU time consumed by the regressed query before the regression is detected.<br />-    `recommendedPlanId` - plan_id of the plan that should be forced.<br />-   `recommendedPlanExecutionCount`- Number of executions of the query with the plan that should be forced before the regression is detected.<br />-    `recommendedPlanAbortedCount` - Number of detected errors during the execution of the plan that should be forced.<br />-    `recommendedPlanCpuTimeAverage` - Average CPU time consumed by the query executed with the plan that should be forced (calculated before the regression is detected).<br />-    `recommendedPlanCpuTimeStddev` Standard deviation of CPU time consumed by the regressed query before the regression is detected.<br /><br />`implementationDetails`<br />-  `method` - The method that should be used to correct the regression. Value is always `TSql`.<br />-    `script` - [!INCLUDE[tsql_md](../../includes/tsql_md.md)] script that should be executed to force the recommended plan. |
+| **details** | **nvarchar(max)** | JSON document that contains more details about the recommendation. Following fields are available:<br /><br />`planForceDetails`<br />-    `queryId` - query\_id of the regressed query.<br />-    `regressedPlanId` - plan_id of the regressed plan.<br />-   `regressedPlanExecutionCount` - Number of executions of the query with regressed plan before the regression is detected.<br />-    `regressedPlanAbortedCount` - Number of detected errors during the execution of the regressed plan.<br />-    `regressedPlanCpuTimeAverage` - Average CPU time consumed by the regressed query before the regression is detected.<br />-    `regressedPlanCpuTimeStddev` - Standard deviation of CPU time consumed by the regressed query before the regression is detected.<br />-    `recommendedPlanId` - plan_id of the plan that should be forced.<br />-   `recommendedPlanExecutionCount`- Number of executions of the query with the plan that should be forced before the regression is detected.<br />-    `recommendedPlanAbortedCount` - Number of detected errors during the execution of the plan that should be forced.<br />-    `recommendedPlanCpuTimeAverage` - Average CPU time consumed by the query executed with the plan that should be forced (calculated before the regression is detected).<br />-    `recommendedPlanCpuTimeStddev` Standard deviation of CPU time consumed by the regressed query before the regression is detected.<br /><br />`implementationDetails`<br />-  `method` - The method that should be used to correct the regression. Value is always `TSql`.<br />-    `script` - [!INCLUDE[tsql_md](../../includes/tsql-md.md)] script that should be executed to force the recommended plan. |
   
 ## Remarks  
  Information returned by `sys.dm_db_tuning_recommendations` is updated when database engine identifies potential query performance regression, and is not persisted. Recommendations are kept only until [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is restarted. Database administrators should periodically make backup copies of the tuning recommendation if they want to keep it after server recycling. 
@@ -90,9 +83,9 @@ JSON document in `state` column contains the reason that describes why is the re
  Statistic in the details column do not show runtime plan statistics (for example, current CPU time). The recommendation details are taken at the time of regression detection and describe why [!INCLUDE[ssde_md](../../includes/ssde_md.md)] identified performance regression. Use `regressedPlanId` and `recommendedPlanId` to query [Query Store catalog views](../../relational-databases/performance/how-query-store-collects-data.md) to find exact runtime plan statistics.
 
 ## Using tuning recommendations information  
- You can use the following query to get the T-SQL script that will fix the issue:  
+You can use the following query to get the [!INCLUDE[tsql](../../includes/tsql-md.md)] script that will fix the issue:  
  
-```
+```sql
 SELECT name, reason, score,
 		JSON_VALUE(details, '$.implementationDetails.script') as script,
 		details.* 

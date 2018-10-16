@@ -31,6 +31,36 @@ SQL Server 2017
 
 For a description of processes and common questions that are related to initial setup and configuration, see [Upgrade and installation FAQ](r/upgrade-and-installation-faq-sql-server-r-services.md). It contains information about upgrades, side-by-side installation, and installation of new R or Python components.
 
+### R Script runtime error (SQL Server 2017 CU5-CU7 Regression)
+
+For SQL Server 2017, in cumulative updates 5 through 7, there is a regression in the **rlauncher.config** file where the temp directory file path includes a space. This regression is corrected in CU8.
+
+The error you will see when running R script includes the following messages:
+
+> *Unable to communicate with the runtime for 'R' script. Please check the requirements of 'R' runtime.*
+>
+> STDERR message(s) from external script: 
+>
+> *Fatal error: cannot create 'R_TempDir'*
+
+**Workaround**
+
+Apply CU8 when it becomes available. Alternatively, you can recreate **rlauncher.config** by running **registerrext** with uninstall/install on an elevated command prompt. 
+
+```text
+<SQLInstancePath>\R_SERVICES\library\RevoScaleR\rxLibs\x64\RegisterRExt.exe /uninstall /sqlbinnpath:<SQLInstanceBinnPath> /userpoolsize:0 /instance:<SQLInstanceName>
+
+<SQLInstancePath>\R_SERVICES\library\RevoScaleR\rxLibs\x64\RegisterRExt.exe /install /sqlbinnpath:<SQLInstanceBinnPath> /userpoolsize:0 /instance:<SQLInstanceName>
+```
+
+The following example shows the commands with the default instance "MSSQL14.MSSQLSERVER" installed into "C:\Program Files\Microsoft SQL Server\":
+
+```text
+"C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\RevoScaleR\rxLibs\x64\RegisterRext.exe" /uninstall /sqlbinnpath:"C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\Binn" /userpoolsize:0 /instance:MSSQLSERVER
+
+"C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\RevoScaleR\rxLibs\x64\RegisterRext.exe" /install /sqlbinnpath:"C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\Binn" /userpoolsize:0 /instance:MSSQLSERVER
+```
+
 ### Unable to install SQL Server machine learning features on a domain controller
 
 If you try to install SQL Server 2016 R Services or SQL Server 2017 Machine Learning Services on a domain controller, setup fails, with these errors:
@@ -92,7 +122,7 @@ This message is displayed if either of the following two statements is true,
 + You installed R Server (Standalone) on a client computer by using the setup wizard for [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)].
 + You installed Microsoft R Server by using the [separate Windows installer](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows).
 
-To ensure that the server and client use the same version you might need to use _binding_, supported for Microsoft R Server 9.0 and later releases, to upgrade the R components in SQL Server 2016 instances. To determine if support for upgrades is available for your version of R Services, see [Upgrade an instance of R Services using SqlBindR.exe](/r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
+To ensure that the server and client use the same version you might need to use _binding_, supported for Microsoft R Server 9.0 and later releases, to upgrade the R components in SQL Server 2016 instances. To determine if support for upgrades is available for your version of R Services, see [Upgrade an instance of R Services using SqlBindR.exe](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
 
 **Applies to:** SQL Server 2016 R Services, with R Server version 9.0.0 or earlier
 
@@ -162,7 +192,7 @@ If you encounter resource limitations, check the current default. If 20 percent 
 
 **Applies to:** SQL Server 2016 R Services, Enterprise Edition
 
-## R issues
+## R script execution issues
 
 This section contains known issues that are specific to running R on SQL Server, as well as some issues that are related to the R libraries and tools published by Microsoft, including RevoScaleR.
 
@@ -366,7 +396,7 @@ The `rxDTree` function does not currently support in-formula transformations. In
 
 Ordered factors are treated the same as factors in all RevoScaleR analysis functions except `rxDTree`.
 
-## Python code execution or Python package issues
+## Python script execution issues
 
 This section contains known issues that are specific to running Python on SQL Server, as well as issues that are related to the Python packages published by Microsoft, including [revoscalepy](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package) and [microsoftml](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package).
 

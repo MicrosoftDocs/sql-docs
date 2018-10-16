@@ -1,37 +1,14 @@
 ---
 title: "Microsoft Clustering Algorithm Technical Reference | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "clustering [Data Mining]"
-  - "MAXIMUM_INPUT_ATTRIBUTES parameter"
-  - "CLUSTER_SEED parameter"
-  - "MODELLING_CARDINALITY parameter"
-  - "MINIMUM_SUPPORT parameter"
-  - "STOPPING_TOLERANCE parameter"
-  - "MAXIMUM_STATES parameter"
-  - "SAMPLE_SIZE parameter"
-  - "CLUSTERING_METHOD parameter"
-  - "soft clustering [Data Mining]"
-  - "clustering algorithms [Analysis Services]"
-  - "CLUSTER_COUNT parameter"
-ms.assetid: ec40868a-6dc7-4dfa-aadc-dedf69e555eb
-caps.latest.revision: 21
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Microsoft Clustering Algorithm Technical Reference
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

@@ -1,24 +1,15 @@
 ---
 title: "Security (Report Builder) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
-ms.component: "report-builder"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-builder
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: ed38291a-6afe-449f-9f32-3ae04502bd6f
-caps.latest.revision: 11
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "kfile"
-ms.workload: "Inactive"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Security (Report Builder)
   Report Builder is a report authoring client application that is designed to work with a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server. The report server can be configured to work in native mode as a stand-alone server or in SharePoint integrated mode to support reports on a SharePoint site.  
@@ -113,7 +104,7 @@ ms.workload: "Inactive"
   
 -   Do not use parameters that are based on query parameters and that are type **Text** unless you provide valid values. An available values list helps a user choose only valid values. Without an available values list, you cannot restrict which values a user can enter.  
   
--   Do not use the the global [&UserID] to secure private data. As a report parameter, this value can be specified in a report URL by using URL access syntax. Using this value in an expression in a shared dataset prevents the dataset from being cached. For more information, see [URL Access Parameter Reference](../../reporting-services/url-access-parameter-reference.md) in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] documentation in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
+-   Do not use the global [&UserID] to secure private data. As a report parameter, this value can be specified in a report URL by using URL access syntax. Using this value in an expression in a shared dataset prevents the dataset from being cached. For more information, see [URL Access Parameter Reference](../../reporting-services/url-access-parameter-reference.md) in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] documentation in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
   
  After items are published to a report server, the report server administrator can help secure them by assigning role-based security or folder and item level security. For more information, see [Secure Reports and Resources](../../reporting-services/security/secure-reports-and-resources.md) in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] documentation in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
   

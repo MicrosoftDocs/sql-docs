@@ -2,16 +2,10 @@
 title: "Create a New SQL Server Failover Cluster (Setup) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "failover-clusters"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.prod: sql
+ms.technology: install
+ms.topic: conceptual
 helpviewer_keywords: 
   - "adding nodes"
   - "failover clustering [SQL Server], creating clusters"
@@ -20,11 +14,9 @@ helpviewer_keywords:
   - "clusters [SQL Server], creating"
   - "removing nodes"
 ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
-caps.latest.revision: 77
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: "Active"
 ---
 # Create a New SQL Server Failover Cluster (Setup)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -124,7 +116,7 @@ ms.workload: "Active"
   
 10. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] setup runs one more set of rules that are based on the features you selected to validate your configuration.  
   
-11. On the Instance Configuration page, specify whether to install a default or a named instance. For more information, see [Instance Configuration](http://msdn.microsoft.com/library/5bf822fc-6dec-4806-a153-e200af28e9a5).  
+11. On the Instance Configuration page, specify whether to install a default or a named instance. For more information, see [Instance Configuration](../../install/instance-configuration.md).  
   
      **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Network Name** — Specify a network name for the new [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster. This is the name that is used to identify your failover cluster on the network.  
   

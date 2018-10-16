@@ -1,16 +1,11 @@
-﻿---
+---
 title: "REPLACE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/23/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "REPLACE_TSQL"
@@ -24,12 +19,10 @@ helpviewer_keywords:
   - "second string expressions [SQL Server]"
   - "REPLACE function"
 ms.assetid: 8a7aaaf2-62e3-46c0-8e44-fa22290dd86b
-caps.latest.revision: 39
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Active"
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # REPLACE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,10 +41,10 @@ REPLACE ( string_expression , string_pattern , string_replacement )
  *string_expression*  
  Is the string [expression](../../t-sql/language-elements/expressions-transact-sql.md) to be searched. *string_expression* can be of a character or binary data type.  
   
- *string_*pattern  
+ *string\_pattern*  
  Is the substring to be found. *string_pattern* can be of a character or binary data type. *string_pattern* cannot be an empty string (''), and must not exceed the maximum number of bytes that fits on a page.  
   
- *string_*replacement  
+ *string\_replacement*  
  Is the replacement string. *string_replacement* can be of a character or binary data type.  
   
 ## Return Types  

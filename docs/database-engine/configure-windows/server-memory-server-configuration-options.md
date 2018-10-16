@@ -2,16 +2,11 @@
 title: "Server Memory Server Configuration Options | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/27/2017"
-ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "configure-windows"
+ms.prod: sql
+ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: configuration
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Virtual Memory Manager"
   - "max server memory option"
@@ -24,11 +19,9 @@ helpviewer_keywords:
   - "manual memory options [SQL Server]"
   - "memory [SQL Server], servers"
 ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
-caps.latest.revision: 78
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
-ms.workload: "Active"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Server Memory Server Configuration Options
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -124,7 +117,7 @@ To enable the lock pages in memory option:
  You can change these settings without restarting the instances, so you can easily experiment to find the best settings for your usage pattern.  
   
 ## Providing the maximum amount of memory to SQL Server  
-Memory can be configured up to the process virtual address space limit in all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] editions. For more information, see [Memory Limits for Windows and Windows Server Releases](http://msdn.microsoft.com/library/windows/desktop/aa366778(v=vs.85).aspx#physical_memory_limits_windows_server_2016).
+Memory can be configured up to the process virtual address space limit in all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] editions. For more information, see [Memory Limits for Windows and Windows Server Releases](/windows/desktop/Memory/memory-limits-for-windows-releases#physical_memory_limits_windows_server_2016).
   
 ## Examples  
   
@@ -170,5 +163,5 @@ FROM sys.dm_os_process_memory;
  [Editions and supported features of SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md#Cross-BoxScaleLimits)   
  [Editions and supported features of SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md#Cross-BoxScaleLimits)   
  [Editions and supported features of SQL Server 2017 on Linux](../../linux/sql-server-linux-editions-and-components-2017.md#Cross-BoxScaleLimits)   
- [Memory Limits for Windows and Windows Server Releases](http://msdn.microsoft.com/library/windows/desktop/aa366778(v=vs.85).aspx)
+ [Memory Limits for Windows and Windows Server Releases](/windows/desktop/Memory/memory-limits-for-windows-releases)
  

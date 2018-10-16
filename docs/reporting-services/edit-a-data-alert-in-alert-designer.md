@@ -1,29 +1,21 @@
 ---
 title: "Edit a Data Alert in Alert Designer | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/02/2017"
+ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
-ms.component: "reporting-services"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: reporting-services
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "editing, data alerts"
   - "updating, data alerts"
   - "editing, alerts"
   - "updating, alerts"
 ms.assetid: dde3664d-90b5-4b12-969e-39152c86e58a
-caps.latest.revision: 11
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
-ms.workload: "Inactive"
+author: markingmyname
+ms.author: maghan
+monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Edit a Data Alert in Alert Designer
 

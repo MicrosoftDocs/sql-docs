@@ -1,16 +1,11 @@
-﻿---
+---
 title: "SET ANSI_NULLS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/04/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "sql-data-warehouse, pdw, sql-database"
-ms.service: ""
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "SET_ANSI_NULLS_TSQL"
@@ -27,12 +22,10 @@ helpviewer_keywords:
   - "null values [SQL Server], comparison operators"
   - "comparison operators [SQL Server], null values"
 ms.assetid: aae263ef-a3c7-4dae-80c2-cc901e48c755
-caps.latest.revision: 43
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Active"
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET ANSI_NULLS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -64,7 +57,22 @@ SET ANSI_NULLS ON
  When SET ANSI_NULLS is OFF, the Equals (=) and Not Equal To (<>) comparison operators do not follow the ISO standard. A SELECT statement that uses WHERE *column_name* = **NULL** returns the rows that have null values in *column_name*. A SELECT statement that uses WHERE *column_name* <> **NULL** returns the rows that have nonnull values in the column. Also, a SELECT statement that uses WHERE *column_name* <> *XYZ_value* returns all rows that are not *XYZ_value* and that are not NULL.  
   
  When SET ANSI_NULLS is ON, all comparisons against a null value evaluate to UNKNOWN. When SET ANSI_NULLS is OFF, comparisons of all data against a null value evaluate to TRUE if the data value is NULL. If SET ANSI_NULLS is not specified, the setting of the ANSI_NULLS option of the current database applies. For more information about the ANSI_NULLS database option, see [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
+
+ The following table shows how the setting of ANSI_NULLS affects the results of a number of Boolean expressions using null and non-null values.  
   
+|Boolean Expression|SET ANSI_NULLS ON|SET ANSI_NULLS OFF|  
+|---------------|---------------|------------|  
+|NULL = NULL|UNKNOWN|TRUE|  
+|1 = NULL|UNKNOWN|FALSE|  
+|NULL <> NULL|UNKNOWN|FALSE|  
+|1 <> NULL|UNKNOWN|TRUE|  
+|NULL > NULL|UNKNOWN|UNKNOWN|  
+|1 > NULL|UNKNOWN|UNKNOWN|  
+|NULL IS NULL|TRUE|TRUE|  
+|1 IS NULL|FALSE|FALSE|  
+|NULL IS NOT NULL|FALSE|FALSE|  
+|1 IS NOT NULL|TRUE|TRUE|  
+
  SET ANSI_NULLS ON affects a comparison only if one of the operands of the comparison is either a variable that is NULL or a literal NULL. If both sides of the comparison are columns or compound expressions, the setting does not affect the comparison.  
   
  For a script to work as intended, regardless of the ANSI_NULLS database option or the setting of SET ANSI_NULLS, use IS NULL and IS NOT NULL in comparisons that might contain null values.  

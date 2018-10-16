@@ -1,16 +1,11 @@
 ---
 title: "Visual C++ Extensions Example | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "C++"
@@ -18,11 +13,9 @@ helpviewer_keywords:
   - "ADO, Visual C++"
   - "Visual C++ [ADO], VC++ extensions example"
 ms.assetid: 9739c278-582c-402b-a158-7f68a1b2c293
-caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Visual C++ Extensions Example
 This program shows how values are retrieved from fields and converted to C/C++ variables.  

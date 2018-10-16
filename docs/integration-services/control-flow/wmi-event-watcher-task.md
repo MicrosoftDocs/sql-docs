@@ -2,16 +2,11 @@
 title: "WMI Event Watcher Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "control-flow"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.wmieventwatchertask.f1"
   - "sql13.dts.designer.wmieventwatcher.general.f1"
@@ -20,11 +15,9 @@ helpviewer_keywords:
   - "WQL [Integration Services]"
   - "WMI Event Watcher task [Integration Services]"
 ms.assetid: b5bb52e9-a77e-41e1-93f9-d4c3bc6b2c9a
-caps.latest.revision: 53
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # WMI Event Watcher Task
   The WMI Event Watcher task watches for a Windows Management Instrumentation (WMI) event using a Management Instrumentation Query Language (WQL) event query to specify events of interest. You can use the WMI Event Watcher task for the following purposes:  

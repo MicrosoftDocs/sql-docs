@@ -1,29 +1,22 @@
-﻿---
+---
 title: "STRING_AGG (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/19/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: t-sql
+ms.topic: conceptual
 f1_keywords: 
   - "STRING_AGG"
   - "STRING_AGG_TSQL"
 helpviewer_keywords: 
   - "STRING_AGG function"
 ms.assetid: 8860ef3f-142f-4cca-aa64-87a123e91206
-caps.latest.revision: 13
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Active"
-monikerRange: "= azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # STRING_AGG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -42,16 +35,15 @@ STRING_AGG ( expression, separator ) [ <order_clause> ]
 ```
 
 ## Arguments 
+*expression*  
+Is an [expression](../../t-sql/language-elements/expressions-transact-sql.md) of any type. Expressions are converted to `NVARCHAR` or `VARCHAR` types during concatenation. Non-string types are converted to `NVARCHAR` type.
 
 *separator*  
 Is an [expression](../../t-sql/language-elements/expressions-transact-sql.md) of `NVARCHAR` or `VARCHAR` type that is used as separator for concatenated strings. It can be literal or variable. 
 
-*expression*  
-Is an [expression](../../t-sql/language-elements/expressions-transact-sql.md) of any type. Expressions are converted to `NVARCHAR` or `VARCHAR` types during concatenation. Non-string types are converted to `NVARCHAR` type.
-
-
 <order_clause>   
 Optionally specify order of concatenated results using `WITHIN GROUP` clause:
+
 ```
 WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )
 ```   
@@ -74,7 +66,6 @@ Return type is depends on first argument (expression). If input argument is stri
 
 
 ## Remarks  
- 
 `STRING_AGG` is an aggregate function that takes all expressions from rows and concatenates them into a single string. Expression values are implicitly converted to string types and then concatenated. The implicit conversion to strings follows the existing rules for data type conversions. For more information about data type conversions, see [CAST and CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md). 
 
 If the input expression is type `VARCHAR`, the separator cannot be type `NVARCHAR`. 
@@ -82,7 +73,6 @@ If the input expression is type `VARCHAR`, the separator cannot be type `NVARCHA
 Null values are ignored and the corresponding separator is not added. To return a place holder for null values, use the `ISNULL` function as demonstrated in example B.
 
 `STRING_AGG` is available in any compatibility level.
-
 
 ## Examples 
 
@@ -102,7 +92,6 @@ FROM Person.Person;
 > [!NOTE]  
 >  If using the Management Studio Query Editor, the **Results to Grid** option cannot implement the carriage return. Switch to **Results to Text** to see the result set properly.   
 
-
 ### B. Generate list of names separated with comma without NULL values   
 The following example replaces null values with 'N/A' and returns the names separated by commas in a single result cell.  
 ```sql
@@ -111,15 +100,12 @@ FROM Person.Person;
 ```
 
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
- 
 
 |Csv | 
 |--- |
 |John,N/A,Mike,Peter,N/A,N/A,Alice,Bob |  
 
-
 ### C. Generate comma-separated values 
-
 ```sql   
 SELECT 
 STRING_AGG(CONCAT(FirstName, ' ', LastName, ' (', ModifiedDate, ')'), CHAR(13)) 
@@ -134,10 +120,8 @@ FROM Person.Person;
 
 > [!NOTE]  
 >  If using the Management Studio Query Editor, the **Results to Grid** option cannot implement the carriage return. Switch to **Results to Text** to see the result set properly.   
- 
 
 ### D. Return news articles with related tags 
-
 Article and their tags are separated into different tables. Developer wants to return one row per each article with all associated tags. Using following query: 
 ```sql
 SELECT a.articleId, title, STRING_AGG (tag, ',') as tags 
@@ -156,7 +140,6 @@ GROUP BY a.articleId, title;
 |177 |Dogs continue to be more popular than cats |polls,animals| 
 
 ### E. Generate list of emails per towns
-
 The following query finds the email addresses of employees and groups them by towns: 
 ```sql
 SELECT town, STRING_AGG (email, ';') AS emails 
@@ -174,7 +157,6 @@ GROUP BY town;
 Emails returned in the emails column can be directly used to send emails to group of people working in some particular towns. 
 
 ### F. Generate a sorted list of emails per towns   
-   
 Similar to previous example, the following query finds the email addresses of employees, groups them by town, and sorts the emails alphabetically:   
 ```sql
 SELECT town, 
@@ -189,7 +171,6 @@ GROUP BY town;
 |--- |--- |
 |Seattle |catherine0@adventure-works.com;kim2@adventure-works.com;syed0@adventure-works.com |
 |LA |hazem0@adventure-works.com;sam1@adventure-works.com |
-
 
 ## See Also  
  [CONCAT &#40;Transact-SQL&#41;](../../t-sql/functions/concat-transact-sql.md)  

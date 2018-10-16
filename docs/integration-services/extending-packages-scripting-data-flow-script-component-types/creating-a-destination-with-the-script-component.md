@@ -2,18 +2,11 @@
 title: "Creating a Destination with the Script Component | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "extending-packages-scripting-data-flow-script-component-types"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
 dev_langs: 
   - "VB"
 helpviewer_keywords: 
@@ -21,11 +14,9 @@ helpviewer_keywords:
   - "destinations [Integration Services], components"
   - "input columns [Integration Services]"
 ms.assetid: 214e22e8-7e7d-4876-b690-c138e5721b81
-caps.latest.revision: 57
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # Creating a Destination with the Script Component
   You use a destination component in the data flow of an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package to save data received from upstream sources and transformations to a data source. Ordinarily the destination component connects to the data source through an existing connection manager.  
@@ -45,7 +36,7 @@ ms.workload: "On Demand"
  To select the script language that the Script destination will use, you set the **ScriptLanguage** property on the **Script** page of the **Script Transformation Editor** dialog box.  
   
 > [!NOTE]  
->  To set the default scripting language for the Script component, use the **Scripting language** option on the **General** page of the **Options** dialog box. For more information, see [General Page](https://msdn.microsoft.com/library/ms189436(v=sql.110).aspx).  
+>  To set the default scripting language for the Script component, use the **Scripting language** option on the **General** page of the **Options** dialog box. For more information, see [General Page](../general-page-of-integration-services-designers-options.md).  
   
  A data flow destination component has one input and no outputs. Configuring the input for the component is one of the steps that you must complete in metadata design mode, by using the **Script Transformation Editor**, before you write your custom script.  
   

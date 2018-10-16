@@ -1,24 +1,15 @@
 ---
 title: "Troubleshoot Server and Database Connection Problems with Reporting Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/28/2016"
+ms.date: 02/28/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
-ms.component: "troubleshooting"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: troubleshooting
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 8bbb88df-72fd-4c27-91b7-b255afedd345
-caps.latest.revision: 6
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
-ms.workload: "On Demand"
+author: markingmyname
+ms.author: maghan
 ---
 # Troubleshoot Server and Database Connection Problems with Reporting Services
 Use this topic to troubleshoot problems that you experience when connecting to a report server. This topic also provides information about "Unexpected error" messages. For more information about data source configuration and configuring report server connection information, see [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) and [Configure a Report Server Database Connection (SSRS Configuration Manager)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
@@ -123,5 +114,5 @@ When you create the report server databases, **ReportServer** and **ReportServer
   
   
 
-[!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
+[!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
 

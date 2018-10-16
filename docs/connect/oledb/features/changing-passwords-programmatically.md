@@ -2,16 +2,11 @@
 title: "Changing Passwords Programmatically | Microsoft Docs"
 description: "Changing passwords programmatically using OLE DB Driver for SQL Server"
 ms.custom: ""
-ms.date: "03/26/2018"
-ms.prod: "sql"
+ms.date: "06/12/2018"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "oledb|features"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
+ms.technology: connectivity
 ms.topic: "reference"
 helpviewer_keywords: 
   - "data access [OLE DB Driver for SQL Server], password expiration"
@@ -23,13 +18,14 @@ helpviewer_keywords:
   - "expired passwords [OLE DB Driver for SQL Server]"
   - "OLE DB Driver for SQL Server, password expiration"
   - "modifying passwords"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Changing Passwords Programmatically
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Before [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], when a user's password expired, only an administrator could reset it. Beginning with [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], OLE DB Driver for SQL Server supports handling password expiration programmatically through OLE DB Driver, and through changes to the **SQL Server Login** dialog boxes.  
   

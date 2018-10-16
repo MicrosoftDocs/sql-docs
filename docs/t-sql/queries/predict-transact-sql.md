@@ -1,15 +1,11 @@
-﻿---
+---
 title: "PREDICT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/25/2018"
-ms.prod: "sql"
+ms.date: "07/02/2018"
+ms.prod: sql
 ms.prod_service: "sql-database"
-ms.service: ""
-ms.component: "t-sql|queries"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "PREDICT"
@@ -18,13 +14,13 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "PREDICT clause"
-author: "jeannt"
-ms.author: "jeannt"
-manager: "craigg"
-monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
+monikerRange: ">=sql-server-2017||=azuresqldb-current||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # PREDICT (Transact-SQL)  
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
 Generates a predicted value or scores based on a stored model.  
 
@@ -94,7 +90,7 @@ It is not possible to view the internal model structure using `PREDICT`. If you 
 
 ## Remarks
 
-The `PREDICT` function is supported in all editions of SQL Server, including Linux, and in Azure SQL Database, regardless of whether other machine learning features are enabled. However, SQL Server 2017 or later is required. 
+The `PREDICT` function is supported in all editions of SQL Server 2017 or later. This support includes SQL Server 2017 on Linux. `PREDICT` is also supported in Azure SQL Database in the cloud. All these supports are active regardless of whether other machine learning features are enabled.
 
 It is not necessary that R, Python, or another machine learning language be installed on the server to use the `PREDICT` function. You can train the model in another environment and save it to a SQL Server table for use with `PREDICT`, or call the model from another instance of SQL Server that has the saved model.
 

@@ -1,17 +1,12 @@
-﻿---
+---
 title: "Create a Login | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/01/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "security"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: security
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.login.status.f1"
   - "sql13.swb.login.effectivepermissions.f1"
@@ -25,12 +20,10 @@ helpviewer_keywords:
   - "Create login [SQL Server]"
   - "SQL Server logins"
 ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
-caps.latest.revision: 29
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Active"
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create a Login
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -166,9 +159,9 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
   
 1.  Click **Search**.  
   
-2.  In the **Add Objects** dialog box, select one of the following options: **Specific objects…**, **All objects of the types…**, or **The server***server_name*. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  In the **Add Objects** dialog box, select one of the following options: **Specific objects…**, **All objects of the types…**, or **The server**_server\_name_. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-    > **NOTE:** Selecting **The server***server_name* automatically fills the upper grid with all of that servers' securable objects.  
+    > **NOTE:** Selecting **The server**_server\_name_ automatically fills the upper grid with all of that servers' securable objects.  
   
 3.  If you select **Specific objects…**:  
   

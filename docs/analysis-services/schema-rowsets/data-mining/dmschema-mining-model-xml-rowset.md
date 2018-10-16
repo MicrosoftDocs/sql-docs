@@ -1,31 +1,14 @@
 ---
 title: "DMSCHEMA_MINING_MODEL_XML Rowset | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-apiname: 
-  - "DMSCHEMA_MINING_MODEL_XML"
-apitype: "NA"
-applies_to: 
-  - "SQL Server 2016 Preview"
-helpviewer_keywords: 
-  - "DMSCHEMA_MINING_MODEL_XML rowset"
-ms.assetid: f58b00e9-3f72-4cff-b448-21a9fb529772
-caps.latest.revision: 33
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: schema-rowsets
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # DMSCHEMA_MINING_MODEL_XML Rowset
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]

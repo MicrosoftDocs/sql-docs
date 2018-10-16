@@ -2,17 +2,13 @@
 title: "Always On Availability Groups troubleshooting and monitoring guide (SQL Server) | Microsoft Docs"
 ms.custom: "ag-guide"
 ms.date: "05/10/2016"
-ms.prod: "sql-server-2016"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: high-availability
+ms.topic: conceptual
 ms.assetid: 8d6d9954-ff6b-4e58-882e-eff0174f0d07
-caps.latest.revision: 8
-author: "rothja"
-ms.author: "jroth"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Always On Availability Groups troubleshooting and monitoring guide

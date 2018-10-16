@@ -2,15 +2,11 @@
 title: "Using Abbreviated Syntax in a Path Expression | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
-ms.service: ""
-ms.component: "xquery"
+ms.prod: sql
+ms.prod_service: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "XML"
@@ -18,11 +14,9 @@ helpviewer_keywords:
   - "axis step [XQuery]"
   - "abbreviated syntax [XQuery]"
 ms.assetid: f83c2e41-5722-47c3-b5b8-bf0f8cbe05d3
-caps.latest.revision: 23
 author: "rothja"
 ms.author: "jroth"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Path Expressions - Using Abbreviated Syntax
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

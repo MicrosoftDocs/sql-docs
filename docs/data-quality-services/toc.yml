@@ -1,0 +1,143 @@
+- name: Overview
+  href: data-quality-services.md
+- name: Concept and Features
+  items:
+  - name: Introduction to Data Quality Services
+    href: introduction-to-data-quality-services.md
+  - name: Data Quality Services Concepts
+    href: data-quality-services-concepts.md
+  - name: Data Quality Services Features and Tasks
+    href: data-quality-services-features-and-tasks.md
+- name: Install
+  href: ../data-quality-services/install-windows/install-data-quality-services.md
+- name: Data Quality Client Application
+  href: data-quality-client-application.md
+  items:
+  - name: Run the Data Quality Client Application
+    href: run-the-data-quality-client-application.md
+  - name: Data Quality Client Home Screen
+    href: data-quality-client-home-screen.md
+- name: DQS Knowledge Bases and Domains
+  href: dqs-knowledge-bases-and-domains.md
+  items:
+  - name: Building a Knowledge Base
+    href: building-a-knowledge-base.md
+    items:
+    - name: Create a Knowledge Base
+      href: create-a-knowledge-base.md
+    - name: Open a Knowledge Base
+      href: open-a-knowledge-base.md
+    - name: Manage a Knowledge Base
+      href: manage-a-knowledge-base.md
+    - name: Adding Knowledge to a Knowledge Base
+      href: adding-knowledge-to-a-knowledge-base.md
+    - name: Perform Knowledge Discovery
+      href: perform-knowledge-discovery.md
+  - name: Importing and Exporting Knowledge
+    href: importing-and-exporting-knowledge.md
+    items:
+    - name: Export a Domain to a .dqs File
+      href: export-a-domain-to-a-dqs-file.md
+    - name: Import a Domain from a .dqs File
+      href: import-a-domain-from-a-dqs-file.md
+    - name: Export a Knowledge Base to a .dqs File
+      href: export-a-knowledge-base-to-a-dqs-file.md
+    - name: Import a Knowledge Base from a .dqs File
+      href: import-a-knowledge-base-from-a-dqs-file.md
+    - name: Import Values from an Excel File into a Domain
+      href: import-values-from-an-excel-file-into-a-domain.md
+    - name: Import Domains from an Excel File in Knowledge Discovery
+      href: import-domains-from-an-excel-file-in-knowledge-discovery.md
+    - name: Import Cleansing Project Values into a Domain
+      href: import-cleansing-project-values-into-a-domain.md
+  - name: Managing a Domain
+    href: managing-a-domain.md
+    items:
+    - name: Create a Domain
+      href: create-a-domain.md
+    - name: "Domain Management: Domain List"
+      href: domain-management-domain-list.md
+    - name: Set Domain Properties
+      href: set-domain-properties.md
+    - name: Create a Linked Domain
+      href: create-a-linked-domain.md
+    - name: Change Domain Values
+      href: change-domain-values.md
+    - name: Create a Domain Rule
+      href: create-a-domain-rule.md
+    - name: Create Term-Based Relations
+      href: create-term-based-relations.md
+    - name: Use the DQS Speller
+      href: use-the-dqs-speller.md
+    - name: Supported SQL Server and SSIS Data Types for DQS Domains
+      href: supported-sql-server-and-ssis-data-types-for-dqs-domains.md
+  - name: Managing a Composite Domain
+    href: managing-a-composite-domain.md
+    items:
+    - name: Create a Composite Domain
+      href: create-a-composite-domain.md
+    - name: Create a Cross-Domain Rule
+      href: create-a-cross-domain-rule.md
+    - name: Use Value Relations in a Composite Domain
+      href: use-value-relations-in-a-composite-domain.md
+  - name: Using the DQS Default Knowledge Base
+    href: using-the-dqs-default-knowledge-base.md
+- name: Data Quality Projects
+  href: data-quality-projects-dqs.md
+  items:
+  - name: Create a Data Quality Project
+    href: create-a-data-quality-project.md
+  - name: Open, Unlock, Rename, and Delete a Data Quality Project
+    href: open-unlock-rename-and-delete-a-data-quality-project.md
+  - name: Open Integration Services Projects in Data Quality Client
+    href: open-integration-services-projects-in-data-quality-client.md
+- name: Data Cleansing
+  href: data-cleansing.md
+  items:
+  - name: Cleanse Data Using DQS (Internal) Knowledge
+    href: cleanse-data-using-dqs-internal-knowledge.md
+  - name: Cleanse Data in a Composite Domain
+    href: cleanse-data-in-a-composite-domain.md
+- name: Data Matching
+  href: data-matching.md
+  items:
+  - name: Create a Matching Policy
+    href: create-a-matching-policy.md
+  - name: Run a Matching Project
+    href: run-a-matching-project.md
+- name: Reference Data Services in DQS
+  href: reference-data-services-in-dqs.md
+  items:
+  - name: Configure DQS to Use Reference Data
+    href: configure-dqs-to-use-reference-data.md
+  - name: Attach Domain or Composite Domain to Reference Data
+    href: attach-domain-or-composite-domain-to-reference-data.md
+  - name: Cleanse Data Using Reference Data (External) Knowledge
+    href: cleanse-data-using-reference-data-external-knowledge.md
+- name: Data Profiling and Notifications in DQS
+  href: data-profiling-and-notifications-in-dqs.md
+- name: DQS Administration
+  href: dqs-administration.md
+  items:
+  - name: Monitor DQS Activities
+    href: monitor-dqs-activities.md
+  - name: Configure Threshold Values for Cleansing and Matching
+    href: configure-threshold-values-for-cleansing-and-matching.md
+  - name: Enable or Disable Profiling Notifications in DQS
+    href: enable-or-disable-profiling-notifications-in-dqs.md
+  - name: Manage DQS Log Files
+    href: manage-dqs-log-files.md
+    items:
+    - name: Configure Severity Levels for DQS Log Files
+      href: configure-severity-levels-for-dqs-log-files.md
+    - name: Configure Advanced Settings for DQS Log Files
+      href: configure-advanced-settings-for-dqs-log-files.md
+  - name: Manage DQS Databases
+    href: manage-dqs-databases.md
+    items:
+    - name: Backing Up and Restoring DQS Databases
+      href: backing-up-and-restoring-dqs-databases.md
+    - name: Detaching and Attaching DQS Databases
+      href: detaching-and-attaching-dqs-databases.md
+- name: DQS Security
+  href: dqs-security.md

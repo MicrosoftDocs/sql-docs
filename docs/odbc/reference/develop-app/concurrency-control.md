@@ -2,25 +2,18 @@
 title: "Concurrency Control | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "transactions [ODBC], concurrency control"
   - "concurrency control [ODBC]"
 ms.assetid: 75e4adb3-3d43-49c5-8c5e-8df96310d912
-caps.latest.revision: 5
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Concurrency Control
 *Concurrency* is the ability of two transactions to use the same data at the same time, and with increased transaction isolation usually comes reduced concurrency. This is because transaction isolation is usually implemented by locking rows, and as more rows are locked, fewer transactions can be completed without being blocked at least temporarily by a locked row. While reduced concurrency is generally accepted as a trade-off for the higher transaction isolation levels necessary to maintain database integrity, it can become a problem in interactive applications with high read/write activity that use cursors.  

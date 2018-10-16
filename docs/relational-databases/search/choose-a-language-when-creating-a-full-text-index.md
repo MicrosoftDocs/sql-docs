@@ -1,16 +1,12 @@
-﻿---
+---
 title: "Choose a Language When Creating a Full-Text Index | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql  
 ms.reviewer: ""
-ms.suite: "sql"
-ms.prod_service: "database-engine, sql-database"
-ms.component: search
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.prod_service: "search, sql-database"
+ms.technology: search
+ms.topic: conceptual
 helpviewer_keywords: 
   - "languages [full-text search]"
   - "full-text indexes [SQL Server], languages"
@@ -21,11 +17,9 @@ helpviewer_keywords:
   - "languages [SQL Server], full-text indexes"
   - "word breakers [full-text search]"
 ms.assetid: 670a5181-ab80-436a-be96-d9498fbe2c09
-caps.latest.revision: 49
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "Inactive"
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Choose a Language When Creating a Full-Text Index

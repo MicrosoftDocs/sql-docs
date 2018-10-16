@@ -2,15 +2,9 @@
 title: "sys.dm_os_latch_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/18/2017"
-ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "dmv's"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.dm_os_latch_stats_TSQL"
@@ -22,11 +16,9 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_os_latch_stats dynamic management view"
 ms.assetid: 2085d9fc-828c-453e-82ec-b54ed8347ae5
-caps.latest.revision: 33
-author: "stevestein"
-ms.author: "sstein"
-manager: "craigg"
-ms.workload: "Inactive"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sys.dm_os_latch_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -125,7 +117,7 @@ GO
 |FCB|Used to synchronize access to the file control block.|  
 |FCB_REPLICA|Internal use only.|  
 |FGCB_ALLOC|Use to synchronize access to round robin allocation information within a filegroup.|  
-|FGCB_ADD_REMOVE|Use to synchronize access to filegroups for ADD and DROP file operations.|  
+|FGCB_ADD_REMOVE|Use to synchronize access to filegroups for add, drop, grow, and shrink file operations.|  
 |FILEGROUP_MANAGER|Internal use only.|  
 |FILE_MANAGER|Internal use only.|  
 |FILESTREAM_FCB|Internal use only.|  

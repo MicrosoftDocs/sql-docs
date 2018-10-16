@@ -1,27 +1,19 @@
 ---
 title: "WideWorldImporters OLAP database - use of SQL Server | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
-ms.service: ""
-ms.component: "samples"
-ms.technology:
-  - "samples"
+ms.prod: sql
+ms.prod_service: sql
+ms.technology: "samples"
 ms.custom: ""
-ms.date: "04/04/2018"
+ms.date: "08/04/2018"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-
-author: "BarbKess"
-ms.author: "barbkess"
-manager: "craigg"
-robots: noindex,nofollow
-ms.workload: "Inactive"
-monikerRange: ">= sql-server-2016 || = sqlallproducts-allversions"
+ms.topic: conceptual
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current"
 ---
 # WideWorldImportersDW use of SQL Server features and capabilities
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
 WideWorldImportersDW is designed to showcase many of the key features of SQL Server that are suitable for data warehousing and analytics. The following is a list of SQL Server features and capabilities, and a description of how they are used in WideWorldImportersDW.
 
 ## PolyBase

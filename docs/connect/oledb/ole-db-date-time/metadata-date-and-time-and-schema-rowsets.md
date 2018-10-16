@@ -2,26 +2,22 @@
 title: "Date and Time and Schema Rowsets | Microsoft Docs"
 description: "Date and time and schema rowsets"
 ms.custom: ""
-ms.date: "03/26/2018"
-ms.prod: "sql"
+ms.date: "06/14/2018"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "ole-db-date-time"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
+ms.technology: connectivity
 ms.topic: "reference"
 helpviewer_keywords: 
   - "date/time [OLE DB], schema rowsets"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Metadata - Date and Time and Schema Rowsets
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   This topic provides information about COLUMNS rowset and PROCEDURE_PARAMETERS rowset. This information relates to the OLE DB date and time enhancements introduced in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)].  
   

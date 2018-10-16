@@ -1,17 +1,12 @@
 ---
 title: "Access Control for Sensitive Data in Packages | Microsoft Docs"
-ms.custom: ""
+ms.custom: security
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "security"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.packageprotectionlevel.f1"
   - "sql13.ssis.bids.projectprotectionlevel.f1"
@@ -26,11 +21,9 @@ helpviewer_keywords:
   - "cryptography [Integration Services]"
   - "security [Integration Services], protection levels"
 ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
-caps.latest.revision: 44
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # Access Control for Sensitive Data in Packages
   To protect the data in an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package, you can set a protection level that helps protect just sensitive data or all the data in the package. Furthermore, you can encrypt this data with a password or a user key, or rely on the database to encrypt the data. Also, the protection level that you use for a package is not necessarily static, but changes throughout the life cycle of the package. You often set one protection level during development and another as soon as you deploy the package.  
@@ -96,7 +89,7 @@ ms.workload: "On Demand"
   
 ### To set or change the protection level of a package in SQL Server Data Tools  
   
-1.  Review the available values for the **ProtectionLevel** property in the topic, [Setting the Protection Level of Packages](#set_protection), and determine the appropriate value for your package.  
+1.  Review the available values for the **ProtectionLevel** property in the section, [Protection Levels](#protection-levels), and determine the appropriate value for your package.  
   
 2.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project that contains the package.  
   
@@ -112,7 +105,7 @@ ms.workload: "On Demand"
   
 ### To set or change the protection level of packages at the command prompt  
   
-1.  Review the available values for the **ProtectionLevel** property in the section, [Setting the Protection Level of Packages](#set_protection), and determine the appropriate value for your package.  
+1.  Review the available values for the **ProtectionLevel** property in the section, [Protection Levels](#protection-levels), and determine the appropriate value for your package.  
   
 2.  Review the mappings for the **Encrypt** option in the topic, [dtutil Utility](../../integration-services/dtutil-utility.md), and determine the appropriate integer to use as the value of the selected **ProtectionLevel** property.  
   

@@ -1,31 +1,25 @@
 ---
-title: "Configuration settings (SQL Server Data Migration Assistant) | Microsoft Docs"
+title: "Configure settings for Data Migration Assistant (SQL Server) | Microsoft Docs"
+description: Learn how to configure settings for the Data Migration Assistant by updating values in the configuration file
 ms.custom: ""
-ms.date: "08/31/2017"
-ms.prod: "sql-non-specified"
+ms.date: "08/29/2018"
+ms.prod: sql
 ms.prod_service: "dma"
-ms.service: ""
-ms.component:
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "sql-dma"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: dma
+ms.topic: conceptual
 keywords: ""
 helpviewer_keywords: 
   - "Data Migration Assistant, Assess"
 ms.assetid: ""
-caps.latest.revision: ""
-author: "HJToland3"
-ms.author: "jtoland"
-manager: "craigg"
-ms.workload: "Inactive"
+author: HJToland3
+ms.author: rajpo
+manager: craigg
 ---
 
-# Configuration settings for Data Migration Assistant
+# Configure settings for Data Migration Assistant
 
-You can fine-tune certain behavior of Data Migration Assistant using configuration values in the dma.exe.config file. This article describes key configuration values.
+You can fine-tune certain behavior of Data Migration Assistant by setting configuration values in the dma.exe.config file. This article describes key configuration values.
 
 You can find the dma.exe.config file for the Data Migration Assistant desktop application and the command line utility, in the following folders on your machine.
 

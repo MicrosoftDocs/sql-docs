@@ -1,0 +1,48 @@
+- name: Overview
+  href: stretch-database.md
+- name: Limitations and blocking issues
+  href: limitations-for-stretch-database.md
+- name: Get Started
+  items:
+  - name: Identify databases and tables
+    href: stretch-database-databases-and-tables-stretch-database-advisor.md
+  - name: Run the wizard
+    href: get-started-by-running-the-enable-database-for-stretch-wizard.md
+  - name: Configure compatible features
+    href: configure-compatible-sql-server-features-with-stretch-database.md
+- name: How To
+  items:
+  - name: Enable
+    items:
+    - name: Enable a database
+      href: enable-stretch-database-for-a-database.md
+    - name: Enable a table
+      href: enable-stretch-database-for-a-table.md
+    - name: Select rows to migrate
+      href: select-rows-to-migrate-by-using-a-filter-function-stretch-database.md
+  - name: Manage
+    items:
+    - name: Monitor migration
+      href: monitor-and-troubleshoot-data-migration-stretch-database.md
+    - name: Pause and resume migration
+      href: pause-and-resume-data-migration-stretch-database.md
+    - name: Manage and troubleshoot
+      href: manage-and-troubleshoot-stretch-database.md
+    - name: Back up
+      href: backup-stretch-enabled-databases-stretch-database.md
+    - name: Restore
+      href: restore-stretch-enabled-databases-stretch-database.md
+    - name: Disable and bring back data
+      href: disable-stretch-database-and-bring-back-remote-data.md
+    - name: Extended events
+      href: extended-events-for-stretch-database.md
+- name: Resources
+  items:
+  - name: Pricing
+    href: https://azure.microsoft.com/pricing/details/sql-server-stretch-database/
+  - name: Blog
+    href: https://blogs.technet.microsoft.com/dataplatforminsider/tag/stretch-database/
+  - name: Service updates
+    href: https://azure.microsoft.com/updates/?product=sql-server-stretch-database
+  - name: Videos
+    href: https://azure.microsoft.com/documentation/videos/index/?services=sql-server-stretch-database

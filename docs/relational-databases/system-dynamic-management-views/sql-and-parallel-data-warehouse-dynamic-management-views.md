@@ -1,25 +1,17 @@
-﻿---
+---
 title: "SQL and Parallel Data Warehouse Dynamic Management Views | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: ""
 ms.prod_service: "sql-data-warehouse, pdw"
-ms.service: "sql-data-warehouse"
-ms.component: "dmv's"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: e713365e-d44c-4b66-84c9-81a1bcc32414
-caps.latest.revision: 9
-author: "barbkess"
-ms.author: "barbkess"
-manager: "craigg"
-ms.workload: "Inactive"
+author: stevestein
+ms.author: sstein
+manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # SQL and Parallel Data Warehouse Dynamic Management Views

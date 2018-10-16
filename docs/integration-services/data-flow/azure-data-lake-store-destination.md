@@ -2,25 +2,18 @@
 title: "Azure Data Lake Store Destination | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/02/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "data-flow"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "SQL13.DTS.DESIGNER.AFPADLSDEST.F1"
   - "sql14.dts.designer.afpadlsdest.f1"
 ms.assetid: 4c4f504f-dd2b-42c5-8a20-1a8ad9a5d632
-caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Azure Data Lake Store Destination
   The **Azure Data Lake Store Destination** component enables an SSIS package to write data to an Azure Data Lake Store. The supported file formats are: Text, Avro and ORC. 

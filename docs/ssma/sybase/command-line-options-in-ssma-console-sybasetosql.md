@@ -2,27 +2,16 @@
 title: "Command Line Options in SSMA Console (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssma-sybase"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "sql-ssma"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
+ms.technology: ssma
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Sybase Console,Command Line Options"
 ms.assetid: 337cbd26-67b7-4c88-9deb-d0a69a3d7714
-caps.latest.revision: 11
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Command Line Options in SSMA Console (SybaseToSQL)
 Microsoft provides you with a robust set of command line options to execute and control SSMA activities. The ensuing sections detail the same.  
@@ -127,7 +116,7 @@ This denotes the project environment settings folder for the current SSMA projec
 ### Secure Password Option: –p/securepassword  
 This option indicates the encrypted password for server connections. It differs from all other options: the option neither executes any script nor helps in any migration-related activities but helps manage password-encryption for the server connections used in the migration project.  
   
-You cannot enter any other option or password as the command line parameter. Otherwise, it results in an error. For more information, refer to the [Managing Passwords](http://msdn.microsoft.com/en-us/9b6a70f9-6840-4140-a059-bb7bd7ccc67c) section.  
+You cannot enter any other option or password as the command line parameter. Otherwise, it results in an error. For more information, refer to the [Managing Passwords](managing-passwords-sybasetosql.md) section.  
   
 The following sub-options are supported for `–p/securepassword`:  
   

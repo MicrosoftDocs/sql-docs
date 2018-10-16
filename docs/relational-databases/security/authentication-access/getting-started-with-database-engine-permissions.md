@@ -1,26 +1,19 @@
-﻿---
+---
 title: "Getting Started with Database Engine Permissions | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/03/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "security"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+ms.technology: security
+ms.topic: quickstart
 helpviewer_keywords: 
   - "permissions [SQL Server], getting started"
 ms.assetid: 051af34e-bb5b-403e-bd33-007dc02eef7b
-caps.latest.revision: 15
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "On Demand"
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Getting Started with Database Engine Permissions
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -230,7 +223,7 @@ JOIN sys.database_principals AS dRole
 ## Next Steps  
  For more topics to get you started, see:  
   
--   [Tutorial: Getting Started with the Database Engine](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md) [Creating a Database &#40;Tutorial&#41;](../../../t-sql/lesson-1-1-creating-a-database.md)  
+-   [Tutorial: Getting Started with the Database Engine](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md) [Creating a Database &#40;Tutorial&#41;](../../../t-sql/lesson-1-creating-database-objects.md#)  
   
 -   [Tutorial: SQL Server Management Studio](../../../tools/sql-server-management-studio/tutorial-sql-server-management-studio.md)  
   

@@ -1,16 +1,11 @@
 ---
 title: "Properties Collection (ADO) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
@@ -20,11 +15,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "Properties collection [ADO]"
 ms.assetid: 1d539aa8-ce0d-4418-ab03-8d0a3c1e9d82
-caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "On Demand"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Properties Collection (ADO)
 Contains all the [Property](../../../ado/reference/ado-api/property-object-ado.md) objects for a specific instance of an object.  

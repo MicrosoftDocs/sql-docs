@@ -2,25 +2,18 @@
 title: "Numeric Functions | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "functions [ODBC], numeric functions"
   - "numeric functions [ODBC]"
 ms.assetid: 4fa548dc-e8b0-4179-92ff-81d6a79d10c3
-caps.latest.revision: 5
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Numeric Functions
 The following table describes numeric functions that are included in the ODBC scalar function set. By calling **SQLGetInfo** with an *information type* of SQL_NUMERIC_FUNCTIONS, an application can determine which numeric functions are supported by a driver.  

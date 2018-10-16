@@ -2,29 +2,26 @@
 title: "IBCPSession::BCPColFmt (OLE DB) | Microsoft Docs"
 description: "IBCPSession::BCPColFmt (OLE DB)"
 ms.custom: ""
-ms.date: "03/26/2018"
-ms.prod: "sql"
+ms.date: "06/14/2018"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "ole-db-interfaces"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
   - "IBCPSession::BCPColFmt (OLE DB)"
 apitype: "COM"
 helpviewer_keywords: 
   - "BCPColFmt method"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
-ms.workload: "Inactive"
 ---
 # IBCPSession::BCPColFmt (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Creates a binding between program variables and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] columns.  
   

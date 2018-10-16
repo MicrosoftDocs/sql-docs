@@ -2,15 +2,11 @@
 title: "srv_parammaxlen (Extended Stored Procedure API) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "extended-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
   - "srv_parammaxlen"
@@ -22,11 +18,9 @@ dev_langs:
 helpviewer_keywords: 
   - "srv_parammaxlen"
 ms.assetid: 49bfc29d-f76a-4963-b0e6-b8532dfda850
-caps.latest.revision: 32
 author: "rothja"
 ms.author: "jroth"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # srv_parammaxlen (Extended Stored Procedure API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

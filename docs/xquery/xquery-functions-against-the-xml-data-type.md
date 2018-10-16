@@ -2,18 +2,12 @@
 title: "XQuery Functions against the xml Data Type | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/09/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
-ms.service: ""
-ms.component: "xquery"
+ms.prod: sql
+ms.prod_service: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 dev_langs: 
   - "XML"
 helpviewer_keywords: 
@@ -21,11 +15,9 @@ helpviewer_keywords:
   - "xml data type [SQL Server], XQuery"
   - "functions [SQL Server], XQuery"
 ms.assetid: 8df0877d-a03f-4ca9-b84e-908c4bb42b5e
-caps.latest.revision: 37
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
-ms.workload: "On Demand"
 ---
 # XQuery Functions against the xml Data Type
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

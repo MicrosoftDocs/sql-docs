@@ -1,16 +1,11 @@
 ---
 title: "UnderlyingValue Property | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
@@ -20,11 +15,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "UnderlyingValue property"
 ms.assetid: 00a0c8b8-8b63-433f-95b8-020ab05874a0
-caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # UnderlyingValue Property
 Indicates the current value of a [Field](../../../ado/reference/ado-api/field-object.md) object in the database.  

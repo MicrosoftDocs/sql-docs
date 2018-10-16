@@ -1,16 +1,10 @@
-﻿---
+---
 title: "sys.dm_tran_version_store_space_usage (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/30/2017"
-ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "dmv's"
+ms.date: "04/24/2018"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.dm_tran_version_store_space_usage_TSQL"
@@ -22,15 +16,13 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_tran_version_store_space_usage dynamic management view"
 ms.assetid: 7ab44517-0351-4f91-bdd9-7cf940f03c51
-caps.latest.revision: 10
 author: "savjani"
 ms.author: "pariks"
 manager: "ajayj"
-ms.workload: "Inactive"
-monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
+monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_tran_version_store_space_usage (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
 
 Returns a table that displays total space in tempdb used by version store records for each database. **sys.dm_tran_version_store_space_usage** is efficient and not expensive to run, as it does not navigate through individual version store records, and returns aggregated version store space consumed in tempdb per database.
   
@@ -48,7 +40,7 @@ Because the versioned record is stored as binary, there are no problems with dif
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
 
 ## Examples  
- The following query can be used to determine space consumed in tempdb, by version store of each database in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. 
+The following query can be used to determine space consumed in tempdb, by version store of each database in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. 
   
 ```sql  
 SELECT 

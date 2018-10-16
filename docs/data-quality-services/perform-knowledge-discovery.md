@@ -2,27 +2,21 @@
 title: "Perform Knowledge Discovery | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/04/2013"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "data-quality-services"
-ms.service: ""
-ms.component: "data-quality-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dqs.kb.kbterms.f1"
   - "sql13.dqs.kb.viewselectcd.f1"
   - "sql13.dqs.kb.kbanalyze.f1"
   - "sql13.dqs.kb.kbmap.f1"
 ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
-caps.latest.revision: 38
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Perform Knowledge Discovery
 

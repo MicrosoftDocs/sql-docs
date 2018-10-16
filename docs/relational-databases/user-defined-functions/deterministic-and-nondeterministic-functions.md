@@ -1,17 +1,12 @@
-﻿---
+---
 title: "Deterministic and Nondeterministic Functions | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/26/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "udf"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
-  - "dbe-udf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "built-in functions [SQL Server]"
   - "nondeterministic functions"
@@ -19,12 +14,10 @@ helpviewer_keywords:
   - "deterministic functions"
   - "user-defined functions [SQL Server], deterministic"
 ms.assetid: 2f3ce5f5-c81c-4470-8141-8144d4f218dd
-caps.latest.revision: 43
 author: "rothja"
 ms.author: "jroth"
-manager: "craigg"
-ms.workload: "On Demand"
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Deterministic and Nondeterministic Functions
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

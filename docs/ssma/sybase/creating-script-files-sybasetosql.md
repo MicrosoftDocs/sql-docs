@@ -2,30 +2,19 @@
 title: "Creating Script Files (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssma-sybase"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "sql-ssma"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
+ms.technology: ssma
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Sybase Console,Configuring Settings"
   - "Sybase Console,Script Commands"
   - "Sybase Console,Script File Validation"
   - "Sybase Console,Server Connection Parameters"
 ms.assetid: e6baf106-abbd-4200-b3de-33b4b4f1b294
-caps.latest.revision: 24
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Creating Script Files (SybaseToSQL)
 The first step before launching the SSMA console application is to create the script file and if required creating the variable value file and the server connection file.  
@@ -356,7 +345,7 @@ The script file contains a sequence of migration workflow commands in the XML fo
   
 For example, a typical data migration of a specific table in a Sybase database follows the hierarchy of: Database-&gt;Schema -&gt;Table.  
   
-When all the commands in the script file are executed successfully, the SSMA console application exits and returns the control to the user. The contents of a script file are more or less static with variable information contained either in a [Variable Value Files](http://msdn.microsoft.com/en-us/395be464-4b19-44f7-91e5-b8876d6743dc) or, in a separate section within the script file for variable values.  
+When all the commands in the script file are executed successfully, the SSMA console application exits and returns the control to the user. The contents of a script file are more or less static with variable information contained either in a [Variable Value Files](creating-variable-value-files-sybasetosql.md) or, in a separate section within the script file for variable values.  
   
 **Example:**  
   

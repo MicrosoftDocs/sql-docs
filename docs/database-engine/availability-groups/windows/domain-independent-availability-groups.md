@@ -2,24 +2,16 @@
 title: "Domain Independent Availability Groups (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/25/2017"
-ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "availability-groups"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-- "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: high-availability
+ms.topic: conceptual
 helpviewer_keywords: 
 - "Availability Groups [SQL Server], domain independent"
 ms.assetid: 
-caps.latest.revision: 
-author: "allanhirt"
-ms.author: "mikeray"
-manager: "craigg"
-ms.workload: "Inactive"
+author: "MashaMSFT"
+ms.author: mathoma
+manager: craigg
 ---
 # Domain Independent Availability Groups
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -2,18 +2,11 @@
 title: "Creating a Synchronous Transformation with the Script Component | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "extending-packages-scripting-data-flow-script-component-types"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
 dev_langs: 
   - "VB"
 helpviewer_keywords: 
@@ -21,11 +14,9 @@ helpviewer_keywords:
   - "transformation components [Integration Services]"
   - "Script component [Integration Services], transformation components"
 ms.assetid: aa1bee1a-ab06-44d8-9944-4bff03d73016
-caps.latest.revision: 64
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # Creating a Synchronous Transformation with the Script Component
   You use a transformation component in the data flow of an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package to modify and analyze data as it passes from source to destination. A transformation with synchronous outputs processes each input row as it passes through the component. A transformation with asynchronous outputs waits until it has received all input rows to complete its processing. This topic discusses a synchronous transformation. For information about asynchronous transformations, see [Creating an Asynchronous Transformation with the Script Component](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md). For more information about the difference between synchronous and asynchronous components, see [Understanding Synchronous and Asynchronous Transformations](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md).  
@@ -43,7 +34,7 @@ ms.workload: "On Demand"
  To set the script language for the Script component, you set the **ScriptLanguage** property on the **Script** page of the **Script Transformation Editor**.  
   
 > [!NOTE]  
->  To set the default scripting language for the Script component, use the **Scripting language** option on the **General** page of the **Options** dialog box. For more information, see [eneral Page](https://msdn.microsoft.com/library/ms189436(v=sql.110).aspx).  
+>  To set the default scripting language for the Script component, use the **Scripting language** option on the **General** page of the **Options** dialog box. For more information, see [eneral Page](../general-page-of-integration-services-designers-options.md).  
   
  A data flow transformation component has one input, and supports one or more outputs. Configuring the input and outputs for the component is one of the steps that you must complete in metadata design mode, by using the **Script Transformation Editor**, before you write your custom script.  
   

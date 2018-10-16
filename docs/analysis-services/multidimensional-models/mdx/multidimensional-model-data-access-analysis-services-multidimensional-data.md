@@ -1,35 +1,14 @@
 ---
 title: "Multidimensional Model Data Access (Analysis Services - Multidimensional Data) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: multidimensional-tabular
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SSAS, data access interfaces"
-  - "objects [Analysis Services], data access interfaces"
-  - "Analysis Services data access interfaces"
-  - "data retrieval [Analysis Services]"
-  - "retrieving data"
-  - "metadata [Analysis Services]"
-  - "data access interfaces [Analysis Services]"
-  - "manipulating objects [Analysis Services]"
-  - "Analysis Services data access interfaces, about data access interfaces"
-ms.assetid: 46388efb-3c78-47a2-b5c9-5a69ff394d03
-caps.latest.revision: 46
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "On Demand"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Multidimensional Model Data Access (Analysis Services - Multidimensional Data)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]

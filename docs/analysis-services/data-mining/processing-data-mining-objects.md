@@ -1,31 +1,14 @@
 ---
 title: "Processing Data Mining Objects | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "processing objects [Analysis Services]"
-  - "mining structures [Analysis Services]"
-  - "process [Analysis Services]"
-  - "mining structures [Analysis Services], creating"
-  - "mining structures [Analysis Services], how-to topics"
-  - "mining structures [Analysis Services], processing"
-ms.assetid: 0f6993c0-0917-4935-82f9-7b8a8a7cc627
-caps.latest.revision: 20
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Processing Data Mining Objects
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

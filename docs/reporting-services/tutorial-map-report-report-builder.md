@@ -1,28 +1,17 @@
 ---
 title: "Tutorial: Map Report (Report Builder) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/31/2016"
+ms.date: 08/31/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.service: ""
-ms.component: "reporting-services"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: reporting-services
 
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+ms.topic: conceptual
 ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
-caps.latest.revision: 18
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "kfile"
-ms.workload: "On Demand"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Tutorial: Map Report (Report Builder)
-In this [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] tutorial, you learn about map features you can use to display data on a geographic background in an [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginated report. 
+In this [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] tutorial, you learn about map features you can use to display data on a geographic background in an [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginated report. 
   
 Maps are based on spatial data that typically consists of points, lines, and polygons. For example, a polygon can represent the outline of a county, a line can represent a road, and a point can represent the location of a city. Each type of spatial data is displayed on a separate map layer as a set of map elements.  
   
@@ -38,7 +27,7 @@ In this tutorial, you build a map report that displays store locations in New Yo
 Estimated time to complete this tutorial: 30 minutes.  
   
 ## Requirements  
-For this tutorial, the report server must be configured to support Bing maps as a background. For more information, see [Plan for Map Report Support](http://msdn.microsoft.com/en-us/5ddc97a7-7ee5-475d-bc49-3b814dce7e19). 
+For this tutorial, the report server must be configured to support Bing maps as a background. For more information, see [Plan for Map Report Support](http://msdn.microsoft.com/5ddc97a7-7ee5-475d-bc49-3b814dce7e19). 
 
 For information about other requirements, see [Prerequisites for Tutorials &#40;Report Builder&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   

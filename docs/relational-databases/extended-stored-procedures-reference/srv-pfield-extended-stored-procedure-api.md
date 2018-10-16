@@ -2,15 +2,11 @@
 title: "srv_pfield (Extended Stored Procedure API) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "extended-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
   - "srv_pfield"
@@ -22,11 +18,9 @@ dev_langs:
 helpviewer_keywords: 
   - "srv_pfield"
 ms.assetid: a61e4c1f-e65b-48ea-a7d1-3e1544af389d
-caps.latest.revision: 32
 author: "rothja"
 ms.author: "jroth"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # srv_pfield (Extended Stored Procedure API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

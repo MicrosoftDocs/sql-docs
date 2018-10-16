@@ -2,15 +2,10 @@
 title: "CREATE XML SCHEMA COLLECTION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/25/2015"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "CREATE XML SCHEMA COLLECTION"
@@ -28,11 +23,9 @@ helpviewer_keywords:
   - "multiple schema namespaces"
   - "XML schema collections [SQL Server], creating"
 ms.assetid: 350684e8-b3f6-4b58-9dbc-0f05cc776ebb
-caps.latest.revision: 30
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "On Demand"
+manager: craigg
 ---
 # CREATE XML SCHEMA COLLECTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

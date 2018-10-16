@@ -2,23 +2,17 @@
 title: "Install SQL Server Database Engine | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/05/2017"
-ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "install-windows"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: install
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Database Engine [SQL Server], installing"
 ms.assetid: d0876e7f-aa52-4dd7-bd5c-029e2ffded5f
-caps.latest.revision: 45
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MashaMSFT
+ms.author: mathoma
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+manager: craigg
 ---
 # Install SQL Server Database Engine
 
@@ -38,7 +32,9 @@ The following features are installed when you select **[!INCLUDE[ssNoVersion](..
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 -   Replication - is an optional component  
-  
+
+-   [Machine Learning Services (In-Database) with R and Python](../../advanced-analytics/install/sql-machine-learning-services-windows-install.md) - is an optional component
+
 -   Full-Text Search - is an optional component  
   
 -   Data Quality Services – is an optional component  

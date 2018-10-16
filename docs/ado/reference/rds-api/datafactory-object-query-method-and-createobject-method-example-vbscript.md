@@ -1,16 +1,11 @@
 ---
 title: "Create RDSServer.DataFactory Object using CreateObject (VBScript) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "VB"
@@ -19,11 +14,9 @@ helpviewer_keywords:
   - "CreateObject method [ADO], VBScript example"
   - "Query method [ADO], VBScript example"
 ms.assetid: b4e2844a-120a-4513-860b-f1b6e4b5dda4
-caps.latest.revision: 14
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # DataFactory Object, Query Method, and CreateObject Method Example (VBScript)
 > [!IMPORTANT]

@@ -2,25 +2,18 @@
 title: "Microsoft Replication Conflict Viewer and Interactive Resolver | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: replication
+ms.topic: conceptual
 helpviewer_keywords: 
   - "replication conflict viewer [SQL Server]"
   - "interactive resolver [SQL Server replication]"
 ms.assetid: 641bd224-fcde-4ad4-9518-369cbeb398e4
-caps.latest.revision: 22
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # Microsoft Replication Conflict Viewer and Interactive Resolver
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -1,17 +1,12 @@
 ---
-title: "common criteria compliance enabled Server Configuration Option | Microsoft Docs"
+title: "Common Criteria Compliance Enabled Configuration | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "configure-windows"
+ms.date: "08/21/2018"
+ms.prod: sql
+ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: configuration
+ms.topic: conceptual
 f1_keywords: 
   - "common criteria compliance"
 helpviewer_keywords: 
@@ -20,16 +15,14 @@ helpviewer_keywords:
   - "Risidual Information Protection [Database Engine]"
   - "RIP (Residual Information Protection)"
 ms.assetid: 61766eea-c450-408d-af33-fbe7ef8c9ff2
-caps.latest.revision: 24
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
-ms.workload: "Inactive"
+author: craigg-msft
+ms.author: craigg
+manager: jhubbard
 ---
-# common criteria compliance enabled Server Configuration Option
+# Common Criteria Compliance Enabled Server Configuration
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  The common criteria compliance enabled option enables the following elements that are required for the Common Criteria.  
+The common criteria compliance option enables the following elements that are required for the [Common Criteria for Information Technology Security Evaluation](https://www.commoncriteriaportal.org/).  
   
 |Criteria|Description|  
 |--------------|-----------------|  
@@ -65,6 +58,4 @@ GO
 Restart [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
   
 ## See Also  
- [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
-  
-  
+ [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)

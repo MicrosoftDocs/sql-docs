@@ -1,24 +1,14 @@
 ﻿---
 title: "Analysis Services tutorial lesson 12: Analyze in Excel | Microsoft Docs"
-description: Describes how to use Analyze in Excel in the Analysis Services tutorial project. 
-ms.prod_service: "analysis-services, azure-analysis-services"
-services: analysis-services
-ms.suite: "pro-bi"
-documentationcenter: ''
-author: Minewiskan
-manager: kfile
-editor: ''
-tags: ''
-
-ms.assetid: 
-ms.service: analysis-services
-ms.devlang: NA
-ms.topic: get-started-article
-ms.tgt_pltfrm: NA
-ms.workload: na
-ms.date: 02/20/2018
+ms.date: 08/27/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: tutorial
 ms.author: owend
-monikerRange: ">= sql-analysis-services-2017 || = sqlallproducts-allversions"
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Analyze in Excel
 

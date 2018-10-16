@@ -1,26 +1,15 @@
 ---
 title: "Command Line Options in SSMA Console (AccessToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssma-access"
+ms.prod: sql
 ms.custom: ""
 ms.date: "08/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "sql-ssma"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
+ms.technology: ssma
+ms.topic: conceptual
 ms.assetid: c1f3b3f0-0f3e-4e07-b745-2fbdde85c67e
-caps.latest.revision: 11
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "murato"
-ms.workload: "Inactive"
 ---
 # Command-line options in the SSMA Console (AccessToSQL)
 Microsoft provides you with a robust set of command-line options to execute and control SSMA activities. The ensuing sections provide additional detail.  
@@ -129,7 +118,7 @@ This optional switch denotes the project environment settings folder for the cur
 ### Secure password option: –p/securepassword  
 This option indicates the encrypted password for server connections. It differs from all other options in that it does not execute any script or help in any migration-related activities, but helps manage password-encryption for the server connections used in the migration project.  
   
-You cannot enter any other option or password as the command-line parameter. Otherwise, it results in an error. For more information, see the [Managing Passwords](http://msdn.microsoft.com/b099d0f9-dd37-4c87-8b6f-ed0177881ea4) section.  
+You cannot enter any other option or password as the command-line parameter. Otherwise, it results in an error. For more information, see the [Managing Passwords](managing-passwords-accesstosql.md) section.  
   
 The following suboptions are supported for `–p/securepassword`:  
   

@@ -1,16 +1,11 @@
 ---
 title: "Record (ADO for Visual C++ Syntax) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 dev_langs: 
@@ -18,11 +13,9 @@ dev_langs:
 helpviewer_keywords: 
   - "Record collection [ADO], ADO for Visual C++ syntax"
 ms.assetid: c4ce8532-a4d8-4f74-9488-9389b6695958
-caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Record (ADO for Visual C++ Syntax)
 ## Methods  

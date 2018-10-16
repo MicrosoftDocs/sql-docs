@@ -1,31 +1,23 @@
-﻿---
+---
 title: "Return Data from a Stored Procedure | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql"
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "stored-procedures"
+ms.prod: sql
+ms.technology: stored-procedures
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-stored-Procs"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "stored procedures [SQL Server], returning data"
   - "returning data from stored procedure"
 ms.assetid: 7a428ffe-cd87-4f42-b3f1-d26aa8312bf7
-caps.latest.revision: 25
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
-ms.workload: "Active"
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Return Data from a Stored Procedure
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
- > For content related to previous versions of SQL Server, see [Return Data from a Stored Procedure](https://msdn.microsoft.com/en-US/library/ms188655(SQL.120).aspx).
+ > For content related to previous versions of SQL Server, see [Return Data from a Stored Procedure](return-data-from-a-stored-procedure.md).
 
   There are three ways of returning data from a procedure to a calling program: result sets, output parameters, and return codes. This topic provides information on the three approaches.  
   

@@ -2,22 +2,15 @@
 title: "getClientConnectionID Method (SQLServerConnection) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "jdbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 ms.assetid: bee39c11-733a-461f-92cc-33efcb2af87d
-caps.latest.revision: 6
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.workload: "Inactive"
 ---
 # getClientConnectionID Method (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -58,7 +51,7 @@ Connection cn = pcon.getConnection();
 UUID conid = ((ISQLServerConnection)cn).getClientConnectionId();  
 ```  
   
- **getClientConnectionID** works regardless of which version of the server you connect to, but extended events logs and entry on connectivity ring buffer errors will not be present in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 2008 R2 and earlier.  
+ **getClientConnectionID** works regardless of which version of the server you connect to, but extended events logs and entry on connectivity ring buffer errors will not be present in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2008 R2 and earlier.  
   
  You can locate the connection ID in the extended events log to see if the failure was on the server if the extended event for logging connection ID is enabled. You can also locate the connection ID in the connection ring buffer ([Connectivity troubleshooting in SQL Server 2008 with the Connectivity Ring Buffer](http://go.microsoft.com/fwlink/?LinkId=207752)) for certain connection errors. If the connection ID is not in the connection ring buffer, you can assume a network error.  
   

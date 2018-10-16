@@ -1,17 +1,11 @@
-﻿---
+---
 title: "sys.dm_db_log_info (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/11/2018"
-ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "dmv's"
+ms.date: "04/24/2018"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: system-objects
+ms.topic: conceptual
 f1_keywords: 
   - "sys.dm_db_log_info"
   - "sys.dm_db_log_info_TSQL"
@@ -22,15 +16,13 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_db_log_info dynamic management view"
 ms.assetid: f6b40060-c17d-472f-b0a3-3b350275d487
-caps.latest.revision: 4
 author: "savjani"
 ms.author: "pariks"
 manager: "ajayj"
-ms.workload: "Inactive"
-monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_log_info (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
 
 Returns [virtual log file (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) information of the transaction log. Note all transaction log files are combined in the table output. Each row in the output represents a VLF in the transaction log and provides information relevant to that VLF in the log.
 
@@ -38,7 +30,8 @@ Returns [virtual log file (VLF)](../../relational-databases/sql-server-transacti
   
 ```  
 sys.dm_db_log_info ( database_id )  
-```  
+``` 
+
 ## Arguments  
  *database_id* | NULL | DEFAULT  
  Is the ID of the database. *database_id* is **int**. Valid inputs are the ID number of a database, NULL, or DEFAULT. The default is NULL. NULL and DEFAULT are equivalent values in the context of current database.
@@ -63,10 +56,10 @@ sys.dm_db_log_info ( database_id )
 |vlf_create_lsn|**nvarchar(48)** |[Log sequence number (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) of the log record that created the [virtual log file (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch).|
 
 ## Remarks
- The `sys.dm_db_log_info` dynamic management function replaces the `DBCC LOGINFO` statement. 
+The `sys.dm_db_log_info` dynamic management function replaces the `DBCC LOGINFO` statement.    
  
 ## Permissions  
- Requires the `VIEW DATABASE STATE` permission in the database.  
+Requires the `VIEW DATABASE STATE` permission in the database.  
   
 ## Examples  
   

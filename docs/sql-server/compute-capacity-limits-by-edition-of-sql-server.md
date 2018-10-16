@@ -2,26 +2,18 @@
 title: "Compute capacity limits by edition of SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/06/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
-ms.service: ""
-ms.component: "sql-non-specified"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: install
+ms.topic: conceptual
 helpviewer_keywords: 
   - "processors [SQL Server], supported"
   - "number of processors supported"
   - "maximum number of processors supported"
 ms.assetid: cd308bc9-9468-40cc-ad6e-1a8a69aca6c8
-caps.latest.revision: 60
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: craigg
-ms.workload: "Active"
 ---
 # Compute capacity limits by edition of SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

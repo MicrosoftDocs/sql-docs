@@ -1,17 +1,12 @@
-﻿---
+---
 title: "Modify Foreign Key Relationships | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/25/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "tables"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: table-view-index
+ms.topic: conceptual
 f1_keywords: 
   - "vdtsql.chm:65538"
   - "vdt.ppg.relationships"
@@ -19,12 +14,10 @@ helpviewer_keywords:
   - "foreign keys [SQL Server], modifying"
   - "modifying foreign keys"
 ms.assetid: 0c9ca80d-d79b-44c4-a21e-0fce39c398ec
-caps.latest.revision: 20
-author: "stevestein"
-ms.author: "sstein"
-manager: "craigg"
-ms.workload: "On Demand"
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+author: stevestein
+ms.author: sstein
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Modify Foreign Key Relationships
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -144,7 +137,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
   
     -   **Set Default** Sets the value to the default value that is defined for the column if all foreign key columns for the table have defaults defined for them.  
   
-4.  On the **File** menu, click **Save***table name*.  
+4.  On the **File** menu, click **Save**_table name_.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
  **To modify a foreign key**  

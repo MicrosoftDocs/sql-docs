@@ -1,0 +1,12 @@
+- name: ADO Glossary
+  href: ado-glossary.md
+- name: ADO-API +
+  href: ../../ado/reference/ado-api/ado-code-examples.md
+- name: ADO-MD-API +
+  href: ../../ado/reference/ado-md-api/ado-md-object-model.md
+- name: ADOX-API +
+  href: ../../ado/reference/adox-api/adox-object-model.md
+- name: RDS-API +
+  href: ../../ado/reference/rds-api/rds-api-reference.md
+- name: ADO Programmer's Reference
+  href: ado-programmer-s-reference.md

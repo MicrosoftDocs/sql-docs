@@ -1,16 +1,11 @@
 ---
 title: "AbsolutePosition Property (ADO) | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
@@ -18,11 +13,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "AbsolutePosition property [ADO]"
 ms.assetid: 79f8ee5e-fc70-46d8-8c29-ebf943c66592
-caps.latest.revision: 14
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # AbsolutePosition Property (ADO)
 Indicates the ordinal position of a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object's current record.  

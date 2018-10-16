@@ -1,16 +1,11 @@
-﻿---
+---
 title: "CREATE ASSEMBLY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/30/2018"
-ms.prod: "sql"
+ms.date: "09/07/2018"
+ms.prod: sql
 ms.prod_service: "sql-database"
-ms.service: ""
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "ASSEMBLY"
@@ -25,20 +20,16 @@ helpviewer_keywords:
   - "CREATE ASSEMBLY statement"
   - "assemblies [CLR integration], creating"
 ms.assetid: d8d1d245-c2c3-4325-be52-4fc1122c2079
-caps.latest.revision: 94
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "craigg"
-ms.workload: "On Demand"
-monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # CREATE ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
 
   Creates a managed application module that contains class metadata and managed code as an object in an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. By referencing this module, common language runtime (CLR) functions, stored procedures, triggers, user-defined aggregates, and user-defined types can be created in the database.  
   
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
-
 >  [!WARNING]
 >  CLR uses Code Access Security (CAS) in the .NET Framework, which is no longer supported as a security boundary. A CLR assembly created with `PERMISSION_SET = SAFE` may be able to access external system resources, call unmanaged code, and acquire sysadmin privileges. Beginning with [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], an `sp_configure` option called `clr strict security` is introduced to enhance the security of CLR assemblies. `clr strict security` is enabled by default, and treats `SAFE` and `EXTERNAL_ACCESS` assemblies as if they were marked `UNSAFE`. The `clr strict security` option can be disabled for backward compatibility, but this is not recommended. Microsoft recommends that all assemblies be signed by a certificate or asymmetric key with a corresponding login that has been granted `UNSAFE ASSEMBLY` permission in the master database. For more information, see [CLR strict security](../../database-engine/configure-windows/clr-strict-security.md).  
   
@@ -69,6 +60,9 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
   
  \<client_assembly_specifier>  
 Specifies the local path or network location where the assembly that is being uploaded is located, and also the manifest file name that corresponds to the assembly.  \<client_assembly_specifier> can be expressed as a fixed string or an expression evaluating to a fixed string, with variables. CREATE ASSEMBLY does not support loading multimodule assemblies. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] also looks for any dependent assemblies of this assembly in the same location and also uploads them with the same owner as the root level assembly. If these dependent assemblies are not found and they are not already loaded in the current database, CREATE ASSEMBLY fails. If the dependent assemblies are already loaded in the current database, the owner of those assemblies must be the same as the owner of the newly created assembly.
+
+> [!IMPORTANT]
+> Azure SQL Database does not support creating an assembly from a file.
   
  \<client_assembly_specifier> cannot be specified if the logged in user is being impersonated.  
   
@@ -179,6 +173,9 @@ CREATE ASSEMBLY HelloWorld
 FROM <system_drive>:\Program Files\Microsoft SQL Server\100\Samples\HelloWorld\CS\HelloWorld\bin\debug\HelloWorld.dll  
 WITH PERMISSION_SET = SAFE;  
 ```  
+
+> [!IMPORTANT]
+> Azure SQL Database does not support creating an assembly from a file.
   
 ### Example B: Creating an assembly from assembly bits  
   

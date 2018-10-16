@@ -1,30 +1,21 @@
-﻿---
+---
 title: "Previous releases of SQL Server Data Tools (SSDT and SSDT-BI) | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/10/2018"
-ms.prod: "sql-non-specified"
+ms.date: "09/05/2018"
+ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.service: ""
-ms.component: "ssdt"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "tools-ssdt"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssdt
+ms.topic: conceptual
 ms.assetid: 5d32e301-0f44-4916-b0db-76e8322c0ab7
-caps.latest.revision: 23
 author: "stevestein"
 ms.author: "sstein"
-manager: "craigg"
-ms.workload: "Active"
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current"
 ---
 # Previous releases of SQL Server Data Tools (SSDT and SSDT-BI)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 SQL Server Data Tools (SSDT) provides project templates and design surfaces for building SQL Server content types — relational databases, Analysis Services models, Reporting Services reports, and Integration Services packages.  
-  
-It's based on a Visual Studio shell and co-released with SQL Server. New versions of SSDT integrate the latest features of SQL Server. Older versions include the templates and design environment that were current for that release.  
   
 SSDT is backwards compatible, so you can always use [the newest SSDT](download-sql-server-data-tools-ssdt.md) to design and deploy databases, models, reports, and packages that run on older versions of SQL Server.  
   
@@ -33,25 +24,24 @@ SSDT is backwards compatible, so you can always use [the newest SSDT](download-s
 
 ## Recent downloads
 
-The last few downloads are provided for the unlikely event that you experience issues with the [latest release](download-sql-server-data-tools-ssdt.md). 
+The last few downloads are provided for the unlikely event that you experience issues with the latest release.
 
-|Release| Visual Studio 2017|
+|SSDT release| Visual Studio 2017|
 |:---|:---|
-|15.5.2|[SSDT for VS2017 15.5.2](https://go.microsoft.com/fwlink/?LinkId=866452)|
-|15.5.1|[SSDT for VS2017 15.5.1](https://go.microsoft.com/fwlink/?LinkId=865748)|  
+|15.8.0|[SSDT for VS2017 15.8.0](https://go.microsoft.com/fwlink/?linkid=2014060)|
+|15.7.1|[SSDT for VS2017 15.7.1](https://go.microsoft.com/fwlink/?LinkId=875613)|
+|15.7.0|[SSDT for VS2017 15.7.0](https://go.microsoft.com/fwlink/?LinkId=874716)|
+|15.6.0|[SSDT for VS2017 15.6.0](https://go.microsoft.com/fwlink/?LinkId=871368)|
 <br>
 
-
-|Release| Visual Studio 2015|
+|SSDT release| Visual Studio 2015|
 |:---|:---|
-|17.3|[SSDT for VS2015 17.3](https://go.microsoft.com/fwlink/?linkid=858660)| 
-|17.2|[SSDT for VS2015 17.2](https://go.microsoft.com/fwlink/?linkid=852922)| 
-|17.1|[SSDT for VS2015 17.1](https://go.microsoft.com/fwlink/?linkid=849393)|
-|17.0|[SSDT for VS2015 17.0](https://go.microsoft.com/fwlink/?linkid=846626)| 
+|17.4|[SSDT for VS2015 17.4](https://go.microsoft.com/fwlink/?linkid=863440)|
+|17.3|[SSDT for VS2015 17.3](https://go.microsoft.com/fwlink/?linkid=858660)|
 |16.5|[SSDT for VS2015 16.5](https://go.microsoft.com/fwlink/?LinkID=832313)|  
 <br>
 
-|Release| Visual Studio 2013|
+|SSDT release| Visual Studio 2013|
 |:---|:---|
 |16.5|[SSDT for VS2013 16.5](https://go.microsoft.com/fwlink/?LinkID=832308)|  
 <br>

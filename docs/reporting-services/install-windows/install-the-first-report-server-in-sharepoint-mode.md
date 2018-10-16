@@ -1,21 +1,12 @@
 ---
 title: "Install the first Report Server in SharePoint mode | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/05/2017"
+ms.date: 10/05/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint"
-ms.service: ""
-ms.component: "install-windows"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
-ms.workload: "On Demand"
+ms.topic: conceptual
+author: markingmyname
+ms.author: maghan
 ---
 # Install the first Report Server in SharePoint mode
 

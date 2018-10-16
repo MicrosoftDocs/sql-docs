@@ -1,16 +1,11 @@
 ---
 title: "ADCPROP_UPDATERESYNC_ENUM | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
@@ -18,11 +13,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "ADCPROP_UPDATERESYNC_ENUM [ADO]"
 ms.assetid: bc9e1a37-e969-47e9-8382-0bbfffa2034f
-caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # ADCPROP_UPDATERESYNC_ENUM
 Specifies whether the [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) method is followed by an implicit [Resync](../../../ado/reference/ado-api/resync-method.md) method operation and if so, the scope of that operation.  

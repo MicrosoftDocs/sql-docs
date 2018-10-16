@@ -1,9 +1,10 @@
 ---
-title: Lesson 5 Train and save a model using T-SQL | Microsoft Docs
+title: Lesson 5 Train and save a model using R and T-SQL (SQL Server Machine Learning) | Microsoft Docs
+description: Tutorial showing how to embed R in SQL Server stored procedures and T-SQL functions 
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
+ms.date: 06/07/2018  
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
@@ -14,7 +15,7 @@ manager: cgronlun
 
 This article is part of a tutorial for SQL developers on how to use R in SQL Server.
 
-In this lesson, you'll learn how to train a machine learning model by using R. You'll train the model using the data features you just created, and then save the trained model in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table. In this case, the R packages are already installed with [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], so everything can be done from SQL.
+In this lesson, you'll learn how to train a machine learning model by using R. You'll train the model using the data features you created in the previous lesson, and then save the trained model in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table. In this case, the R packages are already installed with [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], so everything can be done from SQL.
 
 ## Create the stored procedure
 
@@ -76,7 +77,7 @@ Because the stored procedure already includes a definition of the input data, yo
     EXEC TrainTipPredictionModel
     ```
 
-2. Watch the **Messages** window of [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] for messages that would be piped to R's **stdout** stream, like this messaage: 
+2. Watch the **Messages** window of [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] for messages that would be piped to R's **stdout** stream, like this message: 
 
     "STDOUT message(s) from external script: Rows Read: 1193025, Total Rows Processed: 1193025, Total Chunk Time: 0.093 seconds"
 
@@ -100,5 +101,5 @@ In the next step you'll use the trained model to create predictions.
 
 ## Previous lesson
 
-[Lesson 4: Create data features using T-SQL](..//tutorials/sqldev-create-data-features-using-t-sql.md)
+[Lesson 4: Create data features using R and T-SQL functions](..//tutorials/sqldev-create-data-features-using-t-sql.md)
 

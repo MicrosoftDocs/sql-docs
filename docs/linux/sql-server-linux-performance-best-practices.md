@@ -1,22 +1,17 @@
 ---
 title: Performance best practices for SQL Server on Linux | Microsoft Docs
-description: This article provide performance best practices and guidelines for running SQL Server 2017 on Linux.
+description: This article provide performance best practices and guidelines for running SQL Server on Linux.
 author: rgward 
 ms.author: bobward 
 manager: craigg
 ms.date: 09/14/2017
-ms.topic: article
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: ""
-ms.suite: "sql"
+ms.topic: conceptual
+ms.prod: sql
 ms.custom: "sql-linux"
-ms.technology: database-engine
-ms.workload: "Inactive"
+ms.technology: linux
 ---
 
-# Performance best practices and configuration guidelines for SQL Server 2017 on Linux
+# Performance best practices and configuration guidelines for SQL Server on Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 

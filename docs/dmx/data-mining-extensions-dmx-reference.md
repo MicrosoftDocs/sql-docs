@@ -1,42 +1,14 @@
 ---
 title: "Data Mining Extensions (DMX) Reference | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.component: data-mining
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "DMX"
-helpviewer_keywords: 
-  - "DMX [Analysis Services]"
-  - "statements [DMX]"
-  - "Data Mining Extensions [Analysis Services], statements"
-  - "DMX [Analysis Services], about Data Mining Extensions"
-  - "DMX [Analysis Services], statements"
-  - "data definition statements [DMX]"
-  - "predictions [DMX]"
-  - "Data Mining Extensions [Analysis Services]"
-  - "SSAS, DMX"
-  - "queries [DMX], extensions reference"
-  - "SQL Server Analysis Services, DMX"
-  - "OLE DB for Data Mining"
-  - "data manipulation statements [DMX]"
-  - "Data Mining Extensions [Analysis Services], about Data Mining Extensions"
-  - "mining models [Analysis Services], DMX"
-ms.assetid: 6d85ca20-de67-4e20-b3b5-b734c6cfcece
-caps.latest.revision: 40
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-ms.workload: "Inactive"
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Data Mining Extensions (DMX) Reference
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]

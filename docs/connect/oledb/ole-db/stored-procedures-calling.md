@@ -2,16 +2,11 @@
 title: "Calling a Stored Procedure (OLE DB) | Microsoft Docs"
 description: "Calling a Stored Procedure (OLE DB)"
 ms.custom: ""
-ms.date: "03/26/2018"
-ms.prod: "sql"
+ms.date: "06/12/2018"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "ole-db"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
+ms.technology: connectivity
 ms.topic: "reference"
 helpviewer_keywords: 
   - "calling stored procedures"
@@ -21,13 +16,14 @@ helpviewer_keywords:
   - "ODBC CALL escape sequence"
   - "stored procedures [OLE DB], calling"
   - "OLE DB Driver for SQL Server, stored procedures"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Stored Procedures - Calling
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   A stored procedure can have zero or more parameters. It can also return a value. When using the OLE DB Driver for SQL Server, parameters to a stored procedure can be passed by:  
   
@@ -36,7 +32,7 @@ ms.workload: "Inactive"
 -   Using a parameter marker (?) to specify parameters, bind a program variable to the parameter marker, and then place the data value in the program variable.  
   
 > [!NOTE]  
->  When calling [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] stored procedures using named parameters with OLE DB, the parameter names must start with the '@' character. This is a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] specific restriction. The OLE DB Driver for SQL Server enforces this restriction more strictly than MDAC.  
+>  When calling [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] stored procedures using named parameters with OLE DB, the parameter names must start with the '\@' character. This is a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] specific restriction. The OLE DB Driver for SQL Server enforces this restriction more strictly than MDAC.  
   
  To support parameters, the **ICommandWithParameters** interface is exposed on the command object. To use parameters, the consumer first describes the parameters to the provider by calling the **ICommandWithParameters::SetParameterInfo** method (or optionally prepares a calling statement that calls the **GetParameterInfo** method). The consumer then creates an accessor that specifies the structure of a buffer and places parameter values in this buffer. Finally, it passes the handle of the accessor and a pointer to the buffer to **Execute**. On later calls to **Execute**, the consumer places new parameter values in the buffer and calls **Execute** with the accessor handle and buffer pointer.  
   
@@ -94,7 +90,7 @@ ms.workload: "Inactive"
   
  The general syntax for calling a procedure by using the ODBC CALL escape sequence is:  
   
- {[**?=**]**call***procedure_name*[**(**[*parameter*][**,**[*parameter*]]...**)**]}  
+ {[**?=**]**call**_procedure\_name_[**(**[*parameter*][**,**[_parameter_]]...**)**]}  
   
  For example:  
   

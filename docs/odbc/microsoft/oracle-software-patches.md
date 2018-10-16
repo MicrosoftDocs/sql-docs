@@ -2,25 +2,18 @@
 title: "Oracle Software Patches | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "odbc"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "ODBC driver for Oracle [ODBC], Oraclesoftware patches"
   - "Oracle software patches [ODBC]"
 ms.assetid: 1275157b-f4e1-4c24-b273-c02555e261c2
-caps.latest.revision: 8
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.workload: "Inactive"
 ---
 # Oracle Software Patches
 > [!IMPORTANT]  

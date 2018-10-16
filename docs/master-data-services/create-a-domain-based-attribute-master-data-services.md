@@ -2,26 +2,20 @@
 title: "Create a Domain-Based Attribute (Master Data Services) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/25/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "mds"
-ms.service: ""
-ms.component: "non-specific"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "domain-based attributes [Master Data Services], creating"
   - "creating domain-based attributes [Master Data Services]"
   - "attributes [Master Data Services], creating domain-based attributes"
 ms.assetid: 11c31c9f-e6cc-47b7-b76a-d691f84c93c6
-caps.latest.revision: 12
-author: "leolimsft"
-ms.author: "lle"
-manager: "craigg"
-ms.workload: "Inactive"
+author: leolimsft
+ms.author: lle
+manager: craigg
 ---
 # Create a Domain-Based Attribute (Master Data Services)
 

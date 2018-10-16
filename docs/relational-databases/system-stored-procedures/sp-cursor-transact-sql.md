@@ -2,15 +2,10 @@
 title: "sp_cursor (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_cursor_TSQL"
@@ -20,11 +15,9 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_cursor"
 ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
-caps.latest.revision: 10
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sp_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -127,7 +120,7 @@ sp_cursor  cursor, optype, rownum, table
 ## value Parameter  
  There are two alternatives to the rules for using *value* as stated earlier in the Arguments section:  
   
-1.  You can use a name that is '@' pre-pended to the name of the column in the select-list for any named *value* parameters. One advantage of this alternative is that data conversion may not be necessary.  
+1.  You can use a name that is '\@' pre-pended to the name of the column in the select-list for any named *value* parameters. One advantage of this alternative is that data conversion may not be necessary.  
   
 2.  Use a parameter to either submit a complete UPDATE or INSERT statement or use multiple parameters to submit portions of an UPDATE or INSERT statement which SQL Server will then build into a complete statement. Examples of this can be found in the Examples section later in this topic.  
   

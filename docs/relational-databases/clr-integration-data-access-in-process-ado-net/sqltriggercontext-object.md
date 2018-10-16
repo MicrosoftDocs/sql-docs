@@ -2,26 +2,19 @@
 title: "SqlTriggerContext Object | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "clr"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
+ms.technology: clr
 
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "SqlTriggerContext object"
   - "triggers [CLR integration]"
   - "context [CLR integration]"
 ms.assetid: 472a2d0b-64ae-4877-8f11-a5620aa698b7
-caps.latest.revision: 18
 author: "rothja"
 ms.author: "jroth"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # SqlTriggerContext Object
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

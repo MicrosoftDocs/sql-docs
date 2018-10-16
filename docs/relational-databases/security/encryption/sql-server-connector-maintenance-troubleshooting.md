@@ -2,24 +2,16 @@
 title: "SQL Server Connector Maintenance &amp; Troubleshooting | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/05/2017"
-ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "security"
-ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.prod: sql
+ms.reviewer: vanto
+ms.technology: security
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Connector, appendix"
 ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
-caps.latest.revision: 21
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: aliceku
+ms.author: aliceku
+manager: craigg
 ---
 # SQL Server Connector Maintenance &amp; Troubleshooting
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

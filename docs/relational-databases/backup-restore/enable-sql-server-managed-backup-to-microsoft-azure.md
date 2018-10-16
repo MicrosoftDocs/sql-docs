@@ -2,28 +2,21 @@
 title: "Enable SQL Server Managed Backup to Microsoft Azure | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/03/2016"
-ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "backup-restore"
+ms.prod: sql
+ms.prod_service: backup-restore
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: backup-restore
+ms.topic: conceptual
 ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
-caps.latest.revision: 25
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
-ms.workload: "On Demand"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Enable SQL Server Managed Backup to Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This topic describes how to enable [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] with default settings at both the database and instance level. It also describes how to enable email notifications and how to monitor backup activity.  
   
- This tutorial uses Azure PowerShell. Before starting the tutorial, [download and install Azure PowerShell](http://azure.microsoft.com/en-us/documentation/articles/powershell-install-configure/).  
+ This tutorial uses Azure PowerShell. Before starting the tutorial, [download and install Azure PowerShell](http://azure.microsoft.com/documentation/articles/powershell-install-configure/).  
   
 > [!IMPORTANT]  
 >  If you also want to enable advanced options or use a custom schedule, configure those settings first before enabling [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. For more information, see [Configure Advanced Options for SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md).  
@@ -40,7 +33,7 @@ ms.workload: "On Demand"
     New-AzureStorageAccount -StorageAccountName "managedbackupstorage" -Location "EAST US"  
     ```  
   
-     For more information about storage accounts, see [About Azure Storage Accounts](http://azure.microsoft.com/en-us/documentation/articles/storage-create-storage-account/).  
+     For more information about storage accounts, see [About Azure Storage Accounts](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/).  
   
 3.  **Create a blob container for the backup files:** You can create a blob container in the Azure Management Portal or with Azure PowerShell. The following `New-AzureStorageContainer` command creates a blob container named `backupcontainer` in the `managedbackupstorage` storage account.  
   
@@ -69,7 +62,7 @@ ms.workload: "On Demand"
     |**Container URL:**|https://managedbackupstorage.blob.core.windows.net/backupcontainer|  
     |**SAS token:**|sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl|  
   
-     Record the container URL and SAS for use in creating a SQL CREDENTIAL. For more information about SAS, see [Shared Access Signatures, Part 1: Understanding the SAS Model](http://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-shared-access-signature-part-1/).  
+     Record the container URL and SAS for use in creating a SQL CREDENTIAL. For more information about SAS, see [Shared Access Signatures, Part 1: Understanding the SAS Model](http://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/).  
   
 #### Enable [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]  
   

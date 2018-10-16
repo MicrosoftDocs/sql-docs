@@ -2,16 +2,10 @@
 title: "Use the Fail Over Availability Group Wizard (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
-ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "availability-groups"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: high-availability
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.failoverwizard.connecttoreplicas.f1"
   - "sql13.swb.failoverwizard.progress.f1"
@@ -23,11 +17,9 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], wizards"
   - "Availability Groups [SQL Server], configuring"
 ms.assetid: 4a602584-63e4-4322-aafc-5d715b82b834
-caps.latest.revision: 26
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # Use the Fail Over Availability Group Wizard (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

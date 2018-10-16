@@ -5,17 +5,13 @@ author: rothja
 ms.date: 02/23/2018
 ms.author: jroth 
 manager: craigg
-ms.topic: article
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: ""
-ms.suite: "sql"
+ms.topic: conceptual
+ms.prod: sql
+
 ms.custom: "sql-linux"
-ms.technology: database-engine
+ms.technology: linux
 helpviewer_keywords: 
   - "Linux, AAD authentication"
-ms.workload: "On Demand"
 ---
 # Active Directory authentication for SQL Server on Linux
 
@@ -49,7 +45,6 @@ The details for how to configure AD authentication are provided in the tutorial,
 ## Known issues
 
 - At this time, the only authentication method supported for database mirroring endpoint is CERTIFICATE. WINDOWS authentication method will be enabled in a future release.
-- Third-party AD tools like Centrify, Powerbroker, and Vintela are not supported.
 
 ## Next Steps
 

@@ -1,24 +1,15 @@
 ---
 title: "Extensions (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
-ms.component: "reporting-services"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: reporting-services
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 2bb0fdca-1837-49f5-b542-61826bab0b46
-caps.latest.revision: 7
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
-ms.workload: "On Demand"
+author: markingmyname
+ms.author: maghan
 ---
 # Extensions (SSRS)
   The report server in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] uses extensions to modularize the types of input or output it accepts for authentication, data processing, report rendering, and report delivery. This makes it easy for existing [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] installations to utilize new software standards in the industry, such as a new authentication scheme, or a custom data source type. The report server supports custom authentication extensions, data processing extensions, report processing extensions, rendering extensions, and delivery extensions, and the extensions that are available to the users are configurable in the RSReportServer.config configuration file. For example, you can limit the export formats the report viewer is allowed to use. A report server requires at least one authentication extension, data processing extension, and rendering extension. Delivery and report processing extensions are optional, but necessary if you want to support report distribution or custom controls.  

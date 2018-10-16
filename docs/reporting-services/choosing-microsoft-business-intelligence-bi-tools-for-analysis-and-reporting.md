@@ -1,24 +1,15 @@
 ---
 title: "Choosing Microsoft Business Intelligence (BI) tools for analysis and reporting | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/12/2016"
+ms.date: 09/12/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
-ms.component: "reporting-services"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: reporting-services
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+ms.topic: conceptual
 ms.assetid: d0e16108-7123-4788-87b3-05db962dbc94
-caps.latest.revision: 16
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
-ms.workload: "On Demand"
+author: markingmyname
+ms.author: maghan
 ---
 # Choosing Microsoft Business Intelligence (BI) tools for analysis and reporting
 Choosing the right business intelligence tool can be overwhelming. Learn about the different Microsoft offerings and find the one that best fits your needs.

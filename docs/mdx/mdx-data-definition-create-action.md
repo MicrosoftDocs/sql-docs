@@ -1,40 +1,17 @@
 ---
 title: "CREATE ACTION Statement (MDX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "CREATE ACTION"
-  - "Action"
-  - "CREATE"
-  - "CREATE_ACTION"
-dev_langs: 
-  - "kbMDX"
-helpviewer_keywords: 
-  - "invocation types [MDX]"
-  - "dimensions [Analysis Services], actions"
-  - "CREATE ACTION statement"
-  - "cubes [Analysis Services], actions"
-  - "actions [MDX]"
-  - "hierarchies [Analysis Services], actions"
-ms.assetid: 0419f349-ece2-42ba-8552-a1023f268a41
-caps.latest.revision: 36
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-ms.workload: "Inactive"
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # MDX Data Definition - CREATE ACTION
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Creates an action that can be associated with a cube, dimension, hierarchy, or subordinate object.  
   
@@ -93,10 +70,10 @@ FOR
  It is possible for client applications to create and run actions that are unsafe; it is also possible for client applications to use unsafe functions. To avoid these situations, use the **Safety Options** property. For more information, see Safety Options Property.  
   
 > [!NOTE]  
->  This statement is included for backwards compatibility. Actions new to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], such as Drillthrough or Report actions, are not supported.  
+>  This statement is included for backwards compatibility. Actions new to [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], such as Drillthrough or Report actions, are not supported.  
   
 ## Action Types  
- The following table describes the different types of actions available in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
+ The following table describes the different types of actions available in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
 |Action type|Description|  
 |-----------------|-----------------|  

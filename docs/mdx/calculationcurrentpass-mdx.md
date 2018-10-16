@@ -1,32 +1,17 @@
 ---
 title: "CalculationCurrentPass (MDX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: analysis-services
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "CALCULATIONCURRENTPASS"
-dev_langs: 
-  - "kbMDX"
-helpviewer_keywords: 
-  - "CalculationCurrentPass function"
-ms.assetid: 7069f7a0-8ec8-4293-8db3-b35b9327f437
-caps.latest.revision: 32
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-ms.workload: "Inactive"
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # CalculationCurrentPass (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Returns the current calculation pass of a cube for the specified query context.  
   
@@ -38,7 +23,7 @@ CalculationCurrentPass()
 ```  
   
 ## Remarks  
- The **CalculationCurrentPass** function returns the zero-based index of the calculation pass for the current query context. With automatic recursion resolution in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], this function has little practical use.  
+ The **CalculationCurrentPass** function returns the zero-based index of the calculation pass for the current query context. With automatic recursion resolution, this function has little practical use.  
   
 ## See Also  
  [CalculationPassValue &#40;MDX&#41;](../mdx/calculationpassvalue-mdx.md)   

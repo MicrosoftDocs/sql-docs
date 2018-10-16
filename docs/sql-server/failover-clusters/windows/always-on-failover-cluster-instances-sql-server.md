@@ -2,16 +2,10 @@
 title: "Always On Failover Cluster Instances (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/18/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "failover-clusters"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: high-availability
+ms.topic: conceptual
 helpviewer_keywords: 
   - "clustering [SQL Server]"
   - "high availability [SQL Server], failover clustering"
@@ -23,11 +17,9 @@ helpviewer_keywords:
   - "failover clustering [SQL Server]"
   - "AlwaysOn [SQL Server], see failover clustering [SQL Server]"
 ms.assetid: 86a15b33-4d03-4549-8ea2-b45e4f1baad7
-caps.latest.revision: 80
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: "Active"
 ---
 # Always On Failover Cluster Instances (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

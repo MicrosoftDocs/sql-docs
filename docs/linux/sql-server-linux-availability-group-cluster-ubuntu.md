@@ -4,17 +4,12 @@ description:
 author: MikeRayMSFT 
 ms.author: mikeray 
 manager: craigg
-ms.date: 01/30/2018
-ms.topic: article
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: ""
-ms.suite: "sql"
+ms.date: 04/30/2018
+ms.topic: conceptual
+ms.prod: sql
 ms.custom: "sql-linux"
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
-ms.workload: "Inactive"
 ---
 # Configure Ubuntu Cluster and Availability Group Resource
 
@@ -125,6 +120,7 @@ The following command creates a three-node cluster. Before you run the script, r
    sudo pcs cluster auth <node1> <node2> <node3> -u hacluster -p <password for hacluster>
    sudo pcs cluster setup --name <clusterName> <node1> <node2…> <node3>
    sudo pcs cluster start --all
+   sudo pcs cluster enable --all
    ```
    
    >[!NOTE]
@@ -147,19 +143,31 @@ sudo pcs property set stonith-enabled=false
 >[!IMPORTANT]
 >Disabling STONITH is just for testing purposes. If you plan to use Pacemaker in a production environment, you should plan a STONITH implementation depending on your environment and keep it enabled. Note that at this point there are no fencing agents for any cloud environments (including Azure) or Hyper-V. Consequentially, the cluster vendor does not offer support for running production clusters in these environments. 
 
-## Set cluster property start-failure-is-fatal to false
+## Set cluster property cluster-recheck-interval
 
-`start-failure-is-fatal` indicates whether a failure to start a resource on a node prevents further start attempts on that node. When set to `false`, the cluster decides whether to try starting on the same node again based on the resource's current failure count and migration threshold. So, after failover occurs, Pacemaker retries starting the availability group resource on the former primary once the SQL instance is available. Pacemaker demotes the replica to secondary and it automatically rejoins the availability group. 
+`cluster-recheck-interval` indicates the polling interval at which the cluster checks for changes in the resource parameters, constraints or other cluster options. If a replica goes down, the cluster tries to restart the replica at an interval that is bound by the `failure-timeout` value and the `cluster-recheck-interval` value. For example, if `failure-timeout` is set to 60 seconds and `cluster-recheck-interval` is set to 120 seconds, the restart is tried at an interval that is greater than 60 seconds but less than 120 seconds. We recommend that you set failure-timeout to 60s and cluster-recheck-interval to a value that is greater than 60 seconds. Setting cluster-recheck-interval to a small value is not recommended.
 
-To update the property value to `false` run the following script:
+To update the property value to `2 minutes` run:
 
 ```bash
-sudo pcs property set start-failure-is-fatal=false
+sudo pcs property set cluster-recheck-interval=2min
 ```
 
-
->[!WARNING]
->After an automatic failover, when `start-failure-is-fatal = true` the resource manager attempts to start the resource. If it fails on the first attempt you have to manually run `pcs resource cleanup <resourceName>` to clean up the resource failure count and reset the configuration.
+> [!IMPORTANT] 
+> If you already have an availability group resource managed by a Pacemaker cluster, note that all distributions that use the latest available Pacemaker package 1.1.18-11.el7 introduce a behavior change for the start-failure-is-fatal cluster setting when its value is false. This change affects the failover workflow. If a primary replica experiences an outage, the cluster is expected to failover to one of the available secondary replicas. Instead, users will notice that the cluster keeps trying to start the failed primary replica. If that primary never comes online (because of a permanent outage), the cluster never fails over to another available secondary replica. Because of this change, a previously recommended configuration to set start-failure-is-fatal is no longer valid and the setting needs to be reverted back to its default value of `true`. 
+> Additionally, the AG resource needs to be updated to include the `failover-timeout` property. 
+>
+>To update the property value to `true` run:
+>
+>```bash
+>sudo pcs property set start-failure-is-fatal=true
+>```
+>
+>Update your existing AG resource property `failure-timeout` to `60s` run (replace `ag1` with the name of your availability group resource):
+>
+>```bash
+>pcs resource update ag1 meta failure-timeout=60s
+>```
 
 ## Install SQL Server resource agent for integration with Pacemaker
 
@@ -178,7 +186,7 @@ sudo apt-get install mssql-server-ha
 To create the availability group resource, use `pcs resource create` command and set the resource properties. Below command creates a `ocf:mssql:ag` master/slave type resource for availability group with name `ag1`. 
 
 ```bash
-sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 --master meta notify=true
+sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=30s --master meta notify=true
 
 ```
 

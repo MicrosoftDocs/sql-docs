@@ -5,16 +5,11 @@ author: MikeRayMSFT
 ms.author: mikeray 
 manager: craigg
 ms.date: 03/17/2017
-ms.topic: article
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: ""
-ms.suite: "sql"
+ms.topic: conceptual
+ms.prod: sql
 ms.custom: "sql-linux"
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
-ms.workload: "Inactive"
 ---
 # Operate Red Hat Enterprise Linux shared disk cluster for SQL Server
 
@@ -152,7 +147,7 @@ View the resource agent logs at `/var/log/cluster/corosync.log`
    sudo yum install pacemaker pcs fence-agents-all resource-agents
    ```
  
-2. Set the password for for the default user that is created when installing Pacemaker and Corosync packages. Use the same password as the existing nodes. 
+2. Set the password for the default user that is created when installing Pacemaker and Corosync packages. Use the same password as the existing nodes. 
 
    ```bash
    sudo passwd hacluster

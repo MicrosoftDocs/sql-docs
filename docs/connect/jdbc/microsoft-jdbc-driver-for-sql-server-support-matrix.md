@@ -1,23 +1,16 @@
 ---
 title: "Microsoft JDBC Driver for SQL Server Support Matrix | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2018"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "jdbc"
+ms.date: "07/19/2018"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 ms.assetid: c5769e67-99f7-4bc1-a4fa-8941dad33d35
-caps.latest.revision: 13
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.workload: "On Demand"
 ---
 # Microsoft JDBC Driver for SQL Server Support Matrix
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -25,7 +18,7 @@ ms.workload: "On Demand"
   This page contains the support matrix and support lifecycle policy for the Microsoft JDBC Driver for SQL Server.  
   
 ## Microsoft JDBC Driver Support Lifecycle Matrix and Policy  
- The Microsoft Support Lifecycle (MSL) policy provides transparent, predictable information regarding the support lifecycle of Microsoft products. JDBC driver versions 3.0, 4.x and 6.x have five year Mainstream support from the driver release date. Mainstream support is defined on the  Microsoft support lifecycle website.  
+ The Microsoft Support Lifecycle (MSL) policy provides transparent, predictable information regarding the support lifecycle of Microsoft products. JDBC driver versions 3.0, 4.x, 6.x, and 7.x have five year Mainstream support from the driver release date. Mainstream support is defined on the Microsoft support lifecycle website.  
   
  Extended and custom support options are not available for the Microsoft JDBC Driver.  
     
@@ -33,7 +26,8 @@ ms.workload: "On Demand"
   
 |Driver Name|Driver Package Version|Applicable JAR(s)|End of Mainstream Support|
 |-|-|-|-|  
-|Microsoft JDBC Driver 6.4 for SQL Server|6.4|mssql-jdbc-6.4.0.jre9.jar<br> mssql-jdbc-6.4.0.jre8.jar<br> mssql-jdbc-6.4.0.jre7.jar|January 22, 2023|    
+|Microsoft JDBC Driver 7.0 for SQL Server|7.0|mssql-jdbc-7.0.0.jre10.jar<br> mssql-jdbc-7.0.0.jre8.jar|July 31, 2023|  
+|Microsoft JDBC Driver 6.4 for SQL Server|6.4|mssql-jdbc-6.4.0.jre9.jar<br> mssql-jdbc-6.4.0.jre8.jar<br> mssql-jdbc-6.4.0.jre7.jar|February 27, 2023|    
 |Microsoft JDBC Driver 6.2 for SQL Server|6.2|mssql-jdbc-6.2.2.jre8.jar<br> mssql-jdbc-6.2.2.jre7.jar|June 30, 2022|    
 |Microsoft JDBC Driver 6.0 for SQL Server|6.0|sqljdbc42.jar<br>sqljdbc41.jar|July 14, 2021|    
 |Microsoft JDBC Driver 4.2 for SQL Server|4.2|sqljdbc42.jar<br>sqljdbc41.jar|August 24, 2020|  
@@ -55,6 +49,7 @@ ms.workload: "On Demand"
   
 |Driver Version|SQL Server 2008|SQL Server 2008R2|SQL Server 2012|Azure SQL Database|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|SQL Server 2017|Azure SQL Managed Instance (Extended Private Preview)|  
 |-|-|-|-|-|-|-|-|-|-|
+|7.0|N|Y|Y|Y|Y|Y|Y|Y|Y|  
 |6.4|N|Y|Y|Y|Y|Y|Y|Y|Y|  
 |6.2|Y|Y|Y|Y|Y|Y|Y|Y|N|
 |6.1|Y|Y|Y|Y|Y|Y|Y|N|N|
@@ -83,7 +78,8 @@ ms.workload: "On Demand"
   
 |JDBC Driver Version|JRE Versions|JDBC API Version| 
 |-|-|-|  
-|6.4|1.7, 1.8, 1.9|4.1, 4.2, 4.3 (partially)|  
+|7.0|1.8, 10|4.2, 4.3 (partially)|  
+|6.4|1.7, 1.8, 9|4.1, 4.2, 4.3 (partially)|  
 |6.2|1.7, 1.8|4.1, 4.2|  
 |6.1|1.7, 1.8|4.1, 4.2|  
 |6.0|1.7, 1.8|4.1, 4.2|  

@@ -2,24 +2,16 @@
 title: "How to: Retrieve I/O Parameters Using the SQLSRV Driver | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/12/2018"
-ms.prod: "sql"
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "php"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "stored procedure support"
 ms.assetid: 9a7c5f60-67f9-4968-a3a8-c256ee481da2
-caps.latest.revision: 15
-author: "MightyPen"
-ms.author: "genemi"
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.workload: "Inactive"
 ---
 # How to: Retrieve Input and Output Parameters Using the SQLSRV Driver
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,7 +21,7 @@ This topic demonstrates how to use the SQLSRV driver to call a stored procedure 
 > [!NOTE]  
 > Variables that are initialized or updated to **null**, **DateTime**, or stream types cannot be used as output parameters.  
   
-## Example  
+## Example 1
 The following example calls a stored procedure that subtracts used vacation hours from the available vacation hours of a specified employee. The variable that represents used vacation hours, *$vacationHrs*, is passed to the stored procedure as an input parameter. After updating the available vacation hours, the stored procedure uses the same parameter to return the number of remaining vacation hours.  
   
 > [!NOTE]  
@@ -127,7 +119,7 @@ sqlsrv_close( $conn);
 > [!NOTE]
 > When binding an input/output parameter to a bigint type, if the value may end up outside the range of an [integer](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), you will need to specify its SQL field type as SQLSRV_SQLTYPE_BIGINT. Otherwise, it may result in a "value out of range" exception.
 
-## Example  
+## Example 2
 This code sample shows how to bind a large bigint value as an input/output parameter.  
 
 ```

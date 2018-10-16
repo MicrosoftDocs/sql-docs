@@ -2,24 +2,15 @@
 title: "Step 2: Adding and Configuring a Flat File Connection Manager | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "tutorial"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+ms.technology: integration-services
+ms.topic: tutorial
 ms.assetid: 9a77dd32-d8c2-4961-ad37-2a971f9d6043
-caps.latest.revision: 42
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "Active"
+manager: craigg
 ---
 # Lesson 1-2 - Adding and Configuring a Flat File Connection Manager
 In this task, you add a Flat File connection manager to the package that you just created. A Flat File connection manager enables a package to extract data from a flat file. Using the Flat File connection manager, you can specify the file name and location, the locale and code page, and the file format, including column delimiters, to apply when the package extracts data from the flat file. In addition, you can manually specify the data type for the individual columns, or use the **Suggest Column Types** dialog box to automatically map the columns of extracted data to [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] data types.  
@@ -94,7 +85,7 @@ The Flat File connection manager provides locale information about the data file
     |CurrencyDate|date [DT_DATE]|DimDate.FullDateAlternateKey|date|  
     |EndOfDayRate|float [DT_R4]|FactCurrency.EndOfDayRate|float|  
   
-    The data type suggested for the **CurrencyID** column is incompatible with the data type of the field in the destination table. Because the data type of `DimCurrency.CurrencyAlternateKey` is nchar (3), **CurrencyID** must be changed from string [DT_STR] to string [DT_WSTR]. Additionally, the field `DimDate.FullDateAlternateKey` is defined as a date data type; therefore, **CurrencyDate** needs to be changed from date [DT_Date] to database date [DT_DBDATE].  
+    The data type suggested for the **CurrencyID** column is incompatible with the data type of the field in the destination table. Because the data type of `DimCurrency.CurrencyAlternateKey` is nchar (3), **CurrencyID** must be changed from string [DT_STR] to Unicode string [DT_WSTR]. Additionally, the field `DimDate.FullDateAlternateKey` is defined as a date data type; therefore, **CurrencyDate** needs to be changed from date [DT_Date] to database date [DT_DBDATE].  
   
 2.  In the list, select the CurrencyID column and in the property pane, change the Data Type of column **CurrencyID** from string [DT_STR] to Unicode string [DT_WSTR].  
   

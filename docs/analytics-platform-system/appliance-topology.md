@@ -14,7 +14,7 @@ ms.reviewer: martinle
 # Appliance topology - Analytics Platform System
 Displays summary information on the entire Analytics Platform System.  
   
-Expand the elements of this section to configure information that applies to the entire appliance. Select the Parallel Data Warehouse Topology or HDInsight Topology sections to configure information that applies to only that region of the appliance.  
+The page lists a read-only version of all the hosts and fabric nodes in the current appliance including their Ethernet and Infiniband IP addresses.  
   
 ![SQL_Server_PDW_DWConfig_ApplTop](./media/appliance-topology/SQL_Server_PDW_DWConfig_ApplTop.png "SQL_Server_PDW_DWConfig_ApplTop")  
   

@@ -2,24 +2,16 @@
 title: "Database Engine Tuning Advisor | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/09/2017"
-ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "performance"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: performance
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dta.general.f1"
 ms.assetid: 50dd0a0b-a407-4aeb-bc8b-b02a793aa30a
-caps.latest.revision: 16
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
-ms.workload: "On Demand"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Database Engine Tuning Advisor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +67,7 @@ ms.workload: "On Demand"
  The command prompt version of Database Engine Tuning Advisor. The **dta** utility is designed to allow you to use Database Engine Tuning Advisor functionality in applications and scripts.  
   
  workload  
- A Transact-SQL script file, trace file, or trace table that contains a representative workload for the databases you want to tune. Beginning with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], you can specify the plan cache as the workload.  Beginning with with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], you can [specify the Query Store as the workload](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md). 
+ A Transact-SQL script file, trace file, or trace table that contains a representative workload for the databases you want to tune. Beginning with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], you can specify the plan cache as the workload.  Beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], you can [specify the Query Store as the workload](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md). 
   
  XML input file  
  An XML-formatted file that Database Engine Tuning Advisor can use to tune workloads. The XML input file supports advanced tuning options that are not available in either the GUI or **dta** utility.  

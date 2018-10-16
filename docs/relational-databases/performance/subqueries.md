@@ -1,15 +1,10 @@
-﻿---
+---
 title: "Subqueries (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/18/2018"
-ms.prod: "sql"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "performance"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Subquery"
   - "Subqueries"
@@ -17,12 +12,10 @@ helpviewer_keywords:
   - "subqueries [SQL Server], correlated"
   - "subqueries [SQL Server], types"
 ms.assetid: bfc97432-c14c-4768-9dc5-a9c512f6b2bd
-caps.latest.revision: 52
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
-ms.workload: "On Demand"
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # Subqueries (SQL Server)

@@ -2,15 +2,10 @@
 title: "STRING_ESCAPE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/25/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "STRING_ESCAPE"
@@ -20,11 +15,9 @@ dev_langs:
 helpviewer_keywords: 
   - "STRING_ESCAPE function"
 ms.assetid: 2163bc7a-3816-4304-9c40-8954804f5465
-caps.latest.revision: 11
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Active"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # STRING_ESCAPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

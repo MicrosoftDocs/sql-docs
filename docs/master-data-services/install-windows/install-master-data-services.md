@@ -2,22 +2,15 @@
 title: "Installation Tasks for Master Data Services | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/24/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "mds"
-ms.service: ""
-ms.component: "install-windows"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: install
+ms.topic: conceptual
 ms.assetid: bb7aa3e7-8807-42c8-884f-0e41d7a20837
-caps.latest.revision: 32
-author: "leolimsft"
-ms.author: "lle"
-manager: "craigg"
-ms.workload: "On Demand"
+author: leolimsft
+ms.author: lle
+manager: craigg
 ---
 # Installation Tasks for Master Data Services
 

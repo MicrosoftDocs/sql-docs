@@ -1,24 +1,17 @@
-﻿---
+---
 title: "System-Versioned Temporal Tables with Memory-Optimized Tables | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/12/2016"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "tables"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: table-view-index
+ms.topic: conceptual
 ms.assetid: 23274522-e5cf-4095-bed8-bf986d6342e0
-caps.latest.revision: 16
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "craigg"
-ms.workload: "Inactive"
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # System-Versioned Temporal Tables with Memory-Optimized Tables
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -41,7 +34,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
   
 -   History table for memory-optimized system-versioned table must be disk-based, regardless if it was created by the end user or the system.  
   
--   Queries that affect only the current table (in-memory) can be used in [natively compiled T-SQL modules](https://msdnstage.redmond.corp.microsoft.com/en-us/library/dn133184.aspx). Temporal queries using the FOR SYSTEM TIME clause are not supported in natively compiled modules. Use of the FOR SYSTEM TIME clause with memory-optimized tables in ad hoc queries and non-native modules is supported.  
+-   Queries that affect only the current table (in-memory) can be used in [natively compiled T-SQL modules](https://msdn.microsoft.com/library/dn133184.aspx). Temporal queries using the FOR SYSTEM TIME clause are not supported in natively compiled modules. Use of the FOR SYSTEM TIME clause with memory-optimized tables in ad hoc queries and non-native modules is supported.  
   
 -   When **SYSTEM_VERSIONING = ON**, an internal memory-optimized staging table is automatically created to accept the most recent system-versioned changes that are results of update and delete operations on memory-optimized current table.  
   

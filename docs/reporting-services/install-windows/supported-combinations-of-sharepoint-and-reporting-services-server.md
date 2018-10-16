@@ -1,27 +1,17 @@
 ---
 title: "Supported combinations of SharePoint and Reporting Services server | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/01/2017"
+ms.date: 07/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint"
-ms.service: ""
-ms.component: "install-windows"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SharePoint mode"
   - "add-in for sharepoint"
   - "rsSharePoint"
 ms.assetid: dc6a3372-db26-43f0-b7aa-f725acc635c2
-caps.latest.revision: 39
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
-ms.workload: "On Demand"
+author: markingmyname
+ms.author: maghan
 ---
 
 # Supported combinations of SharePoint and Reporting Services server

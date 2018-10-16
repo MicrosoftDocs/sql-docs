@@ -1,32 +1,30 @@
 ---
 title: "SQL Server Agent Jobs for Packages | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.date: 06/04/2018
+ms.prod: sql
 ms.prod_service: "integration-services"
-ms.service: ""
-ms.component: "packages"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 helpviewer_keywords: 
   - "jobs [Integration Services]"
   - "automatic package execution"
   - "scheduling packages [Integration Services]"
   - "SQL Server Agent [Integration Services]"
 ms.assetid: ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31
-caps.latest.revision: 54
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "Active"
+manager: craigg
 ---
 # SQL Server Agent Jobs for Packages
   You can automate and schedule the execution of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages by using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. You can schedule packages that are deployed to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server, and are stored in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the [!INCLUDE[ssIS](../../includes/ssis-md.md)] Package Store, and the file system.  
-  
+ 
+> [!NOTE]
+> This article describes how to schedule SSIS packages in general, and how to schedule packages on premises. You can also run and schedule SSIS packages on the following platforms:
+> - **The Microsoft Azure cloud**. For more info, see [Lift and shift SQL Server Integration Services workloads to the cloud](../lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md) and [Schedule the execution of an SSIS package in Azure](../lift-shift/ssis-azure-schedule-packages.md).
+> - **Linux**. For more info, see [Extract, transform, and load data on Linux with SSIS](../../linux/sql-server-linux-migrate-ssis.md) and [Schedule SQL Server Integration Services package execution on Linux with cron](../../linux/sql-server-linux-schedule-ssis-packages.md).
+
 ## Sections in This Topic  
  This topic contains the following sections:  
   
@@ -114,7 +112,7 @@ ms.workload: "Active"
   
 6.  Select **Integration Services Package** for the job step type.  
   
-7.  In the **Run as** list, select **SQL Server Agent Service Account** or select a proxy account that has the credentials that the job step will use. For information about creating a proxy account, see [Create a SQL Server Agent Proxy](http://msdn.microsoft.com/library/142e0c55-a8b9-4669-be49-b9dc602d5988).  
+7.  In the **Run as** list, select **SQL Server Agent Service Account** or select a proxy account that has the credentials that the job step will use. For information about creating a proxy account, see [Create a SQL Server Agent Proxy](../../ssms/agent/create-a-sql-server-agent-proxy.md).  
   
      Using a proxy account instead of the **SQL Server Agent Service Account** may resolve common issues that can occur when executing a package using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. For more information about these issues, see the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base article, [An SSIS package does not run when you call the SSIS package from a SQL Server Agent job step](http://support.microsoft.com/kb/918760).  
   
@@ -181,7 +179,7 @@ ms.workload: "Active"
     >   
     >  The server environment that contains the variable is not selected in the list box on the **Configuration** tab.  
   
-10. To create a schedule for a job step, click **Schedules** in the **Select a page** pane. For information on how to configure a schedule, see [Schedule a Job](http://msdn.microsoft.com/library/f626390a-a3df-4970-b7a7-a0529e4a109c).  
+10. To create a schedule for a job step, click **Schedules** in the **Select a page** pane. For information on how to configure a schedule, see [Schedule a Job](../../ssms/agent/schedule-a-job.md).  
   
     > [!TIP]  
     >  When you name the schedule, consider using a name that is unique and descriptive so you can more easily distinguish the schedule from other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent schedules.  

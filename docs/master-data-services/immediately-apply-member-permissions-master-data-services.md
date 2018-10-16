@@ -2,25 +2,19 @@
 title: "Immediately Apply Member Permissions (Master Data Services) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "mds"
-ms.service: ""
-ms.component: "non-specific"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "members [Master Data Services], applying permissions immediately"
   - "permissions [Master Data Services], applying member permissions immediately"
 ms.assetid: 5b16de66-5c39-49f5-992f-402a9eb319aa
-caps.latest.revision: 6
-author: "leolimsft"
-ms.author: "lle"
-manager: "craigg"
-ms.workload: "Inactive"
+author: leolimsft
+ms.author: lle
+manager: craigg
 ---
 # Immediately Apply Member Permissions (Master Data Services)
 

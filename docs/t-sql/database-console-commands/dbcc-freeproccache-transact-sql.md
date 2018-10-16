@@ -1,16 +1,11 @@
-﻿---
+---
 title: "DBCC FREEPROCCACHE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/13/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "sql-data-warehouse, pdw, sql-database"
-ms.service: ""
-ms.component: "t-sql|database-console-commands"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "FREEPROCCACHE_TSQL"
@@ -27,12 +22,10 @@ helpviewer_keywords:
   - "procedure cache [SQL Server]"
   - "clearing procedure cache"
 ms.assetid: 0e09d210-6f23-4129-aedb-3d56b2980683
-caps.latest.revision: 61
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "craigg"
-ms.workload: "Active"
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+author: uc-msft
+ms.author: umajay
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DBCC FREEPROCCACHE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -193,7 +186,7 @@ GO
 ## Examples: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### D. DBCC FREEPROCCACHE Basic Syntax Examples  
-The following example removes all existing query plan caches from the Compute nodes. Although the context is set to UserDbSales, the Compute node query plan caches for all databases will will be removed. The WITH NO_INFOMSGS clause prevents informational messages from appearing in the results.  
+The following example removes all existing query plan caches from the Compute nodes. Although the context is set to UserDbSales, the Compute node query plan caches for all databases will be removed. The WITH NO_INFOMSGS clause prevents informational messages from appearing in the results.  
   
 ```sql
 USE UserDbSales;  

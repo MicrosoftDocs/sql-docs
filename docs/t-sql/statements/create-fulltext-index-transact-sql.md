@@ -2,15 +2,10 @@
 title: "CREATE FULLTEXT INDEX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/05/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "FULLTEXT_INDEX_TSQL"
@@ -24,11 +19,9 @@ helpviewer_keywords:
   - "index creation [SQL Server], CREATE FULLTEXT INDEX statement"
   - "CREATE FULLTEXT INDEX statement"
 ms.assetid: 8b80390f-5f8b-4e66-9bcc-cabd653c19fd
-caps.latest.revision: 110
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Active"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ---
 # CREATE FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -92,7 +85,7 @@ CREATE FULLTEXT INDEX ON table_name
   
  If *language_term* is specified, the language it represents will be used to index data stored in **char**, **nchar**, **varchar**, **nvarchar**, **text**, and **ntext** columns. This language is the default language used at query time if *language_term* is not specified as part of a full-text predicate against the column.  
   
- When specified as a string, *language_term* corresponds to the alias column value in the syslanguages system table. The string must be enclosed in single quotation marks, as in **'***language_term***'**. When specified as an integer, *language_term* is the actual LCID that identifies the language. When specified as a hexadecimal value, *language_term* is 0x followed by the hex value of the LCID. The hex value must not exceed eight digits, including leading zeros.  
+ When specified as a string, *language_term* corresponds to the alias column value in the syslanguages system table. The string must be enclosed in single quotation marks, as in **'**_language\_term_**'**. When specified as an integer, *language_term* is the actual LCID that identifies the language. When specified as a hexadecimal value, *language_term* is 0x followed by the hex value of the LCID. The hex value must not exceed eight digits, including leading zeros.  
   
  If the value is in double-byte character set (DBCS) format, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will convert it to Unicode.  
   

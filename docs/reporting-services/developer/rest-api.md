@@ -1,22 +1,16 @@
 ---
 title: "Develop with the REST APIs for Reporting Services| Microsoft Docs"
 ms.description: "The REST API provides programmatic access to the objects in a SQL Server 2017 Reporting Services report server catalog."
-ms.date: "10/19/2017"
+ms.date: 05/25/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
-ms.component: "developer"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.custom: ""
-ms.technology: 
+ms.technology: developer
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+ms.topic: conceptual
+author: markingmyname
+ms.author: maghan
+monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # Develop with the REST APIs for Reporting Services
 
@@ -25,6 +19,8 @@ manager: "kfile"
 Microsoft SQL Server 2017 Reporting Services support Representational State Transfer (REST) APIs. The REST APIs are service endpoints that support a set of HTTP operations (methods), which provide create, retrieve, update, or delete access for resources within a report server.
 
 The REST API provides programmatic access to the objects in a SQL Server 2017 Reporting Services report server catalog. Examples of objects are folders, reports, KPIs, data sources, datasets, refresh plans, subscriptions, and more. Using the REST API, you can, for example, navigate the folder hierarchy, discover the contents of a folder, or download a report definition. You can also create, update, and delete objects. Examples of working with objects are upload a report, execute a refresh plan, delete a folder, and so on.
+
+[!INCLUDE [GDPR-related guidance](../../includes/gdpr-hybrid-note.md)]
 
 ## Components of a REST API request/response
 

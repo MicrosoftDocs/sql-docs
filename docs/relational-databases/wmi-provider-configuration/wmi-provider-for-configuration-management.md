@@ -2,15 +2,11 @@
 title: "WMI Provider for Configuration Management Concepts | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "wmi"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
 
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "WMI Provider for Configuration Management"
@@ -18,11 +14,9 @@ helpviewer_keywords:
   - "configuration management [WMI]"
   - "WMI Provider for Configuration Management, about WMI Provider for Configuration Management"
 ms.assetid: 7e41db24-b915-4eb8-a1d6-e6948ee915b7
-caps.latest.revision: 24
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "craigg"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # WMI Provider for Configuration Management
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

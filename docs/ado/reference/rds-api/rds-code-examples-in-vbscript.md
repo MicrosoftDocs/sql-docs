@@ -1,16 +1,11 @@
 ---
 title: "RDS Code Examples in VBScript | Microsoft Docs"
 ms.prod: sql
-ms.prod_service: "drivers"
-ms.service: ""
-ms.component: "ado"
-ms.technology:
-  - "drivers"
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "VB"
@@ -18,11 +13,9 @@ helpviewer_keywords:
   - "RDS samples [ADO], VBScript"
   - "VBScript RDS examples [ADO]"
 ms.assetid: 22f23c30-7c21-4fe3-8e76-36cea6448819
-caps.latest.revision: 13
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # RDS Code Examples in VBScript
 > [!IMPORTANT]

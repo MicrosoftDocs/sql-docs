@@ -1,21 +1,13 @@
 ---
 title: "Install SQL Server Reporting Services (2017 and later) | Microsoft Docs"
-ms.date: "12/20/2017"
+ms.date: 12/20/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.service: ""
-ms.component: "install-windows"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.custom: ""
-ms.technology: 
 
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
-ms.workload: "Active"
+ms.topic: conceptual
+author: markingmyname
+ms.author: maghan
+monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # Install SQL Server Reporting Services (2017 and later)
 

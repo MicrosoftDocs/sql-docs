@@ -2,25 +2,19 @@
 title: "OLE DB Driver for SQL Server Features | Microsoft Docs"
 description: "OLE DB Driver for SQL Server features"
 ms.custom: ""
-ms.date: "03/26/2018"
-ms.prod: "sql"
+ms.date: "06/12/2018"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "oledb|features"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
+ms.technology: connectivity
 ms.topic: "reference"
 helpviewer_keywords: 
   - "MDAC [SQL Server]"
   - "MSOLEDBSQL, about OLE DB Driver for SQL Server"
   - "data access [OLE DB Driver for SQL Server], features"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
-ms.workload: "On Demand"
 ---
 # OLE DB Driver for SQL Server Features
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

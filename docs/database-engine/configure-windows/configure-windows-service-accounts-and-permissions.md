@@ -609,7 +609,7 @@ In all installation, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] S
 ###  <a name="Identify_instance_aware_and_unaware"></a> Identifying Instance-Aware and Instance-Unaware Services  
  Instance-aware services are associated with a specific instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and have their own registry hives. You can install multiple copies of instance-aware services by running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup for each component or service. Instance-unaware services are shared among all installed [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances. They are not associated with a specific instance, are installed only once, and cannot be installed side-by-side.  
   
- Instance-aware services in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] include the following:  
+ **Instance-aware services in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] include the following:**  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
@@ -623,7 +623,7 @@ In all installation, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] S
   
 -   Full-text search  
   
- Instance-unaware services in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] include the following:  
+ **Instance-unaware services in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] include the following:** 
   
 -   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  
   

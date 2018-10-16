@@ -4,14 +4,14 @@ description: Learn how to use the cluster administration portal to monitor SQL S
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.date: 10/15/2018
+ms.date: 10/16/2018
 ms.topic: conceptual
 ms.prod: sql
 ---
 
 # Introduction to the cluster administration portal
 
-If you want to monitor or troubleshoot your SQL Server big data cluster, use the cluster administration portal. 
+If you want to monitor or troubleshoot your SQL Server 2019 big data cluster (preview), use the cluster administration portal.
 
 The cluster administration portal allows you to:
 - Quickly view number of pods running and any issues
@@ -25,8 +25,9 @@ The cluster administration portal allows you to:
 Follow the [quickstart to deploy your big data cluster](quickstart-big-data-cluster-deploy.md) until you get to the **cluster administration portal** section. Once you have the big data cluster running with mssqlctl, follow these instructions:
 
 Once the controller pod is running, you can use the cluster administration portal to monitor the deployment. You can access the portal using the external IP address and port number for the `service-proxy-lb` (for example: **https://\<ip-address\>:30777**). Credentials for accessing the admin portal are the values of `CONTROLLER_USERNAME` and `CONTROLLER_PASSWORD` environment variables provided above.
+
 > [!NOTE]
-> There is going to be a security warning when accessing the web page since we are using auto-generated SSL certificates. In future releases, we will provide the capability to provide your own signed certificates.
+> For CTP 2.0, There is a security warning when accessing the web page since it is using auto-generated SSL certificates.
 
 ## Overview
 
@@ -101,5 +102,7 @@ To learn more about each pool:
 Here you can view information about your cluster such as the different version numbers, containers, and a link to the documentation.
 
 ## Next steps
+
+In addition to the cluster administration portal, you can also run several useful Kubernetes commands to explore the status and health of your cluster. For more information, see [Kubectl commands for monitoring and troubleshooting SQL Server big data clusters](cluster-troubleshooting-commands.md).
 
 To learn more about SQL Server 2019 big data clusters, see [What are SQL Server 2019 big data clusters?](big-data-cluster-overview.md).

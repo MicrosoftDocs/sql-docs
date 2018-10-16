@@ -19,7 +19,7 @@ To connect to SQL Server instances in containers on a Kubernetes cluster, create
 To connect to an availability group replica, create a service for different replica types. You can see examples of services for different types of replicas in [sql-server-samples/ag-services.yaml](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files).
 
 * `ag1-primary` points to the primary replica.
-* `ag1-secondary` points to the any secondary replica.
+* `ag1-secondary` points to any secondary replica.
 
 If more than one secondary replica, Kubernetes routes your connection to the different replicas in a round-robin fashion.
 
@@ -27,7 +27,7 @@ If more than one secondary replica, Kubernetes routes your connection to the dif
 
 To create load balancer services for the primary and replicas, copy [`ag1-services.yaml`](https://github.com/Microsoft/sql-server-samples/blob/master/samples/features/high%20availability/Kubernetes/sample-manifest-files/ag-services.yaml) from [sql-server-samples](https://github.com/Microsoft/sql-server-samples/blob/master/samples/features/high%20availability/Kubernetes/sample-manifest-file) and update it for your availability group.
 
-The following command applies the .yaml file to cluster:
+The following command applies the configuration from the `.yaml` file to cluster:
 
 ```kubectl
 kubectl apply -f ag1-services.yaml --namespace ag1

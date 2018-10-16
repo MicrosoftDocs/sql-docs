@@ -75,7 +75,7 @@ In this section, you use this same pattern to train a model on the data you've a
     ```sql
     DECLARE @model varbinary(max);
     DECLARE @new_model_name varchar(50)
-    SET @new_model_name = 'Naive Bayes ' + CAST(GETDATE()as varchar)
+    SET @new_model_name = 'Naive Bayes'
     SELECT @new_model_name 
     EXEC generate_iris_model @model OUTPUT;
     INSERT INTO iris_models (model_name, model) values(@new_model_name, @model);

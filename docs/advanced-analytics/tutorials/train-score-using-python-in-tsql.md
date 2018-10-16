@@ -150,8 +150,8 @@ Moreover, you can generally improve performance by separating the data explorati
 
 Scoring and training processes can often be optimized by leveraging features of SQL Server, such as parallel processing, or by using algorithms in [revoscalepy](../python/what-is-revoscalepy.md) or [MicrosoftML](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) that support streaming and parallel execution, rather than using standard Python libraries. 
 
-## Next lesson
+## Next steps
 
-In the final lesson, you run Python code from a remote client, using SQL Server as the compute context. This step is optional, if you don't have a Python client, or don't intend to run Python outside a stored procedure.
+Previous tutorials focused on local execution. However, you can also run Python code from a client workstation, using SQL Server as the remote compute context. For more information about setting up a client workstation that connects to SQL Server, see [Set up Python client tools](../python/setup-python-client-tools-sql.md).
 
 + [Create a revoscalepy model from a Python client](use-python-revoscalepy-to-create-model.md)

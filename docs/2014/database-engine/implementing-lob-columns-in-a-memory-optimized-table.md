@@ -12,7 +12,7 @@ ms.author: sstein
 manager: craigg
 ---
 # Implementing LOB Columns in a Memory-Optimized Table
-  Memory-optimized tables do not have off-row or large object (LOB) storage, and the row size limit is 8060 bytes. Storing large binary or character string values can be done in two ways:  
+  Memory-optimized tables do not have off-row or large object (LOB) storage (this limitation has been removed in SQL Server 2016 and above - see [Supported Data Types for In-Memory OLTP](../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md)), and the row size limit is 8060 bytes. Storing large binary or character string values can be done in two ways:  
   
 -   Split the LOB values into multiple rows.  
   

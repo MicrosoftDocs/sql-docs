@@ -56,8 +56,7 @@ When called in a CATCH block where an error occurs, `ERROR_SEVERITY` returns the
   
 ### A. Using ERROR_SEVERITY in a CATCH block  
 This example shows a stored procedure that generates a divide-by-zero error. `ERROR_SEVERITY` returns the severity value of that error.  
-```  
-  
+```sql  
 BEGIN TRY  
     -- Generate a divide-by-zero error.  
     SELECT 1/0;  
@@ -66,7 +65,9 @@ BEGIN CATCH
     SELECT ERROR_SEVERITY() AS ErrorSeverity;  
 END CATCH;  
 GO  
-
+```
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+```
 -----------
 
 (0 row(s) affected)
@@ -82,8 +83,7 @@ ErrorSeverity
 ### B. Using ERROR_SEVERITY in a CATCH block with other error-handling tools  
 This example shows a `SELECT` statement that generates a divide by zero error. The stored procedure returns information about the error.  
 
-```  
-  
+```sql  
 BEGIN TRY  
     -- Generate a divide-by-zero error.  
     SELECT 1/0;  
@@ -98,7 +98,9 @@ BEGIN CATCH
         ERROR_MESSAGE() AS ErrorMessage;  
 END CATCH;  
 GO  
-
+```
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+```
 -----------
 
 (0 row(s) affected)
@@ -121,6 +123,7 @@ ErrorNumber ErrorSeverity ErrorState  ErrorProcedure  ErrorLine   ErrorMessage
  [ERROR_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/error-state-transact-sql.md)   
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)  
+ [Errors and Events Reference &#40;Database Engine&#41;](../../relational-databases/errors-events/errors-and-events-reference-database-engine.md)     
   
-  
+    
 

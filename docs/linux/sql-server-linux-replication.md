@@ -4,7 +4,7 @@ description: This article describes SQL Server replication on Linux.
 author: MikeRayMSFT 
 ms.author: mikeray
 manager: craigg
-ms.date: 03/20/2018
+ms.date: 10/17/2018
 ms.topic: article
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
@@ -56,6 +56,7 @@ For [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] the following replic
 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] does not support the following features:
 
 * Immediate update subscribers
+* Oracle publishing
 
 ## Next steps
 

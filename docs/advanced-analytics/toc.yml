@@ -65,8 +65,8 @@
       href: tutorials/rtsql-predict-and-plot-from-model.md
   - name: Python
     items:
-    - name: Wrap Python in a stored procedure
-      href: tutorials/wrap-python-in-tsql-stored-procedure.md
+    - name: Run Python using T-SQL
+      href: tutorials/run-python-using-t-sql.md
 - name: Tutorials
   href: tutorials/machine-learning-services-tutorials.md
   items:
@@ -141,18 +141,17 @@
   - name: Python
     href: tutorials/sql-server-python-tutorials.md
     items:
-    - name: Run Python using T-SQL
-      href: tutorials/run-python-using-t-sql.md
+    - name: Iris data in Python on SQL
       items:
+      - name: Wrap Python in a stored procedure
+        href: tutorials/wrap-python-in-tsql-stored-procedure.md
       - name: Train and score from a Python model in SQL Server
         href: tutorials/train-score-using-python-in-tsql.md
-      - name: Create a model using revoscalepy in a SQL Server compute context
-        href: tutorials/use-python-revoscalepy-to-create-model.md
+    - name: Create a model using revoscalepy
+      href: tutorials/use-python-revoscalepy-to-create-model.md
     - name: Learn in-database analytics
       href: tutorials/sqldev-in-database-python-for-sql-developers.md
       items:
-      - name: Get data and scripts
-        href: tutorials/sqldev-py1-download-the-sample-data.md
       - name: Import data
         href: tutorials/sqldev-py2-import-data-to-sql-server-using-powershell.md
       - name: Explore and visualize data

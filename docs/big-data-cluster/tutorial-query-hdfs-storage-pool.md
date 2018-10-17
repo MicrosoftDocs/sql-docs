@@ -36,7 +36,9 @@ The storage pool contains web clickstream data in a CSV file stored in HDFS. Use
 
 1. In Azure Data Studio, connect to the SQL Server master instance of your big data cluster. For more information, see [Connect to the SQL Server master instance](deploy-big-data-tools.md#master).
 
-2. In the server dashboard, select **New Query**.
+2. Double-click on the connection in the **Servers** window to show the server dashboard for the SQL Server master instance. Select **New Query**.
+
+   ![SQL Server master instance query](./media/tutorial-query-hdfs-storage-pool/sql-server-master-instance-query.png)
 
 3. Run the following Transact-SQL command to change the context to the **Sales** database in the master instance.
 
@@ -110,4 +112,4 @@ GO
 
 Advance to the next article to learn how to query Oracle from a big data cluster.
 > [!div class="nextstepaction"]
-> [Learn about notebooks](notebooks-guidance.md)
+> [Query external data in Oracle](tutorial-query-oracle.md)

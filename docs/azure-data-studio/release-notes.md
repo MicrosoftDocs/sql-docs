@@ -13,7 +13,20 @@ manager: craigg
 ---
 # Azure Data Studio release notes
 
-**[Download the September *General Availability* (GA) Release!](download.md)**
+**[Download the October Release!](download.md)**
+
+## October 2018 (October Release)
+
+release date: October 18, 2018  
+version: 1.1.3
+
+- Introducing the Azure Resource Explorer to browse Azure SQL Databases
+- Improve Object Explorer and Query Editor connectivity robustness
+- SQL Agent extensions improvements
+
+### Bug Fixes
+
+For detailed information, see the [Change Log](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md), and [Releases](https://github.com/Microsoft/azuredatastudio/releases).
 
 ## September 2018 (September GA Release)
 

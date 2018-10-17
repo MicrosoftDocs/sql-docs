@@ -12,8 +12,6 @@ ms.author: maggies
 ---
 # Lesson 1: Creating a Report Server Project (Reporting Services)
 
- > For content related to previous versions of SQL Server, see [Lesson 1: Creating a Report Server Project (Reporting Services)](lesson-1-creating-a-report-server-project-reporting-services.md).
-
 In this lesson, you'll create a *report server project* and a *report definition (.rdl)* file in [!INCLUDE[ssBIDevStudio_md](../includes/ssbidevstudio-md.md)] within Visual Studio. 
 
 To create a report with [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], first you need a report server project where you can save your report definition (.rdl) file and other resource files you need for your report. 

@@ -21,7 +21,7 @@ For more information, see the Launchpad sections in [Extensibility architecture 
 
 By default, SQL Server Launchpad is configured to run under **NT Service\MSSQLLaunchpad**, which is provisioned with all necessary permissions to run external scripts. Removing permissions from this account can result in Launchpad failing to start or to access the SQL Server instance where external scripts should be run.
 
-If you modify the service account, be sure to use the [**Local Security Policy** console](https://docs.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/how-to-configure-security-policy-settings).
+If you modify the service account, be sure to use the [Local Security Policy console](https://docs.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/how-to-configure-security-policy-settings).
 
 Permissions required for this account are listed in the following table.
 
@@ -40,7 +40,8 @@ For more information about permissions required to run SQL Server services, see 
 
 Typically, there is no reason to modify service configuration. Properties that could be changed include the service account, the count of external processes (20 by default), or the password reset policy for worker accounts.
 
-1. Open [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md). 
+1. Open [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).
+
 2. Under SQL Server Services, right-click SQL Server Launchpad and select **Properties**.
   + To change the service account, click the **Log On** tab.
   + To increase the number of users, click the **Advanced** tab and change the **Security Contexts Count**.
@@ -73,6 +74,5 @@ To reset passwords at regular intervals, you can either set this flag manually o
 
 ## Next steps
 
-[Extensibility framework](../concepts/extensibility-framework.md)
-
-[Security overview](../concepts/security.md)
++ [Extensibility framework](../concepts/extensibility-framework.md)
++ [Security overview](../concepts/security.md)

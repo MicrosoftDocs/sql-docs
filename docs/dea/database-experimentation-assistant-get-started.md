@@ -27,13 +27,13 @@ This article walks you through these steps.
 
 ## Capture
 
-The first step of SQL Server A/B testing is capturing a trace on your source server, which is typically the production server. Trace files capture the entire query workload on that server including their timestamps. Later, this trace is replayed on your target servers to be used for analysis. The analysis report provides insights on the difference in performance of the workload between your two target servers.
+The first step of SQL Server A/B testing is to captura a trace on your source server. The source server usually is the production server. Trace files capture the entire query workload on that server, including timestamps. Later, this trace is replayed on your target servers to be used for analysis. The analysis report provides insights on the difference in performance of the workload between your two target servers.
 
-Notes:
-
-- Before starting your trace capture, make sure you back up the databases from which you're capturing trace.
-- A DEA user must be configured to connect to the database using Windows authentication.
-- A SQL Server service account requires access to the source trace file path.
+> ![NOTE]
+>
+> - Before you start your trace capture, make sure that you back up the databases from which you're capturing trace.
+> - A DEA user must be configured to connect to the database by using Windows authentication.
+> - A SQL Server service account requires access to the source trace file path.
 
 Follow these steps to capture a trace on your source server:
 
@@ -145,7 +145,7 @@ On the **Comparison Summary** page, you see summary statistics for that query, s
 
 If the query is an error query, the **Error Information** tab shows more information about the error. On the **Query Plan Information** tab, you see information about the query plans used for the query on Target 1 and Target 2.
 
-![query plan](./media/database-experimentation-assistant-get-started/dea-get-started-queryplan.png)
+![Query plan](./media/database-experimentation-assistant-get-started/dea-get-started-queryplan.png)
 
 On any page of the analysis report, select the **Print** button on the top right to print everything that is visible on the UI at that moment.
 

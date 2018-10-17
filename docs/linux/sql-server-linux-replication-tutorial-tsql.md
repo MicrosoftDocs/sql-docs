@@ -15,7 +15,7 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)] 
 
-In this tutorial you will configure SQL Server snapshot replication on Linux with 2 instances of SQL Server using Transact-SQL. The publisher and distributor will be the same instance, and the subscriber will be on a separate instance.
+In this tutorial you will configure SQL Server snapshot replication on Linux with two instances of SQL Server using Transact-SQL. The publisher and distributor will be the same instance, and the subscriber will be on a separate instance.
 
 > [!div class="checklist"]
 > * Enable SQL Server replication agents on Linux
@@ -32,7 +32,7 @@ All replication configurations can be configured with [replication stored proced
 ## Prerequisites  
 To complete this tutorial, you will need:
 
-- 2 instances of SQL Server with the latest version of SQL Server on Linux
+- Two instances of SQL Server with the latest version of SQL Server on Linux
 - A tool to issue T-SQL queries to set up replication such as SQLCMD or SSMS
 
   See [Use SSMS to Manage SQL Server on Linux](./sql-server-linux-manage-ssms.md).
@@ -276,7 +276,7 @@ the instance for distribution as well.
   SELECT * from [Sales].[dbo].[CUSTOMER]
   ```
 
-In this tutorial you configured SQL Server snapshot replication on Linux with 2 instances of SQL Server using Transact-SQL.
+In this tutorial, you configured SQL Server snapshot replication on Linux with two instances of SQL Server using Transact-SQL.
 
 > [!div class="checklist"]
 > * Enable SQL Server replication agents on Linux

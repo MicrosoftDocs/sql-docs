@@ -4,7 +4,7 @@ description: Security overview for the extensibility framework in SQL Server Mac
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 10/10/2018  
+ms.date: 10/17/2018  
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph

@@ -36,7 +36,7 @@ The storage pool contains web clickstream data in a CSV file stored in HDFS. Use
 
 1. In Azure Data Studio, connect to the SQL Server master instance of your big data cluster. For more information, see [Connect to the SQL Server master instance](deploy-big-data-tools.md#master).
 
-2. Double-click on the connection in the **Servers** window to show the server dashboard. In the server dashboard, select **New Query**.
+2. Double-click on the connection in the **Servers** window to show the server dashboard for the SQL Server master instance. Select **New Query**.
 
    ![SQL Server master instance query](./media/tutorial-query-hdfs-storage-pool/sql-server-master-instance-query.png)
 

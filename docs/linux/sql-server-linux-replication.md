@@ -28,7 +28,7 @@ An instance of SQL Server can participate in any replication role:
 * Distributor
 * Subscriber
 
-A replication schema can mix and match operating system platforms. For example, a replication schema can use instances of SQL Server on Linux for publisher and distributor, and the subscribers can include instances of SQL Server on Windows.
+A replication schema can mix and match operating system platforms. For example, a replication schema may include an instance of SQL Server on Linux for publisher and distributor, and the subscribers include instances of SQL Server on Windows as well as Linux.
 
 SQL Server instances on Linux can participate in any type of replication.
 

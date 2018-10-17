@@ -150,6 +150,10 @@ kubectl get svc service-security-lb -n <name of your cluster>
 
 Look for the **External-IP** value that is assigned to the services. Connect to the SQL Server master instance using the IP address for the `service-master-pool-lb` at port 31433 (Ex: **\<ip-address\>,31433**) and to the SQL Server big data cluster endpoint using the external-IP for the `service-security-lb` service.   That big data cluster end point is where you can interact with HDFS and submit Spark jobs through Knox.
 
+## Sample deployment script
+
+For a sample python script that deploys both AKS and SQL Server big data cluster, see [Deploy a SQL Server big data cluster on Azure Kubernetes Service (AKS)](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/aks).
+
 ## Next steps
 
 Now that the SQL Server big data cluster is deployed, try out some of the new capabilities:

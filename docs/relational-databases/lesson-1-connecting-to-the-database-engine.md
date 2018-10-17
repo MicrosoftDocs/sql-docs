@@ -16,8 +16,6 @@ manager: craigg
 # Lesson 1: Connecting to the Database Engine
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
- > For content related to previous versions of SQL Server, see [Lesson 1: Connecting to the Database Engine](lesson-1-connecting-to-the-database-engine.md).
-
 When you install the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], the tools that are installed depend upon the edition and your setup choices. This lesson reviews the principal tools, and shows you how to connect and perform a basic function (authorizing more users).  
 
 This lesson contains the following tasks:  

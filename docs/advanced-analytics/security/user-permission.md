@@ -25,11 +25,11 @@ The login or user account identifies the *security principal*, who might need mu
 + The ability to create new objects, such as tables, stored procedures that use the external script, or custom functions that use R or Python job.
 + The right to install new packages on the SQL Server computer, or use packages provided to a group of users.
 
-Therefore, each person who runs an external script using SQL Server as the execution context must be mapped to a user in the database. Rather than individually set database user permissions, you could  create roles to manage sets of permissions, and assign users to those roles, rather than individually set user permissions.
+Each person who runs an external script using SQL Server as the execution context must be mapped to a user in the database. Rather than individually set database user permissions, you could create roles to manage sets of permissions, and assign users to those roles, rather than individually set user permissions. 
 
 Even users who are using R or Python in an external client tool must have their login or account mapped to a user in the database if they need to run an external script in-database, or access database objects and data. The same permissions are required whether the external script is sent from a remote data science client or run using a T-SQL stored procedure.
 
-For example, assume that you created an external script that runs on your local computer, and you want to run that code on SQL Server. You must ensure that the following conditions are met:
+For example, assume that you created an external script that runs on your local computer, and you want to run that script on SQL Server. You must ensure that the following conditions are met:
 
 + The database allows remote connections.
 + The SQL login or Windows account that you used for database access has been added to the SQL Server at the instance level.

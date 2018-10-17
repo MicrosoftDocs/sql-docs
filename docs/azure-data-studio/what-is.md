@@ -4,8 +4,8 @@ description: Azure Data Studio is a free, light-weight tool, that runs on Window
 ms.custom: "tools|sos"
 ms.date: "09/24/2018"
 ms.prod: sql
+ms.technology: azure-data-studio
 ms.reviewer: "alayu; sstein"
-ms.prod_service: sql-tools
 ms.topic: "overview"
 author: "stevestein"
 ms.author: "sstein"

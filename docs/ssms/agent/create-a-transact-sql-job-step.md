@@ -81,7 +81,7 @@ For detailed information, see [Implement SQL Server Agent Security](../../ssms/a
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
     ```  
-    -- creates a job step that that uses Transact-SQL  
+    -- creates a job step that uses Transact-SQL  
     USE msdb;  
     GO  
     EXEC sp_add_jobstep  

@@ -25,8 +25,9 @@ To setup Always Encrypted with secure enclaves, use the following workflow:
 4. Configure the enclave type in your SQL Server instance.
 5. Provision enclave-enabled keys.
 6. Encrypt columns that contain sensitive data.
- 
 
+>[!NOTE]
+>For a step-by-step tutorial on how to set up a test environment and try the functionality of Always Encrypted with secure enclaves in SSMS, see [Tutorial: Getting started with Always Encrypted with secure enclaves using SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md).
 
 ## Configure your environment
 
@@ -72,7 +73,7 @@ Install the following tools on the client/development computer:
 
 1. [.NET Framework 4.7.2](https://www.microsoft.com/net/download/dotnet-framework-runtime).
 2. [SSMS 18.0 or later](../../../ssms/download-sql-server-management-studio-ssms.md).
-3. [SQL Server PowerShell module](../../../powershell/download-sql-server-ps-module.md) version 21.5 or later.
+3. [SQL Server PowerShell module](../../../powershell/download-sql-server-ps-module.md) version 21.1 or later.
 4. [Visual Studio (2017 or later recommended)](https://visualstudio.microsoft.com/downloads/).
 5. [Developer Pack for .NET Framework 4.7.2](https://www.microsoft.com/net/download/visual-studio-sdks).
 6. [Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider NuGet package](https://www.nuget.org/packages/Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider), version 2.2.0 or later.

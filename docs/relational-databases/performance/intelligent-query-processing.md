@@ -2,7 +2,7 @@
 title: "Intelligent query processing in Microsoft SQL databases | Microsoft Docs"
 description: "Intelligent query processing features to improve query performance in SQL Server and Azure SQL Database."
 ms.custom: ""
-ms.date: "09/24/2018"
+ms.date: "10/10/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -81,6 +81,9 @@ The following workloads may benefit from batch mode on rowstore:
 1.	A significant part of the workload consists of analytical queries (as a rule of thumb, queries with operators such as joins or aggregates processing hundreds of thousands of rows or more), **AND**
 2.	The workload is CPU bound (if the bottleneck is IO, it is still recommended to consider a columnstore index, if possible), **AND**
 3.	Creating a columnstore index adds too much overhead to the transactional part of your workload **OR** creating a columnstore index is not feasible because your application depends on a feature that is not yet supported with columnstore indexes.
+
+> [!NOTE]
+> Batch mode on rowstore can only help by reducing CPU consumption. If your bottleneck is IO-related, and data is not already cached ("cold" cache), batch mode on rowstore will NOT improve elapsed time. Similarly, if there is not enough memory on the machine to cache all data, a performance improvement is unlikely.
 
 ### What changes with batch mode on rowstore
 Other than moving to compatibility level 150, you don't have to change anything on your side in order to enable batch mode on rowstore for candidate workloads.

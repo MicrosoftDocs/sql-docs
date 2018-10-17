@@ -135,7 +135,7 @@ You need to provide storage that both nodes can access. You can use iSCSI, NFS, 
    ```bash
    sudo yum install pacemaker pcs fence-agents-all resource-agents
    ```
-1. Set the password for for the default user that is created when installing Pacemaker and Corosync packages. Use the same password on both nodes. 
+1. Set the password for the default user that is created when installing Pacemaker and Corosync packages. Use the same password on both nodes. 
 
    ```bash
    sudo passwd hacluster

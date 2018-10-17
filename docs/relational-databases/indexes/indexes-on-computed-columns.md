@@ -39,7 +39,7 @@ All function references in the computed column must have the same owner as the t
 > [!IMPORTANT]  
 >  Expressions are deterministic if they always return the same result for a specified set of inputs. The **IsDeterministic** property of the [COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md) function reports whether a *computed_column_expression* is deterministic.  
   
- The *computed_column_expression* must be deterministic. A *computed_column_expression* is deterministic when one or more of the following is true:  
+ The *computed_column_expression* must be deterministic. A *computed_column_expression* is deterministic when all of the following are true:  
   
 -   All functions that are referenced by the expression are deterministic and precise. These functions include both user-defined and built-in functions. For more information, see [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md). Functions might be imprecise if the computed column is PERSISTED. For more information, see [Creating Indexes on Persisted Computed Columns](#BKMK_persisted) later in this topic.  
   

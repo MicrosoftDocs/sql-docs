@@ -112,6 +112,7 @@ ms.technology:
                                               <ul class="noBullet">
                                                   <li><a class="barLink" href="/azure/sql-database/"><strong>Azure SQL Database</strong></a></li>
                                                   <li><a class="barLink" href="/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is/"> <strong>Azure SQL Data Warehouse</strong></a></li>
+                                                  <li><a class="barLink" href="https://azure.microsoft.com/updates/?status=all&product=sql-database"><strong>What's new</strong></a></li>
                                               </ul>
                                           </div>
                                       </div>
@@ -229,7 +230,7 @@ ms.technology:
                                                       </div>
                                                       <div class="cardText">
                                                           <h3>Migrate, load, and move data</h3>
-                                                          <p><b>Migration Assistants, Integration Services, Import Export Wizard, Replication </b> </p>
+                                                          <p><b>Migration Assistants, Integration Services (SSIS), Import Export Wizard, Replication </b> </p>
                                                       </div>
                                                   </div>
                                               </div>
@@ -342,9 +343,11 @@ ms.technology:
                                                     <li><a class="barLink" href="/sql/xquery/xquery-language-reference-sql-server">xQuery</a></li>
                                                     <li><a class="barLink" href="/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views/">DMVs</a></li>
                                                     <li><a class="barLink" href="/sql/powershell/sql-server-powershell">Powershell</a></li>
+                                                    <li><a class="barLink" href="/rest/api/sql/">SQL Rest API</a></li>
                                                 </ul></td>
                                                 <td style="border-top-color:transparent!important;padding-left:0;">
                                                 <ul class="noBullet">
+                                                     <li><a class="barLink" href="/dotnet/api/?view=sqlserver-2017">SQL .NET SDK API</a></li>
                                                      <li><a class="barLink" href="/sql/t-sql/language-reference">Transact-SQL (T-SQL)</a></li>
                                                      <li><a class="barLink" href="/sql/samples/sql-samples-where-are/">Database Samples</a></li>
                                                      <li><a class="barLink" href="/previous-versions/sql/">Archived Content (SQL 2005-2012)</a></li>
@@ -366,8 +369,8 @@ ms.technology:
                                                         <h3>Reporting</h3>
                                                         <ul class="noBullet">
                                                              <li><a class="barLink" href="/sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports/">SQL Server Reporting Services</a></li>
-                                                            <li><a class="barLink" href="/power-bi/service-get-started/">PowerBI Service</a></li>
-                                                            <li><a class="barLink" href="/power-bi/report-server/get-started/">PowerBI Report Server</a></li>
+                                                            <li><a class="barLink" href="/power-bi/service-get-started/">Power BI Service</a></li>
+                                                            <li><a class="barLink" href="/power-bi/report-server/get-started/">Power BI Report Server</a></li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -420,12 +423,22 @@ ms.technology:
         <ul class="links">
            <li>
                 <a href="http://aka.ms/editsqldocs" data-linktype="external">
-                    Contribute to SQL docs
+                    Contribute
+                </a>
+            </li>
+           <li>
+                <a href="https://docs.microsoft.com/sql/sql-server/sql-server-get-help" data-linktype="external">
+                    Get help
+                </a>
+            </li>
+           <li>
+                <a href="http://aka.ms/sqldocsfeedback" data-linktype="external">
+                    Feedback
                 </a>
             </li>
            <li>
                 <a href="http://aka.ms/sqldocsurvey" data-linktype="external">
-                    SQL Docs Feedback
+                    Survey
                 </a>
             </li>
            <li>
@@ -450,4 +463,3 @@ ms.technology:
             </li>
         </ul>
     </div>
-

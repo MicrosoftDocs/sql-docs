@@ -4,8 +4,8 @@ description: 'Azure Data Studio release notes'
 ms.custom: "tools|sos"
 ms.date: "09/24/2018"
 ms.prod: sql
+ms.technology: azure-data-studio
 ms.reviewer: "alayu; sstein"
-ms.prod_service: sql-tools
 ms.topic: conceptual
 author: "stevestein"
 ms.author: "sstein"
@@ -55,7 +55,7 @@ version: 0.32.8
 
 *0.32.8 contains fixes for a couple regressions found in 0.32.7 ([#1971](https://github.com/Microsoft/azuredatastudio/issues/1971), [#2372](https://github.com/Microsoft/azuredatastudio/issues/2372)*)
 
-The *August Public Preview* focuses on on bug fixes, product stabilization, and filling gaps in existing scenarios.  
+The *August Public Preview* focuses on bug fixes, product stabilization, and filling gaps in existing scenarios.  
 
 - Announcing the SQL Server Import Extension
 - SQL Server Profiler Session management

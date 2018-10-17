@@ -1285,6 +1285,7 @@ The table contains error message numbers and the description, which is the text 
 |	2597	|	10	|	No	|	Ignoring trace flag %d. It is either an invalid trace flag or a trace flag that can only be specified during server startup.	|
 |	2599	|	16	|	No	|	Cannot switch to in row text in table "%.*ls".	|
 |	2601	|	14	|	No	|	Cannot insert duplicate key row in object '%.*ls' with unique index '%.*ls'.	|
+|	2628	|	16	|	No	|	String or binary data would be truncated in table '%.*ls', column '%.*ls'. Truncated value: '%.*ls'.|
 |	2627	|	14	|	No	|	Violation of %ls constraint '%.*ls'. Cannot insert duplicate key in object '%.*ls'.	|
 |	2701	|	10	|	No	|	Database name '%.*ls' ignored, referencing object in tempdb.	|
 |	2702	|	16	|	No	|	Database '%.*ls' does not exist.	|

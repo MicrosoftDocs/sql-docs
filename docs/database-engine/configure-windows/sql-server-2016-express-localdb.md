@@ -20,7 +20,6 @@ manager: craigg
 ---
 # SQL Server 2016 Express LocalDB
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- > For content related to previous versions of SQL Server, see [SQL Server 2014 Express LocalDB](https://msdn.microsoft.com/library/hh510202(SQL.120).aspx).
 
 Microsoft SQL Server 2016 Express **LocalDB** is a feature of [SQL Server Express](../../sql-server/editions-and-components-of-sql-server-2016.md) targeted to developers. It is available on SQL Server 2016 Express with Advanced Services.  
 

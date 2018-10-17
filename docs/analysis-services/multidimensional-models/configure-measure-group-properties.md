@@ -20,7 +20,7 @@ manager: kfile
 |Property|Definition|  
 |--------------|----------------|  
 |**AggregationPrefix**|Applies to ROLAP storage. Assigns a common prefix to the indexed views in SQL Server, used to store aggregations for the partitions associated with this measure group.|  
-|**DataAggregation**|This property is reserved for future use and currently has no effect. Therefore, it is recommended that you do not modify this setting.|  
+|**DataAggregation**|This determines whether SQL Server Analysis Services can aggregate persisted data or cached data for the measure group. The default value is **DataAndCacheAggregatable**, which will aggregate persisted and cached data. You can change this to **CacheAggregatable** or **DataAggregatable**. This can be useful on systems that have limited RAM because the other two settings will attempt to keep the aggregations in memory to improve performance.|  
 |**Description**|You can use this property to document the measure group.|  
 |**ErrorConfiguration**|Configurable error handling settings for handling of duplicate keys, unknown keys, null keys, error limits, action upon error detection, and the error log file. See [Error Configuration for Cube, Partition, and Dimension Processing &#40;SSAS - Multidimensional&#41;](../../analysis-services/multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md).|  
 |**EstimatedRows**|Specifies the estimated number of rows in the fact table.|  

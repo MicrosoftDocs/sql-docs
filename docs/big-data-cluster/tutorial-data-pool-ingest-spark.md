@@ -17,8 +17,8 @@ In this tutorial, you learn how to:
 
 > [!div class="checklist"]
 > * Create an external table in the data pool.
-> * Create a Spark job to load the data.
-> * Join data in the data pool table with local tables.
+> * Create a Spark job to load data from HDFS.
+> * Query the results in the external table.
 
 > [!TIP]
 > If you prefer, you can download and run a script for the commands in this tutorial. For instructions, see the [Data pools samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-pool) on GitHub.
@@ -60,6 +60,8 @@ The following steps create an external table in the data pool named **web_clicks
 
 ## Start a Spark streaming job
 
+The next step is to create a Spark streaming job that loads web clickstream data from the storage pool (HDFS) into the external table you created in the data pool.
+
 1. In Azure Data Studio, connect to the HDFS/Spark gateway of your big data cluster. For more information, see [Connect to the HDFS/Spark gateway](deploy-big-data-tools.md#hdfs).
 
 1. Double-click on the HDFS/Spark gateway connection in the **Servers** window. Then select **New Spark Job**.
@@ -99,6 +101,8 @@ The following steps create an external table in the data pool named **web_clicks
    ![Spark job submit](media/tutorial-data-pool-ingest-spark/spark-new-job-settings.png)
 
 ## Query the data
+
+The following steps show that the Spark streaming job loaded the data from HDFS into the data pool.
 
 1. Before querying the ingested data, look at the task history output to see that the job completed.
 

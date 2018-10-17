@@ -1,6 +1,6 @@
 ---
-title: How to ingest data into the data pool of a SQL Server big data cluster | Microsoft Docs
-description: This tutorial demonstrates how to ingest data into the data pool of a SQL Server 2019 big data cluster (preview).
+title: How to ingest data into a SQL Server data pool with Transact-SQL | Microsoft Docs
+description: This tutorial demonstrates how to ingest data into the data pool of a SQL Server 2019 big data cluster (preview) with the sp_data_pool_table_insert_data stored procedure.
 author: rothja 
 ms.author: jroth 
 manager: craigg
@@ -9,15 +9,15 @@ ms.topic: tutorial
 ms.prod: sql
 ---
 
-# Tutorial: Ingest data into the data pool of a SQL Server big data cluster
+# Tutorial: Ingest data into a SQL Server data pool with Transact-SQL
 
-This tutorial demonstrates how to load data into the [data pool](concept-data-pool.md) of a SQL Server 2019 big data cluster (preview). Query Oracle data from a SQL Server 2019 big data cluster. To run this tutorial, you will need to have access to an Oracle server. If you do not have access, this tutorial can give you a sense of how data virtualization works for external data sources in SQL Server big data cluster.
+This tutorial demonstrates how to use Transact-SQL to load data into the [data pool](concept-data-pool.md) of a SQL Server 2019 big data cluster (preview). With SQL Server big data clusters, data from a variety of sources can be ingested and distributed across data pool instances.
 
 In this tutorial, you learn how to:
 
 > [!div class="checklist"]
 > * Create an external table in the data pool.
-> * Insert data into the data pool table.
+> * Insert sample web clickstream data into the data pool table.
 > * Join data in the data pool table with local tables.
 
 > [!TIP]
@@ -37,7 +37,9 @@ The following steps create an external table in the data pool named **web_clicks
 
 1. In Azure Data Studio, connect to the SQL Server master instance of your big data cluster. For more information, see [Connect to the SQL Server master instance](deploy-big-data-tools.md#master).
 
-1. In the server dashboard, select **New Query**.
+1. Double-click on the connection in the **Servers** window to show the server dashboard. In the server dashboard, select **New Query**.
+
+   ![SQL Server master instance query](./media/tutorial-data-pool-ingest-sql/sql-server-master-instance-query.png)
 
 1. Run the following Transact-SQL command to change the context to the **Sales** database in the master instance.
 
@@ -59,7 +61,7 @@ The following steps create an external table in the data pool named **web_clicks
       );
    ```
   
-1. In CTP 2.0, the creation of the data pool is aynchronous, but there is no way to determine when it completes yet. Wait for two minutes to make sure the data pool is created before continuing.
+1. In CTP 2.0, the creation of the data pool is asynchronous, but there is no way to determine when it completes yet. Wait for two minutes to make sure the data pool is created before continuing.
 
 ## Load data
 
@@ -122,6 +124,6 @@ DROP EXTERNAL TABLE [dbo].[web_clickstream_clicks_data_pool];
 
 ## Next steps
 
-Learn about how to use notebooks in Azure Data Studio:
+Learn about how to ingest data into the data pool with Spark jobs:
 > [!div class="nextstepaction"]
-> [Learn about notebooks](notebooks-guidance.md)
+> [Ingest data with Spark jobs](tutorial-data-pool-ingest-spark.md)

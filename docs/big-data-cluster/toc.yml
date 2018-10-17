@@ -14,6 +14,10 @@
     href: tutorial-query-hdfs-storage-pool.md
   - name: 2_Query Oracle data
     href: tutorial-query-oracle.md
+  - name: 3_Load data pool with SQL
+    href: tutorial-data-pool-ingest-sql.md
+  - name: 4_Load data pool with Spark
+    href: tutorial-data-pool-ingest-spark.md
 - name: Concepts
   items:
   - name: Controller

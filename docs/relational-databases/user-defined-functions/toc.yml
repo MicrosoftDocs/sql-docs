@@ -2,6 +2,8 @@
   href: user-defined-functions.md
 - name: Deterministic and Nondeterministic Functions
   href: deterministic-and-nondeterministic-functions.md
+- name: Scalar User-defined function inlining
+  href: scalar-udf-inlining.md
 - name: Create User-defined Functions (Database Engine)
   href: create-user-defined-functions-database-engine.md
 - name: Create CLR Functions

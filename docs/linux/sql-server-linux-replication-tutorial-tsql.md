@@ -47,16 +47,6 @@ To complete this tutorial, you will need:
   sudo systemctl restart mssql-server
   ```
 
-1. Configure your SQL Server instance for Replication
-  Run the following stored procedure in msdb database for each CTP1.5 instance participating in SQL Server replication.
-
-  ```sql
-  USE msdb
-  GO
-  exec sys.sp_MSrepl_createdatatypemappings;
-  GO
-  ```
-
 1. Create Sample Database and Table
   On your publisher create a sample database and table that will act as the articles for a publication.
 

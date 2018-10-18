@@ -111,7 +111,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
  | Argument | Explanation |
  | -------- | ----------- |
  | *constraint_name* | The optional name for the constraint. The constraint name is unique within the database. The name can be re-used in other databases. |
- | *constant_expression* | The default value for the column. The expression must be a literal value or a  a constant. For example, these constant expressions are allowed: `'CA'`, `4`. These are not allowed: `2+3`, `CURRENT_TIMESTAMP`. |
+ | *constant_expression* | The default value for the column. The expression must be a literal value or a constant. For example, these constant expressions are allowed: `'CA'`, `4`. These are not allowed: `2+3`, `CURRENT_TIMESTAMP`. |
   
 
 ### <a name="TableOptions"></a> Table structure options

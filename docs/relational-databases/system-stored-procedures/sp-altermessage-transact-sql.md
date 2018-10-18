@@ -39,13 +39,13 @@ sp_altermessage [ @message_id = ] message_number   ,[ @parameter = ]'write_to_lo
  [**@message_id =** ] *message_number*  
  Is the error number of the message to alter from **sys.messages**. *message_number* is **int** with no default value.  
   
- [ **@parameter =** ] **'***write_to_log*'  
+ [ **@parameter =** ] **'**_write\_to\_log_'  
  Is used with **@parameter_value** to indicate that the message is to be written to the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows application log. *write_to_log* is **sysname** with no default value. *write_to_log* must be set to WITH_LOG or NULL. If *write_to_log* is set to WITH_LOG or NULL, and the value for **@parameter_value** is **true**, the message is written to the Windows application log. If *write_to_log* is set to WITH_LOG or NULL and the value for **@parameter_value** is **false**, the message is not always written to the Windows application log, but may be written depending upon how the error was raised. If *write_to_log* is specified, the value for **@parameter_value** must also be specified.  
   
 > [!NOTE]  
 >  If a message is written to the Windows application log, it is also written to the [!INCLUDE[ssDE](../../includes/ssde-md.md)] error log file.  
   
- [ **@parameter_value =** ]**'***value*'  
+ [ **@parameter_value =** ]**'**_value_'  
  Is used with **@parameter** to indicate that the error is to be written to the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows application log. *value* is **varchar(5)**, with no default value. If **true**, the error is always written to the Windows application log. If **false**, the error is not always written to the Windows application log, but may be written depending upon how the error was raised. If *value* is specified, *write_to_log* for **@parameter** must also be specified.  
   
 ## Return Code Values  

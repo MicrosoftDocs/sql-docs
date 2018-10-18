@@ -17,7 +17,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # Return Data from a Stored Procedure
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
- > For content related to previous versions of SQL Server, see [Return Data from a Stored Procedure](return-data-from-a-stored-procedure.md).
 
   There are three ways of returning data from a procedure to a calling program: result sets, output parameters, and return codes. This topic provides information on the three approaches.  
   

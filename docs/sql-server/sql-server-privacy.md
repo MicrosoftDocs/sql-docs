@@ -1,6 +1,6 @@
 ---
 title: "SQL Server privacy supplement | Microsoft Docs"
-ms.date: 4/24/2018
+ms.date: 4/25/2018
 ms.prod: sql
 ms.reviewer: ""
 ms.custom: ""

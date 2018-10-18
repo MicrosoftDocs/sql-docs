@@ -3,7 +3,7 @@ title: "SQL Server 2012 Release Notes | Microsoft Docs"
 ms.prod: sql
 ms.technology: install
 ms.custom: ""
-ms.date: "01/31/2017"
+ms.date: "02/01/2017"
 ms.reviewer: ""
 ms.topic: conceptual
 helpviewer_keywords: 

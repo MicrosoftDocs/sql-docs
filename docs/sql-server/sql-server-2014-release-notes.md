@@ -1,7 +1,7 @@
 ---
 title: "SQL Server 2014 Release Notes | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2018"
+ms.date: "03/15/2018"
 ms.prod: sql
 ms.technology: install
 ms.reviewer: ""

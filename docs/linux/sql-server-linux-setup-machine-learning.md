@@ -45,10 +45,7 @@ Choose from the following two approaches to install MRO:
 
 + Download the MRO tarball from MRAN, unpack it, and run its install.sh script. You can follow the [installation instructions on MRAN](https://mran.microsoft.com/releases/3.4.4) if you want this approach.
 
-+ Alternatively, register the **packages.microsoft.com** repo as described below to install the three packages: microsoft-r-open-mro, microsoft-r-open-mkl, and microsoft-r-open-foreachiterators. 
-
-> [!Note]
-> Only the microsoft-r-open-mro is strictly required, but since there isn't a dedicated repo for just that package, all three packages are typically installed together.
++ Alternatively, register the **packages.microsoft.com** repo as described below to install the three packages comprising the MRO distribution: microsoft-r-open-mro, microsoft-r-open-mkl, and microsoft-r-open-foreachiterators. 
 
 The following commands register the repository providing MRO. Post-registration, the commands for installing other R packages, such as mssql-mlservices-mml-r, will automatically include MRO as a package dependency.
 
@@ -164,6 +161,7 @@ Install any *one* R package, plus any *one* Python package, and Java if you want
 > [!Tip]
 > If possible, run `apt-get update` to refresh packages on the system prior to installation. Additionally, some docker images of Ubuntu might not have the https apt transport option. To install it, use `apt-get install apt-transport-https`.
 
+<!---
 ### Prerequisite for 18.04
 
 Running mssql-mlservices R libraries on Ubuntu 18.04 requires **libpng12** from the Linux Kernel archives. This package is no longer included in the standard distribution and must be installed manually. To get this library, run the following commands:
@@ -171,7 +169,7 @@ Running mssql-mlservices R libraries on Ubuntu 18.04 requires **libpng12** from 
 ```bash
 wget https://mirrors.kernel.org/ubuntu/pool/main/libp/libpng/libpng12-0_1.2.54-1ubuntu1_amd64.deb
 dpkg -i libpng12-0_1.2.54-1ubuntu1_amd64.deb
-```
+```--->
 
 ### Example 1 -  Full installation 
 

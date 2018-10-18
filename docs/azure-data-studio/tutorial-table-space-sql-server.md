@@ -4,8 +4,8 @@ description: This tutorial demonstrates how to enable the table space usage samp
 ms.custom: "tools|sos"
 ms.date: "09/24/2018"
 ms.prod: sql
+ms.technology: azure-data-studio
 ms.reviewer: "alayu; sstein"
-ms.prod_service: sql-tools
 ms.topic: "tutorial"
 author: "stevestein"
 ms.author: "sstein"

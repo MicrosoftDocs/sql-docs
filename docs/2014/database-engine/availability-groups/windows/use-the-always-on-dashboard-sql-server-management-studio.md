@@ -145,7 +145,7 @@ manager: craigg
  Lists the issue name. This value is shown by default. For a list of all the AlwaysOn policy issues, see [AlwaysOn Policies for Operational Issues with AlwaysOn Availability Groups (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md).  
   
  **Availability Mode**  
- Indicates the replica property that that you set separately for each availability replica. This value is hidden by default. The possible values are:  
+ Indicates the replica property that you set separately for each availability replica. This value is hidden by default. The possible values are:  
   
 -   **Asynchronous**. The secondary replica never becomes synchronized with the primary replica.  
   

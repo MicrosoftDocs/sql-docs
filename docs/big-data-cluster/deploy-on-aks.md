@@ -17,6 +17,9 @@ This enables you to use your existing skills or draw upon a large and growing bo
 
 This article describes the steps to deploy Kubernetes on AKS using Azure CLI. If you don't have an Azure subscription, create a free account before you begin.
 
+> [!TIP] 
+> For a sample python script that deploys both AKS and SQL Server big data cluster, see [Deploy a SQL Server big data cluster on Azure Kubernetes Service (AKS)](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/aks).
+
 ## Prerequisites
 
 - For an AKS environment, the minimum VM requirement is at least two agent VMs (in addition to master) of a minimum size [Standard_DS3_v2](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-general#dsv2-series). Minimum resources required per VM are 4 CPUs and 14 GB of memory.

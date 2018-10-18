@@ -107,7 +107,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
  The name, nullability, and data type can differ. If **sp_describe_first_result_set** returns an empty result set, the guarantee is that the batch execution will return no-result sets.  
   
- This guarantee presumes there are are no relevant schema changes on the server. Relevant schema changes on the server do not include creating a temporary tables or table variables in the batch A between the time that **sp_describe_first_result_set** is called and the time that the result set is returned during execution, including schema changes made by batch B.  
+ This guarantee presumes there are no relevant schema changes on the server. Relevant schema changes on the server do not include creating a temporary tables or table variables in the batch A between the time that **sp_describe_first_result_set** is called and the time that the result set is returned during execution, including schema changes made by batch B.  
   
  **sp_describe_first_result_set** returns an error in any of the following cases.  
   

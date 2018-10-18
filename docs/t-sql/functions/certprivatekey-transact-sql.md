@@ -24,7 +24,7 @@ manager: craigg
 
 This function returns the private key of a certificate in binary format. This function takes three arguments.
 -   A certificate ID.  
--   An encryption password, used to encrypt the private key bits returned by the function. This approach does not expose the keys as clear text text to users.  
+-   An encryption password, used to encrypt the private key bits returned by the function. This approach does not expose the keys as clear text to users.  
 -   An optional decryption password. A specified decryption password is used to decrypt the private key of the certificate. Otherwise, the database master key is used.  
   
 Only users with access to the certificate private key can use this function. This function returns the private key in PVK format.

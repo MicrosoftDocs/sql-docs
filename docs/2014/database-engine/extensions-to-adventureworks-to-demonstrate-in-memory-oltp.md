@@ -641,7 +641,7 @@ WHERE t.type='U'
 |SpecialOfferProduct_inmem|64|3712|  
 |DemoSalesOrderHeaderSeed|1984|5504|  
   
- We can see a total of about 6.5GB of data. Notice that the size of the indexes on the table SalesOrderHeader_inmem and SalesOrderDetail_inmem is is the same as the size of the indexes before inserting the sales orders. The index size did not change because both tables are using hash indexes, and hash indexes are static.  
+ We can see a total of about 6.5GB of data. Notice that the size of the indexes on the table SalesOrderHeader_inmem and SalesOrderDetail_inmem is the same as the size of the indexes before inserting the sales orders. The index size did not change because both tables are using hash indexes, and hash indexes are static.  
   
 #### After demo reset  
  The stored procedure Demo.usp_DemoReset can be used to reset the demo. It deletes the data in the tables SalesOrderHeader_inmem and SalesOrderDetail_inmem, and re-seeds the data from the original tables SalesOrderHeader and SalesOrderDetail.  

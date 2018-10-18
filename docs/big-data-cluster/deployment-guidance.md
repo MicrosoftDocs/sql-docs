@@ -107,8 +107,8 @@ The cluster configuration can be customized using a set of environment variables
 | **CONTROLLER_PASSWORD** | Yes | N/A | The password for the cluster administrator. |
 | **KNOX_PASSWORD** | Yes | N/A | The password for Knox user. |
 | **MSSQL_SA_PASSWORD** | Yes | N/A | The passowrd of SA user for SQL master instance. |
-| **USE_PERSISTENT_VOLUME** | No | true | `true` to use Kubernetes Persistent Volume Claims for pod storage.  `false` to use ephemeral host storage for pod storage. See the [data persistence](concept-data-persistence.md) topic for more details. |
-| **STORAGE_CLASS_NAME** | No | default | If `USE_PERSISTENT_VOLUME` is `true` this indicates the name of the Kubernetes Storage Class to use. See the [data persistence](concept-data-persistence.md) topic for more details. |
+| **USE_PERSISTENT_VOLUME** | No | true | `true` to use Kubernetes Persistent Volume Claims for pod storage.  `false` to use ephemeral host storage for pod storage. See the [data persistence](concept-data-persistence.md) topic for more details. If you deploy SQL Server big data cluster on minikube and USE_PERSISTENT_VOLUME=true, you must set the value for `STORAGE_CLASS_NAME=standard`. |
+| **STORAGE_CLASS_NAME** | No | default | If `USE_PERSISTENT_VOLUME` is `true` this indicates the name of the Kubernetes Storage Class to use. See the [data persistence](concept-data-persistence.md) topic for more details. Note that if you deploy SQL Server big data cluster on minikube, the default storage class name is different and you must override it by setting `STORAGE_CLASS_NAME=standard`. |
 | **MASTER_SQL_PORT** | No | 31433 | The TCP/IP port that the master SQL instance listens on the public network. |
 | **KNOX_PORT** | No | 30443 | The TCP/IP port that Apache Knox listens on the public network. |
 | **GRAFANA_PORT** | No | 30888 | The TCP/IP port that the Grafana monitoring application listens on the public network. |
@@ -148,6 +148,15 @@ SET DOCKER_EMAIL=<your Docker email, use same as username provided>
 SET DOCKER_PRIVATE_REGISTRY="1"
 ```
 
+On minikube, if USE_PERSISTENT_VOLUME=true (default), you must also overide the default value for STORAGE_CLASS_NAME environment variable:
+```
+SET STORAGE_CLASS_NAME=standard
+```
+
+Alternatively, you can supress using persistent volumes on minikube:
+```
+SET USE_PERSISTENT_VOLUME=false
+```
 ### Linux
 
 Initialize the following environment variables:
@@ -169,6 +178,15 @@ export DOCKER_EMAIL=<your Docker email, use same as username provided>
 export DOCKER_PRIVATE_REGISTRY="1"
 ```
 
+On minikube, if USE_PERSISTENT_VOLUME=true (default), you must also overide the default value for STORAGE_CLASS_NAME environment variable:
+```
+SET STORAGE_CLASS_NAME=standard
+```
+
+Alternatively, you can supress using persistent volumes on minikube:
+```
+SET USE_PERSISTENT_VOLUME=false
+```
 ## Deploy SQL Server Big Data cluster
 
 The create cluster API is used to initialize the Kubernetes namespace and deploy all the application pods into the namespace. To deploy SQL Server Big Data cluster on your Kubernetes cluster, run the following command:

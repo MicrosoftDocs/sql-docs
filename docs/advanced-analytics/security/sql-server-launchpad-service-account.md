@@ -21,7 +21,7 @@ For more information, see the Launchpad sections in [Extensibility architecture 
 
 By default, SQL Server Launchpad is configured to run under **NT Service\MSSQLLaunchpad**, which is provisioned with all necessary permissions to run external scripts. Removing permissions from this account can result in Launchpad failing to start or to access the SQL Server instance where external scripts should be run.
 
-If you modify the service account, be sure to use the [Local Security Policy console](https://docs.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/how-to-configure-security-policy-settings).
+If you modify the service account, be sure to use the [Local Security Policy console](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/how-to-configure-security-policy-settings).
 
 Permissions required for this account are listed in the following table.
 

@@ -4,7 +4,7 @@ hide_bc: true
 experimental: true
 experiment_id: "81ba5f65-59fb-4d"
 title: SQL Server - Load and move data
-description: Explore the features that help you move, load, and manage your data with SQL Server. 
+description: Explore the features that help you load, move, and migrate databases and data with SQL Server. 
 ms.topic: hub-page
 featureFlags:
 - clicktale
@@ -138,6 +138,25 @@ featureFlags:
                                     </div>
                                 </a>
                             </li>
+                            <li>
+                                <a href="/sql/dea/database-experimentation-assistant-overview">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="media/load-move-data/database-experimentation-assistant.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Database Experimentation Assistant (DEA)</h3>
+                                                    <p>Assists in evaluating a target version of SQL Server for an existing workload.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
                             <li class="fullSpan">
                                 <div class="container intro">
                                 <h2>Load and Move Data</h2>
@@ -200,25 +219,6 @@ featureFlags:
                                 </a>
                             </li>
                             <li>
-                                <a href="/sql/relational-databases/replication/sql-server-replication/">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="media/load-move-data/replication.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Replication</h3>
-                                                    <p> A set of technologies for copying and distributing data and database objects from one database to another and then synchronizing between databases to maintain consistency.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
                                 <a href="/sql/integration-services/sql-server-integration-services">
                                     <div class="cardSize">
                                         <div class="cardPadding">
@@ -231,6 +231,25 @@ featureFlags:
                                                 <div class="cardText">
                                                     <h3>SQL Server Integration Services (SSIS)</h3>
                                                     <p>Extract and transform data from a wide variety of sources, such as flat files and relational data sources, and then load the data into your SQL database. </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/sql/relational-databases/replication/sql-server-replication/">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="media/load-move-data/replication.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Replication</h3>
+                                                    <p> A set of technologies for copying and distributing data and database objects from one database to another and then synchronizing between databases to maintain consistency.</p>
                                                 </div>
                                             </div>
                                         </div>

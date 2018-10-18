@@ -37,7 +37,7 @@ By completing these tasks, you'll learn a common pattern used to create, train, 
     GO
     ```
 
-2. Run the following code in a new query window to create the stored procedure that builds and trains a model.
+2. Run the following code in a new query window to create the stored procedure that builds and trains a model. This code uses pickle to serialize the model and scikit to provide the algorithm. The trained model contains column data from columns 0 through 4 from the **iris_data** table. 
 
     ```sql
     CREATE PROCEDURE generate_iris_model (@trained_model varbinary(max) OUTPUT)
@@ -58,53 +58,35 @@ By completing these tasks, you'll learn a common pattern used to create, train, 
     GO
     ```
 
-3. Verify the stored procedure is created. If this command runs without error, a new stored procedure called **generate_iris_model** is created and added to the **sqlpy** database. You can find stored procedures in Management Studio's **Object Explorer**, under **Programmability**.
+3. Verify the object is created. If the T-SQL script from the previous step runs without error, a new stored procedure called **generate_iris_model** is created and added to the **sqlpy** database. You can find stored procedures in Management Studio's **Object Explorer**, under **Programmability**.
 
-3. Run the stored procedure to create the model. This procedure is designed for re-use, with the ability to generate multiple copies of a model. As such, the model object has to be externalized, defined here as a parameter to the procedure so that you can specify the name:
-
-    ```sql
-    DECLARE @model varbinary(max);
-    EXEC generate_iris_model @model OUTPUT;
-    INSERT INTO iris_models (model_name, model) values('Naive Bayes', @model);
-    ```
-
-5. Now, try running the model generation code once more. 
-
-    You should get the error: "Violation of PRIMARY KEY constraint Cannot insert duplicate key in object 'dbo.iris_models'. The duplicate key value is (Naive Bayes)".
-
-    That's because the model name was provided by manually typing in "Naive Bayes" as part of the INSERT statement. Assuming you plan to create lots of models, using different parameters or different algorithms on each run, you should consider setting up a metadata scheme so that you can automatically name models and more easily identify them.
-
-6. To get around this error, you can make some minor modifications to the SQL wrapper. This example generates a unique model name by appending the current date and time:
+4. Run the stored procedure to create the model. This particular script deletes an existing model of the same name ("Naive Bayes") so that it can be recreated on subsequent reruns of the same procedure. Without model deletion, an error occurs stating that the object already exists.
 
     ```sql
     DECLARE @model varbinary(max);
     DECLARE @new_model_name varchar(50)
-    SET @new_model_name = 'Naive Bayes ' + CAST(GETDATE()as varchar)
+    SET @new_model_name = 'Naive Bayes '
     SELECT @new_model_name 
     EXEC generate_iris_model @model OUTPUT;
+    DELETE iris_models WHERE model_name = @new_model_name;
     INSERT INTO iris_models (model_name, model) values(@new_model_name, @model);
-    ```
-
-7. To view the models, run a simple SELECT statement. You should now see a model with the current timestamp, as created by the `SET @new_model_name = 'Naive Bayes ' + CAST(GETDATE()as varchar)` statement in the previous stored procedure.
-
-    ```sql
-    SELECT * FROM iris_models;
     GO
     ```
 
+    The script includes a SELECT statement showing that the model exists.
+
     **Results**
 
-    |model_name	| model |
-    |------|------|
-    | Naive Bayes | 0x800363736B6C656172... |
-    | Naive Bayes Jan 01 2018  9:39AM | 0x800363736B6C656172... |
-    | Naive Bayes Feb 01 2018  10:51AM | 0x800363736B6C656172... |
+    |   | (no column name |
+    |---|-----------------|
+    | 1 | Naive Bayes     | 
+
 
 ## Generate predictions
 
 In this step, create a stored procedure that generates predictions. You'll do this by calling sp_execute_external_script to start Python, and then pass in Python script that loads a serialized model from the **iris_models** table into a variable, and passes it back to Python to generate scores.
 
-1. Run the following code to create the stored procedure that performs scoring. 
+1. Run the following code to create the stored procedure that performs scoring. The procedure loads a binary model, uses columns `[1,2,3,4]` for predictions, and includes columns `[0,5,6]` in output.
 
     ```sql
     CREATE PROCEDURE predict_species (@model varchar(100))
@@ -117,7 +99,7 @@ In this step, create a stored procedure that generates predictions. You'll do th
     irismodel = pickle.loads(nb_model)
     species_pred = irismodel.predict(iris_data[[1,2,3,4]])
     iris_data["PredictedSpecies"] = species_pred
-    OutputDataSet = iris_data.query( ''PredictedSpecies == SpeciesId'' )[[0, 5, 6]]
+    OutputDataSet = iris_data[[0,5,6]] 
     print(OutputDataSet)
     '
     , @input_data_1 = N'select id, "Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width", "SpeciesId" from iris_data'
@@ -129,14 +111,10 @@ In this step, create a stored procedure that generates predictions. You'll do th
     GO
     ```
 
-    The stored procedure gets the Naïve Bayes model from the table and uses the functions associated with the model to generate scores. In this example, the stored procedure gets the model from the table using the model name. However, depending on what kind of metadata you are saving with the model, you could also get the most recent model, or the model with the highest accuracy.
-
 2. Run the following lines to pass the model name "Naive Bayes" to the stored procedure that executes the scoring code. 
 
-   Be sure to specify a valid Naive Bayes model name. On your system, the timestamp indicates when the model was created.
-
     ```sql
-    EXEC predict_species 'Naive Bayes <timestamp>';
+    EXEC predict_species 'Naive Bayes';
     GO
     ```
 

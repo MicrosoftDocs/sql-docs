@@ -24,9 +24,9 @@ To install the SQL Server 2019 extension (preview), download and install the ass
 
    |Platform|Download|Release date|Version
    |:---|:---|:---|:---|
-   |Windows|[.vsix](https://go.microsoft.com/fwlink/?LinkId=2031539)|October 17, 2018|0.7.2
-   |macOS|[.vsix](https://go.microsoft.com/fwlink/?LinkId=2031717)|October 17, 2018 |0.7.2
-   |Linux|[.vsix](https://go.microsoft.com/fwlink/?LinkId=2031538)|October 17, 2018 |0.7.2
+   |Windows|[.vsix](https://go.microsoft.com/fwlink/?LinkId=2031539)|October 18, 2018|0.7.2
+   |macOS|[.vsix](https://go.microsoft.com/fwlink/?LinkId=2031717)|October 18, 2018 |0.7.2
+   |Linux|[.vsix](https://go.microsoft.com/fwlink/?LinkId=2031538)|October 18, 2018 |0.7.2
 
 1. In Azure Data Studio choose **Install Extension from VSIX Package** from the **File** menu and select the downloaded .vsix file.
 

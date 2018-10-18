@@ -23,6 +23,7 @@ version: 1.1.3
 - Introducing the Azure Resource Explorer to browse Azure SQL Databases
 - Improve Object Explorer and Query Editor connectivity robustness
 - SQL Agent extensions improvements
+- Update to the [SQL Server 2019 Preview extension](https://docs.microsoft.com/sql/azure-data-studio/sql-server-2019-extension?view=sql-server-ver15)
 
 ### Bug Fixes
 

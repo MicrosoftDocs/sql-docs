@@ -330,7 +330,7 @@ To release the trigger for a command that does not change any rows, employ the s
 The following T-SQL code snippet will achieve this, and should be present at the beginning of each DML trigger:
 
 ```sql
-IF (@@ROWCOUNT_BIG = 0)
+IF (ROWCOUNT_BIG() = 0)
 RETURN;
 ```
   

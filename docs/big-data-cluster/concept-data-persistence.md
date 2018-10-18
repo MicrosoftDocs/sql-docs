@@ -36,12 +36,12 @@ AKS comes with [two built-in storage classes](https://docs.microsoft.com/en-us/a
 
 ## Minikube storage class
 
-Minikube comes with a built-in storage class called **standard** along with a dynamic provisioner for it. Note that on minikube, if USE_PERSISTENT_VOLUME=true (default), you must also overide the default value for STORAGE_CLASS_NAME environment variable since the default value is diferent and set it to `standard`: 
+Minikube comes with a built-in storage class called **standard** along with a dynamic provisioner for it. Note that on Minikube, if USE_PERSISTENT_VOLUME=true (default), you must also override the default value for the STORAGE_CLASS_NAME environment variable because the default value is different. Set the value to `standard`: 
 ```
 SET STORAGE_CLASS_NAME=standard
 ```
 
-Alternatively, you can supress using persistent volumes on minikube:
+Alternatively, you can suppress using persistent volumes on Minikube:
 ```
 SET USE_PERSISTENT_VOLUME=false
 ```

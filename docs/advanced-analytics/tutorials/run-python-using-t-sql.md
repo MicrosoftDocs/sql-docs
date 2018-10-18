@@ -67,7 +67,7 @@ There are two ways to run Python code in SQL Server:
 
 + From a [remote Python client](../python/setup-python-client-tools-sql.md), connect to SQL Server, and execute code using the SQL Server as the compute context. This requires [revoscalepy](../python/what-is-revoscalepy.md).
 
-The primary goal of this exercise is to ensure that you can use Python in a stored procedure.
+The following exercise is focused on the first interaction model: how to pass Python code to a stored procedure.
 
 1. Run some simple code to see how data is passed back and forth between SQL Server and Python.
 
@@ -98,7 +98,7 @@ For now, remember these rules:
 
 + Everything inside the `@script` argument must be valid Python code. 
 + The code must follow all Pythonic rules regarding indentation, variable names, and so forth. When you get an error, check your white space and casing.
-+ If you are using any libraries that are not loaded by default, you must use an import statement at the beginning of your script to load them. SQL Server adds several product-specific libraries. For more information, see [Python libraries](python-libraries-and-data-types.md).
++ If you are using any libraries that are not loaded by default, you must use an import statement at the beginning of your script to load them. SQL Server adds several product-specific libraries. For more information, see [Python libraries](../python/python-libraries-and-data-types.md).
 + If the library is not already installed, stop and install the Python package outside of SQL Server, as described here: [Install new Python packages on SQL Server](../python/install-additional-python-packages-on-sql-server.md)
 
 ## Inputs and outputs

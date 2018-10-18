@@ -18,6 +18,8 @@
     href: tutorial-data-pool-ingest-sql.md
   - name: 4_Load data pool with Spark
     href: tutorial-data-pool-ingest-spark.md
+  - name: 5_Run a Spark notebook
+    href: tutorial-notebook-spark.md
 - name: Concepts
   items:
   - name: Controller

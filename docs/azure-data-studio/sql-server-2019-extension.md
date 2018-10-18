@@ -22,11 +22,11 @@ To install the SQL Server 2019 extension (preview), download and install the ass
 
 1. Download the SQL Server 2019 extension (preview) .vsix file to a local directory:
 
-   |Platform|Download|Release date|
-   |:---|:---|:---|
-   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2024911)|September 24, 2018|
-   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2024587)|September 24, 2018 |
-   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2024841)|September 24, 2018 |
+   |Platform|Download|Release date|Version
+   |:---|:---|:---|:---|
+   |Windows|[.vsix](https://go.microsoft.com/fwlink/?LinkId=2031539)|October 17, 2018|0.7.2
+   |macOS|[.vsix](https://go.microsoft.com/fwlink/?LinkId=2031717)|October 17, 2018 |0.7.2
+   |Linux|[.vsix](https://go.microsoft.com/fwlink/?LinkId=2031538)|October 17, 2018 |0.7.2
 
 1. In Azure Data Studio choose **Install Extension from VSIX Package** from the **File** menu and select the downloaded .vsix file.
 
@@ -35,6 +35,18 @@ To install the SQL Server 2019 extension (preview), download and install the ass
 1. Select **Reload** to enable the extension (only required the first time you install an extension).
 
 1. After reloading, the extension will install dependencies. You can see the progress in the Output window, and it could take several minutes.
+
+## Release Notes (v0.7.2)
+* Azure Resource Explorer is now built into Azure Data Studio and has been removed from this extension. Thank you for your feedback on this!
+* Improved performance of notebooks with many Markdown cells.
+* Auto-size code cells in Notebook. This still has a minimum size based on the cell toolbar.
+* Notify user when installing Notebook dependencies. On Windows in particular this can take a long time, so notifications are now shown in the Tasks view.
+* Support reinstalling Notebook dependencies. This is useful if the user previously closed Azure Data Studio partway through installation.
+* Support canceling cell execution in Notebook.
+* Improved reliability when using Create External Data wizard, specifically when connection errors occur.
+* Block use of Create External Data wizard if Polybase is not enabled or running in the target server.
+* Spelling and naming fixes related to SQL Server 2019 and Create External Data.
+* Removed a large number of errors from the Azure Data Studio debug console.
 
 ##  SQL Server 2019 Big Data Cluster support
 
@@ -64,16 +76,6 @@ For details, see [Big Data Clusters](../big-data-cluster/big-data-cluster-overvi
 * Choose a SQL Server big data cluster endpoint to connect to if executing remotely (this is not necessary for local development with Python 3).
 * Add code or markdown cells via the buttons in the notebook header. Remove cells with the trash can icon to the left of each cell.
 * Run cells with the play button for code cells, and toggle markdown editing and preview with the eye icon
-
-
-## Azure Resource Explorer
-
-* To sign in to Azure, click on the person icon in the bottom left of Azure Data Studio and follow the dialogs to sign in to Azure.
-* Once signed in, click on the triangular Azure icon in the left bar of Azure Data Studio and expand the tree to show SQL resources associated with your subscriptions.
-* Right-click or click the plug icon on any SQL database or SQL Server to open the connection dialog. Enter your password to connect and add the resource to the Azure Data Studio object explorer.
-
-For details, see [Azure Resource Explorer](azure-resource-explorer.md).
-
 
 ## Polybase Create External Table Wizard
 

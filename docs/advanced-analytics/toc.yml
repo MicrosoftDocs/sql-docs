@@ -141,14 +141,12 @@
   - name: Python
     href: tutorials/sql-server-python-tutorials.md
     items:
-    - name: Iris data in Python on SQL
+    - name: Train your first model
       items:
-      - name: Wrap Python in a stored procedure
+      - name: Create the Iris dataset
         href: tutorials/wrap-python-in-tsql-stored-procedure.md
-      - name: Train and score from a Python model in SQL Server
+      - name: Train a model and score data
         href: tutorials/train-score-using-python-in-tsql.md
-    - name: Create a model using revoscalepy
-      href: tutorials/use-python-revoscalepy-to-create-model.md
     - name: Learn in-database analytics
       href: tutorials/sqldev-in-database-python-for-sql-developers.md
       items:
@@ -162,6 +160,8 @@
         href: tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md
       - name: Operationalize the model
         href: tutorials/sqldev-py6-operationalize-the-model.md
+    - name: Create a model using revoscalepy
+      href: tutorials/use-python-revoscalepy-to-create-model.md
 - name: Samples
   href: https://github.com/Microsoft/sql-server-samples
 - name: Solutions

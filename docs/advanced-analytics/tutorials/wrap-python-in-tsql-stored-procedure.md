@@ -1,5 +1,6 @@
 ---
-title: Wrap Python code in a stored procedure | Microsoft Docs
+title: Create the Iris dataset in SQL Server | Microsoft Docs
+Description: Create a database containing the Iris dataset and a table for storing models. This dataset is used in exercises showing how to wrap Python code in a SQL Server stored procedure.
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -9,18 +10,14 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-# Wrap Python code in a stored procedure
+#  Create the Iris dataset in SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In this lesson, learn how to embed Python code in a stored procedure, get data from the Python sample datasets, and write that data to a SQL Server table.
+In this exercise, prepare a SQL Server database containing tables for both [Iris](https://en.wikipedia.org/wiki/Iris_flower_data_set) data and model storage. You'll need these objects for the [next exercise](train-score-using-python-in-tsql.md) where you learn how to embed Python code in a stored procedure and write the results to a SQL Server table. 
 
-The system stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) provides the wrapper that passes SQL variables and SQL datasets into Python. It also handles the results output by Python and passes them to SQL Server in a format compatible with SQL data types.
-
-Let's see how this works.
+To complete this exercise, you should have [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017) or another tool that can run T-SQL queries.
 
 ## Prepare the database and tables
-
-Although it is possible to set up a remote client and run Python code using Visual Studio Code, Visual Studio, PyCharm, or other tools, to simplify the scenario, all code in this lesson should be run as part of a stored procedure.
 
 1. Start SQL Server Management Studio, and open a new **Query** window.  
 
@@ -34,9 +31,9 @@ Although it is possible to set up a remote client and run Python code using Visu
     ```
 
     > [!TIP] 
-    > If you're new to SQL Server, or are working on a server you own, a common mistake is to log in and start working without noticing that you are in the **master** database. To be sure that you are using the correct database, always specify the context using the `USE <database name>` statement.
+    > If you're new to SQL Server, or are working on a server you own, a common mistake is to log in and start working without noticing that you are in the **master** database. To be sure that you are using the correct database, always specify the context using the `USE <database name>` statement (for example, `use sqlpy`).
 
-3. Add some empty tables: one to store the data, and one to store the models you train. Later you populate the tables using Python.
+3. Add some empty tables: one to store the data, and one to store the models you train. Later, you will use the models table to store serialized models generated in Python script.
 
     The following code creates the table for the training data.
 
@@ -118,7 +115,7 @@ To move the training data from Python into a SQL Server table is a multistep pro
     SELECT COUNT(*) FROM iris_data;
     ```
 
-In the next lesson, you create a machine learning model and save it to a table.
+In the next lesson, you will create a machine learning model and save it to a table, and then use the model to generate predicted outcomes.
 
 ## Next lesson
 

@@ -15,9 +15,9 @@ manager: cgronlun
 
 This article describes how you can give users permission to run external scripts in SQL Server Machine Learning Services and give read, write, or data definition language (DDL) permissions to databases.
 
-For more information, see the user access section in  [Security overview for the extensibility framework](../../advanced-analytics/concepts/security.md#user-access).
+For more information, see the permissions section in [Security overview for the extensibility framework](../../advanced-analytics/concepts/security.md#permissions).
 
-<a name="permissions-external-script"></a> 
+<a name="permissions-external-script"></a>
 
 ## Permission to run scripts
 

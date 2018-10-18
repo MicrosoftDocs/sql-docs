@@ -4,7 +4,7 @@ description: Install, update, and uninstall SQL Server on Linux. This article co
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 04/06/2018
+ms.date: 04/07/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: "sql-linux"

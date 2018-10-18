@@ -28,7 +28,7 @@ Most users, however, do not have such elevated permissions. For example, users i
 ```SQL
 USE <database_name>
 GO
-GRANT EXECUTE ANY EXTERNAL SCRIPT  TO [UserName]
+GRANT EXECUTE ANY EXTERNAL SCRIPT TO [UserName]
 ```
 
 > [!NOTE]

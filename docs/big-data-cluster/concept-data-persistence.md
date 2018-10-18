@@ -18,6 +18,7 @@ ms.prod: sql
 The way SQL Server big data cluster consumes these persistent volumes is by using [Storage Classes](https://kubernetes.io/docs/concepts/storage/storage-classes/). You can create different storage classes for different kind of storage and specify them at the big data cluster deployment time. You can configure which storage class to use for which purpose (pool). SQL Server big data cluster creates [persistent volume claims](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims) with the specified storage class name for each pod that requires persistent volumes. It then mounts the corresponding persistent volume(s) in the pod.
 
 > [!NOTE]
+
 > For CTP 2.0, only `ReadWriteOnce` access mode for the whole cluster is supported.
 
 ## Deployment settings
@@ -31,11 +32,20 @@ If you set the flag to true, you must also provide **STORAGE_CLASS_NAME** as a p
 
 ## AKS storage classes
 
-AKS comes with [two built-in storage classes](https://docs.microsoft.com/en-us/azure/aks/azure-disks-dynamic-pv) **default** and **premium-storage** along with dynamic provisioner for them. You can specify either of those or create your own storage class  for deploying big data cluster with persistent storage enabled.
+AKS comes with [two built-in storage classes](https://docs.microsoft.com/en-us/azure/aks/azure-disks-dynamic-pv) **default** and **managed-premium** along with dynamic provisioner for them. You can specify either of those or create your own storage class  for deploying big data cluster with persistent storage enabled.
 
 ## Minikube storage class
 
-Minikube comes with a built-in storage class called **standard** along with a dynamic provisioner for it.
+Minikube comes with a built-in storage class called **standard** along with a dynamic provisioner for it. Note that on Minikube, if USE_PERSISTENT_VOLUME=true (default), you must also override the default value for the STORAGE_CLASS_NAME environment variable because the default value is different. Set the value to `standard`: 
+```
+SET STORAGE_CLASS_NAME=standard
+```
+
+Alternatively, you can suppress using persistent volumes on Minikube:
+```
+SET USE_PERSISTENT_VOLUME=false
+```
+
 
 ## Kubeadm
 
@@ -56,7 +66,7 @@ You can also have different configurations for persistent storage settings such 
 
 ```bash
 export STORAGE_POOL_USE_PERSISTENT_VOLUME=true
-export STORAGE_POOL_STORAGE_CLASS_NAME=premium-storage
+export STORAGE_POOL_STORAGE_CLASS_NAME=managed-premium
 export STORAGE_POOL_STORAGE_SIZE=100Gi
 ```
 

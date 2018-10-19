@@ -1,7 +1,7 @@
 ---
 title: SQL Server help content and Help Viewer | Microsoft Docs
 ms.custom: ""
-ms.date: "12/15/2017"
+ms.date: "12/16/2017"
 ms.prod: sql
 ms.technology: 
 ms.reviewer: ""

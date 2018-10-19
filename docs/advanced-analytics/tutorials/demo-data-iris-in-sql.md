@@ -4,7 +4,7 @@ Description: Create a database containing the Iris dataset and a table for stori
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 10/15/2018  
+ms.date: 10/19/2018  
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
@@ -17,9 +17,9 @@ In this exercise, prepare a SQL Server database containing tables for both [Iris
 
 To complete this exercise, you should have [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017) or another tool that can run T-SQL queries.
 
-Exercises using this data set include the following:
+Tutorials and quickstarts using this data set include the following:
 
-+  [Use a Python model in SQL Server for training and scoring](train-score-using-python-in-tsql.md) demonstrating how to embed Python code in a stored procedure and write the results to a SQL Server table. 
++  [Use a Python model in SQL Server for training and scoring](train-score-using-python-in-tsql.md)
 
 ## Prepare the database and tables
 

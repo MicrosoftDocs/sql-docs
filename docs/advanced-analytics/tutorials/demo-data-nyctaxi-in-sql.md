@@ -4,7 +4,7 @@ description: Instructions for downloading New York City taxi sample data and cre
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 10/02/2018  
+ms.date: 10/19/2018  
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
@@ -13,17 +13,13 @@ manager: cgronlun
 # NYC Taxi demo data for SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article explains how to obtain sample data for R and Python tutorials for in-database analytics in SQL Server.
+This article explains how to set up a sample database consisting of public data from the [New York City Taxi and Limousine Commission](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml). This data is used in several R and Python tutorials for in-database analytics in SQL Server. The sample data is one percent of the public data set. On your system, the database backup file is slightly over 90 MB, providing 1.7 million rows in the primary data table.
 
-Data originates from the [NYC Taxi and Limousine Commission](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml) public data set. We took a snapshot of the dataset and captured one percent of the available data for our demo database. On your system, the database backup file is slightly over 90 MB, providing 1.7 million rows in the primary data table.
+To complete this exercise, you should have [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017) or another tool that can restore a database backup file and run T-SQL queries.
 
-When you are finished with the steps in this article, the **NYCTaxi_Sample** database is available on your local instance, providing demo data for hands-on learning. The database name must be **NYCTaxi_Sample** if you want to run the demo scripts with no modification.
+Tutorials and quickstarts using this data set include the following:
 
-## Prerequisites
-
-You need an internet connection, local administrative rights on the computer, and a database engine instance.
-
-To complete this exercise, you should have [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017) or another tool that can restore database back up files and run T-SQL queries.
++  [Use a Python model in SQL Server for training and scoring](train-score-using-python-in-tsql.md)
 
 ## Download demo database
 

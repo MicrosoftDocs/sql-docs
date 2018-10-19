@@ -173,5 +173,5 @@ In SQL Server Data Tools, external tables are displayed in a separate folder **E
 
 ## Next steps
 
-For more information about PolyBase, see the [What is PolyBase?](../../relational-databases/polybase/polybase-guide.md). 
+For more information about PolyBase, see the [What is PolyBase?](../relational-databases/polybase/polybase-guide.md). 
 

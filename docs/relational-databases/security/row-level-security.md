@@ -34,6 +34,8 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sql
   
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Get it](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).  
   
+> [!NOTE]
+> Azure SQL Data Warehouse (SQL DW) currently supports filter predicates only. Block predicates support for SQL DW will be coming in future. SESSION_CONTEXT is also currently not supported for SQL DW.
 
 ##  <a name="Description"></a> Description  
  RLS supports two types of security predicates.  
@@ -227,6 +229,9 @@ AS
 WHERE @SalesRep = USER_NAME() OR USER_NAME() = 'Manager';  
 ```  
   
+> [!NOTE]
+> Azure SQL Data Warehouse (SQL DW) doesn't support WITH SCHEMABINDING option. SQL DW also doesn’t support USER_NAME(), hence use SYSTEM_USER instead.
+
  Create a security policy adding the function as a filter predicate. The state must be set to ON to enable the policy.  
   
 ```  
@@ -251,7 +256,9 @@ EXECUTE AS USER = 'Manager';
 SELECT * FROM Sales;   
 REVERT;  
 ```  
-  
+> [!NOTE]
+> Azure SQL Data Warehouse (SQL DW) doesn't support EXECUTE AS USER, hence login as desired user to test the above behavior.
+
  The Manager should see all 6 rows. The Sales1 and Sales2 users should only see their own sales.  
   
  Alter the security policy to disable the policy.  
@@ -302,7 +309,10 @@ DENY UPDATE ON Sales(AppUserId) TO AppUser;
 ```  
   
  Create a new schema and predicate function, which will use the application user ID stored in **SESSION_CONTEXT** to filter rows.  
-  
+
+> [!NOTE]
+> This example with SESSION_CONTEXT isn't applicable to Azure SQL Data Warehouse since both SESSION_CONTEXT and block predicates aren't currently supported.
+
 ```  
 CREATE SCHEMA Security;  
 GO  

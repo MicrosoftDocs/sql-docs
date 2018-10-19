@@ -33,10 +33,10 @@ Character data types that are either fixed length, **char**, or variable length,
   
 ## Arguments  
 **char** [ ( *n* ) ]
-Fixed-length string data. *n* defines the string length and must be a value from 1 through 8,000. For non-Unicode data, the storage size is the actual length of the data entered. For Unicode data, the storage size is *n* bytes. When the collation code page uses double-byte characters, the storage size is still *n* bytes. Depending on the string, the storage size of *n* bytes can be less than the value specified for *n*. The ISO synonym for **char** is **character**.
+Fixed-length string data. *n* defines the string length in bytes and must be a value from 1 through 8,000. For single-byte character sets such as ASCII, the storage size is the actual length of the data entered. For multibyte character sets, the storage size is still *n* bytes. The ISO synonym for **char** is **character**. For more information on character sets, refer to [Single-Byte and Multibyte Character Sets](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets).
   
 **varchar** [ ( *n* | **max** ) ]
-Variable-length string data. *n* defines the string length and can be a value from 1 through 8,000. **max** indicates that the maximum storage size is 2^31-1 bytes (2 GB). For non-Unicode data, the storage size is the actual length of the data entered + 2 bytes. For Unicode data, the storage size is *n* bytes + 2 bytes. When the collation code page uses double-byte characters, the storage size is still *n* bytes. The ISO synonyms for **varchar** are **charvarying** or **charactervarying**.
+Variable-length string data. *n* defines the string length in bytes and can be a value from 1 through 8,000. **max** indicates that the maximum storage size is 2^31-1 bytes (2 GB). For single-byte character sets such as ASCII, the storage size is the actual length of the data entered + 2 bytes. For multibyte character sets, the storage size is *n* bytes + 2 bytes. The ISO synonyms for **varchar** are **charvarying** or **charactervarying**. For more information on character sets, refer to [Single-Byte and Multibyte Character Sets](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets).
   
 ## Remarks  
 When *n* is not specified in a data definition or variable declaration statement, the default length is 1. When *n* is not specified when using the CAST and CONVERT functions, the default length is 30.
@@ -157,5 +157,6 @@ String                                       TruncatedValue
 [Data Type Conversion &#40;Database Engine&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
 [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
 [Estimate the Size of a Database](../../relational-databases/databases/estimate-the-size-of-a-database.md)     
-[Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)  
+[Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)    
+[Single-Byte and Multibyte Character Sets](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)
   

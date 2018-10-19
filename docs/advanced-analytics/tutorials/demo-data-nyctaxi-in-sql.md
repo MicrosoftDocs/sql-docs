@@ -67,7 +67,13 @@ As a validation step, run a query to confirm the data was uploaded.
 
 1. In Object Explorer, under Databases, right-click the **NYCTaxi_Sample** database, and start a new query.
 
-2. Run **`select * from dbo.nyctaxi_sample`** to return all 1.7 million rows.
+2. Run some simple queries:
+
+    ```sql
+    SELECT TOP(10) * FROM dbo.nyctaxi_sample;
+    SELECT COUNT(*) FROM dbo.nyctaxi_sample;
+    ```
+The database contains 1.7 million rows.
 
 ## Next steps
 

@@ -23,7 +23,7 @@ When you are finished with the steps in this article, the **NYCTaxi_Sample** dat
 
 You need an internet connection, local administrative rights on the computer, and a database engine instance.
 
-It helps to have [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) or another tool to verify object creation.
+To complete this exercise, you should have [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017) or another tool that can restore database back up files and run T-SQL queries.
 
 ## Download demo database
 

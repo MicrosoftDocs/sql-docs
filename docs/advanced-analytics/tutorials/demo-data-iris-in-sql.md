@@ -1,5 +1,5 @@
 ---
-title: Create the Iris dataset in SQL Server | Microsoft Docs
+title: Iris demo data set for SQL Server | Microsoft Docs
 Description: Create a database containing the Iris dataset and a table for storing models. This dataset is used in exercises showing how to wrap Python code in a SQL Server stored procedure.
 ms.prod: sql
 ms.technology: machine-learning
@@ -10,12 +10,16 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-#  Create the Iris dataset in SQL Server 
+#  Iris demo data for SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In this exercise, prepare a SQL Server database containing tables for both [Iris](https://en.wikipedia.org/wiki/Iris_flower_data_set) data and model storage. You'll need these objects for the [next exercise](train-score-using-python-in-tsql.md) where you learn how to embed Python code in a stored procedure and write the results to a SQL Server table. 
+In this exercise, prepare a SQL Server database containing tables for both [Iris](https://en.wikipedia.org/wiki/Iris_flower_data_set) data and model storage. You'll need these objects for machine learning tutorials in SQL Server. 
 
 To complete this exercise, you should have [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017) or another tool that can run T-SQL queries.
+
+Exercises using this data set include the following:
+
++  [Use a Python model in SQL Server for training and scoring](train-score-using-python-in-tsql.md) demonstrating how to embed Python code in a stored procedure and write the results to a SQL Server table. 
 
 ## Prepare the database and tables
 
@@ -24,14 +28,14 @@ To complete this exercise, you should have [SQL Server Management Studio](https:
 2. Create a new database for this project, and change the context of your **Query** window to use the new database.
 
     ```sql
-    CREATE DATABASE sqlpy
+    CREATE DATABASE irissql
     GO
-    USE sqlpy
+    USE irissql
     GO
     ```
 
     > [!TIP] 
-    > If you're new to SQL Server, or are working on a server you own, a common mistake is to log in and start working without noticing that you are in the **master** database. To be sure that you are using the correct database, always specify the context using the `USE <database name>` statement (for example, `use sqlpy`).
+    > If you're new to SQL Server, or are working on a server you own, a common mistake is to log in and start working without noticing that you are in the **master** database. To be sure that you are using the correct database, always specify the context using the `USE <database name>` statement (for example, `use irissql`).
 
 3. Add some empty tables: one to store the data, and one to store the models you train. Later, you will use the models table to store serialized models generated in Python script.
 
@@ -118,6 +122,6 @@ To move the training data from Python into a SQL Server table is a multistep pro
 
 In the next lesson, you will create a machine learning model and save it to a table, and then use the model to generate predicted outcomes.
 
-## Next lesson
+## Next steps
 
-[Train a Python model and generate scores in SQL Server](../tutorials/train-score-using-python-in-tsql.md)
+[Use a Python model in SQL Server for training and scoring](train-score-using-python-in-tsql.md)

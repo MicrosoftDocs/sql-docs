@@ -195,5 +195,5 @@ The Spark History Server has the following known issues:
 
 ## Next steps
 
-* [Manage resources for a Spark cluster on HDInsight](https://docs.microsoft.com/en-us/azure/hdinsight/spark/apache-spark-resource-manager)
-* [Configure Spark settings](https://docs.microsoft.com/en-us/azure/hdinsight/spark/apache-spark-settings)
+* [Manage resources for a Spark cluster on HDInsight](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-resource-manager)
+* [Configure Spark settings](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-settings)

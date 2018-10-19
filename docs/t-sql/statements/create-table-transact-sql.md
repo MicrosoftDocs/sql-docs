@@ -1050,7 +1050,7 @@ Global temporary tables for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)
 
 ### Troubleshooting global temporary tables for Azure SQL Database 
 
-For the troubleshooting the tempdb, see [Troubleshooting Insufficient Disk space in tempdb](http://docs.microsoft.com/en-us/previous-versions/sql/sql-server-2008-r2/ms176029(v=sql.105)). 
+For the troubleshooting the tempdb, see [Troubleshooting Insufficient Disk space in tempdb](http://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms176029(v=sql.105)). 
 
 > [!NOTE]
 > Only a server admin can access the troubleshooting DMVs in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].

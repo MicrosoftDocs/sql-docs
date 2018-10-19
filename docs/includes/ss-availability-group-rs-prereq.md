@@ -106,4 +106,4 @@ GRANT CONNECT ON ENDPOINT::[Hadr_endpoint] TO [<service account or user>];
 
 The TCP port on the firewall must be open for the listener port.
 
-For more information, see [The database-mirroring endpoint (SQL Server)](https://docs.microsoft.com/en-us/sql/database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server?view=sql-server-2017).
+For more information, see [The database-mirroring endpoint (SQL Server)](https://docs.microsoft.com/sql/database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server?view=sql-server-2017).

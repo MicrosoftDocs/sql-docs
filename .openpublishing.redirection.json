@@ -1,6 +1,11 @@
 {
     "redirections": [
         {
+            "source_path": "docs/relational-databases/polybase/polybase-type-mapping.md",
+            "redirect_url": "/sql/relational-databases/polybase/polybase-guide",
+            "redirect_document_id": false 
+        },
+        {
             "source_path": "docs/relational-databases/polybase/get-started-with-polybase.md",
             "redirect_url": "/sql/relational-databases/polybase/polybase-guide",
             "redirect_document_id": false 
@@ -2683,12 +2688,12 @@
         },
         {
             "source_path": "docs/relational-databases/replication/replication-to-sql-database.md",
-            "redirect_url": "https://docs.microsoft.com/en-us/azure/sql-database/replication-to-sql-database",
+            "redirect_url": "https://docs.microsoft.com/azure/sql-database/replication-to-sql-database",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/relational-databases/replication/replication-with-sql-database-managed-instance.md",
-            "redirect_url": "https://docs.microsoft.com/en-us/azure/sql-database/replication-with-sql-database-managed-instance",
+            "redirect_url": "https://docs.microsoft.com/azure/sql-database/replication-with-sql-database-managed-instance",
             "redirect_document_id": false
         },
         {

@@ -53,6 +53,6 @@ manager: craigg
  [Integration Services Transformations](integration-services-transformations.md)   
  [Integration Services Paths](../integration-services-paths.md)   
  [Integration Services Data Types](../integration-services-data-types.md)   
- [Data Flow Task]((../../control-flow/data-flow-task.md)  
+ [Data Flow Task](../../control-flow/data-flow-task.md)  
   
   

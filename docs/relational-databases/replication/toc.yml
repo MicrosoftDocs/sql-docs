@@ -40,9 +40,9 @@
   - name: Replication to Memory-Optimized Table Subscribers
     href: replication-to-memory-optimized-table-subscribers.md
   - name: Replication to SQL Database
-    href: https://docs.microsoft.com/en-us/azure/sql-database/replication-to-sql-database
+    href: https://docs.microsoft.com/azure/sql-database/replication-to-sql-database
   - name: Replication with SQL Database
-    href: https://docs.microsoft.com/en-us/azure/sql-database/replication-with-sql-database-managed-instance.md
+    href: https://docs.microsoft.com/azure/sql-database/replication-with-sql-database-managed-instance.md
   - name: Republish Data
     href: republish-data.md
   - name: Replication over the Internet

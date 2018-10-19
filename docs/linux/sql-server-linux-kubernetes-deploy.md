@@ -26,15 +26,15 @@ On Kubernetes, the deployment includes a SQL Server operator, the SQL Server con
 - A Kubernetes cluster
 - Kubernetes version 1.11.0 or higher
 - At least three nodes
-- [kubectl](http://kubernetes.io/docs/tasks/tools/install-kubectl/).
+- [kubectl](http://kubernetes.io/docs/tasks/tools/install-kubectl/)
 - Access to the [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files) GitHub repository
 
-  >[!NOTE]
-  >You can use any type of Kubernetes cluster. To create a Kubernetes cluster on Azure Kubernetes Service (AKS), see [Create an AKS cluster](http://docs.microsoft.com/azure/aks/create-cluster).
-  > The following script creates a four-node Kubernetes cluster in Azure.
-  >```azure-cli
-  az aks create --resource-group myResourceGroup --name myAKSCluster --node-count 4 --kubernetes-version 1.11.3 --generate-ssh-keys
-  >```
+>[!NOTE]
+>You can use any type of Kubernetes cluster. To create a Kubernetes cluster on Azure Kubernetes Service (AKS),see [Create an AKS cluster](http://docs.microsoft.com/azure/aks/create-cluster).
+> The following script creates a four-node Kubernetes cluster in Azure.
+>```azure-cli
+az aks create --resource-group myResourceGroup --name myAKSCluster --node-count 4 --kubernetes-version 1.11.3 --generate-ssh-keys
+>```
 
 ## Deploy the operator, SQL Server containers, and load-balancing services
 
@@ -69,14 +69,14 @@ On Kubernetes, the deployment includes a SQL Server operator, the SQL Server con
       - `sapassword` stores the password for the SQL Server `sa` account.
       - `masterkeypassword` stores the password used to create the SQL Server master key. 
     
-      Copy the script to your terminal. Replace each `<>` with a complex password, and run the script to create the secret.
+     Copy the script to your terminal. Replace each `<>` with a complex password, and run the script to create the secret.
     
-      >[!NOTE]
-      >The password can't use `&` or `` ` `` characters.
+     >[!NOTE]
+     >The password can't use `&` or `` ` `` characters.
     
-      ```azurecli
-      kubectl create secret generic sql-secrets --from-literal=sapassword="<>" --from-literal=masterkeypassword="<>"  --namespace ag1
-      ```
+     ```azurecli
+     kubectl create secret generic sql-secrets --from-literal=sapassword="<>" --from-literal=masterkeypassword="<>"  --namespace ag1
+     ```
 
 1. Deploy the SQL Server custom resource.
 
@@ -91,15 +91,15 @@ On Kubernetes, the deployment includes a SQL Server operator, the SQL Server con
       kubectl apply -f sqlserver.yaml --namespace ag1
       ```
       
-  The following image shows successful application of `kubectl apply` for this example.
+The following image shows successful application of `kubectl apply` for this example.
 
-  ![create sqlservers](./media/sql-server-linux-kubernetes-deploy/create-sqlservers.png)
+![Create sqlservers](./media/sql-server-linux-kubernetes-deploy/create-sqlservers.png)
 
-  After you apply the SQL Server manifest, the operator deploys the SQL Server containers.
+After you apply the SQL Server manifest, the operator deploys the SQL Server containers.
 
-  Kubernetes places the containers in pods. Use `kubectl get pods --namespace ag1` to see the status of the pods. The following image shows the example deployment after the SQL Server pods are deployed. 
+Kubernetes places the containers in pods. Use `kubectl get pods --namespace ag1` to see the status of the pods. The following image shows the example deployment after the SQL Server pods are deployed. 
 
-  ![Built pods](./media/sql-server-linux-kubernetes-deploy/builtpods.png)
+![Built pods](./media/sql-server-linux-kubernetes-deploy/builtpods.png)
 
 ### Monitor the deployment
 

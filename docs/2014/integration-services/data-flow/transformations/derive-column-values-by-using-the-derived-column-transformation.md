@@ -58,7 +58,7 @@ manager: craigg
  [Integration Services Data Types](../integration-services-data-types.md)   
  [Integration Services Transformations](integration-services-transformations.md)   
  [Integration Services Paths](../integration-services-paths.md)   
- [Data Flow Task]((../../control-flow/data-flow-task.md)   
+ [Data Flow Task](../../control-flow/data-flow-task.md)   
  [Integration Services &#40;SSIS&#41; Expressions](../../expressions/integration-services-ssis-expressions.md)  
   
   

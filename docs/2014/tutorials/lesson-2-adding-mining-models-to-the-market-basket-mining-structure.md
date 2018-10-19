@@ -22,7 +22,7 @@ manager: craigg
  You will view the effect of changing the *MINIMUM_PROBABILTY* parameter in a later lesson.  
   
 ## ALTER MINING STRUCTURE Statement  
- To add a mining model that contains a nested table to a mining structure, you use the [ALTER MINING STRUCTURE &#40;DMX&#41;]((~/dmx/alter-mining-structure-dmx.md) statement. The code in the statement can be broken into the following parts:  
+ To add a mining model that contains a nested table to a mining structure, you use the [ALTER MINING STRUCTURE &#40;DMX&#41;](~/dmx/alter-mining-structure-dmx.md) statement. The code in the statement can be broken into the following parts:  
   
 -   Identifying the mining structure  
   

@@ -10,8 +10,6 @@
     href: polybase-pushdown-computation.md
   - name: Scale-out groups
     href: polybase-scale-out-groups.md
-  - name: Type mapping
-    href: polybase-type-mapping.md
 - name: How-to guides
   items:
   - name: Install

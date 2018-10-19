@@ -70,7 +70,7 @@ manager: craigg
   
  There are several reasons that you would want to add more than one mining model in a single mining structure. For example, you might create several mining models using different algorithms to see which one works best. Alternatively, you might create several mining models using the same algorithm, but with a parameter set differently for each mining model to find the best setting for that parameter.  
   
- For more information, see [ALTER MINING STRUCTURE &#40;DMX&#41;]((~/dmx/alter-mining-structure-dmx.md).  
+ For more information, see [ALTER MINING STRUCTURE &#40;DMX&#41;](~/dmx/alter-mining-structure-dmx.md).  
   
  Because you will create a mining structure that contains several mining models, you will use the second method in this tutorial.  
   

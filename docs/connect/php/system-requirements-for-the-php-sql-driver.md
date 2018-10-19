@@ -48,7 +48,7 @@ For information about how to download and install the latest stable PHP binaries
 
 ## ODBC Driver
 
-The correct version of the Microsoft ODBC Driver for SQL Server is required on the computer on which PHP is running. You can download all supported versions of the driver for supported platforms on [this page](https://docs.microsoft.com/en-us/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-2017).
+The correct version of the Microsoft ODBC Driver for SQL Server is required on the computer on which PHP is running. You can download all supported versions of the driver for supported platforms on [this page](https://docs.microsoft.com/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-2017).
 
 If you are downloading the Windows version of the driver on a 64-bit version of Windows, the ODBC 64-bit installer installs both 32-bit and 64-bit ODBC drivers. If you use a 32-bit version of Windows, use the ODBC x86 installer. On non-Windows platforms, only 64-bit versions of the driver are available.
 

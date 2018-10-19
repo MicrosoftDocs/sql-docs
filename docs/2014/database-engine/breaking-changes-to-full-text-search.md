@@ -53,6 +53,6 @@ manager: craigg
   
 ## See Also  
  [Behavior Changes to Full-Text Search](../relational-databases/search/full-text-search.md)   
- [Full-Text Search]((../relational-databases/search/full-text-search.md)  
+ [Full-Text Search](../relational-databases/search/full-text-search.md)  
   
   

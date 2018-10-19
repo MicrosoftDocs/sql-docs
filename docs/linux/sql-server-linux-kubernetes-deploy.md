@@ -69,14 +69,14 @@ az aks create --resource-group myResourceGroup --name myAKSCluster --node-count 
       - `sapassword` stores the password for the SQL Server `sa` account.
       - `masterkeypassword` stores the password used to create the SQL Server master key. 
     
-     Copy the script to your terminal. Replace each `<>` with a complex password, and run the script to create the secret.
+   Copy the script to your terminal. Replace each `<>` with a complex password, and run the script to create the secret.
     
-     >[!NOTE]
-     >The password can't use `&` or `` ` `` characters.
+   >[!NOTE]
+   >The password can't use `&` or `` ` `` characters.
     
-     ```azurecli
-     kubectl create secret generic sql-secrets --from-literal=sapassword="<>" --from-literal=masterkeypassword="<>"  --namespace ag1
-     ```
+   ```azurecli
+   kubectl create secret generic sql-secrets --from-literal=sapassword="<>" --from-literal=masterkeypassword="<>"  --namespace ag1
+   ```
 
 1. Deploy the SQL Server custom resource.
 
@@ -103,7 +103,7 @@ Kubernetes places the containers in pods. Use `kubectl get pods --namespace ag1`
 
 ### Monitor the deployment
 
-You can use the [Kubernetes dashboard with AKS](https://docs.microsoft.com/en-us/azure/aks/kubernetes-dashboard) to monitor the deployment.
+You can use the [Kubernetes dashboard with Azure Kubernetes Service](https://docs.microsoft.com/azure/aks/kubernetes-dashboard) to monitor the deployment.
 
 Use `az aks browse` to launch the dashboard. 
 

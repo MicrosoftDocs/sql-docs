@@ -215,7 +215,7 @@ manager: craigg
      ![Sales Quota measure group dimensioned correctly](../../2014/tutorials/media/l5-granularity-7.gif "Sales Quota measure group dimensioned correctly")  
   
 ## Next Lesson  
- [Lesson 6: Defining Calculations]((lesson-6-defining-calculations.md)  
+ [Lesson 6: Defining Calculations](lesson-6-defining-calculations.md)  
   
 ## See Also  
  [Dimension Relationships](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   

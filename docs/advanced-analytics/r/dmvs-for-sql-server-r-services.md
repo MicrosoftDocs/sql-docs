@@ -3,10 +3,10 @@ title: Data Management Views (DMVs) for SQL Server Machine Learning Services | M
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
+ms.date: 10/19/2018  
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 ---
 # DMVs for SQL Server Machine Learning Services

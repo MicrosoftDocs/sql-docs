@@ -13,7 +13,7 @@ manager: cgronlun
 #  Iris demo data for SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In this exercise, prepare a SQL Server database containing tables for both [Iris](https://en.wikipedia.org/wiki/Iris_flower_data_set) data and model storage. Iris data is included both the R and Python distributions installed by SQL Server. You can use these objects in machine learning tutorials for SQL Server. 
+In this exercise, prepare a SQL Server database containing tables for the [Iris flower data set](https://en.wikipedia.org/wiki/Iris_flower_data_set) and model storage. Iris data is included in both the R and Python distributions installed by SQL Server. It's used in machine learning tutorials for SQL Server. 
 
 To complete this exercise, you should have [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017) or another tool that can run T-SQL queries.
 

@@ -1,7 +1,7 @@
 ---
 title: "nchar and nvarchar (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "7/22/2017"
+ms.date: "10/18/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -25,10 +25,10 @@ Character data types that are either fixed-length, **nchar**, or variable-length
   
 ## Arguments  
 **nchar** [ ( n ) ]  
-Fixed-length string data. *n* defines the string length in bytes and must be a value from 1 through 4,000. The storage size is two times *n* bytes. For single-byte and multibyte character sets, the storage size is still *n* bytes. Depending on the string, the storage size of *n* bytes can be less than the value specified for *n*. The ISO synonyms for **nchar** are **national char** and **national character**. For more information on character sets, refer to [Single-Byte and Multibyte Character Sets](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets).
+Fixed-length string data. *n* defines the string length in bytes and must be a value from 1 through 4,000. The storage size is two times *n* bytes. Depending on the string, the storage size of *n* bytes can be less than the value specified for *n*. The ISO synonyms for **nchar** are **national char** and **national character**. For more information on character sets, refer to [Single-Byte and Multibyte Character Sets](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets).
   
 **nvarchar** [ ( n | **max** ) ]  
-Variable-length string data. *n* defines the string length in bytes and can be a value from 1 through 4,000. **max** indicates that the maximum storage size is 2^30-1 characters (2 GB). The storage size is two times *n* bytes + 2 bytes. For single-byte and multibyte character sets, the storage size is still *n* bytes + 2 bytes. Depending on the string, the storage size of *n* bytes can be less than the value specified for *n*. The ISO synonyms for **nvarchar** are **national char varying** and **national character varying**. For more information on character sets, refer to [Single-Byte and Multibyte Character Sets](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets).
+Variable-length string data. *n* defines the string length in bytes and can be a value from 1 through 4,000. **max** indicates that the maximum storage size is 2^30-1 characters (2 GB). The storage size is two times *n* bytes + 2 bytes. Depending on the string, the storage size of *n* bytes can be less than the value specified for *n*. The ISO synonyms for **nvarchar** are **national char varying** and **national character varying**. For more information on character sets, refer to [Single-Byte and Multibyte Character Sets](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets).
   
 ## Remarks  
 When *n* is not specified in a data definition or variable declaration statement, the default length is 1. When *n* is not specified with the CAST function, the default length is 30.
@@ -44,13 +44,13 @@ Objects that use **nchar** or **nvarchar** are assigned the default collation of
   
 SET ANSI_PADDING is always ON for **nchar** and **nvarchar**. SET ANSI_PADDING OFF does not apply to the **nchar** or **nvarchar** data types.
   
-Prefix Unicode character string constants with the letter N. Without the N prefix, the string is converted to the default code page of the database. This default code page may not recognize certain characters.
+Prefix a Unicode character string constants with the letter N to signal UNICODE UCS-2 or UTF-16 input, depending on whether an SC collation is used or not. Without the N prefix, the string is converted to the default code page of the database. This default code page may not recognize certain characters. Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], when a UTF-8 enabled collation is used, the default code page is capable of storing UNICODE UTF-8 character set. 
  
 > [!NOTE]  
-> When prefixing a string constant with the letter N, the implicit conversion will result in a Unicode string if the constant to convert does not exceed the max length for a Unicode string data type (4,000). Otherwise, the implicit conversion will result in a Unicode large-value (max).
+> When prefixing a string constant with the letter N, the implicit conversion will result in a UNICODE UCS-2 or UTF-16 string if the constant to convert does not exceed the max length for the nvarchar string data type (4,000). Otherwise, the implicit conversion will result in a nvarchar large-value (max).
   
 > [!WARNING]  
-> Each non-null **varchar(max)** or **nvarchar(max)** column requires 24 bytes of additional fixed allocation, which counts against the 8,060-byte row limit during a sort operation. These additional bytes can create an implicit limit to the number of non-null **varchar(max)** or **nvarchar(max)** columns in a table. No special error is provided when the table is created (beyond the usual warning that the maximum row size exceeds the allowed maximum of 8060 bytes) or at the time of data insertion. This large row size can cause errors (such as error 512) that users may not anticipate during some normal operations.  Two examples of operations are a clustered index key update, or sorts of the full column set.
+> Each non-null **varchar(max)** or **nvarchar(max)** column requires 24 bytes of additional fixed allocation, which counts against the 8,060-byte row limit during a sort operation. These additional bytes can create an implicit limit to the number of non-null **varchar(max)** or **nvarchar(max)** columns in a table. No special error is provided when the table is created (beyond the usual warning that the maximum row size exceeds the allowed maximum of 8,060 bytes) or at the time of data insertion. This large row size can cause errors (such as error 512) that users may not anticipate during some normal operations.  Two examples of operations are a clustered index key update, or sorts of the full column set.
   
 ## Converting Character Data  
 For information about converting character data, see [char and varchar &#40;Transact-SQL&#41;](../../t-sql/data-types/char-and-varchar-transact-sql.md).
@@ -74,7 +74,7 @@ FROM dbo.MyTable;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 MyNCharColumn   MyNVarCharColumn  
 --------------- --------------------  
 Test data       More test data  

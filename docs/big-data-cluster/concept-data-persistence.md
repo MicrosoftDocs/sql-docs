@@ -32,7 +32,7 @@ If you set the flag to true, you must also provide **STORAGE_CLASS_NAME** as a p
 
 ## AKS storage classes
 
-AKS comes with [two built-in storage classes](https://docs.microsoft.com/en-us/azure/aks/azure-disks-dynamic-pv) **default** and **managed-premium** along with dynamic provisioner for them. You can specify either of those or create your own storage class  for deploying big data cluster with persistent storage enabled.
+AKS comes with [two built-in storage classes](https://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv) **default** and **managed-premium** along with dynamic provisioner for them. You can specify either of those or create your own storage class  for deploying big data cluster with persistent storage enabled.
 
 ## Minikube storage class
 

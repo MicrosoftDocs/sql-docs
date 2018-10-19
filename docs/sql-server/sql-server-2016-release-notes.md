@@ -1,6 +1,6 @@
 ---
 title: "SQL Server 2016 Release Notes | Microsoft Docs"
-ms.date: "04/24/2018"
+ms.date: "04/25/2018"
 ms.prod: sql
 ms.reviewer: ""
 ms.custom: ""

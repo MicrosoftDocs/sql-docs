@@ -13,11 +13,11 @@ manager: cgronlun
 # Use a Python model in SQL Server for training and scoring
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In this exercise, learn a common pattern used for creating, training, and using a model in Python on SQL Server. This exercise creates two stored procedures. The first one generates a Naïve Bayes model to predict an Iris species based on flower characteristics. The second procedure is for scoring. It calls the model you generated in the first procedure to output a set of predictions. By stepping through this exercise, you'll learn basic technigues that are foundational to executing Python code on a SQL Server database engine instance.
+In this exercise, learn a common pattern used for creating, training, and using a model in Python on SQL Server. This exercise creates two stored procedures. The first one generates a Naïve Bayes model to predict an Iris species based on flower characteristics. The second procedure is for scoring. It calls the model generated in the first procedure to output a set of predictions. By stepping through this exercise, you'll learn basic techniques that are foundational to executing Python code on a SQL Server database engine instance.
 
 Be sure you have completed the [previous lesson](wrap-python-in-tsql-stored-procedure.md) to create the **sqlpy** database objects used for training and scoring Iris data.
 
-## Create the stored procedure and train a Python model
+## Create a stored procedure for generating a python model
 
 1. Open a new query window in Management Studio, connected to the **sqlpy** database. 
 
@@ -26,7 +26,7 @@ Be sure you have completed the [previous lesson](wrap-python-in-tsql-stored-proc
     GO
     ```
 
-2. Run the following code in a new query window to create the stored procedure that builds and trains a model. Models that are stored for reuse in SQL Server as serialized to a binary format and stored in a VARBINARY(MAX) column in a database table. Once the model is created, trained, serialized, and saved to a database, it can be called by other procedures or by the PREDICT T-SQL function in scoring workloads.
+2. Run the following code in a new query window to create the stored procedure that builds and trains a model. Models that are stored for reuse in SQL Server are serialized as a byte stream and stored in a VARBINARY(MAX) column in a database table. Once the model is created, trained, serialized, and saved to a database, it can be called by other procedures or by the PREDICT T-SQL function in scoring workloads.
 
    This code uses pickle to serialize the model and scikit to provide the Naïve Bayes algorithm. The model will be trained using data from columns 0 through 4 from the **iris_data** table. The parameters you see in the second part of the procedure articulate data inputs and model outputs. 
 
@@ -49,9 +49,11 @@ Be sure you have completed the [previous lesson](wrap-python-in-tsql-stored-proc
     GO
     ```
 
-3. Verify the stored procedure exists. If the T-SQL script from the previous step runs without error, a new stored procedure called **generate_iris_model** is created and added to the **sqlpy** database. You can find stored procedures in Management Studio's **Object Explorer**, under **Programmability**.
+3. Verify the stored procedure exists. If the T-SQL script from the previous step ran without error, a new stored procedure called **generate_iris_model** is created and added to the **sqlpy** database. You can find stored procedures in Management Studio's **Object Explorer**, under **Programmability**.
 
-4. After the stored procedure is created, run the following code below to execute it. The specific statement for executing a stored procedure is `EXEC` on the fifth line.
+## Execute the stored procedure to create and train a model
+
+1. After the stored procedure is created, run the following code below to execute it. The specific statement for executing a stored procedure is `EXEC` on the fifth line.
 
    This particular script deletes an existing model of the same name ("Naive Bayes") to make room for new ones created by rerunning the same procedure. Without model deletion, an error occurs stating the object already exists. 
 
@@ -66,7 +68,7 @@ Be sure you have completed the [previous lesson](wrap-python-in-tsql-stored-proc
     GO
     ```
 
-    The script includes a SELECT statement showing that the model exists. Another way to return a list of models is `SELECT * FROM iris_models` in **sqlpy**.
+2. View the results in the output area. The script includes a SELECT statement showing that the model exists. Another way to return a list of models is `SELECT * FROM iris_models` in **sqlpy**.
 
     **Results**
 
@@ -75,7 +77,7 @@ Be sure you have completed the [previous lesson](wrap-python-in-tsql-stored-proc
     | 1 | Naive Bayes     | 
 
 
-## Generate predictions
+## Create and execute a stored procedure that generates predictions
 
 Now that you have created, trained, and saved a model, move on to the next step: creating a stored procedure that generates predictions. You'll do this by calling sp_execute_external_script to start Python, and then pass in Python script that loads a serialized model you created in the last exercise, and then gives it data inputs to score.
 
@@ -121,11 +123,11 @@ Now that you have created, trained, and saved a model, move on to the next step:
 
 ## Conclusion
 
-In this exercise, you learned how to create stored procedures for different tasks, where each stored procedure used the system stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) to start a Python process. Inputs to the Python process are passed to sp_execute_external script as parameters. Both Python script itself and data variables in a SQL Server database were passed as inputs.
+In this exercise, you learned how to create stored procedures for different tasks, where each stored procedure used the system stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) to start a Python process. Inputs to the Python process are passed to sp_execute_external script as parameters. Both the Python script itself and data variables in a SQL Server database are passed as inputs.
 
 If you are used to working in Python, you might be accustomed to loading data, creating some summaries and graphs, then training a model and generating some scores all in the same 250 lines of code. This article differs from customary approaches by organizing operations into separate procedures. This practice is helpful on several levels.
 
-One benefit is that you can separate the process into repeatable steps that can be modified using parameters. As much as possible, you want the Python code that you run in a stored procedure to have clearly defined inputs and outputs that map to stored procedure inputs and outputs passed in at run time. In this exercise, Python code that creates a model (named "Naive Bayes" in this example) is passed as an input to a second stored procedure that calls a model in a scoring process.
+One benefit is that you can separate processes into repeatable steps that can be modified using parameters. As much as possible, you want the Python code that you run in a stored procedure to have clearly defined inputs and outputs that map to stored procedure inputs and outputs that can be passed in at run time. In this exercise, Python code that creates a model (named "Naive Bayes" in this example) is passed as an input to a second stored procedure that calls the model in a scoring process.
 
 A second benefit is that training and scoring processes can be optimized by leveraging features of SQL Server, such as parallel processing, resource governance, or by using algorithms in [revoscalepy](../python/what-is-revoscalepy.md) or [MicrosoftML](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) that support streaming and parallel execution. By separating training and scoring, you can target optimizations for specific workloads.
 

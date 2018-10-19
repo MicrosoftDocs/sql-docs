@@ -28,7 +28,9 @@ This tutorial demonstrates how to load and run a notebook in Azure Data Studio o
 
 Use the following instructions to load the sample notebook file **spark-sql.ipynb** into Azure Data Studio.
 
-1. Open a Windows PowerShell or bash command prompt. Navigate to a directory where you want to download the sample notebook file to.
+1. Open a bash command prompt (Linux) or Windows PowerShell.
+
+1. Navigate to a directory where you want to download the sample notebook file to.
 
 1. Run the following **curl** command to download the notebook file from GitHub:
 
@@ -46,10 +48,20 @@ The following steps show how to open the notebook file in Azure Data Studio:
 
    ![Open notebook](media/tutorial-notebook-spark/azure-data-studio-open-notebook.png)
 
-1. Wait for the **Kernel** and the target context (**Attach to**) lists to be populated. 
-
-1. Set the **Kernel** to **PySpark3**, and set **Attach to** to the IP address of your big data cluster endpoint.
+1. Wait for the **Kernel** and the target context (**Attach to**) to be populated. Set the **Kernel** to **PySpark3**, and set **Attach to** to the IP address of your big data cluster endpoint.
 
    ![Set Kernel and Attach to](media/tutorial-notebook-spark/set-kernel-and-attach-to.png)
 
-1. 
+## Run the notebook cells
+
+You can run each notebook cell by pressing the play button to the left of the cell. The results are shown in the notebook after the cell finishes running.
+
+![Run notebook cell](media/tutorial-notebook-spark/run-notebook-cell.png)
+
+Run each of the cells in the sample notebook in succession. For more information about using notebooks with SQL Server big data clusters, see [How to use notebooks in SQL Server 2019 preview](notebooks-guidance.md) and [How to manage notebooks in Azure Data Studio](notebooks-how-to-manage.md).
+
+## Next steps
+
+Learn more about notebooks:
+> [!div class="nextstepaction"]
+> [Learn about notebooks](notebooks-guidance.md)

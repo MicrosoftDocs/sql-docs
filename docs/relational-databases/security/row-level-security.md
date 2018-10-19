@@ -35,7 +35,7 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sql
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Get it](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).  
   
 > [!NOTE]
-> Azure SQL Data Warehouse (SQL DW) currently supports filter predicates only. Block predicates support for SQL DW will be coming in future. SESSION_CONTEXT is also currently not supported for SQL DW.
+> Azure SQL Data Warehouse (SQL DW) currently supports filter predicates only. Block predicates support for SQL DW will be coming in near future.
 
 ##  <a name="Description"></a> Description  
  RLS supports two types of security predicates.  

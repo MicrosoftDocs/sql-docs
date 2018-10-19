@@ -96,5 +96,5 @@ In the latter part of this walkthrough, you create these additional stored proce
 
 ## Previous step
 
-[Step 1: Download the sample data](sqldev-download-the-sample-data.md)
+[Step 1: Download the sample data](demo-data-nyctaxi-in-sql.md)
 

@@ -79,10 +79,8 @@ For more information about the syntax conventions, see [Transact-SQL Syntax Conv
 >   - [Examples](../../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md)
 
 ## Syntax for disk-based tables  
-  
-```
--- Disk-Based ALTER TABLE Syntax
-  
+
+``` 
 ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
 {
     ALTER COLUMN column_name
@@ -241,8 +239,6 @@ ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
 
 ## Syntax for memory-optimized tables  
 
--- Memory optimized ALTER TABLE Syntax for SQL Server and Azure SQL Database. Azure SQL Database Managed Instance does not support memory optiimized tables.
-  
 ```
 ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name   
 {   

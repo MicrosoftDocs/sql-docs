@@ -94,8 +94,8 @@ To find the correct applies-to include for your article, use the following tips:
 
 ## Contributor resources
 
-- [Contributor guide for docs.microsoft.com](https://docs.microsoft.com/en-us/contribute/)
-- [Microsoft Style Guide](https://docs.microsoft.com/en-us/teamblog/style-guide)
+- [Contributor guide for docs.microsoft.com](https://docs.microsoft.com/contribute/)
+- [Microsoft Style Guide](https://docs.microsoft.com/teamblog/style-guide)
 - [Markdown basics](https://help.github.com/articles/getting-started-with-writing-and-formatting-on-github/)
 
 > [!TIP]

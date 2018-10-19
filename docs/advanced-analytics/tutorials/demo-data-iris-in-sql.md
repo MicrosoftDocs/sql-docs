@@ -37,7 +37,7 @@ Tutorials and quickstarts using this data set include the following:
     > [!TIP] 
     > If you're new to SQL Server, or are working on a server you own, a common mistake is to log in and start working without noticing that you are in the **master** database. To be sure that you are using the correct database, always specify the context using the `USE <database name>` statement (for example, `use irissql`).
 
-3. Add some empty tables: one to store the data, and one to store the models you train. Later, you will use the models table to store serialized models generated in Python script.
+3. Add some empty tables: one to store the data, and one to store the trained models. The **iris_models** table is used for storing serialized models generated in other exercises.
 
     The following code creates the table for the training data.
 
@@ -72,13 +72,13 @@ Tutorials and quickstarts using this data set include the following:
 
 ## Populate the table
 
-You can obtain built-in Iris data from either R or Python. This step uses Python to load the data into a data frame, and then insert it into a table in the database. Moving training data from an external session into a SQL Server table is a multistep process:
+You can obtain built-in Iris data from either R or Python. You can use Python or R to load the data into a data frame, and then insert it into a table in the database. Moving training data from an external session into a SQL Server table is a multistep process:
 
 + Design a stored procedure that gets the data you want.
 + Execute the stored procedure to actually get the data.
 + Construct an INSERT statement to specify where the retrieved data should be saved.
 
-1. Create the following stored procedure that includes Python code to load the data.
+1. On systems with Python integration, create the following stored procedure that uses Python code to load the data.
 
     ```sql
     CREATE PROCEDURE get_iris_dataset
@@ -101,7 +101,27 @@ You can obtain built-in Iris data from either R or Python. This step uses Python
 
     When you run this code, you should get the message "Commands completed successfully." All this means is that the stored procedure has been created according to your specifications.
 
-2. To actually populate the table, run the stored procedure and specify the table where the data should be written. When run, the stored procedure executes the Python code, which loads the Iris dataset from the built-in Python sample data.
+2. Alternatively, on systems having R integration, create a procedure that uses R instead.
+
+    ```sql
+    CREATE PROCEDURE get_iris_dataset
+    AS
+    BEGIN
+    EXEC sp_execute_external_script @language = N'R', 
+    @script = N'
+    library(RevoScaleR)
+    data(iris)
+    iris$SpeciesID <- c(unclass(iris$Species))
+    iris_data <- iris
+    ', 
+    @input_data_1 = N'', 
+    @output_data_1_name = N'iris_data'
+    WITH RESULT SETS (("Sepal.Length" float not null, "Sepal.Width" float not null, "Petal.Length" float not null, "Petal.Width" float not null, "Species" varchar(100) not null, "SpeciesId" int not null));
+    END;
+    GO
+    ```
+
+3. To actually populate the table, run the stored procedure and specify the table where the data should be written. When run, the stored procedure executes the Python or R code, which loads the built-in Iris data set, and then inserts the data into the **iris_data** table.
 
     ```sql
     INSERT INTO iris_data ("Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width", "Species", "SpeciesId")

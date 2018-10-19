@@ -6,8 +6,6 @@ ms.prod: sql
 ms.technology: scripting
 ms.reviewer: ""
 ms.topic: conceptual
-f1_keywords: 
-  - "VS.TextEditor"
 helpviewer_keywords: 
   - "Query Editor [SQL Server Management Studio]"
   - "Code Editor [SQL Server Management Studio], about Query Editor"

@@ -164,6 +164,38 @@ tempdb                   is currently  ONLINE
 AdventureWorksPDW2012    was created on  2014-05-07 09:05:07.083 
 AdventureWorksPDW2012    is currently  ONLINE  
 ```
+
+### E. Using CHAR to return single-byte characters  
+This example uses the integer and hex values in the valid range for ASCII. The CHAR function is able to output the single-byte Japanese character.
+  
+```sql
+SELECT CHAR(188) AS single_byte_representing_complete_character, CHAR(0xBC) AS single_byte_representing_complete_character;  
+GO  
+```
+  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+  
+```
+single_byte_representing_complete_character single_byte_representing_complete_character
+------------------------------------------- -------------------------------------------
+ｼ                                           ｼ                                         
+```
+
+### F. Using CHAR to return multibyte characters  
+This example uses the an integer and hex values in the valid range for ASCII. However, the CHAR function returns NULL because the parameter represents only the first byte of a multibyte character.
+  
+```sql
+SELECT CHAR(129) AS first_byte_of_double_byte_character, CHAR(0x81) AS first_byte_of_double_byte_character;  
+GO  
+```
+  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+  
+```
+first_byte_of_double_byte_character first_byte_of_double_byte_character
+----------------------------------- -----------------------------------
+NULL                                NULL                                         
+```
   
 ## See also
  [ASCII &#40;Transact-SQL&#41;](../../t-sql/functions/ascii-transact-sql.md)  

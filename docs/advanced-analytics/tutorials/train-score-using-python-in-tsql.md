@@ -13,7 +13,7 @@ manager: cgronlun
 # Use a Python model in SQL Server for training and scoring
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In this exercise, learn a common pattern for creating, training, and using a model in Python on SQL Server. This exercise creates two stored procedures. The first one generates a Naïve Bayes model to predict an Iris species based on flower characteristics. The second procedure is for scoring. It calls the model generated in the first procedure to output a set of predictions. By stepping through this exercise, you'll learn basic techniques that are foundational to executing Python code on a SQL Server database engine instance.
+In this Python exercise, learn a common pattern for creating, training, and using a model in SQL Server. This exercise creates two stored procedures. The first one generates a Naïve Bayes model to predict an Iris species based on flower characteristics. The second procedure is for scoring. It calls the model generated in the first procedure to output a set of predictions. By stepping through this exercise, you'll learn basic techniques that are foundational to executing Python code on a SQL Server database engine instance.
 
 Be sure you have completed the [previous lesson](wrap-python-in-tsql-stored-procedure.md) to create the **sqlpy** database objects used for training and scoring Iris data.
 
@@ -51,7 +51,7 @@ Be sure you have completed the [previous lesson](wrap-python-in-tsql-stored-proc
 
 3. Verify the stored procedure exists. If the T-SQL script from the previous step ran without error, a new stored procedure called **generate_iris_model** is created and added to the **sqlpy** database. You can find stored procedures in Management Studio's **Object Explorer**, under **Programmability**.
 
-## Execute sproc to create and train a model
+## Execute the sproc to create and train models
 
 1. After the stored procedure is created, run the following code below to execute it. The specific statement for executing a stored procedure is `EXEC` on the fifth line.
 

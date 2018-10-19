@@ -21,21 +21,22 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 # nchar and nvarchar (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Character data types that are either fixed-length, **nchar**, or variable-length, **nvarchar**, Unicode data and use the UNICODE UCS-2 character set.
+Character data types that are either fixed-length, **nchar**, or variable-length, **nvarchar**. Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], when a [Supplementary Character (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) enabled collation is used, these data types store [Unicode](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) data and use the UNICODE UTF-16 character set. If a non-SC collation is specified, then these data types store Unicode string data and use the UNICODE UCS-2 character set.
   
 ## Arguments  
 **nchar** [ ( n ) ]  
 Fixed-length Unicode string data. *n* defines the string length and must be a value from 1 through 4,000. The storage size is two times *n* bytes. When the collation code page uses double-byte characters, the storage size is still *n* bytes. Depending on the string, the storage size of *n* bytes can be less than the value specified for *n*. The ISO synonyms for **nchar** are **national char** and **national character**.
   
 **nvarchar** [ ( n | **max** ) ]  
-Variable-length Unicode string data. *n* defines the string length and can be a value from 1 through 4,000. **max** indicates that the maximum storage size is 2^30-1 characters.  The maximum storage size in bytes is 2 GB. The actual storage size, in bytes, is two times the number of characters entered + 2 bytes. The ISO synonyms for **nvarchar** are **national char varying** and **national character varying**.
+Variable-length Unicode string data. *n* defines the string length and can be a value from 1 through 4,000. **max** indicates that the maximum storage size is 2^30-1 characters (2 GB). The storage size is two times *n* bytes + 2 bytes. When the collation code page uses double-byte characters, the storage size is still *n* bytes + 2 bytes. Depending on the string, the storage size of *n* bytes can be less than the value specified for *n*. The ISO synonyms for **nvarchar** are **national char varying** and **national character varying**.
   
 ## Remarks  
 When *n* is not specified in a data definition or variable declaration statement, the default length is 1. When *n* is not specified with the CAST function, the default length is 30.
-  
-Use **nchar** when the sizes of the column data entries are probably going to be similar.
-  
-Use **nvarchar** when the sizes of the column data entries are probably going to vary considerably.
+
+If you use **char** or **varchar**, we recommend the following:
+- Use **nchar** when the sizes of the column data entries are consistent.  
+- Use **nvarchar** when the sizes of the column data entries vary considerably.  
+- Use **nvarchar(max)** when the sizes of the column data entries vary considerably, and the size might exceed 8,000 bytes.  
   
 **sysname** is a system-supplied user-defined data type that is functionally equivalent to **nvarchar(128)**, except that it is not nullable. **sysname** is used to reference database object names.
   
@@ -90,7 +91,7 @@ Test data       More test data
 [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
 [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)  
 [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)  
-[SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)  
+[SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)    
 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)
   
   

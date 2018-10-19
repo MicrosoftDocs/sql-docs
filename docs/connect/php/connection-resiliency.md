@@ -125,4 +125,4 @@ Statement 2 successful.
 ```
 
 ## See Also
-[Connection Resiliency in the Windows ODBC Driver](https://docs.microsoft.com/en-us/sql/connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver)
+[Connection Resiliency in the Windows ODBC Driver](https://docs.microsoft.com/sql/connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver)

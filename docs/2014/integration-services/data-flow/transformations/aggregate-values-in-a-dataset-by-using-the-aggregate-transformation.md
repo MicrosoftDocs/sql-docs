@@ -67,6 +67,6 @@ manager: craigg
  [Aggregate Transformation](aggregate-transformation.md)   
  [Integration Services Transformations](integration-services-transformations.md)   
  [Integration Services Paths](../integration-services-paths.md)   
- [Data Flow Task]((../../control-flow/data-flow-task.md)  
+ [Data Flow Task](../../control-flow/data-flow-task.md)  
   
   

@@ -131,4 +131,4 @@ DROP EXTERNAL TABLE [dbo].[web_clickstreams_spark_results];
 
 Learn about how to run a sample notebook in Azure Data Studio:
 > [!div class="nextstepaction"]
-> [Learn about notebooks](tutorial-notebook-spark.md)
+> [Run a sample notebook](tutorial-notebook-spark.md)

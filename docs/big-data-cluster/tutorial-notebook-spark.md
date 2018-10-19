@@ -58,7 +58,10 @@ You can run each notebook cell by pressing the play button to the left of the ce
 
 ![Run notebook cell](media/tutorial-notebook-spark/run-notebook-cell.png)
 
-Run each of the cells in the sample notebook in succession. For more information about using notebooks with SQL Server big data clusters, see [How to use notebooks in SQL Server 2019 preview](notebooks-guidance.md) and [How to manage notebooks in Azure Data Studio](notebooks-how-to-manage.md).
+Run each of the cells in the sample notebook in succession. For more information about using notebooks with SQL Server big data clusters, see the following resources:
+
+- [How to use notebooks in SQL Server 2019 preview](notebooks-guidance.md)
+- [How to manage notebooks in Azure Data Studio](notebooks-how-to-manage.md)
 
 ## Next steps
 

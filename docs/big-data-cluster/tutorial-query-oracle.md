@@ -125,6 +125,6 @@ DROP DATABASE SCOPED CREDENTIAL [OracleCredential];
 
 ## Next steps
 
-Learn about how to use notebooks in Azure Data Studio:
+Learn how to ingest data into the data pool:
 > [!div class="nextstepaction"]
-> [Learn about notebooks](notebooks-guidance.md)
+> [Load data into the data pool](tutorial-data-pool-ingest-sql.md)

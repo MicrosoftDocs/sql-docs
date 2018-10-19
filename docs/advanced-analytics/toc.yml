@@ -141,7 +141,7 @@
   - name: Python
     href: tutorials/sql-server-python-tutorials.md
     items:
-    - name: Train your first model
+    - name: Train and use your first model
       items:
       - name: Create the Iris dataset
         href: tutorials/wrap-python-in-tsql-stored-procedure.md

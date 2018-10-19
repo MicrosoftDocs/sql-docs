@@ -48,7 +48,8 @@ To complete this exercise, you should have [SQL Server Management Studio](https:
     );
     ```
 
-    If you are new to T-SQL, it pays to memorize the `DROP...IF` statement. When you try to  create a table and one already exists, SQL Server returns an error: "There is already an object named 'iris_data' in the database." One way to avoid such errors is to delete any existing tables or other objects as part of your code.
+    > [!TIP] 
+    > If you are new to T-SQL, it pays to memorize the `DROP...IF` statement. When you try to  create a table and one already exists, SQL Server returns an error: "There is already an object named 'iris_data' in the database." One way to avoid such errors is to delete any existing tables or other objects as part of your code.
 
 4. Run the following code to create the table used for storing the trained model. To save Python (or R) models in SQL Server, they must be serialized and stored in a column of type **varbinary(max)**. 
 

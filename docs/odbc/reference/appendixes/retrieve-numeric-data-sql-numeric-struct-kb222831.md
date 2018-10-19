@@ -374,6 +374,6 @@ http://web.archive.org/web/20140319133434/http:/support.microsoft.com:80/kb/2228
 
 http://web.archive.org/web/20080505073901/http:/support.microsoft.com:80/kb/181254
 
-https://docs.microsoft.com/en-us/sql/odbc/reference/appendixes/c-data-types
+https://docs.microsoft.com/sql/odbc/reference/appendixes/c-data-types
 -->
 

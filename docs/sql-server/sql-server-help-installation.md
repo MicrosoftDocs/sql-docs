@@ -165,7 +165,7 @@ Online help always shows the most up-to-date content.
 
 **To view SQL Server online help in SSMS 17.x**
 
-- Click **View Help** in the **Help** menu. The latest SQL Server 2016/2017 documentation from [https://docs.microsoft.com/sql/https://docs.microsoft.com/en-us/sql/sql-server/sql-server-technical-documentation](https://docs.microsoft.com/en-us/sql/sql-server/sql-server-technical-documentation) displays in a browser. 
+- Click **View Help** in the **Help** menu. The latest SQL Server 2016/2017 documentation from [https://docs.microsoft.com/sql/https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation) displays in a browser. 
 
    ![View Help](../sql-server/media/sql-server-help-installation/viewhelp.png)
 

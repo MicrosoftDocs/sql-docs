@@ -74,13 +74,11 @@ PolyBase has the following limitations:
 - [PolyBase doesn't install when you add a node to a SQL Server 2016 Failover Cluster](https://support.microsoft.com/en-us/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster)
 
 ::: moniker-end
+
 - Integration authentication is not support. Only user name and password are supported for now.  
-- We enable encryption by default. In order to disable encrption you must... (talk to thanh)
-- [Type mapping limitations](polybase-type-mapping.md)
 
+- Encyptrion is enabled by default.
 
-## Security and Authentication 
+## Next steps
 
-## See Also  
-
-[PolyBase Guide](../../relational-databases/polybase/polybase-guide.md)  
+For more information about PolyBase, see the [What is PolyBase?](polybase-guide.md).

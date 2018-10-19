@@ -15,7 +15,7 @@ manager: cgronlun
 
 In this Python exercise, learn a common pattern for creating, training, and using a model in SQL Server. This exercise creates two stored procedures. The first one generates a Naïve Bayes model to predict an Iris species based on flower characteristics. The second procedure is for scoring. It calls the model generated in the first procedure to output a set of predictions. By stepping through this exercise, you'll learn basic techniques that are foundational to executing Python code on a SQL Server database engine instance.
 
-Be sure you have completed the [previous lesson](wrap-python-in-tsql-stored-procedure.md) to create the **sqlpy** database objects used for training and scoring Iris data.
+Sample data used in this exercise is the [Iris dataset](demo-data-iris-in-sql.md) in the **sqlpy** database.
 
 ## Create a model using a sproc
 

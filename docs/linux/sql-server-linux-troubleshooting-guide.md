@@ -4,7 +4,7 @@ description: Provides troubleshooting tips for using SQL Server on Linux.
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 04/30/2018
+ms.date: 05/01/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: "sql-linux"

@@ -75,10 +75,10 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
 -   If READ_COMMITTED_SNAPSHOT is set to OFF (the default), the [!INCLUDE[ssDE](../../includes/ssde-md.md)] uses shared locks to prevent other transactions from modifying rows while the current transaction is running a read operation. The shared locks also block the statement from reading rows modified by other transactions until the other transaction is completed. The shared lock type determines when it will be released. Row locks are released before the next row is processed. Page locks are released when the next page is read, and table locks are released when the statement finishes.  
   
-    > [!NOTE]  
-    >  If READ_COMMITTED_SNAPSHOT is set to ON, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] uses row versioning to present each statement with a transactionally consistent snapshot of the data as it existed at the start of the statement. Locks are not used to protect the data from updates by other transactions.  
-    >   
-    >  Snapshot isolation supports FILESTREAM data. Under snapshot isolation mode, FILESTREAM data read by any statement in a transaction will be the transactionally consistent version of the data that existed at the start of the transaction.  
+-   If READ_COMMITTED_SNAPSHOT is set to ON, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] uses row versioning to present each statement with a transactionally consistent snapshot of the data as it existed at the start of the statement. Locks are not used to protect the data from updates by other transactions.  
+
+> [!NOTE]  
+>  Snapshot isolation supports FILESTREAM data. Under snapshot isolation mode, FILESTREAM data read by any statement in a transaction will be the transactionally consistent version of the data that existed at the start of the transaction.  
   
  When the READ_COMMITTED_SNAPSHOT database option is ON, you can use the READCOMMITTEDLOCK table hint to request shared locking instead of row versioning for individual statements in transactions running at the READ COMMITTED isolation level.  
   

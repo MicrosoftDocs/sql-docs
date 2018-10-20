@@ -374,4 +374,4 @@ This exercise was intended to give you an idea of how to work with different Pyt
 
 ## Next steps
 
-[Wrap Python code in a SQL stored procedure](wrap-python-in-tsql-stored-procedure.md)
+[Set up the Iris demo dataset](demo-data-iris-in-sql.md)

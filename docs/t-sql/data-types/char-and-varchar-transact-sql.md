@@ -44,7 +44,7 @@ When *n* is not specified in a data definition or variable declaration statement
 Objects that use **char** or **varchar** are assigned the default collation of the database, unless a specific collation is assigned using the COLLATE clause. The collation controls the code page that is used to store the character data.
 
 Multibyte encodings in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] include:
--	Double-byte character sets (DBCS) for some East Asian languages such as code pages 936 and 950 (Chinese), 932 (Japanese), and 949 (Korean).
+-	Double-byte character sets (DBCS) for some East Asian languages using code pages 936 and 950 (Chinese), 932 (Japanese), or 949 (Korean).
 -	UTF-8 with code page 65001. **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]))
 
 If you have sites that support multiple languages:
@@ -54,7 +54,7 @@ If you have sites that support multiple languages:
 If you use **char** or **varchar**, we recommend to:
 - Use **char** when the sizes of the column data entries are consistent.  
 - Use **varchar** when the sizes of the column data entries vary considerably.  
-- Use **varchar(max)** when the sizes of the column data entries vary considerably, and the size might exceed 8,000 bytes.  
+- Use **varchar(max)** when the sizes of the column data entries vary considerably, and the string length might exceed 8,000 bytes.  
   
 If SET ANSI_PADDING is OFF when either CREATE TABLE or ALTER TABLE is executed, a **char** column that is defined as NULL is handled as **varchar**.
   

@@ -15,14 +15,14 @@ manager: cgronlun
 
 In this Python exercise, learn a common pattern for creating, training, and using a model in SQL Server. This exercise creates two stored procedures. The first one generates a Naïve Bayes model to predict an Iris species based on flower characteristics. The second procedure is for scoring. It calls the model generated in the first procedure to output a set of predictions. By stepping through this exercise, you'll learn basic techniques that are foundational to executing Python code on a SQL Server database engine instance.
 
-Be sure you have completed the [previous lesson](wrap-python-in-tsql-stored-procedure.md) to create the **sqlpy** database objects used for training and scoring Iris data.
+Sample data used in this exercise is the [Iris dataset](demo-data-iris-in-sql.md) in the **irissql** database.
 
 ## Create a model using a sproc
 
-1. Open a new query window in Management Studio, connected to the **sqlpy** database. 
+1. Open a new query window in Management Studio, connected to the **irissql** database. 
 
     ```sql
-    USE sqlpy
+    USE irissql
     GO
     ```
 
@@ -49,7 +49,7 @@ Be sure you have completed the [previous lesson](wrap-python-in-tsql-stored-proc
     GO
     ```
 
-3. Verify the stored procedure exists. If the T-SQL script from the previous step ran without error, a new stored procedure called **generate_iris_model** is created and added to the **sqlpy** database. You can find stored procedures in Management Studio's **Object Explorer**, under **Programmability**.
+3. Verify the stored procedure exists. If the T-SQL script from the previous step ran without error, a new stored procedure called **generate_iris_model** is created and added to the **irissql** database. You can find stored procedures in Management Studio's **Object Explorer**, under **Programmability**.
 
 ## Execute the sproc to create and train models
 
@@ -68,7 +68,7 @@ Be sure you have completed the [previous lesson](wrap-python-in-tsql-stored-proc
     GO
     ```
 
-2. View the results in the output area. The script includes a SELECT statement showing that the model exists. Another way to return a list of models is `SELECT * FROM iris_models` in **sqlpy**.
+2. View the results in the output area. The script includes a SELECT statement showing that the model exists. Another way to return a list of models is `SELECT * FROM iris_models` in **irissql**.
 
     **Results**
 

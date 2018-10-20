@@ -37,7 +37,7 @@ This lesson also demonstrates the basics of how to set up and then use a **SQL S
 
 ## Prepare the database and sample data
 
-1. This lesson uses the database `sqlpy`. If you have not completed any of the previous lessons, you can create the database by running the following code:
+1. This lesson uses the database **sqlpy**. If you have not completed any of the previous lessons, you can create the database by running the following code:
 
     ```sql
     CREATE DATABASE sqlpy;

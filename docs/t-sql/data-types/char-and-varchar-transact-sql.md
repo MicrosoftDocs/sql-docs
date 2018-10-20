@@ -49,8 +49,9 @@ Multibyte encodings in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 If you have sites that support multiple languages:
 - Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], consider using a UTF-8 enabled collation to support Unicode and minimize character conversion issues. 
-- If using a lower version of [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] consider using the Unicode **nchar** or **nvarchar** data types to minimize character conversion issues. 
-If you use **char** or **varchar**, we recommend the following:
+- If using a lower version of [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] consider using the Unicode **nchar** or **nvarchar** data types to minimize character conversion issues.   
+
+If you use **char** or **varchar**, we recommend to:
 - Use **char** when the sizes of the column data entries are consistent.  
 - Use **varchar** when the sizes of the column data entries vary considerably.  
 - Use **varchar(max)** when the sizes of the column data entries vary considerably, and the size might exceed 8,000 bytes.  

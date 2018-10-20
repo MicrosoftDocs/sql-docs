@@ -29,20 +29,24 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 # char and varchar (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Character data types that are either fixed-length, **char**, or variable-length, **varchar**. Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], when a UTF-8 enabled collation is used, these data types store [Unicode](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) data and use the UNICODE UTF-8 character set. If a non-UTF-8 collation is specified, then these data types store non-Unicode string data.
+Character data types that are either fixed-length, **char**, or variable-length, **varchar**. Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], when a UTF-8 enabled collation is used, these data types store the full range of [Unicode](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) character data and use the [UTF-8](http://www.wikipedia.org/wiki/UTF-8) character encoding. If a non-UTF-8 collation is specified, then these data types store only a subset of characters supported by the corresponding code page of that collation.
   
 ## Arguments  
 **char** [ ( *n* ) ]
-Fixed-length string data. *n* defines the string length in bytes and must be a value from 1 through 8,000. For single-byte character sets such as ASCII, the storage size is the actual length of the string data entered. For multibyte character sets, the storage size is still *n* bytes. The ISO synonym for **char** is **character**. For more information on character sets, refer to [Single-Byte and Multibyte Character Sets](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets).
-  
+Fixed-length string data. *n* defines the string length in bytes and must be a value from 1 through 8,000. For single-byte encoding character sets such as *Latin*, the storage size is *n* bytes and the number of characters that can be stored is also *n*. For multibyte enconding character sets, the storage size is still *n* bytes but the number of characters that can be stored may be smaller than *n*. The ISO synonym for **char** is **character**. For more information on character sets, refer to [Single-Byte and Multibyte Character Sets](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets).
+
 **varchar** [ ( *n* | **max** ) ]
-Variable-length string data. *n* defines the string length in bytes and can be a value from 1 through 8,000. **max** indicates that the maximum storage size is 2^31-1 bytes (2 GB). For single-byte character sets such as ASCII, the storage size is the actual length of the string data entered + 2 bytes. For multibyte character sets, the storage size is *n* bytes + 2 bytes. The ISO synonyms for **varchar** are **charvarying** or **charactervarying**. For more information on character sets, refer to [Single-Byte and Multibyte Character Sets](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets).
-  
+Variable-length string data. *n* defines the string length in bytes and can be a value from 1 through 8,000. **max** indicates that the maximum storage size is 2^31-1 bytes (2 GB). For single-byte encoding character sets such as *Latin*, the storage size is *n* bytes + 2 bytes and the number of characters that can be stored is also *n*. For multibyte enconding character sets, the storage size is still *n* bytes + 2 bytes but the number of characters that can be stored may be smaller than *n*. The ISO synonyms for **varchar** are **charvarying** or **charactervarying**. For more information on character sets, refer to [Single-Byte and Multibyte Character Sets](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets).
+
 ## Remarks  
 When *n* is not specified in a data definition or variable declaration statement, the default length is 1. When *n* is not specified when using the CAST and CONVERT functions, the default length is 30.
   
 Objects that use **char** or **varchar** are assigned the default collation of the database, unless a specific collation is assigned using the COLLATE clause. The collation controls the code page that is used to store the character data.
-  
+
+Multibyte encodings in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] include:
+-	Double-byte character sets (DBCS) for some East Asian languages such as code pages 936 and 950 (Chinese), 932 (Japanese), and 949 (Korean).
+-	UTF-8 with code page 65001. **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]))
+
 If you have sites that support multiple languages:
 - Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], consider using a UTF-8 enabled collation to support Unicode and minimize character conversion issues. 
 - If using a lower version of [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] consider using the Unicode **nchar** or **nvarchar** data types to minimize character conversion issues. 

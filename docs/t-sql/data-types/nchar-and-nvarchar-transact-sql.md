@@ -36,7 +36,7 @@ When *n* is not specified in a data definition or variable declaration statement
 If you use **nchar** or **nvarchar**, we recommend to:
 - Use **nchar** when the sizes of the column data entries are consistent.  
 - Use **nvarchar** when the sizes of the column data entries vary considerably.  
-- Use **nvarchar(max)** when the sizes of the column data entries vary considerably, and the size might exceed 8,000 bytes.  
+- Use **nvarchar(max)** when the sizes of the column data entries vary considerably, and the string length might exceed 4,000 byte-pairs.  
   
 **sysname** is a system-supplied user-defined data type that is functionally equivalent to **nvarchar(128)**, except that it is not nullable. **sysname** is used to reference database object names.
   

@@ -55,13 +55,13 @@ In the prerequisite environment architecture, we recommend that you install DEA 
 
 DEA connects to database servers by using Windows authentication. Be sure that a user running DEA can connect to database servers (source, target, and analysis) by using Windows authentication.
 
-Capture: [Learn More](database-experimentation-assistant-capture-trace.md#frequently-asked-questions-about-capture-trace)
+Capture: [Learn more](database-experimentation-assistant-capture-trace.md#frequently-asked-questions-about-capture-trace)
 
 *   User running DEA can connect to the source database server by using Windows authentication.
 *   User running DEA has *sysadmin* rights on the source database server.
 *   Service account running the source database server has *write access* to the trace folder path.
 
-Replay: [Learn More](database-experimentation-assistant-replay-trace.md#frequently-asked-questions-about-replay-trace)
+Replay: [Learn more](database-experimentation-assistant-replay-trace.md#frequently-asked-questions-about-replay-trace)
 
 *   User running DEA can connect to the target database server by using Windows authentication.
 *   User running DEA has sysadmin rights on the target database server.
@@ -69,7 +69,7 @@ Replay: [Learn More](database-experimentation-assistant-replay-trace.md#frequent
 *   Service account running Distributed Replay clients can connect to the target database server by using Windows authentication.
 *   DEA communicates with the Distributed Replay controller by using COM interfaces. Make sure that TCP ports are opened for incoming requests on the Distributed Replay controller.
 
-Analysis: [Learn More](database-experimentation-assistant-create-report.md#frequently-asked-questions-about-analysis-reports)
+Analysis: [Learn more](database-experimentation-assistant-create-report.md#frequently-asked-questions-about-analysis-reports)
 
 *   User running DEA can connect to the analysis database server by using Windows authentication.
 *   User running DEA has sysadmin rights on the source database server.
@@ -93,7 +93,7 @@ These steps show you how to choose which events are collected and whether the ev
 4.  To stop saving local copies of events, set the value of **TraceLoggerEnabled** to **false**. To start saving local copies again, set the value to **true**.
 5.  To stop sending events to Microsoft, set the value of **AppInsightsLoggerEnabled** to **false**. To start sending events to Microsoft again, set the value to **true**.
 
-DEA is governed by [Microsoft's Online Privacy Policy](https://go.microsoft.com/fwlink/?LinkId=521839​).
+DEA is governed the [Microsoft Privacy Statement](https://privacy.microsoft.com/en-us/privacystatement​).
 
 ## Next steps
 

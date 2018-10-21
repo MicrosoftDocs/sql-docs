@@ -17,7 +17,7 @@ manager: craigg
 
 # View analysis reports in Database Experimentation Assistant
 
-After you [create your analysis report](database-experimentation-assistant-create-report.md), complete the steps described in this article to view the report and gain performance insights provided by your A/B test.
+After you [create your analysis report](database-experimentation-assistant-create-report.md) in Database Experimentation Assistant (DEA), complete the steps described in this article to view the report and gain performance insights provided by your A/B test.
 
 ## Select a server
 
@@ -25,7 +25,7 @@ Open the tool, and then select the menu icon on the left side of the screen. Sel
 
 Under **Analysis Reports** window, enter the name of a computer running SQL Server that has an analysis database. Select **Connect**. 
 
-![Connect to existing report](./media/database-experimentation-assistant-view-report/dea-view-report-connect.png)
+![Connect to an existing report](./media/database-experimentation-assistant-view-report/dea-view-report-connect.png)
 
 If you're missing any dependencies, the **Prerequisites** page prompts you with links to install them. Install the requirements, and then select **Try again**.
 
@@ -57,11 +57,11 @@ Select different slices of the left pie chart to show only the queries that fall
 - **Indeterminate queries**: Queries whose performance change was uncertain.  
 - **Same**: Queries whose performance stayed the same across instances A and B.
 
-### Individual query drilldown
+### Individual query drill-down
 
 You can select the query template links to see more detailed information about specific queries.
 
-![Query drilldown](./media/database-experimentation-assistant-view-report/dea-view-report-drilldown.png)
+![Query drill-down](./media/database-experimentation-assistant-view-report/dea-view-report-drilldown.png)
 
 Select a specific query to open a comparison summary for the query.
 
@@ -82,7 +82,7 @@ Select the error (red) pie to show these types of errors:
 
 ## Next steps
 
-- [Run at command prompt](database-experimentation-assistant-run-command-prompt.md) shows you how to generate an analysis report at a command line.
+- To learn how to generate an analysis report at a command prompt, see [Run at command prompt](database-experimentation-assistant-run-command-prompt.md).
 
 - For a 19-minute introduction and demonstration of DEA, watch the following video:
 

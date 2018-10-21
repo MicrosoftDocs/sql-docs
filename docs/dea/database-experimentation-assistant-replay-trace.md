@@ -15,144 +15,146 @@ ms.reviewer: douglasl
 manager: craigg
 ---
 
-# Replay a trace with Database Experimentation Assistant
+# Replay a trace in Database Experimentation Assistant
 
-Replay trace lets you replay a captured trace file (.trc) against an upgraded test environment. For example, consider a production workload that is run out of SQL Server 2008 R2. The trace file for this workload must be replayed twice: once on an environment with the same SQL Server as production, and again on an environment with the upgrade target SQL Server version, such as SQL Server 2016.
+In Database Experimentation Assistant (DEA), you can use trace replay to replay a captured trace (.trc) file against an upgraded test environment. For example, consider a production workload that runs on SQL Server 2008 R2. The trace file for the workload must be replayed twice: once on an environment with the same version of SQL Server that runs on production, and again on an environment that has the upgrade target SQL Server version, such as SQL Server 2016.
 
 > [!NOTE]
-> To run this action, virtual machines or machines must be manually set up to run Distributed Replay traces. Read the blog about [how to set up Distributed Replay controller and clients](https://blogs.msdn.microsoft.com/datamigration/distributed-replay-controller-and-client-setup/).
+> To run this action, virtual machines or machines must be manually set up to run Distributed Replay traces. For more information, see [Distributed Replay controller and clients setup](https://blogs.msdn.microsoft.com/datamigration/distributed-replay-controller-and-client-setup/).
 >
 >
 
 ## Open Replay Traces
-Open the tool and select the menu icon on the left side of screen. This action opens the left side-bar menu. Choose **Replay Traces** next to the play icon.
 
-![Replay1](./media/database-experimentation-assistant-replay-trace/dea-replay-trace-open.png)
+In DEA, select the menu icon in the left navigation pane. In the expanded vertical menu, select **Replay Traces** next to the play icon.
 
-## Enter inputs for replaying traces  
+![Select Replay Traces in the menu](./media/database-experimentation-assistant-replay-trace/dea-replay-trace-open.png)
+
+## Enter inputs for trace replays  
 
 > [!NOTE]
-> The Distributed Replay controller machine requires permissions to the user account you'll be using to remote.
->
+> The Distributed Replay controller machine requires permissions to the user account that you use to remote.
 >
 
-### To grant access to the Distributed Replay controller
+### Grant access to the Distributed Replay controller
 
-1. Open command prompt and type **dcomcnfg** to open the **Component Services** interface.
-1. In the **Component Services** dialog, expand **Component Services** > **Computers** > **My Computer** > **DCOM Config** > **DReplayController**.
-1. Right-click to access the properties of DReplayController.
+1. At a command prompt, enter **dcomcnfg** to open the **Component Services** interface.
+1. In **Component Services**, expand **Component Services** > **Computers** > **My Computer** > **DCOM Config** > **DReplayController**.
+1. Right-click **DReplayController**, and then select **Properties**.
 1. On the **Security** tab, select **Edit** to add the user account.
 1. Select **OK**.
 
 ### Verify setup
 
-- **SQL Server install path:** Provide the path to where SQL Server is installed. For example, [C:\\Program](/Program) Files (x86)\\Microsoft SQL Server\\120.
-- **Controller machine name:** Provide the name of the machine that has been set up as the controller. This machine is the one running the Windows service named SQL Server Distributed Replay controller. The Distributed Replay controller orchestrates the actions of the Distributed Replay clients. There can only be one controller instance in each Distributed Replay environment.
-- **Client machine names:** Provide the name for each client machine, separated by commas, for example client1, client2. You can have up to five client controllers. Clients are one or more machines, physical or virtual, running the Windows service named SQL Server Distributed Replay client. The Distributed Replay clients work together to simulate workloads against an instance of SQL Server. There can be one or more clients in each Distributed Replay environment.
-- Select **Next**.
+1.  **SQL Server install path**: Enter the path to where SQL Server is installed. For example, C:\\<Program\>(/Program) Files (x86)\\Microsoft SQL Server\\120.
+1.  **Controller machine name**: Enter a name of the machine that has been set up as the controller. This machine is running the Windows service named SQL Server Distributed Replay controller. The Distributed Replay controller orchestrates the actions of the Distributed Replay clients. There can only be one controller instance in each Distributed Replay environment.
+1.  **Client machine names**: Enter a name for each client machine, separated by commas. Example: client1, client2. You can have up to five client controllers. Clients are one or more machines, either physical or virtual, that run the Windows service named SQL Server Distributed Replay client. The Distributed Replay clients work together to simulate workloads against an instance of SQL Server. There can be one or more clients in each Distributed Replay environment.
+1.  Select **Next**.
 
 ### Select trace
 
-- **Path to trace file:** Provide the path to the input trace (.trc) file.
-- **Path to store replay preprocess output:**  
-    \- If you don't already have the IRF file, provide the path to the location in which you want to store the IRF file and other pre-process outputs.  
-    \- If you already have the IRF file, provide its path.
-- Select **Next**.
+1.  **Path to trace file**: Enter the path to the input TRC file.
+1.  **Path to store replay preprocess output**:  
+    \- If you don't already have the IRF file, enter the path to the location in which you want to store the IRF file and other pre-process outputs.  
+    \- If you already have the IRF file, enter the path to the IRF files.
+1. Select **Next**.
 
 ### Replay trace
 
-- **Trace file name:** Provide a trace file name.
-- **Max file size (MB):** Provide the trace file roll-over size value. The default is 200 MB. The dropdown is also editable to enter a custom value.
-- **Path to store replay trace output:** Provide the path for the output trace (.trc) file.
-- **SQL Server instance name:** Provide the name of the server on which to replay traces.
-- Select **Start**.
+1.  **Trace file name**: Enter a trace file name.
+1.  **Max file size (MB)**: Enter a trace file roll-over size value. The default is 200 MB. You can enter a custom value in the drop-down menu.
+1.  **Path to store replay trace output**: Enter the path for the output TRC file.
+1.  **SQL Server instance name**:  Enter the name of the server on which to replay traces.
+1.  Select **Start**.
 
-If the inputs are valid, the Distributed Replay process begins. Otherwise, the fields that have invalid inputs are highlighted with red. Make sure that the entered values are correct and select **Start**.
+If the inputs are valid, the Distributed Replay process starts. Otherwise, the fields that have invalid inputs are highlighted with red. Make sure that values you entered values are correct, and then select **Start**.
 
-Wait until the replay has finished running to see the location you specified. Select the bell icon at the bottom left of the navigation to monitor the replay progress.
+Wait until the replay is finished running to see the location that you specified. Select the bell icon at the bottom of the page to monitor the replay progress.
 
-![ReplayProgress](./media/database-experimentation-assistant-replay-trace/dea-replay-trace-progress.png)
+![Replay Traces progress](./media/database-experimentation-assistant-replay-trace/dea-replay-trace-progress.png)
 
-## Frequently asked questions about replay trace
+## Frequently asked questions about trace replay
+
 ### What security permissions do I need to start a replay capture on my target server?
 
-- The Windows user running the trace operation in the DEA Application must have sysadmin privileges in the target SQL Server. These permissions are needed to start a trace.
-- The service account, under which the target SQL Server is running, requires write access to the specified trace file path.
-- The service account, under which the Distributed Replay Client services are running, must have permission to connect and execute queries on the target SQL Server.
+- The Windows user that's running the trace operation in the DEA application must have sysadmin rights in the target computer running SQL Server. These permissions are needed to start a trace.
+- The service account under which the target SQL Server is running must have write access to the specified trace file path.
+- The service account under which the Distributed Replay Client services are running must have permission to connect to the target computer running SQL Server and to execute queries.
 
 ### Can I start more than one replay in the same session?
 
-Yes, DEA allows multiple replays to be started and tracked to completion within the same session.
+Yes, you can start and track to completion multiple replays in the same session.
 
-### Can I start more than one replays in parallel?
+### Can I start more than one replay in parallel?
 
-Yes, but not with the same **Controller plus Clients**. The controller and clients will be busy. Set up a separate set of **Controller plus Client** machines to start a parallel replay.
+Yes, but not with the same set of machines in **Controller plus Clients**. The controller and clients will be busy. Set up a separate set of machines for **Controller plus Client** to start a parallel replay.
 
-### How long does a replay typically take to complete?
+### How long does a replay typically take to finish?
 
-A replay typically takes the same amount of time as the source trace plus the amount of time that is taken to preprocess the source trace. However, if the client machines that are registered with the controller aren't sufficient to manage the load produced from the replay, the replay can take longer to complete. Distributed Replay allows up to 16 client machines to be registered with the controller.
+A replay typically takes the same amount of time as the source trace plus the amount of time it takes to preprocess the source trace. However, if the client machines that are registered with the controller aren't sufficient to manage the load produced from the replay, the replay might take longer to complete. Distributed Replay allows up to 16 client machines to be registered with the controller.
 
-### How large can the target trace files get?
+### How large do target trace files get?
 
-The target trace files can be anywhere from 5 to 15 times the size of the source trace based on how many queries are run. For instance, query plan blobs can be large and if the statistics change often, there will be more events captured for such queries.
+The target trace files might be anywhere from 5 to 15 times the size of the source trace. The file size is based on how many queries are run. For instance, query plan blobs might be large. If the statistics for these queries change often, more events are captured.
 
 ### Why do I need to restore databases?
 
-SQL Server is a stateful relational database management system. To properly run an A/B test, the state of the database must be retained at all times. Otherwise, you might see errors in queries during replay that won't appear in production. To prevent such errors, we recommend taking a backup right before the source capture. Similarly, restoring of the backup on the target SQL Server is required to prevent errors during replay.
+SQL Server is a stateful relational database management system. To properly run an A/B test, the state of the database must be retained at all times. Otherwise, you might see errors in queries during replay that won't appear in production. To prevent such errors, we recommend taking a backup right before the source capture. Similarly, restoring the backup on the target computer running SQL Server is required to prevent errors during replay.
 
-### What does Pass % on the replay screen mean?
+### What does "pass %" on the replay screen mean?
 
-Pass % means that only a percentage of queries passed. It lets you diagnose whether the number of errors is expected or not. The errors could be expected or could occur because the database has lost its integrity. If the pass % isn't what you expect, you can stop the trace and look at the trace file in SQL Profiler to see which queries didn't succeed.
+**Pass %** means that only a percentage of queries passed. You can diagnose whether the number of errors is expected. The errors might be expected, or they might occur because the database has lost its integrity. If the value for **pass %** isn't what you expect, you can stop the trace and look at the trace file in SQL Profiler to see which queries didn't succeed.
 
 ### How can I look at the trace events collected during replay?
 
-Open a target trace file and view it in SQL Profiler. Or, if you wish to make modifications to the replay capture, all the SQL scripts are available at C:\\Program Files (x86)\\Microsoft Corporation\\Database Experimentation Assistant\\Scripts\\StartReplayCapture.sql.
+Open a target trace file and view it in SQL Profiler. Or, if you want to make modifications to the replay capture, all the SQL Server scripts are available at C:\\Program Files (x86)\\Microsoft Corporation\\Database Experimentation Assistant\\Scripts\\StartReplayCapture.sql.
 
 ### Which trace events does DEA collect during replay?
 
-The trace events captured include performance-related information. The capture configuration is present in the StartReplayCaptureTrace.sql script. These events are typical SQL Trace Events that are listed here: https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.
+The trace events that DEA captures include performance-related information. The capture configuration is in the StartReplayCaptureTrace.sql script. These events are typical SQL Trace Events that are listed in the [sp_trace_setevent (Transact-SQL) reference documentation](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql).
 
-## Troubleshooting replay trace
-### I'm unable to connect to the SQL Server.
+## Troubleshoot replay trace
 
-- Confirm that the SQL Server name is valid. To confirm, try connecting to the server using SSMS.
-- Confirm that the firewall configuration isn't blocking connections to SQL Server.
-- Confirm user has the required permissions.
-- Confirm that the Distributed Replay client's service account has access to the SQL Server.
+### I can't connect to the computer running SQL Server
 
-Further details can be found in the logs at %temp%\\DEA. If the problem persists, contact the product team.
+- Confirm that the name of the computer running SQL Server is valid. To confirm, try to connect to the server by using SQL Server Management Studio (SSMS).
+- Confirm that the firewall configuration doesn't block connections to the computer running SQL Server.
+- Confirm that the user has the required user rights.
+- Confirm that the Distributed Replay client's service account has access to the computer running SQL Server.
 
-### I'm unable to connect to the Distributed Replay controller.
+You can get more details in the logs at %temp%\\DEA. If the problem persists, contact the product team.
 
-- Verify that the Distributed Replay controller service is running on the controller machine using the Distributed Replay Management Tools (run command `dreplay.exe status -f 1`).
-- If the replay is being started remotely:
-  - Confirm that the machine running DEA can ping the controller successfully. Confirm firewall settings to allow connections per instructions in the Configure Replay Environment page.
-  - Make sure that the DCOM Remote Launch and Remote Activation are allowed for the user of the Distributed Replay controller.
-  - Make sure that the DCOM Remote Access permissions are allowed for the user of Distributed Replay controller.
+### I can't connect to the Distributed Replay controller
+
+- Verify that the Distributed Replay controller service is running on the controller machine. To verify, use the Distributed Replay Management Tools (run command `dreplay.exe status -f 1`).
+- If the replay is started remotely:
+  - Confirm that the machine running DEA can successfully ping the controller. Confirm firewall settings to allow connections per the instructions on the **Configure Replay Environment** page.
+  - Make sure that DCOM Remote Launch and Remote Activation are allowed for the user of the Distributed Replay controller.
+  - Make sure that DCOM Remote Access permissions are allowed for the user of Distributed Replay controller.
 
 ### The trace file path exists on my machine. Why can't Distributed Replay controller find it?
 
-Distributed Replay can only access local disk resources. You must copy source trace files over to the Distributed Replay controller machine before starting the replay. Also, you must provide the path on the New Replay screen of DEA. 
+Distributed Replay can access only local disk resources. You must copy source trace files over to the Distributed Replay controller machine before you start the replay. Also, you must provide the path on the DEA **New Replay** page. 
 
-Also, UNC paths aren't compatible with Distributed Replay. They must be local absolute paths to the first source trace file, including extension.
+Also, UNC paths aren't compatible with Distributed Replay. Distributed Replay paths must be local absolute paths to the first source trace file, including extension.
 
 ### Why can't I browse for files on the New Replay screen?
 
-Since we can't browse a remote machine's folders, browsing for files isn't useful. Copy-pasting the absolute paths is more efficient.
+Because we can't browse a remote machine's folders, browsing for files isn't useful. Copying and pasting the absolute paths is more efficient.
 
-### I started replay with a trace, but Distributed Replay didn't replay any events.
+### I started replay with a trace but Distributed Replay didn't replay any events
 
-This issue can happen because the trace file doesn't have replayable events or doesn't have information on how to replay events. Confirm whether the trace file path provided is a source trace file. The source trace file is created using the configuration provided in the StartCaptureTrace.sql script.
+This issue might occur because the trace file either doesn't have replayable events or doesn't have information about how to replay events. Confirm whether the trace file path provided is a source trace file. The source trace file is created by using the configuration provided in the StartCaptureTrace.sql script.
 
-### I'm getting an "Unexpected error occurred!" while trying to preprocess my trace files using SQL Server 2017 Distributed Replay controller.
+### I see the error "Unexpected error occurred!" when I try to preprocess my trace files using the SQL Server 2017 Distributed Replay controller
 
-This issue is known in the RTM version of SQL Server 2017. For more information, see [https://support.microsoft.com/help/4045678/fix-unexpected-error-when-you-use-the-dreplay-feature-to-replay-a](https://support.microsoft.com/help/4045678/fix-unexpected-error-when-you-use-the-dreplay-feature-to-replay-a).  
+This issue is known in the RTM version of SQL Server 2017. For more information, see [Unexpected error when you use the DReplay feature to replay a captured trace in SQL Server 2017](https://support.microsoft.com/help/4045678/fix-unexpected-error-when-you-use-the-dreplay-feature-to-replay-a).  
   
-The issue has been addressed in the latest Cumulative Update 1 for SQL Server 2017. Download the latest CU from [https://support.microsoft.com/help/4038634/cumulative-update-1-for-sql-server-2017](https://support.microsoft.com/help/4038634/cumulative-update-1-for-sql-server-2017).
+The issue has been addressed in the latest Cumulative Update 1 for SQL Server 2017. Download the latest version of [Cumulative Update 1 for SQL Server 2017](https://support.microsoft.com/help/4038634/cumulative-update-1-for-sql-server-2017).
 
 ## Next steps
 
-- [Create reports](database-experimentation-assistant-create-report.md) shows you how to create an analysis report that helps you gain insights about proposed changes.
+- To create an analysis report that helps you gain insights about proposed changes, see [Create reports](database-experimentation-assistant-create-report.md).
 
 - For a 19-minute introduction and demonstration of DEA, watch the following video:
 

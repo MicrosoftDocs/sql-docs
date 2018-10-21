@@ -20,7 +20,7 @@ manager: craigg
 You can use trace capture in Database Experimentation Assistant (DEA) to create a trace file that has a log of captured server events. A captured server event is an event that occurred on a specific server during a specific time period. A trace capture must be run once per server.
 
 - Before you start a trace capture, make sure that you back up all target databases.
-- Query caching in SQL Server can affect evaluation results. We recommend restarting the SQL Server service (MSSQLSERVER) in the services application to improve consistency in evaluation results.
+- Query caching in SQL Server might affect evaluation results. We recommend restarting the SQL Server service (MSSQLSERVER) in the services application to improve consistency in evaluation results.
 
 ## Create a trace capture
 
@@ -90,7 +90,7 @@ Yes, there's minimal performance impact during trace collection. In our tests, w
     
 ### What kind of permissions are required for capturing traces on a production workload?
     
-- The Windows user that runs the trace operation in the DEA application must have sysadmin privileges on the computer that's running SQL Server.
+- The Windows user that runs the trace operation in the DEA application must have sysadmin rights on the computer that's running SQL Server.
 - The service account under which the computer running SQL Server is running must have write access to the specified trace file path.
 
 ### Can I capture traces for the entire server vs. a single database?
@@ -117,8 +117,8 @@ Yes. DEA supports XEvents. Download the latest version of DEA and give it a try.
 
 If you receive an error when you run a trace capture, review the following prerequisites:
 
-- Confirm that the name of the computer running SQL Server name is valid. To confirm, try connecting to the computer that's running SQL Server by using SQL Server Management Studio (SSMS).
-- Confirm that your firewall configuration isn't blocking connections to the computer running SQL Server.
+- Confirm that the name of the computer running SQL Server is valid. To confirm, try to connect to the computer that's running SQL Server by using SQL Server Management Studio (SSMS).
+- Confirm that your firewall configuration doesn't block connections to the computer running SQL Server.
 - Confirm that the user has the permissions that are listed in the permissions blog.
 - Confirm that the trace name doesn't follow the standard rollover convention (Capture\_1). Instead, try trace names like Capture\_1A or Capture1.
 
@@ -128,14 +128,14 @@ Following are some possible errors you might see and solutions for resolving the
 |---|---|  
 |Unable to start the trace on the target SQL Server, check whether you have the required permissions and that the SQL Server account has write access to the specified trace file path Sql Error Code (53)|The user running the DEA tool must have access to the computer running SQL Server. The user must be assigned the sysadmin role.|  
 |Unable to start the trace on the target SQL Server, check whether you have the required permissions and that the SQL Server account has write access to the specified trace file path Sql Error Code (19062)|The trace path specified might not exist or the folder doesn't have write permissions for the account under which SQL Server services are running (for example, NETWORK SERVICE). The path must exist and have the required permissions for the trace to start.|  
-|A DEA trace currently is running on the target server.|An active trace is already running on the target server. You can't start a new trace when a server wide trace is already running.|  
+|A DEA trace currently is running on the target server.|An active trace is already running on the target server. You can't start a new trace when a server-wide trace is already running.|  
 |Can't open the requested database for capturing trace. This error might be caused by an incorrect database name.|The specified database doesn’t exist or it’s not accessible to the current user. Use the correct database name.|  
 
 If you see any other errors labeled *Sql Error Code*, see [System error messages](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/cc645603(v=sql.105)) for detailed descriptions and resolutions.
     
 ## Next steps
 
-- [Configure replay](database-experimentation-assistant-configure-replay.md) shows you how to configure the Distributed Replay tools in SQL Server before you replay a captured trace.
+- To learn how to configure the Distributed Replay tools in SQL Server before you replay a captured trace, see [Configure replay](database-experimentation-assistant-configure-replay.md).
 
 - For a 19-minute introduction and demonstration of DEA, watch the following video:
 

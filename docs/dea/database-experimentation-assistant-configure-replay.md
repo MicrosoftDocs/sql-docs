@@ -116,7 +116,7 @@ The following steps must be performed for each replay:
 
 ## Next steps
 
-- [Replay trace](database-experimentation-assistant-replay-trace.md) shows you how to replay a captured trace against an upgraded test environment.
+- To learn how to replay a captured trace against an upgraded test environment, see [Replay trace](database-experimentation-assistant-replay-trace.md).
 
 - For a 19-minute introduction and demonstration of DEA, watch the following video:
 

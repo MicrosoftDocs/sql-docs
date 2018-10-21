@@ -25,7 +25,7 @@ public java.sql.NClob getNClob(java.lang.String columnLabel)
 ```  
   
 #### Parameters  
- *columnLable*  
+ *columnLabel*  
   
  A **String** that contains the column label.  
   

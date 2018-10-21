@@ -54,7 +54,7 @@ To capture a trace on your source server:
 
 You can view the progress of your capture, including start time, duration, and time remaining. You can start a new capture while you wait for this capture to finish. When your capture is finished, use the output trace file to start the second phase: replaying the trace file on your target servers.
 
-For common questions about trace capture, see the [FAQ](database-experimentation-assistant-capture-trace.md#frequently-asked-questions-about-capture-trace).
+For common questions about trace capture, see the [FAQ](database-experimentation-assistant-capture-trace.md#frequently-asked-questions-about-trace-capture).
 
 ## Replay
 
@@ -84,7 +84,7 @@ To replay the trace file:
 
 You can view the status of your replay. After you replay the source trace on both of your target servers, you're ready to generate an analysis report.
 
-For common questions about replay, see the [FAQ](database-experimentation-assistant-replay-trace.md#frequently-asked-questions-about-replay-trace).
+For common questions about replay, see the [FAQ](database-experimentation-assistant-replay-trace.md#frequently-asked-questions-about-trace-replay).
 
 ## Analysis
 

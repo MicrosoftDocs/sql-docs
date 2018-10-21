@@ -55,13 +55,13 @@ In the prerequisite environment architecture, we recommend that you install DEA 
 
 DEA connects to database servers by using Windows authentication. Be sure that a user running DEA can connect to database servers (source, target, and analysis) by using Windows authentication.
 
-Capture: [Learn more](database-experimentation-assistant-capture-trace.md#frequently-asked-questions-about-capture-trace)
+Capture: [Learn more](database-experimentation-assistant-capture-trace.md#frequently-asked-questions-about-trace-capture)
 
 *   User running DEA can connect to the source database server by using Windows authentication.
 *   User running DEA has *sysadmin* rights on the source database server.
 *   Service account running the source database server has *write access* to the trace folder path.
 
-Replay: [Learn more](database-experimentation-assistant-replay-trace.md#frequently-asked-questions-about-replay-trace)
+Replay: [Learn more](database-experimentation-assistant-replay-trace.md#frequently-asked-questions-about-trace-replay)
 
 *   User running DEA can connect to the target database server by using Windows authentication.
 *   User running DEA has sysadmin rights on the target database server.

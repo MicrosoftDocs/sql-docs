@@ -27,22 +27,31 @@ To install the extension, see [Install the SQL Server 2019 extension (preview)](
 
 When you connect to a big data cluster, you have the option to connect to the SQL Server [master instance](concept-master-instance.md) or to the HDFS/Spark gateway. The following sections show how to connect to each.
 
-## Master instance
+## <a id="master"></a> Master instance
 
 1. In Azure Data Studio, press **F1** > **New Connection**.
+
 1. In **Connection type**, select **Microsoft SQL Server**.
+
 1. Type the IP address of the SQL Server master instance in **Server name** (for example: **\<IP Address\>,31433**).
+
+1. Enter a SQL login **User name** and **Password**.
+
 1. Change the **Database name** to the **high_value_data** database.
 
    ![Connect to the master instance](./media/deploy-big-data-tools/connect-to-cluster.png)
 
 1. Press **Connect**, and the **Server Dashboard** should appear.
 
-## HDFS/Spark gateway
+## <a id="hdfs"></a> HDFS/Spark gateway
 
 1. In Azure Data Studio, press **F1** > **New Connection**.
+
 1. In **Connection type**, select **SQL Server big data cluster**.
+
 1. Type the IP address of the big data cluster in **Server name**.
+
+1. Enter `root` for the **User** and specify the **Password** to your big data cluster.
 
    ![Connect to HDFS/Spark gateway](./media/deploy-big-data-tools/connect-to-cluster-hdfs-spark.png)
 

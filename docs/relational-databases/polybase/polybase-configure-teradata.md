@@ -21,7 +21,7 @@ The article explains how to use PolyBase on a SQL Server instance to query exter
 
 If you haven't installed PolyBase, see [PolyBase installation](polybase-installation.md). The installation article explains the prerequisites.
 
-To use polybase on teradata, VC++ redistributable in needed. 
+To use PolyBase on Teradata, VC++ redistributable in needed.
  
 ## Configure an External Table
 

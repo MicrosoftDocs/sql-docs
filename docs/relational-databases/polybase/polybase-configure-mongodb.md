@@ -69,7 +69,7 @@ These objects will create in this section:
     );
      ```
 
-1.  Create external tables that represents data stored in external MongoDB system [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md).
+1.  Create external tables that represent data stored in external MongoDB system [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md).
 
      ```sql
      /*  LOCATION: MongoDB table/view in '<database_name>.<schema_name>.<object_name>' format
@@ -99,7 +99,7 @@ These objects will create in this section:
 
 
 ## Flattening
- flattening  is enable for nested and repeated data from MongoDB document collections. User is required to enable create an external table and explicitly specify a relational schema over MongoDB document collections that may have nested and/or repeated data. We will enable auto-schema detection over mongo document collections in future milestones.
+ flattening  is enabled for nested and repeated data from MongoDB document collections. User is required to enable `create an external table` and explicitly specify a relational schema over MongoDB document collections that may have nested and/or repeated data. We will enable auto-schema detection over mongo document collections in future milestones.
 JSON nested/repeated data types will be flattened as follows
 
 * Object: unordered key/value collection enclosed in curly braces (nested)
@@ -146,7 +146,7 @@ Array grades will be flattened as below:
 
 ## Cosmos DB Connection
 
-Using the Cosmos DB mongo api and the Mongo DB PolyBase connector you can create an external table of an **Cosmos DB instance**. This accomplished by following the same steps listed above. Make sure the Database scoped credential, Sever address, port, and location string reflect that of the Cosmos DB sever. 
+Using the Cosmos DB mongo api and the Mongo DB PolyBase connector you can create an external table of a **Cosmos DB instance**. This accomplished by following the same steps listed above. Make sure the Database scoped credential, Sever address, port, and location string reflect that of the Cosmos DB server. 
 
 ## Next steps
 

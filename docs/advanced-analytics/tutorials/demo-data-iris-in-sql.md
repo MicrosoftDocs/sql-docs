@@ -1,6 +1,6 @@
 ---
-title: Iris demo data set for SQL Server | Microsoft Docs
-Description: Create a database containing the Iris dataset and a table for storing models. This dataset is used in exercises showing how to wrap Python code in a SQL Server stored procedure.
+title: Iris demo data set for SQL Server Python and R tutorials | Microsoft Docs
+Description: Create a database containing the Iris dataset and a table for storing models. This dataset is used in exercises showing how to wrap R language or Python code in a SQL Server stored procedure.
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -10,10 +10,10 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-#  Iris demo data for SQL Server
+#  Iris demo data for SQL Server Python and R tutorials
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In this exercise, prepare a SQL Server database containing tables for the [Iris flower data set](https://en.wikipedia.org/wiki/Iris_flower_data_set) and model storage. Iris data is included in both the R and Python distributions installed by SQL Server. It's used in machine learning tutorials for SQL Server. 
+In this exercise, create a SQL Server database to store data from the [Iris flower data set](https://en.wikipedia.org/wiki/Iris_flower_data_set) and models based on the same data. Iris data is included in both the R and Python distributions installed by SQL Server, and is used in machine learning tutorials for SQL Server. 
 
 To complete this exercise, you should have [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017) or another tool that can run T-SQL queries.
 
@@ -21,7 +21,7 @@ Tutorials and quickstarts using this data set include the following:
 
 +  [Use a Python model in SQL Server for training and scoring](train-score-using-python-in-tsql.md)
 
-## Prepare the database and tables
+## Create the database
 
 1. Start SQL Server Management Studio, and open a new **Query** window.  
 
@@ -134,7 +134,7 @@ You can obtain built-in Iris data from either R or Python. You can use Python or
     > To modify the stored procedure later, you don't need to drop and recreate it. Use the [ALTER PROCEDURE](https://docs.microsoft.com/sql/t-sql/statements/alter-procedure-transact-sql) statement. 
 
 
-## Query data for verification
+## Query the data
 
 As a validation step, run a query to confirm the data was uploaded.
 

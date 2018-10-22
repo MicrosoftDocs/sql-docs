@@ -31,6 +31,11 @@
             "redirect_document_id": false
         }, 
         {
+            "source_path": "docs/advanced-analytics/tutorials/sqldev-py2-import-data-to-sql-server-using-powershell.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/demo-data-nyctaxi-in-sql",
+            "redirect_document_id": false
+        }, 
+        {
             "source_path": "docs/advanced-analytics/r/configuration-sql-server-r-services.md",
             "redirect_url": "/sql/advanced-analytics/r/managing-and-monitoring-r-solutions",
             "redirect_document_id": false

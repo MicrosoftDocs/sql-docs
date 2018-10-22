@@ -1,7 +1,7 @@
 ---
 title: "Tutorials for SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/31/2017"
+ms.date: "11/01/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: performance

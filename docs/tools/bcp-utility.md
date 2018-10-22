@@ -34,8 +34,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 # bcp Utility
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
- > For content related to previous versions of SQL Server, see [bcp Utility](bcp-utility.md).
-
  > For the latest version of the bcp utility, see [Microsoft Command Line Utilities 14.0 for SQL Server ](http://go.microsoft.com/fwlink/?LinkID=825643)
 
  > For using bcp on Linux, see [Install sqlcmd and bcp on Linux](../linux/sql-server-linux-setup-tools.md).

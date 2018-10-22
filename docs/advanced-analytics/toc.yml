@@ -57,13 +57,45 @@
       href: tutorials/rtsql-working-with-inputs-and-outputs.md
     - name: Handle data types and objects
       href: tutorials/rtsql-r-and-sql-data-types-and-data-objects.md
+    - name: Using R functions
+      href: tutorials/rtsql-using-r-functions-with-sql-server-data.md
     - name: Create a predictive model
       href: tutorials/rtsql-create-a-predictive-model-r.md
     - name: Predict and plot from model
       href: tutorials/rtsql-predict-and-plot-from-model.md
+  - name: Python
+    items:
+    - name: Run Python using T-SQL
+      href: tutorials/run-python-using-t-sql.md
 - name: Tutorials
   href: tutorials/machine-learning-services-tutorials.md
   items:
+  - name: Data
+    items:
+    - name: Iris data set
+      href: tutorials/demo-data-iris-in-sql.md
+    - name: NYC Taxi data set
+      href: tutorials/demo-data-nyctaxi-in-sql.md
+  - name: Python
+    href: tutorials/sql-server-python-tutorials.md
+    items:
+    - name: Train and use your first model
+      href: tutorials/train-score-using-python-in-tsql.md    
+    - name: Learn in-database analytics
+      href: tutorials/sqldev-in-database-python-for-sql-developers.md
+      items:
+      - name: Import data
+        href: tutorials/sqldev-py2-import-data-to-sql-server-using-powershell.md
+      - name: Explore and visualize data
+        href: tutorials/sqldev-py3-explore-and-visualize-the-data.md
+      - name: Create data features
+        href: tutorials/sqldev-py4-create-data-features-using-t-sql.md
+      - name: Train and save the model
+        href: tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md
+      - name: Operationalize the model
+        href: tutorials/sqldev-py6-operationalize-the-model.md
+    - name: Create a model using revoscalepy
+      href: tutorials/use-python-revoscalepy-to-create-model.md
   - name: R
     href: tutorials/sql-server-r-tutorials.md
     items:
@@ -72,15 +104,13 @@
     - name: Learn in-database analytics
       href: tutorials/sqldev-in-database-r-for-sql-developers.md
       items:
-      - name: 1 - Set up demo data
-        href: tutorials/sqldev-download-the-sample-data.md
-      - name: 2 - Visualize data
+      - name: 1 - Visualize data
         href: tutorials/sqldev-explore-and-visualize-the-data.md
-      - name: 3 - Create data features
+      - name: 2 - Create data features
         href: tutorials/sqldev-create-data-features-using-t-sql.md
-      - name: 4 - Train and save to SQL
-        href: r/sqldev-train-and-save-a-model-using-t-sql.md
-      - name: 5 - Predict outcomes
+      - name: 3 - Train and save to SQL
+        href: tutorials/sqldev-train-and-save-a-model-using-t-sql.md
+      - name: 4 - Predict outcomes
         href: tutorials/sqldev-operationalize-the-model.md
     - name: Data science end-to-end walkthrough
       href: tutorials/walkthrough-data-science-end-to-end-walkthrough.md
@@ -132,33 +162,6 @@
         href: tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md
       - name: Create a simple simulation
         href: tutorials/deepdive-create-a-simple-simulation.md
-  - name: Python
-    href: tutorials/sql-server-python-tutorials.md
-    items:
-    - name: Run Python using T-SQL
-      href: tutorials/run-python-using-t-sql.md
-      items:
-      - name: Wrap Python in a stored procedure
-        href: tutorials/wrap-python-in-tsql-stored-procedure.md
-      - name: Train and score from a Python model in SQL Server
-        href: tutorials/train-score-using-python-in-tsql.md
-      - name: Create a model using revoscalepy in a SQL Server compute context
-        href: tutorials/use-python-revoscalepy-to-create-model.md
-    - name: Learn in-database analytics
-      href: tutorials/sqldev-in-database-python-for-sql-developers.md
-      items:
-      - name: Get data and scripts
-        href: tutorials/sqldev-py1-download-the-sample-data.md
-      - name: Import data
-        href: tutorials/sqldev-py2-import-data-to-sql-server-using-powershell.md
-      - name: Explore and visualize data
-        href: tutorials/sqldev-py3-explore-and-visualize-the-data.md
-      - name: Create data features
-        href: tutorials/sqldev-py4-create-data-features-using-t-sql.md
-      - name: Train and save the model
-        href: tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md
-      - name: Operationalize the model
-        href: tutorials/sqldev-py6-operationalize-the-model.md
 - name: Samples
   href: https://github.com/Microsoft/sql-server-samples
 - name: Solutions
@@ -171,37 +174,37 @@
     href: concepts/extension-r.md
   - name: Python extension
     href: concepts/extension-python.md
+  - name: Security
+    href: concepts/security.md
 - name: How-to guides
   href: r/sql-server-machine-learning-tasks.md
   items:
   - name: Package management
     items:
-    - name: Package management
+    - name: Default packages
+      href: r/installing-and-managing-r-packages.md
+    - name: Get package information
+      href: r/determine-which-packages-are-installed-on-sql-server.md
+    - name: Install new Python packages
+      href: python/install-additional-python-packages-on-sql-server.md
+    - name: Install new R packages
+      href: r/install-additional-r-packages-on-sql-server.md
       items:
-      - name: Default packages
-        href: r/installing-and-managing-r-packages.md
-      - name: Get package information
-        href: r/determine-which-packages-are-installed-on-sql-server.md
-      - name: Install new Python packages
-        href: python/install-additional-python-packages-on-sql-server.md
-      - name: Install new R packages
-        href: r/install-additional-r-packages-on-sql-server.md
+      - name: Use R package managers
+        href: r/use-r-package-managers-on-sql-server.md
+      - name: Use T-SQL
+        href: r/install-r-packages-tsql.md
+      - name: Use RevoScaleR
+        href: r/use-revoscaler-to-manage-r-packages.md
         items:
-        - name: Use R package managers
-          href: r/use-r-package-managers-on-sql-server.md
-        - name: Use T-SQL
-          href: r/install-r-packages-tsql.md
-        - name: Use RevoScaleR
-          href: r/use-revoscaler-to-manage-r-packages.md
-          items:
-          - name: Enable remote R package management
-            href: r/r-package-how-to-enable-or-disable.md
-          - name: Synchronize R packages
-            href: r/package-install-uninstall-and-sync.md
-        - name: Create a miniCRAN repo
-          href: r/create-a-local-package-repository-using-minicran.md
-        - name: Tips for using R packages
-          href: r/packages-installed-in-user-libraries.md
+        - name: Enable remote R package management
+          href: r/r-package-how-to-enable-or-disable.md
+        - name: Synchronize R packages
+          href: r/package-install-uninstall-and-sync.md
+      - name: Create a miniCRAN repo
+        href: r/create-a-local-package-repository-using-minicran.md
+      - name: Tips for using R packages
+        href: r/packages-installed-in-user-libraries.md
   - name: Data exploration and modeling
     items:
     - name: R libraries and data types
@@ -242,44 +245,34 @@
       href: r/using-r-code-profiling-functions.md
   - name: Security
     items:
-    - name: Security considerations
-      href: r/security-considerations-for-the-r-runtime-in-sql-server.md
-    - name: Security for R 
-      href: r/security-overview-sql-server-r.md
-    - name: Security for Python
-      href: python/security-overview-sql-server-python-services.md
-    - name: SQL Server Launchpad account
-      href: general/sql-server-launchpad-service-account.md
-    - name: Modify SQLRUserGroup
-      href: r/modify-the-user-account-pool-for-sql-server-r-services.md
+    - name: Give users permission
+      href: security/user-permission.md
+    - name: Configure Launchpad
+      href: security/sql-server-launchpad-service-account.md
+    - name: Configure firewall
+      href: security/firewall-configuration.md
     - name: Add SQLRUserGroup as a database user
-      href: r/add-sqlrusergroup-to-database.md
+      href: security/add-sqlrusergroup-to-database.md
   - name: Administration
     items:
-    - name: Configure and manage R
-      href: r/configuration-sql-server-r-services.md
-    - name: Advanced configuration options for Machine Learning Services
-      href: r/configure-and-manage-advanced-analytics-extensions.md
-    - name: Deploy and consume models using web services
-      href: operationalization-with-mrsdeploy.md
-    - name: Manage and monitor solutions
+    - name: Manage integration
       href: r/managing-and-monitoring-r-solutions.md
-    - name: Resource governance for Machine Learning Services
-      href: r/resource-governance-for-r-services.md
-    - name: Create a resource pool for machine learning
-      href: r/how-to-create-a-resource-pool-for-r.md
-    - name: Extended events for Machine Learning Services
-      href: r/extended-events-for-sql-server-r-services.md
-    - name: Extended events for monitoring PREDICT statements
-      href: xe-event-predict-tsql.md
-    - name: DMVs for Machine Learning Services
-      href: r/dmvs-for-sql-server-r-services.md
-    - name: DMVs for Python
-      href: python/dmvs-for-python.md
-    - name: Using R code profiling functions
-      href: r/using-r-code-profiling-functions.md
-    - name: Monitor Machine Learning Services using custom reports in Management Studio
+    - name: Monitor using SSMS reports
       href: r/monitor-r-services-using-custom-reports-in-management-studio.md
+    - name: Scale script execution
+      href: administration/modify-user-account-pool.md
+    - name: Use resource governance
+      href: administration/resource-governance.md
+    - name: Create a resource pool
+      href: administration/how-to-create-a-resource-pool.md
+    - name: Extended events 
+      href: r/extended-events-for-sql-server-r-services.md
+    - name: Extended events PREDICT T-SQL
+      href: xe-event-predict-tsql.md
+    - name: Data Management Views (DMV)
+      href: r/dmvs-for-sql-server-r-services.md
+    - name: R code profiling functions
+      href: r/using-r-code-profiling-functions.md
 - name: Reference
   href: r/machine-learning-services-r-reference.md
   items:

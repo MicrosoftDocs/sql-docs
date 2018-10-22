@@ -42,7 +42,7 @@ The direct attached storage (DAS) is a pool of disks connected to the data hosts
  
 ![HPE Scalability unit](media/scalability-unit-hpe.png "HPE Scalability unit")  
   
-### Data scale unit description
+### Data Scale unit description
 
 A Data Scale unit has one server (host) for each Compute Node and one direct-attached disk array that is attached with Serial Attached SCSI (SAS). Within the storage cabinet, the disk array is divided into two halves that each have redundant power supplies. Windows Server Storage Spaces manages user data by duplicating data across RAID 1 mirrored disk pairs. The disks in each disk pair are stored in different halves of the disk array.  
   
@@ -56,21 +56,21 @@ The total number of disks for the Compute nodes:
   
 -   In addition, each disk array has hot spare disks and a system disk.  
   
-**For high availability**, when a Compute node fails over it can still function and access its user data through the other host in the Data Scale unit. At least one of the direct attached physical hosts MUST be functioning or data access to the storage is lost.  
+**For high availability**, when a Compute node fails over, it can still function and access its user data through the other host in the Data Scale unit. At least one of the direct attached physical hosts MUST be functioning or data access to the storage is lost.  
   
 **For disk sizes**, the direct attached storage can have 1, 2, or 3 Terabyte disk drives. All Data Scale units must have disks of the same size.  
   
 ## <a name="basescaleunit"></a>Base Scale unit 
  
-The Base Scale unit contains the minimum number of brain-power hosts, data hosts, and direct attached storage that is required for the appliance. It includes these components.  
+The Base Scale unit contains the minimum number of brain-power hosts, data hosts, and direct attached storage that is required for the appliance. It includes the following components. 
   
-### orchestration host  
+### Orchestration host  
 This server runs the brains of PDW.
   
-### passive host  
+### Passive host  
 This server provides high availability. It is online and ready to run jobs in case there is a failure on the orchestration or data host. The orchestration host, passive host, and Data Scale unit servers are configured as a Windows failover cluster. Each rack in the appliance requires one passive host.  
   
-### optional passive host  
+### Optional passive host  
 To add further redundancy, you have the option to add a second passive host to the Base Scale unit.  
   
 ### Data Scale unit  

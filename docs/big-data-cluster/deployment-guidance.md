@@ -4,7 +4,7 @@ description:
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 10/01/2018
+ms.date: 10/08/2018
 ms.topic: conceptual
 ms.prod: sql
 ---
@@ -19,11 +19,12 @@ SQL Server Big Data cluster can be deployed as docker containers on a Kubernetes
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
-## Kubernetes prerequisistes
+## <a id="prereqs"></a> Kubernetes cluster prerequisites
 
 SQL Server Big Data cluster requires a minimum v1.10 version for Kubernetes, for both server and client. To install a specific version on kubectl client, see [Install kubectl binary via curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl).  Latest versions of minikube and AKS are at least 1.10. For AKS you will need to use `--kubernetes-version` parameter to specify a version different than default.
 
-Also, note that the client/server Kubernetes version skew that is supported is +/-1 minor version. The Kubernetes documentation states that  "a client should be skewed no more than one minor version from the master, but may lead the master by up to one minor version. For example, a v1.3 master should work with v1.1, v1.2, and v1.3 nodes, and should work with v1.2, v1.3, and v1.4 clients." For more information, see [Kubernetes supported releases and component skew](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew).
+> [!NOTE]
+> Note that the client and server Kubernetes versions should be +1 or -1 minor version. For more information, see [Kubernetes supported releases and component skew](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew).
 
 ## <a id="kubernetes"></a> Kubernetes cluster setup
 
@@ -41,14 +42,17 @@ For guidance on configuring one of these Kubernetes cluster options for SQL Serv
 
    - [Configure Minikube](deploy-on-minikube.md)
    - [Configure Kubernetes on Azure Kubernetes Service](deploy-on-aks.md)
+   
+> [!TIP]
+> For a sample python script that deploys both AKS and SQL Server big data cluster, see [Deploy a SQL Server big data cluster on Azure Kubernetes Service (AKS)](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/aks).
 
 ## <a id="deploy"></a> Deploy SQL Server Big Data cluster
 
-After you have configured your Kubernetes cluster, you can proceed with the deployment for SQL Server Big Data cluster. To deploy an Aris cluster with all default configurations for a dev/test environment, follow the instructions in this article:
+After you have configured your Kubernetes cluster, you can proceed with the deployment for SQL Server Big Data cluster. To deploy a big data cluster with all default configurations for a dev/test environment, follow the instructions in this article:
 
-[Quickstart: Deploy SQL Server Aris on Kubernetes](quickstart-big-data-cluster-deploy.md)
+[Quickstart: Deploy SQL Server Big Data Cluster on Kubernetes](quickstart-big-data-cluster-deploy.md)
 
-If you want to customize your Aris configuration, according to your workload needs, follow the next set of instructions.
+If you want to customize your big data cluster configuration, according to your workload needs, follow the next set of instructions.
 
 ## Verify kubernetes configuration
 
@@ -69,6 +73,9 @@ sudo apt-get install python3
 sudo apt-get install python3-pip
 sudo pip3 install --upgrade pip
 ```
+
+> [!NOTE]
+If your Python installation is missing the `requests` package, you must install `requests` using `python -m pip install requests`. If you already have a `requests` package installed, make sure you have the latest version by running `python -m pip install requests --upgrade`.
 
 Run the below command to install msqlctl:
 
@@ -100,8 +107,8 @@ The cluster configuration can be customized using a set of environment variables
 | **CONTROLLER_PASSWORD** | Yes | N/A | The password for the cluster administrator. |
 | **KNOX_PASSWORD** | Yes | N/A | The password for Knox user. |
 | **MSSQL_SA_PASSWORD** | Yes | N/A | The passowrd of SA user for SQL master instance. |
-| **USE_PERSISTENT_VOLUME** | No | true | `true` to use Kubernetes Persistent Volume Claims for pod storage.  `false` to use ephemeral host storage for pod storage. See the [data persistence](concept-data-persistence.md) topic for more details. |
-| **STORAGE_CLASS_NAME** | No | default | If `USE_PERSISTENT_VOLUME` is `true` this indicates the name of the Kubernetes Storage Class to use. See the [data persistence](concept-data-persistence.md) topic for more details. |
+| **USE_PERSISTENT_VOLUME** | No | true | `true` to use Kubernetes Persistent Volume Claims for pod storage.  `false` to use ephemeral host storage for pod storage. See the [data persistence](concept-data-persistence.md) topic for more details. If you deploy SQL Server big data cluster on minikube and USE_PERSISTENT_VOLUME=true, you must set the value for `STORAGE_CLASS_NAME=standard`. |
+| **STORAGE_CLASS_NAME** | No | default | If `USE_PERSISTENT_VOLUME` is `true` this indicates the name of the Kubernetes Storage Class to use. See the [data persistence](concept-data-persistence.md) topic for more details. Note that if you deploy SQL Server big data cluster on minikube, the default storage class name is different and you must override it by setting `STORAGE_CLASS_NAME=standard`. |
 | **MASTER_SQL_PORT** | No | 31433 | The TCP/IP port that the master SQL instance listens on the public network. |
 | **KNOX_PORT** | No | 30443 | The TCP/IP port that Apache Knox listens on the public network. |
 | **GRAFANA_PORT** | No | 30888 | The TCP/IP port that the Grafana monitoring application listens on the public network. |
@@ -112,9 +119,9 @@ The cluster configuration can be customized using a set of environment variables
 > [!IMPORTANT]
 >1. For the duration of the limited private preview, credentials for the private Docker registry will be provided to you upon triaging your [EAP registration](https://aka.ms/eapsignup).
 >1. For an on-premises cluster built with kubeadm, the value for environment variable `CLUSTER_PLATFORM` is `kubernetes`. Also, when USE_PERSISTENT_STORAGE=true, you must pre-provision a Kubernetes storage class and pass it through using the STORAGE_CLASS_NAME.
->1. Make sure you wrap the passwords in double quotes if it contains any special characters. You can set the MSSQL_SA_PASSWORD to whatever you like, but make sure they are sufficiently complex and don’t use the `!`, `&` or `‘` characters.
+>1. Make sure you wrap the passwords in double quotes if it contains any special characters. You can set the MSSQL_SA_PASSWORD to whatever you like, but make sure they are sufficiently complex and don’t use the `!`, `&` or `‘` characters. Note that double quotes delimiters work only in bash commands.
 >1. The name of your cluster must be only lower case alpha-numeric characters, no spaces. All Kubernetes artifacts (containers, pods, statefull sets, services) for the cluster will be created in a namespace with same name as the cluster name specified.
-
+>1. The **SA** account is a system administrator on the SQL Server Master instance that gets created during setup. After creating your SQL Server container, the MSSQL_SA_PASSWORD environment variable you specified is discoverable by running echo $MSSQL_SA_PASSWORD in the container. For security purposes, change your SA password as per best practices documented [here](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password).
 
 Setting the environment variables required for deploying Aris cluster differs depending on whether you are using Windows or Linux client.  Choose the steps below depending on which operating system you are using.
 
@@ -137,9 +144,19 @@ SET DOCKER_REGISTRY=private-repo.microsoft.com
 SET DOCKER_REPOSITORY=mssql-private-preview
 SET DOCKER_USERNAME=<your username>
 SET DOCKER_PASSWORD=<your password>
+SET DOCKER_EMAIL=<your Docker email, use same as username provided>
 SET DOCKER_PRIVATE_REGISTRY="1"
 ```
 
+On minikube, if USE_PERSISTENT_VOLUME=true (default), you must also overide the default value for STORAGE_CLASS_NAME environment variable:
+```
+SET STORAGE_CLASS_NAME=standard
+```
+
+Alternatively, you can supress using persistent volumes on minikube:
+```
+SET USE_PERSISTENT_VOLUME=false
+```
 ### Linux
 
 Initialize the following environment variables:
@@ -157,9 +174,19 @@ export DOCKER_REGISTRY=private-repo.microsoft.com
 export DOCKER_REPOSITORY=mssql-private-preview
 export DOCKER_USERNAME=<your username>
 export DOCKER_PASSWORD=<your password>
+export DOCKER_EMAIL=<your Docker email, use same as username provided>
 export DOCKER_PRIVATE_REGISTRY="1"
 ```
 
+On minikube, if USE_PERSISTENT_VOLUME=true (default), you must also overide the default value for STORAGE_CLASS_NAME environment variable:
+```
+SET STORAGE_CLASS_NAME=standard
+```
+
+Alternatively, you can supress using persistent volumes on minikube:
+```
+SET USE_PERSISTENT_VOLUME=false
+```
 ## Deploy SQL Server Big Data cluster
 
 The create cluster API is used to initialize the Kubernetes namespace and deploy all the application pods into the namespace. To deploy SQL Server Big Data cluster on your Kubernetes cluster, run the following command:
@@ -192,7 +219,7 @@ After the deployment script has completed successfully, you can obtain the IP ad
 If you are using AKS, Azure provides the Azure LoadBalancer service. Run following command:
 
 ```bash
-kubectl get svc service-master-lb -n <name of your cluster>
+kubectl get svc service-master-pool-lb -n <name of your cluster>
 kubectl get svc service-security-lb -n <name of your cluster>
 kubectl get svc service-proxy-lb -n <name of your cluster>
 ```

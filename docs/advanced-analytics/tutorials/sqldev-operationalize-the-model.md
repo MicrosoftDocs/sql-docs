@@ -1,16 +1,16 @@
 ---
-title: Lesson 6 Predict potential outcomes using R models (SQL Server Machine Learning) | Microsoft Docs
+title: Lesson 4 Predict potential outcomes using R models (SQL Server Machine Learning) | Microsoft Docs
 description: Tutorial showing how to embed R in SQL Server stored procedures and T-SQL functions 
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 06/08/2018  
+ms.date: 10/19/2018  
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-# Lesson 6: Predict potential outcomes using an R model in a stored procedure
+# Lesson 4: Predict potential outcomes using an R model in a stored procedure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This article is part of a tutorial for SQL developers on how to use R in SQL Server.
@@ -187,7 +187,7 @@ In this section, you learn how to create single predictions using a stored proce
     EXEC [dbo].[PredictTipSingleMode] 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
-3. The results indicate that the probability of getting a tip is low on these top 10 trips, since all are single-passenger trips over a relatively short distance.
+3. The results indicate that the probability of getting a tip is low (zero) on these top 10 trips, since all are single-passenger trips over a relatively short distance.
 
 ## Conclusions
 
@@ -195,4 +195,4 @@ This concludes the tutorial. Now that you have learned to embed R code in stored
 
 ## Previous lesson
 
-[Lesson 5: Train and save an R model using T-SQL](../r/sqldev-train-and-save-a-model-using-t-sql.md)
+[Lesson 3: Train and save an R model using T-SQL](sqldev-train-and-save-a-model-using-t-sql.md)

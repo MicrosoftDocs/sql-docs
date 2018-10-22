@@ -4,7 +4,7 @@ description: This article describes how to install SQL Server Machine Learning S
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.date: 09/24/2018
+ms.date: 10/09/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: "sql-linux"
@@ -35,34 +35,68 @@ Package location of the R, Python, and Java extensions are in the SQL Server Lin
 
 <a name="mro"></a>
 
-### Microsoft R Open (MRO)
+### Microsoft R Open (MRO) installation
 
 Microsoft's base distribution of R is a prerequisite for using RevoScaleR, MicrosoftML, and other R packages installed with Machine Learning Services.
 
-The following commands register the repository providing MRO. Post-registration, the commands for installing other R packages will automatically include MRO as a package dependency.
+The required version is MRO 3.4.4.
 
-#### On Ubuntu
+Choose from the following two approaches to install MRO:
+
++ Download the MRO tarball from MRAN, unpack it, and run its install.sh script. You can follow the [installation instructions on MRAN](https://mran.microsoft.com/releases/3.4.4) if you want this approach.
+
++ Alternatively, register the **packages.microsoft.com** repo as described below to install the three packages comprising the MRO distribution: microsoft-r-open-mro, microsoft-r-open-mkl, and microsoft-r-open-foreachiterators. 
+
+The following commands register the repository providing MRO. Post-registration, the commands for installing other R packages, such as mssql-mlservices-mml-r, will automatically include MRO as a package dependency.
+
+#### MRO on Ubuntu
 
 ```bash
+# Install as root
+sudo su
+
+# Optionally, if your system does not have the https apt transport option
+apt-get install apt-transport-https
+
+# Add the **azure-cli** repo to your apt sources list
+AZ_REPO=$(lsb_release -cs)
+
+echo "deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ $AZ_REPO main" | sudo tee /etc/apt/sources.list.d/azure-cli.list
+
 # Set the location of the package repo the "prod" directory containing the distribution.
-# This example specifies 16.04. Replace with 18.04 if you want that version
+# This example specifies 16.04. Replace with 14.04 if you want that version
 wget https://packages.microsoft.com/config/ubuntu/16.04/packages-microsoft-prod.deb
 
 # Register the repo
 dpkg -i packages-microsoft-prod.deb
 ```
 
-#### On RHEL
+#### MRO on RHEL
 
 ```bash
+# Import the Microsoft repository key
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+
+# Create local `azure-cli` repository
+sudo sh -c 'echo -e "[azure-cli]\nname=Azure CLI\nbaseurl=https://packages.microsoft.com/yumrepos/azure-cli\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/azure-cli.repo'
+
 # Set the location of the package repo at the "prod" directory
+# The following command is for version 7.x
+# For 6.x, replace 7 with 6 to get that version
 rpm -Uvh https://packages.microsoft.com/config/rhel/7/packages-microsoft-prod.rpm
 ```
-#### On SUSE
+#### MRO on SUSE
 
 ```bash
-# Set the location of the package repo
+# Install as root
+sudo su
+
+# Set the location of the package repo at the "prod" directory containing the distribution
+# This example is for SLES12, the only supported version of SUSE in Machine Learning Server
 zypper ar -f https://packages.microsoft.com/sles/12/prod packages-microsoft-com
+
+# Update packages on your system:
+zypper update
 ```
 
 ## Package list
@@ -74,7 +108,7 @@ On an internet-connected device, packages are downloaded and installed independe
 |mssql-server-extensibility  | All | Extensibility framework used to run R, Python, or Java code. |
 |mssql-server-extensibility-java | Java | Java extension for loading a Java execution environment. There are no additional libraries or packages for Java. |
 | microsoft-openmpi  | Python, R | Message passing interface used by the Revo* libraries for parallelization on Linux. |
-| microsoft-r-open | R | Open-source distribution of R. |
+| [microsoft-r-open*](#mro) | R | Open-source distribution of R, composed of three packages. |
 | mssql-mlservices-python | Python | Open-source distribution of Anaconda and Python. |
 |mssql-mlservices-mlm-py  | Python | Full install. Provides revoscalepy, microsoftml, pre-trained models for image featurization and text sentiment analysis.| 
 |mssql-mlservices-mml-py  | Python | Partial install. Provides revoscalepy, microsoftml. <br/>Excludes pre-trained models. | 
@@ -127,14 +161,15 @@ Install any *one* R package, plus any *one* Python package, and Java if you want
 > [!Tip]
 > If possible, run `apt-get update` to refresh packages on the system prior to installation. Additionally, some docker images of Ubuntu might not have the https apt transport option. To install it, use `apt-get install apt-transport-https`.
 
+<!---
 ### Prerequisite for 18.04
 
 Running mssql-mlservices R libraries on Ubuntu 18.04 requires **libpng12** from the Linux Kernel archives. This package is no longer included in the standard distribution and must be installed manually. To get this library, run the following commands:
 
 ```bash
 wget https://mirrors.kernel.org/ubuntu/pool/main/libp/libpng/libpng12-0_1.2.54-1ubuntu1_amd64.deb
-dpkg -i libpng12-01_1.2.54-1ubuntu1_amd64.deb
-```
+dpkg -i libpng12-0_1.2.54-1ubuntu1_amd64.deb
+```--->
 
 ### Example 1 -  Full installation 
 
@@ -267,13 +302,19 @@ GO
 
 You can install and configure the database engine and Machine Learning Services in one procedure by appending R, Python, or Java packages and parameters on a command that installs the database engine. 
 
-The following example is a "template" illustration of what a combined package installation looks like using the Yum package manager:
+The following example is a "template" illustration of what a combined package installation looks like using the Yum package manager. It installs the database engine and adds the Java language extension, which pulls in the extensibility framework package as a dependency.
 
 ```bash
-sudo yum install -y mssql-sqlserver mssql-server-extensibility-java 
+sudo yum install -y mssql-server mssql-server-extensibility-java 
 ```
 
-The example installs the database engine and adds the Java language extension, which pulls in the extensibility framework package as a dependency. All of the packages used in this example are found at the same path. If you were adding R packages, registration for microsoft-r-open package repository would be required.
+An expanded example with all extensions (Java, R, Python) looks like this:
+
+```bash
+sudo yum install -y mssql-server mssql-server-extensibility-java mssql-mlservices-packages-r-9.4.5* mssql-mlservices-packages-py-9.4.5*
+```
+
+Except for the R prerequisites, all of the packages used in this example are found at the same path. Adding R requires that you [register the microsoft-r-open package repository](#mro) as an extra step to get MRO. MRO is a prerequisite for R extensibility. On a computer connected to the internet, MRO is retrieved and installed automatically as part of the R extension, assuming you configured both repositories.
 
 Post-installation, remember to use the mssql-conf tool to configure the entire installation and accept licensing agreements. Unaccepted EULAs for open-source R and Python components are detected automatically, and you are prompted to accept them, along with the EULA for SQL Server.
 

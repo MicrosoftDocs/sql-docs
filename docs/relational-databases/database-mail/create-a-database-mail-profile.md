@@ -185,7 +185,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
      *@is_default* = '*Default Profile status* '  
   
-     where *@profile_name* is the name of the profile, and *@principal_name* to indicate this this is a public profile, *@is_default* determines the whether this profile is the default for the database user or role.  
+     where *@profile_name* is the name of the profile, and *@principal_name* to indicate this is a public profile, *@is_default* determines the whether this profile is the default for the database user or role.  
   
  The following example creates a Database Mail account, creates a Database Mail private profile, then adds the account to the profile and grants public access to the profile.  
   

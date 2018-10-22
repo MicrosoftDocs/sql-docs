@@ -46,7 +46,7 @@ As with previous releases, the **SQLRUserGroup** continues to provide read and e
 
 ## Implied authentication
 
-As before, additional configuration is still required for *implied authentication* in cases where script or code has to connect back to SQL Server using trusted authentication to retrieve data or resources. The additional configuration involves creating a database login for **SQLRUserGroup**, whose sole member is now the single SQL Server Launchpad service account instead of multiple worker accounts. For more information about this task, see [Add SQLRUserGroup as a database user](../r/add-sqlrusergroup-to-database.md).
+As before, additional configuration is still required for *implied authentication* in cases where script or code has to connect back to SQL Server using trusted authentication to retrieve data or resources. The additional configuration involves creating a database login for **SQLRUserGroup**, whose sole member is now the single SQL Server Launchpad service account instead of multiple worker accounts. For more information about this task, see [Add SQLRUserGroup as a database user](../security/add-sqlrusergroup-to-database.md).
 
 
 ## Symbolic link created by Setup

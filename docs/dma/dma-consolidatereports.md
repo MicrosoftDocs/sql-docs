@@ -2,7 +2,7 @@
 title: "Assess an enterprise and consolidate assessment reports (SQL Server) | Microsoft Docs"
 description: Learn how to use DMA to assess an enterprise and consolidate assessment reports before upgrading SQL Server or migrating to Azure SQL Database.
 ms.custom: ""
-ms.date: "09/21/2018"
+ms.date: "10/20/2018"
 ms.prod: sql
 ms.prod_service: "dma"
 ms.reviewer: ""
@@ -12,7 +12,7 @@ keywords: ""
 helpviewer_keywords: 
   - "Data Migration Assistant, Assess"
 ms.assetid: ""
-author: HJToland3
+author: pochiraju
 ms.author: rajpo
 manager: craigg
 ---
@@ -78,11 +78,11 @@ Create a database called **EstateInventory** and a table called **DatabaseInvent
 
 ![SQL Server table contents](../dma/media//dma-consolidatereports/dma-sql-server-table-contents.png)
 
-If this database is not on the tools computer, ensure that the tools computer has network connectivity to this SQL Server instance.
+If this database isn't on the tools computer, ensure that the tools computer has network connectivity to this SQL Server instance.
 
 The benefit of using a SQL Server table over a CSV file is that you can use the assessment flag column to control the instance / database that gets picked up for assessment, which makes it easier to separate assessments into smaller chunks.  You can then span multiple assessments (see the section on running an assessment later in this article), which is easier than maintaining multiple CSV files.
 
-Keep in mind that depending on the number of objects and their complexity, an assessment can take an exceptionally long time (hours+), so it is prudent to separate the assessment into manageable chunks.
+Keep in mind that depending on the number of objects and their complexity, an assessment can take an exceptionally long time (hours+), so it's prudent to separate the assessment into manageable chunks.
 
 ## Running a scaled assessment
 After loading the PowerShell modules into the modules directory and creating an inventory, you need to run a scaled assessment by opening PowerShell and running the dmaDataCollector function.
@@ -107,7 +107,7 @@ If there is an unexpected error, then the command window that gets initiated by 
 
 ## Consuming the assessment JSON file
 
-After your assessment has finished, you are now ready to import the data into SQL Server for analysis. To consume the assessment JSON file, open PowerShell and run the dmaProcessor function.
+After your assessment has finished, you're now ready to import the data into SQL Server for analysis. To consume the assessment JSON file, open PowerShell and run the dmaProcessor function.
  
   ![dmaProcessor function listing](../dma/media//dma-consolidatereports/dma-dmaProcessor-function-listing.png)
 
@@ -116,12 +116,12 @@ The parameters associated with the dmaProcessor function are described in the fo
 |Parameter  |Description
 |---------|---------|
 |**processTo**	| The location to which the JSON file will be processed. Possible values are **SQLServer** and **AzureSQLDatabase**. |
-|**serverName**	| The SQL Server instance to which data will be processed.  If you specify **AzureSQLDatabase** for the **processTo** parameter, then include only the SQL Server name (do not include .database.windows.net). You will be prompted for two logins when targeting Azure SQL Database; the first is your Azure tenant credentials, while the second is your admin login for the Azure SQL Server. |
-|**CreateDMAReporting** | The staging database to create for processing the JSON file.  If the database you specify already exists and you set this parameter to one, then objects do not get created.  This parameter is useful for recreating a single object that has been dropped. |
+|**serverName**	| The SQL Server instance to which data will be processed.  If you specify **AzureSQLDatabase** for the **processTo** parameter, then include only the SQL Server name (don't include .database.windows.net). You'll be prompted for two logins when targeting Azure SQL Database; the first is your Azure tenant credentials, while the second is your admin login for the Azure SQL Server. |
+|**CreateDMAReporting** | The staging database to create for processing the JSON file.  If the database you specify already exists and you set this parameter to one, then objects don't get created.  This parameter is useful for recreating a single object that has been dropped. |
 |**CreateDataWarehouse** | Creates the data warehouse that will be used by the Power BI report. |
 |**databaseName** | The name of the DMAReporting database. |
 |**warehouseName** | The name of the data warehouse database. |
-|**jsonDirectory** | The directory containing the JSON assessment file.  If there are multiple JSON files in the directory, then they are processed one by one. |
+|**jsonDirectory** | The directory containing the JSON assessment file.  If there are multiple JSON files in the directory, then they're processed one by one. |
 
 The dmaProcessor function should only take a few seconds to process a single file.
 
@@ -130,14 +130,14 @@ After the dmaProcessor has finishing processing the assessment files, the data w
 
 1. Use the LoadWarehouse script to populate any missing values in the dimensions.
 
-    The script will take the data from the ReportData table in the DMAReporting database and load it into the warehouse.  If there are any errors during this load process, they are likely a result of missing entries in the dimension tables.
+    The script will take the data from the ReportData table in the DMAReporting database and load it into the warehouse.  If there are any errors during this load process, they're likely a result of missing entries in the dimension tables.
 
 2. Load the data warehouse.
  
       ![LoadWarehouse contents loaded](../dma/media//dma-consolidatereports/dma-LoadWarehouse-loaded.png)
 
 ## Set your database owners
-While it is not mandatory, to get the most value from the reports, it is recommended that you set the database owners in the **dimDBOwner** dimension, and then update **DBOwnerKey** in the **FactAssessment** table.  Following this process will allow slicing and filtering the Power BI report based on specific database owners.
+While it's not mandatory, to get the most value from the reports, it's recommended that you set the database owners in the **dimDBOwner** dimension, and then update **DBOwnerKey** in the **FactAssessment** table.  Following this process will allow slicing and filtering the Power BI report based on specific database owners.
 
 You can also use the LoadWarehouse script to provide the basic TSQL statements for you to set the database owners.
 
@@ -153,7 +153,7 @@ You can also use the LoadWarehouse script to provide the basic TSQL statements f
 
       ![DMA Reports Power BI template loaded](../dma/media//dma-consolidatereports/dma-reports-powerbi-template-loaded.png)
 
-   After the report has refreshed the data from the **DMAWarehouse** database, you are presented with a report similar to the following.
+   After the report has refreshed the data from the **DMAWarehouse** database, you're presented with a report similar to the following.
 
    ![DMAWarehouse report view](../dma/media//dma-consolidatereports/dma-DMAWarehouse-report.png)
 

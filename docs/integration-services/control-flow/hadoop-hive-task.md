@@ -26,7 +26,7 @@ manager: craigg
   
 |Field|Description|  
 |-----------|-----------------|  
-|**Hadoop Connection**|Specify an existing Hadoop Connection Manager or create a new one. This connection manager indicates  where the the WebHCat service is hosted.|  
+|**Hadoop Connection**|Specify an existing Hadoop Connection Manager or create a new one. This connection manager indicates  where the WebHCat service is hosted.|  
 |**SourceType**|Specify the source type of the query. Available values are **ScriptFile** and **DirectInput**.|  
 |**InlineScript**|When the value of **SourceType** is **DirectInput**, specify the hive script.|  
 |**HadoopScriptFilePath**|When the value of **SourceType** is **ScriptFile**, specify the script file path on Hadoop.|  

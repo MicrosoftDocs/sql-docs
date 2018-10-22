@@ -1,16 +1,16 @@
 ---
-title: Lesson 3 Explore and visualize data using R and T-SQL (SQL Server Machine Learning) | Microsoft Docs
+title: Lesson 1 Explore and visualize data using R and T-SQL (SQL Server Machine Learning) | Microsoft Docs
 description: Tutorial showing how to embed R in SQL Server stored procedures and T-SQL functions 
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 06/07/2018  
+ms.date: 10/19/2018  
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-# Lesson 3: Explore and visualize the data
+# Lesson 1: Explore and visualize the data
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This article is part of a tutorial for SQL developers on how to use R in SQL Server.
@@ -87,7 +87,7 @@ To create the plot, use [rxHistogram](https://docs.microsoft.com/machine-learnin
     GO
     ```
 
-The stored procedure **PlotHistogram2** is identical to a pre-existing stored procedure **PlotHistogram** created by the `RunSQL_SQL_Walkthrough.ps1` script. 
+The stored procedure **PlotHistogram2** is identical to a pre-existing stored procedure **PlotHistogram** found in the NYCTaxi_sample database. 
   
 + The variable `@query` defines the query text (`'SELECT tipped FROM nyctaxi_sample'`), which is passed to the R script as the argument to the script input variable, `@input_data_1`.
   
@@ -159,7 +159,7 @@ The stored procedure returns the image as a stream of varbinary data, which obvi
 
 Typically, data scientists generate multiple data visualizations to get insights into the data from different perspectives. In this example, the stored procedure uses the Hist function to create the histogram, exporting the binary data to popular formats such as .JPG, .PDF, and .PNG. 
 
-1. Use the existing stored procedure, **PlotInOutputFiles**, to write histograms, scatterplots, and other R graphics to .JPG and .PDF format. The `RunSQL_SQL_Walkthrough.ps1` creates **PlotInOutputFiles** and adds it the database. Use right-click **Modify** to view the source.
+1. Use the existing stored procedure, **PlotInOutputFiles**, to write histograms, scatterplots, and other R graphics to .JPG and .PDF format. Use right-click **Modify** to view the source.
 
 2. Optionally, as a learning exercise, create your own copy of the procedure as **PlotInOutputFiles2**, with a unique name to avoid a naming conflict.
 
@@ -274,8 +274,8 @@ To view the plot, open the destination folder and review the files that were cre
 
 ## Next lesson
 
-[Lesson 3: Create data features using T-SQL](sqldev-create-data-features-using-t-sql.md)
+[Lesson 2: Create data features using T-SQL](sqldev-create-data-features-using-t-sql.md)
 
 ## Previous lesson
 
-[Lesson 1: Set up NYC Taxi demo data](sqldev-download-the-sample-data.md)
+[Set up NYC Taxi demo data](demo-data-nyctaxi-in-sql.md)

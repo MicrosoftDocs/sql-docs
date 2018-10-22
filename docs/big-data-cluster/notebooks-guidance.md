@@ -4,14 +4,24 @@ description:
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 10/01/2018
+ms.date: 10/05/2018
 ms.topic: conceptual
 ms.prod: sql
 ---
 
 # How to use notebooks in SQL Server 2019 preview
 
-This how you can launch notebooks on the cluster and start authoring your own Notebooks. It also shows how to submit jobs against the cluster.
+This article shows how to launch notebooks on a SQL Server 2019 big data cluster. It also shows how to start authoring your own notebooks and how to submit jobs against the cluster.
+
+## Prerequisites
+
+To use notebooks, you must install the following prerequisites:
+
+- [A SQL Server 2019 big data cluster](deployment-guidance.md)
+- [Azure Data Studio](../azure-data-studio/what-is.md)
+- [The SQL Server 2019 extension (preview)](../azure-data-studio/sql-server-2019-extension.md).
+
+[!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
 ## Connect to the SQL Server big data cluster end-point
 
@@ -61,6 +71,9 @@ When you select one of these kernels, we will install that kernel in the virtual
 The Attach-to selection provides the context for the Kernel to attach. When you are connected to the SQL Server big data cluster end-point, the default Attach-to selection will be that end-point of the cluster.
 
 ![image7](media/notebooks-guidance/image7.png)
+
+> [!NOTE]
+> By default, the Spark application is configured with 1 driver and 3 executors that will take approximately 8.5 GB of memory. The recommended configuration to run multiple spark sessions is for each server in the cluster to have at least 32 GB of memory (for example, in an AKS environment use **Standard_D8_v3** VM sizes, which have 32GB of memory).
 
 ## Hello world in the different contexts
 

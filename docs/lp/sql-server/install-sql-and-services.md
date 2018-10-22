@@ -3,8 +3,8 @@ layout: HubPage
 hide_bc: true
 experimental: true
 experiment_id: "81ba5f65-59fb-4d"
-title: Microsoft Azure Documentation
-description: Learn how to build and manage powerful applications using Microsoft Azure cloud services. Get documentation, example code, tutorials, and more.
+title: SQL Server - Installation and Upgrade
+description: Find the content that will help you install or upgrade your SQL Server and related services. 
 ms.topic: hub-page
 featureFlags:
 - clicktale
@@ -302,12 +302,22 @@ featureFlags:
         <ul class="links">
            <li>
                 <a href="http://aka.ms/editsqldocs" data-linktype="external">
-                    Contribute to SQL docs
+                    Contribute
+                </a>
+            </li>
+           <li>
+                <a href="https://docs.microsoft.com/sql/sql-server/sql-server-get-help" data-linktype="external">
+                    Get help
+                </a>
+            </li>
+           <li>
+                <a href="http://aka.ms/sqldocsfeedback" data-linktype="external">
+                    Feedback
                 </a>
             </li>
            <li>
                 <a href="http://aka.ms/sqldocsurvey" data-linktype="external">
-                    SQL Docs Feedback
+                    Survey
                 </a>
             </li>
            <li>
@@ -332,4 +342,5 @@ featureFlags:
             </li>
         </ul>
     </div>
+
 

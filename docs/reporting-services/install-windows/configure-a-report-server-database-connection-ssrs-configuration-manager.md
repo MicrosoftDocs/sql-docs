@@ -1,13 +1,12 @@
 ---
 title: "Configure a Report Server Database Connection  (SSRS Configuration Manager) | Microsoft Docs"
-ms.date: 09/20/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-
-ms.topic: conceptual
-
 author: markingmyname
 ms.author: maghan
+manager: kfile
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-native"
+ms.topic: conceptual
+ms.date: 09/20/2017
 ---
 
 # Configure a Report Server Database Connection  (SSRS Configuration Manager)

@@ -17,13 +17,19 @@ This enables you to use your existing skills or draw upon a large and growing bo
 
 This article describes the steps to deploy Kubernetes on AKS using Azure CLI. If you don't have an Azure subscription, create a free account before you begin.
 
+> [!TIP] 
+> For a sample python script that deploys both AKS and SQL Server big data cluster, see [Deploy a SQL Server big data cluster on Azure Kubernetes Service (AKS)](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/aks).
+
 ## Prerequisites
 
-- For an AKS environment, the minimum VM requirement is at least two agent VMs (in addition to master) of a minimum size Standard_DS3_V2. Minimum resources required per VM are 4 CPUs and 14 GB of memory.
+- For an AKS environment, the minimum VM requirement is at least two agent VMs (in addition to master) of a minimum size [Standard_DS3_v2](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-general#dsv2-series). Minimum resources required per VM are 4 CPUs and 14 GB of memory.
+  
+   > [!NOTE]
+   > If you plan to run big data jobs or multiple Spark applications, the minimum size is [Standard_D8_v3](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-general#dv3-series-sup1sup), and the minimum resources required per VM are 8 CPUs and 32 GB of memory.
 
-- This section requires that you be running the Azure CLI version 2.0.4 or later. If you need to install or upgrade, see [Install Azure CLI 2.0](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli). Run `az --version` to find the version if needed.
+- This section requires that you be running the Azure CLI version 2.0.4 or later. If you need to install or upgrade, see [Install Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-azure-cli). Run `az --version` to find the version if needed.
 
-- Install [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/). SQL Server Big Data cluster requires a minimum 1.10 version for Kubernetes, for both server and client. To install a specific version on kubectl client, see [Install kubectl binary via curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl). For AKS you will need to use `--kubernetes-version` parameter to specify a version different than default.
+- Install [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/). SQL Server Big Data cluster requires any minor version within the 1.10 version range for Kubernetes, for both server and client. To install a specific version on kubectl client, see [Install kubectl binary via curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl). For AKS you will need to use `--kubernetes-version` parameter to specify a version different than default. Note that at the CTP2.0 release timeframe, AKS only supports 1.10.7 and 1.10.8 versions. 
 
 
 > [!NOTE]
@@ -72,10 +78,10 @@ An Azure resource group is a logical group in which Azure resources are deployed
     --generate-ssh-keys \
     --node-vm-size Standard_DS3_v2 \
     --node-count 2 \
-    --kubernetes-version 1.10.3
+    --kubernetes-version 1.10.7
     ```
 
-    You can increase or decrease the default agent count by adding `--agent-count <n>` to the az aks create command where `<n>` is the number of agent nodes you want to have.
+    You can increase or decrease the default agent count by changing the `--node-count <n>` where `<n>` is the number of agent nodes you want to have.
 
     After several minutes, the command completes and returns JSON-formatted information about the cluster.
 
@@ -83,7 +89,7 @@ An Azure resource group is a logical group in which Azure resources are deployed
 
 ## Connect to the cluster
 
-1. To configure kubectl to connect to your Kubernetes cluster, run the [az aks get-credentials](https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest#az-aks-get-credentials) command. This step downloads credentials and configures the kubectl CLI to use them.
+1. To configure kubectl to connect to your Kubernetes cluster, run the [az aks get-credentials](https://docs.microsoft.com/cli/azure/aks?view=azure-cli-latest#az-aks-get-credentials) command. This step downloads credentials and configures the kubectl CLI to use them.
 
    ```bash
    az aks get-credentials --resource-group=sqlbigdatagroup --name kubcluster

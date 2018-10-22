@@ -64,7 +64,7 @@ manager: craigg
   
 |Property|Default Setting|Description|  
 |--------------|---------------------|-----------------|  
-|**Impersonation Settings**|**Default**|This property specifies the impersonation settings used when a model running in DirectQuery mode connects to data sources. Impersonation credentials are not used when querying the in-memory cache. This property setting has the following options:<br /><br /> **Default** – This setting specifies Analysis Services will use the option specified on the Impersonation Information page when the data source connection was created by using the Table Import Wizard.<br /><br /> **ImpersonateCurrentUser** – This setting specifies the the user account of the user currently logged on will be used when connecting to all data sources.|  
+|**Impersonation Settings**|**Default**|This property specifies the impersonation settings used when a model running in DirectQuery mode connects to data sources. Impersonation credentials are not used when querying the in-memory cache. This property setting has the following options:<br /><br /> **Default** – This setting specifies Analysis Services will use the option specified on the Impersonation Information page when the data source connection was created by using the Table Import Wizard.<br /><br /> **ImpersonateCurrentUser** – This setting specifies the user account of the user currently logged on will be used when connecting to all data sources.|  
   
 ##  <a name="bkmk_meth"></a> Deployment Methods  
  There are several methods you can use to deploy a tabular model project. Most of the deployment methods that can be used for other Analysis Services projects, such as multidimensional, can also be used to deploy tabular model projects.  

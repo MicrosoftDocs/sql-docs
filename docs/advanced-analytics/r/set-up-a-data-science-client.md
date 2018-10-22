@@ -89,7 +89,7 @@ If your code requires packages that are not installed by default with SQL Server
 
 ## 4 - Test connections
 
-SQL Server must be enabled for [remote connections](https://docs.microsoft.com/sql/database-engine/configure-windows/view-or-configure-remote-server-connection-options-sql-server.md) and you must have permissions, including a user login and a database to connect to. The following steps assume the demo database, [NYCTaxi_Sample](../tutorials/sqldev-download-the-sample-data.md) and Windows authentication.
+SQL Server must be enabled for [remote connections](https://docs.microsoft.com/sql/database-engine/configure-windows/view-or-configure-remote-server-connection-options-sql-server.md) and you must have permissions, including a user login and a database to connect to. The following steps assume the demo database, [NYCTaxi_Sample](../tutorials/demo-data-nyctaxi-in-sql.md) and Windows authentication.
 
  As a verification step, use a built-in tool and RevoScaleR to confirm connectivity to the remote server.
 

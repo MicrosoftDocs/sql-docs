@@ -17,7 +17,7 @@ manager: craigg
   
 ## Options  
  **Binary Path**  
- Displays the the location of the program files used by this service.  
+ Displays the location of the program files used by this service.  
   
  **Error Control**  
  1 indicates `SERVICE_ERROR_NORMAL`. If the service fails to start during computer start up, the startup program logs the error and displays a pop-up message box but continues the startup operation. This value cannot be changed.  

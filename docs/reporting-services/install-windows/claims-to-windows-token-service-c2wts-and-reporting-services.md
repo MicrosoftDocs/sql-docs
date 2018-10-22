@@ -1,13 +1,14 @@
 ---
 title: "Claims to Windows Token Service (c2WTS) and Reporting Services | Microsoft Docs"
-ms.date: 09/15/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint"
-
-ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
+manager: kfile
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint"
+ms.topic: conceptual
+ms.date: 09/15/2017
 ---
+
 # Claims to Windows Token Service (C2WTS) and Reporting Services
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
@@ -23,9 +24,9 @@ C2WTS is also required with SQL Server Reporting Services SharePoint mode if you
 
 The Report Viewer web part can be used to embed SQL Server Reporting Services native mode reports within your SharePoint site. This web part is available for SharePoint 2013 and SharePoint 2016. Both SharePoint 2013 and SharePoint 2016 make use of claims authentication. As a result, C2WTS needs to be configured properly and Reporting Services needs to be configured for Kerberos authentication for reports to render correctly.
 
-1. Configure your Reporting Services (Native Mode) instance for Kerberos Authentication by determining the SSRS Service account, setting an SPN, and updating the rsreportserver.config file to use RSWindowsNegotiate Authentication Type. [Register a Service Principal Name (SPN) for a Report Server](https://docs.microsoft.com/en-us/sql/reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server)
+1. Configure your Reporting Services (Native Mode) instance for Kerberos Authentication by determining the SSRS Service account, setting an SPN, and updating the rsreportserver.config file to use RSWindowsNegotiate Authentication Type. [Register a Service Principal Name (SPN) for a Report Server](https://docs.microsoft.com/sql/reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server)
 
-2. Follow steps from [Steps needed to configure c2WTS](https://docs.microsoft.com/en-us/sql/reporting-services/install-windows/claims-to-windows-token-service-c2wts-and-reporting-services?view=sql-server-2017#steps-needed-to-configure-c2wts)
+2. Follow steps from [Steps needed to configure c2WTS](https://docs.microsoft.com/sql/reporting-services/install-windows/claims-to-windows-token-service-c2wts-and-reporting-services?view=sql-server-2017#steps-needed-to-configure-c2wts)
  
 
 ## SharePoint mode integration
@@ -78,7 +79,7 @@ If your environment will use Kerberos constrained delegation, then the SharePoin
     * Select **Users or Computers...&#42;** and enter the account that hosts the service. For example, if a SQL Server is running under an account named *sqlservice*, enter `sqlservice`. 
 	  For the **Report Viewer web part**, this will be the service account for the Reporting Services (Native Mode) Instance.
 
-    * Select the service listing. This will show the SPNs that are available on that account. If you don't see the service listed on that account, it may be missing or placed on a different account. you can use the SetSPN utility to adjust SPNs. For the **Report Viewer web part**, you will see the http SPN configured in [Report Viewer web part configuration](https://docs.microsoft.com/en-us/sql/reporting-services/install-windows/claims-to-windows-token-service-c2wts-and-reporting-services?view=sql-server-2017#report-viewer-web-part-configuration).
+    * Select the service listing. This will show the SPNs that are available on that account. If you don't see the service listed on that account, it may be missing or placed on a different account. you can use the SetSPN utility to adjust SPNs. For the **Report Viewer web part**, you will see the http SPN configured in [Report Viewer web part configuration](https://docs.microsoft.com/sql/reporting-services/install-windows/claims-to-windows-token-service-c2wts-and-reporting-services?view=sql-server-2017#report-viewer-web-part-configuration).
 
     * Select OK to get out of the dialogs.
 

@@ -2,10 +2,24 @@
   items:
   - name: What is SQL Server big data cluster?
     href: big-data-cluster-overview.md
+  - name: Release notes
+    href: big-data-cluster-release-notes.md
 - name: Quickstarts
   items:
   - name: Deploy SQL Server big data cluster
     href: quickstart-big-data-cluster-deploy.md
+- name: Tutorials
+  items:
+  - name: 1_Query HDFS data
+    href: tutorial-query-hdfs-storage-pool.md
+  - name: 2_Query Oracle data
+    href: tutorial-query-oracle.md
+  - name: 3_Load data pool with SQL
+    href: tutorial-data-pool-ingest-sql.md
+  - name: 4_Load data pool with Spark
+    href: tutorial-data-pool-ingest-spark.md
+  - name: 5_Run a Spark notebook
+    href: tutorial-notebook-spark.md
 - name: Concepts
   items:
   - name: Controller
@@ -32,7 +46,7 @@
       href: deploy-on-minikube.md
     - name: Deploy on AKS
       href: deploy-on-aks.md
-    - name: Install big data tools
+    - name: Connect with Azure Data Studio
       href: deploy-big-data-tools.md
   - name: Data virtualization
     items:
@@ -52,6 +66,8 @@
     items:
     - name: Cluster administration portal
       href: cluster-admin-portal.md
+    - name: Kubernetes troubleshooting
+      href: cluster-troubleshooting-commands.md
   - name: Notebooks
     items:
     - name: Notebooks overview

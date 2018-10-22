@@ -145,7 +145,7 @@ ALTER AVAILABILITY GROUP AG1 SET (HEALTH_CHECK_TIMEOUT =60000);
 
   - SameSubnetThreshold \<= CrossSubnetThreshold 
 
-  - SameSubnetDelay \<= SameSubnetDelay 
+  - SameSubnetDelay \<= CrossSubnetDelay 
 
 ## See Also    
 

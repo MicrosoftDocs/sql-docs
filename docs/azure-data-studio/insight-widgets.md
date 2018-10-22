@@ -4,7 +4,7 @@ description: Learn about insight widgets in Azure Data Studio.
 ms.custom: "tools|sos"
 ms.date: "09/24/2018"
 ms.prod: sql
-ms.technology: ssops
+ms.technology: azure-data-studio
 ms.reviewer: "alayu; sstein"
 ms.topic: conceptual
 author: stevestein

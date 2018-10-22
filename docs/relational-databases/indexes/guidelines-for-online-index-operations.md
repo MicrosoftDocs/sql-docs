@@ -90,7 +90,7 @@ For more information, see [Disk Space Requirements for Index DDL Operations](../
 When you perform resumable online index create or rebuild, the following guidelines apply:
 -	Managing, planning and extending of index maintenance windows. You can pause and restart an index create or rebuild operation multiple times to fit your maintenance windows.
 - Recovering from index create or rebuild failures (such as database failovers or running out of disk space).
-- When an index operation is paused, both the original index and the the newly created one require disk space and need to be updated during DML operations.
+- When an index operation is paused, both the original index and the newly created one require disk space and need to be updated during DML operations.
 
 - Enables truncation of transaction logs during an index create or rebuild operation.
 - SORT_IN_TEMPDB=ON option is not supported

@@ -71,8 +71,8 @@ manager: craigg
  [ **-?** ]  
  Returns the list of supported parameters.  
   
- **-sourceserver** *source_server_name*[**\\***instance_name*]  
- Is the name of the source server. Specify *source_server_name* for the default instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Specify *source_server_name***\\***instance_name* for a named instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ **-sourceserver** *source_server_name*[**\\**_instance_name_]  
+ Is the name of the source server. Specify _source\_server\_name_ for the default instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Specify _source\_server\_name_**\\**_instance\_name_ for a named instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **-sourcedatabase** *source_database*  
  Is the name of the source database.  
@@ -95,8 +95,8 @@ manager: craigg
  **-sourcelocked**  
  The source table is locked during the comparison using the TABLOCK and HOLDLOCK table hints.  
   
- **-destinationserver** *destination_server_name*[**\\***instance_name*]  
- Is the name of the destination server. Specify *destination_server_name* for the default instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Specify *destination_server_name***\\***instance_name* for a named instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ **-destinationserver** *destination_server_name*[**\\**_instance\_name_]  
+ Is the name of the destination server. Specify *destination_server_name* for the default instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Specify _destination\_server\_name_**\\**_instance\_name_ for a named instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **-destinationdatabase** *subscription_database*  
  Is the name of the destination database.  

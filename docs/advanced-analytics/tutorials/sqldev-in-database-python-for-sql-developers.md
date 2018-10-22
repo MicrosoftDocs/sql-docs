@@ -32,7 +32,7 @@ The data is from the well-known NYC Taxi data set. To make this walkthrough quic
 
 All tasks can be done using [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedures in the familiar environment of [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]
 
-- [Step 1: Download the sample data](sqldev-py1-download-the-sample-data.md)
+- [Step 1: Download the sample data](demo-data-nyctaxi-in-sql.md)
 
     Download the sample dataset and all script files to a local computer.
 
@@ -108,4 +108,4 @@ Use the following resources to help you plan and execute a successful machine le
 
 ## Get started
 
-  [Step 1: Download the sample data](sqldev-py1-download-the-sample-data.md)
+  [Step 1: Download the sample data](demo-data-nyctaxi-in-sql.md)

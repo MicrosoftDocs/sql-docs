@@ -1,6 +1,6 @@
 ---
 title: Download NYC Taxi demo data and scripts for embedded R and Python (SQL Server Machine Learning) | Microsoft Docs
-description: Instructions for downloading New York City taxi sample data and creating a database. Data is used in SQL Server tutorials showing how to embed R and Python in SQL Server stored procedures and T-SQL functions.
+description: Instructions for downloading New York City taxi sample data and creating a database. Data is used in SQL Server Python and R language tutorials showing how to embed script in SQL Server stored procedures and T-SQL functions.
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -10,7 +10,7 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-# NYC Taxi demo data for SQL Server
+# NYC Taxi demo data for SQL Server Python and R tutorials
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This article explains how to set up a sample database consisting of public data from the [New York City Taxi and Limousine Commission](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml). This data is used in several R and Python tutorials for in-database analytics in SQL Server. The sample data is one percent of the public data set. On your system, the database backup file is slightly over 90 MB, providing 1.7 million rows in the primary data table.

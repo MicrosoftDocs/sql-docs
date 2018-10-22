@@ -1,6 +1,6 @@
 ---
 title: Use third-party Active Directory providers with SQL Server on Linux | Microsoft Docs
-description: This tutorial provides the configuration steps for AD Authentication with third-party providers
+description: This tutorial provides the configuration steps for Active Directory authentication with third-party providers
 author: dylan-MSFT
 ms.date: 07/25/2018
 ms.author: dygray 
@@ -16,7 +16,7 @@ helpviewer_keywords:
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-This article explains how to configure a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux host machine with AD Authentication when using third-party AD providers, such as [PowerBroker Identity Services (PBIS)](https://www.beyondtrust.com/), [Vintela Authentication Services (VAS)](https://www.oneidentity.com/products/authentication-services/), and [Centrify](https://www.centrify.com/). This guide includes steps to check your AD configuration, and it is not intended to instruct on how to join a machine to a domain. For detailed instructions on joining a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host to a domain using REALM and SSSD, see [Use Active Directory authentication with SQL Server on Linux](sql-server-linux-active-directory-authentication.md).
+This article explains how to configure a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on a Linux host machine with Active Directory authentication when using third-party AD providers. Examples are [PowerBroker Identity Services (PBIS)](https://www.beyondtrust.com/), [Vintela Authentication Services (VAS)](https://www.oneidentity.com/products/authentication-services/), and [Centrify](https://www.centrify.com/). This guide includes steps to check your Active Directory configuration. It's not intended to instruct on how to join a machine to a domain. For detailed instructions on joining a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host to a domain by using REALM and SSSD, see [Use Active Directory authentication with SQL Server on Linux](sql-server-linux-active-directory-authentication.md).
 
 ## Prerequisites
 

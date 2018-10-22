@@ -2,7 +2,7 @@
 title: "Assess an enterprise and consolidate assessment reports (SQL Server) | Microsoft Docs"
 description: Learn how to use DMA to assess an enterprise and consolidate assessment reports before upgrading SQL Server or migrating to Azure SQL Database.
 ms.custom: ""
-ms.date: "10/20/2018"
+ms.date: "10/22/2018"
 ms.prod: sql
 ms.prod_service: "dma"
 ms.reviewer: ""
@@ -57,7 +57,7 @@ To load the modules, perform the following steps:
 
     PowerShell should now load these modules automatically when a new PowerShell session starts.
 
-## Create an inventory of SQL Servers
+## <a name="create-inventory"></a> Create an inventory of SQL Servers
 Before running the PowerShell script to assess your SQL Servers, you need to build an inventory of the SQL Servers that you want to assess.
 
 This inventory can be in one of two forms:
@@ -93,7 +93,7 @@ The parameters associated with the dmaDataCollector function are described in th
 
 |Parameter  |Description
 |---------|---------|
-|**getServerListFrom** | Your inventory. Possible values are **SqlServer** and **CSV**. |
+|**getServerListFrom** | Your inventory. Possible values are **SqlServer** and **CSV**.<br/>For more info, see [Create an inventory of SQL Servers](#create-inventory). |
 |**serverName**	| The SQL Server instance name of the inventory when using **SqlServer** in the **getServerListFrom** parameter. |
 |**databaseName** | The database hosting the inventory table. |
 |**AssessmentName**	| The name of the DMA assessment. |

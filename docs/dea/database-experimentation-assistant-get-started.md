@@ -153,6 +153,6 @@ On any page of the analysis report, select the **Print** button on the top right
 
 - To learn how to produce a trace file that has a log of events that occur on a server, see [Capture trace](database-experimentation-assistant-capture-trace.md).
 
-- For a 19-minute introduction and demonstration of DEA, watch the following video:
+- For a 19-minute introduction to DEA and demonstration, watch the following videoo:
 
   > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-Database-Experimentation-Assistant/player]

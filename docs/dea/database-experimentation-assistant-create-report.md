@@ -109,6 +109,6 @@ More questions or feedback? Submit feedback through the DEA tool by choosing the
 
 To learn how to view the analysis report, see [View reports](database-experimentation-assistant-view-report.md).
 
-- For a 19-minute introduction and demonstration of DEA, watch the following video:
+- For a 19-minute introduction to DEA and demonstration, watch the following videoo:
 
   > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-Database-Experimentation-Assistant/player]

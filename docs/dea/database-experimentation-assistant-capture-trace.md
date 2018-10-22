@@ -138,6 +138,6 @@ If you see any other errors labeled *Sql Error Code*, see [System error messages
 
 - To learn how to configure the Distributed Replay tools in SQL Server before you replay a captured trace, see [Configure replay](database-experimentation-assistant-configure-replay.md).
 
-- For a 19-minute introduction to and demonstration of DEA, watch the following video:
+- For a 19-minute introduction to DEA and demonstration, watch the following video:
 
   > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-Database-Experimentation-Assistant/player]

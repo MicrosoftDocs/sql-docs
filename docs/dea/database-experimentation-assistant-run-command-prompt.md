@@ -72,6 +72,6 @@ To start a new trace analysis, run the following command:
 
 ## Next steps
 
-For a 19-minute introduction and demonstration of DEA, watch the following video:
+For a 19-minute introduction to DEA and demonstration, watch the following video:
 
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-Database-Experimentation-Assistant/player]

@@ -156,6 +156,6 @@ The issue has been addressed in the latest Cumulative Update 1 for SQL Server 20
 
 - To create an analysis report that helps you gain insights about proposed changes, see [Create reports](database-experimentation-assistant-create-report.md).
 
-- For a 19-minute introduction and demonstration of DEA, watch the following video:
+- For a 19-minute introduction to DEA and demonstration, watch the following video:
 
   > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-Database-Experimentation-Assistant/player]

@@ -29,7 +29,7 @@ Query caching in SQL Server might affect evaluation results. We recommend that y
 
     ![Select Capture Traces in the menu](./media/database-experimentation-assistant-capture-trace/dea-capture-trace-capture.png)
 
-2. Under **New Capture**, enter or select the following information:
+1. Under **New Capture**, enter or select the following information:
 
     - **SQL Server instance name**: Enter a name for the computer running SQL Server on which you want to capture a server trace.
     - **Database name**: Enter a name for a database on which to start a database trace. If you don't specify a database, trace is captured on all the databases on the server.

@@ -19,7 +19,7 @@ manager: craigg
 
 After you replay the source trace on both of your target servers, you can generate an analysis report in Database Experimentation Assistant (DEA). Analysis reports help you gain insights about the performance implications of proposed changes.
 
-## Create a new analysis report
+## Create an analysis report
 
 In DEA, select the menu icon. In the expanded menu, select  **Analysis Reports** next to the checklist icon.
 

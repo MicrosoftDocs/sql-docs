@@ -24,13 +24,11 @@ In Database Experimentation Assistant (DEA), you can replay a captured trace fil
 >
 >
 
-## Open Replay Traces
+## Create a trace replay
 
 In DEA, select the menu icon. In the expanded menu, select **Replay Traces** next to the play icon.
 
 ![Select Replay Traces in the menu](./media/database-experimentation-assistant-replay-trace/dea-replay-trace-open.png)
-
-## Set up a trace replay  
 
 > [!NOTE]
 > The Distributed Replay controller machine requires permissions to the user account that you use to remote.

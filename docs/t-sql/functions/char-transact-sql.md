@@ -109,9 +109,9 @@ This example uses `CHAR(13)` to print the name and e-mail address of an employee
   
 ```sql
 SELECT p.FirstName + ' ' + p.LastName, + CHAR(13)  + pe.EmailAddress   
-FROM Person.Person p JOIN Person.EmailAddress pe  
-ON p.BusinessEntityID = pe.BusinessEntityID  
-AND p.BusinessEntityID = 1;  
+FROM Person.Person p 
+INNER JOIN Person.EmailAddress pe ON p.BusinessEntityID = pe.BusinessEntityID  
+  AND p.BusinessEntityID = 1;  
 GO  
 ```
   
@@ -123,8 +123,6 @@ ken0@adventure-works.com
   
 (1 row(s) affected)
 ```
-  
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### C. Using ASCII and CHAR to print ASCII values from a string  
 This example assumes an ASCII character set. It returns the character value for six different ASCII character number values.
@@ -169,7 +167,8 @@ AdventureWorksPDW2012    is currently  ONLINE
 This example uses the integer and hex values in the valid range for ASCII. The CHAR function is able to output the single-byte Japanese character.
   
 ```sql
-SELECT CHAR(188) AS single_byte_representing_complete_character, CHAR(0xBC) AS single_byte_representing_complete_character;  
+SELECT CHAR(188) AS single_byte_representing_complete_character, 
+  CHAR(0xBC) AS single_byte_representing_complete_character;  
 GO  
 ```
   
@@ -185,7 +184,8 @@ single_byte_representing_complete_character single_byte_representing_complete_ch
 This example uses the an integer and hex values in the valid range for ASCII. However, the CHAR function returns NULL because the parameter represents only the first byte of a multibyte character.
   
 ```sql
-SELECT CHAR(129) AS first_byte_of_double_byte_character, CHAR(0x81) AS first_byte_of_double_byte_character;  
+SELECT CHAR(129) AS first_byte_of_double_byte_character, 
+  CHAR(0x81) AS first_byte_of_double_byte_character;  
 GO  
 ```
   

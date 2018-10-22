@@ -1,7 +1,7 @@
 ---
 title: "SET TRANSACTION ISOLATION LEVEL (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/04/2017"
+ms.date: "10/22/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -66,7 +66,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
 -   The READ COMMITTED isolation level with the READ_COMMITTED_SNAPSHOT database option set to ON.  
   
--   The SNAPSHOT isolation level.  
+-   The SNAPSHOT isolation level. For more information about snapshot isolation, see [Snapshot Isolation in SQL Server](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/snapshot-isolation-in-sql-server). 
   
  READ COMMITTED  
  Specifies that statements cannot read data that has been modified but not committed by other transactions. This prevents dirty reads. Data can be changed by other transactions between individual statements within the current transaction, resulting in nonrepeatable reads or phantom data. This option is the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] default.  

@@ -13,9 +13,16 @@ manager: cgronlun
 # Use a Python model in SQL Server for training and scoring
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This exercise demonstrates the capabilities of Python integration with SQL Server when you [add the machine learning feature](../install/sql-machine-learning-services-windows-install.md) to a database engine instance. On an integrated instance, you can wrap Python code inside a [stored procedure](../../relational-databases/stored-procedures/stored-procedures-database-engine.md), one of the major mechanisms for operationalizing production code in SQL Server. The ability to embed code in a procedure has tangible benefits in how you design, test, and manage data science and machine learning workloads in SQL Server.
+This exercise demonstrates the capabilities of Python integration with SQL Server when you [add machine learning](../install/sql-machine-learning-services-windows-install.md) to a database engine instance. On a Python-integrated instance, you can wrap Python code inside a [stored procedure](../../relational-databases/stored-procedures/stored-procedures-database-engine.md), enabling one of the major mechanisms for operationalizing production code in SQL Server. The ability to embed code in a procedure has tangible benefits in how you design, test, and manage data science and machine learning workloads in SQL Server.
 
-In this Python exercise, you will create and execute two procedures. The first one generates a Naïve Bayes model to predict an Iris species based on flower characteristics. The second procedure is for scoring. It calls the model generated in the first procedure to output a set of predictions. Because code resides in a stored procedure, operations are contained, reusable, and callable by other stored procedures and client applications. 
+In this Python exercise, you will create and execute two procedures. The first one uses the classic Iris flower data set and generates a Naïve Bayes model to predict an Iris species based on flower characteristics. The second procedure is for scoring. It calls the model generated in the first procedure to output a set of predictions. By placing code in a stored procedure, operations are contained, reusable, and callable by other stored procedures and client applications. 
+
+By completing this tutorial, you will learn how to:
+
+> [!div class="checklist"]
+> * Use stored procedures to operationalize code
+> * Embed code in a stored procedure
+> * Pass inputs to your code through inputs on the stored procedure
 
 ## Prerequisites
 

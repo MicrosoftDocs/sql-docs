@@ -17,13 +17,21 @@ The [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-refe
 
 This exercise demonstrates how to create a linear regression model. It also covers shifting code execution from a local to remote computing environment, enabled by revoscalepy functions that set a remote compute context.
 
+By completing this tutorial, you will learn how to:
+
+> [!div class="checklist"]
+> * Use revoscalepy to create a linear model
+> * Shift operations from local to remote compute context
+
 ## Prerequisites
 
 Sample data used in this exercise is the [**flightdata**](demo-data-airlinedemo-in-sql.md) database.
 
-To practice a compute context shift, you need both a [local workstation](../r/set-up-a-data-science-client.md) and a SQL Server database engine instance with [Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)) and Python enabled.
-
 You need an IDE to run the sample code in this article, and the IDE must be linked to the Python executable.
+
+To practice a compute context shift, you need a [local workstation](../r/set-up-a-data-science-client.md) and a SQL Server database engine instance with [Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)) and Python enabled. 
+
+If you don't have two computers, you can simulate a remote compute context on one physical computer by installing relevant applications. First, an installation of SQL Server Machine Learning Services operates as the "remote" instance. Second, an installation of the Python client libraries operates as the client. You will have two copies of the same Python distributation and Microsoft Python libraries on the same machine. You will have to keep track of file paths and which copy of the exe you are using to complete the exercise successfully.
 
 ## Remote compute contexts and revoscalepy
 

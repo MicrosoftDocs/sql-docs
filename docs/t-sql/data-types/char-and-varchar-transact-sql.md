@@ -1,7 +1,7 @@
 ---
 title: "char and varchar (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/18/2018"
+ms.date: "10/22/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -29,27 +29,32 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 # char and varchar (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Character data types that are either fixed length, **char**, or variable length, **varchar**. Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], when a UTF-8 enabled collation is used, these data types store [Unicode](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) data and use the UNICODE UTF-8 character set. If a non-UTF-8 collation is specified, then these data types store non-Unicode string data.
+Character data types that are either fixed-length, **char**, or variable-length, **varchar**. Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], when a UTF-8 enabled collation is used, these data types store the full range of [Unicode](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) character data and use the [UTF-8](http://www.wikipedia.org/wiki/UTF-8) character encoding. If a non-UTF-8 collation is specified, then these data types store only a subset of characters supported by the corresponding code page of that collation.
   
 ## Arguments  
 **char** [ ( *n* ) ]
-Fixed-length string data. *n* defines the string length and must be a value from 1 through 8,000. For non-Unicode data, the storage size is the actual length of the data entered. For Unicode data, the storage size is *n* bytes. When the collation code page uses double-byte characters, the storage size is still *n* bytes. Depending on the string, the storage size of *n* bytes can be less than the value specified for *n*. The ISO synonym for **char** is **character**.
-  
+Fixed-length string data. *n* defines the string length in bytes and must be a value from 1 through 8,000. For single-byte encoding character sets such as *Latin*, the storage size is *n* bytes and the number of characters that can be stored is also *n*. For multibyte encoding character sets, the storage size is still *n* bytes but the number of characters that can be stored may be smaller than *n*. The ISO synonym for **char** is **character**. For more information on character sets, see [Single-Byte and Multibyte Character Sets](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets).
+
 **varchar** [ ( *n* | **max** ) ]
-Variable-length string data. *n* defines the string length and can be a value from 1 through 8,000. **max** indicates that the maximum storage size is 2^31-1 bytes (2 GB). For non-Unicode data, the storage size is the actual length of the data entered + 2 bytes. For Unicode data, the storage size is *n* bytes + 2 bytes. When the collation code page uses double-byte characters, the storage size is still *n* bytes. The ISO synonyms for **varchar** are **charvarying** or **charactervarying**.
-  
+Variable-length string data. *n* defines the string length in bytes and can be a value from 1 through 8,000. **max** indicates that the maximum storage size is 2^31-1 bytes (2 GB). For single-byte encoding character sets such as *Latin*, the storage size is *n* bytes + 2 bytes and the number of characters that can be stored is also *n*. For multibyte encoding character sets, the storage size is still *n* bytes + 2 bytes but the number of characters that can be stored may be smaller than *n*. The ISO synonyms for **varchar** are **charvarying** or **charactervarying**. For more information on character sets, see [Single-Byte and Multibyte Character Sets](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets).
+
 ## Remarks  
 When *n* is not specified in a data definition or variable declaration statement, the default length is 1. When *n* is not specified when using the CAST and CONVERT functions, the default length is 30.
   
 Objects that use **char** or **varchar** are assigned the default collation of the database, unless a specific collation is assigned using the COLLATE clause. The collation controls the code page that is used to store the character data.
-  
+
+Multibyte encodings in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] include:
+-	Double-byte character sets (DBCS) for some East Asian languages using code pages 936 and 950 (Chinese), 932 (Japanese), or 949 (Korean).
+-	UTF-8 with code page 65001. **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]))
+
 If you have sites that support multiple languages:
 - Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], consider using a UTF-8 enabled collation to support Unicode and minimize character conversion issues. 
-- If using a lower version of [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] consider using the Unicode **nchar** or **nvarchar** data types to minimize character conversion issues. 
-If you use **char** or **varchar**, we recommend the following:
+- If using a lower version of [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] consider using the Unicode **nchar** or **nvarchar** data types to minimize character conversion issues.   
+
+If you use **char** or **varchar**, we recommend to:
 - Use **char** when the sizes of the column data entries are consistent.  
 - Use **varchar** when the sizes of the column data entries vary considerably.  
-- Use **varchar(max)** when the sizes of the column data entries vary considerably, and the size might exceed 8,000 bytes.  
+- Use **varchar(max)** when the sizes of the column data entries vary considerably, and the string length might exceed 8,000 bytes.  
   
 If SET ANSI_PADDING is OFF when either CREATE TABLE or ALTER TABLE is executed, a **char** column that is defined as NULL is handled as **varchar**.
   
@@ -113,7 +118,7 @@ WHERE CAST(SalesYTD AS varchar(20) ) LIKE '1%';
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 BusinessEntityID SalesYTD              DisplayFormat CurrentDate             DisplayDateFormat  
 ---------------- --------------------- ------------- ----------------------- -----------------  
 278              1453719.4653          1,453,719.47  2011-05-07 14:29:01.193 07/05/11  
@@ -142,7 +147,7 @@ SELECT @ID, CONVERT(uniqueidentifier, @ID) AS TruncatedValue;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 String                                       TruncatedValue  
 -------------------------------------------- ------------------------------------  
 0E984725-C51C-4BF4-9960-E1C80E27ABA0wrong    0E984725-C51C-4BF4-9960-E1C80E27ABA0  
@@ -157,5 +162,6 @@ String                                       TruncatedValue
 [Data Type Conversion &#40;Database Engine&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
 [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
 [Estimate the Size of a Database](../../relational-databases/databases/estimate-the-size-of-a-database.md)     
-[Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)  
+[Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)    
+[Single-Byte and Multibyte Character Sets](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)
   

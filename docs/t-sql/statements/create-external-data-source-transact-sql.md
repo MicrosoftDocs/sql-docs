@@ -426,7 +426,7 @@ WITH (
 ## Examples: Azure SQL Data Warehouse
 
 ### G. Create external data source to reference Azure Data Lake Store
-Azure Data lake Store connectivity is based on your ADLS URI and your Azure Acitve directory Application's service principle. Documentation for creating this application can be found at[Data lake store authentication using Active Directory](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-authenticate-using-active-directory).
+Azure Data lake Store connectivity is based on your ADLS URI and your Azure Acitve directory Application's service principle. Documentation for creating this application can be found at[Data lake store authentication using Active Directory](https://docs.microsoft.com/azure/data-lake-store/data-lake-store-authenticate-using-active-directory).
 
 ```sql
 -- If you do not have a Master Key on your DW you will need to create one.

@@ -64,7 +64,7 @@ The StatfulSet contains:
 
 * mssql-ha-supervisor container
 
-The code for the operator, HA supervisor, and SQL Server is packaged in a Docker image called `mcr.microsoft.com/mssql/ha`. This image contains following binaries:
+The code for the operator, HA supervisor, and SQL Server is packaged in a Docker image called `mcr.microsoft.com/mssql/ha`. This image contains the following binaries:
 
 * `mssql-operator`
 

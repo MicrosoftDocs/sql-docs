@@ -97,7 +97,7 @@ manager: craigg
      The full-text engine indexes the contents of the FILESTREAM BLOBs. Indexing files such as images might not be useful. When a FILESTREAM BLOB is updated it is reindexed.  
   
 ## See Also  
- [Full-Text Search]((../relational-databases/search/full-text-search.md)   
+ [Full-Text Search](../relational-databases/search/full-text-search.md)   
  [Full-Text Search Backward Compatibility](../../2014/database-engine/full-text-search-backward-compatibility.md)   
  [Upgrade Full-Text Search](../relational-databases/search/upgrade-full-text-search.md)   
  [Get Started with Full-Text Search](../relational-databases/search/get-started-with-full-text-search.md)  

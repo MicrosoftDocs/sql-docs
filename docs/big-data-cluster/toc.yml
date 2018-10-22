@@ -54,6 +54,8 @@
     items:
     - name: Cluster administration portal
       href: cluster-admin-portal.md
+    - name: Kubernetes troubleshooting
+      href: cluster-troubleshooting-commands.md
   - name: Notebooks
     items:
     - name: Notebooks overview

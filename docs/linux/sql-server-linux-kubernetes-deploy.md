@@ -103,7 +103,7 @@ On Kubernetes the deployment includes a SQL Server operator, the SQL Server cont
 
 ### Monitor the deployment
 
-You can use [Kubernetes dashboard with Azure Kubernetes Service (AKS)](https://docs.microsoft.com/en-us/azure/aks/kubernetes-dashboard) to monitor the deployment.
+You can use [Kubernetes dashboard with Azure Kubernetes Service (AKS)](https://docs.microsoft.com/azure/aks/kubernetes-dashboard) to monitor the deployment.
 
 Use `az aks browse` to launch the dashboard. 
 

@@ -1,10 +1,35 @@
 {
     "redirections": [
         {
+            "source_path": "docs/relational-databases/polybase/polybase-type-mapping.md",
+            "redirect_url": "/sql/relational-databases/polybase/polybase-guide",
+            "redirect_document_id": false 
+        },
+        {
             "source_path": "docs/relational-databases/polybase/get-started-with-polybase.md",
             "redirect_url": "/sql/relational-databases/polybase/polybase-guide",
             "redirect_document_id": false 
         },
+        {
+            "source_path": "docs/advanced-analytics/r/sqldev-train-and-save-a-model-using-t-sql.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/sqldev-train-and-save-a-model-using-t-sql",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/advanced-analytics/tutorials/wrap-python-in-tsql-stored-procedure.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/demo-data-iris-in-sql",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "docs/advanced-analytics/tutorials/sqldev-download-the-sample-data.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/demo-data-nyctaxi-in-sql",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "docs/advanced-analytics/tutorials/sqldev-py1-download-the-sample-data.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/demo-data-nyctaxi-in-sql",
+            "redirect_document_id": false
+        }, 
         {
             "source_path": "docs/advanced-analytics/r/configuration-sql-server-r-services.md",
             "redirect_url": "/sql/advanced-analytics/r/managing-and-monitoring-r-solutions",
@@ -187,7 +212,7 @@
         }, 
         {
             "source_path": "docs/advanced-analytics/r/sqldev-import-data-to-sql-server-using-powershell.md",
-            "redirect_url": "/sql/advanced-analytics/tutorials/sqldev-download-the-sample-data",
+            "redirect_url": "/sql/advanced-analytics/tutorials/demo-data-nyctaxi-in-sql",
             "redirect_document_id": false
         }, 
         {
@@ -1193,7 +1218,7 @@
         },
         {
             "source_path": "docs/advanced-analytics/r-services/step-1-download-the-sample-data-in-database-advanced-analytics-tutorial.md",
-            "redirect_url": "/sql/advanced-analytics/tutorials/sqldev-download-the-sample-data",
+            "redirect_url": "/sql/advanced-analytics/tutorials/demo-data-nyctaxi-in-sql",
             "redirect_document_id": false
         },
         {
@@ -1213,7 +1238,7 @@
         },
         {
             "source_path": "docs/advanced-analytics/r-services/step-5-train-and-save-a-model-using-t-sql.md",
-            "redirect_url": "/sql/advanced-analytics/r/sqldev-train-and-save-a-model-using-t-sql",
+            "redirect_url": "/sql/advanced-analytics/tutorials/sqldev-train-and-save-a-model-using-t-sql",
             "redirect_document_id": false
         },
         {
@@ -2678,12 +2703,12 @@
         },
         {
             "source_path": "docs/relational-databases/replication/replication-to-sql-database.md",
-            "redirect_url": "https://docs.microsoft.com/en-us/azure/sql-database/replication-to-sql-database",
+            "redirect_url": "https://docs.microsoft.com/azure/sql-database/replication-to-sql-database",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/relational-databases/replication/replication-with-sql-database-managed-instance.md",
-            "redirect_url": "https://docs.microsoft.com/en-us/azure/sql-database/replication-with-sql-database-managed-instance",
+            "redirect_url": "https://docs.microsoft.com/azure/sql-database/replication-with-sql-database-managed-instance",
             "redirect_document_id": false
         },
         {

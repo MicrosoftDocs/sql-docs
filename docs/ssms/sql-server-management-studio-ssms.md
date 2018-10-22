@@ -1,6 +1,6 @@
 ---
 title: "SQL Server Management Studio (SSMS) | Microsoft Docs"
-ms.date: "10/15/2018"
+ms.date: "10/16/2018"
 ms.prod: sql
 ms.technology: ssms
 ms.reviewer: ""

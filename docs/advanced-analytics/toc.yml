@@ -65,11 +65,37 @@
       href: tutorials/rtsql-predict-and-plot-from-model.md
   - name: Python
     items:
-    - name: Wrap Python in a stored procedure
-      href: tutorials/wrap-python-in-tsql-stored-procedure.md
+    - name: Run Python using T-SQL
+      href: tutorials/run-python-using-t-sql.md
 - name: Tutorials
   href: tutorials/machine-learning-services-tutorials.md
   items:
+  - name: Data
+    items:
+    - name: Iris data set
+      href: tutorials/demo-data-iris-in-sql.md
+    - name: NYC Taxi data set
+      href: tutorials/demo-data-nyctaxi-in-sql.md
+  - name: Python
+    href: tutorials/sql-server-python-tutorials.md
+    items:
+    - name: Train and use your first model
+      href: tutorials/train-score-using-python-in-tsql.md    
+    - name: Learn in-database analytics
+      href: tutorials/sqldev-in-database-python-for-sql-developers.md
+      items:
+      - name: Import data
+        href: tutorials/sqldev-py2-import-data-to-sql-server-using-powershell.md
+      - name: Explore and visualize data
+        href: tutorials/sqldev-py3-explore-and-visualize-the-data.md
+      - name: Create data features
+        href: tutorials/sqldev-py4-create-data-features-using-t-sql.md
+      - name: Train and save the model
+        href: tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md
+      - name: Operationalize the model
+        href: tutorials/sqldev-py6-operationalize-the-model.md
+    - name: Create a model using revoscalepy
+      href: tutorials/use-python-revoscalepy-to-create-model.md
   - name: R
     href: tutorials/sql-server-r-tutorials.md
     items:
@@ -78,15 +104,13 @@
     - name: Learn in-database analytics
       href: tutorials/sqldev-in-database-r-for-sql-developers.md
       items:
-      - name: 1 - Set up demo data
-        href: tutorials/sqldev-download-the-sample-data.md
-      - name: 2 - Visualize data
+      - name: 1 - Visualize data
         href: tutorials/sqldev-explore-and-visualize-the-data.md
-      - name: 3 - Create data features
+      - name: 2 - Create data features
         href: tutorials/sqldev-create-data-features-using-t-sql.md
-      - name: 4 - Train and save to SQL
-        href: r/sqldev-train-and-save-a-model-using-t-sql.md
-      - name: 5 - Predict outcomes
+      - name: 3 - Train and save to SQL
+        href: tutorials/sqldev-train-and-save-a-model-using-t-sql.md
+      - name: 4 - Predict outcomes
         href: tutorials/sqldev-operationalize-the-model.md
     - name: Data science end-to-end walkthrough
       href: tutorials/walkthrough-data-science-end-to-end-walkthrough.md
@@ -138,31 +162,6 @@
         href: tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md
       - name: Create a simple simulation
         href: tutorials/deepdive-create-a-simple-simulation.md
-  - name: Python
-    href: tutorials/sql-server-python-tutorials.md
-    items:
-    - name: Run Python using T-SQL
-      href: tutorials/run-python-using-t-sql.md
-      items:
-      - name: Train and score from a Python model in SQL Server
-        href: tutorials/train-score-using-python-in-tsql.md
-      - name: Create a model using revoscalepy in a SQL Server compute context
-        href: tutorials/use-python-revoscalepy-to-create-model.md
-    - name: Learn in-database analytics
-      href: tutorials/sqldev-in-database-python-for-sql-developers.md
-      items:
-      - name: Get data and scripts
-        href: tutorials/sqldev-py1-download-the-sample-data.md
-      - name: Import data
-        href: tutorials/sqldev-py2-import-data-to-sql-server-using-powershell.md
-      - name: Explore and visualize data
-        href: tutorials/sqldev-py3-explore-and-visualize-the-data.md
-      - name: Create data features
-        href: tutorials/sqldev-py4-create-data-features-using-t-sql.md
-      - name: Train and save the model
-        href: tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md
-      - name: Operationalize the model
-        href: tutorials/sqldev-py6-operationalize-the-model.md
 - name: Samples
   href: https://github.com/Microsoft/sql-server-samples
 - name: Solutions

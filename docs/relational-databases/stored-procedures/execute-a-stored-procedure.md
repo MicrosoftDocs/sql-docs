@@ -23,7 +23,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # Execute a Stored Procedure
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
- > For content related to previous versions of SQL Server, see [Execute a Stored Procedure](execute-a-stored-procedure.md).
 
   This topic describes how to execute a stored procedure in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
@@ -63,7 +62,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 -   Executing System Stored Procedures  
   
-     System procedures begin with the prefix **sp_**. Because they logically appear in all user- and system- defined databases, they can be executed from any database without having to fully quality the procedure name. However, we recommend schema-qualifying all system procedure names with the **sys** schema name to prevent name conflicts. The following example demonstrates the recommended method of calling a system procedure.  
+     System procedures begin with the prefix **sp_**. Because they logically appear in all user- and system- defined databases, they can be executed from any database without having to fully qualify the procedure name. However, we recommend schema-qualifying all system procedure names with the **sys** schema name to prevent name conflicts. The following example demonstrates the recommended method of calling a system procedure.  
   
     ```sql  
     EXEC sys.sp_who;  

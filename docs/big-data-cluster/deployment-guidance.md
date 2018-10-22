@@ -42,6 +42,9 @@ For guidance on configuring one of these Kubernetes cluster options for SQL Serv
 
    - [Configure Minikube](deploy-on-minikube.md)
    - [Configure Kubernetes on Azure Kubernetes Service](deploy-on-aks.md)
+   
+> [!TIP]
+> For a sample python script that deploys both AKS and SQL Server big data cluster, see [Deploy a SQL Server big data cluster on Azure Kubernetes Service (AKS)](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/aks).
 
 ## <a id="deploy"></a> Deploy SQL Server Big Data cluster
 
@@ -104,8 +107,8 @@ The cluster configuration can be customized using a set of environment variables
 | **CONTROLLER_PASSWORD** | Yes | N/A | The password for the cluster administrator. |
 | **KNOX_PASSWORD** | Yes | N/A | The password for Knox user. |
 | **MSSQL_SA_PASSWORD** | Yes | N/A | The passowrd of SA user for SQL master instance. |
-| **USE_PERSISTENT_VOLUME** | No | true | `true` to use Kubernetes Persistent Volume Claims for pod storage.  `false` to use ephemeral host storage for pod storage. See the [data persistence](concept-data-persistence.md) topic for more details. |
-| **STORAGE_CLASS_NAME** | No | default | If `USE_PERSISTENT_VOLUME` is `true` this indicates the name of the Kubernetes Storage Class to use. See the [data persistence](concept-data-persistence.md) topic for more details. |
+| **USE_PERSISTENT_VOLUME** | No | true | `true` to use Kubernetes Persistent Volume Claims for pod storage.  `false` to use ephemeral host storage for pod storage. See the [data persistence](concept-data-persistence.md) topic for more details. If you deploy SQL Server big data cluster on minikube and USE_PERSISTENT_VOLUME=true, you must set the value for `STORAGE_CLASS_NAME=standard`. |
+| **STORAGE_CLASS_NAME** | No | default | If `USE_PERSISTENT_VOLUME` is `true` this indicates the name of the Kubernetes Storage Class to use. See the [data persistence](concept-data-persistence.md) topic for more details. Note that if you deploy SQL Server big data cluster on minikube, the default storage class name is different and you must override it by setting `STORAGE_CLASS_NAME=standard`. |
 | **MASTER_SQL_PORT** | No | 31433 | The TCP/IP port that the master SQL instance listens on the public network. |
 | **KNOX_PORT** | No | 30443 | The TCP/IP port that Apache Knox listens on the public network. |
 | **GRAFANA_PORT** | No | 30888 | The TCP/IP port that the Grafana monitoring application listens on the public network. |
@@ -118,7 +121,7 @@ The cluster configuration can be customized using a set of environment variables
 >1. For an on-premises cluster built with kubeadm, the value for environment variable `CLUSTER_PLATFORM` is `kubernetes`. Also, when USE_PERSISTENT_STORAGE=true, you must pre-provision a Kubernetes storage class and pass it through using the STORAGE_CLASS_NAME.
 >1. Make sure you wrap the passwords in double quotes if it contains any special characters. You can set the MSSQL_SA_PASSWORD to whatever you like, but make sure they are sufficiently complex and don’t use the `!`, `&` or `‘` characters. Note that double quotes delimiters work only in bash commands.
 >1. The name of your cluster must be only lower case alpha-numeric characters, no spaces. All Kubernetes artifacts (containers, pods, statefull sets, services) for the cluster will be created in a namespace with same name as the cluster name specified.
->1. The **SA** account is a system administrator on the SQL Server Master instance that gets created during setup. After creating your SQL Server container, the MSSQL_SA_PASSWORD environment variable you specified is discoverable by running echo $MSSQL_SA_PASSWORD in the container. For security purposes, change your SA password as per best practices documented [here](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password).
+>1. The **SA** account is a system administrator on the SQL Server Master instance that gets created during setup. After creating your SQL Server container, the MSSQL_SA_PASSWORD environment variable you specified is discoverable by running echo $MSSQL_SA_PASSWORD in the container. For security purposes, change your SA password as per best practices documented [here](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password).
 
 Setting the environment variables required for deploying Aris cluster differs depending on whether you are using Windows or Linux client.  Choose the steps below depending on which operating system you are using.
 
@@ -145,6 +148,15 @@ SET DOCKER_EMAIL=<your Docker email, use same as username provided>
 SET DOCKER_PRIVATE_REGISTRY="1"
 ```
 
+On minikube, if USE_PERSISTENT_VOLUME=true (default), you must also overide the default value for STORAGE_CLASS_NAME environment variable:
+```
+SET STORAGE_CLASS_NAME=standard
+```
+
+Alternatively, you can supress using persistent volumes on minikube:
+```
+SET USE_PERSISTENT_VOLUME=false
+```
 ### Linux
 
 Initialize the following environment variables:
@@ -166,6 +178,15 @@ export DOCKER_EMAIL=<your Docker email, use same as username provided>
 export DOCKER_PRIVATE_REGISTRY="1"
 ```
 
+On minikube, if USE_PERSISTENT_VOLUME=true (default), you must also overide the default value for STORAGE_CLASS_NAME environment variable:
+```
+SET STORAGE_CLASS_NAME=standard
+```
+
+Alternatively, you can supress using persistent volumes on minikube:
+```
+SET USE_PERSISTENT_VOLUME=false
+```
 ## Deploy SQL Server Big Data cluster
 
 The create cluster API is used to initialize the Kubernetes namespace and deploy all the application pods into the namespace. To deploy SQL Server Big Data cluster on your Kubernetes cluster, run the following command:

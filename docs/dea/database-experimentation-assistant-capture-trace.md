@@ -25,7 +25,7 @@ Query caching in SQL Server might affect evaluation results. We recommend that y
 
 ## Create a trace capture
 
-1. In DEA, select the menu icon. In the expanded vertical menu, select **Capture Traces** next to the camera icon.
+1. In DEA, select the menu icon in the left menu. In the expanded menu, select **Capture Traces** next to the camera icon.
 
     ![Select Capture Traces in the menu](./media/database-experimentation-assistant-capture-trace/dea-capture-trace-capture.png)
 
@@ -51,7 +51,7 @@ After you enter or select the required information, select **Start** to start ca
 
 Make sure that the values you've selected or entered are correct, and then select **Start**.
 
-When the trace capture is finished running, locate your new trace file in the file location that you specified in **Path to store output trace file**. Select the bell icon at the bottom of the navigation menu to monitor the progress of the capture.
+When the trace capture is finished running, locate your new trace file in the file location that you specified in **Path to store output trace file**. Select the bell icon at the bottom of the left menu to monitor the progress of the capture.
 
 ![Capture Traces progress](./media/database-experimentation-assistant-capture-trace/dea-capture-trace-progress.png)
 

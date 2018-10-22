@@ -17,7 +17,7 @@ manager: craigg
 
 # Run Database Experimentation Assistant at a command prompt
 
-This article describes how to use the Command Prompt window to capture a trace, and then analyze the results. 
+This article describes how to use the Command Prompt window to capture a trace in Database Experimentation Assistant (DEA), and then analyze the results. 
 
 ## Start a new workload capture by using the DEA command
 
@@ -32,17 +32,17 @@ To start a new workload capture, run the following command:
 ## Replay a workload
 
 1.  Log in to the Distributed Replay controller machine.
-2.  Convert the workload trace that was captured by using the Database Experimentation Assistant (DEA) command to an IRF file:
+2.  Convert the workload trace that you captured by using the DEA command to an IRF file:
 
     `DReplay preprocess -m "dreplaycontroller" -i "Path to first trace file" -d "<Folder path on controller>\IrfFolder"`
 
-3.  Start a trace capture on the target computer running SQL Server by using *StartReplayCaptureTrace.sql*.
+3.  Start a trace capture on the target computer running SQL Server by using StartReplayCaptureTrace.sql.
        
     a.  In SQL Server Management Studio (SSMS), open <Dea_InstallPath\>\Scripts\StartReplayCaptureTrace.sql.
     
     b.  Run `Set @durationInMins=0` so that the trace capture doesn't stop automatically after a specified time.
     
-    c.  To set the max file size per trace file, run `Set @maxfilesize`. The recommended size is 200.
+    c.  To set the max file size per trace file, run `Set @maxfilesize`. The recommended size is 200 (in MB).
     
     d.  Edit `@Tracefile` to set a unique name for your trace file.
     
@@ -53,7 +53,7 @@ To start a new workload capture, run the following command:
         
     a.  To monitor the status, open a Command Prompt window and run `DReplay status -f 1`.
         
-    b.  To stop the replay, such as if you see the pass % is lower than expected, open a Command Prompt window and run `DReplay cancel`.
+    b.  To stop the replay, such as if you see that the pass % is lower than expected, open a Command Prompt window and run `DReplay cancel`.
 
 5.  Stop the trace capture on the target SQL Server instance.
 6.  In SSMS, open `<Dea_InstallPath>\Scripts\StopCaptureTrace.sql`.

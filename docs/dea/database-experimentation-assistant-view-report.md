@@ -21,13 +21,13 @@ After you [create your analysis report](database-experimentation-assistant-creat
 
 ## Select a server
 
-Open the tool, and then select the menu icon on the left side of the screen. Select **Analysis Reports** next to the checklist icon to open the Analysis Reports window.
+In DEA, select the menu icon. In the expanded menu, select **Analysis Reports** next to the checklist icon to open the Analysis Reports window.
 
-Under **Analysis Reports** window, enter the name of a computer running SQL Server that has an analysis database. Select **Connect**. 
+Under **Analysis Reports**, enter the name of a computer running SQL Server that has an analysis database. Select **Connect**. 
 
 ![Connect to an existing report](./media/database-experimentation-assistant-view-report/dea-view-report-connect.png)
 
-If you're missing any dependencies, the **Prerequisites** page prompts you with links to install them. Install the requirements, and then select **Try again**.
+If you're missing any dependencies, the **Prerequisites** page prompts you with links to install them. Install the prerequisites, and then select **Try again**.
 
 ![Prerequisites page](./media/database-experimentation-assistant-view-report/dea-view-report-prereq.png)
 
@@ -54,8 +54,8 @@ Select different slices of the left pie chart to show only the queries that fall
 - **Degraded queries**: Queries that performed better in A than in B.  
 - **Errors**: Queries that show errors in instance B but not in instance A.  
 - **Improved queries**: Queries that ran better in instance B than in instance A.  
-- **Indeterminate queries**: Queries whose performance change was uncertain.  
-- **Same**: Queries whose performance stayed the same across instances A and B.
+- **Indeterminate queries**: Queries that had an indeterminate performance change.  
+- **Same**: Queries in which performance stayed the same across instances A and B.
 
 ### Individual query drill-down
 
@@ -67,16 +67,16 @@ Select a specific query to open a comparison summary for the query.
 
 ![Comparison Summary](./media/database-experimentation-assistant-view-report/dea-view-report-comparison-summary.png)
 
-You can see the A and B instance the specific query ran on. You can also see a template of what the query might look like. A table displays query information that is specific to instances A and B.
+You can see the A and B instances that the query ran on. You can also see a template of what the query might look like. A table displays query information that is specific to instances A and B.
 
 ### Error queries
 
 The comparison summary report has expandable **Error Information** and **Query Plan Information** sections. The sections show the errors and plan information for both instances.
 
 Select the error (red) pie to show these types of errors:
-- **Existing errors**: Errors that were in A
-- **New errors**: Errors that were shown in B
-- **Resolved errors**: Errors that were in A but not in B
+- **Existing errors**: Errors that were in A.
+- **New errors**: Errors that were in B.
+- **Resolved errors**: Errors that were in A but not in B.
 
 ![Error charts](./media/database-experimentation-assistant-view-report/dea-view-report-error-charts.png)
 

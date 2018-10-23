@@ -63,7 +63,7 @@ These objects will create in this section:
     WITH ( 
     LOCATION = sqlserver://SqlServer,
     -- PUSHDOWN = ON | OFF,
-      CREDENTIAL = TeradataCredentials
+      CREDENTIAL = SqlServerCredentials
     );
 
      ```

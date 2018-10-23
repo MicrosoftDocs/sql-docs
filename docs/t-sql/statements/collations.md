@@ -21,10 +21,10 @@ ms.author: carlrab
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Collations
+# COLLATE
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Is a clause that can be applied to a database definition or a column definition to define the collation, or to a character string expression to apply a collation cast.  
+Defines a collation of a database or table column, or a collation cast operation when applied to character string expression. Collation name can be either a Windows collation name or a SQL collation name. If not specified during database creation, the database is assigned the default collation of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If not specified during table column creation, the column is assigned the default collation of the database.
 
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,20 +44,18 @@ COLLATE { <collation_name> | database_default }
   
  *SQL_collation_name* is the collation name for a [SQL Server Collation Name](../../t-sql/statements/sql-server-collation-name-transact-sql.md).  
   
- When applying a collation at the  database definition level, Unicode-only Windows collations cannot be used with the COLLATE clause.  
-  
  **database_default**  
  Causes the COLLATE clause to inherit the collation of the current database.  
   
 ## Remarks  
- The COLLATE clause can be specified at several levels. These include the following:  
+The COLLATE clause can be specified at several levels. These include the following:  
   
 1.  Creating or altering a database.  
   
      You can use the COLLATE clause of the CREATE DATABASE or ALTER DATABASE statement to specify the default collation of the database. You can also specify a collation when you create a database using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. If you do not specify a collation, the database is assigned the default collation of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
     > [!NOTE]  
-    >  Windows Unicode-only collations can only be used with the COLLATE clause to apply collations to the **nchar**, **nvarchar**, and **ntext** data types on column-level and expression-level data; they cannot be used with the COLLATE clause to change the collation of a database or server instance.  
+    > Windows Unicode-only collations can only be used with the COLLATE clause to apply collations to the **nchar**, **nvarchar**, and **ntext** data types on column-level and expression-level data; these cannot be used with the COLLATE clause to define or change the collation of a database or server instance.
   
 2.  Creating or altering a table column.  
   
@@ -95,7 +93,7 @@ FROM fn_helpcollations();
 -   When restoring or attaching a database, the default collation of the database and the collation of any **char**, **varchar**, and **text** columns or parameters in the database must be supported by the operating system.  
   
 > [!NOTE]
-> Azure SQL Database Managed Instance server collation is **SQL_Latin1_General_CP1_CI_AS** and cannot be changed.
+> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Managed Instance server collation is **SQL_Latin1_General_CP1_CI_AS** and cannot be changed.
 
 > [!NOTE]
 > Code page translations are supported for **char** and **varchar** data types, but not for **text** data type. Data loss during code page translations is not reported.  
@@ -105,7 +103,7 @@ FROM fn_helpcollations();
   
 ## Examples  
   
-### A. Specifying collation during a select  
+### A. Specifying collation during a SELECT  
  The following example creates a simple table and inserts 4 rows. Then the example applies two collations when selecting data from the table, demonstrating how `Chiapas` is sorted differently.  
   
 ```sql  

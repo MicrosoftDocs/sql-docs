@@ -44,7 +44,7 @@ In DEA, select the menu icon. In the expanded menu, select **Replay Traces** nex
 
 ### Verify setup
 
-1.  **SQL Server install path**: Enter the path to where SQL Server is installed. For example, C:\\<Program\>(\\Program) Files (x86)\\Microsoft SQL Server\\120.
+1.  **SQL Server install path**: Enter the path to where SQL Server is installed. For example, C:\\<Program\>(\\Program Files (x86))\\Microsoft SQL Server\\120.
 1.  **Controller machine name**: Enter a name for the machine that has been set up as the controller. This machine is running the Windows service named SQL Server Distributed Replay controller. The Distributed Replay controller orchestrates the actions of the Distributed Replay clients. There can only be one controller instance in each Distributed Replay environment.
 1.  **Client machine names**: Enter a name for each client machine, separated by commas. Example: client1, client2. You can have up to five client controllers. Clients are one or more machines, either physical or virtual, that run the Windows service named SQL Server Distributed Replay client. The Distributed Replay clients work together to simulate workloads against an instance of SQL Server. There can be one or more clients in each Distributed Replay environment.
 1.  Select **Next**.
@@ -60,14 +60,14 @@ In DEA, select the menu icon. In the expanded menu, select **Replay Traces** nex
 ### Replay a trace
 
 1.  **Trace file name**: Enter a trace file name.
-1.  **Max file size (MB)**: Enter a trace file rollover size value. The default is 200 MB. You can enter a custom value in the drop-down menu.
+1.  **Max file size (MB)**: Enter a trace file rollover size value. The default is 200 MB. You can enter a custom value.
 1.  **Path to store replay trace output**: Enter the path for the output .trc file.
-1.  **SQL Server instance name**:  Enter the name of the computer running SQL Server on which to replay traces.
+1.  **SQL Server instance name**:  Enter the name of the SQL Server instance on which to replay traces.
 1.  Select **Start**.
 
-If the information you entered is valid, the Distributed Replay process starts. Otherwise, the fields that have invalid information are highlighted with red. Make sure that values you entered values are correct, and then select **Start**.
+If the information you entered is valid, the Distributed Replay process starts. Otherwise, the text boses that have incorrect information are highlighted with red. Make sure that the values you entered are correct, and then select **Start**.
 
-Wait until the replay is finished running to see the location that you specified. Select the bell icon in the bottom-left corner of the page to monitor the replay progress.
+Wait until the replay is finished running to see the location that you specified. Select the bell icon at the bottom of the left menu to monitor the replay progress.
 
 ![Replay Traces progress](./media/database-experimentation-assistant-replay-trace/dea-replay-trace-progress.png)
 

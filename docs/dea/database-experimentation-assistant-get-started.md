@@ -54,7 +54,7 @@ To capture a trace on your source server:
 
 You can view the progress of your capture, including start time, duration, and time remaining. You also can start a new capture while you wait for this capture to finish. When your capture is finished, use the output trace file to start the second phase: replay the trace file on your target servers.
 
-For common questions about trace capture, see the [FAQ](database-experimentation-assistant-capture-trace.md#frequently-asked-questions-about-trace-capture).
+For common questions about trace capture, see the [capture FAQ](database-experimentation-assistant-capture-trace.md#frequently-asked-questions-about-trace-capture).
 
 ## Replay
 
@@ -77,7 +77,7 @@ To replay the trace file:
    - **Replay name**: The file name for the replay trace.
    - **Controller machine name**: The name of the Distributed Replay controller machine.
    - **Path to source trace file on controller**: The file path for the source trace file from [Capture](#Capture).
-   - **SQL Server instance name**: The target machine running SQL Server on which to replay the source trace.
+   - **SQL Server instance name**: The name of the SQL Server instance on which to replay the source trace.
    - **Path to store target trace file on SQL Server machine**: The folder path for the resulting replay trace file.
 
 1. Select the check box to restore the backup from the first step.
@@ -86,7 +86,7 @@ To replay the trace file:
 
 You can view the status of your replay. After you replay the source trace on both of your target servers, you're ready to generate an analysis report.
 
-For common questions about replay, see the [FAQ](database-experimentation-assistant-replay-trace.md#frequently-asked-questions-about-trace-replay).
+For common questions about replay, see the [replay FAQ](database-experimentation-assistant-replay-trace.md#frequently-asked-questions-about-trace-replay).
 
 ## Analysis
 
@@ -111,7 +111,7 @@ To generate an analysis report:
 
 Now, view the analysis report to gain insights provided by your A/B test.
 
-For common questions about analysis reports, see the [FAQ](database-experimentation-assistant-create-report.md#frequently-asked-questions-about-analysis-reports).
+For common questions about analysis reports, see the [analysis FAQ](database-experimentation-assistant-create-report.md#frequently-asked-questions-about-analysis-reports).
 
 ### Analysis report
 

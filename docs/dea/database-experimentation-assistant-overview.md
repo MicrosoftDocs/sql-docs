@@ -44,7 +44,7 @@ The following diagram shows the solution architecture for a workload comparison.
 
 Following are some prerequisites for running DEA:
 - Minimum hardware requirement: A single-core machine with 3.5 GB of RAM.
-- Ideal hardware requirement: An eight-core CPU (with 3.5 GB of RAM or more). Processors that have more than eight cores don't help DEA runtimes.
+- Ideal hardware requirement: An eight-core CPU (with 3.5 GB of RAM or more). Processors that have more than eight cores don't improve DEA runtimes.
 - An additional 33% of performance trace size is needed to store A, B, and report analysis databases.
 
 ## Configure DEA

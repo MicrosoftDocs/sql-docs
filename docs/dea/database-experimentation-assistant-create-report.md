@@ -43,13 +43,13 @@ Enter or select the following information:
 
 After you enter or select the required information on the **New analysis report** page, select **Start** to start creating the report. If the information you entered is valid, the analysis report is created. Otherwise, the text boxes that have invalid information are highlighted with red. Make sure that you enter the correct values, and then select **Start**. 
 
-A new analysis report is generated. The analysis database follows the naming scheme **Analysis** + *user-specified report name* + *unique identifier*.
+A new analysis report is generated. The analysis database follows the naming scheme Analysis + *user-specified report name* + *unique identifier*.
 
 ## Frequently asked questions about analysis reports
 
 ### What does my analysis report tell me?
     
-DEA uses statistical tests to analyze your workload and determine how each query ran from Target 1 to Target 2. It provides performance details for each query. Learn more about DEA at [Get started](database-experimentation-assistant-get-started.md).
+DEA uses statistical tests to analyze your workload and determine how each query ran from Target 1 to Target 2. It provides performance details for each query. Learn more about DEA in [Get started](database-experimentation-assistant-get-started.md).
     
 ### Can I create a new analysis report while another report is being generated?
     
@@ -91,7 +91,7 @@ If an error occurs while the report is created, the progress page shows the spec
 
 |Possible errors|Solution|  
 |---|---|  
-|RInterop hit an error on startup. Check RInterop logs and try again.|DEA requires internet access to download dependent R packages. Check RInterop logs in %temp%\\RInterop and DEA logs in %temp%\\DEA. If RInterop was initialized incorrectly or if it initialized without the correct R packages, you might see the exception "Failed to generate new analysis report" after the InitializeRInterop step in the DEA logs.<br><br>The RInterop logs also might show an error similar to "there's no jsonlite package available". If your machine doesn't have internet access, you can manually download the required jsonlite R package:<br><br><li>Go to the %userprofile%\\DEARPackages folder on the machine's file system. This folder consists of the packages used by R for DEA.</li><br><li>If the jsonlite folder is missing in the list of installed packages, you need a machine with internet access to download the release version of jsonlite\_1.4.zip from [https://cran.r-project.org/web/packages/jsonlite/index.html](https://cran.r-project.org/web/packages/jsonlite/index.html).</li><br><li>Copy the .zip file to the machine where you're running DEA.  Extract the jsonlite folder and copy it to %userprofile%\\DEARPackages. This step automatically installs the jsonlite package in R. The folder should be named **jsonlite** and the contents should be directly inside the folder, not one level below.</li><br><li>Close the DEA app, reopen, and try analysis again.</li><br>You can also use the RGUI. Go to **packages** > **install from zip**. Go to the package you downloaded earlier and install.<br><br>If RInterop was initialized and set up correctly, you should see "Installing dependent R package jsonlite" in the RInterop logs.|  
+|RInterop hit an error on startup. Check RInterop logs and try again.|DEA requires internet access to download dependent R packages. Check RInterop logs in %temp%\\RInterop and DEA logs in %temp%\\DEA. If RInterop was initialized incorrectly or if it initialized without the correct R packages, you might see the exception "Failed to generate new analysis report" after the InitializeRInterop step in the DEA logs.<br><br>The RInterop logs also might show an error similar to "there's no jsonlite package available." If your machine doesn't have internet access, you can manually download the required jsonlite R package:<br><br><li>Go to the %userprofile%\\DEARPackages folder on the machine's file system. This folder consists of the packages used by R for DEA.</li><br><li>If the jsonlite folder is missing in the list of installed packages, you need a machine with internet access to download the release version of jsonlite\_1.4.zip from [https://cran.r-project.org/web/packages/jsonlite/index.html](https://cran.r-project.org/web/packages/jsonlite/index.html).</li><br><li>Copy the .zip file to the machine where you're running DEA.  Extract the jsonlite folder and copy it to %userprofile%\\DEARPackages. This step automatically installs the jsonlite package in R. The folder should be named **jsonlite** and the contents should be directly inside the folder, not one level below.</li><br><li>Close DEA, reopen, and try analysis again.</li><br>You can also use the RGUI. Go to **packages** > **install from zip**. Go to the package you downloaded earlier and install.<br><br>If RInterop was initialized and set up correctly, you should see "Installing dependent R package jsonlite" in the RInterop logs.|  
 |Unable to connect to the SQL Server instance, make sure the server name is correct and check for the required access for the user who is logged in.|You might not have access or user rights to the server, or the server name might be incorrect.| 
 |RInterop process timed out. Check DEA and RInterop logs, stop the RInterop process in Task Manager, and then try again.<br><br>or<br><br>RInterop is in faulted state. Stop the RInterop process in Task Manager, and then try again.|Check logs in %temp%\\RInterop to confirm the error. Remove the RInterop process from Task Manager before you try again. Contact the product team if the problem persists.| 
 
@@ -99,13 +99,13 @@ If an error occurs while the report is created, the progress page shows the spec
     
 Check the database on the analysis computer that's running SQL Server to confirm that data exists. Check that the analysis database exists and check its tables. For example, check these tables: TblBatchesA, TblBatchesB, and TblSummaryStats.
 
-If data doesn't exist, the data might not have copied correctly or the database might be corrupt. If only some data is missing, the trace files created in capture or replay might not have captured your workload accurately. If the data is there, check the log files at %temp%\\DEA to see if any errors were logged. Then, try again to generate the analysis report.
+If data doesn't exist, the data might not have copied correctly or the database might be corrupt. If only some data is missing, the trace files created in capture or replay might not have captured your workload accurately. If the data is there, check the log files in %temp%\\DEA to see if any errors were logged. Then, try again to generate the analysis report.
 
 More questions or feedback? Submit feedback through the DEA tool by choosing the smiley icon in the lower-left corner.  
 
 ## Next steps
 
-To learn how to view the analysis report, see [View reports](database-experimentation-assistant-view-report.md).
+- To learn how to view the analysis report, see [View reports](database-experimentation-assistant-view-report.md).
 
 - For a 19-minute introduction to DEA and demonstration, watch the following video:
 

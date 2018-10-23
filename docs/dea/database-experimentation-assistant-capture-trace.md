@@ -33,7 +33,7 @@ Query caching in SQL Server might affect evaluation results. We recommend that y
 
     - **SQL Server instance name**: Enter a name for the computer running SQL Server on which you want to capture a server trace.
     - **Database name**: Enter a name for a database on which to start a database trace. If you don't specify a database, trace is captured on all the databases on the server.
-    - **Trace file name**: Enter a name the trace file for your capture.
+    - **Trace file name**: Enter a name for the trace file for your capture.
     - **Max file size (MB)**: Select the rollover size for files. A new file is created as needed at the file size you select. The recommended rollover size is 200 MB.
     - **Duration (in min)**: Select the length of time (in minutes) that you want the trace capture to run.
     - **Path to store output trace file**: Select the destination path for the trace file. 
@@ -47,7 +47,7 @@ Query caching in SQL Server might affect evaluation results. We recommend that y
 
 ## Start the trace capture
 
-After you enter or select the required information, select **Start** to start capturing traces. If the information you entered is valid, the trace capture process begins. Otherwise, the text boxes that have invalid inputs are highlighted with red. 
+After you enter or select the required information, select **Start** to start capturing traces. If the information you entered is valid, the trace capture process begins. Otherwise, the text boxes that have invalid entries are highlighted with red. 
 
 Make sure that the values you've selected or entered are correct, and then select **Start**.
 
@@ -57,7 +57,7 @@ When the trace capture is finished running, locate your new trace file in the fi
 
 ### Trace file
 
-The trace capture writes out a trace (.trc) file in the specified location. The trace file includes trace results of the activity of a SQL Server database. TRC files are designed to provide more information about errors that are detected and reported by SQL Server.
+The trace capture writes out a .trc file in the specified location. The trace file includes trace results of the activity of a SQL Server database. TRC files are designed to provide more information about errors that are detected and reported by SQL Server.
 
 ## Frequently asked questions about trace capture
 
@@ -106,7 +106,7 @@ If you're running a trace capture for the entire server, the trace captures all 
     
 We recommend that you choose a time that best represents the entirety of your workload. That way, the analysis runs on all the queries in your workload.
     
-### How important is to take a database backup right before you start a trace capture?
+### How important is to take a database backup right before I start a trace capture?
     
 Before you start a trace capture, make sure that you back up all your target databases. The captured trace in Target 1 and Target 2 is replayed. If the database state isn't the same, the results of the experimentation are skewed.
 

@@ -2,7 +2,7 @@
 title: "Identify the right Azure SQL Database SKU for your on-premises database (Data Migration Assistant) | Microsoft Docs"
 description: Learn how to use Data Migration Assistant to identify the right Azure SQL Database SKU for your on-premises database
 ms.custom: ""
-ms.date: "08/29/2018"
+ms.date: "10/20/2018"
 ms.prod: sql
 ms.prod_service: "dma"
 ms.reviewer: ""
@@ -12,7 +12,7 @@ keywords: ""
 helpviewer_keywords: 
   - "Data Migration Assistant, Assess"
 ms.assetid: ""
-author: HJToland3
+author: pochiraju
 ms.author: rajpo
 manager: craigg
 ---
@@ -136,7 +136,7 @@ A description of each column follows.
 - **MetricValue** - Recommended Azure SQL Database SKU.
 - **SQLMiEquivalentCores** - If you choose to go for Azure SQL Database Managed Instance, you can use this value for core count.
 - **IsTierRecommended** - We make a minimum SKU recommendation for each tier. We then apply heuristics to determine the right tier for your database. 
-- **ExclusionReasons** - This value is blank if a Tier is recommended. For each tier that is not recommended, we provide the reasons why it was not picked.
+- **ExclusionReasons** - This value is blank if a Tier is recommended. For each tier that isn't recommended, we provide the reasons why it wasn't picked.
 - **AppliedRules** - A short notation of the rules that were applied.
 
 The recommended value is the minimum SKU required for your queries to run in Azure with a success rate similar to your on-premises databases. For example, if the recommended minimum SKU is S4 for the standard tier, then choosing S3 or below will cause queries to time out or fail to execute.
@@ -150,7 +150,7 @@ With just a few clicks, you can use the recommendations from the previous step t
     - **Subscription ID** – The subscription ID of the Azure subscription to which you want to provision the databases.
     - **Region** – The region in which to provision databases. Make sure your subscription supports the select region.
     - **Resource Group** – The resource group to which you want to deploy the databases. Enter a resource group that exists.
-    - **Server Name** – The Azure SQL Database server to which you want the databases deployed. If you enter a server name that does not exist, it will be created.
+    - **Server Name** – The Azure SQL Database server to which you want the databases deployed. If you enter a server name that doesn't exist, it will be created.
     - **Admin Username\Password** – The server admin username and password.
 
 2. Review recommendations for each database, and modify the pricing tier, compute level, and max data size as needed. Be sure to deselect any databases that you do not currently want to provision.

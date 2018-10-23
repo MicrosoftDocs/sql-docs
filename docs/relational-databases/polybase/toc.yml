@@ -36,6 +36,8 @@
       href: polybase-configure-teradata.md
     - name: MongoDB
       href: polybase-configure-mongodb.md
+    - name: ODBC Generic Types
+      href: polybase-configure-odbc-generic.md
   - name: Scale-out groups
     items:
     - name: Configure a scale-out group

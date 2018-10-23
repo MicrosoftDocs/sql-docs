@@ -28,8 +28,9 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 Community technology preview (CTP) 2.1 is the latest public release of [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]. The following features are added or enhanced for [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] CTP 2.1.
 
 - [Database Engine](#databaseengine)
-  - Intelligent query processing adds scalar UDF inlining. 
-  - Improve truncation message for ETL DW scenarios.
+  - Intelligent query processing adds scalar UDF inlining 
+  - Improve truncation message for ETL DW scenarios
+  - UTF-8 collations support in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Setup
 
 ## CTP 2.0 
 
@@ -100,7 +101,6 @@ Continue reading for more details about these features.
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces or enhances the following new features for the Database Engine
 
 ### Scalar UDF inlining (CTP 2.1)
-
 Scalar UDF inlining automatically transforms scalar user-defined functions (UDF) into relational expressions and embeds them in the calling SQL query, thereby improving the performance of workloads that leverage scalar UDFs. Scalar UDF inlining facilitates cost-based optimization of operations inside UDFs, and results in efficient plans that are set-oriented and parallel as opposed to inefficient, iterative, serial execution plans. This feature is enabled by default under database compatibility level 150.
 
 ### Improve truncation message for ETL DW scenarios (CTP 2.1)
@@ -110,6 +110,10 @@ The error message ID 8152 `String or binary data would be truncated` is familiar
 `String or binary data would be truncated in table '%.*ls', column '%.*ls'. Truncated value: '%.*ls'.`
 
 The new default error message provides more context for the data truncation problem, simplifying the troubleshooting process. If existing applications rely on parsing message ID 8152 and cannot handle the new message ID 2628, then you can revert back to using message ID 8152, by enabling trace flag 459.
+
+### UTF-8 support (CTP 2.0)
+
+Added support for UTF-8 collations in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.1 Setup.
 
 ### Database compatibility level (CTP 2.0)
 

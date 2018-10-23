@@ -49,7 +49,7 @@ Multibyte encodings in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 If you have sites that support multiple languages:
 - Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], consider using a UTF-8 enabled collation to support Unicode and minimize character conversion issues. 
-- If using a lower version of [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] consider using the Unicode **nchar** or **nvarchar** data types to minimize character conversion issues.   
+- If using a lower version of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], consider using the Unicode **nchar** or **nvarchar** data types to minimize character conversion issues.   
 
 If you use **char** or **varchar**, we recommend to:
 - Use **char** when the sizes of the column data entries are consistent.  
@@ -60,12 +60,12 @@ If SET ANSI_PADDING is OFF when either CREATE TABLE or ALTER TABLE is executed, 
   
 > [!WARNING]
 > Each non-null varchar(max) or nvarchar(max) column requires 24 bytes of additional fixed allocation which counts against the 8,060 byte row limit during a sort operation. This can create an implicit limit to the number of non-null varchar(max) or nvarchar(max) columns that can be created in a table.  
-No special error is provided when the table is created (beyond the usual warning that the maximum row size exceeds the allowed maximum of 8060 bytes) or at the time of data insertion. This large row size can cause errors (such as error 512) during some normal operations, such as a clustered index key update, or sorts of the full column set, which users cannot anticipate until performing an operation.
+No special error is provided when the table is created (beyond the usual warning that the maximum row size exceeds the allowed maximum of 8,060 bytes) or at the time of data insertion. This large row size can cause errors (such as error 512) during some normal operations, such as a clustered index key update, or sorts of the full column set, which users cannot anticipate until performing an operation.
   
 ##  <a name="_character"></a> Converting Character Data  
 When character expressions are converted to a character data type of a different size, values that are too long for the new data type are truncated. The **uniqueidentifier** type is considered a character type for the purposes of conversion from a character expression, and therefore is subject to the truncation rules for converting to a character type. See the Examples section that follows.
   
-When a character expression is converted to a character expression of a different data type or size, such as from **char(5)** to **varchar(5)**, or **char(20)** to **char(15)**, the collation of the input value is assigned to the converted value. If a noncharacter expression is converted to a character data type, the default collation of the current database is assigned to the converted value. In either case, you can assign a specific collation by using the [COLLATE](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9) clause.
+When a character expression is converted to a character expression of a different data type or size, such as from **char(5)** to **varchar(5)**, or **char(20)** to **char(15)**, the collation of the input value is assigned to the converted value. If a noncharacter expression is converted to a character data type, the default collation of the current database is assigned to the converted value. In either case, you can assign a specific collation by using the [COLLATE](../../sql/t-sql/statements/collations.md) clause.
   
 > [!NOTE]  
 > Code page translations are supported for **char** and **varchar** data types, but not for **text** data type. As with earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], data loss during code page translations is not reported.  
@@ -158,7 +158,7 @@ String                                       TruncatedValue
 ## See also
 [nchar and nvarchar &#40;Transact-SQL&#41;](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)  
 [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-[COLLATE &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)  
+[COLLATE &#40;Transact-SQL&#41;](../../sql/t-sql/statements/collations.md)  
 [Data Type Conversion &#40;Database Engine&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
 [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
 [Estimate the Size of a Database](../../relational-databases/databases/estimate-the-size-of-a-database.md)     

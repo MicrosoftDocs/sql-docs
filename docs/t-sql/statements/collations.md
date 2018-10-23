@@ -67,24 +67,24 @@ The COLLATE clause can be specified at several levels. These include the followi
   
      You can use the COLLATE clause to apply a character expression to a certain collation. Character literals and variables are assigned the default collation of the current database. Column references are assigned the definition collation of the column.  
   
- The collation of an identifier depends on the level at which it is defined. Identifiers of instance-level objects, such as logins and database names, are assigned the default collation of the instance. Identifiers of objects within a database, such as tables, views, and column names, are assigned the default collation of the database. For example, two tables with names different only in case may be created in a database with case-sensitive collation, but may not be created in a database with case-insensitive collation. For more information, see [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
+The collation of an identifier depends on the level at which it is defined. Identifiers of instance-level objects, such as logins and database names, are assigned the default collation of the instance. Identifiers of objects within a database, such as tables, views, and column names, are assigned the default collation of the database. For example, two tables with names different only in case may be created in a database with case-sensitive collation, but may not be created in a database with case-insensitive collation. For more information, see [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
   
- Variables, GOTO labels, temporary stored procedures, and temporary tables can be created when the connection context is associated with one database, and then referenced when the context has been switched to another database. The identifiers for variables, GOTO labels, temporary stored procedures, and temporary tables are in the default collation of the server instance.  
+Variables, GOTO labels, temporary stored procedures, and temporary tables can be created when the connection context is associated with one database, and then referenced when the context has been switched to another database. The identifiers for variables, GOTO labels, temporary stored procedures, and temporary tables are in the default collation of the server instance.  
   
- The COLLATE clause can be applied only for the **char**, **varchar**, **text**, **nchar**, **nvarchar**, and **ntext** data types.  
+The COLLATE clause can be applied only for the **char**, **varchar**, **text**, **nchar**, **nvarchar**, and **ntext** data types.  
   
- COLLATE uses *collate_name* to refer to the name of either the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] collation or the Windows collation to be applied to the expression, column definition, or database definition. *collation_name* can be only a specified *Windows_collation_name* or a *SQL_collation_name* and the parameter must contain a literal value. *collation_name* cannot be represented by a variable or expression.  
+COLLATE uses *collate_name* to refer to the name of either the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] collation or the Windows collation to be applied to the expression, column definition, or database definition. *collation_name* can be only a specified *Windows_collation_name* or a *SQL_collation_name* and the parameter must contain a literal value. *collation_name* cannot be represented by a variable or expression.  
   
- Collations are generally identified by a collation name, except in Setup. In Setup, you instead specify the root collation designator (the collation locale) for Windows collations, and then specify sort options that are sensitive or insensitive to case or accents.  
+Collations are generally identified by a collation name, except in Setup. In Setup, you instead specify the root collation designator (the collation locale) for Windows collations, and then specify sort options that are sensitive or insensitive to case or accents.  
   
- You can execute the system function [fn_helpcollations](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) to retrieve a list of all the valid collation names for Windows collations and SQL Server collations:  
+You can execute the system function [fn_helpcollations](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) to retrieve a list of all the valid collation names for Windows collations and SQL Server collations:  
   
 ```sql  
 SELECT name, description  
 FROM fn_helpcollations();  
 ```  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can support only code pages that are supported by the underlying operating system. When you perform an action that depends on collations, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] collation used by the referenced object must use a code page supported by the operating system running on the computer. These actions can include the following:  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can support only code pages that are supported by the underlying operating system. When you perform an action that depends on collations, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] collation used by the referenced object must use a code page supported by the operating system running on the computer. These actions can include the following:  
   
 -   Specifying a default collation for a database when you create or alter the database.  
   

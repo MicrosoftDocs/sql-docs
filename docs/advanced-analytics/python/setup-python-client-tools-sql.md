@@ -27,7 +27,9 @@ If you have the developer edition and plan to work locally on Python script you 
 
 Local workstations must have the same Python package versions as those on SQL Server: revoscalepy and microsftml. Additional Python packages are available, but are more commonly used with other scenarios in a standalone (non-instance) Machine Learning Server context. 
 
-1. Download the installation shell script from [https://aka.ms/mls93-py](https://aka.ms/mls93-py) (or use [https://aka.ms/mls-py](https://aka.ms/mls-py) for the 9.2. release). The script installs Anaconda 4.2.0, which includes Python 3.5.2, along with all packages listed previously.
+1. Download the installation shell script from [https://aka.ms/mls93-py](https://aka.ms/mls93-py) (or use [https://aka.ms/mls-py](https://aka.ms/mls-py) for the 9.2. release). 
+
+  The script installs Anaconda 4.2.0, which includes Python 3.5.2, along with all packages listed previously.
 
   Python components are provided through [SPO_9.3.0.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=859054&clcid=1033). If you need a different version, see [CAB downloads](../install/sql-ml-cab-downloads.md)
 
@@ -37,7 +39,7 @@ Local workstations must have the same Python package versions as those on SQL Se
 
    ```python
    cd {{download-directory}}
-   .\Install-PyForMLS.ps1 -InstallFolder "C:\path-to-python-for-mls")
+   .\Install-PyForMLS.ps1 -InstallFolder "C:\path-to-python-for-mls"
    ```
 
    Installation takes some time to complete. You can monitor progress in the PowerShell window. When setup is finished, you have a complete set of packages. For example, if you specified `C:\mspythonlibs` as the folder name, you would find the packages at `C:\mspythonlibs\Lib\site-packages`. Otherwise, the default folder is `C:\Program Files\Microsoft\PyForMLS1`.

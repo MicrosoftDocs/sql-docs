@@ -10,7 +10,7 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-# Create, train, and use a Python model through stored procedures in SQL Server
+# Create, train, and use a Python model with stored procedures in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This exercise demonstrates the capabilities of Python integration with SQL Server when you [add machine learning](../install/sql-machine-learning-services-windows-install.md) to a database engine instance. On a Python-integrated instance, you can wrap Python code inside a [stored procedure](../../relational-databases/stored-procedures/stored-procedures-database-engine.md), leveraging one of the major mechanisms for operationalizing production code in SQL Server. The ability to embed code in a procedure has tangible benefits in how you design, test, and manage data science and machine learning workloads in SQL Server.

@@ -18,7 +18,7 @@ This article provides a comprehensive list of the tutorials, demos, and sample a
 
 + [R tutorials](../tutorials/sql-server-r-tutorials.md)
 
-### <a name ="bkmk_samples"></a>SQL Server product samples
+## <a name ="bkmk_samples"></a>R and Python samples
 
 These samples and demos provided by the SQL Server and R Server development team highlight ways that you can use embedded analytics in real-world applications.
 
@@ -30,7 +30,7 @@ These samples and demos provided by the SQL Server and R Server development team
 | [Build a predictive model using Python and SQL Server](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/) | Build the ski rental analysis application using Python, to help plan for future demand. This example uses the new Python library, **revoscalepy**, to create a linear regression model. | SQL Server 2017 |
 | [How to use Tableau with SQL Server Machine Learning Services](https://blogs.msdn.microsoft.com/mlserver/2017/12/14/how-to-use-tableau-with-sql-server-machine-learning-services-with-r-and-python/) | Analyze social media and create Tableau graphs, using SQL Server and R. | SQL Server 2016 or SQL Server 2017 |
 
-### <a name="bkmk_solutions"></a>Solution templates
+## <a name="bkmk_solutions"></a>Solution templates
 
 The Microsoft Data Science Team has provided customizable solution templates that can be used to jump-start solutions for common scenarios. Each solution is tailored to a specific task or industry problem. Most of the solutions are designed to run either in SQL Server, or in a cloud environment such as Azure Machine Learning. Other solutions can run on Linux or in Spark or Hadoop clusters, by using Microsoft R Server or Machine Learning Server.
 

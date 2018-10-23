@@ -1,7 +1,7 @@
 ---
 title: "Query Hints (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/24/2018"
+ms.date: "10/22/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -251,31 +251,30 @@ manager: craigg
 
  The following hint names are supported:    
  
-*  'DISABLE_OPTIMIZED_NESTED_LOOP'  
- Instructs the query processor not to use a sort operation (batch sort) for optimized nested loop joins when generating a query plan. This is equivalent to [trace flag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2340.
-*  'FORCE_LEGACY_CARDINALITY_ESTIMATION'  <a name="use_hint_ce70"></a>
- Forces the query optimizer to use [Cardinality Estimation](../../relational-databases/performance/cardinality-estimation-sql-server.md) model of [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and earlier versions. This is equivalent to [trace flag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481 or [Database Scoped Configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) setting LEGACY_CARDINALITY_ESTIMATION=ON.
-*  'ENABLE_QUERY_OPTIMIZER_HOTFIXES'  
- Enables query optimizer hotfixes (changes released in SQL Server Cumulative Updates and Service Packs). This is equivalent to [trace flag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4199 or [Database Scoped Configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) setting QUERY_OPTIMIZER_HOTFIXES=ON.
-*  'DISABLE_PARAMETER_SNIFFING'  
- Instructs query optimizer to use average data distribution while compiling a query with one or more parameters, making the query plan independent on the parameter value which was first used when the query was compiled. This is equivalent to [trace flag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4136 or [Database Scoped Configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) setting PARAMETER_SNIFFING=OFF.
-*  'ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES'    <a name="use_hint_correlation"></a>
- Causes SQL Server to generate a plan using minimum selectivity when estimating AND predicates for filters to account for correlation. This is equivalent to [trace flag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4137 when used with cardinality estimation model of [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and earlier versions, and has similar effect when [trace flag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9471 is used with cardinality estimation model of [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] or higher.
-*  'DISABLE_OPTIMIZER_ROWGOAL'  <a name="use_hint_rowgoal"></a>
- Causes SQL Server to generate a plan that does not use row goal adjustments with queries that contain TOP, OPTION (FAST N), IN, or EXISTS keywords. This is equivalent to [trace flag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4138.
-*  'ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS'  
- Enables automatically generated quick statistics (histogram amendment) for any leading index column for which cardinality estimation is needed. The histogram used to estimate cardinality will be adjusted at query compile time to account for actual maximum or minimum value of this column. This is equivalent to [trace flag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4139. 
 *  'ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS'    <a name="use_hint_join_containment"></a>
- Causes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to generate a query plan using the Simple Containment assumption instead of the default Base Containment assumption for joins, under the query optimizer [Cardinality Estimation](../../relational-databases/performance/cardinality-estimation-sql-server.md) model of [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] or newer. This is equivalent to [trace flag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9476. 
-*  'FORCE_DEFAULT_CARDINALITY_ESTIMATION'    
- Forces the Query Optimizer to use [Cardinality Estimation](../../relational-databases/performance/cardinality-estimation-sql-server.md) model that corresponds to the current database compatibility level. Use this hint to override [Database Scoped Configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) setting LEGACY_CARDINALITY_ESTIMATION=ON or [trace flag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481.
-*  'DISABLE_INTERLEAVED_EXECUTION_TVF'   
- Disables interleaved execution for multi-statement table valued functions. For more information, see [Interleaved execution for multi-statement table-valued functions](../../relational-databases/performance/adaptive-query-processing.md#interleaved-execution-for-multi-statement-table-valued-functions).
-*  'DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'     
- Disables batch mode memory grant feedback. For more information, see [Batch mode memory grant feedback](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-memory-grant-feedback).
+   Causes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to generate a query plan using the Simple Containment assumption instead of the default Base Containment assumption for joins, under the query optimizer [Cardinality Estimation](../../relational-databases/performance/cardinality-estimation-sql-server.md) model of [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] or newer. This is equivalent to [trace flag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9476. 
+*  'ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES'    <a name="use_hint_correlation"></a>
+   Causes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to generate a plan using minimum selectivity when estimating AND predicates for filters to account for correlation. This is equivalent to [trace flag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4137 when used with cardinality estimation model of [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and earlier versions, and has similar effect when [trace flag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9471 is used with cardinality estimation model of [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] or higher.
 *  'DISABLE_BATCH_MODE_ADAPTIVE_JOINS'     
- Disables batch mode adaptive joins. For more information, see [Batch mode Adaptive Joins
-](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-adaptive-joins).
+   Disables batch mode adaptive joins. For more information, see [Batch mode Adaptive Joins](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-adaptive-joins).
+*  'DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'     
+   Disables batch mode memory grant feedback. For more information, see [Batch mode memory grant feedback](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-memory-grant-feedback).
+*  'DISABLE_INTERLEAVED_EXECUTION_TVF'   
+   Disables interleaved execution for multi-statement table valued functions. For more information, see [Interleaved execution for multi-statement table-valued functions](../../relational-databases/performance/adaptive-query-processing.md#interleaved-execution-for-multi-statement-table-valued-functions).
+*  'DISABLE_OPTIMIZED_NESTED_LOOP'  
+   Instructs the query processor not to use a sort operation (batch sort) for optimized nested loop joins when generating a query plan. This is equivalent to [trace flag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2340.
+*  'DISABLE_OPTIMIZER_ROWGOAL'  <a name="use_hint_rowgoal"></a>
+   Causes SQL Server to generate a plan that does not use row goal adjustments with queries that contain TOP, OPTION (FAST N), IN, or EXISTS keywords. This is equivalent to [trace flag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4138.
+*  'DISABLE_PARAMETER_SNIFFING'  
+   Instructs query optimizer to use average data distribution while compiling a query with one or more parameters, making the query plan independent on the parameter value which was first used when the query was compiled. This is equivalent to [trace flag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4136 or [Database Scoped Configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) setting PARAMETER_SNIFFING=OFF.
+*  'ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS'  
+   Enables automatically generated quick statistics (histogram amendment) for any leading index column for which cardinality estimation is needed. The histogram used to estimate cardinality will be adjusted at query compile time to account for actual maximum or minimum value of this column. This is equivalent to [trace flag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4139. 
+*  'ENABLE_QUERY_OPTIMIZER_HOTFIXES'  
+   Enables query optimizer hotfixes (changes released in SQL Server Cumulative Updates and Service Packs). This is equivalent to [trace flag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4199 or [Database Scoped Configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) setting QUERY_OPTIMIZER_HOTFIXES=ON.
+*  'FORCE_DEFAULT_CARDINALITY_ESTIMATION'    
+   Forces the Query Optimizer to use [Cardinality Estimation](../../relational-databases/performance/cardinality-estimation-sql-server.md) model that corresponds to the current database compatibility level. Use this hint to override [Database Scoped Configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) setting LEGACY_CARDINALITY_ESTIMATION=ON or [trace flag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481.
+*  'FORCE_LEGACY_CARDINALITY_ESTIMATION'  <a name="use_hint_ce70"></a>
+   Forces the query optimizer to use [Cardinality Estimation](../../relational-databases/performance/cardinality-estimation-sql-server.md) model of [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and earlier versions. This is equivalent to [trace flag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481 or [Database Scoped Configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) setting LEGACY_CARDINALITY_ESTIMATION=ON.
 *  'QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n'       
  Forces the query optimizer behavior at a query level, as if the query was compiled with database compatibility level *n*, where *n* is a supported database compatibility level. Refer to [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md) for a list of currently supported values for *n*. **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU10).    
  

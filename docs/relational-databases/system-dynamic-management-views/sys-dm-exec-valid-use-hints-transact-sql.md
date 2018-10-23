@@ -23,7 +23,7 @@ manager: craigg
 # sys.dm_exec_valid_use_hints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-Returns [USE HINT](../../t-sql/queries/hints-transact-sql-query.md) supported hint names. It lists one hint name per row.  
+Returns [USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint) supported hint names. It lists one hint name per row.  
   
 Use this DMV to see the list of all supported hints under the USE HINT notation.  
   
@@ -31,7 +31,7 @@ Use this DMV to see the list of all supported hints under the USE HINT notation.
 |-----------------|---------------|-----------------|  
 |name|**sysname**|The name of the hint.|
 
-See [Query Hints](../../t-sql/queries/hints-transact-sql-query.md) for descriptions of each hint.
+See [Query Hints](../../t-sql/queries/hints-transact-sql-query.md#use_hint) for descriptions of each hint.
 
 Introduced in [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1.
   

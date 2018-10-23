@@ -32,7 +32,7 @@ The following step-by-step instructions help you use the Data Migration Assistan
     - [PowerBI desktop](https://docs.microsoft.com/power-bi/desktop-get-the-desktop).
 - Download and extract:
     - The [DMA Reports Power BI template](https://msdnshared.blob.core.windows.net/media/2018/04/PowerBI-Reports1.zip).
-    - The [LoadWarehouse script](https://msdnshared.blob.core.windows.net/media/2018/03/LoadWarehouse.zip).
+    - The [LoadWarehouse script](https://msdnshared.blob.core.windows.net/media/2018/10/LoadWarehouse.zip).
 
 ## Loading the PowerShell modules
 Saving the PowerShell modules into the PowerShell modules directory enables you to call the modules without the need to explicitly load them before use.

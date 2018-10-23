@@ -1,5 +1,5 @@
 ---
-title: "Collations | Microsoft Docs"
+title: "COLLATE | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/07/2018"
 ms.prod: sql

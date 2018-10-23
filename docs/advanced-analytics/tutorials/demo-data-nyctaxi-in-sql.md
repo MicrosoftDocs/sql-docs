@@ -1,6 +1,6 @@
 ---
 title: Download NYC Taxi demo data and scripts for embedded R and Python (SQL Server Machine Learning) | Microsoft Docs
-description: Instructions for downloading New York City taxi sample data and creating a database. Data is used in SQL Server tutorials showing how to embed R and Python in SQL Server stored procedures and T-SQL functions.
+description: Instructions for downloading New York City taxi sample data and creating a database. Data is used in SQL Server Python and R language tutorials showing how to embed script in SQL Server stored procedures and T-SQL functions.
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -10,7 +10,7 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-# NYC Taxi demo data for SQL Server
+# NYC Taxi demo data for SQL Server Python and R tutorials
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This article explains how to set up a sample database consisting of public data from the [New York City Taxi and Limousine Commission](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml). This data is used in several R and Python tutorials for in-database analytics in SQL Server. The sample data is one percent of the public data set. On your system, the database backup file is slightly over 90 MB, providing 1.7 million rows in the primary data table.
@@ -21,7 +21,7 @@ Tutorials and quickstarts using this data set include the following:
 
 +  [Use a Python model in SQL Server for training and scoring](train-score-using-python-in-tsql.md)
 
-## Download demo database
+## Download files
 
 The sample database is a backup file hosted by Microsoft. File download begins immediately when you click the link. 
 
@@ -61,7 +61,7 @@ The following table summarizes the objects created in the NYC Taxi demo database
 |**PredictTipSingleMode**  |stored procedure| Created by the PredictTipSingleMode.sql script. Calls the trained model to create predictions using the model. This stored procedure accepts a new observation as input, with individual feature values passed as in-line parameters, and returns a value that predicts the outcome for the new observation. This stored procedure is used in [Operationalize the R model](sqldev-operationalize-the-model.md).|
 |**TrainTipPredictionModel**  |stored procedure|Created by the TrainTipPredictionModel.sql script. Trains a logistic regression model by calling an R package. The model predicts the value of the  tipped column, and is trained using a randomly selected 70% of the data. The output of the stored procedure is the trained model, which is saved in the table nyc_taxi_models. This stored procedure is used in [Train and save a model](sqldev-train-and-save-a-model-using-t-sql.md).|
 
-## Query data for verification
+## Query the data
 
 As a validation step, run a query to confirm the data was uploaded.
 

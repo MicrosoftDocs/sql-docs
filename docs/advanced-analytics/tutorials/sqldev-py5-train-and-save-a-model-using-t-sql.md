@@ -1,5 +1,5 @@
 ---
-title: Step 5 Train and save a Python model using T-SQL | Microsoft Docs
+title: Train and save a Python model using T-SQL | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -9,7 +9,7 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-# Step 5: Train and save a Python model using T-SQL
+# Train and save a Python model using T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This article is part of a tutorial, [In-database Python analytics for SQL developers](sqldev-in-database-python-for-sql-developers.md). 
@@ -189,8 +189,8 @@ In the next step, you use the trained models to create predictions.
 
 ## Next step
 
-[Step 6: Operationalize the Python model using SQL Server](sqldev-py6-operationalize-the-model.md)
+[Operationalize the Python model using SQL Server](sqldev-py6-operationalize-the-model.md)
 
 ## Previous step
 
-[Step 4: Create data features using T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+[Create data features using T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)

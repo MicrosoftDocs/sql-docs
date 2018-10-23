@@ -82,12 +82,15 @@ To improve query performance, enable pushdown computation to your Hadoop cluster
 
 To query the data in your Hadoop data source, you must define an external table to use in Transact-SQL queries. The following steps describe how to configure the external table.
 
-1. Create a master key on the database. This is required to encrypt the credential secret.
+1. Create a master key on the database, if one does not already exist. This is required to encrypt the credential secret.
 
-   ```sql
-   CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
-   ```
+     ```sql
+      CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'password';  
+     ```
+    ## Arguments
+    PASSWORD ='password'
 
+    Is the password that is used to encrypt the master key in the database. password must meet the Windows password policy requirements of the computer that is hosting the instance of SQL Server.
 1. Create a database scoped credential for Kerberos-secured Hadoop clusters.
 
    ```sql

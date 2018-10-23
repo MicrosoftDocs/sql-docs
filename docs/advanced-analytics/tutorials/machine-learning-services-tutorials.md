@@ -18,8 +18,6 @@ This article provides a comprehensive list of the tutorials, demos, and sample a
 
 + [R tutorials](../tutorials/sql-server-r-tutorials.md)
 
-For more information about requirements and how to get set up, see [Prerequisites](#bkmk_prerequisites).
-
 ## Samples and solutions
 
 + [Samples](#bkmk_samples) 
@@ -53,7 +51,7 @@ The Microsoft Data Science Team has provided solution templates that can be used
 
 For more information, see [Machine Learning Templates with SQL Server 2016 R Services](https://blogs.technet.microsoft.com/machinelearning/2016/03/23/machine-learning-templates-with-sql-server-2016-r-services/).
 
-## More resources and reading
+## Recommended reading
 
 + [Why did we build it?](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/01/10/sql-server-r-services-why-did-we-build-it/)
 

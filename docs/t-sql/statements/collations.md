@@ -1,5 +1,5 @@
 ---
-title: "COLLATE | Microsoft Docs"
+title: "COLLATE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/07/2018"
 ms.prod: sql
@@ -21,7 +21,7 @@ ms.author: carlrab
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# COLLATE
+# COLLATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Defines a collation of a database or table column, or a collation cast operation when applied to character string expression. Collation name can be either a Windows collation name or a SQL collation name. If not specified during database creation, the database is assigned the default collation of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If not specified during table column creation, the column is assigned the default collation of the database.
@@ -52,14 +52,14 @@ The COLLATE clause can be specified at several levels. These include the followi
   
 1.  Creating or altering a database.  
   
-     You can use the COLLATE clause of the CREATE DATABASE or ALTER DATABASE statement to specify the default collation of the database. You can also specify a collation when you create a database using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. If you do not specify a collation, the database is assigned the default collation of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     You can use the COLLATE clause of the `CREATE DATABASE` or `ALTER DATABASE` statement to specify the default collation of the database. You can also specify a collation when you create a database using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. If you do not specify a collation, the database is assigned the default collation of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
     > [!NOTE]  
     > Windows Unicode-only collations can only be used with the COLLATE clause to apply collations to the **nchar**, **nvarchar**, and **ntext** data types on column-level and expression-level data; these cannot be used with the COLLATE clause to define or change the collation of a database or server instance.
   
 2.  Creating or altering a table column.  
   
-     You can specify collations for each character string column using the COLLATE clause of the CREATE TABLE or ALTER TABLE statement. You can also specify a collation when you create a table using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. If you do not specify a collation, the column is assigned the default collation of the database.  
+     You can specify collations for each character string column using the COLLATE clause of the `CREATE TABLE` or `ALTER TABLE` statement. You can also specify a collation when you create a table using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. If you do not specify a collation, the column is assigned the default collation of the database.  
   
      You can also use the `database_default` option in the COLLATE clause to specify that a column in a temporary table use the collation default of the current user database for the connection instead of **tempdb**.  
   
@@ -73,7 +73,7 @@ The COLLATE clause can be specified at several levels. These include the followi
   
  The COLLATE clause can be applied only for the **char**, **varchar**, **text**, **nchar**, **nvarchar**, and **ntext** data types.  
   
- COLLATE uses *collate_name* to refer to the name of either the SQL Server collation or the Windows collation to be applied to the expression, column definition, or database definition. *collation_name* can be only a specified *Windows_collation_name* or a *SQL_collation_name* and the parameter must contain a literal value. *collation_name* cannot be represented by a variable or expression.  
+ COLLATE uses *collate_name* to refer to the name of either the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] collation or the Windows collation to be applied to the expression, column definition, or database definition. *collation_name* can be only a specified *Windows_collation_name* or a *SQL_collation_name* and the parameter must contain a literal value. *collation_name* cannot be represented by a variable or expression.  
   
  Collations are generally identified by a collation name, except in Setup. In Setup, you instead specify the root collation designator (the collation locale) for Windows collations, and then specify sort options that are sensitive or insensitive to case or accents.  
   

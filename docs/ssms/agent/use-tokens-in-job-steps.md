@@ -67,8 +67,8 @@ The following tables list and describe the tokens and macros that [!INCLUDE[ssNo
 |**(A-ERR)**|Error number. If the job is run by an alert, the error number value automatically replaces this token in the job step.|  
 |**(A-SEV)**|Error severity. If the job is run by an alert, the error severity value automatically replaces this token in the job step.|  
 |**(A-MSG)**|Message text. If the job is run by an alert, the message text value automatically replaces this token in the job step.|  
-|**(JOBNAME)**|The name of the job.|  
-|**(STEPNAME)**|The name of the step.|  
+|**(JOBNAME)**|The name of the job. This token is only available on SQL 2016 and above.|  
+|**(STEPNAME)**|The name of the step. This token is only available on SQL 2016 and above.|  
 |**(DATE)**|Current date (in YYYYMMDD format).|  
 |**(INST)**|Instance name. For a default instance, this token will have the default instance name: MSSQLSERVER.|  
 |**(JOBID)**|Job ID.|  

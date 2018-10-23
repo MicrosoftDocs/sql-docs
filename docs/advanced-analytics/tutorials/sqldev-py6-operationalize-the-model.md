@@ -1,5 +1,5 @@
 ---
-title: Step 6 Operationalize the Python model using SQL Server | Microsoft Docs
+title: Operationalize the Python model using SQL Server | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -9,7 +9,7 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-# Step 6: Operationalize the Python model using SQL Server
+# Operationalize the Python model using SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This article is part of a tutorial, [In-database Python analytics for SQL developers](sqldev-in-database-python-for-sql-developers.md). 
@@ -357,7 +357,7 @@ In this tutorial, you've learned how to work with Python code embedded in stored
 
 ## Previous step
 
-[Step 5: Train and save a Python model](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+[Train and save a Python model](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
 ## See also
 

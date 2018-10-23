@@ -1,5 +1,5 @@
 ---
-title: Step 3 Explore and visualize the data | Microsoft Docs
+title: Explore and visualize the data | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -9,7 +9,7 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-# Step 3: Explore and visualize the data
+# Explore and visualize the data
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This article is part of a tutorial, [In-database Python analytics for SQL developers](sqldev-in-database-python-for-sql-developers.md). 
@@ -189,9 +189,9 @@ The stored procedure returns a serialized Python `figure` object as a stream of 
 
 ## Next step
 
-[Step 4: Create data features using T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+[Create data features using T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
 ## Previous step
 
-[Step 2: Import data to SQL Server using PowerShell](sqldev-py2-import-data-to-sql-server-using-powershell.md)
+[Download the NYC Taxi data set](demo-data-nyctaxi-in-sql.md)
 

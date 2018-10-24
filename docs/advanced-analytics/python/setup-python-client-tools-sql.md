@@ -12,22 +12,26 @@ manager: cgronlun
 # Set up Python client tools for use with SQL Server Machine Learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Python integration is available starting in SQL Server 2017 or later, when you add Python support to Machine Learning Services (In-Database). For more information, see [Install SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md).
+Python integration is available starting in SQL Server 2017 or later, when you include the Python option in a Machine Learning Services (In-Database) installation. For more information, see [Install SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md).
 
-In this article, learn how to configure development workstations so that you can connect to a remote SQL Server enabled for machine learning and Python integration.
+In this article, learn how to configure a client development workstation so that you can connect to a remote SQL Server enabled for machine learning and Python integration. By completing the steps below, you will have the same Python libraries as those on the remote SQL Server instance.
 
 > [!Tip]
 > For a demonstration and video walkthrough, see [Run R and Python Remotely in SQL Server from Jupyter Notebooks or any IDE](https://blogs.msdn.microsoft.com/mlserver/2018/07/10/run-r-and-python-remotely-in-sql-server-from-jupyter-notebooks-or-any-ide/) or this [YouTube video](https://youtu.be/D5erljpJDjE).
 
 ## 1 - Install Python packages
 
-Local workstations must have the same Python package versions as those on SQL Server: revoscalepy and microsftml. Additional Python packages are available, but are more commonly used with other scenarios in a standalone (non-instance) Machine Learning Server context. 
+Local workstations must have the same Python package versions as those on SQL Server, including the base distribution, and Microsoft-specific packages [revoscalepy](https://docs.microsoft.com//machine-learning-server/python-reference/revoscalepy/revoscalepy-package) and [microsftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package). 
 
-1. Download the installation shell script from [https://aka.ms/mls93-py](https://aka.ms/mls93-py) (or use [https://aka.ms/mls-py](https://aka.ms/mls-py) for the 9.2. release). 
+The [azureml-model-management](https://docs.microsoft.com/en-us/machine-learning-server/python-reference/azureml-model-management-sdk/azureml-model-management-sdk) package is also installed, but it applies to operationalization tasks associated with a standalone (non-instance) Machine Learning Server context. For in-database analystics on a SQL Server instance, operationalization is through stored procedures.
 
-  The script installs Anaconda 4.2.0, which includes Python 3.5.2, along with all packages listed previously.
+1. Download the installation shell script:
 
-  Python components are provided through [SPO_9.3.0.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=859054&clcid=1033). If you need a different version, see [CAB downloads](../install/sql-ml-cab-downloads.md)
+  + [https://aka.ms/mls-py](https://aka.ms/mls-py) if SQL Server 2017 is not bound (common case). Choose this script if you aren't sure.
+
+  + [https://aka.ms/mls93-py](https://aka.ms/mls93-py) if the remote SQL Server instance is [bound to Machine Learning Server 9.3](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server).
+
+  The script installs Anaconda 4.2.0, which includes Python 3.5.2, along with the three previously listed packages.
 
 2. Open PowerShell window with elevated administrator permissions (right-click **Run as administrator**).
 
@@ -63,20 +67,20 @@ To use the Python executable installed by the setup script:
 
 2. Right-click **Python.exe** and select **Run as administrator** to open an interactive command-line window.
 
-### On SQL Server
+### On a standalone Python server
 
-SQL Server Setup adds standard Python tools and resources to a server instance. If you are using the developer edition and want to check Python version or run ad hoc commands:
+If you chose the [standalone server](../install/sql-machine-learning-standalone-windows-install) option in SQL Server setup, you have a Python server that is fully decoupled from a SQL Server database engine instance. Using a standalone server as a rich client is an option that some customers prefer. If you have a standalone server, SQL Server Setup added standard Python tools and resources, which you can find at this location:
 
-1. Go to `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES`.
+1. Go to `C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER`.
 
 2. Right-click **Python.exe** and select **Run as administrator** to open an interactive command-line window.
 
 > [!Note]
-> Generally, to avoid resource contention, we recommend that you **do not** run Python from the instance library on the server, if you think it is possible the SQL Server instance is running Python code. However, using the tools in the instance library might be valuable if you are trying to debug an issue that occurs only when running in SQL Server and want to view more detailed error messages, or make sure that all required packages are installed.
+> Generally, to avoid resource contention, we recommend that you **do not** run a standalone server and an instance-bound service on the same computer.
 
 ## 3 - Permissions
 
-To connect to an instance of SQL Server to run scripts and upload data, you must have a valid login on the database server. You can use either a SQL login or integrated Windows authentication. We generally recommend that you use Windows integrated authentication, but using the SQL login is simpler for some scenarios.
+To connect to an instance of SQL Server to run scripts and upload data, you must have a valid login on the database server. You can use either a SQL login or integrated Windows authentication. We generally recommend that you use Windows integrated authentication, but using the SQL login is simpler for some scenarios, particularly when your script contains connection strings to external data.
 
 At a minimum, the account used to run code must have permission to read from the databases you are working with, plus the special permission EXECUTE ANY EXTERNAL SCRIPT. Most developers also require permissions to create new objects in the form of stored procedures containing your script, and write data into tables containing training data or scored data. 
 
@@ -92,11 +96,11 @@ If your code requires packages that are not installed by default with SQL Server
 
 ## 4 - Test connections
 
-After installing all tools and libraries, you should connect to the server and verify that you can create a compute context, or that Python can communicate with SQL Server.
+After installing all tools and libraries, you should connect to the server and verify that you can load the libraries locally and remotely.
 
 ### Verify that revoscalepy works from the Python command line
 
-To verify that the **revoscalepy** module can be loaded, run the following sample code from a Python interactive command prompt. The code generates a data summary using the Python sample data and [rx_summary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary). 
+To verify that the **revoscalepy** module can be loaded on the local client, run the following sample code from a Python interactive command prompt. The code generates a data summary using the Python sample data and [rx_summary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary) function from the revoscalepy library.
 
 ```Python
 import os
@@ -112,54 +116,21 @@ print(summary)
 
 The sample data path is printed so that you can determine which instance of Python is being called.
 
-### Verify that Python can be called from a local SQL Server
-
-On a local development environment, verify that Python is communicating with local [SQL Server instance configured for external scripting](../install/sql-machine-learning-services-windows-install.md). Use SQL Server Management Studio to open a new **Query** window and run any simple Python command in the context of a stored procedure:
-
-```SQL
-EXEC sp_execute_external_script @language = N'Python', 
-@script = N'print(3+4)'
-```
-
-It can take a while to launch the Python run-time for the first time, but if there are no errors, you know that the SQL Server Launchpad is working, and Python can be started from SQL Server.
-
-To verify that **revoscalepy** is available in the SQL Server instance library, run the script based on [rx_summary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary), with some slight modifications to generate results compatible with SQL Server. 
-
-```SQL
-EXEC sp_execute_external_script @language = N'Python', 
-@script = N'
-import os
-from pandas import DataFrame
-from revoscalepy import rx_summary
-from revoscalepy import RxXdfData
-from revoscalepy import RxOptions
-
-sample_data_path = RxOptions.get_option("sampleDataDir")
-print(sample_data_path)
-
-ds = RxXdfData(os.path.join(sample_data_path, "AirlineDemoSmall.xdf"))
-summary = rx_summary("ArrDelay + DayOfWeek", ds)
-print(summary)
-dfsummary = summary.summary_data_frame
-OutputDataSet = dfsummary
-'
-WITH RESULT SETS  ((ColName nvarchar(25) , ColMean float, ColStdDev  float, ColMin  float,   ColMax  float, Col_ValidObs  float, Col_MissingObs int))
-```
-
-Because rx_summary returns an object of type `class revoscalepy.functions.RxSummary.RxSummaryResults`, which contains multiple elements, to handle the results in SQL Server, you can extract just the data frame in a tabular format.
-
 ### Verify Python execution in SQL Server as remote compute context
 
 If you have installed **revoscalepy** in your local Python development environment, you should be able to connect to a remote instance of SQL Server 2017 where Python has been enabled, and run a similar code sample using the server as the compute context. 
 
+The mechanism for connecting to a remote instance is the [rx_set_compute_context](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-set-compute-context) in **revoscalepy**. Start by loading revoscalepy locally, and then define and set the remote compute context. The remaining code runs remotely on SQL Server.
+
 For this script to run, specify a valid server name and an existing database. This particular script doesn't use the database, but the connection string requires it.
 
 ```Python
+# Load libraries and functions locally
 import os
-from revoscalepy import rx_summary, RxOptions, RxXdfData, RxSqlServerData, RxInSqlServer
+from revoscalepy import rx_summary, rx_set_compute_context, RxOptions, RxXdfData, RxSqlServerData, RxInSqlServer
 
-# define connection string and compute context
-sql_conn_string="Driver=SQL Server;Server=<server-name>;Database=TestDB;Trusted_Connection=True"
+# Define connection string and remote compute context for SQL Server
+sql_conn_string="Driver=SQL Server;Server=<server-name>;Database=<database-name>;Trusted_Connection=True"
 sqlcc = RxInSqlServer(
     connection_string = sql_conn_string,
     num_tasks = 1,
@@ -170,20 +141,16 @@ sqlcc = RxInSqlServer(
     )
 rx_set_compute_context(sqlcc)
 
-# get sample data and path
+# Remaining code now runs reomotely. This command gets sample data and path
 sample_data_path = RxOptions.get_option("sampleDataDir")
 print(sample_data_path)
 
-# generate summary
+# Generate a statistical summary of built-in sample data
 ds = RxXdfData(os.path.join(sample_data_path, "AirlineDemoSmall.xdf"))
 summary = rx_summary("ArrDelay+DayOfWeek", ds)
 print(summary)
 ```
-
-In this sample, the summary object is returned to the console, rather than returning well-formed tabular data to SQL Server. 
-
-Also, because [rx_set_compute_context](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-set-compute-context) has been invoked, the sample data is loaded from the samples folder on the SQL Server computer, and not from your local samples folder.
-
+In this sample, the summary object is returned to the console. 
 
 <a name="install-ide"></a>
 

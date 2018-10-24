@@ -37,6 +37,10 @@ The upgrade path to SQL Server is different depending on the deployment pattern.
 A common approach that has been adopted for side-by-side upgrades of replication topologies is to move publisher-subscriber pairs in parts to the new side-by-side environment as opposed to a movement of the entire topology. This phased approach helps control downtime and minimize the impact to a certain extent for the business dependent on replication.  
 
 
+
+
+
+
 > [!NOTE]  
 > **For more detailed information regarding upgrading replication topology to SQL 2016, please see the blog post [Upgrading a Replication Topology to SQL Server 2016](https://blogs.msdn.microsoft.com/sql_server_team/upgrading-a-replication-topology-to-sql-server-2016/)**. 
 
@@ -54,7 +58,7 @@ A common approach that has been adopted for side-by-side upgrades of replication
 | SQL Server 2016 | SQL Server 2017 <br/> SQL Server 2016 | SQL Server 2017 <br/>SQL Server 2016 <br/> SQL Server 2014 <br/> SQL Server 2012 |
 | SQL Server 2014 | SQL Server 2017 <br/> SQL Server 2016 <br/> SQL Server 2014 <br/>| SQL Server 2017 <br/> SQL Server 2016 <br/> SQL Server 2014 <br/> SQL Server 2012 <br/> SQL Server 2008 R2 <br/> SQL Server 2008 |
 | SQL Server 2012 | SQL Server 2017 <br/> SQL Server 2016 <br/> SQL Server 2014 <br/>SQL Server 2012 <br/> | SQL Server 2016 <br/> SQL Server 2014 <br/> SQL Server 2012 <br/> SQL Server 2008 R2 <br/> SQL Server 2008 | 
-| SQL Server 2008 R2 <br/> SQL Server 2008 | SQL Server 2017 <br/> SQL Server 2016 <br/> SQL Server 2014 <br/>SQL Server 2012 <br/> SQL Server 2008 R2 <br/> SQL Server 2008 | SQL Server 2014 <br/>SQL Server 2012 <br/> | SQL Server 2014 <br/> SQL Server 2012 <br/> SQL Server 2008 R2 <br/> SQL Server 2008 <br/> SQL 2000 |
+| SQL Server 2008 R2 <br/> SQL Server 2008 | SQL Server 2017 <br/> SQL Server 2016 <br/> SQL Server 2014 <br/>SQL Server 2012 <br/> SQL Server 2008 R2 <br/> SQL Server 2008 | SQL Server 2014 <br/> SQL Server 2012 <br/> SQL Server 2008 R2 <br/> SQL Server 2008 <br/> SQL Server 2000 |
 | &nbsp; | &nbsp; | &nbsp; |
 
 ### Merge Replication Support Matrix
@@ -85,16 +89,18 @@ A common approach that has been adopted for side-by-side upgrades of replication
   
  Run the agents from [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], Replication Monitor, or from the command line. For more information about running the Snapshot Agent, see the following articles:  
   
--   [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)    
--   [Start and Stop a Replication Agent &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)   
--   [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)    
+-   [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)
+-   [Start and Stop a Replication Agent &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)
+-   [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)
 -   [Replication Agent Executables Concepts](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
- For more information about running the Merge Agent, see the following articles:    
--   [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md)   
+
+For more information about running the Merge Agent, see the following articles:
+-   [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md)
 -   [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md)  
   
- After upgrading [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in a topology that uses merge replication, change the publication compatibility level of any publications if you want to use new features.  
+
+After upgrading [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in a topology that uses merge replication, change the publication compatibility level of any publications if you want to use new features.  
   
 ## Upgrading to Standard, Workgroup, or Express Editions  
 Before upgrading from one edition of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] to another, verify that the functionality you are currently using is supported in the edition to which you are upgrading. For more information, see the section on Replication in [Editions and supported features of SQL Server](../../sql-server/editions-and-components-of-sql-server-2017.md).  
@@ -103,18 +109,19 @@ Before upgrading from one edition of [!INCLUDE[ssnoversion](../../includes/ssnov
 These steps outline the order in which servers in a replication topology should be upgraded. The same steps apply whether you're running transactional or merge replication. However, these steps do not cover Peer-to-Peer replication, queued updating subscriptions, nor immediate updating subscriptions. 
 
 ### In-place upgrade 
-- **Step 1**: Upgrade the Distributor. 
-- **Step 2**: Upgrade the Publisher and the Subscriber. These can be upgraded in any order. 
+1. Upgrade the Distributor. 
+2. Upgrade the Publisher and the Subscriber. These can be upgraded in any order. 
 
  >[!NOTE]
  > For SQL 2008 and 2008 R2, the upgrade of the publisher and subscriber must be done at the same time to align with the replication topology matrix. A SQL 2008 or 2008R2 publisher or subscriber cannot have a SQL 2016 (or greater) publisher nor subscriber. If upgrading at the same time is not possible, use an intermediate upgrade to upgrade the SQL instances to SQL 2014, and then upgrade them again to SQL 2016 (or greater).  
 
-### side by side upgrade
-- **Step 1**: Upgrade the Distributor. 
-- **Step 2**: Reconfigure [Distribution]((/../../relational-databases/replication/configure-distribution.md)) on the new SQL Server instance. 
-- **Step 3**: Upgrade the Publisher. 
-- **Step 4**: Upgrade the Subscriber.
-- **Step 5**: Reconfigure all publisher-subscriber pairs, including reinitialization of the subscriber. 
+### Side by side upgrade
+1. Upgrade the Distributor.
+1. Reconfigure [Distribution](../../relational-databases/replication/configure-distribution.md) on the new SQL Server instance.
+1. Upgrade the Publisher.
+1. Upgrade the Subscriber.
+1. Reconfigure all Publisher-Subscriber pairs, including reinitialization of the Subscriber. 
+
 
 ## Steps for side-by-side migration of the Distributor to Windows Server 2012 R2
 If you are planning to upgrade your SQL Server instance to SQL 2016 (or greater), and your current OS is Windows 2008 (or 2008 R2), then you will need to perform a side-by side upgrade of the OS to Windows Server 2012 R2 or greater. The reason for this intermediate OS upgrade is that SQL Server 2016 cannot be installed on a Windows Server 2008/2008 R2. The following steps can be performed on either a standalone SQL Server instance, or one within an Always On Failover Cluster Instance (FCI). 
@@ -134,8 +141,9 @@ If you are planning to upgrade your SQL Server instance to SQL 2016 (or greater)
 1. Validate if replication is working as expected. 
 1. Use the SQL Server setup media to run an in-place upgrade of your SQL Server instance to the new version of SQL Server. 
 
+
   >[!NOTE]
-  > f you want to reduce downtime, we recommend that you perform the *side-by-side migration* of the distributor as one activity and the *in-place upgrade to SQL Server 2016* as another activity. This will allow you to take a phased approach, reduce risk and minimize downtime.
+  > To reduce downtime, we recommend that you perform the *side-by-side migration* of the distributor as one activity and the *in-place upgrade to SQL Server 2016* as another activity. This will allow you to take a phased approach, reduce risk and minimize downtime.
 
 ## Web Synchronization for Merge Replication  
  The Web synchronization option for merge replication requires that the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Listener (replisapi.dll) be copied to the virtual directory on the Internet Information Services (IIS) server used for synchronization. When you configure Web synchronization, the file is copied to the virtual directory by the Configure Web Synchronization Wizard. If you upgrade the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components installed on the IIS server, you must manually copy replisapi.dll from the COM directory to the virtual directory on the IIS server. For more information about configuring Web synchronization, see [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md).  

@@ -71,7 +71,7 @@ A Plan Guide applies either a fixed query plan, and/or query hints, to a query.
 ![plan_guide](../../relational-databases/performance/media/plan-guide.png)  
 
   
-##  <a name="TsqlProcedure"></a> Creat a plan guide using T-SQL  
+##  <a name="TsqlProcedure"></a> Create a plan guide using T-SQL  
   
 1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

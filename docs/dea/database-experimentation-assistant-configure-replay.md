@@ -2,7 +2,7 @@
 title: Configure replay for Database Experimentation Assistant for SQL Server upgrades
 description: Configure replay for Database Experimentation Assistant
 ms.custom: ""
-ms.date: 10/12/2018
+ms.date: 10/22/2018
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -10,7 +10,7 @@ ms.technology: dea
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 author: HJToland3
-ms.author: jtoland
+ms.author: ajaykar
 ms.reviewer: douglasl
 manager: craigg
 ---

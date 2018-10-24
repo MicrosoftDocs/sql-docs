@@ -217,7 +217,7 @@ UNION ALL
 SELECT *  
 FROM Server2.CompanyData.dbo.Customers_66  
 UNION ALL  
---Select from mmeber table on Server3.  
+--Select from member table on Server3.  
 SELECT *  
 FROM Server3.CompanyData.dbo.Customers_99;  
 ```  

@@ -35,9 +35,6 @@ manager: craigg
   
 2.  In a Windows Explorer or Windows Command Prompt window, move the detached database file or files and log file or files to the new location.  
   
-    > [!NOTE]  
-    >  To move a single-file database, you can use email if the file size is small enough for email to accommodate.  
-  
      You should move the log files even if you intend to create new log files. In some cases, reattaching a database requires its existing log files. Therefore, always keep all the detached log files until the database has been successfully attached without them.  
   
     > [!NOTE]  

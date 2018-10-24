@@ -183,7 +183,7 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
   
 -   [Windows 8.1 DPI Scaling Enhancements](https://blogs.windows.com/windowsexperience/2013/07/15/windows-8-1-dpi-scaling-enhancements/)  
   
--   [High DPI and Windows 8.1](http://technet.microsoft.com/library/dn528848.aspx)  
+-   [High DPI and Windows 8.1](https://technet.microsoft.com/library/dn528848.aspx)  
 
 ## Next steps
 

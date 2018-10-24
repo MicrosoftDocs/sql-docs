@@ -86,7 +86,7 @@ For more information on editing the file, see [Modify a Reporting Services Confi
  **URLReservations** defines HTTP access to the Report Server Web service and the web portal for the current instance. URLs are reserved and stored in HTTP.SYS when you configure the report server.  
   
 > [!WARNING]  
->  For SharePoint mode, URL reservations are configured in SharePoint Central Administration. For more information, see [Configure alternate access mapping (http://technet.microsoft.com/library/cc263208(office.12).aspx)](http://technet.microsoft.com/library/cc263208\(office.12\).aspx).  
+>  For SharePoint mode, URL reservations are configured in SharePoint Central Administration. For more information, see [Configure alternate access mapping (https://technet.microsoft.com/library/cc263208(office.12).aspx)](https://technet.microsoft.com/library/cc263208\(office.12\).aspx).  
   
  Do not modify URL reservations in the configuration file directly. Always use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager or the Report Server WMI provider to create or modify URL reservations for a Native mode report server. If you modify the values in the configuration file, you might corrupt the reservation, which will cause server errors at run time or leave orphan reservations in HTTP.SYS that are not removed if you uninstall the software. For more information, see [Configure Report Server URLs  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md) and [URLs in Configuration Files  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md).  
   

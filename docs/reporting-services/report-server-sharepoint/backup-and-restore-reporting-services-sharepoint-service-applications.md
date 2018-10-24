@@ -69,7 +69,7 @@ To back up the Service Application, complete the following steps:
   
  [Back up a service application (SharePoint Foundation 2010) in the SharePoint documenttation](https://msdn.microsoft.com/library/ee748601.aspx).  
   
- [Back up a service application (SharePoint Server 2010)](http://technet.microsoft.com/library/ee428318.aspx)  
+ [Back up a service application (SharePoint Server 2010)](https://technet.microsoft.com/library/ee428318.aspx)  
   
 ### Verify execution account and database authentication
 

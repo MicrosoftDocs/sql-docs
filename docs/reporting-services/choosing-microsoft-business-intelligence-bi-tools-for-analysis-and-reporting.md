@@ -32,7 +32,7 @@ The following table maps workloads for data analysis and reporting to the Micros
 |**Corporate BI**|IT Pro||||||  
 |Create multi-dimensional/tabular corporate models||||||[Analysis Services](../analysis-services/analysis-services.md)|  
 |Create ad-hoc data visualizations|||[Power View for SharePoint](https://go.microsoft.com/fwlink/?LinkId=391858)||||  
-|Create dashboards|||[SharePoint Dashboards](https://go.microsoft.com/fwlink/?LinkId=391859)<br /><br /> [PerformancePoint Services](http://technet.microsoft.com/library/ee424392.aspx)||[Dashboards in Power BI](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)||  
+|Create dashboards|||[SharePoint Dashboards](https://go.microsoft.com/fwlink/?LinkId=391859)<br /><br /> [PerformancePoint Services](https://technet.microsoft.com/library/ee424392.aspx)||[Dashboards in Power BI](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)||  
 |Create operational reports||||||*[Reporting Services](create-deploy-and-manage-mobile-and-paginated-reports.md)|  
 |Create custom and embedded reports|||||[Power BI Embedded](create-deploy-and-manage-mobile-and-paginated-reports.md)|  
 |**Advanced Analytics**|Data Scientist||||||  

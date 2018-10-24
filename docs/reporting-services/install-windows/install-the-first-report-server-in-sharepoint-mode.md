@@ -56,7 +56,7 @@ ms.author: maghan
   
  **Creating Reporting Services Service Applications**  
   
--   Following installation and registering the Reporting Services service, create one or more Reporting Services service applications. The “SharePoint farm service account “ needs to temporarily be a member of the local administrators group so the Reporting Services service application can be created. For more information on SharePoint 2013 account permissions, see [Account permissions and security settings in SharePoint 2013](http://technet.microsoft.com/library/cc678863.aspx) (http://technet.microsoft.com/library/cc678863.aspx) or for SharePoint 2016, see [Account permissions and security settings in SharePoint 2016](https://technet.microsoft.com/library/cc678863\(v=office.16\).aspx).  
+-   Following installation and registering the Reporting Services service, create one or more Reporting Services service applications. The “SharePoint farm service account “ needs to temporarily be a member of the local administrators group so the Reporting Services service application can be created. For more information on SharePoint 2013 account permissions, see [Account permissions and security settings in SharePoint 2013](https://technet.microsoft.com/library/cc678863.aspx) (https://technet.microsoft.com/library/cc678863.aspx) or for SharePoint 2016, see [Account permissions and security settings in SharePoint 2016](https://technet.microsoft.com/library/cc678863\(v=office.16\).aspx).  
   
      It is security best practice that SharePoint farm administrator accounts are not also local operating system administrator accounts. If you add a farm admin account to the local administrators group as part of your installation process, it is recommended you remove the account from the local administrators group after installation is complete.  
   
@@ -291,7 +291,7 @@ ms.author: maghan
   
  Parameters  
   
--   Update the **-Account** for the service proxy. The account needs to be a managed service account in the SharePoint farm. For more information, see the SharePoint topic [Plan for administrative and service accounts in SharePoint 2013](http://technet.microsoft.com/library/cc263445.aspx).  
+-   Update the **-Account** for the service proxy. The account needs to be a managed service account in the SharePoint farm. For more information, see the SharePoint topic [Plan for administrative and service accounts in SharePoint 2013](https://technet.microsoft.com/library/cc263445.aspx).  
   
 -   Update the **–DatabaseServer** parameter for the service application. This parameter is the database engine instance  
   
@@ -393,7 +393,7 @@ Enable-SPfeature -identity "reportserver" -Url http://server/sites/bi
   
 -   The section “Configure Excel Services for Analysis Services integration” in [Install Analysis Services in Power Pivot Mode](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
   
--   [Manage Excel Services data model settings (SharePoint Server 2013)](http://technet.microsoft.com/library/jj219780.aspx).  
+-   [Manage Excel Services data model settings (SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780.aspx).  
 
 Also, the application pool security account used by the Reporting Services service application, must be an administrator on the Analysis Services Server.
   
@@ -416,7 +416,7 @@ Also, the application pool security account used by the Reporting Services servi
   
 -   In a SharePoint document library, create a basic Reporting Services report that only contains a text box, for example a title. The report does not contain any data sources or datasets. The goal is to verify you can open Report Builder, build a basic report, and preview the report.  
   
-     Save the report to the document library and the run the report from the library. For more information on creating reports with Report Builder, see [Start Report Builder (Report Builder)](http://technet.microsoft.com/library/ms159221.aspx).  
+     Save the report to the document library and the run the report from the library. For more information on creating reports with Report Builder, see [Start Report Builder (Report Builder)](https://technet.microsoft.com/library/ms159221.aspx).  
   
 ## Next steps
 

@@ -37,10 +37,6 @@ The upgrade path to SQL Server is different depending on the deployment pattern.
 A common approach that has been adopted for side-by-side upgrades of replication topologies is to move publisher-subscriber pairs in parts to the new side-by-side environment as opposed to a movement of the entire topology. This phased approach helps control downtime and minimize the impact to a certain extent for the business dependent on replication.  
 
 
-
-
-
-
 > [!NOTE]  
 > **For more detailed information regarding upgrading replication topology to SQL 2016, please see the blog post [Upgrading a Replication Topology to SQL Server 2016](https://blogs.msdn.microsoft.com/sql_server_team/upgrading-a-replication-topology-to-sql-server-2016/)**. 
 
@@ -68,7 +64,7 @@ A common approach that has been adopted for side-by-side upgrades of replication
 | SQL Server 2016 | SQL Server 2017 <br/> SQL Server 2016 | SQL Server 2016 <br/> SQL Server 2014 <br/> SQL Server 2012 |
 | SQL Server 2014 | SQL Server 2017 <br/> SQL Server 2016 <br/> SQL Server 2014 <br/>| SQL Server 2014 <br/> SQL Server 2012 <br/> SQL Server 2008 R2 <br/> SQL Server 2008 |
 | SQL Server 2012 | SQL Server 2017 <br/> SQL Server 2016 <br/> SQL Server 2014 <br/>SQL Server 2012 <br/> | SQL Server 2012 <br/> SQL Server 2008 R2 <br/> SQL Server 2008 | 
-| SQL Server 2008 R2 <br/> SQL Server 2008 | SQL Server 2017 <br/> SQL Server 2016 <br/> SQL Server 2014 <br/>SQL Server 2012 <br/> SQL Server 2008 R2 <br/> SQL Server 2008 | SQL Server 2008 R2 <br/> SQL Server 2008 <br/> SQL 2000 |
+| SQL Server 2008 R2 <br/> SQL Server 2008 | SQL Server 2017 <br/> SQL Server 2016 <br/> SQL Server 2014 <br/>SQL Server 2012 <br/> SQL Server 2008 R2 <br/> SQL Server 2008 | SQL Server 2008 R2 <br/> SQL Server 2008 <br/> SQL Server 2000 |
 | &nbsp; | &nbsp; | &nbsp; |
   
 ## Run the Log Reader Agent for Transactional Replication Before Upgrade  

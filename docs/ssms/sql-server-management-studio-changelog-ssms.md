@@ -34,7 +34,7 @@ Smaller Download Size:
 
 SSMS 18.x is based on the new Visual Studio 2017 Isolated Shell:
 
-- This means a modern shell (we picked up Visual Studio 2107 15.6.4). The new shell unlocks all the accessibility fixes that went in to both SSMS and Visual Studio.
+- This means a modern shell (we picked up Visual Studio 2017 15.6.4). The new shell unlocks all the accessibility fixes that went in to both SSMS and Visual Studio.
 
 Accessibility improvements:
 

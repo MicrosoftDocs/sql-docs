@@ -163,4 +163,4 @@ ms.author: maghan
   
     3.  Click **Report Viewer**.  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

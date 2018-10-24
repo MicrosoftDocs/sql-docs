@@ -377,8 +377,8 @@ For more information on editing the file, see [Modify a Reporting Services Confi
 |-------------|-----------------|  
 |**MaxConnections**|Specifies the maximum number of connections to Bing Maps Web Services.|  
 |**Timeout**|Specifies the timeout in seconds to wait for a response from Bing Maps Web Services.|  
-|**AppID**|Specifies the application identifier (AppID) to use for Bing Maps Web Services. **(Default)** specifies the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] default AppID.<br /><br /> For more information about the use of Bing map tiles in your report, see [Additional Terms of Use](http://go.microsoft.com/fwlink/?LinkId=151371).<br /><br /> Do not change this value unless you must specify a custom AppID for your own Bing Maps license agreement. When you change the AppID, you do not have to restart [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] for the change to take effect.|  
-|**CacheLevel**|Specifies a value from the HttpRequestCacheLevel Enumeration of System.Net.Cache. The default value is **Default**. For more information, see [HttpRequestCacheLevel Enumeration](http://go.microsoft.com/fwlink/?LinkId=153353).|  
+|**AppID**|Specifies the application identifier (AppID) to use for Bing Maps Web Services. **(Default)** specifies the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] default AppID.<br /><br /> For more information about the use of Bing map tiles in your report, see [Additional Terms of Use](https://go.microsoft.com/fwlink/?LinkId=151371).<br /><br /> Do not change this value unless you must specify a custom AppID for your own Bing Maps license agreement. When you change the AppID, you do not have to restart [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] for the change to take effect.|  
+|**CacheLevel**|Specifies a value from the HttpRequestCacheLevel Enumeration of System.Net.Cache. The default value is **Default**. For more information, see [HttpRequestCacheLevel Enumeration](https://go.microsoft.com/fwlink/?LinkId=153353).|  
   
 ##  <a name="bkmk_nativedefaultfile"></a> Default Configuration File for a Native Mode Report Server  
  The rsreportserver.config file is installed to the following location by default:  
@@ -836,6 +836,6 @@ x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
  [Initialize a Report Server &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
  [Store Encrypted Report Server Data &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
- More questions? [Try the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+ More questions? [Try the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
   
   

@@ -189,4 +189,4 @@ Select to change how security is defined for the current item.
 [Web portal](../reporting-services/web-portal-ssrs-native-mode.md)  
 [Work with Shared Datasets](../reporting-services/work-with-shared-datasets-web-portal.md)
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

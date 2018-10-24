@@ -97,4 +97,4 @@ Review the following list before adding users to a native mode report server.
 [Role Assignments](../../reporting-services/security/role-assignments.md)   
 [Role Definitions](../../reporting-services/security/role-definitions.md)  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

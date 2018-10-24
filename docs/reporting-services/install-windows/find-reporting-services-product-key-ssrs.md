@@ -41,4 +41,4 @@ You should only have to do this step the first time you install SSRS 2017. Servi
 ## Next steps
 
 - [Install SQL Server 2017 Reporting Services](install-reporting-services.md)
-- More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+- More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -144,7 +144,7 @@ ms.author: maghan
   
 -   One option for converting the value Decimal value to hexadecimal form is to us the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Calculator. Windows Calculator supports several modes that show the 'Dec' option and 'Hex' options. Select the 'Dec' option, paste or type in the decimal value you found in the log file and then select the 'Hex' option.  
   
--   Then refer to the topic [User-Account-Control Attribute](http://go.microsoft.com/fwlink/?LinkId=183366) to derive the attribute for the service account.  
+-   Then refer to the topic [User-Account-Control Attribute](https://go.microsoft.com/fwlink/?LinkId=183366) to derive the attribute for the service account.  
   
 ##### SPNs Configured in Active Directory for the Reporting Services service account.  
  To log the SPNs in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service trace log file, you can enable the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Extended Protection feature temporarily.  
@@ -198,7 +198,7 @@ ms.author: maghan
   
 ## External resources  
   
--   For additional information regarding Kerberos and report servers, see [Deploying a Business Intelligence Solution Using SharePoint, Reporting Services, and PerformancePoint Monitoring Server with Kerberos.](http://go.microsoft.com/fwlink/?LinkID=177751)  
+-   For additional information regarding Kerberos and report servers, see [Deploying a Business Intelligence Solution Using SharePoint, Reporting Services, and PerformancePoint Monitoring Server with Kerberos.](https://go.microsoft.com/fwlink/?LinkID=177751)  
   
 ## See Also  
  [Authentication with the Report Server](../../reporting-services/security/authentication-with-the-report-server.md)   

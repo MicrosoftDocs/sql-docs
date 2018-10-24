@@ -229,13 +229,13 @@ ms.author: maggies
   
 
 ##  <a name="bkmk_Related_Topics"></a> Related Sections  
- [Configuring SSRS Report Parameters (quiz)](http://go.microsoft.com/fwlink/p/?LinkID=306443)  
+ [Configuring SSRS Report Parameters (quiz)](https://go.microsoft.com/fwlink/p/?LinkID=306443)  
   
  [Tutorial: Add a Parameter to Your Report &#40;Report Builder&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)  
   
 [Report Parameters Concepts](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md)  
   
- [Report Samples (Report Builder and SSRS)](http://go.microsoft.com/fwlink/?LinkId=198283)  
+ [Report Samples (Report Builder and SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283)  
   
  [Expression Uses in Reports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)  
   

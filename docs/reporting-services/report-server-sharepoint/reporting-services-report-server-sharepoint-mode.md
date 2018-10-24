@@ -129,12 +129,12 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
 |Scale-out your Reporting Services SharePoint deployment by adding additional report servers.|[Add an additional Report Server to a Farm](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md) and [Deployment topologies for SQL Server BI features in SharePoint](https://msdn.microsoft.com/library/39f76bc7-94e6-4dbc-bfa5-d56f4430bb26).|  
 |Add additional SharePoint web front-ends that have the Reporting Services components installed for viewing and report items.|[Add an additional Reporting Services web front-end to a farm](../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md)|  
 |Configure e-mail for your report server within SharePoint.|[Configure e-mail for a Reporting Services service application](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)|
-|Recent information for this release, found on the TechNet Wiki.|[SQL Server 2012 Reporting Services tips, tricks, and troubleshooting](http://go.microsoft.com/fwlink/?LinkId=221297).|  
+|Recent information for this release, found on the TechNet Wiki.|[SQL Server 2012 Reporting Services tips, tricks, and troubleshooting](https://go.microsoft.com/fwlink/?LinkId=221297).|  
 
 ## Next steps
 
 [Install or uninstall the Reporting Services sdd-in for SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
 [Report Viewer web part on a SharePoint site](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
-[Quiz: Configuring SSRS 2012 for SharePoint integration](http://go.microsoft.com/fwlink/?LinkId=306443)  
+[Quiz: Configuring SSRS 2012 for SharePoint integration](https://go.microsoft.com/fwlink/?LinkId=306443)  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

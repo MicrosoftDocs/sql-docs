@@ -126,7 +126,7 @@ ms.author: maggies
   
 -   **Print.**  A report reader can print a report or pages of a report depending on the way in which it is viewed. For more information, see [Print Reports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md).  
   
--   **Web or Windows Form application.**  Use Visual Studio to develop an ASP.NET AJAX application or Windows Form application that hosts the Report Viewer control. The control can point to published reports on a report server. For more information, see [Microsoft Reports](http://go.microsoft.com/fwlink/?LinkID=205399).  
+-   **Web or Windows Form application.**  Use Visual Studio to develop an ASP.NET AJAX application or Windows Form application that hosts the Report Viewer control. The control can point to published reports on a report server. For more information, see [Microsoft Reports](https://go.microsoft.com/fwlink/?LinkID=205399).  
   
 ## Manage Reports  
  To manage a published report:  

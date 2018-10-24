@@ -167,7 +167,7 @@ ms.author: maggies
 2.  On the toolbar, click the **Add Layer** button, and from the drop-down list, click **Tile Layer**.  
   
     > [!NOTE]  
-    >  For more information about the use of Bing map tiles in your report, see [Additional Terms of Use](http://go.microsoft.com/fwlink/?LinkId=151371).  
+    >  For more information about the use of Bing map tiles in your report, see [Additional Terms of Use](https://go.microsoft.com/fwlink/?LinkId=151371).  
   
 3.  Right-click the tile layer in the Map pane, and then click **Tile Properties**.  
   

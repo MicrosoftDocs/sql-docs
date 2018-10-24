@@ -56,4 +56,4 @@ There are two core [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]
  [Data Alerts Architecture and Workflow](../../reporting-services/reporting-services-data-alerts.md#AlertingWF)   
  [Data Alert Manager for Alerting Administrators](../../reporting-services/data-alert-manager-for-alerting-administrators.md)  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

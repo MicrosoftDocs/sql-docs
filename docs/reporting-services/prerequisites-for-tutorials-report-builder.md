@@ -41,4 +41,4 @@ The report server administrator must grant you the necessary permissions on the 
 
 [Report Builder tutorials](../reporting-services/report-builder-tutorials.md)  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

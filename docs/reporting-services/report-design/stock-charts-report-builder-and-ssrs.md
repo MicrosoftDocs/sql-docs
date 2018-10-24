@@ -18,7 +18,7 @@ ms.author: maggies
   
  ![Stock chart](../../reporting-services/report-design/media/rs-stockchart.gif "Stock chart")  
   
- An example of a stock chart is available as a sample Report Builder report. For more information about downloading this sample report and others, see [Report Builder and Report Designer sample reports](http://go.microsoft.com/fwlink/?LinkId=198283).  
+ An example of a stock chart is available as a sample Report Builder report. For more information about downloading this sample report and others, see [Report Builder and Report Designer sample reports](https://go.microsoft.com/fwlink/?LinkId=198283).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -42,4 +42,4 @@ ms.author: maggies
 [Formatting a Chart](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
 [Axis Properties Dialog Box, Axis Options](https://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

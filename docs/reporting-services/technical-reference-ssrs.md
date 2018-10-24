@@ -47,4 +47,4 @@ ms.author: maghan
  ![Small File Folder Icon](../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Reporting Services WMI Provider Class Library**  
  [Reporting Services WMI Provider Library Reference &#40;SSRS&#41;](../reporting-services/wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md)  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -18,7 +18,7 @@ ms.author: maggies
 
 Use Report Designer to create full-featured [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated reports and reporting solutions. Report Designer provides a graphical interface in which you can define data sources, datasets and queries, report layout positions for data regions and fields, and interactive features such as parameters and sets of reports that work together.  
 
-Report Designer is a feature of  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], a Microsoft Visual Studio environment for creating business intelligence solutions. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] is not included with SQL Server. Download [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714). 
+Report Designer is a feature of  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], a Microsoft Visual Studio environment for creating business intelligence solutions. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] is not included with SQL Server. Download [SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714). 
   
 ## Benefits of Report Projects  
 Report projects act as containers for report definitions and resources. Use projects to:  
@@ -177,9 +177,9 @@ Paginated reports are files that are stored in a report project. Reports can be 
 
 ## Next steps
 
-[Download SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714)  
+[Download SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714)  
 [Reporting Services in SQL Server Data Tools](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)   
 [Query Design Tools](../../reporting-services/report-data/query-design-tools-ssrs.md)   
 [Deployment and Version Support in SQL Server Data Tools](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

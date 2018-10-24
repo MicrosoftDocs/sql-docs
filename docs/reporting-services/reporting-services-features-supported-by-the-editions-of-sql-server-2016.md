@@ -101,4 +101,4 @@ To navigate the table for a SQL Server technology, click on its link:
 [Product Specifications for SQL Server 2016](https://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)  
 [Installation for SQL Server 2016](../database-engine/install-windows/installation-for-sql-server-2016.md) 
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

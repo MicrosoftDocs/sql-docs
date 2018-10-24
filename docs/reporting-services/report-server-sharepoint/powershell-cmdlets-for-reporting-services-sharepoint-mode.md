@@ -289,4 +289,4 @@ Get-SPRSExtension -identity $app -ExtensionType “Data” | select name,extensi
 [CheckList: Use PowerShell to verify Power Pivot for SharePoint](../../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)   
 [Get help SQL Server PowerShell](../../relational-databases/scripting/get-help-sql-server-powershell.md)   
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

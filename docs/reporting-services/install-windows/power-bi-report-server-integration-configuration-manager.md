@@ -148,4 +148,4 @@ The second time a user pins an item, the steps 1-4 are skipped and instead the A
 [Pin Reporting Services items to Power BI Dashboards](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)   
 [Dashboards in Power BI](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -60,7 +60,7 @@ ms.author: maggies
   
     -   Relative CSS length units are ignored and not supported. Unsupported units include em, ex, px,%,rem.  
   
-     For more information on CSS units, see: [CSS Values and Units Reference](http://msdn.microsoft.com/library/ms531211\(VS.85\).aspx) (http://msdn.microsoft.com/library/ms531211(VS.85).aspx).  
+     For more information on CSS units, see: [CSS Values and Units Reference](https://msdn.microsoft.com/library/ms531211\(VS.85\).aspx) (https://msdn.microsoft.com/library/ms531211(VS.85).aspx).  
   
 -   color  
   

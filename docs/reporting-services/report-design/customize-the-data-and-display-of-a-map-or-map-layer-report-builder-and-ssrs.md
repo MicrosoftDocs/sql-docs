@@ -82,7 +82,7 @@ ms.author: maggies
   
 -   Resolution and simplification. Choose a balance between drawing time and detailed outlines for lines and polygons.  
   
- To change these options, right-click the map viewport, use the [Map Viewport Properties Dialog Box, General](http://msdn.microsoft.com/library/6c9c773e-5c56-4571-95ed-8a157cfdfe52) page and related pages.  
+ To change these options, right-click the map viewport, use the [Map Viewport Properties Dialog Box, General](https://msdn.microsoft.com/library/6c9c773e-5c56-4571-95ed-8a157cfdfe52) page and related pages.  
   
 ##  <a name="Legends"></a> Change Options for the Legends  
  Legends help users interpret the data on a map.  

@@ -90,7 +90,7 @@ ms.author: maggies
   
  Use the Properties pane to:  
   
--   Set properties for the currently selected item on the design surface. Some properties provide a drop-down list of values. You can also type the value directly in the cell. Some properties contain a collection of values, indicated by the value **(Collection)**. Most properties can accept an expression; complex expressions are indicated by the value **\<Expression>**. Click **\<Expression>** to open the **Expression** dialog box. For more information, see [Expression Dialog Box](http://msdn.microsoft.com/library/e6c74ccb-4594-4d4f-b958-618d710e34eb).  
+-   Set properties for the currently selected item on the design surface. Some properties provide a drop-down list of values. You can also type the value directly in the cell. Some properties contain a collection of values, indicated by the value **(Collection)**. Most properties can accept an expression; complex expressions are indicated by the value **\<Expression>**. Click **\<Expression>** to open the **Expression** dialog box. For more information, see [Expression Dialog Box](https://msdn.microsoft.com/library/e6c74ccb-4594-4d4f-b958-618d710e34eb).  
   
 -   Use the Properties pane toolbar buttons to change the grid from category view to alphabetical view. In category view, you may need to expand a category to see all the properties under it. To open an item's Properties dialog box, click the **Property Pages** button on the toolbar or by right-click the item and click **Properties**.  
   

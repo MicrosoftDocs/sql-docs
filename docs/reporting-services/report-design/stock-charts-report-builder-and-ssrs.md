@@ -40,6 +40,6 @@ ms.author: maggies
 [Range Charts](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md)   
 [Charts](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
 [Formatting a Chart](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
-[Axis Properties Dialog Box, Axis Options](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)  
+[Axis Properties Dialog Box, Axis Options](https://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)  
 
 More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -1,5 +1,6 @@
 ---
-title: Run Python using T-SQL | Microsoft Docs
+title: Run Python using T-SQL on SQL Server | Microsoft Docs
+description: Learn the basics for running Python code using T-SQL and stored procedures on a SQL Server database engine instance for which Python integration is enabled.
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -12,7 +13,7 @@ manager: cgronlun
 # Run Python using T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article explains how you can run Python code in SQL Server 2017. It walks you through the basics f moving data between SQL Server and Python: requirements, data structures, inputs, and outputs. It also explains how to wrap well-formed Python code in a stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) to build, train, and use machine learning models in SQL Server.
+This article explains how you can run Python code in SQL Server 2017. It walks you through the basics of moving data between SQL Server and Python: requirements, data structures, inputs, and outputs. It also explains how to wrap well-formed Python code in a stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) to build, train, and use machine learning models in SQL Server.
 
 ## Prerequisites
 
@@ -22,9 +23,13 @@ You should also install [SQL Server Management Studio](https://docs.microsoft.co
 
 When your environment is ready, return to this page to learn how to execute Python code in the context of a stored procedure. 
 
-## Verify that Python is enabled and the Launchpad is running
+## Verify Python exists
 
-1. In Management Studio, run this statement to make sure the service has been enabled.
+The following steps confirm that Python is enabled and the SQL Server Launchpad service is running.
+
+1. Check whether Python integration is installed on the database engine instance. You should find **python.exe** in a folder called **PYTHON_SERVICES** at C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\. This is the Python executable that SQL Server uses to run Python code.
+
+2. Check whether external scripting is enabled. In Management Studio, run the following statement:
 
     ```sql
     sp_configure 'external scripts enabled'
@@ -32,9 +37,9 @@ When your environment is ready, return to this page to learn how to execute Pyth
 
     If **run_value** is 1, the machine learning feature is installed and ready to use.
 
-    A common cause of errors is that the Launchpad, which manages communication between SQL Server and Python, has stopped. You can view the Launchpad status by using the Windows **Services** panel, or by opening SQL Server Configuration Manager. If the service has stopped, restart it.
+    A common cause of errors is that the [SQL Server Launchpad service](../concepts/extensibility-framework.md#launchpad), which manages communication between SQL Server and Python, has stopped. You can view the Launchpad status by using the Windows **Services** panel, or by opening SQL Server Configuration Manager. If the service has stopped, restart it.
 
-2. Next, verify that the Python runtime is working and communicating with SQL Server. To do this, open a new **Query** window in SQL Server Management Studio, and connect to the instance where Python was installed.
+3. Verify that the Python runtime is working and communicating with SQL Server. To do this, open a new **Query** window in SQL Server Management Studio, and connect to the instance where Python was installed.
 
     ```sql
     EXEC sp_execute_external_script @language = N'Python', 
@@ -58,10 +63,11 @@ When your environment is ready, return to this page to learn how to execute Pyth
 
 There are two ways to run Python code in SQL Server:
 
-+ Add a Python script as an argument of the system stored procedure, **sp_execute_external_script**
-+ From a remote Python client, connect to SQL Server, and execute code using the SQL Server as the compute context. This requires [revoscalepy](../python/what-is-revoscalepy.md).
++ Add a Python script as an argument of the system stored procedure, [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
-The primary goal of this tutorial is to ensure that you can use Python in a stored procedure.
++ From a [remote Python client](../python/setup-python-client-tools-sql.md), connect to SQL Server, and execute code using the SQL Server as the compute context. This requires [revoscalepy](../python/what-is-revoscalepy.md).
+
+The following exercise is focused on the first interaction model: how to pass Python code to a stored procedure.
 
 1. Run some simple code to see how data is passed back and forth between SQL Server and Python.
 
@@ -92,16 +98,18 @@ For now, remember these rules:
 
 + Everything inside the `@script` argument must be valid Python code. 
 + The code must follow all Pythonic rules regarding indentation, variable names, and so forth. When you get an error, check your white space and casing.
-+ If you are using any libraries that are not loaded by default, you must use an import statement at the beginning of your script to load them. 
-+ If the library is not already installed, stop, and install the Python package outside of SQL Server, as described here: [Install new Python packages on SQL Server](../python/install-additional-python-packages-on-sql-server.md)
++ If you are using any libraries that are not loaded by default, you must use an import statement at the beginning of your script to load them. SQL Server adds several product-specific libraries. For more information, see [Python libraries](../python/python-libraries-and-data-types.md).
++ If the library is not already installed, stop and install the Python package outside of SQL Server, as described here: [Install new Python packages on SQL Server](../python/install-additional-python-packages-on-sql-server.md)
 
 ## Inputs and outputs
 
-By default, [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) accepts a single input dataset, which typically you supply in the form of a valid SQL query. Other types of input can be passed as SQL variables: for example, you can pass a trained model as a variable, using a serialization function such as [pickle](https://docs.python.org/3.0/library/pickle.html) or [rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model) to write the model in a binary format.
+By default, [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) accepts a single input dataset, which typically you supply in the form of a valid SQL query. 
 
-The stored procedure returns a single Python [pandas](http://pandas.pydata.org/pandas-docs/stable/index.html) data frame as output. However you can output scalars and models as variables. For example, you can output a trained model as a binary variable and pass that to a T-SQL INSERT statement, to write that model to a table. You can also generate plots (in binary format) or scalars (individual values, such as the date and time, the time elapsed to train the model, and so forth).
+Other types of input can be passed as SQL variables: for example, you can pass a trained model as a variable, using a serialization function such as [pickle](https://docs.python.org/3.0/library/pickle.html) or [rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model) to write the model in a binary format.
 
-For now, let's look at just the default input and output variables, `InputDataSet` and `OutputDataSet`. 
+The stored procedure returns a single Python [pandas](http://pandas.pydata.org/pandas-docs/stable/index.html) data frame as output, but you can also output scalars and models as variables. For example, you can output a trained model as a binary variable and pass that to a T-SQL INSERT statement, to write that model to a table. You can also generate plots (in binary format) or scalars (individual values, such as the date and time, the time elapsed to train the model, and so forth).
+
+For now, let's look at just the default input and output variables of sp_execute_external_script: `InputDataSet` and `OutputDataSet`. 
 
 1. Run the following code to do some math and output the results.
 
@@ -366,4 +374,4 @@ This exercise was intended to give you an idea of how to work with different Pyt
 
 ## Next steps
 
-[Wrap Python code in a SQL stored procedure](wrap-python-in-tsql-stored-procedure.md)
+[Set up the Iris demo dataset](demo-data-iris-in-sql.md)

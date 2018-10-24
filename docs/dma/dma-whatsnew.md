@@ -1,7 +1,7 @@
 ---
 title: "What's new in Data Migration Assistant (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/28/2018"
+ms.date: "10/20/2018"
 ms.prod: sql
 ms.prod_service: "dma"
 ms.reviewer: ""
@@ -11,13 +11,28 @@ keywords: ""
 helpviewer_keywords: 
   - "Data Migration Assistant, new features"
 ms.assetid: ""
-author: HJToland3
+author: pochiraju
 ms.author: rajpo
 manager: craigg
 ---
 
 # What's new in Data Migration Assistant
 This article lists the additions in each release of Data Migration Assistant (DMA).
+
+## DMA v4.1
+The v4.1 release of DMA introduces support for comprehensive assessment of on-premises SQL Server databases migrating to Azure SQL Database Managed Instance.
+
+The assessment workflow helps you detect the following issues, which can affect your migration to Azure SQL Database Managed Instance:
+
+- **Unsupported or partially supported features**. DMA assesses your source SQL Server database for features in use that are partially supported or unsupported on the target Azure SQL Database Managed Instance. The tool then provides a comprehensive set of recommendations, alternative approaches available in Azure, and mitigating steps so that customers can take this information into account when planning their migration projects.
+
+- **Compatibility issues**. DMA also identifies compatibility issues related to the following areas:
+
+    - Breaking changes:  The specific schema objects that may break the functionality migrating to the target database.  We recommend fixing these schema objects after the database migration.
+    - Behavioral changes: The schema objects reported may continue to work, but they may exhibit a different behavior, for example performance degradation.
+    - Informational issues:  These objects will not impact the migration but may have been deprecated from feature SQL Server releases.
+
+After the assessment is complete, use our [Azure Database Migration Service](https://azure.microsoft.com/services/database-migration/) (DMS) to perform the migration of your SQL Server databases to Azure SQL Database Managed Instance.  DMS supports both [offline](https://docs.microsoft.com/azure/dms/tutorial-sql-server-to-managed-instance) (one-time) and [online](https://docs.microsoft.com/azure/dms/tutorial-sql-server-managed-instance-online) (minimal-downtime) database migrations to Azure SQL Database Managed Instance.
 
 ## DMA v4.0
 The v4.0 release of DMA introduces the Azure SQL Database SKU recommendations feature, which allows users to identify the minimum recommended Azure SQL Database SKU based on performance counters collected from the computer(s) hosting your databases. This feature provides recommendations related to pricing tier, compute level, and max data size, as well as estimated cost per month. It also offers the ability to provision all your databases to Azure in bulk.
@@ -30,7 +45,7 @@ For additional detail, see the article [Identify the right Azure SQL Database SK
 ## DMA v3.6
 The v3.6 release of DMA introduces “Auto fix” for the schema objects that are impacted by the most common migration blockers.
 
-This release provides auto-fix for the following migration blocker and behavior change issues:
+This release provides autofix for the following migration blocker and behavior change issues:
 - The schema objects that use Unqualified Join syntax.
 - The schema objects that use the legacy RAISEERROR statement.
 - SQL statements that use Order By Integer Literal.

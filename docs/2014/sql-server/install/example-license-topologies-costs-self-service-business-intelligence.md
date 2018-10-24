@@ -118,9 +118,9 @@ manager: craigg
   
  The sample deployments are all intranet environments, therefore SharePoint CAL licensing is required.  
   
--   [SharePoint full list of Licensing](http://technet.microsoft.com/en-in/library/jj819267.aspx#bkmk_FeaturesOnPremise) (http://technet.microsoft.com/en-in/library/jj819267.aspx#bkmk_FeaturesOnPremise).  
+-   [SharePoint full list of Licensing](http://technet.microsoft.com/library/jj819267.aspx#bkmk_FeaturesOnPremise) (http://technet.microsoft.com/library/jj819267.aspx#bkmk_FeaturesOnPremise).  
   
--   [How to Buy SharePoint](http://sharepoint.microsoft.com/en-in/Pages/buy.aspx) (http://sharepoint.microsoft.com/en-in/Pages/buy.aspx).  
+-   [How to Buy SharePoint](http://sharepoint.microsoft.com/Pages/buy.aspx) (http://sharepoint.microsoft.com/Pages/buy.aspx).  
   
 ##  <a name="bkmk_3tier_powerpivot"></a> 3 Tier Topology with Separate [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Servers  
  This example illustrates that with 800 or less users, it is least expensive to use the SQL Server BI edition for the SharePoint application servers and [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint servers. However when there are 800 users or more, SQL Server Enterprise Edition is less expensive. Core licensing is independent of the number of users, and therefore there is a cost threshold point when you compare core and CAL license costs and the number of user’s increases. From the threshold point onwards the Enterprise Edition is the least expensive solution. To determine the cost threshold, compare costs based on the number of cores to be licensed versus the number of end-user or end device CALs to be licensed.  

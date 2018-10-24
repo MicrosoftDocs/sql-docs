@@ -1,8 +1,8 @@
 ---
-title: Configure replay for Database Experimentation Assistant for SQL Server upgrades
-description: Configure replay for Database Experimentation Assistant
+title: Configure replay in Database Experimentation Assistant for SQL Server upgrades
+description: Configure replay in Database Experimentation Assistant
 ms.custom: ""
-ms.date: 10/12/2018
+ms.date: 10/22/2018
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -10,113 +10,114 @@ ms.technology: dea
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 author: HJToland3
-ms.author: jtoland
+ms.author: ajaykar
 ms.reviewer: douglasl
 manager: craigg
 ---
 
-# Configure replay for Database Experimentation Assistant
+# Configure replay in Database Experimentation Assistant
 
-Database Experimentation Assistant uses the Distributed Replay tools from the SQL Server installation to replay a captured trace against an upgraded test environment. We recommend doing a test run with a small trace file before doing a full replay to make sure proper replay of queries.
+Database Experimentation Assistant (DEA) uses the Distributed Replay tools from the SQL Server installation to replay a captured trace against an upgraded test environment. We recommend doing a test run by using a small trace file before doing a full replay to ensure proper replay of queries.
 
 ## Distributed Replay requirements
 
-- An additional 78% hard drive space is required to create IRF files on the Distributed Replay controller machine.
-- 200 MB or 512 MB is the ideal trace rollover size used for capturing production or performance traces.   
-- The minimum CPU and RAM requirements for the Distributed Replay controller and client machines are a Single Core CPU with 3.5-GB RAM.
-- The replay time takes approximately 1.55 times longer than the capture time, since one controller and four children are used to replay the production trace.
-- If you use our "published" versions of production and performance trace definition files, and the performance trace definition filters out the traces for one database of interest, analysis has shown that the size of the Performance Trace is about 15 times larger than the Production Trace.
+- An additional 78% of hard-drive space is required to create IRF files on the Distributed Replay controller machine.
+- 200 MB or 512 MB is the ideal trace rollover size to use to capture production or performance traces.   
+- The minimum CPU and RAM requirements for the Distributed Replay controller and client machines are a single-core CPU with 3.5 GB of RAM.
+- The replay time takes approximately 1.55 times longer than the capture time because one controller and four child machines are used to replay the production trace.
+- If you use our "published" versions of production and performance trace definition files and the performance trace definition filters out the traces for one database of interest, analysis shows that the **Performance Trace** size is about 15 times larger than the **Production Trace** size.
 
 ## Set up a virtual network or domain
 
-Distributed Replay requires usage of common accounts between machines. For this and security reasons, we recommend running under a virtual network or a domain-controlled network.
+Distributed Replay requires you to use common accounts between machines. Because of this requirement, and for security reasons, we recommend running Distributed Replay on a virtual network or on a domain-controlled network:
 
-- Create controller and client machines in the environment.
-- Make sure that controller and client machines can ping each other over the network.
-- Distributed Replay client machines must have connectivity to the replay target SQL server.
+- Create the controller and client machines in the environment.
+- Make sure that the controller and client machines can ping each other over the network.
+- Distributed Replay client machines must have connectivity to the replay target computer running SQL Server.
 
-## Set up controller service
-Follow these steps to set up the controller service:
+## Set up the controller service
 
-1. Install the Distributed Replay controller using the SQL Server installer. If you didn't see the SQL Server Installer wizard step that configures the Distributed Replay controller, you can configure it through the configuration file. For a typical installation, it's located at `C:\Program Files (x86)\Microsoft SQL Server\<version>\Tools\DReplayController\DReplayController.config`
-1. Distributed Replay controller logs are present at `C:\Program Files (x86)\Microsoft SQL Server\<version>\Tools\DReplayController\Log`.
-1. Open `Services.msc` and navigate to the `"SQL Server Distributed Replay Controller"` service.
-1. Right-click on the service, then select **Properties** to set the service account to an account that is common to the controller and client machines within the network.
+To set up the controller service:
+
+1. Install the Distributed Replay controller by using the SQL Server installer. If you skipped the SQL Server Installer wizard step that configures the Distributed Replay controller, you can configure the controller through the configuration file. In a typical installation, the configuration file is located at C:\Program Files (x86)\Microsoft SQL Server\<version\>\Tools\DReplayController\DReplayController.config.
+1. Distributed Replay controller logs are located at C:\Program Files (x86)\Microsoft SQL Server\<version\>\Tools\DReplayController\Log.
+1. Open Services.msc and go to the **SQL Server Distributed Replay Controller** service.
+1. Right-click on the service, and then select **Properties**. Set the service account to an account that is common to the controller and client machines in the network.
 1. Select **OK** to close the **Properties** window.
-1. Restart the service `SQL Server Distributed Replay Controller` service from `Services.msc` or run the following commands from the command prompt:
-   - `NET STOP "SQL Server Distributed Replay Controller"`
-   - `NET START "SQL Server Distributed Replay Controller"`
-1. For additional configuration options, see [SQL Server Distributed Replay](https://docs.microsoft.com/sql/tools/distributed-replay/configure-distributed-replay).
+1. Restart the **SQL Server Distributed Replay Controller** service from Services.msc. You also can run the following commands at the command line to restart the service:<br/>
+   `NET STOP "SQL Server Distributed Replay Controller"`<br/>
+   `NET START "SQL Server Distributed Replay Controller"`
+1. For more configuration options, see [Configure Distributed Replay](https://docs.microsoft.com/sql/tools/distributed-replay/configure-distributed-replay).
 
-## DCOM configuration
+## Configure DCOM
 
 This configuration is required only on the controller machine.
 
-1. Open `dcomcnfg.exe`.
-1. Expand **Component Services** > **Computers** > **My Computer** > **DCOM Config**
-1. Find DReplayController under DCOM Config. Right-click and open its Properties.
-1. Choose the Security tab.
-1. Under Launch and Activation Permissions, select **Customize** and choose **Edit**.
-1. Add the user that will be starting the replay and give the user Local Launch and Local Activation permissions. If the user plans to launch or activate remotely, give the user Remote Launch and Remote Activation permissions.
-1. Select **OK** to commit the changes and return to the Security tab on the **Properties** window.
-1. Under Access Permissions, select **Customize** and choose **Edit**.
-1. Add the user that will be starting the replay and give the user Local Access permission. If the user plans to access the controller service remotely, give the user Remote Access permission.
-1. Choose **OK** to commit the changes and return to the Security tab on the **Properties** window.
-1. Choose **OK** to commit the changes.
-1. Restart the service `SQL Server Distributed Replay Controller` from `Services.msc` or run the following commands from the command prompt:
-   - `NET STOP "SQL Server Distributed Replay Controller"`
-   - `NET START "SQL Server Distributed Replay Controller"`
+1. Open dcomcnfg.exe.
+1. Expand **Component Services** > **Computers** > **My Computer** > **DCOM Config**.
+1. Under **DCOM Config**, right-click **DReplayController**, and then select **Properties**.
+1. Select the **Security** tab.
+1. Under **Launch and Activation Permissions**, select **Customize**, and then select **Edit**.
+1. Add the user that will be starting the replay. Give the user Local Launch and Local Activation permissions. If the user plans to launch or activate remotely, give the user Remote Launch and Remote Activation permissions.
+1. Select **OK** to commit the changes and return to the **Security** tab.
+1. Under **Access Permissions**, select **Customize**, and then select **Edit**.
+1. Add the user that will be starting the replay. Give the user Local Access permissions. If the user plans to access the controller service remotely, give the user Remote Access permissions.
+1. Select **OK** to commit the changes and return to the **Security** tab.
+1. Select **OK** to commit the changes.
+1. Restart the SQL Server Distributed Replay Controller service from Services.msc. You also can run the following commands at the command line to restart the service:<br/>
+   `NET STOP "SQL Server Distributed Replay Controller"`<br/>
+   `NET START "SQL Server Distributed Replay Controller"`
 
-## Set up client service
+## Set up the client service
 
-Before setting up the client service, verify that the controller and client machines can see each other using networking tools such as ping.
+Before you set up the client service, use networking tools like ping to verify that the controller and client machines can communicate.
 
-1. Install the Distributed Replay client using the SQL Server installer.
-1. Open Services.msc and navigate to the service `SQL Server Distributed Replay Client`.
-1. Right-click on the service, select **Properties**, and set the service account to an account that is common to the controller and client machines within the network.
-1. Choose **OK** to close the **Properties** window. If you didn't see the SQL Server Installer wizard step to configure the Distributed Replay client, you can configure it through the configuration file. For a typical installation, it can be found at `C:\Program Files (x86)\Microsoft SQL Server\<version>\Tools\DReplayClient\DReplayClient.config`
-1. Ensure that the `DReplayClient.config` contains the name of the controller machine as its controller for registration.
-7.  Restart the service `SQL Server Distributed Replay Client` from `Services.msc` or run the following commands from the command prompt:
-    - `NET STOP "SQL Server Distributed Replay Client"`
-    - `NET START "SQL Server Distributed Replay Client"`
-1. Distributed Replay controller logs are present at `C:\Program Files (x86)\Microsoft SQL Server\<version>\Tools\DReplayClient\Log`. The log indicates whether the client is able to register itself with the controller.
-1. If the configuration is successful, the log shows the message, "Registered with controller <controller name>".
-1. For any additional configuration options, see [SQL Server Distributed Replay](https://docs.microsoft.com/sql/tools/distributed-replay/configure-distributed-replay).
+1. Install the Distributed Replay client by using the SQL Server installer.
+1. Open Services.msc and go to the SQL Server Distributed Replay Client service.
+1. Right-click on the service, and then select **Properties**. Set the service account to an account that is common to both the controller and client machines in the network.
+1. Select **OK** to close the **Properties** window. If you skipped the SQL Server Installer wizard step to configure the Distributed Replay client, you can configure it through the configuration file. In a typical installation, the configuration file is located at C:\Program Files (x86)\Microsoft SQL Server\<version\>\Tools\DReplayClient\DReplayClient.config.
+1. Ensure that the DReplayClient.config file contains the name of the controller machine as its controller for registration.
+1.  Restart the SQL Server Distributed Replay Client service from Services.msc. You also can run the following commands from the command line to restart the service:<br/>
+    `NET STOP "SQL Server Distributed Replay Client"`<br/>
+    `NET START "SQL Server Distributed Replay Client"`
+1. Distributed Replay controller logs are located at C:\Program Files (x86)\Microsoft SQL Server\<version\>\Tools\DReplayClient\Log. The logs indicate whether the client can register itself with the controller.
+1. If the configuration is successful, the log displays the message "Registered with controller <controller name\>".
+1. For more configuration options, see [Configure Distributed Replay](https://docs.microsoft.com/sql/tools/distributed-replay/configure-distributed-replay).
 
 ## Set up Distributed Replay administration tools
 
-Distributed Replay administration tools let you quickly test whether Distributed Replay is functioning properly in the environment, especially an environment in which multiple client machines are registered with a controller. SQL Server Management Studio might need to be installed to get the administration tool.
+You can use Distributed Replay administration tools to quickly test whether Distributed Replay is functioning properly in the environment. Testing the configuration can be especially helpful in an environment in which multiple client machines are registered with a controller. You might need to install SQL Server Management Studio (SSMS) to get the administration tools.
 
-1. Go to the SSMS install location and look for the Distributed Replay administration tools: dreplay.exe and its dependent components.
-1. Open a command prompt, and run `dreplay.exe status -f 1`
-1. If all the previous steps are successful, the console output will indicate that the controller is able to see its clients in `READY` state.
+1. Go to the SSMS install location and look for the Distributed Replay administration tool dreplay.exe and its dependent components.
+1. Open a Command Prompt window and run `dreplay.exe status -f 1`.
+1. If all the preceding steps are successful, the console output indicates that the controller can see its clients in a `READY` state.
 
-## Configure firewall for remote Distributed Replay access
+## Configure the firewall for remote Distributed Replay access
 
 Remotely accessing Distributed Replay requires opening ports that are visible within the domain or virtual network.
 
-1. Open the Windows Firewall with Advanced Security.
-1. Navigate to Inbound Rules.
-1. Create a new inbound firewall rule for program `C:\Program Files (x86)\Microsoft SQL Server\<version>\Tools\DReplayController\DReplayController.exe`.
-1. Allow Domain level access to all ports for DReplayController.exe to be able to communicate with the controller service remotely.
+1. Open **Windows Firewall** with **Advanced Security**.
+1. Go to **Inbound Rules**.
+1. Create a new inbound firewall rule for program C:\Program Files (x86)\Microsoft SQL Server\<version\>\Tools\DReplayController\DReplayController.exe.
+1. Allow domain-level access to all ports for DReplayController.exe to be able to communicate with the controller service remotely.
 1. Save the rule.
 
-## Set up target SQL Servers
+## Set up target computers
 
-Two replays are required for running an A/B test or an experiment. That is, you might need two separate instances of SQL Server installations for a migration scenario.
+Two replays are required to run an A/B test or an experiment. That is, you might need two separate instances of SQL Server installations for a migration scenario. 
 
-Installing the two versions of SQL Server instances on the same machine also works. One caveat though is to make sure that the instances are isolated completely when a replay is in progress.
+You can also install the two versions of SQL Server instances on the same machine. A caveat is to make sure that the instances are completely isolated when a replay is in progress.
 
-The following steps must be performed for each replay.
+The following steps must be performed for each replay:
 
 1. Restore the backup of the database.
-1. Provide permission to the client service account user to access the databases under the SQL Server instance. This is required for the queries to be executed on the SQL Server instance.
+1. Provide permissions for the client service account user to access the databases under the SQL Server instance. Permissions are required for the queries to be executed on the SQL Server instance.
 1. Start the replay.
 
 ## Next steps
 
-- [Replay trace](database-experimentation-assistant-replay-trace.md) shows you how to replay a captured trace against an upgraded test environment.
+- To learn how to replay a captured trace in an upgraded test environment, see [Replay trace](database-experimentation-assistant-replay-trace.md).
 
-- For a 19-minute introduction and demonstration of DEA, watch the following video:
+- For a 19-minute introduction to DEA and demonstration, watch the following video:
 
   > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-Database-Experimentation-Assistant/player]

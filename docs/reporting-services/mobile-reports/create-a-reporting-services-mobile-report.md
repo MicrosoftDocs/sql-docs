@@ -13,7 +13,7 @@ ms.author: maggies
 # Create a Reporting Services mobile report
 With SQL Server Mobile Report Publisher, you can quickly create SQL Server 2016 Reporting Services mobile reports that scale well to any screen size, on a design surface with adjustable grid rows and columns, and flexible mobile report elements.  
   
-The first time you create a mobile report, you can install SQL Server Mobile Report Publisher, on your local machine from the Reporting Services web portal. Or you can install it from the [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=733527). After the first time, you can start it either from the web portal or locally.   
+The first time you create a mobile report, you can install SQL Server Mobile Report Publisher, on your local machine from the Reporting Services web portal. Or you can install it from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=733527). After the first time, you can start it either from the web portal or locally.   
     
 1. In the top bar of the Reporting Services web portal, select **New** > **Mobile Report**.  
   

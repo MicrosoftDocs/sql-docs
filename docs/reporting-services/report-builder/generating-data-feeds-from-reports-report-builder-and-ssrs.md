@@ -186,4 +186,4 @@ ms.author: maggies
 [Exporting to a CSV File](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md)   
 [Export Reports](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

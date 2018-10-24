@@ -39,7 +39,7 @@ You can upload report definitions and report models to a SharePoint library. Whe
   
      If the report definition uses a shared data source (.rsds) file to store connection information to an external data source, you can upload the .rdl and the .rsds file at the same time. To do this, click **Upload Multiple Documents**, specify both files, and then click **OK**.  
   
- If you upload a report that contains references to shared data sources, report models, or subreports, the references will be broken in the report when the files are uploaded. For more information about how to reset the references, see [Create and Manage Shared Data Sources &#40;Reporting Services in SharePoint Integrated Mode&#41;](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76).  
+ If you upload a report that contains references to shared data sources, report models, or subreports, the references will be broken in the report when the files are uploaded. For more information about how to reset the references, see [Create and Manage Shared Data Sources &#40;Reporting Services in SharePoint Integrated Mode&#41;](https://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76).  
   
  When you upload a report, it runs on demand when you open it, retrieving live data from the data source. You can configure the report to retrieve data on a schedule or use cached data. For more information, see [Set Processing Options &#40;Reporting Services in SharePoint Integrated Mode&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md).  
   
@@ -51,4 +51,4 @@ You can upload report definitions and report models to a SharePoint library. Whe
  [Publish a Shared Data Source to a SharePoint Library](../../reporting-services/reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
  [Granting Permissions on Report Server Items on a SharePoint Site](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

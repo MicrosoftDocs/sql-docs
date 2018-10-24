@@ -269,7 +269,7 @@
       href: r/extended-events-for-sql-server-r-services.md
     - name: Extended events PREDICT T-SQL
       href: xe-event-predict-tsql.md
-    - name: Dynamic Management Views (DMV)
+    - name: Dynamic management views
       href: administration/dmvs-for-sql-server-machine-learning-services.md
     - name: R code profiling functions
       href: r/using-r-code-profiling-functions.md

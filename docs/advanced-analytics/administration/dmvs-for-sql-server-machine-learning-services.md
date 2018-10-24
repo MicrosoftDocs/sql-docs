@@ -13,16 +13,15 @@ manager: cgronlun
 # Dynamic management views for SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Dynamic management views (DMVs) return server state information that can be used to monitor the health of a server instance, diagnose problems, and tune performance. The article lists the [dynamic management views]((../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)) that are related to machine learning in SQL Server.
-
-For information about extended events, see [Extended events for machine learning](../../advanced-analytics/r/extended-events-for-sql-server-r-services.md).
+Dynamic management views (DMVs) return server state information that can be used to monitor the health of a server instance, diagnose problems, and tune performance. The article lists the that are related to machine learning in SQL Server. For more information, see [System Dynamic Management Views]((../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)).
 
 > [!TIP]
 > Use the built-in reports to monitor machine learning sessions and package utilization. For more information, see [Monitor machine learning using custom reports in Management Studio](../../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md).
 
 ## System configuration and system resources
 
-You can monitor the resources used by external scripts by using [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] the following dynamic management views.
+You can monitor the resources used by external scripts by using the dynamic management views below. To query the DMVs, you need VIEW SERVER STATE permission on server.
+
 
 + [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md)
 
@@ -71,6 +70,9 @@ You can monitor the resources used by external scripts by using [!INCLUDE[ssNoVe
   + **Total Execution Time (ms)**: Time elapsed between the call and completion of call
   + **Execution Errors**: Number of times scripts reported errors. This count does not include R errors.
 
+> [!NOTE]  
+> Users who run external scripts must have the additional permission EXECUTE ANY EXTERNAL SCRIPT, however, these DMVs can be used by administrators without this permission.
+
 ## Resource Governor views
 
 In editions that support Resource Governor, creating external resource pools for R or Python workloads can be en effective way to track and manage resources.
@@ -107,9 +109,7 @@ In editions that support Resource Governor, creating external resource pools for
 
   The affinity schedule maps the resource pool to the [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] schedules identified by the given IDs. These IDs map to the values in the `scheduler_id` column in `sys.dm_os_schedulers`.
 
-
-> [!NOTE] 
-> 
+> [!NOTE]
 > Although the ability to configure and customize resource pools is available only in Enterprise and Developer editions, the default pools as well as the DMVs are available in all editions. Therefore, you can use these DMVs in Standard Edition to determine resource caps for your external script jobs.
 
 For general information about monitoring [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] instances, see [Catalog Views](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md) and [Resource Governor Related Dynamic Management Views](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md).
@@ -129,4 +129,5 @@ To determine if a process is running in a job, use the `IsProcessInJob` function
 
 ## Next steps
 
-[Managing and monitoring machine learning solutions](../../advanced-analytics/r/managing-and-monitoring-r-solutions.md)
++ [Managing and monitoring machine learning solutions](../../advanced-analytics/r/managing-and-monitoring-r-solutions.md)
++ [Extended events for machine learning](../../advanced-analytics/r/extended-events-for-sql-server-r-services.md).

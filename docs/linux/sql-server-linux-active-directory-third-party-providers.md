@@ -16,7 +16,7 @@ helpviewer_keywords:
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-This article explains how to configure a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on a Linux host machine with Active Directory (AD) authentication when using third-party AD providers. Examples are [PowerBroker Identity Services (PBIS)](https://www.beyondtrust.com/), [Vintela Authentication Services (VAS)](https://www.oneidentity.com/products/authentication-services/), and [Centrify](https://www.centrify.com/). This guide includes steps to check your AD configuration. It's not intended to instruct on how to join a machine to a domain. For detailed instructions on joining a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host to a domain by using REALM and SSSD, see [Use Active Directory authentication with SQL Server on Linux](sql-server-linux-active-directory-authentication.md).
+This article explains how to configure a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on a Linux host machine with Active Directory (AD) authentication when using third-party AD providers. Examples are [PowerBroker Identity Services (PBIS)](https://www.beyondtrust.com/), [One Identity](https://www.oneidentity.com/products/authentication-services/), and [Centrify](https://www.centrify.com/). This guide includes steps to check your AD configuration. It's not intended to instruct on how to join a machine to a domain. For detailed instructions on joining a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host to a domain by using realmd and SSSD, see [Use Active Directory authentication with SQL Server on Linux](sql-server-linux-active-directory-authentication.md).
 
 ## Prerequisites
 

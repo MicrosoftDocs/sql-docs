@@ -79,7 +79,7 @@ For detailed information, see [Implement SQL Server Agent Security](../../ssms/a
     GO  
     ```  
   
-For more information, see [sp_start_job (Transact-SQL)](http://msdn.microsoft.com/en-us/8a91df6a-eb84-4512-9a17-4a6e32a9538a).  
+For more information, see [sp_start_job (Transact-SQL)](http://msdn.microsoft.com/8a91df6a-eb84-4512-9a17-4a6e32a9538a).  
   
 ## <a name="SMO"></a>Using SQL Server Management Objects  
 **To start a job**  

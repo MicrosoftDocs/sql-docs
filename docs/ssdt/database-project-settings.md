@@ -101,7 +101,7 @@ Extended Transact-SQL Verification is a feature within the database project syst
 ### Transact-SQL Compiler Service  
 Transact-SQL Compiler Service is a component based on the Microsoft SQL Server 2012 Database Engine. This service can validate the syntax and semantics of DDL statements with the same fidelity as a Microsoft SQL Server 2012 Database engine. This inherently means that the Compiler Service does not support syntax or features that have been deprecated in Microsoft SQL Server 2012. For more information about deprecated features, see [Discontinued Database Engine Functionality in SQL Server 2012](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md).  
   
-For purpose of validation of the database project, the Compiler Service creates a partially contained database and simulates execution of the DDL statements against that database. For more information, see [Partially Contained Databases](http://msdn.microsoft.com/en-us/library/ff929071%28v=SQL.110%29.aspx).  
+For purpose of validation of the database project, the Compiler Service creates a partially contained database and simulates execution of the DDL statements against that database. For more information, see [Partially Contained Databases](http://msdn.microsoft.com/library/ff929071%28v=SQL.110%29.aspx).  
   
 The Compiler Service has two categories of limitations.  
   
@@ -126,7 +126,7 @@ Features that are not currently supported for validation including:
 -   SQL Azure Metadata Collation (Compiler Service uses SQL Server 2012 Partially Contained Database metadata collation - Latin1_General_100_CI_AS_KS_WS_SC)  
   
 ### Enabling/Disabling Extended Verification  
-Extended Transact-SQL Verification is enabled by default in a database project that is created directly from a SQL Azure database or a project whose target platform is set to SQL Azure. It is recommended that Extended Verification be used when developing for SQL Azure or an application-scoped database targeting SQL Server 2012. For more information about application scoped databases, see [Partially Contained Databases](http://msdn.microsoft.com/en-us/library/ff929071%28v=SQL.110%29.aspx).  
+Extended Transact-SQL Verification is enabled by default in a database project that is created directly from a SQL Azure database or a project whose target platform is set to SQL Azure. It is recommended that Extended Verification be used when developing for SQL Azure or an application-scoped database targeting SQL Server 2012. For more information about application scoped databases, see [Partially Contained Databases](http://msdn.microsoft.com/library/ff929071%28v=SQL.110%29.aspx).  
   
 The Extended Verification feature can also be used when developing an application-scoped database for SQL Server 2008/R2 to achieve compatibility with Microsoft SQL Server 2012 and SQL Azure.  
   
@@ -148,21 +148,21 @@ The Extended Verification feature can also be used when developing an applicatio
 ![File Properties](../ssdt/media/ssdt-evf.gif "File Properties")  
   
 ### Special Considerations for Collations  
-For more information regarding collations in partially contained databases, see [Contained Database Collations](http://msdn.microsoft.com/en-us/library/ff929080%28v=sql.110%29.aspx).  
+For more information regarding collations in partially contained databases, see [Contained Database Collations](http://msdn.microsoft.com/library/ff929080%28v=sql.110%29.aspx).  
   
 ## <a name="bkmk_sqlclr"></a>SQLCLR  
-For information about the Assembly options, see [Assembly Information Dialog Box](http://msdn.microsoft.com/en-us/library/1h52t681.aspx?queryresult=true).  
+For information about the Assembly options, see [Assembly Information Dialog Box](http://msdn.microsoft.com/library/1h52t681.aspx?queryresult=true).  
   
-For information about signing, see the **Assembly Signing** section of the [Signing Page, Project Designer](http://msdn.microsoft.com/en-us/library/0k50fs3b.aspx?queryresult=true) topic.  
+For information about signing, see the **Assembly Signing** section of the [Signing Page, Project Designer](http://msdn.microsoft.com/library/0k50fs3b.aspx?queryresult=true) topic.  
   
 ## <a name="bkmk_sqlclr_sqlclrbuild"></a>SQLCLR and SQLCLR Build  
 The **SQLCLR** and **SQLCLR Build** property pages contain many settings for using SQL CLR objects in your project. Specifically, the **SQLCLR** property page has a permission level setting to set permissions on the SQLCLR assembly. It also has a “generate DDL” setting to control whether Dynamic Data Language (DDL) is generated for the SQLCLR objects that have been added to the project. The SQLCLR **Build** property page contains all the compiler options that you can set to configure the compilation of SQLCLR code in the project.  
   
 The **SQLCLR Build** property page contains advanced build settings for building your SQL CLR objects. Different options are provided based on the language (VB or C#) used to code the SQL CLR objects.  
   
-1.  If the object is written in C#, you can access the options by clicking the **Advanced** button in the **SQLCLR Build** property page. Descriptions for C# options can be found at [Advanced Build Settings Dialog Box (C#)](http://msdn.microsoft.com/en-us/library/s4wcexbc.aspx).  
+1.  If the object is written in C#, you can access the options by clicking the **Advanced** button in the **SQLCLR Build** property page. Descriptions for C# options can be found at [Advanced Build Settings Dialog Box (C#)](http://msdn.microsoft.com/library/s4wcexbc.aspx).  
   
-2.  If the object is written in VB, you can first choose VB in the **Language** dropdown list, then click the **Advanced** button. Descriptions for VB options can be found at [Advanced Compiler Settings Dialog Box (Visual Basic)](http://msdn.microsoft.com/en-us/library/07bysfz2.aspx)  
+2.  If the object is written in VB, you can first choose VB in the **Language** dropdown list, then click the **Advanced** button. Descriptions for VB options can be found at [Advanced Compiler Settings Dialog Box (Visual Basic)](http://msdn.microsoft.com/library/07bysfz2.aspx)  
   
 For more information, see [Build Configuration Properties](http://msdn.microsoft.com/query/dev10.query?appId=Dev10IDEF1&l=EN-US&k=k(CS.PROJECTPROPERTIESBUILD))  
   
@@ -223,10 +223,10 @@ You can use these settings to control the debugging of your database project.
 |Advanced…|No|Command button that allows you to specify options that control events and behavior for the deployment.|  
   
 ## <a name="bkmk_ref_paths"></a>Reference Paths  
-You can use this page to define the server and database variables that are associated with a cross-database reference. In addition, you can specify the values of those variables. For more information, see [Using References in Database Projects](http://msdn.microsoft.com/en-us/library/bb386242.aspx).  
+You can use this page to define the server and database variables that are associated with a cross-database reference. In addition, you can specify the values of those variables. For more information, see [Using References in Database Projects](http://msdn.microsoft.com/library/bb386242.aspx).  
   
 ## <a name="bkmk_code_analysis"></a>Code Analysis  
 You can use Code Analysis to discover potential issues in your scripts, such as design, naming and performance problems. Rules for database projects are organized into predefined rule sets that target specific areas, and you can enable or disable any rule in the **Code Analysis** tab of the **Project Properties** property page. In the same tab, you can specify code analysis to be run automatically every time that a project is built, or whether warnings are treated as errors.  
   
-To use Code Analysis manually, right-click your project in **Solution Explorer** and select **Run Code Analysis**. Code analysis warnings are listed in the **Error List** window. You can double-click a warning to navigate to the source code that contains the issue, and you can view additional information and possible corrections for a warning by using the **Show Error Help** contextual menu. For more information on Code Analysis, see [Analyzing Database Code to Improve Code Quality](http://msdn.microsoft.com/en-us/library/dd172133.aspx).  
+To use Code Analysis manually, right-click your project in **Solution Explorer** and select **Run Code Analysis**. Code analysis warnings are listed in the **Error List** window. You can double-click a warning to navigate to the source code that contains the issue, and you can view additional information and possible corrections for a warning by using the **Show Error Help** contextual menu. For more information on Code Analysis, see [Analyzing Database Code to Improve Code Quality](http://msdn.microsoft.com/library/dd172133.aspx).  
   

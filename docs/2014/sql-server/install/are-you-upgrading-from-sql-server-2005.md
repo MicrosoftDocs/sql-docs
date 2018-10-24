@@ -77,6 +77,6 @@ manager: craigg
 ## See Also  
  [SQL Server 2014](http://www.microsoft.com/en-us/server-cloud/products/sql-server/default.aspx)   
  [SQL Server 2005 end of support](http://www.microsoft.com/en-us/server-cloud/products/sql-server-2005/)   
- [Upgrade from SQL Server 2005 to SQL Server 2016](https://msdn.microsoft.com/en-US/library/mt168847.aspx)  
+ [Upgrade from SQL Server 2005 to SQL Server 2016](https://msdn.microsoft.com/library/mt168847.aspx)  
   
   

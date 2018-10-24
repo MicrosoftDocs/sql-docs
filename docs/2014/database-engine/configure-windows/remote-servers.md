@@ -88,7 +88,7 @@ GO
 ```  
   
 ## Viewing Local or Remote Server Properties  
- You can use the **xp_msver** extended stored procedure to review server attributes for local or remote servers. These attributes include the version number of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the type and number of processors in the computer, and the version of the operating system. From the local server, you can view databases, files, logins, and tools for a remote server. For more information, see [xp_msver &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/xp-msver-transact-sql.md.  
+ You can use the **xp_msver** extended stored procedure to review server attributes for local or remote servers. These attributes include the version number of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the type and number of processors in the computer, and the version of the operating system. From the local server, you can view databases, files, logins, and tools for a remote server. For more information, see [xp_msver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/xp-msver-transact-sql).  
   
 ## Related Tasks  
  [Linked Servers &#40;Database Engine&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)  

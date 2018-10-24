@@ -32,7 +32,7 @@ manager: craigg
  
 The upgrade path to SQL Server is different depending on the deployment pattern. SQL Server offers two upgrade paths in general:
 - Side-by-side: Deploy a parallel environment and move databases along with the associated instance level objects, such as logins, jobs, etc. to the new environment. 
-- In-place upgrade: Allow the SQL Server installation media to upgrade the existing SQL Server installation by replacing the SQL Server bits, and upgrading the database objects. For environments running Always On Availability Groups or Failover Cluster Instances, an in-place upgrade is combined with a [rolling upgrade](choose-a-database-engine-upgrade-method.md#-rolling-upgrade) to minimize downtime. 
+- In-place upgrade: Allow the SQL Server installation media to upgrade the existing SQL Server installation by replacing the SQL Server bits, and upgrading the database objects. For environments running Always On Availability Groups or Failover Cluster Instances, an in-place upgrade is combined with a [rolling upgrade](choose-a-database-engine-upgrade-method.md#rolling-upgrade) to minimize downtime. 
 
 A common approach that has been adopted for side-by-side upgrades of replication topologies is to move publisher-subscriber pairs in parts to the new side-by-side environment as opposed to a movement of the entire topology. This phased approach helps control downtime and minimize the impact to a certain extent for the business dependent on replication.  
 

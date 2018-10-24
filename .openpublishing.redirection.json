@@ -4438,7 +4438,11 @@
         "source_path": "docs/connect/odbc/windows/welcome-to-the-microsoft-odbc-driver-13-for-sql-server-on-windows.md",
         "redirect_url": "/sql/connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows",
         "redirect_document_id": false
+      },
+      {
+        "source_path": "docs\2014\sql-server\install/example-license-topologies-costs-self-service-business-intelligence.md",
+        "redirect_url": "https://docs.microsoft.com/business-applications-release-notes/october18/intelligence-platform/",
+        "redirect_document_id": false
       }
-     
     ]
 }

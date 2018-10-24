@@ -38,7 +38,7 @@ ping contoso.com
 
 If either of these name checks fail, update your domain search list:
 
-- **Ubuntu**:
+- **Ubuntu**
 
   Edit the `/etc/network/interfaces` file, so that your AD domain is in the domain search list: 
 
@@ -67,7 +67,7 @@ If either of these name checks fail, update your domain search list:
   nameserver **<AD domain controller IP address>**
   ```
 
-- **RHEL**:
+- **RHEL**
 
   Edit the `/etc/sysconfig/network-scripts/ifcfg-eth0` file, so that your AD domain is in the domain search list. Or edit  another interface config file as appropriate:
 
@@ -97,7 +97,7 @@ If either of these name checks fail, update your domain search list:
   **<IP address>** DC1.CONTOSO.COM CONTOSO.COM CONTOSO
   ```
 
-- **SLES**:
+- **SLES**
 
   Edit the `/etc/sysconfig/network/config` file, so that your AD domain controller IP is used for DNS queries, and your AD domain is in the domain search list:
 

@@ -1,6 +1,6 @@
 ---
 title: Configure Minikube for SQL Server 2019 CTP 2.0 deployments | Microsoft Docs
-description:
+description: Learn how to configure Minikube for SQL Server 2019 big data cluster (preview) deployments on a single machine.
 author: rothja 
 ms.author: jroth 
 manager: craigg

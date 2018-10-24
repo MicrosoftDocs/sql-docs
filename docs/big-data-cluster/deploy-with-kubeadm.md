@@ -120,11 +120,11 @@ After running the previous commands on each machine, choose one of the machines 
 
 ## Configure the Kubernetes agents
 
-The other machines will act as Kubernetes agents in the cluster. On each of the other machines, run the `kubeadm join` command that you copied in the previous section.
+The other machines will act as Kubernetes agents in the cluster. 
 
-```bash
-kubeadm join 10.3.7.10:6443 --token s4bwda.trycksopdu4offk79 --discovery-token-ca-cert-hash sha256:4c5a34563ffc8f7178eee03333ba1345dc93b5989825a12da0d16
-```
+On each of the other machines, run the `kubeadm join` command that you copied in the previous section.
+
+![kubeadm join agents](./media/deploy-with-kubeadm/kubeadm-join-agents.png)
 
 ## View the cluster status
 

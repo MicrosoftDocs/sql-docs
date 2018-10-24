@@ -30,7 +30,7 @@ This tutorial demonstrates how to move and restore a SQL Server backup file into
 
 > [!div class="checklist"]
 > * Pull and run the latest SQL Server Linux container image.
-> * Copy the World Wide Importers database file into the container.
+> * Copy the Wide World Importers database file into the container.
 > * Restore the database in the container.
 > * Run Transact-SQL statements to view and modify the database.
 > * Backup the modified database.

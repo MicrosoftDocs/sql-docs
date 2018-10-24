@@ -19,7 +19,7 @@ This article provides an example of how to configure Kubernetes on multiple mach
 ## Prerequisites
 
 - Multiple Linux physical machines or virtual machines to use for the cluster
-- Recommended configuration: 8 CPUs, 32 GB memory, and at least 100 GB storage for each machine
+- Recommended configuration: 8 CPUs, 32 GB of memory, and at least 100 GB of storage for each machine
 - Minimum of three machines in the cluster
 
 ## Prepare the machines
@@ -100,7 +100,7 @@ After running the previous commands on each machine, choose one of the machines 
 
    ![kubeadm join](./media/deploy-with-kubeadm/kubeadm-join.png)
 
-1. Setup a Kubernetes configuration file your home directory.
+1. Set up a Kubernetes configuration file your home directory.
 
    ```bash
    mkdir -p $HOME/.kube
@@ -128,7 +128,7 @@ kubeadm join 10.3.7.10:6443 --token s4bwda.trycksopdu4offk79 --discovery-token-c
 
 ## View the cluster status
 
-To verify the connection to your cluster, use the [kubectl get](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands) command to return a list of the cluster nodes.  The example below shows the output if you were to have 1 master and 3 agent nodes.
+To verify the connection to your cluster, use the [kubectl get](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands) command to return a list of the cluster nodes.
 
 ```bash
 kubectl get nodes

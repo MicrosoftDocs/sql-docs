@@ -46,7 +46,7 @@
       href: deploy-on-minikube.md
     - name: Deploy on AKS
       href: deploy-on-aks.md
-    - name: Deploy on Machines
+    - name: Deploy with Kubeadm
       href: deploy-with-kubeadm.md
     - name: Connect with Azure Data Studio
       href: deploy-big-data-tools.md

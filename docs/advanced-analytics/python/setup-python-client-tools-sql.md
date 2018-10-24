@@ -23,13 +23,13 @@ In this article, learn how to configure a client development workstation so that
 
 Local workstations must have the same Python package versions as those on SQL Server, including the base distribution, and Microsoft-specific packages [revoscalepy](https://docs.microsoft.com//machine-learning-server/python-reference/revoscalepy/revoscalepy-package) and [microsftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package). 
 
-The [azureml-model-management](https://docs.microsoft.com/en-us/machine-learning-server/python-reference/azureml-model-management-sdk/azureml-model-management-sdk) package is also installed, but it applies to operationalization tasks associated with a standalone (non-instance) Machine Learning Server context. For in-database analystics on a SQL Server instance, operationalization is through stored procedures.
+The [azureml-model-management](https://docs.microsoft.com/en-us/machine-learning-server/python-reference/azureml-model-management-sdk/azureml-model-management-sdk) package is also installed, but it applies to operationalization tasks associated with a standalone (non-instance) Machine Learning Server context. For in-database analytics on a SQL Server instance, operationalization is through stored procedures.
 
 1. Download the installation shell script:
 
   + [https://aka.ms/mls-py](https://aka.ms/mls-py) if SQL Server 2017 is not bound (common case). Choose this script if you aren't sure.
 
-  + [https://aka.ms/mls93-py](https://aka.ms/mls93-py) if the remote SQL Server instance is [bound to Machine Learning Server 9.3](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server).
+  + [https://aka.ms/mls93-py](https://aka.ms/mls93-py) if the remote SQL Server instance is [bound to Machine Learning Server 9.3](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
 
   The script installs Anaconda 4.2.0, which includes Python 3.5.2, along with the three previously listed packages.
 
@@ -69,7 +69,7 @@ To use the Python executable installed by the setup script:
 
 ### On a standalone Python server
 
-If you chose the [standalone server](../install/sql-machine-learning-standalone-windows-install) option in SQL Server setup, you have a Python server that is fully decoupled from a SQL Server database engine instance. Using a standalone server as a rich client is an option that some customers prefer. If you have a standalone server, SQL Server Setup added standard Python tools and resources, which you can find at this location:
+If you chose the [standalone server](../install/sql-machine-learning-standalone-windows-install.md) option in SQL Server setup, you have a Python server that is fully decoupled from a SQL Server database engine instance. Using a standalone server as a rich client is an option that some customers prefer. If you have a standalone server, SQL Server Setup added standard Python tools and resources, which you can find at this location:
 
 1. Go to `C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER`.
 
@@ -167,7 +167,7 @@ We recommend Visual Studio because it supports database projects as well as mach
 
 Because developers frequently work with multiple versions of Python, setup does not add Python to your PATH. To use the Python executable and libraries installed by setup, link your IDE to **Python.exe** at the path that also provides revoscalepy and microsoftml. For example, for a Python project in Visual Studio, your custom environment would specify `C:\Program Files\Microsoft\PyForMLS`, `C:\Program Files\Microsoft\PyForMLS\python.exe` and `C:\Program Files\Microsoft\PyForMLS\pythonw.exe` for **Prefix path**, **Interpreter path**, and **Windowed interpreter**, respectively.
 
-For additional guidance, see [Link Python tools and IDEs](https://docs.microsoft.com/machine-learning-server/python/quickstart-python-tools). The article is written for Microsoft Machine Learning Server so the Python paths are different, but it shows you how to link to Python libraries from various tools.
+For more information, see [Link Python tools and IDEs](https://docs.microsoft.com/machine-learning-server/python/quickstart-python-tools). The article is written for Microsoft Machine Learning Server so the Python paths are different, but it shows you how to link to Python libraries from various tools.
 
 ## Next steps
 

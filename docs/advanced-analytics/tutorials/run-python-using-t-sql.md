@@ -124,7 +124,7 @@ The following exercise is focused on the first interaction model: how to pass Py
 For now, remember these rules:
 
 + Everything inside the `@script` argument must be valid Python code. 
-+ The code must follow all Pythonic rules regarding indentation, variable names, and so forth. When you get an error, check your white space and casing.
++ The code must follow all Python rules regarding indentation, variable names, and so forth. When you get an error, check your white space and casing.
 + If you are using any libraries that are not loaded by default, you must use an import statement at the beginning of your script to load them. SQL Server adds several product-specific libraries. For more information, see [Python libraries](../python/python-libraries-and-data-types.md).
 + If the library is not already installed, stop and install the Python package outside of SQL Server, as described here: [Install new Python packages on SQL Server](../python/install-additional-python-packages-on-sql-server.md)
 

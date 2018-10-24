@@ -109,7 +109,7 @@ The error message ID 8152 `String or binary data would be truncated` is familiar
 
 `String or binary data would be truncated in table '%.*ls', column '%.*ls'. Truncated value: '%.*ls'.`
 
-The new default error message provides more context for the data truncation problem, simplifying the troubleshooting process. If existing applications rely on parsing message ID 8152 and cannot handle the new message ID 2628, then you can revert back to using message ID 8152, by enabling trace flag 459.
+The new error message provides more context for the data truncation problem, simplifying the troubleshooting process, and becomes default under Database Compatibility Model 150. If existing applications rely on parsing message ID 8152 and cannot handle the new message ID 2628, then you can revert back to using message ID 8152, by enabling trace flag 459 or by using a lower Database Compability Model database configuration (100 to 140).
 
 ### UTF-8 support (CTP 2.0)
 

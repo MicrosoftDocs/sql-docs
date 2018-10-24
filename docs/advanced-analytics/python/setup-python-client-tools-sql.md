@@ -3,7 +3,7 @@ title: Set up Python client tools for use with SQL Server Machine Learning | Mic
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 08/21/2018  
+ms.date: 10/21/2018  
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
@@ -14,11 +14,7 @@ manager: cgronlun
 
 Python integration is available starting in SQL Server 2017 or later, when you add Python support to Machine Learning Services (In-Database). For more information, see [Install SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md).
 
-In this article, learn how to configure development workstations so that you can connect to a remote SQL Server enabled for Python.
-
-### Evaluation and independent development
- 
-If you have the developer edition and plan to work locally on Python script you plan to move to SQL Server, you can skip ahead to [Install an IDE](#install-ide) and point the tool to local Python libraries used by SQL Server.
+In this article, learn how to configure development workstations so that you can connect to a remote SQL Server enabled for machine learning and Python integration.
 
 > [!Tip]
 > For a demonstration and video walkthrough, see [Run R and Python Remotely in SQL Server from Jupyter Notebooks or any IDE](https://blogs.msdn.microsoft.com/mlserver/2018/07/10/run-r-and-python-remotely-in-sql-server-from-jupyter-notebooks-or-any-ide/) or this [YouTube video](https://youtu.be/D5erljpJDjE).
@@ -27,7 +23,9 @@ If you have the developer edition and plan to work locally on Python script you 
 
 Local workstations must have the same Python package versions as those on SQL Server: revoscalepy and microsftml. Additional Python packages are available, but are more commonly used with other scenarios in a standalone (non-instance) Machine Learning Server context. 
 
-1. Download the installation shell script from [https://aka.ms/mls93-py](https://aka.ms/mls93-py) (or use [https://aka.ms/mls-py](https://aka.ms/mls-py) for the 9.2. release). The script installs Anaconda 4.2.0, which includes Python 3.5.2, along with all packages listed previously.
+1. Download the installation shell script from [https://aka.ms/mls93-py](https://aka.ms/mls93-py) (or use [https://aka.ms/mls-py](https://aka.ms/mls-py) for the 9.2. release). 
+
+  The script installs Anaconda 4.2.0, which includes Python 3.5.2, along with all packages listed previously.
 
   Python components are provided through [SPO_9.3.0.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=859054&clcid=1033). If you need a different version, see [CAB downloads](../install/sql-ml-cab-downloads.md)
 
@@ -37,7 +35,7 @@ Local workstations must have the same Python package versions as those on SQL Se
 
    ```python
    cd {{download-directory}}
-   .\Install-PyForMLS.ps1 -InstallFolder "C:\path-to-python-for-mls")
+   .\Install-PyForMLS.ps1 -InstallFolder "C:\path-to-python-for-mls"
    ```
 
    Installation takes some time to complete. You can monitor progress in the PowerShell window. When setup is finished, you have a complete set of packages. For example, if you specified `C:\mspythonlibs` as the folder name, you would find the packages at `C:\mspythonlibs\Lib\site-packages`. Otherwise, the default folder is `C:\Program Files\Microsoft\PyForMLS1`.

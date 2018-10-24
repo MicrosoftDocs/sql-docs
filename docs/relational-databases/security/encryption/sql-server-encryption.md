@@ -54,6 +54,9 @@ You can use encryption in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-m
 ## Related Content  
  [Securing SQL Server](../../../relational-databases/security/securing-sql-server.md)  
  Overview of how to help secure the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] platform, and how to work with users and securable objects.  
+
+[An overview of Azure SQL Database security capabilities](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-security-overview)
+</br>Overview of Azure SQL Database security for protecting data, controlling access, and proactive monitoring.
   
  [Cryptographic Functions &#40;Transact-SQL&#41;](../../../t-sql/functions/cryptographic-functions-transact-sql.md)  
  Information about how to implement cryptographic functions.  

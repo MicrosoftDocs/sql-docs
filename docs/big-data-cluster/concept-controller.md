@@ -58,7 +58,7 @@ Authentication to the controller service endpoint is based on username and passw
 ```
 
 > [!NOTE]
-> You must provide a password that is in compliance with [SQL Server password complexity requirements](https://docs.microsoft.com/en-us/sql/relational-databases/security/password-policy?view=sql-server-2017).
+> You must provide a password that is in compliance with [SQL Server password complexity requirements](https://docs.microsoft.com/sql/relational-databases/security/password-policy?view=sql-server-2017).
 
 ## Next steps
 

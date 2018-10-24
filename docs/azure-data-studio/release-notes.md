@@ -4,8 +4,8 @@ description: 'Azure Data Studio release notes'
 ms.custom: "tools|sos"
 ms.date: "09/24/2018"
 ms.prod: sql
+ms.technology: azure-data-studio
 ms.reviewer: "alayu; sstein"
-ms.prod_service: sql-tools
 ms.topic: conceptual
 author: "stevestein"
 ms.author: "sstein"
@@ -13,7 +13,21 @@ manager: craigg
 ---
 # Azure Data Studio release notes
 
-**[Download the September *General Availability* (GA) Release!](download.md)**
+**[Download the October Release!](download.md)**
+
+## October 2018 (October Release)
+
+release date: October 18, 2018  
+version: 1.1.3
+
+- Introducing the Azure Resource Explorer to browse Azure SQL Databases
+- Improve Object Explorer and Query Editor connectivity robustness
+- SQL Agent extensions improvements
+- Update to the [SQL Server 2019 Preview extension](https://docs.microsoft.com/sql/azure-data-studio/sql-server-2019-extension?view=sql-server-ver15)
+
+### Bug Fixes
+
+For detailed information, see the [Change Log](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md), and [Releases](https://github.com/Microsoft/azuredatastudio/releases).
 
 ## September 2018 (September GA Release)
 

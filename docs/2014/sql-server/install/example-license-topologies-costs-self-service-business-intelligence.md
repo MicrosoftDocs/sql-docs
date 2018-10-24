@@ -108,9 +108,15 @@ The following list summarizes the license model used for deployment design and l
   
  The sample deployments are all intranet environments, therefore SharePoint CAL licensing is required.  
   
+<<<<<<< HEAD
 - [SharePoint full list of Licensing](http://technet.microsoft.com/en-in/library/jj819267.aspx#bkmk_FeaturesOnPremise).
   
 - [How to Buy SharePoint](http://sharepoint.microsoft.com/en-in/Pages/buy.aspx) (http://sharepoint.microsoft.com/en-in/Pages/buy.aspx).
+=======
+-   [SharePoint full list of Licensing](http://technet.microsoft.com/library/jj819267.aspx#bkmk_FeaturesOnPremise) (http://technet.microsoft.com/library/jj819267.aspx#bkmk_FeaturesOnPremise).  
+  
+-   [How to Buy SharePoint](http://sharepoint.microsoft.com/Pages/buy.aspx) (http://sharepoint.microsoft.com/Pages/buy.aspx).  
+>>>>>>> d10aaa7b94c7cc07b94871737f1ee92b46e0211a
   
 ##  <a name="bkmk_3tier_powerpivot"></a> 3 Tier Topology with Separate [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Servers  
 

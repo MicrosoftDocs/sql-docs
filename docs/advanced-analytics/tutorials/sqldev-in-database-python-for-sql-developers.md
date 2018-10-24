@@ -32,30 +32,23 @@ The data is from the well-known NYC Taxi data set. To make this walkthrough quic
 
 All tasks can be done using [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedures in the familiar environment of [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]
 
-- [Step 1: Download the sample data](sqldev-py1-download-the-sample-data.md)
 
-    Download the sample dataset and all script files to a local computer.
-
-- [Step 2: Import data to SQL Server using PowerShell](sqldev-py2-import-data-to-sql-server-using-powershell.md)
-
-    Execute a PowerShell script that creates a database and a table on the specified instance, and loads the sample data to the table.
-
-- [Step 3: Explore and visualize the data using Python](sqldev-py3-explore-and-visualize-the-data.md)
+- [Explore and visualize the data using Python](sqldev-py3-explore-and-visualize-the-data.md)
 
     Perform basic data exploration and visualization, by calling Python from [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedures.
 
-- [Step 4: Create data features using Python in T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+- [Create data features using Python in T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
     Create new data features using custom SQL functions.
   
-- [Step 5: Train and save a Python model using T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+- [Train and save a Python model using T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
     Build and save the machine learning model, using Python in stored procedures.
   
     This walkthrough demonstrates how to perform a binary classification task; you could also use the data to build models for regression or multiclass classification.
 
   
--  [Step 6: Operationalize the Python model](sqldev-py6-operationalize-the-model.md)
+-  [ Operationalize the Python model](sqldev-py6-operationalize-the-model.md)
 
     After the model has been saved to the database, call the model for prediction using [!INCLUDE[tsql](../../includes/tsql-md.md)].
 
@@ -108,4 +101,4 @@ Use the following resources to help you plan and execute a successful machine le
 
 ## Get started
 
-  [Step 1: Download the sample data](sqldev-py1-download-the-sample-data.md)
+  [Step 1: Download the sample data](demo-data-nyctaxi-in-sql.md)

@@ -46,7 +46,7 @@ manager: craigg
   
     -   The \<Features> element has three element node children, \<Color>, \<Weight>, and \<Warranty>. Each of these nodes has one text node child and have the values Red, 25, 2 years parts and labor, respectively.  
   
-```  
+```sql
 declare @x xml;  
 set @x='';  
 select @x.query('<ProductModel ProductModelID="111">;  
@@ -62,7 +62,7 @@ This is product model catalog description.
   
  This is the resulting XML:  
   
-```  
+```xml
 <ProductModel ProductModelID="111">  
   This is product model catalog description.  
   <Summary>Some description</Summary>  
@@ -76,7 +76,7 @@ This is product model catalog description.
   
  Although constructing elements from constant expressions, as shown in this example, is useful, the true power of this XQuery language feature is the ability to construct XML that dynamically extracts data from a database. You can use curly braces to specify query expressions. In the resulting XML, the expression is replaced by its value. For example, the following query constructs a <`NewRoot`> element with one child element (<`e`>). The value of element <`e`> is computed by specifying a path expression inside curly braces ("{ … }").  
   
-```  
+```sql
 DECLARE @x xml;  
 SET @x='<root>5</root>';  
 SELECT @x.query('<NewRoot><e> { /root } </e></NewRoot>');  
@@ -86,7 +86,7 @@ SELECT @x.query('<NewRoot><e> { /root } </e></NewRoot>');
   
  This is the result:  
   
-```  
+```xml
 <NewRoot>  
   <e>  
     <root>5</root>  
@@ -96,7 +96,7 @@ SELECT @x.query('<NewRoot><e> { /root } </e></NewRoot>');
   
  The following query is similar to the previous one. However, the expression in the curly braces specifies the **data()** function to retrieve the atomic value of the <`root`> element and assigns it to the constructed element, <`e`>.  
   
-```  
+```sql
 DECLARE @x xml;  
 SET @x='<root>5</root>';  
 DECLARE @y xml;  
@@ -109,7 +109,7 @@ SELECT @y;
   
  This is the result:  
   
-```  
+```xml
 <NewRoot>  
   <e>5</e>  
 </NewRoot>  
@@ -117,7 +117,7 @@ SELECT @y;
   
  If you want to use the curly braces as part of your text instead of context-switching tokens, you can escape them as "}}" or "{{", as shown in this example:  
   
-```  
+```sql
 DECLARE @x xml;  
 SET @x='<root>5</root>';  
 DECLARE @y xml;  
@@ -128,13 +128,13 @@ SELECT @y;
   
  This is the result:  
   
-```  
+```xml
 <NewRoot> Hello, I can use { and  } as part of my text</NewRoot>  
 ```  
   
  The following query is another example of constructing elements by using the direct element constructor. Also, the value of the <`FirstLocation`> element is obtained by executing the expression in the curly braces. The query expression returns the manufacturing steps at the first work center location from the Instructions column of the Production.ProductModel table.  
   
-```  
+```sql
 SELECT Instructions.query('  
     declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
         <FirstLocation>  
@@ -147,7 +147,7 @@ WHERE ProductModelID=7;
   
  This is the result:  
   
-```  
+```xml
 <FirstLocation>  
   <AWMI:step xmlns:AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions">  
       Insert <AWMI:material>aluminum sheet MS-2341</AWMI:material> into the <AWMI:tool>T-85A framing tool</AWMI:tool>.   
@@ -162,7 +162,7 @@ WHERE ProductModelID=7;
 #### Element Content in XML Construction  
  The following example illustrates the behavior of the expressions in constructing element content by using the direct element constructor. In the following example, the direct element constructor specifies one expression. For this expression, one text node is created in the resulting XML.  
   
-```  
+```sql
 declare @x xml;  
 set @x='  
 <root>  
@@ -181,13 +181,13 @@ select @x.query('
   
  The atomic value sequence resulting from the expression evaluation is added to the text node with a space added between the adjacent atomic values, as shown in the result. The constructed element has one child. This is a text node that contains the value shown in the result.  
   
-```  
+```xml
 <result>This is step 1 This is step 2 This is step 3</result>  
 ```  
   
  Instead of one expression, if you specify three separate expressions generating three text nodes, the adjacent text nodes are merged into a single text node, by concatenation, in the resulting XML.  
   
-```  
+```sql
 declare @x xml;  
 set @x='  
 <root>  
@@ -205,14 +205,14 @@ select @x.query('
   
  The constructed element node has one child. This is a text node that contains the value shown in the result.  
   
-```  
+```xml
 <result>This is step 1This is step 2This is step 3</result>  
 ```  
   
 ### Constructing Attributes  
  When you are constructing elements by using the direct element constructor, you can also specify attributes of the element by using XML-like syntax, as shown in this example:  
   
-```  
+```sql
 declare @x xml;  
 set @x='';  
 select @x.query('<ProductModel ProductModelID="111">;  
@@ -223,7 +223,7 @@ This is product model catalog description.
   
  This is the resulting XML:  
   
-```  
+```xml
 <ProductModel ProductModelID="111">  
   This is product model catalog description.  
   <Summary>Some description</Summary>  
@@ -240,7 +240,7 @@ This is product model catalog description.
   
  In the following example, the **data()** function is not strictly required. Because you are assigning the expression value to an attribute, **data()** is implicitly applied to retrieve the typed value of the specified expression.  
   
-```  
+```sql
 DECLARE @x xml;  
 SET @x='<root>5</root>';  
 DECLARE @y xml;  
@@ -250,13 +250,13 @@ SELECT @y;
   
  This is the result:  
   
-```  
+```xml
 <NewRoot attr="5" />  
 ```  
   
  Following is another example in which expressions are specified for LocationID and SetupHrs attribute construction. These expressions are evaluated against the XML in the Instruction column. The typed valued of the expression is assigned to the attributes.  
   
-```  
+```sql
 SELECT Instructions.query('  
     declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
         <FirstLocation   
@@ -271,7 +271,7 @@ where ProductModelID=7;
   
  This is the partial result:  
   
-```  
+```xml
 <FirstLocation LocationID="10" SetupHours="0.5" >  
   <AWMI:step …   
   </AWMI:step>  
@@ -284,13 +284,13 @@ where ProductModelID=7;
   
 -   Multiple or mixed (string and XQuery expression) attribute expressions are not supported. For example, as shown in the following query, you construct XML where `Item` is a constant and the value `5` is obtained by evaluating a query expression:  
   
-    ```  
+    ```xml
     <a attr="Item 5" />  
     ```  
   
      The following query returns an error, because you are mixing constant string with an expression ({/x}) and this is not supported:  
   
-    ```  
+    ```sql
     DECLARE @x xml  
     SET @x ='<x>5</x>'  
     SELECT @x.query( '<a attr="Item {/x}"/>' )   
@@ -300,19 +300,19 @@ where ProductModelID=7;
   
     -   Form the attribute value by the concatenation of two atomic values. These atomic values are serialized into the attribute value with a space between the atomic values:  
   
-        ```  
+        ```sql
         SELECT @x.query( '<a attr="{''Item'', data(/x)}"/>' )   
         ```  
   
          This is the result:  
   
-        ```  
+        ```xml
         <a attr="Item 5" />  
         ```  
   
     -   Use the [concat function](../xquery/functions-on-string-values-concat.md) to concatenate the two string arguments into the resulting attribute value:  
   
-        ```  
+        ```sql
         SELECT @x.query( '<a attr="{concat(''Item'', /x[1])}"/>' )   
         ```  
   
@@ -320,13 +320,13 @@ where ProductModelID=7;
   
          This is the result:  
   
-        ```  
+        ```xml
         <a attr="Item5" />  
         ```  
   
 -   Multiple expressions as an attribute value are not supported. For example, the following query returns an error:  
   
-    ```  
+    ```sql
     DECLARE @x xml  
     SET @x ='<x>5</x>'  
     SELECT @x.query( '<a attr="{/x}{/x}"/>' )  
@@ -334,7 +334,7 @@ where ProductModelID=7;
   
 -   Heterogeneous sequences are not supported. Any attempt to assign a heterogeneous sequence as an attribute value will return an error, as shown in the following example. In this example, a heterogeneous sequence, a string "Item" and an element <`x`>, is specified as the attribute value:  
   
-    ```  
+    ```sql
     DECLARE @x xml  
     SET @x ='<x>5</x>'  
     select @x.query( '<a attr="{''Item'', /x }" />')  
@@ -342,19 +342,19 @@ where ProductModelID=7;
   
      If you apply the **data()** function, the query works because it retrieves the atomic value of the expression, `/x`, which is concatenated with the string. Following is a sequence of atomic values:  
   
-    ```  
+    ```sql
     SELECT @x.query( '<a attr="{''Item'', data(/x)}"/>' )   
     ```  
   
      This is the result:  
   
-    ```  
+    ```xml
     <a attr="Item 5" />  
     ```  
   
 -   Attribute node order is enforced during serialization rather than during static type checking. For example, the following query fails because it attempts to add an attribute after a non-attribute node.  
   
-    ```  
+    ```sql
     select convert(xml, '').query('  
     element x { attribute att { "pass" }, element y { "Element text" }, attribute att2 { "fail" } }  
     ')  
@@ -379,7 +379,7 @@ where ProductModelID=7;
 #### Using a Namespace Declaration Attribute to Add Namespaces  
  The following example uses a namespace declaration attribute in the construction of element <`a`> to declare a default namespace. The construction of the child element <`b`> undoes the declaration of the default namespace declared in the parent element.  
   
-```  
+```sql
 declare @x xml  
 set @x ='<x>5</x>'  
 select @x.query( '  
@@ -390,7 +390,7 @@ select @x.query( '
   
  This is the result:  
   
-```  
+```xml
 <a xmlns="a">  
   <b xmlns="" />  
 </a>  
@@ -398,7 +398,7 @@ select @x.query( '
   
  You can assign a prefix to the namespace. The prefix is specified in the construction of element <`a`>.  
   
-```  
+```sql
 declare @x xml  
 set @x ='<x>5</x>'  
 select @x.query( '  
@@ -409,7 +409,7 @@ select @x.query( '
   
  This is the result:  
   
-```  
+```xml
 <x:a xmlns:x="a">  
   <b />  
 </x:a>  
@@ -417,7 +417,7 @@ select @x.query( '
   
  You can un-declare a default namespace in the XML construction, but you cannot un-declare a namespace prefix. The following query returns an error, because you cannot un-declare a prefix as specified in the construction of element <`b`>.  
   
-```  
+```sql
 declare @x xml  
 set @x ='<x>5</x>'  
 select @x.query( '  
@@ -428,7 +428,7 @@ select @x.query( '
   
  The newly constructed namespace is available to use inside the query. For example, the following query declares a namespace in constructing the element, <`FirstLocation`>, and specifies the prefix in the expressions for the LocationID and SetupHrs attribute values.  
   
-```  
+```sql
 SELECT Instructions.query('  
         <FirstLocation xmlns:AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"  
          LocationID="{ (/AWMI:root/AWMI:Location[1]/@LocationID)[1] }"  
@@ -442,7 +442,7 @@ where ProductModelID=7
   
  Note that creating a new namespace prefix in this way will override any pre-existing namespace declaration for this prefix. For example, the namespace declaration, `AWMI="http://someURI"`, in the query prolog is overridden by the namespace declaration in the <`FirstLocation`> element.  
   
-```  
+```sql
 SELECT Instructions.query('  
 declare namespace AWMI="http://someURI";  
         <FirstLocation xmlns:AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"  
@@ -458,7 +458,7 @@ where ProductModelID=7
 #### Using a Prolog to Add Namespaces  
  This example illustrates how namespaces can be added to the constructed XML. A default namespace is declared in the query prolog.  
   
-```  
+```sql
 declare @x xml  
 set @x ='<x>5</x>'  
 select @x.query( '  
@@ -468,8 +468,10 @@ select @x.query( '
   
  Note that in the construction of element <`b`>, the namespace declaration attribute is specified with an empty string as its value. This un-declares the default namespace that is declared in the parent.  
   
-```  
+
 This is the result:  
+
+```xml
 <a xmlns="a">  
   <b xmlns="" />  
 </a>  
@@ -490,7 +492,7 @@ This is the result:
   
  The following example illustrates white-space handling in XML construction:  
   
-```  
+```sql
 -- line feed is repaced by space.  
 declare @x xml  
 set @x=''  
@@ -519,7 +521,7 @@ test
   
  This is the result:  
   
-```  
+```xml
 -- result  
 <test attr="<test attr="    my test   attr  value    "><a>  
   
@@ -544,7 +546,7 @@ test
   
  In the following query, the constructed XML includes an element, two attributes, a comment, and a processing instruction. Note that a comma is used before the <`FirstLocation`>, because a sequence is being constructed.  
   
-```  
+```sql
 SELECT Instructions.query('  
   declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
    <?myProcessingInstr abc="value" ?>,   
@@ -563,7 +565,7 @@ where ProductModelID=7;
   
  This is the partial result:  
   
-```  
+```xml
 <?myProcessingInstr abc="value" ?>  
 <FirstLocation WorkCtrID="10" SetupHrs="0.5">  
   <!-- some comment -->  
@@ -572,7 +574,7 @@ where ProductModelID=7;
   nsert <AWMI:material>aluminum sheet MS-2341</AWMI:material> into the <AWMI:tool>T-85A framing tool</AWMI:tool>.   
   </AWMI:step>  
     ...  
-/FirstLocation>  
+</FirstLocation>  
   
 ```  
   
@@ -587,7 +589,7 @@ where ProductModelID=7;
   
  For element and attribute nodes, these keywords are followed by node name and also by the expression, enclosed in braces, that generates the content for that node. In the following example, you are constructing this XML:  
   
-```  
+```xml
 <root>  
   <ProductModel PID="5">Some text <summary>Some Summary</summary></ProductModel>  
 </root>  
@@ -595,7 +597,7 @@ where ProductModelID=7;
   
  This is the query that uses computed constructors do generate the XML:  
   
-```  
+```sql
 declare @x xml  
 set @x=''  
 select @x.query('element root   
@@ -612,7 +614,7 @@ text{"Some text "},
   
  The expression that generates the node content can specify a query expression.  
   
-```  
+```sql
 declare @x xml  
 set @x='<a attr="5"><b>some summary</b></a>'  
 select @x.query('element root   
@@ -630,7 +632,7 @@ text{"Some text "},
   
  In the following example, the content for the constructed nodes is obtained from the XML manufacturing instructions stored in the Instructions column of the **xml** data type in the ProductModel table.  
   
-```  
+```sql
 SELECT Instructions.query('  
   declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
    element FirstLocation   
@@ -645,7 +647,7 @@ where ProductModelID=7
   
  This is the partial result:  
   
-```  
+```xml
 <FirstLocation LocationID="10">  
   <AllTheSteps>  
     <AWMI:step> ... </AWMI:step>  

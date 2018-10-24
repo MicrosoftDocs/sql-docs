@@ -1371,7 +1371,7 @@ manager: craigg
 |rsconfig utility|Server connection management tool.|  
 |rsconfig.exe|Server connection management tool.|  
 |rule firing|The process of running one of the application rules (event chronicle rules, subscription event rules, and subscription scheduled rules) defined in the application definition file.|  
-|runaway query|A query with an excessive running time, that can lead to a blocking problem. Runaway queries usually do not use use a query or lock time out.|  
+|runaway query|A query with an excessive running time, that can lead to a blocking problem. Runaway queries usually do not use a query or lock time out.|  
 |run-time error|A software error that occurs while a program is being executed, as detected by a compiler or other supervisory program.|  
 |safe code|Code that is executed by the common language runtime environment rather than directly by the operating system. Managed code applications gain common language runtime services such as automatic garbage collection, runtime type checking and security support, and so on. These services help provide uniform platform- and language-independent behavior of managed-code applications.|  
 |sampling|A statistical process that yields some inferential knowledge about a population or data set of interest as a whole by observing or analyzing a portion of the population or data set.|  

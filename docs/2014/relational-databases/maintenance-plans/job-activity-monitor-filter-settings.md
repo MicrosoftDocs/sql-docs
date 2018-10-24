@@ -54,7 +54,7 @@ manager: craigg
  This unnamed box provides a short description of the criteria as they are selected.  
   
  **Apply filter**  
- To apply the filter, click **Apply****filter** and then click **OK**. To retain the filter settings in the **Filter****Settings** dialog box, but not apply them, uncheck **Apply****filter**, and then click **OK**, to display all rows.  
+ To apply the filter, click **Apply filter** and then click **OK**. To retain the filter settings in the **Filter Settings** dialog box, but not apply them, uncheck **Apply filter**, and then click **OK**, to display all rows.  
   
  **Clear**  
  Returns the filter settings back to the default settings.  

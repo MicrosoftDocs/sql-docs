@@ -10,8 +10,6 @@
     href: polybase-pushdown-computation.md
   - name: Scale-out groups
     href: polybase-scale-out-groups.md
-  - name: Type mapping
-    href: polybase-type-mapping.md
 - name: How-to guides
   items:
   - name: Install
@@ -38,6 +36,8 @@
       href: polybase-configure-teradata.md
     - name: MongoDB
       href: polybase-configure-mongodb.md
+    - name: ODBC Generic Types
+      href: polybase-configure-odbc-generic.md
   - name: Scale-out groups
     items:
     - name: Configure a scale-out group

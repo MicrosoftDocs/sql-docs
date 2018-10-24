@@ -5,7 +5,7 @@ ms.custom: "tools|sos"
 ms.date: "09/24/2018"
 ms.reviewer: "alayu; sstein"
 ms.prod: sql
-ms.prod_service: sql-tools
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: "stevestein"
 ms.author: "sstein"
@@ -59,6 +59,7 @@ You can define your own snippets. To open up the SQL snippet file for editing:
 1. Paste the following code into *sql.json*:
 
    ```sql
+   {
    "Select top 5": {
 	"prefix": "sqlSelectTop5",
 	"body": "SELECT TOP 5 * FROM ${1:TableName}",
@@ -83,6 +84,7 @@ You can define your own snippets. To open up the SQL snippet file for editing:
 	"GO"
 	],
    "description": "User-defined snippet example 2"
+   }
    }
    ```
 

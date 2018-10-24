@@ -1,7 +1,7 @@
 ---
 title: "table (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "7/24/2018"
+ms.date: "10/11/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -121,6 +121,44 @@ Table variable deferred compilation does **not** change any other characteristic
 Table variable deferred compilation **does not increase recompilation frequency**.  Rather, it shifts where the initial compilation occurs. The resulting cached plan is generated based on the initial deferred compilation table variable row count. The cached plan is re-used by consecutive queries until the plan is evicted or recompiled. 
 
 If the table variable row count used for initial plan compilation represents a typical value that is significantly different from a fixed row count guess,  downstream operations will benefit.  If the table variable row count varies significantly across executions, then performance may not be improved by this feature.
+
+### Disabling table variable deferred compilation without changing the compatibility level
+Table variable deferred compilation can be disabled at the database or statement scope while still maintaining database compatibility level 150 and higher. To disable table variable deferred compilation for all query executions originating from the database, execute the following within the context of the applicable database:
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DEFERRED_COMPILATION_TV = OFF;
+```
+
+To re-enable table variable deferred compilation for all query executions originating from the database, execute the following within the context of the applicable database:
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DEFERRED_COMPILATION_TV = ON;
+```
+
+You can also disable table variable deferred compilation for a specific query by designating DISABLE_DEFERRED_COMPILATION_TV as a USE HINT query hint.  For example:
+
+```sql
+DECLARE @LINEITEMS TABLE 
+	(L_OrderKey INT NOT NULL,
+	 L_Quantity INT NOT NULL
+	);
+
+INSERT @LINEITEMS
+SELECT L_OrderKey, L_Quantity
+FROM dbo.lineitem
+WHERE L_Quantity = 5;
+
+SELECT	O_OrderKey,
+	O_CustKey,
+	O_OrderStatus,
+	L_QUANTITY
+FROM	
+	ORDERS,
+	@LINEITEMS
+WHERE	O_ORDERKEY	=	L_ORDERKEY
+	AND O_OrderStatus = 'O'
+OPTION (USE HINT('DISABLE_DEFERRED_COMPILATION_TV'));
+```
 
   
 ## Examples  

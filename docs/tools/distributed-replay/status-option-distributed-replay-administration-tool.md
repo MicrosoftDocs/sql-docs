@@ -6,7 +6,6 @@ ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
 ms.technology: 
-  - "database-engine"
 ms.topic: conceptual
 ms.assetid: ea89386e-1598-4412-8b37-680d14b2a5b6
 author: "stevestein"

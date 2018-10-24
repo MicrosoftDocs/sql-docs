@@ -7,6 +7,7 @@ manager: craigg
 ms.date: 09/24/2018
 ms.topic: quickstart
 ms.prod: sql
+ms.technology: azure-data-studio
 ---
 
 # Explore Azure SQL resources with Azure Resource Explorer

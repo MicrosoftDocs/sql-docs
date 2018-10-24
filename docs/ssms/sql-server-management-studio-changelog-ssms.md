@@ -1166,7 +1166,7 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 - Fixed an issue where "Generate Script…" fails for Azure SQL databases.
 - Fix "Script As" and "Generate Script Wizard" to not add extra newlines when scripting objects such as stored procedures. [Connect Item](http://connect.microsoft.com/SQLServer/feedback/details/3115850)
 - SQLAS PowerShell Provider: Add LastProcessed property to Dimension and MeasureGroup folders. [Connect Item](http://connect.microsoft.com/SQLServer/feedback/details/3111879)
-- Live Query Statistics: fixed issue where it was only showing the first query in a batch. [Connect Item] (http://connect.microsoft.com/SQLServer/feedback/details/3114221)  
+- Live Query Statistics: fixed issue where it was only showing the first query in a batch. [Connect Item](http://connect.microsoft.com/SQLServer/feedback/details/3114221)  
 - Showplan: show max instead of sum across the threads in properties window.
 - Query Store: add new report on queries with high execution variation.
 - Object explorer performance issues: [Connect Item](http://connect.microsoft.com/SQLServer/feedback/details/3114074)
@@ -1180,8 +1180,8 @@ Avoid issuing table queries that sort on the server
 - Fixed an issue where SSMS may crash when trying to display the permissions on a database
 - Query Store: general enhancements in context menu items for result grids of query store report
 - Configuring Always Encrypted for an existing table fails with errors on unrelated objects. [Connect Item](http://connect.microsoft.com/SQLServer/feedback/details/3103181)
-- Configuring Always Encrypted for an existing database with multiple schemas doesn't work. [Connect Item] (http://connect.microsoft.com/SQLServer/feedback/details/3109591)
-- The Always Encrypted, Encrypted Column wizard fails due to the database containing views that reference system views. [Connect Item] (http://connect.microsoft.com/SQLServer/feedback/details/3111925)
+- Configuring Always Encrypted for an existing database with multiple schemas doesn't work. [Connect Item](http://connect.microsoft.com/SQLServer/feedback/details/3109591)
+- The Always Encrypted, Encrypted Column wizard fails due to the database containing views that reference system views. [Connect Item](http://connect.microsoft.com/SQLServer/feedback/details/3111925)
 - When encrypting using Always Encrypted, errors from refreshing modules after encryption are incorrectly handled.
 - Fixed UI truncation issue on "New Server Registration" dialog
 - Fix DMF Condition UI incorrectly updating expressions that contain string constant values with quotes in them

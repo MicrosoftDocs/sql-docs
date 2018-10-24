@@ -3,7 +3,7 @@ title: Set up Python client tools for use with SQL Server Machine Learning | Mic
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 08/21/2018  
+ms.date: 10/21/2018  
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
@@ -14,11 +14,7 @@ manager: cgronlun
 
 Python integration is available starting in SQL Server 2017 or later, when you add Python support to Machine Learning Services (In-Database). For more information, see [Install SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md).
 
-In this article, learn how to configure development workstations so that you can connect to a remote SQL Server enabled for Python.
-
-### Evaluation and independent development
- 
-If you have the developer edition and plan to work locally on Python script you plan to move to SQL Server, you can skip ahead to [Install an IDE](#install-ide) and point the tool to local Python libraries used by SQL Server.
+In this article, learn how to configure development workstations so that you can connect to a remote SQL Server enabled for machine learning and Python integration.
 
 > [!Tip]
 > For a demonstration and video walkthrough, see [Run R and Python Remotely in SQL Server from Jupyter Notebooks or any IDE](https://blogs.msdn.microsoft.com/mlserver/2018/07/10/run-r-and-python-remotely-in-sql-server-from-jupyter-notebooks-or-any-ide/) or this [YouTube video](https://youtu.be/D5erljpJDjE).

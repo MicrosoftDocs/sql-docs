@@ -67,6 +67,6 @@ Set-VM -Name minikube -CheckpointType Disabled -AutomaticCheckpointsEnabled $fal
 
 ## Next steps
 
-The steps in this article configured a Minikube cluster. The next step is to deploy SQL Server 2019 CTP 2.0 to the cluster.
+The steps in this article configured a Minikube cluster. The next step is to deploy SQL Server 2019 big data cluster. For instructions, see the following article:
 
 [Deploy SQL Server 2019 CTP 2.0 on Kubernetes](deployment-guidance.md#deploy)

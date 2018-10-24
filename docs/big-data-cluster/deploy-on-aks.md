@@ -1,15 +1,15 @@
 ---
-title: Configure Azure Kubernetes Service for SQL Server 2019 CTP 2.0 deployments | Microsoft Docs
-description:
+title: Configure Azure Kubernetes Service for SQL Server 2019 deployments | Microsoft Docs
+description: The article describes how to configure Azure Kubernetes Service (AKS) for SQL Server 2019 big data cluster (preview) deployments.
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 10/01/2018
+ms.date: 10/23/2018
 ms.topic: conceptual
 ms.prod: sql
 ---
 
-# Configure Azure Kubernetes Service for SQL Server 2019 CTP 2.0
+# Configure Azure Kubernetes Service for SQL Server 2019 (preview) deployments
 
 Azure Kubernetes Service (AKS) makes it simple to create, configure, and manage a cluster of virtual machines that are preconfigured with a Kubernetes cluster to run containerized applications. 
 

@@ -1,6 +1,6 @@
 ---
-title: How to deploy SQL Server Big Data cluster on Kubernetes | Microsoft Docs
-description:
+title: How to deploy SQL Server big data clusters on Kubernetes | Microsoft Docs
+description: Learn how to deploy SQL Server 2019 big data clusters (preview) on Kubernetes.
 author: rothja 
 ms.author: jroth 
 manager: craigg
@@ -36,12 +36,13 @@ You can choose to deploy Kubernetes in any of three ways:
 |---|---|
 | **Minikube** | A single-node Kubernetes cluster in a VM. |
 | **Azure Kubernetes Services (AKS)** | A managed Kubernetes container service in Azure. |
-| **Multiple VMs** | A Kubernetes cluster deployed on your VMs using kubeadm |
+| **Multiple machines** | A Kubernetes cluster deployed on physical or virtual machines using **kubeadm** |
 
-For guidance on configuring one of these Kubernetes cluster options for SQL Server Big Data cluster, see one of the following articles:
+For guidance on configuring one of these Kubernetes cluster options for a SQL Server big data cluster, see one of the following articles:
 
    - [Configure Minikube](deploy-on-minikube.md)
    - [Configure Kubernetes on Azure Kubernetes Service](deploy-on-aks.md)
+   - [Configure Kubernetes with kubeadm](deploy-with-kubeadm.md)
    
 > [!TIP]
 > For a sample python script that deploys both AKS and SQL Server big data cluster, see [Deploy a SQL Server big data cluster on Azure Kubernetes Service (AKS)](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/aks).

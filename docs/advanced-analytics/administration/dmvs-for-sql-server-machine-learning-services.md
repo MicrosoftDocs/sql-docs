@@ -1,27 +1,51 @@
 ---
-title: Data Management Views (DMVs) for SQL Server Machine Learning Services | Microsoft Docs
+title: Dynamic management views (DMVs) for SQL Server Machine Learning Services | Microsoft Docs
+description: List of dynamic management views (DMVs) related to SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 10/19/2018  
+ms.date: 10/24/2018  
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
 ---
-# DMVs for SQL Server Machine Learning Services
+# Dynamic management views for SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-The article lists the system catalog views and DMVs that are related to machine learning in SQL Server.
+Dynamic management views (DMVs) return server state information that can be used to monitor the health of a server instance, diagnose problems, and tune performance. The article lists the [dynamic management views]((../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)) that are related to machine learning in SQL Server.
 
 For information about extended events, see [Extended events for machine learning](../../advanced-analytics/r/extended-events-for-sql-server-r-services.md).
 
 > [!TIP]
-> Use built-in reports to monitor machine learning sessions and package utilization. For more information, see [Monitor machine learning using custom reports in Management Studio](../../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md).
+> Use the built-in reports to monitor machine learning sessions and package utilization. For more information, see [Monitor machine learning using custom reports in Management Studio](../../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md).
 
 ## System configuration and system resources
 
-You can monitor and analyze the resources used by external scripts by using [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] system catalog views and DMVs.
+You can monitor the resources used by external scripts by using [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] the following dynamic management views.
+
++ [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md)
+
+  This DMV reports a single row for each worker account that is currently running an external script. Note that this worker account is different from the credentials of the person sending the script. If a single Windows user sends multiple script requests, only one worker account would be assigned to handle all requests from that user. If a different Windows user logs in to run an external script, the request would be handled by a separate worker account.
+
+  This DMV does not return any results if no scripts are currently being executed; thus, it is most useful for monitoring long-running scripts. It returns these values:
+
+  + **external_script_request_id**: A GUID, which is also used as the  temporary name of the working directory used to store scripts and intermediate results
+  + **language**: A value such as `R` that denotes the language of the external script
+  + **degree_of_parallelism**:  An integer indicating the number of parallel processes that were used
+  + **external_user_name**: A Launchpad worker account, such as **SQLRUser01**
+
++ [sys.dm_external_script_execution_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)
+
+  This DMV is provided for internal monitoring (telemetry) to track how many external script calls are made on an instance. The telemetry service starts when [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] does and increments a disk-based counter each time a specific machine learning function is called.
+
+  The counter is incremented per call to a specific tracked function. For example, if `rxLinMod` is called and run in parallel, the counter is incremented by 1.
+  
+  Generally speaking, performance counters are valid only as long as the process that generated them is active. Therefore, a query on a DMV cannot show detailed data for  services that have stopped running. For example, if the Launchpad creates multiple parallel R jobs and yet they are very quickly executed and then cleaned up by the Windows job object, a DMV might not show any data.
+ 
+  However, the counters tracked by this DMV are kept running, and state for dm_external_script _execution counter is preserved by using writes to disk, even if the instance is shut down.
+ 
+ For more information about system performance counters used by [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], see [Use SQL Server Objects](../../relational-databases/performance-monitor/use-sql-server-objects.md).
 
 + [ sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)
 
@@ -46,30 +70,6 @@ You can monitor and analyze the resources used by external scripts by using [!IN
   + **Implied Auth. Logins**: Number of times that an ODBC loopback call was made using implied authentication; that is, the [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] executed the call on behalf of the user sending the script request
   + **Total Execution Time (ms)**: Time elapsed between the call and completion of call
   + **Execution Errors**: Number of times scripts reported errors. This count does not include R errors.
-
-
-+ [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md)
-
-  This DMV reports a single row for each worker account that is currently running an external script. Note that this worker account is different from the credentials of the person sending the script. If a single Windows user sends multiple script requests, only one worker account would be assigned to handle all requests from that user. If a different Windows user logs in to run an external script, the request would be handled by a separate worker account.
-
-  This DMV does not return any results if no scripts are currently being executed; thus, it is most useful for monitoring long-running scripts. It returns these values:
-
-  + **external_script_request_id**: A GUID, which is also used as the  temporary name of the working directory used to store scripts and intermediate results
-  + **language**: A value such as `R` that denotes the language of the external script
-  + **degree_of_parallelism**:  An integer indicating the number of parallel processes that were used
-  + **external_user_name**: A Launchpad worker account, such as **SQLRUser01**
-
-+ [sys.dm_external_script_execution_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)
-
-  This DMV is provided for internal monitoring (telemetry) to track how many external script calls are made on an instance. The telemetry service starts when [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] does and increments a disk-based counter each time a specific machine learning function is called.
-
-  The counter is incremented per call to a specific tracked function. For example, if `rxLinMod` is called and run in parallel, the counter is incremented by 1.
-  
-  Generally speaking, performance counters are valid only as long as the process that generated them is active. Therefore, a query on a DMV cannot show detailed data for  services that have stopped running. For example, if the Launchpad creates multiple parallel R jobs and yet they are very quickly executed and then cleaned up by the Windows job object, a DMV might not show any data.
- 
-  However, the counters tracked by this DMV are kept running, and state for dm_external_script _execution counter is preserved by using writes to disk, even if the instance is shut down.
- 
- For more information about system performance counters used by [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], see [Use SQL Server Objects](../../relational-databases/performance-monitor/use-sql-server-objects.md).
 
 ## Resource Governor views
 

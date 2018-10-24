@@ -56,7 +56,7 @@ public void DeleteItem(string item);
   
 ## See Also  
  [Accessing the SOAP API](../../reporting-services/report-server-web-service/accessing-the-soap-api.md)   
- [Report Manager  &#40;SSRS Native Mode&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Report Manager  &#40;SSRS Native Mode&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [Reporting Services Report Server](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)   
  [Report Server Web Service](../../reporting-services/report-server-web-service/report-server-web-service.md)  
   

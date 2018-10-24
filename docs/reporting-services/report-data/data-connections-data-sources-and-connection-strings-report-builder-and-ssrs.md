@@ -85,7 +85,7 @@ ms.author: maghan
   
 -   ODBC  
   
--   Microsoft BI Semantic Model for Power View: On a SharePoint site that has been configured for a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] gallery and [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], this data source type is available. This data source type is used only for [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] presentations. For more information, see [Building the Perfect BI Semantic Tabular Models for Power View](http://technet.microsoft.com/video/building-the-perfect-bi-semantic-tabular-models-for-power-view.aspx).  
+-   Microsoft BI Semantic Model for Power View: On a SharePoint site that has been configured for a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] gallery and [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], this data source type is available. This data source type is used only for [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] presentations. For more information, see [Building the Perfect BI Semantic Tabular Models for Power View](https://technet.microsoft.com/video/building-the-perfect-bi-semantic-tabular-models-for-power-view.aspx).  
   
  For a full list of data sources and versions [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] supports, see [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
@@ -154,4 +154,4 @@ ms.author: maghan
 [Set Deployment Properties](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
 [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

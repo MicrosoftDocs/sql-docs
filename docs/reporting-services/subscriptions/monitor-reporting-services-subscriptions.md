@@ -114,7 +114,7 @@ ms.author: maggies
  When conditions cause the subscription to become inactive, the subscription reflects this fact when the report server runs the subscription. If a subscription is scheduled to deliver a report every Friday at 2:00 A.M., and the delivery extension it uses was uninstalled on Monday at 9:00 A.M., the subscription will not reflect its inactive state until Friday at 2:00 A.M.  
   
 ## See Also  
- [old_Create and Manage Subscriptions for Native Mode Report Servers](http://msdn.microsoft.com/en-us/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)   
+ [old_Create and Manage Subscriptions for Native Mode Report Servers](https://msdn.microsoft.com/en-us/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)   
  [Subscriptions and Delivery &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
   
   

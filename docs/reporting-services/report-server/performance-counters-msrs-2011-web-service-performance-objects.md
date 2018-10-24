@@ -24,7 +24,7 @@ ms.author: maghan
 > [!NOTE]  
 >  These performance objects monitor events on the local report server. If you are running a report server in a scale-out deployment, the counts apply to the current server and not the scale-out deployment.  
   
- The performance objects are available in the Windows Performance Monitor (**Perfmon.exe**). For more information, see the Windows documentation, [Runtime Profiling](http://msdn.microsoft.com/library/w4bz2147.aspx) (http://msdn.microsoft.com/library/w4bz2147.aspx).  
+ The performance objects are available in the Windows Performance Monitor (**Perfmon.exe**). For more information, see the Windows documentation, [Runtime Profiling](https://msdn.microsoft.com/library/w4bz2147.aspx) (https://msdn.microsoft.com/library/w4bz2147.aspx).  
   
  For information related to the SharePoint mode performance counters, see [Performance Counters for the MSRS 2011 Web Service SharePoint Mode and MSRS 2011 Windows Service SharePoint Mode Performance Objects &#40;SharePoint Mode&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md).  
   

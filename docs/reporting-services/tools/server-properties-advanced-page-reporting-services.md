@@ -176,4 +176,4 @@ Indicates whether to send detailed error messages to the client computer when us
 [Script Deployment and Administrative Tasks](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
 [Enable and Disable My Reports](../../reporting-services/report-server/enable-and-disable-my-reports.md)  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

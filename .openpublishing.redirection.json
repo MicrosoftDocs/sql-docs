@@ -4440,7 +4440,7 @@
         "redirect_document_id": false
       },
       {
-        "source_path": "docs\2014\sql-server\install/example-license-topologies-costs-self-service-business-intelligence.md",
+        "source_path": "docs/2014/sql-server/install/example-license-topologies-costs-self-service-business-intelligence.md",
         "redirect_url": "https://docs.microsoft.com/business-applications-release-notes/october18/intelligence-platform/",
         "redirect_document_id": false
       }

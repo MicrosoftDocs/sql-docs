@@ -2,7 +2,7 @@
 title: Create analysis reports in Database Experimentation Assistant for SQL Server upgrades
 description: Create Analysis Reports in Database Experimentation Assistant
 ms.custom: ""
-ms.date: 10/12/2018
+ms.date: 10/22/2018
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -10,7 +10,7 @@ ms.technology: dea
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 author: HJToland3
-ms.author: jtoland
+ms.author: ajaykar
 ms.reviewer: douglasl
 manager: craigg
 ---
@@ -72,7 +72,7 @@ The user who is logged in to DEA must have sysadmin rights on the analysis serve
 |Possible errors|Solution|  
 |---|---|  
 |Unable to connect to the database. Make sure you have sysadmin rights for analyzing and viewing the reports.|You might not have access or sysadmin rights to the server or database. Confirm your login rights and try again.|  
-|Unable to generate **Report Name** on the server **Server Name**. For details, check the **Report Name** report.|You might not have the sysadmin rights needed to generate a new report. To see detailed errors, select the errored-out report (see #4). You can also check the logs in %temp%\\DEA.|  
+|Unable to generate **Report Name** on the server **Server Name**. For details, check the **Report Name** report.|You might not have the sysadmin rights needed to generate a new report. To see detailed errors, select the errored-out report and check the logs in %temp%\\DEA.|  
 |The current user doesn't have the required permissions to run the operation. Make sure you have sysadmin rights for performing trace and analyzing the reports.|You don't have the sysadmin rights needed to generate a new report.|  
 
 ### I can't connect to the computer running SQL Server

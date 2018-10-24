@@ -2,7 +2,7 @@
 title: Capture a trace in Database Experimentation Assistant for SQL Server upgrades
 description: Capture a trace in Database Experimentation Assistant
 ms.custom: ""
-ms.date: 10/12/2018
+ms.date: 10/22/2018
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -10,7 +10,7 @@ ms.technology: dea
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 author: HJToland3
-ms.author: jtoland
+ms.author: ajaykar
 ms.reviewer: douglasl
 manager: craigg
 ---
@@ -120,7 +120,7 @@ If you see an error when you run a trace capture, review the following prerequis
 
 - Confirm that the name of the computer running SQL Server is valid. To confirm, try to connect to the computer running SQL Server by using SQL Server Management Studio (SSMS).
 - Confirm that your firewall configuration doesn't block connections to the computer running SQL Server.
-- Confirm that the user has the permissions that are listed in the permissions blog.
+- Confirm that the user has the permissions that are listed in the blog posting [Replay FAQ](https://blogs.msdn.microsoft.com/datamigration/2017/03/24/dea-2-0-replay-faq/).
 - Confirm that the trace name doesn't follow the standard rollover convention (Capture\_1). Instead, try trace names like Capture\_1A or Capture1.
 
 Following are some possible errors you might see and solutions for resolving them:

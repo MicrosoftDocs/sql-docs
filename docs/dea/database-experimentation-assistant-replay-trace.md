@@ -2,7 +2,7 @@
 title: Replay a trace with Database Experimentation Assistant for SQL Server upgrades
 description: Replay a trace with Database Experimentation Assistant
 ms.custom: ""
-ms.date: 10/12/2018
+ms.date: 10/22/2018
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -10,7 +10,7 @@ ms.technology: dea
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 author: HJToland3
-ms.author: jtoland
+ms.author: ajaykar
 ms.reviewer: douglasl
 manager: craigg
 ---
@@ -44,7 +44,7 @@ In DEA, select the menu icon. In the expanded menu, select **Replay Traces** nex
 
 ### Verify setup
 
-1.  **SQL Server install path**: Enter the path to where SQL Server is installed. For example, C:\\<Program\>(\\Program Files (x86))\\Microsoft SQL Server\\120.
+1.  **SQL Server install path**: Enter the path to where SQL Server is installed. For example, C:\\Program Files (x86)\\Microsoft SQL Server\\120.
 1.  **Controller machine name**: Enter a name for the machine that has been set up as the controller. This machine is running the Windows service named SQL Server Distributed Replay controller. The Distributed Replay controller orchestrates the actions of the Distributed Replay clients. There can only be one controller instance in each Distributed Replay environment.
 1.  **Client machine names**: Enter a name for each client machine, separated by commas. Example: client1, client2. You can have up to five client controllers. Clients are one or more machines, either physical or virtual, that run the Windows service named SQL Server Distributed Replay client. The Distributed Replay clients work together to simulate workloads against an instance of SQL Server. There can be one or more clients in each Distributed Replay environment.
 1.  Select **Next**.
@@ -126,7 +126,7 @@ You can get more details in the logs in %temp%\\DEA. If the problem persists, co
 
 - Verify that the Distributed Replay controller service is running on the controller machine. To verify, use the Distributed Replay Management Tools (run the command `dreplay.exe status -f 1`).
 - If the replay is started remotely:
-  - Confirm that the machine running DEA can successfully ping the controller. Confirm that firewall settings allow connections per the instructions on the **Configure Replay Environment** page.
+  - Confirm that the machine running DEA can successfully ping the controller. Confirm that firewall settings allow connections per the instructions on the **Configure Replay Environment** page. For more infomation, see the article [SQL Server Distributed Replay](https://docs.microsoft.com/sql/tools/distributed-replay/sql-server-distributed-replay?view=sql-server-2017).
   - Make sure that DCOM Remote Launch and Remote Activation are allowed for the user of the Distributed Replay controller.
   - Make sure that DCOM Remote Access user rights are allowed for the user of Distributed Replay controller.
 

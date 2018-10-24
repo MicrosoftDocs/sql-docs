@@ -8,11 +8,11 @@
 - name: Tabular Model Programming +
   href: ../tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md
 - name: Analysis Services Schema Rowsets +
-  href: ../schema-rowsets/analysis-services-schema-rowsets.md
+  href: https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets
 - name: ASSL Reference +
-  href: ../scripting/analysis-services-scripting-language-assl-for-xmla.md
+  href: https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla
 - name: XMLA Reference +
-  href: ../xmla/xml-for-analysis-xmla-reference.md
+  href: https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference
 - name: Multidimensional Model Programming
   href: ../multidimensional-models/multidimensional-model-programming.md
   items:
@@ -105,81 +105,81 @@
     - name: Client Architecture Requirements
       href: ../multidimensional-models/olap-physical/client-architecture-requirements-for-analysis-services-development.md
   - name: Developing with ADOMD.NET
-    href: ../multidimensional-models/adomd-net/developing-with-adomd-net.md
+    href: https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net
   - name: ADOMD.NET Client Programming
-    href: ../multidimensional-models-adomd-net-client/adomd-net-client-programming.md
+    href: https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/adomd-net-client-programming
     items:
     - name: ADOMD.NET Client Functionality
-      href: ../multidimensional-models-adomd-net-client/adomd-net-client-functionality.md
+      href: https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/adomd-net-client-functionality
     - name: Migrating From ADO MD To ADOMD.NET
-      href: ../multidimensional-models-adomd-net-client/migrating-from-ado-md-to-adomd-net.md
+      href: https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/migrating-from-ado-md-to-adomd-net
     - name: Establishing Connections in ADOMD.NET
-      href: ../multidimensional-models-adomd-net-client/connections-in-adomd-net.md
+      href: https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net
     - name: Establishing Secure Connections in ADOMD.NET
-      href: ../multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections.md
+      href: https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections
     - name: Working with Connections and Sessions in ADOMD.NET
-      href: ../multidimensional-models-adomd-net-client/connections-in-adomd-net-working-with-connections-and-sessions.md
+      href: https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net-working-with-connections-and-sessions
     - name: Performing Transactions in ADOMD.NET
-      href: ../multidimensional-models-adomd-net-client/connections-in-adomd-net-performing-transactions.md
+      href: https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net-performing-transactions
     - name: Retrieving Metadata from an Analytical Data Source
-      href: ../multidimensional-models-adomd-net-client/retrieving-metadata-from-an-analytical-data-source.md
+      href: https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/retrieving-metadata-from-an-analytical-data-source
     - name: Working with the ADOMD.NET Object Model
-      href: ../multidimensional-models-adomd-net-client/retrieving-metadata-working-with-adomd-net-object-model.md
+      href: https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/retrieving-metadata-working-with-adomd-net-object-model
     - name: Working with Schema Rowsets in ADOMD.NET
-      href: ../multidimensional-models-adomd-net-client/retrieving-metadata-working-with-schema-rowsets.md
+      href: https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/retrieving-metadata-working-with-schema-rowsets
     - name: Executing Commands Against an Analytical Data Source
-      href: ../multidimensional-models-adomd-net-client/executing-commands-against-an-analytical-data-source.md
+      href: https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/executing-commands-against-an-analytical-data-source
     - name: Retrieving Data from an Analytical Data Source
-      href: ../multidimensional-models-adomd-net-client/retrieving-data-from-an-analytical-data-source.md
+      href: https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/retrieving-data-from-an-analytical-data-source
     - name: Retrieving Data Using the CellSet
-      href: ../multidimensional-models-adomd-net-client/retrieving-data-using-the-cellset.md
+      href: https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/retrieving-data-using-the-cellset
     - name: Retrieving Data Using the AdomdDataReader
-      href: ../multidimensional-models-adomd-net-client/retrieving-data-using-the-adomddatareader.md
+      href: https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/retrieving-data-using-the-adomddatareader
     - name: Retrieving Data Using the XmlReader
-      href: ../multidimensional-models-adomd-net-client/retrieving-data-using-the-xmlreader.md
+      href: https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/retrieving-data-using-the-xmlreader
   - name: ADOMD.NET Server Programming
-    href: ../multidimensional-models-adomd-net-server/adomd-net-server-programming.md
+    href: https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-programming
     items:
     - name: ADOMD.NET Server Functionality
-      href: ../multidimensional-models-adomd-net-server/adomd-net-server-functionality.md
+      href: https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-functionality
     - name: ADOMD.NET Server Object Architecture
-      href: ../multidimensional-models-adomd-net-server/adomd-net-server-object-architecture.md
+      href: https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-object-architecture
     - name: User Defined Functions and Stored Procedures
-      href: ../multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures.md
+      href: https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures
   - name: Redistributing ADOMD.NET
-    href: ../multidimensional-models/adomd-net/redistributing-adomd-net.md
+    href: https://docs.microsoft.com/bi-reference/adomd/redistributing-adomd-net
   - name: Developing with Analysis Management Objects (AMO)
-    href: ../multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md
+    href: https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo
   - name: AMO Concepts and Object Model
-    href: ../multidimensional-models/analysis-management-objects/amo-concepts-and-object-model.md
+    href: https://docs.microsoft.com/bi-reference/amo/amo-concepts-and-object-model
   - name: Introducing AMO Classes
-    href: ../multidimensional-models/analysis-management-objects/amo-classes-introduction.md
+    href: https://docs.microsoft.com/bi-reference/amo/amo-classes-introduction
     items:
     - name: AMO Fundamental Classes
-      href: ../multidimensional-models/analysis-management-objects/amo-fundamental-classes.md
+      href: https://docs.microsoft.com/bi-reference/amo/amo-fundamental-classes
     - name: AMO OLAP Classes
-      href: ../multidimensional-models/analysis-management-objects/amo-olap-classes.md
+      href: https://docs.microsoft.com/bi-reference/amo/amo-olap-classes
     - name: AMO Data Mining Classes
-      href: ../multidimensional-models/analysis-management-objects/amo-data-mining-classes.md
+      href: https://docs.microsoft.com/bi-reference/amo/amo-data-mining-classes
     - name: AMO Security Classes
-      href: ../multidimensional-models/analysis-management-objects/amo-security-classes.md
+      href: https://docs.microsoft.com/bi-reference/amo/amo-security-classes
     - name: AMO Other Classes and Methods
-      href: ../multidimensional-models/analysis-management-objects/amo-other-classes-and-methods.md
+      href: https://docs.microsoft.com/bi-reference/amo/amo-other-classes-and-methods
   - name: Programming Administrative Tasks with AMO
-    href: ../multidimensional-models/analysis-management-objects/programming-administrative-tasks-with-amo.md
+    href: https://docs.microsoft.com/bi-reference/amo/programming-administrative-tasks-with-amo
     items:
     - name: Programming AMO Fundamental Objects
-      href: ../multidimensional-models/analysis-management-objects/programming-amo-fundamental-objects.md
+      href: https://docs.microsoft.com/bi-reference/amo/programming-amo-fundamental-objects
     - name: Programming AMO OLAP Basic Objects
-      href: ../multidimensional-models/analysis-management-objects/programming-amo-olap-basic-objects.md
+      href: https://docs.microsoft.com/bi-reference/amo/programming-amo-olap-basic-objects
     - name: Programming AMO OLAP Advanced Objects
-      href: ../multidimensional-models/analysis-management-objects/programming-amo-olap-advanced-objects.md
+      href: https://docs.microsoft.com/bi-reference/amo/programming-amo-olap-advanced-objects
     - name: Programming AMO Data Mining Objects
-      href: ../multidimensional-models/analysis-management-objects/programming-amo-data-mining-objects.md
+      href: https://docs.microsoft.com/bi-reference/amo/programming-amo-data-mining-objects
     - name: Programming AMO Security Objects
-      href: ../multidimensional-models/analysis-management-objects/programming-amo-security-objects.md
+      href: https://docs.microsoft.com/bi-reference/amo/programming-amo-security-objects
     - name: Programming AMO Complementary Classes and Methods
-      href: ../multidimensional-models/analysis-management-objects/programming-amo-complementary-classes-and-methods.md
+      href: https://docs.microsoft.com/bi-reference/amo/programming-amo-complementary-classes-and-methods
   - name: Developing with Analysis Services Scripting Language (ASSL)
     href: ../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md
   - name: ASSL Objects and Object Characteristics

@@ -135,9 +135,9 @@ manager: kfile
  [Attach and Detach Analysis Services Databases](../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)   
  [Database Storage Location](../../analysis-services/multidimensional-models/database-storage-location.md)   
  [Database ReadWriteModes](../../analysis-services/multidimensional-models/database-readwritemodes.md)   
- [Attach Element](../../analysis-services/xmla/xml-elements-commands/attach-element.md)   
- [Detach Element](../../analysis-services/xmla/xml-elements-commands/detach-element.md)   
- [ReadWriteMode Element](../../analysis-services/xmla/xml-elements-properties/readwritemode-element.md)   
- [DbStorageLocation Element](../../analysis-services/xmla/xml-elements-properties/dbstoragelocation-element.md)  
+ [Attach Element](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)   
+ [Detach Element](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   
+ [ReadWriteMode Element](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/readwritemode-element)   
+ [DbStorageLocation Element](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/dbstoragelocation-element)  
   
   

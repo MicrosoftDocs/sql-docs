@@ -36,7 +36,7 @@ ping contoso
 ping contoso.com
 ```
 
-If either of these fails, update your domain search list:
+If either of these name checks fail, update your domain search list:
 
 - **Ubuntu**:
 

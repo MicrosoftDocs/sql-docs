@@ -1,7 +1,7 @@
 ---
 title: "SQL Server 2019 Release Notes | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/24/2018"
+ms.date: "11/05/2018"
 ms.prod: "sql-server-2018"
 ms.reviewer: ""
 ms.technology: 
@@ -35,11 +35,7 @@ This article describes limitations and known issues for the [!INCLUDE[SQL Server
 ## CTP 2.1 (October 2018)
 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.1 is the latest public release of [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)].
 
-## CTP 2.0 (September 2018)
-
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.0 is the first public release of [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)].
-
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.0 is available is only as Evaluation Edition. No other editions are available. Support for CTP 2.0 is described in license_Eval.rtf with your installation media.
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.1 is available is only as Evaluation Edition. No other editions are available. Support for CTP 2.1 is described in license_Eval.rtf with your installation media.
 
 Limited support may be found at one of the following locations:
 
@@ -51,7 +47,7 @@ Limited support may be found at one of the following locations:
 
 - Or tweet [@SQLServer](http://twitter.com/SQLServer) with [#sqlhelp](https://twitter.com/search?q=%23sqlhelp)
 
-### Documentation (CTP 2.0)
+### Documentation (CTP 2.1)
 
 - **Issue and customer impact**: Documentation for SQL Server 2019 (15.x) is limited and content is included with the [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] documentation set. Content in articles that is specific to SQL Server 2019 (15.x) is noted with **Applies To**.
 
@@ -69,6 +65,32 @@ Limited support may be found at one of the following locations:
   - **Software**
     - Windows Server 2016 or later. For additional requirements, see [Requirements for Installing SQL Server](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
     - For Linux, refer to [Linux - supported platforms](../linux/sql-server-linux-setup.md#supportedplatforms)
+
+### SQL Server Integration Services (SSIS) page deployment after switching DB to single-user mode and then switching back
+
+**Issue and customer impact**: After SSISB is switched from single-user mode back to multi-user mode, the following error may be reported when deploying a package:
+
+`Cannot continue the execution because the session is in the kill state.`
+
+**Workaround**: Stop and restart the SQL Server instance and switch SSISDB back to multi-user mode. 
+
+**Applies to**: SQL Server 2019 preview CTP 2.1
+
+### Hadoop components fail
+
+**Issue and customer impact**: Hadoop components fail with the following error:
+
+`System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.WindowsAzure.Storage, Version=3.2.0.0, Culture=neutral, PublicKeyToken=<>' or one of its dependencies. The system cannot find the file specified.`
+
+**Workaround**: N/A
+
+**More information**:
+
+**Applies to**: SQL Server 2019 CTP 2.1
+
+## CTP 2.0 (September 2018)
+
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.0 is the first public release of [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)].
 
 ### SQL Graph
 

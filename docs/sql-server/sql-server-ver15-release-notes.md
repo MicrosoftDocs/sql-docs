@@ -1,7 +1,7 @@
 ---
 title: "SQL Server 2019 Release Notes | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/25/2018"
+ms.date: "11/05/2018"
 ms.prod: "sql-server-2018"
 ms.reviewer: ""
 ms.technology: 
@@ -35,11 +35,7 @@ This article describes limitations and known issues for the [!INCLUDE[SQL Server
 ## CTP 2.1 (October 2018)
 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.1 is the latest public release of [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)].
 
-## CTP 2.0 (September 2018)
-
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.0 is the first public release of [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)].
-
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.0 is available is only as Evaluation Edition. No other editions are available. Support for CTP 2.0 is described in license_Eval.rtf with your installation media.
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.1 is available only as Evaluation Edition. No other editions are available. Support for CTP 2.1 is described in license_Eval.rtf with your installation media.
 
 Limited support may be found at one of the following locations:
 
@@ -51,7 +47,7 @@ Limited support may be found at one of the following locations:
 
 - Or tweet [@SQLServer](http://twitter.com/SQLServer) with [#sqlhelp](https://twitter.com/search?q=%23sqlhelp)
 
-### Documentation (CTP 2.0)
+### Documentation (CTP 2.1)
 
 - **Issue and customer impact**: Documentation for SQL Server 2019 (15.x) is limited and content is included with the [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] documentation set. Content in articles that is specific to SQL Server 2019 (15.x) is noted with **Applies To**.
 
@@ -70,11 +66,37 @@ Limited support may be found at one of the following locations:
     - Windows Server 2016 or later. For additional requirements, see [Requirements for Installing SQL Server](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
     - For Linux, refer to [Linux - supported platforms](../linux/sql-server-linux-setup.md#supportedplatforms)
 
+### SQL Server Integration Services (SSIS) page deployment after switching DB to single-user mode and then switching back
+
+**Issue and customer impact**: After SSISB is switched from single-user mode back to multi-user mode, the following error may be reported when deploying a package:
+
+`Cannot continue the execution because the session is in the kill state.`
+
+**Workaround**: Stop and restart the SQL Server instance and switch SSISDB back to multi-user mode. 
+
+**Applies to**: SQL Server 2019 preview CTP 2.1
+
+### Hadoop components fail
+
+**Issue and customer impact**: Hadoop components fail with the following error:
+
+`System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.WindowsAzure.Storage, Version=3.2.0.0, Culture=neutral, PublicKeyToken=<>' or one of its dependencies. The system cannot find the file specified.`
+
+**Workaround**: N/A
+
+**More information**:
+
+**Applies to**: SQL Server 2019 CTP 2.1
+
+## CTP 2.0 (September 2018)
+
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.0 is the first public release of [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)].
+
 ### SQL Graph
 
-**Issue and customer impact**: Tools which have dependency on DacFx like import-export will not work for the new graph features - Edge Constraints or Merge DML. Scripting in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] may not work.
+**Issue and customer impact**: Tools that are dependent on DacFx like import-export, will not work for the new graph features - Edge Constraints or Merge DML. Scripting in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] may not work.
 
-**Workaround**: Writing [!INCLUDE[tsql](../includes/tsql-md.md)] scripts and running them against the server using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or SQLCMD will work. Exporting or Importing database objects that create Edge constraints, have the new merge DML syntax or create derived tables/views on graph objects will not work. Users will have to manually create such objects in their database using [!INCLUDE[tsql](../includes/tsql-md.md)] scripts. 
+**Workaround**: Writing [!INCLUDE[tsql](../includes/tsql-md.md)] scripts and running them against the server using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or SQLCMD will work. Exporting or Importing database objects that create Edge constraints, have the new merge DML syntax, or create derived tables/views on graph objects will not work. Users will have to manually create such objects in their database using [!INCLUDE[tsql](../includes/tsql-md.md)] scripts. 
 
 **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.0.
 
@@ -98,7 +120,7 @@ Limited support may be found at one of the following locations:
 **Issue and customer impact**: Executing the command `ALTER DATABASE SCOPED CONFIGURATION SET LIGHTWEIGHT_QUERY_PROFILING = ON` returns a syntax error. Any scenarios that depend on executing this command will fail.
 
 > [!NOTE]
-> Currently, the lightweight query profiling infrastructure (LWP) cannot be controlled at the individual database level, and remains enabled for all databases by default. For more information on LWP, refer to [What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md).
+> Currently, the lightweight query profiling infrastructure (LWP) cannot be controlled at the individual database level, and remains enabled for all databases by default. For more information on LWP, see [What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md).
 
 **Workaround**: No workaround for [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.0.
 
@@ -106,7 +128,7 @@ Limited support may be found at one of the following locations:
 
 ### Always Encrypted with secure enclaves
 
-**Issue and customer impact**: Rich computations are pending several performance optimizations, include limited functionality (no indexing, etc), and are currently disabled by default.
+**Issue and customer impact**: Rich computations are pending several performance optimizations, include limited functionality (no indexing, etc.), and are currently disabled by default.
 
 **Workaround**: To enable rich computations, run `DBCC traceon(127,-1)`. For details, see  [Enable rich computations](../relational-databases/security/encryption/configure-always-encrypted-enclaves.md#configure-a-secure-enclave).
 
@@ -122,7 +144,7 @@ Limited support may be found at one of the following locations:
 
 ### SQL Server Machine Learning Services installation failure
 
-**Issue/Customer impact**: SQL Server Machine Learning Services installations fails on machines that have trust relationship issues with the primary domain. The following error will be seen in the logs in this case:
+**Issue/Customer impact**: SQL Server Machine Learning Services installation fails on machines that have trust relationship issues with the primary domain. The following error will be seen in the logs in this case:
  
 >  Error: 0 : System.SystemException:The trust relationship between this workstation and the primary domain failed at System.Security.Principal.NTAccount.TranslateToSids(IdentityReferenceCollection sourceAccounts, Boolean& someFailed) ...
 

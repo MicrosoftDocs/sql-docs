@@ -100,7 +100,7 @@ The cluster configuration can be customized using a set of environment variables
 | **DOCKER_USERNAME** | Yes | N/A | The username to access the container images in case they are stored in a private repository. It is required for the duration of the gated public preview. |
 | **DOCKER_PASSWORD** | Yes | N/A | The password to access the above private repository. It is required for the duration of the gated public preview.|
 | **DOCKER_EMAIL** | Yes | N/A | The email associated with the above private repository. It is required for the duration of the gated private preview. |
-| **DOCKER_IMAGE_TAG** | No | latest | The lable used to tag the images. |
+| **DOCKER_IMAGE_TAG** | No | latest | The label used to tag the images. |
 | **DOCKER_IMAGE_POLICY** | No | Always | Always force a pull of the images.  |
 | **DOCKER_PRIVATE_REGISTRY** | Yes | 1 | For the timeframe of the gated public preview, this value has to be set to 1. |
 | **CONTROLLER_USERNAME** | Yes | N/A | The username for the cluster administrator. |

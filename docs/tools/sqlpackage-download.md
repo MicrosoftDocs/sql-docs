@@ -17,11 +17,11 @@ sqlpackage runs on Windows, macOS, and Linux.
 
 Download and install the latest .NET Framework release and macOS and Linux previews:
 
-|Platform|Download|Release date|Version|Build|
+|Platform|Download|Release date|Version|Build
 |:---|:---|:---|:---|:---|
-|Windows|[Installer](https://go.microsoft.com/fwlink/?linkid=875508)|June 22, 2018|17.8|14.0.4079.2|
-|macOS (preview)|[.zip](https://go.microsoft.com/fwlink/?linkid=873927)|May 9, 2018 |0.0.1|15.0.4057.1|
-|Linux (preview)|[.zip](https://go.microsoft.com/fwlink/?linkid=873926)|May 9, 2018 |0.0.1|15.0.4057.1|
+|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2033947)|October 24, 2018|18.0|15.0.4200.1|
+|macOS (preview)|[.zip file](https://go.microsoft.com/fwlink/?linkid=873927)|May 9, 2018 |0.0.1|15.0.4057.1|
+|Linux (preview)|[.zip file](https://go.microsoft.com/fwlink/?linkid=873926)|May 9, 2018 |0.0.1|15.0.4057.1|
 
 For details about the latest release, see the [release notes](sqlpackage-release-notes.md).
 
@@ -41,7 +41,8 @@ This release of sqlpackage includes a standard Windows installer experience, and
    **.zip Installation:**
 
    ```bash
-   mv ~/Downloads/sqlpackage-linux-<version string> ~/sqlpackage 
+   mkdir sqlpackage
+   unzip ~/Downloads/sqlpackage-osx-<version string>.zip ~/sqlpackage 
    echo 'export PATH="$PATH:~/sqlpackage"' >> ~/.bash_profile
    source ~/.bash_profile
    sqlpackage

@@ -42,7 +42,7 @@ For guidance on configuring one of these Kubernetes cluster options for a SQL Se
 
    - [Configure Minikube](deploy-on-minikube.md)
    - [Configure Kubernetes on Azure Kubernetes Service](deploy-on-aks.md)
-   - [Configure Kubernetes with kubeadm](deploy-with-kubeadm.md)
+   - [Configure Kubernetes on multiple machines with kubeadm](deploy-with-kubeadm.md)
    
 > [!TIP]
 > For a sample python script that deploys both AKS and SQL Server big data cluster, see [Deploy a SQL Server big data cluster on Azure Kubernetes Service (AKS)](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/aks).

@@ -9,9 +9,9 @@ ms.topic: conceptual
 ms.prod: sql
 ---
 
-# Configure Kubernetes with kubeadm for SQL Server 2019 (preview) deployments
+# Configure Kubernetes on multiple machines for SQL Server 2019 deployments
 
-This article provides an example of how to configure Kubernetes on multiple machines for SQL Server big data cluster (preview) deployments. In this example, multiple Ubuntu 16.04 or 18.04 LTS machines (physical or virtual) are the target. If you are deploying to a different Linux platform, you must alter some of the commands to match your system.  
+This article provides an example of how to use **kubeadm** to configure Kubernetes on multiple machines for SQL Server 2019 big data cluster (preview) deployments. In this example, multiple Ubuntu 16.04 or 18.04 LTS machines (physical or virtual) are the target. If you are deploying to a different Linux platform, you must alter some of the commands to match your system.  
 
 > [!TIP] 
 > For sample scripts that configure Kubernetes, see [Create a Kubernetes cluster using Kubeadm on Ubuntu 16.04 LTS or 18.04 LTS](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm).

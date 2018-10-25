@@ -36,20 +36,25 @@ AKS comes with [two built-in storage classes](https://docs.microsoft.com/azure/a
 
 ## Minikube storage class
 
-Minikube comes with a built-in storage class called **standard** along with a dynamic provisioner for it. Note that on Minikube, if USE_PERSISTENT_VOLUME=true (default), you must also override the default value for the STORAGE_CLASS_NAME environment variable because the default value is different. Set the value to `standard`: 
-```
+Minikube comes with a built-in storage class called **standard** along with a dynamic provisioner for it. Note that on minikube, if `USE_PERSISTENT_VOLUME=true` (default), you must also override the default value for the **STORAGE_CLASS_NAME** environment variable because the default value is different. Set the value to `standard`: 
+
+On Windows, use the following command:
+
+```cmd
 SET STORAGE_CLASS_NAME=standard
 ```
 
-Alternatively, you can suppress using persistent volumes on Minikube:
-```
-SET USE_PERSISTENT_VOLUME=false
+On Linux, use the following command:
+
+```cmd
+export STORAGE_CLASS_NAME=standard
 ```
 
+Alternatively, you can suppress using persistent volumes on minikube by setting `USE_PERSISTENT_VOLUME=false`.
 
 ## Kubeadm
 
-Kubeadm does not come with a built-in storage class; therefore, we have created scripts to set up persistent volumes and storage classes using local storage or [Rook](https://github.com/rook/rook) storage.
+Kubeadm does not come with a built-in storage class. You can choose to create your own persistent volumes and storage classes using local storage or your preferred provisioner, such as [Rook](https://github.com/rook/rook). In that case, you would set the **STORAGE_CLASS_NAME** to the storage class you configured. Alternatively, you can set `USE_PERSISTENT_VOLUME=false` in test environments, but note the previous warning in the **Deployment settings** section of this article.  
 
 ## On-premises cluster
 

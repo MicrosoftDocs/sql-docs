@@ -94,4 +94,4 @@ You can create a custom brand package to alter the colors used for the web porta
 [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
 [Configure a Native Mode Report Server for Local Administration](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)
 
- More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+ More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

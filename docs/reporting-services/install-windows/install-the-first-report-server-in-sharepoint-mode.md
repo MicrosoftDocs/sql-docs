@@ -44,7 +44,7 @@ ms.author: maghan
  ![SSRS SharePoint Mode Single Server Deployment](../../reporting-services/install-windows/media/rs-sharepoint-1server-deployment.gif "SSRS SharePoint Mode Single Server Deployment")  
   
 > [!TIP]  
->  For more complex deployment examples, see [Deployment Topologies for SQL Server BI Features in SharePoint](http://msdn.microsoft.com/library/39f76bc7-94e6-4dbc-bfa5-d56f4430bb26).  
+>  For more complex deployment examples, see [Deployment Topologies for SQL Server BI Features in SharePoint](https://msdn.microsoft.com/library/39f76bc7-94e6-4dbc-bfa5-d56f4430bb26).  
   
 ##  <a name="bkmk_setupaccounts"></a> Setup accounts
 
@@ -56,7 +56,7 @@ ms.author: maghan
   
  **Creating Reporting Services Service Applications**  
   
--   Following installation and registering the Reporting Services service, create one or more Reporting Services service applications. The “SharePoint farm service account “ needs to temporarily be a member of the local administrators group so the Reporting Services service application can be created. For more information on SharePoint 2013 account permissions, see [Account permissions and security settings in SharePoint 2013](http://technet.microsoft.com/library/cc678863.aspx) (http://technet.microsoft.com/library/cc678863.aspx) or for SharePoint 2016, see [Account permissions and security settings in SharePoint 2016](https://technet.microsoft.com/library/cc678863\(v=office.16\).aspx).  
+-   Following installation and registering the Reporting Services service, create one or more Reporting Services service applications. The “SharePoint farm service account “ needs to temporarily be a member of the local administrators group so the Reporting Services service application can be created. For more information on SharePoint 2013 account permissions, see [Account permissions and security settings in SharePoint 2013](https://technet.microsoft.com/library/cc678863.aspx) (https://technet.microsoft.com/library/cc678863.aspx) or for SharePoint 2016, see [Account permissions and security settings in SharePoint 2016](https://technet.microsoft.com/library/cc678863\(v=office.16\).aspx).  
   
      It is security best practice that SharePoint farm administrator accounts are not also local operating system administrator accounts. If you add a farm admin account to the local administrators group as part of your installation process, it is recommended you remove the account from the local administrators group after installation is complete.  
   
@@ -291,7 +291,7 @@ ms.author: maghan
   
  Parameters  
   
--   Update the **-Account** for the service proxy. The account needs to be a managed service account in the SharePoint farm. For more information, see the SharePoint topic [Plan for administrative and service accounts in SharePoint 2013](http://technet.microsoft.com/library/cc263445.aspx).  
+-   Update the **-Account** for the service proxy. The account needs to be a managed service account in the SharePoint farm. For more information, see the SharePoint topic [Plan for administrative and service accounts in SharePoint 2013](https://technet.microsoft.com/library/cc263445.aspx).  
   
 -   Update the **–DatabaseServer** parameter for the service application. This parameter is the database engine instance  
   
@@ -393,7 +393,7 @@ Enable-SPfeature -identity "reportserver" -Url http://server/sites/bi
   
 -   The section “Configure Excel Services for Analysis Services integration” in [Install Analysis Services in Power Pivot Mode](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
   
--   [Manage Excel Services data model settings (SharePoint Server 2013)](http://technet.microsoft.com/library/jj219780.aspx).  
+-   [Manage Excel Services data model settings (SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780.aspx).  
 
 Also, the application pool security account used by the Reporting Services service application, must be an administrator on the Analysis Services Server.
   
@@ -401,7 +401,7 @@ Also, the application pool security account used by the Reporting Services servi
  The Reporting Services subscription and data alert features may require the configuration of SQL Server Agent permissions. If you see an error message that indicates SQL Server Agent is required and you have verified SQL Server Agent is running, update the permissions. You can click the link **Provision Subscriptions and Alerts** on the create service application success page to go to another page for provisioning SQL Server Agent. The provision step is needed if your deployment crosses computer boundaries, for example when the SQL Server database instance is on a different computer. For more information, see [Provision Subscriptions and Alerts for SSRS Service Applications](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)  
   
 ### Configure e-mail for SSRS service applications  
- The Reporting Services data alerts feature sends alerts in e-mail messages. To send e-mail you may need to configure your Reporting Services service application and you may need to modify the e-mail delivery extension for the service application. If you plan to use the e-mail delivery extension for the Reporting Services subscription feature, the e-mail settings are required. For more information, see [Configure E-mail for a Reporting Services Service Application &#40;SharePoint 2013 and SharePoint 2016&#41;](http://msdn.microsoft.com/38fc34a6-aae7-4dde-9ad2-f1eee0c42a9f). 
+ The Reporting Services data alerts feature sends alerts in e-mail messages. To send e-mail you may need to configure your Reporting Services service application and you may need to modify the e-mail delivery extension for the service application. If you plan to use the e-mail delivery extension for the Reporting Services subscription feature, the e-mail settings are required. For more information, see [Configure E-mail for a Reporting Services Service Application &#40;SharePoint 2013 and SharePoint 2016&#41;](https://msdn.microsoft.com/38fc34a6-aae7-4dde-9ad2-f1eee0c42a9f). 
   
 ### Add Reporting Services content types to content libraries  
  Reporting Services provides predefined content types that are used to manage shared data source (.rsds) files, report models (.smdl), and Report Builder report definition (.rdl) files. Adding a **Report Builder Report**, **Report Model**, and **Report Data Source** content type to a library enables the **New** command so that you can create new documents of that type. For more information, see [Add Reporting Services Content Types to a SharePoint Library](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md).  
@@ -416,7 +416,7 @@ Also, the application pool security account used by the Reporting Services servi
   
 -   In a SharePoint document library, create a basic Reporting Services report that only contains a text box, for example a title. The report does not contain any data sources or datasets. The goal is to verify you can open Report Builder, build a basic report, and preview the report.  
   
-     Save the report to the document library and the run the report from the library. For more information on creating reports with Report Builder, see [Start Report Builder (Report Builder)](http://technet.microsoft.com/library/ms159221.aspx).  
+     Save the report to the document library and the run the report from the library. For more information on creating reports with Report Builder, see [Start Report Builder (Report Builder)](https://technet.microsoft.com/library/ms159221.aspx).  
   
 ## Next steps
 
@@ -425,4 +425,4 @@ Also, the application pool security account used by the Reporting Services servi
 [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)   
 [Reporting Services SharePoint Service and Service Applications](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md)  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

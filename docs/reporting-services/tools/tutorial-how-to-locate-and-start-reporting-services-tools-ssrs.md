@@ -83,7 +83,7 @@ ms.author: maggies
 4.  If you run the Web Portal on the local report server, see [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
    
 ##  <a name="bkmk_managements_studio"></a> Management Studio  
- Report server administrators can use [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] to manage a report server alongside other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] component servers. For more information, see [Use SQL Server Management Studio](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be).  
+ Report server administrators can use [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] to manage a report server alongside other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] component servers. For more information, see [Use SQL Server Management Studio](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be).  
   
 ### To Start SQL Server Management Studio  
   
@@ -108,7 +108,7 @@ ms.author: maggies
   
  Report Designer is available in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] - Visual Studio. The Report Designer design surface includes tabbed windows, wizards, and menus used to access report authoring features. The report designer tool becomes available when you choose a Report Server Project or a Report Server Wizard template  in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. To learn more, see [Reporting Services in SQL Server Data Tools &#40;SSDT&#41;](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md). 
  
-Download [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714).  
+Download [SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714).  
   
 ### To start Report Designer  
   
@@ -131,7 +131,7 @@ Download [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714).
 ##  <a name="bkmk_report_builder"></a> [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]  
  [Report Builder in SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md) is a stand-alone application you can use to create paginated reports outside [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. You can customize and update all existing reports, regardless of whether they were created in Report Designer or in previous versions of [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. You can install it from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] web portal or from the Microsoft Download Center.  
   
- [Download Report Builder](http://go.microsoft.com/fwlink/?LinkID=219138) from the Microsoft Download Center.  
+ [Download Report Builder](https://go.microsoft.com/fwlink/?LinkID=219138) from the Microsoft Download Center.  
   
 ### To start [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]  
   
@@ -143,14 +143,14 @@ Download [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714).
   
      Or  
   
-     [Download Report Builder](http://go.microsoft.com/fwlink/?LinkID=219138) from the Microsoft Download Center.  
+     [Download Report Builder](https://go.microsoft.com/fwlink/?LinkID=219138) from the Microsoft Download Center.  
   
 3.  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] opens and you can create or open a paginated report.  
   
 ##  <a name="bkmk_mobile_report_pub"></a> [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]  
- Use [SQL Server Mobile Report Publisher](http://msdn.microsoft.com/library/e23cf095-cb9a-4631-ab46-10413d8e3a7c) to create mobile reports you can view in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] web portal and in mobile devices such as iPads and iPhones.   You can install it from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] web portal or  from the Microsoft Download Center.  
+ Use [SQL Server Mobile Report Publisher](https://msdn.microsoft.com/library/e23cf095-cb9a-4631-ab46-10413d8e3a7c) to create mobile reports you can view in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] web portal and in mobile devices such as iPads and iPhones.   You can install it from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] web portal or  from the Microsoft Download Center.  
   
- [Download SQL Server Mobile Report Publisher](http://go.microsoft.com/fwlink/?LinkID=733527) from the Microsoft Download Center.  
+ [Download SQL Server Mobile Report Publisher](https://go.microsoft.com/fwlink/?LinkID=733527) from the Microsoft Download Center.  
   
 ### To start [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]  
   
@@ -162,18 +162,18 @@ Download [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714).
   
      Or  
   
-     [Download SQL Server Mobile Report Publisher](http://go.microsoft.com/fwlink/?LinkID=733527) from the Microsoft Download Center.  
+     [Download SQL Server Mobile Report Publisher](https://go.microsoft.com/fwlink/?LinkID=733527) from the Microsoft Download Center.  
   
 3.  [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)] opens and you can create or open a mobile report.  
 
 ## Next steps
 
-[Download SQL Server Mobile Report Publisher](http://go.microsoft.com/fwlink/?LinkID=733527)   
-[Download Report Builder](http://go.microsoft.com/fwlink/?LinkID=219138)  
-[Download SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714) 
+[Download SQL Server Mobile Report Publisher](https://go.microsoft.com/fwlink/?LinkID=733527)   
+[Download Report Builder](https://go.microsoft.com/fwlink/?LinkID=219138)  
+[Download SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714) 
 [Install Reporting Services SharePoint Mode](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)   
 [Reporting Services Report Server](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)   
 [Query Design Tools](../../reporting-services/report-data/query-design-tools-ssrs.md)   
 [Reporting Services Tutorials](../../reporting-services/reporting-services-tutorials-ssrs.md)  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

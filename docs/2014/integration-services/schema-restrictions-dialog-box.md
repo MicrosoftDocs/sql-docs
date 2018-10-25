@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "08/22/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.schemarestrictions.f1"
 helpviewer_keywords: 
   - "Schema Restrictions dialog box"
 ms.assetid: 92e5fd32-4944-4f7c-a448-b458df93d0d5
-caps.latest.revision: 17
 author: douglaslms
 ms.author: douglasl
 manager: craigg

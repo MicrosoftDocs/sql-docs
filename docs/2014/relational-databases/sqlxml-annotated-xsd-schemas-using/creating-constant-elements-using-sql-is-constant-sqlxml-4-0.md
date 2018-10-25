@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "element does not map [SQLXML]"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "constant elements [SQLXML]"
   - "annotated XSD schemas, constant elements"
 ms.assetid: 940eea1b-54f5-445f-b844-c894d9f3941b
-caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

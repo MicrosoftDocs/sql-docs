@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/14/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "instances of Analysis Services, renaming"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "names [Analysis Services], renaming instances"
   - "names [Analysis Services]"
 ms.assetid: 87494741-4a2e-4fed-8061-418fd1e111c3
-caps.latest.revision: 49
 author: minewiskan
 ms.author: owend
 manager: craigg

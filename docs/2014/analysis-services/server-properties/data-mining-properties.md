@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "ClusterCount property"
@@ -57,7 +55,6 @@ helpviewer_keywords:
   - "HiddenNodeRatio property"
   - "MaximumSeriesValue property"
 ms.assetid: 9bc9abed-180a-4bd8-b2eb-89c62fa88110
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg

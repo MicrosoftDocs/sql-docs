@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "05/24/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "CHANGE_TRACKING_CLEANUP_VERSION"
@@ -33,7 +31,6 @@ helpviewer_keywords:
   - "change data capture [SQL Server], security"
   - "change data capture [SQL Server], other SQL Server features and"
 ms.assetid: 7a34be46-15b4-4b6b-8497-cfd8f9f14234
-caps.latest.revision: 38
 author: rothja
 ms.author: jroth
 manager: craigg

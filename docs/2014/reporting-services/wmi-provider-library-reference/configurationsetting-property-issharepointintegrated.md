@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "IsSharePointIntegrated property"
 ms.assetid: c548fed8-5e04-4faf-8b10-b37c86178056
-caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
 manager: craigg

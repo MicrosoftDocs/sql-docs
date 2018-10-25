@@ -5,7 +5,7 @@ ms.custom: "tools|sos"
 ms.date: "09/24/2018"
 ms.reviewer: "alayu; sstein"
 ms.prod: sql
-ms.prod_service: sql-tools
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: "yualan"
 ms.author: "alayu"
@@ -15,7 +15,7 @@ manager: craigg
 
 The SQL Server Import extension (preview) converts .txt and .csv files into a SQL table. This wizard utilizes a Microsoft Research framework known as [Program Synthesis using Examples (PROSE)](https://microsoft.github.io/prose/) to intelligently parse the file with minimal user input. It is a powerful framework for data wrangling, and it is the same technology that powers Flash Fill in Microsoft Excel
 
-To learn more about the SSMS version of this feature, you can read [this article](https://docs.microsoft.com/en-us/sql/relational-databases/import-export/import-flat-file-wizard).
+To learn more about the SSMS version of this feature, you can read [this article](https://docs.microsoft.com/sql/relational-databases/import-export/import-flat-file-wizard).
 
 
 ## Install the SQL Server Import extension

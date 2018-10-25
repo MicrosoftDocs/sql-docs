@@ -55,7 +55,7 @@ You create data alert definitions in Data Alert Designer. After you save the ale
   
      The default name of the alert definition is the name of the report. Alert definition names do not have to be unique, which can make it difficult to tell them apart when you later view the list of your alerts in Data Alert Manager. It is recommended that you use meaningful and unique names for your alert definitions.  
   
-6.  Optionally, change the default data option from **any data in in the data feed has** to **no data in the data feed has**.  
+6.  Optionally, change the default data option from **any data in the data feed has** to **no data in the data feed has**.  
   
 7.  Click **Add rule**.  
   
@@ -122,4 +122,4 @@ You create data alert definitions in Data Alert Designer. After you save the ale
 [Data Alert Manager for Alerting Administrators](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
 [Reporting Services Data Alerts](../reporting-services/reporting-services-data-alerts.md)  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.sqlserverstudio.duplicaterole.f1"
 ms.assetid: 0420a2f6-6d11-4d6c-a889-31e8ef55bbee
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg

@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "shapes, data mining"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "Visio shapes, decision tree"
   - "decision tree [data mining]"
 ms.assetid: 9566f6a2-c750-4125-ba5e-42c7251a78c7
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg

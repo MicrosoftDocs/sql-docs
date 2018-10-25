@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "calling stored procedures"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "escape sequences [SQL Server]"
   - "CALL statement"
 ms.assetid: d13737f4-f641-45bf-b56c-523e2ffc080f
-caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
 manager: craigg

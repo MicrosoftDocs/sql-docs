@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "docset-sql-devref"
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "transformations [Integration Services], synchronous and asynchronous"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "data flow components [Integration Services], synchronous and asynchronous"
   - "synchronous transformations [Integration Services]"
 ms.assetid: 0bc2bda5-3f8a-49c2-aaf1-01dbe4c3ebba
-caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

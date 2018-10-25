@@ -4,13 +4,10 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: cf2e2c84-0a69-4cdd-90a1-fb4021936513
-caps.latest.revision: 27
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -127,7 +124,7 @@ manager: craigg
     -   \<drive>:\inetpub\wwwroot\OLAP\Resources  
   
 ##  <a name="bkmk_appPool"></a> Step 2: Create an application pool and virtual directory in IIS  
- Next, create an application pool and an an endpoint to the pump.  
+ Next, create an application pool and an endpoint to the pump.  
   
 #### Create an application pool  
   

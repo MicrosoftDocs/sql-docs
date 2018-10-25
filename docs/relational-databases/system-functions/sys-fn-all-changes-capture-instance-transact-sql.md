@@ -61,7 +61,7 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
 -   @closed_high_end_point = 0  
   
-     Only rows in the cdc.capture_instance_CT change table that have have an associated commit time strictly less than end_time are included in the result set.  
+     Only rows in the cdc.capture_instance_CT change table that have an associated commit time strictly less than end_time are included in the result set.  
   
  If a value of NULL is supplied for this argument, the high endpoint of the query range will correspond to the high endpoint of the valid range for the capture instance.  
   

@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "moving system databases"
@@ -27,7 +25,6 @@ helpviewer_keywords:
   - "Resource database [SQL Server]"
   - "databases [SQL Server], moving"
 ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
-caps.latest.revision: 58
 author: stevestein
 ms.author: sstein
 manager: craigg

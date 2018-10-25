@@ -1,15 +1,15 @@
 ---
-title: What is SQL Server 2019 Big Data Clusters? | Microsoft Docs
-description:
+title: What are SQL Server 2019 big data clusters? | Microsoft Docs
+description: Learn about SQL Server 2019 big data clusters (preview) that run on Kubernetes and provide scale-out options for both relational and HDFS data. 
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 09/24/2018
+ms.date: 10/25/2018
 ms.topic: overview
 ms.prod: sql
 ---
 
-# What is SQL Server 2019 Big Data Clusters?
+# What are SQL Server 2019 big data clusters?
 
 Starting with [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)], SQL Server big data clusters allow you to deploy scalable clusters of SQL Server, Spark, and HDFS containers running on Kubernetes. These components are running side by side to enable you to read, write, and process big data from Transact-SQL or Spark, allowing you to easily combine and analyze your high-value relational data with high-volume big data.
 
@@ -47,7 +47,7 @@ SQL Server big data clusters enable AI and machine learning tasks on the data st
 
 Management and monitoring are provided through a combination of command line tools, APIs, an administrator portal, and dynamic management views.
 
-The cluster administrator portal is a web interface that displays the status and health of the pods in the cluster. It also provides links to other dashboards for log analytics and monitoring dashboards.
+The [cluster administrator portal](cluster-admin-portal.md) is a web interface that displays the status and health of the pods in the cluster. It also provides links to other dashboards for log analytics and monitoring dashboards.
 
 You can use Azure Data Studio to perform a variety of tasks on the big data cluster. This is enabled by the new **SQL Server 2019 Extension (Preview)**. This extension provides:
 
@@ -72,7 +72,7 @@ Kubernetes is an open source container orchestrator, which can scale container d
 
 In SQL Server big data clusters, Kubernetes is responsible for the state of the SQL Server big data clusters; Kubernetes builds and configures the cluster nodes, assigns pods to nodes, and monitors the health of the cluster.
 
-### Big Data Clusters architecture
+### big data clusters architecture
 
 Nodes in the cluster are arranged into three logical planes: the control plane, the compute pane, and the data plane. Each plane has different responsibilities in the cluster. Every Kubernetes node in a SQL Server big data cluster is hosting pods for components of at least one plane.
 
@@ -92,5 +92,5 @@ The data plane is used for data persistence and caching. It contains the SQL dat
 
 ## Next steps
 
-SQL Server Big Data Clusters is first available as a limited public preview through the SQL Server 2019
+SQL Server big data clusters is first available as a limited public preview through the SQL Server 2019
 Early Adoption Program. To request access, register [here](https://aka.ms/eapsignup), and specify your interest to try big data clusters. Microsoft will triage all requests and respond as soon as possible.

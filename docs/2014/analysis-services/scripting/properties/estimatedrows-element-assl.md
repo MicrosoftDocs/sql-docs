@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "EstimatedRows Element"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "EstimatedRows element"
 ms.assetid: 08a66481-6479-4a93-aa7e-15e8b1f854f2
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg

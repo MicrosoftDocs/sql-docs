@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "07/17/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Multidimensional Expressions [Analysis Services], about MDX"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "Multidimensional Expressions [Analysis Services], dimensional modeling"
   - "MDX [Analysis Services], dimensional modeling"
 ms.assetid: 4797ddc8-6423-497a-9a43-81a1af7eb36c
-caps.latest.revision: 52
 author: minewiskan
 ms.author: owend
 manager: craigg

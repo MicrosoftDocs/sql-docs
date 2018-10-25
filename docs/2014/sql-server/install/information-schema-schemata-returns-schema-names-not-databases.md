@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "INFORMATION_SCHEMA.SCHEMATA view"
 ms.assetid: 4337b643-910d-47d7-bea8-f4052066b9a2
-caps.latest.revision: 19
 author: mashamsft
 ms.author: mathoma
 manager: craigg

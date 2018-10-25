@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SharePoint integration [Reporting Services], viewing reports"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "SharePoint integration [Reporting Services], Web Parts"
   - "Report Viewer Web Part [Reporting Services]"
 ms.assetid: cac75345-2380-467d-a394-0a2140908a5a
-caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
 manager: craigg

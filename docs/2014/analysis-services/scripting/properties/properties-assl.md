@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "properties [Analysis Services Scripting Language]"
   - "Analysis Services Scripting Language, properties"
   - "ASSL, properties"
 ms.assetid: 9a38cdc9-a210-421a-90e9-6391876765fa
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg

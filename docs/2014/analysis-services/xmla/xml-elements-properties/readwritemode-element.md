@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "ReadWriteMode command"
 ms.assetid: 379bcaca-bb7e-4934-a9e7-21f8ede2fdc7
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg

@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology:
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Agent jobs, deleting"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "deleting jobs"
   - "removing jobs"
 ms.assetid: 67dcdad0-57b2-431c-b77f-4ffc926af93d
-caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg

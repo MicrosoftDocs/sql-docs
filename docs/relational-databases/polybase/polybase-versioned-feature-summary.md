@@ -75,14 +75,10 @@ PolyBase has the following limitations:
 
 ::: moniker-end
 
-- TBD: Row Width
-- TBD: type mapping
-- TBD: Authentication
-- TBD: Collation 
-- TBD: Pushdown  
+- Integration authentication is not support. Only user name and password are supported for now.  
 
-## Security and Authentication 
+- Encyptrion is enabled by default.
 
-## See Also  
+## Next steps
 
-[PolyBase Guide](../../relational-databases/polybase/polybase-guide.md)  
+For more information about PolyBase, see the [What is PolyBase?](polybase-guide.md).

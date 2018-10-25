@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "roles [Reporting Services], creating"
@@ -22,7 +20,6 @@ helpviewer_keywords:
   - "role-based security [Reporting Services], about role-based security"
   - "security [Reporting Services], role-based"
 ms.assetid: 260dc2e9-546c-4f04-9fa1-977e23c9d68c
-caps.latest.revision: 59
 author: markingmyname
 ms.author: maghan
 manager: craigg

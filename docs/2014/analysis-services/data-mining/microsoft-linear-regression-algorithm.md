@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "algorithms [data mining]"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "linear regression [Analysis Services]"
   - "regression algorithms [Analysis Services]"
 ms.assetid: 50a4abb8-c0b0-4380-ba5e-c49b305b9d22
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg

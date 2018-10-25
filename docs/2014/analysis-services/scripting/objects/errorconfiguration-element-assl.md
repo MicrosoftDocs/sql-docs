@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "ErrorConfiguration Element"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "ErrorConfiguration element"
 ms.assetid: e8363ec2-fbbf-48f6-a55d-01793afa759c
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg

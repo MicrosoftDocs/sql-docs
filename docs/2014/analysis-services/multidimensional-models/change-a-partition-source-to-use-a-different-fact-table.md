@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "fact tables [Analysis Services]"
   - "partitions [Analysis Services], fact tables"
 ms.assetid: 5508312f-8e46-4802-9362-6688ca03d098
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg

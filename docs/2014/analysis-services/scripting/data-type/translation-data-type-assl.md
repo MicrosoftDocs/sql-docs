@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "Translation Data Type"
@@ -19,7 +17,6 @@ topic_type:
 helpviewer_keywords: 
   - "Translation data type"
 ms.assetid: d40039e1-3ff6-4e20-8d8b-5baf501f726f
-caps.latest.revision: 10
 author: minewiskan
 ms.author: owend
 manager: craigg

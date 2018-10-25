@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/14/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "10541"
   - "sql12.rtp.rptdesigner.shared.mapcolorrulesgeneral.f1"
 ms.assetid: 14ff5fc1-4cf8-4a45-9d98-47a1bf1c52c4
-caps.latest.revision: 7
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg

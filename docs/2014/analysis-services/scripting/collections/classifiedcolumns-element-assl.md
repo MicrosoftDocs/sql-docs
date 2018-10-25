@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "ClassifiedColumns Element"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "ClassifiedColumns element"
 ms.assetid: f16b4f51-c38d-4601-98b8-1497dbf12d02
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg

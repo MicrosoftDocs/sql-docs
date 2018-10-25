@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "statements [SQL Server], command prompt"
@@ -23,7 +21,6 @@ helpviewer_keywords:
   - "command prompt utilities [SQL Server], osql"
   - "CTRL+C command"
 ms.assetid: cf530d9e-0609-4528-8975-ab8e08e40b9a
-caps.latest.revision: 48
 author: stevestein
 ms.author: sstein
 manager: craigg

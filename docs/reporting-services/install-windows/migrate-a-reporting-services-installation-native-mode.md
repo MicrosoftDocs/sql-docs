@@ -279,4 +279,4 @@ Once you have successfully migrated your report server to a new instance, you mi
 [Reporting Services Backward Compatibility](../../reporting-services/reporting-services-backward-compatibility.md)   
 [Reporting Services Configuration Manager](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

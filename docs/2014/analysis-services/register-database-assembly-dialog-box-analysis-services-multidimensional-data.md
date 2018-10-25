@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.bidevstudio.assembly.registerassembly.f1"
 ms.assetid: 0c07cc87-fc94-456f-b878-7b23e39772b9
-caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
 manager: craigg

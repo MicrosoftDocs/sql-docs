@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "docset-sql-devref"
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "deleting data processing extensions"
   - "data processing extensions [Reporting Services], removing"
   - "removing data processing extensions"
 ms.assetid: 1d89e32b-0631-44f6-8178-a57fb791d26d
-caps.latest.revision: 33
 author: markingmyname
 ms.author: maghan
 manager: craigg

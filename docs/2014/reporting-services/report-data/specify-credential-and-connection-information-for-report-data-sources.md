@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "no credentials option [Reporting Services]"
@@ -28,7 +26,6 @@ helpviewer_keywords:
   - "security [Reporting Services], data sources"
   - "Windows integrated security [Reporting Services]"
 ms.assetid: fee1a663-a313-424a-aed2-5082bfd114b3
-caps.latest.revision: 59
 author: markingmyname
 ms.author: maghan
 manager: craigg

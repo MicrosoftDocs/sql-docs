@@ -56,7 +56,7 @@ The first step is to configure the operating system on the cluster nodes. For th
 
 1. Designate one node as primary and other nodes as secondaries. Use these terms throughout this guide.
 
-1. Make sure nodes that are going to be part of the cluster can communicate to each other.
+1. Make sure nodes that are going to be part of the cluster can communicate with each other.
 
    The following example shows `/etc/hosts` with additions for three nodes named SLES1, SLES2, and SLES3.
 

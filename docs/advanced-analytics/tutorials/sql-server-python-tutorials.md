@@ -52,29 +52,6 @@ These samples and demos provided by the SQL Server development team highlight wa
 
     Learn how to use the Kmeans algorithm to perform unsupervised clustering of customers.
 
-## <a name="bkmk_Prerequisites"></a>Prerequisites
-
-To use these tutorials, you must have SQL Server 2017, and you must explicitly install and then enable the feature, Machine Learning Services (In-Database). 
-
-SQL Server 2017 supports both the R and Python languages, but neither is installed or enabled by default. Running Python requires that the extensibility framework be enabled, and that you select Python as the language to install. 
-
-### Post-installation configuration tips
-
-After running SQL Server setup, you might need to perform some additional steps to ensure that Python and SQL Server are communicating:
-
-+ Enable the external script execution feature by running `sp_configure 'external scripts enabled', 1`.
-+ Restart the server. 
-+ Open the **Services** panel to check whether Launchpad has started. 
-+ Ensure that the service that calls the external runtime has necessary permissions. For more information, see [Enable implied authentication](../r/add-sqlrusergroup-to-database.md).
-+ Open a port on the firewall for SQL Server, and enable required network protocols.
-+ Ensure that your SQL login or Windows user account has necessary permissions to connect to the server, to read data, and to create any database objects required by the sample.
-
-See this article for some common issues: [Troubleshooting Machine Learning Services](../machine-learning-troubleshooting-faq.md)
-
-### Resource management
-
-You can install both R and Python on the same computer, but running both can require substantial resources. If you get "out of memory" errors, or if running machine learning jobs is the principal intended use of the server, you can reduce the amount of memory that is allocated to the database engine. For more information, see [Managing and monitoring Python in SQL Server](../python/managing-and-monitoring-python-solutions.md).
-
 ## See also
 
 [R tutorials for SQL Server](sql-server-r-tutorials.md)

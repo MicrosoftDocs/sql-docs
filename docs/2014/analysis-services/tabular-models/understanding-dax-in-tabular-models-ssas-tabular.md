@@ -4,13 +4,10 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: b2693985-1bea-4861-a100-cea4761ba809
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -179,7 +176,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 |`[Date]`|Specifies the Date column in the Date table. Columns are in brackets.|  
 |`,`||  
 |`STARTOFQUARTER`|The STARTOFQUARTER function returns the date of the start of the quarter.|  
-|`LASTDATE`|The LASTDATE function returns the the last date of the quarter.|  
+|`LASTDATE`|The LASTDATE function returns the last date of the quarter.|  
 |`'Date'`|Specifies the Date table.|  
 |`[Date]`|Specifies the Date column in the Date table.|  
 |`,`||  

@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dm.miningmodeleditor.timeseries.chart.f1"
 ms.assetid: 8803cdbb-f1b3-436c-994d-ee662ecf64dd
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg

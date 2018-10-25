@@ -1,7 +1,7 @@
 ---
 title: "What's new in SQL Server 2017 | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/19/2017"
+ms.date: "10/20/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: install
@@ -106,7 +106,7 @@ SQL Server developers now have access to the extensive Python ML and AI librarie
 - **Python operationalization with T-SQL** - Deploy Python code easily by using the stored procedure `sp_execute_external_script`. Get great performance by streaming data from SQL to Python processes and using MPI ring parallelization.
 - **Python in SQL Server compute contexts** - Data scientists and developers can execute Python code remotely from their development environments to explore data and develop models without moving data around.
 - **Native scoring** -  The PREDICT function in Transact-SQL can be used to perform scoring in any instance of SQL Server 2017, even if R isn't installed. All that's required is that you train the model using one of the supported RevoScaleR and revoscalepy algorithms and save the model in a new, compact binary format.
-- **Package management** - T-SQL now supports the CREATE EXTERNAL LIBRARY statement, to give DBAs greater management over R packages. Use roles to control prviate or shared package access, store R packages in the database and share them among users.
+- **Package management** - T-SQL now supports the CREATE EXTERNAL LIBRARY statement, to give DBAs greater management over R packages. Use roles to control private or shared package access, store R packages in the database and share them among users.
 - **Performance improvements** - The stored procedure `sp_execute_external_script` has been optimized to support batch mode execution for columnstore data.
 
 

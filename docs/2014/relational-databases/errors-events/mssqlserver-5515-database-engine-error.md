@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "5515 (Database Engine error)"
 ms.assetid: ccd793bc-ba5d-4782-8d72-731fd01fc177
-caps.latest.revision: 12
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

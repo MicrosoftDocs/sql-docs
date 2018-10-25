@@ -34,7 +34,6 @@ Release date: September 27, 2018
 ### Known issues:
 
 - SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True. This issue only applies to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog is not impacted.
-- SSDT 15.8.1 does not currently support Windows 7 SP1, so remain on 15.8.0 if you are using Windows 7 SP1
 
 
 ## SSDT for Visual Studio 2017 (15.8)
@@ -759,7 +758,7 @@ Build number: 14.0.60629.0
 * **Database tools:**
     * From now on SSDT will never disable Transparent Data Encryption (TDE) on a database. Previously since the default encryption option in a project’s database settings was disabled, it would turn off encryption. With this fix encryption can be enabled but never disabled during publish. 
     * Increased the retry count and resiliency for Azure SQL DB connections during initial connection.
-    * If the default filegroup is not PRIMARY, Import/Publish to to Azure V12 would fail. Now this setting is ignored when publishing.
+    * If the default filegroup is not PRIMARY, Import/Publish to Azure V12 would fail. Now this setting is ignored when publishing.
     * Fixed an issue where when exporting a database with an object with Quoted Identifier on, export validation could fail in some instances.
     * Fixed an issue where the TEXTIMAGE_ON option was incorrectly added for Hekaton table creations where it is not allowed.
     * Fixed an issue where Export took a long time exporting with large amount of data due to a write to the model.xml file after data phase completed caused contents of the .bacpac file to be rewritten.

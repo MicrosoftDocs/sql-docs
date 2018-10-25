@@ -841,7 +841,7 @@ The table contains error message numbers and the description, which is the text 
 |	1732	|	16	|	No	|	Cannot create the sparse column set '%.*ls' in the table '%.*ls' because a table cannot have more than one sparse column set. Modify the statement so that only one column is specified as COLUMN_SET FOR ALL_SPARSE_COLUMNS.	|
 |	1733	|	16	|	No	|	Cannot create the sparse column set '%.*ls' in the table '%.*ls' because a sparse column set must be a nullable xml column. Modify the column definition to allow null values.	|
 |	1734	|	16	|	No	|	Cannot create the sparse column set '%.*ls' in the table '%.*ls' because the table already contains one or more sparse columns. A sparse column set cannot be added to a table if the table contains a sparse column.	|
-|	1736	|	16	|	No	|	The column '%.*ls' in the table '%.*ls' cannot be referenced in a CHECK constraint or computed column definition because the column is a sparse column set. A sparse column set cannot be referenced in a a CHECK constraint or computed column definition.	|
+|	1736	|	16	|	No	|	The column '%.*ls' in the table '%.*ls' cannot be referenced in a CHECK constraint or computed column definition because the column is a sparse column set. A sparse column set cannot be referenced in a CHECK constraint or computed column definition.	|
 |	1738	|	10	|	No	|	Cannot create table '%.*ls' with only a column set column and without any non-computed columns in the table.	|
 |	1750	|	10	|	No	|	Could not create constraint. See previous errors.	|
 |	1752	|	16	|	No	|	Column '%.*ls' in table '%.*ls' is invalid for creating a default constraint.	|
@@ -1285,6 +1285,7 @@ The table contains error message numbers and the description, which is the text 
 |	2597	|	10	|	No	|	Ignoring trace flag %d. It is either an invalid trace flag or a trace flag that can only be specified during server startup.	|
 |	2599	|	16	|	No	|	Cannot switch to in row text in table "%.*ls".	|
 |	2601	|	14	|	No	|	Cannot insert duplicate key row in object '%.*ls' with unique index '%.*ls'.	|
+|	2628	|	16	|	No	|	String or binary data would be truncated in table '%.*ls', column '%.*ls'. Truncated value: '%.*ls'.|
 |	2627	|	14	|	No	|	Violation of %ls constraint '%.*ls'. Cannot insert duplicate key in object '%.*ls'.	|
 |	2701	|	10	|	No	|	Database name '%.*ls' ignored, referencing object in tempdb.	|
 |	2702	|	16	|	No	|	Database '%.*ls' does not exist.	|
@@ -8202,7 +8203,7 @@ The table contains error message numbers and the description, which is the text 
 |	22831	|	16	|	No	|	Could not update the metadata that indicates database %s is not enabled for Change Data Capture. The failure occurred when executing the command '%s'. The error returned was %d: '%s'. Use the action and error to determine the cause of the failure and resubmit the request.	|
 |	22832	|	16	|	No	|	Could not update the metadata that indicates table %s is enabled for Change Data Capture. The failure occurred when executing the command '%s'. The error returned was %d: '%s'. Use the action and error to determine the cause of the failure and resubmit the request.	|
 |	22833	|	16	|	No	|	Could not update the metadata that indicates table %s is not enabled for Change Data Capture. The failure occurred when executing the command '%s'. The error returned was %d: '%s'. Use the action and error to determine the cause of the failure and resubmit the request.	|
-|	22834	|	16	|	No	|	Could not modify the the verbose logging status for table %s. The failure occurred when executing the command '%s'. The error returned was %d: '%s'. Use the action and error to determine the cause of the failure and resubmit the request.	|
+|	22834	|	16	|	No	|	Could not modify the verbose logging status for table %s. The failure occurred when executing the command '%s'. The error returned was %d: '%s'. Use the action and error to determine the cause of the failure and resubmit the request.	|
 |	22835	|	16	|	No	|	Could not update the metadata for database %s to indicate that a Change Data Capture job has been dropped. The failure occurred when executing the command '%s'. The error returned was %d: '%s'. Use the action and error to determine the cause of the failure and resubmit the request.	|
 |	22836	|	16	|	No	|	Could not update the metadata for database %s to indicate that a Change Data Capture job has been added. The failure occurred when executing the command '%s'. The error returned was %d: '%s'. Use the action and error to determine the cause of the failure and resubmit the request.	|
 |	22837	|	16	|	No	|	Could not delete table entries or drop objects associated with capture instance '%s'. The failure occurred when executing the command '%s'. The error returned was %d: '%s'. Use the action and error to determine the cause of the failure and resubmit the request.	|

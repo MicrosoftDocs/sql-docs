@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "HierarchyInfo Element"
@@ -23,7 +21,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "HierarchyInfo element"
 ms.assetid: b4472251-1f1d-4233-a8e6-407397862ab4
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg

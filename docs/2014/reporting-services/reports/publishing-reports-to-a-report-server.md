@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "production environments [Reporting Services]"
@@ -23,7 +21,6 @@ helpviewer_keywords:
   - "deploying [Reporting Services], reports"
   - "Report Designer [Reporting Services], publishing reports"
 ms.assetid: bd7aa5e0-61ce-43fd-8f74-5d1aeed078bb
-caps.latest.revision: 45
 author: markingmyname
 ms.author: maghan
 manager: craigg

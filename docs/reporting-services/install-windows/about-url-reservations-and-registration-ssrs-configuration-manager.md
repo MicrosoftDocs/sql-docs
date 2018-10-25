@@ -23,7 +23,7 @@ ms.author: maghan
  Both Setup and the tool will also assign permissions on the URL to the Report Server service, check for duplicate instances, and add the URL reservation to HTTP.SYS. Never create or modify a Reporting Services URL reservation directly using HttpCfg.exe or other tool. If you skip a step or set an invalid value, you will encounter problems that might be difficult to diagnose or fix.  
   
 > [!NOTE]  
->  HTTP.SYS is an operating system component that listens for network requests and routes them to a request queue. In this release of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], HTTP.SYS establishes and maintains the request queue for the Report Server Web service and Report Manager. Internet Information Services (IIS) is no longer used to host or access [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] applications. For more information about HTTP.SYS functionality, see [HTTP Server API](http://go.microsoft.com/fwlink/?LinkId=92652) on MSDN.  
+>  HTTP.SYS is an operating system component that listens for network requests and routes them to a request queue. In this release of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], HTTP.SYS establishes and maintains the request queue for the Report Server Web service and Report Manager. Internet Information Services (IIS) is no longer used to host or access [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] applications. For more information about HTTP.SYS functionality, see [HTTP Server API](https://go.microsoft.com/fwlink/?LinkId=92652) on MSDN.  
   
 ##  <a name="ReportingServicesURLs"></a> URLs in Reporting Services  
  In a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installation, you can access the following tools, applications, and items through URLs:  
@@ -40,7 +40,7 @@ ms.author: maghan
 >  This topic does not describe URL access to specific reports that are stored on the report server. For more information about URL access to these items, see [Access Report Server Items Using URL Access](../../reporting-services/access-report-server-items-using-url-access.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
   
 ##  <a name="URLreservation"></a> URL Reservation and Registration  
- A URL reservation defines the URLs that can be used to access a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] application. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] will reserve one or more URLs for the Report Server Web service and the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] in HTTP.SYS, and then register them when the service starts. By appending parameters to the URL, you can open reports through the Web service. Reservations and registration is provided by HTTP.SYS. For more information, see [Namespace Reservations, Registration, and Routing](http://go.microsoft.com/fwlink/?LinkId=92653) on MSDN.  
+ A URL reservation defines the URLs that can be used to access a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] application. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] will reserve one or more URLs for the Report Server Web service and the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] in HTTP.SYS, and then register them when the service starts. By appending parameters to the URL, you can open reports through the Web service. Reservations and registration is provided by HTTP.SYS. For more information, see [Namespace Reservations, Registration, and Routing](https://go.microsoft.com/fwlink/?LinkId=92653) on MSDN.  
   
  *URL reservation* is a process by which a URL endpoint to a Web application is created and stored in HTTP.SYS. HTTP.SYS is the common repository of all URL reservations that are defined on a computer and defines a set of common rules that guarantee unique URL reservations.  
   
@@ -48,7 +48,7 @@ ms.author: maghan
   
  URLs are unregistered if you stop the service or recycle the Web service or the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] application domain. If you modify a URL reservation while the service is running, the report server will recycle the application domain immediately so that the old URL can be unregistered and the new one put into use.  
   
- A few simple examples illustrate the concept of a URL reservation and how it relates to URL addresses used for [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] applications. A key point to notice is that the URL reservation has different syntax than the the URL you use to access the application:  
+ A few simple examples illustrate the concept of a URL reservation and how it relates to URL addresses used for [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] applications. A key point to notice is that the URL reservation has different syntax than the URL you use to access the application:  
   
 |URL Reservation in HTTP.SYS|URL|Explanation|  
 |---------------------------------|---------|-----------------|  

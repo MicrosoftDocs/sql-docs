@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "OrderBy Element"
@@ -21,7 +19,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "OrderBy element"
 ms.assetid: d7a0564b-430e-44eb-913a-fe1f98917d0f
-caps.latest.revision: 31
 author: minewiskan
 ms.author: owend
 manager: craigg

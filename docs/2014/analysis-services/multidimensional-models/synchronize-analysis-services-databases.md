@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "05/24/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Analysis Services deployments, Synchronize Database Wizard"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "Synchronize Database Wizard"
   - "synchronization [Analysis Services]"
 ms.assetid: 6aeff68d-8470-43fb-a3ed-a4b9685332c2
-caps.latest.revision: 39
 author: minewiskan
 ms.author: owend
 manager: craigg

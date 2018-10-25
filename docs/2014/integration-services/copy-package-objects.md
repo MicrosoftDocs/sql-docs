@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "control flow [Integration Services], copying objects"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "data flow [Integration Services], copying objects"
   - "connection managers [Integration Services], copying"
 ms.assetid: 99b85e5c-d6bd-4e7c-afe4-51f6ce151c2f
-caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

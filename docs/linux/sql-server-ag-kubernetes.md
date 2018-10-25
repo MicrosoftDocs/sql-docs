@@ -52,7 +52,7 @@ To deploy an availability group in Kubernetes:
 
 1. Create the databases and attach them to the availability group
 
-For detailed steps, see [Configure a SQL Server Always On availability group in Kubernetes for high availability](tutorial-sql-server-ag-kubernetes.md).
+For detailed steps, see [Always On availability groups for SQL Server containers](sql-server-ag-kubernetes.md).
 
 ## SQL Server Kubernetes operator
 
@@ -64,7 +64,7 @@ The StatfulSet contains:
 
 * mssql-ha-supervisor container
 
-The code for the operator, HA supervisor, and SQL Server is packaged in a Docker image called `mcr.microsoft.com/mssql/ha`. This image contains following binaries:
+The code for the operator, HA supervisor, and SQL Server is packaged in a Docker image called `mcr.microsoft.com/mssql/ha`. This image contains the following binaries:
 
 * `mssql-operator`
 

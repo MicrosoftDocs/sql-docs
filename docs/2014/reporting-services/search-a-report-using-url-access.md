@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "searching reports"
   - "text searches [Reporting Services]"
   - "URL access [Reporting Services], report searches"
 ms.assetid: 6f3410c4-7944-448f-bae8-bab3e8152d46
-caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
 manager: craigg

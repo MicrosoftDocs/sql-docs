@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "CancelAssociated Element"
@@ -23,7 +21,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "CancelAssociated element"
 ms.assetid: fd890440-d1a7-4c05-9e81-c81e6b8c274c
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg

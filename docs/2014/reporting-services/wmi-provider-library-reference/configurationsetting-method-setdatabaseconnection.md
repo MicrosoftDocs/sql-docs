@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 api_name: 
   - "SetDatabaseConnection (WMI MSReportServer_ConfigurationSetting Class)"
@@ -18,7 +16,6 @@ topic_type:
 helpviewer_keywords: 
   - "SetDatabaseConnection method"
 ms.assetid: c040aa78-92b8-41e4-9ae2-eff9fcdddc5b
-caps.latest.revision: 19
 author: markingmyname
 ms.author: maghan
 manager: craigg

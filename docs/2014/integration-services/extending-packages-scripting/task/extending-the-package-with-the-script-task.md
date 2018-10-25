@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/14/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "docset-sql-devref"
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 dev_langs: 
   - "VB"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "scripts [Integration Services], about Script task with packages"
   - "SSIS Script task, about Script task"
 ms.assetid: 911e6d26-a6fd-4fc3-a111-bf5f048e9bff
-caps.latest.revision: 56
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

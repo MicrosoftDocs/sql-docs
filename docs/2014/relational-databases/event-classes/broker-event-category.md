@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "07/24/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 topic_type: 
   - "apiref"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "Broker event category [SQL Server]"
   - "event classes [SQL Server], Broker event category"
 ms.assetid: 470dc93c-0dda-4d89-829b-937738d59b31
-caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg

@@ -48,7 +48,7 @@ any changes to one section should be duplicated in the other-->
 
 ## <a id="pullandrun2017"></a> Pull and run the container image
 
-1. Pull the SQL Server 2017 Linux container image from Docker Hub.
+1. Pull the SQL Server 2017 Linux container image from Microsoft Container Registry.
 
    ```bash
    sudo docker pull mcr.microsoft.com/mssql/server:2017-latest
@@ -61,7 +61,7 @@ any changes to one section should be duplicated in the other-->
    > [!TIP]
    > If you want to try the SQL Server 2019 preview image, see the [SQL Server 2019 preview version of this article](quickstart-install-connect-docker.md?view=sql-server-linux-ver15#pullandrun2019).
 
-   The previous command pulls the latest SQL Server 2017 container image. If you want to pull a specific image, you add a colon and the tag name (for example, `mcr.microsoft.com/mssql/server:2017-GA`). To see all available images, see [the mssql-server-linux Docker hub page](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/).
+   The previous command pulls the latest SQL Server 2017 container image. If you want to pull a specific image, you add a colon and the tag name (for example, `mcr.microsoft.com/mssql/server:2017-GA-ubuntu`). To see all available images, see [the mssql-server Docker hub page](https://hub.docker.com/r/microsoft/mssql-server).
 
    For the bash commands in this article, `sudo` is used. On MacOS, `sudo` might not be required. On Linux, if you do not want to use `sudo` to run Docker, you can configure a **docker** group and add users to that group. For more information, see [Post-installation steps for Linux](https://docs.docker.com/install/linux/linux-postinstall/).
 
@@ -93,7 +93,7 @@ any changes to one section should be duplicated in the other-->
    | **-e 'SA_PASSWORD=\<YourStrong!Passw0rd\>'** | Specify your own strong password that is at least 8 characters and meets the [SQL Server password requirements](../relational-databases/security/password-policy.md). Required setting for the SQL Server image. |
    | **-p 1433:1433** | Map a TCP port on the host environment (first value) with a TCP port in the container (second value). In this example, SQL Server is listening on TCP 1433 in the container and this is exposed to the port, 1433, on the host. |
    | **--name sql1** | Specify a custom name for the container rather than a randomly generated one. If you run more than one container, you cannot reuse this same name. |
-   | **microsoft/mssql-server-linux:2017-latest** | The SQL Server 2017 Linux container image. |
+   | **mcr.microsoft.com/mssql/server:2017-latest** | The SQL Server 2017 Linux container image. |
 
 3. To view your Docker containers, use the `docker ps` command.
 
@@ -175,7 +175,7 @@ Setting `-h` and `--name` to the same value is a good way to easily identify the
    | **-e 'SA_PASSWORD=\<YourStrong!Passw0rd\>'** | Specify your own strong password that is at least 8 characters and meets the [SQL Server password requirements](../relational-databases/security/password-policy.md). Required setting for the SQL Server image. |
    | **-p 1433:1433** | Map a TCP port on the host environment (first value) with a TCP port in the container (second value). In this example, SQL Server is listening on TCP 1433 in the container and this is exposed to the port, 1433, on the host. |
    | **--name sql1** | Specify a custom name for the container rather than a randomly generated one. If you run more than one container, you cannot reuse this same name. |
-   | **microsoft/mssql-server-linux:vNext-CTP2.0** | The SQL Server 2019 CTP 2.0 Linux container image. |
+   | **mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu** | The SQL Server 2019 CTP 2.0 Linux container image. |
 
 3. To view your Docker containers, use the `docker ps` command.
 
@@ -207,7 +207,7 @@ Setting `-h` and `--name` to the same value is a good way to easily identify the
 ::: moniker-end
 <!--End of 2019 "Pull and run" section-->
 
-## Change the SA password
+## <a id="sapassword"></a> Change the SA password
 
 [!INCLUDE [Change docker password](../includes/sql-server-linux-change-docker-password.md)]
 

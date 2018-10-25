@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dm.dmwizard.browsedatasourceview.f1"
 ms.assetid: d868600a-423c-4892-bb3b-4e6d67798328
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg

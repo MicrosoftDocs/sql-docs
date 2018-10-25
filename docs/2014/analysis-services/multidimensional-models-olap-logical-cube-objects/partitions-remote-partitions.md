@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "storage [Analysis Services], partitions"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "MasterDataSourceID property"
   - "remote partitions [Analysis Services]"
 ms.assetid: 63f5d9f5-c6b6-4ceb-94fe-7b6c396d10bb
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg

@@ -45,3 +45,13 @@ AdventureWorks databases are available in the [SQL Server Samples](https://githu
 - [AdventureWorks downloads for SQL Server 2014 and later](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks). Includes .bak files for the 2012 releases.
 - [AdventureWorks downloads for SQL Server 2012](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks2012).
 - [AdventureWorks downloads for SQL Server 2008R2](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks2008r2).
+
+## Azure Samples and templates
+There are a number of Microsoft Azure code samples and examples available on Github in .NET, Java, Python, Node.js, PHP and Ruby. Additionally, Azure Resource Manager allows you to provision your applications using a declarative template. In a single template, you can deploy multiple services along with their dependencies. You use the same template to repeatedly deploy your application during every stage of the application lifecycle.
+
+- [Azure Samples](https://github.com/Azure-Samples)
+- [Azure Quickstart Templates](https://azure.microsoft.com/resources/templates/)
+
+
+
+

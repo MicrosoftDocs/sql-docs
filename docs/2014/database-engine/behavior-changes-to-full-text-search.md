@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: search
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "full-text search [SQL Server], breaking changes"
   - "behavior changes [full-text search]"
   - "full-text indexes [SQL Server], breaking changes"
 ms.assetid: 573444e8-51bc-4f3d-9813-0037d2e13b8f
-caps.latest.revision: 39
 author: craigg-msft
 ms.author: craigg
 manager: craigg
@@ -100,7 +97,7 @@ manager: craigg
      The full-text engine indexes the contents of the FILESTREAM BLOBs. Indexing files such as images might not be useful. When a FILESTREAM BLOB is updated it is reindexed.  
   
 ## See Also  
- [Full-Text Search]((../relational-databases/search/full-text-search.md)   
+ [Full-Text Search](../relational-databases/search/full-text-search.md)   
  [Full-Text Search Backward Compatibility](../../2014/database-engine/full-text-search-backward-compatibility.md)   
  [Upgrade Full-Text Search](../relational-databases/search/upgrade-full-text-search.md)   
  [Get Started with Full-Text Search](../relational-databases/search/get-started-with-full-text-search.md)  

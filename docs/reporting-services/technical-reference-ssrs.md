@@ -27,11 +27,11 @@ ms.author: maghan
  ![Small File Folder Icon](../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Feature Reference**  
  [Report Designer F1 Help](../reporting-services/tools/report-designer-f1-help.md)  
   
- [Report Manager F1 Help](http://msdn.microsoft.com/library/e0137273-85b8-45f0-83e5-38a50481768f)  
+ [Report Manager F1 Help](https://msdn.microsoft.com/library/e0137273-85b8-45f0-83e5-38a50481768f)  
   
  [Reporting Services Configuration Manager &#40;Native Mode&#41;](../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
   
- [Report Wizard Help](http://msdn.microsoft.com/library/68287bcf-f91a-429f-bb7c-48c029b041fa)  
+ [Report Wizard Help](https://msdn.microsoft.com/library/68287bcf-f91a-429f-bb7c-48c029b041fa)  
   
  [HTML Viewer and the Report Toolbar](../reporting-services/html-viewer-and-the-report-toolbar.md)  
   
@@ -47,4 +47,4 @@ ms.author: maghan
  ![Small File Folder Icon](../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Reporting Services WMI Provider Class Library**  
  [Reporting Services WMI Provider Library Reference &#40;SSRS&#41;](../reporting-services/wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md)  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

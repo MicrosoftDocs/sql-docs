@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 api_name: 
   - "GenerateDatabaseRightsScript (WMI MSReportServer_ConfigurationSetting Class)"
@@ -18,7 +16,6 @@ topic_type:
 helpviewer_keywords: 
   - "GenerateDatabaseRightsScript method"
 ms.assetid: f2e6dcc9-978f-4c2c-bafe-36c330247fd0
-caps.latest.revision: 25
 author: markingmyname
 ms.author: maghan
 manager: craigg

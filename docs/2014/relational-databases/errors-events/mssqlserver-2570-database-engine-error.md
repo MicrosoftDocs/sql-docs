@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "2570 (Database Engine error)"
 ms.assetid: 29800aa9-81aa-4371-992c-487dbb617f46
-caps.latest.revision: 20
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

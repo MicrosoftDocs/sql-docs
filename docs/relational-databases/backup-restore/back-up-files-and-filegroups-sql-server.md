@@ -125,7 +125,7 @@ manager: craigg
   
      BACKUP DATABASE *database*  
   
-     { FILE **=***logical_file_name* | FILEGROUP **=***logical_filegroup_name* } [ **,**...*f* ]  
+     { FILE _=_*logical_file_name* | FILEGROUP _=_*logical_filegroup_name* } [ **,**...*f* ]  
   
      TO *backup_device* [ **,**...*n* ]  
   
@@ -134,10 +134,10 @@ manager: craigg
     |Option|Description|  
     |------------|-----------------|  
     |*database*|Is the database from which the transaction log, partial database, or complete database is backed up.|  
-    |FILE **=***logical_file_name*|Specifies the logical name of a file to include in the file backup.|  
-    |FILEGROUP **=***logical_filegroup_name*|Specifies the logical name of a filegroup to include in the file backup. Under the simple recovery model, a filegroup backup is allowed only for a read-only filegroup.|  
+    |FILE _=_*logical_file_name*|Specifies the logical name of a file to include in the file backup.|  
+    |FILEGROUP _=_*logical_filegroup_name*|Specifies the logical name of a filegroup to include in the file backup. Under the simple recovery model, a filegroup backup is allowed only for a read-only filegroup.|  
     |[ **,**...*f* ]|Is a placeholder that indicates that multiple files and filegroups may be specified. The number of files or filegroups is unlimited.|  
-    |*backup_device* [ **,**...*n* ]|Specifies a list of from 1 to 64 backup devices to use for the backup operation. You can specify a physical backup device, or you can specify a corresponding logical backup device, if already defined. To specify a physical backup device, use the DISK or TAPE option:<br /><br /> { DISK &#124; TAPE } **=***physical_backup_device_name*<br /><br /> For more information, see [Backup Devices &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).|  
+    |*backup_device* [ **,**...*n* ]|Specifies a list of from 1 to 64 backup devices to use for the backup operation. You can specify a physical backup device, or you can specify a corresponding logical backup device, if already defined. To specify a physical backup device, use the DISK or TAPE option:<br /><br /> { DISK &#124; TAPE } _=_*physical_backup_device_name*<br /><br /> For more information, see [Backup Devices &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).|  
     |WITH *with_options* [ **,**...*o* ]|Optionally, specifies one or more additional options, such as DIFFERENTIAL.<br /><br /> Note: A differential file backup requires a full file backup as a base. For more information, see [Create a Differential Database Backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md).|  
   
 2.  Under the full recovery model, you must also back up the transaction log. To use a complete set of full file backups to restore a database, you must also have enough log backups to span all the file backups, from the start of the first file backup. For more information, see [Back Up a Transaction Log &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md).  
@@ -191,9 +191,9 @@ GO
   
 1.  Use the **Backup-SqlDatabase** cmdlet and specify **Files** for the value of the **-BackupAction** parameter. Also, specify one of the following parameters:  
   
-    -   To back up a specific file, specify the **-DatabaseFile***String* parameter, where *String* is one or more database files to be backed up.  
+    -   To back up a specific file, specify the _-DatabaseFile_*String* parameter, where *String* is one or more database files to be backed up.  
   
-    -   To back up all the files in a given filegroup, specify the **-DatabaseFileGroup***String* parameter, where *String* is one or more database filegroups to be backed up.  
+    -   To back up all the files in a given filegroup, specify the _-DatabaseFileGroup_*String* parameter, where *String* is one or more database filegroups to be backed up.  
   
      The following example creates a full file backup of every file in the secondary filegroups 'FileGroup1' and 'FileGroup2' in the `MyDB` database. The backups are created on the default backup location of the server instance `Computer\Instance`.  
   

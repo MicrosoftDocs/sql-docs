@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology:
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "data collector [SQL Server], server activity"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "query statistics reports [SQL Server]"
   - "disk usage reports [SQL Server]"
 ms.assetid: 0b126b8d-4fe7-443d-8a9a-c266350181e5
-caps.latest.revision: 24
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

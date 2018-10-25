@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: data-movement
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "bulk importing [SQL Server], planning"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "CSV files [SQL Server]"
   - "quoted fields in CSV files [SQL Server]"
 ms.assetid: 783fd581-2e5f-496b-b79c-d4de1e09ea30
-caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

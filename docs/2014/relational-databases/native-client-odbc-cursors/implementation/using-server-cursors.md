@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "ODBC applications, cursors"
@@ -14,7 +12,6 @@ helpviewer_keywords:
   - "ODBC cursors, server cursors"
   - "server cursors [SQL Server]"
 ms.assetid: 8a6d99b7-10b8-4474-8639-4914b25ba170
-caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg

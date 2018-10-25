@@ -31,10 +31,8 @@ These objects will create in this section:
 
 - CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL) 
 - CREATE EXTERNAL DATA SOURCE (Transact-SQL) 
-- CREATE EXTERNAL FILE FORMAT (Transact-SQL) 
 - CREATE EXTERNAL TABLE (Transact-SQL) 
 - CREATE STATISTICS (Transact-SQL)
-.
 
 1. Create a master key on the database. This is required to encrypt the credential secret.
 
@@ -56,16 +54,17 @@ These objects will create in this section:
 1. Create an external data source with [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).Specify external data source location and credentials for SQL Server.
 
      ```sql
-     /*  LOCATION: Server DNS name or IP address.
-     *  PUSHDOWN: specify whether computation should be pushed down to the source. ON by default.
-     *  CREDENTIAL: the database scoped credential, created above.
-     */  
-     CREATE EXTERNAL DATA SOURCE SqlServerInstance
-     WITH ( 
-     LOCATION = '<vendor>://<server>[:<port>]',
-     -- PUSHDOWN = ON | OFF,
-     CREDENTIAL = SqlServerCredentials
-     );
+    /*  LOCATION: Location string should be of format '<vendor>://<server>[:<port>]'.
+    *  PUSHDOWN: specify whether computation should be pushed down to the source. ON by default.
+    *  CREDENTIAL: the database scoped credential, created above.
+    */  
+    CREATE EXTERNAL DATA SOURCE SQLServerInstance
+    WITH ( 
+    LOCATION = sqlserver://SqlServer,
+    -- PUSHDOWN = ON | OFF,
+      CREDENTIAL = SQLServerCredentials
+    );
+
      ```
 
 1. Create schemas for external data
@@ -75,7 +74,7 @@ These objects will create in this section:
      GO
      ```
 
-1.  Create external tables that represents data stored in external SQL Server  [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md).
+1.  Create external tables that represent data stored in external SQL Server  [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md).
  
      ```sql
      /*  LOCATION: sql server table/view in 'database_name.schema_name.object_name' format
@@ -102,6 +101,10 @@ These objects will create in this section:
      ```sql
       CREATE STATISTICS CustomerCustKeyStatistics ON sqlserver.customer (C_CUSTKEY) WITH FULLSCAN; 
      ```
+
+## SQL Server Connector Compatible Types
+
+A connection can be made to other data sources that recognizes a SQL Server connection. Using the SQL Server PolyBase connector you can create an external table of both **Azure SQL Data Warehouse and Azure SQL Database**. This is accomplished by following the same steps listed above. Make sure the database scoped credential, server address, port, and location string corelate to that of the compatible data source you want to connect to.
 
 ## Next steps
 

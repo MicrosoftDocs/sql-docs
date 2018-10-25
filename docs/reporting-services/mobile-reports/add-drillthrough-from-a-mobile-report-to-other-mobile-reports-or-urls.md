@@ -47,7 +47,7 @@ Report items with drillthrough, either to a URL or another mobile report, have t
 1. In Layout view in [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)], select a visualization that supports drillthrough targets.    
 2. In the **Visual Properties** pane, select **Drillthrough target** > **Custom URL**.  this will open the drillthrough configuration dialog.  
   
-3. In **Set drillthrough URL**, enter the destination URL to go to when the visualization is clicked, and and select from **Available parameters** listed on the right. A preview of the custom URL combined with sample resolved parameters (if included) is displayed in the panel below.  
+3. In **Set drillthrough URL**, enter the destination URL to go to when the visualization is clicked, and select from **Available parameters** listed on the right. A preview of the custom URL combined with sample resolved parameters (if included) is displayed in the panel below.  
   
    ![mobile-report-drillthrough-url](../../reporting-services/mobile-reports/media/mobile-report-drillthrough-url.PNG)
   

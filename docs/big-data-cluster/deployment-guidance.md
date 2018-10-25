@@ -63,28 +63,54 @@ Execute the below kubectl command to view the cluster configuration. Ensure that
 kubectl config view
 ```
 
-## Install mssqlctl CLI management tool for SQL Server Big Data cluster
+## <a id="mssqlctl"></a> Install mssqlctl
 
 `mssqlctl` is a command-line utility written in Python that enables cluster administrators to bootstrap and manage the big data cluster via REST APIs. The minimum Python version required is v3.5. You must also have `pip` that is used to download and install `mssqlctl` tool. 
 
-On a Windows client, you can download the necessary Python package from [https://www.python.org/downloads/](https://www.python.org/downloads/). For python3.5.3 and later, pip3 is also installed when you install Python. When you install it, you may not select to it add to the path. Then you can find where the pip3 located and add it to path manually.
-On Linux (WSL or Ubuntu client for example), these commands will install the latest 3.5 version of Python and pip:
+### Windows mssqlctl installation
 
-```bash
-sudo apt-get update
-sudo apt-get install python3
-sudo apt-get install python3-pip
-sudo pip3 install --upgrade pip
-```
+1. On a Windows client, download the necessary Python package from [https://www.python.org/downloads/](https://www.python.org/downloads/). For python3.5.3 and later, pip3 is also installed when you install Python. 
 
-> [!NOTE]
-If your Python installation is missing the `requests` package, you must install `requests` using `python -m pip install requests`. If you already have a `requests` package installed, make sure you have the latest version by running `python -m pip install requests --upgrade`.
+   > [!TIP] When installing Python3, select to add Python to your path. If you do not, you can later find where pip3 is located and manually add it to your path.
 
-Run the below command to install msqlctl:
+1. Make sure that you have the latest **requests** package.
 
-```bash
-pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.0 mssqlctl
-```
+   ```cmd
+   python -m pip install requests
+   python -m pip install requests --upgrade
+   ```
+
+1. Install **mssqlctl** with the following command:
+
+   ```bash
+   pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.0 mssqlctl
+   ```
+
+### Linux mssqlctl installation
+
+On Linux, you must install the **python3** and **python3-pip** packages and then run `sudo pip3 install --upgrade pip`. This installs the latest 3.5 version of Python and pip. The following example shows how these commands would work for Ubuntu (if you are using another platform, modify the commands for your package manager):
+
+1. Install the necessary Python packages:
+
+   ```bash
+   sudo apt-get update && /
+   sudo apt-get install -y python3 && /
+   sudo apt-get install -y python3-pip && /
+   sudo -H pip3 install --upgrade pip
+   ```
+
+1. Make sure that you have the latest **requests** package.
+
+   ```bash
+   sudo -H python3 -m pip install requests
+   sudo -H python3 -m pip install requests --upgrade
+   ```
+
+1. Install **mssqlctl** with the following command:
+
+   ```bash
+   pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.0 mssqlctl
+   ```
 
 ## Define environment variables
 
@@ -174,13 +200,13 @@ export DOCKER_PRIVATE_REGISTRY="1"
 
 If you are deploying on minikube and `USE_PERSISTENT_VOLUME=true` (default), you must also override the default value for `STORAGE_CLASS_NAME` environment variable.
 
-Use the following command on Windows:
+Use the following command on Windows for minikube deployments:
 
 ```cmd
 SET STORAGE_CLASS_NAME=standard
 ```
 
-Use the following command on Linux:
+Use the following command on Linux for minikube deployments:
 
 ```bash
 export STORAGE_CLASS_NAME=standard
@@ -190,7 +216,7 @@ Alternatively, you can suppress using persistent volumes on minikube by setting 
 
 ### Kubadm settings
 
-If you are deploying with kubeadm on your own physical or virtual machines, you must pre-provision a Kubernetes storage class and pass it through using the `STORAGE_CLASS_NAME`. Alternatively, you can suppress using persistent volumes on minikube by setting `USE_PERSISTENT_VOLUME=false`. For more information about persistent storage, see [Data persistence with SQL Server big data cluster on Kubernetes](concept-data-persistence.md).
+If you are deploying with kubeadm on your own physical or virtual machines, you must pre-provision a Kubernetes storage class and pass it through using the `STORAGE_CLASS_NAME`. Alternatively, you can suppress using persistent volumes by setting `USE_PERSISTENT_VOLUME=false`. For more information about persistent storage, see [Data persistence with SQL Server big data cluster on Kubernetes](concept-data-persistence.md).
 
 ## Deploy SQL Server Big Data cluster
 

@@ -21,7 +21,7 @@ The controller service provides the following core functionality:
 - Expose monitoring tools to observe the state of the cluster
 - Expose troubleshooting tools to detect and repair unexpected issues
 - Manage cluster security: ensure secure cluster endpoints, manage users and roles, configure credentials for intra-cluster communication
-- Manage the workflow of upgrades so that they are implemented safely (not available in CTP 2.0)
+- Manage the workflow of upgrades so that they are implemented safely (not available in CTP 2.0)
 - Manage high availability and DR for statefull services in the cluster (not available in CTP 2.0)
 
 ## Deploying the controller service
@@ -37,7 +37,7 @@ The buildout workflow will layout on top of Kubernetes a fully functional SQL Se
 ## Managing the cluster through the controller service
 You can manage the cluster purely through the controller service using either `mssqlctl` APIs or the cluster administration portal that is hosted within the cluster. If you deploy additional Kubernetes objects like pods into the same namespace, they are not managed or monitored by the controller service.
 
-The controller and the Kubernetes objects (stateful sets, pods, secrets, etc.) created for a big data cluster reside in a dedicated Kubernetes namespace. The controller service will be granted permission by the Kubernetes cluster administrator to manage all resources within that namespace.  The RBAC policy for this scenario is configured automatically as part of initial cluster deployment using `mssqlctl`. 
+The controller and the Kubernetes objects (stateful sets, pods, secrets, etc.) created for a big data cluster reside in a dedicated Kubernetes namespace. The controller service will be granted permission by the Kubernetes cluster administrator to manage all resources within that namespace.  The RBAC policy for this scenario is configured automatically as part of initial cluster deployment using `mssqlctl`. 
 
 ### mssqlctl
 

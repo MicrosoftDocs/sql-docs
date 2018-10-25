@@ -26,7 +26,7 @@ The way SQL Server big data cluster consumes these persistent volumes is by usin
 To use persistent storage during deployment, configure the **USE_PERSISTENT_VOLUME** and **STORAGE_CLASS_NAME** environment variables before running  `mssqlctl create cluster` command. **USE_PERSISTENT_VOLUME** is set to `true` by default. You can override the default and set it to `false` and, in this case, SQL Server big data cluster uses emptyDir mounts. 
 
 > [!WARNING]
-> Running without persistent storage can result in a non-functional cluster. Upon pod restarts, cluster metadata and/or user data will be lost permanently.
+> Running without persistent storage can work in a test environment, but it could result in a non-functional cluster. Upon pod restarts, cluster metadata and/or user data will be lost permanently.
 
 If you set the flag to true, you must also provide **STORAGE_CLASS_NAME** as a parameter at the deployment time.
 

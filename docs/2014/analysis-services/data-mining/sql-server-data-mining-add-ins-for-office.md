@@ -76,7 +76,7 @@ manager: craigg
   
 -   Standard  
   
- Depending on the edition of SQL Server Analysis Services that you connect to, some of the advanced algorithms might not be available. For information, see [Features Supported by the Editions of SQL Server 2014](https://msdn.microsoft.com/en-us/library/cc645993.aspx).  
+ Depending on the edition of SQL Server Analysis Services that you connect to, some of the advanced algorithms might not be available. For information, see [Features Supported by the Editions of SQL Server 2014](https://msdn.microsoft.com/library/cc645993.aspx).  
   
  For additional help with installation, see this page on the Download Center: [http://www.microsoft.com/download/details.aspx?id=29061](http://www.microsoft.com/download/details.aspx?id=29061)  
   

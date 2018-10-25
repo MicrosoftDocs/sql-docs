@@ -36,11 +36,11 @@ To install a trial version of SQL Server, go to [SQL Server evaluations](https:/
 
 - MSVC++ 2012. 
 
-> ![NOTE]  
+> [!NOTE]  
 
 > PolyBase can be installed on only one SQL Server instance per machine.
 
-> ![IMPORTANT]
+> [!IMPORTANT]
 >
 > To use the computation pushdown functionality against Hadoop, the target Hadoop cluster must have the core components of HDFS, YARN and MapReduce, with the job history server enabled. PolyBase submits the pushdown query via MapReduce and pulls status from the job history server. Without either component, the query fails.
   
@@ -61,17 +61,17 @@ After you install PolyBase either standalone or in a scale-out group, you can't 
    
 1. Run the SQL Server setup.exe.   
    
-2. Select **Installation**, and then select **New Standalone SQL Server installation or add features**.  
+2. Select **Installation**, and then select **New standalone SQL Server installation or add features**.  
    
-3. On the feature selection page, select **PolyBase Query Service for External Data**.  
+3. On the Feature Selection page, select **PolyBase Query Service for External Data**.  
 
- ![PolyBase services](../../relational-databases/polybase/media/install-wizard.png "PolyBase services")  
+   ![PolyBase services](../../relational-databases/polybase/media/install-wizard.png "PolyBase services")  
    
 4. On the Server Configuration page, configure the **SQL Server PolyBase Engine Service** and **SQL Server PolyBase Data Movement Service** to run under the same domain account.  
    
-> ![IMPORTANT] 
->
->In a PolyBase scale-out group, the PolyBase Engine and PolyBase Data Movement service on all nodes must run under the same domain account. See [PolyBase scale-out groups](#Enable).
+   > [!IMPORTANT] 
+   >
+   >In a PolyBase scale-out group, the PolyBase Engine and PolyBase Data Movement service on all nodes must run under the same domain account. See [PolyBase scale-out groups](#Enable).
    
 5. On the PolyBase Configuration page, select one of the two options. For more information, see [PolyBase scale-out groups](../../relational-databases/polybase/polybase-scale-out-groups.md).  
    
@@ -85,9 +85,9 @@ After you install PolyBase either standalone or in a scale-out group, you can't 
    
 6. On the PolyBase Configuration page, specify a port range with at least six ports. SQL Server setup  allocates the first six available ports from the range.  
 
-  > ![IMPORTANT]
-  >
-  > After installation, you must [enable the PolyBase feature](#enable).
+   > [!IMPORTANT]
+   >
+   > After installation, you must [enable the PolyBase feature](#enable).
 
 
 ##  <a name="installing"></a> Use a command prompt
@@ -103,10 +103,10 @@ Use the values in this table to create installation scripts. The SQL Server Poly
 |SQL Server PolyBase Engine|**Optional**<br /><br /> /PBENGSVCACCOUNT|Specifies the account for the engine service. The default is **NT Authority\NETWORK SERVICE**.|  
 |SQL Server PolyBase Engine|**Optional**<br /><br /> /PBENGSVCPASSWORD|Specifies the password for the engine service account.|  
 |SQL Server PolyBase Engine|**Optional**<br /><br /> /PBENGSVCSTARTUPTYPE|Specifies the startup mode for the PolyBase Engine: Automatic (default), Disabled, and Manual.|  
-|SQL Server PolyBase Data Movement service|**Optional**<br /><br /> /PBDMSSVCACCOUNT|Specifies the account for the data movement service. The default is **NT Authority\NETWORK SERVICE**.|  
-|SQL Server PolyBase Data Movement service|**Optional**<br /><br /> /PBDMSSVCPASSWORD|Specifies the password for the data movement account.|  
-|SQL Server PolyBase Data Movement service|**Optional**<br /><br /> /PBDMSSVCSTARTUPTYPE|Specifies the startup mode for the data movement service: Automatic (default), Disabled, and Manual.|  
-|PolyBase|**Optional**<br /><br /> /PBSCALEOUT|Specifies whether the SQL Server instance is used as a part of a PolyBase scale-out computational group. <br />Supported values: **True**, **False**.|  
+|SQL Server PolyBase Data Movement |**Optional**<br /><br /> /PBDMSSVCACCOUNT|Specifies the account for the data movement service. The default is **NT Authority\NETWORK SERVICE**.|  
+|SQL Server PolyBase Data Movement |**Optional**<br /><br /> /PBDMSSVCPASSWORD|Specifies the password for the data movement account.|  
+|SQL Server PolyBase Data Movement |**Optional**<br /><br /> /PBDMSSVCSTARTUPTYPE|Specifies the startup mode for the data movement service: Automatic (default), Disabled, and Manual.|  
+|PolyBase|**Optional**<br /><br /> /PBSCALEOUT|Specifies whether the SQL Server instance is used as a part of a PolyBase scale-out computational group. <br />Supported values: True, False.|  
 |PolyBase|**Optional**<br /><br /> /PBPORTRANGE|Specifies a port range with at least six ports for PolyBase services. Example:<br /><br /> `/PBPORTRANGE=16450-16460`|  
 
 ::: moniker-end
@@ -115,14 +115,14 @@ Use the values in this table to create installation scripts. The SQL Server Poly
 
 |SQL Server component|Parameter and values|Description|  
 |--------------------------|--------------------------|-----------------|  
-|SQL Server setup control|**Required**<br /><br /> /FEATURES=PolyBaseCore, PolyBaseJava, PolyBase | **PolyBaseCore** installs support for all PolyBase features except Hadoop connectivity. **PolyBaseJava** enables Hadoop connectivity. **PolyBase** installs both. |  
+|SQL Server setup control|**Required**<br /><br /> /FEATURES=PolyBaseCore, PolyBaseJava, PolyBase | PolyBaseCore installs support for all PolyBase features except Hadoop connectivity. PolyBaseJava enables Hadoop connectivity. PolyBase installs both. |  
 |SQL Server PolyBase Engine|**Optional**<br /><br /> /PBENGSVCACCOUNT|Specifies the account for the engine service. The default is **NT Authority\NETWORK SERVICE**.|  
 |SQL Server PolyBase Engine|**Optional**<br /><br /> /PBENGSVCPASSWORD|Specifies the password for the engine service account.|  
 |SQL Server PolyBase Engine|**Optional**<br /><br /> /PBENGSVCSTARTUPTYPE|Specifies the startup mode for the PolyBase Engine: Automatic (default), Disabled, and Manual.|  
-|SQL Server PolyBase Data Movement service|**Optional**<br /><br /> /PBDMSSVCACCOUNT|Specifies the account for data movement service. The default is **NT Authority\NETWORK SERVICE**.|  
-|SQL Server PolyBase Data Movement service|**Optional**<br /><br /> /PBDMSSVCPASSWORD|Specifies the password for the data movement account.|  
-|SQL Server PolyBase Data Movement service|**Optional**<br /><br /> /PBDMSSVCSTARTUPTYPE|Specifies the startup mode for the data movement service: Automatic (default), Disabled, and Manual.|  
-|PolyBase|**Optional**<br /><br /> /PBSCALEOUT|Specifies whether the SQL Server instance is used as a part of a PolyBase scale-out computational group. <br />Supported values: **True**, **False**.|  
+|SQL Server PolyBase Data Movement |**Optional**<br /><br /> /PBDMSSVCACCOUNT|Specifies the account for data movement service. The default is **NT Authority\NETWORK SERVICE**.|  
+|SQL Server PolyBase Data Movement |**Optional**<br /><br /> /PBDMSSVCPASSWORD|Specifies the password for the data movement account.|  
+|SQL Server PolyBase Data Movement |**Optional**<br /><br /> /PBDMSSVCSTARTUPTYPE|Specifies the startup mode for the data movement service: Automatic (default), Disabled, and Manual.|  
+|PolyBase|**Optional**<br /><br /> /PBSCALEOUT|Specifies whether the SQL Server instance is used as a part of a PolyBase scale-out computational group. <br />Supported values: True, False.|  
 |PolyBase|**Optional**<br /><br /> /PBPORTRANGE|Specifies a port range with at least six ports for PolyBase services. Example:<br /><br /> `/PBPORTRANGE=16450-16460`|  
 
 ::: moniker-end

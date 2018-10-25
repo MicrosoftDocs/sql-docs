@@ -20,7 +20,7 @@ This article is a summary of PolyBase features available for SQL Server products
   
 ## Feature summary for product releases
 
-This table summarizes key features for PolyBase and the products in which they are available.  
+This table lists the key features for PolyBase and the products in which they're available.  
   
 ||||||
 |-|-|-|-|-|   
@@ -38,7 +38,7 @@ This table summarizes key features for PolyBase and the products in which they a
 
 ## Pushdown computation supported by T-SQL operators
 
-In SQL Server and APS, not all T-SQL operators can be pushed down to the Hadoop cluster. The following table lists all the supported operators and a subset of the unsupported operators. 
+In SQL Server and APS, not all T-SQL operators can be pushed down to the Hadoop cluster. This table lists all the supported operators and a subset of the unsupported operators. 
 
 ||||
 |-|-|-| 

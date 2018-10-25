@@ -39,7 +39,8 @@ These objects are created in this section:
      ```sql
       CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'password';  
      ```
-    ## Arguments
+    **Arguments**
+
     PASSWORD ='password'
 
     Is the password that's used to encrypt the master key in the database? The password must meet the Windows password policy requirements of the computer that hosts the instance of SQL Server.

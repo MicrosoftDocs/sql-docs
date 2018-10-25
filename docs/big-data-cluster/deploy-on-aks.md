@@ -11,10 +11,7 @@ ms.prod: sql
 
 # Configure Azure Kubernetes Service for SQL Server 2019 (preview) deployments
 
-This article describes how to use Azure Kubernetes Service (AKS) for SQL Server 2019 big data cluster (preview) deployments. 
-
-> [!TIP]
-> For a quickstart on this deployment path, see [Quickstart: Deploy SQL Server big data cluster on Azure Kubernetes Service (AKS)](quickstart-big-data-cluster-deploy.md). 
+This article describes how to configure Azure Kubernetes Service (AKS) for SQL Server 2019 big data cluster (preview) deployments. 
 
 AKS makes it simple to create, configure, and manage a cluster of virtual machines that are preconfigured with a Kubernetes cluster to run containerized applications. This enables you to use your existing skills or draw upon a large and growing body of community expertise, to deploy and manage container-based applications on Microsoft Azure.
 
@@ -108,4 +105,4 @@ An Azure resource group is a logical group in which Azure resources are deployed
 
 The steps in this article configured a Kubernetes cluster in AKS. The next step is to deploy SQL Server 2019 big data to the cluster.
 
-[Deploy SQL Server 2019 big data cluster on Kubernetes](quickstart-big-data-cluster-deploy.md)
+[Quickstart: Deploy SQL Server big data cluster on Azure Kubernetes Service (AKS)](quickstart-big-data-cluster-deploy.md)

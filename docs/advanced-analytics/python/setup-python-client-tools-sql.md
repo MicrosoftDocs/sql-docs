@@ -17,10 +17,10 @@ Python integration is available starting in SQL Server 2017 or later when you in
 In this article, learn how to configure a client development workstation so that you can connect to a remote SQL Server enabled for machine learning and Python integration. At the end, you will have the same Python libraries as those on SQL Server plus the ability to push computations from a local session to a remote session on SQL Server.
 
 > [!Tip]
-> For a demonstration and video walkthrough, see [Run R and Python Remotely in SQL Server from Jupyter Notebooks or any IDE](https://blogs.msdn.microsoft.com/mlserver/2018/07/10/run-r-and-python-remotely-in-sql-server-from-jupyter-notebooks-or-any-ide/) or this [YouTube video](https://youtu.be/D5erljpJDjE).
+> For a video demonstration, see [Run R and Python Remotely in SQL Server from Jupyter Notebooks](https://blogs.msdn.microsoft.com/mlserver/2018/07/10/run-r-and-python-remotely-in-sql-server-from-jupyter-notebooks-or-any-ide/).
 
 > [!Note]
-> An alternative option to installing just the client libraries is using a standalone server. Using a standalone server as a rich client is an option that some customers prefer for more end-to-end scenario work. If you have a [standalone server](../install/sql-machine-learning-standalone-windows-install.md) as provided in SQL Server setup, you have a Python server that is fully decoupled from a SQL Server database engine instance. A standalon server includes the open-source base distribution of Anaconda plus the Microsoft-specific libraries. You can find the Python executable at this location: `C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER`. As validation of your rich client install, open a [Jupyter notebook](#python-tools) to run commands.
+> An alternative to installing just the client libraries is using a standalone server. Using a standalone server as a rich client is an option that some customers prefer for more end-to-end scenario work. If you have a [standalone server](../install/sql-machine-learning-standalone-windows-install.md) as provided in SQL Server setup, you have a Python server that is fully decoupled from a SQL Server database engine instance. A standalon server includes the open-source base distribution of Anaconda plus the Microsoft-specific libraries. You can find the Python executable at this location: `C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER`. As validation of your rich client install, open a [Jupyter notebook](#python-tools) to run commands.
 
 ## 1 - Install Python packages
 
@@ -46,7 +46,7 @@ Installation takes some time to complete. You can monitor progress in the PowerS
 > [!Tip] 
 > We recommend the [Python for Windows FAQ](https://docs.python.org/3/faq/windows.html) for general purppose information on running Python programs on Windows.
 
-## 2 - Locate executables and packages
+## 2 - Locate executables
 
 Still in PowerShell, navigate to the installation folder to confirm the location of the Python.exe, scripts, and other packages. 
 
@@ -79,7 +79,7 @@ Anaconda includes Jupyter Notebooks. As a next step, create a notebook and run s
 
 3. Enter `import revoscalepy` and run the command to load one of the Microsoft-specific libraries.
 
-4. Enter a more complex series of statements. This example generates summary statitistics using [rx_summary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary). Other functions get the location of the sample data and create a data source object for a local .xdf file.
+4. Enter a more complex series of statements. This example generates summary statistics using [rx_summary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary). Other functions get the location of the sample data and create a data source object for a local .xdf file.
 
   ```Python
   import os
@@ -97,7 +97,7 @@ The following screenshot shows the input and a portion of the output, trimmed fo
 
   ![jupyter notebook showing revoscalepy inputs and output](media/jupyter-notebook-local-revo.png)
 
-## 4 - Permissions
+## 4 - Get SQL permissions
 
 To connect to an instance of SQL Server to run scripts and upload data, you must have a valid login on the database server. You can use either a SQL login or integrated Windows authentication. We generally recommend that you use Windows integrated authentication, but using the SQL login is simpler for some scenarios, particularly when your script contains connection strings to external data.
 
@@ -173,9 +173,31 @@ The following screenshot shows the input and scatter plot output.
   ![jupyter notebook showing scatter plot output](media/jupyter-notebook-scatterplot.png)
 
 
+
+## 6 - Link IDE to python.exe
+
+If you are simply debugging scripts from the command line, you can get by with the standard Python tools. However, if you are developing new solutions, you might require a full-featured Python IDE. Popular options are:
+
++ [Visual Studio 2017 Community Edition](https://www.visualstudio.com/vs/features/python/) with Python
++ [AI tools for Visual Studio](https://docs.microsoft.com/visualstudio/ai/installation)
++ [Python in Visual Studio Code](https://code.visualstudio.com/docs/languages/python)
++ Popular third-party tools such as PyCharm, Spyder, and Eclipse
+
+We recommend Visual Studio because it supports database projects as well as machine learning projects. For help configuring a Python environment, see [Managing Python environments in Visual Studio](https://docs.microsoft.com/visualstudio/python/managing-python-environments-in-visual-studio).
+
+Because developers frequently work with multiple versions of Python, setup does not add Python to your PATH. To use the Python executable and libraries installed by setup, link your IDE to **Python.exe** at the path that also provides **revoscalepy** and **microsoftml**. 
+
+For a Python project in Visual Studio, your custom environment would specify the following values, assuming a default installation.
+
+| Configuration setting | value |
+|-----------------------|-------|
+| **Prefix path** | C:\Program Files\Microsoft\PyForMLS |
+| **Interpreter path** | C:\Program Files\Microsoft\PyForMLS\python.exe |
+| **Windowed interpreter** | C:\Program Files\Microsoft\PyForMLS\pythonw.exe |
+
 <a name="create-iris-remotely"></a>
 
-## Create the Iris database remotely
+## Optional: Create the Iris database remotely
 
 If you have permissions to create a database on the remote server, you can run the following code to create the Iris demo database if it doesn't already exist.
 
@@ -221,27 +243,6 @@ print("Sklearn Iris sample loaded into Iris table")
 ```
 
 <a name="install-ide"></a>
-
-## 6 - Install an IDE
-
-If you are simply debugging scripts from the command line, you can get by with the standard Python tools. However, if you are developing new solutions, you might require a full-featured Python IDE. Popular options are:
-
-+ [Visual Studio 2017 Community Edition](https://www.visualstudio.com/vs/features/python/) with Python
-+ [AI tools for Visual Studio](https://docs.microsoft.com/visualstudio/ai/installation)
-+ [Python in Visual Studio Code](https://code.visualstudio.com/docs/languages/python)
-+ Popular third-party tools such as PyCharm, Spyder, and Eclipse
-
-We recommend Visual Studio because it supports database projects as well as machine learning projects. For help configuring a Python environment, see [Managing Python environments in Visual Studio](https://docs.microsoft.com/visualstudio/python/managing-python-environments-in-visual-studio).
-
-Because developers frequently work with multiple versions of Python, setup does not add Python to your PATH. To use the Python executable and libraries installed by setup, link your IDE to **Python.exe** at the path that also provides **revoscalepy** and **microsoftml**. 
-
-For a Python project in Visual Studio, your custom environment would specify the following values, assuming a default installation.
-
-| Configuration setting | value |
-|-----------------------|-------|
-| **Prefix path** | C:\Program Files\Microsoft\PyForMLS |
-| **Interpreter path** | C:\Program Files\Microsoft\PyForMLS\python.exe |
-| **Windowed interpreter** | C:\Program Files\Microsoft\PyForMLS\pythonw.exe |
 
 ## Next steps
 

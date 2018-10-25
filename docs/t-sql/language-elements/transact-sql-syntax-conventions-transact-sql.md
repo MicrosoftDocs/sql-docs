@@ -47,7 +47,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |{ } (braces)|Required syntax items. Do not type the braces.|  
 |[**,**...*n*]|Indicates the preceding item can be repeated *n* number of times. The occurrences are separated by commas.|  
 |[...*n*]|Indicates the preceding item can be repeated *n* number of times. The occurrences are separated by blanks.|  
-|;|[!INCLUDE[tsql](../../includes/tsql-md.md)] statement terminator.Although the semicolon is not required for most statements in this version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], it will be required in a future version.|  
+|;|[!INCLUDE[tsql](../../includes/tsql-md.md)] statement terminator. Although the semicolon is not required for most statements in this version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], it will be required in a future version.|  
 |\<label> ::=|The name for a block of syntax. This convention is used to group and label sections of lengthy syntax or a unit of syntax that can be used in more than one location within a statement. Each location in which the block of syntax can be used is indicated with the label enclosed in chevrons: \<label>.<br /><br /> A set is a collection of expressions, for example \<grouping set>; and a list is a collection of sets, for example \<composite element list>.|  
   
 ## Multipart Names  

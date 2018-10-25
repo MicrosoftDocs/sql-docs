@@ -1,6 +1,6 @@
 ---
 title: Security concepts for SQL Server big data cluster | Microsoft Docs
-description:
+description: This article describes security concepts for SQL Server 2019 big data cluster.
 author: nelgson 
 ms.author: negust 
 manager: craigg
@@ -11,11 +11,11 @@ ms.prod: sql
 
 # Security concepts for SQL Server big data cluster
 
-A secure Big Data cluster implies consistent and coherent support for authentication and authorization scenarios, across both SQL Server and HDFS/Spark. Authentication is the process of verifying the identity of a user or service and ensuring they are who they are claiming to be. Authorization refers to granting or denying of access to specific resources based on the requesting user's identity. This step is performed after a user is identified through authentication.
+A secure big data cluster implies consistent and coherent support for authentication and authorization scenarios, across both SQL Server and HDFS/Spark. Authentication is the process of verifying the identity of a user or service and ensuring they are who they are claiming to be. Authorization refers to granting or denying of access to specific resources based on the requesting user's identity. This step is performed after a user is identified through authentication.
 
 Authorization in Big Data context is usually performed through access control lists (ACLs), which associate user identities with specific permissions. HDFS supports authorization by limiting access to service APIs, HDFS files and job execution.
 
-This article will cover the key security-related concepts in the Big Data cluster.
+This article will cover the key security-related concepts in the big data cluster.
 
 ## Cluster Endpoints
 
@@ -75,5 +75,5 @@ Communication with non-SQL services within the big data cluster, such as Livy to
 
 To learn more about the SQL Server big data clusters, see the following articles:
 
-- [What is SQL Server 2019 big data clusters?](big-data-cluster-overview.md)
+- [What are SQL Server 2019 big data clusters?](big-data-cluster-overview.md)
 - [Quickstart: Deploy SQL Server big data cluster on Kubernetes](quickstart-big-data-cluster-deploy.md)

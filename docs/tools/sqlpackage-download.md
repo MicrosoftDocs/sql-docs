@@ -29,9 +29,10 @@ For details about the latest release, see the [release notes](sqlpackage-release
 
 This release of sqlpackage includes a standard Windows installer experience, and a .zip: 
 
-1. Download and run the [DacFramework.msi installer for Windows](https://go.microsoft.com/fwlink/?linkid=875508).
+1. Download and run the [DacFramework.msi installer for Windows](https://go.microsoft.com/fwlink/?linkid=2033947).
 2. Open a new Command Prompt window, and run sqlpackage.exe
-    - sqlpackage is installed to the ```C:\Program Files\Microsoft SQL Server\140\DAC\bin``` folder
+    - sqlpackage is installed to the ```C:\Program Files\Microsoft SQL Server\150\DAC\bin``` folder
+    - Installing the x86 version on a x64 machine, sqlpackage is installed to the ```C:\Program Files (x86)\Microsoft SQL Server\150\DAC\bin``` folder
 
 ## Get sqlpackage (preview) for macOS
 

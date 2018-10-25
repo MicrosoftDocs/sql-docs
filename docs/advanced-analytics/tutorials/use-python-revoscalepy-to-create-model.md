@@ -13,13 +13,13 @@ manager: cgronlun
 # Use Python with revoscalepy to create a model that runs remotely on SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-The [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) Python library from Microsoft provides data science algorithms for data exploration, visualization, transformations, and analysis. This library has strategic importance in Python integration scenarios in SQL Server. On a multi-core server, **revoscalepy** functions can run in parallel. In a distributed architecture with a central server and client workstations (separate physical compters, all having the same **revoscalepy** library), you can write Python code that starts locally, but then shifts execution to a remote SQL Server instance.
+The [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) Python library from Microsoft provides data science algorithms for data exploration, visualization, transformations, and analysis. This library has strategic importance in Python integration scenarios in SQL Server. On a multi-core server, **revoscalepy** functions can run in parallel. In a distributed architecture with a central server and client workstations (separate physical computers, all having the same **revoscalepy** library), you can write Python code that starts locally, but then shifts execution to a remote SQL Server instance.
 
-You can find **revoscalepy** in the following Microsoft product:
+You can find **revoscalepy** in the following Microsoft products and distributions:
 
-+ SQL Server with [Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)
-+ A non-SQL standalone [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/index)
-+ In [client-side Python library](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter) used for development on a workstation 
++ [SQL Server Machine Learning Services (in-database)](../install/sql-machine-learning-services-windows-install.md)
++ [Microsoft Machine Learning Server (non-SQL, standalone server)](https://docs.microsoft.com/machine-learning-server/index)
++ [Client-side Python libraries (for development workstations)](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter) 
 
 This exercise demonstrates how to create a linear regression model based on [rx_lin_mod](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-lin-mod), one of the algorithms in **revoscalepy** that accepts compute context as an input. The code you'll run in this exercise shifts code execution from a local to remote computing environment, enabled by **revoscalepy** functions that enable a remote compute context.
 

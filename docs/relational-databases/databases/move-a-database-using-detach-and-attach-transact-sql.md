@@ -34,8 +34,8 @@ manager: craigg
 1.  Detach the database. For more information, see [Detach a Database](../../relational-databases/databases/detach-a-database.md).  
   
 2.  In a Windows Explorer or Windows Command Prompt window, move the detached database file or files and log file or files to the new location.  
-
-  You should move the log files even if you intend to create new log files. In some cases, reattaching a database requires its existing log files. Therefore, always keep all the detached log files until the database has been successfully attached without them.  
+  
+     You should move the log files even if you intend to create new log files. In some cases, reattaching a database requires its existing log files. Therefore, always keep all the detached log files until the database has been successfully attached without them.  
   
     > [!NOTE]  
     >  If you try to attach the database without specifying the log file, the attach operation will look for the log file in its original location. If a copy of the log still exists in the original location, that copy is attached. To avoid using the original log file, either specify the path of the new log file or remove the original copy of the log file (after copying it to the new location).  

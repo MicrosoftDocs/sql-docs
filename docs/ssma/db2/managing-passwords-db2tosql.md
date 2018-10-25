@@ -123,5 +123,5 @@ Example:
 
   
 ## See Also  
-[Executing the SSMA Console](http://msdn.microsoft.com/en-us/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  
+[Executing the SSMA Console](http://msdn.microsoft.com/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  
   

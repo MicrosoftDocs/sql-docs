@@ -66,7 +66,7 @@ manager: craigg
 |-|-|  
 |System Object|Description|  
 |**MSDB**|Stores the metadata, backup history for all the backups created by [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
-|[smart_admin.set_db_backup &#40;Transact-SQL&#41;](https://msdn.microsoft.com/en-us/library/dn451013(v=sql.120).aspx)|System stored procedure for enabling and configuring [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] for a database.|  
+|[smart_admin.set_db_backup &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/dn451013(v=sql.120).aspx)|System stored procedure for enabling and configuring [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] for a database.|  
 |[smart_admin.set_instance_backup &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/dn451009(v=sql.120).aspx)|System stored procedure for enabling and configuring default settings [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] for the SQL Server instance.|  
 |[smart_admin.sp_ backup_master_switch &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-backup-master-switch-transact-sql)|System stored procedure to pause and resume [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
 |[smart_admin.sp_set_parameter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-set-parameter-transact-sql)|System stored procedure to enable and configure monitoring for [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Examples: enabling extended events, mail settings for notifications.|  

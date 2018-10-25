@@ -92,9 +92,9 @@ Review the following list before adding users to a native mode report server.
 ## Next steps
 
 [Create and Manage Role Assignments](../../reporting-services/security/create-and-manage-role-assignments.md)   
-[New Role Assignment: Edit Role Assignment Page &#40;Report Manager&#41;](http://msdn.microsoft.com/library/3319ced0-4b86-42af-b18d-da41a625113c)   
-[Security Properties Page, Items &#40;Report Manager&#41;](http://msdn.microsoft.com/library/351b8503-354f-4b1b-a7ac-f1245d978da0)   
+[New Role Assignment: Edit Role Assignment Page &#40;Report Manager&#41;](https://msdn.microsoft.com/library/3319ced0-4b86-42af-b18d-da41a625113c)   
+[Security Properties Page, Items &#40;Report Manager&#41;](https://msdn.microsoft.com/library/351b8503-354f-4b1b-a7ac-f1245d978da0)   
 [Role Assignments](../../reporting-services/security/role-assignments.md)   
 [Role Definitions](../../reporting-services/security/role-definitions.md)  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

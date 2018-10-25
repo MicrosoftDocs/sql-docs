@@ -125,6 +125,6 @@ For information on how to install SQL Server 2016 Reporting Services native mode
 
 With your report server installed, begin to create reports and deploy those to your report server. For information on how to start with Report Builder, see [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md).
 
-To create reports using SQL Server Data Tools, [download SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714).
+To create reports using SQL Server Data Tools, [download SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714).
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

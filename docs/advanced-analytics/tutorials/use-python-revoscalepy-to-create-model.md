@@ -1,6 +1,6 @@
 ---
 title: Use Python with revoscalepy to create a model in SQL Server | Microsoft Docs
-description: Write Python script using revoscalepy functions to create data science models in SQL Server.
+description: Write Python script using revoscalepy functions to create data science models that run remotely in SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -10,17 +10,17 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-# Use Python with revoscalepy to create a model
+# Use Python with revoscalepy to create a model that runs remotely on SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-The [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) Python library from Microsoft provides data science algorithms for data exploration, visualization, transformations, and analysis. You can find this library in SQL Server with [machine learning services](../install/sql-machine-learning-services-windows-install.md), in the non-SQL standalone [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/index), and as a [client-side Python library](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter) used for development on a workstation. From a workstation, you can call revoscalepy functions that shift code execution from the local system to a remote SQL Server or Machine Learning Server.
+The [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) Python library from Microsoft provides data science algorithms for data exploration, visualization, transformations, and analysis. You can find this library in SQL Server with [Machine Learning Services](../install/sql-machine-learning-services-windows-install.md), in a non-SQL standalone [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/index), and as a [client-side Python library](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter) used for development on a workstation. From a workstation, you can call **revoscalepy** functions that shift code execution from the local system to a remote SQL Server or Machine Learning Server.
 
-This exercise demonstrates how to create a linear regression model. It also covers shifting code execution from a local to remote computing environment, enabled by revoscalepy functions that set a remote compute context.
+This exercise demonstrates how to create a linear regression model based on [rx_lin_mod](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-lin-mod), one of the algorithms in **revoscalepy** that accepts compute context as an input. The code you'll run in this exercise shifts code execution from a local to remote computing environment, enabled by **revoscalepy** functions that enable a remote compute context.
 
 By completing this tutorial, you will learn how to:
 
 > [!div class="checklist"]
-> * Use revoscalepy to create a linear model
+> * Use **revoscalepy** to create a linear model
 > * Shift operations from local to remote compute context
 
 ## Prerequisites
@@ -29,14 +29,14 @@ Sample data used in this exercise is the [**flightdata**](demo-data-airlinedemo-
 
 You need an IDE to run the sample code in this article, and the IDE must be linked to the Python executable.
 
-To practice a compute context shift, you need a [local workstation](../python/set-up-python-client-tools-sql.md) and a SQL Server database engine instance with [Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) and Python enabled. 
+To practice a compute context shift, you need a [local workstation](../python/setup-python-client-tools-sql.md) and a SQL Server database engine instance with [Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) and Python enabled. 
 
 > [!Tip]
-> If you don't have two computers, you can simulate a remote compute context on one physical computer by installing relevant applications. First, an installation of [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) operates as the "remote" instance. Second, an installation of the [Python client libraries operates](../python/set-up-python-client-tools-sql.md) as the client. You will have two copies of the same Python distribution and Microsoft Python libraries on the same machine. You will have to keep track of file paths and which copy of the Python.exe you are using to complete the exercise successfully.
+> If you don't have two computers, you can simulate a remote compute context on one physical computer by installing relevant applications. First, an installation of [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) operates as the "remote" instance. Second, an installation of the [Python client libraries operates](../python/setup-python-client-tools-sql.md) as the client. You will have two copies of the same Python distribution and Microsoft Python libraries on the same machine. You will have to keep track of file paths and which copy of the Python.exe you are using to complete the exercise successfully.
 
 ## Remote compute contexts and revoscalepy
 
-This sample demonstrates the process of creating a Python model in a remote compute context, which lets you work from a client, but choose a remote environment, such as SQL Server, Spark, or Machine Learning Server, where the operations are actually performed. Using compute contexts makes it easier to write code once and deploy it to any supported environment.
+This sample demonstrates the process of creating a Python model in a remote compute context, which lets you work from a client, but choose a remote environment, such as SQL Server, Spark, or Machine Learning Server, where the operations are actually performed. The objective of remote compute context is to bring computation to where the data resides.
 
 To execute Python code in SQL Server requires the **revoscalepy** package. This is a special Python package provided by Microsoft, similar to the **RevoScaleR** package for the R language. The **revoscalepy** package supports the creation of compute contexts, and provides the infrastructure for passing data and models between a local workstation and a remote server. The **revoscalepy** function that supports in-database code execution is [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rxinsqlserver).
 

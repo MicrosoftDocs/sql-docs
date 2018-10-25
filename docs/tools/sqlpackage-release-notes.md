@@ -15,6 +15,24 @@ manager: kenvh
 
 **[Download the latest version](sqlpackage-download.md)**
 
+## sqlpackage 18.0
+
+Release date: October 24, 2018  
+Build: 15.0.4200.1 
+
+The release includes the following features and fixes:
+
+- Added support for database compatibility level 150.
+- Added support for Managed Instances.
+- Added MaxParallelism command-line parameter to specify the degree of parallelism for database operations.
+- Add AccessToken command-line parameter to specify an authentication token when connecting to SQL Server.
+- Added support to stream BLOB/CLOB data types for imports.
+- Added support for scalar UDF 'INLINE' option.
+- Added support for graph table 'MERGE' syntax.
+- Fixed unresolved pseudo-column for graph tables.
+- Fixed creating a database with memory optimized file groups when memory optimized tables are used.
+- Fixed including extended properties on external tables.
+
 ## sqlpackage 17.8
 
 Release date: June 22, 2018  
@@ -23,7 +41,6 @@ Build: 14.0.4079.2
 The release includes the following fixes:
 
 - Improved error messages for connection failures, including the SqlClient exception message.
-- Added MaxParallelism command-line  parameter to specify the degree of parallelism for database operations.
 - Support index compression on single partition indexes for import/export.
 - Fixed a reverse engineering issue for XML column sets with SQL 2017 and later.
 - Fixed an issue where scripting the database compatibility level 140 was ignored for Azure SQL Database.

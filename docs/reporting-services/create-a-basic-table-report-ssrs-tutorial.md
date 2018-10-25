@@ -53,4 +53,4 @@ You must also have read-only permissions to retrieve data from the [!INCLUDE[ssS
 
 [Reporting Services Tutorials](../reporting-services/reporting-services-tutorials-ssrs.md)  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

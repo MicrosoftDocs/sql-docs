@@ -35,8 +35,8 @@ These tutorials introduce you a variety of visualizations you can create in Repo
   
 ## See Also  
 * [AdventureWorks sample databases](https://github.com/Microsoft/sql-server-samples/releases)  
-* [Reporting Services Samples on the TechNet wiki](http://go.microsoft.com/fwlink/?LinkId=198283)  
-* [TechNet Wiki: SQL Server 2012 Samples](http://go.microsoft.com/fwlink/?linkID=220734)  
+* [Reporting Services Samples on the TechNet wiki](https://go.microsoft.com/fwlink/?LinkId=198283)  
+* [TechNet Wiki: SQL Server 2012 Samples](https://go.microsoft.com/fwlink/?linkID=220734)  
  
   
   

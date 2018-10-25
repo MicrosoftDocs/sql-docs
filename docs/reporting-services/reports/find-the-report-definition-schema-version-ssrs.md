@@ -81,4 +81,4 @@ A report definition file specifies the RDL namespace for the version of the repo
 [Upgrade Reports](../../reporting-services/install-windows/upgrade-reports.md)   
 [Report Definition Language](../../reporting-services/reports/report-definition-language-ssrs.md)  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

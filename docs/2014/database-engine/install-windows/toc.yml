@@ -85,8 +85,6 @@
 - name: Install SQL Server 2014 Business Intelligence Features
   href: ../../sql-server/install/install-sql-server-business-intelligence-features.md
   items:
-  - name: Example License Topologies and Costs  for Business Intelligence
-    href: ../../sql-server/install/example-license-topologies-costs-self-service-business-intelligence.md
   - name: Install Analysis Services in Multidimensional and Data Mining Mode
     href: ../../sql-server/install/install-analysis-services-in-multidimensional-and-data-mining-mode.md
   - name: Install Analysis Services in Tabular Mode

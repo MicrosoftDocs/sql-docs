@@ -31,11 +31,11 @@ ms.author: maggies
   
 ## System Requirements
   
- See the **System Requirements** section of the [Report Builder download page](http://go.microsoft.com/fwlink/?LinkID=734968) on the Microsoft Download Center.
+ See the **System Requirements** section of the [Report Builder download page](https://go.microsoft.com/fwlink/?LinkID=734968) on the Microsoft Download Center.
   
 ##  <a name="download"></a> To install [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] from the download site  
   
-1.  On  the [Report Builder page of the Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=734968) , click **Download**.  
+1.  On  the [Report Builder page of the Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=734968) , click **Download**.  
   
 2.  After [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] has finished downloading, click  **Run**.  
   
@@ -66,7 +66,7 @@ ms.author: maggies
   
  If you want a completely silent installation, with no user interface interaction at all, specify the **/quiet** option. By design, the quiet option flag suppresses installation errors. It is therefore recommended that you include the **/l** option, which specifies logging, when you use the quiet option.   
   
-1.  On  the [Report Builder page of the Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=734968), click **Download**.  
+1.  On  the [Report Builder page of the Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=734968), click **Download**.  
   
 2.  After [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] has finished downloading, click  **Save**.  
   

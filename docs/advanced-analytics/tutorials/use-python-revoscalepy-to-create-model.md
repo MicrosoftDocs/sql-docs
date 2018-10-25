@@ -29,10 +29,10 @@ Sample data used in this exercise is the [**flightdata**](demo-data-airlinedemo-
 
 You need an IDE to run the sample code in this article, and the IDE must be linked to the Python executable.
 
-To practice a compute context shift, you need a [local workstation](../r/set-up-a-data-science-client.md) and a SQL Server database engine instance with [Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)) and Python enabled. 
+To practice a compute context shift, you need a [local workstation](../python/set-up-python-client-tools-sql.md) and a SQL Server database engine instance with [Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) and Python enabled. 
 
 > [!Tip]
-> If you don't have two computers, you can simulate a remote compute context on one physical computer by installing relevant applications. First, an installation of SQL Server Machine Learning Services operates as the "remote" instance. Second, an installation of the Python client libraries operates as the client. You will have two copies of the same Python distribution and Microsoft Python libraries on the same machine. You will have to keep track of file paths and which copy of the exe you are using to complete the exercise successfully.
+> If you don't have two computers, you can simulate a remote compute context on one physical computer by installing relevant applications. First, an installation of [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) operates as the "remote" instance. Second, an installation of the [Python client libraries operates](../python/set-up-python-client-tools-sql.md) as the client. You will have two copies of the same Python distribution and Microsoft Python libraries on the same machine. You will have to keep track of file paths and which copy of the Python.exe you are using to complete the exercise successfully.
 
 ## Remote compute contexts and revoscalepy
 
@@ -113,7 +113,7 @@ def test_linmod_sql():
 
 ### Defining a data source vs. defining a compute context
 
-A data source is different from a compute context. The _data source_ defines the data used in your code. The compute context defines where the code will be executed. However, they use some of the same information:
+A data source is different from a compute context. The *data source* defines the data used in your code. The compute context defines where the code will be executed. However, they use some of the same information:
 
 + Python variables, such as `sql_query` and `sql_connection_string`, define the source of the data. 
 
@@ -165,5 +165,4 @@ For SQL Server compute contexts, you can set the batch size, or provide hints ab
 These additional Python samples and tutorials demonstrate end-to-end scenarios using more complex data sources, as well as the use of remote compute contexts.
 
 + [In-Database Python for SQL developers](sqldev-in-database-python-for-sql-developers.md)
-+ [Build a predictive model using Python and SQL Server](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/)
 + [Build a predictive model using Python and SQL Server](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/)

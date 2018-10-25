@@ -25,7 +25,7 @@ In this article, learn how to configure a client development workstation so that
 
 ## 1 - Install Python packages
 
-Local workstations must have the same Python package versions as those on SQL Server, including the base distribution, and Microsoft-specific packages [revoscalepy](https://docs.microsoft.com//machine-learning-server/python-reference/revoscalepy/revoscalepy-package) and [microsftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package). The [azureml-model-management](https://docs.microsoft.com/en-us/machine-learning-server/python-reference/azureml-model-management-sdk/azureml-model-management-sdk) package is also installed, but it applies to operationalization tasks associated with a standalone (non-instance) Machine Learning Server context. For in-database analytics on a SQL Server instance, operationalization is through stored procedures.
+Local workstations must have the same Python package versions as those on SQL Server, including the base distribution, and Microsoft-specific packages [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) and [microsftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package). The [azureml-model-management](https://docs.microsoft.com/machine-learning-server/python-reference/azureml-model-management-sdk/azureml-model-management-sdk) package is also installed, but it applies to operationalization tasks associated with a standalone (non-instance) Machine Learning Server context. For in-database analytics on a SQL Server instance, operationalization is through stored procedures.
 
 1. Download the installation script to install Anaconda 4.2.0 with Python 3.5.2 and the three previously listed Microsoft packages.
 
@@ -177,8 +177,6 @@ The following screenshot shows the input and scatter plot output.
 
   ![jupyter notebook showing scatter plot output](media/jupyter-notebook-scatterplot.png)
 
-
-
 ## 6 - Link IDE to python.exe
 
 If you are simply debugging scripts from the command line, you can get by with the standard Python tools. However, if you are developing new solutions, you might require a full-featured Python IDE. Popular options are:
@@ -204,7 +202,7 @@ For a Python project in Visual Studio, your custom environment would specify the
 
 ## Optional: Create the Iris database remotely
 
-If you have permissions to create a database on the remote server, you can run the following code to create the Iris demo database used for the example code in this article.
+If you have permissions to create a database on the remote server, you can run the following code to create the Iris demo database used for the examples in this article.
 
 ### 1 - Create the irissql database
 

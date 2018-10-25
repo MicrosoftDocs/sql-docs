@@ -75,5 +75,5 @@ Communication with non-SQL services within the big data cluster, such as Livy to
 
 To learn more about the SQL Server big data clusters, see the following articles:
 
-- [What is SQL Server 2019 big data clusters?](big-data-cluster-overview.md)
+- [What are SQL Server 2019 big data clusters?](big-data-cluster-overview.md)
 - [Quickstart: Deploy SQL Server big data cluster on Kubernetes](quickstart-big-data-cluster-deploy.md)

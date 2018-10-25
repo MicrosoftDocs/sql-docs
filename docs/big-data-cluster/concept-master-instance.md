@@ -58,6 +58,6 @@ With SQL Server 2019 big data clusters, you can do more with your enterprise dat
 
 ## Next steps
 
-To learn more about the SQL Server big data Clusters, see the following overview:
+To learn more about the SQL Server big data clusters, see the following overview:
 
-- [What is SQL Server 2019 big data Clusters?](big-data-cluster-overview.md)
+- [What are SQL Server 2019 big data clusters?](big-data-cluster-overview.md)

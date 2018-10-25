@@ -51,7 +51,7 @@ For guidance on configuring one of these Kubernetes cluster options for a SQL Se
 
 After you have configured your Kubernetes cluster, you can proceed with the deployment for SQL Server big data cluster. To deploy a big data cluster in Azure with all default configurations for a dev/test environment, follow the instructions in this article:
 
-[Quickstart: Deploy SQL Server big data Cluster on Kubernetes](quickstart-big-data-cluster-deploy.md)
+[Quickstart: Deploy SQL Server big data cluster on Kubernetes](quickstart-big-data-cluster-deploy.md)
 
 If you want to customize your big data cluster configuration according to your workload needs, follow the next set of instructions.
 

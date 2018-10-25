@@ -64,4 +64,4 @@ Authentication to the controller service endpoint is based on username and passw
 
 To learn more about the SQL Server big data clusters, see the following overview:
 
-- [What is SQL Server 2019 big data clusters?](big-data-cluster-overview.md)
+- [What are SQL Server 2019 big data clusters?](big-data-cluster-overview.md)

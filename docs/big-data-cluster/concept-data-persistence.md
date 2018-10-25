@@ -75,7 +75,7 @@ export STORAGE_POOL_STORAGE_CLASS_NAME=managed-premium
 export STORAGE_POOL_STORAGE_SIZE=100Gi
 ```
 
-Here is a comprehensive list of the environment variables related to setting up persistent storage for the SQL Server Big Data cluster:
+Here is a comprehensive list of the environment variables related to setting up persistent storage for the SQL Server big data cluster:
 
 | Environment variable | Default value | Description |
 |---|---|---|

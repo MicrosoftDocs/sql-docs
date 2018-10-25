@@ -11,7 +11,7 @@ ms.prod: sql
 
 # What is a SQL big data clusters data pool?
 
-This article describes the role of *SQL Server data pools* in a SQL Server 2019 preview Big Data cluster. The following sections describe the architecture and functionality of a SQL data pool.
+This article describes the role of *SQL Server data pools* in a SQL Server 2019 preview big data cluster. The following sections describe the architecture and functionality of a SQL data pool.
 
 ## Data pool architecture
 

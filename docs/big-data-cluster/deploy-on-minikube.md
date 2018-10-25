@@ -15,7 +15,7 @@ Minikube is a tool that makes it easy to run Kubernetes on a single machine like
 
 ## Prerequisites
 
-- To run a Minikube cluster for SQL Server 2019 CTP 2.0 in a SQL Big Data cluster configuration, it is recommended that your machine have at least 32 GB of RAM.
+- To run a Minikube cluster for SQL Server 2019 CTP 2.0 in a SQL big data cluster configuration, it is recommended that your machine have at least 32 GB of RAM.
 
    > [!TIP] 
    > If the machine has only the minimum recommended memory, then configure the deployment of the cluster to have only 1 compute pool instance, 1 data pool instance, and 1 storage pool instance. This configuration should only be used for evaluation environments where the durability and availability of the data is unimportant. See the [deployment documentation](deployment-guidance.md#define-environment-variables) for more information on the environment variables to set to configure the number of replicas for data pools, compute pools, and storage pools.

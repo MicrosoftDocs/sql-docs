@@ -77,4 +77,4 @@ If you are using a SharePoint product, you can create a dashboard or web part Pa
  [Report Viewer web part on a SharePoint Site](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
  [Customize the Report Viewer web part](../../reporting-services/report-server-sharepoint/customize-the-report-viewer-web-part.md)  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

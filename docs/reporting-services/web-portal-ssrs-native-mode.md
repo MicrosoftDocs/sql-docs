@@ -123,4 +123,4 @@ You can enter a search team, and you will see everything you can access. The res
 [Planning for Reporting Services Browser Support](../reporting-services/browser-support-for-reporting-services-and-power-view.md)  
 [Reporting Services Features supported by the Editions of SQL Server 2016](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)  
 
-More questions? [Try the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

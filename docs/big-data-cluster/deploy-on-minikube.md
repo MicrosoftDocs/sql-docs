@@ -1,6 +1,6 @@
 ---
-title: Configure Minikube for SQL Server 2019 CTP 2.0 deployments | Microsoft Docs
-description:
+title: Configure Minikube for SQL Server 2019 big data cluster deployments | Microsoft Docs
+description: Learn how to configure Minikube for SQL Server 2019 big data cluster (preview) deployments on a single machine.
 author: rothja 
 ms.author: jroth 
 manager: craigg
@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.prod: sql
 ---
 
-# Configure Minikube for SQL Server 2019 CTP 2.0
+# Configure Minikube for SQL Server 2019 big data cluster deployments
 
-Minikube is a tool that makes it easy to run Kubernetes on a single machine like a laptop or a desktop. Minikube runs a single-node Kubernetes cluster inside a VM on your laptop for users looking to try out Kubernetes or develop with it day-to-day. 
+This article describes how to configure **minikube** on a single machine for SQL Server 2019 big data cluster (preview) deployments. Minikube is a tool that makes it easy to run Kubernetes on a single machine like a laptop or a desktop. Minikube runs a single-node Kubernetes cluster inside a VM on your laptop for users looking to try out Kubernetes or develop with it day-to-day. 
 
 ## Prerequisites
 
-- To run a Minikube cluster for SQL Server 2019 CTP 2.0 in a SQL Big Data cluster configuration, it is recommended that your machine have at least 32 GB of RAM.
+- To run a Minikube cluster for SQL Server 2019 CTP 2.0 in a SQL big data cluster configuration, it is recommended that your machine have at least 32 GB of RAM.
 
    > [!TIP] 
    > If the machine has only the minimum recommended memory, then configure the deployment of the cluster to have only 1 compute pool instance, 1 data pool instance, and 1 storage pool instance. This configuration should only be used for evaluation environments where the durability and availability of the data is unimportant. See the [deployment documentation](deployment-guidance.md#define-environment-variables) for more information on the environment variables to set to configure the number of replicas for data pools, compute pools, and storage pools.
@@ -67,6 +67,6 @@ Set-VM -Name minikube -CheckpointType Disabled -AutomaticCheckpointsEnabled $fal
 
 ## Next steps
 
-The steps in this article configured a Minikube cluster. The next step is to deploy SQL Server 2019 CTP 2.0 to the cluster.
+The steps in this article configured a Minikube cluster. The next step is to deploy SQL Server 2019 big data cluster. For instructions, see the following article:
 
 [Deploy SQL Server 2019 CTP 2.0 on Kubernetes](deployment-guidance.md#deploy)

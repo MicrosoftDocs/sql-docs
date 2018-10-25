@@ -34,7 +34,7 @@ ms.author: maghan
 > [!TIP]  
 >  For the latest information regarding issues with SQL Server, see the following:  
 >   
->  -   [SQL Server 2016 Release Notes](http://go.microsoft.com/fwlink/?LinkID=398124).  
+>  -   [SQL Server 2016 Release Notes](https://go.microsoft.com/fwlink/?LinkID=398124).  
   
   
 ##  <a name="bkmk_side_by_side"></a> Side By Side Installations  
@@ -227,17 +227,17 @@ ms.author: maghan
   
 -   [Overview of the upgrade process to SharePoint 2016](https://technet.microsoft.com/library/cc262483\(v=office.16\)).
 
--   [Overview of the upgrade process to SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256688).
+-   [Overview of the upgrade process to SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256688).
   
--   [Clean up preparations before an upgrade to SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256689).  
+-   [Clean up preparations before an upgrade to SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256689).  
   
 -   [Upgrade databases from SharePoint 2013 to SharePoint 2016](https://technet.microsoft.com/library/cc303436\(v=office.16\)).
 
--   [Upgrade databases from SharePoint 2010 to SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256690).  
+-   [Upgrade databases from SharePoint 2010 to SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256690).  
 
 ## Next steps
 
 [Upgrade Reports](../../reporting-services/install-windows/upgrade-reports.md)   
 [Upgrade to SQL Server 2016 Using the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

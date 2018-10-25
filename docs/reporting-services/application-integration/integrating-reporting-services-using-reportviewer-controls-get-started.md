@@ -79,7 +79,7 @@ Make sure to update any assembly references to version *15.0.0.0*, including the
 <?xml version="1.0"?>
 <!--
   For more information on how to configure your ASP.NET application, please visit
-  http://go.microsoft.com/fwlink/?LinkId=169433
+  https://go.microsoft.com/fwlink/?LinkId=169433
   -->
 <configuration>
   <system.web>
@@ -261,5 +261,5 @@ Let the team know about issues on the [Reporting Services forums](https://social
 ## See also
 
 [Data collection in the Report Viewer control](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)  
-More questions? [Try the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
 

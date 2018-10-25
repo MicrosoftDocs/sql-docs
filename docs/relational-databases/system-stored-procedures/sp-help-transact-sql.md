@@ -44,7 +44,7 @@ sp_help [ [ @objname = ] 'name' ]
  0 (success) or 1 (failure)  
   
 ## Result Sets  
- The result sets that are returned depend on whether *name* is specified, when it is specified, and what database object it is.  
+ The result sets that are returned depend on whether *name* is specified, when it is specified, and which database object it is.  
   
 1.  If **sp_help** is executed with no arguments, summary information of objects of all types that exist in the current database is returned.  
   

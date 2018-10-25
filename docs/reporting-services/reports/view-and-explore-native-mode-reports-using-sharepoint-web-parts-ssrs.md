@@ -95,7 +95,7 @@ ms.author: maghan
   
     > rswebparts.cab    00000000-0000-0000-0000-000000000000     True  
   
-     For more information on using PowerShell, see [Install-SPWebPartPack (http://technet.microsoft.com/library/ff607840.aspx)](http://technet.microsoft.com/library/ff607840.aspx).  
+     For more information on using PowerShell, see [Install-SPWebPartPack (https://technet.microsoft.com/library/ff607840.aspx)](https://technet.microsoft.com/library/ff607840.aspx).  
   
 #### Install Web Parts Using STSADM.exe  
   
@@ -163,4 +163,4 @@ ms.author: maghan
   
     3.  Click **Report Viewer**.  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

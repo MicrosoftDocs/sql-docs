@@ -43,6 +43,6 @@ ms.author: maghan
 >  The primary, or base, entity used in the report must be the same entity that you link the report to.  
   
 ## See Also  
- [Link a Report to a Model as a Clickthrough Report](http://msdn.microsoft.com/library/3af42de3-67ef-41c2-bc8a-7045baec6f63)  
+ [Link a Report to a Model as a Clickthrough Report](https://msdn.microsoft.com/library/3af42de3-67ef-41c2-bc8a-7045baec6f63)  
   
   

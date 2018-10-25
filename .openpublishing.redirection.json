@@ -4439,11 +4439,11 @@
         "redirect_url": "/sql/connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows",
         "redirect_document_id": false
       },
-	          {
-            "source_path": "docs/analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md",
-            "redirect_url": "https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net",
-            "redirect_document_id": false
-        }, 
+		{
+			"source_path": "docs/analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md",
+			"redirect_url": "https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net",
+			"redirect_document_id": false
+		}, 
         {
             "source_path": "docs/analysis-services/multidimensional-models/adomd-net/redistributing-adomd-net.md",
             "redirect_url": "https://docs.microsoft.com/bi-reference/adomd/redistributing-adomd-net",
@@ -12548,8 +12548,11 @@
             "source_path": "docs/2014/analysis-services/xmla/xml-elements-properties.md",
             "redirect_url": "https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/xml-elements-properties",
             "redirect_document_id": false
-        }
-
-     
+        },
+      {
+        "source_path": "docs/2014/sql-server/install/example-license-topologies-costs-self-service-business-intelligence.md",
+        "redirect_url": "https://docs.microsoft.com/en-us/sql/sql-server/install/install-sql-server-business-intelligence-features?view=sql-server-2014",
+        "redirect_document_id": false
+      }
     ]
 }

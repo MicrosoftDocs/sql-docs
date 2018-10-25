@@ -1,6 +1,6 @@
 ---
 title: What is a SQL big data clusters data pool? | Microsoft Docs
-description:
+description: This article describes the data pool in a SQL Server 2019 big data cluster.
 author: rothja 
 ms.author: jroth 
 manager: craigg

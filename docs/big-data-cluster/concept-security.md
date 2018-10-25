@@ -1,6 +1,6 @@
 ---
 title: Security concepts for SQL Server big data cluster | Microsoft Docs
-description:
+description: This article describes security concepts for SQL Server 2019 big data cluster.
 author: nelgson 
 ms.author: negust 
 manager: craigg

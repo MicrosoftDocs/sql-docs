@@ -76,4 +76,4 @@ ms.date: 05/24/2018
 [Administer a Report Server Database](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)   
 [Configure and Manage Encryption Keys](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

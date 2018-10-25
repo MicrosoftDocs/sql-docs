@@ -66,4 +66,4 @@ This lesson assumes you are using [!INCLUDE[ssManStudioFull_md](../includes/ssma
 [Create a Database](../relational-databases/databases/create-a-database.md)  
 [Create a Basic Table Report](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -89,4 +89,4 @@ ms.author: maggies
 
 [Managing Report Parts](../../reporting-services/report-design/managing-report-parts.md)  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -124,13 +124,13 @@ ms.author: maggies
  In Report Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], add both the .shp file and the .dbf file to the report project, and then specify the name of the .shp file as the spatial data source.  
   
 ###  <a name="GetShapefiles"></a> Where can I get ESRI shapefiles?  
- ESRI shapefiles are available on the Web. For more information, see [Finding ESRI Shapefiles for a Map](http://go.microsoft.com/fwlink/?linkid=178814).  
+ ESRI shapefiles are available on the Web. For more information, see [Finding ESRI Shapefiles for a Map](https://go.microsoft.com/fwlink/?linkid=178814).  
   
 ###  <a name="SqlServerSpatial"></a> What is a SQL Server spatial query?  
  A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] spatial query is a dataset query that specifies data that is either a SQLGeometry or a SQLGeography data type from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] relational database.  
   
 > [!NOTE]  
->  When you define a data source in the wizard, you will see different query designers in the Design a Query page, depending on what type of data source you are connecting to. For more information, see [Query Designers &#40;Report Builder&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9).  
+>  When you define a data source in the wizard, you will see different query designers in the Design a Query page, depending on what type of data source you are connecting to. For more information, see [Query Designers &#40;Report Builder&#41;](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9).  
   
  When you run the query in the query designer, the result set displays a column with spatial data that appears as text. For example, one row might contain spatial data that is a single point and the next row might contain spatial data that defines a set of points. Each row becomes one map element. You can vary the display of each map element as an indivisible unit.  
   
@@ -179,7 +179,7 @@ ms.author: maggies
   
 -   **Hybrid.** Display the combination of **Road** and **Aerial** views.  
   
- For more information about tiles, see [Bing Maps Tiles System](http://go.microsoft.com/fwlink/?LinkId=147315). For more information about the use of Bing map tiles in your report, see [Additional Terms of Use](http://go.microsoft.com/fwlink/?LinkId=151371).  
+ For more information about tiles, see [Bing Maps Tiles System](https://go.microsoft.com/fwlink/?LinkId=147315). For more information about the use of Bing map tiles in your report, see [Additional Terms of Use](https://go.microsoft.com/fwlink/?LinkId=151371).  
   
  To see a tile background in Design view, you must have Internet access. To see the tile background in preview from a report on a report server, the report server must be configured to support Bing map tiles. For more information, see [Troubleshoot Reports: Map Reports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md) and [Plan a Map Report](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md).  
   

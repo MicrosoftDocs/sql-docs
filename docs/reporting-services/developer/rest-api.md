@@ -63,4 +63,4 @@ Review the available APIs over on [SwaggerHub](https://app.swaggerhub.com/api/mi
 
 Samples are available on [GitHub](https://github.com/Microsoft/Reporting-Services). The sample includes an HTML5 app built on TypeScript, React, and webpack along with a PowerShell example.
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

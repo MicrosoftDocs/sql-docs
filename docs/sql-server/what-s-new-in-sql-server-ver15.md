@@ -30,7 +30,8 @@ Community technology preview (CTP) 2.1 is the latest public release of [!INCLUDE
 - [Database Engine](#databaseengine)
   - Intelligent query processing adds scalar UDF inlining 
   - Improve truncation message for ETL DW scenarios
-  - UTF-8 collations support in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Setup
+  - UTF-8 collations support in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] setup
+  - Use derived table or view aliases in SQL Graph match query
 
 ## CTP 2.0 
 
@@ -208,9 +209,12 @@ To use intelligent query processing features, set database `COMPATIBILITY_LEVEL 
 
 ### <a id="sqlgraph"></a> SQL Graph features
 
-- **Match support in `MERGE` DML** allows you to specify graph relationships in a single statement, instead of separate `INSERT`, `UPDATE`, or `DELETE` statements. Merge your current graph data from node or edge tables with new data using the `MATCH` predicates in the `MERGE` statement. This feature enables `UPSERT` scenarios on edge tables. Users can now use a single merge statement to insert a new edge or update an existing one between two nodes.
+- **Use derived table or view aliases in graph match query (CTP 2.1)** Graph queries on SQL Server 2019 preview support using view and derived table aliases in the `MATCH` syntax. To use these aliases in `MATCH`, the views and derived tables must be created on either a set of node or a set of edge tables, using the `UNION ALL` operator. The node or edge tables may or may not have filters on it. The ability to use derived table and view aliases in `MATCH` queries can be very useful in scenarios where you are looking to query heterogeneous entities or heterogeneous connections between two or more entities in your graph.
 
-- **Edge Constraints** are introduced for edge tables in SQL Graph. Edge tables can connect any node to any other node in the database. With introduction of edge constraints, you can now apply some restrictions on this behavior. The new `CONNECTION` constraint can be used to specify the type of nodes a given edge table will be allowed to connect to in the schema.
+
+- **Match support in `MERGE` DML (CTP 2.0)** allows you to specify graph relationships in a single statement, instead of separate `INSERT`, `UPDATE`, or `DELETE` statements. Merge your current graph data from node or edge tables with new data using the `MATCH` predicates in the `MERGE` statement. This feature enables `UPSERT` scenarios on edge tables. Users can now use a single merge statement to insert a new edge or update an existing one between two nodes.
+
+- **Edge Constraints (CTP 2.0)** are introduced for edge tables in SQL Graph. Edge tables can connect any node to any other node in the database. With introduction of edge constraints, you can now apply some restrictions on this behavior. The new `CONNECTION` constraint can be used to specify the type of nodes a given edge table will be allowed to connect to in the schema.
 
 ### Database scoped default setting for online and resumable DDL operations  (CTP 2.0)
 

@@ -1,15 +1,16 @@
 ---
-title: Set up Python client tools for use with SQL Server Machine Learning | Microsoft Docs
+title: Set up a Python client for use with SQL Server Machine Learning | Microsoft Docs
+description: Set up a Python local environment for remote connections to SQL Server Machine Learning Services with Python.
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 10/24/2018  
+ms.date: 10/25/2018  
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-# Set up Python client tools for use with SQL Server Machine Learning
+# Set up a Python client for use with SQL Server Machine Learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Python integration is available starting in SQL Server 2017 or later when you include the Python option in a Machine Learning Services (In-Database) installation. For more information, see [Install SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md).
@@ -20,7 +21,7 @@ In this article, learn how to configure a client development workstation so that
 > For a video demonstration, see [Run R and Python Remotely in SQL Server from Jupyter Notebooks](https://blogs.msdn.microsoft.com/mlserver/2018/07/10/run-r-and-python-remotely-in-sql-server-from-jupyter-notebooks-or-any-ide/).
 
 > [!Note]
-> An alternative to installing just the client libraries is using a standalone server. Using a standalone server as a rich client is an option that some customers prefer for more end-to-end scenario work. If you have a [standalone server](../install/sql-machine-learning-standalone-windows-install.md) as provided in SQL Server setup, you have a Python server that is fully decoupled from a SQL Server database engine instance. A standalon server includes the open-source base distribution of Anaconda plus the Microsoft-specific libraries. You can find the Python executable at this location: `C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER`. As validation of your rich client install, open a [Jupyter notebook](#python-tools) to run commands.
+> An alternative to installing just the client libraries is using a standalone server. Using a standalone server as a rich client is an option that some customers prefer for more end-to-end scenario work. If you have a [standalone server](../install/sql-machine-learning-standalone-windows-install.md) as provided in SQL Server setup, you have a Python server that is fully decoupled from a SQL Server database engine instance. A standalon server includes the open-source base distribution of Anaconda plus the Microsoft-specific libraries. You can find the Python executable at this location: `C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER`. As validation of your rich client install, open a [Jupyter notebook](#python-tools) to run commands using the Python.exe on the server.
 
 ## 1 - Install Python packages
 
@@ -32,7 +33,7 @@ Local workstations must have the same Python package versions as those on SQL Se
 
   + [https://aka.ms/mls93-py](https://aka.ms/mls93-py) if the remote SQL Server instance is [bound to Machine Learning Server 9.3](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
 
-2. Open PowerShell window with elevated administrator permissions (right-click **Run as administrator**).
+2. Open a PowerShell window with elevated administrator permissions (right-click **Run as administrator**).
 
 3. Go to the folder in which you downloaded the installer and run the script. Add the `-InstallFolder` command-line argument to specify a folder location for the libraries. For example: 
 
@@ -40,6 +41,8 @@ Local workstations must have the same Python package versions as those on SQL Se
    cd {{download-directory}}
    .\Install-PyForMLS.ps1 -InstallFolder "C:\path-to-python-for-mls"
    ```
+
+If you omit the install folder, the default is C:\Program Files\Microsoft\PyForMLS.
 
 Installation takes some time to complete. You can monitor progress in the PowerShell window. When setup is finished, you have a complete set of packages. 
 
@@ -50,14 +53,16 @@ Installation takes some time to complete. You can monitor progress in the PowerS
 
 Still in PowerShell, navigate to the installation folder to confirm the location of the Python.exe, scripts, and other packages. 
 
-1. Enter `cd \` to go to the root drive, and then enter the path you specified for `-InstallFolder` in the previous step. If you omitted this parameter during installation, the default is `cd C:\Program Files\Microsoft\PyForMLS1`.
+1. Enter `cd \` to go to the root drive, and then enter the path you specified for `-InstallFolder` in the previous step. If you omitted this parameter during installation, the default is `cd C:\Program Files\Microsoft\PyForMLS`.
 
 2. Enter `dir *.exe` to list the executables. You should see **python.exe**, **pythonw.exe**, and **uninstall-anaconda.exe**.
 
+  ![List of Python executables](media/powershell-python-exe.png)
+   
 On systems having multiple versions of Python, remember to use this particular Python.exe if you want to load **revoscalepy** and other Microsoft packages.
 
 > [!Note] 
-> The installation script does not modify the PATH environment variable on your computer so the new python interpreter and modules you just installed are not automatically available to other tools you might installed. For help on linking the Python interpreter and libraries to tools, see [Install an IDE](#install-ide).
+> The installation script does not modify the PATH environment variable on your computer, which means that the new python interpreter and modules you just installed are not automatically available to other tools you might have. For help on linking the Python interpreter and libraries to tools, see [Install an IDE](#install-ide).
 
 <a name="python-tool"></a>
 
@@ -79,7 +84,7 @@ Anaconda includes Jupyter Notebooks. As a next step, create a notebook and run s
 
 3. Enter `import revoscalepy` and run the command to load one of the Microsoft-specific libraries.
 
-4. Enter a more complex series of statements. This example generates summary statistics using [rx_summary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary). Other functions get the location of the sample data and create a data source object for a local .xdf file.
+4. Enter a more complex series of statements. This example generates summary statistics using [rx_summary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary) over a local data set. Other functions get the location of the sample data and create a data source object for a local .xdf file.
 
   ```Python
   import os
@@ -121,7 +126,7 @@ Replace the connection string with valid values. The sample code uses `"Driver=S
 
 ### Define a function
 
-The following code defines a function that you will send to SQL Server in the next step. When executed, it uses data and libraries (revoscalepy, pandas, matplotlib) on the remote server to create scatter plots of the iris data set. It returns the bytestream of the .png back to Jupyter Notebooks to render in the browser.
+The following code defines a function that you will send to SQL Server in a later step. When executed, it uses data and libraries (revoscalepy, pandas, matplotlib) on the remote server to create scatter plots of the iris data set. It returns the bytestream of the .png back to Jupyter Notebooks to render in the browser.
 
 ```python
 def send_this_func_to_sql():
@@ -149,7 +154,7 @@ def send_this_func_to_sql():
 
 ### Send the function to SQL Server
 
-In this example, create the remote compute context and then send the execution of the function to SQL Server with [rx_exec](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-exec). The **rx_xec** function is useful because it accepts a compute context as an argument. Any function that you want to execute remotely must have a compute context argument. Some functions, such as [rx_lin_mod](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-lin-mod) support this argument directly. For operations that don't, you can use **rx_exec** to deliver your code in a remote compute context.
+In this example, create the remote compute context and then send the execution of the function to SQL Server with [rx_exec](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-exec). The **rx_exec** function is useful because it accepts a compute context as an argument. Any function that you want to execute remotely must have a compute context argument. Some functions, such as [rx_lin_mod](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-lin-mod) support this argument directly. For operations that don't, you can use **rx_exec** to deliver your code in a remote compute context.
 
 In this example, no raw data had to be transferred from SQL Server to the Jupyter Notebook. All computations occur within the Iris database and only the image file is returned to the client.
 
@@ -199,7 +204,7 @@ For a Python project in Visual Studio, your custom environment would specify the
 
 ## Optional: Create the Iris database remotely
 
-If you have permissions to create a database on the remote server, you can run the following code to create the Iris demo database if it doesn't already exist.
+If you have permissions to create a database on the remote server, you can run the following code to create the Iris demo database used for the example code in this article.
 
 ### 1 - Create the irissql database
 

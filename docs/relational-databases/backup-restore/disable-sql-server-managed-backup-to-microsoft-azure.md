@@ -151,7 +151,7 @@ Go
 ```  
 Use msdb;  
 Go  
-EXEC managed_backup. sp_backup_master_switch @new_state=1;  
+EXEC managed_backup.sp_backup_master_switch @new_state=1;  
 GO  
   
 ```  

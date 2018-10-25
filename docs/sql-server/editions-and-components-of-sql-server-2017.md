@@ -1,7 +1,7 @@
 ---
 title: "Editions and supported features of SQL Server 2017 | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/10/2017"
+ms.date: "11/11/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: install

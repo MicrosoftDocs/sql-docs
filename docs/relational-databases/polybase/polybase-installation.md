@@ -29,27 +29,28 @@ To install a trial version of  SQL Server, go to [SQL Server evaluations](https:
 - Minimum memory: 4GB  
    
 - Minimum hard disk space: 2GB  
+- **Recommended:** Minimum of 16GB RAM
    
 - TCP/IP must be enabled for Polybase to function correctly. TCP/IP is enabled by default on all editions of SQL Server except for the Developer and Express SQL Server editions. For Polybase to function correctly on the Developer and Express editions you must enable TCP/IP connectivity (See [Enable or Disable a Server Network Protocol](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).)
 
-- An external data source, which is either an Azure blob or a Hadoop cluster. For supported versions of Hadoop, see [Configure PolyBase](#supported). 
-- MSVC++ 2012 installation  
+- MSVC++ 2012 
 
-> [!NOTE]
-> If you are going to use the computation pushdown functionality against Hadoop, you will need to ensure that the target Hadoop cluster has core components of HDFS, Yarn/MapReduce with Jobhistory server enabled. PolyBase submits the pushdown query via MapReduce and pulls status from the JobHistory Server. Without either component the query will fail.
+**Note**  
 
-**Notes**  
+PolyBase can be installed on only one SQL Server instance per machine.
 
-PolyBase can be installed on only one SQL Server instance per machine.  
-   
+> **Important**
+>
+> If you are going to use the computation pushdown functionality against Hadoop, you will need to ensure that the target Hadoop cluster has the core components of HDFS, Yarn/MapReduce with Jobhistory server enabled. PolyBase submits the pushdown query via MapReduce and pulls status from the JobHistory Server. Without either component the query will fail.
+  
 ## Single Node or PolyBase ScaleOut Group
 
-Before you start installing PolyBase on your SQL Server Instances, it is good to plan out if you want a single node installation or a PolyBase scale-out group. 
+Before you start installing PolyBase on your SQL Server instances, it is good to plan out if you want a single node installation or a [PolyBase scale-out group](../../relational-databases/polybase/polybase-scale-out-groups.md).
 
-For a PolyBase scale-out group, you will need to make sure that: 
+For a PolyBase scale-out group, you will need to make sure that:
 
 - All of the machines are on the same domain.
-- You use the same service account and password during installation.
+- You use the same service account and password during PolyBase installation.
 - Your SQL Server Instances can communicate with one another over the network.
 - The SQL Server Instances are all the same version of SQL Server.
 
@@ -57,7 +58,7 @@ Once you have installed PolyBase as either stand alone or in a scale-out group, 
 
 ## Install using the installation wizard  
    
-1. Run **SQL Server Installation Center**. Insert SQL Server installation media and double-click **Setup.exe**.  
+1. Run the SQL Server setup.exe.   
    
 2. Click **Installation**, then click **New Standalone SQL Server installation or add features**.  
    
@@ -65,31 +66,28 @@ Once you have installed PolyBase as either stand alone or in a scale-out group, 
 
  ![PolyBase services](../../relational-databases/polybase/media/install-wizard.png "PolyBase services")  
    
-4. On the Server Configuration Page, configure the **SQL Server PolyBase Engine Service** and SQL Server PolyBase Data Movement Service to run under the same account.  
+4. On the Server Configuration Page, configure the **SQL Server PolyBase Engine Service** and SQL Server PolyBase Data Movement Service to run under the same domain account.  
    
-   > **IMPORTANT!** In a PolyBase scale-out group, PolyBase engine and PolyBase data movement service on all nodes must run under the same domain account.  
-   > See Scaling out PolyBase.  
+ > **IMPORTANT!** 
+>
+>In a PolyBase scale-out group, PolyBase engine and PolyBase data movement service on all nodes must run under the same domain account. See [PolyBase scale-out groups](#Enable)
    
 5. On the **PolyBase Configuration Page**, select one of the two options. See [PolyBase scale-out groups](../../relational-databases/polybase/polybase-scale-out-groups.md) for more information.  
    
    - Use the SQL Server instance as a standalone PolyBase enabled instance.  
    
-     Choose this option to use the SQL Server instance as a standalone Head node.  
+     Choose this option to use the SQL Server instance as a standalone Head Node.  
    
-   - Use the SQL Server instance as part of a PolyBase scale-out group.  Selecting this option opens the firewall to allow incoming connections to the SQL Server Database Engine, SQL Server PolyBase Engine, SQL Server PolyBase Data Movement service and SQL Browser. The firewall is opened to allow incoming connections from other nodes in a PolyBase scale-out group.  
+   - Use the SQL Server instance as part of a PolyBase scale-out group.  Selecting this option opens the firewall to allow incoming connections to the SQL Server Database Engine, SQL Server PolyBase Engine, SQL Server PolyBase Data Movement Service and SQL Browser. The firewall is opened to allow incoming connections from other nodes in a PolyBase scale-out group.  
    
      Selecting this option will also enable Microsoft Distributed Transaction Coordinator (MSDTC) firewall connections and modify MSDTC registry settings.  
    
 6. On the **PolyBase Configuration Page**, specify a port range with at least six ports. SQL Server setup will allocate the first six available ports from the range.  
 
-<!--SQL Server 2019-->
-::: moniker range=">= sql-server-ver15 || =sqlallproducts-allversions"
-
   > **IMPORTANT!**
   >
   > After installation, you must [enable the PolyBase feature](#enable).
 
-::: moniker-end
 
 ##  <a name="installing"></a> Install using a command prompt  
 
@@ -128,12 +126,9 @@ Use the values in this table to create installation scripts. The two services **
 
 ::: moniker-end
 
-<!--SQL Server 2019-->
-::: moniker range=">= sql-server-ver15 || =sqlallproducts-allversions"
-
 After installation, you must [enable the PolyBase feature](#enable).
 
-::: moniker-end
+
 
 **Example**
 
@@ -150,10 +145,7 @@ Setup.exe /Q /ACTION=INSTALL /IACCEPTSQLSERVERLICENSETERMS /FEATURES=SQLEngine,P
    
 ```  
 
-<!--SQL Server 2019-->
-::: moniker range=">= sql-server-ver15 || =sqlallproducts-allversions"
 ## <a id="enable"></a> Enable PolyBase
-
 
 Once you are done with the installation, Polybase must be enabled to access it's features. connect to SQL Server 2019 CTP 2.0, you must enable PolyBase after installation using the following Transact-SQL command:
 
@@ -164,8 +156,6 @@ RECONFIGURE [ WITH OVERRIDE ]  ;
 ```
 The instance then needs to be **restarted** 
 
-
-::: moniker-end
 
 ## Post installation notes  
 
@@ -189,7 +179,7 @@ SQL Server PolyBase setup creates the following firewall rules on the machine.
 
 - SQL Server PolyBase - SQL Browser - (UDP-In)  
    
-At installation, if you choose to use the SQL Server instance as part of a PolyBase Scale-out Group, these rules are enabled and the firewall is opened to allow incoming connections to the SQL Server Database Engine, SQL Server PolyBase Engine, SQL Server PolyBase Data Movement service and SQL Browser. However, if the Firewall service on the machine is not running during installation, SQL Server setup would fail to enable these rules. In that case, you must start the Firewall service on the machine and enable these rules post-installation.  
+At installation, if you choose to use the SQL Server instance as part of a PolyBase scale-out group, these rules are enabled and the firewall is opened to allow incoming connections to the SQL Server Database Engine, SQL Server PolyBase Engine, SQL Server PolyBase Data Movement service and SQL Browser. However, if the Firewall service on the machine is not running during installation, SQL Server setup will fail to enable these rules. In that case, you must start the Firewall service on the machine and enable these rules post-installation.  
    
 #### To enable the firewall rules  
 

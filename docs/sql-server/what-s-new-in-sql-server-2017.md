@@ -1,7 +1,7 @@
 ---
 title: "What's new in SQL Server 2017 | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/19/2017"
+ms.date: "10/20/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: install

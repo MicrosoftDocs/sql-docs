@@ -1,29 +1,55 @@
 ---
-title: Use Python model in SQL for training and scoring | Microsoft Docs
+title: Python models in SQL Server for training and predictions using stored procedures | Microsoft Docs
+description: Embed Python code in SQL Server stored procedures to create, train, and use a Python model with the classic Iris data set. Save a trained model to SQL Server, and then use it to generate predicted outcomes.
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
+ms.date: 10/23/2018  
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-# Use Python model in SQL for training and scoring
+# Create, train, and use a Python model with stored procedures in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In the [previous lesson](wrap-python-in-tsql-stored-procedure.md), you learned the common pattern for using Python together with SQL. You learned that your Python code should output one clearly defined data.frame, and can optionally output multiple scalar or binary variables. You've learned that the SQL stored procedure should be designed to pass the right type of data into Python, and handle the results.
+This exercise demonstrates the capabilities of Python integration with SQL Server when you add the [Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) feature to a database engine instance. On such an instance, you can wrap Python code inside a [stored procedure](../../relational-databases/stored-procedures/stored-procedures-database-engine.md) to operationalize your script for production workloads on SQL Server. The ability to embed code in a stored procedure has tangible benefits in how you design, test, and manage data science and machine learning tasks. It makes your script and models accessible to any application that can connect to SQL Server.
 
-In this section, you use this same pattern to train a model on the data you've added to SQL Server, and save the model to a SQL Server table:
+In this Python exercise, you will create and execute two stored procedures. The first one uses the classic Iris flower data set and generates a Naïve Bayes model to predict an Iris species based on flower characteristics. The second procedure is for scoring. It calls the model generated in the first procedure to output a set of predictions. By placing code in a stored procedure, operations are contained, reusable, and callable by other stored procedures and client applications. 
 
-+ You design a stored procedure that calls a Python machine learning function.
-+ The stored procedure needs data from SQL Server to use in training the model.
-+ The stored procedure outputs a trained model as a binary variable. 
-+ You save the trained model by inserting the variable model into a table. 
+By completing this tutorial, you will learn:
 
-## Create the stored procedure and train a Python model
+> [!div class="checklist"]
+> * How to embed Python code in a stored procedure
+> * How to pass inputs to your code through inputs on the stored procedure
+> * How stored procedures are used to operationalize models
 
-1. Run the following code in SQL Server Management Studio to create the stored procedure that builds a model.
+## Prerequisites
+
+Sample data used in this exercise is the [**irissql**](demo-data-iris-in-sql.md) database.
+
+You also need a T-SQL editor, such as [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017).
+
+## Create a stored procedure that generates models
+
+A common pattern in SQL Server development is to organize programmable operations into distinct stored procedures. In this step, you will create a stored procedure that generates a model for predicting outcomes. 
+
+1. Open a new query window in Management Studio, connected to the **irissql** database. 
+
+    ```sql
+    USE irissql
+    GO
+    ```
+
+2. Copy in the following code to create a new stored procedure. 
+
+   When executed, this procedure calls [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) to start a Python session. 
+   
+   Inputs needed by your Python code are passed as input parameters on this stored procedure. Output will be a trained model, based on the Python **scikit-learn** library for the machine learning algorithm. 
+
+   This code uses [**pickle**](https://docs.python.org/2/library/pickle.html) to serialize the model. The model will be trained using data from columns 0 through 4 from the **iris_data** table. 
+   
+   The parameters you see in the second part of the procedure articulate data inputs and model outputs. As much as possible, you want the Python code running in a stored procedure to have clearly defined inputs and outputs that map to stored procedure inputs and outputs passed in at run time. 
 
     ```sql
     CREATE PROCEDURE generate_iris_model (@trained_model varbinary(max) OUTPUT)
@@ -44,63 +70,43 @@ In this section, you use this same pattern to train a model on the data you've a
     GO
     ```
 
-2. If this command runs without error, a new stored procedure is created and added to the database. You can find stored procedures in Management Studio's **Object Explorer**, under **Programmability**.
+3. Verify the stored procedure exists. 
 
-3. Now run the stored procedure.
+   If the T-SQL script from the previous step ran without error, a new stored procedure called **generate_iris_model** is created and added to the **irissql** database. You can find stored procedures in Management Studio's **Object Explorer**, under **Programmability**.
 
-    ```sql
-    EXEC generate_iris_model
-    ```
+## Execute the procedure to create and train models
 
-    You should get an error, because you haven't provided the input the stored procedure requires.
+In this step, execute the procedure to run the embedded code, creating a trained and serialized model as an output. Models that are stored for reuse in SQL Server are serialized as a byte stream and stored in a VARBINARY(MAX) column in a database table. Once the model is created, trained, serialized, and saved to a database, it can be called by other procedures or by the [PREDICT T-SQL](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) function in scoring workloads.
 
-    "Procedure or function 'generate_iris_model' expects parameter '\@trained_model', which was not supplied."
+1. Copy the following code to execute the procedure. The specific statement for executing a stored procedure is `EXEC` on the fifth line.
 
-4. To generate the model with the required inputs and save it to a table requires some additional statements:
-
-    ```sql
-    DECLARE @model varbinary(max);
-    EXEC generate_iris_model @model OUTPUT;
-    INSERT INTO iris_models (model_name, model) values('Naive Bayes', @model);
-    ```
-
-5. Now, try running the model generation code once more. 
-
-    You should get the error: "Violation of PRIMARY KEY constraint Cannot insert duplicate key in object 'dbo.iris_models'. The duplicate key value is (Naive Bayes)".
-
-    That's because the model name was provided by manually typing in "Naive Bayes" as part of the INSERT statement. Assuming you plan to create lots of models, using different parameters or different algorithms on each run, you should consider setting up a metadata scheme so that you can automatically name models and more easily identify them.
-
-6. To get around this error, you can make some minor modifications to the SQL wrapper. This example generates a unique model name by appending the current date and time:
+   This particular script deletes an existing model of the same name ("Naive Bayes") to make room for new ones created by rerunning the same procedure. Without model deletion, an error occurs stating the object already exists. The model is stored in a table called **iris_models**, provisioned when you created the **irissql** database.
 
     ```sql
     DECLARE @model varbinary(max);
     DECLARE @new_model_name varchar(50)
-    SET @new_model_name = 'Naive Bayes ' + CAST(GETDATE()as varchar)
+    SET @new_model_name = 'Naive Bayes '
     SELECT @new_model_name 
     EXEC generate_iris_model @model OUTPUT;
+    DELETE iris_models WHERE model_name = @new_model_name;
     INSERT INTO iris_models (model_name, model) values(@new_model_name, @model);
-    ```
-
-7. To view the models, run a simple SELECT statement. You should now see a model with the current timestamp, as created by the `SET @new_model_name = 'Naive Bayes ' + CAST(GETDATE()as varchar)` statement in the previous stored procedure.
-
-    ```sql
-    SELECT * FROM iris_models;
     GO
     ```
 
+2. View the results in the output area. The script includes a SELECT statement showing that the model exists. Another way to return a list of models is `SELECT * FROM iris_models` in **irissql**.
+
     **Results**
 
-    |model_name	| model |
-    |------|------|
-    | Naive Bayes | 0x800363736B6C656172... |
-    | Naive Bayes Jan 01 2018  9:39AM | 0x800363736B6C656172... |
-    | Naive Bayes Feb 01 2018  10:51AM | 0x800363736B6C656172... |
+    |   | (no column name |
+    |---|-----------------|
+    | 1 | Naive Bayes     | 
 
-## Generate scores from the model
 
-Finally, let's load this model from the table into a variable, and pass it back to Python to generate scores.
+## Create and execute a stored procedure for generating predictions
 
-1. Run the following code to create the stored procedure that performs scoring. 
+Now that you have created, trained, and saved a model, move on to the next step: creating a stored procedure that generates predictions. You'll do this by calling sp_execute_external_script to start Python, and then pass in Python script that loads a serialized model you created in the last exercise, and then gives it data inputs to score.
+
+1. Run the following code to create the stored procedure that performs scoring. At run time, this procedure will load a binary model, use columns `[1,2,3,4]` as inputs, and specify columns `[0,5,6]` as output.
 
     ```sql
     CREATE PROCEDURE predict_species (@model varchar(100))
@@ -113,7 +119,7 @@ Finally, let's load this model from the table into a variable, and pass it back 
     irismodel = pickle.loads(nb_model)
     species_pred = irismodel.predict(iris_data[[1,2,3,4]])
     iris_data["PredictedSpecies"] = species_pred
-    OutputDataSet = iris_data.query( ''PredictedSpecies != SpeciesId'' )[[0, 5, 6]]
+    OutputDataSet = iris_data[[0,5,6]] 
     print(OutputDataSet)
     '
     , @input_data_1 = N'select id, "Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width", "SpeciesId" from iris_data'
@@ -125,34 +131,31 @@ Finally, let's load this model from the table into a variable, and pass it back 
     GO
     ```
 
-    The stored procedure gets the Naïve Bayes model from the table and uses the functions associated with the model to generate scores. In this example, the stored procedure gets the model from the table using the model name. However, depending on what kind of metadata you are saving with the model, you could also get the most recent model, or the model with the highest accuracy.
-
-2. Run the following lines to pass the model name "Naive Bayes" to the stored procedure that executes the scoring code. 
-
-   Be sure to specify a valid Naive Bayes model name. On your system, the timestamp indicates when the model was created.
+2. Execute the stored procedure, giving the model name "Naive Bayes" so that the procedure knows which model to use. 
 
     ```sql
-    EXEC predict_species 'Naive Bayes <timestamp>';
+    EXEC predict_species 'Naive Bayes';
     GO
     ```
 
-    When you run the stored procedure, it returns a Python data.frame. This line of T-SQL specifies the schema for the returned results: `WITH RESULT SETS ( ("id" int, "SpeciesId" int, "SpeciesId.Predicted" int));`
+    When you run the stored procedure, it returns a Python data.frame. This line of T-SQL specifies the schema for the returned results: `WITH RESULT SETS ( ("id" int, "SpeciesId" int, "SpeciesId.Predicted" int));`. You can insert the results into a new table, or return them to an application.
 
     ![Result set from running stored procedure](media/train-score-using-python-NB-model-results.png)
 
-    You can insert the results into a new table, or return them to an application.
+    The results are 150 predictions about species using floral characteristics as inputs. For the majority of the observations, the predicted species matches the actual species.
 
-    This example has been made simple by using the data from the Python iris dataset for scoring. (See the line `iris_data[[1,2,3,4]])`.) However, more typically you would run a SQL query to get the new data, and pass that into Python as `InputDataSet`. 
+    This example has been made simple by using the Python iris dataset for both training and scoring. A more typical approach would involve running a SQL query to get the new data, and pass that into Python as `InputDataSet`. 
 
-### Remarks
+## Conclusion
 
-If you are used to working in Python, you might be accustomed to loading data, creating some summaries and graphs, then training a model and generating some scores all in the same 250 lines of code.
+In this exercise, you learned how to create stored procedures dedicated to different tasks, where each stored procedure used the system stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) to start a Python process. Inputs to the Python process are passed to sp_execute_external script as parameters. Both the Python script itself and data variables in a SQL Server database are passed as inputs.
 
-However, if your goal is to operationalize the process (model creation, scoring, etc.) in SQL Server, it is important to consider ways that you can separate the process into repeatable steps that can be modified using parameters. As much as possible, you want the Python code that you run in a stored procedure to have clearly defined inputs and outputs that map to stored procedure inputs and outputs.
+For some Python developers who are used to writing all-inclusive script handling a range of operations, organizing tasks into separate procedures might seem unnecessary. But training and scoring have different use cases. By separating them, you can put each task on different schedule and scope permissions to operation.
 
-Moreover, you can generally improve performance by separating the data exploration process from the processes of training a model or generating scores. 
+Likewise, you can also leverage resourcing features of SQL Server, such as parallel processing, resource governance, or by writing your script to use algorithms in [revoscalepy](../python/what-is-revoscalepy.md) or [MicrosoftML](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) that support streaming and parallel execution. By separating training and scoring, you can target optimizations for specific workloads.
 
-Scoring and training processes can often be optimized by leveraging features of SQL Server, such as parallel processing, or by using algorithms in [revoscalepy](../python/what-is-revoscalepy.md) or [MicrosoftML](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) that support streaming and parallel execution, rather than using standard Python libraries. 
+A final benefit is that processes can be modified using parameters. In this exercise, Python code that created the model (named "Naive Bayes" in this example) was passed as an input to a second stored procedure calling the model in a scoring process. This exercise only uses one model, but you can imagine how parameterizing the model in a scoring task would make that script more useful.
+
 
 ## Next steps
 

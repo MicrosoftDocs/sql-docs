@@ -64,6 +64,8 @@
     items:
     - name: Data wrangling using PROSE Code Accelerator
       href: use-prose-for-big-data-automation.md
+    - name: Create apps
+      href: big-data-cluster-create-apps.md
   - name: Manage SQL Server big data cluster
     items:
     - name: Cluster administration portal

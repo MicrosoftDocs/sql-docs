@@ -14,6 +14,8 @@ ms.author: maghan
 
 # Reporting Services Features Supported by the Editions of SQL Server
 
+[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
+
 This topic provides details of the Reporting Services features supported by the different editions of SQL Server. SQL Server Evaluation edition is available for a 180-day trial period.  
   
  For the latest SQL Server release notes, see [SQL Server 2017 Release Notes](../sql-server/sql-server-2017-release-notes.md). For the latest information on what is new, see [What's new in Reporting Services (SSRS)](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).
@@ -60,7 +62,7 @@ For features supported by Evaluation and Developer editions, see the SQL Server 
   
  <sup>1</sup> For more information on supported data sources in SQL Server Reporting Services (SSRS), see [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
- <sup>2</sup> Requires Reporting Services in SharePoint mode. For more information, see [Install Reporting Services SharePoint Mode](../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md). Starting in Reporting Services 2017, Reporting Services integration with SharePoint is no longer available. The [Report Viewer web part on a SharePoint site](report-server-sharepoint/report-viewer-web-part-sharepoint-site.md) is the alternative in Reporting Services 2017 and later.” 
+ <sup>2</sup> Requires Reporting Services 2016 in SharePoint mode. For more information, see [Install Reporting Services SharePoint Mode](../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md). Starting in Reporting Services 2017, Reporting Services integration with SharePoint is no longer available. The [Report Viewer web part on a SharePoint site](report-server-sharepoint/report-viewer-web-part-sharepoint-site.md) is the alternative in Reporting Services 2017 and later. 
   
 ## Report Server Database Server Edition Requirements  
  When creating a report server database, not all editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] can be used to host the database. The following table shows you which editions of the [!INCLUDE[ssDE](../includes/ssde-md.md)] you can use for specific editions of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  

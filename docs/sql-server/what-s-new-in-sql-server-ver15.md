@@ -109,11 +109,11 @@ The error message ID 8152 `String or binary data would be truncated` is familiar
 
 `String or binary data would be truncated in table '%.*ls', column '%.*ls'. Truncated value: '%.*ls'.`
 
-The new error message provides more context for the data truncation problem, simplifying the troubleshooting process, and becomes default under Database Compatibility Level 150. If existing applications rely on parsing message ID 8152 and cannot handle the new message ID 2628, then you can revert back to using message ID 8152, by enabling trace flag 459 or by using a lower Database Compability Level database configuration (100 to 140).
+The new error message 2628 provides more context for the data truncation problem, simplifying the troubleshooting process. For CTP 2.1, this is an opt-in error message and requires [trace flag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 460 to be enabled.
 
-### UTF-8 support (CTP 2.0)
+### UTF-8 support (CTP 2.1)
 
-Added support for UTF-8 collations in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.1 Setup.
+Added support to select UTF-8 collations as server collation during [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.1 Setup.
 
 ### Database compatibility level (CTP 2.0)
 
@@ -129,7 +129,7 @@ Full support for the widely used UTF-8 character encoding as an import or export
 
 For example,`LATIN1_GENERAL_100_CI_AS_SC` to `LATIN1_GENERAL_100_CI_AS_SC_UTF8`. UTF-8 is only available to Windows collations that support supplementary characters, as introduced in SQL Server 2012. `NCHAR` and `NVARCHAR` allow UTF-16 encoding only, and remain unchanged.
 
-This feature may provide significant storage savings, depending on the character set in use. For example, changing an existing column data type with ASCII strings from `NCHAR(10)` to `CHAR(10)` using an UTF-8 enabled collation, translates into nearly 50% reduction in storage requirements. This reduction is because `NCHAR(10)` requires 22 bytes for storage, whereas `CHAR(10)` requires 12 bytes for the same Unicode string.
+This feature may provide significant storage savings, depending on the character set in use. For example, changing an existing column data type with Latin strings from `NCHAR(10)` to `CHAR(10)` using an UTF-8 enabled collation, translates into nearly 50% reduction in storage requirements. This reduction is because `NCHAR(10)` requires 22 bytes for storage, whereas `CHAR(10)` requires 12 bytes for the same Unicode string.
 
 ### Resumable online index create (CTP 2.0)
 

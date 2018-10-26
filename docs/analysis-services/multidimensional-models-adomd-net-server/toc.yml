@@ -1,8 +1,8 @@
 - name: ADOMD.NET Server Functionality
-  href: adomd-net-server-functionality.md
+  href: https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-functionality
 - name: ADOMD.NET Server Object Architecture
-  href: adomd-net-server-object-architecture.md
+  href: https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-object-architecture
 - name: ADOMD.NET Server Programming
-  href: adomd-net-server-programming.md
+  href: https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-programming
 - name: User Defined Functions and Stored Procedures
-  href: user-defined-functions-and-stored-procedures.md
+  href: https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures

@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ---
 # Inserting, Updating, and Dropping Members (XMLA)
-  You can use the [Insert](../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md), [Update](../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md), and [Drop](../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md) commands in XML for Analysis (XMLA) to respectively insert, update, or delete members from a write-enabled dimension. For more information about write-enabled dimensions, see [Write-Enabled Dimensions](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md).  
+  You can use the [Insert](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/insert-element-xmla), [Update](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/update-element-xmla), and [Drop](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/drop-element-xmla) commands in XML for Analysis (XMLA) to respectively insert, update, or delete members from a write-enabled dimension. For more information about write-enabled dimensions, see [Write-Enabled Dimensions](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md).  
   
 ## Inserting New Members  
  The **Insert** command inserts new members into specified attributes in a write-enabled dimension.  
@@ -30,9 +30,9 @@ manager: kfile
   
  The **Insert** command takes only two properties:  
   
--   The [Object](../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md) property, which contains an object reference for the dimension in which the members are to be inserted. The object reference contains the database identifier, cube identifier, and dimension identifier for the dimension.  
+-   The [Object](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) property, which contains an object reference for the dimension in which the members are to be inserted. The object reference contains the database identifier, cube identifier, and dimension identifier for the dimension.  
   
--   The [Attributes](../../analysis-services/xmla/xml-elements-properties/attributes-element-xmla.md) property, which contains one or more [Attribute](../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md) elements to identify the attributes in which members are to be inserted. Each **Attribute** element identifies an attribute and provides the name, value, translations, unary operator, custom rollup, custom rollup properties, and skipped levels for a single member to be added to the identified attribute.  
+-   The [Attributes](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/attributes-element-xmla) property, which contains one or more [Attribute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/attribute-element-xmla) elements to identify the attributes in which members are to be inserted. Each **Attribute** element identifies an attribute and provides the name, value, translations, unary operator, custom rollup, custom rollup properties, and skipped levels for a single member to be added to the identified attribute.  
   
     > [!NOTE]  
     >  All properties for the **Attribute** element must be included. Otherwise, an error may occur.  
@@ -59,13 +59,13 @@ manager: kfile
     > [!NOTE]  
     >  All properties for the **Attribute** element must be included. Otherwise, an error may occur.  
   
--   The [Where](../../analysis-services/xmla/xml-elements-properties/where-element-xmla.md) property, which contains one or more **Attribute** elements that constrain the attributes in which members are to be updated. The **Where** property is crucial to limiting an **Update** command to specific instances of a member. If the **Where** property is not specified, all instances of a given member are updated. For example, there are three customers for whom you want to change the city name from Redmond to Bellevue. To change the city name, you must provide a **Where** property that identifies the three members in the Customer attribute for which the members in the City attribute should be changed. If you do not provide this **Where** property, every customer whose city name is currently Redmond would have the city name of Bellevue after the **Update** command runs.  
+-   The [Where](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/where-element-xmla) property, which contains one or more **Attribute** elements that constrain the attributes in which members are to be updated. The **Where** property is crucial to limiting an **Update** command to specific instances of a member. If the **Where** property is not specified, all instances of a given member are updated. For example, there are three customers for whom you want to change the city name from Redmond to Bellevue. To change the city name, you must provide a **Where** property that identifies the three members in the Customer attribute for which the members in the City attribute should be changed. If you do not provide this **Where** property, every customer whose city name is currently Redmond would have the city name of Bellevue after the **Update** command runs.  
   
     > [!NOTE]  
     >  With the exception of new members, the **Update** command can only update attribute key values for attributes not included in the **Where** clause. For example, the city name cannot be updated when a customer is updated; otherwise, the city name is changed for all customers.  
   
 ### Updating Members in Parent Attributes  
- To support parent attributes, the **Update** command the optional [MoveWithDescendants](../../analysis-services/xmla/xml-elements-properties/movewithdescendants-element-xmla.md)MovewithDescedants properties. Setting the **MoveWithDescendants** property to true indicates that the descendants of the parent member should also be moved with the parent member when the identifier of that parent member changes. If this value is set to false, moving a parent member causes the immediate descendants of that parent member to be promoted to the level in which the parent member formerly resided.  
+ To support parent attributes, the **Update** command the optional [MoveWithDescendants](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/movewithdescendants-element-xmla)MovewithDescedants properties. Setting the **MoveWithDescendants** property to true indicates that the descendants of the parent member should also be moved with the parent member when the identifier of that parent member changes. If this value is set to false, moving a parent member causes the immediate descendants of that parent member to be promoted to the level in which the parent member formerly resided.  
   
  When updating members in a parent attribute, the **Update** command cannot update members in other attributes.  
   
@@ -88,15 +88,15 @@ manager: kfile
     >  The **Attribute** elements included in a **Drop** command must contain only the **AttributeName** and **Keys** properties. Otherwise, an error may occur.  
   
 ### Dropping Members in Parent Attributes  
- Setting the [DeleteWithDescendants](../../analysis-services/xmla/xml-elements-properties/deletewithdescendants-element-xmla.md) property indicates that the descendants of a parent member should also be deleted with the parent member. If this value is set to false, the immediate descendants of the parent member are instead promoted to the level in which the parent member formerly resided.  
+ Setting the [DeleteWithDescendants](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/deletewithdescendants-element-xmla) property indicates that the descendants of a parent member should also be deleted with the parent member. If this value is set to false, the immediate descendants of the parent member are instead promoted to the level in which the parent member formerly resided.  
   
 > [!IMPORTANT]  
 >  A user needs only to have delete permissions for the parent member to delete both the parent member and its descendants. A user does not need delete permissions on the descendants.  
   
 ## See Also  
- [Drop Element &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md)   
- [Insert Element &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)   
- [Update Element &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)   
+ [Drop Element &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/drop-element-xmla)   
+ [Insert Element &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/insert-element-xmla)   
+ [Update Element &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/update-element-xmla)   
  [Defining and Identifying Objects &#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/defining-and-identifying-objects-xmla.md)   
  [Developing with XMLA in Analysis Services](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   

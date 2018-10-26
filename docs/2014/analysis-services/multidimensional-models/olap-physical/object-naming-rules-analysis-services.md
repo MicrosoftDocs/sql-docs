@@ -86,6 +86,6 @@ manager: craigg
 ## See Also  
  [MDX Reserved Words](/sql/mdx/mdx-reserved-words)   
  [Translations &#40;Analysis Services&#41;](../../../analysis-services/translations-analysis-services.md)   
- [XML for Analysis Compliance &#40;XMLA&#41;](../../xmla/xml-for-analysis-compliance-xmla.md)  
+ [XML for Analysis Compliance &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-compliance-xmla)  
   
   

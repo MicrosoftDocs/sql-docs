@@ -36,6 +36,6 @@ ADOMD.NET Object Model
 |Support implicit conversion and casting among the six basic types of the MDX language|<xref:Microsoft.AnalysisServices.AdomdServer.MDXValue><br /> The <xref:Microsoft.AnalysisServices.AdomdServer.MDXValue> object provides implicit conversion and casting among the following types:<br /><br /> -   <xref:Microsoft.AnalysisServices.AdomdServer.Hierarchy><br />-   <xref:Microsoft.AnalysisServices.AdomdServer.Level><br />-   <xref:Microsoft.AnalysisServices.AdomdServer.Member><br />-   <xref:Microsoft.AnalysisServices.AdomdServer.Tuple><br />-   <xref:Microsoft.AnalysisServices.AdomdServer.Set><br />-   Scalar, or value types|  
   
 ## See Also  
- [ADOMD.NET Server Programming](../multidimensional-models-adomd-net-server/adomd-net-server-programming.md)  
+ [ADOMD.NET Server Programming](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-programming)  
   
   

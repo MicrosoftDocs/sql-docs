@@ -29,7 +29,7 @@ manager: kfile
   
 4.  Right-click any field and select **Explore Data**. You will see English, Spanish, and French translations of each member.  
   
- Formats for date, time, and currency are not implemented through translations. To dynamically provide culturally specific formats based on the client's locale, use the Currency Conversion Wizard and **FormatString** property. See [Currency Conversions &#40;Analysis Services&#41;](../../analysis-services/currency-conversions-analysis-services.md) and [FormatString Element &#40;ASSL&#41;](../../analysis-services/scripting/properties/formatstring-element-assl.md) for details.  
+ Formats for date, time, and currency are not implemented through translations. To dynamically provide culturally specific formats based on the client's locale, use the Currency Conversion Wizard and **FormatString** property. See [Currency Conversions &#40;Analysis Services&#41;](../../analysis-services/currency-conversions-analysis-services.md) and [FormatString Element &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/formatstring-element-assl) for details.  
   
  [Lesson 9: Defining Perspectives and Translations](../../analysis-services/lesson-9-defining-perspectives-and-translations.md) in the Analysis Services Tutorial will walk you through the steps for creating and testing translations.  
   

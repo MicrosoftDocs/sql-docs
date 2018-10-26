@@ -20,7 +20,7 @@ manager: kfile
 ## In This Section  
  Follow these links to learn more about monitoring.  
   
- [Analysis Services Trace Events](../../analysis-services/trace-events/analysis-services-trace-events.md)  
+ [Analysis Services Trace Events](https://docs.microsoft.com/bi-reference/trace-events/analysis-services-trace-events)  
   
  [Use SQL Server Profiler to Monitor Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)  
   

@@ -4,7 +4,7 @@ description: Learn how to deploy SQL Server 2019 big data clusters (preview) on 
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 10/08/2018
+ms.date: 11/01/2018
 ms.topic: conceptual
 ms.prod: sql
 ---
@@ -49,7 +49,12 @@ For guidance on configuring one of these Kubernetes cluster options for a SQL Se
 
 ## <a id="deploy"></a> Deploy SQL Server big data cluster
 
-After you have configured your Kubernetes cluster, you can proceed with the deployment for SQL Server big data cluster. To deploy a big data cluster in Azure with all default configurations for a dev/test environment, follow the instructions in this article:
+After you have configured your Kubernetes cluster, you can proceed with the deployment for SQL Server big data cluster. 
+
+> [!NOTE]
+> If you are upgrading from a previous release, please see the [Upgrade section of this article](#upgrade).
+
+To deploy a big data cluster in Azure with all default configurations for a dev/test environment, follow the instructions in this article:
 
 [Quickstart: Deploy SQL Server big data cluster on Kubernetes](quickstart-big-data-cluster-deploy.md)
 
@@ -66,6 +71,9 @@ kubectl config view
 ## <a id="mssqlctl"></a> Install mssqlctl
 
 **mssqlctl** is a command-line utility written in Python that enables cluster administrators to bootstrap and manage the big data cluster via REST APIs. The minimum Python version required is v3.5. You must also have `pip` that is used to download and install **mssqlctl** tool. 
+
+> [!IMPORTANT]
+> If you installed a previous release, you must delete the cluster *before* upgrading **mssqlctl** and installing the new release. For more information, see [Upgrading to a new release](deployment-guidance.md#upgrade).
 
 ### Windows mssqlctl installation
 
@@ -84,7 +92,7 @@ kubectl config view
 1. Install **mssqlctl** with the following command:
 
    ```bash
-   pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.0 mssqlctl
+   pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctl
    ```
 
 ### Linux mssqlctl installation
@@ -110,7 +118,7 @@ On Linux, you must install the **python3** and **python3-pip** packages and then
 1. Install **mssqlctl** with the following command:
 
    ```bash
-   pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.0 mssqlctl
+   pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctl
    ```
 
 ## Define environment variables
@@ -270,6 +278,29 @@ Irrespective of the platform you are running your Kubernetes cluster on, to get 
 ```bash
 kubectl get svc -n <name of your cluster>
 ```
+
+## <a id="upgrade"></a> Upgrade to a new release
+
+Currently, the only way to upgrade a big data cluster to a new release is to manually remove and recreate the cluster. Each release has a unique version of **mssqlctl** that is not compatible with the previous version. Also, if an older cluster had to download an image on a new node, the latest image might not be compatible with the older images on the cluster. To upgrade to the latest release, use the following steps:
+
+1. Before deleting the old cluster, back up the data on the SQL Server master instance and on HDFS. For the SQL Server master instance, you can use SQL Server backup techniques. For HDFS, you can copy the data out with **curl**.
+
+1. Delete the old cluster with the `mssqlctl delete cluster` command.
+
+   ```bash
+    mssqlctl delete cluster <old-cluster-name>
+   ```
+
+1. Install the latest version of **mssqlctl**.
+   
+   ```bash
+   pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctl
+   ```
+
+   > [!IMPORTANT]
+   > For each release, the path to **mssqlctl** changes. Even if you previously installed **mssqlctl**, you must reinstall from the latest path before creating the new cluster.
+
+1. Install the latest release using the instructions in this article. 
 
 ## Next steps
 

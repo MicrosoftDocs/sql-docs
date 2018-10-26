@@ -1,5 +1,5 @@
 ---
-title: "Install SQL Server With PowerShell Desired State Configuration | Microsoft Docs"
+title: "Install SQL Server with PowerShell Desired State Configuration | Microsoft Docs"
 description: "Learn how to install SQL Server using PowerShell Desired State Configuration (DSC)."
 ms.custom: ""
 ms.date: "10/26/2018"
@@ -13,7 +13,7 @@ ms.author: dareist
 monikerRange: ">=sql-server-2012||=sqlallproducts-allversions"
 ---
 
-# Install SQL Server With PowerShell Desired State Configuration
+# Install SQL Server with PowerShell Desired State Configuration
 
 How many times have you clicked through the SQL Server installation interface just clicking the same old buttons, entering the same old information, not giving it much of a second thought? Then the installation finishes and the realization of "I forgot to specify the DBA group in the sysadmins role" hits. Now you have to spend precious time dropping into single-user mode, adding the appropriate users/groups, bringing SQL back up in multi-user mode, and testing. What's worse is now the confidence of the entire installation is shaken. "What else did I forget?" I for one have been in that situation more than once.
 
@@ -31,7 +31,7 @@ The following items are required for this walkthrough:
 
 In most cases, DSC will be used to handle the prerequisite requirements. However, for the purposes of this demo, I will handle the prerequisites manually.
 
-## Install the SqlServerDsc DSC Resource
+## Install the SqlServerDsc DSC resource
 
 The [SqlServerDsc](https://www.powershellgallery.com/packages/SqlServerDsc) DSC resource can be downloaded from the [PowerShell Gallery](https://www.powershellgallery.com/) using the [Install-Module](https://docs.microsoft.com/powershell/module/powershellget/Install-Module?view=powershell-5.1) cmdlet. _Note: Ensure PowerShell is running "As Administrator" to install the module._
 
@@ -53,7 +53,7 @@ Copy-Item -Path ( Join-Path -Path $driveInfo.Root -ChildPath '*' ) -Destination 
 Dismount-DiskImage -ImagePath 'C:\en_sql_server_2017_enterprise_x64_dvd_11293666.iso'
 ```
 
-## Create the Configuration
+## Create the configuration
 
 ### Configuration
 
@@ -99,7 +99,7 @@ A full list and description of the parameters available on SqlSetup are availabl
 
 The SqlSetup resource is odd because it only installs SQL and DOES NOT maintain the settings that are applied. For example, if the SQLSysAdminAccounts are specified at installation time, an admin could add or remove logins from to/from the sysadmin role and the SqlSetup resource wouldn't care. If it is desired that DSC enforces the membership of the sysadmin role, the [SqlServerRole](https://github.com/PowerShell/SqlServerDsc/tree/master#sqlserverrole) resource should be utilized.
 
-#### Complete Configuration
+#### Complete configuration
 
 ```PowerShell
 Configuration SQLInstall
@@ -126,9 +126,9 @@ Configuration SQLInstall
 }
 ```
 
-## Build and Deploy
+## Build and deploy
 
-### Compile the Configuration
+### Compile the configuration
 
 Dot-source the configuration script:
 
@@ -144,7 +144,7 @@ SQLInstall
 
 A directory will be created in the working directory called "SQLInstall" and will contain a file call "localhost.mof". Examining the contents of the MOF will show the compiled DSC configuration.
 
-### Deploy the Configuration
+### Deploy the configuration
 
 To start the DSC deployment of SQL Server, call the Start-DscConfiguration cmdlet. The parameters provided to the cmdlet are:
 
@@ -159,7 +159,7 @@ Start-DscConfiguration -Path C:\SQLInstall -Wait -Force -Verbose
 
 As the configuration applies, the Verbose output will show you what is happening and give you a warm and fuzzy feeling that SOMETHING is happening. As long as no errors (red text) are thrown, when "Operation 'Invoke CimMethod' complete." is displayed on the screen, SQL should be installed.
 
-## Validate Installation
+## Validate installation
 
 ### DSC
 
@@ -194,6 +194,10 @@ PS C:\> & sqlcmd -S $env:COMPUTERNAME
 1> quit
 ```
 
-### That's a Wrap
+## See also
 
-And there you have it. Installing SQL Server in a consistent manner has never been easier.
+[Windows PowerShell Desired State Configuration Overview](https://docs.microsoft.com/powershell/dsc/overview)
+
+[Install SQL Server from the Command Prompt](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)
+
+[Install SQL Server using a configuration file](../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md)

@@ -21,7 +21,7 @@ SQL Server big data cluster can be deployed as docker containers on a Kubernetes
 
 ## <a id="prereqs"></a> Kubernetes cluster prerequisites
 
-SQL Server big data cluster requires a minimum v1.10 version for Kubernetes, for both server and client. To install a specific version on kubectl client, see [Install kubectl binary via curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl).  Latest versions of minikube and AKS are at least 1.10. For AKS, you will need to use `--kubernetes-version` parameter to specify a version different than default.
+SQL Server big data cluster requires a minimum v1.10 version for Kubernetes, for both server and client. To install a specific version on kubectl client, see [Install kubectl binary via curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl). Latest versions of minikube and AKS are at least 1.10. For AKS, you will need to use `--kubernetes-version` parameter to specify a version different than default.
 
 > [!NOTE]
 > Note that the client and server Kubernetes versions should be +1 or -1 minor version. For more information, see [Kubernetes supported releases and component skew](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew).
@@ -283,7 +283,7 @@ kubectl get svc -n <name of your cluster>
 
 Currently, the only way to upgrade a big data cluster to a new release is to manually remove and recreate the cluster. Each release has a unique version of **mssqlctl** that is not compatible with the previous version. Also, if an older cluster had to download an image on a new node, the latest image might not be compatible with the older images on the cluster. To upgrade to the latest release, use the following steps:
 
-1. Before deleting the old cluster, back up the data on the SQL Server master instance and on HDFS. For the SQL Server master instance, you can use SQL Server backup techniques. For HDFS, you can copy the data out with **curl**.
+1. Before deleting the old cluster, back up the data on the SQL Server master instance and on HDFS. For the SQL Server master instance, you can use [SQL Server backup and restore](data-ingestion-restore-databse.md). For HDFS, you [can copy the data out with **curl**](data-ingestion-curl.md).
 
 1. Delete the old cluster with the `mssqlctl delete cluster` command.
 
@@ -300,7 +300,7 @@ Currently, the only way to upgrade a big data cluster to a new release is to man
    > [!IMPORTANT]
    > For each release, the path to **mssqlctl** changes. Even if you previously installed **mssqlctl**, you must reinstall from the latest path before creating the new cluster.
 
-1. Install the latest release using the instructions in this article. 
+1. Install the latest release using the instructions in the [Deploy section](#deploy) of this article. 
 
 ## Next steps
 

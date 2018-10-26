@@ -15,11 +15,11 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 
 # Install SQL Server with PowerShell Desired State Configuration
 
-How many times have you clicked through the SQL Server installation interface just clicking the same old buttons, entering the same old information, not giving it much of a second thought? Then the installation finishes and the realization of "I forgot to specify the DBA group in the sysadmins role" hits. Now you have to spend precious time dropping into single-user mode, adding the appropriate users/groups, bringing SQL back up in multi-user mode, and testing. What's worse is now the confidence of the entire installation is shaken. "What else did I forget?" I for one have been in that situation more than once.
+How many times have you clicked through the SQL Server installation interface just clicking the same old buttons, entering the same old information, not giving it much of a second thought? Then the installation finishes and the realization of "I forgot to specify the DBA group in the sysadmin role" hits. Now you have to spend precious time dropping into single-user mode, adding the appropriate users or groups, bringing SQL back up in multi-user mode, and testing. What's worse is now the confidence of the entire installation is shaken. "What else did I forget?" I for one have been in that situation more than once.
 
-Enter PowerShell Desired State Configuration (DSC). Using DSC I can build one configuration template that can be reused over hundreds and thousands of servers. Depending on the build, I may have to tweak a few of the setup parameters, but that's not a big deal because I can still keep all of the standard settings in place. The beautiful thing is it eliminates the possibility that will forget to enter an important parameter after spending a sleepless night caring for my kids.
+Enter [PowerShell Desired State Configuration (DSC)](https://docs.microsoft.com/powershell/dsc/overview). Using DSC I can build one configuration template that can be reused over hundreds and thousands of servers. Depending on the build, I may have to tweak a few of the setup parameters, however that's not a big deal because I can still keep all of the standard settings in place. The beautiful thing is it eliminates the possibility that will forget to enter an important parameter after spending a sleepless night caring for my kids.
 
-In this article, I will explore the initial setup of a standalone instance of SQL Server 2017 on Windows Server 2016 using the SqlServerDsc DSC resource. Some prior knowledge of DSC will be helpful as I will not explore the hows and whys of how DSC works.
+In this article, I will explore the initial setup of a standalone instance of SQL Server 2017 on Windows Server 2016 using the SqlServerDsc DSC resource. Some prior knowledge of DSC will be helpful as I will not explore the how DSC works.
 
 The following items are required for this walkthrough:
 
@@ -57,7 +57,7 @@ Dismount-DiskImage -ImagePath 'C:\en_sql_server_2017_enterprise_x64_dvd_11293666
 
 ### Configuration
 
-Create the configuration function that will be called to generate the MOF document(s).
+Create the configuration function that will be called to generate the [Managed Object Format (MOF)](https://docs.microsoft.com/windows/desktop/WmiSdk/managed-object-format--mof-) document(s).
 
 ```PowerShell
 Configuration SQLInstall
@@ -97,7 +97,7 @@ The SqlSetup resource is used to tell DSC how to install SQL Server. The paramet
 
 A full list and description of the parameters available on SqlSetup are available on the [SqlServerDsc GitHub respository](https://github.com/PowerShell/SqlServerDsc/tree/master#sqlsetup).
 
-The SqlSetup resource is odd because it only installs SQL and DOES NOT maintain the settings that are applied. For example, if the SQLSysAdminAccounts are specified at installation time, an admin could add or remove logins from to/from the sysadmin role and the SqlSetup resource wouldn't care. If it is desired that DSC enforces the membership of the sysadmin role, the [SqlServerRole](https://github.com/PowerShell/SqlServerDsc/tree/master#sqlserverrole) resource should be utilized.
+The SqlSetup resource is odd because it only installs SQL and DOES NOT maintain the settings that are applied. For example, if the SQLSysAdminAccounts are specified at installation time, an admin could add or remove logins from to or from the sysadmin role and the SqlSetup resource wouldn't care. If it is desired that DSC enforces the membership of the sysadmin role, the [SqlServerRole](https://github.com/PowerShell/SqlServerDsc/tree/master#sqlserverrole) resource should be utilized.
 
 #### Complete configuration
 
@@ -151,7 +151,7 @@ To start the DSC deployment of SQL Server, call the Start-DscConfiguration cmdle
 - **Path**: The path to the folder containing the MOF documents to deploy. (for example "C:\SQLInstall")
 - **Wait**: Wait for the configuration job to complete.
 - **Force**: Override any existing DSC configurations.
-- **Verbose**: Show the verbose output. This is handy when pushing a configuration for the first time to aid in troubleshooting.
+- **Verbose**: Show the verbose output. Useful when pushing a configuration for the first time to aid in troubleshooting.
 
 ```PowerShell
 Start-DscConfiguration -Path C:\SQLInstall -Wait -Force -Verbose

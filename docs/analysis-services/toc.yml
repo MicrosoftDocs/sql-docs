@@ -222,7 +222,7 @@
   - name: Manage servers
     href: ../analysis-services/instances/analysis-services-instance-management.md
   - name: Trace-events
-    href: ../analysis-services/trace-events/analysis-services-trace-events.md
+    href: https://docs.microsoft.com/bi-reference/trace-events/analysis-services-trace-events
 - name: Developer
   items:
   - name: Analysis Services Developer Documentation
@@ -231,19 +231,19 @@
     href: ./tabular-model-programming-compatibility-level-1200/tabular-model-programming-for-compatibility-level-1200.md
     items:
     - name: Tabular Model Scripting Language (TMSL)
-      href: tabular-model-scripting-language-tmsl-reference.md
+      href: https://docs.microsoft.com/bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference
     - name: Tabular Model Scripting Language (TMSL) commands
-      href: ../analysis-services/tabular-models-scripting-language-commands/tmsl-reference-commands.md
+      href: https://docs.microsoft.com/bi-reference/tmsl/tmsl-reference-commands
     - name: Tabular Model Scripting Language (TMSL) objects
-      href: ../analysis-services/tabular-models-scripting-language-objects/tmsl-reference-tabular-objects.md
+      href: https://docs.microsoft.com/bi-reference/tmsl/tmsl-reference-tabular-objects
   - name: Tabular Model Programming for Compatibility Levels 1050 and 1103
     href: ./tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md
   - name: Analysis Services Scripting Language (ASSL) +
     href: ../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md
   - name: Analysis management objects (AMO)+
-    href: ../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md
+    href: https://docs.microsoft.com/bi-reference/amo/amo-classes-introduction
   - name: ADOMD.NET +
-    href: ../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md
+    href: https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net
   - name: OLAP logical +
     href: ../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md
   - name: OLAP physical +
@@ -251,9 +251,9 @@
   - name: Extending OLAP +
     href: ../analysis-services/multidimensional-models/extending-olap/analysis-services-personalization-extensions.md
   - name: Schema rowsets
-    href: ../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md
+    href: https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets
   - name: Analysis Services Scripting Language (ASSL for XMLA)
-    href: scripting/analysis-services-scripting-language-assl-for-xmla.md
+    href: https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla
   - name: Data Mining Programming
     href: data-mining-programming.md
     items:
@@ -280,4 +280,4 @@
   - name: Server properties
     href: ../analysis-services/server-properties/server-properties-in-analysis-services.md
   - name: XML for Analysis (XMLA)
-    href: ../analysis-services/xmla/xml-for-analysis-xmla-reference.md
+    href: https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference

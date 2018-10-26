@@ -11,13 +11,13 @@ author: minewiskan
 manager: kfile
 ---
 # Monitoring Traces (XMLA)
-  You can use the [Subscribe](../../analysis-services/xmla/xml-elements-commands/subscribe-element-xmla.md) command in XML for Analysis (XMLA) to monitor an existing trace defined on an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. The **Subscribe** command returns the results of a trace as a rowset.  
+  You can use the [Subscribe](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/subscribe-element-xmla) command in XML for Analysis (XMLA) to monitor an existing trace defined on an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. The **Subscribe** command returns the results of a trace as a rowset.  
   
 ## Specifying a Trace  
- The [Object](../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md) property of the **Subscribe** command must contain an object reference to either an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance or a trace on an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance. If the **Object** property is not specified, or a trace identifier is not specified in the **Object** property, the **Subscribe** command monitors the default session trace for the explicit session specified in the SOAP header for the command.  
+ The [Object](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) property of the **Subscribe** command must contain an object reference to either an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance or a trace on an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance. If the **Object** property is not specified, or a trace identifier is not specified in the **Object** property, the **Subscribe** command monitors the default session trace for the explicit session specified in the SOAP header for the command.  
   
 ## Returning Results  
- The **Subscribe** command returns a rowset containing the trace events captured by the specified trace. The **Subscribe** command returns trace results until the command is canceled by the [Cancel](../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md) command.  
+ The **Subscribe** command returns a rowset containing the trace events captured by the specified trace. The **Subscribe** command returns trace results until the command is canceled by the [Cancel](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/cancel-element-xmla) command.  
   
  The rowset contains the columns listed in the following table.  
   

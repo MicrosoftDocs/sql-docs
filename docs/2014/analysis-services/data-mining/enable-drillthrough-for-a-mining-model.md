@@ -18,7 +18,7 @@ manager: craigg
 # Enable Drillthrough for a Mining Model
   If you have enabled drillthrough for a mining model, when you browse the model you can retrieve detailed information about the cases that were used to create the model. To view this information, you must have the necessary permissions, and the structure must have already been processed.  
   
- **Permissions** For a user to drill through to either model data or structure data, the user must be a member of a role that has [AllowDrillThrough](../scripting/properties/allowdrillthrough-element-assl.md) permissions on the mining model or mining structure. Drillthrough permissions are set separately on the structure and model.  
+ **Permissions** For a user to drill through to either model data or structure data, the user must be a member of a role that has [AllowDrillThrough](https://docs.microsoft.com/bi-reference/assl/properties/allowdrillthrough-element-assl) permissions on the mining model or mining structure. Drillthrough permissions are set separately on the structure and model.  
   
 -   Drillthrough permissions on the model enable you to drill through from the model, even if you do not have permissions on the structure.  
   

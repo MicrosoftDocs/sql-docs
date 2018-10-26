@@ -65,7 +65,7 @@ manager: craigg
 |**Specific Windows user name and password** <sup>2</sup>|ImpersonateWindowsUserAccount|This option specifies the model use a Windows user account to import or process data from the data source. The domain and name of the user account uses the following format:**\<Domain name>\\<User account name\>**. When creating a new model using the Table Import Wizard, this is the default option.|  
 |**Service Account**|ImpersonateServiceAccount|This option specifies the model use the security credentials associated with the Analysis Services service instance that manages the model.|  
   
- <sup>1</sup>ImpersonationMode specifies the value for the [DataSourceImpersonationInfo Element &#40;ASSL&#41;](../scripting/properties/impersonationinfo-element-assl.md) property on the data source.  
+ <sup>1</sup>ImpersonationMode specifies the value for the [DataSourceImpersonationInfo Element &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/impersonationinfo-element-assl) property on the data source.  
   
  <sup>2</sup>When using this option, if the workspace database is removed from memory, either due to a reboot or the **Workspace Retention** property is set to **Unload from Memory** or **Delete from Workspace**, and the model project is closed, in the subsequent session, if you attempt to process table data, you will be prompted to enter the credentials for each data source. Similarly, if a deployed model database is removed from memory, you will be prompted for credentials for each data source.  
   

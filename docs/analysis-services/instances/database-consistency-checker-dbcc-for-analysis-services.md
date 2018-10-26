@@ -52,7 +52,7 @@ The command takes an object definition and returns either an empty result set or
  You can get object names and DatabaseID from Management Studio, through the property page of each object.  
   
 ## Command syntax for Multidimensional and Tabular 110x databases  
- DBCC uses identical syntax for   multidimensional as well as tabular 1100 and 1103 databases. You can run DBCC against specific database objects, including the entire database. See [Object Element &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md) for more information about the object definition.  
+ DBCC uses identical syntax for   multidimensional as well as tabular 1100 and 1103 databases. You can run DBCC against specific database objects, including the entire database. See [Object Element &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) for more information about the object definition.  
   
 ```  
 <DBCC xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  

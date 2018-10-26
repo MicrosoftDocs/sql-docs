@@ -63,7 +63,7 @@ SELECT [<axis_specification>
 ||**CELL_UPDATE_NOT_ENABLED_INVALIDDIMENSIONTYPE** (0x10000009)   The cell cannot be updated because update is not supported in mining model, indirect, or data mining dimensions.|  
 |**VALUE**|The unformatted value of the cell.|  
   
- Only the **CELL_ORDINAL**, **FORMATTED_VALUE**, and **VALUE** cell properties are required. All cell properties, intrinsic or provider-specific, are defined in the **PROPERTIES** schema rowset, including their data types and provider support. For more information about the **PROPERTIES** schema rowset, see [MDSCHEMA_PROPERTIES Rowset](../../../analysis-services/schema-rowsets/ole-db-olap/mdschema-properties-rowset.md).  
+ Only the **CELL_ORDINAL**, **FORMATTED_VALUE**, and **VALUE** cell properties are required. All cell properties, intrinsic or provider-specific, are defined in the **PROPERTIES** schema rowset, including their data types and provider support. For more information about the **PROPERTIES** schema rowset, see [MDSCHEMA_PROPERTIES Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-properties-rowset).  
   
  By default, if the **CELL PROPERTIES** keyword is not used, the cell properties returned are **VALUE**, **FORMATTED_VALUE**, and **CELL_ORDINAL** (in that order). If the **CELL PROPERTIES** keyword is used, only those cell properties explicitly stated with the keyword are returned.  
   

@@ -56,7 +56,7 @@ For features supported by Evaluation and Developer editions, see the SQL Server 
 |Data driven report subscription|Yes||||||Yes|  
 |Scale out deployment (Web farms)|Yes||||||Yes|  
 |Alerting<sup>2</sup> (SSRS 2016) |Yes||||||Yes|  
-|[!INCLUDE[ssCrescent](../includes/sscrescent-md.md) (SSRS 2016)] <sup>2</sup>|Yes||||||Yes|  
+| Power View<sup>2</sup> (SSRS 2016) |Yes||||||Yes|  
   
  <sup>1</sup> For more information on supported data sources in SQL Server Reporting Services (SSRS), see [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   

@@ -10,9 +10,9 @@ When a workload is running as SYSTEM, it is difficult (if not impossible) to tra
 
 ## Default Permissions
 
-[SYSTEM](https://msdn.microsoft.com/en-us/library/windows/desktop/ms684190) is granted the CONNECT SQL and VIEW ANY DATABASE permissions by default.
+[SYSTEM](https://msdn.microsoft.com/en-us/library/windows/desktop/ms684190) is granted the CONNECT SQL and VIEW ANY DATABASE permissions by default. No additional permissions should be granted to SYSTEM
 
-## A Better Way to Grant Permissions
+## Grant Permissions to Services
 
 SQL Server 2008 introduced the use of [per-service Security Identifiers (SID)](https://support.microsoft.com/en-us/help/2620201/sql-server-uses-a-service-sid-to-provide-service-isolation) to allow permissions to be granted directly to a specific service. This is the method used by SQL Server to grant permissions to the engine and agent services (e.g. NT SERVICE\MSSQL$<InstanceName> and NT SERVICE\SQLAGENT$<InstanceName> respectively). Using this method, those services can access the database engine only when the services are running.
 

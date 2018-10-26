@@ -33,7 +33,7 @@ In most cases, DSC will be used to handle the prerequisite requirements. However
 
 ## Install the SqlServerDsc DSC Resource
 
-The [SqlServerDsc](https://www.powershellgallery.com/packages/SqlServerDsc) DSC resource can be downloaded from the [PowerShell Gallery](https://www.powershellgallery.com/) using the [Install-Module](https://docs.microsoft.com/en-us/powershell/module/powershellget/Install-Module?view=powershell-5.1) cmdlet. _Note: Ensure PowerShell is running "As Administrator" to install the module._
+The [SqlServerDsc](https://www.powershellgallery.com/packages/SqlServerDsc) DSC resource can be downloaded from the [PowerShell Gallery](https://www.powershellgallery.com/) using the [Install-Module](https://docs.microsoft.com/powershell/module/powershellget/Install-Module?view=powershell-5.1) cmdlet. _Note: Ensure PowerShell is running "As Administrator" to install the module._
 
 ```PowerShell
 Install-Module -Name SqlServerDsc
@@ -163,7 +163,7 @@ As the configuration applies, the Verbose output will show you what is happening
 
 ### DSC
 
-The [Test-DscConfiguration](https://docs.microsoft.com/en-us/powershell/module/psdesiredstateconfiguration/test-dscconfiguration) cmdlets can be utilized to determine if the current state of the server, in this case the SQL installation, meets the desired state. The result of Test-DscConfiguration should be "True".
+The [Test-DscConfiguration](https://docs.microsoft.com/powershell/module/psdesiredstateconfiguration/test-dscconfiguration) cmdlets can be utilized to determine if the current state of the server, in this case the SQL installation, meets the desired state. The result of Test-DscConfiguration should be "True".
 
 ```PowerShell
 PS C:\> Test-DscConfiguration

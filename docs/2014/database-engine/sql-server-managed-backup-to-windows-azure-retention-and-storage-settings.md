@@ -116,7 +116,7 @@ manager: craigg
     >   
     >  For more information on creating a certificate for encryption, see the Create a Backup Certificate step in [Create an Encrypted Backup](../relational-databases/backup-restore/create-an-encrypted-backup.md).  
   
-     For more information on this stored procedure, see [smart_admin.set_db_backup &#40;Transact-SQL&#41;](https://msdn.microsoft.com/en-us/library/dn451013(v=sql.120).aspx)  
+     For more information on this stored procedure, see [smart_admin.set_db_backup &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/dn451013(v=sql.120).aspx)  
   
      To review the configuration settings for a database use the following query:  
   

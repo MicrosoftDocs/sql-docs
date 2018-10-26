@@ -202,6 +202,6 @@ ms.author: maggies
   
 ## See Also  
  [Maps &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [Troubleshoot Report Builder](https://msdn.microsoft.com/en-us/3806fc48-56f8-44d1-a3c1-df8c33cce0a3)  
+ [Troubleshoot Report Builder](https://msdn.microsoft.com/3806fc48-56f8-44d1-a3c1-df8c33cce0a3)  
   
   

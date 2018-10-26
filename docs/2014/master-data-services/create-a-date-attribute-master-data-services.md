@@ -81,7 +81,7 @@ manager: craigg
   
  After you enter a row with the above values in the mdm.tblList table, the “dd/MM/yyyy hh:mm:ss tt” mask will be available in the Input mask list box. You can then select that mask to display the date and time in a datetime attribute column of an entity in the MDS Explorer.  
   
- The Input Mask is a custom .NET DateTime format string. For more information, see [Custom Date and Time Format Strings](https://msdn.microsoft.com/en-us/library/8kb3ddd4\(v=vs.110\).aspx)  
+ The Input Mask is a custom .NET DateTime format string. For more information, see [Custom Date and Time Format Strings](https://msdn.microsoft.com/library/8kb3ddd4\(v=vs.110\).aspx)  
   
 ## See Also  
  [Attributes &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)   

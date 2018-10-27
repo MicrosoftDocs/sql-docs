@@ -137,7 +137,7 @@ The following query returns one row per `wait_resource` exposed by `sys.dm_exec_
 SELECT page_info.* 
 FROM sys.dm_exec_requests AS d  
 CROSS APPLY sys.fn_PageResCracker (d.page_resource) AS r  
-CROSS APPLY sys.dm_db_page_info(r.db_id, r.file_id, r.page_id, 1) AS page_info
+CROSS APPLY sys.dm_db_page_info(r.db_id, r.file_id, r.page_id, 'LIMITED') AS page_info
 ```
 
 ## See Also  

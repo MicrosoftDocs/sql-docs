@@ -33,7 +33,6 @@ These objects will create in this section:
 - CREATE EXTERNAL DATA SOURCE (Transact-SQL) 
 - CREATE EXTERNAL TABLE (Transact-SQL) 
 - CREATE STATISTICS (Transact-SQL)
-.
 
 1. Create a master key on the database. This is required to encrypt the credential secret.
 
@@ -63,7 +62,7 @@ These objects will create in this section:
     WITH ( 
     LOCATION = sqlserver://SqlServer,
     -- PUSHDOWN = ON | OFF,
-      CREDENTIAL = TeradataCredentials
+      CREDENTIAL = SQLServerCredentials
     );
 
      ```
@@ -75,7 +74,7 @@ These objects will create in this section:
      GO
      ```
 
-1.  Create external tables that represents data stored in external SQL Server  [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md).
+1.  Create external tables that represent data stored in external SQL Server  [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md).
  
      ```sql
      /*  LOCATION: sql server table/view in 'database_name.schema_name.object_name' format
@@ -102,6 +101,10 @@ These objects will create in this section:
      ```sql
       CREATE STATISTICS CustomerCustKeyStatistics ON sqlserver.customer (C_CUSTKEY) WITH FULLSCAN; 
      ```
+
+## SQL Server Connector Compatible Types
+
+A connection can be made to other data sources that recognizes a SQL Server connection. Using the SQL Server PolyBase connector you can create an external table of both **Azure SQL Data Warehouse and Azure SQL Database**. This is accomplished by following the same steps listed above. Make sure the database scoped credential, server address, port, and location string corelate to that of the compatible data source you want to connect to.
 
 ## Next steps
 

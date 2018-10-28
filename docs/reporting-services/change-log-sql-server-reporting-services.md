@@ -77,4 +77,4 @@ Initial release
 
 [What's New in Reporting Services (SSRS)](what-s-new-in-sql-server-reporting-services-ssrs.md)   
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

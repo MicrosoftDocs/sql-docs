@@ -39,7 +39,7 @@ manager: "kfile"
 > SQL Server Data Tools (SSDT) is not included with SQL Server 2016. [Download SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714).
   
 ## See Also  
- [What's New in Reporting Services &#40;SSRS&#41;](http://msdn.microsoft.com/en-us/bc909063-6b84-4b3a-80d2-e93fc04b4b9d)   
+ [What's New in Reporting Services &#40;SSRS&#41;](http://msdn.microsoft.com/bc909063-6b84-4b3a-80d2-e93fc04b4b9d)   
  [What's New in Analysis Services](../../analysis-services/what-s-new-in-analysis-services.md)   
  [What's New in Integration Services](../../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)   
  [What's New in Master Data Services &#40;MDS&#41;](../../master-data-services/what-s-new-in-master-data-services-mds.md)   

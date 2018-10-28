@@ -229,7 +229,7 @@ For more information, see [SQL Data Discovery and Classification](../relational-
 [Auditing](../relational-databases/security/auditing/sql-server-audit-database-engine.md) has also been enhanced to include a new field in the audit log called `data_sensitivity_information`, which logs the sensitivity classifications (labels) of the actual data that was returned by the query. For details and examples, see [Add sensitivity classification](../t-sql/statements/add-sensitivity-classification-transact-sql.md).
 
 >[!NOTE]
->There are no changes in terms of how audit is enabled. There is a new field added to the audit records, `data_sensitivity_information`, which logs the sensitivity classifications (labels) of the actual data that was returned by the query. See [Auditing access to sensitive data](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-data-discovery-and-classification#subheading-3).
+>There are no changes in terms of how audit is enabled. There is a new field added to the audit records, `data_sensitivity_information`, which logs the sensitivity classifications (labels) of the actual data that was returned by the query. See [Auditing access to sensitive data](https://docs.microsoft.com/azure/sql-database/sql-database-data-discovery-and-classification#subheading-3).
 
 ### Expanded support for persistent memory devices
 

@@ -59,6 +59,33 @@ The following steps confirm that Python is enabled and the SQL Server Launchpad 
     
     Additionally, you might need to enable network protocols that have been disabled, or open the firewall so that SQL Server can communicate with external clients. For more information, see [Troubleshooting setup](../common-issues-external-script-execution.md).
 
+### Call revoscalepy functions
+
+To verify that **revoscalepy** is available, run a script that includes [rx_summary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary) that produces a statistical summary data. This script demonstrates how to retrieve a sample .xdf data file from built-in samples included in revoscalepy. The RxOptions function provides the **sampleDataDir** parameter that returns the location of the sample files.
+
+Because rx_summary returns an object of type `class revoscalepy.functions.RxSummary.RxSummaryResults`, which contains multiple elements, you can use pandas to extract just the data frame in a tabular format.
+
+```SQL
+EXEC sp_execute_external_script @language = N'Python', 
+@script = N'
+import os
+from pandas import DataFrame
+from revoscalepy import rx_summary
+from revoscalepy import RxXdfData
+from revoscalepy import RxOptions
+
+sample_data_path = RxOptions.get_option("sampleDataDir")
+print(sample_data_path)
+
+ds = RxXdfData(os.path.join(sample_data_path, "AirlineDemoSmall.xdf"))
+summary = rx_summary("ArrDelay + DayOfWeek", ds)
+print(summary)
+dfsummary = summary.summary_data_frame
+OutputDataSet = dfsummary
+'
+WITH RESULT SETS  ((ColName nvarchar(25) , ColMean float, ColStdDev  float, ColMin  float,   ColMax  float, Col_ValidObs  float, Col_MissingObs int))
+```
+
 ## Basic Python interaction
 
 There are two ways to run Python code in SQL Server:
@@ -97,7 +124,7 @@ The following exercise is focused on the first interaction model: how to pass Py
 For now, remember these rules:
 
 + Everything inside the `@script` argument must be valid Python code. 
-+ The code must follow all Pythonic rules regarding indentation, variable names, and so forth. When you get an error, check your white space and casing.
++ The code must follow all Python rules regarding indentation, variable names, and so forth. When you get an error, check your white space and casing.
 + If you are using any libraries that are not loaded by default, you must use an import statement at the beginning of your script to load them. SQL Server adds several product-specific libraries. For more information, see [Python libraries](../python/python-libraries-and-data-types.md).
 + If the library is not already installed, stop and install the Python package outside of SQL Server, as described here: [Install new Python packages on SQL Server](../python/install-additional-python-packages-on-sql-server.md)
 
@@ -374,4 +401,4 @@ This exercise was intended to give you an idea of how to work with different Pyt
 
 ## Next steps
 
-[Wrap Python code in a SQL stored procedure](wrap-python-in-tsql-stored-procedure.md)
+[Set up the Iris demo dataset](demo-data-iris-in-sql.md)

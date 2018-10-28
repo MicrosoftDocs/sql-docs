@@ -96,6 +96,6 @@ ms.author: maghan
  The account information is removed from the RSReportServer.config file.  
   
 ## See Also  
- [Reporting Services Configuration Manager (SSRS Native Mode)](http://msdn.microsoft.com/en-us/379eab68-7f13-4997-8d64-38810240756e)  
+ [Reporting Services Configuration Manager (SSRS Native Mode)](https://msdn.microsoft.com/379eab68-7f13-4997-8d64-38810240756e)  
   
   

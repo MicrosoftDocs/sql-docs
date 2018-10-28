@@ -236,6 +236,6 @@ GUIDELINES for Next Steps
 
 ## Next steps
 
-Database backups are an essential part of any business continuity and disaster recovery strategy because they protect your data from accidental corruption or deletion. To see how database backups into a broader strategy, see [Business continuity overview](sql-database-business-continuity.md).
+Database backups are an essential part of any business continuity and disaster recovery strategy because they protect your data from accidental corruption or deletion. To see how database backups fit into a broader strategy, see [Business continuity overview](sql-database-business-continuity.md).
 
 

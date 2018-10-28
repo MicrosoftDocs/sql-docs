@@ -88,7 +88,7 @@ A *calculated table* is a model-only construction based on a DAX expression or q
  ### PowerShell for Tabular models    
  This release includes PowerShell enhancements for tabular models at compatibility level 1200. You can use all of the applicable cmdlets, plus cmdlets specific to Tabular mode: [Invoke-ProcessASDatabase](../analysis-services/powershell/invoke-processasdatabase.md) and [Invoke-ProcessTable cmdlet](../analysis-services/powershell/invoke-processtable-cmdlet.md).    
  ### SSMS scripting database operations    
- In the [latest SQL Server Management Studio (SSMS)](http://msdn.microsoft.com/library/mt238290.aspx), script is now enabled for database commands, including Create, Alter, Delete, Backup, Restore, Attach, Detach. Output is Tabular Model Scripting Language (TMSL) in JSON. See [Tabular Model Scripting Language &#40;TMSL&#41; Reference](../analysis-services/tabular-model-scripting-language-tmsl-reference.md) for more information.    
+ In the [latest SQL Server Management Studio (SSMS)](http://msdn.microsoft.com/library/mt238290.aspx), script is now enabled for database commands, including Create, Alter, Delete, Backup, Restore, Attach, Detach. Output is Tabular Model Scripting Language (TMSL) in JSON. See [Tabular Model Scripting Language &#40;TMSL&#41; Reference](https://docs.microsoft.com/bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference) for more information.    
  ### Analysis Services Execute DDL Task    
  [Analysis Services Execute DDL Task](../integration-services/control-flow/analysis-services-execute-ddl-task.md) now also accepts Tabular Model Scripting Language (TMSL) commands.     
  ### SSAS PowerShell cmdlet    
@@ -97,7 +97,7 @@ See [Analysis Services PowerShell Reference](../analysis-services/powershell/ana
  ### Tabular Model Scripting Language (TMSL) supported in SSMS    
   Using the [latest version of SSMS](http://msdn.microsoft.com/library/mt238290.aspx), you can now create scripts to automate most administrative tasks for tabular 1200 models. Currently, the following tasks can be scripted: Process at any level, plus CREATE, ALTER, DELETE at the database level.    
     
- Functionally, TMSL is equivalent to the XMLA ASSL extension that provides multidimensional object definitions, except that TMSL uses native descriptors like **model**, **table**, and **relationship** to describe tabular metadata. See [Tabular Model Scripting Language &#40;TMSL&#41; Reference](../analysis-services/tabular-model-scripting-language-tmsl-reference.md) for details about the schema.    
+ Functionally, TMSL is equivalent to the XMLA ASSL extension that provides multidimensional object definitions, except that TMSL uses native descriptors like **model**, **table**, and **relationship** to describe tabular metadata. See [Tabular Model Scripting Language &#40;TMSL&#41; Reference](https://docs.microsoft.com/bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference) for details about the schema.    
     
  A generated JSON-based script for a tabular model might look like the following:    
     
@@ -115,7 +115,7 @@ See [Analysis Services PowerShell Reference](../analysis-services/powershell/ana
 }    
 ```    
 
-The payload is a JSON document that can be as minimal as the example shown above, or highly embellished with  the full set of object definitions. [Tabular Model Scripting Language &#40;TMSL&#41; Reference](../analysis-services/tabular-model-scripting-language-tmsl-reference.md) describes the syntax.
+The payload is a JSON document that can be as minimal as the example shown above, or highly embellished with  the full set of object definitions. [Tabular Model Scripting Language &#40;TMSL&#41; Reference](https://docs.microsoft.com/bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference) describes the syntax.
 
 At the database level, CREATE, ALTER, and DELETE commands will output TMSL script in the familiar XMLA window.  Other commands, such as Process, can also be scripted in this release. Script support for many other actions may be added in a future release.    
 

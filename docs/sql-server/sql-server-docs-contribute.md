@@ -84,7 +84,7 @@ This adds the following text at the top of the article:
 
 ![Applies to text](./media/sql-server-docs-contribute/applies-to.png)
 
-To find the correct applies-to include for your article, use the following tips:
+To find the correct applies-to include file for your article, use the following tips:
 
 - For a list of commonly used includes, see [SQL Server version and applies-to include files](applies-to-includes.md).
 - Look at other articles that cover the same feature or a related task. If you edit that article, you can copy the Markdown for the applies-to include link (you can cancel the edit without submitting it).
@@ -94,8 +94,8 @@ To find the correct applies-to include for your article, use the following tips:
 
 ## Contributor resources
 
-- [Contributor guide for docs.microsoft.com](https://docs.microsoft.com/en-us/contribute/)
-- [Microsoft Style Guide](https://docs.microsoft.com/en-us/teamblog/style-guide)
+- [Contributor guide for docs.microsoft.com](https://docs.microsoft.com/contribute/)
+- [Microsoft Style Guide](https://docs.microsoft.com/teamblog/style-guide)
 - [Markdown basics](https://help.github.com/articles/getting-started-with-writing-and-formatting-on-github/)
 
 > [!TIP]

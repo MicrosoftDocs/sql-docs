@@ -54,7 +54,7 @@ manager: craigg
  For optimal performance, use [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] to monitor only those events in which you are most interested. Monitoring too many events adds overhead and can cause the trace file or table to grow very large, especially when you monitor over a long period of time. In addition, use filtering to limit the amount of data that is collected and to prevent traces from becoming too large.  
   
 ## See Also  
- [Analysis Services Trace Events](../trace-events/analysis-services-trace-events.md)   
+ [Analysis Services Trace Events](https://docs.microsoft.com/bi-reference/trace-events/analysis-services-trace-events)   
  [Create Profiler Traces for Replay &#40;Analysis Services&#41;](create-profiler-traces-for-replay-analysis-services.md)  
   
   

@@ -1,7 +1,7 @@
 ---
 title: "Bike Buyer DMX Tutorial | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/13/2017"
+ms.date: "10/19/2018"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: 
@@ -63,7 +63,7 @@ manager: craigg
  ALTER MINING STRUCTURE  
  Use this statement to add a mining model to a mining structure that already exists on the server. This statement is useful if you want to create a mining structure that contains several different mining models. There are several reasons that you would want to add more than one mining model in a single mining structure. For example, you might create several mining models that use different algorithms to see which algorithm works best. You might create several mining models that use the same algorithm, but with a parameter set differently for each mining model to find the best setting for the parameter.  
   
- For more information, see [ALTER MINING STRUCTURE &#40;DMX&#41;]((~/dmx/alter-mining-structure-dmx.md).  
+ For more information, see [ALTER MINING STRUCTURE &#40;DMX&#41;](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016).  
   
  Because you will create a mining structure that contains several mining models, you will use the second method in this tutorial.  
   

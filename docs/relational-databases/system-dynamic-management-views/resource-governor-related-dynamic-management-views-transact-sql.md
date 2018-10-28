@@ -1,7 +1,7 @@
 ---
 title: "Resource Governor Related Dynamic Management Views (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/06/2017"
+ms.date: "10/28/2018"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects

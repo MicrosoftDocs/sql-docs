@@ -13,14 +13,14 @@ manager: cgronlun
 # Dynamic management views for SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Dynamic management views (DMVs) return server state information that can be used to monitor the health of a server instance, diagnose problems, and tune performance. The article lists the that are related to machine learning in SQL Server. For more information, see [System Dynamic Management Views](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).
+Dynamic management views (DMVs) return server state information that can be used to monitor the health of a server instance, diagnose problems, and tune performance. The article lists the that are related to machine learning in SQL Server. For more general information about DMVs, see [System Dynamic Management Views](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).
 
 > [!TIP]
 > Use the built-in reports to monitor machine learning sessions and package utilization. For more information, see [Monitor machine learning using custom reports in Management Studio](../../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md).
 
 ## Monitor system resources
 
-You can monitor the resources used by external scripts by using the dynamic management views below. To query the DMVs, you need VIEW SERVER STATE permission on server.
+You can monitor the resources used by external scripts by using the dynamic management views below. To query the DMVs, you need `VIEW SERVER STATE` permission on server.
 
 | Dynamic management view | Description |
 |-------------------------|-----------------|
@@ -29,7 +29,7 @@ You can monitor the resources used by external scripts by using the dynamic mana
 | [sys.dm_os_performance_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) | Returns a row per performance counter maintained by the server. You can use this information to see how many scripts ran, which scripts were run using which authentication mode, or how many R calls were issued on the instance overall. |
 
 > [!NOTE]  
-> Users who run external scripts must have the additional permission EXECUTE ANY EXTERNAL SCRIPT, however, these DMVs can be used by administrators without this permission.
+> Users who run external scripts must have the additional permission `EXECUTE ANY EXTERNAL SCRIPT`, however, these DMVs can be used by administrators without this permission.
 
 ### Performance counters
 
@@ -41,7 +41,7 @@ FROM sys.dm_os_performance_counters
 WHERE object_name LIKE '%External Scripts%'
 ```
 
-The counters below are reported by **sys.dm_os_performance_counters** where the object name is **External scripts**:
+The counters below are reported by **sys.dm_os_performance_counters**  for external scripts:
 
 | Counter | Description |
 |---------|-------------|
@@ -64,14 +64,13 @@ You can see configuration information about the external resource pools by using
 | [sys.resource_governor_external_resource_pools](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md) | Returns information about the current external resource pool state, the current configuration of resource pools, and resource pool statistics. |
 | [sys.dm_resource_governor_external_resource_pool_affinity](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md) | Returns CPU affinity information about the current external resource pool configuration. Returns one row per scheduler in [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] where each scheduler is mapped to an individual processor. Use this view to monitor the condition of a scheduler or to identify runaway tasks.  Under the default configuration, workload pools are automatically assigned to processors and therefore there are no affinity values to return. The affinity schedule maps the resource pool to the [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] schedules identified by the given IDs. These IDs map to the values in the `scheduler_id` column in `sys.dm_os_schedulers`. |
 
-For general information about monitoring [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] instances, see [Catalog Views](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md) and [Resource Governor Related Dynamic Management Views](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md).
+For information about monitoring [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] instances, see [Catalog Views](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md) and [Resource Governor Related Dynamic Management Views](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md).
 
 ## Monitoring script execution
 
 R and Python scripts that run in [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] are started by the [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] interface. However, the Launchpad is not resource governed or monitored separately, as it is a secure service provided by Microsoft that manages resources appropriately.
 
-External scripts that run under the Launchpad service are managed using the 
-[Windows job object](/windows/desktop/ProcThread/job-objects). A job object allows groups of processes to be managed as a unit. Each job object is hierarchical and controls the attributes of all processes associated with it. Operations performed on a job object affect all processes associated with the job object.
+External scripts that run under the Launchpad service are managed using the [Windows job object](/windows/desktop/ProcThread/job-objects). A job object allows groups of processes to be managed as a unit. Each job object is hierarchical and controls the attributes of all processes associated with it. Operations performed on a job object affect all processes associated with the job object.
 
 Thus, if you need to terminate one job associated with an object, be aware that all related processes will also be terminated. If you are running an R script that is assigned to a Windows job object and that script runs a related ODBC job which must be terminated, the parent R script process will be terminated as well.
 

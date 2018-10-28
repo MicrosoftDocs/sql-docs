@@ -20,13 +20,13 @@ Dynamic management views (DMVs) return server state information that can be used
 
 ## Monitor system resources
 
-You can monitor the resources used by external scripts by using the dynamic management views below. To query the DMVs, you need `VIEW SERVER STATE` permission on server.
+You can monitor the resources used by external scripts by using the dynamic management views below. To query the DMVs, you need `VIEW SERVER STATE` permission on the server.
 
 | Dynamic management view | Description |
 |-------------------------|-----------------|
 | [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) | Returns a row for each active worker account that is running an external script. |
 | [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md) | Returns one row for each type of external script request. |
-| [sys.dm_os_performance_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) | Returns a row per performance counter maintained by the server. You can use this information to see how many scripts ran, which scripts were run using which authentication mode, or how many R calls were issued on the instance overall. |
+| [sys.dm_os_performance_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) | Returns a row per performance counter maintained by the server. You can use this information to see how many scripts ran, which scripts were run using which authentication mode, or how many R or Python calls were issued on the instance overall. |
 
 > [!NOTE]  
 > Users who run external scripts must have the additional permission `EXECUTE ANY EXTERNAL SCRIPT`, however, these DMVs can be used by administrators without this permission.

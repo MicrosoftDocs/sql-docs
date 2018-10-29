@@ -82,16 +82,18 @@ First, complete the following steps while online:
 
 1. [Download the SSDT standalone installer](#ssdt-for-vs-2017-standalone-installer).
 2. [Download vs_sql.exe](https://aka.ms/vs/15/release/vs_sql.exe).
-3. While still online, execute one of the following commands to download all the files required for installing offline. Using the `--layout` option is the key. Replace <filepath> with the actual path to save the files.
+3. While still online, execute one of the following commands to download all the files required for installing offline. Using the `--layout` option is the key, it will download the actual files for the offline installation. Replace <filepath> with the actual layouts path to save the files.
 
+   
    a.	For a specific language, pass the locale: `vs_sql.exe --layout c:\<filepath> --lang en-us` (a single language is ~1GB)  
    b. For all languages, omit the `--lang` argument: `vs_sql.exe --layout c:\<filepath>` (all languages are ~3.9GB).
 
+4. Execute `SSDT-Setup-ENU.exe /layout c:\<filepath>` to extract the SSDT payload into the same `<filepath>` location where the VS2017 files were downloaded. This ensure that all files from both are combined into a single layouts folder.
+
 After completing the previous steps, the following can be done while offline:
 
-1. Copy the VS2017 payload to the SSDT payload folder. Ensure all files from both are combined into a single layouts folder.
-2. Run `vs_setup.exe --NoWeb` to install the VS2017 Shell and SQL Server Data Project.
-3. Run `SSDT-Setup-ENU.exe /install` and select SSIS/SSRS/SSAS.
+1. Run `vs_setup.exe --NoWeb` to install the VS2017 Shell and SQL Server Data Project.
+2. From the layouts folder run `SSDT-Setup-ENU.exe /install` and select SSIS/SSRS/SSAS.
 
    - Or for an unattended installation, run `SSDT-Setup-ENU.exe /INSTALLALL[:vsinstances] /passive`  
 

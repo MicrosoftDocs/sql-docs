@@ -26,7 +26,7 @@ You can monitor the resources used by external scripts by using the dynamic mana
 |-------------------------|------|-------------|
 | [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) | Execution | Returns a row for each active worker account that is running an external script. |
 | [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md) | Execution | Returns one row for each type of external script request. |
-| [sys.dm_os_performance_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) | Execution | Returns a row per performance counter maintained by the server. You can use this information to see how many scripts ran, which scripts were run using which authentication mode, or how many R or Python calls were issued on the instance overall. |
+| [sys.dm_os_performance_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) | Execution | Returns a row per performance counter maintained by the server. If you use the search condition `WHERE object_name LIKE '%External Scripts%'`, you can use this information to see how many scripts ran, which scripts were run using which authentication mode, or how many R or Python calls were issued on the instance overall. |
 | [sys.resource_governor_external_resource_pools](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md) | Resource Governor | Returns information about the current external resource pool state in Resource Governor, the current configuration of resource pools, and resource pool statistics. |
 | [sys.dm_resource_governor_external_resource_pool_affinity](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md) | Resource Governor | Returns CPU affinity information about the current external resource pool configuration in Resource Governor. Returns one row per scheduler in [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] where each scheduler is mapped to an individual processor. Use this view to monitor the condition of a scheduler or to identify runaway tasks. |
 
@@ -40,7 +40,9 @@ For information about monitoring [!INCLUDE[ssNoVersion_md](../../includes/ssnove
 The following example returns the active sessions that are running external scripts:
 
 ```SQL
-SELECT r.session_id, r.blocking_session_id, r.status, DB_NAME(s.database_id) AS database_name, s.login_name, r.wait_time, r.wait_type, r.last_wait_type, r.total_elapsed_time, r.cpu_time, r.reads, r.logical_reads, r.writes, er.language, er.degree_of_parallelism, er.external_user_name
+SELECT r.session_id, r.blocking_session_id, r.status, DB_NAME(s.database_id) AS database_name
+    , s.login_name, r.wait_time, r.wait_type, r.last_wait_type, r.total_elapsed_time, r.cpu_time
+    , r.reads, r.logical_reads, r.writes, er.language, er.degree_of_parallelism, er.external_user_name
 FROM sys.dm_exec_requests AS r
 INNER JOIN sys.dm_external_script_requests AS er
 ON r.external_script_request_id = er.external_script_request_id
@@ -48,7 +50,7 @@ INNER JOIN sys.dm_exec_sessions AS s
 ON s.session_id = r.session_id
 ```
 
-The query joins three [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md), [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md), and [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md). It returns the following columns :
+The query joins the three DMVs [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md), [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md), and [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md) together and returns the following columns:
 
 | Column | Description |
 |--------|-------------|
@@ -74,7 +76,7 @@ The query joins three [sys.dm_exec_requests](../../relational-databases/system-d
 The following example returns the performance counters from [sys.dm_os_performance_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) related to external scripts:
 
 ```SQL
-SELECT *
+SELECT counter_name, cntr_value
 FROM sys.dm_os_performance_counters 
 WHERE object_name LIKE '%External Scripts%'
 ```

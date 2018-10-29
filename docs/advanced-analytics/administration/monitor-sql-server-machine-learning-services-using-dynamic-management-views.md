@@ -13,14 +13,27 @@ manager: cgronlun
 # Monitor SQL Server Machine Learning Services using dynamic management views (DMVs)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Dynamic management views (DMVs) return server state information that can be used to monitor the health of a server instance, diagnose problems, and tune performance. The article lists the DMVs that are related to machine learning in SQL Server. For more general information about DMVs, see [System Dynamic Management Views](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).
+Dynamic management views (DMVs) can be used to monitor the execution of external scripts (R and Python), resources used, diagnose problems, and tune performance in SQL Server Machine Learning Services.
+
+In this article, you will find the DMVs that are specific for SQL Server Machine Learning Services. You will also find example queries that show:
+
++ Settings and configuration options for machine learning
++ Active sessions running external R or Python scripts
++ Execution statistics for the external runtime for R and Python
++ Performance counters for external scripts
++ Memory usage for the OS, SQL Server, and external resource pools
++ Memory configuration for SQL Server and external resource pools
++ Resource Governor resource pools, including external resource pools
++ Installed packages for R and Python
+
+For more general information about DMVs, see [System Dynamic Management Views](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).
 
 > [!TIP]
-> Use the built-in reports to monitor machine learning sessions and package utilization. For more information, see [Monitor machine learning using custom reports in Management Studio](../../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md).
+> You can also use the built-in reports to monitor SQL Server Machine Learning Services. For more information, see [Monitor machine learning using custom reports in Management Studio](../../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md).
 
 ## Dynamic management views
 
-You can monitor the resources used by external scripts by using the dynamic management views below. To query the DMVs, you need `VIEW SERVER STATE` permission on the server.
+The following dynamic management views can be used when monitoring machine learning workloads in SQL Server. To query the DMVs, you need `VIEW SERVER STATE` permission on the instance.
 
 | Dynamic management view | Type | Description |
 |-------------------------|------|-------------|
@@ -33,11 +46,11 @@ You can monitor the resources used by external scripts by using the dynamic mana
 For information about monitoring [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] instances, see [Catalog Views](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md) and [Resource Governor Related Dynamic Management Views](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md).
 
 > [!NOTE]  
-> Users who run external scripts must have the additional permission `EXECUTE ANY EXTERNAL SCRIPT`, however, these DMVs can be used by administrators without this permission.
+> Users who run external scripts must have EXECUTE ANY EXTERNAL SCRIPT permission. However, administrators can use these DMVs without additional permission.
 
-## Settings and configuration options
+## Settings and configuration
 
-You can Retrieve the Machine Learning Services installation setting and configuration options by using the example below. 
+You can retrieve the Machine Learning Services installation setting and configuration options by using the query below.
 
 ```SQL
 SELECT CAST(SERVERPROPERTY('IsAdvancedAnalyticsInstalled') AS INT) AS IsMLServicesInstalled
@@ -68,7 +81,7 @@ The query returns the following columns:
 
 ## Active sessions
 
-The following example returns the active sessions that are running external scripts:
+The following query returns the active sessions that are running external scripts:
 
 ```SQL
 SELECT r.session_id, r.blocking_session_id, r.status, DB_NAME(s.database_id) AS database_name
@@ -80,6 +93,11 @@ ON r.external_script_request_id = er.external_script_request_id
 INNER JOIN sys.dm_exec_sessions AS s
 ON s.session_id = r.session_id;
 ```
+
+session_id	blocking_session_id	status	database_name	login_name	wait_time	wait_type	last_wait_type	total_elapsed_time	cpu_time	reads	logical_reads	writes	language	degree_of_parallelism	external_user_name
+54	0	suspended	master	NORTHAMERICA\davidph	5006420	EXTERNAL_SCRIPT_NETWORK_IO	EXTERNAL_SCRIPT_NETWORK_IO	5023681	1	0	2	0	R	1	SQL201701
+52	0	suspended	master	NORTHAMERICA\davidph	4998837	EXTERNAL_SCRIPT_NETWORK_IO	EXTERNAL_SCRIPT_NETWORK_IO	4998997	1	0	0	0	Python	1	SQL201701
+
 
 The query joins the three DMVs [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md), [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md), and [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md) together and returns the following columns:
 
@@ -163,29 +181,6 @@ The query returns the following columns:
 | committed_kb | The committed memory in kilobytes (KB) in the memory manager. Does not include reserved memory in the memory manager. |
 | external_pool_peak_memory_kb | The sum of the The maximum amount of memory used, in kilobytes, for all external resource pools. |
 
-## Resource pools
-
-In the SQL Server Resource Governor, a [resource pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md) represents a subset of the physical resources of an instance of the Database Engine. The query below retrieves information about the resource pools used for SQL Server and external scripts.
-
-```SQL
-SELECT CONCAT ('SQL Server - ', p.name) AS pool_name
-    , p.total_cpu_usage_ms, p.read_io_completed_total, p.write_io_completed_total
-FROM sys.dm_resource_governor_resource_pools AS p
-UNION ALL
-SELECT CONCAT ('External Pool - ', ep.name) AS pool_name
-    , ep.total_cpu_user_ms, ep.read_io_count, ep.write_io_count
-FROM sys.dm_resource_governor_external_resource_pools AS ep;
-```
-
-The query returns the following columns:
-
-| Column | Description |
-|--------|-------------|
-| pool_name | Name of the resource pool. SQL Server resource pools are prefixed with `SQL Server` and external resource pools are prefixed with `External Pool`.
-| total_cpu_usage_hours | The cumulative CPU usage in milliseconds  since the Resource Govenor statistics were reset. |
-| read_io_completed_total | The total read IOs completed since the Resource Govenor statistics were reset. |
-| write_io_completed_total | The total write IOs completed since the Resource Govenor statistics were reset. |
-
 ## Memory configuration
 
 The example below retrieves the memory configuration of SQL Server and external resource pools. If SQL Sever is running with default then max_memory limit is considered as 100% of OS memory.
@@ -209,6 +204,29 @@ The query returns the following columns:
 |--------|-------------|
 | name | Name of the external resource pool or SQL Server. |
 | max_memory_percent | The maximum memory that SQL Server or the external resource pool can use. |
+
+## Resource pools
+
+In the SQL Server Resource Governor, a [resource pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md) represents a subset of the physical resources of an instance of the Database Engine. The query below retrieves information about the resource pools used for SQL Server and external scripts.
+
+```SQL
+SELECT CONCAT ('SQL Server - ', p.name) AS pool_name
+    , p.total_cpu_usage_ms, p.read_io_completed_total, p.write_io_completed_total
+FROM sys.dm_resource_governor_resource_pools AS p
+UNION ALL
+SELECT CONCAT ('External Pool - ', ep.name) AS pool_name
+    , ep.total_cpu_user_ms, ep.read_io_count, ep.write_io_count
+FROM sys.dm_resource_governor_external_resource_pools AS ep;
+```
+
+The query returns the following columns:
+
+| Column | Description |
+|--------|-------------|
+| pool_name | Name of the resource pool. SQL Server resource pools are prefixed with `SQL Server` and external resource pools are prefixed with `External Pool`.
+| total_cpu_usage_hours | The cumulative CPU usage in milliseconds  since the Resource Govenor statistics were reset. |
+| read_io_completed_total | The total read IOs completed since the Resource Govenor statistics were reset. |
+| write_io_completed_total | The total write IOs completed since the Resource Govenor statistics were reset. |
 
 ## Installed packages
 
@@ -260,3 +278,4 @@ The columns returned are:
 + [Extended events for machine learning](../../advanced-analytics/r/extended-events-for-sql-server-r-services.md)
 + [Resource Governor Related Dynamic Management Views](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)
 + [System Dynamic Management Views](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
++ [Monitor machine learning using custom reports in Management Studio](../../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md)

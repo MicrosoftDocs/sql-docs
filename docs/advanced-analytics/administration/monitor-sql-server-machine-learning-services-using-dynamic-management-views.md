@@ -40,11 +40,7 @@ For information about monitoring [!INCLUDE[ssNoVersion_md](../../includes/ssnove
 The following example returns the active sessions that are running external scripts:
 
 ```SQL
-SELECT r.session_id, r.blocking_session_id, r.status
-	, DB_NAME(s.database_id) AS database_name, s.login_name
-	, r.wait_time, r.wait_type, r.last_wait_type
-	, r.total_elapsed_time, r.cpu_time, r.reads, r.logical_reads, r.writes
-	, er.language, er.degree_of_parallelism, er.external_user_name
+SELECT r.session_id, r.blocking_session_id, r.status, DB_NAME(s.database_id) AS database_name, s.login_name, r.wait_time, r.wait_type, r.last_wait_type, r.total_elapsed_time, r.cpu_time, r.reads, r.logical_reads, r.writes, er.language, er.degree_of_parallelism, er.external_user_name
 FROM sys.dm_exec_requests AS r
 INNER JOIN sys.dm_external_script_requests AS er
 ON r.external_script_request_id = er.external_script_request_id
@@ -73,10 +69,9 @@ The query joins three [sys.dm_exec_requests](../../relational-databases/system-d
 | degree_of_parallelism | Number indicating the number of parallel processes that were created. This value might be different from the number of parallel processes that were requested. |
 | external_user_name | The Windows worker account under which the script was executed. |
 
-
 ## Performance counters
 
-The following example returns the performance counters related to external scripts:
+The following example returns the performance counters from [sys.dm_os_performance_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) related to external scripts:
 
 ```SQL
 SELECT *

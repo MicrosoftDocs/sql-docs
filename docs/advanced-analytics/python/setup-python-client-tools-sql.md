@@ -13,12 +13,12 @@ manager: cgronlun
 # Set up a Python client for use with SQL Server Machine Learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Python integration is available starting in SQL Server 2017 or later when you include the Python option in a Machine Learning Services (In-Database) installation. For more information, see [Install SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md).
+Python integration is available starting in SQL Server 2017 or later when you include the Python option in a [Machine Learning Services (In-Database) installation](../install/sql-machine-learning-services-windows-install.md). 
 
-In this article, learn how to configure a client development workstation so that you can connect to a remote SQL Server enabled for machine learning and Python integration. At the end, you will have the same Python libraries as those on SQL Server plus the ability to push computations from a local session to a remote session on SQL Server.
+In this article, learn how to configure a Python client development workstation so that you can connect to a remote SQL Server enabled for machine learning and Python integration. This exercise uses Jupyter Notebooks to run Python code. After completing the steps in this article, you will have the same Python libraries as those on SQL Server. You will also know how to push computations from a local Python session to a remote Python session on SQL Server.
 
 > [!Tip]
-> For a video demonstration, see [Run R and Python Remotely in SQL Server from Jupyter Notebooks](https://blogs.msdn.microsoft.com/mlserver/2018/07/10/run-r-and-python-remotely-in-sql-server-from-jupyter-notebooks-or-any-ide/).
+> For a video demonstration of the exercises in this article, see [Run R and Python Remotely in SQL Server from Jupyter Notebooks](https://blogs.msdn.microsoft.com/mlserver/2018/07/10/run-r-and-python-remotely-in-sql-server-from-jupyter-notebooks-or-any-ide/).
 
 > [!Note]
 > An alternative to installing just the client libraries is using a standalone server. Using a standalone server as a rich client is an option that some customers prefer for more end-to-end scenario work. If you have a [standalone server](../install/sql-machine-learning-standalone-windows-install.md) as provided in SQL Server setup, you have a Python server that is fully decoupled from a SQL Server database engine instance. A standalon server includes the open-source base distribution of Anaconda plus the Microsoft-specific libraries. You can find the Python executable at this location: `C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER`. As validation of your rich client install, open a [Jupyter notebook](#python-tools) to run commands using the Python.exe on the server.
@@ -122,7 +122,7 @@ If your code requires packages that are not installed by default with SQL Server
 
 Before trying this next step, make sure you have permissions on the SQL Server instance and a connection string to the [Iris sample database](../tutorials/demo-data-iris-in-sql.md). If the database doesn't exist and you have sufficient permissions, you can [create a database using these inline instructions](#create-iris-remotely).
 
-Replace the connection string with valid values. The sample code uses `"Driver=SQL Server;Server=localhost;Database=irissql;Trusted_Connection=Yes;"` but your code should specify a remote server, possibly with an instance name.
+Replace the connection string with valid values. The sample code uses `"Driver=SQL Server;Server=localhost;Database=irissql;Trusted_Connection=Yes;"` but your code should specify a remote server, possibly with an instance name, and a credential option that maps to database user login.
 
 ### Define a function
 
@@ -232,7 +232,7 @@ iris = datasets.load_iris()
 df = pd.DataFrame(iris.data, columns=iris.feature_names)
 ```
 
-### 3 - Use RecoscalePy APIs to create a table and load the Iris data
+### 3 - Use Revoscalepy APIs to create a table and load the Iris data
 
 ```Python
 from revoscalepy import RxSqlServerData, rx_data_step

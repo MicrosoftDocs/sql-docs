@@ -22,11 +22,8 @@ This article describes the steps to deploy Kubernetes on AKS using Azure CLI. If
 
 ## Prerequisites
 
-- For an AKS environment, the minimum VM requirement is at least two agent VMs (in addition to master) of a minimum size [Standard_DS3_v2](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-general#dsv2-series). Minimum resources required per VM are 4 CPUs and 14 GB of memory.
+- For an AKS environment, the minimum VM requirement is at least two agent VMs (in addition to master), with at least 4 CPUs and 32 GB of memory each. Azure infrastructure offers multiple size options for VMs, see [here](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes) for selections in the region you are planning to deploy.
   
-   > [!NOTE]
-   > If you plan to run big data jobs or multiple Spark applications, the minimum size is [Standard_D8_v3](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-general#dv3-series-sup1sup), and the minimum resources required per VM are 8 CPUs and 32 GB of memory.
-
 - This section requires that you be running the Azure CLI version 2.0.4 or later. If you need to install or upgrade, see [Install Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-azure-cli). Run `az --version` to find the version if needed.
 
 - Install [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/). SQL Server big data cluster requires any minor version within the 1.10 version range for Kubernetes, for both server and client. To install a specific version on kubectl client, see [Install kubectl binary via curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl). For AKS you will need to use `--kubernetes-version` parameter to specify a version different than default. Note that at the CTP2.0 release timeframe, AKS only supports 1.10.7 and 1.10.8 versions. 
@@ -76,7 +73,7 @@ An Azure resource group is a logical group in which Azure resources are deployed
    az aks create --name kubcluster \
     --resource-group sqlbigdatagroup \
     --generate-ssh-keys \
-    --node-vm-size Standard_DS3_v2 \
+    --node-vm-size Standard_E4s_v3 \
     --node-count 2 \
     --kubernetes-version 1.10.7
     ```

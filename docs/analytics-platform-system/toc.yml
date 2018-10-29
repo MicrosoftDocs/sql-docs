@@ -1,12 +1,14 @@
 - name: What's new in APS
   href: whats-new-analytics-platform-system.md
   items:
+  - name: APS CU7.2
+    href: whats-new-analytics-platform-system.md#h2-aps-cu7.2
   - name: APS CU7.1
-    href: whats-new-analytics-platform-system.md#h2-aps-cu7.1?view=aps-pdw-2016-au7
+    href: whats-new-analytics-platform-system.md#h2-aps-cu7.1
   - name: APS AU7
-    href: whats-new-analytics-platform-system.md#h2-aps-au7?view=aps-pdw-2016-au7
+    href: whats-new-analytics-platform-system.md#h2-aps-au7
   - name: APS 2016
-    href: whats-new-analytics-platform-system.md#h2-aps-au6?view=aps-pdw-2016
+    href: whats-new-analytics-platform-system.md#h2-aps-au6
 - name: Architecture
   items:
   - name: Parallel Data Warehouse overview
@@ -157,6 +159,8 @@
       items:
       - name: Connect to Hadoop
         href: polybase-configure-hadoop.md
+      - name: Configure Hadoop Security
+        href: polybase-configure-hadoop-security.md
       - name: Azure Blob Storage
         href: polybase-configure-azure-blob-storage.md
     - name: Use a DNS forwarder to resolve non-appliance DNS names

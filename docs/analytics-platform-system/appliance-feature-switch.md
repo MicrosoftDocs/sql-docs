@@ -19,6 +19,9 @@ The **Feature Switch** page displays information about the feature switches that
 ##AutoStatsEnabled
 Controls the auto statistics feature. This feature switch is set to true by default after upgrading to AU7. Any database created after the upgrade will inherit auto creation and asynchronous update of statistics. For existing databases, database administrators can enable auto statistics with [ALTER DATABASE (Parallel Data Warehouse)](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw). For more information on statistics, see [Statistics](../relational-databases/statistics/statistics.md).
 
+##MaxDOPForInsertQueries
+Allows you to pick maxdop settings greater than 1 for insert/select operations. Options for this setting are 0, 1, 2 and 4, with default being 1.
+
 ##UseCatalogQueries
 Using catalog objects for some metadata calls instead of using SMO has shown performance improvement. Set to true by default in CU7.1, this switch controls that behavior. 
 

@@ -27,13 +27,14 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 
 Community technology preview (CTP) 2.1 is the latest public release of [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]. The following features are added or enhanced for [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] CTP 2.1.
 
+- [Big Data Clusters](#bigdatacluster)
+  - Deploy Python and R apps.
 - [Database Engine](#databaseengine)
   - Intelligent query processing adds scalar UDF inlining 
   - Improve truncation message for ETL DW scenarios
   - UTF-8 collations support in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] setup
   - Use derived table or view aliases in graph match queries
-- [Big Data Clusters](#bigdatacluster)
-  - Deploy Python and R apps.
+  - Improved diagnostic data for long-running queries
 
 ## CTP 2.0 
 
@@ -119,6 +120,10 @@ The new error message 2628 provides more context for the data truncation problem
 ### UTF-8 support (CTP 2.1)
 
 Added support to select UTF-8 collations as server collation during [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.1 Setup.
+
+### Improved diagnostic data for long-running queries (CTP 2.1)
+
+SQL Server 2019 preview provides improved diagnostic data for long-running queries that wait on synchronous statistics update operations.  The dynamic management view `sys.dm_exec_requests` column `command` shows `SELECT (STATMAN)` if a `SELECT` is waiting for a synchronous statistics update operation to complete prior to continuing query execution.  Additionally, the new wait type `WAIT_ON_SYNC_STATISTICS_REFRESH` is surfaced in the `sys.dm_os_wait_stats` dynamic management view. It shows the accumulated instance-level time spent on synchronous statistics refresh operations.
 
 ### Database compatibility level (CTP 2.0)
 

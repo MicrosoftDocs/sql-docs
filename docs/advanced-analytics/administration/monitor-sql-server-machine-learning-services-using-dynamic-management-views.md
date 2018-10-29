@@ -35,6 +35,37 @@ For information about monitoring [!INCLUDE[ssNoVersion_md](../../includes/ssnove
 > [!NOTE]  
 > Users who run external scripts must have the additional permission `EXECUTE ANY EXTERNAL SCRIPT`, however, these DMVs can be used by administrators without this permission.
 
+## Settings and configuration options
+
+You can Retrieve the Machine Learning Services installation setting and configuration options by using the example below. 
+
+```SQL
+SELECT CAST(SERVERPROPERTY('IsAdvancedAnalyticsInstalled') AS INT) AS IsMLServicesInstalled
+    , CAST(value_in_use AS INT) AS ExternalScriptsEnabled
+    , COALESCE(SIGN(SUSER_ID(CONCAT (
+                    CAST(SERVERPROPERTY('MachineName') AS NVARCHAR(128))
+                    , '\SQLRUserGroup'
+                    , CAST(serverproperty('InstanceName') AS NVARCHAR(128))
+                    ))), 0) AS ImpliedAuthenticationEnabled
+    , COALESCE((
+            SELECT CAST(r.value_data AS INT)
+            FROM sys.dm_server_registry AS r
+            WHERE r.registry_key LIKE 'HKLM\Software\Microsoft\Microsoft SQL Server\%\SuperSocketNetLib\Tcp'
+            AND r.value_name = 'Enabled'
+            ), - 1) AS IsTcpEnabled
+FROM sys.configurations
+WHERE name = 'external scripts enabled';
+```
+
+The query returns the following columns:
+
+| Column | Description |
+|--------|-------------|
+| IsMLServicesInstalled | Returns 1 if SQL Server Machine Learning Services is installed for the instance. Otherwise, returns 0. |
+| ExternalScriptsEnabled | Returns 1 if external scripts is enabled for the instance. Otherwise, returns 0. |
+| ImpliedAuthenticationEnabled | Returns 1 if implied authentication is enabled. Otherwise, returns 0. The configuration for implied authentication is checked by verifying if a login exists for SQLRUserGroup. |
+| IsTcpEnabled | Returns 1 if the TCP/IP protocol is enabled for the instance. Otherwise, returns 0. For more information, see [Default SQL Server Network Protocol Configuration](../../database-engine/configure-windows/default-sql-server-network-protocol-configuration.md). |
+
 ## Active sessions
 
 The following example returns the active sessions that are running external scripts:
@@ -47,7 +78,7 @@ FROM sys.dm_exec_requests AS r
 INNER JOIN sys.dm_external_script_requests AS er
 ON r.external_script_request_id = er.external_script_request_id
 INNER JOIN sys.dm_exec_sessions AS s
-ON s.session_id = r.session_id
+ON s.session_id = r.session_id;
 ```
 
 The query joins the three DMVs [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md), [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md), and [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md) together and returns the following columns:
@@ -71,6 +102,25 @@ The query joins the three DMVs [sys.dm_exec_requests](../../relational-databases
 | degree_of_parallelism | Number indicating the number of parallel processes that were created. This value might be different from the number of parallel processes that were requested. |
 | external_user_name | The Windows worker account under which the script was executed. |
 
+## Execution statistics
+
+Using [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md), you can retrieve execution statistics for the external runtime for R and Python. Only statistics of RevoScaleR or revoscalepy or microsoftml package functions are currently available.
+
+```SQL
+SELECT language, counter_name, counter_value
+FROM sys.dm_external_script_execution_stats
+WHERE counter_value > 0
+ORDER BY language, counter_name;
+```
+
+The example returns the following columns:
+
+| Column | Description |
+|--------|-------------|
+| language | Name of the registered external script language. |
+| counter_name | Name of a registered external script function. |
+| counter_value | Total number of instances that the registered external script function has been called on the server. This value is cumulative, beginning with the time that the feature was installed on the instance, and cannot be reset. |
+
 ## Performance counters
 
 The following example returns the performance counters from [sys.dm_os_performance_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) related to external scripts:
@@ -92,6 +142,119 @@ The counters below are reported by **sys.dm_os_performance_counters**  for exter
 | Implied Auth. Logins | Number of times that an ODBC loopback call was made using implied authentication; that is, the [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] executed the call on behalf of the user sending the script request. |
 | Total Execution Time (ms) | Time elapsed between the call and completion of call. |
 | Execution Errors | Number of times scripts reported errors. This count does not include R or Python errors. |
+
+## Memory usage
+
+The example below retrieves memory used by the OS, SQL Server, and the external pools.
+
+```SQL
+SELECT physical_memory_kb
+    , committed_kb
+    , (SELECT SUM(peak_memory_kb)
+        FROM sys.dm_resource_governor_external_resource_pools AS ep
+        ) AS external_pool_peak_memory_kb
+FROM sys.dm_os_sys_info;
+```
+
+The query returns the following columns:
+
+| Column | Description |
+|--------|-------------|
+| physical_memory_kb | The total amount of physical memory on the machine. |
+| committed_kb | The committed memory in kilobytes (KB) in the memory manager. Does not include reserved memory in the memory manager. |
+| external_pool_peak_memory_kb | The sum of the The maximum amount of memory used, in kilobytes, for all external resource pools. |
+
+## Resource pools
+
+In the SQL Server Resource Governor, a [resource pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md) represents a subset of the physical resources of an instance of the Database Engine. The query below retrieves information about the resource pools used for SQL Server and external scripts.
+
+```SQL
+SELECT CONCAT ('SQL Server - ', p.name) AS pool_name
+    , p.total_cpu_usage_ms, p.read_io_completed_total, p.write_io_completed_total
+FROM sys.dm_resource_governor_resource_pools AS p
+UNION ALL
+SELECT CONCAT ('External Pool - ', ep.name) AS pool_name
+    , ep.total_cpu_user_ms, ep.read_io_count, ep.write_io_count
+FROM sys.dm_resource_governor_external_resource_pools AS ep;
+```
+
+The query returns the following columns:
+
+| Column | Description |
+|--------|-------------|
+| pool_name | Name of the resource pool. SQL Server resource pools are prefixed with `SQL Server` and external resource pools are prefixed with `External Pool`.
+| total_cpu_usage_hours | The cumulative CPU usage in milliseconds  since the Resource Govenor statistics were reset. |
+| read_io_completed_total | The total read IOs completed since the Resource Govenor statistics were reset. |
+| write_io_completed_total | The total write IOs completed since the Resource Govenor statistics were reset. |
+
+## Memory configuration
+
+The example below retrieves the memory configuration of SQL Server and external resource pools. If SQL Sever is running with default then max_memory limit is considered as 100% of OS memory.
+
+```SQL
+SELECT 'SQL Server' AS name
+    , CASE CAST(c.value AS BIGINT)
+        WHEN 2147483647 THEN 100
+        ELSE (SELECT CAST(c.value AS BIGINT) / (physical_memory_kb / 1024.0) * 100 FROM sys.dm_os_sys_info)
+        END AS max_memory_percent
+FROM sys.configurations AS c
+WHERE c.name LIKE 'max server memory (MB)'
+UNION ALL
+SELECT CONCAT ('External Pool - ', ep.name) AS pool_name, ep.max_memory_percent
+FROM sys.dm_resource_governor_external_resource_pools AS ep;
+```
+
+The query returns the following columns:
+
+| Column | Description |
+|--------|-------------|
+| name | Name of the external resource pool or SQL Server. |
+| max_memory_percent | The maximum memory that SQL Server or the external resource pool can use. |
+
+## Installed packages
+
+### Installed packages for R
+
+The following query use an R script to determine R packages installed with SQL Server.
+
+```SQL
+EXEC sp_execute_external_script @language = N'R'
+, @script = N'
+# Use installed packages to determine packages installed in the R directory
+OutputDataSet <- data.frame(installed.packages()[,c("Package", "Version", "Depends", "License", "LibPath")]);'
+WITH result sets((Package NVARCHAR(255), Version NVARCHAR(100), Depends NVARCHAR(4000)
+    , License NVARCHAR(1000), LibPath NVARCHAR(2000)));
+```
+
+The columns returned are:
+
+| Column | Description |
+|--------|-------------|
+| Package | Name of the installed package. |
+| Version | Version of the package. |
+| Depends | Lists the package(s) that the installed package depends on. |
+| License | License for the installed package. |
+| LibPath | Directory where you can find the package. |
+
+### Installed packages for Python
+
+The following query use an Python script to determine the Python packages installed with SQL Server.
+
+```SQL
+EXEC sp_execute_external_script @language = N'Python'
+, @script = N'
+import pip
+OutputDataSet = pandas.DataFrame([(i.key, i.version, i.location) for i in pip.get_installed_distributions()])'
+WITH result sets((Package NVARCHAR(128), Version NVARCHAR(128), Location NVARCHAR(1000)));
+```
+
+The columns returned are:
+
+| Column | Description |
+|--------|-------------|
+| Package | Name of the installed package. |
+| Version | Version of the package. |
+| Location | Directory where you can find the package. |
 
 ## Next steps
 

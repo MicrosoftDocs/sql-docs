@@ -13,7 +13,7 @@ ms.prod: sql
 
 This article describes how to deploy and manage R and Python applications inside a SQL Server 2019 big data cluster (preview). 
 
-R and Python applications are deployed and managed with the **mssqlctl-ctp** command-line utility. This article provides examples of how to perform common tasks for big data cluster apps from the command line.
+R and Python applications are deployed and managed with the **mssqlctl-pre** command-line utility. This article provides examples of how to perform common tasks for big data cluster apps from the command line.
 
 ## Prerequisites
 

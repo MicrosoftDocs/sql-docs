@@ -31,7 +31,9 @@ Community technology preview (CTP) 2.1 is the latest public release of [!INCLUDE
   - Intelligent query processing adds scalar UDF inlining 
   - Improve truncation message for ETL DW scenarios
   - UTF-8 collations support in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] setup
-  - Use derived table or view aliases in SQL Graph match query
+  - Use derived table or view aliases in graph match queries
+- [Big Data Clusters](#bigdatacluster)
+  - Deploy Python and R apps.
 
 ## CTP 2.0 
 
@@ -89,12 +91,13 @@ Continue reading for more details about these features.
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] [Big Data Clusters](../big-data-cluster/big-data-cluster-overview.md) enables new scenarios including the following:
 
+- [Deploy Python and R apps](../big-data-cluster/big-data-cluster-create-apps.md). (CTP 2.1)
 - Deploy a Big Data cluster with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and Spark Linux containers on Kubernetes (CTP 2.0)
 - Access your big data from HDFS (CTP 2.0)
 - Run Advanced analytics and machine learning with Spark (CTP 2.0)
 - Use Spark streaming to data to SQL data pools (CTP 2.0)
 - Run Query books that provide a notebook experience in [**Azure Data Studio**](../sql-operations-studio/what-is.md). (CTP 2.0)
-  
+ 
 [!INCLUDE [Big Data Clusters preview](../includes/big-data-cluster-preview-note.md)]
 
 ## <a id="databaseengine"></a> Database Engine

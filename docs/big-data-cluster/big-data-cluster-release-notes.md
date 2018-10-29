@@ -27,9 +27,9 @@ The following sections describe the new features and known issues for big data c
 
 ### What's in the CTP 2.1 release?
 
-- Deploy Python and R scripts as applcations in a big data cluster
-- New version of **mssqlctl** and updated images 
-- Miscellaneous bug fixes and improvements
+- [Deploy Python and R apps](big-data-cluster-create-apps.md) in a big data cluster.
+- New version of **mssqlctl** and updated images. 
+- Miscellaneous bug fixes and improvements.
 
 ### Known issues
 
@@ -46,6 +46,10 @@ The following sections provide known issues for SQL Server big data clusters in 
    `Warning  Unhealthy: Readiness probe failed: cat: /tmp/provisioner.done: No such file or directory`
 
 - If a big data cluster deployment fails, the associated namespace is not removed. This could result in an orphaned namespace on the cluster. A workaround is to delete the namespace manually before deploying a cluster with the same name.
+
+#### Admin portal
+
+- When you [create an app using msqlctl-ctp command](big-data-cluster-create-apps.md) and deploy it on a SQL Server big data cluster, the Cluster Admin Portal shows the pods where the application was deployed as "Unknown" in the Controller section of the Admin Portion.
 
 #### External tables
 

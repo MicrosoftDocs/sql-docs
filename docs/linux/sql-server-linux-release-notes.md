@@ -70,7 +70,7 @@ If you are updating existing SQL Server packages, run the appropriate update com
 - [Install SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 - [Enable SQL Server Agent](sql-server-linux-setup-sql-agent.md)
 
-## <a id="CU11"></a> CU12 (Oct 2018)
+## <a id="CU12"></a> CU12 (Oct 2018)
 
 This is the Cumulative Update 12 (CU12) release of SQL Server 2017. The SQL Server engine version for this release is 14.0.3045.24. For information about the fixes and improvements in this release, see [https://support.microsoft.com/en-us/help/4464082](https://support.microsoft.com/en-us/help/4464082).
 

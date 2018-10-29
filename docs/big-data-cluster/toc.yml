@@ -1,6 +1,6 @@
 - name: Overview
   items:
-  - name: What is SQL Server big data cluster?
+  - name: What are SQL Server big data clusters?
     href: big-data-cluster-overview.md
   - name: Release notes
     href: big-data-cluster-release-notes.md
@@ -64,6 +64,8 @@
     items:
     - name: Data wrangling using PROSE Code Accelerator
       href: use-prose-for-big-data-automation.md
+    - name: Deploy apps
+      href: big-data-cluster-create-apps.md
   - name: Manage SQL Server big data cluster
     items:
     - name: Cluster administration portal

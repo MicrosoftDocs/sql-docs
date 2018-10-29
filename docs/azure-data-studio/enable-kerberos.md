@@ -119,7 +119,7 @@ sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
 
 ### macOS
 
-- Join your macOS to the Active Directory Domain Controller by [following these steps] (https://support.apple.com/kb/PH26282?viewlocale=en_US&locale=en_US).
+- Join your macOS to the Active Directory Domain Controller by [following these steps](https://support.apple.com/kb/PH26282?viewlocale=en_US&locale=en_US).
 
 
 

@@ -1,7 +1,7 @@
 ---
 title: "What's new in SQL Server 2019 | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/27/2018"
+ms.date: "11/02/2018"
 ms.prod: "sql-server-2018"
 ms.reviewer: ""
 ms.technology: 
@@ -30,7 +30,8 @@ Community technology preview (CTP) 2.1 is the latest public release of [!INCLUDE
 - [Database Engine](#databaseengine)
   - Intelligent query processing adds scalar UDF inlining 
   - Improve truncation message for ETL DW scenarios
-  - UTF-8 collations support in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Setup
+  - UTF-8 collations support in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] setup
+  - Use derived table or view aliases in SQL Graph match query
 
 ## CTP 2.0 
 
@@ -101,6 +102,7 @@ Continue reading for more details about these features.
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces or enhances the following new features for the Database Engine
 
 ### Scalar UDF inlining (CTP 2.1)
+
 Scalar UDF inlining automatically transforms scalar user-defined functions (UDF) into relational expressions and embeds them in the calling SQL query, thereby improving the performance of workloads that leverage scalar UDFs. Scalar UDF inlining facilitates cost-based optimization of operations inside UDFs, and results in efficient plans that are set-oriented and parallel as opposed to inefficient, iterative, serial execution plans. This feature is enabled by default under database compatibility level 150.
 
 ### Improve truncation message for ETL DW scenarios (CTP 2.1)
@@ -109,15 +111,15 @@ The error message ID 8152 `String or binary data would be truncated` is familiar
 
 `String or binary data would be truncated in table '%.*ls', column '%.*ls'. Truncated value: '%.*ls'.`
 
-The new default error message provides more context for the data truncation problem, simplifying the troubleshooting process. If existing applications rely on parsing message ID 8152 and cannot handle the new message ID 2628, then you can revert back to using message ID 8152, by enabling trace flag 459.
+The new error message 2628 provides more context for the data truncation problem, simplifying the troubleshooting process. For CTP 2.1, this is an opt-in error message and requires [trace flag](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 460 to be enabled.
 
-### UTF-8 support (CTP 2.0)
+### UTF-8 support (CTP 2.1)
 
-Added support for UTF-8 collations in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.1 Setup.
+Added support to select UTF-8 collations as server collation during [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.1 Setup.
 
 ### Database compatibility level (CTP 2.0)
 
-Database **COMPATIBILITY_LEVEL 150** is added. To enable for a specific user database, execute: (CTP 2.0)
+Database **COMPATIBILITY_LEVEL 150** is added. To enable for a specific user database, execute:
 
    ```sql
    ALTER DATABASE database_name SET COMPATIBILITY_LEVEL =  150;
@@ -129,7 +131,7 @@ Full support for the widely used UTF-8 character encoding as an import or export
 
 For example,`LATIN1_GENERAL_100_CI_AS_SC` to `LATIN1_GENERAL_100_CI_AS_SC_UTF8`. UTF-8 is only available to Windows collations that support supplementary characters, as introduced in SQL Server 2012. `NCHAR` and `NVARCHAR` allow UTF-16 encoding only, and remain unchanged.
 
-This feature may provide significant storage savings, depending on the character set in use. For example, changing an existing column data type with ASCII strings from `NCHAR(10)` to `CHAR(10)` using an UTF-8 enabled collation, translates into nearly 50% reduction in storage requirements. This reduction is because `NCHAR(10)` requires 22 bytes for storage, whereas `CHAR(10)` requires 12 bytes for the same Unicode string.
+This feature may provide significant storage savings, depending on the character set in use. For example, changing an existing column data type with Latin strings from `NCHAR(10)` to `CHAR(10)` using an UTF-8 enabled collation, translates into nearly 50% reduction in storage requirements. This reduction is because `NCHAR(10)` requires 22 bytes for storage, whereas `CHAR(10)` requires 12 bytes for the same Unicode string.
 
 ### Resumable online index create (CTP 2.0)
 
@@ -208,9 +210,12 @@ To use intelligent query processing features, set database `COMPATIBILITY_LEVEL 
 
 ### <a id="sqlgraph"></a> SQL Graph features
 
-- **Match support in `MERGE` DML** allows you to specify graph relationships in a single statement, instead of separate `INSERT`, `UPDATE`, or `DELETE` statements. Merge your current graph data from node or edge tables with new data using the `MATCH` predicates in the `MERGE` statement. This feature enables `UPSERT` scenarios on edge tables. Users can now use a single merge statement to insert a new edge or update an existing one between two nodes.
+- **Use derived table or view aliases in graph match query (CTP 2.1)** Graph queries on SQL Server 2019 preview support using view and derived table aliases in the `MATCH` syntax. To use these aliases in `MATCH`, the views and derived tables must be created on either a set of node or a set of edge tables, using the `UNION ALL` operator. The node or edge tables may or may not have filters on it. The ability to use derived table and view aliases in `MATCH` queries can be very useful in scenarios where you are looking to query heterogeneous entities or heterogeneous connections between two or more entities in your graph.
 
-- **Edge Constraints** are introduced for edge tables in SQL Graph. Edge tables can connect any node to any other node in the database. With introduction of edge constraints, you can now apply some restrictions on this behavior. The new `CONNECTION` constraint can be used to specify the type of nodes a given edge table will be allowed to connect to in the schema.
+
+- **Match support in `MERGE` DML (CTP 2.0)** allows you to specify graph relationships in a single statement, instead of separate `INSERT`, `UPDATE`, or `DELETE` statements. Merge your current graph data from node or edge tables with new data using the `MATCH` predicates in the `MERGE` statement. This feature enables `UPSERT` scenarios on edge tables. Users can now use a single merge statement to insert a new edge or update an existing one between two nodes.
+
+- **Edge Constraints (CTP 2.0)** are introduced for edge tables in SQL Graph. Edge tables can connect any node to any other node in the database. With introduction of edge constraints, you can now apply some restrictions on this behavior. The new `CONNECTION` constraint can be used to specify the type of nodes a given edge table will be allowed to connect to in the schema.
 
 ### Database scoped default setting for online and resumable DDL operations  (CTP 2.0)
 
@@ -334,7 +339,7 @@ FROM sys.dm_exec_requests AS d
   - Microsoft Container Registry: `mcr.microsoft.com/mssql/server:vNext-CTP2.0`
   - Certified RHEL-based container images: `mcr.microsoft.com/mssql/rhel/server:vNext-CTP2.0`
 
-## <a id="mds"></a> Master Data Services (MDS) \
+## <a id="mds"></a> Master Data Services (MDS)
 
 ### CTP 2.0 
 

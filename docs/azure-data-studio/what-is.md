@@ -42,7 +42,7 @@ Server groups provide a way to organize connection information for the servers a
 
 ## Integrated Terminal
 
-Use your favorite command-line tools (for example, Bash, PowerShell, sqlcmd, bcp, and ssh) in the Integrated Terminal window right within the [!INCLUDE[name-sos](../includes/name-sos-short.md)] user interface. To learn about the integrated terminal, see [Integrated terminal] (integrated-terminal.md).
+Use your favorite command-line tools (for example, Bash, PowerShell, sqlcmd, bcp, and ssh) in the Integrated Terminal window right within the [!INCLUDE[name-sos](../includes/name-sos-short.md)] user interface. To learn about the integrated terminal, see [Integrated terminal](integrated-terminal.md).
 
 ## Extensibility and extension authoring
 

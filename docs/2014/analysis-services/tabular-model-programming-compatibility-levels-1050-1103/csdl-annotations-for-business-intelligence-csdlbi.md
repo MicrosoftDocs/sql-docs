@@ -67,7 +67,7 @@ manager: craigg
   
 -   Support for perspectives.  
   
- For detailed information about individual elements in the CSDLBI annotations, see [Technical Reference for BI Annotations to CSDL](conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md). For information about the core CSDL specification, see the [CSDL v3 Specification](https://msdn.microsoft.com/en-us/data/jj652004) on MSDN.  
+ For detailed information about individual elements in the CSDLBI annotations, see [Technical Reference for BI Annotations to CSDL](conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md). For information about the core CSDL specification, see the [CSDL v3 Specification](https://msdn.microsoft.com/data/jj652004) on MSDN.  
   
 ## See Also  
  [Understanding the Tabular Object Model](representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)   

@@ -148,8 +148,7 @@ The counters below are reported by **sys.dm_os_performance_counters**  for exter
 The example below retrieves memory used by the OS, SQL Server, and the external pools.
 
 ```SQL
-SELECT physical_memory_kb
-    , committed_kb
+SELECT physical_memory_kb, committed_kb
     , (SELECT SUM(peak_memory_kb)
         FROM sys.dm_resource_governor_external_resource_pools AS ep
         ) AS external_pool_peak_memory_kb
@@ -220,7 +219,6 @@ The following query use an R script to determine R packages installed with SQL S
 ```SQL
 EXEC sp_execute_external_script @language = N'R'
 , @script = N'
-# Use installed packages to determine packages installed in the R directory
 OutputDataSet <- data.frame(installed.packages()[,c("Package", "Version", "Depends", "License", "LibPath")]);'
 WITH result sets((Package NVARCHAR(255), Version NVARCHAR(100), Depends NVARCHAR(4000)
     , License NVARCHAR(1000), LibPath NVARCHAR(2000)));

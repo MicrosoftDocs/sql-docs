@@ -26,4 +26,4 @@ Allows you to pick maxdop settings greater than 1 for insert/select operations. 
 Using catalog objects for some metadata calls instead of using SMO has shown performance improvement. Set to true by default in CU7.1, this switch controls that behavior. 
 
 ##DmsProcessStopMessageTimeoutInSeconds
-Controls the time Data Movement Service (DMS) waits to synchronize on a busy system when a query involving data movement is cancelled. Updating to AU7 sets this value to 900 seconds (15 minutes) by default. The valid range is 0 – 3600 seconds.
+Controls the time Data Movement Service (DMS) waits to synchronize on a busy system when a query involving data movement is canceled. Updating to AU7 sets this value to 900 seconds (15 minutes) by default. The valid range is 0 – 3600 seconds.

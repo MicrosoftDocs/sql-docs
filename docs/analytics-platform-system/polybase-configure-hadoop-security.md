@@ -72,7 +72,7 @@ Yarn-site.xml with yarn.application.classpath and mapreduce.application.classpat
 </configuration>
 ```
 
-If you choose to break your two configuration settings into the mapred-site.xml and the yarn-site.xml then the files would be the following:
+If you choose to break your two configuration settings into the mapred-site.xml and the yarn-site.xml, then the files would be the following:
 
 **yarn-site.xml**
 
@@ -109,7 +109,7 @@ If you choose to break your two configuration settings into the mapred-site.xml 
 
 **mapred-site.xml**
 
-Note that we added the property mapreduce.application.classpath. In CDH 5.x you will find the configuration values under the same naming convention in Ambari.
+Note that we added the property mapreduce.application.classpath. In CDH 5.x, you will find the configuration values under the same naming convention in Ambari.
 
 ```xml
 <?xml version="1.0"?>

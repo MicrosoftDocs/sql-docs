@@ -21,10 +21,10 @@ manager: craigg
   
 - [Multidimensional Model Programming](../multidimensional-models/multidimensional-model-programming.md)  
   
-- [Analysis Services Schema Rowsets](../schema-rowsets/analysis-services-schema-rowsets.md)  
+- [Analysis Services Schema Rowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets)  
   
-- [Analysis Services Scripting Language &#40;ASSL&#41; Reference](../scripting/analysis-services-scripting-language-assl-for-xmla.md)  
+- [Analysis Services Scripting Language &#40;ASSL&#41; Reference](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)  
   
-- [XML for Analysis  &#40;XMLA&#41; Reference](../xmla/xml-for-analysis-xmla-reference.md)  
+- [XML for Analysis  &#40;XMLA&#41; Reference](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)  
   
   

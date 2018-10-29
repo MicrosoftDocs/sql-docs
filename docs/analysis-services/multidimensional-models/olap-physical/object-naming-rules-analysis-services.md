@@ -82,6 +82,6 @@ manager: kfile
 ## See Also  
  [MDX Reserved Words](../../../mdx/mdx-reserved-words.md)   
  [Translation support in Analysis Services](../../../analysis-services/translation-support-in-analysis-services.md)   
- [XML for Analysis Compliance &#40;XMLA&#41;](../../../analysis-services/xmla/xml-for-analysis-compliance-xmla.md)  
+ [XML for Analysis Compliance &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-compliance-xmla)  
   
   

@@ -1,12 +1,12 @@
 - name: Tabular Model Programming
   href: tabular-model-programming-for-compatibility-levels-1050-through-1103.md
 - name: CSDL Annotations for Business Intelligence (CSDLBI)
-  href: csdl-annotations-for-business-intelligence-csdlbi.md
+  href: https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi
   items:
   - name: CSDLBI Concepts
-    href: csdlbi-concepts.md
+    href: https://docs.microsoft.com/bi-reference/csdl/csdlbi-concepts
   - name: CSDLBI Attributes for Report Design
-    href: csdlbi-attributes-for-report-design.md
+    href: https://docs.microsoft.com/bi-reference/csdl/csdlbi-attributes-for-report-design
 - name: Understanding the Tabular Object Model
   href: representation/understanding-tabular-object-model-at-levels-1050-through-1103.md
   items:
@@ -33,43 +33,43 @@
   - name: Querying a Tabular Model
     href: representation/querying-a-tabular-model.md
 - name: CSDLBI Technical Reference
-  href: conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md
+  href: https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl
   items:
   - name: AssociationSet Element (CSDLBI)
-    href: conceptual-schema-definition-language-csdl/associationset-element-csdlbi.md
+    href: https://docs.microsoft.com/bi-reference/csdl/associationset-element-csdlbi
   - name: BaseProperty Element (CSDLBI)
-    href: conceptual-schema-definition-language-csdl/baseproperty-element-csdlbi.md
+    href: https://docs.microsoft.com/bi-reference/csdl/baseproperty-element-csdlbi
   - name: DefaultDetails Element (CSDLBI)
-    href: conceptual-schema-definition-language-csdl/defaultdetails-element-csdlbi.md
+    href: https://docs.microsoft.com/bi-reference/csdl/defaultdetails-element-csdlbi
   - name: DisplayKey Element (CSDLBI)
-    href: conceptual-schema-definition-language-csdl/displaykey-element-csdlbi.md
+    href: https://docs.microsoft.com/bi-reference/csdl/displaykey-element-csdlbi
   - name: EntityContainer Element (CSDLBI)
-    href: conceptual-schema-definition-language-csdl/entitycontainer-element-csdlbi.md
+    href: https://docs.microsoft.com/bi-reference/csdl/entitycontainer-element-csdlbi
   - name: EntitySet Element (CSDLBI)
-    href: conceptual-schema-definition-language-csdl/entityset-element-csdlbi.md
+    href: https://docs.microsoft.com/bi-reference/csdl/entityset-element-csdlbi
   - name: EntityType Element (CSDLBI)
-    href: conceptual-schema-definition-language-csdl/entitytype-element-csdlbi.md
+    href: https://docs.microsoft.com/bi-reference/csdl/entitytype-element-csdlbi
   - name: Hierarchy Element (CSDLBI)
-    href: conceptual-schema-definition-language-csdl/hierarchy-element-csdlbi.md
+    href: https://docs.microsoft.com/bi-reference/csdl/hierarchy-element-csdlbi
   - name: KPI Element (CSDLBI)
-    href: conceptual-schema-definition-language-csdl/kpi-element-csdlbi.md
+    href: https://docs.microsoft.com/bi-reference/csdl/kpi-element-csdlbi
   - name: KpiGoal Element (CSDLBI)
-    href: conceptual-schema-definition-language-csdl/kpigoal-element-csdlbi.md
+    href: https://docs.microsoft.com/bi-reference/csdl/kpigoal-element-csdlbi
   - name: KpiStatus Element (CSDLBI)
-    href: conceptual-schema-definition-language-csdl/kpistatus-element-csdlbi.md
+    href: https://docs.microsoft.com/bi-reference/csdl/kpistatus-element-csdlbi
   - name: Level Element (CSDLBI)
-    href: conceptual-schema-definition-language-csdl/level-element-csdlbi.md
+    href: https://docs.microsoft.com/bi-reference/csdl/level-element-csdlbi
   - name: Measure Element (CSDLBI)
-    href: conceptual-schema-definition-language-csdl/measure-element-csdlbi.md
+    href: https://docs.microsoft.com/bi-reference/csdl/measure-element-csdlbi
   - name: Member Element (CSDLBI)
-    href: conceptual-schema-definition-language-csdl/member-element-csdlbi.md
+    href: https://docs.microsoft.com/bi-reference/csdl/member-element-csdlbi
   - name: MemberRef Element (CSDLBI)
-    href: conceptual-schema-definition-language-csdl/memberref-element-csdlbi.md
+    href: https://docs.microsoft.com/bi-reference/csdl/memberref-element-csdlbi
   - name: NavigationProperty Element (CSDLBI)
-    href: conceptual-schema-definition-language-csdl/navigationproperty-element-csdlbi.md
+    href: https://docs.microsoft.com/bi-reference/csdl/navigationproperty-element-csdlbi
   - name: Property Element (CSDLBI)
-    href: conceptual-schema-definition-language-csdl/property-element-csdlbi.md
+    href: https://docs.microsoft.com/bi-reference/csdl/property-element-csdlbi
   - name: PropertyRef Element (CSDLBI)
-    href: conceptual-schema-definition-language-csdl/propertyref-element-csdlbi.md
+    href: https://docs.microsoft.com/bi-reference/csdl/propertyref-element-csdlbi
 - name: IMDEmbedded Interface
   href: imdembeddeddata-interface.md

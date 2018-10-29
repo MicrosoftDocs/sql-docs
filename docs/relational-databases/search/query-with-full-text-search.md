@@ -274,7 +274,7 @@ GO
   
 SELECT AddressLine1, KEY_TBL.RANK   
 FROM Person.Address AS Address INNER JOIN  
-CONTAINSTABLE(Person.Address, AddressLine1, 'ISABOUT ("Bay*,"   
+CONTAINSTABLE(Person.Address, AddressLine1, 'ISABOUT ("Bay*",   
          Street WEIGHT(0.9),   
          View WEIGHT(0.1)  
          ) ' ) AS KEY_TBL  

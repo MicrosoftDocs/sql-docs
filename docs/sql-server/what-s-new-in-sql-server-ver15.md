@@ -31,9 +31,9 @@ Community technology preview (CTP) 2.1 is the latest public release of [!INCLUDE
   - Intelligent query processing adds scalar UDF inlining 
   - Improve truncation message for ETL DW scenarios
   - UTF-8 collations support in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] setup
-  - Use derived table or view aliases in SQL Graph match query
+  - Use derived table or view aliases in graph match queries
 - [Big Data Clusters](#bigdatacluster)
-  - Deploy Python and R apps.  
+  - Deploy Python and R apps.
 
 ## CTP 2.0 
 

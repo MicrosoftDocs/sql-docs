@@ -4,7 +4,7 @@ description: Deploy a Python or R script as an application on SQL Server 2019 bi
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 10/25/2018
+ms.date: 11/01/2018
 ms.topic: conceptual
 ms.prod: sql
 ---
@@ -13,92 +13,161 @@ ms.prod: sql
 
 This article describes how to deploy and manage R and Python applications inside a SQL Server 2019 big data cluster (preview). 
 
-R and Python applications are deployed and managed with the **mssqlctl-ctp** command-line utility. This article provides examples of how to perform common tasks for big data cluster apps from the command-line.
+R and Python applications are deployed and managed with the **mssqlctl-ctp** command-line utility. This article provides examples of how to perform common tasks for big data cluster apps from the command line.
 
 ## Prerequisites
 
-You must have a SQL Server 2019 big data cluster configured. For more information, see [How to deploy SQL Server big data cluster on Kubernetes](deployment-guidance.md).
+-	You must have a SQL Server 2019 big data cluster configured. For more information, see [How to deploy SQL Server big data cluster on Kubernetes](deployment-guidance.md).
 
-## mssqlctl-ctp installation
+-	Install the latest version of Python. This dependency is the same as for the [mssqlctl utility](deployment-guidance.md#mssqlctl). 
 
-The **mssqlctl-ctp** can be installed with the following command:
+	- On a Windows client, download the necessary Python package from [https://www.python.org/downloads/](https://www.python.org/downloads/). During installation, select to add Python to your path.
 
-```bash
-pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.0 mssqlctl-ctp
-```
+   - On Linux, install the **python3** and **python3-pip** packages. Then install **pip3** with `sudo pip3 install --upgrade pip`.
 
-This command requires the same Python prerquisites as the **mssqlctl** tool. For more details about the prerequisites, see [Install mssqlctl](deployment-guidance.md#mssqlctl).
+## Installation
 
+The **mssqlctl-ctp** command-line utility is provided to preview the Python and R application management feature. Because it is a preview, we recommend that you install it to a Python virtual environment using the following instructions:
+
+1.	From a Windows PowerShell or bash command-line, install **virtualenv** with the following command (add `sudo` to the command on Linux):
+
+   ```cmd
+   pip install virtualenv
+   ```
+
+1.	Create a new directory for the virtual environment.
+
+   ```cmd
+   mkdir mssqlctl-ctp-env
+   cd mssqlctl-ctp-env
+   ```
+
+1.	Create and activate the virtual environment in this directory.
+
+   On Windows, run the following command:
+
+   ```PowerShell
+   python -m venv env
+   ./env/scripts/activate
+   ```
+
+   On Linux, run the following command:
+
+   ```bash
+   python3 -m venv env
+   source ./env/bin/activate
+   ```
+
+4.	Install the mssqlctl-ctp utility in this virtual environment:
+
+   ```cmd
+   pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.0 mssqlctl-ctp
+   ```
 
 ## Log in
 
-Before configuring R and Python applications, first log into your SQL Server big data cluster with the `mssqlctl-ctp login` command. Specify the IP address of the HDFS/Spark gateway as well as your user name and password to the cluster.
+Before configuring R and Python applications, first log into your SQL Server big data cluster with the `mssqlctl-ctp login` command. Specify the IP address of the [HDFS/Spark gateway](deploy-big-data-tools.md) as well as your user name and password to the cluster.
 
 ```bash
 mssqlctl-ctp login -e https://<ip-address-of-hdfs-spark-gateway> -u <user-name> -p <password>
 ```
 
-## Fileshare 
+## Register a file share
 
-Fileshare Register
+You can optionally register a file share on Azure to use with an application that you want to publish. If you do not register a file share, you can reference code files locally when you create an application.
 
+To register an Azure file share, first create the file share in the Azure portal with the following steps:
 
-Go to Azure Portal and create a new file share to use for associated apps
+1. Log into the Azure portal.
 
-Azure Portal > Storage Accounts > New Storage Account
+1. If you do not have a storage account, create one by selecting **Storage accounts**, and then clicking the **Add** button.
 
-Once the storage account is created, you can go to the Storage Explorer and create a new File Share
+1. After creating the storage account, select it to view the details.
 
-Now you can test out registering this File Share for a specific app that you intend to publish
+1. On the left pane, select **Storage Exporer (preview)** to bring up the Storage Explorer for the target storage account.
 
-You can see all details for the Azure File Share registration with --help
+1. Right-click on **File Shares**, and click **Create File Share**. Give it a name and then click **Create** to create the new share.
 
-mssqlctl-ctp file-share register --help
-To register:
+Now you can register this file share for a specific app that you intend to publish within a SQL Server big date cluster. From the command line, run the following command to register the file share:
 
+```cmd
 mssqlctl-ctp file-share register -app <app_name> --secret <file_share_secret> --sharename <file_share_directory_name> --type AzureFiles
-Example (feel free to use my fileshare, it has mtcars.csv in it):
+```
 
-sq file-share register --app testapp --secret arise2e --type AzureFiles --sharename testshare1
-App Create
+You can get help for Azure file share registration with the `--help` parameter:
 
-You can see all details for app create with --help
+```cmd
+mssqlctl-ctp file-share register --help
+```
 
-mssqlctl-ctp app create --help 
-You can either use your Azure File Storage spec that you registered above so you can reference those files in your code or not.
+## Create an app
 
-mssqlctl-ctp app create -n <app_name> -v <version_number> -r <runtime> -i <path_to_code_init> -c <path_to_code> --inputs <input_params> --outputs <output_params> --fileshare 
-Example:
+To create an application, you pass Python or R code files to **mssqlctl-ctp** with the `app create` command. These files can reside in an Azure file share that you previously registered. Or they can reside locally on the machine that you are registering the app from.
 
-sq app create --name testapp --version v1 --runtime Python --code ./testapp.py --init ./init.py --inputs x=float,y=float --outputs result=float --fileshare
-App List
+Use the following syntax to create a new app in your big data cluster:
 
-If the app was successfully created, you should now be able to list it:
+```cmd
+mssqlctl-ctp app create -n <app_name> -v <version_number> -r <runtime> -i <path_to_code_init> -c <path_to_code> --inputs <input_params> --outputs <output_params> --fileshare
+```
 
-If you do not specify a name and version, it will list all available apps
+The following command shows an example of what this command might look like:
 
+```cmd
+mssqlctl-ctp app create --name testapp --version v1 --runtime Python --code ./testapp.py --init ./init.py --inputs x=float,y=float --outputs result=float --fileshare
+```
+
+You can get help for app create with the `--help` parameter:
+
+```cmd
+mssqlctl-ctp app create --help
+```
+
+## List an app
+
+You can list any apps that were successfully created with the `app list` command.
+
+The following command lists all available applications in your big data cluster:
+
+```cmd
 mssqlctl-ctp app list
-If you specify a name and version, it will list that specific app and its state
+```
 
+If you specify a name and version, it will list that specific app and its state:
+
+```cmd
 mssqlctl-ctp app list --name <app_name> --version <app_version>
-Example:
+```
 
-sq app list --name testapp --version v1
-App Run
+The following example demonstrates this command:
 
-If the app is in a "Ready" state, you should now be able to consume it with run by giving it your specified input parameters
+```cmd
+mssqlctl-ctp app list --name testapp --version v1
+```
 
+## Run an app
+
+If the app is in a "Ready" state, you can use it by running it with your specified input parameters. Use the following syntax to run an app:
+
+```cmd
 mssqlctl-ctp app run --name <app_name> --version <app_version> --inputs <inputs_params>
-Example:
+```
 
-sq app run --name testapp --version v1 --inputs x=1,y=2
-If the run was successful, you should see your output as specified when you created the app
+The following example command demonstrates the run command:
 
-App Delete
+```cmd
+mssqlctl-ctp app run --name testapp --version v1 --inputs x=1,y=2
+```
 
-You can now delete your app if you choose to:
+If the run was successful, you should see your output as specified when you created the app.
 
+## Delete an app
+
+To delete an app from your big data cluster, use the following syntax:
+
+```cmd
 mssqlctl-ctp app delete --name <app_name> --version <app_version>
-Example:
+```
 
-sq app delete --name testapp --version v1
+## Next steps
+
+For more information about SQL Server big data clusters, see [What are SQL Server 2019 big data clusters?](big-data-cluster-overview.md).

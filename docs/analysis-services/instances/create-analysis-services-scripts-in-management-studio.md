@@ -22,9 +22,9 @@ manager: kfile
   
 #### To script an Analysis Services task  
   
-1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connect to an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], **connect to an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]**.  
   
-2.  Right-click a database and click **Backup**. This opens the Backup Database dialog box. Specify a backup file name and choose the options you want for this backup.  
+2.  Right-click a database and click **Backup**. This opens the Backup Database dialog box. **Specify a backup file name and choose the options you want** for this backup.  
   
 3.  Click **Script** at the top of the dialog box. The Script feature is part of all task-based dialog boxes in Management Studio. It has the following options: **Script Action to New Query Window** to open the query editor window, **Script Action to File** to save the XMLA script to a file, or **Script Action to Clipboard** to save the XMLA script to the Clipboard.  
   
@@ -46,7 +46,7 @@ manager: kfile
   
 #### To script Analysis Services objects  
   
-1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connect to an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], **connect to an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]**.  
   
 2.  Locate the object for which you want to create a script that either creates, alters, or deletes objects.  
   

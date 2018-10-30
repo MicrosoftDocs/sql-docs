@@ -35,6 +35,7 @@ Community technology preview (CTP) 2.1 is the latest public release of [!INCLUDE
   - UTF-8 collations support in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] setup
   - Use derived table or view aliases in graph match queries
   - Improved diagnostic data for long-running queries
+  - Support for Hybrid Buffer Pool
 
 ## CTP 2.0 
 

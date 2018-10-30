@@ -35,7 +35,6 @@ Community technology preview (CTP) 2.1 is the latest public release of [!INCLUDE
   - UTF-8 collations support in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] setup
   - Use derived table or view aliases in graph match queries
   - Improved diagnostic data for long-running queries
-  - Support for Hybrid Buffer Pool
 
 ## CTP 2.0 
 
@@ -281,6 +280,10 @@ Any [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] file that is placed o
 
 > [!NOTE]
 > For this preview release, enlightenment of files on persistent memory devices is only available on Linux. SQL Server on Windows supports persistent memory devices starting with SQL Server 2016.
+
+### Hybrid Buffer Pool (CTP 2.1)
+
+Hybrid Buffer Pool is a new feature of the SQL Server database engine where database pages sitting on database files placed on a persistent memory (PMEM) device will be directly accessed when required. Since PMEM devices provide very low latency for data access, the engine can forgo making a copy of the data in a "clean pages" area of the buffer pool and simply access the page directly on PMEM. Access is performed using memory mapped I/O, as is the case with enlightenment. This brings performance benefits from avoiding a copy of the page to DRAM, and from the avoidance of the I/O stack of the operating system to access the page on persistent storage. This feature is available on both SQL Server on Windows and SQL Server on Linux.   
 
 ### Support for columnstore statistics in DBCC CLONEDATABASE (CTP 2.0)
 

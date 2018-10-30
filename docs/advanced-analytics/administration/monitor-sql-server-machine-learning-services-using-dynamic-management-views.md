@@ -29,7 +29,7 @@ In this article, you will find the DMVs that are specific for SQL Server Machine
 For more general information about DMVs, see [System Dynamic Management Views](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).
 
 > [!TIP]
-> You can also use the built-in reports to monitor SQL Server Machine Learning Services. For more information, see [Monitor machine learning using custom reports in Management Studio](../../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md).
+> You can also use the custom reports to monitor SQL Server Machine Learning Services. For more information, see [Monitor machine learning using custom reports in Management Studio](../../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md).
 
 ## Dynamic management views
 
@@ -175,7 +175,7 @@ The query returns the following columns:
 
 ## Memory configuration
 
-The query below uses the catalog view [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact.md) and the dynamic management view [sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) to retrieves the memory configuration of SQL Server and external resource pools. If SQL Sever is running with default value of `max server memory (MB)`, it is considered as 100% of the OS memory.
+The query below uses the catalog view [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) and the dynamic management view [sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) to retrieves the memory configuration of SQL Server and external resource pools. If SQL Sever is running with default value of `max server memory (MB)`, it is considered as 100% of the OS memory.
 
 ```SQL
 SELECT 'SQL Server' AS name

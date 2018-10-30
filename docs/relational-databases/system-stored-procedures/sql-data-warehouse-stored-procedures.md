@@ -3,7 +3,7 @@ title: "SQL Data Warehouse Stored Procedures | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
 ms.service: sql-data-warehouse
-ms.component: system-objects
+ms.component: design
 ms.reviewer: ""
 ms.topic: "language-reference"
 dev_langs: 

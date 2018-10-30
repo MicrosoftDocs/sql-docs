@@ -9,8 +9,6 @@ ms.topic: article
 ms.prod: sql
 ms.custom: "sql-linux"
 ms.technology: linux
-ms.assetid: 
-ms.workload: "On Demand"
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Configure replication snapshot folder with shares

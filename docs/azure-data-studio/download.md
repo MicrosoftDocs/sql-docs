@@ -22,9 +22,9 @@ Download and install the latest release, the *October Release*:
 
 |Platform|Download|Release date| Version |
 |:---|:---|:---|:---|
-|Windows|[Installer](https://go.microsoft.com/fwlink/?linkid=2030731)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2030736)|October 18, 2018 |1.1.3|
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2030738)|October 18, 2018 |1.1.3|
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2030750)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2030746)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2030741)|October 18, 2018 |1.1.3|
+|Windows|[Installer](https://go.microsoft.com/fwlink/?linkid=2030731)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2030736)|October 30, 2018 |1.1.4|
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2030738)|October 30, 2018 |1.1.4|
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2030750)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2030746)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2030741)|October 30, 2018 |1.1.4|
 
 For details about the latest release, see the [release notes](release-notes.md).
 

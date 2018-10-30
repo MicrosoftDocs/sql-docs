@@ -107,7 +107,7 @@ manager: craigg
     -   `SqlException 3284 occurred. Severity: 16 State: 5  
         Message Filemark on device 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak' is not aligned.           Reissue the Restore statement with the same block size used to create the backupset: '65536' looks like a possible value.`  
   
-        To solve this error, reissue the **BACKUP** statement with **BLOCKSIZE = 65536** specified.  
+        To solve this error, reissue the **RESTORE** statement with **BLOCKSIZE = 65536** specified.  
   
 -   Error during backup due to blobs that have active lease on them: Failed backup activity can result in blobs with active leases.  
   

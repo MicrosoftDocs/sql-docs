@@ -13,7 +13,7 @@ ms.prod: sql
 
 This article describes how to deploy and manage R and Python applications inside a SQL Server 2019 Big Data Cluster (preview). 
 
-R and Python applications are deployed and managed with the **mssqlctl-pre** command-line utility which is included in CTP 2.1. This article provides examples of how to perform common tasks for big data cluster apps from the command line.
+R and Python applications are deployed and managed with the `mssqlctl-pre` command-line utility, which is included in CTP 2.1. This article provides examples of how to perform common tasks for big data cluster apps from the command line.
 
 
 
@@ -32,7 +32,7 @@ R and Python applications are deployed and managed with the **mssqlctl-pre** com
 
 ## Installation
 
-The **mssqlctl-pre** command-line utility is provided to preview the Python and R application deployment feature. 
+The `mssqlctl-pre` command-line utility is provided to preview the Python and R application deployment feature. 
 
 <!--Because it is a preview, we recommend that you install it to a Python virtual environment using the following instructions:
 
@@ -65,6 +65,7 @@ The **mssqlctl-pre** command-line utility is provided to preview the Python and 
    source ./env/bin/activate
    ```
 -->
+
 ## Install the mssqlctl-pre utility:
 
    ```cmd
@@ -72,14 +73,17 @@ The **mssqlctl-pre** command-line utility is provided to preview the Python and 
    ```
 
 ## Capabilities
-In CTP 2.1 you can  create, delete, list and run a R or Python appliction. 
+
+In CTP 2.1 you can  create, delete, list, and run an R or Python application.
 
 ## Log in
 
-Before configuring R and Python applications, first log into your SQL Server big data cluster with the `mssqlctl-pre login` command. Specify the IP address of the [service-proxy-lb](for example: https://<ip-address>:30777) along with the user name and password to the cluster.
+Before configuring R and Python applications, first log into your SQL Server big data cluster with the `mssqlctl-pre login` command. Specify the IP address of the [service-proxy-lb], (for example, https://<ip-address>:30777) along with the user name and password to the cluster.
 
 You can get the IP address of the service-proxy-lb service by running this command in a bash or cmd window:
-```bashkubectl get svc service-proxy-lb -n <name of your cluster>
+
+```bash
+kubectl get svc service-proxy-lb -n <name of your cluster>
 ```
 
 ```bash
@@ -115,27 +119,44 @@ mssqlctl-pre file-share register --help
 ```
 -->
 
-## Here is a breakdown of the list of commands that are supported
+## Command examples
 
-App Creation: mssqlctl-pre app create
+- Create app
 
-Listing Apps deployed: mssqlctl-pre app list
+  ```cmd
+  mssqlctl-pre app create
+  ```
 
-App Deletion: mssqlctl-pre app delete
+- List deployed apps
 
-Runnnig Apps: mssqlctl-pre app run
+  ```cmd
+  mssqlctl-pre app list
+  ```
 
-You can get help for app create with the `--help` parameter:
+- Delete app
+
+  ```cmd
+  mssqlctl-pre app delete
+  ```
+
+- List running apps
+
+  ```cmd
+  mssqlctl-pre app run
+  ```
+
+Get help for app create with the `--help` parameter:
 
 ```cmd
 mssqlctl-pre app create --help
 ```
-Note that not all commands are supported in CTP 2.1
 
+>[!NOTE]
+>Not all commands are supported in CTP 2.1
 
 ## Create an app
 
-To create an application, you pass Python or R code files to **mssqlctl-pre** with the `app create` command. These files reside locally on the machine that you are creating the app from.
+To create an application, you pass Python or R code files to `mssqlctl-pre` with the `app create` command. These files reside locally on the machine that you are creating the app from.
 
 Use the following syntax to create a new app in your big data cluster:
 

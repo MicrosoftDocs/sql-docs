@@ -15,7 +15,7 @@ ms.reviewer: martinle
 
 This article provides a reference for various configuration settings that affect APS PolyBase connectivity to Hadoop. For a walkthrough on what is PolyBase, see [What is PolyBase](configure-polybase-connectivity-to-external-data.md).
 
-> [!NOTE] <br>
+> [!NOTE]
 > On APS, changes on XML files are needed on all compute nodes and control node.
 > 
 > Take special care when modifying XML files in APS. Any missing tags or unwanted characters can invalidate the xml file hindering the usablilty of the feature.

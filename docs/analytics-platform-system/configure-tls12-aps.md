@@ -1,5 +1,5 @@
 ---
-title: "Configuring TLS 1.2 in APS"
+title: "Configuring TLS 1.2 in Analytic Platform Systems | Microsoft Docs "
 description: "Recommendation to configure TLS 1.2 in APS"
 author: "mzaman1"
 manager: "craigg"

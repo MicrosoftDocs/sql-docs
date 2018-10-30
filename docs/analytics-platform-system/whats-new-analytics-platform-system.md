@@ -64,7 +64,7 @@ from cte;
 Reading, importing and exporting date data types using PolyBase now supports dates before 1970-01-01 and after 2038-01-20 for ORC and Parquet file types.
 
 ### SSIS destination adapter for SQL Server 2017 as target
-New APS SSIS destination adapter that supports SQL Server 2017 as deployment target can be downloaded from [download site](in progress).
+New APS SSIS destination adapter that supports SQL Server 2017 as deployment target can be downloaded from [download site](https://www.microsoft.com/en-us/download/details.aspx?id=57472).
 
 <a name="h2-aps-cu7.1"></a>
 ## APS CU7.1

@@ -17,8 +17,8 @@ manager: craigg
 
 ## October 2018 (October Release)
 
-release date: October 18, 2018  
-version: 1.1.3
+release date: October 29, 2018  
+version: 1.1.4
 
 - Introducing the Azure Resource Explorer to browse Azure SQL Databases
 - Improve Object Explorer and Query Editor connectivity robustness
@@ -26,6 +26,12 @@ version: 1.1.3
 - Update to the [SQL Server 2019 Preview extension](https://docs.microsoft.com/sql/azure-data-studio/sql-server-2019-extension?view=sql-server-ver15)
 
 ### Bug Fixes
+- Fix [issue #2717](https://github.com/Microsoft/azuredatastudio/issues/2717): XML Column result click formatting
+- Fix [issue #2993](https://github.com/Microsoft/azuredatastudio/issues/2993): Width's Result windows is incomplete
+- Fix [issue #2999](https://github.com/Microsoft/azuredatastudio/issues/2999): Could not load file System.Diagnostics.Tracing on Mac when connecting to DB
+- Fix [issue #2851](https://github.com/Microsoft/azuredatastudio/issues/2851): TimeSeries chart does not render correctly
+- Fix [issue #2996](https://github.com/Microsoft/azuredatastudio/issues/2996): Temp table loss due to sudden session change
+- ...
 
 For detailed information, see the [Change Log](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md), and [Releases](https://github.com/Microsoft/azuredatastudio/releases).
 

@@ -40,13 +40,10 @@ The following dynamic management views can be used when monitoring machine learn
 | [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) | Execution | Returns a row for each active worker account that is running an external script. |
 | [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md) | Execution | Returns one row for each type of external script request. |
 | [sys.dm_os_performance_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) | Execution | Returns a row per performance counter maintained by the server. If you use the search condition `WHERE object_name LIKE '%External Scripts%'`, you can use this information to see how many scripts ran, which scripts were run using which authentication mode, or how many R or Python calls were issued on the instance overall. |
-| [sys.resource_governor_external_resource_pools](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md) | Resource Governor | Returns information about the current external resource pool state in Resource Governor, the current configuration of resource pools, and resource pool statistics. |
+| [sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) | Resource Governor | Returns information about the current external resource pool state in Resource Governor, the current configuration of resource pools, and resource pool statistics. |
 | [sys.dm_resource_governor_external_resource_pool_affinity](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md) | Resource Governor | Returns CPU affinity information about the current external resource pool configuration in Resource Governor. Returns one row per scheduler in [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] where each scheduler is mapped to an individual processor. Use this view to monitor the condition of a scheduler or to identify runaway tasks. |
 
 For information about monitoring [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] instances, see [Catalog Views](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md) and [Resource Governor Related Dynamic Management Views](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md).
-
-> [!NOTE]  
-> Users who run external scripts must have EXECUTE ANY EXTERNAL SCRIPT permission. However, administrators can use these DMVs without additional permission.
 
 ## Settings and configuration
 
@@ -81,7 +78,7 @@ The query returns the following columns:
 
 ## Active sessions
 
-The following query returns the active sessions that are running external scripts:
+To see the active sessions running external scripts, run the query below.
 
 ```SQL
 SELECT r.session_id, r.blocking_session_id, r.status, DB_NAME(s.database_id) AS database_name
@@ -94,12 +91,7 @@ INNER JOIN sys.dm_exec_sessions AS s
 ON s.session_id = r.session_id;
 ```
 
-session_id	blocking_session_id	status	database_name	login_name	wait_time	wait_type	last_wait_type	total_elapsed_time	cpu_time	reads	logical_reads	writes	language	degree_of_parallelism	external_user_name
-54	0	suspended	master	NORTHAMERICA\davidph	5006420	EXTERNAL_SCRIPT_NETWORK_IO	EXTERNAL_SCRIPT_NETWORK_IO	5023681	1	0	2	0	R	1	SQL201701
-52	0	suspended	master	NORTHAMERICA\davidph	4998837	EXTERNAL_SCRIPT_NETWORK_IO	EXTERNAL_SCRIPT_NETWORK_IO	4998997	1	0	0	0	Python	1	SQL201701
-
-
-The query joins the three DMVs [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md), [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md), and [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md) together and returns the following columns:
+The query uses the three DMVs [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md), [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md), and [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md) and returns the following columns:
 
 | Column | Description |
 |--------|-------------|
@@ -122,7 +114,7 @@ The query joins the three DMVs [sys.dm_exec_requests](../../relational-databases
 
 ## Execution statistics
 
-Using [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md), you can retrieve execution statistics for the external runtime for R and Python. Only statistics of RevoScaleR or revoscalepy or microsoftml package functions are currently available.
+Use [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md) to retrieve execution statistics for the external runtime for R and Python. Only statistics of RevoScaleR, revoscalepy, or microsoftml package functions are currently available. The query below only returns functions that have been executed more than once.
 
 ```SQL
 SELECT language, counter_name, counter_value
@@ -131,7 +123,7 @@ WHERE counter_value > 0
 ORDER BY language, counter_name;
 ```
 
-The example returns the following columns:
+The query returns the following columns:
 
 | Column | Description |
 |--------|-------------|
@@ -141,7 +133,7 @@ The example returns the following columns:
 
 ## Performance counters
 
-The following example returns the performance counters from [sys.dm_os_performance_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) related to external scripts:
+The query below returns the performance counters from [sys.dm_os_performance_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) related to external scripts.
 
 ```SQL
 SELECT counter_name, cntr_value
@@ -149,7 +141,7 @@ FROM sys.dm_os_performance_counters
 WHERE object_name LIKE '%External Scripts%'
 ```
 
-The counters below are reported by **sys.dm_os_performance_counters**  for external scripts:
+**sys.dm_os_performance_counters** outputs the following performance counters for external scripts:
 
 | Counter | Description |
 |---------|-------------|
@@ -163,7 +155,7 @@ The counters below are reported by **sys.dm_os_performance_counters**  for exter
 
 ## Memory usage
 
-The example below retrieves memory used by the OS, SQL Server, and the external pools.
+You can get information about memory used by the OS, SQL Server, and the external pools from [sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) and [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md). The query below uses these DMVs.
 
 ```SQL
 SELECT physical_memory_kb, committed_kb
@@ -183,7 +175,7 @@ The query returns the following columns:
 
 ## Memory configuration
 
-The example below retrieves the memory configuration of SQL Server and external resource pools. If SQL Sever is running with default then max_memory limit is considered as 100% of OS memory.
+The query below uses the catalog view [sys.configurations](../../relational-databases//system-catalog-views/sys-configurations-transact.md) and the dynamic management view [sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) to retrieves the memory configuration of SQL Server and external resource pools. If SQL Sever is running with default value of `max server memory (MB)`, it is considered as 100% of the OS memory.
 
 ```SQL
 SELECT 'SQL Server' AS name
@@ -207,7 +199,7 @@ The query returns the following columns:
 
 ## Resource pools
 
-In the SQL Server Resource Governor, a [resource pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md) represents a subset of the physical resources of an instance of the Database Engine. The query below retrieves information about the resource pools used for SQL Server and external scripts.
+In SQL Server Resource Governor, a [resource pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md) represents a subset of the physical resources of an instance of the Database Engine. The query below retrieves information about the resource pools used for SQL Server (using [sys.dm_resource_governor_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)) and external scripts (using [sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md)).
 
 ```SQL
 SELECT CONCAT ('SQL Server - ', p.name) AS pool_name
@@ -229,6 +221,8 @@ The query returns the following columns:
 | write_io_completed_total | The total write IOs completed since the Resource Govenor statistics were reset. |
 
 ## Installed packages
+
+You can to view the R and Python packages that are installed in SQL Server Machine Learning Services by executing an R or Python script that outputs these.
 
 ### Installed packages for R
 

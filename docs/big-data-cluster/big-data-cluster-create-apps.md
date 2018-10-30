@@ -13,146 +13,58 @@ ms.prod: sql
 
 This article describes how to deploy and manage R and Python applications inside a SQL Server 2019 Big Data Cluster (preview). 
 
-R and Python applications are deployed and managed with the `mssqlctl-pre` command-line utility, which is included in CTP 2.1. This article provides examples of how to perform common tasks for big data cluster apps from the command line.
-
-
+R and Python applications are deployed and managed with the **mssqlctl-pre** command-line utility, which is included in CTP 2.1. This article provides examples of how to perform common tasks for big data cluster apps from the command line.
 
 ## Prerequisites
 
 -	You must have a SQL Server 2019 big data cluster configured. For more information, see [How to deploy SQL Server big data cluster on Kubernetes](deployment-guidance.md). 
 
-<!--
--	Install the latest version of Python. This dependency is the same as for the [mssqlctl utility](deployment-guidance.md#mssqlctl). 
-
-	- On a Windows client, download the necessary Python package from [https://www.python.org/downloads/](https://www.python.org/downloads/). During installation, select to add Python to your path.
-
-   - On Linux, install the **python3** and **python3-pip** packages. Then install **pip3** with `sudo pip3 install --upgrade pip`.
-
--->
-
 ## Installation
 
-The `mssqlctl-pre` command-line utility is provided to preview the Python and R application deployment feature. 
-
-<!--Because it is a preview, we recommend that you install it to a Python virtual environment using the following instructions:
-
-1.	From a Windows PowerShell or bash command-line, install **virtualenv** with the following command (add `sudo` to the command on Linux):
+Install the **mssqlctl-pre** tool with the following command:
 
    ```cmd
-   pip install virtualenv
-   ```
-
-1.	Create a new directory for the virtual environment.
-
-   ```cmd
-   mkdir mssqlctl-pre-env
-   cd mssqlctl-pre-env
-   ```
-
-1.	Create and activate the virtual environment in this directory.
-
-   On Windows, run the following command:
-
-   ```PowerShell
-   python -m venv env
-   ./env/scripts/activate
-   ```
-
-   On Linux, run the following command:
-
-   ```bash
-   python3 -m venv env
-   source ./env/bin/activate
-   ```
--->
-
-## Install the mssqlctl-pre utility:
-
-   ```cmd
-   pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.0 mssqlctl-pre
+   pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctl-pre
    ```
 
 ## Capabilities
 
-In CTP 2.1 you can  create, delete, list, and run an R or Python application.
+In CTP 2.1 you can  create, delete, list, and run an R or Python application. The following table describes the application deployment commands that you can use with **mssqlctl-pre**.
 
-## Log in
+| Command | Description |
+|---|---|
+| `mssqlctl-pre login` | Log into a SQL Server big data cluster |
+| `mssqlctl-pre app create` | Create an app |
+| `mssqlctl-pre app list` | List deployed apps |
+| `mssqlctl-pre app delete` | Delete an app |
+| `mssqlctl-pre app run` | List running apps |
 
-Before configuring R and Python applications, first log into your SQL Server big data cluster with the `mssqlctl-pre login` command. Specify the IP address of the [service-proxy-lb], (for example, https://<ip-address>:30777) along with the user name and password to the cluster.
+> [!NOTE]
+> Some commands are not supported in CTP 2.1.
 
-You can get the IP address of the service-proxy-lb service by running this command in a bash or cmd window:
-
-```bash
-kubectl get svc service-proxy-lb -n <name of your cluster>
-```
-
-```bash
-mssqlctl-pre login -e https://<ip-address-of-service-proxy-lb> -u <user-name> -p <password>
-```
-<!--
-## Register a file share
-
-You can optionally register a file share on Azure to use with an application that you want to publish. If you do not register a file share, you can reference code files locally when you create an application.
-
-To register an Azure file share, first create the file share in the Azure portal with the following steps:
-
-1. Log into the Azure portal.
-
-2. If you do not have a storage account, create one by selecting **Storage accounts**, and then clicking the **Add** button.
-
-3. After creating the storage account, select it to view the details.
-
-4. On the left pane, select **Storage Exporer (preview)** to bring up the Storage Explorer for the target storage account.
-
-5. Right-click on **File Shares**, and click **Create File Share**. Give it a name and then click **Create** to create the new share.
-
-Now you can register this file share for a specific app that you intend to publish within a SQL Server big date cluster. From the command line, run the following command to register the file share:
-
-```cmd
-mssqlctl-pre file-share register -app <app_name> --secret <file_share_secret> --sharename <file_share_directory_name> --type AzureFiles
-```
-
-You can get help for Azure file share registration with the `--help` parameter:
-
-```cmd
-mssqlctl-pre file-share register --help
-```
--->
-
-## Command examples
-
-- Create app
-
-  ```cmd
-  mssqlctl-pre app create
-  ```
-
-- List deployed apps
-
-  ```cmd
-  mssqlctl-pre app list
-  ```
-
-- Delete app
-
-  ```cmd
-  mssqlctl-pre app delete
-  ```
-
-- List running apps
-
-  ```cmd
-  mssqlctl-pre app run
-  ```
-
-Get help for app create with the `--help` parameter:
+You can get help for any command with the `--help` parameter. The following example displays help for the `app create` command:
 
 ```cmd
 mssqlctl-pre app create --help
 ```
 
->[!NOTE]
->Not all commands are supported in CTP 2.1
+The following sections provide more details on each command.
+
+## Log in
+
+Before configuring R and Python applications, first log into your SQL Server big data cluster with the `mssqlctl-pre login` command. Specify the IP address of the service-proxy-lb (for example, `https://<ip-address>:30777`) along with the user name and password to the cluster.
+
+1. Obtain the IP address of the service-proxy-lb service by running the following command in a bash or cmd window:
+
+   ```bash
+   kubectl get svc service-proxy-lb -n <name of your cluster>
+   ```
+
+1. Call  `mssqlctl-pre login` with the service-proxy-lb. Specify your user name and password for the big data cluster you are connecting to.
+
+   ```bash
+   mssqlctl-pre login -e https://<ip-address-of-service-proxy-lb> -u <user-name> -p <password>
+   ```
 
 ## Create an app
 
@@ -192,9 +104,17 @@ The following example demonstrates this command:
 mssqlctl-pre app list --name testapp --version v1
 ```
 
+## Delete an app
+
+To delete an app from your big data cluster, use the following syntax:
+
+```cmd
+mssqlctl-pre app delete --name <app_name> --version <app_version>
+```
+
 ## Run an app
 
-If the app is in a "Ready" state, you can use it by running it with your specified input parameters. Use the following syntax to run an app:
+If the app is in a "Ready" state, you can use it by running it with your specified input parameters. Use the `app run` command with the following syntax to run an app:
 
 ```cmd
 mssqlctl-pre app run --name <app_name> --version <app_version> --inputs <inputs_params>
@@ -207,14 +127,6 @@ mssqlctl-pre app run --name testapp --version v1 --inputs x=1,y=2
 ```
 
 If the run was successful, you should see your output as specified when you created the app.
-
-## Delete an app
-
-To delete an app from your big data cluster, use the following syntax:
-
-```cmd
-mssqlctl-pre app delete --name <app_name> --version <app_version>
-```
 
 ## Next steps
 

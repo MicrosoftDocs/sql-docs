@@ -13,7 +13,7 @@ manager: cgronlun
 # Monitor SQL Server Machine Learning Services using dynamic management views (DMVs)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Dynamic management views (DMVs) can be used to monitor the execution of external scripts (R and Python), resources used, diagnose problems, and tune performance in SQL Server Machine Learning Services.
+Use dynamic management views (DMVs) to monitor the execution of external scripts (R and Python), resources used, diagnose problems, and tune performance in SQL Server Machine Learning Services.
 
 In this article, you will find the DMVs that are specific for SQL Server Machine Learning Services. You will also find example queries that show:
 
@@ -175,7 +175,7 @@ The query returns the following columns:
 
 ## Memory configuration
 
-The query below uses the catalog view [sys.configurations](../../relational-databases//system-catalog-views/sys-configurations-transact.md) and the dynamic management view [sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) to retrieves the memory configuration of SQL Server and external resource pools. If SQL Sever is running with default value of `max server memory (MB)`, it is considered as 100% of the OS memory.
+The query below uses the catalog view [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact.md) and the dynamic management view [sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) to retrieves the memory configuration of SQL Server and external resource pools. If SQL Sever is running with default value of `max server memory (MB)`, it is considered as 100% of the OS memory.
 
 ```SQL
 SELECT 'SQL Server' AS name

@@ -4,7 +4,7 @@ description: This article provides a walk-through for configuring PMEM on Linux.
 author: DBArgenis 
 ms.author: argenisf 
 manager: craigg
-ms.date: 09/24/2018
+ms.date: 11/02/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: "sql-linux"

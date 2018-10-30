@@ -33,7 +33,7 @@ To enable enlightenment of database files in SQL Server on Linux, follow the fol
   - Use [ndctl] to create a namespace.
 
   ```bash 
-  ndctl create-namespace -f -e namespace0.0 --mode=fsdax* –map=mem
+  ndctl create-namespace -f -e namespace0.0 --mode=fsdax* -–map=mem
   ```
 
   >[!NOTE]

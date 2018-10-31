@@ -49,9 +49,9 @@ For information about monitoring [!INCLUDE[ssNoVersion_md](../../includes/ssnove
 
 You can get the Machine Learning Services installation setting and configuration options. 
 
- ![Output from the settings and configuration query](media/dmv-settings-and-configuration.png "Output from the settings and configuration query")
+![Output from the settings and configuration query](media/dmv-settings-and-configuration.png "Output from the settings and configuration query")
 
-Run the query below to get this output.
+Run the query below to get this output. For more information on the views and functions used, see [sys.dm_server_registry](../../relational-databases/system-dynamic-management-views/sys-dm-server-registry-transact-sql.md), [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md), and [SERVERPROPERTY](../../t-sql/functions/serverproperty-transact-sql.md).
 
 ```SQL
 SELECT CAST(SERVERPROPERTY('IsAdvancedAnalyticsInstalled') AS INT) AS IsMLServicesInstalled
@@ -84,9 +84,9 @@ The query returns the following columns:
 
 View the active sessions running external scripts.
 
- ![Output from the settings and configuration query](media/dmv-active-sessions.png "Output from the settings and configuration query")
+![Output from the active settings query](media/dmv-active-sessions.png "Output from the active settings query")
 
-Run the query below to get this output.
+Run the query below to get this output. For more information on the dynamic management views used, see [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md), [sys.dm_external_script_requests](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md), and [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md).
 
 ```SQL
 SELECT r.session_id, r.blocking_session_id, r.status, DB_NAME(s.database_id) AS database_name
@@ -99,7 +99,7 @@ INNER JOIN sys.dm_exec_sessions AS s
 ON s.session_id = r.session_id;
 ```
 
-The query uses the three DMVs [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md), [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md), and [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md) and returns the following columns:
+The query returns the following columns:
 
 | Column | Description |
 |--------|-------------|
@@ -122,7 +122,11 @@ The query uses the three DMVs [sys.dm_exec_requests](../../relational-databases/
 
 ## Execution statistics
 
-Use [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md) to retrieve execution statistics for the external runtime for R and Python. Only statistics of RevoScaleR, revoscalepy, or microsoftml package functions are currently available. The query below only returns functions that have been executed more than once.
+View the execution statistics for the external runtime for R and Python. Only statistics of RevoScaleR, revoscalepy, or microsoftml package functions are currently available.
+
+![Output from the execution statistics query](media/dmv-execution-statistics.png "Output from the execution statistics query")
+
+Run the query below to get this output. For more information on the dynamic management view used, see  [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md). The query only returns functions that have been executed more than once.
 
 ```SQL
 SELECT language, counter_name, counter_value
@@ -141,7 +145,11 @@ The query returns the following columns:
 
 ## Performance counters
 
-The query below returns the performance counters from [sys.dm_os_performance_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) related to external scripts.
+View the performance counters related to the execution of external scripts.
+
+![Output from the performance counters query](media/dmv-performance-counters.png "Output from the performance counters query")
+
+Run the query below to get this output. For more information on the dynamic management view used, see  [sys.dm_os_performance_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md).
 
 ```SQL
 SELECT counter_name, cntr_value
@@ -163,7 +171,11 @@ WHERE object_name LIKE '%External Scripts%'
 
 ## Memory usage
 
-You can get information about memory used by the OS, SQL Server, and the external pools from [sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) and [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md). The query below uses these DMVs.
+View information about the memory used by the OS, SQL Server, and the external pools.
+
+![Output from the memory usage query](media/dmv-memory-usage.png "Output from the memory usage query")
+
+Run the query below to get this output. For more information on the dynamic management views used, see [sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) and [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md).
 
 ```SQL
 SELECT physical_memory_kb, committed_kb
@@ -183,7 +195,11 @@ The query returns the following columns:
 
 ## Memory configuration
 
-The query below uses the catalog view [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) and the dynamic management view [sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) to retrieves the memory configuration of SQL Server and external resource pools. If SQL Sever is running with default value of `max server memory (MB)`, it is considered as 100% of the OS memory.
+View information about the maximum memory configuration in percentage of SQL Server and external resource pools. If SQL Sever is running with default value of `max server memory (MB)`, it is considered as 100% of the OS memory.
+
+![Output from the memory configuration query](media/dmv-memory-configuration.png "Output from the memory configuration query")
+
+Run the query below to get this output. For more information on the views used, see [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) and [sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md).
 
 ```SQL
 SELECT 'SQL Server' AS name
@@ -207,7 +223,11 @@ The query returns the following columns:
 
 ## Resource pools
 
-In SQL Server Resource Governor, a [resource pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md) represents a subset of the physical resources of an instance of the Database Engine. The query below retrieves information about the resource pools used for SQL Server (using [sys.dm_resource_governor_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)) and external scripts (using [sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md)).
+In [SQL Server Resource Governor](../../relational-databases/resource-governor/resource-governor.md), a [resource pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md) represents a subset of the physical resources of an instance. You can specify limits on the amount of CPU, physical IO, and memory that incoming application requests, including execution of external scripts, can use within the resource pool. View the resource pools used for SQL Server and external scripts.
+
+![Output from the resource pools query](media/dmv-resource-pools.png "Output from the resource pools query")
+
+Run the query below to get this output. For more information on the dynamic management views used, see  [sys.dm_resource_governor_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md) and [sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md).
 
 ```SQL
 SELECT CONCAT ('SQL Server - ', p.name) AS pool_name
@@ -234,7 +254,11 @@ You can to view the R and Python packages that are installed in SQL Server Machi
 
 ### Installed packages for R
 
-The following query use an R script to determine R packages installed with SQL Server.
+View the R packages installed in SQL Server Machine Learning Services.
+
+![Output from the installed packages for R query](media/dmv-installed-packages-r.png "Output from the installed packages for R query")
+
+Run the query below to get this output. The query use an R script to determine R packages installed with SQL Server.
 
 ```SQL
 EXEC sp_execute_external_script @language = N'R'
@@ -256,7 +280,11 @@ The columns returned are:
 
 ### Installed packages for Python
 
-The following query use an Python script to determine the Python packages installed with SQL Server.
+View the Python packages installed in SQL Server Machine Learning Services.
+
+![Output from the installed packages for Python query](media/dmv-installed-packages-python.png "Output from the installed packages for Python query")
+
+Run the query below to get this output. The query use an Python script to determine the Python packages installed with SQL Server.
 
 ```SQL
 EXEC sp_execute_external_script @language = N'Python'

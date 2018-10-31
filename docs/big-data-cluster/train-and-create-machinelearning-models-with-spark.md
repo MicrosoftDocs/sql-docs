@@ -1,6 +1,6 @@
 ---
-title: Training and Creating Machine Learning Models with Spark 
-description: Use PySpark to train and create machine Learning Models with Spark
+title: Train and create machine learning models with Spark 
+description: Use PySpark to train and create machine learning models with Spark | SQL Server
 services: SQL Server 2019 Big Data Cluster Spark
 ms.service: SQL Server 2019 Big Data Cluster Spark
 author: lgongmsft
@@ -16,30 +16,32 @@ Spark in SQL Server big data cluster enables AI and machine learning. The exampl
 
 The example is a step by step guide with code snippets that can be used from an Azure Data Studio Notebook and each cell run one step at a time. For more information on how to connect with Spark from notebook refer [here] (notebooks-guidance.md)
 
-In the example, we will 
-1. Start with **understanding the data and prediction we want to make**
+In the example:
+
+1. Start with **understanding the data and prediction desired**
 2. **Upload the data to HDFS and prepare the data** for creating the model
-3. **Select features that we use**
+3. **Select features to use**
 4. **Split data as  training and test set**
 5. Put together a **ml pipeline and build a model**
 6. Use the created model to **make predictions**
-7. As a final step, we'll **persist the created model to later use**.
+7. As a final step, **persist the created model to later use**.
 
 E2E machine learning involves several additional steps, e.g, data exploration, feature selection and principal component analysis, model selection. Many of these steps are ignored here for brevity.
 
 
-## Step 1 - Understanding the data and prediction we want to make
-For this example, we'll use AdultCensusIncome data from [here]( https://amldockerdatasets.azureedge.net/AdultCensusIncome.csv ). In AdultCensusIncome.csv, each row represents Income range and other characteristics like age, hours-per-week, education, occupation etc for a given adult. We'll build a model that can predict if the income range. The model will take age and hours-per-week as features and predict if the income would be >50 K or <50 K. 
+## Step 1 - Understanding the data and prediction desired
+
+This example uses adult census income data data from [here]( https://amldockerdatasets.azureedge.net/AdultCensusIncome.csv ). In `AdultCensusIncome.csv`, each row represents income range and other characteristics like age, hours-per-week, education, occupation etc for a given adult. Build a model that can predict if the income range. The model will take age and hours-per-week as features and predict if the income would be >50 K or <50 K. 
 
 
 ## Step 2 - Upload the data to HDFS and basic explorations on data
-From your Azure Data Studio connect to the HDFS/Spark gateway, and create a directory called spark_ml under HDFS. 
-Download [AdultCensusIncome.csv]( https://amldockerdatasets.azureedge.net/AdultCensusIncome.csv ) to your local machine and upload to HDFS. Upload AdultCensusIncome.csv to the folder we created.
+From Azure Data Studio connect to the HDFS/Spark gateway, and create a directory called `spark_ml` under HDFS. 
+Download [AdultCensusIncome.csv]( https://amldockerdatasets.azureedge.net/AdultCensusIncome.csv ) to your local machine and upload to HDFS. Upload `AdultCensusIncome.csv` to the folder you created.
 
 
-Now we'll write some code. You can copy the code below and paste it in individual cells of a notebook in Azure Data Studio. 
+Now, write some code. You can copy the code below and paste it in individual cells of a notebook in Azure Data Studio. 
 
-In the code snipped below we read the CSV file to Spark data frame. Further to that we count the number of rows and columns and display the loaded data.
+The code below reads the CSV file to Spark data frame. Further to that it counts the number of rows and columns and display the loaded data.
 
 ```python
 datafile = "/spark_ml/AdultCensusIncome.csv"
@@ -57,13 +59,13 @@ data_all.printSchema()
 data_all.show(5)
 ```
 
-## Step 3 - Select features that we use
+## Step 3 - Select features to use
 
-In this step, we'll use the following two terms
-1. 'Label'    - Refers to value that we want to predict. This is represented as a column in the data.  
-2. 'Features' - Refers to the characteristics in data that we use to predict. Also referred some time as 'predictors' 
+In this step, use the following two terms
+1. `Label`    - Refers to value to predict. This is represented as a column in the data.  
+2. `Features` - Refers to the characteristics in data to predict. Also referred some time as `predictors` 
 
-In this example 'Label', is the **income** column. For simplicity, we'll choose **age** and **hours_per_week** as 'Features'. In reality features are chosen by applying some correlations techniques to understand what best characterize the Label we are predicting.
+In this example `Label`, is the **income** column. For simplicity, choose **age** and **hours_per_week** as `Features`. In reality features are chosen by applying some correlation techniques to understand what best characterize the predicting label.
 
 ```python
 # Choose feature columns and the label column.
@@ -81,7 +83,8 @@ data = data_all.select(select_cols)
 
 
 ## Step 4 - Split as training and test set
-We'll use 75% of rows to train the model and rest of the 25% to evaluate the model. Additionally we persist the train and test data sets to HDFS storage. The step is not necessary,but shown to demonstrate saving and loading with ORC format. Other formats, for example, Parquet may also be used. 
+
+Use 75% of rows to train the model and rest of the 25% to evaluate the model. Additionally, persist the train and test data sets to HDFS storage. The step is not necessary,but shown to demonstrate saving and loading with ORC format. Other formats, for example, `Parquet `may also be used.
 
 Post this step you should see two directories created with the name AdultCensusIncomeTrain and AdultCensusIncomeTest
 
@@ -141,7 +144,8 @@ si_label = StringIndexer(inputCol=label, outputCol='label')
 assembler = VectorAssembler(inputCols=featureCols, outputCol="features")
 
 ```
-Here we put together the pipeline. 
+
+Now, put together the pipeline. 
 
 ```python
 # put together the pipeline
@@ -156,7 +160,7 @@ print("Pipeline Created")
 
 ```
 
-Now that the pipeline is created, we use that to train the model.
+Now that the pipeline is created, use that to train the model.
 
 ```python
 # train the model
@@ -168,7 +172,7 @@ print("Model Stages", model.stages)
 ```
 
 ## Step 6 - Predict using the model and Evaluate the model accuracy
-The code below use test data set to predict the outcome using the model created in the step above. We measure accuracy of the model with areaUnderROC and areaUnderPR metric.
+The code below uses test data set to predict the outcome using the model created in the step above. It measures accuracy of the model with `areaUnderROC` and `areaUnderPR` metric.
 
 ```python
 from pyspark.ml.evaluation import BinaryClassificationEvaluator
@@ -185,8 +189,8 @@ print("Area Under PR: {}".format(au_prc))
 ```
 
 
-## Step 7 - Persist the Models to HDFS
-Finally we persist the model in HDFS for later use. Post this step the created model get saved as /spark_ml/AdultCensus.mml
+## Step 7 - Persist the models to HDFS
+Finally, persist the model in HDFS for later use. Post this step the created model get saved as /spark_ml/AdultCensus.mml
 
 ```python
 ##NOTE: by default the model is saved to and loaded from path

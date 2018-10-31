@@ -34,7 +34,7 @@ Release date: September 27, 2018
 ### Known issues:
 
 - SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True. This issue only applies to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog is not impacted.
-- Deploying SSIS project which contains packages containing Script Task/Flat file destination to Azure-SSIS will result in the packages fail to execute in Azure-SSIS. There are two workarounds 1)deploy the project with SSMS 2)launch the deployment wizard by double clicking the ISDeploymentWizard.exe installed by SSDT and then deploy the project.
+- Deploying SSIS project which contains packages containing Script Task/Flat file destination to Azure-SSIS will result in the packages failing to execute in Azure-SSIS. There are two workarounds: deploy the project with SSMS, or launch the deployment wizard by double-clicking the ISDeploymentWizard.exe installed by SSDT and then deploy the project.
 
 
 ## SSDT for Visual Studio 2017 (15.8)

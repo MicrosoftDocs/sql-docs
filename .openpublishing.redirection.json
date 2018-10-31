@@ -56,6 +56,11 @@
             "redirect_document_id": true
         },
         {
+            "source_path": "docs/advanced-analytics/r/dmvs-for-sql-server-r-services.md",
+            "redirect_url": "/sql/advanced-analytics/administration/monitor-sql-server-machine-learning-services-using-dynamic-management-views",
+            "redirect_document_id": true
+        },
+        {
             "source_path": "docs/advanced-analytics/python/machine-learning-services-python-reference.md",
             "redirect_url": "/sql/advanced-analytics/r/machine-learning-services-r-reference",
             "redirect_document_id": false

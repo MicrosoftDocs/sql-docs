@@ -216,7 +216,7 @@ To connect to a Kerberos-secured Hadoop cluster using MIT KDC the following chan
 4. Create a database-scoped credential object to specify the authentication information for each Hadoop user. See [PolyBase T-SQL objects](../relational-databases/polybase/polybase-t-sql-objects.md).
 
 ## <a id="encryptionzone"></a> Hadoop Encryption Zone setup
-If you are using Hadoop encryption zone modify core-site.xml and hdfs-site.xml as following. The ip address and port number should match 
+If you are using Hadoop encryption zone modify core-site.xml and hdfs-site.xml as following. Provide the ip address where KMS service is running with the corresponding port number. The default port for KMS on CDH is 16000.
 
 **core-site.xml**
 ```xml

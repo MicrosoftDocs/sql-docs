@@ -3,8 +3,6 @@ title: "SQL Server Distributed Replay | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
 ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords: 

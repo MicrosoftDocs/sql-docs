@@ -66,6 +66,10 @@
       href: use-prose-for-big-data-automation.md
     - name: Deploy apps
       href: big-data-cluster-create-apps.md
+    - name: Training and Creating Machine Learning Models with Spark
+      href: train-and-create-machinelearning-models-with-spark.md
+    - name: Exporting ML models with Spark/Mleap
+      href: export-model-with-spark-mleap.md
   - name: Manage SQL Server big data cluster
     items:
     - name: Cluster administration portal

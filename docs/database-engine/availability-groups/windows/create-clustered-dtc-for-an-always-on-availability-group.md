@@ -446,7 +446,7 @@ IF ($restart -eq 1)
 
 In order to guarantee that distributed transactions use the clustered DTC resource, disable the local DTC on both nodes.  The following script will disable and stop the local DTC service on each node.  Run the following PowerShell Script on `SQLNODE1`.
 ```powershell  
-# Disble local DTC service
+# Disable local DTC service
 
 \<#
 Script: 

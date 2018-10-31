@@ -47,7 +47,7 @@ For information about monitoring [!INCLUDE[ssNoVersion_md](../../includes/ssnove
 
 ## Settings and configuration
 
-You can get the Machine Learning Services installation setting and configuration options. 
+View the Machine Learning Services installation setting and configuration options.
 
 ![Output from the settings and configuration query](media/dmv-settings-and-configuration.png "Output from the settings and configuration query")
 
@@ -195,7 +195,7 @@ The query returns the following columns:
 
 ## Memory configuration
 
-View information about the maximum memory configuration in percentage of SQL Server and external resource pools. If SQL Sever is running with default value of `max server memory (MB)`, it is considered as 100% of the OS memory.
+View information about the maximum memory configuration in percentage of SQL Server and external resource pools. If SQL Sever is running with the default value of `max server memory (MB)`, it is considered as 100% of the OS memory.
 
 ![Output from the memory configuration query](media/dmv-memory-configuration.png "Output from the memory configuration query")
 

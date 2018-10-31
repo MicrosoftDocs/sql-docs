@@ -39,6 +39,6 @@ manager: craigg
  Two security audit events are also provided for Service Broker. For more information on those events, see [Audit Broker Login Event Class](audit-broker-login-event-class.md) and [Audit Broker Conversation Event Class](audit-broker-conversation-event-class.md).  
   
 ## See Also  
- [Security Audit Event Category](../../analysis-services/trace-events/security-audit-event-category.md)  
+ [Security Audit Event Category](https://docs.microsoft.com/bi-reference/trace-events/security-audit-event-category)  
   
   

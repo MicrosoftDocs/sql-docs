@@ -31,11 +31,11 @@ manager: kfile
  [More…](../../../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md)  
   
  ![Small File Folder Icon](../../../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Programming Architecture**  
- [Developing with Analysis Management Objects &#40;AMO&#41;](../../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
+ [Developing with Analysis Management Objects &#40;AMO&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)  
   
  [Developing with Analysis Services Scripting Language &#40;ASSL&#41;](../../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
   
- [Developing with ADOMD.NET](../../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)  
+ [Developing with ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net)  
   
  ![Small File Folder Icon](../../../analysis-services/media/filefolder-small.png "Small File Folder Icon") **International Considerations**  
  [Globalization scenarios for Analysis Services](../../../analysis-services/globalization-scenarios-for-analysis-services.md)  

@@ -182,7 +182,7 @@ manager: craigg
  If you did not synchronize roles or membership, remember to specify user access permissions now on the destination database.  
   
 ## See Also  
- [Synchronize Element &#40;XMLA&#41;](../xmla/xml-elements-commands/synchronize-element-xmla.md)   
+ [Synchronize Element &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/synchronize-element-xmla)   
  [Deploy Model Solutions Using XMLA](deploy-model-solutions-using-xmla.md)   
  [Deploy Model Solutions Using the Deployment Wizard](deploy-model-solutions-using-the-deployment-wizard.md)  
   

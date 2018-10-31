@@ -140,9 +140,9 @@ manager: craigg
  [Attach and Detach Analysis Services Databases](attach-and-detach-analysis-services-databases.md)   
  [Database Storage Location](database-storage-location.md)   
  [Database ReadWriteModes](database-readwritemodes.md)   
- [Attach Element](../xmla/xml-elements-commands/attach-element.md)   
- [Detach Element](../xmla/xml-elements-commands/detach-element.md)   
- [ReadWriteMode Element](../xmla/xml-elements-properties/readwritemode-element.md)   
- [DbStorageLocation Element](../xmla/xml-elements-properties/dbstoragelocation-element.md)  
+ [Attach Element](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)   
+ [Detach Element](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   
+ [ReadWriteMode Element](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/readwritemode-element)   
+ [DbStorageLocation Element](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/dbstoragelocation-element)  
   
   

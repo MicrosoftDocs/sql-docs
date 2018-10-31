@@ -56,15 +56,11 @@ Partial aggregation means that a final aggregation must occur after the data rea
 
 PolyBase has the following limitations:
 
-- The maximum possible row size can't exceed 32 KB in SQL Server or 1 MB in Azure SQL Data Warehouse. This size includes the full length of variable-length columns.
-
-- PolyBase doesn’t support Hive 0.12+ data types, that is, Char(), VarChar().
+- The maximum possible row size, which includes the full length of variable length columns, can't exceed 32 KB in SQL Server or 1 MB in Azure SQL Data Warehouse.
 
 - When data is exported into an ORC file format from SQL Server or SQL Data Warehouse, text-heavy columns might be limited. They can be limited to as few as 50 columns because of Java out-of-memory error messages. To work around this issue, export only a subset of the columns.
 
-- PolyBase can't read or write data encrypted at rest in Hadoop. This limitation includes HDFS encrypted zones or transparent encryption.
-
-- PolyBase can't connect to a Hortonworks instance if KNOX is enabled.
+- PolyBase can't connect to a Hortonworks instance if Knox is enabled.
 
 - If you use Hive tables with transactional = true, PolyBase can't access the data in the Hive table's directory.
 
@@ -74,10 +70,6 @@ PolyBase has the following limitations:
 - [PolyBase doesn't install when you add a node to a SQL Server 2016 failover cluster](https://support.microsoft.com/en-us/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster).
 
 ::: moniker-end
-
-- Integration authentication isn't supported. Only username and password are supported for now.  
-
-- Encryption is enabled by default.
 
 ## Next steps
 

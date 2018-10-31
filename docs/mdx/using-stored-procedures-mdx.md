@@ -13,7 +13,7 @@ manager: kfile
 # Using Stored Procedures (MDX)
 
 
-  You can extend the functionality of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] and Multidimensional Expressions (MDX) by writing .NET stored procedures or user-defined functions. For more information, see [ADOMD.NET Server Programming](../analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-programming.md)  
+  You can extend the functionality of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] and Multidimensional Expressions (MDX) by writing .NET stored procedures or user-defined functions. For more information, see [ADOMD.NET Server Programming](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-programming)  
   
  When you reference or call a stored procedure, you specify the function name followed by parentheses. Within the parentheses, you can specify expressions called arguments that provide the data to be passed into the parameters. When you call a function, you must supply argument values for all of the parameters, and you must specify the argument values in the same sequence in which the parameters are defined in the user-defined function.  
   

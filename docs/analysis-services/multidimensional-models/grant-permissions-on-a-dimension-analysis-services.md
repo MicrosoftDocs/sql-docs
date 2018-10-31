@@ -52,7 +52,7 @@ manager: kfile
      By default, permissions are inherited from a corresponding database dimension. Clear the **Inherit** check box to alter permissions from **Read** to **Read/Write**. Before using **Read/Write**, be sure to read the note in the previous section.  
   
 > [!IMPORTANT]  
->  If you configure database role permissions by using Analysis Management Objects (AMO), any reference to a cube dimension in a cube's DimensionPermission attribute severs the permission inheritance from the database's DimensionPermission attribute. For more information about AMO, see [Developing with Analysis Management Objects &#40;AMO&#41;](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md).  
+>  If you configure database role permissions by using Analysis Management Objects (AMO), any reference to a cube dimension in a cube's DimensionPermission attribute severs the permission inheritance from the database's DimensionPermission attribute. For more information about AMO, see [Developing with Analysis Management Objects &#40;AMO&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo).  
   
 ## See Also  
  [Roles and Permissions &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)   

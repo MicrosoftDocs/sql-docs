@@ -41,7 +41,18 @@ POWER ( float_expression , y )
  Is the power to which to raise *float_expression*. *y* can be an expression of the exact numeric or approximate numeric data type category, except for the **bit** data type.  
   
 ## Return Types  
- Returns the same type as submitted in *float_expression*. For example, if a **decimal**(2,0) is submitted as *float_expression*, the result returned is **decimal**(2,0).  
+ The return type depends on the input type of *float_expression*:
+ 
+|Input type|Return type|  
+|----------|-----------|  
+|**float**, **real**|**float**|
+|**decimal(*p*, *s*)**|**decimal(38, *s*)**|
+|**int**, **smallint**, **tinyint**|**int**|
+|**bigint**|**bigint**|
+|**money**, **smallmoney**|**money**|
+|**bit**, **char**, **nchar**, **varchar**, **nvarchar**|**float**|
+ 
+If the result does not fit in the return type, an arithmetic overflow error occurs.
   
 ## Examples  
   

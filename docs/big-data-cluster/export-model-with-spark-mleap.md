@@ -12,21 +12,24 @@ ms.date: 10/10/2018
 ---
 
 # Export models using Mleap
-A typical machine learning scenario involves model training on Spark and scoring outside of Spark. This requires models be exported in a portable format such that it can be used outside Spark. MLeap [here](https://github.com/combust/mleap) is one such model exchange format. It allows Spark machine learning pipelines and models to be exported as portable formats and used in any JVM based system with the Mleap runtime.
+A typical machine learning scenario involves model training on Spark and scoring outside of Spark. Export models in a portable format such that it can be used outside Spark. [MLeap](https://github.com/combust/mleap) is one such model exchange format. It allows Spark machine learning pipelines and models to be exported as portable formats and used in any JVM-based system with the `Mleap` runtime.
 
 This guide demonstrates how you can export your spark models using Mleap. The steps are summarized below and detailed with code in the following section.
 
 1. Start by creating a Spark model. For this use **Training and Creating machine learning model with Spark [here.](train-and-create-machinelearning-models-with-spark.md)**
 2. As a next step we'll **Import the training\test data and the Model**
-3. **Export the model as MLeap bundle**.This exported bundle can now be used to score outside spark.
-4. To validate, we'll import the mleap bundle back again and use that to score in Spark.
+3. **Export the model as `Mleap` bundle**. This exported bundle can now be used to score outside spark.
+4. To validate, we'll import the `Mleap` bundle back again and use that to score in Spark.
 
 ## Step 1 - Start by creating a Spark model
-Run this to **Training and Creating machine learning model with Spark [here.](train-and-create-machinelearning-models-with-spark.md)**  create training/test sets and model, and persist to HDFS storage. The model should be exported as AdultCensus.mml under the spark_ml directory.
+Run [Training and Creating machine learning model with Spark] (train-and-create-machinelearning-models-with-spark.md) to create training/test sets and model, and persist to HDFS storage. The model should be exported as `AdultCensus.mml` under the `spark_ml` directory.
 
 
 ## Step 2 - Import the training\test data and the Model
-Step 1 will create a AdultCensus.mml, which is a spark model. In this step we import the spark model. 
+
+Step 1 created the `AdultCensus.mml`, which is a spark model. 
+
+In this step, import the spark model.
 
 ```python
 import mleap.pyspark
@@ -43,16 +46,17 @@ print("Model stages", model.stages)
 ```
 
 
-## Step 3 - Export the model as Mleap bundle
+## Step 3 - Export the model as `Mleap` bundle
 
-Here we export the Spark model as a portable mleap model and persist it in local storage. Post this step, the model is available in a portable mleap format and can be used outside Spark.
+Export the Spark model as a portable `Mleap` model and persist it in local storage. Post this step, the model is available in a portable `Mleap` format and can be used outside Spark.
 
 ```python
 import os
 
-#get the train and test datasets
+#Get the train and test datasets
 
 # Write the train and test data sets to intermediate storage
+
 train_data_path = "/spark_ml/AdultCensusIncomeTrain"
 test_data_path = "/spark_ml/AdultCensusIncomeTest"
 
@@ -86,7 +90,7 @@ model.serializeToBundle(model_file_path, model.transform(train))
 
 ```
 
-Persist the mleap bundle from local to hdfs
+Persist the `Mleap` bundle from local to hdfs
 
 ```python
 print("persist the mleap bundle from local to hdfs")
@@ -97,8 +101,8 @@ if(s_err):
     print("Error when storing to HDFS")
 ```
 
-## Step 3 - Validate by Importing the MLeap bundle and Scoring in Spark
-In step 2, we have already exported the model to a portable mleap format that can be used outside Spark. In this step, We import the mleap serialized in Spark and use it in Spark to Score on the test set.
+## Step 3 - Validate by Importing the `Mleap` bundle and Scoring in Spark
+In step 2, we have already exported the model to a portable `Mleap` format that can be used outside Spark. In this step, We import the `Mleap` serialized in Spark and use it in Spark to Score on the test set.
    
 ```python
 model_deserialized = PipelineModel.deserializeFromBundle(model_file_path)
@@ -122,6 +126,6 @@ print("Area Under PR: {}".format(au_prc))
 ```
 
 ## References
-* For getting started with PySpark notebooks refer [here.](notebooks-guidance.md)
-* Training and Creating machine learning model with Spark [here.](train-and-create-machinelearning-models-with-spark.md)
 
+* [Getting started with PySpark notebooks](notebooks-guidance.md)
+* [Training and Creating machine learning model with Spark](train-and-create-machinelearning-models-with-spark.md)

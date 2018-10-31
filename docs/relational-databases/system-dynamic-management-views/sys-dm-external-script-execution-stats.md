@@ -17,9 +17,9 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_external_script_execution_stats dynamic management view"
 ms.assetid: 2e99f026-ceb2-42a2-a549-c71d31ed0cf4
-author: "jeannt"
-ms.author: "jeannt"
-manager: craigg
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlund
 ---
 # sys.dm_external_script_execution_stats
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

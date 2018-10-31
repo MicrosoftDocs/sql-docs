@@ -14,6 +14,58 @@ ms.reviewer: "martinle"
 See what’s new in the latest Appliance Updates for Microsoft® Analytics Platform System (APS). APS is a scale-out on-premises appliance that hosts MPP SQL Server Parallel Data Warehouse. 
 
 ::: moniker range=">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
+<a name="h2-aps-cu7.2"></a>
+## APS CU7.2
+Release date - October 2018
+
+### Support for TLS 1.2
+APS CU7.2 supports TLS 1.2. Client machine to APS and APS intra-node communication can now be set to communicate only over TLS1.2. Tools like SSDT, SSIS, and Dwloader installed on client machines that are set to communicate only over TLS 1.2 can now connect to APS using TLS 1.2. By default, APS will support all TLS (1.0, 1.1 and 1.2) versions for backward compatibility. If you wish to set your APS appliance to stictly use TLS 1.2, you can do so by changing registry settings. 
+
+See [configuring TLS1.2 on APS](configure-tls12-aps.md) for more information.
+
+### Hadoop encryption zone support for PolyBase
+PolyBase now can communicate to Hadoop encryption zones. See APS configuration changes that are needed in [configure Hadoop security](polybase-configure-hadoop-security.md#encryptionzone).
+
+### Insert-Select maxdop options
+We have added a [feature switch](appliance-feature-switch.md) that allows you to pick maxdop settings greater than 1 for insert-select operations. You can now set the maxdop setting to 0, 1, 2, or 4. The default is 1.
+
+> [!IMPORTANT]  
+> Increasing maxdop may sometimes result in slower operations or deadlock errors. If that occurs, change the setting back to maxdop 1 and retry the operation.
+
+### ColumnStore index health DMV
+You can view columnstore index health information using **dm_pdw_nodes_db_column_store_row_group_physical_stats** dmv. Use the following view to determine fragmentation and decide when to rebuild or reorganize a columnstore index.
+
+```sql
+create view dbo.vCS_rg_physical_stats
+as 
+with cte
+as
+(
+select   tb.[name]                    AS [logical_table_name]
+,        rg.[row_group_id]            AS [row_group_id]
+,        rg.[state]                   AS [state]
+,        rg.[state_desc]              AS [state_desc]
+,        rg.[total_rows]              AS [total_rows]
+,        rg.[trim_reason_desc]        AS trim_reason_desc
+,        mp.[physical_name]           AS physical_name
+FROM    sys.[schemas] sm
+JOIN    sys.[tables] tb               ON  sm.[schema_id]          = tb.[schema_id]                             
+JOIN    sys.[pdw_table_mappings] mp   ON  tb.[object_id]          = mp.[object_id]
+JOIN    sys.[pdw_nodes_tables] nt     ON  nt.[name]               = mp.[physical_name]
+JOIN    sys.[dm_pdw_nodes_db_column_store_row_group_physical_stats] rg      ON  rg.[object_id]     = nt.[object_id]
+                                                                            AND rg.[pdw_node_id]   = nt.[pdw_node_id]
+                                        AND rg.[pdw_node_id]    = nt.[pdw_node_id]                                          
+)
+select *
+from cte;
+```
+
+### PolyBase date range increase for ORC and Parquet files
+Reading, importing and exporting date data types using PolyBase now supports dates before 1970-01-01 and after 2038-01-20 for ORC and Parquet file types.
+
+### SSIS destination adapter for SQL Server 2017 as target
+New APS SSIS destination adapter that supports SQL Server 2017 as deployment target can be downloaded from [download site](https://www.microsoft.com/en-us/download/details.aspx?id=57472).
+
 <a name="h2-aps-cu7.1"></a>
 ## APS CU7.1
 Release date - July 2018

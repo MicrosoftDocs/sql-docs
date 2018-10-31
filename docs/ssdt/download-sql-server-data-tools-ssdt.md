@@ -44,6 +44,7 @@ The installer lists available Visual Studio instances to add the SSDT tools to. 
 > [!IMPORTANT]
 > - Before installing SSDT for Visual Studio 2017 (15.8.1), uninstall *Analysis Services Projects* and *Reporting Services Projects* extensions if they are already installed, and close all VS instances.
 > - When installing SSDT on Windows 10 1803 and choosing to install SSIS, you may meet an unexpected reboot. You can launch the installer again and continue the installation after the reboot.
+> - There's a known issue that deploying SSIS project which contains packages containing Script Task/Flat file destination to Azure-SSIS will result in the packages fail to execute in Azure-SSIS. There are two workarounds 1)deploy the project with SSMS 2)launch the deployment wizard by double clicking the ISDeploymentWizard.exe installed by SSDT and then deploy the project.
 
 
 

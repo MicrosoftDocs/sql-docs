@@ -47,7 +47,11 @@ For information about monitoring [!INCLUDE[ssNoVersion_md](../../includes/ssnove
 
 ## Settings and configuration
 
-You can retrieve the Machine Learning Services installation setting and configuration options by using the query below.
+You can get the Machine Learning Services installation setting and configuration options. 
+
+ ![Output from the settings and configuration query](media/dmv-settings-and-configuration.png "Output from the settings and configuration query")
+
+Run the query below to get this output.
 
 ```SQL
 SELECT CAST(SERVERPROPERTY('IsAdvancedAnalyticsInstalled') AS INT) AS IsMLServicesInstalled
@@ -78,7 +82,11 @@ The query returns the following columns:
 
 ## Active sessions
 
-To see the active sessions running external scripts, run the query below.
+View the active sessions running external scripts.
+
+ ![Output from the settings and configuration query](media/dmv-active-sessions.png "Output from the settings and configuration query")
+
+Run the query below to get this output.
 
 ```SQL
 SELECT r.session_id, r.blocking_session_id, r.status, DB_NAME(s.database_id) AS database_name

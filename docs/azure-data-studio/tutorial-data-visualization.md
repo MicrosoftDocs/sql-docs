@@ -16,7 +16,7 @@ Our template of AdventureWorksLT the OrderDate is the same on all orders.
    ![Unmodified Order Date](./media/tutorial-data-visualization/data-orderdate-sameday.png)
 
 We need to generate an OrderDate before the DueDate in this case we will generate a random date starting on 2008-01-01 until 150 days later.
-   ![Update Random Date](./media/tutorial-data-visualization/date-orderdate-random.png)
+   ![Set Generated Date To Order Date](./media/tutorial-data-visualization/data-orderdate-random.png)
 
 Now we will retrieve some data from our database as a sample and display it like we do in SSMS. From United States select only the states that sells less than $13,000.
    ![Grid Cost vs Tax](./media/tutorial-data-visualization/data-cost-vs-tax.png)

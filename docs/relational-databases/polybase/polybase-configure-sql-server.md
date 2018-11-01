@@ -74,7 +74,7 @@ These objects are created in this section:
      GO
      ```
 
-1.  Create external tables that represent data stored in an external SQL Server with [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md).
+1.  Create external tables that represent data stored in an external SQL Server instance with [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md).
  
      ```sql
      /*  LOCATION: sql server table/view in 'database_name.schema_name.object_name' format

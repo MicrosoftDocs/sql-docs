@@ -98,6 +98,17 @@ Limited support may be found at one of the following locations:
 
 **Applies to**: SQL Server 2019 CTP 2.1
 
+### Lightweight query profiling infrastructure
+
+**Issue and customer impact**: Executing the command `ALTER DATABASE SCOPED CONFIGURATION SET LIGHTWEIGHT_QUERY_PROFILING = ON` returns a syntax error. Any scenarios that depend on executing this command will fail.
+
+> [!NOTE]
+> Currently, the lightweight query profiling infrastructure (LWP) cannot be controlled at the individual database level, and remains enabled for all databases by default. For more information on LWP, see [What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md).
+
+**Workaround**: No workaround for [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTPs.
+
+**Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.1 and CTP 2.0.
+
 ### UTF-8 collations
 
 **Issue and customer impact**: UTF-8 enabled collations cannot be used with some other [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] features. UTF-8 is not supported when the following [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] features are in use:
@@ -109,7 +120,7 @@ Limited support may be found at one of the following locations:
 
   Also note there is currently no UI support to choose UTF-8 enabled collations in Azure Data Studio or SSDT. The latest SSMS version supports choice of UTF-8 enabled collations in the UI.
 
-**Workaround**: No workaround for [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.0.
+**Workaround**: No workaround for [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTPs.
 
 **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.1, CTP 2.0.
 
@@ -122,17 +133,6 @@ Limited support may be found at one of the following locations:
 **Issue and customer impact**: Tools that are dependent on DacFx like import-export, will not work for the new graph features - Edge Constraints or Merge DML. Scripting in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] may not work.
 
 **Workaround**: Writing [!INCLUDE[tsql](../includes/tsql-md.md)] scripts and running them against the server using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or SQLCMD will work. Exporting or Importing database objects that create Edge constraints, have the new merge DML syntax, or create derived tables/views on graph objects will not work. Users will have to manually create such objects in their database using [!INCLUDE[tsql](../includes/tsql-md.md)] scripts. 
-
-**Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.0.
-
-### Lightweight query profiling infrastructure
-
-**Issue and customer impact**: Executing the command `ALTER DATABASE SCOPED CONFIGURATION SET LIGHTWEIGHT_QUERY_PROFILING = ON` returns a syntax error. Any scenarios that depend on executing this command will fail.
-
-> [!NOTE]
-> Currently, the lightweight query profiling infrastructure (LWP) cannot be controlled at the individual database level, and remains enabled for all databases by default. For more information on LWP, see [What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md).
-
-**Workaround**: No workaround for [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.0.
 
 **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.0.
 

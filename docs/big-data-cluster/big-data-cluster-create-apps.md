@@ -115,7 +115,7 @@ If the deployment is not complete you will see the "state" show "Creating"
   }
 ]
 ```
-Once the deployment is successful you will see the "state" change to "Ready" status
+After the deployment is successful, you should see the `state` change to `Ready` status:
 
 ```
 [

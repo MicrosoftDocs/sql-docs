@@ -4,7 +4,7 @@ description: Deploy a Python or R script as an application on SQL Server 2019 bi
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 11/02/2018
+ms.date: 11/01/2018
 ms.topic: conceptual
 ms.prod: sql
 ---
@@ -29,13 +29,13 @@ The **mssqlctl-pre** command-line utility is provided to preview the Python and 
 ## Install the mssqlctl-pre utility:
 
    ```cmd
-   pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.0 mssqlctl-pre
+   pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.1
    ```
 
 ## Capabilities
 
 
-In CTP 2.1 you can create, delete, list, and run a R or Python application. The following table describes the application deployment commands that you can use with **mssqlctl-pre**.
+In CTP 2.1 you can create, delete, list, and run an R or Python application. The following table describes the application deployment commands that you can use with **mssqlctl-pre**.
 
 | Command | Description |
 |---|---|
@@ -47,7 +47,7 @@ In CTP 2.1 you can create, delete, list, and run a R or Python application. The 
 
 ## Log in
 
-Before configuring R and Python applications, first log into your SQL Server big data cluster with the `mssqlctl-pre login` command. Specify the IP address of the `service-proxy-lb` (for example: `https://<ip-address>:30777`) along with the user name and password to the cluster.
+Before configuring R and Python applications, first log into your SQL Server big data cluster with the `mssqlctl-pre login` command. Specify the IP address of the `service-proxy-lb` (for example: `https://ip-address:30777`) along with the user name and password to the cluster.
 
 You can get the IP address of the service-proxy-lb service by running this command in a bash or cmd window:
 ```bash 
@@ -115,7 +115,7 @@ If the deployment is not complete you will see the "state" show "Creating"
   }
 ]
 ```
-After the deployment is successful, you should see the `state` change to `Ready` status:
+Once the deployment is successful you will see the "state" change to "Ready" status
 
 ```
 [

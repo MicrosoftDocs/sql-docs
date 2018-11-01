@@ -1,39 +1,33 @@
 ---
 title: How to deploy an app on SQL Server big data cluster | Microsoft Docs
 description: Deploy a Python or R script as an application on SQL Server 2019 big data cluster (preview). 
-author: rothja 
-ms.author: jroth 
+author: TheBharath 
+ms.author: bharaths  
 manager: craigg
-ms.date: 11/01/2018
+ms.date: 11/02/2018
 ms.topic: conceptual
 ms.prod: sql
 ---
 
 # How to deploy an app on SQL Server 2019 big data cluster (preview)
 
-This article describes how to deploy and manage R and Python script as an applications inside a SQL Server 2019 Big Data Cluster (preview). 
+This article describes how to deploy and manage R and Python script as an applications inside a SQL Server 2019 Big Data Cluster (preview).
 
 R and Python applications are deployed and managed with the **mssqlctl-pre** command-line utility which is included in CTP 2.1. This article provides examples of how to deploy these R and Python scripts as apps from the command line.
 
-
-
 ## Prerequisites
 
--	You must have a SQL Server 2019 big data cluster configured. For more information, see [How to deploy SQL Server big data cluster on Kubernetes](deployment-guidance.md). 
-
+You must have a SQL Server 2019 big data cluster configured. For more information, see [How to deploy SQL Server big data cluster on Kubernetes](deployment-guidance.md). 
 
 ## Installation
 
-The **mssqlctl-pre** command-line utility is provided to preview the Python and R application deployment feature. 
+The **mssqlctl-pre** command-line utility is provided to preview the Python and R application deployment feature. Use the following comamnd to install the utility:
 
-## Install the mssqlctl-pre utility:
-
-   ```cmd
-   pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.1
-   ```
+```cmd
+pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctl-pre
+```
 
 ## Capabilities
-
 
 In CTP 2.1 you can create, delete, list, and run an R or Python application. The following table describes the application deployment commands that you can use with **mssqlctl-pre**.
 
@@ -44,6 +38,14 @@ In CTP 2.1 you can create, delete, list, and run an R or Python application. The
 | `mssqlctl-pre app list` | List deployed apps |
 | `mssqlctl-pre app delete` | Delete an app |
 | `mssqlctl-pre app run` | List running apps |
+
+You can get help with the `--help` parameter as in the following example:
+
+```bash
+mssqlctl-pre app create --help
+```
+
+The following sections describe these commands in more detail.
 
 ## Log in
 
@@ -56,22 +58,6 @@ kubectl get svc service-proxy-lb:30777 -n <name of your cluster>
 
 ```bash
 mssqlctl-pre login -e https://<ip-address-of-service-proxy-lb> -u <user-name> -p <password>
-```
-
-## Here is the list of commands that are supported in CTP 2.1
-
-App Creation: mssqlctl-pre app create
-
-Listing Apps deployed: mssqlctl-pre app list
-
-App Deletion: mssqlctl-pre app delete
-
-Running Apps: mssqlctl-pre app run
-
-You can get help for app create with the `--help` parameter:
-
-```bash
-mssqlctl-pre app create --help
 ```
 
 ## Create an app
@@ -99,12 +85,13 @@ To try this, save the above lines of code to your local directory as `add.py` an
 mssqlctl-pre app create --name add-app --version v1 --runtime Python --code ./add.py  --inputs x=int,y=int --outputs result=int 
 ```
 
-You can check if the app is deployed using the list command
+You can check if the app is deployed using the list command:
+
 ```bash
 mssqlctl-pre app list
 ```
 
-If the deployment is not complete you will see the "state" show "Creating" 
+If the deployment is not complete you should see the "state" show "Creating": 
 
 ```
 [
@@ -115,7 +102,8 @@ If the deployment is not complete you will see the "state" show "Creating"
   }
 ]
 ```
-Once the deployment is successful you will see the "state" change to "Ready" status
+
+After the deployment is successful you should see the "state" change to "Ready" status:
 
 ```
 [
@@ -148,7 +136,8 @@ The following example demonstrates this command:
 ```bash
 mssqlctl-pre app list --name add-app --version v1
 ```
-and you will see
+
+You should see output similar to the following example:
 
 ```
 [
@@ -174,7 +163,8 @@ The following example command demonstrates the run command:
 mssqlctl-pre app run --name add-app --version v1 --inputs x=1,y=2
 ```
 
-If the run was successful, you should see your output as specified when you created the app as follows
+If the run was successful, you should see your output as specified when you created the app. The following is an example.
+
 ```
 {
   "changedFiles": [],
@@ -198,6 +188,6 @@ mssqlctl-pre app delete --name add-app --version v1
 
 ## Next steps
 
-You can also check out additional samples at https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster 
+You can also check out additional samples at [https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster). 
 
 For more information about SQL Server big data clusters, see [What are SQL Server 2019 big data clusters?](big-data-cluster-overview.md).

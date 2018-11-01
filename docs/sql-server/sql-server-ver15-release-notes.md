@@ -68,25 +68,61 @@ Limited support may be found at one of the following locations:
 
 ### SQL Server Integration Services (SSIS) page deployment after switching DB to single-user mode and then switching back
 
-**Issue and customer impact**: After SSISB is switched from single-user mode back to multi-user mode, the following error may be reported when deploying a package:
+- **Issue and customer impact**: After SSISB is switched from single-user mode back to multi-user mode, the following error may be reported when deploying a package:
 
-`Cannot continue the execution because the session is in the kill state.`
+  `Cannot continue the execution because the session is in the kill state.`
 
-**Workaround**: Stop and restart the SQL Server instance and switch SSISDB back to multi-user mode. 
+- **Workaround**: Stop and restart the SQL Server instance and switch SSISDB back to multi-user mode. 
 
-**Applies to**: SQL Server 2019 preview CTP 2.1
+- **Applies to**: SQL Server 2019 preview CTP 2.1
 
 ### Hadoop components fail
 
-**Issue and customer impact**: Hadoop components fail with the following error:
+- **Issue and customer impact**: Hadoop components fail with the following error:
 
-`System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.WindowsAzure.Storage, Version=3.2.0.0, Culture=neutral, PublicKeyToken=<>' or one of its dependencies. The system cannot find the file specified.`
+  `System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.WindowsAzure.Storage, Version=3.2.0.0, Culture=neutral, PublicKeyToken=<>' or one of its dependencies. The system cannot find the file specified.`
 
-**Workaround**: N/A
+- **Workaround**: N/A
 
-**More information**:
+- **More information**:
 
-**Applies to**: SQL Server 2019 CTP 2.1
+- **Applies to**: SQL Server 2019 CTP 2.1
+
+### UDF Inlining 
+
+- **Issue and customer impact**: In some scenarios user-defined function inlining may allow unauthorized access to securables referenced in the `EXECUTE` string.
+  
+- **Workaround**: Not applicable
+
+- **More information**:
+
+- **Applies to**: SQL Server 2019 CTP 2.1
+
+### Lightweight query profiling infrastructure
+
+- **Issue and customer impact**: Executing the command `ALTER DATABASE SCOPED CONFIGURATION SET LIGHTWEIGHT_QUERY_PROFILING = ON` returns a syntax error. Any scenarios that depend on executing this command will fail.
+
+  > [!NOTE]
+  > Currently, the lightweight query profiling infrastructure (LWP) cannot be controlled at the individual database level, and remains enabled for all databases by default. For more information on LWP, see [What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md).
+
+- **Workaround**: No workaround for [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTPs.
+
+- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.1 and CTP 2.0.
+
+### UTF-8 collations
+
+- **Issue and customer impact**: UTF-8 enabled collations cannot be used with some other [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] features. UTF-8 is not supported when the following [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] features are in use:
+
+  - SQL Server Replication
+  - Linked Server
+  - In-memory OLTP
+  - External Table for Polybase
+
+    Also note there is currently no UI support to choose UTF-8 enabled collations in Azure Data Studio or SSDT. The latest SSMS version supports choice of UTF-8 enabled collations in the UI.
+
+- **Workaround**: No workaround for [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTPs.
+
+- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.1, CTP 2.0.
 
 ## CTP 2.0 (September 2018)
 
@@ -94,67 +130,42 @@ Limited support may be found at one of the following locations:
 
 ### SQL Graph
 
-**Issue and customer impact**: Tools that are dependent on DacFx like import-export, will not work for the new graph features - Edge Constraints or Merge DML. Scripting in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] may not work.
+- **Issue and customer impact**: Tools that are dependent on DacFx like import-export, will not work for the new graph features - Edge Constraints or Merge DML. Scripting in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] may not work.
 
-**Workaround**: Writing [!INCLUDE[tsql](../includes/tsql-md.md)] scripts and running them against the server using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or SQLCMD will work. Exporting or Importing database objects that create Edge constraints, have the new merge DML syntax, or create derived tables/views on graph objects will not work. Users will have to manually create such objects in their database using [!INCLUDE[tsql](../includes/tsql-md.md)] scripts. 
+- **Workaround**: Writing [!INCLUDE[tsql](../includes/tsql-md.md)] scripts and running them against the server using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or SQLCMD will work. Exporting or Importing database objects that create Edge constraints, have the new merge DML syntax, or create derived tables/views on graph objects will not work. Users will have to manually create such objects in their database using [!INCLUDE[tsql](../includes/tsql-md.md)] scripts. 
 
-**Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.0.
-
-### UTF-8 collations
-
-**Issue and customer impact**: UTF-8 enabled collations cannot be used with some other [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] features. UTF-8 is not supported when the following [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] features are in use:
-
-- SQL Server Replication
-- Linked Server
-- In-memory OLTP
-- External Table for Polybase
-
-  Also note there is currently no UI support to choose UTF-8 enabled collations in Azure Data Studio or SSDT. The latest SSMS version supports choice of UTF-8 enabled collations in the UI.
-
-**Workaround**: No workaround for [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.0.
-
-**Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.0.
-
-### Lightweight query profiling infrastructure
-
-**Issue and customer impact**: Executing the command `ALTER DATABASE SCOPED CONFIGURATION SET LIGHTWEIGHT_QUERY_PROFILING = ON` returns a syntax error. Any scenarios that depend on executing this command will fail.
-
-> [!NOTE]
-> Currently, the lightweight query profiling infrastructure (LWP) cannot be controlled at the individual database level, and remains enabled for all databases by default. For more information on LWP, see [What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md).
-
-**Workaround**: No workaround for [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.0.
-
-**Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.0.
+- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.0.
 
 ### Always Encrypted with secure enclaves
 
-**Issue and customer impact**: Rich computations are pending several performance optimizations, include limited functionality (no indexing, etc.), and are currently disabled by default.
+- **Issue and customer impact**: Rich computations are pending several performance optimizations, include limited functionality (no indexing, etc.), and are currently disabled by default.
 
-**Workaround**: To enable rich computations, run `DBCC traceon(127,-1)`. For details, see  [Enable rich computations](../relational-databases/security/encryption/configure-always-encrypted-enclaves.md#configure-a-secure-enclave).
+- **Workaround**: To enable rich computations, run `DBCC traceon(127,-1)`. For details, see  [Enable rich computations](../relational-databases/security/encryption/configure-always-encrypted-enclaves.md#configure-a-secure-enclave).
 
-**Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.0.
+- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.0.
 
 ### SQL Server Integration Services (SSIS) Transfer Database Task
 
-**Issue and customer impact**:  When a `Transfer Database Task` is configured to transfer a database in `Database Online` mode, it may fail with the following error:
+- **Issue and customer impact**:  When a `Transfer Database Task` is configured to transfer a database in `Database Online` mode, it may fail with the following error:
 
->The Execute method on the task returned error code 0x80131500 (An error occurred while transferring data. See the inner exception for details.). The Execute method must succeed, and indicate the result using an "out" parameter.
+  >The Execute method on the task returned error code 0x80131500 (An error occurred while transferring data. See the inner exception for details.). The Execute method must succeed, and indicate the result using an "out" parameter.
 
-**Workaround**: Execute `DBCC TRACEON (7416,-1)` on the server and try again.
+- **Workaround**: Execute `DBCC TRACEON (7416,-1)` on the server and try again.
 
 ### SQL Server Machine Learning Services installation failure
 
-**Issue/Customer impact**: SQL Server Machine Learning Services installation fails on machines that have trust relationship issues with the primary domain. The following error will be seen in the logs in this case:
- 
->  Error: 0 : System.SystemException:The trust relationship between this workstation and the primary domain failed at System.Security.Principal.NTAccount.TranslateToSids(IdentityReferenceCollection sourceAccounts, Boolean& someFailed) ...
+- **Issue/Customer impact**: SQL Server Machine Learning Services installation fails on machines that have trust relationship issues with the primary domain. The following error will be seen in the logs in this case:
 
-Verify in the logs located at:
+  `Error: 0 : System.SystemException:The trust relationship between this workstation and the primary domain failed at System.Security.Principal.NTAccount.TranslateToSids(IdentityReferenceCollection sourceAccounts, Boolean& someFailed) ...`
 
-* `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\R_SERVICES\library\RevoScaleR\rxLibs\x64\RegisterRExt.log`
-* `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages\revoscalepy\rxLibs\RegisterRExt.log`
-**Workaround**: Resolve the domain trust issues and retry the installation.
+  Verify in the logs located at:
 
-**Applies to**: SQL Server 2019 CTP 2.0.
+  `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\R_SERVICES\library\RevoScaleR\rxLibs\x64\RegisterRExt.log`
+
+  `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages\revoscalepy\rxLibs\RegisterRExt.log`
+- **Workaround**: Resolve the domain trust issues and retry the installation.
+
+- **Applies to**: SQL Server 2019 CTP 2.0.
 
 [!INCLUDE[get-help-options-msft-only](../includes/paragraph-content/get-help-options.md)]
 

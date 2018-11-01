@@ -208,7 +208,7 @@ To change these settings, use the following steps:
    sudo /opt/mssql/bin/mssql-conf set filelocation.masterlogfile /tmp/masterdatabasedir/mastlog.ldf
    ```
 
-   > [NOTE]
+   > [!NOTE]
    > In addition to moving the master data and log files, this also moves the default location for all other system databases.
 
 1. Stop the SQL Server service:
@@ -224,21 +224,18 @@ To change these settings, use the following steps:
    sudo mv /var/opt/mssql/data/mastlog.ldf /tmp/masterdatabasedir/mastlog.ldf
    ```
 
-> [!NOTE]
-> If SQL Server cannot find master.mdf and mastlog.ldf files in the specified directory, a templated copy of the system databases will be automatically created in the specified directory, and SQL Server will successfully start up. However, metadata such as user databases, server logins, server certificates, encryption keys, SQL agent jobs, or old SA login password will not be updated in the new master database. You will have to stop SQL Server and move your old master.mdf and mastlog.ldf to the new specified location and start SQL Server to continue using the existing metadata. 
-
 1. Start the SQL Server service:
 
    ```bash
    sudo systemctl start mssql-server
    ```
 
+   > [!NOTE]
+   > If SQL Server cannot find master.mdf and mastlog.ldf files in the specified directory, a templated copy of the system databases will be automatically created in the specified directory, and SQL Server will successfully start up. However, metadata such as user databases, server logins, server certificates, encryption keys, SQL agent jobs, or old SA login password will not be updated in the new master database. You will have to stop SQL Server and move your old master.mdf and mastlog.ldf to the new specified location and start SQL Server to continue using the existing metadata.
+ 
 ## <a id="masterdatabasename"></a> Change the name of master database files
 
 The **filelocation.masterdatafile** and **filelocation.masterlogfile** setting changes the location where the SQL Server engine looks for the master database files. You can also use this to change the name of the master database and log files. 
-
-> [IMPORTANT]
-> You can only change the name of the master database and log files after SQL Server has started successfully. Before the initial run, SQL Server expects the files to be named master.mdf and mastlog.ldf.
 
 To change these settings, use the following steps:
 
@@ -254,6 +251,9 @@ To change these settings, use the following steps:
    sudo /opt/mssql/bin/mssql-conf set filelocation.masterdatafile /var/opt/mssql/data/masternew.mdf
    sudo /opt/mssql/bin/mssql-conf set filelocation.mastlogfile /var/opt/mssql/data/mastlognew.ldf
    ```
+
+   > [!IMPORTANT]
+   > You can only change the name of the master database and log files after SQL Server has started successfully. Before the initial run, SQL Server expects the files to be named master.mdf and mastlog.ldf.
 
 1. Change the name of the master database data and log files 
 

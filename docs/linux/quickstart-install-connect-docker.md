@@ -4,7 +4,7 @@ description: This quickstart shows how to use Docker to run the SQL Server 2017 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/07/2018
+ms.date: 10/31/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -38,8 +38,9 @@ This image consists of SQL Server running on Linux based on Ubuntu 16.04. It can
 ## <a id="requirements"></a> Prerequisites
 
 - Docker Engine 1.8+ on any supported Linux distribution or Docker for Mac/Windows. For more information, see [Install Docker](https://docs.docker.com/engine/installation/).
-- Minimum of 2 GB of disk space
-- Minimum of 2 GB of RAM
+- Docker **overlay2** storage driver. This is the default for most users. If you find that you are not using this storage provider and need to change, please see the instructions and warnings in the [docker documentation for configuring overlay2](https://docs.docker.com/storage/storagedriver/overlayfs-driver/#configure-docker-with-the-overlay-or-overlay2-storage-driver).
+- Minimum of 2 GB of disk space.
+- Minimum of 2 GB of RAM.
 - [System requirements for SQL Server on Linux](sql-server-linux-setup.md#system).
 
 <!--The following H2 is versioned for 2017 and 2019. Much of the content is duplicated, so

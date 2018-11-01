@@ -15,34 +15,35 @@ monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-The article explains how to use PolyBase on a SQL Server instance to query external data in Teradata.
+This article explains how to use PolyBase on a SQL Server instance to query external data in Teradata.
 
 ## Prerequisites
 
 If you haven't installed PolyBase, see [PolyBase installation](polybase-installation.md). The installation article explains the prerequisites.
 
-To use PolyBase on Teradata, VC++ redistributable in needed.
+To use PolyBase on Teradata, VC++ redistributable is needed.
  
-## Configure an External Table
+## Configure an external table
 
 To query the data from a Teradata data source, you must create external tables to reference the external data. This section provides sample code to create these external tables. 
 
-These objects will create in this section:
+These objects are created in this section:
 
 - CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
 - CREATE EXTERNAL DATA SOURCE (Transact-SQL) 
 - CREATE EXTERNAL TABLE (Transact-SQL) 
 - CREATE STATISTICS (Transact-SQL)
 
-1. Create a master key on the database, if one does not already exist. This is required to encrypt the credential secret.
+1. Create a master key on the database, if one doesn't already exist. A master key is required to encrypt the credential secret.
 
      ```sql
       CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'password';  
      ```
-    ## Arguments
+    **Arguments**
+
     PASSWORD ='password'
 
-    Is the password that is used to encrypt the master key in the database. password must meet the Windows password policy requirements of the computer that is hosting the instance of SQL Server.
+    Is the password that's used to encrypt the master key in the database? The password must meet the Windows password policy requirements of the computer that hosts the instance of SQL Server.
 
 1. Create a database scoped credential.
  
@@ -72,7 +73,7 @@ These objects will create in this section:
 
      ```
 
-1.  Create external tables that represent data stored in external Teradata system [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md).
+1.  Create external tables that represent data stored in an external Teradata system with [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md).
  
      ```sql
      /*  LOCATION: Teradata table/view in '<database_name>.<object_name>' format
@@ -102,9 +103,9 @@ These objects will create in this section:
      );
      ```
 
-1. **Optional:** Create statistics on an external table.
+1. *Optional:* Create statistics on an external table.
 
-    We recommend creating statistics on external table columns, especially the ones used for joins, filters and aggregates, for optimal query performance.
+    For optimal query performance, create statistics on external table columns, especially the ones used for joins, filters, and aggregates.
 
      ```sql
       CREATE STATISTICS statistics_name ON customer (C_CUSTKEY) WITH FULLSCAN; 

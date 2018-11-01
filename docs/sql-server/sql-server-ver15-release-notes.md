@@ -64,6 +64,7 @@ Limited support may be found at one of the following locations:
     - [Linux - system requirements](../linux/sql-server-linux-setup.md#system)
   - **Software**
     - Windows Server 2016 or later. For additional requirements, see [Requirements for Installing SQL Server](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
+    - Microsoft .NET Framework 4.6.2. Available from [Download Center](http://www.microsoft.com/download/details.aspx?id=53344).
     - For Linux, refer to [Linux - supported platforms](../linux/sql-server-linux-setup.md#supportedplatforms)
 
 ### SQL Server Integration Services (SSIS) page deployment after switching DB to single-user mode and then switching back

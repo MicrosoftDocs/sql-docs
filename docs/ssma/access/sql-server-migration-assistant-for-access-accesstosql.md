@@ -27,6 +27,6 @@ This documentation introduces you to SSMA for Access and provides step-by-step i
 |[Migrating Access Databases to SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)|Provides an overview of the conversion process and detailed information about each step in the process.|  
 |[Linking Access Applications to SQL Server](linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md)|Describes how to use your existing Access applications with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[User Interface Reference](user-interface-reference-accesstosql.md)|Contains documentation for SSMA dialog boxes.|  
-|[Working with SSMA for Access Console](working-with-ssma-for-access-console-accesstosql.md)|Contain documentation on the SSMA Console application|  
+|[Working with SSMA for Access Console](working-with-ssma-for-access-console-accesstosql.md)|Contains documentation on the SSMA Console application|  
 |[Getting SSMA Assistance for Access](http://go.microsoft.com/fwlink/?LinkID=708538&clcid=0x409)|Provides information about getting additional assistance.|  
   

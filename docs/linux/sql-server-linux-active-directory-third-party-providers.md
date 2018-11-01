@@ -1,6 +1,6 @@
 ---
 title: Use third-party Active Directory providers with SQL Server on Linux | Microsoft Docs
-description: This tutorial provides the configuration steps for AD authentication with third-party providers
+description: This tutorial provides the configuration steps for Active Directory authentication with third-party providers
 author: dylan-MSFT
 ms.date: 07/25/2018
 ms.author: dygray 
@@ -16,11 +16,11 @@ helpviewer_keywords:
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-This article explains how to configure a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on a Linux host machine with Active Directory (AD) authentication when using third-party AD providers. Examples are [PowerBroker Identity Services (PBIS)](https://www.beyondtrust.com/), [One Identity](https://www.oneidentity.com/products/authentication-services/), and [Centrify](https://www.centrify.com/). This guide includes steps to check your AD configuration. It's not intended to instruct on how to join a machine to a domain. For detailed instructions on joining a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host to a domain by using realmd and SSSD, see [Use Active Directory authentication with SQL Server on Linux](sql-server-linux-active-directory-authentication.md).
+This article explains how to configure a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on a Linux host machine with Active Directory authentication when using third-party Active Directory providers. Examples are [PowerBroker Identity Services (PBIS)](https://www.beyondtrust.com/), [One Identity](https://www.oneidentity.com/products/authentication-services/), and [Centrify](https://www.centrify.com/). This guide includes steps to check your Active Directory configuration. It's not intended to instruct on how to join a machine to a domain. For detailed instructions on joining a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host to a domain by using realmd and SSSD, see [Use Active Directory authentication with SQL Server on Linux](sql-server-linux-active-directory-authentication.md).
 
 ## Prerequisites
 
-Before you configure AD authentication, you need to set up an AD domain controller, Windows, on your network. Then join your [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux host to an AD domain. You can use [PBIS](https://www.beyondtrust.com/), [VAS](https://www.oneidentity.com/products/authentication-services/), or [Centrify](https://www.centrify.com/).
+Before you configure Active Directory authentication, you need to set up an Active Directory domain controller, Windows, on your network. Then join your [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux host to an Active Directory domain. You can use [PBIS](https://www.beyondtrust.com/), [VAS](https://www.oneidentity.com/products/authentication-services/), or [Centrify](https://www.centrify.com/).
 
 > [!NOTE]
 >
@@ -40,7 +40,7 @@ If either of these name checks fail, update your domain search list:
 
 - **Ubuntu**
 
-  Edit the `/etc/network/interfaces` file, so that your AD domain is in the domain search list: 
+  Edit the `/etc/network/interfaces` file, so that your Active Directory domain is in the domain search list: 
 
   ```/etc/network/interfaces
   <...>
@@ -69,7 +69,7 @@ If either of these name checks fail, update your domain search list:
 
 - **RHEL**
 
-  Edit the `/etc/sysconfig/network-scripts/ifcfg-eth0` file, so that your AD domain is in the domain search list. Or edit  another interface config file as appropriate:
+  Edit the `/etc/sysconfig/network-scripts/ifcfg-eth0` file, so that your Active Directory domain is in the domain search list. Or edit  another interface config file as appropriate:
 
   ```/etc/sysconfig/network-scripts/ifcfg-eth0
   <...>
@@ -99,7 +99,7 @@ If either of these name checks fail, update your domain search list:
 
 - **SLES**
 
-  Edit the `/etc/sysconfig/network/config` file, so that your AD domain controller IP is used for DNS queries, and your AD domain is in the domain search list:
+  Edit the `/etc/sysconfig/network/config` file, so that your Active Directory domain controller IP is used for DNS queries, and your Active Directory domain is in the domain search list:
 
   ```/etc/sysconfig/network/config
   <...>
@@ -133,7 +133,7 @@ If this command doesn't return your host's FQDN, or if the FQDN is incorrect, ad
 
 ## Check that your KRB5 configuration is correct
 
-Check that your `/etc/krb5.conf` is configured correctly. For most third-party AD providers, this configuration is done automatically. However, check `/etc/krb5.conf` for the following values to prevent any future issues:
+Check that your `/etc/krb5.conf` is configured correctly. For most third-party Active Directory providers, this configuration is done automatically. However, check `/etc/krb5.conf` for the following values to prevent any future issues:
 
 ```/etc/krb5.conf
 [libdefaults]
@@ -150,11 +150,11 @@ contoso.com = CONTOSO.COM
 
 ## Next steps
 
-This article covers how to configure a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on a Linux host machine with AD Authentication when using third-party AD providers. To finish configuring [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux to support AD accounts, follow the instructions at [Use Active Directory authentication with SQL Server on Linux](sql-server-linux-active-directory-authentication.md).
+This article covers how to configure a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on a Linux host machine with Active Directory Authentication when using third-party Active Directory providers. To finish configuring [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux to support Active Directory accounts, follow the instructions at [Use Active Directory authentication with SQL Server on Linux](sql-server-linux-active-directory-authentication.md).
 
 > [!div class="nextstepaction"]
 > [Use Active Directory authentication with SQL Server on Linux](sql-server-linux-active-directory-authentication.md)
 
 > [!NOTE]
 >
-> You can skip the **Join SQL Server host to AD domain** section in [Use Active Directory authentication with SQL Server on Linux](sql-server-linux-active-directory-authentication.md) as you've just done that in this tutorial.
+> You can skip the **Join SQL Server host to Active Directory domain** section in [Use Active Directory authentication with SQL Server on Linux](sql-server-linux-active-directory-authentication.md) as you've just done that in this tutorial.

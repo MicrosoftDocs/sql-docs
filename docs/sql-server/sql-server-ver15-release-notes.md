@@ -88,6 +88,16 @@ Limited support may be found at one of the following locations:
 
 **Applies to**: SQL Server 2019 CTP 2.1
 
+### UDF Inlining 
+
+**Issue and customer impact**: In some scenarios user-defined function inlining may allow unauthorized access to securables referenced in the `EXECUTE` string.
+  
+**Workaround**: Not applicable
+
+**More information**:
+
+**Applies to**: SQL Server 2019 CTP 2.1
+
 ## CTP 2.0 (September 2018)
 
 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.0 is the first public release of [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)].

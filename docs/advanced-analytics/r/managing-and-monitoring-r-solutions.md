@@ -83,6 +83,18 @@ If you subsequently determine that external library functions are necessary and 
 > [!NOTE]
 > For R packages, server admin rights are not specifically required for package installation if you use alternative methods. See [Install R packages in SQL Server](install-additional-r-packages-on-sql-server.md) for details.
 
+## Monitoring script execution
+
+R and Python scripts that run in [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] are started by the [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] interface. However, the Launchpad is not resource governed or monitored separately, as it is a secure service provided by Microsoft that manages resources appropriately.
+
+External scripts that run under the Launchpad service are managed using the [Windows job object](/windows/desktop/ProcThread/job-objects). A job object allows groups of processes to be managed as a unit. Each job object is hierarchical and controls the attributes of all processes associated with it. Operations performed on a job object affect all processes associated with the job object.
+
+Thus, if you need to terminate one job associated with an object, be aware that all related processes will also be terminated. If you are running an R script that is assigned to a Windows job object and that script runs a related ODBC job which must be terminated, the parent R script process will be terminated as well.
+
+If you start an external script that uses parallel processing, a single Windows job object manages all  parallel child processes.
+
+To determine if a process is running in a job, use the `IsProcessInJob` function.
+
 ## Next steps
 
 + Review the concepts and components of the [extensibility architecture](../concepts/extensibility-framework.md) and [security](../concepts/security.md) for more background.

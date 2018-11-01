@@ -22,9 +22,9 @@ Download and install the latest release, the *October Release*:
 
 |Platform|Download|Release date| Version |
 |:---|:---|:---|:---|
-|Windows|[Installer](https://go.microsoft.com/fwlink/?linkid=2030731)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2030736)|October 18, 2018 |1.1.3|
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2030738)|October 18, 2018 |1.1.3|
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2030750)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2030746)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2030741)|October 18, 2018 |1.1.3|
+|Windows|[Installer](https://go.microsoft.com/fwlink/?linkid=2030731)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2030736)|October 30, 2018 |1.1.4|
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2030738)|October 30, 2018 |1.1.4|
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2030750)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2030746)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2030741)|October 30, 2018 |1.1.4|
 
 For details about the latest release, see the [release notes](release-notes.md).
 
@@ -139,6 +139,15 @@ If you installed [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] with 
 - Red Hat Enterprise Linux 7.3
 - SUSE Linux Enterprise Server v12 SP2
 - Ubuntu 16.04
+
+## Recommended System Requirements
+For an optimal experience, please use the recommended system requirements.
+
+|             | CPU Cores | Memory/RAM |
+|:-----------:|:---------:|:----------:|
+| Recommended |     4     |      8     |
+|   Minimum   |     2     |      4     |
+|             |           |            |
 
 ## Check for updates
 To check for latest updates, click the gear icon on the bottom left of the window and click **Check for Updates**

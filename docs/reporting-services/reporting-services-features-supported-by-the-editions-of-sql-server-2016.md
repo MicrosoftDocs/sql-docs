@@ -1,6 +1,6 @@
 ---
 title: "Reporting Services Features Supported by the Editions of SQL Server | Microsoft Docs"
-ms.date: 10/26/2018
+ms.date: 11/01/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.technology: reporting-services
@@ -30,39 +30,46 @@ For features supported by Evaluation and Developer editions, see the SQL Server 
 
 ##  <a name="SSRS"></a> Reporting Services  
   
-|Feature Name|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|Developer|  
-|------------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
-|Mobile reports and KPIs|Yes||||||Yes|  
-|Supported catalog DB [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] edition|Standard or higher|Standard or higher|Web|Express|||Standard or higher|  
-|Supported data source [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] edition|All   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] editions|All [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] editions|Web|Express|||All [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] editions|  
-|Report server|Yes|Yes|Yes|Yes|||Yes|  
-|Report designer|Yes|Yes|Yes|Yes|||Yes|  
-|Report designer web portal|Yes|Yes|Yes|Yes|||Yes|  
-|Role based security|Yes|Yes|Yes|Yes|||Yes|  
-|Export to  Excel, PowerPoint, Word, PDF, and images|Yes|Yes|Yes|Yes|||Yes|  
-|Enhanced gauges and charting|Yes|Yes|Yes|Yes|||Yes|  
-|Pin report items to [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]dashboards|Yes|Yes|Yes|Yes|||Yes|  
-|Custom authentication|Yes|Yes|Yes|Yes|||Yes|  
-|Report as data feeds|Yes|Yes|Yes|Yes|||Yes|  
-|Model support|Yes|Yes|Yes||||Yes|  
-|Create custom roles for role-based security|Yes|Yes|||||Yes|  
-|Model Item security|Yes|Yes|||||Yes|  
-|Infinite click through|Yes|Yes|||||Yes|  
-|Shared component library|Yes|Yes|||||Yes|  
-|Email and file share subscriptions and scheduling|Yes|Yes|||||Yes|  
-|Report history, execution snapshots and caching|Yes|Yes|||||Yes|  
-|SharePoint Integration|Yes|Yes|||||Yes|  
-|Remote and non-SQL data source support<sup>1</sup>|Yes|Yes|||||Yes|  
-|Data source, delivery and rendering, RDCE extensibility|Yes|Yes|||||Yes|  
-|Custom branding|Yes||||||Yes|  
-|Data driven report subscription|Yes||||||Yes|  
-|Scale out deployment (Web farms)|Yes||||||Yes|  
-|Alerting<sup>2</sup> (SSRS 2016) |Yes||||||Yes|  
-| Power View<sup>2</sup> (SSRS 2016) |Yes||||||Yes|  
+|Feature Name|Enterprise|Standard|Web|Express with Advanced Services|Developer|  
+|------------------|---------|------------------------------------|------------------------|-------------|---------------|  
+|Mobile reports and KPIs|Yes||||Yes|  
+|Supported catalog DB [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] edition|Standard or higher|Standard or higher|Web|Express|Standard or higher|  
+|Supported data source [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] edition|All   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] editions|All [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] editions|Web|Express|All [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] editions|  
+|Report server|Yes|Yes|Yes|Yes|Yes|  
+|Report designer|Yes|Yes|Yes|Yes|Yes|  
+|Report designer web portal|Yes|Yes|Yes|Yes|Yes|  
+|Role based security|Yes|Yes|Yes|Yes|Yes|  
+|Export to  Excel, PowerPoint, Word, PDF, and images|Yes|Yes|Yes|Yes|Yes|  
+|Enhanced gauges and charting|Yes|Yes|Yes|Yes|Yes|  
+|Pin report items to [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]dashboards|Yes|Yes|Yes|Yes|Yes|  
+|Custom authentication|Yes|Yes|Yes|Yes|Yes|  
+|Report as data feeds|Yes|Yes|Yes|Yes|Yes|  
+|Model support|Yes|Yes|Yes||Yes|  
+|Create custom roles for role-based security|Yes|Yes|||Yes|  
+|Model Item security|Yes|Yes|||Yes|  
+|Infinite click through|Yes|Yes|||Yes|  
+|Shared component library|Yes|Yes|||Yes|  
+|Email and file share subscriptions and scheduling|Yes|Yes|||Yes|  
+|Report history, execution snapshots and caching|Yes|Yes|||Yes|  
+|SharePoint Integration|Yes|Yes|||Yes|  
+|Remote and non-SQL data source support<sup>1</sup>|Yes|Yes|||Yes|  
+|Data source, delivery and rendering, RDCE extensibility|Yes|Yes|||Yes|  
+|Custom branding|Yes||||Yes|  
+|Data driven report subscription|Yes||||Yes|  
+|Scale out deployment (Web farms)|Yes||||Yes|  
+|Alerting<sup>2</sup> (SSRS 2016) |Yes||||Yes|  
+| Power View<sup>2</sup> (SSRS 2016) |Yes||||Yes| 
+|Comments<sup>3</sup> |Yes|Yes|Yes|Yes|Yes|  
+ 
   
  <sup>1</sup> For more information on supported data sources in SQL Server Reporting Services (SSRS), see [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
- <sup>2</sup> Requires Reporting Services 2016 in SharePoint mode. For more information, see [Install Reporting Services SharePoint Mode](../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md). Starting in Reporting Services 2017, Reporting Services integration with SharePoint is no longer available. The [Report Viewer web part on a SharePoint site](report-server-sharepoint/report-viewer-web-part-sharepoint-site.md) is the alternative in Reporting Services 2017 and later. 
+ <sup>2</sup> Requires Reporting Services 2016 in SharePoint mode. For more information, see [Install Reporting Services SharePoint Mode](../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md). Starting in Reporting Services 2017, Reporting Services integration with SharePoint is no longer available. 
+
+<sup>3</sup> Only in Power BI Report Server and Reporting Services 2017 and later.
+
+> [!NOTE]
+> SQL Server Express with Tools and SQL Server Express don't support SQL Server Reporting Services.
   
 ## Report Server Database Server Edition Requirements  
  When creating a report server database, not all editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] can be used to host the database. The following table shows you which editions of the [!INCLUDE[ssDE](../includes/ssde-md.md)] you can use for specific editions of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
@@ -78,11 +85,11 @@ For features supported by Evaluation and Developer editions, see the SQL Server 
 ##  <a name="BIC"></a> Business Intelligence Clients  
  The following software client applications are available on the Microsoft Download center and are provided to assist you with creating business intelligence documents that run on a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance. When you host these documents in a server environment, use an edition of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that supports that document type. The following table identifies which [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] edition contains the server features required to host the documents created in these client applications.  
   
-|Tool Name|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|Developer|  
-|---------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
-|[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] (.rdl and .rds)|Yes|Yes|||||Yes|  
-|[!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] (.rsmobile)|Yes||||||Yes|  
-|Power BI apps for mobile devices (iOS, Windows 10, Android) (.rsmobile)|Yes||||||Yes|  
+|Tool Name|Enterprise|Standard|Web|Express with Advanced Services|Developer|  
+|---------------|----------------|--------------|------------------------|-------------|---------------|  
+|[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] (.rdl and .rds)|Yes|Yes|Yes|Yes|Yes|  
+|[!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] (.rsmobile)|Yes||||Yes|  
+|Power BI apps for mobile devices (iOS, Windows 10, Android) (.rsmobile)|Yes||||Yes|  
   
 > [!NOTE]  
 > 1.  The above table identifies the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] editions that are required to enable these client tools; however these tools can access data hosted on any edition of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

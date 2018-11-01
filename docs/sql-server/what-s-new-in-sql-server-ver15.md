@@ -397,9 +397,7 @@ FROM sys.dm_exec_requests AS d
 
 ## Other services
 
-### (CTP 2.0)
-
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.0 does not introduce new features for the following services:
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] does not introduce new features for the following services:
 
 - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Analysis Services (SSAS)
 - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS)

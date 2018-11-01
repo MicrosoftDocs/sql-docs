@@ -24,6 +24,8 @@
     href: tutorial-build-custom-insight-sql-server.md
   - name: Backup and restore
     href: tutorial-backup-restore-sql-server.md
+  - name: Data Visualization
+    href: tutorial-data-visualization.md
 - name: How-to guides
   items:
   - name: Dashboards & insight widgets

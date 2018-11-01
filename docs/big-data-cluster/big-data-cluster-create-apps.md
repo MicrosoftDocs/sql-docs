@@ -66,7 +66,7 @@ Listing Apps deployed: mssqlctl-pre app list
 
 App Deletion: mssqlctl-pre app delete
 
-Runnnig Apps: mssqlctl-pre app run
+Running Apps: mssqlctl-pre app run
 
 You can get help for app create with the `--help` parameter:
 
@@ -198,6 +198,6 @@ mssqlctl-pre app delete --name add-app --version v1
 
 ## Next steps
 
-You can also check out addtional samples at https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster 
+You can also check out additional samples at https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster 
 
 For more information about SQL Server big data clusters, see [What are SQL Server 2019 big data clusters?](big-data-cluster-overview.md).

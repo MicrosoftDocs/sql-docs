@@ -62,7 +62,7 @@ class direxec {
    HSTMT hstmt;   // Statement Handle  
    SQLHDESC hdesc;   // Descriptor handle  
    unsigned char szData[MAX_DATA];   // Returned Data Storage  
-   SDWORD cbData;   // Output Lenght of data  
+   SDWORD cbData;   // Output Length of data  
    unsigned char char_ds_name[SQL_MAX_DSN_LENGTH];   // Data Source Name  
   
    SQL_DATE_STRUCT date;   // date structure  

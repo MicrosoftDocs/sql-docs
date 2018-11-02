@@ -79,7 +79,7 @@ featureFlags:
                                     <div class="card">
                                         <div class="cardImageOuter">
                                             <div class="cardImage">
-                                                <img src="media/sql-education-center/quickstart.svg" alt="" data-linktype="external">
+                                                <img src="media/sql-education-center/sql-iaas-quickstart.svg" alt="" data-linktype="external">
                                             </div>
                                         </div>
                                         <div class="cardText">
@@ -97,7 +97,7 @@ featureFlags:
                                     <div class="card">
                                         <div class="cardImageOuter">
                                             <div class="cardImage">
-                                                <img src="media/sql-education-center/quickstart.svg" alt="" data-linktype="external">
+                                                <img src="media/sql-education-center/ads-quickstart.svg" alt="" data-linktype="external">
                                             </div>
                                         </div>
                                         <div class="cardText">
@@ -109,17 +109,17 @@ featureFlags:
                             </a>
                         </li>
                         <li>
-                            <a href="/sql/azure-data-studio/quickstart-sql-server" data-linktype="external">
+                            <a href="/sql/linux/quickstart-install-connect-red-hat" data-linktype="external">
                             <div class="cardSize">
                                 <div class="cardPadding">
                                     <div class="card">
                                         <div class="cardImageOuter">
                                             <div class="cardImage">
-                                                <img src="media/sql-education-center/quickstart.svg" alt="" data-linktype="external">
+                                                <img src="media/sql-education-center/linux-quickstart.svg" alt="" data-linktype="external">
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <p>Running SQL Server on Linux </p> 
+                                            <p>Running SQL Server on Linux</p> 
                                         </div>
                                     </div>
                                 </div>
@@ -565,7 +565,7 @@ featureFlags:
                                     <div class="card">
                                         <div class="cardImageOuter">
                                             <div class="cardImage">
-                                                <img src="media/sql-education-center/mva.svg" alt="" data-linktype="external">
+                                                <img src="media/sql-education-center/msftlearn.svg" alt="" data-linktype="external">
                                             </div>
                                         </div>
                                         <div class="cardText">
@@ -637,7 +637,7 @@ featureFlags:
                                     <div class="card">
                                         <div class="cardImageOuter">
                                             <div class="cardImage">
-                                                <img src="media/sql-education-center/mva.svg" alt="" data-linktype="external">
+                                                <img src="media/sql-education-center/plusral.svg" alt="" data-linktype="external">
                                             </div>
                                         </div>
                                         <div class="cardText">

@@ -559,7 +559,7 @@ featureFlags:
         <h2>Additional Resources</h2>
 		 <ul class="cardsF panelContent singlePanelContent" style="display:flex!important;">
                         <li>
-                            <a href="https://docs.microsoft.com/en-us/learn/" data-linktype="external">
+                            <a href="https://docs.microsoft.com/learn/" data-linktype="external">
                             <div class="cardSize">
                                 <div class="cardPadding">
                                     <div class="card">

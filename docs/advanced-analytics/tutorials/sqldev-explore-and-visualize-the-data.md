@@ -85,7 +85,7 @@ To create the plot, use [rxHistogram](https://docs.microsoft.com/machine-learnin
     GO
     ```
 
-Key points to understand in this script include the folloiwng: 
+Key points to understand in this script include the following: 
   
 + The variable `@query` defines the query text (`'SELECT tipped FROM nyctaxi_sample'`), which is passed to the R script as the argument to the script input variable, `@input_data_1`. For R scripts that run as external processes, you should have a one-to-one mapping between inputs to your script, and inputs to the [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) system stored procedure that starts the R session on SQL Server.
   

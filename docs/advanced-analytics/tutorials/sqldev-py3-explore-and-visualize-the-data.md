@@ -168,7 +168,7 @@ The stored procedure returns a serialized Python `figure` object as a stream of 
     import pyodbc
     import pickle
     import os
-    cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER={SERVER_NAME};DATABASE={DB_NAME};Trusted_Connection=yes;')
+    cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER={SERVER_NAME};DATABASE={DB_NAME};Trusted_Connection=True;')
     cursor = cnxn.cursor()
     cursor.execute("EXECUTE [dbo].[PyPlotMatplotlib]")
     tables = cursor.fetchall()

@@ -10,7 +10,7 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-# Lesson 4: Predict potential outcomes using an R model in a stored procedure
+# Lesson 4: Run predictions using R embedded in a stored procedure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This article is part of a tutorial for SQL developers on how to use R in SQL Server.

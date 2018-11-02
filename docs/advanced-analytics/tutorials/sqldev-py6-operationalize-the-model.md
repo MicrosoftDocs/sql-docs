@@ -1,5 +1,6 @@
 ---
-title: Operationalize the Python model using SQL Server | Microsoft Docs
+title: Predict potential outcomes using Python models (SQL Server Machine Learning) | Microsoft Docs
+description: Tutorial showing how to operationalize embedded PYthon script in SQL Server stored procedures with T-SQL functions 
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -9,7 +10,7 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-# Operationalize the Python model using SQL Server
+# Run predictions using Python embedded in a stored procedure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This article is part of a tutorial, [In-database Python analytics for SQL developers](sqldev-in-database-python-for-sql-developers.md). 
@@ -25,13 +26,6 @@ This lesson demonstrates two methods for creating predictions based on a Python 
 
 All the Python code needed for scoring is provided as part of the stored procedures.
 
-| Stored procedure name | Batch or single | Model source|
-|----|----|----|
-|PredictTipRxPy|batch| revoscalepy model|
-|PredictTipSciKitPy|batch |scikit-learn model|
-|PredictTipSingleModeRxPy|single row| revoscalepy model|
-|PredictTipSingleModeSciKitPy|single row| scikit-learn model|
-
 ## Batch scoring
 
 The first two stored procedures illustrate the basic syntax for wrapping a Python prediction call in a stored procedure. Both stored procedures require a table of data as inputs.
@@ -45,9 +39,7 @@ The first two stored procedures illustrate the basic syntax for wrapping a Pytho
 
 ### PredictTipSciKitPy
 
-The stored procedure should have already been created for you. If you can't find it, run the following T-SQL statements to create the stored procedures.
-
-This stored procedure requires a model based on the scikit-learn package, because it uses functions specific to that package:
+Rrun the following T-SQL statements to create the stored procedures. This stored procedure requires a model based on the scikit-learn package, because it uses functions specific to that package:
 
 + The data frame containing inputs is passed to the `predict_proba` function of the logistic regression model, `mod`. The `predict_proba` function (`probArray = mod.predict_proba(X)`) returns a **float** that represents the probability that a tip (of any amount) will be given.
 
@@ -93,8 +85,6 @@ GO
 
 This stored procedure uses the same inputs and creates the same type of scores as the previous stored procedure, but uses functions from the **revoscalepy** package provided with SQL Server machine learning.
 
-> [!NOTE] 
-> The code for this stored procedure has changed slightly between early release versions and the RTM version, to reflect changes to the revoscalepy package. See the [Changes](#changes) table for details.
 
 ```SQL
 CREATE PROCEDURE [dbo].[PredictTipRxPy] (@model varchar(50), @inquery nvarchar(max))
@@ -337,19 +327,6 @@ v*trip_time_in_secs*
     ```
 
 The output from both procedures is a probability of a tip being paid for the taxi trip with the specified parameters or features.
-
-### <a name="changes"></a> Changes
-
-This section lists changes to the code used in this tutorial. These changes were made to reflect the latest **revoscalepy** version. For API help, see [Python function library reference](https://docs.microsoft.com/machine-learning-server/python-reference/introducing-python-package-reference).
-
-| Change details | Notes|
-| ----|----|
-| deleted `import pandas` in all samples| pandas now loaded by default|
-| function `rx_predict_ex` changed to `rx_predict`| RTM and pre-release versions require `rx_predict_ex`|
-| function `rx_logit_ex` changed to `rx_logit`| RTM and pre-release versions require `rx_logit_ex`|
-| ` probList.append(probArray._results["tipped_Pred"])` changed to `prob_list = prob_array["tipped_Pred"].values`| updates to API|
-
-If you installed Python Services using a prerelease version of SQL Server 2017, we recommend that you upgrade. You can also upgrade just the Python and R components by using the latest release of Machine Learning Server. For more information, see [Using binding to upgrade an instance of SQL Server](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
 
 ## Conclusions
 

@@ -59,4 +59,4 @@ This tutorial assumes familiarity with basic database operations such as creatin
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Set up the NYC Taxi database](demo-data-nyctaxi-in-sql.md)
+> [Explore and visualize the data using Python](sqldev-py3-explore-and-visualize-the-data.md)

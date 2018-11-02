@@ -17,20 +17,16 @@ This article is part of a tutorial, [In-database Python analytics for SQL develo
 In this step, you learn how to train a machine learning model using the Python packages **scikit-learn** and **revoscalepy**. These Python libraries are already installed with SQL Server Machine Learning Services.
 
 You load the modules and call the necessary functions to create and train the model using a SQL Server stored procedure. The model requires the data features you engineered in earlier lessons. Finally, you save the trained model to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table.
-
-> [!IMPORTANT]
-> There have been several changes in the **revoscalepy** package, which required small changes in the code for this tutorial. See the [changelist](sqldev-py6-operationalize-the-model.md#changes) at the end of this tutorial. 
-> 
-> If you installed Python Services using a prerelease version of SLq Server 2017, we recommend that you upgrade to the latest version. 
+ 
 
 ## Split the sample data into training and testing sets
 
-1. You can use the stored procedure **TrainTestSplit** to divide the data in the nyctaxi\_sample table into two parts: nyctaxi\_sample\_training and nyctaxi\_sample\_testing. 
+1. Create a stored procedure called **PyTrainTestSplit** to divide the data in the nyctaxi_sample table into two parts: nyctaxi_sample_training and nyctaxi_sample_testing. 
 
     This stored procedure should already be created for you, but you can run the following code to create it:
 
     ```SQL
-    CREATE PROCEDURE [dbo].[TrainTestSplit] (@pct int)
+    CREATE PROCEDURE [dbo].[PyTrainTestSplit] (@pct int)
     AS
     
     DROP TABLE IF EXISTS dbo.nyctaxi_sample_training
@@ -45,7 +41,7 @@ You load the modules and call the necessary functions to create and train the mo
 2. To divide your data using a custom split, run the stored procedure, and type an integer that represents the percentage of data allocated to the training set. For example, the following statement would allocate 60% of data to the training set.
 
     ```SQL
-    EXEC TrainTestSplit 60
+    EXEC PyTrainTestSplit 60
     GO
     ```
 
@@ -53,8 +49,8 @@ You load the modules and call the necessary functions to create and train the mo
 
 After the data has been prepared, you can use it to train a model. You do this by calling a stored procedure that runs some Python code, taking as input the training data table. For this tutorial, you create two models, both binary classification models:
 
-+ The stored procedure **TrainTipPredictionModelRxPy** creates a tip prediction model using the **revoscalepy** package.
 + The stored procedure **PyTrainScikit** creates a tip prediction model using the **scikit-learn** package.
++ The stored procedure **TrainTipPredictionModelRxPy** creates a tip prediction model using the **revoscalepy** package.
 
 Each stored procedure uses the input data you provide to create and train a logistic regression model. All Python code is wrapped in the system stored procedure, [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
@@ -106,7 +102,7 @@ To make it easier to retrain the model on new data, you wrap the call to sp_exec
     ```SQL
     DECLARE @model VARBINARY(MAX);
     EXEC PyTrainScikit @model OUTPUT;
-    INSERT INTO nyc_taxi_models (name, model) VALUES('SciKit_model', @model);
+    INSERT INTO nyc_taxi_models (model) VALUES(@model);
     ```
 
     Processing of the data and fitting the model might take a couple of mins. Messages that would be piped to Python's **stdout** stream are displayed in the **Messages** window of [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. For example:

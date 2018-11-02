@@ -59,11 +59,10 @@ The following table summarizes the objects created in the NYC Taxi demo database
 
 Stored procedures are created using R and Python script found in various tutorials. The following table summarizes the stored procedures that you can optionally add to the NYC Taxi demo database when you run script from various lessons.
 
-|**Stored procedure name**|**Language**|**Description**|
+|**Stored procedure**|**Language**|**Description**|
 |-------------------------|------------|---------------|
 |**RxPlotHistogram** |R | Calls the RevoScaleR rxHistogram function to plot the histogram of a variable and then returns the plot as a binary object. This stored procedure is used in [Explore and visualize data](sqldev-explore-and-visualize-the-data.md).|
 |**RPlotRHist** |R| Creates a graphic using the Hist function and saves the output as a local PDF file. This stored procedure is used in [Explore and visualize data](sqldev-explore-and-visualize-the-data.md).|
-
 |**RxTrainLogitModel**  |R| Trains a logistic regression model by calling an R package. The model predicts the value of the  tipped column, and is trained using a randomly selected 70% of the data. The output of the stored procedure is the trained model, which is saved in the table nyc_taxi_models. This stored procedure is used in [Train and save a model](sqldev-train-and-save-a-model-using-t-sql.md).|
 |**RxPredictBatchOutput**  |R | Calls the trained model to create predictions using the model. The stored procedure accepts a query as its input parameter and returns a column of numeric values containing the scores for the input rows. This stored procedure is used in [Predict potential outcomes](sqldev-operationalize-the-model.md).|
 |**RxPredictSingleRow**  |R| Calls the trained model to create predictions using the model. This stored procedure accepts a new observation as input, with individual feature values passed as in-line parameters, and returns a value that predicts the outcome for the new observation. This stored procedure is used in [Predict potential outcomes](sqldev-operationalize-the-model.md).|
@@ -94,7 +93,7 @@ The database contains 1.7 million rows.
     ````
 Results should be similar to those showing in the following screenshot.
 
-  ![Table summary information](../media/nyctaxidatatablesummary.png "Query results")
+  ![Table summary information](media/nyctaxidatatablesummary.png "Query results")
 
 ## Next steps
 

@@ -386,7 +386,6 @@ FROM sys.dm_exec_requests AS d
   - And explore your Azure resources with a built-in subscription and resource browser.
   - Supports scenarios using SQL Server Big Data Cluster.
 
-
 - [**SQL Server Management Studio (SSMS) 18.0 (preview)**](../ssms/sql-server-management-studio-ssms.md)
 
   - Support for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
@@ -397,9 +396,7 @@ FROM sys.dm_exec_requests AS d
 
 ## Other services
 
-### (CTP 2.0)
-
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.0 does not introduce new features for the following services:
+As of CTP 2.1, [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] does not introduce new features for the following services:
 
 - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Analysis Services (SSAS)
 - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS)

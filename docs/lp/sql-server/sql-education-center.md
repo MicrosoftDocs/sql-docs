@@ -637,7 +637,7 @@ featureFlags:
                                     <div class="card">
                                         <div class="cardImageOuter">
                                             <div class="cardImage">
-                                                <img src="media/sql-education-center/plusral.svg" alt="" data-linktype="external">
+                                                <img src="media/sql-education-center/plural.svg" alt="" data-linktype="external">
                                             </div>
                                         </div>
                                         <div class="cardText">

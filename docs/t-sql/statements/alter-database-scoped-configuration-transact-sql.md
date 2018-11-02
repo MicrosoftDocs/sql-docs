@@ -222,7 +222,7 @@ Allows you to enable or disable Adaptive joins at the database or statement scop
 
 ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}
 
-***Applies to**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] and [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] as a public preview feature
+**Applies to**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] and [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] as a public preview feature
 
 Allows you to enable or disable Row mode memory grant feedback at the database or statement scope while still maintaining database compatibility level 150 and higher. Row mode memory grant feedback a feature that is part of [Adaptive query processing](../../relational-databases/performance/adaptive-query-processing.md) introduced in SQL Server 2019.
 

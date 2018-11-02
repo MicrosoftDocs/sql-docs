@@ -3,7 +3,7 @@ title: Train and save a Python model using T-SQL | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
+ms.date: 11/01/2018  
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
@@ -54,49 +54,49 @@ You load the modules and call the necessary functions to create and train the mo
 After the data has been prepared, you can use it to train a model. You do this by calling a stored procedure that runs some Python code, taking as input the training data table. For this tutorial, you create two models, both binary classification models:
 
 + The stored procedure **TrainTipPredictionModelRxPy** creates a tip prediction model using the **revoscalepy** package.
-+ The stored procedure **TrainTipPredictionModelSciKitPy** creates a tip prediction model using the **scikit-learn** package.
++ The stored procedure **PyTrainScikit** creates a tip prediction model using the **scikit-learn** package.
 
 Each stored procedure uses the input data you provide to create and train a logistic regression model. All Python code is wrapped in the system stored procedure, [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
 To make it easier to retrain the model on new data, you wrap the call to sp_execute_exernal_script in another stored procedure, and pass in the new training data as a parameter. This section will walk you through that process.
 
-### TrainTipPredictionModelSciKitPy
+### PyTrainScikit
 
-1.  In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], open a new **Query** window and run the following statement to create the stored procedure _TrainTipPredictionModelSciKitPy_.  The stored procedure contains a definition of the input data, so you don't need to provide an input query.
+1.  In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], open a new **Query** window and run the following statement to create the stored procedure **PyTrainScikit**.  The stored procedure contains a definition of the input data, so you don't need to provide an input query.
 
     ```SQL
-    DROP PROCEDURE IF EXISTS TrainTipPredictionModelSciKitPy;
+    DROP PROCEDURE IF EXISTS PyTrainScikit;
     GO
 
-    CREATE PROCEDURE [dbo].[TrainTipPredictionModelSciKitPy] (@trained_model varbinary(max) OUTPUT)
+    CREATE PROCEDURE [dbo].[PyTrainScikit] (@trained_model varbinary(max) OUTPUT)
     AS
     BEGIN
-      EXEC sp_execute_external_script
+    EXEC sp_execute_external_script
       @language = N'Python',
       @script = N'
-      import numpy
-      import pickle
-      from sklearn.linear_model import LogisticRegression
-      
-      ##Create SciKit-Learn logistic regression model
-      X = InputDataSet[["passenger_count", "trip_distance", "trip_time_in_secs", "direct_distance"]]
-      y = numpy.ravel(InputDataSet[["tipped"]])
-      
-      SKLalgo = LogisticRegression()
-      logitObj = SKLalgo.fit(X, y)
-      
-      ##Serialize model
-      trained_model = pickle.dumps(logitObj)
-      ',
-      @input_data_1 = N'
-      select tipped, fare_amount, passenger_count, trip_time_in_secs, trip_distance, 
-      dbo.fnCalculateDistance(pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude) as direct_distance
-      from nyctaxi_sample_training
-      ',
-      @input_data_1_name = N'InputDataSet',
-      @params = N'@trained_model varbinary(max) OUTPUT',
-      @trained_model = @trained_model OUTPUT;
-      ;
+    import numpy
+    import pickle
+    from sklearn.linear_model import LogisticRegression
+    
+    ##Create SciKit-Learn logistic regression model
+    X = InputDataSet[["passenger_count", "trip_distance", "trip_time_in_secs", "direct_distance"]]
+    y = numpy.ravel(InputDataSet[["tipped"]])
+    
+    SKLalgo = LogisticRegression()
+    logitObj = SKLalgo.fit(X, y)
+    
+    ##Serialize model
+    trained_model = pickle.dumps(logitObj)
+    ',
+    @input_data_1 = N'
+    select tipped, fare_amount, passenger_count, trip_time_in_secs, trip_distance, 
+    dbo.fnCalculateDistance(pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude) as direct_distance
+    from nyctaxi_sample_training
+    ',
+    @input_data_1_name = N'InputDataSet',
+    @params = N'@trained_model varbinary(max) OUTPUT',
+    @trained_model = @trained_model OUTPUT;
+    ;
     END;
     GO
     ```
@@ -105,7 +105,7 @@ To make it easier to retrain the model on new data, you wrap the call to sp_exec
 
     ```SQL
     DECLARE @model VARBINARY(MAX);
-    EXEC TrainTipPredictionModelSciKitPy @model OUTPUT;
+    EXEC PyTrainScikit @model OUTPUT;
     INSERT INTO nyc_taxi_models (name, model) VALUES('SciKit_model', @model);
     ```
 
@@ -166,7 +166,7 @@ By using **revoscalepy**, you can create remote compute contexts, move data betw
     - The binary variable _tipped_ is used as the *label* or outcome column, and the model is fit using these feature columns:  _passenger_count_, _trip_distance_, _trip_time_in_secs_, and _direct_distance_.
     - The trained model is serialized and stored in the Python variable `logitObj`. By adding the T-SQL keyword OUTPUT, you can add the variable as an output of the stored procedure. In the next step, that variable is used to insert the binary code of the model into a database table _nyc_taxi_models_. This mechanism makes it easy to store and re-use models.
 
-2. Run the stored procedure as follows to insert the trained **revoscalepy** model into the table _nyc\_taxi\_models.
+2. Run the stored procedure as follows to insert the trained **revoscalepy** model into the table *nyc_taxi_models*.
 
     ```SQL
     DECLARE @model VARBINARY(MAX);

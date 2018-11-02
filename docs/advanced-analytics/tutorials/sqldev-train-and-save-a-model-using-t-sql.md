@@ -4,7 +4,7 @@ description: Tutorial showing how to embed R in SQL Server stored procedures and
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 06/07/2018  
+ms.date: 10/29/2018  
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
@@ -19,12 +19,14 @@ In this lesson, you'll learn how to train a machine learning model by using R. Y
 
 ## Create the stored procedure
 
-When calling R from T-SQL, you use the system stored procedure, [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). However, for processes that you repeat often, such as retraining a model, it is easier to encapsulate the call to  `sp_execute_exernal_script` in another stored procedure.
+When calling R from T-SQL, you use the system stored procedure, [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). However, for processes that you repeat often, such as retraining a model, it is easier to encapsulate the call to  sp_execute_exernal_script in another stored procedure.
 
-1.  First, create a stored procedure that contains the R code to build the tip prediction model. In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], open a new **Query** window and run the following statement to create the stored procedure _TrainTipPredictionModel_. This stored procedure defines the input data and uses an R package to create a logistic regression model.
+1. In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], open a new **Query** window.
+
+2. Run the following statement to create the stored procedure **RxTrainLogitModel**. This stored procedure defines the input data and uses **rxLogit** from RevoScaleR to create a logistic regression model.
 
     ```SQL
-    CREATE PROCEDURE [dbo].[TrainTipPredictionModel]
+    CREATE PROCEDURE [dbo].[RxTrainLogitModel]
     
     AS
     BEGIN
@@ -55,17 +57,15 @@ When calling R from T-SQL, you use the system stored procedure, [sp_execute_exte
     GO
     ```
 
-    - However, to ensure that some data is left over to test the model, 70% of the data are randomly selected from the taxi data table.
-    
-    - The SELECT query uses the custom scalar function _fnCalculateDistance_ to calculate the direct distance between the pick-up and drop-off locations.  the results of the query are stored in the default R input variable, `InputDataset`.
+    -To ensure that some data is left over to test the model, 70% of the data are randomly selected from the taxi data table for training purposes.
+
+    - The SELECT query uses the custom scalar function *fnCalculateDistance* to calculate the direct distance between the pick-up and drop-off locations. The results of the query are stored in the default R input variable, `InputDataset`.
   
-    - The R script calls the `rxLogit` function, which is one of the enhanced R functions included with [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], to create the logistic regression model.
+    - The R script calls the **rxLogit** function, which is one of the enhanced R functions included with [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], to create the logistic regression model.
   
         The binary variable _tipped_ is used as the *label* or outcome column,  and the model is fit using these feature columns:  _passenger_count_, _trip_distance_, _trip_time_in_secs_, and _direct_distance_.
   
     -   The trained model, saved in the R variable `logitObj`, is serialized and put in a data frame for output to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. That output is inserted into the database table _nyc_taxi_models_, so that you can use it for future predictions.
-  
-2.  Run the statement to create the stored procedure, if it doesn't already exist.
 
 ## Generate the R model using the stored procedure
 
@@ -74,7 +74,7 @@ Because the stored procedure already includes a definition of the input data, yo
 1. To generate the R model, call the stored procedure without any other parameters:
 
     ```SQL
-    EXEC TrainTipPredictionModel
+    EXEC RxTrainLogitModel
     ```
 
 2. Watch the **Messages** window of [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] for messages that would be piped to R's **stdout** stream, like this message: 
@@ -93,11 +93,11 @@ Because the stored procedure already includes a definition of the input data, yo
     0x580A00000002000302020....
     ```
 
-In the next step you'll use the trained model to create predictions.
+In the next step you'll use the trained model to generate predictions.
 
 ## Next lesson
 
-[Lesson 4: Operationalize the model](../tutorials/sqldev-operationalize-the-model.md)
+[Lesson 4: Predict potential outcomes using an R model in a stored procedure](../tutorials/sqldev-operationalize-the-model.md)
 
 ## Previous lesson
 

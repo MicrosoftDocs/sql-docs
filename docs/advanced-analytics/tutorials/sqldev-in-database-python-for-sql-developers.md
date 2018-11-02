@@ -1,21 +1,24 @@
 ---
 title: In-database Python analytics for SQL developers | Microsoft Docs
+description: Learn how to embed Python code in SQL Server stored procedures and T-SQL functions.
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
+ms.date: 10/29/2018  
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-# In-Database Python analytics for SQL developers
+# Tutorial: In-Database Python analytics for SQL developers
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-The goal of this walkthrough is to provide SQL programmers with hands-on experience building a machine learning solution using Python that runs in SQL Server. In this walkthrough, you'll learn how to add Python code to stored procedures and run stored procedures to build and predict from models.
+In this tutorial for SQL programmers, you gain hands-on experience using the Python language to build and deploy a machine learning solution by wrapping Python code in stored procedures.
+
+This tutorial uses a subset of a well-known public dataset, based on trips in New York City taxis. To make the sample code run quicker, we created a representative 1% sampling of the data. You'll use this data to build a binary classification model that predicts whether a particular trip is likely to get a tip or not, based on columns such as the time of day, distance, and pick-up location.
 
 > [!NOTE]
-> Prefer R? See [this tutorial](sqldev-in-database-r-for-sql-developers.md), which provides a similar solution but uses R, and can be run in either SQL Server 2016 or SQL Server 2017.
+> This tutorial is available in both R and Python. For the R version, see [In-database analytics for R developers](sqldev-in-database-r-for-sql-developers.md).
 
 ## Overview
 
@@ -26,79 +29,34 @@ The process of building a machine learning solution is a complex one that can in
 + training and tuning the model
 + deployment to production
 
-**The focus of this walkthrough is on building and deploying a solution using SQL Server.**
+Development and testing of the actual code is best performed using a dedicated development environment. However, after the script is fully tested, you can easily deploy it to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedures in the familiar environment of [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
 
-The data is from the well-known NYC Taxi data set. To make this walkthrough quick and easy, the data is sampled. You'll create a binary classification model that predicts whether a particular trip is likely to get a tip or not, based on columns such as the time of day, distance, and pick-up location.
+Whether you are a SQL programmer new to Python, or a Python developer new to SQL, this multi-part tutorial introduces a typical workflow for conducting in-database analytics with Python and SQL Server. 
 
-All tasks can be done using [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedures in the familiar environment of [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]
++ [Lesson 1: Explore and visualize the data using Python](sqldev-py3-explore-and-visualize-the-data.md)
+
++ [Lesson 2: Create data features using using custom SQL functions](sqldev-py4-create-data-features-using-t-sql.md)
+
++ [Lesson 3: Train and save a Python model using T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+
++ [Lesson 4: Predict potential outcomes using a Python model in a stored procedure](sqldev-py6-operationalize-the-model.md)
+
+After the model has been saved to the database, call the model for predictions from [!INCLUDE[tsql](../../includes/tsql-md.md)] by using stored procedures.
+
+## Prerequisites
+
+All tasks can be done using [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedures in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
+
+This tutorial assumes familiarity with basic database operations such as creating databases and tables, importing data, and writing SQL queries. It does not assume you know Python. As such, all Python code is provided. 
+
++ [SQL Server 2017 Machine Learning Services with Python](../install/sql-machine-learning-services-windows-install.md#verify-installation)
+
++ [Permissions](../security/user-permission.md)
+
++ [NYC Taxi demo database](demo-data-nyctaxi-in-sql.md)
 
 
-- [Explore and visualize the data using Python](sqldev-py3-explore-and-visualize-the-data.md)
+## Next steps
 
-    Perform basic data exploration and visualization, by calling Python from [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedures.
-
-- [Create data features using Python in T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
-
-    Create new data features using custom SQL functions.
-  
-- [Train and save a Python model using T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
-
-    Build and save the machine learning model, using Python in stored procedures.
-  
-    This walkthrough demonstrates how to perform a binary classification task; you could also use the data to build models for regression or multiclass classification.
-
-  
--  [ Operationalize the Python model](sqldev-py6-operationalize-the-model.md)
-
-    After the model has been saved to the database, call the model for prediction using [!INCLUDE[tsql](../../includes/tsql-md.md)].
-
-## Requirements
-
-### Prerequisites
-
-+ Install an instance of SQL Server 2017 with Machine Learning Services and Python enabled. For more information, see [Install SQL Server 2017 Machine Learning Services (In-Database)](../install/sql-machine-learning-services-windows-install.md).
-+ The login that you use for this walkthrough must have permissions to create databases and other objects, to upload data, select data, and run stored procedures.
-
-### Experience level
-
-You should be familiar with fundamental database operations, such as creating databases and tables, importing data into tables, and creating SQL queries.
-
-An experienced SQL programmer should be able to complete this walkthrough by using [!INCLUDE[tsql](../../includes/tsql-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or by running the provided PowerShell scripts.
-
-Python: Basic knowledge is useful but not required. All Python code is provided.
-
-Some knowledge of PowerShell is helpful.
-
-### Tools
-
-For this tutorial, we're assuming that you've reached the deployment phase. You have been given clean data, complete T-SQL code for feature engineering, and working Python code. Therefore, you can complete this tutorial using SQL Server Management Studio, or any other tool that supports running SQL statements.
-
-+ [Overview of SQL Server tools](https://docs.microsoft.com/sql/tools/overview-sql-tools) 
-
-If you want to develop and test your own Python code, or debug a Python solution, we recommend using a dedicated development environment:
-
-+ **Visual Studio 2017** supports both R and [Python](https://blogs.msdn.microsoft.com/visualstudio/2017/05/12/a-lap-around-python-in-visual-studio-2017/). We recommend the [Data Science workload](https://blogs.msdn.microsoft.com/visualstudio/2016/11/18/data-science-workloads-in-visual-studio-2017-rc/), which also supports R and F#.
-+ If you have an earlier version of Visual Studio, [Python Extensions for Visual Studio](https://docs.microsoft.com/visualstudio/python/python-in-visual-studio) makes it easy to manage multiple Python environments.
-+ PyCharm is a popular IDE among Python developers.
-
-    > [!NOTE]
-    > In general, avoid writing or testing new Python code in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. If the code that you embed in a stored procedure has any problems, the information that is returned from the stored procedure is usually inadequate to understand the cause of the error.
-
-Use the following resources to help you plan and execute a successful machine learning project:
-
-+ [Team Data Science Process](https://docs.microsoft.com/azure/machine-learning/team-data-science-process/overview)
-
-### Estimated time required
-
-|Step| Time (hrs)|
-|----|----|
-|Download the sample data| 0:15|
-|Import data to SQL Server using PowerShell|0:15|
-|Explore and visualize the data|0:20|
-|Create data features using T-SQL|0:30|
-|Train and save a Model using T-SQL|0:15|
-|Operationalize the model|0:40|
-
-## Get started
-
-  [Step 1: Download the sample data](demo-data-nyctaxi-in-sql.md)
+> [!div class="nextstepaction"]
+> [Set up the NYC Taxi database](demo-data-nyctaxi-in-sql.md)

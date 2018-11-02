@@ -51,7 +51,7 @@ Installation takes some time to complete. You can monitor progress in the PowerS
 
 ## 2 - Locate executables
 
-Still in PowerShell, navigate to the installation folder to confirm the location of the Python.exe, scripts, and other packages. 
+Still in PowerShell, list the contents of the installation folder to confirm that Python.exe, scripts, and other packages are installed. 
 
 1. Enter `cd \` to go to the root drive, and then enter the path you specified for `-InstallFolder` in the previous step. If you omitted this parameter during installation, the default is `cd C:\Program Files\Microsoft\PyForMLS`.
 
@@ -70,7 +70,7 @@ On systems having multiple versions of Python, remember to use this particular P
 
 Anaconda includes Jupyter Notebooks. As a next step, create a notebook and run some Python code containing the libraries you just installed.
 
-1. At the Powershell prompt, navigate to the scripts folder to open Jupyter Notebooks:
+1. At the Powershell prompt, still in the C:\Program Files\Microsoft\PyForMLS directory, open Jupyter Notebooks from the Scripts folder:
 
    ```powershell
    .\Scripts\jupyter-notebook

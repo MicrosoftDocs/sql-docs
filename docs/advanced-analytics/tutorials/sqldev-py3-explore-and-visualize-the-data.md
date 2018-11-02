@@ -1,9 +1,10 @@
 ---
-title: Explore and visualize the data | Microsoft Docs
+title: Lesson 1 Explore and visualize data using Python and T-SQL (SQL Server Machine Learning) | Microsoft Docs
+description: Tutorial showing how to embed Python in SQL Server stored procedures and T-SQL functions 
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
+ms.date: 11/01/2018  
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
@@ -63,18 +64,16 @@ In this section, you learn how to work with plots using stored procedures. Rathe
 
 ### Create a plot as varbinary data
 
-The **revoscalepy** module included with SQL Server 2017 Machine Learning Services supports features similar to those in the **RevoScaleR** package for R.  This example uses the Python equivalent of `rxHistogram` to plot a histogram based on data from a [!INCLUDE[tsql](../../includes/tsql-md.md)] query. 
-
 The stored procedure returns a serialized Python `figure` object as a stream of **varbinary** data. You cannot view the binary data directly, but you can use Python code on the client to deserialize and view the figures, and then save the image file on a client computer.
 
-1. Create the stored procedure _SerializePlots_, if the PowerShell script did not already do so.
+1. Create the stored procedure **PyPlotMatplotlib**, if the PowerShell script did not already do so.
 
     - The variable `@query` defines the query text `SELECT tipped FROM nyctaxi_sample`, which is passed to the Python code block as the argument to the script input variable, `@input_data_1`.
     - The Python script is fairly simple: **matplotlib** `figure` objects are used to make the histogram and scatter plot, and these objects are then serialized using the `pickle` library.
     - The Python graphics object is serialized to a **pandas** DataFrame for output.
   
     ```SQL
-	CREATE PROCEDURE [dbo].[SerializePlots]
+	CREATE PROCEDURE [dbo].[PyPlotMatplotlib]
 	AS
 	BEGIN
       SET NOCOUNT ON;
@@ -129,7 +128,7 @@ The stored procedure returns a serialized Python `figure` object as a stream of 
 2. Now run the stored procedure with no arguments to generate a plot from the data hard-coded as the input query.
 
     ```
-    EXEC [dbo].[SerializePlots]
+    EXEC [dbo].[PyPlotMatplotlib]
     ```
 
 3. The results should be something like this:
@@ -155,7 +154,7 @@ The stored procedure returns a serialized Python `figure` object as a stream of 
     import os
     cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER={SERVER_NAME};DATABASE={DB_NAME};UID={USER_NAME};PWD={PASSWORD}')
     cursor = cnxn.cursor()
-    cursor.execute("EXECUTE [dbo].[SerializePlots]")
+    cursor.execute("EXECUTE [dbo].[PyPlotMatplotlib]")
     tables = cursor.fetchall()
     for i in range(0, len(tables)):
         fig = pickle.loads(tables[i][0])
@@ -171,7 +170,7 @@ The stored procedure returns a serialized Python `figure` object as a stream of 
     import os
     cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER={SERVER_NAME};DATABASE={DB_NAME};Trusted_Connection=yes;')
     cursor = cnxn.cursor()
-    cursor.execute("EXECUTE [dbo].[SerializePlots]")
+    cursor.execute("EXECUTE [dbo].[PyPlotMatplotlib]")
     tables = cursor.fetchall()
     for i in range(0, len(tables)):
         fig = pickle.loads(tables[i][0])

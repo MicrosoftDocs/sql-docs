@@ -140,6 +140,15 @@ If you installed [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] with 
 - SUSE Linux Enterprise Server v12 SP2
 - Ubuntu 16.04
 
+## Recommended System Requirements
+For an optimal experience, please use the recommended system requirements.
+
+|             | CPU Cores | Memory/RAM |
+|:-----------:|:---------:|:----------:|
+| Recommended |     4     |      8     |
+|   Minimum   |     2     |      4     |
+|             |           |            |
+
 ## Check for updates
 To check for latest updates, click the gear icon on the bottom left of the window and click **Check for Updates**
 

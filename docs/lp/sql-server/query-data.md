@@ -78,25 +78,6 @@ featureFlags:
                         <a class="singlePanelNavItem selected" href="#products1" data-linktype="self-bookmark"></a>
                         <ul class="cardsD panelContent singlePanelContent" id="products1" style="margin-top: 0px; display: flex;">
                             <li>
-                                <a href="/sql/relational-databases/cursors/">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="media/query-data/cursors.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Cursors</h3>
-                                                    <p> Allows for the processing of a result set one row at a time </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
                                 <a href="/sql/relational-databases/search/full-text-search/">
                                     <div class="cardSize">
                                         <div class="cardPadding">

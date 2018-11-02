@@ -873,10 +873,10 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 |Parameter and values|Description| 
 |---------------|-----------------|  
 |/FEATURES=SQLEngine|Installs the [!INCLUDE[ssDE](../../includes/ssde-md.md)] without replication and full-text.|  
-|/FEATURES=SQLEngine, FullText|Installs the [!INCLUDE[ssDE](../../includes/ssde-md.md)] and full-text.|  
-|/FEATURES=SQL, Tools|Installs the complete [!INCLUDE[ssDE](../../includes/ssde-md.md)] and all tools.|  
+|/FEATURES=SQLEngine,FullText|Installs the [!INCLUDE[ssDE](../../includes/ssde-md.md)] and full-text.|  
+|/FEATURES=SQL,Tools|Installs the complete [!INCLUDE[ssDE](../../includes/ssde-md.md)] and all tools.|  
 |/FEATURES=BOL|Installs SQL Server Books Online components to view and manage help content.|  
-|/FEATURES=SQLEngine, PolyBase|Installs the PolyBase engine.|  
+|/FEATURES=SQLEngine,PolyBase|Installs the PolyBase engine.|  
   
 ##  <a name="RoleParameters"></a> Role Parameters  
  The setup role or /Role parameter is used to install a preconfigured selection of features. The SSAS roles install an SSAS instance in either an existing SharePoint farm, or a new un-configured farm. Two setup roles are provided to support each scenario. You can only choose one setup role to install at a time. If you choose a setup role, Setup installs the features and components that belong to the role. You cannot vary the features and components that are designated for that role. For more information about how to use the feature role parameter, see [Install Power Pivot from the Command Prompt](http://msdn.microsoft.com/7f1f2b28-c9f5-49ad-934b-02f2fa6b9328). 

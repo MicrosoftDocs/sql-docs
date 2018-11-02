@@ -26,7 +26,7 @@ The Data Migration Assistant (DMA) helps you upgrade to a modern data platform b
 ## Capabilities
 - Assess on-premises SQL Server instance(s) migrating to Azure SQL database(s). The assessment workflow helps you to detect the following issues that can affect Azure SQL database migration and provides detailed guidance on how to resolve them.
 
-  - Migration blocking issues: Discovers the compatibility issues that block migrating on-premises SQL Server database(s)s to Azure SQL Database(s). DMA provides recommendations to help you address those issues.
+  - Migration blocking issues: Discovers the compatibility issues that block migrating on-premises SQL Server database(s) to Azure SQL Database(s). DMA provides recommendations to help you address those issues.
 
   - Partially supported or unsupported features: Detects partially supported or unsupported features that are currently in use on the source SQL Server instance. DMA provides a comprehensive set of recommendations, alternative approaches available in Azure, and mitigating steps so that you can incorporate them into your migration projects.
 

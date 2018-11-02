@@ -28,13 +28,14 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 Community technology preview (CTP) 2.1 is the latest public release of [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]. The following features are added or enhanced for [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] CTP 2.1.
 
 - [Big Data Clusters](#bigdatacluster)
-  - Deploy Python and R apps.
+  - Deploy Python and R apps
 - [Database Engine](#databaseengine)
-  - Intelligent query processing adds scalar UDF inlining 
-  - Improve truncation message for ETL DW scenarios
+  - Intelligent query processing adds scalar UDF inlining
+  - Truncation error message improved to include table and column names, and truncated value
   - UTF-8 collations support in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] setup
   - Use derived table or view aliases in graph match queries
-  - Improved diagnostic data for long-running queries
+  - Improved diagnostic data for stats blocking
+  - Static data masking
 
 ## CTP 2.0 
 
@@ -109,7 +110,7 @@ Continue reading for more details about these features.
 
 Scalar UDF inlining automatically transforms scalar user-defined functions (UDF) into relational expressions and embeds them in the calling SQL query, thereby improving the performance of workloads that leverage scalar UDFs. Scalar UDF inlining facilitates cost-based optimization of operations inside UDFs, and results in efficient plans that are set-oriented and parallel as opposed to inefficient, iterative, serial execution plans. This feature is enabled by default under database compatibility level 150.
 
-### Improve truncation message for ETL DW scenarios (CTP 2.1)
+### Truncation error message improved to include table and column names, and truncated value (CTP 2.1)
 
 The error message ID 8152 `String or binary data would be truncated` is familiar to many [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] developers and administrators who develop or maintain data movement workloads; the error is raised during data transfers between a source and a destination with different schemas when the source data is too large to fit into the destination data type. This error message can be time-consuming to troubleshoot. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces a new, more specific error message (2628) for this scenario:  
 
@@ -119,11 +120,25 @@ The new error message 2628 provides more context for the data truncation problem
 
 ### UTF-8 support (CTP 2.1)
 
-Added support to select UTF-8 collations as server collation during [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.1 Setup.
+Added support to select UTF-8 collation as default during [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] setup.
 
-### Improved diagnostic data for long-running queries (CTP 2.1)
+### Improved diagnostic data for stats blocking (CTP 2.1)
 
-SQL Server 2019 preview provides improved diagnostic data for long-running queries that wait on synchronous statistics update operations.  The dynamic management view `sys.dm_exec_requests` column `command` shows `SELECT (STATMAN)` if a `SELECT` is waiting for a synchronous statistics update operation to complete prior to continuing query execution.  Additionally, the new wait type `WAIT_ON_SYNC_STATISTICS_REFRESH` is surfaced in the `sys.dm_os_wait_stats` dynamic management view. It shows the accumulated instance-level time spent on synchronous statistics refresh operations.
+SQL Server 2019 preview provides improved diagnostic data for long-running queries that wait on synchronous statistics update operations. The dynamic management view `sys.dm_exec_requests` column `command` shows `SELECT (STATMAN)` if a `SELECT` is waiting for a synchronous statistics update operation to complete prior to continuing query execution.  Additionally, the new wait type `WAIT_ON_SYNC_STATISTICS_REFRESH` is surfaced in the `sys.dm_os_wait_stats` dynamic management view. It shows the accumulated instance-level time spent on synchronous statistics refresh operations.
+
+### Static data masking (CTP 2.1)
+
+SQL Server 2019 preview introduces static data masking. Use static data masking to sanitize sensitive data in a copies of SQL databases. Static Data Masking helps create a sanitized copy of databases where all sensitive information has been altered in a way that makes the copy sharable with non-production users. Static data masking can be used for development, testing, analytics and business reporting, compliance, troubleshooting, and any other environment where specific data cannot be copied to. 
+
+Static data masking operates at the column level. Select which columns to mask, and for each column selected, which masking function to apply. Static data masking copies the database and applies the masking functions selected by the user on the copy.
+
+#### Static data masking vs. Dynamic data masking
+
+Data masking is the process of applying a mask on a database to hide sensitive information and replacing it with new data or scrubbed data. Microsoft offers two masking options, static data masking and dynamic data masking. Dynamic data masking was introduced in SQL Server 2017. The following table compares these two solutions:
+
+|Static data masking |Dynamic data masking
+|:----|:----
+|Happens on a copy of the database <br/><br/>Original data not retrievable<br/><br/>Mask occurs at the storage level<br/><br/>All users have access to the same masked data<br/><br/>Geared toward continuous team-wide access|Happens on the original database<br/><br/>Original data intact<br/><br/>Mask occurs on-the-fly at query time<br/><br/>Mask varies based on user permission <br/><br/>Geared toward punctual user-specific access
 
 ### Database compatibility level (CTP 2.0)
 
@@ -351,15 +366,11 @@ FROM sys.dm_exec_requests AS d
   - Microsoft Container Registry: `mcr.microsoft.com/mssql/server:vNext-CTP2.0`
   - Certified RHEL-based container images: `mcr.microsoft.com/mssql/rhel/server:vNext-CTP2.0`
 
-## <a id="mds"></a> Master Data Services (MDS)
-
-### CTP 2.0 
+## <a id="mds"></a> Master Data Services (CTP 2.0) 
 
 - **Silverlight controls replaced with HTML**: The Master Data Services (MDS) portal no longer depends on Silverlight. All the former Silverlight components have been replaced with HTML controls.
 
-## <a id="security"></a>Security
-
-### (CTP 2.0)
+## <a id="security"></a>Security (CTP 2.0)
 
 - **Certificate management in SQL Server Configuration Manager**: SSL/TLS certificates are widely used to secure access to SQL Server instances. Certificate management is now integrated into the SQL Server Configuration Manager, simplifying common tasks such as:
 
@@ -371,9 +382,7 @@ FROM sys.dm_exec_requests AS d
   > [!NOTE]
   > User must have administrator permissions on all the cluster nodes.
 
-## <a id="tools"></a>Tools 
-
-### (CTP 2.0)
+## <a id="tools"></a>Tools (CTP 2.0)
 
 - [**Azure Data Studio**](../azure-data-studio/what-is.md): Previously released under the preview name SQL Operations Studio, Azure Data Studio is a lightweight, modern, open source, cross-platform desktop tool for the most common tasks in data development and administration. With Azure Data Studio you can connect to SQL Server on premises and in the cloud on Windows, macOS, and Linux. Azure Data Studio allows you to:
 

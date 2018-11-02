@@ -1,7 +1,7 @@
 ---
 title: "SQL Server 2019 Release Notes | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/02/2018"
+ms.date: "11/06/2018"
 ms.prod: "sql-server-2018"
 ms.reviewer: ""
 ms.technology: 
@@ -32,7 +32,7 @@ This article describes limitations and known issues for the [!INCLUDE[SQL Server
 - Install on Linux for [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md), [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md), and [Ubuntu](../linux/quickstart-install-connect-ubuntu.md).
 - [Run on SQL Server 2019 on Docker](../linux/quickstart-install-connect-docker.md).
 
-## CTP 2.1 (October 2018)
+## CTP 2.1 (November 2018)
 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.1 is the latest public release of [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)].
 
 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.1 is available only as Evaluation Edition. No other editions are available. Support for CTP 2.1 is described in license_Eval.rtf with your installation media.
@@ -67,6 +67,14 @@ Limited support may be found at one of the following locations:
     - Microsoft .NET Framework 4.6.2. Available from [Download Center](http://www.microsoft.com/download/details.aspx?id=53344).
     - For Linux, refer to [Linux - supported platforms](../linux/sql-server-linux-setup.md#supportedplatforms)
 
+### Floating point results
+
+- **Issue and customer impact**: SQL Server 2019 preview uses an updated compiler to build SQL Server. In some cases code compiled with the new compiler can return floating point numeric values that are different from previous versions of SQL Server.
+
+- **Workaround**: N/A
+
+- **Applies to**: SQL Server 2019 CTP 2.1
+
 ### SQL Server Integration Services (SSIS) page deployment after switching DB to single-user mode and then switching back
 
 - **Issue and customer impact**: After SSISB is switched from single-user mode back to multi-user mode, the following error may be reported when deploying a package:
@@ -91,7 +99,7 @@ Limited support may be found at one of the following locations:
 
 ### UDF Inlining 
 
-- **Issue and customer impact**: In some scenarios user-defined function inlining may allow unauthorized access to securables referenced in the `EXECUTE` string.
+- **Issue and customer impact**: There are corner case scenarios where nested calls to user defined functions inline do not correctly validate security.
   
 - **Workaround**: Not applicable
 

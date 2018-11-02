@@ -207,6 +207,25 @@ Allows setting the auto drop functionality for [global temporary tables](create-
 - In Azure SQL Database logical server, this option can be set in the individual user databases of the logical server.
 - In SQL Server and Azure SQL Database Managed Instance, this option is set in TEMPDB and the setting of the individual user databases has no effect.
 
+DISABLE_INTERLEAVED_EXECUTION_TVF = { ON | OFF }
+
+**Applies to**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
+
+Allows you to enable or disable Interleaved execution for multi-statement table valued functions at the database or statement scope while still maintaining database compatibility level 140 and higher. Interleaved execution is a feature that is part of Adaptive query processing in SQL databases. For more information, please refer to https://docs.microsoft.com/en-us/sql/relational-databases/performance/adaptive-query-processing?view=sql-server-2017 (sorry don't know how to do the links yet)
+
+DISABLE_BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF }
+
+**Applies to**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
+
+Allows you to enable or disable Adaptive joins at the database or statement scope while still maintaining database compatibility level 140 and higher. Adaptive Joins is a feature that is part of Adaptive Query Processing (bolded is a link https://docs.microsoft.com/en-us/sql/relational-databases/performance/adaptive-query-processing?view=sql-server-2017) introduced in SQL Server 2017. 
+
+ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}
+
+***Applies to**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] and [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] as a public preview feature
+
+Allows you to enable or disable Row mode memory grant feedback  at the database or statement scope while still maintaining database compatibility level 150 and higher. Row mode memory grant feedback a feature that is part of Adaptive Query Processing (bolded is a link https://docs.microsoft.com/en-us/sql/relational-databases/performance/adaptive-query-processing?view=sql-server-2017) introduced in SQL Server 2019.
+
+
 ##  <a name="Permissions"></a> Permissions  
  Requires ALTER ANY DATABASE SCOPE CONFIGURATION   
 on the database. This permission can be granted by a user with CONTROL permission on a database.  

@@ -52,7 +52,7 @@ DBCC CLONEDATABASE
 (  
     source_database_name
     ,  target_database_name
-    [ WITH { [ NO_STATISTICS ] [ , NO_QUERYSTORE ] [ , VERIFY_CLONEDB ] [ , BACKUP_CLONEDB ] } ]   
+    [ WITH { [ NO_STATISTICS ] [ , NO_QUERYSTORE ] [ , VERIFY_CLONEDB | SERVICEBROKER ] [ , BACKUP_CLONEDB ] } ]   
 )  
 ```  
   
@@ -66,17 +66,21 @@ The name of the database the source database will be copied to. This database wi
 NO_STATISTICS  
 Specifies if table/index statistics need to be excluded from the clone. If this option is not specified, table/index statistics are automatically included. This option is available starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 CU3 and [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1.
 
-NO_QUERYSTORE
+NO_QUERYSTORE<br>
 Specifies if query store data needs to be excluded from the clone. If this option is not specified, query store data will be copied to the clone if the query store is enabled in the source database. This option is available starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1.
 
 VERIFY_CLONEDB  
-Verifies the consistency of the new database.  This option is required if the cloned database is intended for production use.  Enabling VERIFY_CLONEDB also disables statistics and query store collection, thus it is equivalent to running WITH VERIFY_CLONEDB, NO_STATISTICS, NO_QUERYSTORE.  This option is available starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2.
+Verifies the consistency of the new database.  This option is required if the cloned database is intended for production use.  Enabling VERIFY_CLONEDB also disables statistics and query store collection, thus it is equivalent to running WITH VERIFY_CLONEDB, NO_STATISTICS, NO_QUERYSTORE.  This option is available starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP3, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU8.
 
 > [!NOTE]  
 > The following command can be used to confirm that the cloned database is production-ready: <br/>`SELECT DATABASEPROPERTYEX('clone_database_name', 'IsVerifiedClone')`
 
+
+SERVICEBROKER<br>
+Specifies if service broker related system catalogs should be included in the clone.  The SERVICEBROKER option cannot be used in combination with VERIFY_CLONEDB.  This option is available starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP3, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU8.
+
 BACKUP_CLONEDB  
-Creates and verifies a backup of the clone database.  If used in combination with VERIFY_CLONEDB, the clone database is verified before the backup is taken.  This option is available starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2.
+Creates and verifies a backup of the clone database.  If used in combination with VERIFY_CLONEDB, the clone database is verified before the backup is taken.  This option is available starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP3, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU8.
   
 ## Remarks
 The following validations are performed by DBCC CLONEDATABASE. The command fails if any of the validations fail.

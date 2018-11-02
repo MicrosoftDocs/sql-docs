@@ -152,7 +152,7 @@ For an optimal experience, please use the recommended system requirements.
 ## Check for updates
 To check for latest updates, click the gear icon on the bottom left of the window and click **Check for Updates**
 
-## Supported SQL offerings (SSMS 18.0 preview)
+## Supported SQL offerings
 
 * This version of Azure Data Studio works with all [supported versions of SQL Server 2014 - [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044) and provides support for working with the latest cloud features in Azure SQL Database and Azure SQL Data Warehouse. Azure Data Studio also provides preview support for Azure SQL Managed Instance.
 

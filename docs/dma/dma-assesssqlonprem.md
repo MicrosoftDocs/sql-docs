@@ -43,15 +43,13 @@ The following step-by-step instructions help you perform your first assessment f
    When you're assessing your source SQL Server instance for migrating to on-premises SQL Server or to SQL Server hosted on Azure VM targets, you can choose one or both of the following assessment report types:
 
     -   **Compatibility Issues**
-
     -   **New features’ recommendation**
 
     ![Select an assessment report type for SQL Server target](../dma/media/AssessmentTypes.png)
 
-   When you're assessing your source SQL Server instance for migrating to Azure SQL Database, you can choose one or both of the following assessment report types:
+   When assessing your source SQL Server instance for migrating to Azure SQL Database, you can choose one or both of the following assessment report types:
 
     -   **Check database compatibility**
-
     -   **Check feature parity**
 
     ![Select assessment report type for SQL Database target](../dma/media/AssessmentTypes_Azure.png)
@@ -85,7 +83,7 @@ You can review compatibility issues by analyzing the affected object, its detail
 
 Similarly, you can review feature recommendation across **Performance**, **Storage**, and **Security** areas.
 
-Feature recommendations cover a variety of features such as In-Memory OLTP and Columnstore, Stretch Database, Always Encrypted, Dynamic Data Masking, and Transparent Data Encryption.
+Feature recommendations cover a variety of features such as In-Memory OLTP, Columnstore, Stretch Database, Always Encrypted, Dynamic Data Masking, and Transparent Data Encryption.
 
 ![View feature recommendations](../dma/media/FeatureRecommendations.png)
 

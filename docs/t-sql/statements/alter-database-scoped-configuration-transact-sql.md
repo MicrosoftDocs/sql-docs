@@ -212,19 +212,19 @@ DISABLE_INTERLEAVED_EXECUTION_TVF = { ON | OFF }
 
 **Applies to**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-Allows you to enable or disable Interleaved execution for multi-statement table valued functions at the database or statement scope while still maintaining database compatibility level 140 and higher. Interleaved execution is a feature that is part of Adaptive query processing in SQL databases. For more information, please refer to [Adaptive query processing](../../relational-databases/performance/adaptive-query-processing)
+Allows you to enable or disable Interleaved execution for multi-statement table valued functions at the database or statement scope while still maintaining database compatibility level 140 and higher. Interleaved execution is a feature that is part of Adaptive query processing in SQL databases. For more information, please refer to [Adaptive query processing](../../relational-databases/performance/adaptive-query-processing.md)
 
 DISABLE_BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF }
 
 **Applies to**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-Allows you to enable or disable Adaptive joins at the database or statement scope while still maintaining database compatibility level 140 and higher. Adaptive Joins is a feature that is part of [Adaptive query processing](../../relational-databases/performance/adaptive-query-processing) introduced in SQL Server 2017.
+Allows you to enable or disable Adaptive joins at the database or statement scope while still maintaining database compatibility level 140 and higher. Adaptive Joins is a feature that is part of [Adaptive query processing](../../relational-databases/performance/adaptive-query-processing.md) introduced in SQL Server 2017.
 
 ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}
 
 ***Applies to**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] and [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] as a public preview feature
 
-Allows you to enable or disable Row mode memory grant feedback at the database or statement scope while still maintaining database compatibility level 150 and higher. Row mode memory grant feedback a feature that is part of [Adaptive query processing](../../relational-databases/performance/adaptive-query-processing) introduced in SQL Server 2019.
+Allows you to enable or disable Row mode memory grant feedback at the database or statement scope while still maintaining database compatibility level 150 and higher. Row mode memory grant feedback a feature that is part of [Adaptive query processing](../../relational-databases/performance/adaptive-query-processing.md) introduced in SQL Server 2019.
 
 ## <a name="Permissions"></a> Permissions
 

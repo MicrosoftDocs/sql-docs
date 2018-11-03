@@ -128,9 +128,9 @@ SQL Server 2019 preview provides improved diagnostic data for long-running queri
 
 ### Static data masking (CTP 2.1)
 
-SQL Server 2019 preview introduces static data masking. Use static data masking to sanitize sensitive data in copies of SQL Server databases. Static data masking helps create a sanitized copy of databases where all sensitive information has been altered in a way that makes the copy sharable with non-production users. Static data masking can be used for development, testing, analytics and business reporting, compliance, troubleshooting, and any other scenario where specific data cannot be copied to different environments.
+SQL Server 2019 preview introduces static data masking. You can use static data masking to sanitize sensitive data in copies of SQL Server databases. Static data masking helps create a sanitized copy of databases where all sensitive information has been altered in a way that makes the copy sharable with non-production users. Static data masking can be used for development, testing, analytics and business reporting, compliance, troubleshooting, and any other scenario where specific data cannot be copied to different environments.
 
-Static data masking operates at the column level. Select which columns to mask, and for each column selected, which masking function to apply. Static data masking copies the database and applies the specified masking functions at the time of the copy.
+Static data masking operates at the column level. Select which columns to mask, and for each column selected, which masking function to apply. Static data masking copies the database and then applies the specified masking functions to the columns.
 
 #### Static data masking vs. dynamic data masking
 

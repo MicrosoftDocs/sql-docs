@@ -94,7 +94,7 @@ GO
   
 ```sql  
 USE [master] ;  
-ALTER DATABASE [master] SET RECOVERY FULL ;  
+ALTER DATABASE [model] SET RECOVERY FULL ;  
 ```  
   
 ##  <a name="FollowUp"></a> Recommendations: After you change the recovery model  

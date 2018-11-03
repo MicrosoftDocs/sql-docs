@@ -140,10 +140,19 @@ If you installed [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] with 
 - SUSE Linux Enterprise Server v12 SP2
 - Ubuntu 16.04
 
+## Recommended System Requirements
+For an optimal experience, please use the recommended system requirements.
+
+|             | CPU Cores | Memory/RAM |
+|:-----------:|:---------:|:----------:|
+| Recommended |     4     |      8     |
+|   Minimum   |     2     |      4     |
+|             |           |            |
+
 ## Check for updates
 To check for latest updates, click the gear icon on the bottom left of the window and click **Check for Updates**
 
-## Supported SQL offerings (SSMS 18.0 preview)
+## Supported SQL offerings
 
 * This version of Azure Data Studio works with all [supported versions of SQL Server 2014 - [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044) and provides support for working with the latest cloud features in Azure SQL Database and Azure SQL Data Warehouse. Azure Data Studio also provides preview support for Azure SQL Managed Instance.
 

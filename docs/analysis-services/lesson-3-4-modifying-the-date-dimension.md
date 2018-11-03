@@ -80,7 +80,7 @@ You can create a new hierarchy by dragging an attribute from the **Attributes** 
   
 5.  Drag the **Date Key** attribute from the **Attributes** pane into the **<new level>** cell in the **Hierarchies** pane, underneath the **English Month Name** level.  
   
-6.  In the **Hierarchies** pane, right-click the title bar of the **Hierarchy** hierarchy, cick **Rename**, and then type **Calendar Date**.  
+6.  In the **Hierarchies** pane, right-click the title bar of the **Hierarchy** hierarchy, click **Rename**, and then type **Calendar Date**.  
   
 7.  By using the right-click context menu, in the **Calendar Date** hierarchy, rename the **English Month Name** level to **Calendar Month**, and then rename the **Date Key** level to **Date**.  
   

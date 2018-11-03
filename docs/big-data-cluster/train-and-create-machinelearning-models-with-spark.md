@@ -31,7 +31,7 @@ E2E machine learning involves several additional steps, e.g, data exploration, f
 
 ## Step 1 - Understanding the data and prediction desired
 
-This example uses adult census income data data from [here]( https://amldockerdatasets.azureedge.net/AdultCensusIncome.csv ). In `AdultCensusIncome.csv`, each row represents income range and other characteristics like age, hours-per-week, education, occupation etc for a given adult. Build a model that can predict if the income range. The model will take age and hours-per-week as features and predict if the income would be >50 K or <50 K. 
+This example uses adult census income data from [here]( https://amldockerdatasets.azureedge.net/AdultCensusIncome.csv ). In `AdultCensusIncome.csv`, each row represents income range and other characteristics like age, hours-per-week, education, occupation etc for a given adult. Build a model that can predict if the income range. The model will take age and hours-per-week as features and predict if the income would be >50 K or <50 K. 
 
 
 ## Step 2 - Upload the data to HDFS and basic explorations on data

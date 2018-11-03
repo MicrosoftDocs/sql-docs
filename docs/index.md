@@ -249,7 +249,7 @@ ms.technology:
                                                       </div>
                                                       <div class="cardText">
                                                           <h3>Database design</h3>
-                                                          <p><b>Filestream, Filetable, Spatial Data, Views, Triggers, Graphs, Sequence Numbers, Stored Procedures, Track Changes </b> </p>
+                                                          <p><b>Filestream, Filetable, Graph, Sequence Numbers, Spatial Data,  Stored Procedures, Triggers,  Track Changes, Views </b> </p>
                                                       </div>
                                                   </div>
                                               </div>
@@ -268,7 +268,7 @@ ms.technology:
                                                       </div>
                                                       <div class="cardText">
                                                           <h3>Query data</h3>
-                                                          <p><b>Cursors, Synonyms, Scripting, Joins, User-defined Functions, Full-text Search </b></p>
+                                                          <p><b>Full-text search, Joins, Scripting, Synonyms, User-defined functions</b></p>
                                                       </div>
                                                   </div>
                                               </div>

@@ -2,11 +2,9 @@
 title: "SQL Server secondary to primary replica read/write connection redirection-Always On Availability Groups | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2018"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
+ms.prod: sql
 ms.reviewer: ""
-ms.technology: 
-  - "dbe-high-availability"
+ms.technology: high-availability
 ms.topic: "article"
 helpviewer_keywords: 
   - "connection access to availability replicas"
@@ -19,7 +17,6 @@ ms.assetid:
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "craigg"
-ms.workload: "On Demand"
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Secondary to primary replica read/write connection redirection (Always On Availability Groups)

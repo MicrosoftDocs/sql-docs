@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+  <title>sqlml_tutorials</title>
+  <g id="Shapes">
+    <g>
+      <rect x="10.156" y="39.063" width="28.125" height="10.156" fill="#184775"/>
+      <polygon points="23.086 11.711 32.813 19.531 10.156 49.219 0 41.313 23.086 11.711" fill="#27a2dc"/>
+      <polygon points="27.023 33.336 38.531 25.773 50 41.469 38.281 49.219 27.023 33.336" fill="#0b7ab1"/>
+      <rect x="17.188" y="0.781" width="15.625" height="18.703" fill="#0384be"/>
+    </g>
+  </g>
+</svg>

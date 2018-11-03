@@ -137,7 +137,7 @@ To configure WSUS, you need to:
   
     Unselect all selected updates.  
   
-    Select **SQL Server 2014**, **SQL Server 2016**, **Windows Server 2012 R2**, and **System Center 2012 R2 - Virtual Machine Manager**, and then click **Next**.  
+    Select **Windows Server 2012 R2**, and **System Center 2012 R2 - Virtual Machine Manager**, and then click **Next**.  
   
 9. Choose classifications.  
   

@@ -149,6 +149,18 @@ Limited support may be found at one of the following locations:
 
 - **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.1, 2.0.
 
+### SQL Server Integration Service - Fuzzy Lookup Transformation
+
+- **Issue / customer impact**: The Fuzzy Lookup Transformation would fail with following error if it's set to reuse index:
+
+  `The specified delimiters do not match the delimiters used to build the pre-existing match index "...". This error occurs when the delimiters used to tokenize fields do not match. This can have unknown effects on the matching behavior or results.`
+
+- **Workaround**: N/A
+
+- **More information**: N/A  
+
+- **Applies To**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP2.1
+
 ## CTP 2.0 (September 2018)
 
 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.0 is the first public release of [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)].

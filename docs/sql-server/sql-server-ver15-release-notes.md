@@ -69,7 +69,7 @@ Limited support may be found at one of the following locations:
 
 ### Floating point results
 
-- **Issue and customer impact**: SQL Server 2019 preview uses an updated compiler to build SQL Server. In some cases code compiled with the new compiler can return floating point numeric values that are different from previous versions of SQL Server.
+- **Issue and customer impact**: SQL Server 2019 preview uses an updated compiler to build SQL Server. In some cases code compiled with the new compiler can return floating point numeric values that are different from previous versions of SQL Server. Behavior change will be restricted to new compatibility level (150) in a future CTP.
 
 - **Workaround**: N/A
 
@@ -148,6 +148,18 @@ Limited support may be found at one of the following locations:
 - **Workaround**: To enable rich computations, run `DBCC traceon(127,-1)`. For details, see  [Enable rich computations](../relational-databases/security/encryption/configure-always-encrypted-enclaves.md#configure-a-secure-enclave).
 
 - **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.1, 2.0.
+
+### SQL Server Integration Service - Fuzzy Lookup Transformation
+
+- **Issue / customer impact**: The Fuzzy Lookup Transformation would fail with following error if it's set to reuse index:
+
+  `The specified delimiters do not match the delimiters used to build the pre-existing match index "...". This error occurs when the delimiters used to tokenize fields do not match. This can have unknown effects on the matching behavior or results.`
+
+- **Workaround**: N/A
+
+- **More information**: N/A  
+
+- **Applies To**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP2.1
 
 ## CTP 2.0 (September 2018)
 

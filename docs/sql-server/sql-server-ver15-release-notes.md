@@ -69,7 +69,7 @@ Limited support may be found at one of the following locations:
 
 ### Floating point results
 
-- **Issue and customer impact**: SQL Server 2019 preview uses an updated compiler to build SQL Server. In some cases code compiled with the new compiler can return floating point numeric values that are different from previous versions of SQL Server.
+- **Issue and customer impact**: SQL Server 2019 preview uses an updated compiler to build SQL Server. In some cases code compiled with the new compiler can return floating point numeric values that are different from previous versions of SQL Server. Behavior change will be restricted to new compatibility level (150) in a future CTP.
 
 - **Workaround**: N/A
 

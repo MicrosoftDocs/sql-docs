@@ -23,7 +23,7 @@ manager: craigg
  In the [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], you can use Data Quality Services (DQS) to match data before loading it into MDS. This helps to prevent duplicate data in MDS.  
 
 ## Downloads 
->*  Download the Master Data Services Add-in for Excel for SQL Server 2016 SP1 from [this Microsoft Download Center page](https://go.microsoft.com/fwlink/?linkid=836866). 
+>*  Download the Master Data Services Add-in for Excel for SQL Server 2016 SP2 from [this Microsoft Download Center page](https://www.microsoft.com/en-us/download/details.aspx?id=56838). 
 >* Download the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] for SQL Server 2017 from [this Microsoft Download Center page](https://go.microsoft.com/fwlink/?linkid=836867).
  
   

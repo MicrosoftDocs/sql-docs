@@ -35,7 +35,6 @@ Community technology preview (CTP) 2.1 is the latest public release of [!INCLUDE
   - UTF-8 collations support in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] setup
   - Use derived table or view aliases in graph match queries
   - Improved diagnostic data for stats blocking
-  - Static data masking
 
 ## CTP 2.0 
 
@@ -125,20 +124,6 @@ Added support to select UTF-8 collation as default during [!INCLUDE[sql-server-2
 ### Improved diagnostic data for stats blocking (CTP 2.1)
 
 SQL Server 2019 preview provides improved diagnostic data for long-running queries that wait on synchronous statistics update operations. The dynamic management view `sys.dm_exec_requests` column `command` shows `SELECT (STATMAN)` if a `SELECT` is waiting for a synchronous statistics update operation to complete prior to continuing query execution.  Additionally, the new wait type `WAIT_ON_SYNC_STATISTICS_REFRESH` is surfaced in the `sys.dm_os_wait_stats` dynamic management view. It shows the accumulated instance-level time spent on synchronous statistics refresh operations.
-
-### Static data masking (CTP 2.1)
-
-SQL Server 2019 preview introduces static data masking. You can use static data masking to sanitize sensitive data in copies of SQL Server databases. Static data masking helps create a sanitized copy of databases where all sensitive information has been altered in a way that makes the copy sharable with non-production users. Static data masking can be used for development, testing, analytics and business reporting, compliance, troubleshooting, and any other scenario where specific data cannot be copied to different environments.
-
-Static data masking operates at the column level. Select which columns to mask, and for each column selected, specify a masking function. Static data masking copies the database and then applies the specified masking functions to the columns.
-
-#### Static data masking vs. dynamic data masking
-
-Data masking is the process of applying a mask on a database to hide sensitive information and replacing it with new data or scrubbed data. Microsoft offers two masking options, static data masking and dynamic data masking. Dynamic data masking was introduced in SQL Server 2017. The following table compares these two solutions:
-
-|Static data masking |Dynamic data masking
-|:----|:----
-|Happens on a copy of the database <br/><br/>Original data not retrievable<br/><br/>Mask occurs at the storage level<br/><br/>All users have access to the same masked data<br/><br/>Geared toward continuous team-wide access|Happens on the original database<br/><br/>Original data intact<br/><br/>Mask occurs on-the-fly at query time<br/><br/>Mask varies based on user permission <br/><br/>Geared toward punctual user-specific access
 
 ### Database compatibility level (CTP 2.0)
 

@@ -93,17 +93,13 @@ Limited support may be found at one of the following locations:
 
 - **Workaround**: N/A
 
-- **More information**:
-
 - **Applies to**: SQL Server 2019 CTP 2.1
 
 ### UDF Inlining 
 
 - **Issue and customer impact**: There are corner case scenarios where nested calls to user defined functions inline do not correctly validate security.
   
-- **Workaround**: Not applicable
-
-- **More information**:
+- **Workaround**: Disable UDF inlining for using the `INLINE=OFF` option.
 
 - **Applies to**: SQL Server 2019 CTP 2.1
 

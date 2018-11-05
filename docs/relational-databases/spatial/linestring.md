@@ -1,12 +1,10 @@
 ---
 title: "LineString | Microsoft Docs"
-ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: 
-  - "dbe-spatial"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "LineString geometry subtype [SQL Server]"

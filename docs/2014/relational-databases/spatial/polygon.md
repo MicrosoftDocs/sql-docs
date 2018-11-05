@@ -1,11 +1,9 @@
 ---
 title: "Polygon | Microsoft Docs"
-ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: 
-  - "dbe-spatial"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "geometry subtypes [SQL Server]"

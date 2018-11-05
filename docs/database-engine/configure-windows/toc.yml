@@ -280,5 +280,7 @@
   href: sql-server-monitor-overview.md
 - name: Service Broker
   href: sql-server-service-broker.md
-- name: Buffer Pool Extension
+- name: Buffer pool extension
+  href: buffer-pool-extension.md
+- name: Hybrid buffer pool
   href: buffer-pool-extension.md

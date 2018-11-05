@@ -26,6 +26,9 @@ You load the modules and call the necessary functions to create and train the mo
     This stored procedure should already be created for you, but you can run the following code to create it:
 
     ```SQL
+    DROP PROCEDURE IF EXISTS PyTrainTestSplit;
+    GO
+
     CREATE PROCEDURE [dbo].[PyTrainTestSplit] (@pct int)
     AS
     
@@ -102,7 +105,7 @@ To make it easier to retrain the model on new data, you wrap the call to sp_exec
     ```SQL
     DECLARE @model VARBINARY(MAX);
     EXEC PyTrainScikit @model OUTPUT;
-    INSERT INTO nyc_taxi_models (model) VALUES(@model);
+    INSERT INTO nyc_taxi_models (name, model) VALUES('SciKit_model', @model);
     ```
 
     Processing of the data and fitting the model might take a couple of mins. Messages that would be piped to Python's **stdout** stream are displayed in the **Messages** window of [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. For example:
@@ -112,7 +115,7 @@ To make it easier to retrain the model on new data, you wrap the call to sp_exec
 
 3. Open the table *nyc\_taxi_models*. You can see that one new row has been added, which contains the serialized model in the column _model_.
 
-    *linear_model*
+    *SciKit_model*
     *0x800363736B6C6561726E2E6C696E6561....*
 
 ### TrainTipPredictionModelRxPy
@@ -167,7 +170,7 @@ By using **revoscalepy**, you can create remote compute contexts, move data betw
     ```SQL
     DECLARE @model VARBINARY(MAX);
     EXEC TrainTipPredictionModelRxPy @model OUTPUT;
-    INSERT INTO nyc_taxi_models (model) VALUES(@model);
+    INSERT INTO nyc_taxi_models (name, model) VALUES('revoscalepy_model', @model);
     ```
 
     Processing of the data and fitting the model might take a while. Messages that would be piped to Python's **stdout** stream are displayed in the **Messages** window of [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. For example:
@@ -177,7 +180,7 @@ By using **revoscalepy**, you can create remote compute contexts, move data betw
 
 3. Open the table *nyc_taxi_models*. You can see that one new row has been added, which contains the serialized model in the column _model_.
 
-    *rx_model*
+    *revoscalepy_model*
     *0x8003637265766F7363616c....*
 
 In the next step, you use the trained models to create predictions.

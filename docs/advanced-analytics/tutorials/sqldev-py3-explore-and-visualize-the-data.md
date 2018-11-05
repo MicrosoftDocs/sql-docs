@@ -73,6 +73,9 @@ The stored procedure returns a serialized Python `figure` object as a stream of 
     - The Python graphics object is serialized to a **pandas** DataFrame for output.
   
     ```SQL
+    DROP PROCEDURE IF EXISTS PyPlotMatplotlib;
+    GO
+
 	CREATE PROCEDURE [dbo].[PyPlotMatplotlib]
 	AS
 	BEGIN

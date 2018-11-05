@@ -13,14 +13,12 @@ manager: cgronlun
 # Set up a data-science client for R development on SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-After you have configured an instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] to support machine learning, you should set up an R development environment that is capable of connecting to the server for remote execution and deployment.
+R integration is available in SQL Server 2016 or later when you include the R language option in an [R Services](../install/sql-r-services-windows-install.md) or [Machine Learning Services (In-Database) installation](../install/sql-machine-learning-services-windows-install.md). 
 
-### Evaluation and independent development
- 
-If you have the developer edition and plan to work locally on R script you plan to move to SQL Server, you can skip ahead to [Install an IDE](#install-ide) and point the tool to local R libraries used by SQL Server.
+In this article, learn how to configure an R client development workstation so that you can connect to a remote SQL Server enabled for machine learning and R integration. After completing the steps in this article, you will have the same R libraries as those on SQL Server. You will also know how to push computations from a local R session to a remote Python session on SQL Server.
 
 > [!Tip]
-> For a demonstration and video walkthrough, see [Run R and Python Remotely in SQL Server from Jupyter Notebooks or any IDE](https://blogs.msdn.microsoft.com/mlserver/2018/07/10/run-r-and-python-remotely-in-sql-server-from-jupyter-notebooks-or-any-ide/) or this [YouTube video](https://youtu.be/D5erljpJDjE).
+> For a video demonstration of the exercises in this article, see [Run R and Python Remotely in SQL Server from Jupyter Notebooks](https://blogs.msdn.microsoft.com/mlserver/2018/07/10/run-r-and-python-remotely-in-sql-server-from-jupyter-notebooks-or-any-ide/).
 
 ## 1 - Install R packages
 

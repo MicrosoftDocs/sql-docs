@@ -5,8 +5,7 @@ ms.date: "08/05/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: performance-monitor
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Activity Monitor [SQL Server], setting the refresh interval"

@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Management Studio - Changelog (SSMS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/24/2018"
+ms.date: "11/07/2018"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
@@ -13,11 +13,121 @@ ms.author: "sstein"
 manager: craigg
 ---
 # SQL Server Management Studio - Changelog (SSMS)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 This article provides details about updates, improvements, and bug fixes for the current and previous versions of SSMS. Download [previous SSMS versions below](#previous-ssms-releases).
 
+## [SSMS 18.0 (preview 5)](download-sql-server-management-studio-ssms.md)
 
-## [SSMS 18.0 (preview 4)](download-sql-server-management-studio-ssms.md)
+Build number: TBD<br>
+Release date: November 07, 2018
+
+Preview 5 is the 2nd public preview of SSMS 18.0. For the latest General Availability (GA) version of SSMS, [download and install SSMS 17.9](#ssms-179-latest-ga-release).
+
+### What's new
+
+**General SSMS**
+
+- Exposed "maximum size for error log files" under "Configure SQL Server Error Logs". For details, see [Set the Maximum Size of the SQL Server Error Logs](https://feedback.azure.com/forums/908035/suggestions/33624115).  
+
+Object scripting:
+
+- Added new menu items for 'CREATE OR ALTER' when scripting objects.
+
+Database compatibility level upgrade:
+
+-  Added a new option under <Database name> > **Tasks** > **Database Upgrade**. This starts the new *Query Tuning Assistant (QTA)* to guide users through the process of:
+   - Collecting a performance baseline before upgrading the database compatibility level.  
+   - Upgrading to the desired database compatibility level 
+   - Collecting a 2nd pass of performance data over the same workload. 
+   - Detect workload regressions, and provide tested recommendations to improve workload performance.
+
+Database compatibility level upgrade is similar to the database upgrade process documented in [Keep performance stability during the upgrade to newer SQL Server](https://docs.microsoft.com/sql/relational-databases/performance/query-store-usage-scenarios#CEUpgrade), except for the last step where QTA does not rely on a previously known good state to generate recommendations.
+
+Query Store:
+
+- Improved usability of some reports (Overall Resource Consumptions) by adding thousands separator to numbers displayed on the Y-axis of the charts.
+- Added a new Query Wait Statistics report.
+
+Vulnerability assessment:
+
+- Enabled Vulnerability Assessment tasks menu on Azure SQL Data Warehouse.
+
+SMO:
+
+- Exposed new ProductUpdateLevel property on the Server object, which maps to the servicing level for the version of SQL in use (e.g. CU12, RTM, etc…).
+- Exposed new LastGoodCheckDbTime property on  Database object, which maps to "lastgoodcheckdbtime" database property. If such property is not available, a default value of 1/1/1900 12:00:00 AM will be returned.
+
+
+Azure Data Studio integration:
+
+- Added **Start Azure Data Studio** menu item to Object Explorer.
+
+### Bug fixes
+
+Crashes / Hangs:
+
+- Fixed a crash in SSMS when trying to use Central Management Server and Azure SQL Database servers. For details, see [crash when using Central Management Server](https://feedback.azure.com/forums/908035/suggestions/33374884).  
+- Fixed a hang in Object Explorer by optimizing the way IsFullTextEnabled  property is retrieved.
+- Fixed a hang in 'Copy Database Wizard' by avoiding to build unnecessary queries to retrieve database properties.
+
+SSMS Options:
+
+- Restored CTRL+D to be the shortcut as it was in older version of SSMS. For details, see [Restore CTRL-D shortcut for ResultsToGrid in SSMS](https://feedback.azure.com/forums/908035/suggestions/35544754).
+
+Object Explorer:
+
+- Fixed an issue where the 'New Job Schedule' dialog was not rendering properly on High DPI monitors.
+- Fixed/improved the way database size ("Size (MB)") is displayed in Object Explorer. Only 2 decimal digits and formatted using the thousands separator. For details, see [Too Many Decimal-places in Size (MB) property](https://feedback.azure.com/forums/908035/suggestions/34379308).
+- Fixed an issue that was causing the creation of a 'Spatial Index' to fail with an error like 'To accomplish this action, set property PartitionScheme'.
+- Minor performance improvements in Object Explorer to avoid issuing extra queries, when possible.
+
+Analysis Services (AS):
+
+- Fixed an issue where DAX parsing throws file not found exception.
+- Added back shortcut to "Deployment Wizard" to Start Menu.
+
+Integration Services (IS):
+
+- Fixed a side-by-side issue where the deployment wizard fails to connect to Sql Server when SQL Server 2019 and SSMS 18.0 are installed on the same machine.
+- Fixed an issue that maintenance plan task can’t be edited when designing the maintenance plan.
+- Fixed an issue that deployment wizard will stuck if the project under deployment is renamed.
+- Enabled environment setting in Azure-SSIS IR schedule feature.
+
+
+HADR / Availability Groups:
+
+- Fixed an issue where roles in *Fail Over Availability Groups* wizard was always displayed as "Resolving". 
+- Fixed an issue where SSMS was showing truncated warnings in "AG Dashboard".
+
+Backup/Restore/Attach/Detach DB:
+
+- Fixed issue where the "Attach Database" wizard was not displaying secondary files that were renamed. Now, the file is displayed and a comment about it is is added (e.g. "Not Found"). For details, see [database attach not displaying secondary files](https://feedback.azure.com/forums/908035/suggestions/32897434).
+
+
+Managed Instance support:
+
+- Improved support for AAD Logins (in SSMS Explorer).
+- Improved scripting of SMO Filegroups objects.
+- Improved UI for credentials and audits.
+
+
+DAC Import Wizard:
+
+- Fixed an issue where DAC Import Wizard was not working when connected using AAD.
+
+XEvent Viewer:
+
+- Fixed an issue where XEvent Viewer was crashing when trying to group the events using the *Extended Event Toolbar Options*.
+
+Vulnerability Assessment:
+
+- Fixed an issue where the scan results were not being loaded properly.
+
+
+
+
+## SSMS 18.0 (preview 4)
 
 Build number: 15.0.18040.0<br>
 Release date: September 24, 2018

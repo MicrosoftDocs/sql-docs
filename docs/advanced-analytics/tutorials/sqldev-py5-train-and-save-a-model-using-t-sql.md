@@ -167,8 +167,7 @@ By using **revoscalepy**, you can create remote compute contexts, move data betw
     ```SQL
     DECLARE @model VARBINARY(MAX);
     EXEC TrainTipPredictionModelRxPy @model OUTPUT;
-    
-    INSERT INTO nyc_taxi_models (name, model) VALUES('revoscalepy_model', @model);
+    INSERT INTO nyc_taxi_models (model) VALUES(@model);
     ```
 
     Processing of the data and fitting the model might take a while. Messages that would be piped to Python's **stdout** stream are displayed in the **Messages** window of [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. For example:
@@ -185,7 +184,7 @@ In the next step, you use the trained models to create predictions.
 
 ## Next step
 
-[Operationalize the Python model using SQL Server](sqldev-py6-operationalize-the-model.md)
+[Run predictions using Python embedded in a stored procedure](sqldev-py6-operationalize-the-model.md)
 
 ## Previous step
 

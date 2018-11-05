@@ -4,7 +4,7 @@ description: Tutorial showing how to operationalize embedded PYthon script in SQ
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
+ms.date: 11/02/2018  
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
@@ -84,7 +84,6 @@ GO
 ### PredictTipRxPy
 
 This stored procedure uses the same inputs and creates the same type of scores as the previous stored procedure, but uses functions from the **revoscalepy** package provided with SQL Server machine learning.
-
 
 ```SQL
 CREATE PROCEDURE [dbo].[PredictTipRxPy] (@model varchar(50), @inquery nvarchar(max))

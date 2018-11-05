@@ -20,6 +20,8 @@ Download and install the latest release, the *October Release*:
 > [!NOTE]
 > If you're updating from SQL Operations Studio and want to keep your settings, keyboard shortcuts, or code snippets, see [Move user settings](#move-user-settings).
 
+> If overriding an existing installation, delete the old install directory before installation to avoid errors connecting to your Azure account for the resource explorer.
+
 |Platform|Download|Release date| Version |
 |:---|:---|:---|:---|
 |Windows|[Installer](https://go.microsoft.com/fwlink/?linkid=2030731)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2030736)|October 30, 2018 |1.1.4|

@@ -1,12 +1,10 @@
 ---
 title: "Spatial Indexes Overview | Microsoft Docs"
-ms.custom: ""
 ms.date: "09/12/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: 
-  - "dbe-spatial"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "spatial indexes [SQL Server]"

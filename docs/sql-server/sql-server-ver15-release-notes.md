@@ -85,25 +85,12 @@ Limited support may be found at one of the following locations:
 
 - **Applies to**: SQL Server 2019 preview CTP 2.1
 
-### Hadoop components fail
-
-- **Issue and customer impact**: Hadoop components fail with the following error:
-
-  `System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.WindowsAzure.Storage, Version=3.2.0.0, Culture=neutral, PublicKeyToken=<>' or one of its dependencies. The system cannot find the file specified.`
-
-- **Workaround**: N/A
-
-- **More information**:
-
-- **Applies to**: SQL Server 2019 CTP 2.1
 
 ### UDF Inlining 
 
 - **Issue and customer impact**: There are corner case scenarios where nested calls to user defined functions inline do not correctly validate security.
   
-- **Workaround**: Not applicable
-
-- **More information**:
+- **Workaround**: Disable UDF inlining for using the `INLINE=OFF` option.
 
 - **Applies to**: SQL Server 2019 CTP 2.1
 

@@ -142,13 +142,14 @@ The stored procedure returns a serialized Python `figure` object as a stream of 
     ```
 
   
-4. From a Python client, you can now connect to the SQL Server instance that generated the binary plot objects, and view the plots. 
+4. From a [Python client](../python/setup-python-client-tools-sql.md), you can now connect to the SQL Server instance that generated the binary plot objects, and view the plots. 
 
     To do this, run the following Python code, replacing the server name, database name, and credentials as appropriate. Make sure the Python version is the same on the client and the server. Also make sure that the Python libraries on your client (such as matplotlib) are the same or higher version relative to the libraries installed on the server.
   
     **Using SQL Server authentication:**
     
     ```python
+    %matplotlib notebook
     import pyodbc
     import pickle
     import os
@@ -165,6 +166,7 @@ The stored procedure returns a serialized Python `figure` object as a stream of 
     **Using Windows authentication:**
 
     ```python
+    %matplotlib notebook
     import pyodbc
     import pickle
     import os

@@ -13,9 +13,9 @@ manager: cgronlun
 # Tutorial: In-Database Python analytics for SQL developers
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In this tutorial for SQL programmers, you gain hands-on experience using the Python language to build and deploy a machine learning solution by wrapping Python code in stored procedures.
+In this tutorial for SQL programmers, learn about Python integration by building and deploying a Python-based machine learning solution using a [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) database on SQL Server. 
 
-This tutorial uses a subset of a well-known public dataset, based on trips in New York City taxis. To make the sample code run quicker, we created a representative 1% sampling of the data. You'll use this data to build a binary classification model that predicts whether a particular trip is likely to get a tip or not, based on columns such as the time of day, distance, and pick-up location.
+This tutorial introduces you to Python functions used in a data modeling workflow. Steps include data exploration, building and training a binary classification model, and model deployment. You'll use sample data from the New York City Taxi and Limosine Commission, and the model you will build predicts whether a trip is likely to result in a tip based on the time of day, distance travelled, and pick-up location. All of the Python code used in this tutorial is wrapped in stored procedures that you create and run in Management Studio.
 
 > [!NOTE]
 > This tutorial is available in both R and Python. For the R version, see [In-database analytics for R developers](sqldev-in-database-r-for-sql-developers.md).
@@ -29,7 +29,7 @@ The process of building a machine learning solution is a complex one that can in
 + training and tuning the model
 + deployment to production
 
-Development and testing of the actual code is best performed using a dedicated development environment. However, after the script is fully tested, you can easily deploy it to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedures in the familiar environment of [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
+Development and testing of the actual code is best performed using a dedicated development environment. However, after the script is fully tested, you can easily deploy it to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedures in the familiar environment of [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Wrapping external code in stored procedures is the primary mechanism for operationalizing code in SQL Server.
 
 Whether you are a SQL programmer new to Python, or a Python developer new to SQL, this multi-part tutorial introduces a typical workflow for conducting in-database analytics with Python and SQL Server. 
 
@@ -41,13 +41,9 @@ Whether you are a SQL programmer new to Python, or a Python developer new to SQL
 
 + [Lesson 4: Predict potential outcomes using a Python model in a stored procedure](sqldev-py6-operationalize-the-model.md)
 
-After the model has been saved to the database, call the model for predictions from [!INCLUDE[tsql](../../includes/tsql-md.md)] by using stored procedures.
+After the model has been saved to the database, you can call the model for predictions from [!INCLUDE[tsql](../../includes/tsql-md.md)] by using stored procedures.
 
 ## Prerequisites
-
-All tasks can be done using [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedures in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
-
-This tutorial assumes familiarity with basic database operations such as creating databases and tables, importing data, and writing SQL queries. It does not assume you know Python. As such, all Python code is provided. 
 
 + [SQL Server 2017 Machine Learning Services with Python](../install/sql-machine-learning-services-windows-install.md#verify-installation)
 
@@ -55,6 +51,9 @@ This tutorial assumes familiarity with basic database operations such as creatin
 
 + [NYC Taxi demo database](demo-data-nyctaxi-in-sql.md)
 
+All tasks can be done using [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedures in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
+
+This tutorial assumes familiarity with basic database operations such as creating databases and tables, importing data, and writing SQL queries. It does not assume you know Python. As such, all Python code is provided. 
 
 ## Next steps
 

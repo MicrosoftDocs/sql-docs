@@ -89,7 +89,7 @@ This stored procedure uses the same inputs and creates the same type of scores a
 CREATE PROCEDURE [dbo].[PredictTipRxPy] (@model varchar(50), @inquery nvarchar(max))
 AS
 BEGIN
-  DECLARE @lmodel2 varbinary(max) = (select model from nyc_taxi_models2 where name = @model);
+  DECLARE @lmodel2 varbinary(max) = (select model from nyc_taxi_models where name = @model);
 
   EXEC sp_execute_external_script 
     @language = N'Python',
@@ -193,7 +193,7 @@ BEGIN
     @dropoff_latitude,
     @dropoff_longitude)
     '
-  DECLARE @lmodel2 varbinary(max) = (select model from nyc_taxi_models2 where name = @model);
+  DECLARE @lmodel2 varbinary(max) = (select model from nyc_taxi_models where name = @model);
   EXEC sp_execute_external_script 
     @language = N'Python',
     @script = N'
@@ -257,7 +257,7 @@ BEGIN
       @dropoff_latitude,
       @dropoff_longitude)
     '
-  DECLARE @lmodel2 varbinary(max) = (select model from nyc_taxi_models2 where name = @model);
+  DECLARE @lmodel2 varbinary(max) = (select model from nyc_taxi_models where name = @model);
   EXEC sp_execute_external_script 
     @language = N'Python',
     @script = N'

@@ -15,7 +15,7 @@ manager: cgronlun
 
 In this tutorial for SQL programmers, you gain hands-on experience using the R language to build and deploy a machine learning solution by wrapping R code in stored procedures.
 
-This tutorial uses a well-known public dataset, based on trips in New York City taxis. To make the sample code run quicker, we created a representative 1% sampling of the data. You'll use this data to build a binary classification model that predicts whether a particular trip is likely to get a tip or not, based on columns such as the time of day, distance, and pick-up location.
+Using sample data from the New York City Taxi and Limosine Commission, you will build a binary classification model that predicts whether a particular trip is likely to get a tip or not, based on columns such as the time of day, distance, and pick-up location.
 
 > [!NOTE]
 > 

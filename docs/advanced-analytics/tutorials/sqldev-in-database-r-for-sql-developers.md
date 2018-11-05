@@ -13,9 +13,10 @@ manager: cgronlun
 # Tutorial: In-Database R analytics for SQL developers
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In this tutorial for SQL programmers, you gain hands-on experience using the R language to build and deploy a machine learning solution by wrapping R code in stored procedures.
+In this tutorial for SQL programmers, learn about R integration by building and deploying an R-based machine learning solution using a [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) database on SQL Server. 
 
-Using sample data from the New York City Taxi and Limosine Commission, you will build a binary classification model that predicts whether a particular trip is likely to get a tip or not, based on columns such as the time of day, distance, and pick-up location.
+This tutorial introduces you to R functions used in a data modeling workflow. Steps include data exploration, building and training a binary classification model, and model deployment. You'll use sample data from the New York City Taxi and Limosine Commission, and the model you will build predicts whether a trip is likely to result in a tip based on the time of day, distance travelled, and pick-up location. All of the R code used in this tutorial is wrapped in stored procedures that you create and run in Management Studio.
+
 
 > [!NOTE]
 > 

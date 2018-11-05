@@ -59,7 +59,6 @@ import numpy;
 from sklearn import metrics
 
 mod = pickle.loads(lmodel2)
-
 X = InputDataSet[["passenger_count", "trip_distance", "trip_time_in_secs", "direct_distance"]]
 y = numpy.ravel(InputDataSet[["tipped"]])
 
@@ -109,12 +108,13 @@ X = InputDataSet[["passenger_count", "trip_distance", "trip_time_in_secs", "dire
 y = numpy.ravel(InputDataSet[["tipped"]])
 
 probArray = rx_predict(mod, X)
-prob_list = prob_array["tipped_Pred"].values 
+probList = probArray["tipped_Pred"].values 
 
 probArray = numpy.asarray(probList)
 fpr, tpr, thresholds = metrics.roc_curve(y, probArray)
 aucResult = metrics.auc(fpr, tpr)
 print ("AUC on testing data is: " + str(aucResult))
+
 OutputDataSet = pandas.DataFrame(data = probList, columns = ["predictions"])
 ',	
   @input_data_1 = @inquery,

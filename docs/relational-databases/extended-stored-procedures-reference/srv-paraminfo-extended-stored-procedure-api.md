@@ -5,8 +5,7 @@ ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: stored-procedures
 ms.topic: "reference"
 apiname: 
   - "srv_paraminfo"

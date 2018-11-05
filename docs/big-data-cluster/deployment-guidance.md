@@ -92,7 +92,7 @@ kubectl config view
 1. Install **mssqlctl** with the following command:
 
    ```bash
-   pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctl
+   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctl
    ```
 
 ### Linux mssqlctl installation
@@ -118,7 +118,7 @@ On Linux, you must install the **python3** and **python3-pip** packages and then
 1. Install **mssqlctl** with the following command:
 
    ```bash
-   pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctl
+   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctl
    ```
 
 ## Define environment variables
@@ -294,7 +294,7 @@ Currently, the only way to upgrade a big data cluster to a new release is to man
 1. Install the latest version of **mssqlctl**.
    
    ```bash
-   pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctl
+   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctl
    ```
 
    > [!IMPORTANT]

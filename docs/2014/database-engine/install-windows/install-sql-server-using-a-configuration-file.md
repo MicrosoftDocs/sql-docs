@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "01/20/2016"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: a832153a-6775-4bed-83f0-55790766d885
 author: MashaMSFT

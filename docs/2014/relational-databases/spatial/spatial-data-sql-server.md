@@ -1,11 +1,9 @@
 ---
 title: "Spatial Data (SQL Server) | Microsoft Docs"
-ms.custom: ""
 ms.date: "06/14/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: 
-  - "dbe-spatial"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "geography data type [SQL Server], spatial storage design"

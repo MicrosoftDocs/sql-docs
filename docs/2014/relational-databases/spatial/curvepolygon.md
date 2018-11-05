@@ -1,11 +1,9 @@
 ---
 title: "CurvePolygon | Microsoft Docs"
-ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: 
-  - "dbe-spatial"
 ms.topic: conceptual
 ms.assetid: e000a1d8-a049-4542-bfeb-943fd6ab3969
 author: douglaslMS

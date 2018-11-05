@@ -41,7 +41,7 @@ When you install [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-m
 |Office Database Connection files||.odc||  
  
 
-<sup>[1]
+<sup id="dnu">[1]
 Using **ACE 14 OLE DB provider** to connect to file data types **is not recommended**. It's recommended you upgrade to tabular 1400 compatibility level and use **Get Data** in SSDT to select and import your file data source. Get Data uses structured data source connections, which provide greater stability than ACE 14 OLE DB provider connections. If you must retain your tabular 1200 and lower compatibility level models, export the data to a csv file type, then import those into a SQL database, and then connect to and import that database. 
 </sup>
 

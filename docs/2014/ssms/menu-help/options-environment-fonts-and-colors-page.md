@@ -6,8 +6,6 @@ ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology:
 ms.topic: conceptual
-f1_keywords: 
-  - "VS.ToolsOptionsPages.Environment.Fonts_And_Colors"
 ms.assetid: ea3aa222-538d-485f-99dc-01eb02cdcfea
 author: stevestein
 ms.author: sstein

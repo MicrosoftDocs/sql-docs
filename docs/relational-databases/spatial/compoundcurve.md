@@ -1,12 +1,10 @@
 ---
 title: "CompoundCurve | Microsoft Docs"
-ms.custom: ""
 ms.date: "06/02/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: 
-  - "dbe-spatial"
 ms.topic: conceptual
 ms.assetid: ae357f9b-e3e2-4cdf-af02-012acda2e466
 author: "douglaslMS"

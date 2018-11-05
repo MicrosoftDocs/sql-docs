@@ -1,7 +1,7 @@
 ---
 title: "SQL Server 2019 Release Notes | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/02/2018"
+ms.date: "11/06/2018"
 ms.prod: "sql-server-2018"
 ms.reviewer: ""
 ms.technology: 
@@ -32,7 +32,7 @@ This article describes limitations and known issues for the [!INCLUDE[SQL Server
 - Install on Linux for [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md), [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md), and [Ubuntu](../linux/quickstart-install-connect-ubuntu.md).
 - [Run on SQL Server 2019 on Docker](../linux/quickstart-install-connect-docker.md).
 
-## CTP 2.1 (October 2018)
+## CTP 2.1 (November 2018)
 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.1 is the latest public release of [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)].
 
 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.1 is available only as Evaluation Edition. No other editions are available. Support for CTP 2.1 is described in license_Eval.rtf with your installation media.
@@ -67,6 +67,14 @@ Limited support may be found at one of the following locations:
     - Microsoft .NET Framework 4.6.2. Available from [Download Center](http://www.microsoft.com/download/details.aspx?id=53344).
     - For Linux, refer to [Linux - supported platforms](../linux/sql-server-linux-setup.md#supportedplatforms)
 
+### Floating point results
+
+- **Issue and customer impact**: SQL Server 2019 preview uses an updated compiler to build SQL Server. In some cases code compiled with the new compiler can return floating point numeric values that are different from previous versions of SQL Server. Behavior change will be restricted to new compatibility level (150) in a future CTP.
+
+- **Workaround**: N/A
+
+- **Applies to**: SQL Server 2019 CTP 2.1
+
 ### SQL Server Integration Services (SSIS) page deployment after switching DB to single-user mode and then switching back
 
 - **Issue and customer impact**: After SSISB is switched from single-user mode back to multi-user mode, the following error may be reported when deploying a package:
@@ -77,25 +85,12 @@ Limited support may be found at one of the following locations:
 
 - **Applies to**: SQL Server 2019 preview CTP 2.1
 
-### Hadoop components fail
-
-- **Issue and customer impact**: Hadoop components fail with the following error:
-
-  `System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.WindowsAzure.Storage, Version=3.2.0.0, Culture=neutral, PublicKeyToken=<>' or one of its dependencies. The system cannot find the file specified.`
-
-- **Workaround**: N/A
-
-- **More information**:
-
-- **Applies to**: SQL Server 2019 CTP 2.1
 
 ### UDF Inlining 
 
-- **Issue and customer impact**: In some scenarios user-defined function inlining may allow unauthorized access to securables referenced in the `EXECUTE` string.
+- **Issue and customer impact**: There are corner case scenarios where nested calls to user defined functions inline do not correctly validate security.
   
-- **Workaround**: Not applicable
-
-- **More information**:
+- **Workaround**: Disable UDF inlining for using the `INLINE=OFF` option.
 
 - **Applies to**: SQL Server 2019 CTP 2.1
 
@@ -140,6 +135,18 @@ Limited support may be found at one of the following locations:
 - **Workaround**: To enable rich computations, run `DBCC traceon(127,-1)`. For details, see  [Enable rich computations](../relational-databases/security/encryption/configure-always-encrypted-enclaves.md#configure-a-secure-enclave).
 
 - **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.1, 2.0.
+
+### SQL Server Integration Service - Fuzzy Lookup Transformation
+
+- **Issue / customer impact**: The Fuzzy Lookup Transformation would fail with following error if it's set to reuse index:
+
+  `The specified delimiters do not match the delimiters used to build the pre-existing match index "...". This error occurs when the delimiters used to tokenize fields do not match. This can have unknown effects on the matching behavior or results.`
+
+- **Workaround**: N/A
+
+- **More information**: N/A  
+
+- **Applies To**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP2.1
 
 ## CTP 2.0 (September 2018)
 

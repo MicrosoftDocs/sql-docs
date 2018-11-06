@@ -174,7 +174,10 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sql
  This short example creates three users, creates and populates a table with 6 rows, then creates an inline table valued function and a security policy for the table. The example shows how select statements are filtered for the various users.  
   
  Create three user accounts that will demonstrate different access capabilities.  
-  
+
+> [!NOTE]
+> Azure SQL Data Warehouse doesn't support EXECUTE AS USER, hence CREATE LOGIN for each user beforehand. Later you will login as desired user to test this behavior.
+
 ```sql  
 CREATE USER Manager WITHOUT LOGIN;  
 CREATE USER Sales1 WITHOUT LOGIN;  
@@ -230,7 +233,7 @@ WHERE @SalesRep = USER_NAME() OR USER_NAME() = 'Manager';
 ```  
   
 > [!NOTE]
-> Azure SQL Data Warehouse (SQL DW) doesn't support WITH SCHEMABINDING option. SQL DW also doesn’t support USER_NAME(), hence use SYSTEM_USER instead.
+> Azure SQL Data Warehouse doesn’t support USER_NAME(), hence use SYSTEM_USER instead.
 
  Create a security policy adding the function as a filter predicate. The state must be set to ON to enable the policy.  
   
@@ -257,7 +260,7 @@ SELECT * FROM Sales;
 REVERT;  
 ```  
 > [!NOTE]
-> Azure SQL Data Warehouse (SQL DW) doesn't support EXECUTE AS USER, hence login as desired user to test the above behavior.
+> Azure SQL Data Warehouse doesn't support EXECUTE AS USER, hence login as desired user to test the above behavior.
 
  The Manager should see all 6 rows. The Sales1 and Sales2 users should only see their own sales.  
   
@@ -272,7 +275,10 @@ WITH (STATE = OFF);
   
   
 ###  <a name="MidTier"></a> B. Scenario for users who connect to the database through a middle-tier application  
- This example shows how a middle-tier application can implement connection filtering, where application users (or tenants) share the same [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] user (the application). The application sets the current application user ID in [SESSION_CONTEXT &#40;Transact-SQL&#41;](../../t-sql/functions/session-context-transact-sql.md) after connecting to the database, and then security policies transparently filter rows that shouldn't be visible to this ID, and also block the user from inserting rows for the wrong user ID. No other app changes are necessary .  
+> [!NOTE]
+> This example with SESSION_CONTEXT isn't applicable to Azure SQL Data Warehouse since both SESSION_CONTEXT and block predicates aren't currently supported.
+
+This example shows how a middle-tier application can implement connection filtering, where application users (or tenants) share the same [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] user (the application). The application sets the current application user ID in [SESSION_CONTEXT &#40;Transact-SQL&#41;](../../t-sql/functions/session-context-transact-sql.md) after connecting to the database, and then security policies transparently filter rows that shouldn't be visible to this ID, and also block the user from inserting rows for the wrong user ID. No other app changes are necessary .  
   
  Create a simple table to hold data.  
   
@@ -308,10 +314,7 @@ GRANT SELECT, INSERT, UPDATE, DELETE ON Sales TO AppUser;
 DENY UPDATE ON Sales(AppUserId) TO AppUser;  
 ```  
   
- Create a new schema and predicate function, which will use the application user ID stored in **SESSION_CONTEXT** to filter rows.  
-
-> [!NOTE]
-> This example with SESSION_CONTEXT isn't applicable to Azure SQL Data Warehouse since both SESSION_CONTEXT and block predicates aren't currently supported.
+ Create a new schema and predicate function, which will use the application user ID stored in **SESSION_CONTEXT** to filter rows.
 
 ```  
 CREATE SCHEMA Security;  

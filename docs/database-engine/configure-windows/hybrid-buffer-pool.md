@@ -31,4 +31,3 @@ On CTP 2.1, you must enable the startup trace flag 809 in order to use Hybrid Bu
 
 * When formatting your PMEM device on Windows use the largest allocation unit size available for NTFS (2MB in Windows Server 2019) and ensure the device has been enabled for DAX (DirectAccess)
   
-  

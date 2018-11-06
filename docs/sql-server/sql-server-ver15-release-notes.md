@@ -1,7 +1,7 @@
 ---
 title: "SQL Server 2019 Release Notes | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/06/2018"
+ms.date: 11/06/2018
 ms.prod: "sql-server-2018"
 ms.reviewer: ""
 ms.technology: 

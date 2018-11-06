@@ -108,13 +108,6 @@ On Linux, you must install the **python3** and **python3-pip** packages and then
    sudo -H pip3 install --upgrade pip
    ```
 
-1. Make sure that you have the latest **requests** package.
-
-   ```bash
-   sudo -H python3 -m pip install requests
-   sudo -H python3 -m pip install requests --upgrade
-   ```
-
 1. Install **mssqlctl** with the following command:
 
    ```bash

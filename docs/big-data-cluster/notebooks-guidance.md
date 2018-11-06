@@ -23,10 +23,10 @@ To use notebooks, you must install the following prerequisites:
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
-## Connect to the Hadoop Gateway Knox end-point
+## Connect to the Hadoop Gateway Knox end point
 
-You can connect to different end-points in the cluster. You can connect to the Microsoft SQL Server connection type or to the HDFS/Spark Gateway end-point.
-In Azure Data Studio (preview), press F1, and click **New Connection** and you can connect to your HDFS/Spark Gateway end-point.
+You can connect to different end points in the cluster. You can connect to the Microsoft SQL Server connection type or to the HDFS/Spark Gateway end point.
+In Azure Data Studio (preview), press F1, and click **New Connection** and you can connect to your HDFS/Spark Gateway end point.
 
 ![image1](media/notebooks-guidance/image1.png)
 
@@ -43,7 +43,7 @@ These simple operations let you bring your own data into HDFS.
 >[!NOTE]
 >If you have multiple Python processes running in your environment, first delete the `.scaleoutdata` folder under your installed directory. This should trigger the `Reinstall Notebook dependencies` task in Azure Data Studio. It will take few minutes for all the dependencies to be installed.
 
-If there are issues in installing notebook dependencies please click on Ctrl+Shift+P or Cmd+Shift+P ( if you are in Mac) and the type in “Reinstall Notebook dependencies” in the command palette.
+If there are issues installing notebook dependencies please click on Ctrl+Shift+P or for Macintosh Cmd+Shift+P, and type `Reinstall Notebook dependencies` in the command palette.
 
 ![image3](media/notebooks-guidance/image3.png)
 
@@ -75,8 +75,7 @@ When you select one of these kernels, we will install that kernel in the virtual
 |Spark Kernel|For writing Scala code using Spark compute from the cluster.
 |Python Kernel|For writing Python code for local development.
 
-
-The Attach to provides the context for the Kernel to attach. When you are connected to the HDFS/Spark Gateway (Knox) end-point the default Attach to will be that end-point of the cluster.
+The `Attach to` provides the context for the Kernel to attach. When you are connected to the HDFS/Spark Gateway (Knox) end point the default `Attach to` is that end point of the cluster.
 
 ![image8](media/notebooks-guidance/image8.png)
 
@@ -105,15 +104,15 @@ You can also view the “Cell Options” when you click on the options icon belo
 
 ![image13](media/notebooks-guidance/image13.png)
 
-Here are the list of options you can see for every cell –
+Here are the options for every cell –
 
-![image14](media/notebooks-guidance/image14.png)
+![image14](media/notebooks-guidance/image14.png)-
 
-Now, choose the Spark Kernel in the drop down for the kernels and in the cell type/paste in –
+Now, choose the Spark Kernel in the dropdown for the kernels and in the cell type/paste in –
 
 ![image15](media/notebooks-guidance/image15.png)
 
-Click **Run** and you should see the Spark Application being started and this will create the Sparksession as **spark** and will define the **HelloWorld** object.
+Click **Run** and you should see the Spark Application being started and this will create the Spark session as **spark** and will define the **HelloWorld** object.
 
 The Notebook should look similar to the following image.
 

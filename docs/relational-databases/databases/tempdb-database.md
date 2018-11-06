@@ -198,6 +198,10 @@ GO
 - All allocations in **tempdb** use uniform extents. [Trace flag 1118](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) is no longer required.  
 - For the primary filegroup, the AUTOGROW_ALL_FILES property is turned on and the property cannot be modified. 
 
+For more information on performance improvements in tempdb, see the following blog article:
+
+[TEMPDB – Files and Trace Flags and Updates, Oh My!](https://blogs.msdn.microsoft.com/sql_server_team/tempdb-files-and-trace-flags-and-updates-oh-my/)
+
 ## Capacity Planning for tempdb in SQL Server
  Determining the appropriate size for tempdb in a SQL Server production environment depends on many factors. As described previously in this article, these factors include the existing workload and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features that are used. We recommend that you analyze the existing workload by performing the following tasks in a SQL Server test environment:
 - Set autogrow on for tempdb.
@@ -268,5 +272,5 @@ GO
  [Move Database Files](../../relational-databases/databases/move-database-files.md)  
   
 ## See Also  
- [Working with tempdb in SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=81216)  
+ [Working with tempdb in SQL Server 2005](https://technet.microsoft.com/library/cc966545.aspx)  
  [Troubleshooting Insufficient Disk Space in tempdb](http://msdn.microsoft.com/library/ms176029.aspx) 

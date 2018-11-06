@@ -3,6 +3,7 @@ title: "Subqueries (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/18/2018"
 ms.prod: sql
+ms.technology: performance
 ms.reviewer: ""
 ms.topic: conceptual
 helpviewer_keywords: 

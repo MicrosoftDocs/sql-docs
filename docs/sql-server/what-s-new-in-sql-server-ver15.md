@@ -35,6 +35,8 @@ Community technology preview (CTP) 2.1 is the latest public release of [!INCLUDE
   - UTF-8 collations support in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] setup
   - Use derived table or view aliases in graph match queries
   - Improved diagnostic data for stats blocking
+- [Tools](#tools)
+  - Azure Data Studio
 
 ## CTP 2.0 
 
@@ -373,6 +375,7 @@ FROM sys.dm_exec_requests AS d
 
 - [**Azure Data Studio**](../azure-data-studio/what-is.md): Previously released under the preview name SQL Operations Studio, Azure Data Studio is a lightweight, modern, open source, cross-platform desktop tool for the most common tasks in data development and administration. With Azure Data Studio you can connect to SQL Server on premises and in the cloud on Windows, macOS, and Linux. Azure Data Studio allows you to:
 
+  - Update to the [SQL Server 2019 (preview) extension](../azure-data-studio/sql-server-2019-extension.md). (CTP 2.1)
   - Edit and run queries in a modern development environment with lightning fast Intellisense, code snippets, and source control integration.  
   - Quickly visualize data with built-in charting of your result sets.  
   - Create custom dashboards for your servers and databases using customizable widgets.  

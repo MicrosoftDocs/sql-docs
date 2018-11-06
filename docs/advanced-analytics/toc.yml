@@ -2,14 +2,14 @@
   href: index.md
 - name: Machine learning extensions (R, Python)
   items:
+  - name: What's New
+    href: what-s-new-in-sql-server-machine-learning-services.md
   - name: Machine Learning Services (R, Python)
     href: what-is-sql-server-machine-learning.md
   - name: R Services
     href: r/sql-server-r-services.md
   - name: Standalone server
     href: r/r-server-standalone.md
-  - name: What's New
-    href: what-s-new-in-sql-server-machine-learning-services.md
 - name: Java extension
   items:
   - name: Run Java code on SQL
@@ -24,13 +24,13 @@
   items:
   - name: Differences in SQL Server 2019
     href: install/sql-machine-learning-services-ver15.md
-  - name: Machine Learning Services (R, Python)
+  - name: Install MLS (R, Python)
     href: install/sql-machine-learning-services-windows-install.md
-  - name: R Services
+  - name: Install R Services
     href: install/sql-r-services-windows-install.md
-  - name: Standalone server (R, Python)
+  - name: Install standalone server (R, Python)
     href: install/sql-machine-learning-standalone-windows-install.md
-  - name: Pre-trained models
+  - name: Install pre-trained models
     href: install/sql-pretrained-models-install.md
   - name: Offline setup (no internet)
     href: install/sql-ml-component-install-without-internet-access.md
@@ -41,9 +41,9 @@
     href: install/sql-ml-component-commandline-install.md
   - name: Upgrade R and Python
     href: r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md
-  - name: Set up R tools
+  - name: Set up an R client
     href: r/set-up-a-data-science-client.md
-  - name: Set up Python tools
+  - name: Set up a Python client
     href: python/setup-python-client-tools-sql.md
   - name: Set up a virtual server
     href: r/installing-sql-server-r-services-on-an-azure-virtual-machine.md

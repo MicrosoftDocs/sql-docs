@@ -35,7 +35,7 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sql
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Get it](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)), [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
   
 > [!NOTE]
-> Azure SQL Data Warehouse (SQL DW) currently supports filter predicates only.
+> Azure SQL Data Warehouse supports filter predicates only. Block predicates aren't currently supported in Azure SQL DAta Warehouse.
 
 ##  <a name="Description"></a> Description  
  RLS supports two types of security predicates.  
@@ -117,7 +117,7 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sql
   
 -   It is highly recommended to create a separate schema for the RLS objects (predicate function and security policy).  
   
--   The **ALTER ANY SECURITY POLICY** permission is intended for highly privileged users (such as a security policy manager). The security policy manager does not require **SELECT** permission on the tables they protect.  
+-   The **ALTER ANY SECURITY POLICY** permission is intended for highly privileged users (such as a security policy manager). The security policy manager doesn't require **SELECT** permission on the tables they protect.  
   
 -   Avoid type conversions in predicate functions to avoid potential runtime errors.  
   
@@ -161,7 +161,7 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sql
   
 -   **Full-Text Search** A performance hit is expected for queries using the following Full-Text Search and Semantic Search functions, because of an extra join introduced to apply row-level security and avoid leaking the primary keys of rows that should be filtered: **CONTAINSTABLE**, **FREETEXTTABLE**, semantickeyphrasetable, semanticsimilaritydetailstable, semanticsimilaritytable.  
   
--   **Columnstore Indexes** RLS is compatible with both clustered and non-clustered columnstore indexes. However, because row-level security applies a function, it is possible that the optimizer may modify the query plan such that it does not use batch mode.  
+-   **Columnstore Indexes** RLS is compatible with both clustered and non-clustered columnstore indexes. However, because row-level security applies a function, it is possible that the optimizer may modify the query plan so that it doesn't use batch mode.  
   
 -   **Partitioned Views** Block predicates cannot be defined on partitioned views, and partitioned views cannot be created on top of tables that use block predicates. Filter predicates are compatible with partitioned views.  
   
@@ -176,7 +176,7 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sql
  Create three user accounts that will demonstrate different access capabilities.  
 
 > [!NOTE]
-> Azure SQL Data Warehouse doesn't support EXECUTE AS USER, hence CREATE LOGIN for each user beforehand. Later you will login as desired user to test this behavior.
+> Azure SQL Data Warehouse doesn't support EXECUTE AS USER, so you must CREATE LOGIN for each user beforehand. Later, you will log in as the appropriate user to test this behavior.
 
 ```sql  
 CREATE USER Manager WITHOUT LOGIN;  
@@ -260,7 +260,7 @@ SELECT * FROM Sales;
 REVERT;  
 ```  
 > [!NOTE]
-> Azure SQL Data Warehouse doesn't support EXECUTE AS USER, hence login as desired user to test the above behavior.
+> Azure SQL Data Warehouse doesn't support EXECUTE AS USER, so log in as the appropriate user to test the above behavior.
 
  The Manager should see all six rows. The Sales1 and Sales2 users should only see their own sales.  
   

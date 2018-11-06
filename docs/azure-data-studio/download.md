@@ -177,6 +177,7 @@ If you want to move your custom settings, keyboard shortcuts, or code snippets, 
 
 4. In your new version of Azure Data Studio, follow steps 1-2, then for step 3 paste the contents you saved into the folder. You can also manually copy over the settings, keybindings, or snippets in their respective locations.
 
+5. If overriding an existing installation, delete the old install directory before installation to avoid errors connecting to your Azure account for the resource explorer.
 
 ## Next Steps
 

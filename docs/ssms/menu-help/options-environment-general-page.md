@@ -29,3 +29,7 @@ Specifies that when this check box is selected, only the tool window that has fo
 **Auto Hide button affects active tool window only**
 
 Specifies that when this check box is selected, only the tool window that has focus currently is hidden automatically, not all of the tool windows in the docked set. By default, this check box is cleared.
+
+## See also
+
+- [Options Dialog Boxes F1 Help](options-dialog-boxes-f1-help.md)

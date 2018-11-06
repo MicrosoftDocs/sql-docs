@@ -1,5 +1,5 @@
 ---
-title: "Options (Environment - Startup Page) | Microsoft Docs"
+title: " SQL Server Options page - Environment - Startup | Microsoft Docs"
 ms.date: 11/05/2018
 ms.prod: sql
 ms.prod_service: "sql-tools"
@@ -37,3 +37,8 @@ Select the action for [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-
 **Hide system objects in Object Explorer**
 
 Select this check box to remove the system databases, system tables, system views, and system stored procedures from tree view in Object Explorer. System functions and system data types are not hidden. This option only applies to instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and does not affect servers already connected in Object Explorer.
+
+## See also
+
+- [Options Dialog Boxes F1 Help](options-dialog-boxes-f1-help.md)
+- [Options (Environment - General Page)](options-environment-general-page.md)

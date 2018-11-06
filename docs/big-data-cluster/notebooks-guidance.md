@@ -11,7 +11,7 @@ ms.prod: sql
 
 # How to use notebooks in SQL Server 2019 preview
 
-This how you can launch Jupyter Notebooks on the cluster and start authoring your own Notebooks. It also shows how to submit jobs against the cluster.
+This article describes how to launch Jupyter Notebooks on the cluster and start authoring your own Notebooks. It also shows how to submit jobs against the cluster.
 
 ## Prerequisites
 
@@ -43,7 +43,7 @@ These simple operations let you bring your own data into HDFS.
 >[!NOTE]
 >If you have multiple Python processes running in your environment, first delete the `.scaleoutdata` folder under your installed directory. This should trigger the `Reinstall Notebook dependencies` task in Azure Data Studio. It will take few minutes for all the dependencies to be installed.
 
-If there are issues installing notebook dependencies please click on Ctrl+Shift+P or for Macintosh Cmd+Shift+P, and type `Reinstall Notebook dependencies` in the command palette.
+If there are issues installing notebook dependencies, click on Ctrl+Shift+P or for Macintosh Cmd+Shift+P, and type `Reinstall Notebook dependencies` in the command palette.
 
 ![image3](media/notebooks-guidance/image3.png)
 
@@ -63,7 +63,7 @@ There are multiple ways to launch a new notebook.
 
 ## Supported kernels and attach to context
 
-In our Notebook Installation we support PySpark and Spark, Spark Magic kernels which would allow users to write Python and Scala code using Spark. Optionally, you can  choose Python for local development purposes.
+The Notebook Installation supports PySpark and Spark, Spark Magic kernels, which allow you to write Python and Scala code using Spark. Optionally, you can  choose Python for local development purposes.
 
 ![image7](media/notebooks-guidance/image7.png)
 

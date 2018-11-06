@@ -1,5 +1,5 @@
 ---
-title: "Hybrid buffer pool | Microsoft Docs"
+title: "Hybrid Buffer Pool | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/06/2018"
 ms.prod: sql
@@ -12,18 +12,23 @@ author: DBArgenis
 ms.author: Argenis.Fernandez
 manager: craigg
 ---
-# Hybrid buffer pool
+# Hybrid Buffer Pool
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-## Benefits of the Hybrid buffer pool  
-## Related Tasks  
-  
-|||  
-|-|-|  
-|**Task Description**|**Topic**|  
-|Enable and configure the Hybrid buffer pool.|[ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md)|  
-|Modify the Hybrid buffer pool configuration|[ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md)|  
-|View the Hybrid buffer pool configuration|[sys.dm_os_buffer_pool_extension_configuration &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)|  
-|Monitor the Hybrid buffer pool|[sys.dm_os_buffer_descriptors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql.md)<br /><br /> [Performance counters](../../relational-databases/performance-monitor/sql-server-buffer-manager-object.md)|  
+With SQL Server 2019 CTP 2.1 a new feature is introduced in the SQL Server database engine which allows it to directly access data pages in database files stored in persistent memory (PMEM) devices. 
+
+In a traditional system without persistent memory, SQL Server caches data pages in the buffer pool. With Hybrid Buffer Pool, SQL Server skips performing a copy of the page into the DRAM-based portion of the buffer pool, and instead references the page directly on the database file that lives on a PMEM device. Access to data files in PMEM for Hybrid Buffer Pool is performed using memory-mapped I/O, also known as enlightenment.
+
+Only clean pages can be referenced directly on a PMEM device. When a page becomes dirty it is kept in DRAM, and then eventually written back to the PMEM device.
+
+This feature is available on both Windows and Linux.
+
+## Enable Hybrid Buffer Pool
+
+On CTP 2.1, you must enable the startup trace flag 809 in order to use Hybrid Buffer Pool.
+
+## Best Practices for Hybrid Buffer Pool
+
+* When formatting your PMEM device on Windows use the largest allocation unit size available for NTFS (2MB in Windows Server 2019) and ensure the device has been enabled for DAX (DirectAccess)
   
   

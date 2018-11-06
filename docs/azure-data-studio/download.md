@@ -20,8 +20,6 @@ Download and install the latest release, the *October Release*:
 > [!NOTE]
 > If you're updating from SQL Operations Studio and want to keep your settings, keyboard shortcuts, or code snippets, see [Move user settings](#move-user-settings).
 
-> If overriding an existing installation, delete the old install directory before installation to avoid errors connecting to your Azure account for the resource explorer.
-
 |Platform|Download|Release date| Version |
 |:---|:---|:---|:---|
 |Windows|[Installer](https://go.microsoft.com/fwlink/?linkid=2030731)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2030736)|October 30, 2018 |1.1.4|
@@ -179,6 +177,7 @@ If you want to move your custom settings, keyboard shortcuts, or code snippets, 
 
 4. In your new version of Azure Data Studio, follow steps 1-2, then for step 3 paste the contents you saved into the folder. You can also manually copy over the settings, keybindings, or snippets in their respective locations.
 
+5. If overriding an existing installation, delete the old install directory before installation to avoid errors connecting to your Azure account for the resource explorer.
 
 ## Next Steps
 

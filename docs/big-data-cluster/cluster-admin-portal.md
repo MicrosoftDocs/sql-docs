@@ -4,7 +4,7 @@ description: Learn how to use the cluster administration portal to monitor SQL S
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.date: 10/16/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ---
@@ -27,7 +27,7 @@ Follow the [quickstart to deploy your big data cluster](quickstart-big-data-clus
 Once the controller pod is running, you can use the cluster administration portal to monitor the deployment. You can access the portal using the external IP address and port number for the `service-proxy-lb` (for example: **https://\<ip-address\>:30777**). Credentials for accessing the admin portal are the values of `CONTROLLER_USERNAME` and `CONTROLLER_PASSWORD` environment variables provided above.
 
 > [!NOTE]
-> For CTP 2.0, There is a security warning when accessing the web page since it is using auto-generated SSL certificates.
+> For CTP 2.1, There is a security warning when accessing the web page since it is using auto-generated SSL certificates.
 
 ## Overview
 

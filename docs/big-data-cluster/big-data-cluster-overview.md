@@ -4,7 +4,7 @@ description: Learn about SQL Server 2019 big data clusters (preview) that run on
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 10/25/2018
+ms.date: 11/06/2018
 ms.topic: overview
 ms.prod: sql
 ---
@@ -12,6 +12,8 @@ ms.prod: sql
 # What are SQL Server 2019 big data clusters?
 
 Starting with [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)], SQL Server big data clusters allow you to deploy scalable clusters of SQL Server, Spark, and HDFS containers running on Kubernetes. These components are running side by side to enable you to read, write, and process big data from Transact-SQL or Spark, allowing you to easily combine and analyze your high-value relational data with high-volume big data.
+
+For more information about new features and known issues for latest release, see the [release notes](big-data-cluster-release-notes.md).
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 

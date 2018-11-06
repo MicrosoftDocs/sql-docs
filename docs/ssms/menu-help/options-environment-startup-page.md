@@ -8,6 +8,8 @@ ms.topic: conceptual
 f1_keywords:
   - "VS.TOOLSOPTIONSPAGES.ENVIRONMENT.Startup"
   - "DevLang-TSQL"
+dev_langs:
+ - sql
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

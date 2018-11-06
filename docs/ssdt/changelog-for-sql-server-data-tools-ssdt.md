@@ -32,7 +32,7 @@ Fixed an issue that deploying SSIS project which contains packages containing Sc
 ### Known issues:
 
 - SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True. This issue only applies to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog is not impacted.
-- SSDT for Visual Studio 2017 (15.8.2) doesn't support designing package which contains Oracle/Teradata source/destination. Please use SSDT for Visual Studio 2017 (15.8) to do it.
+- SSDT for Visual Studio 2017 (15.8.2) doesn't support designing packages that contain Oracle/Teradata source/destination. Use SSDT for Visual Studio 2017 (15.8).
 
 
 ## SSDT for Visual Studio 2017 (15.8.1)
@@ -49,8 +49,8 @@ Release date: September 27, 2018
 ### Known issues:
 
 - SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True. This issue only applies to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog is not impacted.
-- Deploying SSIS project which contains packages containing Script Task/Flat file destination to Azure-SSIS will result in the packages failing to execute in Azure-SSIS.
-- SSDT for Visual Studio 2017 (15.8.1) doesn't support designing package which contains Oracle/Teradata source/destination. Please use SSDT for Visual Studio 2017 (15.8) to do it.
+- Deploying SSIS projects that have packages that contain Script Task/Flat file destination to Azure-SSIS will result in the packages failing to execute in Azure-SSIS.
+- SSDT for Visual Studio 2017 (15.8.1) doesn't support designing packages that contain Oracle/Teradata source/destination. Use SSDT for Visual Studio 2017 (15.8).
 
 
 ## SSDT for Visual Studio 2017 (15.8)

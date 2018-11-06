@@ -13,13 +13,27 @@ ms.date: 11/06/2018
 
 This topic provides step-by-step instructions for migrating one of the following supported versions of a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] native mode deployment to a new SQL Server Reporting Services instance:  
   
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+* [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)]
+
 * [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
   
 * [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
   
 * [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]  
   
-* [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]  
+* [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]
+::: moniker-end
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+* [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
+  
+* [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
+  
+* [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]  
+  
+* [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]
+::: moniker-end
 
 For information on migrating a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode deployment, see [Migrate a Reporting Services Installation &#40;SharePoint Mode&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md).  
   
@@ -142,15 +156,27 @@ For more information about changes in SQL Server Reporting Services, see the Upg
   
 1. Choose the [!INCLUDE[ssDE](../../includes/ssde-md.md)] instance to use. SQL Server Reporting Services requires that you use one of the following versions to host the report server database:  
   
-    * SQL Server 2016
-  
+    ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+    * [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)]
+
     * [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
   
     * [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
   
     * [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]  
   
-    * [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]  
+    * [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]
+    ::: moniker-end
+
+    ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+    * [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
+
+    * [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
+
+    * [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]  
+
+    * [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]
+    ::: moniker-end
   
 2. Start [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

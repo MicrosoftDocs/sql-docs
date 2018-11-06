@@ -4,7 +4,7 @@ description: Learn how to configure Azure Kubernetes Service (AKS) for SQL Serve
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 10/23/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ---
@@ -26,8 +26,7 @@ This article describes the steps to deploy Kubernetes on AKS using Azure CLI. If
   
 - This section requires that you be running the Azure CLI version 2.0.4 or later. If you need to install or upgrade, see [Install Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-azure-cli). Run `az --version` to find the version if needed.
 
-- Install [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/). SQL Server big data cluster requires any minor version within the 1.10 version range for Kubernetes, for both server and client. To install a specific version on kubectl client, see [Install kubectl binary via curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl). For AKS you will need to use `--kubernetes-version` parameter to specify a version different than default. Note that at the CTP2.0 release timeframe, AKS only supports 1.10.7 and 1.10.8 versions. 
-
+- Install [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) with a minimum of version 1.10 for both server and client. If you want to install a specific version on kubectl client, see [Install kubectl binary via curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl). For AKS, you need to use `--kubernetes-version` parameter to specify a version different than the default.
 
 > [!NOTE]
 Note that the client/server version skew that is supported is +/-1 minor version. The Kubernetes documentation states that  "a client should be skewed no more than one minor version from the master, but may lead the master by up to one minor version. For example, a v1.3 master should work with v1.1, v1.2, and v1.3 nodes, and should work with v1.2, v1.3, and v1.4 clients." For more information, see [Kubernetes supported releases and component skew](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew).
@@ -75,7 +74,7 @@ An Azure resource group is a logical group in which Azure resources are deployed
     --generate-ssh-keys \
     --node-vm-size Standard_E4s_v3 \
     --node-count 3 \
-    --kubernetes-version 1.10.7
+    --kubernetes-version 1.10.8
     ```
 
     You can increase or decrease the default agent count by changing the `--node-count <n>` where `<n>` is the number of agent nodes you want to have.

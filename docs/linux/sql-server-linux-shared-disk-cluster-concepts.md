@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: "sql-linux"
 ms.technology: linux
-ms.assetid: 
 ---
 
 # Failover Cluster Instances - SQL Server on Linux

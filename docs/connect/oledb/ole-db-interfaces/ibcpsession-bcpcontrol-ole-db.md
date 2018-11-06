@@ -6,8 +6,7 @@ ms.date: "07/03/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: connectivity
 ms.topic: "reference"
 apiname: 
   - "IBCPSession::BCPControl (OLE DB)"

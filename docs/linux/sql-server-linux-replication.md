@@ -6,11 +6,10 @@ ms.author: mikeray
 manager: craigg
 ms.date: 10/17/2018
 ms.topic: article
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
 ms.custom: "sql-linux"
-ms.technology: database-engine
-ms.assetid: 
+ms.technology: linux
 ms.workload: "On Demand"
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---

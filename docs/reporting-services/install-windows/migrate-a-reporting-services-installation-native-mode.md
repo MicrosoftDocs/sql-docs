@@ -39,7 +39,7 @@ For information on migrating a [!INCLUDE[ssRSnoversion](../../includes/ssrsnover
   
 * Back up the encryption key.  
   
-* Install a new instance of SQL Server. If you are using the same hardware, you can install SQL Server side-by-side with your existing installation if it was one of the supported versions.  
+* Install a new instance of SQL Server. If you are using the same hardware, you can install SQL Server side by side with your existing installation if it was one of the supported versions.  
   
     > [!TIP]  
     >  A side-by-side installation may require that you install SQL Server as a named instance.
@@ -62,7 +62,7 @@ For information on migrating a [!INCLUDE[ssRSnoversion](../../includes/ssrsnover
   
 ## <a name="bkmk_fixed_database_name"></a> Fixed Database Name
 
- You cannot rename the report server database. The identity of the database is recorded in report server stored procedures when the database is created. Renaming either the report server primary or temporary databases causes errors when the procedures run, invalidating your report server installation.  
+ You cannot rename the report server database. The identity of the database is recorded in report server stored procedures when the database is created. Renaming either the report server primary or temporary databases cause errors when the procedures run, invalidating your report server installation.  
   
  If the database name from the existing installation is not suited for the new installation, you should consider creating a new database that has the name, and then load existing application data using the techniques in the following list:  
   
@@ -70,19 +70,19 @@ For information on migrating a [!INCLUDE[ssRSnoversion](../../includes/ssrsnover
   
 * Write code that calls the WMI provider to copy data between databases. For more information about this approach, see [Access the Reporting Services WMI Provider](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md).  
   
-* If you have just a few items, you can republish reports, report models, and shared data sources from Report Designer, Model Designer, and Report Builder to the new report server. You must re-create role assignments, subscriptions, shared schedules, report snapshot schedules, custom properties that you set on reports or other items, model item security, and properties that you set on the report server. You will lose report history and report execution log data.  
+* If you have just a few items, you can republish reports, report models, and shared data sources from Report Designer, Model Designer, and Report Builder to the new report server. Re-create the role assignments, subscriptions, shared schedules, report snapshot schedules, custom properties that you set on reports or other items, model item security, and properties that you set on the report server. Be prepared to lose report history and report execution log data if you follow these actions.
   
 ## <a name="bkmk_before_you_start"></a> Before You Start
 
  Even though you are migrating rather than upgrading the installation, consider running Upgrade Advisor on your existing installation help identify any issues that could affect migration. This step is especially helpful if you are migrating a report server that you did not install or configure. By running Upgrade Advisor, you can find out about custom settings that might not be supported in a new SQL Server installation.  
   
- In addition, you should be aware of several important changes in SQL Server Reporting Services that will affect how you migrate your installation:
+ In addition, you should be aware of several important changes in SQL Server Reporting Services that affect how you migrate your installation:
 
 * The new [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] has replaced Report Manager.
   
 * Starting with [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], IIS is no longer a prerequisite. If you are migrating a report server installation to a new computer, you do not need to add the Web server role. In addition, steps for configuring URLs and authentication are different from the previous release, as are techniques and tools for diagnosing and troubleshooting problems.  
   
-* Report Server Web service, the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)], and the Report Server Windows service run under the same account. All three applications read configuration settings from RSReportServer.config file. 
+* Report Server Web service, the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)], and the Report Server Windows service run under the same account. All three applications read configuration settings from RSReportServer.config file.
   
 * The [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] and SQL Server Management Studio are designed to remove overlapping features. Each tool supports a distinct set of tasks.
   
@@ -92,9 +92,9 @@ For information on migrating a [!INCLUDE[ssRSnoversion](../../includes/ssrsnover
   
 * Client Secure Sockets Layer (SSL) certificates are not supported in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] and later versions. If you use client SSL certificates, you must redesign your reporting solution prior to migration.  
   
-* If you use an authentication type other than Windows Integrated authentication, you must update the `<AuthenticationTypes>` element in the **RSReportServer.config** file with a supported authentication type. The supported authentication types are NTLM, Kerberos, Negotiate, and Basic. Anonymous, .NET Passport, and Digest authentication are not supported in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] and later versions.  
+* If you use an authentication type other than Windows-Integrated authentication, you must update the `<AuthenticationTypes>` element in the **RSReportServer.config** file with a supported authentication type. The supported authentication types are NTLM, Kerberos, Negotiate, and Basic. Anonymous, .NET Passport, and Digest authentication are not supported in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] and later versions.  
   
-* If you use custom cascading style sheets in your reporting environment, they will not be migrated. You must manually move them following migration. 
+* If you use custom cascading style sheets in your reporting environment, they can't be migrated. Manually move them following migration.
   
 For more information about changes in SQL Server Reporting Services, see the Upgrade Advisor documentation and [What's New in Reporting Services](../../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).  
 
@@ -124,7 +124,7 @@ For more information about changes in SQL Server Reporting Services, see the Upg
 
 ## <a name="bkmk_install_ssrs"></a> Install SQL Server Reporting Services
 
- Install a new report server instance in files-only mode so that you can configure it to use non-default values. For command line installation, use the **FilesOnly** argument. In the Installation Wizard, select the **Install but do not configure option**.  
+ Install a new report server instance in files-only mode so that you can configure it to use non-default values. For command-line installation, use the **FilesOnly** argument. In the Installation Wizard, select the **Install but do not configure option**.  
   
  Click one of the following links to view instructions on how to install a new instance of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]:  
   
@@ -138,11 +138,11 @@ For more information about changes in SQL Server Reporting Services, see the Upg
   
  If your migration includes using a different [!INCLUDE[ssDE](../../includes/ssde-md.md)] instance, you must move the report server database to the new [!INCLUDE[ssDE](../../includes/ssde-md.md)] instance. If you are using the same [!INCLUDE[ssDE](../../includes/ssde-md.md)] instance, skip to section [Move Custom Assemblies or Extensions](#bkmk_move_custom).  
   
- To move the report server database, do the following:  
+ To move the report server database, follow these steps:
   
 1. Choose the [!INCLUDE[ssDE](../../includes/ssde-md.md)] instance to use. SQL Server Reporting Services requires that you use one of the following versions to host the report server database:  
   
-    * SQL Server 2016  
+    * SQL Server 2016
   
     * [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
   
@@ -158,17 +158,17 @@ For more information about changes in SQL Server Reporting Services, see the Upg
   
 4. Follow the instructions in [Moving the Report Server Databases to Another Computer &#40;SSRS Native Mode&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
   
- Remember that both the report server database and the temporary database are interdependent and must be moved together. Do not copy the databases; copying does not transfer all of the security settings to the new installation. Do not move SQL Server Agent jobs for scheduled report server operations. The report server will recreate these jobs automatically.  
+ Remember that both the report server database and the temporary database are interdependent and must be moved together. Do not copy the databases; copying does not transfer all of the security settings to the new installation. Do not move SQL Server Agent jobs for scheduled report server operations. The report server recreates these jobs automatically.  
 
 ## <a name="bkmk_move_custom"></a> Move Custom Assemblies or Extensions
 
  If your installation includes custom report items, assemblies, or extensions, you must redeploy the custom components. If you are not using custom components, skip to section [Configure the Report Server](#bkmk_configure_reportserver).  
   
- To redeploy the custom components, do the following:  
+ To redeploy the custom components, follow these steps:  
   
 1. Determine whether the assemblies are supported or need recompilation:
 
-    * Custom security extensions must be re-written using the [IAuthenticationExtension2](https://msdn.microsoft.com/library/microsoft.reportingservices.interfaces.iauthenticationextension2.aspx) interface.
+    * Custom security extensions must be rewritten using the [IAuthenticationExtension2](https://msdn.microsoft.com/library/microsoft.reportingservices.interfaces.iauthenticationextension2.aspx) interface.
   
     * Custom rendering extensions for [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] must be rewritten using the Rendering Object Model (ROM).  
   
@@ -180,7 +180,7 @@ For more information about changes in SQL Server Reporting Services, see the Upg
   
      `\Program files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer\bin`  
   
-3. Modify the configuration files to add entries for your custom component. The entries will vary depending on the kind of assembly you are using. For instructions on where to place files and add configuration entries, see the following:  
+3. Modify the configuration files to add entries for your custom component. The entries vary depending on the kind of assembly you are using. For instructions on where to place files and add configuration entries, see below:  
   
     1. [Deploying a Custom Assembly](../../reporting-services/custom-assemblies/deploying-a-custom-assembly.md)  
   
@@ -203,17 +203,17 @@ For more information about changes in SQL Server Reporting Services, see the Upg
 > [!IMPORTANT]
 >  If any of the report servers in the scale-out deployment are online and have not been migrated, they might encounter an *rsInvalidReportServerDatabase* exception because they are using an older schema when connected to the upgraded.  
 
-If the report server you migrated was configured as the shared database for a scale-out deployment, you need to delete any of the old encryption keys from the **Keys** table in the **ReportServer** database, before configuring the report server service. If the keys are not removed, the migrated report server will try to initialize in scale-out deployment mode. For more information, see [Add and Remove Encryption Keys for Scale-Out Deployment &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md) and [Configure and Manage Encryption Keys &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).  
+If the report server you migrated is configured as the shared database for a scale-out deployment, you need to delete any of the old encryption keys from the **Keys** table in the **ReportServer** database, before configuring the report server service. If the keys are not removed, the migrated report server will try to initialize in scale-out deployment mode. For more information, see [Add and Remove Encryption Keys for Scale-Out Deployment &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md) and [Configure and Manage Encryption Keys &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).  
 
-The scale-out keys cannot be deleted by using the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager. The old keys must be deleted from the **Keys** table in the **ReportServer** database using SQL Server Management Studio. Delete all rows in the Keys table. This will clear the table and prepare it for restoring the Symmetric key only, as documented in the following steps.  
+The scale-out keys cannot be deleted by using the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager. The old keys must be deleted from the **Keys** table in the **ReportServer** database using SQL Server Management Studio. Delete all rows in the Keys table. This action clears the table and prepares it for restoring the Symmetric key only, as documented in the following steps.  
 
-Prior to deleting the keys it is recommended you first back up the Symmetric Encryption key. You can use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager to back up the key. Open the Configuration Manager open, click the **Encryption Keys** tab and then click the **Backup** button. You can also script WMI commands to back up the encryption key. For more information on WMI, see [BackupEncryptionKey Method &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-backupencryptionkey.md).  
+Prior to deleting the keys it is recommended you first back up the Symmetric Encryption key. You can use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager to back up the key. Open the Configuration Manager open, click the Encryption Keys tab, and then click the **Backup** button. You can also script WMI commands to back up the encryption key. For more information on WMI, see [BackupEncryptionKey Method &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-backupencryptionkey.md).  
   
-1. Start the Reporting Services Configuration Manager and connect to the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instance you just installed. For more information, see [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
+1. Start the Reporting Services Configuration Manager and connect to the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instance you installed. For more information, see [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
   
 2. Configure URLs for the report server and the web portal. For more information, see [Configure a URL  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md).  
   
-3. Configure the report server database, selecting the existing report server database from your previous installation. After successful configuration, the report server services will restart, and once a connection is made to the report server database, the database will be automatically upgraded to SQL Server Reporting Services. For more information about how to run the Change Database Wizard that you use to create or select a report server database, see [Create a Native Mode Report Server Database](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
+3. Configure the report server database, selecting the existing report server database from your previous installation. After successful configuration, the report server service restarts, and once a connection is made to the report server database, the database automatically upgrades to SQL Server Reporting Services. For more information about how to run the Change Database Wizard that you use to create or select a report server database, see [Create a Native Mode Report Server Database](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
   
 4. Restore the encryption keys. This step is necessary for enabling reversible encryption on pre-existing connection strings and credentials that are already in the report server database. For more information, see [Back Up and Restore Reporting Services Encryption Keys](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md).  
   

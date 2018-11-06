@@ -3,7 +3,6 @@ title: "SQL Server Always On availability group deployment patterns | Microsoft 
 ms.custom: "sql-linux"
 ms.date: "10/16/2017"
 ms.prod: sql
-
 ms.reviewer: ""
 ms.technology: linux
 ms.topic: conceptual

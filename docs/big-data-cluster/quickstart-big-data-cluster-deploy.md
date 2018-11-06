@@ -4,7 +4,7 @@ description:
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 11/01/2018
+ms.date: 11/06/2018
 ms.topic: quickstart
 ms.prod: sql
 ---
@@ -38,7 +38,7 @@ kubectl config view
 Run below command to install **mssqlctl** tool on your client machine. The command works from both a Windows and a Linux client, but make sure you are running it from a cmd window that runs with administrative privileges on Windows or prefix it with `sudo` on Linux:
 
 ```
-pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctl  
+pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctl  
 ```
 
 > [!IMPORTANT]

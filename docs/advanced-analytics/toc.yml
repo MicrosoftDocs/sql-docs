@@ -86,13 +86,13 @@
     - name: Learn in-database analytics
       href: tutorials/sqldev-in-database-python-for-sql-developers.md
       items:
-      - name: Explore and visualize data
+      - name: 1 - Visualize data
         href: tutorials/sqldev-py3-explore-and-visualize-the-data.md
-      - name: Create data features
+      - name: 2 - Create data features
         href: tutorials/sqldev-py4-create-data-features-using-t-sql.md
-      - name: Train and save the model
+      - name: 3 - Train and save to SQL
         href: tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md
-      - name: Operationalize the model
+      - name: 4 - Predict outcomes
         href: tutorials/sqldev-py6-operationalize-the-model.md
     - name: Create a model using revoscalepy
       href: tutorials/use-python-revoscalepy-to-create-model.md

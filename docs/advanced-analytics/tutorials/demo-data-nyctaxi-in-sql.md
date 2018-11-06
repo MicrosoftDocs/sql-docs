@@ -81,7 +81,7 @@ As a validation step, run a query to confirm the data was uploaded.
     ```
 The database contains 1.7 million rows.
 
-3. This data table has been optimized for set-based calculations by adding a [columnstore index](../../relational-databases/indexes/columnstore-indexes-overview.md). Run this statement to generate a quick summary on the table.
+3. Within the database is a **nyctaxi_sample** table that contains the data set. The table has been optimized for set-based calculations with the addition of a [columnstore index](../../relational-databases/indexes/columnstore-indexes-overview.md). Run this statement to generate a quick summary on the table.
 
     ```SQL
     SELECT DISTINCT [passenger_count]

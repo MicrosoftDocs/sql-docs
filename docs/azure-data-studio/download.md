@@ -2,7 +2,7 @@
 title: Download and install Azure Data Studio | Microsoft Docs
 description: 'Download and Install Azure Data Studio for Windows, macOS, or Linux'
 ms.custom: "tools|sos"
-ms.date: "09/24/2018"
+ms.date: "11/06/2018"
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: "alayu; sstein"
@@ -15,16 +15,16 @@ manager: craigg
 
 [!INCLUDE[name-sos](../includes/name-sos.md)] runs on Windows, macOS, and Linux.
 
-Download and install the latest release, the *October Release*:
+Download and install the latest release, the *November Release*:
 
 > [!NOTE]
 > If you're updating from SQL Operations Studio and want to keep your settings, keyboard shortcuts, or code snippets, see [Move user settings](#move-user-settings).
 
 |Platform|Download|Release date| Version |
 |:---|:---|:---|:---|
-|Windows|[Installer](https://go.microsoft.com/fwlink/?linkid=2030731)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2030736)|October 30, 2018 |1.1.4|
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2030738)|October 30, 2018 |1.1.4|
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2030750)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2030746)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2030741)|October 30, 2018 |1.1.4|
+|Windows|[Installer](https://go.microsoft.com/fwlink/?linkid=2038320)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2038323)|November 6, 2018 |1.2.4|
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2038327)|November 6, 2018 |1.2.4|
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2038405)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2038401)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2038332)|November 6, 2018 |1.2.4|
 
 For details about the latest release, see the [release notes](release-notes.md).
 
@@ -34,20 +34,20 @@ This release of [!INCLUDE[name-sos](../includes/name-sos-short.md)] includes a s
 
 **Installer**
 
-1. Download and run the [[!INCLUDE[name-sos](../includes/name-sos-short.md)] installer for Windows](https://go.microsoft.com/fwlink/?linkid=2030731).
+1. Download and run the [[!INCLUDE[name-sos](../includes/name-sos-short.md)] installer for Windows](https://go.microsoft.com/fwlink/?linkid=2038320).
 1. Start the [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] app.
 
 
 **.zip file**
 
-1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip for Windows](https://go.microsoft.com/fwlink/?linkid=2030736).
+1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip for Windows](https://go.microsoft.com/fwlink/?linkid=2038323).
 2. Browse to the downloaded file and extract it.
 3. Run `\azuredatastudio-windows\azuredatastudio.exe`
 
 
 ## Get Azure Data Studio for macOS
 
-1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for macOS](https://go.microsoft.com/fwlink/?linkid=2030738).
+1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for macOS](https://go.microsoft.com/fwlink/?linkid=2038327).
 2. To expand the contents of the zip, double-click it.
 3. To make [!INCLUDE[name-sos](../includes/name-sos-short.md)] available in the *Launchpad*, drag *Azure Data Studio.app* to the *Applications* folder.
 
@@ -55,9 +55,9 @@ This release of [!INCLUDE[name-sos](../includes/name-sos-short.md)] includes a s
 ## Get Azure Data Studio for Linux
 
 1. Download [!INCLUDE[name-sos](../includes/name-sos-short.md)] for Linux by using one of the installers or the tar.gz archive:
-    - [.deb](https://go.microsoft.com/fwlink/?linkid=2030750)
-    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2030746)
-    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2030741)
+    - [.deb](https://go.microsoft.com/fwlink/?linkid=2038405)
+    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2038401)
+    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2038332)
 1. To extract the file and launch [!INCLUDE[name-sos](../includes/name-sos-short.md)], open a new Terminal window and type the following commands:
 
    **Debian Installation:**
@@ -177,6 +177,7 @@ If you want to move your custom settings, keyboard shortcuts, or code snippets, 
 
 4. In your new version of Azure Data Studio, follow steps 1-2, then for step 3 paste the contents you saved into the folder. You can also manually copy over the settings, keybindings, or snippets in their respective locations.
 
+5. If overriding an existing installation, delete the old install directory before installation to avoid errors connecting to your Azure account for the resource explorer.
 
 ## Next Steps
 

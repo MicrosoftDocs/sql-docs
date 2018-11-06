@@ -5,8 +5,7 @@ ms.date: "09/23/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: data-movement
 ms.topic: conceptual
 author: "douglaslMS"
 ms.author: "douglasl"

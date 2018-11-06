@@ -35,6 +35,8 @@ Community technology preview (CTP) 2.1 is the latest public release of [!INCLUDE
   - UTF-8 collations support in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] setup
   - Use derived table or view aliases in graph match queries
   - Improved diagnostic data for stats blocking
+- [Tools](#tools)
+  - Azure Data Studio
 
 ## CTP 2.0 
 
@@ -369,26 +371,27 @@ FROM sys.dm_exec_requests AS d
   > [!NOTE]
   > User must have administrator permissions on all the cluster nodes.
 
-## <a id="tools"></a>Tools (CTP 2.0)
+## <a id="tools"></a>Tools
 
 - [**Azure Data Studio**](../azure-data-studio/what-is.md): Previously released under the preview name SQL Operations Studio, Azure Data Studio is a lightweight, modern, open source, cross-platform desktop tool for the most common tasks in data development and administration. With Azure Data Studio you can connect to SQL Server on premises and in the cloud on Windows, macOS, and Linux. Azure Data Studio allows you to:
 
-  - Edit and run queries in a modern development environment with lightning fast Intellisense, code snippets, and source control integration.  
-  - Quickly visualize data with built-in charting of your result sets.  
-  - Create custom dashboards for your servers and databases using customizable widgets.  
-  - Easily manage your broader environment with the built-in terminal.  
-  - Analyze data in an integrated notebook experience built on Jupyter.  
-  - Enhance your experience with custom theming and extensions.  
-  - And explore your Azure resources with a built-in subscription and resource browser.
-  - Supports scenarios using SQL Server Big Data Cluster.
+  - Update to the [SQL Server 2019 (preview) extension](../azure-data-studio/sql-server-2019-extension.md). (CTP 2.1)
+  - Edit and run queries in a modern development environment with lightning fast Intellisense, code snippets, and source control integration. (CTP 2.0) 
+  - Quickly visualize data with built-in charting of your result sets. (CTP 2.0)
+  - Create custom dashboards for your servers and databases using customizable widgets. (CTP 2.0)  
+  - Easily manage your broader environment with the built-in terminal. (CTP 2.0)
+  - Analyze data in an integrated notebook experience built on Jupyter. (CTP 2.0)
+  - Enhance your experience with custom theming and extensions.(CTP 2.0)
+  - And explore your Azure resources with a built-in subscription and resource browser. (CTP 2.0)
+  - Supports scenarios using SQL Server Big Data Cluster. (CTP 2.0)
 
 - [**SQL Server Management Studio (SSMS) 18.0 (preview)**](../ssms/sql-server-management-studio-ssms.md)
 
-  - Support for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
-  - Support for Always Encrypted with secure enclaves.
-  - Smaller download size.
-  - Now based on the Visual Studio 2017 Isolated Shell.
-  - For a complete list, see the [SSMS changelog](../ssms/sql-server-management-studio-changelog-ssms.md).
+  - Support for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].(CTP 2.0)
+  - Support for Always Encrypted with secure enclaves.(CTP 2.0)
+  - Smaller download size.(CTP 2.0)
+  - Now based on the Visual Studio 2017 Isolated Shell.(CTP 2.0)
+  - For a complete list, see the [SSMS changelog](../ssms/sql-server-management-studio-changelog-ssms.md).(CTP 2.0)
 
 ## Other services
 

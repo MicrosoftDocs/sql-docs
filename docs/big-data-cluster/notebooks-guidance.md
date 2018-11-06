@@ -4,14 +4,14 @@ description:
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 10/05/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ---
 
 # How to use notebooks in SQL Server 2019 preview
 
-This article shows how to launch notebooks on a SQL Server 2019 big data cluster. It also shows how to start authoring your own notebooks and how to submit jobs against the cluster.
+This how you can launch Jupyter Notebooks on the cluster and start authoring your own Notebooks. It also shows how to submit jobs against the cluster.
 
 ## Prerequisites
 
@@ -23,15 +23,15 @@ To use notebooks, you must install the following prerequisites:
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
-## Connect to the SQL Server big data cluster end-point
+## Connect to the Hadoop Gateway Knox end-point
 
-You can connect to different end-points in the cluster. You can connect to the Microsoft SQL Server connection type or to the SQL Server big data cluster end-point.
-
-In Azure Data Studio (preview), type **F1** > **New Connection**, and connect to your SQL Server big data cluster end-point.
+You can connect to different end-points in the cluster. You can connect to the Microsoft SQL Server connection type or to the HDFS/Spark Gateway end-point.
+In Azure Data Studio (preview), press F1, and click **New Connection** and you can connect to your HDFS/Spark Gateway end-point.
 
 ![image1](media/notebooks-guidance/image1.png)
 
 ## Browse HDFS
+
 Once you connect, you will be able to browse your HDFS folder. WebHDFS is started when the deployment is completed, and you will be able to **Refresh**, add **New Directory**, **Upload** files, and **Delete**.
 
 ![image2](media/notebooks-guidance/image2.png)
@@ -40,104 +40,117 @@ These simple operations let you bring your own data into HDFS.
 
 ## Launch new Notebooks
 
+>[!NOTE]
+>If you have multiple Python processes running in your environment, first delete the `.scaleoutdata` folder under your installed directory. This should trigger the `Reinstall Notebook dependencies` task in Azure Data Studio. It will take few minutes for all the dependencies to be installed.
+
+If there are issues in installing notebook dependencies please click on Ctrl+Shift+P or Cmd+Shift+P ( if you are in Mac) and the type in “Reinstall Notebook dependencies” in the command palette.
+
+![image3](media/notebooks-guidance/image3.png)
+
 There are multiple ways to launch a new notebook.
 
-1. From the Manage Dashboard. On making a new connection, you will see a Dashboard. Click on New Notebook task from the Dashboard.
+1. From the **Manage Dashboard**. After making a new connection, you will see a dashboard. Click **New Notebook** task from the dashboard.
 
-  ![image3](media/notebooks-guidance/image3.png)
+  ![image4](media/notebooks-guidance/image4.png)
 
-1. Right click on the HDFS/Spark connection and you have New Notebook in the context menu
+1. Right-click the HDFS/Spark connection and click **New Notebook** in the context menu.
 
-![image4](media/notebooks-guidance/image4.png)
+  ![image5](media/notebooks-guidance/image5.png)
 
-Provide a name of your Notebook (Example: *Test.ipynb*) and click **Save**.
-
-![image5](media/notebooks-guidance/image5.png)
-
-## Supported kernels and attach to context
-
-In our Notebook Installation, we support the PySpark and Spark, Spark Magic kernels that allow users to write Python and Scala code using Spark. We also allow users to choose Python for their local development purposes.
+  Provide a name of your Notebook, for example, `Test.ipynb`. Click **Save**.
 
 ![image6](media/notebooks-guidance/image6.png)
 
-When you select one of these kernels, we will install that kernel in the virtual environment and you can start writing code in the supported language.
+## Supported kernels and attach to context
 
-| Kernel | Description
-|---- |----
-|PySpark Kernel| For writing Python code using Spark, compute from the cluster.
-|Spark Kernel|For writing Scala code using Spark, compute from the cluster.
-|Python Kernel|For writing Python code for local development.
-
-The Attach-to selection provides the context for the Kernel to attach. When you are connected to the SQL Server big data cluster end-point, the default Attach-to selection will be that end-point of the cluster.
+In our Notebook Installation we support PySpark and Spark, Spark Magic kernels which would allow users to write Python and Scala code using Spark. Optionally, you can  choose Python for local development purposes.
 
 ![image7](media/notebooks-guidance/image7.png)
 
-> [!NOTE]
-> By default, the Spark application is configured with 1 driver and 3 executors that will take approximately 8.5 GB of memory. The recommended configuration to run multiple spark sessions is for each server in the cluster to have at least 32 GB of memory (for example, in an AKS environment use **Standard_D8_v3** VM sizes, which have 32GB of memory).
+When you select one of these kernels, we will install that kernel in the virtual environment and you can start writing code in the supported language.
 
-## Hello world in the different contexts
+|Kernel|Description
+|:-----|:-----
+|PySpark Kernel|For writing Python code using Spark compute from the cluster.
+|Spark Kernel|For writing Scala code using Spark compute from the cluster.
+|Python Kernel|For writing Python code for local development.
+
+
+The Attach to provides the context for the Kernel to attach. When you are connected to the HDFS/Spark Gateway (Knox) end-point the default Attach to will be that end-point of the cluster.
+
+![image8](media/notebooks-guidance/image8.png)
+
+## Hello world in different contexts
 
 ### Pyspark kernel
 
 Choose the PySpark Kernel and in the cell type in the following code:
 
-![image8](media/notebooks-guidance/image8.png)
+![image9](media/notebooks-guidance/image9.png)
 
 Click Run and you should see the Spark Application being started and you will see the following output:
 
-![image9](media/notebooks-guidance/image9.png)
+![image10](media/notebooks-guidance/image10.png)
 
 The output should look something similar to the following image.
 
-![image10](media/notebooks-guidance/image10.png)
-
-### Spark kernel
-Add a new code cell by clicking the +Code command in the toolbar.
-
 ![image11](media/notebooks-guidance/image11.png)
 
-Choose the Spark Kernel in the drop-down for the kernels and in the cell type/paste in 
+### Spark kernel
+Add a new code cell by clicking the **+Code** command in the toolbar.
 
 ![image12](media/notebooks-guidance/image12.png)
 
-Click **Run**  you should see the Spark Application being started and this will create the Spark session  **spark** and will define the **HelloWorld** object.
-
-The Notebook should look similar to the following image.
+You can also view the “Cell Options” when you click on the options icon below –
 
 ![image13](media/notebooks-guidance/image13.png)
 
-Once you define the object then in the next Notebook cell type in the following code:
+Here are the list of options you can see for every cell –
 
 ![image14](media/notebooks-guidance/image14.png)
 
-Click **Run** in the Notebook menu and you should see the "Hello, world!" in the output.
+Now, choose the Spark Kernel in the drop down for the kernels and in the cell type/paste in –
 
 ![image15](media/notebooks-guidance/image15.png)
 
-### Local python kernel
-Choose the local Python Kernel and in the cell type in **
+Click **Run** and you should see the Spark Application being started and this will create the Sparksession as **spark** and will define the **HelloWorld** object.
+
+The Notebook should look similar to the following image.
 
 ![image16](media/notebooks-guidance/image16.png)
 
-You should see the following output:
+Once you define the object then in the next Notebook cell, type in the following code:
 
 ![image17](media/notebooks-guidance/image17.png)
 
-### Markdown Text
-Add a new text cell by clicking the +Text command in the toolbar.
+Click **Run** in the Notebook menu and you should see the "Hello, world!" in the output.
 
 ![image18](media/notebooks-guidance/image18.png)
 
-Click on the preview icon to add your markdown
+### Local python kernel
+Choose the local Python Kernel and in the cell type in -
 
 ![image19](media/notebooks-guidance/image19.png)
 
-Click on the preview icon again to toggle to see just the markdown
+You should see the following output:
 
 ![image20](media/notebooks-guidance/image20.png)
 
+### Markdown Text
+Add a new text cell by clicking the **+Text** command in the toolbar.
+
+![image21](media/notebooks-guidance/image21.png)
+
+Click on the preview icon to add your markdown
+
+![image22](media/notebooks-guidance/image22.png)
+
+Click on the preview icon again to toggle to see just the markdown
+
+![image23](media/notebooks-guidance/image23.png)
+
 ## Manage Packages
-One of the things we optimized for local Python development was to include the ability to install packages which customers would need for their scenarios. By default, we include the common packages like pandas, numpy etc., but if you are expecting a package that is not included then write the following code in the Notebook cell
+One of the things we optimized for local Python development was to include the ability to install packages which customers would need for their scenarios. By default, we include the common packages like pandas, numpy etc., but if you are expecting a package that is not included then write the following code in the Notebook cell: 
 
 ```python
 import <package-name>
@@ -145,13 +158,13 @@ import <package-name>
 
 When you run this command, you will get a `Module not found` error. If your package exists, then you will not get the error.
 
-If you find a `Module not Found` error, then click on the **Manage Packages** to launch the terminal with the path for your Virtualenv identified. You can now install packages locally. Use the following command to install the packages:
+If you find a `Module not Found` error, then click on **Manage Packages** to launch the terminal with the path for your Virtualenv identified. You can now install packages locally. Use the following commands to install the packages:
 
-```
+```bash
 ./pip install <package-name>
 ```
 
-After the package is installed, you should be able to go in the Notebook cell and type in the following command:
+After the package is installed, you should be able to go in the Notebook cell and type in following command:
 
 ```python
 import <package-name>
@@ -159,9 +172,9 @@ import <package-name>
 
 Now when you run the cell, you should no longer get the `Module not found` error.
 
-If you want to uninstall a package, use the following command from your terminal:
+To uninstall a package, use the following command from your terminal:
 
-```
+```bash
 ./pip uninstall <package-name>
 ```
 

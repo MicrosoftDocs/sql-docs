@@ -32,7 +32,7 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sql
   
  Implement RLS by using the [CREATE SECURITY POLICY](../../t-sql/statements/create-security-policy-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] statement, and predicates created as [inline table valued functions](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md).  
   
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Get it](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).  
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Get it](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)), [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
   
 > [!NOTE]
 > Azure SQL Data Warehouse (SQL DW) currently supports filter predicates only. Block predicates support for SQL DW will be coming in near future.
@@ -276,7 +276,7 @@ WITH (STATE = OFF);
   
 ###  <a name="MidTier"></a> B. Scenario for users who connect to the database through a middle-tier application  
 > [!NOTE]
-> This example with SESSION_CONTEXT isn't applicable to Azure SQL Data Warehouse since both SESSION_CONTEXT and block predicates aren't currently supported.
+> This example isn't applicable to Azure SQL Data Warehouse since both SESSION_CONTEXT and block predicates aren't currently supported.
 
 This example shows how a middle-tier application can implement connection filtering, where application users (or tenants) share the same [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] user (the application). The application sets the current application user ID in [SESSION_CONTEXT &#40;Transact-SQL&#41;](../../t-sql/functions/session-context-transact-sql.md) after connecting to the database, and then security policies transparently filter rows that shouldn't be visible to this ID, and also block the user from inserting rows for the wrong user ID. No other app changes are necessary .  
   

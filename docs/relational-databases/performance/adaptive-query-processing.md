@@ -6,7 +6,7 @@ ms.date: "10/15/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.technology: 
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords: 
 ms.assetid: 

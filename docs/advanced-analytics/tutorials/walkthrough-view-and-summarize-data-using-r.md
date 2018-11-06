@@ -3,7 +3,7 @@ title: View and summarize data using R (walkthrough)| Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
+ms.date: 11/02/2018  
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
@@ -47,7 +47,7 @@ The following steps are all part of the R code and should be run in an R environ
 2. Create the connection string for SQL Server and save it in an R variable, _connStr_.
     
     ```R
-    connStr <- "Driver=SQL Server;Server=your_server_name;Database=Your_Database_Name;Uid=Your_User_Name;Pwd=Your_Password"
+    connStr <- "Driver=SQL Server;Server=your_server_name;Database=nyctaxi_sample;Uid=your-sql-login;Pwd=your-login-password"
     ```
 
     For the server name, you might be able to use only the instance name, or you might need to fully qualify the name, depending on your network.
@@ -55,12 +55,12 @@ The following steps are all part of the R code and should be run in an R environ
     For Windows authentication, the syntax is a bit different:
     
     ```R
-    connStr <- "Driver=SQL Server;Server=SQL_instance_name;Database=database_name;Trusted_Connection=Yes"
+    connStr <- "Driver=SQL Server;Server=your_server_name;Database=nyctaxi_sample;Trusted_Connection=True"
     ```
 
     The R script available for download uses SQL logins only. Generally, we recommend that you use Windows authentication where possible, to avoid saving passwords in your R code. However, to ensure that the code in this tutorial matches the code downloaded from Github, we'll use a SQL login for the rest of the walkthrough.
 
-3. Define variables to use in creating a new _compute context_. After you create the compute context object, you can use it to run R code on the SQL Server instance.
+3. Define variables to use in creating a new *compute context*. After you create the compute context object, you can use it to run R code on the SQL Server instance.
 
     ```R
     sqlShareDir <- paste("C:\\AllShare\\",Sys.getenv("USERNAME"),sep="")
@@ -101,7 +101,7 @@ Earlier you defined a connection string, and saved that information in an R vari
 1. Save a SQL query as a string variable. The query defines the data for training the model.
 
     ```R
-    sampleDataQuery <- "SELECT tipped, fare_amount, passenger_count,trip_time_in_secs,trip_distance, pickup_datetime, dropoff_datetime, pickup_longitude, pickup_latitude, dropoff_longitude, dropoff_latitude FROM nyctaxi_sample"
+    sampleDataQuery <- "SELECT TOP 1000 tipped, fare_amount, passenger_count,trip_time_in_secs,trip_distance, pickup_datetime, dropoff_datetime, pickup_longitude, pickup_latitude, dropoff_longitude, dropoff_latitude FROM nyctaxi_sample"
     ```
 
     We've used a TOP clause here to make things run faster, but the actual rows returned by the query can vary depending on order. Hence, your summary results might also be different from those listed below. Feel free to remove the TOP clause.

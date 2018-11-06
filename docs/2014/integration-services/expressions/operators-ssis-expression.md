@@ -35,7 +35,7 @@ manager: craigg
 |[&#40;Modulo&#41; &#40;SSIS Expression&#41;](modulo-ssis-expression.md)|Provides the integer remainder after dividing the first numeric expression by the second one.|  
 |[&#124;&#124; &#40;Logical OR&#41; &#40;SSIS Expression&#41;](logical-or-ssis-expression.md)|Performs a logical OR operation.|  
 |[&& &#40;Logical AND&#41; &#40;SSIS Expression&#41;](logical-and-ssis-expression.md)|Performs a logical AND operation.|  
-|[! &#40;Logical Not&#41; &#40;SSIS Expression&#41;](logical-not-ssis-expression.md)|Negates a Boolean operand.|  
+|[\! &#40;Logical NOT&#41; &#40;SSIS Expression&#41;](logical-not-ssis-expression.md)|Negates a Boolean operand.|  
 |[&#124; &#40;Bitwise Inclusive OR&#41; &#40;SSIS Expression&#41;](bitwise-inclusive-or-ssis-expression.md)|Performs a bitwise OR operation of two integer values.|  
 |[^ &#40;Bitwise Exclusive OR&#41; &#40;SSIS Expression&#41;](bitwise-exclusive-or-ssis-expression.md)|Performs a bitwise exclusive OR operation of two integer values.|  
 |[& &#40;Bitwise AND&#41; &#40;SSIS Expression&#41;](bitwise-and-ssis-expression.md)|Performs a bitwise AND operation of two integer values.|  

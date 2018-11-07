@@ -4,7 +4,7 @@ description: R in SQL Server and Python in SQL Server, integrating with relation
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 09/10/2018  
+ms.date: 11/06/2018  
 ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
@@ -15,7 +15,7 @@ manager: cgronlun
 
 SQL Server 2017 Machine Learning Services is an add-on to a database engine instance, used for executing R and Python code on SQL Server. Code runs in an extensibility framework, isolated from core engine processes, but fully available to relational data as stored procedures, as T-SQL script containing R or Python statements, or as R or Python code containing T-SQL. 
 
-If you previously used [SQL Server 2016 R Services](r/sql-server-r-services.md), Machine Learning Services in SQL Server 2017 is the next generation of R support, with updated versions of base R, RevoScaleR, MicrosoftML, and other libraries introduced in 2016.
+If you previously used [SQL Server 2016 R Services](r/sql-server-r-services.md), Machine Learning Services in SQL Server 2017 is the next generation of R support, with updated versions of base R, RevoScaleR, MicrosoftML, and other libraries introduced in 2016. If you are using Azure SQL Database, [Machine Learning Services (with R)]((https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-r)) is in public preview.
 
 The key value proposition of Machine Learning Services is the power of its enterprise R and Python packages to deliver advanced analytics at scale, and the ability to bring calculations and processing to where the data resides, eliminating the need to pull data across the network.
 

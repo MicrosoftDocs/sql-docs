@@ -131,20 +131,20 @@ Setting `-h` and `--name` to the same value is a good way to easily identify the
 
 ## <a id="pullandrun2019"></a> Pull and run the container image
 
-1. Pull the SQL Server 2019 CTP 2.0 Linux container image from Docker Hub.
+1. Pull the SQL Server 2019 CTP 2.1 Linux container image from Docker Hub.
 
    ```bash
-   sudo docker pull mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+   sudo docker pull mcr.microsoft.com/mssql/server:2019-CTP2.1-ubuntu
    ```
 
    ```PowerShell
-   docker pull mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+   docker pull mcr.microsoft.com/mssql/server:2019-CTP2.1-ubuntu
    ```
 
    > [!TIP]
-   > This quickstart uses the SQL Server 2019 CTP 2.0 Docker image. If you want to run the SQL Server 2017 image, see the [SQL Server 2017 version of this article](quickstart-install-connect-docker.md?view=sql-server-linux-2017#pullandrun2017).
+   > This quickstart uses the SQL Server 2019 CTP 2.1 Docker image. If you want to run the SQL Server 2017 image, see the [SQL Server 2017 version of this article](quickstart-install-connect-docker.md?view=sql-server-linux-2017#pullandrun2017).
 
-   The previous command pulls the latest SQL Server 2019 CTP 2.0 container image based on Ubuntu. To instead use container images based on RedHat, see [Run RHEL-based container images](sql-server-linux-configure-docker.md#rhel). If you want to pull a specific image, you add a colon and the tag name (for example, `mcr.microsoft.com/mssql/server:2017-GA`). To see all available images, see [the mssql-server-linux Docker hub page](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/).
+   The previous command pulls the latest SQL Server 2019 CTP 2.1 container image based on Ubuntu. To instead use container images based on RedHat, see [Run RHEL-based container images](sql-server-linux-configure-docker.md#rhel). If you want to pull a specific image, you add a colon and the tag name (for example, `mcr.microsoft.com/mssql/server:2017-GA`). To see all available images, see [the mssql-server-linux Docker hub page](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/).
 
    For the bash commands in this article, `sudo` is used. On MacOS, `sudo` might not be required. On Linux, if you do not want to use `sudo` to run Docker, you can configure a **docker** group and add users to that group. For more information, see [Post-installation steps for Linux](https://docs.docker.com/install/linux/linux-postinstall/).
 
@@ -153,20 +153,20 @@ Setting `-h` and `--name` to the same value is a good way to easily identify the
    ```bash
    sudo docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' \
       -p 1433:1433 --name sql1 \
-      -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+      -d mcr.microsoft.com/mssql/server:2019-CTP2.1-ubuntu
    ```
 
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" `
       -p 1433:1433 --name sql1 `
-      -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+      -d mcr.microsoft.com/mssql/server:2019-CTP2.1-ubuntu
    ```
 
    > [!NOTE]
    > The password should follow the SQL Server default password policy, otherwise the container can not setup SQL server and will stop working. By default, the password must be at least 8 characters long and contain characters from three of the following four sets: Uppercase letters, Lowercase letters, Base 10 digits, and Symbols. You can examine the error log by executing the [docker logs](https://docs.docker.com/engine/reference/commandline/logs/) command.
 
    > [!NOTE]
-   > By default, this creates a container with the Developer edition of SQL Server 2019 CTP 2.0.
+   > By default, this creates a container with the Developer edition of SQL Server 2019 CTP 2.1.
 
    The following table provides a description of the parameters in the previous `docker run` example:
 
@@ -176,7 +176,7 @@ Setting `-h` and `--name` to the same value is a good way to easily identify the
    | **-e 'SA_PASSWORD=\<YourStrong!Passw0rd\>'** | Specify your own strong password that is at least 8 characters and meets the [SQL Server password requirements](../relational-databases/security/password-policy.md). Required setting for the SQL Server image. |
    | **-p 1433:1433** | Map a TCP port on the host environment (first value) with a TCP port in the container (second value). In this example, SQL Server is listening on TCP 1433 in the container and this is exposed to the port, 1433, on the host. |
    | **--name sql1** | Specify a custom name for the container rather than a randomly generated one. If you run more than one container, you cannot reuse this same name. |
-   | **mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu** | The SQL Server 2019 CTP 2.0 Linux container image. |
+   | **mcr.microsoft.com/mssql/server:2019-CTP2.1-ubuntu** | The SQL Server 2019 CTP 2.1 Linux container image. |
 
 3. To view your Docker containers, use the `docker ps` command.
 

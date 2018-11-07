@@ -74,7 +74,7 @@ An Azure resource group is a logical group in which Azure resources are deployed
     --generate-ssh-keys \
     --node-vm-size Standard_E4s_v3 \
     --node-count 3 \
-    --kubernetes-version 1.10.7
+    --kubernetes-version 1.10.8
     ```
 
     You can increase or decrease the default agent count by changing the `--node-count <n>` where `<n>` is the number of agent nodes you want to have.

@@ -56,6 +56,8 @@
   href: ../master-data-services/master-data-services-overview-mds.md
 - name: Reporting Services
   href: ../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
+- name: Machine Learning Services
+  href: ../advanced-analytics/what-is-sql-server-machine-learning.md
 - name: SQL Server Migration Assistant
   href: ../ssma/sql-server-migration-assistant.md
 - name: Data Migration Assistant

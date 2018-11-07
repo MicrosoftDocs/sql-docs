@@ -244,7 +244,7 @@ Here are some use cases that show how you can use the built-in JSON support in [
 
 ## Store and index JSON data in SQL Server
 
-JSON is a textual format so the JSON documents can be stored in `NVARCHAR` columns in a SQL Database. Since `NVARCHAR` type is supported in all SQL Server sub-systems you can put JSON documents in tables with **CLUSTERED COLUMNSTORE** indexes, **memory optimized** tables, or external files that can be read using OPENROWSET or Polybase.
+JSON is a textual format so the JSON documents can be stored in `NVARCHAR` columns in a SQL Database. Since `NVARCHAR` type is supported in all SQL Server sub-systems you can put JSON documents in tables with **CLUSTERED COLUMNSTORE** indexes, **memory optimized** tables, or external files that can be read using OPENROWSET or PolyBase.
 
 To learn more about your options for storing, indexing, and optimizing JSON data in SQL Server, see the following articles:
 -   [Store JSON documents in SQL Server or SQL Database](store-json-documents-in-sql-tables.md)

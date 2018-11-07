@@ -4,7 +4,7 @@ description: New feature announcements for each release of SQL Server 2016 R Ser
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 09/24/2018  
+ms.date: 11/06/2018  
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
@@ -98,9 +98,9 @@ On Linux, SQL Server 2017 does not have R or Python integration, but you can use
 
 <a name="azure-sql-database-roadmap"></a>
 
-## Azure SQL Database roadmap
+## Machine Learning Services in Azure SQL Database
 
-There is currently no support for Machine Learning Services (R and Python) in Azure SQL Database. Support is on the roadmap but there is no projected release date at this time.  
+Machine Learning Services (with R) in Azure SQL Database is in public preview. For more information, see [Quickstart: Use Machine Learning Services (with R) in Azure SQL Database (preview)](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-r).
 
 ## Next steps
 

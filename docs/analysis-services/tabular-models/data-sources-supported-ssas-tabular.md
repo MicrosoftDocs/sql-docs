@@ -1,6 +1,6 @@
 ---
 title: "Data sources supported in SQL Server Analysis Services tabular 1200 models | Microsoft Docs"
-ms.date: 11/05/2018
+ms.date: 11/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -40,7 +40,7 @@ When you install [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-m
 |Data feeds<br /><br /> (used to import data from Reporting Services reports, Atom service documents, Microsoft Azure Marketplace DataMarket, and single data feed)|Atom 1.0 format<br /><br /> Any database or document that is exposed as a Windows Communication Foundation (WCF) Data Service (formerly ADO.NET Data Services).|`.atomsvc` for a service document that defines one or more feeds<br /><br /> .atom for an Atom web feed document|Microsoft Data Feed Provider for [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]<br /><br /> .NET Framework data feed data provider for [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]|  
 |Office Database Connection files||.odc||  
  
-<a name="dnu">[1]</a> Using **ACE 14 OLE DB provider** to connect to file data types **is not recommended**. If you must retain your tabular 1200 and lower compatibility level models, export your data to a csv file type, import to SQL database, and then connect to and import from the database. However, it's recommended you upgrade to tabular 1400 compatibility level (SQL Server 2017 and later) and use **Get Data** in SSDT to select and import your file data source. Get Data uses structured data source connections, which provide greater stability than ACE 14 OLE DB provider connections.  
+<a name="dnu">[1]</a> Using **ACE 14 OLE DB provider** to connect to file data types **is not recommended**. If you must retain your tabular 1200 and lower compatibility level models, export your data to a csv file type, import to SQL database, and then connect to and import from the database. However, it's recommended you upgrade to tabular 1400 compatibility level (SQL Server 2017 and later) and use **Get Data** in SSDT to select and import your file data source. Get Data uses structured data source connections provided by the Power Query data engine, which are more stable than ACE 14 OLE DB provider connections.  
 
 
 ##  <a name="bkmk_supported_ds_dq"></a> Supported data sources for DirectQuery models  

@@ -59,9 +59,9 @@ PolyBase has multiple configuration XMLs containing properties of the Hadoop clu
 
 These files are located under:
 
-\\[System Drive\\]:{install path}\\{instance}\\{name}\\MSSQL\\Binn\\Polybase\\Hadoop\\conf
+\\[System Drive\\]:{install path}\\{instance}\\{name}\\MSSQL\\Binn\\PolyBase\\Hadoop\\conf
 
-For example, the default for SQL Server 2016, for instance, would be "C:\\Program Files\\Microsoft SQL Server\\MSSQL13.MSSQLSERVER\\MSSQL\\Binn\\Polybase\\Hadoop\\conf".
+For example, the default for SQL Server 2016, for instance, would be "C:\\Program Files\\Microsoft SQL Server\\MSSQL13.MSSQLSERVER\\MSSQL\\Binn\\PolyBase\\Hadoop\\conf".
 
 Update one of the PolyBase configuration files, **core-site.xml**, with the three properties below with the values set according to the environment:
 
@@ -85,7 +85,7 @@ The other XMLs will later need to be updated as well if pushdown operations are 
 The tool runs independently of SQL Server, so it does not need to be running, nor does it need to be restarted if updates are made to the configuration XMLs. To run the tool, execute the following commands on the host with SQL Server installed:
 
 ```cmd
-> cd C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\Polybase  
+> cd C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBase  
 > java -classpath ".\Hadoop\conf;.\Hadoop\*;.\Hadoop\HDP2_2\*" com.microsoft.polybase.client.HdfsBridge {Name Node Address} {Name Node Port} {Service Principal} {Filepath containing Service Principal's Password} {Remote HDFS file path (optional)}
 ```
 
@@ -227,4 +227,4 @@ In Active Directory, the SPNs can be viewed by browsing to Control Panel > Activ
 [Integrating PolyBase with Cloudera using Active Directory Authentication](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/2016/10/17/integrating-polybase-with-cloudera-using-active-directory-authentication)  
 [Cloudera’s Guide to setting up Kerberos for CDH](https://www.cloudera.com/documentation/enterprise/5-6-x/topics/cm_sg_principal_keytab.html)  
 [Hortonworks’ Guide to Setting up Kerberos for HDP](https://docs.hortonworks.com/HDPDocuments/Ambari-2.2.0.0/bk_Ambari_Security_Guide/content/ch_configuring_amb_hdp_for_kerberos.html)  
-[Polybase troubleshooting](polybase-troubleshooting.md)
+[PolyBase troubleshooting](polybase-troubleshooting.md)

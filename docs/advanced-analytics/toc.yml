@@ -4,7 +4,7 @@
   items:
   - name: What's New
     href: what-s-new-in-sql-server-machine-learning-services.md
-  - name: Machine Learning Services (R, Python)
+  - name: SQL ML Services (R, Python)
     href: what-is-sql-server-machine-learning.md
   - name: R Services
     href: r/sql-server-r-services.md
@@ -24,7 +24,7 @@
   items:
   - name: Differences in SQL Server 2019
     href: install/sql-machine-learning-services-ver15.md
-  - name: Install MLS (R, Python)
+  - name: Install ML Services (R, Python)
     href: install/sql-machine-learning-services-windows-install.md
   - name: Install R Services
     href: install/sql-r-services-windows-install.md

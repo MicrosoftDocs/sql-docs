@@ -13,15 +13,15 @@ manager: cgronlun
 # Set up a Python client for use with SQL Server Machine Learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Python integration is available starting in SQL Server 2017 or later when you include the Python option in a [Machine Learning Services (In-Database) installation](../install/sql-machine-learning-services-windows-install.md). To benefit from Python integration and conduct full scale in-database analytics, you need a Python client that can:
+Python integration is available starting in SQL Server 2017 or later when you include the Python option in a [Machine Learning Services (In-Database) installation](../install/sql-machine-learning-services-windows-install.md). To benefit from Python integration with the ability to conduct full scale in-database analytics, you need a Python client that can:
 
 + Connect to SQL Server databases
 + Execute Python functions locally and remotely on SQL Server 
-+ Render visualizations and summaries using the capabilities of a client application
++ Render any subsequent visualizations and summaries 
 
 Coordinated computing between a local client and remote database engine instance is achieved by having identical Python libraries on both systems. 
 
-In this article, you will learn how to install the libraries, write Python code that executes on SQL Server, and render visualizations and other output in the local client. This exercise uses Jupyter Notebooks to run Python code, but you can adapt the instructions for PyCharm or another IDE that you normally use.
+In this article, you will learn how to install the necessary Python libraries on your local workstation, write Python code that executes on SQL Server, and render visualizations and other output using the capabilities of a client application. This exercise uses Jupyter Notebooks to run Python code, but you can adapt the instructions for PyCharm or another IDE that you normally use.
 
 After completing the steps in this article, you will have the same Python libraries as those on SQL Server. You will also know how to call revoscalepy functions that push computations from a local session to a remote Python session on SQL Server, and render results in Juypter Notebook.
 

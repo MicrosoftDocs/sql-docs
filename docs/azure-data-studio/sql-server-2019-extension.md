@@ -65,7 +65,7 @@ To install the SQL Server 2019 extension (preview), download and install the ass
 * Support reinstalling Notebook dependencies. This is useful if the user previously closed Azure Data Studio partway through installation.
 * Support canceling cell execution in Notebook.
 * Improved reliability when using Create External Data wizard, specifically when connection errors occur.
-* Block use of Create External Data wizard if Polybase is not enabled or running in the target server.
+* Block use of Create External Data wizard if PolyBase is not enabled or running in the target server.
 * Spelling and naming fixes related to SQL Server 2019 and Create External Data.
 * Removed a large number of errors from the Azure Data Studio debug console.
 
@@ -98,7 +98,7 @@ For details, see [Big Data Clusters](../big-data-cluster/big-data-cluster-overvi
 * Add code or markdown cells via the buttons in the notebook header. Remove cells with the trash can icon to the left of each cell.
 * Run cells with the play button for code cells, and toggle markdown editing and preview with the eye icon
 
-## Polybase Create External Table Wizard
+## PolyBase Create External Table Wizard
 
 * From a SQL Server 2019 instance the *Create External Table Wizard* can be opened in three ways:
   * Right click on a server, choose **Manage**, click on the tab for SQL Server 2019 (Preview), and choose **Create External Table**.

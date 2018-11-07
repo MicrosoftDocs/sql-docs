@@ -23,8 +23,6 @@ On the computer you are using to run the commands to install the SQL Server big 
 
 To install the **mssqlctl** CLI tool to manage the SQL Server big data cluster on your client machine, you must first install [Python](https://www.python.org/downloads/) minimum version v3.0 and [pip3](https://pip.pypa.io/en/stable/installing/). `pip` is already installed if you are using a Python version of at least 3.4 downloaded from [python.org](https://www.python.org/).
 
-If your Python installation is missing the `requests` package, you must install `requests` using `python -m pip install requests` (use `python3` for these commands on Linux). If you already have a `requests` package, upgrade it to latest version using `python -m pip install requests --upgrade`.
-
 ## Verify AKS configuration
 
 Once you have the AKS cluster deployed, you can execute the below kubectl command to view the cluster configuration. Ensure that kubectl is pointed to the correct cluster context.

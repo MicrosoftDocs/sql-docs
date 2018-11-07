@@ -137,7 +137,7 @@ This example shows a sample setup script.
 
 ```cmd
    
-Setup.exe /Q /ACTION=INSTALL /IACCEPTSQLSERVERLICENSETERMS /FEATURES=SQLEngine,Polybase   
+Setup.exe /Q /ACTION=INSTALL /IACCEPTSQLSERVERLICENSETERMS /FEATURES=SQLEngine,PolyBase   
 /INSTANCENAME=MSSQLSERVER /SQLSYSADMINACCOUNTS="\<fabric-domain>\Administrator"   
 /INSTANCEDIR="C:\Program Files\Microsoft SQL Server" /PBSCALEOUT=TRUE   
 /PBPORTRANGE=16450-16460 /SECURITYMODE=SQL /SAPWD="<StrongPassword>"   
@@ -148,7 +148,7 @@ Setup.exe /Q /ACTION=INSTALL /IACCEPTSQLSERVERLICENSETERMS /FEATURES=SQLEngine,P
 
 ## <a id="enable"></a> Enable PolyBase
 
-After installation, Polybase must be enabled to access its features. To connect to SQL Server 2019 CTP 2.0, you must enable PolyBase after installation. Use the following Transact-SQL command.
+After installation, PolyBase must be enabled to access its features. To connect to SQL Server 2019 CTP 2.0, you must enable PolyBase after installation. Use the following Transact-SQL command.
 
 
 ```sql
@@ -167,7 +167,7 @@ PolyBase installs three user databases, DWConfiguration, DWDiagnostics, and DWQu
 Run the following command. If PolyBase is installed, the return is 1. Otherwise, it's 0.  
 
 ```sql  
-SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;  
+SELECT SERVERPROPERTY ('IsPolyBaseInstalled') AS IsPolyBaseInstalled;  
 ```  
 
 ### Firewall rules  

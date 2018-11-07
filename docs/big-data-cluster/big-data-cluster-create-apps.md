@@ -49,11 +49,11 @@ The following sections describe these commands in more detail.
 
 ## Log in
 
-Before configuring R and Python applications, first log into your SQL Server big data cluster with the `mssqlctl-pre login` command. Specify the IP address of the `service-proxy-lb` (for example: `https://ip-address:30777`) along with the user name and password to the cluster.
+Before configuring R and Python applications, first log into your SQL Server big data cluster with the `mssqlctl-pre login` command. Specify the IP address (external) of the `service-proxy-lb` (for example: `https://ip-address:30777`) along with the user name and password to the cluster.
 
 You can get the IP address of the service-proxy-lb service by running this command in a bash or cmd window:
 ```bash 
-kubectl get svc service-proxy-lb:30777 -n <name of your cluster>
+kubectl get svc service-proxy-lb -n <name of your cluster>
 ```
 
 ```bash

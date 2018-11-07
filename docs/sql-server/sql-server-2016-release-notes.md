@@ -94,7 +94,7 @@ The following features are available in the Standard, Web, Express, and Local DB
 - In Memory OLTP (not availabe in Local DB)
 - Multiple filestream containers (not available in Local DB)
 - Partitioning
-- Polybase
+- PolyBase
 - Row level security
 
 The following table summarizes key improvements provided in SQL Server 2016 SP1.

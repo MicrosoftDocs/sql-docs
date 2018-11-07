@@ -66,7 +66,7 @@ Community technology preview (CTP) 2.0 is the first public release of [!INCLUDE[
   - New options added to `sp_estimate_data_compression_savings`
   - SQL Server Machine Learning Services failover clusters
   - Lightweight query profiling infrastructure enabled by default
-  - New Polybase connectors
+  - New PolyBase connectors
   - New `sys.dm_db_page_info` system function returns page information
 
 - [SQL Server on Linux](#sqllinux)
@@ -314,7 +314,7 @@ The lightweight query profiling infrastructure (LWP) provides query performance 
 
 For more information on lightweight profiling, see [Developers Choice: Query progress – anytime, anywhere](http://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/).
 
-### <a id="polybase"></a>New Polybase connectors
+### <a id="polybase"></a>New PolyBase connectors
 
 - **New connectors for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], Oracle, Teradata, and MongoDB**: [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces new connectors to external data for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], Oracle, Teradata, and MongoDB.
 

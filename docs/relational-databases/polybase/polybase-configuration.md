@@ -144,7 +144,7 @@ To connect to a Kerberos-secured Hadoop cluster using MIT KDC:
 1. Find the Hadoop configuration directory in the installation path of SQL Server. Typically, the path is:  
 
    ```  
-   C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\Polybase\Hadoop\conf  
+   C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBase\Hadoop\conf  
    ```  
 
 2. Find the Hadoop side configuration value of the configuration keys listed in the table. (On the Hadoop machine, find the files in the Hadoop configuration directory.)  

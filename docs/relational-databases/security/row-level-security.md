@@ -149,7 +149,7 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sql
   
 -   **Filestream** RLS is incompatible with Filestream.  
   
--   **Polybase** RLS is incompatible with Polybase.  
+-   **PolyBase** RLS is incompatible with PolyBase.  
   
 -   **Memory-Optimized Tables**The inline table-valued function used as a security predicate on a memory-optimized table must be defined using the `WITH NATIVE_COMPILATION` option. With this option, language features not supported by memory-optimized tables will be banned and the appropriate error will be issued at creation time. For more information, see the **Row-Level Security in Memory Optimized Tables** section in [Introduction to Memory-Optimized Tables](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md).  
   

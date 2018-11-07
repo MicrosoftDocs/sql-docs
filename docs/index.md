@@ -385,7 +385,7 @@ ms.technology:
                                                         <h3>Data Analytics</h3>
                                                         <ul class="noBullet">
                                                         <li><a class="barLink" href="/sql/analytics-platform-system/">Microsoft Analytics Platform System</a></li>
-                                                            <li><a class="barLink" href="/sql/relational-databases/polybase/polybase-guide/">Polybase</a></li>
+                                                            <li><a class="barLink" href="/sql/relational-databases/polybase/polybase-guide/">PolyBase</a></li>
                                                             <li><a class="barLink" href="/sql/analysis-services/analysis-services">SQL Server Analysis Services</a></li>
                                                             <li><a class="barLink" href="/azure/analysis-services/">Azure Analysis Services</a></li>
                                                        </ul>

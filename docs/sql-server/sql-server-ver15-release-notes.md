@@ -112,7 +112,7 @@ Limited support may be found at one of the following locations:
   - SQL Server Replication
   - Linked Server
   - In-memory OLTP
-  - External Table for Polybase
+  - External Table for PolyBase
 
     Also note there is currently no UI support to choose UTF-8 enabled collations in Azure Data Studio or SSDT. The latest SSMS version supports choice of UTF-8 enabled collations in the UI.
 

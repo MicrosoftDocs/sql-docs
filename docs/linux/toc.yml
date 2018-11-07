@@ -6,7 +6,7 @@
     items:
     - name: SQL Server 2017
       href: sql-server-linux-release-notes.md
-    - name: SQL Server 2019 CTP 2.0
+    - name: SQL Server 2019 preview
       href: sql-server-linux-release-notes-2019.md
   - name: What's new?
     href: sql-server-linux-whats-new.md

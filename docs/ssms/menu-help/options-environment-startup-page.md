@@ -5,11 +5,6 @@ ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.technology: ssms
 ms.topic: conceptual
-f1_keywords:
-  - "VS.TOOLSOPTIONSPAGES.ENVIRONMENT.Startup"
-  - "DevLang-TSQL"
-dev_langs:
- - sql
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

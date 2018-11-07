@@ -191,7 +191,7 @@ brew install --no-sandbox mssql-tools
 
 ## <a id="docker"></a> Docker
 
-Starting with SQL Server 2017 CTP 2.0, the SQL Server command-line tools are included in the Docker image. If you attach to the image with an interactive command-prompt, you can run the tools locally.
+The SQL Server command-line tools are included in the Docker image. If you attach to the image with an interactive command-prompt, you can run the tools locally.
 
 ## Offline installation
 

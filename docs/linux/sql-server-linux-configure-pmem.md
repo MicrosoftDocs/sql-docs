@@ -15,7 +15,7 @@ monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-This article describes how to configure the persistent memory (PMEM) for SQL Server on Linux. PMEM support on Linux was introduced in SQL Server 2019 CTP 2.0.
+This article describes how to configure the persistent memory (PMEM) for SQL Server on Linux. PMEM support on Linux was introduced in SQL Server 2019 preview.
 
 ## Overview
 

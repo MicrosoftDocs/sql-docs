@@ -78,7 +78,7 @@ General Availability release of Azure Data Studio (formerly SQL Operations Studi
     - Use the PROSE Code Accelerator libraries in your Notebook to learn file format and data types for fast data preparation.
   - Azure Resource Explorer
     - The Azure Resource Explorer view lets you browse data-related endpoints for your Azure accounts and create connections to them in Object Explorer. In this release Azure SQL Databases and servers are supported.
-  - SQL Server Polybase Create External Table Wizard
+  - SQL Server PolyBase Create External Table Wizard
     - Create an external table and its supporting metadata structures with an easy to use wizard. In this release, remote SQL Server and Oracle servers are supported.
 - Query Results Grid performance and UX improvements for large number of result sets.
 - Visual Studio Code source code refresh from 1.23 to 1.26.1 with Grid Layout and Improved Settings Editor (preview).

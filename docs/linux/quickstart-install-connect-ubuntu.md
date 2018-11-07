@@ -18,13 +18,13 @@ ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-In this quickstart, you install SQL Server 2017 or SQL Server 2019 CTP 2.0 on Ubuntu 16.04. You then connect with **sqlcmd** to create your first database and run queries.
+In this quickstart, you install SQL Server 2017 or SQL Server 2019 preview on Ubuntu 16.04. You then connect with **sqlcmd** to create your first database and run queries.
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-In this quickstart, you install SQL Server 2019 CTP 2.0 on Ubuntu 16.04. You then connect with **sqlcmd** to create your first database and run queries.
+In this quickstart, you install SQL Server 2019 preview on Ubuntu 16.04. You then connect with **sqlcmd** to create your first database and run queries.
 
 ::: moniker-end
 
@@ -141,7 +141,7 @@ To configure SQL Server on Ubuntu, run the following commands in a terminal to i
 
 6. If you plan to connect remotely, you might also need to open the SQL Server TCP port (default 1433) on your firewall.
 
-At this point, SQL Server 2019 CTP 2.0 is running on your Ubuntu machine and is ready to use!
+At this point, SQL Server 2019 preview is running on your Ubuntu machine and is ready to use!
 
 ::: moniker-end
 

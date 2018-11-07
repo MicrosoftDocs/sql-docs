@@ -2,7 +2,7 @@
 title: Azure Data Studio SQL Server 2019 extension (preview) | Microsoft Docs
 description: SQL Server 2019 Preview extension for Azure Data Studio
 ms.custom: "tools|sos"
-ms.date: "10/11/2018"
+ms.date: "11/06/2018"
 ms.reviewer: "alayu; sstein"
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -24,9 +24,9 @@ To install the SQL Server 2019 extension (preview), download and install the ass
 
    |Platform|Download|Release date|Version
    |:---|:---|:---|:---|
-   |Windows|[.vsix](https://go.microsoft.com/fwlink/?LinkId=2031539)|October 18, 2018|0.7.2
-   |macOS|[.vsix](https://go.microsoft.com/fwlink/?LinkId=2031717)|October 18, 2018 |0.7.2
-   |Linux|[.vsix](https://go.microsoft.com/fwlink/?LinkId=2031538)|October 18, 2018 |0.7.2
+   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2038184)|November 6, 2018 |0.8.0
+   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2038178)|November 6, 2018 |0.8.0
+   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2038246)|November 6, 2018 |0.8.0
 
 1. In Azure Data Studio choose **Install Extension from VSIX Package** from the **File** menu and select the downloaded .vsix file.
 
@@ -35,6 +35,27 @@ To install the SQL Server 2019 extension (preview), download and install the ass
 1. Select **Reload** to enable the extension (only required the first time you install an extension).
 
 1. After reloading, the extension will install dependencies. You can see the progress in the Output window, and it could take several minutes.
+
+## Release Notes (v0.8.0)
+*Notebooks*:
+* Adding cells before / after existing cells is now supported by clicking the “More Actions” cell button
+* **Add New Connection** option has been added to the connections in the “Attach To” dropdown
+* A **Reinstall Notebook Dependencies** command has been added to assist with Python package updates, and solve cases where install was halted partway through by closing the application. This can be run from the command palette (use `Ctrl/Cmd+Shift+P` and type `Reinstall Notebook Dependencies`)
+* The PROSE python package has been updated to 1.1.0 and includes a number of bug fixes. Use the **Reinstall Notebook Dependencies** command to update this package
+* A **Clear Output** command is now supported by clicking the **More Actions** cell button
+* Fixed the following customer reported issues:
+  * Notebook session could not start on Windows due to PATH issues
+  * Notebook could not be started from the root folder of a drive, such as C:\ or D:\
+  * [#2820](https://github.com/Microsoft/azuredatastudio/issues/2820) Unable to edit notebooks created from ADS in VS Code
+  * Spark UI link now works when running a Spark kernel
+  * Renamed “Managed Packages” to “Install Packages”
+
+*Create External Data*:
+
+* Error messages are copyable and have been separated into a summary and detailed view for easier
+* Improved UI layout and significantly improved reliability and error handling
+* Fixed the following customer reported issues:
+  * Tables with invalid column mappings are shown as disabled and a warning explains the error
 
 ## Release Notes (v0.7.2)
 * Azure Resource Explorer is now built into Azure Data Studio and has been removed from this extension. Thank you for your feedback on this!
@@ -100,3 +121,5 @@ For details, see [Big Data Clusters](../big-data-cluster/big-data-cluster-overvi
 
 * If password is not saved when creating a connection, some actions such as submitting Spark Job may not succeed.
 * Existing .ipynb notebooks must be upgraded to version 4 or higher to load contents in the viewer.
+* Running the **Reinstall Notebook Dependencies** command may show 2 tasks in the tasks view, one of which fails. This does not cause installation to fail
+* Choosing **Add New Connection** in a Notebook and clicking cancel will cause **Select Connection** to be shown, even if you were already connected.

@@ -5,8 +5,7 @@ ms.date: "01/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: data-movement
 ms.topic: conceptual
 helpviewer_keywords: 
   - "bulk importing [SQL Server], from Azure blob storage"

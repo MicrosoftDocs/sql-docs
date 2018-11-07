@@ -1,7 +1,7 @@
 ---
 title: "What's new in SQL Server 2019 | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/06/2018"
+ms.date: 11/06/2018
 ms.prod: "sql-server-2018"
 ms.reviewer: ""
 ms.technology: 
@@ -35,6 +35,9 @@ Community technology preview (CTP) 2.1 is the latest public release of [!INCLUDE
   - UTF-8 collations support in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] setup
   - Use derived table or view aliases in graph match queries
   - Improved diagnostic data for stats blocking
+  - Hybrid Buffer Pool
+- [Tools](#tools)
+  - Azure Data Studio
 
 ## CTP 2.0 
 
@@ -108,6 +111,8 @@ Continue reading for more details about these features.
 ### Scalar UDF inlining (CTP 2.1)
 
 Scalar UDF inlining automatically transforms scalar user-defined functions (UDF) into relational expressions and embeds them in the calling SQL query, thereby improving the performance of workloads that leverage scalar UDFs. Scalar UDF inlining facilitates cost-based optimization of operations inside UDFs, and results in efficient plans that are set-oriented and parallel as opposed to inefficient, iterative, serial execution plans. This feature is enabled by default under database compatibility level 150.
+
+For more information, see [Scalar UDF inlining](../relational-databases/user-defined-functions/scalar-udf-inlining.md)
 
 ### Truncation error message improved to include table and column names, and truncated value (CTP 2.1)
 
@@ -281,9 +286,11 @@ Any [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] file that is placed o
 > [!NOTE]
 > For this preview release, enlightenment of files on persistent memory devices is only available on Linux. SQL Server on Windows supports persistent memory devices starting with SQL Server 2016.
 
-### Hybrid Buffer Pool (CTP 2.1)
+### Hybrid buffer pool (CTP 2.1)
 
-Hybrid Buffer Pool is a new feature of the SQL Server database engine where database pages sitting on database files placed on a persistent memory (PMEM) device will be directly accessed when required. Since PMEM devices provide very low latency for data access, the engine can forgo making a copy of the data in a "clean pages" area of the buffer pool and simply access the page directly on PMEM. Access is performed using memory mapped I/O, as is the case with enlightenment. This brings performance benefits from avoiding a copy of the page to DRAM, and from the avoidance of the I/O stack of the operating system to access the page on persistent storage. This feature is available on both SQL Server on Windows and SQL Server on Linux.   
+Hybrid buffer pool is a new feature of the SQL Server database engine where database pages sitting on database files placed on a persistent memory (PMEM) device will be directly accessed when required. Since PMEM devices provide very low latency for data access, the engine can forgo making a copy of the data in a "clean pages" area of the buffer pool and simply access the page directly on PMEM. Access is performed using memory mapped I/O, as is the case with enlightenment. This brings performance benefits from avoiding a copy of the page to DRAM, and from the avoidance of the I/O stack of the operating system to access the page on persistent storage. This feature is available on both SQL Server on Windows and SQL Server on Linux.
+
+For more information, see [Hybrid buffer pool](../database-engine/configure-windows/hybrid-buffer-pool.md)
 
 ### Support for columnstore statistics in DBCC CLONEDATABASE (CTP 2.0)
 
@@ -367,26 +374,27 @@ FROM sys.dm_exec_requests AS d
   > [!NOTE]
   > User must have administrator permissions on all the cluster nodes.
 
-## <a id="tools"></a>Tools (CTP 2.0)
+## <a id="tools"></a>Tools
 
 - [**Azure Data Studio**](../azure-data-studio/what-is.md): Previously released under the preview name SQL Operations Studio, Azure Data Studio is a lightweight, modern, open source, cross-platform desktop tool for the most common tasks in data development and administration. With Azure Data Studio you can connect to SQL Server on premises and in the cloud on Windows, macOS, and Linux. Azure Data Studio allows you to:
 
-  - Edit and run queries in a modern development environment with lightning fast Intellisense, code snippets, and source control integration.  
-  - Quickly visualize data with built-in charting of your result sets.  
-  - Create custom dashboards for your servers and databases using customizable widgets.  
-  - Easily manage your broader environment with the built-in terminal.  
-  - Analyze data in an integrated notebook experience built on Jupyter.  
-  - Enhance your experience with custom theming and extensions.  
-  - And explore your Azure resources with a built-in subscription and resource browser.
-  - Supports scenarios using SQL Server Big Data Cluster.
+  - Update to the [SQL Server 2019 (preview) extension](../azure-data-studio/sql-server-2019-extension.md). (CTP 2.1)
+  - Edit and run queries in a modern development environment with lightning fast Intellisense, code snippets, and source control integration. (CTP 2.0) 
+  - Quickly visualize data with built-in charting of your result sets. (CTP 2.0)
+  - Create custom dashboards for your servers and databases using customizable widgets. (CTP 2.0)  
+  - Easily manage your broader environment with the built-in terminal. (CTP 2.0)
+  - Analyze data in an integrated notebook experience built on Jupyter. (CTP 2.0)
+  - Enhance your experience with custom theming and extensions.(CTP 2.0)
+  - And explore your Azure resources with a built-in subscription and resource browser. (CTP 2.0)
+  - Supports scenarios using SQL Server Big Data Cluster. (CTP 2.0)
 
 - [**SQL Server Management Studio (SSMS) 18.0 (preview)**](../ssms/sql-server-management-studio-ssms.md)
 
-  - Support for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
-  - Support for Always Encrypted with secure enclaves.
-  - Smaller download size.
-  - Now based on the Visual Studio 2017 Isolated Shell.
-  - For a complete list, see the [SSMS changelog](../ssms/sql-server-management-studio-changelog-ssms.md).
+  - Support for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].(CTP 2.0)
+  - Support for Always Encrypted with secure enclaves.(CTP 2.0)
+  - Smaller download size.(CTP 2.0)
+  - Now based on the Visual Studio 2017 Isolated Shell.(CTP 2.0)
+  - For a complete list, see the [SSMS changelog](../ssms/sql-server-management-studio-changelog-ssms.md).(CTP 2.0)
 
 ## Other services
 

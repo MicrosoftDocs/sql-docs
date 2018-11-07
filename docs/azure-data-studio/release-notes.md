@@ -2,7 +2,7 @@
 title: Azure Data Studio release notes| Microsoft Docs
 description: 'Azure Data Studio release notes'
 ms.custom: "tools|sos"
-ms.date: "09/24/2018"
+ms.date: "11/06/2018"
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: "alayu; sstein"
@@ -13,7 +13,33 @@ manager: craigg
 ---
 # Azure Data Studio release notes
 
-**[Download the October Release!](download.md)**
+**[Download the November Release!](download.md)**
+
+## November 2018 (November Release)
+
+release date: November 6, 2018  
+version: 1.2.4
+
+- Introducing Idera extension
+- Update to the [SQL Server 2019 Preview extension](https://docs.microsoft.com/sql/azure-data-studio/sql-server-2019-extension?view=sql-server-ver15)
+- Introducing Paste the Plan extension
+- Introducing High Color queries extension, including SSMS editor theme
+- Fixes in SQL Server Agent, Profiler, and Import extensions
+- Fix .Net Core Socket KeepAlive issue causing dropped inactive connections on macOS
+- Upgrade SQL Tools Service to .Net Core 2.2 Preview 3 (for eventual AAD support)
+
+### Bug Fixes
+- Fix [issue #2933](https://github.com/Microsoft/azuredatastudio/issues/2933): Connection lost to Azure SQL DB
+- Fix [issue #2914](https://github.com/Microsoft/azuredatastudio/issues/2914): "Invalid argument" exception expanding OE database node
+- Fix [issue #2935](https://github.com/Microsoft/azuredatastudio/pull/2935): Display multi-line messages correctly in query results
+- Fix [issue #2906](https://github.com/Microsoft/azuredatastudio/pull/2906): Fix Edit Data document name when table name contains special characters
+- Fix [issue #2929](https://github.com/Microsoft/azuredatastudio/issues/2929): Built in extension changelog says to check the VSCode Release Notes for changes
+- Fix [issue #2719](https://github.com/Microsoft/azuredatastudio/issues/2719): High Contrast theme doubles/triples icons
+- Fix [issue #3047](https://github.com/Microsoft/azuredatastudio/pull/3047): Add a command line interface for connecting to a SQL Server
+- Fix [issue #3031](https://github.com/Microsoft/azuredatastudio/pull/3031): Add query plan theme support
+- ...
+
+For detailed information, see the [Change Log](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md), and [Releases](https://github.com/Microsoft/azuredatastudio/releases).
 
 ## October 2018 (October Release)
 

@@ -4,7 +4,7 @@ description: This article describes the compute pool in a SQL Server 2019 big da
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 10/01/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ---

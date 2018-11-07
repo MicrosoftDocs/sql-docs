@@ -1,7 +1,7 @@
 ---
 title: "SQL Server 2019 Release Notes | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/06/2018"
+ms.date: 11/06/2018
 ms.prod: "sql-server-2018"
 ms.reviewer: ""
 ms.technology: 
@@ -90,7 +90,7 @@ Limited support may be found at one of the following locations:
 
 - **Issue and customer impact**: There are corner case scenarios where nested calls to user defined functions inline do not correctly validate security.
   
-- **Workaround**: Disable UDF inlining for using the `INLINE=OFF` option.
+- **Workaround**: Disable UDF inlining for such UDFs using the `INLINE = OFF` setting.
 
 - **Applies to**: SQL Server 2019 CTP 2.1
 

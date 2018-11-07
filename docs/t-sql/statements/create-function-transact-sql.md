@@ -1,7 +1,7 @@
 ---
 title: "CREATE FUNCTION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/25/2018"
+ms.date: 11/06/2018
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""

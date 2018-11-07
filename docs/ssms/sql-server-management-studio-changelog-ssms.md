@@ -1130,7 +1130,7 @@ Fixed issue in AE wizard where the Azure Key Vault sign-in page was not showing 
 Fixed issue in AE wizard where the Azure Key Vault sign-in page was not showing Azure subscriptions for which the user has reader permission
   - Fixed an issue where resource files may not be loaded correctly, thus resulting in inaccurate error messages
 - Improved contrast of hyperlinks on SSMS Setup page
-- Fixed an issue where Polybase nodes were not displayed when connected to SQL Server Express (2016 SP1)
+- Fixed an issue where PolyBase nodes were not displayed when connected to SQL Server Express (2016 SP1)
 - Fixed an issue where SSMS is unable to change the Compatibility Level of an Azure DB to v140
 - Improved performance of Object Explorer when expanding the list of Azure databases [Connect Item](https://connect.microsoft.com/SQLServer/feedback/details/3100675)
 - Fixed an issue where "View SQL Server Log" context menu item appeared incorrectly for non-relational server types (AS\RS\IS) 
@@ -1176,7 +1176,7 @@ Avoid issuing table queries that sort on the server
 - Removed Azure Deployment Wizard (Deploy Database to Azure VM) from SSMS
 - Fixed issue where missing indexes were not shown in execution plans in SSMS [Connect Item](http://connect.microsoft.com/SQLServer/feedback/details/3114194)
 - Fixed common crash-on-shutdown issue in SSMS
-- Fixed issue in Object Explorer where an error occurred when bringing up the context menu on the Polybase|Scale-Out Group nodes [Connect Item](http://connect.microsoft.com/SQLServer/feedback/details/3115128)
+- Fixed issue in Object Explorer where an error occurred when bringing up the context menu on the PolyBase|Scale-Out Group nodes [Connect Item](http://connect.microsoft.com/SQLServer/feedback/details/3115128)
 - Fixed an issue where SSMS may crash when trying to display the permissions on a database
 - Query Store: general enhancements in context menu items for result grids of query store report
 - Configuring Always Encrypted for an existing table fails with errors on unrelated objects. [Connect Item](http://connect.microsoft.com/SQLServer/feedback/details/3103181)

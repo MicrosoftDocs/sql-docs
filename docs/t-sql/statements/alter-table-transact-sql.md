@@ -1436,7 +1436,7 @@ FROM sys.columns WHERE object_id = OBJECT_ID(N'dbo.doc_exy');
 ```  
   
 #### C. Changing column collation  
- The following example shows how to change the collation of a column. Frist, a table is created table with the default user collation.  
+ The following example shows how to change the collation of a column. First, a table is created table with the default user collation.  
   
 ```sql  
 CREATE TABLE T3  

@@ -24,8 +24,7 @@ This article describes limitations and known issues for the [!INCLUDE[SQL Server
 > Preview releases of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] are made available for you to experience the features of the upcoming release. They are not supported or licensed for production use. The following scenarios are explicitly unsupported:
 >
 > - Side-by-side installation with other versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
-> - Uninstallation
-> - Upgrade from a previous edition of SQL Server
+> - Upgrade an existing instance of SQL Server from any version
 
 **Try [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]!**
 - [![Download from Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=862101) [Download [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] to install on Windows](http://go.microsoft.com/fwlink/?LinkID=862101)
@@ -112,7 +111,7 @@ Limited support may be found at one of the following locations:
   - SQL Server Replication
   - Linked Server
   - In-memory OLTP
-  - External Table for Polybase
+  - External Table for PolyBase
 
     Also note there is currently no UI support to choose UTF-8 enabled collations in Azure Data Studio or SSDT. The latest SSMS version supports choice of UTF-8 enabled collations in the UI.
 

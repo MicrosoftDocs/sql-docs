@@ -131,7 +131,7 @@ APS AU6 supports these T-SQL compatibility improvements.  These additional langu
 
 **Data types**
 
-- [VARCHAR(MAX)][], [NVARCHAR(MAX)][] and [VARBINARY(MAX)][]. These LOB data types have a maximum size of 2 GB. To load these objects use [bcp Utility][]. Polybase and dwloader do not currently support these data types. 
+- [VARCHAR(MAX)][], [NVARCHAR(MAX)][] and [VARBINARY(MAX)][]. These LOB data types have a maximum size of 2 GB. To load these objects use [bcp Utility][]. PolyBase and dwloader do not currently support these data types. 
 - [SYSNAME][]
 - [UNIQUEIDENTIFIER][]
 - [NUMERIC][] and DECIMAL data types.

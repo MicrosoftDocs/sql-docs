@@ -329,7 +329,7 @@ The following features and services are not available on Linux at the time of th
 | **Database engine** | Transactional replication |
 | &nbsp; | Merge replication |
 | &nbsp; | Stretch DB |
-| &nbsp; | Polybase |
+| &nbsp; | PolyBase |
 | &nbsp; | Distributed query with 3rd-party connections |
 | &nbsp; | Linked Servers to data sources other than SQL Server |
 | &nbsp; | System extended stored procedures (XP_CMDSHELL, etc.) |

@@ -98,7 +98,7 @@ manager: craigg
   
  - **SQL Server PolyBase Engine** - Provides distributed query capabilities to external data sources.
  
- - **SQL Server Polybase Data Movement Service** - Enables data movement between SQL Server and External Data Sources and between SQL nodes in PolyBase Scaleout Groups.
+ - **SQL Server PolyBase Data Movement Service** - Enables data movement between SQL Server and External Data Sources and between SQL nodes in PolyBase Scaleout Groups.
   
 ##  <a name="Serv_Prop"></a> Service Properties and Configuration
 

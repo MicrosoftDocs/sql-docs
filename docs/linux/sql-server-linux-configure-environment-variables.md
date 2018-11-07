@@ -24,7 +24,7 @@ You can use several different environment variables to configure SQL Server 2017
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-You can use several different environment variables to configure SQL Server 2019 CTP 2.0 on Linux. These variables are used in two scenarios:
+You can use several different environment variables to configure SQL Server 2019 preview on Linux. These variables are used in two scenarios:
 
 ::: moniker-end
 

@@ -60,9 +60,9 @@ To learn more about some of our other partners, see [High availability and disas
 [solarwinds_datasheet]:https://www.solarwinds.com/-/media/solarwinds/swdcv2/licensed-products/database-performance-analyzer-sql-server/resources/datasheets/dpa-datasheet-sql-server.ashx
 
 <!--Marketplace Links -->
-<!----Not available[idera_marketplace]:https://azure.microsoft.com/en-us/marketplace/-->
-[quest_marketplace]:http://azuremarketplace.microsoft.com/marketplace/apps/dell_software.spotlight-enterprise-12-0?tab=Overview 
-[solarwinds_marketplace]:https://azuremarketplace.microsoft.com/en-us/marketplace/apps/solarwinds.solarwinds-database-performance-analyzer?tab=Overview
+<!----Not available[idera_marketplace]:https://azure.microsoft.com/en-us/marketplace/-->  
+[quest_marketplace]:http://azuremarketplace.microsoft.com/marketplace/apps/dell_software.spotlight-enterprise-12-0?tab=Overview  
+[solarwinds_marketplace]:https://azuremarketplace.microsoft.com/en-us/marketplace/apps/solarwinds.solarwinds-database-performance-analyzer?tab=Overview  
 
 <!--Press links-->
 <!--[idera_press]:-->

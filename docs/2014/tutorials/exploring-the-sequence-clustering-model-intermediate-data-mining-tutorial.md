@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: f8a485d5-47ed-4dd5-bb66-ef4d6d463845
-caps.latest.revision: 45
-author: "minewiskan"
-ms.author: "owend"
-manager: "kfile"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Exploring the Sequence Clustering Model (Intermediate Data Mining Tutorial)
   Now that you have built the **Sequence Clustering with Region** model, you can explore it by using the [!INCLUDE[msCoName](../includes/msconame-md.md)] Sequence Clustering Viewer in the **Mining Model Viewer** tab of Data Mining Designer. The [!INCLUDE[msCoName](../includes/msconame-md.md)] Sequence Cluster Viewer contains five tabs: **Cluster Diagram**, **Cluster Profiles**, **Cluster Characteristics**, **ClusterDiscrimination**, and **State Transitions**. For more information about how to use this viewer, see [Browse a Model Using the Microsoft Sequence Cluster Viewer](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md).  
@@ -44,7 +41,7 @@ manager: "kfile"
   
 2.  Select **Cycling Cap** in the **State** list.  
   
-     The diagram updates to show the concentration of the selected product in each of the clusters. The cluster that has the darkest shading contains the highest density of cycling caps. You can change the shading variable to use any any state of any input column.  
+     The diagram updates to show the concentration of the selected product in each of the clusters. The cluster that has the darkest shading contains the highest density of cycling caps. You can change the shading variable to use any state of any input column.  
   
 3.  In the **Shading Variable** list, select **Population**.  
   

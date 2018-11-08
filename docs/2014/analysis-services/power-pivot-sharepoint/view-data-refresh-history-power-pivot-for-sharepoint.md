@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "unattended data refresh [Analysis Services with SharePoint]"
@@ -15,10 +13,9 @@ helpviewer_keywords:
   - "scheduled data refresh [Analysis Services with SharePoint]"
   - "data refresh [Analysis Services with SharePoint]"
 ms.assetid: 4c8d8aa8-794d-4f72-ace3-78d0e688e1a5
-caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # View Data Refresh History (PowerPivot for SharePoint)
   Data refresh history is a record of all data refresh activity for PowerPivot data in an Excel workbook. Data refresh operations are performed on an Analysis Services server instance in a SharePoint farm on a schedule that you provide. By default, data refresh history is retained for one year. However, a farm administrator can specify a different retention policy for usage and event history that determines how long data refresh records are kept.  

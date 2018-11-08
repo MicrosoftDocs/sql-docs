@@ -4,19 +4,15 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: supportability
 ms.topic: conceptual
 f1_keywords: 
   - "17194"
 helpviewer_keywords: 
   - "17194 (Database Engine error)"
 ms.assetid: 0d03eb20-28a7-4ceb-8903-7f9420a620f7
-caps.latest.revision: 11
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # MSSQLSERVER_17194

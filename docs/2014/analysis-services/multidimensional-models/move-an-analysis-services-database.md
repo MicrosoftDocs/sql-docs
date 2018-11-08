@@ -4,20 +4,17 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "moving databases [Anlysis Services]"
   - "moving databases"
   - "operations [Analysis Services - multidimensional data]"
 ms.assetid: fa644e5d-e276-445e-98d9-673afcfb83fe
-caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Move an Analysis Services Database
   There are often situations when an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database administrator (dba) wants to move a multidimensional or tabular model database to a different location. These situations are often driven by business needs, such as moving the database to a different disk for better performance, gaining room for database growth, or to upgrade a product.  
@@ -143,9 +140,9 @@ manager: "mblythe"
  [Attach and Detach Analysis Services Databases](attach-and-detach-analysis-services-databases.md)   
  [Database Storage Location](database-storage-location.md)   
  [Database ReadWriteModes](database-readwritemodes.md)   
- [Attach Element](../xmla/xml-elements-commands/attach-element.md)   
- [Detach Element](../xmla/xml-elements-commands/detach-element.md)   
- [ReadWriteMode Element](../xmla/xml-elements-properties/readwritemode-element.md)   
- [DbStorageLocation Element](../xmla/xml-elements-properties/dbstoragelocation-element.md)  
+ [Attach Element](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)   
+ [Detach Element](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   
+ [ReadWriteMode Element](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/readwritemode-element)   
+ [DbStorageLocation Element](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/dbstoragelocation-element)  
   
   

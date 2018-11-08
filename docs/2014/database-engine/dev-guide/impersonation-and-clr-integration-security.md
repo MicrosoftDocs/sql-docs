@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "impersonation [CLR integration]"
@@ -17,9 +15,8 @@ helpviewer_keywords:
   - "user impersonation [CLR integration]"
   - "context [CLR integration]"
 ms.assetid: 1495a7af-2248-4cee-afdb-9269fb3a7774
-caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Impersonation and CLR Integration Security

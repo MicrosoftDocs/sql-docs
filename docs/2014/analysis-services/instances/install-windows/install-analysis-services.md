@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: cd6ac80d-b735-4e3e-a024-489f1409ad33
-caps.latest.revision: 16
-author: "markingmyname"
-ms.author: "maghan"
+author: minewiskan
+ms.author: owend
 manager: craigg
 ---
 # Install Analysis Services in Tabular Mode

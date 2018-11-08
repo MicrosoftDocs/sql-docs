@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dm.dmwizard.specifytrainingdata.f1"
 ms.assetid: cb04deeb-0f89-4bba-b3f1-efccada16825
-caps.latest.revision: 29
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Specify the Training Data (Data Mining Wizard)
   Use the **Specify the Training Data** page to identify which columns to include in the mining structure. You can select columns to include in the structure even if you do not use them in all models. For example, if you want to drill through to the columns from the mining model, you can include them in the structure but not in the model.  

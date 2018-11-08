@@ -6,14 +6,11 @@ ms.date: "02/09/2017"
 ms.prod: "sql"
 ms.technology: ssdt
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql.data.tools.unittesting.DatabaseMethodNameDialog"
   - "sql.data.tools.unittesting.designer"
 ms.assetid: 3c082177-a2b1-4fde-8833-b49b2a351815
-caps.latest.revision: 10
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"

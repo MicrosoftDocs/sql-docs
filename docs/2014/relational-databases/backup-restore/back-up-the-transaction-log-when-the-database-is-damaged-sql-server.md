@@ -4,19 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
+ms.technology: backup-restore
 ms.topic: conceptual
 helpviewer_keywords: 
   - "databases [SQL Server], damaged"
   - "backing up [SQL Server]. damaged database"
   - "transaction log backups [SQL Server], damaged databases"
 ms.assetid: 9b8873cc-df54-4336-ab9b-8f525132c2b0
-caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Back Up the Transaction Log When the Database Is Damaged (SQL Server)

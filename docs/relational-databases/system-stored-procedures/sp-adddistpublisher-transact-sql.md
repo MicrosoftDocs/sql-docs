@@ -1,31 +1,25 @@
 ---
 title: "sp_adddistpublisher (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "06/15/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "replication"
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_adddistpublisher"
   - "sp_adddistpublisher_TSQL"
 helpviewer_keywords: 
   - "sp_adddistpublisher"
 ms.assetid: 04e15011-a902-4074-b38c-3ec2fc73b838
-caps.latest.revision: 35
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # sp_adddistpublisher (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Configures a Publisher to use a specified distribution database. This stored procedure is executed at the Distributor on any database. Note that the stored procedures [sp_adddistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md) and [sp_adddistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md) must have been run prior to using this stored procedure.  
   
@@ -41,6 +35,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
     [ , [ @login= ] 'login' ]   
     [ , [ @password= ] 'password' ]   
     [ , [ @working_directory= ] 'working_directory' ]   
+    [ , [ @storage_connection_string= ] 'storage_connection_string']
     [ , [ @trusted= ] 'trusted' ]   
     [ , [ @encrypted_password= ] encrypted_password ]   
     [ , [ @thirdparty_flag = ] thirdparty_flag ]  
@@ -72,8 +67,15 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 >  Do not use a blank password. Use a strong password.  
   
  [ **@working_directory=**] **'***working_directory***'**  
- Is the name of the working directory used to store data and schema files for the publication. *working_directory* is **nvarchar(255)**, and defaults to the ReplData folder for this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], for example 'C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData'. The name should be specified in UNC format.  
-  
+ Is the name of the working directory used to store data and schema files for the publication. *working_directory* is **nvarchar(255)**, and defaults to the ReplData folder for this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], for example `C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData`. The name should be specified in UNC format.  
+
+ For Azure SQL Database, use `\\<storage_account>.file.core.windows.net\<share>`.
+
+ [ **@storage_connection_string =**] **'***storage_connection_string***'**  
+ Is required for SQL Database. Use the access key from Azure Portal under storage > settings.
+
+ > [!INCLUDE[Azure SQL Database link](../../includes/azure-sql-db-repl-for-more-information.md)]
+
  [ **@trusted=**] **'***trusted***'**  
  This parameter has been deprecated and is provided for backward compatibility only. *trusted* is **nvarchar(5)**, and setting it to anything but **false** will result in an error.  
   

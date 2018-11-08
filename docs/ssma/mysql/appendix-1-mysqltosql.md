@@ -4,15 +4,9 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 ms.assetid: 2d22766d-ff09-420d-ae7c-13b443e28bd0
-caps.latest.revision: 10
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: craigg
@@ -32,5 +26,5 @@ Quick view of the SSMA Console command line options:
 |8|-?|No|Not Applicable|Not Applicable|  
   
 ## See Also  
-[Executing the SSMA Console (MySQL)](http://msdn.microsoft.com/en-us/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
+[Executing the SSMA Console (MySQL)](http://msdn.microsoft.com/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
   

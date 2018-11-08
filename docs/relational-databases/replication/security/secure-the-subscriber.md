@@ -4,19 +4,14 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "subscriptions [SQL Server replication], security"
   - "Subscribers [SQL Server replication], security"
   - "security [SQL Server replication], Subscribers"
 ms.assetid: c8f0d62a-8b5d-4a21-9aec-223da52bb708
-caps.latest.revision: 37
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

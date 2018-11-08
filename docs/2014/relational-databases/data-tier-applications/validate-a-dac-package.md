@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "dbe-data-tier-apps"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "data-tier application [SQL Server], validate"
@@ -17,9 +14,8 @@ helpviewer_keywords:
   - "data-tier application [SQL Server], view"
   - "view DAC"
 ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
-caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Validate a DAC Package

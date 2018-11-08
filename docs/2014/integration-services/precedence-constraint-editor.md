@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.precedenceconstraint.f1"
 helpviewer_keywords: 
   - "Precedence Constraint Editor dialog box"
 ms.assetid: b10d4330-6e35-4037-b309-ef56efcd60c5
-caps.latest.revision: 27
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Precedence Constraint Editor

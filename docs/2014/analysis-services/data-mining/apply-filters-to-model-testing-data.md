@@ -4,20 +4,17 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "input row filtering [SQL Server]"
   - "filtering input rows [Analysis Services]"
   - "Mining Accuracy Chart [Analysis Services], filtering input rows"
 ms.assetid: 9ccc9a23-5597-4b35-a05f-2fc8eb885147
-caps.latest.revision: 43
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Apply Filters to Model Testing Data
   When you specify an external data source to use in testing a model, you can optionally apply a filter to restrict the input data. For example, you might want to test the model specifically for predictions on customers in a certain income range.  

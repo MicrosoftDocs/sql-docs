@@ -1,14 +1,11 @@
 ---
 title: "PREDICT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/25/2018"
+ms.date: "11/06/2018"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: t-sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "PREDICT"
@@ -17,13 +14,13 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "PREDICT clause"
-author: "jeannt"
-ms.author: "jeannt"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: craigg
-monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
+monikerRange: ">=sql-server-2017||=azuresqldb-current||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # PREDICT (Transact-SQL)  
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
 Generates a predicted value or scores based on a stored model.  
 
@@ -68,9 +65,6 @@ The PARAMETERS parameter is used to specify optional user-defined parameters use
 
 The name of each parameter is specific to the model type. For example, the [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) function in RevoScaleR supports the parameter `@computeResiduals`, which indicates whether residuals should be computed when scoring a logistic regression model. If you are calling a compatible model, you could pass that parameter name and a TRUE or FALSE value to the `PREDICT` function.
 
-> [!NOTE]
-> This option does not work in pre-release versions of SQL Server 2017.
-
 **WITH ( <result_set_definition> )**
 
 The WITH clause is used to specify the schema of the output returned by the `PREDICT` function.
@@ -93,7 +87,7 @@ It is not possible to view the internal model structure using `PREDICT`. If you 
 
 ## Remarks
 
-The `PREDICT` function is supported in all editions of SQL Server, including Linux, and in Azure SQL Database, regardless of whether other machine learning features are enabled. However, SQL Server 2017 or later is required. 
+The `PREDICT` function is supported in all editions of SQL Server 2017 or later. This support includes SQL Server 2017 on Linux. `PREDICT` is also supported in Azure SQL Database in the cloud. All these supports are active regardless of whether other machine learning features are enabled.
 
 It is not necessary that R, Python, or another machine learning language be installed on the server to use the `PREDICT` function. You can train the model in another environment and save it to a SQL Server table for use with `PREDICT`, or call the model from another instance of SQL Server that has the saved model.
 
@@ -169,9 +163,6 @@ END;
 ```
 
 ### Creating an R model and generating scores using optional model parameters
-
-> [!NOTE]
-> Use of the parameters argument is not supported in Release Candidate 1.
 
 This example assumes that you have created a logistic regression model fitted with a covariance matrix, using a call to RevoScaleR such as this:
 

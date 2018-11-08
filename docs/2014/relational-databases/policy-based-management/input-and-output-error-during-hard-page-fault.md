@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-cross-instance"
-ms.tgt_pltfrm: ""
+ms.technology:
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Best Practices [Database Engine]"
 ms.assetid: f17abdd4-5f34-403a-ade4-7857d3056b83
-caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Input and Output Error During Hard Page Fault

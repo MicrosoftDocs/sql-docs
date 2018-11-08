@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "VB"
 ms.assetid: b65c74b6-889b-4323-9240-90827a70ab0e
-caps.latest.revision: 33
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: craigg-msft
+ms.author: douglasl
+manager: craigg
 ---
 # Lesson 4: Running the Application (VB-VC#)
   [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] offers several methods to build and run a console application from the IDE, such as:  

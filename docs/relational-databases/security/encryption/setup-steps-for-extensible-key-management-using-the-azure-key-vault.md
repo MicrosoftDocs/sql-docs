@@ -1,19 +1,16 @@
 ---
 title: "SQL Server TDE Extensible Key Management Using Azure Key Vault - Setup Steps | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/11/2018"
+ms.date: "08/24/2018"
 ms.prod: sql
-ms.reviewer: ""
-ms.suite: "sql"
+ms.reviewer: vanto
 ms.technology: security
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "EKM, with key vault setup"
   - "SQL Server Connector, setup"
   - "SQL Server Connector"
 ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
-caps.latest.revision: 34
 author: aliceku
 ms.author: aliceku
 manager: craigg
@@ -147,14 +144,14 @@ SQL Server Version  |Redistributable Install Link
     In this case, let’s use the Azure Active Directory service principal created in Part I to authorize the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance.  
   
     > [!IMPORTANT]  
-    >  The Azure Active Directory service principal must have at least the `get`, `list`, `wrapKey`, and `unwrapKey` permissions for the key vault.  
+    >  The Azure Active Directory service principal must have at least the `get`, `wrapKey`, and `unwrapKey` permissions for the key vault.  
   
      As shown below, use the **Client ID** from Part I for the `ServicePrincipalName` parameter. The `Set-AzureRmKeyVaultAccessPolicy` runs silently with no output if it runs successfully.  
   
     ```powershell  
     Set-AzureRmKeyVaultAccessPolicy -VaultName 'ContosoDevKeyVault'`  
       -ServicePrincipalName EF5C8E09-4D2A-4A76-9998-D93440D8115D `  
-      -PermissionsToKeys get, list, wrapKey, unwrapKey  
+      -PermissionsToKeys get, wrapKey, unwrapKey  
     ```  
   
      Call the `Get-AzureRmKeyVault` cmdlet to confirm the permissions. In the statement output under ‘Access Policies,’ you should see your AAD application name listed as another tenant that has access to this key vault.  
@@ -240,6 +237,9 @@ SQL Server Version  |Redistributable Install Link
 
 > [!NOTE]  
 >  Versions 1.0.0.440 and older have been replaced and are no longer supported in production environments. Upgrade to version 1.0.1.0 or later by visiting the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=45344) and using the instructions on the [SQL Server Connector Maintenance & Troubleshooting](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) page under “Upgrade of SQL Server Connector.”
+
+> [!NOTE]  
+> There is a breaking change in 1.0.5.0 version, in terms of the thumbprint algorithm. You may experience database restore failure after upgrading to 1.0.5.0 version. Please refer KB aritcle [447099](https://support.microsoft.com/en-us/help/4470999/db-backup-problems-to-sql-server-connector-for-azure-1-0-5-0).
   
  ![ekm-connector-install](../../../relational-databases/security/encryption/media/ekm-connector-install.png "ekm-connector-install")  
   

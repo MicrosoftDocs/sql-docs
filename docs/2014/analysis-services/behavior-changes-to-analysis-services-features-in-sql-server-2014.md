@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 92ebd5cb-afb6-4b62-968f-39f5574a452b
-caps.latest.revision: 17
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Behavior Changes to Analysis Services Features in SQL Server 2014
   This topic describes behavior changes in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] for multidimensional, tabular, data mining, and [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] deployments. Behavior changes affect how features work or interact in the current version as compared to earlier versions of SQL Server.  
@@ -46,7 +43,7 @@ manager: "mblythe"
 ### Analysis Services, Multidimensional Mode  
   
 #### NullProcessing option set to Preserve is no longer supported for distinct count measures  
- Prior to [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], it was possible to set [NullProcessing Element &#40;ASSL&#41;](scripting/properties/nullprocessing-element-assl.md) to `Preserve` for distinct count measures.  Unfortunately, this practice often produced invalid results and sometimes even crashed the processing job. As a result, this configuration is no longer valid in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. Attempting to use it will cause the following validation error to occur: "Errors in the metadata manager. Preserve is not a valid NullProcessing value for the \<measurename> distinct count measure."  
+ Prior to [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], it was possible to set [NullProcessing Element &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/nullprocessing-element-assl) to `Preserve` for distinct count measures.  Unfortunately, this practice often produced invalid results and sometimes even crashed the processing job. As a result, this configuration is no longer valid in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. Attempting to use it will cause the following validation error to occur: "Errors in the metadata manager. Preserve is not a valid NullProcessing value for the \<measurename> distinct count measure."  
   
 #### Cube browser in Management Studio and Cube Designer has been removed  
  The cube browser control that let you drag and drop fields onto a PivotTable structure in Management Studio or in Cube Designer has been removed from the product. The control was an Office Web Control (OWC) component. OWC was deprecated by Office and is no longer available.  

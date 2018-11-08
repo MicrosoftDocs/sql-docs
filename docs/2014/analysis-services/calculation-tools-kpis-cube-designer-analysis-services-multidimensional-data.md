@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/14/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.cubeeditor.kpisview.calculationtoolspane.f1"
 ms.assetid: c030c725-7763-4c23-9988-4b274a88fc31
-caps.latest.revision: 24
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Calculation Tools (KPIs Tab, Cube Designer) (Analysis Services - Multidimensional Data)
   Use the **Calculation Tools** pane on the **KPIs** tab in Cube Designer to explore metadata, functions, and templates available for use in Key Performance Indicators (KPIs).  

@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
+ms.technology: high-availability
 ms.topic: conceptual
 helpviewer_keywords: 
   - "user accounts [SQL Server], failover clustering"
@@ -23,9 +20,8 @@ helpviewer_keywords:
   - "removing nodes"
   - "virtual servers [SQL Server], adding nodes"
 ms.assetid: 2d5c63e9-8061-45c3-94db-8dd3100b8a91
-caps.latest.revision: 34
-author: "rothja"
-ms.author: "jroth"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Failover Cluster Instance Administration and Maintenance

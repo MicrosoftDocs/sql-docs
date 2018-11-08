@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: clr
 ms.topic: "reference"
 helpviewer_keywords: 
   - "aggregate functions [CLR integration]"
@@ -16,9 +12,8 @@ helpviewer_keywords:
   - "calculations [CLR integration]"
   - "user-defined functions [CLR integration]"
 ms.assetid: bad9b7e8-5967-4afa-8dc8-6d840faf9372
-caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # CLR User-Defined Aggregates

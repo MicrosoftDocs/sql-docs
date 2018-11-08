@@ -4,20 +4,17 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.sqlserverstudio.cubeproperties.errorconfiguration.f1"
   - "sql12.asvs.sqlserverstudio.dimensionproperties.errorconfiguration.f1"
   - "sql12.asvs.sqlserverstudio.partitionproperties.errorconfiguration.f1"
 ms.assetid: 3f442645-790d-4dc8-b60a-709c98022aae
-caps.latest.revision: 18
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Error Configuration for Cube, Partition, and Dimension Processing (SSAS - Multidimensional)
   Error configuration properties on cube, partition, or dimension objects determine how the server responds when data integrity errors occur during processing. Duplicate keys, missing keys, and null values in a key column typically trigger such errors, and while the record causing the error will not be added to the database, you can set properties that determine what happens next. By default, processing stops. However, during cube development, you might want processing to continue when errors occur so that you can test cube behaviors with imported data, even if it is incomplete.  

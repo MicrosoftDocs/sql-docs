@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: reference
-ms.tgt_pltfrm: ""
+ms.technology: clr
 ms.topic: "reference"
 helpviewer_keywords: 
   - "host protection attributes [CLR integration]"
   - "common language runtime [SQL Server], host protection attributes"
 ms.assetid: daf82d4b-2f6d-44ca-9148-75193321b6d5
-caps.latest.revision: 21
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

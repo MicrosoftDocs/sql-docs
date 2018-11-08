@@ -4,16 +4,12 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 25e66ed3-2270-4c5c-9f5a-2c0f165a57ca
-caps.latest.revision: 6
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -25,9 +21,9 @@ manager: craigg
   
 |Column header|Data type|Description|  
 |-------------------|---------------|-----------------|  
-|period_type|**sysname**|Name of the period|  
-|period_type_desc|**tinyint**|The numeric value representing the type of period:<br /><br /> 1 = system-time period|  
-|object_id|**nvarchar(60)**|The text description of the type of column:<br /><br /> SYSTEM_TIME_PERIOD|  
+|name|**sysname**|Name of the period|  
+|period_type|**tinyint**|The numeric value representing the type of period:<br /><br /> 1 = system-time period|  
+|period_type_desc|**nvarchar(60)**|The text description of the type of column:<br /><br /> SYSTEM_TIME_PERIOD|  
 |object_id|**int**|The id of the table containing the period_type column|  
 |start_column_id|**int**|The id of the column that defines the lower period boundary|  
 |end_column_id|**int**|The id of the column that defines the upper period boundary|  

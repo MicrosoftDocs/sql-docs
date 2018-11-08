@@ -1,30 +1,13 @@
 ---
 title: "Backup and Restore Operations for Reporting Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/24/2018"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-
-
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-helpviewer_keywords: 
-  - "databases [Reporting Services], backing up"
-  - "databases [Reporting Services], restoring"
-  - "databases [Reporting Services], moving"
-  - "backing up databases [Reporting Services]"
-  - "moving databases"
-  - "restoring databases [Reporting Services]"
-  - "files [Reporting Services], restoring"
-  - "files [Reporting Services], backing up"
 ms.assetid: 157bc376-ab72-4c99-8bde-7b12db70843a
-caps.latest.revision: 43
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+ms.date: 05/24/2018
 ---
 
 # Backup and Restore Operations for Reporting Services
@@ -93,4 +76,4 @@ manager: "kfile"
 [Administer a Report Server Database](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)   
 [Configure and Manage Encryption Keys](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -1,0 +1,210 @@
+- name: Common Language Runtime (CLR) Integration Programming Concepts
+  href: common-language-runtime-clr-integration-programming-concepts.md
+- name: Common Language Runtime (CLR) Integration Overview
+  href: common-language-runtime-integration-overview.md
+  items:
+  - name: Overview of CLR Integration
+    href: clr-integration-overview.md
+  - name: Architecture of CLR Integration
+    href: ../../database-engine/dev-guide/architecture-of-clr-integration.md
+- name: Getting Started with CLR Integration
+  href: database-objects/getting-started-with-clr-integration.md
+- name: What's New in CLR Integration
+  href: clr-integration-what-s-new.md
+  items:
+  - name: CLR Hosted Environment
+    href: clr-integration-architecture-clr-hosted-environment.md
+  - name: Performance of CLR Integration
+    href: clr-integration-architecture-performance.md
+- name: CLR Stored Procedures
+  href: ../../database-engine/dev-guide/clr-stored-procedures.md
+- name: CLR Triggers
+  href: ../../database-engine/dev-guide/clr-triggers.md
+- name: Enabling CLR Integration
+  href: clr-integration-enabling.md
+- name: Assemblies
+  href: assemblies-database-engine.md
+  items:
+  - name: Designing Assemblies
+    href: assemblies-designing.md
+  - name: Implementing Assemblies
+    href: assemblies-implementing.md
+  - name: Getting Information About Assemblies
+    href: assemblies-getting-information.md
+  - name: Assembly Properties (General Page)
+    href: assemblies-properties.md
+- name: Building Database Objects with Common Language Runtime (CLR) Integration
+  href: database-objects/building-database-objects-with-common-language-runtime-clr-integration.md
+  items:
+  - name: Supported .NET Framework Libraries
+    href: database-objects/supported-net-framework-libraries.md
+  - name: CLR Integration Programming Model Restrictions
+    href: database-objects/clr-integration-programming-model-restrictions.md
+  - name: SQL Server Data Types in the .NET Framework
+    href: ../clr-integration-database-objects-types-net-framework/sql-server-data-types-in-the-net-framework.md
+    items:
+    - name: Nullability and Three-Value Logic Comparisons
+      href: ../clr-integration-database-objects-types-net-framework/nullability-and-three-value-logic-comparisons.md
+    - name: Collation and CLR Integration Data Types
+      href: ../clr-integration-database-objects-types-net-framework/collation-and-clr-integration-data-types.md
+    - name: Handling Large Object (LOB) Parameters in the CLR
+      href: ../clr-integration-database-objects-types-net-framework/handling-large-object-lob-parameters-in-the-clr.md
+    - name: Mapping CLR Parameter Data
+      href: ../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md
+- name: Overview of CLR Integration Custom Attributes
+  href: ../../database-engine/dev-guide/overview-of-clr-integration-custom-attributes.md
+  items:
+  - name: Custom Attributes for CLR Routines
+    href: database-objects/clr-integration-custom-attributes-for-clr-routines.md
+- name: CLR User-Defined Functions
+  href: ../clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md
+  items:
+  - name: CLR Scalar-Valued Functions
+    href: ../clr-integration-database-objects-user-defined-functions/clr-scalar-valued-functions.md
+  - name: CLR Table-Valued Functions
+    href: ../clr-integration-database-objects-user-defined-functions/clr-table-valued-functions.md
+  - name: CLR User-Defined Aggregates
+    href: ../clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md
+  - name: Requirements for CLR User-Defined Aggregates
+    href: ../clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates-requirements.md
+  - name: Invoking CLR User-Defined Aggregate Functions
+    href: ../clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregate-invoking-functions.md
+- name: CLR User-Defined Types
+  href: ../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md
+  items:
+  - name: User Defined Type
+    href: ../../database-engine/dev-guide/user-defined-type.md
+  - name: UTF8 String User-Defined Data Type (UDT)
+    href: ../../database-engine/dev-guide/utf8-string-user-defined-data-type-udt.md
+  - name: Creating a User-Defined Type
+    href: ../clr-integration-database-objects-user-defined-types/creating-user-defined-types.md
+  - name: User-Defined Type Requirements
+    href: ../clr-integration-database-objects-user-defined-types/creating-user-defined-types-requirements.md
+  - name: Coding User-Defined Types
+    href: ../clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md
+  - name: Registering User-Defined Types in SQL Server
+    href: ../clr-integration-database-objects-user-defined-types/registering-user-defined-types-in-sql-server.md
+  - name: Working with User-Defined Types in SQL Server
+    href: ../clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md
+  - name: Defining UDT Tables and Columns
+    href: ../clr-integration-database-objects-user-defined-types/working-with-user-defined-types-defining-udt-tables-and-columns.md
+  - name: Manipulating UDT Data
+    href: ../clr-integration-database-objects-user-defined-types/working-with-user-defined-types-manipulating-udt-data.md
+  - name: Accessing User-Defined Types in ADO.NET
+    href: ../clr-integration-database-objects-user-defined-types/accessing-user-defined-types-in-ado-net.md
+  - name: Retrieving UDT Data
+    href: ../clr-integration-database-objects-user-defined-types/accessing-user-defined-types-retrieving-udt-data.md
+  - name: Updating UDT Columns with DataAdapters
+    href: ../clr-integration-database-objects-user-defined-types/accessing-user-defined-types-updating-udt-columns-with-dataadapters.md
+- name: Data Access from CLR Database Objects
+  href: data-access/data-access-from-clr-database-objects.md
+  items:
+  - name: Context Connection
+    href: data-access/context-connection.md
+    items:
+    - name: Regular vs. Context Connections
+      href: data-access/context-connections-vs-regular-connections.md
+    - name: Restrictions on Regular and Context Connections
+      href: data-access/context-connections-and-regular-connections-restrictions.md
+  - name: Impersonation and Credentials for Connections
+    href: data-access/impersonation-and-credentials-for-connections.md
+- name: SQL Server In-Process Specific Extensions to ADO.NET
+  href: ../clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md
+  items:
+  - name: SqlContext Object
+    href: ../clr-integration-data-access-in-process-ado-net/sqlcontext-object.md
+  - name: SqlPipe Object
+    href: ../clr-integration-data-access-in-process-ado-net/sqlpipe-object.md
+  - name: SqlTriggerContext Object
+    href: ../clr-integration-data-access-in-process-ado-net/sqltriggercontext-object.md
+  - name: SqlDataRecord Object
+    href: ../clr-integration-data-access-in-process-ado-net/sqldatarecord-object.md
+- name: CLR Integration and Transactions
+  href: ../clr-integration-data-access-transactions/clr-integration-and-transactions.md
+  items:
+  - name: Transaction Promotion
+    href: ../clr-integration-data-access-transactions/transaction-promotion.md
+  - name: Accessing the Current Transaction
+    href: ../clr-integration-data-access-transactions/accessing-the-current-transaction.md
+  - name: Using System.Transactions
+    href: ../clr-integration-data-access-transactions/using-system-transactions.md
+  - name: Transaction Lifetimes
+    href: ../clr-integration-data-access-transactions/transaction-lifetimes.md
+- name: XML Serialization from CLR Database Objects
+  href: ../../database-engine/dev-guide/xml-serialization-from-clr-database-objects.md
+- name: CLR Integration Security
+  href: security/clr-integration-security.md
+  items:
+  - name: CLR Integration Code Access Security
+    href: security/clr-integration-code-access-security.md
+  - name: Links in CLR Integration Security
+    href: ../../database-engine/dev-guide/links-in-clr-integration-security.md
+  - name: Impersonation and CLR Integration Security
+    href: ../../database-engine/dev-guide/impersonation-and-clr-integration-security.md
+  - name: Allowing Partially Trusted Callers
+    href: ../../database-engine/dev-guide/allowing-partially-trusted-callers.md
+  - name: Application Domains and CLR Integration Security
+    href: ../../database-engine/dev-guide/application-domains-and-clr-integration-security.md
+- name: Host Protection Attributes and CLR Integration Programming
+  href: ../clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md
+  items:
+  - name: Disallowed Types and Members in Microsoft.VisualBasic.dll
+    href: ../clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-microsoft-visualbasic-dll.md
+  - name: Disallowed Types and Members in mscorlib.dll
+    href: ../clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-mscorlib-dll.md
+  - name: Disallowed Types and Members in System.dll
+    href: ../clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-dll.md
+  - name: Disallowed Types and Members in System.Data.dll
+    href: ../clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-data-dll.md
+  - name: Disallowed Types and Members in System.Core.dll
+    href: ../clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-core-dll.md
+- name: Debugging CLR Database Objects
+  href: debugging-clr-database-objects.md
+- name: Deploying CLR Database Objects
+  href: deploying-clr-database-objects.md
+- name: Managing CLR Integration Assemblies
+  href: assemblies/managing-clr-integration-assemblies.md
+  items:
+  - name: Creating an Assembly
+    href: assemblies/creating-an-assembly.md
+  - name: Altering an Assembly
+    href: assemblies/altering-an-assembly.md
+  - name: Dropping an Assembly
+    href: assemblies/dropping-an-assembly.md
+- name: Monitoring and Troubleshooting Managed Database Objects
+  href: monitoring-and-troubleshooting-managed-database-objects.md
+- name: Usage Scenarios and Examples for Common Language Runtime (CLR) Integration
+  href: ../../database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md
+  items:
+  - name: Accessing Native Code from a CLR UDF
+    href: ../../database-engine/dev-guide/accessing-native-code-from-a-clr-udf.md
+  - name: Array Parameter Sample
+    href: ../../database-engine/dev-guide/array-parameter-sample.md
+  - name: Calendar-Aware Date/Time UDT Sample
+    href: ../../database-engine/dev-guide/calendar-aware-date-and-time-udt-sample.md
+  - name: CLR Transactions Sample
+    href: ../../database-engine/dev-guide/clr-transactions-sample.md
+  - name: Contact Creation using CLR and XML
+    href: ../../database-engine/dev-guide/contact-creation-using-clr-and-xml.md
+  - name: Currency Type and Conversion Function
+    href: ../../database-engine/dev-guide/currency-type-and-conversion-function.md
+  - name: Handling Large Objects Using CLR
+    href: ../../database-engine/dev-guide/handling-large-objects-using-clr.md
+  - name: Hello World Ready Sample
+    href: ../../database-engine/dev-guide/hello-world-ready-sample.md
+  - name: Hello World Sample
+    href: ../../database-engine/dev-guide/hello-world-sample.md
+  - name: In-Process Data Access Sample
+    href: ../../database-engine/dev-guide/in-process-data-access-sample.md
+  - name: Result Set Sample
+    href: ../../database-engine/dev-guide/result-set-sample.md
+  - name: Send DataSet Sample
+    href: ../../database-engine/dev-guide/send-dataset-sample.md
+  - name: String Utility Functions Sample
+    href: ../../database-engine/dev-guide/string-utility-functions-sample.md
+  - name: Supplementary-Aware String Manipulation Sample
+    href: ../../database-engine/dev-guide/supplementary-aware-string-manipulation-sample.md
+- name: UDT Utilities
+  href: ../../database-engine/dev-guide/udt-utilities.md
+- name: Unused Assembly Cleanup
+  href: ../../database-engine/dev-guide/unused-assembly-cleanup.md

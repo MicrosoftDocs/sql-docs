@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "07/18/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 keywords: 
   - "Data Collection"
 helpviewer_keywords: 
   - "data collection [SQL Server]"
 ms.assetid: 0cc1f95c-5815-4d78-8868-a900be15e674
-caps.latest.revision: 46
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -114,7 +111,7 @@ manager: craigg
 |Manage different aspects of data collection, such as enabling or disabling data collection, changing a collection set configuration, or viewing data in the management data warehouse.|[Manage Data Collection](../../relational-databases/data-collection/manage-data-collection.md)|  
 |Use reports to obtain information for monitoring system capacity and troubleshooting system performance.|[System Data Collection Set Reports](../../relational-databases/data-collection/system-data-collection-set-reports.md)|  
 |Use the Management Data Warehouse to collect data from a server that is a data collection target.|[Management Data Warehouse](../../relational-databases/data-collection/management-data-warehouse.md)| 
-|Exploit the server-side trace capabilities of SQL Server Profiler to export a trace definition that you can use to create a collection set that uses the Generic SQL Trace collector type| [Use SQL Server Profiler to Create a SQL Trace Collection Set (SQL Server Management Studio)](https://msdn.microsoft.com/library/cc645955(v=sql.130).aspx)
+|Exploit the server-side trace capabilities of SQL Server Profiler to export a trace definition that you can use to create a collection set that uses the Generic SQL Trace collector type| [Use SQL Server Profiler to Create a SQL Trace Collection Set (SQL Server Management Studio)](use-sql-server-profiler-to-create-a-sql-trace-collection-set.md)
   
   
 

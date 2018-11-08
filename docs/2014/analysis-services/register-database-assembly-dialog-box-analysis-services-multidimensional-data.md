@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.bidevstudio.assembly.registerassembly.f1"
 ms.assetid: 0c07cc87-fc94-456f-b878-7b23e39772b9
-caps.latest.revision: 18
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Register Database Assembly Dialog Box (Analysis Services - Multidimensional Data)
   Use the **Register Server Assembly** dialog box in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to set the properties of an assembly reference in an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database. You can display the **Register Server Assembly** dialog box by right-clicking the Assemblies folder of an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance or database in **Object Explorer** and selecting **New assembly**.  

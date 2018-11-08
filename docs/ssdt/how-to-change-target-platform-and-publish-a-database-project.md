@@ -6,14 +6,11 @@ ms.date: "02/09/2017"
 ms.prod: "sql"
 ms.technology: ssdt
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql.data.tools.publish.dialog"
   - "sql.data.tools.publishdacproject"
 ms.assetid: 6012e120-5f72-4f4f-ae6e-f9a57ae1dea7
-caps.latest.revision: 25
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
@@ -40,7 +37,7 @@ SSDT also makes this task simple by being aware of your target platform and auto
   
 3.  Notice that the following error shows up in the **Error List** pane:  SQL70015: 'Filegroup reference and partitioning scheme' is not supported in SQL Azure..  
   
-    SSDT automatically validates your script based on the target platform. In this case, since filegroup is not supported in SQL Azure, SSDT returns an error. For a list of non-supported Transact\-SQL statements in SQL Azure, see [Partially Supported Transact-SQL Statements (Microsoft Azure SQL Database)](http://msdn.microsoft.com/en-us/library/ee336267.aspx).  
+    SSDT automatically validates your script based on the target platform. In this case, since filegroup is not supported in SQL Azure, SSDT returns an error. For a list of non-supported Transact\-SQL statements in SQL Azure, see [Partially Supported Transact-SQL Statements (Microsoft Azure SQL Database)](http://msdn.microsoft.com/library/ee336267.aspx).  
   
 4.  Remove the `ON` clause. Notice that the error immediately disappears from the **Error List**.  
   

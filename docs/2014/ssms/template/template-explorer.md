@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-cross-instance"
-ms.tgt_pltfrm: ""
+ms.technology:
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.wb.templates.f1"
@@ -19,9 +16,8 @@ helpviewer_keywords:
   - "templates [Transact-SQL]"
   - "templates [SQL Server], Template Explorer"
 ms.assetid: b9ee55c5-bb44-4f76-90ac-792d8d83b4c8
-caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Template Explorer

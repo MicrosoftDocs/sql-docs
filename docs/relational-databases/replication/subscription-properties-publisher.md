@@ -4,19 +4,14 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.rep.newsubwizard.subproperties.publisher.f1"
 helpviewer_keywords: 
   - "Subscription Properties dialog box"
 ms.assetid: d4b2bc8b-0431-4331-8305-8992c96d0d34
-caps.latest.revision: 22
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

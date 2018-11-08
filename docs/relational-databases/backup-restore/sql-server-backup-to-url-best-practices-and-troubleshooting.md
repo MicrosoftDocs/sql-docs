@@ -5,12 +5,9 @@ ms.date: "01/19/2018"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: backup-restore
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
-caps.latest.revision: 26
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -24,7 +21,7 @@ manager: craigg
   
 -   [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
   
--   [Tutorial: SQL Server Backup and Restore to Windows Azure Blob Storage Service](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [Tutorial: SQL Server Backup and Restore to Windows Azure Blob Storage Service](../../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
 ## Managing Backups  
  The following list includes general recommendations to manage backups:  
@@ -87,13 +84,30 @@ manager: craigg
         -   **VERIFYONLY**  
   
     -   You can also find information by reviewing the Windows Event Log - Under Application logs with the name `SQLBackupToUrl`.  
+
+    -   Consider COMPRESSION, MAXTRANSFERSIZE, BLOCKSIZE and multiple URL arguments when backing up large databases.  See [Backing up a VLDB to Azure Blob Storage](https://blogs.msdn.microsoft.com/sqlcat/2017/03/10/backing-up-a-vldb-to-azure-blob-storage/)
   
+		```
+		Msg 3202, Level 16, State 1, Line 1
+		Write on "https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak" failed: 1117(The request could not be performed because of an I/O device error.)
+		Msg 3013, Level 16, State 1, Line 1
+		BACKUP DATABASE is terminating abnormally.
+		```
+
+        ```sql  
+        BACKUP DATABASE TestDb
+        TO URL = 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak',
+        URL = 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_1.bak',
+        URL = 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_2.bak'
+        WITH COMPRESSION, MAXTRANSFERSIZE = 4194304, BLOCKSIZE = 65536;  
+        ```  
+
 -   When restoring from a compressed backup, you might see the following error:  
   
     -   `SqlException 3284 occurred. Severity: 16 State: 5  
         Message Filemark on device 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak' is not aligned.           Reissue the Restore statement with the same block size used to create the backupset: '65536' looks like a possible value.`  
   
-        To solve this error, reissue the **BACKUP** statement with **BLOCKSIZE = 65536** specified.  
+        To solve this error, reissue the **RESTORE** statement with **BLOCKSIZE = 65536** specified.  
   
 -   Error during backup due to blobs that have active lease on them: Failed backup activity can result in blobs with active leases.  
   

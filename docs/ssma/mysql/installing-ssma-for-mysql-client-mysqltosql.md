@@ -4,17 +4,11 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 helpviewer_keywords: 
   - "Installing client,Licensing"
 ms.assetid: ede3128c-370d-45a5-a815-3d94eecaea30
-caps.latest.revision: 22
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: craigg
@@ -24,13 +18,13 @@ The SSMA for MySQL client consists of the program files that perform the followi
   
 -   Connect to a MySQL database.  
   
--   Connect to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure.  
+-   Connect to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure.  
   
--   Convert the MySQL database objects to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure objects.  
+-   Convert the MySQL database objects to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure objects.  
   
--   Load the objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure.  
+-   Load the objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure.  
   
--   Migrate data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure.  
+-   Migrate data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure.  
   
 This topic provides the installation prerequisites and instructions for installing SSMA for MySQL client.  
   

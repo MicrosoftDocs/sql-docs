@@ -4,19 +4,14 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "merge replication conflict resolution [SQL Server replication], viewing conflicts"
   - "viewing conflict information"
   - "conflict resolution [SQL Server replication], merge replication"
 ms.assetid: aeee9546-4480-49f9-8b1e-c71da1f056c7
-caps.latest.revision: 41
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

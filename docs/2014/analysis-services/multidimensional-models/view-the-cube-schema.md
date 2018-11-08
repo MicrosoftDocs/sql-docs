@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 82fc715c-e08e-447d-8fc8-9c9005f145f0
-caps.latest.revision: 7
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # View the Cube Schema
   The **Data Source View** pane of the **Cube Structure** tab in **Cube Designer** displays the cube schema. The schema is the set of tables from which the measures and dimensions for a cube are derived. Every cube schema consists of one or more fact tables and one or more dimension tables on which the measures and dimensions in the cube are based.  

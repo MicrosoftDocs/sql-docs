@@ -4,20 +4,14 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 helpviewer_keywords: 
   - "Creating script files, configuring console settings"
   - "Creating script files, Script commands"
   - "Creating script files, script file validation"
   - "Creating script files, server connection parameters"
 ms.assetid: b4608fe7-c777-4ba5-b853-4402f02109e3
-caps.latest.revision: 22
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: craigg
@@ -351,7 +345,7 @@ The script file contains a sequence of migration workflow commands in the XML fo
   
 For example, a typical data migration of a specific table in a MySQL database follows the hierarchy of: Database -&gt; Table.  
   
-When all the commands in the script file are executed successfully, the SSMA console application exits and returns the control to the user. The contents of a script file are more or less static with variable information contained either in a [Variable Value Files](http://msdn.microsoft.com/en-us/1dc56a7b-8e3a-4576-ad4f-47050bf7e28a) or, in a separate section within the script file for variable values.  
+When all the commands in the script file are executed successfully, the SSMA console application exits and returns the control to the user. The contents of a script file are more or less static with variable information contained either in a [Variable Value Files](creating-variable-value-files-mysqltosql.md) or, in a separate section within the script file for variable values.  
   
 **Example:**  
   

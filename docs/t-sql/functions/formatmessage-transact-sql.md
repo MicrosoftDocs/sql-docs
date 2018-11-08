@@ -5,9 +5,7 @@ ms.date: "07/12/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "FORMATMESSAGE"
@@ -21,9 +19,8 @@ helpviewer_keywords:
   - "messages [SQL Server], formats"
   - "errors [SQL Server], formats"
 ms.assetid: 83f18102-2035-4a87-acd0-8d96d03efad5
-caps.latest.revision: 39
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # FORMATMESSAGE (Transact-SQL)
@@ -92,6 +89,7 @@ SELECT FORMATMESSAGE('This is the %s and this is the %s.', 'first variable', 'se
 SELECT FORMATMESSAGE('Signed int %i, %d %i, %d, %+i, %+d, %+i, %+d', 5, -5, 50, -50, -11, -11, 11, 11);  
 SELECT FORMATMESSAGE('Signed int with leading zero %020i', 5);  
 SELECT FORMATMESSAGE('Signed int with leading zero 0 %020i', -55);  
+SELECT FORMATMESSAGE('Bigint %I64d', 3000000000);
 SELECT FORMATMESSAGE('Unsigned int %u, %u', 50, -50);  
 SELECT FORMATMESSAGE('Unsigned octal %o, %o', 50, -50);  
 SELECT FORMATMESSAGE('Unsigned hexadecimal %x, %X, %X, %X, %x', 11, 11, -11, 50, -50);  
@@ -100,7 +98,6 @@ SELECT FORMATMESSAGE('Unsigned hexadecimal with prefix: %#x, %#X, %#X, %X, %x', 
 SELECT FORMATMESSAGE('Hello %s!', 'TEST');  
 SELECT FORMATMESSAGE('Hello %20s!', 'TEST');  
 SELECT FORMATMESSAGE('Hello %-20s!', 'TEST');  
-SELECT FORMATMESSAGE('Hello %20s!', 'TEST');  
 ```  
   
 ## See Also  

@@ -4,18 +4,12 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 helpviewer_keywords: 
   - "Creating variable value files"
   - "variable value file validation"
 ms.assetid: 1dc56a7b-8e3a-4576-ad4f-47050bf7e28a
-caps.latest.revision: 16
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: craigg
@@ -94,5 +88,5 @@ The user can easily validate his/her variable value file against the schema defi
 The next step in operating the console is [Creating the Server Connection Files &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-the-server-connection-files-mysqltosql.md)  
   
 ## See Also  
-[Creating the Server Connection Files (MySQL)](http://msdn.microsoft.com/en-us/df0e970c-da0b-4118-b359-c9dcbbad16d6)  
+[Creating the Server Connection Files (MySQL)](http://msdn.microsoft.com/df0e970c-da0b-4118-b359-c9dcbbad16d6)  
   

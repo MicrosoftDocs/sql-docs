@@ -6,7 +6,6 @@ author: MashaMSFT
 ms.author: mathoma
 ms.date: 03/13/2018
 ms.topic: Tutorial
-ms.suite: "sql"
 ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
@@ -78,12 +77,19 @@ You can comment and uncomment portions of your text by using the **Comment** but
 7. Highlight everything except for the **Alter Database** command, and then select the **Comment** button:
 
     ![Comment everything](media/ssms-tricks/commenteverything.png)
+    
+    > [!NOTE]
+    > The keyboard shortcut to comment text is **CTRL + K, CTRL + C**. 
 
 8. Highlight the **Alter Database** portion of the text, and then select the **Uncomment** button to uncomment it:
 
     ![Uncomment text](media/ssms-tricks/uncomment.png)
     
+    > [!NOTE]
+    > The keyboard shortcut to uncomment text is **CTRL + K, CTRL + U**. 
+    
 9. Select **Execute** to run the uncommented portion of the text. 
+
 
 ## Indent your text
 You can use the indentation buttons on the toolbar to increase or decrease the indent of your text. 
@@ -122,7 +128,7 @@ You can use the indentation buttons on the toolbar to increase or decrease the i
 
 
 ## Filter objects in Object Explorer
-You can filter objects to make finding a specific object easier in databases that have many objects. This section describes how to filter tables, but you can use the following steps in any other node in Object Explorer:
+In databases that have many objects, you can use filtering to search for specific tables, views, etc. This section describes how to filter tables, but you can use the following steps in any other node in Object Explorer:
 
 1. Connect to your SQL server.
 2. Expand **Databases** > **AdventureWorks** > **Tables**. All the tables in the database appear.
@@ -184,6 +190,8 @@ The error log is a file that contains details about things that occur in your SQ
     ![Find the error log by query](media/ssms-tricks/finderrorlogquery.png)
 
 ### Find the error log location if you can't connect to SQL Server
+The path for your SQL Server errog log can vary depending on your configuration settings. The path for the error log location can be found in the startup parameters within the SQL Server Configuration Manager. Follow the steps below to locate the relevant startup parameter identifying the location of your SQL Server error log. *Your path may vary from the path indicated below*. 
+
 1. Open SQL Server Configuration Manager. 
 2. Expand **Services**.
 3. Right-click your SQL Server instance, and then select **Properties**:
@@ -203,7 +211,7 @@ The error log is a file that contains details about things that occur in your SQ
 You have a few options for finding the name of your SQL server before and after you connect to SQL Server.  
 
 ### Before you connect to SQL Server
-1. Follow the steps to locate the [SQL Server error log on disk](#finding-your-error-log-if-you-cannot-connect-to-sql). 
+1. Follow the steps to locate the [SQL Server error log on disk](#finding-your-error-log-if-you-cannot-connect-to-sql). Your path may vary from the path in the image below.
 2. Open the errorlog.log file in Notepad.  
 3. Search for the text *Server name is*.
     

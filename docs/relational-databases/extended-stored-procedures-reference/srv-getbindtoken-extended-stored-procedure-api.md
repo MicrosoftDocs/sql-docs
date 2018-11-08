@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "extended-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: stored-procedures
 ms.topic: "reference"
 apiname: 
   - "srv_getbindtoken"
@@ -21,7 +17,6 @@ dev_langs:
 helpviewer_keywords: 
   - "srv_getbindtoken"
 ms.assetid: c947d011-08ac-4fb8-b925-3da6e0999277
-caps.latest.revision: 36
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

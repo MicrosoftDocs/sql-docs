@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "data source views [Analysis Services], bindings"
@@ -33,10 +31,9 @@ helpviewer_keywords:
   - "measure groups [Analysis Services], bindings"
   - "partitions [Analysis Services], bindings"
 ms.assetid: bc028030-dda2-4660-b818-c3160d79fd6d
-caps.latest.revision: 40
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Data Sources and Bindings (SSAS Multidimensional)
   Cubes, dimensions, and other [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objects can be bound to a data source. A data source can be one of the following objects:  

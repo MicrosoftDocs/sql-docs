@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Analysis Services dialog boxes"
   - "Analysis Services designers"
 ms.assetid: a2c60d98-c15f-4f0d-ba95-7ee2def4277e
-caps.latest.revision: 10
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Data Mining Designers and Dialog Boxes
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] provides design tools that you can use to create, view, test, and create predictions from data mining models.  

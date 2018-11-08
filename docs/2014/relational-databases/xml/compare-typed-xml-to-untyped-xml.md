@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: conceptual
 helpviewer_keywords: 
   - "xml data type [SQL Server], variables"
@@ -25,9 +22,8 @@ helpviewer_keywords:
   - "XML [SQL Server], untyped"
   - "xml data type [SQL Server], parameters"
 ms.assetid: 4bc50af9-2f7d-49df-bb01-854d080c72c7
-caps.latest.revision: 57
-author: "craigg-msft"
-ms.author: "craigg"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Compare Typed XML to Untyped XML

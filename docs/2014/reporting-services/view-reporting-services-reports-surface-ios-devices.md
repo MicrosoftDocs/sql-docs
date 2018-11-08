@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "iPad"
@@ -16,10 +14,9 @@ helpviewer_keywords:
   - "Report Viewer [Reporting Services]"
   - "iOS"
 ms.assetid: 2124bcf5-d60a-475f-a4ae-de6df44d2860
-caps.latest.revision: 21
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: maggiesmsft
+ms.author: douglasl
+manager: craigg
 ---
 # View Reporting Services Reports on Microsoft Surface Devices and  Apple iOS Devices
   This article describes the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] features and workflows supported for Microsoft Surface devices, and devices with Apple iOS 6 and Apple Safari such as the iPad.  

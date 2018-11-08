@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-cross-instance"
-ms.tgt_pltfrm: ""
+ms.technology:
 ms.topic: conceptual
 helpviewer_keywords: 
   - "aliases [SQL Server], creating"
   - "SQL Server Agent, aliases"
 ms.assetid: 02d6295d-ab52-44f0-8f1b-f3910a507d8f
-caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Set a SQL Server Alias for the SQL Server Agent Service (SQL Server Management Studio)

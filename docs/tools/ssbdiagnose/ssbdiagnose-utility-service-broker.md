@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssbdiagnose"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Service Broker, runtime reports"
@@ -27,7 +24,6 @@ helpviewer_keywords:
   - "Service Broker, ssbdiagnose utility"
   - "ssbdiagnose"
 ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
-caps.latest.revision: 45
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -244,7 +240,7 @@ WHERE database_id = DB_ID();
  **-S** *server_name*[\\*instance_name*]  
  Specifies the instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] that holds the [!INCLUDE[ssSB](../../includes/sssb-md.md)] services to be analyzed.  
   
- Specify *server_name* to connect to the default instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] on that server. Specify *server_name***\\***instance_name* to connect to a named instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] on that server. If **-S** is not specified, **ssbdiagnose** uses the value of the SQLCMDSERVER environment variable. If SQLCMDSERVER is not set either, **ssbdiagnose** connects to the default instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] on the local computer.  
+ Specify *server_name* to connect to the default instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] on that server. Specify _server\_name_**\\**_instance\_name_ to connect to a named instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] on that server. If **-S** is not specified, **ssbdiagnose** uses the value of the SQLCMDSERVER environment variable. If SQLCMDSERVER is not set either, **ssbdiagnose** connects to the default instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] on the local computer.  
   
  **-d** *database_name*  
  Specifies the database that holds the [!INCLUDE[ssSB](../../includes/sssb-md.md)] services to be analyzed. If the database does not exist, an error message is generated. If **-d** is not specified, the default is the database specified in the default-database property for your login.  

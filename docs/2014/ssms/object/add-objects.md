@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-cross-instance"
-ms.tgt_pltfrm: ""
+ms.technology:
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.common.addobject.f1"
 ms.assetid: 17ac0e99-8490-46b0-8515-e5012bc9e0cf
-caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Add Objects

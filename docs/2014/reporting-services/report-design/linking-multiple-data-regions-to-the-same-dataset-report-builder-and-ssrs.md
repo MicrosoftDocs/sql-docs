@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 90c94a91-8fb2-42cb-b998-563691f30d2d
-caps.latest.revision: 7
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
 ---
 # Linking Multiple Data Regions to the Same Dataset (Report Builder and SSRS)
   You can add multiple data regions to a report to provide different views of data from the same report dataset. For example, you might want to display data in a table and also display it visually in a chart. To do so, you must use identical expressions and scopes for the appropriate filter expressions, sort expressions, and group expressions.  

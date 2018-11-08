@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "replication"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "monitoring performance [SQL Server replication], about monitoring replication"
@@ -18,9 +16,8 @@ helpviewer_keywords:
   - "replication [SQL Server], monitoring"
   - "administering replication, monitoring"
 ms.assetid: f182f43a-6af8-45bc-a708-08d5f7a6984a
-caps.latest.revision: 38
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Monitoring (Replication)

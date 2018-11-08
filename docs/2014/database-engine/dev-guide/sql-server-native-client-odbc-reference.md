@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "SQL Server Native Client, ODBC"
@@ -16,9 +14,8 @@ helpviewer_keywords:
   - "ODBC drivers, programmer's reference"
   - "ODBC drivers"
 ms.assetid: 06b7edee-8636-49d9-9b5c-2c710bf4fa2d
-caps.latest.revision: 37
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # SQL Server Native Client (ODBC) Reference

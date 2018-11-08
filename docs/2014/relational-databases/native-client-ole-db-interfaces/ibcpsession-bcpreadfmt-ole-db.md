@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 api_name: 
   - "IBCPSession::BCPReadFmt (OLE DB)"
@@ -17,9 +13,8 @@ topic_type:
 helpviewer_keywords: 
   - "BCPReadFmt method"
 ms.assetid: e2a12050-94e4-48a3-8a48-b780d646f116
-caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # IBCPSession::BCPReadFmt (OLE DB)

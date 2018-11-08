@@ -1,14 +1,11 @@
-﻿---
+---
 title: "sys.fn_virtualservernodes (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, pdw"
-ms.component: "system-functions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "fn_virtualservernodes"
@@ -23,11 +20,10 @@ helpviewer_keywords:
   - "fn_virtualservernodes function"
   - "sys.fn_virtualservernodes function"
 ms.assetid: 257f3b8d-93c0-4444-87f1-ea211bd8cad0
-caps.latest.revision: 25
 author: "rothja"
 ms.author: "jroth"
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.fn_virtualservernodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]

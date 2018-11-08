@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 02bcccd0-99e1-4a08-9401-f1f1147d184b
-caps.latest.revision: 6
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Analysis Services Features and Tasks
   Analysis Services foundational documentation is organized by modeling and server mode so that you can focus on just the tools, tasks, and features that are available in the mode you installed. Server administration tasks that span multiple modes can be found in Server Instances.  

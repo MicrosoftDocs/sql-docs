@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-views"
-ms.tgt_pltfrm: ""
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords: 
   - "dropping views"
@@ -15,9 +12,8 @@ helpviewer_keywords:
   - "views [SQL Server], deleting"
   - "removing views"
 ms.assetid: 6823c7f8-06ca-4bda-8482-7092f03d52a0
-caps.latest.revision: 16
-author: "craigg-msft"
-ms.author: "craigg"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Delete Views

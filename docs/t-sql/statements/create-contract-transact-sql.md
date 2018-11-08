@@ -5,9 +5,7 @@ ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "CONTRACT_TSQL"
@@ -21,9 +19,8 @@ helpviewer_keywords:
   - "contracts [Service Broker], creating"
   - "message types [Service Broker], contracts"
 ms.assetid: 494cbfa6-8e93-4161-a64d-90d681915211
-caps.latest.revision: 48
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # CREATE CONTRACT (Transact-SQL)

@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords: 
   - "index size [SQL Server]"
@@ -20,9 +17,8 @@ helpviewer_keywords:
   - "designing indexes [SQL Server], included columns"
   - "nonkey columns"
 ms.assetid: d198648d-fea5-416d-9f30-f9d4aebbf4ec
-caps.latest.revision: 28
-author: "craigg-msft"
-ms.author: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Create Indexes with Included Columns

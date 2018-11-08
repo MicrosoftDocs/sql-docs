@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "srv_setcollen"
@@ -21,9 +19,8 @@ dev_langs:
 helpviewer_keywords: 
   - "srv_setcollen"
 ms.assetid: 3c60f1c3-4562-463a-a259-12df172788bd
-caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # srv_setcollen (Extended Stored Procedure API)

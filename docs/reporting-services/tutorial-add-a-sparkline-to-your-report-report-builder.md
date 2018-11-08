@@ -1,28 +1,19 @@
 ---
 title: "Tutorial: Add a Sparkline to Your Report (Report Builder) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/30/2017"
+ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.component: "reporting-services"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: reporting-services
 
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+ms.topic: conceptual
 ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
-caps.latest.revision: 17
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
 ---
 
 # Tutorial: Add a Sparkline to Your Report (Report Builder)
 
-In this tutorial in [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)], you create a basic table with a sparkline chart in a [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginated report.   
+In this tutorial in [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)], you create a basic table with a sparkline chart in a [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginated report.   
   
 Sparklines and data bars are small, simple charts that convey a lot of information in a little space, often in tables and matrices in [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] reports. The following illustration shows a report similar to the one that you will create.  
   
@@ -326,4 +317,4 @@ This concludes the tutorial for creating a table report with sparkline charts. F
 [Report Builder Tutorials](../reporting-services/report-builder-tutorials.md) 
 [Report Builder in SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

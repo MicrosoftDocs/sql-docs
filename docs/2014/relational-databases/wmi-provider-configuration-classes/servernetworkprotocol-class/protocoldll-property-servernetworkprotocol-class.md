@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "ProtocolDLL Property (ServerNetworkProtocol Class)"
@@ -19,9 +17,8 @@ topic_type:
 helpviewer_keywords: 
   - "ProtocolDLL property"
 ms.assetid: ac386558-392e-46f3-97f8-382f267b7fca
-caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # ProtocolDLL Property (ServerNetworkProtocol Class)

@@ -39,7 +39,7 @@ These functions have not been optimized to work with DirectQuery. These function
 
 The reasons a particular function might not be optimized for DirectQuery is because the underlying relational engine cannot perform calculations equivalent to those performed by the xVelocity engine, or the formula cannot be converted to an equivalent SQL expression. In other cases, the performance of the converted expression and the resulting calculations may be unacceptable.
 
-To learn about all DAX functions, see the [DAX Function Reference].(https://msdn.microsoft.com/en-us/library/ee634396.aspx)
+To learn about all DAX functions, see the [DAX Function Reference].(https://msdn.microsoft.com/library/ee634396.aspx)
 
 ## DAX operators in DirectQuery mode
 All DAX comparison and arithmetic operators are fully supported in DirectQuery mode. To learn more, see [DAX Operator Reference](https://msdn.microsoft.com/library/ee634237.aspx).
@@ -111,7 +111,7 @@ In DirectQuery mode, casts from string representations of dates and times to act
 Models that use the in-memory data store support a more limited range of text formats for dates than the string formats for dates that are supported by SQL Server. However, DAX supports custom date and time formats.  
   
 **Cast from string to other non Boolean values**  
-When casting from strings to non-Boolean values, DirectQuery mode behaves the same as SQL Server. For more information, see [CAST and CONVERT (Transact-SQL)](http://msdn.microsoft.com/en-us/a87d0850-c670-4720-9ad5-6f5a22343ea8).  
+When casting from strings to non-Boolean values, DirectQuery mode behaves the same as SQL Server. For more information, see [CAST and CONVERT (Transact-SQL)](http://msdn.microsoft.com/a87d0850-c670-4720-9ad5-6f5a22343ea8).  
   
 **Cast from numbers to string not allowed**  
 EXAMPLE: `CONCATENATE(102,”,345”)`  
@@ -336,7 +336,7 @@ In an in-memory model, the result terminates at the last string character, with 
 
 
 ## See also  
-[DirectQuery Mode](http://msdn.microsoft.com/en-us/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
+[DirectQuery Mode](http://msdn.microsoft.com/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
   
 
 

@@ -12,12 +12,12 @@ manager: cgronlun
 # R libraries and R data types
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This topic describes the R libraries that are included and the data types that are supported in the following products:
+This article describes the R libraries that are included and the data types that are supported in the following products:
 
 + SQL Server 2016 R Services (In-Database)
 + SQL Server Machine Learning Services (In-Database)
 
-This topic also lists unsupported data types, and lists the data type conversions that might be performed implicitly when data is passed between R and SQL Server.
+This article also lists unsupported data types, and lists the data type conversions that might be performed implicitly when data is passed between R and SQL Server.
 
 ## R Libraries
 
@@ -70,7 +70,7 @@ The following table shows the changes in data types and values when data from [!
 
 Of the categories of data types supported by the [SQL Server type system](../../t-sql/data-types/data-types-transact-sql.md), the following types are likely to pose problems when passed to R code:
 
-+ Data types listed in the **Other** section of the SQL type system topic: **cursor**, **timestamp**, **hierarchyid**, **uniqueidentifier**, **sql_variant**, **xml**, **table**
++ Data types listed in the **Other** section of the SQL type system article: **cursor**, **timestamp**, **hierarchyid**, **uniqueidentifier**, **sql_variant**, **xml**, **table**
 + All spatial types
 + **image**
 
@@ -97,7 +97,7 @@ For more information, see [SQL Server 2016 improvements in handling some data ty
 
 In general, whenever you have any doubt about how a particular data type or data structure is being used in R, use the  `str()` function to get the internal structure and type of the R object. The result of the function is printed to the R console and is also available in the query results, in the **Messages** tab in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. 
 
-When retrieving data from a database for use in R code, you should always eliminate columns that cannot be used in R, as well as columns that are not useful for analysis, such as GUIDS (uniqueidentifier), timestamps and other columns used for auditing, or lineage informatioh created by ETL processes. 
+When retrieving data from a database for use in R code, you should always eliminate columns that cannot be used in R, as well as columns that are not useful for analysis, such as GUIDS (uniqueidentifier), timestamps and other columns used for auditing, or lineage information created by ETL processes. 
 
 Note that inclusion of unnecessary columns can greatly reduce the performance of R code, especially if high cardinality columns are used as factors. Therefore, we recommend that you use SQL Server system stored procedures and information views to get the data types for a given table in advance, and eliminate or convert incompatible columns. For more information, see [Information Schema Views in Transact-SQL](../../relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)
 
@@ -185,4 +185,3 @@ sqlQuery <- paste("SELECT", columnList, "FROM testdata")
 
 ## See Also
 
-[Python Libraries and Data Types](../python/python-libraries-and-data-types.md)

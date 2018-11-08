@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "statefulness [XML for Analysis]"
@@ -18,10 +16,9 @@ helpviewer_keywords:
   - "XMLA, sessions"
   - "sessions [XML for Analysis]"
 ms.assetid: b83bb3ff-09be-4fda-9d1d-6248e04ffb21
-caps.latest.revision: 29
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Managing Connections and Sessions (XMLA)
   *Statefulness* is a condition during which the server preserves the identity and context of a client between method calls. *Statelessness* is a condition during which the server does not remember the identity and context of a client after a method call finishes.  
@@ -34,7 +31,7 @@ manager: "mblythe"
   
 -   Multiple commands can be run in the context of a single session.  
   
--   Support for transactions in the XMLA context is through provider-specific commands sent with the [Execute](../xmla/xml-elements-methods-execute.md) method.  
+-   Support for transactions in the XMLA context is through provider-specific commands sent with the [Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) method.  
   
  XMLA defines a way to support sessions in a Web environment in a mode similar to the approach used by the Distributed Authoring and Versioning (DAV) protocol to implement locking in a loosely coupled environment. This implementation parallels DAV in that the provider is allowed to expire sessions for various reasons (for example, a timeout or connection error). When sessions are supported, Web services must be aware and ready to handle interrupted sets of commands that must be restarted.  
   

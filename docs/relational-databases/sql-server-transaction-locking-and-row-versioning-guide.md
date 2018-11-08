@@ -1,15 +1,12 @@
-﻿---
+---
 title: "SQL Server Transaction Locking and Row Versioning Guide | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/17/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "relational-databases-misc"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "guide, transaction locking and row versioning"
@@ -17,11 +14,10 @@ helpviewer_keywords:
   - "lock compatibility matrix, [SQL Server]"
   - "lock granularity and hierarchies, [SQL Server]"
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb7
-caps.latest.revision: 5
 author: "rothja"
 ms.author: "jroth"
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Transaction Locking and Row Versioning Guide
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -229,7 +225,7 @@ GO
     --Transaction 2  
     BEGIN TRAN;  
     INSERT INTO dbo.employee  
-       SET name = 'New' WHERE ID = 5;  
+      (Id, Name) VALUES(6 ,'New');  
     COMMIT;   
     ```  
   
@@ -660,7 +656,7 @@ INSERT mytable VALUES ('Dan');
  When working with CLR, the deadlock monitor automatically detects deadlock for synchronization resources (monitors, reader/writer lock and thread join) accessed inside managed procedures. However, the deadlock is resolved by throwing an exception in the procedure that was selected to be the deadlock victim. It is important to understand that the exception does not automatically release resources currently owned by the victim; the resources must be explicitly released. Consistent with exception behavior, the exception used to identify a deadlock victim can be caught and dismissed.  
   
 ##### <a name="deadlock_tools"></a> Deadlock Information Tools  
- To view deadlock information, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] provides monitoring tools in the form of the the system\_health xEvent session, two trace flags, and the deadlock graph event in SQL Profiler.  
+ To view deadlock information, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] provides monitoring tools in the form of the system\_health xEvent session, two trace flags, and the deadlock graph event in SQL Profiler.  
 
 ###### <a name="deadlock_xevent"></a> Deadlock in system_health session
 Starting with [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], when deadlocks occur, the system\_health session captures all `xml_deadlock_report` xEvents. The system\_health session is enabled by default. The deadlock graph captured typically has three distinct nodes:

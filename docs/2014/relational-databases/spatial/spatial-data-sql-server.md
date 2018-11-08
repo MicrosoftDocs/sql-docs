@@ -1,13 +1,9 @@
 ---
 title: "Spatial Data (SQL Server) | Microsoft Docs"
-ms.custom: ""
 ms.date: "06/14/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "dbe-spatial"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "geography data type [SQL Server], spatial storage design"
@@ -18,9 +14,8 @@ helpviewer_keywords:
   - "spatial storage [SQL Server]"
   - "geodetic spatial data [SQL Server], designing"
 ms.assetid: 41a132a1-09e2-4426-b9df-225270cb8e15
-caps.latest.revision: 34
-author: "craigg-msft"
-ms.author: "craigg"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Spatial Data (SQL Server)

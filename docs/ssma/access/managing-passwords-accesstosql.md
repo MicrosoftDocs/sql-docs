@@ -4,15 +4,9 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 ms.assetid: b099d0f9-dd37-4c87-8b6f-ed0177881ea4
-caps.latest.revision: 13
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: craigg
@@ -122,5 +116,5 @@ The SSMA Console application allows you to export encrypted database passwords p
     Please confirm password: xxxxxxxx  
   
 ## See Also  
-[Executing the SSMA Console (Access)](http://msdn.microsoft.com/en-us/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
+[Executing the SSMA Console (Access)](http://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
   

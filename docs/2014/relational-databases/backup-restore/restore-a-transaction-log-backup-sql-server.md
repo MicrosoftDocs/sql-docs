@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
+ms.technology: backup-restore
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.restoretlog.options.f1"
@@ -19,9 +16,8 @@ helpviewer_keywords:
   - "restoring transaction logs [SQL Server], restoring backups"
   - "transaction log restores [SQL Server], SQL Server Management Studio"
 ms.assetid: 1de2b888-78a6-4fb2-a647-ba4bf097caf3
-caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Restore a Transaction Log Backup (SQL Server)

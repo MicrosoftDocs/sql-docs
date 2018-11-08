@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "replication"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.rep.monitor.Distributor.SubscriptionSummary.tran.f1"
 ms.assetid: f569444d-c53f-4a22-bf4f-fff450c092de
-caps.latest.revision: 8
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Distributor Information, Subscription Watch List (Transactional Publication, SQL Server 2005 and Later)

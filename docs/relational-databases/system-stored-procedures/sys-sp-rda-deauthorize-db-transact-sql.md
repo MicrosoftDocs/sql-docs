@@ -3,13 +3,8 @@ title: "sys.sp_rda_deauthorize_db (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-stretch"
-ms.tgt_pltfrm: ""
+ms.technology: stored-procedures
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.sp_rda_deauthorize_db"
@@ -19,7 +14,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.sp_rda_deauthorize_db stored procedure"
 ms.assetid: 2e362e15-2cd5-4856-9f0b-54df56b0866b
-caps.latest.revision: 11
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 helpviewer_keywords: 
   - "21893 (Database Engine error)"
 ms.assetid: 1ab1195a-fe2a-4e06-b871-b177b6bea1fe
-caps.latest.revision: 6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -28,7 +25,7 @@ manager: craigg
 |Event Source|MSSQLSERVER|  
 |Component|SQLEngine|  
 |Symbolic Name|SQLErrorNum21893|  
-|Message Text|The subscribers ( %s ) of original publisher '%s' do not appear as remote servers at redirected publisher '%s'. Run **sp_addlinkedserver** at the redirected publisher to add these subscribers as remote servers .|  
+|Message Text|The subscribers ( %s ) of original publisher '%s' do not appear as remote servers at redirected publisher '%s'. Run **sp_addlinkedserver** at the redirected publisher to add these subscribers as remote servers.|  
   
 ## Explanation  
 **sp_validate_redirected_publisher** uses the subscription metadata tables of the publisher database at the remote server to identify its associated subscribers and verifies that there are associated entries in master.dbo.sysservers for the subscribers. This error is returned if any of the identified subscribers are not present.  

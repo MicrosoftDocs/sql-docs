@@ -5,12 +5,8 @@ ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
 dev_langs: 
   - "VB"
 helpviewer_keywords: 
@@ -18,7 +14,6 @@ helpviewer_keywords:
   - "output columns [Integration Services]"
   - "sources [Integration Services], components"
 ms.assetid: 547c4179-ea82-4265-8c6f-04a2aa77a3c0
-caps.latest.revision: 59
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

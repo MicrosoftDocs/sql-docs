@@ -4,19 +4,14 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Publishers [SQL Server replication], Replication Monitor tasks"
   - "viewing Publisher information"
   - "Publishers [SQL Server replication], viewing information"
 ms.assetid: 1e777e95-377a-4de3-b965-867464aadaaf
-caps.latest.revision: 37
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

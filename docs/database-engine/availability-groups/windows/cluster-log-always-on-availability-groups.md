@@ -4,12 +4,9 @@ ms.custom: "ag-guide"
 ms.date: "06/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 01a9e3c1-2a5f-4b98-a424-0ffc15d312cf
-caps.latest.revision: 7
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -30,7 +27,7 @@ manager: craigg
  The following PowerShell commands generate the cluster logs from all cluster nodes from the last 15 minutes and place them in the current directory. Run the commands in a PowerShell window with Administrative privileges.  
   
 ```powershell  
-Import-Modeul FailoverClusters   
+Import-Module FailoverClusters   
 Get-ClusterLog –TimeSpan 15 –Destination .  
 ```  
   

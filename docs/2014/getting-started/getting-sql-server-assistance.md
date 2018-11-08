@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "05/25/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "offline resources [SQL Server]"
@@ -41,9 +39,8 @@ helpviewer_keywords:
   - "SQL Server assistance"
   - "SQL Server Solution Center"
 ms.assetid: 619facba-5cf4-4474-9577-9e2d82a851fb
-caps.latest.revision: 40
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mightypen
+ms.author: genemi
 manager: craigg
 ---
 # Getting SQL Server Assistance
@@ -62,7 +59,7 @@ manager: craigg
   
  Books Online can be accessed in the following ways:  
   
--   A copy of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Books Online is published in both the MSDN Library and the TechNet Library on the Internet. The topics in these copies of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online include comments from the community, such as additional information and code examples from other customers. You can view the MSDN Library copy at the [SQL Server 2014 Books Online](http://msdn.microsoft.com/library/ms130214\(v=sql.120\).aspx).  
+-   A copy of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Books Online is published in both the MSDN Library and the TechNet Library on the Internet. The topics in these copies of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online include comments from the community, such as additional information and code examples from other customers. You can view the MSDN Library copy at the [SQL Server 2014 Books Online](../2014-toc/index.md).  
   
 -   You can use the Help Library Manager to install [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online on a local computer. For more information, see [Add or Remove Product Documentation for SQL Server](../2014-toc/books-online-for-sql-server-2014.md).  
   

@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "IsReadOnly Property (SqlServiceAdvancedProperty Class)"
@@ -19,9 +17,8 @@ topic_type:
 helpviewer_keywords: 
   - "IsReadOnly property"
 ms.assetid: 9672e70f-1d8c-4133-ac73-3b5733a1c4ee
-caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # IsReadOnly Property (SqlServiceAdvancedProperty Class)

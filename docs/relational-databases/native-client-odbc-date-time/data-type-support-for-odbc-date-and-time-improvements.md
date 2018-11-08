@@ -1,13 +1,11 @@
-﻿---
+---
 title: "Data Type Support for ODBC Date and Time Improvements | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: connectivity
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "date/time [ODBC], data type support"
@@ -16,7 +14,7 @@ ms.assetid: 8e0d9ba2-3ec1-4680-86e3-b2590ba8e2e9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Data Type Support for ODBC Date and Time Improvements
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -134,7 +132,7 @@ typedef struct tagSS_TIMESTAMPOFFSET_STRUCT {
 } SQL_SS_TIMESTAMPOFFSET_STRUCT;  
 ```  
   
- If the **timezone_hour** is negative, the **timezone_minute** must be negative or zero. If the **timezone_hour** is positive, the **timezone_minute** must be positive or zero. If the **timezone_hour** is zero, the s**timezone_minute** may have any value in the range -59 through +59.  
+ If the **timezone_hour** is negative, the **timezone_minute** must be negative or zero. If the **timezone_hour** is positive, the **timezone_minute** must be positive or zero. If the **timezone_hour** is zero, the **timezone_minute** may have any value in the range -59 through +59.  
   
 ## See Also  
  [Date and Time Improvements &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  

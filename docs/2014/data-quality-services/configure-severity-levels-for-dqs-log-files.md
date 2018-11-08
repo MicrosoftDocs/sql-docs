@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dqs.admin.config.log.f1"
@@ -18,9 +15,8 @@ helpviewer_keywords:
   - "logging,severity levels"
   - "configure severity levels"
 ms.assetid: 66ffcdec-4bf7-4dd5-a221-fd9baefeeef4
-caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Configure Severity Levels for DQS Log Files

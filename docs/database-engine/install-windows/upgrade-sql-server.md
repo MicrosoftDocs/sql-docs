@@ -4,16 +4,14 @@ ms.custom: ""
 ms.date: "07/17/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: install
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+ms.topic: quickstart
 helpviewer_keywords: 
   - "upgrading SQL Server"
 ms.assetid: 5064e35b-b70d-4a0b-a9e9-fff04162f9d2
-caps.latest.revision: 40
 author: MashaMSFT
 ms.author: mathoma
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 manager: craigg
 ---
 # Upgrade SQL Server

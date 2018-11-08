@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "docset-sql-devref"
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 dev_langs: 
   - "VB"
@@ -21,9 +19,8 @@ helpviewer_keywords:
   - "SSIS Script task, variables"
   - "variables [Integration Services], Script task"
 ms.assetid: 593b5961-4bfa-4ce1-9531-a251c34e89d3
-caps.latest.revision: 62
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Using Variables in the Script Task

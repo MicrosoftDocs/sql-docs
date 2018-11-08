@@ -4,20 +4,15 @@ ms.custom: ""
 ms.date: "04/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 topic_type: 
   - "apiref"
 helpviewer_keywords: 
   - "IRowsetFastLoad interface"
 ms.assetid: d19a7097-48d9-409a-aff9-277891b7aca7
-caps.latest.revision: 36
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # IRowsetFastLoad (OLE DB)

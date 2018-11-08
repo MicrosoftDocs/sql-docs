@@ -4,15 +4,11 @@ ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
+ms.technology: backup-restore
 ms.topic: conceptual
 ms.assetid: 78fb78ed-653f-45fe-a02a-a66519bfee1b
-caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # SQL Server Managed Backup to Windows Azure: Interoperability and Coexistence

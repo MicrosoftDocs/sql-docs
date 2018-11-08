@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dm.dmwizard.specifycontentdatatype.f1"
 ms.assetid: 7061f674-e806-46f2-8c15-e260a3c69a17
-caps.latest.revision: 21
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Specify the Column&#39;s Content and Data Type (Data Mining Wizard)
   Use the **Specify the Column's Content and Data Type** page to modify the column and content types that have already been set by the wizard. The wizard uses the data types of the source columns and the capabilities of the selected algorithm to determine the default data and content types for each column.  

@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-cross-instance"
-ms.tgt_pltfrm: ""
+ms.technology:
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Best Practices [Database Engine]"
 ms.assetid: 86db5da1-afe4-4fbb-8bf8-33cedc7e4361
-caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Network Packet Size Should Not Exceed 8060 Bytes

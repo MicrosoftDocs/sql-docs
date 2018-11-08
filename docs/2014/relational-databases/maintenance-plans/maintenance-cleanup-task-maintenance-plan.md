@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.maint.cleanup.f1"
 helpviewer_keywords: 
   - "Maintenance Cleanup Task dialog box"
 ms.assetid: 022b679c-6799-4c13-9185-814224a20412
-caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Maintenance Cleanup Task (Maintenance Plan)

@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "endpoints [SQL Server], AlwaysOn Availability Groups"
@@ -14,7 +12,6 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], endpoint"
   - "Endpoint URLs (HADR)"
 ms.assetid: d7520c13-a8ee-4ddc-9e9a-54cd3d27ef1c
-caps.latest.revision: 22
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

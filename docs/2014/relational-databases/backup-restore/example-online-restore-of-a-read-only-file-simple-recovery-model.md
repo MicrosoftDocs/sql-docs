@@ -4,19 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
+ms.technology: backup-restore
 ms.topic: conceptual
 helpviewer_keywords: 
   - "restore sequences [SQL Server], online"
   - "online restores [SQL Server], simple recovery model"
   - "simple recovery model [SQL Server], RESTORE examples"
 ms.assetid: 0c691fc6-9865-46a7-b055-8097424492d6
-caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Example: Online Restore of a Read-Only File (Simple Recovery Model)

@@ -3,18 +3,14 @@ title: "Enable and Configure FILESTREAM | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/14/2017"
 ms.prod: "sql-server-2014"
+ms.technology: filestream
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "FILESTREAM [SQL Server], enabling"
 ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
-caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Enable and Configure FILESTREAM

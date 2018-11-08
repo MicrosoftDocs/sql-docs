@@ -4,17 +4,12 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "MSSQL_ENG014150 error"
 ms.assetid: c3dd3109-abf3-4b38-a4e9-ef48d0235656
-caps.latest.revision: 11
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

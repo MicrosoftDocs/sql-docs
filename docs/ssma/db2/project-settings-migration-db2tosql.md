@@ -4,21 +4,15 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 ms.assetid: 48aaa8e6-a9cb-487d-9ba5-fc3f1c4786ae
-caps.latest.revision: 5
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: craigg
 ---
 # Project Settings (Migration) (DB2ToSQL)
-The Migration page of the **Project Settings** dialog box contains settings that customize how SSMA migrates data from DB2 to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+The Migration page of the **Project Settings** dialog box contains settings that customize how SSMA migrates data from DB2 to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 The Migration pane is available in both the **Project Settings** and **Default Project Settings** dialog boxes.  
   
@@ -48,7 +42,7 @@ The Migration pane is available in both the **Project Settings** and **Default P
 |**Keep nulls**|Specifies whether SSMA preserves null values in the source data when it adds data to SQL Server, regardless of the default values that are specified in SQL Server.<br /><br />**Default Mode**:  True<br /><br />**Optimistic Mode**:  True<br /><br />**Full Mode**:  True|  
 |**Mark string Trim operation with error**|If the target column size is less than the source string length, the value will be trimmed and marked as an error.<br /><br />**Default Mode**:  Yes<br /><br />**Optimistic Mode**:  Yes<br /><br />**Full Mode**:  Yes|  
 |**On Error**|Stops Data migration when an error occurs. It has three options:<br /><br />**Stop migration:** Stops data migration operation<br /><br />**Proceed to next table:** Stops data migration to the current table and proceeds to the next one<br /><br />**Proceed to next batch:** Stops data migration to the current batch and proceeds to the next one<br /><br />**Default Mode**: Proceed to the next batch<br /><br />**Optimistic Mode**: Proceed to the next batch<br /><br />**Full Mode**: Proceed to the next batch|  
-|**Replace unsupported dates**|Specifies whether SSMA should correct dates that are earlier than the earliest [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **datetime** date (01 January 1753).<br /><br />To keep the current date values, select **Do nothing**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] will not accept dates before 01 January 1753 in a datetime column. If you use older dates, you must convert the datetime values to character values.<br /><br />To convert dates before 01 January 1753 to NULL, select **Replace with NULL**.<br /><br />To replace dates before 01 January 1753 with a supported date, select **Replace with nearest supported date**.<br /><br />**Default Mode**: Do nothing<br /><br />**Optimistic Mode**: Do nothing<br /><br />**Full Mode**: Replace with nearest supported date|  
+|**Replace unsupported dates**|Specifies whether SSMA should correct dates that are earlier than the earliest [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime** date (01 January 1753).<br /><br />To keep the current date values, select **Do nothing**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will not accept dates before 01 January 1753 in a datetime column. If you use older dates, you must convert the datetime values to character values.<br /><br />To convert dates before 01 January 1753 to NULL, select **Replace with NULL**.<br /><br />To replace dates before 01 January 1753 with a supported date, select **Replace with nearest supported date**.<br /><br />**Default Mode**: Do nothing<br /><br />**Optimistic Mode**: Do nothing<br /><br />**Full Mode**: Replace with nearest supported date|  
 |**Table lock**|Specifies whether SSMA locks tables when it adds data to tables during data migration. Obtains a bulk update lock for the duration of the bulk copy operation. If the value is False, a lock is set at the row level.<br /><br />**Default Mode**:  True<br /><br />**Optimistic Mode**:  True<br /><br />**Full Mode**:  True|  
   
 ## Parallel Data Migration  

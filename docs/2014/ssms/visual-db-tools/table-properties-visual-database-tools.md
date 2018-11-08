@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-cross-instance"
-ms.tgt_pltfrm: ""
+ms.technology:
 ms.topic: conceptual
 f1_keywords: 
   - "vdt.tabledesigner"
   - "vdt.designers.properties.Table"
 ms.assetid: cc392987-1aab-45f5-b5af-a26be53409bf
-caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Table Properties (Visual Database Tools)

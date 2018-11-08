@@ -1,13 +1,10 @@
-﻿---
+---
 title: "Configure Always Encrypted using SQL Server Management Studio | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/30/2016"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.suite: "sql"
+ms.reviewer: vanto
 ms.technology: security
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "SQL13.SWB.COLUMNMASTERKEY.PAGE.F1"
@@ -16,11 +13,10 @@ f1_keywords:
 helpviewer_keywords: 
   - "Always Encrypted, configure with SSMS"
 ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
-caps.latest.revision: 15
-author: "stevestein"
-ms.author: "sstein"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Configure Always Encrypted using SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -383,7 +379,7 @@ For more information, see [Create and Store Column Master Keys (Always Encrypted
 
 ## Performing DAC Upgrade Operations when Database or DACPAC uses Always Encrypted
 
-[DAC operations](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) are supported on DACPAC files and databases with schemas containing encrypted columns. Special considerations apply to the DAC upgrade operation – see [Upgrade a Data-tier Application](../../../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md) on how to perform a DAC upgrade operation in various tools, including SSMS. 
+[DAC operations](../../data-tier-applications/data-tier-applications.md) are supported on DACPAC files and databases with schemas containing encrypted columns. Special considerations apply to the DAC upgrade operation – see [Upgrade a Data-tier Application](../../../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md) on how to perform a DAC upgrade operation in various tools, including SSMS. 
 
 When you upgrade a database using a DACPAC and either the DACPAC or the target database has encrypted columns, the upgrade operation will trigger a data encryption operation if all of the following conditions are met:
 - The database contains a column with data.
@@ -415,7 +411,7 @@ For more information, see [Create and Store Column Master Keys (Always Encrypted
 
 ## Migrating Databases with Encrypted Columns using BACPAC
 
-When you export a database, all data stored in encrypted columns are retrieved and put into the resulting [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4) (in encrypted form). The resulting BACPAC also contains the metadata for Always Encrypted keys.
+When you export a database, all data stored in encrypted columns are retrieved and put into the resulting [BACPAC](../../data-tier-applications/data-tier-applications.md) (in encrypted form). The resulting BACPAC also contains the metadata for Always Encrypted keys.
 
 When you import the BACPAC into a database, the encrypted data from the BACPAC is loaded into the database and Always Encrypted key metadata is re-created.
 

@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: clr
 ms.topic: "reference"
 helpviewer_keywords: 
   - "database objects [CLR integration], debugging"
@@ -17,9 +13,8 @@ helpviewer_keywords:
   - "building database objects [CLR integration], debugging"
   - "common language runtime [SQL Server], debugging"
 ms.assetid: 1332035c-d6ed-424d-8234-46ad21168319
-caps.latest.revision: 45
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Debugging CLR Database Objects

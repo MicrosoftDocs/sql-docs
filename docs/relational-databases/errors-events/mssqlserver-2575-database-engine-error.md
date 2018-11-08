@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 helpviewer_keywords: 
   - "2575 (Database Engine error)"
 ms.assetid: 92dfe449-a122-4730-942b-e1d319862d20
-caps.latest.revision: 21
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "11/13/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.resource_governor_external_resource_pools"
@@ -19,9 +16,8 @@ helpviewer_keywords:
   - "sys.resource_governor_external_resource_pools"
   - "resource_governor_external_resource_pools"
 ms.assetid: 75063e36-a91b-496f-9936-88f3d57bd447
-caps.latest.revision: 10
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sys.resource_governor_external_resource_pools (Transact-SQL)

@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: b57cc2fe-52dc-4fa9-8554-5a866e25c6d7
-caps.latest.revision: 5
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Use SQL Server Extended Events (XEvents) to Monitor Analysis Services
   Analysis Services provides tracing capabilities through the usage of [Extended Events](../../relational-databases/extended-events/extended-events.md).  
@@ -64,7 +61,7 @@ manager: "mblythe"
  The name given to this trace; usually a human readable definition of the trace. It is a common practice to use the *trace_id* value as the name.  
   
  *AS_event*  
- The Analysis Services event to be exposed. See [Analysis Services Trace Events](../trace-events/analysis-services-trace-events.md) for names of the events.  
+ The Analysis Services event to be exposed. See [Analysis Services Trace Events](https://docs.microsoft.com/bi-reference/trace-events/analysis-services-trace-events) for names of the events.  
   
  *data_filename*  
  The name of the file that contains the events data. This name is suffixed with a time stamp to avoid data overwriting if the trace is sent over and over.  

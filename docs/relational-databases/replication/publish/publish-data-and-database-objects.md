@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "user-defined types [SQL Server replication]"
@@ -43,7 +39,6 @@ helpviewer_keywords:
   - "publications [SQL Server replication], modifying"
   - "user-defined functions [SQL Server replication]"
 ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
-caps.latest.revision: 83
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

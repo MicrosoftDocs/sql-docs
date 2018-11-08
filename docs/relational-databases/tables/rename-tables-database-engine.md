@@ -1,13 +1,11 @@
-﻿---
+---
 title: "Rename Tables (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/23/2018"
 ms.prod: sql
 ms.prod_service: "table-view-index, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: table-view-index
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "table renaming [SQL Server]"
@@ -17,7 +15,7 @@ helpviewer_keywords:
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Rename Tables (Database Engine)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -65,7 +63,7 @@ To rename a table in Azure SQL Data Warehouse or Parallel Data Warehouse, use th
   
 4.  To cancel this action, press the ESC key before leaving this field.  
   
-5.  From the **File** menu choose **Save***table name*.  
+5.  From the **File** menu choose **Save** _table name_.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   

@@ -4,19 +4,15 @@ ms.custom: ""
 ms.date: "06/14/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
+ms.technology: high-availability
 ms.topic: conceptual
 helpviewer_keywords: 
   - "primary databases [SQL Server], in availability group"
   - "Availability Groups [SQL Server], configuring"
   - "Availability Groups [SQL Server], databases"
 ms.assetid: 2a54eef8-9e8e-4e04-909c-6970112d55cc
-caps.latest.revision: 31
-author: "rothja"
-ms.author: "jroth"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Add a Database to an Availability Group (SQL Server)

@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/06/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "connection access to availability replicas"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "readable secondary replicas"
   - "Availability Groups [SQL Server], active secondary replicas"
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
-caps.latest.revision: 80
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -62,7 +59,7 @@ manager: craigg
   
 -   Read-only workloads for disk-based tables use row versioning to remove blocking contention on the secondary databases. All queries that run against the secondary databases are automatically mapped to snapshot isolation transaction level, even when other transaction isolation levels are explicitly set. Also, all locking hints are ignored. This eliminates reader/writer contention.  
   
--   Read-only workloads for memory-optimized durable tables access the data in exactly the same way it is accessed on the primary database, using native stored procedures or SQL Interoperability with the same transaction isolation level limitations (See [Isolation Levels in the Database Engine](http://msdn.microsoft.com/en-us/8ac7780b-5147-420b-a539-4eb556e908a7)). Reporting workload or read-only queries running on the primary replica can be run on the secondary replica without requiring any changes. Similarly, a reporting workload or read-only queries running on a secondary replica can be run on the primary replica without requiring any changes.  Similar to disk-based tables, all queries that run against the secondary databases are automatically mapped to snapshot isolation transaction level, even when other transaction isolation levels are explicitly set.  
+-   Read-only workloads for memory-optimized durable tables access the data in exactly the same way it is accessed on the primary database, using native stored procedures or SQL Interoperability with the same transaction isolation level limitations (See [Isolation Levels in the Database Engine](http://msdn.microsoft.com/8ac7780b-5147-420b-a539-4eb556e908a7)). Reporting workload or read-only queries running on the primary replica can be run on the secondary replica without requiring any changes. Similarly, a reporting workload or read-only queries running on a secondary replica can be run on the primary replica without requiring any changes.  Similar to disk-based tables, all queries that run against the secondary databases are automatically mapped to snapshot isolation transaction level, even when other transaction isolation levels are explicitly set.  
   
 -   DML operations are allowed on table variables both for disk-based and memory-optimized table types on the secondary replica.  
   

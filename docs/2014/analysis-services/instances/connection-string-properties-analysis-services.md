@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 29a00a41-5b0d-44b2-8a86-1b16fe507768
-caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Connection String Properties (Analysis Services)
   This topic documents the connection string properties you might set in one of the designer or administration tools, or see in connection strings built by client applications that connect to and query Analysis Services data. As such, it covers just a subset of the available properties. The complete list includes numerous server and database properties, allowing you to customize a connection for a specific application, independent of how the instance or database is configured on the server.  
@@ -67,7 +64,7 @@ manager: "mblythe"
 |`Integrated Security`|The Windows identity of the caller is used to connect to Analysis Services. Valid values are blank, SSPI, and BASIC.<br /><br /> `Integrated Security`=`SSPI` is the default value for TCP connections, allowing NTLM, Kerberos, or Anonymous authentication. Blank is the default value for HTTP connections.<br /><br /> When using `SSPI`, `ProtectionLevel` must be set to one of the following: `Connect`, `PktIntegrity`, `PktPrivacy`.|  
 |`Persist Encrypted`|Set this property when the client application requires the data source object to persist sensitive authentication information, such as a password, in encrypted form. By default, authentication information is not persisted.|  
 |`Persist Security Info`|Valid values are True and False. When set to True, security information, such as the user identity or password previously specified on the connection string, can be obtained from the connection after the connection is made. The default value is False.|  
-|`ProtectionLevel`|Determines the security level used on the connection. Valid values are:<br /><br /> `None`. Unauthenticated or anonymous connections. Performs no authentication on data sent to the server.<br /><br /> `Connect`. Authenticated connections. Authenticates only when the client establishes a relationship with a server.<br /><br /> `PktIntegrity`. Encrypted connections. Verifies that all data is received from the client and that it has not been changed in transit.<br /><br /> `PktPrivacy`. Signed encryption, supported only for XMLA. Verifies that all data is received from the client, that it has not been changed in transit, and protects the privacy of the data by encrypting it.<br /><br /> <br /><br /> For more information, see [Establishing Secure Connections in ADOMD.NET](../multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections.md)|  
+|`ProtectionLevel`|Determines the security level used on the connection. Valid values are:<br /><br /> `None`. Unauthenticated or anonymous connections. Performs no authentication on data sent to the server.<br /><br /> `Connect`. Authenticated connections. Authenticates only when the client establishes a relationship with a server.<br /><br /> `PktIntegrity`. Encrypted connections. Verifies that all data is received from the client and that it has not been changed in transit.<br /><br /> `PktPrivacy`. Signed encryption, supported only for XMLA. Verifies that all data is received from the client, that it has not been changed in transit, and protects the privacy of the data by encrypting it.<br /><br /> <br /><br /> For more information, see [Establishing Secure Connections in ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections)|  
 |`Roles`|Specify a comma-delimited list of predefined roles to connect to a server or database using permissions conveyed by that role. If this property is omitted, all roles are used, and the effective permissions are the combination of all roles. Setting the property to an empty value (for example, Roles=’ ‘) the client connection has no role membership.<br /><br /> An administrator using this property connects using the permissions conveyed by the role. Some commands might fail if the role does not provide sufficient permission.|  
 |`SSPI`|Explicitly specifies which security package to use for client authentication when `Integrated Security` is set to `SSPI`. SSPI supports multiple packages, but you can use this property to specify a particular package. Valid values are Negotiate, Kerberos, NTLM, and Anonymous User. If this property is not set, all packages will be available to the connection.|  
 |`Use Encryption for Data`|Encrypts data transmissions. Value values are True and False.|  

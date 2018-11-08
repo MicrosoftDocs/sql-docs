@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "change tracking [SQL Server], making changes"
@@ -21,9 +19,8 @@ helpviewer_keywords:
   - "change tracking [SQL Server], ensuring consistent results"
   - "change tracking [SQL Server], handling changes"
 ms.assetid: 5aec22ce-ae6f-4048-8a45-59ed05f04dc5
-caps.latest.revision: 26
-author: "craigg-msft"
-ms.author: "craigg"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Work with Change Tracking (SQL Server)

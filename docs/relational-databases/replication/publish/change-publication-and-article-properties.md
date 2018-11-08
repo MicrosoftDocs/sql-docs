@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "modifying article properties"
@@ -18,7 +14,6 @@ helpviewer_keywords:
   - "publications [SQL Server replication], changing properties"
   - "articles [SQL Server replication], properties"
 ms.assetid: f7df51ef-c088-4efc-b247-f91fb2c6ff32
-caps.latest.revision: 20
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

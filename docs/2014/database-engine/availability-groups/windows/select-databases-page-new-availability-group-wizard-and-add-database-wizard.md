@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "06/14/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
+ms.technology: high-availability
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.adddatabasewizard.selectdatabases.f1"
   - "sql12.swb.newagwizard.selectdatabases.f1"
 ms.assetid: 929c5e15-d087-438d-b1f2-aa97c5f8bff8
-caps.latest.revision: 12
-author: "rothja"
-ms.author: "jroth"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Select Databases Page (New Availability Group Wizard-Add Database Wizard)

@@ -1,16 +1,11 @@
 ---
 title: "Previewing Reports | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/05/2016"
+ms.date: 05/05/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "reports"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: reports
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Report Designer [Reporting Services], previewing reports"
@@ -18,10 +13,8 @@ helpviewer_keywords:
   - "printing previews"
   - "test servers [Reporting Services]"
 ms.assetid: 85117f6c-828e-45c9-810f-e700d9bfba67
-caps.latest.revision: 44
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ---
 # Previewing Reports
   When you design a     [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report, you may want to view it before publishing it to a production environment. You can do this in several ways: by switching to Preview mode in Report Designer, by using the preview window in Report Designer, and by publishing the report to a report server in a test environment.  
@@ -54,7 +47,7 @@ manager: "kfile"
 ## See Also  
  [Print Reports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
  [Print a Report &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/print-a-report-report-builder-and-ssrs.md)   
- [Publish Reports](http://msdn.microsoft.com/library/ef5a514e-e818-4041-a8b0-15835f9a046b)   
+ [Publish Reports](https://msdn.microsoft.com/library/ef5a514e-e818-4041-a8b0-15835f9a046b)   
  [Using Custom Assemblies with Reports](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)  
   
   

@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "mapping data types [OLE DB]"
@@ -22,9 +18,8 @@ helpviewer_keywords:
   - "GetParameterInfo function"
   - "OLE DB, data types"
 ms.assetid: 3d831ff8-3b79-4698-b2c1-2b5dd2f8235c
-caps.latest.revision: 40
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Data Type Mapping in Rowsets and Parameters

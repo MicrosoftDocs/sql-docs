@@ -5,9 +5,7 @@ ms.date: "07/24/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "CHECKSUM_AGG"
@@ -19,9 +17,8 @@ helpviewer_keywords:
   - "CHECKSUM_AGG function"
   - "groups [SQL Server], checksum values"
 ms.assetid: cdede70c-4eb5-4c92-98ab-b07787ab7222
-caps.latest.revision: 38
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # CHECKSUM_AGG (Transact-SQL)

@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dqs.dm.rules.f1"
   - "sql12.dqs.dm.testdomainrule.f1"
 ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
-caps.latest.revision: 27
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Create a Domain Rule

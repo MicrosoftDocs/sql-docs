@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "12/29/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "content type [data mining]"
@@ -20,10 +18,9 @@ helpviewer_keywords:
   - "discrete values"
   - "discretized"
 ms.assetid: 7c72d80e-913c-4bbe-b258-444294a78838
-caps.latest.revision: 25
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Choosing Data for Data Mining
   As you start data mining, you might ask “How much data do I need?” or “Are there any special requirements I should know about when cleaning or formatting my data?”  

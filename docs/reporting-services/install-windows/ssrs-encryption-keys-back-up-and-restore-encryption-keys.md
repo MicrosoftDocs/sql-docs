@@ -1,14 +1,9 @@
 ---
 title: "Back Up and Restore Reporting Services Encryption Keys | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/31/2016"
+ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "backing up encryption keys [Reporting Services]"
@@ -16,10 +11,8 @@ helpviewer_keywords:
   - "encryption keys [Reporting Services]"
   - "symmetric keys [Reporting Services]"
 ms.assetid: 6773d5df-03ef-4781-beb7-9f6825bac979
-caps.latest.revision: 14
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ---
 # SSRS Encryption Keys - Back Up and Restore Encryption Keys
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

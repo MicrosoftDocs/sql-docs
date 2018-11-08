@@ -6,11 +6,8 @@ ms.date: "02/09/2017"
 ms.prod: "sql"
 ms.technology: ssdt
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: cb241e94-d81c-40e9-a7ae-127762a6b855
-caps.latest.revision: 6
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
@@ -54,7 +51,7 @@ For some procedures in this topic, the Distributed Transaction Coordinator servi
     For more information about how ROLLBACK TRANSACTION works with stored procedures and triggers, see this page on the Microsoft Web site: [ROLLBACK TRANSACTION (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkID=115927).  
   
 ## To create a transaction for a single test method  
-In this example, you are using an ambient transaction when you use the [System.Transactions.TransactionScope](https://docs.microsoft.com/dotnet/api/system.transactions.transactionscope) type. By default, the Execution and Privileged connections will not use the ambient transaction, because the connections were created before the method is executed. The SqlConnection has an [System.Data.SqlClient.SqlConnection.EnlistTransaction](https://docs.microsoft.com/en-us/dotnet/api/system.data.sqlclient.sqlconnection.enlisttransaction) method, which associates an active connection with a transaction. When an ambient transaction is created, it registers itself as the current transaction, and you can access it through the [System.Transactions.Transaction.Current](https://docs.microsoft.com/dotnet/api/system.transactions.transaction.current) property. In this example, the transaction is rolled back when the ambient transaction is disposed. If you want to commit any changes that were made when you ran the unit test, you must call the [System.Transactions.TransactionScope.Complete](https://docs.microsoft.com/dotnet/api/system.transactions.transactionscope.complete) method.  
+In this example, you are using an ambient transaction when you use the [System.Transactions.TransactionScope](https://docs.microsoft.com/dotnet/api/system.transactions.transactionscope) type. By default, the Execution and Privileged connections will not use the ambient transaction, because the connections were created before the method is executed. The SqlConnection has an [System.Data.SqlClient.SqlConnection.EnlistTransaction](https://docs.microsoft.com/dotnet/api/system.data.sqlclient.sqlconnection.enlisttransaction) method, which associates an active connection with a transaction. When an ambient transaction is created, it registers itself as the current transaction, and you can access it through the [System.Transactions.Transaction.Current](https://docs.microsoft.com/dotnet/api/system.transactions.transaction.current) property. In this example, the transaction is rolled back when the ambient transaction is disposed. If you want to commit any changes that were made when you ran the unit test, you must call the [System.Transactions.TransactionScope.Complete](https://docs.microsoft.com/dotnet/api/system.transactions.transactionscope.complete) method.  
   
 #### To create a transaction for a single test method  
   

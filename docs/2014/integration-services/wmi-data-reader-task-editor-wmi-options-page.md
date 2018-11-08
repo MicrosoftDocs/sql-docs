@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.wmidatareadertask.wmiquery.f1"
 helpviewer_keywords: 
   - "WMI Data Reader Task Editor"
 ms.assetid: 4b8d4716-882d-41b0-b77e-e0e2741a2cd5
-caps.latest.revision: 39
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # WMI Data Reader Task Editor (WMI Options Page)

@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "time dimensions [Analysis Services]"
@@ -17,10 +15,9 @@ helpviewer_keywords:
   - "calendars [Analysis Services]"
   - "time intelligence [Analysis Services]"
 ms.assetid: 6d692856-4b01-4dca-a650-f97ac220c114
-caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Create a Date type Dimension
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], a time dimension is a dimension type whose attributes represent time periods, such as years, semesters, quarters, months, and days. The periods in a time dimension provide time-based levels of granularity for analysis and reporting. The attributes are organized in hierarchies, and the granularity of the time dimension is determined largely by the business and reporting requirements for historical data. For example, most financial and sales data in business intelligence applications use a monthly or quarterly granularity.  

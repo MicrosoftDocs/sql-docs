@@ -5,9 +5,7 @@ ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "SET QUERY_GOVERNOR_COST_LIMIT"
@@ -22,9 +20,8 @@ helpviewer_keywords:
   - "QUERY_GOVERNOR_COST_LIMIT option"
   - "overriding connection values"
 ms.assetid: 3424bb44-6915-462d-a8d7-fe834af81387
-caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # SET QUERY_GOVERNOR_COST_LIMIT (Transact-SQL)

@@ -6,14 +6,11 @@ ms.date: "02/09/2017"
 ms.prod: "sql"
 ms.technology: ssdt
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql.data.tools.design.table.scriptpanel"
   - "sql.data.tools.design.table.context.view"
 ms.assetid: 9c9479c1-9bfc-4039-837e-e53fce67723d
-caps.latest.revision: 20
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"

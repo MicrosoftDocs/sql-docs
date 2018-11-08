@@ -4,22 +4,16 @@ ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: sql
-ms.component: "xquery"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 dev_langs: 
   - "XML"
 helpviewer_keywords: 
   - "sql:variable() function"
   - "sql:variable function"
 ms.assetid: 6e2e5063-c1cf-4b5a-b642-234921e3f4f7
-caps.latest.revision: 36
 author: "rothja"
 ms.author: "jroth"
 manager: craigg
@@ -60,7 +54,7 @@ sql:variable("variableName") as xdt:anyAtomicType?
   
  This is the query:  
   
-```  
+```sql
 DECLARE @price money  
   
 SET @price=2500.00  
@@ -88,7 +82,7 @@ WHERE ProductID=771
   
  This is the result:  
   
-```  
+```xml
 <Product ProductID="771" ProductModelID="19"   
          ProductModelName="Mountain 100"   
          ListPrice="3399.99" DiscountPrice="2500" />  

@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.datasourceviewwizard.finish.f1"
 ms.assetid: 5e18d9d8-4a5e-45db-b721-6b7968239b48
-caps.latest.revision: 21
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Completing the Wizard (Data Source View Wizard) (Analysis Services)
   Use the **Completing the Wizard** page of the wizard to provide a name for the data source view and to review the tables and views included in the view. After you click **Finish**, you can use Data Source View Designer to change the view's properties in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. For more information about Data Source View Designer, see [Data Source View Designer &#40;Analysis Services - Multidimensional Data&#41;](data-source-view-designer-analysis-services-multidimensional-data.md).  

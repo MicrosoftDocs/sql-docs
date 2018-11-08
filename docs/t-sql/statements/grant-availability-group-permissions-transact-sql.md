@@ -5,9 +5,7 @@ ms.date: "06/12/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -17,9 +15,8 @@ helpviewer_keywords:
   - "granting permissions, [SQL Server], availability groups"
   - "permissions [SQL Server], availability group"
 ms.assetid: 060eb839-666a-4046-9e1d-5edc9ea75a11
-caps.latest.revision: 9
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # GRANT Availability Group Permissions (Transact-SQL)

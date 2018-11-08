@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "01/09/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "databases"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "initializing files [SQL Server]"
@@ -19,7 +16,6 @@ helpviewer_keywords:
   - "IFI [SQL Server]"
   - "database instant file initialization [SQL Server]"
 ms.assetid: 1ad468f5-4f75-480b-aac6-0b01b048bd67
-caps.latest.revision: 33
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

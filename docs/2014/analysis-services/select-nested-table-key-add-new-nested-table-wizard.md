@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dm.dmwizard.addnestedtable.selectnestedtablekey.f1"
 ms.assetid: c715ac28-3c5d-4e4b-8104-f97b79150654
-caps.latest.revision: 20
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Select Nested Table Key (Add New Nested Table Wizard)
   Use the **Select Nested Table Key** page to select the attribute that will be the key for the nested table.  

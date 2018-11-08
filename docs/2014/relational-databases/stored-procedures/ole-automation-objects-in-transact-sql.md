@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-ole"
-ms.tgt_pltfrm: ""
+ms.technology: stored-procedures
 ms.topic: conceptual
 helpviewer_keywords: 
   - "triggers [SQL Server], OLE Automation"
@@ -15,9 +12,8 @@ helpviewer_keywords:
   - "OLE Automation [SQL Server]"
   - "OLE Automation [SQL Server], about OLE Automation"
 ms.assetid: a887d956-4cd0-400a-aa96-00d7abd7c44b
-caps.latest.revision: 23
-author: "craigg-msft"
-ms.author: "craigg"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # OLE Automation Objects in Transact-SQL

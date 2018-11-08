@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.dimensiondesigner.ardesigner.toolbar.f1"
 ms.assetid: 9c0415a8-b780-40dd-a6dd-6ee0e30a24cb
-caps.latest.revision: 18
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Toolbar (Attribute Relationship Designer Tab, Dimension Designer) (Analysis Services - Multidimensional Data)
   Use the toolbar on the **Attribute Relationship** tab of the Dimension Designer to do the following procedures:  

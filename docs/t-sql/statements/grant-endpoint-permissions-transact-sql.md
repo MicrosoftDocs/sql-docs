@@ -5,9 +5,7 @@ ms.date: "06/17/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -17,9 +15,8 @@ helpviewer_keywords:
   - "GRANT statement, endpoints"
   - "permissions [SQL Server], endpoints"
 ms.assetid: 9eda885c-fc3a-4c9d-8de6-ce07fb35a934
-caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # GRANT Endpoint Permissions (Transact-SQL)

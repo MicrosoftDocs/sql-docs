@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 4f8aa192-e6fc-4b4e-b107-5a5372ac31d9
-caps.latest.revision: 6
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: maggiesmsft
+ms.author: douglasl
+manager: craigg
 ---
 # Relational Query Designer User Interface
   Report Designer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] provides both a graphical query designer and a text-based query designer to help you create a query that specifies the data to retrieve from [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] and [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] for a report dataset. Use the graphical query designer to explore the metadata, interactively build a query, and view the results for your query. Use the text-based query designer to view the query that was built by the graphical query designer or to modify a query. You can also import an existing query from a file or report.  

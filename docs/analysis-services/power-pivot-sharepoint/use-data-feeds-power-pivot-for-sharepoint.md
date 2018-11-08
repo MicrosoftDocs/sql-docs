@@ -33,7 +33,7 @@ manager: kfile
   
  You must have a Web service or a data service that provides data in the Atom 1.0 format. Both [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] and SharePoint 2010 can provide data in this format.  
   
- Before you can export a SharePoint list as a data feed, you must install ADO.NET Data Services on the SharePoint server. For more information, see [Install ADO.NET Data Services to support data feed exports of SharePoint lists](http://msdn.microsoft.com/en-us/f32527ae-f623-4e08-adfb-6d3262f5c2ac).  
+ Before you can export a SharePoint list as a data feed, you must install ADO.NET Data Services on the SharePoint server. For more information, see [Install ADO.NET Data Services to support data feed exports of SharePoint lists](http://msdn.microsoft.com/f32527ae-f623-4e08-adfb-6d3262f5c2ac).  
   
 ##  <a name="sharepointlist"></a> Create a Data Feed from a SharePoint List  
  In a SharePoint 2010 farm, a SharePoint list has an Export as Data Feed button on the List ribbon. You can click this button to export the list as a feed. For best results, you should have Excel 2010 with the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] client application on your workstation. The [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] client application will launch in response to the data feed export, creating a new [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] table that contains the list.  
@@ -51,7 +51,7 @@ manager: kfile
   
 5.  If you chose **Open**, use the Table Import Wizard to import the data feed to a worksheet. The data feed will be added as a new table in the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] window.  
   
- An error will occur if ADO.NET Data Services 3.5.1 is not installed on the SharePoint server. For more information about the error and how to resolve it, see [Install ADO.NET Data Services to support data feed exports of SharePoint lists](http://msdn.microsoft.com/en-us/f32527ae-f623-4e08-adfb-6d3262f5c2ac).  
+ An error will occur if ADO.NET Data Services 3.5.1 is not installed on the SharePoint server. For more information about the error and how to resolve it, see [Install ADO.NET Data Services to support data feed exports of SharePoint lists](http://msdn.microsoft.com/f32527ae-f623-4e08-adfb-6d3262f5c2ac).  
   
 ##  <a name="rsreport"></a> Create a Data Feed from a Reporting Services Report  
  If you have a deployment of SQL Server 2008 R2 Reporting Services, you can use the new Atom rendering extension to generate a data feed from an existing report. For best results, you should have Excel 2010 with the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel on your workstation. The [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] client application will launch in response to the data feed export, automatically adding and relating the tables and columns as they are streamed in.  

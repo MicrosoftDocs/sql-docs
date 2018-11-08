@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
+ms.technology: backup-restore
 ms.topic: conceptual
 helpviewer_keywords: 
   - "backing up databases [SQL Server], full backups"
@@ -15,9 +12,8 @@ helpviewer_keywords:
   - "backups [SQL Server], creating"
   - "database backups [SQL Server], SQL Server Management Studio"
 ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
-caps.latest.revision: 51
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Create a Full Database Backup (SQL Server)

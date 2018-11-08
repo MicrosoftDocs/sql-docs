@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.browseforremotepartition.f1"
 ms.assetid: 1438c355-6a2c-4cf8-9b1d-19116fab45e7
-caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Browse for Remote Folder Dialog Box (Analysis Services - Multidimensional Data)
   The **Browse for Remote Folder** dialog box displays a list of available log and data folders defined for an instance of [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. You can either select a listed folder, or you can specify a different folder if needed. The **Browse for Remote Folder** dialog box is displayed by doing one of the following steps:  

@@ -1,0 +1,10 @@
+- name: Authentication in Reporting Services
+  href: authentication-in-reporting-services.md
+- name: Authorization in Reporting Services
+  href: authorization-in-reporting-services.md
+- name: How to install custom security extensions
+  href: how-to-install-custom-security-extensions.md
+- name: Implementing a Security Extension
+  href: implementing-a-security-extension.md
+- name: Security Extensions Overview
+  href: security-extensions-overview.md

@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 8a73e945-daa6-4e5d-93da-10f000f1f3a2
-caps.latest.revision: 6
-author: "mgblythe"
-ms.author: "mblythe"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Escape SQL Server Identifiers

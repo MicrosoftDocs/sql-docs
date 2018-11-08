@@ -4,19 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-cross-instance"
-ms.tgt_pltfrm: ""
+ms.technology:
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.connectionproperties.f1"
 helpviewer_keywords: 
   - "Connection Properties dialog box"
 ms.assetid: 6df812ad-4d80-4503-8a23-47719ce85624
-caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Connection Properties Dialog Box

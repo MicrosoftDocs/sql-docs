@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "12/29/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "mining models, validating"
@@ -15,10 +13,9 @@ helpviewer_keywords:
   - "confusion table"
   - "mining models, testing"
 ms.assetid: d6f620f4-39af-4714-9628-28ce3c361fca
-caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Classification Matrix (SQL Server Data Mining Add-ins)
   ![Classification Matrix button, Data Mining ribbon](media/dmc-cmatrix.gif "Classification Matrix button, Data Mining ribbon")  

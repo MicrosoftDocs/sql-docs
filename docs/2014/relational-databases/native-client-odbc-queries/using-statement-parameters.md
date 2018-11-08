@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "SQL Server Native Client ODBC driver, parameters"
@@ -19,9 +15,8 @@ helpviewer_keywords:
   - "SQL Server Native Client ODBC driver, statements"
   - "ODBC applications, statements"
 ms.assetid: 2427d886-ec6c-49d7-b0b6-0d998b64cdb9
-caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Using Statement Parameters

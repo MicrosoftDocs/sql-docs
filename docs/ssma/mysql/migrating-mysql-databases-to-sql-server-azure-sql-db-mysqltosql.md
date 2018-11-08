@@ -4,15 +4,9 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 ms.assetid: 8006f9a0-394d-4238-8dc5-44255134628b
-caps.latest.revision: 12
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: craigg
@@ -39,7 +33,7 @@ To successfully migrate objects and data from MySQL databases to SQL Server or S
   
 7.  [Converting MySQL Databases &#40;MySQLToSQL&#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
   
-8.  [Synchronization](http://msdn.microsoft.com/en-us/ac993a6d-0283-4823-8793-6b217677dfa3)  
+8.  [Synchronization](loading-converted-database-objects-into-sql-server-mysqltosql.md)  
   
 9. You can do this in one of the following ways:  
   

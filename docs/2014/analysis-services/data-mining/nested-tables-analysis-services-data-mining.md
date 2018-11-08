@@ -4,20 +4,17 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "data mining [Analysis Services], nested tables"
   - "tables [Analysis Services], nested"
   - "nested tables"
 ms.assetid: cb192aa2-597e-4d4f-ac34-3556d037fed4
-caps.latest.revision: 51
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Nested Tables (Analysis Services - Data Mining)
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], data must be fed to a data mining algorithm as a series of cases that are contained within a case table. However, not all cases can be described by a single row of data. For example, a case might be derived from two tables: one table that contains customer information, and another table that contains customer purchases. A single customer in the customer information table might have multiple items in the customer purchases table, which makes it difficult to describe the data by using a single row. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] provides a unique method for handling these cases, by using *nested tables*. The concept of a nested table is demonstrated in the following illustration.  

@@ -1,15 +1,8 @@
-﻿---
+---
 title: "sys.firewall_rules (Azure SQL Database) | Microsoft Docs"
-ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: ""
-ms.prod_service: "sql-database"
-ms.reviewer: ""
-ms.service: "sql-database"
-ms.component: "system-catalog-views"
-ms.suite: "sql"
+ms.prod: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.firewall_rules"
@@ -22,9 +15,8 @@ helpviewer_keywords:
   - "firewall_rules"
   - "sys.firewall_rules"
 ms.assetid: 140d2cd8-9aa1-4cc5-870d-e1dbc873b3fe
-caps.latest.revision: 14
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---

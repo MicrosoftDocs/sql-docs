@@ -5,10 +5,8 @@ author: MikeRayMSFT
 ms.author: mikeray 
 manager: craigg
 ms.date: 04/30/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
-ms.component: ""
-ms.suite: "sql"
 ms.custom: "sql-linux"
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
@@ -58,7 +56,7 @@ The first step is to configure the operating system on the cluster nodes. For th
 
 1. Designate one node as primary and other nodes as secondaries. Use these terms throughout this guide.
 
-1. Make sure nodes that are going to be part of the cluster can communicate to each other.
+1. Make sure nodes that are going to be part of the cluster can communicate with each other.
 
    The following example shows `/etc/hosts` with additions for three nodes named SLES1, SLES2, and SLES3.
 
@@ -210,7 +208,7 @@ crm configure property cluster-recheck-interval=2min
 
 For more information on Pacemaker cluster properties, see [Configuring Cluster Resources](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_config_crm_resources.html).
 
-# Configure fencing (STONITH)
+## Configure fencing (STONITH)
 Pacemaker cluster vendors require STONITH to be enabled and a fencing device configured for a supported cluster setup. When the cluster resource manager cannot determine the state of a node or of a resource on a node, fencing is used to bring the cluster to a known state again.
 
 Resource level fencing ensures mainly that there is no data corruption during an outage by configuring a resource. You can use resource level fencing, for instance, with DRBD (Distributed Replicated Block Device) to mark the disk on a node as outdated when the communication link goes down.
@@ -232,6 +230,16 @@ sudo crm configure property stonith-enabled=true
 ## Configure the cluster resources for SQL Server
 
 Refer to [SLES Administration Guid](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.manual_config)
+
+## Enable Pacemaker
+
+Enable Pacemaker so that it automatically starts.
+
+Run the following command on every node in the cluster.
+
+```bash
+systemctl enable pacemaker
+```
 
 ### Create availability group resource
 

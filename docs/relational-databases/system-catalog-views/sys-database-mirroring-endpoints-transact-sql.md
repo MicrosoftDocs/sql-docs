@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.database_mirroring_endpoints_TSQL"
@@ -23,9 +20,8 @@ helpviewer_keywords:
   - "database mirroring [SQL Server], catalog views"
   - "sys.database_mirroring_endpoints catalog view"
 ms.assetid: f2285199-97ad-473c-a52d-270044dd862b
-caps.latest.revision: 49
-author: "stevestein"
-ms.author: "sstein"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # sys.database_mirroring_endpoints (Transact-SQL)

@@ -6,8 +6,6 @@ ms.technology: samples
 ms.custom: ""
 ms.date: "06/19/2018"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
@@ -27,7 +25,7 @@ AdventureWorks download links and installation instructions.
 
 - [All AdventureWorks files for SQL 2014 - 2016](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)
 - [All AdventureWorks files for SQL 2012](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks2012)
-- [All AdventurewWorks files for SQL 2008 and 2008R2](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks2008r2)
+- [All AdventureWorks files for SQL 2008 and 2008R2](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks2008r2)
 
 ## OLTP downloads
 
@@ -53,8 +51,8 @@ Direct links to the Data Warehouse versions of AdventureWorks can be found below
 ## Creation scripts
 The below scripts can be used to create the entire AdventureWorks database, irrespective of version. 
 
-- [AdventureWorks OLTP Scripts Zip](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorkDW-oltp-install-script.zip)
-- [AdventureWorks DW Scripts Zip](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorkDW-data-warehouse-install-script.zip)
+- [AdventureWorks OLTP Scripts Zip](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks-oltp-install-script.zip)
+- [AdventureWorks DW Scripts Zip](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW-data-warehouse-install-script.zip)
 
 ## Install to SQL Server
 

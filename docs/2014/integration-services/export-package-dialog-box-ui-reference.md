@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.dtsserver.exportpackage.f1"
 helpviewer_keywords: 
   - "Export Package dialog box"
 ms.assetid: 3742fe8a-ef57-444d-b2fb-cb25d16bae97
-caps.latest.revision: 22
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Export Package Dialog Box UI Reference

@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
+ms.technology: high-availability
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.configdbmsecurwiz.principalsrvr.f1"
 ms.assetid: 58af27d7-c5dd-4669-be6b-b472bc2c8ef4
-caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Principal Server Instance (Configure Database Mirroring Security Wizard)

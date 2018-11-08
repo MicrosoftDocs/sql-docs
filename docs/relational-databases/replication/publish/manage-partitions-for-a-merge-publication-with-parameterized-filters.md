@@ -4,19 +4,14 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "partitions [SQL Server replication]"
   - "merge replication partitions [SQL Server replication], SQL Server Management Studio"
   - "parameterized filters [SQL Server replication], partition management"
 ms.assetid: fb5566fe-58c5-48f7-8464-814ea78e6221
-caps.latest.revision: 22
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

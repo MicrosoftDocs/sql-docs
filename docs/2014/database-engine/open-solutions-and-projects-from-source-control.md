@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-cross-instance"
-ms.tgt_pltfrm: ""
+ms.technology:
 ms.topic: conceptual
 helpviewer_keywords: 
   - "source controls [SQL Server Management Studio], solutions"
   - "source controls [SQL Server Management Studio], projects"
 ms.assetid: 1c8d27f2-1741-485f-b56a-cadcb8b5493d
-caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Open Solutions and Projects from Source Control

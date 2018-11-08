@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "06/30/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "replication"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.rep.configdistwizard.distproperties.publishers.f1"
 helpviewer_keywords: 
   - "Distributor Properties dialog box"
 ms.assetid: 31c81898-11ca-4d2f-afea-2fbc71e19ce4
-caps.latest.revision: 20
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Distributor Properties, Publishers

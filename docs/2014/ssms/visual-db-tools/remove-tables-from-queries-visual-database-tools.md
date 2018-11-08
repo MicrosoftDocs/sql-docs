@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-cross-instance"
-ms.tgt_pltfrm: ""
+ms.technology:
 ms.topic: conceptual
 helpviewer_keywords: 
   - "deleting tables"
@@ -15,9 +12,8 @@ helpviewer_keywords:
   - "dropping tables"
   - "queries [SQL Server], tables"
 ms.assetid: 8fea0b4f-99b7-4050-8d6f-a97ffb839619
-caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Remove Tables from Queries (Visual Database Tools)

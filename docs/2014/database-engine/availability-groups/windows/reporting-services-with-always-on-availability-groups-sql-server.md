@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
+ms.technology: high-availability
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Reporting Services, AlwaysOn Availability Groups"
   - "Availability Groups [SQL Server], interoperability"
 ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
-caps.latest.revision: 15
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Reporting Services with AlwaysOn Availability Groups (SQL Server)
@@ -125,7 +121,7 @@ manager: craigg
 > [!NOTE]  
 >  SharePoint mode report servers use a synchronization process between the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] service application databases and the SharePoint content databases. It is important to maintain the report server databases and content databases together. You should consider configuring them in the same availability groups so they failover and recover as a set. Consider the following scenario:  
 >   
->  -   You restore or failover to a copy of the content database that has not received the same recent updates that that the report server database has received.  
+>  -   You restore or failover to a copy of the content database that has not received the same recent updates that the report server database has received.  
 > -   The [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] synchronization process will detect differences between the list of items in the content database and the report server databases.  
 > -   The synchronization process will delete or update items in the content database.  
   

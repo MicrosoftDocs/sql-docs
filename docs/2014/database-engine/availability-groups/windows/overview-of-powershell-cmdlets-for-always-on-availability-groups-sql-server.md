@@ -4,19 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
+ms.technology: high-availability
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], PowerShell cmdlets"
   - "Availability Groups [SQL Server], about"
   - "PowerShell [SQL Server], cmdlets"
 ms.assetid: b3fef0d5-b6d7-4386-a0f0-d06c165ad4de
-caps.latest.revision: 35
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Overview of PowerShell Cmdlets for AlwaysOn Availability Groups (SQL Server)
@@ -58,7 +54,7 @@ manager: craigg
 |Cmdlets|Description|Supported on|  
 |-------------|-----------------|------------------|  
 |`Backup-SqlDatabase`|Creates a data or log backup.|Any online database (for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], a database on the server instance that hosts the primary replica)|  
-|`Restore-SqlDatabase`|Restores a backup.|Any instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], a server instance that hosts a secondary replica)<br /><br /> **\*\* Important \*\*** When preparing a secondary database, you must use the `-NoRecovery` parameter in every `Restore-SqlDatabase` command.|  
+|`Restore-SqlDatabase`|Restores a backup.|Any instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], a server instance that hosts a secondary replica)<br /><br /> **&#42;&#42; Important &#42;&#42;** When preparing a secondary database, you must use the `-NoRecovery` parameter in every `Restore-SqlDatabase` command.|  
   
  For information about using these cmdlets to prepare a secondary database, see [Manually Prepare a Secondary Database for an Availability Group &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
   

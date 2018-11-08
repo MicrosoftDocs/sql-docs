@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/14/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "docset-sql-devref"
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "custom report items"
 ms.assetid: cfacd816-00d6-4a3d-be72-1bba6f7f6886
-caps.latest.revision: 22
-author: "douglaslM"
-ms.author: "douglasl"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Custom Report Item Implementation Requirements

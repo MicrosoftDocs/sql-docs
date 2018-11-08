@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "08/24/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.foreachloopcontainer.collection.f1"
 ms.assetid: 95a19dde-61ca-4d9b-aa3d-131fa4264296
-caps.latest.revision: 62
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Foreach Loop Editor (Collection Page)

@@ -5,9 +5,7 @@ ms.date: "07/26/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "insert keyword [XML DML]"
   - "insert XML DML statement"
 ms.assetid: 0c95c2b3-5cc2-4c38-9e25-86493096c442
-caps.latest.revision: 38
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

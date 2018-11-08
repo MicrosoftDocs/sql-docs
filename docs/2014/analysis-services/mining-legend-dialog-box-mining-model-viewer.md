@@ -4,20 +4,17 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dm.miningmodeleditor.nodelegend.f1"
 helpviewer_keywords: 
   - "Mining Legend dialog box"
 ms.assetid: 9040e213-a6fd-420e-be3e-37cc3a17c111
-caps.latest.revision: 22
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Mining Legend Dialog Box (Mining Model Viewer)
   Use the **Mining Legend** dialog box to get more detailed information about the selected node or item in a mining model viewer.  

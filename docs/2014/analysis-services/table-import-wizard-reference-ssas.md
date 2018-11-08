@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.bidtoolset.tableimportwizard.f1"
 ms.assetid: 2ac05e89-c002-4adc-86c7-438df70e9ed5
-caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Table Import Wizard Reference (SSAS)
   This section provides Help on the **Table Import Wizard**. This wizard enables you to import data from a variety of data sources. To access the wizard from the model designer, on the **Model** menu, click **Import from Data Source**.  

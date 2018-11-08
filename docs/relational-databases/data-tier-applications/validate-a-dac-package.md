@@ -3,13 +3,7 @@ title: "Validate a DAC Package | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: "data-tier-applications"
-ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-data-tier-apps"
-ms.tgt_pltfrm: ""
+ms.technology:
 ms.topic: conceptual
 helpviewer_keywords: 
   - "data-tier application [SQL Server], validate"
@@ -19,7 +13,6 @@ helpviewer_keywords:
   - "data-tier application [SQL Server], view"
   - "view DAC"
 ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
-caps.latest.revision: 17
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

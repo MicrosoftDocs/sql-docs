@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-cross-instance"
-ms.tgt_pltfrm: ""
+ms.technology:
 ms.topic: conceptual
 helpviewer_keywords: 
   - "dropping jobs"
@@ -17,9 +14,8 @@ helpviewer_keywords:
   - "deleting jobs"
   - "removing jobs"
 ms.assetid: 92dbb6da-5919-4bde-9354-d454e9ea3da0
-caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Automatically Delete a Job

@@ -4,24 +4,18 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "replication"
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_replmonitorhelppublication_TSQL"
   - "sp_replmonitorhelppublication"
 helpviewer_keywords: 
   - "sp_replmonitorhelppublication"
 ms.assetid: 7928c50c-617f-41c5-9e0f-4e42e8be55dc
-caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_replmonitorhelppublication (Transact-SQL)

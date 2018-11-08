@@ -4,19 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords: 
   - "feature adding [SQL Server]"
   - "SQL Server, features"
   - "adding features to SQL Server"
 ms.assetid: 97931fdc-d943-48dd-81b9-ae8b8d2c6dad
-caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Add Features to an Instance of SQL Server 2014 (Setup)

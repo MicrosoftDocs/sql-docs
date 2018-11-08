@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Jet-based ODBC drivers [ODBC], Excel driver"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "ODBC desktop database drivers [ODBC], Excel driver"
   - "Excel driver [ODBC], setting options programmatically"
 ms.assetid: b5ee3636-4591-427a-a65a-a2d5926fcc1a
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg

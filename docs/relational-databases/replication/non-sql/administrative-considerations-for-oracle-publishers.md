@@ -4,18 +4,13 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Oracle publishing [SQL Server replication], administrative considerations"
   - "administering replication, Oracle publishing"
 ms.assetid: cfd81fb5-419b-4a1b-97c4-be7c9d4ee289
-caps.latest.revision: 29
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

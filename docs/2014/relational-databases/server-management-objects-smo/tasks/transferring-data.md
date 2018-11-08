@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "10/20/2016"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 topic_type: 
   - "apiref"
@@ -16,9 +14,8 @@ helpviewer_keywords:
   - "data transfers [SMO]"
   - "transferring data"
 ms.assetid: eea255c3-8251-40f0-973b-fe4ef6cb5261
-caps.latest.revision: 49
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Transferring Data

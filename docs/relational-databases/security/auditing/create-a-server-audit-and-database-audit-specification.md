@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: security
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: security
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.sqlaudit.dbaudit.general.f1"
@@ -15,9 +13,8 @@ helpviewer_keywords:
   - "audits [SQL Server], creating database specification"
   - "database audit [SQL Server]"
 ms.assetid: 26ee85de-6e97-4318-b526-900924d96e62
-caps.latest.revision: 17
-author: CarlRabeler
-ms.author: carlraba
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Create a Server Audit and Database Audit Specification

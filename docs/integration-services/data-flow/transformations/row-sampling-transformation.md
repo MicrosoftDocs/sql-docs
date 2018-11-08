@@ -5,9 +5,7 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.rowsamplingtrans.f1"
@@ -22,7 +20,6 @@ helpviewer_keywords:
   - "packages [Integration Services], samples"
   - "datasets [Integration Services], sample"
 ms.assetid: b6caafd3-30b2-4368-82af-a44611d4cd39
-caps.latest.revision: 43
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

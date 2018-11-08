@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "08/18/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.dm_os_memory_brokers"
@@ -18,7 +16,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_os_memory_brokers dynamic management view"
 ms.assetid: 48dd6ad9-0d36-4370-8a12-4921d0df4b86
-caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -44,7 +41,7 @@ manager: craigg
 |**predicted_allocations_kb**|**bigint**|Predicted amount of allocated memory by the broker. This is based on the memory usage pattern.|  
 |**target_allocations_kb**|**bigint**|Recommended amount of allocated memory, in kilobytes (KB), that is based on current settings and the memory usage pattern. This broker should grow to or shrink to this number.|  
 |**future_allocations_kb**|**bigint**|Projected number of allocations, in kilobytes (KB), that will be done in the next several seconds.|  
-|**overall_limit_kb**|**bigint**|Maximum amount of memory, in kilobytes (KB), that the the broker can allocate.|  
+|**overall_limit_kb**|**bigint**|Maximum amount of memory, in kilobytes (KB), that the broker can allocate.|  
 |**last_notification**|**nvarchar(60)**|Memory usage recommendation that is based on the current settings and usage pattern. Valid values are as follows:<br /><br /> grow<br /><br /> shrink<br /><br /> stable|  
 |**pdw_node_id**|**int**|**Applies to**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> The identifier for the node that this distribution is on.|  
   

@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.fuzzylookuptrans.f1"
@@ -33,7 +31,6 @@ helpviewer_keywords:
   - "missing values replaced [Integration Services]"
   - "similarity thresholds [Integration Services]"
 ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
-caps.latest.revision: 75
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

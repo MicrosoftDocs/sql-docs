@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "ResumeService Method (SqlService Class)"
@@ -19,9 +17,8 @@ topic_type:
 helpviewer_keywords: 
   - "ResumeService method"
 ms.assetid: 0b0a5f08-b95e-4626-bf81-309da7a0aacd
-caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # ResumeService Method (SqlService Class)

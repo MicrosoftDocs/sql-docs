@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.scriptcomponent.connections.f1"
 helpviewer_keywords: 
   - "Script Transformation Editor"
 ms.assetid: 709f048e-0b8b-46c3-9dde-3e912361157f
-caps.latest.revision: 19
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Script Transformation Editor (Connection Managers Page)

@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "09/09/2016"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords: 
   - "installing SQL Server, preparing to install"
   - "installation [SQL Server]"
 ms.assetid: 0300e777-d56b-4d10-9c33-c9ebd2489ee5
-caps.latest.revision: 40
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Install SQL Server 2014

@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-cross-instance"
-ms.tgt_pltfrm: ""
+ms.technology:
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.connecttoserver.options.registeredservers.f1"
 ms.assetid: ba34b01a-6289-4eb8-8341-fa3d9ec87b3f
-caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Connect to Server (Additional Connection Parameters Page)

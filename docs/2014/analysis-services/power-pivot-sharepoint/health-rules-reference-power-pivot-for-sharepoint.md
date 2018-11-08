@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 47ae04ce-7b9d-49c2-8dbc-bafcb73d4603
-caps.latest.revision: 17
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Health Rules Reference (PowerPivot for SharePoint)
   This reference topic describes the SharePoint health rules that are added by a PowerPivot for SharePoint installation. These rules are used to report problems with server health, availability, or configuration of a [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] service application or its associated [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance.  

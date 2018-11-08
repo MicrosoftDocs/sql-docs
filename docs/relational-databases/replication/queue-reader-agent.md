@@ -4,19 +4,14 @@ ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.rep.monitor.queuereaderagent.f1"
 helpviewer_keywords: 
   - "Queue Reader Agent dialog box"
 ms.assetid: f02d24b6-dcb5-4126-b56e-fab41cfe4337
-caps.latest.revision: 18
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

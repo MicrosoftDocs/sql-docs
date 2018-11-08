@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.multicasttransformation.f1"
 helpviewer_keywords: 
   - "Multicast Transformation Editor"
 ms.assetid: 96155ed9-6597-4fe1-8f9f-b741b18ba2c1
-caps.latest.revision: 20
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Multicast Transformation Editor

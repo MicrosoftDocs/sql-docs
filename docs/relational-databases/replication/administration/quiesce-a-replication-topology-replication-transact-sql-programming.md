@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 dev_langs: 
   - "TSQL"
@@ -18,7 +14,6 @@ helpviewer_keywords:
   - "quiesce [SQL Server replication]"
   - "transactional replication, backup and restore"
 ms.assetid: 7626d575-9994-47be-b772-5b6f1b7ef7ca
-caps.latest.revision: 34
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

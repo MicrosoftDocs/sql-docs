@@ -5,9 +5,7 @@ ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: backup-restore
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "log sequence numbers [SQL Server]"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "database recovery [SQL Server]"
   - "database restores [SQL Server], point in time"
 ms.assetid: f7b3de5b-198d-448d-8c71-1cdd9239676c
-caps.latest.revision: 38
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

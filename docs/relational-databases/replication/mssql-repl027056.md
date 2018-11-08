@@ -4,17 +4,12 @@ ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "MSSQL_REPL027056 error"
 ms.assetid: 92d62f3c-b8ae-482e-a348-2e9a8ee9786e
-caps.latest.revision: 15
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

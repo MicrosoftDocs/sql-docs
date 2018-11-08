@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "PropertyNumValue Property (SqlServiceAdvancedProperty Class)"
@@ -19,9 +17,8 @@ topic_type:
 helpviewer_keywords: 
   - "PropertyNumValue property"
 ms.assetid: 2c740dee-8911-443c-981f-7f224598ad21
-caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # PropertyNumValue Property (SqlServiceAdvancedProperty Class)

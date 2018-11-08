@@ -5,9 +5,7 @@ ms.date: "01/04/2018"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "WORKLOAD GROUP"
@@ -19,9 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "CREATE WORKLOAD GROUP statement"
 ms.assetid: d949e540-9517-4bca-8117-ad8358848baa
-caps.latest.revision: 47
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # CREATE WORKLOAD GROUP (Transact-SQL)

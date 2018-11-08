@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "replication"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "development [SQL Server replication]"
   - "replication [SQL Server], development"
   - "replication [SQL Server], interoperability"
 ms.assetid: 47c613e4-7fe9-462a-89b4-659b14825b70
-caps.latest.revision: 20
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Replication Features and Tasks

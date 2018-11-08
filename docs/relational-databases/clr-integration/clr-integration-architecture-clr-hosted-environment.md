@@ -3,10 +3,8 @@ title: "CLR Hosted Environment | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: reference
+ms.technology: clr
 ms.topic: "reference"
 helpviewer_keywords: 
   - "type-safe code [CLR integration]"
@@ -26,7 +24,6 @@ helpviewer_keywords:
   - "hosted environments [CLR integration]"
   - "HPAs [CLR integration]"
 ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
-caps.latest.revision: 60
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

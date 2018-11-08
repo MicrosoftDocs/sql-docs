@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-security"
-ms.tgt_pltfrm: ""
+ms.technology: security
 ms.topic: conceptual
 f1_keywords: 
   - "Security [SQL Server]"
@@ -18,9 +15,8 @@ helpviewer_keywords:
   - "security [SQL Server], planning"
   - "applications [SQL Server], security"
 ms.assetid: 4d93489e-e9bb-45b3-8354-21f58209965d
-caps.latest.revision: 28
-author: "craigg-msft"
-ms.author: "craigg"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Securing SQL Server

@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "commands [SQL Server Native Client]"
@@ -17,9 +13,8 @@ helpviewer_keywords:
   - "OLE DB extensions for XML"
   - "SQL Server Native Client OLE DB provider, command execution"
 ms.assetid: bb0b3cbf-fe45-46ba-b2ec-c5a39e3c7081
-caps.latest.revision: 40
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Executing a Command

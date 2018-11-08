@@ -4,24 +4,19 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-f1_keywords: 
-  - "VS.ToolsOptionsPages.Text_Editor.XML.General"
 ms.assetid: 46a9f913-d0b9-40ff-b382-9bbdec7461a6
-caps.latest.revision: 20
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Options (Text Editor - XML - General Page)
   Use this dialog to change the general editing behavior of the XML Editor, which is used to edit XML documents. To display these settings, click **Options** on the **Tools** menu, expand the **XML** subfolder, and then click **General**.  
   
 ## Setting Options in Multiple Locations  
- Options for the XML Editor can also be set in the the **All Languages General** dialog. If you use the **All Languages** dialogs to set different options for the other [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] editors, such as the DMX or MDX editors, you must reset the XML Editor options using this dialog.  
+ Options for the XML Editor can also be set in the **All Languages General** dialog. If you use the **All Languages** dialogs to set different options for the other [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] editors, such as the DMX or MDX editors, you must reset the XML Editor options using this dialog.  
   
 ## Statement Completion  
  **Auto list members**  

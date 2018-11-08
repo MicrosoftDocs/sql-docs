@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-cross-instance"
-ms.tgt_pltfrm: ""
+ms.technology:
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLServer:Deprecated Features"
@@ -15,9 +12,8 @@ helpviewer_keywords:
   - "deprecation [SQL Server], performance counters"
   - "Deprecated Features object"
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
-caps.latest.revision: 58
-author: "craigg-msft"
-ms.author: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # SQL Server, Deprecated Features Object
@@ -29,7 +25,7 @@ manager: craigg
 |------------------------------------------------------|-----------------|  
 |'#' and '##' as the name of temporary tables and stored procedures|An identifier was encountered that did not contain any characters other than #. Use at least one additional character. Occurs once per compilation.|  
 |'::' function calling syntax|The :: function calling syntax was encountered for a table-valued function. Replace with `SELECT column_list FROM` *\< function_name>*`()`. For example, replace `SELECT * FROM ::fn_virtualfilestats(2,1)`with `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Occurs once per compilation.|  
-|'@' and names that start with '@@' as [!INCLUDE[tsql](../../includes/tsql-md.md)] identifiers|An identifier was encountered that began with @ or @@. Do not use @ or @@ or names that begin with @@ as identifiers. Occurs once per compilation.|  
+|'\@' and names that start with '\@\@' as [!INCLUDE[tsql](../../includes/tsql-md.md)] identifiers|An identifier was encountered that began with \@ or \@\@. Do not use \@ or \@\@ or names that begin with \@\@ as identifiers. Occurs once per compilation.|  
 |ADDING TAPE DEVICE|The deprecated feature sp_addumpdevice'`tape`' was encountered. Use sp_addumpdevice'`disk`' instead. Occurs once per use.|  
 |ALL Permission|Total number of times the GRANT ALL, DENY ALL, or REVOKE ALL syntax was encountered. Modify the syntax to deny specific permissions. Occurs once per query.|  
 |ALTER DATABASE WITH TORN_PAGE_DETECTION|Total number of times the deprecated feature TORN_PAGE_DETECTION option of ALTER DATABASE has been used since the server instance was started. Use the PAGE_VERIFY syntax instead. Occurs once per use in a DDL statement.|  
@@ -168,7 +164,7 @@ manager: craigg
 |sp_defaultlanguage|The sp_defaultlanguage procedure was encountered. Use ALTER LOGIN instead. Occurs once per compilation.|  
 |sp_denylogin|The sp_denylogin procedure was encountered. Use ALTER LOGIN DISABLE instead. Occurs once per query.|  
 |sp_depends|The sp_depends procedure was encountered. Use sys.dm_sql_referencing_entities and sys.dm_sql_referenced_entities instead. Occurs once per query.|  
-|sp_detach_db @keepfulltextindexfile|The @keepfulltextindexfile argument was encountered in a sp_detach_db statement. Do not use this argument.|  
+|sp_detach_db \@keepfulltextindexfile|The \@keepfulltextindexfile argument was encountered in a sp_detach_db statement. Do not use this argument.|  
 |sp_dropalias|The sp_dropalias procedure was encountered. Replace aliases with a combination of user accounts and database roles. Use sp_dropalias to remove aliases in upgraded databases. Occurs once per compilation.|  
 |sp_dropapprole|The sp_dropapprole procedure was encountered. Use DROP APPLICATION ROLE instead. Occurs once per query.|  
 |sp_dropextendedproc|The sp_dropextendedproc procedure was encountered. Use CLR instead. Occurs once per compilation.|  
@@ -181,10 +177,10 @@ manager: craigg
 |sp_fulltext_catalog|The sp_fulltext_catalog procedure was encountered. Use CREATE/ALTER/DROP FULLTEXT CATALOG instead. Occurs once per compilation.|  
 |sp_fulltext_column|The sp_fulltext_column procedure was encountered. Use ALTER FULLTEXT INDEX instead. Occurs once per compilation.|  
 |sp_fulltext_database|The sp_fulltext_database procedure was encountered. Use ALTER DATABASE instead. Occurs once per compilation.|  
-|sp_fulltext_service @action=clean_up|The clean_up option of the sp_fulltext_service procedure was encountered. Occurs once per query.|  
-|sp_fulltext_service @action=connect_timeout|The connect_timeout option of the sp_fulltext_service procedure was encountered. Occurs once per query.|  
-|sp_fulltext_service @action=data_timeout|The data_timeout option of the sp_fulltext_service procedure was encountered. Occurs once per query.|  
-|sp_fulltext_service @action=resource_usage|The resource_usage option of the sp_fulltext_service procedure was encountered. This option has no function. Occurs once per query.|  
+|sp_fulltext_service \@action=clean_up|The clean_up option of the sp_fulltext_service procedure was encountered. Occurs once per query.|  
+|sp_fulltext_service \@action=connect_timeout|The connect_timeout option of the sp_fulltext_service procedure was encountered. Occurs once per query.|  
+|sp_fulltext_service \@action=data_timeout|The data_timeout option of the sp_fulltext_service procedure was encountered. Occurs once per query.|  
+|sp_fulltext_service \@action=resource_usage|The resource_usage option of the sp_fulltext_service procedure was encountered. This option has no function. Occurs once per query.|  
 |sp_fulltext_table|The sp_fulltext_table procedure was encountered. Use CREATE/ALTER/DROP FULLTEXT INDEX instead. Occurs once per compilation.|  
 |sp_getbindtoken|The sp_getbindtoken procedure was encountered. Use Multiple Active Result Sets (MARS) or distributed transactions instead. Occurs once per compilation.|  
 |sp_grantdbaccess|The sp_grantdbaccess procedure was encountered. Use CREATE USER instead. Occurs once per query.|  

@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.oledbdestadapter.mappings.f1"
 helpviewer_keywords: 
   - "OLE DB Destination Editor"
 ms.assetid: 8cfddd4d-f605-4913-9648-66e8e41417e1
-caps.latest.revision: 29
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # OLE DB Destination Editor (Mappings Page)

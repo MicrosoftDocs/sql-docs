@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dm.miningmodeleditor.associationrules.rules.f1"
 ms.assetid: 705d5492-b58f-45d9-94d7-ed57b7025823
-caps.latest.revision: 22
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Rules Tab (Mining Model Viewer)
   Use the **Rules** pane in an association model to view the rules that the algorithm extracted from the data. Rules describe how items are related to each other, and can be used to create recommendations.  

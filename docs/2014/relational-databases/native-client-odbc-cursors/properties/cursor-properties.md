@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "SQL Server Native Client ODBC driver, cursors"
@@ -16,9 +12,8 @@ helpviewer_keywords:
   - "ODBC applications, cursors"
   - "ODBC cursors, cursor behaviors"
 ms.assetid: e70960e1-2085-46ed-9d55-aeb8c3532c84
-caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Cursor Properties

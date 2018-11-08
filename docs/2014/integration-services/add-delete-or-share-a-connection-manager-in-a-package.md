@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "connection managers [Integration Services], adding"
   - "adding connection managers"
 ms.assetid: 6f2ba4ea-10be-4c40-9e80-7efcf6ee9655
-caps.latest.revision: 56
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Add, Delete, or Share a Connection Manager in a Package

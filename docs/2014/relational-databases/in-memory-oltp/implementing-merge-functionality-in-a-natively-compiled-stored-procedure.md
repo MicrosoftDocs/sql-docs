@@ -4,15 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
+ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: d4bcdc36-3302-4abc-9b35-64ec2b920986
-caps.latest.revision: 6
-author: "stevestein"
-ms.author: "sstein"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Implementing MERGE Functionality

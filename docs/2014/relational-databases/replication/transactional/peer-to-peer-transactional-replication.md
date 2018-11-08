@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "08/29/2016"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "replication"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "bidirectional replication"
@@ -16,9 +14,8 @@ helpviewer_keywords:
   - "transactional replication, peer-to-peer replication"
   - "peer-to-peer transactional replication"
 ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
-caps.latest.revision: 68
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Peer-to-Peer Transactional Replication

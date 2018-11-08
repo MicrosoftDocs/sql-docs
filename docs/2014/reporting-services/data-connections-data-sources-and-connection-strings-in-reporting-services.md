@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/14/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "connections [Reporting Services], data sources"
@@ -19,10 +17,9 @@ helpviewer_keywords:
   - "Reporting Services, data sources"
   - "logins [Reporting Services]"
 ms.assetid: 4d8f0ae1-102b-4b3d-9155-fa584c962c9e
-caps.latest.revision: 112
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: maggiesmsft
+ms.author: douglasl
+manager: craigg
 ---
 # Data Connections, Data Sources, and Connection Strings in Reporting Services
   To include data in a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report, you must first create *data sources* and *datasets*. This topic explains the type of data sources, how to create data sources, and important information related to data source credentials. A data source includes the data source type, connection information, and the type of credentials to use. There are two types of data sources: embedded and shared. An embedded data source is defined in the report and used only by that report. A shared data source is defined independently from a report and can be used by multiple reports. For more information, see [Embedded and Shared Data Connections or Data Sources &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md) and [Embedded and Shared Datasets &#40;Report Builder and SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md).  
@@ -107,7 +104,7 @@ manager: "mblythe"
   
  ![note](media/rs-fyinote.png "note")A good practice is to verify that the data source connections continue to connect successfully after you publish a report. If you need to change the credentials, you can modify them directly on the report server.  
   
- To change the data sources that a report uses, you can modify the report properties in in Native mode Report Manager or from document libraries in SharePoint mode. For more information, see the following:  
+ To change the data sources that a report uses, you can modify the report properties in Native mode Report Manager or from document libraries in SharePoint mode. For more information, see the following:  
   
 -   [Store Credentials in a Reporting Services Data Source](report-data/store-credentials-in-a-reporting-services-data-source.md) [Store Credentials in a Reporting Services Data Source](report-data/store-credentials-in-a-reporting-services-data-source.md)  
   

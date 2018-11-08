@@ -4,17 +4,12 @@ ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.rep.monitor.publicationinfo.downlevelagents.merge.f1"
 ms.assetid: 73ff590a-20da-4f10-b592-c60b7226d22b
-caps.latest.revision: 23
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

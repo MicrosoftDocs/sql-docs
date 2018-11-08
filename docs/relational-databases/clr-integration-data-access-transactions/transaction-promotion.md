@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: reference
-ms.tgt_pltfrm: ""
+ms.technology: clr
 ms.topic: "reference"
 helpviewer_keywords: 
   - "distributed transactions [CLR integration]"
@@ -14,7 +12,6 @@ helpviewer_keywords:
   - "Enlist keyword"
   - "transaction promotion [CLR integration]"
 ms.assetid: 5bc7e26e-28ad-4198-a40d-8b2c648ba304
-caps.latest.revision: 13
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

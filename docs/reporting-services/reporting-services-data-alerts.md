@@ -1,22 +1,16 @@
 ---
 title: "Reporting Services Data Alerts | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/02/2017"
+ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "reporting-services"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: reporting-services
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 8c234077-b670-45c0-803f-51c5a5e0866e
-caps.latest.revision: 33
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
+monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Reporting Services Data Alerts
 
@@ -118,9 +112,9 @@ The following summarizes the key areas of [!INCLUDE[ssRSnoversion](../includes/s
 ##  <a name="InstallAlerting"></a> Install Data Alerts  
  The data alerts feature is available only when [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] is installed in SharePoint mode. When you install [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in SharePoint mode, setup automatically creates the alerting database that stores data alert definitions and alerting metadata, and two SharePoint pages for managing alerts and adds Data Alert Designer to the SharePoint site. There are no special steps to perform or options to set for alerting during installation.  
   
- If you want to learn more about installing [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in SharePoint mode, including the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] shared service that is new in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] and [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] service application that you must create and configure before you can use [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] features, see [Install Reporting Services SharePoint Mode for SharePoint 2010](http://msdn.microsoft.com/en-us/47efa72e-1735-4387-8485-f8994fb08c8c) in MSDN library.  
+ If you want to learn more about installing [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in SharePoint mode, including the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] shared service that is new in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] and [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] service application that you must create and configure before you can use [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] features, see [Install Reporting Services SharePoint Mode for SharePoint 2010](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c) in MSDN library.  
   
- As the diagram earlier in the topic shows, data alerts use SQL Server Agent jobs. To create the jobs, SQL Server Agent must be running. You might have configured SQL Server Agent to start automatically when you installed [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. If not, you can start SQL Server Agent manually. For more information, see [Configure SQL Server Agent](http://msdn.microsoft.com/library/2e361a62-9e92-4fcd-80d7-d6960f127900) and [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
+ As the diagram earlier in the topic shows, data alerts use SQL Server Agent jobs. To create the jobs, SQL Server Agent must be running. You might have configured SQL Server Agent to start automatically when you installed [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. If not, you can start SQL Server Agent manually. For more information, see [Configure SQL Server Agent](../ssms/agent/configure-sql-server-agent.md) and [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
  You can use the **Provision Subscriptions and Alerts** page in SharePoint Central Administration to find out whether SQL Server Agent is running and create and download customized [!INCLUDE[tsql](../includes/tsql-md.md)] scripts that you then run to grant permissions to SQL Server Agent. If can also generate the [!INCLUDE[tsql](../includes/tsql-md.md)] scripts by using PowerShell. For more information, see [Provision Subscriptions and Alerts for SSRS Service Applications](../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
   
@@ -248,7 +242,7 @@ The following summarizes the key areas of [!INCLUDE[ssRSnoversion](../includes/s
   
 -   ReadSentAlerts  
   
- You can use SQL Agent to run the stored procedure on a schedule. For more information, see [SQL Server Agent](http://msdn.microsoft.com/library/8d1dc600-aabb-416f-b3af-fbc9fccfd0ec).  
+ You can use SQL Agent to run the stored procedure on a schedule. For more information, see [SQL Server Agent](../ssms/agent/sql-server-agent.md).  
   
 #### Report Server Execution Log  
  Reports are run to generate the data feeds that data alert definitions are built upon. The report server execution log in the report server database captures information each time the report is run. You can query the ExecutionLog2 view in the database for detailed information. For more information, see [Report Server ExecutionLog and the ExecutionLog3 View](../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md).  
@@ -323,4 +317,4 @@ The following summarizes the key areas of [!INCLUDE[ssRSnoversion](../includes/s
 [Data Alert Manager for Alerting Administrators](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
 [Data Alert Manager for SharePoint Users](../reporting-services/data-alert-manager-for-sharepoint-users.md)  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

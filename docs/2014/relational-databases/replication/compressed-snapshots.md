@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "replication"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "snapshots [SQL Server replication], compressed"
   - "snapshot replication [SQL Server], compressed snapshots"
   - "compressed snapshots [SQL Server replication]"
 ms.assetid: 979ffa7c-3a88-4e70-8cf2-b8d452fd7a7f
-caps.latest.revision: 33
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Compressed Snapshots

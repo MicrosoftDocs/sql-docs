@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-visual-db"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "user-defined functions [SQL Server], queries"
   - "queries [SQL Server], creating"
 ms.assetid: 8e4a1f0a-8a42-4733-be8d-e21d6dbddb33
-caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -142,5 +138,5 @@ FROM
      fn_GetWholeTeam ('VPA30890F')  
 ```  
   
-"VPA30890F" is the emp_id of the manager whose organization you want to retrieve. For more information about adding a user-defined function to a query, see [Add Tables to Queries &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/add-tables-to-queries-visual-database-tools.md). For a complete description of user-defined functions, see [User-Defined Functions](http://msdn.microsoft.com/en-us/d7ddafab-f5a6-44b0-81d5-ba96425aada4).  
+"VPA30890F" is the emp_id of the manager whose organization you want to retrieve. For more information about adding a user-defined function to a query, see [Add Tables to Queries &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/add-tables-to-queries-visual-database-tools.md). For a complete description of user-defined functions, see [User-Defined Functions](http://msdn.microsoft.com/d7ddafab-f5a6-44b0-81d5-ba96425aada4).  
   

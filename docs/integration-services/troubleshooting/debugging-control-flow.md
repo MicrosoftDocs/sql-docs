@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.setbreakpoints.f1"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "color-coded progress reporting [Integration Services]"
   - "Set Breakpoints dialog box"
 ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
-caps.latest.revision: 54
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

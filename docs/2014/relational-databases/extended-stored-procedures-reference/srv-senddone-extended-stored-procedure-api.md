@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "04/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "srv_senddone"
@@ -21,9 +19,8 @@ dev_langs:
 helpviewer_keywords: 
   - "srv_senddone"
 ms.assetid: 1fc4f1d5-56d4-43f6-b5e4-0c0cc295cba3
-caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # srv_senddone (Extended Stored Procedure API)

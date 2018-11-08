@@ -4,20 +4,17 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.cubeeditor.newmeasuredialog.f1"
 helpviewer_keywords: 
   - "New Measure dialog box"
 ms.assetid: 86dc9146-cc6d-4cef-b178-9a6b4cf616e8
-caps.latest.revision: 20
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # New Measure Dialog Box (Analysis Services - Multidimensional Data)
   Use the **New Measure** dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to add a new measure to a measure group in Cube Designer. You can display the **New Measure** dialog box by:  

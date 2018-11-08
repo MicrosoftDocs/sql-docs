@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "extended-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: stored-procedures
 ms.topic: "reference"
 apiname: 
   - "srv_paramnumber"
@@ -21,7 +17,6 @@ dev_langs:
 helpviewer_keywords: 
   - "srv_paramnumber"
 ms.assetid: d7a6dbff-71d9-4297-8a4f-bfd2876fe204
-caps.latest.revision: 30
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

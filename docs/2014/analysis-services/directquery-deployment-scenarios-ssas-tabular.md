@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 2aaf5cb8-294b-4031-94b3-fe605d7fc4c7
-caps.latest.revision: 17
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # DirectQuery Deployment Scenarios (SSAS Tabular)
   This topic provides a walkthrough of the design and deployment process for DirectQuery models. You can configure DirectQuery to use relational data only (DirectQuery only), or you can configure the model to switch between using cached data only or relational data only (hybrid mode). This topic explains the implementation process for both modes, and describes possible differences in query results depending on the mode and the security configuration.  

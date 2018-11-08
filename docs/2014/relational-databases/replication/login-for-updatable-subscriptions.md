@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "04/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "replication"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.rep.newsubwizard.updatablesubscriptionslogin.f1"
 ms.assetid: 301ea227-0455-40ba-9009-d38f8676b325
-caps.latest.revision: 17
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Login for Updatable Subscriptions

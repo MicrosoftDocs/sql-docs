@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "wmi"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: wmi
 ms.topic: "reference"
 apiname: 
   - "ProtocolName Property (ClientNetworkProtocol Class)"
@@ -19,7 +15,6 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "ProtocolName property"
 ms.assetid: f8527121-fbcd-4d30-9b4a-1461149cb5a8
-caps.latest.revision: 35
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg

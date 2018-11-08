@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Upgrade SharePoint Mode [Reporting Services]"
   - "SharePoint integration"
   - "SharePoint Mode"
 ms.assetid: 2c19794a-dd55-4fe5-b901-6dd93e9f6beb
-caps.latest.revision: 8
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Reporting Services SharePoint Mode Authentication

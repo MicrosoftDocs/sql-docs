@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dm.dmwizard.selectminingtechnique.f1"
 ms.assetid: d1ff17b2-fff3-4ed7-a5d6-42d131e59f93
-caps.latest.revision: 28
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Create the Data Mining Structure (Data Mining Wizard)
   Use the **Create the Data Mining Structure** page to create a data mining structure and optionally create an associated mining model.  

@@ -4,20 +4,17 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dm.miningmodeleditor.accuracychart.selectminingstructure.f1"
 helpviewer_keywords: 
   - "Select Mining Structure dialog box"
 ms.assetid: ce5af79f-a1f8-47f3-acb9-769022285a69
-caps.latest.revision: 19
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Select Mining Structure Dialog Box (Mining Accuracy Chart View)
   Use the **Select Mining Structure** dialog box to select a mining structure that contains the mining models for which you want to compare or test the accuracy.  

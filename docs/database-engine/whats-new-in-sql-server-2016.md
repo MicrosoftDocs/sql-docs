@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "07/26/2017"
 ms.prod: sql
 ms.prod_service: high-availability
-ms.component: "database-engine"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "what's new [SQL Server Database Engine]"
   - "Database Engine [SQL Server], what's new"
 ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
-caps.latest.revision: 431
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg
@@ -34,7 +30,7 @@ To review what is new in the other SQL Server components, see [What's New in SQL
 
 - To download [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], go to  **[Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**![download](../analysis-services/media/download.png "download").
 
-- Have an Azure account?  Then go **[Here](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/)** to spin up a Virtual Machine with [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] already installed.
+- Have an Azure account?  Then go **[Here](https://azure.microsoft.com/services/virtual-machines/sql-server/)** to spin up a Virtual Machine with [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] already installed.
 
 > [!NOTE]
 > For the current release notes, see [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md).

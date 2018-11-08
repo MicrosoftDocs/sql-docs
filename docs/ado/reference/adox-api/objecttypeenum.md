@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
@@ -15,7 +13,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "ObjectTypeEnum enumeration [ADOX]"
 ms.assetid: 3fdecfca-aa91-4596-ad98-610f1b7f840b
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg

@@ -3,10 +3,8 @@ title: "Deploying CLR Database Objects | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: reference
+ms.technology: clr
 ms.topic: "reference"
 helpviewer_keywords: 
   - "deployment script [CLR integration]"
@@ -14,7 +12,6 @@ helpviewer_keywords:
   - "deploying assemblies [CLR integration]"
   - "deploying [CLR integration]"
 ms.assetid: 00752573-3367-41a7-af98-7b7a29e8e2f2
-caps.latest.revision: 35
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

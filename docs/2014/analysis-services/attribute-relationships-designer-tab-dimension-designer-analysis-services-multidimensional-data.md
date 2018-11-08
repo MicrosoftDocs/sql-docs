@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.dimensiondesigner.ardesigner.attributerelationships.f1"
 ms.assetid: abc8af00-5389-456d-b0f1-ec3e7403d4f9
-caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Attribute Relationships (Attribute Relationship Designer Tab, Dimension Designer) (Analysis Services - Multidimensional Data)
   Use the **Attribute Relationship** list to locate a specific attribute relationship in the attribute relationship diagram and to manage that relationship. This pane appears immediately under the pane that contains the attribute relationship diagram.  

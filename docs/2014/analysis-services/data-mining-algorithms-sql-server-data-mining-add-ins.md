@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "segmentation"
@@ -23,10 +21,9 @@ helpviewer_keywords:
   - "Naive Bayes"
   - "time series [data mining]"
 ms.assetid: 3a1a62e4-9fb5-4cdb-a6c6-1b8b30d417ef
-caps.latest.revision: 18
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Data Mining Algorithms (SQL Server Data Mining Add-ins)
   The Data Mining Add-ins for Office supports creation of analytical models using the following data mining algorithms. All algorithms are based on well-known machine learning methods and have been implemented by Microsoft Research.  
@@ -40,7 +37,7 @@ manager: "mblythe"
 |Microsoft Decision Trees algorithm|Identify previously unknown relationships between various elements of your data to better inform your decisions, or find the factors that lead to specific outcomes.<br /><br /> [http://msdn.microsoft.com/library/ms174923.aspx](http://msdn.microsoft.com/library/ms174923.aspx)|  
 |Microsoft Linear Regression algorithm|Find a mathematical formula that describes factors that contribute to a numeric outcome.<br /><br /> [http://msdn.microsoft.com/library/ms174824.aspx](http://msdn.microsoft.com/library/ms174824.aspx)|  
 |Microsoft Logistic Regression algorithm|Identify the factors that contribute to binary outcomes, and learn how to use those to affect results.<br /><br /> [http://msdn.microsoft.com/library/ms174828.aspx](http://msdn.microsoft.com/library/ms174828.aspx)|  
-|Microsoft Naïve Bayes algorithm|Explore relationships in your data and find those mostly closely correlated with an outcome.<br /><br /> [http://msdn.microsoft.com/en-us/library/ms174806.aspx](http://msdn.microsoft.com/library/ms174806.aspx)|  
+|Microsoft Naïve Bayes algorithm|Explore relationships in your data and find those mostly closely correlated with an outcome.<br /><br /> [http://msdn.microsoft.com/library/ms174806.aspx](http://msdn.microsoft.com/library/ms174806.aspx)|  
 |Microsoft Neural Networks algorithm|Find hidden relationships among multiple inputs and even multiple outputs. Use for exploration or for prediction.<br /><br /> [http://msdn.microsoft.com/library/ms174941.aspx](http://msdn.microsoft.com/library/ms174941.aspx)|  
 |Microsoft Time Series algorithm|Use historical data to forecast future values.<br /><br /> [http://msdn.microsoft.com/library/ms174923.aspx](http://msdn.microsoft.com/library/ms174923.aspx)|  
   

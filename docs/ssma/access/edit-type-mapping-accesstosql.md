@@ -4,15 +4,9 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 ms.assetid: 7f9d9530-6c04-41d9-bbe7-d91820a30066
-caps.latest.revision: 4
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: craigg
@@ -30,7 +24,7 @@ Table-specific type mappings override database and project type mappings. Databa
   
 ## Options  
 **Source type**  
-Select the source data type to map to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] data type.  
+Select the source data type to map to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data type.  
   
 If the data type is of variable length, the following fields will appear under **Source type**:  
   
@@ -41,7 +35,7 @@ Specify the minimum length for this mapping. For example, for the **text** data 
 Specify the maximum length for this mapping. For example, for the **text** data type, you can enter 20 to specify that this mapping is for a range ending at **text(20)**.  
   
 **Target type**  
-Select the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] data type to which the source data type is mapped. When SSMA creates the table or stored procedure in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], the source data type will change to this data type.  
+Select the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data type to which the source data type is mapped. When SSMA creates the table or stored procedure in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the source data type will change to this data type.  
   
 If the data type is of variable length, the following field will appear under **Target type**:  
   

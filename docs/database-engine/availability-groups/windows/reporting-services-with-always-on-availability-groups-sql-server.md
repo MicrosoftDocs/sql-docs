@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Reporting Services, AlwaysOn Availability Groups"
   - "Availability Groups [SQL Server], interoperability"
 ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
-caps.latest.revision: 22
 author: MashaMSFT
 ms.author: mathoma
 manager: "erikre"
@@ -47,7 +44,7 @@ manager: "erikre"
     -   [Report Server Behavior When a Failover Occurs](#bkmk_failover_behavior)  
   
 ##  <a name="bkmk_requirements"></a> Requirements for using Reporting Services and Always On Availability Groups  
- [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] uses the .Net framework 4.0 and supports [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] connection string properties for use with data sources.  
+ [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] and Power BI Report Server uses the .Net framework 4.0 and supports [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] connection string properties for use with data sources.  
   
  To use [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] with  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 2014, and earlier, you need to download and install a hotfix for .Net 3.5 SP1. The hotfix adds support to SQL Client for AG features and support of the connection string properties **ApplicationIntent** and **MultiSubnetFailover**. If the Hotfix is not installed on each computer that hosts a report server, then users attempting to preview reports will see an error message similar to the following, and the error message will be written to the report server trace log:  
   
@@ -87,7 +84,7 @@ manager: "erikre"
   
 -   **SharePoint Mode:** Use SharePoint configuration pages within the document libraries for reports that are already published to a SharePoint server.  
   
--   **Report Design:** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion-md.md)] or [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] when you are creating new reports. See the ‘Report Design’ section in this topic or more information.  
+-   **Report Design:** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] or [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] when you are creating new reports. See the ‘Report Design’ section in this topic or more information.  
   
  **Additional Resources:**  
   
@@ -108,16 +105,16 @@ manager: "erikre"
  When using a read-only secondary as a [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] data source, it is important to ensure that data update latency meets the needs of the report users.  
   
 ##  <a name="bkmk_reportdesign"></a> Report Design and Availability Groups  
- When designing reports in [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion-md.md)] or a report project in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], a user can configure a report data source connection string to contain new connection properties provided by [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Support for the new connection properties depends on where a user previews the report.  
+ When designing reports in [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] or a report project in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], a user can configure a report data source connection string to contain new connection properties provided by [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Support for the new connection properties depends on where a user previews the report.  
   
--   **Local preview:** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion-md.md)] and [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] use the .Net framework 4.0 and support [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] connection string properties.  
+-   **Local preview:** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] and [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] use the .Net framework 4.0 and support [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] connection string properties.  
   
--   **Remote or server mode preview:** If after publishing reports to the report server or using preview in [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion-md.md)], you see an error similar to the following, it is an indication you are previewing reports against the report server and the .Net Framework 3.5 SP1 Hotfix for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] has not been installed on the report server.  
+-   **Remote or server mode preview:** If after publishing reports to the report server or using preview in [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)], you see an error similar to the following, it is an indication you are previewing reports against the report server and the .Net Framework 3.5 SP1 Hotfix for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] has not been installed on the report server.  
   
 > **Error message:** “Keyword not supported ‘applicationintent’”  
   
 ##  <a name="bkmk_reportserverdatabases"></a> Report Server Databases and Availability Groups  
- Reporting Services offers limited support for using [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] with report server databases. The report server databases can be configured in AG to be part of a replica; however [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] will not automatically use a different replica for the report server databases when a failover occurs. The use of MultiSubnetFailover, with the report server databases, is not supported.  
+ Reporting Services and Power BI Report Server offers limited support for using [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] with report server databases. The report server databases can be configured in AG to be part of a replica; however [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] will not automatically use a different replica for the report server databases when a failover occurs. The use of MultiSubnetFailover, with the report server databases, is not supported.  
   
  Manual actions or custom automation scripts need to be used to complete the failover and recovery. Until these actions are completed, some features of the report server may not work correctly after the [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] failover.  
   
@@ -146,7 +143,7 @@ manager: "erikre"
 > [!NOTE]  
 >  SharePoint mode report servers use a synchronization process between the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] service application databases and the SharePoint content databases. It is important to maintain the report server databases and content databases together. You should consider configuring them in the same availability groups so they failover and recover as a set. Consider the following scenario:  
 >   
->  -   You restore or failover to a copy of the content database that has not received the same recent updates that that the report server database has received.  
+>  -   You restore or failover to a copy of the content database that has not received the same recent updates that the report server database has received.  
 > -   The [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] synchronization process will detect differences between the list of items in the content database and the report server databases.  
 > -   The synchronization process will delete or update items in the content database.  
   

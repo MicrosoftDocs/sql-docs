@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "12/29/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "getting started"
 ms.assetid: 6c3d2b96-6646-42ef-b219-fea2e0cd3459
-caps.latest.revision: 25
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # What&#39;s Included in the Data Mining Add-Ins for Office
   When you install the Data Mining Add-ins for Office 2013, and you select all installation options, the following toolbars and templates will be added:  

@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "synchronous event counter target [SQL Server extended events]"
   - "targets [SQL Server extended events], synchronous event counter target"
 ms.assetid: 342e08d1-dcca-4a71-ae64-cb61b55b85bc
-caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Event Counter Target

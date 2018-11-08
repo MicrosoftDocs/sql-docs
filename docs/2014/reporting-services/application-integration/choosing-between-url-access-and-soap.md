@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "docset-sql-devref"
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "SOAP [Reporting Services], vs. URL access"
@@ -16,9 +14,8 @@ helpviewer_keywords:
   - "URL access [Reporting Services], vs. SOAP"
   - "Web service [Reporting Services], application integration"
 ms.assetid: bccdc243-4366-4ce5-8e63-3dd6c463fa52
-caps.latest.revision: 39
-author: "douglaslM"
-ms.author: "douglasl"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Choosing Between URL Access and SOAP

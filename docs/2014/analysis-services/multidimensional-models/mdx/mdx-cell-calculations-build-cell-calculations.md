@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "calculated cells [MDX]"
@@ -18,10 +16,9 @@ helpviewer_keywords:
   - "calculated values [MDX]"
   - "Multidimensional Expressions [Analysis Services], cell calculations"
 ms.assetid: 068aea63-d419-4791-a960-3d74e76f808e
-caps.latest.revision: 30
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Building Cell Calculations in MDX (MDX)
   Multidimensional Expressions (MDX) provides you with a number of tools for generating calculated values, such as calculated members, custom rollups, and custom members. However, using these features to affect a specific set of cells, or a single cell for that matter, would be difficult.  

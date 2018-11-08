@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "replication"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "transactional replication, propagation methods"
   - "propagating data changes [SQL Server replication]"
 ms.assetid: 0a291582-f034-42da-a1a3-29535b607b74
-caps.latest.revision: 37
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Set the Propagation Method for Data Changes to Transactional Articles

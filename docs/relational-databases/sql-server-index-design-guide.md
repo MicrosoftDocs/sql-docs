@@ -1,15 +1,12 @@
 ---
 title: "SQL Server Index Architecture and Design Guide | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/03/2018"
+ms.date: "07/06/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "relational-databases-misc"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "index design guide" 
@@ -23,11 +20,10 @@ helpviewer_keywords:
   - "sql server index design guide"
   - "sql server index design guidance"
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
-caps.latest.revision: 3
 author: "rothja"
 ms.author: "jroth"
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server Index Architecture and Design Guide
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -102,13 +98,21 @@ For information about Full-text indexes, see [Populate Full-Text Indexes](../rel
 ### Query Considerations  
  When you design an index, consider the following query guidelines:  
   
--   Create nonclustered indexes on the columns that are frequently used in predicates and join conditions in queries. However, you should avoid adding unnecessary columns. Adding too many index columns can adversely affect disk space and index maintenance performance.  
+-   Create nonclustered indexes on the columns that are frequently used in predicates and join conditions in queries. These are your SARGable<sup>1</sup> columns. However, you should avoid adding unnecessary columns. Adding too many index columns can adversely affect disk space and index maintenance performance.  
   
 -   Covering indexes can improve query performance because all the data needed to meet the requirements of the query exists within the index itself. That is, only the index pages, and not the data pages of the table or clustered index, are required to retrieve the requested data; therefore, reducing overall disk I/O. For example, a query of columns **a** and **b** on a table that has a composite index created on columns **a**, **b**, and **c** can retrieve the specified data from the index alone.  
-  
+
+    > [!IMPORTANT]
+    > Covering indexes are the designation for a [nonclustered index](#nonclustered-index-architecture) that resolves one or several similar query results directly with no access to its base table, and without incurring in lookups.
+    > Such indexes have all the necessary non-[SARGable](#sargable) columns in its leaf level. This means that the columns returned by either the SELECT clause and all the WHERE and JOIN arguments are covered by the index.
+    > There is potentially much less I/O to execute the query, if the index is narrow enough when compared to the rows and columns in the table itself, meaning it is a real sub-set of the total columns. 
+    > Consider covering indexes when selecting a small portion of a large table, and where that small portion is defined by a fixed predicate, such as [sparse columns](../relational-databases/tables/use-sparse-columns.md) that contain only a few non-NULL values, for example.
+    
 -   Write queries that insert or modify as many rows as possible in a single statement, instead of using multiple queries to update the same rows. By using only one statement, optimized index maintenance could be exploited.  
   
 -   Evaluate the query type and how columns are used in the query. For example, a column used in an exact-match query type would be a good candidate for a nonclustered or clustered index.
+
+<a name="sargable"></a><sup>1</sup> The term SARGable in relational databases refers to a **S**earch **ARG**ument-**able** predicate that can leverage an index to speed up the execution of the query.
   
 ### Column Considerations  
  When you design an index consider the following column guidelines:  
@@ -142,7 +146,7 @@ For information about Full-text indexes, see [Populate Full-Text Indexes](../rel
 -   Columnstore versus rowstore
 -   Hash versus nonclustered for Memory-Optimized tables
   
- You can also customize the initial storage characteristics of the index to optimize its performance or maintenance by setting an option such as FILLFACTOR. Also, you can determine the index storage location by using filegroups or partition schemes to optimize performance.  
+You can also customize the initial storage characteristics of the index to optimize its performance or maintenance by setting an option such as FILLFACTOR. Also, you can determine the index storage location by using filegroups or partition schemes to optimize performance.  
   
 ###  <a name="Index_placement"></a> Index Placement on Filegroups or Partitions Schemes  
  As you develop your index design strategy, you should consider the placement of the indexes on the filegroups associated with the database. Careful selection of the filegroup or partition scheme can improve query performance.  
@@ -153,9 +157,9 @@ For information about Full-text indexes, see [Populate Full-Text Indexes](../rel
 -   Partition clustered and nonclustered indexes to span multiple filegroups.  
 -   Move a table from one filegroup to another by dropping the clustered index and specifying a new filegroup or partition scheme in the MOVE TO clause of the DROP INDEX statement or by using the CREATE INDEX statement with the DROP_EXISTING clause.  
   
- By creating the nonclustered index on a different filegroup, you can achieve performance gains if the filegroups are using different physical drives with their own controllers. Data and index information can then be read in parallel by the multiple disk heads. For example, if `Table_A` on filegroup `f1` and `Index_A` on filegroup `f2` are both being used by the same query, performance gains can be achieved because both filegroups are being fully used without contention. However, if `Table_A` is scanned by the query but `Index_A` is not referenced, only filegroup `f1` is used. This creates no performance gain.  
+By creating the nonclustered index on a different filegroup, you can achieve performance gains if the filegroups are using different physical drives with their own controllers. Data and index information can then be read in parallel by the multiple disk heads. For example, if `Table_A` on filegroup `f1` and `Index_A` on filegroup `f2` are both being used by the same query, performance gains can be achieved because both filegroups are being fully used without contention. However, if `Table_A` is scanned by the query but `Index_A` is not referenced, only filegroup `f1` is used. This creates no performance gain.  
   
- Because you cannot predict what type of access will occur and when it will occur, it could be a better decision to spread your tables and indexes across all filegroups. This would guarantee that all disks are being accessed because all data and indexes are spread evenly across all disks, regardless of which way the data is accessed. This is also a simpler approach for system administrators.  
+Because you cannot predict what type of access will occur and when it will occur, it could be a better decision to spread your tables and indexes across all filegroups. This would guarantee that all disks are being accessed because all data and indexes are spread evenly across all disks, regardless of which way the data is accessed. This is also a simpler approach for system administrators.  
   
 #### Partitions across multiple Filegroups  
  You can also consider partitioning clustered and nonclustered indexes across multiple filegroups. Partitioned indexes are partitioned horizontally, or by row, based on a partition function. The partition function defines how each row is mapped to a set of partitions based on the values of certain columns, called partitioning columns. A partition scheme specifies the mapping of the partitions to a set of filegroups.  
@@ -166,7 +170,7 @@ For information about Full-text indexes, see [Populate Full-Text Indexes](../rel
   
 -   Make queries run faster and more efficiently. When queries access several partitions of an index, the query optimizer can process individual partitions at the same time and exclude partitions that are not affected by the query.  
   
- For more information, see [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md).  
+For more information, see [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
 ###  <a name="Sort_Order"></a> Index Sort Order Design Guidelines  
  When defining indexes, you should consider whether the data for the index key column should be stored in ascending or descending order. Ascending is the default and maintains compatibility with earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. The syntax of the CREATE INDEX, CREATE TABLE, and ALTER TABLE statements supports the keywords ASC (ascending) and DESC (descending) on individual columns in indexes and constraints.  
@@ -231,7 +235,7 @@ Use these metadata views to see attributes of indexes. More architectural inform
   
 -   Can be used in range queries.  
   
- If the clustered index is not created with the `UNIQUE` property, the [!INCLUDE[ssDE](../includes/ssde-md.md)] automatically adds a 4-byte uniqueifier column to the table. When it is required, the [!INCLUDE[ssDE](../includes/ssde-md.md)] automatically adds a uniqueifier value to a row to make each key unique. This column and its values are used internally and cannot be seen or accessed by users.  
+If the clustered index is not created with the `UNIQUE` property, the [!INCLUDE[ssDE](../includes/ssde-md.md)] automatically adds a 4-byte uniqueifier column to the table. When it is required, the [!INCLUDE[ssDE](../includes/ssde-md.md)] automatically adds a uniqueifier value to a row to make each key unique. This column and its values are used internally and cannot be seen or accessed by users.  
   
 ### Clustered Index Architecture  
  In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], indexes are organized as B-Trees. Each page in an index B-tree is called an index node. The top node of the B-tree is called the root node. The bottom nodes in the index are called the leaf nodes. Any index levels between the root and the leaf nodes are collectively known as intermediate levels. In a clustered index, the leaf nodes contain the data pages of the underlying table. The root and intermediate level nodes contain index pages holding index rows. Each index row contains a key value and a pointer to either an intermediate level page in the B-tree, or a data row in the leaf level of the index. The pages in each level of the index are linked in a doubly-linked list.  
@@ -266,32 +270,32 @@ Use these metadata views to see attributes of indexes. More architectural inform
   
 -   Are unique or contain many distinct values  
   
-     For example, an employee ID uniquely identifies employees. A clustered index or [PRIMARY KEY](../relational-databases/tables/create-primary-keys.md) constraint on the `EmployeeID` column would improve the performance of queries that search for employee information based on the employee ID number. Alternatively, a clustered index could be created on `LastName`, `FirstName`, `MiddleName` because employee records are frequently grouped and queried in this way, and the combination of these columns would still provide a high degree of difference. 
+    For example, an employee ID uniquely identifies employees. A clustered index or [PRIMARY KEY](../relational-databases/tables/create-primary-keys.md) constraint on the `EmployeeID` column would improve the performance of queries that search for employee information based on the employee ID number. Alternatively, a clustered index could be created on `LastName`, `FirstName`, `MiddleName` because employee records are frequently grouped and queried in this way, and the combination of these columns would still provide a high degree of difference. 
 
-     > [!TIP]
-     > If not specified differently, when creating a [PRIMARY KEY](../relational-databases/tables/create-primary-keys.md) constraint, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] creates a [clustered index](#clustered_index) to support that constraint.
-     > Although a *[uniqueidentifier](../t-sql/data-types/uniqueidentifier-transact-sql.md)* can be used to enforce uniqueness as a PRIMARY KEY, it is not an efficient clustering key.
-     > If using a *uniqueidentifier* as PRIMARY KEY, the recommendation is to create it as a nonclustered index, and use another column such as an `IDENTITY` to create the clustered index.   
+    > [!TIP]
+    > If not specified differently, when creating a [PRIMARY KEY](../relational-databases/tables/create-primary-keys.md) constraint, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] creates a [clustered index](#clustered_index) to support that constraint.
+    > Although a *[uniqueidentifier](../t-sql/data-types/uniqueidentifier-transact-sql.md)* can be used to enforce uniqueness as a PRIMARY KEY, it is not an efficient clustering key.
+    > If using a *uniqueidentifier* as PRIMARY KEY, the recommendation is to create it as a nonclustered index, and use another column such as an `IDENTITY` to create the clustered index.   
   
 -   Are accessed sequentially  
   
-     For example, a product ID uniquely identifies products in the `Production.Product` table in the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database. Queries in which a sequential search is specified, such as `WHERE ProductID BETWEEN 980 and 999`, would benefit from a clustered index on `ProductID`. This is because the rows would be stored in sorted order on that key column.  
+    For example, a product ID uniquely identifies products in the `Production.Product` table in the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database. Queries in which a sequential search is specified, such as `WHERE ProductID BETWEEN 980 and 999`, would benefit from a clustered index on `ProductID`. This is because the rows would be stored in sorted order on that key column.  
   
 -   Defined as `IDENTITY`.  
   
 -   Used frequently to sort the data retrieved from a table.  
   
-     It can be a good idea to cluster, that is physically sort, the table on that column to save the cost of a sort operation every time the column is queried.  
+    It can be a good idea to cluster, that is physically sort, the table on that column to save the cost of a sort operation every time the column is queried.  
   
  Clustered indexes are not a good choice for the following attributes:  
   
 -   Columns that undergo frequent changes  
   
-     This causes in the whole row to move, because the [!INCLUDE[ssDE](../includes/ssde-md.md)] must keep the data values of a row in physical order. This is an important consideration in high-volume transaction processing systems in which data is typically volatile.  
+    This causes in the whole row to move, because the [!INCLUDE[ssDE](../includes/ssde-md.md)] must keep the data values of a row in physical order. This is an important consideration in high-volume transaction processing systems in which data is typically volatile.  
   
 -   Wide keys  
   
-     Wide keys are a composite of several columns or several large-size columns. The key values from the clustered index are used by all nonclustered indexes as lookup keys. Any nonclustered indexes defined on the same table will be significantly larger because the nonclustered index entries contain the clustering key and also the key columns defined for that nonclustered index.  
+    Wide keys are a composite of several columns or several large-size columns. The key values from the clustered index are used by all nonclustered indexes as lookup keys. Any nonclustered indexes defined on the same table will be significantly larger because the nonclustered index entries contain the clustering key and also the key columns defined for that nonclustered index.  
   
 ##  <a name="Nonclustered"></a> Nonclustered Index Design Guidelines  
  A nonclustered index contains the index key values and row locators that point to the storage location of the table data. You can create multiple nonclustered indexes on a table or indexed view. Generally, nonclustered indexes should be designed to improve the performance of frequently used queries that are not covered by the clustered index.  
@@ -303,19 +307,19 @@ Use these metadata views to see attributes of indexes. More architectural inform
   
 -   The data rows of the underlying table are not sorted and stored in order based on their nonclustered keys.  
   
--   The leaf layer of a nonclustered index is made up of index pages instead of data pages.  
+-   The leaf level of a nonclustered index is made up of index pages instead of data pages.  
   
- The row locators in nonclustered index rows are either a pointer to a row or are a clustered index key for a row, as described in the following:  
+The row locators in nonclustered index rows are either a pointer to a row or are a clustered index key for a row, as described in the following:  
   
 -   If the table is a heap, which means it does not have a clustered index, the row locator is a pointer to the row. The pointer is built from the file identifier (ID), page number, and number of the row on the page. The whole pointer is known as a Row ID (RID).  
   
 -   If the table has a clustered index, or the index is on an indexed view, the row locator is the clustered index key for the row.  
   
- Nonclustered indexes have one row in [sys.partitions](../relational-databases/system-catalog-views/sys-partitions-transact-sql.md) with **index_id** > 1 for each partition used by the index. By default, a nonclustered index has a single partition. When a nonclustered index has multiple partitions, each partition has a B-tree structure that contains the index rows for that specific partition. For example, if a nonclustered index has four partitions, there are four B-tree structures, with one in each partition.  
+Nonclustered indexes have one row in [sys.partitions](../relational-databases/system-catalog-views/sys-partitions-transact-sql.md) with **index_id** > 1 for each partition used by the index. By default, a nonclustered index has a single partition. When a nonclustered index has multiple partitions, each partition has a B-tree structure that contains the index rows for that specific partition. For example, if a nonclustered index has four partitions, there are four B-tree structures, with one in each partition.  
   
- Depending on the data types in the nonclustered index, each nonclustered index structure will have one or more allocation units in which to store and manage the data for a specific partition. At a minimum, each nonclustered index will have one *IN_ROW_DATA* allocation unit per partition that stores the index B-tree pages. The nonclustered index will also have one *LOB_DATA* allocation unit per partition if it contains large object (LOB) columns. Additionally, it will have one *ROW_OVERFLOW_DATA* allocation unit per partition if it contains variable length columns that exceed the 8,060 byte row size limit.  
+Depending on the data types in the nonclustered index, each nonclustered index structure will have one or more allocation units in which to store and manage the data for a specific partition. At a minimum, each nonclustered index will have one *IN_ROW_DATA* allocation unit per partition that stores the index B-tree pages. The nonclustered index will also have one *LOB_DATA* allocation unit per partition if it contains large object (LOB) columns. Additionally, it will have one *ROW_OVERFLOW_DATA* allocation unit per partition if it contains variable length columns that exceed the 8,060 byte row size limit.  
   
- The following illustration shows the structure of a nonclustered index in a single partition.  
+The following illustration shows the structure of a nonclustered index in a single partition.  
 
 ![bokind1a](../relational-databases/media/bokind1a.gif)  
   
@@ -326,7 +330,7 @@ Use these metadata views to see attributes of indexes. More architectural inform
   
      Decision Support System applications and databases that contain primarily read-only data can benefit from many nonclustered indexes. The query optimizer has more indexes to choose from to determine the fastest access method, and the low update characteristics of the database mean index maintenance will not impede performance.  
   
--   Online Transaction Processing applications and databases that contain heavily updated tables should avoid over-indexing. Additionally, indexes should be narrow, that is, with as few columns as possible.  
+-   Online Transaction Processing (OLTP) applications and databases that contain heavily updated tables should avoid over-indexing. Additionally, indexes should be narrow, that is, with as few columns as possible.  
   
      Large numbers of indexes on a table affect the performance of INSERT, UPDATE, DELETE, and MERGE  statements because all indexes must be adjusted appropriately as data in the table changes.  
   
@@ -339,19 +343,25 @@ Use these metadata views to see attributes of indexes. More architectural inform
   
 -   Queries that do not return large result sets.  
   
-     Create filtered indexes to cover queries that return a well-defined subset of rows from a large table.  
-  
+     Create filtered indexes to cover queries that return a well-defined subset of rows from a large table. 
+     
+     > [!TIP] 
+     > Typically the WHERE clause of the CREATE INDEX statement matches the WHERE clause of a query being covered.  
+
 -   Contain columns frequently involved in search conditions of a query, such as WHERE clause, that return exact matches.  
-  
+
+    > [!TIP]
+    > Consider the cost versus benefit when adding new indexes. It may be preferable to consolidate additional query needs into an existing index. For example, consider adding one or two extra leaf level columns to an existing index, if it allows coverage of several critical queries, instead of having one exactly covering index per each critical query.
+    
 ### Column Considerations  
  Consider columns that have one or more of these attributes:  
   
 -   Cover the query.  
   
-     Performance gains are achieved when the index contains all columns in the query. The query optimizer can locate all the column values within the index; table or clustered index data is not accessed resulting in fewer disk I/O operations. Use index with included columns to add covering columns instead of creating a wide index key.  
+     Performance gains are achieved when the index contains all columns in the query (either . The query optimizer can locate all the column values within the index; table or clustered index data is not accessed resulting in fewer disk I/O operations. Use index with [included columns](#Included_Columns) to add covering columns instead of creating a wide index key.  
   
      If the table has a clustered index, the column or columns defined in the clustered index are automatically appended to the end of each nonclustered index on the table. This can produce a covered query without specifying the clustered index columns in the definition of the nonclustered index. For example, if a table has a clustered index on column `C`, a nonclustered index on columns `B` and `A` will have as its key values columns `B`, `A`, and `C`.  
-  
+      
 -   Lots of distinct values, such as a combination of last name and first name, if a clustered index is used for other columns.  
   
      If there are very few distinct values, such as only 1 and 0, most queries will not use the index because a table scan is generally more efficient. For this type of data, consider creating a filtered index on a distinct value that only occurs in a small number of rows. For example, if most of the values are 0, the query optimizer might use a filtered index for the data rows that contain 1.  
@@ -386,7 +396,7 @@ INCLUDE (FileName);
 ```  
   
 ##### Index with Included Columns Guidelines  
- When you design nonclustered indexes with included columns consider the following guidelines:  
+When you design nonclustered indexes with included columns consider the following guidelines:  
   
 -   Nonkey columns are defined in the INCLUDE clause of the CREATE INDEX statement.  
   
@@ -401,7 +411,7 @@ INCLUDE (FileName);
 -   Column names cannot be specified in both the INCLUDE list and in the key column list.  
   
 -   Column names cannot be repeated in the INCLUDE list.  
-  
+
 ##### Column Size Guidelines  
   
 -   At least one key column must be defined. The maximum number of nonkey columns is 1023 columns. This is the maximum number of table columns minus 1.  

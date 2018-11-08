@@ -4,24 +4,18 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "replication"
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_link_publication_TSQL"
   - "sp_link_publication"
 helpviewer_keywords: 
   - "sp_link_publication"
 ms.assetid: 1945ed24-f9f1-4af6-94ca-16d8e864706e
-caps.latest.revision: 41
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_link_publication (Transact-SQL)

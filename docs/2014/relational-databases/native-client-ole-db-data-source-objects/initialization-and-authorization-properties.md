@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "authorization [OLE DB]"
@@ -17,9 +13,8 @@ helpviewer_keywords:
   - "SQL Server Native Client OLE DB provider, authorization properties"
   - "initialization properties [OLE DB]"
 ms.assetid: 913ab38c-e443-446c-b326-7447e95aa7f9
-caps.latest.revision: 58
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Initialization and Authorization Properties

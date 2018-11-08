@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "upgrading SQL Server"
@@ -15,9 +13,8 @@ helpviewer_keywords:
   - "SQL Server Upgrade Advisor, process description"
   - "upgrade process [Upgrade Advisor]"
 ms.assetid: f77ffbab-a195-4124-acce-9c538f7ca9ce
-caps.latest.revision: 39
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Upgrade Process Overview

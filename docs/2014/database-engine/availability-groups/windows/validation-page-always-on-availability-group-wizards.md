@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/14/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
+ms.technology: high-availability
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.newagwizard.validation.f1"
@@ -16,9 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - ", listeners"
 ms.assetid: c8971556-240c-491a-bc86-9cc72f71a3dd
-caps.latest.revision: 13
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Validation Page (AlwaysOn Availability Group Wizards)

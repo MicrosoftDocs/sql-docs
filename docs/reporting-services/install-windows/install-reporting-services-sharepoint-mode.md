@@ -1,24 +1,18 @@
 ---
 title: "Install Reporting Services 2016 in SharePoint mode | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/20/2017"
+ms.date: 12/20/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
 
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "default configuration [Reporting Services]"
   - "installing Reporting Services, SharePoint integrated mode"
   - "installation options [Reporting Services]"
 ms.assetid: ac6cba68-2665-4a39-8fa3-cb7d7e6723c0
-caps.latest.revision: 35
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
+monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Install Reporting Services 2016 in SharePoint mode
 
@@ -52,7 +46,7 @@ There are two core [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]
   
  [Add an Additional Reporting Services Web Front-end to a Farm](../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md)  
   
- [Configure E-mail for a Reporting Services Service Application &#40;SharePoint 2013 and SharePoint 2016&#41;](http://msdn.microsoft.com/en-us/38fc34a6-aae7-4dde-9ad2-f1eee0c42a9f)  
+ [Configure E-mail for a Reporting Services Service Application &#40;SharePoint 2013 and SharePoint 2016&#41;](https://msdn.microsoft.com/38fc34a6-aae7-4dde-9ad2-f1eee0c42a9f)  
   
  [Provision Subscriptions and Alerts for SSRS Service Applications](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)  
   
@@ -63,4 +57,4 @@ There are two core [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]
  [Data Alerts Architecture and Workflow](../../reporting-services/reporting-services-data-alerts.md#AlertingWF)   
  [Data Alert Manager for Alerting Administrators](../../reporting-services/data-alert-manager-for-alerting-administrators.md)  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

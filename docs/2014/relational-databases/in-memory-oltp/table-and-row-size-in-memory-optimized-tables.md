@@ -4,15 +4,11 @@ ms.custom: ""
 ms.date: "10/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
+ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
-caps.latest.revision: 25
-author: "stevestein"
-ms.author: "sstein"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Table and Row Size in Memory-Optimized Tables

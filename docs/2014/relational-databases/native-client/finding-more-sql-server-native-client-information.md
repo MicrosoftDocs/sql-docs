@@ -4,19 +4,14 @@ ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "SQLNCLI, additional resources"
   - "SQL Server Native Client, additional resources"
 ms.assetid: 1bbe4ea4-dda4-47eb-aca1-ddcc3829a6f4
-caps.latest.revision: 42
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Finding More SQL Server Native Client Information

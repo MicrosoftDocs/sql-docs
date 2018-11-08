@@ -5,9 +5,7 @@ ms.date: "07/17/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "DBCC_TRACESTATUS_TSQL"
@@ -24,7 +22,6 @@ helpviewer_keywords:
   - "session trace flags [SQL Server]"
   - "displaying trace flag status"
 ms.assetid: 9be51199-78b4-4b87-ae6e-557246b7e29a
-caps.latest.revision: 36
 author: uc-msft
 ms.author: umajay
 manager: craigg

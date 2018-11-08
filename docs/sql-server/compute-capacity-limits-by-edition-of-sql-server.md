@@ -1,12 +1,10 @@
 ---
 title: "Compute capacity limits by edition of SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/06/2017"
+ms.date: "11/07/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: install
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "processors [SQL Server], supported"

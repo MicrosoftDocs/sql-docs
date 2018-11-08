@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "replication"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "recovery [SQL Server replication], merge replication"
@@ -15,9 +13,8 @@ helpviewer_keywords:
   - "restoring [SQL Server replication], merge replication"
   - "merge replication [SQL Server replication], backup and restore"
 ms.assetid: b8ae31c6-d76f-4dd7-8f46-17d023ca3eca
-caps.latest.revision: 47
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Strategies for Backing Up and Restoring Merge Replication

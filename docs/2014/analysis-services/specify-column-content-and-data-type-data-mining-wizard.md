@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 0634be64-4c38-4381-9b19-fe9a5889306c
-caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Specify Column Content and Data Type (Data Mining Wizard)
   Use the **Specify Column Content and Data Type** page to specify the usage and data type for each column that you selected on the previous page of the wizard. If you want to ignore the column, click **Back** to return to the page **Specify the Training Data**, and clear all checkboxes.  

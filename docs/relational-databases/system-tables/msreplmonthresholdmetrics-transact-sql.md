@@ -4,15 +4,10 @@ ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-tables"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "replication"
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "msreplmonthresholdmetrics_TSQL"
   - "msreplmonthresholdmetrics"
@@ -21,9 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSreplmonthresholdmetrics system table"
 ms.assetid: 0cc9b40a-36ce-485b-9bc2-d4abd5aa6727
-caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # MSreplmonthresholdmetrics (Transact-SQL)

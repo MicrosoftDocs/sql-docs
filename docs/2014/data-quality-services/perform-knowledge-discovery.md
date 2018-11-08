@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dqs.kb.kbanalyze.f1"
@@ -15,9 +12,8 @@ f1_keywords:
   - "sql12.dqs.kb.kbmap.f1"
   - "sql12.dqs.kb.kbterms.f1"
 ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
-caps.latest.revision: 37
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Perform Knowledge Discovery

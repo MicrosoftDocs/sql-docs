@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "custom attributes [CLR integration]"
@@ -17,9 +15,8 @@ helpviewer_keywords:
   - "database objects [CLR integration], custom attributes"
   - "building database objects [CLR integration], custom attributes"
 ms.assetid: ecf5c097-0972-48e2-a9c0-b695b7dd2820
-caps.latest.revision: 39
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Overview of CLR Integration Custom Attributes

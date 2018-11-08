@@ -6,11 +6,8 @@ ms.date: "05/23/2018"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-caps.latest.revision: 1
 author: "haoqian"
 ms.author: "haoqian"
 manager: craigg
@@ -103,6 +100,9 @@ On the primary SQL Server, run the stored procedure `[catalog].[update_master_ad
 ## 9. Add the Scale Out Workers
 
 Now, you can add Scale Out Workers with the help of [Integration Services Scale Out Manager](integration-services-ssis-scale-out-manager.md). Enter `[SQL Server Availability Group Listener DNS name],[Port]` on the connection page.
+
+# Upgrade Scale Out in high availability environment
+To upgrade Scale Out in high availability environment, follow the [upgrade steps of Always On for SSIS catalog](../catalog/ssis-catalog.md#Upgrade), upgrade Scale Out Master and Scale Out Worker on each machine, and recreate Windows Server failover cluster role in above step 7 with new version of Scale Out Master service.
 
 ## Next steps
 For more info, see the following articles:

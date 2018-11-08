@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "Name Property (SecurityCertificate Class)"
@@ -19,9 +17,8 @@ topic_type:
 helpviewer_keywords: 
   - "Name property"
 ms.assetid: 797f338f-4d2d-4171-acad-6cc997a7a6c8
-caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # Name Property (SecurityCertificate Class)

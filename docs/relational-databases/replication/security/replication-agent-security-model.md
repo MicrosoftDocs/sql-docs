@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "04/26/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Snapshot Agent, security"
@@ -22,7 +18,6 @@ helpviewer_keywords:
   - "Merge Agent, security"
   - "replication [SQL Server], agents and profiles"
 ms.assetid: 6d09fc8d-843a-4a7a-9812-f093d99d8192
-caps.latest.revision: 72
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg
@@ -36,7 +31,7 @@ manager: craigg
   
  Replication agents, like all executables, run under the context of a Windows account. The agents make Windows Integrated Security connections by using this account. The account under which the agent runs depends on how the agent is started:  
   
--   Starting the agent from a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent job, the default: When a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent job is used to start a replication agent, the agent runs under the context of an account that you specify when you configure replication. For more information about [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent and replication, see the section "Agent Security under SQL Server Agent" later in this topic. For information about the permissions that are required for the account under which [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent runs, see [Configure SQL Server Agent](http://msdn.microsoft.com/library/2e361a62-9e92-4fcd-80d7-d6960f127900).  
+-   Starting the agent from a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent job, the default: When a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent job is used to start a replication agent, the agent runs under the context of an account that you specify when you configure replication. For more information about [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent and replication, see the section "Agent Security under SQL Server Agent" later in this topic. For information about the permissions that are required for the account under which [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent runs, see [Configure SQL Server Agent](../../../ssms/agent/configure-sql-server-agent.md).  
   
 -   Starting the agent from an MS-DOS command line, either directly or through a script: The agent runs under the context of the account of the user that is running the agent at the command line.  
   

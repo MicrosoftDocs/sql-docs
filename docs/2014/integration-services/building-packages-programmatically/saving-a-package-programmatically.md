@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "04/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "docset-sql-devref"
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "programmatically saving a package"
   - "saving a package programmatically"
 ms.assetid: 4204f817-d5df-475a-9338-d7f01305d566
-caps.latest.revision: 16
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Saving a Package Programmatically

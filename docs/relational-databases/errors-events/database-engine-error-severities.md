@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "user-defined error messages [SQL Server]"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "errors [SQL Server], severity"
   - "TRY...CATCH [SQL Server]"
 ms.assetid: 3e7f5925-6edd-42e1-bf17-f7deb03993a7
-caps.latest.revision: 21
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

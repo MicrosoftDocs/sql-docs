@@ -5,9 +5,7 @@ ms.date: "04/10/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "QUEUE_TSQL"
@@ -25,9 +23,8 @@ helpviewer_keywords:
   - "activation stored procedures [Service Broker]"
   - "queues [Service Broker], creating"
 ms.assetid: fce80faf-2bdc-475d-8ca1-31438ed41fb0
-caps.latest.revision: 67
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # CREATE QUEUE (Transact-SQL)

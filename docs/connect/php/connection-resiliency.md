@@ -3,7 +3,6 @@ title: "Idle Connection Resiliency"
 ms.date: "07/13/2017"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.suite: "sql"
 ms.custom: ""
 ms.technology: connectivity
 ms.topic: conceptual
@@ -126,4 +125,4 @@ Statement 2 successful.
 ```
 
 ## See Also
-[Connection Resiliency in the Windows ODBC Driver](https://docs.microsoft.com/en-us/sql/connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver)
+[Connection Resiliency in the Windows ODBC Driver](https://docs.microsoft.com/sql/connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver)

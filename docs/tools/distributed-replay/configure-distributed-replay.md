@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "distributed-replay"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: aee11dde-daad-439b-b594-9f4aeac94335
-caps.latest.revision: 43
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Configure Distributed Replay
@@ -163,7 +159,23 @@ manager: craigg
     </OutputOptions>  
 </Options>  
 ```  
-  
+
+### Possible Issue When Running With Synchronization Sequencing Mode
+ You may encounter a symptom in which the replay functionality appears to “stall”, or replays events very slowly. This phenomenon can occur if the trace being replayed relies on data and/or events that do not exist in the restored target database. 
+ 
+ One example is a captured workload that uses WAITFOR, such as in Service Broker’s WAITFOR RECEIVE statement. When using the synchronization sequencing mode, batches are replayed serially. If an INSERT occurs against the source database after the database backup, but before the replay capture trace is started, the WAITFOR RECEIVE issued during replay may have to wait the entire duration of the WAITFOR. Events set to be replayed after the WAITFOR RECEIVE will be stalled. This can result in the Batch Requests/sec performance monitor counter for the replay database target dropping to zero until the WAITFOR completes. 
+ 
+ If you need to use synchronization mode and wish to avoid this behavior, you must do the following:
+ 
+1.  Quiesce the databases that you will be using as the replay targets.
+
+2.  Allow all pending activity to complete.
+
+3.  Backup the databases and allow backups to complete.
+
+4.  Start the distributed replay trace capture and resume the normal workload. 
+ 
+ 
 ## See Also  
  [Administration Tool Command-line Options &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   

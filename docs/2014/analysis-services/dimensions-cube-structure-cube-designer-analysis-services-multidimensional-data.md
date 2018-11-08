@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.cubeeditor.cubebuilder.dimensionspane.f1"
 ms.assetid: 37eb7525-b423-4df5-9e62-9f4680d47b9b
-caps.latest.revision: 20
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Dimensions (Cube Structure Tab, Cube Designer) (Analysis Services - Multidimensional Data)
   Use the **Dimensions** pane to view and edit cube dimensions, including hierarchies and attributes, on the **Cube Structure** tab in Cube Designer.  

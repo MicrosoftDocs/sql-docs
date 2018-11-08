@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
-caps.latest.revision: 9
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
 ---
 # Built-in Globals and Users References (Report Builder and SSRS)
   The Built-in fields collection, which includes both the `Globals` and the `User` collections, represent global values provided by Reporting Services when a report is processed. The `Globals` collection provides values such as the name of the report, the time when report processing began, and current page numbers for the report header or footer. The `User` collection provides the user identifier and language settings. These values can be used in expressions to filter results in a report.  

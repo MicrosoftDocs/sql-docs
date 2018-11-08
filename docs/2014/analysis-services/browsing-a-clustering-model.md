@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "mining models, browsing"
@@ -15,10 +13,9 @@ helpviewer_keywords:
   - "clustering [data mining]"
   - "mining model, clustering"
 ms.assetid: 7f3f0949-d791-403a-88e2-54cb1a803dae
-caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Browsing a Clustering Model
   When you open a clustering model using **Browse**, the model is displayed in an interactive viewer, similar to the clustering viewer in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. The viewer helps you explore the clusters that were created, and understand cluster characteristics. You can also compare and contrast individual segments with other segments or with the population.  

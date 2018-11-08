@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "PowerShell [SQL Server], Invoke-Sqlcmd"
@@ -15,9 +13,8 @@ helpviewer_keywords:
   - "Invoke-Sqlcmd cmdlet"
   - "sqlcmd utility, PowerShell"
 ms.assetid: 0c74d21b-84a5-4fa4-be51-90f0f7230044
-caps.latest.revision: 17
-author: "mgblythe"
-ms.author: "mblythe"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Invoke-Sqlcmd cmdlet

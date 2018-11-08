@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "replication"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "conflict resolution [SQL Server replication], queued updating subscriptions"
   - "queued updating subscriptions [SQL Server replication]"
   - "viewing conflict information"
 ms.assetid: 9977dd75-b0de-4376-9c13-86d80567d8aa
-caps.latest.revision: 36
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # View Data Conflicts for Transactional Publications (SQL Server Management Studio)

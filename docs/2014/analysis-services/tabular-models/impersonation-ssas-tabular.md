@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: fcc79e96-182a-45e9-8ae2-aeb440e9bedd
-caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Impersonation (SSAS Tabular)
   This topic provides tabular model authors an understanding of how logon credentials are used by Analysis Services when connecting to a data source to import and process (refresh) data.  
@@ -68,7 +65,7 @@ manager: "mblythe"
 |**Specific Windows user name and password** <sup>2</sup>|ImpersonateWindowsUserAccount|This option specifies the model use a Windows user account to import or process data from the data source. The domain and name of the user account uses the following format:**\<Domain name>\\<User account name\>**. When creating a new model using the Table Import Wizard, this is the default option.|  
 |**Service Account**|ImpersonateServiceAccount|This option specifies the model use the security credentials associated with the Analysis Services service instance that manages the model.|  
   
- <sup>1</sup>ImpersonationMode specifies the value for the [DataSourceImpersonationInfo Element &#40;ASSL&#41;](../scripting/properties/impersonationinfo-element-assl.md) property on the data source.  
+ <sup>1</sup>ImpersonationMode specifies the value for the [DataSourceImpersonationInfo Element &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/impersonationinfo-element-assl) property on the data source.  
   
  <sup>2</sup>When using this option, if the workspace database is removed from memory, either due to a reboot or the **Workspace Retention** property is set to **Unload from Memory** or **Delete from Workspace**, and the model project is closed, in the subsequent session, if you attempt to process table data, you will be prompted to enter the credentials for each data source. Similarly, if a deployed model database is removed from memory, you will be prompted for credentials for each data source.  
   

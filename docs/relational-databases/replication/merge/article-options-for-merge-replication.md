@@ -4,18 +4,13 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "merge replication [SQL Server replication], article options"
   - "articles [SQL Server replication], merge replication options"
 ms.assetid: 670abd41-d204-4cd7-a371-7664e603a0ce
-caps.latest.revision: 37
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

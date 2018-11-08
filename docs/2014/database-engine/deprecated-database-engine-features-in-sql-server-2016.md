@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "deprecated features [SQL Server]"
   - "Database Engine [SQL Server], backward compatibility"
   - "deprecation [SQL Server], feature list"
 ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
-caps.latest.revision: 208
-author: "craigg-msft"
-ms.author: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Deprecated Database Engine Features in SQL Server 2014
@@ -34,7 +31,7 @@ manager: craigg
 |Database objects|Ability to return result sets from triggers|None|Returning results from trigger|12|  
 |Encryption|Encryption using RC4 or RC4_128 is deprecated and is scheduled to be removed in the next version. Decrypting RC4 and RC4_128 is not deprecated.|Use another encryption algorithm such as AES.|Deprecated encryption algorithm|253|  
 |Remote servers|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|Replace remote servers by using linked servers. sp_addserver can only be used with the local option.|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|70<br /><br /> 69<br /><br /> 71<br /><br /> 72<br /><br /> 73|  
-|Remote servers|@@remserver|Replace remote servers by using linked servers.|None|None|  
+|Remote servers|\@\@remserver|Replace remote servers by using linked servers.|None|None|  
 |Remote servers|SET REMOTE_PROC_TRANSACTIONS|Replace remote servers by using linked servers.|SET REMOTE_PROC_TRANSACTIONS|110|  
 |Set options|`SET ROWCOUNT` for `INSERT`, `UPDATE`, and `DELETE` statements|TOP keyword|SET ROWCOUNT|109|  
 |Table hints|HOLDLOCK table hint without parenthesis.|Use HOLDLOCK with parenthesis.|HOLDLOCK table hint without parenthesis|167|  
@@ -137,7 +134,7 @@ manager: craigg
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|ROWGUIDCOL as a column name in DML statements.|Use $rowguid.|ROWGUIDCOL|182|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|IDENTITYCOL as a column name in DML statements.|Use $identity.|IDENTITYCOL|183|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Use of #, ## as temporary table and temporary stored procedure names.|Use at least one additional character.|'#' and '##' as the name of temporary tables and stored procedures|185|  
-|[!INCLUDE[tsql](../includes/tsql-md.md)]|Use of @, @@, or @@ as [!INCLUDE[tsql](../includes/tsql-md.md)] identifiers.|Do not use @ or @@ or names that begin with @@ as identifiers.|'@' and names that start with '@@' as [!INCLUDE[tsql](../includes/tsql-md.md)] identifiers|186.|  
+|[!INCLUDE[tsql](../includes/tsql-md.md)]|Use of \@, \@\@, or \@\@ as [!INCLUDE[tsql](../includes/tsql-md.md)] identifiers.|Do not use \@ or \@\@ or names that begin with \@\@ as identifiers.|'\@' and names that start with '\@\@' as [!INCLUDE[tsql](../includes/tsql-md.md)] identifiers|186.|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Use of DEFAULT keyword as default value.|Do not use the word DEFAULT as a default value.|DEFAULT keyword as a default value|187|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Use of a space as a separator between table hints.|Use a comma to separate table hints.|Multiple table hints without comma|168|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|The select list of an aggregate indexed view must contain COUNT_BIG (*) in 90 compatibility mode|Use COUNT_BIG (*).|Index view select list without COUNT_BIG(*)|2|  

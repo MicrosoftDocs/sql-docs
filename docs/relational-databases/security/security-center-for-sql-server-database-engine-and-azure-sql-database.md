@@ -5,9 +5,7 @@ ms.date: "09/27/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: security
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "Security [SQL Server]"
@@ -17,11 +15,10 @@ helpviewer_keywords:
   - "database security [SQL Server]"
   - "databases [SQL Server], security"
 ms.assetid: dfb39d16-722a-4734-94bb-98e61e014ee7
-caps.latest.revision: 55
-author: CarlRabeler
-ms.author: carlraba
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Security Center for SQL Server Database Engine and Azure SQL Database
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -76,9 +73,9 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
   
  Additional links for application programmers:  
   
--   [Application Security Scenarios in SQL Server](https://msdn.microsoft.com/library/bb669057.aspx)  
+-   [Application Security Scenarios in SQL Server](/dotnet/framework/data/adonet/sql/application-security-scenarios-in-sql-server)  
   
--   [Writing Secure Dynamic SQL in SQL Server](https://msdn.microsoft.com/library/bb669091.aspx)  
+-   [Writing Secure Dynamic SQL in SQL Server](/dotnet/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server)  
   
 -   [How To: Protect From SQL Injection in ASP.NET](https://msdn.microsoft.com/library/ff648339.aspx)  
   
@@ -94,3 +91,4 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
  [Database Engine Features and Tasks](http://msdn.microsoft.com/library/d9efe145-3306-4d61-bd77-e2af43e19c34)  
  [Protecting Your SQL Server Intellectual Property](../../relational-databases/security/protecting-your-sql-server-intellectual-property.md)   
   
+[!INCLUDE[get-help-security](../../includes/get-help-security.md)]

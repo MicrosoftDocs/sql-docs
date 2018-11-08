@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "11/15/2016"
 ms.prod: sql
 ms.prod_service: high-availability
-ms.component: "database-engine"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Database Engine [SQL Server], what's new"
   - "breaking changes [SQL Server]"
 ms.assetid: 47edefbd-a09b-4087-937a-453cd5c6e061
-caps.latest.revision: 144
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -37,11 +33,11 @@ manager: craigg
   
 ## Previous Versions  
   
--   [Breaking Changes to Database Engine Features in SQL Server 2014](https://msdn.microsoft.com/library/ms143179\(v=sql.120\))  
+-   [Breaking Changes to Database Engine Features in SQL Server 2014](breaking-changes-to-database-engine-features-in-sql-server-2016.md))  
   
--   [Breaking Changes to Database Engine Features in SQL Server 2012](https://msdn.microsoft.com/library/ms143179\(v=sql.110\))  
+-   [Breaking Changes to Database Engine Features in SQL Server 2012](breaking-changes-to-database-engine-features-in-sql-server-2016.md))  
   
--   [Breaking Changes to Database Engine Features in SQL Server 2008](https://msdn.microsoft.com/library/ms143179\(v=sql.100\))  
+-   [Breaking Changes to Database Engine Features in SQL Server 2008](breaking-changes-to-database-engine-features-in-sql-server-2016.md))  
   
 ## See Also  
  [Deprecated Database Engine Features in SQL Server 2016](../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   

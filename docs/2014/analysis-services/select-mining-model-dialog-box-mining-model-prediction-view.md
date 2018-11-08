@@ -4,20 +4,17 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dm.miningmodeleditor.prediction.selectminingmodel.f1"
 helpviewer_keywords: 
   - "Select Mining Model dialog box"
 ms.assetid: a9d5c5b0-1beb-49bf-8df5-c659c8e7b390
-caps.latest.revision: 17
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Select Mining Model Dialog Box (Mining Model Prediction View)
   Use the **Select Mining Model** dialog box to select a mining model on which to base your predictions.  

@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: ef732855-b7af-4f40-a619-5573c1c354bb
-caps.latest.revision: 20
-author: "HeidiSteen"
-ms.author: "heidist"
+author: heidisteen
+ms.author: heidist
 manager: craigg
 ---
 # Analysis Services Configuration - Data Directories

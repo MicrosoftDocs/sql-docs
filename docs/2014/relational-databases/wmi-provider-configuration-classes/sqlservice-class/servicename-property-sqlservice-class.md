@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "ServiceName Property (SqlService Class)"
@@ -19,9 +17,8 @@ topic_type:
 helpviewer_keywords: 
   - "ServiceName property"
 ms.assetid: 8ac7387b-c3ae-4e45-b2cc-ebab3f83bfb2
-caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # ServiceName Property (SqlService Class)

@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 topic_type: 
   - "apiref"
 helpviewer_keywords: 
   - "event classes [SQL Server], QN:Subscription"
 ms.assetid: 4916167e-8541-43b4-900e-ec8e6adcbc34
-caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # QN:Subscription Event Class

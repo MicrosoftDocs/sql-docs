@@ -4,20 +4,17 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "docset-sql-devref"
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "delivery extensions [Reporting Services], debugging"
   - "debugging delivery extensions [Reporting Services]"
   - "troubleshooting [Reporting Services], delivery extensions"
 ms.assetid: a7d959da-5005-4a50-aca7-2cef36aa9947
-caps.latest.revision: 34
-author: "douglaslM"
-ms.author: "douglasl"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Debugging Delivery Extension Code

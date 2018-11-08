@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: a6aa2c56-227c-43c5-a28e-c7104131ac5e
-caps.latest.revision: 7
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: craigg
 ---
 # Lesson 4: Define a Data Connection and Data Table for Child Report
   After you design the parent report, you next step is to create a data connection and a data table for the child report. In this tutorial the data connection is to the AdventureWorks2008 database. You also have the option of connecting to the AdventureWorks2012 database.  

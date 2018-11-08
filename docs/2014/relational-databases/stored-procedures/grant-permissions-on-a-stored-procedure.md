@@ -3,18 +3,14 @@ title: "Grant Permissions on a Stored Procedure | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
+ms.technology: stored-procedures
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-stored-procs"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "stored procedures [SQL Server], permissions"
 ms.assetid: a7d15816-a788-4099-ad91-dc4b26618299
-caps.latest.revision: 22
-author: "craigg-msft"
-ms.author: "craigg"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Grant Permissions on a Stored Procedure

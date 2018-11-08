@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "SQL12.DTS.DESIGNER.AFPADLSSRC.F1"
   - "SQL11.DTS.DESIGNER.AFPADLSSRC.F1"
 ms.assetid: 7d9e8457-62aa-4aea-98ee-7d1121dfae4f
-caps.latest.revision: 6
-author: "yualan"
-ms.author: "yual"
+author: yualan
+ms.author: douglasl
 manager: craigg
 ---
 # Azure Data Lake Store Source

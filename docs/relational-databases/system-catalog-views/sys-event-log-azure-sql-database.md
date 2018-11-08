@@ -1,15 +1,10 @@
-﻿---
+---
 title: "sys.event_log (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: ""
+ms.prod:
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.service: "sql-database"
-ms.component: "system-catalog-views"
-ms.suite: "sql"
-ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "event_log"
@@ -22,9 +17,8 @@ helpviewer_keywords:
   - "event_log"
   - "sys.event_log"
 ms.assetid: ad5496b5-e5c7-4a18-b5a0-3f985d7c4758
-caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
@@ -131,7 +125,7 @@ start_time                    end_time
   
 ```  
 SELECT * FROM sys.event_log   
-WHERE start_time >= '2011-09-25:12:00:00'   
+WHERE start_time >= '2011-09-25 12:00:00'   
     AND end_time <= '2011-09-28 12:00:00';  
 ```  
   

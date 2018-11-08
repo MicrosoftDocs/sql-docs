@@ -60,7 +60,7 @@ manager: kfile
   
 |Object|Invalid characters|  
 |------------|------------------------|  
-|**Server**|Follow Windows server naming conventions when naming a server object. See [Naming Conventions (Windows)](http://msdn.microsoft.com/library/windows/desktop/ms682856\(v=vs.85\).aspx) for details.|  
+|**Server**|Follow Windows server naming conventions when naming a server object. See [Naming Conventions (Windows)](/windows/desktop/DNS/naming-conventions) for details.|  
 |**DataSource**|: / \ * &#124; ? " () [] {} <>|  
 |**Level** or **Attribute**|. , ; ' ` : / \ * &#124; ? " & % $ ! + = [] {} < >|  
 |**Dimension** or **Hierarchy**|. , ; ' ` : / \ * &#124; ? " & % $ ! + = () [] {} \<,>|  
@@ -82,6 +82,6 @@ manager: kfile
 ## See Also  
  [MDX Reserved Words](../../../mdx/mdx-reserved-words.md)   
  [Translation support in Analysis Services](../../../analysis-services/translation-support-in-analysis-services.md)   
- [XML for Analysis Compliance &#40;XMLA&#41;](../../../analysis-services/xmla/xml-for-analysis-compliance-xmla.md)  
+ [XML for Analysis Compliance &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-compliance-xmla)  
   
   

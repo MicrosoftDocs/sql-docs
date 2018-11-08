@@ -5,9 +5,7 @@ ms.date: "07/26/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "SET_FORCEPLAN_TSQL"
@@ -23,9 +21,8 @@ helpviewer_keywords:
   - "query optimizer [SQL Server], optimizing process"
   - "overriding query optimizer process"
 ms.assetid: b6c0b08f-2060-4696-9e12-50cb7e674321
-caps.latest.revision: 40
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # SET FORCEPLAN (Transact-SQL)

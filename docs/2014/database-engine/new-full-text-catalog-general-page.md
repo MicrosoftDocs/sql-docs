@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
+ms.technology: search
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.fulltextsearch.ftcatalog.general.f1"
 ms.assetid: 5ed6f7cd-d9af-4439-9f33-fc935b883d91
-caps.latest.revision: 27
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # New Full-Text Catalog (General Page)

@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 34f03407-2ec4-4554-b16b-bc9a6c161815
-caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # PowerPivot Data Refresh with SharePoint 2013
   The design for refresh of [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data models in SharePoint 2013 utilizes Excel Services as the primary component to load and refresh data models on an instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] running in SharePoint mode. The [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] server runs external to the SharePoint farm.  

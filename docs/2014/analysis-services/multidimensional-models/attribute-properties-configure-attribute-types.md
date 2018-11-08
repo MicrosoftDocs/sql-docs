@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "time dimensions [Analysis Services]"
@@ -17,10 +15,9 @@ helpviewer_keywords:
   - "currency dimensions [Analysis Services]"
   - "Type property"
 ms.assetid: c2c6a3da-555e-4362-a83f-88da28427520
-caps.latest.revision: 25
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Configure Attribute Types
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], attribute types help classify an attribute in terms of business functionality. There are many attribute types, most of which are used by client applications to display or support an attribute. However, some attribute types also have specific meaning to [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. For example, some attribute types identify attributes that represent time periods in various calendars for time dimensions.  

@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.flatfilesourceadapter.errorhandling.f1"
 helpviewer_keywords: 
   - "Flat File Source Editor"
 ms.assetid: c50500e7-0c74-42a0-865f-301f03feffab
-caps.latest.revision: 25
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Flat File Source Editor (Error Output Page)

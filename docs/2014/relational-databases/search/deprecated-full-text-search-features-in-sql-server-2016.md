@@ -4,19 +4,15 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
+ms.technology: search
 ms.topic: conceptual
 helpviewer_keywords: 
   - "deprecated features [full-text search]"
   - "full-text search [SQL Server], deprecated features"
   - "full-text queries [SQL Server], proximity"
 ms.assetid: ab0d799c-ba79-4459-837b-c4862730dafd
-caps.latest.revision: 31
-author: "craigg-msft"
-ms.author: "craigg"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Deprecated Full-Text Search Features in SQL Server 2014

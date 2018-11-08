@@ -13,13 +13,86 @@ ms.reviewer: "martinle"
 # What's new in Analytics Platform System, a scale-out MPP data warehouse
 See what’s new in the latest Appliance Updates for Microsoft® Analytics Platform System (APS). APS is a scale-out on-premises appliance that hosts MPP SQL Server Parallel Data Warehouse. 
 
-::: moniker range="= aps-pdw-2016-au7 || = sqlallproducts-allversions"
+::: moniker range=">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
+<a name="h2-aps-cu7.2"></a>
+## APS CU7.2
+Release date - October 2018
 
-## APS 2016-AU7
-APS 2016-AU6 is a prerequisite to upgrade to AU7. The following are new in APS AU7:
+### Support for TLS 1.2
+APS CU7.2 supports TLS 1.2. Client machine to APS and APS intra-node communication can now be set to communicate only over TLS1.2. Tools like SSDT, SSIS, and Dwloader installed on client machines that are set to communicate only over TLS 1.2 can now connect to APS using TLS 1.2. By default, APS will support all TLS (1.0, 1.1 and 1.2) versions for backward compatibility. If you wish to set your APS appliance to stictly use TLS 1.2, you can do so by changing registry settings. 
+
+See [configuring TLS1.2 on APS](configure-tls12-aps.md) for more information.
+
+### Hadoop encryption zone support for PolyBase
+PolyBase now can communicate to Hadoop encryption zones. See APS configuration changes that are needed in [configure Hadoop security](polybase-configure-hadoop-security.md#encryptionzone).
+
+### Insert-Select maxdop options
+We have added a [feature switch](appliance-feature-switch.md) that allows you to pick maxdop settings greater than 1 for insert-select operations. You can now set the maxdop setting to 0, 1, 2, or 4. The default is 1.
+
+> [!IMPORTANT]  
+> Increasing maxdop may sometimes result in slower operations or deadlock errors. If that occurs, change the setting back to maxdop 1 and retry the operation.
+
+### ColumnStore index health DMV
+You can view columnstore index health information using **dm_pdw_nodes_db_column_store_row_group_physical_stats** dmv. Use the following view to determine fragmentation and decide when to rebuild or reorganize a columnstore index.
+
+```sql
+create view dbo.vCS_rg_physical_stats
+as 
+with cte
+as
+(
+select   tb.[name]                    AS [logical_table_name]
+,        rg.[row_group_id]            AS [row_group_id]
+,        rg.[state]                   AS [state]
+,        rg.[state_desc]              AS [state_desc]
+,        rg.[total_rows]              AS [total_rows]
+,        rg.[trim_reason_desc]        AS trim_reason_desc
+,        mp.[physical_name]           AS physical_name
+FROM    sys.[schemas] sm
+JOIN    sys.[tables] tb               ON  sm.[schema_id]          = tb.[schema_id]                             
+JOIN    sys.[pdw_table_mappings] mp   ON  tb.[object_id]          = mp.[object_id]
+JOIN    sys.[pdw_nodes_tables] nt     ON  nt.[name]               = mp.[physical_name]
+JOIN    sys.[dm_pdw_nodes_db_column_store_row_group_physical_stats] rg      ON  rg.[object_id]     = nt.[object_id]
+                                                                            AND rg.[pdw_node_id]   = nt.[pdw_node_id]
+                                        AND rg.[pdw_node_id]    = nt.[pdw_node_id]                                          
+)
+select *
+from cte;
+```
+
+### PolyBase date range increase for ORC and Parquet files
+Reading, importing and exporting date data types using PolyBase now supports dates before 1970-01-01 and after 2038-01-20 for ORC and Parquet file types.
+
+### SSIS destination adapter for SQL Server 2017 as target
+New APS SSIS destination adapter that supports SQL Server 2017 as deployment target can be downloaded from [download site](https://www.microsoft.com/en-us/download/details.aspx?id=57472).
+
+<a name="h2-aps-cu7.1"></a>
+## APS CU7.1
+Release date - July 2018
+
+### DBCC commands do not consume concurrency slots (behavior change)
+APS supports a subset of the T-SQL [DBCC commands](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-transact-sql) such as [DBCC DROPCLEANBUFFERS](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql). Previously, these commands would consume a [concurrency slot](https://docs.microsoft.com/sql/analytics-platform-system/workload-management?view=aps-pdw-2016-au7#concurrency-slots) reducing the number of user loads/queries that could be executed. The `DBCC` commands are now run in a local queue that do not consume a user concurrency slot improving overall query execution performance.
+
+### Replaces some metadata calls with catalog objects
+Using catalog objects for metadata calls instead of using SMO has shown performance improvement in APS. Starting from CU7.1, some of these metadata calls now use catalog objects by default. This behavior can be turned off by [feature switch](appliance-feature-switch.md) if customers using metadata queries run into any issues.
+
+### Bug fixes
+We have upgraded to SQL Server 2016 SP2 CU2 with APS CU7.1. The upgrade fixes some issues described below.
+
+| Title | Description |
+|:---|:---|
+| **Potential tuple mover deadlock** |The upgrade fixes a long standing possibility of deadlock in a distributed transaction and tuple mover background thread. After installing CU7.1, customers who used TF634 to stop tuple mover as SQL Server startup parameter or global trace flag can safely remove it. | 
+| **Certain lag/lead query fails** |Certain queries on CCI tables with nested lag/lead functions that would error is now fixed with this upgrade. | 
+
+
+<a name="h2-aps-au7"></a>
+## APS AU7
+Release date - May 2018
+
+APS 2016 is a prerequisite to upgrade to AU7. The following are new features in APS AU7:
 
 ### Auto-create and auto-update statistics
-APS AU7 creates and updates statistics automatically, by default. To update statistics settings, administrators can use a new feature switch menu item in the [Configuration Manager](appliance-configuration.md#CMTasks). The [feature switch](appliance-feature-switch.md) controls the auto-create, auto-update, and asynchronous update behavior of statistics. You can also update statistics settings with the [ALTER DATABASE (Parallel Data Warehouse)](/sql/t-sql/statements/alter-database-parallel-data-warehouse) statement.
+APS AU7 creates and updates statistics automatically, by default. To update statistics settings, administrators can use a new feature switch menu item in the [Configuration Manager](appliance-configuration.md#CMTasks). The [feature switch](appliance-feature-switch.md) controls the auto-create, auto-update, and asynchronous update behavior of statistics. You can also update statistics settings with the [ALTER DATABASE (Parallel Data Warehouse)](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw) statement.
 
 ### T-SQL
 Select @var is now supported. For more information, see [select local variable] (/sql/t-sql/language-elements/select-local-variable-transact-sql) 
@@ -32,18 +105,12 @@ APS AU7 introduces Feature Switch in [Configuration Manager](launch-the-configur
 ### Known Issues
 With APS AU7 software, an Intel BIOS update is provided which fixes a problem described as *speculative execution side-channel attacks*. The attacks aim to exploit what are called *Spectre and Meltdown vulnerabilities*. Although packaged together with APS, the BIOS update is installed manually, and not as part of the APS AU7 software install.
 
-Microsoft advises all customers to install the BIOS updated. Microsoft has measured the effect of the following configurations on various SQL workloads in various environments. The measurements found significant degradation on some workloads:
-
-- Kernel Virtual Address Shadowing (KVAS)
-- Kernel Page Table Indirection (KPTI)
-- Indirect Branch Prediction mitigation (IBP)
-
-Based on the results, the recommendation is that you test the performance effect of enabling BIOS update before you deploy them in a production environment. If the performance effect of enabling these features is too high for your application, consider whether a better mitigation is to isolate your APS Appliance from any untrusted code that is running. See SQL Server guidance [here](https://support.microsoft.com/en-us/help/4073225/guidance-protect-sql-server-against-spectre-meltdown).
+Microsoft advises all customers to install the BIOS updated. Microsoft has measured the effect of Kernel Virtual Address Shadowing (KVAS), Kernel Page Table Indirection (KPTI) and Indirect Branch Prediction mitigation (IBP) on various SQL workloads in various environments. The measurements found significant degradation on some workloads. Based on the results, the recommendation is that you test the performance effect of enabling BIOS update before you deploy them in a production environment. See SQL Server guidance [here](https://support.microsoft.com/en-us/help/4073225/guidance-protect-sql-server-against-spectre-meltdown).
 
 ::: moniker-end
-::: moniker range="= aps-pdw-2016 || = sqlallproducts-allversions"
-
-## APS 2016-AU6
+::: moniker range=">= aps-pdw-2016 || = sqlallproducts-allversions"
+<a name="h2-aps-au6"></a>
+## APS 2016
 This section described the new features for APS 2016-AU6.
 
 ### SQL Server 2016
@@ -64,7 +131,7 @@ APS AU6 supports these T-SQL compatibility improvements.  These additional langu
 
 **Data types**
 
-- [VARCHAR(MAX)][], [NVARCHAR(MAX)][] and [VARBINARY(MAX)][]. These LOB data types have a maximum size of 2 GB. To load these objects use [bcp Utility][]. Polybase and dwloader do not currently support these data types. 
+- [VARCHAR(MAX)][], [NVARCHAR(MAX)][] and [VARBINARY(MAX)][]. These LOB data types have a maximum size of 2 GB. To load these objects use [bcp Utility][]. PolyBase and dwloader do not currently support these data types. 
 - [SYSNAME][]
 - [UNIQUEIDENTIFIER][]
 - [NUMERIC][] and DECIMAL data types.

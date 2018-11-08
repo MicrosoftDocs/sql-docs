@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
+ms.technology: search
 ms.topic: conceptual
 helpviewer_keywords: 
   - "languages [full-text search]"
@@ -19,9 +16,8 @@ helpviewer_keywords:
   - "languages [SQL Server], full-text indexes"
   - "word breakers [full-text search]"
 ms.assetid: 670a5181-ab80-436a-be96-d9498fbe2c09
-caps.latest.revision: 48
-author: "craigg-msft"
-ms.author: "craigg"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Choose a Language When Creating a Full-Text Index

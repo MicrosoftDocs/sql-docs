@@ -4,24 +4,18 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "replication"
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_startpublication_snapshot"
   - "sp_startpublication_snapshot_TSQL"
 helpviewer_keywords: 
   - "sp_startpublication_snapshot"
 ms.assetid: 2cf568ee-0679-4d19-a394-27210bff61e5
-caps.latest.revision: 13
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_startpublication_snapshot (Transact-SQL)

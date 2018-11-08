@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "dbe-udf"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "built-in functions [SQL Server]"
@@ -16,9 +13,8 @@ helpviewer_keywords:
   - "deterministic functions"
   - "user-defined functions [SQL Server], deterministic"
 ms.assetid: 2f3ce5f5-c81c-4470-8141-8144d4f218dd
-caps.latest.revision: 41
-author: "craigg-msft"
-ms.author: "craigg"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Deterministic and Nondeterministic Functions

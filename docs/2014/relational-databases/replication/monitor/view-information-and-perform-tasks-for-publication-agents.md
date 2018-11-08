@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "replication"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "agents [SQL Server replication], viewing information"
   - "viewing replication agent information"
   - "agents [SQL Server replication], tasks in Replication Monitor"
 ms.assetid: 2a420da2-66f4-4650-9bdd-1992221ed3fd
-caps.latest.revision: 38
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # View Information and Perform Tasks for the Agents Associated With a Publication (Replication Monitor)

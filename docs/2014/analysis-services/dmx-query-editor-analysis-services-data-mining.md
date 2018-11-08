@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.sqlserverstudio.startpage.dmx.f1"
 ms.assetid: 7ac877a1-0f29-46b9-9a51-73b02172bef1
-caps.latest.revision: 21
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # DMX Query Editor (Analysis Services - Data Mining)
   Use the DMX Query Editor to design and execute statements written in the Data Mining Extensions (DMX) language.  

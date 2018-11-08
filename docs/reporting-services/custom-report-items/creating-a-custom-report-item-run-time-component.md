@@ -1,31 +1,22 @@
 ---
 title: "Creating a Custom Report Item Run-Time Component | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.component: "custom-report-items"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: custom-report-items
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
+ms.topic: reference
 helpviewer_keywords: 
   - "custom report items, creating"
 ms.assetid: b3e15a4a-98f8-4dbb-b847-bbcb20327051
-caps.latest.revision: 33
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ---
 # Creating a Custom Report Item Run-Time Component
   The custom report item run-time component is implemented as a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] component using any CLS-compliant language, and is called by the report processor at run time. You define the properties for the run-time component in the design environment by modifying the custom report item's corresponding design-time component.  
   
- For a sample of a fully implemented custom report item, see [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889).  
+ For a sample of a fully implemented custom report item, see [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## Definition and Instance Objects  
  Before implementing a custom report item it is important to understand the difference between *definition objects* and *instance objects*. Definition objects provide the RDL representation of the custom report item whereas instance objects are the evaluated versions of the definition objects. There is only one definition object for each item on the report. When accessing properties on a definition object that contain expressions, you will get the unevaluated expression string. Instance objects contain the evaluated versions of the definition objects and can have a one-to-many relationship with an item's definition object. For example, if a report has a <xref:Microsoft.ReportingServices.OnDemandReportRendering.Tablix> data region that contains a <xref:Microsoft.ReportingServices.OnDemandReportRendering.CustomReportItem> in a detail row, there will be only one definition object but there will be an instance object for each row in the data region.  

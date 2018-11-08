@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Resource Governor, classifier function create"
@@ -15,9 +13,8 @@ helpviewer_keywords:
   - "classifier function [SQL Server], create"
   - "Resource Governor, classifier function test"
 ms.assetid: 7866b3c9-385b-40c6-aca5-32d3337032be
-caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Create and Test a Classifier User-Defined Function

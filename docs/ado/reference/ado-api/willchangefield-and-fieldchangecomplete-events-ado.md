@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "WillChangeField event [ADO]"
   - "fieldchangecomplete event [ADO]"
 ms.assetid: 3e49fb89-c45b-4d39-823e-3cc887c59b37
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg

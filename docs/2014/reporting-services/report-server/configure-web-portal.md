@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Report Manager [Reporting Services], configuring"
 ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
-caps.latest.revision: 28
-author: "markingmyname"
-ms.author: "maghan"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: craigg
 ---
 # Configure Report Manager (Native Mode)
   Report Manager is a Web front end application used to view reports, manage report server content, and grant user access to a native mode report server. Report Manager is installed with the Report Server Web service within the same report server instance and optionally configured if you select the **Install in the default native mode configuration** option in Setup. You can also configure Report Manager as a post-installation task. This topic provides information about the following Report Manager configuration scenarios:  

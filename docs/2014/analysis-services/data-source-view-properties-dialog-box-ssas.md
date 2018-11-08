@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.sqlserverstudio.datasourceviewproperties.f1"
 ms.assetid: 560d1846-8da2-475f-b021-13ff31fb49d7
-caps.latest.revision: 22
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Data Source View Properties Dialog Box (SSAS)
   Use the **Data Source View Properties** dialog box in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to set the properties of a data source view in an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database. You can display the **Data Source View Properties** dialog box by right-clicking a data source view in **Object Explorer** and selecting **Properties**.  

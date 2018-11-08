@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -16,9 +13,8 @@ helpviewer_keywords:
   - "system stored procedures [SQL Server], OLE Automation"
   - "OLE Automation [SQL Server], stored procedures"
 ms.assetid: ff16a833-01fe-4877-8aa6-55b72603ec2e
-caps.latest.revision: 15
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # OLE Automation Stored Procedures (Transact-SQL)

@@ -5,15 +5,12 @@ ms.date: "08/24/2016"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: configuration
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "ports [SQL Server], listening on"
   - "listening [SQL Server], on ports"
 ms.assetid: 4c17ed45-9da7-4bec-bce6-970109fe7365
-caps.latest.revision: 47
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -61,6 +58,6 @@ manager: craigg
 ## See Also  
  [Choosing a Network Protocol](https://msdn.microsoft.com/library/ms187892(v=sql.120).aspx)   
  [Creating a Valid Connection String Using TCP IP](creating-a-valid-connection-string-using-tcp-ip.md)   
- [SQL Server Browser Service](https://msdn.microsoft.com/library/ms181087(v=sql.130).aspx)  
+ [SQL Server Browser Service](sql-server-browser-service.md)  
   
   

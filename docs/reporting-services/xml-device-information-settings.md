@@ -1,25 +1,18 @@
 ---
 title: "XML Device Information Settings | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
+ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "reporting-services"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: reporting-services
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "XML [Reporting Services], rendering"
   - "device information settings [Reporting Services], PDF rendering"
 ms.assetid: a32e83fe-c10e-4ebd-8975-5be7dcc422e7
-caps.latest.revision: 43
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ---
 # XML Device Information Settings
   The following table lists the device information settings for rendering in XML format.  

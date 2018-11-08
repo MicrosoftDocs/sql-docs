@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "VS.ToolsOptionsPages.QueryExecution.AnalysisServer.AnalysisServicesExecutionGeneral"
 ms.assetid: 456867d0-724c-449c-abf9-013a694d7924
-caps.latest.revision: 22
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Options (Query Execution-Analysis Server-General Page)

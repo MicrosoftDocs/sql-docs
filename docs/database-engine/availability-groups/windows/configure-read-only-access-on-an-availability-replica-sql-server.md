@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "connection access to availability replicas"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], read-only routing"
   - "Availability Groups [SQL Server], client connectivity"
 ms.assetid: 22387419-22c4-43fa-851c-5fecec4b049b
-caps.latest.revision: 35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -208,10 +205,10 @@ Set-SqlAvailabilityReplica -ConnectionModeInPrimaryRole "AllowAllConnections" `
   
  **Factors that might affect triggers and jobs after a failover**  
   
- If you have triggers and jobs that will fail when running on a non-readable secondary database or on a readable secondary database, you need to script the triggers and jobs to check on a given replica to determine whether the database is a primary database or is a readable secondary database. To obtain this information, use the [DATABASEPROPERTYEX](../../../t-sql/functions/databasepropertyex-transact-sql.md) function to return the **Updatability** property of the database. To identify a read-only database, specify READ_ONLY as the value, as follows:  
+ If you have triggers and jobs that will fail when running on a non-readable secondary database or on a readable secondary database, you need to script the triggers and jobs to check on a given replica to determine whether the database is a primary database or is a readable secondary database. To obtain this information, use the [DATABASEPROPERTYEX](../../../t-sql/functions/databasepropertyex-transact-sql.md) function to return the **Updateability** property of the database. To identify a read-only database, specify READ_ONLY as the value, as follows:  
   
 ```  
-DATABASEPROPERTYEX([db name],’Updatability’) = N’READ_ONLY’  
+DATABASEPROPERTYEX([db name],’UpdateAbility’) = N’READ_ONLY’  
 ```  
   
  To identify a read-write database, specify READ_WRITE as the value.  

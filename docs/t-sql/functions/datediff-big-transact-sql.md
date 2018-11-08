@@ -5,9 +5,7 @@ ms.date: "07/29/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "DATEDIFF_BIG"
@@ -20,9 +18,8 @@ helpviewer_keywords:
   - "functions [SQL Server], date and time"
   - "time [SQL Server], functions"
 ms.assetid: 19ac1693-3cfa-400d-bf83-20a9cb46599a
-caps.latest.revision: 7
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # DATEDIFF_BIG (Transact-SQL)
@@ -73,7 +70,7 @@ An expression that can resolve to one of the following values:
 + **smalldatetime**
 + **time**
 
-For *date*, `DATEDIFF_BIG` will accept a column expression, expression, string literal, or user-defined variable. A string literal value must resolve to a **datetime**. Use four-digit years to avoid ambiguity issues. `DATEDIFF_BIG` subtracts *enddate* from *startdate*. To avoid ambiguity, use four-digit years. See [Configure the two digit year cutoff Server Configuration Option](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md) for information about two-digit years.
+For *date*, `DATEDIFF_BIG` will accept a column expression, expression, string literal, or user-defined variable. A string literal value must resolve to a **datetime**. Use four-digit years to avoid ambiguity issues. `DATEDIFF_BIG` subtracts *startdate* from *enddate*. To avoid ambiguity, use four-digit years. See [Configure the two digit year cutoff Server Configuration Option](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md) for information about two-digit years.
   
 *enddate*  
 See *startdate*.
@@ -86,7 +83,7 @@ Signed **bigint**
 Returns the count (as a signed bigint value) of the specified datepart boundaries crossed between the specified startdate and enddate.
 -   Each specific *datepart* and the abbreviations for that *datepart* will return the same value.  
   
-For a return value out of range for **bigint** (-9,223,372,036,854,775,808 to 9,223,372,036,854,775,807), `DATEDIFF_BIG` returns an error. For **millisecond**, the maximum difference between *startdate* and *enddate* is 24 days, 20 hours, 31 minutes and 23.647 seconds. For **second**, the maximum difference is 68 years.
+For a return value out of range for **bigint** (-9,223,372,036,854,775,808 to 9,223,372,036,854,775,807), `DATEDIFF_BIG` returns an error. For **millisecond**, the maximum difference between *enddate* and *startdate* is 24 days, 20 hours, 31 minutes and 23.647 seconds. For **second**, the maximum difference is 68 years.
   
 If *startdate* and *enddate* are both assigned only a time value, and the *datepart* is not a time *datepart*, `DATEDIFF_BIG` returns 0.
   

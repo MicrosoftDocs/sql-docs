@@ -5,9 +5,7 @@ ms.date: "7/22/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "GetLevel"
@@ -17,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "GetLevel [Database Engine]"
 ms.assetid: 81577d7e-8ff6-4e73-b7f4-94c03d4921e7
-caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # GetLevel (Database Engine)

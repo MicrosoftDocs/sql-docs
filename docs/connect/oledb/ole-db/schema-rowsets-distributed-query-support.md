@@ -5,11 +5,8 @@ ms.custom: ""
 ms.date: "06/12/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "oledb|ole-db"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "DBPROPSET_SQLSERVERSESSION property"
@@ -18,18 +15,18 @@ helpviewer_keywords:
   - "OLE DB, schema rowsets"
   - "OLE DB rowsets, schema"
   - "rowsets [OLE DB], schema"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Schema Rowsets - Distributed Query Support
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   To support [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] distributed queries, the OLE DB Driver for SQL Server **IDBSchemaRowset** interface returns metadata on linked servers.  
   
- If the DBPROPSET_SQLSERVERSESSION property SSPROP_QUOTEDCATALOGNAMES is VARIANT_TRUE, a quoted identifier can be specified for the catalog name (for example "my.catalog"). When restricting schema rowset output by catalog, the OLE DB Driver for SQL Server recognizes a two-part name containing the linked server and catalog name. For the schema rowsets in the table below, specifying a two-part catalog name as *linked_server***.***catalog* restricts output to the applicable catalog of the named linked server.  
+ If the DBPROPSET_SQLSERVERSESSION property SSPROP_QUOTEDCATALOGNAMES is VARIANT_TRUE, a quoted identifier can be specified for the catalog name (for example "my.catalog"). When restricting schema rowset output by catalog, the OLE DB Driver for SQL Server recognizes a two-part name containing the linked server and catalog name. For the schema rowsets in the table below, specifying a two-part catalog name as _linked\_server_**.**_catalog_ restricts output to the applicable catalog of the named linked server.  
   
 |Schema rowset|Catalog restriction|  
 |-------------------|-------------------------|  
@@ -43,8 +40,8 @@ manager: craigg
 |DBSCHEMA_TABLE_PRIVILEGES|TABLE_CATALOG|  
   
 > [!NOTE]  
->  To restrict a schema rowset to all catalogs from a linked server, use the syntax *linked_server* (where the period separator is part of the name specification). This syntax is equivalent to specifying NULL for the catalog name restriction and is also used when the linked server indicates a data source that does not support catalogs.  
-  
+>  To restrict a schema rowset to all catalogs from a linked server, use the syntax *linked_server* (where the underscore separator is part of the name specification). This syntax is equivalent to specifying NULL for the catalog name restriction and is also used when the linked server indicates a data source that does not support catalogs.  
+ 
  The OLE DB Driver for SQL Server defines the schema rowset LINKEDSERVERS, returning a list of OLE DB data sources registered as linked servers.  
   
 ## See Also  

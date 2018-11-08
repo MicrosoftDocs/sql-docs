@@ -1,8 +1,7 @@
 ---
 title: Common issues with Launchpad service and external script execution in SQL Server| Microsoft Docs
 ms.prod: sql
-ms.technology: machine-learning
-
+ms.technology: mlserver
 ms.date: 05/31/2018  
 ms.topic: conceptual
 author: HeidiSteen
@@ -48,13 +47,13 @@ For information about these user rights, see the "Windows privileges and rights"
 
 ## User group for Launchpad cannot log on locally
 
-During setup of Machine Learning services, SQL Server creates the Windows user group **SQLRUserGroup** and then provisions it with all rights necessary for Launchpad to connect to SQL Server and run external script jobs. If this user group is enabled, it is also used to execute Python scripts.
+During setup of Machine Learning Services, SQL Server creates the Windows user group **SQLRUserGroup** and then provisions it with all rights necessary for Launchpad to connect to SQL Server and run external script jobs. If this user group is enabled, it is also used to execute Python scripts.
 
 However, in organizations where more restrictive security policies are enforced, the rights that are required by this group might have been manually removed, or they might be automatically revoked by policy. If the rights have been removed, Launchpad can no longer connect to SQL Server, and SQL Server cannot call the external runtime.
 
 To correct the problem, ensure that the group **SQLRUserGroup** has the system right **Allow log on locally**.
 
-For more information, see [Configure Windows service accounts and permissions](https://msdn.microsoft.com/library/ms143504.aspx#Windows).
+For more information, see [Configure Windows service accounts and permissions](../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).
 
 ## Permissions to run external scripts
 

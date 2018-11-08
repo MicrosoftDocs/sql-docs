@@ -5,18 +5,15 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: security
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: security
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "credentials [SQL Server], creating"
   - "authentication [SQL Server], credentials"
   - "logins [SQL Server], credentials"
 ms.assetid: c1e77e91-2a69-40d9-b8b3-97cffc710586
-caps.latest.revision: 17
-author: CarlRabeler
-ms.author: carlraba
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Create a Credential

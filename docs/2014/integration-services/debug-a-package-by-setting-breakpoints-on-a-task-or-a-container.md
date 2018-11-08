@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "containers [Integration Services], breakpoints"
   - "breakpoints [Integration Services]"
   - "tasks [Integration Services], breakpoints"
 ms.assetid: e7fa106a-2221-403a-bb74-efc9f12bb450
-caps.latest.revision: 33
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Debug a Package by Setting Breakpoints on a Task or a Container

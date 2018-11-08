@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: efdbd930-cde5-41b0-90ad-58a6cc68dddc
-caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Lesson 1: Create Windows Azure Storage Account and Container

@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 topic_type: 
   - "apiref"
@@ -16,9 +14,8 @@ topic_type:
 helpviewer_keywords: 
   - "extended stored procedures [SQL Server], listed"
 ms.assetid: 4e9d0374-0927-4f17-bab9-2215b1b8fea8
-caps.latest.revision: 38
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Extended Stored Procedures Programmer&#39;s Reference

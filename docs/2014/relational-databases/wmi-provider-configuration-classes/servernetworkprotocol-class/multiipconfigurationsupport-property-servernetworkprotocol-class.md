@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "MultiIpConfigurationSupport Property (ServerNetworkProtocol Class)"
@@ -19,9 +17,8 @@ topic_type:
 helpviewer_keywords: 
   - "MultiIpConfigurationSupport property"
 ms.assetid: 442c6133-4038-42db-a67d-2631285ac76b
-caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # MultiIpConfigurationSupport Property (ServerNetworkProtocol Class)

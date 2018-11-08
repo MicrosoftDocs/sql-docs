@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "NumberOfFlags Property (SInstance Class)"
@@ -19,9 +17,8 @@ topic_type:
 helpviewer_keywords: 
   - "NumberOfFlags property"
 ms.assetid: b62005f8-9af3-4fc8-9344-a1ccdb713053
-caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # NumberOfFlags Property (SInstance Class)

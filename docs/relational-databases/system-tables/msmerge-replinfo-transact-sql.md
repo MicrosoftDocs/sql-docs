@@ -4,15 +4,10 @@ ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-tables"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "replication"
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "MSmerge_replinfo_TSQL"
   - "MSmerge_replinfo"
@@ -21,9 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSmerge_replinfo system table"
 ms.assetid: b0924094-c0cc-49c1-869a-65be0d0465a0
-caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # MSmerge_replinfo (Transact-SQL)

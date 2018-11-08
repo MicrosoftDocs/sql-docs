@@ -1,13 +1,12 @@
 ---
 title: Configure SQL Server to send feedback to Microsoft | Microsoft Docs
 description: 
-author: annashres 
-ms.author: anshrest 
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.date: 07/12/2017
+ms.date: 07/13/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.suite: "sql"
 ms.custom: ""
 ms.technology: configuration
 ---
@@ -152,7 +151,7 @@ The procedure to turn this feature on or off is dependent on the OS version. To 
     [Configure Windows telemetry in your organization](https://technet.microsoft.com/en-us/itpro/windows/manage/configure-windows-telemetry-in-your-organization)
 - Windows Server 2008 R2 and Windows 7
 
-    [WER Settings](https://msdn.microsoft.com/en-us/library/windows/desktop/bb513638(v=vs.85).aspx)
+    [WER Settings](/windows/desktop/wer/wer-settings)
  
 ## Feedback for Analysis Services
 

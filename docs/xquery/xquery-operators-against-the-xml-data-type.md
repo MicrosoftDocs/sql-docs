@@ -4,15 +4,10 @@ ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: sql
-ms.component: "xquery"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 dev_langs: 
   - "XML"
 helpviewer_keywords: 
@@ -20,7 +15,6 @@ helpviewer_keywords:
   - "operators [XQuery]"
   - "xml data type [SQL Server], XQuery"
 ms.assetid: 39ca3d2e-e928-4333-872b-75c4ccde8e79
-caps.latest.revision: 23
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
@@ -45,7 +39,7 @@ manager: craigg
   
  The query uses the **=** comparison operator. Each node in the sequence on the right side of the **=** operator is compared with each node in the sequence on the left side. If the nodes match, the node comparison is **TRUE**. It is then converted to an int and compared with 1, and the query returns the customer ID.  
   
-```  
+```sql
 WITH XMLNAMESPACES (  
 'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo' AS ACI,  
 'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS ACT)  
@@ -62,7 +56,7 @@ WHERE  AdditionalContactInfo.value('
 ### B. Using a numeric operator  
  The + operator in this query is a value operator, because it applies to a single item. For example, value 1 is added to a lot size that is returned by the query:  
   
-```  
+```sql
 SELECT ProductModelID, Instructions.query('  
      declare namespace   
  AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
@@ -82,7 +76,7 @@ where ProductModelID=7
 ### C. Using a value operator  
  The following query retrieves the <`Picture`> elements for a product model where the picture size is "small":  
   
-```  
+```sql
 SELECT CatalogDescription.query('  
      declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
      for $P in /PD:ProductDescription/PD:Picture[PD:Size eq "small"]  

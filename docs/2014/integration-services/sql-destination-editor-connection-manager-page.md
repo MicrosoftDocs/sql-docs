@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.sqlserverdestadapter.connection.f1"
 helpviewer_keywords: 
   - "SQL Server Destination Editor"
 ms.assetid: 423e1654-54af-47c6-ab6f-98670534557d
-caps.latest.revision: 36
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # SQL Destination Editor (Connection Manager Page)

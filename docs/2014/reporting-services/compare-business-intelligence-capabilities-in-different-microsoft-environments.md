@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 1fb759ee-8172-4c4c-9f7d-49af2c731006
-caps.latest.revision: 18
-author: "markingmyname"
-ms.author: "maghan"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: craigg
 ---
 # Compare Business Intelligence Capabilities In Different Microsoft Environments
   Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Business Intelligence can be deployed in a number of different environments including [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] with SharePoint Server, SharePoint Online, and Power BI for Office 365. This topic compares the components and features supported in each environment.  

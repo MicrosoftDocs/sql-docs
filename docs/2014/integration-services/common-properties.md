@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "VB"
@@ -19,9 +17,8 @@ helpviewer_keywords:
   - "input properties [Integration Services]"
   - "component properties [Integration Services]"
 ms.assetid: 51973502-5cc6-4125-9fce-e60fa1b7b796
-caps.latest.revision: 45
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Common Properties

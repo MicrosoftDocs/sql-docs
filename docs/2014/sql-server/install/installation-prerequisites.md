@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "installation prerequisites, Setup"
@@ -15,9 +13,8 @@ helpviewer_keywords:
   - "SQL Server Component Update page [SQL Server Installation Wizard]"
   - "SQL Server Installation Wizard, SQL Server Component Update page"
 ms.assetid: cd1454dc-2585-4b14-83b3-ee9aec6f7e75
-caps.latest.revision: 45
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Installation Prerequisites

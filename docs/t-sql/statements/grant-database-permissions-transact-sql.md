@@ -1,13 +1,11 @@
-﻿---
+---
 title: "GRANT Database Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/05/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -19,11 +17,10 @@ helpviewer_keywords:
   - "database permissions [SQL Server], granting"
   - "GRANT statement, databases"
 ms.assetid: 499e5ed6-945c-4791-ab45-68dec0b9c289
-caps.latest.revision: 43
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # GRANT Database Permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -243,11 +240,21 @@ USE AdventureWorks2012;
 GRANT CREATE VIEW TO CarmineEs WITH GRANT OPTION;  
 GO  
 ```  
-  
+
+### D. Granting CONTROL permission to a database user.
+ The following example grants `CONTROL` permission on the `AdventureWorks2012` database to the database user `Sarah`. The user must exist in the database and the context must be set to the database.
+ 
+```  
+USE AdventureWorks2012;  
+GRANT CONTROL ON DATABASE:AdventureWorks2012 TO Sarah;  
+GO  
+```  
+
+
 ## See Also  
  [sys.database_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [Permissions &#40;Database Engine&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Principals &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  

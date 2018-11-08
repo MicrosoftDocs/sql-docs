@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 50140fdf-6fd1-41a1-9c14-8ecfb97ba2e1
-caps.latest.revision: 11
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Use Data Feeds (PowerPivot for SharePoint)
   Data feeds are one or more data streams that are generated from an online data source and streamed to a destination document or application. If you are using PowerPivot for Excel, data feeds can help you get existing corporate or business data from arbitrary data sources into the PowerPivot window in your Excel 2010 workbook. After you import a data feed to a workbook, you can reference it later in any data refresh operations that you schedule on a SharePoint server.  

@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 5e027605-1086-4941-bb01-f315df8f829b
-caps.latest.revision: 7
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Configure Dedicated Data Refresh or Query-Only Processing (PowerPivot for SharePoint)
   In SharePoint integrated mode, an Analysis Services server instance can be configured to support a specific type of processing request, such as data refresh or query-only processing. By default, both types of load requests are enabled. You can turn off either type to create a dedicated query engine or data refresh server.  

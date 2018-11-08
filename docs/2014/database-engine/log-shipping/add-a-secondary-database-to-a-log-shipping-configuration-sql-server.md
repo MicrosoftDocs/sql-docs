@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
+ms.technology: high-availability
 ms.topic: conceptual
 helpviewer_keywords: 
   - "adding secondary databases"
@@ -15,9 +12,8 @@ helpviewer_keywords:
   - "secondary data files [SQL Server], adding"
   - "log shipping [SQL Server], secondary databases"
 ms.assetid: b02eba13-f8e6-4684-b7e4-75ea038ea473
-caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Add a Secondary Database to a Log Shipping Configuration (SQL Server)

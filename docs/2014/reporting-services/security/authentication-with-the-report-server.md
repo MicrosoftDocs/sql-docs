@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "connections [Reporting Services], configuring"
@@ -16,10 +14,9 @@ helpviewer_keywords:
   - "authentication [Reporting Services]"
   - "Forms authentication"
 ms.assetid: 753c2542-0e97-4d8f-a5dd-4b07a5cd10ab
-caps.latest.revision: 32
-author: "markingmyname"
-ms.author: "maghan"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: craigg
 ---
 # Authentication with the Report Server
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) offers several configurable options for authenticating users and client applications against the report server. By default, the report server uses Windows Integrated authentication and assumes trusted relationships where client and network resources are in the same domain or in a trusted domain. Depending on your network topology and the needs of your organization, you can customize the authentication protocol that is used for Windows Integrated authentication, use Basic authentication, or use a custom forms-based authentication extension that you provide. Each of the authentication types can be turned on or off individually. You can enable more than one authentication type if you want the report server to accept requests of multiple types.  

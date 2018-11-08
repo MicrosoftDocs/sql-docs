@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "05/24/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords: 
   - "merge replication database upgrades [SQL Server replication]"
@@ -16,9 +13,8 @@ helpviewer_keywords:
   - "snapshot replication [SQL Server], upgrading databases"
   - "upgrading replicated databases"
 ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
-caps.latest.revision: 71
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Upgrade Replicated Databases

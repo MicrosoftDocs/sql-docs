@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "accuracy chart"
@@ -17,10 +15,9 @@ helpviewer_keywords:
   - "mining models, testing"
   - "lift [data mining]"
 ms.assetid: 303973b4-71c0-4cfc-b7bc-92218b52509d
-caps.latest.revision: 19
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Accuracy Chart (SQL Server Data Mining Add-ins)
   ![Accuracy Chart button in Data Mining ribbon](media/dmc-accchart.gif "Accuracy Chart button in Data Mining ribbon")  

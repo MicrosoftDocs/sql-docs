@@ -6,13 +6,10 @@ ms.date: "02/09/2017"
 ms.prod: "sql"
 ms.technology: ssdt
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql.data.tools.errortask.generichelp"
 ms.assetid: 5f08f15a-851d-4026-a557-28b3c6492efe
-caps.latest.revision: 30
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
@@ -28,8 +25,6 @@ The following topics and sections discuss how SSDT can help you do database deve
   
 |Topics/Section|Description|  
 |-------------------|---------------|  
-|[Install SQL Server Data Tools](../ssdt/install-sql-server-data-tools.md)|Describes how to install SQL Server Data Tools.|  
-|[Removing SQL Server Data Tools Components](../ssdt/removing-sql-server-data-tools-components.md)|Describes components not removed when you uninstall SSDT.|  
 |[Project-Oriented Offline Database Development](../ssdt/project-oriented-offline-database-development.md)|Topics in this section describe SQL Server Data Tools features for authoring, building, debugging and publishing a database project.|  
 |[Project-Oriented Database Development using Command-Line Tools](../ssdt/project-oriented-database-development-using-command-line-tools.md)|Topics in this section describe command-line tools which enable a number of project-oriented database development scenarios.|  
 |[Connected Database Development](../ssdt/connected-database-development.md)|Topics in this section describe SQL Server Data Tools features for designing and querying a connected database.|  
@@ -40,7 +35,6 @@ The following topics and sections discuss how SSDT can help you do database deve
 |[Extending the Database Features](../ssdt/extending-the-database-features.md)|You can create feature extensions that let you extend features such as unit testing, and database code analysis.|  
 |[Required Permissions for SQL Server Data Tools](../ssdt/required-permissions-for-sql-server-data-tools.md)|Discusses required access permission to use SQL Server Data Tools.|  
 |[DAC Framework Compatibility](../ssdt/dac-framework-compatibility.md)|Describes compatibility issues with DAC framework.|  
-|[API Reference](http://msdn.microsoft.com/library/jj863457(VS.103).aspx)|Topics in this section describe classes, interfaces, and value types that SQL Server Data Tools exposes.|  
   
 
   

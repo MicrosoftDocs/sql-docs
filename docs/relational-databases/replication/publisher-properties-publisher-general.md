@@ -4,19 +4,14 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.rep.configdistwizard.pubproperties.general.f1"
 helpviewer_keywords: 
   - "Publisher Properties dialog box"
 ms.assetid: 9055bd4a-89cc-4059-9474-e213d7bcc36d
-caps.latest.revision: 19
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

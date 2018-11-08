@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-tables"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "replication"
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "MSsubscriber_schedule"
@@ -19,9 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSsubscriber_schedule system table"
 ms.assetid: ff428306-0ef4-49a3-b536-07ccdf6e2196
-caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # MSsubscriber_schedule (Transact-SQL)

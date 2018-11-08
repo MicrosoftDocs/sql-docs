@@ -6,15 +6,12 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords:
   - "OLE DB remoting provider [ADO]"
   - "providers [ADO], OLE DB remoting provider"
   - "remoting provider [ADO]"
 ms.assetid: a4360ed4-b70f-4734-9041-4025d033346b
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -89,4 +86,4 @@ rs.UpdateBatch     'Equivalent of RDS SubmitChanges
 ```
 
 ## See Also
- [Overview of the OLE DB Remoting Provider](http://msdn.microsoft.com/en-us/4083b72f-68c4-4252-b366-abb70db5ca2b)
+ [Overview of the OLE DB Remoting Provider](http://msdn.microsoft.com/4083b72f-68c4-4252-b366-abb70db5ca2b)

@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "configuring permissions on databases"
 ms.assetid: d0ecf297-27af-43a4-918c-31c354b3a96e
-caps.latest.revision: 12
-author: "craigg-msft"
-ms.author: "craigg"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Summary: Configuring Permissions on Database Objects

@@ -4,15 +4,9 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 ms.assetid: f551cf6e-1575-4206-9cca-975b5b43a6b8
-caps.latest.revision: 10
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: craigg
@@ -76,5 +70,5 @@ These settings will be available based on the type of Metabase node. For example
     3.  The settings made by the user are saved in cascaded preferences file on clicking **Apply** button.  
   
 ## See Also  
-[Project Settings (Conversion) (MySQL to SQL)](http://msdn.microsoft.com/en-us/7ad5fe44-6445-4ba8-a457-5af792631f11)  
+[Project Settings (Conversion) (MySQL to SQL)](http://msdn.microsoft.com/7ad5fe44-6445-4ba8-a457-5af792631f11)  
   

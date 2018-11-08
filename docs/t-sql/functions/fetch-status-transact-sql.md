@@ -5,9 +5,7 @@ ms.date: "09/18/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "@@FETCH_STATUS"
@@ -19,22 +17,20 @@ helpviewer_keywords:
   - "status information [SQL Server], FETCH"
   - "@@FETCH_STATUS function"
 ms.assetid: 93659193-e4ff-4dfb-9043-0c4114921b91
-caps.latest.revision: 39
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # &#x40;&#x40;FETCH_STATUS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Returns the status of the last cursor FETCH statement issued against any cursor currently opened by the connection.  
+This function returns the status of the last cursor FETCH statement issued against any cursor currently opened by the connection.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
 ```  
-  
 @@FETCH_STATUS  
 ```  
   
@@ -45,20 +41,20 @@ manager: craigg
   
 |Return value|Description|  
 |------------------|-----------------|  
-|0|The FETCH statement was successful.|  
+|&nbsp;0|The FETCH statement was successful.|  
 |-1|The FETCH statement failed or the row was beyond the result set.|  
 |-2|The row fetched is missing.|
 |-9|The cursor is not performing a fetch operation.|  
   
 ## Remarks  
- Because @@FETCH_STATUS is global to all cursors on a connection, use @@FETCH_STATUS carefully. After a FETCH statement is executed, the test for @@FETCH_STATUS must occur before any other FETCH statement is executed against another cursor. The value of @@FETCH_STATUS is undefined before any fetches have occurred on the connection.  
+Because `@@FETCH_STATUS` is global to all cursors on a connection, use it carefully. After a FETCH statement executes, the test for `@@FETCH_STATUS` must occur before any other FETCH statement executes against another cursor. `@@FETCH_STATUS` is undefined before any fetches have occurred on the connection.  
   
- For example, a user executes a FETCH statement from one cursor, and then calls a stored procedure that opens and processes the results from another cursor. When control is returned from the called stored procedure, @@FETCH_STATUS reflects the last FETCH executed in the stored procedure, not the FETCH statement executed before the stored procedure is called.  
+For example, a user executes a FETCH statement from one cursor, and then calls a stored procedure that opens and processes results from another cursor. When control returns from that called stored procedure, `@@FETCH_STATUS` reflects the last FETCH executed inside that stored procedure, not the FETCH statement executed before the call to the stored procedure.  
   
- To retrieve the last fetch status of a specific cursor, query the **fetch_status** column of the **sys.dm_exec_cursors** dynamic management function.  
+To retrieve the last fetch status of a specific cursor, query the **fetch_status** column of the **sys.dm_exec_cursors** dynamic management function.  
   
 ## Examples  
- The following example uses `@@FETCH_STATUS` to control cursor activities in a `WHILE` loop.  
+This example uses `@@FETCH_STATUS` to control cursor activities in a `WHILE` loop.  
   
 ```  
 DECLARE Employee_Cursor CURSOR FOR  

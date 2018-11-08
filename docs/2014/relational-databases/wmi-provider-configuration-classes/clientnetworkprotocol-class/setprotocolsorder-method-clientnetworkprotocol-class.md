@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "SetProtocolsOrder Method (ClientNetworkProtocol Class)"
@@ -19,9 +17,8 @@ topic_type:
 helpviewer_keywords: 
   - "SetProtocolsOrder method"
 ms.assetid: b86d98b9-aae4-4e74-b4da-1ec984d5c8b4
-caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # SetProtocolsOrder Method (ClientNetworkProtocol Class)

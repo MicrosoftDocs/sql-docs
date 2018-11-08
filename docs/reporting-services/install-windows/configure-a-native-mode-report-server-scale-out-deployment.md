@@ -1,24 +1,17 @@
 ---
 title: "Configure a Native Mode Report Server Scale-Out Deployment | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/24/2018"
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "report servers [Reporting Services], deployments"
   - "deploying [Reporting Services], scale-out deployment model"
   - "scale-out deployments [Reporting Services]"
 ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
-caps.latest.revision: 13
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ---
 
 # Configure a Native Mode Report Server Scale-Out Deployment
@@ -146,7 +139,7 @@ The issue will be intermittent is that only the server who created the SQL Agent
 
 ## Next steps
 
-[Configure a Service Account](http://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0)   
+[Configure a Service Account](https://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0)   
 [Configure a URL](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
 [Create a Native Mode Report Server Database](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
 [Configure Report Server URLs](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
@@ -154,4 +147,4 @@ The issue will be intermittent is that only the server who created the SQL Agent
 [Add and Remove Encryption Keys for Scale-Out Deployment](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
 [Manage a Reporting Services Native Mode Report Server](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

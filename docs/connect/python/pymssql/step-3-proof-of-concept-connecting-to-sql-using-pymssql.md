@@ -5,12 +5,9 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 2246ddeb-7c2f-46f3-8a91-cdd718d39b40
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -84,4 +81,4 @@ This code example demonstrates the use of transactions in which you:
     
   ## Next steps  
   
-For more information, see the [Python Developer Center](https://azure.microsoft.com/en-us/develop/python/).
+For more information, see the [Python Developer Center](https://azure.microsoft.com/develop/python/).

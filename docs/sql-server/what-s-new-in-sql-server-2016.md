@@ -1,12 +1,10 @@
 ---
 title: "What's New in SQL Server 2016"
 ms.custom: ""
-ms.date: "07/21/2017"
+ms.date: "07/22/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: install
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 keywords: 
   - "new sql server"

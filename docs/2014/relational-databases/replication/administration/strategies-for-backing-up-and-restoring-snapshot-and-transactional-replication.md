@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "replication"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "backups [SQL Server replication], snapshot replication"
@@ -20,9 +18,8 @@ helpviewer_keywords:
   - "sync with backup [SQL Server replication]"
   - "backups [SQL Server replication], transactional replication"
 ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
-caps.latest.revision: 58
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Strategies for Backing Up and Restoring Snapshot and Transactional Replication

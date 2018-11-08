@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.ssmsimbi.DatabaseProperties.f1"
 ms.assetid: 0f0ec02f-7b55-40ea-8a04-ed0deb1efd7a
-caps.latest.revision: 9
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Database Properties Dialog Box (SSAS - Tabular)
   This dialog box provides timestamps and other descriptive information, plus customizable properties that determine whether the database uses cached data. Other customizable properties include changing the database name and specifying the impersonation options.  

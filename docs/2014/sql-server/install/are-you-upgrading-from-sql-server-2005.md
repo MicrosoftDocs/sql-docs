@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 3d50a66a-1845-4116-8b3a-7b5a2eeb78e6
-caps.latest.revision: 16
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Are you upgrading from SQL Server 2005?
@@ -80,6 +77,6 @@ manager: craigg
 ## See Also  
  [SQL Server 2014](http://www.microsoft.com/en-us/server-cloud/products/sql-server/default.aspx)   
  [SQL Server 2005 end of support](http://www.microsoft.com/en-us/server-cloud/products/sql-server-2005/)   
- [Upgrade from SQL Server 2005 to SQL Server 2016](https://msdn.microsoft.com/en-US/library/mt168847.aspx)  
+ [Upgrade from SQL Server 2005 to SQL Server 2016](https://msdn.microsoft.com/library/mt168847.aspx)  
   
   

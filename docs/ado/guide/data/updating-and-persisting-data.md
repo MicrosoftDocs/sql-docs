@@ -6,15 +6,12 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "updating data [ADO]"
   - "data updates [ADO]"
   - "ADO, updating data"
 ms.assetid: 8dc27274-4f96-43d1-913c-4ff7d01b9a27
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg

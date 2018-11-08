@@ -1,22 +1,15 @@
 ---
 title: "Troubleshoot Publishing or Viewing a Report on a Native Mode Report Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/28/2016"
+ms.date: 02/28/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "troubleshooting"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: troubleshooting
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: df7720a1-d178-45bb-8d6f-63e208cae7fe
-caps.latest.revision: 6
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ---
 # Troubleshoot Publishing or Viewing a Report on a Native Mode Report Server
   
@@ -60,5 +53,5 @@ Verify that you have permission to access the folders that contain the cached fi
   
   
 
-[!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
+[!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
 

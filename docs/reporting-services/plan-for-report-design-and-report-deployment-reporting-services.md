@@ -1,22 +1,15 @@
 ---
 title: "Plan for report design and report deployment | Reporting Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/12/2016"
+ms.date: 09/12/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "reporting-services"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: reporting-services
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+ms.topic: conceptual
 ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
-caps.latest.revision: 19
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ---
 # Plan for report design and report deployment | Reporting Services
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] provides several approaches for authoring and deploying paginated reports. Learn how to plan a report authoring and report server environment that work together.
@@ -38,13 +31,13 @@ This topic is an overview of report definition support by [!INCLUDE[ssRSnoversio
   
  For more information on RDL and RDL schemas, see the following:  
   
--   [Microsoft SQL Server XML Schemas](http://go.microsoft.com/fwlink/?LinkId=31850)  
+-   [Microsoft SQL Server XML Schemas](https://go.microsoft.com/fwlink/?LinkId=31850)  
   
--   [Report Definition Language Specifications](http://go.microsoft.com/fwlink/?linkid=116865)  
+-   [Report Definition Language Specifications](https://go.microsoft.com/fwlink/?linkid=116865)  
   
 -   [Report Definition Language &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
   
- For more information about ReportViewer controls, see [ReportViewer Controls (Visual Studio)](http://msdn.microsoft.com/library/ms251671.aspx).  
+ For more information about ReportViewer controls, see [ReportViewer Controls (Visual Studio)](https://msdn.microsoft.com/library/ms251671.aspx).  
   
 ##  <a name="bkmk_report_server_rdl_schema_support"></a> Report Server and RDL Schema Support  
  A report definition file can be deployed to a [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] report server in the following ways:  
@@ -104,11 +97,11 @@ This topic is an overview of report definition support by [!INCLUDE[ssRSnoversio
   
  For more information, see the following:  
   
--   [Converting RDLC Files to RDL Files](http://msdn.microsoft.com/library/ms252109.aspx)  
+-   [Converting RDLC Files to RDL Files](https://msdn.microsoft.com/library/ms252109.aspx)  
   
--   [ReportViewer Controls (Visual Studio)](http://msdn.microsoft.com/library/ms251671.aspx)  
+-   [ReportViewer Controls (Visual Studio)](https://msdn.microsoft.com/library/ms251671.aspx)  
   
--   [Adding and Configuring the ReportViewer Controls](http://msdn.microsoft.com/library/ms252104.aspx)  
+-   [Adding and Configuring the ReportViewer Controls](https://msdn.microsoft.com/library/ms252104.aspx)  
   
 ## See Also  
  [Reports, Report Parts, and Report Definitions &#40;Report Builder and SSRS&#41;](../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   

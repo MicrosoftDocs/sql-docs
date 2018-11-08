@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "wmi"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: wmi
 ms.topic: "reference"
 apiname: 
   - "ServiceName Property (SqlService Class)"
@@ -19,7 +15,6 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "ServiceName property"
 ms.assetid: 8ac7387b-c3ae-4e45-b2cc-ebab3f83bfb2
-caps.latest.revision: 34
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg

@@ -1,13 +1,10 @@
-﻿---
+---
 title: "Always Encrypted (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/24/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.suite: "sql"
+ms.reviewer: vanto
 ms.technology: security
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "encryption [SQL Server], Always Encrypted"
@@ -16,11 +13,10 @@ helpviewer_keywords:
   - "Always Encrypted, about"
   - "SQL13.SWB.COLUMNMASTERKEY.CLEANUP.F1"
 ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
-caps.latest.revision: 58
 author: aliceku
 ms.author: aliceku
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Always Encrypted (Database Engine)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -60,6 +56,30 @@ The server computes the result set, and for any encrypted columns included in th
 
 For details of how to develop applications using Always Encrypted with particular client drivers, see [Always Encrypted (client development)](../../../relational-databases/security/encryption/always-encrypted-client-development.md).
 
+## Remarks
+
+Decryption occurs via the client. This means that some actions that occur only server-side will not work when using Always Encrypted. 
+
+Here's an example of an update that attempts to move data from an encrypted column to an unencrypted column without returning a result set to the client: 
+
+```sql
+update dbo.Patients set testssn = SSN
+```
+
+If SSN is a column encrypted using Always Encrypted, the above update statement will fail with an error similar to:
+
+```
+Msg 206, Level 16, State 2, Line 89
+Operand type clash: char(11) encrypted with (encryption_type = 'DETERMINISTIC', encryption_algorithm_name = 'AEAD_AES_256_CBC_HMAC_SHA_256', column_encryption_key_name = 'CEK_1', column_encryption_key_database_name = 'ssn') collation_name = 'Latin1_General_BIN2' is incompatible with char
+```
+
+To successfully update the column, do the following:
+
+1. SELECT the data out of the SSN column, and store it as a result set in the application. This will allow for the application (client *driver*) to decrypt the column.
+2. INSERT the data from the result set into SQL Server. 
+
+ >[!IMPORTANT]
+ > In this scenario, the data will be unencrypted when sent back to the server because the destination column is a regular varchar that does not accept encrypted data. 
   
 ## Selecting  Deterministic or Randomized Encryption  
  The Database Engine never operates on plaintext data stored in encrypted columns, but it still supports some queries on encrypted data, depending on the encryption type for the column. Always Encrypted supports two types of encryption: randomized encryption and deterministic encryption.  

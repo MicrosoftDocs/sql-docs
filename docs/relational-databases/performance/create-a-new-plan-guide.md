@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "08/02/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: performance
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.designer.newplanguide.f1"
@@ -14,7 +12,6 @@ helpviewer_keywords:
   - "creating plan guides"
   - "plan guides [SQL Server]. creating"
 ms.assetid: e1ad78bb-4857-40ea-a0c6-dcf5c28aef2f
-caps.latest.revision: 17
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -74,7 +71,7 @@ A Plan Guide applies either a fixed query plan, and/or query hints, to a query.
 ![plan_guide](../../relational-databases/performance/media/plan-guide.png)  
 
   
-##  <a name="TsqlProcedure"></a> Creat a plan guide using T-SQL  
+##  <a name="TsqlProcedure"></a> Create a plan guide using T-SQL  
   
 1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

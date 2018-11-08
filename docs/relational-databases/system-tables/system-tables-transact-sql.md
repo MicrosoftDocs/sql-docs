@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-tables"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -23,9 +20,8 @@ helpviewer_keywords:
   - "system tables [SQL Server], retrieving information from"
   - "retrieving system table information"
 ms.assetid: 56b8ad51-930c-4e5c-8d99-8c939d5b70ac
-caps.latest.revision: 41
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # System Tables (Transact-SQL)

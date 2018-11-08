@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "06/06/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "relational-databases-misc"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "guide, query processing architecture"
@@ -17,7 +14,6 @@ helpviewer_keywords:
   - "row mode execution"
   - "batch mode execution"
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
-caps.latest.revision: 5
 author: "rothja"
 ms.author: "jroth"
 manager: craigg
@@ -33,7 +29,7 @@ The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] can process SQL s
 - Batch mode execution
 
 ### Row mode execution
-*Row mode execution* is a query processing method used with traditional RDMBS tables, where data is stored in row format. When a query is executed and accesses data in row store tables, the execution tree operators and child operators read each required row, accross all the columns specified in the table schema. From each row that is read, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] then retrieves the columns that are required for the result set, as referenced by a SELECT statement, JOIN predicate, or filter predicate.
+*Row mode execution* is a query processing method used with traditional RDMBS tables, where data is stored in row format. When a query is executed and accesses data in row store tables, the execution tree operators and child operators read each required row, across all the columns specified in the table schema. From each row that is read, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] then retrieves the columns that are required for the result set, as referenced by a SELECT statement, JOIN predicate, or filter predicate.
 
 > [!NOTE]
 > Row mode execution is very efficient for OLTP scenarios, but can be less efficient when scanning large amounts of data, for example in Data Warehousing scenarios.
@@ -568,7 +564,7 @@ Additionally, the following query clauses are not parameterized. Note that in th
   * The expression contains a `CASE` clause.  
 * Arguments to query hint clauses. These include the `number_of_rows` argument of the `FAST` query hint, the `number_of_processors` argument of the `MAXDOP` query hint, and the number argument of the `MAXRECURSION` query hint.
 
-Parameterization occurs at the level of individual Transact-SQL statements. In other words, individual statements in a batch are parameterized. After compiling, a parameterized query is executed in the context of the batch in which it was originally submitted. If an execution plan for a query is cached, you can determine whether the query was parameterized by referencing the sql column of the sys.syscacheobjects dynamic management view. If a query is parameterized, the names and data types of parameters come before the text of the submitted batch in this column, such as (@1 tinyint).
+Parameterization occurs at the level of individual Transact-SQL statements. In other words, individual statements in a batch are parameterized. After compiling, a parameterized query is executed in the context of the batch in which it was originally submitted. If an execution plan for a query is cached, you can determine whether the query was parameterized by referencing the sql column of the sys.syscacheobjects dynamic management view. If a query is parameterized, the names and data types of parameters come before the text of the submitted batch in this column, such as (\@1 tinyint).
 
 > [!NOTE]
 > Parameter names are arbitrary. Users or applications should not rely on a particular naming order. Also, the following can change between versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and Service Pack upgrades: Parameter names, the choice of literals that are parameterized, and the spacing in the parameterized text.
@@ -1022,7 +1018,7 @@ To improve the performance of queries that access a large amount of data from la
 * Use a server with fast processors and as many processor cores as you can afford, to take advantage of parallel query processing capability.
 * Ensure the server has sufficient I/O controller bandwidth. 
 * Create a clustered index on every large partitioned table to take advantage of B-tree scanning optimizations.
-* Follow the best practice recommendations in the white paper, [The Data Loading Performance Guide](http://msdn.microsoft.com/en-us/library/dd425070.aspx), when bulk loading data into partitioned tables.
+* Follow the best practice recommendations in the white paper, [The Data Loading Performance Guide](http://msdn.microsoft.com/library/dd425070.aspx), when bulk loading data into partitioned tables.
 
 ### Example
 

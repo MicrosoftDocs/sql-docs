@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "04/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "docset-sql-devref"
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 dev_langs: 
   - "VB"
@@ -17,9 +15,8 @@ helpviewer_keywords:
   - "destinations [Integration Services], components"
   - "input columns [Integration Services]"
 ms.assetid: 214e22e8-7e7d-4876-b690-c138e5721b81
-caps.latest.revision: 56
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Creating a Destination with the Script Component

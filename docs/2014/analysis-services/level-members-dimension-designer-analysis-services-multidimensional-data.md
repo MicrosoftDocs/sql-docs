@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.dimensiondesigner.browsertab.levelsandmembers.f1"
 ms.assetid: 3f61e384-5b4e-4480-a7ed-b408de2fdea7
-caps.latest.revision: 19
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Level and Members (Browser Tab, Dimension Designer) (Analysis Services - Multidimensional Data)
   Use this pane to browse the members of the currently selected hierarchy and language. To select a hierarchy or language to browse, use the **Hierarchy** and **Language** options on the **Toolbar** pane. For more information about the Toolbar pane, see [Toolbar &#40;Browser Tab, Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md).  

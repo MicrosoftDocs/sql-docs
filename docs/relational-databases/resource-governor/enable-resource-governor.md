@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: performance
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Resource Governor, enabling"
 ms.assetid: 4d17af53-cf11-4ce4-aab4-deda94a49836
-caps.latest.revision: 12
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

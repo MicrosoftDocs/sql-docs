@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.pro.replay.tools.destinationtable.f1"
 helpviewer_keywords: 
   - "Destination Table dialog box"
 ms.assetid: 88ee6090-b2f5-4dc5-997a-1d45fa7e3e84
-caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # SQL Server Profiler - Destination Table

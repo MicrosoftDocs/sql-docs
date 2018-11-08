@@ -5,16 +5,13 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLSetPos function [ODBC], deleting rows"
   - "updating data [ODBC], SQLSetPos"
   - "data updates [ODBC], SQLSetPos"
 ms.assetid: 3117a47d-e179-4f76-89d0-656582f1c9bb
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg

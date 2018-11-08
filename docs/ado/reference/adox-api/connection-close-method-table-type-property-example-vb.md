@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "VB"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "Close method [ADOX], Visual Basic example"
   - "Type property [ADOX], Visual Basic example"
 ms.assetid: f88e7a3b-19ed-46e2-b2ce-3b611d9b8166
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg

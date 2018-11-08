@@ -5,9 +5,7 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.oledbcommandtrans.f1"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "statements [Integration Services]"
   - "OLE DB Command transformation"
 ms.assetid: baa6735c-5acf-4759-b077-1216aca16c6c
-caps.latest.revision: 55
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

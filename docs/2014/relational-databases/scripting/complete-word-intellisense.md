@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "word completion [IntelliSense]"
@@ -15,9 +13,8 @@ helpviewer_keywords:
   - "text completion [IntelliSense]"
   - "Complete Word option [IntelliSense]"
 ms.assetid: ee9c43a6-aae9-4cfa-b18e-1da9266fabcd
-caps.latest.revision: 24
-author: "craigg-msft"
-ms.author: "craigg"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Complete Word (IntelliSense)

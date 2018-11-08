@@ -4,16 +4,9 @@ ms.description: "This article describes why and how to store and index JSON docu
 ms.custom: ""
 ms.date: "01/04/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.component: "json"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
-  - "dbe-json"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-ms.assetid: 
-caps.latest.revision: 
 author: "jovanpop-msft"
 ms.author: "jovanpop"
 ms.reviewer: douglasl

@@ -4,15 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
+ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 2b67292d-6d8e-4016-9063-a97461ffe57a
-caps.latest.revision: 24
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: genemi
 manager: craigg
 ---
 # SQL Server Management Objects Support for In-Memory OLTP

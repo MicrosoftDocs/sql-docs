@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-solutions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "vs.newproject"
@@ -16,7 +13,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "projects [SQL Server Management Studio], creating"
 ms.assetid: 7897be19-365b-4b06-bcf0-8a669f67a673
-caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -37,7 +33,7 @@ You can create one or more projects within an existing solution.
     In the **Templates** box, select a template. A brief description of the selected project template appears beneath the **Templates** box.  
   
     **Name**  
-    Enter the name of the script project you want to create. A folder with the same name as the project is also created in the location displayed in the **Location** field. For some projects, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] creates source and other supporting files and adds them to the new project folder.  
+    Enter the name of the script project you want to create. A folder with the same name as the project is also created in the location displayed in the **Location** field. For some projects, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] creates source and other supporting files and adds them to the new project folder.  
   
     > [!NOTE]  
     > For some project types, the **Name** text box is unavailable because specifying the location sets the name. For example, Web applications and Web services are located on a Web server and derive their name from the virtual directory specified on that server.  
@@ -94,7 +90,7 @@ You can create one or more projects within an existing solution.
   
 4.  Click **OK**.  
   
-You can set a name for the script project, but the folder names are established by [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] and cannot be changed. You can configure the drive and path specification for the common set of folders by using the **Add New Project** dialog box. Right-click the solution icon in **Solution Explorer**, and then click **Add**. The default location for script project folders is: C:\Documents and Settings\\*username*\My Documents\SQL Server Management Studio\Projects\\.  
+You can set a name for the script project, but the folder names are established by [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] and cannot be changed. You can configure the drive and path specification for the common set of folders by using the **Add New Project** dialog box. Right-click the solution icon in **Solution Explorer**, and then click **Add**. The default location for script project folders is: C:\Documents and Settings\\*username*\My Documents\SQL Server Management Studio\Projects\\.  
   
 ## See Also  
 [Solution Explorer](../../ssms/solution/solution-explorer.md)  

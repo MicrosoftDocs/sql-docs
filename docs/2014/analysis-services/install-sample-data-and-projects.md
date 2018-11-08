@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: fc475b25-cbb2-408a-901f-9299299538c5
-caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
+author: minewiskan
+ms.author: owend
 manager: craigg
 ---
 # Install Sample Data and Projects for the Analysis Services Multidimensional Modeling Tutorial

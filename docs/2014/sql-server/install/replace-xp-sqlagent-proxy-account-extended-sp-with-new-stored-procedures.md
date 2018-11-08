@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "xp_sqlagent_proxy_account"
 ms.assetid: 0e3cc931-6237-41dd-bf0d-0c03f4d8fff2
-caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Replace usage of the xp_sqlagent_proxy_account extended stored procedure with new stored procedures

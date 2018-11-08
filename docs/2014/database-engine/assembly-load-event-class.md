@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 topic_type: 
   - "apiref"
 helpviewer_keywords: 
   - "Assembly Load event class"
 ms.assetid: cfb0b69d-4ce0-4067-a3df-d82775e57886
-caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Assembly Load Event Class

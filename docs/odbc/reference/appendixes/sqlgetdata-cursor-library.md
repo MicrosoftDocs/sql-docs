@@ -5,14 +5,11 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLGetData function [ODBC], Cursor Library"
 ms.assetid: ff40c9c0-b847-4426-a099-1bff47e6e872
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg

@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "data access [SQL Server Native Client], connection string keywords"
@@ -16,9 +12,8 @@ helpviewer_keywords:
   - "connection strings [SQL Server Native Client]"
   - "SQL Server Native Client, connection string keywords"
 ms.assetid: 16008eec-eddf-4d10-ae99-29db26ed6372
-caps.latest.revision: 79
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Using Connection String Keywords with SQL Server Native Client

@@ -1,19 +1,16 @@
 ---
 title: "Azure Data Lake Store Source | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/02/2017"
+ms.date: "08/16/2018"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "SQL13.DTS.DESIGNER.AFPADLSSRC.F1"
   - "sql14.dts.designer.afpadlssrc.f1"
 ms.assetid: f9c3311f-7316-48d6-bf10-d810e70b4304
-caps.latest.revision: 10
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
@@ -38,3 +35,7 @@ manager: craigg
         If the file format is Text, you must specify the **Column delimiter character** value. Also select **Column names in the first data row** if the first row in the file contains column names.  
   
 3.  After specifying the connection information, switch to the **Columns** page to map source columns to destination columns for the SSIS data flow.   
+
+## Text qualifier
+
+The **Azure Data Lake Store Source** does not support a text qualifier. If you have to specify a text qualifier to process your files correctly, consider downloading the files to your local computer and processing the files with the **Flat File Source**. The Flat File Source lets you specify a text qualifier. For more info, see [Flat File Source](flat-file-source.md).

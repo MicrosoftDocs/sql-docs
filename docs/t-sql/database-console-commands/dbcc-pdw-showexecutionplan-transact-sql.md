@@ -1,14 +1,10 @@
-﻿---
+---
 title: "DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/16/2017"
 ms.prod: ""
 ms.prod_service: "sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.service: sql-data-warehouse
-ms.suite: "sql"
-ms.component: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -27,7 +23,7 @@ Once query performance problems are understood for SMP [!INCLUDE[ssNoVersion](..
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
-Syntax for SQL Server:
+Syntax for Azure SQL Data Warehouse:
 
 ```sql
 DBCC PDW_SHOWEXECUTIONPLAN ( distribution_id, spid )  

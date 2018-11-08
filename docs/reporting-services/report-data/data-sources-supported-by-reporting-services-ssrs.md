@@ -1,16 +1,11 @@
 ---
 title: "Data Sources Supported by Reporting Services (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
+ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "report-data"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-data
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server data processing extension [Reporting Services]"
@@ -23,10 +18,8 @@ helpviewer_keywords:
   - "ODBC data processing extension"
   - "Reporting Services, data sources"
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
-caps.latest.revision: 96
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ---
 # Data Sources Supported by Reporting Services (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] retrieves report data from data sources through a modular and extensible data layer that uses data processing extensions. To retrieve report data from a data source, you must select a data processing extension that supports the type of data source, the version of software running on the data source, and the data source platform (32-bit or 64-bit [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]).  
@@ -63,7 +56,7 @@ manager: "kfile"
   
  For example, the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data extension is OLEDB-MD.  
   
- Many third-party standard [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] data providers are available as downloads from the [Microsoft Download Center](http://go.microsoft.com/fwlink/?linkid=51456) and from third-party sites. You can also search the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] public forum for information about third-party data providers.  
+ Many third-party standard [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] data providers are available as downloads from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?linkid=51456) and from third-party sites. You can also search the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] public forum for information about third-party data providers.  
   
 > [!NOTE]  
 >  Standard [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] data providers do not necessarily support all the functionality supplied by [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data processing extensions. In addition, some OLE DB data providers and ODBC drivers can be used to author and preview reports, but are not designed to support reports published on a report server. For example, the [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Jet is not supported on the report server. For more information, see [Data Processing Extensions and .NET Framework Data Providers &#40;SSRS&#41;](../../reporting-services/report-data/data-processing-extensions-and-net-framework-data-providers-ssrs.md).  
@@ -117,7 +110,7 @@ manager: "kfile"
 |[!INCLUDE[extEssbase](../../includes/extessbase-md.md)]|[Hyperion Essbase](#Hyperion)|Built-in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data processing extension|See Hyperion documentation for platform support.|Y|N/A|[!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 9.3.1|Y|N/A|  
 |Oracle relational database|[Oracle](#OracleClient)|Built-in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data processing extension|Requires Oracle client components 12c or higher.|Y|N/A|Oracle 11g, 11g R2, 12c|Y|Y|  
 |Teradata relational database|[Teradata](#Teradata)|Built-in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data processing extension|Extends .NET Data Provider for Teradata from Teradata.<br /><br /> Requires .NET Data Provider for Teradata from Teradata.<br /><br /> See Teradata documentation for platform support.|Y|N/A|Teradata v15<br /><br />Teradata v14<br /><br /> Teradata v13|Y|N|  
-|DB2 relational database|Customized registered data extension name||2004 Host Integration (HI) Server<br /><br /> See [HI Server documentation](http://msdn.microsoft.com/library/gg241192\(v=bts.10\).aspx).|Y|N/A|N/A|Y|N|  
+|DB2 relational database|Customized registered data extension name||2004 Host Integration (HI) Server<br /><br /> See [HI Server documentation](https://msdn.microsoft.com/library/gg241192\(v=bts.10\).aspx).|Y|N/A|N/A|Y|N|  
 |Generic OLE DB data source|OLEDB|Built-in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data processing extension|Any data source that supports OLE DB.<br /><br /> See the data source documentation for platform support.|Y|N/A|Any data source that supports OLE DB. See [Note](#OLEDBStandard).|Y|N/A|  
 |Generic ODBC data source|[ODBC](#ODBCGeneric)|Built-in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data processing extension|Any data source that supports ODBC.<br /><br /> See the data source documentation for platform support.|Y|N/A|Any data source that supports ODBC. See [Note](#ODBCGeneric).|Y|Y|  
   
@@ -135,7 +128,7 @@ manager: "kfile"
 > [!NOTE]  
 >  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] data processing extension is not supported at this time.  
   
- For more information about data processing extensions supported by Report Builder, see [Data Connections, Data Sources, and Connection Strings in Report Builder](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34) in the [Report Builder documentation](http://go.microsoft.com/fwlink/?LinkId=154494) on msdn.microsoft.com.  
+ For more information about data processing extensions supported by Report Builder, see [Data Connections, Data Sources, and Connection Strings in Report Builder](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34) in the [Report Builder documentation](https://go.microsoft.com/fwlink/?LinkId=154494) on msdn.microsoft.com.  
   
 ###  <a name="MicrosoftSQLServer"></a> Microsoft SQL Server Data Processing Extension  
  The data source type **Microsoft SQL Server** wraps and extends the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This data processing extension is natively compiled for and runs on x86 and [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]-based platforms.  
@@ -238,7 +231,7 @@ To install the Oracle Client tools you can do the following.
   
  Named parameters are supported by this extension. For Oracle version 11g or later, multivalue parameters are supported. For unnamed parameters that are position-dependent, use the OLE DB data processing extension with the data provider [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Oracle. For more information about configuring Oracle as a data source, see [How to use Reporting Services to configure and to access an Oracle data source](http://support.microsoft.com/kb/834305). For more information about additional permissions configuration, see [How to add permissions for the NETWORK SERVICE security principal](http://support.microsoft.com/kb/870668) in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base.  
   
- You can retrieve data from stored procedures with multiple input parameters, but the stored procedure must return only one output cursor. For more information, see the Oracle section in [Retrieving Data Using the DataReader](http://go.microsoft.com/fwlink/?LinkId=81758).  
+ You can retrieve data from stored procedures with multiple input parameters, but the stored procedure must return only one output cursor. For more information, see the Oracle section in [Retrieving Data Using the DataReader](https://go.microsoft.com/fwlink/?LinkId=81758).  
   
  For more information, see [Oracle Connection Type &#40;SSRS&#41;](../../reporting-services/report-data/oracle-connection-type-ssrs.md). For more information about the associated query designer, see [Graphical Query Designer User Interface](../../reporting-services/report-data/graphical-query-designer-user-interface.md).  
   
@@ -295,7 +288,7 @@ To install the Oracle Client tools you can do the following.
  The credentials that you can specify depend on the implementation that the client application uses. For more information, see [SharePoint List Connection Type &#40;SSRS&#41;](../../reporting-services/report-data/sharepoint-list-connection-type-ssrs.md).  
   
 ###  <a name="XML"></a> XML Data Processing Extension  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] includes an XML data processing extension so that you can use XML data in a report. The data can be retrieved from an XML document, a Web service, or a Web-based application that can be accessed by way of a URL. For more information, see [XML Connection Type &#40;SSRS&#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md). For more information about the associated query designer, see the text-based query designer section in [Graphical Query Designer User Interface](../../reporting-services/report-data/graphical-query-designer-user-interface.md). For examples, see [Reporting Services: Using XML and Web Service Data Sources](http://go.microsoft.com/fwlink/?LinkId=81654).  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] includes an XML data processing extension so that you can use XML data in a report. The data can be retrieved from an XML document, a Web service, or a Web-based application that can be accessed by way of a URL. For more information, see [XML Connection Type &#40;SSRS&#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md). For more information about the associated query designer, see the text-based query designer section in [Graphical Query Designer User Interface](../../reporting-services/report-data/graphical-query-designer-user-interface.md). For examples, see [Reporting Services: Using XML and Web Service Data Sources](https://go.microsoft.com/fwlink/?LinkId=81654).  
   
  [Return to Data sources table](#DataSourcesTable)  
   
@@ -309,13 +302,13 @@ To install the Oracle Client tools you can do the following.
   
  For more information, see [Hyperion Essbase Connection Type &#40;SSRS&#41;](../../reporting-services/report-data/hyperion-essbase-connection-type-ssrs.md). For more information about the associated query designer, see [Hyperion Essbase Query Designer User Interface](../../reporting-services/report-data/hyperion-essbase-query-designer-user-interface.md).  
   
- For more information about [!INCLUDE[extEssbase](../../includes/extessbase-md.md)], see [Using SQL Server 2005 Reporting Services with Hyperion Essbase](http://go.microsoft.com/fwlink/?LinkId=81970).  
+ For more information about [!INCLUDE[extEssbase](../../includes/extessbase-md.md)], see [Using SQL Server 2005 Reporting Services with Hyperion Essbase](https://go.microsoft.com/fwlink/?LinkId=81970).  
   
  [Return to Data sources table](#DataSourcesTable)  
   
 ## See Also  
  [Data Connections, Data Sources, and Connection Strings &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Report Datasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
- More questions? [Try the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+ More questions? [Try the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
   
   

@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: filestream
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 api_name: 
   - "OpenSqlFilestream"
@@ -15,9 +13,8 @@ api_location:
 helpviewer_keywords: 
   - "OpenSqlFilestream"
 ms.assetid: d8205653-93dd-4599-8cdf-f9199074025f
-caps.latest.revision: 45
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Access FILESTREAM Data with OpenSqlFilestream

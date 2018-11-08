@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 api_name: 
   - "RestoreEncryptionKey (WMI MSReportServer_ConfigurationSetting Class)"
@@ -18,10 +16,9 @@ topic_type:
 helpviewer_keywords: 
   - "RestoreEncryptionKey method"
 ms.assetid: 37e949f5-15af-4858-848a-f482ee94fcd9
-caps.latest.revision: 18
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: craigg
 ---
 # RestoreEncryptionKey Method (WMI MSReportServer_ConfigurationSetting)
   Reapplies the specified encryption key to the report server database.  

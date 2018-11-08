@@ -5,10 +5,8 @@ ms.date: "04/01/2016"
 ms.prod: sql
 ms.prod_service: "mds"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "master-data-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "collections [Master Data Services], reactivating"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "reactivating collections [Master Data Services]"
   - "leaf members [Master Data Services], reactivating"
 ms.assetid: bb4884c0-3658-4763-92d1-636804278b1c
-caps.latest.revision: 11
 author: leolimsft
 ms.author: lle
 manager: craigg

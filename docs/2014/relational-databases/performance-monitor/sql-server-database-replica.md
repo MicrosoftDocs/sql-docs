@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-cross-instance"
-ms.tgt_pltfrm: ""
+ms.technology:
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], monitoring"
@@ -15,9 +12,8 @@ helpviewer_keywords:
   - "performance counters [SQL Server], AlwaysOn Availability Groups"
   - "Availability Groups [SQL Server], performance counters"
 ms.assetid: a5f6bdce-2b13-4924-aaeb-b50b57d624d8
-caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # SQL Server, Database Replica

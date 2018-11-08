@@ -4,8 +4,6 @@ ms.custom: ""
 ms.date: "05/24/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Copyright"
@@ -15,9 +13,8 @@ helpviewer_keywords:
   - "undocumented [SQL Server]"
   - "documentation policy [SQL Server]"
 ms.assetid: 6854121d-429d-4d1b-9d64-342583e08378
-caps.latest.revision: 64
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mightypen
+ms.author: genemi
 manager: craigg
 ---
 # Legal Notice for Documentation

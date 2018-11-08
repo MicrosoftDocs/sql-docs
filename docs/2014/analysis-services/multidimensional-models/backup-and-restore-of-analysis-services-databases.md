@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.ssmsimbi.Backup.f1"
@@ -21,10 +19,9 @@ helpviewer_keywords:
   - "restoring databases [Analysis Services]"
   - "recovery [Analysis Services]"
 ms.assetid: 947eebd2-3622-479e-8aa6-57c11836e4ec
-caps.latest.revision: 52
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Backup and Restore of Analysis Services Databases
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] includes backup and restore so that you can recover a database and its objects from a particular point in time. Backup and restore is also a valid technique for migrating databases to upgraded servers, moving databases between servers, or deploying a database to a production server. For the purposes of data recovery, if you do not already have a backup plan and your data is valuable, you should design and implement a plan as soon as possible.  

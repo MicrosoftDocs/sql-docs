@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
+ms.technology: high-availability
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.agdashboard.policyeval.f1"
   - "swb.agdashboard.policyeval.f1"
 ms.assetid: 703e947f-d345-4506-be21-34bfbfa7bca6
-caps.latest.revision: 8
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Policy Evaluation Result (AlwaysOn)

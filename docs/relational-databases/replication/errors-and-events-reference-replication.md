@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "errors [SQL Server replication], troubleshooting"
@@ -18,7 +14,6 @@ helpviewer_keywords:
   - "errors [SQL Server replication]"
   - "errors and events reference [SQL Server replication]"
 ms.assetid: e67d1bab-47b6-441d-ab9c-251a2ca499e1
-caps.latest.revision: 25
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

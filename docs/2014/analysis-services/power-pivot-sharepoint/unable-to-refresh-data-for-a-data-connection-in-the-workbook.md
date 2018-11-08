@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 0f6fd52d-ac72-43e3-aa08-05a2d2bb873d
-caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Unable to refresh data for a data connection in the workbook. Try again or contact your system administrator. The following connections failed to refresh: PowerPivot Data
   For Excel workbooks that contain PowerPivot data, Excel Services returns this error if it submits a connection request to a PowerPivot server and the request fails.  

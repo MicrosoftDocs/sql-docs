@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "08/24/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "SQL12.DTS.DESIGNER.AFPADLSTASK.F1"
   - "SQL11.DTS.DESIGNER.AFPADLSTASK.F1"
 ms.assetid: 02b9edd7-6ef9-463e-abbf-e1830bcae875
-caps.latest.revision: 3
-author: "Lingxi-Li"
-ms.author: "lingxl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Azure Data Lake Store File System Task

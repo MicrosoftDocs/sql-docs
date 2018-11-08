@@ -1,25 +1,18 @@
 ---
 title: "Export a Report Using URL Access | Microsoft Docs"
-ms.date: "03/01/2017"
+ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "reporting-services"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.custom: ""
-ms.technology: 
+ms.technology: reporting-services
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "formats [Reporting Services], URL rendering"
   - "URL access [Reporting Services], rendering formats"
 ms.assetid: 6a3b7fc3-3d91-4d12-8371-42ea12e74517
-caps.latest.revision: 42
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ---
 # Export a Report Using URL Access
   You can optionally specify the format in which to render a report by using the *rs:Format* URL parameter.  The HTML4.0 and HTM5 formats (rendering extension) will render in the browser and for other formats, the browser will prompt to save the report output to a local file.  

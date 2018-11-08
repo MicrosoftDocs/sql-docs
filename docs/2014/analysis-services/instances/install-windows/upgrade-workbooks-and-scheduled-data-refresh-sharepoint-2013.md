@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: a49c4af4-e243-4926-be97-74da1f9d54eb
-caps.latest.revision: 18
-author: "markingmyname"
-ms.author: "maghan"
+author: minewiskan
+ms.author: owend
 manager: craigg
 ---
 # Upgrade Workbooks and Scheduled Data Refresh (SharePoint 2013)

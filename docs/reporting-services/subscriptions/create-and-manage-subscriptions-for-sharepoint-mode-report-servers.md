@@ -1,26 +1,19 @@
 ---
 title: "Create and Manage Subscriptions for SharePoint Mode Report Servers | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
+ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "subscriptions"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: subscriptions
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "subscriptions [Reporting Services], creating"
   - "subscriptions [Reporting Services], deleting"
   - "subscriptions [Reporting Services], managing"
 ms.assetid: 44be7ee2-33ce-46e4-9d1a-a20aaf43a227
-caps.latest.revision: 19
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ---
 # Create and Manage Subscriptions for SharePoint Mode Report Servers
   You can create [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] subscriptions to deliver reports from a SharePoint Web application that is integrated with a SharePoint mode report server. Subscriptions can deliver reports to a document library, file folder, or as e-mail. This topic summarizes the requirements and steps for creating a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] subscription.  
@@ -162,6 +155,6 @@ manager: "kfile"
  [E-Mail Delivery in Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)   
  [File Share Delivery in Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)   
  [SharePoint Library Delivery in Reporting Services](../../reporting-services/subscriptions/sharepoint-library-delivery-in-reporting-services.md)   
- [Configure a Report Server for E-Mail Delivery (SSRS Configuration Manager)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83)  
+ [Configure a Report Server for E-Mail Delivery (SSRS Configuration Manager)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83)  
   
   

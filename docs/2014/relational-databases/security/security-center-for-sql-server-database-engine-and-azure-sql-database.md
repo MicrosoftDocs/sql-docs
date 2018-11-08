@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "09/23/2015"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-security"
-ms.tgt_pltfrm: ""
+ms.technology: security
 ms.topic: conceptual
 f1_keywords: 
   - "Security [SQL Server]"
@@ -17,9 +14,8 @@ helpviewer_keywords:
   - "database security [SQL Server]"
   - "databases [SQL Server], security"
 ms.assetid: dfb39d16-722a-4734-94bb-98e61e014ee7
-caps.latest.revision: 50
-author: "craigg-msft"
-ms.author: "craigg"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Security Center for SQL Server Database Engine and Azure SQL Database

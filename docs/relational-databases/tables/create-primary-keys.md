@@ -1,27 +1,22 @@
-﻿---
+---
 title: "Create Primary Keys | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: table-view-index
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "primary keys [SQL Server], creating"
 ms.assetid: 85c623ca-4656-4d70-a9db-ee4d897cd214
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create Primary Keys
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
-
- > For content related to previous versions of SQL Server, see [Create Primary Keys](https://msdn.microsoft.com/en-US/library/ms189039(SQL.120).aspx).
 
   You can define a primary key in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. Creating a primary key automatically creates a corresponding unique clustered index, or a nonclustered index if specified as such.  
   
@@ -105,8 +100,10 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
 3.  Copy and paste the following example into the query window and click **Execute**. The example creates a table and defines a primary key on the column `CustomerID` and a clustered index on `TransactionID`.  
   
     ```sql  
+    -- Select appropriate database
     USE AdventureWorks2012;  
     GO  
+    -- Create table to add the clustered index
     CREATE TABLE Production.TransactionHistoryArchive1  
     (  
        CustomerID uniqueidentifier DEFAULT NEWSEQUENTIALID(),

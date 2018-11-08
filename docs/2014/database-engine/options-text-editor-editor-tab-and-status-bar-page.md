@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.sqleditors.editorcontextsettings"
   - "VS.ToolsOptionsPages.Text_Editor.EditorTabAndStatusBar"
 ms.assetid: e4815678-7885-4631-878f-c6a2b857ee05
-caps.latest.revision: 15
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Options (Text Editor: Editor Tab and Status Bar Page)

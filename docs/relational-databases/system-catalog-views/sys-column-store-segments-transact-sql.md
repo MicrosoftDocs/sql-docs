@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "01/15/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "column_store_segments"
@@ -20,9 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.column_store_segments catalog view"
 ms.assetid: 1253448c-2ec9-4900-ae9f-461d6b51b2ea
-caps.latest.revision: 20
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # sys.column_store_segments (Transact-SQL)

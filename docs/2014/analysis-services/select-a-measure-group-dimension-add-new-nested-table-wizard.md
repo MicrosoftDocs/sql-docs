@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dm.dmwizard.addnestedtable.selectmeasuregroup.f1"
 ms.assetid: 66194214-be3b-4df2-a676-216b986c8838
-caps.latest.revision: 24
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Select a Measure Group Dimension (Add New Nested Table Wizard)
   Use the **Select a Measure Group Dimension** page to select a dimension in the measure group to use as a nested table.  

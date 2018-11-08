@@ -1,14 +1,12 @@
 ---
 title: Troubleshoot SQL Server on Linux | Microsoft Docs
-description: Provides troubleshooting tips for using SQL Server 2017 on Linux.
-author: annashres 
-ms.author: anshrest 
+description: Provides troubleshooting tips for using SQL Server on Linux.
+author: rothja 
+ms.author: jroth 
 manager: craigg
-ms.date: 04/30/2018
-ms.topic: article
+ms.date: 05/01/2018
+ms.topic: conceptual
 ms.prod: sql
-ms.component: ""
-ms.suite: "sql"
 ms.custom: "sql-linux"
 ms.technology: linux
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
@@ -106,7 +104,7 @@ If you prefer, you can also convert the files to UTF-8 to read them with ‘more
    ```
 ## Extended events
 
-Extended events can be queried via a SQL command.  More information about extended events can be found [here](https://technet.microsoft.com/en-us/library/bb630282.aspx):
+Extended events can be queried via a SQL command.  More information about extended events can be found [here](https://technet.microsoft.com/library/bb630282.aspx):
 
 ## Crash dumps 
 
@@ -187,6 +185,14 @@ As a last resort, you can choose to rebuild the master and model databases back 
    ```bash
    sudo systemctl start mssql-server
    ```
+
+## Improve performance
+
+There are many factors that affect performance, including database design, hardware, and workload demands. If you are looking to improve performance, start by reviewing the best practices in the article, [Performance best practices and configuration guidelines for SQL Server on Linux](sql-server-linux-performance-best-practices.md). Then explore some of the avilable tools for troubleshooting performance problems.
+
+- [Query Store](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
+- [System dynamic management views (DMVs)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
+- [Performance Dashboard in SQL Server Management Studio](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-performance-dashboard-built-in/)
 
 ## Common issues
 

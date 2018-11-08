@@ -1,34 +1,27 @@
 ---
 title: "Create, Delete, or Modify a Folder (web portal) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.component: "report-server"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-server
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 70a38879-856c-414b-8479-5f9dead38f15
-caps.latest.revision: 6
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ---
 # Create, Delete, or Modify a Folder (web portal)
   You can create folders to organize and manage the items you publish to a report server. Creating folders can help users find reports of interest to them. For content managers, folders provide a framework for applying permissions. You can create role assignments on specific folders to restrict access to reports that are in development or that should not be widely distributed.  
   
 #### To create a folder  
   
-1.  Start the [Report Manager  &#40;SSRS Native Mode&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  Start the [Report Manager  &#40;SSRS Native Mode&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  In the web portal, select **Folder** under the **New** menu drop down. Or, to create a folder under an existing folder, navigate to that folder and select **Folder** under the **New** menu drop down.  
   
      The **Create a new folder in** dialog opens.  
   
-3.  Type a folder name. A folder name can include spaces, but cannot include reserved characters that are used for URL encoding: ; ? : @ & = + , $ / * < > |. You cannot type a series of folder names to create several folders at once.  
+3.  Type a folder name. A folder name can include spaces, but cannot include reserved characters that are used for URL encoding: \; \? \: \@ \& \= \+ \, \$ \/ \* \< \> \|. You cannot type a series of folder names to create several folders at once.  
   
 4.  Select **Create**.  
   

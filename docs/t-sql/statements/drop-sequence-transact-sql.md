@@ -5,9 +5,7 @@ ms.date: "05/11/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "DROP SEQUENCE"
@@ -18,9 +16,8 @@ helpviewer_keywords:
   - "DROP SEQUENCE statement"
   - "sequence number object, dropping"
 ms.assetid: c25772d3-61af-4aa7-b58b-a6f67a793e3d
-caps.latest.revision: 20
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # DROP SEQUENCE (Transact-SQL)

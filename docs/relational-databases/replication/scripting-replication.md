@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "scripts [SQL Server replication], replication objects"
@@ -19,7 +15,6 @@ helpviewer_keywords:
   - "scripts [SQL Server replication]"
   - "transactional replication, scripting"
 ms.assetid: e50fac44-54c0-470c-a4ea-9c111fa4322b
-caps.latest.revision: 36
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

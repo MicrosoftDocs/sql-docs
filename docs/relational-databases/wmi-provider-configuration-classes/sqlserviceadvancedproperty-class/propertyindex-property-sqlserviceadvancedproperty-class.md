@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "wmi"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: wmi
 ms.topic: "reference"
 apiname: 
   - "PropertyIndex Property (SqlServiceAdvancedProperty Class)"
@@ -19,7 +15,6 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "PropertyIndex property"
 ms.assetid: b18b45a2-e187-44f5-a8c9-26fd9828b6c6
-caps.latest.revision: 33
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg

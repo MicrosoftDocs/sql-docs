@@ -5,9 +5,7 @@ ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "TRY_CONVERT_TSQL"
@@ -17,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "TRY_CONVERT function"
 ms.assetid: 3e6e7825-6482-4cb2-a8c2-9abc99e265a6
-caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # TRY_CONVERT (Transact-SQL)

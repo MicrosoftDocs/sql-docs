@@ -4,17 +4,12 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "performance-monitor"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: performance-monitor
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Activity Monitor [SQL Server]"
 ms.assetid: 1e6c430d-3a2a-468e-a3d5-ef5459c36c15
-caps.latest.revision: 7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

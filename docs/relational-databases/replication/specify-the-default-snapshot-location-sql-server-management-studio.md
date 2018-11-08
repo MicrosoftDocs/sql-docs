@@ -4,18 +4,13 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "snapshots [SQL Server replication], default locations"
   - "default snapshot locations"
 ms.assetid: 27c5d9ad-a915-4c59-a8b7-82e3af61ac4d
-caps.latest.revision: 38
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

@@ -4,19 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-cross-instance"
-ms.tgt_pltfrm: ""
+ms.technology:
 ms.topic: conceptual
 helpviewer_keywords: 
   - "jobs [SQL Server Agent], modifying"
   - "modifying jobs"
   - "SQL Server Agent jobs, modifying"
 ms.assetid: dd5e5f20-20c4-4ab9-a19a-db87577dcd43
-caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Modify a Job

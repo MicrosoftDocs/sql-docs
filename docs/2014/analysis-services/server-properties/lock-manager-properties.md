@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "lock manager properties [Analysis Services]"
@@ -15,10 +13,9 @@ helpviewer_keywords:
   - "DefaultLockTimeoutMS property"
   - "DeadlockDetectionGranularityMS property"
 ms.assetid: 15fe9ead-825b-4ac3-9191-7a07caa2861b
-caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Lock Manager Properties
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supports the lock manager server properties listed in the following table. For more information about additional server properties and how to set them, see [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  

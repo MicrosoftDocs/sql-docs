@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "feature selection, Setup"
@@ -15,9 +13,8 @@ helpviewer_keywords:
   - "SQL Server Installation Wizard, Components to Install page"
   - "Components to Install page [SQL Server Installation Wizard]"
 ms.assetid: 73182088-153b-4634-a060-d14d1fd23b70
-caps.latest.revision: 86
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Feature Selection

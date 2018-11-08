@@ -38,13 +38,13 @@ manager: kfile
   
  To determine the version of the workbook, open it in Excel and check which data provider is specified in the connection string. A SQL Server 2008 R2 workbook uses MSOLAP.4 as its data provider.  
   
- To work around this issue, you can upgrade the workbook. Alternatively, you can install client libraries from the SQL Server 2008 R2 version of Analysis Services on the physical computers running [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint or Excel Services, [Install the Analysis Services OLE DB Provider on SharePoint Servers](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859).  
+ To work around this issue, you can upgrade the workbook. Alternatively, you can install client libraries from the SQL Server 2008 R2 version of Analysis Services on the physical computers running [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint or Excel Services, [Install the Analysis Services OLE DB Provider on SharePoint Servers](http://msdn.microsoft.com/2c62daf9-1f2d-4508-a497-af62360ee859).  
   
  **Scenario 2b: Excel Services is running on an application server that has the wrong version of the client libraries**  
   
  By default, SharePoint Server 2010 installs the SQL Server 2008 version of the Analysis Services OLE DB provider on application servers that run Excel Services. In a farm that supports [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data access, all physical servers running applications that request [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data, such as Excel Services and [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint, must use a later version of the data provider.  
   
- Servers that run [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint get the updated OLE DB data provider automatically. Other servers, such as those running a standalone instance Excel Services without [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint on the same computer, must be patched to use the newer client libraries. For more information, see [Install the Analysis Services OLE DB Provider on SharePoint Servers](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859).  
+ Servers that run [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint get the updated OLE DB data provider automatically. Other servers, such as those running a standalone instance Excel Services without [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint on the same computer, must be patched to use the newer client libraries. For more information, see [Install the Analysis Services OLE DB Provider on SharePoint Servers](http://msdn.microsoft.com/2c62daf9-1f2d-4508-a497-af62360ee859).  
   
  **Scenario 3: Domain controller is unavailable**  
   

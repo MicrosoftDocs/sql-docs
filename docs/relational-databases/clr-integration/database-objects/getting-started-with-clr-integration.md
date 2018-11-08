@@ -3,11 +3,9 @@ title: "Getting Started with CLR Integration | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/02/2016"
 ms.prod: sql
-ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: reference
-ms.topic: "get-started-article"
+ms.technology: clr
+ms.topic: quickstart
 dev_langs: 
   - "TSQL"
   - "VB"
@@ -24,7 +22,6 @@ helpviewer_keywords:
   - "Hello World example [CLR integration]"
   - "library [CLR integration]"
 ms.assetid: c73e628a-f54a-411a-bfe3-6dae519316cc
-caps.latest.revision: 62
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

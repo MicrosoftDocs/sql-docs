@@ -5,12 +5,9 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 723e2680-a0c5-4a7d-a319-1e49e41078cf
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -26,7 +23,7 @@ manager: craigg
   
 |Topic|Description|  
 |-----------|-----------------|  
-|[Handling Errors](../../connect/jdbc/handling-errors.md)|Describes how to handle errors that are returned from [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
+|[Handling Errors](../../connect/jdbc/handling-errors.md)|Describes how to handle errors that are returned from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Getting the Driver Version](../../connect/jdbc/getting-the-driver-version.md)|Describes how to determine which version of the JDBC driver is installed.|  
 |[Tracing Driver Operation](../../connect/jdbc/tracing-driver-operation.md)|Describes how to enable tracing when using the JDBC driver.|  
 |[Troubleshooting Connectivity](../../connect/jdbc/troubleshooting-connectivity.md)|Describes how to troubleshoot database connectivity.|  

@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/14/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
+ms.technology: high-availability
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.failoverwizard.results.f1"
@@ -15,9 +12,8 @@ f1_keywords:
   - "sql12.swb.adddatabasewizard.results.f1"
   - "sql12.swb.newagwizard.results.f1"
 ms.assetid: d80b14eb-60db-4351-90ad-6c179d235aa3
-caps.latest.revision: 8
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Results Page (AlwaysOn Availability Group Wizards)

@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "SQLServerStatement.executeUpdate (java.lang.String[])"
@@ -15,7 +13,6 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: 2f44a689-65c8-4c94-9574-e9c08ea7918e
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg

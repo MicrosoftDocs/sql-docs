@@ -4,20 +4,17 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.datasampleviewerdialog.f1"
 helpviewer_keywords: 
   - "Data Sample Viewer dialog box"
 ms.assetid: 590383cd-30b3-4e3f-a1cf-3f9ec7ba48e3
-caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Data Sample Viewer Dialog Box (Analysis Services - Multidimensional Data)
   Use the **Data Sample Viewer** dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to view the first 1000 records of a fact table that will be used to provide measures for a new cube.  

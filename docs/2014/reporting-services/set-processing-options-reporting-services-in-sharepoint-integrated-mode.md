@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SharePoint integration [Reporting Services], content management"
   - "snapshots [Reporting Services], creating"
 ms.assetid: 453b19a1-739a-4b67-aeea-2069b52204e1
-caps.latest.revision: 14
-author: "markingmyname"
-ms.author: "maghan"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: craigg
 ---
 # Set Processing Options (Reporting Services in SharePoint Integrated Mode)
   You can set processing options on a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report to determine when data processing occurs. You can also set a time-out value for report processing, and options that determine whether report history is enabled for the current report.  

@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "12/29/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "administering Report Builder"
 ms.assetid: 2c9a5814-17bf-4947-8fb3-6269e7caa416
-caps.latest.revision: 29
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: maggiesmsft
+ms.author: douglasl
+manager: craigg
 ---
 # Install, Uninstall, and Report Builder Support
   Report Builder is a report authoring tool that you use to create, update, and share reports, report parts and shared datasets. Report Builder is available in two versions: stand-alone and [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]. The stand-alone version is installed on your computer by you or an administrator. The [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] version is installed automatically with [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] and downloaded to your computer from Report Manager or a SharePoint site integrated with [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  

@@ -4,19 +4,15 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-security"
-ms.tgt_pltfrm: ""
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords: 
   - "audits [SQL Server], viewing logs"
   - "viewing audit logs"
   - "logs [SQL Server], audit"
 ms.assetid: e8feaca0-7852-422b-895a-319b965d8d9b
-caps.latest.revision: 12
-author: "craigg-msft"
-ms.author: "craigg"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # View a SQL Server Audit Log

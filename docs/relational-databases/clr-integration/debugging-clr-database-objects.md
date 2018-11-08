@@ -3,10 +3,8 @@ title: "Debugging CLR Database Objects | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: reference
+ms.technology: clr
 ms.topic: "reference"
 helpviewer_keywords: 
   - "database objects [CLR integration], debugging"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "building database objects [CLR integration], debugging"
   - "common language runtime [SQL Server], debugging"
 ms.assetid: 1332035c-d6ed-424d-8234-46ad21168319
-caps.latest.revision: 46
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

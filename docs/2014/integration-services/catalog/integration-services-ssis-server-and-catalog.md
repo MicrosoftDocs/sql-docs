@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "packages [Integration Services], managing"
   - "managing packages [Integration Services]"
 ms.assetid: 6d667bba-7c25-492a-8f4d-70ebaca28f40
-caps.latest.revision: 38
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Integration Services (SSIS) Server

@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "DiffGrams [SQLXML], examples"
@@ -16,9 +14,8 @@ helpviewer_keywords:
   - "diffgr:parentID"
   - "parentID annotation"
 ms.assetid: fc148583-dfd3-4efb-a413-f47b150b0975
-caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # DiffGram Examples (SQLXML 4.0)

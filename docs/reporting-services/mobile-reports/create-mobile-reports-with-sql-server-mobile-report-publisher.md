@@ -1,22 +1,15 @@
 ---
 title: "Create mobile reports with SQL Server Mobile Report Publisher | Microsoft Docs"
 description: "Learn about Reporting Services mobile reports for mobile devices, connected to on-premises data, with an assortment of data visualizations."
-ms.custom: ""
-ms.date: "03/30/2017"
+ms.date: 03/30/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.component: "mobile-reports"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: mobile-reports
 
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+ms.topic: conceptual
 ms.assetid: a5a8dbf6-4c3a-435d-8188-d6656c32f229
-caps.latest.revision: 35
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Create mobile reports with SQL Server Mobile Report Publisher
 Learn about [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] mobile reports, optimized for mobile devices and connected to on-premises data, with an assortment of data visualizations. 
@@ -35,7 +28,7 @@ With [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)], you can 
 ## Create [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  mobile reports  
   
 These articles will help you get started.
--  Download [SQL Server Mobile Report Publisher](http://go.microsoft.com/fwlink/?LinkID=733527)  
+-  Download [SQL Server Mobile Report Publisher](https://go.microsoft.com/fwlink/?LinkID=733527)  
 -  [Create a Reporting Services mobile report](../../reporting-services/mobile-reports/create-a-reporting-services-mobile-report.md)  
 -  [End-to-end walkthrough: Create mobile reports and KPIs in SQL Server 2016 Reporting Services](http://christopherfinlan.com/2015/12/21/how-to-create-mobile-reports-and-kpis-in-sql-server-reporting-services-2016-an-end-to-end-walkthrough/) (Christopher Finlan's blog)  
 - [Design first, or data first](../../reporting-services/mobile-reports/design-first-or-data-first-when-creating-in-reporting-services-mobile-reports.md): Decide whether to design your report first with simulated data, or start with your own data.  

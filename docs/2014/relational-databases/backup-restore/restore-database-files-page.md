@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
+ms.technology: backup-restore
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.restoredb.files.f1 in the code"
   - "sql12.swb.restoredb.files.f1"
 ms.assetid: 714c36ea-a9f9-43a4-99f9-a6f73d1baf8e
-caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Restore Database (Files Page)

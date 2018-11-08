@@ -4,20 +4,17 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Analysis Services, technical reference"
   - "multidimensional data [Analysis Services], technical reference"
   - "technical reference [Analysis Services - multidimensional data]"
 ms.assetid: 1226c5a4-fd88-469c-81fe-3f664ab66e5e
-caps.latest.revision: 20
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Technical Reference (SSAS)
   Find the tools, languages, and PowerShell reference documentation for using or administering [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -45,8 +42,8 @@ manager: "mblythe"
   
 ## See Also  
  [Developer's Guide &#40;Analysis Services&#41;](../analysis-services-developer-documentation.md)   
- [Analysis Services Schema Rowsets](../schema-rowsets/analysis-services-schema-rowsets.md)   
- [Analysis Services Scripting Language &#40;ASSL&#41; Reference](../scripting/analysis-services-scripting-language-assl-for-xmla.md)   
- [XML for Analysis  &#40;XMLA&#41; Reference](../xmla/xml-for-analysis-xmla-reference.md)  
+ [Analysis Services Schema Rowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets)   
+ [Analysis Services Scripting Language &#40;ASSL&#41; Reference](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
+ [XML for Analysis  &#40;XMLA&#41; Reference](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)  
   
   

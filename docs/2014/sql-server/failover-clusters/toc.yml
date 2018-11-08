@@ -1,0 +1,13 @@
+- name: High Availability Solutions with SQL Server 2014
+  href: high-availability-solutions-sql-server.md
+  items:
+  - name: Automatic Page Repair (For Availability Groups and Database Mirroring)
+    href: automatic-page-repair-availability-groups-database-mirroring.md
+  - name: Management of Logins and Jobs After Role Switching
+    href: management-of-logins-and-jobs-after-role-switching-sql-server.md
+  - name: Troubleshoot Orphaned Users
+    href: troubleshoot-orphaned-users-sql-server.md
+- name: SQL Server Failover Cluster Installation +
+  href: install/sql-server-failover-cluster-installation.md
+- name: Windows Server Failover Clustering (WSFC) +
+  href: windows/windows-server-failover-clustering-wsfc-with-sql-server.md

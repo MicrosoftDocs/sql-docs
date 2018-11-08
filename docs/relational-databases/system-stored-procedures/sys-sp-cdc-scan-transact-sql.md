@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.sp_cdc_scan_TSQL"
@@ -20,9 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_cdc_scan"
 ms.assetid: 46e4294c-97b8-47d6-9ed9-b436a9929353
-caps.latest.revision: 20
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # sys.sp_cdc_scan (Transact-SQL)

@@ -6,14 +6,11 @@ ms.date: "02/09/2017"
 ms.prod: "sql"
 ms.technology: ssdt
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql.data.tools.SqlProjectImportSnapshotSummaryDialog.dialog"
   - "sql.data.tools.SqlProjectImportSnapshotDialog.dialog"
 ms.assetid: bed670a3-13bd-4d88-91a1-58d5b9524a97
-caps.latest.revision: 22
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"

@@ -5,15 +5,12 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "expressions [Integration Services], syntax"
   - "syntax [Integration Services]"
 ms.assetid: 61c053c5-1182-4ad0-b804-51cbd19aa0ba
-caps.latest.revision: 48
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
@@ -33,7 +30,7 @@ manager: craigg
 ## Identifiers  
  Expressions can include column and variable identifiers. The columns can originate in the data source or can be created by transformations in the data flow. Expressions can use lineage identifiers to refer to columns. Lineage identifiers are numbers that uniquely identify package elements. Lineage identifiers, referenced in an expression, must include the pound (#) prefix. For example, the lineage identifier 138 is referenced using #138.  
   
- Expressions can include the system variables that [!INCLUDE[ssIS](../../includes/ssis-md.md)] provides and custom variables. Variables, when referenced in an expression, must include the @ prefix. For example, the `Counter` variable is referenced using @Counter. The @ character is not part of the variable name; it only indicates to the expression evaluator that the identifier is a variable. For more information, see [Identifiers &#40;SSIS&#41;](../../integration-services/expressions/identifiers-ssis.md).  
+ Expressions can include the system variables that [!INCLUDE[ssIS](../../includes/ssis-md.md)] provides and custom variables. Variables, when referenced in an expression, must include the \@ prefix. For example, the `Counter` variable is referenced using \@Counter. The \@ character is not part of the variable name; it only indicates to the expression evaluator that the identifier is a variable. For more information, see [Identifiers &#40;SSIS&#41;](../../integration-services/expressions/identifiers-ssis.md).  
   
 ## Literals  
  Expressions can include numeric, string, and Boolean literals. String literals used in expressions must be enclosed in quotation marks. Numeric and Boolean literals do not take quotation marks. The expression language includes escape sequences for characters that are frequently escaped. For more information, see [Literals &#40;SSIS&#41;](../../integration-services/expressions/numeric-string-and-boolean-literals.md).  

@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-cross-instance"
-ms.tgt_pltfrm: ""
+ms.technology:
 ms.topic: conceptual
 f1_keywords: 
   - "vdt.ppg.joinline"
   - "vdtsql.chm:69638"
 ms.assetid: 0d9516bb-4ad3-4fcf-bb77-93474dea698f
-caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Join Dialog Box (Visual Database Tools)

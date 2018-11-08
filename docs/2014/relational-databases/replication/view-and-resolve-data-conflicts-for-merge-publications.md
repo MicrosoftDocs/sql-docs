@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "replication"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "merge replication conflict resolution [SQL Server replication], viewing conflicts"
   - "viewing conflict information"
   - "conflict resolution [SQL Server replication], merge replication"
 ms.assetid: aeee9546-4480-49f9-8b1e-c71da1f056c7
-caps.latest.revision: 40
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # View and Resolve Data Conflicts for Merge Publications (SQL Server Management Studio)

@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "dimensions [Analysis Services], Business Intelligence enhancements"
@@ -16,10 +14,9 @@ helpviewer_keywords:
   - "unary operators"
   - "custom aggregations [Analysis Services]"
 ms.assetid: 3199a6c2-a06d-47b9-bd1c-604dbb085318
-caps.latest.revision: 28
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Add a Custom Aggregation to a Dimension
   Add a custom aggregation enhancement to a cube or dimension to replace the default aggregations that are associated with a dimension member with a different unary operator. This enhancement specifies a unary operator column in the dimension table that defines rollup for members in a parent-child hierarchy. The unary operator acts on the parent attribute in a parent-child hierarchy.  

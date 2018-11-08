@@ -4,17 +4,12 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "F1 Help [SQL Server replication]"
 ms.assetid: 0c8c282a-d428-417f-ac83-7f37593d40c5
-caps.latest.revision: 19
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

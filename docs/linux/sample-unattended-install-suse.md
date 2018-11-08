@@ -1,14 +1,12 @@
 ---
 title: Unattended install for SQL Server on SUSE Linux Enterprise Server | Microsoft Docs
 description: SQL Server Script Sample - Unattended Install on SUSE Linux Enterprise Server
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
 ms.date: 10/02/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
-ms.component: ""
-ms.suite: "sql"
 ms.custom: "sql-linux"
 ms.technology: linux
 ---

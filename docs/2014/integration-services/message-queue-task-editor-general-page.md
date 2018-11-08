@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.msgqueuetask.general.f1"
 helpviewer_keywords: 
   - "Message Queue Task Editor"
 ms.assetid: 09368b18-37a5-4321-a173-7cfe5d42d2a2
-caps.latest.revision: 25
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Message Queue Task Editor (General Page)

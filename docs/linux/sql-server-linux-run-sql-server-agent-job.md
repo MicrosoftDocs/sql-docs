@@ -5,10 +5,8 @@ author: rothja
 ms.author: jroth 
 manager: craigg
 ms.date: 02/20/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
-ms.component: ""
-ms.suite: "sql"
 ms.custom: "sql-linux"
 ms.technology: linux
 ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
@@ -32,7 +30,7 @@ For known issues with SQL Server Agent on Linux, see the [Release Notes](sql-ser
 The following prerequisites are required to complete this tutorial:
 
 * Linux machine with the following prerequisites:
-  * SQL Server 2017 ([RHEL](quickstart-install-connect-red-hat.md), [SLES](quickstart-install-connect-suse.md), or [Ubuntu](quickstart-install-connect-ubuntu.md)) with command-line tools.
+  * SQL Server ([RHEL](quickstart-install-connect-red-hat.md), [SLES](quickstart-install-connect-suse.md), or [Ubuntu](quickstart-install-connect-ubuntu.md)) with command-line tools.
 
 The following prerequisites are optional:
 
@@ -41,7 +39,7 @@ The following prerequisites are optional:
 
 ## Enable SQL Server Agent
 
-To use SQL Server Agent on Linux, you must first enable SQL Server Agent on a machine that already has SQL Server 2017 installed.
+To use SQL Server Agent on Linux, you must first enable SQL Server Agent on a machine that already has SQL Server installed.
 
 1. To enable SQL Server Agent, follow the step below.
   ```bash

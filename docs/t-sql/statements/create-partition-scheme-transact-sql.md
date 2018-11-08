@@ -5,9 +5,7 @@ ms.date: "04/10/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "CREATE PARTITION SCHEME"
@@ -28,9 +26,8 @@ helpviewer_keywords:
   - "partitioned tables [SQL Server], filegroups"
   - "mapping partitions [SQL Server]"
 ms.assetid: 5b21c53a-b4f4-4988-89a2-801f512126e4
-caps.latest.revision: 39
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # CREATE PARTITION SCHEME (Transact-SQL)

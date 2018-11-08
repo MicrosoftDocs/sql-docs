@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "namespaces [Reporting Services]"
@@ -15,10 +13,9 @@ helpviewer_keywords:
   - "xmldp [Reporting Services]"
   - "XML [Reporting Services], data retrieval"
 ms.assetid: d203886f-faa1-4a02-88f5-dd4c217181ef
-caps.latest.revision: 46
-author: "markingmyname"
-ms.author: "maghan"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: craigg
 ---
 # XML Query Syntax for XML Report Data (SSRS)
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], you can create datasets for XML data sources. After you define a data source, you create a query for the dataset. Depending on the type of XML data pointed to by the data source, you create the dataset query by including an XML `Query` or an element path. An XML `Query` starts with a **\<Query>** tag and includes namespaces and XML elements that vary depending on the data source. An element path is namespace-independent and specifies which nodes and node attributes to use from the underlying XML data with an XPath-like syntax. For more information about element paths, see [Element Path Syntax for XML Report Data &#40;SSRS&#41;](report-data-ssrs.md).  

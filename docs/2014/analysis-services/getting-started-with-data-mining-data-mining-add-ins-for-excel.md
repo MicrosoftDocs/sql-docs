@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: cbe10a19-e194-408e-a65b-5fdf3fb1e880
-caps.latest.revision: 9
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Getting Started with Data Mining (Data Mining Add-ins for Excel)
   Data mining is the process of discovering meaningful patterns in data. Data mining is a natural complement to the process of exploring and understanding your data through traditional BI. Machine algorithms can process very large amounts of data and discover patterns and trends that would otherwise be hidden.  

@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
+ms.technology: search
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.fulltextsearch.ftcatalogproperties.schedule.f1"
 ms.assetid: 8681506b-5dc6-4165-beb6-1e76ca470425
-caps.latest.revision: 19
-author: "craigg-msft"
-ms.author: "craigg"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Full-Text Catalog Properties (Population Schedule Page)

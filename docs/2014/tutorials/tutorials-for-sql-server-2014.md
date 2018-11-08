@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "data-quality-services"
@@ -14,12 +13,10 @@ ms.technology:
   - "replication"
   - "reporting-services-native"
   - "reporting-services-sharepoint"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
-caps.latest.revision: 30
-author: "mgblythe"
-ms.author: "mblythe"
+author: craigg-msft
+ms.author: craigg
 manager: craigg
 ---
 # Tutorials for SQL Server 2014

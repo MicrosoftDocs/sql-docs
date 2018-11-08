@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
@@ -17,7 +15,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "Source property [ADO Error]"
 ms.assetid: 4044ba15-f013-4c4c-9fe1-b4410fe9a778
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -29,7 +26,7 @@ Indicates the name of the object or application that originally generated an err
  Returns a **String** value that indicates the name of an object or application.  
   
 ## Remarks  
- Use the **Source** property on an [Error](../../../ado/reference/ado-api/error-object.md) object to determine the name of the object or application that originally generated an error. This could be the object's class name or programmatic ID. For errors in ADO, the property value will be **ADODB.***ObjectName*, where *ObjectName* is the name of the object that triggered the error. For ADOX and ADO MD, the value will be **ADOX.***ObjectName* and **ADOMD.***ObjectName,* respectively.  
+ Use the **Source** property on an [Error](../../../ado/reference/ado-api/error-object.md) object to determine the name of the object or application that originally generated an error. This could be the object's class name or programmatic ID. For errors in ADO, the property value will be **ADODB.**_ObjectName_, where *ObjectName* is the name of the object that triggered the error. For ADOX and ADO MD, the value will be **ADOX.**_ObjectName_ and **ADOMD.**_ObjectName_, respectively.  
   
  Based on the error documentation from the **Source**, [Number](../../../ado/reference/ado-api/number-property-ado.md), and [Description](../../../ado/reference/ado-api/description-property.md) properties of **Error** objects, you can write code that will handle the error appropriately.  
   

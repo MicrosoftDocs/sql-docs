@@ -5,9 +5,7 @@ ms.date: "05/10/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "DROP_AGGREGATE_TSQL"
@@ -22,9 +20,8 @@ helpviewer_keywords:
   - "deleting user-defined functions"
   - "DROP AGGREGATE statement"
 ms.assetid: 84ffc4e7-c451-4f1f-9a67-7fc3a120e53f
-caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # DROP AGGREGATE (Transact-SQL)

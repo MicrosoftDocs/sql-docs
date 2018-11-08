@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-ole"
-ms.tgt_pltfrm: ""
+ms.technology: stored-procedures
 ms.topic: conceptual
 helpviewer_keywords: 
   - "data types [SQL Server], OLE Automation"
@@ -17,9 +14,8 @@ helpviewer_keywords:
   - "OLE Automation [SQL Server], result sets"
   - "arrays [SQL Server]"
 ms.assetid: b2f99e33-2303-427c-94b9-9d55f8e2a6ab
-caps.latest.revision: 21
-author: "craigg-msft"
-ms.author: "craigg"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # OLE Automation Result Sets

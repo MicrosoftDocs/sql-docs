@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "replication"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "inline data validation [SQL Server replication]"
@@ -19,9 +17,8 @@ helpviewer_keywords:
   - "merge replication data validation [SQL Server replication], about data validation"
   - "validating replicated data"
 ms.assetid: f7500a2b-61cb-41b5-816d-27609a6c58e7
-caps.latest.revision: 45
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Validate Replicated Data

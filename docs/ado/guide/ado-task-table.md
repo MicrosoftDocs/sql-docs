@@ -3,8 +3,6 @@ title: "ADO Task Table | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,7 +11,6 @@ helpviewer_keywords:
   - "tasks [ADO]"
   - "ADO, tasks"
 ms.assetid: 2fad33fb-c858-4dcb-98dc-3dfd0e555055
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg

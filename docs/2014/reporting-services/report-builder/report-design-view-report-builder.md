@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "10440"
@@ -21,10 +19,9 @@ helpviewer_keywords:
   - "user interface"
   - "overview of Report Builder"
 ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
-caps.latest.revision: 20
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
 ---
 # Report Design View (Report Builder)
   The Report Builder window is designed to help you easily organize your report resources and quickly build the reports you need. The design surface is at the center of the window, with the Ribbon above and the Report Data, Grouping, and Properties panes and Report Part Gallery to the left, below, and right. The design surface is where you add and organize your report items. The Ribbon organizes traditional menu items into categories that you can easily find and use. The panes help you to add, select, and organize your report resources, and change report item properties.  

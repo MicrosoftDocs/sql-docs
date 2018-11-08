@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 501aa9ee-8c13-458c-bf6f-24e00c82681b
-caps.latest.revision: 9
-author: "markingmyname"
-ms.author: "maghan"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: craigg
 ---
 # Reporting Services SharePoint Service and Service Applications
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint mode is architected on the SharePoint service architecture and utilizes a SharePoint service and one to many service applications. Creating a service application makes the service available and generates the service application database. You can create multiple Reporting Services service applications but one service application is sufficient for most deployment scenarios.  

@@ -4,17 +4,12 @@ ms.custom: ""
 ms.date: "08/25/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.rep.newsubwizard.updatablesubscriptionslogin.f1"
 ms.assetid: 301ea227-0455-40ba-9009-d38f8676b325
-caps.latest.revision: 18
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

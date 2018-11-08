@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "data access [SQL Server Native Client], password expiration"
@@ -22,9 +18,8 @@ helpviewer_keywords:
   - "SQL Server Native Client, password expiration"
   - "modifying passwords"
 ms.assetid: 624ad949-5fed-4ce5-b319-878549f9487b
-caps.latest.revision: 36
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Changing Passwords Programmatically

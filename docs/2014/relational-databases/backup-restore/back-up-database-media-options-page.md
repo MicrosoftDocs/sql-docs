@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
+ms.technology: backup-restore
 ms.topic: conceptual
 f1_keywords: 
   - "swb.backupdatabase.mediaoptions.f1"
   - "sql12.swb.backupdatabase.mediaoptions.f1"
 ms.assetid: eff36228-710c-4ed5-9af5-95859575dc0f
-caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Back Up Database (Media Options Page)

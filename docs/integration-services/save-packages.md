@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.savecopyas.f1"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "SSIS packages, saving"
   - "SQL Server Integration Services packages, saving"
 ms.assetid: 17c1de2c-637f-45c2-a148-79294bae0af4
-caps.latest.revision: 48
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

@@ -4,19 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-cross-instance"
-ms.tgt_pltfrm: ""
+ms.technology:
 ms.topic: conceptual
 helpviewer_keywords: 
   - "self-joins"
   - "manual joins [SQL Server]"
   - "joins [SQL Server], self"
 ms.assetid: 910ed516-cb84-481b-95d0-cba3e89afdba
-caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Create Self-Joins Manually (Visual Database Tools)

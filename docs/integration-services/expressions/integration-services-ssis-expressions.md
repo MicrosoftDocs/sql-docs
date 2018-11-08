@@ -5,9 +5,7 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "packages [Integration Services], expressions"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "expressions [Integration Services], packages"
   - "SSIS packages, expressions"
 ms.assetid: 26d2e242-7f60-4fa9-a70d-548a80eee667
-caps.latest.revision: 51
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
@@ -41,9 +38,9 @@ manager: craigg
   
 -   Variables use an expression to set their value. For example, GETDATE() sets the value of the variable to the current date.  
   
--   Precedence constraints can use expressions to specify the conditions that determine whether the constrained task or container in a package runs. Expressions used in a precedence constraint must evaluate to **true** or **false**. For example, the expression @A > @B compares two user-defined variables to determine whether the constrained task runs.  
+-   Precedence constraints can use expressions to specify the conditions that determine whether the constrained task or container in a package runs. Expressions used in a precedence constraint must evaluate to **true** or **false**. For example, the expression \@A > \@B compares two user-defined variables to determine whether the constrained task runs.  
   
--   The For Loop container can use expressions to build the initialization, evaluation, and the incrementing statements that the looping structure uses. For example, the expression @Counter = 1 initializes the loop counter.  
+-   The For Loop container can use expressions to build the initialization, evaluation, and the incrementing statements that the looping structure uses. For example, the expression \@Counter = 1 initializes the loop counter.  
   
  Expressions can also be used to update the values of properties of packages, containers such as the For Loop and Foreach Loop, tasks, package and project level connection managers, log providers, and Foreach enumerators. For example, using a property expression, the string "Localhost.AdventureWorks" can be assigned to the ConnectionName property of the Execute SQL task. For more information, see [Use Property Expressions in Packages](../../integration-services/expressions/use-property-expressions-in-packages.md).  
   
@@ -53,7 +50,7 @@ manager: craigg
 ## Expression Builder  
  The expression builder is a graphical tool for building expressions. It is available in the **Conditional Split Transformation Editor**, **Derived Column Transformation Editor** dialog boxes, and in the **Expression Builder** dialog box, is a graphical tool for building expressions.  
   
- The expression builder provides folders that contain package-specific elements, and folders that contain the functions, type casts, and operators that the expression language provides. The package-specific elements include system variables and user-defined variables. In the **Conditional Split Transformation Editor** and **Derived Column Transformation Editor** dialog boxes, you can also view data columns. To build expressions for the transformations, you can drag items from the folders to the **Condition** or **Expression** column or you can type the expression directly in the column. The expression builder automatically adds needed syntax elements such as the @ prefix on variable names.  
+ The expression builder provides folders that contain package-specific elements, and folders that contain the functions, type casts, and operators that the expression language provides. The package-specific elements include system variables and user-defined variables. In the **Conditional Split Transformation Editor** and **Derived Column Transformation Editor** dialog boxes, you can also view data columns. To build expressions for the transformations, you can drag items from the folders to the **Condition** or **Expression** column or you can type the expression directly in the column. The expression builder automatically adds needed syntax elements such as the \@ prefix on variable names.  
   
 > [!NOTE]  
 >  The names of user-defined and system variables are case-sensitive.  

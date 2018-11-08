@@ -4,13 +4,9 @@ ms.custom: ""
 ms.date: "08/12/2015"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "SQL Server 2014"
 helpviewer_keywords: 
   - "security [Reporting Services], extensions"
   - "report servers [Reporting Services], about report server"
@@ -26,10 +22,9 @@ helpviewer_keywords:
   - "Web service [Reporting Services], report server"
   - "storage [Reporting Services]"
 ms.assetid: 88ed5b97-1d28-4980-80e4-b36761f3c03a
-caps.latest.revision: 89
-author: "markingmyname"
-ms.author: "maghan"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: craigg
 ---
 # Reporting Services Report Server
   This topic is an overview of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report server, the central component of a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] installation. It consists of a pair of processing engines plus a collection of special-purpose extensions that handle authentication, data processing, rendering, and delivery operations. A [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report server runs in one of two deployment modes; Native mode or SharePoint mode. See the [Feature Comparison of SharePoint and Native Mode](#bkmk_featuresupport) section for a comparison of features.  
@@ -113,7 +108,7 @@ manager: "mblythe"
  Third-party developers can create additional extensions to replace or extend the processing capability of the report server. To learn more about the programmatic interfaces available to application developers, see the [Technical Reference](../../2014/reporting-services/technical-reference-ssrs.md).  
   
 ###  <a name="bkmk_nativewithwebparts"></a> Native Mode with SharePoint Web Parts  
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] provides two Web Parts that you can install and register on an instance of [!INCLUDE[winSPServ](../includes/winspserv-md.md)] 2.0 or later, or [!INCLUDE[spPortalServ](../includes/spportalserv-md.md)] 2003 or later. From a SharePoint site, you can use the Web Parts to find and view reports that are stored and processed on a report server that runs in native mode. These Web parts were introduced in earlier releases of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] provides two Web Parts that you can install and register on an instance of [!INCLUDE[winSPServ](../includes/winspserv-md.md)] 2.0 or later, or SharePoint Portal Server 2003 or later. From a SharePoint site, you can use the Web Parts to find and view reports that are stored and processed on a report server that runs in native mode. These Web parts were introduced in earlier releases of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
 ##  <a name="bkmk_sharepointmode"></a> SharePoint Mode  
  In SharePoint mode, a report server must run within a SharePoint server farm. The report server processing, rendering, and management features are represented by a SharePoint application server running the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint shared service and one or more [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] service applications. A SharePoint site provides the front-end access to report server content and operations.  

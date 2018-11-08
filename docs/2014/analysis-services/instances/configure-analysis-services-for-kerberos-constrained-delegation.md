@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 6d751477-6bf1-48b4-8833-5a631bbe7650
-caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Configure Analysis Services for Kerberos constrained delegation
   When configuring Analysis Services for Kerberos authentication, you are most likely interested in achieving one or both of the following outcomes: having Analysis Services impersonate a user identity when querying data; or having Analysis Services delegate a user identity to a down-level service. Each scenario calls for slightly different configuration requirements. Both scenarios require verification to ensure configuration was done properly.  

@@ -4,19 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-cross-instance"
-ms.tgt_pltfrm: ""
+ms.technology:
 ms.topic: conceptual
 helpviewer_keywords: 
   - "joins [SQL Server], operators"
   - "modifying join operators"
   - "join operators"
 ms.assetid: d1dcdcfd-166c-4147-85ab-43cadc63819b
-caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Modify Join Operators (Visual Database Tools)

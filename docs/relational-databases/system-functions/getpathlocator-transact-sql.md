@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-functions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "GetPathLocator"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "GetPathLocator function"
 ms.assetid: 78b7e220-445b-4fdf-811b-7253f4f2b058
-caps.latest.revision: 15
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

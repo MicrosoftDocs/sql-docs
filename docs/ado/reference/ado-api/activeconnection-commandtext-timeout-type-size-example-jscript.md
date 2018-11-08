@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "JScript"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "Direction property [ADO], JScript example"
   - "CommandTimeout property [ADO], JScript example"
 ms.assetid: ea74e2a3-c965-43aa-9076-26a084b48ad8
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg

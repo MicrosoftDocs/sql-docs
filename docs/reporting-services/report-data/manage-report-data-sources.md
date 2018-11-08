@@ -1,16 +1,11 @@
 ---
 title: "Manage Report Data Sources | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/24/2018"
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "report-data"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-data
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "reports [Reporting Services], data"
@@ -18,10 +13,8 @@ helpviewer_keywords:
   - "shared data sources [Reporting Services]"
   - "data sources [Reporting Services], managing"
 ms.assetid: 0475aded-c8fe-4337-a2b5-4df0ec4c46af
-caps.latest.revision: 52
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ---
 # Manage Report Data Sources
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], reports, report models, and data-driven subscriptions retrieve data from external data sources. To connect to an external data source, a report server uses data source connection information that is defined in or referenced from the report, model, or subscription. Data source connection properties are always defined with the report or model when you create it, but can be independently managed after the report or model is published to a report server.  
@@ -64,13 +57,13 @@ manager: "kfile"
 |----------|----------|----------|  
 |View examples of connection strings.||[Data Connections, Data Sources, and Connection Strings &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)|  
 |Choose an approach for getting credentials to connect to a data source.||[Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)|  
-|Add data source connection properties to a report definition (.rdl) file.|Report Designer|[Create an Embedded or Shared Data Source &#40;SSRS&#41;](http://msdn.microsoft.com/library/b111a8d0-a60d-4c8b-b00a-51644b19c34b)|  
+|Add data source connection properties to a report definition (.rdl) file.|Report Designer|[Create an Embedded or Shared Data Source &#40;SSRS&#41;](https://msdn.microsoft.com/library/b111a8d0-a60d-4c8b-b00a-51644b19c34b)|  
 |Add and link to a shared data source (.rds) file in report project.|Report Designer|[Create, Modify, and Delete Shared Data Sources &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)|  
 |Create a predefined list of data sources that users can select at run time. When a user requests a report, the report provides a list of data sources. The user must select which data source to use prior to running the report. To add a data source selection list to a report, you use an expression.<br /><br /> This is known as a dynamic data source connection.|Report Designer|[Data Connections, Data Sources, and Connection Strings &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)|  
 |Create a shared data source item on a report server.|[Create, Modify, and Delete Shared Data Sources](create-modify-and-delete-shared-data-sources-ssrs.md) |  
 |Store credentials as a prerequisite for creating subscriptions or report snapshots.|The web portal|[Store Credentials in a Reporting Services Data Source](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)|  
 |Edit data source connection properties on a published report.|The web portal|[Configure Data Source Properties for a Report](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)|  
-|Create a shared data source item on a report server.|SharePoint site|[Create and Manage Shared Data Sources &#40;Reporting Services in SharePoint Integrated Mode&#41;](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)|  
+|Create a shared data source item on a report server.|SharePoint site|[Create and Manage Shared Data Sources &#40;Reporting Services in SharePoint Integrated Mode&#41;](https://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)|  
 |Use existing .odc connection information with a report.|SharePoint site|[Use an Office Data Connection &#40;.odc&#41; with Reports &#40;Reporting Services in SharePoint Integrated Mode&#41;](../../reporting-services/report-data/use-an-office-data-connection-odc-with-reports.md)|  
   
 > [!NOTE]  

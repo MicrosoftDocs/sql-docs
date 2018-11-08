@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.bidtoolset.pastepreviewdb.f1"
 ms.assetid: 2f8d8b3d-810b-4c31-98f2-341015e13da8
-caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Copy and Paste Data (SSAS Tabular)
   You can copy table data from external applications and paste it into a new or existing table in the model designer. The data that you paste from the Clipboard must be in HTML format, for example, data that is copied from Excel or Word. The model designer will automatically detect and apply data types to the pasted data. You can also manually modify the data type or display formatting of a column.  

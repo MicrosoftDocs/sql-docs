@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.storagedesignwizard.finish.f1"
 ms.assetid: 0081efe0-815d-4c55-9844-965db953aafe
-caps.latest.revision: 22
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Completing the Wizard (Aggregation Design Wizard)
   Use the **Completing the Wizard** page to save the aggregation design to the selected partitions. You can also optionally deploy and process the selected partitions after the Aggregation Design Wizard finishes designing and saving the aggregations.  

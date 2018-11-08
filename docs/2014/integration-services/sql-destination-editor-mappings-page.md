@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.sqlserverdestadapter.mappings.f1"
 helpviewer_keywords: 
   - "SQL Server Destination Editor"
 ms.assetid: 3ca00cf8-3460-43e9-9705-af4c530f7fbd
-caps.latest.revision: 22
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # SQL Destination Editor (Mappings Page)

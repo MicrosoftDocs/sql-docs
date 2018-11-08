@@ -4,19 +4,14 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "LINKEDSERVERS rowset"
   - "enumerating data sources [OLE DB]"
 ms.assetid: 2633fd8a-65e7-498d-9aed-8e4b1cca2381
-caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # LINKEDSERVERS Rowset (OLE DB)

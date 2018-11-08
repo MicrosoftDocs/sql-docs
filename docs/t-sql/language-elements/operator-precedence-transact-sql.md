@@ -5,9 +5,7 @@ ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "order of operator execution [Transact-SQL]"
   - "precedence [SQL Server], operators"
 ms.assetid: f04d2439-6fff-4e4c-801f-cc62faef510a
-caps.latest.revision: 23
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
@@ -42,7 +39,7 @@ manager: craigg
   
  When two operators in an expression have the same operator precedence level, they are evaluated left to right based on their position in the expression. For example, in the expression that is used in the following `SET` statement, the subtraction operator is evaluated before the addition operator.  
   
-```  
+```sql  
 DECLARE @MyNumber int;  
 SET @MyNumber = 4 - 2 + 27;  
 -- Evaluates to 2 + 27 which yields an expression result of 29.  
@@ -53,7 +50,7 @@ SELECT @MyNumber;
   
  For example, in the expression used in the following `SET` statement, the multiplication operator has a higher precedence than the addition operator. Therefore, it is evaluated first; the expression result is `13`.  
   
-```  
+```sql  
 DECLARE @MyNumber int;  
 SET @MyNumber = 2 * 4 + 5;  
 -- Evaluates to 8 + 5 which yields an expression result of 13.  
@@ -62,7 +59,7 @@ SELECT @MyNumber;
   
  In the expression used in the following `SET` statement, the parentheses cause the addition to be performed first. The expression result is `18`.  
   
-```  
+```sql  
 DECLARE @MyNumber int;  
 SET @MyNumber = 2 * (4 + 5);  
 -- Evaluates to 2 * 9 which yields an expression result of 18.  
@@ -71,7 +68,7 @@ SELECT @MyNumber;
   
  If an expression has nested parentheses, the most deeply nested expression is evaluated first. The following example contains nested parentheses, with the expression `5 - 3` in the most deeply nested set of parentheses. This expression yields a value of `2`. Then, the addition operator (`+`) adds this result to `4`. This yields a value of `6`. Finally, the `6` is multiplied by `2` to yield an expression result of `12`.  
   
-```  
+```sql  
 DECLARE @MyNumber int;  
 SET @MyNumber = 2 * (4 + (5 - 3) );  
 -- Evaluates to 2 * (4 + 2) which then evaluates to 2 * 6, and   

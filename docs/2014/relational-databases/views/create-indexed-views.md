@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-views"
-ms.tgt_pltfrm: ""
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords: 
   - "indexed views [SQL Server], creating"
@@ -17,9 +14,8 @@ helpviewer_keywords:
   - "indexed views [SQL Server]"
   - "views [SQL Server], indexed views"
 ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
-caps.latest.revision: 77
-author: "craigg-msft"
-ms.author: "craigg"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Create Indexed Views

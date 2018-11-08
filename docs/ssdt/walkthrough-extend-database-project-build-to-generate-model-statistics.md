@@ -6,11 +6,8 @@ ms.date: "02/09/2017"
 ms.prod: "sql"
 ms.technology: ssdt
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: d44935ce-63bf-46df-976a-5a54866c8119
-caps.latest.revision: 9
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
@@ -53,12 +50,12 @@ Here are some of the commands used by the example contributor in this walkthroug
   
 |**Class**|**Method/Property**|**Description**|  
 |-------------|------------------------|-------------------|  
-|[TSqlModel](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx)|GetObjects()|Queries the model for objects, and is the main entry point to the model API. Only top-level types such as Table or View can be queried – types such as Columns can only be found by traversing the model. If no ModelTypeClass filters are specified then all top level types will be returned.|  
-|[TSqlObject](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|GetReferencedRelationshipInstances()|Finds relationships to elements referenced by the current TSqlObject. For instance, for a table this will return objects like the Table’s columns. In this case, a ModelRelationshipClass filter can be used to specify exact relationships to query (for instance using the “Table.Columns” filter would ensure only columns were returned).<br /><br />There are a number of similar methods, such as GetReferencingRelationshipInstances, GetChildren, and GetParent. See the API documentation for more information.|  
+|[TSqlModel](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx)|GetObjects()|Queries the model for objects, and is the main entry point to the model API. Only top-level types such as Table or View can be queried – types such as Columns can only be found by traversing the model. If no ModelTypeClass filters are specified then all top level types will be returned.|  
+|[TSqlObject](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|GetReferencedRelationshipInstances()|Finds relationships to elements referenced by the current TSqlObject. For instance, for a table this will return objects like the Table’s columns. In this case, a ModelRelationshipClass filter can be used to specify exact relationships to query (for instance using the “Table.Columns” filter would ensure only columns were returned).<br /><br />There are a number of similar methods, such as GetReferencingRelationshipInstances, GetChildren, and GetParent. See the API documentation for more information.|  
   
 **Uniquely Identifying your Contributor**  
   
-During the build process, custom contributors are loaded from a standard extension directory. Build Contributors are identified by an [ExportBuildContributor](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.exportbuildcontributorattribute.aspx) attribute. This attribute is required so that contributors can be discovered. This attribute should look similar to the following:  
+During the build process, custom contributors are loaded from a standard extension directory. Build Contributors are identified by an [ExportBuildContributor](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.exportbuildcontributorattribute.aspx) attribute. This attribute is required so that contributors can be discovered. This attribute should look similar to the following:  
   
 ```  
 [ExportBuildContributor("ExampleContributors.ModelStatistics", "1.0.0.0")]  
@@ -72,7 +69,7 @@ To create a build contributor, you must perform the following tasks:
   
 -   Create a class library project and add required references.  
   
--   Define a class named ModelStatistics that inherits from [BuildContributor](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx).  
+-   Define a class named ModelStatistics that inherits from [BuildContributor](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx).  
   
 -   Override the OnExecute method.  
   

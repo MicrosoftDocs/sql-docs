@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "slicer axis"
   - "filtering data [MDX]"
 ms.assetid: c56b0a70-cdec-427f-990e-425290344e7d
-caps.latest.revision: 32
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Specifying the Contents of a Slicer Axis (MDX)
   The slicer axis filters the data returned by the Multidimensional Expressions (MDX) SELECT statement, restricting the returned data so that only data intersecting with the specified members will be returned. It can be thought of as an invisible extra axis in a query. The slicer axis is defined in the WHERE clause of the SELECT statement in MDX.  

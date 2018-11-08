@@ -6,11 +6,8 @@ ms.date: "02/09/2017"
 ms.prod: "sql"
 ms.technology: ssdt
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 24f5b85d-d6f9-415f-b09f-933b78dc0b67
-caps.latest.revision: 14
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
@@ -112,7 +109,7 @@ By default, Team Foundation Build creates a configuration file from the project'
   
 3.  Right-click the file called **Copy of app.config**, and click Rename.  
   
-4.  Type *BuildComputer***.sqlunitttest.config** and press ENTER, where *BuildComputer* is the name of the computer on which your build agent runs.  
+4.  Type _BuildComputer_**.sqlunitttest.config** and press ENTER, where *BuildComputer* is the name of the computer on which your build agent runs.  
   
 5.  Double-click *BuildComputer*.sqlunitttest.config.  
   
@@ -271,7 +268,7 @@ In this procedure, you check in all the files of your solution. These files incl
   
 1.  In Team Explorer, expand the team project node, expand the Builds node, right-click the build definition that you want to run, and then click Queue New Build.  
   
-    The **Queue Build {***TeamProjectName***}** dialog box appears with a list of all existing build types.  
+    The **Queue Build {**_TeamProjectName_**}** dialog box appears with a list of all existing build types.  
   
 2.  If necessary, in **Build definition**, click your new build definition.  
   

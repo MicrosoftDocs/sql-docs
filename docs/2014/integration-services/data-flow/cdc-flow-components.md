@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
-caps.latest.revision: 18
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # CDC Flow Components
@@ -58,7 +55,7 @@ manager: craigg
  Before you run the installation wizard, be sure that the [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] is closed. Then follow the directions in the installation wizard.  
   
 ### Restart SSIS  
- After you install the CDC components, you must restart the SSIS service to be sure that that the components work correctly when developing packages in the SQL [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)].  
+ After you install the CDC components, you must restart the SSIS service to be sure that the components work correctly when developing packages in the SQL [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)].  
   
  A message is displayed after you install the components. Click **Yes** when prompted.  
   

@@ -5,15 +5,12 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Visual FoxPro data source [ODBC], changing"
   - "editing data sources [ODBC], Visual FoxPro"
 ms.assetid: d9c30b5a-9ddf-4044-a7c5-0bdb983fdda4
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg

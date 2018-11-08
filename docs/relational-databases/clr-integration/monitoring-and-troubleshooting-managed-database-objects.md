@@ -3,17 +3,14 @@ title: "Monitoring and Troubleshooting Managed Database Objects | Microsoft Docs
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: reference
+ms.technology: clr
 ms.topic: "reference"
 helpviewer_keywords: 
   - "common language runtime [SQL Server], performance"
   - "monitoring [CLR integration]"
   - "performance [CLR integration]"
 ms.assetid: a7b589ac-104d-4b68-b4aa-9f5fc192b13d
-caps.latest.revision: 18
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

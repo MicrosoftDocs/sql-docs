@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "monitoring performance [SQL Server replication], agents"
@@ -21,7 +17,6 @@ helpviewer_keywords:
   - "agents [SQL Server replication], monitoring"
   - "Distribution Agent, monitoring"
 ms.assetid: d06ed24f-82d7-4b9e-9e40-cc9780476a71
-caps.latest.revision: 17
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

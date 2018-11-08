@@ -4,20 +4,17 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.dimensiondesigner.browsedim.view.f1"
 helpviewer_keywords: 
   - "Dimension Designer"
 ms.assetid: c7772d73-31c9-4b22-a899-bac424d603bb
-caps.latest.revision: 19
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Browser (Dimension Designer) (Analysis Services - Multidimensional Data)
   Use the **Browser** tab of Dimension Designer to browse dimension data and metadata for a dimension. If dimension writeback is enabled for the currently selected dimension, use this view to change member data for the dimension.  

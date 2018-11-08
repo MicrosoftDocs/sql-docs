@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -16,9 +13,8 @@ helpviewer_keywords:
   - "object catalog views [SQL Server]"
   - "catalog views [SQL Server], objects"
 ms.assetid: e8670a6b-e15c-4126-8d2d-c9cfb968a12d
-caps.latest.revision: 35
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Object Catalog Views (Transact-SQL)

@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.executepackagetask.f1"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "child packages"
   - "parent packages [Integration Services]"
 ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
-caps.latest.revision: 63
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

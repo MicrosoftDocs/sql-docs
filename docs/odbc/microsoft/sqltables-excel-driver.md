@@ -5,15 +5,12 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Excel driver [ODBC], SQLTables"
   - "SQLTables function [ODBC], Excel Driver"
 ms.assetid: 9410b686-4b5b-4b51-b5ef-f9d2e7a48faa
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg

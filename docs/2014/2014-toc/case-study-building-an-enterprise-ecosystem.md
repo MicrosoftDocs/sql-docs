@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 2b0b5ab7-4e08-431a-bd59-360177c4565c
-author: MashaMSFT
+author: mashamsft
 ms.author: mathoma
 manager: craigg
 ---

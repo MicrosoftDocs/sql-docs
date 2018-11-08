@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "07/12/2016"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "NUMA"
   - "non-uniform memory access"
 ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
-caps.latest.revision: 38
-author: "craigg-msft"
-ms.author: "craigg"
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # Configure SQL Server to Use Soft-NUMA (SQL Server)

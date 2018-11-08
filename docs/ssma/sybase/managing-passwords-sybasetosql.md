@@ -4,19 +4,13 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 helpviewer_keywords: 
   - "Sybase Console,Exporting or Importing Encrypted Passwords"
   - "Sybase Console,Managing Passwords"
   - "Sybase Console,Securing Password"
 ms.assetid: 9b6a70f9-6840-4140-a059-bb7bd7ccc67c
-caps.latest.revision: 12
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: craigg
@@ -132,5 +126,5 @@ Example:
     Please confirm password: xxxxxxxx  
   
 ## See Also  
-[Executing the SSMA Console (Sybase)](http://msdn.microsoft.com/en-us/ea8950b7-fabc-4aa4-89f8-9573a2617d70)  
+[Executing the SSMA Console (Sybase)](http://msdn.microsoft.com/ea8950b7-fabc-4aa4-89f8-9573a2617d70)  
   

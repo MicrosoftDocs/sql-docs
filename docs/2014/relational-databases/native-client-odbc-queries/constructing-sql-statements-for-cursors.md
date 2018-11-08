@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "cursors [ODBC], statement construction"
@@ -18,9 +14,8 @@ helpviewer_keywords:
   - "ODBC applications, statements"
   - "statements [ODBC], cursors"
 ms.assetid: 134003fd-9c93-4f5c-a988-045990933b80
-caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Constructing SQL Statements for Cursors

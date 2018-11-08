@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 api_name: 
   - "InitializeReportServer (WMI MSReportServer_ConfigurationSetting Class)"
@@ -18,10 +16,9 @@ topic_type:
 helpviewer_keywords: 
   - "InitializeReportServer method"
 ms.assetid: 0304acc2-1fd7-437b-94d9-1c1073dd3ca4
-caps.latest.revision: 20
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: craigg
 ---
 # InitializeReportServer Method (WMI MSReportServer_ConfigurationSetting)
   Initializes the specified report service instance.  

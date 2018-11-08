@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "interoperability and coexistence [Integration Services]"
   - "Integration Services, interoperability and coexistence"
 ms.assetid: edfbcd56-012f-462e-a542-95491394fda9
-caps.latest.revision: 34
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Interoperability and Coexistence (Integration Services)

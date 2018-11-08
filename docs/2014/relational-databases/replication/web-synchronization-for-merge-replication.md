@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "replication"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "merge replication synchronization [SQL Server replication]"
@@ -17,9 +15,8 @@ helpviewer_keywords:
   - "Web synchronization, about"
   - "Web synchronization"
 ms.assetid: 84785aba-b2c1-4821-9e9d-a363c73dcb37
-caps.latest.revision: 44
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Web Synchronization for Merge Replication

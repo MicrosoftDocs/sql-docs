@@ -4,21 +4,18 @@ ms.custom: ""
 ms.date: "05/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.suite: "sql"
+ms.reviewer: vanto
 ms.technology: security
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "encryption [SQL Server], about encryption"
   - "security [SQL Server], encryption"
   - "cryptography [SQL Server], about cryptography"
 ms.assetid: ead0150e-4943-4ad5-84c8-36f85c7278f4
-caps.latest.revision: 21
 author: aliceku
 ms.author: aliceku
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server Encryption
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -57,6 +54,9 @@ You can use encryption in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-m
 ## Related Content  
  [Securing SQL Server](../../../relational-databases/security/securing-sql-server.md)  
  Overview of how to help secure the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] platform, and how to work with users and securable objects.  
+
+[An overview of Azure SQL Database security capabilities](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-security-overview)
+</br>Overview of Azure SQL Database security for protecting data, controlling access, and proactive monitoring.
   
  [Cryptographic Functions &#40;Transact-SQL&#41;](../../../t-sql/functions/cryptographic-functions-transact-sql.md)  
  Information about how to implement cryptographic functions.  

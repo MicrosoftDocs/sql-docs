@@ -1,20 +1,15 @@
 ---
 title: "Manage a Reporting Services SharePoint Service Application | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/05/2017"
+ms.date: 10/05/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "report-server-sharepoint"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-server-sharepoint
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
+monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Manage a Reporting Services SharePoint service application
 
@@ -188,4 +183,4 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
   
 5.  Check the box for your proxy and click **Ok**.  
   
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

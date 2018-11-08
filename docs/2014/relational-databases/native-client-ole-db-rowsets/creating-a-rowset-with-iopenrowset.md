@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "IOpenRowset interface"
@@ -16,9 +12,8 @@ helpviewer_keywords:
   - "SQL Server Native Client OLE DB provider, rowsets"
   - "OLE DB rowsets, creating"
 ms.assetid: e8bc3de7-4b97-4de9-8df8-e11947d24045
-caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Creating a Rowset with IOpenRowset

@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "SQLXML, annotated XDR schemas"
@@ -16,9 +14,8 @@ helpviewer_keywords:
   - "annotated XDR schemas"
   - "schemas [SQLXML]"
 ms.assetid: 874c6dca-8a0c-4a2e-891c-ba6e326154d2
-caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Annotated XDR Schemas (Deprecated in SQLXML 4.0)

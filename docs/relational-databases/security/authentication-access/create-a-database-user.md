@@ -1,13 +1,11 @@
-﻿---
+---
 title: "Create a Database User | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/24/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: security
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.user.securables.f1"
@@ -23,11 +21,10 @@ helpviewer_keywords:
   - "users [SQL Server], adding"
   - "mapping database users"
 ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
-caps.latest.revision: 31
-author: CarlRabeler
-ms.author: carlraba
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---   
 # Create a Database User
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -133,7 +130,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
      View or specify the extended properties for the object. Each extended property consists of a name/value pair of metadata associated with the object.  
   
      **Ellipsis (…)**  
-     Click the ellipsis **(…)** after **Value** to open the **Value for Extended Property** dialog box. Type or view the value of the extended property in this larger location. For more information, see [Value for Extended Property Dialog Box](http://msdn.microsoft.com/library/ms189353.aspx).  
+     Click the ellipsis **(…)** after **Value** to open the **Value for Extended Property** dialog box. Type or view the value of the extended property in this larger location. For more information, see [Value for Extended Property Dialog Box](../../databases/value-for-extended-property-dialog-box.md).  
   
      **Delete**  
      Removes the selected extended property.  

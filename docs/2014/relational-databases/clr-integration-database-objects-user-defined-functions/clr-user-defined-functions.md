@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: clr
 ms.topic: "reference"
 helpviewer_keywords: 
   - "building database objects [CLR integration], user-defined functions"
@@ -17,9 +13,8 @@ helpviewer_keywords:
   - "database objects [CLR integration], user-defined functions"
   - "user-defined functions [CLR integration]"
 ms.assetid: 6f7491f1-9a46-4146-ae09-056248634de2
-caps.latest.revision: 45
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # CLR User-Defined Functions

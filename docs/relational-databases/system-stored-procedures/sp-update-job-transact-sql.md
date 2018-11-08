@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "08/09/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_update_job"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_update_job"
 ms.assetid: cbdfea38-9e42-47f3-8fc8-5978b82e2623
-caps.latest.revision: 39
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -59,27 +55,27 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
  The identification number of the job to be updated. *job_id*is **uniqueidentifier**.  
   
  [ **@job_name =**] **'***job_name***'**  
- The name of the job. *job_name*is **nvarchar(128)**.  
+ The name of the job. *job_name* is **nvarchar(128)**.  
   
 > **NOTE:** Either *job_id* or *job_name* must be specified but both cannot be specified.  
   
  [ **@new_name =**] **'***new_name***'**  
- The new name for the job. *new_name*is **nvarchar(128)**.  
+ The new name for the job. *new_name* is **nvarchar(128)**.  
   
  [ **@enabled =**] *enabled*  
- Specifies whether the job is enabled (**1**) or not enabled (**0**). *enabled*is **tinyint**.  
+ Specifies whether the job is enabled (**1**) or not enabled (**0**). *enabled* is **tinyint**.  
   
  [ **@description =**] **'***description***'**  
  The description of the job. *description* is **nvarchar(512)**.  
   
  [ **@start_step_id =**] *step_id*  
- The identification number of the first step to execute for the job. *step_id*is **int**.  
+ The identification number of the first step to execute for the job. *step_id* is **int**.  
   
  [ **@category_name =**] **'***category***'**  
- The category of the job. *category*is **nvarchar(128)**.  
+ The category of the job. *category* is **nvarchar(128)**.  
   
  [ **@owner_login_name =**] **'***login***'**  
- The name of the login that owns the job. *login*is **nvarchar(128)** Only members of the **sysadmin** fixed server role can change job ownership.  
+ The name of the login that owns the job. *login* is **nvarchar(128)** Only members of the **sysadmin** fixed server role can change job ownership.  
   
  [ **@notify_level_eventlog =**] *eventlog_level*  
  Specifies when to place an entry in the Microsoft Windows application log for this job. *eventlog_level*is **int**, and can be one of these values.  
@@ -98,7 +94,7 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
  Specifies when to send a network message upon the completion of this job. *netsend_level*is **int**. *netsend_level*uses the same values as *eventlog_level*.  
   
  [ **@notify_level_page =**] *page_level*  
- Specifies when to send a page upon the completion of this job. *page_level*is **int**. *page_level*uses the same values as *eventlog_level*.  
+ Specifies when to send a page upon the completion of this job. *page_level* is **int**. *page_level*uses the same values as *eventlog_level*.  
   
  [ **@notify_email_operator_name =**] **'***operator_name***'**  
  The name of the operator to whom the e-mail is sent when *email_level* is reached. *email_name* is **nvarchar(128)**.  
@@ -132,7 +128,7 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
   
 -   **SQLAgentOperatorRole**  
   
- For details about the permissions of these roles, see [SQL Server Agent Fixed Database Roles](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ For details about the permissions of these roles, see [SQL Server Agent Fixed Database Roles](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
  Only members of **sysadmin** can use this stored procedure to edit the attributes of jobs that are owned by other users.  
   

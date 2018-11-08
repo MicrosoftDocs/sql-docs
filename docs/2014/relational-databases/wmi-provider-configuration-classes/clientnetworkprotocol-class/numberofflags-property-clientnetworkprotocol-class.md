@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "NumberOfFlags Property (ClientNetworkProtocol Class)"
@@ -19,9 +17,8 @@ topic_type:
 helpviewer_keywords: 
   - "NumberOfFlags property"
 ms.assetid: 7a656644-2154-419f-9787-99877f597770
-caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # NumberOfFlags Property (ClientNetworkProtocol Class)

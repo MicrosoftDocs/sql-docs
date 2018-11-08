@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.dmquerytask.output.f1"
 helpviewer_keywords: 
   - "Data Mining Query Task Editor"
 ms.assetid: 62f9e015-6fe0-4396-ad90-3ad51bf00025
-caps.latest.revision: 28
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Data Mining Query Task Editor (Output Tab)

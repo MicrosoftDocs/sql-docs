@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "SQL Server Native Client ODBC driver, cursors"
@@ -16,9 +12,8 @@ helpviewer_keywords:
   - "ODBC applications, cursors"
   - "cursors [ODBC], about ODBC cursors"
 ms.assetid: 2b1d7dd4-08a4-43fc-b3eb-70c183d0941f
-caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # How Cursors Are Implemented

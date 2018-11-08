@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "08/09/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_purge_data_TSQL"
@@ -21,7 +18,6 @@ helpviewer_keywords:
   - "core.sp_purge_data stored procedure"
   - "data collector [SQL Server], stored procedures"
 ms.assetid: 056076c3-8adf-4f51-8a1b-ca39696ac390
-caps.latest.revision: 21
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

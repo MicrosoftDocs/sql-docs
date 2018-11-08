@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "master-data-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "user-defined metadata [Master Data Services], about user-defined metadata"
@@ -15,9 +13,8 @@ helpviewer_keywords:
   - "metadata [Master Data Services]"
   - "user-defined metadata [Master Data Services]"
 ms.assetid: ac1aabe3-d8d4-4d7a-8954-50ee3c185d81
-caps.latest.revision: 7
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Metadata (Master Data Services)

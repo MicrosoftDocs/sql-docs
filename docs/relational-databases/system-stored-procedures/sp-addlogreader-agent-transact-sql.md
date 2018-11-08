@@ -4,24 +4,18 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "replication"
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_addlogreader_agent"
   - "sp_addlogreader_agent_TSQL"
 helpviewer_keywords: 
   - "sp_addlogreader_agent"
 ms.assetid: d83096b9-96ee-4789-bde0-940d4765b9ed
-caps.latest.revision: 37
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_addlogreader_agent (Transact-SQL)

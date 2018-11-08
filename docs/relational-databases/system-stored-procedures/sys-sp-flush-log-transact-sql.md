@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_flush_log_TSQL"
@@ -20,9 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.sp_flush_log"
 ms.assetid: 75cc9f52-3b1f-4754-b1e7-ce0dd3323bc9
-caps.latest.revision: 6
-author: "stevestein"
-ms.author: "sstein"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # sys.sp_flush_log (Transact-SQL)

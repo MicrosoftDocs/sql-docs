@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "04/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "docset-sql-devref"
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 dev_langs: 
   - "VB"
@@ -22,9 +20,8 @@ helpviewer_keywords:
   - "output columns [Integration Services]"
   - "data flow components [Integration Services], transformation components"
 ms.assetid: b694d21f-9919-402d-9192-666c6449b0b7
-caps.latest.revision: 55
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Developing a Custom Transformation Component with Synchronous Outputs

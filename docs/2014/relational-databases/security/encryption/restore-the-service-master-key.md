@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-security"
-ms.tgt_pltfrm: ""
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords: 
   - "service master key [SQL Server], importing"
   - "service master key [SQL Server], restoring"
 ms.assetid: 14bdbbbe-d384-4692-b670-4243d2466fe1
-caps.latest.revision: 15
-author: "craigg-msft"
-ms.author: "craigg"
+author: aliceku
+ms.author: aliceku
 manager: craigg
 ---
 # Restore the Service Master Key

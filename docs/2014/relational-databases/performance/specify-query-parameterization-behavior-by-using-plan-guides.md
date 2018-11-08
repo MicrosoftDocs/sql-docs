@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-plan-guides"
-ms.tgt_pltfrm: ""
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "TEMPLATE plan guide"
@@ -19,9 +16,8 @@ helpviewer_keywords:
   - "plan guides [SQL Server], parameterization"
   - "parameterized queries [SQL Server]"
 ms.assetid: f0f738ff-2819-4675-a8c8-1eb6c210a7e6
-caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Specify Query Parameterization Behavior by Using Plan Guides

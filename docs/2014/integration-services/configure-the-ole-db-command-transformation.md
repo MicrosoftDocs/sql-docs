@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "parameters [Integration Services]"
   - "OLE DB Command transformation"
 ms.assetid: c800f167-3d2e-4c10-8ba3-a02f1872ccea
-caps.latest.revision: 24
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Configure the OLE DB Command Transformation

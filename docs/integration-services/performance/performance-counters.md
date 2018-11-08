@@ -5,9 +5,7 @@ ms.date: "08/27/2016"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "logs [Integration Services], performance counters"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "counters [Integration Services]"
   - "data flow engine [Integration Services]"
 ms.assetid: 11e17f4e-72ed-44d7-a71d-a68937a78e4c
-caps.latest.revision: 63
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "permissions [Analysis Services], assemblies"
@@ -21,10 +19,9 @@ helpviewer_keywords:
   - "assemblies [Analysis Services]"
   - "application domains [Analysis Services]"
 ms.assetid: b2645d10-6d17-444e-9289-f111ec48bbfb
-caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Multidimensional Model Assemblies Management
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supplies lots of intrinsic functions for use with the Multidimensional Expressions (MDX) and Data Mining Extensions (DMX) languages, designed to accomplish everything from standard statistical calculations to traversing members in a hierarchy. But, as with any other complex and robust product, there is always the need to extend the functionality of such a product further.  

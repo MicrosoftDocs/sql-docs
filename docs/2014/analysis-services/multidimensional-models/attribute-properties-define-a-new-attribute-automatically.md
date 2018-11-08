@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "automatic attribute creation"
   - "attributes [Analysis Services], creating"
 ms.assetid: 208a050a-5e2f-470c-b645-8d835e123db7
-caps.latest.revision: 33
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Define a New Attribute Automatically
   You can create a new attribute in a dimension by using drag-and-drop editing in the Dimension Designer.  

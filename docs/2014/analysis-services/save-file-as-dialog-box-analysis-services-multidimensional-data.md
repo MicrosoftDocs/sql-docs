@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.savefileasdialog.f1"
 ms.assetid: 8e2099ba-c5b0-4940-8e48-7d696485fa4c
-caps.latest.revision: 11
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Save File As Dialog Box (Analysis Services - Multidimensional Data)
   The **Save File As** dialog box displays a list of available files in log and data folders defined for an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance. You can either select a listed file, or you can specify a different folder and file if needed. The **Save File As** dialog box is displayed by:  

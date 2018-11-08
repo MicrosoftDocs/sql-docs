@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "VB"
@@ -16,10 +14,9 @@ helpviewer_keywords:
   - "Reporting Services, Web service"
   - "Web service [Reporting Services], tutorials"
 ms.assetid: cf688163-4ac0-475b-b6dd-6f2f05b553c6
-caps.latest.revision: 45
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: craigg-msft
+ms.author: douglasl
+manager: craigg
 ---
 # Accessing the Report Server Web Service Using Visual Basic or Visual C# (SSRS Tutorial)
   The following tutorial shows you how to access the Report Server Web service from an application created with [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] or [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[csprcs](../includes/csprcs-md.md)].  

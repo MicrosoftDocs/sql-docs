@@ -5,9 +5,7 @@ ms.date: "03/13/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords:
 - "sql13.dts.designer.executesqltask.f1"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "batches [Integration Services]"
   - "Execute SQL task [Integration Services]"
 ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
-caps.latest.revision: 115
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
@@ -212,7 +209,7 @@ Use the **Parameter Mapping** page of the **Execute SQL Task Editor** dialog box
  **Parameter Name**  
  Provide a parameter name.  
   
- Depending on the connection manager type that the task uses, you must use numbers or parameter names. Some connection manager types require that the first character of the parameter name is the @ sign , specific names like @Param1, or column names as parameter names.  
+ Depending on the connection manager type that the task uses, you must use numbers or parameter names. Some connection manager types require that the first character of the parameter name is the \@ sign , specific names like \@Param1, or column names as parameter names.  
   
  **Parameter Size**  
  Provide the size of parameters that have variable length, such as strings and binary fields.  
@@ -267,16 +264,16 @@ SQL statements and stored procedures frequently use **input** parameters, **outp
 -   [Getting values of return codes](#Return_codes)    
   
 ###  <a name="Parameter_names_and_markers"></a> Parameter names and markers  
- Depending on the connection type that the Execute SQL task uses, the syntax of the SQL command uses different parameter markers. For example, the [!INCLUDE[vstecado](../../includes/vstecado-md.md)] connection manager type requires that the SQL command uses a parameter marker in the format **@varParameter**, whereas OLE DB connection type requires the question mark (?) parameter marker.  
+ Depending on the connection type that the Execute SQL task uses, the syntax of the SQL command uses different parameter markers. For example, the [!INCLUDE[vstecado](../../includes/vstecado-md.md)] connection manager type requires that the SQL command uses a parameter marker in the format **\@varParameter**, whereas OLE DB connection type requires the question mark (?) parameter marker.  
   
- The names that you can use as parameter names in the mappings between variables and parameters also vary by connection manager type. For example, the [!INCLUDE[vstecado](../../includes/vstecado-md.md)] connection manager type uses a user-defined name with a @ prefix, whereas the OLE DB connection manager type requires that you use the numeric value of a 0-based ordinal as the parameter name.  
+ The names that you can use as parameter names in the mappings between variables and parameters also vary by connection manager type. For example, the [!INCLUDE[vstecado](../../includes/vstecado-md.md)] connection manager type uses a user-defined name with a \@ prefix, whereas the OLE DB connection manager type requires that you use the numeric value of a 0-based ordinal as the parameter name.  
   
  The following table summarizes the requirements for SQL commands for the connection manager types that the Execute SQL task can use.  
   
 |Connection type|Parameter marker|Parameter name|Example SQL command|  
 |---------------------|----------------------|--------------------|-------------------------|  
 |ADO|?|Param1, Param2, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
-|[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|@\<parameter name>|@\<parameter name>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = @parmContactID|  
+|[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|\@\<parameter name>|\@\<parameter name>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = \@parmContactID|  
 |ODBC|?|1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
 |EXCEL and OLE DB|?|0, 1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
   
@@ -369,7 +366,7 @@ SQL statements and stored procedures frequently use **input** parameters, **outp
   
 -   The ADO connection type could use any two parameter names, such as Param1 and Param2, but the parameters must be mapped by their ordinal position in the parameter list.  
   
--   The [!INCLUDE[vstecado](../../includes/vstecado-md.md)] connection type uses the parameter names @parmMinProductID and @parmMaxProductID.  
+-   The [!INCLUDE[vstecado](../../includes/vstecado-md.md)] connection type uses the parameter names \@parmMinProductID and \@parmMaxProductID.  
   
 ###  <a name="Stored_procedures"></a> Use parameters with stored procedures  
  SQL commands that run stored procedures can also use parameter mapping. The rules for how to use parameter markers and parameter names depends on the type of connection manager that the Execute SQL uses, just like the rules for parameterized queries.  
@@ -415,7 +412,7 @@ This section describes how to use a parameterized SQL statement in the Execute S
     |Connection type|Parameter marker|  
     |---------------------|----------------------|  
     |ADO|?|  
-    |ADO.NET and SQLMOBILE|@\<parameter name>|  
+    |ADO.NET and SQLMOBILE|\@\<parameter name>|  
     |ODBC|?|  
     |EXCEL and OLE DB|?|  
   
@@ -438,7 +435,7 @@ This section describes how to use a parameterized SQL statement in the Execute S
     |Connection type|Parameter name|  
     |---------------------|--------------------|  
     |ADO|Param1, Param2, …|  
-    |ADO.NET and SQLMOBILE|@\<parameter name>|  
+    |ADO.NET and SQLMOBILE|\@\<parameter name>|  
     |ODBC|1, 2, 3, …|  
     |EXCEL and OLE DB|0, 1, 2, 3, …|  
   

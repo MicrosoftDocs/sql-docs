@@ -1,1 +1,0 @@
- SQL Server 2005 (9.x) 

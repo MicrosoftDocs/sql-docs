@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: reference
-ms.tgt_pltfrm: ""
+ms.technology: clr
 ms.topic: "reference"
 helpviewer_keywords: 
   - "aggregate functions [CLR integration]"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "user-defined functions [CLR integration]"
   - "UDTs [CLR integration], user-defined aggregates"
 ms.assetid: dbf9eb5a-bd99-42f7-b275-556d0def045d
-caps.latest.revision: 56
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

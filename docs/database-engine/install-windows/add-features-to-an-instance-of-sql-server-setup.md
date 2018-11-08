@@ -4,18 +4,16 @@ ms.custom: ""
 ms.date: "09/07/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: install
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "feature adding [SQL Server]"
   - "SQL Server, features"
   - "adding features to SQL Server"
 ms.assetid: 97931fdc-d943-48dd-81b9-ae8b8d2c6dad
-caps.latest.revision: 29
 author: MashaMSFT
 ms.author: mathoma
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 manager: craigg
 ---
 # Add Features to an Instance of SQL Server (Setup)

@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "wmi"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: wmi
 ms.topic: "reference"
 apiname: 
   - "PropertyNumValue Property (SqlServiceAdvancedProperty Class)"
@@ -19,7 +15,6 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "PropertyNumValue property"
 ms.assetid: 2c740dee-8911-443c-981f-7f224598ad21
-caps.latest.revision: 29
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg

@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.executeprocesstask.process.f1"
 helpviewer_keywords: 
   - "Execute Process Task Editor"
 ms.assetid: 0fc22406-e79b-47a4-a7e4-108d4ce6202f
-caps.latest.revision: 31
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Execute Process Task Editor (Process Page)

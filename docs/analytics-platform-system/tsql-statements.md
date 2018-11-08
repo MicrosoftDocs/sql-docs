@@ -15,7 +15,7 @@ ms.reviewer: martinle
 Transact-SQL (T-SQL) statements for Analytic Platform System (APS) SQL Server Parallel Data Warehouse (PDW).
 
 ## Data Definition Language (DDL) statements
-* [ALTER DATABASE](../t-sql/statements/alter-database-azure-sql-data-warehouse.md)
+* [ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)
 * [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md)
 * [ALTER PROCEDURE](../t-sql/statements/alter-procedure-transact-sql.md)
 * [ALTER SCHEMA](../t-sql/statements/alter-schema-transact-sql.md)

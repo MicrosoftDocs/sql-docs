@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.wmieventwatcher.wmiquery.f1"
 helpviewer_keywords: 
   - "WMI Event Watcher Task Editor"
 ms.assetid: 525f3de7-a021-4e52-9939-3a83c88f131a
-caps.latest.revision: 37
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # WMI Event Watcher Task Editor (WMI Options Page)

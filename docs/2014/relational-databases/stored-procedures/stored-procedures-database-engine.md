@@ -3,19 +3,15 @@ title: "Stored Procedures (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
+ms.technology: stored-procedures
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-stored-procs"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "storing programs as stored procedures"
   - "stored procedures [SQL Server], about stored procedures"
 ms.assetid: cc6daf62-9663-4c3e-950a-ab42e2830427
-caps.latest.revision: 33
-author: "craigg-msft"
-ms.author: "craigg"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Stored Procedures (Database Engine)

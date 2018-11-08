@@ -4,19 +4,14 @@ ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "FILESTREAM [SQL Server], ODBC"
   - "ODBC, FILESTREAM support"
 ms.assetid: 87982955-1542-4551-9c06-447ffe8193b9
-caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # FILESTREAM Support (ODBC)

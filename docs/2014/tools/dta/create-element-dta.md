@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "XML"
 helpviewer_keywords: 
   - "Create element (DTA)"
 ms.assetid: 9d076c90-f933-45f4-b6d9-447793f6528b
-caps.latest.revision: 12
-author: "craigg-msft"
-ms.author: "craigg"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Create Element (DTA)

@@ -3,11 +3,8 @@ title: "View the Definition of a Stored Procedure | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
+ms.technology: stored-procedures
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-stored-procs"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "stored procedures [SQL Server], viewing"
@@ -15,9 +12,8 @@ helpviewer_keywords:
   - "viewing stored procedures"
   - "displaying stored procedures"
 ms.assetid: 93318587-a0c5-4788-946f-3b5dc8372ea9
-caps.latest.revision: 29
-author: "craigg-msft"
-ms.author: "craigg"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # View the Definition of a Stored Procedure

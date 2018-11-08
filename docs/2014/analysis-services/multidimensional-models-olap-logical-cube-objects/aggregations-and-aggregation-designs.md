@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "aggregations [Analysis Services], about aggregations"
@@ -19,10 +17,9 @@ helpviewer_keywords:
   - "storing data [Analysis Services], aggregations"
   - "aggregations [Analysis Services]"
 ms.assetid: 35bd8589-39fa-4e0b-b28f-5a07d70da0a2
-caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Aggregations and Aggregation Designs
   An <xref:Microsoft.AnalysisServices.AggregationDesign> object defines a set of aggregation definitions that can be shared across multiple partitions.  

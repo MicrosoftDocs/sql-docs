@@ -1,15 +1,11 @@
 ---
 title: "SqlPackage.exe | Microsoft Docs"
-ms.custom: 
-  - "SSDT"
+ms.prod: sql
+ms.technology: ssdt
 ms.date: "2018-06-27"
-ms.prod: "sql-non-specified"
 ms.reviewer: "alayu; sstein"
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
-caps.latest.revision: 53
 author: "pensivebrian"
 ms.author: "broneill"
 manager: "craigg"
@@ -49,8 +45,10 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |Parameter|Short Form|Value|Description|
 |---|---|---|---|
 |**/Action:**|**/a**|Extract|Specifies the action to be performed. |
+|**/AccessToken:**|**/at**|{string}| Specifies the token based authentication access token to use when connect to the target database. |
 |**/Diagnostics:**|**/d**|{True&#124;False}|Specifies whether diagnostic logging is output to the console. Defaults to False. |
 |**/DiagnosticsFile:**|**/df**|{string}|Specifies a file to store diagnostic logs. |
+|**/MaxParallelism:**|**/mp**|{int}| Specifies the degree of parallelism for concurrent operations running against a database. The default value is 8. |
 |**/OverwriteFiles:**|**/of**|{True&#124;False}|Specifies if sqlpackage.exe should overwrite existing files. Specifying false causes sqlpackage.exe to abort action if an existing file is encountered. Default value is True. |
 |**/Properties:**|**/p**|{PropertyName}={Value}|Specifies a name value pair for an action-specific property; {PropertyName}={Value}. Refer to the help for a specific action to see that action's property names. Example: sqlpackage.exe /Action:Publish /?. |
 |**/Quiet:**|**/q**|{True&#124;False}|Specifies whether detailed feedback is suppressed. Defaults to False. |
@@ -95,10 +93,12 @@ A SqlPackage.exe publish operation incrementally updates the schema of a target 
 |Parameter|Short Form|Value|Description|
 |---|---|---|---|
 |**/Action:**|**/a**|Publish|Specifies the action to be performed. |
+|**/AccessToken:**|**/at**|{string}| Specifies the token based authentication access token to use when connect to the target database. |
 |**/AzureKeyVaultAuthMethod:**|**/akv**|{Interactive&#124;ClientIdSecret}|Specifies what authentication method is used for accessing Azure KeyVault |
 |**/ClientId:**|**/cid**|{string}|Specifies the Client ID to be used in authenticating against Azure KeyVault, when necessary |
 |**/Diagnostics:**|**/d**|{True&#124;False}|Specifies whether diagnostic logging is output to the console. Defaults to False. |
 |**/DiagnosticsFile:**|**/df**|{string}|Specifies a file to store diagnostic logs. |
+|**/MaxParallelism:**|**/mp**|{int}| Specifies the degree of parallelism for concurrent operations running against a database. The default value is 8. |
 |**/OverwriteFiles:**|**/of**|{True&#124;False}|Specifies if sqlpackage.exe should overwrite existing files. Specifying false causes sqlpackage.exe to abort action if an existing file is encountered. Default value is True. |
 |**/Profile:**|**/pr**|{string}|Specifies the file path to a DAC Publish Profile. The profile defines a collection of properties and variables to use when generating outputs.|
 |**/Properties:**|**/p**|{PropertyName}={Value}|Specifies a name value pair for an action-specific property;{PropertyName}={Value}. Refer to the help for a specific action to see that action's property names. Example: sqlpackage.exe /Action:Publish /?.|
@@ -131,7 +131,7 @@ A SqlPackage.exe publish operation incrementally updates the schema of a target 
 |---|---|---|
 |**/p:**|AdditionalDeploymentContributorArguments=(STRING)|Specifies additional deployment contributor arguments for the deployment contributors. This should be a semi-colon delimited list of values.|
 |**/p:**|AdditionalDeploymentContributors=(STRING)|Specifies additional deployment contributors, which should run when the dacpac is deployed. This should be a semi-colon delimited list of fully qualified build contributor names or IDs.|
-|**/p:**|AllowDropBlocking  Assemblies=(BOOLEAN)|This property is used by SqlClr deployment to cause any blocking assemblies to be dropped as part of the deployment plan. By default, any blocking/referencing assemblies will block an assembly update if the referencing assembly needs to be dropped.|
+|**/p:**|AllowDropBlockingAssemblies=(BOOLEAN)|This property is used by SqlClr deployment to cause any blocking assemblies to be dropped as part of the deployment plan. By default, any blocking/referencing assemblies will block an assembly update if the referencing assembly needs to be dropped.|
 |**/p:**|AllowIncompatiblePlatform=(BOOLEAN)|Specifies whether to attempt the action despite incompatible SQL Server platforms.|
 |**/p:**|AllowUnsafeRowLevelSecurityDataMovement=(BOOLEAN)|Do not block data motion on a table that has Row Level Security if this property is set to true. Default is false.|
 |**/p:**|BackupDatabaseBeforeChanges=(BOOLEAN)|Backups the database before deploying any changes.|
@@ -234,8 +234,10 @@ A SqlPackage.exe Export action exports a live database from SQL Server or Azure 
 |Parameter|Short Form|Value|Description|
 |---|---|---|---|
 |**/Action:**|**/a**|Export|Specifies the action to be performed. |
+|**/AccessToken:**|**/at**|{string}| Specifies the token based authentication access token to use when connect to the target database. |
 |**/Diagnostics:**|**/d**|{True&#124;False}|Specifies whether diagnostic logging is output to the console. Defaults to False. |
 |**/DiagnosticsFile:**|**/df**|{string}|Specifies a file to store diagnostic logs. |
+|**/MaxParallelism:**|**/mp**|{int}| Specifies the degree of parallelism for concurrent operations running against a database. The default value is 8. |
 |**/OverwriteFiles:**|**/of**|{True&#124;False}|Specifies if sqlpackage.exe should overwrite existing files. Specifying false causes sqlpackage.exe to abort action if an existing file is encountered. Default value is True. |
 |**/Properties:**|**/p**|{PropertyName}={Value}|Specifies a name value pair for an action-specific property;{PropertyName}={Value}. Refer to the help for a specific action to see that action's property names. Example: sqlpackage.exe /Action:Publish /?.|
 |**/Quiet:**|**/q**|{True&#124;False}|Specifies whether detailed feedback is suppressed. Defaults to False.|
@@ -270,8 +272,10 @@ A SqlPackage.exe Import action imports the schema and table data from a BACPAC p
 |Parameter|Short Form|Value|Description|
 |---|---|---|---|
 |**/Action:**|**/a**|Import|Specifies the action to be performed. |
+|**/AccessToken:**|**/at**|{string}| Specifies the token based authentication access token to use when connect to the target database. |
 |**/Diagnostics:**|**/d**|{True&#124;False}|Specifies whether diagnostic logging is output to the console. Defaults to False. |
 |**/DiagnosticsFile:**|**/df**|{string}|Specifies a file to store diagnostic logs. |
+|**/MaxParallelism:**|**/mp**|{int}| Specifies the degree of parallelism for concurrent operations running against a database. The default value is 8. |
 |**/Properties:**|**/p**|{PropertyName}={Value}|Specifies a name value pair for an action-specific property;{PropertyName}={Value}. Refer to the help for a specific action to see that action's property names. Example: sqlpackage.exe /Action:Publish /?.|
 |**/Quiet:**|**/q**|{True&#124;False}|Specifies whether detailed feedback is suppressed. Defaults to False.|
 |**/SourceFile:**|**/sf**|{string}|Specifies a source file to be used as the source of action. If this parameter is used, no other source parameter shall be valid. |
@@ -306,8 +310,10 @@ A **SqlPackage.exe** report action creates an XML report of the changes that wou
 |Parameter|Short Form|Value|Description|
 |---|---|---|---|
 |**/Action:**|**/a**|DeployReport|Specifies the action to be performed. |
+|**/AccessToken:**|**/at**|{string}| Specifies the token based authentication access token to use when connect to the target database. |
 |**/Diagnostics:**|**/d**|{True&#124;False}|Specifies whether diagnostic logging is output to the console. Defaults to False. |
 |**/DiagnosticsFile:**|**/df**|{string}|Specifies a file to store diagnostic logs. |
+|**/MaxParallelism:**|**/mp**|{int}| Specifies the degree of parallelism for concurrent operations running against a database. The default value is 8. |
 |**/OutputPath:**|**/op**|{string}|Specifies the file path where the output files are generated. |
 |**/OverwriteFiles:**|**/of**|{True&#124;False}|Specifies if sqlpackage.exe should overwrite existing files. Specifying false causes sqlpackage.exe to abort action if an existing file is encountered. Default value is True. |
 |**/Profile:**|**/pr**|{string}|Specifies the file path to a DAC Publish Profile. The profile defines a collection of properties and variables to use when generating outputs. |
@@ -341,7 +347,7 @@ A **SqlPackage.exe** report action creates an XML report of the changes that wou
 |---|---|---|
 |**/p:**|AdditionalDeploymentContributorArguments=(STRING)|Specifies additional deployment contributor arguments for the deployment contributors. This should be a semi-colon delimited list of values.|
 |**/p:**|AdditionalDeploymentContributors=(STRING)|Specifies additional deployment contributors, which should run when the dacpac is deployed. This should be a semi-colon delimited list of fully qualified build contributor names or IDs.|
-|**/p:**|AllowDropBlocking  Assemblies=(BOOLEAN)|This property is used by SqlClr deployment to cause any blocking assemblies to be dropped as part of the deployment plan. By default, any blocking/referencing assemblies will block an assembly update if the referencing assembly needs to be dropped.|
+|**/p:**|AllowDropBlocking Assemblies=(BOOLEAN)|This property is used by SqlClr deployment to cause any blocking assemblies to be dropped as part of the deployment plan. By default, any blocking/referencing assemblies will block an assembly update if the referencing assembly needs to be dropped.|
 |**/p:**|AllowIncompatiblePlatform=(BOOLEAN)|Specifies whether to attempt the action despite incompatible SQL Server platforms.|
 |**/p:**|AllowUnsafeRowLevelSecurityDataMovement=(BOOLEAN)|Do not block data motion on a table that has Row Level Security if this property is set to true. Default is false.|
 |**/p:**|BackupDatabaseBeforeChanges=(BOOLEAN)|Backups the database before deploying any changes.|
@@ -436,8 +442,10 @@ A **SqlPackage.exe** report action creates an XML report of the changes that hav
 |Parameter|Short Form|Value|Description|
 |---|---|---|---|
 |**/Action:**|**/a**|DriftReport|Specifies the action to be performed. |
+|**/AccessToken:**|**/at**|{string}| Specifies the token based authentication access token to use when connect to the target database. |
 |**/Diagnostics:**|**/d**|{True&#124;False}|Specifies whether diagnostic logging is output to the console. Defaults to False. |
 |**/DiagnosticsFile:**|**/df**|{string}|Specifies a file to store diagnostic logs. |
+|**/MaxParallelism:**|**/mp**|{int}| Specifies the degree of parallelism for concurrent operations running against a database. The default value is 8. |
 |**/OutputPath:**|**/op**|{string}|Specifies the file path where the output files are generated. |
 |**/OverwriteFiles:**|**/of**|{True&#124;False}|Specifies if sqlpackage.exe should overwrite existing files. Specifying false causes sqlpackage.exe to abort action if an existing file is encountered. Default value is True. |
 |**/Quiet:**|**/q**|{True&#124;False}|Specifies whether detailed feedback is suppressed. Defaults to False.|
@@ -461,8 +469,10 @@ A **SqlPackage.exe** script action creates a Transact-SQL incremental update scr
 |Parameter|Short Form|Value|Description|
 |---|---|---|---|
 |**/Action:**|**/a**|Script|Specifies the action to be performed. |
+|**/AccessToken:**|**/at**|{string}| Specifies the token based authentication access token to use when connect to the target database. |
 |**/Diagnostics:**|**/d**|{True&#124;False}|Specifies whether diagnostic logging is output to the console. Defaults to False. |
 |**/DiagnosticsFile:**|**/df**|{string}|Specifies a file to store diagnostic logs. |
+|**/MaxParallelism:**|**/mp**|{int}| Specifies the degree of parallelism for concurrent operations running against a database. The default value is 8. |
 |**/OutputPath:**|**/op**|{string}|Specifies the file path where the output files are generated. |
 |**/OverwriteFiles:**|**/of**|{True&#124;False}|Specifies if sqlpackage.exe should overwrite existing files. Specifying false causes sqlpackage.exe to abort action if an existing file is encountered. Default value is True. |
 |**/Profile:**|**/pr**|{string}|Specifies the file path to a DAC Publish Profile. The profile defines a collection of properties and variables to use when generating outputs.|
@@ -515,14 +525,14 @@ A **SqlPackage.exe** script action creates a Transact-SQL incremental update scr
 |**/p:**|DoNotAlterReplicatedObjects=(BOOLEAN 'True')|Specifies whether objects that are replicated are identified during verification.
 |**/p:**|DoNotDropObjectType=(STRING)|An object type that should not be dropped when DropObjectsNotInSource is true. Valid object type names are Aggregates, ApplicationRoles, Assemblies, AsymmetricKeys, BrokerPriorities, Certificates, ColumnEncryptionKeys, ColumnMasterKeys, Contracts, DatabaseRoles, DatabaseTriggers, Defaults, ExtendedProperties, ExternalDataSources, ExternalFileFormats, ExternalTables, Filegroups, FileTables, FullTextCatalogs, FullTextStoplists, MessageTypes, PartitionFunctions, PartitionSchemes, Permissions, Queues, RemoteServiceBindings, RoleMembership, Rules, ScalarValuedFunctions, SearchPropertyLists, SecurityPolicies, Sequences, Services, Signatures, StoredProcedures, SymmetricKeys, Synonyms, Tables, TableValuedFunctions, UserDefinedDataTypes, UserDefinedTableTypes, ClrUserDefinedTypes, Users, Views, XmlSchemaCollections, Audits, Credentials, CryptographicProviders, DatabaseAuditSpecifications, DatabaseScopedCredentials, Endpoints, ErrorMessages, EventNotifications, EventSessions, LinkedServerLogins, LinkedServers, Logins, Routes, ServerAuditSpecifications, ServerRoleMembership, ServerRoles, ServerTriggers.
 |**/p:**|DoNotDropObjectTypes=(STRING)|A semicolon-delimited list of object types that should not be dropped whenDropObjectsNotInSource is true. Valid object type names are Aggregates, ApplicationRoles, Assemblies, AsymmetricKeys, BrokerPriorities, Certificates, ColumnEncryptionKeys, ColumnMasterKeys, Contracts, DatabaseRoles, DatabaseTriggers, Defaults, ExtendedProperties, ExternalDataSources, ExternalFileFormats, ExternalTables, Filegroups, FileTables, FullTextCatalogs, FullTextStoplists, MessageTypes, PartitionFunctions, PartitionSchemes, Permissions, Queues, RemoteServiceBindings, RoleMembership, Rules, ScalarValuedFunctions, SearchPropertyLists, SecurityPolicies, Sequences, Services, Signatures, StoredProcedures, SymmetricKeys, Synonyms, Tables, TableValuedFunctions, UserDefinedDataTypes, UserDefinedTableTypes, ClrUserDefinedTypes, Users, Views, XmlSchemaCollections, Audits, Credentials, CryptographicProviders, DatabaseAuditSpecifications, DatabaseScopedCredentials, Endpoints, ErrorMessages, EventNotifications, EventSessions, LinkedServerLogins, LinkedServers, Logins, Routes, ServerAuditSpecifications, ServerRoleMembership, ServerRoles, ServerTriggers.
-|**/p:**|DropConstraintsNotInSource=(BOOLEAN 'True')|Specifies whether constraints that do not exist in the database snapshot (.dacpac) file will be dropped from the target database when you   a database.|
-|**/p:**|DropDmlTriggersNotInSource=(BOOLEAN 'True')|Specifies whether DML triggers that do not exist in the database snapshot (.dacpac) file will be dropped from the target database when you   a database.|
+|**/p:**|DropConstraintsNotInSource=(BOOLEAN 'True')|Specifies whether constraints that do not exist in the database snapshot (.dacpac) file will be dropped from the target database when you a database.|
+|**/p:**|DropDmlTriggersNotInSource=(BOOLEAN 'True')|Specifies whether DML triggers that do not exist in the database snapshot (.dacpac) file will be dropped from the target database when you a database.|
 |**/p:**|DropExtendedPropertiesNotInSource=(BOOLEAN 'True')|Specifies whether extended properties that do not exist in the database snapshot (.dacpac) file will be dropped from the target database when you publish to a database.|
-|**/p:**|DropIndexesNotInSource=(BOOLEAN 'True')|Specifies whether indexes that do not exist in the database snapshot (.dacpac) file will be dropped from the target database when you   a database.|
-|**/p:**|DropObjectsNotInSource=(BOOLEAN)|Specifies whether objects that do not exist in the database snapshot (.dacpac) file will be dropped from the target database when you   a database. This value takes precedence over DropExtendedProperties.|
+|**/p:**|DropIndexesNotInSource=(BOOLEAN 'True')|Specifies whether indexes that do not exist in the database snapshot (.dacpac) file will be dropped from the target database when you a database.|
+|**/p:**|DropObjectsNotInSource=(BOOLEAN)|Specifies whether objects that do not exist in the database snapshot (.dacpac) file will be dropped from the target database when you a database. This value takes precedence over DropExtendedProperties.|
 |**/p:**|DropPermissionsNotInSource=(BOOLEAN)|Specifies whether permissions that do not exist in the database snapshot (.dacpac) file will be dropped from the target database when you publish updates to a database.|
 |**/p:**|DropRoleMembersNotInSource=(BOOLEAN)|Specifies whether role members that are not defined in the database snapshot (.dacpac) file will be dropped from the target database when you publish updates to a database.|
-|**/p:**|DropStatisticsNotInSource=(BOOLEAN 'True')|Specifies whether statistics that do not exist in the database snapshot (.dacpac) file will be dropped from the target database when you   a database.|
+|**/p:**|DropStatisticsNotInSource=(BOOLEAN 'True')|Specifies whether statistics that do not exist in the database snapshot (.dacpac) file will be dropped from the target database when you a database.|
 |**/p:**|ExcludeObjectType=(STRING)|An object type that should be ignored during deployment. Valid object typenames are Aggregates, ApplicationRoles, Assemblies, AsymmetricKeys, BrokerPriorities, Certificates, ColumnEncryptionKeys, ColumnMasterKeys, Contracts, DatabaseRoles, DatabaseTriggers, Defaults, ExtendedProperties, ExternalDataSources, ExternalFileFormats, ExternalTables, Filegroups, FileTables, FullTextCatalogs, FullTextStoplists, MessageTypes, PartitionFunctions, PartitionSchemes, Permissions, Queues, RemoteServiceBindings, RoleMembership, Rules, ScalarValuedFunctions, SearchPropertyLists, SecurityPolicies, Sequences, Services, Signatures, StoredProcedures, SymmetricKeys, Synonyms, Tables, TableValuedFunctions, UserDefinedDataTypes, UserDefinedTableTypes, ClrUserDefinedTypes, Users, Views, XmlSchemaCollections, Audits, Credentials, CryptographicProviders, DatabaseAuditSpecifications, DatabaseScopedCredentials, Endpoints, ErrorMessages, EventNotifications, EventSessions, LinkedServerLogins, LinkedServers, Logins, Routes, ServerAuditSpecifications, ServerRoleMembership, ServerRoles, ServerTriggers.
 |**/p:**|ExcludeObjectTypes=(STRING)|A semicolon-delimited list of object types that should be ignored during deployment. Valid object type names are Aggregates, ApplicationRoles, Assemblies, AsymmetricKeys, BrokerPriorities, Certificates, ColumnEncryptionKeys, ColumnMasterKeys, Contracts, DatabaseRoles, DatabaseTriggers, Defaults, ExtendedProperties, ExternalDataSources, ExternalFileFormats, ExternalTables, Filegroups, FileTables, FullTextCatalogs, FullTextStoplists, MessageTypes, PartitionFunctions, PartitionSchemes, Permissions, Queues, RemoteServiceBindings, RoleMembership, Rules, ScalarValuedFunctions, SearchPropertyLists, SecurityPolicies, Sequences, Services, Signatures, StoredProcedures, SymmetricKeys, Synonyms, Tables, TableValuedFunctions, UserDefinedDataTypes, UserDefinedTableTypes, ClrUserDefinedTypes, Users, Views, XmlSchemaCollections, Audits, Credentials, CryptographicProviders, DatabaseAuditSpecifications, DatabaseScopedCredentials, Endpoints, ErrorMessages, EventNotifications, EventSessions, LinkedServerLogins, LinkedServers, Logins, Routes, ServerAuditSpecifications, ServerRoleMembership, ServerRoles, ServerTriggers.
 |**/p:**|GenerateSmartDefaults=(BOOLEAN)|Automatically provides a default value when updating a table that containsdata with a column that does not allow null values.
@@ -542,7 +552,7 @@ A **SqlPackage.exe** script action creates a Transact-SQL incremental update scr
 |**/p:**|IgnoreFilegroupPlacement=(BOOLEAN 'True')|Specifies whether differences in the placement of objects in FILEGROUPs should be ignored or updated when you publish to a database.|
 |**/p:**|IgnoreFileSize=(BOOLEAN 'True')|Specifies whether differences in the file sizes should be ignored or whether a warning should be issued when you publish to a database.|
 |**/p:**|IgnoreFillFactor=(BOOLEAN 'True')|Specifies whether differences in the fill factor for index storage should be ignored or whether a warning should be issued when you publish.|
-|**/p:**|IgnoreFullTextCatalogFilePath=(BOOLEAN 'True')|Specifies whether differences in the file path for the full-text   be ignored or whether a warning should be issued when you   a database.|
+|**/p:**|IgnoreFullTextCatalogFilePath=(BOOLEAN 'True')|Specifies whether differences in the file path for the full-text be ignored or whether a warning should be issued when you a database.|
 |**/p:**|IgnoreIdentitySeed=(BOOLEAN)|Specifies whether differences in the seed for an identity column should be ignored or updated when you publish updates to a database.|
 |**/p:**|IgnoreIncrement=(BOOLEAN)|Specifies whether differences in the increment for an identity column should be ignored or updated when you publish to a database.|
 |**/p:**|IgnoreIndexOptions=(BOOLEAN)|Specifies whether differences in the index options should be ignored or updated when you publish to a database.|

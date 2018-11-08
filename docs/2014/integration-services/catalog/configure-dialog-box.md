@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "SQL12.SSIS.SSMS.ISPROJECTPROP.PARAMETERS.F1"
   - "SQL12.SSIS.SSMS.ISPROJECTPROP.REFERENCES.F1"
   - "sql12.dts.designer.configure.f1"
 ms.assetid: 10183c8d-b1be-420f-972a-96ea97d4f4d8
-caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Configure Dialog Box

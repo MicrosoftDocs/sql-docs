@@ -5,16 +5,13 @@ ms.date: 06/04/2018
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.ssis.ssms.iscreatecatalog.f1"
   - "sql13.ssis.ssms.iscatalogprop.general.f1"
   - "sql13.ssis.dbupgradewizard.f1"
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
-caps.latest.revision: 28
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
@@ -86,7 +83,7 @@ manager: craigg
   
 -   The name might not contain leading or trailing spaces.  
   
--   @ is not allowed as the first character, but subsequent characters might use @.  
+-   \@ is not allowed as the first character, but subsequent characters might use \@.  
   
 -   The length of the name must be greater than 0 and less than or equal to 128.  
   
@@ -104,7 +101,7 @@ manager: craigg
   
 -   The name might not contain leading or trailing spaces.  
   
--   @ is not allowed as the first character, but subsequent characters might use @.  
+-   \@ is not allowed as the first character, but subsequent characters might use \@.  
   
 -   The length of the name must be greater than 0 and less than or equal to 128.  
   
@@ -220,7 +217,7 @@ To run the **SSIS Server Maintenance Job**, SSIS creates the SQL Server login **
   
 -   [catalog.get_project &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-get-project-ssisdb-database.md)  
   
--   [catalog.move_project &#40;&#40;SSISDB Database&#41;](../Topic/catalog.move_project%20\(\(SSISDB%20Database\).md)  
+-   [catalog.move_project &#40;&#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-move-project-ssisdb-database.md)  
   
 -   [catalog.restore_project &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-restore-project-ssisdb-database.md)  
   
@@ -597,7 +594,7 @@ Do the following prerequisite steps before enabling Always On support for the SS
 > -   You must enable **SSIS support for Always On** *after* you add SSISDB to an Always On Availability Group.  
 
 > [!NOTE]
-> For more info about this procedure, see the following walkthrough with additional screen shots by SQL Server MVP Marcos Freccia: [Adding SSISDB to AG for SQL Server 2016](https://marcosfreccia.wordpress.com/2017/04/28/adding-ssisdb-to-ag-for-sql-server-2016/).
+> For more info about this procedure, see the following walkthrough with additional screen shots by Data Platform MVP Marcos Freccia: [Adding SSISDB to AG for SQL Server 2016](https://marcosfreccia.com/2017/04/28/adding-ssisdb-to-ag-for-sql-server-2016/).
 
 ####  <a name="Step1"></a> Step 1: Create Integration Services Catalog  
   

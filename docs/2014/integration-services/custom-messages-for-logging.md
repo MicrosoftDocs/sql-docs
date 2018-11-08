@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "logs [Integration Services], custom"
@@ -15,9 +13,8 @@ helpviewer_keywords:
   - "SSIS packages, logs"
   - "custom messages for logging [Integration Services]"
 ms.assetid: 3c74bba9-02b7-4bf5-bad5-19278b680730
-caps.latest.revision: 29
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Custom Messages for Logging

@@ -4,21 +4,15 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 ms.assetid: aec09593-17d9-4ec2-ac56-3cd8851406fd
-caps.latest.revision: 6
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: craigg
 ---
 # Removing SSMA for Sybase Components (SybaseToSQL)
-When you have finished migrating databases from Sybase Adaptive Server Enterprise (ASE) to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], you might want to uninstall SSMA components. You can uninstall the client components at any time, but you should not uninstall the extension pack from [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] unless you are sure that your migrated databases no longer use functions in the **ssma_syb** schema of the **sysdb** database.  
+When you have finished migrating databases from Sybase Adaptive Server Enterprise (ASE) to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you might want to uninstall SSMA components. You can uninstall the client components at any time, but you should not uninstall the extension pack from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unless you are sure that your migrated databases no longer use functions in the **ssma_syb** schema of the **sysdb** database.  
   
 ## Uninstalling the SSMA for Sybase Client  
 You can uninstall SSMA by using **Add or Remove Programs**.  
@@ -52,7 +46,7 @@ To uninstall the extension pack
   
 7.  On the Finish page, click **Exit**.  
   
-After uninstalling, you can confirm that the **sysdb.ssma_syb** schema, and possibly the whole **sysdb** database, has been removed by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. However, if you use other SSMA products, they also use the **sysdb** database. If the database exists and you are sure that no other databases reference objects in this database, you can detach the database.  
+After uninstalling, you can confirm that the **sysdb.ssma_syb** schema, and possibly the whole **sysdb** database, has been removed by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. However, if you use other SSMA products, they also use the **sysdb** database. If the database exists and you are sure that no other databases reference objects in this database, you can detach the database.  
   
 ## See Also  
 [Installing SSMA  for Sybase Client &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-client-sybasetosql.md)  

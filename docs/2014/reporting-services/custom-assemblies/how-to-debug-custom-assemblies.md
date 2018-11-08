@@ -4,20 +4,17 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "docset-sql-devref"
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "custom assemblies [Reporting Services], debugging"
   - "debugging custom assemblies [Reporting Services]"
   - "troubleshooting [Reporting Services], custom assemblies"
 ms.assetid: 3a3215b3-548c-4474-81ba-3a98dd3912bf
-caps.latest.revision: 43
-author: "douglaslM"
-ms.author: "douglasl"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # How to: Debug Custom Assemblies

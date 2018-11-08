@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "07/14/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
+ms.technology: in-memory-oltp
 ms.topic: conceptual
 helpviewer_keywords: 
   - "In-Memory OLTP"
   - "memory-optimized tables"
 ms.assetid: e1d03d74-2572-4a55-afd6-7edf0bc28bdb
-caps.latest.revision: 98
-author: "stevestein"
-ms.author: "sstein"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # In-Memory OLTP (In-Memory Optimization)

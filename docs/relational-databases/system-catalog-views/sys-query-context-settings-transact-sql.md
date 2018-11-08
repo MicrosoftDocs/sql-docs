@@ -1,14 +1,11 @@
-﻿---
+---
 title: "sys.query_context_settings (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/22/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "QUERY_CONTEXT_SETTINGS_TSQL"
@@ -20,11 +17,10 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.query_context_settings catalog view"
 ms.assetid: 3c1887df-6bd8-491e-82fc-d25ad9589faf
-caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.query_context_settings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

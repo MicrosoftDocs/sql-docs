@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "08/22/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.foreachloopcontainer.mapping.f1"
 ms.assetid: aa847b87-f391-48a5-9849-eeda2d6b00b9
-caps.latest.revision: 36
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Foreach Loop Editor (Variable Mappings Page)

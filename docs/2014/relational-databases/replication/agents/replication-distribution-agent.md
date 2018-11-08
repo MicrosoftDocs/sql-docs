@@ -1,13 +1,11 @@
 ---
 title: "Replication Distribution Agent | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/13/2017"
+ms.date: "29/10/2018"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "replication"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Distribution Agent, executables"
@@ -15,9 +13,8 @@ helpviewer_keywords:
   - "Distribution Agent, parameter reference"
   - "command prompt [SQL Server replication]"
 ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
-caps.latest.revision: 62
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Replication Distribution Agent
@@ -137,7 +134,10 @@ manager: craigg
 |**0**|Specifies that SSL is not used.|  
 |**1**|Specifies that SSL is used, but the agent does not verify that the SSL server certificate is signed by a trusted issuer.|  
 |**2**|Specifies that SSL is used, and that the certificate is verified.|  
-  
+ 
+ > [!NOTE]  
+ >  A valid SSL certificate is defined with a fully qualified domain name of the SQL Server. In order for the agent to connect successfully when setting -EncryptionLevel to 2, create an alias on the local SQL Server. The ‘Alias Name’ parameter should be the server name and the ‘Server’ parameter should be set to the fully qualified name of the SQL Server.
+
  For more information, see [Security Overview &#40;Replication&#41;](../security/security-overview-replication.md).  
   
  **-ErrorFile** *error_path_and_file_name*  

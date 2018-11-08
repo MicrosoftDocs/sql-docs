@@ -1,0 +1,52 @@
+- name: ODBC How-to Topics
+  href: odbc-how-to-topics.md
+- name: Subareas
+  items:
+  - name: Execute queries +
+    href: ../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md
+  - name: Cursors +
+    href: ../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md
+  - name: Bulk copy +
+    href: ../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md
+- name: Allocate Handles and Connect to SQL Server (ODBC)
+  href: allocate-handles-and-connect-to-sql-server-odbc.md
+- name: Call SQLColumns on a Table with Sparse Columns
+  href: call-sqlcolumns-on-a-table-with-sparse-columns.md
+- name: Configuring the SQL Server ODBC Driver - Add a Data Source
+  href: configuring-the-sql-server-odbc-driver-add-a-data-source.md
+- name: Configuring the SQL Server ODBC Driver - Delete a Data Source
+  href: configuring-the-sql-server-odbc-driver-delete-a-data-source.md
+- name: Get Mutual Kerberos Authentication
+  href: get-mutual-kerberos-authentication.md
+- name: "How to: Insert Rows into Geography Column (ODBC)"
+  href: how-to-insert-rows-into-geography-column-odbc.md
+- name: Managing text and image Columns - Use Data-at-Execution Columns
+  href: managing-text-and-image-columns-use-data-at-execution-columns.md
+- name: Managing text and image Columns - Use Data-at-Execution Parameters
+  href: managing-text-and-image-columns-use-data-at-execution-parameters.md
+- name: Process ODBC Errors (ODBC)
+  href: process-odbc-errors-odbc.md
+- name: Processing Results - Process Results
+  href: processing-results-process-results.md
+- name: Processing Results - Retrieve Result Set Information
+  href: processing-results-retrieve-result-set-information.md
+- name: Profiling ODBC Driver Performance (ODBC)
+  href: profiling-odbc-driver-performance-odbc.md
+- name: Profiling ODBC Driver Performance Data - Log Long-Running Queries
+  href: profiling-odbc-driver-performance-data-log-long-running-queries.md
+- name: Profiling ODBC Driver Performance Data
+  href: profiling-odbc-driver-performance-data.md
+- name: Running Stored Procedures - Call Stored Procedures
+  href: running-stored-procedures-call-stored-procedures.md
+- name: Running Stored Procedures - Process Return Codes and Output Parameters
+  href: running-stored-procedures-process-return-codes-and-output-parameters.md
+- name: Send and Receive Data Incrementally with FILESTREAM (ODBC)
+  href: send-and-receive-data-incrementally-with-filestream-odbc.md
+- name: Support for Large UDTs
+  href: support-for-large-udts.md
+- name: Use Date and Time Types
+  href: use-date-and-time-types.md
+- name: Use Microsoft Distributed Transaction Coordinator (ODBC)
+  href: use-microsoft-distributed-transaction-coordinator-odbc.md
+- name: Use Table-Valued Parameters (ODBC)
+  href: use-table-valued-parameters-odbc.md

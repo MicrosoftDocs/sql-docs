@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "11/17/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sysmail_update_account_sp"
@@ -18,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysmail_update_account_sp"
 ms.assetid: ba2fdccc-5ed4-40ef-a479-79497b4d61aa
-caps.latest.revision: 51
-author: "stevestein"
-ms.author: "sstein"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # sysmail_update_account_sp (Transact-SQL)

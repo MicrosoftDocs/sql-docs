@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-cross-instance"
-ms.tgt_pltfrm: ""
+ms.technology:
 ms.topic: conceptual
 helpviewer_keywords: 
   - "database monitoring [SQL Server], disk usage"
@@ -23,9 +20,8 @@ helpviewer_keywords:
   - "database performance [SQL Server], disk usage"
   - "monitoring server performance [SQL Server], disk usage"
 ms.assetid: 1525449c-ea7d-4222-b294-1ba1fe99c9ac
-caps.latest.revision: 22
-author: "craigg-msft"
-ms.author: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Monitor Disk Usage

@@ -3,10 +3,8 @@ title: "Extensible Key Management Using Azure Key Vault (SQL Server) | Microsoft
 ms.custom: ""
 ms.date: "07/22/2016"
 ms.prod: sql
-ms.reviewer: ""
-ms.suite: "sql"
+ms.reviewer: vanto
 ms.technology: security
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Extensible Key Management with key vault"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "Key Management with key vault"
   - "SQL Server Connector, about"
 ms.assetid: 3efdc48a-8064-4ea6-a828-3fbf758ef97c
-caps.latest.revision: 66
 author: aliceku
 ms.author: aliceku
 manager: craigg

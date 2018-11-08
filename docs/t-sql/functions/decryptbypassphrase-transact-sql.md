@@ -5,9 +5,7 @@ ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "DECRYPTBYPASSPHRASE"
@@ -19,9 +17,8 @@ helpviewer_keywords:
   - "symmetric keys [SQL Server], DECRYPTBYPASSPHRASE function"
   - "DECRYPTBYPASSPHRASE function"
 ms.assetid: ca34b5cd-07b3-4dca-b66a-ed8c6a826c95
-caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # DECRYPTBYPASSPHRASE (Transact-SQL)

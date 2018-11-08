@@ -4,23 +4,19 @@ ms.custom: ""
 ms.date: "09/26/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "import-export"
 ms.reviewer: "douglasl"
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: data-movement
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.importflatfile.f1"
 author: "yualan"
 ms.author: "alayu"
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Import Flat File to SQL Wizard
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-> For content related to the Import and Export Wizard, see [SQL Server Import and Export Wizard](https://docs.microsoft.com/en-us/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard).
+> For content related to the Import and Export Wizard, see [SQL Server Import and Export Wizard](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard).
 
 Import Flat File Wizard is a simple way to copy data from a flat file (.csv, .txt) to a destination. This overview describes the reasons for using this wizard, how to find this wizard, and a simple example to follow.
 
@@ -34,7 +30,7 @@ To further understand the user experience improvement of the Import Flat File Wi
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173/player]
 
 ## Prerequisites
-This feature is only available on SQL Server Management Studio (SSMS) v17.3 or later. Make sure you are using the latest version. You can find the latest version [here.](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)
+This feature is only available on SQL Server Management Studio (SSMS) v17.3 or later. Make sure you are using the latest version. You can find the latest version [here.](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)
  
 ## <a id="started"></a>Getting Started
 To access the Import Flat File Wizard, follow these steps:
@@ -92,7 +88,7 @@ This page indicates whether the import was successful. If a green check mark app
 
 Learn more about the wizard.
  
-- **Learn more about importing other sources.** If you are looking to import more than flat files, see [SQL Server Import and Export Wizard](https://docs.microsoft.com/en-us/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard).
-- **Learn more about connecting to flat file sources.** If you are looking for more information about connecting to flat file sources, see [Connect to a Flat File Data Source](https://docs.microsoft.com/en-us/sql/integration-services/import-export-data/connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard).
+- **Learn more about importing other sources.** If you are looking to import more than flat files, see [SQL Server Import and Export Wizard](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard).
+- **Learn more about connecting to flat file sources.** If you are looking for more information about connecting to flat file sources, see [Connect to a Flat File Data Source](https://docs.microsoft.com/sql/integration-services/import-export-data/connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard).
 - **Learn more about PROSE.** If you are looking for an overview of the intelligent framework used by this wizard, see [PROSE SDK](https://microsoft.github.io/prose/).
 

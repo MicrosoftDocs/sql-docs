@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "measure groups [Analysis Services], cubes"
@@ -18,10 +16,9 @@ helpviewer_keywords:
   - "partitions [Analysis Services], cubes"
   - "storage [Analysis Services], cubes"
 ms.assetid: 1b1ad360-9a9b-4996-bee9-84238a2bb4ac
-caps.latest.revision: 40
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Cube Storage (Analysis Services - Multidimensional Data)
   Storage may include only the cube metadata, or may include all of the source data from the fact table as well as the aggregations defined by dimensions related to the measure group. The amount of data stored depends upon the storage mode selected and the number of aggregations. The amount of data stored directly affects query performance. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] uses several techniques for minimizing the space required for storage of cube data and aggregations:  

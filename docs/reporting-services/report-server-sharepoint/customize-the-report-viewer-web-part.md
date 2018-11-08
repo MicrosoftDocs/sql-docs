@@ -1,20 +1,14 @@
 ---
 title: "Customize the Report Viewer web part | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/25/2017"
+ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "report-server-sharepoint"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-server-sharepoint
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ---
 # Customize the Report Viewer web part
 
@@ -86,7 +80,7 @@ You can use the Report Viewer web part to view reports that run on a report serv
 |Parameters Area Width|You can choose the measurement and value. The default is 200 pixels. The only requirement for this property is that it is greater than zero.|  
 |Document Map|A report navigation control that is defined in the report and used to provide one-click access to specific sections of a report. It is available in HTML reports. The document map is displayed in a collapsible area next to the report viewing area. Valid values include **Displayed**, **Collapsed**, and **Hidden**. If a document map is defined for a report, the area is expanded by default unless marked as hidden or collapsed in the web part properties. If the document map is collapsed, you can click the arrow to expand it.|  
 |Document Map Area Width|You can choose the measurement and value. The default is 200 pixels. The only requirement for this property is that it is greater than zero.|  
-|Load Parameters|Retrieve parameter properties for the report. Not all reports have parameters. If the report does not have parameters, no values will be returned. If you are setting properties for a report that you just uploaded, you might get an error indicating that the data source connection has been deleted. If this occurs, reset the connection and then finish setting parameter properties after the connection is specified. For more information about how to set the connection, see [Create and Manage Shared Data Sources &#40;Reporting Services in SharePoint Integrated Mode&#41;](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76).<br /><br /> For best results, click **Apply** before clicking Load Parameters.<br /><br /> After you load parameter properties, you can set them the same way you would in the parameter property pages of the report. For more information about how to set parameters, see [Set Parameters on a Published Report &#40;Reporting Services in SharePoint Integrated Mode&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).|  
+|Load Parameters|Retrieve parameter properties for the report. Not all reports have parameters. If the report does not have parameters, no values will be returned. If you are setting properties for a report that you just uploaded, you might get an error indicating that the data source connection has been deleted. If this occurs, reset the connection and then finish setting parameter properties after the connection is specified. For more information about how to set the connection, see [Create and Manage Shared Data Sources &#40;Reporting Services in SharePoint Integrated Mode&#41;](https://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76).<br /><br /> For best results, click **Apply** before clicking Load Parameters.<br /><br /> After you load parameter properties, you can set them the same way you would in the parameter property pages of the report. For more information about how to set parameters, see [Set Parameters on a Published Report &#40;Reporting Services in SharePoint Integrated Mode&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).|  
 
 ## Customizing the toolbar
 
@@ -96,7 +90,7 @@ You can use the Report Viewer web part to view reports that run on a report serv
 
 ## Customizing the viewing area
 
- The view area is used to display reports. The report view area is shared with the Parameters and Credentials area, if they are used. If credentials are required, the Credentials area is displayed next to an empty report view area. The Credentials area closes after the user provides credentials and runs the report. To customize the text that prompts users to set credentials, modify the data source connection properties. For more information, see [Create and Manage Shared Data Sources &#40;Reporting Services in SharePoint Integrated Mode&#41;](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76).  
+ The view area is used to display reports. The report view area is shared with the Parameters and Credentials area, if they are used. If credentials are required, the Credentials area is displayed next to an empty report view area. The Credentials area closes after the user provides credentials and runs the report. To customize the text that prompts users to set credentials, modify the data source connection properties. For more information, see [Create and Manage Shared Data Sources &#40;Reporting Services in SharePoint Integrated Mode&#41;](https://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76).  
   
  The Parameters area provides fields for entering values before running the report. It is only used when a report definition includes parameters. When either the Parameters or Credentials areas are displayed, the report view is adjusted to use the remaining width of the web part. You can set properties on the web part to customize the width of Parameters. You can also define the labels that appear next to individual parameters on the page. For more information about how to modify parameter labels, see [Set Parameters on a Published Report &#40;Reporting Services in SharePoint Integrated Mode&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   
@@ -105,4 +99,4 @@ You can use the Report Viewer web part to view reports that run on a report serv
  [Report Viewer web part on a SharePoint Site](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
  [Add the Report Viewer web part to a web page](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

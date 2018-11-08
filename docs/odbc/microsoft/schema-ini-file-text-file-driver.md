@@ -5,15 +5,12 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "schema.ini file [ODBC]"
   - "text file driver [ODBC], schema.ini file"
 ms.assetid: 0c4625c4-c730-4984-b430-9051b7bc0451
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -77,14 +74,14 @@ ColNameHeader=True
 MaxScanRows=0  
 ```  
   
- The next entry designates fields in a table by using the column number (**Col***n*) option, which is optional for character-delimited files and required for fixed-length files. The example shows the Schema.ini entries for two fields, a 10-character CustomerNumber text field and a 30-character CustomerName text field:  
+ The next entry designates fields in a table by using the column number (**Col**_n_) option, which is optional for character-delimited files and required for fixed-length files. The example shows the Schema.ini entries for two fields, a 10-character CustomerNumber text field and a 30-character CustomerName text field:  
   
 ```  
 Col1=CustomerNumber Text Width 10  
 Col2=CustomerName Text Width 30  
 ```  
   
- The syntax of **Col***n* is:  
+ The syntax of **Col**_n_ is:  
   
 ```  
   

@@ -6,7 +6,6 @@ author: MashaMSFT
 ms.author: mathoma
 ms.date: 03/13/2018
 ms.topic: tutorial
-ms.suite: "sql"
 ms.prod_service: sql-tools
 ms.reviewer: sstein
 manager: craigg
@@ -15,6 +14,10 @@ ms.technology: ssms
 ---
 
 # Tutorial: Connect to and query a SQL Server instance by using SQL Server Management Studio
+
+> [!div class="nextstepaction"]
+> [Please help improve SQL Server docs!](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+
 This tutorial teaches you how to use SQL Server Management Studio (SSMS) to connect to your SQL Server instance and run some basic Transact-SQL (T-SQL) commands. The article demonstrates how to do the following:
 
 > [!div class="checklist"]	
@@ -181,5 +184,11 @@ You can change the server that your current query window is connected to by doin
     > [!NOTE]
     > This action changes only the server that the query window is connected to, not the server that Object Explorer is connected to. 
 
+## Next steps
+The next article teaches you how to script various objects within SQL Server Managment Studio. 
+
+Go to the next article to learn more:
+> [!div class="nextstepaction"]
+> [Next steps](scripting-ssms.md)
 
 

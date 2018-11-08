@@ -4,19 +4,15 @@ ms.custom: ""
 ms.date: "04/26/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-cross-instance"
-ms.tgt_pltfrm: ""
+ms.technology:
 ms.topic: conceptual
 helpviewer_keywords: 
   - "jobs [SQL Server Agent], master jobs"
   - "jobs [SQL Server Agent], creating"
   - "master SQL Server Agent job [SQL Server]"
 ms.assetid: c12ab23f-d7ee-43a5-8cd2-0a9121292bcd
-caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Create a SQL Server Agent Master Job

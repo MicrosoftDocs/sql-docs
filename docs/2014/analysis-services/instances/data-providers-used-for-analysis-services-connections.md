@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 128f6dde-409d-4c12-9820-3305bab57b75
-caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Data providers used for Analysis Services connections
   Analysis Services provides three data providers for server and data access. All applications connecting to Analysis Services do so using one of these providers. Two of the providers, ADOMD.NET and Analysis Services Management Objects (AMO), are managed data providers. The Analysis Services OLE DB provider (MSOLAP DLL) is a native data provider.  
@@ -97,7 +94,7 @@ manager: "mblythe"
   
  When connecting to a database, the connection string properties for all three libraries are largely the same. Almost any connection string you define for ADOMD.NET (<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>) will also work for AMO and the Analysis Services OLE DB provider. See [Connection String Properties &#40;Analysis Services&#41;](connection-string-properties-analysis-services.md) for more information.  
   
- For more information about connecting programmatically, see [Establishing Connections in ADOMD.NET](../multidimensional-models-adomd-net-client/connections-in-adomd-net.md).  
+ For more information about connecting programmatically, see [Establishing Connections in ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net).  
   
 ##  <a name="blkmk_AMO"></a> AMO  
  AMO is a managed data provider used for server administration and data definition. For example, SQL Server Management Studio uses AMO to connect to Analysis Services.  
@@ -106,7 +103,7 @@ manager: "mblythe"
   
  A connection using AMO is typically minimal, consisting of “data source=\<servername>”. After a connection is established, you use the API to work with database collections and major objects. Both SSDT and SSMS use AMO to connect to an Analysis Services instance.  
   
- For more information about connecting programmatically, see [Programming AMO Fundamental Objects](../multidimensional-models/analysis-management-objects/programming-amo-fundamental-objects.md).  
+ For more information about connecting programmatically, see [Programming AMO Fundamental Objects](https://docs.microsoft.com/bi-reference/amo/programming-amo-fundamental-objects).  
   
 ## See Also  
  [Connect to Analysis Services](connect-to-analysis-services.md)  

@@ -4,19 +4,14 @@ ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "merge replication logical records [SQL Server replication]"
   - "articles [SQL Server replication], logical records"
   - "logical records [SQL Server replication]"
 ms.assetid: ad76799c-4486-4b98-9705-005433041321
-caps.latest.revision: 55
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

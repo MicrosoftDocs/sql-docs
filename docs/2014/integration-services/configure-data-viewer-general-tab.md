@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.configuredataviewer.general.f1"
 helpviewer_keywords: 
   - "Configure Data Viewer dialog box"
 ms.assetid: 7f60ff18-9ad6-4169-af62-edcb04525b0e
-caps.latest.revision: 22
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Configure Data Viewer (General Tab)

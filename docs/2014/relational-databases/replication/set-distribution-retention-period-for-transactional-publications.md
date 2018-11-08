@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "replication"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "transaction retention periods [SQL Server replication]"
   - "retention periods [SQL Server replication]"
 ms.assetid: 9a98c53a-fea5-4235-b23d-6c69587c5676
-caps.latest.revision: 35
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Set the Distribution Retention Period for Transactional Publications (SQL Server Management Studio)

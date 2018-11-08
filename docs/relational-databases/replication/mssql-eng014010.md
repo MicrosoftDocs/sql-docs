@@ -4,17 +4,12 @@ ms.custom: ""
 ms.date: "08/26/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "MSSQL_ENG014010 error"
 ms.assetid: 6ea84f2f-e7a2-4028-9ea9-af0d2eba660e
-caps.latest.revision: 18
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

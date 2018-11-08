@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "database engine configuration"
   - "database engine configuration, user instance"
 ms.assetid: dfc27c1e-0fe2-4221-bed5-f52667ddd3c8
-caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Database Engine Configuration - User Instance

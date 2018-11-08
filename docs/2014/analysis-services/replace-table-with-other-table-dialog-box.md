@@ -4,20 +4,17 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.dsvdesigner.replacetable.f1"
 helpviewer_keywords: 
   - "Replace Table with Other Table dialog box"
 ms.assetid: 7ca304bf-a01f-43db-bbbc-0572976425b2
-caps.latest.revision: 19
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Replace Table with Other Table Dialog Box
   Use the **Replace Table with Other Table** dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to replace an existing table in a data source view with a table in the underlying data source that is not yet included in the data source view. You can display the **Replace Table with Other Table** dialog box by right-clicking the name of a table in the **Diagram** or **Tables** pane of **Data Source View Designer** and selecting **With Other Table** from **Replace Table**.  

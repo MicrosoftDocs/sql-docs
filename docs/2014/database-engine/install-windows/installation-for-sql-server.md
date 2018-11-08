@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "09/09/2016"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: install
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.portal.Installation.f1"
@@ -16,9 +13,8 @@ helpviewer_keywords:
   - "installation [SQL Server]"
   - "initial installation [SQL Server]"
 ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
-caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Installation for SQL Server 2014

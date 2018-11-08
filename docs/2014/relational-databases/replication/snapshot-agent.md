@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "replication"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.rep.monitor.snapshotagent.f1"
 helpviewer_keywords: 
   - "Snapshot Agent dialog box"
 ms.assetid: b715e621-2cd5-4a15-8f58-a341aa8ef5e4
-caps.latest.revision: 19
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Snapshot Agent

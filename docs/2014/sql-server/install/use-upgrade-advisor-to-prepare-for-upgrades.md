@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Upgrade Advisor [SQL Server]"
@@ -16,9 +14,8 @@ helpviewer_keywords:
   - "SQL Server Upgrade Advisor"
   - "analyzing installations for upgrading [SQL Server]"
 ms.assetid: d85b0833-ddeb-42e3-9397-97ea60d521b7
-caps.latest.revision: 51
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Use Upgrade Advisor to Prepare for Upgrades

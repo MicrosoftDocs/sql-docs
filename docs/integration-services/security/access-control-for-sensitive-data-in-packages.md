@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.packageprotectionlevel.f1"
@@ -23,7 +21,6 @@ helpviewer_keywords:
   - "cryptography [Integration Services]"
   - "security [Integration Services], protection levels"
 ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
-caps.latest.revision: 44
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
@@ -92,7 +89,7 @@ manager: craigg
   
 ### To set or change the protection level of a package in SQL Server Data Tools  
   
-1.  Review the available values for the **ProtectionLevel** property in the topic, [Setting the Protection Level of Packages](#set_protection), and determine the appropriate value for your package.  
+1.  Review the available values for the **ProtectionLevel** property in the section, [Protection Levels](#protection-levels), and determine the appropriate value for your package.  
   
 2.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project that contains the package.  
   
@@ -108,7 +105,7 @@ manager: craigg
   
 ### To set or change the protection level of packages at the command prompt  
   
-1.  Review the available values for the **ProtectionLevel** property in the section, [Setting the Protection Level of Packages](#set_protection), and determine the appropriate value for your package.  
+1.  Review the available values for the **ProtectionLevel** property in the section, [Protection Levels](#protection-levels), and determine the appropriate value for your package.  
   
 2.  Review the mappings for the **Encrypt** option in the topic, [dtutil Utility](../../integration-services/dtutil-utility.md), and determine the appropriate integer to use as the value of the selected **ProtectionLevel** property.  
   

@@ -1,21 +1,14 @@
 ---
 title: "Open a mobile report with specific query string parameters | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/25/2016"
+ms.date: 10/25/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.component: "mobile-reports"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: mobile-reports
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 4eeb3204-e207-4ac0-aff3-bfc4926e5754
-caps.latest.revision: 5
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Open a mobile report with specific query string parameters | Reporting Services
 If you have a [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] mobile report with parameters and a [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] or [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)] data source, you can include query string parameters in the report URL so it opens automatically with values you’ve specified. 
@@ -37,7 +30,7 @@ If you have a [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] m
     
     `http://sampleserver/reports/adventureworks-reports/adventureworks-load-on-demand?TimeChartLoD.category=Clothing` 
     
-     **For a SQL Server data source**: The query string parameter is almost the same, but has the @ symbol in front of the field name:
+     **For a SQL Server data source**: The query string parameter is almost the same, but has the \@ symbol in front of the field name:
 
     `http://<servername>/reports/<report-folder-name>/<report-name>?<dataset-name>.@<field-name>=<parameter-value>`
 

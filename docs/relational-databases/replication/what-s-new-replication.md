@@ -3,19 +3,14 @@ title: "What&#39;s New (Replication) | Microsoft Docs"
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.custom: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "replication [SQL Server], what's new"
   - "what's new [SQL Server replication]"
 ms.assetid: 130a760a-4162-4d7d-b266-453eb5759d7a
-caps.latest.revision: 39
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

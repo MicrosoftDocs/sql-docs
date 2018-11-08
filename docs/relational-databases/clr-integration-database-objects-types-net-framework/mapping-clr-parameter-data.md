@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "08/01/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: reference
-ms.tgt_pltfrm: ""
+ms.technology: clr
 ms.topic: "reference"
 helpviewer_keywords: 
   - "SqlBinary data type"
@@ -25,7 +23,6 @@ helpviewer_keywords:
   - "SqlChars data type"
   - "SqlInt32 data type"
 ms.assetid: 89b43ee9-b9ad-4281-a4bf-c7c8d116daa2
-caps.latest.revision: 71
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

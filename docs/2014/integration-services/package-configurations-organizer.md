@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.packageconfigurationorganizer.f1"
 helpviewer_keywords: 
   - "Package Configurations Organizer dialog box"
 ms.assetid: f20ae6cb-9e6a-4d24-88ff-d7a903a4e8d3
-caps.latest.revision: 37
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Package Configurations Organizer

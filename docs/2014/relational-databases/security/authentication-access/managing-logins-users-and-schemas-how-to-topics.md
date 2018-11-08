@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-security"
-ms.tgt_pltfrm: ""
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords: 
   - "security [SQL Server], logins and users"
 ms.assetid: bc9c8e8a-4a40-4c69-bfca-39975c844298
-caps.latest.revision: 17
-author: "craigg-msft"
-ms.author: "craigg"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Managing Logins, Users, and Schemas How-to Topics

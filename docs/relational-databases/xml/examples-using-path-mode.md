@@ -4,16 +4,12 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "xml"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: xml
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "PATH FOR XML mode, examples"
 ms.assetid: 3564e13b-9b97-49ef-8cf9-6a78677b09a3
-caps.latest.revision: 11
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
@@ -122,7 +118,7 @@ GO
  `<Name>Bike Wash</Name>`  
   
 ## Specifying XPath-like column names  
- In the following query the `ProductModelID` column name specified starts with '@' and does not contain a slash mark ('/'). Therefore, an attribute of the <`row`> element that has the corresponding column value is created in the resulting XML.  
+ In the following query the `ProductModelID` column name specified starts with '\@' and does not contain a slash mark ('/'). Therefore, an attribute of the <`row`> element that has the corresponding column value is created in the resulting XML.  
   
 ```  
 USE AdventureWorks2012;  

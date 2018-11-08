@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Report Builder, launching"
@@ -15,10 +13,9 @@ helpviewer_keywords:
   - "SharePoint integration [Reporting Services], starting Report Builder"
   - "starting Report Builder"
 ms.assetid: 8c8c7d2e-b315-418d-bf65-90e7685e4259
-caps.latest.revision: 50
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
 ---
 # Start Report Builder (Report Builder)
   [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] includes stand-alone and [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] versions of Report Builder. The [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] version can be used with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installed in native or SharePoint integrated mode.  

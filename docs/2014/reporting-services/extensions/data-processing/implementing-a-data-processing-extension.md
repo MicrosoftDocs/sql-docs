@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "docset-sql-devref"
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "custom data processing extensions [Reporting Services]"
@@ -16,9 +14,8 @@ helpviewer_keywords:
   - "data processing extensions [Reporting Services]"
   - "extensions [Reporting Services], data processing"
 ms.assetid: 8dc2b44e-5ad9-411d-a29f-7213e29321a9
-caps.latest.revision: 34
-author: "douglaslM"
-ms.author: "douglasl"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Implementing a Data Processing Extension

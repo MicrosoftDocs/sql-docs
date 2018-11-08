@@ -1,22 +1,15 @@
 ---
 title: "Turn on Reporting Services events for the SharePoint trace log (ULS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/30/2017"
+ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "report-server"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-server
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
-caps.latest.revision: 19
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ---
 
 # Turn on Reporting Services events for the SharePoint trace log (ULS)
@@ -150,11 +143,11 @@ Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Ext
   
  There are also tools you can download which will allow you read ULS logs. For example, the [SharePoint LogViewer](https://github.com/hasankhan/SharePointLogViewer), available on GitHub. 
   
- For more information on how to use PowerShell to view log data, see [View diagnostic logs (SharePoint Server 2010)](http://technet.microsoft.com/library/ff463595.aspx)  
+ For more information on how to use PowerShell to view log data, see [View diagnostic logs (SharePoint Server 2010)](https://technet.microsoft.com/library/ff463595.aspx)  
   
 ##  <a name="bkmk_trace"></a> Trace Log Location  
  The Trace Log files are usually found in the folder **c:\Program Files\Common files\Microsoft Shared\Web Server Extensions\14\logs** but you can verify or change the path from the **Diagnostic Logging** page in SharePoint Central Administration.  
   
- For more information and steps to configure diagnostic logging on a SharePoint server in SharePoint 2010 Central Administration, see [Configure diagnostic logging settings (Windows SharePoint Services)](http://go.microsoft.com/fwlink/?LinkID=114423).  
+ For more information and steps to configure diagnostic logging on a SharePoint server in SharePoint 2010 Central Administration, see [Configure diagnostic logging settings (Windows SharePoint Services)](https://go.microsoft.com/fwlink/?LinkID=114423).  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

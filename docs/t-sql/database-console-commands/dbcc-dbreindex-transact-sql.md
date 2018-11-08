@@ -5,9 +5,7 @@ ms.date: "07/16/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "DBCC DBREINDEX"
@@ -22,7 +20,6 @@ helpviewer_keywords:
   - "dynamic index rebuilding [SQL Server]"
   - "DBCC DBREINDEX statement"
 ms.assetid: 6e929d09-ccb5-4855-a6af-b616022bc8f6
-caps.latest.revision: 52
 author: uc-msft
 ms.author: umajay
 manager: craigg

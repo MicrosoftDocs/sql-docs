@@ -1,23 +1,17 @@
 ---
 title: "Troubleshooter: Find errors with SQL Server transactional replication | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/26/2018"
+ms.date: "04/27/2018"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: replication
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "SQL Server 2016"
 helpviewer_keywords: 
   - "replication [SQL Server], tutorials"
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---
-
-
 # Troubleshooter: Find errors with SQL Server transactional replication 
 Troubleshooting replication errors can be frustrating without a basic understanding of how transactional replication works. The first step in creating a publication is having the Snapshot Agent create the snapshot and save it to the snapshot folder. Next, the Distribution Agent applies the snapshot to the subscriber. 
 

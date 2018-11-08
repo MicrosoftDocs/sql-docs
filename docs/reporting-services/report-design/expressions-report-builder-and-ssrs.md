@@ -1,22 +1,15 @@
 ---
 title: "Expressions (Report Builder and SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/06/2016"
+ms.date: 09/06/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "report-design"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-design
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
-caps.latest.revision: 13
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Expressions (Report Builder and SSRS)
   Expressions are widely used throughout [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated reports to retrieve, calculate, display, group, sort, filter, parameterize, and format data. 
@@ -118,5 +111,5 @@ manager: "kfile"
 -   [Filter Equation Examples &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)  
 -   [Group Expression Examples &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)  
 -   [Tutorial: Introducing Expressions](Tutorial:%20Introducing%20Expressions.md)
--   [Report Samples (Report Builder and SSRS)](http://go.microsoft.com/fwlink/?LinkId=198283)  
+-   [Report Samples (Report Builder and SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283)  
   

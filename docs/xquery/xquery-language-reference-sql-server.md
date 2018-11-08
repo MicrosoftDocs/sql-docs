@@ -4,15 +4,10 @@ ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: sql
-ms.component: "xquery"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
 helpviewer_keywords: 
   - "XQuery"
   - "XQuery, about XQuery"
@@ -20,7 +15,6 @@ helpviewer_keywords:
   - "XML [SQL Server], XQuery"
   - "queries [XML in SQL Server], XQuery"
 ms.assetid: 8a69344f-2990-4357-8160-cb26aac95b91
-caps.latest.revision: 51
 author: "rothja"
 ms.author: "jroth"
 manager: craigg
@@ -38,7 +32,7 @@ manager: craigg
   
  To query an XML instance stored in a variable or column of **xml** type, you use the [xml Data Type Methods](../t-sql/xml/xml-data-type-methods.md). For example, you can declare a variable of **xml** type and query it by using the **query()** method of the **xml** data type.  
   
-```  
+```sql
 DECLARE @x xml  
 SET @x = '<ROOT><a>111</a></ROOT>'  
 SELECT @x.query('/ROOT/a')  
@@ -46,7 +40,7 @@ SELECT @x.query('/ROOT/a')
   
  In the following example, the query is specified against the Instructions column of **xml** type in ProductModel table in the AdventureWorks database.  
   
-```  
+```sql
 SELECT Instructions.query('declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";           
     /AWMI:root/AWMI:Location[@LocationID=10]  
 ') as Result   

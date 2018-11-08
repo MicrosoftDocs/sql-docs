@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "result sets [Integration Services]"
   - "Execute SQL task [Integration Services]"
 ms.assetid: 62605b63-d43b-49e8-a863-e154011e6109
-caps.latest.revision: 30
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Result Sets in the Execute SQL Task

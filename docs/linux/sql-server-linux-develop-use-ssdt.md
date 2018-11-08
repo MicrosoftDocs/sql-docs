@@ -5,11 +5,8 @@ author: rothja
 ms.author: jroth 
 manager: craigg
 ms.date: 03/17/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
-
-ms.component: ""
-ms.suite: "sql"
 ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
 ms.custom: "sql-linux"
@@ -34,7 +31,7 @@ SQL Server Data Tools (SSDT) turns Visual Studio into a powerful development and
 
 ## Upgrade SQL Server Data Tools to SSDT 17.0 RC release
 
-SQL Server 2017 on Linux is supported by SSDT version 17.0 RC or later.
+SQL Server on Linux is supported by SSDT version 17.0 RC or later.
 
 * [Download and Install SSDT 17.0 RC2](https://go.microsoft.com/fwlink/?linkid=837939).
 
@@ -74,13 +71,13 @@ SQL Server 2017 on Linux is supported by SSDT version 17.0 RC or later.
 
 ## Build and validate the database
 
-1. Open the database project menu on **TutorialDB** and select **Build**. SSDT compiles .sql source code files in your project and builds a Data-tier Application package (dacpac) file. This can be used to publish a database to your SQL Server 2017 instance on Linux. 
+1. Open the database project menu on **TutorialDB** and select **Build**. SSDT compiles .sql source code files in your project and builds a Data-tier Application package (dacpac) file. This can be used to publish a database to your SQL Server instance on Linux. 
 
     <img src="./media/sql-server-linux-develop-use-ssdt/build.png" alt="add columns" style="width: 400px;"/>
 
 2. Check the build success message in **Output** window in Visual Studio. 
 
-## Publish the database to SQL Server 2017 instance on Linux
+## Publish the database to SQL Server instance on Linux
 
 1. Open the database project menu on **TutorialDB** and select **Publish**.
 
@@ -110,6 +107,6 @@ For more information about developing a database with SQL Data Tools, see [SSDT 
 
 [Download and Install Visual Studio]:https://www.visualstudio.com/downloads/
 [Download and Install SSDT 17.0 RC2]:https://aka.ms/ssdt-download
-[SSDT MSDN documents]: https://msdn.microsoft.com/en-us/library/hh272686(v=vs.103).aspx
+[SSDT MSDN documents]: https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx
 [Tutorial: Writing Transact-SQL Statements]:https://msdn.microsoft.com/library/ms365303.aspx
 [Transact-SQL Reference (Database Engine)]:https://msdn.microsoft.com/library/bb510741.aspx

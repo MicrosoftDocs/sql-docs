@@ -5,9 +5,7 @@ ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -19,9 +17,8 @@ helpviewer_keywords:
   - "DENY statement, asymmetric keys"
   - "cryptography [SQL Server], asymmetric keys"
 ms.assetid: dd7d8cd5-536b-460c-ab5b-cb4752bbdfaa
-caps.latest.revision: 14
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # DENY Asymmetric Key Permissions (Transact-SQL)

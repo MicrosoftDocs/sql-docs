@@ -3,11 +3,8 @@ title: "Recompile a Stored Procedure | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
+ms.technology: stored-procedures
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-stored-procs"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "sp_recompile"
@@ -15,9 +12,8 @@ helpviewer_keywords:
   - "recompiling stored procedures"
   - "stored procedures [SQL Server], recompiling"
 ms.assetid: b90deb27-0099-4fe7-ba60-726af78f7c18
-caps.latest.revision: 37
-author: "craigg-msft"
-ms.author: "craigg"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Recompile a Stored Procedure

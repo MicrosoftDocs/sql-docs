@@ -3,10 +3,8 @@ title: SQL Server high availability and disaster recovery partners | Microsoft D
 description: Lists of third-party partners with solutions to monitor Server.
 services: sql-server
 documentationcenter: NA
-ms.suite: "sql"
 ms.devlang: NA
-ms.topic: article
-ms.tgt_pltfrm: NA
+ms.topic: conceptual
 ms.custom: ""
 ms.date: 09/17/2017    
 ms.prod: sql

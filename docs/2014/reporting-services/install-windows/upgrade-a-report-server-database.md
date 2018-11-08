@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "08/10/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "upgrading databases"
   - "report server database"
   - "upgrading Reporting Services"
 ms.assetid: 4091cf87-9d97-4048-a393-67f1f9207401
-caps.latest.revision: 42
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Upgrade a Report Server Database
@@ -24,7 +21,7 @@ manager: craigg
   
  **Native Mode:** In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode, the report server database is actually comprised of two database that have default names of “ReportServer and ReportServerTempDB”.  
   
- **SharePoint mode:** In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode the report sever database is actually a collection of databases that is created for each instance of the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application.  
+ **SharePoint mode:** In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode the report server database is actually a collection of databases that is created for each instance of the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application.  
   
 ## Ways to Upgrade a Native Mode Report Server Database  
  The following list identifies the conditions under which a report server database is upgraded:  

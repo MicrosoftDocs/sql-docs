@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "scenarios [CLR integration]"
@@ -18,9 +16,8 @@ helpviewer_keywords:
   - "database objects [CLR integration], samples"
   - "managed code [SQL Server], samples"
 ms.assetid: 33aac25f-abb4-4f29-af88-4a0dacd80ae7
-caps.latest.revision: 43
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Usage Scenarios and Examples for Common Language Runtime (CLR) Integration

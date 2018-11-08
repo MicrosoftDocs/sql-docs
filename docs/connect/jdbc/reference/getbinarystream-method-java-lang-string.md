@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "SQLServerResultSet.getBinaryStream (java.lang.String)"
@@ -15,7 +13,6 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: 149609b5-a6de-4e23-a440-7061775d0899
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -46,7 +43,7 @@ public java.io.InputStream getBinaryStream(java.lang.String columnName)
 ## Remarks  
  This getBinaryStream method is specified by the getBinaryStream method in the java.sql.ResultSet interface.  
   
- This method can be used only with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] data types of binary, varbinary, varbinary(max), and image. Trying to use it with other data types will cause an exception to be thrown.  
+ This method can be used only with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] data types of binary, varbinary, varbinary(max), and image. Trying to use it with other data types will cause an exception to be thrown.  
   
  After this method gets the value as a stream, the value can then be read in chunks from the stream. This method is particularly suitable for retrieving large LONGVARBINARY values.  
   

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.xml_indexes_TSQL"
@@ -20,9 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.xml_indexes catalog view"
 ms.assetid: 3408de72-b067-4fda-b5d5-8e856dfd9db3
-caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # sys.xml_indexes (Transact-SQL)

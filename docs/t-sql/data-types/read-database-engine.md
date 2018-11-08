@@ -5,9 +5,7 @@ ms.date: "7/22/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "Read_TSQL"
@@ -17,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Read [Database Engine]"
 ms.assetid: f2b8207c-b69f-4327-a874-100b3a1f27d8
-caps.latest.revision: 13
-author: edmacauley
-ms.author: edmaca
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Read (Database Engine)

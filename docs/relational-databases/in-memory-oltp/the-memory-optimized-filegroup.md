@@ -4,14 +4,10 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "in-memory-oltp"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 14106cc9-816b-493a-bcb9-fe66a1cd4630
-caps.latest.revision: 15
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg
@@ -44,7 +40,7 @@ manager: craigg
   
 The following limitations apply to a memory-optimized filegroup:  
   
--   Once you create a memory-optimized filegroup, you can only remove it by dropping the database. In a production environment, it is unlikely that you will need to remove the memory-optimized filegroup.  
+-   Once you use a memory-optimized filegroup, you can only remove it by dropping the database. In a production environment, it is unlikely that you will need to remove the memory-optimized filegroup.  
   
 -   You cannot drop a non-empty container or move data and delta file pairs to another container in the memory-optimized filegroup.  
   

@@ -4,18 +4,12 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 helpviewer_keywords: 
   - "Password management, importing or exporting encrypted password"
   - "Password management, securing password"
 ms.assetid: 4ffbc587-ea3f-49ad-bc42-a654f672325e
-caps.latest.revision: 13
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: craigg
@@ -131,5 +125,5 @@ Example:
     Please confirm password: xxxxxxxx  
   
 ## See Also  
-[Executing the SSMA Console (MySQL)](http://msdn.microsoft.com/en-us/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
+[Executing the SSMA Console (MySQL)](http://msdn.microsoft.com/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
   

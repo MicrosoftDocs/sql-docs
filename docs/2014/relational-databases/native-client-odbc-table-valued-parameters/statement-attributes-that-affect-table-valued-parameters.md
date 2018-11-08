@@ -4,19 +4,14 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "table-valued parameters (ODBC), descriptor header field"
   - "table-valued parameters (ODBC), statement attribute"
 ms.assetid: 089213b0-d368-4332-b2e5-b2bd8770c64f
-caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Statement Attributes that Affect Table-Valued Parameters

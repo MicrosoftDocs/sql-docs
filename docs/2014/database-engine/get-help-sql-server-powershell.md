@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Help [PowerShell]"
   - "Help [SQL Server], PowerShell"
   - "PowerShell [SQL Server], help"
 ms.assetid: 968c316d-db83-4c24-8ea6-9f18736842f7
-caps.latest.revision: 18
-author: "mgblythe"
-ms.author: "mblythe"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Get Help SQL Server PowerShell

@@ -1,11 +1,9 @@
 ---
 title: "SQL Server privacy supplement | Microsoft Docs"
-ms.date: 4/24/2018
+ms.date: 4/25/2018
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.custom: ""
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
 helpviewer_keywords: 
@@ -21,7 +19,7 @@ This article summarizes the behavior of different data objects used within SQL S
 - Azure SQL Database
 - SQL Server Management Studio (SSMS)
 - SQL Server Data Tools (SSDT)
-- SQL Operations Studio
+- Azure Data Studio
 - Database Migration Assistant
 - SQL Server Migration Assistant
 - MS-SQL Extension
@@ -124,6 +122,7 @@ The following are considered system metadata when they do not inlcude customer c
 - Server configuration data, for example settings of sp_configure
 - Feature configuration data
 - Event names and error codes
+- Hardware settings and identification such as OEM Manufacturer
 
 Microsoft does examine application name values set by other programs that use SQL Server (example: Sharepoint or 3rd party packaged programs and includes this information in System Metadata sent to Microsoft when Usage Data is enabled). Customers should not place personal data, such as end-user identifiable information, in System Metadata fields or create applications designed to store personal data in these fields. 
 

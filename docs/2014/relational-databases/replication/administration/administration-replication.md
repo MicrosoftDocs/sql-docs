@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "replication"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "transactional replication, administering"
@@ -16,9 +14,8 @@ helpviewer_keywords:
   - "replication [SQL Server], administering"
   - "merge replication [SQL Server replication], administering"
 ms.assetid: a3d4e7c6-feb5-411b-8bb9-70b6d943420c
-caps.latest.revision: 37
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Administration (Replication)

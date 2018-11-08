@@ -4,19 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
+ms.technology: high-availability
 ms.topic: conceptual
 helpviewer_keywords: 
   - "TRUSTWORTHY database option"
   - "mirror database [SQL Server]"
   - "database mirroring [SQL Server], security"
 ms.assetid: 6993b076-78ef-453e-b0ea-e341b8e5ee3e
-caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Set Up a Mirror Database to Use the Trustworthy Property (Transact-SQL)

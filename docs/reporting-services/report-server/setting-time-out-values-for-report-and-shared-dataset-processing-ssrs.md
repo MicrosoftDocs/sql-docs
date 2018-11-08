@@ -1,16 +1,11 @@
 ---
 title: "Setting Time-out Values for Report and Shared Dataset Processing (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "report-server"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-server
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "time-outs [Reporting Services]"
@@ -18,10 +13,8 @@ helpviewer_keywords:
   - "report processing [Reporting Services], time-outs"
   - "report execution time-outs [Reporting Services]"
 ms.assetid: 0f9dc61d-d03c-4bbf-8090-7a53844350f8
-caps.latest.revision: 39
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ---
 # Setting Time-out Values for Report and Shared Dataset Processing (SSRS)
   You can [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] specify time-out values to set limits on how system resources are used. Report server supports two time-out values:  
@@ -59,6 +52,6 @@ manager: "kfile"
  [Set Processing Options &#40;Reporting Services in SharePoint Integrated Mode&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [Reporting Services Report Server &#40;Native Mode&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [Manage a Running Process](../../reporting-services/subscriptions/manage-a-running-process.md)   
- [Report Manager  &#40;SSRS Native Mode&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
+ [Report Manager  &#40;SSRS Native Mode&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
   
   

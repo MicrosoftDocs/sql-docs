@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "srv_rpcname"
@@ -21,9 +19,8 @@ dev_langs:
 helpviewer_keywords: 
   - "srv_rpcname"
 ms.assetid: 0a1424e4-3319-4836-b8d8-5e0344cc683f
-caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # srv_rpcname (Extended Stored Procedure API)

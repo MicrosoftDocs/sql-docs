@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "behavior changes [SQL Server]"
   - "Database Engine [SQL Server], what's new"
   - "Transact-SQL behavior changes"
 ms.assetid: 65eaafa1-9e06-4264-b547-cbee8013c995
-caps.latest.revision: 134
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Behavior Changes to Database Engine Features in SQL Server 2014

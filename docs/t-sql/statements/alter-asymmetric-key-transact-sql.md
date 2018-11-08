@@ -1,13 +1,8 @@
 ---
 title: "ALTER ASYMMETRIC KEY (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
 ms.date: "04/12/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "ALTER_ASYMMETRIC_KEY_TSQL"
@@ -22,9 +17,8 @@ helpviewer_keywords:
   - "ALTER ASYMMETRIC KEY statement"
   - "asymmetric keys [SQL Server], modifying"
 ms.assetid: 958e95d6-fbe6-43e8-abbd-ccedbac2dbac
-caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # ALTER ASYMMETRIC KEY (Transact-SQL)

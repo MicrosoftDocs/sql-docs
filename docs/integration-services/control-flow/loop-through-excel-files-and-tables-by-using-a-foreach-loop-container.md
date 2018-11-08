@@ -5,16 +5,13 @@ ms.date: "05/15/2018"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "connections [Integration Services], Excel"
   - "Excel [Integration Services]"
   - "connection managers [Integration Services], Excel"
 ms.assetid: a5393c1a-cc37-491a-a260-7aad84dbff68
-caps.latest.revision: 35
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

@@ -1,0 +1,14 @@
+- name: Tabular Model Programming for Compatibility Levels 1050 through 1103
+  href: tabular-model-programming-for-compatibility-levels-1050-through-1103.md
+- name: Representation +
+  href: ../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/connection-representation-tabular.md
+- name: Conceptual schema definition language (CSDL) +
+  href: https://docs.microsoft.com/bi-reference/csdl/associationset-element-csdlbi
+- name: CSDL Annotations for Business Intelligence (CSDLBI)
+  href: https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi
+- name: CSDLBI Attributes for Report Design
+  href: https://docs.microsoft.com/bi-reference/csdl/csdlbi-attributes-for-report-design
+- name: CSDLBI Concepts
+  href: https://docs.microsoft.com/bi-reference/csdl/csdlbi-concepts
+- name: IMDEmbeddedData Interface
+  href: imdembeddeddata-interface.md

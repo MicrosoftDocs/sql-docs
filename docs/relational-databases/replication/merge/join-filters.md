@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "filters [SQL Server replication], join"
@@ -17,7 +13,6 @@ helpviewer_keywords:
   - "merge replication join filters [SQL Server replication]"
   - "join filters"
 ms.assetid: dd78fd8f-56e3-4582-9abd-6bc25c91e075
-caps.latest.revision: 38
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

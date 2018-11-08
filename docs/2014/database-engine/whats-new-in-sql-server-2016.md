@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/22/2016"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "what's new [SQL Server Database Engine]"
   - "Database Engine [SQL Server], what's new"
 ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
-caps.latest.revision: 206
-author: "craigg-msft"
-ms.author: "craigg"
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # What&#39;s New (Database Engine)

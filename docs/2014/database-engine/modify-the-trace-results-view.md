@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 860a80dc-bac0-4ef0-bf7f-7a9b430d7aa3
-caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Modify the Trace Results View
@@ -225,7 +222,7 @@ manager: craigg
   
     -   **Table Columns**. Use this option to search all visible columns in the trace window.  
   
-    -   **Details**. Use this option to search all columns (promoted and non-promoted) in the trace window that that were selected before opening the **Find in Extended Events** dialog box.  
+    -   **Details**. Use this option to search all columns (promoted and non-promoted) in the trace window that were selected before opening the **Find in Extended Events** dialog box.  
   
     -   **\<Event column name>**. Use this option to search in a specific event column from the drop-down list.  
   

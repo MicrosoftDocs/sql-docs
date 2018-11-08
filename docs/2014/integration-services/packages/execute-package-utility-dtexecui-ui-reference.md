@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.dtexecui.general.f1"
@@ -23,9 +21,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "DTExecUI utility"
 ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
-caps.latest.revision: 39
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Execute Package Utility (DtExecUI) UI Reference
@@ -280,7 +277,7 @@ manager: craigg
  Click to close the **Execute Package Utility** dialog box.  
   
 ## Logging Page  
- Use the **Logging** page of the **Execute Package Utility** dialog box to make log providers available to the package at run time. Provide the package log provider type and the connection string for connecting to the log. Each log provider entry adds a **/LOGGER***classid* option to the command prompt.  
+ Use the **Logging** page of the **Execute Package Utility** dialog box to make log providers available to the package at run time. Provide the package log provider type and the connection string for connecting to the log. Each log provider entry adds a **/LOGGER**_classid_ option to the command prompt.  
   
 ### Options  
  **Log Provider**  
@@ -299,7 +296,7 @@ manager: craigg
  Click to close the **Execute Package Utility** dialog box.  
   
 ## Set Values Page  
- Use the **Set Values** page of the **Execute Package Utility** dialog box to set the property values of packages, executables, connections, variables, and log providers by typing the paths of properties and the property values. Each path entry adds a **/SET***propertypath;value* option to the command prompt.  
+ Use the **Set Values** page of the **Execute Package Utility** dialog box to set the property values of packages, executables, connections, variables, and log providers by typing the paths of properties and the property values. Each path entry adds a **/SET**_propertypath;value_ option to the command prompt.  
   
 ### Options  
  **Property Path**  

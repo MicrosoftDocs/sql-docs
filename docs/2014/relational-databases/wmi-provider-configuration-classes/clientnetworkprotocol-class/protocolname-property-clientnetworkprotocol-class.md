@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "ProtocolName Property (ClientNetworkProtocol Class)"
@@ -19,9 +17,8 @@ topic_type:
 helpviewer_keywords: 
   - "ProtocolName property"
 ms.assetid: f8527121-fbcd-4d30-9b4a-1461149cb5a8
-caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # ProtocolName Property (ClientNetworkProtocol Class)

@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.datasourceviewwizard.namematchingcriteria.f1"
 ms.assetid: 7f811e02-0fe6-45c9-a7b7-29c61032d96b
-caps.latest.revision: 24
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Name Matching (Data Source View Wizard) (Analysis Services)
   Use the **Name Matching** page to select the criterion to use for detecting possible relationships between the tables that you select for the data source view and the other tables in the schema. If no physical foreign key relationships exist between the tables, this criterion helps you identify and add related tables to the data source view. The logical relationships that are identified by name matching are also added to the data source view.  

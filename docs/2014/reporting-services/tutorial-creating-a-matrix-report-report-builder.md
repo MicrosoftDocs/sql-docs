@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
-caps.latest.revision: 11
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
 ---
 # Tutorial: Creating a Matrix Report (Report Builder)
   This tutorial teaches you how to create a basic matrix report based on sample sales data. The matrix has nested row and column groups and an adjacent column group. You will also learn how to format columns and rotate text. The following illustration shows a report similar to the one you will create.  

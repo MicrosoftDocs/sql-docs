@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
+ms.technology: high-availability
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.availabilitygroup.OEdetails.f1"
@@ -16,9 +13,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], databases"
   - "Availability Groups [SQL Server]"
 ms.assetid: 84affc47-40e0-43d9-855e-468967068c35
-caps.latest.revision: 28
-author: "rothja"
-ms.author: "jroth"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Use the Object Explorer Details to Monitor Availability Groups (SQL Server Management Studio)

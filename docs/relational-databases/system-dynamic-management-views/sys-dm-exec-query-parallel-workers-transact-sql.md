@@ -1,13 +1,11 @@
-﻿---
+---
 title: "sys.dm_exec_query_parallel_workers (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/24/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "dm_exec_query_parallel_workers_TSQL"
@@ -19,11 +17,10 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_exec_query_parallel_workers dynamic management view"
 ms.assetid: 1d72cef1-22d8-4ae0-91db-6694fe918c9f
-caps.latest.revision: 1
 author: "pelopes"
 ms.author: "pelopes"
 manager: "ajayj"
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_query_parallel_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]

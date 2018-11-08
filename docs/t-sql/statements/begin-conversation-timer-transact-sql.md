@@ -5,9 +5,7 @@ ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "CONVERSATION"
@@ -32,9 +30,8 @@ helpviewer_keywords:
   - "starting timers [Service Broker]"
   - "http://schemas.microsoft.com/SQL/ServiceBroker/DialogTimer message"
 ms.assetid: 98e49b3f-a38f-4180-8171-fa9cb30db4cb
-caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # BEGIN CONVERSATION TIMER (Transact-SQL)
@@ -54,7 +51,7 @@ BEGIN CONVERSATION TIMER ( conversation_handle )
 ```  
   
 ## Arguments  
- BEGIN CONVERSATION TIMER **(***conversation_handle***)**  
+ BEGIN CONVERSATION TIMER **(**_conversation\_handle_**)**  
  Specifies the conversation to time. The *conversation_handle* must be of type **uniqueidentifier**.  
   
  TIMEOUT  

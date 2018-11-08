@@ -5,9 +5,7 @@ ms.date: "05/01/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "ALTER SERVER CONFIGURATION"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "ALTER SERVER CONFIGURATION statement"
   - "setting process affinity"
 ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
-caps.latest.revision: 72
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
@@ -183,7 +180,7 @@ SQLDUMPEREDUMPFLAGS
   
 **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- HADR CLUSTER CONTEXT **=** { **'***remote_windows_cluster***'** | LOCAL }  
+ HADR CLUSTER CONTEXT **=** { **'**_remote\_windows\_cluster_**'** | LOCAL }  
  Switches the HADR cluster context of the server instance to the specified Windows Server Failover Cluster (WSFC). The *HADR cluster context* determines what WSFC manages the metadata for availability replicas hosted by the server instance. Use the SET HADR CLUSTER CONTEXT option only during a cross-cluster migration of [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] to an instance of [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] or higher version on a new WSFC r.  
   
  You can switch the HADR cluster context only from the local WSFC to a remote WSFC and then back from the remote WSFC to the local WSFC. The HADR cluster context can be switched to a remote cluster only when the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is not hosting any availability replicas.  

@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "04/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "docset-sql-devref"
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 dev_langs: 
   - "VB"
@@ -19,9 +17,8 @@ helpviewer_keywords:
   - "validation [Integration Services], design-time tasks"
   - "SSIS custom tasks, validating"
 ms.assetid: dc224f4f-b339-4eb6-a008-1b4fe0ea4fd2
-caps.latest.revision: 52
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Coding a Custom Task

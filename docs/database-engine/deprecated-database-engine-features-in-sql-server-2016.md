@@ -4,19 +4,15 @@ ms.custom: ""
 ms.date: "05/09/2018"
 ms.prod: sql
 ms.prod_service: high-availability
-ms.component: "database-engine"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "deprecated features [SQL Server]"
   - "Database Engine [SQL Server], backward compatibility"
   - "deprecation [SQL Server], feature list"
 ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
-caps.latest.revision: 215
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -48,7 +44,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Category|Deprecated feature|Replacement|Feature name|Feature ID|  
 |--------------|------------------------|-----------------|------------------|----------------|  
 |Backup and Restore|RESTORE { DATABASE &#124; LOG } WITH [MEDIA]PASSWORD continues to be deprecated. BACKUP { DATABASE &#124; LOG } WITH PASSWORD and BACKUP { DATABASE &#124; LOG } WITH MEDIAPASSWORD are discontinued.|None.|BACKUP DATABASE or LOG WITH PASSWORD<br /><br /> BACKUP DATABASE or LOG WITH MEDIAPASSWORD|104<br /><br /> 103|  
-|Compatibility levels|Upgrade from version 110 ([!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]).|When a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] version goes out of [support](http://aka.ms/sqllifecycle), the associated database compatibility level will be marked deprecated. However, we will continue to support applications certified on any supported Database Compatibility Level as long as possible, to make the upgrades easier. For more information about compatibility levels, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|Database compatibility level 100|108|  
+|Compatibility levels|Upgrade from version 100 ([!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]).|When a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] version goes out of [support](http://aka.ms/sqllifecycle), the associated database compatibility level will be marked deprecated. However, we will continue to support applications certified on any supported Database Compatibility Level as long as possible, to make the upgrades easier. For more information about compatibility levels, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|Database compatibility level 100|108|  
 |Database objects|Ability to return result sets from triggers|None|Returning results from trigger|12|  
 |Encryption|Encryption using RC4 or RC4_128 is deprecated and is scheduled to be removed in the next version. Decrypting RC4 and RC4_128 is not deprecated.|Use another encryption algorithm such as AES.|Deprecated encryption algorithm|253|  
 |Remote servers|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|Replace remote servers by using linked servers. sp_addserver can only be used with the local option.|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|70<br /><br /> 69<br /><br /> 71<br /><br /> 72<br /><br /> 73|  
@@ -62,7 +58,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Category|Deprecated feature|Replacement|Feature name|Feature ID|  
 |--------------|------------------------|-----------------|------------------|----------------|  
 |Compatibility levels|sp_dbcmptlevel|ALTER DATABASE … SET COMPATIBILITY_LEVEL. For more information, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|sp_dbcmptlevel|80|  
-|Compatibility levels|Database compatibility level 110 and 120.|Plan to upgrade the database and application for a future release.|Database compatibility level 110<br /><br /> Database compatibility level 120||  
+|Compatibility levels|Database compatibility level 110 and 120.|Plan to upgrade the database and application for a future release. However, we will continue to support applications certified on any supported database compatibility level as long as possible, to make the upgrades easier. For more information about compatibility levels, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|Database compatibility level 110<br /><br /> Database compatibility level 120||  
 |XML|Inline XDR Schema Generation|The XMLDATA directive to the FOR XML option is deprecated. Use XSD generation in the case of RAW and AUTO modes. There is no replacement for the XMLDATA directive in EXPLICT mode.|XMLDATA|181|  
 |Backup and restore|BACKUP { DATABASE &#124; LOG } TO TAPE<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_tape*|BACKUP { DATABASE &#124; LOG } TO DISK<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_disk*|BACKUP DATABASE or LOG TO TAPE|235|  
 |Backup and restore|sp_addumpdevice'**tape**'|sp_addumpdevice'**disk**'|ADDING TAPE DEVICE|236|  

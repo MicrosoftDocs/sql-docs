@@ -5,14 +5,11 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.ssis.packagepublishwizard.f1"
 ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
-caps.latest.revision: 12
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
@@ -124,7 +121,7 @@ manager: craigg
   
         1.  Specify the database schema in which you want the view to be created (Schema field).  
   
-        2.  Specify whether data should be encrypted before sending it over the network (Encrypt field). See [Using Encryption Without Validation](http://msdn.microsoft.com/library/ms131691.aspx) topic for more details about this setting and the TrustServerCertificate setting.  
+        2.  Specify whether data should be encrypted before sending it over the network (Encrypt field). See [Using Encryption Without Validation](../../relational-databases/native-client/features/using-encryption-without-validation.md) topic for more details about this setting and the TrustServerCertificate setting.  
   
         3.  Specify whether a self-signed server certificate can be used when the encryption setting is enabled (**TrustServerCertificate** field).  
   
@@ -207,7 +204,7 @@ GO
   
  At runtime, when the view is executed, the linked server query that is defined in the view starts the SSIS package specified in the query and receives the package output as a tabular result set.  
   
-1.  Before creating the view, type and run the following query in the new query window. OPENQUERY is a rowset function supported by SQL Server. It executes the specified pass-through query on the specified linked server using the OLE DB Provider associated with the linked server. OPENQUERY can be referenced in the FROM clause of a query as if it were a table name. See [OPENQUERY documentation on MSDN Library](http://msdn.microsoft.com/library/ms188427.aspx) for more information.  
+1.  Before creating the view, type and run the following query in the new query window. OPENQUERY is a rowset function supported by SQL Server. It executes the specified pass-through query on the specified linked server using the OLE DB Provider associated with the linked server. OPENQUERY can be referenced in the FROM clause of a query as if it were a table name. See [OPENQUERY documentation on MSDN Library](../../t-sql/functions/openquery-transact-sql.md) for more information.  
   
     ```sql
     SELECT * FROM OPENQUERY(SSISFeedServer,N'Folder=Eldorado;Project=SSISPackagePublishing;Package=Package.dtsx')   

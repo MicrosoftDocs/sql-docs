@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SSIS, operators"
@@ -15,9 +13,8 @@ helpviewer_keywords:
   - "operators [Integration Services]"
   - "expressions [Integration Services], operators"
 ms.assetid: 33df3a3d-1f5c-429b-a3b9-52b7d8689089
-caps.latest.revision: 34
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Operators (SSIS Expression)
@@ -38,7 +35,7 @@ manager: craigg
 |[&#40;Modulo&#41; &#40;SSIS Expression&#41;](modulo-ssis-expression.md)|Provides the integer remainder after dividing the first numeric expression by the second one.|  
 |[&#124;&#124; &#40;Logical OR&#41; &#40;SSIS Expression&#41;](logical-or-ssis-expression.md)|Performs a logical OR operation.|  
 |[&& &#40;Logical AND&#41; &#40;SSIS Expression&#41;](logical-and-ssis-expression.md)|Performs a logical AND operation.|  
-|[! &#40;Logical Not&#41; &#40;SSIS Expression&#41;](logical-not-ssis-expression.md)|Negates a Boolean operand.|  
+|[\! &#40;Logical NOT&#41; &#40;SSIS Expression&#41;](logical-not-ssis-expression.md)|Negates a Boolean operand.|  
 |[&#124; &#40;Bitwise Inclusive OR&#41; &#40;SSIS Expression&#41;](bitwise-inclusive-or-ssis-expression.md)|Performs a bitwise OR operation of two integer values.|  
 |[^ &#40;Bitwise Exclusive OR&#41; &#40;SSIS Expression&#41;](bitwise-exclusive-or-ssis-expression.md)|Performs a bitwise exclusive OR operation of two integer values.|  
 |[& &#40;Bitwise AND&#41; &#40;SSIS Expression&#41;](bitwise-and-ssis-expression.md)|Performs a bitwise AND operation of two integer values.|  

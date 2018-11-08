@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
@@ -15,7 +13,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "Direction property"
 ms.assetid: d5732578-3434-4dcd-a9f7-db1abd1b3b94
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg

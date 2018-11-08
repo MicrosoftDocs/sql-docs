@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "C++"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "SetObjectOwner method [ADOX], VC++ example"
   - "GetObjectOwner method [ADOX], VC++ example"
 ms.assetid: f5f2aa4b-d790-458f-9e70-1643e3e203b2
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg

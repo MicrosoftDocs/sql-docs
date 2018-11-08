@@ -6,11 +6,8 @@ ms.date: "04/26/2017"
 ms.prod: "sql"
 ms.technology: ssdt
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 213b91ab-03e9-431a-80f0-17eed8335abe
-caps.latest.revision: 9
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
@@ -26,7 +23,7 @@ manager: "craigg"
   
 -   **Script**: Creates a Transact\-SQL script equivalent to the script executed by the Publish Action.  
   
-For more information regarding DACFx, please see the DACFx managed API documentation at [http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.aspx](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.aspx) or [SqlPackage.exe](../tools/sqlpackage.md) (DACFx command-line tool).  
+For more information regarding DACFx, please see the DACFx managed API documentation at [http://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx) or [SqlPackage.exe](../tools/sqlpackage.md) (DACFx command-line tool).  
   
 > [!IMPORTANT]  
 > The dbSqlPackage provider feature will be removed from the next major release of Visual Studio. For information on how to do database publishing with Web Deploy, see [dbDacFx Provider for Incremental Database publishing](http://www.iis.net/learn/publish/using-web-deploy/dbdacfx-provider-for-incremental-database-publishing).  

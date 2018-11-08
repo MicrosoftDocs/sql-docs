@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "integer data types [Integration Services]"
@@ -15,9 +13,8 @@ helpviewer_keywords:
   - "locale-sensitive parsing [Integration Services]"
   - "fast parse [Integration Services]"
 ms.assetid: fa3975ce-9d21-408a-857d-f85e30af27b0
-caps.latest.revision: 33
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Numeric Data Formats

@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "5/4/2018"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daveng
@@ -92,7 +90,7 @@ These components are still supported in the current release of MDAC/WDAC, but th
 * **SQLODBC:** The Microsoft SQL Server ODBC Driver (SQLODBC), which supports access to Microsoft SQL Server, has been deprecated. Its connectivity to future versions of SQL Server may not be supported. The ability to connect to versions earlier than SQL Server 7 will be removed from the operating system after Windows 7. New applications should use the Microsoft ODBC Driver for SQL Server on Windows, which supports new SQL Server features. Existing applications should migrate to the Microsoft ODBC Driver for SQL Server as well for better performance, reliability, and supportability. For relevant information, see [Updating an Application to SQL Server Native Client from MDAC](../relational-databases/native-client/applications/updating-an-application-to-sql-server-native-client-from-mdac.md).
 * **Microsoft Jet Database Engine 4.0:** Starting with version 2.6, MDAC no longer contains Jet components. In other words, MDAC 2.6, 2.7, and 2.8 do not contain Microsoft Jet, the Microsoft Jet OLE DB Provider, the ODBC Desktop Database Drivers, or Jet Data Access Objects (DAO). The Microsoft Jet Database Engine 4.0 components entered a state of functional deprecation and sustained engineering, and have not received feature level enhancements since becoming a part of Microsoft Windows in Windows 2000.
 
-  There is no 64-bit version of the Jet Database Engine, the Jet OLEDB Driver, the Jet ODBC Drivers, or Jet DAO available. For more information, see [KB article 957570](http://support.microsoft.com/kb/957570). On 64-bit versions of Windows, 32-bit Jet runs under the Windows WOW64 subsystem. For more information on WOW64, see the [MSDN WOW64 documentation](https://msdn.microsoft.com/library/windows/desktop/aa384274(v=vs.85).aspx). Native 64-bit applications cannot communicate with the 32-bit Jet drivers running in WOW64.
+  There is no 64-bit version of the Jet Database Engine, the Jet OLEDB Driver, the Jet ODBC Drivers, or Jet DAO available. For more information, see [KB article 957570](http://support.microsoft.com/kb/957570). On 64-bit versions of Windows, 32-bit Jet runs under the Windows WOW64 subsystem. For more information on WOW64, see the [MSDN WOW64 documentation](/windows/desktop/WinProg64/wow64-implementation-details). Native 64-bit applications cannot communicate with the 32-bit Jet drivers running in WOW64.
 
   Instead of Microsoft Jet, Microsoft recommends using [Microsoft SQL Server Express Edition](https://www.microsoft.com/sql-server/sql-server-editions-express) when developing new, non-Microsoft Access applications requiring a relational data store. These new or converted Jet applications can continue to use Jet with the intention of using Microsoft Office 2003 and earlier files (.mdb and .xls) for non-primary data storage. However, for these applications, you should plan to migrate from Jet to the 2007 Office System Driver. You can [download the 2007 Office System Driver](https://www.microsoft.com/downloads/details.aspx?displaylang=en&FamilyID=7554f536-8c28-4598-9b72-ef94e038c891), which allows you to read from and write to pre-existing files in either Office 2003 (.mdb and .xls) or the Office 2007 (*.accdb, *.xlsm, *.xlsx and *.xlsb) file formats.
 

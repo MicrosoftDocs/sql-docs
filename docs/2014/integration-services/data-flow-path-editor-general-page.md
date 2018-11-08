@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.patheditor.general.f1"
 helpviewer_keywords: 
   - "Data Flow Path Editor dialog box"
 ms.assetid: 72a9ff1d-3748-41d1-a9b2-63f4a77bba24
-caps.latest.revision: 24
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Data Flow Path Editor (General Page)

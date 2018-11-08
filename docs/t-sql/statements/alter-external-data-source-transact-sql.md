@@ -5,9 +5,7 @@ ms.date: "01/09/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "ALTER EXTERNAL DATA SOURCE"
@@ -18,9 +16,8 @@ helpviewer_keywords:
   - "polybase, alter external data source statement"
   - "ALTER EXTERNAL DATA SOURCE statement"
 ms.assetid: a34b9e90-199d-46d0-817a-a7e69387bf5f
-caps.latest.revision: 8
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # ALTER EXTERNAL DATA SOURCE (Transact-SQL)

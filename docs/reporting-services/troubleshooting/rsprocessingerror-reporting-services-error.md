@@ -1,24 +1,17 @@
 ---
 title: "rsProcessingError - Reporting Services Error | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
+ms.date: 03/15/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "troubleshooting"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: troubleshooting
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "rsProcessingError"
 ms.assetid: 414ee58a-8251-4367-9a8e-10c068d17280
-caps.latest.revision: 29
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ---
 # rsProcessingError - Reporting Services Error
     

@@ -1,15 +1,11 @@
 ---
 title: Development SQL Server partners | Microsoft Docs
 description: Lists of third-party partners with development solutions for Server.
-services: sql-server
-documentationcenter: NA
-ms.suite: "sql"
-ms.devlang: NA
-ms.topic: article
-ms.tgt_pltfrm: NA
+ms.topic: conceptual
 ms.custom: ""
-ms.date: 17/09/2017    
+ms.date: 09/17/2017    
 ms.prod: sql
+ms.technology: 
 ms.prod_service: "database-engine"
 ms.author: mikeray
 author: MikeRayMSFT
@@ -45,7 +41,9 @@ To learn more about some of our other partners, see [High availability, and disa
 <!--Datasheet Links-->
 
 <!--Marketplace Links -->
-<!----Not available[idera_marketplace]:https://azure.microsoft.com/en-us/marketplace/-->
+
+<!----Not available[idera_marketplace]:https://azure.microsoft.com/en-us/marketplace/ -->
+
 [click2cloud_marketplace]:https://marketplace.visualstudio.com/items?itemName=Click2CloudInc.Click2CloudDockerExtensionforVisualStudio 
 
 <!--Press links-->

@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "docset-sql-devref"
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "device information settings [Reporting Services]"
@@ -22,9 +20,8 @@ helpviewer_keywords:
   - "device information settings [Reporting Services], about device information settings"
   - "extensions [Reporting Services], device information settings"
 ms.assetid: fe718939-7efe-4c7f-87cb-5f5b09caeff4
-caps.latest.revision: 46
-author: "douglaslM"
-ms.author: "douglasl"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Passing Device Information Settings to Rendering Extensions

@@ -5,9 +5,7 @@ ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "UPDATE()_TSQL"
@@ -25,9 +23,8 @@ helpviewer_keywords:
   - "verifying column updates"
   - "checking column updates"
 ms.assetid: 8e3be25b-2e3b-4d1f-a610-dcbbd8d72084
-caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # UPDATE - Trigger Functions (Transact-SQL)
@@ -39,7 +36,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```sql  
   
 UPDATE ( column )   
 ```  
@@ -66,7 +63,7 @@ UPDATE ( column )
 ## Examples  
  The following example creates a trigger that prints a message to the client when anyone tries to update the `StateProvinceID` or `PostalCode` columns of the `Address` table.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF EXISTS (SELECT name FROM sys.objects  

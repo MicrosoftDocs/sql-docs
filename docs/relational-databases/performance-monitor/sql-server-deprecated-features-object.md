@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "05/03/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "performance-monitor"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: performance-monitor
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLServer:Deprecated Features"
@@ -17,7 +13,6 @@ helpviewer_keywords:
   - "deprecation [SQL Server], performance counters"
   - "Deprecated Features object"
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
-caps.latest.revision: 61
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

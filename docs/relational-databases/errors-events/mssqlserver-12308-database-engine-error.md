@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 helpviewer_keywords: 
   - "12308 (Database Engine error)"
 ms.assetid: b8a8a2d7-eda5-409c-8cc3-7ba32f0d4fd7
-caps.latest.revision: 4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

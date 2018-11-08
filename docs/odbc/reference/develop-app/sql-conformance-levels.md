@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "conformance levels [ODBC], SQL"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "data sources [ODBC], conformance levels"
   - "ODBC drivers [ODBC], conformance levels"
 ms.assetid: 3529df2c-a09b-4c16-9c60-eae7a06d903a
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg

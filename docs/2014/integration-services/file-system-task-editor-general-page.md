@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.filesystemtask.general.f1"
 helpviewer_keywords: 
   - "File System Task Editor"
 ms.assetid: 51fe6614-3418-4eff-a28d-02ea31cc9aa9
-caps.latest.revision: 43
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # File System Task Editor (General Page)

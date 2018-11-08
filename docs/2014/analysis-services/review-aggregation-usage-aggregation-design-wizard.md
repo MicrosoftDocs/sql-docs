@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.aggregationdesignwizard.reviewusage.f1"
 ms.assetid: 107ee872-3df2-4931-b56c-af11e38f6745
-caps.latest.revision: 8
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Review Aggregation Usage (Aggregation Design Wizard)
   Use the **Review Aggregation Usage** page to configure aggregation usage settings.  

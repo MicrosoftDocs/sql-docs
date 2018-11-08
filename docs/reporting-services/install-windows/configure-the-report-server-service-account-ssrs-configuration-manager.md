@@ -1,20 +1,13 @@
 ---
 title: "Configure the Report Server Service Account (SSRS Configuration Manager) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/18/2016"
+ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: f880c623-67c8-4167-b98b-ace17e800faa
-caps.latest.revision: 14
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ---
 # Configure the Report Server Service Account (SSRS Configuration Manager)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] is implemented as a single service that contains a Report Server Web service, [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)], and a background processing application that is used for scheduled report processing and subscription delivery. This topic explains how the service account is initially configured and how to modify the account or password using the Reporting Services Configuration tool.  
@@ -90,7 +83,7 @@ The following guidelines and links in this section can help you decide on an app
   
 -   [Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) in SQL Server Books Online.  
   
--   [The Services and Service Accounts Security Planning Guide](http://go.microsoft.com/fwlink/?LinkId=69155) on MSDN.  
+-   [The Services and Service Accounts Security Planning Guide](https://go.microsoft.com/fwlink/?LinkId=69155) on MSDN.  
   
 ## Updating an Expired Password  
  If the Report Server service runs under a domain account and the password expires before you can update it in the Reporting Services Configuration Manager, the service will not start until you specify a new password.  

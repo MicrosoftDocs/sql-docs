@@ -4,19 +4,14 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "IIS server configuration [SQL Server replication]"
   - "websync.log"
   - "Web synchronization, IIS servers"
 ms.assetid: d651186e-c9ca-4864-a444-2cd6943b8e35
-caps.latest.revision: 88
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg
@@ -31,7 +26,7 @@ manager: craigg
   
 -   RMO: [How to: Configure a Subscription to Use Web Synchronization (RMO Programming)](http://msdn.microsoft.com/library/ms345207.aspx)  
   
- Web synchronization uses a computer that is running [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) to synchronize pull subscriptions to merge publications. IIS version 5.0, IIS version 6.0, and [!INCLUDE[iisver](../../includes/iisver-md.md)] are supported. The Configure Web Synchronization Wizard is not supported on [!INCLUDE[iisver](../../includes/iisver-md.md)].  
+ Web synchronization uses a computer that is running [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) to synchronize pull subscriptions to merge publications. IIS version 5.0, IIS version 6.0, and IIS version 7.0 are supported. The Configure Web Synchronization Wizard is not supported on IIS version 7.0.  
   
 > [!IMPORTANT]  
 >  Make sure that your application uses only [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] or later versions, and that earlier versions of the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] are not installed on the IIS server. Earlier versions of the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] can cause errors. These include the following: "The format of a message during Web synchronization was invalid. Ensure that replication components are properly configured at the Web server".  

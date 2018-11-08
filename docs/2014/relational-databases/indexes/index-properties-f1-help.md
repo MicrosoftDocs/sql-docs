@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
+ms.technology: table-view-index
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.indexproperties.storage.f1"
@@ -18,9 +15,8 @@ f1_keywords:
   - "sql12.swb.indexproperties.options.f1"
   - "sql12.swb.indexproperties.spatial.f1"
 ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
-caps.latest.revision: 37
-author: "craigg-msft"
-ms.author: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Index Properties F1 Help

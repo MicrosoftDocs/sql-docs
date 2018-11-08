@@ -3,16 +3,13 @@ title: "Restore the Service Master Key | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.reviewer: ""
-ms.suite: "sql"
+ms.reviewer: vanto
 ms.technology: security
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "service master key [SQL Server], importing"
   - "service master key [SQL Server], restoring"
 ms.assetid: 14bdbbbe-d384-4692-b670-4243d2466fe1
-caps.latest.revision: 17
 author: aliceku
 ms.author: aliceku
 manager: craigg

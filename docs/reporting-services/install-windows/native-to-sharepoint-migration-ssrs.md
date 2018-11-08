@@ -1,21 +1,14 @@
 ---
 title: "Native to SharePoint Migration (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/17/2017"
+ms.date: 08/17/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: c5b15bec-6fde-4174-bcde-d043307244dd
-caps.latest.revision: 8
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ---
 # Native to SharePoint Migration (SSRS)
 
@@ -54,4 +47,4 @@ manager: "kfile"
 |Subscriptions|yes|See the List Subscriptions method [Subscription and Delivery Methods](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md) and the <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A> method.|  
 |Snapshots|||
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

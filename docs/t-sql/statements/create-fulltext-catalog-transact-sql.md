@@ -5,9 +5,7 @@ ms.date: "09/12/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "CATALOG_TSQL"
@@ -26,9 +24,8 @@ helpviewer_keywords:
   - "full-text catalogs [SQL Server], creating"
   - "CREATE FULLTEXT CATALOG statement"
 ms.assetid: d7a8bd93-e2d7-4a40-82ef-39069e65523b
-caps.latest.revision: 60
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # CREATE FULLTEXT CATALOG (Transact-SQL)
@@ -68,7 +65,7 @@ CREATE FULLTEXT CATALOG catalog_name
  ON FILEGROUP *filegroup*  
  Beginning with [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], this clause has no effect.  
   
- IN PATH **'***rootpath***'**  
+ IN PATH **'**_rootpath_**'**  
  > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   

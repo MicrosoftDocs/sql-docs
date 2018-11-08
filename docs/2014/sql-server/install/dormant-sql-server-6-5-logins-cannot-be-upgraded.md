@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "passwords [SQL Server], dormant logins"
@@ -16,9 +14,8 @@ helpviewer_keywords:
   - "identifying dormant logins"
   - "password hashes [SQL Server]"
 ms.assetid: ebe18a74-0375-4df4-b894-239f8fdabb64
-caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Dormant SQL Server 6.5 logins cannot be upgraded

@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dm.dmwizard.selectcaselevelcolumn.f1"
 ms.assetid: b110af78-8eee-4817-93da-d63c1603f6c8
-caps.latest.revision: 20
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Select Case Level Columns (Data Mining Wizard)
   Use the **Select Case Level Columns** page to select the attributes and measures from the underlying source cube dimension that will be the case level columns of the mining structure.  

@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "security [Integration Services], firewalls"
@@ -18,9 +16,8 @@ helpviewer_keywords:
   - "SQL Server Integration Services, firewalls"
   - "SSIS, firewalls"
 ms.assetid: 39975cf2-c351-4205-8c39-27a0fadfb010
-caps.latest.revision: 42
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Configure a Windows Firewall for Access to the SSIS Service

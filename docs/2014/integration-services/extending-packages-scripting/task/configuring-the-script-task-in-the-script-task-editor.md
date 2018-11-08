@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "docset-sql-devref"
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 dev_langs: 
   - "VB"
@@ -17,9 +15,8 @@ helpviewer_keywords:
   - "Script Task Editor"
   - "SSIS Script task, configuring"
 ms.assetid: 232de0c9-b24d-4c38-861d-6c1f4a75bdf3
-caps.latest.revision: 33
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Configuring the Script Task in the Script Task Editor

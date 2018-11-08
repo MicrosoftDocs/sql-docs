@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.partitiondesigner.writebackenabledisable.f1"
 ms.assetid: 2d254393-3f0d-4b70-8b98-87159f9f3639
-caps.latest.revision: 22
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Enable-Disable Writeback Dialog Box (Analysis Services - Multidimensional Data)
   The **Enable/Disable Writeback** dialog box enables or disables writeback for a measure group in a cube. Enabling writeback on a measure group defines a writeback partition and creates a writeback table for that measure group. Disabling writeback on a measure group removes the writeback partition but does not delete the writeback table, to avoid unanticipated data loss. The **Enable/Disable Writeback** dialog box is displayed by:  

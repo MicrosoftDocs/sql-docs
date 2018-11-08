@@ -1,14 +1,10 @@
-﻿---
+---
 title: "sys.dm_pdw_sql_requests (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: ""
 ms.prod_service: "sql-data-warehouse, pdw"
-ms.service: sql-data-warehouse
 ms.reviewer: ""
-ms.suite: "sql"
-ms.component: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -38,7 +34,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
 |spid|**int**|Session id on the SQL Server instance running the query distribution.||  
 |command|**nvarchar(4000)**|Full text of command for this query distribution.|Any valid query or request string.|  
   
- For information about the maximum rows retained by this view, see the Maximum System View Values section in the [Minimum and Maximum Values (SQL Server PDW)](http://msdn.microsoft.com/en-us/5243f018-2713-45e3-9b61-39b2a57401b9) topic.  
+ For information about the maximum rows retained by this view, see the Maximum System View Values section in the [Minimum and Maximum Values (SQL Server PDW)](http://msdn.microsoft.com/5243f018-2713-45e3-9b61-39b2a57401b9) topic.  
   
 ## See Also  
  [SQL Data Warehouse and Parallel Data Warehouse Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  

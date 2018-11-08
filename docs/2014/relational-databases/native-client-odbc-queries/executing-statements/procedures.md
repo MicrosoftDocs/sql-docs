@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "stored procedures [ODBC]"
@@ -17,9 +13,8 @@ helpviewer_keywords:
   - "statements [ODBC], stored procedures"
   - "ODBC applications, stored procedures"
 ms.assetid: c64d5f3a-376b-48ef-84f3-b6148ac8600a
-caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Procedures

@@ -4,24 +4,18 @@ ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "replication"
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_redirect_publisher_TSQL"
   - "sp_redirect_publisher"
 helpviewer_keywords: 
   - "sp_redirect_publisher"
 ms.assetid: af45e2b2-57fb-4bcd-a58b-e61401fb3b26
-caps.latest.revision: 14
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_redirect_publisher (Transact-SQL)

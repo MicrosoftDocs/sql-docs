@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "algorithms [data mining]"
@@ -17,10 +15,9 @@ helpviewer_keywords:
   - "mining models [Analysis Services], about data mining models"
   - "architecture [Analysis Services]"
 ms.assetid: cd4df273-0c6a-4b3e-9572-8a7e313111e8
-caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Mining Models (Analysis Services - Data Mining)
   A *mining model* is created by applying an algorithm to data, but it is more than an algorithm or a metadata container: it is a set of data, statistics, and patterns that can be applied to new data to generate predictions and make inferences about relationships.  
@@ -126,7 +123,7 @@ manager: "mblythe"
 |Learn how to build mining structures that can support multiple mining models. Learn about the usage of columns in models.|[Mining Structure Columns](mining-structure-columns.md)<br /><br /> [Mining Model Columns](mining-model-columns.md)<br /><br /> [Content Types &#40;Data Mining&#41;](content-types-data-mining.md)|  
 |Learn about different algorithms, and how the choice of algorithm affects the model content.|[Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md)<br /><br /> [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)|  
 |Learn now you can set properties on the model that affects its composition and behavior.|[Mining Model Properties](mining-model-properties.md)<br /><br /> [Modeling Flags &#40;Data Mining&#41;](modeling-flags-data-mining.md)|  
-|Learn about the programmable interfaces for data mining.|[Developing with Analysis Management Objects &#40;AMO&#41;](../multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)<br /><br /> [Data Mining Extensions &#40;DMX&#41; Reference](/sql/dmx/data-mining-extensions-dmx-reference)|  
+|Learn about the programmable interfaces for data mining.|[Developing with Analysis Management Objects &#40;AMO&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)<br /><br /> [Data Mining Extensions &#40;DMX&#41; Reference](/sql/dmx/data-mining-extensions-dmx-reference)|  
 |Learn how to use the custom data mining viewers in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|[Data Mining Model Viewers](data-mining-model-viewers.md)|  
 |View examples of the different types of queries that you can use against data mining models.|[Data Mining Queries](data-mining-queries.md)|  
   

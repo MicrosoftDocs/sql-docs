@@ -5,9 +5,7 @@ ms.date: "07/26/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "RECEIVE_TSQL"
@@ -21,9 +19,8 @@ helpviewer_keywords:
   - "receiving messages"
   - "retrieving messages"
 ms.assetid: 878c6c14-37ab-4b87-9854-7f8f42bac7dd
-caps.latest.revision: 50
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # RECEIVE (Transact-SQL)

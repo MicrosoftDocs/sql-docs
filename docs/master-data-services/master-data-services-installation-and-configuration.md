@@ -5,13 +5,10 @@ ms.date: "07/28/2017"
 ms.prod: sql
 ms.prod_service: "mds"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+ms.topic: quickstart
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
-caps.latest.revision: 44
 author: leolimsft
 ms.author: lle
 manager: craigg
@@ -34,7 +31,7 @@ For links to videos and other training resources to help you learn [!INCLUDE[ssM
   
 > **Download**  
 >-   To download [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], go to  **[Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2017-ctp/)**.  
->-   Have an Azure account?  Then go **[Here](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)** to spin up a Virtual Machine with SQL Server already installed.  
+>-   Have an Azure account?  Then go **[Here](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)** to spin up a Virtual Machine with SQL Server already installed.  
  
 > **Can't create an MDS web site?**
 >>Check out this Microsoft support article for instructions on how to resolve this problem.
@@ -117,7 +114,7 @@ If you're interested in making changes to the installation of [!INCLUDE[ssCurren
 
  
 > [!WARNING]  
-    >  You must [install IIS](#InstallIIS) before launching the [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Configuration Manager. Otherwise, the Configuration Manager will display an Information Information Services error and you will not be able to create the [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] web application.  
+    >  You must [install IIS](#InstallIIS) before launching the [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Configuration Manager. Otherwise, the Configuration Manager will display an Internet Information Services error and you will not be able to create the [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] web application.  
     
 > **Browser Requirement**
 >>The [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] web application works only in Internet Explorer (IE) 9 or later. IE 8 and earlier versions, Microsoft Edge and Chrome are not supported.    

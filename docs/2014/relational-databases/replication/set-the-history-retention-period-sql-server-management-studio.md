@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "replication"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "history retention periods [SQL Server replication]"
   - "retention periods [SQL Server replication]"
 ms.assetid: c288daab-5181-4d4b-ba2a-8a147098e758
-caps.latest.revision: 34
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Set the History Retention Period (SQL Server Management Studio)

@@ -5,14 +5,11 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "connOra"
 ms.assetid: 711ac7ff-5d3d-4533-80ca-d1fecdb3048f
-caps.latest.revision: 5
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

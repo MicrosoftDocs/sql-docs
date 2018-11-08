@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: ea9d02f2-a668-4547-ade5-e3d077a2e1bd
-caps.latest.revision: 6
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Visual Totals and Non Visual Totals
   Visual Totals are totals at the end of a column or row that add up all of the items visible in the column or row. This is the default behavior for most tables when displayed. However, there are times when the user wants to display only certain columns in a table but keep the totals for the entire row, including those that are not displayed. These are called `Non Visual Totals`, because the total comes from both the visible and non-visible values.  

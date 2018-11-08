@@ -6,15 +6,12 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords:
   - "providers [ADO], OLE DB persistence provider"
   - "persistence provider [ADO]"
   - "OLE DB persistence provider [ADO]"
 ms.assetid: e75ef0dc-2016-4fcc-8918-23311c0d4e02
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg

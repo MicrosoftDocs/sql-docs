@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "replication"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "logical records [SQL Server replication]"
   - "conflict resolution [SQL Server replication], merge replication"
 ms.assetid: f2e55040-ca69-4ccf-97d1-c362e1633f26
-caps.latest.revision: 31
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Detecting and Resolving Conflicts in Logical Records

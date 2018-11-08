@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 dev_langs: 
   - "TSQL"
@@ -19,7 +15,6 @@ helpviewer_keywords:
   - "distribution databases [SQL Server replication], viewing replicated commands"
   - "viewing replicated commands"
 ms.assetid: 9c20acec-8fab-4483-b9c1-dfe3768f85dd
-caps.latest.revision: 31
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

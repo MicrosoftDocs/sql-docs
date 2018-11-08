@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "input buffers [ODBC]"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "application buffers [ODBC]"
   - "buffers [ODBC]"
 ms.assetid: 42c5226c-cb40-4d1e-809f-2ea50ce6bd55
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg

@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-plan-guides"
-ms.tgt_pltfrm: ""
+ms.technology: performance
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.planguideprop.general.f1"
@@ -15,9 +12,8 @@ helpviewer_keywords:
   - "plan guides [SQL Server], view plan guide properties"
   - "viewing plan guide properties"
 ms.assetid: 8c0d2f39-59c1-4168-a649-65473f6a771b
-caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # View Plan Guide Properties

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-visual-db"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "dropping queues"
@@ -16,7 +13,6 @@ helpviewer_keywords:
   - "removing queries"
   - "queries [SQL Server], deleting"
 ms.assetid: 084e1504-3d2f-4bd9-b97c-b9c8c874751c
-caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

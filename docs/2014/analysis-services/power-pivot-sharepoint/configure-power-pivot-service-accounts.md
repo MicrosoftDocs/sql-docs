@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 76a85cd0-af93-40c9-9adf-9eb0f80b30c1
-caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Configure PowerPivot Service Accounts
   A [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] installation includes two services that support server operations. The **SQL Server Analysis Services (PowerPivot)** service is a Windows service that provides PowerPivot data processing and query support on an application server. The login account for this service is always specified during SQL Server Setup when you install Analysis Services in SharePoint integrated mode.  

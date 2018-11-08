@@ -1,20 +1,14 @@
 ---
 title: "Deploy the SQL Server Reporting Services Report Viewer web part on a SharePoint site | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/05/2017"
+ms.date: 10/05/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "report-server-sharepoint"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-server-sharepoint
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: markingmyname
+ms.author: maghan
 ---
 
 # Deploy the SQL Server Reporting Services Report Viewer web part on a SharePoint site
@@ -30,7 +24,8 @@ Use the following instructions to manually deploy the solution package that add 
 ## Requirements
 
 > [!IMPORTANT]
-> You currently cannot install this web part if you already have Reporting Services SharePoint integrated mode configured.
+> Starting with version "15.X.X.X" you can install the ReportViewerWebPart side by side with your existing Reporting Services SharePoint integrated mode shared service applications.
+> With this update of the .wsp solution we introduced new files and the previous solution must be retracted and the new .wsp redeployed by using the Uninstall-SPSolution and Install-SPSolution cmdlets, respectively.
 >
 
 **Support SharePoint Server versions:**
@@ -153,7 +148,7 @@ The following languages are supported with the web part:
 
 * Error when uninstalling SSRS if you have SharePoint integrated mode configured:
 
-    Install-SPRSService : [A] Microsoft.ReportingServices.SharePoint.SharedService.Service.ReportingWebService cannot be cast cast to [B]Microsoft.ReportingServices.SharePoint.SharedService.Service.ReportingWebService. Type A originates from 'Microsoft.ReportingServices.SharePoint.SharedService,Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' in the context 'Default' at location 'C:\Windows\assembly\GAC_MSIL\Microsoft.Reporting Services.SharePoint.SharedService.dll'. Type B originates from 'Microsoft.ReportingServices.SharePoint.SharedService,Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' in the context 'Default' at location 'C:\Windows\assembly\GAC_MSIL\Microsoft.Reporting Services.SharePoint.SharedService.dll'.
+    Install-SPRSService : [A] Microsoft.ReportingServices.SharePoint.SharedService.Service.ReportingWebService cannot be cast to [B]Microsoft.ReportingServices.SharePoint.SharedService.Service.ReportingWebService. Type A originates from 'Microsoft.ReportingServices.SharePoint.SharedService,Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' in the context 'Default' at location 'C:\Windows\assembly\GAC_MSIL\Microsoft.Reporting Services.SharePoint.SharedService.dll'. Type B originates from 'Microsoft.ReportingServices.SharePoint.SharedService,Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' in the context 'Default' at location 'C:\Windows\assembly\GAC_MSIL\Microsoft.Reporting Services.SharePoint.SharedService.dll'.
     
     Solution:
     1. Remove the Report Viewer web part
@@ -173,4 +168,4 @@ The following languages are supported with the web part:
 
 After the Report Viewer web part has been deployed and activiated, you can add the web part to a SharePoint page. For more information, see [Add Report Viewer web part to a SharePoint page](add-report-viewer-web-part-to-page.md).
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

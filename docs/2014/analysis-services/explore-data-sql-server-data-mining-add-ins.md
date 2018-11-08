@@ -4,20 +4,17 @@ ms.custom: ""
 ms.date: "12/29/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "data preparation"
   - "histogram [data mining]"
   - "data visualization"
 ms.assetid: 714845a9-4c27-461a-9ba3-149e1e818386
-caps.latest.revision: 20
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Explore Data (SQL Server Data Mining Add-ins)
   ![Explore Data wizard](media/dmc-explore.gif "Explore Data wizard")  

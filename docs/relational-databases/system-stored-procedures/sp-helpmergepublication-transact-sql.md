@@ -4,24 +4,18 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "replication"
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_helpmergepublication"
   - "sp_helpmergepublication_TSQL"
 helpviewer_keywords: 
   - "sp_helpmergepublication"
 ms.assetid: dfe1e1e1-9a65-406a-aced-6385a078e135
-caps.latest.revision: 55
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_helpmergepublication (Transact-SQL)

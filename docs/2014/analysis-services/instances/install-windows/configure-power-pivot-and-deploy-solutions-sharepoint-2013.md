@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 6401fd92-f43b-450e-8298-12db644c25bc
-caps.latest.revision: 10
-author: "markingmyname"
-ms.author: "maghan"
+author: minewiskan
+ms.author: owend
 manager: craigg
 ---
 # Configure PowerPivot and Deploy Solutions (SharePoint 2013)

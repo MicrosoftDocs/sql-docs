@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "tuning databases [SQL Server]"
   - "Database Engine Tuning Advisor [SQL Server], starting"
 ms.assetid: 4abc0e10-96fd-4e46-93d6-d7ee03eec844
-caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Launching Database Engine Tuning Advisor
@@ -32,7 +29,7 @@ manager: craigg
  ![Database Engine Tuning Advisor default window](media/defaultdtagui.gif "Database Engine Tuning Advisor default window")  
   
 > [!NOTE]  
->  The the tab and **Session Name** box display the name of your computer and the instance you are connected to. The tab and box also display the current date and time.  
+>  The tab and **Session Name** box display the name of your computer and the instance you are connected to. The tab and box also display the current date and time.  
   
  Two main panes are displayed in the Database Engine Tuning Advisor GUI when it is first opened.  
   

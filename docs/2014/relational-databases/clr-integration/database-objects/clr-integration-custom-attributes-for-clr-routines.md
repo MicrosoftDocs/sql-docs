@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: clr
 ms.topic: "reference"
 helpviewer_keywords: 
   - "routines [CLR integration]"
@@ -23,9 +19,8 @@ helpviewer_keywords:
   - "common language runtime [SQL Server], attributes"
   - "SqlUserDefinedTypeAttribute attribute"
 ms.assetid: 95069d22-b05d-4670-b053-15ee2a664e33
-caps.latest.revision: 82
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Custom Attributes for CLR Routines

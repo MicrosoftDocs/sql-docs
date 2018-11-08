@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "09/11/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_serveroption_TSQL"
@@ -19,9 +16,8 @@ helpviewer_keywords:
   - "7343 (Database Engine error)"
   - "sp_serveroption"
 ms.assetid: 47d04a2b-dbf0-4f15-bd9b-81a2efc48131
-caps.latest.revision: 40
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_serveroption (Transact-SQL)

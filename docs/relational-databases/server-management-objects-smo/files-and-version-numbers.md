@@ -1,15 +1,12 @@
-﻿---
+---
 title: "Files and Version Numbers | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "smo"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
 
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "SQL Server Management Objects, versions"
@@ -18,11 +15,10 @@ helpviewer_keywords:
   - "SMO [SQL Server], versions"
   - "versions [SMO]"
 ms.assetid: 510907b6-e7a9-41bd-b892-d6d99a5118e1
-caps.latest.revision: 34
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
-monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Files and Version Numbers
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]

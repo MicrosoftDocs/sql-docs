@@ -4,15 +4,9 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "08/17/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 ms.assetid: 64dfe192-965c-49d4-a3ea-848fbc5f619f
-caps.latest.revision: 21
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "murato"
@@ -346,7 +340,7 @@ The script file contains a sequence of migration workflow commands in the XML fo
   
 For example, a typical data migration of a specific table in an Access database follows the hierarchy of: Database-&gt; Table.  
   
-When all the commands in the script file are executed successfully, the SSMA console application exits and returns the control to the user. The contents of a script file are more or less static with variable information contained either in a [Variable Value Files](http://msdn.microsoft.com/808595c3-8ef1-40bd-a93e-5cf237950e08) or, in a separate section within the script file for variable values.  
+When all the commands in the script file are executed successfully, the SSMA console application exits and returns the control to the user. The contents of a script file are more or less static with variable information contained either in a [Variable Value Files](creating-variable-value-files-accesstosql.md) or, in a separate section within the script file for variable values.  
   
 **Example:**  
   

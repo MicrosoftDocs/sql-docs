@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "ADSI provider [ADO]"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "providers [ADO], OLE DB provider for Active Directory service"
   - "OLE DB provider for Active Directory service [ADO]"
 ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg

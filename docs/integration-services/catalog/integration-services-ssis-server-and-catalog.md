@@ -5,15 +5,12 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "packages [Integration Services], managing"
   - "managing packages [Integration Services]"
 ms.assetid: 6d667bba-7c25-492a-8f4d-70ebaca28f40
-caps.latest.revision: 38
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

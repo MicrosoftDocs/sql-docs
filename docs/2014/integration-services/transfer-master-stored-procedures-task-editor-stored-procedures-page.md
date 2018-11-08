@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.transferstoredprocedurestask.storedprocedures.f1"
 helpviewer_keywords: 
   - "Transfer Stored Procedures Task Editor"
 ms.assetid: 5fcf171e-cc0b-4c24-8eb5-3a4b4775e64a
-caps.latest.revision: 18
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Transfer Master Stored Procedures Task Editor (Stored Procedures Page)

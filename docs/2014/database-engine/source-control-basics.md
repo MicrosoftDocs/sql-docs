@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-cross-instance"
-ms.tgt_pltfrm: ""
+ms.technology:
 ms.topic: conceptual
 helpviewer_keywords: 
   - "source controls [SQL Server Management Studio], providers"
@@ -15,9 +12,8 @@ helpviewer_keywords:
   - "source controls [SQL Server Management Studio], about source controls"
   - "source controls [SQL Server Management Studio], clients"
 ms.assetid: ca35b67a-104a-41fb-ac58-a61be06fe114
-caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Source Control Basics

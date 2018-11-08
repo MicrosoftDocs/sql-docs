@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "Size Property (ClientNetLibInfo Class)"
@@ -19,9 +17,8 @@ topic_type:
 helpviewer_keywords: 
   - "Size property"
 ms.assetid: 66f7264e-2c18-40f5-8091-b5dd83d5716f
-caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # Size Property (ClientNetLibInfo Class)

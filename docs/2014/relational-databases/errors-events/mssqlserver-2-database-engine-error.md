@@ -4,19 +4,15 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: supportability
 ms.topic: conceptual
 f1_keywords: 
   - "2"
 helpviewer_keywords: 
   - "2 (Database Engine error)"
 ms.assetid: 567fb571-7cda-4ce8-a702-cdff2df5d419
-caps.latest.revision: 10
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # MSSQLSERVER_2

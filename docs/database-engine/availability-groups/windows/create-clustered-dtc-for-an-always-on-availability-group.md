@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "08/30/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 0e332aa4-2c48-4bc4-a404-b65735a02cea
-caps.latest.revision: 2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: ">= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Create Clustered DTC for an Always On Availability Group
 
@@ -23,7 +20,7 @@ This topic walks you through a complete configuration of a clustered DTC resourc
 
 The walkthrough creates a clustered DTC resource and the SQL Server Availability Groups to align with the requirements at [Cluster DTC for SQL Server Availability Groups](../../../database-engine/availability-groups/windows/cluster-dtc-for-sql-server-2016-availability-groups.md).
 
-The walkthrough uses PowerShell and Transact-SQL (T-SQL) scripts.  Many of the T-SQL scripts require **SQLCMD Mode** to be enabled.  For more information on **SQLCMD Mode**, see [Enable SQLCMD Scripting in Query Editor](https://msdn.microsoft.com/library/ms174187.aspx#Anchor_1).  The PowerShell module **FailoverClusters** must be imported.  For more information of importing a PowerShell module, see [Importing a PowerShell Module](https://msdn.microsoft.com/library/dd878284(v=vs.85).aspx).  This walkthrough is based on the following:
+The walkthrough uses PowerShell and Transact-SQL (T-SQL) scripts.  Many of the T-SQL scripts require **SQLCMD Mode** to be enabled.  For more information on **SQLCMD Mode**, see [Enable SQLCMD Scripting in Query Editor](../../../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md).  The PowerShell module **FailoverClusters** must be imported.  For more information of importing a PowerShell module, see [Importing a PowerShell Module](https://msdn.microsoft.com/library/dd878284(v=vs.85).aspx).  This walkthrough is based on the following:
 - All requirements from [Prerequisites, Restrictions, and Recommendations for Always On Availability Groups (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md) have been met.  
 - The domain is `contoso.lab`.
 - The user has the Create Computer objects permission in the OU where the DTC Network Name resource will be created.
@@ -449,7 +446,7 @@ IF ($restart -eq 1)
 
 In order to guarantee that distributed transactions use the clustered DTC resource, disable the local DTC on both nodes.  The following script will disable and stop the local DTC service on each node.  Run the following PowerShell Script on `SQLNODE1`.
 ```powershell  
-# Disble local DTC service
+# Disable local DTC service
 
 \<#
 Script: 

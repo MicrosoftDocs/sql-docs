@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "multiple currency conversions"
@@ -18,10 +16,9 @@ helpviewer_keywords:
   - "many-to-many currency conversions [Analysis Services]"
   - "many-to-one currency conversions [Analysis Services]"
 ms.assetid: e03f491c-7df8-46a0-ade9-f2e55b68db85
-caps.latest.revision: 21
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Currency Conversions (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]**  Multidimensional only  

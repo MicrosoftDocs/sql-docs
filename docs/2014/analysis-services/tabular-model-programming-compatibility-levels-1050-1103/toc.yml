@@ -1,0 +1,75 @@
+- name: Tabular Model Programming
+  href: tabular-model-programming-for-compatibility-levels-1050-through-1103.md
+- name: CSDL Annotations for Business Intelligence (CSDLBI)
+  href: https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi
+  items:
+  - name: CSDLBI Concepts
+    href: https://docs.microsoft.com/bi-reference/csdl/csdlbi-concepts
+  - name: CSDLBI Attributes for Report Design
+    href: https://docs.microsoft.com/bi-reference/csdl/csdlbi-attributes-for-report-design
+- name: Understanding the Tabular Object Model
+  href: representation/understanding-tabular-object-model-at-levels-1050-through-1103.md
+  items:
+  - name: Database Representation
+    href: representation/database-representation-tabular.md
+  - name: Connection  Representation
+    href: representation/connection-representation-tabular.md
+  - name: Tables Representation
+    href: representation/tables-representation-tabular.md
+  - name: Calculated Column Representation
+    href: representation/tables-calculated-column-representation.md
+  - name: Calculated Measure Representation
+    href: representation/tables-calculated-measure-representation.md
+  - name: Hierarchy Representation
+    href: representation/tables-hierarchy-representation.md
+  - name: Key Performance Indicator Representation
+    href: representation/tables-key-performance-indicator-representation.md
+  - name: Partition Representation
+    href: representation/tables-partition-representation.md
+  - name: Relationship Representation
+    href: representation/relationship-representation-tabular.md
+  - name: Perspective Representation
+    href: representation/perspective-representation-tabular.md
+  - name: Querying a Tabular Model
+    href: representation/querying-a-tabular-model.md
+- name: CSDLBI Technical Reference
+  href: https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl
+  items:
+  - name: AssociationSet Element (CSDLBI)
+    href: https://docs.microsoft.com/bi-reference/csdl/associationset-element-csdlbi
+  - name: BaseProperty Element (CSDLBI)
+    href: https://docs.microsoft.com/bi-reference/csdl/baseproperty-element-csdlbi
+  - name: DefaultDetails Element (CSDLBI)
+    href: https://docs.microsoft.com/bi-reference/csdl/defaultdetails-element-csdlbi
+  - name: DisplayKey Element (CSDLBI)
+    href: https://docs.microsoft.com/bi-reference/csdl/displaykey-element-csdlbi
+  - name: EntityContainer Element (CSDLBI)
+    href: https://docs.microsoft.com/bi-reference/csdl/entitycontainer-element-csdlbi
+  - name: EntitySet Element (CSDLBI)
+    href: https://docs.microsoft.com/bi-reference/csdl/entityset-element-csdlbi
+  - name: EntityType Element (CSDLBI)
+    href: https://docs.microsoft.com/bi-reference/csdl/entitytype-element-csdlbi
+  - name: Hierarchy Element (CSDLBI)
+    href: https://docs.microsoft.com/bi-reference/csdl/hierarchy-element-csdlbi
+  - name: KPI Element (CSDLBI)
+    href: https://docs.microsoft.com/bi-reference/csdl/kpi-element-csdlbi
+  - name: KpiGoal Element (CSDLBI)
+    href: https://docs.microsoft.com/bi-reference/csdl/kpigoal-element-csdlbi
+  - name: KpiStatus Element (CSDLBI)
+    href: https://docs.microsoft.com/bi-reference/csdl/kpistatus-element-csdlbi
+  - name: Level Element (CSDLBI)
+    href: https://docs.microsoft.com/bi-reference/csdl/level-element-csdlbi
+  - name: Measure Element (CSDLBI)
+    href: https://docs.microsoft.com/bi-reference/csdl/measure-element-csdlbi
+  - name: Member Element (CSDLBI)
+    href: https://docs.microsoft.com/bi-reference/csdl/member-element-csdlbi
+  - name: MemberRef Element (CSDLBI)
+    href: https://docs.microsoft.com/bi-reference/csdl/memberref-element-csdlbi
+  - name: NavigationProperty Element (CSDLBI)
+    href: https://docs.microsoft.com/bi-reference/csdl/navigationproperty-element-csdlbi
+  - name: Property Element (CSDLBI)
+    href: https://docs.microsoft.com/bi-reference/csdl/property-element-csdlbi
+  - name: PropertyRef Element (CSDLBI)
+    href: https://docs.microsoft.com/bi-reference/csdl/propertyref-element-csdlbi
+- name: IMDEmbedded Interface
+  href: imdembeddeddata-interface.md

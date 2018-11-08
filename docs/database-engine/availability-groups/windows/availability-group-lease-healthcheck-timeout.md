@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "05/02/2018"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid:
 author: MashaMSFT
@@ -147,7 +145,7 @@ ALTER AVAILABILITY GROUP AG1 SET (HEALTH_CHECK_TIMEOUT =60000);
 
   - SameSubnetThreshold \<= CrossSubnetThreshold 
 
-  - SameSubnetDelay \<= SameSubnetDelay 
+  - SameSubnetDelay \<= CrossSubnetDelay 
 
 ## See Also    
 

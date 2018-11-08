@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "09/30/2015"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_detach_db"
@@ -19,7 +16,6 @@ helpviewer_keywords:
   - "sp_detach_db"
   - "detaching databases [SQL Server]"
 ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
-caps.latest.revision: 86
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

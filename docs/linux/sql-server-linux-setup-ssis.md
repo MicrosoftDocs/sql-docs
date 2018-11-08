@@ -6,10 +6,8 @@ ms.author: lle
 ms.reviewer: douglasl
 manager: craigg
 ms.date: 01/09/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
-ms.component: ""
-ms.suite: "sql"
 ms.custom: "sql-linux"
 ms.technology: linux
 ---

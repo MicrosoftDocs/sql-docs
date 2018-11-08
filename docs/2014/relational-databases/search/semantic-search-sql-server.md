@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
+ms.technology: search
 ms.topic: conceptual
 helpviewer_keywords: 
   - "semantic search [SQL Server]"
@@ -15,9 +12,8 @@ helpviewer_keywords:
   - "statistical semantic search [SQL Server]"
   - "statistical semantic search [SQL Server], overview"
 ms.assetid: cd8faa9d-07db-420d-93f4-a2ea7c974b97
-caps.latest.revision: 18
-author: "craigg-msft"
-ms.author: "craigg"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # Semantic Search (SQL Server)

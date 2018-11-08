@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "modifying replication security settings"
@@ -18,7 +14,6 @@ helpviewer_keywords:
   - "viewing replication security settings"
   - "security [SQL Server replication], modifying settings"
 ms.assetid: 67d79532-1482-4de1-ac9f-4a23d162c85e
-caps.latest.revision: 47
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

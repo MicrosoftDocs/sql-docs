@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/16/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -16,9 +13,8 @@ helpviewer_keywords:
   - "Resource Governor, catalog views"
   - "catalog views [SQL Server]"
 ms.assetid: bb0a38e0-4eb2-49bf-bba8-750fb706d06e
-caps.latest.revision: 9
-author: "stevestein"
-ms.author: "sstein"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Resource Governor Catalog Views (Transact-SQL)

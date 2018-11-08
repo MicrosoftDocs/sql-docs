@@ -6,15 +6,12 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords:
   - "providers [ADO], OLE DB provider for SQL Server"
   - "OLE DB provider for SQL Server [ADO]"
   - "SQLOLEDB [ADO]"
 ms.assetid: 99bc40c4-9181-4ca1-a06f-9a1a914a0b7b
-caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -132,7 +129,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 ## Dynamic Properties
  The Microsoft OLE DB Provider for SQL Server inserts several dynamic properties into the **Properties** collection of the unopened [Connection](../../../ado/reference/ado-api/connection-object-ado.md), [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), and [Command](../../../ado/reference/ado-api/command-object-ado.md) objects.
 
- The following tables are a cross-index of the ADO and OLE DB names for each dynamic property. The OLE DB Programmer's Reference refers to an ADO property name by the term "Description." You can find more information about these properties in the OLE DB Programmer's Reference. Search for the OLE DB property name in the Index or see [Appendix C: OLE DB Properties](http://msdn.microsoft.com/en-us/deded3ff-f508-4e1b-b2b1-fd9afd3bd292).
+ The following tables are a cross-index of the ADO and OLE DB names for each dynamic property. The OLE DB Programmer's Reference refers to an ADO property name by the term "Description." You can find more information about these properties in the OLE DB Programmer's Reference. Search for the OLE DB property name in the Index or see [Appendix C: OLE DB Properties](http://msdn.microsoft.com/deded3ff-f508-4e1b-b2b1-fd9afd3bd292).
 
 ## Connection Dynamic Properties
  The following properties are added to the **Properties** collection of the **Connection** object.
@@ -352,7 +349,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |XML Root|SSPROP_STREAM_XMLROOT|
 |XSL|SSPROP_STREAM_XSL|
 
- For specific implementation details and functional information about the Microsoft SQL Server OLE DB Provider, see the [SQL Server Provider](http://msdn.microsoft.com/en-us/adf1d6c4-5930-444a-9248-ff1979729635).
+ For specific implementation details and functional information about the Microsoft SQL Server OLE DB Provider, see the [SQL Server Provider](http://msdn.microsoft.com/adf1d6c4-5930-444a-9248-ff1979729635).
 
 ## See Also
  [ConnectionString Property (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md)

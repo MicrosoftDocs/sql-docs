@@ -5,9 +5,7 @@ ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "XQuery, XML DML"
   - "xml data type [SQL Server], XML DML"
 ms.assetid: 20ce50d2-c07b-4e41-93a7-1380d2cd49cb
-caps.latest.revision: 29
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

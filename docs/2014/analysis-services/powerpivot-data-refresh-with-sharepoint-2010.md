@@ -4,20 +4,17 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "unattended data refresh [Analysis Services with SharePoint]"
   - "scheduled data refresh [Analysis Services with SharePoint]"
   - "data refresh [Analysis Services with SharePoint]"
 ms.assetid: 01b54e6f-66e5-485c-acaa-3f9aa53119c9
-caps.latest.revision: 32
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # PowerPivot Data Refresh with SharePoint 2010
   [!INCLUDE[ssGemini](../includes/ssgemini-md.md)]t data refresh is a scheduled server-side operation that queries external data sources to update embedded [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] data in an Excel 2010 workbook that is stored in a content library.  

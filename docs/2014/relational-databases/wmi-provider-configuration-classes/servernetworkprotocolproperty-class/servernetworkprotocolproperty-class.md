@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "ServerNetworkProtocolProperty Class"
@@ -19,9 +17,8 @@ topic_type:
 helpviewer_keywords: 
   - "ServerNetworkProtocolProperty class"
 ms.assetid: 72e124ad-a610-405a-8749-b2508068b348
-caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # ServerNetworkProtocolProperty Class

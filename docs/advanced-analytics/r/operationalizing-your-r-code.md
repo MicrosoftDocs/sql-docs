@@ -58,7 +58,7 @@ This walkthrough provides examples of scoring using a stored procedure in both b
 See these solution templates for examples of how to integrate scoring in an application:
 
 + [Retail forecasting](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/RetailForecasting/Introduction.md)
-+ [Fraud detection](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/FraudDetection/Introduction.md)
++ [Fraud detection](https://github.com/Microsoft/r-server-fraud-detection)
 + [Customer clustering](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/r-services/getting-started/customer-clustering)
 
 ## Boost performance and scale

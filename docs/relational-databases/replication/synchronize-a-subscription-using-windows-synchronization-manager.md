@@ -4,18 +4,13 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "synchronization [SQL Server replication], Windows Synchronization Manager"
   - "Windows Synchronization Manager"
 ms.assetid: 80f15dd6-e84d-4f96-9866-5b34ea531f1e
-caps.latest.revision: 44
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

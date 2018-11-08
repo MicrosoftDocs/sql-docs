@@ -5,14 +5,11 @@ ms.date: "07/03/2018"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "driver, installing"
 ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
-caps.latest.revision: 69
 author: MightyPen
 ms.author: v-jizho2
 manager: kenvh
@@ -20,7 +17,7 @@ manager: kenvh
 # Installing the Microsoft ODBC Driver for SQL Server on Linux and macOS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-This article explains how to install the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] on Linux and macOS, as well as the optional Command-Line Tools for SQL Server (`bcp` and `sqlcmd`) and the unixODBC Development Headers.
+This article explains how to install the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Linux and macOS, as well as the optional Command-Line Tools for SQL Server (`bcp` and `sqlcmd`) and the unixODBC Development Headers.
 
 ## Microsoft ODBC Driver 17 for SQL Server 
 
@@ -433,7 +430,7 @@ Installation puts the driver in `/opt/microsoft/msodbcsql/11.0.2270.0`. The driv
   
 To verify that the Microsoft ODBC driver on Linux was registered successfully, execute the following command: ```odbcinst -q -d -n "ODBC Driver 11 for SQL Server"```.  
   
-[Use Existing MSDN C++ ODBC Samples for the ODBC Driver on Linux](http://blogs.msdn.com/b/sqlblog/archive/2012/01/26/use-existing-msdn-c-odbc-samples-for-microsoft-linux-odbc-driver.aspx) shows a code sample that connects to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] using the ODBC driver on Linux.  
+[Use Existing MSDN C++ ODBC Samples for the ODBC Driver on Linux](http://blogs.msdn.com/b/sqlblog/archive/2012/01/26/use-existing-msdn-c-odbc-samples-for-microsoft-linux-odbc-driver.aspx) shows a code sample that connects to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] using the ODBC driver on Linux.  
   
 **Uninstalling**  
   
@@ -448,7 +445,7 @@ You can uninstall the ODBC driver 11 on Linux by executing the following command
 4.  `odbcinst -u -d -n "ODBC Driver 11 for SQL Server"`
   
 ## Troubleshooting Connection Problems  
-If you are unable to make a connection to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] using the ODBC driver, use the following information to identify the problem.  
+If you are unable to make a connection to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] using the ODBC driver, use the following information to identify the problem.  
   
 The most common connection problem is to have two copies of the UnixODBC Driver Manager installed. Search /usr for libodbc\*.so\*. If you see more than one version of the file, you (possibly) have more than one driver manager installed. Your application might use the wrong version.
   

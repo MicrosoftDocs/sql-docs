@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "03/26/2018"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: d315ad6a-0d50-4093-80c2-2f11217237c2
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -18,11 +15,11 @@ manager: craigg
 
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-LocalDB is a lightweight version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] which has been available since [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]. This topic discusses how to connect to a database in a LocalDB instance.
+LocalDB is a lightweight version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] which has been available since [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. This topic discusses how to connect to a database in a LocalDB instance.
 
 ## Remarks
 
-For more information about LocalDB, including how to install LocalDB and configure your LocalDB instance, see the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Books Online topic on [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)] Express LocalDB.
+For more information about LocalDB, including how to install LocalDB and configure your LocalDB instance, see the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online topic on [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Express LocalDB.
 
 In brief, LocalDB allows you to:
 

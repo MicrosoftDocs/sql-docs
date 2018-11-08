@@ -2,14 +2,11 @@
 title: "What&#39;s New in CLR Integration | Microsoft Docs"
 ms.date: "03/03/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.custom: ""
-ms.technology: reference
+ms.technology: clr
 ms.topic: conceptual
 ms.assetid: 871fcccd-b726-4b13-9f95-d02b4b39d8ab
-caps.latest.revision: 7
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

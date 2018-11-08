@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
+ms.technology: backup-restore
 ms.topic: conceptual
 helpviewer_keywords: 
   - "piecemeal restores [SQL Server], defunct filegroups"
@@ -17,9 +14,8 @@ helpviewer_keywords:
   - "filegroups [SQL Server], defunct"
   - "unrestored filegroups"
 ms.assetid: 055f9c6a-5c18-4942-98e7-ec918f0ff975
-caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Remove Defunct Filegroups (SQL Server)

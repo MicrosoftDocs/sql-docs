@@ -4,20 +4,17 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "incremental generation [Analysis Services]"
   - "Schema Generation Wizard, incremental generation"
   - "relational schema [Analysis Services], incremental generation"
 ms.assetid: 3ca0aa63-3eb5-4fe9-934f-8e96dee84eaa
-caps.latest.revision: 29
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Understanding Incremental Generation
   Following the initial schema generation, you can change cube and dimension definitions by using [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], and then rerun the Schema Generation Wizard. The wizard updates the schema in the subject area database and in the associated data source view to reflect the changes, and retaining the data that currently exists in the tables to be regenerated, to the extent possible. If you changed the tables after the initial generation, the Schema Generation Wizard preserves those changes when possible by using the following rules:  

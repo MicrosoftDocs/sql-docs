@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "docset-sql-devref"
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "exceptions [Reporting Services], warnings that don't cause"
   - "warnings [Reporting Services]"
 ms.assetid: 475c0713-6265-44e7-9ebc-ebdd1b89e0af
-caps.latest.revision: 30
-author: "douglaslM"
-ms.author: "douglasl"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Handling Warnings and Cases That Do Not Cause Exceptions

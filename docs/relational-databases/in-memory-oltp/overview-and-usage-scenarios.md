@@ -1,22 +1,18 @@
-﻿---
+---
 title: "Overview and Usage Scenarios | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/10/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "in-memory-oltp"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 62c964c5-eae4-4cf1-9024-d5a19adbd652
-caps.latest.revision: 5
 author: "jodebrui"
 ms.author: "jodebrui"
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Overview and Usage Scenarios
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -127,6 +123,7 @@ To get started see: [Improving temp table and table variable performance using m
 #### Customer Case Studies
 
 - One customer was able to improve performance by 40%, just by replacing traditional TVPs with memory-optimized TVPs: [High Speed IoT Data Ingestion Using In-Memory OLTP in Azure](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/04/07/a-technical-case-study-high-speed-iot-data-ingestion-using-in-memory-oltp-in-azure/)
+- SentryOne significantly improved data ingestion capacity with almost zero latency in their monitoring solution by swapping tables in tempdb to In-Memory OLTP tables as part of their enterprise scalability improvements: [Solution provider breaks through performance ceiling with data monitoring innovation.](https://customers.microsoft.com/story/sentryone-partner-professional-services-sql-server-azure)
 
 ### ETL (Extract Transform Load)
 

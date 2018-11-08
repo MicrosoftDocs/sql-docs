@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dm.miningmodeleditor.sequenceclustering.characteristics.f1"
 ms.assetid: 3a9e8a0c-7d03-47cc-8625-e68d73a8c947
-caps.latest.revision: 23
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Sequence Clustering Cluster Characteristics Tab (Mining Model Viewer)
   The **Cluster Characteristics** tab in the **Microsoft Sequence Clustering Viewer** provides a detailed list of the characteristics that define a sequence cluster. Those characteristics can include simple attribute-value pairs as well as transitions between states.  

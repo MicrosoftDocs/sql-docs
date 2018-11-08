@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "12/29/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords: 
   - "17828 (Database Engine error)"
@@ -15,9 +12,8 @@ helpviewer_keywords:
   - "17832 (Database Engine error)"
   - "login packet (bad)"
 ms.assetid: bd56ffe4-0855-4ada-8aca-251fbc6ff2ce
-caps.latest.revision: 17
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # MSSQLSERVER_17832

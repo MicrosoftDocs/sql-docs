@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "10040"
@@ -15,10 +13,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "Expression dialog box [Reporting Services]"
 ms.assetid: e6c74ccb-4594-4d4f-b958-618d710e34eb
-caps.latest.revision: 63
-author: "douglaslM"
-ms.author: "douglasl"
-manager: "mblythe"
+author: maggiesmsft
+ms.author: douglasl
+manager: craigg
 ---
 # Expression Dialog Box
   Use the **Expression** dialog box to write [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] expressions for report item properties. You can use expressions to set many properties, including color, font, and borders. At run time, the report processor evaluates expressions and substitutes the result for the value of the property.  

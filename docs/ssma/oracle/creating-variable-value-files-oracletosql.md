@@ -4,15 +4,12 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Variable Value File Creation"
   - "Variable Value File, Variable Value File Validation"
 ms.assetid: f583d81a-8e34-41b1-8100-ee3a6a82213b
-caps.latest.revision: 26
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "v-thobro"
@@ -88,5 +85,5 @@ Variable Value File is an XML file comprising the parameter values of commands l
 The next step in operating the console is [Creating the Server Connection Files &#40;OracleToSQL&#41;](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md)  
   
 ## See Also  
-[Creating the Server Files (Oracle)](http://msdn.microsoft.com/en-us/002f129e-0868-48ad-a4b4-c68b5007e12e)  
+[Creating the Server Files (Oracle)](http://msdn.microsoft.com/002f129e-0868-48ad-a4b4-c68b5007e12e)  
   

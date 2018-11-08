@@ -1,12 +1,11 @@
-﻿---
+---
 title: Guidelines for Online Index Operations | Microsoft Docs
 ms.custom: ""
-ms.date: 05/14/2018
+ms.date: 09/26/2018
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: table-view-index
-ms.tgt_pltfrm: ""
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords: 
   - "clustered indexes, online operations"
   - "online index operations"
@@ -15,13 +14,11 @@ helpviewer_keywords:
   - "nonclustered indexes [SQL Server], online operations"
   - "transaction logs [SQL Server], indexes"
 ms.assetid: d82942e0-4a86-4b34-a65f-9f143ebe85ce
-caps.latest.revision: 64
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.suite: "sql"
 ms.prod_service: "table-view-index, sql-database"
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Guidelines for online index operations
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,7 +30,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
 -   Nonunique nonclustered indexes can be created online when the table contains LOB data types but none of these columns are used in the index definition as either key or nonkey (included) columns.  
   
 -   Indexes on local temp tables cannot be created, rebuilt, or dropped online. This restriction does not apply to indexes on global temp tables.
-- Indexes can be resumed from where it stopped after an unexpected failure, database failover, or a **PAUSE** command. See [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). 
+- Indexes can be resumed from where it stopped after an unexpected failure, database failover, or a **PAUSE** command. See [Create Index](../../t-sql/statements/create-index-transact-sql.md) and [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). 
 
 > [!NOTE]  
 >  Online index operations are not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features supported by editions](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
@@ -88,12 +85,12 @@ For more information, see [Disk Space Requirements for Index DDL Operations](../
 ## Resumable index considerations
 
 > [!NOTE]
-> The resumable index option applies to SQL Server (Starting with SQL Server 2017) (index rebuild only) and SQL Database (create non-clustered index and index rebuild). See [Create Index](../../t-sql/statements/create-index-transact-sql.md) (currently in public preview for SQL Database only) and [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). 
+> The resumable index option applies to SQL Server (Starting with SQL Server 2017) (index rebuild only) and SQL Database (create index and index rebuild). See [Create Index](../../t-sql/statements/create-index-transact-sql.md) (currently in public preview for SQL Database and [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)]) and [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). 
 
 When you perform resumable online index create or rebuild, the following guidelines apply:
 -	Managing, planning and extending of index maintenance windows. You can pause and restart an index create or rebuild operation multiple times to fit your maintenance windows.
 - Recovering from index create or rebuild failures (such as database failovers or running out of disk space).
-- When an index operation is paused, both the original index and the the newly created one require disk space and need to be updated during DML operations.
+- When an index operation is paused, both the original index and the newly created one require disk space and need to be updated during DML operations.
 
 - Enables truncation of transaction logs during an index create or rebuild operation.
 - SORT_IN_TEMPDB=ON option is not supported
@@ -112,7 +109,7 @@ Generally, there is no difference in defragmentation quality between resumable a
 ## Online default options 
 
 > [!IMPORTANT]
-> These options are in public preview.
+> These options are in public preview for SQL Database and [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)].
 
 You can set default options for online or resumable at a database level by setting the ELEVATE_ONLINE or ELEVATE_RESUMABLE database scoped configuration options. With these default options, you can avoid accidentally performing an operation that takes your database table offline. Both options will cause the engine to automatically elevate certain operations to online or resumable execution.  
 You can set either option as FAIL_UNSUPPORTED, WHEN_SUPPORTED, or OFF using the [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) command. You can set different values for online and resumable. 
@@ -123,12 +120,9 @@ Both ELEVATE_ONLINE and ELEVATE_RESUMABLE only apply to DDL statements that supp
 > ELEVATE_ONLINE and ELEVATE_RESUMABLE does not apply to XML index operations. 
  
 ## Related content  
- [How Online Index Operations Work](../../relational-databases/indexes/how-online-index-operations-work.md)  
-  
- [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)  
-  
- [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)  
-  
- [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
+- [How Online Index Operations Work](../../relational-databases/indexes/how-online-index-operations-work.md)  
+- [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)  
+- [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)  
+- [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
   
   

@@ -4,18 +4,13 @@ ms.custom: ""
 ms.date: "07/21/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "updatable transactional subscriptions"
   - "updateable transactional subscriptions, SSMS"
 ms.assetid: f9ef89ed-36f6-431b-8843-25d445ec137f
-caps.latest.revision: 51
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

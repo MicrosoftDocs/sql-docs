@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "user-defined login names [SQL Server]"
@@ -15,9 +13,8 @@ helpviewer_keywords:
   - "renamed logins [SQL Server]"
   - "logins [SQL Server], names"
 ms.assetid: 10a1d77c-3153-474f-a6a0-969556794467
-caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Rename logins matching fixed server role names

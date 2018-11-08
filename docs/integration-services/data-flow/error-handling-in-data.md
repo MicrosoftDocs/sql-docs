@@ -5,9 +5,7 @@ ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.configureerroroutput.f1"
@@ -22,7 +20,6 @@ helpviewer_keywords:
   - "data flow [Integration Services], errors"
   - "expressions [Integration Services], errors"
 ms.assetid: c61667b4-25cb-4d45-a52f-a733e32863f4
-caps.latest.revision: 63
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "collation configuration, SQL Server"
   - "collation configuration, Setup"
   - "collation configuration"
 ms.assetid: e3986870-5be4-458b-b671-5ff12a27b022
-caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Server Configuration - Collation

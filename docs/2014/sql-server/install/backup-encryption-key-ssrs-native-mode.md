@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "SQL12.rsconfigtool.backupencryptionkey.F1"
 ms.assetid: eb8c82be-323b-4d86-ab10-c1bf69a4abe3
-caps.latest.revision: 6
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Backup Encryption Key (SSRS Native Mode)

@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "VB"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "Views collection [ADOX], Visual Basic example"
   - "Fields collection [ADOX]"
 ms.assetid: d8304849-3f80-4cf3-9425-529d2a8ebedd
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg

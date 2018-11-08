@@ -4,16 +4,13 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Report Generation in Oracle Console, synchronize-target"
   - "Report Generation in Oracle Console,refresh-from-database"
   - "Report Generation in Oracle Console,write-summary-report-to"
 ms.assetid: ccad6262-01e1-447a-bd2b-c105154c80ce
-caps.latest.revision: 17
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "v-thobro"
@@ -139,5 +136,5 @@ The command **refresh-from-database** has **report-errors-to** parameter, which 
 -   fail-script  
   
 ## See Also  
-[Executing the SSMA Console (Oracle)](http://msdn.microsoft.com/en-us/7228ccba-c69f-4b4c-8664-01a2750183c5)  
+[Executing the SSMA Console (Oracle)](http://msdn.microsoft.com/7228ccba-c69f-4b4c-8664-01a2750183c5)  
   

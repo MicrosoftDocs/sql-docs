@@ -1,13 +1,11 @@
-﻿---
+---
 title: "SERVERPROPERTY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/21/2018"
+ms.date: "09/07/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "SERVERPROPERTY_TSQL"
@@ -22,18 +20,15 @@ helpviewer_keywords:
   - "instances of SQL Server, property information"
   - "server properties [SQL Server]"
 ms.assetid: 11e166fa-3dd2-42d8-ac4b-04f18c612c4a
-caps.latest.revision: 128
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SERVERPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Returns property information about the server instance.  
-
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
 
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -67,7 +62,7 @@ SERVERPROPERTY ( 'propertyname' )
 |IsHadrEnabled|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] is enabled on this server instance.<br /><br /> 0 = The [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] feature is disabled.<br /><br /> 1 = The [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] feature is enabled.<br /><br /> NULL = Input is not valid, an error, or not applicable.<br /><br /> Base data type: **int**<br /><br /> For availability replicas to be created and run on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] must be enabled on the server instance. For more information, see [Enable and Disable AlwaysOn Availability Groups (SQL Server)](../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).<br /><br /> **Note:** The IsHadrEnabled property pertains only to [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]. Other high availability or disaster recovery features, such as database mirroring or log shipping, are unaffected by this server property.|  
 |IsIntegratedSecurityOnly|Server is in integrated security mode.<br /><br /> 1 = Integrated security (Windows Authentication)<br /><br /> 0 = Not integrated security. (Both Windows Authentication and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication.)<br /><br /> NULL = Input is not valid, an error, or not applicable.<br /><br /> Base data type: **int**|  
 |IsLocalDB|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Server is an instance of [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] LocalDB.<br /><br /> NULL = Input is not valid, an error, or not applicable.|  
-|IsPolybaseInstalled|**Applies to**: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Returns whether the server instance has the PolyBase feature installed.<br /><br /> 0 = PolyBase is not installed.<br /><br /> 1 = PolyBase is installed.<br /><br /> Base data type: **int**|  
+|IsPolyBaseInstalled|**Applies to**: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Returns whether the server instance has the PolyBase feature installed.<br /><br /> 0 = PolyBase is not installed.<br /><br /> 1 = PolyBase is installed.<br /><br /> Base data type: **int**|  
 |IsSingleUser|Server is in single-user mode.<br /><br /> 1 = Single user.<br /><br /> 0 = Not single user<br /><br /> NULL = Input is not valid, an error, or not applicable.<br /><br /> Base data type: **int**|  
 |IsXTPSupported|**Applies to**: SQL Server ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDS](../../includes/sssds-md.md)].<br /><br /> Server supports In-Memory OLTP.<br /><br /> 1= Server supports In-Memory OLTP.<br /><br /> 0= Server does not supports In-Memory OLTP.<br /><br /> NULL = Input is not valid, an error, or not applicable.<br /><br /> Base data type: **int**|  
 |LCID|Windows locale identifier (LCID) of the collation.<br /><br /> Base data type: **int**|  

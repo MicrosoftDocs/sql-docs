@@ -1,26 +1,20 @@
-﻿---
+---
 title: "Get Information About DDL Triggers | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.component: "triggers"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-ddl"
-ms.tgt_pltfrm: ""
+ms.technology:
 ms.topic: conceptual
 helpviewer_keywords: 
   - "metadata [SQL Server], triggers"
   - "status information [SQL Server], DDL triggers"
   - "DDL triggers, metadata"
 ms.assetid: 462becea-292a-4b9e-bb98-533e89733911
-caps.latest.revision: 31
 author: "rothja"
 ms.author: "jroth"
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Get Information About DDL Triggers
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

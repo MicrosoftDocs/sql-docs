@@ -1,13 +1,11 @@
 ---
 title: "CREATE FUNCTION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/25/2018"
+ms.date: 11/06/2018
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "FUNCTION"
@@ -35,15 +33,17 @@ helpviewer_keywords:
   - "scalar-valued functions"
   - "functions [SQL Server], invoking"
 ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
-caps.latest.revision: 162
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # CREATE FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Creates a user-defined function in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. A user-defined function is a [!INCLUDE[tsql](../../includes/tsql-md.md)] or common language runtime (CLR) routine that accepts parameters, performs an action, such as a complex calculation, and returns the result of that action as a value. The return value can either be a scalar (single) value or a table. Use this statement to create a reusable routine that can be used in these ways:  
+> [!div class="nextstepaction"]
+> [Please help improve SQL Server docs!](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+
+Creates a user-defined function in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. A user-defined function is a [!INCLUDE[tsql](../../includes/tsql-md.md)] or common language runtime (CLR) routine that accepts parameters, performs an action, such as a complex calculation, and returns the result of that action as a value. The return value can either be a scalar (single) value or a table. Use this statement to create a reusable routine that can be used in these ways:  
   
 -   In [!INCLUDE[tsql](../../includes/tsql-md.md)] statements such as SELECT  
   
@@ -132,6 +132,7 @@ RETURNS @return_variable TABLE <table_type_definition>
   | [ SCHEMABINDING ]  
   | [ RETURNS NULL ON NULL INPUT | CALLED ON NULL INPUT ]  
   | [ EXECUTE_AS_Clause ]  
+  | [ INLINE = { ON | OFF }]  
 }  
   
 <table_type_definition>:: =   
@@ -336,7 +337,7 @@ RETURNS return_data_type
  Is the single SELECT statement that defines the return value of an inline table-valued function.  
   
  ORDER (\<order_clause>) 
- Specifies the order in which results are being returned from the table-valued function. For more information, see the section, "Guidance on Using Sort Order," later in this topic.  
+ Specifies the order in which results are being returned from the table-valued function. For more information, see the section, "[Using Sort Order in CLR Table-valued Functions](#using-sort-order-in-clr-table-valued-functions)", later in this topic.  
   
  EXTERNAL NAME \<method_specifier> *assembly_name*.*class_name*.*method_name* 
  **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -419,18 +420,21 @@ RETURNS return_data_type
   
 -   The user who executed the CREATE FUNCTION statement has REFERENCES permission on the database objects that the function references.  
   
- RETURNS NULL ON NULL INPUT | **CALLED ON NULL INPUT**  
- Specifies the **OnNULLCall** attribute of a scalar-valued function. If not specified, CALLED ON NULL INPUT is implied by default. This means that the function body executes even if NULL is passed as an argument.  
+RETURNS NULL ON NULL INPUT | **CALLED ON NULL INPUT**  
+Specifies the **OnNULLCall** attribute of a scalar-valued function. If not specified, CALLED ON NULL INPUT is implied by default. This means that the function body executes even if NULL is passed as an argument.  
   
- If RETURNS NULL ON NULL INPUT is specified in a CLR function, it indicates that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can return NULL when any of the arguments it receives is NULL, without actually invoking the body of the function. If the method of a CLR function specified in \<method_specifier> already has a custom attribute that indicates RETURNS NULL ON NULL INPUT, but the CREATE FUNCTION statement indicates CALLED ON NULL INPUT, the CREATE FUNCTION statement takes precedence. The **OnNULLCall** attribute cannot be specified for CLR table-valued functions. 
+If RETURNS NULL ON NULL INPUT is specified in a CLR function, it indicates that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can return NULL when any of the arguments it receives is NULL, without actually invoking the body of the function. If the method of a CLR function specified in \<method_specifier> already has a custom attribute that indicates RETURNS NULL ON NULL INPUT, but the CREATE FUNCTION statement indicates CALLED ON NULL INPUT, the CREATE FUNCTION statement takes precedence. The **OnNULLCall** attribute cannot be specified for CLR table-valued functions. 
   
- EXECUTE AS Clause  
- Specifies the security context under which the user-defined function is executed. Therefore, you can control which user account [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses to validate permissions on any database objects that are referenced by the function.  
+EXECUTE AS Clause  
+Specifies the security context under which the user-defined function is executed. Therefore, you can control which user account [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses to validate permissions on any database objects that are referenced by the function.  
   
 > [!NOTE]  
->  EXECUTE AS cannot be specified for inline user-defined functions.  
+>  EXECUTE AS cannot be specified for inline table-valued functions.
   
  For more information, see [EXECUTE AS Clause &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md).  
+
+INLINE = { ON | OFF }  
+Specifies whether this scalar UDF should be inlined or not. This clause applies only to scalar user-defined functions. The `INLINE` clause is not mandatory. If `INLINE` clause is not specified, it is automatically set to ON/OFF based on whether the UDF is inlineable. If `INLINE=ON` is specified but the UDF is found to be non-inlineable, an error will be thrown. For more information, see [Scalar UDF Inlining](../../relational-databases/user-defined-functions/scalar-udf-inlining.md).
   
  **\< column_definition >::=** 
   

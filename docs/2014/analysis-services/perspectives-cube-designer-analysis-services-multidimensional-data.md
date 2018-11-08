@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.cubeeditor.perspectives.perspectivespane.f1"
 ms.assetid: 85d4f696-b429-409c-a679-2ee867f3a589
-caps.latest.revision: 22
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Perspectives (Cube Designer) (Analysis Services - Multidimensional Data)
   Use the **Perspectives** tab in Cube Designer to create and modify perspectives for the selected cube.  

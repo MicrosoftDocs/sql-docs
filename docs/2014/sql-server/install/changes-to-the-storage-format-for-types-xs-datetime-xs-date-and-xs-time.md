@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "xs:date"
@@ -15,9 +13,8 @@ helpviewer_keywords:
   - "storage format"
   - "DateTime"
 ms.assetid: b9f758df-030c-4aec-8ade-1bf904aa2c61
-caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Changes to the storage format for types xs:dateTime, xs:date, and xs:time

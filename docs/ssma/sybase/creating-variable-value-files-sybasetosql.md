@@ -4,18 +4,12 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 helpviewer_keywords: 
   - "Sybase Console,Creating Variable Value Files"
   - "Sybase Console,Variable Value File Validation"
 ms.assetid: 395be464-4b19-44f7-91e5-b8876d6743dc
-caps.latest.revision: 15
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: craigg
@@ -94,5 +88,5 @@ The user can easily validate his/her variable value file against the schema defi
 The next step in operating the console is [Creating the Server Connection Files &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md)  
   
 ## See Also  
-[Creating the Server Files (Sybase)](http://msdn.microsoft.com/en-us/35ef396f-9f98-429d-9fc5-4f413d08fb37)  
+[Creating the Server Files (Sybase)](http://msdn.microsoft.com/35ef396f-9f98-429d-9fc5-4f413d08fb37)  
   

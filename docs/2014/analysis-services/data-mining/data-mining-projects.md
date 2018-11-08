@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "07/17/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 543d70fc-34d2-42dd-8d6d-0543109f94d0
-caps.latest.revision: 23
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Data Mining Projects
   A data mining project is part of an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] solution. During the design process, the objects that you create in this project are available for testing and querying as part of a workspace database. When you want users to be able to query or browse the objects in the project, you must deploy the project to an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] running in multidimensional mode.  

@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
+ms.technology: high-availability
 ms.topic: conceptual
 helpviewer_keywords: 
   - "secondary servers [SQL Server]"
@@ -25,9 +22,8 @@ helpviewer_keywords:
   - "backup jobs [SQL Server]"
   - "primary servers [SQL Server]"
 ms.assetid: 55da6b94-3a4b-4bae-850f-4bf7f6e918ca
-caps.latest.revision: 63
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # About Log Shipping (SQL Server)

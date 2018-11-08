@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "xp_sqlmaint"
@@ -18,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "xp_sqlmaint"
 ms.assetid: bda66e1b-6bbd-49be-b86e-37efc920e912
-caps.latest.revision: 37
-author: "stevestein"
-ms.author: "sstein"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # xp_sqlmaint (Transact-SQL)

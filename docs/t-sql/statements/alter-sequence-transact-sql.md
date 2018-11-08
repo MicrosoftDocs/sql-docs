@@ -5,9 +5,7 @@ ms.date: "08/08/2015"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "ALTER_SEQUENCE_TSQL"
@@ -18,9 +16,8 @@ helpviewer_keywords:
   - "sequence number object, altering"
   - "ALTER SEQUENCE statement"
 ms.assetid: decc0760-029e-4baf-96c9-4a64073df1c2
-caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # ALTER SEQUENCE (Transact-SQL)

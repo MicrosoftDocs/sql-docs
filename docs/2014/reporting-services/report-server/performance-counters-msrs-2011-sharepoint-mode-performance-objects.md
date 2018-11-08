@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "performance counters [Reporting Services]"
@@ -17,10 +15,9 @@ helpviewer_keywords:
   - "Scheduling and Delivery Processor performance object [Reporting Services]"
   - "performance [Reporting Services]"
 ms.assetid: 70bf6980-7845-4ab5-8b2a-ebf526d811a6
-caps.latest.revision: 54
-author: "markingmyname"
-ms.author: "maghan"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: craigg
 ---
 # Performance Counters for the MSRS 2014 Web Service SharePoint Mode and MSRS 2014 Windows Service SharePoint Mode Performance Objects (SharePoint Mode)
   This topic describes performance counters for the `MSRS 2014 Web Service SharePoint Mode` and `MSRS 2014 Windows Service SharePoint Mode` performance objects that are part of a [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] SharePoint mode deployment.  

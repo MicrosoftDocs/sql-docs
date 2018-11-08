@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.dm_db_uncontained_entities"
@@ -18,7 +16,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_db_uncontained_entities dynamic management view"
 ms.assetid: f417efd4-8c71-4f81-bc9c-af13bb4b88ad
-caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg

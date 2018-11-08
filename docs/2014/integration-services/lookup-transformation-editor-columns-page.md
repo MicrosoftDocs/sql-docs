@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.lookuptransformation.columns.f1"
 helpviewer_keywords: 
   - "Lookup Transformation Editor"
 ms.assetid: 690ffef5-fd59-4e95-a27d-4fcf0d6b1c0b
-caps.latest.revision: 38
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Lookup Transformation Editor (Columns Page)

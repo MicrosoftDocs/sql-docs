@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.sqlserverstudio.queryparameters.mdx.f1"
 ms.assetid: e69b9542-7b54-42bf-b2de-c091e81af7ee
-caps.latest.revision: 3
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Query Parameters Dialog Box (MDX)
   Use the **Query Parameters** dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] and [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to add parameters to MDX queries that are used to define sets, dimensions, and subcubes. You can display the **Query Parameters** dialog box by clicking the **Parameters** icon in the **MDX query builder** dialog box.  

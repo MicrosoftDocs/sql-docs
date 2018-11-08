@@ -4,19 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "result sets [ODBC]"
   - "result sets [ODBC], fetching"
 ms.assetid: 34f235e4-f80b-4123-8764-9deb18506f14
-caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Retrieve Result Set Information (ODBC)

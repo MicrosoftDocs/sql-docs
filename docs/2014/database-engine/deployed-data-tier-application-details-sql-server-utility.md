@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-cross-instance"
-ms.tgt_pltfrm: ""
+ms.technology:
 ms.topic: conceptual
 f1_keywords: 
   - "SQL12.SWB.UE.dac.details.F1"
@@ -18,9 +15,8 @@ helpviewer_keywords:
   - "data-tier application [SQL Server], utility details"
   - "Multi-server management [SQL Server]"
 ms.assetid: 79c41dd9-abcb-434e-9326-00a341d5c867
-caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Deployed Data-tier Application Details (SQL Server Utility)

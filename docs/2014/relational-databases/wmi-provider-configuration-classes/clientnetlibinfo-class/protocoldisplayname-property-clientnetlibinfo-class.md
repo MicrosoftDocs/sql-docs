@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
   - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 api_name: 
   - "ProtocolDisplayName Property (ClientNetLibInfo Class)"
@@ -19,9 +17,8 @@ topic_type:
 helpviewer_keywords: 
   - "ProtocolDisplayName property"
 ms.assetid: b90755fd-7cac-4bdb-8e45-e95119a7665c
-caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # ProtocolDisplayName Property (ClientNetLibInfo Class)

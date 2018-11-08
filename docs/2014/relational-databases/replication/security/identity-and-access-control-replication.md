@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "replication"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "access controls [SQL Server replication]"
@@ -15,9 +13,8 @@ helpviewer_keywords:
   - "authentication [SQL Server replication]"
   - "identity [Replication]"
 ms.assetid: 4da0e793-1ee4-4f69-a80b-45c6732a238d
-caps.latest.revision: 7
-author: "craigg-msft"
-ms.author: "craigg"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Identity and Access Control (Replication)

@@ -4,19 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
+ms.technology: data-movement
 ms.topic: conceptual
 helpviewer_keywords: 
   - "myTeam sample table [SQL Server]"
   - "bulk importing [SQL Server], examples"
   - "bulk exporting [SQL Server], examples"
 ms.assetid: 27da45a0-c1f4-4bf4-ab24-6196e80d3834
-caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
 ---
 # HumanResources.myTeam Sample Table (SQL Server)

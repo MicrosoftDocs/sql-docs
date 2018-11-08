@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "07/17/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "dimensions [Analysis Services], data mining"
@@ -15,10 +13,9 @@ helpviewer_keywords:
   - "Data Mining Wizard"
   - "relational mining models [Analysis Services]"
 ms.assetid: d5fea90f-5f38-4639-8851-7707f6606a12
-caps.latest.revision: 56
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Data Mining Wizard (Analysis Services - Data Mining)
   The Data Mining Wizard in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] starts every time that you add a new mining structure to a data mining project. The wizard helps you choose a data source and set up a data source view that defines the data to be used for analysis, and then helps you create an initial model.  

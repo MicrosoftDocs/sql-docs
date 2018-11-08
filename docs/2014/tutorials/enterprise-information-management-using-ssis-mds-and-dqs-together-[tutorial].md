@@ -4,17 +4,14 @@ ms.custom: ""
 ms.date: "12/29/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "data-quality-services"
   - "integration-services"
   - "master-data-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: ba09b504-3007-4cb7-8ef8-f01adbf51646
-caps.latest.revision: 11
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Enterprise Information Management using SSIS, MDS, and DQS Together [Tutorial]
@@ -32,7 +29,7 @@ manager: craigg
   
  SQL Server Data Quality Services (DQS) enables you to cleanse, match, standardize, and enrich data, so you can deliver trusted information for business intelligence, a data warehouse, and transaction processing workloads. See [Introducing Data Quality Services](http://msdn.microsoft.com/library/ff877917.aspx) topic for the business need for DQS and how DQS answers the need.  
   
- SQL Server Master Data Services (MDS) provides a central data hub that ensures that the integrity of information and consistency of data is constant across different applications. See [Master Data Services Overview](http://msdn.microsoft.com/library/ff487003.aspx) topic for brief descriptions of important features of MDS.  
+ SQL Server Master Data Services (MDS) provides a central data hub that ensures that the integrity of information and consistency of data is constant across different applications. See [Master Data Services Overview](../master-data-services/master-data-services-overview-mds.md) topic for brief descriptions of important features of MDS.  
   
  See [Cleansing and Matching Master Data using EIM Technologies](http://msdn.microsoft.com/library/hh403491.aspx) whitepapers for a comprehensive guidance on implementing an EIM solution using these Microsoft EIM technologies together and watch [Enterprise Information Management (EIM): Bringing together SSIS, DQS, and MDS](http://go.microsoft.com/fwlink/?LinkId=258672) video for a cool demonstration of an EIM scenario.  
   
@@ -50,7 +47,7 @@ manager: craigg
   
     4.  SQL Server Data Tools  
   
-         See [SQL Server 2012 Installation Guide](http://msdn.microsoft.com/library/bb500469.aspx) for details about installing the product.  
+         See [SQL Server 2012 Installation Guide](../database-engine/install-windows/installation-for-sql-server.md) for details about installing the product.  
   
 2.  [Configure MDS using Master Data Services Configuration Manager](http://msdn.microsoft.com/library/ee633884.aspx)  
   

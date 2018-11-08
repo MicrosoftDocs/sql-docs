@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "targets [SQL Server extended events], ring buffer target"
   - "ring buffer target [SQL Server extended events]"
 ms.assetid: 54494e11-b56b-43b7-aa5e-c8724e56b251
-caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Ring Buffer Target

@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dm.miningmodeleditor.prediction.query.f1"
 ms.assetid: fdeec72e-d0bd-4453-9eaa-46436e4d6edc
-caps.latest.revision: 25
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Query Pane (Mining Model Prediction View)
   The **Query** pane displays the Data Mining Expressions (DMX) statements created by Prediction Query Builder. You can modify the statements and then click the **Switch to query result view** button to return the results. If you switch back to the **Design** view, any changes you made to the statement will be lost.  

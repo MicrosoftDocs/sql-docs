@@ -1,13 +1,11 @@
-﻿---
+---
 title: "Delete Views | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "table-view-index, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: table-view-index
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "dropping views"
@@ -15,14 +13,13 @@ helpviewer_keywords:
   - "views [SQL Server], deleting"
   - "removing views"
 ms.assetid: 6823c7f8-06ca-4bda-8482-7092f03d52a0
-caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Delete Views
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
   You can delete (drop) views in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]  
   
  **In This Topic**  
@@ -63,7 +60,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 3.  In the **Delete Object** dialog box, click **OK**.  
   
     > [!IMPORTANT]  
-    >  Click **Show Dependencies** in the **Delete Object** dialog box to open the *view_name***Dependencies** dialog box. This will show all of the objects that depend on the view and all of the objects on which the view depends.  
+    >  Click **Show Dependencies** in the **Delete Object** dialog box to open the _view\_name_**Dependencies** dialog box. This will show all of the objects that depend on the view and all of the objects on which the view depends.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   

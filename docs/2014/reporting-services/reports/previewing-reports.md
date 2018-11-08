@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Report Designer [Reporting Services], previewing reports"
@@ -15,10 +13,9 @@ helpviewer_keywords:
   - "printing previews"
   - "test servers [Reporting Services]"
 ms.assetid: 85117f6c-828e-45c9-810f-e700d9bfba67
-caps.latest.revision: 42
-author: "markingmyname"
-ms.author: "maghan"
-manager: "mblythe"
+author: markingmyname
+ms.author: maghan
+manager: craigg
 ---
 # Previewing Reports
   When you design a report, you may want to view it before publishing it to a production environment. You can do this in several ways: by switching to Preview mode in Report Designer, by using the preview window in Report Designer, and by publishing the report to a report server in a test environment.  

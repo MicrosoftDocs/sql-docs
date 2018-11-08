@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "05/25/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
   - "data-quality-services"
@@ -14,16 +13,14 @@ ms.technology:
   - "replication"
   - "reporting-services-native"
   - "reporting-services-sharepoint"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "quick start installation [SQL Server]"
   - "installation [SQL Server]"
   - "installing SQL Server, quick start installations"
 ms.assetid: 672afac9-364d-4946-ad5d-8a2d89cf8d81
-caps.latest.revision: 48
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mightypen
+ms.author: genemi
 manager: craigg
 ---
 # Quick-Start Installation of SQL Server 2014

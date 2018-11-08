@@ -3,10 +3,8 @@ title: "Building Database Objects with Common Language Runtime (CLR) Integration
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: reference
+ms.technology: clr
 ms.topic: "reference"
 helpviewer_keywords: 
   - "routines [CLR integration]"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "building database objects [CLR integration]"
   - ".NET Framework routines [SQL Server]"
 ms.assetid: ce34132c-bfa3-447b-9131-b6e17c672efe
-caps.latest.revision: 48
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

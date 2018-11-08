@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/20/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_addsrvrolemember"
@@ -18,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_addsrvrolemember"
 ms.assetid: 777f0e09-8ee5-4cb2-a3ac-939d02c3cd22
-caps.latest.revision: 32
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_addsrvrolemember (Transact-SQL)

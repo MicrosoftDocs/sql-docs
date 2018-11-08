@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Data Source Wizard"
 ms.assetid: 0ed3caf1-249d-4307-b588-d8a0ef315faa
-caps.latest.revision: 22
-author: "Minewiskan"
-ms.author: "owend"
-manager: "mblythe"
+author: minewiskan
+ms.author: owend
+manager: craigg
 ---
 # Data Source Wizard F1 Help (Analysis Services)
   Use the Data Source Wizard to create a data source for use in the following business intelligence projects in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]:  

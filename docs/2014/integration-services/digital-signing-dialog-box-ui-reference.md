@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.digitalsigning.f1"
 helpviewer_keywords: 
   - "Digital Signing dialog box"
 ms.assetid: d6137275-65d3-4fc9-bf31-d61dcd1228d4
-caps.latest.revision: 30
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Digital Signing Dialog Box UI Reference

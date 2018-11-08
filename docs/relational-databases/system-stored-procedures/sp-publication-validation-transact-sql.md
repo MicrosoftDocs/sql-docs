@@ -4,24 +4,18 @@ ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
   - "replication"
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_publication_validation"
   - "sp_publication_validation_TSQL"
 helpviewer_keywords: 
   - "sp_publication_validation"
 ms.assetid: 06be2363-00c0-4936-97c1-7347f294a936
-caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_publication_validation (Transact-SQL)

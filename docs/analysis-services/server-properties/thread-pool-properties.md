@@ -266,9 +266,9 @@ We recommend SQL Server 2016 Cumulative Update 1 (CU1) or later for setting **Gr
 >  For instructions on how to set properties, see [Server Properties in Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
 ## See Also  
- [About Processes and Threads](http://msdn.microsoft.com/library/windows/desktop/ms681917\(v=vs.85\).aspx)   
- [Multiple Processors](http://msdn.microsoft.com/library/windows/desktop/ms684251\(v=vs.85\).aspx)   
- [Processor Groups](http://msdn.microsoft.com/library/windows/desktop/dd405503\(v=vs.85\).aspx)   
+ [About Processes and Threads](/windows/desktop/ProcThread/about-processes-and-threads)   
+ [Multiple Processors](/windows/desktop/ProcThread/multiple-processors)   
+ [Processor Groups](/windows/desktop/ProcThread/processor-groups)   
  [Analysis Services Thread Pool Changes in SQL Server 2012](http://blogs.msdn.com/b/psssql/archive/2012/01/31/analysis-services-thread-pool-changes-in-sql-server-2012.aspx)   
  [Analysis Services 2012 Configuration settings (Wordpress Blog)](http://go.microsoft.com/fwlink/?LinkId=330387)   
  [Supporting Systems That Have More Than 64 Processors](http://msdn.microsoft.com/library/windows/hardware/gg463349.aspx)   

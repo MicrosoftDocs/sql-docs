@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "integration-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "tasks [Integration Services], precedence constraints"
@@ -15,9 +13,8 @@ helpviewer_keywords:
   - "default precedence constraints"
   - "containers [Integration Services], precedence constraints"
 ms.assetid: 8f31f15f-98ff-4c35-b41f-8b8cfd148d75
-caps.latest.revision: 32
-author: "douglaslMS"
-ms.author: "douglasl"
+author: douglaslms
+ms.author: douglasl
 manager: craigg
 ---
 # Connect Tasks and Containers by Using a Default Precedence Constraint

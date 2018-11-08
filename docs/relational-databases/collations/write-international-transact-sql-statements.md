@@ -1,12 +1,10 @@
-﻿---
+---
 title: "Write International Transact-SQL Statements | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "writing international statements"
@@ -17,11 +15,10 @@ helpviewer_keywords:
   - "database international considerations [SQL Server], Transact-SQL"
   - "dates [SQL Server], international considerations"
 ms.assetid: f0b10fee-27f7-45fe-aece-ccc3f63bdcdb
-caps.latest.revision: 35
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Write International Transact-SQL Statements
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +32,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
   
     -   ADO, OLE DB, and ODBC applications should use the ODBC timestamp, date, and time escape clauses of:  
   
-         **{ ts'**yyyy**-***mm***-***dd**hh***:***mm***:***ss*[**.***fff*] **'}** such as: **{ ts'**1998**-**09**-**24 10**:**02**:**20**' }**  
+         **{ ts'**yyyy**-**_mm_**-_**dd**hh_**:**_mm_**:**_ss_[**.**_fff_] **'}** such as: **{ ts'**1998**-**09**-**24 10**:**02**:**20**' }**  
   
          **{ d'** *yyyy* **-** *mm* **-** *dd* **'}** such as: **{ d'**1998**-**09**-**24**'}**  
   

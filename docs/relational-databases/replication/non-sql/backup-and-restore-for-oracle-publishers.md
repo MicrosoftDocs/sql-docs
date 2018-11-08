@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "recovery [SQL Server replication], Oracle publishing"
@@ -17,7 +13,6 @@ helpviewer_keywords:
   - "Oracle publishing [SQL Server replication], backup and restore"
   - "restoring [SQL Server replication], Oracle publishing"
 ms.assetid: e5f181d0-cacf-442b-8b7a-202b3cfc358b
-caps.latest.revision: 33
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

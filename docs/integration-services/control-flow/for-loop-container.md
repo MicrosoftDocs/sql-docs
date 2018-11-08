@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.forloopcontainerdetails.f1"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "containers [Integration Services], For Loop"
   - "For Loop containers"
 ms.assetid: 44cf7355-992b-4bbf-a28c-bfb012de06f6
-caps.latest.revision: 55
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

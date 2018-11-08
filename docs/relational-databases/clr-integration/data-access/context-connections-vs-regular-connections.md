@@ -3,16 +3,13 @@ title: "Regular vs. Context Connections | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: reference
+ms.technology: clr
 ms.topic: "reference"
 helpviewer_keywords: 
   - "context connections [CLR integration]"
   - "regular connections [CLR integration]"
 ms.assetid: a1dead02-be88-4b16-8cb2-db1284856764
-caps.latest.revision: 13
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
@@ -16,7 +14,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "InfoMessage event [ADO]"
 ms.assetid: 468c87dd-e3bc-4084-9941-94d10743d4e9
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg

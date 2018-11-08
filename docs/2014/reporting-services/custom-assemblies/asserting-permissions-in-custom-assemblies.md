@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "docset-sql-devref"
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "secure calls [Reporting Services]"
@@ -19,9 +17,8 @@ helpviewer_keywords:
   - "limited permission sets"
   - "security configuration files [Reporting Services]"
 ms.assetid: 3afb9631-f15e-405e-990b-ee102828f298
-caps.latest.revision: 32
-author: "douglaslM"
-ms.author: "douglasl"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Asserting Permissions in Custom Assemblies

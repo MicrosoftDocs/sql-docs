@@ -4,17 +4,12 @@ ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "MSSQL_ENG021076 error"
 ms.assetid: 612e5c59-ba3e-49c3-a3df-56bac3d850a2
-caps.latest.revision: 15
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

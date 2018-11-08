@@ -4,17 +4,12 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.rep.p2pwizard.publication.f1"
 ms.assetid: 92794414-6e54-437a-88b6-3bf02d3802f6
-caps.latest.revision: 11
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

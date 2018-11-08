@@ -4,19 +4,16 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Upgrade Advisor [SQL Server], when to use"
   - "SQL Server Upgrade Advisor, when to use"
   - "when to use Upgrade Advisor"
 ms.assetid: 5f26a7b9-1ac2-442c-8316-87b078db3baf
-caps.latest.revision: 43
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Working with Upgrade Advisor

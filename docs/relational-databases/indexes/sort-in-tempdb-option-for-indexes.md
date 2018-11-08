@@ -1,13 +1,11 @@
-﻿---
+---
 title: "SORT_IN_TEMPDB Option For Indexes | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/24/2017"
 ms.prod: sql
 ms.prod_service: "table-view-index, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: table-view-index
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SORT_IN_TEMPDB option"
@@ -17,11 +15,10 @@ helpviewer_keywords:
   - "indexes [SQL Server], tempdb database"
   - "index creation [SQL Server], tempdb database"
 ms.assetid: 754a003f-fe51-4d10-975a-f6b8c04ebd35
-caps.latest.revision: 26
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SORT_IN_TEMPDB Option For Indexes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -54,19 +51,19 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
   
  If SORT_IN_TEMPDB is set to OFF, the available free disk space in the destination filegroup must be roughly the size of the final index. During the first phase, the sort runs are built and require about the same amount of space as the final index. During the second phase, each sort run extent is freed after it has been processed. This means that sort run extents are freed at about the same rate at which extents are acquired to hold the final index pages; therefore, the overall space requirements do not greatly exceed the size of the final index. One side effect of this is that if the amount of free space is very close to the size of the final index, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] will generally reuse the sort run extents very quickly after they are freed. Because the sort run extents are freed in a somewhat random manner, this reduces the continuity of the index extents in this scenario. If SORT_IN_TEMPDB is set to OFF, the continuity of the index extents is improved if there is sufficient free space available in the destination filegroup that the index extents can be allocated from a contiguous pool instead of from the freshly deallocated sort run extents.  
   
- When you create a nonclustered index, you must have available as free space:  
+When you create a nonclustered index, you must have available as free space:  
   
 -   If SORT_IN_TEMPDB is set to ON, there must be sufficient free space in **tempdb** to store the sort runs, and sufficient free space in the destination filegroup to store the final index structure. The sort runs contain the leaf rows of the index.  
   
 -   If SORT_IN_TEMPDB is set to OFF, the free space in the destination filegroup must be large enough to store the final index structure. The continuity of the index extends may be improved if more free space is available.  
   
- When you create a clustered index on a table that does not have nonclustered indexes, you must have available as free space:  
+When you create a clustered index on a table that does not have nonclustered indexes, you must have available as free space:  
   
 -   If SORT_IN_TEMPDB is set to ON, there must be sufficient free space in **tempdb** to store the sort runs. These include the data rows of the table. There must be sufficient free space in the destination filegroup to store the final index structure. This includes the data rows of the table and the index B-tree. You may have to adjust the estimate for factors such as having a large key size or a fill factor with a low value.  
   
 -   If SORT_IN_TEMPDB is set to OFF, the free space in the destination filegroup must be large enough to store the final table. This includes the index structure. The continuity of the table and index extents may be improved if more free space is available.  
   
- When you create a clustered index on a table that has nonclustered indexes, you must have available as free space:  
+When you create a clustered index on a table that has nonclustered indexes, you must have available as free space:  
   
 -   If SORT_IN_TEMPDB is set to ON, there must be sufficient free space in **tempdb** to store the collection of sort runs for the largest index, typically the clustered index, and sufficient free space in the destination filegroup to store the final structures of all the indexes. This includes the clustered index that contains the data rows of the table.  
   

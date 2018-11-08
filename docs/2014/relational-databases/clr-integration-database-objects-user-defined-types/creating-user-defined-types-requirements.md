@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: clr
 ms.topic: "reference"
 helpviewer_keywords: 
   - "UDTs [CLR integration], requirements"
@@ -21,9 +17,8 @@ helpviewer_keywords:
   - "user-defined types [CLR integration], Native serialization"
   - "UDTs [CLR integration], Native serialization"
 ms.assetid: bedc3372-50eb-40f2-bcf2-d6db6a63b7e6
-caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # User-Defined Type Requirements
@@ -70,7 +65,7 @@ manager: craigg
   
  **bool**, **byte**, **sbyte**, **short**, **ushort**, **int**, **uint**, **long**, **ulong**, **float**, **double**, **SqlByte**, **SqlInt16**, **SqlInt32**, **SqlInt64**, **SqlDateTime**, **SqlSingle**, **SqlDouble**, **SqlMoney**, **SqlBoolean**  
   
- Value types that that are composed of fields of the above types are good candidates for `Native` format, such as `structs` in Visual C#, (or `Structures` as they are known in Visual Basic). For example, a UDT specified with the `Native` serialization format may contain a field of another UDT that was also specified with the `Native` format. If the UDT definition is more complex and contains data types not on the above list, you must specify the `UserDefined` serialization format instead.  
+ Value types that are composed of fields of the above types are good candidates for `Native` format, such as `structs` in Visual C#, (or `Structures` as they are known in Visual Basic). For example, a UDT specified with the `Native` serialization format may contain a field of another UDT that was also specified with the `Native` format. If the UDT definition is more complex and contains data types not on the above list, you must specify the `UserDefined` serialization format instead.  
   
  The `Native` format has the following requirements:  
   

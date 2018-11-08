@@ -26,9 +26,9 @@ For information about Power BI Report Server, see [What is Power BI Report Serve
 To download SQL Server 2017 Reporting Services, go to the  **[Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=55252)**.
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
-## SQL Server 2019 CTP 2.0 Reporting Services
+## SQL Server 2019 preview Reporting Services
 
-SQL Server vNext CTP 2.0 Reporting Services isn’t available for preview. Install the current version, [SQL Server 2017 Reporting Services](install-windows/install-reporting-services.md). 
+[!INCLUDE[sql-server-2019]](../includes/sssqlv15-md.md)] Reporting Services isn’t available for CTP 2.1. Install the current version, [SQL Server 2017 Reporting Services](install-windows/install-reporting-services.md).
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"

@@ -4,7 +4,7 @@ description:
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 10/01/2018
+ms.date: 11/06/2018
 ms.topic: quickstart
 ms.prod: sql
 ---
@@ -23,8 +23,6 @@ On the computer you are using to run the commands to install the SQL Server big 
 
 To install the **mssqlctl** CLI tool to manage the SQL Server big data cluster on your client machine, you must first install [Python](https://www.python.org/downloads/) minimum version v3.0 and [pip3](https://pip.pypa.io/en/stable/installing/). `pip` is already installed if you are using a Python version of at least 3.4 downloaded from [python.org](https://www.python.org/).
 
-If your Python installation is missing the `requests` package, you must install `requests` using `python -m pip install requests` (use `python3` for these commands on Linux). If you already have a `requests` package, upgrade it to latest version using `python -m pip install requests --upgrade`.
-
 ## Verify AKS configuration
 
 Once you have the AKS cluster deployed, you can execute the below kubectl command to view the cluster configuration. Ensure that kubectl is pointed to the correct cluster context.
@@ -38,8 +36,11 @@ kubectl config view
 Run below command to install **mssqlctl** tool on your client machine. The command works from both a Windows and a Linux client, but make sure you are running it from a cmd window that runs with administrative privileges on Windows or prefix it with `sudo` on Linux:
 
 ```
-pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.0 mssqlctl  
+pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctl  
 ```
+
+> [!IMPORTANT]
+> If you installed a previous release, you must delete the cluster *before* upgrading **mssqlctl** and installing the new release. For more information, see [Upgrading to a new release](deployment-guidance.md#upgrade).
 
 > [!TIP]
 > If **mssqlctl** does not install correctly, review the prerequisite steps in the article [Install mssqlctl](deployment-guidance.md#mssqlctl).
@@ -53,7 +54,7 @@ Before continuing, note the following important guidelines:
 - In the [Command Window](http://docs.microsoft.com/visualstudio/ide/reference/command-window), quotes are included in the environment variables. If you use quotes to wrap a password, the quotes are included in the password.
 - In bash, quotes are not included in the variable. Our examples use double quotes `"`.
 - You can set the password environment variables to whatever you like, but make sure they are sufficiently complex and don’t use the `!`, `&`, or `'` characters.
-- For the CTP 2.0 release, do not change the default ports.
+- For the CTP 2.1 release, do not change the default ports.
 - The `sa` account is a system administrator on the SQL Server Master instance that gets created during setup. After creating your SQL Server container, the `MSSQL_SA_PASSWORD` environment variable you specified is discoverable by running `echo $MSSQL_SA_PASSWORD` in the container. For security purposes, change your `sa` password as per best practices documented [here](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password).
 
 Initialize the following environment variables.  They are required for deploying a big data cluster:
@@ -105,7 +106,7 @@ export DOCKER_PRIVATE_REGISTRY="1"
 
 ## Deploy a big data cluster
 
-To deploy a SQL Server 2019 CTP 2.0 big data cluster on your Kubernetes cluster, run the following command:
+To deploy a SQL Server 2019 CTP 2.1 big data cluster on your Kubernetes cluster, run the following command:
 
 ```bash
 mssqlctl create cluster <name of your cluster>

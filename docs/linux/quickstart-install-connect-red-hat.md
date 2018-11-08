@@ -24,7 +24,7 @@ In this quickstart, you install SQL Server 2017 or SQL Server 2019 on Red Hat En
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-In this quickstart, you install SQL Server 2019 CTP 2.0 on Red Hat Enterprise Linux (RHEL) 7.3+. You then connect with **sqlcmd** to create your first database and run queries.
+In this quickstart, you install SQL Server 2019 preview on Red Hat Enterprise Linux (RHEL) 7.3+. You then connect with **sqlcmd** to create your first database and run queries.
 
 ::: moniker-end
 
@@ -136,7 +136,7 @@ To configure SQL Server on RHEL, run the following commands in a terminal to ins
    sudo firewall-cmd --reload
    ```
 
-At this point, SQL Server 2019 CTP 2.0 is running on your RHEL machine and is ready to use!
+At this point, SQL Server 2019 preview is running on your RHEL machine and is ready to use!
 
 ::: moniker-end
 

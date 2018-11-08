@@ -385,7 +385,7 @@ ms.technology:
                                                         <h3>Data Analytics</h3>
                                                         <ul class="noBullet">
                                                         <li><a class="barLink" href="/sql/analytics-platform-system/">Microsoft Analytics Platform System</a></li>
-                                                            <li><a class="barLink" href="/sql/relational-databases/polybase/polybase-guide/">Polybase</a></li>
+                                                            <li><a class="barLink" href="/sql/relational-databases/polybase/polybase-guide/">PolyBase</a></li>
                                                             <li><a class="barLink" href="/sql/analysis-services/analysis-services">SQL Server Analysis Services</a></li>
                                                             <li><a class="barLink" href="/azure/analysis-services/">Azure Analysis Services</a></li>
                                                        </ul>
@@ -401,8 +401,8 @@ ms.technology:
                                                   <div class="cardText">
                                                         <h3>AI and Machine Learning</h3>
                                                         <ul class="noBullet">
-                                                            <li><a class="barLink" href="/sql/advanced-analytics/what-is-sql-server-machine-learning">SQL Machine Learning Services</a></li>
-                                                            <li><a class="barLink" href="/sql/sql/advanced-analytics/r/sql-server-r-services">R Services</a></li>
+                                                            <li><a class="barLink" href="/sql/advanced-analytics/what-is-sql-server-machine-learning">SQL Server Machine Learning Services (R and Python)</a></li>
+                                                            <li><a class="barLink" href="/sql/advanced-analytics/r/sql-server-r-services">SQL Server R Services</a></li>
                                                             <li><a class="barLink" href="/azure/machine-learning/">Azure Machine Learning</a></li>
                                                        </ul>
                                                     </div>

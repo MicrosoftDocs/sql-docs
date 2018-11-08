@@ -19,15 +19,19 @@ Python integration is available starting in SQL Server 2017 or later when you in
 + Execute Python functions locally and shift execution to a remote SQL Server instance
 + Render any subsequent visual and summarized output returned from SQL Server
 
-Coordinated computing between a local workstation and a remote SQL Server database engine instance is achieved by having the same-version of Microsoft's revoscalepy Python library on both systems. In this article, you will learn how to install the necessary Python libraries on your local workstation. You will also learn how to write Python code that executes on SQL Server, and render visualizations and other output using the capabilities of a client application. 
+Coordination between a local workstation and a remote SQL Server database engine instance is achieved by having the same version of Microsoft's [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) Python library on both systems. 
 
-You can use built-in Jupyter Notebooks as described in this article, or adapt the instructions for PyCharm or any another IDE that you normally use.
+  ![Client-server components](media/sqlmls-python-client-revo.png "Local and remote Python sessions and libraries")
+
+In this article, you will learn how to install the necessary Python libraries on your local workstation. You will also learn how to write Python code that executes on SQL Server, and render visualizations and other output locally using the capabilities of a client application. 
+
+You can use built-in Jupyter Notebooks as described in this article, or [adapt the instructions](#install-ide) for PyCharm or any another IDE that you normally use.
 
 > [!Tip]
 > For a video demonstration of these exercises, see [Run R and Python remotely in SQL Server from Jupyter Notebooks](https://blogs.msdn.microsoft.com/mlserver/2018/07/10/run-r-and-python-remotely-in-sql-server-from-jupyter-notebooks-or-any-ide/).
 
 > [!Note]
-> An alternative to client libraries is using a [standalone server](../install/sql-machine-learning-standalone-windows-install.md) as a rich client, which some customers prefer for deeper scenario work. A standalone server is fully decoupled from SQL Server. Because it has the same Python libraries, you can use it as a client for SQL Server in-database analytics. But you can also use it for non-SQL-related work, including the ability to import and load data from other data platforms. If you install a standalone server, you can find the Python executable at this location: `C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER`. To validate your installation, [open a Jupyter notebook](#python-tools) to run commands using the Python.exe at that location.
+> An alternative to client library installation is using a [standalone server](../install/sql-machine-learning-standalone-windows-install.md) as a rich client, which some customers prefer for deeper scenario work. A standalone server is fully decoupled from SQL Server, but because it has the same Python libraries, you can use it as a client for SQL Server in-database analytics. You can also use it for non-SQL-related work, including the ability to import and model data from other data platforms. If you install a standalone server, you can find the Python executable at this location: `C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER`. To validate your installation, [open a Jupyter notebook](#python-tools) to run commands using the Python.exe at that location.
 
 ## Common IDEs
 
@@ -37,7 +41,9 @@ Jupyter Notebooks is included in the Anaconda distribution installed by SQL Serv
 
 ## 1 - Install Python packages
 
-Local workstations must have the same Python package versions as those on SQL Server, including the base distribution, and Microsoft-specific packages [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) and [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package). The [azureml-model-management](https://docs.microsoft.com/machine-learning-server/python-reference/azureml-model-management-sdk/azureml-model-management-sdk) package is also installed, but it applies to operationalization tasks associated with a standalone (non-instance) Machine Learning Server context. For in-database analytics on a SQL Server instance, operationalization is through stored procedures.
+Local workstations must have the same Python package versions as those on SQL Server, including the base Anaconda distribution, and Microsoft-specific packages.
+
+The [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) package is foundational, defining data source objects and compute context. The [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) package provides machine learning algorithms. The [azureml-model-management](https://docs.microsoft.com/machine-learning-server/python-reference/azureml-model-management-sdk/azureml-model-management-sdk) package is also installed, but it applies to operationalization tasks associated with a standalone (non-instance) Machine Learning Server context. 
 
 1. Download the installation script to install Anaconda 4.2.0 with Python 3.5.2, revoscalepy, microsoftml, and azure-model-management.
 
@@ -95,6 +101,8 @@ Anaconda includes Jupyter Notebooks. As a next step, create a notebook and run s
   ![jupyter notebook with New Python 3 selection](media/jupyter-notebook-new-p3.png)
 
 3. Enter `import revoscalepy` and run the command to load one of the Microsoft-specific libraries.
+
+4. Enter and run `print(revoscalepy.__version__)` to return the version information. You should see 9.2.1 or 9.3.0.  
 
 4. Enter a more complex series of statements. This example generates summary statistics using [rx_summary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary) over a local data set. Other functions get the location of the sample data and create a data source object for a local .xdf file.
 

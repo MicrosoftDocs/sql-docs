@@ -5,7 +5,7 @@ ms.custom: ""
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 05/29/2018  
+ms.date: 11/08/2018  
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
@@ -158,48 +158,37 @@ EXECUTE sp_execute_external_script
   print("Package", pckg_name, "is", "not" if installed_pckg.empty else "", "installed")'
 ```
 
-## Get package information in R and Python tools
+## Get package information
 
-All of the previous instructions assume you are using a SQL Server tool such as Management Studio (SSMS). If you prefer using R and Python tools, the following instructions explain how to get library and package information from an R or Python command line.
+You can get R and Python package version information using Management Studio.
 
-### R commands
+### R package version
 
-The instance library for R is \Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library.
+This statement returns the RevoScaleR package version and the base R version.
 
-Launch the standard R tools from these locations to ensure packages from the instance library are used:
+```sql
+EXECUTE sp_execute_external_script
+  @language = N'R',
+  @script = N'
+print(packageDescription("RevoScaleR"))
+print(packageDescription("base"))
+'
+```
 
-+ \MSSQL14.MSSQLSERVER\R_SERVICES\bin\R.exe for an R command prompt
-+ \MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\Rgui.exe for an R console app
+### Python package version
 
-You can use standard R commands or RevoScaleR commands to get package information. The RevoScaleR package is loaded automatically. 
+This statement returns the revoscalepy package version and the version of Python.
 
-Return RevoScaleR package information:
-
-    > print(Revo.version)
-
-Return a list of all installed packages:
-
-    > installed.packages()
-
-Return the version of R:
-
-    > packageDescription("base")
-
-### Python commands
-
-Python support is SQL Server 2017 only. The instance library for Python is \Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\.
-
-Open the Python command window from this location to ensure packages from the instance library are used:
-
-+ \MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Python.exe
-
-Open interactive help:
-
-    > help()
-
-Type a module name at the help prompt to get the package contents, version, and file location:
-
-    help> revoscalepy
+```sql
+EXECUTE sp_execute_external_script
+  @language = N'Python',
+  @script = N'
+import revoscalepy
+import sys
+print(revoscalepy.__version__)
+print(sys.version)
+'
+```
 
 <a name="pip-conda"></a>
 

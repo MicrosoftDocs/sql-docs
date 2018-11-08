@@ -19,7 +19,7 @@ Python integration is available starting in SQL Server 2017 or later when you in
 + Execute Python functions locally and shift execution to a remote SQL Server instance
 + Render any subsequent visual and summarized output returned from SQL Server
 
-Coordination between a local workstation and a remote SQL Server database engine instance is achieved by having the same version of Microsoft's [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) Python library on both systems. 
+Coordination between a local workstation and a remote SQL Server database engine instance is achieved by having Microsoft's [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) Python library on both systems. This library has functions for managing the compute context.
 
   ![Client-server components](media/sqlmls-python-client-revo.png "Local and remote Python sessions and libraries")
 
@@ -33,11 +33,13 @@ You can use built-in Jupyter Notebooks as described in this article, or [adapt t
 > [!Note]
 > An alternative to client library installation is using a [standalone server](../install/sql-machine-learning-standalone-windows-install.md) as a rich client, which some customers prefer for deeper scenario work. A standalone server is fully decoupled from SQL Server, but because it has the same Python libraries, you can use it as a client for SQL Server in-database analytics. You can also use it for non-SQL-related work, including the ability to import and model data from other data platforms. If you install a standalone server, you can find the Python executable at this location: `C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER`. To validate your installation, [open a Jupyter notebook](#python-tools) to run commands using the Python.exe at that location.
 
-## Common IDEs
+## Commonly used tools
 
-Jupyter Notebooks and PyCharm are two of the more frequently used development tools. Whether you are a data science developer working with SQL for the first time, or a SQL developer diving into Python and in-database analytics, you should have a Python IDE in addition to query editor such as SQL Server Management Studio (SSMS). While SSMS is useful for creating and running stored procedures containing Python code, a Python IDE fills in where SSMS falls short by rendering output formats that SSMS can't produce.
+Whether you are a data science developer working with SQL for the first time, or a SQL developer diving into Python and in-database analytics, you should have both a Python IDE for development, as well as query editor such as [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) for deploying your code on SQL Server.
 
-Jupyter Notebooks is included in the Anaconda distribution installed by SQL Server Setup. This article explains how to start up Jupyter Notebooks so that you can run Python code locally and remotely on SQL Server.
+Jupyter Notebooks is one of the more frequently used development tools for Python, and it comes bundled in the Anaconda distribution installed by SQL Server. This article explains how to start Jupyter Notebooks so that you can run Python code locally and remotely on SQL Server.
+
+SSMS is a separate download, useful for creating and running stored procedures on SQL Server, including those containing Python code. Almost any Python code that you write in Jupyter Notebooks can be embedded in a stored procedure. You can choose from several tutorials to learn about SSMS and the steps for creating and executing Python in stored procedures.
 
 ## 1 - Install Python packages
 
@@ -272,7 +274,7 @@ For a Python project in Visual Studio, your custom environment would specify the
 
 ## Next steps
 
-Now that you have tools and a working connection to SQL Server, step through a tutorial to get a closer look at revoscalepy functions and switching compute contexts.
+Now that you have tools and a working connection to SQL Server, expand your skills by using SQL Server Management Studio to create and execute stored procedures containing embedded Python code.
 
 > [!div class="nextstepaction"]
-> [Create a model using revoscalepy and a remote compute context](../tutorials/use-python-revoscalepy-to-create-model.md)
+> [Create, train, and use a Python model with stored procedures in SQL Server](../tutorials//train-score-using-python-in-tsql.md)

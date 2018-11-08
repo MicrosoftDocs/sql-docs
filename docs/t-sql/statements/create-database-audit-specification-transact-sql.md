@@ -87,7 +87,7 @@ CREATE DATABASE AUDIT SPECIFICATION audit_specification_name
   
 ## Examples
 
-### A. Audit SELECT and INSERT on a table for any user 
+### A. Audit SELECT and INSERT on a table for any database principal 
  The following example creates a server audit called `Payrole_Security_Audit` and then a database audit specification called `Payrole_Security_Audit` that audits `SELECT` and `INSERT` statements by any user (`public`), for the `HumanResources.EmployeePayHistory` table in the `AdventureWorks2012` database.  
   
 ```  
@@ -114,8 +114,8 @@ WITH (STATE = ON) ;
 GO  
 ``` 
 
-### B. Audit any DML (INSERT, UPDATE or DELETE) on ALL tables in the sales schema for a specific database role  
- The following example creates a server audit called `DataModification_Security_Audit` and then a database audit specification called `Audit_Data_Modification_On_All_Sales_Tables` that audits `INSERT`, `UPDATE` and `DELETE` statements by users in a new role `SalesUK`, for all objects in the `Sales` schema in the `AdventureWorks2012` database.  
+### B. Audit any DML (INSERT, UPDATE or DELETE) on _all_ objects in the _sales_ schema for a specific database role  
+ The following example creates a server audit called `DataModification_Security_Audit` and then a database audit specification called `Audit_Data_Modification_On_All_Sales_Tables` that audits `INSERT`, `UPDATE` and `DELETE` statements by users in a new database role `SalesUK`, for all objects in the `Sales` schema in the `AdventureWorks2012` database.  
   
 ```  
 USE master ;  

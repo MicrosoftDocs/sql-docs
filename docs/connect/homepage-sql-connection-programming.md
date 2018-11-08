@@ -28,7 +28,7 @@ In any given language, the code that connects to SQL Server is almost identical 
 
 For details about the connection strings for connecting to Azure SQL Database, see:
 
-- [Use .NET Core (C#) to query an Azure SQL database](/azure/sql-database/sql-database-connect-query-dotnet-test-nosuch-core).
+- [Use .NET Core (C#) to query an Azure SQL database](/azure/sql-database/sql-database-connect-query-dotnet-core).
 - Other Azure SQL Database that are nearby the preceding article in the table of contents, about other languages. For instance, see [Use PHP to query an Azure SQL database](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-php).
 
 

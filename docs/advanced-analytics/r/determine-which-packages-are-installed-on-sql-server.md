@@ -158,7 +158,9 @@ EXECUTE sp_execute_external_script
   print("Package", pckg_name, "is", "not" if installed_pckg.empty else "", "installed")'
 ```
 
-## Get package information
+<a name="get-package-vers"></a>
+
+## Get package version
 
 You can get R and Python package version information using Management Studio.
 
@@ -189,21 +191,6 @@ print(revoscalepy.__version__)
 print(sys.version)
 '
 ```
-
-<a name="pip-conda"></a>
-
-### Python package managers (Pip and Conda)
-
-Anaconda includes Python tools for managing packages. On a default instance, Pip, Conda, and other tools can be found at \Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Scripts.
-
-SQL Server Setup does not add Pip or Conda to the system path and on a production SQL Server instance, keeping non-essential executables out of the path is a best practice. However, for development and test environments, you could add the Scripts folder to the system PATH environment variable to run both Pip and Conda on command from any location.
-
-1. Go to C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Scripts
-
-1. Right-click **conda.exe** > **Run as administrator**, and enter `conda list` to return a list of packages installed in the current environment.
-
-1. Similarly, right-click **pip.exe** > **Run as administrator**, and enter `pip list` to return the same information. 
-
 
 ## Next steps
 

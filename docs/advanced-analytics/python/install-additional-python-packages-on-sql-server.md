@@ -15,27 +15,29 @@ manager: cgronlun
 
 This article describes how to install new Python packages on an instance of SQL Server 2017 Machine Learning Services. In general, the process for installing new packages is similar to that in a standard Python environment. However, some additional steps are required if the server does not have an internet connection.
 
-For help figuring out where packages are installed, or which packages are installed, see [Get R or Python package information](../r/determine-which-packages-are-installed-on-sql-server.md).
+For more information about package location and installation paths, see [Get R or Python package information](../r/determine-which-packages-are-installed-on-sql-server.md).
 
 ## Prerequisites
 
-+ You must have installed SQL Server 2017 Machine Learning Services (In-Database) with the Python language option. For instructions, see [Install SQL Server 2017 Machine Learning Services (In-Database)](../install/sql-machine-learning-services-windows-install.md).
-
-+ For each server instance, you must install a separate copy of the package. Packages cannot be shared across instances.
++ [SQL Server 2017 Machine Learning Services (In-Database)](../install/sql-machine-learning-services-windows-install.md) with the Python language option. 
 
 + Packages must be Python 3.5 compliant and run on Windows. 
 
-+ Assess whether the package is a good fit for use in the SQL Server environment. Typically a database server supports multiple services and applications, and resources on the file system might be limited, as well as connections to the server. In many cases Internet access is blocked entirely.
-
-    Other common problems include the use of networking functionality that is blocked on the server or by the firewall, or packages with dependencies that cannot be installed on a Windows computer. 
-
-    Some popular Python packages (like Flask) perform tasks such as web development that run better in a standalone environment. We recommend that you use Python in-database for tasks such as machine learning, that require intensive data processing that benefit from tight integration with the database engine, rather than simply querying the database.
-
 + Administrative access to the server is required to install packages.
+
+## Considerations
+
+Before adding packages, consider whether the package is a good fit for the SQL Server environment. Typically a database server is a shared asset accommodating multiple workloads. If you add packages that put too much computational pressure on the server, performance will suffer. 
+
+Additionally, Some popular Python packages (like Flask) perform tasks, such as web development, that are better suited for a standalone environment. We recommend that you use Python in-database for tasks that benefit from tight integration with the database engine, such as machine learning,  rather than tasks that simply query the database.
+
+Database servers are frequently locked down. In many cases, Internet access is blocked entirely. For packages with a long list of dependencies, you will need to identify these dependencies in advance and be willing to install each one manually.
 
 ## Add a new Python package
 
 For this example, we assume that you want to install a new package directly on the SQL Server computer.
+
+Package installation is per instance. If you have multiple instances of Machine Learning Services, you must add the package to each one.
 
 The package installed in this example is [CNTK](https://docs.microsoft.com/cognitive-toolkit/), a framework for deep learning from Microsoft that supports customization, training, and sharing of different types of neural networks.
 

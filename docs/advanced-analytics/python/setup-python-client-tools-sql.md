@@ -10,26 +10,26 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-# Set up a Python client for use with SQL Server Machine Learning
+# Set up a Python client for connections to SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Python integration is available starting in SQL Server 2017 or later when you include the Python option in a [Machine Learning Services (In-Database) installation](../install/sql-machine-learning-services-windows-install.md). To benefit from Python integration with the ability to conduct full scale in-database analytics, you need a Python client that can:
+Python integration is available starting in SQL Server 2017 or later when you include the Python option in a [Machine Learning Services (In-Database) installation](../install/sql-machine-learning-services-windows-install.md). To benefit from Python integration and the ability to conduct full scale in-database analytics, you need a Python client that can:
 
 + Connect to SQL Server databases
 + Execute Python functions locally and remotely on SQL Server 
-+ Render any subsequent visualizations and summaries 
++ Render any subsequent visual and summarized output
 
-Coordinated computing between a local client and remote database engine instance is achieved by having identical Python libraries on both systems. 
+Coordinated computing between a local workstation and a remote SQL Server database engine instance is achieved by having the same-version of Microsoft's revoscalepy Python library on both systems. 
 
-In this article, you will learn how to install the necessary Python libraries on your local workstation, write Python code that executes on SQL Server, and render visualizations and other output using the capabilities of a client application. This exercise uses Jupyter Notebooks to run Python code, but you can adapt the instructions for PyCharm or another IDE that you normally use.
+In this article, you will learn how to install the necessary Python libraries on your local workstation, write Python code that executes on SQL Server, and render visualizations and other output using the capabilities of a client application. 
 
-After completing the steps in this article, you will have the same Python libraries as those on SQL Server. You will also know how to call revoscalepy functions that push computations from a local session to a remote Python session on SQL Server, and render results in Juypter Notebook.
+This exercise uses Jupyter Notebooks to run Python code, but you can adapt the instructions for PyCharm or any another IDE that you normally use.
 
 > [!Tip]
 > For a video demonstration of these exercises, see [Run R and Python remotely in SQL Server from Jupyter Notebooks](https://blogs.msdn.microsoft.com/mlserver/2018/07/10/run-r-and-python-remotely-in-sql-server-from-jupyter-notebooks-or-any-ide/).
 
 > [!Note]
-> An alternative to installing just the client libraries is using a standalone server. Using a standalone server as a rich client is an option that some customers prefer for more end-to-end scenario work. If you have a [standalone server](../install/sql-machine-learning-standalone-windows-install.md) as provided in SQL Server setup, you have a Python server that is fully decoupled from a SQL Server database engine instance. It provides the open-source base distribution of Anaconda plus the Microsoft-specific libraries. You can find the Python executable at this location: `C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER`. As validation of your rich client install, open a [Jupyter notebook](#python-tools) to run commands using the Python.exe on the server.
+> An alternative to client libraries is using a [standalone server](../install/sql-machine-learning-standalone-windows-install.md) as a rich client, which some customers prefer for deeper scenario work. A standalone server is fully decoupled from SQL Server. Because it has the same Python libraries, you can use it as a client for SQL Server in-database analytics. But you can also use it for non-SQL-related work, including the ability to import and load data from other data platforms. If you install a standalone server, you can find the Python executable at this location: `C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER`. To validate your installation, open a [Jupyter notebook](#python-tools) to run commands using the Python.exe at that location.
 
 ## Common IDEs
 

@@ -20,7 +20,6 @@ manager: craigg
 release date: November 6, 2018  
 version: 1.2.4
 
-- Introducing Idera extension
 - Update to the [SQL Server 2019 Preview extension](https://docs.microsoft.com/sql/azure-data-studio/sql-server-2019-extension?view=sql-server-ver15)
 - Introducing Paste the Plan extension
 - Introducing High Color queries extension, including SSMS editor theme

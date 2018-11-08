@@ -401,8 +401,8 @@ ms.technology:
                                                   <div class="cardText">
                                                         <h3>AI and Machine Learning</h3>
                                                         <ul class="noBullet">
-                                                            <li><a class="barLink" href="/sql/advanced-analytics/what-is-sql-server-machine-learning">SQL Machine Learning Services</a></li>
-                                                            <li><a class="barLink" href="/sql/sql/advanced-analytics/r/sql-server-r-services">R Services</a></li>
+                                                            <li><a class="barLink" href="/sql/advanced-analytics/what-is-sql-server-machine-learning">SQL Server Machine Learning Services (R and Python)</a></li>
+                                                            <li><a class="barLink" href="/sql/advanced-analytics/r/sql-server-r-services">SQL Server R Services</a></li>
                                                             <li><a class="barLink" href="/azure/machine-learning/">Azure Machine Learning</a></li>
                                                        </ul>
                                                     </div>

@@ -230,6 +230,8 @@ Execute a character string
   
  If the value of a parameter is an object name, character string, or qualified by a database name or schema name, the whole name must be enclosed in single quotation marks. If the value of a parameter is a keyword, the keyword must be enclosed in double quotation marks.  
   
+ If the parameter is a single word NOT enclosed in quotation marks and not beginning with @, the word will be interpreted as an nvarchar string.
+  
  If a default is defined in the module, a user can execute the module without specifying a parameter.  
   
  The default can also be NULL. Generally, the module definition specifies the action that should be taken if a parameter value is NULL.  

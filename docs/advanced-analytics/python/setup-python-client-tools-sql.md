@@ -272,7 +272,7 @@ If you have [Python in Visual Studio](https://code.visualstudio.com/docs/languag
 
 For help configuring a Python environment, see [Managing Python environments in Visual Studio](https://docs.microsoft.com/visualstudio/python/managing-python-environments-in-visual-studio).
 
-### Link PyCharm
+### PyCharm
 
 In PyCharm, set the interpreter to the Python executable installed by Machine Learning Server.
 

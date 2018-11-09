@@ -1,5 +1,5 @@
 ---
-title: Set up a Python client for use with SQL Server Machine Learning | Microsoft Docs
+title: Set up a data science client for Python development on SQL Server Machine Learning | Microsoft Docs
 description: Set up a Python local environment (Jupyter Notebook or PyCharm) for remote connections to SQL Server Machine Learning Services with Python.
 ms.prod: sql
 ms.technology: machine-learning
@@ -10,7 +10,7 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-# Set up a Python client for connections to SQL Server Machine Learning Services
+# Set up a data science client for Python development on SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Python integration is available starting in SQL Server 2017 or later when you include the Python option in a [Machine Learning Services (In-Database) installation](../install/sql-machine-learning-services-windows-install.md). To create and deploy solutions written in Python, you must have a client workstation that has necessary components for full interaction with the Python infrastructure in SQL Server. Coordination between a local workstation and a remote SQL Server database engine instance is achieved by having Microsoft's [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) Python library on both systems. Among other things, this library has functions for coordinating the computations on both sides.
@@ -33,7 +33,7 @@ Whether you are a Python developer new to SQL, or a SQL developer new to Python 
 
 For Python development, you can use Jupyter Notebooks, which comes bundled in the Anaconda distribution installed by SQL Server. This article explains how to start Jupyter Notebooks so that you can run Python code locally and remotely on SQL Server.
 
-SSMS is a separate download, useful for creating and running stored procedures on SQL Server, including those containing Python code. Almost any Python code that you write in Jupyter Notebooks can be embedded in a stored procedure. You can pursue other tutorials to learn about [SSMS and embedded Python](../tutorials//train-score-using-python-in-tsql.md).
+SSMS is a separate download, useful for creating and running stored procedures on SQL Server, including those containing Python code. Almost any Python code that you write in Jupyter Notebooks can be embedded in a stored procedure. You can pursue other tutorials to learn about [SSMS and embedded Python](../tutorials/train-score-using-python-in-tsql.md).
 
 ## 1 - Install Python packages
 
@@ -272,7 +272,7 @@ If you have [Python in Visual Studio](https://code.visualstudio.com/docs/languag
 
 For help configuring a Python environment, see [Managing Python environments in Visual Studio](https://docs.microsoft.com/visualstudio/python/managing-python-environments-in-visual-studio).
 
-### Link PyCharm
+### PyCharm
 
 In PyCharm, set the interpreter to the Python executable installed by Machine Learning Server.
 

@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: 11/08/2018
 ms.reviewer: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -23,7 +23,7 @@ The Active Directory Service Interfaces (ADSI) Provider allows ADO to connect to
 ## Connection String Parameters  
  To connect to this provider, set the **Provider** argument of the [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) property to the following:  
   
-```  
+```vb
 ADSDSOObject  
 ```  
   
@@ -32,7 +32,7 @@ ADSDSOObject
 ## Typical Connection String  
  A typical connection string for this provider is as follows:  
   
-```  
+```vb
 "Provider=ADSDSOObject;User ID=MyUserID;Password=MyPassword;"  
 ```  
   
@@ -50,7 +50,7 @@ ADSDSOObject
 ## Command Text  
  A four-part command text string is recognized by the provider in the following syntax:  
   
-```  
+```vb
 "Root; Filter; Attributes[; Scope]"  
 ```  
   
@@ -63,13 +63,13 @@ ADSDSOObject
   
  For example:  
   
-```  
+```vb
 "<LDAP://DC=ArcadiaBay,DC=COM>;(objectClass=*);sn, givenName; subtree"  
 ```  
   
  The provider also supports SQL SELECT for command text. For example:  
   
-```  
+```vb
 "SELECT title, telephoneNumber From 'LDAP://DC=Microsoft, DC=COM' WHERE   
 objectClass='user' AND objectCategory='Person'"  
 ```  

@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: 11/08/2018
 ms.reviewer: ""
 ms.topic: conceptual
 dev_langs: 
@@ -29,14 +29,14 @@ manager: craigg
   
  You can either copy and paste constant definitions from these files into your ASP pages, or, if you are doing server-side scripting, copy Adovbs.inc file to a folder on your Web site and referencing it from your ASP page like this:  
   
-```  
+```vb
 <!--#include File="adovbs.inc"-->  
 ```  
   
 ## Creating ADO Objects in VBScript  
  You cannot use the **Dim** statement to assign objects to a specific type in VBScript. Also, VBScript does not support the **New** syntax used with the **Dim** statement in Visual Basic for Applications. You must instead use the **CreateObject** function call:  
   
-```  
+```vb
 Dim Rs1  
 Set Rs1 = Server.CreateObject( "ADODB.Recordset" )  
 ```  
@@ -44,7 +44,7 @@ Set Rs1 = Server.CreateObject( "ADODB.Recordset" )
 ## VBScript Examples  
  The following code is a generic example of VBScript server-side programming in an Active Server Page (ASP) file:  
   
-```  
+```vb
 <%  @LANGUAGE="VBSCRIPT" %>  
 <%  Option Explicit %>  
 <!--#include File="adovbs.inc"-->  

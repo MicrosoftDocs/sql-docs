@@ -5,15 +5,14 @@ ms.date: "10/05/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Policy-Based Management, view policy conditions"
   - "Policy-Based Management, modify policy conditions"
 ms.assetid: 890d7384-8444-4767-bb6f-f5debb155747
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # View or Modify the Properties of a Policy-Based Management Condition

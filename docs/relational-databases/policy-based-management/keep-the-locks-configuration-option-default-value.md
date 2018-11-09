@@ -5,14 +5,13 @@ ms.date: "03/13/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Best Practices [Database Engine]"
 ms.assetid: f214f05b-5f0b-4786-b2ad-b8b4b6e58d72
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Keep the Locks Configuration Option Default Value

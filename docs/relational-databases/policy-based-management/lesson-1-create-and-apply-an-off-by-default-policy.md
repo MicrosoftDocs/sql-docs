@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: performance
 ms.topic: conceptual
 ms.assetid: d31367db-b7db-44c4-8df2-f1240474cf78
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Lesson 1: Create and Apply an Off By Default Policy

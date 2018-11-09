@@ -5,14 +5,13 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Policy-Based Management, configure alerts"
 ms.assetid: e8e60159-d5b0-49d5-91f3-af8e9cb994c1
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Configure Alerts to Notify Policy Administrators of Policy Failures

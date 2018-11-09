@@ -33,7 +33,7 @@ You can use built-in **RGUI** tool as described in this article, or [link the li
 
 Whether you are an R developer new to SQL, or a SQL developer new to R and in-database analytics, you will need both an R development tool and a T-SQL query editor such as [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) to exercise all of the capabilities of in-database analytics.
 
-For simple R development scenarios, you can use the RGUI executable which comes bundled in the base R distribution in MRO and SQL Server. This article explains how to use RGUI for both local and remote R sessions. For improved productivity, you should use a full-featured IDE such as [RStudio or Visual Studio](#install-ide).
+For simple R development scenarios, you can use the RGUI executable, bundled in the base R distribution in MRO and SQL Server. This article explains how to use RGUI for both local and remote R sessions. For improved productivity, you should use a full-featured IDE such as [RStudio or Visual Studio](#install-ide).
 
 SSMS is a separate download, useful for creating and running stored procedures on SQL Server, including those containing R code. Almost any R code that you write in a development environment can be embedded in a stored procedure. You can pursue other tutorials to learn about [SSMS and embedded R](../tutorials/sqldev-in-database-r-for-sql-developers.md).
 
@@ -47,7 +47,7 @@ Microsoft's R packages are available in multiple products and services. On a loc
 
 When installation is finished, a welcome screen introduces you to the product and documentation.
 
-In R Client, R processing is capped at two threads and in-memory data. For scaleable processing using multiple cores and large data sets, you can shift execution (referred to as *compute context*) to the data sets and computational power of a remote SQL Server instance. This is the recommended approach for client integration with a production SQL Server instance. 
+In R Client, R processing is capped at two threads and in-memory data. For scalable processing using multiple cores and large data sets, you can shift execution (referred to as *compute context*) to the data sets and computational power of a remote SQL Server instance. This is the recommended approach for client integration with a production SQL Server instance. 
 
 ## 2 - Locate executables
 
@@ -72,7 +72,7 @@ When you install R with SQL Server, you get the same R tools that are standard t
 
 2. Enter `print(Revo.version)` at the command prompt to return RevoScaleR package version information. You should have version 9.2.1 or 9.3.0 for RevoScaleR.
 
-3. Enter **search()** at the R prompt for a list of installed pacakges.
+3. Enter **search()** at the R prompt for a list of installed packages.
 
    ![Version information when loading R](../install/media/rclient-rgui-r-prompt.png "Open an R prompt")
 
@@ -91,11 +91,11 @@ Ask the database administrator to [configure the following permissions for your 
 + **db_owner** to create objects such as stored procedures, tables, functions. 
   You also need **db_owner** to create sample and test databases. 
 
-If your code requires packages that are not installed by default with SQL Server, arrange with the database administrator to have the packages installed with the instance. SQL Server is a secured environment and there are restrictions on where packages can be installed. Ad hoc installation of packages as part of your code is not recommended, even if you have rights. Also, always carefully consider the security implications before installing new packages in the server library.
-
+If your code requires packages that are not installed by default with SQL Server, arrange with the database administrator to have the packages installed with the instance. SQL Server is a secured environment and there are restrictions on where packages can be installed. For more information, see [Install new R packages on SQL Server](install-additional-r-packages-on-sql-server.md).
+.
 ## 5 - Test connections
 
-SQL Server must be enabled for [remote connections](https://docs.microsoft.com/sql/database-engine/configure-windows/view-or-configure-remote-server-connection-options-sql-server.md) and you must have permissions, including a user login and a database to connect to. The following steps assume the demo database, [NYCTaxi_Sample](../tutorials/demo-data-nyctaxi-in-sql.md) and Windows authentication.
+SQL Server must be enabled for [remote connections](https://docs.microsoft.com/sql/database-engine/configure-windows/view-or-configure-remote-server-connection-options-sql-server.md) and you must have permissions, including a user login and a database to connect to. The following steps assume the demo database, [NYCTaxi_Sample](../tutorials/demo-data-nyctaxi-in-sql.md), and Windows authentication.
 
  As a verification step, use **RGUI** and RevoScaleR to confirm connectivity to the remote server.
 
@@ -130,7 +130,7 @@ SQL Server must be enabled for [remote connections](https://docs.microsoft.com/s
   tip_amount 63.245 31.61087 36  180 100      0     
   ```
 
- 4. Revise the data set by changing the query and refreshing the data source object.
+4. Revise the data set by changing the query and refreshing the data source object.
 
   ```r
   sampleDataQuery <- "SELECT TOP 100 * from [dbo].[nyctaxi_sample]"
@@ -153,7 +153,7 @@ SQL Server must be enabled for [remote connections](https://docs.microsoft.com/s
 
 For sustained and serious development projects, you should install an integrated development environment (IDE). SQL Server tools and the built-in R tools are not equipped for heavy R development. Once you have working code, you can deploy it as a stored procedure for execution on SQL Server.
 
-You should point your IDE to the local R libraries: base R, RevoScaleR, and so forth. Running workloads on a remote SQL Server occurs during script execution, when your script invokes a remote compute context on SQL Server, accessing data and operations on that server.
+Point your IDE to the local R libraries: base R, RevoScaleR, and so forth. Running workloads on a remote SQL Server occurs during script execution, when your script invokes a remote compute context on SQL Server, accessing data and operations on that server.
 
 ### RStudio
 
@@ -161,7 +161,7 @@ When using [RStudio](https://www.rstudio.com/), you can configure the environmen
 
 1. Check R package versions installed on SQL Server. For more information, see [Get R package information](determine-which-packages-are-installed-on-sql-server.md#get-the-r-library-location).
 
-1. Install Microsoft R Client or one of the standalone server options to add RevoScaleR and other R packages, including the base R distribution used by your SQL Server instance. Choose a version at the same level or lower (packages are backward compatible) that provides the same package versions as those on the server. For version information, see the version map in this article: [Upgrade R and Python components](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
+1. Install Microsoft R Client or one of the standalone server options to add RevoScaleR and other R packages, including the base R distribution used by your SQL Server instance. Choose a version at the same level or lower (packages are backward compatible) that provides the same package versions as on the server. For version information, see the version map in this article: [Upgrade R and Python components](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
 
 1. In RStudio, [update your R path](https://support.rstudio.com/hc/articles/200486138-Using-Different-Versions-of-R) to point to the R environment providing RevoScaleR, Microsoft R Open, and other Microsoft packages. Depending on how you obtained RevoScaleR and other libraries, it is most likely one of the following paths:
 

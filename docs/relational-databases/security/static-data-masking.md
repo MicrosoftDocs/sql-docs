@@ -15,7 +15,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 # Static Data Masking
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-Static Data Masking is a component of [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md) 18.0 preview 5 and higher. The latest preview of SQL Server Management Studio can be downloaded [here](../../ssms/download-sql-server-management-studio-ssms?view=sql-server-2017.md). 
+Static Data Masking is a component of [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md) 18.0 preview 5 and higher. The latest preview of SQL Server Management Studio can be downloaded [here](../../ssms/download-sql-server-management-studio-ssms.md). 
 
 ![Static data masking](../../relational-databases/security/media/sql-static-data-masking/static_data_masking_intro_image.PNG)
 
@@ -178,7 +178,7 @@ String Composite masking also has an advanced mode that allows for subsections o
 
 ![Advanced String Composite masking parameter example](../../relational-databases/security/media/sql-static-data-masking/string_composite_advanced.PNG)
 
-String Composite masking and its advanced mode can only be used for columns with [datatypes](../../relational-databases/security/media/sql-static-data-masking/t-sql/data-types/data-types-transact-sql.md) char, varchar, text, nchar, nvarchar, ntext.
+String Composite masking and its advanced mode can only be used for columns with [datatypes](../../t-sql/data-types/data-types-transact-sql.md) char, varchar, text, nchar, nvarchar, ntext.
 
 ## Limitations 
 
@@ -200,7 +200,7 @@ In addition, Static Data Masking presents three limitations in its masking abili
 
 - If Static Data Masking returns an error, all masking operations are suspended. The copy of the database is not deleted and may contain sensitive information. The user is responsible for deleting the copy of the database if Static Data Masking returns an error. 
 
-- (SQL Server only) The [data file(s)](../../relational-databases/databases/database-files-and-filegroups.md) and the [log file](../../relational-databases/logs/the-transaction-log-sql-server) may still contain bits of sensitive data in unallocated memory after Static Data Masking has completed. This sensitive data may be retrievable with a hex editor if given access to the data file(s) and the log file. 
+- (SQL Server only) The [data file(s)](../../relational-databases/databases/database-files-and-filegroups.md) and the [log file](../../relational-databases/logs/the-transaction-log-sql-server.md) may still contain bits of sensitive data in unallocated memory after Static Data Masking has completed. This sensitive data may be retrievable with a hex editor if given access to the data file(s) and the log file. 
  
 
 ## Contact Information 

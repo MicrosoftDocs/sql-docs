@@ -1,10 +1,10 @@
 ---
-title: "ADO Glossary | Microsoft Docs"
+title: "ADO Glossary Terms | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: 11/08/2018
 ms.reviewer: ""
 ms.topic: conceptual
 helpviewer_keywords:

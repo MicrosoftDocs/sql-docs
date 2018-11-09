@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: 11/08/2018
 ms.reviewer: ""
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,7 +22,7 @@ The OLE DB Provider for Microsoft Jet allows ADO to access Microsoft Jet databas
 ## Connection String Parameters
  To connect to this provider, set the *Provider* argument of the [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) property to the following:
 
-```
+```vb
 Microsoft.Jet.OLEDB.4.0
 ```
 
@@ -31,7 +31,7 @@ Microsoft.Jet.OLEDB.4.0
 ## Typical Connection String
  A typical connection string for this provider is:
 
-```
+```vb
 "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=databaseName;User ID=MyUserID;Password=MyPassword;"
 ```
 

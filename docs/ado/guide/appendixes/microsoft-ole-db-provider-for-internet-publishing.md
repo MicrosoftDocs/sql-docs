@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: 11/08/2018
 ms.reviewer: ""
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,7 +22,7 @@ The Microsoft OLE DB Provider for Internet Publishing allows ADO to access resou
 ## Connection String Parameters
  To connect to this provider, set the *Provider* argument of the [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) property to:
 
-```
+```vb
 MSDAIPP.DSO
 ```
 
@@ -31,13 +31,13 @@ MSDAIPP.DSO
 ## Typical Connection String
  A typical connection string for this provider is:
 
-```
+```vb
 "Provider=MSDAIPP.DSO;Data Source=ResourceURL;User ID=MyUserID;Password=MyPassword;"
 ```
 
  -or-
 
-```
+```vb
 "URL=ResourceURL;User ID=MyUserID;Password=MyPassword;"
 ```
 

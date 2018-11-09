@@ -1,7 +1,7 @@
 ---
 title: "ADO Security Design Issues | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: 11/08/2018
 ms.reviewer: ""
 ms.prod: sql
 ms.prod_service: connectivity
@@ -26,7 +26,7 @@ The following sections describe security design features in ActiveX Data Objects
 ### Revised and improved security warning message box now used to alert users
  For ADO 2.7 and earlier, the following warning message appears when a scripted Web page tries to run ADO code from an untrusted provider:
 
-```
+```console
 This page accesses data on another domain. Do you want to allow this? To
 avoid this message in Internet Explorer, you can add a secure Web site to
 your Trusted Sites zone on the Security tab of the Internet Options dialog
@@ -35,7 +35,7 @@ box.
 
  For ADO 2.8 and later, the preceding message no longer appears. Instead, the following message appears in this context:
 
-```
+```console
 This Website uses a data provider that may be unsafe. If you trust the
 Website, click OK, otherwise click Cancel.
 ```
@@ -81,7 +81,7 @@ Website, click OK, otherwise click Cancel.
 
  In the case where a security warning now appears, the message box informs users:
 
-```
+```console
 This Website is using your identity to access a data source. If you trust this Website, click OK, otherwise click Cancel.
 ```
 

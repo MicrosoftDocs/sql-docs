@@ -114,7 +114,7 @@ In the example below, the user selected NULL masking for a column that does not 
 
 ![Validation mechanism error](../../relational-databases/security/media/sql-static-data-masking/validation_mechanism_error_message.PNG)
 
-In the example below, the user selected Group Shuffle masking for only one column. Since Group Shuffle required a minimum of two columns, a warning was issued. 
+In the example below, the user selected Group Shuffle masking for only one column. A warning was issued because Since Group Shuffle required a minimum of two columns. 
 
 ![Validation mechanism warning](../../relational-databases/security/media/sql-static-data-masking/validation_warning.PNG)
 
@@ -125,7 +125,7 @@ In the example below, the user selected Group Shuffle masking for only one colum
 6. Static Data Masking will create a folder in in the user’s **Documents** folder named Static Data Masking and place log files inside. The log files can be useful for debugging purposes. The name of the log file is indicated at the bottom of the configuration window. 
  
  
-7. (SQL Server only) If you operate Static Data Masking on an on-premise database, Static Data Masking will perform a backup/restore operation. In **Step 2: Clone .BAK file Location**, please provide the location on the server where the backup file will be stored. 
+7. (SQL Server only) If you operate Static Data Masking on an on-premise database, Static Data Masking will perform a backup/restore operation. In **Step 2: Clone .BAK file Location**, provide the location on the server where the backup file will be stored. 
 
 ## Masking Functions
 
@@ -209,7 +209,7 @@ In addition, Static Data Masking presents three limitations in its masking abili
 
 ## Contact Information 
 
-If you have any questions or suggestions regarding Static Data Making, please contact <static-data-masking@microsoft.com>. We are actively looking for feedback on the feature. 
+If you have any questions or suggestions regarding Static Data Making, contact <static-data-masking@microsoft.com>. We are actively looking for feedback on the feature. 
 
 
 ## See Also  

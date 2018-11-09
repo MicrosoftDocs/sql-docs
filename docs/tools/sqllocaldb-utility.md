@@ -5,8 +5,7 @@ ms.date: "08/09/2016"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SqlLocalDB utility [SQL Server]"

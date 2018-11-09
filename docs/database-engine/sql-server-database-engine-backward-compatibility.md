@@ -6,7 +6,6 @@ ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
 ms.technology: 
-  - "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "backward compatibility [SQL Server], Database Engine"

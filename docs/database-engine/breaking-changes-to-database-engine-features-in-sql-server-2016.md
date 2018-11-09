@@ -5,8 +5,7 @@ ms.date: "11/15/2016"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: release-landing
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Database Engine [SQL Server], what's new"

@@ -5,14 +5,13 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: security
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.dmf.viewfacet.f1"
 ms.assetid: 70adec34-078c-4ae0-9961-d6a8318340e7
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # View Facets Dialog Box

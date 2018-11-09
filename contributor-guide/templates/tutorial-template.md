@@ -53,7 +53,7 @@ GUIDELINES for procedures (steps)
 
 ## Procedure title (H2)
 
-Add procedures and include screenshots ( of equal dimensions) where helpful.
+Add procedures and include screenshots (of equal dimensions) where helpful.
 
 ## Next steps (H2)
 

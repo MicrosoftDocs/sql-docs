@@ -27,7 +27,7 @@ By replacing sensitive data (pre-masking data) with new data (post-masking data)
 - Development and testing 
 - Analytics and business reporting 
 - Troubleshooting 
-- Sharing the database with a consultant, a research team or any third-party 
+- Sharing the database with a consultant, a research team or any third party 
 
 The example below shows how Static Data Masking works in action. Before masking, the column contains social security numbers. After masking, the five first digits of each social security number have been replaced by randomly generated numbers.
 
@@ -72,13 +72,9 @@ A masking function performing a replacement with NULL value will leave post-mask
 | 612-72-1026 | NULL |
 
 ### How does Static Data Masking work?
-<<<<<<< HEAD
-Paragraph locked by Benjin Dubishar
 Static Data Masking happens at the column level. Users select which columns they wish to mask and, for each column selected, which masking function they wish to apply. There are several masking functions to choose from. They are described in detail in [Masking Functions](#masking-functions). 
-=======
 
-Static Data Masking happens at the column level. Users select which columns they wish to mask and, for each column selected, which masking function they wish to apply. There are several masking functions to choose from. They are described in detail in Currently-supported masking functions. 
->>>>>>> bfb76d30b06c7592ec4291723cf546344fb34eaa
+Static Data Masking happens at the column level. Users select which columns they wish to mask and, for each column selected, which masking function they wish to apply. There are several masking functions to choose from. They are described in detail [Masking Functions](#masking-functions).
 
 Static Data Masking will then create a copy of the database. For Azure SQL Database, the copy is performed through the [copy function](https://azure.microsoft.com/en-us/blog/static-data-masking-preview/). For SQL Server, it is performed through a backup operation followed by a restore operation. From there, for each column, Static Data Masking starts replacing the pre-masking data with post-masking data according to the masking function selected. 
 
@@ -96,7 +92,7 @@ Below is a step-by-step guide to run Static Data Masking.
 
 ![User Interface](../../relational-databases/security/media/sql-static-data-masking/ui_dropdown.PNG)
 
-3. Click on the drop-down icon near the table name to get a list of all the columns in the table. For each column in the table, the datatype of the column is specified as well as whether the column is nullable. A nullable column is column which can receive the NULL value as an entry. 
+3. Click on the drop-down icon near the table name to get a list of all the columns in the table. For each column in the table, the datatype of the column is specified as well as whether the column is nullable. A nullable column is a column that can receive the NULL value as an entry. 
 
 ![Table dropdown](../../relational-databases/security/media/sql-static-data-masking/ui_dropdown_column.png)
 
@@ -110,22 +106,22 @@ NOTE: Most of these masking functions have additional configuration parameters. 
 
 The masking configuration choices get validated for configuration- and schema-related errors and warnings on-the-fly.  Anything detected will show up as an icon to the left that you can hover over with your mouse to get additional details. 
 
-In the example below, the user selected NULL masking for a column that does not allow NULL values (NOT NULL constraint).
+In the example below, the user-selected NULL masking for a column that does not allow NULL values (NOT NULL constraint).
 
 ![Validation mechanism error](../../relational-databases/security/media/sql-static-data-masking/validation_mechanism_error_message.PNG)
 
-In the example below, the user selected Group Shuffle masking for only one column. Since Group Shuffle required a minimum of two columns, a warning was issued. 
+In the example below, the user-selected Group Shuffle masking for only one column. Since Group Shuffle required a minimum of two columns a warning was issued. 
 
 ![Validation mechanism warning](../../relational-databases/security/media/sql-static-data-masking/validation_warning.PNG)
 
-5. The complete masking configuration can be saved to an XML file for later use.  While masking function configuration is identical between Azure SQL databases and on-premise databases, there are some slight differences in which other properties (such as the backup file path) that get saved. To save the configuration, click on **Save Config**, provide a file name and click save.  Users can later load an existing configuration file using **Load Config**. We recommend using configuration files for tables with a large number of columns. 
+5. The complete masking configuration can be saved to an XML file for later use.  While masking function configuration is identical between Azure SQL databases and on-premise databases, there are some slight differences in which other properties (such as the backup file path) that get saved. To save the configuration, click on **Save Config**, provide a file name, and click save.  Users can later load an existing configuration file using **Load Config**. We recommend using configuration files for tables with a large number of columns. 
 
 ![Configuration file](../../relational-databases/security/media/sql-static-data-masking/load_save_config.PNG)
 
-6. Static Data Masking will create a folder in in the user’s **Documents** folder named Static Data Masking and place log files inside. The log files can be useful for debugging purposes. The name of the log file is indicated at the bottom of the configuration window. 
+6. Static Data Masking will create a folder in the user’s **Documents** folder named Static Data Masking and place log files inside. The log files can be useful for debugging purposes. The name of the log file is indicated at the bottom of the configuration window. 
  
  
-7. (SQL Server only) If you operate Static Data Masking on an on-premise database, Static Data Masking will perform a backup/restore operation. In **Step 2: Clone .BAK file Location**, please provide the location on the server where the backup file will be stored. 
+7. (SQL Server only) If you operate Static Data Masking on an on-premise database, Static Data Masking will perform a backup/restore operation. In **Step 2: Clone .BAK file Location**, provide the location on the server where the backup file will be stored. 
 
 ## Masking Functions
 
@@ -135,7 +131,7 @@ NULL masking replaces all the values in the column with NULL. If the column does
 
 ### Single-value masking
 
-Single-value masking replaces all the values in the column with a single fixed value, this value is specified by the user. The format of the input must be convertible to whatever the type of the selected column is. To specify the value, click on **Configure…**, provide a value and then click **Okay**. 
+Single-value masking replaces all the values in the column with a single fixed value, this value is specified by the user. The format of the input must be convertible to whatever the type of the selected column is. To specify the value, click on **Configure…**, and provide a value and then click **Okay**. 
 
 ![Single-value masking parameter](../../relational-databases/security/media/sql-static-data-masking/single_value_parameter.PNG)
 
@@ -178,7 +174,7 @@ String Composite masking provides three example patterns that can be tested by c
 
 ![String Composite masking parameter example](../../relational-databases/security/media/sql-static-data-masking/string_composite_phone_example.PNG)
 
-String Composite masking also has an advanced mode that allows for sub-sections of the existing data to be replaced with pattern-generated strings. The replaced portion of the string is determined by the capture group in a regular expression. For example, the username portion of an email can be replaced while preserving the domain, or phone number can be replaced by preserving the area code. More information on regular expressions is available [here](https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-language-quick-reference).
+String Composite masking also has an advanced mode that allows for subsections of the existing data to be replaced with pattern-generated strings. The replaced portion of the string is determined by the capture group in a regular expression. For example, the username portion of an email can be replaced while preserving the domain, or phone number can be replaced by preserving the area code. More information on regular expressions is available [here](https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-language-quick-reference).
 
 ![Advanced String Composite masking parameter example](../../relational-databases/security/media/sql-static-data-masking/string_composite_advanced.PNG)
 
@@ -202,7 +198,7 @@ In addition, Static Data Masking presents three limitations in its masking abili
 
 - Static Data Masking does not update [histogram statistics](../../relational-databases/statistics/statistics.md). Consequently, the masked copy of the database may still contain sensitive data in the histogram statistics once Static Data Masking has been completed. Consider running [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) to remedy this issue. 
 
-- If Static Data Masking returns an error, all masking operations are suspended. The copy of the database is not deleted and may contain sensitive information. The user is responsible for deleting the copy of the database should Static Data Masking return an error. 
+- If Static Data Masking returns an error, all masking operations are suspended. The copy of the database is not deleted and may contain sensitive information. The user is responsible for deleting the copy of the database if Static Data Masking returns an error. 
 
 - (SQL Server only) The [data file(s)](../../relational-databases/databases/database-files-and-filegroups.md) and the [log file](../../relational-databases/logs/the-transaction-log-sql-server) may still contain bits of sensitive data in unallocated memory after Static Data Masking has completed. This sensitive data may be retrievable with a hex editor if given access to the data file(s) and the log file. 
  
@@ -214,4 +210,4 @@ If you have any questions or suggestions regarding Static Data Making, please co
 
 ## See Also  
  [Dynamic Data Masking](../../relational-databases/security/dynamic-data-masking.md)   
- [Get started with SQL Database Static Data Masking (Azure Preview portal)](http://azure.microsoft.com/documentation/articles/sql-database-static-data-masking-get-started/)  
+ [Get started with SQL Database Static Data Masking](http://azure.microsoft.com/documentation/articles/sql-database-static-data-masking-get-started/)  

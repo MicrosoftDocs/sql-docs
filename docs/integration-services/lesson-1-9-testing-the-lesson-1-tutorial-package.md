@@ -38,7 +38,7 @@ Before you test the package you should verify that the control and data flows in
   
 1.  On the **Debug** menu, click **Start Debugging**.  
   
-    The package will run, resulting in 1097 rows successfully added into the **FactCurrency** fact table in **AdventureWorksDW2012**.  
+    The package will run, resulting in 1097 rows successfully added into the **FactCurrency** **NewFactCurrencyRate** fact table in **AdventureWorksDW2012**.  
   
 2.  After the package has completed running, on the **Debug** menu, click **Stop Debugging**.  
   

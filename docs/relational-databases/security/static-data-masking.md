@@ -93,7 +93,7 @@ Below is a step-by-step guide to run Static Data Masking.
 
 3. Click on the drop-down icon near the table name to get a list of all the columns in the table. For each column in the table, the datatype of the column is specified as well as whether the column is nullable. A nullable column is column which can receive the NULL value as an entry. 
 
-![Table dropdown](../../relational-databases/security/media/sql-static-data-masking/ui_dropdown_column.PNG)
+![Table dropdown](../../relational-databases/security/media/sql-static-data-masking/ui_dropdown_column.png)
 
 4. Select all the columns you wish to mask and the masking function that you wish to apply. The types of masking available are **Shuffle** masking, **Group Shuffle** masking, **Single value** masking, **NULL** masking, **String Composite** masking. 
 
@@ -101,7 +101,7 @@ Below is a step-by-step guide to run Static Data Masking.
 
 NOTE: Most of these masking functions have additional configuration parameters. For Shuffle masking, Static Data Masking provides a default parameter. For Group Shuffle masking, Single value masking, and String Composite masking, the user has to provide configuration parameters. To change or provide configuration parameters, click on the **Configure…** option and specify an (alternative) value for the parameter in the dialog box that pops up. Detailed descriptions of each masking function are provided in section [Masking Functions](#masking-functions).
 
-![Masking functions configuration button](../../relational-databases/security/media/sql-static-data-masking/masking_functions_configure.PNG)
+![Masking functions configuration button](../../relational-databases/security/media/sql-static-data-masking/masking_functions_configure.png)
 
 The masking configuration choices get validated for configuration- and schema-related errors and warnings on-the-fly.  Anything detected will show up as an icon to the left that you can hover over with your mouse to get additional details. 
 

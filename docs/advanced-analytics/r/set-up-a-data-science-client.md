@@ -92,17 +92,16 @@ Ask the database administrator to [configure the following permissions for your 
   You also need **db_owner** to create sample and test databases. 
 
 If your code requires packages that are not installed by default with SQL Server, arrange with the database administrator to have the packages installed with the instance. SQL Server is a secured environment and there are restrictions on where packages can be installed. For more information, see [Install new R packages on SQL Server](install-additional-r-packages-on-sql-server.md).
-.
+
 ## 5 - Test connections
 
-SQL Server must be enabled for [remote connections](https://docs.microsoft.com/sql/database-engine/configure-windows/view-or-configure-remote-server-connection-options-sql-server.md) and you must have permissions, including a user login and a database to connect to. The following steps assume the demo database, [NYCTaxi_Sample](../tutorials/demo-data-nyctaxi-in-sql.md), and Windows authentication.
+ As a verification step, use **RGUI** and RevoScaleR to confirm connectivity to the remote server. SQL Server must be enabled for [remote connections](https://docs.microsoft.com/sql/database-engine/configure-windows/view-or-configure-remote-server-connection-options-sql-server.md) and you must have permissions, including a user login and a database to connect to. 
 
- As a verification step, use **RGUI** and RevoScaleR to confirm connectivity to the remote server.
+The following steps assume the demo database, [NYCTaxi_Sample](../tutorials/demo-data-nyctaxi-in-sql.md), and Windows authentication.
 
 1. Open **RGUI** on the client workstation. For example, go to `~\Program Files\Microsoft SQL Server\140\R_SERVER\bin\x64` and double-click **RGui.exe** to start it.
 
 2. RevoScaleR loads automatically. Confirm RevoScaleR is operational by running this command:
-
 
 3. Modify the following sample script to include a valid name for a remote SQL Server instance.
 
@@ -130,22 +129,49 @@ SQL Server must be enabled for [remote connections](https://docs.microsoft.com/s
   tip_amount 63.245 31.61087 36  180 100      0     
   ```
 
-4. Revise the data set by changing the query and refreshing the data source object.
+4. Get and set the compute context. Once you set a compute context, it remains in effect for the duration of the session. If you aren't sure whether computation is local or remote, run the following command to find out. Results that specify a connection string indicate a remote compute context.
 
   ```r
-  sampleDataQuery <- "SELECT TOP 100 * from [dbo].[nyctaxi_sample]"
-  inDataSource <- RxSqlServerData(sqlQuery = sampleDataQuery, connectionString = connStr, rowsPerRead = 500)
-  ```
+  # Return the current compute context
+  rxGetComputeContext()
 
-5. Set the compute context to the server, as defined in a previous step, and then run some simple R code on the data.
+  # Revert to a local compute context
+  rxSetComputeContext("local")
+  rxGetComputeContext()
 
-  ```r
+  # Switch back to remote
+  connStr <- "Driver=SQL Server;Server=<your-server-name>;Database=NYCTaxi_Sample;Trusted_Connection=true"
+  cc <-RxInSqlServer(connectionString=connStr)
   rxSetComputeContext(cc)
+  rxGetComputeContext()
+  ```  
+
+5. Return information about variables in the data source, including name and type.
+
+  ```r
   rxGetVarInfo(data = inDataSource)
   ```
-  
-  Results are returned in the console window. If you want to assure yourself that the code is being executed on the SQL Server instance, you can use Profiler to create a trace.
+  Results include 23 variables.
 
+
+6. Generate a scatter plot to explore whether there are dependencies between two variables. 
+
+  ```r
+  # Set the connection string. Substitute a valid server name for the placeholder
+  connStr <- "Driver=SQL Server;Server=<your database name>;Database=NYCTaxi_Sample;Trusted_Connection=true"
+
+  # Specify a query on the nyctaxi_sample table.
+  # For variables on each axis, remove nulls. Use a WHERE clause and <> to do this.
+  sampleQuery <-"SELECT DISTINCT TOP 100 * from [dbo].[nyctaxi_sample] WHERE fare_amount <> '' AND  tip_amount <> ''"
+  cc <-RxInSqlServer(connectionString=connStr)
+
+  # Generate a scatter plot
+  rxLinePlot(fare_amount ~ tip_amount, data = RxSqlServerData(sqlQuery=sampleQuery, connectionString=connStr, computeContext=cc), type="p")
+  ```
+
+  The following screenshot shows the input and scatter plot output.
+
+   ![Scatter plot in RGUI](media/rclient-setup-scatterplot.png "Scatter plot on NYC Taxi demo data")
 
 <a name="install-ide"></a>
 

@@ -74,8 +74,6 @@ A masking function performing a replacement with NULL value will leave post-mask
 ### How does Static Data Masking work?
 Static Data Masking happens at the column level. Users select which columns they wish to mask and, for each column selected, which masking function they wish to apply. There are several masking functions to choose from. They are described in detail in [Masking Functions](#masking-functions). 
 
-Static Data Masking happens at the column level. Users select which columns they wish to mask and, for each column selected, which masking function they wish to apply. There are several masking functions to choose from. They are described in detail [Masking Functions](#masking-functions).
-
 Static Data Masking will then create a copy of the database. For Azure SQL Database, the copy is performed through the [copy function](https://azure.microsoft.com/en-us/blog/static-data-masking-preview/). For SQL Server, it is performed through a backup operation followed by a restore operation. From there, for each column, Static Data Masking starts replacing the pre-masking data with post-masking data according to the masking function selected. 
 
 The replacement is done at the storage level. As a result, it is not possible to retrieve pre-masking data from the masked copy of the database after Static Data Masking has completed.
@@ -100,7 +98,7 @@ Below is a step-by-step guide to run Static Data Masking.
 
 ![Masking functions dropdown](../../relational-databases/security/media/sql-static-data-masking/masking_functions.PNG)
 
-NOTE: Most of these masking functions have additional configuration parameters. For Shuffle masking, Static Data Masking provides a default parameter. For Group Shuffle masking, Single value masking, and String Composite masking, the user has to provide configuration parameters. To change or provide configuration parameters, click on the **Configure…** option and specify an (alternative) value for the parameter in the dialog box that pops up. Detailed descriptions of each masking function are provided in section [Masking Functions](#masking-functions).
+NOTE: Most of these masking functions have additional configuration parameters. For Shuffle masking, Static Data Masking provides a default parameter. For Group Shuffle masking, Single value masking, and String Composite masking, the user has to provide configuration parameters. To change or provide configuration parameters, click on the **Configure…** option and specify an (alternative) value for the parameter in the dialog box that pops up. Detailed descriptions of each masking function are provided in [Masking Functions](#masking-functions).
 
 ![Masking functions configuration button](../../relational-databases/security/media/sql-static-data-masking/masking_functions_configure.png)
 

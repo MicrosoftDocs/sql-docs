@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: 11/08/2018
 ms.reviewer: ""
 ms.topic: conceptual
 helpviewer_keywords:
@@ -25,7 +25,7 @@ manager: craigg
 ## Connection String Parameters
  To connect to this provider, set the *Provider* argument of the [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) property to:
 
-```
+```vb
 MSDAORA
 ```
 
@@ -36,7 +36,7 @@ MSDAORA
 ## Typical Connection String
  A typical connection string for this provider is:
 
-```
+```vb
 "Provider=MSDAORA;Data Source=serverName;User ID=MyUserID; Password=MyPassword;"
 ```
 
@@ -55,7 +55,7 @@ MSDAORA
 ## Provider-Specific Connection Parameters
  The provider supports several provider-specific connection parameters in addition to those defined by ADO. As with the ADO connection properties, these provider-specific properties can be set via the [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) collection of a [Connection](../../../ado/reference/ado-api/connection-object-ado.md) or as part of the **ConnectionString**.
 
- These parameters are fully described in the [OLE DB Programmer's Reference](http://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8). The [ADO Dynamic Property Index](../../../ado/reference/ado-api/ado-dynamic-property-index.md) provides a cross-reference between these parameter names and the corresponding OLE DB properties.
+ These parameters are fully described in the [OLE DB Programmer's Reference](https://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8). The [ADO Dynamic Property Index](../../../ado/reference/ado-api/ado-dynamic-property-index.md) provides a cross-reference between these parameter names and the corresponding OLE DB properties.
 
 |Parameter|Description|
 |---------------|-----------------|

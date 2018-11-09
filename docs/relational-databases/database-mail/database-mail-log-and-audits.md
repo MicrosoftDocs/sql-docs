@@ -6,7 +6,6 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: 
-  - "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "auditing [SQL Server]"
@@ -15,8 +14,8 @@ helpviewer_keywords:
   - "audits [SQL Server], Database Mail"
   - "Database Mail [SQL Server], logging"
 ms.assetid: 846589ee-5fe5-4ab3-b335-0c253e569f99
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Database Mail Log and Audits

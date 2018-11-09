@@ -29,7 +29,7 @@ By replacing sensitive data (pre-masking data) with new data (post-masking data)
 - Troubleshooting 
 - Sharing the database with a consultant, a research team or any third-party 
 
-The example below shows how Static Data Masking in action. Before masking, the column contains social security numbers. After masking, the five first digits of each social security number have been replaced by randomly generated numbers.
+The example below shows how Static Data Masking works in action. Before masking, the column contains social security numbers. After masking, the five first digits of each social security number have been replaced by randomly generated numbers.
 
 | US Social Security Number (pre-masking)   | US Social Security Number (post-masking)  |
 | ------------- | ------------- |
@@ -72,8 +72,13 @@ A masking function performing a replacement with NULL value will leave post-mask
 | 612-72-1026 | NULL |
 
 ### How does Static Data Masking work?
+<<<<<<< HEAD
 Paragraph locked by Benjin Dubishar
 Static Data Masking happens at the column level. Users select which columns they wish to mask and, for each column selected, which masking function they wish to apply. There are several masking functions to choose from. They are described in detail in [Masking Functions](#masking-functions). 
+=======
+
+Static Data Masking happens at the column level. Users select which columns they wish to mask and, for each column selected, which masking function they wish to apply. There are several masking functions to choose from. They are described in detail in Currently-supported masking functions. 
+>>>>>>> bfb76d30b06c7592ec4291723cf546344fb34eaa
 
 Static Data Masking will then create a copy of the database. For Azure SQL Database, the copy is performed through the [copy function](https://azure.microsoft.com/en-us/blog/static-data-masking-preview/). For SQL Server, it is performed through a backup operation followed by a restore operation. From there, for each column, Static Data Masking starts replacing the pre-masking data with post-masking data according to the masking function selected. 
 

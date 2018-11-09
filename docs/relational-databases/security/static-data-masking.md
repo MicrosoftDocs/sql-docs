@@ -73,7 +73,7 @@ A masking function performing a replacement with NULL value will leave post-mask
 
 ### How does Static Data Masking work?
 Paragraph locked by Benjin Dubishar
-Static Data Masking happens at the column level. Users select which columns they wish to mask and, for each column selected, which masking function they wish to apply. There are several masking functions to choose from. They are described in detail in section 4. Currently-supported masking functions. 
+Static Data Masking happens at the column level. Users select which columns they wish to mask and, for each column selected, which masking function they wish to apply. There are several masking functions to choose from. They are described in detail in [Masking Functions](#masking-functions). 
 
 Static Data Masking will then create a copy of the database. For Azure SQL Database, the copy is performed through the [copy function](https://azure.microsoft.com/en-us/blog/static-data-masking-preview/). For SQL Server, it is performed through a backup operation followed by a restore operation. From there, for each column, Static Data Masking starts replacing the pre-masking data with post-masking data according to the masking function selected. 
 
@@ -185,7 +185,7 @@ Static Data Masking has the following limitations:
 
 - Static Data Masking does not support databases with [temporal tables](../../relational-databases/tables/temporal-tables.md).
 
-- Static Data Masking does not mask [memory-optimized] (../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md) tables.
+- Static Data Masking does not mask [memory-optimized](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md) tables.
 
 - Static Data Masking does not mask [computed columns](../../relational-databases/tables/specify-computed-columns-in-a-table.md), and [identity](../../t-sql/statements/create-table-transact-sql-identity-property.md) columns.
 
@@ -197,7 +197,7 @@ In addition, Static Data Masking presents three limitations in its masking abili
 
 - Static Data Masking does not update [histogram statistics](../../relational-databases/statistics/statistics.md). Consequently, the masked copy of the database may still contain sensitive data in the histogram statistics once Static Data Masking has been completed. Consider running [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) to remedy this issue. 
 
-- If Static Data Masking returns an error, all masking operations are suspended. The copy of the database if not deleted and may contain sensitive information. The user is responsible for deleting the copy of the database should Static Data Masking return an error. 
+- If Static Data Masking returns an error, all masking operations are suspended. The copy of the database is not deleted and may contain sensitive information. The user is responsible for deleting the copy of the database should Static Data Masking return an error. 
 
 - (SQL Server only) The [data file(s)](../../relational-databases/databases/database-files-and-filegroups.md) and the [log file](../../relational-databases/logs/the-transaction-log-sql-server) may still contain bits of sensitive data in unallocated memory after Static Data Masking has completed. This sensitive data may be retrievable with a hex editor if given access to the data file(s) and the log file. 
  

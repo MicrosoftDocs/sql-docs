@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: 11/08/2018
 ms.reviewer: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -58,7 +58,7 @@ A *cellset* is the result of a query on multidimensional data. It consists of a 
   
  Each coordinate is represented as a position with two members — one from the Salesperson dimension and another from the Geography dimension:  
   
-```  
+```console
 (Valentine, Seattle), (Valentine, Boston), (Valentine, USA_North),  
 (Valentine, Japan), (Nash, Seattle), (Nash, Boston), (Nash, USA_North),  
 (Nash, Japan)  
@@ -66,7 +66,7 @@ A *cellset* is the result of a query on multidimensional data. It consists of a 
   
  The y-axis has only one dimension, containing the following eight positions:  
   
-```  
+```console
 Jan, Feb, Mar, Qtr2, Qtr3, Oct, Nov, Dec  
 ```  
   

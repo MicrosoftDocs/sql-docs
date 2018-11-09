@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: 11/08/2018
 ms.reviewer: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -35,7 +35,7 @@ manager: craigg
   
  The Geography dimension has the following set of members:  
   
-```  
+```console
 {All, North America, Europe, Canada, USA, UK, Germany, Canada-West,  
 Canada-East, USA-NW, USA-SW, USA-NE, USA-SE, England, Scotland,   
 Wales,Ireland, Germany-North, Germany-South, Ottawa, Toronto,   

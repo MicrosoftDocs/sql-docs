@@ -5,8 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: fea376de-307a-4b45-b7e2-37df88f3681a
 author: "stevestein"

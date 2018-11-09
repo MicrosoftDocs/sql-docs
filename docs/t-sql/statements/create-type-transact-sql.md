@@ -43,7 +43,7 @@ manager: craigg
 ## Syntax  
   
 ```  
--- Disk-Based Type Syntax  
+-- User-defined Data Type Syntax    
 CREATE TYPE [ schema_name. ] type_name  
 {   
     FROM base_type   
@@ -109,7 +109,7 @@ column_name AS computed_column_expression
 ```  
   
 ```  
--- Memory-Optimized Table Type Syntax  
+-- User-defined Table Types Syntax  
 CREATE TYPE [schema_name. ] type_name  
 AS TABLE ( { <column_definition> }  
     |  [ <table_constraint> ] [ ,... n ]    

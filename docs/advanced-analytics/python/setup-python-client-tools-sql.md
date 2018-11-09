@@ -43,7 +43,7 @@ There are three Microsoft-specific packages. The [revoscalepy](https://docs.micr
 
 1. Download the installation script to install.
 
-  + [https://aka.ms/mls-py](https://aka.ms/mls-py) installs version 9.2.1 of the Microsoft Python packages. This is version corresponds to a default in SQL Server 2017. 
+  + [https://aka.ms/mls-py](https://aka.ms/mls-py) installs version 9.2.1 of the Microsoft Python packages. This version corresponds to a default SQL Server 2017 instance. 
 
   + [https://aka.ms/mls93-py](https://aka.ms/mls93-py) installs version 9.3 of the Microsoft Python packages. This version is a better choice if your remote SQL Server 2017 instance is [bound to Machine Learning Server 9.3](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
 

@@ -6,8 +6,7 @@ ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
 ms.custom: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: release-landing
 ms.topic: conceptual
 helpviewer_keywords: 
   - "breaking changes 2017 [SQL Server]"

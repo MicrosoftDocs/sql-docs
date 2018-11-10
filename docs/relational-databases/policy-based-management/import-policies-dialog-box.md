@@ -5,14 +5,13 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: security
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.dmf.importpolicy.f1"
 ms.assetid: 78ab5f6e-2f13-4788-937e-8892ef4e2345
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Import Policies Dialog Box

@@ -1223,20 +1223,31 @@ DROP TABLE dbo.doc_exf ;
 GO  
 ```  
   
-#### G. Creating a PRIMARY KEY constraint with index options  
+#### G. Creating a PRIMARY KEY constraint with index or data compression options  
  The following example creates the PRIMARY KEY constraint `PK_TransactionHistoryArchive_TransactionID` and sets the options `FILLFACTOR`, `ONLINE`, and `PAD_INDEX`. The resulting clustered index will have the same name as the constraint.  
   
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks;  
 GO  
 ALTER TABLE Production.TransactionHistoryArchive WITH NOCHECK   
 ADD CONSTRAINT PK_TransactionHistoryArchive_TransactionID PRIMARY KEY CLUSTERED (TransactionID)  
 WITH (FILLFACTOR = 75, ONLINE = ON, PAD_INDEX = ON);  
 GO  
 ```  
-  
+
+This similar example applies page compression while applying the clustered primary key.
+
+```sql  
+USE AdventureWorks;  
+GO  
+ALTER TABLE Production.TransactionHistoryArchive WITH NOCHECK   
+ADD CONSTRAINT PK_TransactionHistoryArchive_TransactionID PRIMARY KEY CLUSTERED (TransactionID)  
+WITH (DATA_COMPRESSION = PAGE);  
+GO  
+```  
+
 #### H. Adding a sparse column  
  The following examples show adding and modifying sparse columns in table T1. The code to create table `T1` is as follows.  
   
@@ -1566,7 +1577,7 @@ GO
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks;  
 ALTER TABLE Person.Person  
 ENABLE CHANGE_TRACKING;  
 ```  
@@ -1576,7 +1587,7 @@ The following example enables change tracking and enables the tracking of the co
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks;  
 GO  
 ALTER TABLE Person.Person  
 ENABLE CHANGE_TRACKING  
@@ -1588,7 +1599,7 @@ The following example disables change tracking on the `Person.Person` table.
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks;  
 Go  
 ALTER TABLE Person.Person  
 DISABLE CHANGE_TRACKING;  

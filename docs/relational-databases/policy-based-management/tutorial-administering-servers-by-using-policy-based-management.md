@@ -5,15 +5,14 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords: 
   - "tutorials [Policy-Based Management]"
   - "Policy-Based Management, tutorials"
 ms.assetid: 7de96e7b-9fb8-4cc8-8d85-61345d68a1e8
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Tutorial: Administering Servers by Using Policy-Based Management

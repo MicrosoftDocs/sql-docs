@@ -5,8 +5,7 @@ ms.date: "10/24/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: backup-restore
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.attachdatabase.f1"

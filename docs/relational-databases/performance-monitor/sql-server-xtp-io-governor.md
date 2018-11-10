@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: performance-monitor
 ms.topic: conceptual
 ms.assetid: 91e176fe-c838-44e9-b4fc-2814a0551ca3
-author: "dagiro"
-ms.author: "v-dagir"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # SQL Server XTP IO Governor

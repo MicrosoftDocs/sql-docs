@@ -6,14 +6,13 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: 
-  - "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Database Mail [SQL Server], accounts"
   - "accounts [Database Mail]"
 ms.assetid: c07abbc6-fc6a-470b-8fa3-532f2e06b16a
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Create a Database Mail Account

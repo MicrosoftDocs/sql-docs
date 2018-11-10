@@ -6,15 +6,14 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: 
-  - "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "architecture [SQL Server], Database Mail"
   - "Database Mail [SQL Server], architecture"
   - "Database Mail [SQL Server], components"
 ms.assetid: 9e4563dd-4799-4b32-a78a-048ea44a44c1
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Database Mail

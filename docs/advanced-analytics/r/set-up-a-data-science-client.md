@@ -101,9 +101,9 @@ The following steps assume the demo database, [NYCTaxi_Sample](../tutorials/demo
 
 1. Open **RGUI** on the client workstation. For example, go to `~\Program Files\Microsoft SQL Server\140\R_SERVER\bin\x64` and double-click **RGui.exe** to start it.
 
-2. RevoScaleR loads automatically. Confirm RevoScaleR is operational by running this command:
+2. RevoScaleR loads automatically. Confirm RevoScaleR is operational by running this command: `print(Revo.version)`
 
-3. Modify the following sample script to include a valid name for a remote SQL Server instance.
+3. Enter demo script that executes on the remote server. You must modify the following sample script to include a valid name for a remote SQL Server instance. This session begins as a local session, but the **rxSummary** function executes on the remote SQL Server instance.
 
   ```r
   connStr <- "Driver=SQL Server;Server=<your-server-name>;Database=NYCTaxi_Sample;Trusted_Connection=true"

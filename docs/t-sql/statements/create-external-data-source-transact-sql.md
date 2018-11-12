@@ -1,7 +1,7 @@
 ---
 title: "CREATE EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/20/2018"
+ms.date: "11/12/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -69,6 +69,20 @@ WITH (
     LOCATION = 'adl://<AzureDataLake account_name>.azuredatalake.net',
     CREDENTIAL = AzureStorageCredential
 );
+
+-- PolyBase only: Azure Data Lake Store Gen 2
+-- (on Azure SQL Data Warehouse)
+CREATE EXTERNAL DATA SOURCE ABFS 
+WITH
+(
+              TYPE=HADOOP,
+              LOCATION='abfs://<container>@<AzureDataLake account_name>.dfs.core.windows.net',
+              CREDENTIAL=ABFS_Credemt
+);
+GO
+
+
+
 
 -- PolyBase only: Hadoop cluster as data source
 -- (on Parallel Data Warehouse)

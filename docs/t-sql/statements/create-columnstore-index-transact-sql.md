@@ -371,6 +371,10 @@ If the underlying table has a column of a data type that is not supported for co
 -   Cannot include large object (LOB) columns of type nvarchar(max), varchar(max), and varbinary(max) in nonclustered column store indexes. Only clustered columnstore indexes support LOB types, beginning in [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] version and Azure SQL Database configured at  Premium tier, Standard tier (S3 and above), and all VCore offerings tiers tier. Note, prior versions do not support LOB types in clustered and nonclustered columnstore indexes.
 
 
+> [!NOTE]  
+> Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], you can create a nonclustered columnstore index on an indexed view.  
+
+
  **Columnstore indexes cannot be combined with the following features:**  
 -   Computed columns. Starting with SQL Server 2017, a clustered columnstore index can contain a non-persisted computed column. However, in SQL Server 2017, clustered columnstore indexes cannot contain persisted computed columns, and you cannot created nonclustered indexes on computed columns. 
 -   Page and row compression, and **vardecimal** storage format (A columnstore index is already compressed in a different format.)  

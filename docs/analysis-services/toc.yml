@@ -32,7 +32,6 @@
     - name: Tips and best practices
       href: globalization-tips-and-best-practices-analysis-services.md
 - name: Tutorials
-  href: analysis-services-tutorials-ssas.md
   items:
   - name: Tabular modeling (1400 compatibility level)
     href: tutorial-tabular-1400/as-adventure-works-tutorial.md
@@ -209,55 +208,408 @@
     href: data-mining-tutorials-analysis-services.md
 - name: How-to
   items:
-  - name: Tabular models
-    href: ../analysis-services/tabular-models/tabular-models-ssas.md
-  - name: Multidimensional models
+  - name: Install and configure
+    items:
+    - name: Install in tabular or multidimensional mode
+      href: ../analysis-services/instances/install-windows/install-analysis-services.md
+    - name: Install in Power Pivot for Sharepoint mode
+      href: ../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md
+      items:
+      - name: Verify a Power Pivot for SharePoint Installation
+        href: ../analysis-services/instances/install-windows/verify-a-power-pivot-for-sharepoint-installation.md
+      - name: Example of a Minimum-Privilege Configuration for Power Pivot for SharePoint 2016
+        href: ../analysis-services/instances/install-windows/power-pivot-minimum-privilege-example-sharepoint-2016.md
+      - name: Example of a Minimum-Privilege Configuration for Power Pivot for SharePoint 2013
+        href: ../analysis-services/instances/install-windows/power-pivot-minimum-privilege-example-sharepoint-2013.md
+      - name: Install or Uninstall the Power Pivot for SharePoint Add-in (SharePoint 2016)
+        href: ../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016.md
+      - name: Install or Uninstall the Power Pivot for SharePoint Add-in (SharePoint 2013)
+        href: ../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md
+      - name: Configure Power Pivot and Deploy Solutions (SharePoint 2016)
+        href: ../analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2016.md
+      - name: Configure Power Pivot and Deploy Solutions (SharePoint 2013)
+        href: ../analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013.md
+      - name: Migrate Power Pivot to SharePoint 2013
+        href: ../analysis-services/instances/install-windows/migrate-power-pivot-to-sharepoint-2013.md
+      - name: Upgrade Workbooks and Scheduled Data Refresh (SharePoint 2013)
+        href: ../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md
+      - name: Configure Analysis Services and Kerberos Constrained Delegation (KCD)
+        href: ../analysis-services/instances/install-windows/configure-analysis-services-and-kerberos-constrained-delegation-kcd.md
+      - name: CheckList Use PowerShell to Verify Power Pivot for SharePoint
+        href: ../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md
+      - name: Deploying SQL Server 2016 PowerPivot and Power View in SharePoint 2016
+        href: ../analysis-services/instances/install-windows/deploying-sql-server-2016-powerpivot-and-power-view-in-sharepoint-2016.md
+      - name: Deploying SQL Server 2016 PowerPivot and Power View in a Multi-Tier SharePoint 2016 Farm
+        href: ../analysis-services/instances/install-windows/deploy-powerpivot-and-power-view-multi-tier-sharepoint-2016-farm.md
+    - name: Install client libraries (AMO, ADOMD.NET, MSOLAP)
+      href: ../data-providers-used-for-analysis-services-connections.md
+    - name: Verify cumulative update build version
+      href: ../analysis-services/instances/install-windows/analysis-services-component-version.md
+    - name: Post-install configuration
+      items:
+      - name: Post install and confiuration overview  
+        href: ../analysis-services/instances/post-install-configuration-analysis-services.md
+      - name: Configure the Windows Firewall
+        href: ../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md
+      - name: Configure the service account
+        href: ../analysis-services/instances/configure-service-accounts-analysis-services.md
+      - name: Add administrators
+        href: ../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md
+      - name: Features off by default
+        href: ../analysis-services/instances/features-off-by-default-analysis-services.md
+      - name: Server groups in SSMS
+        href: ../analysis-services/instances/register-an-analysis-services-instance-in-a-server-group.md
+      - name: Determine the Server Mode
+        href: ../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md
+      - name: Rename an Analysis Services Instance
+        href: ../analysis-services/instances/rename-an-analysis-services-instance.md
+  - name: Tabular modeling
+    items: 
+    - name: Tabular modeling overview
+      href: ../analysis-services/tabular-models/tabular-models-ssas.md
+    - name: Compatibility level
+      href: ../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md
+    - name: Data sources supported in tabular 1400 models
+      href: ../analysis-services/tabular-models/data-sources-supported-ssas-tabular-1400.md
+    - name: Data sources supported in tabular 1200 models
+      href: ../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md
+    - name: Create Tabular Models
+      items:
+      - name: Tabular model designer
+        href: ../analysis-services/tabular-models/tabular-model-designer-ssas.md
+      - name: Workspace database
+        href: ../analysis-services/tabular-models/workspace-database-ssas-tabular.md
+      - name: Tabular Model Projects
+        href: ../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md
+        items:
+        - name: Create a New Tabular Model Project
+          href: ../analysis-services/tabular-models/create-a-new-tabular-model-project-analysis-services.md
+        - name: Import from Analysis Services
+          href: ../analysis-services/tabular-models/import-from-analysis-services-ssas-tabular.md
+        - name: Import from Power Pivot
+          href: ../analysis-services/tabular-models/import-from-power-pivot-ssas-tabular.md
+      - name: Properties
+        items:
+        - name: Power View - Reporting Properties
+          href: ../analysis-services/tabular-models/power-view-reporting-properties-ssas-tabular.md
+        - name: Power View - Configure Default Field Set
+          href: ../analysis-services/tabular-models/power-view-configure-default-field-set-for-reports.md
+        - name: Power View - Configure Table Behavior Properties
+          href: ../analysis-services/tabular-models/power-view-configure-table-behavior-properties-for-reports.md
+        - name: Project properties
+          href: ../analysis-services/tabular-models/project-properties-ssas-tabular.md
+        - name: Model properties
+          href: ../analysis-services/tabular-models/model-properties-ssas-tabular.md
+        - name: Table Properties
+          href: ../analysis-services/tabular-models/table-properties-ssas-tabular.md
+        - name: Column Properties
+          href: ../analysis-services/tabular-models/column-properties-ssas-tabular.md
+        - name: Configure default data modeling and deployment properties
+          href: ../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md
+      - name: Import Data
+        items:
+        - name: Data sources supported in tabular 1400 models
+          href: ../analysis-services/tabular-models/data-sources-supported-ssas-tabular-1400.md
+        - name: Data sources supported in tabular 1200 models
+          href: ../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md
+        - name: Data types supported
+          href: ../analysis-services/tabular-models/data-types-supported-ssas-tabular.md
+        - name: Impersonation
+          href: ../analysis-services/tabular-models/impersonation-ssas-tabular.md
+        - name: Import data by using a native query
+          href: ../analysis-services/tabular-models/ssas-import-query.md
+      - name: DirectQuery Mode
+        href: ../analysis-services/tabular-models/directquery-mode-ssas-tabular.md
+        items:
+        - name: Enable DirectQuery mode in SSDT
+          href: ../analysis-services/tabular-models/enable-directquery-mode-in-ssdt.md
+        - name: Enable DirectQuery mode in SSMS
+          href: ../analysis-services/tabular-models/enable-directquery-mode-in-ssms.md
+        - name: Add sample data to DirectQuery models
+          href: ../analysis-services/tabular-models/add-sample-data-to-a-directquery-model-in-design-mode.md
+        - name: Define partitions in DirectQuery models
+          href: ../analysis-services/tabular-models/define-partitions-in-directquery-models-ssas-tabular.md
+        - name: Test a model in DirectQuery mode
+          href: ../analysis-services/tabular-models/test-a-model-in-directquery-mode.md
+        - name: DAX formula compatibility in DirectQuery mode (SSAS 2016)
+          href: ../analysis-services/tabular-models/dax-formula-compatibility-in-directquery-mode-ssas-2016.md
+      - name: Tables and Columns
+        href: ../analysis-services/tabular-models/tables-and-columns-ssas-tabular.md
+        items:
+        - name: Add columns to a table
+          href: ../analysis-services/tabular-models/add-columns-to-a-table-ssas-tabular.md
+        - name: Delete a Column
+          href: ../analysis-services/tabular-models/delete-a-column-ssas-tabular.md
+        - name: Change table, column, or row filter mappings
+          href: ../analysis-services/tabular-models/change-table-column-or-row-filter-mappings-ssas-tabular.md
+        - name: Specify Mark as Date Table for use with Time Intelligence
+          href: ../analysis-services/tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md
+        - name: Add a table
+          href: ../analysis-services/tabular-models/add-a-table-ssas-tabular.md
+        - name: Delete a Table
+          href: ../analysis-services/tabular-models/delete-a-table-ssas-tabular.md
+        - name: Create a Calculated Table
+          href: ../analysis-services/tabular-models/create-a-calculated-table-ssas-tabular.md
+        - name: Rename a Table or Column
+          href: ../analysis-services/tabular-models/rename-a-table-or-column-ssas-tabular.md
+        - name: Set the Data Type of a Column
+          href: ../analysis-services/tabular-models/set-the-data-type-of-a-column-ssas-tabular.md
+        - name: Hide or freeze columns
+          href: ../analysis-services/tabular-models/hide-or-freeze-columns-ssas-tabular.md
+        - name: Calculated Columns
+          href: ../analysis-services/tabular-models/ssas-calculated-columns.md
+        - name: Create a Calculated Column
+          href: ../analysis-services/tabular-models/ssas-calculated-columns-create-a-calculated-column.md
+        - name: Sort Data in a Table
+          href: ../analysis-services/tabular-models/sort-data-in-a-table-ssas-tabular.md
+        - name: Filter Data in a Table
+          href: ../analysis-services/tabular-models/filter-data-in-a-table-ssas-tabular.md
+      - name: Relationships
+        href: ../analysis-services/tabular-models/relationships-ssas-tabular.md
+        items:
+        - name: Create a Relationship Between Two Tables
+          href: ../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md
+        - name: Delete Relationships
+          href: ../analysis-services/tabular-models/delete-relationships-ssas-tabular.md
+        - name: Bi-directional cross filters
+          href: ../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md
+      - name: Calculations
+        href: ../analysis-services/tabular-models/calculations-ssas-tabular.md
+        items:
+        - name: Understanding DAX in Tabular Models
+          href: ../analysis-services/tabular-models/understanding-dax-in-tabular-models-ssas-tabular.md
+      - name: Measures
+        href: ../analysis-services/tabular-models/measures-ssas-tabular.md
+        items:
+        - name: Create and Manage Measures
+          href: ../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md
+      - name: KPIs
+        href: ../analysis-services/tabular-models/kpis-ssas-tabular.md
+        items:
+        - name: Create and Manage KPIs
+          href: ../analysis-services/tabular-models/create-and-manage-kpis-ssas-tabular.md
+      - name: Hierarchies
+        href: ../analysis-services/tabular-models/hierarchies-ssas-tabular.md
+        items:
+        - name: Create and Manage Hierarchies
+          href: ../analysis-services/tabular-models/create-and-manage-hierarchies-ssas-tabular.md
+      - name: Partitions
+        href: ../analysis-services/tabular-models/partitions-ssas-tabular.md
+        items:
+        - name: Create and Manage Partitions in the Workspace Database
+          href: ../analysis-services/tabular-models/create-and-manage-partitions-in-the-workspace-database-ssas-tabular.md
+        - name: Process Partitions in the Workspace Database
+          href: ../analysis-services/tabular-models/process-partitions-in-the-workspace-databse-ssas-tabular.md
+      - name: Perspectives
+        href: ../analysis-services/tabular-models/perspectives-ssas-tabular.md
+        items:
+        - name: Create and Manage Perspectives
+          href: ../analysis-services/tabular-models/create-and-manage-perspectives-ssas-tabular.md
+      - name: Translations 
+        href: ../analysis-services/tabular-models/translations-in-tabular-models-analysis-services.md
+      - name: Roles
+        href: ../analysis-services/tabular-models/roles-ssas-tabular.md
+        items:
+        - name: Create and Manage Roles
+          href: ../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md
+        - name: Object-level security
+          href: ../analysis-services/tabular-models/object-level-security.md
+      - name: Analyze in Excel
+        href: ../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md
+        items:
+        - name: Analyze a tabular model in Excel
+          href: ../analysis-services/tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md
+      - name: String storage and collation in tabular models
+        href: ../analysis-services/tabular-models/string-storage-and-collation-in-tabular-models.md
+    - name: Deploy tabular model solutions
+      href: ../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md
+      items:
+      - name: Deploy from SQL Server Data Tools
+        href: ../analysis-services/tabular-models/deploy-from-sql-server-data-tools-ssas-tabular.md
+    - name: Manage Tabular Model Databases
+      href: ../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md
+      items:
+      - name: Process Database, Table, or Partition
+        href: ../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md
+      - name: Tabular Model Roles
+        href: ../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md
+        items:
+        - name: Manage Roles by using SSMS
+          href: ../analysis-services/tabular-models/manage-roles-by-using-ssms-ssas-tabular.md
+      - name: Tabular Model Partitions
+        href: ../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md
+        items:
+        - name: Create and Manage Tabular Model Partitions
+          href: ../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md
+        - name: Process Tabular Model Partitions
+          href: ../analysis-services/tabular-models/process-tabular-model-partitions-ssas-tabular.md
+    - name: Connect to a tabular model database
+      href: ../analysis-services/tabular-models/connect-to-a-tabular-model-database-ssas.md
+    - name: Restore from Power Pivot
+      href: ../analysis-services/tabular-models/restore-from-power-pivot.md
+  - name: Multidimensional modeling
     href: ../analysis-services/multidimensional-models/multidimensional-models-ssas.md
   - name: Data mining
     href: ../analysis-services/data-mining/data-mining-ssas.md
   - name: Power Pivot for Sharepoint
     href: ../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md
-  - name: Monitor an Analysis Services Instance
-    href: instances/monitor-an-analysis-services-instance.md
   - name: Manage servers
-    href: ../analysis-services/instances/analysis-services-instance-management.md
-  - name: Trace-events
-    href: https://docs.microsoft.com/bi-reference/trace-events/analysis-services-trace-events
+    items:
+    - name: Server management overview
+      href: ../analysis-services/instances/analysis-services-instance-management.md
+    - name: Server properties
+      items:
+      - name: Server properties overview  
+        href: ../analysis-services/server-properties/server-properties-in-analysis-services.md
+      - name: Data Mining Properties
+        href: ../analysis-services/server-properties/data-mining-properties.md
+      - name: DAX Properties
+        href: ../analysis-services/server-properties/dax-properties.md
+      - name: Feature Properties
+        href: ../analysis-services/server-properties/feature-properties.md
+      - name: Filestore Properties
+        href: ../analysis-services/server-properties/filestore-properties.md
+      - name: General Properties
+        href: ../analysis-services/server-properties/general-properties.md
+      - name: Lock Manager Properties
+        href: ../analysis-services/server-properties/lock-manager-properties.md
+      - name: Log Properties
+        href: ../analysis-services/server-properties/log-properties.md
+      - name: Memory Properties
+        href: ../analysis-services/server-properties/memory-properties.md
+      - name: Network Properties
+        href: ../analysis-services/server-properties/network-properties.md
+      - name: OLAP Properties
+        href: ../analysis-services/server-properties/olap-properties.md
+      - name: Security Properties
+        href: ../analysis-services/server-properties/security-properties.md
+      - name: Thread Pool Properties    
+    - name: Monitor Analysis Services
+      items:
+      - name: SQL Server Profiler
+        href: use-sql-server-profiler-to-monitor-analysis-services.md
+        items:
+        - name: Monitoring Analysis Services with SQL Server Profiler
+          href: introduction-to-monitoring-analysis-services-with-sql-server-profiler.md
+        - name: Create Profiler Traces for Replay
+          href: create-profiler-traces-for-replay-analysis-services.md
+      - name: Extended Events
+        href: monitor-analysis-services-with-sql-server-extended-events.md
+      - name: Dynamic Management Views (DMVs) 
+        href: use-dynamic-management-views-dmvs-to-monitor-analysis-services.md
+      - name: Trace-events
+        href: https://docs.microsoft.com/bi-reference/trace-events/analysis-services-trace-events
+  - name: Connect
+    items:
+    - name: Connect to servers overview
+      href: connect-to-analysis-services.md
+    - name: Connect from client applications
+      href: connect-from-client-applications-analysis-services.md
+    - name: Connection String Properties
+      href: connection-string-properties-analysis-services.md
+    - name: Authentication methodologies
+      href: authentication-methodologies-supported-by-analysis-services.md
+    - name: Kerberos authentication
+      href: configure-analysis-services-for-kerberos-constrained-delegation.md
+    - name: SPN registration
+      href: spn-registration-for-an-analysis-services-instance.md
+    - name: HTTP Access
+      href: configure-http-access-to-analysis-services-on-iis-8-0.md
+    - name: Client libraries (data providers)
+      href: data-providers-used-for-analysis-services-connections.md
+    - name: Disconnect users and sessions
+      href: disconnect-users-and-sessions-on-analysis-services-server.md
 - name: Developer
+  items:
+  - name: Performance Counters
+    href: performance-counters-ssas.md
+  - name: Clear the Analysis Services Caches
+    href: clear-the-analysis-services-caches.md
+  - name: Script Administrative Tasks
+    items:
+    - name: Create Scripts in Management Studio
+      href: create-analysis-services-scripts-in-management-studio.md
+      items:
+      - name: Use Analysis Services Templates in SQL Server Management Studio
+        href: use-analysis-services-templates-in-sql-server-management-studio.md
+      - name: Use the Analysis Services Scripts Project in Management Studio
+        href: analysis-services-scripts-project-in-sql-server-management-studio.md
+      - name: Schedule Administrative Tasks with SQL Server Agent
+        href: schedule-ssas-administrative-tasks-with-sql-server-agent.md
+      - name: Automate Administrative Tasks with SSIS
+        href: automate-analysis-services-administrative-tasks-with-ssis.md
+    - name: High Availability and Scalability
+      href: high-availability-and-scalability-in-analysis-services.md
+    - name: Logging in Analysis Services
+      href: log-operations-in-analysis-services.md
+    - name: DBCC for Analysis Services
+      href: database-consistency-checker-dbcc-for-analysis-services.md  
   items:
   - name: Analysis Services Developer Documentation
     href: analysis-services-developer-documentation.md
-  - name: Tabular Model Programming for Compatibility Level 1200 and higher
-    href: ./tabular-model-programming-compatibility-level-1200/tabular-model-programming-for-compatibility-level-1200.md
+  - name: Tabular models
+    items: 
+    - name: Tabular 1200 and higher
+      items:
+      - name: Tabular model programming for compatibility level 1200 and higher
+        href: ./tabular-model-programming-compatibility-level-1200/tabular-model-programming-for-compatibility-level-1200.md
+      - name: Tabular Model Scripting Language (TMSL)
+        href: https://docs.microsoft.com/bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference
+      - name: Tabular Object Model (TOM)
+        href: https://docs.microsoft.com/bi-reference/tom/introduction-to-the-tabular-object-model-tom-in-analysis-services-amo  
+      - name: Analysis Management Objects (AMO)
+        href: https://docs.microsoft.com/bi-reference/amo/amo-classes-introduction 
+      - name: Schema rowsets
+        href: https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets 
+    - name: Tabular 1103 and lower 
+      items:
+      - name: Tabular model programming for compatibility level 1103 and lower
+        href: ./tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md
+      - name: Conceptual Schema Definition Language (CSDL)
+        href: https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi
+      - name: Analysis Services Scripting Language (ASSL)
+        href: ../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md
+      - name: Connection Representation
+        href: ./tabular-model-programming-compatibility-levels-1050-1103/representation/connection-representation-tabular.md
+      - name: IMDEmbeddedData Interface
+        href: ./tabular-model-programming-compatibility-levels-1050-1103/imdembeddeddata-interface.md
+      - name: Schema rowsets
+        href: https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets
+  - name: Multidimensional models
     items:
-    - name: Tabular Model Scripting Language (TMSL)
-      href: https://docs.microsoft.com/bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference
-    - name: Tabular Model Scripting Language (TMSL) commands
-      href: https://docs.microsoft.com/bi-reference/tmsl/tmsl-reference-commands
-    - name: Tabular Model Scripting Language (TMSL) objects
-      href: https://docs.microsoft.com/bi-reference/tmsl/tmsl-reference-tabular-objects
-  - name: Tabular Model Programming for Compatibility Levels 1050 and 1103
-    href: ./tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md
-  - name: Analysis Services Scripting Language (ASSL) +
-    href: ../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md
-  - name: Analysis management objects (AMO)+
-    href: https://docs.microsoft.com/bi-reference/amo/amo-classes-introduction
-  - name: ADOMD.NET +
-    href: https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net
-  - name: OLAP logical +
-    href: ../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md
-  - name: OLAP physical +
-    href: ../analysis-services/multidimensional-models/olap-physical/client-architecture-requirements-for-analysis-services-development.md
-  - name: Extending OLAP +
-    href: ../analysis-services/multidimensional-models/extending-olap/analysis-services-personalization-extensions.md
-  - name: Schema rowsets
-    href: https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets
-  - name: Analysis Services Scripting Language (ASSL for XMLA)
-    href: https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla
-  - name: Data Mining Programming
-    href: data-mining-programming.md
+    - name: Multidimensional model programming
+      href: ./multidimensional-models/multidimensional-model-programming.md
+    - name: Analysis Management Objects (AMO)
+      href: https://docs.microsoft.com/bi-reference/amo/amo-classes-introduction   
+    - name: Analysis Services Scripting Language (ASSL)
+      href: ../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md
+    - name: Schema rowsets
+      href: https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets
+    - name: XML for Analysis (XMLA)
+      href: https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference
+    - name: ADOMD.NET
+      href: https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net
+    - name: Analysis Services Scripting Language (ASSL for XMLA)
+      href: https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla
+    - name: OLAP logical
+      href: ../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md
+    - name: OLAP physical
+      href: ../analysis-services/multidimensional-models/olap-physical/client-architecture-requirements-for-analysis-services-development.md
+    - name: Extending OLAP
+      href: ../analysis-services/multidimensional-models/extending-olap/analysis-services-personalization-extensions.md
+  - name: Data Mining
     items:
-    - name: Data Mining Programming - OLE DB
+    - name: Data Mining programming
+      href: data-mining-programming.md
+    - name: Analysis Management Objects (AMO)
+      href: https://docs.microsoft.com/bi-reference/amo/amo-classes-introduction 
+    - name: ADOMD.NET
+      href: https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net
+    - name: Data Mining Extensions (DMX)
+      href: ../dmx/data-mining-extensions-dmx-reference.md
+    - name: XML for Analysis (XMLA)
+      href: https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference  
+    - name: OLE DB for Data Minining
       href: data-mining-programming-ole-db.md
 - name: Samples
   items:
@@ -269,15 +621,11 @@
     href: ../analysis-services/powershell/analysis-services-powershell-reference.md
   - name: PowerShell Reference for Power Pivot for SharePoint
     href: ../analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md
-  - name: Data Analysis Expressions (DAX) on MSDN
+  - name: Data Analysis Expressions (DAX)
     href: https://msdn.microsoft.com/library/gg413422.aspx
-  - name: Data Mining Extensions (DMX)
-    href: ../dmx/data-mining-extensions-dmx-reference.md
-  - name: Multidimensional Expressions (MDX)
-    href: ../mdx/analysis-services-language-reference.md
   - name: Power Query M
     href: https://msdn.microsoft.com/library/mt211003.aspx
-  - name: Server properties
-    href: ../analysis-services/server-properties/server-properties-in-analysis-services.md
-  - name: XML for Analysis (XMLA)
-    href: https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference
+  - name: Data Mining Extensions (DMX)
+    href: ../dmx/data-mining-extensions-dmx-reference.md
+  - name: Multidimensional Data Expressions (MDX)
+    href: ../mdx/multidimensional-expressions-mdx-reference.md

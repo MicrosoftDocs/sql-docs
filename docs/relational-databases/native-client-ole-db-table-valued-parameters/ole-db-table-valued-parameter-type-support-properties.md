@@ -22,7 +22,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   This topic provides information about OLE DB properties and property sets that are associated with table-valued parameter rowset objects.  
   
 ## Properties  
- The following is the list of properties exposed through the IRowsetInfo::GetPropeties method on table-valued parameter rowset objects. Note that all table-valued parameter rowset properties are read-only. Therefore, attempting to set any of the properties through IOpenRowset::OpenRowset or ITableDefinitionWithConstraints::CreateTableWithConstraints methods to their non-default values will result in an error, and no object will be created.  
+ The following is the list of properties exposed through the IRowsetInfo::GetProperties method on table-valued parameter rowset objects. Note that all table-valued parameter rowset properties are read-only. Therefore, attempting to set any of the properties through IOpenRowset::OpenRowset or ITableDefinitionWithConstraints::CreateTableWithConstraints methods to their non-default values will result in an error, and no object will be created.  
   
  Properties not implemented in the table-valued parameter rowset object are not listed here. For a complete list of properties, see the OLE DB documentation in Windows Data Access Components.  
   

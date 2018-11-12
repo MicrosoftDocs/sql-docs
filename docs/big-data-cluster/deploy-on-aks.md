@@ -26,7 +26,9 @@ This article describes the steps to deploy Kubernetes on AKS using Azure CLI. If
   
 - This section requires that you be running the Azure CLI version 2.0.4 or later. If you need to install or upgrade, see [Install Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-azure-cli). Run `az --version` to find the version if needed.
 
-- Install [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) with a minimum of version 1.10 for both server and client. If you want to install a specific version on kubectl client, see [Install kubectl binary via curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl). For AKS, you need to use `--kubernetes-version` parameter to specify a version different than the default.
+- Install [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) with a minimum of version 1.10. If you want to install a specific version on kubectl client, see [Install kubectl binary via curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl). 
+
+- Same 1.10 minimum version applies to Kubernetes server. For AKS, you need to use `--kubernetes-version` parameter to specify a version different than the default.
 
 > [!NOTE]
 Note that the client/server version skew that is supported is +/-1 minor version. The Kubernetes documentation states that  "a client should be skewed no more than one minor version from the master, but may lead the master by up to one minor version. For example, a v1.3 master should work with v1.1, v1.2, and v1.3 nodes, and should work with v1.2, v1.3, and v1.4 clients." For more information, see [Kubernetes supported releases and component skew](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew).
@@ -77,7 +79,7 @@ An Azure resource group is a logical group in which Azure resources are deployed
     --kubernetes-version 1.10.8
     ```
 
-    You can increase or decrease the default agent count by changing the `--node-count <n>` where `<n>` is the number of agent nodes you want to have.
+    You can increase or decrease the number of Kubernetes agent nodes by changing the `--node-count <n>` where `<n>` is the number of agent nodes you want to have, which it does not include the master Kubernetes node. So in the example above, there will be **4** VMs of size **Standard_E4s_v3** used for the AKS cluster: **1** for the master and **3** for the agent nodes.
 
     After several minutes, the command completes and returns JSON-formatted information about the cluster.
 

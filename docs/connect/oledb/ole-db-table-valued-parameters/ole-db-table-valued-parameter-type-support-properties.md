@@ -80,7 +80,7 @@ manager: craigg
 |SSPROP_COL_COMPUTED|R/W: Read/Write<br /><br /> Default: VARIANT_FALSE<br /><br /> Type: VT_BOOL<br /><br /> Description: When set to VARIANT_TRUE, indicates that the column is a computed column. VARIANT_FALSE indicates that it is not a computed column.|  
   
 ### DBPROPSET_SQLSERVERPARAMETER  
- These properties are read by the consumer while discovering the table-valued parameter type information in calls to ISSCommandWithParamters::GetParameterProperties and set by the consumer while setting specific properties about the table-valued parameter through ISSCommandWithParameters::SetParameterProperties.  
+ These properties are read by the consumer while discovering the table-valued parameter type information in calls to ISSCommandWithParameters::GetParameterProperties and set by the consumer while setting specific properties about the table-valued parameter through ISSCommandWithParameters::SetParameterProperties.  
   
  The following table provides detailed descriptions of these properties.  
   

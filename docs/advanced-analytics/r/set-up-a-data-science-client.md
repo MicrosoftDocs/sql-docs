@@ -191,8 +191,8 @@ When using [RStudio](https://www.rstudio.com/), you can configure the environmen
 
 1. In RStudio, [update your R path](https://support.rstudio.com/hc/articles/200486138-Using-Different-Versions-of-R) to point to the R environment providing RevoScaleR, Microsoft R Open, and other Microsoft packages. 
 
-  + For an R Client intallation, look for C:\Program Files\Microsoft\R Client\R_SERVER\bin\x64
-  + For a standalone servier, look for C:\Program Files\Microsoft SQL Server\140\R_SERVER\Library or C:\Program Files\Microsoft SQL Server\130\R_SERVER\Library
+  + For an R Client installation, look for C:\Program Files\Microsoft\R Client\R_SERVER\bin\x64
+  + For a standalone server, look for C:\Program Files\Microsoft SQL Server\140\R_SERVER\Library or C:\Program Files\Microsoft SQL Server\130\R_SERVER\Library
 
 2. Close and then open RStudio.
 

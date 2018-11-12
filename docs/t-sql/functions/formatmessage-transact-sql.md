@@ -87,8 +87,8 @@ SELECT FORMATMESSAGE('This is the %s and this is the %s.', 'first variable', 'se
   
 ```  
 SELECT FORMATMESSAGE('Signed int %i, %d %i, %d, %+i, %+d, %+i, %+d', 5, -5, 50, -50, -11, -11, 11, 11);
-SELECT FORMATMESSAGE('Signed int with up to 3 leading zero's %03i', 5);  
-SELECT FORMATMESSAGE('Signed int with up to 20 leading zero's %020i', 5);  
+SELECT FORMATMESSAGE('Signed int with up to 3 leading zeros %03i', 5);  
+SELECT FORMATMESSAGE('Signed int with up to 20 leading zeros %020i', 5);  
 SELECT FORMATMESSAGE('Signed int with leading zero 0 %020i', -55);  
 SELECT FORMATMESSAGE('Bigint %I64d', 3000000000);
 SELECT FORMATMESSAGE('Unsigned int %u, %u', 50, -50);  

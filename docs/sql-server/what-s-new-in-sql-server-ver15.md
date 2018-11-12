@@ -1,15 +1,13 @@
 ---
 title: "What's new in SQL Server 2019 | Microsoft Docs"
-ms.custom: ""
 ms.date: 11/06/2018
 ms.prod: "sql-server-2018"
 ms.reviewer: ""
-ms.technology: 
-  - "server-general"
+ms.technology: release-landing
 ms.topic: "article"
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "craigg"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
 # What's new in SQL Server 2019

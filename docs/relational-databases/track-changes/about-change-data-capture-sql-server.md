@@ -1,20 +1,18 @@
 ---
 title: "About Change Data Capture (SQL Server) | Microsoft Docs"
-ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: 
-  - "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "change data capture [SQL Server], about"
   - "change data capture [SQL Server]"
   - "22832 (Database Engine error)"
 ms.assetid: 7d8c4684-9eb1-4791-8c3b-0f0bb15d9634
-author: "rothja"
-ms.author: "jroth"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # About Change Data Capture (SQL Server)

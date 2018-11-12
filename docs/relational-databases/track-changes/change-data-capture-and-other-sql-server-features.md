@@ -1,18 +1,16 @@
 ---
 title: "Change Data Capture and Other SQL Server Features | Microsoft Docs"
-ms.custom: ""
 ms.date: "05/03/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: 
-  - "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "change data capture [SQL Server], other SQL Server features and"
 ms.assetid: 7dfcb362-1904-4578-8274-da16681a960e
-author: "rothja"
-ms.author: "jroth"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Change Data Capture and Other SQL Server Features

@@ -13,7 +13,7 @@ f1_keywords:
 ms.assetid: e23d27a8-e968-4082-9dbe-963fc724b5d9
 author: minewiskan
 ms.author: owend
-manager: craigg
+manager: kfile
 ---
 # Create and Manage Roles (SSAS Tabular)
   Roles, in tabular models, define member permissions for a model. Roles are defined for a model project by using the Role Manager dialog box in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. When a model is deployed, database administrators can manage roles by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

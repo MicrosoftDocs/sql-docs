@@ -6,8 +6,7 @@ ms.date: "04/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.technology:
-  - "database-engine"
+ms.technology: performance
 ms.topic: "language-reference"
 f1_keywords:
   - "dm_exec_query_optimizer_memory_gateways_TSQL"

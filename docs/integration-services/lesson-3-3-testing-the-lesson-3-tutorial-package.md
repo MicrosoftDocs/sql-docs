@@ -26,7 +26,7 @@ Before you test the package you should verify that the control and data flows in
   
 ![Data flow in package](../integration-services/media/task9lesson1data.gif "Data flow in package")  
   
-### To run the Lesson 4 tutorial package  
+### To run the Lesson 3 tutorial package  
   
 1.  On the SSIS menu, click Log Events.  
   

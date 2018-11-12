@@ -4,7 +4,7 @@ description: Install local R libraries and tools on a development workstation fo
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 11/07/2018  
+ms.date: 11/12/2018  
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
@@ -189,11 +189,15 @@ When using [RStudio](https://www.rstudio.com/), you can configure the environmen
 
 1. Install Microsoft R Client or one of the standalone server options to add RevoScaleR and other R packages, including the base R distribution used by your SQL Server instance. Choose a version at the same level or lower (packages are backward compatible) that provides the same package versions as on the server. For version information, see the version map in this article: [Upgrade R and Python components](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
 
-1. In RStudio, [update your R path](https://support.rstudio.com/hc/articles/200486138-Using-Different-Versions-of-R) to point to the R environment providing RevoScaleR, Microsoft R Open, and other Microsoft packages. Depending on how you obtained RevoScaleR and other libraries, it is most likely one of the following paths:
+1. In RStudio, [update your R path](https://support.rstudio.com/hc/articles/200486138-Using-Different-Versions-of-R) to point to the R environment providing RevoScaleR, Microsoft R Open, and other Microsoft packages. 
 
-  + C:\Program Files\Microsoft SQL Server\130\R_SERVER\Library
-  + C:\Program Files\Microsoft SQL Server\140\R_SERVER\Library
-  + C:\Program Files\Microsoft\R Client\R_SERVER\bin\x64
+  + For an R Client intallation, look for C:\Program Files\Microsoft\R Client\R_SERVER\bin\x64
+  + For a standalone servier, look for C:\Program Files\Microsoft SQL Server\140\R_SERVER\Library or C:\Program Files\Microsoft SQL Server\130\R_SERVER\Library
+
+2. Close and then open RStudio.
+
+When you reopen RStudio, the R executable from R Client (or standalone server) is the default R engine.
+
 
 ### R Tools for Visual Studio (RTVS)
 

@@ -17,9 +17,9 @@ Python integration is available starting in SQL Server 2017 or later when you in
 
 To create and deploy Python solutions on SQL Server, install Microsoft's [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) and other Python libraries on the client workstation. The revoscalepy library, which is also on the remote SQL Server instance, coordinates computing requests between both systems. 
 
-In this article, you will learn how to install the necessary Python libraries on your local workstation. You will also learn how to write Python code that executes on SQL Server, and render visualizations and other output locally using the capabilities of a client application. 
+In this article, learn how to configure a Python development workstation so that you can connect to a remote SQL Server enabled for machine learning and Python integration. After completing the steps in this article, you will have the same Python libraries as those on SQL Server. You will also know how to push computations from a local Python session to a remote Python session on SQL Server.
 
-  ![Client-server components](media/sqlmls-python-client-revo.png "Local and remote Python sessions and libraries")
+![Client-server components](media/sqlmls-python-client-revo.png "Local and remote Python sessions and libraries")
 
 You can use built-in Jupyter Notebooks as described in this article, or [link the libraries](#install-ide) to PyCharm or any another IDE that you normally use.
 

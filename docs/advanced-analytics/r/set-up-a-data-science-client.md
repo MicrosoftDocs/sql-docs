@@ -17,7 +17,7 @@ R integration is available in SQL Server 2016 or later when you include the R la
 
 To create and deploy R solutions on SQL Server, install [Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client) to get [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) and other R libraries on your development workstation. The RevoScaleR library, which is also on the remote SQL Server instance, coordinates computing requests between both systems. 
 
-In this article, learn how to configure an R client development workstation so that you can connect to a remote SQL Server enabled for machine learning and R integration. After completing the steps in this article, you will have the same R libraries as those on SQL Server. You will also know how to push computations from a local R session to a remote Python session on SQL Server.
+In this article, learn how to configure an R client development workstation so that you can connect to a remote SQL Server enabled for machine learning and R integration. After completing the steps in this article, you will have the same R libraries as those on SQL Server. You will also know how to push computations from a local R session to a remote R session on SQL Server.
 
 ![Client-server components](media/sqlmls-r-client-revo.png "Local and remote R sessions and libraries")
 
@@ -83,9 +83,9 @@ To connect to an instance of SQL Server to run scripts and upload data, you must
 
 At a minimum, the account used to run code must have permission to read from the databases you are working with, plus the special permission EXECUTE ANY EXTERNAL SCRIPT. Most developers also require permissions to create stored procedures, and to write data into tables containing training data or scored data. 
 
-Ask the database administrator to [configure the following permissions for your account](../security/user-permission.md), in the database where you use Python:
+Ask the database administrator to [configure the following permissions for your account](../security/user-permission.md), in the database where you use R:
 
-+ **EXECUTE ANY EXTERNAL SCRIPT** to run Python on the server.
++ **EXECUTE ANY EXTERNAL SCRIPT** to run R script on the server.
 + **db_datareader** privileges to run the queries used for training the model.
 + **db_datawriter** to write training data or scored data.
 + **db_owner** to create objects such as stored procedures, tables, functions. 

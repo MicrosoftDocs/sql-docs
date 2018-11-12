@@ -85,5 +85,5 @@ Applies to: Azure SQL Database
 
 Row-Level Security is not enabled by default in the bacpac download of WideWorldImporters. To enable Row-Level Security in the database, run the following stored procedure:
 
-    EXECUTE [Application].[Configuration_ApplyAuditing]
+    EXECUTE [Application].[Configuration_ApplyRowLevelSecurity]
 

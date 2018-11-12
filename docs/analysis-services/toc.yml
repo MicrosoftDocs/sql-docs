@@ -448,7 +448,9 @@
     - name: Restore from Power Pivot
       href: ../analysis-services/tabular-models/restore-from-power-pivot.md
   - name: Multidimensional modeling
-    href: ../analysis-services/multidimensional-models/multidimensional-models-ssas.md
+    items:
+    - name: Multidimensionl modeling overview
+      href: ../analysis-services/multidimensional-models/multidimensional-models-ssas.md
     - name: Multidimensional Solutions
       href: multidimensional-model-solutions-ssas.md
       items:
@@ -827,7 +829,6 @@
         href: create-a-power-view-report-with-a-multidimensional-data-source.md
     - name: Assemblies Management
       href: multidimensional-model-assemblies-management.md
-    - name: Reference
   - name: Data mining
     href: ../analysis-services/data-mining/data-mining-ssas.md
   - name: Power Pivot for Sharepoint

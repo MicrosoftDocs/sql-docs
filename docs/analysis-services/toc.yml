@@ -9,7 +9,7 @@
   - name: Tools and applications
     href: tools-and-applications-used-in-analysis-services.md
   - name: Client libraries (data providers)
-    href: instances/data-providers-used-for-analysis-services-connections.md
+    href: ../analysis-services/instances/data-providers-used-for-analysis-services-connections.md
   - name: Comparing Tabular and Multidimensional solutions
     href: comparing-tabular-and-multidimensional-solutions-ssas.md
   - name: Analysis Services Features and Tasks
@@ -242,9 +242,9 @@
       - name: Deploying SQL Server 2016 PowerPivot and Power View in a Multi-Tier SharePoint 2016 Farm
         href: ../analysis-services/instances/install-windows/deploy-powerpivot-and-power-view-multi-tier-sharepoint-2016-farm.md
     - name: Install client libraries (AMO, ADOMD.NET, MSOLAP)
-      href: ../data-providers-used-for-analysis-services-connections.md
+      href: ../analysis-services/instances/data-providers-used-for-analysis-services-connections.md
     - name: Verify cumulative update build version
-      href: ../analysis-services/instances/install-windows/analysis-services-component-version.md
+      href: ../analysis-services/instances/analysis-services-component-version.md
     - name: Post-install configuration
       items:
       - name: Post install and confiuration overview  
@@ -487,38 +487,38 @@
     - name: Monitor Analysis Services
       items:
       - name: SQL Server Profiler
-        href: use-sql-server-profiler-to-monitor-analysis-services.md
+        href: ../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md
         items:
         - name: Monitoring Analysis Services with SQL Server Profiler
-          href: introduction-to-monitoring-analysis-services-with-sql-server-profiler.md
+          href: ../analysis-services/instances/introduction-to-monitoring-analysis-services-with-sql-server-profiler.md
         - name: Create Profiler Traces for Replay
-          href: create-profiler-traces-for-replay-analysis-services.md
+          href: ../analysis-services/instances/create-profiler-traces-for-replay-analysis-services.md
       - name: Extended Events
-        href: monitor-analysis-services-with-sql-server-extended-events.md
+        href: ../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md
       - name: Dynamic Management Views (DMVs) 
-        href: use-dynamic-management-views-dmvs-to-monitor-analysis-services.md
+        href: ../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md
       - name: Trace-events
         href: https://docs.microsoft.com/bi-reference/trace-events/analysis-services-trace-events
   - name: Connect
     items:
     - name: Connect to servers overview
-      href: connect-to-analysis-services.md
+      href: ../analysis-services/instances/connect-to-analysis-services.md
     - name: Connect from client applications
-      href: connect-from-client-applications-analysis-services.md
+      href: ../analysis-services/instances/connect-from-client-applications-analysis-services.md
     - name: Connection String Properties
-      href: connection-string-properties-analysis-services.md
+      href: ../analysis-services/instances/connection-string-properties-analysis-services.md
     - name: Authentication methodologies
-      href: authentication-methodologies-supported-by-analysis-services.md
+      href: ../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md
     - name: Kerberos authentication
-      href: configure-analysis-services-for-kerberos-constrained-delegation.md
+      href: ../analysis-services/instances/configure-analysis-services-for-kerberos-constrained-delegation.md
     - name: SPN registration
-      href: spn-registration-for-an-analysis-services-instance.md
+      href: ../analysis-services/instances/spn-registration-for-an-analysis-services-instance.md
     - name: HTTP Access
-      href: configure-http-access-to-analysis-services-on-iis-8-0.md
+      href: ../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md
     - name: Client libraries (data providers)
-      href: data-providers-used-for-analysis-services-connections.md
+      href: ../analysis-services/instances/data-providers-used-for-analysis-services-connections.md
     - name: Disconnect users and sessions
-      href: disconnect-users-and-sessions-on-analysis-services-server.md
+      href: ../analysis-services/instances/disconnect-users-and-sessions-on-analysis-services-server.md
 - name: Developer
   items:
   - name: Performance Counters

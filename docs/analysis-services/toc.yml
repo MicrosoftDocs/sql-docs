@@ -458,23 +458,23 @@
         href: ../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md
         items:
         - name: Create an Analysis Services Project (SSDT)
-          href: create-an-analysis-services-project-ssdt.md
+          href: ../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md
         - name: Configure Analysis Services Project Properties (SSDT)
-          href: configure-analysis-services-project-properties-ssdt.md
+          href: ../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md
         - name: Build Analysis Services Projects (SSDT)
-          href: build-analysis-services-projects-ssdt.md
+          href: ../analysis-services/multidimensional-models/build-analysis-services-projects-ssdt.md
         - name: Deploy Analysis Services Projects (SSDT)
-          href: deploy-analysis-services-projects-ssdt.md
+          href: ../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md
         - name: Create and Run an MDX Script (SSDT)
-          href: create-and-run-an-mdx-script-in-sql-server-data-tools.md
+          href: ../analysis-services/multidimensional-models/create-and-run-an-mdx-script-in-sql-server-data-tools.md
         - name: View the XML for an Analysis Services Project (SSDT)
-          href: view-the-xml-for-an-analysis-services-project-ssdt.md
+          href: ../analysis-services/multidimensional-models/view-the-xml-for-an-analysis-services-project-ssdt.md
         - name: Connect in Online Mode to an Analysis Services Database
-          href: connect-in-online-mode-to-an-analysis-services-database.md
+          href: ../analysis-services/multidimensional-models/connect-in-online-mode-to-an-analysis-services-database.md
         - name: Working with Analysis Services Projects and Databases During the Development Phase
-          href: work-with-analysis-services-projects-and-databases-in-development.md
+          href: ../analysis-services/multidimensional-models/work-with-analysis-services-projects-and-databases-in-development.md
         - name: Working with Analysis Services Projects and Databases in a Production Environment
-          href: work-with-analysis-services-projects-and-databases-in-production.md
+          href: ../analysis-services/multidimensional-models/work-with-analysis-services-projects-and-databases-in-production.md
       - name: Data Sources
         href: ../analysis-services/multidimensional-models/data-sources-in-multidimensional-models.md
         items:

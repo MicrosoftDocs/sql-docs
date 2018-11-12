@@ -78,18 +78,24 @@ manager: craigg
 ### Identify Sessions with Empty Result Sets  
  Every row in sys.dm_cdc_log_scan_sessions represents a log scan session (except the row with an ID of 0). A log scan session is equivalent to one execution of [sp_cdc_scan](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql). During a session, the scan can either return changes or return an empty result. If the result set is empty, the empty_scan_count column in sys.dm_cdc_log_scan_sessions is set to 1. If there are consecutive empty result sets, such as if the capture job is running continuously, the empty_scan_count in the last existing row is incremented. For example, if sys.dm_cdc_log_scan_sessions already contains 10 rows for scans that returned changes and there are five empty results in a row, the view contains 11 rows. The last row has a value of 5 in the empty_scan_count column. To determine sessions that had an empty scan, run the following query:  
   
- `SELECT * from sys.dm_cdc_log_scan_sessions where empty_scan_count <> 0`  
+```sql
+SELECT * from sys.dm_cdc_log_scan_sessions where empty_scan_count <> 0
+```
   
 ### Determine Latency  
  The sys.dm_cdc_log_scan_sessions management view includes a column that records the latency for each capture session. Latency is defined as the elapsed time between a transaction being committed on a source table and the last captured transaction being committed on the change table. The latency column is populated only for active sessions. For sessions with a value greater than 0 in the empty_scan_count column, the latency column is set to 0. The following query returns the average latency for the most recent sessions:  
   
- `SELECT latency FROM sys.dm_cdc_log_scan_sessions WHERE session_id = 0`  
+```sql
+SELECT latency FROM sys.dm_cdc_log_scan_sessions WHERE session_id = 0
+```
   
  You can use latency data to determine how fast or slow the capture process is processing transactions. This data is most useful when the capture process is running continuously. If the capture process is running on a schedule, latency can be high because of the lag between transactions being committed on the source table and the capture process running at its scheduled time.  
   
  Another important measure of capture process efficiency is throughput. This is the average number of commands per second that are processed during each session. To determine the throughput of a session, divide the value in the command_count column by the value in the duration column. The following query returns the average throughput for the most recent sessions:  
   
- `SELECT command_count/duration AS [Throughput] FROM sys.dm_cdc_log_scan_sessions WHERE session_id = 0`  
+```sql
+SELECT command_count/duration AS [Throughput] FROM sys.dm_cdc_log_scan_sessions WHERE session_id = 0
+```
   
 ### Use Data Collector to Collect Sampling Data  
  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data collector lets you collect snapshots of data from any table or dynamic management view and build a performance data warehouse. When change data capture is enabled on a database, it is useful to take snapshots of the sys.dm_cdc_log_scan_sessions view and the sys.dm_cdc_errors view at regular intervals for later analysis. The following procedure sets up a data collector for collecting sample data from the sys.dm_cdc_log_scan_sessions management view.  
@@ -100,7 +106,7 @@ manager: craigg
   
 2.  Execute the following code to create a custom collector for change data capture.  
   
-    ```tsql  
+    ```sql  
     USE msdb;  
   
     DECLARE @schedule_uid uniqueidentifier;  
@@ -122,10 +128,10 @@ manager: craigg
   
     -- Create a collection item using statistics from   
     -- the change data capture dynamic management view.  
-    DECLARE @paramters xml;  
+    DECLARE @parameters xml;  
     DECLARE @collection_item_id int;  
   
-    SELECT @paramters = CONVERT(xml,   
+    SELECT @parameters = CONVERT(xml,   
         N'<TSQLQueryCollector>  
             <Query>  
               <Value>SELECT * FROM sys.dm_cdc_log_scan_sessions</Value>  
@@ -138,7 +144,7 @@ manager: craigg
     @collector_type_uid = N'302E93D1-3424-4BE7-AA8E-84813ECF2419',  
     @name = ' CDC Performance Data Collector',  
     @frequency = 5,   
-    @parameters = @paramters,  
+    @parameters = @parameters,  
     @collection_item_id = @collection_item_id output;  
   
     GO  

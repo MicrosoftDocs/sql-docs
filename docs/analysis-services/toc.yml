@@ -832,10 +832,8 @@
   - name: Data Mining
     items:
     - name: Data Mining overview
-      href: ../analysis-services/data-mining/data-mining-ssas.md
-    - name: Overview
-      href: ../analysis-services/data-mining/data-mining-ssas.md
-    - name: Concep../analysis-services/multidimensional-models/ts
+      href: ./data-mining/data-mining-ssas.md
+    - name: Data Mining concepts
       href: ../analysis-services/data-mining/data-mining-concepts.md
     - name: Algorithms
       href: ../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md
@@ -1210,7 +1208,7 @@
       - name: SystemGetClusterAccuracyResults
         href: ../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md
     - name: Data Mining Extensions (DMX)
-      href: ../../../dmx/data-mining-extensions-dmx-reference.md
+      href: ../dmx/data-mining-extensions-dmx-reference.md
   - name: Power Pivot for Sharepoint
     items:
     - name: Power Pivot for SharePoint overview

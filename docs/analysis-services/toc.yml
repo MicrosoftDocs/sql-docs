@@ -1209,9 +1209,124 @@
         href: ../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md
       - name: SystemGetClusterAccuracyResults
         href: ../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md
-    - name: Reference
+    - name: Data Mining Extensions (DMX)
+      href: ../../dmx/data-mining-extensions-dmx-reference.md
   - name: Power Pivot for Sharepoint
-    href: ../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md
+    items:
+    - name: Power Pivot for SharePoint overview
+      href: ../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md
+    - name: Power Pivot Server Administration and Configuration in Central Administration
+      href: ../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md
+      items:
+      - name: Deploy Power Pivot Solutions to SharePoint
+        href: ../analysis-services/power-pivot-sharepoint/deploy-power-pivot-solutions-to-sharepoint.md
+      - name: Create and Configure a Power Pivot Service Application
+        href: ../analysis-services/power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md
+      - name: Connect a Power Pivot Service Application to a SharePoint Web Application
+        href: ../analysis-services/power-pivot-sharepoint/connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md
+      - name: Activate Power Pivot Feature Integration for Site Collections
+        href: ../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md
+      - name: Add MSOLAP.5 as a Trusted Data Provider in Excel Services
+        href: ../analysis-services/power-pivot-sharepoint/add-msolap-5-as-a-trusted-data-provider-in-excel-services.md
+      - name: Create a Trusted Location for Power Pivot Sites
+        href: ../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md
+      - name: Configure Power Pivot Service Accounts
+        href: ../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md
+      - name: Configure and View SharePoint Log Files
+        href: ../analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md
+      - name: Configure Disk Space Usage
+        href: ../analysis-services/power-pivot-sharepoint/configure-disk-space-usage-power-pivot-for-sharepoint.md
+      - name: Configure Maximum File Upload Size
+        href: ../analysis-services/power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint.md
+      - name: Configuration Setting Reference
+        href: ../analysis-services/power-pivot-sharepoint/configuration-setting-reference-power-pivot-for-sharepoint.md
+      - name: Start or Stop a Power Pivot for SharePoint Server
+        href: ../analysis-services/power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server.md
+    - name: Power Pivot Configuration using Windows PowerShell
+      href: ../analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md
+    - name: Power Pivot Configuration Tools
+      href: ../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md
+      items:
+      - name: Configure or Repair Power Pivot for SharePoint 2013 (Power Pivot Configuration Tool)
+        href: ../analysis-services/power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013.md
+    - name: Power Pivot Availability and Disaster Recovery
+      href: ../analysis-services/power-pivot-sharepoint/power-pivot-availability-and-disaster-recovery.md
+    - name: Power Pivot Authentication and Authorization
+      href: ../analysis-services/power-pivot-sharepoint/power-pivot-authentication-and-authorization.md
+    - name: Configure Power Pivot Health Rules
+      href: ../analysis-services/power-pivot-sharepoint/configure-power-pivot-health-rules.md
+      items:
+      - name: Health Rules Reference
+        href: ../analysis-services/power-pivot-sharepoint/health-rules-reference-power-pivot-for-sharepoint.md
+    - name: Power Pivot Management Dashboard and Usage Data
+      href: ../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md
+      items:
+      - name: Power Pivot Usage Data Collection
+        href: ../analysis-services/power-pivot-sharepoint/power-pivot-usage-data-collection.md
+      - name: Configure Usage Data Collection for (Power Pivot for SharePoint
+        href: ../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md
+    - name: Create and Customize Power Pivot Gallery
+      href: ../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md
+      items:
+      - name: Use Power Pivot Gallery
+        href: ../analysis-services/power-pivot-sharepoint/use-power-pivot-gallery.md
+      - name: Delete Power Pivot Gallery
+        href: ../analysis-services/power-pivot-sharepoint/delete-power-pivot-gallery.md
+    - name: Power Pivot Data Access
+      href: ../analysis-services/power-pivot-sharepoint/power-pivot-data-access.md
+    - name: Power Pivot Data Refresh
+      href: ../analysis-services/power-pivot-sharepoint/power-pivot-data-refresh.md
+      items:
+      - name: View Power Pivot Data Refresh History
+        href: ../analysis-services/power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md
+      - name: Power Pivot Data Refresh with SharePoint 2013
+        href: ../analysis-services/power-pivot-sharepoint/power-pivot-data-refresh-with-sharepoint-2013.md
+        items:
+        - name: Schedule Data Refresh and Data Sources That Do Not Support Windows Authentication (Power Pivot for SharePoint)
+          href: ../analysis-services/power-pivot-sharepoint/schedule-data-refresh-and-data-sources-no-windows-authentication.md
+    - name: Power Pivot Data Feeds
+      href: ../analysis-services/power-pivot-sharepoint/power-pivot-data-feeds.md
+      items:
+      - name: Create or Customize a Data Feed Library
+        href: ../analysis-services/power-pivot-sharepoint/create-or-customize-a-data-feed-library-power-pivot-for-sharepoint.md
+      - name: Use Power Pivot Data Feeds
+        href: ../analysis-services/power-pivot-sharepoint/use-data-feeds-power-pivot-for-sharepoint.md
+      - name: Delete a Power Pivot Data Feed Library
+        href: ../analysis-services/power-pivot-sharepoint/delete-a-power-pivot-data-feed-library.md
+      - name: Share Power Pivot Data Feeds in a Data Feed Library
+        href: ../analysis-services/power-pivot-sharepoint/share-data-feeds-using-a-data-feed-library-power-pivot-for-sharepoint.md
+    - name: Power Pivot BI Semantic Model Connection (.bism)
+      href: ../analysis-services/power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md
+      items:
+      - name: Add a BI Semantic Model Connection Content Type to a Library
+        href: ../analysis-services/power-pivot-sharepoint/add-bi-semantic-model-connection-content-type-to-library.md
+      - name: Create a BI Semantic Model Connection to a Power Pivot Workbook
+        href: ../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md
+      - name: Create a BI Semantic Model Connection to a Tabular Model Database
+        href: ../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md
+      - name: Use a BI Semantic Model Connection in Excel or Reporting Services
+        href: ../analysis-services/power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md
+    - name: Errors and Events Reference (Power Pivot for SharePoint)
+      href: ../analysis-services/power-pivot-sharepoint/errors-and-events-reference-power-pivot-for-sharepoint.md
+      items:
+      - name: "An error occurred during an attempt to establish a connection to the external data source. The following connections failed to refresh: Power Pivot Data"
+        href: ../analysis-services/power-pivot-sharepoint/an-error-occurred-during-an-attempt-to-establish-a-connection.md
+      - name: Could not load file or assembly Microsoft.Data.Services
+        href: ../analysis-services/power-pivot-sharepoint/could-not-load-file-or-assembly-microsoft-data-services.md
+      - name: Could not load file or assembly 'Microsoft.AnalysisServices.SharePoint.Integration'
+        href: ../analysis-services/power-pivot-sharepoint/could-not-load-microsoft-analysisservices-sharepoint-integration.md
+      - name: The data connection path in the workbook points to a file on the local drive or is an invalid URI
+        href: ../analysis-services/power-pivot-sharepoint/the-data-connection-path-is-invalid.md
+      - name: "The data connection uses Windows Authentication and user credentials could not be delegated. The following connections failed to refresh: Power Pivot Data"
+        href: ../analysis-services/power-pivot-sharepoint/the-data-connection-user-could-not-be-delegated.md
+      - name: "The following features are not supported by Excel Services and may not display or may display only partially: Comments, Shapes, or other objects"
+        href: ../analysis-services/power-pivot-sharepoint/comments-shapes-other-objects-not-supported-by-excel-services.md
+      - name: The trusted location where the workbook is stored does not allow external data connections
+        href: ../analysis-services/power-pivot-sharepoint/trusted-location-does-not-allow-external-data-connections.md
+      - name: Workbook contains one or more queries that refresh external data
+        href: ../analysis-services/power-pivot-sharepoint/this-workbook-contains-one-or-more-queries-that-refresh-external-data.md
+      - name: Unable to refresh data for a data connection in the workbook
+        href: ../analysis-services/power-pivot-sharepoint/unable-to-refresh-data-for-a-data-connection-in-the-workbook.md
   - name: Manage servers
     items:
     - name: Server management overview

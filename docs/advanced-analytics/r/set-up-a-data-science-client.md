@@ -15,7 +15,7 @@ manager: cgronlun
 
 R integration is available in SQL Server 2016 or later when you include the R language option in an [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md) or [SQL Server 2017 Machine Learning Services (In-Database)](../install/sql-machine-learning-services-windows-install.md) installation. 
 
-To create and deploy solutions written in R on SQL Server, install Microsoft R Client to get [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) and other R libraries on your development workstation. The RevoScaleR library, which is also on the remote SQL Server instance, coordinates computing requests between both systems. 
+To create and deploy R solutions on SQL Server, install [Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client) to get [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) and other R libraries on your development workstation. The RevoScaleR library, which is also on the remote SQL Server instance, coordinates computing requests between both systems. 
 
 In this article, learn how to configure an R client development workstation so that you can connect to a remote SQL Server enabled for machine learning and R integration. After completing the steps in this article, you will have the same R libraries as those on SQL Server. You will also know how to push computations from a local R session to a remote Python session on SQL Server.
 

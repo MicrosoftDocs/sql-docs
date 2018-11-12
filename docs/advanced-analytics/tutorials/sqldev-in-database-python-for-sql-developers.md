@@ -35,7 +35,7 @@ Whether you are a SQL programmer new to Python, or a Python developer new to SQL
 
 + [Lesson 1: Explore and visualize the data using Python](sqldev-py3-explore-and-visualize-the-data.md)
 
-+ [Lesson 2: Create data features using using custom SQL functions](sqldev-py4-create-data-features-using-t-sql.md)
++ [Lesson 2: Create data features using custom SQL functions](sqldev-py4-create-data-features-using-t-sql.md)
 
 + [Lesson 3: Train and save a Python model using T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 

@@ -43,7 +43,7 @@ fn:local-name-from-QName($arg as xs:QName?) as xs:NCName?
   
 -   Stores a sample XML instance in the table. Using the **query()** method of the xml data type, the query expression is executed to retrieve the local name part of the QName type value from the instance.  
   
-```  
+```sql
 DROP TABLE T  
 go  
 DROP XML SCHEMA COLLECTION SC  
@@ -64,7 +64,7 @@ insert into T values ('<root xmlns="QNameXSD" xmlns:a="http://someURI">a:someLoc
 SELECT xmlCol.query('declare default element namespace "QNameXSD"; local-name-from-QName(/root[1])')  
 FROM T  
 -- Result = someLocalName  
--- You can retrive namespace URI part from the QName using the namespace-uri-from-QName() function  
+-- You can retrieve namespace URI part from the QName using the namespace-uri-from-QName() function  
 SELECT xmlCol.query('declare default element namespace "QNameXSD"; namespace-uri-from-QName(/root[1])')  
 FROM T  
 -- Result = http://someURI  

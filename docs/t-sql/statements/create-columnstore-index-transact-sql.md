@@ -364,6 +364,8 @@ If the underlying table has a column of a data type that is not supported for co
 -   Cannot have more than 1024 columns.
 -   Cannot be created as a constraint-based index. It is possible to have unique constraints, primary key constraints, and foreign key constraints on a table with a columnstore index. Constraints are always enforced with a row-store index. Constraints cannot be enforced with a columnstore (clustered or nonclustered) index.
 -   Cannot be created on a view or indexed view.  
+> [!NOTE]  
+> Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], you can create a nonclustered columnstore index on an indexed view.  
 -   Cannot include a sparse column.  
 -   Cannot be changed by using the **ALTER INDEX** statement. To change the nonclustered index, you must drop and re-create the columnstore index instead. You can use **ALTER INDEX** to disable and rebuild a columnstore index.  
 -   Cannot be created by using the **INCLUDE** keyword.  

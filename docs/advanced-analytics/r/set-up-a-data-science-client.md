@@ -4,7 +4,7 @@ description: Install local R libraries and tools on a development workstation fo
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 11/07/2018  
+ms.date: 11/12/2018  
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
@@ -101,14 +101,21 @@ The following steps assume the demo database, [NYCTaxi_Sample](../tutorials/demo
 
 1. Open **RGUI** on the client workstation. For example, go to `~\Program Files\Microsoft SQL Server\140\R_SERVER\bin\x64` and double-click **RGui.exe** to start it.
 
-2. RevoScaleR loads automatically. Confirm RevoScaleR is operational by running this command:
+2. RevoScaleR loads automatically. Confirm RevoScaleR is operational by running this command: `print(Revo.version)`
 
-3. Modify the following sample script to include a valid name for a remote SQL Server instance.
+3. Enter demo script that executes on the remote server. You must modify the following sample script to include a valid name for a remote SQL Server instance. This session begins as a local session, but the **rxSummary** function executes on the remote SQL Server instance.
 
   ```r
+  # Define a connection. Replace server with a valid server name.
   connStr <- "Driver=SQL Server;Server=<your-server-name>;Database=NYCTaxi_Sample;Trusted_Connection=true"
+  
+  # Specify the input data in a SQL query.
   sampleQuery <-"SELECT DISTINCT TOP(100) tip_amount FROM [dbo].nyctaxi_sample ORDER BY tip_amount DESC;"
+  
+  # Define a remote compute context based on the remote server.
   cc <-RxInSqlServer(connectionString=connStr)
+
+  # Execute the function using the remote compute context.
   rxSummary(formula = ~ ., data = RxSqlServerData(sqlQuery=sampleQuery, connectionString=connStr), computeContext=cc)
   ```
 
@@ -132,14 +139,14 @@ The following steps assume the demo database, [NYCTaxi_Sample](../tutorials/demo
 4. Get and set the compute context. Once you set a compute context, it remains in effect for the duration of the session. If you aren't sure whether computation is local or remote, run the following command to find out. Results that specify a connection string indicate a remote compute context.
 
   ```r
-  # Return the current compute context
+  # Return the current compute context.
   rxGetComputeContext()
 
-  # Revert to a local compute context
+  # Revert to a local compute context.
   rxSetComputeContext("local")
   rxGetComputeContext()
 
-  # Switch back to remote
+  # Switch back to remote.
   connStr <- "Driver=SQL Server;Server=<your-server-name>;Database=NYCTaxi_Sample;Trusted_Connection=true"
   cc <-RxInSqlServer(connectionString=connStr)
   rxSetComputeContext(cc)
@@ -157,7 +164,7 @@ The following steps assume the demo database, [NYCTaxi_Sample](../tutorials/demo
 6. Generate a scatter plot to explore whether there are dependencies between two variables. 
 
   ```r
-  # Set the connection string. Substitute a valid server name for the placeholder
+  # Set the connection string. Substitute a valid server name for the placeholder.
   connStr <- "Driver=SQL Server;Server=<your database name>;Database=NYCTaxi_Sample;Trusted_Connection=true"
 
   # Specify a query on the nyctaxi_sample table.
@@ -165,7 +172,7 @@ The following steps assume the demo database, [NYCTaxi_Sample](../tutorials/demo
   sampleQuery <-"SELECT DISTINCT TOP 100 * from [dbo].[nyctaxi_sample] WHERE fare_amount <> '' AND  tip_amount <> ''"
   cc <-RxInSqlServer(connectionString=connStr)
 
-  # Generate a scatter plot
+  # Generate a scatter plot.
   rxLinePlot(fare_amount ~ tip_amount, data = RxSqlServerData(sqlQuery=sampleQuery, connectionString=connStr, computeContext=cc), type="p")
   ```
 
@@ -189,11 +196,15 @@ When using [RStudio](https://www.rstudio.com/), you can configure the environmen
 
 1. Install Microsoft R Client or one of the standalone server options to add RevoScaleR and other R packages, including the base R distribution used by your SQL Server instance. Choose a version at the same level or lower (packages are backward compatible) that provides the same package versions as on the server. For version information, see the version map in this article: [Upgrade R and Python components](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
 
-1. In RStudio, [update your R path](https://support.rstudio.com/hc/articles/200486138-Using-Different-Versions-of-R) to point to the R environment providing RevoScaleR, Microsoft R Open, and other Microsoft packages. Depending on how you obtained RevoScaleR and other libraries, it is most likely one of the following paths:
+1. In RStudio, [update your R path](https://support.rstudio.com/hc/articles/200486138-Using-Different-Versions-of-R) to point to the R environment providing RevoScaleR, Microsoft R Open, and other Microsoft packages. 
 
-  + C:\Program Files\Microsoft SQL Server\130\R_SERVER\Library
-  + C:\Program Files\Microsoft SQL Server\140\R_SERVER\Library
-  + C:\Program Files\Microsoft\R Client\R_SERVER\bin\x64
+  + For an R Client installation, look for C:\Program Files\Microsoft\R Client\R_SERVER\bin\x64
+  + For a standalone server, look for C:\Program Files\Microsoft SQL Server\140\R_SERVER\Library or C:\Program Files\Microsoft SQL Server\130\R_SERVER\Library
+
+2. Close and then open RStudio.
+
+When you reopen RStudio, the R executable from R Client (or standalone server) is the default R engine.
+
 
 ### R Tools for Visual Studio (RTVS)
 

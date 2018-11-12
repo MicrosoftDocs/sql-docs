@@ -5,15 +5,14 @@ ms.date: "05/02/2018"
 ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords: 
   - "ghost cleanup"
   - "ghost records"
   - "ghost clean up process" 
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: MashaMSFT
+ms.author: mathoma
 manager: "craigg"
 ---
 # Ghost cleanup process guide

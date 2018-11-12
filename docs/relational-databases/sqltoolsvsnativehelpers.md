@@ -6,7 +6,6 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: 
-  - "database-engine"
 ms.topic: "reference"
 ms.assetid: d33cb556-0380-490a-9220-b74062dbd6d9
 author: "CarlRabeler"

@@ -40,7 +40,7 @@ manager: craigg
   
  The following illustration shows an availability group that contains one primary replica and four secondary replicas. Up to eight secondary replicas are supported, including one primary replica and two synchronous-commit secondary replicas.  
   
- ![Availabilty group with five replicas](../../media/aoag-agintrofigure.gif "Availabilty group with five replicas")  
+ ![Availability group with five replicas](../../media/aoag-agintrofigure.gif "Availability group with five replicas")  
   
   
 ##  <a name="AvDbs"></a> Availability Databases  

@@ -6,7 +6,6 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: 
-  - "database-engine"
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.sqlimail.profileandaccountmanagement.f1"
@@ -31,8 +30,8 @@ helpviewer_keywords:
   - "profiles [SQL Server], Database Mail"
   - "accounts [Database Mail]"
 ms.assetid: 03f6e4c0-04ff-490a-bd91-637806215bd1
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Database Mail Configuration Objects

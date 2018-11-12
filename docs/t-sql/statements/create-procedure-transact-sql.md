@@ -981,6 +981,7 @@ BEGIN
     ORDER BY AnnualSales DESC, ResellerName ASC;  
 END  
 ;  
+GO
   
 --Show 10 Top Resellers  
 EXEC Get10TopResellers;  

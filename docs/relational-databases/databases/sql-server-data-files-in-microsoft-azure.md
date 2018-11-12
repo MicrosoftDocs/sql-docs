@@ -5,8 +5,7 @@ ms.date: "10/02/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: supportability
 ms.topic: conceptual
 ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT

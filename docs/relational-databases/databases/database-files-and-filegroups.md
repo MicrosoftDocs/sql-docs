@@ -5,8 +5,7 @@ ms.date: "01/07/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords: 
   - "databases [SQL Server], files"

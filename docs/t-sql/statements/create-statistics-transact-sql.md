@@ -285,7 +285,7 @@ CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress) WITH
 ```  
 
 ### E. Using CREATE STATISTICS with FULLSCAN and PERSIST_SAMPLE_PERCENT  
- The following example creates the `ContactMail2` statistics for all rows in the `BusinessEntityID` and `EmailPromotion` columns of the `Contact` table and sets a 100 percent sampling percentage for all subsequent updates that do not explicitely specify a sampling percentage.  
+ The following example creates the `ContactMail2` statistics for all rows in the `BusinessEntityID` and `EmailPromotion` columns of the `Contact` table and sets a 100 percent sampling percentage for all subsequent updates that do not explicitly specify a sampling percentage.  
   
 ```sql  
 CREATE STATISTICS NamePurchase  

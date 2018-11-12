@@ -26,7 +26,7 @@ manager: craigg
  To understand capture job behavior, you must understand how the configurable parameters are used by `sp_cdc_scan`.  
   
 #### maxtrans Parameter  
- The *maxtrans* parameter specifies the maximum number of transactions that can be processed in a single scan cycle of the log. If, during the scan, the number of transactions to be proessed reaches this limit, no additional transactions are included in the current scan. After a scan cycle is complete, the number of transactions that were processed will always be less than or equal to *maxtrans*.  
+ The *maxtrans* parameter specifies the maximum number of transactions that can be processed in a single scan cycle of the log. If, during the scan, the number of transactions to be processed reaches this limit, no additional transactions are included in the current scan. After a scan cycle is complete, the number of transactions that were processed will always be less than or equal to *maxtrans*.  
   
 #### maxscans Parameter  
  The *maxscans* parameter specifies the maximum number of scan cycles that are attempted to drain the log before either returning (continuous = 0) or executing a waitfor (continuous = 1).  

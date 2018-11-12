@@ -1,6 +1,5 @@
 ---
 title: "Post-migration Validation and Optimization Guide | Microsoft Docs"
-ms.custom: ""
 ms.date: "5/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -13,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: "pelopes"
 ms.author: "harinid"
-manager: ""
+manager: "craigg"
 ---
 # Post-migration Validation and Optimization Guide
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

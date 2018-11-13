@@ -23,7 +23,7 @@ Retrieving data as a stream is only available in the SQLSRV driver of the [!INCL
 The SQLSRV driver takes advantage of PHP streams for retrieving large amounts of data from the server. The example in this topic demonstrates how to retrieve character data as a stream.  
   
 ## Example  
-The following example retrieves a row from the *Production.ProductReview* table of the AdventureWorks database. The *Comments* field of the returned row is retrieved as a stream and displayed by using the PHP [fpassthru](http://php.net/manual/function.fpassthru.php) function.  
+The following example retrieves a row from the *Production.ProductReview* table of the AdventureWorks database. The *Comments* field of the returned row is retrieved as a stream and displayed by using the PHP [fpassthru](https://php.net/manual/function.fpassthru.php) function.  
   
 Retrieving data as a stream is accomplished by using [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md) and [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) with the return type specified as a character stream. The return type is specified by using the constant **SQLSRV_PHPTYPE_STREAM**. For information about **sqlsrv** constants, see [Constants &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
   

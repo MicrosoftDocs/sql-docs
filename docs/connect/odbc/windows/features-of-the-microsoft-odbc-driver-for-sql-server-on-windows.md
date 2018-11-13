@@ -26,7 +26,7 @@ Azure Active Directory allows users, DBA's, and application programmers to use A
   
 ## Microsoft ODBC Driver 11 for SQL Server on Windows  
 
-The ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] contains all the functionality of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver that shipped in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. For more information, see [SQL Server Native Client Programming](../../../relational-databases/native-client/sql-server-native-client-programming.md). The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver is based on the ODBC driver that ships in the Windows operating system. For more information, see [Windows Data Access Components SDK](http://msdn.microsoft.com/library/aa968814(VS.85).aspx).  
+The ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] contains all the functionality of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver that shipped in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. For more information, see [SQL Server Native Client Programming](../../../relational-databases/native-client/sql-server-native-client-programming.md). The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver is based on the ODBC driver that ships in the Windows operating system. For more information, see [Windows Data Access Components SDK](https://msdn.microsoft.com/library/aa968814(VS.85).aspx).  
   
 This release of the ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] contains the following new features:  
   
@@ -35,10 +35,10 @@ This release of the ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssn
 The –l option specifies the number of seconds before a `bcp.exe` login to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] times out when you try to connect to a server. The default login timeout is 15 seconds. The login timeout must be a number between 0 and 65534. If the value supplied is not numeric or does not fall into that range, `bcp.exe` generates an error message. A value of 0 specifies an infinite timeout. A login timeout of less than (approximately) 10 seconds is not reliable.  
   
 ### Driver-Aware Connection Pooling  
-The ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports [Driver-Aware Connection Pooling](http://msdn.microsoft.com/library/hh405031(VS.85).aspx). For more information, see [Driver-Aware Connection Pooling in the ODBC Driver for SQL Server](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md).  
+The ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports [Driver-Aware Connection Pooling](https://msdn.microsoft.com/library/hh405031(VS.85).aspx). For more information, see [Driver-Aware Connection Pooling in the ODBC Driver for SQL Server](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md).  
   
 ### Asynchronous Execution (Notification Method)  
-The ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports [Asynchronous Execution (Notification Method)](http://msdn.microsoft.com/library/hh405038(VS.85).aspx). For a usage sample, see [Asynchronous Execution &#40;Notification Method&#41; Sample](../../../connect/odbc/windows/asynchronous-execution-notification-method-sample.md).  
+The ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports [Asynchronous Execution (Notification Method)](https://msdn.microsoft.com/library/hh405038(VS.85).aspx). For a usage sample, see [Asynchronous Execution &#40;Notification Method&#41; Sample](../../../connect/odbc/windows/asynchronous-execution-notification-method-sample.md).  
   
 ### Connection Resiliency
 To ensure that applications remain connected to a Microsoft Azure SQL Database, the ODBC driver on Windows can restore idle connections. For more information, see [Connection Resiliency in the Windows ODBC Driver](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md).  

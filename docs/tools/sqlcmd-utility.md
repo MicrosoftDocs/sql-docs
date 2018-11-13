@@ -1,7 +1,7 @@
 ---
 title: "sqlcmd Utility | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/12/2018"
+ms.date: "11/13/2018"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
@@ -163,7 +163,7 @@ Sets the Column Encryption Setting to `Enabled`. For more information, see [Alwa
    *AAD Integrated Authentication is not currently supported on Linux or macOS*.
 
     ```
-    Sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net  -G
+    Sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net -G
     ```  
 
     This will generate the following connection string in the backend: 
@@ -189,7 +189,7 @@ Sets the Column Encryption Setting to `Enabled`. For more information, see [Alwa
    Interactive mode requires a password to be manually entered, or for accounts with multi-factor authentication enabled, complete your configured MFA authentication method.
 
    ``` 
-   sqlcmd -S testsrv.database.windows.net -d Target_DB_or_DW -U alice@aadtest.onmicrosoft.com -G  
+   sqlcmd -S testsrv.database.windows.net -d Target_DB_or_DW -G -U alice@aadtest.onmicrosoft.com
    ```
 
    The previous command generates the following connection string in the backend:  
@@ -201,10 +201,13 @@ Sets the Column Encryption Setting to `Enabled`. For more information, see [Alwa
    In case an Azure AD user is a domain federated user using a Windows account, the user name required in the command-line, contains its domain account (for example,  joe@contoso.com see below):
 
    ```
-   sqlcmd -S testsrv.database.windows.net -d Target_DB_or_DW -U joe@contoso.com  -G  
+   sqlcmd -S testsrv.database.windows.net -d Target_DB_or_DW -G -U joe@contoso.com  
    ```
  
-   If guest users exist in a specific Azure AD and are part of a group that exist in SQL DB that has database permissions to execute the sqlcmd command, their guest user alias is used (for example, *keith0@adventure-works.com*). 
+   If guest users exist in a specific Azure AD and are part of a group that exist in SQL DB that has database permissions to execute the sqlcmd command, their guest user alias is used (for example, *keith0@adventureworks.com*).
+
+  >[!IMPORTANT]
+  >There is a known issue when using the `-G` and `-U` option with SQLCMD, where putting the `-U` option before the `-G` option may cause authentication to fail. Always start with the `-G` option followed by the `-U` option.
 
     
  **-H** *workstation_name*  
@@ -866,7 +869,7 @@ When you press ENTER, the following informational message is printed: "Changed d
 Examples using Azure Active Directory Authentication:
 ```
 sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net  -G  -l 30
-sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net -U bob@contoso.com -P MyAADPassword -G -l 30
+sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net -G -U bob@contoso.com -P MyAADPassword -l 30
 ```
   
 ## sqlcmd Best Practices  

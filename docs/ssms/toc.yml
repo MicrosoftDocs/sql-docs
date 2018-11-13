@@ -9,6 +9,8 @@
     href: download-sql-server-management-studio-ssms.md#release-notes
   - name: Install non-English SSMS
     href: install-other-languages.md
+  - name: SSMS Support Policy
+    href: ssms-supportpolicy.md
 - name: Install SQL Server PowerShell Module
   href: ../powershell/download-sql-server-ps-module.md?toc=/sql/ssms/toc.json
 - name: SQL Server Agent +

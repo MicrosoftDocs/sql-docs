@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Find in Files dialog box"
 ms.assetid: bf92770a-33df-43ef-85ad-5a9223649b98
-author: MightyPen
-ms.author: genemi
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

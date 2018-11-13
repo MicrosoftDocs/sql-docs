@@ -11,8 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Breakpoints Window [Transact-SQL]"
 ms.assetid: bad88d10-fdd5-4d3d-b5ea-a4f063847485
-author: MightyPen
-ms.author: genemi
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

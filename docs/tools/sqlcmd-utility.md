@@ -57,7 +57,7 @@ You can try the sqlcmd utility from Azure Cloud Shell as it is pre-installed by 
 > [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] (SSMS) uses the Microsoft [!INCLUDE[dnprdnshort_md](../includes/dnprdnshort-md.md)] SqlClient for execution in regular and SQLCMD mode in **Query Editor**. When **sqlcmd** is run from the command-line, **sqlcmd** uses the ODBC driver. Because different default options may apply, you might see different behavior when you execute the same query in [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] in SQLCMD Mode and in the **sqlcmd** utility.  
 >   
   
- Currently, **sqlcmd** does not require a space between the command-line option and the value. However, in a future release, a space may be required between the command-line option and the value.  
+ Currently, **sqlcmd** doesn't require a space between the command-line option and the value. However, in a future release, a space may be required between the command-line option and the value.  
  
  Other topics:
 - [Start the sqlcmd Utility](../relational-databases/scripting/sqlcmd-start-the-utility.md)   
@@ -118,7 +118,7 @@ sqlcmd
 ## Command-line Options  
  **Login-Related Options**  
   **-A**  
- Signs in to SQL Server  with a Dedicated Administrator Connection (DAC). This kind of connection is used to troubleshoot a server. This connection works only with server computers that support DAC. If DAC is not available, **sqlcmd** generates an error message, and then exits. For more information about DAC, see [Diagnostic Connection for Database Administrators](../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md). The -A option is not supported with the -G option. When connecting to SQL Database using -A, you must be a SQL server administrator. The DAC is not available for an Azure Active Directory administrator.
+ Signs in to SQL Server  with a Dedicated Administrator Connection (DAC). This kind of connection is used to troubleshoot a server. This connection works only with server computers that support DAC. If DAC is not available, **sqlcmd** generates an error message, and then exits. For more information about DAC, see [Diagnostic Connection for Database Administrators](../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md). The -A option isn't supported with the -G option. When connecting to SQL Database using -A, you must be a SQL server administrator. DAC isn't available for an Azure Active Directory administrator.
   
  **-C**  
  This switch is used by the client to configure it to implicitly trust the server certificate without validation. This option is equivalent to the ADO.NET option `TRUSTSERVERCERTIFICATE = true`.  
@@ -204,7 +204,7 @@ Sets the Column Encryption Setting to `Enabled`. For more information, see [Alwa
    sqlcmd -S testsrv.database.windows.net -d Target_DB_or_DW -G -U joe@contoso.com  
    ```
  
-   If guest users exist in a specific Azure AD and are part of a group that exist in SQL DB that has database permissions to execute the sqlcmd command, their guest user alias is used (for example, *keith0@adventureworks.com*).
+   If guest users exist in a specific Azure AD and are part of a group that exists in SQL DB that has database permissions to execute the sqlcmd command, their guest user alias is used (for example, *keith0@adventureworks.com*).
 
   >[!IMPORTANT]
   >There is a known issue when using the `-G` and `-U` option with SQLCMD, where putting the `-U` option before the `-G` option may cause authentication to fail. Always start with the `-G` option followed by the `-U` option.
@@ -275,7 +275,7 @@ We recommend that you use a strong password.
 > [!NOTE]  
 >  The OSQLUSER environment variable is available for backward compatibility. The SQLCMDUSER environment variable takes precedence over the OSQLUSER environment variable. This means that **sqlcmd** and **osql** can be used next to each other without interference. It also means that existing **osql** scripts will continue to work.  
   
- If neither the **-U** option nor the **-P** option is specified, **sqlcmd** tries to connect by using Microsoft Windows Authentication mode. Authentication is based on the Windows account of the user who is running **sqlcmd**.  
+ If neither the **-U** option or the **-P** option is specified, **sqlcmd** tries to connect by using Microsoft Windows Authentication mode. Authentication is based on the Windows account of the user who is running **sqlcmd**.  
   
  If the **-U** option is used with the **-E** option (described later in this article), an error message is generated. If the **–U** option is followed by more than one argument, an error message is generated and the program exits.  
   
@@ -398,7 +398,7 @@ We recommend that you use a strong password.
   
  **Formatting Options**  
   **-h** *headers*  
- Specifies the number of rows to print between the column headings. The default is to print headings one time for each set of query results. This option sets the **sqlcmd** scripting variable SQLCMDHEADERS. Use **-1** to specify that headers should not be printed. Any value that is not valid causes **sqlcmd** to generate an error message and then exit.  
+ Specifies the number of rows to print between the column headings. The default is to print headings one time for each set of query results. This option sets the **sqlcmd** scripting variable SQLCMDHEADERS. Use **-1** to specify that headers not be printed. Any value that is not valid causes **sqlcmd** to generate an error message and then exit.  
   
  **-k** [**1** | **2**]  
  Removes all control characters, such as tabs and new line characters from the output. This parameter preserves column formatting when data is returned. If 1 is specified, the control characters are replaced by a single space. If 2 is specified, consecutive control characters are replaced by a single space. **-k** is the same as **-k1**.  
@@ -792,7 +792,7 @@ We recommend that you use a strong password.
   
 -   If an input file that is located on a remote server is called from **sqlcmd** on a local computer and the file contains a drive file path such as :Out c:\OutputFile.txt. The output file is created on the local computer and not on the remote server.  
   
--   Valid file paths include: `C:\<filename>`, `\\<Server>\<Share$>\<filename>` and `"C:\Some Folder\<file name>"`. If there is a space in the path, use quotation marks.  
+-   Valid file paths include: `C:\<filename>`, `\\<Server>\<Share$>\<filename>`, and `"C:\Some Folder\<file name>"`. If there is a space in the path, use quotation marks.  
   
 -   Each new **sqlcmd** session will overwrite existing files that have the same names.  
   

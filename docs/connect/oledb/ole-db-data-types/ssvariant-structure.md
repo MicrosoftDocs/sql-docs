@@ -24,7 +24,7 @@ manager: craigg
 
   The **SSVARIANT** structure, which is defined in msoledbsql.h, corresponds to a DBTYPE_SQLVARIANT value in the OLE DB Driver for SQL Server.  
   
- **SSVARIANT** is a discriminating union. Depending on the value of the vt member, the consumer can determine which member to read. vt values correspond to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] data types. Therefore, the **SSVARIANT** structure can hold any SQL Server type. For more information about the data structure for standard OLE DB types, see [Type Indicators](http://go.microsoft.com/fwlink/?LinkId=122171).  
+ **SSVARIANT** is a discriminating union. Depending on the value of the vt member, the consumer can determine which member to read. vt values correspond to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] data types. Therefore, the **SSVARIANT** structure can hold any SQL Server type. For more information about the data structure for standard OLE DB types, see [Type Indicators](https://go.microsoft.com/fwlink/?LinkId=122171).  
   
 ## Remarks  
  When DataTypeCompat==80, several **SSVARIANT** subtypes become strings. For example, the following vt values will appear in **SSVARIANT** as VT_SS_WVARSTRING:  

@@ -62,7 +62,7 @@ You can use Secure Sockets Layer (SSL) to encrypt connections to [!INCLUDE[ssNoV
 
 Enabling encryption increases security at the expense of performance.
 
-For more information, see [Encrypting Connections to SQL Server](http://go.microsoft.com/fwlink/?LinkId=220900) and [Using Encryption Without Validation](https://docs.microsoft.com/sql/relational-databases/native-client/features/using-encryption-without-validation).
+For more information, see [Encrypting Connections to SQL Server](https://go.microsoft.com/fwlink/?LinkId=220900) and [Using Encryption Without Validation](https://docs.microsoft.com/sql/relational-databases/native-client/features/using-encryption-without-validation).
 
 Regardless of the settings for **Encrypt** and **TrustServerCertificate**, the server login credentials (user name and password) are always encrypted. The following table shows the effect of the **Encrypt** and **TrustServerCertificate** settings.  
 

@@ -44,7 +44,7 @@ public final void setMaxRows(int max)
   
  When the setMaxRows method is called, the [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] executes the SET ROWCOUNT SQL statement when it runs the application's query. This causes the JDBC driver to limit the maximum number of rows affected by all the [!INCLUDE[tsql](../../../includes/tsql-md.md)] statements executed by that query, not just the number of rows returned by that query. If the application needs to set a limit only on the top-level [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) object, it should use SELECT TOP N SQL syntax in the query instead of the setMaxRows method.  
   
- For more information about the SET ROWCOUNT SQL statement, see the "[SET ROWCOUNT (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=139522)" topic in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Books Online.  
+ For more information about the SET ROWCOUNT SQL statement, see the "[SET ROWCOUNT (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=139522)" topic in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Books Online.  
   
 ## See Also  
  [SQLServerStatement Members](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

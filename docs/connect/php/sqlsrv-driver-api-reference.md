@@ -50,7 +50,7 @@ The SQLSRV driver contains the following functions:
 |[sqlsrv_server_info](../../connect/php/sqlsrv-server-info.md)|Provides information about the server.|  
   
 ## Reference  
-[PHP Manual](http://php.net/manual)  
+[PHP Manual](https://php.net/manual)  
   
 ## See Also  
 [Overview of the Microsoft Drivers for PHP for SQL Server](../../connect/php/overview-of-the-php-sql-driver.md)

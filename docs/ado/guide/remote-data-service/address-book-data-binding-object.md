@@ -30,7 +30,7 @@ The Address Book application uses the [RDS.DataControl](../../../ado/reference/r
 ```vb
 <OBJECT classid="clsid:BD96C556-65A3-11D0-983A-00C04FC29E33"  
    ID=DC1 Width=1 Height=1>  
-   <PARAM NAME="SERVER" VALUE="http://<%=Request.ServerVariables("SERVER_NAME")%>">  
+   <PARAM NAME="SERVER" VALUE="https://<%=Request.ServerVariables("SERVER_NAME")%>">  
    <PARAM NAME="CONNECT" VALUE="Provider=sqloledb;  
 Initial Catalog=AddrBookDb;Integrated Security=SSPI;">  
 </OBJECT>  
@@ -55,7 +55,7 @@ Initial Catalog=AddrBookDb;Integrated Security=SSPI;">
   
 |Parameter|Description|  
 |---------------|-----------------|  
-|[SERVER](../../../ado/reference/rds-api/server-property-rds.md)|If you are using HTTP, the value is the name of the server computer preceded by `http://`.|  
+|[SERVER](../../../ado/reference/rds-api/server-property-rds.md)|If you are using HTTP, the value is the name of the server computer preceded by `https://`.|  
 |[CONNECT](../../../ado/reference/rds-api/connect-property-rds.md)|Provides the necessary connection information for the **RDS.DataControl** to connect to SQL Server.|  
 |[SQL](../../../ado/reference/rds-api/sql-property.md)|Sets or returns the query string used to retrieve the [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).|  
   

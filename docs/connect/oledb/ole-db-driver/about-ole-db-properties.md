@@ -46,6 +46,6 @@ manager: craigg
   
 ## See Also  
  [Creating an OLE DB Driver for SQL Server Application](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)   
- [Properties (OLE DB)](http://go.microsoft.com/fwlink/?LinkId=112207)  
+ [Properties (OLE DB)](https://go.microsoft.com/fwlink/?LinkId=112207)  
   
   

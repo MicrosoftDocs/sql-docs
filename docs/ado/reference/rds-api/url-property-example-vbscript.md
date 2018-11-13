@@ -18,7 +18,7 @@ manager: craigg
 ---
 # URL Property Example (VBScript)
 > [!IMPORTANT]
->  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
  The following code demonstrates how to set the **URL** property on the client side to specify an .asp file that in turn handles the submission of changes to the data source.  
   
@@ -84,7 +84,7 @@ body {
 <script Language="VBScript">  
 Sub Getdata()  
   
-      ADC.URL = "http://MyServer/URLServerVBS.asp"  
+      ADC.URL = "https://MyServer/URLServerVBS.asp"  
       ADC.Refresh  
 End Sub  
   

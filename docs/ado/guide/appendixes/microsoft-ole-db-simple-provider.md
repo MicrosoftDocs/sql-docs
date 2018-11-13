@@ -110,7 +110,7 @@ adoRS.Open "https://WebServer/VRoot/portfolio.xml, adoConn
 
 ```vb
 'HTTP://
-adoRS.Open "http://WebServer/VRoot/portfolio.xml", adoConn
+adoRS.Open "https://WebServer/VRoot/portfolio.xml", adoConn
 'FILE://
 adoRS.Open "file:/// C:\\Directory\\portfolio.xml", adoConn
 'UNC Path
@@ -146,7 +146,7 @@ adoRS.Open "C:\Directory\portfolio.xml", adoConn
       <price>$70.00</price>
       <info>
          <companyname>Microsoft Corporation</companyname>
-         <website>http://www.microsoft.com</website>
+         <website>https://www.microsoft.com</website>
       </info>
    </stock>
    <stock>
@@ -155,7 +155,7 @@ adoRS.Open "C:\Directory\portfolio.xml", adoConn
       <price>$107.00</price>
       <info>
          <companyname>Apple Computer, Inc.</companyname>
-         <website>http://www.apple.com</website>
+         <website>https://www.apple.com</website>
       </info>
    </stock>
    <stock>
@@ -164,7 +164,7 @@ adoRS.Open "C:\Directory\portfolio.xml", adoConn
       <price>$50.00</price>
       <info>
          <companyname>Dell Corporation</companyname>
-         <website>http://www.dell.com</website>
+         <website>https://www.dell.com</website>
       </info>
     </stock>
     <stock>
@@ -173,7 +173,7 @@ adoRS.Open "C:\Directory\portfolio.xml", adoConn
        <price>$115.00</price>
        <info>
           <companyname>Intel Corporation</companyname>
-          <website>http://www.intel.com</website>
+          <website>https://www.intel.com</website>
        </info>
    </stock>
 </portfolio>
@@ -195,7 +195,7 @@ Private Sub BrowseHierRecordset()
     Set adoChildRS = ADODB.Recordset
 
     adoConn.Open "Provider=MSDAOSP; Data Source=MSXML2.DSOControl.2.6;"
-    adoRS.Open "http://bwillett3/Kowalski/portfolio.xml", adoConn
+    adoRS.Open "https://bwillett3/Kowalski/portfolio.xml", adoConn
 
     Dim iLevel As Integer
     iLevel = 0

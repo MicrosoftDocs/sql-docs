@@ -1,12 +1,10 @@
 ---
 title: "Administer Multiple Servers Using Central Management Servers | Microsoft Docs"
-ms.custom: ""
 ms.date: "08/12/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords: 
   - "multiserver queries"

@@ -217,7 +217,7 @@ The example below contains a simple Java application that connects to Azure SQL 
 	3. Click the "App registrations" tab.
 	4. In the drawer, click "New application registration".
 	5. Enter mytokentest as a friendly name for the application, select "Web App/API".
-	6. We don't need SIGN-ON URL. Just provide anything: "http://mytokentest".
+	6. We don't need SIGN-ON URL. Just provide anything: "https://mytokentest".
 	7. Click "Create" at the bottom.
 	9. While still in the Azure portal, click the "Settings" tab of your application, and open the "Properties" tab.
 	10. Find the "Application ID" (AKA Client ID) value and copy it aside, you need this later when configuring your application (for example, 1846943b-ad04-4808-aa13-4702d908b5c1). See the following snapshot.

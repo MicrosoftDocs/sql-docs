@@ -5,14 +5,13 @@ ms.date: "08/12/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: security
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.dmf.condition.advancededit.f1"
 ms.assetid: a0bbe501-78c5-45ad-9087-965d04855663
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Advanced Edit (Condition) Dialog Box

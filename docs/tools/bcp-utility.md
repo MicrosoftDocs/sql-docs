@@ -5,8 +5,7 @@ ms.date: "02/12/2018"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords: 
   - "bcp utility [SQL Server]"

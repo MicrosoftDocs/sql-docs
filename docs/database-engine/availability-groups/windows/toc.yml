@@ -23,7 +23,7 @@
     - name: PowerShell
       href: create-an-availability-group-sql-server-powershell.md
     - name: Azure virtual machines
-      href: http://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-availability-group-overview
+      href: https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-availability-group-overview
   - name: Listener
     href: create-or-configure-an-availability-group-listener-sql-server.md
 - name: Concepts

@@ -9,7 +9,7 @@ ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 
 author: DBArgenis
-ms.author: Argenis.Fernandez
+ms.author: argenisf
 manager: craigg
 ---
 # Hybrid Buffer Pool

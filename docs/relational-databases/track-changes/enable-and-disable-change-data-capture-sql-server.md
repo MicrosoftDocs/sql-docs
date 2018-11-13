@@ -1,12 +1,10 @@
 ---
 title: "Enable and Disable Change Data Capture (SQL Server) | Microsoft Docs"
-ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: 
-  - "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "change data capture [SQL Server], enabling tables"
@@ -14,8 +12,8 @@ helpviewer_keywords:
   - "change data capture [SQL Server], disabling databases"
   - "change data capture [SQL Server], disabling tables"
 ms.assetid: b741894f-d267-4b10-adfe-cbc14aa6caeb
-author: "rothja"
-ms.author: "jroth"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Enable and Disable Change Data Capture (SQL Server)

@@ -20,7 +20,7 @@ manager: craigg
 > [!IMPORTANT]  
 >  The connection resiliency feature is supported on Microsoft Azure SQL Databases and SQL Server 2014 (and later) server versions.  
   
- For additional information about idle connection resiliency, see [Technical Article – Idle Connection Resiliency](http://go.microsoft.com/fwlink/?LinkId=393996).  
+ For additional information about idle connection resiliency, see [Technical Article – Idle Connection Resiliency](https://go.microsoft.com/fwlink/?LinkId=393996).  
   
  To control reconnect behavior, the ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Windows has two options:  
   

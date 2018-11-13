@@ -1,12 +1,10 @@
 ---
 title: "Work with Change Data (SQL Server) | Microsoft Docs"
-ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: 
-  - "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "change data [SQL Server]"
@@ -14,8 +12,8 @@ helpviewer_keywords:
   - "change data capture [SQL Server], LSN boundaries"
   - "change data capture [SQL Server], query functions"
 ms.assetid: 5346b852-1af8-4080-b278-12efb9b735eb
-author: "rothja"
-ms.author: "jroth"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Work with Change Data (SQL Server)

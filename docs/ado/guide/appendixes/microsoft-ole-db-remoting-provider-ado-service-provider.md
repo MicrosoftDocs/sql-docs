@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: 11/08/2018
 ms.reviewer: ""
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,12 +20,12 @@ manager: craigg
 The Microsoft OLE DB Remoting Provider enables a local user on a client machine to invoke data providers on a remote machine. Specify the data provider parameters for the remote machine as you would if you were a local user on the remote machine. Then specify the parameters used by the Remoting Provider to access the remote machine. You can then access the remote machine as if you were a local user.
 
 > [!IMPORTANT]
->  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to  [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).
+>  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to  [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).
 
 ## Provider Keyword
  To invoke the OLE DB Remoting Provider, specify the following keyword and value in the connection string. (Note the blank space in the provider name.)
 
-```
+```vb
 "Provider=MS Remote"
 ```
 
@@ -52,14 +52,14 @@ The Microsoft OLE DB Remoting Provider enables a local user on a client machine 
 
  You may also set writable dynamic properties by specifying their names as keywords in the connection string. For example, set the **Internet Timeout** dynamic property to five seconds by specifying:
 
-```
+```vb
 Dim cn as New ADODB.Connection
 cn.Open "Provider=MS Remote;Internet Timeout=5000"
 ```
 
  You may also set or retrieve a dynamic property by specifying its name as the index to the **Properties** property. The following example shows how to get and print the current value of the **Internet Timeout** dynamic property, and then set a new value:
 
-```
+```vb
 Debug.Print cn.Properties("Internet Timeout")
 cn.Properties("Internet Timeout") = 5000
 ```
@@ -74,11 +74,11 @@ cn.Properties("Internet Timeout") = 5000
 ## Example
  This example performs a query on the **Authors** table of the **Pubs** database on a server named *YourServer*. The names of the remote data source and remote server are provided in the [Open](../../../ado/reference/ado-api/open-method-ado-connection.md) method of the[Connection](../../../ado/reference/ado-api/connection-object-ado.md) object, and the SQL query is specified in the[Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) method of the [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object. A **Recordset** object is returned, edited, and used to update the data source.
 
-```
+```vb
 Dim rs as New ADODB.Recordset
 Dim cn as New ADODB.Connection
 cn.Open  "Provider=MS Remote;Data Source=pubs;" & _
-         "Remote Server=http://YourServer"
+         "Remote Server=https://YourServer"
 rs.Open "SELECT * FROM authors", cn
 ...                'Edit the recordset
 rs.UpdateBatch     'Equivalent of RDS SubmitChanges
@@ -86,4 +86,4 @@ rs.UpdateBatch     'Equivalent of RDS SubmitChanges
 ```
 
 ## See Also
- [Overview of the OLE DB Remoting Provider](http://msdn.microsoft.com/4083b72f-68c4-4252-b366-abb70db5ca2b)
+ [Overview of the OLE DB Remoting Provider](https://msdn.microsoft.com/4083b72f-68c4-4252-b366-abb70db5ca2b)

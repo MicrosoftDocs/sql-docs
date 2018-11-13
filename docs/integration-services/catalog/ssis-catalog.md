@@ -1,7 +1,7 @@
 ---
 title: "SSIS Catalog | Microsoft Docs"
 ms.custom: ""
-ms.date: 06/04/2018
+ms.date: 11/12/2018
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
@@ -356,7 +356,7 @@ To run the **SSIS Server Maintenance Job**, SSIS creates the SQL Server login **
 ## Catalog Properties Dialog Box
   Use the Catalog Properties dialog box to configure the SSISDB catalog. Catalog properties define how sensitive data is encrypted, how operations and project versioning data is retained, and when validation operations time out. The SSISDB catalog is a central storage and administration point for [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] projects, packages, parameters, and environments.  
   
- You can also view catalog properties in the catalog.catalog_property view, and set the properties by using the catalog.configure_catalog stored procedure. For more information, see [catalog.catalog_properties &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md) and [catalog.configure_catalog &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md).  
+ You can also view catalog properties in the `catalog.catalog_properties` view, and set the properties by using the `catalog.configure_catalog` stored procedure. For more information, see [catalog.catalog_properties &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md) and [catalog.configure_catalog &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md).  
   
  **What do you want to do?**  
   
@@ -375,15 +375,14 @@ To run the **SSIS Server Maintenance Job**, SSIS creates the SQL Server login **
 ###  <a name="options"></a> Configure the Options  
   
 #### Options  
- The following table describes certain properties in the dialog box and the corresponding properties in the catalog.catalog_property view.  
+ The following table describes certain properties in the dialog box and the corresponding properties in the `catalog.catalog_properties` view.  
   
-|Property Name (Catalog Properties dialog box)|Property Name (catalog.catalog_property view)|Description|  
+|Property Name (Catalog Properties dialog box)|Property Name (catalog.catalog_properties view)|Description|  
 |-----------------------------------------------------|------------------------------------------------------|-----------------|  
-|Encryption Algorithm Name|ENCRYPTION_CLEANUP_ENABLED|Specifies the type of encryption that is used to encrypt the sensitive parameter values in the catalog. The following are the possible values:<br /><br /> DES<br /><br /> TRIPLE_DES<br /><br /> TRIPLE_DES_3KEY<br /><br /> DESPX<br /><br /> AES_128<br /><br /> AES_192<br /><br /> AES_256 (default)|  
-|Validation Timeout (seconds)|VALIDATION_TIMEOUT|Specify the maximum number of seconds a project validation or a package validation can run before it is stopped. The default value is 300 seconds.<br /><br /> Performing the validation is an asynchronous operation. The larger the project or package is, the longer it takes to validate.<br /><br /> For information on validating projects and packages, see [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md).|  
+|Encryption Algorithm Name|ENCRYPTION_ALGORITHM|Specifies the type of encryption that is used to encrypt the sensitive parameter values in the catalog. The following are the possible values:<br /><br /> DES<br /><br /> TRIPLE_DES<br /><br /> TRIPLE_DES_3KEY<br /><br /> DESPX<br /><br /> AES_128<br /><br /> AES_192<br /><br /> AES_256 (default)|  
+|Maximum Number of Versions per Project|MAX_PROJECT_VERSIONS|Specify how many versions of a project are stored in the catalog. Older versions of projects that exceed the maximum are removed when the project version cleanup job runs.|  
 |Clean Logs Periodically|OPERATION_CLEANUP_ENABLED|Set the property to True to indicate that the SQL Server Agent job, operations cleanup, runs. Otherwise, set the property to False.|  
 |Retention Period (days)|RETENTION_WINDOW|Specify the maximum age of allowable operations data (in days). Data that is older than the specified number of days are removed by the SQL Agent job, operations cleanup.|  
-|Maximum Number of Versions per Project|MAX_PROJECT_VERSIONS|Specify how many versions of a project are stored in the catalog. Older versions of projects that exceed the maximum are removed when the project version cleanup job runs.|  
 
 ## Back up, Restore, and Move the SSIS Catalog
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

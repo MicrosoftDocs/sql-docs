@@ -42,7 +42,7 @@ When sending data to the server, the [!INCLUDE[ssDriverPHP](../../includes/ssdri
 
 [sqlsrv_field_metadata](../../connect/php/sqlsrv-field-metadata.md)
 
-[PHP Types](http://php.net/manual/language.types.php)
+[PHP Types](https://php.net/manual/language.types.php)
 
 [Data Types (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/data-types/data-types-transact-sql)  
   

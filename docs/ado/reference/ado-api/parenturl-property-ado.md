@@ -29,13 +29,13 @@ Indicates an absolute URL string that points to the parent [Record](../../../ado
  Suppose "second" is a folder contained under "first". Open the **Record** object by using the following syntax:  
   
 ```  
-record.ActiveConnection = "http://first"  
+record.ActiveConnection = "https://first"  
 record.Open "second"  
 ```  
   
- Now, the value of `the` **ParentURL** property is `"http://first"`, the same as **ActiveConnection**.  
+ Now, the value of `the` **ParentURL** property is `"https://first"`, the same as **ActiveConnection**.  
   
- The source can also be an absolute URL such as, `"http://first/second"`. The **ParentURL** property is then `"http://first"`, the level above `"second"`.  
+ The source can also be an absolute URL such as, `"https://first/second"`. The **ParentURL** property is then `"https://first"`, the level above `"second"`.  
   
  This property may be a null value if:  
   

@@ -42,8 +42,8 @@ This documentation for the Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../.
 -   [Using Transparent Network IP Resolution](../../../connect/odbc/using-transparent-network-ip-resolution.md)   
 
 ## Community  
-- [Microsoft ODBC Driver For SQL Server Team blog](http://blogs.msdn.com/sqlnativeclient/default.aspx)  
-- [SQL Server Data Access Forum](http://social.technet.microsoft.com/Forums/en/sqldataaccess/threads)  
+- [Microsoft ODBC Driver For SQL Server Team blog](https://blogs.msdn.com/sqlnativeclient/default.aspx)  
+- [SQL Server Data Access Forum](https://social.technet.microsoft.com/Forums/en/sqldataaccess/threads)  
   
 ## See Also  
 - [About SQL Server Native Client](https://msdn.microsoft.com/sqlserver/ff658532.aspx)   

@@ -30,8 +30,8 @@ The general rules are:
 -   A Distributor can be any version as long as it is greater than or equal to the Publisher version (in many cases the Distributor is the same instance as the Publisher).    
 -   A Publisher can be any version as long as it less than or equal to the Distributor version.    
 -   Subscriber version depends on the type of publication:    
-    -   A Subscriber to a transactional publication can be any version within two versions of the Publisher version. For example: a SQL Server 2012 (11.x) Publisher can have SQL Server 2014 (12.x) and SQL Server 2016 (13.x) Subscribers; and a SQL Server 2016 (13.x) Publisher can have SQL Server 2014 (12.x) and SQL Server 2012 (11.x) Subscribers.     
-    -   A Subscriber to a merge publication can be any version less than or equal to the Publisher version.  
+    - A Subscriber to a transactional publication can be any version within two versions of the Publisher version. For example: a SQL Server 2012 (11.x) Publisher can have SQL Server 2014 (12.x) and SQL Server 2016 (13.x) Subscribers; and a SQL Server 2016 (13.x) Publisher can have SQL Server 2014 (12.x) and SQL Server 2012 (11.x) Subscribers.     
+    - A Subscriber to a merge publication can be all versions equal to or lower than the Publisher version which are supported as per the versions life cycle support cycle.  
 
 
 ## Replication Matrix

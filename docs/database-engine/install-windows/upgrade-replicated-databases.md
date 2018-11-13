@@ -27,8 +27,8 @@ manager: craigg
 -   A Distributor can be any version as long as it is greater than or equal to the Publisher version (in many cases the Distributor is the same instance as the Publisher).    
 -   A Publisher can be any version as long as it less than or equal to the Distributor version.    
 -   Subscriber version depends on the type of publication:    
-    -   A Subscriber to a transactional publication can be any version within two versions of the Publisher version. For example: a SQL Server 2012 (11.x) Publisher can have SQL Server 2014 (12.x) and SQL Server 2016 (13.x) Subscribers; and a SQL Server 2016 (13.x) Publisher can have SQL Server 2014 (12.x) and SQL Server 2012 (11.x) Subscribers.     
-    -   A Subscriber to a merge publication can be any version less than or equal to the Publisher version.  
+    - A Subscriber to a transactional publication can be any version within two versions of the Publisher version. For example: a SQL Server 2012 (11.x) Publisher can have SQL Server 2014 (12.x) and SQL Server 2016 (13.x) Subscribers; and a SQL Server 2016 (13.x) Publisher can have SQL Server 2014 (12.x) and SQL Server 2012 (11.x) Subscribers.     
+    - A Subscriber to a merge publication can be all versions equal to or lower than the Publisher version which are supported as per the versions life cycle support cycle.  
  
 The upgrade path to SQL Server is different depending on the deployment pattern. SQL Server offers two upgrade paths in general:
 - Side-by-side: Deploy a parallel environment and move databases along with the associated instance level objects, such as logins, jobs, etc. to the new environment. 
@@ -101,10 +101,10 @@ These steps outline the order in which servers in a replication topology should 
 
 
 ## Steps for side-by-side migration of the Distributor to Windows Server 2012 R2
-If you are planning to upgrade your SQL Server instance to SQL 2016 (or greater), and your current OS is Windows 2008 (or 2008 R2), then you will need to perform a side-by side upgrade of the OS to Windows Server 2012 R2 or greater. The reason for this intermediate OS upgrade is that SQL Server 2016 cannot be installed on a Windows Server 2008/2008 R2. The following steps can be performed on either a standalone SQL Server instance, or one within an Always On Failover Cluster Instance (FCI). 
+If you are planning to upgrade your SQL Server instance to SQL 2016 (or greater), and your current OS is Windows 2008 (or 2008 R2), then you will need to perform a side-by side upgrade of the OS to Windows Server 2012 R2 or greater. The reason for this intermediate OS upgrade is that SQL Server 2016 cannot be installed on a Windows Server 2008/2008 R2, nor does Windows Server 2008/20008 R2 allow in-place upgrades. The following steps can be performed on either a standalone SQL Server instance, or one within an Always On Failover Cluster Instance (FCI).
 
   >[!NOTE]
-  > While doing an in-place OS upgrade is possible, it is not generally recommended to do so when running SQL Server. 
+  > While doing an in-place OS upgrade with a standalone SQL Server instance is supported, it is not generally recommended as there could be unforeseen issues, and there is no rollback plan. Doing an in-place OS upgrade with a Windows Failover Cluster is not supported with Windows 2008. 
 
 1. Set up a new SQL Server instance (either standalone, or Always On Failover Cluster), edition, and version as your distributor on Windows Server 2012 R2/2016 with a different windows cluster and SQL Server FCI name or standalone host name. You will need to keep the directory structure same as the old distributor to ensure that the replication agents executables, replication folders, and database file paths are found at the same path on the new environment. This will reduce any post migration/upgrade steps required.
 1. Ensure that your replication is synchronized and then shut down all of the replication agents. 

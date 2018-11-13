@@ -31,23 +31,23 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ### Analysis Services XMLA Query Editor Regions  
  The [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] XMLA Query Editor generates an outline region for each multiline XML attribute. The editor nests the outline regions for nested tags. For example, the XMLA Editor creates three outline regions for the following document.  
   
- ![XML code showing outlining](../../relational-databases/scripting/media/editoutlinexmlfull.gif "XML code showing outlining")  
+ ![XML code showing outlining](../../ssms/scripting/media/editoutlinexmlfull.gif "XML code showing outlining")  
   
  When you click the minus sign on the \<InnerTag> line, just the InnerTag is collapsed, as shown in the following illustration.  
   
- ![XML code with inner node hidden](../../relational-databases/scripting/media/editoutlinexmlinnercol.gif "XML code with inner node hidden")  
+ ![XML code with inner node hidden](../../ssms/scripting/media/editoutlinexmlinnercol.gif "XML code with inner node hidden")  
   
  When you move the pointer over the box that has the three periods (…), the code in the collapsed region appears in a tooltip, as shown in the following illustration.  
   
- ![XML code with tooltip showing hidden code](../../relational-databases/scripting/media/editoutlinexmlmouse.gif "XML code with tooltip showing hidden code")  
+ ![XML code with tooltip showing hidden code](../../ssms/scripting/media/editoutlinexmlmouse.gif "XML code with tooltip showing hidden code")  
   
  When you click the minus sign on the \<MiddleTag> line, both the MiddleTag and InnerTag are collapsed, as shown in the following illustration.  
   
- ![XML code with inner and middle tags hidden](../../relational-databases/scripting/media/editoutlinexmlmiddlecol.gif "XML code with inner and middle tags hidden")  
+ ![XML code with inner and middle tags hidden](../../ssms/scripting/media/editoutlinexmlmiddlecol.gif "XML code with inner and middle tags hidden")  
   
  When you click the minus sign on the \<OuterTag> line, all three lines are collapsed, as shown in the following illustration.  
   
- ![XML code showing all three tags hidden](../../relational-databases/scripting/media/editoutlinexmloutercol.gif "XML code showing all three tags hidden")  
+ ![XML code showing all three tags hidden](../../ssms/scripting/media/editoutlinexmloutercol.gif "XML code showing all three tags hidden")  
   
 ### Database Engine Query Editor Regions  
  The [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor generates outline regions for each element in the following hierarchy:  

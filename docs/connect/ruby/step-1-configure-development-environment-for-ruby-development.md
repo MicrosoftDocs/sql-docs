@@ -21,7 +21,7 @@ Note that the Ruby Driver uses the TDS protocol, which is enabled by default in 
 ## Windows  
   
 1.  **Download Ruby Installer**  
-If your machine does not have Ruby please install it. For new ruby users, we recommend you use Ruby 2.2.X installers. These provide a stable language and a extensive list of packages (gems) that are compatible and updated. Go the [Ruby download page](http://rubyinstaller.org/downloads/) and download the appropriate 2.1.x installer. For example if you are on a 64 bit machine, download the Ruby 2.1.6 (x64) installer.   
+If your machine does not have Ruby please install it. For new ruby users, we recommend you use Ruby 2.2.X installers. These provide a stable language and a extensive list of packages (gems) that are compatible and updated. Go the [Ruby download page](https://rubyinstaller.org/downloads/) and download the appropriate 2.1.x installer. For example if you are on a 64 bit machine, download the Ruby 2.1.6 (x64) installer.   
   
 2.  **Install Ruby**  
 Once the installer is downloaded, do the following:  

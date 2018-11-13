@@ -79,5 +79,5 @@ This sample shows how to set the PDO::ATTR_ERRMODE attribute.
 ## See Also  
 [PDO Class](../../connect/php/pdo-class.md)
 
-[PDO](http://php.net/manual/book.pdo.php)  
+[PDO](https://php.net/manual/book.pdo.php)  
   

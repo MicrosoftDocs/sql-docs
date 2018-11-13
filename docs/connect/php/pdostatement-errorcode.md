@@ -46,5 +46,5 @@ print $stmt->errorCode();
 ## See Also  
 [PDOStatement Class](../../connect/php/pdostatement-class.md)
 
-[PDO](http://php.net/manual/book.pdo.php)  
+[PDO](https://php.net/manual/book.pdo.php)  
   

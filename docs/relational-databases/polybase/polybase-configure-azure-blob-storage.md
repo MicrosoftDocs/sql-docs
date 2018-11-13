@@ -97,7 +97,7 @@ To query the data in your Hadoop data source, you must define an external table 
          [YearMeasured] int NOT NULL  
    )  
    WITH (LOCATION='/Demo/',
-         DATA_SOURCE = MyHadoopCluster,  
+         DATA_SOURCE = AzureStorage,  
          FILE_FORMAT = TextFileFormat  
    );  
    ```

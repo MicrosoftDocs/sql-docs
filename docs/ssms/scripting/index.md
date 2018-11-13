@@ -1,3 +1,3 @@
 --- 
-redirect_url: /sql/relational-databases/scripting/database-engine-scripting 
+redirect_url: /sql/ssms/scripting/database-engine-scripting 
 --- 

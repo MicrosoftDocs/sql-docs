@@ -24,7 +24,7 @@ sConn = "Provider='SQLOLEDB';Data Source='MySqlServer';" & _
 ```  
   
 > [!NOTE]
->  You can also specify an ODBC Data Source Name (DSN) or a Data Link (UDL) file in a connection string. For more information about DSNs, see [Managing Data Sources](../../../odbc/admin/managing-data-sources.md) in the ODBC Programmer's Reference. For more information about UDLs, see [Data Link API Overview](http://msdn.microsoft.com/95c180ea-bd4f-4dca-b95a-576afd135bbc) in the OLE DB Programmer's Reference.  
+>  You can also specify an ODBC Data Source Name (DSN) or a Data Link (UDL) file in a connection string. For more information about DSNs, see [Managing Data Sources](../../../odbc/admin/managing-data-sources.md) in the ODBC Programmer's Reference. For more information about UDLs, see [Data Link API Overview](https://msdn.microsoft.com/95c180ea-bd4f-4dca-b95a-576afd135bbc) in the OLE DB Programmer's Reference.  
   
  Typically, you establish a connection by calling the **Connection.Open** method with an appropriate a *connection string* as its parameter. An example is shown in the following Visual Basic code snippet:  
   

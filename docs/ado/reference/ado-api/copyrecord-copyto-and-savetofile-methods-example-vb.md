@@ -26,7 +26,7 @@ This example demonstrates how to create copies of a file using [Stream](../../..
   
 'Note:  
 ' This sample requires that "C:\checkmrk.wmf" and  
-' "http://MyServer/mywmf.wmf" exist.  
+' "https://MyServer/mywmf.wmf" exist.  
   
 Option Explicit  
   
@@ -48,10 +48,10 @@ Private Sub Form_Load()
     ' Initialize path and URL strings  
     strPicturePath = "C:\checkmrk.wmf"  
     strStreamPath = "C:\mywmf.wmf"  
-    strStreamURL = "URL=http://MyServer/mywmf.wmf"  
+    strStreamURL = "URL=https://MyServer/mywmf.wmf"  
     strStream2Path = "C:\checkmrk2.wmf"  
     strRecordPath = "C:\mywmf.wmf"  
-    strRecordURL = "http://MyServer/mywmf2.wmf"  
+    strRecordURL = "https://MyServer/mywmf2.wmf"  
   
     ' Load the file into the stream  
     objStream.Open  

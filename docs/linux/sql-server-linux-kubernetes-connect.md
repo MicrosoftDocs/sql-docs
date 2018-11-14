@@ -14,7 +14,7 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 
 # Connect to a SQL Server Always On Availability Group on Kubernetes
 
-To connect to SQL Server instances in containers on a Kubernetes cluster, create a [load balancer service](http://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer). The load balancer is an endpoint. It holds an IP address and forwards requests for the IP address to the pod running the SQL Server instance.
+To connect to SQL Server instances in containers on a Kubernetes cluster, create a [load balancer service](https://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer). The load balancer is an endpoint. It holds an IP address and forwards requests for the IP address to the pod running the SQL Server instance.
 
 To connect to an availability group replica, create a service for different replica types. You can see examples of services for different types of replicas in [sql-server-samples/ag-services.yaml](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files).
 

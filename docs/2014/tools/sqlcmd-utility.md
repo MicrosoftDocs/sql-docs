@@ -701,7 +701,7 @@ manager: craigg
   
  `GO`  
   
- When you press ENTER, the following result set is retuned.  
+ When you press ENTER, the following result set is returned.  
   
  `BusinessEntityID FirstName    LastName`  
   

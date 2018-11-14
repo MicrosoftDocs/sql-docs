@@ -44,7 +44,7 @@ For a list of SQL Server features not available on Linux, see [Unsupported featu
 
 ### Try SQL Server!    
     
-[Download SQL Server 2017](http://www.microsoft.com/sql-server/sql-server-2017)
+[Download SQL Server 2017](https://www.microsoft.com/sql-server/sql-server-2017)
 
 ## [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] editions  
  The following table describes the editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. 
@@ -211,9 +211,9 @@ For info about the Integration Services (SSIS) features supported by the edition
 ## Next steps 
  [Editions and supported features for SQL Server 2017 - Windows](../sql-server/editions-and-components-of-sql-server-2017.md)  
  [Editions and supported features for SQL Server 2016 - Windows](../sql-server/editions-and-components-of-sql-server-2016.md)  
- [Editions and supported features for SQL Server 2014 - Windows](http://msdn.microsoft.com/library/cc645993(v=sql.120).aspx)  
+ [Editions and supported features for SQL Server 2014 - Windows](https://msdn.microsoft.com/library/cc645993(v=sql.120).aspx)  
  [Installation for SQL Server](../database-engine/install-windows/installation-for-sql-server-2016.md)  
- [Product Specifications for SQL Server](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb) 
+ [Product Specifications for SQL Server](https://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb) 
 
   
   

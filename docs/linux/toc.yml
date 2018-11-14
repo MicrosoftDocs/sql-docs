@@ -253,7 +253,7 @@
   - name: DBA Stack Exchange
     href: https://dba.stackexchange.com/questions/tagged/sql-server
   - name: Stack Overflow
-    href: http://stackoverflow.com/questions/tagged/sql-server
+    href: https://stackoverflow.com/questions/tagged/sql-server
   - name: MSDN Forums
     href: https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver
   - name: Submit feedback

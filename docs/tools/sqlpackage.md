@@ -96,6 +96,8 @@ A SqlPackage.exe publish operation incrementally updates the schema of a target 
 |**/AccessToken:**|**/at**|{string}| Specifies the token based authentication access token to use when connect to the target database. |
 |**/AzureKeyVaultAuthMethod:**|**/akv**|{Interactive&#124;ClientIdSecret}|Specifies what authentication method is used for accessing Azure KeyVault |
 |**/ClientId:**|**/cid**|{string}|Specifies the Client ID to be used in authenticating against Azure KeyVault, when necessary |
+|**/DeployScriptPath:**|**/dsp**|{string}|Specifies an optional file path to output the deployment script. For Azure deployments, if there are TSQL commands to create or modify the master database, a script will be written to the same path but with "Filename_Master.sql" as the output file name. |
+|**/DeployReportPath:**|**/drp**|{string}|Specifies an optional file path to output the deployment report xml file. |
 |**/Diagnostics:**|**/d**|{True&#124;False}|Specifies whether diagnostic logging is output to the console. Defaults to False. |
 |**/DiagnosticsFile:**|**/df**|{string}|Specifies a file to store diagnostic logs. |
 |**/MaxParallelism:**|**/mp**|{int}| Specifies the degree of parallelism for concurrent operations running against a database. The default value is 8. |
@@ -470,6 +472,8 @@ A **SqlPackage.exe** script action creates a Transact-SQL incremental update scr
 |---|---|---|---|
 |**/Action:**|**/a**|Script|Specifies the action to be performed. |
 |**/AccessToken:**|**/at**|{string}| Specifies the token based authentication access token to use when connect to the target database. |
+|**/DeployScriptPath:**|**/dsp**|{string}|Specifies an optional file path to output the deployment script. For Azure deployments, if there are TSQL commands to create or modify the master database, a script will be written to the same path but with "Filename_Master.sql" as the output file name. |
+|**/DeployReportPath:**|**/drp**|{string}|Specifies an optional file path to output the deployment report xml file. |
 |**/Diagnostics:**|**/d**|{True&#124;False}|Specifies whether diagnostic logging is output to the console. Defaults to False. |
 |**/DiagnosticsFile:**|**/df**|{string}|Specifies a file to store diagnostic logs. |
 |**/MaxParallelism:**|**/mp**|{int}| Specifies the degree of parallelism for concurrent operations running against a database. The default value is 8. |

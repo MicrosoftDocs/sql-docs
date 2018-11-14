@@ -1,3 +1,11 @@
+---
+ author: MashaMSFT
+ ms.service: sql
+ ms.topic: include
+ ms.date: 11/14/2018
+ ms.author: mathoma
+---
+
 ### Transactional Replication Matrix 
 
 | **Publisher**   | **Distributor** | **Subscriber** |

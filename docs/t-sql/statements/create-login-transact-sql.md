@@ -388,14 +388,18 @@ GO
 CREATE LOGIN login_name [FROM EXTERNAL PROVIDER] { WITH <option_list> [,..]}
   
 <option_list> ::=
-    PASSWORD = {'password'}  
+    PASSWORD = {'password'}
+    | SID = sid
     | DEFAULT_DATABASE = database
     | DEFAULT_LANGUAGE = language  
 ```  
 
-## Arguments  
+> [!IMPORTANT]
+> Azure AD logins for SQL Database Managed Instance is in **public preview**. This is introduced with the syntax **FROM EXTERNAL PROVIDER**.
+
+## Arguments
 *login_name*  
-When used with the **FROM EXTERNAL PROVIDER** clause, the login specifies the Azure_Active_Directory_principal, which is an Azure AD user or group. Otherwise, the login represents the name of the SQL login that was created.
+When used with the **FROM EXTERNAL PROVIDER** clause, the login specifies the Azure Active Directory (AD) Principal, which is an Azure AD user, group, or application. Otherwise, the login represents the name of the SQL login that was created.
 
 FROM EXTERNAL PROVIDER </br>
 Specifies that the login is for Azure AD Authentication.
@@ -408,32 +412,31 @@ Passwords are case-sensitive. Passwords should always be at least eight characte
 SID **=** *sid*  
 Used to recreate a login. Applies to SQL Server authentication logins only, not Windows authentication logins. Specifies the SID of the new SQL Server authentication login. If this option is not used, SQL Server automatically assigns a SID. The SID structure depends on the SQL Server version. For SQL Database, this is a 32 byte (**binary(32)**) literal consisting of `0x01060000000000640000000000000000` plus 16 bytes representing a GUID. For example, `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`. 
 
-## Remarks  
+## Remarks
+
 - Passwords are case-sensitive.
 - New syntax is introduced for the creation of server-level principals mapped to Azure AD accounts (**FROM EXTERNAL PROVIDER**)
 - When **FROM EXTERNAL PROVIDER** is specified:
-    - The login_name must represent an existing Azure AD account (user or group) that is accessible in Azure AD by the current Azure SQL Managed Instance.
+    - The login_name must represent an existing Azure AD account (user, group, or application) that is accessible in Azure AD by the current Azure SQL Managed Instance.
     - The **PASSWORD** option cannot be used.
-    - Currently, the first Azure AD login must be created by the SQL admin using the syntax above.
+    - Currently, the first Azure AD login must be created by the SQL admin (`sysadmin`) using the syntax above.
     - Once the first Azure AD login is created, this login can create other Azure AD logins once it is granted the necessary permissions.
 - By default, when the **FROM EXTERNAL PROVIDER** clause is omitted, a regular SQL login is created.
-- Azure AD logins are visible in sys.server_principals, with type column value set to **E** for logins mapped to Azure AD users, or **X** for logins mapped to Azure AD groups.
+- Azure AD logins are visible in sys.server_principals, with type column value set to **E** and type_desc set to **EXTERNAL_LOGIN** for logins mapped to Azure AD users, or type column value set to **X** and type_desc value set to **EXTERNAL_GROUP** for logins mapped to Azure AD groups.
 - For a script to transfer logins, see [How to transfer the logins and the passwords between instances of SQL Server 2005 and SQL Server 2008](http://support.microsoft.com/kb/918992).
 - Creating a login automatically enables the new login and grants the login the server level **CONNECT SQL** permission. 
-- The server's [authentication mode](../../relational-databases/security/choose-an-authentication-mode.md) must match the login type to permit access.
-    - For information about designing a permissions system, see [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
   
 ## Logins and Permissions
 
-Only the server-level principal login (created by the provisioning process) or members of the `loginmanager`, `securityadmin`, or `sysadmin` database role in the master database can create new logins. For more information, see [Server-Level Roles](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) and [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).
+Only the server-level principal login (created by the provisioning process) or members of the `securityadmin` or `sysadmin` database role in the master database can create new logins. For more information, see [Server-Level Roles](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) and [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).
 
 By default, the standard permission granted to a newly created Azure AD login in master is:
 - **CONNECT SQL** and **VIEW ANY DATABASE**.
 
 ### SQL Database Managed Instance Logins
 
-- Must have **ALTER ANY LOGIN** permission on the server or membership in the one of the fixed server roles `loginmanager`, `securityadmin`, or `sysadmin`. Only an Azure Active Directory (Azure AD) account with **ALTER ANY LOGIN** permission on the server or membership in one of those roles can execute the create command.
-- Can either be a SQL Principal or Azure AD account with ALTER ANY LOGIN or higher permissions.
+- Must have **ALTER ANY LOGIN** permission on the server or membership in the one of the fixed server roles `securityadmin` or `sysadmin`. Only an Azure Active Directory (Azure AD) account with **ALTER ANY LOGIN** permission on the server or membership in one of those roles can execute the create command.
+- If the login is a SQL Principal, only logins that are part of the `sysadmin` role can use the create command to create logins for an Azure AD account.
 - Must be a member of Azure AD within the same directory used for Azure SQL Managed Instance.
 
 ## After creating a login  
@@ -442,16 +445,23 @@ After creating a login, the login can connect to a SQL Database Managed Instance
 - To create an Azure AD user from an Azure AD login, see [CREATE USER](../../t-sql/statements/create-user-transact-sql.md). 
 - To grant permissions to a user in a database, use the **ALTER SERVER ROLE** … **ADD MEMBER** statement to add the user to one of the built-in database roles or a custom role, or grant permissions to the user directly using the [GRANT](../../t-sql/statements/grant-transact-sql.md) statement. For more information, see [Non-admistrator Roles](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles, and [GRANT](grant-transact-sql.md) statement.
 - To grant server-wide permissions, create a database user in the master database and use the **ALTER SERVER ROLE** … **ADD MEMBER** statement to add the user to one of the administrative server roles. For more information, see [Server-Level Roles](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) and [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md), and [Server roles](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles).
+    - Use the following command to add the `sysadmin` role to an Azure AD login:
+    `ALTER SERVER ROLE sysadmin ADD MEMBER [AzureAD_Login_name]`
 - Use the **GRANT** statement, to grant server-level permissions to the new login or to a role containing the login. For more information, see [GRANT](../../t-sql/statements/grant-transact-sql.md).
-
 
 ## Limitations
 
 - Setting an Azure AD login mapped to an Azure AD group as the database owner is not supported.
 - Impersonation of Azure AD server-level principals using other Azure AD principals is supported, such as the [EXECUTE AS](execute-as-transact-sql.md) clause.
-- SQL server-level principals (logins) cannot execute the following operations targeting Azure AD principals: 
-    - EXECUTE AS USER
-    - EXECUTE AS LOGIN
+- Only SQL server-level principals (logins) that are part of the `sysadmin` role can execute the following operations targeting Azure AD principals:
+  - EXECUTE AS USER
+  - EXECUTE AS LOGIN
+- Azure AD admins cannot create an Azure AD login for a SQL Database Managed Instance. When creating an Azure AD login using an Azure AD admin for the SQL Database Managed Instance, the following error occurs:</br>
+
+    `Msg 15247, Level 16, State 1, Line 1
+    User does not have permission to perform this action.`
+
+    - This is a known limitation for **public preview** and will be fixed at a later date.
   
 ## Examples  
   
@@ -486,7 +496,7 @@ After creating a login, the login can connect to a SQL Database Managed Instance
  GO  
  ```
 
-### C. Creating a login for a local Azure AD Account
+### C. Creating a login for a local Azure AD account
  The following example creates a login for the Azure AD account joe@myaad.onmicrosoft.com that exists in the Azure AD of *myaad*.
 
 ```sql
@@ -494,7 +504,7 @@ CREATE LOGIN [joe@myaad.onmicrosoft.com] FROM EXTERNAL PROVIDER
 GO
 ```
 
-### D. Creating a login for a federated Azure AD Account
+### D. Creating a login for a federated Azure AD account
  The following example creates a login for a federated Azure AD account bob@contoso.com that exists in the Azure AD called *contoso*. User bob can also be a guest user.
 
 ```sql
@@ -506,11 +516,18 @@ GO
  The following example creates a login for the Azure AD group *mygroup* that exists in the Azure AD of *myaad*
 
 ```sql
-CREATE LOGIN [mygroup@myaad.onmicrosoft.com] FROM EXTERNAL PROVIDER
+CREATE LOGIN [mygroup] FROM EXTERNAL PROVIDER
 GO
 ```
 
-### F. Check newly added logins
+### F. Creating a login for an Azure AD application
+ The following example creates a login for the Azure AD application *myapp* that exists in the Azure AD of *myaad*
+
+```sql
+CREATE LOGIN [myapp] FROM EXTERNAL PROVIDER
+```
+
+### G. Check newly added logins
  To check the newly added login, execute the following T-SQL command:
 
 ```sql

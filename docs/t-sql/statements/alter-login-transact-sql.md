@@ -563,7 +563,7 @@ GO
 ## Syntax  
   
 ```  
--- Syntax for SQL Server  
+-- Syntax for SQL Server and Azure SQL Database Managed Instance
   
 ALTER LOGIN login_name   
     {   
@@ -599,7 +599,7 @@ ALTER LOGIN login_name
 ```  
   
 ```  
--- Syntax for Azure SQL Database and Azure SQL Data Warehouse 
+-- Syntax for Azure SQL Database Managed Instance using Azure AD logins
   
 ALTER LOGIN login_name   
   {   
@@ -611,39 +611,14 @@ ALTER LOGIN login_name
 <status_option> ::=  
     ENABLE | DISABLE  
   
-<set_option> ::=   
-    PASSWORD ='password'   
-    [  
-      OLD_PASSWORD ='oldpassword'  
-    ]   
-    | NAME = login_name  
-```  
-  
-```  
--- Syntax for Parallel Data Warehouse  
-  
-ALTER LOGIN login_name   
-    {   
-    <status_option>   
-    | WITH <set_option> [ ,... ]  
-    }   
-  
-<status_option> ::=ENABLE | DISABLE  
-  
-<set_option> ::=              
-    PASSWORD ='password'   
-    [   
-      OLD_PASSWORD ='oldpassword'  
-      | <password_option> [<password_option> ]   
-    ]  
-    | NAME = login_name  
-    | CHECK_POLICY = { ON | OFF }  
-    | CHECK_EXPIRATION = { ON | OFF }   
-      
-<password_option> ::=   
-    MUST_CHANGE | UNLOCK  
-```  
-  
+<set_option> ::=
+     DEFAULT_DATBASE = database
+   | DEFAULT_LANGUAGE = language
+```
+
+> [!IMPORTANT]
+> Azure AD logins for SQL Database Managed Instance is in **public preview**.
+
 ## Arguments  
  *login_name*  
  Specifies the name of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login that is being changed. Domain logins must be enclosed in brackets in the format [domain\user].  

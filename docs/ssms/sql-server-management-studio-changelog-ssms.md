@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Management Studio - Changelog (SSMS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/15/2018"
+ms.date: "11/16/2018"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
@@ -19,7 +19,7 @@ This article provides details about updates, improvements, and bug fixes for the
 
 ## [SSMS 18.0 (preview 5)](download-sql-server-management-studio-ssms.md)
 
-Build number: TBD<br>
+Build number: 15.0.18068.0<br>
 Release date: November 15, 2018
 
 Preview 5 is the second public preview of SSMS 18.0. For the latest General Availability (GA) version of SSMS, [download and install SSMS 17.9](#ssms-179-latest-ga-release).

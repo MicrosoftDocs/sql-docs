@@ -1,7 +1,7 @@
 ---
 title: "Download SQL Server Management Studio (SSMS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/15/2018"
+ms.date: "11/16/2018"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
@@ -52,14 +52,14 @@ For additional details about SSMS 17.9, please see the [SSMS 17.9 changelog](sql
 
 **SSMS 18.0 Public Preview 5 is now available, and is the latest generation of *SQL Server Management Studio* that provides support for [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]!**
 
-**[![download](../ssdt/media/download.png) Download SQL Server Management Studio 18.0 (preview 5)](https://go.microsoft.com/fwlink/?linkid=2014662)**
+**[![download](../ssdt/media/download.png) Download SQL Server Management Studio 18.0 (preview 5)](https://go.microsoft.com/fwlink/?linkid=2041155)**
 
-*Preview 5* is the second public preview of SSMS 18.0.
+*Preview 5* is the second public preview of SSMS 18.0. If you have a previous SSMS 18.0 preview installed, uninstall it before installing SSMS 18.0 preview 5.
 
 **Version Information**
 
 - Release number: 18.0 (preview 5)<br>
-- Build number: TBD<br>
+- Build number: 15.0.18068.0<br>
 - Release date: November 15, 2018
 
 If you have comments or suggestions, or you want to report issues, the best way to reach out to the SSMS Team is at [UserVoice](https://aka.ms/sqlfeedback).

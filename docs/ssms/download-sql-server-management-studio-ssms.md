@@ -1,7 +1,7 @@
 ---
 title: "Download SQL Server Management Studio (SSMS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/07/2018"
+ms.date: "11/15/2018"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
@@ -42,6 +42,10 @@ Use SQL Server Management Studio (SSMS) to query, design, and manage your databa
 **[![download](../ssdt/media/download.png) Download SQL Server Management Studio 17.9](https://go.microsoft.com/fwlink/?linkid=2014306)**
 <br>**[![download](../ssdt/media/download.png) Download SQL Server Management Studio 17.9 Upgrade Package (upgrades 17.x to 17.9)](https://go.microsoft.com/fwlink/?linkid=2014215)**
 
+### Available Languages (SSMS 17.9)
+
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x40a)
+
 For additional details about SSMS 17.9, please see the [SSMS 17.9 changelog](sql-server-management-studio-changelog-ssms.md#ssms-179-latest-ga-release).
 
 ## SSMS 18.0 (preview 5)
@@ -56,7 +60,7 @@ For additional details about SSMS 17.9, please see the [SSMS 17.9 changelog](sql
 
 - Release number: 18.0 (preview 5)<br>
 - Build number: TBD<br>
-- Release date: November 07, 2018
+- Release date: November 15, 2018
 
 If you have comments or suggestions, or you want to report issues, the best way to reach out to the SSMS Team is at [UserVoice](https://aka.ms/sqlfeedback).
 

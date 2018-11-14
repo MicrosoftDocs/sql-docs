@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Management Studio - Changelog (SSMS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/07/2018"
+ms.date: "11/15/2018"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
@@ -20,7 +20,7 @@ This article provides details about updates, improvements, and bug fixes for the
 ## [SSMS 18.0 (preview 5)](download-sql-server-management-studio-ssms.md)
 
 Build number: TBD<br>
-Release date: November 07, 2018
+Release date: November 15, 2018
 
 Preview 5 is the second public preview of SSMS 18.0. For the latest General Availability (GA) version of SSMS, [download and install SSMS 17.9](#ssms-179-latest-ga-release).
 
@@ -29,6 +29,10 @@ Preview 5 is the second public preview of SSMS 18.0. For the latest General Avai
 **General SSMS**
 
 - Exposed "maximum size for error log files" under "Configure SQL Server Error Logs". For details, see [Set the Maximum Size of the SQL Server Error Logs](https://feedback.azure.com/forums/908035/suggestions/33624115).  
+
+Object Explorer:
+
+- Extended logic to request confirmation when renaming a database to all the schema objects (the setting can be configured and this disabled).
 
 Object scripting:
 
@@ -53,15 +57,26 @@ Vulnerability assessment:
 
 - Enabled Vulnerability Assessment tasks menu on Azure SQL Data Warehouse.
 
+Data Masking:
+
+- Added Static Data Masking. Static Data Masking is a data protection tool that allows users to create a copy of their SQL database and mask sensitive data on the copy. The feature proves useful for those who share their production database with nonproduction users such as dev/test team or analytics team. For more information, see [Static Data Masking for Azure SQL Database and SQL Server](https://azure.microsoft.com/en-us/blog/static-data-masking-preview/).
+
 SMO:
 
 - Exposed new ProductUpdateLevel property on the Server object, which maps to the servicing level for the version of SQL in use (for example, CU12, RTM, etc).
 - Exposed new LastGoodCheckDbTime property on  Database object, which maps to "lastgoodcheckdbtime" database property. If such property is not available, a default value of 1/1/1900 12:00:00 AM is returned.
 
+Managed Instance support:
+
+- Added support for Logical Replication.
 
 Azure Data Studio integration:
 
 - Added **Start Azure Data Studio** menu item to Object Explorer.
+
+SSIS:
+
+- Added support to allow customers to schedule SSIS packages on Azure-SSIS IRs which are in Azure Government cloud.
 
 ### Bug fixes
 

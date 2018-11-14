@@ -104,7 +104,7 @@ For more info about the error described in this section and about the permission
     -   If you created the project in an earlier release of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], after you open the project file in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], convert the project to the project deployment model.  
   
         > [!NOTE]  
-        >  If the project contains one or more datasources, the datasources are removed when the project conversion is completed. To create a connection to a data source that the packages in the project can share, add a connection manager at the project level. For more information, see [Add, Delete, or Share a Connection Manager in a Package](http://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655).  
+        >  If the project contains one or more datasources, the datasources are removed when the project conversion is completed. To create a connection to a data source that the packages in the project can share, add a connection manager at the project level. For more information, see [Add, Delete, or Share a Connection Manager in a Package](https://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655).  
   
          Depending on whether you run the **Integration Services Project Conversion Wizard** from [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] or from [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], the wizard performs different conversion tasks.  
   
@@ -508,7 +508,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
   The **Integration Services Project Conversion Wizard** converts a project to the project deployment model.  
   
 > [!NOTE]  
->  If the project contains one or more datasources, the datasources are removed when the project conversion is completed. To create a connection to a data source that can be shared by the packages in the project, add a connection manager at the project level. For more information, see [Add, Delete, or Share a Connection Manager in a Package](http://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655).  
+>  If the project contains one or more datasources, the datasources are removed when the project conversion is completed. To create a connection to a data source that can be shared by the packages in the project, add a connection manager at the project level. For more information, see [Add, Delete, or Share a Connection Manager in a Package](https://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655).  
   
  **What do you want to do?**  
   

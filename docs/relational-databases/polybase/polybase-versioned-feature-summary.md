@@ -67,7 +67,7 @@ PolyBase has the following limitations:
 <!--SQL Server 2016-->
 ::: moniker range="= sql-server-2016 || =sqlallproducts-allversions"
 
-- [PolyBase doesn't install when you add a node to a SQL Server 2016 failover cluster](https://support.microsoft.com/en-us/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster).
+- [PolyBase doesn't install when you add a node to a SQL Server 2016 failover cluster](https://support.microsoft.com/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster).
 
 ::: moniker-end
 

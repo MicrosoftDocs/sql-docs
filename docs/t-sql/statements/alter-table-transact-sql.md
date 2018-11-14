@@ -1722,31 +1722,32 @@ SysStartTime datetime2 GENERATED ALWAYS AS ROW START HIDDEN NOT NULL
     DEFAULT SYSUTCDATETIME(),   
 SysEndTime datetime2 GENERATED ALWAYS AS ROW END HIDDEN NOT NULL 
     DEFAULT CONVERT(DATETIME2, '9999-12-31 23:59:59.99999999');  
+
 --Enable system versioning with 1 year retention for historical data
 ALTER TABLE InsurancePolicy 
 SET (SYSTEM_VERSIONING = ON (HISTORY_RETENTION_PERIOD = 1 YEAR));  
 ```  
   
 #### B. Migrate An Existing Solution to Use System Versioning  
- The following example shows how to migrate to system versioning from a solution that uses triggers to mimic temporal support. The example assumes there is an existing solution that uses a `ProjectTaskCurrent` table and a `ProjectTaskHistory` table for its existing solution, that is uses the Changed Date and Revised Date columns for its periods, that these period columns do not use the datetime2 datatype and that the `ProjectTaskCurrent` table has a primary key defined.  
-  
+ The following example shows how to migrate to system versioning from a solution that uses triggers to mimic temporal support. The example assumes there is an existing solution that uses a `ProjectTask` table and a `ProjectTaskHistory` table for its existing solution, that is uses the `Changed Date` and `Revised Date` columns for its periods, that these period columns do not use the `datetime2` datatype and that the `ProjectTask` table has a primary key defined.  
+
 ```sql  
 -- Drop existing trigger  
-DROP TRIGGER ProjectTaskCurrent_Trigger;  
+DROP TRIGGER ProjectTask_HistoryTrigger;  
+
 -- Adjust the schema for current and history table  
 -- Change data types for existing period columns
-
-ALTER TABLE ProjectTaskCurrent ALTER COLUMN [Changed Date] datetime2 NOT NULL;   
-ALTER TABLE ProjectTaskCurrent ALTER COLUMN [Revised Date] datetime2 NOT NULL;  
+ALTER TABLE ProjectTask ALTER COLUMN [Changed Date] datetime2 NOT NULL;   
+ALTER TABLE ProjectTask ALTER COLUMN [Revised Date] datetime2 NOT NULL;  
 ALTER TABLE ProjectTaskHistory ALTER COLUMN [Changed Date] datetime2 NOT NULL;  
 ALTER TABLE ProjectTaskHistory ALTER COLUMN [Revised Date] datetime2 NOT NULL;  
 
 -- Add SYSTEM_TIME period and set system versioning with linking two existing tables  
 -- (a certain set of data checks happen in the background)  
-ALTER TABLE ProjectTaskCurrent  
+ALTER TABLE ProjectTask  
 ADD PERIOD FOR SYSTEM_TIME ([Changed Date], [Revised Date])  
   
-ALTER TABLE ProjectTaskCurrent  
+ALTER TABLE ProjectTask  
 SET (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.ProjectTaskHistory, DATA_CONSISTENCY_CHECK = ON))  
 ```  
   

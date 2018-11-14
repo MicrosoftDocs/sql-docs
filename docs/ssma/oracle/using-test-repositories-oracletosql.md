@@ -44,7 +44,7 @@ The following buttons are available on Test Cases page:
   
 -   Click the **Edit** button to run the Test Case Wizard and change the selected test.  
   
--   Click the **Run** button to open the [Running Test Cases (OracleToSQL)](http://msdn.microsoft.com/fc208cdb-7373-4f6b-8f6c-cdff9d3dcd02) dialog and execute the selected test.  
+-   Click the **Run** button to open the [Running Test Cases (OracleToSQL)](https://msdn.microsoft.com/fc208cdb-7373-4f6b-8f6c-cdff9d3dcd02) dialog and execute the selected test.  
   
 ## Test Results Repository  
 You can view the Test Results Repository on the **Test Results** page of the **Repository of Test Cases** window. Open it by clicking **Test Results…** from the **Tester** menu.  

@@ -58,6 +58,6 @@ manager: craigg
   
 -   [Access FILESTREAM Data with OpenSqlFilestream](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)  
   
--   [Managed API - SqlFileStream Class](http://go.microsoft.com/fwlink/?LinkId=220875)  
+-   [Managed API - SqlFileStream Class](https://go.microsoft.com/fwlink/?LinkId=220875)  
   
   

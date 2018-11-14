@@ -200,7 +200,7 @@ Use the example in [sys.dm_db_column_store_row_group_physical_stats &#40;Transac
 
 ## Automatic index and statistics management
 
-Leverage solutions such as [Adaptive Index Defrag](http://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag) to automatically manage index defragmentation and statistics updates for one or more databases. This procedure automatically chooses whether to rebuild or reorganize an index according to its fragmentation level, amongst other parameters, and update statistics with a linear threshold.
+Leverage solutions such as [Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag) to automatically manage index defragmentation and statistics updates for one or more databases. This procedure automatically chooses whether to rebuild or reorganize an index according to its fragmentation level, amongst other parameters, and update statistics with a linear threshold.
 
 ## See Also        
 [Columnstore indexes - what's new](../../relational-databases/indexes/columnstore-indexes-what-s-new.md)    
@@ -208,6 +208,6 @@ Leverage solutions such as [Adaptive Index Defrag](http://github.com/Microsoft/t
 [Get started with Columnstore for real-time operational analytics](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)   
 [Columnstore Indexes for Data Warehousing](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)  
 [Columnstore Index Architecture](../../relational-databases/sql-server-index-design-guide.md#columnstore_index)    
-[Adaptive Index Defrag](http://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)    
+[Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)    
   
   

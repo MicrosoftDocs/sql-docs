@@ -21,7 +21,7 @@ manager: craigg
 Access database types differ from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database types. When you convert Access database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objects, you must specify how to map data types from Access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. You can accept the default data type mappings, or you can customize the mappings as shown in the following procedures.  
   
 ## Default Mappings  
-SSMA has a default set of data type mappings. For the list of default mappings, see [Project Settings (Type Mapping)](http://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655).  
+SSMA has a default set of data type mappings. For the list of default mappings, see [Project Settings (Type Mapping)](https://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655).  
   
 ## Customizing Data Type Mappings  
 By using the **Project Settings** dialog box, you can customize how types are mapped for all databases and database objects in a project. The type mappings for a project apply to all databases and database objects that do not have custom type mappings.  

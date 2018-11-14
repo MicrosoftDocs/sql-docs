@@ -28,7 +28,7 @@ manager: craigg
   
 1.  Install the latest version of the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] OLE DB Provider for DB2 on the Distributor:  
   
-    -   If you are using [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)] Enterprise Edition, on the [SQL Server Downloads](http://go.microsoft.com/fwlink/?LinkId=149256) Web page, in the **Related Downloads** section, click the link to the latest version of the Microsoft SQL Server Feature Pack. On the **Microsoft SQL Server Feature Pack** Web page, search for **Microsoft OLE DB Provider for DB2**.  
+    -   If you are using [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)] Enterprise Edition, on the [SQL Server Downloads](https://go.microsoft.com/fwlink/?LinkId=149256) Web page, in the **Related Downloads** section, click the link to the latest version of the Microsoft SQL Server Feature Pack. On the **Microsoft SQL Server Feature Pack** Web page, search for **Microsoft OLE DB Provider for DB2**.  
   
     -   If you are using [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)] Standard Edition, install the latest version of the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Host [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] (HIS) server, which includes the provider.  
   

@@ -793,7 +793,7 @@ When you press ENTER, the following informational message is printed: "Changed d
   
  `GO`  
   
- When you press ENTER, the following result set is retuned.  
+ When you press ENTER, the following result set is returned.  
   
  `BusinessEntityID FirstName    LastName`  
   

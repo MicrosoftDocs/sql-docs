@@ -1719,7 +1719,7 @@ GO
 ALTER TABLE InsurancePolicy  
 ADD PERIOD FOR SYSTEM_TIME (SysStartTime, SysEndTime),   
 SysStartTime datetime2 GENERATED ALWAYS AS ROW START HIDDEN NOT NULL 
-    DEFAULT GETUTCDATE(),   
+    DEFAULT SYSUTCDATETIME(),   
 SysEndTime datetime2 GENERATED ALWAYS AS ROW END HIDDEN NOT NULL 
     DEFAULT CONVERT(DATETIME2, '9999-12-31 23:59:59.99999999');  
 --Enable system versioning with 1 year retention for historical data
@@ -1734,13 +1734,11 @@ SET (SYSTEM_VERSIONING = ON (HISTORY_RETENTION_PERIOD = 1 YEAR));
 -- Drop existing trigger  
 DROP TRIGGER ProjectTaskCurrent_Trigger;  
 -- Adjust the schema for current and history table  
--- Change data types for existing period columns  
-ALTER TABLE ProjectTaskCurrent ALTER COLUMN [Changed Date] datetime2 NOT NULL;  
-ALTER TABLE ProjectTaskCurrent ALTER COLUMN [Revised Date] datetime2 NOT NULL;  
-  
+-- Change data types for existing period columns
+
 ALTER TABLE ProjectTaskHistory ALTER COLUMN [Changed Date] datetime2 NOT NULL;  
 ALTER TABLE ProjectTaskHistory ALTER COLUMN [Revised Date] datetime2 NOT NULL;  
-  
+
 -- Add SYSTEM_TIME period and set system versioning with linking two existing tables  
 -- (a certain set of data checks happen in the background)  
 ALTER TABLE ProjectTaskCurrent  
@@ -1778,7 +1776,7 @@ COMMIT
 ALTER TABLE Department  
     SET (SYSTEM_VERSIONING = OFF);  
 ALTER TABLE Department  
-DROP PEROD FOR SYSTEM_TIME;  
+DROP PERIOD FOR SYSTEM_TIME;  
 DROP TABLE DepartmentHistory;  
 ```  
   

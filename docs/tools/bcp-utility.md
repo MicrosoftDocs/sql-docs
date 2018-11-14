@@ -244,7 +244,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
    bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U joe@contoso.com 
    ```
 
-   If guest users exist in a specific Azure AD and are part of a group that exist in SQL DB that has database permissions to execute the bcp command, their guest user alias is used (for example, *keith0@adventure-works.com*).
+   If guest users exist in a specific Azure AD and are part of a group that exist in SQL DB that has database permissions to execute the bcp command, their guest user alias is used (for example, *keith0@adventureworks.com*).
   
 **-h** _**"load hints**_[ ,... *n*]**"**<a name="h"></a>
 Specifies the hint or hints to be used during a bulk import of data into a table or view.  

@@ -311,6 +311,6 @@ go
   
 - [sp_getapplock (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)  
   
-- [Row Versioning-based Isolation Levels in the Database Engine](http://msdn.microsoft.com/library/ms177404.aspx)  
+- [Row Versioning-based Isolation Levels in the Database Engine](https://msdn.microsoft.com/library/ms177404.aspx)  
   
 - [Control Transaction Durability](../../relational-databases/logs/control-transaction-durability.md)   

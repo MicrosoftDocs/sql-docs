@@ -81,7 +81,7 @@ For this example we will assume that from your calculations you determined that 
 ###  <a name="bkmk_CreateResourcePool"></a> Create a resource pool and configure memory  
  When configuring memory for memory-optimized tables, the capacity planning should be done based on MIN_MEMORY_PERCENT, not on MAX_MEMORY_PERCENT.  See [ALTER RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-pool-transact-sql.md) for information on MIN_MEMORY_PERCENT and MAX_MEMORY_PERCENT. This provides more predictable memory availability for memory-optimized tables as MIN_MEMORY_PERCENT causes memory pressure to other resource pools to make sure it is honored. To ensure that memory is available and help avoid out-of-memory conditions, the values for MIN_MEMORY_PERCENT and MAX_MEMORY_PERCENT should be the same. See [Percent of memory available for memory-optimized tables and indexes](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_PercentAvailable) below for the percent of memory available for memory-optimized tables based on the amount of committed memory.  
   
- See [Best Practices: Using In-Memory OLTP in a VM environment](http://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9) for more information when working in a VM environment.  
+ See [Best Practices: Using In-Memory OLTP in a VM environment](https://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9) for more information when working in a VM environment.  
   
  The following [!INCLUDE[tsql](../../includes/tsql-md.md)] code creates a resource pool named Pool_IMOLTP with half of the memory available for its use.  After the pool is created Resource Governor is reconfigured to include Pool_IMOLTP.  
   
@@ -137,7 +137,7 @@ GO
  And now, the database is bound to the resource pool.  
   
 ##  <a name="bkmk_ChangeAllocation"></a> Change MIN_MEMORY_PERCENT and MAX_MEMORY_PERCENT on an existing pool  
- If you add additional memory to the server or the amount of memory needed for your memory-optimized tables changes, you may need to alter the value of MIN_MEMORY_PERCENT and MAX_MEMORY_PERCENT. The following steps show you how to alter the value of MIN_MEMORY_PERCENT and MAX_MEMORY_PERCENT on a resource pool. See the section below, for guidance on what values to use for MIN_MEMORY_PERCENT and MAX_MEMORY_PERCENT.  See the topic [Best Practices: Using In-Memory OLTP in a VM environment](http://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9) for more information.  
+ If you add additional memory to the server or the amount of memory needed for your memory-optimized tables changes, you may need to alter the value of MIN_MEMORY_PERCENT and MAX_MEMORY_PERCENT. The following steps show you how to alter the value of MIN_MEMORY_PERCENT and MAX_MEMORY_PERCENT on a resource pool. See the section below, for guidance on what values to use for MIN_MEMORY_PERCENT and MAX_MEMORY_PERCENT.  See the topic [Best Practices: Using In-Memory OLTP in a VM environment](https://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9) for more information.  
   
 1.  Use `ALTER RESOURCE POOL` to change the value of both MIN_MEMORY_PERCENT and MAX_MEMORY_PERCENT.  
   

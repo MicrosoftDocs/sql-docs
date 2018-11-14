@@ -19,7 +19,7 @@ manager: craigg
 # ODBC Visual FoxPro Setup Dialog Box
 The **ODBC Visual FoxPro Setup** dialog box enables you to add or change a Visual FoxPro data source.  
   
- To download the driver, see [the Visual FoxPro ODBC Driver download site](http://go.microsoft.com/fwlink/?LinkId=121318).  
+ To download the driver, see [the Visual FoxPro ODBC Driver download site](https://go.microsoft.com/fwlink/?LinkId=121318).  
   
 ## Dialog Box Options  
  **Data Source Name**  

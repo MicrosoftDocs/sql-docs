@@ -95,7 +95,7 @@ customProperty.TypeConverter = GetType(MyValidValues).AssemblyQualifiedName
 customProperty.Value = MyValidValues.ValueOne  
 ```  
   
- For more information, see "Generalized Type Conversion" and "Implementing a Type Converter" in the [MSDN Library](http://go.microsoft.com/fwlink/?LinkId=7022).  
+ For more information, see "Generalized Type Conversion" and "Implementing a Type Converter" in the [MSDN Library](https://go.microsoft.com/fwlink/?LinkId=7022).  
   
  You can specify a custom editor dialog box for the value of your custom property by using the <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.UITypeEditor%2A> property, as shown in the following example. First, you must create a custom type editor that inherits from **System.Drawing.Design.UITypeEditor**, if you cannot locate an existing UI type editor class that fits your needs.  
   
@@ -129,7 +129,7 @@ customProperty.Name = "My Custom Property"
 customProperty.UITypeEditor = GetType(MyCustomTypeEditor).AssemblyQualifiedName  
 ```  
   
- For more information, see "Implementing a UI Type Editor" in the [MSDN Library](http://go.microsoft.com/fwlink/?LinkId=7022).  
+ For more information, see "Implementing a UI Type Editor" in the [MSDN Library](https://go.microsoft.com/fwlink/?LinkId=7022).  
   
 ## See Also  
  [Run-time Methods of a Data Flow Component](../../../integration-services/extending-packages-custom-objects/data-flow/run-time-methods-of-a-data-flow-component.md)  

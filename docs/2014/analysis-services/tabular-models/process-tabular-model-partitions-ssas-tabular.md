@@ -21,7 +21,7 @@ manager: craigg
   
 2.  In the **Partitions** dialog box, in **Partitions**, click on the Process button.  
   
-3.  In the **Process Parition(s)** dialog box, in the **Mode** listbox, select one of the following process modes:  
+3.  In the **Process Partition(s)** dialog box, in the **Mode** listbox, select one of the following process modes:  
   
     |Mode|Description|  
     |----------|-----------------|  

@@ -1441,12 +1441,36 @@
         href: https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi
       - name: Analysis Services Scripting Language (ASSL)
         href: ./multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md
-      - name: Connection Representation
-        href: ./tabular-model-programming-compatibility-levels-1050-1103/representation/connection-representation-tabular.md
       - name: IMDEmbeddedData Interface
         href: ./tabular-model-programming-compatibility-levels-1050-1103/imdembeddeddata-interface.md
       - name: Schema rowsets
         href: https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets
+      - name: Representation
+        items:
+        - name: Connection Representation (Tabular)
+          href: ./tabular-model-programming-compatibility-levels-1050-1103/representation/connection-representation-tabular.md
+        - name: Database Representation(Tabular)
+          href: ./tabular-model-programming-compatibility-levels-1050-1103/representation/database-representation-tabular.md
+        - name: Perspective Representation (Tabular)
+          href: ./tabular-model-programming-compatibility-levels-1050-1103/representation/perspective-representation-tabular.md
+        - name: Querying a Tabular Model
+          href: ./tabular-model-programming-compatibility-levels-1050-1103/representation/querying-a-tabular-model.md
+        - name: Relationship Representation (Tabular)
+          href: ./tabular-model-programming-compatibility-levels-1050-1103/representation/relationship-representation-tabular.md
+        - name: Tables - Calculated Column Representation
+          href: ./tabular-model-programming-compatibility-levels-1050-1103/representation/tables-calculated-column-representation.md
+        - name: Tables - Calculated Measure Representation
+          href: ./tabular-model-programming-compatibility-levels-1050-1103/representation/tables-calculated-measure-representation.md
+        - name: Tables - Hierarchy Representation
+          href: ./tabular-model-programming-compatibility-levels-1050-1103/representation/tables-hierarchy-representation.md
+        - name: Tables - Key Performance Indicator Representation
+          href: ./tabular-model-programming-compatibility-levels-1050-1103/representation/tables-key-performance-indicator-representation.md
+        - name: Tables - Partition Representation
+          href: ./tabular-model-programming-compatibility-levels-1050-1103/representation/tables-partition-representation.md
+        - name: Tables Representation (Tabular)
+          href: ./tabular-model-programming-compatibility-levels-1050-1103/representation/tables-representation-tabular.md
+        - name: Understanding Tabular Object Model at Levels 1050 through 1103
+          href: ./tabular-model-programming-compatibility-levels-1050-1103/representation/understanding-tabular-object-model-at-levels-1050-through-1103.md 
   - name: Multidimensional models
     items:
     - name: Multidimensional model programming

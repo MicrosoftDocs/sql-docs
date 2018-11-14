@@ -37,6 +37,8 @@ Use SQL Server Management Studio (SSMS) to query, design, and manage your databa
 
 **SSMS is free!**
 
+**[SSMS 18.0 Public Preview 5 is now available](#ssms-180-preview-5), and is the latest generation of *SQL Server Management Studio* that provides support for [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]!**
+
 ## SSMS 17.9 is the current General Availability (GA) version of SSMS
 
 **[![download](../ssdt/media/download.png) Download SQL Server Management Studio 17.9](https://go.microsoft.com/fwlink/?linkid=2014306)**
@@ -47,6 +49,17 @@ Use SQL Server Management Studio (SSMS) to query, design, and manage your databa
 [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x40a)
 
 For additional details about SSMS 17.9, please see the [SSMS 17.9 changelog](sql-server-management-studio-changelog-ssms.md#ssms-179-latest-ga-release).
+
+## SSMS installation tips and issues (SSMS 17.9)
+
+### Minimize Installation Reboots
+
+* Take the following actions to reduce the chances of SSMS setup requiring a reboot at the end of installation:
+  * Make sure you are running an up-to-date version of the Visual C++ 2013 Redistributable Package. Version 12.0.40649.5 (or greater) is required. Only the x64 version is needed.
+  * Verify the version of .NET Framework on the computer is 4.6.1 (or greater).
+  * Close all instances of Visual Studio that are open on the computer.
+  * Make sure all the latest OS updates are installed on the computer.
+  * The noted actions are typically required only once. There are few cases where a reboot is required during additional upgrades to the same major version of SSMS. For minor upgrades, all the prerequisites for SSMS are already installed on the computer.
 
 ## SSMS 18.0 (preview 5)
 
@@ -111,24 +124,12 @@ This release of SSMS supports the following 64-bit platforms when used with the 
 > [!NOTE]
 > SSMS runs on Windows only. If you need a tool that runs on platforms other than Windows, take a look at Azure Data Studio. Azure Data Studio is a new cross-platform tool that runs on macOS, Linux, as well as Windows. For details, see [Azure Data Studio](../azure-data-studio/what-is.md).
   
-## SSMS installation tips and issues (SSMS 18.0 preview 5)
 
-### Minimize Installation Reboots
-
-* Take the following actions to reduce the chances of SSMS setup requiring a reboot at the end of installation:
-  * Make sure you are running an up-to-date version of the Visual C++ 2013 Redistributable Package. Version 12.0.40649.5 (or greater) is required. Only the x64 version is needed.
-  * Verify the version of .NET Framework on the computer is 4.6.1 (or greater).
-  * Close any other instances of Visual Studio that are open on the computer.
-  * Make sure all the latest OS updates are installed on the computer.
-  * The noted actions are typically required only once. There are few cases where a reboot is required during additional upgrades to the same major version of SSMS. For minor upgrades, all the prerequirements for SSMS are already installed on the computer.
 
 
 ## Release Notes (SSMS 18.0 preview 5)
 
 The following are known issues in SSMS 18.0 preview 5:
-
-> [!IMPORTANT]
-> When using *Active Directory – Universal with MFA Support* authentication with the SQL query editor, users may experience their connection being closed and reopened with each query invocation. Side effects of such closure include global temporary tables being dropped unexpectedly and sometimes a new SPID being given to the connection. This closure will not occur if there is an open transaction on the connection. To work around this issue, users can set `persist security info=true` in the connection parameters.
 
 SSMS
 

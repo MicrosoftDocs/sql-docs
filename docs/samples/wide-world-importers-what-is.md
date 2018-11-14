@@ -59,4 +59,4 @@ The company operates with a financial year that starts on November 1st.
 
 The license for the sample database and the sample code is described here: [license.txt](https://github.com/Microsoft/sql-server-samples/blob/master/license.txt)
 
-The sample database includes public data that has been loaded from data.gov and Natural EarthData. The terms of use are here: [http://www.naturalearthdata.com/about/terms-of-use/](http://www.naturalearthdata.com/about/terms-of-use/)
+The sample database includes public data that has been loaded from data.gov and Natural EarthData. The terms of use are here: [https://www.naturalearthdata.com/about/terms-of-use/](https://www.naturalearthdata.com/about/terms-of-use/)

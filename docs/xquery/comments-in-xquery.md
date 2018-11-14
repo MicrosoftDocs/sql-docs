@@ -36,7 +36,7 @@ SELECT @x.query('
 ```  
 SELECT Instructions.query('  
 (: declare prefix and namespace binding in the prolog. :)  
-     declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+     declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
   (: Following expression retrieves the <Location> element children of the <root> element. :)  
   /AWMI:root/AWMI:Location  
 ') as Result  

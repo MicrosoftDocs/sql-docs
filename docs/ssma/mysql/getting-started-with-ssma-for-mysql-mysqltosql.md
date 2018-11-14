@@ -67,7 +67,7 @@ SQL Server or Azure SQL DB Metadata Explorer shows information about an instance
   
 You can use this Metadata Explorer to select converted MySQL database objects, and then synchronize those objects with the instance of SQL Server or Azure SQL DB.  
   
-For more information, see [Synchronization (MySQL to SQL Server / Azure SQL DB)](http://msdn.microsoft.com/ac993a6d-0283-4823-8793-6b217677dfa3)  
+For more information, see [Synchronization (MySQL to SQL Server / Azure SQL DB)](https://msdn.microsoft.com/ac993a6d-0283-4823-8793-6b217677dfa3)  
   
 ### Metadata  
 To the right of each metadata explorer are tabs that describe the selected object. For example, if you select a table in MySQL Metadata Explorer, nine tabs will appear: **Table**, **SQL**, **Type Mapping**, **Data**, **Settings**, **Charset Mapping**, **SQL Modes**, **Properties**, and **Report**. The **Report** tab contains information only after you create a report that contains the selected object. If you select a table in SQL Server Metadata Explorer, three tabs will appear: **Table**, **SQL** and **Data**.  

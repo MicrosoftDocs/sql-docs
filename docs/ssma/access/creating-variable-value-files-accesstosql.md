@@ -89,5 +89,5 @@ The user can easily validate his/her variable value file against the schema defi
 The next step in operating the console is [Creating the Server Connection Files &#40;AccessToSQL&#41;](../../ssma/access/creating-the-server-connection-files-accesstosql.md)  
   
 ## See also  
-[Creating the Server Connection Files (Access)](http://msdn.microsoft.com/829153be-aa8e-4162-87e8-69882feecf19)  
+[Creating the Server Connection Files (Access)](https://msdn.microsoft.com/829153be-aa8e-4162-87e8-69882feecf19)  
   

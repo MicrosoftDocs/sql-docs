@@ -69,5 +69,5 @@ Click to reset all data type mappings to the SSMA defaults.
   
 ## See Also  
 [Mapping Source and Target Data Types](mapping-source-and-target-data-types-accesstosql.md)  
-[User Interface Reference(Access)](http://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
+[User Interface Reference(Access)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

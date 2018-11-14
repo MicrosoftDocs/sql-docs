@@ -23,10 +23,10 @@ manager: "craigg"
   
 -   **Script**: Creates a Transact\-SQL script equivalent to the script executed by the Publish Action.  
   
-For more information regarding DACFx, please see the DACFx managed API documentation at [http://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx) or [SqlPackage.exe](../tools/sqlpackage.md) (DACFx command-line tool).  
+For more information regarding DACFx, please see the DACFx managed API documentation at [https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx) or [SqlPackage.exe](../tools/sqlpackage.md) (DACFx command-line tool).  
   
 > [!IMPORTANT]  
-> The dbSqlPackage provider feature will be removed from the next major release of Visual Studio. For information on how to do database publishing with Web Deploy, see [dbDacFx Provider for Incremental Database publishing](http://www.iis.net/learn/publish/using-web-deploy/dbdacfx-provider-for-incremental-database-publishing).  
+> The dbSqlPackage provider feature will be removed from the next major release of Visual Studio. For information on how to do database publishing with Web Deploy, see [dbDacFx Provider for Incremental Database publishing](https://www.iis.net/learn/publish/using-web-deploy/dbdacfx-provider-for-incremental-database-publishing).  
   
 ## Command Line Syntax  
 **MSDeploy** with the **dbSqlPackage** provider uses a command line of the following form:  

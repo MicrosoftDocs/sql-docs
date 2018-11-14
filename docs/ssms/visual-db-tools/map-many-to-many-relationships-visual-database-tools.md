@@ -35,9 +35,9 @@ Many-to-many relationships between tables are accommodated in databases by means
   
 4.  Copy the primary key columns from each of the other two tables to the junction table. You can add other columns to this table, just as you can to any other table.  
   
-5.  In the junction table, set the primary key to include all the primary key columns from the other two tables. For details, see [How to: Create Primary Keys (Visual Database Tools)](http://msdn.microsoft.com/85c623ca-4656-4d70-a9db-ee4d897cd214).  
+5.  In the junction table, set the primary key to include all the primary key columns from the other two tables. For details, see [How to: Create Primary Keys (Visual Database Tools)](https://msdn.microsoft.com/85c623ca-4656-4d70-a9db-ee4d897cd214).  
   
-6.  Define a one-to-many relationship between each of the two primary tables and the junction table. The junction table should be at the "many" side of both of the relationships you create. For details, see [How to: Create Relationships Between Tables (Visual Database Tools)](http://msdn.microsoft.com/867a54b8-5be4-46e6-9702-49ae6dabf67c).  
+6.  Define a one-to-many relationship between each of the two primary tables and the junction table. The junction table should be at the "many" side of both of the relationships you create. For details, see [How to: Create Relationships Between Tables (Visual Database Tools)](https://msdn.microsoft.com/867a54b8-5be4-46e6-9702-49ae6dabf67c).  
   
     > [!NOTE]  
     > The creation of a junction table in a database diagram does not insert data from the related tables into the junction table. For information about inserting data into a table, see [Create Insert Results Queries &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-insert-results-queries-visual-database-tools.md).  

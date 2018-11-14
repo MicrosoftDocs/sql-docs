@@ -39,7 +39,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |key_algorithm|**nvarchar(32)**|Displays the algorithm that is used for the key.|  
 |key_length|**int**|Displays the length of the key.|  
 |encryptor_thumbprint|**varbinary(20)**|Shows the thumbprint of the encryptor.|  
-|encryptor_type|**nvarchar(32)**|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).<br /><br /> Describes the encryptor.|  
+|encryptor_type|**nvarchar(32)**|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658)).<br /><br /> Describes the encryptor.|  
 |percent_complete|**real**|Percent complete of the database encryption state change. This will be 0 if there is no state change.|  
   
 ## Permissions

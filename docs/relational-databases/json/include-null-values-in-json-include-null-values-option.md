@@ -55,7 +55,7 @@ FOR JSON AUTO, INCLUDE_NULL_VALUES
   
 ### Microsoft blog posts  
   
-For specific solutions, use cases, and recommendations, see these [blog posts](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) about the built-in JSON support in SQL Server and Azure SQL Database.  
+For specific solutions, use cases, and recommendations, see these [blog posts](https://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) about the built-in JSON support in SQL Server and Azure SQL Database.  
 
 ### Microsoft videos
 

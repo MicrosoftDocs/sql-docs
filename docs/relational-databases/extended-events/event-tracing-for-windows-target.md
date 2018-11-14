@@ -22,9 +22,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 
   Before you use Event Tracing for Windows (ETW) as a target, we recommend that you have a working knowledge of ETW. ETW tracing is either used together with Extended Events or as an Extended Events event consumer. The following external links provide a starting point for obtaining background information about ETW:  
   
--   [Windows Events](http://go.microsoft.com/fwlink/?LinkId=92380)  
+-   [Windows Events](https://go.microsoft.com/fwlink/?LinkId=92380)  
   
--   [Improve Debugging And Performance Tuning With ETW](http://go.microsoft.com/fwlink/?LinkId=92381)  
+-   [Improve Debugging And Performance Tuning With ETW](https://go.microsoft.com/fwlink/?LinkId=92381)  
   
  The ETW target is a singleton target, although the target can be added to many sessions. If an event is raised on many sessions, the event will only be propagated to the ETW target one time per event occurrence. The Extended Events engine is limited to a single instance per process.  
   
@@ -73,7 +73,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
     > [!IMPORTANT]  
     >  The file path cannot be changed after the first session starts.  
   
--   Managed Object Format (MOF) files are in *\<your install path>*\Microsoft SQL Server\Shared. For more information, see [Managed Object Format](http://go.microsoft.com/fwlink/?LinkId=92851) on MSDN.  
+-   Managed Object Format (MOF) files are in *\<your install path>*\Microsoft SQL Server\Shared. For more information, see [Managed Object Format](https://go.microsoft.com/fwlink/?LinkId=92851) on MSDN.  
   
 ## Adding the Target to a Session  
  To add the ETW target to an Extended Events session, you must include the following statement when you create or alter an event session:  
@@ -85,7 +85,7 @@ ADD TARGET package0.etw_classic_sync_target
  For more information about a full example that shows how to use the ETW target, including how to view the data, see [Monitor System Activity Using Extended Events](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md).  
   
 ## See Also  
- [SQL Server Extended Events Targets](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)   
+ [SQL Server Extended Events Targets](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)   
  [sys.dm_xe_session_targets &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql.md)   
  [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)  

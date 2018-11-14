@@ -43,4 +43,4 @@ The Microsoft Open Database Connectivity (ODBC) interface is a C programming lan
  Describes the command-line utility for configuring drivers and data source names.  
   
 ## Support  
- Information about support options can be found on the [Microsoft Help and Support](http://go.microsoft.com/fwlink?linkid=5521) Web site.
+ Information about support options can be found on the [Microsoft Help and Support](https://go.microsoft.com/fwlink?linkid=5521) Web site.

@@ -26,6 +26,6 @@ manager: craigg
  For more information, see [SQL Server Compact Edition Destination](../../integration-services/data-flow/sql-server-compact-edition-destination.md).  
   
 ## See Also  
- [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+ [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

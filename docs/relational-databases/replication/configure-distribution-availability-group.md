@@ -1,7 +1,7 @@
 ---
 title: "Configure SQL Server distribution database in availability group | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/04/2018"
+ms.date: "11/13/2018"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: replication
@@ -42,6 +42,7 @@ After a distribution database in the AG is configured based on the steps describ
 - Adding or removing nodes to existing distribution database AG.
 - A distributor may have multiple distribution databases. Each distribution database can be in its own AG and can be not in any AG. Multiple distribution databases can share an AG.
 - Publisher and distributor need to be on separate SQL Server instances.
+- If the listener for the availability group hosting the distribution database is configured to use a non-default port, then its required to setup an alias for the listener and the non-default port.
 
 ## Limitations or exclusions
 
@@ -57,6 +58,7 @@ After a distribution database in the AG is configured based on the steps describ
 - The distribution database AG must have a listener configured.
 - Secondary replicas in a distribution database AG can be synchronous or asynchronous. Synchronous mode is recommended and preferred.
 - Bidirectional transactional replication is not supported.
+- SSMS does not show Distribution Database as synchronizing/synchronized, when distribution database is added to an availability group.
 
 
    >[!NOTE]

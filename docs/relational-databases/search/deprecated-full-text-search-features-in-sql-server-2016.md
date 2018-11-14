@@ -6,7 +6,6 @@ ms.prod: sql
 ms.prod_service: "search, sql-database"
 ms.reviewer: ""
 ms.technology: 
-  - "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "deprecated features [full-text search]"

@@ -63,5 +63,5 @@ This example deletes rows in Table1 that have 'xxxyy' in col1. The example then 
 ## See Also  
 [PDO Class](../../connect/php/pdo-class.md)
 
-[PDO](http://php.net/manual/book.pdo.php)  
+[PDO](https://php.net/manual/book.pdo.php)  
   

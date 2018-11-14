@@ -174,9 +174,9 @@ Managed service accounts, group managed service accounts, and virtual accounts a
   
      A Group Managed Service Account is an MSA for multiple servers. Windows manages a service account for services running on a group of servers. Active Directory automatically updates the group managed service account password without restarting services. You can configure SQL Server services to use a group managed service account principal. Beginning with SQL Server 2014, SQL Server supports group managed service accounts for standalone instances, and SQL Server 2016 and later for failover cluster instances, and availability groups.  
   
-    To use a group managed service account for SQL Server 2014 or later, the operating system must be Windows Server 2012 R2 or later. Servers with Windows Server 2012 R2 require [KB 2998082](http://support.microsoft.com/kb/2998082) applied so that the services can log in without disruption immediately after a password change.  
+    To use a group managed service account for SQL Server 2014 or later, the operating system must be Windows Server 2012 R2 or later. Servers with Windows Server 2012 R2 require [KB 2998082](https://support.microsoft.com/kb/2998082) applied so that the services can log in without disruption immediately after a password change.  
   
-    For more information, see [Group Managed Service Accounts](http://technet.microsoft.com/library/hh831782.aspx)  
+    For more information, see [Group Managed Service Accounts](https://technet.microsoft.com/library/hh831782.aspx)  
       
     > [!NOTE]  
     >  The group managed service account must be created in the Active Directory by the domain administrator before [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup can use it for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services.  
@@ -197,7 +197,7 @@ Managed service accounts, group managed service accounts, and virtual accounts a
     |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service on the default instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|**NT SERVICE\SQLSERVERAGENT**|  
     |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] named **PAYROLL**|**NT SERVICE\SQLAGENT$PAYROLL**|  
   
- For more information on Managed Service Accounts and Virtual Accounts, see the **Managed service account and virtual account concepts** section of [Service Accounts Step-by-Step Guide](http://technet.microsoft.com/library/dd548356\(WS.10\).aspx) and [Managed Service Accounts Frequently Asked Questions (FAQ)](http://technet.microsoft.com/library/ff641729\(WS.10\).aspx).  
+ For more information on Managed Service Accounts and Virtual Accounts, see the **Managed service account and virtual account concepts** section of [Service Accounts Step-by-Step Guide](https://technet.microsoft.com/library/dd548356\(WS.10\).aspx) and [Managed Service Accounts Frequently Asked Questions (FAQ)](https://technet.microsoft.com/library/ff641729\(WS.10\).aspx).  
   
  **Security Note:** [!INCLUDE[ssNoteLowRights](../../includes/ssnotelowrights-md.md)] Use a [MSA](#MSA) or [virtual account](#VA_Desc) when possible. When MSA and virtual accounts are not possible, use a specific low-privilege user account or domain account instead of a shared account for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services. Use separate accounts for different [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services. Do not grant additional permissions to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account or the service groups. Permissions will be granted through group membership or granted directly to a service SID, where a service SID is supported.  
   
@@ -277,7 +277,7 @@ This section describes the permissions that [!INCLUDE[ssNoVersion](../../include
  Depending on the service configuration, the service account for a service or service SID is added as a member of the service group during install or upgrade.
   
 ###  <a name="Windows"></a> Windows Privileges and Rights  
- The account assigned to start a service needs the **Start, stop and pause permission** for the service. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup program automatically assigns this.  First install Remote Server Administration Tools (RSAT). See [Remote Server Administration Tools for Windows 7](http://www.microsoft.com/downloads/en/details.aspx?FamilyID=7d2f6ad7-656b-4313-a005-4e344e43997d).
+ The account assigned to start a service needs the **Start, stop and pause permission** for the service. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup program automatically assigns this.  First install Remote Server Administration Tools (RSAT). See [Remote Server Administration Tools for Windows 7](https://www.microsoft.com/downloads/en/details.aspx?FamilyID=7d2f6ad7-656b-4313-a005-4e344e43997d).
   
  The following table shows permissions that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup requests for the per-service SIDs or local Windows groups used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components.
   

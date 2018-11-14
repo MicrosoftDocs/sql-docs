@@ -23,9 +23,9 @@ Always Encrypted allows clients to encrypt sensitive data and never reveal the d
 - Make sure Microsoft JDBC Driver 6.0 (or higher) for SQL Server is installed on your development machine. 
 - Download and install the Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files.  Be sure to read the Readme included in the zip file for installation instructions and relevant details on possible export/import issues.  
 
-    - If using the mssql-jdbc-X.X.X.jre7.jar or sqljdbc41.jar, the policy files can be downloaded from [Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files 7 Download](http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html)
+    - If using the mssql-jdbc-X.X.X.jre7.jar or sqljdbc41.jar, the policy files can be downloaded from [Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files 7 Download](https://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html)
 
-    - If using the mssql-jdbc-X.X.X.jre8.jar or sqljdbc42.jar, the policy files can be downloaded from  [Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files 8 Download](http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html)
+    - If using the mssql-jdbc-X.X.X.jre8.jar or sqljdbc42.jar, the policy files can be downloaded from  [Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files 8 Download](https://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html)
 
     - If using the mssql-jdbc-X.X.X.jre9.jar, no policy file needs to be downloaded. The jurisdiction policy in Java 9 defaults to unlimited strength encryption.
 
@@ -149,7 +149,7 @@ You can also get or set these settings using the SQLServerDataSource object. For
 The JDBC driver automatically instantiates the SQLServerColumnEncryptionJavaKeyStoreProvider when these credentials are present in connection properties.
 
 ### Creating a column master key for the Java Key Store
-The SQLServerColumnEncryptionJavaKeyStoreProvider can be used with JKS or PKCS12 keystore types. To create or import a key to use with this provider use the Java [keytool](http://docs.oracle.com/javase/7/docs/technotes/tools/windows/keytool.html) utility. The key must have the same password as the keystore itself. Here is an example of how to create a public key and its associated private key using the keytool utility:
+The SQLServerColumnEncryptionJavaKeyStoreProvider can be used with JKS or PKCS12 keystore types. To create or import a key to use with this provider use the Java [keytool](https://docs.oracle.com/javase/7/docs/technotes/tools/windows/keytool.html) utility. The key must have the same password as the keystore itself. Here is an example of how to create a public key and its associated private key using the keytool utility:
 
 ```
 keytool -genkeypair -keyalg RSA -alias AlwaysEncryptedKey -keystore keystore.jks -storepass mypassword -validity 360 -keysize 2048 -storetype jks

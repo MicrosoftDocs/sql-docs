@@ -23,6 +23,6 @@ manager: craigg
 
 
 ## See Also  
- [SQL Server Resource Center](http://go.microsoft.com/fwlink/?LinkId=219676)  
+ [SQL Server Resource Center](https://go.microsoft.com/fwlink/?LinkId=219676)  
   
   

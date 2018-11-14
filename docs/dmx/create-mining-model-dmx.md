@@ -121,7 +121,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
 ## Remarks  
  If you want to create a model that has a built-in testing data set, you should use the statement CREATE MINING STRUCTURE followed by ALTER MINING STRUCTURE. However, not all model types support a holdout data set. For more information, see [CREATE MINING STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md).  
   
- For a walkthrough of how to create a mining model by using the CREATEMODEL statement, see [Time Series Prediction DMX Tutorial](http://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2).  
+ For a walkthrough of how to create a mining model by using the CREATEMODEL statement, see [Time Series Prediction DMX Tutorial](https://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2).  
   
 ## Naive Bayes Example  
  The following example uses the [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes algorithm to create a new mining model. The Bike Buyer column is defined as the predictable attribute.  

@@ -221,5 +221,5 @@ As you can see, binding is done internally by the driver. A valid query is sent 
 ## See Also  
 [PDO Class](../../connect/php/pdo-class.md)
 
-[PDO](http://php.net/manual/book.pdo.php)  
+[PDO](https://php.net/manual/book.pdo.php)  
   

@@ -43,7 +43,7 @@ Public Sub Main()
      ' Create a DataSpace object  
     Set rdsDS = New RDS.DataSpace  
      ' Create a DataFactory object  
-    Set rdsDF = rdsDS.CreateObject("RDSServer.DataFactory", "http://MyServer") 'MyServer  
+    Set rdsDF = rdsDS.CreateObject("RDSServer.DataFactory", "https://MyServer") 'MyServer  
   
      ' Get all of the Author records  
   

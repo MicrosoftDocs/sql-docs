@@ -141,7 +141,7 @@ Sets the Column Encryption Setting to `Enabled`. For more information, see [Alwa
  This switch is used by the client when connecting to SQL Database or SQL Data Warehouse to specify that the user be authenticated using Azure Active Directory authentication. This option sets the **sqlcmd** scripting variable SQLCMDUSEAAD = true. The -G switch requires at least **sqlcmd** version [13.1](http://go.microsoft.com/fwlink/?LinkID=825643). To determine your version, execute `sqlcmd -?`. For more information, see [Connecting to SQL Database or SQL Data Warehouse By Using Azure Active Directory Authentication](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/). The -A option is not supported with the -G option.
 
 > [!IMPORTANT]
-> The **-G** option only applies to Azure SQL Database and Azure Data Warehouse.
+> The `-G` option only applies to Azure SQL Database and Azure Data Warehouse.
 > AAD Integrated and Interactive Authentication is not currently supported on Linux or macOS.
 
 - **Azure Active Directory Username and Password:** 
@@ -173,7 +173,7 @@ Sets the Column Encryption Setting to `Enabled`. For more information, see [Alwa
     ``` 
 
     > [!NOTE] 
-    > The -E option (Trusted_Connection) cannot be used along with the -G option).
+    > The `-E` option (Trusted_Connection) cannot be used along with the `-G` option.
 
 
 - **Azure Active Directory Interactive**  
@@ -740,7 +740,7 @@ We recommend that you use a strong password.
  The file will be read and executed after a batch terminator is encountered. You can issue multiple **:r** commands. The file may include any **sqlcmd** command. This includes the batch terminator **GO**.  
   
 > [!NOTE]  
->  The line count that is displayed in interactive mode will be increased by one for every **:r** command encountered. The **:r** command will appear in the output of the list command.  
+>  The line count that is displayed in interactive mode will be increased by one for every `:r` command encountered. The `:r` command will appear in the output of the list command.  
   
  **:Serverlist**  
  Lists the locally configured servers and the names of the servers broadcasting on the network.  
@@ -856,7 +856,7 @@ When you press ENTER, the following informational message is printed: "Changed d
  XML (streamed) data and rowset data can't be mixed. If the XML ON command hasn't been issued before a Transact-SQL statement that outputs XML streams is executed, the output is garbled. Once the XML ON command has been issued, you can't execute Transact-SQL statements that output regular row sets.  
   
 > [!NOTE]  
->  The **:XML** command does not support the SET STATISTICS XML statement.  
+>  The `:XML` command does not support the SET STATISTICS XML statement.  
   
 ###  <a name="OutputJSON"></a> JSON Output Format  
  When you expect JSON output, use the following command: `:XML ON`. Otherwise the output includes both the column name and the JSON text. This output is not valid JSON.  

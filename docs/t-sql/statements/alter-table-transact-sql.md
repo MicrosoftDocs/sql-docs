@@ -1736,6 +1736,8 @@ DROP TRIGGER ProjectTaskCurrent_Trigger;
 -- Adjust the schema for current and history table  
 -- Change data types for existing period columns
 
+ALTER TABLE ProjectTaskCurrent ALTER COLUMN [Changed Date] datetime2 NOT NULL;   
+ALTER TABLE ProjectTaskCurrent ALTER COLUMN [Revised Date] datetime2 NOT NULL;  
 ALTER TABLE ProjectTaskHistory ALTER COLUMN [Changed Date] datetime2 NOT NULL;  
 ALTER TABLE ProjectTaskHistory ALTER COLUMN [Revised Date] datetime2 NOT NULL;  
 

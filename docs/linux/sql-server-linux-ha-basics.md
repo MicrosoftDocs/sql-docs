@@ -72,7 +72,7 @@ Samba, which is the Linux variant of server message block (SMB), can also be use
 
 Windows-based SMB shares can also be used; SMB shares do not need to be Linux-based, as long as the client portion of Samba is configured properly on the Linux server hosting [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] and the share has the right access. For those in a mixed environment, this would be one way to leverage existing infrastructure for Linux-based [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] deployments.
 
-One thing that is important is that the version of Samba deployed should be SMB 3.0 compliant. When SMB support was added in [!INCLUDE[sssql11-md](../includes/sssql11-md.md)], it required all shares to support SMB 3.0. If using Samba for the share and not Windows Server, the Samba-based share should be using Samba 4.0 or later, and ideally 4.3 or later, which supports SMB 3.1.1. A good source of information on SMB and Linux is [SMB3 in Samba](http://events.linuxfoundation.org/sites/events/files/slides/smb3-in-samba.pr__0.pdf).
+One thing that is important is that the version of Samba deployed should be SMB 3.0 compliant. When SMB support was added in [!INCLUDE[sssql11-md](../includes/sssql11-md.md)], it required all shares to support SMB 3.0. If using Samba for the share and not Windows Server, the Samba-based share should be using Samba 4.0 or later, and ideally 4.3 or later, which supports SMB 3.1.1. A good source of information on SMB and Linux is [SMB3 in Samba](https://events.linuxfoundation.org/sites/events/files/slides/smb3-in-samba.pr__0.pdf).
 
 Finally, using a network file system (NFS) share is an option. Using NFS is not an option on Windows-based deployments of [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], and can only be used for Linux-based deployments.
 
@@ -112,7 +112,7 @@ sudo firewall-cmd --permanent --add-service=high-availability
 ```
 
 **Firewall documentation:**
--   [RHEL](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-firewalls-haar)
+-   [RHEL](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-firewalls-haar)
 -   [SLES](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html)
 
 ### Install [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] packages for availability
@@ -151,7 +151,7 @@ For full documentation on Pacemaker, including a more in-depth explanation of wh
 
 Ubuntu does not have a guide for availability.
 
-For more information about the whole stack, also see the official [Pacemaker documentation page](http://clusterlabs.org/doc/) on the Clusterlabs site.
+For more information about the whole stack, also see the official [Pacemaker documentation page](https://clusterlabs.org/doc/) on the Clusterlabs site.
 
 ### Pacemaker concepts and terminology
 This section documents the common concepts and terminology for a Pacemaker implementation.
@@ -203,13 +203,13 @@ To change the default logging location, modify `corosync.conf`.
 This section discusses the important planning points for a Pacemaker cluster.
 
 ### Virtualizing Linux-based Pacemaker clusters for [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
-Using virtual machines to deploy Linux-based [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] deployments for AGs and FCIs is covered by the same rules as for their Windows-based counterparts. There is a base set of rules for supportability of virtualized [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] deployments provided by Microsoft in [Microsoft Support KB 956893](https://support.microsoft.com/en-us/help/956893/support-policy-for-microsoft-sql-server-products-that-are-running-in-a-hardware-virtualization-environment). Different hypervisors such as Microsoft’s Hyper-V and VMware’s ESXi may have different variances on top of that, due to differences in the platforms themselves.
+Using virtual machines to deploy Linux-based [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] deployments for AGs and FCIs is covered by the same rules as for their Windows-based counterparts. There is a base set of rules for supportability of virtualized [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] deployments provided by Microsoft in [Microsoft Support KB 956893](https://support.microsoft.com/help/956893/support-policy-for-microsoft-sql-server-products-that-are-running-in-a-hardware-virtualization-environment). Different hypervisors such as Microsoft’s Hyper-V and VMware’s ESXi may have different variances on top of that, due to differences in the platforms themselves.
 
 When it comes to AGs and FCIs under virtualization, ensure that anti-affinity is set for the nodes of a given Pacemaker cluster. When configured for high availability in an AG or FCI configuration, the VMs hosting [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] should never be running on the same hypervisor host. For example, if a two-node FCI is deployed, there would need to be *at least* three hypervisor hosts so that there is somewhere for one of the VMs hosting a node to go in the event of a host failure, especially if using features like Live Migration or vMotion.
 
 For more specifics, consult:
 -   Hyper-V Documentation – [Using Guest Clustering for High Availability](https://technet.microsoft.com/library/dn440540(v=ws.11).aspx)
--   Whitepaper (written for Windows-based deployments, but most of the concepts still apply) – [Planning Highly Available, Mission Critical SQL Server Deployments with VMware vSphere](http://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/solutions/vmware-vsphere-highly-available-mission-critical-sql-server-deployments.pdf)
+-   Whitepaper (written for Windows-based deployments, but most of the concepts still apply) – [Planning Highly Available, Mission Critical SQL Server Deployments with VMware vSphere](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/solutions/vmware-vsphere-highly-available-mission-critical-sql-server-deployments.pdf)
 
 >[!NOTE]
 >RHEL with a Pacemaker cluster with STONITH is not yet supported by Hyper-V. Until that is supported, for more information and updates, consult [Support Policies for RHEL High Availability Clusters](https://access.redhat.com/articles/29440#3physical_host_mixing).

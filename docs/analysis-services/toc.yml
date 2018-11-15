@@ -68,39 +68,39 @@
       href: tutorial-tabular-1400/as-supplemental-lesson-dynamic-security.md
     - name: Supplemental lesson - Ragged hierarchies
       href: tutorial-tabular-1400/as-supplemental-lesson-ragged-hierarchies.md
-  - name: Tabular modeling (1200 compatibility level)
-    href: tabular-modeling-adventure-works-tutorial.md
+  - name: Tabular modeling (1200 compatibility level) 
+    href: tutorial-tabular-1200/tabular-modeling-adventure-works-tutorial.md
     items:
-    - name: "Lesson 1: Create a New Tabular Model Project"
-      href: lesson-1-create-a-new-tabular-model-project.md
-    - name: "Lesson 2: Add Data"
-      href: lesson-2-add-data.md
-    - name: "Lesson 3: Mark as Date Table"
-      href: lesson-3-mark-as-date-table.md
-    - name: "Lesson 4: Create relationships"
-      href: lesson-4-create-relationships.md
-    - name: "Lesson 5: Create calculated columns"
-      href: lesson-5-create-calculated-columns.md
-    - name: "Lesson 6: Create measures"
-      href: lesson-6-create-measures.md
-    - name: "Lesson 7: Create Key Performance Indicators"
-      href: lesson-7-create-key-performance-indicators.md
-    - name: "Lesson 8: Create perspectives"
-      href: lesson-8-create-perspectives.md
-    - name: "Lesson 9: Create hierarchies"
-      href: lesson-9-create-hierarchies.md
-    - name: "Lesson 10: Create partitions"
-      href: lesson-10-create-partitions.md
-    - name: "Lesson 11: Create roles"
-      href: lesson-11-create-roles.md
-    - name: "Lesson 12: Analyze in Excel"
-      href: lesson-12-analyze-in-excel.md
-    - name: "Lesson 13: Deploy"
-      href: lesson-13-deploy.md
+    - name: 1 - Create a New Tabular Model Project
+      href: tutorial-tabular-1200/lesson-1-create-a-new-tabular-model-project.md
+    - name: 2 - Add Data
+      href: tutorial-tabular-1200/lesson-2-add-data.md
+    - name: 3 - Mark as Date Table
+      href: tutorial-tabular-1200/lesson-3-mark-as-date-table.md
+    - name: 4 - Create relationships
+      href: tutorial-tabular-1200/lesson-4-create-relationships.md
+    - name: 5 - Create calculated columns
+      href: tutorial-tabular-1200/lesson-5-create-calculated-columns.md
+    - name: 6 - Create measures
+      href: tutorial-tabular-1200/lesson-6-create-measures.md
+    - name: 7 - Create Key Performance Indicators
+      href: tutorial-tabular-1200/lesson-7-create-key-performance-indicators.md
+    - name: 8 - Create perspectives
+      href: tutorial-tabular-1200/lesson-8-create-perspectives.md
+    - name: 9 - Create hierarchies
+      href: tutorial-tabular-1200/lesson-9-create-hierarchies.md
+    - name: 10 - Create partitions
+      href: tutorial-tabular-1200/lesson-10-create-partitions.md
+    - name: 11 - Create roles
+      href: tutorial-tabular-1200/lesson-11-create-roles.md
+    - name: 12 - Analyze in Excel
+      href: tutorial-tabular-1200/lesson-12-analyze-in-excel.md
+    - name: 13 - Deploy
+      href: tutorial-tabular-1200/lesson-13-deploy.md
     - name: Supplemental Lesson - Implement dynamic security by using row filters
-      href: supplemental-lesson-implement-dynamic-security-by-using-row-filters.md
+      href: tutorial-tabular-1200/supplemental-lesson-implement-dynamic-security-by-using-row-filters.md
     - name: Supplemental Lesson - Configure reporting properties for Power View reports
-      href: supplemental-lesson-configure-reporting-properties-for-power-view-reports.md
+      href: tutorial-tabular-1200/supplemental-lesson-configure-reporting-properties-for-power-view-reports.md
   - name: Multidimensional modeling
     href: multidimensional-modeling-adventure-works-tutorial.md
     items:
@@ -1327,7 +1327,7 @@
         href: ./power-pivot-sharepoint/unable-to-refresh-data-for-a-data-connection-in-the-workbook.md
   - name: Manage servers
     items:
-    - name: Server management overview
+    - name: SQL Server Analysis Services server management overview
       href: ./instances/analysis-services-instance-management.md
     - name: Server properties
       items:
@@ -1358,6 +1358,8 @@
       - name: Thread Pool Properties    
     - name: Monitor Analysis Services
       items:
+      -name: Monitoring overview
+       href: ./instances/monitor-an-analysis-services-instance.md
       - name: SQL Server Profiler
         href: ./instances/use-sql-server-profiler-to-monitor-analysis-services.md
         items:
@@ -1369,6 +1371,8 @@
         href: ./instances/monitor-analysis-services-with-sql-server-extended-events.md
       - name: Dynamic Management Views (DMVs) 
         href: ./instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md
+      - name: Performance counters
+        href: ./instances/performance-counters-ssas.md
       - name: Trace-events
         href: https://docs.microsoft.com/bi-reference/trace-events/analysis-services-trace-events
   - name: Connect
@@ -1513,9 +1517,9 @@
     href: analysis-services-samples.md
 - name: Reference
   items:
-  - name: PowerShell Reference for Analysis Services
+  - name: PowerShell for Analysis Services
     href: ./powershell/analysis-services-powershell-reference.md
-  - name: PowerShell Reference for Power Pivot for SharePoint
+  - name: PowerShell for Power Pivot for SharePoint
     href: ./powershell/powershell-reference-for-power-pivot-for-sharepoint.md
   - name: Data Analysis Expressions (DAX)
     href: https://msdn.microsoft.com/library/gg413422.aspx
@@ -1525,3 +1529,22 @@
     href: ../dmx/data-mining-extensions-dmx-reference.md
   - name: Multidimensional Data Expressions (MDX)
     href: ../mdx/multidimensional-expressions-mdx-reference.md
+  - name: Tabular Model Scripting Language (TMSL)
+    href: https://docs.microsoft.com/bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference
+  - name: Tabular Object Model (TOM)
+    href: https://docs.microsoft.com/bi-reference/tom/introduction-to-the-tabular-object-model-tom-in-analysis-services-amo  
+  - name: Analysis Management Objects (AMO)
+    href: https://docs.microsoft.com/bi-reference/amo/amo-classes-introduction 
+  - name: Conceptual Schema Definition Language (CSDL)
+    href: https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi
+  - name: XML for Analysis (XMLA)
+    href: https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference
+  - name: ADOMD.NET
+    href: https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net
+  - name: Analysis Services Scripting Language (ASSL for XMLA)
+    href: https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla
+  - name: Schema rowsets
+    href: https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets 
+  - name: Trace events
+    href: https://docs.microsoft.com/bi-reference/trace-events/analysis-services-trace-events
+    

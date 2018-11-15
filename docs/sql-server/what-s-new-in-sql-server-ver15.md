@@ -21,72 +21,71 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 - Install on Linux for [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md), [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md), and [Ubuntu](../linux/quickstart-install-connect-ubuntu.md).
 - [Run on SQL Server 2019 on Docker](../linux/quickstart-install-connect-docker.md).
 
-## CTP 2.1
+## CTP 2.2
 
-Community technology preview (CTP) 2.1 is the latest public release of [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]. The following features are added or enhanced for [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] CTP 2.1.
+Community technology preview (CTP) 2.2 is the latest public release of [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]. The following features are added or enhanced for [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] CTP 2.2.
 
-- [Big Data Clusters](#bigdatacluster)
-  - Deploy Python and R apps
 - [Database Engine](#databaseengine)
-  - Intelligent query processing adds scalar UDF inlining
-  - Truncation error message improved to include table and column names, and truncated value
-  - UTF-8 collations support in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] setup
-  - Use derived table or view aliases in graph match queries
-  - Improved diagnostic data for stats blocking
-  - Hybrid Buffer Pool
-  - Static data masking
-- [Tools](#tools)
-  - Azure Data Studio
+  - Reduced recompilations for workloads using temporary tables across multiple scopes
 
-## CTP 2.0 
+## Previous CTPs
 
-Community technology preview (CTP) 2.0 is the first public release of [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]. The following features are added or enhanced for [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] CTP 2.0.
+Earlier CTP releases added or enhanced the following features for [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)].
 
-- [Big Data Clusters](#bigdatacluster)
-  - Deploy a Big Data cluster with SQL and Spark Linux containers on Kubernetes
-  - Access your big data from HDFS
-  - Run Advanced analytics and machine learning with Spark
-  - Use Spark streaming to data to SQL data pools
-  - Use Azure Data Studio to run Query books that provide a notebook experience
+- [Big Data Clusters](#bigdatacluster) 
+  - Deploy a Big Data cluster with SQL and Spark Linux containers on Kubernetes (CTP 2.0)
+  - Access your big data from HDFS (CTP 2.0)
+  - Run Advanced analytics and machine learning with Spark (CTP 2.0)
+  - Use Spark streaming to data to SQL data pools (CTP 2.0)
+  - Use Azure Data Studio to run Query books that provide a notebook experience (CTP 2.0)
+  - Deploy Python and R apps (CTP 2.1)
 
 - [Database engine](#databaseengine)
-  - UTF-8 support
-  - Resumable online index create allows index create to resume after interruption
-  - Clustered columnstore online index build and rebuild
-  - Always Encrypted with secure enclaves
-  - Intelligent query processing
-  - Java language programmability extension
-  - SQL Graph features
-  - Database scoped configuration setting for online and resumable DDL operations
-  - Always On Availability Groups - secondary replica connection redirection
-  - Data discovery and classification - natively built into SQL Server
-  - Expanded support for persistent memory devices
-  - Support for columnstore statistics in `DBCC CLONEDATABASE`
-  - New options added to `sp_estimate_data_compression_savings`
-  - SQL Server Machine Learning Services failover clusters
-  - Lightweight query profiling infrastructure enabled by default
-  - New PolyBase connectors
-  - New `sys.dm_db_page_info` system function returns page information
+  - UTF-8 support (CTP 2.0)
+  - Resumable online index create allows index create to resume after interruption (CTP 2.0)
+  - Clustered columnstore online index build and rebuild (CTP 2.0)
+  - Always Encrypted with secure enclaves (CTP 2.0)
+  - Intelligent query processing (CTP 2.0)
+  - Java language programmability extension (CTP 2.0)
+  - SQL Graph features (CTP 2.0)
+  - Database scoped configuration setting for online and resumable DDL operations (CTP 2.0)
+  - Always On Availability Groups - secondary replica connection redirection (CTP 2.0)
+  - Data discovery and classification - natively built into SQL Server (CTP 2.0)
+  - Expanded support for persistent memory devices (CTP 2.0)
+  - Support for columnstore statistics in `DBCC CLONEDATABASE` (CTP 2.0)
+  - New options added to `sp_estimate_data_compression_savings` (CTP 2.0)
+  - SQL Server Machine Learning Services failover clusters (CTP 2.0)
+  - Lightweight query profiling infrastructure enabled by default (CTP 2.0)
+  - New PolyBase connectors (CTP 2.0)
+  - New `sys.dm_db_page_info` system function returns page information (CTP 2.0)
+  - Intelligent query processing adds scalar UDF inlining (CTP 2.1)
+  - Truncation error message improved to include table and column names, and truncated value (CTP 2.1)
+  - UTF-8 collations support in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] setup (CTP 2.1)
+  - Use derived table or view aliases in graph match queries (CTP 2.1)
+  - Improved diagnostic data for stats blocking (CTP 2.1)
+  - Hybrid Buffer Pool (CTP 2.1)
+  - Static data masking (CTP 2.1)
 
 - [SQL Server on Linux](#sqllinux)
-  - Replication support
-  - Support for the Microsoft Distributed Transaction Coordinator (MSDTC)
-  - Always On Availability Group on Docker containers with Kubernetes
-  - OpenLDAP support for third-party AD providers
-  - Machine Learning on Linux
-  - New container registry
-  - New RHEL-based container images
-  - Memory pressure notification
+  - Replication support (CTP 2.0)
+  - Support for the Microsoft Distributed Transaction Coordinator (MSDTC) (CTP 2.0)
+  - Always On Availability Group on Docker containers with Kubernetes (CTP 2.0)
+  - OpenLDAP support for third-party AD providers (CTP 2.0)
+  - Machine Learning on Linux (CTP 2.0)
+  - New container registry (CTP 2.0)
+  - New RHEL-based container images (CTP 2.0)
+  - Memory pressure notification (CTP 2.0)
 
 - [Master Data Services](#mds)
-  - Silverlight controls replaced
+  - Silverlight controls replaced (CTP 2.0)
 
 - [Security](#security)
-  - Certificate management in SQL Server Configuration Manager
+  - Certificate management in SQL Server Configuration Manager (CTP 2.0)
 
 - [Tools](#tools)
-  - SQL Server Management Studio (SSMS) 18.0 (preview)
-  - Azure Data Studio
+  - SQL Server Management Studio (SSMS) 18.0 (preview) (CTP 2.0)
+  - Azure Data Studio (CTP 2.0)
+  - Azure Data Studio (CTP 2.1)
 
 Continue reading for more details about these features.
 
@@ -344,6 +343,16 @@ FROM sys.dm_exec_requests AS d
   CROSS APPLY sys.dm_db_page_info(r.db_id, r.file_id, r.page_id,'DETAILED')
     AS page_info;
 ```
+
+### Reduced recompilations for workloads using temporary tables across multiple scopes (CTP 2.2)
+
+Prior to this feature, when referencing a temporary table with a DML statement (`SELECT`, `INSERT`, `UPDATE`, `DELETE`), if the temporary table was created by an outer scope batch, this would result in a recompile of the DML statement each time it is executed.  With this improvement, SQL Server performs additional lightweight checks to avoid unnecessary recompilations:
+
+- Check if the outer-scope module used for creating the temporary table at compile time is the same one used for consecutive executions.  
+- Track of any data definition language (DDL) changes made at initial compilation and  compare them with DDL operations for consecutive executions.  
+
+The end result is a reduction in extraneous recompilations and CPU-overhead.
+
 
 ## <a id="sqllinux"></a> SQL Server on Linux
 

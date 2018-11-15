@@ -131,11 +131,11 @@ The basic steps that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses
 
 The basic steps described for processing a `SELECT` statement apply to other SQL statements such as `INSERT`, `UPDATE`, and `DELETE`. `UPDATE` and `DELETE` statements both have to target the set of rows to be modified or deleted. The process of identifying these rows is the same process used to identify the source rows that contribute to the result set of a `SELECT` statement. The `UPDATE` and `INSERT` statements may both contain embedded `SELECT statements that provide the data values to be updated or inserted.
 
-Even Data Definition Language (DDL) statements, such as `CREATE PROCEDURE` or `ALTER TABL`E, are ultimately resolved to a series of relational operations on the system catalog tables and sometimes (such as `ALTER TABLE ADD COLUMN`) against the data tables.
+Even Data Definition Language (DDL) statements, such as `CREATE PROCEDURE` or `ALTER TABLE`, are ultimately resolved to a series of relational operations on the system catalog tables and sometimes (such as `ALTER TABLE ADD COLUMN`) against the data tables.
 
 ### Worktables
 
-The relational engine may need to build a worktable to perform a logical operation specified in an SQL statement. Worktables are internal tables that are used to hold intermediate results. Worktables are generated for certain `GROUP BY`, `ORDER BY`, or `UNION` queries. For example, if an `ORDER BY` clause references columns that are not covered by any indexes, the relational engine may need to generate a worktable to sort the result set into the order requested. Worktables are also sometimes used as spools that temporarily hold the result of executing a part of a query plan. Worktables are built in `tempdb` and are dropped automatically when they are no longer needed.
+The relational engine may need to build a worktable to perform a logical operation specified in an SQL statement. Worktables are internal tables that are used to hold intermediate results. Worktables are generated for certain `GROUP BY`, `ORDER BY`, or `UNION` queries. For example, if an `ORDER BY` clause references columns that are not covered by any indexes, the relational engine may need to generate a worktable to sort the result set into the order requested. Worktables are also sometimes used as spools that temporarily hold the result of executing a part of a query plan. Worktables are built in tempdb and are dropped automatically when they are no longer needed.
 
 ### View Resolution
 

@@ -82,15 +82,15 @@ The SSMS 18.x installation does not upgrade or replace SSMS versions 17.x or ear
 If a computer contains side by side installations of SSMS, verify you start the correct version for your specific needs. The latest version is labeled *Microsoft SQL Server Management Studio 18*:
  
 
-## Available Languages (SSMS 18.0 preview)
+## Available Languages (SSMS 18.0 preview 5)
 
 This release of SSMS can be installed in the following languages:
 
 SQL Server Management Studio 18.0 (preview 5):<br>
-[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2014662&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2014662&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2014662&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2014662&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2014662&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2014662&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2014662&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2014662&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2014662&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2014662&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2014662&clcid=0x40a)
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2041155&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2041155&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2041155&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2041155&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2041155&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2041155&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2041155&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2041155&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2041155&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2041155&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2041155&clcid=0x40a)
 
 SQL Server Management Studio 18.0 Upgrade Package (upgrades to 18.0):<br>
-No upgrade option is available at this time.
+No upgrade option is available at this time. If you have a previous SSMS 18.0 preview installed, uninstall it before installing SSMS 18.0 preview 5.
 
 > [!NOTE]
 > The SQL Server PowerShell module is a separate install through the PowerShell Gallery. For more information, see [Download SQL Server PowerShell Module](download-sql-server-ps-module.md).

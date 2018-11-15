@@ -54,7 +54,7 @@ ALTER USER userName
 
 > [!IMPORTANT]
 > Azure AD logins for SQL Database Managed Instance is in **public preview**. Only the following options are supported for Azure SQL Database Managed Instance when using Azure AD logins:
-> `DEFAULT_SCHEMA = { schemaName | NULL }`
+> `DEFAULT_SCHEMA = { schemaName | NULL }` and
 > `DEFAULT_LANGUAGE = { NONE | lcid | language name | language alias }`
 
 ```

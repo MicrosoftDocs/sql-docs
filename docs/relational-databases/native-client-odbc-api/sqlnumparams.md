@@ -21,7 +21,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  For more information, see [Metadata Discovery](../../relational-databases/native-client/features/metadata-discovery.md).  
   
 ## See Also  
- [SQLNumParams Function](http://go.microsoft.com/fwlink/?LinkId=58404)   
+ [SQLNumParams Function](https://go.microsoft.com/fwlink/?LinkId=58404)   
  [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

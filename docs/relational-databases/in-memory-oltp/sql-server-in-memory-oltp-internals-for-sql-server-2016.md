@@ -35,4 +35,4 @@ engine is designed for high concurrency with no blocking.
   
 **Applies to:** SQL Server 2016  
   
-To review the document, please download the [SQL Server In-Memory OLTP Internals for SQL Server 2016](http://download.microsoft.com/download/8/3/6/8360731A-A27C-4684-BC88-FC7B5849A133/SQL_Server_2016_In_Memory_OLTP_White_Paper.pdf) document.   
+To review the document, please download the [SQL Server In-Memory OLTP Internals for SQL Server 2016](https://download.microsoft.com/download/8/3/6/8360731A-A27C-4684-BC88-FC7B5849A133/SQL_Server_2016_In_Memory_OLTP_White_Paper.pdf) document.   

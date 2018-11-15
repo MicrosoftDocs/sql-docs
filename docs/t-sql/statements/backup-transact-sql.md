@@ -277,7 +277,7 @@ Specifies a set of up to three secondary backup devices, each of which mirrors t
 This option is available only in the Enterprise edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
-> For MIRROR TO = DISK, BACKUP automatically determines the appropriate block size for disk devices. For more information about block size, see "BLOCKSIZE" later in this table.  
+> For MIRROR TO = DISK, BACKUP automatically determines the appropriate block size for disk devices based on the sector size of the disk. If the MIRROR TO disk is formatted with a different sector size than the disk specified as the primary backup device, the backup command will fail.  In order to mirror backups to devices that have different sector sizes, the BLOCKSIZE parameter must be specified, and should be set to the highest sector size amongst all the target devices.  For more information about block size, see "BLOCKSIZE" later in this topic.  
   
 \<backup_device>
 See "\<backup_device>," earlier in this section.

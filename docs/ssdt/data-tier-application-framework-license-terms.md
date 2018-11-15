@@ -73,7 +73,7 @@ for this software, unless other terms accompany those items. If so, those terms 
     -   transfer the software or this agreement to any third party; or  
     -   use the software for commercial software hosting services.  
       
-4.  **THIRD PARTY NOTICES.** The software may include third party code, that Microsoft, not the third party, licenses to you under the terms set forth in this agreement. Notices, if any, for any third party code are included for your information only. Additionally, any third party scripts, linked to, called or referenced from this software, are licensed to you by the third parties that own such code, not by Microsoft, see ASP.NET Ajax CDN Terms of Use: http://www.asp.net/ajaxlibrary/CDN.ashx.  
+4.  **THIRD PARTY NOTICES.** The software may include third party code, that Microsoft, not the third party, licenses to you under the terms set forth in this agreement. Notices, if any, for any third party code are included for your information only. Additionally, any third party scripts, linked to, called or referenced from this software, are licensed to you by the third parties that own such code, not by Microsoft, see ASP.NET Ajax CDN Terms of Use: https://www.asp.net/ajaxlibrary/CDN.ashx.  
   
 5.  **BACKUP COPY.** You may make one backup copy of the software. You may use it only to reinstall the software.  
   

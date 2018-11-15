@@ -60,7 +60,7 @@ fn:id($arg as xs:IDREF*) as element()*
 -- go  
   
 create xml schema collection SC as  
-'<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:e="emp" targetNamespace="emp">  
+'<schema xmlns="https://www.w3.org/2001/XMLSchema" xmlns:e="emp" targetNamespace="emp">  
             <element name="employees" type="e:EmployeesType"/>  
             <complexType name="EmployeesType">  
                  <sequence>  
@@ -101,7 +101,7 @@ Go
 drop xml schema collection SC  
 go  
 create xml schema collection SC as  
-'<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:Customers="Customers" targetNamespace="Customers">  
+'<schema xmlns="https://www.w3.org/2001/XMLSchema" xmlns:Customers="Customers" targetNamespace="Customers">  
             <element name="Customers" type="Customers:CustomersType"/>  
             <complexType name="CustomersType">  
                         <sequence>  
@@ -176,6 +176,6 @@ select @x.query('declare namespace CustOrders="Customers";
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] requires the argument type of **id()** to be a subtype of xs:IDREF*.  
   
 ## See Also  
- [Functions on Sequences](http://msdn.microsoft.com/library/672d2795-53ab-49c2-bf24-bc81a47ecd3f)  
+ [Functions on Sequences](https://msdn.microsoft.com/library/672d2795-53ab-49c2-bf24-bc81a47ecd3f)  
   
   

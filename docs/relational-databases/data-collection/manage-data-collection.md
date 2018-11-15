@@ -168,7 +168,7 @@ manager: craigg
   
 ## See also  
  [Execute a Stored Procedure](../../relational-databases/stored-procedures/execute-a-stored-procedure.md)   
- [Use SQL Server Management Studio](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)   
+ [Use SQL Server Management Studio](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)   
  [Data Collection](../../relational-databases/data-collection/data-collection.md)  
   
   

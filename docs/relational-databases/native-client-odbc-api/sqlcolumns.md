@@ -87,7 +87,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  For more information about sparse columns in ODBC, see [Sparse Columns Support &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md).  
   
 ## See Also  
- [SQLColumns Function](http://go.microsoft.com/fwlink/?LinkId=59336)   
+ [SQLColumns Function](https://go.microsoft.com/fwlink/?LinkId=59336)   
  [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

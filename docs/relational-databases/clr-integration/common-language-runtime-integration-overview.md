@@ -47,14 +47,14 @@ manager: craigg
  [What's New in CLR Integration](../../relational-databases/clr-integration/clr-integration-what-s-new.md)  
  Describes the new features in this release.  
   
- [Architecture of CLR Integration](http://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9)  
+ [Architecture of CLR Integration](https://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9)  
  Describes the design goals of CLR integration.  
   
  [Enabling CLR Integration](../../relational-databases/clr-integration/clr-integration-enabling.md)  
  Describes how to enable CLR integration.  
   
 ## See Also  
- [Installing the .NET Framework](http://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
+ [Installing the .NET Framework](https://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
  [Performance of CLR Integration](../../relational-databases/clr-integration/clr-integration-architecture-performance.md)  
   
   

@@ -49,12 +49,12 @@ A database administrator typically creates a full database backup occasionally, 
 -   By default, every successful backup operation adds an entry in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log and in the system event log. If back up the log very frequently, these success messages accumulate quickly, resulting in huge error logs that can make finding other messages difficult. In such cases you can suppress these log entries by using trace flag 3226 if none of your scripts depend on those entries. For more information, see [Trace Flags &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
 
 -   Take frequent enough log backups to support your business requirements, specifically your tolerance for work loss such as might be caused by a damaged log storage. 
-   -   The appropriate frequency for taking log backups depends on your tolerance for work-loss exposure balanced by how many log backups you can store, manage, and, potentially, restore. Think about the required [RTO](http://wikipedia.org/wiki/Recovery_time_objective) and [RPO](http://wikipedia.org/wiki/Recovery_point_objective) when implementing your recovery strategy, and specifically the log backup cadence.
+   -   The appropriate frequency for taking log backups depends on your tolerance for work-loss exposure balanced by how many log backups you can store, manage, and, potentially, restore. Think about the required [RTO](https://wikipedia.org/wiki/Recovery_time_objective) and [RPO](https://wikipedia.org/wiki/Recovery_point_objective) when implementing your recovery strategy, and specifically the log backup cadence.
    -   Taking a log backup every 15 to 30 minutes might be enough. If your business requires that you minimize work-loss exposure, consider taking log backups more frequently. More frequent log backups have the added advantage of increasing the frequency of log truncation, resulting in smaller log files.  
   
 > [!IMPORTANT]
 > To limit the number of log backups that you need to restore, it is essential to routinely back up your data. For example, you might schedule a weekly full database backup and daily differential database backups.  
-> Again, think about the required [RTO](http://wikipedia.org/wiki/Recovery_time_objective) and [RPO](http://wikipedia.org/wiki/Recovery_point_objective) when implementing your recovery strategy, and specifically the full and differential database backup cadence.
+> Again, think about the required [RTO](https://wikipedia.org/wiki/Recovery_time_objective) and [RPO](https://wikipedia.org/wiki/Recovery_point_objective) when implementing your recovery strategy, and specifically the full and differential database backup cadence.
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
  **To create a transaction log backup**  

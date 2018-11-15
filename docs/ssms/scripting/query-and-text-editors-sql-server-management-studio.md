@@ -97,15 +97,15 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  Templates you can use as a starting point when adding statements in the Database Engine Query Editor. You can insert the pre-defined snippets supplied with SQL Server, or add your own snippets.  
   
  **SQLCMD Mode**  
- Runs [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts that include the set of commands supported by the sqlcmd utility. For more information, see [sqlcmd How-to Topics](http://msdn.microsoft.com/library/dd7a2d2b-6327-4d77-ac5a-580d36073ad4).  
+ Runs [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts that include the set of commands supported by the sqlcmd utility. For more information, see [sqlcmd How-to Topics](https://msdn.microsoft.com/library/dd7a2d2b-6327-4d77-ac5a-580d36073ad4).  
   
 ## Editor Tasks  
   
 |Task Description|Topic|  
 |----------------------|-----------|  
 |Describes how to view and use the basic features in the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor.|[Database Engine Query Editor &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)|  
-|Describes how to view and use the basic features in the MDX Query Editor.|[MDX Query Editor &#40;Analysis Services - Multidimensional Data&#41;](http://msdn.microsoft.com/library/777f2c23-1c1c-4b72-9d19-48a4866551f8)|  
-|Describes how to view and use the basic features in the DMX Query Editor.|[DMX Query Editor &#40;Analysis Services - Data Mining&#41;](http://msdn.microsoft.com/library/7ac877a1-0f29-46b9-9a51-73b02172bef1)|  
+|Describes how to view and use the basic features in the MDX Query Editor.|[MDX Query Editor &#40;Analysis Services - Multidimensional Data&#41;](https://msdn.microsoft.com/library/777f2c23-1c1c-4b72-9d19-48a4866551f8)|  
+|Describes how to view and use the basic features in the DMX Query Editor.|[DMX Query Editor &#40;Analysis Services - Data Mining&#41;](https://msdn.microsoft.com/library/7ac877a1-0f29-46b9-9a51-73b02172bef1)|  
 |Describes how to view and use the basic features in the XML/A Editor.|[XML Editor &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/xml-editor-sql-server-management-studio.md)|  
 |Describes how to configure options for the various editors, such as line numbering and IntelliSense options.|[Configure Editors &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/configure-editors-sql-server-management-studio.md)|  
 |Describes the various ways you can open the editors in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].|[Open an Editor &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/open-an-editor-sql-server-management-studio.md)|  

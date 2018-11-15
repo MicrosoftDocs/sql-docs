@@ -43,7 +43,7 @@ This procedure explains how to create a test condition to appear in the SQL Serv
   
 10. Derive your class from the [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx) class.  
   
-11. Sign the assembly with a strong name. For more information, see [How to: Sign an Assembly with a Strong Name](http://msdn.microsoft.com/library/xc31ft41.aspx).  
+11. Sign the assembly with a strong name. For more information, see [How to: Sign an Assembly with a Strong Name](https://msdn.microsoft.com/library/xc31ft41.aspx).  
   
 12. Build the class library.  
   

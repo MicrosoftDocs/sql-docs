@@ -48,7 +48,7 @@ SSMA contains several settings for converting and loading database, migrating da
   
 -   For information about settings for Synchronization to SQL Server, see [Project Settings &#40;Synchronization&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-synchronization-mysqltosql.md).  
   
--   For information about GUI settings, see [Project Settings (GUI) (SSMA Common)](http://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693).  
+-   For information about GUI settings, see [Project Settings (GUI) (SSMA Common)](https://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693).  
   
 -   For information about data type mapping settings, see [Project Settings &#40;Type Mapping&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md).  
   

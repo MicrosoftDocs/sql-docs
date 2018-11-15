@@ -120,7 +120,7 @@ GO
 DECLARE @var XML  
 SET @var = '<root>1</root>'  
 SELECT @var.query('  
-DECLARE namespace x="http://X";  
+DECLARE namespace x="https://X";  
 for $x:i in /root return data($x:i)')  
 GO  
 ```  

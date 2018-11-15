@@ -202,4 +202,4 @@ In addition, Static Data Masking presents three limitations in its masking abili
 
 ## See Also  
  [Dynamic Data Masking](../../relational-databases/security/dynamic-data-masking.md)   
- [Get started with SQL Database Static Data Masking](http://azure.microsoft.com/documentation/articles/sql-database-static-data-masking-get-started/)  
+ [Get started with SQL Database Static Data Masking](https://azure.microsoft.com/documentation/articles/sql-database-static-data-masking-get-started/)  

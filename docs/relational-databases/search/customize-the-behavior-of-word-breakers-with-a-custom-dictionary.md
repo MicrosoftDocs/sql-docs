@@ -19,7 +19,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
  For more information, see the following SharePoint article:  
   
- [Create a custom dictionary (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkId=215011)  
+ [Create a custom dictionary (SharePoint Server 2010)](https://go.microsoft.com/fwlink/?LinkId=215011)  
   
  For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], place custom dictionary files in the following folder:  
   

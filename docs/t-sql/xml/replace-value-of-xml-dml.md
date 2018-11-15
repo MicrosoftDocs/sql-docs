@@ -152,7 +152,7 @@ go
 --insert a new location - <Location 1000/>.   
 update T  
 set Instructions.modify('  
-  declare namespace MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+  declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
 insert <MI:Location LocationID="1000"  LaborHours="1000"  LotSize="1000" >  
            <MI:step>Do something using <MI:tool>hammer</MI:tool></MI:step>  
          </MI:Location>  
@@ -166,7 +166,7 @@ go
 -- Now replace manu. tool in location 1000  
 update T  
 set Instructions.modify('  
-  declare namespace MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+  declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
   replace value of (/MI:root/MI:Location/MI:step/MI:tool)[1]   
   with   "screwdriver"  
 ')  
@@ -176,7 +176,7 @@ from T
 -- Now replace value of lot size  
 update T  
 set Instructions.modify('  
-  declare namespace MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+  declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
   replace value of (/MI:root/MI:Location/@LotSize)[1]   
   with   500 cast as xs:decimal ?  
 ')  

@@ -141,7 +141,7 @@ Specifies the name of an asymmetric key to be associated with this login. This k
 >  CHECK_EXPIRATION and CHECK_POLICY are only enforced on Windows Server 2003 and later. For more information, see [Password Policy](../../relational-databases/security/password-policy.md). 
   
 - Logins created from certificates or asymmetric keys are used only for code signing. They cannot be used to connect to SQL Server. You can create a login from a certificate or asymmetric key only when the certificate or asymmetric key already exists in master. 
-- For a script to transfer logins, see [How to transfer the logins and the passwords between instances of SQL Server 2005 and SQL Server 2008](http://support.microsoft.com/kb/918992).
+- For a script to transfer logins, see [How to transfer the logins and the passwords between instances of SQL Server 2005 and SQL Server 2008](https://support.microsoft.com/kb/918992).
 - Creating a login automatically enables the new login and grants the login the server level **CONNECT SQL** permission. 
 - The server's [authentication mode](../../relational-databases/security/choose-an-authentication-mode.md) must match the login type to permit access.
 - For information about designing a permissions system, see [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
@@ -291,7 +291,7 @@ Used to recreate a login. Applies to SQL Server authentication logins only, not 
   
 ## Remarks  
 - Passwords are case-sensitive.
-- For a script to transfer logins, see [How to transfer the logins and the passwords between instances of SQL Server 2005 and SQL Server 2008](http://support.microsoft.com/kb/918992).
+- For a script to transfer logins, see [How to transfer the logins and the passwords between instances of SQL Server 2005 and SQL Server 2008](https://support.microsoft.com/kb/918992).
 - Creating a login automatically enables the new login and grants the login the server level **CONNECT SQL** permission. 
 - The server's [authentication mode](../../relational-databases/security/choose-an-authentication-mode.md) must match the login type to permit access.
     - For information about designing a permissions system, see [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
@@ -409,7 +409,7 @@ Used to recreate a login. Applies to SQL Server authentication logins only, not 
   
 ## Remarks  
 - Passwords are case-sensitive.
-- For a script to transfer logins, see [How to transfer the logins and the passwords between instances of SQL Server 2005 and SQL Server 2008](http://support.microsoft.com/kb/918992).
+- For a script to transfer logins, see [How to transfer the logins and the passwords between instances of SQL Server 2005 and SQL Server 2008](https://support.microsoft.com/kb/918992).
 - Creating a login automatically enables the new login and grants the login the server level **CONNECT SQL** permission. 
 - The server's [authentication mode](../../relational-databases/security/choose-an-authentication-mode.md) must match the login type to permit access.
     - For information about designing a permissions system, see [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
@@ -527,7 +527,7 @@ Passwords are case-sensitive. Passwords should always be at least 8 characters l
   
 ## Remarks  
 - Passwords are case-sensitive.
-- For a script to transfer logins, see [How to transfer the logins and the passwords between instances of SQL Server 2005 and SQL Server 2008](http://support.microsoft.com/kb/918992).
+- For a script to transfer logins, see [How to transfer the logins and the passwords between instances of SQL Server 2005 and SQL Server 2008](https://support.microsoft.com/kb/918992).
 - Creating a login automatically enables the new login and grants the login the server level **CONNECT SQL** permission. 
 - The server's [authentication mode](../../relational-databases/security/choose-an-authentication-mode.md) must match the login type to permit access.
     - For information about designing a permissions system, see [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
@@ -666,7 +666,7 @@ Specifies that the login be mapped to a Windows login.
 > [!IMPORTANT]  
 >  CHECK_EXPIRATION and CHECK_POLICY are only enforced on Windows Server 2003 and later. For more information, see [Password Policy](../../relational-databases/security/password-policy.md). 
   
-- For a script to transfer logins, see [How to transfer the logins and the passwords between instances of SQL Server 2005 and SQL Server 2008](http://support.microsoft.com/kb/918992).
+- For a script to transfer logins, see [How to transfer the logins and the passwords between instances of SQL Server 2005 and SQL Server 2008](https://support.microsoft.com/kb/918992).
 - Creating a login automatically enables the new login and grants the login the server level **CONNECT SQL** permission. 
 - For information about designing a permissions system, see [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
 

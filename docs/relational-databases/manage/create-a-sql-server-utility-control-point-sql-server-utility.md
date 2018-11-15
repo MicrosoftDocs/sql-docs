@@ -72,7 +72,7 @@ manager: craigg
   
 -   This procedure must be run by a user with sysadmin permissions, the same permissions required to create a UCP.  
   
--   All managed instances of SQL Server must be removed from the UCP. Note that the UCP is a managed instance of SQL Server. For more information, see [How to: Remove an Instance of SQL Server from the SQL Server Utility](http://go.microsoft.com/fwlink/?LinkId=169392).  
+-   All managed instances of SQL Server must be removed from the UCP. Note that the UCP is a managed instance of SQL Server. For more information, see [How to: Remove an Instance of SQL Server from the SQL Server Utility](https://go.microsoft.com/fwlink/?LinkId=169392).  
   
  Use this procedure to remove a SQL Server UCP from the SQL Server Utility. After the operation is complete, a UCP can be created on the instance of SQL Server again.  
   
@@ -134,7 +134,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
  To continue, click **Next**.  
   
 ##  <a name="Connection_dialog"></a> Connection Dialog  
- On the Connect to Server dialog box, verify the server type, computer name, and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance name information. For more information, see [Connect to Server &#40;Database Engine&#41;](http://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41).  
+ On the Connect to Server dialog box, verify the server type, computer name, and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance name information. For more information, see [Connect to Server &#40;Database Engine&#41;](https://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41).  
   
 > [!NOTE]  
 >  If the connection is encrypted, the encrypted connection will be used. If the connection is not encrypted, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility will reconnect using an encrypted connection.  
@@ -164,7 +164,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 |The instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot have a database named "sysutility_mdw."|The create UCP operation will create a utility management data warehouse (UMDW) named "sysutility_mdw." The operation requires that the name does not exist on the computer at the time that validation rules are run. To continue, you must remove or rename any database named "sysutility_mdw." For more information about renaming operations, see [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).|  
 |Collection sets on the specified instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must be stopped.|Stop pre-existing collection sets while the UCP is created on the specified instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If the data collector is disabled, enable it, stop any running collection sets, then re-run validation rules for the Create UCP operation.<br /><br /> To enable the data collector:<br /><br /> In Object Explorer, expand the **Management** node.<br /><br /> Right-click **Data Collection**, and then click **Enable Data Collection**.<br /><br /> To stop a collection set:<br /><br /> In Object Explorer, expand the Management node, expand **Data Collection**, and then expand **System Data Collection Sets**.<br /><br /> Right-click the collection set that you want to stop, and then click **Stop Data Collection Set**.<br /><br /> A message box will display the result of this action, and a red circle on the icon for the collection set indicates that the collection set has stopped.|  
 |The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service on the specified instance must be started. If the specified instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster instance, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service must be configured to start manually. Otherwise, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service must be configured to start automatically.|Start the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service. If the specified instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster instance, configure the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service to start manually. Otherwise, configure the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service to start automatically.|  
-|WMI must be configured correctly.|To troubleshoot WMI configuration, see [Troubleshoot the SQL Server Utility](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453).|  
+|WMI must be configured correctly.|To troubleshoot WMI configuration, see [Troubleshoot the SQL Server Utility](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453).|  
 |The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxy account cannot be a built-in account, like Network Service.|If the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxy account is a built-in account, like Network Service, re-assign the account to a Windows domain account that is sysadmin.|  
 |If you select the proxy account option, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxy account must be a valid Windows domain account.|Specify a valid Windows domain account. To ensure that the account is valid, logon to the specified instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using the Windows domain account.|  
 |If you select the service account option, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service account cannot be a built-in account, like Network Service.|If the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service account is a built-in account, like Network Service, re-assign the account to a Windows domain account.|  
@@ -223,6 +223,6 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
   
 ## See Also  
  [SQL Server Utility Features and Tasks](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
- [Troubleshoot the SQL Server Utility](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
+ [Troubleshoot the SQL Server Utility](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
   
   

@@ -54,7 +54,7 @@ Operations within **tempdb** are minimally logged so that transactions can be ro
  \* The number of files depends on the number of (logical) processors on the machine. As a general rule, if the number of logical processors is less than or equal to eight, use the same number of data files as logical processors. If the number of logical processors is greater than eight, use eight data files and then if contention continues, increase the number of data files by multiples of 4 until the contention is reduced to acceptable levels or make changes to the workload/code.
 
 > [!NOTE]
-> The default value for the number of data files is based on the general guidelines in [KB 2154845](http://support.microsoft.com/kb/2154845/).  
+> The default value for the number of data files is based on the general guidelines in [KB 2154845](https://support.microsoft.com/kb/2154845/).  
   
 ### Moving the tempdb data and log files in SQL Server  
  To move the **tempdb** data and log files, see [Move System Databases](../../relational-databases/databases/move-system-databases.md).  
@@ -272,4 +272,4 @@ For more information on performance improvements in tempdb, see the following bl
   
 ## See Also  
  [Working with tempdb in SQL Server 2005](https://technet.microsoft.com/library/cc966545.aspx)  
- [Troubleshooting Insufficient Disk Space in tempdb](http://msdn.microsoft.com/library/ms176029.aspx) 
+ [Troubleshooting Insufficient Disk Space in tempdb](https://msdn.microsoft.com/library/ms176029.aspx) 

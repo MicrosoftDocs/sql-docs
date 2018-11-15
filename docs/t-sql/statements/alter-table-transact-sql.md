@@ -675,7 +675,7 @@ Specifies that *constraint_name* or *column_name* is removed from the table. Mul
 -   Bound to a rule.  
   
 > [!NOTE]  
-> Dropping a column does not reclaim the disk space of the column. You may have to reclaim the disk space of a dropped column when the row size of a table is near, or has exceeded, its limit. Reclaim space by creating a clustered index on the table or rebuilding an existing clustered index by using [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md). For information about the impact of dropping LOB data types, see this [CSS blog entry](http://blogs.msdn.com/b/psssql/archive/2012/12/03/how-it-works-gotcha-varchar-max-caused-my-queries-to-be-slower.aspx).  
+> Dropping a column does not reclaim the disk space of the column. You may have to reclaim the disk space of a dropped column when the row size of a table is near, or has exceeded, its limit. Reclaim space by creating a clustered index on the table or rebuilding an existing clustered index by using [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md). For information about the impact of dropping LOB data types, see this [CSS blog entry](https://blogs.msdn.com/b/psssql/archive/2012/12/03/how-it-works-gotcha-varchar-max-caused-my-queries-to-be-slower.aspx).  
   
 PERIOD FOR SYSTEM_TIME  
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
@@ -929,7 +929,7 @@ ALTER TABLE \<table name>
        SET ( REMOTE_DATA_ARCHIVE ( MIGRATION_STATE = INBOUND ) ) ;  
     ```  
   
-     This operation incurs data transfer costs, and it can't be canceled. For more info, see [Data Transfers Pricing Details](https://azure.microsoft.com/en-us/pricing/details/data-transfers/).  
+     This operation incurs data transfer costs, and it can't be canceled. For more info, see [Data Transfers Pricing Details](https://azure.microsoft.com/pricing/details/data-transfers/).  
   
      After all the remote data has been copied from Azure back to SQL Server, Stretch is disabled for the table.  
   
@@ -992,9 +992,9 @@ WAIT_AT_LOW_PRIORITY
  Requires **ALTER ANY CONNECTION** permission.  
   
 IF EXISTS  
- **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
- Conditionally drops the column or constraint  only if it already exists.  
+Conditionally drops the column or constraint  only if it already exists.  
   
 ## Remarks  
  To add new rows of data, use [INSERT](../../t-sql/statements/insert-transact-sql.md). To remove rows of data, use [DELETE](../../t-sql/statements/delete-transact-sql.md) or [TRUNCATE TABLE](../../t-sql/statements/truncate-table-transact-sql.md). To change the values in existing rows, use [UPDATE](../../t-sql/queries/update-transact-sql.md).  
@@ -1721,31 +1721,32 @@ SysStartTime datetime2 GENERATED ALWAYS AS ROW START HIDDEN NOT NULL
     DEFAULT SYSUTCDATETIME(),   
 SysEndTime datetime2 GENERATED ALWAYS AS ROW END HIDDEN NOT NULL 
     DEFAULT CONVERT(DATETIME2, '9999-12-31 23:59:59.99999999');  
+
 --Enable system versioning with 1 year retention for historical data
 ALTER TABLE InsurancePolicy 
 SET (SYSTEM_VERSIONING = ON (HISTORY_RETENTION_PERIOD = 1 YEAR));  
 ```  
   
 #### B. Migrate An Existing Solution to Use System Versioning  
- The following example shows how to migrate to system versioning from a solution that uses triggers to mimic temporal support. The example assumes there is an existing solution that uses a `ProjectTaskCurrent` table and a `ProjectTaskHistory` table for its existing solution, that is uses the Changed Date and Revised Date columns for its periods, that these period columns do not use the datetime2 datatype and that the `ProjectTaskCurrent` table has a primary key defined.  
-  
+ The following example shows how to migrate to system versioning from a solution that uses triggers to mimic temporal support. The example assumes there is an existing solution that uses a `ProjectTask` table and a `ProjectTaskHistory` table for its existing solution, that is uses the `Changed Date` and `Revised Date` columns for its periods, that these period columns do not use the `datetime2` datatype and that the `ProjectTask` table has a primary key defined.  
+
 ```sql  
 -- Drop existing trigger  
-DROP TRIGGER ProjectTaskCurrent_Trigger;  
+DROP TRIGGER ProjectTask_HistoryTrigger;  
+
 -- Adjust the schema for current and history table  
 -- Change data types for existing period columns
-
-ALTER TABLE ProjectTaskCurrent ALTER COLUMN [Changed Date] datetime2 NOT NULL;   
-ALTER TABLE ProjectTaskCurrent ALTER COLUMN [Revised Date] datetime2 NOT NULL;  
+ALTER TABLE ProjectTask ALTER COLUMN [Changed Date] datetime2 NOT NULL;   
+ALTER TABLE ProjectTask ALTER COLUMN [Revised Date] datetime2 NOT NULL;  
 ALTER TABLE ProjectTaskHistory ALTER COLUMN [Changed Date] datetime2 NOT NULL;  
 ALTER TABLE ProjectTaskHistory ALTER COLUMN [Revised Date] datetime2 NOT NULL;  
 
 -- Add SYSTEM_TIME period and set system versioning with linking two existing tables  
 -- (a certain set of data checks happen in the background)  
-ALTER TABLE ProjectTaskCurrent  
+ALTER TABLE ProjectTask  
 ADD PERIOD FOR SYSTEM_TIME ([Changed Date], [Revised Date])  
   
-ALTER TABLE ProjectTaskCurrent  
+ALTER TABLE ProjectTask  
 SET (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.ProjectTaskHistory, DATA_CONSISTENCY_CHECK = ON))  
 ```  
   

@@ -218,7 +218,7 @@ go
     SELECT C.query('.') as result  
     FROM Production.ProductModel  
     CROSS APPLY Instructions.nodes('  
-    declare namespace MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+    declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
     /MI:root/MI:Location') as T(C)  
     WHERE ProductModelID=7  
     ```  
@@ -251,10 +251,10 @@ SELECT ProductModelID, Locations.value('./@LocationID','int') as LocID,
 steps.query('.') as Step         
 FROM Production.ProductModel         
 CROSS APPLY Instructions.nodes('         
-declare namespace MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";         
+declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";         
 /MI:root/MI:Location') as T1(Locations)         
 CROSS APPLY T1.Locations.nodes('         
-declare namespace MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";         
+declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";         
 ./MI:step ') as T2(steps)         
 WHERE ProductModelID=7         
 GO         
@@ -278,7 +278,7 @@ ProductModelID LocID Step
   
 ```  
 WITH XMLNAMESPACES (  
-   'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions'  AS MI)  
+   'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions'  AS MI)  
   
 SELECT ProductModelID, Locations.value('./@LocationID','int') as LocID,  
 steps.query('.') as Step         

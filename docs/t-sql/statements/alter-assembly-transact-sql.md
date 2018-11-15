@@ -193,7 +193,7 @@ The following permissions required to alter a CLR assembly when `CLR strict secu
  The following example updates assembly `ComplexNumber` to the latest copy of the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] modules that hold its implementation.  
   
 > [!NOTE]  
->  Assembly `ComplexNumber` can be created by running the UserDefinedDataType sample scripts. For more information, see [User Defined Type](http://msdn.microsoft.com/library/a9b75f36-d7f5-47f7-94d6-b4448c6a2191).  
+>  Assembly `ComplexNumber` can be created by running the UserDefinedDataType sample scripts. For more information, see [User Defined Type](https://msdn.microsoft.com/library/a9b75f36-d7f5-47f7-94d6-b4448c6a2191).  
   
  ```
  ALTER ASSEMBLY ComplexNumber 

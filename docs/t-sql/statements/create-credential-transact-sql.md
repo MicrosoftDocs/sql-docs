@@ -138,7 +138,7 @@ EXEC ('CREATE CREDENTIAL Azure_EKM_TDE_cred
 ```  
   
 ### D. Creating a Credential using a SAS Token  
- **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658).  
+ **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658).  
   
  The following example creates a shared access signature credential using a SAS token.  For a tutorial on creating a stored access policy and a shared access signature on an Azure container, and then creating a credential using the shared access signature, see [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
@@ -162,6 +162,6 @@ GO
  [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
  [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)   
  [Lesson 2: Create a SQL Server credential using a shared access signature](../../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)   
- [Shared Access Signatures](https://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-shared-access-signature-part-1/)  
+ [Shared Access Signatures](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)  
   
   

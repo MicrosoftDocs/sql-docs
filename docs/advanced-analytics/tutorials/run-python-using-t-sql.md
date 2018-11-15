@@ -134,7 +134,7 @@ By default, [sp_execute_external_script](../../relational-databases/system-store
 
 Other types of input can be passed as SQL variables: for example, you can pass a trained model as a variable, using a serialization function such as [pickle](https://docs.python.org/3.0/library/pickle.html) or [rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model) to write the model in a binary format.
 
-The stored procedure returns a single Python [pandas](http://pandas.pydata.org/pandas-docs/stable/index.html) data frame as output, but you can also output scalars and models as variables. For example, you can output a trained model as a binary variable and pass that to a T-SQL INSERT statement, to write that model to a table. You can also generate plots (in binary format) or scalars (individual values, such as the date and time, the time elapsed to train the model, and so forth).
+The stored procedure returns a single Python [pandas](https://pandas.pydata.org/pandas-docs/stable/index.html) data frame as output, but you can also output scalars and models as variables. For example, you can output a trained model as a binary variable and pass that to a T-SQL INSERT statement, to write that model to a table. You can also generate plots (in binary format) or scalars (individual values, such as the date and time, the time elapsed to train the model, and so forth).
 
 For now, let's look at just the default input and output variables of sp_execute_external_script: `InputDataSet` and `OutputDataSet`. 
 
@@ -308,7 +308,7 @@ So how would you expose the single result of a calculation as a data frame, if a
 
 Having converted our scalar math results to a tabular structure, we still need to convert them to a format that SQL Server can handle. 
 
-1. To convert a series to a data.frame, call the pandas [DataFrame](http://pandas.pydata.org/pandas-docs/stable/dsintro.html#dataframe) method.
+1. To convert a series to a data.frame, call the pandas [DataFrame](https://pandas.pydata.org/pandas-docs/stable/dsintro.html#dataframe) method.
 
     ```sql
     execute sp_execute_external_script 

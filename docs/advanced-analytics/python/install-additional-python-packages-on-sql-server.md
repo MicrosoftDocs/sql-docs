@@ -46,7 +46,7 @@ The package installed in this example is [CNTK](https://docs.microsoft.com/cogni
 > 
 > [Getting Started with Python Web Services using Machine Learning Server](https://blogs.msdn.microsoft.com/mlserver/2017/12/13/getting-started-with-python-web-services-using-machine-learning-server/)
 > 
-> [David Crook: Microsoft Cognitive Toolkit + VS Code](http://dacrook.com/cntk-vs-code-awesome/)
+> [David Crook: Microsoft Cognitive Toolkit + VS Code](https://dacrook.com/cntk-vs-code-awesome/)
 
 ### Step 1. Download the Windows version of the Python package
 

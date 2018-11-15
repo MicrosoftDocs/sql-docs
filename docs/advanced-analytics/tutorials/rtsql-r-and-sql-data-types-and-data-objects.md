@@ -103,7 +103,7 @@ $ X...      : Factor w/ 1 level " ": 1
 $ c..world..: Factor w/ 1 level "world": 1
 ```
 
-As you can see, a slight change in R syntax had a big effect on the schema of the results. We won't go into why, because the differences in R data types are explained more thoroughly in this article by Hadley Wickham: [R Data Structures](http://adv-r.had.co.nz/Data-structures.html).
+As you can see, a slight change in R syntax had a big effect on the schema of the results. We won't go into why, because the differences in R data types are explained more thoroughly in this article by Hadley Wickham: [R Data Structures](https://adv-r.had.co.nz/Data-structures.html).
 
 For now, just be aware that you need to check the expected results when coercing R objects into data frames.
 

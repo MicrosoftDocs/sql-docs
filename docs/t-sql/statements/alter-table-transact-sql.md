@@ -641,19 +641,19 @@ Specifies the names of the columns that the system will use to record the period
   
 Use this argument in conjunction with the SET SYSTEM_VERSIONING argument to enable system versioning on an existing table. For more information, see [Temporal Tables](../../relational-databases/tables/temporal-tables.md) and [Getting Started with Temporal Tables in Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-temporal-tables/).  
   
-As of [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], users will be able to mark one or both period columns with **HIDDEN** flag to implicitly hide these columns such that **SELECT \* FROM**_\<table/>_ does not return a value for those columns. By default, period columns are not hidden. In order to be used, hidden columns must be explicitly included in all queries that directly reference the temporal table.  
+As of [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], users will be able to mark one or both period columns with **HIDDEN** flag to implicitly hide these columns such that **SELECT \* FROM \<table_name>**  does not return a value for those columns. By default, period columns are not hidden. In order to be used, hidden columns must be explicitly included in all queries that directly reference the temporal table.  
   
 DROP  
 Specifies that one or more column definitions, computed column definitions, or table constraints are dropped, or to drop the specification for the columns that the system will use for system versioning.  
   
-CONSTRAINT *constraint_name*  
+CONSTRAINT *constraint_name*    
 Specifies that *constraint_name* is removed from the table. Multiple constraints can be listed.  
   
 The user-defined or system-supplied name of the constraint can be determined by querying the **sys.check_constraint**, **sys.default_constraints**, **sys.key_constraints**, and **sys.foreign_keys** catalog views.  
   
 A PRIMARY KEY constraint cannot be dropped if an XML index exists on the table.  
  
-INDEX *index_name*
+INDEX *index_name*    
 Specifies that *index_name* is removed from the table.
   
 The syntax ALTER TABLE … ADD/DROP/ALTER INDEX is supported only for memory-optimized tables.    

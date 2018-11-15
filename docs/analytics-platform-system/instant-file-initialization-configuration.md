@@ -49,5 +49,5 @@ The backup process requires a network credential (Windows user account) that can
   
 ![DWConfig Appliance PDW Instant File Initialization](./media/instant-file-initialization-configuration/SQL_Server_PDW_DWConfig_ApplPDWInstant.png "SQL_Server_PDW_DWConfig_ApplPDWInstant")  
   
-For more information about instant file initialization, see [Instant File Initialization](http://technet.microsoft.com/library/ms175935(v=SQL.105).aspx).  
+For more information about instant file initialization, see [Instant File Initialization](https://technet.microsoft.com/library/ms175935(v=SQL.105).aspx).  
   

@@ -52,10 +52,10 @@ To learn more about additional partners, see [monitoring][mon_partners], [manage
 
 <!--Website links -->
 [veeam_website]:https://www.veeam.com/
-[dh2i_website]:http://dh2i.com
+[dh2i_website]:https://dh2i.com
 [idera_website]:https://www.idera.com/productssolutions/sqlserver
 [hpe_website]: https://www.hpe.com/us/en/product-catalog/detail/pip.376220.html
-[azure_website]: http://docs.microsoft.com/azure/site-recovery/site-recovery-sql
+[azure_website]: https://docs.microsoft.com/azure/site-recovery/site-recovery-sql
 [necec_website]: https://www.necam.com/ExpressCluster/
 [portworx_website]: https://portworx.com/
 [sios_website]: https://us.sios.com/
@@ -64,15 +64,15 @@ To learn more about additional partners, see [monitoring][mon_partners], [manage
 
 <!--Datasheet Links-->
 [veeam_datasheet]:https://www.veeam.com/veeam_backup_9_5_datasheet_en_ds.pdf
-[dh2i_datasheet]:http://dh2i.com/wp-content/uploads/DxE-Win-QuickFacts.pdf
+[dh2i_datasheet]:https://dh2i.com/wp-content/uploads/DxE-Win-QuickFacts.pdf
 [hpe]:https://www.hpe.com/h20195/v2/default.aspx?cc=us&lc=en&oid=376220
 [necec_datasheet]: https://www.necam.com/docs/?id=0d9ef7a7-f935-4909-b6bb-20a47b3
-[azure_datasheet]: http://docs.microsoft.com/azure/site-recovery/site-recovery-sql#site-recovery-support
+[azure_datasheet]: https://docs.microsoft.com/azure/site-recovery/site-recovery-sql#site-recovery-support
 [sios_datasheet]: https://us.sios.com/solutions/high-availability-cluster-software-cloud/
 
 <!--Marketplace Links -->
 [azure_marketplace]: https://azuremarketplace.microsoft.com/marketplace/apps?search=site%20recovery&page=1
-[sios_marketplace]: https://azuremarketplace.microsoft.com/en-us/marketplace/apps/sios_datakeeper.sios-datakeeper-8
+[sios_marketplace]: https://azuremarketplace.microsoft.com/marketplace/apps/sios_datakeeper.sios-datakeeper-8
 <!--Press links-->
 <!--[veeam_press]:-->
 
@@ -93,7 +93,7 @@ To learn more about additional partners, see [monitoring][mon_partners], [manage
 [sios_twitter]:https://www.twitter.com/SIOSTech
 
 <!--Docs links>-->
-[portworx_docs]: http://docs.portworx.com/
+[portworx_docs]: https://docs.portworx.com/
 
 <!--Download links-->
 [hpe_download]: https://h20392.www2.hpe.com/portal/swdepot/displayProductInfo.do?productNumber=SGLX-DEMO

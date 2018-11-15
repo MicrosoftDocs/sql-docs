@@ -104,7 +104,7 @@ Permissions to execute this procedure default to members of the **sysadmin** fix
     GO;  
     ```  
   
-    For more information, see [sp_msx_enlist (Transact-SQL)](http://msdn.microsoft.com/ceb3b2bc-0cc4-48d8-9bdc-6a809556e35f).  
+    For more information, see [sp_msx_enlist (Transact-SQL)](https://msdn.microsoft.com/ceb3b2bc-0cc4-48d8-9bdc-6a809556e35f).  
   
 ## See Also  
 [Automated Administration Across an Enterprise](../../ssms/agent/automated-administration-across-an-enterprise.md)  

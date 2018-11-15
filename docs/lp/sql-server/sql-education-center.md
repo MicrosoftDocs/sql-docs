@@ -655,12 +655,12 @@ featureFlags:
         <h2>Keep in touch with us</h2>
         <ul class="links">
            <li>
-                <a href="http://aka.ms/editsqldocs" data-linktype="external">
+                <a href="https://aka.ms/editsqldocs" data-linktype="external">
                     Contribute to SQL docs
                 </a>
             </li>
            <li>
-                <a href="http://aka.ms/sqldocsurvey" data-linktype="external">
+                <a href="https://aka.ms/sqldocsurvey" data-linktype="external">
                     SQL Docs Feedback
                 </a>
             </li>

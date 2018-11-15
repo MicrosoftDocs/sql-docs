@@ -88,4 +88,4 @@ DROP SENSITIVITY CLASSIFICATION FROM
 
 [sys.sensitivity_classifications (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sensitivity-classifications-transact-sql.md)
 
-[Getting started with SQL Information Protection](http://aka.ms/sqlip)
+[Getting started with SQL Information Protection](https://aka.ms/sqlip)

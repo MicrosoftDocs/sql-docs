@@ -64,7 +64,7 @@ from cte;
 Reading, importing and exporting date data types using PolyBase now supports dates before 1970-01-01 and after 2038-01-20 for ORC and Parquet file types.
 
 ### SSIS destination adapter for SQL Server 2017 as target
-New APS SSIS destination adapter that supports SQL Server 2017 as deployment target can be downloaded from [download site](https://www.microsoft.com/en-us/download/details.aspx?id=57472).
+New APS SSIS destination adapter that supports SQL Server 2017 as deployment target can be downloaded from [download site](https://www.microsoft.com/download/details.aspx?id=57472).
 
 <a name="h2-aps-cu7.1"></a>
 ## APS CU7.1
@@ -105,7 +105,7 @@ APS AU7 introduces Feature Switch in [Configuration Manager](launch-the-configur
 ### Known Issues
 With APS AU7 software, an Intel BIOS update is provided which fixes a problem described as *speculative execution side-channel attacks*. The attacks aim to exploit what are called *Spectre and Meltdown vulnerabilities*. Although packaged together with APS, the BIOS update is installed manually, and not as part of the APS AU7 software install.
 
-Microsoft advises all customers to install the BIOS updated. Microsoft has measured the effect of Kernel Virtual Address Shadowing (KVAS), Kernel Page Table Indirection (KPTI) and Indirect Branch Prediction mitigation (IBP) on various SQL workloads in various environments. The measurements found significant degradation on some workloads. Based on the results, the recommendation is that you test the performance effect of enabling BIOS update before you deploy them in a production environment. See SQL Server guidance [here](https://support.microsoft.com/en-us/help/4073225/guidance-protect-sql-server-against-spectre-meltdown).
+Microsoft advises all customers to install the BIOS updated. Microsoft has measured the effect of Kernel Virtual Address Shadowing (KVAS), Kernel Page Table Indirection (KPTI) and Indirect Branch Prediction mitigation (IBP) on various SQL workloads in various environments. The measurements found significant degradation on some workloads. Based on the results, the recommendation is that you test the performance effect of enabling BIOS update before you deploy them in a production environment. See SQL Server guidance [here](https://support.microsoft.com/help/4073225/guidance-protect-sql-server-against-spectre-meltdown).
 
 ::: moniker-end
 ::: moniker range=">= aps-pdw-2016 || = sqlallproducts-allversions"

@@ -369,7 +369,7 @@ RETURNS return_data_type
  Defines the table data type for a [!INCLUDE[tsql](../../includes/tsql-md.md)] function. The table declaration includes column definitions and column or table constraints. The table is always put in the primary filegroup.  
   
  \< clr_table_type_definition >  ( { *column_name**data_type* } [ ,...*n* ] ) 
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Preview in some regions](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).|  
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Preview in some regions](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).|  
   
  Defines the table data types for a CLR function. The table declaration includes only column names and data types. The table is always put in the primary filegroup.  
   
@@ -585,7 +585,7 @@ Specifies whether this scalar UDF should be inlined or not. This clause applies 
 |**SystemDataAccess**|Function accesses system data (system catalogs or virtual system tables) in the local instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].||  
 |**UserDataAccess**|Function accesses user data in the local instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Includes user-defined tables and temp tables, but not table variables.|  
   
- The precision and determinism properties of [!INCLUDE[tsql](../../includes/tsql-md.md)] functions are determined automatically by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The data access and determinism properties of CLR functions can be specified by the user. For more information, see [Overview of CLR Integration Custom Attributes](http://msdn.microsoft.com/library/ecf5c097-0972-48e2-a9c0-b695b7dd2820).  
+ The precision and determinism properties of [!INCLUDE[tsql](../../includes/tsql-md.md)] functions are determined automatically by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The data access and determinism properties of CLR functions can be specified by the user. For more information, see [Overview of CLR Integration Custom Attributes](https://msdn.microsoft.com/library/ecf5c097-0972-48e2-a9c0-b695b7dd2820).  
   
  To display the current values for these properties, use [OBJECTPROPERTYEX](../../t-sql/functions/objectpropertyex-transact-sql.md).  
   

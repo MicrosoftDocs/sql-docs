@@ -8,7 +8,6 @@ ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ---
-
 # Configure Azure Kubernetes Service for SQL Server 2019 (preview) deployments
 
 This article describes how to configure Azure Kubernetes Service (AKS) for SQL Server 2019 big data cluster (preview) deployments. 
@@ -22,7 +21,7 @@ This article describes the steps to deploy Kubernetes on AKS using Azure CLI. If
 
 ## Prerequisites
 
-- For an AKS environment, for an optimal experience while validating basic scenarios, we recommend  at least three agent VMs (in addition to master), with at least 4 vCPUs and 32 GB of memory each. Azure infrastructure offers multiple size options for VMs, see [here](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes) for selections in the region you are planning to deploy.
+- For an AKS environment, for an optimal experience while validating basic scenarios, we recommend  at least three agent VMs (in addition to master), with at least 4 vCPUs and 32 GB of memory each. Azure infrastructure offers multiple size options for VMs, see [here](https://docs.microsoft.com/azure/virtual-machines/windows/sizes) for selections in the region you are planning to deploy.
   
 - This section requires that you be running the Azure CLI version 2.0.4 or later. If you need to install or upgrade, see [Install Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-azure-cli). Run `az --version` to find the version if needed.
 

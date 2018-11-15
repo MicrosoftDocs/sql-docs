@@ -112,7 +112,7 @@ DECLARE @logit_model varbinary(max) = "SELECT TOP 1 [model_binary] from [models_
 DECLARE @input_qry = "SELECT ID, [Gender], [Income] from NewCustomers";
 
 SELECT PREDICT [class]
-FROM PREDICT( MODEL = @logit_model,  DATA = @input_qry
+FROM PREDICT( MODEL = @logit_model,  DATA = @input_qry)
 WITH (class string);
 ```
 

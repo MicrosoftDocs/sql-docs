@@ -36,7 +36,7 @@ manager: craigg
  In general, you should assign **ALL** permission to the model object, and then explicitly assign permission to objects underneath.  
   
 ## External Resources  
- Blog post, [Security Improvements](http://go.microsoft.com/fwlink/p/?LinkId=615376), on msdn.com.  
+ Blog post, [Security Improvements](https://go.microsoft.com/fwlink/p/?LinkId=615376), on msdn.com.  
   
 ## See Also  
  [Assign Model Object Permissions &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   

@@ -25,7 +25,7 @@ manager: craigg
 
 Constructs a **geography** instance given a representation in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] subset of the Geography Markup Language (GML).
   
-For more information on GML, see the following Open Geospatial Consortium Specifications: [OGC Specifications, Geography Markup Language](http://go.microsoft.com/fwlink/?LinkId=93629)
+For more information on GML, see the following Open Geospatial Consortium Specifications: [OGC Specifications, Geography Markup Language](https://go.microsoft.com/fwlink/?LinkId=93629)
   
 This **geography** data type method supports **FullGlobe** instances or spatial instances that are larger than a hemisphere.
   
@@ -59,7 +59,7 @@ GeomFromGml ( GML_input, SRID )
 ```  
 DECLARE @g geography;  
 DECLARE @x xml;  
-SET @x = '<LineString xmlns="http://www.opengis.net/gml"><posList>47.656 -122.36 47.656 -122.343</posList></LineString>';  
+SET @x = '<LineString xmlns="https://www.opengis.net/gml"><posList>47.656 -122.36 47.656 -122.343</posList></LineString>';  
 SET @g = geography::GeomFromGml(@x, 4326);  
 SELECT @g.ToString();  
 ```  
@@ -69,7 +69,7 @@ SELECT @g.ToString();
 ```  
 DECLARE @g geography;  
 DECLARE @x xml;  
-SET @x = '<FullGlobe xmlns="http://schemas.microsoft.com/sqlserver/2011/geography" />';  
+SET @x = '<FullGlobe xmlns="https://schemas.microsoft.com/sqlserver/2011/geography" />';  
 SET @g = geography::GeomFromGml(@x, 4326);  
 SELECT @g.ToString();  
 ```  

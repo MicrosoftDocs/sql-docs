@@ -23,7 +23,7 @@ manager: craigg
 You can remove a table — or any table-valued object — from the query.  
   
 > [!NOTE]  
-> Removing a table or table-valued object does not delete anything from the database; it only removes it from the current query. For details about removing a table from a database, see [How to: Delete Tables from a Database (Visual Database Tools)](http://msdn.microsoft.com/ca6aa3e9-9885-44c3-bafc-aec441fd97ec).  
+> Removing a table or table-valued object does not delete anything from the database; it only removes it from the current query. For details about removing a table from a database, see [How to: Delete Tables from a Database (Visual Database Tools)](https://msdn.microsoft.com/ca6aa3e9-9885-44c3-bafc-aec441fd97ec).  
   
 ### To remove a table or table-structured object  
   

@@ -17,7 +17,7 @@ To secure APS to only use TLS 1.2, you will have to explicitly disable other pro
 
 > [!WARNING]
 > This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly that can cause data loss and require reinstalling of the operating system. We highly recommend back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, click the following article number to view the article in the Microsoft Knowledge Base:<br>
-[322756](https://support.microsoft.com/en-us/help/322756) How to back up and restore the registry in Windows
+[322756](https://support.microsoft.com/help/322756) How to back up and restore the registry in Windows
 
 **Disable:**
 ```

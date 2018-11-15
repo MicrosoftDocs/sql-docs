@@ -40,7 +40,7 @@ To learn more about some of our other partners, see [High availability, and disa
 <!--Datasheet Links-->
 
 <!--Marketplace Links -->
-<!----Not available[idera_marketplace]:https://azure.microsoft.com/en-us/marketplace/-->
+<!----Not available[idera_marketplace]:https://azure.microsoft.com/marketplace/-->
 
 <!--Press links-->
 <!--[idera_press]:-->

@@ -67,10 +67,10 @@ Creates a user-defined function in [!INCLUDE[ssNoVersion](../../includes/ssnover
 -   Use an inline function as a filter predicate for a security policy  
   
 > [!NOTE]  
->  The integration of .NET Framework CLR into SQL Server is discussed in this topic. CLR integration does not apply to Azure SQL Database.
+> The integration of .NET Framework CLR into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  is discussed in this topic. CLR integration does not apply to [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 > [!NOTE]  
->  For Azure SQL Data Warehouse, see the [CREATE FUNCTION (SQL Data Warehouse)](https://docs.microsoft.com/sql/t-sql/statements/create-function-sql-data-warehouse?view=aps-pdw-2016) article.
+> For [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], see [CREATE FUNCTION (SQL Data Warehouse)](../../t-sql/statements/create-function-sql-data-warehouse.md).
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -281,7 +281,7 @@ RETURNS return_data_type
  Is the name of the user-defined function. Function names must comply with the rules for [identifiers](../../relational-databases/databases/database-identifiers.md) and must be unique within the database and to its schema.  
   
 > [!NOTE]  
->  Parentheses are required after the function name even if a parameter is not specified.  
+> Parentheses are required after the function name even if a parameter is not specified.  
   
  @*parameter_name*  
  Is a parameter in the user-defined function. One or more parameters can be declared.  
@@ -291,7 +291,7 @@ RETURNS return_data_type
  Specify a parameter name by using an at sign (@) as the first character. The parameter name must comply with the rules for identifiers. Parameters are local to the function; the same parameter names can be used in other functions. Parameters can take the place only of constants; they cannot be used instead of table names, column names, or the names of other database objects.  
   
 > [!NOTE]  
->  ANSI_WARNINGS is not honored when you pass parameters in a stored procedure, user-defined function, or when you declare and set variables in a batch statement. For example, if a variable is defined as **char(3)**, and then set to a value larger than three characters, the data is truncated to the defined size and the INSERT or UPDATE statement succeeds.  
+> ANSI_WARNINGS is not honored when you pass parameters in a stored procedure, user-defined function, or when you declare and set variables in a batch statement. For example, if a variable is defined as **char(3)**, and then set to a value larger than three characters, the data is truncated to the defined size and the INSERT or UPDATE statement succeeds.  
   
  [ *type_schema_name*. ] *parameter_data_type*  
  Is the parameter data type, and optionally the schema to which it belongs. For [!INCLUDE[tsql](../../includes/tsql-md.md)] functions, all data types, including CLR user-defined types and user-defined table types, are allowed except the **timestamp** data type. For CLR functions, all data types, including CLR user-defined types, are allowed except **text**, **ntext**, **image**, user-defined table types and **timestamp** data types. The nonscalar types, **cursor** and **table**, cannot be specified as a parameter data type in either [!INCLUDE[tsql](../../includes/tsql-md.md)] or CLR functions.  
@@ -308,7 +308,7 @@ RETURNS return_data_type
  Is a default value for the parameter. If a *default* value is defined, the function can be executed without specifying a value for that parameter.  
   
 > [!NOTE]  
->  Default parameter values can be specified for CLR functions except for the **varchar(max)** and **varbinary(max)** data types.  
+> Default parameter values can be specified for CLR functions except for the **varchar(max)** and **varbinary(max)** data types.  
   
  When a parameter of the function has a default value, the keyword DEFAULT must be specified when the function is called to retrieve the default value. This behavior is different from using parameters with default values in stored procedures in which omitting the parameter also implies the default value. However, the DEFAULT keyword is not required when invoking a scalar function by using the EXECUTE statement.  
   
@@ -319,7 +319,7 @@ RETURNS return_data_type
  Is the return value of a scalar user-defined function. For [!INCLUDE[tsql](../../includes/tsql-md.md)] functions, all data types, including CLR user-defined types, are allowed except the **timestamp** data type. For CLR functions, all data types, including CLR user-defined types, are allowed except the **text**, **ntext**, **image**, and **timestamp** data types. The nonscalar types, **cursor** and **table**, cannot be specified as a return data type in either [!INCLUDE[tsql](../../includes/tsql-md.md)] or CLR functions.  
   
  *function_body*  
- Specifies that a series of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, which together do not produce a side effect such as modifying a table, define the value of the function. *function_body* is used only in scalar functions and multistatement table-valued functions (MSTVFs).  
+ Specifies that a series of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, which together do not produce a side effect such as modifying a table, define the value of the function. *function_body* is used only in scalar functions and multi-statement table-valued functions (MSTVFs).  
   
  In scalar functions, *function_body* is a series of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements that together evaluate to a scalar value.  
   

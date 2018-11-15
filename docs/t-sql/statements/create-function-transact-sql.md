@@ -12,6 +12,8 @@ f1_keywords:
   - "CREATE FUNCTION"
   - "CREATE_FUNCTION_TSQL"
   - "FUNCTION_TSQL"
+  - "TVF"
+  - "MSTVF"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -31,6 +33,9 @@ helpviewer_keywords:
   - "nesting user-defined functions"
   - "deterministic functions"
   - "scalar-valued functions"
+  - "scalar UDF"
+  - "MSTVF"
+  - "TVF"
   - "functions [SQL Server], invoking"
 ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 author: CarlRabeler
@@ -314,27 +319,32 @@ RETURNS return_data_type
  Is the return value of a scalar user-defined function. For [!INCLUDE[tsql](../../includes/tsql-md.md)] functions, all data types, including CLR user-defined types, are allowed except the **timestamp** data type. For CLR functions, all data types, including CLR user-defined types, are allowed except the **text**, **ntext**, **image**, and **timestamp** data types. The nonscalar types, **cursor** and **table**, cannot be specified as a return data type in either [!INCLUDE[tsql](../../includes/tsql-md.md)] or CLR functions.  
   
  *function_body*  
- Specifies that a series of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, which together do not produce a side effect such as modifying a table, define the value of the function. *function_body* is used only in scalar functions and multistatement table-valued functions.  
+ Specifies that a series of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, which together do not produce a side effect such as modifying a table, define the value of the function. *function_body* is used only in scalar functions and multistatement table-valued functions (MSTVFs).  
   
  In scalar functions, *function_body* is a series of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements that together evaluate to a scalar value.  
   
- In multistatement table-valued functions, *function_body* is a series of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements that populate a TABLE return variable.  
+ In MSTVFs, *function_body* is a series of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements that populate a TABLE return variable.  
   
  *scalar_expression*  
  Specifies the scalar value that the scalar function returns.  
   
  TABLE  
- Specifies that the return value of the table-valued function is a table. Only constants and @*local_variables* can be passed to table-valued functions.  
+ Specifies that the return value of the table-valued function (TVF) is a table. Only constants and @*local_variables* can be passed to TVFs.  
   
- In inline table-valued functions, the TABLE return value is defined through a single SELECT statement. Inline functions do not have associated return variables.  
+ In inline TVFs, the TABLE return value is defined through a single SELECT statement. Inline functions do not have associated return variables.  
   
- In multistatement table-valued functions, @*return_variable* is a TABLE variable, used to store and accumulate the rows that should be returned as the value of the function. @*return_variable* can be specified only for [!INCLUDE[tsql](../../includes/tsql-md.md)] functions and not for CLR functions.  
+ <a name="mstvf"></a> In MSTVFs, @*return_variable* is a TABLE variable, used to store and accumulate the rows that should be returned as the value of the function. @*return_variable* can be specified only for [!INCLUDE[tsql](../../includes/tsql-md.md)] functions and not for CLR functions.  
   
 > [!WARNING]  
->  Joining to a multistatement table valued function in a **FROM** clause is possible, but can give poor performance. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is unable to use all the optimized techniques against some statements that can be included in a multistatement function, resulting in a suboptimal query plan. To obtain the best possible performance, whenever possible use joins between base tables instead of functions.  
+> Joining to an MSTVF in a **FROM** clause is possible, but can result in poor performance. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is unable to use all the optimized techniques on some statements that can be included in a MSTVF, resulting in a suboptimal query plan. To obtain the best possible performance, whenever possible use joins between base tables instead of functions.  
+
+> [!IMPORTANT]
+> MSTVFs have a fixed cardinality guess of 100 starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], and 1 for earlier [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versions.    
+> Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], optimizing an execution plan that uses MSTVFs can leverage interleaved execution, which results in using actual cardinality instead of the above heuristics.     
+> For more information, see [Interleaved execution for multi-statement table valued functions](../../relational-databases/performance/adaptive-query-processing.md#interleaved-execution-for-multi-statement-table-valued-functions).
   
  *select_stmt*  
- Is the single SELECT statement that defines the return value of an inline table-valued function.  
+ Is the single SELECT statement that defines the return value of an inline table-valued function (TVF).  
   
  ORDER (\<order_clause>) 
  Specifies the order in which results are being returned from the table-valued function. For more information, see the section, "[Using Sort Order in CLR Table-valued Functions](#using-sort-order-in-clr-table-valued-functions)", later in this topic.  
@@ -360,7 +370,7 @@ RETURNS return_data_type
 `MyFood.[MyFood.MyClass].MyStaticMethod`  
   
 > [!NOTE]  
->  By default, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot execute CLR code. You can create, modify, and drop database objects that reference common language runtime modules; however, you cannot execute these references in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] until you enable the [clr enabled option](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md). To enable this option, use [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
+> By default, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot execute CLR code. You can create, modify, and drop database objects that reference common language runtime modules; however, you cannot execute these references in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] until you enable the [clr enabled option](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md). To enable this option, use [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
 > [!NOTE]  
 >  This option is not available in a contained database.  

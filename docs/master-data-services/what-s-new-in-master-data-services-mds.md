@@ -27,7 +27,7 @@ manager: craigg
   
  **Download**  
   
--   To download [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], go to  **[Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**.  
+-   To download [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], go to  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**.  
   
 -   Have an Azure account?  Then go **[Here](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** to spin up a Virtual Machine with [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] already installed.  
   
@@ -56,7 +56,7 @@ manager: craigg
   
     ```  
   
-     For more information, see [URL Compression](http://www.iis.net/configreference/system.webserver/urlcompression)  
+     For more information, see [URL Compression](https://www.iis.net/configreference/system.webserver/urlcompression)  
   
 -   The following new SQL Server Agent jobs do index and log maintenance.  
   
@@ -68,7 +68,7 @@ manager: craigg
   
  An index with more than 30% fragmentation is rebuilt online. During the rebuild, the performance is affected on the CRUD operation on the same table. If performance degradation is a concern, it is recommended that you run the store procedure during off business hours. For more information about index fragmentation, see [Reorganize and Rebuild Indexes](../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
   
- For more information, see this post on the Master Data Services Blog, [Performance and Scale Improvement in SQL Server 2016](http://go.microsoft.com/fwlink/p/?LinkId=615375).  
+ For more information, see this post on the Master Data Services Blog, [Performance and Scale Improvement in SQL Server 2016](https://go.microsoft.com/fwlink/p/?LinkId=615375).  
   
 ##  Improved Security  
   

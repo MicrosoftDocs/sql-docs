@@ -12,7 +12,7 @@ manager: cgronlun
 # R scripting errors in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article documents several scriptin gerrors when running R code in SQL Server. The list is not comprehensive. There are many packages, and errors can vary between versions of the same package. We recommend posting script errors on the [Machine Learning Server forum](https://social.msdn.microsoft.com/Forums/home?category=MicrosoftR), which supports the machine learning components used in R Services (In-Database), Microsoft R Client, and Microsoft R Server.
+This article documents several scriptin gerrors when running R code in SQL Server. The list is not comprehensive. There are many packages, and errors can vary between versions of the same package. We recommend posting script errors on the [Machine Learning Server forum](https://social.msdn.microsoft.com/Forums/en-US/home?category=MicrosoftR), which supports the machine learning components used in R Services (In-Database), Microsoft R Client, and Microsoft R Server.
 
 **Applies to:** SQL Server 2016 R Services, SQL Server 2017 Machine Learning Services
 

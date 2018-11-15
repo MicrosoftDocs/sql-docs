@@ -30,7 +30,7 @@ The [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/cr
 
 If you are installing a single package, download the package in zipped format.
 
-It's more common to install multiple packages due to package dependencies. When a package requires other packages, you must verify that all of them are accessible to each other during installation. We recommend [creating a local repository](create-a-local-package-repository-using-minicran.md) using [miniCRAN](http://andrie.github.io/miniCRAN/) to assemble a full collection of packages, as well as [igraph](http://igraph.org/r/) for analyzing packages dependencies. Installing the wrong version of a package or omitting a package dependency can cause a CREATE EXTERNAL LIBRARY statement to fail. 
+It's more common to install multiple packages due to package dependencies. When a package requires other packages, you must verify that all of them are accessible to each other during installation. We recommend [creating a local repository](create-a-local-package-repository-using-minicran.md) using [miniCRAN](https://andrie.github.io/miniCRAN/) to assemble a full collection of packages, as well as [igraph](https://igraph.org/r/) for analyzing packages dependencies. Installing the wrong version of a package or omitting a package dependency can cause a CREATE EXTERNAL LIBRARY statement to fail. 
 
 ## Copy the file to a local folder
 

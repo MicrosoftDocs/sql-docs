@@ -115,8 +115,8 @@ In some cases, the general subject of the article can be used in a product, but 
 ## See Also  
 [Transact-SQL Reference &#40;Database Engine&#41;](../../t-sql/transact-sql-reference-database-engine.md)    
 [Reserved Keywords &#40;Transact SQL&#41;](../../t-sql/language-elements/reserved-keywords-transact-sql.md)      
-[Transact-SQL Design Issues](http://msdn.microsoft.com/library/dd193411.aspx)    
-[Transact-SQL Naming Issues](http://msdn.microsoft.com/library/dd193246.aspx)        
-[Transact-SQL Performance Issues](http://msdn.microsoft.com/library/dd172117.aspx)    
+[Transact-SQL Design Issues](https://msdn.microsoft.com/library/dd193411.aspx)    
+[Transact-SQL Naming Issues](https://msdn.microsoft.com/library/dd193246.aspx)        
+[Transact-SQL Performance Issues](https://msdn.microsoft.com/library/dd172117.aspx)    
 
 

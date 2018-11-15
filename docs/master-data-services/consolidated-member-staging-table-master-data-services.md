@@ -37,7 +37,7 @@ manager: craigg
 |**Code**<br /><br /> Required, except when codes are generated automatically for **ImportType1** or **2**; see [Automatic Code Creation &#40;Master Data Services&#41;](../master-data-services/automatic-code-creation-master-data-services.md) for more information|A unique code for the member.|  
 |**Name**<br /><br /> Optional|A name for the member.|  
 |**NewCode**|Use only if you are changing the member code.|  
-|\<Attribute name>|A column exists for each attribute in the entity. Use this with an **ImportType** of **0** or **2**. For free-form attributes, specify the new text or string value for the attribute. For domain-based attributes, specify the code for the member that will be the attribute. For link attributes, the URL must start with **http://**.<br /><br /> <br /><br /> Note: You cannot stage file attributes.|  
+|\<Attribute name>|A column exists for each attribute in the entity. Use this with an **ImportType** of **0** or **2**. For free-form attributes, specify the new text or string value for the attribute. For domain-based attributes, specify the code for the member that will be the attribute. For link attributes, the URL must start with **https://**.<br /><br /> <br /><br /> Note: You cannot stage file attributes.|  
   
 ## See Also  
  [Overview: Importing Data from Tables &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)   

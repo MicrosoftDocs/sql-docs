@@ -102,7 +102,7 @@ You can also run scripts from the command line by using the **sqlcmd** utility, 
 After you have loaded the converted database objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can grant and deny permissions on those objects. It is a good idea to do this before migrating data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For information about how to help secure objects in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see "Security Considerations for Databases and Database Applications" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
   
 ## Next Step  
-The next step in the migration process is to [Migrating Sybase ASE Data into SQL Server / SQL Azure(SybaseToSQL)](http://msdn.microsoft.com/54a39f5e-9250-4387-a3ae-eae47c799811).  
+The next step in the migration process is to [Migrating Sybase ASE Data into SQL Server / SQL Azure(SybaseToSQL)](https://msdn.microsoft.com/54a39f5e-9250-4387-a3ae-eae47c799811).  
   
 ## See Also  
 [Migrating Sybase ASE Databases to SQL Server - Azure SQL DB &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  

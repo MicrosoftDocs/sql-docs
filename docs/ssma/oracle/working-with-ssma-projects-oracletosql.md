@@ -114,7 +114,7 @@ When you open a project, it is disconnected from Oracle and from [!INCLUDE[ssNoV
 3.  To reconnect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], on the **File** menu, click **Reconnect to SQL Server**.  
   
 ## Next Step  
-The next step in the migration process is to [Connecting to Oracle Database (OracleToSQL)](http://msdn.microsoft.com/e276cdbf-3ebc-4ba8-b40d-a7a42befa2b6).  
+The next step in the migration process is to [Connecting to Oracle Database (OracleToSQL)](https://msdn.microsoft.com/e276cdbf-3ebc-4ba8-b40d-a7a42befa2b6).  
   
 ## See Also  
 [Migrating Oracle Databases to SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  

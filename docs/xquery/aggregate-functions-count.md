@@ -46,7 +46,7 @@ fn:count($arg as item()*) as xs:integer
 SELECT Production.ProductModel.ProductModelID,   
        Production.ProductModel.Name,   
        Instructions.query('  
-declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
        <NoOfWorkStations>  
           { count(/AWMI:root/AWMI:Location) }  
        </NoOfWorkStations>  
@@ -75,7 +75,7 @@ ProductModelID   Name                 WorkCtrCount
   
 ```  
 SELECT Instructions.query('  
-declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
        <NoOfWorkStations  
              ProductModelID= "{ sql:column("Production.ProductModel.ProductModelID") }"   
              ProductModelName = "{ sql:column("Production.ProductModel.Name") }" >  
@@ -98,7 +98,7 @@ WHERE Production.ProductModel.ProductModelID= 7
 ```  
 SELECT  ProductModelID,   
         Name,   
-        Instructions.value('declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+        Instructions.value('declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
            count(/AWMI:root/AWMI:Location)', 'int' ) as WorkCtrCount  
 FROM Production.ProductModel  
 WHERE ProductModelID=7  

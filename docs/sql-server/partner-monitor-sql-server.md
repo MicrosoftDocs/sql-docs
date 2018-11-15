@@ -49,7 +49,7 @@ To learn more about some of our other partners, see [High availability and disas
 <!--Website links -->
 
 [idera_website]:https://www.idera.com/productssolutions/sqlserver/sqldiagnosticmanager
-[sentryone_website]:http://www.sentryone.com 
+[sentryone_website]:https://www.sentryone.com 
 [quest_website]:https://www.quest.com/products/spotlight-on-sql-server-enterprise
 [redgate_website]:https://www.red-gate.com/products/dba/sql-monitor/
 [solarwinds_website]:https://www.solarwinds.com/database-performance-analyzer
@@ -60,9 +60,9 @@ To learn more about some of our other partners, see [High availability and disas
 [solarwinds_datasheet]:https://www.solarwinds.com/-/media/solarwinds/swdcv2/licensed-products/database-performance-analyzer-sql-server/resources/datasheets/dpa-datasheet-sql-server.ashx
 
 <!--Marketplace Links -->
-<!----Not available[idera_marketplace]:https://azure.microsoft.com/en-us/marketplace/-->  
-[quest_marketplace]:http://azuremarketplace.microsoft.com/marketplace/apps/dell_software.spotlight-enterprise-12-0?tab=Overview  
-[solarwinds_marketplace]:https://azuremarketplace.microsoft.com/en-us/marketplace/apps/solarwinds.solarwinds-database-performance-analyzer?tab=Overview  
+<!----Not available[idera_marketplace]:https://azure.microsoft.com/marketplace/-->  
+[quest_marketplace]:https://azuremarketplace.microsoft.com/marketplace/apps/dell_software.spotlight-enterprise-12-0?tab=Overview  
+[solarwinds_marketplace]:https://azuremarketplace.microsoft.com/marketplace/apps/solarwinds.solarwinds-database-performance-analyzer?tab=Overview  
 
 <!--Press links-->
 <!--[idera_press]:-->

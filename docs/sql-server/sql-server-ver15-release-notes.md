@@ -25,7 +25,7 @@ This article describes limitations and known issues for the [!INCLUDE[SQL Server
 > - Upgrade an existing instance of SQL Server from any version
 
 **Try [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]!**
-- [![Download from Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=862101) [Download [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] to install on Windows](http://go.microsoft.com/fwlink/?LinkID=862101)
+- [![Download from Evaluation Center](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=862101) [Download [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] to install on Windows](https://go.microsoft.com/fwlink/?LinkID=862101)
 - Install on Linux for [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md), [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md), and [Ubuntu](../linux/quickstart-install-connect-ubuntu.md).
 - [Run on SQL Server 2019 on Docker](../linux/quickstart-install-connect-docker.md).
 
@@ -37,12 +37,12 @@ This article describes limitations and known issues for the [!INCLUDE[SQL Server
 Limited support may be found at one of the following locations:
 
 - Forums
-  - [SQL Server Feedback](http://aka.ms/sqlfeedback)
+  - [SQL Server Feedback](https://aka.ms/sqlfeedback)
   - [Getting started with SQL Server](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=sqlgetstarted)
   - [Transact-SQL](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=transactsql)
   - [SQL Server Documentation](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=sqldocumentation)
 
-- Or tweet [@SQLServer](http://twitter.com/SQLServer) with [#sqlhelp](https://twitter.com/search?q=%23sqlhelp)
+- Or tweet [@SQLServer](https://twitter.com/SQLServer) with [#sqlhelp](https://twitter.com/search?q=%23sqlhelp)
 
 ### Documentation (CTP 2.1)
 
@@ -61,7 +61,7 @@ Limited support may be found at one of the following locations:
     - [Linux - system requirements](../linux/sql-server-linux-setup.md#system)
   - **Software**
     - Windows Server 2016 or later. For additional requirements, see [Requirements for Installing SQL Server](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
-    - Microsoft .NET Framework 4.6.2. Available from [Download Center](http://www.microsoft.com/download/details.aspx?id=53344).
+    - Microsoft .NET Framework 4.6.2. Available from [Download Center](https://www.microsoft.com/download/details.aspx?id=53344).
     - For Linux, refer to [Linux - supported platforms](../linux/sql-server-linux-setup.md#supportedplatforms)
 
 ### Floating point results

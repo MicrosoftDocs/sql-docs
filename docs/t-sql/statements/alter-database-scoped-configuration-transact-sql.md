@@ -405,7 +405,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE=WHEN_SUPPORTED ;
 ### MAXDOP Resources
 
 - [Degree of Parallelism](../../relational-databases/query-processing-architecture-guide.md#DOP)
-- [Recommendations and guidelines for the "max degree of parallelism" configuration option in SQL Server](https://support.microsoft.com/en-us/kb/2806535)
+- [Recommendations and guidelines for the "max degree of parallelism" configuration option in SQL Server](https://support.microsoft.com/kb/2806535)
 
 ### LEGACY_CARDINALITY_ESTIMATION Resources
 
@@ -420,7 +420,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE=WHEN_SUPPORTED ;
 ### QUERY_OPTIMIZER_HOTFIXES Resources
 
 - [Trace Flags](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
-- [SQL Server query optimizer hotfix trace flag 4199 servicing model](https://support.microsoft.com/en-us/kb/974006)
+- [SQL Server query optimizer hotfix trace flag 4199 servicing model](https://support.microsoft.com/kb/974006)
 
 ### ELEVATE_ONLINE Resources
 

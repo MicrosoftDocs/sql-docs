@@ -201,7 +201,7 @@ featureFlags:
         <h2>Keep in touch with us</h2>
         <ul class="links">
            <li>
-                <a href="http://aka.ms/editsqldocs" data-linktype="external">
+                <a href="https://aka.ms/editsqldocs" data-linktype="external">
                     Contribute
                 </a>
             </li>
@@ -211,12 +211,12 @@ featureFlags:
                 </a>
             </li>
            <li>
-                <a href="http://aka.ms/sqldocsfeedback" data-linktype="external">
+                <a href="https://aka.ms/sqldocsfeedback" data-linktype="external">
                     Feedback
                 </a>
             </li>
            <li>
-                <a href="http://aka.ms/sqldocsurvey" data-linktype="external">
+                <a href="https://aka.ms/sqldocsurvey" data-linktype="external">
                     Survey
                 </a>
             </li>

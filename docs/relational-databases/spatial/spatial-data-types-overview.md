@@ -78,8 +78,8 @@ In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], **FullGlobe** is a spe
 The OGC Simple Features for SQL Specification discusses outer rings and inner rings, but this distinction makes little sense for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** data type; any ring of a polygon can be taken to be the outer ring.  
 
 For more information on OGC specifications, see the following:  
--   [OGC Specifications, Simple Feature Access Part 1 - Common Architecture](http://go.microsoft.com/fwlink/?LinkId=93627)  
--   [OGC Specifications, Simple Feature Access Part 2 – SQL Options](http://go.microsoft.com/fwlink/?LinkId=93628)  
+-   [OGC Specifications, Simple Feature Access Part 1 - Common Architecture](https://go.microsoft.com/fwlink/?LinkId=93627)  
+-   [OGC Specifications, Simple Feature Access Part 2 – SQL Options](https://go.microsoft.com/fwlink/?LinkId=93628)  
 
 ##  <a name="circular"></a> Circular Arc Segments  
 Three instantiable types can take circular arc segments: **CircularString**, **CompoundCurve**, and **CurvePolygon**.  A circular arc segment is defined by three points in a two dimensional plane and the third point cannot be the same as the first point.  
@@ -167,7 +167,7 @@ SELECT @g.ToString(), @g.STLength();
 ## See Also  
 - [Spatial Data (SQL Server)](https://msdn.microsoft.com/library/bb933790.aspx) 
 - [geometry Data Type Method Reference](https://msdn.microsoft.com/library/bb933973.aspx) 
-- [geography Data Type Method Reference](http://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e)   
+- [geography Data Type Method Reference](https://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e)   
 - [STNumCurves &#40;geometry Data Type&#41;](../../t-sql/spatial-geometry/stnumcurves-geometry-data-type.md)   
 - [STNumCurves &#40;geography Data Type&#41;](../../t-sql/spatial-geography/stnumcurves-geography-data-type.md)   
 - [STGeomFromText &#40;geometry Data Type&#41;](../../t-sql/spatial-geometry/stgeomfromtext-geometry-data-type.md)   

@@ -28,7 +28,7 @@ Java version requirements vary across Windows and Linux. The Java Runtime Enviro
 
 | Operating System | Java version | JRE download | JDK download |
 |------------------|--------------|--------------|--------------|
-| Windows          | 1.10         | [JRE 10](http://www.oracle.com/technetwork/java/javase/downloads/jre10-downloads-4417026.html) | [JDK 10](http://www.oracle.com/technetwork/java/javase/downloads/jdk10-downloads-4416644.html)  |
+| Windows          | 1.10         | [JRE 10](https://www.oracle.com/technetwork/java/javase/downloads/jre10-downloads-4417026.html) | [JDK 10](https://www.oracle.com/technetwork/java/javase/downloads/jdk10-downloads-4416644.html)  |
 | Linux            | 1.8          |  [JRE 8](https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) | [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)  |  
 
 On Linux, the **mssql-server-extensibility-java** package automatically installs JRE 1.8 if it is not already installed. Installation scripts also add the JVM path to an environment variable called JAVA_HOME.

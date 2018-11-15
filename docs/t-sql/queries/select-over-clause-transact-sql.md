@@ -541,6 +541,6 @@ ORDER BY SalesOrderNumber,ProductKey;
 ## See Also  
  [Aggregate Functions &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
  [Analytic Functions &#40;Transact-SQL&#41;](../../t-sql/functions/analytic-functions-transact-sql.md)   
- [Excellent blog post about window functions and OVER, on sqlmag.com, by Itzik Ben-Gan](http://sqlmag.com/sql-server-2012/how-use-microsoft-sql-server-2012s-window-functions-part-1)  
+ [Excellent blog post about window functions and OVER, on sqlmag.com, by Itzik Ben-Gan](https://sqlmag.com/sql-server-2012/how-use-microsoft-sql-server-2012s-window-functions-part-1)  
   
   

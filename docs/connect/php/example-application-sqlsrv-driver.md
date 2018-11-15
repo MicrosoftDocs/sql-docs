@@ -51,7 +51,7 @@ The AdventureWorks Product Reviews example application returns product informati
   
 Put the following code in a file named adventureworks_demo.php:  
   
-```  
+```php
 <!--=============  
 This file is part of a Microsoft SQL Server Shared Source Application.  
 Copyright (C) Microsoft Corporation.  All rights reserved.  
@@ -491,7 +491,7 @@ The photo.php script returns a product photo for a specified **ProductID**. This
   
 Put the following code in a file named photo.php:  
   
-```  
+```php
 <?php  
 /*=============  
 This file is part of a Microsoft SQL Server Shared Source Application.  
@@ -544,7 +544,7 @@ else
      die(print_r( sqlsrv_errors(), true));  
 }  
   
-/* Free the statement and connectin resources. */  
+/* Free the statement and connection resources. */  
 sqlsrv_free_stmt( $stmt );  
 sqlsrv_close( $conn );  
 ?>  

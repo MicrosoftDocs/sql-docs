@@ -86,7 +86,7 @@ using(System.Data.SqlClient.SqlCommand cmd = c.CreateCommand())
   
 2.  Save the .aspx application in the c:\inetpub\wwwroot directory (GetSalesOrderInfo.aspx).  
   
-3.  Execute the application (`http://server/GetSalesOrderInfo.aspx`).  
+3.  Execute the application (`https://server/GetSalesOrderInfo.aspx`).  
   
 ## See Also  
  [Use Nested FOR XML Queries](../../relational-databases/xml/use-nested-for-xml-queries.md)  

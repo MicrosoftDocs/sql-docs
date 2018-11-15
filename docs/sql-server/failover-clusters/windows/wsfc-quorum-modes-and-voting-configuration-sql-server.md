@@ -82,7 +82,7 @@ manager: craigg
 > [!IMPORTANT]  
 >  In order to use NodeWeight settings, the following hotfix must be applied to all servers in the WSFC cluster:  
 >   
->  [KB2494036](http://support.microsoft.com/kb/2494036): A hotfix is available to let you configure a cluster node that does not have quorum votes in [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] and in [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
+>  [KB2494036](https://support.microsoft.com/kb/2494036): A hotfix is available to let you configure a cluster node that does not have quorum votes in [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] and in [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
   
 ##  <a name="RecommendedAdjustmentstoQuorumVoting"></a> Recommended Adjustments to Quorum Voting  
  When enabling or disabling a given WSFC node’s vote, follow these guidelines:  
@@ -104,7 +104,7 @@ manager: craigg
 >   
 >  -   The cluster node that hosts the primary replica does not have a vote  
 > -   A secondary replica is configured for automatic failover and its cluster node does not have a vote.  
-> -   [KB2494036](http://support.microsoft.com/kb/2494036) is not installed on all cluster nodes that host availability replicas. This patch is required to add or remove votes for cluster nodes in multi-site deployments. However, in single-site deployments, it is usually not required and you may safely ignore the warning.  
+> -   [KB2494036](https://support.microsoft.com/kb/2494036) is not installed on all cluster nodes that host availability replicas. This patch is required to add or remove votes for cluster nodes in multi-site deployments. However, in single-site deployments, it is usually not required and you may safely ignore the warning.  
   
 > [!TIP]  
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] exposes several system dynamic management views (DMVs) that can help you manage settings related WSFC cluster configuration and node quorum voting.  
@@ -119,13 +119,13 @@ manager: craigg
   
 ##  <a name="RelatedContent"></a> Related Content  
   
--   [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [Quorum vote configuration check in Always On Availability Group Wizards](https://blogs.msdn.microsoft.com/sqlalwayson/2012/03/13/quorum-vote-configuration-check-in-alwayson-availability-group-wizards-andy-jing/)  
   
--   [Windows Server Technologies:  Failover Clusters](http://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
+-   [Windows Server Technologies:  Failover Clusters](https://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
   
--   [Failover Cluster Step-by-Step Guide: Configuring the Quorum in a Failover Cluster](http://technet.microsoft.com/library/cc770620\(WS.10\).aspx)  
+-   [Failover Cluster Step-by-Step Guide: Configuring the Quorum in a Failover Cluster](https://technet.microsoft.com/library/cc770620\(WS.10\).aspx)  
   
 ## See Also  
  [WSFC Disaster Recovery through Forced Quorum &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)   

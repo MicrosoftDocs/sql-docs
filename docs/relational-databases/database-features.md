@@ -25,7 +25,7 @@ This section contains the features and tasks associated with Microsoft SQL relat
 - [SQL Server on Linux Documentation](../linux/sql-server-linux-overview.md)  
 - [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/)  
 - [Azure SQL Data Warehouse](https://docs.microsoft.com/azure/sql-data-warehouse/)  
-- [Parallel Data Warehouse](https://www.microsoft.com/en-us/download/details.aspx?id=51610)  
+- [Parallel Data Warehouse](https://www.microsoft.com/download/details.aspx?id=51610)  
 
   
   

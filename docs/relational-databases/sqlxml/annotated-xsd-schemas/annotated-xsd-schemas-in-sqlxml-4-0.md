@@ -43,14 +43,14 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ## Other Resources  
  You can find more information about XML Schema Definition language (XSD), XML Path language (XPath), and Extensible Stylesheet Language Transformations (XSLT) at the following Web sites:  
   
--   XML Schema Part 0: Primer, W3C Recommendation (http://www.w3.org/TR/xmlschema-0/)  
+-   XML Schema Part 0: Primer, W3C Recommendation (https://www.w3.org/TR/xmlschema-0/)  
   
--   XML Schema Part 1: Structures, W3C Recommendation (http://www.w3.org/TR/xmlschema-1/)  
+-   XML Schema Part 1: Structures, W3C Recommendation (https://www.w3.org/TR/xmlschema-1/)  
   
--   XML Schema Part 2:Datatypes, W3C Recommendation (http://www.w3.org/TR/xmlschema-2/)  
+-   XML Schema Part 2:Datatypes, W3C Recommendation (https://www.w3.org/TR/xmlschema-2/)  
   
--   XML Path Language (XPath) (http://www.w3.org/TR/xpath)  
+-   XML Path Language (XPath) (https://www.w3.org/TR/xpath)  
   
--   XSL Transformations (XSLT) (http://www.w3.org/TR/xslt)  
+-   XSL Transformations (XSLT) (https://www.w3.org/TR/xslt)  
   
   

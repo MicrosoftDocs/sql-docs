@@ -41,6 +41,6 @@ monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
  This view is available to all user roles with permissions to connect to the virtual **master** database.  
   
 ## See Also  
- [Managing Premium Databases](http://go.microsoft.com/fwlink/?LinkID=311927)  
+ [Managing Premium Databases](https://go.microsoft.com/fwlink/?LinkID=311927)  
   
   

@@ -53,7 +53,7 @@ select @x.query('/ROOT[number()=111]')
   
 ```  
 SELECT ProductModelID, Instructions.query('  
-declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions" ;  
+declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions" ;  
      for $i in (//AWMI:root//AWMI:Location)[1]  
      return   
        <Location LocationID="{ ($i/@LocationID) }"   

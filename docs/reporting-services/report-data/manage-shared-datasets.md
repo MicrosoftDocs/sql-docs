@@ -59,7 +59,7 @@ ms.author: maghan
  Another way to view the shared dataset definition in XML is to use URL access syntax in Report Manager. For example, to view the default values for each dataset parameter, you can use the following URL access command to display a shared dataset definition named DataSet1 from the report server:  
   
 ```  
-http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition  
+https://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition  
 ```  
   
 ## Controlling Access to the Shared Dataset Definition  
@@ -86,10 +86,10 @@ http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition
 |Change shared dataset item properties.|Report Manager|[General Properties Page, Shared Datasets &#40;Report Manager&#41;](https://msdn.microsoft.com/library/10798e41-24c3-4e69-893b-7ee6af7fc958)|  
 |Specify additional shared dataset properties for a shared dataset instance in a report.|Report Builder Report Designer|[Dataset Properties Dialog Box, Query](https://msdn.microsoft.com/library/1fa34a4b-7de0-4e92-99fa-bc28a206773f)|  
 |Bind to a different shared data source for a shared dataset.|Report Manager|[Data Source Selection Page &#40;Report Manager&#41;](https://msdn.microsoft.com/library/7f7e8b19-0c0b-4b1f-9cc1-057099aa07eb)|  
-|Verify default values for dataset parameters.|Open in Report Builder or use URL access syntax.|For example:<br /><br /> `http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition`|  
+|Verify default values for dataset parameters.|Open in Report Builder or use URL access syntax.|For example:<br /><br /> `https://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition`|  
 |Enable caching|Report Manager|[Cache Shared Datasets &#40;SSRS&#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)<br /><br /> [Caching Page, Shared Datasets &#40;Report Manager&#41;](https://msdn.microsoft.com/library/eac372e9-d2a1-48a8-bbe5-09d101df16ea)|  
 |Create or edit a cache refresh plan|Report Manager|[Cache Refresh Options &#40;Report Manager&#41;](https://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6)|  
-|View the shared dataset definition schema.|Report Manager|`http://<reportserver>/shareddatasetdefinition.xsd`|  
+|View the shared dataset definition schema.|Report Manager|`https://<reportserver>/shareddatasetdefinition.xsd`|  
 |In SharePoint integrated mode, synchronize the shared dataset definition between the report server and the SharePoint site|SharePoint application pages|Change shared dataset item properties<br /><br /> Change cache options<br /><br /> Change the shared data source|  
   
 ## Comparing Shared Datasets with Other Report Server Items  

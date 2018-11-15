@@ -40,8 +40,8 @@ manager: craigg
   
 ```sql
 WITH XMLNAMESPACES (  
-'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo' AS ACI,  
-'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS ACT)  
+'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo' AS ACI,  
+'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS ACT)  
 SELECT ContactID   
 FROM   Person.Contact  
 WHERE  AdditionalContactInfo.value('  
@@ -58,7 +58,7 @@ WHERE  AdditionalContactInfo.value('
 ```sql
 SELECT ProductModelID, Instructions.query('  
      declare namespace   
- AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+ AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
      for $i in (/AWMI:root/AWMI:Location)[1]  
      return   
        <Location LocationID="{ ($i/@LocationID) }"  
@@ -77,7 +77,7 @@ where ProductModelID=7
   
 ```sql
 SELECT CatalogDescription.query('  
-     declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+     declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
      for $P in /PD:ProductDescription/PD:Picture[PD:Size eq "small"]  
      return  
            $P  

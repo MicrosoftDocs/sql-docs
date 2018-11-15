@@ -42,7 +42,7 @@ fn:not($arg as item()*) as xs:boolean
  The following query constructs XML that contains product model IDs for product models whose catalog descriptions do not include the <`Specifications`> element.  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
 SELECT ProductModelID, CatalogDescription.query('  
        <Product   
            ProductModelID="{ sql:column("ProductModelID") }"  
@@ -71,7 +71,7 @@ WHERE CatalogDescription.exist('
   
 ```  
 SELECT ProductModelID, Instructions.query('  
-declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions" ;  
+declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions" ;  
      for $i in /AWMI:root/AWMI:Location[not(@MachineHours)]  
      return  
        <Location LocationID="{ $i/@LocationID }"   

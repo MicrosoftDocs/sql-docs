@@ -39,13 +39,13 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
  DLM begins with discussion of project design and intent, continues with database develop, test, build, deploy, maintain, monitor, and backup activities, and ends with data archive. This topic provides an overview of the stages of DLM that begin with database development and progress through build, deploy, and monitor actions. Also included are data management activities, and data portability operations like import/export, backup, migrate, and sync.  
   
- To read the complete topic, see [Database Lifecycle Management (DLM)](http://go.microsoft.com/fwlink/?LinkId=276949).  
+ To read the complete topic, see [Database Lifecycle Management (DLM)](https://go.microsoft.com/fwlink/?LinkId=276949).  
   
 ## See Also  
- [Windows Azure Home Page](http://www.windowsazure.com/)   
- [Windows Azure Developer Center](http://www.windowsazure.com/develop/overview/)   
- [Windows Azure Manage Center](http://www.windowsazure.com/manage/overview/)   
- [Windows Azure Team Blog](http://www.windowsazure.com/community/blog/)   
- [Windows Azure Support Options](http://www.windowsazure.com/support/contact/)  
+ [Windows Azure Home Page](https://www.windowsazure.com/)   
+ [Windows Azure Developer Center](https://www.windowsazure.com/develop/overview/)   
+ [Windows Azure Manage Center](https://www.windowsazure.com/manage/overview/)   
+ [Windows Azure Team Blog](https://www.windowsazure.com/community/blog/)   
+ [Windows Azure Support Options](https://www.windowsazure.com/support/contact/)  
   
   

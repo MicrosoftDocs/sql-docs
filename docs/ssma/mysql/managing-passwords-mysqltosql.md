@@ -125,5 +125,5 @@ Example:
     Please confirm password: xxxxxxxx  
   
 ## See Also  
-[Executing the SSMA Console (MySQL)](http://msdn.microsoft.com/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
+[Executing the SSMA Console (MySQL)](https://msdn.microsoft.com/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
   

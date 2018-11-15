@@ -322,7 +322,7 @@ Trace flag 7745 will prevent the default behavior where Query Store writes data 
 Trace flag 7752 enables asynchronous load of Query Store, and also allows [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to run queries before Query Store has been fully loaded. Default Query Store behavior prevents queries from running before the Query Store has been recovered.
 
 > [!IMPORTANT]
-> If you are using Query Store for just in time workload insights in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], plan to install the performance scalability fixes in [KB 4340759](http://support.microsoft.com/help/4340759) as soon as possible. 
+> If you are using Query Store for just in time workload insights in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], plan to install the performance scalability fixes in [KB 4340759](https://support.microsoft.com/help/4340759) as soon as possible. 
 
 ## See Also  
  [Query Store Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   

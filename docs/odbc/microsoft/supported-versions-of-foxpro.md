@@ -33,4 +33,4 @@ You can use the Microsoft® Visual FoxPro® ODBC Driver to access data stored in
   
  For more information about how to connect to a data source, see [Adding a Visual FoxPro Data Source](../../odbc/microsoft/adding-a-visual-foxpro-data-source.md).  
   
- To download the driver, see [the Visual FoxPro ODBC Driver download site](http://go.microsoft.com/fwlink/?LinkId=121318).
+ To download the driver, see [the Visual FoxPro ODBC Driver download site](https://go.microsoft.com/fwlink/?LinkId=121318).

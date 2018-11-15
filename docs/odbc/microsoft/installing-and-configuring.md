@@ -20,7 +20,7 @@ ms.author: genemi
 manager: craigg
 ---
 # Installing and Configuring
-To download the Visual FoxPro ODBC Driver, see [the Visual FoxPro ODBC Driver download site](http://go.microsoft.com/fwlink/?LinkId=121318).  
+To download the Visual FoxPro ODBC Driver, see [the Visual FoxPro ODBC Driver download site](https://go.microsoft.com/fwlink/?LinkId=121318).  
   
  This section contains the following topics to help you install and configure the Microsoft Visual FoxPro ODBC Driver:  
   
@@ -32,4 +32,4 @@ To download the Visual FoxPro ODBC Driver, see [the Visual FoxPro ODBC Driver do
   
 -   [ODBC Visual FoxPro Setup Dialog Box](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)  
   
- To download the driver, see [the Visual FoxPro ODBC Driver download site](http://go.microsoft.com/fwlink/?LinkId=121318).
+ To download the driver, see [the Visual FoxPro ODBC Driver download site](https://go.microsoft.com/fwlink/?LinkId=121318).

@@ -181,7 +181,7 @@ Tool Requirements
 
 - SQL Server Management Studio can decrypt the results retrieved from encrypted columns if you connect with the *column encryption setting=enabled* in the **Additional Properties** tab of the **Connect to Server** dialog. Requires at least SQL Server Management Studio version 17 to insert, update, or filter encrypted columns.
 
-- Encrypted connections from `sqlcmd` require at least version 13.1, which is available from the [Download Center](http://go.microsoft.com/fwlink/?LinkID=825643).
+- Encrypted connections from `sqlcmd` require at least version 13.1, which is available from the [Download Center](https://go.microsoft.com/fwlink/?LinkID=825643).
 
   
 ## Database Permissions  

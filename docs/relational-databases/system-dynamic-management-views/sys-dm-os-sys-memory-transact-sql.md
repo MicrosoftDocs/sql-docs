@@ -41,8 +41,8 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallpr
 |**system_cache_kb**|**bigint**|Total amount of system cache memory, in KB.|  
 |**kernel_paged_pool_kb**|**bigint**|Total amount of the paged kernel pool, in KB.|  
 |**kernel_nonpaged_pool_kb**|**bigint**|Total amount of the nonpaged kernel pool, in KB.|  
-|**system_high_memory_signal_state**|**bit**|State of the system high memory resource notification. A value of 1 indicates the high memory signal has been set by Windows. For more information, see [CreateMemoryResourceNotification](http://go.microsoft.com/fwlink/?LinkId=82427) in the MSDN library.|  
-|**system_low_memory_signal_state**|**bit**|State of the system low memory resource notification. A value of 1 indicates the low memory signal has been set by Windows. For more information, see [CreateMemoryResourceNotification](http://go.microsoft.com/fwlink/?LinkId=82427) in the MSDN library.|  
+|**system_high_memory_signal_state**|**bit**|State of the system high memory resource notification. A value of 1 indicates the high memory signal has been set by Windows. For more information, see [CreateMemoryResourceNotification](https://go.microsoft.com/fwlink/?LinkId=82427) in the MSDN library.|  
+|**system_low_memory_signal_state**|**bit**|State of the system low memory resource notification. A value of 1 indicates the low memory signal has been set by Windows. For more information, see [CreateMemoryResourceNotification](https://go.microsoft.com/fwlink/?LinkId=82427) in the MSDN library.|  
 |**system_memory_state_desc**|**nvarchar(256)**|Description of the memory state. See the table below.|  
 |**pdw_node_id**|**int**|**Applies to**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> The identifier for the node that this distribution is on.|  
   

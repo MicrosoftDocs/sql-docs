@@ -50,7 +50,7 @@ fn:sum($arg as xdt:anyAtomicType*) as xdt:anyAtomicType
   
 ```  
 SELECT Instructions.query('         
-   declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";         
+   declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";         
   <ProductModel PMID= "{ sql:column("Production.ProductModel.ProductModelID") }"         
   ProductModelName = "{ sql:column("Production.ProductModel.Name") }" >         
    <TotalLaborHrs>         
@@ -80,7 +80,7 @@ WHERE Instructions is not NULL
 SELECT ProductModelID,         
         Name,         
         Instructions.value('declare namespace   
-      AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";         
+      AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";         
     sum(//AWMI:Location/@LaborHours)', 'float') as TotalLaborHours         
 FROM Production.ProductModel         
 WHERE Instructions is not NULL          

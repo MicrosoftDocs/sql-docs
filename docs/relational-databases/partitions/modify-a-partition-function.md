@@ -52,7 +52,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not provide replication support for modifying a partition function. If you want to make changes to a partition function in the publication database, you must do this manually in the subscription database.  
   
--   All filegroups that are affected by ALTER PARITITION FUNCTION must be online.  
+-   All filegroups that are affected by ALTER PARTITION FUNCTION must be online.  
   
 ###  <a name="Security"></a> Security  
   

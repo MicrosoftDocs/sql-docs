@@ -120,4 +120,4 @@ ADD SENSITIVITY CLASSIFICATION TO
 
 [Permissions (Database Engine)](https://docs.microsoft.com/sql/relational-databases/security/permissions-database-engine)
 
-[Getting started with SQL Information Protection](http://aka.ms/sqlip)
+[Getting started with SQL Information Protection](https://aka.ms/sqlip)

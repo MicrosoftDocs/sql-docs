@@ -49,7 +49,7 @@ manager: craigg
 |Change or augment the values in a knowledge base|[Change Domain Values](../data-quality-services/change-domain-values.md)|  
 |Use validation and standardization rules|[Create a Domain Rule](../data-quality-services/create-a-domain-rule.md)|  
 |Use relations to correct a term that is part of a value in a domain|[Create Term-Based Relations](../data-quality-services/create-term-based-relations.md)|  
-|Complete, close, or cancel the domain management activity|[End the Domain Management Activity](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)|  
+|Complete, close, or cancel the domain management activity|[End the Domain Management Activity](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)|  
   
 ## Related Tasks  
   

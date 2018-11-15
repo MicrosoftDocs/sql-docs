@@ -40,7 +40,7 @@ In the following table, you can find descriptions of common tasks that support t
 [Running SQL Server Unit Tests](../ssdt/running-sql-server-unit-tests.md)  
 After you create your SQL Server unit tests, you can run them from the Test View window, the SQL Server Unit Test Designer, or by using Team Foundation Build.  
   
-[Scenario: Define Custom Test Conditions for Database Unit Tests](http://msdn.microsoft.com/library/dd193282(VS.100).aspx)  
+[Scenario: Define Custom Test Conditions for Database Unit Tests](https://msdn.microsoft.com/library/dd193282(VS.100).aspx)  
 You can create a custom test condition to test a behavior that the default test conditions cannot verify.  
   
 ## See Also  

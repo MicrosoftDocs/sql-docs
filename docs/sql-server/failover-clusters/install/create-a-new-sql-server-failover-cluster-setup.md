@@ -61,7 +61,7 @@ manager: craigg
   
  For more information about remote installation, see [Supported Version and Edition Upgrades](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
   
- For more information about installing [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in a Windows failover cluster, see [How to Cluster SQL Server Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=396548).  
+ For more information about installing [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in a Windows failover cluster, see [How to Cluster SQL Server Analysis Services](https://go.microsoft.com/fwlink/p/?LinkId=396548).  
   
 ## Prerequisites  
  Before you begin, review the following [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Books Online topics:  
@@ -163,7 +163,7 @@ manager: craigg
   
 17. On the Server Configuration — Service Accounts page, specify login accounts for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] services. The actual services that are configured on this page depend on the features that you selected to install.  
   
-     You can assign the same login account to all [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] services, or you can configure each service account individually. The startup type is set to manual for all cluster-aware services, including full-text search and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent, and cannot be changed during installation. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] recommends that you configure service accounts individually to provide least privileges for each service, where [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] services are granted the minimum permissions they have to have complete their tasks. For more information, see [Server Configuration - Service Accounts](http://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) and [Configure Windows Service Accounts and Permissions](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+     You can assign the same login account to all [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] services, or you can configure each service account individually. The startup type is set to manual for all cluster-aware services, including full-text search and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent, and cannot be changed during installation. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] recommends that you configure service accounts individually to provide least privileges for each service, where [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] services are granted the minimum permissions they have to have complete their tasks. For more information, see [Server Configuration - Service Accounts](https://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) and [Configure Windows Service Accounts and Permissions](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
      To specify the same logon account for all service accounts in this instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], provide credentials in the fields at the bottom of the page.  
   

@@ -71,7 +71,7 @@ If you try to install SQL Server 2016 R Services or SQL Server 2017 Machine Lear
 > 
 > *Component error code: 0x80131509*
 
-The failure occurs because, on a domain controller, the service cannot create the 20 local accounts required to run machine learning. In general, we do not recommend installing SQL Server on a domain controller. For more information, see [Support bulletin 2032911](https://support.microsoft.com/en-us/help/2032911/you-may-encounter-problems-when-installing-sql-server-on-a-domain-cont).
+The failure occurs because, on a domain controller, the service cannot create the 20 local accounts required to run machine learning. In general, we do not recommend installing SQL Server on a domain controller. For more information, see [Support bulletin 2032911](https://support.microsoft.com/help/2032911/you-may-encounter-problems-when-installing-sql-server-on-a-domain-cont).
 
 ### Install the latest service release to ensure compatibility with Microsoft R Client
 
@@ -95,7 +95,7 @@ A limited number of Azure virtual machines were provisioned without the R instal
 
 A service release has been provided that includes the correct version of the R installation files.
 
-+ [Cumulative Update Package 3 for SQL Server 2017 KB4052987](https://www.microsoft.com/en-us/download/details.aspx?id=56128).
++ [Cumulative Update Package 3 for SQL Server 2017 KB4052987](https://www.microsoft.com/download/details.aspx?id=56128).
 
 To install the components and repair SQL Server 2017 CU3, you must uninstall CU3, and reinstall the updated version:
 

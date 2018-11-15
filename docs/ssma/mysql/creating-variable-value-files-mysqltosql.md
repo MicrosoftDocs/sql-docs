@@ -88,5 +88,5 @@ The user can easily validate his/her variable value file against the schema defi
 The next step in operating the console is [Creating the Server Connection Files &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-the-server-connection-files-mysqltosql.md)  
   
 ## See Also  
-[Creating the Server Connection Files (MySQL)](http://msdn.microsoft.com/df0e970c-da0b-4118-b359-c9dcbbad16d6)  
+[Creating the Server Connection Files (MySQL)](https://msdn.microsoft.com/df0e970c-da0b-4118-b359-c9dcbbad16d6)  
   

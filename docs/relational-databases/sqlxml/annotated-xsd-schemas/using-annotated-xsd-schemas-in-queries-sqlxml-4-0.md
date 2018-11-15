@@ -37,7 +37,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
  For example, consider this annotated schema:  
   
 ```  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:element name="Person.Contact" >  
      <xsd:complexType>  
@@ -70,7 +70,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 ```  
 <ROOT xmlns:sql='urn:schemas-microsoft-com:xml-sql'>  
-<xsd:schema xmlns:xsd='http://www.w3.org/2001/XMLSchema'  
+<xsd:schema xmlns:xsd='https://www.w3.org/2001/XMLSchema'  
         xmlns:ms='urn:schemas-microsoft-com:mapping-schema'  
         id='InLineSchema1' sql:is-mapping-schema='1'>  
   <xsd:element name='Employees' ms:relation='HumanResources.Employee'>  
@@ -83,7 +83,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   </xsd:element>  
 </xsd:schema>  
   
-<xsd:schema xmlns:xsd='http://www.w3.org/2001/XMLSchema'  
+<xsd:schema xmlns:xsd='https://www.w3.org/2001/XMLSchema'  
         xmlns:ms='urn:schemas-microsoft-com:mapping-schema'  
         id='InLineSchema2' sql:is-mapping-schema='1'>  
   <xsd:element name='Contacts' ms:relation='Person.Contact'>  

@@ -40,7 +40,7 @@ fn:last() as xs:integer
   
 ```  
 SELECT ProductModelID, Instructions.query('   
-declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
   <LastTwoManuSteps>  
    <Last-1Step>   
      { (/AWMI:root/AWMI:Location)[1]/AWMI:step[(last()-1)]/text() }  

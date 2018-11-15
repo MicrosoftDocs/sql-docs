@@ -41,7 +41,7 @@ SSMS is a separate download, useful for creating and running stored procedures o
 
 Microsoft's R packages are available in multiple products and services. On a local workstation, we recommend installing Microsoft R Client. R Client provides [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler), [MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package), [SQLRUtils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils), and other R packages.
 
-1. [Download Microsoft R Client](http://aka.ms/rclient/download).
+1. [Download Microsoft R Client](https://aka.ms/rclient/download).
 
 2. In the installation wizard, accept or change default installation path, accept or change the components list, and accept the Microsoft R Client license terms.
 

@@ -20,7 +20,7 @@ You can call an arbitrary function in the context of the [!INCLUDE[ssNoVersion](
 
 In this lesson, you use the remote server to create a simple simulation. The simulation doesn't require any [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data; the example only demonstrates how to design a custom function and then call it using the **rxExec** function.
 
-For a more complex example of using **rxExec**, see this article: [Coarse grain parallelism with foreach and rxExec](http://blog.revolutionanalytics.com/2015/04/coarse-grain-parallelism-with-foreach-and-rxexec.html)
+For a more complex example of using **rxExec**, see this article: [Coarse grain parallelism with foreach and rxExec](https://blog.revolutionanalytics.com/2015/04/coarse-grain-parallelism-with-foreach-and-rxexec.html)
 
 ## Create the custom function
 
@@ -111,7 +111,7 @@ In this tutorial, you have become proficient with these tasks:
 -   Passing models, data, and plots between your workstation and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server
   
 
-If you would like to experiment with these techniques using a larger dataset of 10 million observations, the data files are available from the Revolution analytics web site: [Index of datasets](http://packages.revolutionanalytics.com/datasets)
+If you would like to experiment with these techniques using a larger dataset of 10 million observations, the data files are available from the Revolution analytics web site: [Index of datasets](https://packages.revolutionanalytics.com/datasets)
 
 To re-use this walkthrough with the larger data files, download the data, and then modify each of the data sources as follows:
 

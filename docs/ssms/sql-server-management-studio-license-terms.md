@@ -15,8 +15,8 @@ manager: craigg
 # SQL Server Management Studio - License Terms
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 ### Available Languages:  
-[Chinese (Simplified)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x804) | [Chinese (Traditional)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x404) | [English (United States)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x409) | [French](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x40c)  
-[German](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x407) | [Italian](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x410) | [Japanese](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x411) | [Korean](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x412) | [Portuguese (Brazil)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x416) | [Russian](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x419) | [Spanish](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x40a)  
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x40c)  
+[German](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x40a)  
   
 ## MICROSOFT SOFTWARE LICENSE TERMS  
 **MICROSOFT SQL SERVER MANAGEMENT STUDIO**  
@@ -68,7 +68,7 @@ As described below, using some features also operates as your consent to the tra
   
 **3.    INTERNET-BASED SERVICES.** Microsoft provides Internet-based services with the software. It may change or cancel them at any time.  
   
-&nbsp;&nbsp;**a.    Consent for Internet-Based Services.** The software feature described below and in the SQL Server Privacy Statement connects to Microsoft or service provider computer systems over the Internet. In some cases, you will not receive a separate notice when they connect. You may switch off this feature or not use it. For more information about this feature, see [http://go.microsoft.com/fwlink/?LinkID=398120](http://go.microsoft.com/fwlink/?LinkID=398120). **By using this feature, you consent to the transmission of this information**. Microsoft does not use the information to identify or contact you.  
+&nbsp;&nbsp;**a.    Consent for Internet-Based Services.** The software feature described below and in the SQL Server Privacy Statement connects to Microsoft or service provider computer systems over the Internet. In some cases, you will not receive a separate notice when they connect. You may switch off this feature or not use it. For more information about this feature, see [https://go.microsoft.com/fwlink/?LinkID=398120](https://go.microsoft.com/fwlink/?LinkID=398120). **By using this feature, you consent to the transmission of this information**. Microsoft does not use the information to identify or contact you.  
   
 &nbsp;&nbsp;**i.    Computer Information.** The following feature uses Internet protocols, which send to the appropriate systems computer information, such as your Internet protocol address, the type of operating system, browser and name and version of the software you are using, and the language code of the device where you installed the software. Microsoft uses this information to make the Internet-based service available to you.  
   

@@ -115,7 +115,7 @@ Each instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consi
  **Specify Administrators** - You must specify at least one server administrator for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The users or groups that you specify will become members of the server administrator role of the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance you are installing. These must be Windows domain user accounts in the same domain as the computer on which you are installing the software.  
   
 > [!NOTE]  
->  User Account Control (UAC) is a Windows security feature that requires an administrator to specifically approve administrative actions or applications before they are allowed to run. Because UAC is on by default, you will be prompted to allow specific operations that require elevated privileges. You can configure UAC to change the default behavior or customize UAC for specific programs. For more information about UAC and UAC configuration, see [User Account Control Step by Step Guide](http://go.microsoft.com/fwlink/?linkid=196350) and [User Account Control (Wikipedia)](http://go.microsoft.com/fwlink/?linkid=196351).  
+>  User Account Control (UAC) is a Windows security feature that requires an administrator to specifically approve administrative actions or applications before they are allowed to run. Because UAC is on by default, you will be prompted to allow specific operations that require elevated privileges. You can configure UAC to change the default behavior or customize UAC for specific programs. For more information about UAC and UAC configuration, see [User Account Control Step by Step Guide](https://go.microsoft.com/fwlink/?linkid=196350) and [User Account Control (Wikipedia)](https://go.microsoft.com/fwlink/?linkid=196351).  
   
 ### See Also  
  [Configure Service Accounts &#40;Analysis Services&#41;](../../analysis-services/instances/configure-service-accounts-analysis-services.md)
@@ -245,7 +245,7 @@ Each instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consi
  For more information about directories, file locations, and instance ID naming, see [File Locations for Default and Named Instances of SQL Server](file-locations-for-default-and-named-instances-of-sql-server.md).  
   
     
- [Share and NTFS Permissions on a File Server](http://go.microsoft.com/fwlink/?LinkID=206571) 
+ [Share and NTFS Permissions on a File Server](https://go.microsoft.com/fwlink/?LinkID=206571) 
 
 ## Database Engine Configuration - Filestream
   Use this page to enable FILESTREAM for this installation of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. FILESTREAM integrates the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] with an NTFS file system by storing **varbinary(max)** binary large object (BLOB) data as files on the file system. [!INCLUDE[tsql](../../includes/tsql-md.md)] statements can insert, update, query, search, and back up FILESTREAM data. Win32 file system interfaces provide streaming access to the data.  
@@ -424,7 +424,7 @@ Each instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consi
   
 ### See Also  
  [Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
- [Share and NTFS Permissions on a File Server](http://go.microsoft.com/fwlink/?LinkID=206571)  
+ [Share and NTFS Permissions on a File Server](https://go.microsoft.com/fwlink/?LinkID=206571)  
 
 ## Database Engine Configuration - User Instance
 Use the **User Instance** page to generate a separate instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] for users without administrator permissions, and to add users to the administrator role.  

@@ -62,7 +62,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 |*ValuePtr* value|Description|  
 |----------------------|-----------------|  
-|SQL_DP_ON|Default. After calling [SQLPrepare Function](http://go.microsoft.com/fwlink/?LinkId=59360), the statement preparation is deferred until **SQLExecute** is called or metaproperty operation (**SQLDescribeCol** or **SQLDescribeParam**) is executed.|  
+|SQL_DP_ON|Default. After calling [SQLPrepare Function](https://go.microsoft.com/fwlink/?LinkId=59360), the statement preparation is deferred until **SQLExecute** is called or metaproperty operation (**SQLDescribeCol** or **SQLDescribeParam**) is executed.|  
 |SQL_DP_OFF|The statement is prepared as soon as **SQLPrepare** is executed.|  
   
 ### SQL_SOPT_SS_REGIONALIZE  
@@ -144,7 +144,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  If a catalog function other then SQLTables, SQLColumns, or SQLPrimaryKeys is called when SQL_SOPT_SS_NAME_SCOPE has a value other than SQL_SS_NAME_SCOPE_TABLE, SQL_ERROR is returned. A diagnostic record is generated with SQLSTATE HY010 and the message "Function sequence error (SQL_SOPT_SS_NAME_SCOPE is not set to SQL_SS_NAME_SCOPE_TABLE)".  
   
 ## See Also  
- [SQLGetStmtAttr Function](http://go.microsoft.com/fwlink/?LinkId=59355)   
+ [SQLGetStmtAttr Function](https://go.microsoft.com/fwlink/?LinkId=59355)   
  [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

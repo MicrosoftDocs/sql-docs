@@ -28,7 +28,7 @@ There are two main workflows you can use to contribute:
 
 You can make simple edits to SQL Server content in your browser and then submit them to Microsoft. The complete process is documented in the article, [Microsoft Docs contributor guide overview](https://docs.microsoft.com/contribute/#quick-edits-to-existing-documents). The following video demonstrates the end-to-end process for submitting changes in your browser:
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE23pxh]
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE23pxh]
 
 > [!TIP]
 > Note that the location of **Edit** button is slightly different than what is shown in the video, but the process is the same.

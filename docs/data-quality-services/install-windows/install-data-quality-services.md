@@ -111,7 +111,7 @@ manager: craigg
                     [Access Data for the DQS Operations](../../data-quality-services/install-windows/access-data-for-the-dqs-operations.md).  
   
 ## See Also  
- [Video: Install and Configure DQS](http://go.microsoft.com/fwlink/?LinkId=238241)   
+ [Video: Install and Configure DQS](https://go.microsoft.com/fwlink/?LinkId=238241)   
  [Upgrade SQLCLR Assemblies After .NET Framework Update](../../data-quality-services/install-windows/upgrade-sqlclr-assemblies-after-net-framework-update.md)   
  [Export and Import DQS Knowledge Bases Using DQSInstaller.exe](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)   
  [Upgrade Data Quality Services](../../database-engine/install-windows/upgrade-data-quality-services.md)   
@@ -119,6 +119,6 @@ manager: craigg
  [Install SQL Server Business Intelligence Features](../../sql-server/install/install-sql-server-business-intelligence-features.md)   
  [Uninstall SQL Server](../../sql-server/install/uninstall-sql-server.md)   
  [Data Quality Services](../../data-quality-services/data-quality-services.md)   
- [Troubleshoot Installation and Configuration Issues in DQS](http://social.technet.microsoft.com/wiki/contents/articles/3776.aspx)  
+ [Troubleshoot Installation and Configuration Issues in DQS](https://social.technet.microsoft.com/wiki/contents/articles/3776.aspx)  
   
   

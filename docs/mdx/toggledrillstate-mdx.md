@@ -42,7 +42,7 @@ ToggleDrillState(Set_Expression1,Set_Expression2 [, [RECURSIVE] [,INCLUDE_CALC_M
   
  Querying the XMLA property MdpropMdxDrillFunctions enables you to verify the level of support that the server provides for the drilling functions; see [Supported XMLA Properties &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) for details.  
   
- See [Database Journal: MDX Set Functions: The ToggleDrillState() Function](http://go.microsoft.com/fwlink/?LinkId=517759) for scenarios and examples involving this function.  
+ See [Database Journal: MDX Set Functions: The ToggleDrillState() Function](https://go.microsoft.com/fwlink/?LinkId=517759) for scenarios and examples involving this function.  
   
 ## Example  
  The following example drills down on the Australia member of the first set, and drills up on the United States member of the first set.  

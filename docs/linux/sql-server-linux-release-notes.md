@@ -72,7 +72,7 @@ If you are updating existing SQL Server packages, run the appropriate update com
 
 ## <a id="CU12"></a> CU12 (Oct 2018)
 
-This is the Cumulative Update 12 (CU12) release of SQL Server 2017. The SQL Server engine version for this release is 14.0.3045.24. For information about the fixes and improvements in this release, see [https://support.microsoft.com/en-us/help/4464082](https://support.microsoft.com/en-us/help/4464082).
+This is the Cumulative Update 12 (CU12) release of SQL Server 2017. The SQL Server engine version for this release is 14.0.3045.24. For information about the fixes and improvements in this release, see [https://support.microsoft.com/help/4464082](https://support.microsoft.com/help/4464082).
 
 ### Package details
 
@@ -86,7 +86,7 @@ For manual or offline package installations, you can download the RPM and Debian
 
 ## <a id="CU11"></a> CU11 (Sept 2018)
 
-This is the Cumulative Update 11 (CU11) release of SQL Server 2017. The SQL Server engine version for this release is 14.0.3038.14. For information about the fixes and improvements in this release, see [https://support.microsoft.com/en-us/help/4462262](https://support.microsoft.com/en-us/help/4462262).
+This is the Cumulative Update 11 (CU11) release of SQL Server 2017. The SQL Server engine version for this release is 14.0.3038.14. For information about the fixes and improvements in this release, see [https://support.microsoft.com/help/4462262](https://support.microsoft.com/help/4462262).
 
 ### Package details
 
@@ -100,7 +100,7 @@ For manual or offline package installations, you can download the RPM and Debian
 
 ## <a id="CU10"></a> CU10 (Aug 2018)
 
-This is the Cumulative Update 10 (CU10) release of SQL Server 2017. The SQL Server engine version for this release is 14.0.3037.1. For information about the fixes and improvements in this release, see [https://support.microsoft.com/en-us/help/4342123](https://support.microsoft.com/en-us/help/4342123).
+This is the Cumulative Update 10 (CU10) release of SQL Server 2017. The SQL Server engine version for this release is 14.0.3037.1. For information about the fixes and improvements in this release, see [https://support.microsoft.com/help/4342123](https://support.microsoft.com/help/4342123).
 
 ### Package details
 
@@ -114,7 +114,7 @@ For manual or offline package installations, you can download the RPM and Debian
 
 ## <a id="CU9-GDR2"></a> CU9-GDR2 (Aug 2018)
 
-This is a security update that also includes the previously released CU (CU9) for SQL Server 2017. The SQL Server engine version for this release is 14.0.3035.2. For information about the fixes and improvements in this release, see [https://support.microsoft.com/en-us/help/4293805](https://support.microsoft.com/en-us/help/4293805).
+This is a security update that also includes the previously released CU (CU9) for SQL Server 2017. The SQL Server engine version for this release is 14.0.3035.2. For information about the fixes and improvements in this release, see [https://support.microsoft.com/help/4293805](https://support.microsoft.com/help/4293805).
 
 ### Package details
 
@@ -128,7 +128,7 @@ For manual or offline package installations, you can download the RPM and Debian
 
 ## <a id="GDR2"></a> GDR2 (Aug 2018)
 
-This is a security update that only includes the GDR2 (and GDR1) security fixes for SQL Server 2017.  The SQL Server engine version for this release is 14.0.2002.14. For information about the fixes and improvements in this release, see [https://support.microsoft.com/en-us/help/4293803](https://support.microsoft.com/en-us/help/4293803).
+This is a security update that only includes the GDR2 (and GDR1) security fixes for SQL Server 2017.  The SQL Server engine version for this release is 14.0.2002.14. For information about the fixes and improvements in this release, see [https://support.microsoft.com/help/4293803](https://support.microsoft.com/help/4293803).
 
 ### Package details
 
@@ -142,7 +142,7 @@ For manual or offline package installations, you can download the RPM and Debian
 
 ## <a id="CU9"></a> CU9 (Jul 2018)
 
-This is the Cumulative Update 9 (CU9) release of SQL Server 2017. The SQL Server engine version for this release is 14.0.3030.27. For information about the fixes and improvements in this release, see [https://support.microsoft.com/en-us/help/4341265](https://support.microsoft.com/en-us/help/4341265).
+This is the Cumulative Update 9 (CU9) release of SQL Server 2017. The SQL Server engine version for this release is 14.0.3030.27. For information about the fixes and improvements in this release, see [https://support.microsoft.com/help/4341265](https://support.microsoft.com/help/4341265).
 
 ### Package details
 
@@ -156,7 +156,7 @@ For manual or offline package installations, you can download the RPM and Debian
 
 ## <a id="CU8"></a> CU8 (Jun 2018)
 
-This is the Cumulative Update 8 (CU8) release of SQL Server 2017. The SQL Server engine version for this release is 14.0.3029.16. For information about the fixes and improvements in this release, see [https://support.microsoft.com/en-us/help/4338363](https://support.microsoft.com/en-us/help/4338363).
+This is the Cumulative Update 8 (CU8) release of SQL Server 2017. The SQL Server engine version for this release is 14.0.3029.16. For information about the fixes and improvements in this release, see [https://support.microsoft.com/help/4338363](https://support.microsoft.com/help/4338363).
 
 ### Package details
 
@@ -170,7 +170,7 @@ For manual or offline package installations, you can download the RPM and Debian
 
 ## <a id="CU7"></a> CU7 (May 2018)
 
-This is the Cumulative Update 7 (CU7) release of SQL Server 2017. The SQL Server engine version for this release is 14.0.3026.27. For information about the fixes and improvements in this release, see [https://support.microsoft.com/en-us/help/4229789](https://support.microsoft.com/en-us/help/4229789).
+This is the Cumulative Update 7 (CU7) release of SQL Server 2017. The SQL Server engine version for this release is 14.0.3026.27. For information about the fixes and improvements in this release, see [https://support.microsoft.com/help/4229789](https://support.microsoft.com/help/4229789).
 
 ### Package details
 
@@ -230,7 +230,7 @@ For manual or offline package installations, you can download the RPM and Debian
 
 ## <a id="CU4"></a> CU4 (Feb 2018)
 
-This is the Cumulative Update 4 (CU4) release of SQL Server 2017. The SQL Server engine version for this release is 14.0.3022.28. For information about the fixes and improvements in this release, see [https://support.microsoft.com/en-us/help/4056498](https://support.microsoft.com/en-us/help/4056498).
+This is the Cumulative Update 4 (CU4) release of SQL Server 2017. The SQL Server engine version for this release is 14.0.3022.28. For information about the fixes and improvements in this release, see [https://support.microsoft.com/help/4056498](https://support.microsoft.com/help/4056498).
 
 ### Package details
 
@@ -247,7 +247,7 @@ For manual or offline package installations, you can download the RPM and Debian
 
 ## <a id="GDR1"></a> GDR1 (Jan 2018)
 
-This is a security update that only includes the GDR1 security fixes for SQL Server 2017. The SQL Server engine version for this release is 14.0.2000.63. For information about the fixes and improvements in this release, see [https://support.microsoft.com/en-us/help/4057122](https://support.microsoft.com/en-us/help/4057122).
+This is a security update that only includes the GDR1 security fixes for SQL Server 2017. The SQL Server engine version for this release is 14.0.2000.63. For information about the fixes and improvements in this release, see [https://support.microsoft.com/help/4057122](https://support.microsoft.com/help/4057122).
 
 ### Package details
 
@@ -261,7 +261,7 @@ For manual or offline package installations, you can download the RPM and Debian
 
 ## <a id="CU3"></a> CU3 (Jan 2018)
 
-This is the Cumulative Update 3 (CU3) release of SQL Server 2017. The SQL Server engine version for this release is 14.0.3015.40. For information about the fixes and improvements in this release, see [https://support.microsoft.com/en-us/help/4052987](https://support.microsoft.com/en-us/help/4052987).
+This is the Cumulative Update 3 (CU3) release of SQL Server 2017. The SQL Server engine version for this release is 14.0.3015.40. For information about the fixes and improvements in this release, see [https://support.microsoft.com/help/4052987](https://support.microsoft.com/help/4052987).
 
 ### Package details
 

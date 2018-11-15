@@ -41,7 +41,7 @@ GO
   
 3.  Select **New Full-Text Catalog**.  
   
-4.  In the **New Full-Text Catalog** dialog box, specify the information for the catalog that you are re-creating. For more information, see [New Full-Text Catalog &#40;General Page&#41;](http://msdn.microsoft.com/library/5ed6f7cd-d9af-4439-9f33-fc935b883d91).  
+4.  In the **New Full-Text Catalog** dialog box, specify the information for the catalog that you are re-creating. For more information, see [New Full-Text Catalog &#40;General Page&#41;](https://msdn.microsoft.com/library/5ed6f7cd-d9af-4439-9f33-fc935b883d91).  
   
     > [!NOTE]  
     >  Full-text catalog IDs begin at 00005 and are incremented by one for each new catalog created.  

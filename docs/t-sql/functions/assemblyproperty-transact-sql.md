@@ -57,7 +57,7 @@ The name of a property about which to retrieve information. *property_name* can 
 **sql_variant**
   
 ## Examples  
-This example assumes a `HelloWorld` assembly that is registered in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database. For more information, see [Hello World Sample](http://msdn.microsoft.com/library/fed6c358-f5ee-4d4c-9ad6-089778383ba7).
+This example assumes a `HelloWorld` assembly that is registered in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database. For more information, see [Hello World Sample](https://msdn.microsoft.com/library/fed6c358-f5ee-4d4c-9ad6-089778383ba7).
   
 ```sql
 USE AdventureWorks2012;  

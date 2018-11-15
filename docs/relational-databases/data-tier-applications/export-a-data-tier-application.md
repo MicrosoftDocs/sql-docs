@@ -114,7 +114,7 @@ On Azure SQL DB you need to grant **for each database** VIEW DEFINITION and SELE
 ##  <a name="NetApp"></a> Using a .Net Framework Application  
  **To export a DAC using the Export() method in a .Net Framework application.**  
   
- To view a code example, download the DAC sample application on [Codeplex](http://go.microsoft.com/fwlink/?LinkId=219575)  
+ To view a code example, download the DAC sample application on [Codeplex](https://go.microsoft.com/fwlink/?LinkId=219575)  
   
 1.  Create a SMO Server object and set it to the instance that contains the DAC to be exported.  
   

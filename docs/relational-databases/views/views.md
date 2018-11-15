@@ -33,7 +33,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  A partitioned view joins horizontally partitioned data from a set of member tables across one or more servers. This makes the data appear as if from one table. A view that joins member tables on the same instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is a local partitioned view.  
   
  System Views  
- System views expose catalog metadata. You can use system views to return information about the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or the objects defined in the instance. For example, you can query the sys.databases catalog view to return information about the user-defined databases available in the instance. For more information, see [System Views &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+ System views expose catalog metadata. You can use system views to return information about the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or the objects defined in the instance. For example, you can query the sys.databases catalog view to return information about the user-defined databases available in the instance. For more information, see [System Views &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
 ## Common View Tasks  
  The following table provides links to common tasks associated with creating or modifying a view.  

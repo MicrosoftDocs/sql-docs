@@ -35,14 +35,14 @@ To learn more about some of our other partners, see [High availability, and disa
 <!--Website links -->
 
 [idera_website]:https://www.idera.com/rapid-sql-ide
-[click2cloud_website]:http://www.click2cloud.net
+[click2cloud_website]:https://www.click2cloud.net
 <!--Get Started Links-->
 
 <!--Datasheet Links-->
 
 <!--Marketplace Links -->
 
-<!----Not available[idera_marketplace]:https://azure.microsoft.com/en-us/marketplace/ -->
+<!----Not available[idera_marketplace]:https://azure.microsoft.com/marketplace/ -->
 
 [click2cloud_marketplace]:https://marketplace.visualstudio.com/items?itemName=Click2CloudInc.Click2CloudDockerExtensionforVisualStudio 
 

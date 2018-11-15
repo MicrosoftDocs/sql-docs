@@ -35,6 +35,6 @@ fn:false() as xs:boolean
  For a working sample, see [true Function &#40;XQuery&#41;](../xquery/boolean-constructor-functions-true-xquery.md).  
   
 ## See Also  
- [Boolean Constructor Functions &#40;XQuery&#41;](http://msdn.microsoft.com/library/fa907f39-d4b7-4495-b829-c788928e0f64)  
+ [Boolean Constructor Functions &#40;XQuery&#41;](https://msdn.microsoft.com/library/fa907f39-d4b7-4495-b829-c788928e0f64)  
   
   

@@ -21,7 +21,7 @@ manager: craigg
 ### Input Trace Versions  
  Distributed Replay supports input trace data that is collected on the following versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
--   [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)]  Cumulative Update 1 and later. See - [SQL Server 2017 Cumulative updates](http://aka.ms/sql2017cu).
+-   [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)]  Cumulative Update 1 and later. See - [SQL Server 2017 Cumulative updates](https://aka.ms/sql2017cu).
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]   
 -   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
 -   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  

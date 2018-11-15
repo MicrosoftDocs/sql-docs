@@ -23,7 +23,7 @@ This dialog box allows you to create a full-text index, for full-text searches o
 > To create a full-text index, you must first create a full-text catalog for the database using an outside tool, such as [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or Enterprise Manager.  
   
 > [!NOTE]  
-> Full-text index functionality is not available in every edition of [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2012](http://msdn.microsoft.com/5da61ff5-12b9-48e6-b3c8-0dacca1751c4).  
+> Full-text index functionality is not available in every edition of [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2012](https://msdn.microsoft.com/5da61ff5-12b9-48e6-b3c8-0dacca1751c4).  
   
 ## Options  
 **Selected Full-Text Index**  
@@ -90,6 +90,6 @@ Displays the type of the current or most recent crawl: Full, Incremental, Update
 Displays a list of all of the names of columns in this database that have unique single-column indexes. These columns can be used to create a full-text index.  
   
 ## See Also  
-[Use the Full-Text Indexing Wizard](http://msdn.microsoft.com/3e9d9605-6525-4781-9168-fdaa06db3459)  
-[CREATE FULLTEXT INDEX (Transact-SQL)](http://msdn.microsoft.com/8b80390f-5f8b-4e66-9bcc-cabd653c19fd)  
+[Use the Full-Text Indexing Wizard](https://msdn.microsoft.com/3e9d9605-6525-4781-9168-fdaa06db3459)  
+[CREATE FULLTEXT INDEX (Transact-SQL)](https://msdn.microsoft.com/8b80390f-5f8b-4e66-9bcc-cabd653c19fd)  
   

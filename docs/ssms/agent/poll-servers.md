@@ -56,7 +56,7 @@ If you use the following items, you do not have to post operations explicitly:
   
 -   [SQL Server Management Studio](../../ssms/agent/force-a-target-server-to-poll-the-master-server.md)  
   
--   [Transact-SQL](http://msdn.microsoft.com/085deef8-2709-4da9-bb97-9ab32effdacf)  
+-   [Transact-SQL](https://msdn.microsoft.com/085deef8-2709-4da9-bb97-9ab32effdacf)  
   
 ## See Also  
 [Manage Events](../../ssms/agent/manage-events.md)  

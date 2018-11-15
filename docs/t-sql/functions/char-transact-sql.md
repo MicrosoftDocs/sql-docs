@@ -47,7 +47,7 @@ CHAR ( integer_expression )
 An integer from 0 through 255. `CHAR` returns a `NULL` value for integer expressions outside this range, or when then integer expresses only the first byte of a double-byte character.
 
 > [!NOTE]
-> Some non-European character sets, such as [Shift Japanese Industrial Standards](http://www.wikipedia.org/wiki/Shift_JIS), include characters than can be represented in a single-byte coding scheme, but require multibyte encoding. For more information on character sets, refer to [Single-Byte and Multibyte Character Sets](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets). 
+> Some non-European character sets, such as [Shift Japanese Industrial Standards](https://www.wikipedia.org/wiki/Shift_JIS), include characters than can be represented in a single-byte coding scheme, but require multibyte encoding. For more information on character sets, refer to [Single-Byte and Multibyte Character Sets](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets). 
   
 ## Return types
 **char(1)**

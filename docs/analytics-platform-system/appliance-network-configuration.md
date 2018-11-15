@@ -47,9 +47,9 @@ Change the IP addresses of the fabric domain and workload domain by editing the 
 ## Manufacturer References  
 For additional information about Dell appliances, see:  
   
--   PowerConnect Switch Instructions [Dell PowerConnect 6200 Series System CLI Reference Guide](http://downloads.dell.com/Manuals/all-products/esuprt_ser_stor_net/esuprt_powerconnect/powerconnect-6224f_Reference%20Guide_en-us.pdf)  
+-   PowerConnect Switch Instructions [Dell PowerConnect 6200 Series System CLI Reference Guide](https://downloads.dell.com/Manuals/all-products/esuprt_ser_stor_net/esuprt_powerconnect/powerconnect-6224f_Reference%20Guide_en-us.pdf)  
   
--   iDRAC/BMC [Integrated Dell Remote Access Controller 7 (iDRAC7) Version 1.30.30 User's Guide](http://downloads.dell.com/Manuals/all-products/esuprt_electronics/esuprt_software/esuprt_remote_ent_sys_mgmt/integrated-dell-remote-access-cntrllr-7-v1.30.30_User%27s%20Guide_en-us.pdf?c=us&l=en&cs=555&s=biz)  
+-   iDRAC/BMC [Integrated Dell Remote Access Controller 7 (iDRAC7) Version 1.30.30 User's Guide](https://downloads.dell.com/Manuals/all-products/esuprt_electronics/esuprt_software/esuprt_remote_ent_sys_mgmt/integrated-dell-remote-access-cntrllr-7-v1.30.30_User%27s%20Guide_en-us.pdf?c=us&l=en&cs=555&s=biz)  
   
 -   PDU's **Dell Metered Rack PDU**`ftp://ftp.dell.com/Manuals/all-products/esuprt_ser_stor_net/esuprt_rack_infrastructure/dell-metered-pdu-led_User's%20Guide_en-us.pdf`  
   

@@ -16,7 +16,7 @@ manager: craigg
 
 Stretch Database provides a set of extended events for troubleshooting.  
   
-For more info, see [Extended Events](../../relational-databases/extended-events/extended-events.md). For info about how to start an extended events session for troubleshooting, see [Create an Extended Events Session](http://msdn.microsoft.com/library/34b1e95a-a80e-4aca-9201-abde47f2ca74)  
+For more info, see [Extended Events](../../relational-databases/extended-events/extended-events.md). For info about how to start an extended events session for troubleshooting, see [Create an Extended Events Session](https://msdn.microsoft.com/library/34b1e95a-a80e-4aca-9201-abde47f2ca74)  
   
 ## List of extended events for Stretch Database  
   

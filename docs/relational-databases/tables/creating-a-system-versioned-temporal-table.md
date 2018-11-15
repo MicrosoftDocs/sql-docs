@@ -88,7 +88,7 @@ WITH
   
 -   If the specified schema does not exist, the **CREATE TABLE** statement will fail.  
   
--   If the table specified by the **HISTORY_TABLE** parameter already exists, it will be validated against the newly created temporal table in terms of [schema consistency and temporal data consistency](http://msdn.microsoft.com/library/dn935015.aspx). If you specify an invalid history table,  the **CREATE TABLE** statement will fail.  
+-   If the table specified by the **HISTORY_TABLE** parameter already exists, it will be validated against the newly created temporal table in terms of [schema consistency and temporal data consistency](https://msdn.microsoft.com/library/dn935015.aspx). If you specify an invalid history table,  the **CREATE TABLE** statement will fail.  
   
 ## Creating a temporal table with a user-defined history table  
  Creating a temporal table with user-defined history table is a convenient option when the user wants to specify a history table with specific storage options and additional indexes. In the example below, a user-defined history table is created with a schema that is aligned with the temporal table that will be created. To this user-defined history table,  a clustered columnstore index and additional non clustered rowstore (B-tree) index is created for point lookups. After this user-defined history table is created, the system-versioned temporal table is created specifying the user-defined history table as the default history table.  

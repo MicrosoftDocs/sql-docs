@@ -86,7 +86,7 @@ manager: craigg
   
 5.  If you selected **Delimiters** for the parsing method, you can also select **Use Knowledge Based Parsing**. For more information, see [Knowledge-Based Parsing](#KnowledgeBaseParsing).  
   
-6.  Click **Finish** to complete the domain management activity, as described in [End the Domain Management Activity](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
+6.  Click **Finish** to complete the domain management activity, as described in [End the Domain Management Activity](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
   
 ##  <a name="FollowUp"></a> Follow Up: After Creating a Composite Domain  
  After you create a composite domain, you can perform other domain management tasks on the domain, you can perform knowledge discovery to add knowledge to the domain, or you can add a matching policy to the domain. For more information, see [Perform Knowledge Discovery](../data-quality-services/perform-knowledge-discovery.md), [Managing a Domain](../data-quality-services/managing-a-domain.md), or [Create a Matching Policy](../data-quality-services/create-a-matching-policy.md).  

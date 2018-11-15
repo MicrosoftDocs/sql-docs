@@ -95,7 +95,7 @@ There are many different ways that you can install packages on SQL Server. For e
     install.packages("RODBC", lib=grep("Program Files", .libPaths(), value=TRUE)[1])
     ```
 
-    - This example uses the R grep function to search the vector of available paths and find the path that includes “Program Files”. For more information, see [http://www.rdocumentation.org/packages/base/functions/grep](http://www.rdocumentation.org/packages/base/functions/grep).
+    - This example uses the R grep function to search the vector of available paths and find the path that includes “Program Files”. For more information, see [https://www.rdocumentation.org/packages/base/functions/grep](https://www.rdocumentation.org/packages/base/functions/grep).
 
     - If you think the packages are already installed, check the list of installed packages by running `installed.packages()`.
 
@@ -168,7 +168,7 @@ If you have any problems with the PowerShell script, you can run all or any of t
 
 To download the data manually, right-click the following link and select **Save target as**.
 
-[http://getgoing.blob.core.windows.net/public/nyctaxi1pct.csv](http://getgoing.blob.core.windows.net/public/nyctaxi1pct.csv)
+[https://getgoing.blob.core.windows.net/public/nyctaxi1pct.csv](https://getgoing.blob.core.windows.net/public/nyctaxi1pct.csv)
 
 Make a note of the path to the downloaded data file and the file name where the data was saved. You need the full path to load the data to the table using **bcp**.
 
@@ -261,7 +261,7 @@ When you download the files from the GitHub repository, you get the following:
 
 The data is a representative sampling of the New York City taxi data set, which contains records of over 173 million individual trips in 2013, including the fares and tip amounts paid for each trip. To make the data easier to work with, the Microsoft data science team performed downsampling to get just 1% of the data.  This data has been shared in a public blob storage container in Azure, in .CSV format. The source data is an uncompressed file, just under 350 MB.
 
-+ Public dataset: [NYC Taxi and Limousine Commission](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)
++ Public dataset: [NYC Taxi and Limousine Commission](https://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)
 
 + [Building Azure ML Models on the NYC Taxi Dataset](https://blogs.technet.microsoft.com/machinelearning/2015/04/02/building-azure-ml-models-on-the-nyc-taxi-dataset/).
 

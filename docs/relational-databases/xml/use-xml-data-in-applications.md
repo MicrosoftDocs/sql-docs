@@ -111,7 +111,7 @@ Set objConn = Nothing
 ```  
 Row 1  
   
-<StoreSurvey xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">  
+<StoreSurvey xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">  
   <AnnualSales>1500000</AnnualSales>  
   <AnnualRevenue>150000</AnnualRevenue>  
   <BankName>Primary International</BankName>  
@@ -126,7 +126,7 @@ Row 1
   
 Row 2  
   
-<StoreSurvey xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">  
+<StoreSurvey xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">  
   <AnnualSales>300000</AnnualSales>  
   <AnnualRevenue>30000</AnnualRevenue>  
   <BankName>United Security</BankName>  

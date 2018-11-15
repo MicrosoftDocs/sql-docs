@@ -47,6 +47,6 @@ object.SetStringValue(StrValue)
  The property value type must be **string** to be able to set the property to a string value.  
   
 ## See Also  
- [Starting and Stopping Services](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [Starting and Stopping Services](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

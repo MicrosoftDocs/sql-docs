@@ -194,7 +194,7 @@ Signed **money** expressions:
 ```
   
 ## Enhanced Collations  
-SQL Server supports character and Unicode string constants that support enhanced collations. For more information, see the [COLLATE &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9) clause.
+SQL Server supports character and Unicode string constants that support enhanced collations. For more information, see the [COLLATE &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9) clause.
   
 ## See also
 [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  

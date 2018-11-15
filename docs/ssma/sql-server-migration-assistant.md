@@ -43,11 +43,11 @@ The following target versions are supported for SSMA.
 ** This target is supported only by SSMA for Oracle.
  
 ## Downloads
-- [SSMA for Access](http://aka.ms/ssmaforaccess)
-- [SSMA for DB2](http://aka.ms/ssmafordb2)
-- [SSMA for MySql](http://aka.ms/ssmaformysql)
-- [SSMA for Oracle](http://aka.ms/ssmafororacle)
-- [SSMA for SAP ASE](http://aka.ms/ssmaforsybase)
+- [SSMA for Access](https://aka.ms/ssmaforaccess)
+- [SSMA for DB2](https://aka.ms/ssmafordb2)
+- [SSMA for MySql](https://aka.ms/ssmaformysql)
+- [SSMA for Oracle](https://aka.ms/ssmafororacle)
+- [SSMA for SAP ASE](https://aka.ms/ssmaforsybase)
  
 ## Getting SSMA Support  
 **Help and support for Microsoft SQL Server Migration Assistant (SSMA):**  
@@ -56,9 +56,9 @@ The following target versions are supported for SSMA.
   
 -   **SQL Server community forums** – Ask a question in the SQL Server Community  
   
-    -   [SQL Server Community](http://go.microsoft.com/fwlink/?LinkId=42455) -   Newsgroups and forums that are monitored by the SQL Server community. This site also lists community information sources, such as blogs and Web sites.  
+    -   [SQL Server Community](https://go.microsoft.com/fwlink/?LinkId=42455) -   Newsgroups and forums that are monitored by the SQL Server community. This site also lists community information sources, such as blogs and Web sites.  
   
-    -   [SQL Server Developer Center Community](http://go.microsoft.com/fwlink/?LinkId=42456) -  Newsgroups, forums, and other community resources that are useful to SQL Server developers  
+    -   [SQL Server Developer Center Community](https://go.microsoft.com/fwlink/?LinkId=42456) -  Newsgroups, forums, and other community resources that are useful to SQL Server developers  
   
 -   Assisted support - Go to [https://support.microsoft.com/assistedsupportproducts](https://support.microsoft.com/assistedsupportproducts) and search for ‘SQL Server Migration Assistant’.  Select your version, then select “start request.”  Assisted support is included with the SQL Server Migration Assistant Tool.  
   

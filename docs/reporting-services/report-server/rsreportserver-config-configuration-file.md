@@ -425,7 +425,7 @@ x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
 			<VirtualDirectory>ReportServer</VirtualDirectory>
 			<URLs>
 				<URL>
-					<UrlString>http://+:80</UrlString>
+					<UrlString>https://+:80</UrlString>
 					<AccountSid>S-1-5-80-2885764129-887777008-271615777-1616004480-2722851051</AccountSid>
 					<AccountName>NT SERVICE\ReportServer</AccountName>
 				</URL>
@@ -436,7 +436,7 @@ x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
 			<VirtualDirectory>Reports</VirtualDirectory>
 			<URLs>
 				<URL>
-					<UrlString>http://+:80</UrlString>
+					<UrlString>https://+:80</UrlString>
 					<AccountSid>S-1-5-80-2885764129-887777008-271615777-1616004480-2722851051</AccountSid>
 					<AccountName>NT SERVICE\ReportServer</AccountName>
 				</URL>
@@ -766,7 +766,7 @@ x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
       <VirtualDirectory>ReportServer</VirtualDirectory>  
       <URLs>  
         <URL>  
-          <UrlString>http://+:80</UrlString>  
+          <UrlString>https://+:80</UrlString>  
           <AccountSid>  
           </AccountSid>  
           <AccountName>  
@@ -779,7 +779,7 @@ x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
       <VirtualDirectory>Reports</VirtualDirectory>  
       <URLs>  
         <URL>  
-          <UrlString>http://+:80</UrlString>  
+          <UrlString>https://+:80</UrlString>  
           <AccountSid>  
           </AccountSid>  
           <AccountName>  

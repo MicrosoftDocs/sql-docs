@@ -26,7 +26,7 @@ ms.author: maghan
  The following example shows a URL that retrieves a report history snapshot:  
   
 ```  
-http://myrshost/reportserver?/SampleReports/Company Sales&rs:Snapshot=2003-04-07T13:40:02  
+https://myrshost/reportserver?/SampleReports/Company Sales&rs:Snapshot=2003-04-07T13:40:02  
 ```  
   
 ## See Also  

@@ -19,7 +19,7 @@ If your data center requires antivirus software, use these guidelines to install
 >   
 > Virus protection software requires some system resources to execute. You must perform testing before and after you install your antivirus software to determine whether there is any performance effect on the Analytics Platform System.  
   
-This topic is based on the guidance in [How to choose antivirus software to run on computers that are running SQL Server](http://support.microsoft.com/kb/309422) and [KB Article 961804](http://support.microsoft.com/kb/961804/en-us).  
+This topic is based on the guidance in [How to choose antivirus software to run on computers that are running SQL Server](https://support.microsoft.com/kb/309422) and [KB Article 961804](https://support.microsoft.com/kb/961804/en-us).  
   
 ## Exclusion List for Physical Hosts  
 To install the antivirus software on the physical hosts, exclude the following list of directories and processes. These should not be scanned by the antivirus software.  

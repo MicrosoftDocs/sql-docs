@@ -34,7 +34,7 @@ This article describes how to configure **minikube** on a single machine for SQL
 
 1. If you do not already have a hypervisor installed, install one now.
    - For OS X, install [xhyve driver](https://git.k8s.io/minikube/docs/drivers.md), [VirtualBox](https://www.virtualbox.org/wiki/Downloads), or [VMware Fusion](https://www.vmware.com/products/fusion).
-   - For Linux, install [VirtualBox](https://www.virtualbox.org/wiki/Downloads) or [KVM](http://www.linux-kvm.org/).
+   - For Linux, install [VirtualBox](https://www.virtualbox.org/wiki/Downloads) or [KVM](https://www.linux-kvm.org/).
    - For Windows, install [VirtualBox](https://www.virtualbox.org/wiki/Downloads) or [Hyper-V](https://msdn.microsoft.com/virtualization/hyperv_on_windows/quick_start/walkthrough_install). If you do not have an external switch configured in hyper-v, then create one that has external network access.  See how to [create external switch in hyper-v for minikube](https://blogs.msdn.microsoft.com/wasimbloch/2017/01/23/setting-up-kubernetes-on-windows10-laptop-with-minikube/).
 
 ## Install Minikube

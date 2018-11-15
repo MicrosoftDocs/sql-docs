@@ -8,7 +8,6 @@ ms.date: 11/06/2018
 ms.topic: quickstart
 ms.prod: sql
 ---
-
 # Quickstart: Deploy SQL Server big data cluster on Azure Kubernetes Service (AKS)
 
 Install SQL Server big data cluster on AKS in a default configuration suitable for dev/test environments. In addition to a SQL Master instance, the cluster includes one compute pool instance, one data pool instance, and two storage pool instances. Data is persisted using Kubernetes persistent volumes that use AKS default storage classes. To further customize your configuration, see the environment variables at [deployment guidance](deployment-guidance.md).
@@ -51,7 +50,7 @@ Setting the environment variables required for deploying big data cluster slight
 
 Before continuing, note the following important guidelines:
 
-- In the [Command Window](http://docs.microsoft.com/visualstudio/ide/reference/command-window), quotes are included in the environment variables. If you use quotes to wrap a password, the quotes are included in the password.
+- In the [Command Window](https://docs.microsoft.com/visualstudio/ide/reference/command-window), quotes are included in the environment variables. If you use quotes to wrap a password, the quotes are included in the password.
 - In bash, quotes are not included in the variable. Our examples use double quotes `"`.
 - You can set the password environment variables to whatever you like, but make sure they are sufficiently complex and don’t use the `!`, `&`, or `'` characters.
 - For the CTP 2.1 release, do not change the default ports.

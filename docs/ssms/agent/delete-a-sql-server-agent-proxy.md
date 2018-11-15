@@ -93,5 +93,5 @@ Only members of the **sysadmin** fixed server role can create, modify, or delete
     GO  
     ```  
   
-For more information, see [sp_delete_proxy (Transact-SQL)](http://msdn.microsoft.com/44a1db13-b7f2-4dab-a1b5-b8dafb41737c).  
+For more information, see [sp_delete_proxy (Transact-SQL)](https://msdn.microsoft.com/44a1db13-b7f2-4dab-a1b5-b8dafb41737c).  
   

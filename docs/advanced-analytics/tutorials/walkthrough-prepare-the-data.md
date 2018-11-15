@@ -95,7 +95,7 @@ There are many different ways that you can install packages on SQL Server. For e
     install.packages("RODBC", lib=grep("Program Files", .libPaths(), value=TRUE)[1])
     ```
 
-    - This example uses the R grep function to search the vector of available paths and find the path that includes “Program Files”. For more information, see [https://www.rdocumentation.org/packages/base/functions/grep](https://www.rdocumentation.org/packages/base/functions/grep).
+    - This example uses the R grep function to search the vector of available paths and find the path that includes "Program Files". For more information, see [https://www.rdocumentation.org/packages/base/functions/grep](https://www.rdocumentation.org/packages/base/functions/grep).
 
     - If you think the packages are already installed, check the list of installed packages by running `installed.packages()`.
 

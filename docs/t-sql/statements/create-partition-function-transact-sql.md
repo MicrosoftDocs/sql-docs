@@ -61,7 +61,20 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
   
 > [!NOTE]  
 >  If *boundary_value* consists of **datetime** or **smalldatetime** literals, these literals are evaluated assuming that us_english is the session language. This behavior is deprecated. To make sure the partition function definition behaves as expected for all session languages, we recommend that you use constants that are interpreted the same way for all language settings, such as the yyyymmdd format; or explicitly convert literals to a specific style. To determine the language session of your server, run `SELECT @@LANGUAGE`.  
-  
+
+> [!IMPORTANT]  
+>  When you refer to string literals of the date data type in indexed computed columns in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], we recommend that you explicitly convert the literal to the date type that you want by using a deterministic date format style. For a list of the date format styles that are deterministic, see [CAST and CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md). 
+
+> [!NOTE]
+> Expressions that involve implicit conversion of character strings to date data types are considered nondeterministic, unless the database compatibility level is set to 80 or earlier. This is because the results depend on the [LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) and [DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md) settings of the server session. 
+>
+> For example, the results of the expression `CONVERT (datetime, '30 listopad 1996', 113)` depend on the LANGUAGE setting because the string '`30 listopad 1996`' means different months in different languages. 
+> Similarly, in the expression `DATEADD(mm,3,'2000-12-01')`, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] interprets the string `'2000-12-01'` based on the DATEFORMAT setting.  
+>   
+> Implicit conversion of non-Unicode character data between collations is also considered nondeterministic, unless the compatibility level is set to 80 or earlier.  
+>   
+> When the database compatibility level setting is 90, you cannot create indexes on computed columns that contain these expressions. However, existing computed columns that contain these expressions from an upgraded database are maintainable. If you use indexed computed columns that contain implicit string to date conversions, to avoid possible index corruption, make sure that the LANGUAGE and DATEFORMAT settings are consistent in your databases and applications.  
+
  *...n*  
  Specifies the number of values supplied by *boundary_value*, not to exceed 14,999. The number of partitions created is equal to *n* + 1. The values do not have to be listed in order. If the values are not in order, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] sorts them, creates the function, and returns a warning that the values are not provided in order. The Database Engine returns an error if *n* includes any duplicate values.  
   

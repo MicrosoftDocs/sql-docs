@@ -33,9 +33,9 @@ ms.author: maghan
 ## Default URLs  
  When you access a report server or the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] through its URL, the URL should include the host name and not the IP address. On a TCP/IP network, the IP address will resolve to a host name (or the network name of the computer). If you used the default values to configure URLs, you should be able to access the Report Server Web service using URLs that specify the computer name or localhost as the host name:  
   
--   `http://<computername>/reportserver`  
+-   `https://<computername>/reportserver`  
   
--   `http://localhost/reportserver`  
+-   `https://localhost/reportserver`  
   
  The settings that make these URLs available appear in the following table. This table shows the default values that enable a report server connection though URLs that include a host name:  
   

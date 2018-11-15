@@ -676,7 +676,7 @@ This setting is ON for all system databases. **tempdb** is the only system datab
   
 **\<PARAMETERIZATION_option> ::=**  
   
-Controls the parameterization option.  
+Controls the parameterization option. For more information on parameterization, see the [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md#SimpleParam). 
   
 PARAMETERIZATION { SIMPLE | FORCED }  
 SIMPLE  
@@ -692,13 +692,13 @@ The current setting of this option can be determined by examining the is_paramet
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
 ON | OFF | CLEAR [ ALL ]  
-Controls if the query store is enabled in this database, and also controls removing the contents of the query store.  
+Controls if the query store is enabled in this database, and also controls removing the contents of the query store. For more information, see [Query Store Usage Scenarios](../../relational-databases/performance/query-store-usage-scenarios.md). 
   
 ON  
 Enables the query store.  
   
 OFF  
-Disables the query store.  This is the default value.   
+Disables the query store. This is the default value.   
   
 CLEAR  
 Remove the contents of the query store.  

@@ -156,7 +156,7 @@ Get-content -path C:\Users\testuser\AppData\Local\Temp\rs_sp_0.log | select-stri
   
 2.  Add the proxy to the default proxy group  
   
-3.  Grant the service app access to the port 80 web app’s content database. The script assumes site `http://sitename` already exists.  
+3.  Grant the service app access to the port 80 web app’s content database. The script assumes site `https://sitename` already exists.  
   
 ```  
 # Create service application and service application proxy  
@@ -168,7 +168,7 @@ $serviceAppProxy = New-SPRSServiceApplicationProxy –Name “My RS Service App 
 Get-SPServiceApplicationProxyGroup –default | Add-SPServiceApplicationProxyGroupMember –Member $serviceAppProxy  
   
 # Grant application pool account access to the port 80 web application’s content database.  
-$webApp = Get-SPWebApplication “http://sitename”  
+$webApp = Get-SPWebApplication “https://sitename”  
 $appPoolAccountName = $appPool.ProcessAccount.LookupName()  
 $webApp.GrantAccessToProcessIdentity($appPoolAccountName)  
   

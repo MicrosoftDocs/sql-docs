@@ -58,7 +58,7 @@ You can generate Atom-compliant data feeds from paginated reports, and then use 
   
      The format of the URL is the following:  
   
-     `http://<server name>/ReportServer?%2f<ReportName>rs%3aCommand=Render&rs%3aFormat=ATOM&rc%3aDataFeed=<Identifier>`  
+     `https://<server name>/ReportServer?%2f<ReportName>rs%3aCommand=Render&rs%3aFormat=ATOM&rc%3aDataFeed=<Identifier>`  
   
 3.  Press ENTER.  
   

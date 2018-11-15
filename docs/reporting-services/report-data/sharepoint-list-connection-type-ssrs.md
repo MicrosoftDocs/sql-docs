@@ -20,7 +20,7 @@ To include data from a Microsoft SharePoint list in your report, you must add or
 Use the information in this topic to build a data source. For step-by-step instructions, see [Add and Verify a Data Connection &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
 
 ##  <a name="Connection"></a> Connection String  
- The connection string to a SharePoint list is the URL to the SharePoint site or subsite, for example, `http://MySharePointWeb/MySharePointSite` or `http://MySharePointWeb/MySharePointSite/Subsite`.  
+ The connection string to a SharePoint list is the URL to the SharePoint site or subsite, for example, `https://MySharePointWeb/MySharePointSite` or `https://MySharePointWeb/MySharePointSite/Subsite`.  
   
  The query designer automatically displays the SharePoint lists that you have sufficient permissions to access.  
   
@@ -65,7 +65,7 @@ Use the information in this topic to build a data source. For step-by-step instr
  **Credentials are not required (Do not use credentials):**  
  To use this option, the unattended execution account must be configured on the report server. For more information, see [Configure the Unattended Execution Account &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
- For information about Claims authentication support across the Microsoft BI stack, see [Using Claims Authentication across the Microsoft BI Stack](http://social.technet.microsoft.com/wiki/contents/articles/15274.using-claims-authentication-across-the-microsoft-bi-stack.aspx).  
+ For information about Claims authentication support across the Microsoft BI stack, see [Using Claims Authentication across the Microsoft BI Stack](https://social.technet.microsoft.com/wiki/contents/articles/15274.using-claims-authentication-across-the-microsoft-bi-stack.aspx).  
   
  For more information, see [Data Connections, Data Sources, and Connection Strings &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md), [Specify Credentials in Report Builder](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53), and [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   

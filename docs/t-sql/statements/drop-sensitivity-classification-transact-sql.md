@@ -54,7 +54,7 @@ Is the name of the database column from which to remove the classification. Curr
 
 ## Remarks  
 
-- Multiple object classifications can be dropped using a single ‘DROP SENSITIVITY CLASSIFICTION’ statement.
+- Multiple object classifications can be dropped using a single ‘DROP SENSITIVITY CLASSIFICATION’ statement.
 
 ## Permissions  
 
@@ -84,7 +84,7 @@ DROP SENSITIVITY CLASSIFICATION FROM
 
 ## See Also  
 
-[ADD SENSITIVITY CLASSIFICTION (Transact-SQL)](../../t-sql/statements/add-sensitivity-classification-transact-sql.md)
+[ADD SENSITIVITY CLASSIFICATION (Transact-SQL)](../../t-sql/statements/add-sensitivity-classification-transact-sql.md)
 
 [sys.sensitivity_classifications (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sensitivity-classifications-transact-sql.md)
 

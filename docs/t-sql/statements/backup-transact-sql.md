@@ -254,7 +254,7 @@ Specifies a disk file or tape device, or a Microsoft Azure Blob storage service.
 > The NUL disk device will discard all information sent to it and should only be used for testing. This is not for production use.
   
 > [!IMPORTANT]  
-> Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 through [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], you can only backup to a single device when backing up to URL. In order to backup to multiple devices when backing up to URL, you must use [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and you must use Shared Access Signature (SAS) tokens. For examples creating a Shared Access Signature, see [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) and [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx).  
+> Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 through [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], you can only backup to a single device when backing up to URL. In order to backup to multiple devices when backing up to URL, you must use [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and you must use Shared Access Signature (SAS) tokens. For examples creating a Shared Access Signature, see [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) and [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx).  
   
 **URL applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
@@ -471,7 +471,7 @@ Specifies the total number of I/O buffers to be used for the backup operation. Y
 The total space used by the buffers is determined by: *buffercount/maxtransfersize*.  
   
 > [!NOTE]  
-> For important information about using the `BUFFERCOUNT` option, see the [Incorrect BufferCount data transfer option can lead to OOM condition](http://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx) blog.  
+> For important information about using the `BUFFERCOUNT` option, see the [Incorrect BufferCount data transfer option can lead to OOM condition](https://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx) blog.  
   
 MAXTRANSFERSIZE **=** { *maxtransfersize* | _**@** maxtransfersize\_variable_ } 
 Specifies the largest unit of transfer in bytes to be used between [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and the backup media. The possible values are multiples of 65536 bytes (64 KB) ranging up to 4194304 bytes (4 MB).  
@@ -728,7 +728,7 @@ The BACKUP statement is not allowed in an explicit or implicit transaction.
 Cross-platform backup operations, even between different processor types, can be performed as long as the collation of the database is supported by the operating system.  
  
 When using backup compression with [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) enabled databases with a single data file, it is recommended to use a `MAXTRANSFERSIZE` setting **larger than 65536 (64 KB)**.   
-Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], this enables an optimized compression algorithm for TDE encrypted databases that first decrypts a page, compresses it and then encrypts it again. If using `MAXTRANSFERSIZE = 65536` (64 KB), backup compression with TDE encrypted databases directly compresses the encrypted pages, and may not yield good compression ratios. For more information, see [Backup Compression for TDE-enabled Databases](http://blogs.msdn.microsoft.com/sqlcat/2016/06/20/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases/).
+Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], this enables an optimized compression algorithm for TDE encrypted databases that first decrypts a page, compresses it and then encrypts it again. If using `MAXTRANSFERSIZE = 65536` (64 KB), backup compression with TDE encrypted databases directly compresses the encrypted pages, and may not yield good compression ratios. For more information, see [Backup Compression for TDE-enabled Databases](https://blogs.msdn.microsoft.com/sqlcat/2016/06/20/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases/).
 
 > [!NOTE]  
 > There are some cases where the default `MAXTRANSFERSIZE` is greater than 64K:
@@ -1005,7 +1005,7 @@ TO URL
 Specifies the URL to use for the backup operation. The URL format is used for creating backups to the Microsoft Azure storage service. 
 
 > [!IMPORTANT]  
-> In order to backup to multiple devices when backing up to URL, you must use Shared Access Signature (SAS) tokens. For examples creating a Shared Access Signature, see [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) and [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx).  
+> In order to backup to multiple devices when backing up to URL, you must use Shared Access Signature (SAS) tokens. For examples creating a Shared Access Signature, see [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) and [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx).  
   
 *n*  
 Is a placeholder that indicates that up to 64 backup devices may be specified in a comma-separated list.  
@@ -1071,7 +1071,7 @@ Specifies the total number of I/O buffers to be used for the backup operation. Y
 The total space used by the buffers is determined by: *buffercount/maxtransfersize*.  
   
 > [!NOTE]  
-> For important information about using the `BUFFERCOUNT` option, see the [Incorrect BufferCount data transfer option can lead to OOM condition](http://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx) blog.  
+> For important information about using the `BUFFERCOUNT` option, see the [Incorrect BufferCount data transfer option can lead to OOM condition](https://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx) blog.  
   
 MAXTRANSFERSIZE **=** { *maxtransfersize* | _**@** maxtransfersize\_variable_ } 
 Specifies the largest unit of transfer in bytes to be used between [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and the backup media. The possible values are multiples of 65536 bytes (64 KB) ranging up to 4194304 bytes (4 MB).  

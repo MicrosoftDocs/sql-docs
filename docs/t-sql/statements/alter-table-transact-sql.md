@@ -671,7 +671,7 @@ Specifies that *constraint_name* or *column_name* is removed from the table. Mul
 -   Bound to a rule.  
   
 > [!NOTE]  
-> Dropping a column does not reclaim the disk space of the column. You may have to reclaim the disk space of a dropped column when the row size of a table is near, or has exceeded, its limit. Reclaim space by creating a clustered index on the table or rebuilding an existing clustered index by using [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md). For information about the impact of dropping LOB data types, see this [CSS blog entry](http://blogs.msdn.com/b/psssql/archive/2012/12/03/how-it-works-gotcha-varchar-max-caused-my-queries-to-be-slower.aspx).  
+> Dropping a column does not reclaim the disk space of the column. You may have to reclaim the disk space of a dropped column when the row size of a table is near, or has exceeded, its limit. Reclaim space by creating a clustered index on the table or rebuilding an existing clustered index by using [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md). For information about the impact of dropping LOB data types, see this [CSS blog entry](https://blogs.msdn.com/b/psssql/archive/2012/12/03/how-it-works-gotcha-varchar-max-caused-my-queries-to-be-slower.aspx).  
   
  PERIOD FOR SYSTEM_TIME  
  **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
@@ -930,7 +930,7 @@ ALTER TABLE \<table name>
        SET ( REMOTE_DATA_ARCHIVE ( MIGRATION_STATE = INBOUND ) ) ;  
     ```  
   
-     This operation incurs data transfer costs, and it can't be canceled. For more info, see [Data Transfers Pricing Details](https://azure.microsoft.com/en-us/pricing/details/data-transfers/).  
+     This operation incurs data transfer costs, and it can't be canceled. For more info, see [Data Transfers Pricing Details](https://azure.microsoft.com/pricing/details/data-transfers/).  
   
      After all the remote data has been copied from Azure back to SQL Server, Stretch is disabled for the table.  
   
@@ -993,7 +993,7 @@ WAIT_AT_LOW_PRIORITY
  Requires **ALTER ANY CONNECTION** permission.  
   
 IF EXISTS  
- **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658)) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Conditionally drops the column or constraint  only if it already exists.  
   

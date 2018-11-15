@@ -57,7 +57,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 # ODBC Scalar Functions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  You can use [ODBC Scalar Functions](http://go.microsoft.com/fwlink/?LinkID=88579) in [!INCLUDE[tsql](../../includes/tsql-md.md)] statements. These statements are interpreted by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. They can be used in stored procedures and user-defined functions. These include string, numeric, time, date, interval, and system functions.  
+  You can use [ODBC Scalar Functions](https://go.microsoft.com/fwlink/?LinkID=88579) in [!INCLUDE[tsql](../../includes/tsql-md.md)] statements. These statements are interpreted by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. They can be used in stored procedures and user-defined functions. These include string, numeric, time, date, interval, and system functions.  
   
 ## Usage  
  `SELECT {fn <function_name> [ (<argument>,....n) ] }`  

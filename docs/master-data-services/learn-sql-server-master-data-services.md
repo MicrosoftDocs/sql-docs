@@ -45,8 +45,8 @@ manager: craigg
     * Master Data Services Security API Sample  
   
 ## SQL Server Certification  
-* [Microsoft SQL Server Training and Certification](https://www.microsoft.com/en-us/learning/sql-training.aspx)  
-* [Microsoft Certification Exam List](https://www.microsoft.com/en-us/learning/exam-list.aspx)  
+* [Microsoft SQL Server Training and Certification](https://www.microsoft.com/learning/sql-training.aspx)  
+* [Microsoft Certification Exam List](https://www.microsoft.com/learning/exam-list.aspx)  
 * [Microsoft Born to Learn Blog (Training and Certification Community)](https://borntolearn.mslearn.net/b/weblog/archive/2016/03)  
   
   

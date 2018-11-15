@@ -59,7 +59,7 @@ Alternativley, you can perform this steps manually:
 
 For installation on a server without internet access, you must download a copy of the package in the format of a zipped file for offline installation. **Do not unzip the package.**
 
-For example, the following procedure describes now to get the correct version of the [FISHalyseR](http://bioconductor.org/packages/release/bioc/html/FISHalyseR.html) package from Bioconductor, assuming the computer has access to the internet.
+For example, the following procedure describes now to get the correct version of the [FISHalyseR](https://bioconductor.org/packages/release/bioc/html/FISHalyseR.html) package from Bioconductor, assuming the computer has access to the internet.
 
 1.  In the **Package Archives** list, find the **Windows binary** version.
 

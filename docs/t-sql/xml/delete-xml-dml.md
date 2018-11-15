@@ -134,7 +134,7 @@ from T
 --1) insert <Location 1000/>. Note: <Root> must be singleton in the query  
 update T  
 set Instructions.modify('  
-  declare namespace MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+  declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
   insert <MI:Location LocationID="1000"  LaborHours="1000" >  
            These are manu steps at location 1000.   
            <MI:step>New step1 instructions</MI:step>  
@@ -151,7 +151,7 @@ from T
 -- delete an attribute  
 update T  
 set Instructions.modify('  
-  declare namespace MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+  declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
   delete(/MI:root/MI:Location[@LocationID=1000]/@LaborHours)   
 ')  
 go  
@@ -160,7 +160,7 @@ from T
 -- delete text in <location>  
 update T  
 set Instructions.modify('  
-  declare namespace MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+  declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
   delete(/MI:root/MI:Location[@LocationID=1000]/text())   
 ')  
 go  
@@ -169,7 +169,7 @@ from T
 -- delete 2nd manu step at location 1000  
 update T  
 set Instructions.modify('  
-  declare namespace MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+  declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
   delete(/MI:root/MI:Location[@LocationID=1000]/MI:step[2])   
 ')  
 go  

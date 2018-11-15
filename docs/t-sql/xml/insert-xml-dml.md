@@ -378,7 +378,7 @@ FROM T;
 -- expression 2 in the insert() must be singleton.      
 UPDATE T   
 set Instructions.modify('   
-declare namespace MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";   
+declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";   
 insert <MI:Location LocationID="1000" >   
            <MI:step>New instructions go here</MI:step>   
          </MI:Location>   
@@ -391,7 +391,7 @@ FROM T ;
 -- 2) insert attributes in the new <Location>             
 UPDATE T             
 SET Instructions.modify('             
-declare namespace MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";             
+declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";             
 insert attribute LaborHours { "1000" }             
 into (/MI:root/MI:Location[@LocationID=1000])[1] ');   
 GO             

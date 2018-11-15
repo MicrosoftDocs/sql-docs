@@ -241,5 +241,5 @@ GO
 
 ## See Also
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)    
-[How to generate a script of the necessary database metadata to create a statistics-only database in SQL Server](http://support.microsoft.com/help/914288)   
+[How to generate a script of the necessary database metadata to create a statistics-only database in SQL Server](https://support.microsoft.com/help/914288)   
 

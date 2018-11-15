@@ -92,7 +92,7 @@ Anaconda includes Jupyter Notebooks. As a next step, create a notebook and run s
   .\Scripts\jupyter-notebook
   ```
 
-  A notebook should open in your default browser at `http://localhost:8889/tree`.
+  A notebook should open in your default browser at `https://localhost:8889/tree`.
 
   Another way to start is double-click **jupyter-notebook.exe**. 
 

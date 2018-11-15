@@ -158,7 +158,7 @@ Complete documentation for these APIs will be available when the product is rele
 
 You can get help on any Python function by importing the module, and then calling `help()`. For example, running `help(revoscalepy)` from your Python IDE returns a list of all functions in the revoscalepy module, with their signatures.
 
-If you use Python Tools for Visual Studio, you can use IntelliSense to get syntax and argument help. For more information, see [Python support in Visual Studio](http://docs.microsoft.com/visualstudio/python/installation), and download the extension that matches your version of Visual Studio. You can use Python with Visual Studio 2015 and 2017, or earlier versions.
+If you use Python Tools for Visual Studio, you can use IntelliSense to get syntax and argument help. For more information, see [Python support in Visual Studio](https://docs.microsoft.com/visualstudio/python/installation), and download the extension that matches your version of Visual Studio. You can use Python with Visual Studio 2015 and 2017, or earlier versions.
 
 ## See Also
 

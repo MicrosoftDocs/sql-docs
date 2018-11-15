@@ -337,7 +337,7 @@ For training large models, or scoring in large batches, the overhead might be mi
 
 + [Loan classification using SQL Server 2016 R Services](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/2016/09/27/loan-classification-using-sql-server-2016-r-services/)
 + [Early customer experiences with R Services](https://blogs.msdn.microsoft.com/sqlcat/2016/06/16/early-customer-experiences-with-sql-server-r-services/)
-+ [Using R to detect fraud at 1 million transactions per second](http://blog.revolutionanalytics.com/2016/09/fraud-detection.html/)
++ [Using R to detect fraud at 1 million transactions per second](https://blog.revolutionanalytics.com/2016/09/fraud-detection.html/)
 
 ## Resources
 

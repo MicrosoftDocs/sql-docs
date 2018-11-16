@@ -340,23 +340,24 @@ To monitor or troubleshoot a deployment, use **kubectl** to inspect the status o
    | Service | Description |
    |---|---|
    | **service-compute-pool-default** | Supports the [Compute pool](concept-compute-pool.md). |
-   | **service-data-pool-default** | Supports the [Data pool](concept-data-pool.md) service. |
+   | **service-data-pool-default** | Supports the [Data pool](concept-data-pool.md). |
    | **service-master-pool** | Supports the [SQL Server master instance](concept-master-instance.md). |
-   | **service-master-pool-lb** | Provides access through the **EXTERNAL-IP** and port 31433 to the SQL Server master instance. |
+   | **service-master-pool-lb** | Provides access to the master instance.<br/>(**EXTERNAL-IP,31433** and the **SA** user) |
    | **service-monitor-elasticsearch** | |
    | **service-monitor-grafana** | |
    | **service-monitor-influxdb** | |
    | **service-monitor-kibana** | |
    | **service-mssql-controller** | Supports the [controller](concept-controller.md). |
-   | **service-mssql-controller-lb** | Supports clients that manage the cluster, such as **mssqlctl**. |
-   | **service-proxy-lb** | Provides access through the **EXTERNAL-IP** and port 30777 to the [Cluster Administration Portal](cluster-admin-portal.md) for the **SA** user.|
+   | **service-mssql-controller-lb** | Supports tools and clients that manage the cluster. |
+   | **service-proxy-lb** | Provides access to the [Cluster Administration Portal](cluster-admin-portal.md).<br/>(https://**EXTERNAL-IP**:30777)|
    | **service-security** | Supports security of the HDFS data tier. |
-   | **service-security-lb** | Provides access through the **EXTERNAL-IP** to the HDFS/Spark Gateway for the **root** user. |
+   | **service-security-lb** | Provides access to the HDFS/Spark Gateway.<br/>(**EXTERNAL-IP** and the **root** user) |
    | **service-storage-pool-default** | Supports the [storage pool](concept-storage-pool.md). |
 
 1. Use the [Cluster Administration Portal](cluster-admin-portal.md) to monitor the deployment on the **Deployment** tab. You have to wait for the **service-proxy-lb** service to start before accessing this portal, so it won't be available at the beginning of a deployment.
 
-For more information about troubleshooting the cluster, see [Kubectl commands for monitoring and troubleshooting SQL Server big data clusters](cluster-troubleshooting-commands.md).
+> [!TIP]
+> For more information about troubleshooting the cluster, see [Kubectl commands for monitoring and troubleshooting SQL Server big data clusters](cluster-troubleshooting-commands.md).
 
 ## Next steps
 

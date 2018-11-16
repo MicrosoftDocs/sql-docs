@@ -20,8 +20,8 @@ You will also modify the dataset and report to use a parameter to filter the rep
 1.  Browse to the [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] web portal with administrator privileges, for example, right-click the icon for Internet Explorer and click **Run as administrator**.  
  
 2.    Browse to the web portal URL.  For example:   
-    `http://<server name>/reports`.  
-    `http://localhost/reports`
+    `https://<server name>/reports`.  
+    `https://localhost/reports`
  **Note:** The web *portal* URL is "Reports", not the Report *Server* URL of "Reportserver".  
 3.  Browse to the folder containing the **Sales Orders** report and in the context menu of the report, click **Manage**.  
  

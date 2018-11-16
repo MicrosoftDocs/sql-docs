@@ -20,30 +20,30 @@ Initially designed by a private company, this is now a widespread semi-open form
   
 The base files names must match (e.g. *canada.shp* and *canada.dbf*). The metadata must include the field *NAME* with the value of the corresponding shape's name (key), to be used when populating the map with data.  
   
-> **Note**: The two map files together, the SHP and the DBF, can be no bigger than 512 KB. If your map files are too big, use a tool like [http://mapshaper.org/](http://mapshaper.org/) to reduce their size.  
+> **Note**: The two map files together, the SHP and the DBF, can be no bigger than 512 KB. If your map files are too big, use a tool like [https://mapshaper.org/](https://mapshaper.org/) to reduce their size.  
   
 See how to [add custom maps to mobile reports](../../reporting-services/mobile-reports/add-a-custom-map-to-a-reporting-services-mobile-report.md).  
   
 ## Technical information  
   
-- The official specification: [http://www.esri.com/library/whitepapers/pdfs/shapefile.pdf](http://www.esri.com/library/whitepapers/pdfs/shapefile.pdf)  
-- The Wikipedia shapefile article: [http://en.wikipedia.org/wiki/Shapefile](http://en.wikipedia.org/wiki/Shapefile)  
+- The official specification: [https://www.esri.com/library/whitepapers/pdfs/shapefile.pdf](https://www.esri.com/library/whitepapers/pdfs/shapefile.pdf)  
+- The Wikipedia shapefile article: [https://en.wikipedia.org/wiki/Shapefile](https://en.wikipedia.org/wiki/Shapefile)  
   
 ## Creating & editing map geometry  
   
 Creating and editing shapefiles is a complex process that is beyond the scope of this document. Here are some resources and applications to help you get started:  
   
-- ArcGIS: [http://www.arcgis.com/](http://www.arcgis.com/)  
-- MAPublisher plug-in for Adobe Illustrator: [http://www.avenza.com/mapublisher](http://www.avenza.com/mapublisher)  
-- QuantumGIS (free): [http://www.qgis.org/](http://www.qgis.org/)  
-- Manco ShapeFile Editor: [http://www.mancosoftware.com/ShapeFileEditor](http://www.mancosoftware.com/ShapeFileEditor)  
+- ArcGIS: [https://www.arcgis.com/](https://www.arcgis.com/)  
+- MAPublisher plug-in for Adobe Illustrator: [https://www.avenza.com/mapublisher](https://www.avenza.com/mapublisher)  
+- QuantumGIS (free): [https://www.qgis.org/](https://www.qgis.org/)  
+- Manco ShapeFile Editor: [https://www.mancosoftware.com/ShapeFileEditor](https://www.mancosoftware.com/ShapeFileEditor)  
   
 ## Existing shapefiles  
   
 Many existing shapefiles can be downloaded from the Web, from sites like these:  
   
-- Diva-GIS: [http://www.diva-gis.org/Data](http://www.diva-gis.org/Data)  
-- OpenStreetMap: [http://openstreetmapdata.com/data](http://openstreetmapdata.com/data)  
+- Diva-GIS: [https://www.diva-gis.org/Data](https://www.diva-gis.org/Data)  
+- OpenStreetMap: [https://openstreetmapdata.com/data](https://openstreetmapdata.com/data)  
   
 ### See also  
 - [Maps in Reporting Services mobile reports](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)  

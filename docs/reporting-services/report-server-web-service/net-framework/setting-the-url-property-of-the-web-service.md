@@ -24,13 +24,13 @@ ms.author: maghan
 ```vb  
 Dim rs As New ReportingService2010()  
 rs.Credentials = System.Net.CredentialCache.DefaultCredentials  
-rs.Url = "http://<Server Name>/reportserver/ReportService2010.asmx"  
+rs.Url = "https://<Server Name>/reportserver/ReportService2010.asmx"  
 ```  
   
 ```csharp  
 ReportingService2010 service = new ReportingService2010();  
 rs.Credentials = System.Net.CredentialCache.DefaultCredentials;  
-rs.Url = "http://<Server Name>/reportserver/ReportService2010.asmx";  
+rs.Url = "https://<Server Name>/reportserver/ReportService2010.asmx";  
 ```  
   
  The following example retrieves a report definition from one report server and uses that definition to create an identical report on a different report server:  
@@ -44,7 +44,7 @@ Class Sample
       Dim rs As New ReportingService2010()  
       rs.Credentials = System.Net.CredentialCache.DefaultCredentials  
       ' Set the base Web service URL of the source server  
-      rs.Url = "http://<Server Name>/reportserver/ReportService2010.asmx"  
+      rs.Url = "https://<Server Name>/reportserver/ReportService2010.asmx"  
   
       Dim reportName As String = "/SampleReports/Company Sales"  
       Dim reportDefinition As Byte() = Nothing  
@@ -53,7 +53,7 @@ Class Sample
          ' Get the report definition of a report on a source server  
          reportDefinition = rs.GetItemDefinition(reportName)  
          ' Set the base Web service URL of the destination server  
-         rs.Url = "http://<Server Name>/reportserver/ReportService2010.asmx"  
+         rs.Url = "https://<Server Name>/reportserver/ReportService2010.asmx"  
          ' Create a copy of the report on the destination server  
          Dim warnings As Warning() = {}  
          rs.CreateCatalogItem("Report", "Company Sales Copy", "/", False, reportDefinition, Nothing, warnings)        
@@ -75,7 +75,7 @@ class Sample
       ReportingService2010 rs = new ReportingService2010();  
       rs.Credentials = System.Net.CredentialCache.DefaultCredentials;  
       // Set the base Web service URL of the source server  
-      rs.Url = "http://<Server Name>/reportserver/reportservice2010.asmx";  
+      rs.Url = "https://<Server Name>/reportserver/reportservice2010.asmx";  
   
       string reportName = "/SampleReports/Company Sales";  
       byte[] reportDefinition = null;  
@@ -84,7 +84,7 @@ class Sample
       {  
          reportDefinition = rs.GetItemDefinition(reportName);  
          // Set the base Web service URL of the destination server  
-         rs.Url = "http://<Server Name>/reportserver/ReportService2010.asmx";  
+         rs.Url = "https://<Server Name>/reportserver/ReportService2010.asmx";  
          // Create a copy of the report on the destination server  
          Warning[] warnings = {};  
          rs.CreateCatalogItem("Report", "Company Sales Copy", "/", false, reportDefinition, null, out warnings);  

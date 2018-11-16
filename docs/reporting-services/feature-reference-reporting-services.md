@@ -38,7 +38,7 @@ ms.author: maghan
  [Reporting Services Concepts &#40;SSRS&#41;](../reporting-services/reporting-services-concepts-ssrs.md)   
  [Reporting Services Reports &#40;SSRS&#41;](../reporting-services/reports/reporting-services-reports-ssrs.md)   
  [Report Datasets &#40;SSRS&#41;](../reporting-services/report-data/report-datasets-ssrs.md)   
- [Getting Started with Report Builder](http://www.microsoft.com/download/en/details.aspx?id=29072)   
+ [Getting Started with Report Builder](https://www.microsoft.com/download/en/details.aspx?id=29072)   
  [Designing and Implementing Reports Using Report Builder 1.0](https://go.microsoft.com/fwlink/?LinkId=142601)  
   
   

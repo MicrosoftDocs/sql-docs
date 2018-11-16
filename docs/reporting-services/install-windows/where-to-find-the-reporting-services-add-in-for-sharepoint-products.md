@@ -47,7 +47,7 @@ The [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](.
   
  To download and install the add-in see the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Download Center:  
   
--   **SP1 add-in:**  [Microsoft® SQL Server® 2012 SP1 Reporting Services Add-in for Microsoft® SharePoint®](http://www.microsoft.com/download/details.aspx?id=35583)(http://www.microsoft.com/download/details.aspx?id=35583).  
+-   **SP1 add-in:**  [Microsoft® SQL Server® 2012 SP1 Reporting Services Add-in for Microsoft® SharePoint®](https://www.microsoft.com/download/details.aspx?id=35583)(https://www.microsoft.com/download/details.aspx?id=35583).  
   
 -   **SP1:**  [Microsoft® SQL Server® 2012 Service Pack 1 (SP1)](https://go.microsoft.com/fwlink/p/?LinkID=255906) (https://go.microsoft.com/fwlink/p/?LinkID=255906).  
 
@@ -58,6 +58,6 @@ In the SQL Server 2016 release, the add-in can be installed as part of the SQL S
 ## Next steps
 
 [Install or Uninstall the Reporting Services Add-in for SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
-[You are not able to browse SharePoint pages in non-default zone after uninstalling Reporting Services add-in](http://support.microsoft.com/kb/2009212)  
+[You are not able to browse SharePoint pages in non-default zone after uninstalling Reporting Services add-in](https://support.microsoft.com/kb/2009212)  
 
 More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

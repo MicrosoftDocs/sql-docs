@@ -75,7 +75,7 @@ You can create a custom brand package to alter the colors used for the web porta
 
 2. Open Internet Explorer.
 
-3. Enter the web portal URL. By default, it is http://\<**your-server-name**>/reports, but if you installed Reporting Services as a named instance, the default URL will be http://\<**your-server-name**>/reports\<**_instancename**>.
+3. Enter the web portal URL. By default, it is https://\<**your-server-name**>/reports, but if you installed Reporting Services as a named instance, the default URL will be https://\<**your-server-name**>/reports\<**_instancename**>.
 
 4. Select **Site Settings**.
 

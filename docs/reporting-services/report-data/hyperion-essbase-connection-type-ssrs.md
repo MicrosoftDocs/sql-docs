@@ -20,7 +20,7 @@ ms.author: maghan
  The following connection string example specifies a [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] data source on a server that uses port 13080 and XML for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (XMLA) over the Internet using SOAP, connecting to a sample catalog:  
   
 ```  
-Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample  
+Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample  
 ```  
   
  For more information about connection string examples, see [Data Connections, Data Sources, and Connection Strings in Report Builder](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  

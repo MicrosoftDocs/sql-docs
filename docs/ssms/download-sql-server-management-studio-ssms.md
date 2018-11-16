@@ -44,6 +44,12 @@ Use SQL Server Management Studio (SSMS) to query, design, and manage your databa
 **[![download](../ssdt/media/download.png) Download SQL Server Management Studio 17.9](https://go.microsoft.com/fwlink/?linkid=2014306)**
 <br>**[![download](../ssdt/media/download.png) Download SQL Server Management Studio 17.9 Upgrade Package (upgrades 17.x to 17.9)](https://go.microsoft.com/fwlink/?linkid=2014215)**
 
+**Version Information**
+
+- Release number: 17.9<br>
+- Build number: 14.0.17285.0<br>
+- Release date: September 04, 2018
+
 ### Available Languages (SSMS 17.9)
 
 [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x40a)

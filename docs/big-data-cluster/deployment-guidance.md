@@ -235,7 +235,7 @@ After 10 to 20 minutes, you should be notified that the controller pod is runnin
 ```
 
 > [!IMPORTANT]
-> The entire deployment can take a long time, but it should not take several hours. If you are experiencing problems with your deployment, see the [troubleshooting](#troubleshoot) section of this article to learn how to monitor and inspect the deployment.
+> The entire deployment can take a long time due to the time required to download the container images for the components of the big data cluster. However, it should not take several hours. If you are experiencing problems with your deployment, see the [troubleshooting](#troubleshoot) section of this article to learn how to monitor and inspect the deployment.
 
 When the deployment finishes, the output notifies you of success:
 
@@ -306,7 +306,7 @@ To monitor or troubleshoot a deployment, use **kubectl** to inspect the status o
    kubectl get pods -n <your-cluster-name>
    ```
 
-   During deployment, pods with a **STATUS** of **ContainerCreating** are still coming up. If the deployment hangs for any reason, this can give you an idea where the problem might be. Note that deployments can take thirty minutes or more depending on your configuration and network. Also look at the **READY** column. This tells you how many containers have started in the pod. The following table shows example edited output of two containers during a deployment:
+   During deployment, pods with a **STATUS** of **ContainerCreating** are still coming up. If the deployment hangs for any reason, this can give you an idea where the problem might be. Also look at the **READY** column. This tells you how many containers have started in the pod. Note that deployments can take thirty minutes or more depending on your configuration and network. Much of this time is spent downloading the container images for different components. The following table shows example edited output of two containers during a deployment:
 
    ```output
    PS C:\> kubectl get pods -n sbdc8
@@ -329,16 +329,34 @@ To monitor or troubleshoot a deployment, use **kubectl** to inspect the status o
    kubectl logs mssql-storage-pool-default-0 --all-containers=true -n <your-cluster-name> > pod-logs.txt
    ```
 
-You can also inspect the cluster services during and after a deployment with the following command:
+1. Review the cluster services during and after a deployment with the following command:
 
-```cmd
-kubectl get svc -n <your-cluster-name>
-```
+   ```cmd
+   kubectl get svc -n <your-cluster-name>
+   ```
 
-After the **service-proxy-lb** service has an external IP assigned, you can start the [Cluster Administration Portal](cluster-admin-portal.md) to monitor the deployment on the **Deployment** tab.
+   The following table describes the services that you will see in a fully provisioned big data cluster.
 
-> [!TIP]
-> For more information about troubleshooting the cluster, see [Kubectl commands for monitoring and troubleshooting SQL Server big data clusters](cluster-troubleshooting-commands.md).
+   | Service | Description |
+   |---|---|
+   | **service-compute-pool-default** | Supports the [Compute pool](concept-compute-pool.md). |
+   | **service-data-pool-default** | Supports the [Data pool](concept-data-pool.md) service. |
+   | **service-master-pool** | Supports the [SQL Server master instance](concept-master-instance.md). |
+   | **service-master-pool-lb** | Provides access through the **EXTERNAL-IP** and port 31433 to the SQL Server master instance. |
+   | **service-monitor-elasticsearch** | |
+   | **service-monitor-grafana** | |
+   | **service-monitor-influxdb** | |
+   | **service-monitor-kibana** | |
+   | **service-mssql-controller** | Supports the [controller](concept-controller.md). |
+   | **service-mssql-controller-lb** | Supports clients that manage the cluster, such as **mssqlctl**. |
+   | **service-proxy-lb** | Provides access through the **EXTERNAL-IP** and port 30777 to the [Cluster Administration Portal](cluster-admin-portal.md) for the **SA** user.|
+   | **service-security** | Supports security of the HDFS data tier. |
+   | **service-security-lb** | Provides access through the **EXTERNAL-IP** to the HDFS/Spark Gateway for the **root** user. |
+   | **service-storage-pool-default** | Supports the [storage pool](concept-storage-pool.md). |
+
+1. Use the [Cluster Administration Portal](cluster-admin-portal.md) to monitor the deployment on the **Deployment** tab. You have to wait for the **service-proxy-lb** service to start before accessing this portal, so it won't be available at the beginning of a deployment.
+
+For more information about troubleshooting the cluster, see [Kubectl commands for monitoring and troubleshooting SQL Server big data clusters](cluster-troubleshooting-commands.md).
 
 ## Next steps
 

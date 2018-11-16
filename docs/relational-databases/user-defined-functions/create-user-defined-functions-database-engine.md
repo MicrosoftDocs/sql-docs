@@ -177,7 +177,7 @@ SELECT EmployeeID, FirstName, LastName, JobTitle, RecursionLevel
 FROM dbo.ufn_FindReports(1);  
 ```  
 
-> [!IMPORTANT]  
+> [!NOTE]  
 > For more information and examples of inline table-valued functions (inline TVFs) and multi-statement table-valued functions (MSTVFs), see [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md). 
 
 ## Best Practices  

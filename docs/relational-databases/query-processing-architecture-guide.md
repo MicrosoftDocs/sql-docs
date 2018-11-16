@@ -663,18 +663,18 @@ During query optimization, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)
 Constructs that inhibit parallelism include:
 >
 > - **Scalar UDFs**    
->   For more information on scalar user-defined functions, see [Create User-defined Functions](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar). Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] has the ability to inline these functions, and unlock use of parallelism during query processing. For more information on scalar UDF inlining, see [Intelligent query processing in SQL databases](../../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining).
+>   For more information on scalar user-defined functions, see [Create User-defined Functions](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar). Starting with [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] has the ability to inline these functions, and unlock use of parallelism during query processing. For more information on scalar UDF inlining, see [Intelligent query processing in SQL databases](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining).
 > - **Remote Query**    
->   For more information on Remote Query, see [Showplan Logical and Physical Operators Reference](../../relational-databases/showplan-logical-and-physical-operators-reference.md).
+>   For more information on Remote Query, see [Showplan Logical and Physical Operators Reference](../relational-databases/showplan-logical-and-physical-operators-reference.md).
 > - **Dynamic cursors**    
->   For more information on cursors, see [DECLARE CURSOR](../../t-sql/language-elements/declare-cursor-transact-sql.md).
+>   For more information on cursors, see [DECLARE CURSOR](../t-sql/language-elements/declare-cursor-transact-sql.md).
 > - **Recursive queries**    
 >   For more information on recursion, see [Guidelines for Defining and Using Recursive Common Table Expressions
-](../../t-sql/queries/with-common-table-expression-transact-sql.md#guidelines-for-defining-and-using-recursive-common-table-expressions) and [Recursion in T–SQL](https://msdn.microsoft.com/library/aa175801(v=sql.80).aspx).
+](../t-sql/queries/with-common-table-expression-transact-sql.md#guidelines-for-defining-and-using-recursive-common-table-expressions) and [Recursion in T–SQL](https://msdn.microsoft.com/library/aa175801(v=sql.80).aspx).
 > - **Table Valued Functions (TVFs)**    
->   For more information on TVFs, see [Create User-defined Functions (Database Engine)](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
+>   For more information on TVFs, see [Create User-defined Functions (Database Engine)](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
 > - **TOP keyword**    
->   For more information, see [TOP (Transact-SQL)](../../t-sql/queries/top-transact-sql.md).
+>   For more information, see [TOP (Transact-SQL)](../t-sql/queries/top-transact-sql.md).
 
 After exchange operators are inserted, the result is a parallel-query execution plan. A parallel-query execution plan can use more than one worker thread. A serial execution plan, used by a nonparallel query, uses only one worker thread for its execution. The actual number of worker threads used by a parallel query is determined at query plan execution initialization and is determined by the complexity of the plan and the degree of parallelism. Degree of parallelism determines the maximum number of CPUs that are being used; it does not mean the number of worker threads that are being used. The degree of parallelism value is set at the server level and can be modified by using the sp_configure system stored procedure. You can override this value for individual query or index statements by specifying the `MAXDOP` query hint or `MAXDOP` index option. 
 

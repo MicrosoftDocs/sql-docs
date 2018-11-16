@@ -12,6 +12,8 @@ f1_keywords:
   - "CREATE FUNCTION"
   - "CREATE_FUNCTION_TSQL"
   - "FUNCTION_TSQL"
+  - "TVF"
+  - "MSTVF"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -31,6 +33,9 @@ helpviewer_keywords:
   - "nesting user-defined functions"
   - "deterministic functions"
   - "scalar-valued functions"
+  - "scalar UDF"
+  - "MSTVF"
+  - "TVF"
   - "functions [SQL Server], invoking"
 ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 author: CarlRabeler
@@ -62,10 +67,10 @@ Creates a user-defined function in [!INCLUDE[ssNoVersion](../../includes/ssnover
 -   Use an inline function as a filter predicate for a security policy  
   
 > [!NOTE]  
->  The integration of .NET Framework CLR into SQL Server is discussed in this topic. CLR integration does not apply to Azure SQL Database.
+> The integration of .NET Framework CLR into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  is discussed in this topic. CLR integration does not apply to [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 > [!NOTE]  
->  For Azure SQL Data Warehouse, see the [CREATE FUNCTION (SQL Data Warehouse)](https://docs.microsoft.com/sql/t-sql/statements/create-function-sql-data-warehouse?view=aps-pdw-2016) article.
+> For [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], see [CREATE FUNCTION (SQL Data Warehouse)](../../t-sql/statements/create-function-sql-data-warehouse.md).
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -262,12 +267,12 @@ RETURNS return_data_type
   
 ## Arguments
 *OR ALTER*  
- **Applies to**: Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1).  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  Conditionally alters the function only if it already exists. 
  
 > [!NOTE]  
->  Optional [OR ALTER] syntax for CLR is available starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU1.   
+> Optional [OR ALTER] syntax for CLR is available starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU1.   
  
  *schema_name*  
  Is the name of the schema to which the user-defined function belongs.  
@@ -276,7 +281,7 @@ RETURNS return_data_type
  Is the name of the user-defined function. Function names must comply with the rules for [identifiers](../../relational-databases/databases/database-identifiers.md) and must be unique within the database and to its schema.  
   
 > [!NOTE]  
->  Parentheses are required after the function name even if a parameter is not specified.  
+> Parentheses are required after the function name even if a parameter is not specified.  
   
  @*parameter_name*  
  Is a parameter in the user-defined function. One or more parameters can be declared.  
@@ -286,24 +291,22 @@ RETURNS return_data_type
  Specify a parameter name by using an at sign (@) as the first character. The parameter name must comply with the rules for identifiers. Parameters are local to the function; the same parameter names can be used in other functions. Parameters can take the place only of constants; they cannot be used instead of table names, column names, or the names of other database objects.  
   
 > [!NOTE]  
->  ANSI_WARNINGS is not honored when you pass parameters in a stored procedure, user-defined function, or when you declare and set variables in a batch statement. For example, if a variable is defined as **char(3)**, and then set to a value larger than three characters, the data is truncated to the defined size and the INSERT or UPDATE statement succeeds.  
+> ANSI_WARNINGS is not honored when you pass parameters in a stored procedure, user-defined function, or when you declare and set variables in a batch statement. For example, if a variable is defined as **char(3)**, and then set to a value larger than three characters, the data is truncated to the defined size and the INSERT or UPDATE statement succeeds.  
   
  [ *type_schema_name*. ] *parameter_data_type*  
  Is the parameter data type, and optionally the schema to which it belongs. For [!INCLUDE[tsql](../../includes/tsql-md.md)] functions, all data types, including CLR user-defined types and user-defined table types, are allowed except the **timestamp** data type. For CLR functions, all data types, including CLR user-defined types, are allowed except **text**, **ntext**, **image**, user-defined table types and **timestamp** data types. The nonscalar types, **cursor** and **table**, cannot be specified as a parameter data type in either [!INCLUDE[tsql](../../includes/tsql-md.md)] or CLR functions.  
   
- If *type_schema_name* is not specified, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] looks for the *scalar_parameter_data_type* in the following order:  
+If *type_schema_name* is not specified, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] looks for the *scalar_parameter_data_type* in the following order:  
   
 -   The schema that contains the names of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system data types.  
-  
 -   The default schema of the current user in the current database.  
-  
 -   The **dbo** schema in the current database.  
   
- [ =*default* ]  
- Is a default value for the parameter. If a *default* value is defined, the function can be executed without specifying a value for that parameter.  
+[ =*default* ]  
+Is a default value for the parameter. If a *default* value is defined, the function can be executed without specifying a value for that parameter.  
   
 > [!NOTE]  
->  Default parameter values can be specified for CLR functions except for the **varchar(max)** and **varbinary(max)** data types.  
+> Default parameter values can be specified for CLR functions except for the **varchar(max)** and **varbinary(max)** data types.  
   
  When a parameter of the function has a default value, the keyword DEFAULT must be specified when the function is called to retrieve the default value. This behavior is different from using parameters with default values in stored procedures in which omitting the parameter also implies the default value. However, the DEFAULT keyword is not required when invoking a scalar function by using the EXECUTE statement.  
   
@@ -314,33 +317,38 @@ RETURNS return_data_type
  Is the return value of a scalar user-defined function. For [!INCLUDE[tsql](../../includes/tsql-md.md)] functions, all data types, including CLR user-defined types, are allowed except the **timestamp** data type. For CLR functions, all data types, including CLR user-defined types, are allowed except the **text**, **ntext**, **image**, and **timestamp** data types. The nonscalar types, **cursor** and **table**, cannot be specified as a return data type in either [!INCLUDE[tsql](../../includes/tsql-md.md)] or CLR functions.  
   
  *function_body*  
- Specifies that a series of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, which together do not produce a side effect such as modifying a table, define the value of the function. *function_body* is used only in scalar functions and multistatement table-valued functions.  
+ Specifies that a series of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, which together do not produce a side effect such as modifying a table, define the value of the function. *function_body* is used only in scalar functions and multi-statement table-valued functions (MSTVFs).  
   
  In scalar functions, *function_body* is a series of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements that together evaluate to a scalar value.  
   
- In multistatement table-valued functions, *function_body* is a series of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements that populate a TABLE return variable.  
+ In MSTVFs, *function_body* is a series of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements that populate a TABLE return variable.  
   
  *scalar_expression*  
  Specifies the scalar value that the scalar function returns.  
   
  TABLE  
- Specifies that the return value of the table-valued function is a table. Only constants and @*local_variables* can be passed to table-valued functions.  
+ Specifies that the return value of the table-valued function (TVF) is a table. Only constants and @*local_variables* can be passed to TVFs.  
   
- In inline table-valued functions, the TABLE return value is defined through a single SELECT statement. Inline functions do not have associated return variables.  
+ In inline TVFs, the TABLE return value is defined through a single SELECT statement. Inline functions do not have associated return variables.  
   
- In multistatement table-valued functions, @*return_variable* is a TABLE variable, used to store and accumulate the rows that should be returned as the value of the function. @*return_variable* can be specified only for [!INCLUDE[tsql](../../includes/tsql-md.md)] functions and not for CLR functions.  
+ <a name="mstvf"></a> In MSTVFs, @*return_variable* is a TABLE variable, used to store and accumulate the rows that should be returned as the value of the function. @*return_variable* can be specified only for [!INCLUDE[tsql](../../includes/tsql-md.md)] functions and not for CLR functions.  
   
 > [!WARNING]  
->  Joining to a multistatement table valued function in a **FROM** clause is possible, but can give poor performance. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is unable to use all the optimized techniques against some statements that can be included in a multistatement function, resulting in a suboptimal query plan. To obtain the best possible performance, whenever possible use joins between base tables instead of functions.  
+> Joining to an MSTVF in a **FROM** clause is possible, but can result in poor performance. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is unable to use all the optimized techniques on some statements that can be included in a MSTVF, resulting in a suboptimal query plan. To obtain the best possible performance, whenever possible use joins between base tables instead of functions.  
+
+> [!IMPORTANT]
+> MSTVFs have a fixed cardinality guess of 100 starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], and 1 for earlier [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versions.    
+> Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], optimizing an execution plan that uses MSTVFs can leverage interleaved execution, which results in using actual cardinality instead of the above heuristics.     
+> For more information, see [Interleaved execution for multi-statement table valued functions](../../relational-databases/performance/adaptive-query-processing.md#interleaved-execution-for-multi-statement-table-valued-functions).
   
  *select_stmt*  
- Is the single SELECT statement that defines the return value of an inline table-valued function.  
+ Is the single SELECT statement that defines the return value of an inline table-valued function (TVF).  
   
  ORDER (\<order_clause>) 
  Specifies the order in which results are being returned from the table-valued function. For more information, see the section, "[Using Sort Order in CLR Table-valued Functions](#using-sort-order-in-clr-table-valued-functions)", later in this topic.  
   
- EXTERNAL NAME \<method_specifier> *assembly_name*.*class_name*.*method_name* 
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ EXTERNAL NAME \<method_specifier> *assembly_name*.*class_name*.*method_name*    
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
   
  Specifies the assembly and method to which the created function name shall refer.  
   
@@ -356,20 +364,20 @@ RETURNS return_data_type
     `SELECT * FROM sys.assembly_modules;`.  
     The method must be static.  
   
- In a typical example, for MyFood.DLL, in which all types are in the MyFood namespace, the `EXTERNAL NAME` value could be:   
+In a typical example, for MyFood.DLL, in which all types are in the MyFood namespace, the `EXTERNAL NAME` value could be:   
 `MyFood.[MyFood.MyClass].MyStaticMethod`  
   
 > [!NOTE]  
->  By default, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot execute CLR code. You can create, modify, and drop database objects that reference common language runtime modules; however, you cannot execute these references in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] until you enable the [clr enabled option](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md). To enable this option, use [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
+> By default, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot execute CLR code. You can create, modify, and drop database objects that reference common language runtime modules; however, you cannot execute these references in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] until you enable the [clr enabled option](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md). To enable this option, use [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
 > [!NOTE]  
->  This option is not available in a contained database.  
+> This option is not available in a contained database.  
   
  *\<*table_type_definition*>* ( { \<column_definition> \<column_constraint>    | \<computed_column_definition> }    [ \<table_constraint> ] [ ,...*n* ] ) 
  Defines the table data type for a [!INCLUDE[tsql](../../includes/tsql-md.md)] function. The table declaration includes column definitions and column or table constraints. The table is always put in the primary filegroup.  
   
- \< clr_table_type_definition >  ( { *column_name**data_type* } [ ,...*n* ] ) 
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Preview in some regions](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).|  
+ \< clr_table_type_definition >  ( { *column_name**data_type* } [ ,...*n* ] )    
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ([Preview in some regions](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).  
   
  Defines the table data types for a CLR function. The table declaration includes only column names and data types. The table is always put in the primary filegroup.  
   
@@ -393,7 +401,7 @@ RETURNS return_data_type
  Specifies that the function will have one or more of the following options.  
   
  ENCRYPTION  
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])  
   
  Indicates that the [!INCLUDE[ssDE](../../includes/ssde-md.md)] will convert the original text of the CREATE FUNCTION statement to an obfuscated format. The output of the obfuscation is not directly visible in any catalog views. Users that have no access to system tables or database files cannot retrieve the obfuscated text. However, the text will be available to privileged users that can either access system tables over the [DAC port](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md) or directly access database files. Also, users that can attach a debugger to the server process can retrieve the original procedure from memory at runtime. For more information about accessing system metadata, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
@@ -408,7 +416,7 @@ RETURNS return_data_type
   
 -   The function is modified by using the ALTER statement with the SCHEMABINDING option not specified.  
   
- A function can be schema bound only if the following conditions are true:  
+A function can be schema bound only if the following conditions are true:  
   
 -   The function is a [!INCLUDE[tsql](../../includes/tsql-md.md)] function.  
   
@@ -781,7 +789,7 @@ GO
 ### D. Creating a CLR function  
  The example creates CLR function `len_s`. Before the function is created, the assembly `SurrogateStringFunction.dll` is registered in the local database.  
   
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])  
   
 ```sql  
 DECLARE @SamplesPath nvarchar(1024);  

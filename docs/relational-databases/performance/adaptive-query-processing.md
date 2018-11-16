@@ -265,10 +265,11 @@ OPTION (USE HINT('DISABLE_BATCH_MODE_ADAPTIVE_JOINS'));
 A USE HINT query hint takes precedence over a database scoped configuration or trace flag setting.
 
 ## Interleaved execution for multi-statement table valued functions
-Interleaved execution changes the unidirectional boundary between the optimization and execution phases for a single-query execution and enables plans to adapt based on the revised cardinality estimates. During optimization if we encounter a candidate for interleaved execution, which is currently **multi-statement table-valued functions (MSTVFs)**, we will pause optimization, execute the applicable subtree, capture accurate cardinality estimates, and then resume optimization for downstream operations.
-MSTVFs have a fixed cardinality guess of 100 starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], and 1 for earlier [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versions. Interleaved execution helps workload performance issues that are due to these fixed cardinality estimates associated with MSTVFs. For more information on MSTVFs, see [CREATE FUNCTION](../../t-sql/statements/create-function-transact-sql.md#mstvf).
+Interleaved execution changes the unidirectional boundary between the optimization and execution phases for a single-query execution and enables plans to adapt based on the revised cardinality estimates. During optimization if we encounter a candidate for interleaved execution, which is currently **multi-statement table-valued functions (MSTVFs)**, we will pause optimization, execute the applicable subtree, capture accurate cardinality estimates, and then resume optimization for downstream operations.   
 
-The following image depicts a Live Query Statistics ouput, a subset of an overall execution plan that shows the impact of fixed cardinality estimates from MSTVFs. You can see the actual row flow vs. estimated rows. There are three noteworthy areas of the plan (flow is from right to left):
+MSTVFs have a fixed cardinality guess of 100 starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], and 1 for earlier [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versions. Interleaved execution helps workload performance issues that are due to these fixed cardinality estimates associated with MSTVFs. For more information on MSTVFs, see [Create User-defined Functions (Database Engine)](../../user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
+
+The following image depicts a [Live Query Statistics](../../relational-databases/performance/live-query-statistics.md) ouput, a subset of an overall execution plan that shows the impact of fixed cardinality estimates from MSTVFs. You can see the actual row flow vs. estimated rows. There are three noteworthy areas of the plan (flow is from right to left):
 1. The MSTVF Table Scan has a fixed estimate of 100 rows. For this example, however, there are 527,597 rows flowing through this MSTVF Table Scan, as seen in Live Query Statistics via the *527597 of 100* actual of estimated – so the fixed estimate is significantly skewed.
 1. For the Nested Loops operation, only 100 rows are assumed to be returned by the outer side of the join. Given the high number of rows actually being returned by the MSTVF, you are likely better off with a different join algorithm altogether.
 1. For the Hash Match operation, notice the small warning symbol, which in this case is indicating a spill to disk.
@@ -291,7 +292,7 @@ In general, the higher the skew between the estimated vs. actual number of rows,
 In general, interleaved execution benefits queries where:
 1. There is a large skew between the estimated vs. actual number of rows for the intermediate result set (in this case, the MSTVF).
 1. And the overall query is sensitive to a change in the size of the intermediate result. This typically happens when there is a complex tree above that subtree in the query plan.
-A simply "SELECT *" from an MSTVF will not benefit from interleaved execution.
+A simple `SELECT *` from an MSTVF will not benefit from interleaved execution.
 
 ### Interleaved execution overhead
 The overhead should be minimal-to-none. MSTVFs were already being materialized prior to the introduction of interleaved execution, however the difference is that now we’re now allowing deferred optimization and are then leveraging the cardinality estimate of the materialized row set.
@@ -366,5 +367,5 @@ A USE HINT query hint takes precedence over a database scoped configuration or t
 [Showplan Logical and Physical Operators Reference](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    
 [Joins](../../relational-databases/performance/joins.md)    
 [Demonstrating Adaptive Query Processing](https://github.com/joesackmsft/Conferences/blob/master/Data_AMP_Detroit_2017/Demos/AQP_Demo_ReadMe.md)    
-[USE HINT query hint](../../t-sql/queries/hints-transact-sql-query.md#use_hint)     
-[CREATE FUNCTION](../../t-sql/statements/create-function-transact-sql.md#mstvf)    
+[USE HINT query hint](../../t-sql/queries/hints-transact-sql-query.md#use_hint)   
+[Create User-defined Functions (Database Engine)](../../user-defined-functions/create-user-defined-functions-database-engine.md#TVF)  

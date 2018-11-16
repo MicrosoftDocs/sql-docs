@@ -12938,6 +12938,11 @@
             "source_path": "docs/relational-databases/scripting/xml-editor-sql-server-management-studio.md",
             "redirect_url": "/sql/ssms/scripting/xml-editor-sql-server-management-studio",
             "redirect_document_id": true
+        },
+        {
+            "source_path": "ssma/access/save-metadata-acesstosql.md",
+            "redirect_url": "/sql/ssma/access/save-metadata-accesstosql",
+            "redirect_document_id": true
         }
     ]
 }

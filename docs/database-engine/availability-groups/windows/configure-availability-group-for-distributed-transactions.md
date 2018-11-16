@@ -25,7 +25,7 @@ manager: craigg
 In order to guarantee distributed transactions, the availability group must be configured to register databases as distributed transaction resource managers.  
 
 >[!NOTE]
->[!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] Service Pack 2 and later provides full support for distributed transactions in availability groups. In [!INCLUDE[SQL2016]](../../../includes/sssql15-md.md)] versions prior to Service Pack 2, cross-database distributed transactions (i.e. transaction using databases on the same SQL Server instance) involving a database in an availability group are not supported. [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] does not have this limitation. 
+>[!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] Service Pack 2 and later provides full support for distributed transactions in availability groups. In [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] versions prior to Service Pack 2, cross-database distributed transactions (i.e. transaction using databases on the same SQL Server instance) involving a database in an availability group are not supported. [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] does not have this limitation. 
 >
 >In [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] the configuration steps are the same as in [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)].
 

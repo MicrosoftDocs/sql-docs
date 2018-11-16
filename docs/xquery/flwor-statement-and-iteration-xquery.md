@@ -221,7 +221,7 @@ where ProductModelID=7
 ```  
   
 ## Using the where Clause  
- You can use the `where` clause to filter results of an interation. This is illustrated in this next example.  
+ You can use the `where` clause to filter results of an iteration. This is illustrated in this next example.  
   
  In the manufacturing of a bicycle, the manufacturing process goes through a series of work center locations. Each work center location defines a sequence of manufacturing steps. The following query retrieves only those work center locations that manufacture a bicycle model and have less than three manufacturing steps. That is, they have less than three <`step`> elements.  
   

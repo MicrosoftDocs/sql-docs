@@ -227,7 +227,7 @@ During cluster bootstrap, the client command window will output the deployment s
 2018-11-15 15:42:02.0209 UTC | INFO | Waiting for controller pod to be up...
 ```
 
-After ten to twenty minutes, you should be notified that the controller pod is running:
+After 10 to 20 minutes, you should be notified that the controller pod is running:
 
 ```output
 2018-11-15 15:50:50.0300 UTC | INFO | Controller pod is running.
@@ -235,26 +235,13 @@ After ten to twenty minutes, you should be notified that the controller pod is r
 ```
 
 > [!IMPORTANT]
-> The entire deployment can take a long time, but it should not take several hours. If you are experiencing problems with your deployment, see the [troubleshooting](#troubleshooting) section of this article to learn how to monitor and inspect the deployment.
+> The entire deployment can take a long time, but it should not take several hours. If you are experiencing problems with your deployment, see the [troubleshooting](#troubleshoot) section of this article to learn how to monitor and inspect the deployment.
 
-When the deployment finishes, the output notifies you of success and provides connection information:
+When the deployment finishes, the output notifies you of success:
 
 ```output
 2018-11-15 16:10:25.0583 UTC | INFO | Cluster state: Ready
 2018-11-15 16:10:25.0583 UTC | INFO | Cluster deployed successfully.
-
-SQL Server big data cluster connection endpoints:
-SQL Server master instance:
-IP             PORT
-44.11.11.111   31433
-
-HDFS/KNOX:
-IP               PORT
-222.11.111.111   30443
-
-Cluster administration portal (https://<ip>:<port>):
-IP                PORT
-222.222.222.222   30777
 ```
 
 ## <a id="masterip"></a> Get the SQL Server Master instance and SQL Server big data cluster IP addresses
@@ -319,7 +306,7 @@ To monitor or troubleshoot a deployment, use **kubectl** to inspect the status o
    kubectl get pods -n <your-cluster-name>
    ```
 
-   During deployment, pods with a **STATUS** of **ContainerCreating** are still coming up. If the deployment hangs for any reason, this can give you an idea where the problem might be. Note that a deployment can take thirty minutes or more depending on your configuration and network. Also look at the **READY** column. This tells you how many containers have started in the pod. The following table shows example edited output of two containers during a deployment:
+   During deployment, pods with a **STATUS** of **ContainerCreating** are still coming up. If the deployment hangs for any reason, this can give you an idea where the problem might be. Note that deployments can take thirty minutes or more depending on your configuration and network. Also look at the **READY** column. This tells you how many containers have started in the pod. The following table shows example edited output of two containers during a deployment:
 
    ```output
    PS C:\> kubectl get pods -n sbdc8
@@ -351,8 +338,8 @@ kubectl get svc -n <your-cluster-name>
 After the **service-proxy-lb** service has an external IP assigned, you can start the [Cluster Administration Portal](cluster-admin-portal.md) to monitor the deployment on the **Deployment** tab.
 
 > [!TIP]
-> For more details about troubleshooting the cluster, see [Kubectl commands for monitoring and troubleshooting SQL Server big data clusters](cluster-troubleshooting-commands.md).
-> 
+> For more information about troubleshooting the cluster, see [Kubectl commands for monitoring and troubleshooting SQL Server big data clusters](cluster-troubleshooting-commands.md).
+
 ## Next steps
 
 After successfully deploying SQL Server big data cluster to Kubernetes, [install the big data tools](deploy-big-data-tools.md) and try out some of the new capabilities and learn [How to use notebooks in SQL Server 2019 preview](notebooks-guidance.md).

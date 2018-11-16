@@ -25,9 +25,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 # sys.databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Contains one row per database in the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Contains one row per database in the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- If a database is not `ONLINE`, or `AUTO_CLOSE` is set to `ON` and the database is closed, the values of some columns may be `NULL`. If a database is `OFFLINE`, the corresponding row is not visible to low-privileged users. To see the corresponding row if the database is `OFFLINE`, a user must have at least the `ALTER ANY DATABASE` server-level permission, or the `CREATE DATABASE` permission in the `master` database.  
+If a database is not `ONLINE`, or `AUTO_CLOSE` is set to `ON` and the database is closed, the values of some columns may be `NULL`. If a database is `OFFLINE`, the corresponding row is not visible to low-privileged users. To see the corresponding row if the database is `OFFLINE`, a user must have at least the `ALTER ANY DATABASE` server-level permission, or the `CREATE DATABASE` permission in the `master` database.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -119,7 +119,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 > By default, the public role has the `VIEW ANY DATABASE` permission, allowing all logins to see database information. To block a login from the ability to detect a database, `REVOKE` the `VIEW ANY DATABASE` permission from `public`, or `DENY` the `VIEW ANY DATABASE` permission for individual logins.  
   
 ## Azure SQL Database Remarks  
- In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] this view is available in the `master` database and in user databases. In the `master` database, this view returns the information on the `master` database and all user databases on the server. In a user database, this view returns information only on the current database and the master database.  
+In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] this view is available in the `master` database and in user databases. In the `master` database, this view returns the information on the `master` database and all user databases on the server. In a user database, this view returns information only on the current database and the master database.  
   
  Use the `sys.databases` view in the `master` database of the [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] server where the new database is being created. After the database copy starts, you can query the `sys.databases` and the `sys.dm_database_copies` views from the `master` database of the destination server to retrieve more information about the copying progress.  
   
@@ -128,7 +128,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ### A. Query the sys.databases view  
  The following example returns a few of the columns available in the `sys.databases` view.  
   
-```  
+```sql  
 SELECT name, user_access_desc, is_read_only, state_desc, recovery_model_desc  
 FROM sys.databases;  
 ```  
@@ -138,7 +138,7 @@ FROM sys.databases;
   
 **Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
   
-```  
+```sql  
 -- Execute from the master database.  
 SELECT a.name, a.state_desc, b.start_date, b.modify_date, b.percentage_complete  
 FROM sys.databases AS a  
@@ -150,7 +150,7 @@ WHERE a.state = 7;
   
 **Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
-```  
+```sql  
 -- Execute from the master database.  
 SELECT a.name, a.is_temporal_history_retention_enabled 
 FROM sys.databases AS a;

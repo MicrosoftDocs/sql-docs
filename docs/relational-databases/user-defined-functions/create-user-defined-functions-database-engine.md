@@ -187,9 +187,9 @@ If a user-defined function (UDF) is not created with the `SCHEMABINDING` clause,
   
 -   Execute the [sp_refreshsqlmodule](../../relational-databases/system-stored-procedures/sp-refreshsqlmodule-transact-sql.md) stored procedure after modifying any object that is specified in the definition of the UDF.  
 
-If creating a UDF that does not access data, specify the `SCHEMABINDING` option. This will prevent the query optimizer from generating unnecessary spool operators for query plans involving these UDFs. For more information on spools, see [Showplan Logical and Physical Operators Reference](../../relational-databases/showplan-logical-and-physical-operators-reference.md).
+If creating a UDF that does not access data, specify the `SCHEMABINDING` option. This will prevent the query optimizer from generating unnecessary spool operators for query plans involving these UDFs. For more information on spools, see [Showplan Logical and Physical Operators Reference](../../relational-databases/showplan-logical-and-physical-operators-reference.md). For more information on creating a schema bound function, see [Schema-bound functions](../../relational-databases/user-defined-functions/user-defined-functions.md#SchemaBound).
 
-Joining to an MSTVF in a **FROM** clause is possible, but can result in poor performance. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is unable to use all the optimized techniques on some statements that can be included in a MSTVF, resulting in a suboptimal query plan. To obtain the best possible performance, whenever possible use joins between base tables instead of functions.  
+Joining to an MSTVF in a `FROM` clause is possible, but can result in poor performance. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is unable to use all the optimized techniques on some statements that can be included in a MSTVF, resulting in a suboptimal query plan. To obtain the best possible performance, whenever possible use joins between base tables instead of functions.  
 
 > [!IMPORTANT]
 > MSTVFs have a fixed cardinality guess of 100 starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], and 1 for earlier [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versions.    

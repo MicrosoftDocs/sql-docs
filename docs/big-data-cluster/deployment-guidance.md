@@ -70,7 +70,7 @@ kubectl config view
 
 ## <a id="mssqlctl"></a> Install mssqlctl
 
-**mssqlctl** is a command-line utility written in Python that enables cluster administrators to bootstrap and manage the big data cluster via REST APIs. The minimum Python version required is v3.5. You must also have `pip` that is used to download and install **mssqlctl** tool. 
+**mssqlctl** is a command-line utility written in Python that enables cluster administrators to bootstrap and manage the big data cluster via REST APIs. The minimum Python version required is v3.5. You must also have `pip` that is used to download and install **mssqlctl** tool. The instructions below provide examples for Windows and Ubuntu. For installing Python on other platforms, see the [Python documentation](https://wiki.python.org/moin/BeginnersGuide/Download).
 
 > [!IMPORTANT]
 > If you installed a previous release, you must delete the cluster *before* upgrading **mssqlctl** and installing the new release. For more information, see [Upgrading to a new release](deployment-guidance.md#upgrade).
@@ -82,13 +82,6 @@ kubectl config view
    > [!TIP] 
    > When installing Python3, select to add Python to your path. If you do not, you can later find where pip3 is located and manually add it to your path.
 
-1. Make sure that you have the latest **requests** package.
-
-   ```cmd
-   python -m pip install requests
-   python -m pip install requests --upgrade
-   ```
-
 1. Install **mssqlctl** with the following command:
 
    ```bash
@@ -97,7 +90,7 @@ kubectl config view
 
 ### Linux mssqlctl installation
 
-On Linux, you must install the **python3** and **python3-pip** packages and then run `sudo pip3 install --upgrade pip`. This installs the latest 3.5 version of Python and pip. The following example shows how these commands would work for Ubuntu (if you are using another platform, modify the commands for your package manager):
+On Linux, you must install the **python3** and **python3-pip** packages and then upgrade pip. This installs the latest 3.5 version of Python and pip. The following example shows how these commands would work for Ubuntu (for other Linux platforms, see the [Python documentation](https://wiki.python.org/moin/BeginnersGuide/Download).
 
 1. Install the necessary Python packages:
 
@@ -225,23 +218,44 @@ If you are deploying with kubeadm on your own physical or virtual machines, you 
 The create cluster API is used to initialize the Kubernetes namespace and deploy all the application pods into the namespace. To deploy SQL Server big data cluster on your Kubernetes cluster, run the following command:
 
 ```bash
-mssqlctl create cluster <name of your cluster>
+mssqlctl create cluster <your-cluster-name>
 ```
 
-During cluster bootstrap, the client command window will output the deployment status. You can also check the deployment status by running these commands in a different cmd window:
+During cluster bootstrap, the client command window will output the deployment status. During the deployment process, you should see a series of messages where it is waiting for the controller pod:
 
-```bash
-kubectl get all -n <name of your cluster>
-kubectl get pods -n <name of your cluster>
-kubectl get svc -n <name of your cluster>
+```output
+2018-11-15 15:42:02.0209 UTC | INFO | Waiting for controller pod to be up...
 ```
 
-You can see a more granular status and configuration for each pod by running:
-```bash
-kubectl describe pod <pod name> -n <name of your cluster>
+After ten to twenty minutes, you should be notified that the controller pod is running:
+
+```output
+2018-11-15 15:50:50.0300 UTC | INFO | Controller pod is running.
+2018-11-15 15:50:50.0585 UTC | INFO | Controller Endpoint: https://111.222.222.222:30080
 ```
 
-Once the Controller pod is running, you can leverage the Deployment tab in the Cluster Administration Portal to monitor the deployment.
+> [!IMPORTANT]
+> The entire deployment can take a long time, but it should not take several hours. If you are experiencing problems with your deployment, see the [troubleshooting](#troubleshooting) section of this article to learn how to monitor and inspect the deployment.
+
+When the deployment finishes, the output notifies you of success and provides connection information:
+
+```output
+2018-11-15 16:10:25.0583 UTC | INFO | Cluster state: Ready
+2018-11-15 16:10:25.0583 UTC | INFO | Cluster deployed successfully.
+
+SQL Server big data cluster connection endpoints:
+SQL Server master instance:
+IP             PORT
+44.11.11.111   31433
+
+HDFS/KNOX:
+IP               PORT
+222.11.111.111   30443
+
+Cluster administration portal (https://<ip>:<port>):
+IP                PORT
+222.222.222.222   30777
+```
 
 ## <a id="masterip"></a> Get the SQL Server Master instance and SQL Server big data cluster IP addresses
 
@@ -252,9 +266,9 @@ After the deployment script has completed successfully, you can obtain the IP ad
 If you are using AKS, Azure provides the Azure LoadBalancer service. Run following command:
 
 ```bash
-kubectl get svc service-master-pool-lb -n <name of your cluster>
-kubectl get svc service-security-lb -n <name of your cluster>
-kubectl get svc service-proxy-lb -n <name of your cluster>
+kubectl get svc service-master-pool-lb -n <your-cluster-name>
+kubectl get svc service-security-lb -n <your-cluster-name>
+kubectl get svc service-proxy-lb -n <your-cluster-name>
 ```
 
 Look for the **External-IP** value that is assigned to the service. Then, connect to the SQL Server master instance using the IP address at port 31433 (Ex: **\<ip-address\>,31433**) and to SQL Server big data cluster endpoint using the external-IP for `service-security-lb` service. 
@@ -269,7 +283,7 @@ minikube ip
 
 Irrespective of the platform you are running your Kubernetes cluster on, to get all the service endpoints deployed for the cluster, run following command:
 ```bash
-kubectl get svc -n <name of your cluster>
+kubectl get svc -n <your-cluster-name>
 ```
 
 ## <a id="upgrade"></a> Upgrade to a new release
@@ -295,6 +309,50 @@ Currently, the only way to upgrade a big data cluster to a new release is to man
 
 1. Install the latest release using the instructions in the [Deploy section](#deploy) of this article. 
 
+## <a id="troubleshoot"></a> Monitoring and troubleshooting
+
+To monitor or troubleshoot a deployment, use **kubectl** to inspect the status of the cluster and to detect potential problems. At any time during a deployment, you can open a different command window to run the following tests.
+
+1. Inspect the status of the pods in your cluster.
+
+   ```cmd
+   kubectl get pods -n <your-cluster-name>
+   ```
+
+   During deployment, pods with a **STATUS** of **ContainerCreating** are still coming up. If the deployment hangs for any reason, this can give you an idea where the problem might be. Note that a deployment can take thirty minutes or more depending on your configuration and network. Also look at the **READY** column. This tells you how many containers have started in the pod. The following table shows example edited output of two containers during a deployment:
+
+   ```output
+   PS C:\> kubectl get pods -n sbdc8
+   NAME                                     READY   STATUS              RESTARTS   AGE
+   mssql-controller-h79ft                   4/4     Running             0          13m
+   mssql-storage-pool-default-0             0/7     ContainerCreating   0          6m
+   ```
+
+1. Describe an individual pod for more details. The following command inspects the `mssql-storage-pool-default-0` pod.
+
+   ```cmd
+   kubectl describe pod mssql-storage-pool-default-0 -n <your-cluster-name>
+   ```
+
+   This outputs detailed information about the pod, including recent events. If an error has occurred, you can sometimes find the error here.
+
+1. Retrieve the logs for containers running in a pod. The following command retrieves the logs for all containers running in the pod named `mssql-storage-pool-default-0` and outputs them to a file name `pod-logs.txt`:
+
+   ```cmd
+   kubectl logs mssql-storage-pool-default-0 --all-containers=true -n <your-cluster-name> > pod-logs.txt
+   ```
+
+You can also inspect the cluster services during and after a deployment with the following command:
+
+```cmd
+kubectl get svc -n <your-cluster-name>
+```
+
+After the **service-proxy-lb** service has an external IP assigned, you can start the [Cluster Administration Portal](cluster-admin-portal.md) to monitor the deployment on the **Deployment** tab.
+
+> [!TIP]
+> For more details about troubleshooting the cluster, see [Kubectl commands for monitoring and troubleshooting SQL Server big data clusters](cluster-troubleshooting-commands.md).
+> 
 ## Next steps
 
 After successfully deploying SQL Server big data cluster to Kubernetes, [install the big data tools](deploy-big-data-tools.md) and try out some of the new capabilities and learn [How to use notebooks in SQL Server 2019 preview](notebooks-guidance.md).

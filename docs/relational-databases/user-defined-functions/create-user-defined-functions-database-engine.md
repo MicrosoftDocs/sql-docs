@@ -24,7 +24,6 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 # Create User-defined Functions (Database Engine)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
   This topic describes how to create a user-defined function (UDF) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[tsql](../../includes/tsql-md.md)].  
-
   
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
   
@@ -96,7 +95,10 @@ SELECT ProductModelID, Name, dbo.ufnGetInventoryStock(ProductID)AS CurrentSupply
 FROM Production.Product  
 WHERE ProductModelID BETWEEN 75 and 80;  
 ```  
-  
+
+> [!NOTE]  
+> For more information and examples of scalar functions, see [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md). 
+
 ##  <a name="TVF"></a> Table-Valued Functions  
 The following example creates an **inline table-valued function (TVF)** in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. The function takes one input parameter, a customer (store) ID, and returns the columns `ProductID`, `Name`, and the aggregate of year-to-date sales as `YTD Total` for each product sold to the store.  
   
@@ -174,6 +176,9 @@ The following example invokes the function and specifies employee ID 1.
 SELECT EmployeeID, FirstName, LastName, JobTitle, RecursionLevel  
 FROM dbo.ufn_FindReports(1);  
 ```  
+
+> [!IMPORTANT]  
+> For more information and examples of inline table-valued functions (inline TVFs) and multi-statement table-valued functions (MSTVFs), see [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md). 
 
 ## Best Practices  
 If a user-defined function (UDF) is not created with the `SCHEMABINDING` clause, changes that are made to underlying objects can affect the definition of the function and produce unexpected results when it is invoked. We recommend that you implement one of the following methods to ensure that the function does not become outdated because of changes to its underlying objects:  

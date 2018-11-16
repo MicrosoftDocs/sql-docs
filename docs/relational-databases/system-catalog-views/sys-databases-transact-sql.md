@@ -116,12 +116,12 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  If the caller of `sys.databases` is not the owner of the database and the database is not `master` or `tempdb`, the minimum permissions required to see the corresponding row are `ALTER ANY DATABASE` or the `VIEW ANY DATABASE` server-level permission, or `CREATE DATABASE` permission in the `master` database. The database to which the caller is connected can always be viewed in `sys.databases`.  
   
 > [!IMPORTANT]  
-> By default, the public role has the `VIEW ANY DATABASE` permission, allowing all logins to see database information. To block a login from the ability to detect a database, `REVOKE` the `VIEW ANY DATABASE` permission from `public`, or `DENY` the `VIEW ANY DATABASE permission for individual logins.  
+> By default, the public role has the `VIEW ANY DATABASE` permission, allowing all logins to see database information. To block a login from the ability to detect a database, `REVOKE` the `VIEW ANY DATABASE` permission from `public`, or `DENY` the `VIEW ANY DATABASE` permission for individual logins.  
   
-## [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Remarks  
- In [!INCLUDE[ssSDS](../../includes/sssds-md.md)], this view is available in the `master` database and in user databases. In the `master` database, this view returns the information on the `master` database and all user databases on the server. In a user database, this view returns information only on the current database and the master database.  
+## Azure SQL Database Remarks  
+ In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] this view is available in the `master` database and in user databases. In the `master` database, this view returns the information on the `master` database and all user databases on the server. In a user database, this view returns information only on the current database and the master database.  
   
- Use the `sys.databases` view in the `master` database of the [!INCLUDE[ssSDS](../../includes/sssds-md.md)] server where the new database is being created. After the database copy starts, you can query the `sys.databases` and the `sys.dm_database_copies` views from the `master` database of the destination server to retrieve more information about the copying progress.  
+ Use the `sys.databases` view in the `master` database of the [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] server where the new database is being created. After the database copy starts, you can query the `sys.databases` and the `sys.dm_database_copies` views from the `master` database of the destination server to retrieve more information about the copying progress.  
   
 ## Examples  
   

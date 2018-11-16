@@ -1358,7 +1358,7 @@
       - name: Thread Pool Properties    
     - name: Monitor Analysis Services
       items:
-      - name: Monitoring overview
+      - name: Monitoring tools
         href: ./instances/monitor-an-analysis-services-instance.md
       - name: SQL Server Profiler
         href: ./instances/use-sql-server-profiler-to-monitor-analysis-services.md
@@ -1375,6 +1375,12 @@
         href: ./instances/performance-counters-ssas.md
       - name: Trace-events
         href: https://docs.microsoft.com/bi-reference/trace-events/analysis-services-trace-events
+      - name: Log operations
+        href: ./instances/log-operations-in-analysis-services.md
+    - name: Clear server caches
+      href: ./instances/clear-the-analysis-services-caches.md
+    - name: Database Consistency Checker (DBCC)
+      href: ./instances/database-consistency-checker-dbcc-for-analysis-services.md
   - name: Connect
     items:
     - name: Connect to servers overview

@@ -22,7 +22,7 @@ ms.author: maghan
  Contact the database administrator for connection information and for the credentials to use to connect to the data source. The following connection string example specifies an [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] data source on a server using port 8000 and XML for Analysis Services (XMLA) over the Internet using SOAP:  
   
 ```  
-DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla  
+DataSource=https://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla  
 ```  
   
  For more connection string examples, see [Data Connections, Data Sources, and Connection Strings in Report Builder](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  

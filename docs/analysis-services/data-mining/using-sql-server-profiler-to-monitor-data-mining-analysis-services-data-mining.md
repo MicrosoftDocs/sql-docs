@@ -34,7 +34,7 @@ manager: kfile
  By viewing the command statements in the trace log, you can also see the syntax of complex statements sent by the client to the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] server, including calls to system stored procedures. This information can be useful for debugging, or you can use valid statements as a template for creating new prediction queries or models. For some examples of stored procedure calls that you can capture via a trace, see [Clustering Model Query Examples](../../analysis-services/data-mining/clustering-model-query-examples.md).  
   
 ## See Also  
- [Monitor an Analysis Services Instance](../../analysis-services/instances/monitor-an-analysis-services-instance.md)   
+
  [Monitor Analysis Services with SQL Server Extended Events](../../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)  
   
   

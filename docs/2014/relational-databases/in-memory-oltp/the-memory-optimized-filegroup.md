@@ -43,17 +43,23 @@ The following limitations of memory-optimized filegroup,
 -   You cannot drop a non-empty container or move data and delta file pairs to another container in the memory-optimized filegroup.  
   
 ## Configuring a Memory-Optimized Filegroup  
- You should consider creating multiple containers in the memory-optimized filegroup and distribute them on different drives to achieve more bandwidth to stream the data into memory.  
+Consider creating multiple containers in the memory-optimized filegroup and distribute them on different drives to achieve more bandwidth to stream the data into memory.  
   
- When configuring storage, you must provide free disk space that is four times the size of durable memory-optimized tables. You must also ensure that your I/O subsystem supports the required IOPS for your workload. If data and delta file pairs are populated at a given IOPS, you need 3 times that IOPS to account for storing and merge operations. You can add storage capacity and IOPS by adding one or more containers to the memory-optimized filegroup.  
+When configuring storage, you must provide free disk space that is four times the size of durable memory-optimized tables. Ensure that your I/O subsystem supports the required IOPS for your workload. If data and delta file pairs are populated at a given IOPS, you need three times that IOPS to account for storing and merge operations. You can add storage capacity and IOPS by adding one or more containers to the memory-optimized filegroup.  
   
- In a multiple container, multiple drive scenario, data and delta files are allocated in a round-robin fashion into containers. The first data file is allocated from the first container and the delta file is allocated from the next container and this allocation pattern repeats. This allocation scheme distributes data and delta files evenly across containers if you have an odd number of drives, each mapped to one container. However, if you have an even number of drives, each mapped to a container, it can result in imbalanced storage with data files mapped to odd drives and delta files mapped to even drives. To obtain a balanced stream of I/O on recovery, consider placing pairs of data and delta files on the same spindles/storage as described in the example below.  
-  
- **Example:** Consider a memory-optimized filegroup with two containers: container 1 on drive X and container 2 on drives Y. Since the allocation of data and delta files is done in round-robin fashion, container 1 will only have data files and container 2 will only have delta files, which leads to imbalanced persistence for storage as well as input/output operations per second, as data files are significantly larger than the delta files. To distribute data and delta files uniformly across drives X and Y, create four containers instead of two and map the first two containers to drive X and the next two containers to drive Y. With round-robin allocation, the first data and first delta file will be allocated from container-1 and container-2 respectively which are mapped to drive X. Similarly, the next data and delta file will be allocated from container-3 and container-4 which are mapped to drive Y. This allows distributing data and delta files across two drives uniformly.  
- 
+In a multiple container, multiple drive scenario, data and delta files are allocated in a round-robin fashion into containers. The first data file is allocated from the first container and the delta file is allocated from the next container and this allocation pattern repeats. This allocation scheme distributes data and delta files evenly across containers if you have an odd number of drives, each mapped to one container. However, if you have an even number of drives, each mapped to a container, it can result in imbalanced storage with data files mapped to odd drives and delta files mapped to even drives. To obtain a balanced stream of I/O on recovery, consider placing pairs of data and delta files on the same spindles/storage as described in the example below.  
+
 > [!CAUTION]
 > If a `MAXSIZE` value is set for the memory-optimized filegroup, and checkpoint files exceed the max size of the container, then the database will become SUSPECT.   
 > In this case do not attempt to set the database OFFLINE and ONLINE, causing the database to stay in RECOVERY_PENDING state.
+  
+### Example 
+Consider a memory-optimized filegroup with two containers: container 1 on drive X and container 2 on drives Y.  
+Since the allocation of data and delta files is done in round-robin fashion, container 1 will only have data files and container 2 will only have delta files, which leads to imbalanced persistence for storage as well as input/output operations per second, as data files are significantly larger than the delta files.    
+To distribute data and delta files uniformly across drives X and Y, create four containers instead of two, and map the first two containers to drive X and the next two containers to drive Y.  
+With round-robin allocation, the first data and first delta file will be allocated from container-1 and container-2 respectively, which are mapped to drive X.   
+Similarly, the next data and delta file will be allocated from container-3 and container-4 which are mapped to drive Y. This allows distributing data and delta files across two drives uniformly.  
+ 
   
 ## See Also  
 [Creating and Managing Storage for Memory-Optimized Objects](creating-and-managing-storage-for-memory-optimized-objects.md)     

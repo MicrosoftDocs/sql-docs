@@ -328,6 +328,7 @@ The following features and services are not available on Linux at the time of th
 |-----|-----|
 | **Database engine** | Transactional replication |
 | &nbsp; | Merge replication |
+| &nbsp; | Change Data Capture (see SQL Server Agent) |
 | &nbsp; | Stretch DB |
 | &nbsp; | PolyBase |
 | &nbsp; | Distributed query with 3rd-party connections |
@@ -339,7 +340,7 @@ The following features and services are not available on Linux at the time of th
 | **SQL Server Agent** |  Subsystems: CmdExec, PowerShell, Queue Reader, SSIS, SSAS, SSRS |
 | &nbsp; | Alerts |
 | &nbsp; | Log Reader Agent |
-| &nbsp; | Change Data Capture |
+| &nbsp; | Change Data Capture (CDC) |
 | &nbsp; | Managed Backup |
 | **High Availability** | Database mirroring  |
 | **Security** | Extensible Key Management |

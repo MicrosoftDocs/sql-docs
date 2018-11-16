@@ -48,7 +48,7 @@ manager: craigg
   
  For example, the following query iterates over the <`Step`> elements at the first manufacturing location and returns the string value of the <`Step`> nodes:  
   
-```  
+```sql
 declare @x xml  
 set @x='<ManuInstructions ProductModelID="1" ProductModelName="SomeBike" >  
 <Location LocationID="L1" >  
@@ -76,7 +76,7 @@ Manu step 1 at Loc 1 Manu step 2 at Loc 1 Manu step 3 at Loc 1
   
  The following query is similar to the previous one, except that it is specified against the Instructions column, a typed xml column, of the ProductModel table. The query iterates over all the manufacturing steps, <`step`> elements, at the first work center location for a specific product.  
   
-```  
+```sql
 SELECT Instructions.query('  
    declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
 for $Step in //AWMI:root/AWMI:Location[1]/AWMI:step  
@@ -109,7 +109,7 @@ the aluminum sheet. ....
   
  These are examples of additional input sequences that are allowed:  
   
-```  
+```sql
 declare @x xml  
 set @x=''  
 SELECT @x.query('  
@@ -140,7 +140,7 @@ SELECT @x.query('
   
  In the AdventureWorks sample database, the manufacturing instructions stored in the **Instructions** column of the **Production.ProductModel** table have the following form:  
   
-```  
+```xml
 <Location LocationID="10" LaborHours="1.2"   
             SetupHours=".2" MachineHours=".1">  
   <step>describes 1st manu step</step>  
@@ -152,11 +152,11 @@ SELECT @x.query('
   
  The following query constructs new XML that has the <`Location`> elements with the work center location attributes returned as child elements:  
   
-```  
+```xml
 <Location>  
    <LocationID>10</LocationID>  
    <LaborHours>1.2</LaborHours>  
-   <SetupHours>.2</SteupHours>  
+   <SetupHours>.2</SetupHours>  
    <MachineHours>.1</MachineHours>  
 </Location>  
 ...  
@@ -164,7 +164,7 @@ SELECT @x.query('
   
  This is the query:  
   
-```  
+```sql
 SELECT Instructions.query('  
      declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
         for $WC in /AWMI:root/AWMI:Location  
@@ -190,7 +190,7 @@ where ProductModelID=7
   
  This is a partial result:  
   
-```  
+```xml
 <Location>  
   <LocationID>10</LocationID>  
   <LaborHours>2.5</LaborHours>  
@@ -208,7 +208,7 @@ where ProductModelID=7
   
  In the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database, the manufacturing instructions contain information about the tools required and the location where the tools are used. The following query uses the `let` clause to list the tools required to build a production model, as well as the locations where each tool is needed.  
   
-```  
+```sql
 SELECT Instructions.query('  
      declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
         for $T in //AWMI:tool  
@@ -221,11 +221,11 @@ where ProductModelID=7
 ```  
   
 ## Using the where Clause  
- You can use the `where` clause to filter results of an interation. This is illustrated in this next example.  
+ You can use the `where` clause to filter results of an iteration. This is illustrated in this next example.  
   
  In the manufacturing of a bicycle, the manufacturing process goes through a series of work center locations. Each work center location defines a sequence of manufacturing steps. The following query retrieves only those work center locations that manufacture a bicycle model and have less than three manufacturing steps. That is, they have less than three <`step`> elements.  
   
-```  
+```sql
 SELECT Instructions.query('  
      declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
 for $WC in /AWMI:root/AWMI:Location  
@@ -264,7 +264,7 @@ where ProductModelID=7
 ## Multiple Variable Binding in FLWOR  
  You can have a single FLWOR expression that binds multiple variables to input sequences. In the following example, the query is specified against an untyped xml variable. The FLOWR expression returns the first <`Step`> element child in each <`Location`> element.  
   
-```  
+```sql
 declare @x xml  
 set @x='<ManuInstructions ProductModelID="1" ProductModelName="SomeBike" >  
 <Location LocationID="L1" >  
@@ -305,7 +305,7 @@ Manu step 1 at Loc 2
   
  The following query is similar, except that it is specified against the Instructions column, typed **xml** column, of the **ProductModel** table. [XML Construction (XQuery)](../xquery/xml-construction-xquery.md) is used to generate the XML that you want.  
   
-```  
+```sql
 SELECT Instructions.query('  
      declare default element namespace "https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
 for $WC in /root/Location,  
@@ -329,7 +329,7 @@ WHERE ProductModelID=7
   
  This is the partial result:  
   
-```  
+```xml
 <Step xmlns=  
     "https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"     
   LocationID="10">  
@@ -354,7 +354,7 @@ WHERE ProductModelID=7
   
  The following query retrieves all the telephone numbers for a specific customer from the AdditionalContactInfo column. The results are sorted by telephone number.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT AdditionalContactInfo.query('  
@@ -376,7 +376,7 @@ order by data($a/act:number[1]) descending
   
  This is the result:  
   
-```  
+```xml
 <act:telephoneNumber xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">  
   <act:number>333-333-3334</act:number>  
 </act:telephoneNumber>  
@@ -387,7 +387,7 @@ order by data($a/act:number[1]) descending
   
  Instead of declaring the namespaces in the query prolog, you can declare them by using WITH XMLNAMESPACES.  
   
-```  
+```sql
 WITH XMLNAMESPACES (  
    'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS act,  
    'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo'  AS aci)  
@@ -403,7 +403,7 @@ WHERE BusinessEntityID=291;
   
  You can also sort by attribute value. For example, the following query retrieves the newly created <`Location`> elements that have the LocationID and LaborHours attributes sorted by the LaborHours attribute in descending order. As a result, the work center locations that have the maximum labor hours are returned first.  
   
-```  
+```sql
 SELECT Instructions.query('  
      declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
 for $WC in /AWMI:root/AWMI:Location   
@@ -431,7 +431,7 @@ WHERE ProductModelID=7;
   
  In the following query, the results are sorted by element name. The query retrieves the specifications of a specific product from the product catalog. The specifications are the children of the <`Specifications`> element.  
   
-```  
+```sql
 SELECT CatalogDescription.query('  
      declare namespace  
  pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
@@ -451,7 +451,7 @@ where ProductModelID=19;
   
  This is the result:  
   
-```  
+```xml
 <Color>Available in most colors</Color>  
 <Material>Almuminum Alloy</Material>  
 <ProductLine>Mountain bike</ProductLine>  
@@ -461,7 +461,7 @@ where ProductModelID=19;
   
  Nodes in which the ordering expression returns empty are sorted to the start of the sequence, as shown in the following example:  
   
-```  
+```sql
 declare @x xml  
 set @x='<root>  
   <Person Name="A" />  
@@ -478,7 +478,7 @@ select @x.query('
   
  This is the result:  
   
-```  
+```xml
 <Person />  
 <Person Name="A" />  
 <Person Name="B" />  
@@ -486,7 +486,7 @@ select @x.query('
   
  You can specify multiple sorting criteria, as shown in the following example. The query in this example sorts <`Employee`> elements first by Title and then by Administrator attribute values.  
   
-```  
+```sql
 declare @x xml  
 set @x='<root>  
   <Employee ID="10" Title="Teacher"        Gender="M" />  
@@ -507,7 +507,7 @@ order by $e/@Title ascending, $e/@Gender descending
   
  This is the result:  
   
-```  
+```xml
 <Employee ID="8" Title="Administrator" Gender="M" />  
 <Employee ID="4" Title="Administrator" Gender="F" />  
 <Employee ID="125" Title="Administrator" Gender="F" />  

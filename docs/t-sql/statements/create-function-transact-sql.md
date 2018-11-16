@@ -421,7 +421,7 @@ A function can be schema bound only if the following conditions are true:
 -   The user who executed the `CREATE FUNCTION` statement has `REFERENCES` permission on the database objects that the function references.  
   
 RETURNS NULL ON NULL INPUT | **CALLED ON NULL INPUT**  
-Specifies the **OnNULLCall** attribute of a scalar-valued function. If not specified, CALLED ON NULL INPUT is implied by default. This means that the function body executes even if NULL is passed as an argument.  
+Specifies the **OnNULLCall** attribute of a scalar function. If not specified, CALLED ON NULL INPUT is implied by default. This means that the function body executes even if NULL is passed as an argument.  
   
 If RETURNS NULL ON NULL INPUT is specified in a CLR function, it indicates that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can return NULL when any of the arguments it receives is NULL, without actually invoking the body of the function. If the method of a CLR function specified in \<method_specifier> already has a custom attribute that indicates RETURNS NULL ON NULL INPUT, but the CREATE FUNCTION statement indicates CALLED ON NULL INPUT, the CREATE FUNCTION statement takes precedence. The **OnNULLCall** attribute cannot be specified for CLR table-valued functions. 
   
@@ -557,7 +557,7 @@ If a user-defined function is not created with the `SCHEMABINDING` clause, chang
  For more information about how to program CLR functions, see [CLR User-Defined Functions](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md).  
   
 ## General Remarks  
- Scalar-valued functions can be invoked where scalar expressions are used. This includes computed columns and CHECK constraint definitions. Scalar-valued functions can also be executed by using the [EXECUTE](../../t-sql/language-elements/execute-transact-sql.md) statement. Scalar-valued functions must be invoked by using at least the two-part name of the function. For more information about multipart names, see [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md). Table-valued functions can be invoked where table expressions are allowed in the `FROM` clause of `SELECT`, `INSERT`, `UPDATE`, or `DELETE` statements. For more information, see [Execute User-defined Functions](../../relational-databases/user-defined-functions/execute-user-defined-functions.md).  
+ Scalar functions can be invoked where scalar expressions are used. This includes computed columns and CHECK constraint definitions. Scalar functions can also be executed by using the [EXECUTE](../../t-sql/language-elements/execute-transact-sql.md) statement. Scalar functions must be invoked by using at least the two-part name of the function (*<schema>.<function>*). For more information about multipart names, see [Transact-SQL Syntax Conventions (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md). Table-valued functions can be invoked where table expressions are allowed in the `FROM` clause of `SELECT`, `INSERT`, `UPDATE`, or `DELETE` statements. For more information, see [Execute User-defined Functions](../../relational-databases/user-defined-functions/execute-user-defined-functions.md).  
   
 ## Interoperability  
  The following statements are valid in a function:  

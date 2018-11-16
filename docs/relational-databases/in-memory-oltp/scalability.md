@@ -21,11 +21,11 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
      In the previous release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], there was a single offline checkpoint thread that scanned the transaction log for changes to memory-optimized tables and persisted them in checkpoint files (such as data and delta files). With larger number of COREs, the single offline checkpoint thread could fall behind.  
   
-     In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], there are multiple concurrent threads responsible to persist changes to memory-optimized tables.  
+     Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], there are multiple concurrent threads responsible to persist changes to memory-optimized tables.  
   
 -   **Multi-threaded recovery**  
   
-     In the previous release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the log apply as part of recovery operation was single threaded. In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], the log apply is multi-threaded.  
+     In the previous release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the log apply as part of recovery operation was single threaded. Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], the log apply is multi-threaded.  
   
 -   **MERGE Operation**  
   
@@ -33,10 +33,17 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 -   **Dynamic management views**  
   
-     [sys.dm_db_xtp_checkpoint_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-stats-transact-sql.md) and [sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql.md)have been changed significantly.  
+     [sys.dm_db_xtp_checkpoint_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-stats-transact-sql.md) and [sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql.md) have been changed significantly.  
   
- Manual Merge has been disabled as multi-threaded merge is expected to keep up with the load.  
+> [!NOTE]
+> Manual Merge has been disabled as multi-threaded merge is expected to keep up with the load.  
   
- The In-memory OLTP engine continues to use memory-optimized filegroup based on FILESTREAM, but the individual files in the filegroup are decoupled from FILESTREAM. These files are fully managed (such as for create, drop, and garbage collection) by the In-Memory OLTP engine. [DBCC SHRINKFILE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md) is not supported.  
+The In-memory OLTP engine continues to use memory-optimized filegroup based on FILESTREAM, but the individual files in the filegroup are decoupled from FILESTREAM. These files are fully managed (such as for create, drop, and garbage collection) by the In-Memory OLTP engine. 
+
+> [!NOTE]
+> [DBCC SHRINKFILE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md) is not supported.  
   
-  
+## See Also   
+[Creating and Managing Storage for Memory-Optimized Objects](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)     
+[Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)    
+[ALTER DATABASE File and Filegroup Options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)    

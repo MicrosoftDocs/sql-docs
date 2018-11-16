@@ -143,7 +143,7 @@ ms.technology:
                             <li class="fullSpan">
                                 <ul class="cardsC panelContent singlePanelContent cols cols4" style="display:flex!important;">
                                     <li>
-                                      <a href="/sql/lp/sql-server/install-sql-and-services/">
+                                      <a style="display: block;" href="/sql/lp/sql-server/install-sql-and-services/">
                                           <div class="cardSize">
                                               <div class="cardPadding">
                                                   <div class="card">
@@ -162,7 +162,7 @@ ms.technology:
                                       </a>
                                     </li>
                                     <li>
-                                      <a href="/sql/lp/sql-server/business-continuity/">
+                                      <a style="display: block;" href="/sql/lp/sql-server/business-continuity/">
                                           <div class="cardSize">
                                               <div class="cardPadding">
                                                   <div class="card">
@@ -181,7 +181,7 @@ ms.technology:
                                       </a>
                                     </li>
                                     <li>
-                                      <a href="/sql/lp/sql-server/secure-sql-server/">
+                                      <a style="display: block;" href="/sql/lp/sql-server/secure-sql-server/">
                                           <div class="cardSize">
                                               <div class="cardPadding">
                                                   <div class="card">
@@ -200,7 +200,7 @@ ms.technology:
                                       </a>
                                     </li>
                                     <li>
-                                      <a href="/sql/lp/sql-server/manage-monitor-tune/">
+                                      <a style="display: block;" href="/sql/lp/sql-server/manage-monitor-tune/">
                                           <div class="cardSize">
                                               <div class="cardPadding">
                                                   <div class="card">
@@ -219,7 +219,7 @@ ms.technology:
                                       </a>
                                     </li>
                                     <li>
-                                      <a href="/sql/lp/sql-server/load-move-data/">
+                                      <a style="display: block;" href="/sql/lp/sql-server/load-move-data/">
                                           <div class="cardSize">
                                               <div class="cardPadding">
                                                   <div class="card">
@@ -238,7 +238,7 @@ ms.technology:
                                       </a>
                                     </li>
                                     <li>
-                                      <a href="/sql/lp/sql-server/database-design/">
+                                      <a style="display: block;" href="/sql/lp/sql-server/database-design/">
                                           <div class="cardSize">
                                               <div class="cardPadding">
                                                   <div class="card">
@@ -257,7 +257,7 @@ ms.technology:
                                       </a>
                                     </li>
                                     <li>
-                                      <a href="/sql/lp/sql-server/query-data/">
+                                      <a style="display: block;" href="/sql/lp/sql-server/query-data/">
                                           <div class="cardSize">
                                               <div class="cardPadding">
                                                   <div class="card">
@@ -276,7 +276,7 @@ ms.technology:
                                       </a>
                                     </li>
                                     <li>
-                                      <a href="/sql/lp/sql-server/sql-education-center/">
+                                      <a style="display: block;" href="/sql/lp/sql-server/sql-education-center/">
                                           <div class="cardSize">
                                               <div class="cardPadding">
                                                   <div class="card">

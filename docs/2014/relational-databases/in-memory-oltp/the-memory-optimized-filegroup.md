@@ -58,6 +58,4 @@ The following limitations of memory-optimized filegroup,
 ## See Also  
 [Creating and Managing Storage for Memory-Optimized Objects](creating-and-managing-storage-for-memory-optimized-objects.md)     
 [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)    
-[ALTER DATABASE File and Filegroup Options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md) 
-  
   

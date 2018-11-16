@@ -79,14 +79,14 @@ A document map provides a set of navigational links to report items in a rendere
      For example, for the [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] sample reports, the following URL specifies the report named Product Catalog.  
   
     ```  
-    http://localhost/Reports/Pages/Report.aspx?ItemPath=%2fAdventureWorks2012+Sample+Reports%2fProduct+Catalog  
+    https://localhost/Reports/Pages/Report.aspx?ItemPath=%2fAdventureWorks2012+Sample+Reports%2fProduct+Catalog  
     ```  
   
 2.  Copy the report path on the server. In the example, the report path is `%2fAdventureWorks2012+Sample+Reports%2fProduct+Catalog`.  
   
 3.  Create a new URL with the following three components:  
   
-    -   The report viewer on the report server: `http://localhost/ReportServer/Pages/ReportViewer.aspx?`  
+    -   The report viewer on the report server: `https://localhost/ReportServer/Pages/ReportViewer.aspx?`  
   
     -   The name of the report you copied in step 1, for example: `%2fAdventureWorks2012+Sample+Reports%2fProduct+Catalog`  
   
@@ -95,7 +95,7 @@ A document map provides a set of navigational links to report items in a rendere
      The following URL consists of these three components appended in the order they are listed.  
   
     ```  
-    http://localhost/ReportServer/Pages/ReportViewer.aspx?  
+    https://localhost/ReportServer/Pages/ReportViewer.aspx?  
     %2fAdventureWorks2012+Sample+Reports%2fProduct+Catalog  
     &rs%3aCommand=Render&rc%3aFormat=HTML4.0&rc%3aDocMap=False  
     ```  

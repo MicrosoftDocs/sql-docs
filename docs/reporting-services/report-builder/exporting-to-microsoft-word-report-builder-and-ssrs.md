@@ -109,9 +109,9 @@ ms.author: maggies
   
  The following topics provide additional information about setting Office and Word options.  
   
--   Change the editing language in **Microsoft Office Language Preferences** or **Word Options** dialog box in Word. For more information, see [Enable the use of other languages in your Office programs](http://office.microsoft.com/word-help/enable-the-use-of-other-languages-in-your-office-programs-HA010354783.aspx?CTT=1).  
+-   Change the editing language in **Microsoft Office Language Preferences** or **Word Options** dialog box in Word. For more information, see [Enable the use of other languages in your Office programs](https://office.microsoft.com/word-help/enable-the-use-of-other-languages-in-your-office-programs-HA010354783.aspx?CTT=1).  
   
--   Add Office language packs and then change the editing language. For more information, see [Enable the use of other languages in your Office programs](http://office.microsoft.com/word-help/enable-the-use-of-other-languages-in-your-office-programs-HA010354783.aspx?CTT=1) and [Office Language Options](http://office.microsoft.com/language/).  
+-   Add Office language packs and then change the editing language. For more information, see [Enable the use of other languages in your Office programs](https://office.microsoft.com/word-help/enable-the-use-of-other-languages-in-your-office-programs-HA010354783.aspx?CTT=1) and [Office Language Options](https://office.microsoft.com/language/).  
   
 > [!NOTE]  
 >  When you change the editing language in **Microsoft Office Language Preferences** or the **Word Options** dialog box in Word, the change applies to all Office programs.  

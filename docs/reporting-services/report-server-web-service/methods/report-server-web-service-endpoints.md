@@ -32,7 +32,7 @@ ms.author: maghan
  If the report server is configured for native mode or SharePoint integrate mode, the WSDL for the management endpoint can be accessed using one of the following URL:  
   
 ```  
-http://<Server Name>/ReportServer/ReportService2010.asmx?wsdl  
+https://<Server Name>/ReportServer/ReportService2010.asmx?wsdl  
 ```  
   
  For more information, see [Accessing the SOAP API](../../../reporting-services/report-server-web-service/accessing-the-soap-api.md).  
@@ -43,13 +43,13 @@ http://<Server Name>/ReportServer/ReportService2010.asmx?wsdl
  The WSDL for the management endpoint can be accessed using the following URL:  
   
 ```  
-http://<Server Name>/ReportServer/ReportExecution2005.asmx?wsdl  
+https://<Server Name>/ReportServer/ReportExecution2005.asmx?wsdl  
 ```  
   
  If the report server is configured for SharePoint integrate mode, the WSDL can be accessed using the following URL:  
   
 ```  
-http://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportExecution2005.asmx?wsdl  
+https://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportExecution2005.asmx?wsdl  
 ```  
   
  For more information, please see [Accessing the SOAP API](../../../reporting-services/report-server-web-service/accessing-the-soap-api.md).  
@@ -67,15 +67,15 @@ http://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportExecution2005.asmx?
  The following are example URLs for referencing the proxy endpoints on a SharePoint site.  
   
 ```  
-http://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportService2010.asmx  
+https://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportService2010.asmx  
 ```  
   
 ```  
-http://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportExecution2005.asmx  
+https://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportExecution2005.asmx  
 ```  
   
 ```  
-http://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportServiceAuthentication.asmx  
+https://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportServiceAuthentication.asmx  
 ```  
   
 ## See Also  

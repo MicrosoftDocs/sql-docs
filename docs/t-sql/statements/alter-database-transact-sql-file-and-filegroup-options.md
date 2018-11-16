@@ -189,7 +189,8 @@ Specifies the operating system (physical) file name.
 ' *os_file_name* '  
 For a standard (ROWS) filegroup, this is the path and file name that is used by the operating system when you create the file. The file must reside on the server on which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed. The specified path must exist before executing the ALTER DATABASE statement.  
   
-SIZE, MAXSIZE, and FILEGROWTH parameters cannot be set when a UNC path is specified for the file.  
+> [!NOTE]
+> SIZE, MAXSIZE, and FILEGROWTH parameters cannot be set when a UNC path is specified for the file.  
   
 > [!NOTE]  
 > System databases cannot reside in UNC share directories.  
@@ -199,16 +200,20 @@ Data files should not be put on compressed file systems unless the files are rea
 If the file is on a raw partition, *os_file_name* must specify only the drive letter of an existing raw partition. Only one file can be put on each raw partition.  
   
 **'** *filestream_path* **'**  
-For a FILESTREAM filegroup, FILENAME refers to a path where FILESTREAM data will be stored. The path up to the last folder must exist, and the last folder must not exist. For example, if you specify the path C:\MyFiles\MyFilestreamData, C:\MyFiles must exist before you run ALTER DATABASE, but the MyFilestreamData folder must not exist.  
+For a FILESTREAM filegroup, FILENAME refers to a path where FILESTREAM data will be stored. The path up to the last folder must exist, and the last folder must not exist. For example, if you specify the path `C:\MyFiles\MyFilestreamData`, then `C:\MyFiles` must exist before you run ALTER DATABASE, but the `MyFilestreamData` folder must not exist.  
   
-The SIZE and FILEGROWTH properties do not apply to a FILESTREAM filegroup.  
+> [!NOTE]
+> The SIZE and FILEGROWTH properties do not apply to a FILESTREAM filegroup.  
   
 **'** *memory_optimized_data_path* **'**  
-For a memory-optimized filegroup, FILENAME refers to a path where memory-optimized data will be stored. The path up to the last folder must exist, and the last folder must not exist. For example, if you specify the path C:\MyFiles\MyData, C:\MyFiles must exist before you run ALTER DATABASE, but the MyData folder must not exist.  
+For a memory-optimized filegroup, FILENAME refers to a path where memory-optimized data will be stored. The path up to the last folder must exist, and the last folder must not exist. For example, if you specify the path `C:\MyFiles\MyData`, then `C:\MyFiles` must exist before you run ALTER DATABASE, but the `MyData` folder must not exist.  
   
 The filegroup and file (`<filespec>`) must be created in the same statement.  
   
-The SIZE, MAXSIZE, and FILEGROWTH properties do not apply to a memory-optimized filegroup.  
+> [!NOTE]
+> The SIZE and FILEGROWTH properties do not apply to a MEMORY_OPTIMIZED_DATA filegroup.  
+
+For more information on memory-optimized filegroups, see [The Memory Optimized Filegroup](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md).
   
 SIZE *size*  
 Specifies the file size. SIZE does not apply to FILESTREAM filegroups.  
@@ -253,7 +258,7 @@ OFFLINE
 Sets the file offline and makes all objects in the filegroup inaccessible.  
   
 > [!CAUTION]  
->  Use this option only when the file is corrupted and can be restored. A file set to OFFLINE can only be set online by restoring the file from backup. For more information about restoring a single file, see [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
+> Use this option only when the file is corrupted and can be restored. A file set to OFFLINE can only be set online by restoring the file from backup. For more information about restoring a single file, see [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
   
 > [!NOTE]  
 > \<filespec> options are not available in a Contained Database.  

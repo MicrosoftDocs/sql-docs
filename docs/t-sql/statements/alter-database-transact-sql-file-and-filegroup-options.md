@@ -283,7 +283,7 @@ REMOVE FILEGROUP *filegroup_name*
 Removes a filegroup from the database. The filegroup cannot be removed unless it is empty. Remove all files from the filegroup first. For more information, see "REMOVE FILE *logical_file_name*," earlier in this topic.  
   
 > [!NOTE]  
-> Unless the FILESTREAM Garbage Collector has removed all the files from a FILESTREAM container, the `ALTER DATABASE REMOVE FILE` operation to remove a FILESTREAM container will fail and return an error. See the [Removing a FILESTREAM Container](removing-a-filestream-container) section later in this topic.  
+> Unless the FILESTREAM Garbage Collector has removed all the files from a FILESTREAM container, the `ALTER DATABASE REMOVE FILE` operation to remove a FILESTREAM container will fail and return an error. See the [Removing a FILESTREAM Container](#removing-a-filestream-container) section later in this topic.  
   
 MODIFY FILEGROUP *filegroup_name* { \<filegroup_updatability_option> | DEFAULT | NAME **=**_new\_filegroup\_name_ }
 Modifies the filegroup by setting the status to READ_ONLY or READ_WRITE, making the filegroup the default filegroup for the database, or changing the filegroup name.  

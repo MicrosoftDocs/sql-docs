@@ -1,7 +1,7 @@
 ---
 title: "The Memory Optimized Filegroup | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/14/2017"
+ms.date: "11/19/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: in-memory-oltp

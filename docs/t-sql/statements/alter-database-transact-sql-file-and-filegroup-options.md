@@ -139,7 +139,7 @@ Removes the logical file description from an instance of [!INCLUDE[ssNoVersion](
 Is the logical name used in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] when referencing the file.  
   
 > [!WARNING]  
-> Removing a database file that has FILE_SNAPSHOT backups associated with it will succeed, but any associated snapshots will not be deleted to avoid invalidating the backups referring to the database file. The file will be truncated, but will not be physically deleted in order to keep the FILE_SNAPSHOT backups intact. For more information, see [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+> Removing a database file that has `FILE_SNAPSHOT` backups associated with it will succeed, but any associated snapshots will not be deleted to avoid invalidating the backups referring to the database file. The file will be truncated, but will not be physically deleted in order to keep the FILE_SNAPSHOT backups intact. For more information, see [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
 MODIFY FILE  
 Specifies the file that should be modified. Only one \<filespec> property can be changed at a time. NAME must always be specified in the \<filespec> to identify the file to be modified. If SIZE is specified, the new size must be larger than the current file size.  
@@ -165,7 +165,7 @@ For a FILESTREAM filegroup, NAME can be modified online. FILENAME can be modifie
 You can set a FILESTREAM file to OFFLINE. When a FILESTREAM file is offline, its parent filegroup will be internally marked as offline; therefore, all access to FILESTREAM data within that filegroup will fail.  
   
 > [!NOTE]  
->  \<add_or_modify_files> options are not available in a Contained Database.
+> \<add_or_modify_files> options are not available in a Contained Database.
   
 **\<filespec>::=**  
   
@@ -226,6 +226,11 @@ When specified with ADD FILE, *size* is the initial size for the file. When spec
 When *size* is not supplied for the primary file, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses the size of the primary file in the **model** database. When a secondary data file or log file is specified but *size* is not specified for the file, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] makes the file 1 MB.  
   
 The KB, MB, GB, and TB suffixes can be used to specify kilobytes, megabytes, gigabytes, or terabytes. The default is MB. Specify a whole number and do not include a decimal. To specify a fraction of a megabyte, convert the value to kilobytes by multiplying the number by 1024. For example, specify 1536 KB instead of 1.5 MB (1.5 x 1024 = 1536).  
+
+> [!NOTE] 
+> `SIZE` cannot be set:
+> - When a UNC path is specified for the file  
+> - For `FILESTREAM` and `MEMORY_OPTIMIZED_DATA` filegroups   
   
 MAXSIZE { *max_size*| UNLIMITED }  
 Specifies the maximum file size to which the file can grow.  
@@ -235,6 +240,9 @@ Is the maximum file size. The KB, MB, GB, and TB suffixes can be used to specify
   
 UNLIMITED  
 Specifies that the file grows until the disk is full. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a log file specified with unlimited growth has a maximum size of 2 TB, and a data file has a maximum size of 16 TB. There is no maximum size when this option is specified for a FILESTREAM container. It continues to grow until the disk is full.  
+
+> [!NOTE] 
+> `MAXSIZE` cannot be set when a UNC path is specified for the file.
   
 FILEGROWTH *growth_increment*  
 Specifies the automatic growth increment of the file. The FILEGROWTH setting for a file cannot exceed the MAXSIZE setting. FILEGROWTH does not apply to FILESTREAM filegroups.  
@@ -253,7 +261,12 @@ If FILEGROWTH is not specified, the default values are:
 |Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|Data 64 MB. Log files 64 MB.|  
 |Starting with [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Data 1 MB. Log files 10%.|  
 |Prior to [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Data 10%. Log files 10%.|  
-  
+
+> [!NOTE] 
+> `FILEGROWTH` cannot be set:
+> - When a UNC path is specified for the file  
+> - For `FILESTREAM` and `MEMORY_OPTIMIZED_DATA` filegroups   
+
 OFFLINE  
 Sets the file offline and makes all objects in the filegroup inaccessible.  
   

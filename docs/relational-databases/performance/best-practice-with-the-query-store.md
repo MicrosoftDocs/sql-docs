@@ -28,7 +28,7 @@ Download the latest version of [!INCLUDE[ssManStudio](../../includes/ssmanstudio
   
 ##  <a name="Insight"></a> Use Query Performance Insight in Azure SQL Database  
  If you run Query Store in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] you can use **Query Performance Insight** to analyze DTU consumption over time.  
-While you can use [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] to get detailed resource consumption for all your queries (CPU, memory, IO, etc.), Query Performance Insight gives you a quick and efficient way to determine their impact on overall DTU consumption for your database.  
+While you can use [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] to get detailed resource consumption for all your queries (CPU, memory, I/O, etc.), Query Performance Insight gives you a quick and efficient way to determine their impact on overall DTU consumption for your database.  
 For more information, see [Azure SQL Database Query Performance Insight](https://azure.microsoft.com/documentation/articles/sql-database-query-performance/).    
 
 ##  Using Query Store with Elastic Pool Databases
@@ -42,11 +42,11 @@ The default parameters are good enough to start, but you should monitor how Quer
   
  Here are guidelines to follow for setting parameter values:  
   
- **Max Size (MB):** Specifies the limit for the data space that Query Store will take inside your database.  This is the most important setting that directly affects operation mode of the Query Store.  
+ **Max Size (MB):** Specifies the limit for the data space that Query Store will take inside your database. This is the most important setting that directly affects operation mode of the Query Store.  
   
  While Query Store collects queries, execution plans and statistics, its size in the database grows until this limit is reached. When that happens, Query Store automatically changes the operation mode to read-only and stops collecting new data, which means that your performance analysis is no longer accurate.  
   
- The default value (100 MB) may not be sufficient if your workload generates large number of different queries and plans or if you want to keep query history for a longer period of time. Keep track of current space usage and increase the Max Size (MB) to prevent Query Store from transitioning to read-only mode.  Use [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] or execute the following script to get the latest information about Query Store size:  
+ The default value (100 MB) may not be sufficient if your workload generates large number of different queries and plans or if you want to keep query history for a longer period of time. Keep track of current space usage and increase the Max Size (MB) to prevent Query Store from transitioning to read-only mode. Use [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] or execute the following script to get the latest information about Query Store size:  
   
 ```sql 
 USE [QueryStoreDB];  
@@ -63,11 +63,24 @@ FROM sys.database_query_store_options;
 ALTER DATABASE [QueryStoreDB]  
 SET QUERY_STORE (MAX_STORAGE_SIZE_MB = 1024);  
 ```  
-  
- **Statistics Collection Interval:** Defines level of granularity for the collected runtime statistic (the default is 1 hour). Consider using lower value if you require finer granularity or less time to detect and mitigate issues but keep in mind that it will directly affect the size of Query Store data. Use SSMS or Transact-SQL to set different value for Statistics Collection Interval:  
+
+ **Data Flush Interval:** Defines frequency in seconds to persist collected runtime statistics to disk (the default is 900 seconds, which is 15 minutes). Consider using higher value if your workload does not generates large number of different queries and plans, or if you can withstand longer time to persist data before a database shutdown. 
+ 
+> [!NOTE]
+> Using trace flag 7745 will prevent Query Store data from being written to disk in case of a failover or shutdown command. See the [Use trace flags on mission critical servers to improve recovery from disaster](#Recovery) section for more detail.
+
+Use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)] to set different value for Data Flush Interval:  
   
 ```sql  
-ALTER DATABASE [QueryStoreDB] SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 60);  
+ALTER DATABASE [QueryStoreDB] 
+SET QUERY_STORE (DATA_FLUSH_INTERVAL_SECONDS = 900);  
+```  
+
+ **Statistics Collection Interval:** Defines level of granularity for the collected runtime statistic (the default is 60 minutes). Consider using lower value if you require finer granularity or less time to detect and mitigate issues but keep in mind that it will directly affect the size of Query Store data. Use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)] to set different value for Statistics Collection Interval:  
+  
+```sql  
+ALTER DATABASE [QueryStoreDB] 
+SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 60);  
 ```  
   
  **Stale Query Threshold (Days):** Time-based cleanup policy that controls the retention period of persisted runtime statistics and inactive queries.  
@@ -141,7 +154,7 @@ Navigate to the Query Store sub-folder under the database node in Object Explore
 |Tracked Queries|Track the execution of the most important queries in real time. Typically, you use this view when you have queries with forced plans and you want to make sure that query performance is stable.|
   
 > [!TIP]  
->  For a detailed description how to use [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] to identify the top resource consuming queries and fix those that regressed due to the change of a plan choice, see [Query Store @Azure Blogs](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/).  
+> For a detailed description how to use [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] to identify the top resource consuming queries and fix those that regressed due to the change of a plan choice, see [Query Store @Azure Blogs](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/).  
   
  When you identify a query with sub-optimal performance, your action depends on the nature of the problem.  
   

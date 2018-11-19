@@ -31,7 +31,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |**name**|**nvarchar(60)**|The name of the configuration option. For information about the possible configurations, see [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).|  
 |**value**|**sqlvariant**|The value set for this configuration option for the primary replica.|  
 |**value_for_secondary**|**sqlvariant**|The value set for this configuration option for the secondary replicas.|  
-|**elevate_online**|**nvarchar(60)** |The db scoped default set for the online option for index operations |
+|**is_value_default**|**bit** |Specifies whether the value set is the default value.|
 |**elevate_resumable**|nvarchar(60)|The db scoped default set for the resumable option for index operations| 
   
 ##  <a name="Permissions"></a> Permissions  

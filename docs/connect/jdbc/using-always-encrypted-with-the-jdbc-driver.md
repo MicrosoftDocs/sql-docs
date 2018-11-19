@@ -255,7 +255,7 @@ import com.microsoft.sqlserver.jdbc.SQLServerException;
  */
 public class AlwaysEncrypted {
     // Alias of the key stored in the keystore.
-    private static String keyAlias = "<proide key alias>";
+    private static String keyAlias = "<provide key alias>";
 
     // Name by which the column master key will be known in the database.
     private static String columnMasterKeyName = "MyCMK";

@@ -52,7 +52,7 @@ The final page should look like the following.
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="https://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
     <title></title>
@@ -61,7 +61,7 @@ The final page should look like the following.
     <form id="form1" runat="server">
     <asp:ScriptManager runat="server"></asp:ScriptManager>        
         <rsweb:ReportViewer ID="ReportViewer1" runat="server" ProcessingMode="Remote">
-            <ServerReport ReportServerUrl="http://AContosoDepartment/ReportServer" ReportPath="/LatestSales" />
+            <ServerReport ReportServerUrl="https://AContosoDepartment/ReportServer" ReportPath="/LatestSales" />
         </rsweb:ReportViewer>
     </form>
 </body>
@@ -174,7 +174,7 @@ If setting the height of the viewer control to 100% the parent element is requir
 
 ```
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="https://www.w3.org/1999/xhtml">
 <head runat="server">
     <style>
         html,body,form,#div1 {
@@ -187,7 +187,7 @@ If setting the height of the viewer control to 100% the parent element is requir
     <div id="div1" >
             <asp:ScriptManager runat="server"></asp:ScriptManager>
         <rsweb:ReportViewer ID="ReportViewer1" runat="server" ProcessingMode="Remote" Height="100%" Width="100%">
-            <ServerReport ReportServerUrl="http://test/ReportServer" ReportPath="/testreport" />
+            <ServerReport ReportServerUrl="https://test/ReportServer" ReportPath="/testreport" />
         </rsweb:ReportViewer>
     </div>
     </form>
@@ -202,7 +202,7 @@ For more information about viewport percentage lengths, see [Viewport-percentage
 
 ```
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="https://www.w3.org/1999/xhtml">
 <head runat="server">
 </head>
 <body>
@@ -210,7 +210,7 @@ For more information about viewport percentage lengths, see [Viewport-percentage
     <div style="height:100vh;">
             <asp:ScriptManager runat="server"></asp:ScriptManager>
         <rsweb:ReportViewer ID="ReportViewer1" runat="server" ProcessingMode="Remote" Height="100%" Width="100%">
-            <ServerReport ReportServerUrl="http://test/ReportServer" ReportPath="/testreport" />
+            <ServerReport ReportServerUrl="https://test/ReportServer" ReportPath="/testreport" />
         </rsweb:ReportViewer>
     </div>
     </form>

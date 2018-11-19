@@ -33,7 +33,7 @@ Class Sample
    Sub Main()  
       Dim rs As New ReportingService2010()  
       rs.Credentials = System.Net.CredentialCache.DefaultCredentials  
-      rs.Url = "http://<Server Name>/reportserver/ReportService2010.asmx"  
+      rs.Url = "https://<Server Name>/reportserver/ReportService2010.asmx"  
   
       Dim items() As CatalogItem  
   
@@ -76,7 +76,7 @@ class Sample
    {  
    ReportingService2010 rs = new ReportingService2010();  
       rs.Credentials = System.Net.CredentialCache.DefaultCredentials;  
-      rs.Url = "http://<Server Name>/reportserver/ReportService2010.asmx";  
+      rs.Url = "https://<Server Name>/reportserver/ReportService2010.asmx";  
   
       CatalogItem[] items;  
   

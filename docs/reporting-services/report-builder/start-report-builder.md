@@ -33,7 +33,7 @@ ms.author: maggies
   
 ## To start [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] from the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] web portal  
   
-1.  In your Web browser, type the URL for your report server in the address bar. By default, the URL is http://\<*servername*>/reports.  
+1.  In your Web browser, type the URL for your report server in the address bar. By default, the URL is https://\<*servername*>/reports.  
   
 2.  In the top bar of the web portal, select **New** > **Paginated Report**.  
   

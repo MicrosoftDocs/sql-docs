@@ -69,9 +69,9 @@ You can link to bookmarks to a location in the current report. To link to a book
   
 4.  In **Select URL**, type or select a URL or an expression that evaluates to a URL, or click the drop-down arrow and click the name of a field that contains a URL. 
 
-    For an item published to a report server configured for native mode, use a full or relative path. For example, `http://<servername>/images/image1.jpg`. 
+    For an item published to a report server configured for native mode, use a full or relative path. For example, `https://<servername>/images/image1.jpg`. 
     
-    For an item published to a report server configured in SharePoint integrated mode, use a fully qualified URL. For example, `http://<SharePointservername>/<site>/Documents/images/image1.jpg`.
+    For an item published to a report server configured in SharePoint integrated mode, use a fully qualified URL. For example, `https://<SharePointservername>/<site>/Documents/images/image1.jpg`.
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 

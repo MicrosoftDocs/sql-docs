@@ -24,7 +24,7 @@ ms.author: maggies
  
 ## Install [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] with System Center Configuration Manager 
   
- An administrator can also use software such as System Center Configuration Manager to push the program to your computer. To learn how to use specific software to install [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], consult the documentation for the software. For more information, see the [System Center Configuration Manager site](https://www.microsoft.com/en-us/cloud-platform/system-center-configuration-manager).  
+ An administrator can also use software such as System Center Configuration Manager to push the program to your computer. To learn how to use specific software to install [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], consult the documentation for the software. For more information, see the [System Center Configuration Manager site](https://www.microsoft.com/cloud-platform/system-center-configuration-manager).  
   
 > [!IMPORTANT]  
 >  Windows Vista and Windows 7 security features require elevated permissions to run command line operations and will prompt for permission to run the command line. The installation is not silent. To make the installation silent, you need to run the command line as an administrator.  

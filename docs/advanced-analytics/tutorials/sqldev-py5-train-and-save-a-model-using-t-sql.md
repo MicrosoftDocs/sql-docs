@@ -48,16 +48,6 @@ You load the modules and call the necessary functions to create and train the mo
     GO
     ```
 
-## Add a name column in nyc_taxi_models
-
-Scripts in this tutorial store a model name as a label for generated models. The model name is used in queries to select a revoscalepy or SciKit model.
-
-1. In Management Studio, open the **nyc_taxi_models** table.
-
-2. Right-click **Columns** and click **New Column**. Set the column name to *name*, with a type **nchar(250)**, and allow nulls.
-
-    ![Name column for storing model names](media/sqldev-python-newcolumn.png)
-
 ## Build a logistic regression model
 
 After the data has been prepared, you can use it to train a model. You do this by calling a stored procedure that runs some Python code, taking as input the training data table. For this tutorial, you create two models, both binary classification models:

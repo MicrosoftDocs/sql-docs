@@ -110,7 +110,7 @@ In this tutorial lesson, you will add grouping and totals to your [!INCLUDE[ssRS
 3.  In the **TargetServerURL** type the name of your report server, for example   
     - `http:/<servername>/reportserver`  
    
-    - `http://localhost/reportserver` works if your designing the report on the report server.  
+    - `https://localhost/reportserver` works if your designing the report on the report server.  
   
   
 4. Note the TargetReportFolder is tutorial, the name of the project.  This is the name of the folder that the report will deploy to in the next steps.  
@@ -124,7 +124,7 @@ In this tutorial lesson, you will add grouping and totals to your [!INCLUDE[ssRS
     > Skipping 'Sales Orders.rdl'. Item is up to date.  
     > Build complete -- 0 errors, 0 warnings  
     > ------ Deploy started: Project: tutorial, Configuration: Debug ------  
-    > Deploying to http://[server name]/reportserver  
+    > Deploying to https://[server name]/reportserver  
     > Deploying report '/tutorial/Sales Orders'.  
     > Deploy complete -- 0 errors, 0 warnings  
     > ========== Build: 1 succeeded or up-to-date, 0 failed, 0 skipped ==========  
@@ -138,8 +138,8 @@ In this tutorial lesson, you will add grouping and totals to your [!INCLUDE[ssRS
   
     Browse to [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] web portal URL.   
     **Note:** The *portal* URL is "Reports", not the Report *Server* URL of "Reportserver".  For example:   
-    `http://<server name>/reports`.  
-    `http://localhost/reports` works if you're designing the report on the report server.  
+    `https://<server name>/reports`.  
+    `https://localhost/reports` works if you're designing the report on the report server.  
   
 8.  Browse to the folder that contains the report. The default name is *tutorial*, the name of the project or the name you typed into the TargetReportFolder fiedl in the project properties.   
 Click the name of the report **Sales Orders** to view the rendered report in the browser.  

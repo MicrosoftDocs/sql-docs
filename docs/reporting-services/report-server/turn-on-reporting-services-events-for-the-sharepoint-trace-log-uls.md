@@ -105,7 +105,7 @@ Get-SPDiagnosticConfig
 |Report Server Catalog||  
 |Report Server Chunk||  
 |Report Server Cleanup||  
-|Report Server Configuration Manager|Sample entries:<br /><br /> MediumUsing report server internal url `http://localhost:80/ReportServer`.<br /><br /> UnexpectedMissing or Invalid ExtendedProtectionLevel setting|  
+|Report Server Configuration Manager|Sample entries:<br /><br /> MediumUsing report server internal url `https://localhost:80/ReportServer`.<br /><br /> UnexpectedMissing or Invalid ExtendedProtectionLevel setting|  
 |Report Server Crypto||  
 |Report Server Data Extension||  
 |Report Server DB Polling||  

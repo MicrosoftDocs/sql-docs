@@ -195,7 +195,7 @@ The query returns the following columns:
 
 ## Memory configuration
 
-View information about the maximum memory configuration in percentage of SQL Server and external resource pools. If SQL Sever is running with the default value of `max server memory (MB)`, it is considered as 100% of the OS memory.
+View information about the maximum memory configuration in percentage of SQL Server and external resource pools. If SQL Server is running with the default value of `max server memory (MB)`, it is considered as 100% of the OS memory.
 
 ![Output from the memory configuration query](media/dmv-memory-configuration.png "Output from the memory configuration query")
 

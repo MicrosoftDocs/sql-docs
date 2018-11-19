@@ -2112,6 +2112,56 @@
             "redirect_document_id": true
         },
         {
+            "source_path": "docs/analysis-services/powershell/get-powerpivotserviceapplication-cmdlet.md",
+            "redirect_url": "/sql/analysis-services/powershell/analysis-services-powershell-reference",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/analysis-services/powershell/get-powerpivotsystemservice-cmdlet.md",
+            "redirect_url": "/sql/analysis-services/powershell/analysis-services-powershell-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/analysis-services/powershell/get-powerpivotsystemserviceinstance-cmdlet.md",
+            "redirect_url": "/sql/analysis-services/powershell/analysis-services-powershell-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/analysis-services/powershell/new-powerpivotserviceapplication-cmdlet.md",
+            "redirect_url": "/sql/analysis-services/powershell/analysis-services-powershell-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/analysis-services/powershell/new-powerpivotsystemserviceinstance-cmdlet.md",
+            "redirect_url": "/sql/analysis-services/powershell/analysis-services-powershell-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/analysis-services/powershell/remove-powerpivotserviceapplication-cmdlet.md",
+            "redirect_url": "/sql/analysis-services/powershell/analysis-services-powershell-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/analysis-services/powershell/remove-powerpivotsystemserviceinstance-cmdlet.md",
+            "redirect_url": "/sql/analysis-services/powershell/analysis-services-powershell-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/analysis-services/powershell/set-powerpivotserviceapplication-cmdlet.md",
+            "redirect_url": "/sql/analysis-services/powershell/analysis-services-powershell-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/analysis-services/powershell/set-powerpivotsystemservice-cmdlet.md",
+            "redirect_url": "/sql/analysis-services/powershell/analysis-services-powershell-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/analysis-services/powershell/update-powerpivotsystemservice-cmdlet.md",
+            "redirect_url": "/sql/analysis-services/powershell/analysis-services-powershell-reference",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/whitepapers/introducing-microsoft-technologies-for-data-storage-movement-and-transformation.md",
             "redirect_url": "sql/whitepapers/microsoft-white-papers",
             "redirect_document_id": true

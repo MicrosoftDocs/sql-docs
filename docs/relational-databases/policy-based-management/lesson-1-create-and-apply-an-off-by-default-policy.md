@@ -3,9 +3,9 @@ title: "Lesson 1: Create and Apply an Off By Default Policy | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
+ms.technology: security
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: performance
 ms.topic: conceptual
 ms.assetid: d31367db-b7db-44c4-8df2-f1240474cf78
 author: VanMSFT

@@ -69,14 +69,14 @@ SET QUERY_STORE (MAX_STORAGE_SIZE_MB = 1024);
 > [!NOTE]
 > Using trace flag 7745 will prevent Query Store data from being written to disk in case of a failover or shutdown command. See the [Use trace flags on mission critical servers to improve recovery from disaster](#Recovery) section for more detail.
 
-Use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)] to set different value for Data Flush Interval:  
+Use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)] to set different value for Data Flush Interval:  
   
 ```sql  
 ALTER DATABASE [QueryStoreDB] 
 SET QUERY_STORE (DATA_FLUSH_INTERVAL_SECONDS = 900);  
 ```  
 
- **Statistics Collection Interval:** Defines level of granularity for the collected runtime statistic (the default is 60 minutes). Consider using lower value if you require finer granularity or less time to detect and mitigate issues but keep in mind that it will directly affect the size of Query Store data. Use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../includes/tsql-md.md)] to set different value for Statistics Collection Interval:  
+ **Statistics Collection Interval:** Defines level of granularity for the collected runtime statistic (the default is 60 minutes). Consider using lower value if you require finer granularity or less time to detect and mitigate issues but keep in mind that it will directly affect the size of Query Store data. Use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)] to set different value for Statistics Collection Interval:  
   
 ```sql  
 ALTER DATABASE [QueryStoreDB] 

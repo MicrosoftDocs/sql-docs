@@ -32,7 +32,7 @@ For best experience, it is recommended for customers to install the most recent 
 
 - **Security Updates (Only)** servicing phase: After the release of a new current branch version, Microsoft only supports security updates to the most recent release of the previous version. Any versions prior to this version are out of support.
 
-![Support-matrix](./media/ssms-supportpolicy/supportpolicy.png)
+![Support-matrix](./media/ssms-supportpolicy/support-policy.png)
 
 
 > [!NOTE]

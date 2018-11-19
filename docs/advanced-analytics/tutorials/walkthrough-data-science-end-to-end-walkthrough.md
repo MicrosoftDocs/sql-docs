@@ -39,7 +39,7 @@ If you need to put client and server on the same computer, be sure to install a 
 
 ## Add R to SQL Server
 
-You must have access to an instance of SQL Server with support for R installed. This walkthrough was originally developed for SQL erver 2016 and tested on 2017, so you should be able to use either of the following SQL Server versions. (There are some small differences in the RevoScaleR functions between the releases.)
+You must have access to an instance of SQL Server with support for R installed. This walkthrough was originally developed for SQL Server 2016 and tested on 2017, so you should be able to use either of the following SQL Server versions. (There are some small differences in the RevoScaleR functions between the releases.)
 
 + [Install SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)
 + [Install SQL Server 2016 R Services](../install/sql-r-services-windows-install.md).

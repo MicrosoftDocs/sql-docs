@@ -58,7 +58,7 @@ manager: craigg
 -   HierarchyID  
   
 ## Target Table of the OUTPUT INTO Clause Cannot Have Any Defined Triggers  
- OUPUT INTO a target table when the table has any enabled triggers is not supported.  
+ OUTPUT INTO a target table when the table has any enabled triggers is not supported.  
   
 ## Compile Time Error for UDFs When the Target of an OUTPUT INTO Clause is a Table  
  User-defined functions (UDF) cannot be used to perform actions that modify the database state. For example, a UDF cannot perform any DDL (CREATE/ALTER/DROP) or DML (INSERT/UPDATE/DELETE) actions on any objects, except for table variables.  

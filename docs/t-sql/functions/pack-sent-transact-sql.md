@@ -15,7 +15,7 @@ dev_langs:
 helpviewer_keywords: 
   - "number of output packets written"
   - "@@PACK_SENT function"
-  - "packets [SQL Server], ouput"
+  - "packets [SQL Server], output"
   - "networking [SQL Server], output packets"
   - "connections [SQL Server], packets"
   - "output packets written to network [SQL Server]"
@@ -33,7 +33,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```sql
 @@PACK_SENT  
 ```  
   
@@ -46,7 +46,7 @@ manager: craigg
 ## Examples  
  The following example shows the usage of `@@PACK_SENT`.  
   
-```  
+```sql
 SELECT @@PACK_SENT AS 'Pack Sent';  
 ```  
   

@@ -4,13 +4,13 @@ description: Learn how to configure Azure Kubernetes Service (AKS) for SQL Serve
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 11/15/2018
 ms.topic: conceptual
 ms.prod: sql
 ---
 # Configure Azure Kubernetes Service for SQL Server 2019 (preview) deployments
 
-This article describes how to configure Azure Kubernetes Service (AKS) for SQL Server 2019 big data cluster (preview) deployments. 
+This article describes how to configure Azure Kubernetes Service (AKS) for SQL Server 2019 big data cluster (preview) deployments.
 
 AKS makes it simple to create, configure, and manage a cluster of virtual machines that are preconfigured with a Kubernetes cluster to run containerized applications. This enables you to use your existing skills or draw upon a large and growing body of community expertise, to deploy and manage container-based applications on Microsoft Azure.
 
@@ -73,12 +73,12 @@ An Azure resource group is a logical group in which Azure resources are deployed
    az aks create --name kubcluster \
     --resource-group sqlbigdatagroup \
     --generate-ssh-keys \
-    --node-vm-size Standard_E4s_v3 \
+    --node-vm-size Standard_L4s \
     --node-count 3 \
     --kubernetes-version 1.10.8
     ```
 
-    You can increase or decrease the number of Kubernetes agent nodes by changing the `--node-count <n>` where `<n>` is the number of agent nodes you want to have, which it does not include the master Kubernetes node. So in the example above, there will be **4** VMs of size **Standard_E4s_v3** used for the AKS cluster: **1** for the master and **3** for the agent nodes.
+    You can increase or decrease the number of Kubernetes agent nodes by changing the `--node-count <n>` where `<n>` is the number of agent nodes you want to have, which it does not include the master Kubernetes node. So in the example above, there will be **4** VMs of size **Standard_L4s** used for the AKS cluster: **1** for the master and **3** for the agent nodes.
 
     After several minutes, the command completes and returns JSON-formatted information about the cluster.
 

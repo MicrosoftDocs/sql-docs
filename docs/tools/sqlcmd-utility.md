@@ -45,9 +45,19 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 - In an operating system (Cmd.exe) job step of a  SQL Server  Agent job.
 
 The utility uses ODBC to execute Transact-SQL batches. 
- 
+
+## Download the latest version of sqlcmd Utility
+
+**[![download](../ssdt/media/download.png) Download Microsoft Command Line Utilities 15.0 for SQL Server (x64)](https://go.microsoft.com/fwlink/?linkid=2043518)**
+<br>**[![download](../ssdt/media/download.png) Download Microsoft Command Line Utilities 15.0 for SQL Server (x86)](https://go.microsoft.com/fwlink/?linkid=2043622)**
+
+**Version Information**
+
+Release number: 15.0 <br>
+Build number: 15.0.0500.17<br>
+
 > [!NOTE]
-> The most recent versions of the sqlcmd utility is available as a web release from the [Download Center](http://go.microsoft.com/fwlink/?LinkID=825643). You need version 13.1 or higher to support Always Encrypted (`-g`) and Azure Active Directory authentication (`-G`). (You may have several versions of sqlcmd.exe installed on your computer. Be sure you are using the correct version. To determine the version, execute `sqlcmd -?`.)
+> sqlcmd utility version 14 is available as a web release from the [Download Center](http://go.microsoft.com/fwlink/?LinkID=825643). You need version 13.1 or higher to support Always Encrypted (`-g`) and Azure Active Directory authentication (`-G`). (You may have several versions of sqlcmd.exe installed on your computer. Be sure you are using the correct version. To determine the version, execute `sqlcmd -?`.)
 
 You can try the sqlcmd utility from Azure Cloud Shell as it is pre-installed by default: [![Launch Cloud Shell](https://shell.azure.com/images/launchcloudshell.png "Launch Cloud Shell")](https://shell.azure.com)
 
@@ -180,7 +190,7 @@ Sets the Column Encryption Setting to `Enabled`. For more information, see [Alwa
  
    The Azure AD Interactive authentication for Azure SQL Database and SQL Data Warehouse, allows you to use an interactive method supporting multi-factor authentication. For more information, see [Active Directory Interactive Authentication](../ssdt/azure-active-directory.md#active-directory-interactive-authentication). 
 
-   Azure AD interactive requires **sqlcmd** [version 15.0.0500.17 or later](http://go.microsoft.com/fwlink/?LinkID=825643) as well as [ODBC version 17.2 or later](https://www.microsoft.com/download/details.aspx?id=56567).  
+   Azure AD interactive requires **sqlcmd** [version 15.0.0500.17](#download-the-latest-version-of-sqlcmd-utility) or later as well as [ODBC version 17.2 or later](https://www.microsoft.com/download/details.aspx?id=56567).  
 
    To enable interactive authentication, provide -G option with user name (-U) only, without a password.
 

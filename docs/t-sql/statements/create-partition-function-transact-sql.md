@@ -1,7 +1,7 @@
 ---
 title: "CREATE PARTITION FUNCTION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/10/2017"
+ms.date: "11/19/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -58,7 +58,9 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
  Specifies the boundary values for each partition of a partitioned table or index that uses *partition_function_name*. If *boundary_value* is empty, the partition function maps the whole table or index using *partition_function_name* into a single partition. Only one partitioning column, specified in a CREATE TABLE or CREATE INDEX statement, can be used.  
   
  *boundary_value* is a constant expression that can reference variables. This includes user-defined type variables, or functions and user-defined functions. It cannot reference [!INCLUDE[tsql](../../includes/tsql-md.md)] expressions. *boundary_value* must either match or be implicitly convertible to the data type supplied in *input_parameter_type*, and cannot be truncated during implicit conversion in a way that the size and scale of the value does not match that of its corresponding *input_parameter_type*.  
-  
+
+For more information, see [Nondeterministic conversion of literal date strings into DATE values](../data-types/nondeterministic-convert-date-literals.md).
+
 > [!NOTE]  
 >  If *boundary_value* consists of **datetime** or **smalldatetime** literals, these literals are evaluated assuming that us_english is the session language. This behavior is deprecated. To make sure the partition function definition behaves as expected for all session languages, we recommend that you use constants that are interpreted the same way for all language settings, such as the yyyymmdd format; or explicitly convert literals to a specific style. To determine the language session of your server, run `SELECT @@LANGUAGE`.  
   

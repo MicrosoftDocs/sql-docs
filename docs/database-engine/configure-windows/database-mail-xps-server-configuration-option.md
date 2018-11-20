@@ -45,7 +45,19 @@ GO
 RECONFIGURE  
 GO  
 ```  
-  
+
+The following example enables the Database Mail extended stored procedures if it is not already enabled.
+```
+if exists (select 1 from sys.configurations where name = 'Database Mail XPs' and value = 0)
+begin
+	print 'Enabling Database Mail XPs'
+	exec sp_configure 'show advanced options', 1;  
+	reconfigure
+	exec sp_configure 'Database Mail XPs', 1;  
+	reconfigure  
+end
+```
+
 ## See Also  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)  
   

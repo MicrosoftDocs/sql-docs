@@ -5,7 +5,7 @@ ms.custom: "tools|sos"
 ms.date: "09/24/2018"
 ms.reviewer: "alayu; sstein"
 ms.prod: sql
-ms.prod_service: sql-tools
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: "stevestein"
 ms.author: "sstein"
@@ -106,7 +106,7 @@ To refer to registered container, specify the id of the container
 
 `dashboard.insights`
 
-You can register insights using dashboard.insights. This is similar to [Tutorial: Build a custom insight widget](https://docs.microsoft.com/en-us/sql/sql-operations-studio/tutorial-build-custom-insight-sql-server)
+You can register insights using dashboard.insights. This is similar to [Tutorial: Build a custom insight widget](https://docs.microsoft.com/sql/sql-operations-studio/tutorial-build-custom-insight-sql-server)
 
 ```json
 "dashboard.insights": {

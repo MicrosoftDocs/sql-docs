@@ -93,8 +93,8 @@ GO
 3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to change the recovery model in the `model` database to `FULL` by using the `SET RECOVERY` option of the [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md) statement.  
   
 ```sql  
-USE master ;  
-ALTER DATABASE model SET RECOVERY FULL ;  
+USE [master] ;  
+ALTER DATABASE [model] SET RECOVERY FULL ;  
 ```  
   
 ##  <a name="FollowUp"></a> Recommendations: After you change the recovery model  

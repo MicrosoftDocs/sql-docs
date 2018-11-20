@@ -1,7 +1,7 @@
 ---
 title: "CREATE EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/20/2018"
+ms.date: "11/12/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -69,6 +69,20 @@ WITH (
     LOCATION = 'adl://<AzureDataLake account_name>.azuredatalake.net',
     CREDENTIAL = AzureStorageCredential
 );
+
+-- PolyBase only: Azure Data Lake Store Gen 2
+-- (on Azure SQL Data Warehouse)
+CREATE EXTERNAL DATA SOURCE ABFS 
+WITH
+(
+              TYPE=HADOOP,
+              LOCATION='abfs://<container>@<AzureDataLake account_name>.dfs.core.windows.net',
+              CREDENTIAL=ABFS_Credemt
+);
+GO
+
+
+
 
 -- PolyBase only: Hadoop cluster as data source
 -- (on Parallel Data Warehouse)
@@ -189,8 +203,22 @@ CREATE EXTERNAL DATA SOURCE MyElasticDBQueryDataSrc WITH
 For a step-by-step tutorial on RDBMS, see [Getting started with cross-database queries (vertical partitioning)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started-vertical/).  
 
 **BLOB_STORAGE**   
-For bulk operations only, `LOCATION` must be valid the URL to Azure Blob storage and container. Do not put **/**, file name, or shared access signature parameters at the end of the `LOCATION` URL.   
-The credential used, must be created using `SHARED ACCESS SIGNATURE` as the identity. For more information on shared access signatures, see [Using Shared Access Signatures (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1). For an example of accessing blob storage, see example F of [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md). 
+This type is used for bulk operations only, `LOCATION` must be valid the URL to Azure Blob storage and container. Do not put **/**, file name, or shared access signature parameters at the end of the `LOCATION` URL. `CREADENTIAL` is required if the blob object is not public. For example: 
+```sql
+CREATE EXTERNAL DATA SOURCE MyAzureBlobStorage
+WITH (	TYPE = BLOB_STORAGE, 
+		LOCATION = 'https://****************.blob.core.windows.net/invoices', 
+		CREDENTIAL= MyAzureBlobStorageCredential	--> CREDENTIAL is not required if a blob has public access!
+);
+```
+The credential used, must be created using `SHARED ACCESS SIGNATURE` as the identity, should not have the leading `?` in SAS token, must have at least read permission on the file that should be loaded (for example `srt=o&sp=r`), and the expiration period should be valid (all dates are in UTC time). For example:
+```sql
+CREATE DATABASE SCOPED CREDENTIAL MyAzureBlobStorageCredential 
+ WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
+ SECRET = '******srt=sco&sp=rwac&se=2017-02-01T00:55:34Z&st=2016-12-29T16:55:34Z***************';
+```
+
+For more information on shared access signatures, see [Using Shared Access Signatures (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1). For an example of accessing blob storage, see example F of [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md). 
 >[!NOTE] 
 >To load from Azure Blob storage into SQL DW or Parallel Data Warehouse, the Secret must be the Azure Storage Key.
 
@@ -412,7 +440,7 @@ WITH (
 ## Examples: Azure SQL Data Warehouse
 
 ### G. Create external data source to reference Azure Data Lake Store
-Azure Data lake Store connectivity is based on your ADLS URI and your Azure Acitve directory Application's service principle. Documentation for creating this application can be found at[Data lake store authentication using Active Directory](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-authenticate-using-active-directory).
+Azure Data lake Store connectivity is based on your ADLS URI and your Azure Acitve directory Application's service principle. Documentation for creating this application can be found at[Data lake store authentication using Active Directory](https://docs.microsoft.com/azure/data-lake-store/data-lake-store-authenticate-using-active-directory).
 
 ```sql
 -- If you do not have a Master Key on your DW you will need to create one.
@@ -461,8 +489,12 @@ CREATE EXTERNAL DATA SOURCE MyAzureStorage WITH (
 ## Examples: Bulk Operations   
 ### J. Create an external data source for bulk operations retrieving data from Azure Blob storage.   
 **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].   
-Use the following data source for bulk operations using [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) or [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md). The credential used, must be created using `SHARED ACCESS SIGNATURE` as the identity. For more information on shared access signatures, see [Using Shared Access Signatures (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1).   
+Use the following data source for bulk operations using [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) or [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md). The credential used, must be created using `SHARED ACCESS SIGNATURE` as the identity, should not have the leading `?` in SAS token, must have at least read permission on the file that should be loaded (for example `srt=o&sp=r`), and the expiration period should be valid (all dates are in UTC time). For more information on shared access signatures, see [Using Shared Access Signatures (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1).   
 ```sql
+CREATE DATABASE SCOPED CREDENTIAL AccessAzureInvoices 
+ WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
+ SECRET = '(REMOVE ? FROM THE BEGINNING)******srt=sco&sp=rwac&se=2017-02-01T00:55:34Z&st=2016-12-29T16:55:34Z***************';
+
 CREATE EXTERNAL DATA SOURCE MyAzureInvoices
     WITH  (
         TYPE = BLOB_STORAGE,
@@ -470,7 +502,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureInvoices
 		CREDENTIAL = AccessAzureInvoices
     );   
 ```   
-To see this example in use, see [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md).
+To see this example in use, see [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md#f-importing-data-from-a-file-in-azure-blob-storage).
   
 ## See Also
 [ALTER EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/alter-external-data-source-transact-sql.md)  

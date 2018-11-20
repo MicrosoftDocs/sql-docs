@@ -71,7 +71,7 @@ ms.author: maghan
   
 2.  Click **Allow** to continue.  
   
-3.  In the URL address, enter the Report Manager URL. For instructions, see [Report Manager  &#40;SSRS Native Mode&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
+3.  In the URL address, enter the Report Manager URL. For instructions, see [Report Manager  &#40;SSRS Native Mode&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
   
 4.  Click **Tools**.  
   
@@ -83,7 +83,7 @@ ms.author: maghan
   
 8.  Click **Sites**.  
   
-9. Add `http://<your-server-name>`.  
+9. Add `https://<your-server-name>`.  
   
 10. Clear the check box **Require server certification (https:) for all sites in this zone** if you are not using HTTPS for the default site.  
   
@@ -107,7 +107,7 @@ ms.author: maghan
   
 ###  <a name="bkmk_configure_site_settings"></a> Report Manager Site Settings  
   
-1.  Open your browser with administrative privileges and browse to report manager, `http://<server name>/reports`.  
+1.  Open your browser with administrative privileges and browse to report manager, `https://<server name>/reports`.  
   
 2.  Click **Site Settings** in the upper corner of the Home page.  
   

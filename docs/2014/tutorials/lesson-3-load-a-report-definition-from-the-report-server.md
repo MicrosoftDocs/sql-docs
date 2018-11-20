@@ -37,7 +37,7 @@ manager: craigg
         string reportPath =   
             "/AdventureWorks 2012 Sample Reports/Company Sales 2012";  
   
-        // Retrieve the report defintion   
+        // Retrieve the report definition   
         // from the report server  
         byte[] bytes =   
             _reportService.GetItemDefinition(reportPath);  
@@ -66,7 +66,7 @@ manager: craigg
         Dim reportPath As String = _  
             "/AdventureWorks 2012 Sample Reports/Company Sales 2012"  
   
-        'Retrieve the report defintion   
+        'Retrieve the report definition   
         'from the report server  
         Dim bytes As Byte() = _  
             m_reportService.GetItemDefinition(reportPath)  

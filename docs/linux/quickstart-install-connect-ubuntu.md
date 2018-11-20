@@ -18,13 +18,13 @@ ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-In this quickstart, you install SQL Server 2017 or SQL Server 2019 CTP 2.0 on Ubuntu 16.04. You then connect with **sqlcmd** to create your first database and run queries.
+In this quickstart, you install SQL Server 2017 or SQL Server 2019 preview on Ubuntu 16.04. You then connect with **sqlcmd** to create your first database and run queries.
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-In this quickstart, you install SQL Server 2019 CTP 2.0 on Ubuntu 16.04. You then connect with **sqlcmd** to create your first database and run queries.
+In this quickstart, you install SQL Server 2019 preview on Ubuntu 16.04. You then connect with **sqlcmd** to create your first database and run queries.
 
 ::: moniker-end
 
@@ -35,7 +35,7 @@ In this quickstart, you install SQL Server 2019 CTP 2.0 on Ubuntu 16.04. You the
 
 You must have a Ubuntu 16.04 machine with **at least 2 GB** of memory.
 
-To install Ubuntu on your own machine, go to [http://www.ubuntu.com/download/server](http://www.ubuntu.com/download/server). You can also create Ubuntu virtual machines in Azure. See [Create and Manage Linux VMs with the Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm).
+To install Ubuntu on your own machine, go to [https://www.ubuntu.com/download/server](https://www.ubuntu.com/download/server). You can also create Ubuntu virtual machines in Azure. See [Create and Manage Linux VMs with the Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm).
 
 > [!NOTE]
 > At this time, the [Windows Subsystem for Linux](https://msdn.microsoft.com/commandline/wsl/about) for Windows 10 is not supported as an installation target.
@@ -141,7 +141,7 @@ To configure SQL Server on Ubuntu, run the following commands in a terminal to i
 
 6. If you plan to connect remotely, you might also need to open the SQL Server TCP port (default 1433) on your firewall.
 
-At this point, SQL Server 2019 CTP 2.0 is running on your Ubuntu machine and is ready to use!
+At this point, SQL Server 2019 preview is running on your Ubuntu machine and is ready to use!
 
 ::: moniker-end
 

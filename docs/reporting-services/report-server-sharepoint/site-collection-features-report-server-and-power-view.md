@@ -22,7 +22,7 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
 > [!NOTE]
 > Reporting Services integration with SharePoint is no longer available after SQL Server 2016.
 
- If you install the Reporting Services add-in for SharePoint 2010 Products after the installation of the SharePoint product, then the Report Server integration feature and the Power View integration feature will only be activated for root site collections. For other site collections, you need to manually activate the features. For example, if you have a site collection of **http://[my server name]/sites/[site collection name]** you need to manually activate the Reporting Services site collection features.  
+ If you install the Reporting Services add-in for SharePoint 2010 Products after the installation of the SharePoint product, then the Report Server integration feature and the Power View integration feature will only be activated for root site collections. For other site collections, you need to manually activate the features. For example, if you have a site collection of **https://[my server name]/sites/[site collection name]** you need to manually activate the Reporting Services site collection features.  
   
  When there is no root site collection, the Reporting Services add-in will log a message similar to the following.  
   
@@ -66,4 +66,4 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
 
 After the feature is activated, you can continue with server integration.
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -1,6 +1,6 @@
 ---
 title: "SQL Server privacy supplement | Microsoft Docs"
-ms.date: 4/24/2018
+ms.date: 4/25/2018
 ms.prod: sql
 ms.reviewer: ""
 ms.custom: ""
@@ -122,6 +122,7 @@ The following are considered system metadata when they do not inlcude customer c
 - Server configuration data, for example settings of sp_configure
 - Feature configuration data
 - Event names and error codes
+- Hardware settings and identification such as OEM Manufacturer
 
 Microsoft does examine application name values set by other programs that use SQL Server (example: Sharepoint or 3rd party packaged programs and includes this information in System Metadata sent to Microsoft when Usage Data is enabled). Customers should not place personal data, such as end-user identifiable information, in System Metadata fields or create applications designed to store personal data in these fields. 
 
@@ -154,6 +155,6 @@ Data that describes or is used to configure servers, databases, tables, and othe
 
 ## Telemetry controls
 
-Instructions on how telemetry can be turned on/off in product can be referenced here - https://support.microsoft.com/en-us/help/3153756/how-to-configure-sql-server-2016-to-send-feedback-to-microsoft.
+Instructions on how telemetry can be turned on/off in product can be referenced here - https://support.microsoft.com/help/3153756/how-to-configure-sql-server-2016-to-send-feedback-to-microsoft.
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

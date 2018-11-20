@@ -5,8 +5,7 @@ ms.date: "07/14/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords: 
   - "SQL13.SWB.DATABASESTATES.F1"

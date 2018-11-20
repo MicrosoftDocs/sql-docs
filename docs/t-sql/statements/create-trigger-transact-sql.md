@@ -34,7 +34,10 @@ ms.reviewer: mathoma
 # CREATE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Creates a DML, DDL, or logon trigger. A trigger is a special type of stored procedure that automatically executes when an event occurs in the database server. DML triggers execute when a user tries to modify data through a data manipulation language (DML) event. DML events are INSERT, UPDATE, or DELETE statements on a table or view. These triggers fire when any valid event is fired, regardless of whether or not any table rows are affected. For more information, see [DML Triggers](../../relational-databases/triggers/dml-triggers.md).  
+> [!div class="nextstepaction"]
+> [Please help improve SQL Server docs!](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+
+Creates a DML, DDL, or logon trigger. A trigger is a special type of stored procedure that automatically executes when an event occurs in the database server. DML triggers execute when a user tries to modify data through a data manipulation language (DML) event. DML events are INSERT, UPDATE, or DELETE statements on a table or view. These triggers fire when any valid event is fired, regardless of whether or not any table rows are affected. For more information, see [DML Triggers](../../relational-databases/triggers/dml-triggers.md).  
   
  DDL triggers execute in response to a variety of data definition language (DDL) events. These events primarily correspond to [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE, ALTER, and DROP statements, and certain system stored procedures that perform DDL-like operations. Logon triggers fire in response to the LOGON event that is raised when a user's session is being established. Triggers can be created directly from [!INCLUDE[tsql](../../includes/tsql-md.md)] statements or from methods of assemblies that are created in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] common language runtime (CLR) and uploaded to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] allows for creating multiple triggers for any specific statement.  
   
@@ -325,12 +328,12 @@ SELECT * FROM deleted;
 ### Optimizing DML Triggers
  Triggers work in transactions (implied, or otherwise) and while they are open, they lock resources. The lock will remain in place until the transaction is confirmed (with COMMIT) or rejected (with a ROLLBACK). The longer a trigger runs, the higher the probability that another process will be blocked. Therefore, triggers should be written in a way to decrease their duration whenever possible. One way to achieve this is to release a trigger when a DML statement changes 0 rows. 
 
-To release the trigger for a command that that does not change any rows, employ the system variable  [ROWCOUNT_BIG](https://docs.microsoft.com/it-it/sql/t-sql/functions/rowcount-big-transact-sql). 
+To release the trigger for a command that does not change any rows, employ the system variable  [ROWCOUNT_BIG](../functions/rowcount-big-transact-sql.md). 
 
 The following T-SQL code snippet will achieve this, and should be present at the beginning of each DML trigger:
 
 ```sql
-IF (@@ROWCOUNT_BIG = 0)
+IF (ROWCOUNT_BIG() = 0)
 RETURN;
 ```
   

@@ -25,7 +25,7 @@ manager: craigg
   
 -   You must have an Azure subscription  
   
--   Install the latest [Azure PowerShell](https://azure.microsoft.com/en-us/documentation/articles/powershell-install-configure/) (5.2.0 or higher).  
+-   Install the latest [Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) (5.2.0 or higher).  
 
 -   Create an Azure Active Directory  
 
@@ -233,10 +233,13 @@ SQL Server Version  |Redistributable Install Link
    
   
 ## Part III: Install the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector  
- Download the SQL Server Connector from the [Microsoft Download Center](http://go.microsoft.com/fwlink/p/?LinkId=521700). (This should be done by the administrator of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] computer.)  
+ Download the SQL Server Connector from the [Microsoft Download Center](https://go.microsoft.com/fwlink/p/?LinkId=521700). (This should be done by the administrator of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] computer.)  
 
 > [!NOTE]  
 >  Versions 1.0.0.440 and older have been replaced and are no longer supported in production environments. Upgrade to version 1.0.1.0 or later by visiting the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=45344) and using the instructions on the [SQL Server Connector Maintenance & Troubleshooting](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) page under “Upgrade of SQL Server Connector.”
+
+> [!NOTE]  
+> There is a breaking change in 1.0.5.0 version, in terms of the thumbprint algorithm. You may experience database restore failure after upgrading to 1.0.5.0 version. Please refer KB aritcle [447099](https://support.microsoft.com/help/4470999/db-backup-problems-to-sql-server-connector-for-azure-1-0-5-0).
   
  ![ekm-connector-install](../../../relational-databases/security/encryption/media/ekm-connector-install.png "ekm-connector-install")  
   

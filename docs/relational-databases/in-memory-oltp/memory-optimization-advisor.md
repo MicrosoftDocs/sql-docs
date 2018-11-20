@@ -27,7 +27,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 -   Migrate a table and data to memory-optimized (if there are no unsupported features).  
     
- For information about migration methodologies, see [In-Memory OLTP – Common Workload Patterns and Migration Considerations](http://msdn.microsoft.com/library/dn673538.aspx).  
+ For information about migration methodologies, see [In-Memory OLTP – Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx).  
   
 ## Walkthrough Using the Memory-Optimization Advisor  
  In **Object Explorer**, right click the table you want to convert, and select **Memory-Optimization Advisor**. This will display the welcome page for the **Table Memory Optimization Advisor**.  
@@ -93,7 +93,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
  If a primary key doesn’t exist and the table is being migrated to a non-durable table, this screen will not appear.  
   
- For textual columns (columns with types **char**, **nchar**, **varchar**, and **nvarchar**) you must select an appropriate collation. In-Memory OLTP only supports BIN2 collations for columns on a memory-optimized table and it does not support collations with supplementary characters. See [Collations and Code Pages](http://msdn.microsoft.com/library/c626dcac-0474-432d-acc0-cfa643345372) for information on the collations supported and the potential impact of a change in collation.  
+ For textual columns (columns with types **char**, **nchar**, **varchar**, and **nvarchar**) you must select an appropriate collation. In-Memory OLTP only supports BIN2 collations for columns on a memory-optimized table and it does not support collations with supplementary characters. See [Collations and Code Pages](https://msdn.microsoft.com/library/c626dcac-0474-432d-acc0-cfa643345372) for information on the collations supported and the potential impact of a change in collation.  
   
  You can configure the following parameters for the primary key:  
   
@@ -107,7 +107,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 -   A NONCLUSTERED index. This type of index is best for indexes with many range queries. You may configure the sort order for each column in the **Sort column and order** list.  
   
- To understand the type of index best for your primary key, see [Hash Indexes](http://msdn.microsoft.com/library/f4bdc9c1-7922-4fac-8183-d11ec58fec4e).  
+ To understand the type of index best for your primary key, see [Hash Indexes](https://msdn.microsoft.com/library/f4bdc9c1-7922-4fac-8183-d11ec58fec4e).  
   
  Click **Next** after you make your primary key choices.  
   

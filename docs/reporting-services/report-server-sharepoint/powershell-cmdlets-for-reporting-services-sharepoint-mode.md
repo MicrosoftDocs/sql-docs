@@ -30,7 +30,7 @@ When you install SQL Server 2016 Reporting Services SharePoint mode, PowerShell 
 
 ## Cmdlet summary
 
- To run the cmdlets you need to open the SharePoint Management Shell. You can also use the graphical user interface editor that is included with Microsoft Windows, **Windows PowerShell Integrated Scripting Environment (ISE)**. For more information, see [Starting Windows PowerShell on Windows Server](http://technet.microsoft.com/library/hh847814.aspx). In the following cmdlet summaries, the references to service application ‘databases’, refer to all of the databases created and used by a Reporting Services service application. This includes the configuration, alerting, and temp databases.  
+ To run the cmdlets you need to open the SharePoint Management Shell. You can also use the graphical user interface editor that is included with Microsoft Windows, **Windows PowerShell Integrated Scripting Environment (ISE)**. For more information, see [Starting Windows PowerShell on Windows Server](https://technet.microsoft.com/library/hh847814.aspx). In the following cmdlet summaries, the references to service application ‘databases’, refer to all of the databases created and used by a Reporting Services service application. This includes the configuration, alerting, and temp databases.  
   
  If you see an error message similar to the following when you type the PowerShell examples:  
   
@@ -47,7 +47,7 @@ When you install SQL Server 2016 Reporting Services SharePoint mode, PowerShell 
     Add-PSSnapin Microsoft.SharePoint.PowerShell  
     ```  
   
- For more information see [Use Windows PowerShell to administer SharePoint 2013](http://technet.microsoft.com/library/ee806878.aspx).  
+ For more information see [Use Windows PowerShell to administer SharePoint 2013](https://technet.microsoft.com/library/ee806878.aspx).  
   
 ### Open the SharePoint Management Shell and run cmdlets
   
@@ -156,7 +156,7 @@ Get-content -path C:\Users\testuser\AppData\Local\Temp\rs_sp_0.log | select-stri
   
 2.  Add the proxy to the default proxy group  
   
-3.  Grant the service app access to the port 80 web app’s content database. The script assumes site `http://sitename` already exists.  
+3.  Grant the service app access to the port 80 web app’s content database. The script assumes site `https://sitename` already exists.  
   
 ```  
 # Create service application and service application proxy  
@@ -168,7 +168,7 @@ $serviceAppProxy = New-SPRSServiceApplicationProxy –Name “My RS Service App 
 Get-SPServiceApplicationProxyGroup –default | Add-SPServiceApplicationProxyGroupMember –Member $serviceAppProxy  
   
 # Grant application pool account access to the port 80 web application’s content database.  
-$webApp = Get-SPWebApplication “http://sitename”  
+$webApp = Get-SPWebApplication “https://sitename”  
 $appPoolAccountName = $appPool.ProcessAccount.LookupName()  
 $webApp.GrantAccessToProcessIdentity($appPoolAccountName)  
   
@@ -289,4 +289,4 @@ Get-SPRSExtension -identity $app -ExtensionType “Data” | select name,extensi
 [CheckList: Use PowerShell to verify Power Pivot for SharePoint](../../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)   
 [Get help SQL Server PowerShell](../../relational-databases/scripting/get-help-sql-server-powershell.md)   
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -5,8 +5,7 @@ ms.date: "10/24/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: backup-restore
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.attachdatabase.f1"
@@ -39,7 +38,7 @@ manager: craigg
 We don't recommend using detach and attach for Backup and Recovery. There are no transaction log backups, and it's possible to accidently delete files.
   
 ###  <a name="Security"></a> Security  
- File access permissions are set during a number of database operations, including detaching or attaching a database. For information about file permissions that are set whenever a database is detached and attached, see [Securing Data and Log Files](http://technet.microsoft.com/library/ms189128.aspx) from [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Books Online (Still a valid read!) 
+ File access permissions are set during a number of database operations, including detaching or attaching a database. For information about file permissions that are set whenever a database is detached and attached, see [Securing Data and Log Files](https://technet.microsoft.com/library/ms189128.aspx) from [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Books Online (Still a valid read!) 
   
  We recommend that you do not attach or restore databases from unknown or untrusted sources. Such databases could contain malicious code that might execute unintended [!INCLUDE[tsql](../../includes/tsql-md.md)] code or cause errors by modifying the schema or the physical database structure. Before you use a database from an unknown or untrusted source, run [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) on the database on a nonproduction server and also examine the code, such as stored procedures or other user-defined code, in the database. For more information about attaching databases and information about changes that are made to metadata when you attach a database, see [Database Detach and Attach (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md).  
   

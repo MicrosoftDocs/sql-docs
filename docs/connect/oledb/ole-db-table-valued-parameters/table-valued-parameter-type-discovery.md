@@ -25,7 +25,7 @@ manager: craigg
   
  For table-valued parameters, you also use the ISSCommandWithParameters interface to discover detailed information. The client calls ISSCommandWithParameters::GetParameterInfo after preparing the command object. For table-valued parameters, the *wType* member of the DBPARAMINFO structure is set to DBTYPE_TABLE by the provider. The *ulParamSize* field of DBPARAMINFO structure has a value of ~0.  
   
- The consumer would then request additional properties (table-valued parameter type catalog name, table-valued parameter type schema name, table-valued parameter type name, column ordering, and default columns) by using ISSCommandWithParamters::GetParameterProperties.  
+ The consumer would then request additional properties (table-valued parameter type catalog name, table-valued parameter type schema name, table-valued parameter type name, column ordering, and default columns) by using ISSCommandWithParameters::GetParameterProperties.  
   
  After the type name is known, to retrieve the individual column information the consumer must either call IOpenRowset::OpenRowsetor obtain the DBSCHEMA_TABLE_TYPE_COLUMNS rowset by specifying the table-valued parameter type name as the table name.  
   

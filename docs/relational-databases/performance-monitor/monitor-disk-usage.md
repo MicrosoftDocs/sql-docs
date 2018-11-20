@@ -5,8 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+s.technology: performance"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "database monitoring [SQL Server], disk usage"
@@ -36,6 +35,6 @@ manager: craigg
   
 -   Isolating Disk Activity That [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Creates  
   
- For more information see, [Monitoring Disk Usage](http://social.technet.microsoft.com/wiki/contents/articles/monitoring-disk-usage.aspx)  
+ For more information see, [Monitoring Disk Usage](https://social.technet.microsoft.com/wiki/contents/articles/monitoring-disk-usage.aspx)  
   
   

@@ -28,7 +28,7 @@ manager: craigg
     > [!NOTE]  
     >  Although a MERGE statement typically requires a staging table in this scenario, the performance of the MERGE statement usually exceeds that of the row-by-row lookup performed by the Lookup transformation. MERGE is also useful when the large size of a lookup table would test the memory that is available to the Lookup transformation for caching its reference table.  
   
- For a sample destination component that supports the use of the MERGE statement, see the CodePlex community sample, [MERGE Destination](http://go.microsoft.com/fwlink/?LinkId=141215).  
+ For a sample destination component that supports the use of the MERGE statement, see the CodePlex community sample, [MERGE Destination](https://go.microsoft.com/fwlink/?LinkId=141215).  
   
 ## Using MERGE  
  Typically, you use the MERGE statement when you want to apply changes that include inserts, updates, and deletions from one table to another table. Prior to [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], this process required both a Lookup transformation and multiple OLE DB Command transformations. The Lookup transformation performed a row-by-row lookup to determine whether each row was new or changed. The OLE DB Command transformations then performed the necessary INSERT, UPDATE, and DELETE operations. Beginning in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], a single MERGE statement can replace both the Lookup transformation and the corresponding OLE DB Command transformations.  

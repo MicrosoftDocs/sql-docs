@@ -143,33 +143,35 @@ The following table lists the paths for R and Python distributions created by Mi
 
 ## Apply updates
 
-We recommend that you apply the latest cumulative update to both the database engine and machine learning components.
+We recommend that you apply the latest cumulative update to both the database engine and machine learning components. Cumulative updates are installed through the Setup program. 
 
-Cumulative updates are installed through the Setup program. On an internet-connected device, Setup retrieves cumulative updates for any R or Python features you installed on the standalone server. For an offline device, you must download and transfer the .cab files providing the updates.
+On internet-connected devices, cumulative updates are typically applied through Windows Update, but you can also use the steps below for controlled updates. When you apply the update for the database engine, Setup pulls cumulative updates for any R or Python features you installed on the standalone server. 
+
+On disconnected servers, extra steps are required. You must obtain the cumulative update for the database engine as well as the CAB files for machine learning features. All files must be transfered to the isolated server and applied manually.
 
 1. Start with a baseline instance. You can only apply cumulative updates to existing installations:
 
   + Machine Learning Server (Standalone) from SQL Server 2017 initial release
   + R Server (Standalone) from SQL Server 2016 initial release, SQL Server 2016 SP 1, or SQL Server 2016 SP 2
 
-2. On an internet connected device, Windows Update provides cumulative updates. Alternatively, you can go to the cumulative update list for your version of SQL Server.
+2. On an internet connected device,go to the cumulative update list for your version of SQL Server.
 
   + [SQL Server 2017 updates](https://sqlserverupdates.com/sql-server-2017-updates/)
   + [SQL Server 2016 updates](https://sqlserverupdates.com/sql-server-2016-updates/)
 
 3. Download the latest cumulative update. It is an executable file.
 
-4. On an internet-connected device, double-click the .exe to run Setup.
+4. On an internet-connected device, double-click the .exe to run Setup and step through the wizard to accept licensing terms, review affected features, and monitor progress until completion.
 
 5. On a server with no internet connectivity:
 
    + Get corresponding CAB files for R and Python. For download links, see [CAB downloads for cumulative updates on SQL Server in-database analytics instances](sql-ml-cab-downloads.md).
 
-   + Transfer all files to a folder on the offline computer.
+   + Transfer all files, the main executable and CAB files, to a folder on the offline computer.
 
    + Double-click the .exe to run Setup. When installing a cumulate update on a server with no internet connectivity, you are prompted to select the location of the .cab files for R and Python.
 
-6. On a server for which you have enabled operationalization with web nodes and compute nodes, edit **appsettings.json**, adding an "MMLResourcePath" entry, directly under "MMLNativePath":
+6. Post-install, on a server for which you have enabled operationalization with web nodes and compute nodes, edit **appsettings.json**, adding an "MMLResourcePath" entry, directly under "MMLNativePath":
 
     ```json
     "ScorerParameters": {

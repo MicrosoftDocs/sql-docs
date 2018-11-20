@@ -29,5 +29,5 @@ Shows the path of the Access database file.
 Shows the owner of the file.  
   
 ## See Also  
-[User Interface Reference(Access)](http://msdn.microsoft.com/en-us/af24c303-4a41-449b-9c86-d6558a97e839)  
+[User Interface Reference(Access)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

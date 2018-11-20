@@ -1,7 +1,7 @@
 ---
 title: SQL Server help content and Help Viewer | Microsoft Docs
 ms.custom: ""
-ms.date: "12/15/2017"
+ms.date: "12/16/2017"
 ms.prod: sql
 ms.technology: 
 ms.reviewer: ""
@@ -128,7 +128,7 @@ Earlier versions of SSMS and VS use Help Viewer 1.x, which supports SQL Server 2
 
 This process uses Help Viewer 1.x to download SQL Server 2014 help from the Microsoft Download Center and install it on your computer.
 
-1. Navigate to the [Product Documentation for Microsoft SQL Server 2014](https://www.microsoft.com/en-us/download/details.aspx?id=42557) download site and click **Download**.  
+1. Navigate to the [Product Documentation for Microsoft SQL Server 2014](https://www.microsoft.com/download/details.aspx?id=42557) download site and click **Download**.  
 2. Click **Save** in the message box to save the *SQLServer2014Documentation\_\*.exe* file to your computer.  
    
    >[!NOTE]
@@ -165,7 +165,7 @@ Online help always shows the most up-to-date content.
 
 **To view SQL Server online help in SSMS 17.x**
 
-- Click **View Help** in the **Help** menu. The latest SQL Server 2016/2017 documentation from [https://docs.microsoft.com/sql/https://docs.microsoft.com/en-us/sql/sql-server/sql-server-technical-documentation](https://docs.microsoft.com/en-us/sql/sql-server/sql-server-technical-documentation) displays in a browser. 
+- Click **View Help** in the **Help** menu. The latest SQL Server 2016/2017 documentation from [https://docs.microsoft.com/sql/https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation) displays in a browser. 
 
    ![View Help](../sql-server/media/sql-server-help-installation/viewhelp.png)
 

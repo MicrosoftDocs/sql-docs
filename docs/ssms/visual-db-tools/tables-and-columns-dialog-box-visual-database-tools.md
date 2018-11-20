@@ -42,5 +42,5 @@ List the columns of the table selected in the **Foreign Key Table** list. Enter 
 > The columns you choose for the foreign key must have the same data type of the primary columns they correspond to. There must be an equal number of columns in each of the keys. For example, if the primary key of the table on the primary side of the relationship is made up of two columns, you will need to match each of those columns with a column in the table for the foreign key side of the relationship.  
   
 ## See Also  
-[How to: Create Relationships Between Tables (Visual Database Tools)](http://msdn.microsoft.com/en-us/867a54b8-5be4-46e6-9702-49ae6dabf67c)  
+[How to: Create Relationships Between Tables (Visual Database Tools)](https://msdn.microsoft.com/867a54b8-5be4-46e6-9702-49ae6dabf67c)  
   

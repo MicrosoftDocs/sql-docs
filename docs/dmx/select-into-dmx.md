@@ -48,7 +48,7 @@ FROM <existing model>
  The **WITH DRILLTHROUGH** clause enables drillthrough on the new mining model. Drillthrough can only be enabled when you create the model.  
   
 ## Example 1: Altering the Parameters of the Model  
- The following example creates a new mining model based on an existing mining model, `TM_Clustering`, which you create in the [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). In the new model, the CLUSTER_COUNT parameter is modified so that a maximum of five clusters will exist in the new model. In contrast, the existing model uses the default value, which is 10.  
+ The following example creates a new mining model based on an existing mining model, `TM_Clustering`, which you create in the [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). In the new model, the CLUSTER_COUNT parameter is modified so that a maximum of five clusters will exist in the new model. In contrast, the existing model uses the default value, which is 10.  
   
 ```  
 SELECT * INTO [New_Clustering]  

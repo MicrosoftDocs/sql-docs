@@ -1,7 +1,7 @@
 ---
 title: "Configure SQL Server distribution database in availability group | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/23/2018"
+ms.date: "11/13/2018"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: replication
@@ -25,7 +25,7 @@ manager: craigg
 
 This article explains how to set up a SQL Server replication distribution databases in an Always On availability group (AG).
 
-SQL Server 2017 CU 6 introduces support for replication distribution database in an AG through the following mechanisms:
+SQL Server 2017 CU6 and SQL Server 2016 SP2-CU3 introduces support for replication distribution database in an AG through the following mechanisms:
 
 - The distribution database AG needs to have a listener. When the publisher adds the distributor, it uses the listener name as the distributor name.
 - The replication jobs are created with the listener name as the distributor name.
@@ -42,6 +42,7 @@ After a distribution database in the AG is configured based on the steps describ
 - Adding or removing nodes to existing distribution database AG.
 - A distributor may have multiple distribution databases. Each distribution database can be in its own AG and can be not in any AG. Multiple distribution databases can share an AG.
 - Publisher and distributor need to be on separate SQL Server instances.
+- If the listener for the availability group hosting the distribution database is configured to use a non-default port, then its required to setup an alias for the listener and the non-default port.
 
 ## Limitations or exclusions
 
@@ -57,6 +58,7 @@ After a distribution database in the AG is configured based on the steps describ
 - The distribution database AG must have a listener configured.
 - Secondary replicas in a distribution database AG can be synchronous or asynchronous. Synchronous mode is recommended and preferred.
 - Bidirectional transactional replication is not supported.
+- SSMS does not show Distribution Database as synchronizing/synchronized, when distribution database is added to an availability group.
 
 
    >[!NOTE]
@@ -184,13 +186,15 @@ This example adds a new distributor to an existing replication configuration wit
    sp_adddistributiondb 'distribution'
    ```
 
-1. On DIST3, run: 
+4. On DIST3, run: 
 
    ```sql
    sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'
    ```
 
    The value of `@working_directory` should be the same as what was specified for DIST1 and DIST2.
+
+4. On DIST3, you must recreate Linked Servers to the subscribers.
 
 ## Remove a replica from distribution database AG
 

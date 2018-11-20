@@ -7,9 +7,6 @@ ms.prod_service: "sql-tools"
 ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
-f1_keywords: 
-  - "VS.ToolsOptionsPages.Environment.Fonts_And_Colors"
-  - "VS.TOOLSOPTIONSPAGES.ENVIRONMENT.FONTS_AND_COLORS"
 ms.assetid: ea3aa222-538d-485f-99dc-01eb02cdcfea
 author: "stevestein"
 ms.author: "sstein"
@@ -81,5 +78,5 @@ Displays a sample of the font style, size, and color scheme for the selected val
   
 ## See Also  
 [Color Coding in Code Editors](../../relational-databases/scripting/color-coding-in-query-editors.md)  
-[Options (Text Editor/Editor Tab and Status Bar Page)](http://msdn.microsoft.com/en-us/e4815678-7885-4631-878f-c6a2b857ee05)  
+[Options (Text Editor/Editor Tab and Status Bar Page)](https://msdn.microsoft.com/e4815678-7885-4631-878f-c6a2b857ee05)  
   

@@ -6,7 +6,6 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
 ms.technology: 
-  - "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "guide, transaction locking and row versioning"
@@ -656,7 +655,7 @@ INSERT mytable VALUES ('Dan');
  When working with CLR, the deadlock monitor automatically detects deadlock for synchronization resources (monitors, reader/writer lock and thread join) accessed inside managed procedures. However, the deadlock is resolved by throwing an exception in the procedure that was selected to be the deadlock victim. It is important to understand that the exception does not automatically release resources currently owned by the victim; the resources must be explicitly released. Consistent with exception behavior, the exception used to identify a deadlock victim can be caught and dismissed.  
   
 ##### <a name="deadlock_tools"></a> Deadlock Information Tools  
- To view deadlock information, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] provides monitoring tools in the form of the the system\_health xEvent session, two trace flags, and the deadlock graph event in SQL Profiler.  
+ To view deadlock information, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] provides monitoring tools in the form of the system\_health xEvent session, two trace flags, and the deadlock graph event in SQL Profiler.  
 
 ###### <a name="deadlock_xevent"></a> Deadlock in system_health session
 Starting with [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], when deadlocks occur, the system\_health session captures all `xml_deadlock_report` xEvents. The system\_health session is enabled by default. The deadlock graph captured typically has three distinct nodes:
@@ -1855,7 +1854,7 @@ GO
  You may have to use the KILL statement. Use this statement very carefully, however, especially when critical processes are running. For more information, see [KILL &#40;Transact-SQL&#41;](../t-sql/language-elements/kill-transact-sql.md).  
   
 ##  <a name="Additional_Reading"></a> Additional Reading   
-[Overhead of Row Versioning](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2008/03/30/overhead-of-row-versioning.aspx)   
+[Overhead of Row Versioning](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2008/03/30/overhead-of-row-versioning.aspx)   
 [Extended Events](../relational-databases/extended-events/extended-events.md)   
 [sys.dm_tran_locks &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)     
 [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)      

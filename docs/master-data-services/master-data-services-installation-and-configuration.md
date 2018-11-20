@@ -30,7 +30,7 @@ For an overview of how you organize data in [!INCLUDE[ssMDSshort_md](../includes
 For links to videos and other training resources to help you learn [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], see [Learn Master Data Services](../master-data-services/learn-sql-server-master-data-services.md). 
   
 > **Download**  
->-   To download [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], go to  **[Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2017-ctp/)**.  
+>-   To download [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], go to  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)**.  
 >-   Have an Azure account?  Then go **[Here](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)** to spin up a Virtual Machine with SQL Server already installed.  
  
 > **Can't create an MDS web site?**
@@ -114,7 +114,7 @@ If you're interested in making changes to the installation of [!INCLUDE[ssCurren
 
  
 > [!WARNING]  
-    >  You must [install IIS](#InstallIIS) before launching the [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Configuration Manager. Otherwise, the Configuration Manager will display an Information Information Services error and you will not be able to create the [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] web application.  
+    >  You must [install IIS](#InstallIIS) before launching the [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Configuration Manager. Otherwise, the Configuration Manager will display an Internet Information Services error and you will not be able to create the [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] web application.  
     
 > **Browser Requirement**
 >>The [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] web application works only in Internet Explorer (IE) 9 or later. IE 8 and earlier versions, Microsoft Edge and Chrome are not supported.    
@@ -188,7 +188,7 @@ If you're interested in making changes to the installation of [!INCLUDE[ssCurren
      ![mds_2016ConfigManager_WebConfig_Completed](../master-data-services/media/mds-2016configmanager-webconfig-completed.png)  
  
      
-15. Click **Apply**. The **Configuration Complete** message box displays. Click **OK** in the message box to launch the web application. The web site address is http://*server name*/*web application*/. 
+15. Click **Apply**. The **Configuration Complete** message box displays. Click **OK** in the message box to launch the web application. The web site address is https://*server name*/*web application*/. 
 
 
 ![mds_2016ConfigurationComplete_MessageBox](../master-data-services/media/mds-2016configurationcomplete-messagebox.png) 
@@ -266,7 +266,7 @@ If you're interested in making changes to the installation of [!INCLUDE[ssCurren
   
     1.  Navigate to the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] web site that you set up. See the [Setting up the Database and Website](#SetUpWeb) section.  
   
-         The web site address is http://*server name*/*web application*/.  
+         The web site address is https://*server name*/*web application*/.  
   
     2.  Select a model from the **Model** list box, and click **Explorer**.  
   

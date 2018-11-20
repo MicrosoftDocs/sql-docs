@@ -17,7 +17,7 @@ manager: craigg
 # Connecting with sqlcmd
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-The [sqlcmd](http://go.microsoft.com/fwlink/?LinkID=154481) utility is available in the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Linux and macOS.
+The [sqlcmd](https://go.microsoft.com/fwlink/?LinkID=154481) utility is available in the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Linux and macOS.
   
 The following commands show how to use Windows Authentication (Kerberos) and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication, respectively:
   

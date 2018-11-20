@@ -5,8 +5,7 @@ ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: xml
 ms.topic: "language-reference"
 dev_langs: 
   - "XML"
@@ -72,7 +71,7 @@ go
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS '  
-<schema xmlns="http://www.w3.org/2001/XMLSchema">  
+<schema xmlns="https://www.w3.org/2001/XMLSchema">  
       <element name="s" type="string"/>  
       <element name="b" type="boolean"/>  
 </schema>'  

@@ -139,7 +139,7 @@ GO
 ```  
   
 ### Add a semantic index by using SQL Server Management Studio  
- You can change the columns that are enabled for semantic and full-text indexing on the **Full-Text Index Columns** page of the **Full-Text Index Properties** dialog box. For more information, see [Manage Full-Text Indexes](http://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1).  
+ You can change the columns that are enabled for semantic and full-text indexing on the **Full-Text Index Columns** page of the **Full-Text Index Properties** dialog box. For more information, see [Manage Full-Text Indexes](https://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1).  
 
 ## Alter a semantic index
   
@@ -153,7 +153,7 @@ GO
 You can drop semantic indexing when you alter an existing full-text index with the **ALTER FULLTEXT INDEX** statement. You can also drop semantic indexing by using various dialog boxes in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  ### Drop a semantic index by using Transact-SQL  
-To drop semantic indexing only from a column or columns, call the **ALTER FULLTEXT INDEX** statement with the **ALTER COLUMN***column_name***DROP STATISTICAL_SEMANTICS** option. You can drop the indexing from multiple columns in a single **ALTER** statement.  
+To drop semantic indexing only from a column or columns, call the **ALTER FULLTEXT INDEX** statement with the **ALTER COLUMN**_column\_name_**DROP STATISTICAL_SEMANTICS** option. You can drop the indexing from multiple columns in a single **ALTER** statement.  
   
 ```sql  
 USE database_name  
@@ -165,7 +165,7 @@ ALTER FULLTEXT INDEX
 GO  
 ```  
   
-To drop both full-text and semantic indexing from a column, call the **ALTER FULLTEXT INDEX** statement with the **ALTER COLUMN***column_name***DROP** option.  
+To drop both full-text and semantic indexing from a column, call the **ALTER FULLTEXT INDEX** statement with the **ALTER COLUMN**_column\_name_**DROP** option.  
   
 ```sql  
 USE database_name  
@@ -178,7 +178,7 @@ GO
 ```  
   
  ### Drop a semantic index by using SQL Server Management Studio  
- You can change the columns that are enabled for semantic and full-text indexing on the **Full-Text Index Columns** page of the **Full-Text Index Properties** dialog box. For more information, see [Manage Full-Text Indexes](http://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1).  
+ You can change the columns that are enabled for semantic and full-text indexing on the **Full-Text Index Columns** page of the **Full-Text Index Properties** dialog box. For more information, see [Manage Full-Text Indexes](https://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1).  
   
 ###  <a name="dropreq"></a> Requirements and restrictions for dropping a semantic index  
   

@@ -5,15 +5,14 @@ ms.date: "05/02/2018"
 ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords: 
   - "ghost cleanup"
   - "ghost records"
   - "ghost clean up process" 
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: MashaMSFT
+ms.author: mathoma
 manager: "craigg"
 ---
 # Ghost cleanup process guide
@@ -52,7 +51,7 @@ Once the ghost cleanup process is disabled, some action needs to be taken to rem
 
 
 ## Next steps  
-[Disabling the ghost clean up process](https://support.microsoft.com/en-us/help/920093/tuning-options-for-sql-server-when-running-in-high-performance-workloa)
+[Disabling the ghost clean up process](https://support.microsoft.com/help/920093/tuning-options-for-sql-server-when-running-in-high-performance-workloa)
 <br>[Remove ghost records from a single database file](system-stored-procedures/sp-clean-db-file-free-space-transact-sql.md)
 <br>[Remove ghost records from all database data files](system-stored-procedures/sp-clean-db-free-space-transact-sql.md)
 

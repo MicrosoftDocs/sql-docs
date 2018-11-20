@@ -5,8 +5,7 @@ ms.date: "11/13/2018"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords: 
   - "statements [SQL Server], command prompt"
@@ -33,7 +32,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 # sqlcmd Utility
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
- > For SQL Server 2014 and lower, see [sqlcmd Utility](sqlcmd-utility.md).
+ > For SQL Server 2014 and lower, see [sqlcmd Utility](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-2014
+).
 
  > For using sqlcmd on Linux, see [Install sqlcmd and bcp on Linux](../linux/sql-server-linux-setup-tools.md).
 
@@ -145,10 +145,10 @@ sqlcmd
  The **-E** option ignores possible user name and password environment variable settings such as SQLCMDPASSWORD. If the **-E** option is used together with the **-U** option or the **-P** option, an error message is generated.  
 
 **-g**  
-Sets the Column Encryption Setting to `Enabled`. For more information, see [Always Encrypted](../relational-databases/security/encryption/always-encrypted-database-engine.md). Only master keys stored in Windows Certificate Store are supported. The -g switch requires at least **sqlcmd** version [13.1](http://go.microsoft.com/fwlink/?LinkID=825643). To determine your version, execute `sqlcmd -?`.
+Sets the Column Encryption Setting to `Enabled`. For more information, see [Always Encrypted](../relational-databases/security/encryption/always-encrypted-database-engine.md). Only master keys stored in Windows Certificate Store are supported. The -g switch requires at least **sqlcmd** version [13.1](https://go.microsoft.com/fwlink/?LinkID=825643). To determine your version, execute `sqlcmd -?`.
 
  **-G**  
- This switch is used by the client when connecting to SQL Database or SQL Data Warehouse to specify that the user be authenticated using Azure Active Directory authentication. This option sets the **sqlcmd** scripting variable SQLCMDUSEAAD = true. The -G switch requires at least **sqlcmd** version [13.1](http://go.microsoft.com/fwlink/?LinkID=825643). To determine your version, execute `sqlcmd -?`. For more information, see [Connecting to SQL Database or SQL Data Warehouse By Using Azure Active Directory Authentication](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/). The -A option is not supported with the -G option.
+ This switch is used by the client when connecting to SQL Database or SQL Data Warehouse to specify that the user be authenticated using Azure Active Directory authentication. This option sets the **sqlcmd** scripting variable SQLCMDUSEAAD = true. The -G switch requires at least **sqlcmd** version [13.1](https://go.microsoft.com/fwlink/?LinkID=825643). To determine your version, execute `sqlcmd -?`. For more information, see [Connecting to SQL Database or SQL Data Warehouse By Using Azure Active Directory Authentication](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/). The -A option is not supported with the -G option.
 
 > [!IMPORTANT]
 > The `-G` option only applies to Azure SQL Database and Azure Data Warehouse.
@@ -837,7 +837,7 @@ When you press ENTER, the following informational message is printed: "Changed d
   
  `GO`  
   
- When you press ENTER, the following result set is retuned.  
+ When you press ENTER, the following result set is returned.  
   
  `BusinessEntityID FirstName    LastName`  
   

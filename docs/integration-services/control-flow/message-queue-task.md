@@ -36,7 +36,7 @@ manager: craigg
   
  When sending or receiving messages, the Message Queue task uses one of four message types: data file, string, string message to variable, or variable. The string message to variable message type can be used only when receiving messages.  
   
- The task uses an MSMQ connection manager to connect to a message queue. For more information, see [MSMQ Connection Manager](../../integration-services/connection-manager/msmq-connection-manager.md). For more information about Message Queuing, see the [MSDN Library](http://go.microsoft.com/fwlink/?LinkId=7022).  
+ The task uses an MSMQ connection manager to connect to a message queue. For more information, see [MSMQ Connection Manager](../../integration-services/connection-manager/msmq-connection-manager.md). For more information about Message Queuing, see the [MSDN Library](https://go.microsoft.com/fwlink/?LinkId=7022).  
   
  The Message Queue task requires that the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service be installed. Some [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components that you may select for installation on the **Components to Install** page or the **Feature Selection** page of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Wizard install a partial subset of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] components. These components are useful for specific tasks, but the functionality of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] will be limited. For example, the [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] option installs the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] components required to design a package, but the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service is not installed, and therefore the Message Queue task is not functional. To ensure a complete installation of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], you must select [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] on the **Components to Install** page. For more information about installing and running the Message Queue task, see [Install Integration Services](../../integration-services/install-windows/install-integration-services.md).  
   
@@ -92,7 +92,7 @@ manager: craigg
  For information about programmatically setting these properties, see the documentation for the **Microsoft.SqlServer.Dts.Tasks.MessageQueueTask.MessageQueueTask** class in the Developer Guide.  
   
 ## Related Tasks  
- For more information about how to set these properties in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, see [Set the Properties of a Task or Container](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
+ For more information about how to set these properties in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, see [Set the Properties of a Task or Container](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
   
 ## Message Queue Task Editor (General Page)
   Use the **General page** of the **Message Queue Task Editor** dialog box to name and describe the Message Queue task, to specify the message format, and to indicate whether the task sends or receives messages.  
@@ -223,7 +223,7 @@ manager: craigg
  **Variable**  
  Type the variable name, or click \<**New variable…**> and then configure a new variable.  
   
- **Related Topics:** [Add Variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Related Topics:** [Add Variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 #### Filter Dynamic Options  
   
@@ -268,7 +268,7 @@ manager: craigg
  **Variable**  
  Type the name of the variable to hold the received message, or click \<**New variable…**> and then configure a new variable.  
   
- **Related Topics:** [Add Variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Related Topics:** [Add Variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ## Select Variables
   Use the **Select Variables** dialog box to specify the variables to use in a send message operation in the Message Queue task. The **Available Variables** list includes system and user-defined variables that are in the scope of the Message Queue task or its parent container. The task uses the variables in the **Selected Variables** list.  
@@ -289,7 +289,7 @@ manager: craigg
  **New Variable**  
  Create a new variable.  
   
- **Related Topics:** [Add Variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Related Topics:** [Add Variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
 ## See Also  
  [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md)   
  [Control Flow](../../integration-services/control-flow/control-flow.md)  

@@ -5,8 +5,7 @@ ms.date: "03/17/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+s.technology: performance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "server performance [SQL Server], objects for monitoring"
@@ -107,6 +106,7 @@ manager: craigg
 |[SQLServer:General Statistics](../../relational-databases/performance-monitor/sql-server-general-statistics-object.md)|Provides information about general server-wide activity, such as the number of users who are connected to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[SQL Server:HADR Availability Replica](../../relational-databases/performance-monitor/sql-server-availability-replica.md)|Provides information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../includes/sshadr-md.md)] availability replicas.|  
 |[SQL Server:HADR Database Replica](../../relational-databases/performance-monitor/sql-server-database-replica.md)|Provides information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../includes/sshadr-md.md)] database replicas.|  
+|[SQL Server:HTTP Storage](../../relational-databases/performance-monitor/sql-server-http-storage-object.md)|Provides information to monitor a Microsoft Azure Storage account when using [SQL Server Data Files in Microsoft Azure](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)|  
 |[SQLServer:Latches](../../relational-databases/performance-monitor/sql-server-latches-object.md)|Provides information about the latches on internal resources, such as database pages, that are used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[SQLServer:Locks](../../relational-databases/performance-monitor/sql-server-locks-object.md)|Provides information about the individual lock requests made by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], such as lock time-outs and deadlocks. There can be multiple instances of this object.|  
 |[SQLServer:LogPool FreePool](../../relational-databases/performance-monitor/sql-server-logpool-freepool-object.md)|Describes statistics for the free pool inside the Log Pool.|

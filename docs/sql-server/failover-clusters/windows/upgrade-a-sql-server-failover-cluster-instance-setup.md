@@ -55,7 +55,7 @@ manager: craigg
   
 10. The Disk Space Requirements page calculates the required disk space for the features that you specify, and compares requirements to the available disk space on the computer where Setup is running.  
   
-11. On the Full-Text Search Upgrade page, specify the upgrade options for the databases being upgraded. For more information, see [Full-Text Search Upgrade Options](http://msdn.microsoft.com/library/16c9376b-5fbb-4495-a429-06a2493849c9).  
+11. On the Full-Text Search Upgrade page, specify the upgrade options for the databases being upgraded. For more information, see [Full-Text Search Upgrade Options](https://msdn.microsoft.com/library/16c9376b-5fbb-4495-a429-06a2493849c9).  
   
 12. On the **Error Reporting** page, specify the information that you want to send to [!INCLUDE[msCoName](../../../includes/msconame-md.md)] that will help improve [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. By default, options for error reporting is enabled.  
   
@@ -98,7 +98,7 @@ manager: craigg
   
 -   [Change the Database Compatibility Mode and Use the Query Store](../../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)  
   
--   [Take Advantage of New SQL Server 2016 Features](http://msdn.microsoft.com/library/d8879659-8efa-4442-bcbb-91272647ae16)  
+-   [Take Advantage of New SQL Server 2016 Features](https://msdn.microsoft.com/library/d8879659-8efa-4442-bcbb-91272647ae16)  
   
 ## See Also  
  [Upgrade a SQL Server Failover Cluster Instance](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)   

@@ -20,19 +20,19 @@ ms.author: maghan
  For example, to get a PDF copy of a report directly from a native mode report server:  
   
 ```  
-http://myrshost/ReportServer?/myreport&rs:Format=PDF  
+https://myrshost/ReportServer?/myreport&rs:Format=PDF  
 ```  
   
  And, from a SharePoint integrated mode report server:  
   
 ```  
-http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/myrereport.rdl&rs:Format=PDF  
+https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/myrereport.rdl&rs:Format=PDF  
 ```  
   
  For example the following  URL command in your browser exports a PPTX report from a named instance of the report server:  
   
 ```  
-http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportfolder%2freport+name+with+spaces&rs:Format=pptx  
+https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportfolder%2freport+name+with+spaces&rs:Format=pptx  
 ```  
   
  Valid values for this parameter are based on the report rendering extensions that are installed on the report server being accessed. Common extensions are HTML4.0, MHTML, IMAGE, EXCELOPENXML (xlsx) , WORDOPENXML (docx), CSV, PDF, XML, and NULL. If a specified rendering extension is not installed on the report server, the report is not rendered and an error is generated and displayed in the browser.  

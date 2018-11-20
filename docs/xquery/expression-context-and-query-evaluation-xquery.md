@@ -5,8 +5,7 @@ ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: xml
 ms.topic: "language-reference"
 dev_langs: 
   - "XML"
@@ -55,10 +54,10 @@ manager: craigg
   
     -   Any namespaces defined using WITH XMLNAMESPACES. For more information, see [Add Namespaces to Queries with WITH XMLNAMESPACES](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)).  
   
-    -   Any namespaces defined in the query prolog. Note that the namespace declarations in the prolog may override the namespace declaration in the WITH XMLNAMESPACES. For example, in the following query, WITH XMLNAMESPACES declares a prefix (pd) that binds it to namespace (`http://someURI`). However, in the WHERE clause, the query prolog overrides the binding.  
+    -   Any namespaces defined in the query prolog. Note that the namespace declarations in the prolog may override the namespace declaration in the WITH XMLNAMESPACES. For example, in the following query, WITH XMLNAMESPACES declares a prefix (pd) that binds it to namespace (`https://someURI`). However, in the WHERE clause, the query prolog overrides the binding.  
   
         ```  
-        WITH XMLNAMESPACES ('http://someURI' AS pd)  
+        WITH XMLNAMESPACES ('https://someURI' AS pd)  
         SELECT ProductModelID, CatalogDescription.query('  
             <Product   
                 ProductModelID= "{ sql:column("ProductModelID") }"   
@@ -66,7 +65,7 @@ manager: craigg
         ') AS Result  
         FROM Production.ProductModel  
         WHERE CatalogDescription.exist('  
-            declare namespace  pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+            declare namespace  pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
              /pd:ProductDescription[(pd:Specifications)]'  
             ) = 1  
         ```  
@@ -80,10 +79,10 @@ manager: craigg
     ```  
     -- DROP XML SCHEMA COLLECTION SC  
     -- go  
-    CREATE XML SCHEMA COLLECTION SC AS '<schema xmlns="http://www.w3.org/2001/XMLSchema"   
+    CREATE XML SCHEMA COLLECTION SC AS '<schema xmlns="https://www.w3.org/2001/XMLSchema"   
     targetNamespace="myNS" xmlns:ns="myNS"  
-    xmlns:s="http://schemas.microsoft.com/sqlserver/2004/sqltypes">  
-          <import namespace="http://schemas.microsoft.com/sqlserver/2004/sqltypes"/>  
+    xmlns:s="https://schemas.microsoft.com/sqlserver/2004/sqltypes">  
+          <import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes"/>  
           <simpleType name="myType">  
                 <restriction base="int">  
                  <enumeration value="0" />  
@@ -128,10 +127,10 @@ manager: craigg
     ```  
     DROP XML SCHEMA COLLECTION SC  
     go  
-    CREATE XML SCHEMA COLLECTION SC AS '<schema xmlns="http://www.w3.org/2001/XMLSchema"   
+    CREATE XML SCHEMA COLLECTION SC AS '<schema xmlns="https://www.w3.org/2001/XMLSchema"   
     targetNamespace="myNS" xmlns:ns="myNS"  
-    xmlns:s="http://schemas.microsoft.com/sqlserver/2004/sqltypes">  
-          <import namespace="http://schemas.microsoft.com/sqlserver/2004/sqltypes"/>  
+    xmlns:s="https://schemas.microsoft.com/sqlserver/2004/sqltypes">  
+          <import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes"/>  
           <element name="Elem" type="string"/>  
     </schema>'  
     go  

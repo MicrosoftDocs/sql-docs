@@ -95,7 +95,7 @@ ms.author: maghan
   
     > rswebparts.cab    00000000-0000-0000-0000-000000000000     True  
   
-     For more information on using PowerShell, see [Install-SPWebPartPack (http://technet.microsoft.com/library/ff607840.aspx)](http://technet.microsoft.com/library/ff607840.aspx).  
+     For more information on using PowerShell, see [Install-SPWebPartPack (https://technet.microsoft.com/library/ff607840.aspx)](https://technet.microsoft.com/library/ff607840.aspx).  
   
 #### Install Web Parts Using STSADM.exe  
   
@@ -137,7 +137,7 @@ ms.author: maghan
   
 6.  While the page is in edit mode, click **Edit Web Part** in the Report Viewer Web Part.  
   
-7.  In **Report Manager URL**, type a URL to a Report Manager instance that is associated with the native mode report server you want to access. By default, a Report Manager URL has the following syntax: **http://\<servername>/reports**.  
+7.  In **Report Manager URL**, type a URL to a Report Manager instance that is associated with the native mode report server you want to access. By default, a Report Manager URL has the following syntax: **https://\<servername>/reports**.  
   
 8.  In **Report Path**, specify a forward slash, followed by the folder path, and the report name. Do **not** include the server name or Report Manager virtual directory. For example to open the ‘Company Sales’ report in the Adventure Works folder specify **/Adventure Works/Company Sales**. The following is another example where the report ‘Products’ is in the report server root folder **/Products**.  
   
@@ -163,4 +163,4 @@ ms.author: maghan
   
     3.  Click **Report Viewer**.  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -94,7 +94,7 @@ For more information on these dialog boxes, see [Job Categories - Manage Job Cat
     GO  
     ```  
   
-For more information, see [sp_add_category (Transact-SQL)](http://msdn.microsoft.com/en-us/6cca32cd-d941-4378-aed6-a7c90cb7520a).  
+For more information, see [sp_add_category (Transact-SQL)](https://msdn.microsoft.com/6cca32cd-d941-4378-aed6-a7c90cb7520a).  
   
 ## <a name="SMO"></a>Using SQL Server Management Objects  
 **To create a job category**  

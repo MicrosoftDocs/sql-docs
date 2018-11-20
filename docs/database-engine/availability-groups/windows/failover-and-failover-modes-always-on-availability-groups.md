@@ -246,7 +246,7 @@ manager: craigg
 ###  <a name="ForcedFailoverRisks"></a> Risks of Forcing Failover  
  It is essential to understand that forcing failover can cause data loss. Data loss is possible because the target replica cannot communicate with the primary replica and, therefore, cannot guarantee that the databases are synchronized. Forcing failover starts a new recovery fork. Because the original primary databases and secondary databases are on different recovery forks, each of them now contains data that the other database does not contain: each original primary database contains whatever changes were not yet sent from its send queue to the former secondary database (the unsent log); the former secondary databases contain whatever changes occur after failover was forced.  
   
- If failover is forced because the primary replica has failed, potential data loss is depends on whether any transaction logs had not been sent to the secondary replica before the failure. Under the asynchronous-commit mode, accumulated unsent log is always a possibility. Under synchronous-commit mode, this is possible only until the secondary databases becomes synchronized.  
+ If failover is forced because the primary replica has failed, potential data loss depends on whether or not any transaction logs had been sent to the secondary replica before the failure. Under the asynchronous-commit mode, accumulated unsent log is always a possibility. Under synchronous-commit mode, this is possible only until the secondary databases become synchronized.  
   
  The following table summarizes the possibility of data loss for a particular database on the replica to which you force failover.  
   
@@ -256,7 +256,7 @@ manager: craigg
 |Synchronous-commit|No|Yes|  
 |Asynchronous-commit|No|Yes|  
   
- Secondary databases track only two recovery forks, so if you perform multiple forced failovers, any secondary database that did start data synchronization with the previous force failover might not be able to resume. If this occurs, any secondary databases that cannot be resumed will need to be removed from the availability group, restored to the correct point in time, and rejoined to the availability group. A restore will not work across multiple recovery forks, therefore, be sure to perform a log backup after performing more than one forced failover.  
+ Secondary databases track only two recovery forks, so if you perform multiple forced failovers, any secondary database that did start data synchronization with the previous force failover might not be able to resume. If this occurs, any secondary databases that cannot be resumed will need to be removed from the availability group, restored to the correct point in time, and rejoined to the availability group. Error 1408 with state 103 may be observed in this scenario (Error: 1408, Severity: 16, State: 103). A restore will not work across multiple recovery forks, therefore, be sure to perform a log backup after performing more than one forced failover.  
   
 ###  <a name="WhyFFoPostForcedQuorum"></a> Why Forced Failover is Required After Forcing Quorum  
  After quorum is forced on the WSFC cluster (*forced quorum*) you need to perform a forced failover (with possible data loss) on each availability group. The forced failover is required because the real state of the WSFC cluster values might have been lost. Preventing normal failovers after a forced quorum is required because of the possibility than an unsynchronized secondary replica would appear to be synchronized on the reconfigured WSFC cluster.  
@@ -342,7 +342,7 @@ manager: craigg
   
 ##  <a name="RelatedContent"></a> Related Content  
   
--   [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [SQL Server Always On Team Blog: The official SQL Server Always On Team Blog](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   

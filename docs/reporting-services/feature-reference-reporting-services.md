@@ -25,7 +25,7 @@ ms.author: maghan
  [Report Designer F1 Help](../reporting-services/tools/report-designer-f1-help.md)  
  Provides help for Report Designer and its related dialog boxes, Report Wizard, and Image Wizard.  
   
- [Reporting Services Configuration Manager Help Topics](http://msdn.microsoft.com/library/7b6fb18e-ec39-4661-88e3-977ed64e2c82)  
+ [Reporting Services Configuration Manager Help Topics](https://msdn.microsoft.com/library/7b6fb18e-ec39-4661-88e3-977ed64e2c82)  
  Provides help for the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Configuration tool used for deploying and managing report server instances.  
   
  [Report Server in Management Studio F1 Help](../reporting-services/tools/report-server-in-management-studio-f1-help.md)  
@@ -38,7 +38,7 @@ ms.author: maghan
  [Reporting Services Concepts &#40;SSRS&#41;](../reporting-services/reporting-services-concepts-ssrs.md)   
  [Reporting Services Reports &#40;SSRS&#41;](../reporting-services/reports/reporting-services-reports-ssrs.md)   
  [Report Datasets &#40;SSRS&#41;](../reporting-services/report-data/report-datasets-ssrs.md)   
- [Getting Started with Report Builder](http://www.microsoft.com/download/en/details.aspx?id=29072)   
- [Designing and Implementing Reports Using Report Builder 1.0](http://go.microsoft.com/fwlink/?LinkId=142601)  
+ [Getting Started with Report Builder](https://www.microsoft.com/download/en/details.aspx?id=29072)   
+ [Designing and Implementing Reports Using Report Builder 1.0](https://go.microsoft.com/fwlink/?LinkId=142601)  
   
   

@@ -19,7 +19,7 @@ This article covers methodology and scripts used to get information about the **
 
 The DMV [sys.dm_exec_query_optimizer_info](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-optimizer-info-transact-sql) exposes statistics about the optimizations performed by the SQL Server query optimizer. These values are cumulative and begin recording when SQL Server starts.  
 
-The below common_table_expression (CTE) uses this  DMV to provide information about the workload, such as the percentage of queries that reference a view. The results returned by this query do not indicate a performance problem by themselves, but can expose underlying issues when combined with users' complaints of slow-performing queries. 
+The below common_table_expression (CTE) uses this DMV to provide information about the workload, such as the percentage of queries that reference a view. The results returned by this query do not indicate a performance problem by themselves, but can expose underlying issues when combined with users' complaints of slow-performing queries. 
 
 
 ```SQL
@@ -196,8 +196,8 @@ GO
 ## Related external resources
 
 - [DMVs for Performance Tuning (Video - SQL Saturday Pordenone)](https://www.youtube.com/watch?v=9FQaFwpt3-k)
-- [DMVs for Performance Tuning (Slide e Demo - SQL Saturday Pordenone)](http://www.sqlsaturday.com/589/Sessions/Details.aspx?sid=57409)
+- [DMVs for Performance Tuning (Slide e Demo - SQL Saturday Pordenone)](https://www.sqlsaturday.com/589/Sessions/Details.aspx?sid=57409)
 - [SQL Server Tuning in capsule form (movie-SQL Saturday Parma)](https://vimeo.com/200980883)
-- [SQL Server Tuning in a nutshell (slides and Demo-SQL Saturday Parma)](http://www.sqlsaturday.com/566/Sessions/Details.aspx?sid=53988)
+- [SQL Server Tuning in a nutshell (slides and Demo-SQL Saturday Parma)](https://www.sqlsaturday.com/566/Sessions/Details.aspx?sid=53988)
 - [Performance Tuning With SQL Server Dynamic Management Views](https://www.red-gate.com/library/performance-tuning-with-sql-server-dynamic-management-views)
 - [The Most Prominent Wait Types of your SQL Server 2016](https://channel9.msdn.com/Blogs/MVP-Data-Platform/The-Most-Prominent-Wait-Types-of-your-SQL-Server-2016)

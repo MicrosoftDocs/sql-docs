@@ -16,7 +16,7 @@ manager: craigg
   In this lesson, you will add a new mining model to the mining structure that you just created in [Lesson 1: Creating a Time Series Mining Model and Mining Structure](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md).  
   
 ## ALTER MINING STRUCTURE Statement  
- In order to add a new mining model to an existing mining structure, you use the [ALTER MINING STRUCTURE &#40;DMX&#41;]((~/dmx/alter-mining-structure-dmx.md) statement. The code in the statement can be broken into the following parts:  
+ In order to add a new mining model to an existing mining structure, you use the [ALTER MINING STRUCTURE &#40;DMX&#41;](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016) statement. The code in the statement can be broken into the following parts:  
   
 -   Identifying the mining structure  
   

@@ -2,11 +2,11 @@
 title: "Intelligent query processing in Microsoft SQL databases | Microsoft Docs"
 description: "Intelligent query processing features to improve query performance in SQL Server and Azure SQL Database."
 ms.custom: ""
-ms.date: "09/24/2018"
+ms.date: "11/07/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.technology: 
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords: 
 ms.assetid: 
@@ -20,7 +20,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 
 The **Intelligent query processing** feature family includes features with broad impact that improve the performance of existing workloads with minimal implementation effort.
 
-![Intelligent Query Processing Features](./media/2_IQPFeatureFamily.png)
+![Intelligent Query Processing Features](./media/3_IQPFeatureFamily.png)
 
 ## Adaptive Query Processing
 The adaptive query processing feature family includes query processing improvements that adapt optimization strategies to your application workload’s runtime conditions. These improvements included: batch mode adaptive joins, memory grant feedback, and interleaved execution for multi-statement table-valued functions.
@@ -48,6 +48,14 @@ Table variable deferred compilation improves plan quality and overall performanc
 With table variable deferred compilation, compilation of a statement that references a table variable is deferred until the first actual execution of the statement. This deferred compilation behavior is identical to the behavior of temporary tables, and this change results in the use of actual cardinality instead of the original one-row guess. To enable the public preview of table variable deferred compilation in Azure SQL Database, enable database compatibility level 150 for the database you are connected to when executing the query.
 
 For more information, see [Table variable deferred compilation](../../t-sql/data-types/table-transact-sql.md#table-variable-deferred-compilation ).
+
+## Scalar UDF inlining
+> [!NOTE]
+> Scalar UDF inlining is a public preview feature.  
+
+Scalar UDF inlining automatically transforms scalar user-defined functions (UDF) into relational expressions and embeds them in the calling SQL query, thereby improving the performance of workloads that leverage scalar UDFs. Scalar UDF inlining facilitates cost-based optimization of operations inside UDFs, and results in efficient plans that are set-oriented and parallel as opposed to inefficient, iterative, serial execution plans. This feature is enabled by default under database compatibility level 150.
+
+For more information, see [Scalar UDF Inlining](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining?view=sqlallproducts-allversions).
 
 ## Approximate query processing
 > [!NOTE]
@@ -81,6 +89,9 @@ The following workloads may benefit from batch mode on rowstore:
 1.	A significant part of the workload consists of analytical queries (as a rule of thumb, queries with operators such as joins or aggregates processing hundreds of thousands of rows or more), **AND**
 2.	The workload is CPU bound (if the bottleneck is IO, it is still recommended to consider a columnstore index, if possible), **AND**
 3.	Creating a columnstore index adds too much overhead to the transactional part of your workload **OR** creating a columnstore index is not feasible because your application depends on a feature that is not yet supported with columnstore indexes.
+
+> [!NOTE]
+> Batch mode on rowstore can only help by reducing CPU consumption. If your bottleneck is IO-related, and data is not already cached ("cold" cache), batch mode on rowstore will NOT improve elapsed time. Similarly, if there is not enough memory on the machine to cache all data, a performance improvement is unlikely.
 
 ### What changes with batch mode on rowstore
 Other than moving to compatibility level 150, you don't have to change anything on your side in order to enable batch mode on rowstore for candidate workloads.

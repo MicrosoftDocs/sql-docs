@@ -5,8 +5,7 @@ ms.date: "08/28/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.databaseproperties.options.f1"
@@ -90,10 +89,10 @@ manager: craigg
  In SQL Server 2016 and in Azure SQL Database, there are a number of configuration properties that can be scoped to the database level. For more information for all of these settings, see [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).  
   
  **Legacy Cardinality Estimation**  
- Specify the query optimizer cardinality estimation model for the primary independent of the compatibility level of the database. This is equivalent to [Trace Flag 9481](https://support.microsoft.com/en-us/kb/2801413).  
+ Specify the query optimizer cardinality estimation model for the primary independent of the compatibility level of the database. This is equivalent to [Trace Flag 9481](https://support.microsoft.com/kb/2801413).  
   
  **Legacy Cardinality Estimation for Secondary**  
- Specify the query optimizer cardinality estimation model for secondaries, if any, independent of the compatibility level of the database. This is equivalent to [Trace Flag 9481](https://support.microsoft.com/en-us/kb/2801413).  
+ Specify the query optimizer cardinality estimation model for secondaries, if any, independent of the compatibility level of the database. This is equivalent to [Trace Flag 9481](https://support.microsoft.com/kb/2801413).  
   
  **Max DOP**  
  Specify the default [MAXDOP](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) setting for the primary that should be used for statements.  
@@ -102,16 +101,16 @@ manager: craigg
  Specify the default [MAXDOP](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) setting for secondaries, if any, that should be used for statements.  
   
  **Parameter Sniffing**  
- Enables or disables parameter sniffing on the primary. This is equivalent to [Trace Flag 4136](https://support.microsoft.com/en-us/kb/980653).  
+ Enables or disables parameter sniffing on the primary. This is equivalent to [Trace Flag 4136](https://support.microsoft.com/kb/980653).  
   
  **Parameter Sniffing for Secondary**  
- Enables or disables parameter sniffing on secondaries, if any. This is equivalent to [Trace Flag 4136](https://support.microsoft.com/en-us/kb/980653).  
+ Enables or disables parameter sniffing on secondaries, if any. This is equivalent to [Trace Flag 4136](https://support.microsoft.com/kb/980653).  
   
  **Query Optimizer Fixes**  
- Enables or disables query optimization hotfixes on the primary regardless of the compatibility level of the database. This is equivalent to [Trace Flag 4199](https://support.microsoft.com/en-us/kb/974006).  
+ Enables or disables query optimization hotfixes on the primary regardless of the compatibility level of the database. This is equivalent to [Trace Flag 4199](https://support.microsoft.com/kb/974006).  
   
  **Query Optimizer Fixes for Secondary**  
- Enables or disables query optimization hotfixes on secondaries, if any, regardless of the compatibility level of the database. This is equivalent to [Trace Flag 4199](https://support.microsoft.com/en-us/kb/974006).  
+ Enables or disables query optimization hotfixes on secondaries, if any, regardless of the compatibility level of the database. This is equivalent to [Trace Flag 4199](https://support.microsoft.com/kb/974006).  
   
 ## FILESTREAM  
  **FILESTREAM Directory Name**  

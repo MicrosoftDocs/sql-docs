@@ -321,9 +321,9 @@
 - name: Resources
   items:
   - name: Get help in the SSIS forum
-    href: https://social.msdn.microsoft.com/Forums/home?forum=sqlintegrationservices
+    href: https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlintegrationservices
   - name: Get help on Stack Overflow
-    href: http://stackoverflow.com/questions/tagged/ssis
+    href: https://stackoverflow.com/questions/tagged/ssis
   - name: Follow the SSIS team blog
     href: https://blogs.msdn.microsoft.com/ssis/
   - name: Report issues & request features

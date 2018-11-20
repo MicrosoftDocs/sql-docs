@@ -169,7 +169,7 @@ One advantage of list data regions is that you can add report items such as rect
   
 1.  On the **Insert** tab, select **Rectangle**. 
 
-2. Click in the the upper left corner of the list and drag to make the rectangle 7 inches tall and 3.5 inches wide. Again, to get the exact size, in the **Properties** pane under **Position**, type values for **Width** and **Height**.
+2. Click in the upper left corner of the list and drag to make the rectangle 7 inches tall and 3.5 inches wide. Again, to get the exact size, in the **Properties** pane under **Position**, type values for **Width** and **Height**.
   
 2.  Right-click the rectangle > **Rectangle Properties**.  
   
@@ -500,7 +500,7 @@ For more information about lists, see:
 * [Create Invoices and Forms with Lists](../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)
 * [Tablix Data Region Cells, Rows, and Columns &#40;Report Builder&#41; and SSRS](../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
   
-For more information about query designers, see [Query Designers &#40;Report Builder&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9) and [Text-based Query Designer User Interface &#40;Report Builder&#41;](../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
+For more information about query designers, see [Query Designers &#40;Report Builder&#41;](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9) and [Text-based Query Designer User Interface &#40;Report Builder&#41;](../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
   
 ## See Also  
 [Report Builder Tutorials](../reporting-services/report-builder-tutorials.md) 

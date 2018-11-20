@@ -82,5 +82,5 @@ Specifies whether SSMA should correct Access dates that are earlier than the ear
 Batch size used during data migration. A transaction is logged after each batch. By default, the batch size for all schemes is 10000.  
   
 ## See Also  
-[User Interface Reference(Access)](http://msdn.microsoft.com/en-us/af24c303-4a41-449b-9c86-d6558a97e839)  
+[User Interface Reference(Access)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

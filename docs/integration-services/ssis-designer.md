@@ -83,7 +83,7 @@ manager: craigg
 ### Event Handlers Tab  
  You construct the events in a package on the design surface of the **Event Handlers** tab. On the **Event Handlers** tab, you select the package or package object that you want to create an event handler for, and then select the event to associate with the event handler. An event handler has a control flow and optional data flows.  
   
- For more information, see [Add an Event Handler to a Package](http://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78).  
+ For more information, see [Add an Event Handler to a Package](https://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78).  
   
 ### Package Explorer Tab  
  Packages can be complex, including many tasks, connection managers, variables, and other elements. The explorer view of the package lets you see a complete list of package elements.  
@@ -98,7 +98,7 @@ manager: craigg
 #### Connection Managers Area  
  You add and modify the connection managers that a package uses in the **Connection Managers** area. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] includes connection managers to connect to a variety of data sources, such as text files, OLE DB databases, and .NET providers.  
   
- For more information, see [Integration Services &#40;SSIS&#41; Connections](../integration-services/connection-manager/integration-services-ssis-connections.md) and [Create Connection Managers](http://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345).  
+ For more information, see [Integration Services &#40;SSIS&#41; Connections](../integration-services/connection-manager/integration-services-ssis-connections.md) and [Create Connection Managers](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345).  
  
 ## Control Flow tab
 Use the **Control Flow** tab of [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer to build the control flow in a [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] package.  

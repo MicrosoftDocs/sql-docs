@@ -4,16 +4,12 @@
     href: polybase-guide.md
 - name: Concepts
   items:
-  - name: External data sources
-    href: polybase-external-data-sources.md
   - name: Query scenarios
     href: polybase-queries.md
   - name: Push-down computation
     href: polybase-pushdown-computation.md
   - name: Scale-out groups
     href: polybase-scale-out-groups.md
-  - name: Type mapping
-    href: polybase-type-mapping.md
 - name: How-to guides
   items:
   - name: Install
@@ -40,6 +36,8 @@
       href: polybase-configure-teradata.md
     - name: MongoDB
       href: polybase-configure-mongodb.md
+    - name: ODBC Generic Types
+      href: polybase-configure-odbc-generic.md
   - name: Scale-out groups
     items:
     - name: Configure a scale-out group
@@ -65,9 +63,9 @@
   - name: DBA Stack Exchange
     href: https://dba.stackexchange.com/questions/tagged/sql-server
   - name: Stack Overflow
-    href: http://stackoverflow.com/questions/tagged/sql-server
+    href: https://stackoverflow.com/questions/tagged/sql-server
   - name: MSDN Forums
-    href: https://social.msdn.microsoft.com/Forums/home?category=sqlserver
+    href: https://social.msdn.microsoft.com/Forums/en-us/home?category=sqlserver
   - name: Submit feedback
     href: https://feedback.azure.com/forums/908035-sql-server
   - name: Reddit

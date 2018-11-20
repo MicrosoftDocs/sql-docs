@@ -7,7 +7,6 @@ ms.reviewer: ""
 ms.technology:
 ms.topic: conceptual
 f1_keywords: 
-  - "VS.TOOLSOPTIONSPAGES.ENVIRONMENT.GENERAL"
   - "VS.ToolsOptionsPages.Environment.SQLEnvironmentOptions"
 ms.assetid: c32ccdb8-2cf8-4c78-b474-a3abd3dbbd13
 author: stevestein

@@ -260,7 +260,7 @@ The following table lists extended events related to automatic seeding.
 
 [CREATE AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/create-availability-group-transact-sql.md)
 
-[Always On Availability Groups Troubleshooting and Monitoring Guide](http://technet.microsoft.com/library/dn135328.aspx)
+[Always On Availability Groups Troubleshooting and Monitoring Guide](https://technet.microsoft.com/library/dn135328.aspx)
 
 <!--Image references-->
 [1]: ./media/auto-seed-new-availability-group.png

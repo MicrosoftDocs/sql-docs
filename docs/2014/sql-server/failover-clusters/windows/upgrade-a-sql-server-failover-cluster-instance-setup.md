@@ -40,7 +40,7 @@ manager: craigg
   
 -   To make sure that the Visual Studio component can be installed correctly, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] requires you to install an update. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup checks for the presence of this update and then requires you to download and install the update before you can continue with the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installation. To avoid the interruption during [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup, you can download and install the update before running [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup as described below (or install all the updates for .NET 3.5 SP1 available on Windows Update):  
   
-     If you install [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] on a computer with the Widows Server 2008 SP2 operating system, you can get the required update from [here](http://go.microsoft.com/fwlink/?LinkId=198093)  
+     If you install [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] on a computer with the Windows Server 2008 SP2 operating system, you can get the required update from [here](http://go.microsoft.com/fwlink/?LinkId=198093)  
   
      If you install [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] on a computer with the [!INCLUDE[win7](../../../includes/win7-md.md)] SP1 or [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] SP1 operating system, this update in included.  
   

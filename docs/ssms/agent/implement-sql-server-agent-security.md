@@ -76,7 +76,7 @@ Follow these guidelines to improve the security of your [!INCLUDE[ssNoVersion](.
   
 ## See Also  
 [Using Predefined Roles](../../reporting-services/security/role-definitions-predefined-roles.md)  
-[sp_addrolemember (Transact-SQL)](http://msdn.microsoft.com/en-us/a583c087-bdb3-46d2-b9e5-3921b3e6d10b)  
-[sp_droprolemember (Transact-SQL)](http://msdn.microsoft.com/en-us/c2f19ab1-e742-4d56-ba8e-8ffd40cf4925)  
-[Security and Protection (Database Engine)](http://msdn.microsoft.com/en-us/dfb39d16-722a-4734-94bb-98e61e014ee7)  
+[sp_addrolemember (Transact-SQL)](https://msdn.microsoft.com/a583c087-bdb3-46d2-b9e5-3921b3e6d10b)  
+[sp_droprolemember (Transact-SQL)](https://msdn.microsoft.com/c2f19ab1-e742-4d56-ba8e-8ffd40cf4925)  
+[Security and Protection (Database Engine)](https://msdn.microsoft.com/dfb39d16-722a-4734-94bb-98e61e014ee7)  
   

@@ -96,6 +96,7 @@ manager: craigg
 |-----------------------------------|--------------------|-----------------|  
 |**Number to increment new business rules by**|**BusinessRuleDefaultPriorityIncrement**|In the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **System Administration** functional area, the number the priority of each new business rule is incremented by. The default value is **10**.|  
 |**Number of members to apply business rules to**|**BusinessRuleRealtimeMemberCount**|In the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **Explorer** functional area, the maximum number of members in the grid to apply business rules to. In the [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)], the maximum number of members in the active worksheet to apply business rules to. The default value is **10000**.|  
+|**Business Rule User Script Execute First**|**BusinessRuleUserScriptExecuteFirst**|Normally, business rule action executes with sequence "Default Value", "Change Value", "Validation", "External Action", "User Defined Action Script". If this setting is changed to **1**, "User Defined Action Script" will be the first step for business rule action execution. This setting is a hidden setting. The default value is **0**.|  
   
  For more information, see [Business Rules &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md).  
   
@@ -103,11 +104,11 @@ manager: craigg
   
 |Configuration Manager Setting|System Setting|Description|  
 |-----------------------------------|--------------------|-----------------|  
-|**Master Data Manager URL for notifications**|**MDMRootURL**|The URL for the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] web application, which is used in the link in email notifications, for example `http://constoso/mds`.|  
+|**Master Data Manager URL for notifications**|**MDMRootURL**|The URL for the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] web application, which is used in the link in email notifications, for example `https://constoso/mds`.|  
 |**Notification email interval**|**NotificationInterval**|The frequency, in seconds, that email notifications are sent. The default value is **120** seconds (2 minutes).|  
 |**Number of notifications in a single email**|**NotificationsPerEmail**|The maximum number of validation issues that will be listed in a single notification email. Additional issues, if they exist, are not included in the email, but are available in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].|  
 |**Default email format**|**EmailFormat**|The format for all email notifications. The default value is **HTML** or **1**. The database setting of **2** indicates **Text**.<br /><br /> Note: You can override this for an individual user in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], by changing and saving the **Email format** on the user's **General** tab.|  
-|**Regular expression for email address**|**EmailRegExPattern**|In the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **User and Group Permissions** functional area, the regular expression used to validate the email address entered on a user's **General** tab. For more information about regular expressions, see [Regular Expression Language Elements](http://go.microsoft.com/fwlink/?LinkId=164401) in the MSDN library.|  
+|**Regular expression for email address**|**EmailRegExPattern**|In the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **User and Group Permissions** functional area, the regular expression used to validate the email address entered on a user's **General** tab. For more information about regular expressions, see [Regular Expression Language Elements](https://go.microsoft.com/fwlink/?LinkId=164401) in the MSDN library.|  
 |**Database Mail account**|**EmailProfilePrincipalAccount**|Displays the Database Mail account to use when sending email notifications. The default profile is **mds_email_user**.|  
 |**Database Mail profile**|**DatabaseMailProfile**|The Database Mail profile to use when sending email notifications. The default value is blank.|  
 ||**ValidationIssueHTML**|In HTML format, the text of the email users get when a business rule fails validation.|  

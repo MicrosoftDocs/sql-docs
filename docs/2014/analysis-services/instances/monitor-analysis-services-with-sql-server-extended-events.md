@@ -61,7 +61,7 @@ manager: craigg
  The name given to this trace; usually a human readable definition of the trace. It is a common practice to use the *trace_id* value as the name.  
   
  *AS_event*  
- The Analysis Services event to be exposed. See [Analysis Services Trace Events](../trace-events/analysis-services-trace-events.md) for names of the events.  
+ The Analysis Services event to be exposed. See [Analysis Services Trace Events](https://docs.microsoft.com/bi-reference/trace-events/analysis-services-trace-events) for names of the events.  
   
  *data_filename*  
  The name of the file that contains the events data. This name is suffixed with a time stamp to avoid data overwriting if the trace is sent over and over.  

@@ -46,7 +46,7 @@ manager: craigg
   
  [Create a Model Deployment Package by Using the Wizard](../master-data-services/create-a-model-deployment-package-by-using-the-wizard.md)  
   
- [Troubleshooting Model Deployment (Master Data Services)](http://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-model-deployment-master-data-services.aspx)  
+ [Troubleshooting Model Deployment (Master Data Services)](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-model-deployment-master-data-services.aspx)  
   
 ## Business Rules  
  [Business Rules &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  

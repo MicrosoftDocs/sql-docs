@@ -6,7 +6,7 @@
     items:
     - name: SQL Server 2017
       href: sql-server-linux-release-notes.md
-    - name: SQL Server 2019 CTP 2.0
+    - name: SQL Server 2019 preview
       href: sql-server-linux-release-notes-2019.md
   - name: What's new?
     href: sql-server-linux-whats-new.md
@@ -55,12 +55,8 @@
     href: sql-server-linux-deploy-pacemaker-cluster.md
   - name: 8_Create and configure availability groups
     href: sql-server-linux-create-availability-group.md
-  - name: 9_High availability on containers
-    items:
-    - name: Deploy on Kubernetes
-      href: tutorial-sql-server-containers-kubernetes.md
-    - name: Deploy on Kubernetes with availability groups
-      href: tutorial-sql-server-ag-kubernetes.md
+  - name: 9_Deploy on Kubernetes
+    href: tutorial-sql-server-containers-kubernetes.md
   - name: 10_Configure replication
     href: sql-server-linux-replication-tutorial-tsql.md
 - name: Concepts
@@ -257,7 +253,7 @@
   - name: DBA Stack Exchange
     href: https://dba.stackexchange.com/questions/tagged/sql-server
   - name: Stack Overflow
-    href: http://stackoverflow.com/questions/tagged/sql-server
+    href: https://stackoverflow.com/questions/tagged/sql-server
   - name: MSDN Forums
     href: https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver
   - name: Submit feedback

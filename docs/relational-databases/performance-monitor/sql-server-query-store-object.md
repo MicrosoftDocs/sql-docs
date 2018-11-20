@@ -5,8 +5,7 @@ ms.date: "03/17/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+s.technology: performance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Query Store object"

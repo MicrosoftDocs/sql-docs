@@ -42,5 +42,15 @@
   href: row-level-security.md
 - name: Dynamic Data Masking
   href: dynamic-data-masking.md
+- name: Static Data Masking
+  href: static-data-masking.md
 - name: SQL Server Certificates and Asymmetric Keys
   href: sql-server-certificates-and-asymmetric-keys.md
+- name: Tutorials
+  items:
+    - name: Always Encrypted
+      items:
+        - name: Getting Started with Always Encrypted with secure enclaves using SSMS
+          href: tutorial-getting-started-with-always-encrypted-enclaves.md
+
+

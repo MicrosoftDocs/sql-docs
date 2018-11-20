@@ -5,8 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: xml
 ms.topic: "language-reference"
 dev_langs: 
   - "XML"
@@ -60,7 +59,7 @@ SELECT @x.query('/ROOT[string-length()=5]');
  For products whose summary description is greater than 50 characters, the following query retrieves the product ID, the length of the summary description, and the summary itself, the <`Summary`> element.  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' as pd)  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' as pd)  
 SELECT CatalogDescription.query('  
       <Prod ProductID= "{ /pd:ProductDescription[1]/@ProductModelID }" >  
        <LongSummary SummaryLength =   
@@ -101,8 +100,8 @@ Result
   
 ```  
 WITH XMLNAMESPACES (  
-'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd,  
-'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain' AS wm)  
+'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd,  
+'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain' AS wm)  
   
 SELECT CatalogDescription.query('  
       for   $ProdDesc in /pd:ProductDescription,  
@@ -135,7 +134,7 @@ Result
 <Prod ProductModelID="19">  
   <ShortFeature FeatureDescLength="15">  
     <wm:Warranty   
-       xmlns:wm="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain">  
+       xmlns:wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain">  
       <wm:WarrantyPeriod>3 years</wm:WarrantyPeriod>  
       <wm:Description>parts and labor</wm:Description>  
     </wm:Warranty>  

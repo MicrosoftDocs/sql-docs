@@ -50,12 +50,12 @@ Here are some of the commands used by the example contributor in this walkthroug
   
 |**Class**|**Method/Property**|**Description**|  
 |-------------|------------------------|-------------------|  
-|[TSqlModel](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx)|GetObjects()|Queries the model for objects, and is the main entry point to the model API. Only top-level types such as Table or View can be queried – types such as Columns can only be found by traversing the model. If no ModelTypeClass filters are specified then all top level types will be returned.|  
-|[TSqlObject](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|GetReferencedRelationshipInstances()|Finds relationships to elements referenced by the current TSqlObject. For instance, for a table this will return objects like the Table’s columns. In this case, a ModelRelationshipClass filter can be used to specify exact relationships to query (for instance using the “Table.Columns” filter would ensure only columns were returned).<br /><br />There are a number of similar methods, such as GetReferencingRelationshipInstances, GetChildren, and GetParent. See the API documentation for more information.|  
+|[TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx)|GetObjects()|Queries the model for objects, and is the main entry point to the model API. Only top-level types such as Table or View can be queried – types such as Columns can only be found by traversing the model. If no ModelTypeClass filters are specified then all top level types will be returned.|  
+|[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|GetReferencedRelationshipInstances()|Finds relationships to elements referenced by the current TSqlObject. For instance, for a table this will return objects like the Table’s columns. In this case, a ModelRelationshipClass filter can be used to specify exact relationships to query (for instance using the “Table.Columns” filter would ensure only columns were returned).<br /><br />There are a number of similar methods, such as GetReferencingRelationshipInstances, GetChildren, and GetParent. See the API documentation for more information.|  
   
 **Uniquely Identifying your Contributor**  
   
-During the build process, custom contributors are loaded from a standard extension directory. Build Contributors are identified by an [ExportBuildContributor](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.exportbuildcontributorattribute.aspx) attribute. This attribute is required so that contributors can be discovered. This attribute should look similar to the following:  
+During the build process, custom contributors are loaded from a standard extension directory. Build Contributors are identified by an [ExportBuildContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.exportbuildcontributorattribute.aspx) attribute. This attribute is required so that contributors can be discovered. This attribute should look similar to the following:  
   
 ```  
 [ExportBuildContributor("ExampleContributors.ModelStatistics", "1.0.0.0")]  
@@ -69,7 +69,7 @@ To create a build contributor, you must perform the following tasks:
   
 -   Create a class library project and add required references.  
   
--   Define a class named ModelStatistics that inherits from [BuildContributor](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx).  
+-   Define a class named ModelStatistics that inherits from [BuildContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx).  
   
 -   Override the OnExecute method.  
   
@@ -494,7 +494,7 @@ You can do this in one of two ways:
         ```  
         <?xml version="1.0" encoding="utf-8"?>  
   
-        <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
+        <Project xmlns="https://schemas.microsoft.com/developer/msbuild/2003">  
           <PropertyGroup>  
             <BuildContributors>$(BuildContributors);ExampleContributors.ModelStatistics</BuildContributors>  
             <ContributorArguments Condition="'$(Configuration)' == 'Debug'">$(ContributorArguments);ModelStatistics.GenerateModelStatistics=true;ModelStatistics.SortModelStatisticsBy=name;</ContributorArguments>  

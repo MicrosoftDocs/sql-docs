@@ -1,7 +1,7 @@
 ---
 title: "PREDICT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/02/2018"
+ms.date: "11/06/2018"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
@@ -65,9 +65,6 @@ The PARAMETERS parameter is used to specify optional user-defined parameters use
 
 The name of each parameter is specific to the model type. For example, the [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) function in RevoScaleR supports the parameter `@computeResiduals`, which indicates whether residuals should be computed when scoring a logistic regression model. If you are calling a compatible model, you could pass that parameter name and a TRUE or FALSE value to the `PREDICT` function.
 
-> [!NOTE]
-> This option does not work in pre-release versions of SQL Server 2017.
-
 **WITH ( <result_set_definition> )**
 
 The WITH clause is used to specify the schema of the output returned by the `PREDICT` function.
@@ -115,7 +112,7 @@ DECLARE @logit_model varbinary(max) = "SELECT TOP 1 [model_binary] from [models_
 DECLARE @input_qry = "SELECT ID, [Gender], [Income] from NewCustomers";
 
 SELECT PREDICT [class]
-FROM PREDICT( MODEL = @logit_model,  DATA = @input_qry
+FROM PREDICT( MODEL = @logit_model,  DATA = @input_qry)
 WITH (class string);
 ```
 
@@ -166,9 +163,6 @@ END;
 ```
 
 ### Creating an R model and generating scores using optional model parameters
-
-> [!NOTE]
-> Use of the parameters argument is not supported in Release Candidate 1.
 
 This example assumes that you have created a logistic regression model fitted with a covariance matrix, using a call to RevoScaleR such as this:
 

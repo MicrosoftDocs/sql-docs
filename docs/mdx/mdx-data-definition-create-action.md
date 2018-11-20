@@ -77,7 +77,7 @@ FOR
   
 |Action type|Description|  
 |-----------------|-----------------|  
-|**URL**|The returned action string is a URL that should be opened using an Internet browser.<br /><br /> Note: If this action does not start with `http://` or `https://`, the action will be unavailable to the browser unless **SafetyOptions** is set to **DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_ALL**.|  
+|**URL**|The returned action string is a URL that should be opened using an Internet browser.<br /><br /> Note: If this action does not start with `https://` or `https://`, the action will be unavailable to the browser unless **SafetyOptions** is set to **DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_ALL**.|  
 |**HTML**|The returned action string is an HTML script. The string should be saved to a file and the file should be rendered using an Internet browser. In this case, a whole script may be run as part of the generated HTML.|  
 |**STATEMENT**|The returned action string is a statement that needs to be executed by setting the **ICommand::SetText** method of a command object to the string and calling the **ICommand::Execute**method. If the command does not succeed, an error is returned.|  
 |**DATASET**|The returned action string is an MDX statement that needs to be run by setting the **ICommand::SetText** method of a command object to the string and calling the **ICommand::Execute** method. The requested interface ID (IID) should be **IDataset**. The command succeeds if a data set has been created. The client application should allow the user to browse the returned data set.|  

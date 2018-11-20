@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: 11/08/2018
 ms.reviewer: ""
 ms.topic: conceptual
 helpviewer_keywords:
@@ -25,7 +25,7 @@ The Microsoft Cursor Service for OLE DB supplements the cursor support functions
 ## Keyword
  To invoke this service component, set the [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) or [Connection](../../../ado/reference/ado-api/connection-object-ado.md) object's [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) property to **adUseClient**.
 
-```
+```vb
 connection.CursorLocation=adUseClient
 recordset.CursorLocation=adUseClient
 ```
@@ -35,7 +35,7 @@ recordset.CursorLocation=adUseClient
 
  Changes to some dynamic properties are not visible to the underlying data source after the Cursor Service has been invoked. For example, setting the *Command Time out* property on a **Recordset** will not be visible to the underlying data provider.
 
-```
+```vb
 
 Recordset1.CursorLocation = adUseClient     'invokes cursor service
 Recordset1.Open "authors", _
@@ -69,7 +69,7 @@ Recordset1.Properties.Item("Command Time out") = 50
 
  You can also set or retrieve a dynamic property by specifying its name as the index to the **Properties** collection. For example, get and print the current value of the [Optimize](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) dynamic property, then set a new value, as follows:
 
-```
+```vb
 Debug.Print rs.Properties("Optimize")
 rs.Properties("Optimize") = True
 ```

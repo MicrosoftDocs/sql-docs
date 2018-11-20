@@ -6,8 +6,7 @@ ms.date: "06/14/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: connectivity
 ms.topic: "reference"
 helpviewer_keywords: 
   - "OLE DB Driver for SQL Server, reference"
@@ -27,7 +26,7 @@ manager: craigg
   
  This OLE DB Driver for SQL Server programming reference does not document all of the OLE DB interfaces and methods, only those interfaces and methods that exhibit provider-specific behavior when using the OLE DB Driver for SQL Server.  
   
- For a full description of the core OLE DB interfaces and methods, see the [OLE DB Programmer's Reference](http://go.microsoft.com/fwlink/?LinkId=45232).  
+ For a full description of the core OLE DB interfaces and methods, see the [OLE DB Programmer's Reference](https://go.microsoft.com/fwlink/?LinkId=45232).  
   
 ## In This Section  
   

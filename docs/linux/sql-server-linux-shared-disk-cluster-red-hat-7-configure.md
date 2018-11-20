@@ -15,7 +15,7 @@ ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-This guide provides instructions to create a two-node shared disk cluster for SQL Server on Red Hat Enterprise Linux. The clustering layer is based on Red Hat Enterprise Linux (RHEL) [HA add-on](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) built on top of [Pacemaker](http://clusterlabs.org/). The SQL Server instance is active on either one node or the other.
+This guide provides instructions to create a two-node shared disk cluster for SQL Server on Red Hat Enterprise Linux. The clustering layer is based on Red Hat Enterprise Linux (RHEL) [HA add-on](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) built on top of [Pacemaker](https://clusterlabs.org/). The SQL Server instance is active on either one node or the other.
 
 > [!NOTE] 
 > Access to Red Hat HA add-on and documentation requires a subscription. 
@@ -24,7 +24,7 @@ As the following diagram shows, storage is presented to two servers. Clustering 
 
 ![Red Hat Enterprise Linux 7 Shared Disk SQL Cluster](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 
-For more information on cluster configuration, resource agents options, and management, visit [RHEL reference documentation](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
+For more information on cluster configuration, resource agents options, and management, visit [RHEL reference documentation](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
 
 
 > [!NOTE] 
@@ -195,8 +195,8 @@ Do the following steps on all cluster nodes.
 
 For more information about using NFS, see the following resources:
 
-* [NFS servers and firewalld | Stack Exchange](http://unix.stackexchange.com/questions/243756/nfs-servers-and-firewalld)
-* [Mounting an NFS Volume | Linux Network Administrators Guide](http://www.tldp.org/LDP/nag2/x-087-2-nfs.mountd.html)
+* [NFS servers and firewalld | Stack Exchange](https://unix.stackexchange.com/questions/243756/nfs-servers-and-firewalld)
+* [Mounting an NFS Volume | Linux Network Administrators Guide](https://www.tldp.org/LDP/nag2/x-087-2-nfs.mountd.html)
 * [NFS server configuration](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/3/html/Reference_Guide/s1-nfs-server-export.html)
 
 ### Mount database files directory to point to the shared storage
@@ -281,7 +281,7 @@ At this point both instances of SQL Server are configured to run with the databa
 
    ​
 
-2. Set the password for for the default user that is created when installing Pacemaker and Corosync packages. Use the same password on both nodes. 
+2. Set the password for the default user that is created when installing Pacemaker and Corosync packages. Use the same password on both nodes. 
 
    ```bash
    sudo passwd hacluster
@@ -383,7 +383,7 @@ At this point both instances of SQL Server are configured to run with the databa
 
 ## Additional resources
 
-* [Cluster from Scratch](http://clusterlabs.org/doc/Cluster_from_Scratch.pdf) guide from Pacemaker
+* [Cluster from Scratch](https://clusterlabs.org/doc/Cluster_from_Scratch.pdf) guide from Pacemaker
 
 ## Next steps
 

@@ -70,9 +70,9 @@ To start the web portal from a browser, do the following:
 
 2. In the address bar of the web browser, type the web portal URL.
 
-    By default, the URL is *http://[ComputerName]/reports*.
+    By default, the URL is *https://[ComputerName]/reports*.
 
-    The report server might be configured to use a specific port. For example, *http://[ComputerName]:80/reports* or *http://[ComputerName]:8080/reports*.
+    The report server might be configured to use a specific port. For example, *https://[ComputerName]:80/reports* or *https://[ComputerName]:8080/reports*.
 
 ## Grouping by categories
 
@@ -123,4 +123,4 @@ You can enter a search team, and you will see everything you can access. The res
 [Planning for Reporting Services Browser Support](../reporting-services/browser-support-for-reporting-services-and-power-view.md)  
 [Reporting Services Features supported by the Editions of SQL Server 2016](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)  
 
-More questions? [Try the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

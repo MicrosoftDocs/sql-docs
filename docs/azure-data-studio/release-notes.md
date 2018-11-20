@@ -2,10 +2,10 @@
 title: Azure Data Studio release notes| Microsoft Docs
 description: 'Azure Data Studio release notes'
 ms.custom: "tools|sos"
-ms.date: "09/24/2018"
+ms.date: "11/06/2018"
 ms.prod: sql
+ms.technology: azure-data-studio
 ms.reviewer: "alayu; sstein"
-ms.prod_service: sql-tools
 ms.topic: conceptual
 author: "stevestein"
 ms.author: "sstein"
@@ -13,7 +13,52 @@ manager: craigg
 ---
 # Azure Data Studio release notes
 
-**[Download the September *General Availability* (GA) Release!](download.md)**
+**[Download the November Release!](download.md)**
+
+## November 2018 (November Release)
+
+release date: November 6, 2018  
+version: 1.2.4
+
+- Update to the [SQL Server 2019 Preview extension](https://docs.microsoft.com/sql/azure-data-studio/sql-server-2019-extension?view=sql-server-ver15)
+- Introducing Paste the Plan extension
+- Introducing High Color queries extension, including SSMS editor theme
+- Fixes in SQL Server Agent, Profiler, and Import extensions
+- Fix .Net Core Socket KeepAlive issue causing dropped inactive connections on macOS
+- Upgrade SQL Tools Service to .Net Core 2.2 Preview 3 (for eventual AAD support)
+
+### Bug Fixes
+- Fix [issue #2933](https://github.com/Microsoft/azuredatastudio/issues/2933): Connection lost to Azure SQL DB
+- Fix [issue #2914](https://github.com/Microsoft/azuredatastudio/issues/2914): "Invalid argument" exception expanding OE database node
+- Fix [issue #2935](https://github.com/Microsoft/azuredatastudio/pull/2935): Display multi-line messages correctly in query results
+- Fix [issue #2906](https://github.com/Microsoft/azuredatastudio/pull/2906): Fix Edit Data document name when table name contains special characters
+- Fix [issue #2929](https://github.com/Microsoft/azuredatastudio/issues/2929): Built in extension changelog says to check the VSCode Release Notes for changes
+- Fix [issue #2719](https://github.com/Microsoft/azuredatastudio/issues/2719): High Contrast theme doubles/triples icons
+- Fix [issue #3047](https://github.com/Microsoft/azuredatastudio/pull/3047): Add a command line interface for connecting to a SQL Server
+- Fix [issue #3031](https://github.com/Microsoft/azuredatastudio/pull/3031): Add query plan theme support
+- ...
+
+For detailed information, see the [Change Log](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md), and [Releases](https://github.com/Microsoft/azuredatastudio/releases).
+
+## October 2018 (October Release)
+
+release date: October 29, 2018  
+version: 1.1.4
+
+- Introducing the Azure Resource Explorer to browse Azure SQL Databases
+- Improve Object Explorer and Query Editor connectivity robustness
+- SQL Agent extensions improvements
+- Update to the [SQL Server 2019 Preview extension](https://docs.microsoft.com/sql/azure-data-studio/sql-server-2019-extension?view=sql-server-ver15)
+
+### Bug Fixes
+- Fix [issue #2717](https://github.com/Microsoft/azuredatastudio/issues/2717): XML Column result click formatting
+- Fix [issue #2993](https://github.com/Microsoft/azuredatastudio/issues/2993): Width's Result windows is incomplete
+- Fix [issue #2999](https://github.com/Microsoft/azuredatastudio/issues/2999): Could not load file System.Diagnostics.Tracing on Mac when connecting to DB
+- Fix [issue #2851](https://github.com/Microsoft/azuredatastudio/issues/2851): TimeSeries chart does not render correctly
+- Fix [issue #2996](https://github.com/Microsoft/azuredatastudio/issues/2996): Temp table loss due to sudden session change
+- ...
+
+For detailed information, see the [Change Log](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md), and [Releases](https://github.com/Microsoft/azuredatastudio/releases).
 
 ## September 2018 (September GA Release)
 
@@ -32,7 +77,7 @@ General Availability release of Azure Data Studio (formerly SQL Operations Studi
     - Use the PROSE Code Accelerator libraries in your Notebook to learn file format and data types for fast data preparation.
   - Azure Resource Explorer
     - The Azure Resource Explorer view lets you browse data-related endpoints for your Azure accounts and create connections to them in Object Explorer. In this release Azure SQL Databases and servers are supported.
-  - SQL Server Polybase Create External Table Wizard
+  - SQL Server PolyBase Create External Table Wizard
     - Create an external table and its supporting metadata structures with an easy to use wizard. In this release, remote SQL Server and Oracle servers are supported.
 - Query Results Grid performance and UX improvements for large number of result sets.
 - Visual Studio Code source code refresh from 1.23 to 1.26.1 with Grid Layout and Improved Settings Editor (preview).
@@ -55,7 +100,7 @@ version: 0.32.8
 
 *0.32.8 contains fixes for a couple regressions found in 0.32.7 ([#1971](https://github.com/Microsoft/azuredatastudio/issues/1971), [#2372](https://github.com/Microsoft/azuredatastudio/issues/2372)*)
 
-The *August Public Preview* focuses on on bug fixes, product stabilization, and filling gaps in existing scenarios.  
+The *August Public Preview* focuses on bug fixes, product stabilization, and filling gaps in existing scenarios.  
 
 - Announcing the SQL Server Import Extension
 - SQL Server Profiler Session management

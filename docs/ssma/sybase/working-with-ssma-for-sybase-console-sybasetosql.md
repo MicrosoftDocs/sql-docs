@@ -33,5 +33,5 @@ Topics covered in this section include:
 |[Troubleshooting &#40;SybaseToSQL&#41;](../../ssma/sybase/troubleshooting-sybasetosql.md)|Provides brief information about fixing migration issues.|  
   
 ## See Also  
-[Getting Started with SSMA for Sybase Console(SybaseToSQL)](http://msdn.microsoft.com/en-us/43219dbe-bcfa-427d-9242-f07b1455f15f)  
+[Getting Started with SSMA for Sybase Console(SybaseToSQL)](https://msdn.microsoft.com/43219dbe-bcfa-427d-9242-f07b1455f15f)  
   

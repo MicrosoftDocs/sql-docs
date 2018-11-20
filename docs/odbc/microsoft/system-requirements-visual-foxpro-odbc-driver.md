@@ -24,7 +24,7 @@ manager: craigg
 The system requirements for installation provide the minimum operating system and disk space needed to successfully install the driver. After you've installed the driver, you can select the specific application software you want to use to access Visual FoxPro data.  
   
 ## Installation Requirements  
- For installation requirements and other information, see [the Visual FoxPro ODBC Driver download site](http://go.microsoft.com/fwlink/?LinkId=121318).  
+ For installation requirements and other information, see [the Visual FoxPro ODBC Driver download site](https://go.microsoft.com/fwlink/?LinkId=121318).  
   
 ## Accessing Visual FoxPro Data  
  To access Microsoft Visual FoxPro or FoxPro 2.*x* data, you must have the following:  

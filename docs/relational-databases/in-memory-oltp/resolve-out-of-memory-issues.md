@@ -131,7 +131,7 @@ GO
 > See the topic [Best Practices using In-Memory OLTP in a VM environment](#bkmk_VMs) for more information.  
   
 ##  <a name="bkmk_PageAllocFailure"></a> Resolve page allocation failures due to insufficient memory when sufficient memory is available  
- If you get the error message, `Disallowing page allocations for database '*\<databaseName>*' due to insufficient memory in the resource pool '*\<resourcePoolName>*'. See 'http://go.microsoft.com/fwlink/?LinkId=330673' for more information.` in the error log when the available physical memory is sufficient to allocate the page, it may be due to a disabled Resource Governor. When the Resource Governor is disabled MEMORYBROKER_FOR_RESERVE induces artificial memory pressure.  
+ If you get the error message, `Disallowing page allocations for database '*\<databaseName>*' due to insufficient memory in the resource pool '*\<resourcePoolName>*'. See 'https://go.microsoft.com/fwlink/?LinkId=330673' for more information.` in the error log when the available physical memory is sufficient to allocate the page, it may be due to a disabled Resource Governor. When the Resource Governor is disabled MEMORYBROKER_FOR_RESERVE induces artificial memory pressure.  
   
  To resolve this you need to enable the Resource Governor.  
   
@@ -153,7 +153,7 @@ If you follow the above practices for a database with memory-optimized tables, a
 To mitigate this, pre-allocate sufficient memory to the database to recover or restart the database, not a minimum value relying on dynamic memory to provide the additional memory when needed.
   
 ## See Also  
- [Managing Memory for In-Memory OLTP](http://msdn.microsoft.com/library/d82f21fa-6be1-4723-a72e-f2526fafd1b6)   
+ [Managing Memory for In-Memory OLTP](https://msdn.microsoft.com/library/d82f21fa-6be1-4723-a72e-f2526fafd1b6)   
  [Monitor and Troubleshoot Memory Usage](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md)   
  [Bind a Database with Memory-Optimized Tables to a Resource Pool](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
  [Memory Management Architecture guide](../../relational-databases/memory-management-architecture-guide.md)  

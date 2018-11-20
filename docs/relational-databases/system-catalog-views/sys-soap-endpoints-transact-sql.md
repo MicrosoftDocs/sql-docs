@@ -35,7 +35,7 @@ manager: craigg
 |**is_sql_language_enabled**|**bit**|1 = BATCHES = ENABLED option was specified, meaning that ad-hoc SQL batches are allowed on the endpoint.|  
 |**wsdl_generator_procedure**|**nvarchar(776)**|The three-part name of the stored procedure that implements this method.<br /><br /> Names of methods require strict three-part syntax. one, two, or four-part names are not allowed.|  
 |**default_database**|**sysname**|The name of the default database given in the DATABASE = option.<br /><br /> NULL = DEFAULT was specified.|  
-|**default_namespace**|**nvarchar(384)**|The default namespace specified in the NAMESPACE = option, or `http://tempuri.org` if DEFAULT was specified instead.|  
+|**default_namespace**|**nvarchar(384)**|The default namespace specified in the NAMESPACE = option, or `https://tempuri.org` if DEFAULT was specified instead.|  
 |**default_result_schema**|**tinyint**|The default value of the SCHEMA = option.<br /><br /> 0 = NONE<br /><br /> 1 = STANDARD|  
 |**default_result_schema_desc**|**nvarchar(60)**|Description of the default value of the SCHEMA = option.<br /><br /> NONE<br /><br /> STANDARD|  
 |**is_xml_charset_enforced**|**bit**|0 = CHARACTER_SET = SQL option was specified.<br /><br /> 1 = CHARACTER_SET = XML option was specified.|  

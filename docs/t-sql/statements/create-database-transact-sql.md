@@ -2,7 +2,7 @@
 title: "CREATE DATABASE (Transact-SQL) | Microsoft Docs"
 description: Create database syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, and Parallel Data Warehouse
 ms.custom: ""
-ms.date: "09/23/2018"
+ms.date: "10/02/2018"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
@@ -56,10 +56,11 @@ In the following row, click whichever product name you are interested in. The cl
 > [!div class="mx-tdCol2BreakAll"]
 > |||||
 > |-|-|-|-| 
-> |**_\* SQL Server \*_** | [SQL Database<br />logical server](create-database-transact-sql.md?view=azuresqldb-current) | [SQL Database<br />Managed Instance](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) | 
+> |**_\* SQL Server \*_** | [SQL Database<br />logical server](create-database-transact-sql.md?view=azuresqldb-current) | [SQL Database<br />Managed Instance](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
 
+&nbsp;
 
-# SQL Server
+## SQL Server
 
 ## Overview
 
@@ -187,7 +188,7 @@ CREATE DATABASE database_snapshot_name
  COLLATE *collation_name*  
  Specifies the default collation for the database. Collation name can be either a Windows collation name or a SQL collation name. If not specified, the database is assigned the default collation of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A collation name cannot be specified on a database snapshot.  
   
- A collation name cannot be specified with the FOR ATTACH or FOR ATTACH_REBUILD_LOG clauses. For information about how to change the collation of an attached database, visit this [Microsoft Web site](http://go.microsoft.com/fwlink/?linkid=16419&kbid=325335).  
+ A collation name cannot be specified with the FOR ATTACH or FOR ATTACH_REBUILD_LOG clauses. For information about how to change the collation of an attached database, visit this [Microsoft Web site](https://go.microsoft.com/fwlink/?linkid=16419&kbid=325335).  
   
  For more information about the Windows and SQL collation names, see [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md).  
   
@@ -505,7 +506,7 @@ Some database features depend on features or capabilities present in the file sy
  Unless FOR ATTACH is specified, each new database inherits the database option settings from the model database. For example, the database option auto shrink is set to **true** in model and in any new databases you create. If you change the options in the model database, these new option settings are used in any new databases you create. Changing operations in the model database does not affect existing databases. If FOR ATTACH is specified on the CREATE DATABASE statement, the new database inherits the database option settings of the original database.  
   
 ## Viewing Database Information  
- You can use catalog views, system functions, and system stored procedures to return information about databases, files, and filegroups. For more information, see [System Views &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90).  
+ You can use catalog views, system functions, and system stored procedures to return information about databases, files, and filegroups. For more information, see [System Views &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90).  
   
 ## Permissions  
  Requires CREATE DATABASE, CREATE ANY DATABASE, or ALTER ANY DATABASE permission.  
@@ -868,26 +869,13 @@ GO
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="create-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><strong><em>* SQL Database<br />logical server *</em></strong></th>
->   <th><a href="create-database-transact-sql.md?view=azuresqldb-mi-current">SQL Database<br />Managed Instance</a></th>
->   <th><a href="create-database-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
->   <th><a href="create-database-transact-sql.md?view=aps-pdw-2016">Parallel<br />Data Warehouse</a></th>
-> </tr>
-> </table>
+> |||||
+> |-|-|-|-| 
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| **_\* SQL Database<br />logical server \*_**  | [SQL Database<br />Managed Instance](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
-# Azure SQL Database logical server
+## Azure SQL Database logical server
 
 ## Overview
 
@@ -944,13 +932,13 @@ CREATE DATABASE database_name
   
 *database_name* 
  
-The name of the new database. This name must be unique on the SQL server and comply with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rules for identifiers. For more information, see [Identifiers](http://go.microsoft.com/fwlink/p/?LinkId=180386).  
+The name of the new database. This name must be unique on the SQL server and comply with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rules for identifiers. For more information, see [Identifiers](https://go.microsoft.com/fwlink/p/?LinkId=180386).  
   
 *Collation_name*  
 
 Specifies the default collation for the database. Collation name can be either a Windows collation name or a SQL collation name. If not specified, the database is assigned the default collation, which is  SQL_Latin1_General_CP1_CI_AS.  
   
-For more information about the Windows and SQL collation names, [COLLATE (Transact-SQL)](http://msdn.microsoft.com/library/ms184391.aspx).  
+For more information about the Windows and SQL collation names, [COLLATE (Transact-SQL)](https://msdn.microsoft.com/library/ms184391.aspx).  
   
 CATALOG_COLLATION  
 
@@ -1107,7 +1095,7 @@ The following syntax and semantic rules apply to your use of the `AS COPY OF` ar
   
 - The source server name and the server name for the copy target may be the same or different. When they are the same, this parameter is optional and the server context of the current session is used by default.  
   
-- The source and destination database names must be specified, unique, and comply with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rules for identifiers. For more information, see [Identifiers](http://go.microsoft.com/fwlink/p/?LinkId=180386).  
+- The source and destination database names must be specified, unique, and comply with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rules for identifiers. For more information, see [Identifiers](https://go.microsoft.com/fwlink/p/?LinkId=180386).  
   
 - The `CREATE DATABASE` statement must be executed within the context of the master database of the [!INCLUDE[ssSDS](../../includes/sssds-md.md)] server where the new database will be created. 
 - After the copying completes, the destination database must be managed as an independent database. You can execute the `ALTER DATABASE` and `DROP DATABASE` statements against the new database independently of the source database. You can also copy the new database to another new database.  
@@ -1210,26 +1198,13 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140  (MAXSIZE = 100 MB, EDITION = 
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="create-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="create-database-transact-sql.md?view=azuresqldb-current">SQL Database<br />logical server</a></th>
->   <th><strong><em>* SQL Database<br />Managed Instance *</em></strong></th>
->   <th><a href="create-database-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
->   <th><a href="create-database-transact-sql.md?view=aps-pdw-2016">Parallel<br />Data Warehouse</a></th>
-> </tr>
-> </table>
+> |||||
+> |-|-|-|-| 
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [SQL Database<br />logical server](create-database-transact-sql.md?view=azuresqldb-current)| **_\* SQL Database<br />Managed Instance \*_**   | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
-# Azure SQL Database Managed Instance
+## Azure SQL Database Managed Instance
 
 ## Overview
 
@@ -1248,13 +1223,13 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
   
 *database_name* 
  
-The name of the new database. This name must be unique on the SQL server and comply with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rules for identifiers. For more information, see [Identifiers](http://go.microsoft.com/fwlink/p/?LinkId=180386).  
+The name of the new database. This name must be unique on the SQL server and comply with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rules for identifiers. For more information, see [Identifiers](https://go.microsoft.com/fwlink/p/?LinkId=180386).  
   
 *Collation_name*  
 
 Specifies the default collation for the database. Collation name can be either a Windows collation name or a SQL collation name. If not specified, the database is assigned the default collation, which is  SQL_Latin1_General_CP1_CI_AS.  
   
-For more information about the Windows and SQL collation names, [COLLATE (Transact-SQL)](http://msdn.microsoft.com/library/ms184391.aspx).  
+For more information about the Windows and SQL collation names, [COLLATE (Transact-SQL)](https://msdn.microsoft.com/library/ms184391.aspx).  
   
 ## Remarks
  
@@ -1294,26 +1269,13 @@ See [ALTER DATABASE](alter-database-transact-sql.md?&tabs=sqldbmi)
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="create-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="create-database-transact-sql.md?view=azuresqldb-current">SQL Database<br />logical server</a></th>
->   <th><a href="create-database-transact-sql.md?view=azuresqldb-mi-current">SQL Database<br />Managed Instance</a></th>
->   <th><strong><em>* SQL Data<br />Warehouse *</em></strong></th>
->   <th><a href="create-database-transact-sql.md?view=aps-pdw-2016">Parallel<br />Data Warehouse</a></th>
-> </tr>
-> </table>
+> |||||
+> |-|-|-|-| 
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [SQL Database<br />logical server](create-database-transact-sql.md?view=azuresqldb-current)| [SQL Database<br />Managed Instance](create-database-transact-sql.md?view=azuresqldb-mi-current)| **_\* SQL Data<br />Warehouse \*_**    | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
-# Azure SQL Data Warehouse
+## Azure SQL Data Warehouse
 
 ## Overview
 
@@ -1343,12 +1305,12 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
   
 ## Arguments  
 *database_name*  
-The name of the new database. This name must be unique on the SQL server, which can host both [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] databases and [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] databases, and comply with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rules for identifiers. For more information, see [Identifiers](http://go.microsoft.com/fwlink/p/?LinkId=180386).  
+The name of the new database. This name must be unique on the SQL server, which can host both [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] databases and [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] databases, and comply with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rules for identifiers. For more information, see [Identifiers](https://go.microsoft.com/fwlink/p/?LinkId=180386).  
   
 *collation_name*  
 Specifies the default collation for the database. Collation name can be either a Windows collation name or a SQL collation name. If not specified, the database is assigned the default collation, which is SQL_Latin1_General_CP1_CI_AS.  
   
-For more information about the Windows and SQL collation names, see [COLLATE (Transact-SQL)](http://msdn.microsoft.com/library/ms184391.aspx).  
+For more information about the Windows and SQL collation names, see [COLLATE (Transact-SQL)](https://msdn.microsoft.com/library/ms184391.aspx).  
   
 *EDITION*  
 Specifies the service tier of the database. For [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] use 'datawarehouse' .  
@@ -1402,7 +1364,7 @@ CREATE DATABASE TestDW
 ```  
   
 ### B. Create a data warehouse database with all the options  
-An example of creating a a 10 terabyte data warehouse using all the options.  
+An example of creating a 10 terabyte data warehouse using all the options.  
   
 ```  
 CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS  
@@ -1418,32 +1380,19 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
 ::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="create-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="create-database-transact-sql.md?view=azuresqldb-current">SQL Database<br />logical server</a></th>
->   <th><a href="create-database-transact-sql.md?view=azuresqldb-mi-current">SQL Database<br />Managed Instance</a></th>
->   <th><a href="create-database-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
->   <th><strong><em>* Parallel<br />Data Warehouse *</em></strong></th>
-> </tr>
-> </table>
+> |||||
+> |-|-|-|-| 
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [SQL Database<br />logical server](create-database-transact-sql.md?view=azuresqldb-current)| [SQL Database<br />Managed Instance](create-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest)|  **_\* Parallel<br />Data Warehouse \*_** |
 
 &nbsp;
 
-# Parallel Data Warehouse
+## Parallel Data Warehouse
 
 ## Overview
 
 In Parallel Data Warehouse, this statement is used to create a new database on a Parallel Data Warehouse appliance. Use this statement to create all files associated with an appliance database and to set maximum size and auto-growth options for the database tables and transaction log.
 
-## Syntax  
+## Syntax
   
 ```  
 CREATE DATABASE database_name   
@@ -1455,7 +1404,8 @@ WITH (
 [;]  
 ```  
   
-## Arguments  
+## Arguments
+  
  *database_name*  
  The name of the new database. For more information on permitted database names, see "Object Naming Rules" and "Reserved Database Names" in the [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
   

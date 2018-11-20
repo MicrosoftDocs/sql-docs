@@ -5,8 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Maintenance Plan Design Surface"
@@ -212,7 +211,7 @@ manager: craigg
   
         1.  If you select **Generate a text file report**, select either **Create a new file** or **Append to file**.  
   
-        2.  Depending on the selection above, enter the name and full path of the new file or file to be appended by entering the information in the **Folder** or **File name** boxes. Alternately, click on the ellipsis **(…)** and select the path to the folder or file name from the **Locate Folder –***server_name* or **Locate Database Files –***server_name* dialog boxes.  
+        2.  Depending on the selection above, enter the name and full path of the new file or file to be appended by entering the information in the **Folder** or **File name** boxes. Alternately, click on the ellipsis **(…)** and select the path to the folder or file name from the **Locate Folder –**_server\_name_ or **Locate Database Files –**_server\_name_ dialog boxes.  
   
         3.  If you select **Send report to an email recipient**, on the **Agent operator** list, select the recipient of the emailed report.  
   
@@ -227,7 +226,7 @@ manager: craigg
   
 12. To view the results in the log file viewer, in **Object Explorer**, right-click either the **Maintenance Plans** folder or the specific maintenance plan and select **View History**.  
   
-     The following options are available on the **Log File Viewer –***server_name* dialog box.  
+     The following options are available on the **Log File Viewer –**_server\_name_ dialog box.  
   
      **Load Log**  
      Open a dialog box where you can specify a log file to load.  

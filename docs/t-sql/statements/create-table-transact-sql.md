@@ -51,7 +51,10 @@ manager: craigg
 # CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Creates a new table in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+> [!div class="nextstepaction"]
+> [Please help improve SQL Server docs!](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+
+Creates a new table in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
 > [!NOTE]   
 >  For [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] syntax, see [CREATE TABLE (Azure SQL Data Warehouse)](../../t-sql/statements/create-table-azure-sql-data-warehouse.md).
@@ -78,7 +81,7 @@ CREATE TABLE
     ( {   <column_definition>   
         | <computed_column_definition>    
         | <column_set_definition>   
-        | [ <table_constraint> ]   
+        | [ <table_constraint> ] [ ,... n ] 
         | [ <table_index> ] }  
           [ ,...n ]    
           [ PERIOD FOR SYSTEM_TIME ( system_start_time_column_name   
@@ -111,7 +114,7 @@ column_name <data_type>
           ENCRYPTION_TYPE = { DETERMINISTIC | RANDOMIZED } ,   
           ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256'  
         ) ]  
-    [ <column_constraint> [ ...n ] ]   
+    [ <column_constraint> [, ...n ] ]   
     [ <column_index> ]  
   
 <data type> ::=   
@@ -258,7 +261,8 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
 ```  
   
 ```  
---Memory optimized CREATE TABLE Syntax  
+--Memory optimized 
+LE Syntax  
 CREATE TABLE  
     [database_name . [schema_name ] . | schema_name . ] table_name  
     ( { <column_definition>  
@@ -1049,7 +1053,7 @@ Global temporary tables for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)
 
 ### Troubleshooting global temporary tables for Azure SQL Database 
 
-For the troubleshooting the tempdb, see [Troubleshooting Insufficient Disk space in tempdb](http://docs.microsoft.com/en-us/previous-versions/sql/sql-server-2008-r2/ms176029(v=sql.105)). 
+For the troubleshooting the tempdb, see [Troubleshooting Insufficient Disk space in tempdb](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms176029(v=sql.105)). 
 
 > [!NOTE]
 > Only a server admin can access the troubleshooting DMVs in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].

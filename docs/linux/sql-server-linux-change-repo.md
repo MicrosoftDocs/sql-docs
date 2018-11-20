@@ -17,7 +17,7 @@ ms.technology: linux
 This article describes how to configure the correct repository for SQL Server 2017 and SQL Server 2019 installations and upgrades on Linux.
 
 > [!TIP]
-> SQL Server 2019 CTP 2.0 is now available! To try it, use this article to configure the new **mssql-server-preview** repository. Then install using the instructions in the [installation guide](sql-server-linux-setup.md).
+> SQL Server 2019 preview is now available! To try it, use this article to configure the new **mssql-server-preview** repository. Then install using the instructions in the [installation guide](sql-server-linux-setup.md).
 
 ## <a id="repositories"></a> Repositories
 
@@ -26,7 +26,7 @@ When you install SQL Server on Linux, you must configure a Microsoft repository.
 | Repository | Name | Description |
 |---|---|---|
 | **Preview (2017)** | **mssql-server** | SQL Server 2017 CTP and RC repository (discontinued). |
-| **Preview (2019)** | **mssql-server-preview** | SQL Server 2019 CTP and RC repository. |
+| **Preview (2019)** | **mssql-server-preview** | SQL Server 2019 preview and RC repository. |
 | **CU** | **mssql-server-2017** | SQL Server 2017 Cumulative Update (CU) repository. |
 | **GDR** | **mssql-server-2017-gdr** | SQL Server 2017 GDR repository for critical updates only. |
 

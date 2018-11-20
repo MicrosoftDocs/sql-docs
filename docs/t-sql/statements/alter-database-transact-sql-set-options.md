@@ -2,7 +2,7 @@
 title: "ALTER DATABASE SET Options (Transact-SQL) | Microsoft Docs"
 description: Learn about how to set database options such as automatic tuning, encryption, query store in a SQL Server and Azure SQL Database
 ms.custom: ""
-ms.date: "08/08/2018"
+ms.date: "10/02/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -37,7 +37,7 @@ Sets database options in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md
 
 Click one of the following tabs for the syntax, arguments, remarks, permissions, and examples for a particular SQL version with which you are working.
 
-For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntFor more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md). 
+For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
 ## Click a product!
 
@@ -45,23 +45,14 @@ In the following row, click whichever product name you are interested in. The cl
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><strong><em>* SQL Server *<br />&nbsp;</em></strong></th>
->   <th><a href="alter-database-transact-sql-set-options.md?view=azuresqldb-current">SQL Database<br />logical server</a></th>
->   <th><a href="alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current">SQL Database<br />Managed Instance</a></th>
-> </tr>
-> </table>
+> [!div class="mx-tdCol2BreakAll"]  
+> |||
+> |---|---| 
+> |**_\* SQL Server \*_** &nbsp;|[SQL Database<br />logical server](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[SQL Database<br />Managed Instance](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|||  
 
 &nbsp;
 
-# SQL Server
+## SQL Server
   
 Database mirroring, [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], and compatibility levels are `SET` options but are described in separate articles because of their length. For more information, see [ALTER DATABASE Database Mirroring](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md), [ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md), and [ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
@@ -671,7 +662,7 @@ See [ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql
   
 **\<mixed_page_allocation_option> ::=**  
   
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)). 
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658)). 
   
 MIXED_PAGE_ALLOCATION { OFF | ON } controls whether the database can create initial pages using a mixed extent for the first eight pages of a table or index.  
  
@@ -685,7 +676,7 @@ This setting is ON for all system databases. **tempdb** is the only system datab
   
 **\<PARAMETERIZATION_option> ::=**  
   
-Controls the parameterization option.  
+Controls the parameterization option. For more information on parameterization, see the [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md#SimpleParam). 
   
 PARAMETERIZATION { SIMPLE | FORCED }  
 SIMPLE  
@@ -701,13 +692,13 @@ The current setting of this option can be determined by examining the is_paramet
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
 ON | OFF | CLEAR [ ALL ]  
-Controls if the query store is enabled in this database, and also controls removing the contents of the query store.  
+Controls if the query store is enabled in this database, and also controls removing the contents of the query store. For more information, see [Query Store Usage Scenarios](../../relational-databases/performance/query-store-usage-scenarios.md). 
   
 ON  
 Enables the query store.  
   
 OFF  
-Disables the query store.  This is the default value.   
+Disables the query store. This is the default value.   
   
 CLEAR  
 Remove the contents of the query store.  
@@ -815,7 +806,7 @@ When a torn page or checksum failure is detected, you can recover by restoring t
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will retry any read that fails with a checksum, torn page, or other I/O error four times. If the read is successful in any one of the retry attempts, a message will be written to the error log and the command that triggered the read will continue. If the retry attempts fail, the command will fail with error message 824.  
   
-For more information about error messages 823, 824 and 825, see [How to troubleshoot a Msg 823 error in SQL Server](http://support.microsoft.com/help/2015755), [How to troubleshoot Msg 824 in SQL Server](http://support.microsoft.com/help/2015756) and [How to troubleshoot Msg 825 &#40;read retry&#41; in SQL Server](http://support.microsoft.com/help/2015757).
+For more information about error messages 823, 824 and 825, see [How to troubleshoot a Msg 823 error in SQL Server](https://support.microsoft.com/help/2015755), [How to troubleshoot Msg 824 in SQL Server](https://support.microsoft.com/help/2015756) and [How to troubleshoot Msg 825 &#40;read retry&#41; in SQL Server](https://support.microsoft.com/help/2015757).
   
 The current setting of this option can be determined by examining the *page_verify_option* column in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view or the *IsTornPageDetectionEnabled* property of the [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) function.  
   
@@ -1283,24 +1274,15 @@ SET QUERY_STORE = ON
 ::: moniker-end
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><strong><em>* SQL Server *<br />&nbsp;</em></strong></th>
->   <th><a href="alter-database-transact-sql-set-options.md?view=azuresqldb-current">SQL Database<br />logical server</a></th>
->   <th><a href="alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current">SQL Database<br />Managed Instance</a></th>
-> </tr>
-> </table>
+> [!div class="mx-tdCol2BreakAll"]  
+> |||
+> |---|---| 
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2016)|**_\* SQL Database<br />logical server \*_** &nbsp;|[SQL Database<br />Managed Instance](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|
 
 &nbsp;
 
-# Azure SQL Database logical server
+## Azure SQL Database logical server
+
 Compatibility levels are `SET` options but are described in [ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
 > [!NOTE]  
@@ -2082,34 +2064,27 @@ SET QUERY_STORE = ON
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="alter-database-transact-sql-set-options.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="alter-database-transact-sql-set-options.md?view=azuresqldb-current">SQL Database<br />logical server</a></th>
->   <th><strong><em>* SQL Database<br />Managed Instance *</em></strong></th>
-> </tr>
-> </table>
+> [!div class="mx-tdCol2BreakAll"]  
+> |||
+> |---|---|
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2016)|[SQL Database<br />logical server](alter-database-transact-sql-set-options.md?view=azuresqldb-current) |**_\* SQL Database<br />Managed Instance \*_** &nbsp;|
+
+
 
 &nbsp;
 
-# Azure SQL Database Managed Instance
+## Azure SQL Database Managed Instance
 
 Compatibility levels are `SET` options but are described in [ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
 > [!NOTE]  
 > Many database set options can be configured for the current session by using [SET Statements](../../t-sql/statements/set-statements-transact-sql.md) and are often configured by applications when they connect. Session level set options override the **ALTER DATABASE SET** values. The database options described below are values that can be set for sessions that do not explicitly provide other set option values.  
   
-## Syntax  
+## Syntax
   
-```  
+```
 ALTER DATABASE { database_name | Current }  
-SET   
+SET
 {  
     <optionspec> [ ,...n ] 
 }  

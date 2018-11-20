@@ -15,7 +15,7 @@ manager: kfile
   A calculated member is a dimension member whose value is calculated from an expression at run time, and can be used in subselects and subcubes to more precisely define the cubespace of a query.  
   
 ## Enabling calculated members in the subspace  
- The **SubQueries** connection string property in <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> or the **DBPROPMSMDSUBQUERIES** property in [Supported XMLA Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) defines the behavior or allowance of calculated members or calculated sets on subselects or subcubes. In the context of this document, subselect refers to subselects and subcubes unless otherwise stated.  
+ The **SubQueries** connection string property in <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> or the **DBPROPMSMDSUBQUERIES** property in [Supported XMLA Properties &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) defines the behavior or allowance of calculated members or calculated sets on subselects or subcubes. In the context of this document, subselect refers to subselects and subcubes unless otherwise stated.  
   
  The SubQueries property allows the following values.  
   
@@ -119,6 +119,6 @@ Where [Measures].[Reseller Sales Amount]
 ## See Also  
  <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>   
  [Subselects in Queries](../../../analysis-services/multidimensional-models/mdx/subselects-in-queries.md)   
- [Supported XMLA Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)  
+ [Supported XMLA Properties &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)  
   
   

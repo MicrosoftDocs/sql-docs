@@ -6,15 +6,14 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: 
-  - "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Database Mail [SQL Server], public profiles"
   - "profiles [SQL Server], Database Mail"
   - "public profiles [Database Mail]"
 ms.assetid: 58ae749d-6ada-4f9c-bf00-de7c7a992a2d
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Create a Database Mail Profile
@@ -185,7 +184,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
      *@is_default* = '*Default Profile status* '  
   
-     where *@profile_name* is the name of the profile, and *@principal_name* to indicate this this is a public profile, *@is_default* determines the whether this profile is the default for the database user or role.  
+     where *@profile_name* is the name of the profile, and *@principal_name* to indicate this is a public profile, *@is_default* determines the whether this profile is the default for the database user or role.  
   
  The following example creates a Database Mail account, creates a Database Mail private profile, then adds the account to the profile and grants public access to the profile.  
   

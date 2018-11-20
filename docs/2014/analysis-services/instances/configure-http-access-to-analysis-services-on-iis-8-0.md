@@ -124,7 +124,7 @@ manager: craigg
     -   \<drive>:\inetpub\wwwroot\OLAP\Resources  
   
 ##  <a name="bkmk_appPool"></a> Step 2: Create an application pool and virtual directory in IIS  
- Next, create an application pool and an an endpoint to the pump.  
+ Next, create an application pool and an endpoint to the pump.  
   
 #### Create an application pool  
   
@@ -288,7 +288,7 @@ manager: craigg
   
  `Data Source=https://<servername>/olap/msmdpump.dll; Initial Catalog=AdventureWorksDW2012; Integrated Security=Basic; User ID=XXXX; Password=XXXXX;`  
   
- For more information about setting up the connection programmatically, see [Establishing Secure Connections in ADOMD.NET](../multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections.md).  
+ For more information about setting up the connection programmatically, see [Establishing Secure Connections in ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections).  
   
  As a final step, be sure to follow-up with more rigorous testing by using a client computer that runs in the network environment from which the connections will originate.  
   

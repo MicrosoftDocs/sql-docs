@@ -1,48 +1,60 @@
 ---
 title: Restore a database into SQL Server big data cluster | Microsoft Docs
-description:
+description: This article shows how to restore a database into the master instance of a SQL Server big data cluster.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/01/2018
+ms.date: 10/09/2018
 ms.topic: conceptual
 ms.prod: sql
 ---
-
 # Restore a database into the SQL Server big data cluster master instance
 
-To bring an existing SQL Server database into the master instance, we recommend using a backup, copy and restore approach.  In this example we will show how to restore the AdventureWorks database, but you can use any database backup that you have.  You can download the AdventureWorks backup [here](https://www.microsoft.com/en-us/download/details.aspx?id=49502).
+This article describes how to restore an existing database into the master instance of a SQL Server 2019 big data cluster (preview). The recommended method is to use a backup, copy, and restore approach.
 
-First, backup your existing SQL Server database on either SQL Server on Windows or Linux using any of the usual methods of creating a database backup.
+## Backup your existing database
+
+First, backup your existing SQL Server database from either SQL Server on Windows or Linux. Use standard backup techniques with Transact-SQL or with a tool like SQL Server Management Studio (SSMS).
+
+This article shows how to restore the AdventureWorks database, but you can use any database backup. 
+
+> [!TIP]
+> You can download the AdventureWorks backup [here](https://www.microsoft.com/download/details.aspx?id=49502).
+
+## Copy the backup file
 
 Copy the backup file to the SQL Server container in the master instance pod of the Kubernetes cluster.
 
 ```bash
-kubectl cp <path to .bak file> mssql-data-pool-master-0:/tmp/ -c mssql-data-pool-data -n <name of your cluster>
+kubectl cp <path to .bak file> mssql-master-pool-0:/tmp -c mssql-server -n <name of your cluster>
 ```
 
 Example:
 
 ```bash
-kubectl cp ~/Downloads/AdventureWorks2016CTP3.bak mssql-data-pool-master-0:/tmp/ -c mssql-data-pool-data -n clustertest
+kubectl cp ~/Downloads/AdventureWorks2016CTP3.bak mssql-master-pool-0:/tmp -c mssql-server -n clustertest
 ```
 
 Then, verify that the backup file was copied to the pod container.
 
 ```bash
-kubectl exec -it mssql-data-pool-master-0 -n <name of your cluster> -c mssql-data-pool-data -- bin/bash
-root@mssql-data-pool-master-0:/# ls /tmp
-root@mssql-data-pool-master-0:/# exit
+kubectl exec -it mssql-master-pool-0 -n <name of your cluster> -c mssql-server -- bin/bash
+cd /var/
+ls /tmp
+exit
 ```
 
 Example:
 
 ```bash
-kubectl exec -it mssql-data-pool-master-0 -n clustertest -c mssql-data-pool-data -- bin/bash
-root@mssql-data-pool-master-0:/# ls /tmp
+kubectl exec -it mssql-master-pool-0 -n clustertest -c mssql-server -- bin/bash
+ls /tmp
+exit
 ```
 
-Next, restore the database backup to master instance SQL Server.  If you are restoring a database backup that was created on Windows, you will need to get the names of the files.  In Ops Studio connected to the master instance run this SQL script:
+## Restore the backup file
+
+Next, restore the database backup to master instance SQL Server.  If you are restoring a database backup that was created on Windows, you will need to get the names of the files.  In Azure Data Studio, connect to the master instance and run this SQL script:
 
 ```sql
 RESTORE FILELISTONLY FROM DISK='/tmp/<db file name>.bak'
@@ -56,7 +68,7 @@ RESTORE FILELISTONLY FROM DISK='/tmp/AdventureWorks2016CTP3.bak'
 
 ![Backup file list](media/restore-database/database-restore-file-list.png)
 
-Now, restore the database with a script like this, substituting the names/paths as needed depending on your database backup.
+Now, restore the database. The following script is an example. Replace the names/paths as needed depending on your database backup.
 
 ```sql
 RESTORE DATABASE AdventureWorks2016CTP3
@@ -66,10 +78,28 @@ WITH MOVE 'AdventureWorks2016CTP3_Data' TO '/var/opt/mssql/data/AdventureWorks20
         MOVE 'AdventureWorks2016CTP3_mod' TO '/var/opt/mssql/data/AdventureWorks2016CTP3_mod'
 ```
 
-Now, if you want to have your high value database be able to access data pools you will need to setup the data pool stored procedures by opening and running these scripts from the GitHub repository.
+## Configure data pool and HDFS access
 
-Execute the **high-value-db-configuration\data_pool_ddl_install.SQL** script.
+Now, for the SQL Server master instance to access data pools and HDFS, run the data pool and storage pool stored procedures. Run the following Transact-SQL scripts against your newly restored database:
 
-- Setup supportability stored procedures
+```sql
+USE AdventureWorks2016CTP3
+GO 
+IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
+    CREATE EXTERNAL DATA SOURCE SqlDataPool
+    WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
 
-Execute the **high-value-db-configuration\supportability.SQL** script.
+IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
+    CREATE EXTERNAL DATA SOURCE SqlStoragePool
+    WITH (LOCATION = 'sqlhdfs://service-mssql-controller:8080');
+GO
+```
+
+> [!NOTE]
+> You will have to run through these setup scripts only for databases restored from older versions of SQL Server. If you create a new database in SQL Server master instance, data pool and storage pool store procedures are already configured for you.
+
+## Next steps
+
+To learn more about the SQL Server big data clusters, see the following overview:
+
+- [What are SQL Server 2019 big data clusters?](big-data-cluster-overview.md)

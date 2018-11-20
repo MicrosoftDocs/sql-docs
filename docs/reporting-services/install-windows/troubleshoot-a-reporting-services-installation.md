@@ -14,9 +14,9 @@ ms.author: maghan
 
   If you cannot install [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] because of errors that occur during setup, use the instructions in this article to address the conditions that are most likely to cause installation errors.  
   
- For information about other errors and issues related to [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], see [Troubleshoot SSRS issues and errors.](http://social.technet.microsoft.com/wiki/contents/articles/ssrs-troubleshooting-issues-and-errors.aspx)  
+ For information about other errors and issues related to [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], see [Troubleshoot SSRS issues and errors.](https://social.technet.microsoft.com/wiki/contents/articles/ssrs-troubleshooting-issues-and-errors.aspx)  
   
- Review the [Online release notes](http://go.microsoft.com/fwlink/?linkid=236893) in case the issue you encounter is described in the release notes.  
+ Review the [Online release notes](https://go.microsoft.com/fwlink/?linkid=236893) in case the issue you encounter is described in the release notes.  
   
 ##  <a name="bkmk_setuplogs"></a> Check setup logs  
  Setup errors are recorded in log files in the **[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Setup Bootstrap\Log** folder. A subfolder is created each time you run Setup. The subfolder name is the time and date you ran Setup. For instructions on how to view the Setup log files, see [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
@@ -161,7 +161,7 @@ ms.author: maghan
   
 -   Review the SharePoint article on development environments. [Set up a general development environment for SharePoint](https://msdn.microsoft.com/library/ee554869)  
   
--   Review the forum post: [Central Administration returns blank page after installation on Windows 7](http://social.technet.microsoft.com/Forums/en/sharepoint2010setup/thread/a422a3c8-39f6-4b9e-988a-4c4d1e745694)  
+-   Review the forum post: [Central Administration returns blank page after installation on Windows 7](https://social.technet.microsoft.com/Forums/en/sharepoint2010setup/thread/a422a3c8-39f6-4b9e-988a-4c4d1e745694)  
   
 -   The Service account you are using for SharePoint services such as the SharePoint 2013/2016 Central Administration Service, should have administrative privileges in the local operating system.  
   
@@ -263,9 +263,9 @@ ms.author: maghan
 ##  <a name="bkmk_additional"></a> Additional resources  
  The following are additional resources you can review to assist you with troubleshooting issues:  
   
--   TechNet Wiki: [Troubleshoot SQL Server Reporting Services (SSRS) in SharePoint 2010 Integrated Mode](http://social.technet.microsoft.com/wiki/contents/articles/troubleshoot-sql-server-reporting-services-ssrs-in-sharepoint-integrated-mode.aspx)  
+-   TechNet Wiki: [Troubleshoot SQL Server Reporting Services (SSRS) in SharePoint 2010 Integrated Mode](https://social.technet.microsoft.com/wiki/contents/articles/troubleshoot-sql-server-reporting-services-ssrs-in-sharepoint-integrated-mode.aspx)  
   
--   [Forum: SQL Server Reporting Services](http://social.msdn.microsoft.com/Forums/sqlreportingservices/threads)  
+-   [Forum: SQL Server Reporting Services](https://social.msdn.microsoft.com/Forums/sqlreportingservices/threads)  
   
 -   Got feedback or more questions? Visit [Microsoft SQL Server UserVoice](https://feedback.azure.com/forums/908035-sql-server).  
   

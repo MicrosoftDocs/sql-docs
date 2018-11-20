@@ -108,37 +108,40 @@ export DOCKER_PRIVATE_REGISTRY="1"
 To deploy a SQL Server 2019 CTP 2.1 big data cluster on your Kubernetes cluster, run the following command:
 
 ```bash
-mssqlctl create cluster <name of your cluster>
+mssqlctl create cluster <your-cluster-name>
 ```
 
 > [!NOTE]
 > The name of your cluster needs to be only lower case alpha-numeric characters, no spaces. All Kubernetes artifacts for the big data cluster will be created in a namespace with same name as the cluster name specified.
 
-
 The command window or shell returns the deployment status. You can also check the deployment status by running these commands in a different cmd window:
 
 ```bash
-kubectl get all -n <name of your cluster>
-kubectl get pods -n <name of your cluster>
-kubectl get svc -n <name of your cluster>
+kubectl get all -n <your-cluster-name>
+kubectl get pods -n <your-cluster-name>
+kubectl get svc -n <your-cluster-name>
 ```
 
 You can see a more granular status and configuration for each pod by running:
 ```bash
-kubectl describe pod <pod name> -n <name of your cluster>
+kubectl describe pod <pod name> -n <your-cluster-name>
 ```
+
+> [!TIP]
+> For more details on how to monitor and troubleshoot a deployment, see the [deployment troubleshooting](deployment-guidance.md#troubleshoot) section of the deployment guidance article.
+
+## Open the Cluster Administration Portal
 
 Once the Controller pod is running, you can use the Cluster Administration Portal to monitor the deployment. You can access the portal using the external IP address and port number for the `service-proxy-lb` (for example: **https://\<ip-address\>:30777**). Credentials for accessing the admin portal are the values of `CONTROLLER_USERNAME` and `CONTROLLER_PASSWORD` environment variables provided above.
 
 You can get the IP address of the service-proxy-lb service by running this command in a bash or cmd window:
 
 ```bash
-kubectl get svc service-proxy-lb -n <name of your cluster>
+kubectl get svc service-proxy-lb -n <your-cluster-name>
 ```
 
 > [!NOTE]
 > You will see a security warning when accessing the web page since we are using auto-generated SSL certificates. In future releases, we will provide the capability to provide your own signed certificates.
- 
 
 ## Connect to the big data cluster
 
@@ -147,8 +150,8 @@ After the deployment script has completed successfully, you can obtain the IP ad
 Azure provides the Azure LoadBalancer service to AKS. Run following command in a cmd or bash window:
 
 ```bash
-kubectl get svc service-master-pool-lb -n <name of your cluster>
-kubectl get svc service-security-lb -n <name of your cluster>
+kubectl get svc service-master-pool-lb -n <your-cluster-name>
+kubectl get svc service-security-lb -n <your-cluster-name>
 ```
 
 Look for the **External-IP** value that is assigned to the services. Connect to the SQL Server master instance using the IP address for the `service-master-pool-lb` at port 31433 (Ex: **\<ip-address\>,31433**) and to the SQL Server big data cluster endpoint using the external-IP for the `service-security-lb` service.   That big data cluster end point is where you can interact with HDFS and submit Spark jobs through Knox.

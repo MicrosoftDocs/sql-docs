@@ -335,24 +335,17 @@ To monitor or troubleshoot a deployment, use **kubectl** to inspect the status o
    kubectl get svc -n <your-cluster-name>
    ```
 
-   The following table describes the services that you will see in a fully provisioned big data cluster.
+   These services support internal and external connections to the big data cluster. For external connections, the following services are used:
 
    | Service | Description |
    |---|---|
-   | **service-compute-pool-default** | Supports the [Compute pool](concept-compute-pool.md). |
-   | **service-data-pool-default** | Supports the [Data pool](concept-data-pool.md). |
-   | **service-master-pool** | Supports the [SQL Server master instance](concept-master-instance.md). |
-   | **service-master-pool-lb** | Provides access to the master instance.<br/>(**EXTERNAL-IP,31433** and the **SA** user) |
-   | **service-monitor-elasticsearch** | |
-   | **service-monitor-grafana** | |
-   | **service-monitor-influxdb** | |
-   | **service-monitor-kibana** | |
-   | **service-mssql-controller** | Supports the [controller](concept-controller.md). |
-   | **service-mssql-controller-lb** | Supports tools and clients that manage the cluster. |
-   | **service-proxy-lb** | Provides access to the [Cluster Administration Portal](cluster-admin-portal.md).<br/>(https://**EXTERNAL-IP**:30777)|
-   | **service-security** | Supports security of the HDFS data tier. |
-   | **service-security-lb** | Provides access to the HDFS/Spark Gateway.<br/>(**EXTERNAL-IP** and the **root** user) |
-   | **service-storage-pool-default** | Supports the [storage pool](concept-storage-pool.md). |
+   | **service-master-pool-lb**<br/>**service-master-pool-nodeport** | Provides access to the master instance.<br/>(**EXTERNAL-IP,31433** and the **SA** user) |
+   | **service-mssql-controller-lb**<br/>**service-mssql-controller-nodeport** | Supports tools and clients that manage the cluster. |
+   | **service-proxy-lb**<br/>**service-proxy-nodeport** | Provides access to the [Cluster Administration Portal](cluster-admin-portal.md).<br/>(https://**EXTERNAL-IP**:30777)|
+   | **service-security-lb**<br/>**service-security-nodeport** | Provides access to the HDFS/Spark Gateway.<br/>(**EXTERNAL-IP** and the **root** user) |
+
+   > [!NOTE]
+   > The service names can vary depending on your Kubernetes environment. When deploying on Azure Kubernetes Service (AKS), the service names end with **-lb**. For minikube and kubeadm deployments, the service names end with **-nodeport**.
 
 1. Use the [Cluster Administration Portal](cluster-admin-portal.md) to monitor the deployment on the **Deployment** tab. You have to wait for the **service-proxy-lb** service to start before accessing this portal, so it won't be available at the beginning of a deployment.
 

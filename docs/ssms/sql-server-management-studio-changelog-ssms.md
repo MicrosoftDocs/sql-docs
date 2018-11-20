@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Management Studio - Changelog (SSMS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/16/2018"
+ms.date: "11/22/2018"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
@@ -424,7 +424,36 @@ SSIS
 - Package can’t be deployed or executed successfully when it targets SQL Server of old version and contains Script Task/Script component at the same time.
 - SSMS can’t connect to remote Integration Services.
 
-## SSMS 17.9 (latest GA release)
+
+## SSMS 17.9.1 (latest GA release)
+
+![download](../ssdt/media/download.png) [SSMS 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409)
+
+- Release number: 17.9.1<br>
+- Build number: 14.0.17289.0<br>
+- Release date: November 21, 2018
+
+17.9.1 is a small update to 17.9 with the following bug fixes:
+
+- Fixed an issue where users may experience their connection being closed and reopened with each query invocation when using "Active Directory – Universal with MFA Support" authentication with the SQL query editor. Side effects of the connection closing included global temporary tables being dropped unexpectedly, and sometimes a new SPID given to the connection.
+- Fixed a long outstanding issue where restore plan would fail to find a restore plan, or would generate an inefficient restore plan under certain conditions.
+- Fixed an issue in the "Import Data-tier Application" wizard which could result in an error when connected to an Azure SQL database.
+
+
+
+> [!NOTE]
+> Non-English localized releases of SSMS 17.x require the [KB 2862966 security update package](https://support.microsoft.com/kb/2862966) if installing on: Windows 8, Windows 7, Windows Server 2012, and Windows Server 2008 R2.
+
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40a)
+
+
+
+
+
+
+
+
+## SSMS 17.9
 
 ![download](../ssdt/media/download.png) [SSMS 17.9](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x409)
 

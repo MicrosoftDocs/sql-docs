@@ -163,22 +163,6 @@ This process uses Help Viewer 1.x to download SQL Server 2014 help from the Micr
    ![HelpViewer1_withContentInstalled_ZoomedIn](../sql-server/media/sql-server-help-installation/helpviewer1-withcontentinstalled-zoomedin.png)  
    
 
-## Systems without internet access
-Once you've followed the [steps mentioned previously](#use-help-viewer-v2x) to download  offline content using SQL Server Help Viewer on a system that has internet access, you can then migrate that content to a system that does not have internet access. You can do so with the following steps. 
-
-  >[!NOTE]
-  >Software that supports the Help Viewer, such as SQL Server Management Studio, must be installed on the offline system. 
-
-1. Open Help Viewer (Ctrl + Alt + F1).
-1. Select the documentation you're interested in. For example, filter by SQL and select the SQL Server Technical Documentation. 
-1. Identify the physical path of the files on disk, which can be found under **Local store path**.
-1. Navigate to this location using your file system explorer. 
-    1.  The default location is: `C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\Extensions\Application`
-1. Select the three folders, **ContentStore**, **Incoming**, **IndexStore** and copy them to the same location on your offline system. You may need to use an interim media device such as a USB or CD. 
-1. Once these files have been moved, launch Help Viewer on the offline system and and the SQL Server technical documentation will be available.
-
-![physical-location-of-offline-content.png](media/sql-server-help-installation/physical-location-of-offline-content.png)
-
 
 ## View online help
 
@@ -219,6 +203,22 @@ When you press F1 or click **Help** or the **?** icon in a dialog box in SSMS or
 
 >  [!NOTE]
 >  F1 help only works when you are online. There are no offline sources for F1 help. 
+
+## Systems without internet access
+Once you've followed the [steps mentioned previously](#use-help-viewer-v2x) to download  offline content using SQL Server Help Viewer on a system that has internet access, you can then migrate that content to a system that does not have internet access. You can do so with the following steps. 
+
+  >[!NOTE]
+  >Software that supports the Help Viewer, such as SQL Server Management Studio, must be installed on the offline system. 
+
+1. Open Help Viewer (Ctrl + Alt + F1).
+1. Select the documentation you're interested in. For example, filter by SQL and select the SQL Server Technical Documentation. 
+1. Identify the physical path of the files on disk, which can be found under **Local store path**.
+1. Navigate to this location using your file system explorer. 
+    1.  The default location is: `C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\Extensions\Application`
+1. Select the three folders, **ContentStore**, **Incoming**, **IndexStore** and copy them to the same location on your offline system. You may need to use an interim media device such as a USB or CD. 
+1. Once these files have been moved, launch Help Viewer on the offline system and the SQL Server technical documentation will be available.
+
+![physical-location-of-offline-content.png](media/sql-server-help-installation/physical-location-of-offline-content.png)
    
 
 ## Next steps

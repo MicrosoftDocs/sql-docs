@@ -59,10 +59,10 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
   
  *boundary_value* is a constant expression that can reference variables. This includes user-defined type variables, or functions and user-defined functions. It cannot reference [!INCLUDE[tsql](../../includes/tsql-md.md)] expressions. *boundary_value* must either match or be implicitly convertible to the data type supplied in *input_parameter_type*, and cannot be truncated during implicit conversion in a way that the size and scale of the value does not match that of its corresponding *input_parameter_type*.  
 
-For more information, see [Nondeterministic conversion of literal date strings into DATE values](../data-types/nondeterministic-convert-date-literals.md).
-
 > [!NOTE]  
->  If *boundary_value* consists of **datetime** or **smalldatetime** literals, these literals are evaluated assuming that us_english is the session language. This behavior is deprecated. To make sure the partition function definition behaves as expected for all session languages, we recommend that you use constants that are interpreted the same way for all language settings, such as the yyyymmdd format; or explicitly convert literals to a specific style. To determine the language session of your server, run `SELECT @@LANGUAGE`.  
+>  If *boundary_value* consists of **datetime** or **smalldatetime** literals, these literals are evaluated assuming that us_english is the session language. This behavior is deprecated. To make sure the partition function definition behaves as expected for all session languages, we recommend that you use constants that are interpreted the same way for all language settings, such as the yyyymmdd format; or explicitly convert literals to a specific style. To determine the language session of your server, run `SELECT @@LANGUAGE`.
+>
+> For more information, see [Nondeterministic conversion of literal date strings into DATE values](../data-types/nondeterministic-convert-date-literals.md).
   
  *...n*  
  Specifies the number of values supplied by *boundary_value*, not to exceed 14,999. The number of partitions created is equal to *n* + 1. The values do not have to be listed in order. If the values are not in order, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] sorts them, creates the function, and returns a warning that the values are not provided in order. The Database Engine returns an error if *n* includes any duplicate values.  

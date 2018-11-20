@@ -24,7 +24,7 @@ There are two main workflows you can use to contribute:
 | [Edit in your browser](#githubui) | Good for small, quick edits of any article. |
 | [Edit locally with tools](#tools) | Good for more complex edits, edits involving multiple articles, and frequent contributions to docs.microsoft.com. |
 
-All public contributions are validated by the SQL content team. 
+All public contributions are validated by the SQL content team for technical accuracy and consistency. 
 
 ## <a id="githubui"></a> Edit in your browser
 

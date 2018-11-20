@@ -16,7 +16,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # Nondeterministic conversion of literal date strings into DATE values
 
-You must use caution when you allow conversion of your CHARACTER strings into DATE data types. The reason is that such conversions are _nondeterministic_.
+Use caution when allowing conversion of your CHARACTER strings into DATE data types. The reason is that such conversions are often _nondeterministic_.
 
 You control these nondeterministic conversions by accounting for the settings of [SET LANGUAGE](../statements/set-language-transact-sql.md) and [SET DATEFORMAT](../statements/set-dateformat-transact-sql.md).
 
@@ -26,9 +26,9 @@ You control these nondeterministic conversions by accounting for the settings of
 
 - `SET LANGUAGE Polish;`
 
-A string can contain the name of a month. But is the name in English, or Polish, or Croatian, or in another language? And, will the user's session be set to the correct corresponding LANGUAGE?
+A character string can be the name of a month. But is the name in English, or Polish, or Croatian, or in another language? And, will the user's session be set to the correct corresponding LANGUAGE?
 
-For example, consider the word *listopad* which is the name of a month. But which month it is depends on the language the SQL system believes is being used:
+For example, consider the word _listopad_, which is the name of a month. But which month it is depends on the language the SQL system believes is being used:
 - If Polish, then _listopad_ translates to month 11 (_November_ in English).
 - If Croatian, then _listopad_ translates to month 10 (_October_ in English).
 
@@ -63,7 +63,7 @@ SL_Croatian
 
 - `SET DATEFORMAT dmy;`
 
-In the preceding DATEFORMAT statement, the **dmy** says that an example date string of '01-03-2018' would be interpreted to mean _the first day of March in the year 2018_.
+The preceding **dmy** format says that an example date string of '01-03-2018' would be interpreted to mean _the first day of March in the year 2018_.
 
 If instead **mdy** was specified, then the same '01-03-2018' string would mean _the third day of January in 2018_.
 
@@ -74,7 +74,7 @@ The preceding claim of "no guarantee" might be incorrect, in the minds of the SQ
 
 #### Specific countries
 
-In Japan and China, the DATEFORMAT of **ymd** is used. The format's parts are in a sensible sequence of largest unit to smallest. Consequently, this format sorts well. This format is considered to be the _international_ format, because the four digits of the year are unambiguous, and no country on Earth uses the archaic format of **ydm**.
+In Japan and China, the DATEFORMAT of **ymd** is used. The format's parts are in a sensible sequence of largest unit to smallest. Consequently, this format sorts well. This format is considered to be the _international_ format. It is international because the four digits of the year are unambiguous, and no country on Earth uses the archaic format of **ydm**.
 
 In other countries such as Germany and France, the DATEFORMAT is **dmy**, meaning **'dd-mm-yyyy'**. The **dmy** format does not sort well, but it is a sensible sequence of smallest unit to largest.
 
@@ -82,7 +82,7 @@ The United States, and the Federated States of Micronesia, are the only countrie
 
 #### Code example of SET DATEFORMAT: *mdy* versus *dmy*
 
-The following Transact-SQL code example uses the same date charactger string with three different DATEFORMAT settings. A run of the code produces the output shown in the comment:
+The following Transact-SQL code example uses the same date character string with three different DATEFORMAT settings. A run of the code produces the output shown in the comment:
 
 ```sql
 DECLARE @yourDateString NVARCHAR(10) = '12-09-2018';
@@ -112,22 +112,22 @@ YMD-Interpretation--?--NotGuaranteed
 ***/
 ```
 
-In the preceding code example, note that the final example has a mismatch between format **ymd** versus the input string. The third node of the input string represents a numeric value that is too large to be a day. Microsoft does not guarantee the output value from such mismatches.
+In the preceding code example, the final example has a mismatch between format **ymd** versus the input string. The third node of the input string represents a numeric value that is too large to be a day. Microsoft does not guarantee the output value from such mismatches.
 
 #### CONVERT offers explicit codes for _deterministic_ control of date formats
 
-Our CAST and CONVERT documentation article lists numerous explicit codes that can you can use with the CONVERT function to _deterministically_ control date conversions. Every month the article has one of our highest pageview counts.
+Our CAST and CONVERT documentation article lists explicit codes that can you can use with the CONVERT function to _deterministically_ control date conversions. Every month the article has one of our highest pageview counts.
 
 - [CAST and CONVERT (Transact-SQL): Date and time styles](../functions/cast-and-convert-transact-sql.md#date-and-time-styles)
 - [CAST and CONVERT (Transact-SQL): Certain datetime conversions are nondeterministic](../functions/cast-and-convert-transact-sql.md#certain-datetime-conversions-are-nondeterministic)
 
 
 
-## Compatibiltiy level 90 and above
+## Compatibility level 90 and above
 
-In SQL Server 2000 the compatibility level was 80. For level settings of 80 or below, implicit date conversions were deterministic.
+In SQL Server 2000, the compatibility level was 80. For level settings of 80 or below, implicit date conversions were deterministic.
 
-Starting with SQL Server 2005 and its compatibility level of 90, implicit date conversions became nondeterministic. This is when date conversions became dependent on SET LANGUAGE and SET DATEFORMAT.
+Starting with SQL Server 2005 and its compatibility level of 90, implicit date conversions became nondeterministic. Date conversions became dependent on SET LANGUAGE and SET DATEFORMAT starting with level 90.
 
 #### Unicode
 

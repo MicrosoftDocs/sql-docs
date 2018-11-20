@@ -26,7 +26,7 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 Community technology preview (CTP) 2.2 is the latest public release of [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]. The following features are added or enhanced for [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] CTP 2.2.
 
 - [Database Engine](#databaseengine)
-  - Reduced recompilations for workloads using temporary tables across multiple scopes
+
 
 ## Previous CTPs
 
@@ -343,16 +343,6 @@ FROM sys.dm_exec_requests AS d
   CROSS APPLY sys.dm_db_page_info(r.db_id, r.file_id, r.page_id,'DETAILED')
     AS page_info;
 ```
-
-### Reduced recompilations for workloads using temporary tables across multiple scopes (CTP 2.2)
-
-Prior to this feature, when referencing a temporary table with a DML statement (`SELECT`, `INSERT`, `UPDATE`, `DELETE`), if the temporary table was created by an outer scope batch, this would result in a recompile of the DML statement each time it is executed.  With this improvement, SQL Server performs additional lightweight checks to avoid unnecessary recompilations:
-
-- Check if the outer-scope module used for creating the temporary table at compile time is the same one used for consecutive executions.  
-- Track of any data definition language (DDL) changes made at initial compilation and  compare them with DDL operations for consecutive executions.  
-
-The end result is a reduction in extraneous recompilations and CPU-overhead.
-
 
 ## <a id="sqllinux"></a> SQL Server on Linux
 

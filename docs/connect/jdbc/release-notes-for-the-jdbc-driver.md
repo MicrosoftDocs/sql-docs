@@ -19,39 +19,39 @@ manager: craigg
 
 ## Updates in Microsoft JDBC Driver 7.0 for SQL Server
 
-The Microsoft JDBC Driver 7.0 for SQL Server is fully compliant with JDBC API Specification 4.2. The jars in the 7.0 package are named according to Java version compatibility. For example, the mssql-jdbc-7.0.0.jre10.jar file from the 7.0 package should be used with Java 10.
+Microsoft JDBC Driver 7.0 for SQL Server is fully compliant with JDBC API Specification 4.2. The jars in the 7.0 package are named according to Java version compatibility. For example, the mssql-jdbc-7.0.0.jre10.jar file from the 7.0 package should be used with Java 10.
 
 ### Support for JDK 10
 
-The Microsoft JDBC Driver 7.0 for SQL Server is now compatible with Java Development Kit (JDK) version 10.0 in addition to JDK 1.8. This update also exposes the driver's `Automatic-Module-Name` as `com.microsoft.sqlserver.jdbc` through its MANIFEST file.
+Microsoft JDBC Driver 7.0 for SQL Server is now compatible with Java Development Kit (JDK) version 10.0 in addition to JDK 1.8. This update also exposes the driver's `Automatic-Module-Name` as `com.microsoft.sqlserver.jdbc` through its MANIFEST file.
 
 ### Support for spatial datatypes
 
-The Microsoft JDBC Driver 7.0 for SQL Server now provides support for SQL Server spatial datatypes Geography and Geometry. For more information about spatial datatype APIs and how to use them, see [Using spatial datatypes](../../connect/jdbc/use-spatial-datatypes.md).
+Microsoft JDBC Driver 7.0 for SQL Server now provides support for SQL Server spatial datatypes Geography and Geometry. For more information about spatial datatype APIs and how to use them, see [Using spatial datatypes](../../connect/jdbc/use-spatial-datatypes.md).
 
 ### Implementation for JDBC 4.3 introduced java.sql.Connection APIs beginRequest() and endRequest()
 
-The Microsoft JDBC Driver 7.0 for SQL Server now implements `beginRequest()` and `endRequest()` APIs from the `java.sql.Connection` class. These APIs were introduced with JDBC 4.3 specifications and JDK 9. For more information about the driver's implementation of these APIs, see [JDBC 4.3 compliance for the JDBC Driver](../../connect/jdbc/jdbc-4-3-compliance-for-the-jdbc-driver.md).
+Microsoft JDBC Driver 7.0 for SQL Server now implements `beginRequest()` and `endRequest()` APIs from the `java.sql.Connection` class. These APIs were introduced with JDBC 4.3 specifications and JDK 9. For more information about the driver's implementation of these APIs, see [JDBC 4.3 compliance for the JDBC Driver](../../connect/jdbc/jdbc-4-3-compliance-for-the-jdbc-driver.md).
 
 ### Support for SQL data discovery and classification
 
-The Microsoft JDBC Driver 7.0 for SQL Server provides support for SQL data discovery and classification with any target database that supports this feature. The driver now exposes `SQLServerResultSet.getSensitivityClassification()` APIs to extract this information from the fetched `ResultSet`.
+Microsoft JDBC Driver 7.0 for SQL Server provides support for SQL data discovery and classification with any target database that supports this feature. The driver now exposes `SQLServerResultSet.getSensitivityClassification()` APIs to extract this information from the fetched `ResultSet`.
 
 For more information about how to use this feature with the JDBC Driver, see the sample in [SQL data discovery and classification](../../connect/jdbc/data-discovery-classification-sample.md).
 
 ### Added connection property: useBulkCopyForBatchInsert
 
-The Microsoft JDBC Driver 7.0 for SQL Server introduces a new connection property, `useBulkCopyForBatchInsert`. This property is supported only for Azure SQL Data Warehouse.
+Microsoft JDBC Driver 7.0 for SQL Server introduces a new connection property, `useBulkCopyForBatchInsert`. This property is supported only for Azure SQL Data Warehouse.
 
 This property is disabled by default. You can enable it to increase performance of user applications when you're pushing large amounts data to Azure SQL Data Warehouse. Enabling this property changes the behavior of batch insert operations to switch to bulk copy operations with user-provided data. For more information about this property and its limitations, see [Using Bulk Copy API for batch insert operation](../../connect/jdbc/use-bulk-copy-api-batch-insert-operation.md).
 
 ### Added connection property: cancelQueryTimeout
 
-The Microsoft JDBC Driver 7.0 for SQL Server introduces a new connection property, `cancelQueryTimeout`, to cancel `queryTimeout` on `java.sql.Connection` and `java.sql.Statement` objects.
+Microsoft JDBC Driver 7.0 for SQL Server introduces a new connection property, `cancelQueryTimeout`, to cancel `queryTimeout` on `java.sql.Connection` and `java.sql.Statement` objects.
 
 ### Added Azure Key Vault Provider constructors
 
-The Microsoft JDBC Driver 7.0 for SQL Server reintroduces a previously removed constructor, for `SQLServerColumnEncryptionAzureKeyVaultProvider`. It allowed authentication through a custom method implemented over `SQLServerKeyVaultAuthenticationCallback` to fetch an access token.
+Microsoft JDBC Driver 7.0 for SQL Server reintroduces a previously removed constructor, for `SQLServerColumnEncryptionAzureKeyVaultProvider`. It allowed authentication through a custom method implemented over `SQLServerKeyVaultAuthenticationCallback` to fetch an access token.
 
 The new constructors have the following definition:
 
@@ -72,11 +72,11 @@ public SQLServerColumnEncryptionAzureKeyVaultProvider(
 
 ### Updated ADAL4J version: 1.6.0
 
-The Microsoft JDBC Driver 7.0 for SQL Server has updated its Maven dependency on azure-activedirectory-library-for-java (ADAL4J) to version 1.6.0. For more information about dependencies, see [Feature dependencies of the Microsoft JDBC Driver for SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md).
+Microsoft JDBC Driver 7.0 for SQL Server has updated its Maven dependency on azure-activedirectory-library-for-java (ADAL4J) to version 1.6.0. For more information about dependencies, see [Feature dependencies of the Microsoft JDBC Driver for SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md).
 
 ## Updates in Microsoft JDBC Driver 6.4 for SQL Server
 
-The Microsoft JDBC Driver 6.4 for SQL Server is fully compliant with JDBC specifications 4.1 and 4.2. The jars in the 6.4 package are named according to Java version compatibility. For example, the mssql-jdbc-6.4.0.jre8.jar file from the 6.4 package must be used with Java 8.
+Microsoft JDBC Driver 6.4 for SQL Server is fully compliant with JDBC specifications 4.1 and 4.2. The jars in the 6.4 package are named according to Java version compatibility. For example, the mssql-jdbc-6.4.0.jre8.jar file from the 6.4 package must be used with Java 8.
 
 ### Support for JDK 9
 

@@ -42,7 +42,7 @@ TLS is used to encrypt connections from a client application to [!INCLUDE[ssNoVe
 
         openssl req -x509 -nodes -newkey rsa:2048 -subj '/CN=mssql.contoso.com' -keyout mssql.key -out mssql.pem -days 365 
         sudo chown mssql:mssql mssql.pem mssql.key 
-        sudo chmod 600 mssql.pem mssql.key   
+        sudo chmod 640 mssql.pem mssql.key   
         sudo mv mssql.pem /etc/ssl/certs/ 
         sudo mv mssql.key /etc/ssl/private/ 
 
@@ -50,8 +50,8 @@ TLS is used to encrypt connections from a client application to [!INCLUDE[ssNoVe
 
         systemctl stop mssql-server 
         cat /var/opt/mssql/mssql.conf 
-        sudo /opt/mssql/bin/mssql-conf set network.tlscert /etc/ssl/certs/mssqlfqdn.pem 
-        sudo /opt/mssql/bin/mssql-conf set network.tlskey /etc/ssl/private/mssqlfqdn.key 
+        sudo /opt/mssql/bin/mssql-conf set network.tlscert /etc/ssl/certs/mssql.pem 
+        sudo /opt/mssql/bin/mssql-conf set network.tlskey /etc/ssl/private/mssql.key 
         sudo /opt/mssql/bin/mssql-conf set network.tlsprotocols 1.2 
         sudo /opt/mssql/bin/mssql-conf set network.forceencryption 0 
 

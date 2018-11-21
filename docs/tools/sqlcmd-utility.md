@@ -57,7 +57,7 @@ Release number: 15.0 <br>
 Build number: 15.0.0500.17<br>
 
 > [!NOTE]
-> sqlcmd utility version 14 is available as a web release from the [Download Center](http://go.microsoft.com/fwlink/?LinkID=825643). You need version 13.1 or higher to support Always Encrypted (`-g`) and Azure Active Directory authentication (`-G`). (You may have several versions of sqlcmd.exe installed on your computer. Be sure you are using the correct version. To determine the version, execute `sqlcmd -?`.)
+> sqlcmd utility version 14 is available as a web release from the [Download Center](https://go.microsoft.com/fwlink/?LinkID=825643). You need version 13.1 or higher to support Always Encrypted (`-g`) and Azure Active Directory authentication (`-G`). (You may have several versions of sqlcmd.exe installed on your computer. Be sure you are using the correct version. To determine the version, execute `sqlcmd -?`.)
 
 You can try the sqlcmd utility from Azure Cloud Shell as it is pre-installed by default: [![Launch Cloud Shell](https://shell.azure.com/images/launchcloudshell.png "Launch Cloud Shell")](https://shell.azure.com)
 

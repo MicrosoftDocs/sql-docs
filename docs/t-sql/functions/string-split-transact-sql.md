@@ -61,6 +61,8 @@ STRING_SPLIT ( string , separator )
 |amet.|  
   
 If the input string is **NULL**, the **STRING_SPLIT** table-valued function returns an empty table.  
+
+If the input string is not **NULL**, the **STRING_SPLIT** table-valued function returns a result set in {the order of | no predetermined order} with respect to the delimited substrings as found in the input string
   
 **STRING_SPLIT** requires at least compatibility mode 130.  
   

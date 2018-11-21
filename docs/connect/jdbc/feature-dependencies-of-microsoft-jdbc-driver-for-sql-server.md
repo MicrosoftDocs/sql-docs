@@ -17,16 +17,16 @@ manager: craigg
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-This article lists down libraries that the Microsoft JDBC Driver for SQL Server depends on. The project has the following dependencies.
+This article lists libraries that the Microsoft JDBC Driver for SQL Server depends on. The project has the following dependencies.
 
 ## Compile time
 
-- `azure-keyvault`: Azure Key Vault Provider for Always Encrypted Azure Key Vault feature (optional)
+- `azure-keyvault`: Azure Key Vault Provider for the Always Encrypted Azure Key Vault feature (optional)
 - `adal4j`: Azure Active Directory Library for Java for the Azure Active Directory Authentication feature and the Azure Key Vault feature (optional)
 
 ## Test time
 
-Specific projects that require either of the preceding features need to explicitly declare the respective dependencies in their POM file:
+Specific projects that require either of the preceding features need to explicitly declare the respective dependencies in their POM file.
 
 **For example:** When you're using the Azure Active Directory Authentication feature, you need to redeclare the `adal4j` dependency in your project's POM file. See the following snippet:
 
@@ -45,7 +45,7 @@ Specific projects that require either of the preceding features need to explicit
 </dependency>
 ```
 
-**For example:** When you're using the Azure Key Vault feature, you need to redeclare `azure-keyvault` dependency and the `adal4j` dependency in your project's POM file. See the following snippet:
+**For example:** When you're using the Azure Key Vault feature, you need to redeclare the `azure-keyvault` dependency and the `adal4j` dependency in your project's POM file. See the following snippet:
 
 ```xml
 <dependency>
@@ -79,8 +79,8 @@ Specific projects that require either of the preceding features need to explicit
 
 > [!NOTE]
 > With 6.2.2 and 6.4.0 driver versions, the azure-keyvault-java dependency had been updated to version 1.0.0. However, the new version was not compatible with the previous version (0.9.7) and breaks the existing implementation in the driver. The new implementation in the driver required API changes, which in turn breaks client programs that use the Azure Key Vault Provider.
-
-> This problem has been resolved with latest driver version (7.0.0). The removed constructor using authentication callback mechanism is added back to the Azure Key Vault Provider for backward compatibility.
+>
+> This problem is resolved with latest driver version (7.0.0). The removed constructor that used the authentication callback mechanism is added back to the Azure Key Vault Provider for backward compatibility.
 
 ### Working with Azure Active Directory Authentication:
 

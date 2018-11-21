@@ -41,9 +41,9 @@ For more information about how to use this feature with the JDBC Driver, see the
 
 ### Added connection property: useBulkCopyForBatchInsert
 
-The Microsoft JDBC Driver 7.0 for SQL Server introduces a new connection property, `useBulkCopyForBatchInsert`, which is supported only for Azure SQL Data Warehouse.
+The Microsoft JDBC Driver 7.0 for SQL Server introduces a new connection property, `useBulkCopyForBatchInsert`. This property is supported only for Azure SQL Data Warehouse.
 
-This property is disabled by default. You an enable it to increase performance of user applications when you're pushing large amounts data to Azure SQL Data Warehouse. Enabling this property changes the behavior of batch insert operations to switch to  bulk copy operations with user-provided data. For more information about this property and its limitations, see [Using Bulk Copy API for batch insert operation](../../connect/jdbc/use-bulk-copy-api-batch-insert-operation.md).
+This property is disabled by default. You can enable it to increase performance of user applications when you're pushing large amounts data to Azure SQL Data Warehouse. Enabling this property changes the behavior of batch insert operations to switch to bulk copy operations with user-provided data. For more information about this property and its limitations, see [Using Bulk Copy API for batch insert operation](../../connect/jdbc/use-bulk-copy-api-batch-insert-operation.md).
 
 ### Added connection property: cancelQueryTimeout
 
@@ -57,7 +57,7 @@ The new constructors have the following definition:
 
 ```java
 /* This constructor is added to provide backward compatibility with 6.0
-* version of the driver. It is marked deprecated for removal in next
+* version of the driver. It is marked deprecated for removal in the next
 * stable release.
 */
 @Deprecated
@@ -70,9 +70,9 @@ public SQLServerColumnEncryptionAzureKeyVaultProvider(
             SQLServerKeyVaultAuthenticationCallback authenticationCallback) throws SQLServerException;
 ```
 
-### Updated ADAL4J version to 1.6.0
+### Updated ADAL4J version: 1.6.0
 
-The Microsoft JDBC Driver 7.0 for SQL Server has updated its maven dependency on azure-activedirectory-library-for-java (ADAL4J) to version 1.6.0. For more information about dependencies, see [Feature dependencies of the Microsoft JDBC Driver for SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md).
+The Microsoft JDBC Driver 7.0 for SQL Server has updated its Maven dependency on azure-activedirectory-library-for-java (ADAL4J) to version 1.6.0. For more information about dependencies, see [Feature dependencies of the Microsoft JDBC Driver for SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md).
 
 ## Updates in Microsoft JDBC Driver 6.4 for SQL Server
 
@@ -84,23 +84,23 @@ The driver supports JDK version 9.0 in addition to JDK 8.0 and 7.0.
 
 ### JDBC 4.3 compliance
 
-The driver supports the Java Database Connectivity API 4.3 specification, in addition to 4.1 and 4.2. The JDBC 4.3 API methods are added but not implemented yet. For details, see [JDBC 4.3 Compliance for the JDBC Driver](../../connect/jdbc/jdbc-4-3-compliance-for-the-jdbc-driver.md).
+The driver supports the Java Database Connectivity API 4.3 specification, in addition to 4.1 and 4.2. The JDBC 4.3 API methods are added but not implemented yet. For details, see [JDBC 4.3 compliance for the JDBC Driver](../../connect/jdbc/jdbc-4-3-compliance-for-the-jdbc-driver.md).
 
-### Added the connection property sslProtocol
+### Added connection property: sslProtocol
 
-A new connection property lets users specify the TLS protocol keyword. Possible values are: "TLS", "TLSv1", "TLSv1.1", "TLSv1.2". For details, see [SSLProtocol](https://github.com/Microsoft/mssql-jdbc/wiki/SSLProtocol).
+A new connection property lets users specify the TLS protocol keyword. Possible values are: "TLS", "TLSv1", "TLSv1.1", and "TLSv1.2". For details, see [SSLProtocol](https://github.com/Microsoft/mssql-jdbc/wiki/SSLProtocol).
 
-### Deprecated the connection property fipsProvider
+### Deprecated connection property: fipsProvider
 
 The connection property `fipsProvider` is removed from the list of accepted connection properties. For details, see the related [GitHub pull request](https://github.com/Microsoft/mssql-jdbc/pull/460).
 
 ### Added connection properties for specifying a custom TrustManager
 
-The driver now supports specifying a custom TrustManager with added `trustManagerClass` and `trustManagerConstructorArg` connection properties. You can dynamically specify a set of certificates that are trusted on a per-connection basis without modifying the global settings for the JVM environment.
+The driver now supports specifying a custom TrustManager with added `trustManagerClass` and `trustManagerConstructorArg` connection properties. You can dynamically specify a set of certificates that are trusted on a per-connection basis without modifying the global settings for the Jave virtual machine (JVM) environment.
 
 ### Added support for datetime/smallDatetime in table-valued parameters
 
-The driver now supports the datatypes `DATETIME` and `SMALLDATETIME` when you're using table-valued parameters (TVPs).
+The driver now supports the datatypes `datetime` and `smallDatetime` when you're using table-valued parameters (TVPs).
 
 ### Added support for the sql_variant datatype
 
@@ -108,15 +108,15 @@ The JDBC Driver now supports `sql_variant` datatypes to be used with SQL Server.
 
 * **For date values**: 
 
-  When you're using TVP to populate a table that contains `datetime`, `smalldatetime`, or `date` values stored in a `sql_variant` column, calling the `getDateTime()`, `getSmallDateTime()`, or `getDate()` method on the result set doesn't work and throws the following exception:
+  When you're using a TVP to populate a table that contains `datetime`, `smalldatetime`, or `date` values stored in a `sql_variant` column, calling the `getDateTime()`, `getSmallDateTime()`, or `getDate()` method on the result set doesn't work and throws the following exception:
 
   `java java.lang.String cannot be cast to java.sql.Timestamp`
     
   As a workaround, use the `getString()` or `getObject()` method instead.
 
-* **Using TVP with sql_variant for null values**:
+* **Using a TVP with sql_variant for null values**:
   
-  If you're using TVP to populate a table and send a NULL value to the `sql_variant` column type, you'll encounter an exception. Inserting a NULL value with the column type `sql_variant` in TVP is currently not supported.
+  If you're using a TVP to populate a table and send a NULL value to the `sql_variant` column type, you'll encounter an exception. Inserting a NULL value with the column type `sql_variant` in a TVP is currently not supported.
 
 ### Implemented prepared statement metadata caching
 
@@ -126,13 +126,13 @@ The JDBC Driver has implemented prepared statement metadata caching for performa
 
 The JDBC Driver now supports Azure Active Directory (Azure AD) Integrated Authentication on all supported operating systems (Windows, Linux, and Mac) with Kerberos. Alternatively, on Windows operating systems, users can authenticate with sqljdbc_auth.dll.
 
-### Updated ADAL4J version to 1.4.0
+### Updated ADAL4J version: 1.4.0
 
 The JDBC Driver has updated its Maven dependency on azure-activedirectory-library-for-java (ADAL4J) to version 1.4.0. For more information about dependencies, see [Feature dependencies of the Microsoft JDBC Driver for SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md).
 
 ## Updates in Microsoft JDBC Driver 6.2 for SQL Server
 
-The Microsoft JDBC Driver 6.2 for SQL Server is fully compliant with JDBC specifications 4.1 and 4.2. The jars in the 6.2 package are named according to Java version compatibility. For example, the mssql-jdbc-6.2.2.jre8.jar file from the 6.2 package is recommended for use with Java 8.
+Microsoft JDBC Driver 6.2 for SQL Server is fully compliant with JDBC specifications 4.1 and 4.2. The jars in the 6.2 package are named according to Java version compatibility. For example, the mssql-jdbc-6.2.2.jre8.jar file from the 6.2 package is recommended for use with Java 8.
 
 > [!NOTE]  
 > An issue with the metadata caching improvement was found in the JDBC 6.2 RTW released on June 29, 2017. The improvement was rolled back and new jars (version 6.2.1) were released on July 17, 2017. 
@@ -154,7 +154,7 @@ The JDBC Driver can now be used on JVMs that run in Federal Information Processi
 The JDBC Driver now has support for:
 
 - Principal/password method for applications where the Kerberos configuration can't be modified or can't retrieve a new token or keytab. This method can be used for authenticating to a SQL Server instance that allows only Kerberos authentication.
-- Cross-realm authentication that uses Kerberos Integrated Authentication without explicitly setting the server SPN. The driver now automatically computes the REALM even when it isn't provided.
+- Cross-realm authentication that uses Kerberos Integrated Authentication without explicitly setting the server SPN. The driver now automatically computes the realm even when it isn't provided.
 - Kerberos Constrained Delegation by accepting impersonated user credentials as a GSS credential object via data source. This impersonated credential is then used to establish a Kerberos connection.
 
 ### Added timeouts
@@ -166,11 +166,11 @@ The JDBC Driver now supports the following configurable timeouts. You can change
 
 ## Updates in Microsoft JDBC Driver 6.1 for SQL Server
 
-The Microsoft JDBC Driver 6.1 for SQL Server is fully compliant with JDBC specifications 4.1 and 4.2. This is the initial open-source release of the JDBC Driver. It contains the mssql-jdbc-6.1.0.jre8.jar and mssql-jdbc-6.1.0.jre7.jar files, which correspond to Java version compatibility.
+Microsoft JDBC Driver 6.1 for SQL Server is fully compliant with JDBC specifications 4.1 and 4.2. This is the initial open-source release of the JDBC Driver. It contains the mssql-jdbc-6.1.0.jre8.jar and mssql-jdbc-6.1.0.jre7.jar files, which correspond to Java version compatibility.
 
 ## Updates in Microsoft JDBC Driver 6.0 for SQL Server
 
-The Microsoft JDBC Driver 6.0 for SQL Server is fully compliant with JDBC specifications 4.1 and 4.2. The jars in the 6.0 package are named according to their compliance with the JDBC API version. For example, the sqljdbc42.jar file from the 6.0 package is JDBC API 4.2 compliant. Similarly, the sqljdbc41.jar file is compliant with JDBC API 4.1.
+Microsoft JDBC Driver 6.0 for SQL Server is fully compliant with JDBC specifications 4.1 and 4.2. The jars in the 6.0 package are named according to their compliance with the JDBC API version. For example, the sqljdbc42.jar file from the 6.0 package is JDBC API 4.2 compliant. Similarly, the sqljdbc41.jar file is compliant with JDBC API 4.1.
 
 To ensure that you have the right sqljdbc42.jar or sqljdbc41.jar file, run the following lines of code. If the output is "Driver version: 6.0.7507.100", you have the JDBC Driver 6.0 package.
 
@@ -193,21 +193,23 @@ The driver now supports retrieving parameter metadata with prepared statements f
 
 ### Azure Active Directory
 
-Azure AD authentication is a mechanism of connecting to Azure SQL Database v12 by using identities in Azure AD. Use Azure AD authentication to centrally manage identities of database users and as an alternative to SQL Server authentication. The JDBC Driver 6.0 enables you to specify your Azure AD credentials in the JDBC connection string to connect to Azure SQL Database. For details, see the authentication property in the [Setting the connection properties](../../connect/jdbc/setting-the-connection-properties.md) article.
+Azure AD authentication is a mechanism of connecting to Azure SQL Database v12 by using identities in Azure AD. Use Azure AD authentication to centrally manage identities of database users and as an alternative to SQL Server authentication. 
 
-### Table-Valued Parameters
+You can use JDBC Driver 6.0 to specify your Azure AD credentials in the JDBC connection string to connect to Azure SQL Database. For details, see the authentication property in the [Setting the connection properties](../../connect/jdbc/setting-the-connection-properties.md) article.
 
-Table-valued parameters provide an easy way to marshal multiple rows of data from a client application to SQL Server without requiring multiple round trips or special server-side logic for processing the data. You can use table-valued parameters to encapsulate rows of data in a client application and send the data to the server in a single parameterized command. The incoming data rows are stored in a table variable that can then be operated on by using Transact-SQL. For details, see [Using Table-Valued Parameters](../../connect/jdbc/using-table-valued-parameters.md).
+### Table-valued parameters
 
-### AlwaysOn Availability Groups (AG)
+TVPs provide an easy way to marshal multiple rows of data from a client application to SQL Server without requiring multiple round trips or special server-side logic for processing the data. You can use TVPs to encapsulate rows of data in a client application and send the data to the server in a single parameterized command. The incoming data rows are stored in a table variable that you can then operate on by using Transact-SQL. For details, see [Using table-valued parameters](../../connect/jdbc/using-table-valued-parameters.md).
 
-The driver now supports transparent connections to AlwaysOn Availability Groups. The driver quickly discovers the current AlwaysOn topology of your server infrastructure and connects to the current active server transparently.
+### Always On Availability Groups
+
+The driver now supports transparent connections to Always On Availability Groups. The driver quickly discovers the current Always On topology of your server infrastructure and connects to the current active server transparently.
 
 ## Updates in Microsoft JDBC Driver 4.2 for SQL Server and later
 
-The Microsoft JDBC Driver 4.2 for SQL Server is fully compliant with JDBC specifications 4.1 and 4.2. The jars in the 4.2 package are named according to their compliance with the JDBC API version. For example, the sqljdbc42.jar file from the 4.2 package is JDBC API 4.2 compliant. Similarly, the sqljdbc41.jar file is compliant with JDBC API 4.1.
+Microsoft JDBC Driver 4.2 for SQL Server is fully compliant with JDBC specifications 4.1 and 4.2. The jars in the 4.2 package are named according to their compliance with the JDBC API version. For example, the sqljdbc42.jar file from the 4.2 package is JDBC API 4.2 compliant. Similarly, the sqljdbc41.jar file is compliant with JDBC API 4.1.
 
-To ensure you have the right sqljdbc42.jar or sqljdbc41.jar, run the following lines of code. If the output is "Driver version: 4.2.6420.100", you have the JDBC Driver 4.2 package.
+To ensure you have the right sqljdbc42.jar or sqljdbc41.jar file, run the following lines of code. If the output is "Driver version: 4.2.6420.100", you have the JDBC Driver 4.2 package.
 
 ```java
 Connection conn = DriverManager.getConnection("jdbc:sqlserver://<server>;user=<user>;password=<password>;");
@@ -216,34 +218,34 @@ System.out.println("Driver version: " + conn.getMetaData().getDriverVersion());
 
 ### Support for JDK 8
 
-Support for Java Development Kit (JDK) version 8.0 in addition to JDK 7.0, 6.0, and 5.0.
+The driver supports JDK version 8.0 in addition to JDK 7.0, 6.0, and 5.0.
 
 ### JDBC 4.1 and 4.2 compliance
 
-Support for Java Database Connectivity API 4.1 and 4.2 specifications, in addition to 4.0. For details, see [JDBC 4.1 Compliance for the JDBC Driver](../../connect/jdbc/jdbc-4-1-compliance-for-the-jdbc-driver.md) and [JDBC 4.2 Compliance for the JDBC Driver](../../connect/jdbc/jdbc-4-2-compliance-for-the-jdbc-driver.md).
+The driver supports Java Database Connectivity API 4.1 and 4.2 specifications, in addition to 4.0. For details, see [JDBC 4.1 compliance for the JDBC Driver](../../connect/jdbc/jdbc-4-1-compliance-for-the-jdbc-driver.md) and [JDBC 4.2 compliance for the JDBC Driver](../../connect/jdbc/jdbc-4-2-compliance-for-the-jdbc-driver.md).
 
 ### Bulk copy
 
-The bulk copy feature is used to quickly copy large amounts of data into tables or views in SQL Server databases. For details, see [Using Bulk Copy with the JDBC Driver](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md).
+You use the bulk copy feature to quickly copy large amounts of data into tables or views in SQL Server databases. For details, see [Using bulk copy with the JDBC Driver](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md).
 
 ### XA transaction rollback option
 
-Added new timeout options for existing automatic rollback of unprepared transactions. For details, see [Understanding XA Transactions](../../connect/jdbc/understanding-xa-transactions.md).
+The driver has new timeout options for existing automatic rollback of unprepared transactions. For details, see [Understanding XA transactions](../../connect/jdbc/understanding-xa-transactions.md).
 
-### New Kerberos Principal Connection Property
+### New Kerberos principal connection property
 
-Added a new connection property to facilitate flexibility with Kerberos connections. For details, see [Using Kerberos Integrated Authentication to Connect to SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md).
+The driver uses a new connection property to facilitate flexibility with Kerberos connections. For details, see [Using Kerberos Integrated Authentication to connect to SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md).
 
 ## Updates in Microsoft JDBC Driver 4.1 for SQL Server and later
 
 ### Support for JDK 7
 
-Support for Java Development Kit (JDK) version 7.0 in addition to JDK 6.0 and 5.0.
+The driver supports JDK version 7.0 in addition to JDK 6.0 and 5.0.
 
-## Itanium Not Supported for JDBC Driver 6.4, 6.0, 4.2, and 4.1 Applications
+## Itanium not supported for JDBC Driver 6.4, 6.0, 4.2, and 4.1 applications
 
 Microsoft JDBC Drivers 6.4, 6.0, 4.2, and 4.1 for SQL Server applications aren't supported to run on an Itanium computer.
 
-## See Also
+## See also
 
 [Overview of the JDBC Driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)

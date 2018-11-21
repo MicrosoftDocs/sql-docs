@@ -42,7 +42,7 @@ Before powering off the appliance, you should end all activity on the appliance.
   
 4.  Connect to ***appliance_domain*-HST01** and login with the appliance domain administrator account.  
   
-5.  Using the **Failover Cluster Manager** connect to the ***appliance_domain*-WFOHST01** cluster, if not automatically connected, and then in the Navigation pane, click **Roles**. In the **Roles** pane:  
+5.  Using the **Failover Cluster Manager** connect to the **_appliance_domain_-WFOHST01** cluster, if not automatically connected, and then in the Navigation pane, click **Roles**. In the **Roles** pane:  
   
     1.  Multi-select all of the virtual machines. Right-click them, and select **Shut Down**.  
   
@@ -69,11 +69,11 @@ Before powering off the appliance, you should end all activity on the appliance.
   
 3.  Log in to ***appliance_domain*-HST01** as the appliance domain administrator.  
   
-4.  Start the **Hyper-V Manager** program (**virtmgmt.msc**) and connect to ***appliance_domain*-HST01** if not connected by default.  
+4.  Start the **Hyper-V Manager** program (**virtmgmt.msc**) and connect to **_appliance_domain_-HST01** if not connected by default.  
   
     1.  If you cannot connect by name because the ***PDW_region*-AD01** is not running, try connecting by using the IP address.  
   
-    2.  In the **Virtual Machines** pane, locate ***PDW_region*-AD01** and confirm that it is running. If not, start this VM and wait for it to be fully started.  
+    2.  In the **Virtual Machines** pane, locate **_PDW_region_-AD01** and confirm that it is running. If not, start this VM and wait for it to be fully started.  
   
 5.  Power on the rest of the servers in the appliance.  
   
@@ -81,9 +81,9 @@ Before powering off the appliance, you should end all activity on the appliance.
   
     1.  Connect to ***appliance_domain*-HST02**.  
   
-    2.  In the **Virtual Machines** pane, locate ***PDW_region*-AD02** and confirm that it is running.  If not, start this VM and wait for it to be fully started.  
+    2.  In the **Virtual Machines** pane, locate **_PDW_region_-AD02** and confirm that it is running.  If not, start this VM and wait for it to be fully started.  
   
-7.  Using the **Failover Cluster Manager** connect to the ***appliance_domain*-WFOHST01** cluster, if not automatically connected, and then in the **Navigation** pane, click **Roles**. In the **Roles** pane:  
+7.  Using the **Failover Cluster Manager** connect to the **_appliance_domain_-WFOHST01** cluster, if not automatically connected, and then in the **Navigation** pane, click **Roles**. In the **Roles** pane:  
   
     1.  Multi-select all of the virtual machines, right-click them, and then click **Start**.  
   

@@ -62,7 +62,7 @@ manager: craigg
 5.  In the **Delete Object** dialog box, click **OK**.  
   
     > [!IMPORTANT]  
-    >  Click **Show Dependencies** in the **Delete Object** dialog box to open the *function_name***Dependencies** dialog box. This will show all of the objects that depend on the function and all of the objects on which the function depends.  
+    >  Click **Show Dependencies** in the **Delete Object** dialog box to open the _function_name_**Dependencies** dialog box. This will show all of the objects that depend on the function and all of the objects on which the function depends.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   

@@ -194,7 +194,6 @@ In SQL Server Data Tools, external tables are displayed in a separate folder **E
 
 ## Next steps
 
-Explore more ways to configure PolyBase in the following articles:
-
-[PolyBase configuration and security for Hadoop ](../relational-databases/polybase/polybase-configuration.md).  
+For Hadoop security settings see [configure Hadoop security](polybase-configure-hadoop-security.md).<br>
+For more information about PolyBase, see the [What is PolyBase?](../relational-databases/polybase/polybase-guide.md). 
  

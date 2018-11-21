@@ -35,7 +35,7 @@ The present article assumes you already know how to create and start an event se
 
 This article also assumes you have installed a very recent monthly release of SSMS. Installation help is at:
 
-- [Download SQL Server Management Studio (SSMS)](http://msdn.microsoft.com/library/mt238290.aspx)
+- [Download SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)
 
 
 
@@ -59,7 +59,7 @@ The present article is written from the perspective of SQL Server. The article u
 
 For documentation about extended events that is specific to Azure SQL Database, see:
 
-- [Extended Events in Azure SQL Database](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)
+- [Extended Events in Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)
 
 
 

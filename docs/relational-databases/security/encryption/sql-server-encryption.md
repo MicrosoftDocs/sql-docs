@@ -54,6 +54,9 @@ You can use encryption in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-m
 ## Related Content  
  [Securing SQL Server](../../../relational-databases/security/securing-sql-server.md)  
  Overview of how to help secure the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] platform, and how to work with users and securable objects.  
+
+[An overview of Azure SQL Database security capabilities](https://docs.microsoft.com/azure/sql-database/sql-database-security-overview)
+</br>Overview of Azure SQL Database security for protecting data, controlling access, and proactive monitoring.
   
  [Cryptographic Functions &#40;Transact-SQL&#41;](../../../t-sql/functions/cryptographic-functions-transact-sql.md)  
  Information about how to implement cryptographic functions.  
@@ -71,7 +74,7 @@ You can use encryption in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-m
  Information about how to use a certificate to encrypt data.  
   
 ## External Resources  
- [Microsoft TechNet: SQL Server TechCenter: SQL Server 2012 Security and Protection](http://download.microsoft.com/download/8/F/A/8FABACD7-803E-40FC-ADF8-355E7D218F4C/SQL_Server_2012_Security_Best_Practice_Whitepaper_Apr2012.docx)  
+ [Microsoft TechNet: SQL Server TechCenter: SQL Server 2012 Security and Protection](https://download.microsoft.com/download/8/F/A/8FABACD7-803E-40FC-ADF8-355E7D218F4C/SQL_Server_2012_Security_Best_Practice_Whitepaper_Apr2012.docx)  
  Current information about [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] security.  
   
 ## See Also  

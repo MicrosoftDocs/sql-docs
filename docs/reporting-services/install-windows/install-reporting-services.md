@@ -93,15 +93,15 @@ URL reservations are composed of a prefix, host name, port, and virtual director
 |Part|Description|
 |----------|-----------------|
 |Prefix|The default prefix is HTTP. If you previously installed a Secure Sockets Layer (SSL) certificate, Setup tries to create URL reservations that use the HTTPS prefix.|
-|Host name|The default host name is a strong wildcard (+). It specifies that the report server accepts any HTTP request on the designated port for any host name that resolves to the computer, including `http://<computername>/reportserver`, `http://localhost/reportserver`, or `http://<IPAddress>/reportserver.`|
+|Host name|The default host name is a strong wildcard (+). It specifies that the report server accepts any HTTP request on the designated port for any host name that resolves to the computer, including `https://<computername>/reportserver`, `https://localhost/reportserver`, or `https://<IPAddress>/reportserver.`|
 |Port|The default port is 80. If you use any port other than port 80, you have to explicitly add it to the URL when you open web portal in a browser window.|
 |Virtual directory|By default, virtual directories are created in the format of ReportServer for the Report Server Web service and Reports for the web portal. For the Report Server Web service, the default virtual directory is **reportserver**. For the web portal, the default virtual directory is **reports**.|
 
 An example of the complete URL string might be as follows:
 
-- `http://+:80/reportserver`, provides access to the report server.
+- `https://+:80/reportserver`, provides access to the report server.
 
-- `http://+:80/reports`, provides access to the web portal.
+- `https://+:80/reports`, provides access to the web portal.
 
 ## Firewall
 
@@ -125,6 +125,6 @@ For information on how to install SQL Server 2016 Reporting Services native mode
 
 With your report server installed, begin to create reports and deploy those to your report server. For information on how to start with Report Builder, see [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md).
 
-To create reports using SQL Server Data Tools, [download SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714).
+To create reports using SQL Server Data Tools, [download SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714).
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

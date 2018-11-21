@@ -4,7 +4,7 @@ description: For loopback connections using implied authentication, add SQLRUser
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 10/10/2018  
+ms.date: 10/17/2018  
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
@@ -13,11 +13,11 @@ manager: cgronlun
 # Add SQLRUserGroup as a database user
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Create a database login for the [SQLRUserGroup](../concepts/security.md#sqlrusergroup) when a loopback connection in your script specifies a *trusted connection*, and the identity used to execute whatever object contains your code is a Windows account.
+Create a database login for [SQLRUserGroup](../concepts/security.md#sqlrusergroup) when a [loop back connection](../../advanced-analytics/concepts/security.md#implied-authentication) in your script specifies a *trusted connection*, and the identity used to execute an object contains your code is a Windows user account.
 
-Trusted connections are those having `Trusted_Connection=True` in the connection string. When SQL Server receives a request specifying a trusted connection, it checks whether the identity of the current user has a login. For external satellite processes executing as a worker account (such as MSSQLSERVER01 from **SQLRUserGroup**), the request fails because those accounts do not have a login by default. 
+Trusted connections are those having `Trusted_Connection=True` in the connection string. When SQL Server receives a request specifying a trusted connection, it checks whether the identity of the current Windows user has a login. For external processes executing as a worker account (such as MSSQLSERVER01 from **SQLRUserGroup**), the request fails because those accounts do not have a login by default.
 
-You can work around the connection error by giving **SQLServerRUserGroup** a database login on your server. For more information about identities and external processes, see [Security overview for the extensibility framework](../concepts/security.md).
+You can work around the connection error by giving **SQLServerRUserGroup** a SQL Server login. For more information about identities and external processes, see [Security overview for the extensibility framework](../concepts/security.md).
 
 > [!Note]
 >  Make sure that **SQLRUserGroup** has "Allow Log on locally" permissions. By default, this right is given to all new local users, but in some organizations stricter group policies might disable this right.
@@ -45,9 +45,9 @@ You can work around the connection error by giving **SQLServerRUserGroup** a dat
 5. Scroll through the list of group accounts on the server until you find one beginning with `SQLRUserGroup`.
     
     + The name of the group that's associated with the Launchpad service for the _default instance_ is always **SQLRUserGroup**, regardless of whether you installed R or Python or both. Select this account for the default instance only.
-    + If you are using a _named instance_, the instance name is appended to the name of the default worker group name, `SQLRUserGroup`. Hence, if your instance is named "MLTEST", the default user group name for this instance would be **SQLRUserGroupMLTest**.
+    + If you are using a _named instance_, the instance name is appended to the name of the default worker group name, `SQLRUserGroup`. For example, if your instance is named "MLTEST", the default user group name for this instance would be **SQLRUserGroupMLTest**.
  
-     ![Example of groups on server](media/implied-auth-login5.png "Example of groups on server")
+ ![Example of groups on server](media/implied-auth-login5.png "Example of groups on server")
    
 5. Click **OK** to close the advanced search dialog box.
 
@@ -58,7 +58,7 @@ You can work around the connection error by giving **SQLServerRUserGroup** a dat
 
 7. In the **Login - New** dialog box, click **OK**. By default, the login is assigned to the **public** role and has permission to connect to the database engine.
 
-## See also
+## Next steps
 
 + [Security overview](../concepts/security.md)
 + [Extensibility framework](../concepts/extensibility-framework.md)

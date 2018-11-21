@@ -1,6 +1,6 @@
 ---
 title: SQL Server help and feedback | Microsoft Docs
-ms.date: "10/10/2018"
+ms.date: 10/10/2018
 ms.prod: sql
 ms.reviewer: ""
 ms.custom: ""
@@ -30,7 +30,7 @@ If you're a business user, please review the [support options](https://support.m
 If you're a commercial user, please review the Microsoft [Contact](https://support.microsoft.com/gp/contactus81?forceorigin=esmc&Audience=Commercial) page.
 
 ## I want to review license information about SQL Server
-If you would like to download and review the license information for SQL Server, it can be found at [Microsoft SQL Server Additional Software License Terms](https://www.microsoft.com/en-us/download/details.aspx?id=39299). 
+If you would like to download and review the license information for SQL Server, it can be found at [Microsoft SQL Server Additional Software License Terms](https://www.microsoft.com/download/details.aspx?id=39299). 
 
 ## I want to ask the community for help 
 If you're interested in engaging the vibrant SQL Server community for assistance, there are multiple options available to you!
@@ -72,13 +72,12 @@ There are a few social media outlets that can reach the SQL team as well.
 - [MashaMSFT Twitter](https://twitter.com/mashamsft)
 - [MikeRayMSFT Twitter](https://twitter.com/mncray)
 
+## I want to provide feedback for SQL Docs content
 
-## I want to provide feedback for SQL Docs content 
-
-### Editing content
-Did you find something wrong with our documentation? Did you know that you could edit the content yourself? If you do so, not only will our documentation improve, but you'll also be credited as a contributor to the page! Find out more information at [http://aka.ms/editsqldocs](http://aka.ms/editsqldocs). 
+### ![edit content](../includes/media/edit-topic-pencil.png) Editing content
+Did you find something wrong with our documentation? Did you know that you could edit the content yourself? If you do so, not only will our documentation improve, but you'll also be credited as a contributor to the page! Find out more information at [https://aka.ms/editsqldocs](https://aka.ms/editsqldocs). 
 
 ### Surveys
-If you've got some time to spare, and would like to share some thoughts on your SQL Docs experience, please take our survey! It can be found at [http://aka.ms/SQLDocSurvey](http://aka.ms/SQLDocSurvey) and should take you about 10-15 minutes. 
+If you've got some time to spare, and would like to share some thoughts on your SQL Docs experience, please take our survey! It can be found at [https://aka.ms/SQLDocSurvey](https://aka.ms/SQLDocSurvey) and should take you about 10-15 minutes. 
 
-If you have something to share with the SQL content team, an idea, a suggestion, feedback, anything! You can do so at [http://aka.ms/SQLDocsFeedback](http://aka.ms/SQLDocsFeedback). 
+If you have something to share with the SQL content team, an idea, a suggestion, feedback, anything! You can do so at [https://aka.ms/SQLDocsFeedback](https://aka.ms/SQLDocsFeedback). 

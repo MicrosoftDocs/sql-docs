@@ -138,7 +138,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
  Click **Close** to close the wizard.  
   
 ## See Also  
-[Import a BACPAC file to create a new Azure SQL database](https://azure.microsoft.com/en-us/documentation/articles/sql-database-import/)  
+[Import a BACPAC file to create a new Azure SQL database](https://azure.microsoft.com/documentation/articles/sql-database-import/)  
  [Data-tier Applications](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Export a Data-tier Application](../../relational-databases/data-tier-applications/export-a-data-tier-application.md)  
   

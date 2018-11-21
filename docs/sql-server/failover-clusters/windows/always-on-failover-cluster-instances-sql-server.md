@@ -29,9 +29,9 @@ manager: craigg
  An FCI can leverage  [Availability Groups](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) to provide remote disaster recovery at the database level. For more information, see [Failover Clustering and Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md).  
  
  > [!NOTE]  
- > Windows Server 2016 Datacenter edition introduces support for Storage Spaces Direct (S2D). SQL Server Failover Cluster Instances support S2D for cluster storage resources. For more information, see [Storage Spaces Direct in Windows Server 2016](http://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-spaces-direct-overview).
+ > Windows Server 2016 Datacenter edition introduces support for Storage Spaces Direct (S2D). SQL Server Failover Cluster Instances support S2D for cluster storage resources. For more information, see [Storage Spaces Direct in Windows Server 2016](https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-spaces-direct-overview).
  > 
- >Failover Cluster Instances also support Clustered Shared Volumes (CSV). For more information, see [Understanding Cluster Shared Volumes in a Failover Cluster](http://technet.microsoft.com/library/dd759255.aspx). 
+ >Failover Cluster Instances also support Clustered Shared Volumes (CSV). For more information, see [Understanding Cluster Shared Volumes in a Failover Cluster](https://technet.microsoft.com/library/dd759255.aspx). 
    
  **In this Topic:**  
   
@@ -151,7 +151,7 @@ manager: craigg
 |----------------------------|---------------|  
 |Describes how to install a new [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI.|[Create a New SQL Server Failover Cluster &#40;Setup&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)|  
 |Describes how to upgrade to a [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] failover cluster.|[Upgrade a SQL Server Failover Cluster Instance](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)|  
-|Describes Windows Failover Clustering Concepts and provides links to tasks related to Windows Failover Clustering|[!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]: [Overview of Failover Clusters](http://go.microsoft.com/fwlink/?LinkId=177878)<br /><br /> [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)] R2: [Overview of Failover Clusters](http://go.microsoft.com/fwlink/?LinkId=177879)|  
+|Describes Windows Failover Clustering Concepts and provides links to tasks related to Windows Failover Clustering|[!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]: [Overview of Failover Clusters](https://go.microsoft.com/fwlink/?LinkId=177878)<br /><br /> [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)] R2: [Overview of Failover Clusters](https://go.microsoft.com/fwlink/?LinkId=177879)|  
 |Describes the distinctions in concepts between nodes in an FCI and replicas within an availability group and considerations for using an FCI to host a replica for an availability group.|[Failover Clustering and Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)|  
   
   

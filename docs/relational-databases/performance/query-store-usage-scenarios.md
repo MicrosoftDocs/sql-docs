@@ -75,7 +75,7 @@ When you identify a query with sub-optimal performance, your action depends on t
   
 -   Creating missing indexes on tables referenced by expensive queries.  
   
--   Applying filtering policy for row-level security. For more details, see [Optimizing Row Level Security with Query Store](http://blogs.msdn.com/b/sqlsecurity/archive/2015/07/21/optimizing-rls-performance-with-the-query-store.aspx).  
+-   Applying filtering policy for row-level security. For more details, see [Optimizing Row Level Security with Query Store](https://blogs.msdn.com/b/sqlsecurity/archive/2015/07/21/optimizing-rls-performance-with-the-query-store.aspx).  
   
 -   Adding temporal system-versioning to tables that are frequently modified by your OLTP applications.  
   

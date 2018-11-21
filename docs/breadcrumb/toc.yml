@@ -733,9 +733,6 @@
       - name: Resource Governor
         href: /sql/relational-databases/resource-governor/
         homepage: /sql/relational-databases/resource-governor/resource-governor
-      - name: Scripting
-        href: /sql/relational-databases/scripting/
-        homepage: /sql/relational-databases/scripting/database-engine-scripting
       - name: Search
         href: /sql/relational-databases/search/
         homepage: /sql/relational-databases/search/full-text-search
@@ -1165,6 +1162,9 @@
         - name: Tutorials
           href: /sql/ssms/tutorials/
           homepage: /sql/ssms/tutorials/tutorial-sql-server-management-studio
+        - name: Scripting
+          href: /sql/ssms/scripting/
+          homepage: /sql/ssms/scripting/database-engine-scripting
         - name: Visual DB tools
           href: /sql/ssms/visual-db-tools/
           homepage: /sql/ssms/visual-db-tools/visual-database-tools

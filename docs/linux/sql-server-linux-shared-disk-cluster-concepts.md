@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: "sql-linux"
 ms.technology: linux
-ms.assetid: 
 ---
 
 # Failover Cluster Instances - SQL Server on Linux
@@ -31,7 +30,7 @@ To create a SQL Server FCI on Linux, see [Configure SQL Server FCI on Linux](sql
 
     For more information on cluster configuration, resource agent options, management, best practices, and recommendations, see [SUSE Linux Enterprise High Availability Extension 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html).
 
-Both the RHEL HA add-on and the SUSE HAE are built on [Pacemaker](http://clusterlabs.org/).
+Both the RHEL HA add-on and the SUSE HAE are built on [Pacemaker](https://clusterlabs.org/).
 
 As the following diagram shows, storage is presented to two servers. Clustering components - Corosync and Pacemaker - coordinate communications and resource management. One of the servers has the active connection to the storage resources and the SQL Server. When Pacemaker detects a failure the clustering components manage moving the resources to the other node.  
 

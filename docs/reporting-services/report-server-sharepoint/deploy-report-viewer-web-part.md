@@ -76,7 +76,7 @@ This section shows you how to deploy the solution package to your SharePoint far
 
     ![Site settings from the gear icon.](media/sharepoint-site-settings.png)
 
-    By default, SharePoint web applications are accessed through port 80. This means that you can often access a SharePoint site by entering *http://<computer name>* to open the root site collection.
+    By default, SharePoint web applications are accessed through port 80. This means that you can often access a SharePoint site by entering *https://<computer name>* to open the root site collection.
 
 3. In **Site Collection Administration**, select **Site collection features**.
 
@@ -116,7 +116,7 @@ Retracting the solution does not remove the Report Viewer web part from the list
 
     ![Site settings from the gear icon.](media/sharepoint-site-settings.png)
 
-    By default, SharePoint web applications are accessed through port 80. This means that you can often access a SharePoint site by entering *http://<computer name>* to open the root site collection.
+    By default, SharePoint web applications are accessed through port 80. This means that you can often access a SharePoint site by entering *https://<computer name>* to open the root site collection.
 
 2. Under **Web Designer Galleries**, select **web parts**.
 
@@ -168,4 +168,4 @@ The following languages are supported with the web part:
 
 After the Report Viewer web part has been deployed and activiated, you can add the web part to a SharePoint page. For more information, see [Add Report Viewer web part to a SharePoint page](add-report-viewer-web-part-to-page.md).
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

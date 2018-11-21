@@ -1,7 +1,7 @@
 ---
 title: "Compute capacity limits by edition of SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/06/2017"
+ms.date: "11/07/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: install
@@ -91,7 +91,7 @@ You might want to disable hyperthreading when the performance for each virtual p
  [Editions and components of SQL Server 2016](../sql-server/editions-and-components-of-sql-server-2016.md)   
  [Features supported by the editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
  [Maximum capacity specifications for SQL Server](../sql-server/maximum-capacity-specifications-for-sql-server.md)   
- [Quickstart installation of SQL Server 2016](http://msdn.microsoft.com/library/672afac9-364d-4946-ad5d-8a2d89cf8d81)  
+ [Quickstart installation of SQL Server 2016](https://msdn.microsoft.com/library/672afac9-364d-4946-ad5d-8a2d89cf8d81)  
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

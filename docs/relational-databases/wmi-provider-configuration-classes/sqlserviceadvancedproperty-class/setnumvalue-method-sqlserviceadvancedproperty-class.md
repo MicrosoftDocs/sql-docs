@@ -5,8 +5,7 @@ ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: wmi
 ms.topic: "reference"
 apiname: 
   - "SetNumValue Method (SqlServiceAdvancedProperty Class)"
@@ -48,6 +47,6 @@ object.SetNumValue(NumValue)
  The property value type must be numeric to be able to set the property to a numeric value.  
   
 ## See Also  
- [Starting and Stopping Services](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [Starting and Stopping Services](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

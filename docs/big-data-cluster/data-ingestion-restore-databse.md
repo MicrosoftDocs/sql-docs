@@ -8,7 +8,6 @@ ms.date: 10/09/2018
 ms.topic: conceptual
 ms.prod: sql
 ---
-
 # Restore a database into the SQL Server big data cluster master instance
 
 This article describes how to restore an existing database into the master instance of a SQL Server 2019 big data cluster (preview). The recommended method is to use a backup, copy, and restore approach.
@@ -20,7 +19,7 @@ First, backup your existing SQL Server database from either SQL Server on Window
 This article shows how to restore the AdventureWorks database, but you can use any database backup. 
 
 > [!TIP]
-> You can download the AdventureWorks backup [here](https://www.microsoft.com/en-us/download/details.aspx?id=49502).
+> You can download the AdventureWorks backup [here](https://www.microsoft.com/download/details.aspx?id=49502).
 
 ## Copy the backup file
 
@@ -103,4 +102,4 @@ GO
 
 To learn more about the SQL Server big data clusters, see the following overview:
 
-- [What is SQL Server 2019 big data clusters?](big-data-cluster-overview.md)
+- [What are SQL Server 2019 big data clusters?](big-data-cluster-overview.md)

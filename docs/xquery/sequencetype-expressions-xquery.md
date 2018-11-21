@@ -5,8 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: xml
 ms.topic: "language-reference"
 dev_langs: 
   - "XML"
@@ -98,7 +97,7 @@ go
   
 ```  
 SELECT CatalogDescription.query('  
-   declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+   declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
    data(/PD:ProductDescription[1]/@ProductModelID) instance of xs:string  
 ') as Result  
 FROM Production.ProductModel  
@@ -111,7 +110,7 @@ WHERE ProductModelID = 19
   
 ```  
 SELECT Instructions.query('  
-   declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+   declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
    /AWMI:root[1]/AWMI:Location[1]/@LocationID instance of attribute(LocationID,xs:integer)  
 ') as Result  
 FROM Production.ProductModel  
@@ -124,7 +123,7 @@ WHERE ProductModelID=7
   
 ```  
 SELECT CatalogDescription.query('  
-     declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+     declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
      /PD:ProductDescription[1] instance of element(PD:ProductDescription, PD:ProductDescription?)  
     ') as Result  
 FROM  Production.ProductModel  
@@ -150,7 +149,7 @@ where ProductModelID=19
   
 ```  
 CREATE XML SCHEMA COLLECTION MyTestSchema AS '  
-<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://ns" xmlns:ns="http://ns">  
+<schema xmlns="https://www.w3.org/2001/XMLSchema" targetNamespace="https://ns" xmlns:ns="https://ns">  
 <simpleType name="MyUnionType">  
 <union memberTypes="integer string"/>  
 </simpleType>  
@@ -165,9 +164,9 @@ Go
 SET QUOTED_IDENTIFIER ON  
 DECLARE @var XML(MyTestSchema)  
   
-SET @var = '<TestElement xmlns="http://ns">123</TestElement>'  
+SET @var = '<TestElement xmlns="https://ns">123</TestElement>'  
   
-SELECT @var.query('declare namespace ns="http://ns"   
+SELECT @var.query('declare namespace ns="https://ns"   
    data(/ns:TestElement[1]) instance of xs:integer')  
 go  
 ```  
@@ -177,8 +176,8 @@ go
 ```  
 SET QUOTED_IDENTIFIER ON  
 DECLARE @var XML(MyTestSchema)  
-SET @var = '<TestElement xmlns="http://ns">123</TestElement>'  
-SELECT @var.query('declare namespace ns="http://ns"     
+SET @var = '<TestElement xmlns="https://ns">123</TestElement>'  
+SELECT @var.query('declare namespace ns="https://ns"     
    data(/ns:TestElement[1]) instance of xs:decimal')  
 go  
 ```  
@@ -192,9 +191,9 @@ go
 drop xml schema collection SC  
 go  
 CREATE XML SCHEMA COLLECTION SC AS '  
-<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="myNS" xmlns:ns="myNS"  
-xmlns:s="http://schemas.microsoft.com/sqlserver/2004/sqltypes">  
-      <import namespace="http://schemas.microsoft.com/sqlserver/2004/sqltypes"/>  
+<schema xmlns="https://www.w3.org/2001/XMLSchema" targetNamespace="myNS" xmlns:ns="myNS"  
+xmlns:s="https://schemas.microsoft.com/sqlserver/2004/sqltypes">  
+      <import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes"/>  
       <simpleType name="myType">  
            <restriction base="s:varchar">  
                   <maxLength value="20"/>  
@@ -210,7 +209,7 @@ Go
 ```  
 DECLARE @var XML(SC)  
 SET @var = '<root xmlns="myNS">My data</root>'  
-SELECT @var.query('declare namespace sqltypes = "http://schemas.microsoft.com/sqlserver/2004/sqltypes";  
+SELECT @var.query('declare namespace sqltypes = "https://schemas.microsoft.com/sqlserver/2004/sqltypes";  
 declare namespace ns="myNS";   
    data(/ns:root[1]) instance of ns:myType')  
 go  
@@ -221,7 +220,7 @@ go
 ```  
 DECLARE @var XML(SC)  
 SET @var = '<root xmlns="myNS">My data</root>'  
-SELECT @var.query('declare namespace sqltypes = "http://schemas.microsoft.com/sqlserver/2004/sqltypes";  
+SELECT @var.query('declare namespace sqltypes = "https://schemas.microsoft.com/sqlserver/2004/sqltypes";  
 declare namespace ns="myNS";   
 data(/ns:root[1]) instance of sqltypes:varchar?')  
 go  
@@ -238,7 +237,7 @@ go
   
 ```  
 create xml schema collection SC as  
-'<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:Customers="Customers" targetNamespace="Customers">  
+'<schema xmlns="https://www.w3.org/2001/XMLSchema" xmlns:Customers="Customers" targetNamespace="Customers">  
             <element name="Customers" type="Customers:CustomersType"/>  
             <complexType name="CustomersType">  
                         <sequence>  
@@ -339,7 +338,7 @@ select @x.query('"2" cast as xs:integer?')
  In the following query, **data()** returns the typed value of the ProductModelID attribute, a string type. The `cast as`operator converts the value to xs:integer.  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS PD)  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS PD)  
 SELECT CatalogDescription.query('  
    data(/PD:ProductDescription[1]/@ProductModelID) cast as xs:integer?  
 ') as Result  

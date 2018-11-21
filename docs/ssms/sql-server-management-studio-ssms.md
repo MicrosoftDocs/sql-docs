@@ -1,6 +1,6 @@
 ---
 title: "SQL Server Management Studio (SSMS) | Microsoft Docs"
-ms.date: "10/15/2018"
+ms.date: "10/16/2018"
 ms.prod: sql
 ms.technology: ssms
 ms.reviewer: ""
@@ -43,7 +43,7 @@ manager: craigg
 
 ## Next steps  
 [Tutorial: SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)  
-[Tutorial: Writing Transact-SQL Statements](http://msdn.microsoft.com/en-us/2addc9be-67d0-423d-a457-192fe9d7d058)  
+[Tutorial: Writing Transact-SQL Statements](https://msdn.microsoft.com/2addc9be-67d0-423d-a457-192fe9d7d058)  
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
 

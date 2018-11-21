@@ -56,11 +56,11 @@ After you have made these modifications to the package, when the package is run,
   
     This sample data is included with the [!INCLUDE[ssIS](../includes/ssis-md.md)] lesson packages. To download the sample data and the lesson packages, do the following.  
   
-    1.  Navigate to [Integration Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=275027). 
+    1.  Navigate to [Integration Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=275027). 
   
     2.  Click the **DOWNLOADS** tab.  
   
-    3.  Click the link for the [SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip](http://msftisprodsamples.codeplex.com/downloads/get/596031) file.  
+    3.  Click the link for the [SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip](https://msftisprodsamples.codeplex.com/downloads/get/596031) file.  
   
 6.  In the **Files** box, type **Currency_\*.txt**.  
   
@@ -87,8 +87,8 @@ After you have made these modifications to the package, when the package is run,
 [Step 3: Modifying the Flat File Connection Manager](../integration-services/lesson-2-3-modifying-the-flat-file-connection-manager.md)  
   
 ## See Also  
-[Configure a Foreach Loop Container](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)  
-[Use Variables in Packages](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
+[Configure a Foreach Loop Container](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)  
+[Use Variables in Packages](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
   
   
   

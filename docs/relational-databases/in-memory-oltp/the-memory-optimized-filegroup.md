@@ -16,7 +16,7 @@ manager: craigg
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   To create memory-optimized tables, you must first create a memory-optimized filegroup. The memory-optimized filegroup holds one or more containers. Each container contains data files or delta files or both.  
   
- Even though data rows from SCHEMA_ONLY tables are not persisted and the metadata for memory-optimized tables and natively compiled stored procedures is stored in the traditional catalogs, the [!INCLUDE[hek_2](../../includes/hek-2-md.md)] engine still requires a memory-optimized filegroup for SCHEMA_ONLY memory-optimized tables to provide a uniform experience for databases with memory-optimized tables.  
+ Even though data rows from `SCHEMA_ONLY` tables are not persisted and the metadata for memory-optimized tables and natively compiled stored procedures is stored in the traditional catalogs, the [!INCLUDE[hek_2](../../includes/hek-2-md.md)] engine still requires a memory-optimized filegroup for `SCHEMA_ONLY` memory-optimized tables to provide a uniform experience for databases with memory-optimized tables.  
   
  The memory-optimized filegroup is based on filestream filegroup, with the following differences:  
   
@@ -40,18 +40,23 @@ manager: craigg
   
 The following limitations apply to a memory-optimized filegroup:  
   
--   Once you create a memory-optimized filegroup, you can only remove it by dropping the database. In a production environment, it is unlikely that you will need to remove the memory-optimized filegroup.  
+-   Once you use a memory-optimized filegroup, you can only remove it by dropping the database. In a production environment, it is unlikely that you will need to remove the memory-optimized filegroup.  
   
--   You cannot drop a non-empty container or move data and delta file pairs to another container in the memory-optimized filegroup.  
-  
--   You cannot specify `MAXSIZE` for the container.  
+-   You cannot drop a non-empty container or move data and delta file pairs to another container in the memory-optimized filegroup.    
   
 ## Configuring a Memory-Optimized Filegroup  
- You should consider creating multiple containers in the memory-optimized filegroup and distribute them on different drives to achieve more bandwidth to stream the data into memory.  
+Consider creating multiple containers in the memory-optimized filegroup and distribute them on different drives to achieve more bandwidth to stream the data into memory. 
+ 
+In a multiple container, multiple drive scenario, data and delta files are allocated in a round-robin fashion into containers. The first data file is allocated from the first container and the delta file is allocated from the next container and this allocation pattern repeats. This allocation scheme distributes data and delta files evenly across containers if you have an odd number of drives, each mapped to one container. However, if you have an even number of drives, each mapped to a container, it can result in imbalanced storage with data files mapped to odd drives and delta files mapped to even drives. To obtain a balanced stream of I/O on recovery, consider placing pairs of data and delta files on the same spindles/storage.
   
- When configuring storage, you must provide free disk space that is four times the size of durable memory-optimized tables. You must also ensure that your I/O subsystem supports the required IOPS for your workload. If data and delta file pairs are populated at a given IOPS, you need 3 times that IOPS to account for storing and merge operations. You can add storage capacity and IOPS by adding one or more containers to the memory-optimized filegroup.  
+When configuring storage, you must provide free disk space that is four times the size of durable memory-optimized tables. Also ensure that your I/O subsystem supports the required IOPS for your workload. If data and delta file pairs are populated at a given IOPS, you need three times that IOPS to account for storing and merge operations. You can add storage capacity and IOPS by adding one or more containers to the memory-optimized filegroup.  
+ 
+> [!CAUTION]
+> If a `MAXSIZE` value is set for the memory-optimized filegroup, and checkpoint files exceed the max size of the container, then the database will become SUSPECT.   
+> In this case do not attempt to set the database OFFLINE and ONLINE, causing the database to stay in RECOVERY_PENDING state.
   
 ## See Also  
- [Creating and Managing Storage for Memory-Optimized Objects](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
- [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md) 
-  
+[Creating and Managing Storage for Memory-Optimized Objects](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
+[Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)    
+[ALTER DATABASE File and Filegroup Options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md) 
+

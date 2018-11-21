@@ -138,5 +138,5 @@ FROM
      fn_GetWholeTeam ('VPA30890F')  
 ```  
   
-"VPA30890F" is the emp_id of the manager whose organization you want to retrieve. For more information about adding a user-defined function to a query, see [Add Tables to Queries &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/add-tables-to-queries-visual-database-tools.md). For a complete description of user-defined functions, see [User-Defined Functions](http://msdn.microsoft.com/d7ddafab-f5a6-44b0-81d5-ba96425aada4).  
+"VPA30890F" is the emp_id of the manager whose organization you want to retrieve. For more information about adding a user-defined function to a query, see [Add Tables to Queries &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/add-tables-to-queries-visual-database-tools.md). For a complete description of user-defined functions, see [User-Defined Functions](https://msdn.microsoft.com/d7ddafab-f5a6-44b0-81d5-ba96425aada4).  
   

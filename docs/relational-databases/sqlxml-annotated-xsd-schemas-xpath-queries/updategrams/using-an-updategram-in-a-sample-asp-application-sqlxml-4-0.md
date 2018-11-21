@@ -99,7 +99,7 @@ Enter ContactID: <input type=text name="cid"><br>
 <%  
   else  
 %>  
-<form name="Contacts" action="http://localhost/AdventureWorks/Template/UpdateContact.xml" method="POST">  
+<form name="Contacts" action="https://localhost/AdventureWorks/Template/UpdateContact.xml" method="POST">  
 You may update customer information below.<br><br>  
 <!-- A comment goes here to separate the parts of the application or page. -->  
 <br>  
@@ -109,7 +109,7 @@ You may update customer information below.<br><br>
     ObjXML.setProperty "ServerHTTPRequest", TRUE  
   
     objXML.async=False  
-    objXML.Load("http://localhost/AdventureWorks/Template/GetContact.xml?cid=" & ContactID)  
+    objXML.Load("https://localhost/AdventureWorks/Template/GetContact.xml?cid=" & ContactID)  
     set objCustomer=objXML.documentElement.childNodes.Item(0)  
   
   ' In retrieving data from the database, if a value in the column is NULL there  

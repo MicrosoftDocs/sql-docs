@@ -72,7 +72,7 @@ manager: craigg
 ##  <a name="Set_properties"></a> Set Properties Page  
  Use this page to specify DAC-level properties such as the application name and version.  
   
- **Application name.** - A string that specifies the name used to identify the DAC defintion, the field is been populated with the database name.  
+ **Application name.** - A string that specifies the name used to identify the DAC definition, the field is been populated with the database name.  
   
  **Version.** - A numeric value that identifies the version of the DAC. The DAC version is used in Visual Studio to identify the version of the DAC that developers are working on. When deploying a DAC, the version is stored in the **msdb** database and can later be viewed under the **Data-tier Applications** node in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   

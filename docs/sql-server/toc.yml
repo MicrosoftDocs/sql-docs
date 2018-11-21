@@ -56,6 +56,8 @@
   href: ../master-data-services/master-data-services-overview-mds.md
 - name: Reporting Services
   href: ../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
+- name: Machine Learning Services
+  href: ../advanced-analytics/what-is-sql-server-machine-learning.md
 - name: SQL Server Migration Assistant
   href: ../ssma/sql-server-migration-assistant.md
 - name: Data Migration Assistant
@@ -96,7 +98,7 @@
     - name: DBA Stack Exchange
       href: https://dba.stackexchange.com/questions/tagged/sql-server
     - name: Stack Overflow
-      href: http://stackoverflow.com/questions/tagged/sql-server
+      href: https://stackoverflow.com/questions/tagged/sql-server
     - name: MSDN Forums
       href: https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver
     - name: Reddit

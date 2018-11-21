@@ -9,7 +9,6 @@ ms.topic: article
 ms.prod: sql
 ms.technology: linux
 ms.custom: "sql-linux"
-ms.workload: "On Demand"
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Configure replication with non-default ports

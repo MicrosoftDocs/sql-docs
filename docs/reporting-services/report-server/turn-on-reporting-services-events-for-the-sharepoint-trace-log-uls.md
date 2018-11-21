@@ -105,7 +105,7 @@ Get-SPDiagnosticConfig
 |Report Server Catalog||  
 |Report Server Chunk||  
 |Report Server Cleanup||  
-|Report Server Configuration Manager|Sample entries:<br /><br /> MediumUsing report server internal url `http://localhost:80/ReportServer`.<br /><br /> UnexpectedMissing or Invalid ExtendedProtectionLevel setting|  
+|Report Server Configuration Manager|Sample entries:<br /><br /> MediumUsing report server internal url `https://localhost:80/ReportServer`.<br /><br /> UnexpectedMissing or Invalid ExtendedProtectionLevel setting|  
 |Report Server Crypto||  
 |Report Server Data Extension||  
 |Report Server DB Polling||  
@@ -143,11 +143,11 @@ Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Ext
   
  There are also tools you can download which will allow you read ULS logs. For example, the [SharePoint LogViewer](https://github.com/hasankhan/SharePointLogViewer), available on GitHub. 
   
- For more information on how to use PowerShell to view log data, see [View diagnostic logs (SharePoint Server 2010)](http://technet.microsoft.com/library/ff463595.aspx)  
+ For more information on how to use PowerShell to view log data, see [View diagnostic logs (SharePoint Server 2010)](https://technet.microsoft.com/library/ff463595.aspx)  
   
 ##  <a name="bkmk_trace"></a> Trace Log Location  
  The Trace Log files are usually found in the folder **c:\Program Files\Common files\Microsoft Shared\Web Server Extensions\14\logs** but you can verify or change the path from the **Diagnostic Logging** page in SharePoint Central Administration.  
   
- For more information and steps to configure diagnostic logging on a SharePoint server in SharePoint 2010 Central Administration, see [Configure diagnostic logging settings (Windows SharePoint Services)](http://go.microsoft.com/fwlink/?LinkID=114423).  
+ For more information and steps to configure diagnostic logging on a SharePoint server in SharePoint 2010 Central Administration, see [Configure diagnostic logging settings (Windows SharePoint Services)](https://go.microsoft.com/fwlink/?LinkID=114423).  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

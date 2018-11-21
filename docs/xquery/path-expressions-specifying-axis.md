@@ -5,8 +5,7 @@ ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: xml
 ms.topic: "language-reference"
 dev_langs: 
   - "XML"
@@ -60,7 +59,7 @@ manager: craigg
   
 ```  
 SELECT CatalogDescription.query('  
-declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
   /child::PD:ProductDescription/child::PD:Features')  
 FROM Production.ProductModel  
 WHERE ProductModelID=19  
@@ -139,7 +138,7 @@ select @y
   
 ```  
 SELECT CatalogDescription.query('  
-declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
   /child::PD:ProductDescription/child::PD:Features/descendant::*  
 ')  
 FROM  Production.ProductModel  
@@ -153,7 +152,7 @@ WHERE ProductModelID=19
   
 ```  
 SELECT CatalogDescription.query('  
-declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
   
 /child::PD:ProductDescription/child::PD:Features/parent::PD:ProductDescription/child::PD:Summary  
 ')  
@@ -193,8 +192,8 @@ WHERE  ProductModelID=19
   
 ```  
 SELECT CatalogDescription.query('  
-declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
-declare namespace wm="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain";  
+declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+declare namespace wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain";  
   for $f in /child::PD:ProductDescription/child::PD:Features/child::*  
   return  
    <Feature  
@@ -211,14 +210,14 @@ WHERE ProductModelID=19
 ```  
 <Feature ProductModelID="19">  
   <wm:Warranty   
-   xmlns:wm="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain">  
+   xmlns:wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain">  
     <wm:WarrantyPeriod>3 years</wm:WarrantyPeriod>  
     <wm:Description>parts and labor</wm:Description>  
   </wm:Warranty>  
 </Feature>  
 <Feature ProductModelID="19">  
   <wm:Maintenance   
-   xmlns:wm="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain">  
+   xmlns:wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain">  
     <wm:NoOfYears>10 years</wm:NoOfYears>  
     <wm:Description>maintenance contract available through your dealer   
                   or any AdventureWorks retail store.</wm:Description>  
@@ -226,7 +225,7 @@ WHERE ProductModelID=19
 </Feature>  
 <Feature ProductModelID="19">  
   <p1:wheel   
-   xmlns:p1="http://www.adventure-works.com/schemas/OtherFeatures">  
+   xmlns:p1="https://www.adventure-works.com/schemas/OtherFeatures">  
       High performance wheels.  
   </p1:wheel>  
 </Feature>  

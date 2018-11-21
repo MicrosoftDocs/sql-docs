@@ -5,14 +5,13 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+s.technology: performance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLServer:Catalog Metadata"
 ms.assetid: 665e63e6-4bd2-4091-92a5-327364db2f8d
-author: "dagiro"
-ms.author: "v-dagir"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # SQL Server, Catalog Metadata Object

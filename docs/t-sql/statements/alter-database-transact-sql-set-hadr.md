@@ -62,7 +62,7 @@ ALTER DATABASE database_name
   
 -   The database must already have been added to the availability group on the primary replica.  
   
--   The primary replica must be active. For information about how troubleshoot an inactive primary replica, see [Troubleshooting Always On Availability Groups Configuration (SQL Server)](http://go.microsoft.com/fwlink/?LinkId=225834).  
+-   The primary replica must be active. For information about how troubleshoot an inactive primary replica, see [Troubleshooting Always On Availability Groups Configuration (SQL Server)](https://go.microsoft.com/fwlink/?LinkId=225834).  
   
 -   The primary replica must be online, and the secondary replica must be connected to the primary replica.  
   

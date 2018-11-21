@@ -1,6 +1,6 @@
 ---
 title: "SQL Server privacy supplement | Microsoft Docs"
-ms.date: 4/24/2018
+ms.date: 4/25/2018
 ms.prod: sql
 ms.reviewer: ""
 ms.custom: ""
@@ -155,6 +155,6 @@ Data that describes or is used to configure servers, databases, tables, and othe
 
 ## Telemetry controls
 
-Instructions on how telemetry can be turned on/off in product can be referenced here - https://support.microsoft.com/en-us/help/3153756/how-to-configure-sql-server-2016-to-send-feedback-to-microsoft.
+Instructions on how telemetry can be turned on/off in product can be referenced here - https://support.microsoft.com/help/3153756/how-to-configure-sql-server-2016-to-send-feedback-to-microsoft.
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

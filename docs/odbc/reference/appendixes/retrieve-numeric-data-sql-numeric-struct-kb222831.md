@@ -366,14 +366,14 @@ void main() {
 <!--
 GeneMi historical notes, 2017/July/12. Per Jason.C
 
-http://go.microsoft.com/fwlink/?LinkId=147596
+https://go.microsoft.com/fwlink/?LinkId=147596
 
-https://support.microsoft.com/en-us/help/222831
+https://support.microsoft.com/help/222831
 
-http://web.archive.org/web/20140319133434/http:/support.microsoft.com:80/kb/222831
+https://web.archive.org/web/20140319133434/http:/support.microsoft.com:80/kb/222831
 
-http://web.archive.org/web/20080505073901/http:/support.microsoft.com:80/kb/181254
+https://web.archive.org/web/20080505073901/http:/support.microsoft.com:80/kb/181254
 
-https://docs.microsoft.com/en-us/sql/odbc/reference/appendixes/c-data-types
+https://docs.microsoft.com/sql/odbc/reference/appendixes/c-data-types
 -->
 

@@ -27,6 +27,6 @@ The **Migrate data for selected objects** section of the page also contains a **
 Shows the associated conversion or migration report.  
   
 ## See Also  
-[User Interface Reference(Access)](http://msdn.microsoft.com/en-us/af24c303-4a41-449b-9c86-d6558a97e839)  
+[User Interface Reference(Access)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
 [Migration Wizard](migration-wizard-accesstosql.md)  
   

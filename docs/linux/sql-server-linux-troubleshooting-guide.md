@@ -4,7 +4,7 @@ description: Provides troubleshooting tips for using SQL Server on Linux.
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 04/30/2018
+ms.date: 05/01/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: "sql-linux"
@@ -202,7 +202,7 @@ There are many factors that affect performance, including database design, hardw
 
 2. ERROR: Hostname must be 15 characters or less.
 
-   This is a known-issue that happens whenever the name of the machine that is trying to install the SQL Server Debian package is longer than 15 characters. There are currently no workarounds other than changing the name of the machine. One way to achieve this is by editing the hostname file and rebooting the machine. The following [website guide](http://www.cyberciti.biz/faq/ubuntu-change-hostname-command/) explains this in detail.
+   This is a known-issue that happens whenever the name of the machine that is trying to install the SQL Server Debian package is longer than 15 characters. There are currently no workarounds other than changing the name of the machine. One way to achieve this is by editing the hostname file and rebooting the machine. The following [website guide](https://www.cyberciti.biz/faq/ubuntu-change-hostname-command/) explains this in detail.
 
 3. Resetting the system administration (SA) password.
 
@@ -235,7 +235,7 @@ There are many factors that affect performance, including database design, hardw
    ```
 
    Resources:
-   [Special characters](http://tldp.org/LDP/abs/html/special-chars.html)
-   [Escaping](http://tldp.org/LDP/abs/html/escapingsection.html)
+   [Special characters](https://tldp.org/LDP/abs/html/special-chars.html)
+   [Escaping](https://tldp.org/LDP/abs/html/escapingsection.html)
 
 [!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]

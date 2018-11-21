@@ -96,7 +96,7 @@ The connection property `fipsProvider` is removed from the list of accepted conn
 
 ### Added connection properties for specifying a custom TrustManager
 
-The driver now supports specifying a custom TrustManager with added `trustManagerClass` and `trustManagerConstructorArg` connection properties. You can dynamically specify a set of certificates that are trusted on a per-connection basis without modifying the global settings for the Jave virtual machine (JVM) environment.
+The driver now supports specifying a custom TrustManager with added `trustManagerClass` and `trustManagerConstructorArg` connection properties. You can dynamically specify a set of certificates that are trusted on a per-connection basis without modifying the global settings for the Java virtual machine (JVM) environment.
 
 ### Added support for datetime/smallDatetime in table-valued parameters
 

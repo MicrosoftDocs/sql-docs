@@ -123,7 +123,7 @@ Requires `CREATE DATABASE`, `CREATE ANY DATABASE`, or `ALTER ANY DATABASE` permi
   
 2.  From the Standard bar, click **New Query**.  
   
-3.  Use the [CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md) statement with the FOR ATTACH clause.  
+3.  Use the [CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md) statement with the `FOR ATTACH` clause.  
   
      Copy and paste the following example into the query window and click **Execute**. This example attaches the files of the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database and renames the database to `MyAdventureWorks`.  
   
@@ -132,7 +132,6 @@ Requires `CREATE DATABASE`, `CREATE ANY DATABASE`, or `ALTER ANY DATABASE` permi
         ON (FILENAME = 'C:\MySQLServer\AdventureWorks_Data.mdf'),   
         (FILENAME = 'C:\MySQLServer\AdventureWorks_Log.ldf')   
         FOR ATTACH;  
-  
     ```  
   
     > [!NOTE]  

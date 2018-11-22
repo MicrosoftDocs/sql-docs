@@ -230,7 +230,7 @@ sp_addpublication [ @publication = ] 'publication'
   
  *Not supported for Oracle Publishers*.  
   
- [ **@add_to_active_directory =** ] **'**_add_*_**to_active_directory**_'_*  
+ [ **@add_to_active_directory =** ] **'**_add_*\_*_to_active_directory_**'**  
  This parameter has been deprecated and is only supported for the backward compatibility of scripts. You can no longer add publication information to the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory.  
   
  [ **@logreader_job_name =** ] **'**_logreader_agent_name_**'**  

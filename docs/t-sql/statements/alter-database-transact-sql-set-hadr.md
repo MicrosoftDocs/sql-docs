@@ -52,7 +52,7 @@ ALTER DATABASE database_name
  SET HADR  
  Executes the specified [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] command on the specified database.  
   
- { AVAILABILITY GROUP **=***group_name* | OFF }  
+ { AVAILABILITY GROUP **=**_group_name_ | OFF }  
  Joins or removes the availability database from the specified availability group, as follows:  
   
  *group_name*  

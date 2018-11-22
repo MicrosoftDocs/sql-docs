@@ -86,11 +86,11 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
  **'** *partner_server* **'**  
  Specifies the server network address of an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to act as a failover partner in a new database mirroring session. Each session requires two partners: one starts as the principal server, and the other starts as the mirror server. We recommend that these partners reside on different computers.  
   
- This option is specified one time per session on each partner. Initiating a database mirroring session requires two ALTER DATABASE *database* SET PARTNER **='***partner_server***'** statements. Their order is significant. First, connect to the mirror server, and specify the principal server instance as *partner_server* (SET PARTNER **='***principal_server***'**). Second, connect to the principal server, and specify the mirror server instance as *partner_server* (SET PARTNER **='***mirror_server***'**); this starts a database mirroring session between these two partners. For more information, see [Setting Up Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).  
+ This option is specified one time per session on each partner. Initiating a database mirroring session requires two ALTER DATABASE *database* SET PARTNER **='**_partner_server_**'** statements. Their order is significant. First, connect to the mirror server, and specify the principal server instance as *partner_server* (SET PARTNER **='**_principal_server_**'**). Second, connect to the principal server, and specify the mirror server instance as *partner_server* (SET PARTNER **='**_mirror_server_**'**); this starts a database mirroring session between these two partners. For more information, see [Setting Up Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).  
   
  The value of *partner_server* is a server network address. This has the following syntax:  
   
- TCP**://***\<system-address>***:***\<port>*  
+ TCP**://***\<system-address>**_:_**\<port>*  
   
  where  
   
@@ -100,7 +100,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
   
  For more information, see [Specify a Server Network Address &#40;Database Mirroring&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).  
   
- The following example illustrates the SET PARTNER **='***partner_server***'** clause:  
+ The following example illustrates the SET PARTNER **='**_partner_server_**'** clause:  
   
 ```  
 'TCP://MYSERVER.mydomain.Adventure-Works.com:7777'  
@@ -192,7 +192,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
  **'** *witness_server* **'**  
  Specifies an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to act as the witness server for a database mirroring session. You can specify SET WITNESS statements only on the principal server.  
   
- In a SET WITNESS **='***witness_server***'** statement, the syntax of *witness_server* is the same as the syntax of *partner_server*.  
+ In a SET WITNESS **='**_witness_server_**'** statement, the syntax of *witness_server* is the same as the syntax of *partner_server*.  
   
  OFF  
  Removes the witness from a database mirroring session. Setting the witness to OFF disables automatic failover. If the database is set to FULL SAFETY and the witness is set to OFF, a failure on the mirror server causes the principal server to make the database unavailable.  

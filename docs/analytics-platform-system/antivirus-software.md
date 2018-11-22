@@ -47,7 +47,7 @@ To install the antivirus software on the VMs, exclude the following list of dire
   
 -   G:\  
   
-***appliance_domain*-AD01** and ***appliance_domain*-AD02**  
+***appliance_domain*-AD01** and **_appliance_domain_-AD02**  
   
 -   No restrictions  
   

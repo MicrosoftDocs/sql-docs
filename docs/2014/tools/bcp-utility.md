@@ -85,7 +85,7 @@ manager: craigg
   
  You can also explicitly specify the database name with `d-`.  
   
- **in** *data_file* | **out***data_file* | **queryout***data_file* | **format nul**  
+ **in** *data_file* | **out**_data_file_ | **queryout**_data_file_ | **format nul**  
  Specifies the direction of the bulk copy, as follows:  
   
 -   **in** copies from a file into the database table or view.  
@@ -173,10 +173,10 @@ manager: craigg
  **-h"** *hint*[ **,**... *n*] **"**  
  Specifies the hint or hints to be used during a bulk import of data into a table or view.  
   
- ORDER**(***column*[ASC | DESC] [**,**...*n*]**)**  
+ ORDER**(**_column_[ASC | DESC] [**,**...*n*]**)**  
  The sort order of the data in the data file. Bulk import performance is improved if the data being imported is sorted according to the clustered index on the table, if any. If the data file is sorted in a different order, that is other than the order of a clustered index key, or if there is no clustered index on the table, the ORDER clause is ignored. The column names supplied must be valid column names in the destination table. By default, **bcp** assumes the data file is unordered. For optimized bulk import, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] also validates that the imported data is sorted.  
   
- ROWS_PER_BATCH **=***bb*  
+ ROWS_PER_BATCH **=**_bb_  
  Number of rows of data per batch (as *bb*). Used when **-b** is not specified, resulting in the entire data file being sent to the server as a single transaction. The server optimizes the bulk load according to the value *bb*. By default, ROWS_PER_BATCH is unknown.  
   
  KILOBYTES_PER_BATCH **=** *cc*  
@@ -276,8 +276,8 @@ manager: craigg
  **-R**  
  Specifies that currency, date, and time data is bulk copied into [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] using the regional format defined for the locale setting of the client computer. By default, regional settings are ignored.  
   
- **-S** *server_name*[ **\\***instance_name*]  
- Specifies the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to which to connect. If no server is specified, the **bcp** utility connects to the default instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on the local computer. This option is required when a **bcp** command is run from a remote computer on the network or a local named instance. To connect to the default instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on a server, specify only *server_name*. To connect to a named instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], specify *server_name***\\***instance_name*.  
+ **-S** *server_name*[ **\\**_instance_name_]  
+ Specifies the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to which to connect. If no server is specified, the **bcp** utility connects to the default instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on the local computer. This option is required when a **bcp** command is run from a remote computer on the network or a local named instance. To connect to the default instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on a server, specify only *server_name*. To connect to a named instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], specify *server_name**_\\_**instance_name*.  
   
  `-t` *field_term*  
  Specifies the field terminator. The default is **\t** (tab character). Use this parameter to override the default field terminator. For more information, see [Specify Field and Row Terminators &#40;SQL Server&#41;](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).  

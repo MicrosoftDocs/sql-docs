@@ -46,7 +46,7 @@ manager: craigg
   
 3.  Connect to the principal server and issue the following statement:  
   
-     ALTER DATABASE *<database_name>* SET WITNESS **=***<server_network_address>*  
+     ALTER DATABASE *<database_name>* SET WITNESS **=**_<server_network_address>_  
   
      where *<database_name>* is the name of the database to be mirrored (this name is the same on both partners), and *<server_network_address>* is the server network address of the witness server instance.  
   

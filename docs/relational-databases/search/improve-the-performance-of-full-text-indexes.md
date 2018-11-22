@@ -132,7 +132,7 @@ For essential information about the following formulas, see the notes that follo
 |x64|*F* = *Number of crawl ranges* * 10 * 8|*M* = *T* – *F* – 500|  
 
 **Notes about the formulas**
-1.  If multiple full populations are in progress, calculate the fdhost.exe memory requirements of each separately, as *F1*, *F2*, and so forth. Then calculate *M* as *T***–** sigma**(***F*i**)**.  
+1.  If multiple full populations are in progress, calculate the fdhost.exe memory requirements of each separately, as *F1*, *F2*, and so forth. Then calculate *M* as *T***–** sigma**(**_F_i**)**.  
 2.  500 MB is an estimate of the memory required by other processes in the system. If the system is doing additional work, increase this value accordingly.  
 3.  .*ism_size* is assumed to be 8 MB for x64 platforms.  
   

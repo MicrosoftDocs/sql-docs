@@ -27,13 +27,13 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 -   Identify and improve ad hoc workloads  
   
 ## Pinpoint and fix queries with plan choice regressions  
- During its regular query execution, Query Optimizer may decide to choose a different plan because important inputs became different: data cardinality has changed, indexes have been created, altered, or dropped, statistics have been updated, etc. For the most part, the new plan is better, or about the same than the plan used previously. However, there are cases when new plan is significantly worse - this situation is referred to as plan choice change regression. Prior to Query Store, it was an issue very difficult to identify and fix as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] did not provide built-in data store, for users to look at for execution plans that were used over time.  
+ During its regular query execution, Query Optimizer may decide to choose a different plan because important inputs became different: data cardinality has changed, indexes have been created, altered, or dropped, statistics have been updated, etc. For the most part, the new plan is better, or about the same than the plan used previously. However, there are cases when new plan is significantly worse - this situation is referred to as plan choice change regression. Prior to Query Store, it was an issue difficult to identify and fix as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] did not provide built-in data store, for users to look at for execution plans that were used over time.  
   
  With the Query Store, you can quickly:  
   
 -   Identify all queries which execution metrics have been degraded, in the period of time of interest (last hour, day, week, etc.). Use **Regressed Queries** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to speed up your analysis.  
   
--   Among the regressed queries, it’s very easy to find those that had multiple plans and which degraded because of the bad plan choice. Use **Plan Summary** pane in **Regressed Queries** to visualize all plans for a regressed query and their query performance over time.  
+-   Among the regressed queries, it’s easy to find those that had multiple plans and which degraded because of the bad plan choice. Use **Plan Summary** pane in **Regressed Queries** to visualize all plans for a regressed query and their query performance over time.  
   
 -   Force the previous plan from the history, if it proved to be better. Use **Force Plan** button in **Regressed Queries** to force selected plan for the query.  
   
@@ -50,7 +50,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
  Look at the plan summary on the right to analyze the execution history and learn about the different plans and their runtime statistics. Use the bottom pane to examine the different plans or to compare them visually, rendered side by side (use the Compare button).  
   
-When you identify a query with sub-optimal performance, your action depends on the nature of the problem:  
+When you identify a query with suboptimal performance, your action depends on the nature of the problem:  
   
 1.  If the query was executed with multiple plans and the last plan is significantly worse than previous plan, you can use the plan forcing mechanism to ensure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will use the optimal plan for future executions  
   
@@ -71,7 +71,7 @@ When you identify a query with sub-optimal performance, your action depends on t
   
 -   Creating missing indexes on tables referenced by expensive queries.  
   
--   Applying filtering policy for row-level security. For more details, see [Optimizing Row Level Security with Query Store](https://blogs.msdn.com/b/sqlsecurity/archive/2015/07/21/optimizing-rls-performance-with-the-query-store.aspx).  
+-   Applying filtering policy for row-level security. For more information, see [Optimizing Row Level Security with Query Store](https://blogs.msdn.com/b/sqlsecurity/archive/2015/07/21/optimizing-rls-performance-with-the-query-store.aspx).  
   
 -   Adding temporal system-versioning to tables that are frequently modified by your OLTP applications.  
   
@@ -178,7 +178,7 @@ EXEC sp_create_plan_guide
   
 Solution with plan guides is more precise but it requires more work.  
   
-If all your queries (or majority of them), are candidates for auto-parameterization, then changing `FORCED PARAMETERIZATION` for the entire database may be a better option:  
+If all your queries (or the majority of them) are candidates for auto-parameterization, then changing `FORCED PARAMETERIZATION` for the entire database may be a better option:  
   
 ```sql  
 --Apply forced parameterization for entire database  

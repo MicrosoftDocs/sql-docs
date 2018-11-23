@@ -37,7 +37,7 @@ A query execution plan is a definition of the following:
 
 ## In This Section  
   
--   [Query Profiling Infrastructure](../../relational-databases/performance/query-profiling-infrastruture.md)  
+-   [Query Profiling Infrastructure](../../relational-databases/performance/query-profiling-infrastructure.md)  
   
 -   [Display and Save Execution Plans](../../relational-databases/performance/display-and-save-execution-plans.md)  
   

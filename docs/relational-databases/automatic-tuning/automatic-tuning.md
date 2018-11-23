@@ -170,7 +170,7 @@ Finding the optimal set of indexes that improve performance of the queries that 
 
 In addition to detection, [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] can automatically apply identified recommendations. If you find that the built-in rules improve the performance of your database, you might let [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] automatically manage your indexes.
 
-To enable automatic tuning in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and allow the automatic tuning feature to fully manage your workload, see [Enable automatic tuning in Azure SQL Database using Azure portal](azure/sql-database/sql-database-automatic-tuning-enable).
+To enable automatic tuning in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and allow the automatic tuning feature to fully manage your workload, see [Enable automatic tuning in Azure SQL Database using Azure portal](/azure/sql-database/sql-database-automatic-tuning-enable).
 
 When the [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] applies a CREATE INDEX or DROP INDEX recommendation, it automatically monitors the performance of the queries that are affected by the index. New index will be retained only if performances of the affected queries are improved. Dropped index will be automatically re-created if there are some queries that run slower due to the absence of the index.
 

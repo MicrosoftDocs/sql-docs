@@ -1119,5 +1119,5 @@ GO
  [Cardinality Estimation](../relational-databases/performance/cardinality-estimation-sql-server.md)  
  [Adaptive query processing](../relational-databases/performance/adaptive-query-processing.md)   
  [Operator Precedence](../t-sql/language-elements/operator-precedence-transact-sql.md)    
- [Execution Plans](../../relational-databases/performance/execution-plans.md)    
- [Performance Center for SQL Server Database Engine and Azure SQL Database](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)
+ [Execution Plans](../relational-databases/performance/execution-plans.md)    
+ [Performance Center for SQL Server Database Engine and Azure SQL Database](../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)

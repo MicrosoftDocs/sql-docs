@@ -54,7 +54,7 @@ The live execution plan can also be accessed from the **[Activity Monitor](../..
  ![Live Query Stats button in Activity Monitor](../../relational-databases/performance/media/livequerystatsactmon.png "Live Query Stats button in Activity Monitor")  
   
 ## Remarks  
- The statistics profile infrastructure must be enabled before live query statistics can capture information about the progress of queries. Depending on the version, the overhead may be significant. For more information on this overhead, see [Query Profiling Infrastructure](../../relational-databases/performance/query-profiling-infrastruture.md).
+ The statistics profile infrastructure must be enabled before live query statistics can capture information about the progress of queries. Depending on the version, the overhead may be significant. For more information on this overhead, see [Query Profiling Infrastructure](../../relational-databases/performance/query-profiling-infrastructure.md).
   
 ## Permissions  
  Requires the database level **SHOWPLAN** permission to populate the **Live Query Statistics** results page, the server level **VIEW SERVER STATE** permission to see the live statistics, and requires any permissions necessary to execute the query.  
@@ -69,4 +69,4 @@ The live execution plan can also be accessed from the **[Activity Monitor](../..
  [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md)     
  [Trace flags](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)    
  [Showplan Logical and Physical Operators Reference](../../relational-databases/showplan-logical-and-physical-operators-reference.md)     
- [Query Profiling Infrastructure](../../relational-databases/performance/query-profiling-infrastruture.md)   
+ [Query Profiling Infrastructure](../../relational-databases/performance/query-profiling-infrastructure.md)   

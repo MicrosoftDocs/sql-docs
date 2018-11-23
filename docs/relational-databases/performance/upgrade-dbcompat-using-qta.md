@@ -58,12 +58,9 @@ QTA targets only `SELECT` queries that can be executed from Query Store. Paramet
 QTA targets known possible patterns of query regressions due to changes in [Cardinality Estimator (CE)](../../relational-databases/performance/cardinality-estimation-sql-server.md) versions. For example, when upgrading a database from [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and database compatibility level 110, to [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] and database compatibility level 140, some queries may regress because they were designed specifically to work with the CE version that existed in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (CE 70). This does not mean that reverting from CE 140 to CE 70 is the only option. If only a specific change in the newer version is introducing the regression, then it is possible to hint that query to use just the relevant part of the previous CE version that was working better for the specific query, while still leveraging all other improvements of newer CE versions. And also allow other queries in the workload that have not regressed to benefit from newer CE improvements.
 
 The CE patterns searched by QTA are the following: 
--  **Independence vs. Correlation**
-   If independence provides better estimations for the specific query, then the query hint `USE HINT ('ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES')` causes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to generate an execution plan by using minimum selectivity when estimating `AND` predicates for filters to account for correlation. 
--  **Simple Containment vs. Base Containment**
-   If a different join containment provides better estimations for the specific query, then the query hint `USE HINT ('ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS')` causes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to generate an execution plan by using the Simple Containment assumption instead of the default Base Containment assumption.
--  **Multi-statement table-valued function (MSTVF) fixed cardinality guess** of 100 rows vs. 1 row
-   If the default fixed estimation for TVFs of 100 rows does not result in a more efficient plan than using the fixed estimation for TVFs of 1 row (corresponding to the default under the query optimizer CE model of [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] and earlier versions), then the query hint `QUERYTRACEON 9488` is used to generate an execution plan. For more information on MSTVFs, see [Create User-defined Functions &#40;Database Engine&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
+-  **Independence vs. Correlation**: If independence provides better estimations for the specific query, then the query hint `USE HINT ('ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES')` causes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to generate an execution plan by using minimum selectivity when estimating `AND` predicates for filters to account for correlation. 
+-  **Simple Containment vs. Base Containment**: If a different join containment provides better estimations for the specific query, then the query hint `USE HINT ('ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS')` causes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to generate an execution plan by using the Simple Containment assumption instead of the default Base Containment assumption.
+-  **Multi-statement table-valued function (MSTVF) fixed cardinality guess** of 100 rows vs. 1 row: If the default fixed estimation for TVFs of 100 rows does not result in a more efficient plan than using the fixed estimation for TVFs of 1 row (corresponding to the default under the query optimizer CE model of [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] and earlier versions), then the query hint `QUERYTRACEON 9488` is used to generate an execution plan. For more information on MSTVFs, see [Create User-defined Functions &#40;Database Engine&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
 
 > [!NOTE]
 > As a last resort, if the narrow scoped hints are not yielding good enough results for the eligible query patterns, then full use of CE 70 is also considered, by using the query hint `USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION')` to generate an execution plan.
@@ -120,10 +117,10 @@ QTA is a session-based feature that stores session state in the `msqta` schema o
     
     The list contains the following information:
     -  **Session ID**
-    -  **Session Name**, system generated name comprised of the database name, date and time of session creation.
-    -  **Status** of the session (Active or Closed).
-    -  **Description**, system generated comprised of the user selected target database compatibility level and number of days for business cycle workload.
-    -  **Time Started**
+    -  **Session Name**: System generated name comprised of the database name, date and time of session creation.
+    -  **Status**: Status of the session (Active or Closed).
+    -  **Description**: System generated comprised of the user selected target database compatibility level and number of days for business cycle workload.
+    -  **Time Started**: Date and time of when the session was created.
 
     ![QTA Session Management page](../../relational-databases/performance/media/qta-session-management.png "QTA Session Management page")
 
@@ -161,12 +158,12 @@ QTA is a session-based feature that stores session state in the `msqta` schema o
 
         The list contains the following information:
         -  **Query ID** 
-        -  **Query Text**, can be expanded by clicking the **...** button.
-        -  **Runs**, shows the number of executions of that query for the entore workload collection.
-        -  **Baseline Metric**, the selected metric (Duration or CpuTime) in ms for the baseline data collection before the database compatibility upgrade.
-        -  **Observed Metric**, the selected metric (Duration or CpuTime) in ms for the data collection after the database compatibility upgrade.
-        -  **% Change**, percentual change for the selected metric between the before and after database compatibility upgrade state. A negative number represents the amount of measured regression for the query.
-        -  **Tunable**, *True* or *False* depending on whether the query is eligible for experimentation.
+        -  **Query Text**: [!INCLUDE[tsql](../includes/tsql-md.md)] statement that can be expanded by clicking the **...** button.
+        -  **Runs**: Displays the number of executions of that query for the entore workload collection.
+        -  **Baseline Metric**: The selected metric (Duration or CpuTime) in ms for the baseline data collection before the database compatibility upgrade.
+        -  **Observed Metric**: The selected metric (Duration or CpuTime) in ms for the data collection after the database compatibility upgrade.
+        -  **% Change**: Percentual change for the selected metric between the before and after database compatibility upgrade state. A negative number represents the amount of measured regression for the query.
+        -  **Tunable**: *True* or *False* depending on whether the query is eligible for experimentation.
 
 4.  **View Analysis** allows selection of which queries to experiment and find optimization opportunities. The **Queries to show** value becomes the scope of eligible queries to experiment on. Once the desired queries are checked, click **Next** to start experimentation.  
 
@@ -183,13 +180,13 @@ QTA is a session-based feature that stores session state in the `msqta` schema o
 
     The list contains the following information:
     -  **Query ID** 
-    -  **Query Text**, can be expanded by clicking the **...** button.
-    -  **Status**, shows the current experimentation state for the query.
-    -  **Baseline Metric**, the selected metric (Duration or CpuTime) in ms for the query as executed in **Step 2 Substep 3**, representing the regressed query after the database compatibility upgrade.
-    -  **Observed Metric**, the selected metric (Duration or CpuTime) in ms for the query after experimentation, for a good enough proposed optimization.
-    -  **% Change**, percentual change for the selected metric between the before and after experimentation state, representing the amount of measured improvement for the query with the proposed optimization.
-    -  **Query Option**, link to the proposed hint that improves query execution metric.
-    -  **Can Deploy**, *True* or *False* depending on whether the proposed query optimization can be deployed as a plan guide.
+    -  **Query Text**: [!INCLUDE[tsql](../includes/tsql-md.md)] statement that can be expanded by clicking the **...** button.
+    -  **Status**: Displays the current experimentation state for the query.
+    -  **Baseline Metric**: The selected metric (Duration or CpuTime) in ms for the query as executed in **Step 2 Substep 3**, representing the regressed query after the database compatibility upgrade.
+    -  **Observed Metric**: The selected metric (Duration or CpuTime) in ms for the query after experimentation, for a good enough proposed optimization.
+    -  **% Change**: Percentual change for the selected metric between the before and after experimentation state, representing the amount of measured improvement for the query with the proposed optimization.
+    -  **Query Option**: Link to the proposed hint that improves query execution metric.
+    -  **Can Deploy**: *True* or *False* depending on whether the proposed query optimization can be deployed as a plan guide.
 
     ![QTA Step 4](../../relational-databases/performance/media/qta-step4.png "QTA Step 4")
 

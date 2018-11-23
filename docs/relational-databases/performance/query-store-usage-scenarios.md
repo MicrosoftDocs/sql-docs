@@ -135,7 +135,7 @@ Some workloads do not have dominant queries that you can tune to improve overall
   
 Use **Execution Count** metric to analyze whether your top queries are ad hoc (this requires you to run Query Store with `QUERY_CAPTURE_MODE = ALL`). From the diagram above, you can see that 90% of your **Top Resource Consuming Queries** are executed only once.  
   
-Alternatively, you can run [!INCLUDE[tsql](../../includes/tsql-md.md)] script to get total number of query texts, queries, and plans in the system and determine how different they are by comparing their query_hash and plan_hash:  
+Alternatively, you can run [!INCLUDE[tsql](../../includes/tsql-md.md)] script to get total number of query texts, queries, and plans in the system and determine how different they are by comparing the query_hash and plan_hash:  
   
 ```sql  
 --Do cardinality analysis when suspect on ad hoc workloads

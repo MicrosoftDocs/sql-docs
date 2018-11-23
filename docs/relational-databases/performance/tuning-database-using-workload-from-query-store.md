@@ -30,14 +30,14 @@ From the DTA GUI, select the radio button **Query Store** in the **General** pan
 From the command line (dta.exe), choose the **-iq** option to select the workload from Query Store. 
 
 There are two additional options available via the command line that helps tune the behavior of DTA when selecting the workload from Query Store. These options not available via the GUI:
-  1. Number of workload events to tune: This option, specified using **-n** command line argument, allows the user to control how many events from the Query Store are tuned. By default, DTA uses a value of 1000 for this option. Note that DTA always chooses the most expensive events by total duration. 
+  1. **Number of workload events to tune**: This option, specified using **-n** command line argument, allows the user to control how many events from the Query Store are tuned. By default, DTA uses a value of 1000 for this option. DTA always chooses the most expensive events by total duration. 
   
-  2. Time windows of events to tune: Since the Query Store may contain queries that have executed a long time ago, this option allows the user to specify a past time window (in hours) when a query must have executed for it to be considered by DTA for tuning. This option is specified using **-I** command line argument. 
+  2. **Time windows of events to tune**: Since the Query Store may contain queries that have executed a long time ago, this option allows the user to specify a past time window (in hours) when a query must have executed for it to be considered by DTA for tuning. This option is specified using **-I** command line argument. 
 
-See [dta Utilty](../../tools/dta/dta-utility.md) for more information.
+See [dta Utility](../../tools/dta/dta-utility.md) for more information.
 
 ## Difference between using Workload from Query Store and Plan Cache 
-The difference between the Query Store and Plan Cache options is that the former contains a longer history of queries that have executed against the database, persisted across server restarts. On the other hand, the Plan Cache only contains a subset of recently-executed queries whose plans are cached in memory. When the server restarts, the entries in the Plan Cache are discarded.
+The difference between the Query Store and Plan Cache options is that the former contains a longer history of queries that have executed against the database, persisted across server restarts. On the other hand, the Plan Cache only contains a subset of recently executed queries whose plans are cached in memory. When the server restarts, the entries in the Plan Cache are discarded.
 
 ## See Also  
 [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)     

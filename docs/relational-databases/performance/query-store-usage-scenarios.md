@@ -21,13 +21,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   Query Store can be used in wide set of scenarios when tracking and ensuring predictable workload performance is critical. Here are some examples you can consider:  
   
 -   Pinpoint and fix queries with plan choice regressions  
-  
 -   Identify and tune top resource consuming queries  
-  
 -   A/B testing  
-  
 -   Keep performance stability during the upgrade to newer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
-  
 -   Identify and improve ad hoc workloads  
   
 ## Pinpoint and fix queries with plan choice regressions  
@@ -142,7 +138,7 @@ Use **Execution Count** metric to analyze whether your top queries are ad hoc (t
 Alternatively, you can run [!INCLUDE[tsql](../../includes/tsql-md.md)] script to get total number of query texts, queries, and plans in the system and determine how different they are by comparing their query_hash and plan_hash:  
   
 ```sql  
-/*Do cardinality analysis when suspect on ad hoc workloads*/  
+--Do cardinality analysis when suspect on ad hoc workloads
 SELECT COUNT(*) AS CountQueryTextRows FROM sys.query_store_query_text;  
 SELECT COUNT(*) AS CountQueryRows FROM sys.query_store_query;  
 SELECT COUNT(DISTINCT query_hash) AS CountDifferentQueryRows FROM  sys.query_store_query;  
@@ -163,7 +159,7 @@ If you are in control of the application code, you may consider rewriting of the
 Approach with individual query templates requires plan guide creation:  
   
 ```sql  
-/*Apply plan guide for the selected query template*/  
+--Apply plan guide for the selected query template 
 DECLARE @stmt nvarchar(max);  
 DECLARE @params nvarchar(max);  
 EXEC sp_get_query_template   
@@ -185,7 +181,7 @@ Solution with plan guides is more precise but it requires more work.
 If all your queries (or majority of them), are candidates for auto-parameterization, then changing `FORCED PARAMETERIZATION` for the entire database may be a better option:  
   
 ```sql  
-/*Apply forced parameterization for entire database*/  
+--Apply forced parameterization for entire database  
 ALTER DATABASE <database name> SET PARAMETERIZATION FORCED;  
 ```  
 

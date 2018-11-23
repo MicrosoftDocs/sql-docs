@@ -17,17 +17,16 @@ manager: craigg
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 
-The [Query Store](../../relational-databases/performance/how-query-store-collects-data.md) feature in SQL Server automatically captures a history of queries, plans, and runtime statistics, and persists this information in the database. The [Database Engine Tuning Advisor (DTA)](../../relational-databases/performance/database-engine-tuning-advisor.md) supports a new option to use the Query Store to automatically select an appropriate workload for tuning. For many users, this can take away the need to explicitly collect a workload for tuning. This feature is only available if the database has the Query Store feature turned on. 
+The [Query Store](../../relational-databases/performance/how-query-store-collects-data.md) feature in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automatically captures a history of queries, plans, and runtime statistics, and persists this information in the database. The [Database Engine Tuning Advisor (DTA)](../../relational-databases/performance/database-engine-tuning-advisor.md) supports a new option to use the Query Store to automatically select an appropriate workload for tuning. For many users, this can take away the need to explicitly collect a workload for tuning. This feature is only available if the database has the Query Store feature turned on. 
   
-  This feature is available with SQL Server Management Studio version **16.4** or higher. 
+This feature is available with [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **v16.4** or higher. 
   
-How To Tune a Workload from Query Store in Database Engine Tuning Advisor GUI
----
+## How To Tune a Workload from Query Store in Database Engine Tuning Advisor GUI
 From the DTA GUI, select the radio button **Query Store** in the **General** pane to enable this feature (see figure below).
+
 ![DTA workload from query store](../../relational-databases/performance/media/dta-workload-from-query-store.gif)
  
-How To Tune a Workload from Query Store in dta.exe command line Utility
----
+## How To Tune a Workload from Query Store in dta.exe command line Utility
 From the command line (dta.exe), choose the **-iq** option to select the workload from Query Store. 
 
 There are two additional options available via the command line that helps tune the behavior of DTA when selecting the workload from Query Store. These options not available via the GUI:
@@ -37,12 +36,10 @@ There are two additional options available via the command line that helps tune 
 
 See [dta Utilty](../../tools/dta/dta-utility.md) for more information.
 
-Difference between using Workload from Query Store and Plan Cache 
---- 
+## Difference between using Workload from Query Store and Plan Cache 
 The difference between the Query Store and Plan Cache options is that the former contains a longer history of queries that have executed against the database, persisted across server restarts. On the other hand, the Plan Cache only contains a subset of recently-executed queries whose plans are cached in memory. When the server restarts, the entries in the Plan Cache are discarded.
 
-See Also 
---- 
+## See Also  
 [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)     
 [Tutorial: Database Engine Tuning Advisor](Tutorial:%20Database%20Engine%20Tuning%20Advisor.md)     
 [How Query Store Collects Data](../../relational-databases/performance/how-query-store-collects-data.md)     

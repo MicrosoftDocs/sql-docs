@@ -17,7 +17,7 @@
   href: execution-plans.md
   items:
   - name: Query Profiling Infrastructure
-    href: query-profiling-infrastruture.md
+    href: query-profiling-infrastructure.md
   - name: Display and Save Execution Plans
     href: display-and-save-execution-plans.md
     items:

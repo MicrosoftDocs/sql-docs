@@ -158,7 +158,7 @@ QTA is a session-based feature that stores session state in the `msqta` schema o
 
         The list contains the following information:
         -  **Query ID** 
-        -  **Query Text**: [!INCLUDE[tsql](../includes/tsql-md.md)] statement that can be expanded by clicking the **...** button.
+        -  **Query Text**: [!INCLUDE[tsql](../../includes/tsql-md.md)] statement that can be expanded by clicking the **...** button.
         -  **Runs**: Displays the number of executions of that query for the entore workload collection.
         -  **Baseline Metric**: The selected metric (Duration or CpuTime) in ms for the baseline data collection before the database compatibility upgrade.
         -  **Observed Metric**: The selected metric (Duration or CpuTime) in ms for the data collection after the database compatibility upgrade.
@@ -180,7 +180,7 @@ QTA is a session-based feature that stores session state in the `msqta` schema o
 
     The list contains the following information:
     -  **Query ID** 
-    -  **Query Text**: [!INCLUDE[tsql](../includes/tsql-md.md)] statement that can be expanded by clicking the **...** button.
+    -  **Query Text**: [!INCLUDE[tsql](../../includes/tsql-md.md)] statement that can be expanded by clicking the **...** button.
     -  **Status**: Displays the current experimentation state for the query.
     -  **Baseline Metric**: The selected metric (Duration or CpuTime) in ms for the query as executed in **Step 2 Substep 3**, representing the regressed query after the database compatibility upgrade.
     -  **Observed Metric**: The selected metric (Duration or CpuTime) in ms for the query after experimentation, for a good enough proposed optimization.

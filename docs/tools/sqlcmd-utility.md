@@ -243,7 +243,7 @@ Prints raw error messages to the screen.
 
 We recommend that you use a strong password.
  
-#### [**Use a strong password!**](https://msdn.microsoft.com/library/ms161962(SQL.130).aspx)
+#### [**Use a strong password!**](../relational-databases/security/strong-passwords.md)
   
   
  The password prompt is displayed by printing the password prompt to the console, as follows: `Password:`  

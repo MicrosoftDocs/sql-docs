@@ -120,7 +120,7 @@ SELECT * FROM FREETEXTTABLE (Flags, FlagColors, 'Yellow');
 ```  
   
 ### B. Using FREETEXT in an INNER JOIN  
- The following example returns the category name and description of all categories that relate to `sweet`, `candy`, `bread`, `dry`, or `meat`.  
+ The following example returns the description and rank of any products with a description that match the meaning of `high level of performance`.  
   
 ```  
 USE AdventureWorks2012;  

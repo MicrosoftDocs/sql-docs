@@ -86,7 +86,7 @@ When you attach a database, all data files (MDF and NDF files) must be available
 > [!NOTE]  
 > If the primary data file being attached is read-only, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] assumes that the database is read-only.  
   
-When an encrypted database is first attached to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the database owner must open the master key of the database by executing the following statement: `OPEN MASTER KEY DECRYPTION BY PASSWORD = **'***password***'**`. We recommend that you enable automatic decryption of the master key by executing the following statement: `ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY`. For more information, see [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md) and [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md).  
+When an encrypted database is first attached to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the database owner must open the master key of the database by executing the following statement: `OPEN MASTER KEY DECRYPTION BY PASSWORD = 'password'`. We recommend that you enable automatic decryption of the master key by executing the following statement: `ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY`. For more information, see [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md) and [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md).  
   
  The requirement for attaching log files depends partly on whether the database is read-write or read-only, as follows:  
   

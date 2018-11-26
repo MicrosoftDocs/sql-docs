@@ -71,7 +71,7 @@ Changing conditions result in changing performance. In your evaluations, you can
 |[Server Performance and Activity Monitoring](../../relational-databases/performance/server-performance-and-activity-monitoring.md)|Use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and Windows performance and activity monitoring tools.|  
 |[Display and Save Execution Plans](../../relational-databases/performance/display-and-save-execution-plans.md)|Display and save execution plans to a file in XML format.|  
 |[Live Query Statistics](../../relational-databases/performance/live-query-statistics.md)|Display real-time statistics about query execution steps.|  
-|[Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)|Use Query Store to automatically capture a history of queries, plans, and runtime statistics, and retain these for your review.|  
+|[Monitoring Performance by Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)|Use Query Store to automatically capture a history of queries, plans, and runtime statistics, and retain these for your review.|  
 |[Using the Query Store with In-Memory OLTP](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)|Considerations for Memory-Optimized tables.|  
 |[Best Practice with the Query Store](../../relational-databases/performance/best-practice-with-the-query-store.md)|Advice on using the Query Store.|  
   
@@ -79,6 +79,6 @@ Changing conditions result in changing performance. In your evaluations, you can
  [Automated Administration Across an Enterprise](../../ssms/agent/automated-administration-across-an-enterprise.md)   
  [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)   
  [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
- [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
+ [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)       
   
   

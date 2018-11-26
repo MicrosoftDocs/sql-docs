@@ -32,6 +32,8 @@ This tutorial gives you some additional tricks for using SQL Server Management S
 > * Access your SQL Server error log
 > * Find the name of your SQL Server instance
 
+Data Platform MVP Greg Low also offers a free eBook on [SQL Server Management Studio Tips and Tricks](https://ssmsbook.sqldownunder.com).
+
 ## Prerequisites
 To complete this tutorial, you need SQL Server Management Studio, access to a SQL server, and an AdventureWorks database. 
 

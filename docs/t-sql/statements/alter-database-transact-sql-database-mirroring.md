@@ -90,7 +90,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
   
  The value of *partner_server* is a server network address. This has the following syntax:  
   
- TCP**://***\<system-address>**_:_**\<port>*  
+ TCP**://**_\<system-address>_**:**_\<port>_  
   
  where  
   

@@ -41,7 +41,7 @@ A number of language features, such as outer joins and scalar function calls, ar
  The escape sequence is recognized and parsed by drivers, which replace the escape sequences with DBMS-specific grammar. For more information about escape sequence syntax, see [ODBC Escape Sequences](../../../odbc/reference/appendixes/odbc-escape-sequences.md) in Appendix C: SQL Grammar.  
   
 > [!NOTE]  
->  In ODBC 2.*x*, this was the standard syntax of the escape sequence:            **--(\*vendor(***vendor-name**_), product(_**product-name**_)_**extension* **\*)--**  
+>  In ODBC 2.*x*, this was the standard syntax of the escape sequence:            **--(\*vendor(**_vendor-name_**), product(**_product-name_**)**_extension_ **\*)--**  
 >   
 >  In addition to this syntax, a shorthand syntax was defined of the form:            **{**_extension_**}**  
 >   

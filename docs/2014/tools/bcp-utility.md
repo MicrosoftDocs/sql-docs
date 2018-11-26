@@ -168,7 +168,7 @@ manager: craigg
  **-F** *first_row*  
  Specifies the number of the first row to export from a table or import from a data file. This parameter requires a value greater than (>) 0 but less than (\<) or equal to (=) the total number rows. In the absence of this parameter, the default is the first row of the file.  
   
- *first_row* can be a positive integer with a value up to 2^63-1. **-F***first_row* is 1-based.  
+ *first_row* can be a positive integer with a value up to 2^63-1. **-F**_first_row_ is 1-based.  
   
  **-h"** *hint*[ **,**... *n*] **"**  
  Specifies the hint or hints to be used during a bulk import of data into a table or view.  
@@ -319,7 +319,7 @@ manager: craigg
  For more information, see [Use Unicode Character Format to Import or Export Data &#40;SQL Server&#41;](../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md).  
   
  **-x**  
- Used with the **format** and **-f***format_file* options, generates an XML-based format file instead of the default non-XML format file. The **-x** does not work when importing or exporting data. It generates an error if used without both **format** and **-f***format_file*.  
+ Used with the **format** and **-f**_format_file_ options, generates an XML-based format file instead of the default non-XML format file. The **-x** does not work when importing or exporting data. It generates an error if used without both **format** and **-f**_format_file_.  
   
 ## Remarks  
  The **bcp** 12.0 client is installed when you install [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] tools. If tools are installed for both [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] and an earlier version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], depending on the value of the PATH environment variable, you might be using the earlier **bcp** client instead of the **bcp** 12.0 client. This environment variable defines the set of directories used by Windows to search for executable files. To discover which version you are using, run the **bcp /v** command at the Windows Command Prompt. For information about how to set the command path in the PATH environment variable, see Windows Help.  

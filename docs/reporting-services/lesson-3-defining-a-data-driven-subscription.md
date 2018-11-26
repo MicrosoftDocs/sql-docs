@@ -27,14 +27,17 @@ This lesson assumes you completed Lesson 1 and Lesson 2 and that the report data
   
 ## Define a description  
 1.  Type **Sales Order delivery** in description.
+
 ## Type
 1.  click **Data-driven subscription**..  
+
 ## Schedule
 1. In the schedule section click **Report-specific schedule**.
 2. Click **Edit schedule**.
 3.  In **Schedule Details**, click **Once**.  
 4.  Specify a start time that is a few minutes ahead of the current time.  
 5.  Click **Apply**.
+
 ## Destination  
 1.  In the Destination section, Select **Windows File Share** for the method of delivery.  
 
@@ -48,12 +51,13 @@ This lesson assumes you completed Lesson 1 and Lesson 2 and that the report data
     data source=localhost; initial catalog=Subscribers
     ```
     
- ## Credentials
- 1. Select **Using the following credentials**.
- 2. Select **Windows user name and password**.
- 3.  In **User Name** and **Password**, type your domain user name and password. Include both the domain and user account when specifying **User Name**.
-     > [!NOTE]  
+## Credentials
+1. Select **Using the following credentials**.
+2. Select **Windows user name and password**.
+3.  In **User Name** and **Password**, type your domain user name and password. Include both the domain and user account when specifying **User Name**.
+    > [!NOTE]  
     > Credentials used to connect to a subscriber data source are not passed back to [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. If you modify the subscription later, you must retype the password used to connect to the data source.
+
 ## Query      
 1.  In the query box, type the following query:  
   
@@ -64,6 +68,7 @@ This lesson assumes you completed Lesson 1 and Lesson 2 and that the report data
 2.  Specify a time-out of 30 seconds.  
   
 3.  Click **Validate query**, and then click **Apply**.
+
 ## Delivery Options
 Fill in the following values:
 

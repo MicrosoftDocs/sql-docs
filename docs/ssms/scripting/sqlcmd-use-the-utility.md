@@ -536,7 +536,7 @@ SQLCMD –E –N
  Connect using Windows credentials, encrypt communication and trust server certificate:  
   
 ```  
-SQLCMD –E –T  
+SQLCMD –E –C  
   
 ```  
   

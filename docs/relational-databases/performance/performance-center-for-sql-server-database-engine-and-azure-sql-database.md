@@ -1,7 +1,7 @@
 ---
 title: "Performance Center for SQL Server Database Engine and Azure SQL Database | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/08/2016"
+ms.date: "11/26/2018"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: performance
@@ -22,7 +22,7 @@ ms.author: "carlrab"
 manager: craigg
 ---
 # Performance Center for SQL Server Database Engine and Azure SQL Database
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   This page provides links to help you locate the information that you need about performance in the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] and [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
   
  **Legend**  

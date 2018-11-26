@@ -82,7 +82,7 @@ In this task, you will convert the project to the Package Deployment Model and e
   
 16. Click **Close**.  
   
-17. The wizard creates a configuration file, named SSISTutorial.dtsConfig, that contains configuration settings for the v**alue** of the variable that in turn sets the **Directory** property of the enumerator.  
+17. The wizard creates a configuration file, named SSISTutorial.dtsConfig, that contains configuration settings for the **Value** of the variable that in turn sets the **Directory** property of the enumerator.  
   
     > [!NOTE]  
     > A configuration file typically contains complex information about the package properties, but for this tutorial the only configuration information should be  

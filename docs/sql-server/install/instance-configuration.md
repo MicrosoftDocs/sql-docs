@@ -447,6 +447,6 @@ Use the **User Instance** page to generate a separate instance of the [!INCLUDE[
   
  Ensure that the **User to provision** field lists the DomainName\UserName of the user whose permissions should be updated. Select the role to be updated from the list of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances in the **Available privileges** pane, and then click the right arrow. To add the user to all available roles for all available instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances and all available roles, click the double right arrow.  
   
- To implement the changes when your selections are complete, [!INCLUDE[clickOK](../../includes/clickok-md.md)]. To end the tool without making changes, click **Cancel**.  
+ To implement the changes when your selections are complete, [!INCLUDE[clickOK](../../includes/clickok-md.md)] To end the tool without making changes, click **Cancel**.  
   
   

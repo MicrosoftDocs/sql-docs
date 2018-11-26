@@ -50,6 +50,7 @@ You can create a stored access policy and a shared access signature by using Azu
 -   Storage account  
 -   Azure blob container   
 -   SAS policy    
+
 This script starts by declaring a number of variables to specify the names for the above resources and the names of the following required input values:  
   
 -   A prefix name used in naming other resource objects    

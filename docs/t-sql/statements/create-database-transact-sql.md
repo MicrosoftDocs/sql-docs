@@ -2,7 +2,7 @@
 title: "CREATE DATABASE (Transact-SQL) | Microsoft Docs"
 description: Create database syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, and Parallel Data Warehouse
 ms.custom: ""
-ms.date: "10/02/2018"
+ms.date: "11/16/2018"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
@@ -1318,11 +1318,11 @@ Specifies the service tier of the database. For [!INCLUDE[ssSDW](../../includes/
 *MAXSIZE*  
 The default is 245,760 GB (240 TB).  
 
-**Applies to:** Optimized for Elasticity performance tier
+**Applies to:** Optimized for Compute Gen1
 
 The maximum allowable size for the database. The database cannot grow beyond MAXSIZE. 
 
-**Applies to:** Optimized for Compute performance tier
+**Applies to:** Optimized for Compute Gen2
 
 The maximum allowable size for rowstore data in the database. Data stored in rowstore tables, a columnstore index's deltastore, or a nonclustered index on a clustered columnstore index cannot grow beyond MAXSIZE.  Data compressed into columnstore format does not have a size limit and is not constrained by MAXSIZE.
   

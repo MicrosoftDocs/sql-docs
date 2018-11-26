@@ -42,7 +42,7 @@ The source code for Azure Data Studio and its data providers is available on Git
 
 ## Do we plan to open source SSMS?
 
-No. However, next generation multi-OS CLI and GUI tools are open source. For example, the mssql extension for VS Code, mssql-scripter, and msql-CLI are all open source on GitHub. The source code for Azure Data Studo is available on GitHub.  
+No. However, next generation multi-OS CLI and GUI tools are open source. For example, the mssql extension for VS Code, mssql-scripter, and msql-CLI are all open source on GitHub. The source code for Azure Data Studio is available on GitHub.  
 
 ## Now that there is Azure Data Studio, does Microsoft plan to deprecate SSMS and SSDT? 
 

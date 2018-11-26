@@ -45,7 +45,7 @@ To enhance the usefulness of the error output, before the package writes the fai
   
 9. In the **Name** property, type **ErrorDescription** and set the **DataType** property to **Unicode string [DT_WSTR]**.  
   
-10. On the **Script** page, verify that the **LocaleID** property is set to **English (United States.**  
+10. On the **Script** page, verify that the **LocaleID** property is set to **English (United States).**  
   
 11. Click **Edit Script** to open [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications (VSTA). In the **Input0_ProcessInputRow** method, type or paste the following code.  
   

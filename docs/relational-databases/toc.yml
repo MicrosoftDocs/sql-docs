@@ -133,7 +133,7 @@
     - name: Tune
       items:
       - name: Database Experimentation Assistant
-        href: https://www.microsoft.com/en-us/download/details.aspx?id=54090
+        href: https://www.microsoft.com/download/details.aspx?id=54090
       - name: In-memory OLTP +
         href: ../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md 
       - name: Indexes +

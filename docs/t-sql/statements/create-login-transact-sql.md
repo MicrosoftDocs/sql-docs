@@ -1,7 +1,7 @@
 ---
 title: "CREATE LOGIN (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/02/2018"
+ms.date: "12/01/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -410,7 +410,7 @@ Specifies the password for the SQL login that is being created. Use a strong pas
 Passwords are case-sensitive. Passwords should always be at least eight characters long, and cannot exceed 128 characters. Passwords can include a-z, A-Z, 0-9, and most non-alphanumeric characters. Passwords cannot contain single quotes, or the *login_name*.
 
 SID **=** *sid*  
-Used to recreate a login. Applies to SQL Server authentication logins only, not Windows authentication logins. Specifies the SID of the new SQL Server authentication login. If this option is not used, SQL Server automatically assigns a SID. The SID structure depends on the SQL Server version. For SQL Database, this is a 32 byte (**binary(32)**) literal consisting of `0x01060000000000640000000000000000` plus 16 bytes representing a GUID. For example, `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`. 
+Used to recreate a login. Applies to SQL Server authentication logins only. Specifies the SID of the new SQL Server authentication login. If this option is not used, SQL Server automatically assigns a SID. The SID structure depends on the SQL Server version. For SQL Database, this is a 32 byte (**binary(32)**) literal consisting of `0x01060000000000640000000000000000` plus 16 bytes representing a GUID. For example, `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`. 
 
 ## Remarks
 
@@ -419,7 +419,7 @@ Used to recreate a login. Applies to SQL Server authentication logins only, not 
 - When **FROM EXTERNAL PROVIDER** is specified:
     - The login_name must represent an existing Azure AD account (user, group, or application) that is accessible in Azure AD by the current Azure SQL Managed Instance.
     - The **PASSWORD** option cannot be used.
-    - Currently, the first Azure AD login must be created by the SQL admin (`sysadmin`) using the syntax above.
+    - Currently, the first Azure AD login must be created by the standard SQL Server account (non Azure AD) that is a `sysadmin` using the syntax above.
     - Once the first Azure AD login is created, this login can create other Azure AD logins once it is granted the necessary permissions.
 - By default, when the **FROM EXTERNAL PROVIDER** clause is omitted, a regular SQL login is created.
 - Azure AD logins are visible in sys.server_principals, with type column value set to **E** and type_desc set to **EXTERNAL_LOGIN** for logins mapped to Azure AD users, or type column value set to **X** and type_desc value set to **EXTERNAL_GROUP** for logins mapped to Azure AD groups.

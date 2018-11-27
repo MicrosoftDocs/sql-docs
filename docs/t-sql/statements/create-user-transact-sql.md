@@ -184,7 +184,7 @@ CREATE USER user_name
  '*Azure_Active_Directory_principal*'  
  **Applies to**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].  
   
- Specifies the Azure Active Directory principal for which the database user is being created. The *Azure_Active_Directory_principal* can be an Azure Active Directory user, or an Azure Active Directory group. (Azure Active Directory users cannot have Windows Authentication logins in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]; only database users.) The connection string must specify the contained database as the initial catalog.
+ Specifies the Azure Active Directory principal for which the database user is being created. The *Azure_Active_Directory_principal* can be an Azure Active Directory user, an Azure Active Directory group, or an Azure Active Directory application. (Azure Active Directory users cannot have Windows Authentication logins in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]; only database users.) The connection string must specify the contained database as the initial catalog.
 
  For users, you use the full alias of their domain principal.   
  
@@ -476,6 +476,13 @@ Creating an Azure AD user as a group from an Azure AD login that is a group is s
 
 ```sql
 CREATE USER [AAD group] FROM LOGIN [AAD group];
+GO
+```
+
+You can also create an Azure AD user from an Azure AD login that is a group.
+
+```sql
+CREATE USER [bob@contoso.com] FROM LOGIN [AAD group];
 GO
 ```
 

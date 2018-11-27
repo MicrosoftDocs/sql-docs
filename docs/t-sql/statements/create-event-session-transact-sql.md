@@ -33,8 +33,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
-  
+```    
 CREATE EVENT SESSION event_session_name  
 ON SERVER  
 {  
@@ -226,7 +225,7 @@ ON SERVER
  Specifies whether or not to start this event session automatically when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] starts.  
   
 > [!NOTE]  
->  If STARTUP_STATE = ON, the event session will only start if SQL Server is stopped and then restarted.  
+> If `STARTUP_STATE = ON`, the event session will only start if [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is stopped and then restarted.  
   
  ON  
  The event session is started at startup.  
@@ -235,15 +234,15 @@ ON SERVER
  The event session is not started at startup.  
   
 ## Remarks  
- The order of precedence for the logical operators is NOT (highest), followed by AND, followed by OR.  
+The order of precedence for the logical operators is `NOT` (highest), followed by `AND`, followed by `OR`.  
   
 ## Permissions  
- Requires the ALTER ANY EVENT SESSION permission.  
+Requires the `ALTER ANY EVENT SESSION` permission.  
   
 ## Examples  
  The following example shows how to create an event session named `test_session`. This example adds two events and uses the Event Tracing for Windows target.  
   
-```  
+```sql  
 IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='test_session')  
     DROP EVENT session test_session ON SERVER;  
 GO  

@@ -3,7 +3,7 @@ title: Build an R model and save to SQL Server | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
+ms.date: 11/26/2018  
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
@@ -12,11 +12,11 @@ manager: cgronlun
 # Build an R model and save to SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In this step, you'll learn how to build a machine learning model and save the model in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+In this step, learn how to build a machine learning model and save the model in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 ## Create a classification model using rxLogit
 
-The model you build is a binary classifier that predicts whether the taxi driver is likely to get a tip on a particular ride or not. You'll use the data source you created in the previous lesson to train the tip classifier, using logistic regression.
+The model is a binary classifier that predicts whether the taxi driver is likely to get a tip on a particular ride or not. You'll use the data source you created in the previous lesson to train the tip classifier, using logistic regression.
 
 1. Call the [rxLogit](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlogit) function, included in the **RevoScaleR** package, to create a logistic regression model. 
 
@@ -32,33 +32,35 @@ The model you build is a binary classifier that predicts whether the taxi driver
     summary(logitObj);
     ```
 
-     *Results*
-
+    **Results**
+    
+    ```R
      *Logistic Regression Results for: tipped ~ passenger_count + trip_distance + trip_time_in_secs +*
      direct_distance* 
-     <br/>*Data: featureDataSource (RxSqlServerData Data Source)*
-     <br/>*Dependent variable(s): tipped*
-     <br/>*Total independent variables: 5*
-     <br/>*Number of valid observations: 17068*
-     <br/>*Number of missing observations: 0*
-     <br/>*-2\*LogLikelihood: 23540.0602 (Residual deviance on 17063 degrees of freedom)*
-     <br/>*Coefficients:*
-     <br/>*Estimate Std. Error z value Pr(>|z|)*
-     <br/>*(Intercept)       -2.509e-03  3.223e-02  -0.078  0.93793*
-     <br/>*passenger_count   -5.753e-02  1.088e-02  -5.289 1.23e-07 \*\*\**
-     <br/>*trip_distance     -3.896e-02  1.466e-02  -2.658  0.00786 \*\**
-     <br/>*trip_time_in_secs  2.115e-04  4.336e-05   4.878 1.07e-06 \*\*\**
-     <br/>*direct_distance    6.156e-02  2.076e-02   2.966  0.00302 \*\**
-     <br/>*---*
-     <br/>*Signif. codes:  0 ‘\*\*\*’ 0.001 ‘\*\*’ 0.01 ‘\*’ 0.05 ‘.’ 0.1 ‘ ’ 1*
-     <br/>*Condition number of final variance-covariance matrix: 48.3933*
-     <br/>*Number of iterations: 4*
+     *Data: featureDataSource (RxSqlServerData Data Source)*
+     *Dependent variable(s): tipped*
+     *Total independent variables: 5*
+     *Number of valid observations: 17068*
+     *Number of missing observations: 0*
+     *-2\*LogLikelihood: 23540.0602 (Residual deviance on 17063 degrees of freedom)*
+     *Coefficients:*
+     *Estimate Std. Error z value Pr(>|z|)*
+     *(Intercept)       -2.509e-03  3.223e-02  -0.078  0.93793*
+     *passenger_count   -5.753e-02  1.088e-02  -5.289 1.23e-07 \*\*\**
+     *trip_distance     -3.896e-02  1.466e-02  -2.658  0.00786 \*\**
+     *trip_time_in_secs  2.115e-04  4.336e-05   4.878 1.07e-06 \*\*\**
+     *direct_distance    6.156e-02  2.076e-02   2.966  0.00302 \*\**
+     *---*
+     *Signif. codes:  0 ‘\*\*\*’ 0.001 ‘\*\*’ 0.01 ‘\*’ 0.05 ‘.’ 0.1 ‘ ’ 1*
+     *Condition number of final variance-covariance matrix: 48.3933*
+     *Number of iterations: 4*
+   ```
 
 ## Use the logistic regression model for scoring
 
 Now that the model is built, you can use to predict whether the driver is likely to get a tip on a particular drive or not.
 
-1. First, use the [RxSqlServerData](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdata) function to define a data source object for storing the scoring resul
+1. First, use the [RxSqlServerData](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdata) function to define a data source object for storing the scoring result.
 
     ```R
     scoredOutput <- RxSqlServerData(
@@ -152,19 +154,17 @@ In this section, you'll experiment with both techniques.
 
 After you have built a model and ascertained that it is performing well, you probably want to deploy it to a site where users or people in your organization can make use of the model, or perhaps retrain and recalibrate the model on a regular basis. This process is sometimes called  *operationalizing* a model.
 
-Because [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] lets you invoke an R model using a [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure, it is easy to use R in a client application.
+In SQL Server, operationalization is achieved by embedding R code in a stored procedure. Because code resides in the procedure, it can be called from any application that can connect to SQL Server.
 
-However, before you can call the model from an external application, you must save the model to the database used for production. In [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], trained models are stored in binary form, in a single column of type **varbinary(max)**.
+However, before you can call the model from an external application, you must save the model to the database used for production. Trained models are stored in binary form, in a single column of type **varbinary(max)**.
 
-Therefore, moving a trained model from R to SQL Server includes these steps:
+A typical deployment workflow consists of the following steps:
 
-+ Serializing the model into a hexadecimal string
++ Serialize the model into a hexadecimal string
++ Transmit the serialized object to the database
++ Save the model in a varbinary(max) column
 
-+ Transmitting the serialized object to the database
-
-+ Saving the model in a varbinary(max) column
-
-In this section, you learn how to persist the model, and how to call it to make predictions.
+In this section, you learn how to persist the model and then call it to make predictions.
 
 1. Switch back to your local R environment if you are not already using it, serialize the model, and save it in a variable.
 

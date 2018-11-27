@@ -85,7 +85,7 @@ Typically, database servers block Internet access. This can be inconvenient when
     + When the line beginning with `plot` runs, the rendered data is serialized back to the local R environment so that you can view it in your R client.
 
     > [!NOTE]
-    > If you are using SQL Server in an Azure virtual machine, you might get an error at this point. An error occurs when the default firewall rule in Azure blocks network access by R code. For details on how to fix this error, see [Installing R Services in an Azure VM](../r/installing-sql-server-r-services-on-an-azure-virtual-machine.md).
+    > If you are using SQL Server in an Azure virtual machine, you might get an error at this point. An error occurs when the default firewall rule in Azure blocks network access by R code. For details on how to fix this error, see [Installing Machine Learning (R) Services on an Azure VM](../r/installing-sql-server-r-services-on-an-azure-virtual-machine.md).
 
 4. The following image shows the output plot. The taxi pickup locations are added to the map as red dots. Your image might look different, depending how many locations are in the data source you used.
 

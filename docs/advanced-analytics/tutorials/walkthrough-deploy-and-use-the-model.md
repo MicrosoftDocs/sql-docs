@@ -96,7 +96,7 @@ A stored procedure for batch scoring was created when you initially ran the Powe
     sqlQuery (conn, q);
     ```
 
-    If you get an ODBC error, check the query syntax, and whether you have the right number of quotation marks. 
+    If you get an ODBC error, check for syntax errors and whether you have the right number of quotation marks. 
     
     If you get a permissions error, make sure the login has the ability to execute the stored procedure.
 

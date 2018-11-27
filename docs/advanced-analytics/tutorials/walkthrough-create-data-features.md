@@ -67,8 +67,8 @@ First, let's do it the way R users are accustomed to: get the data onto your lap
     }
     ```
   
-    + The first line defines a new environment. In R, an environment can be used to encapsulate name spaces in packages and such.  You can use the `search()` function to view the environments in your workspace. To view the objects in a specific environment, type `ls(<envname>)`.
-    + The lines beginning with `$env.ComputeDistance` contain the code that defines the haversine formula, which calculates the *great-circle distance* between two points on a sphere.
+    + The first line defines a new environment. In R, an environment can be used to encapsulate name spaces in packages and such. You can use the `search()` function to view the environments in your workspace. To view the objects in a specific environment, type `ls(<envname>)`.
+    + The lines beginning with `$env.ComputeDist` contain the code that defines the haversine formula, which calculates the *great-circle distance* between two points on a sphere.
 
 4. Having defined the function, you apply it to the data to create a new feature column, *direct_distance*. but before you run the transformation, change the compute context to local.
 
@@ -110,11 +110,9 @@ First, let's do it the way R users are accustomed to: get the data onto your lap
 
 ## Featurization using Transact-SQL
 
-Now, create a custom SQL function, *ComputeDist*, to accomplish the same task as the custom R function.
+In this exercise, learn how to accomplish the same task using SQL functions instead of custom R functions.
 
-1. Define a new custom SQL function, named *fnCalculateDistance*. The code for this user-defined SQL function is provided as part of the PowerShell script you ran to create and configure the database.  The function should already exist in your database.
-
-    If it does not exist, use SQL Server Management Studio to generate the function in the same database where the taxi data is stored.
+1. Define a SQL function, named *fnCalculateDistance*. The function should already exist in the NYCTaxi_Sample database. If it does not exist, use SQL Server Management Studio to generate the function in the same database where the taxi data is stored.
 
     ```sql
     CREATE FUNCTION [dbo].[fnCalculateDistance] (@Lat1 float, @Long1 float, @Lat2 float, @Long2 float)
@@ -139,7 +137,7 @@ Now, create a custom SQL function, *ComputeDist*, to accomplish the same task as
     END
     ```
 
-2. Run the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement from any application that supports [!INCLUDE[tsql](../../includes/tsql-md.md)], just to see how the function works.
+2. Run the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement from any application that supports [!INCLUDE[tsql](../../includes/tsql-md.md)] to see how the function works.
 
     ```sql
     SELECT tipped, fare_amount, passenger_count,trip_time_in_secs,trip_distance, pickup_datetime, dropoff_datetime,
@@ -147,9 +145,9 @@ Now, create a custom SQL function, *ComputeDist*, to accomplish the same task as
     pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude
     FROM nyctaxi_sample
     ```
-3. Having defined this function, it would be easy to create the features you want by using SQL and then insert the values directly into a new table:
+3. To insert values directly into a new table, you can add an **INTO** clause specifying the table name.
 
-    ```
+    ```sql
     SELECT tipped, fare_amount, passenger_count,trip_time_in_secs,trip_distance, pickup_datetime, dropoff_datetime,
     dbo.fnCalculateDistance(pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude) as direct_distance,
     pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude
@@ -157,7 +155,7 @@ Now, create a custom SQL function, *ComputeDist*, to accomplish the same task as
     FROM nyctaxi_sample
     ```
 
-4. However, let's see how to call the custom SQL function from R code. First, store the SQL featurization query in an R variable.
+4. You can also call the SQL function from R code. First, store the SQL featurization query in an R variable.
 
     ```R
     featureEngineeringQuery = "SELECT tipped, fare_amount, passenger_count,
@@ -188,7 +186,7 @@ Now, create a custom SQL function, *ComputeDist*, to accomplish the same task as
     rxGetVarInfo(data = featureDataSource)
     ```
 
-    *Results*
+    **Results**
 
     ```
     Var 1: tipped, Type: integer

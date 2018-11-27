@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Profiler | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/24/2016"
+ms.date: "11/27/2018"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""

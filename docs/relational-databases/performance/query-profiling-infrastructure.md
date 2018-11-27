@@ -22,21 +22,21 @@ manager: amitban
 
 The [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] provides the ability to access runtime information on query execution plans. One of the most important actions when a performance issue occurs, is to get precise understanding on the workload that is executing and how resource usage is being driven. For this, access to the [actual execution plan](../../relational-databases/performance/display-an-actual-execution-plan.md) is important.
 
-While query completion is a prerequisite for the availability of an actual query plan, [live query statistics](../../relational-databases/performance/live-query-statistics.md) can provide real-time insights into the query execution process as the controls flow from one [query plan operator](../../relational-databases/showplan-logical-and-physical-operators-reference.md) to another. The live query plan displays the overall query progress and operator-level run-time execution statistics such as the number of rows produced, elapsed time, operator progress, etc. Because this data is available in real time without needing to wait for the query to complete, these execution statistics are extremely useful for debugging query performance issues, such as long running queries, and queries that run indefinitely and never finish.
+While query completion is a prerequisite for the availability of an actual query plan, [live query statistics](../../relational-databases/performance/live-query-statistics.md) can provide real-time insights into the query execution process as the data flows from one [query plan operator](../../relational-databases/showplan-logical-and-physical-operators-reference.md) to another. The live query plan displays the overall query progress and operator-level run-time execution statistics such as the number of rows produced, elapsed time, operator progress, etc. Because this data is available in real time without needing to wait for the query to complete, these execution statistics are extremely useful for debugging query performance issues, such as long running queries, and queries that run indefinitely and never finish.
 
 ## The standard query execution statistics profiling infrastructure
 
-The *query execution statistics profile infrastructure*, or standard profiling, must be enabled to collect information about execution plans, namely row count, CPU and I/O usage. The following methods of collecting execution plan information for a target session leverage the standard profiling infrastruture:
+The *query execution statistics profile infrastructure*, or standard profiling, must be enabled to collect information about execution plans, namely row count, CPU and I/O usage. The following methods of collecting execution plan information for a **target session** leverage the standard profiling infrastruture:
 
 - [SET STATISTICS XML](../../t-sql/statements/set-statistics-xml-transact-sql.md) 
 - [SET STATISTICS PROFILE](../../t-sql/statements/set-statistics-profile-transact-sql.md)
-- Live query statistics
+- [Live Query Statistics](../../relational-databases/performance/live-query-statistics.md)
 
 > [!NOTE]
 > Using live query statistics with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] leverages the standard profiling infrastruture.    
-> In higher versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], live query statistics leverages the [lightweight profiling infrastrcture](#lwp).
+> In higher versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], if [lightweight profiling infrastrcture](#lwp) is enabled, then it is leveraged by Live Query Statistics instead of standard profiling.
 
-The following methods of collecting execution plan information globally for all sessions leverage the standard profiling infrastruture:
+The following methods of collecting execution plan information globally for **all sessions** leverage the standard profiling infrastruture:
 
 -  The ***query_post_execution_showplan*** extended event. To enable extended events, see [Monitor System Activity Using Extended Events](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md).  
 - The **Showplan XML** trace event in [SQL Trace](../../relational-databases/sql-trace/sql-trace.md) and [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md). For more information on this trace event, see [Showplan XML Event Class](../../relational-databases/event-classes/showplan-xml-event-class.md).

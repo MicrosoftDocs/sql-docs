@@ -132,20 +132,26 @@
         href: ../relational-databases/sql-trace/sql-trace.md
     - name: Tune
       items:
+      - name: Database Experimentation Assistant
+        href: https://www.microsoft.com/download/details.aspx?id=54090
       - name: In-memory OLTP +
         href: ../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md 
       - name: Indexes +
         href: ../relational-databases/indexes/indexes.md
       - name: Partitions +
         href: ../relational-databases/partitions/partitioned-tables-and-indexes.md
+      - name: Performance Center +
+        href: ../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md
+      - name: Performance Monitoring and Tuning Tools +
+        href: ../relational-databases/performance/performance-monitoring-and-tuning-tools.md
       - name: Resource Governor +
         href: ../relational-databases/resource-governor/resource-governor.md
-      - name: Showplan Operators
+      - name: Showplan Logical and Physical Operators Reference
         href: showplan-logical-and-physical-operators-reference.md
       - name: Statistics +
         href: ../relational-databases/statistics/statistics.md
-      - name: Performance +
-        href: ../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md
+      - name: Tuning Database using workload from Query Store
+        href: ../relational-databases/performance/tuning-database-using-workload-from-query-store.md
   - name: PolyBase +
     href: ../relational-databases/polybase/polybase-guide.md
   - name: Query Data

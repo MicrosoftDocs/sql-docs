@@ -34,7 +34,7 @@ manager: craigg
 -   A Windows Azure storage account and a SQL Credential that stores the authentication information to the storage account should both be created before configuring [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]. For more information see [Introduction to Key Components and Concepts](../relational-databases/backup-restore/sql-server-backup-to-url.md#intorkeyconcepts) section of the **SQL Server Backup to URL** topic, and [Lesson 2: Create a SQL Server Credential](../../2014/tutorials/lesson-2-create-a-sql-server-credential.md).  
   
     > [!IMPORTANT]  
-    >  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] creates the necessary containers to store the backups. The container name is created using ‘machine name-instance name’ format. For AlwaysOn Availability Groups the container is named using the GUID of the availability group.  
+    >  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] creates the necessary containers to store the backups. The container name is created using 'machine name-instance name' format. For AlwaysOn Availability Groups the container is named using the GUID of the availability group.  
   
 ###  <a name="Security"></a> Security  
   
@@ -94,7 +94,7 @@ manager: craigg
   
     2.  From the Standard bar, click **New Query**.  
   
-    3.  Copy and paste the following example into the query window and click `Execute`. This example enables [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] for the database ‘TestDB’. The retention period is set to 30 days. This sample uses the encryption option by specifying the encryption algorithm and the encryptor information.  
+    3.  Copy and paste the following example into the query window and click `Execute`. This example enables [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] for the database 'TestDB'. The retention period is set to 30 days. This sample uses the encryption option by specifying the encryption algorithm and the encryptor information.  
   
     ```  
     Use msdb;  

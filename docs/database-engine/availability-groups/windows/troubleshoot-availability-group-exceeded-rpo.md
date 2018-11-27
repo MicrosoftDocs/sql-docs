@@ -66,7 +66,7 @@ To remedy this issue, try upgrading your network bandwidth or removing or reduci
 ### Diagnosis and resolution  
  If you have verified that the network is not suffering from high latency or low throughput, then you should investigate the secondary replica for I/O contentions. Queries from [SQL Server: Minimize Disk I/O](https://technet.microsoft.com/magazine/jj643251.aspx) are useful in identifying contentions. Examples from that article are derived below for your convenience.  
   
- The following script lets you see the number of reads and writes on each data and log file for every availability database running on an instance of SQL Server. It’s sorted by average I/O stall time, in milliseconds. Note that the numbers are cumulative from the last time the server instance was started. Therefore, you should take the difference between two measurements after some time has elapsed.  
+ The following script lets you see the number of reads and writes on each data and log file for every availability database running on an instance of SQL Server. It's sorted by average I/O stall time, in milliseconds. Note that the numbers are cumulative from the last time the server instance was started. Therefore, you should take the difference between two measurements after some time has elapsed.  
   
 ```sql  
 SELECT DB_NAME(database_id) AS   

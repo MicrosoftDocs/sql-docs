@@ -102,7 +102,7 @@ FROM <backup_device>
 |**FirstLSN**|**numeric(25,0)**|Log sequence number of the first log record in the backup set.|  
 |**LastLSN**|**numeric(25,0)**|Log sequence number of the next log record after the backup set.|  
 |**CheckpointLSN**|**numeric(25,0)**|Log sequence number of the most recent checkpoint at the time the backup was created.|  
-|**DatabaseBackupLSN**|**numeric(25,0)**|Log sequence number of the most recent full database backup.<br /><br /> **DatabaseBackupLSN**  is the “begin of checkpoint” that is triggered when the backup starts. This LSN will coincide with **FirstLSN** if the backup is taken when the database is idle and no replication is configured.|  
+|**DatabaseBackupLSN**|**numeric(25,0)**|Log sequence number of the most recent full database backup.<br /><br /> **DatabaseBackupLSN**  is the "begin of checkpoint" that is triggered when the backup starts. This LSN will coincide with **FirstLSN** if the backup is taken when the database is idle and no replication is configured.|  
 |**BackupStartDate**|**datetime**|Date and time that the backup operation began.|  
 |**BackupFinishDate**|**datetime**|Date and time that the backup operation finished.|  
 |**SortOrder**|**smallint**|Server sort order. This column is valid for database backups only. Provided for backward compatibility.|  

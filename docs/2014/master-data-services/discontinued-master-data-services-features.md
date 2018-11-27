@@ -23,7 +23,7 @@ manager: craigg
 ### Security  
  To make assigning security easier, you can no longer assign model object permissions to the Derived Hierarchy, Explicit Hierarchy, and Attribute Group objects.  
   
--   Derived hierarchy permissions are now based on the model. For example, if you want a user to have permission to a derived hierarchy, you must assign **Update** to the model object. Then you can assign **Deny** access to any entities you don’t want the user to have access to.  
+-   Derived hierarchy permissions are now based on the model. For example, if you want a user to have permission to a derived hierarchy, you must assign **Update** to the model object. Then you can assign **Deny** access to any entities you don't want the user to have access to.  
   
 -   Explicit hierarchy permissions are now based on the entity. For example, if the user has **Update** permissions to an Account entity, then all explicit hierarchies for the entity will be updateable.  
   

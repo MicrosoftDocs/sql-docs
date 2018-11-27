@@ -21,14 +21,14 @@ The SQL Azure pane is available in the **Project Settings** and **Default Projec
   
 -   Use the Project Settings dialog box to set configuration options for the current project. To access the SQL Azure settings, on the **Tools** menu, select **Project Settings**, click **General** at the bottom of the left pane, and then select **SQL Azure**.  
   
--   Use the Default Project Settings dialog box to set configuration options for all projects. To access the SQL Azure settings, on the **Tools** menu, select **DefaultProject Settings**, select the project type as “SQL Azure” in **Migration Target Version** combo box to access the settings in SQL Azure pane, click **General** at the bottom of the left pane, and then select **SQL Azure**.  
+-   Use the Default Project Settings dialog box to set configuration options for all projects. To access the SQL Azure settings, on the **Tools** menu, select **DefaultProject Settings**, select the project type as "SQL Azure" in **Migration Target Version** combo box to access the settings in SQL Azure pane, click **General** at the bottom of the left pane, and then select **SQL Azure**.  
   
 ## Options  
   
 ## Connectivity  
 **Heartbeat Interval**  
   
-Specifies a time interval to be used for heartbeat mechanism to keep the SQL Azure connection alive in ‘minutes : seconds’ format.  
+Specifies a time interval to be used for heartbeat mechanism to keep the SQL Azure connection alive in 'minutes : seconds' format.  
   
 **Default Value**:'4:45'  
   

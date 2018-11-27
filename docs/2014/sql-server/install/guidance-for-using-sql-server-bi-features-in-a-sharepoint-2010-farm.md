@@ -64,7 +64,7 @@ manager: craigg
   
 -   **Complete the upgrade with psconfig:** Run the command `psconfig –upgrade` to complete the SP1 upgrade  
   
- For more information, see the “upgrade” section of [(SharePoint Server 2010)](http://technet.microsoft.com/library/cc263093.aspx) and [Resource center: Updates for SharePoint 2010 Products](http://technet.microsoft.com/sharepoint/ff800847.aspx)  
+ For more information, see the "upgrade" section of [(SharePoint Server 2010)](http://technet.microsoft.com/library/cc263093.aspx) and [Resource center: Updates for SharePoint 2010 Products](http://technet.microsoft.com/sharepoint/ff800847.aspx)  
   
 ## SharePoint Installation with SQL Server BI Features  
   

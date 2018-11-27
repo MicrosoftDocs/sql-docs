@@ -70,14 +70,14 @@ manager: craigg
   
  Row filters can be defined only for roles with Read and Read and Process permissions. By default, if a row filter is not defined for a particular table, members of a role that has Read or Read and Process permission can query all rows in the table unless cross-filtering applies from another table.  
   
- Once a row filter is defined for a particular table, a DAX formula, which must evaluate to a TRUE/FALSE value, defines the rows that can be queried by members of that particular role. Rows not included in the DAX formula will cannot be queried. For example, for members of the Sales role, the Customers table with the following row filters expression, *=Customers [Country] = “USA”*, members of the Sales role, will only be able to see customers in the USA.  
+ Once a row filter is defined for a particular table, a DAX formula, which must evaluate to a TRUE/FALSE value, defines the rows that can be queried by members of that particular role. Rows not included in the DAX formula will cannot be queried. For example, for members of the Sales role, the Customers table with the following row filters expression, *=Customers [Country] = "USA"*, members of the Sales role, will only be able to see customers in the USA.  
   
  Row filters apply to the specified rows as well as related rows. When a table has multiple relationships, filters apply security for the relationship that is active. Row filters will be intersected with other row filers defined for related tables, for example:  
   
 |Table|DAX expression|  
 |-----------|--------------------|  
-|Region|=Region[Country]=”USA”|  
-|ProductCategory|=ProductCategory[Name]=”Bicycles”|  
+|Region|=Region[Country]="USA"|  
+|ProductCategory|=ProductCategory[Name]="Bicycles"|  
 |Transactions|=Transactions[Year]=2008|  
   
  The net effect of these permissions on the Transactions table is that members will be allowed to query rows of data where the customer is in the USA, and the product category is bicycles, and the year is 2008. Users would not be able to query any transactions outside of the USA, or any transactions that are not bicycles, or any transactions not in 2008 unless they are a member of another role that grants these permissions.  

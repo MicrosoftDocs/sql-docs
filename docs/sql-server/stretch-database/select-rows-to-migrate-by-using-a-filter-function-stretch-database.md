@@ -133,7 +133,7 @@ RETURN  SELECT 1 AS is_eligible
 ### Constant expressions  
  The constants that you use in a filter function can be any deterministic expression that can be evaluated when you define the function. Constant expressions can contain the following things.  
   
--   Literals. For example, `N’abc’, 123`.  
+-   Literals. For example, `N'abc', 123`.  
   
 -   Algebraic expressions. For example, `123 + 456`.  
   
@@ -503,7 +503,7 @@ ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (
   
 -   All the operators that existed in the old function must exist in the new function.  
   
--   The new function can't contain operators that don’t exist in the old function.  
+-   The new function can't contain operators that don't exist in the old function.  
   
 -   The order of operator arguments can't change.  
   

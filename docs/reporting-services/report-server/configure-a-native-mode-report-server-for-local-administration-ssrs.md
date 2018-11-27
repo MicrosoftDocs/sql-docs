@@ -156,7 +156,7 @@ ms.author: maghan
   
 -   When you attempt to deploy report items to the local report server, you see an error message similar to the following in the **Error List** window:  
   
-    -   The permissions granted to user ‘Domain\\<user name\>’ are insufficient for performing this operation.  
+    -   The permissions granted to user 'Domain\\<user name\>' are insufficient for performing this operation.  
   
  **To run with elevated permissions each time you open SSDT:**  
   

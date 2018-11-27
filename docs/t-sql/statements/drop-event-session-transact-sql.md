@@ -29,8 +29,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
-  
+```    
 DROP EVENT SESSION event_session_name  
 ON SERVER  
 ```  
@@ -43,14 +42,14 @@ ON SERVER
  When you drop an event session, all configuration information, such as targets and session parameters, is completely removed.  
   
 ## Permissions  
- Requires the ALTER ANY EVENT SESSION permission.  
+ Requires the `ALTER ANY EVENT SESSION` permission.  
   
 ## Examples  
- The following example shows how to drop an event session.  
+The following example shows how to drop an event session.  
   
-```  
-DROP EVENT SESSION evt_spin_lock_diagnosis  
-ON SERVER;  
+```sql  
+DROP EVENT SESSION evt_spin_lock_diagnosis ON SERVER;
+GO
 ```  
   
 ## See Also  

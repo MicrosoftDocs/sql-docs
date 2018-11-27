@@ -35,7 +35,7 @@ ms.author: maghan
   
 -   OutputPath is a build property that identifies the path of folders to store the report definition used in build verification, deployment, and preview of reports.  
   
--   ErrorLevel is a build property that identifies the severity of the build issues that are reported as errors. Issues with severity levels less than or equal to the value of ErrorLevel are reported as errors; otherwise, the issues are reported as warnings. For more information, see The “Report Validation and Error Levels” section in [Design Reports with Report Designer &#40;SSRS&#41;](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  
+-   ErrorLevel is a build property that identifies the severity of the build issues that are reported as errors. Issues with severity levels less than or equal to the value of ErrorLevel are reported as errors; otherwise, the issues are reported as warnings. For more information, see The "Report Validation and Error Levels" section in [Design Reports with Report Designer &#40;SSRS&#41;](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  
   
 -   TargetServerVersion is a deployment property that identifies the expected version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] that is installed on the target report server specified in the TargetServerURL property.  
   

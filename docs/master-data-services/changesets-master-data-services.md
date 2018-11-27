@@ -19,7 +19,7 @@ manager: craigg
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] now supports the ability to save any pending changes to an entity as changesets. There are two usage scenarios for this feature.  
   
--   **Changes when “Approval Required” is turned on by Entity Administrator**  
+-   **Changes when "Approval Required" is turned on by Entity Administrator**  
   
      If an Entity administrator specifies that the changes to a given entity require approval before they are committed, any changes to the entity have to be saved into a new or an existing changeset before they can be submitted for approval.  For more information, see [Approval Required &#40;Master Data Services&#41;](../master-data-services/approval-required-master-data-services.md)  
   

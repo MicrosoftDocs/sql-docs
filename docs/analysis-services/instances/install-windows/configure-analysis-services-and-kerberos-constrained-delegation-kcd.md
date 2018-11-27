@@ -90,11 +90,11 @@ manager: kfile
   
 1.  Run the [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] setup wizard and from the feature selection page, click the database engine, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], and the Management tools. In a later setup for the setup wizard you can specify the [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] mode for [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
-2.  For instance configuration, configure a named instance of “POWERPIVOT”.  
+2.  For instance configuration, configure a named instance of "POWERPIVOT".  
   
 3.  On the Analysis Services Configuration page, configure the Analysis Services server for **Power Pivot** mode and add the **computer name** of the Office Online Server to the list of Analysis Services server administrators. For more information, see [Install Analysis Services in Power Pivot Mode](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
   
-4.  Note, by default the “Computer” object type is not included in the search. Click ![click objects to add computer account](../../../analysis-services/instances/install-windows/media/ss-objects-button.png "click objects to add computer account") to add the Computers object.  
+4.  Note, by default the "Computer" object type is not included in the search. Click ![click objects to add computer account](../../../analysis-services/instances/install-windows/media/ss-objects-button.png "click objects to add computer account") to add the Computers object.  
   
      ![add computer accounts as ssas administrators](../../../analysis-services/instances/media/ssas-in-ssms-computerobjects.png "add computer accounts as ssas administrators")  
   
@@ -155,7 +155,7 @@ manager: kfile
         $computer1 = Get-ADComputer -Identity [ComputerName]  
         ```  
   
-         find this Principal name is by looking at Task Manager / Details / w3wp.exe's User name. For example “svcSharePoint”  
+         find this Principal name is by looking at Task Manager / Details / w3wp.exe's User name. For example "svcSharePoint"  
   
         ```  
         Set-ADUser svcSharePoint -PrincipalsAllowedToDelegateToAccount $computer1  

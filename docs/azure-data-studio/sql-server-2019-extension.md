@@ -38,8 +38,8 @@ To install the SQL Server 2019 extension (preview), download and install the ass
 
 ## Release Notes (v0.8.0)
 *Notebooks*:
-* Adding cells before / after existing cells is now supported by clicking the “More Actions” cell button
-* **Add New Connection** option has been added to the connections in the “Attach To” dropdown
+* Adding cells before / after existing cells is now supported by clicking the "More Actions" cell button
+* **Add New Connection** option has been added to the connections in the "Attach To" dropdown
 * A **Reinstall Notebook Dependencies** command has been added to assist with Python package updates, and solve cases where install was halted partway through by closing the application. This can be run from the command palette (use `Ctrl/Cmd+Shift+P` and type `Reinstall Notebook Dependencies`)
 * The PROSE python package has been updated to 1.1.0 and includes a number of bug fixes. Use the **Reinstall Notebook Dependencies** command to update this package
 * A **Clear Output** command is now supported by clicking the **More Actions** cell button
@@ -48,7 +48,7 @@ To install the SQL Server 2019 extension (preview), download and install the ass
   * Notebook could not be started from the root folder of a drive, such as C:\ or D:\
   * [#2820](https://github.com/Microsoft/azuredatastudio/issues/2820) Unable to edit notebooks created from ADS in VS Code
   * Spark UI link now works when running a Spark kernel
-  * Renamed “Managed Packages” to “Install Packages”
+  * Renamed "Managed Packages" to "Install Packages"
 
 *Create External Data*:
 

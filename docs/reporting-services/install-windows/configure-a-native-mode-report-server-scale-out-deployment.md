@@ -129,7 +129,7 @@ The issue will be intermittent is that only the server who created the SQL Agent
 3.  On the Scale-out Deployment page, select the report server instance that is waiting to join the deployment, and select **Add Server**.  
   
     > [!NOTE]  
-    >  **Issue:** When you attempt to join a Reporting Services report server instance to the scale-out deployment, you may experience error messages similar to ‘Access Denied’.  
+    >  **Issue:** When you attempt to join a Reporting Services report server instance to the scale-out deployment, you may experience error messages similar to 'Access Denied'.  
     >   
     >  **Workaround:** Back up the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] encryption key from the first [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instance and restore the key to the second [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server. Then try to join the second server to the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] scale-out deployment.  
   

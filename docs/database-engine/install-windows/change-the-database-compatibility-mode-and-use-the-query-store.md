@@ -24,7 +24,7 @@ In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent
   
 - Since upgrade is a one-way operation (it is not possible to downgrade the file format), there is value in separating the enablement of new features to a separate operation within the database. It is possible to revert a setting to a prior database compatibility level.  The new model reduces the number of things that must happen during an outage window.  
   
-- Changes to the query processor can have complex effects. Even though a “good” change to the system may be great for most workloads - it may cause an unacceptable regression on an important query for others. Separating this logic from the upgrade process, allows for features such as the Query Store, to mitigate plan choice regressions quickly or even avoid them completely in production servers.  
+- Changes to the query processor can have complex effects. Even though a "good" change to the system may be great for most workloads - it may cause an unacceptable regression on an important query for others. Separating this logic from the upgrade process, allows for features such as the Query Store, to mitigate plan choice regressions quickly or even avoid them completely in production servers.  
   
 > [!IMPORTANT]  
 > The below behaviors are expected for [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] when a database is attached or restored, and after an in-place upgrade:

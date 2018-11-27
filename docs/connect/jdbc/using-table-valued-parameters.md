@@ -104,7 +104,7 @@ The following two code fragments demonstrate how to configure a table-valued par
 ```java
 // Using table-valued parameter with a SQLServerPreparedStatement.  
 SQLServerPreparedStatement pStmt =
-    (SQLServerPreparedStatement) connection.prepareStatement(“INSERT INTO dbo.Categories SELECT * FROM ?”);  
+    (SQLServerPreparedStatement) connection.prepareStatement("INSERT INTO dbo.Categories SELECT * FROM ?");  
 pStmt.setStructured(1, "dbo.CategoryTableType", sourceTVPObject);  
 pStmt.execute();  
 ```

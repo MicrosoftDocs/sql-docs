@@ -411,7 +411,7 @@ The Loader truncates the destination table before it inserts the source data.
 **-b** *batchsize*  
 Recommended only for use by Microsoft Support, *batchsize* is the SQL Server batch size for the bulk copy that DMS performs into SQL Server instances on the Compute nodes.  When *batchsize* is specified, SQL Server PDW will override the batch load size that is calculated dynamically for each load.  
   
-Beginning with SQL Server 2012 PDW, the Control node dynamically computes a batch size for each load by default. This automatic calculation is based on several parameters such as memory size, target table type, target table schema, load type, file size, and the user’s resource class.  
+Beginning with SQL Server 2012 PDW, the Control node dynamically computes a batch size for each load by default. This automatic calculation is based on several parameters such as memory size, target table type, target table schema, load type, file size, and the user's resource class.  
   
 For example, if the load mode is FASTAPPEND and the table has a clustered columnstore index, SQL Server PDW will by default attempt to use a batch size of 1,048,576 so that rowgroups will become CLOSED and load directly into the columnstore without going through the delta store. If memory does not allow the batch size of 1,048,576, dwloader will choose a smaller batchsize.  
   
@@ -523,7 +523,7 @@ The total size of all loads occurring concurrently must be smaller than LOG_SIZE
   
 When loading multiple files with one load command, all rejected rows are written to the same reject file. The reject file does not show which input file contains each rejected row.  
   
-The empty string should not be used as a delimiter . When an empty string is used as a row delimiter, the load will fail. When used as column delimiter, the load ignores the delimiter and continues to use the default “|” as the column delimiter. When used as string delimiter, the empty string is ignored and the default behavior is applied.  
+The empty string should not be used as a delimiter . When an empty string is used as a row delimiter, the load will fail. When used as column delimiter, the load ignores the delimiter and continues to use the default "|" as the column delimiter. When used as string delimiter, the empty string is ignored and the default behavior is applied.  
   
 ## Locking Behavior  
 **dwloader** locking behavior varies depending on the *load_mode_option*.  

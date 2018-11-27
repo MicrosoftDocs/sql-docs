@@ -114,7 +114,7 @@ ms.author: maghan
 |**Total Snapshot Updates**|Total number of report execution snapshot updates.|  
   
 ##  <a name="bkmk_powershell"></a> Use PowerShell Cmdlets to return lists  
- ![PowerShell related content](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content")The following Windows PowerShell script will return the counter sets where the CounterSetName starts with “msr”  
+ ![PowerShell related content](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content")The following Windows PowerShell script will return the counter sets where the CounterSetName starts with "msr"  
   
 ```  
 get-counter -listset msr*  
@@ -123,7 +123,7 @@ CounterSetName     : MSRS 2011 Windows Service SharePoint Mode
 CounterSetName     : MSRS 2011 Web Service SharePoint Mode  
 ```  
   
- The following Windows PowerShell script will return the list of performance counters for the CounterSetName “MSRS 2011 Windows Service SharePoint Mode”.  
+ The following Windows PowerShell script will return the list of performance counters for the CounterSetName "MSRS 2011 Windows Service SharePoint Mode".  
   
 ```  
 (get-counter -listset "MSRS 2011 Windows Service SharePoint Mode").paths  

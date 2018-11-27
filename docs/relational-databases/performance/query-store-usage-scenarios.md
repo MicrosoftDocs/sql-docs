@@ -33,7 +33,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 -   Identify all queries which execution metrics have been degraded, in the period of time of interest (last hour, day, week, etc.). Use **Regressed Queries** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to speed up your analysis.  
   
--   Among the regressed queries, it’s easy to find those that had multiple plans and which degraded because of the bad plan choice. Use **Plan Summary** pane in **Regressed Queries** to visualize all plans for a regressed query and their query performance over time.  
+-   Among the regressed queries, it's easy to find those that had multiple plans and which degraded because of the bad plan choice. Use **Plan Summary** pane in **Regressed Queries** to visualize all plans for a regressed query and their query performance over time.  
   
 -   Force the previous plan from the history, if it proved to be better. Use **Force Plan** button in **Regressed Queries** to force selected plan for the query.  
   
@@ -95,7 +95,7 @@ The following illustration shows Query Store analysis (step 4) in case of missin
   
 ![query-store-usage-3](../../relational-databases/performance/media/query-store-usage-3.png "query-store-usage-3")  
   
-Additionally, you can compare plans before and after index creation by rendering them side by side. (“Compare the plans for the selected query in a separate window” toolbar option, which is marked with red square on the toolbar.)  
+Additionally, you can compare plans before and after index creation by rendering them side by side. ("Compare the plans for the selected query in a separate window" toolbar option, which is marked with red square on the toolbar.)  
   
 ![query-store-usage-4](../../relational-databases/performance/media/query-store-usage-4.png "query-store-usage-4")  
   
@@ -112,7 +112,7 @@ Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] all Query Optimi
   
 ![query-store-usage-5](../../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5")  
   
-1.  Upgrade [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] without changing the database compatibility level. It doesn’t expose the latest Query Optimizer changes but still provides newer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features including Query Store.  
+1.  Upgrade [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] without changing the database compatibility level. It doesn't expose the latest Query Optimizer changes but still provides newer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features including Query Store.  
   
 2.  Enable Query Store. For more information on this topic, see [Keep Query Store adjusted to your workload](../../relational-databases/performance/best-practice-with-the-query-store.md#Configure).
 
@@ -194,7 +194,7 @@ After you apply any of these steps, **Top Resource Consuming Queries** will show
   
 In some cases, your application may generate lots of different queries which are not good candidates for auto-parameterization. In that case, you see large number of queries in the system but the ratio between unique queries and unique `query_hash` is likely close to 1.  
   
-In that case, you may want to enable the [**Optimize for Ad hoc Workloads**](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md) server option to prevent wasting cache memory on queries that won’t likely be executed again. To prevent capture of those queries in the Query Store, set `QUERY_CAPTURE_MODE` to `AUTO`.  
+In that case, you may want to enable the [**Optimize for Ad hoc Workloads**](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md) server option to prevent wasting cache memory on queries that won't likely be executed again. To prevent capture of those queries in the Query Store, set `QUERY_CAPTURE_MODE` to `AUTO`.  
   
 ```sql  
 EXEC sys.sp_configure N'show advanced options', N'1' RECONFIGURE WITH OVERRIDE

@@ -51,8 +51,8 @@ monikerRange: "=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversio
 |first_row_time|**bigint**|Timestamp when first row was opened (in milliseconds).|  
 |last_row_time|**bigint**|Timestamp when last row was opened(in milliseconds).|  
 |close_time|**bigint**|Timestamp when close (in milliseconds).|  
-|elapsed_time_ms|**bigint**|Total elapsed time (in milliseconds) used by the target node’s operations so far.|  
-|cpu_time_ms|**bigint**|Total CPU time (in milliseconds) use by target node’s operations so far.|  
+|elapsed_time_ms|**bigint**|Total elapsed time (in milliseconds) used by the target node's operations so far.|  
+|cpu_time_ms|**bigint**|Total CPU time (in milliseconds) use by target node's operations so far.|  
 |database_id|**smallint**|ID of the database that contains the object on which the reads and writes are being performed.|  
 |object_id|**int**|The identifier for the object on which the reads and writes are being performed. References sys.objects.object_id.|  
 |index_id|**int**|The index (if any) the rowset is opened against.|  

@@ -391,7 +391,7 @@ The first phase capture is controlled by the **coredump.coredumptype** setting, 
     | Type | Description |
     |-----|-----|
     | **mini** | Mini is the smallest dump file type. It uses the Linux system information to determine threads and modules in the process. The dump contains only the host environment thread stacks and modules. It does not contain indirect memory references or globals. |
-    | **miniplus** | MiniPlus is similar to mini, but it includes additional memory. It understands the internals of SQLPAL and the host environment, adding the following memory regions to the dump:</br></br> - Various globals</br> - All memory above 64TB</br> - All named regions found in **/proc/$pid/maps**</br> - Indirect memory from threads and stacks</br> - Thread information</br> - Associated Teb’s and Peb’s</br> - Module Information</br> - VMM and VAD tree |
+    | **miniplus** | MiniPlus is similar to mini, but it includes additional memory. It understands the internals of SQLPAL and the host environment, adding the following memory regions to the dump:</br></br> - Various globals</br> - All memory above 64TB</br> - All named regions found in **/proc/$pid/maps**</br> - Indirect memory from threads and stacks</br> - Thread information</br> - Associated Teb's and Peb's</br> - Module Information</br> - VMM and VAD tree |
     | **filtered** | Filtered uses a subtraction-based design where all memory in the process is included unless specifically excluded. The design understands the internals of SQLPAL and the host environment, excluding certain regions from the dump.
     | **full** | Full is a complete process dump that includes all regions located in **/proc/$pid/maps**. This is not controlled by **coredump.captureminiandfull** setting. |
 

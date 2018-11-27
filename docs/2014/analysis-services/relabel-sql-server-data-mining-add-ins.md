@@ -47,7 +47,7 @@ manager: craigg
   
 5.  Type a new value into the row under **New Labels**. You can also choose a value from the list of existing values. As you type new values, they become available for re-use right away.  
   
-6.  When you have entered enough rows, click **Next**, and on the **Select Destination** page, choose where you’ll save the relabeled data.  
+6.  When you have entered enough rows, click **Next**, and on the **Select Destination** page, choose where you'll save the relabeled data.  
   
     -   **Add as a new column to the current worksheet**  
   

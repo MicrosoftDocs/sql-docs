@@ -213,7 +213,7 @@ SELECT actual_state, actual_state_desc, readonly_reason,
 FROM sys.database_query_store_options;  
 ```  
   
- Query Store status is determined by actual_state column. If it’s different than the desired status, the `readonly_reason` column can give you more information.   
+ Query Store status is determined by actual_state column. If it's different than the desired status, the `readonly_reason` column can give you more information.   
 When Query Store size exceeds the quota, the feature will switch to readon_only mode.  
   
  **Get Query Store options**  

@@ -188,7 +188,7 @@ CREATE EVENT SESSION [AlwaysOn_autoseed] ON SERVER
     ADD EVENT sqlserver.hadr_physical_seeding_restore_state_change,
     ADD EVENT sqlserver.hadr_physical_seeding_submit_callback
     ADD TARGET package0.event_file(
-        SET filename=N’autoseed.xel’,
+        SET filename=N'autoseed.xel',
             max_file_size=(5),
             max_rollover_files=(4)
         )

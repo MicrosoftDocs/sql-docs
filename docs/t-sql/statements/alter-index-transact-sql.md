@@ -218,7 +218,7 @@ ALTER INDEX { index_name | ALL }
   
 1.  Does not use the sort order.  
   
-2.  Acquires an exclusive lock on the table or partition while the rebuild occurs.  The data is “offline” and unavailable during the rebuild, even when using NOLOCK, RCSI, or SI.  
+2.  Acquires an exclusive lock on the table or partition while the rebuild occurs.  The data is "offline" and unavailable during the rebuild, even when using NOLOCK, RCSI, or SI.  
   
 3.  Re-compresses all data into the columnstore. Two copies of the columnstore index exist while the rebuild is taking place. When the rebuild is finished, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deletes the original columnstore index.  
   
@@ -650,7 +650,7 @@ In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, you may still 
   
 To rebuild a clustered columnstore index, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
-1.  Acquires an exclusive lock on the table or partition while the rebuild occurs. The data is “offline” and unavailable during the rebuild.  
+1.  Acquires an exclusive lock on the table or partition while the rebuild occurs. The data is "offline" and unavailable during the rebuild.  
   
 2.  Defragments the columnstore by physically deleting rows that have been logically deleted from the table; the deleted bytes are reclaimed on the physical media.  
   
@@ -730,7 +730,7 @@ The following functionality is disabled for resumable index rebuild operations
    -	Rebuilding an index that is disabled is not supported with RESUMABLE=ON
    -	ALTER INDEX REBUILD ALL command
    -	ALTER TABLE using index rebuild  
-   -	DDL command with “RESUMEABLE = ON” cannot be executed inside an explicit transaction (cannot be part of begin tran … commit  block)
+   -	DDL command with "RESUMEABLE = ON" cannot be executed inside an explicit transaction (cannot be part of begin tran … commit  block)
    -	Rebuild an index that has computed or TIMESTAMP column(s) as key columns.
 -	In case the base table contains LOB column(s) resumable clustered index rebuild requires a Sch-M lock in the Starting of this operation
    -	The SORT_IN_TEMPDB=ON option is not supported for resumable index 

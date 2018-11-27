@@ -86,7 +86,7 @@ DEA has an internet-enabled feature that can send telemetry information to Micro
 
 You can decide which events are collected. You also decide whether collected events are sent to Microsoft. There are four types of events:
 
-*   **TraceEvent**: Usage events for the application (for example, “triggered stop capture”).
+*   **TraceEvent**: Usage events for the application (for example, "triggered stop capture").
 *   **Exception**: Exception thrown during application usage.
 *   **DiagnosticEvent**: An event log to assist with diagnosis when problems occur (*not* sent to Microsoft).
 *   **FeedbackEvent**: User feedback that's submitted through the application.

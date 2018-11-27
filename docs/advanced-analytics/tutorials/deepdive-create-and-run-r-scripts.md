@@ -14,7 +14,7 @@ manager: cgronlun
 
 This article is part of the Data Science Deep Dive tutorial, on how to use [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
 
-Now that you’ve set up your data sources and established one or several compute contexts, you’re ready to run some high-powered R scripts using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  In this lesson, you use the server compute context to do some common machine learning tasks:
+Now that you've set up your data sources and established one or several compute contexts, you're ready to run some high-powered R scripts using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  In this lesson, you use the server compute context to do some common machine learning tasks:
 
 - Visualize data and generate some summary statistics
 - Create a linear regression model

@@ -48,7 +48,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 2.  Click the plus sign to expand the **Tables** folder.  
   
-3.  Click the plus sign to expand the table in which you want to view the statistic’s properties.  
+3.  Click the plus sign to expand the table in which you want to view the statistic's properties.  
   
 4.  Click the plus sign to expand the **Statistics** folder.  
   

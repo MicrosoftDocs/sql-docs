@@ -29,7 +29,7 @@ manager: craigg
   
 5.  Type **CleanseAndCurateSuppliers** for **Name** and click **OK**.  
   
-6.  In **Solution Explorer** window, right-click **Package.dtsx** and select **Rename**. If you don’t see **Solution Explorer** window, click **View** on the menu bar and click **Solution Explorer**.  
+6.  In **Solution Explorer** window, right-click **Package.dtsx** and select **Rename**. If you don't see **Solution Explorer** window, click **View** on the menu bar and click **Solution Explorer**.  
   
      ![Package.dtsx - Rename Menu](../../2014/tutorials/media/et-creatinganssisprojectusingsqlsdt-02.jpg "Package.dtsx - Rename Menu")  
   

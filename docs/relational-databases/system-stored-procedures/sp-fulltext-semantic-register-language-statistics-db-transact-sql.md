@@ -32,12 +32,12 @@ manager: craigg
   
 ```sql  
 EXEC sp_fulltext_semantic_register_language_statistics_db  
-    [ @dbname = ] ‘database_name’;  
+    [ @dbname = ] 'database_name';  
 GO  
 ```  
   
 ##  <a name="Arguments"></a> Arguments  
- [ @dbname = ] ‘*database_name*’  
+ [ @dbname = ] '*database_name*'  
  Is the name of the Semantic Language Statistics database to be registered for the current instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The database must already be attached. *database_name* is **sysname**, and may not be NULL.  
   
 ## Return Code Value  

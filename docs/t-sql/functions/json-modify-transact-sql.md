@@ -30,7 +30,7 @@ JSON_MODIFY ( expression , path , newValue )
  *expression*  
  An expression. Typically the name of a variable or a column that contains JSON text.  
   
- **JSON_MODIFY** returns an error if *expression* doesn’t contain valid JSON.  
+ **JSON_MODIFY** returns an error if *expression* doesn't contain valid JSON.  
   
  *path*  
  A JSON path expression that specifies the property to update.
@@ -201,7 +201,7 @@ PRINT @product
 }
 ```  
   
- If you don’t cast the new value to a numeric type, JSON_MODIFY treats it as text and surrounds it with double quotes.  
+ If you don't cast the new value to a numeric type, JSON_MODIFY treats it as text and surrounds it with double quotes.  
   
 ### Example - Increment a value  
  The following example shows how to increment the value of a property in JSON text with the JSON_MODIFY function. First you can take the value of the existing property and insert it as a new key:value pair. Then you can delete the old key by setting the value of the old property to NULL.  

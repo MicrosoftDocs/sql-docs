@@ -50,7 +50,7 @@ manager: craigg
  Every week, the database generates a WeeklyChanges table that contains price changes for the week and new books that were added during the week. By using a single MERGE statement, you can apply the changes in the WeeklyChanges table to the DimBook table. The MERGE statement inserts new rows for newly-added books, and updates the IsCurrent column to 0 for rows of existing books whose prices have changed. The MERGE statement also inserts new rows for books whose prices have changed, and for these new rows, sets the value of the IsCurrent column to 1.  
   
 ### Merge a Table with New Data Against the Old Table  
- The database models the properties of an object by using an “open schema,” that is, a table contains name-value pairs for each property. The Properties table has three columns: EntityID, PropertyID, and Value. A NewProperties table that is a newer version of the table has to be synchronized with the Properties table. To synchronize these two tables, you can use a single MERGE statement to perform the following operations:  
+ The database models the properties of an object by using an "open schema," that is, a table contains name-value pairs for each property. The Properties table has three columns: EntityID, PropertyID, and Value. A NewProperties table that is a newer version of the table has to be synchronized with the Properties table. To synchronize these two tables, you can use a single MERGE statement to perform the following operations:  
   
 -   Delete properties from the Properties table if they are absent from the NewProperties table.  
   

@@ -15,7 +15,7 @@ ms.author: genemi
 manager: craigg
 ---
 # Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP
-  The transaction performance collector in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] helps you evaluate if In-Memory OLTP will improve your database application’s performance. The transaction performance analysis report also indicates how much work you must do to enable In-Memory OLTP in your application. After you identify a disk-based table to port to In-Memory OLTP, you can use the [Memory Optimization Advisor](memory-optimization-advisor.md), to help you migrate the table. Similarly, the [Native Compilation Advisor](native-compilation-advisor.md) will help you port a stored procedure to a natively compiled stored procedure.  
+  The transaction performance collector in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] helps you evaluate if In-Memory OLTP will improve your database application's performance. The transaction performance analysis report also indicates how much work you must do to enable In-Memory OLTP in your application. After you identify a disk-based table to port to In-Memory OLTP, you can use the [Memory Optimization Advisor](memory-optimization-advisor.md), to help you migrate the table. Similarly, the [Native Compilation Advisor](native-compilation-advisor.md) will help you port a stored procedure to a natively compiled stored procedure.  
   
  This topic will discuss how to:  
   
@@ -198,7 +198,7 @@ manager: craigg
   
 -   Execution Statistics Section  
   
-     This section includes a table that shows the statistics that were collected about the stored procedure’s executions. The columns are as follows:  
+     This section includes a table that shows the statistics that were collected about the stored procedure's executions. The columns are as follows:  
   
     -   Cached Time. The time this execution plan is cached. If the stored procedure drops out of the plan cache and re-enters, there will be times for each cache.  
   
@@ -206,7 +206,7 @@ manager: craigg
   
     -   Total Execution Time. The total amount of execution time the stored procedure used during profiling. The higher the difference between this number and the CPU time is, the less efficiently the stored procedure is using the CPU.  
   
-    -   Total Cache Missed. The number of cache misses (reads from physical storage) that is caused by the stored procedure’s executions during profiling.  
+    -   Total Cache Missed. The number of cache misses (reads from physical storage) that is caused by the stored procedure's executions during profiling.  
   
     -   Execution Count. The number of times this stored procedure executed during profiling.  
   

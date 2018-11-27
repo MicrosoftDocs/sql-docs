@@ -39,7 +39,7 @@ manager: craigg
 -   [Browser Support for ReportViewer Web Server Controls in Visual Studio](#bkmk_controls)  
   
 ##  <a name="bkmk_powerview"></a> Power View Browser Scenarios  
- The list of supported browsers and browser versions that [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] supports, depends on what type of document is opened. Excel 2013 workbooks and “**.rdlx**” files utilize different components.  
+ The list of supported browsers and browser versions that [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] supports, depends on what type of document is opened. Excel 2013 workbooks and "**.rdlx**" files utilize different components.  
   
 |Document Type|Environment|Browser support|  
 |-------------------|-----------------|---------------------|  

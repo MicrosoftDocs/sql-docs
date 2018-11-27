@@ -73,7 +73,7 @@ In general, the driver is designed to be backward compatible so that you do not 
 The Microsoft JDBC Driver for SQL Server is available at no additional charge.
 
 **Can I redistribute the driver?**
-The JDBC Drivers 4.1, 4.2, 6.0, 6.2, 6.4, and 7.0 are redistributable. Review the “Distributable Code” clause in the license agreements.
+The JDBC Drivers 4.1, 4.2, 6.0, 6.2, 6.4, and 7.0 are redistributable. Review the "Distributable Code" clause in the license agreements.
 
 **Can I use the driver to access Microsoft SQL Server from a Linux computer?**
 Yes! You can use the driver to access SQL Server from Linux, Unix, and other non-Windows platforms. For more information, see [Microsoft JDBC Driver for SQL Server Support Matrix](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md).

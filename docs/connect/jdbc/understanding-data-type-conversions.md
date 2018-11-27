@@ -21,11 +21,11 @@ To facilitate the conversion of Java programming language data types to [!INCLUD
 
 ## Getter Method Conversions
 
-Based on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types, the following chart contains the JDBC driver’s conversion map for the get\<Type>() methods of the [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) class, and the supported conversions for the get\<Type> methods of the [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) class.
+Based on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types, the following chart contains the JDBC driver's conversion map for the get\<Type>() methods of the [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) class, and the supported conversions for the get\<Type> methods of the [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) class.
 
 ![JDBCGetterConversions](../../connect/jdbc/media/jdbcgetterconversions.gif "JDBCGetterConversions")
 
-There are three categories of conversions that are supported by the JDBC driver’s getter methods:
+There are three categories of conversions that are supported by the JDBC driver's getter methods:
 
 - **Non-Lossy (x)**: Conversions for cases where the getter type is the same or smaller than the underlying server type. For example, when calling getBigDecimal on an underlying server decimal column, no conversion is necessary.
 
@@ -41,7 +41,7 @@ For the Java typed data passed to the update\<Type>() methods of the [SQLServerR
 
 ![JDBCUpdaterConversions](../../connect/jdbc/media/jdbc_jdbcupdatterconversions.gif "JDBCUpdaterConversions")
 
-There are three categories of conversions supported by the JDBC driver’s updater methods:
+There are three categories of conversions supported by the JDBC driver's updater methods:
 
 - **Non-Lossy (x)**: Conversions for cases where the updater type is the same or smaller than the underlying server type. For example, when calling updateBigDecimal on an underlying server decimal column, no conversion is necessary.
 
@@ -69,7 +69,7 @@ The server tries any conversions and returns errors on failure.
 
 In the case of the **String** data type, if the value exceeds the length of **VARCHAR**, it maps to **LONGVARCHAR**. Similarly, **NVARCHAR** maps to **LONGNVARCHAR** if the value exceeds the supported length of **NVARCHAR**. The same is true for **byte[]**. Values longer than **VARBINARY** become **LONGVARBINARY**.
 
-There are two categories of conversions that are supported by the JDBC driver’s setter methods:
+There are two categories of conversions that are supported by the JDBC driver's setter methods:
 
 - **Non-Lossy (x)**: Conversions for numeric cases where the setter type is the same or smaller than the underlying server type. For example, when calling setBigDecimal on an underlying server **decimal** column, no conversion is necessary. For numeric to character cases, the Java **numeric** data type is converted to a **String**. For example, calling setDouble with a value of "53" on a varchar(50) column produces a character value "53" in that destination column.
 
@@ -98,7 +98,7 @@ For the Java typed data passed to the setObject(\<Type>) methods of the [SQLServ
 
 The setObject method with no specified target type uses the default mapping. In the case of the **String** data type, if the value exceeds the length of **VARCHAR**, it maps to **LONGVARCHAR**. Similarly, **NVARCHAR** maps to **LONGNVARCHAR** if the value exceeds the supported length of **NVARCHAR**. The same is true for **byte[]**. Values longer than **VARBINARY** become **LONGVARBINARY**.
 
-There are three categories of conversions that are supported by the JDBC driver’s setObject methods:
+There are three categories of conversions that are supported by the JDBC driver's setObject methods:
 
 - **Non-Lossy (x)**: Conversions for numeric cases where the setter type is the same or smaller than the underlying server type. For example, when calling setBigDecimal on an underlying server **decimal** column, no conversion is necessary. For numeric to character cases, the Java **numeric** data type is converted to a **String**. For example, calling setDouble with a value of "53" on a varchar(50) column will produce a character value "53" in that destination column.
 

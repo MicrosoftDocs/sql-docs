@@ -13,7 +13,7 @@ ms.author: lle
 manager: craigg
 ---
 # Automatically Generate Code Attribute Values (Master Data Services)
-  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], automatically generate values for an entity’s Code attribute when you want an integer to be automatically assigned to the Code value each time a new member is created.  
+  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], automatically generate values for an entity's Code attribute when you want an integer to be automatically assigned to the Code value each time a new member is created.  
   
 ## Prerequisites  
  To perform this procedure:  
@@ -38,7 +38,7 @@ manager: craigg
   
 6.  Select the **Create Code values automatically** check box.  
   
-7.  In the **Start with** box, type a number to begin incrementing. If members already exist, the Code will be set based on the highest existing value. For example, if the highest existing Code value is 299, the next member’s Code value will be set to 300.  
+7.  In the **Start with** box, type a number to begin incrementing. If members already exist, the Code will be set based on the highest existing value. For example, if the highest existing Code value is 299, the next member's Code value will be set to 300.  
   
 8.  Click **Save entity**.  
   

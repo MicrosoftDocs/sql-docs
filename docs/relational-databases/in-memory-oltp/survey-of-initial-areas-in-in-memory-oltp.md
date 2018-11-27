@@ -467,7 +467,7 @@ Refer to these other articles that discuss special considerations for memory-opt
   
 - [Migrating to In-Memory OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   - [Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)  
-  - The Transaction Performance Analysis report in SQL Server Management Studio helps you evaluate if In-Memory OLTP will improve your database application’s performance.  
+  - The Transaction Performance Analysis report in SQL Server Management Studio helps you evaluate if In-Memory OLTP will improve your database application's performance.  
   - Use the [Memory Optimization Advisor](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md) to help you migrate the disk-based database table to In-Memory OLTP.   
 - [Backup, Restore, and Recovery of Memory-Optimized Tables](https://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
   - The storage used by memory-optimized tables can be much larger than its size in memory, and it affects the size of the database backup.  

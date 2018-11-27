@@ -82,7 +82,7 @@ The tutorial includes sample projects so that you can compare your results again
   
     The tutorial projects work for [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] and later.  
   
-2.  Move the .zip file to a folder just below the root drive (for example, C:\Tutorial). This step mitigates the “Path too long” error that sometimes occurs if you attempt to unzip the files in the Downloads folder.  
+2.  Move the .zip file to a folder just below the root drive (for example, C:\Tutorial). This step mitigates the "Path too long" error that sometimes occurs if you attempt to unzip the files in the Downloads folder.  
   
 3.  Unzip the sample projects: right-click on the file and select **Extract All**. After extracting the files, you should have folders Lesson 1, 2, 3, 5, 6, 7, 8, 9, 10 Complete and Lesson 4 Start. 
   

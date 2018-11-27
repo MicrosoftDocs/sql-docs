@@ -212,7 +212,7 @@ manager: craigg
      ![rs_SprklineMtrxUnaligndBars](../../2014/tutorials/media/rs-sprklinemtrxunaligndbars.gif "rs_SprklineMtrxUnaligndBars")  
   
 ##  <a name="AlignSparklines"></a> 4. Align the Sparklines Vertically and Horizontally  
- The sparklines are hard to read when they don’t all use the same measurements. Both the horizontal and vertical axes for each need to match the rest.  
+ The sparklines are hard to read when they don't all use the same measurements. Both the horizontal and vertical axes for each need to match the rest.  
   
 #### To set alignment for the sparklines in the table  
   

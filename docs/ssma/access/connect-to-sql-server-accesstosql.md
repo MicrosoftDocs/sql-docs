@@ -46,5 +46,5 @@ If you want to securely connect to SQL Server, make use of Encrypt connection by
 If you want to use this option, select the **Trust Server Certificate** checkbox.  
   
 > [!NOTE]  
-> To enable **Trust Server Certificate**, “Encrypt” must be set to **True**.  
+> To enable **Trust Server Certificate**, "Encrypt" must be set to **True**.  
   

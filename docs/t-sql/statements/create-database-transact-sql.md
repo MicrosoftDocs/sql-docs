@@ -1181,7 +1181,7 @@ CREATE DATABASE db_copy
 The following example sets the catalog collation to DATABASE_DEFAULT during database creation, which sets the catalog collation to be the same as the database collation.
 
 ```sql
-CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140  (MAXSIZE = 100 MB, EDITION = ‘basic’)  
+CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140  (MAXSIZE = 100 MB, EDITION = 'basic')  
   WITH CATALOG_COLLATION = DATABASE_DEFAULT 
 ```
   

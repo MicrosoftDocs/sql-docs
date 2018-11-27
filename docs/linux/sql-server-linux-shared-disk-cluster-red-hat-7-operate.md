@@ -136,7 +136,7 @@ View the resource agent logs at `/var/log/cluster/corosync.log`
    ```
 
    > [!NOTE]
-   > If you’re using another firewall that doesn’t have a built-in high-availability configuration, the following ports need to be opened for Pacemaker to be able to communicate with other nodes in the cluster
+   > If you're using another firewall that doesn't have a built-in high-availability configuration, the following ports need to be opened for Pacemaker to be able to communicate with other nodes in the cluster
    >
    > * TCP: Ports 2224, 3121, 21064
    > * UDP: Port 5405

@@ -93,7 +93,7 @@ ORDER BY TABLE_NAME ASC
 ```  
   
 > [!NOTE]  
->  If a DMV is not available for a given rowset, the server returns the following error: “The \<schemarowset> request type was not recognized by the server". All other errors point to problems with the syntax.  
+>  If a DMV is not available for a given rowset, the server returns the following error: "The \<schemarowset> request type was not recognized by the server". All other errors point to problems with the syntax.  
   
 |Rowset|Description|  
 |------------|-----------------|  

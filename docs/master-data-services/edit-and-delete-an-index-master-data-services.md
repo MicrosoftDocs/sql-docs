@@ -17,7 +17,7 @@ manager: craigg
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  You can edit and delete an index that you’ve created on attributes.  
+  You can edit and delete an index that you've created on attributes.  
   
 ## Prerequisites  
  To perform this procedure:  

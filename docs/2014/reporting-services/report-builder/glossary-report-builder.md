@@ -152,7 +152,7 @@ manager: craigg
 |gauge|A gauge is a data region that presents data as a range with an indicator pointing to a specific value within the range.|  
 |gauge panel|The gauge panel is the encompassing outer element that contains one or more radial and linear gauges.  Use the gauge panel to define properties that apply for all gauges in a gauge panel.|  
 |gauge pointer|A gauge pointer is a needle, marker, or bar that indicates the current value on the gauge.  A gauge pointer is always attached to a gauge scale.|  
-|gauge range|A gauge range is a colored area that represents a “critical zone,” always bound by a start value and an end value, on the gauge scale.|  
+|gauge range|A gauge range is a colored area that represents a "critical zone," always bound by a start value and an end value, on the gauge scale.|  
 |gauge scale|A gauge scale is the range of values, bound by a minimum and a maximum, shown on the gauge.  Typically, a gauge scale contains gauge labels and gauge tick marks to give accurate readings of what the gauge pointer is showing.|  
 |geodesic data|Data that specifies points, lines, or areas on a curved surface.|  
 |geography data|A SQL Server spatial data type that represents data in a round-earth coordinate system,  such as GPS latitude and longitude coordinates.|  

@@ -51,7 +51,7 @@ manager: craigg
   
     4.  Change the `-Subscriber` parameter to the subscriber's availability group listener name.  
   
- When you create your subscription following these steps, then you won’t have to do anything after a failover.  
+ When you create your subscription following these steps, then you won't have to do anything after a failover.  
   
 ## Creating a Transactional Replication Push Subscription  
   

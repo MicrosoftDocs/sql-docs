@@ -37,7 +37,7 @@ manager: craigg
  *distance*  
  Is a value of type **float** (**double** in the .NET Framework) specifying the distance from the **geography** instance around which to calculate the buffer.  
   
- The maximum distance of the buffer cannot exceed 0.999 \* *π* * minorAxis \* minorAxis / majorAxis (~0.999 \* 1/2 Earth’s circumference) or the full globe.  
+ The maximum distance of the buffer cannot exceed 0.999 \* *π* * minorAxis \* minorAxis / majorAxis (~0.999 \* 1/2 Earth's circumference) or the full globe.  
   
 ## Return Types  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return type: **geography**  
@@ -53,7 +53,7 @@ manager: craigg
   
  This method will throw an **ArgumentException** in **FullGlobe** instances where the distance of the buffer exceeds the following limitation:  
   
- 0.999 \* *π* * minorAxis \* minorAxis / majorAxis (~0.999 \* 1/2 Earth’s circumference)  
+ 0.999 \* *π* * minorAxis \* minorAxis / majorAxis (~0.999 \* 1/2 Earth's circumference)  
   
  The maximum distance limit allows the construction of the buffer to be as flexible as possible.  
   

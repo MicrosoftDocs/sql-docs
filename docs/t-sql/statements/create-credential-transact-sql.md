@@ -91,7 +91,7 @@ GO
 ```  
   
 ### B. Creating a Credential for EKM  
- The following example uses a previously created account called `User1OnEKM` on an EKM module through the EKM’s Management tools, with a basic account type and password. The **sysadmin** account on the server creates a credential that is used to connect to the EKM account, and assigns it to the `User1`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account:  
+ The following example uses a previously created account called `User1OnEKM` on an EKM module through the EKM's Management tools, with a basic account type and password. The **sysadmin** account on the server creates a credential that is used to connect to the EKM account, and assigns it to the `User1`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account:  
   
 ```  
 CREATE CREDENTIAL CredentialForEKM  

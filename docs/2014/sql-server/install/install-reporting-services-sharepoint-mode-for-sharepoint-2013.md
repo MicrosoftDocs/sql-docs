@@ -69,11 +69,11 @@ manager: craigg
   
  **Installation and registering the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Service:**  
   
--   The current account during the installation (referred to as the ‘setup’ account) of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in SharePoint mode needs to have administrative rights in the local computer. If you are installing [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] after SharePoint is installed and the ‘setup’ account is also a member of the SharePoint farm administrators group, the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installation will register the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service for you. If you install [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] before SharePoint is installed or the ‘setup’ account is not a member of the farm administrators group, you register the service manually. See the section [Step 2: Register and Start the Reporting Services SharePoint Service](#bkmk_install_SSRS_sharedservice).  
+-   The current account during the installation (referred to as the 'setup' account) of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in SharePoint mode needs to have administrative rights in the local computer. If you are installing [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] after SharePoint is installed and the 'setup' account is also a member of the SharePoint farm administrators group, the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installation will register the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service for you. If you install [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] before SharePoint is installed or the 'setup' account is not a member of the farm administrators group, you register the service manually. See the section [Step 2: Register and Start the Reporting Services SharePoint Service](#bkmk_install_SSRS_sharedservice).  
   
  **Creating [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Service Applications**  
   
--   Following installation and registering the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service, create one or more [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service applications. The “SharePoint farm service account “ needs to temporarily be a member of the local administrators group so the Reporting Services service application can be created. For more information on SharePoint 2013 account permissions, see [Account permissions and security settings in SharePoint 2013](http://technet.microsoft.com/library/cc678863.aspx) (http://technet.microsoft.com/library/cc678863.aspx).  
+-   Following installation and registering the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service, create one or more [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service applications. The "SharePoint farm service account " needs to temporarily be a member of the local administrators group so the Reporting Services service application can be created. For more information on SharePoint 2013 account permissions, see [Account permissions and security settings in SharePoint 2013](http://technet.microsoft.com/library/cc678863.aspx) (http://technet.microsoft.com/library/cc678863.aspx).  
   
      It is security best practice that SharePoint farm administrator accounts are not also local operating system administrator accounts. If you add a farm admin account to the local administrators group as part of your installation process, it is recommended you remove the account from the local administrators group after installation is complete.  
   
@@ -88,7 +88,7 @@ manager: craigg
   
 4.  Click **Install** on the **Setup Support Files** page. Depending on what is already installed on your computer, you might see the following message:  
   
-    -   “One or more affected files have operations pending. You must restart your computer after the setup process is completed.”  
+    -   "One or more affected files have operations pending. You must restart your computer after the setup process is completed."  
   
     -   Click **Ok**.  
   
@@ -96,7 +96,7 @@ manager: craigg
   
 6.  On the **Installation Type** page, click **Add features to an existing instance of SQL Server 2014**. Select the correct instance in the drop-down list and click **Next**.  
   
-7.  If you see the **Product Key** page, type your key or accept the default of the ‘Enterprise Evaluation’ edition.  
+7.  If you see the **Product Key** page, type your key or accept the default of the 'Enterprise Evaluation' edition.  
   
      Click **Next**.  
   
@@ -214,7 +214,7 @@ manager: craigg
 3.  The status of the Reporting Services service will change from **Stopped** to **Started**. If the Reporting Services service is not in the list, use PowerShell to install the service.  
   
     > [!NOTE]  
-    >  If the Reporting Services service stays in the **Starting** status and does not change to **Started**, verify the ‘SharePoint 2013 Administration’ service is started in Windows Server Manager.  
+    >  If the Reporting Services service stays in the **Starting** status and does not change to **Started**, verify the 'SharePoint 2013 Administration' service is started in Windows Server Manager.  
   
 ##  <a name="bkmk_create_serrviceapplication"></a> Step 3: Create a Reporting Services Service Application  
  This section provides the steps to create a service application and a description of the properties, if you are reviewing an existing service application.  
@@ -280,9 +280,9 @@ manager: craigg
   
 -   Installs [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service and service proxy, and starts the service.  
   
--   Creates a service proxy named “Reporting Services”.  
+-   Creates a service proxy named "Reporting Services".  
   
--   Creates a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application named “Reporting Services Application”.  
+-   Creates a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application named "Reporting Services Application".  
   
 -   Enables the [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] feature for a site collection.  
   
@@ -380,7 +380,7 @@ Enable-SPfeature -identity "reportserver" -Url http://server/sites/bi
 ###  <a name="bkmk_configure_ECS"></a> Configure Excel Services and PowerPivot  
  If you want to view [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] Power View reports in an Excel 2013 workbook in SharePoint, an Excel Services Application on the farm needs to be configured to use an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Server in SharePoint mode. Also, the application pool security account used by the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application, must be an administrator on the Analysis Services Server. For more information, see the following:  
   
--   The section “Configure Excel Services for Analysis Services integration” in [PowerPivot for SharePoint 2013 Installation](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
+-   The section "Configure Excel Services for Analysis Services integration" in [PowerPivot for SharePoint 2013 Installation](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
   
 -   [Manage Excel Services data model settings (SharePoint Server 2013)](http://technet.microsoft.com/library/jj219780.aspx).  
   

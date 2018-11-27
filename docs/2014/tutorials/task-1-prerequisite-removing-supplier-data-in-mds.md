@@ -33,11 +33,11 @@ manager: craigg
   
 8.  Repeat the previous step to delete **State** entity.  
   
-9. Don’t close **Master Data Manager**.  
+9. Don't close **Master Data Manager**.  
   
 10. Switch to the Excel window that has **Cleansed and Matched Suppliers.xls** file open. Switch to the **Sheet1** tab at the bottom.  
   
-11. Select only the **first row with headers**. Don’t select any other row. You want to create the entities based on the Excel columns but don’t want to upload any data. Therefore you select only the first row with the headers.  
+11. Select only the **first row with headers**. Don't select any other row. You want to create the entities based on the Excel columns but don't want to upload any data. Therefore you select only the first row with the headers.  
   
 12. Click **Master Data** on the menu bar.  
   

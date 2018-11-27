@@ -65,7 +65,7 @@ This inventory can be in one of two forms:
 - SQL Server table
 
 ### If using a CSV file
-When using a csv file to import the data, ensure there are only two columns of data – **Instance Name** and **Database Name**, and that the columns don’t have header rows.
+When using a csv file to import the data, ensure there are only two columns of data – **Instance Name** and **Database Name**, and that the columns don't have header rows.
  
  ![csv file contents](../dma/media//dma-consolidatereports/dma-csv-file-contents.png)
 

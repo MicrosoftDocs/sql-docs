@@ -18,7 +18,7 @@ manager: craigg
 This article provides information on the two changes that are implemented to enhance the performance of the driver.
 
 ## Batching of Unprepare for Prepared Statements
-Since version 6.1.6-preview, an improvement in performance was implemented through minimizing server round trips to SQL Server. Previously, for every prepareStatement query, a call to unprepare was also sent. Now, the driver is batching unprepare queries up to the threshold “ServerPreparedStatementDiscardThreshold“, which has a default value of 10.
+Since version 6.1.6-preview, an improvement in performance was implemented through minimizing server round trips to SQL Server. Previously, for every prepareStatement query, a call to unprepare was also sent. Now, the driver is batching unprepare queries up to the threshold "ServerPreparedStatementDiscardThreshold", which has a default value of 10.
 
 > [!NOTE]  
 >  Users can change the default value with the following method:

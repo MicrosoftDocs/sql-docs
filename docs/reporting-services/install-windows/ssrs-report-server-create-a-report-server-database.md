@@ -39,7 +39,7 @@ ms.author: maghan
   
  **SharePoint Mode:** The Report Server Installation Options page only has one option for SharePoint mode of **Install Only**. This option installs all the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] files and the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] shared service. The next step is to create at least one [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application in one of the following ways:  
   
--   Use SharePoint Central Administration to create a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application. For more information see the “Service Application” section of [Step 3: Create a Reporting Services Service Application](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication).  
+-   Use SharePoint Central Administration to create a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application. For more information see the "Service Application" section of [Step 3: Create a Reporting Services Service Application](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication).  
   
 -   Use [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] PowerShell cmdlets to create a service application and the report server databases. For more information see the sample for creating service applications in the topic [PowerShell cmdlets for Reporting Services SharePoint Mode](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
   

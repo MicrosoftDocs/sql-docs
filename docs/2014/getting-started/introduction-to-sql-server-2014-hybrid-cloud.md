@@ -22,7 +22,7 @@ manager: craigg
 ## SQL Server, Azure, and Hybrid Cloud 
  By using Microsoft technologies, you can run code both on-premises and in the cloud, run in the cloud using on-premises data, or run entirely in the cloud leveraging more than one data center. Therefore, you can move your applications to the cloud at your own pace while preserving the value of existing legacy IT investments. 
  
- In this article, we’ll focus on the hybrid cloud scenarios that span from on-premises SQL Server to Azure public cloud offerings: [SQL Server in Azure Virtual Machines](http://msdn.microsoft.com/library/azure/jj823132.aspx) and [Azure Storage](http://www.azure.com/documentation/services/storage/). Specifically, we’ll discuss the following scenarios: 
+ In this article, we'll focus on the hybrid cloud scenarios that span from on-premises SQL Server to Azure public cloud offerings: [SQL Server in Azure Virtual Machines](http://msdn.microsoft.com/library/azure/jj823132.aspx) and [Azure Storage](http://www.azure.com/documentation/services/storage/). Specifically, we'll discuss the following scenarios: 
  
 -  [Backup and Restore Databases to/from Azure Storage](../../2014/getting-started/introduction-to-sql-server-2014-hybrid-cloud.md#backup) 
  
@@ -60,7 +60,7 @@ manager: craigg
 -  The [SQL Server Backup to Azure Tool](http://www.microsoft.com/download/details.aspx?id=40740) enables backup to Azure Blob Storage and encrypts and compresses SQL Server backups stored locally or in the cloud. This tool enables a single cloud backup strategy across for several versions of SQL Server, such as SQL Server 2005, 2008, 2008 R2, and 2014. 
  
 #### <a name="replica"></a> Maintain Database Replicas on Azure Virtual Machines 
- Having a stable disaster recovery solution for your databases is essential for your business’s success. Most customers need to configure a disaster recovery site and purchase additional hardware for database replicas. With SQL Server and Azure, you can maintain one or more replicas of your databases in the cloud. 
+ Having a stable disaster recovery solution for your databases is essential for your business's success. Most customers need to configure a disaster recovery site and purchase additional hardware for database replicas. With SQL Server and Azure, you can maintain one or more replicas of your databases in the cloud. 
  
  The key benefits of maintaining secondary replicas in Azure include: 
  
@@ -74,7 +74,7 @@ manager: craigg
  
 -  The [Add Azure Replica Wizard](http://msdn.microsoft.com/library/dn463980\(v=sql.120\).aspx) allows you to deploy one or more replicas of your databases to a virtual machine in Azure for disaster recovery. 
  
--  AlwaysOn Availability Groups, database mirroring, and log shipping are the most common technologies that you can use to address your application’s high availability and disaster recovery needs. For information, see [High Availability and Disaster Recovery for SQL Server in Azure Virtual Machines](http://msdn.microsoft.com/library/azure/jj870962.aspx). 
+-  AlwaysOn Availability Groups, database mirroring, and log shipping are the most common technologies that you can use to address your application's high availability and disaster recovery needs. For information, see [High Availability and Disaster Recovery for SQL Server in Azure Virtual Machines](http://msdn.microsoft.com/library/azure/jj870962.aspx). 
  
 #### <a name="store"></a> Store SQL Server Data Files in Azure Storage 
  Storing on-premises SQL Server data files in Azure Storage provides a flexible, reliable, and limitless off-site storage for your databases. Starting with SQL Server 2014, you can use [SQL Server Data Files in Miceosoft Azure](https://docs.microsoft.com/sql/relational-databases/databases/sql-server-data-files-in-microsoft-azure) to store SQL Server database files in Azure Storage. With this feature, you can move data and log files from on-premises database into Azure Storage, while keeping the compute node of SQL Server running on-premises. This feature enables you to have unlimited storage capacity in Azure Storage. 

@@ -33,7 +33,7 @@ manager: craigg
 5.  In the **MDS server address** box, type the URL of the [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web application, for example http://contoso/mds.  
   
     > [!NOTE]  
-    >  Ensure that you use the computer name; do not use “localhost”.  
+    >  Ensure that you use the computer name; do not use "localhost".  
   
 6.  Click **OK**. The name is displayed in the **Existing Connections** section.  
   

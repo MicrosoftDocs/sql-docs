@@ -199,7 +199,7 @@ Here are some tips and notes for successfully using SMB:
     mkdir <FolderName>
     ```
 
-    \<FolderName> is the name of the folder. The folder’s full path needs to be specified if not in the right location. The following example creates a folder named /var/opt/mssql/userdata.
+    \<FolderName> is the name of the folder. The folder's full path needs to be specified if not in the right location. The following example creates a folder named /var/opt/mssql/userdata.
 
     ```bash
     mkdir /var/opt/mssql/userdata

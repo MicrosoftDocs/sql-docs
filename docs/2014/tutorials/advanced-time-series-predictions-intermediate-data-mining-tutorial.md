@@ -38,7 +38,7 @@ manager: craigg
 ##  <a name="bkmk_newExtendData"></a> Creating the New Extended Sales Data  
  To update your sales data, you will need to get the latest sales figures. Of particular interest are the data just in from the Pacific region, which launched a regional sales promotion to call attention to the new stores and raise awareness of their products.  
   
- For this scenario, we’ll assume that the data has been imported from an Excel workbook that contains just three months of new data for a couple of regions. You’ll create a table for the data using a Transact-SQL script, and then define a data source view to use for prediction.  
+ For this scenario, we'll assume that the data has been imported from an Excel workbook that contains just three months of new data for a couple of regions. You'll create a table for the data using a Transact-SQL script, and then define a data source view to use for prediction.  
   
 #### Create the table with new sales data  
   

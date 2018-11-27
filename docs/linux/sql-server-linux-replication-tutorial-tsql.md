@@ -68,7 +68,7 @@ To complete this tutorial, you will need:
   ```
 
 1. Create Snapshot folder for SQL Server Agents to read/write to
-  On the distributor, create the snapshot folder and grant access to ‘mssql’ user 
+  On the distributor, create the snapshot folder and grant access to 'mssql' user 
 
   ```bash
   sudo mkdir /var/opt/mssql/data/ReplData/

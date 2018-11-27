@@ -349,7 +349,7 @@ GO
   
 |Column|Description|  
 |------------|-----------------|  
-|Name|error_reported<br /><br /> Error Number 1480: The REPLICATION_TYPE_MSG database "DATABASE_NAME" is changing roles from “OLD_ROLE” to “NEW_ROLE” due to REASON_MSG|  
+|Name|error_reported<br /><br /> Error Number 1480: The REPLICATION_TYPE_MSG database "DATABASE_NAME" is changing roles from "OLD_ROLE" to "NEW_ROLE" due to REASON_MSG|  
 |Category|errors|  
 |Channel|Admin|  
   

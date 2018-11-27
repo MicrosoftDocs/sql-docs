@@ -89,7 +89,7 @@ manager: craigg
 |`Memory Shrink Notifications/Sec`|  
   
 ##  <a name="bkmk_powershell"></a> Use PowerShell Cmdlets to return lists  
- ![PowerShell related content](../media/rs-powershellicon.jpg "PowerShell related content") The following Windows PowerShell script will return the list of performance counters for the CounterSetName “ReportServerSharePoint:Service”:  
+ ![PowerShell related content](../media/rs-powershellicon.jpg "PowerShell related content") The following Windows PowerShell script will return the list of performance counters for the CounterSetName "ReportServerSharePoint:Service":  
   
 ```  
 (get-counter -listset "ReportServerSharePoint:Service").paths  

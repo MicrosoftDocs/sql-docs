@@ -62,8 +62,8 @@ manager: craigg
   
 |**Term**|**Results with previous word breaker and stemmer**|**Results with new word breaker and stemmer**|  
 |--------------|--------------------------------------------------------|---------------------------------------------------|  
-|jěˊÿｑℭžl<br /><br /> *(where the terms are not valid English characters)*|‘jěˊÿｑℭžl’|je yq zl|  
-|table's|table’s<br /><br /> table|table’s|  
+|jěˊÿｑℭžl<br /><br /> *(where the terms are not valid English characters)*|'jěˊÿｑℭžl'|je yq zl|  
+|table's|table's<br /><br /> table|table's|  
 |cat-|cat<br /><br /> cat-|cat|  
 |v-z*(where v and z are noise words)*|*(no results)*|v-z|  
 |$100 000 USD|$100<br /><br /> 000<br /><br /> nn000<br /><br /> nn100$<br /><br /> usd|$100 000 usd<br /><br /> nn100000usd|  

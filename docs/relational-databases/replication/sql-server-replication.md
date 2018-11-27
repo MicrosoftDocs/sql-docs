@@ -24,7 +24,7 @@ manager: craigg
  As an alternative to replication, you can synchronize databases by using Microsoft Sync Framework. Sync Framework includes components and an intuitive and flexible API that make it easy to synchronize among SQL Server, SQL Server Express, SQL Server Compact, and SQL Azure databases. Sync Framework also includes classes that can be adapted to synchronize between a SQL Server database and any other database that is compatible with ADO.NET. For detailed documentation of the Sync Framework database synchronization components, see [Synchronizing Databases](https://go.microsoft.com/fwlink/?LinkId=209079). For an overview of Sync Framework, see [Microsoft Sync Framework Developer Center](https://go.microsoft.com/fwlink/?LinkId=209078). For a comparison between Sync Framework and Merge Replication, see [Synchronizing Databases Overview](https://msdn.microsoft.com/library/bb902818\(SQL.110\).aspx)  
   
  **Browse by area**  
- - [What’s New](../../relational-databases/replication/what-s-new-replication.md)  
+ - [What's New](../../relational-databases/replication/what-s-new-replication.md)  
  - [Backward Compatibility](../../relational-databases/replication/replication-backward-compatibility.md)  
  - [Replication Features and Tasks](../../relational-databases/replication/replication-features-and-tasks.md)  
  - [Technical Reference](../../relational-databases/replication/technical-reference-replication.md)  

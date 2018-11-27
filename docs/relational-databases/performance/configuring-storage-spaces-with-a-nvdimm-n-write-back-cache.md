@@ -47,7 +47,7 @@ $pd | Select FriendlyName, MediaType, BusType
  Using the $pd variable containing the PhysicalDisks, it is easy to build the storage pool using the New-StoragePool PowerShell cmdlet.  
   
 ```  
-New-StoragePool –StorageSubSystemFriendlyName “Windows Storage*” –FriendlyName NVDIMM_Pool –PhysicalDisks $pd  
+New-StoragePool –StorageSubSystemFriendlyName "Windows Storage*" –FriendlyName NVDIMM_Pool –PhysicalDisks $pd  
 ```  
   
  ![New-StoragePool](../../relational-databases/performance/media/new-storagepool.png "New-StoragePool")  

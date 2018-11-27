@@ -1,5 +1,5 @@
 ---
-title: Deploy the R model and use it in SQL (walkthrough) | Microsoft Docs
+title: Deploy an R model for predictions on SQL Server (walkthrough) | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -9,7 +9,7 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-# Deploy the R model and use it in SQL
+# Deploy the R model and use it in SQL Server (walkthrough)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In this lesson, learn how to deploy R models in a production environment by calling a trained model from a stored procedure. You can invoke the stored procedure from R or any application programming language that supports [!INCLUDE[tsql](../../includes/tsql-md.md)] (such as C#, Java, Python, and so forth) and use the model to make predictions on new observations.
@@ -17,12 +17,12 @@ In this lesson, learn how to deploy R models in a production environment by call
 This article demonstrates the two most common ways to use a model in scoring:
 
 > [!div class="checklist"]
-> * **Batch scoring mode** generates multiple predictions, passing a SQL query or table as input. A table of results is returned, which you might insert directly into a table or write to a file.
-> * **Individual scoring mode** generates predictions one at a time, passing a set of individual values to the stored procedure as input. The values correspond to features in the model, which the model uses to create a prediction, or generate another result such as a probability value. You can then return that value to the application, or user.
+> * **Batch scoring mode** generates multiple predictions
+> * **Individual scoring mode** generates predictions one at a time
 
 ## Batch scoring
 
-Create a stored procedure, *PredictTipBatchMode*, that does the following:
+Create a stored procedure, *PredictTipBatchMode*, that generates multiple predictions, passing a SQL query or table as input. A table of results is returned, which you might insert directly into a table or write to a file.
 
 - Gets a set of input data as a SQL query
 - Calls the trained logistic regression model that you saved in the previous lesson
@@ -112,6 +112,8 @@ Create a stored procedure, *PredictTipBatchMode*, that does the following:
     If you get a permissions error, make sure the login has the ability to execute the stored procedure.
 
 ## Single row scoring
+
+Individual scoring mode generates predictions one at a time, passing a set of individual values to the stored procedure as input. The values correspond to features in the model, which the model uses to create a prediction, or generate another result such as a probability value. You can then return that value to the application, or user.
 
 When calling the model for prediction on a row-by-row basis, you pass a set of values that represent features for each individual case. The stored procedure then returns a single prediction or probability. 
 

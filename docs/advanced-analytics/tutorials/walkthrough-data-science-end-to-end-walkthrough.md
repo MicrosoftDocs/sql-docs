@@ -1,5 +1,5 @@
 ---
-title: End-to-end data science walkthrough for R and SQL Server | Microsoft Docs
+title: Data science walkthrough for R and SQL Server | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -9,7 +9,7 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-# End-to-end data science walkthrough for R and SQL Server
+# Data science walkthrough for R and SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In this walkthrough, you develop an end-to-end solution for predictive modeling based on R feature support in either SQL Server 2016 or SQL Server 2017.

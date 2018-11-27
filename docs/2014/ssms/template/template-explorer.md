@@ -21,7 +21,7 @@ ms.author: sstein
 manager: craigg
 ---
 # Template Explorer
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides a variety of templates. Templates are boilerplate files containing SQL scripts that help you create objects in a database. The first time the template explorer is opened, a copy of the templates are placed in the user’s folder in C:\Users, under AppData\Roaming\Microsoft\SQL Server Management Studio\120\Templates.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides a variety of templates. Templates are boilerplate files containing SQL scripts that help you create objects in a database. The first time the template explorer is opened, a copy of the templates are placed in the user's folder in C:\Users, under AppData\Roaming\Microsoft\SQL Server Management Studio\120\Templates.  
   
  You can browse the available templates in Template Explorer, then open a template to incorporate the code into a code editor window. You can also create custom templates.  
   

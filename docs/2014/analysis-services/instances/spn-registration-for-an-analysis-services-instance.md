@@ -50,7 +50,7 @@ manager: craigg
  [SPN registration for SSAS instances listening on fixed ports](#bkmk_spnFixedPorts)  
   
 ##  <a name="bkmk_scnearios"></a> When SPN registration is required  
- Any client connection that specifies “SSPI=Kerberos” on the connection string will introduce SPN registration requirements for an Analysis Services instance.  
+ Any client connection that specifies "SSPI=Kerberos" on the connection string will introduce SPN registration requirements for an Analysis Services instance.  
   
  SPN registration is required under the following circumstances. For more detailed information, see [Configure Analysis Services for Kerberos constrained delegation](configure-analysis-services-for-kerberos-constrained-delegation.md).  
   
@@ -147,7 +147,7 @@ Setspn –s msolapsvc.3/<virtualname.FQDN > <domain user account>
  Recall that nodes in an Analysis Services cluster are required to use the default port (TCP 2383) and run under the same domain user account so that each node has the same SID. See [How to Cluster SQL Server Analysis Services](http://msdn.microsoft.com/library/dn736073.aspx) for more information.  
   
 ##  <a name="bkmk_spnHTTP"></a> SPN registration for SSAS instances configured for HTTP access  
- Depending on solution requirements, you might have configured Analysis Services for HTTP access. If your solution includes IIS as a middle tier component, and Kerberos authentication is a solution requirement, you might need to manually register an SPN for IIS. For more information, see “Configure the settings on the computer running IIS” in [How to configure SQL Server 2008 Analysis Services and SQL Server 2005 Analysis Services to use Kerberos authentication](http://support.microsoft.com/kb/917409).  
+ Depending on solution requirements, you might have configured Analysis Services for HTTP access. If your solution includes IIS as a middle tier component, and Kerberos authentication is a solution requirement, you might need to manually register an SPN for IIS. For more information, see "Configure the settings on the computer running IIS" in [How to configure SQL Server 2008 Analysis Services and SQL Server 2005 Analysis Services to use Kerberos authentication](http://support.microsoft.com/kb/917409).  
   
  In terms of SPN registration for the Analysis Services instance, there is no difference between an instance configured for TCP or HTTP. The connection to Analysis Services from IIS, using the MSMDPUMP ISAPI extension, is always TCP.  
   
@@ -170,7 +170,7 @@ Setspn –s msolapsvc.3/<virtualname.FQDN > <domain user account>
  [Service Accounts Step-by-Step Guide](http://technet.microsoft.com/library/dd548356\(WS.10\).aspx)   
  [Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
  [How to use SPNs when you configure Web applications that are hosted on Internet Information Services](http://support.microsoft.com/kb/929650)   
- [what’s new in service accounts](http://technet.microsoft.com/library/dd367859\(WS.10\).aspx)   
+ [what's new in service accounts](http://technet.microsoft.com/library/dd367859\(WS.10\).aspx)   
  [Configure Kerberos authentication for SharePoint 2010 Products (white paper)](http://technet.microsoft.com/library/ff829837.aspx)  
   
   

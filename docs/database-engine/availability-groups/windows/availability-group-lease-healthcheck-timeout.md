@@ -51,7 +51,7 @@ The default settings are optimized for quickly reacting to symptoms of hard fail
 
 The primary function of the lease mechanism is to take the SQL Server resource in the case that the cluster service cannot communicate with the instance while performing a failover to another node. When the cluster performs the offline operation on the AG cluster resource, the cluster service makes an RPC call to rhs.exe to take the resource offline. The resource DLL uses stored procedures to tell SQL Server to take the AG offline, but this stored procedure could fail or timeout. The resource host also stops its own lease renewal thread during the offline call. In the worst-case, SQL Server will cause the lease to expire in ½ \* LeaseTimeout and transition the instance to a resolving state. Failovers can be initiated by multiple different parties, but it is vitally important that the view of the cluster state is consistent across the cluster and across SQL Server instances. For example, imagine a scenario where the primary instance loses connection with the rest of the cluster. Each node in the cluster will determine a failure at similar times due to the cluster timeout values, but only the primary node can interact with the primary SQL Server instance to force it to give up the primary role. 
 
-From the primary node’s perspective, the cluster service will have lost quorum and the service will begin to terminate itself. The cluster service will issue an RPC call to the resource host to terminate the process. This terminate call is responsible for taking the AG offline on the SQL Server instance. This offline call is done via T-SQL, but cannot guarantee that the connection will be successfully established between SQL and the resource DLL. 
+From the primary node's perspective, the cluster service will have lost quorum and the service will begin to terminate itself. The cluster service will issue an RPC call to the resource host to terminate the process. This terminate call is responsible for taking the AG offline on the SQL Server instance. This offline call is done via T-SQL, but cannot guarantee that the connection will be successfully established between SQL and the resource DLL. 
 
 From the perspective of the rest of the cluster, there is currently no primary replica and it will vote and establish a single new primary for the remaining nodes in the cluster. If stored procedure that was called by the resource DLL, fails or times-out, the cluster could be vulnerable to a split brain scenario. 
 
@@ -117,14 +117,14 @@ The lease mechanism is controlled by a single value specific to each AG in a WSF
    ![Properties](media/availability-group-lease-healthcheck-timeout/image3.png) 
 
 
-   Depending on the AG’s configuration there may be additional resources for listeners, shared disks, file shares, etc., these resources do not require any additional configuration. 
+   Depending on the AG's configuration there may be additional resources for listeners, shared disks, file shares, etc., these resources do not require any additional configuration. 
 
    
 ### Health Check Values 
 
 Two values control the Always On health check: FailureConditionLevel and HealthCheckTimeout. The FailureConditionLevel indicates the tolerance level to specific failure conditions reported by `sp_server_diagnostics` and the HealthCheckTimeout configures the time the resource DLL can go without receiving an update from `sp_server_diagnostics`. The update interval for `sp_server_diagnostics` is always HealthCheckTimeout / 3. 
 
-To configure the failover condition level, use the `FAILURE_CONDITION_LEVEL = <n>` option of the `CREATE` or `ALTER` `AVAILABILITY GROUP` statement, where `<n>` is an integer between 1 and 5. The following command sets the failure condition level to 1 for AG ‘AG1’: 
+To configure the failover condition level, use the `FAILURE_CONDITION_LEVEL = <n>` option of the `CREATE` or `ALTER` `AVAILABILITY GROUP` statement, where `<n>` is an integer between 1 and 5. The following command sets the failure condition level to 1 for AG 'AG1': 
 
 ```sql
 ALTER AVAILABILITY GROUP AG1 SET (FAILURE_CONDITION_LEVEL = 1); 

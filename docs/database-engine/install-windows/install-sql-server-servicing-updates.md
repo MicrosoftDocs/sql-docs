@@ -47,7 +47,7 @@ On an installed instance of [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md
   
 The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] updates are available through [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update (MU), Windows Server Update Services (WSUS) and the Microsoft Download Center. Security and Critical updates for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] are available through [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update, and to be able to see these updates you need to opt-into MU through the Windows Update applet in Control panel.  
   
-When you receive an update through [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update, it will update all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features to the latest version in an unattended mode. If you need more flexibility or don’t have internet or WSUS access, you must obtain the updates from the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Download Center.  
+When you receive an update through [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update, it will update all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features to the latest version in an unattended mode. If you need more flexibility or don't have internet or WSUS access, you must obtain the updates from the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Download Center.  
   
 ## See Also  
 [Install SQL Server from the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)

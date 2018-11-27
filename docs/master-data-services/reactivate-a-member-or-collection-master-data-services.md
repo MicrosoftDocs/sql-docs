@@ -34,7 +34,7 @@ manager: craigg
   
  When you reactivate a member, its attributes and its membership in hierarchies and collections are restored.  
   
- You can also reactivate collections. When you do, the collection’s attributes and the members that belong to the collection are restored.  
+ You can also reactivate collections. When you do, the collection's attributes and the members that belong to the collection are restored.  
   
  When either a collection or member is reactivated, all previous transactions are restored.  
   

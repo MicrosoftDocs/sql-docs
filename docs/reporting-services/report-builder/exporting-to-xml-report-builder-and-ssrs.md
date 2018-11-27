@@ -118,7 +118,7 @@ ms.author: maggies
  The corner is not rendered. Only the contents of the corner are rendered.  
   
 #### Tablix Cells  
- Tablix cells are rendered as elements. The name of the element is taken from the cell’s DataElementName RDL property.  
+ Tablix cells are rendered as elements. The name of the element is taken from the cell's DataElementName RDL property.  
   
 #### Automatic Subtotals  
  Tablix automatic subtotals are not rendered.  

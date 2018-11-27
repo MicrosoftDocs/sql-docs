@@ -255,7 +255,7 @@ The granular settings can override the global ones and that resource governor ca
 
   - If the query hint is not 0, it is capped by the resource governor setting.
 
-- The DB scoped setting (unless it’s 0) overrides the sp_configure setting unless there is a query hint and is capped by the resource governor setting.
+- The DB scoped setting (unless it's 0) overrides the sp_configure setting unless there is a query hint and is capped by the resource governor setting.
 
 - The sp_configure setting is overridden by the resource governor setting.
 

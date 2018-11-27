@@ -23,7 +23,7 @@ The **Intelligent query processing** feature family includes features with broad
 ![Intelligent Query Processing Features](./media/3_IQPFeatureFamily.png)
 
 ## Adaptive Query Processing
-The adaptive query processing feature family includes query processing improvements that adapt optimization strategies to your application workload’s runtime conditions. These improvements included: 
+The adaptive query processing feature family includes query processing improvements that adapt optimization strategies to your application workload's runtime conditions. These improvements included: 
 -  Batch mode adaptive joins
 -  Memory grant feedback
 -  Interleaved execution for multi-statement table-valued functions (MSTVFs)
@@ -107,7 +107,7 @@ Even if a query does not involve any table with a columnstore index, the query p
 1.	An initial check of table sizes, operators used, and estimated cardinalities in the input query.
 2.	Additional checkpoints, as the optimizer discovers new, cheaper plans for the query. If these alternative plans do not make significant use of batch mode, the optimizer will stop exploring batch mode alternatives.
 
-If batch mode on rowstore is used, in the query execution plan you will see the actual execution mode as “batch mode” used by the scan operator for on-disk heaps and B-tree indexes.  This batch mode scan  can evaluate batch mode bitmap filters.  You may also see other batch mode operators in the plan, such as hash joins, hash-based aggregates, sorts, window aggregates, filters, concatenation, and compute scalar operators.
+If batch mode on rowstore is used, in the query execution plan you will see the actual execution mode as "batch mode" used by the scan operator for on-disk heaps and B-tree indexes.  This batch mode scan  can evaluate batch mode bitmap filters.  You may also see other batch mode operators in the plan, such as hash joins, hash-based aggregates, sorts, window aggregates, filters, concatenation, and compute scalar operators.
 
 ### Remarks
 1.	There is no guarantee that query plans will use batch mode. The query optimizer may decide that batch mode does not look beneficial for the query. 

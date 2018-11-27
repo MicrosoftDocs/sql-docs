@@ -35,7 +35,7 @@ manager: craigg
   
 7.  Drag-drop **Record Status** to the **Condition** column.  
   
-8.  Type **==“Corrected”** next to **[Record Status]** for the **Condition** column.  
+8.  Type **=="Corrected"** next to **[Record Status]** for the **Condition** column.  
   
 9. Click **Case 1** in the **Output Name Column**, and change the name to **Corrected**.  
   

@@ -177,7 +177,7 @@ The **Time Skew** tab displays skewed tasks based on task execution time.
 ### Executor Usage Analysis
 The Executor Usage Graph visualizes the Spark job actual executor allocation and running status.  
 
-+ Click **Executor Usage Analysis**, then we draft four types curves about executor usage. They include **Allocated Executors**, **Running Executors**, **idle Executors**, and **Max Executor Instances**. Regarding allocated executors, each "Executor added" or "Executor removed" event will increase or decrease the allocated executors. You can check "Event Timeline" in the “Jobs" tab for more comparison.
++ Click **Executor Usage Analysis**, then we draft four types curves about executor usage. They include **Allocated Executors**, **Running Executors**, **idle Executors**, and **Max Executor Instances**. Regarding allocated executors, each "Executor added" or "Executor removed" event will increase or decrease the allocated executors. You can check "Event Timeline" in the "Jobs" tab for more comparison.
 
     ![Executors tab](./media/apache-azure-spark-history-server/sparkui-diagnosis-executors.png)
 

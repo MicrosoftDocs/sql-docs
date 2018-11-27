@@ -27,7 +27,7 @@ manager: craigg
 ## Syntax  
   
 ```sql  
-sp_kill_filestream_non_transacted_handles [[ @table_name = ] ‘table_name’, [[ @handle_id = ] @handle_id]]  
+sp_kill_filestream_non_transacted_handles [[ @table_name = ] 'table_name', [[ @handle_id = ] @handle_id]]  
 ```  
   
 ## Arguments  
@@ -70,10 +70,10 @@ sp_kill_filestream_non_transacted_handles [[ @table_name = ] ‘table_name’, [
 sp_kill_filestream_non_transacted_handles  
   
 -- Close all open handles in myFileTable.  
-sp_kill_filestream_non_transacted_handles @table_name = ’myFileTable’  
+sp_kill_filestream_non_transacted_handles @table_name = 'myFileTable'  
   
 -- Close a specific handle in myFileTable.  
-sp_kill_filestream_non_transacted_handles @table_name = ’myFileTable’, @handle_id = 0xFFFAAADD  
+sp_kill_filestream_non_transacted_handles @table_name = 'myFileTable', @handle_id = 0xFFFAAADD  
 ```  
   
  The following example shows how to use a script to get a *handle_id* and close it.  

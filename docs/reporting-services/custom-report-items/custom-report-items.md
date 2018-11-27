@@ -23,7 +23,7 @@ ms.author: maghan
 ## Custom Report Item Scenarios  
  Developers who need to integrate [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] into their applications may require functionality that is not natively supported in RDL. This may include items such as: map controls, horizontal lists, columnar lists, and repivotable matrixes. A run-time custom report item component can be developed and distributed with an application to fill this need.  
   
- In addition to providing functionality that isn’t natively supported, some developers may want to extend existing functionality with alternative versions of controls that are already included with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. In this scenario, a developer could provide three components: a run-time component, a design-time component, and a design-time report item conversion component that converts an existing report item into a custom report item on demand.  
+ In addition to providing functionality that isn't natively supported, some developers may want to extend existing functionality with alternative versions of controls that are already included with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. In this scenario, a developer could provide three components: a run-time component, a design-time component, and a design-time report item conversion component that converts an existing report item into a custom report item on demand.  
   
 ## In This Section  
  [Custom Report Item Architecture](../../reporting-services/custom-report-items/custom-report-item-architecture.md)  

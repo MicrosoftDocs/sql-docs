@@ -41,7 +41,7 @@ manager: craigg
 4.  Enter `12` for **HoldoutSeed**.  
   
 ## Deploying and Processing the Models  
- In Data Mining Designer, you can decide which objects to process, depending on the scope of changes you’ve made to your model or the underlying data:  
+ In Data Mining Designer, you can decide which objects to process, depending on the scope of changes you've made to your model or the underlying data:  
   
  For this task, because the data and the models are new, you will process the structure and all the models at the same time.  
   

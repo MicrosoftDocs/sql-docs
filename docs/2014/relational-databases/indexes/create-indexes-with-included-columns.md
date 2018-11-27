@@ -67,7 +67,7 @@ manager: craigg
   
 -   Computed columns derived from `image`, `ntext`, and `text` data types can be nonkey columns as long as the computed column data type is allowed as a nonkey index column.  
   
--   Nonkey columns cannot be dropped from a table unless that table’s index is dropped first.  
+-   Nonkey columns cannot be dropped from a table unless that table's index is dropped first.  
   
 -   Nonkey columns cannot be changed, except to do the following:  
   

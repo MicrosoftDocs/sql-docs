@@ -234,7 +234,7 @@ Use the **General** page of the **Foreach Loop Editor** dialog box to name and d
  Specify the files to enumerate.  
   
 > [!NOTE]  
->  Use wildcard characters (*) to specify the files to include in the collection. For example, to include files with names that contain “abc”, use the following filter: \*abc\*.  
+>  Use wildcard characters (*) to specify the files to include in the collection. For example, to include files with names that contain "abc", use the following filter: \*abc\*.  
 >   
 >  When you specify a file name extension, the enumerator also returns files that have the same extension with additional characters appended. (This is the same behavior as that of the **dir** command in the operating system, which also compares 8.3 file names for backward compatibility.) This behavior of the enumerator could cause unexpected results. For example, you want to enumerate only Excel 2003 files, and you specify "*.xls". However, the enumerator also returns Excel 2007 files because those files have the extension, ".xlsx".  
 >   

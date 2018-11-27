@@ -39,7 +39,7 @@ manager: craigg
     ```  
   
     > [!IMPORTANT]  
-    >  If you don’t include the parentheses around the variable as shown above, the report fails to render and the “must declare the scalar variable” error is displayed.  
+    >  If you don't include the parentheses around the variable as shown above, the report fails to render and the "must declare the scalar variable" error is displayed.  
   
      A dataset parameter for an embedded dataset or a shared dataset is created automatically for the query variable. A report parameter is created automatically for the dataset parameter.  
   
@@ -73,7 +73,7 @@ manager: craigg
     ```  
   
     > [!IMPORTANT]  
-    >  If you don’t include the parentheses around the variable as shown above, the report fails to render and the “must declare the scalar variable” error is displayed.  
+    >  If you don't include the parentheses around the variable as shown above, the report fails to render and the "must declare the scalar variable" error is displayed.  
   
      A dataset parameter for an embedded dataset or a shared dataset is created automatically for the query variable. A report parameter is created automatically for the dataset parameter.  
   

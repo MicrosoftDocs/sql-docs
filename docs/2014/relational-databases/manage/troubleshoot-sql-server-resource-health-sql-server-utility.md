@@ -14,7 +14,7 @@ manager: craigg
 # Troubleshoot SQL Server Resource Health (SQL Server Utility)
   Troubleshooting resource health issues identified by a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UCP might include mitigating overutilized CPU on a computer or on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], or mitigating overutilized CPU for a data-tier application. Other issues might include resolving overutilized file space for database files or resolving overutilization of allocated disk space on a storage volume.  
   
- Note that if a database is in “emergency” state, the health state will display overutilized log file space.  
+ Note that if a database is in "emergency" state, the health state will display overutilized log file space.  
   
  For more information about failed data collection resulting in gray status icons in the managed instance list view on a UCP, see [Troubleshoot the SQL Server Utility](../../database-engine/troubleshoot-the-sql-server-utility.md). For more information about getting started with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility, see [SQL Server Utility Features and Tasks](sql-server-utility-features-and-tasks.md).  
   

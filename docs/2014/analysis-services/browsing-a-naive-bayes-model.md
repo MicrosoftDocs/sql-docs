@@ -31,7 +31,7 @@ manager: craigg
  For these examples, we used the Source data in the sample workbook, and grouped the column, **Yearly Income**, into five income groups, from **Very Low** to **Very High**. The Naïve Bayes model then analyzed the factors correlated with each income category.  
   
 ###  <a name="bkmk_DepNet"></a> Dependency Network  
- The first window you’ll use is the **Dependency Network**. It shows you at a glance which inputs are closely correlated to the selected outcome.  
+ The first window you'll use is the **Dependency Network**. It shows you at a glance which inputs are closely correlated to the selected outcome.  
   
  ![dependency network in Naive Bayes viewer](media/dm13-nb.gif "dependency network in Naive Bayes viewer")  
   

@@ -23,7 +23,7 @@ ms.author: owend
 manager: craigg
 ---
 # Choosing Data for Data Mining
-  As you start data mining, you might ask “How much data do I need?” or “Are there any special requirements I should know about when cleaning or formatting my data?”  
+  As you start data mining, you might ask "How much data do I need?" or "Are there any special requirements I should know about when cleaning or formatting my data?"  
   
  In particular, people new to data mining often run into problems with Excel data, such as needing to format data consistently within columns, cleaning up missing values, or binning numbers. This section also lists data requirements for specific kinds of models.  
   
@@ -174,7 +174,7 @@ manager: craigg
   
  For example, if a column contains numbers that repeat in a specific interval to indicate the days of the week, you might specify the content type of that column as `Cyclical`.  
   
- You don’t have to worry about content types if you use the wizards and tools provided in this add-ins. However, if you use the [Add Model to Structure &#40;Data Mining Add-ins for Excel&#41;](add-model-to-structure-data-mining-add-ins-for-excel.md) modeling option to add a new model to existing data, you might get an error relating to content types.  
+ You don't have to worry about content types if you use the wizards and tools provided in this add-ins. However, if you use the [Add Model to Structure &#40;Data Mining Add-ins for Excel&#41;](add-model-to-structure-data-mining-add-ins-for-excel.md) modeling option to add a new model to existing data, you might get an error relating to content types.  
   
  The reason is that some types of model require a certain kind of data (such as a time stamp). The tools process these columns according to specific requirements and also add a content type property. Therefore, if you re-use the data with a completely different algorithm, you might need to change the data type or content type.  
   

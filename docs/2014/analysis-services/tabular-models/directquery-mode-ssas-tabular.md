@@ -129,7 +129,7 @@ manager: craigg
   
 -   Consider whether users have the necessary level of access to the data in the relational data store.  
   
--   Users who view the same model or report might see different data, depending on the user’s security context.  
+-   Users who view the same model or report might see different data, depending on the user's security context.  
   
 -   If the model cache has been preserved, the cache is secured using the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] security model (roles). The cache might contain data that the model designer is privileged to see but the user is not. Model and report designers should either clear the cache, or secure this data by controlling access via roles.  
   

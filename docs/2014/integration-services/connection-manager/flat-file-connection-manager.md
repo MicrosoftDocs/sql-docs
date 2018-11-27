@@ -50,7 +50,7 @@ manager: craigg
   
 -   Specify a text qualifier character. Each column can be configured to recognize a text qualifier.  
   
-     The use of a qualifier character to embed a qualifier character into a qualified string is now supported. The double instance of a text qualifier is interpreted as a literal, single instance of that string. For example, if the text qualifier is a single quote and the input data is ‘abc’, ‘def’, ‘g’hi’, the output data is abc, def, g’hi.  
+     The use of a qualifier character to embed a qualifier character into a qualified string is now supported. The double instance of a text qualifier is interpreted as a literal, single instance of that string. For example, if the text qualifier is a single quote and the input data is 'abc', 'def', 'g'hi', the output data is abc, def, g'hi.  
   
 -   Set properties such as the name, data type, and maximum width on individual columns.  
   

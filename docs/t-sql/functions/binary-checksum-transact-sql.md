@@ -71,7 +71,7 @@ or
   
 For example, the strings "McCavity" and "Mccavity" have different BINARY_CHECKSUM values. In contrast, for a case-insensitive server, CHECKSUM returns the same checksum values for those strings. You should avoid comparison of CHECKSUM values with BINARY_CHECKSUM values.
  
-BINARY_CHECKSUM supports up to 8,000 characters of type **varbinary(max)** and up to 255 characters of type **nvarchar(max)**.
+BINARY_CHECKSUM supports any length of type **varbinary(max)** and up to 255 characters of type **nvarchar(max)**.
   
 ## Examples  
 This example uses `BINARY_CHECKSUM` to detect changes in a table row.

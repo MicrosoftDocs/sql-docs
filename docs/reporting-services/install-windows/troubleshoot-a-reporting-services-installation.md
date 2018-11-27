@@ -71,7 +71,7 @@ ms.author: maghan
  ![Arrow icon used with Back to Top link](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Troubleshoot Problems with SharePoint Mode installations](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_no_ssrs_service"></a> You do not see the SQL Server Reporting Services service in SharePoint Central Administration after installing SQL Server 2016 SSRS in SharePoint mode  
- **Description:** If after successfully installing SQL Server 2016 Reporting Services in SharePoint mode and the SQL Server 2016 Reporting Services Add-in for SharePoint 2013/2016, you do not see “SQL Server Reporting Services” in the following two menus, then the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service has not been registered:  
+ **Description:** If after successfully installing SQL Server 2016 Reporting Services in SharePoint mode and the SQL Server 2016 Reporting Services Add-in for SharePoint 2013/2016, you do not see "SQL Server Reporting Services" in the following two menus, then the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service has not been registered:  
   
 -   SharePoint 2013/2016 Central Administration -> "Application Management" -> "Manage Services on Server" page  
   
@@ -95,7 +95,7 @@ ms.author: maghan
         Get-SPServiceInstance -all |where {$_.TypeName -like "SQL Server Reporting*"} | Start-SPServiceInstance  
         ```  
   
-2.  Verify the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Service shows status as “**Started**” on the page: SharePoint 2013/2016 Central Administration -> "**Application Management**" -> "**Manage Services on Server**"  
+2.  Verify the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Service shows status as "**Started**" on the page: SharePoint 2013/2016 Central Administration -> "**Application Management**" -> "**Manage Services on Server**"  
   
  ![Arrow icon used with Back to Top link](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Troubleshoot Problems with SharePoint Mode installations](#bkmk_tshoot_sharepoint)  
   
@@ -131,7 +131,7 @@ ms.author: maghan
  
  - The SSRS service application is not mapped to this web application. Use the SSRS service application pages to associate the SSRS service application proxy to the Application Proxy Group for this web application. 
   
- **Workaround:** The error message contains three suggested steps to correct this issue. The first suggestion in the message ‘A report server URL is not configured.’ is relevant when integrating with report server version previous to [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. SharePoint Configuration for the previous report server versions is completed on the **General Application Settings** page, using the **SQL Server Reporting Services (2008 and 2008 R2)**..  
+ **Workaround:** The error message contains three suggested steps to correct this issue. The first suggestion in the message 'A report server URL is not configured.' is relevant when integrating with report server version previous to [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. SharePoint Configuration for the previous report server versions is completed on the **General Application Settings** page, using the **SQL Server Reporting Services (2008 and 2008 R2)**..  
   
  **More Information:** You will see this error message when attempting to use any of the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] functionality that requires a connection to the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service. This includes:  
   
@@ -179,7 +179,7 @@ ms.author: maghan
 ###  <a name="bkmk_RS_SHP_notsupported"></a> You see an error message that RS_SHP is not supported with PREPAREIMAGE  
  **Description:** When you try to run PREPAREIMAGE for [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] you see an error message similar to this one:  
   
- “The specified feature 'RS_SHP' is not supported when running the PREPAREIMAGE action, since it does not support SysPrep. Remove the features that are not compatible with SysPrep and run setup again.”  
+ "The specified feature 'RS_SHP' is not supported when running the PREPAREIMAGE action, since it does not support SysPrep. Remove the features that are not compatible with SysPrep and run setup again."  
   
  **Workaround:** There is no work-around. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] does not support SYSPREP (PREPAREIMAGE). [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode does support SYSPREP.  
   

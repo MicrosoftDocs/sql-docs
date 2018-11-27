@@ -42,7 +42,7 @@ manager: craigg
 |-|-|  
 |**Variables**|An attribute in the mining model.|  
 |**Values**|A value of the attribute selected in **Variables**.|  
-|**Favors \<cluster 1>**|The bar graph on the left represents the probability that the selected attribute-value pair is representative of the cluster selected in **Cluster 1**. You can pause the mouse over the bar to see the value, represented as a percentage. Note that even if the value is zero, it doesn’t mean the attribute-value is necessarily missing from the cluster, just that the distribution strongly favors one cluster over the other.|  
+|**Favors \<cluster 1>**|The bar graph on the left represents the probability that the selected attribute-value pair is representative of the cluster selected in **Cluster 1**. You can pause the mouse over the bar to see the value, represented as a percentage. Note that even if the value is zero, it doesn't mean the attribute-value is necessarily missing from the cluster, just that the distribution strongly favors one cluster over the other.|  
 |**Favors \<cluster 2>**|The bar graph on the right represents the probability that the selected attribute-value pair is representative of the cluster selected in **Cluster 2**.|  
   
 ## See Also  

@@ -80,7 +80,7 @@ To revert to the behavior for SQL Server 2016 and before, enable trace flag 9571
 Security permissions vary depending on the type of replica being initialized:
 
 * For a traditional availability group, permissions must be granted to the availability group on the secondary replica as it is joined to the availability group. In Transact-SQL, use the command `ALTER AVAILABILITY GROUP [<AGName>] GRANT CREATE ANY DATABASE`.
-* For a distributed availability group where the replica’s databases that are being created are on the primary replica of the second availability group, no extra permissions are required as it is already a primary.
+* For a distributed availability group where the replica's databases that are being created are on the primary replica of the second availability group, no extra permissions are required as it is already a primary.
 * For a secondary replica on the second availability group of a distributed availability group, you must use the command `ALTER AVAILABILITY GROUP [<2ndAGName>] GRANT CREATE ANY DATABASE`. This secondary replica is seeded from the primary of the second availability group.
 
 ## Create an availability group with automatic seeding
@@ -148,7 +148,7 @@ In addition to the [Dynamic Management Views](#dynamic-management-views) describ
 
 ## Combine backup and restore with automatic seeding
 
-It is possible to combine the traditional backup, copy, and restore with automatic seeding. In this case, first restore the database on a secondary replica including all available transaction logs. Next, enable automatic seeding when creating the availability group to "catch up" the secondary replica’s database, as if a tail-log backup were restored (see [Tail-Log Backups (SQL Server)](../../../relational-databases/backup-restore/tail-log-backups-sql-server.md)).
+It is possible to combine the traditional backup, copy, and restore with automatic seeding. In this case, first restore the database on a secondary replica including all available transaction logs. Next, enable automatic seeding when creating the availability group to "catch up" the secondary replica's database, as if a tail-log backup were restored (see [Tail-Log Backups (SQL Server)](../../../relational-databases/backup-restore/tail-log-backups-sql-server.md)).
 
 ## Add a database to an availability group with automatic seeding
 
@@ -157,7 +157,7 @@ If the secondary replica used automatic seeding when it was added to the availab
 
 ## Change the seeding mode of a replica
 
-A replica’s seeding mode can be altered after the availability group is created, so automatic seeding can be enabled or disabled. Enabling automatic seeding after creation allows a database to be added to the availability group using automatic seeding if it was created with backup, copy, and restore. For example:
+A replica's seeding mode can be altered after the availability group is created, so automatic seeding can be enabled or disabled. Enabling automatic seeding after creation allows a database to be added to the availability group using automatic seeding if it was created with backup, copy, and restore. For example:
 
 ```sql
 ALTER AVAILABILITY GROUP [AGName]
@@ -216,7 +216,7 @@ CREATE EVENT SESSION [AG_autoseed] ON SERVER
     ADD EVENT sqlserver.hadr_physical_seeding_restore_state_change,
     ADD EVENT sqlserver.hadr_physical_seeding_submit_callback
     ADD TARGET package0.event_file(
-        SET filename=N’autoseed.xel’,
+        SET filename=N'autoseed.xel',
         max_file_size=(5),
         max_rollover_files=(4)
         )

@@ -460,7 +460,7 @@ To allow retrieving the entire list, every Get operation returns the current pro
 The `SQL_COPT_SS_CEKEYSTOREDATA` connection attribute enables a client application to communicate with loaded keystore providers for configuring additional parameters, keying material, etc. The communication between a client application and a provider follows a simple request-response protocol, based on Get and Set requests using this connection attribute. Communication is initiated only by the client application.
 
 > [!NOTE]
-> Due to the nature of the ODBC calls CEKeyStoreProvider’s respond to (SQLGet/SetConnectAttr), the ODBC interface only supports setting data at the resolution of the connection context.
+> Due to the nature of the ODBC calls CEKeyStoreProvider's respond to (SQLGet/SetConnectAttr), the ODBC interface only supports setting data at the resolution of the connection context.
 
 The application communicates with keystore providers through the driver via the CEKeystoreData structure:
 

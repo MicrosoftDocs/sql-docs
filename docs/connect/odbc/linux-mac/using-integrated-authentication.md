@@ -45,7 +45,7 @@ Ensure that you use `kinit` or PAM (Pluggable Authentication Module) to obtain a
   
 -   Run `kinit`, passing in a principal name and password.  
   
--   Run `kinit`, passing in a principal name and a location of a keytab file that contains the principal’s key created by `ktutil`.  
+-   Run `kinit`, passing in a principal name and a location of a keytab file that contains the principal's key created by `ktutil`.  
   
 -   Ensure that the login to the system was done using the Kerberos PAM (Pluggable Authentication Module).
 

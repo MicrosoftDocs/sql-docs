@@ -57,7 +57,7 @@ This example shows how to create and debug a Transact\-SQL stored procedure by s
   
 10. Press F11 to step into the query. Notice that the parameters of the store procedure and their respective values show up in the **Locals** window. Alternatively, hover your mouse over the `@name` parameter in the `INSERT` clause, and you will see the **Contoso** value being assigned to it.  
   
-11. Click **Contoso** in the textbox. Type **Fabrikam** and press ENTER to change the `name` variable’s value while debugging. You can also change its value in the **Locals** window. Notice that the value of the parameter is now displayed in red, indicating that it has changed.  
+11. Click **Contoso** in the textbox. Type **Fabrikam** and press ENTER to change the `name` variable's value while debugging. You can also change its value in the **Locals** window. Notice that the value of the parameter is now displayed in red, indicating that it has changed.  
   
 12. Press F10 to step over the remaining code.  
   

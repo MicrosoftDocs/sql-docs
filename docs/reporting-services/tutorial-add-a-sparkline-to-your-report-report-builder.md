@@ -221,7 +221,7 @@ The **SalesDate** values display in the default date format, and the summary val
      ![report-builder-sparkline-misaligned](../reporting-services/media/report-builder-sparkline-misaligned.png)
   
 ## <a name="AlignSparklines"></a>4. Align the Sparklines Vertically and Horizontally  
-Sparklines are hard to read when they don’t all use the same measurements. Both the horizontal and vertical axes for each need to match the rest.  
+Sparklines are hard to read when they don't all use the same measurements. Both the horizontal and vertical axes for each need to match the rest.  
    
 1.  Click **Design** to return to design view.  
   

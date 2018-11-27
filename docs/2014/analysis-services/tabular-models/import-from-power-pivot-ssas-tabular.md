@@ -23,11 +23,11 @@ manager: craigg
 > [!NOTE]  
 >  Tabular models do not support linked tables. When importing from a PowerPivot workbook that contains a linked table, linked table data is treated as copy\pasted data and stored in the Model.bim file. When viewing properties for a copy\pasted table, the **Source Data** property is disabled and the **Table Properties** dialog on the **Table** menu is disabled.  
 >   
->  There is a limit of 10,000 rows that can be added to the data embedded in the model. If you import a model from PowerPivot and see the error, “Data was truncated. Pasted tables cannot contain more than 10000 rows” you should revise the PowerPivot model by moving the embedded data into another data source, such as a table in SQL Server, and then re-import.  
+>  There is a limit of 10,000 rows that can be added to the data embedded in the model. If you import a model from PowerPivot and see the error, "Data was truncated. Pasted tables cannot contain more than 10000 rows" you should revise the PowerPivot model by moving the embedded data into another data source, such as a table in SQL Server, and then re-import.  
   
  There are special considerations depending on whether or not the workspace database is on an Analysis Services instance on the same computer (local) as [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] or is on a remote Analysis Services instance..  
   
- If the workspace database is on a local instance of Analysis Services, you can import both the metadata and data from the PowerPivot workbook. The metadata is copied from the workbook and used to create the tabular model project. The data is then copied from the workbook and stored in the project’s workspace database (except for copy/pasted data, which is stored in the Model.bim file).  
+ If the workspace database is on a local instance of Analysis Services, you can import both the metadata and data from the PowerPivot workbook. The metadata is copied from the workbook and used to create the tabular model project. The data is then copied from the workbook and stored in the project's workspace database (except for copy/pasted data, which is stored in the Model.bim file).  
   
  If the workspace database is on a remote Analysis Services instance, you cannot import data from a PowerPivot for Excel workbook. You can still import the workbook metadata; however, this will cause a script to be run on the remote Analysis Services instance. You should only import metadata from a trusted PowerPivot workbook. Data must be imported from sources defined in the data source connections. Copy/pasted and linked table data in the PowerPivot workbook must be copied and pasted into the tabular model project.  
   

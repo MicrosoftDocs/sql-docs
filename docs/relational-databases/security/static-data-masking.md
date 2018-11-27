@@ -116,7 +116,7 @@ Below is a step-by-step guide to run Static Data Masking.
  
  ![Configuration file](../../relational-databases/security/media/sql-static-data-masking/load_save_config.PNG)
  
-6. Static Data Masking will create a folder in the user’s **Documents** folder named Static Data Masking and place log files inside. The log files can be useful for debugging purposes. The name of the log file is indicated at the bottom of the configuration window. 
+6. Static Data Masking will create a folder in the user's **Documents** folder named Static Data Masking and place log files inside. The log files can be useful for debugging purposes. The name of the log file is indicated at the bottom of the configuration window. 
   
  
 7. (SQL Server only) If you operate Static Data Masking on an on-premise database, Static Data Masking will perform a backup/restore operation. In **Step 2: Clone .BAK file Location**, provide the location on the server where the backup file will be stored. 

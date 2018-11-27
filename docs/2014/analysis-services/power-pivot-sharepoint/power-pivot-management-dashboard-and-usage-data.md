@@ -119,7 +119,7 @@ manager: craigg
   
     7.  Click type a name for the connection and then click **Next**.  
   
-    8.  In Specify MDX Query, click **Design** to open the MDX query designer to assemble the data you want to work with **If you see the error message** “The Edit Mode property name is not formatted correctly.”, verify you edits the .ODC file.  
+    8.  In Specify MDX Query, click **Design** to open the MDX query designer to assemble the data you want to work with **If you see the error message** "The Edit Mode property name is not formatted correctly.", verify you edits the .ODC file.  
   
     9. Click **OK** and then click **Finish**.  
   

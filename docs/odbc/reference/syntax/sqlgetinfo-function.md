@@ -788,7 +788,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_DRIVER_AWARE_POOLING_NOT_CAPABLE indicates that the driver cannot support driver-aware pooling mechanism.  
   
- A driver does not need to implement SQL_DRIVER_AWARE_POOLING_SUPPORTED and the Driver Manager will not honor to the driver’s return value.  
+ A driver does not need to implement SQL_DRIVER_AWARE_POOLING_SUPPORTED and the Driver Manager will not honor to the driver's return value.  
   
  SQL_DRIVER_HDBCSQL_DRIVER_HENV(ODBC 1.0)  
  An SQLULEN value, the driver's environment handle or connection handle, determined by the argument *InfoType*.  

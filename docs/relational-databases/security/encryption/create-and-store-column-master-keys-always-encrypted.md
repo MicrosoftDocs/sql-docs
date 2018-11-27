@@ -133,7 +133,7 @@ For a step-by-step tutorial that uses SSMS and stores Always Encrypted keys in a
 
 ### Making Azure Key Vault Keys Available to Applications and Users
 
-When using an Azure Key Vault key as a column master key, your application needs to authenticate to Azure and your application’s identity needs to have the following permissions on the key vault: *get*, *unwrapKey*, and *verify*. 
+When using an Azure Key Vault key as a column master key, your application needs to authenticate to Azure and your application's identity needs to have the following permissions on the key vault: *get*, *unwrapKey*, and *verify*. 
 
 To provision column encryption keys that are protected with a column master key stored in Azure Key Vault, you need the *get*, *unwrapKey*, *wrapKey*, *sign*, and *verify* permissions. Additionally, to create a new key in an Azure Key Vault you need the *create* permission; to list the key vault contents, you need the *list* permission.
 

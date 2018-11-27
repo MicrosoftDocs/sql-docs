@@ -56,7 +56,7 @@ You can either assign static values, or use data from a shared dataset. When you
   
 > **Warning**: While you can use the word value for the **Status** field at design time, you should use the number value if refreshing a dataset. If you refresh a dataset with the word value, instead of the number, it could corrupt the KPIs on your server.  
   
-> **Note**: The **Value**, **Goal** and **Status** fields can only choose a value from the first row of a dataset’s result. The **Trend set** field, however, can choose which column reflects the trend.  
+> **Note**: The **Value**, **Goal** and **Status** fields can only choose a value from the first row of a dataset's result. The **Trend set** field, however, can choose which column reflects the trend.  
   
 To use data from a shared dataset, you can do the following.  
   

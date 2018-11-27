@@ -74,7 +74,7 @@ manager: craigg
   
 5.  Right-click the index you want to rename and select **Rename**.  
   
-6.  Type the index’s new name and press Enter.  
+6.  Type the index's new name and press Enter.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   

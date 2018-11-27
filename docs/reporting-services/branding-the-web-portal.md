@@ -14,7 +14,7 @@ ms.author: maghan
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
-You can alter the appearance of the web portal by branding it to your business. This is done through a brand package. The brand package has been designed so you don’t need deep cascading style sheet (CSS) knowledge to create it.  
+You can alter the appearance of the web portal by branding it to your business. This is done through a brand package. The brand package has been designed so you don't need deep cascading style sheet (CSS) knowledge to create it.  
   
 <iframe width="560" height="315" src="https://www.youtube.com/embed/m08kLuofwFA?list=PLv2BtOtLblH3F--8WmK9QcLbx6dV_lVkL" frameborder="0" allowfullscreen></iframe>  
    
@@ -100,7 +100,7 @@ The first time you connect to a server with the Mobile Report Publisher, that ha
   
 ![ssRSBrandingMobileReportPublisher](../reporting-services/media/ssrsbrandingmobilereportpublisher.png)  
   
-You can then use that theme for any mobile reports that you create, even if they aren’t for the same server that you have the theme deployed on.   
+You can then use that theme for any mobile reports that you create, even if they aren't for the same server that you have the theme deployed on.   
   
 ### Using a logo
   

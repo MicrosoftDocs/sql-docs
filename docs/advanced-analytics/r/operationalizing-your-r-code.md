@@ -65,7 +65,7 @@ See these solution templates for examples of how to integrate scoring in an appl
 
 Although the open source R language is known to have limitations, the RevoScaleR package APIs can operate on large datasets and benefit from multi-threaded, multi-core, multi-process in-database computations.
 
-If your R solution uses complex aggregations or involves large datasets, you can leverage SQL Server’s highly efficient in-memory aggregations and columnstore indexes, and let the R code handle the statistical computations and scoring.
+If your R solution uses complex aggregations or involves large datasets, you can leverage SQL Server's highly efficient in-memory aggregations and columnstore indexes, and let the R code handle the statistical computations and scoring.
 
 For more information about how to improve performance in SQL Server Machine Learning, see:
 

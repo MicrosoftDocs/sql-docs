@@ -13,7 +13,7 @@ ms.reviewer: martinle
 
 # Workload management in Analytics Platform System
 
-SQL Server PDW’s workload management capabilities allow users and administrators to assign requests to pre-set configurations of memory, and concurrency. Use workload management to improve performance of your workload, either consistent or mixed, by allowing requests to have the appropriate resources without starving any requests forever.  
+SQL Server PDW's workload management capabilities allow users and administrators to assign requests to pre-set configurations of memory, and concurrency. Use workload management to improve performance of your workload, either consistent or mixed, by allowing requests to have the appropriate resources without starving any requests forever.  
   
 For example, with the workload management techniques in SQL Server PDW, you could:  
   

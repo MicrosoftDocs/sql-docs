@@ -29,7 +29,7 @@ manager: craigg
   
      When you select a report, instances of data sources used in the report are created automatically. Code is generated to instantiate each DataTable (and its [DataSet](http://msdn.microsoft.com/library/system.data.dataset\(v=vs.100\).aspx) container). An [ObjectDataSource](http://msdn.microsoft.com/library/system.web.ui.webcontrols.objectdatasource\(v=vs.100\).aspx) control is added to the design surface, corresponding to each data source used in the report. This data source control is configured automatically.  
   
-     If you’re using Microsoft Visual Studio 2012, make sure that the ObjectDataSource control is bound with DataSet1 that is fully qualified with the project namespace, if the fully qualified name is listed in the **Choose your business object** drop-down list box (for example, Projectnamespace.DataSet1TableAdapters.ProductTableAdapter). You access the list box by right-clicking ObjectDataSource, and then clicking **Configure Data Source**.  
+     If you're using Microsoft Visual Studio 2012, make sure that the ObjectDataSource control is bound with DataSet1 that is fully qualified with the project namespace, if the fully qualified name is listed in the **Choose your business object** drop-down list box (for example, Projectnamespace.DataSet1TableAdapters.ProductTableAdapter). You access the list box by right-clicking ObjectDataSource, and then clicking **Configure Data Source**.  
   
 6.  On the Build menu, click Build website.  
   

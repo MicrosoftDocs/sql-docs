@@ -81,13 +81,13 @@ manager: craigg
     ALTER AUTHORIZATION ON DATABASE::AdventureWorks2014 TO [<NewLogin>]  
     ```  
   
-5.  Download the sample script ‘[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql’ from [SQL Server 2014 RTM In-Memory OLTP Sample](http://go.microsoft.com/fwlink/?LinkID=396372) to a local folder.  
+5.  Download the sample script '[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql' from [SQL Server 2014 RTM In-Memory OLTP Sample](http://go.microsoft.com/fwlink/?LinkID=396372) to a local folder.  
   
-6.  Update the value for the variable ‘checkpoint_files_location’ in the script '[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql', to point to the target location for the [!INCLUDE[hek_2](../includes/hek-2-md.md)] checkpoint files. The checkpoint files should be placed on a drive with good sequential IO performance.  
+6.  Update the value for the variable 'checkpoint_files_location' in the script '[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql', to point to the target location for the [!INCLUDE[hek_2](../includes/hek-2-md.md)] checkpoint files. The checkpoint files should be placed on a drive with good sequential IO performance.  
   
      Update the value for the variable 'database_name' to point to the AdventureWorks2014 database.  
   
-    1.  Be sure to include the backslash ‘\’ as part of the path name  
+    1.  Be sure to include the backslash '\' as part of the path name  
   
     2.  Example:  
   
@@ -107,18 +107,18 @@ manager: craigg
   
     2.  Using Management Studio:  
   
-        1.  Open the script ‘[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql’ in a query window  
+        1.  Open the script '[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql' in a query window  
   
         2.  Connect to the target server that contains the database AdventureWorks2014  
   
-        3.  Enable SQLCMD Mode, by clicking on ‘Query -> SQLCMD Mode’  
+        3.  Enable SQLCMD Mode, by clicking on 'Query -> SQLCMD Mode'  
   
-        4.  Click the button ‘Execute’ to run the script  
+        4.  Click the button 'Execute' to run the script  
   
 ##  <a name="Descriptionofthesampletablesandprocedures"></a> Description of the sample tables and procedures  
  The sample creates new tables for products and sales orders, based on existing tables in AdventureWorks. The schema of the new tables is similar to the existing tables, with a few differences, as explained below.  
   
- The new memory-optimized tables carry the suffix ‘_inmem’. The sample also includes corresponding tables carrying the suffix ‘_ondisk’ – these tables can be used to make a one-to-one comparison between the performance of memory-optimized tables and disk-based tables on your system..  
+ The new memory-optimized tables carry the suffix '_inmem'. The sample also includes corresponding tables carrying the suffix '_ondisk' – these tables can be used to make a one-to-one comparison between the performance of memory-optimized tables and disk-based tables on your system..  
   
  Note that the memory-optimized tables used in the workload for performance comparison are fully durable and fully logged. They do not sacrifice durability or reliability to attain the performance gain.  
   
@@ -265,7 +265,7 @@ manager: craigg
   
 -   HASH index on (SalesOrderID): bucket_count is sized at 10 million (rounded up to 16 million), because the expected number of sales orders is 10 million  
   
--   HASH index on (SalesPersonID): bucket_count is 1 million. The data set provided does not have a lot of sales persons, but this allows for future growth, plus you don’t pay a performance penalty for point lookups if the bucket_count is oversized.  
+-   HASH index on (SalesPersonID): bucket_count is 1 million. The data set provided does not have a lot of sales persons, but this allows for future growth, plus you don't pay a performance penalty for point lookups if the bucket_count is oversized.  
   
 -   HASH index on (CustomerID): bucket_count is 1 million. The data set provided does not have a lot of customers, but this allows for future growth.  
   
@@ -389,14 +389,14 @@ manager: craigg
   
 1.  Download and run the x64 installation package for the RML utilities from the following page: [http://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx](http://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx)  
   
-2.  If there is a dialog box saying certain files are in use, click ‘Continue’  
+2.  If there is a dialog box saying certain files are in use, click 'Continue'  
   
 ### Running ostress  
  Ostress is run from the command-line prompt. It is most convenient to run the tool from the "RML Cmd Prompt", which is installed as part of the RML Utilities.  
   
  To open the RML Cmd Prompt follow these instructions:  
   
- In Windows Server 2012 [R2] and in Windows 8 and 8.1, open the start menu by clicking the Windows key, and type ‘rml’. Click on “RML Cmd Prompt”, which will be in the list of search results.  
+ In Windows Server 2012 [R2] and in Windows 8 and 8.1, open the start menu by clicking the Windows key, and type 'rml'. Click on "RML Cmd Prompt", which will be in the list of search results.  
   
  Ensure that the command prompt is located in the RML Utilities installation folder. For example:  
   
@@ -451,9 +451,9 @@ END
   
  With this script, each sample order that is constructed is inserted 20 times, through 20 stored procedures executed in a WHILE loop. The loop is used to account for the fact that the database is used to construct the sample order. In typical production environments, the mid-tier application will construct the sales order to be inserted.  
   
- The above script inserts sales orders into memory-optimized tables. The script to insert sales orders into disk-based tables is derived by replacing the two occurrences of ‘_inmem’ with ‘_ondisk’.  
+ The above script inserts sales orders into memory-optimized tables. The script to insert sales orders into disk-based tables is derived by replacing the two occurrences of '_inmem' with '_ondisk'.  
   
- We will use the ostress tool to execute the scripts using several concurrent connections. We will use the parameter ‘-n’ to control the number of connections, and the parameter ‘r’ to control how many times the script is executed on each connection.  
+ We will use the ostress tool to execute the scripts using several concurrent connections. We will use the parameter '-n' to control the number of connections, and the parameter 'r' to control how many times the script is executed on each connection.  
   
 #### Functional Validation of the Workload  
  To verify everything works, we will start with a sample test, using 10 concurrent connects and 5 iterations, inserting a total of 10 * 5 \* 20 = 1000 sales order.  
@@ -481,7 +481,7 @@ ostress.exe –n10 –r5 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @
 ```  
   
 #### Running the Workload  
- To test at scale we insert 10 million sales orders, using 100 connections. This test performs reasonably on a modest server (e.g., 8 physical, 16 logical cores), and basic SSD storage for the log. If the test does not perform well on your hardware, take look at the Section [Troubleshooting slow-running tests](#Troubleshootingslow-runningtests).If you want to reduce the level of stress for this test, lower the number of connections by changing the parameter ‘-n’. For example to lower the connection count to 40, change the parameter ‘-n100’ to ‘-n40’.  
+ To test at scale we insert 10 million sales orders, using 100 connections. This test performs reasonably on a modest server (e.g., 8 physical, 16 logical cores), and basic SSD storage for the log. If the test does not perform well on your hardware, take look at the Section [Troubleshooting slow-running tests](#Troubleshootingslow-runningtests).If you want to reduce the level of stress for this test, lower the number of connections by changing the parameter '-n'. For example to lower the connection count to 40, change the parameter '-n100' to '-n40'.  
   
  As a performance measure for the workload we use the elapsed time as reported by ostress.exe after running the workload.  
   
@@ -513,11 +513,11 @@ ostress.exe –n100 –r5000 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 
   
  On one test server with a total number of 8 physical (16 logical) cores, this took 41 minutes and 25 seconds. On a second test server with 24 physical (48 logical) cores, this took 52 minutes and 16 seconds.  
   
- The main factor in the performance difference between memory-optimized tables and disk-based tables in this test is the fact that when using disk-based tables, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cannot not fully utilize the CPU. The reason is latch contention: concurrent transactions are attempting to write to the same data page; latches are used to ensure only one transaction at a time can write to a page. The [!INCLUDE[hek_2](../includes/hek-2-md.md)] engine is latch-free, and data rows are not organized in pages. Thus, concurrent transactions do not block each other’s inserts, thus enabling [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to fully utilize the CPU.  
+ The main factor in the performance difference between memory-optimized tables and disk-based tables in this test is the fact that when using disk-based tables, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cannot not fully utilize the CPU. The reason is latch contention: concurrent transactions are attempting to write to the same data page; latches are used to ensure only one transaction at a time can write to a page. The [!INCLUDE[hek_2](../includes/hek-2-md.md)] engine is latch-free, and data rows are not organized in pages. Thus, concurrent transactions do not block each other's inserts, thus enabling [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to fully utilize the CPU.  
   
  You can observe the CPU utilization while the workload is running, for example using task manager. You will see with disk-based tables the CPU utilization is far from 100%. On a test configuration with 16 logical processors, the utilization would hover around 24%.  
   
- Optionally, you can view the number of latch waits per second using Performance Monitor, with the performance counter ‘\SQL Server:Latches\Latch Waits/sec’.  
+ Optionally, you can view the number of latch waits per second using Performance Monitor, with the performance counter '\SQL Server:Latches\Latch Waits/sec'.  
   
 #### Resetting the demo  
  To reset the demo, open the RML Cmd Prompt, and execute the following command:  
@@ -866,7 +866,7 @@ ORDER BY state, file_type
 |ACTIVE|DATA|41|5608|  
 |ACTIVE|DELTA|41|328|  
   
- In this case, there are two checkpoint file pairs in the ‘under construction’ state, which means multiple file pairs were moved to the ‘under construction’ state, likely due to the high level of concurrency in the workload. Multiple concurrent threads required a new file pair at the same time, and thus moved a pair from ‘precreated’ to ‘under construction’.  
+ In this case, there are two checkpoint file pairs in the 'under construction' state, which means multiple file pairs were moved to the 'under construction' state, likely due to the high level of concurrency in the workload. Multiple concurrent threads required a new file pair at the same time, and thus moved a pair from 'precreated' to 'under construction'.  
   
 ## See Also  
  [In-Memory OLTP &#40;In-Memory Optimization&#41;](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  

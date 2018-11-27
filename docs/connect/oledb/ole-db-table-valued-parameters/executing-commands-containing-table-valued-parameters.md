@@ -41,7 +41,7 @@ manager: craigg
   
 -   A table-valued parameter can be marked with the status DBSTATUS_S_DEFAULT. The only valid values are DBSTATUS_S_DEFAULT and DBSTATUS_S_OK. When the status is set to DBSTATUS_S_DEFAULT, the value of the table-valued parameter corresponds to an empty table.  
   
--   Read-only columns in table-valued parameters (identity or computed columns) must be marked as default by using the SSPROP_PARAM_TABLE_DEFAULT_COLUMNS property. Columns that have a default value must also be marked as default through SSPROP_PARAM_TABLE_DEFAULT_COLUMNS property to allow the default value to be used for the column’s data values for a particular table-valued parameter. The provider will ignore the data values bound for the columns marked as default.  
+-   Read-only columns in table-valued parameters (identity or computed columns) must be marked as default by using the SSPROP_PARAM_TABLE_DEFAULT_COLUMNS property. Columns that have a default value must also be marked as default through SSPROP_PARAM_TABLE_DEFAULT_COLUMNS property to allow the default value to be used for the column's data values for a particular table-valued parameter. The provider will ignore the data values bound for the columns marked as default.  
   
 -   Data will be sent to the server for columns with DBPROP_COL_AUTOINCREMENT or SSPROP_COL_COMPUTED, unless SSPROP_PARAM_TABLE_DEFAULT is also set.  
   

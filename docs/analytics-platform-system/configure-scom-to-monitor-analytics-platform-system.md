@@ -38,7 +38,7 @@ Here are detailed instructions on how to do the tasks:
   
     2.  The **Create Run As Account Wizard** dialog will open. On the **Introduction** page, click **Next**.  
   
-    3.  On the **General Properties** page, select **Windows** from **Run As Account type** and specify “APS Watcher” as the **Display name**.  
+    3.  On the **General Properties** page, select **Windows** from **Run As Account type** and specify "APS Watcher" as the **Display name**.  
   
         ![CreateRunAsAccountWizardGeneralProperties](./media/configure-scom-to-monitor-analytics-platform-system/CreateRunAsAccountWizardGeneralProperties.png "CreateRunAsAccountWizardGeneralProperties")  
   

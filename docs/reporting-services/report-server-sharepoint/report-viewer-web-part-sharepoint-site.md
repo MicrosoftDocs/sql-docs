@@ -22,7 +22,7 @@ The latest Report Viewer web part can also service paginated reports deployed to
 
 The Report Viewer web part was available as part of the Reporting Services Add-in for SharePoint products. The web part was specific for report servers in SharePoint integrated mode. SharePoint integrated mode was deprecated after SQL Server 2016.
 
-Starting with SQL Server 2017, there’s only one installation mode for Reporting Services: **Native mode**. You could embed all reports types using a Page Viewer web part using the *rs:Embed=true* URL parameter. Embedding reports into SharePoint pages is an integration story requested by customers and the updated Report Viewer web part enables this scenario for paginated reports.
+Starting with SQL Server 2017, there's only one installation mode for Reporting Services: **Native mode**. You could embed all reports types using a Page Viewer web part using the *rs:Embed=true* URL parameter. Embedding reports into SharePoint pages is an integration story requested by customers and the updated Report Viewer web part enables this scenario for paginated reports.
 
 While the Page Viewer web part suffices to embed a paginated report into a SharePoint page, the updated Report Viewer web part offers additional features.
 

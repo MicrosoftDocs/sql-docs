@@ -69,7 +69,7 @@ manager: craigg
   
      `=Geography[Country Region Code] = "US"`  
   
-     A Row Filter formula must resolve to a Boolean (TRUE/FALSE) value. With this formula, you are specifying that only rows with the Country Region Code value of “US” be visible to the user.  
+     A Row Filter formula must resolve to a Boolean (TRUE/FALSE) value. With this formula, you are specifying that only rows with the Country Region Code value of "US" be visible to the user.  
   
      When you have finished building the formula, press ENTER.  
   

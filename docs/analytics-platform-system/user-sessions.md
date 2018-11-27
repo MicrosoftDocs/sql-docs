@@ -30,7 +30,7 @@ The permissions required to manage sessions by using either method are the same,
   
 1.  On the top menu, click **Sessions**.  
   
-2.  The resulting list displays all recent sessions. To view only ‘Active’ or ‘Idle’ sessions, click the **Status** column header to sort results by status.  
+2.  The resulting list displays all recent sessions. To view only 'Active' or 'Idle' sessions, click the **Status** column header to sort results by status.  
   
 ### To view active and recent queries for a session by using the Admin Console  
   
@@ -46,14 +46,14 @@ The permissions required to manage sessions by using either method are the same,
   
 2.  Find the session ID for the session to cancel.  
   
-3.  Click the red **X** to the left of the session ID to end the session. Only sessions with a status of ‘Active’ or ‘Idle’ will have a red **X**; only these sessions can be ended.  
+3.  Click the red **X** to the left of the session ID to end the session. Only sessions with a status of 'Active' or 'Idle' will have a red **X**; only these sessions can be ended.  
   
 ## Manage Sessions by Using System Views and SQL Commands  
   
 ### To View Current Sessions by Using System Views  
 Use [sys.dm_pdw_exec_sessions](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md) to generate a list of current sessions.  
   
-This example returns the session_id, login_name, and status for all sessions with a status of ‘Active’ or ‘Idle’.  
+This example returns the session_id, login_name, and status for all sessions with a status of 'Active' or 'Idle'.  
   
 ```sql  
 SELECT session_id, login_name, status FROM sys.dm_pdw_exec_sessions WHERE status='Active' OR status='Idle';  
@@ -81,7 +81,7 @@ In this example, select the login_name, session_id, and status values to find a 
 SELECT session_id, login_name, status FROM sys.dm_pdw_exec_sessions;  
 ```  
   
-Sessions with an ‘Active’ or ‘Idle’ status can be ended by using the KILL command.  
+Sessions with an 'Active' or 'Idle' status can be ended by using the KILL command.  
   
 ```sql  
 KILL 'SID137';  

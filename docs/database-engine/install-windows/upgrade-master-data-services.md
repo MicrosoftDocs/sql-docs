@@ -144,7 +144,7 @@ manager: craigg
 3.  Upgrade the MDS database schema, create a web application, and associate the new web application with the upgraded MDS database. For the instructions, see steps 2 - 4 in [Upgrade without Database Engine Upgrade](#noengine)  
   
 ## Troubleshooting  
- **Issue:** When you open the [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], or [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] web application, a “client version is not compatible with the database version” error message is displayed.  
+ **Issue:** When you open the [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], or [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] web application, a "client version is not compatible with the database version" error message is displayed.  
   
  **Solution:** This issue occurs when a [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], or [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Master Data Manager web application tries to access a database that has been upgraded to  or [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] Master Data Services. You must use a  or [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] web application instead.  
   

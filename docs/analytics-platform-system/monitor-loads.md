@@ -25,7 +25,7 @@ To monitor this type of load, see [Monitoring Active Queries](monitor-active-que
 Regardless of the method used to monitor a load, the login must have permission to access the underlying data sources. 
 
 <!-- MISSING LINKS
-For the permissions to grant, see “Use All of the Admin Console” in [Grant Permissions to Use the Admin Console](grant-permissions-admin-console.md). 
+For the permissions to grant, see "Use All of the Admin Console" in [Grant Permissions to Use the Admin Console](grant-permissions-admin-console.md). 
 
 --> 
   
@@ -70,7 +70,7 @@ To monitor active and recent loads by using SQL Server PDW views, follow the ste
     LEFT OUTER JOIN   
     sys.pdw_loader_backup_runs lbr   
     ON (er.request_id=lbr.requst_id)   
-    WHERE er.request_id=’12738’;  
+    WHERE er.request_id='12738';  
     ```  
   
 <!-- MISSING LINKS

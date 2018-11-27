@@ -54,7 +54,7 @@ Is the name of the database column from which to remove the classification. Curr
 
 ## Remarks  
 
-- Multiple object classifications can be dropped using a single ‘DROP SENSITIVITY CLASSIFICATION’ statement.
+- Multiple object classifications can be dropped using a single 'DROP SENSITIVITY CLASSIFICATION' statement.
 
 ## Permissions  
 

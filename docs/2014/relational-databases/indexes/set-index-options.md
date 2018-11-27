@@ -58,11 +58,11 @@ manager: craigg
   
 #### To modify the properties of an index in Table Designer  
   
-1.  In Object Explorer, click the plus sign to expand the database that contains the table on which you want to modify an index’s properties.  
+1.  In Object Explorer, click the plus sign to expand the database that contains the table on which you want to modify an index's properties.  
   
 2.  Click the plus sign to expand the **Tables** folder.  
   
-3.  Right-click the table on which you want to modify an index’s properties and select **Design**.  
+3.  Right-click the table on which you want to modify an index's properties and select **Design**.  
   
 4.  On the **Table Designer** menu, click **Indexes/Keys**.  
   
@@ -76,11 +76,11 @@ manager: craigg
   
 #### To modify the properties of an index in Object Explorer  
   
-1.  In Object Explorer, click the plus sign to expand the database that contains the table on which you want to modify an index’s properties.  
+1.  In Object Explorer, click the plus sign to expand the database that contains the table on which you want to modify an index's properties.  
   
 2.  Click the plus sign to expand the **Tables** folder.  
   
-3.  Click the plus sign to expand the table on which you want to modify an index’s properties.  
+3.  Click the plus sign to expand the table on which you want to modify an index's properties.  
   
 4.  Click the plus sign to expand the **Indexes** folder.  
   

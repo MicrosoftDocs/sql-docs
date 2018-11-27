@@ -376,7 +376,7 @@ The following sections describe known issues with the General Availability (GA) 
 
     - **Resolution**: If you want to have more than one instance on a given host, consider using VMs or Docker containers. 
 
-- SQL Server Configuration Manager can’t connect to SQL Server on Linux.
+- SQL Server Configuration Manager can't connect to SQL Server on Linux.
 
 - The default language of the **sa** login is English.
 
@@ -455,7 +455,7 @@ If you use **Network File System (NFS)** remote shares in production, note the f
    sudo MSSQL_LCID=<LcidValue> /opt/mssql/bin/mssql-conf setup
    ```
 
-- When running mssql-conf setup, and performing a non-English installation of SQL Server, incorrect extended characters are displayed after the localized text, "Configuring SQL Server...". Or, for non-Latin based installations, the sentence might be missing completely. The missing sentence should display the following localized string: "The licensing PID was successfully processed.  The new edition is [\<Name\> edition]”. This string is output for information purposes only, and the next SQL Server Cumulative Update will address this for all languages. This does not affect the successful installation of SQL Server in any way. 
+- When running mssql-conf setup, and performing a non-English installation of SQL Server, incorrect extended characters are displayed after the localized text, "Configuring SQL Server...". Or, for non-Latin based installations, the sentence might be missing completely. The missing sentence should display the following localized string: "The licensing PID was successfully processed.  The new edition is [\<Name\> edition]". This string is output for information purposes only, and the next SQL Server Cumulative Update will address this for all languages. This does not affect the successful installation of SQL Server in any way. 
 
 #### Full-Text Search
 

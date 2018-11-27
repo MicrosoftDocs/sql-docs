@@ -81,7 +81,7 @@ manager: kfile
  ![Measure group in Power View Field List](../../analysis-services/multidimensional-models/media/daxmd-fieldlist-group.gif "Measure group in Power View Field List")  
   
 ### Measures as variants  
- Measures in multidimensional models are variants. This means the measures are not strongly typed and can have different data types. For example, in the image below, the Amount measure in the Financial Reporting table by default is Currency data type, but also has a string value “NA” for the sub-total of “Statistical Accounts”, which is String data type. Power View recognizes certain measures as variants and shows the correct values and formatting in the different visualizations.  
+ Measures in multidimensional models are variants. This means the measures are not strongly typed and can have different data types. For example, in the image below, the Amount measure in the Financial Reporting table by default is Currency data type, but also has a string value "NA" for the sub-total of "Statistical Accounts", which is String data type. Power View recognizes certain measures as variants and shows the correct values and formatting in the different visualizations.  
   
  **Measure as variant**  
   
@@ -115,7 +115,7 @@ manager: kfile
   
  Calculated members of user hierarchies are not exposed in Power View; however, end-users will still be able to connect to a cube containing calculated members on user hierarchies.  
   
- The image below shows a Power View report for a cube that contains time-intelligence calculated members on dimension attribute “Fiscal Date Calculations” in the Date dimension.  
+ The image below shows a Power View report for a cube that contains time-intelligence calculated members on dimension attribute "Fiscal Date Calculations" in the Date dimension.  
   
  **Power View report with calculated members**  
   
@@ -151,11 +151,11 @@ manager: kfile
  ![Parent-child hierarchies](../../analysis-services/multidimensional-models/media/daxmd-ssdt-hierarchies.gif "Parent-child hierarchies")  
   
 ## Perspectives and translations  
- Perspectives are views of cubes where only certain dimensions or measure groups are visible in client tools. You can specify a perspective name as a value to the Cube connection string property. For example, in the following connection string, ‘Direct Sales’ is a perspective in the multidimensional model:  
+ Perspectives are views of cubes where only certain dimensions or measure groups are visible in client tools. You can specify a perspective name as a value to the Cube connection string property. For example, in the following connection string, 'Direct Sales' is a perspective in the multidimensional model:  
   
  `Data Source=localost;Initial Catalog=AdventureWorksDW-MD;Cube='Direct Sales'`  
   
- Cubes can have metadata and data translations specified for various Languages within the model. In order to see the translations (data and metadata) you need to add the optional “Locale Identifier” property to the connection string in the RSDS file as shown below.  
+ Cubes can have metadata and data translations specified for various Languages within the model. In order to see the translations (data and metadata) you need to add the optional "Locale Identifier" property to the connection string in the RSDS file as shown below.  
   
  `Data Source=localost;Initial Catalog=AdventureWorksDW-MD;Cube='Adventure Works'; Locale Identifier=3084`  
   
@@ -190,13 +190,13 @@ manager: kfile
  **Sample DISCOVER_CSDL_METADATA request**  
   
 ```  
-<Envelopexmlns=”http://schemas.xmlsoap.org/soap/envelope/”>  
+<Envelopexmlns="http://schemas.xmlsoap.org/soap/envelope/">  
    <Body>  
-      <Discoverxmlns=”urn:schemas-microsoft-com:xml-analysis”>  
+      <Discoverxmlns="urn:schemas-microsoft-com:xml-analysis">  
          <RequestType>DISCOVER_CSDL_METADATA</RequestType>  
          <Restrictions>  
             <RestrictionList>  
-              <CATALOG_NAME>”catalogname”<CATALOG_NAME>  
+              <CATALOG_NAME>"catalogname"<CATALOG_NAME>  
             </RestrictionList>  
          </Restrictions>  
          <Properties>  

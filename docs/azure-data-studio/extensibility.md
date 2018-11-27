@@ -133,7 +133,7 @@ There are currently four supported container types:
 
     ![Widgets container](media/extensibility/widgets-container.png)
 
-    The list of widgets that will be displayed in the container. It’s a flow layout. It accepts the list of widgets.
+    The list of widgets that will be displayed in the container. It's a flow layout. It accepts the list of widgets.
 
     ```json
     "container": {

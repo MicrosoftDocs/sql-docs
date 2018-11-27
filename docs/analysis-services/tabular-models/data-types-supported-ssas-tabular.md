@@ -61,7 +61,7 @@ When you import data or use a value in a formula, even if the original data sour
   
  If the data in the column that you specify as an argument is incompatible with the data type required by the function, DAX in many cases returns an error. However, wherever possible DAX attempts to implicitly convert the data to the required data type. For example:  
   
--   You can type a number, for example “123”, as a string. DAX parses the string and attempt to specify it as a number data type.  
+-   You can type a number, for example "123", as a string. DAX parses the string and attempt to specify it as a number data type.  
   
 -   You can add TRUE + 1 and get the result 2, because TRUE is implicitly converted to the number 1 and the operation 1+1 is performed.  
   

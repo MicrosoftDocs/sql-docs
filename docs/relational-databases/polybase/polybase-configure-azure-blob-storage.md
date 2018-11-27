@@ -155,7 +155,7 @@ The following query exports data from SQL Server to Azure Blob Storage. To do th
 
 ```sql
 -- Enable INSERT into external table  
-sp_configure ‘allow polybase export’, 1;  
+sp_configure 'allow polybase export', 1;  
 reconfigure  
   
 -- Create an external table.

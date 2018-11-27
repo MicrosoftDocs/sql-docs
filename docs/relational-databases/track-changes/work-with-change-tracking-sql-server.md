@@ -386,9 +386,9 @@ SET TRANSACTION ISOLATION LEVEL SNAPSHOT;
 BEGIN TRAN  
     -- Verify that last_sync_version is valid.  
     IF (@last_sync_version <  
-CHANGE_TRACKING_MIN_VALID_VERSION(OBJECT_ID(‘SalesLT.Product’)))  
+CHANGE_TRACKING_MIN_VALID_VERSION(OBJECT_ID('SalesLT.Product')))  
     BEGIN  
-       RAISERROR (N’Last_sync_version too old’, 16, -1);  
+       RAISERROR (N'Last_sync_version too old', 16, -1);  
     END  
     ELSE  
     BEGIN  

@@ -41,7 +41,7 @@ manager: craigg
   
  To determine whether a model contains a predefined filter that might affect results, you can look for the **Filter** property in the **Property** pane, or you can query the model by using the data mining schema rowsets. For example, the following query returns the filter text for the specified model:  
   
- `SELECT [FILTER] FROM $system.DMSCHEMA_MINING_MODELS WHERE MODEL_NAME = 'name of model’`  
+ `SELECT [FILTER] FROM $system.DMSCHEMA_MINING_MODELS WHERE MODEL_NAME = 'name of model'`  
   
 > [!WARNING]  
 >  If you want to remove the filter from an existing mining model, or change the filter conditions, you must reprocess the mining model.  

@@ -20,7 +20,7 @@ Variable Value File is an XML file comprising the parameter values of commands l
 > [!NOTE]  
 > 1.  Variable names are prefixed and suffixed with a $ (dollar) symbol. If the variables are not assigned a value in the variable value file, you will encounter an error during the parsing of the script file resulting in stalling the console execution process.  
 > 2.  The escape character for **$** is **$$**. If the value of a variable or static value of a parameter contains **$** (dollar) symbol, then **$$** must be specified to treat it as a character instead of a variable.  
-> 3.  For maintainability purposes, variables can be declared inside `‘variable-group’` elements for logical separation of user defined variables.  Usage of this element is not mandatory.  
+> 3.  For maintainability purposes, variables can be declared inside `'variable-group'` elements for logical separation of user defined variables.  Usage of this element is not mandatory.  
   
 **Examples:**  
   
@@ -82,7 +82,7 @@ Variable Value File is an XML file comprising the parameter values of commands l
 ```  
   
 ## Variable Value File Validation  
-The user can easily validate his/her variable value file against the schema definition file **ConsoleScriptVariablesSchema.xsd** available in the ‘Schemas’ folder.  
+The user can easily validate his/her variable value file against the schema definition file **ConsoleScriptVariablesSchema.xsd** available in the 'Schemas' folder.  
   
 ## Next Step  
 The next step in operating the console is [Creating the Server Connection Files &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md)  

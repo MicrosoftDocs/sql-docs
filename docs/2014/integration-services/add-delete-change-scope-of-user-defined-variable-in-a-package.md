@@ -55,7 +55,7 @@ manager: craigg
   
 4.  Select the variable to delete, and then click **Delete Variable**.  
   
-     If you don’t see the variable in the Variables window, click **Grid Options** and then select **Show variables of all scopes**.  
+     If you don't see the variable in the Variables window, click **Grid Options** and then select **Show variables of all scopes**.  
   
 5.  If the **Confirm Deletion of Variables** dialog box opens, click **Yes** to confirm.  
   
@@ -71,7 +71,7 @@ manager: craigg
   
 4.  Select the variable and then click **Move Variable**.  
   
-     If you don’t see the variable in the Variables window, click **Grid Options** and then select **Show variables of all scopes**.  
+     If you don't see the variable in the Variables window, click **Grid Options** and then select **Show variables of all scopes**.  
   
 5.  In the **Select New Scope** dialog box, select the package or a container, task, or event handler in the package, to change the variable scope.  
   

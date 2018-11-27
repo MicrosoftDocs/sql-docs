@@ -57,7 +57,7 @@ manager: craigg
 |Reference terms|Windows, Windows 7 Professional|  
 |Output|Windows|  
   
- The Term Lookup transformation can match nouns and noun phrases that contain special characters, and the data in the reference table may include these characters. The special characters are as follows: %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, “, and ‘.  
+ The Term Lookup transformation can match nouns and noun phrases that contain special characters, and the data in the reference table may include these characters. The special characters are as follows: %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, ", and '.  
   
 ## Data Types  
  The Term Lookup transformation can only use a column that has either the DT_WSTR or the DT_NTEXT data type. If a column contains text, but does not have one of these data types, the Data Conversion transformation can add a column with the DT_WSTR or DT_NTEXT data type to the data flow and copy the column values to the new column. The output from the Data Conversion transformation can then be used as the input to the Term Lookup transformation. For more information, see [Data Conversion Transformation](data-conversion-transformation.md).  

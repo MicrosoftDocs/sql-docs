@@ -71,7 +71,7 @@ manager: craigg
   
 -   For errors that provide a correlation ID, copy the ID and use it as a search term in the log file.  
   
--   Search for error status "High" or "Exception". Search for “PowerPivot Service”.  
+-   Search for error status "High" or "Exception". Search for "PowerPivot Service".  
   
 -   If you know when the error occurred, use the date and time information to narrow the scope of entries you must scroll through.  
   

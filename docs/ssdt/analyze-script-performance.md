@@ -26,7 +26,7 @@ To toggle the gathering of client statistics, when the Transact\-SQL Editor is o
   
 If you turned on client statistics, the **Statistics** tab appears next to the **Message** tab upon query execution. If you turned off client statistics, the **Statistics** tab does not appear. Statistics from successive query executions are listed along with the average values.  
   
-For more information on the statistics collected, see [Query Window Statistics Pane](https://msdn.microsoft.com/library/aa216969(SQL.80).aspx) and [“Client Statistics Tab” section of this topic](https://msdn.microsoft.com/library/aa833205.aspx).  
+For more information on the statistics collected, see [Query Window Statistics Pane](https://msdn.microsoft.com/library/aa216969(SQL.80).aspx) and ["Client Statistics Tab" section of this topic](https://msdn.microsoft.com/library/aa833205.aspx).  
   
 ## Using Execution Plans  
 Execution plans display how the database engine navigates tables and uses indexes to access or process the data for a query or other DML statement, such as an update. This graphical approach is very useful for understanding the performance characteristics of a query.  

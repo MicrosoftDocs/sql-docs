@@ -44,7 +44,7 @@ manager: craigg
  The Read, Create, Update, and Delete permissions can be combined. When Create, Update and Delete are assigned, the read permission is assigned automatically.  
   
 ## Attribute Permissions  
- Attribute permissions apply to the attribute’s values for the specific entity. Users with attribute permissions only cannot add or remove members.  
+ Attribute permissions apply to the attribute's values for the specific entity. Users with attribute permissions only cannot add or remove members.  
   
 |Permission|Description|  
 |----------------|-----------------|  

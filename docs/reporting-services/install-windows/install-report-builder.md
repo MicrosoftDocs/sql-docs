@@ -94,7 +94,7 @@ ms.author: maggies
   
 -   Click **Report Builder** .  
   
-     If you don’t see the report server in the list of existing servers, close the **Open Report** dialog box and then click **Connect** at the bottom of [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] to connect to the server.  
+     If you don't see the report server in the list of existing servers, close the **Open Report** dialog box and then click **Connect** at the bottom of [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] to connect to the server.  
   
 ## See Also  
  [Start Report Builder](../../reporting-services/report-builder/start-report-builder.md)   

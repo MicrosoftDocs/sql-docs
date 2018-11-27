@@ -93,9 +93,9 @@ manager: craigg
   
      The 2012 tutorials are valid for the [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] release.  
   
-     The “Analysis Services Tutorial SQL Server 2012.zip” file will be saved to the Downloads folder on your computer.  
+     The "Analysis Services Tutorial SQL Server 2012.zip" file will be saved to the Downloads folder on your computer.  
   
-2.  Move the .zip file to a folder just below the root drive (for example, C:\Tutorial). This step mitigates the “Path too long” error that sometimes occurs if you attempt to unzip the files in the Downloads folder.  
+2.  Move the .zip file to a folder just below the root drive (for example, C:\Tutorial). This step mitigates the "Path too long" error that sometimes occurs if you attempt to unzip the files in the Downloads folder.  
   
 3.  Unzip the sample projects: right-click on the file and select **Extract All**. After you extract the files, you should have the following projects installed on your computer:  
   

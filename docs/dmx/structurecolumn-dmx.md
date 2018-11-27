@@ -43,11 +43,11 @@ StructureColumn('structure column name')
 ## Error Messages  
  The following security error is raised if the user does not have drillthrough permission on the parent mining structure:  
   
- The '%{user/}' user does not have permission to drill through to the parent mining structure of the ‘%{model/}’ mining model.  
+ The '%{user/}' user does not have permission to drill through to the parent mining structure of the '%{model/}' mining model.  
   
  The following error message is raised if an invalid structure column name is specified:  
   
- The ‘%{structure-column-name/}’ mining structure column was not found in the ‘%{structure/}’ parent mining structure in the current context (line %{line/}, column %{column/}).  
+ The '%{structure-column-name/}' mining structure column was not found in the '%{structure/}' parent mining structure in the current context (line %{line/}, column %{column/}).  
   
 ## Examples  
  We will use the following mining structure for these examples. Note that the mining structure contains two nested table columns, `Products` and `Hobbies`. The nested table in the `Hobbies` column has a single column that is used as the key for the nested table. The nested table in the `Products` column is a complex nested table that has both a key column and other columns used for input. The following examples illustrate how a data mining structure can be designed to include many different columns, even though a model may not use every column. Some of these columns may not be useful at the model level for generalizing patterns, but may be very useful for drillthrough.  
@@ -92,7 +92,7 @@ WITH FILTER(EXISTS (Products))
  The following sample query returns the columns `CustomerName` and `Age`, which are defined as being part of the mining model. However, the query also returns the column `Age`, which is part of the structure but not part of the mining model.  
   
 ```  
-SELECT CustomerName, Age, StructureColumn(‘Occupation’) FROM MyModel.CASES   
+SELECT CustomerName, Age, StructureColumn('Occupation') FROM MyModel.CASES   
 WHERE Age > 30  
 ```  
   
@@ -103,11 +103,11 @@ WHERE Age > 30
   
 ```  
 SELECT CustomerName, Age,  
-(SELECT ProductName, StructureColumn(‘Quantity’) FROM Products) FROM MA.CASES   
-WHERE StructureColumn(‘Occupation’) = ‘Architect’  
+(SELECT ProductName, StructureColumn('Quantity') FROM Products) FROM MA.CASES   
+WHERE StructureColumn('Occupation') = 'Architect'  
 ```  
   
- Note that, in this example, a filter is applied to the structure column to restrict the cases to customers whose occupation is ‘Architect’ (`WHERE StructureColumn(‘Occupation’) = ‘Architect’`). Because the model filter condition is always applied to the cases when the model is created, only cases that contain at least one qualifying row in the `Products` table are included in the model cases. Therefore, both the filter on the nested table `Products` and the filter on the case `(‘Occupation’)`are applied.  
+ Note that, in this example, a filter is applied to the structure column to restrict the cases to customers whose occupation is 'Architect' (`WHERE StructureColumn('Occupation') = 'Architect'`). Because the model filter condition is always applied to the cases when the model is created, only cases that contain at least one qualifying row in the `Products` table are included in the model cases. Therefore, both the filter on the nested table `Products` and the filter on the case `('Occupation')`are applied.  
   
 ### Sample Query 3: Selecting Columns from a Nested Table  
  The following sample query returns the names of customers who were used as training cases from the model. For each customer, the query also returns a nested table that contains the purchase details. Although the model includes the `ProductName` column, the model does not use the value of the `ProductName` column. The model only checks if the product was purchased at regular (`NOT``OnSale`) price. This query not only returns the product name, but also returns the quantity purchased, which is not included in the model.  

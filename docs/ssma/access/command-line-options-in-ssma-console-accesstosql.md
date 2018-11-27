@@ -17,9 +17,9 @@ Microsoft provides you with a robust set of command-line options to execute and 
 ## Command-line options in the SSMA Console  
 Described herein are the console command options.  
   
-For the purpose of this section, the term ‘option’ is also referred to as ‘switch’.  
+For the purpose of this section, the term 'option' is also referred to as 'switch'.  
   
-Options are not case-sensitive and may start with either the ‘**-**’ or ‘**/**’ character.  
+Options are not case-sensitive and may start with either the '**-**' or '**/**' character.  
   
 If options are specified, it is mandatory that you specify the corresponding option parameters.  
   
@@ -29,7 +29,7 @@ Option parameters must be separated from the option character by white space.
   
 `C:\> SSMAforAccessConsole.EXE -s scriptfile`  
   
-`C:\> SSMAforAccessConsole.EXE -s “C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\AssessmentReportGenerationSample.xml” –v “C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\VariableValueFileSample.xml” –c “C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ServersConnectionFileSample.xml”`  
+`C:\> SSMAforAccessConsole.EXE -s "C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\AssessmentReportGenerationSample.xml" –v "C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\VariableValueFileSample.xml" –c "C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ServersConnectionFileSample.xml"`  
   
 Folder or file names containing spaces should be specified in double quotes.  
   
@@ -40,7 +40,7 @@ A mandatory switch, the script file path/name specifies the script of command se
   
 **Syntax examples:**  
   
-`C:\>SSMAforAccessConsole.EXE –s “C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ConversionAndDataMigrationSample.xml”`  
+`C:\>SSMAforAccessConsole.EXE –s "C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ConversionAndDataMigrationSample.xml"`  
   
 ### Variable value file option: –v/variable  
 The variable value file comprises variables used in the script file. The switch is optional. If variables are not declared in variable file and used in the script file, the application generates an error and terminates the console execution.  
@@ -51,9 +51,9 @@ The variable value file comprises variables used in the script file. The switch 
   
     `C:\>SSMAforAccessConsole.EXE -s`  
   
-    `“C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ConversionAndDataMigrationSample.xml” –v c:\migration`  
+    `"C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ConversionAndDataMigrationSample.xml" –v c:\migration`  
   
-    `projects\global_variablevaluefile.xml –v “c:\migrationprojects\instance_variablevaluefile.xml”`  
+    `projects\global_variablevaluefile.xml –v "c:\migrationprojects\instance_variablevaluefile.xml"`  
   
 ### Server connection file option: –c/serverconnection  
 This file contains server connection information for each server. Each server definition is identified by a unique Server ID. The Server IDs are referenced in the script file for connection-related commands.  
@@ -64,7 +64,7 @@ Server definition can be a part of server connection file and/or script file. Se
   
 -   Server IDs are used in the script file. They are defined in a separate server connection file. This file uses variables that are defined in the variable value file:  
   
-    `C:\>SSMAforAccessConsole.EXE –s “C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ConversionAndDataMigrationSample.xml”  –v`  
+    `C:\>SSMAforAccessConsole.EXE –s "C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ConversionAndDataMigrationSample.xml"  –v`  
   
     `c:\SsmaProjects\myvaluefile1.xml –c`  
   
@@ -72,7 +72,7 @@ Server definition can be a part of server connection file and/or script file. Se
   
 -   Server definition is embedded in the script file:  
   
-    `C:\>SSMAforAccessConsole.EXE –s “C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ConversionAndDataMigrationSample.xml”`  
+    `C:\>SSMAforAccessConsole.EXE –s "C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ConversionAndDataMigrationSample.xml"`  
   
 ### XML output option: -x/xmloutput [xmloutputfile]  
 This command is used for outputting the command output messages in an xml format either to console or to an xml file.  
@@ -85,13 +85,13 @@ There are two options available for xmloutput, namely:
   
     `C:\>SSMAforAccessConsole.EXE –s`  
   
-    `“C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ConversionAndDataMigrationSample.xml”  –x d:\xmloutput\project1output.xml`  
+    `"C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ConversionAndDataMigrationSample.xml"  –x d:\xmloutput\project1output.xml`  
   
 -   If no filepath is provided after the xmloutput switch, then the xmlout is displayed on the console itself.  
   
     **Syntax example:**  
   
-    `C:\>SSMAforAccessConsole.EXE –s “C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ConversionAndDataMigrationSample.xml”  –xmloutput`  
+    `C:\>SSMAforAccessConsole.EXE –s "C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ConversionAndDataMigrationSample.xml"  –xmloutput`  
   
 ### Log file option: –l/log  
 All the SSMA operations in the Console application are recorded in a log file, and the switch is optional. If a log file and its path are specified at the command line, the log gets generated in the specified location. Otherwise, it gets generated in its default location.  
@@ -100,7 +100,7 @@ All the SSMA operations in the Console application are recorded in a log file, a
   
 `C:\>SSMAforAccessConsole.EXE`  
   
-`“C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ConversionAndDataMigrationSample.xml”  –l c:\SsmaProjects\migration1.log`  
+`"C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ConversionAndDataMigrationSample.xml"  –l c:\SsmaProjects\migration1.log`  
   
 ### Project environment folder option: –e/projectenvironment  
 This optional switch denotes the project environment settings folder for the current SSMA project.  
@@ -109,7 +109,7 @@ This optional switch denotes the project environment settings folder for the cur
   
 `C:\>SSMAforAccessConsole.EXE –s`  
   
-`“C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ConversionAndDataMigrationSample.xml”  –e c:\SsmaProjects\CommonEnvironment`  
+`"C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ConversionAndDataMigrationSample.xml"  –e c:\SsmaProjects\CommonEnvironment`  
   
 ||  
 |-|  

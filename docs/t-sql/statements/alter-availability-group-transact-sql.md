@@ -50,10 +50,10 @@ ALTER AVAILABILITY GROUP group_name
    | DENY CREATE ANY DATABASE  
    | FAILOVER  
    | FORCE_FAILOVER_ALLOW_DATA_LOSS   
-   | ADD LISTENER ‘dns_name’ ( <add_listener_option> )  
-   | MODIFY LISTENER ‘dns_name’ ( <modify_listener_option> )  
-   | RESTART LISTENER ‘dns_name’  
-   | REMOVE LISTENER ‘dns_name’  
+   | ADD LISTENER 'dns_name' ( <add_listener_option> )  
+   | MODIFY LISTENER 'dns_name' ( <modify_listener_option> )  
+   | RESTART LISTENER 'dns_name'  
+   | REMOVE LISTENER 'dns_name'  
    | OFFLINE  
   }  
 [ ; ]  
@@ -86,8 +86,8 @@ ALTER AVAILABILITY GROUP group_name
      } )  
      | PRIMARY_ROLE ( {   
             [ ALLOW_CONNECTIONS = { READ_WRITE | ALL } ]   
-        [,] [ READ_ONLY_ROUTING_LIST = { ( ‘<server_instance>’ [ ,...n ] ) | NONE } ]  
-        [,] [ READ_WRITE_ROUTING_URL = { ( ‘<server_instance>’ ) ] 
+        [,] [ READ_ONLY_ROUTING_LIST = { ( '<server_instance>' [ ,...n ] ) | NONE } ]  
+        [,] [ READ_WRITE_ROUTING_URL = { ( '<server_instance>' ) ] 
      } )  
      | SESSION_TIMEOUT = integer
   
@@ -105,7 +105,7 @@ ALTER AVAILABILITY GROUP group_name
           } )  
      | PRIMARY_ROLE ( {   
           ALLOW_CONNECTIONS = { READ_WRITE | ALL }   
-        | READ_ONLY_ROUTING_LIST = { ( ‘<server_instance>’ [ ,...n ] ) | NONE }   
+        | READ_ONLY_ROUTING_LIST = { ( '<server_instance>' [ ,...n ] ) | NONE }   
           } )  
      | SESSION_TIMEOUT = seconds  
     )   
@@ -134,12 +134,12 @@ ALTER AVAILABILITY GROUP group_name
    }  
   
   <network_subnet_option> ::=  
-     ‘four_part_ipv4_address’, ‘four_part_ipv4_mask’    
+     'four_part_ipv4_address', 'four_part_ipv4_mask'    
   
   <ip_address_option> ::=  
      {   
-        ‘four_part_ipv4_address’, ‘four_part_ipv4_mask’  
-      | ‘ipv6_address’  
+        'four_part_ipv4_address', 'four_part_ipv4_mask'  
+      | 'ipv6_address'  
      }  
   
 <modify_listener_option>::=  
@@ -375,7 +375,7 @@ ALTER AVAILABILITY GROUP group_name
  ALL  
  All connections are allowed to the databases in the primary replica. This is the default behavior.  
   
- READ_ONLY_ROUTING_LIST **=** { **(‘**\<server_instance>**’** [ **,**...*n* ] **)** | NONE }  
+ READ_ONLY_ROUTING_LIST **=** { **('**\<server_instance>**'** [ **,**...*n* ] **)** | NONE }  
  Specifies a comma-separated list of server instances that host availability replicas for this availability group that meet the following requirements when running under the secondary role:  
   
 -   Be configured to allow all connections or read-only connections (see the ALLOW_CONNECTIONS argument of the SECONDARY_ROLE option, above).  
@@ -445,7 +445,7 @@ Initiates a manual failover of the availability group without data loss to the s
   
  For information about the limitations, prerequisites and recommendations for forcing failover and the effect of a forced failover on the former primary databases in the availability group, see [Perform a Forced Manual Failover of an Availability Group &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).  
   
- ADD LISTENER **‘**_dns\_name_**’(** \<add_listener_option> **)**  
+ ADD LISTENER **'**_dns\_name_**'(** \<add_listener_option> **)**  
  Defines a new availability group listener for this availability group. Supported only on the primary replica.  
   
 > [!IMPORTANT]  
@@ -529,7 +529,7 @@ Initiates a manual failover of the availability group without data loss to the s
  \<add_listener_option>  
  ADD LISTENER takes one of the following options:  
   
- WITH DHCP [ ON { **(‘**_four\_part\_ipv4\_address_**’,‘**_four\_part\_ipv4\_mask_**’)** } ]  
+ WITH DHCP [ ON { **('**_four\_part\_ipv4\_address_**','**_four\_part\_ipv4\_mask_**')** } ]  
  Specifies that the availability group listener will use the Dynamic Host Configuration Protocol (DHCP).  Optionally, use the ON clause to identify the network on which this listener will be created. DHCP is limited to a single subnet that is used for every server instances that hosts an availability replica in the availability group.  
   
 > [!IMPORTANT]  
@@ -539,7 +539,7 @@ Initiates a manual failover of the availability group without data loss to the s
   
  `WITH DHCP ON ('10.120.19.0','255.255.254.0')`  
   
- WITH IP **(** { **(‘**_four\_part\_ipv4\_address_**’,‘**_four\_part\_ipv4\_mask_**’)** | **(‘**_ipv6\_address_**’)** } [ **,** ..._n_ ] **)** [ **,** PORT **=**_listener\_port_ ]  
+ WITH IP **(** { **('**_four\_part\_ipv4\_address_**','**_four\_part\_ipv4\_mask_**')** | **('**_ipv6\_address_**')** } [ **,** ..._n_ ] **)** [ **,** PORT **=**_listener\_port_ ]  
  Specifies that, instead of using DHCP, the availability group listener will use one or more static IP addresses. To create an availability group across multiple subnets, each subnet requires one static IP address in the listener configuration. For a given subnet, the static IP address can be either an IPv4 address or an IPv6 address. Contact your network administrator to get a static IP address for each subnet that will host an availability replica for the new availability group.  
   
  For example:  
@@ -562,22 +562,22 @@ Initiates a manual failover of the availability group without data loss to the s
   
  For example: `WITH IP ( ('2001::4898:23:1002:20f:1fff:feff:b3a3') ) , PORT = 7777`  
   
- MODIFY LISTENER **‘**_dns\_name_**’(** \<modify\_listener\_option\> **)**  
+ MODIFY LISTENER **'**_dns\_name_**'(** \<modify\_listener\_option\> **)**  
  Modifies an existing availability group listener for this availability group. Supported only on the primary replica.  
   
  \<modify\_listener\_option\>  
  MODIFY LISTENER takes one of the following options:  
   
- ADD IP { **(‘**_four\_part\_ipv4\_address_**’,‘**_four\_part\_ipv4_mask_**’)** \| <b>(‘</b>dns\_name*ipv6\_address*__’)__ }  
+ ADD IP { **('**_four\_part\_ipv4\_address_**','**_four\_part\_ipv4_mask_**')** \| <b>('</b>dns\_name*ipv6\_address*__')__ }  
  Adds the specified IP address to the availability group listener specified by *dns\_name*.  
   
  PORT **=** *listener_port*  
  See the description of this argument earlier in this section.  
   
- RESTART LISTENER **‘**_dns\_name_**’**  
+ RESTART LISTENER **'**_dns\_name_**'**  
  Restarts the listener that is associated with the specified DNS name. Supported only on the primary replica.  
   
- REMOVE LISTENER **‘**_dns\_name_**’**  
+ REMOVE LISTENER **'**_dns\_name_**'**  
  Removes the listener that is associated with the specified DNS name. Supported only on the primary replica.  
   
  OFFLINE  

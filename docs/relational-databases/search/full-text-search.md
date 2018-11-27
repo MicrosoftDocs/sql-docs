@@ -60,7 +60,7 @@ A full-text index includes one or more character-based columns in a table. These
     ```  
     SELECT product_id   
     FROM products   
-    WHERE CONTAINS(product_description, ”Snap Happy 100EZ” OR FORMSOF(THESAURUS,’Snap Happy’) OR ‘100EZ’)   
+    WHERE CONTAINS(product_description, "Snap Happy 100EZ" OR FORMSOF(THESAURUS,'Snap Happy') OR '100EZ')   
     AND product_cost < 200 ;  
     ```  
   
@@ -69,7 +69,7 @@ A full-text index includes one or more character-based columns in a table. These
     ```  
     SELECT candidate_name,SSN   
     FROM candidates   
-    WHERE CONTAINS(candidate_resume,”SQL Server”) AND candidate_division =DBA;  
+    WHERE CONTAINS(candidate_resume,"SQL Server") AND candidate_division =DBA;  
     ```  
   
  For more information, see [Query with Full-Text Search](../../relational-databases/search/query-with-full-text-search.md).  

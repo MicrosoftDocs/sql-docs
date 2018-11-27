@@ -78,9 +78,9 @@ manager: craigg
 3.  If **Maximize data throughput for network applications** is selected, choose any other option, click **OK**, and then close the rest of the dialog boxes.  
   
 ## Lock Pages in Memory  
- This Windows policy determines which accounts can use a process to keep data in physical memory, preventing the system from paging the data to virtual memory on disk. Locking pages in memory may keep the server responsive when paging memory to disk occurs. The SQL Server **Lock Pages in Memory** option is set to ON in 32-bit and 64-bit instances of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard edition and higher when the account with privileges to run sqlservr.exe has been granted the Windows "Locked Pages in Memory” (LPIM) user right. In earlier versions of SQL Server, setting the Lock Pages option for a 32-bit instance of SQL Server, requires that the account with privileges to run sqlservr.exe have the LPIM user right and the 'awe_enabled' configuration option is set to ON.  
+ This Windows policy determines which accounts can use a process to keep data in physical memory, preventing the system from paging the data to virtual memory on disk. Locking pages in memory may keep the server responsive when paging memory to disk occurs. The SQL Server **Lock Pages in Memory** option is set to ON in 32-bit and 64-bit instances of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard edition and higher when the account with privileges to run sqlservr.exe has been granted the Windows "Locked Pages in Memory" (LPIM) user right. In earlier versions of SQL Server, setting the Lock Pages option for a 32-bit instance of SQL Server, requires that the account with privileges to run sqlservr.exe have the LPIM user right and the 'awe_enabled' configuration option is set to ON.  
   
- To disable the **Lock Pages In Memory** option for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], remove the “Locked Pages in Memory” user right for the SQL Server startup account.  
+ To disable the **Lock Pages In Memory** option for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], remove the "Locked Pages in Memory" user right for the SQL Server startup account.  
   
 ### To Disable Lock Pages in Memory  
  **To disable the lock pages in memory option:**  

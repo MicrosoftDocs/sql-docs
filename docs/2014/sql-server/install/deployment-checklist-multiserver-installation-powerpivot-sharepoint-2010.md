@@ -157,7 +157,7 @@ manager: craigg
  Similarly, a computer that has just Central Administration, without PowerPivot for SharePoint on the same computer, will require the ADOMD.NET client library. This library is used by the PowerPivot Management Dashboard to access internal data it uses to populate the dashboard. For more information, see [Install ADOMD.NET on Web Front-End Servers Running Central Administration](../../../2014/sql-server/install/install-adomd-net-on-web-front-end-servers-running-central-administration.md).  
   
 ##  <a name="configsrvr"></a> Configure the server  
- Use the PowerPivot Configuration Tool to configure PowerPivot for SharePoint. The tool will scan the farm’s existing configuration and provide options for installing or activating the SharePoint features that are needed by PowerPivot for SharePoint. During this step, the Claims to Windows Token Service will be started. Additionally, if other required SharePoint features are not yet enabled, the configuration tool will add them to the list and include actions for enabling the feature.  
+ Use the PowerPivot Configuration Tool to configure PowerPivot for SharePoint. The tool will scan the farm's existing configuration and provide options for installing or activating the SharePoint features that are needed by PowerPivot for SharePoint. During this step, the Claims to Windows Token Service will be started. Additionally, if other required SharePoint features are not yet enabled, the configuration tool will add them to the list and include actions for enabling the feature.  
   
  For more information, see [Configure or Repair PowerPivot for SharePoint 2010 &#40;PowerPivot Configuration Tool&#41;](../../../2014/analysis-services/configure-repair-powerpivot-sharepoint-2010.md).  
   

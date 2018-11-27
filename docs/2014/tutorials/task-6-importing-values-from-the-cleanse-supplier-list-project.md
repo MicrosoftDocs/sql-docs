@@ -34,7 +34,7 @@ manager: craigg
     |bobby0@adventure-work.com|bobby0@adventure-works.com|  
     |tad0@adventure-work.com|tad0@adventure-works.com|  
   
-6.  Repeat the previous step of importing project values for the **Country** domain and notice that a new entry is added for correcting **United State** to **United States** (with ‘s’).  
+6.  Repeat the previous step of importing project values for the **Country** domain and notice that a new entry is added for correcting **United State** to **United States** (with 's').  
   
     |Value|Correct To|  
     |-----------|----------------|  

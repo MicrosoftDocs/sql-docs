@@ -80,7 +80,7 @@ manager: craigg
   
          On the **Start** menu, point to **All Programs**, click [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], click **Configuration Tools**, and then click **PowerPivot for SharePoint 2013 Configuration Too**. Note that this tool is listed only when [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] is installed on the local server.  
   
-    2.  At startup, the configuration tool checks the upgrade status of the PowerPivot farm solution and PowerPivot web application solutions. If older versions of these solutions are detected, you will see the message “**Newer versions of the PowerPivot solution files have been detected. Please select the upgrade option to upgrade your farm**.” Click **OK** to close the system validation message.  
+    2.  At startup, the configuration tool checks the upgrade status of the PowerPivot farm solution and PowerPivot web application solutions. If older versions of these solutions are detected, you will see the message "**Newer versions of the PowerPivot solution files have been detected. Please select the upgrade option to upgrade your farm**." Click **OK** to close the system validation message.  
   
     3.  Click **Upgrade Features, Services, Applications and Solutions**, and then click **OK**.  
   
@@ -97,11 +97,11 @@ manager: craigg
         > [!IMPORTANT]  
         >  The first action, **Upgrade Farm Solution**, must always be processed first. It registers the PowerShell cmdlets that are used to configure the server. If you get an error on this action, do not continue. Instead, use the information provided by the error to diagnose and resolve the problem before processing additional actions in the task list.  
   
-    7.  Click **Run** to perform all of the actions that are valid for this task. **Run** is available only after the validation check is passed. When you click **Run**, the following warning appears, reminding you that actions are processed in batch mode: “**All of the configuration settings that are flagged as valid in the tool will be applied to the SharePoint farm. Do you want to continue?**”.  
+    7.  Click **Run** to perform all of the actions that are valid for this task. **Run** is available only after the validation check is passed. When you click **Run**, the following warning appears, reminding you that actions are processed in batch mode: "**All of the configuration settings that are flagged as valid in the tool will be applied to the SharePoint farm. Do you want to continue?**".  
   
     8.  Click **Yes** to continue.  
   
-    9. Upgrading solutions and features in the farm can take several minutes to complete. During this time, connection requests for PowerPivot data **will fail** with errors similar to “**Unable to refresh data**” or “**An error has occurred trying to perform the requested action. Please try again**.” After upgrade is finished, the server will become available and these errors will no longer occur.  
+    9. Upgrading solutions and features in the farm can take several minutes to complete. During this time, connection requests for PowerPivot data **will fail** with errors similar to "**Unable to refresh data**" or "**An error has occurred trying to perform the requested action. Please try again**." After upgrade is finished, the server will become available and these errors will no longer occur.  
   
      For more information, see the following:  
   
@@ -150,11 +150,11 @@ manager: craigg
   
     1.  On the **Start** menu, point to **All Programs**, click [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], click **Configuration Tools**, and then click **PowerPivot Configuration Tool**. Note that this tool is listed only when [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] is installed on the local server.  
   
-    2.  At startup, the configuration tool checks the upgrade status of the PowerPivot farm solution and PowerPivot web application solutions. If older versions of these solutions are detected, you will see the message “Newer versions of the PowerPivot solution files have been detected. Please select the upgrade option to upgrade your farm.” Click **OK** to close the message.  
+    2.  At startup, the configuration tool checks the upgrade status of the PowerPivot farm solution and PowerPivot web application solutions. If older versions of these solutions are detected, you will see the message "Newer versions of the PowerPivot solution files have been detected. Please select the upgrade option to upgrade your farm." Click **OK** to close the message.  
   
     3.  Click **Upgrade Features, Services, Applications and Solutions**, and then click **OK** to continue.  
   
-    4.  The following warning appears: “Workbooks in the PowerPivot Management Dashboard are about to be upgraded to the latest version. Any customizations you made to the existing workbooks will be lost. Do you want to continue?”  
+    4.  The following warning appears: "Workbooks in the PowerPivot Management Dashboard are about to be upgraded to the latest version. Any customizations you made to the existing workbooks will be lost. Do you want to continue?"  
   
          This warning refers to workbooks in the PowerPivot Management Dashboard that report on data refresh activity. If you customized these workbooks, any changes you made to those workbooks will be lost when existing files are replaced with newer versions.  
   
@@ -175,11 +175,11 @@ manager: craigg
         > [!IMPORTANT]  
         >  The first action, **Upgrade Farm Solution**, must always be processed first. It registers the PowerShell cmdlets that are used to configure the server. If you get an error on this action, do not continue. Instead, use the information provided by the error to diagnose and resolve the problem before processing additional actions in the task list.  
   
-    8.  Click **Run** to perform all of the actions that are valid for this task. **Run** is available only after the validation check is passed. When you click **Run**, the following warning appears, reminding you that actions are processed in batch mode: “All of the configuration settings that are flagged as valid in the tool will be applied to the SharePoint farm. Do you want to continue?”  
+    8.  Click **Run** to perform all of the actions that are valid for this task. **Run** is available only after the validation check is passed. When you click **Run**, the following warning appears, reminding you that actions are processed in batch mode: "All of the configuration settings that are flagged as valid in the tool will be applied to the SharePoint farm. Do you want to continue?"  
   
     9. Click **Yes** to continue.  
   
-    10. Upgrading solutions and features in the farm can take several minutes to complete. During this time, connection requests for PowerPivot data will fail with errors like “Unable to refresh data” or “An error has occurred trying to perform the requested action. Please try again.” After upgrade is finished, the server will become available and these errors will no longer occur.  
+    10. Upgrading solutions and features in the farm can take several minutes to complete. During this time, connection requests for PowerPivot data will fail with errors like "Unable to refresh data" or "An error has occurred trying to perform the requested action. Please try again." After upgrade is finished, the server will become available and these errors will no longer occur.  
   
 8.  **Repeat the process** for each SQL Server Analysis Services (PowerPivot) service in the farm: 1) Run SQL Server setup 2) Run the PowerPivot Configuration tool.  
   
@@ -199,10 +199,10 @@ manager: craigg
   
     2.  Review existing deployments for the following information: **Type** is Retraction or Deployment, **File** is powerpivotwebapp.wsp or powerpivotfarm.wsp.  
   
-    3.  For deployments or retractions related to PowerPivot solutions, copy the GUID value for **JobId** and then paste it into the following command (use the Mark, Copy, and Paste commands on the Shell’s Edit menu to copy the GUID):  
+    3.  For deployments or retractions related to PowerPivot solutions, copy the GUID value for **JobId** and then paste it into the following command (use the Mark, Copy, and Paste commands on the Shell's Edit menu to copy the GUID):  
   
         ```  
-        Stsadm –o canceldeployment –id “<GUID>”  
+        Stsadm –o canceldeployment –id "<GUID>"  
         ```  
   
     4.  Retry the task in the configuration tool by clicking **Validate** followed by **Run**.  

@@ -49,7 +49,7 @@ GO
  The **SEMANTICKEYPHRASETABLE** function retrieves these results efficiently by using an index seek instead of a table scan.  
   
 ###  <a name="HowToTopDocuments"></a> Example 2: Find the top documents that contain a specific key phrase  
- The following example retrieves the top 25 documents that contain the key phrase “Bracket” from the Document column of the Production.Document table of the AdventureWorks sample database.  
+ The following example retrieves the top 25 documents that contain the key phrase "Bracket" from the Document column of the Production.Document table of the AdventureWorks sample database.  
   
 ```sql  
 SELECT TOP (25) DOC_TBL.DocumentID, DOC_TBL.DocumentSummary  

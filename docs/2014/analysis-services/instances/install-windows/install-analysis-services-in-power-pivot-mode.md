@@ -94,7 +94,7 @@ manager: craigg
   
 10. On the **Setup Role** page, select **SQL Server PowerPivot for SharePoint**. This option installs Analysis Services in SharePoint mode.  
   
-     Optionally, you can add an instance of the Database Engine to your installation. You might add the Database Engine when setting up a new farm and need a database server to run the farm’s configuration and content databases. This option also installs [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
+     Optionally, you can add an instance of the Database Engine to your installation. You might add the Database Engine when setting up a new farm and need a database server to run the farm's configuration and content databases. This option also installs [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
   
      If you add the Database Engine, it is installed as a **PowerPivot** named instance. Whenever you specify a connection to this instance, enter the database name in this format: [`servername`]\PowerPivot.  
   

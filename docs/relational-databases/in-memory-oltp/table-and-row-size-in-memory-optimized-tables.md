@@ -149,7 +149,7 @@ CREATE TABLE dbo.Orders (
 GO  
 ```  
   
-Notice that this table has one hash index and a nonclustered index (the primary key). It also has three fixed-length columns and one variable-length column, with one of the columns being NULLable (`OrderDescription`). Let’s assume the `Orders` table has 8379 rows, and the average length of the values in the `OrderDescription` column is 78 characters.  
+Notice that this table has one hash index and a nonclustered index (the primary key). It also has three fixed-length columns and one variable-length column, with one of the columns being NULLable (`OrderDescription`). Let's assume the `Orders` table has 8379 rows, and the average length of the values in the `OrderDescription` column is 78 characters.  
   
 To determine the table size, first determine the size of the indexes. The bucket_count for both indexes is specified as 10000. This is rounded up to the nearest power of 2: 16384. Therefore, the total size of the indexes for the Orders table is:  
   
@@ -170,7 +170,7 @@ What remains is the table data size, which is,
 [row header size] = 24 + 8 * [number of indices] = 24 + 8 * 1 = 32 bytes  
 ```  
   
-Next, let’s calculate [actual row body size]:  
+Next, let's calculate [actual row body size]:  
   
 -   Shallow type columns:  
   

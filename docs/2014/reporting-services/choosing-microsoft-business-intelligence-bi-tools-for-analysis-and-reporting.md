@@ -17,7 +17,7 @@ manager: craigg
   
  The intent is to help you choose the tool that best meets your needs. For more information about a product, click the product link in the table.  
   
- If you’re looking for a brief overview of these tools to help you decide which tools are right for you, see [Introducing Microsoft Business Intelligence (BI) Tools](http://msdn.microsoft.com/library/dn655131.aspx).  
+ If you're looking for a brief overview of these tools to help you decide which tools are right for you, see [Introducing Microsoft Business Intelligence (BI) Tools](http://msdn.microsoft.com/library/dn655131.aspx).  
   
 |Workloads|User|||BI Tools|||  
 |---------------|----------|-|-|--------------|-|-|  

@@ -110,7 +110,7 @@ foreach ($node in $nodes) {
     };
 ```  
 ## 3.  Configure **in-doubt xact resolution** 
-This script will configure the **in-doubt xact resolution** server configuration option to “presume commit” for in-doubt transactions.  Run the following T-SQL script in SQL Server Management Studio (SSMS) against `SQLNODE1` in **SQLCMD mode**.
+This script will configure the **in-doubt xact resolution** server configuration option to "presume commit" for in-doubt transactions.  Run the following T-SQL script in SQL Server Management Studio (SSMS) against `SQLNODE1` in **SQLCMD mode**.
 
 ```sql  
 /*******************************************************************
@@ -581,4 +581,4 @@ GO
 ```
 
 > [!IMPORTANT]
-> The `USE AG1` statement must be executed to ensure the database context is set to `AG1`.  Otherwise, you will receive the following error message: “Transaction context in use by another session.”
+> The `USE AG1` statement must be executed to ensure the database context is set to `AG1`.  Otherwise, you will receive the following error message: "Transaction context in use by another session."

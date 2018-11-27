@@ -34,7 +34,7 @@ The body of a natively compiled stored procedure did not have an ATOMIC block.
 A natively compiled stored procedure must contain an ATOMIC block. For example:  
   
 ```  
-BEGIN ATOMIC WITH (TRANSACTION ISOLATION LEVEL = SNAPSHOT, LANGUAGE= N’us_english’)  
+BEGIN ATOMIC WITH (TRANSACTION ISOLATION LEVEL = SNAPSHOT, LANGUAGE= N'us_english')  
 ```  
   
 For more information, see [In-Memory OLTP &#40;In-Memory Optimization&#41;](~/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  

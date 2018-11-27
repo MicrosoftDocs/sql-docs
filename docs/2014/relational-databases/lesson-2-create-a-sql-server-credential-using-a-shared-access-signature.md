@@ -30,7 +30,7 @@ manager: craigg
   
 3.  On the Standard tool bar, click New Query.  
   
-4.  Copy and paste the following example into the query window, modify as needed. The following statement will create a SQL Server Credential to store your storage container’s Shared Access Certificate.  
+4.  Copy and paste the following example into the query window, modify as needed. The following statement will create a SQL Server Credential to store your storage container's Shared Access Certificate.  
   
     ```tsql  
   

@@ -95,7 +95,7 @@ For more info about the error described in this section and about the permission
   
  To deploy a project to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server, complete the following tasks:  
   
-1.  Create an SSISDB catalog, if you haven’t already. For more information, see [SSIS Catalog](../../integration-services/catalog/ssis-catalog.md).  
+1.  Create an SSISDB catalog, if you haven't already. For more information, see [SSIS Catalog](../../integration-services/catalog/ssis-catalog.md).  
   
 2.  Convert the project to the project deployment model by running the **Integration Services Project Conversion Wizard** . For more information, see the instructions below: [To convert a project to the project deployment model](#convert)  
   
@@ -288,7 +288,7 @@ Launch the wizard by either:
 
 **OR**
 
- - Search for the executable file **ISDeploymentWizard.exe** under the SQL Server installation folder; for example: “C:\Program Files (x86)\Microsoft SQL Server\130\DTS\Binn”. 
+ - Search for the executable file **ISDeploymentWizard.exe** under the SQL Server installation folder; for example: "C:\Program Files (x86)\Microsoft SQL Server\130\DTS\Binn". 
  
  > **NOTE:** If you see the **Introduction** page, click **Next** to switch to the **Select Source** page. 
  
@@ -331,7 +331,7 @@ Launch the wizard by either:
  After the deployment is complete, you should see the **Results** page. In the **Results** page, review results from each step in the deployment process. On the **Results** page, click **Save Report** to save the deployment report or **Close** to the close the wizard.  
 
 ## Create and Map a Server Environment
-  You create a server environment to specify runtime values for packages contained in a project you’ve deployed to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server. You can then map the environment variables to parameters, for a specific package, for entry-point packages, or for all the packages in a given project. An entry-point package is typically a parent package that executes a child package.  
+  You create a server environment to specify runtime values for packages contained in a project you've deployed to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server. You can then map the environment variables to parameters, for a specific package, for entry-point packages, or for all the packages in a given project. An entry-point package is typically a parent package that executes a child package.  
   
 > [!IMPORTANT]  
 >  For a given execution, a package can execute only with the values contained in a single server environment.  
@@ -375,7 +375,7 @@ Launch the wizard by either:
 7.  To script the environment, click **Script**. By default, the script displays in a new Query Editor window.  
   
     > [!TIP]  
-    >  You need to click **Script** after you’ve made one or changes to the environment properties, such as adding a variable, and before you click **OK** in the **Environment Properties** dialog box. Otherwise, a script is not generated.  
+    >  You need to click **Script** after you've made one or changes to the environment properties, such as adding a variable, and before you click **OK** in the **Environment Properties** dialog box. Otherwise, a script is not generated.  
   
 8.  Click **OK** to save your changes to the environment properties.  
   
@@ -485,7 +485,7 @@ Launch the wizard by either:
   
 -   Confirm that the Distributed Transaction Coordinator (DTC) is started on both servers.  
   
- Call catalog.get_project to return the binary for the project, and then call catalog.deploy_project. The value returned by catalog.get_project is inserted into a table variable of type varbinary(max). The linked server can’t return results that are varbinary(max).  
+ Call catalog.get_project to return the binary for the project, and then call catalog.deploy_project. The value returned by catalog.get_project is inserted into a table variable of type varbinary(max). The linked server can't return results that are varbinary(max).  
   
  In the following example, catalog.get_project returns a binary for the SSISPackages project on the linked server. The catalog.deploy_project deploys the project to the local server, to the folder named DestFolder.  
   
@@ -671,7 +671,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **Remove configurations from all packages after conversion**  
  It is recommended that you remove all configurations from the project by selecting this option.  
   
- If you don’t select this option, only the configurations that you selected to replace with parameters are removed.  
+ If you don't select this option, only the configurations that you selected to replace with parameters are removed.  
   
 ###  <a name="createParameters"></a> Set Options on the Create Parameters Page  
  Select the parameter name and scope for each configuration property.  
@@ -704,7 +704,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  The **Set Parameter Details** dialog box also lists the data type of the parameter value and the origin of the parameter.  
   
 ###  <a name="review"></a> Set the Options on the Review page  
- Use the **Review** page to confirm the options that you’ve selected for the conversion of the project.  
+ Use the **Review** page to confirm the options that you've selected for the conversion of the project.  
   
  **Previous**  
  Click to change an option.  

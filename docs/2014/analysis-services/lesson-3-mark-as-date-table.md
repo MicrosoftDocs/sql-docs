@@ -17,7 +17,7 @@ manager: craigg
   
  Whenever you use Time Intelligence functions in calculations, as you will do when you create measures a little later, you must specify date table properties, which include a *Date table* and a unique identifier *Date column* in that table. You can then create valid relationships between other tables and the Date table; necessary for calculations using DAX time intelligence functions.  
   
- In this lesson, you will mark the imported and renamed Date table as the *Date table* and the Date column (in the Date table) as the *Date column* (unique identifier). All the use of the name Date can get kind of confusing, but you’ll soon get the idea.  
+ In this lesson, you will mark the imported and renamed Date table as the *Date table* and the Date column (in the Date table) as the *Date column* (unique identifier). All the use of the name Date can get kind of confusing, but you'll soon get the idea.  
   
  Estimated time to complete this lesson: **3 minutes**  
   

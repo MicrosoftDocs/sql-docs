@@ -65,7 +65,7 @@ Starting with Data Migration Assistant v2.0, if you experience this problem you 
 
 <workflowSettings>
 
-<migration parallelDatabases=”8″ />
+<migration parallelDatabases="8″ />
 
 </workflowSettings>
 

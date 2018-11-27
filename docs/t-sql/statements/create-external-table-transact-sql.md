@@ -166,7 +166,7 @@ In SQL Data Warehouse and Analytics Platform System, the [CREATE EXTERNAL TABLE 
  Specifies the name of the external file format object that stores the file type and compression method for the external data. To create an external file format, use [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md).  
   
  Reject Options  
- You can specify reject parameters that determine how PolyBase will handle *dirty* records it retrieves from the external data source. A data record is considered ‘dirty’ if it actual data types or the number of columns do not match the column definitions of the external table.  
+ You can specify reject parameters that determine how PolyBase will handle *dirty* records it retrieves from the external data source. A data record is considered 'dirty' if it actual data types or the number of columns do not match the column definitions of the external table.  
   
  When you do not specify or change reject values, PolyBase uses default values. This information about the reject parameters is stored as additional metadata when you create an external table with CREATE EXTERNAL TABLE statement.   When a future SELECT statement or SELECT INTO SELECT statement selects data from the external table , PolyBase will use the reject options to determine the number or percentage of rows that can be rejected before the actual query fails. . The query will return (partial) results until the reject threshold is exceeded; it then fails with the appropriate error message.  
   
@@ -216,7 +216,7 @@ Example:
 REJECTED_ROW_LOCATION = *Directory Location*
   
   Specifies the directory within the External Data Source that the rejected rows and the corresponding error file should be written.
-If the specified path does not exist, PolyBase will create one on your behalf. A child directory is created with the name “_rejectedrows”. The “_” character ensures that the directory is escaped for other data processing unless explicitly named in the location parameter. Within this directory, there is a folder created based on the time of load submission in the format YearMonthDay -HourMinuteSecond (Ex. 20180330-173205). In this folder, two types of files are written, the _reason file and the data file. 
+If the specified path does not exist, PolyBase will create one on your behalf. A child directory is created with the name "_rejectedrows". The "_" character ensures that the directory is escaped for other data processing unless explicitly named in the location parameter. Within this directory, there is a folder created based on the time of load submission in the format YearMonthDay -HourMinuteSecond (Ex. 20180330-173205). In this folder, two types of files are written, the _reason file and the data file. 
 
 The reason files and the data files both have the queryID associated with the CTAS statement. Because the data and the reason are in separate files corresponding files have a matching suffix. 
   
@@ -272,7 +272,7 @@ The reason files and the data files both have the queryID associated with the CT
   
  Since the data for an external table resides off the appliance, it is not under the control of PolyBase, and can be changed or removed at any time by an external process. Because of this, uery results against an external table are not guaranteed to be deterministic. The same query can return different results each time it runs against an external table. Similarly, a query can fail if the external data is removed or relocated.  
   
- You can create multiple external tables that each reference different external data sources. However, if you simultaneously run queries against different Hadoop data sources, then each Hadoop source must use the same 'hadoop connectivity' server configuration setting. For example, you can’t simultaneously run a query against a Cloudera Hadoop cluster and a Hortonworks Hadoop cluster since these use different configuration settings. For the configuration settings and supported combinations, see [PolyBase Connectivity Configuration &#40;Transact-SQL&#41;](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).  
+ You can create multiple external tables that each reference different external data sources. However, if you simultaneously run queries against different Hadoop data sources, then each Hadoop source must use the same 'hadoop connectivity' server configuration setting. For example, you can't simultaneously run a query against a Cloudera Hadoop cluster and a Hortonworks Hadoop cluster since these use different configuration settings. For the configuration settings and supported combinations, see [PolyBase Connectivity Configuration &#40;Transact-SQL&#41;](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).  
   
  Only these Data Definition Language (DDL) statements are allowed on external tables:  
   

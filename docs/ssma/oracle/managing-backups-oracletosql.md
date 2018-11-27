@@ -24,9 +24,9 @@ To open the backup dialog, on the  Tester menu point to Oracle Backup Management
   
 The following buttons are available on the dialog:  
   
--   Click the **Check State** button to check the table’s backup state.  
+-   Click the **Check State** button to check the table's backup state.  
   
--   Click the **Backup** button to back up table’s the data.  
+-   Click the **Backup** button to back up table's the data.  
   
 -   Click the **Cancel** button to close the dialog.  
   
@@ -35,7 +35,7 @@ To open the restore dialog, on the Tester menu point to Oracle Backup Management
   
 The following buttons are available on the dialog:  
   
--   Click the **Check State** button to check the table’s backup state.  
+-   Click the **Check State** button to check the table's backup state.  
   
 -   Click the **Restore** button to restore backup data into the table.  
   
@@ -46,7 +46,7 @@ To open Managing Backup Contents, on the Tester menu point to Oracle Backup Mana
   
 The following buttons are available on the dialog:  
   
--   Click the **Check State** button to check the table’s backup state.  
+-   Click the **Check State** button to check the table's backup state.  
   
 -   Click the **Remove** button to remove the table from the backup.  
   
@@ -60,9 +60,9 @@ To open the backup dialog, on the Tester menu point to SQL Server Backup Managem
   
 The following buttons are available on the dialog:  
   
--   Click the **Check State** button to check the table’s backup state.  
+-   Click the **Check State** button to check the table's backup state.  
   
--   Click the **Backup** button to back up the table’s data.  
+-   Click the **Backup** button to back up the table's data.  
   
 -   Click the **Cancel** button to close the dialog.  
   
@@ -71,7 +71,7 @@ To open the restore dialog, on the Tester menu point to SQL Server Backup Manage
   
 The following buttons are available on the dialog:  
   
--   Click the **Check State** button to check the table’s backup state.  
+-   Click the **Check State** button to check the table's backup state.  
   
 -   Click the **Restore** button to restore backup data into the table.  
   
@@ -82,7 +82,7 @@ To open Managing Backup Contents, on the Tester menu point to SQL Server Backup 
   
 The following buttons are available on the dialog:  
   
--   Click the **Check State** button to check the table’s backup state.  
+-   Click the **Check State** button to check the table's backup state.  
   
 -   Click the **Remove** button to remove the table from the backup.  
   

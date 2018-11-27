@@ -46,11 +46,11 @@ manager: craigg
   
         -   \<appSettings>  
   
-            -   \<add key=”WebServicePort” value=”” />  
+            -   \<add key="WebServicePort" value="" />  
   
-            -   \<add key=”WebServiceCertificate” value=”GUID” />  
+            -   \<add key="WebServiceCertificate" value="GUID" />  
   
-            -   \<add key=”ExposeExceptionDetails” value=”true” />  
+            -   \<add key="ExposeExceptionDetails" value="true" />  
   
         -   \</appSettings>  
   
@@ -58,7 +58,7 @@ manager: craigg
   
 -   **Certificate details** – The certificate has the following values:  
   
-    -   Subject – “CN=CloudAdapter\<VMName>, DC=SQL Server, DC=Microsoft”  
+    -   Subject – "CN=CloudAdapter\<VMName>, DC=SQL Server, DC=Microsoft"  
   
     -   The certificate should have only Server Authentication EKU enabled.  
   

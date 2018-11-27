@@ -76,7 +76,7 @@ manager: craigg
   
  A user can now explicitly be assigned the Admin permission at the model level. This means that if the user is later assigned permissions in the model subtree, such as the entity level, he will not lose this Admin permission.  
   
- In this release of [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], we’re providing more levels of permissions by introducing the following new permissions: Read, Create, Update and Delete. For example, a user that has only the Update permission can now update the master data without creating or deleting the data. When you give a user the Create, Update or Delete permission, the user is automatically assigned the Read permission. You can also combine the Read, Create, Update and Delete permissions.  
+ In this release of [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], we're providing more levels of permissions by introducing the following new permissions: Read, Create, Update and Delete. For example, a user that has only the Update permission can now update the master data without creating or deleting the data. When you give a user the Create, Update or Delete permission, the user is automatically assigned the Read permission. You can also combine the Read, Create, Update and Delete permissions.  
   
  When you upgrade to [!INCLUDE[ssSQL15](../includes/sssql15-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], old permissions are converted to new permissions as shown in the following table.  
   

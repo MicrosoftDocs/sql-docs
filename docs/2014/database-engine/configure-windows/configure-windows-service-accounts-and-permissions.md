@@ -152,7 +152,7 @@ manager: craigg
 ##  <a name="Serv_Prop"></a> Service Properties and Configuration  
  Startup accounts used to start and run [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can be [domain user accounts](#Domain_User), [local user accounts](#Local_User), [managed service accounts](#MSA), [virtual accounts](#VA_Desc), or [built-in system accounts](#Local_Service). To start and run, each service in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must have a startup account configured during installation.  
   
- This section describes the accounts that can be configured to start [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services, the default values used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup, the concept of per-service SID’s, the startup options, and configuring the firewall.  
+ This section describes the accounts that can be configured to start [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services, the default values used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup, the concept of per-service SID's, the startup options, and configuring the firewall.  
   
 -   [Default Service Accounts](#Default_Accts)  
   
@@ -275,7 +275,7 @@ manager: craigg
  In most cases, when initially installed, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] can be connected to by tools such as [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] installed on the same computer as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup does not open ports in the Windows firewall. Connections from other computers may not be possible until the [!INCLUDE[ssDE](../../includes/ssde-md.md)] is configured to listen on a TCP port, and the appropriate port is opened for connections in the Windows firewall. For more information, see [Configure the Windows Firewall to Allow SQL Server Access](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
 ##  <a name="Serv_Perm"></a> Service Permissions  
- This section describes the permissions that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup configures for the per-service SID’s of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services.  
+ This section describes the permissions that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup configures for the per-service SID's of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services.  
   
 -   [Service Configuration and Access Control](#Serv_SID)  
   
@@ -577,13 +577,13 @@ manager: craigg
   
     -   The per-service SID of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] is provisioned in the [!INCLUDE[ssDE](../../includes/ssde-md.md)] as a member of the **sysadmin** fixed server role.  
   
-    -   The per-service SID’s are added to the local [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows groups, unless [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is a Failover Cluster Instance.  
+    -   The per-service SID's are added to the local [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows groups, unless [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is a Failover Cluster Instance.  
   
     -   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] resources remain provisioned to the local [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows groups.  
   
-    -   The local Windows group for services is renamed from **SQLServer2005MSSQLUser$***<computer_name>***$***<instance_name>* to **SQLServerMSSQLUser$***<computer_name>***$***<instance_name>*. File locations for migrated databases will have Access Control Entries (ACE) for the local Windows groups. The file locations for new databases will have ACE’s for the per-service SID.  
+    -   The local Windows group for services is renamed from **SQLServer2005MSSQLUser$***<computer_name>***$***<instance_name>* to **SQLServerMSSQLUser$***<computer_name>***$***<instance_name>*. File locations for migrated databases will have Access Control Entries (ACE) for the local Windows groups. The file locations for new databases will have ACE's for the per-service SID.  
   
--   During upgrade from [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup will be preserve the ACE’s for the [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] per-service SID.  
+-   During upgrade from [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup will be preserve the ACE's for the [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] per-service SID.  
   
 -   For a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Failover Cluster Instance, the ACE for the domain account configured for the service will be retained.  
   

@@ -124,7 +124,7 @@ manager: craigg
 4.  Optionally, right-click the connection manager in the **Solution Explorer** window under **Connection Managers** node (or) in the **Connection Managers** tab of the **SSIS Designer** window, click **Rename**, and then modify the default name of the connection manager.  
   
     > [!NOTE]  
-    >  In the **Connection Managers** tab of the **SSIS Designer** window, you won’t be able to overwrite the **(project)** prefix from the connection manager name. This is by design.  
+    >  In the **Connection Managers** tab of the **SSIS Designer** window, you won't be able to overwrite the **(project)** prefix from the connection manager name. This is by design.  
   
 ##  <a name="parameter"></a> To create a parameter for a connection manager property  
   

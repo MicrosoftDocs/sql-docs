@@ -1,7 +1,7 @@
 ---
 title: "Database Mail XPs Server Configuration Option | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/02/2017"
+ms.date: "11/27/2018"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
@@ -16,13 +16,14 @@ ms.author: mikeray
 manager: craigg
 ---
 # Database Mail XPs Server Configuration Option
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Use the **DatabaseMail XPs** option to enable Database Mail on this server. The possible values are:  
   
--   **0** indicating Database Mail is not available (default).  
+- **0** indicating Database Mail is not available (default).  
   
--   **1** indicating Database Mail is available.  
+- **1** indicating Database Mail is available.  
   
  The setting takes effect immediately without a server stop and restart.  
   
@@ -32,7 +33,7 @@ manager: craigg
   
  Setting the **Database Mail XPs** option to 0 prevents Database Mail from starting. If it is running when the option is set to 0, it continues to run and send mail until it is idle for the time configured in the **DatabaseMailExeMinimumLifeTime** option.  
   
-## Examples  
+## Examples
  The following example enables the Database Mail extended stored procedures.  
   
 ```  
@@ -47,18 +48,19 @@ GO
 ```  
 
 The following example enables the Database Mail extended stored procedures if it is not already enabled.
-```
-if exists (select 1 from sys.configurations where name = 'Database Mail XPs' and value = 0)
-begin
-	print 'Enabling Database Mail XPs'
-	exec sp_configure 'show advanced options', 1;  
-	reconfigure
-	exec sp_configure 'Database Mail XPs', 1;  
-	reconfigure  
-end
+
+```sql
+IF EXISTS (
+    SELECT 1 FROM sys.configurations 
+    WHERE NAME = 'Database Mail XPs' AND VALUE = 0)
+BEGIN
+  PRINT 'Enabling Database Mail XPs'
+  EXEC sp_configure 'show advanced options', 1;  
+  RECONFIGURE
+  EXEC sp_configure 'Database Mail XPs', 1;  
+  RECONFIGURE  
+END
 ```
 
-## See Also  
- [Database Mail](../../relational-databases/database-mail/database-mail.md)  
-  
-  
+## See Also
+[Database Mail](../../relational-databases/database-mail/database-mail.md)  

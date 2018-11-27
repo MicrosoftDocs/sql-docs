@@ -53,7 +53,7 @@ For more information on editing the file, see [Modify a Reporting Services Confi
  The following table provides information about general configuration settings that appear in the first part of the file. Settings are presented in the order in which they appear in the configuration file. The last column of the table indicates if the setting applies to a Native mode report server **(N)** or a SharePoint mode report server **(S)** or both.  
   
 > [!NOTE]  
->  In this topic, “maximum integer” refers to INT_MAX value of 2147483647.  For more information, see [Integer Limits](https://msdn.microsoft.com/library/296az74e\(v=vs.110\).aspx) (https://msdn.microsoft.com/library/296az74e(v=vs.110).aspx).  
+>  In this topic, "maximum integer" refers to INT_MAX value of 2147483647.  For more information, see [Integer Limits](https://msdn.microsoft.com/library/296az74e\(v=vs.110\).aspx) (https://msdn.microsoft.com/library/296az74e(v=vs.110).aspx).  
   
 |Setting|Description|Mode|  
 |-------------|-----------------|----------|  
@@ -425,7 +425,7 @@ x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
 			<VirtualDirectory>ReportServer</VirtualDirectory>
 			<URLs>
 				<URL>
-					<UrlString>http://+:80</UrlString>
+					<UrlString>https://+:80</UrlString>
 					<AccountSid>S-1-5-80-2885764129-887777008-271615777-1616004480-2722851051</AccountSid>
 					<AccountName>NT SERVICE\ReportServer</AccountName>
 				</URL>
@@ -436,7 +436,7 @@ x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
 			<VirtualDirectory>Reports</VirtualDirectory>
 			<URLs>
 				<URL>
-					<UrlString>http://+:80</UrlString>
+					<UrlString>https://+:80</UrlString>
 					<AccountSid>S-1-5-80-2885764129-887777008-271615777-1616004480-2722851051</AccountSid>
 					<AccountName>NT SERVICE\ReportServer</AccountName>
 				</URL>
@@ -766,7 +766,7 @@ x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
       <VirtualDirectory>ReportServer</VirtualDirectory>  
       <URLs>  
         <URL>  
-          <UrlString>http://+:80</UrlString>  
+          <UrlString>https://+:80</UrlString>  
           <AccountSid>  
           </AccountSid>  
           <AccountName>  
@@ -779,7 +779,7 @@ x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
       <VirtualDirectory>Reports</VirtualDirectory>  
       <URLs>  
         <URL>  
-          <UrlString>http://+:80</UrlString>  
+          <UrlString>https://+:80</UrlString>  
           <AccountSid>  
           </AccountSid>  
           <AccountName>  

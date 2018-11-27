@@ -2112,6 +2112,56 @@
             "redirect_document_id": true
         },
         {
+            "source_path": "docs/analysis-services/powershell/get-powerpivotserviceapplication-cmdlet.md",
+            "redirect_url": "/sql/analysis-services/powershell/analysis-services-powershell-reference",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/analysis-services/powershell/get-powerpivotsystemservice-cmdlet.md",
+            "redirect_url": "/sql/analysis-services/powershell/analysis-services-powershell-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/analysis-services/powershell/get-powerpivotsystemserviceinstance-cmdlet.md",
+            "redirect_url": "/sql/analysis-services/powershell/analysis-services-powershell-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/analysis-services/powershell/new-powerpivotserviceapplication-cmdlet.md",
+            "redirect_url": "/sql/analysis-services/powershell/analysis-services-powershell-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/analysis-services/powershell/new-powerpivotsystemserviceinstance-cmdlet.md",
+            "redirect_url": "/sql/analysis-services/powershell/analysis-services-powershell-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/analysis-services/powershell/remove-powerpivotserviceapplication-cmdlet.md",
+            "redirect_url": "/sql/analysis-services/powershell/analysis-services-powershell-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/analysis-services/powershell/remove-powerpivotsystemserviceinstance-cmdlet.md",
+            "redirect_url": "/sql/analysis-services/powershell/analysis-services-powershell-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/analysis-services/powershell/set-powerpivotserviceapplication-cmdlet.md",
+            "redirect_url": "/sql/analysis-services/powershell/analysis-services-powershell-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/analysis-services/powershell/set-powerpivotsystemservice-cmdlet.md",
+            "redirect_url": "/sql/analysis-services/powershell/analysis-services-powershell-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/analysis-services/powershell/update-powerpivotsystemservice-cmdlet.md",
+            "redirect_url": "/sql/analysis-services/powershell/analysis-services-powershell-reference",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/whitepapers/introducing-microsoft-technologies-for-data-storage-movement-and-transformation.md",
             "redirect_url": "sql/whitepapers/microsoft-white-papers",
             "redirect_document_id": true
@@ -12554,10 +12604,390 @@
             "redirect_url": "https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/xml-elements-properties",
             "redirect_document_id": false
         },
-      {
-        "source_path": "docs/2014/sql-server/install/example-license-topologies-costs-self-service-business-intelligence.md",
-        "redirect_url": "https://docs.microsoft.com/en-us/sql/sql-server/install/install-sql-server-business-intelligence-features?view=sql-server-2014",
-        "redirect_document_id": false
-      }
+        {
+          "source_path": "docs/2014/sql-server/install/example-license-topologies-costs-self-service-business-intelligence.md",
+          "redirect_url": "https://docs.microsoft.com/en-us/sql/sql-server/install/install-sql-server-business-intelligence-features?view=sql-server-2014",
+          "redirect_document_id": false
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/add-transact-sql-snippets.md",
+            "redirect_url": "/sql/ssms/scripting/add-transact-sql-snippets",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/associate-file-extensions-to-a-code-editor.md",
+            "redirect_url": "/sql/ssms/scripting/associate-file-extensions-to-a-code-editor",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/automatic-matching-of-syntax-pairs.md",
+            "redirect_url": "/sql/ssms/scripting/automatic-matching-of-syntax-pairs",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/bookmarks-f1-help.md",
+            "redirect_url": "/sql/ssms/scripting/bookmarks-f1-help",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/change-font-color-size-and-style.md",
+            "redirect_url": "/sql/ssms/scripting/change-font-color-size-and-style",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/code-outlining.md",
+            "redirect_url": "/sql/ssms/scripting/code-outlining",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/color-coding-in-query-editors.md",
+            "redirect_url": "/sql/ssms/scripting/color-coding-in-query-editors",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/complete-transact-sql-snippets.md",
+            "redirect_url": "/sql/ssms/scripting/complete-transact-sql-snippets",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/complete-word-intellisense.md",
+            "redirect_url": "/sql/ssms/scripting/complete-word-intellisense",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/configure-editors-sql-server-management-studio.md",
+            "redirect_url": "/sql/ssms/scripting/configure-editors-sql-server-management-studio",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md",
+            "redirect_url": "/sql/ssms/scripting/configure-firewall-rules-before-running-the-tsql-debugger",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/configure-intellisense-sql-server-management-studio.md",
+            "redirect_url": "/sql/ssms/scripting/configure-intellisense-sql-server-management-studio",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md",
+            "redirect_url": "/sql/ssms/scripting/database-engine-query-editor-sql-server-management-studio",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/database-engine-scripting.md",
+            "redirect_url": "/sql/ssms/scripting/database-engine-scripting",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/drag-and-drop-text.md",
+            "redirect_url": "/sql/ssms/scripting/drag-and-drop-text",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/edit-a-breakpoint-location.md",
+            "redirect_url": "/sql/ssms/scripting/edit-a-breakpoint-location",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md",
+            "redirect_url": "/sql/ssms/scripting/edit-sqlcmd-scripts-with-query-editor",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/enable-disable-and-delete-breakpoints.md",
+            "redirect_url": "/sql/ssms/scripting/enable-disable-and-delete-breakpoints",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/find-and-replace.md",
+            "redirect_url": "/sql/ssms/scripting/find-and-replace",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/find-in-files.md",
+            "redirect_url": "/sql/ssms/scripting/find-in-files",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/find-results-windows.md",
+            "redirect_url": "/sql/ssms/scripting/find-results-windows",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/generate-and-publish-scripts-wizard.md",
+            "redirect_url": "/sql/ssms/scripting/generate-and-publish-scripts-wizard",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/generate-scripts-sql-server-management-studio.md",
+            "redirect_url": "/sql/ssms/scripting/generate-scripts-sql-server-management-studio",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/index.md",
+            "redirect_url": "/sql/ssms/scripting/index",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/insert-surround-with-transact-sql-snippets.md",
+            "redirect_url": "/sql/ssms/scripting/insert-surround-with-transact-sql-snippets",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/insert-transact-sql-snippets.md",
+            "redirect_url": "/sql/ssms/scripting/insert-transact-sql-snippets",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/intellisense-sql-server-management-studio.md",
+            "redirect_url": "/sql/ssms/scripting/intellisense-sql-server-management-studio",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/manage-bookmarks.md",
+            "redirect_url": "/sql/ssms/scripting/manage-bookmarks",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/manage-code-formatting.md",
+            "redirect_url": "/sql/ssms/scripting/manage-code-formatting",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/manage-the-editor-and-view-mode.md",
+            "redirect_url": "/sql/ssms/scripting/manage-the-editor-and-view-mode",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/navigate-code-and-text.md",
+            "redirect_url": "/sql/ssms/scripting/navigate-code-and-text",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/Xobjects-supported-by-the-generate-scripts-wizardX.md",
+            "redirect_url": "/sql/ssms/scripting/objects-supported-by-the-generate-scripts-wizard",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/open-an-editor-sql-server-management-studio.md",
+            "redirect_url": "/sql/ssms/scripting/open-an-editor-sql-server-management-studio",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/parameter-info-intellisense.md",
+            "redirect_url": "/sql/ssms/scripting/parameter-info-intellisense",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/print-code-and-results.md",
+            "redirect_url": "/sql/ssms/scripting/print-code-and-results",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md",
+            "redirect_url": "/sql/ssms/scripting/query-and-text-editors-sql-server-management-studio",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/quick-info-intellisense.md",
+            "redirect_url": "/sql/ssms/scripting/quick-info-intellisense",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/replace-in-files.md",
+            "redirect_url": "/sql/ssms/scripting/replace-in-files",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/run-the-transact-sql-debugger.md",
+            "redirect_url": "/sql/ssms/scripting/run-the-transact-sql-debugger",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/search-an-active-document-incrementally.md",
+            "redirect_url": "/sql/ssms/scripting/search-an-active-document-incrementally",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/search-and-replace.md",
+            "redirect_url": "/sql/ssms/scripting/search-and-replace",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/search-documents-interactively.md",
+            "redirect_url": "/sql/ssms/scripting/search-documents-interactively",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/search-documents-using-results-lists.md",
+            "redirect_url": "/sql/ssms/scripting/search-documents-using-results-lists",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/search-text-with-regular-expressions.md",
+            "redirect_url": "/sql/ssms/scripting/search-text-with-regular-expressions",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/search-text-with-wildcards.md",
+            "redirect_url": "/sql/ssms/scripting/search-text-with-wildcards",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/spatial-results-window.md",
+            "redirect_url": "/sql/ssms/scripting/spatial-results-window",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/specify-a-breakpoint-action.md",
+            "redirect_url": "/sql/ssms/scripting/specify-a-breakpoint-action",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/specify-a-breakpoint-condition.md",
+            "redirect_url": "/sql/ssms/scripting/specify-a-breakpoint-condition",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/specify-a-breakpoint-filter.md",
+            "redirect_url": "/sql/ssms/scripting/specify-a-breakpoint-filter",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/specify-a-hit-count.md",
+            "redirect_url": "/sql/ssms/scripting/specify-a-hit-count",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/sqlcmd-connect-to-the-database-engine.md",
+            "redirect_url": "/sql/ssms/scripting/sqlcmd-connect-to-the-database-engine",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/sqlcmd-run-transact-sql-script-files.md",
+            "redirect_url": "/sql/ssms/scripting/sqlcmd-run-transact-sql-script-files",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/sqlcmd-start-the-utility.md",
+            "redirect_url": "/sql/ssms/scripting/sqlcmd-start-the-utility",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/sqlcmd-use-the-utility.md",
+            "redirect_url": "/sql/ssms/scripting/sqlcmd-use-the-utility",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/sqlcmd-use-with-scripting-variables.md",
+            "redirect_url": "/sql/ssms/scripting/sqlcmd-use-with-scripting-variables",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/status-bar-database-engine-query-editor.md",
+            "redirect_url": "/sql/ssms/scripting/status-bar-database-engine-query-editor",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/step-through-transact-sql-code.md",
+            "redirect_url": "/sql/ssms/scripting/step-through-transact-sql-code",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/toggle-a-breakpoint.md",
+            "redirect_url": "/sql/ssms/scripting/toggle-a-breakpoint",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/transact-sql-breakpoints.md",
+            "redirect_url": "/sql/ssms/scripting/transact-sql-breakpoints",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/transact-sql-code-snippets.md",
+            "redirect_url": "/sql/ssms/scripting/transact-sql-code-snippets",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/transact-sql-debugger.md",
+            "redirect_url": "/sql/ssms/scripting/transact-sql-debugger",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/transact-sql-debugger-breakpoints-window.md",
+            "redirect_url": "/sql/ssms/scripting/transact-sql-debugger-breakpoints-window",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/transact-sql-debugger-call-stack-window.md",
+            "redirect_url": "/sql/ssms/scripting/transact-sql-debugger-call-stack-window",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/transact-sql-debugger-command-window.md",
+            "redirect_url": "/sql/ssms/scripting/transact-sql-debugger-command-window",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/transact-sql-debugger-error-list-windowXX.md",
+            "redirect_url": "/sql/ssms/scripting/transact-sql-debugger-error-list-window",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/transact-sql-debugger-information.md",
+            "redirect_url": "/sql/ssms/scripting/transact-sql-debugger-information",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/transact-sql-debugger-locals-window.md",
+            "redirect_url": "/sql/ssms/scripting/transact-sql-debugger-locals-window",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/transact-sql-debugger-output-window.md",
+            "redirect_url": "/sql/ssms/scripting/transact-sql-debugger-output-window",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/transact-sql-debugger-quickwatch-dialog-box.md",
+            "redirect_url": "/sql/ssms/scripting/transact-sql-debugger-quickwatch-dialog-box",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/transact-sql-debugger-threads-window.md",
+            "redirect_url": "/sql/ssms/scripting/transact-sql-debugger-threads-window",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/transact-sql-debugger-watch-window.md",
+            "redirect_url": "/sql/ssms/scripting/transact-sql-debugger-watch-window",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/transact-sql-syntax-supported-by-intellisense.md",
+            "redirect_url": "/sql/ssms/scripting/transact-sql-syntax-supported-by-intellisense",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/troubleshooting-intellisense.md",
+            "redirect_url": "/sql/ssms/scripting/troubleshooting-intellisense",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/use-the-properties-window-in-management-studio.md",
+            "redirect_url": "/sql/ssms/scripting/use-the-properties-window-in-management-studio",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/view-spatial-data-in-object-explorer.md",
+            "redirect_url": "/sql/ssms/scripting/view-spatial-data-in-object-explorer",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "docs/relational-databases/scripting/xml-editor-sql-server-management-studio.md",
+            "redirect_url": "/sql/ssms/scripting/xml-editor-sql-server-management-studio",
+            "redirect_document_id": true
+        }
     ]
 }

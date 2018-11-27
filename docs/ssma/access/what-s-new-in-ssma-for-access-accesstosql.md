@@ -83,7 +83,7 @@ The v7.3 release of SSMA for Access contains the following changes:
 ## SSMA v7.2
 The v7.2 release of SSMA for Access contains the following changes:
 - Improved quality and conversion metric with targeted fixes based on customer feedback.
-- Telemetry enhancements to provide better data points to troubleshoot customer issues and improve SSMA’s conversion rates.
+- Telemetry enhancements to provide better data points to troubleshoot customer issues and improve SSMA's conversion rates.
 
 ## SSMA v7.1
 The v7.1 release of SSMA for Access contains the following changes:
@@ -126,7 +126,7 @@ The July 2014 release of SSMA for Access contains the following changes:
 -   Moved extension pack functionality to schema to support Azure SQL DB.  
 -   Tested performance improvements for databases with over 10k objects.  
 -   Added UI improvements for dealing with large number of objects.  
--   Added support for highlighting of “well known” LOB schemas (so they can be ignored in conversion).  
+-   Added support for highlighting of "well known" LOB schemas (so they can be ignored in conversion).  
 -   Added conversion speed improvements.
 -   Added support for showing object counts in UI.
 -   Reduced report size by more than 25%.
@@ -154,8 +154,8 @@ The July 2011 release of SSMA for Access contains the following changes:
 ## April 2011  
 The April 2011 release of SSMA for Access contains the following changes:  
   
--   Added a single installable of “SSMA for Access”, which supports [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] “Denali” and Azure SQL.  
--   Added the ability to connect [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] “Denali.”  
+-   Added a single installable of "SSMA for Access", which supports [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] "Denali" and Azure SQL.  
+-   Added the ability to connect [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] "Denali."  
 -   Added SSMA for Access Console version support for backward compatibility. You can open the projects created by versions earlier to SSMA v5.0.
 -   Added the ability to install SSMA v5.0 product side by side (SxS) with older versions of SSMA Product.  
   

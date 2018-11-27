@@ -80,9 +80,9 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
 > [!NOTE]  
 >  When the **Script Transformation Editor** creates the first output, the editor sets the `SynchronousInputID` property of the output to the `ID` of the component's input. However, when the editor creates subsequent outputs, the editor sets the `SynchronousInputID` properties of those outputs to zero.  
 >   
->  If you are creating a component with synchronous outputs, each output must have its `SynchronousInputID` property set to the `ID` of the component’s input. Therefore, each output that the editor creates after the first output must have its `SynchronousInputID` value changed from zero to the `ID` of the component's input.  
+>  If you are creating a component with synchronous outputs, each output must have its `SynchronousInputID` property set to the `ID` of the component's input. Therefore, each output that the editor creates after the first output must have its `SynchronousInputID` value changed from zero to the `ID` of the component's input.  
 >   
->  If you are creating a component with asynchronous outputs, each output must have its `SynchronousInputID` property set to zero. Therefore, the first output must have its `SynchronousInputID` value changed from the `ID` of the component’s input to zero.  
+>  If you are creating a component with asynchronous outputs, each output must have its `SynchronousInputID` property set to zero. Therefore, the first output must have its `SynchronousInputID` value changed from the `ID` of the component's input to zero.  
   
  For an example of directing rows to one of two synchronous outputs in the Script component, see [Creating a Synchronous Transformation with the Script Component](../../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md).  
   

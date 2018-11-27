@@ -19,7 +19,7 @@ manager: craigg
  Version Introduced: ODBC 3.81 Standards Compliance: ODBC  
   
  **Summary**  
- **SQLSetDriverConnectInfo** is used to set the connection string into the connection info token for an application’s **SQLDriverConnect** call.  
+ **SQLSetDriverConnectInfo** is used to set the connection string into the connection info token for an application's **SQLDriverConnect** call.  
   
 ## Syntax  
   

@@ -44,7 +44,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
  Is an internal document identifier (DocId) that corresponds to the key value. An invalid *docid* value returns no results.  
   
  *key*  
- Is the full-text key value from the specified table. An invalid *key* value returns no results. For information about full-text key values, see [Manage Full-Text Indexes](http://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1).  
+ Is the full-text key value from the specified table. An invalid *key* value returns no results. For information about full-text key values, see [Manage Full-Text Indexes](https://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1).  
   
 > [!IMPORTANT]  
 >  For information about using one, two, or three parameters, see "Remarks," later in this topic.  

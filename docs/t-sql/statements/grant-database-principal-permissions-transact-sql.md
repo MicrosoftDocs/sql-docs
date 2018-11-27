@@ -91,7 +91,7 @@ GRANT permission [ ,...n ]
  Specifies an application role.  
   
  *Database_user_mapped_to_Windows_User*  
- pecifies a database user mapped to a Windows user.  
+ Specifies a database user mapped to a Windows user.  
   
  *Database_user_mapped_to_Windows_Group*  
   

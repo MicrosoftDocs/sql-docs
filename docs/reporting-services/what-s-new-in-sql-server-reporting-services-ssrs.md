@@ -28,7 +28,7 @@ To download SQL Server 2017 Reporting Services, go to the  **[Microsoft Download
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 ## SQL Server 2019 preview Reporting Services
 
-[!INCLUDE[sql-server-2019]](../includes/sssqlv15-md.md)] Reporting Services isn’t available for CTP 2.1. Install the current version, [SQL Server 2017 Reporting Services](install-windows/install-reporting-services.md).
+[!INCLUDE[sql-server-2019]](../includes/sssqlv15-md.md)] Reporting Services isn't available for CTP 2.1. Install the current version, [SQL Server 2017 Reporting Services](install-windows/install-reporting-services.md).
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
@@ -144,7 +144,7 @@ For more information, see:
  You can also select the PPTX format for subscription output and use Report Server URL access to render and export a report. For example the following  URL command in your browser exports a report from a named instance of the report server.  
   
 ```  
-http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportfolder%2freport+name+with+spaces&rs:Format=pptx  
+https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportfolder%2freport+name+with+spaces&rs:Format=pptx  
 ```  
   
  For more information, see [Export a Report Using URL Access](../reporting-services/export-a-report-using-url-access.md).  

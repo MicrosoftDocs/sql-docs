@@ -126,7 +126,7 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 
 The below script is an end-to-end example for generating a column master key in a key store that implements Cryptography Next Generation API (CNG), generating and encrypting a column encryption key, and creating key metadata in a SQL Server database.
 
-The example leverages the key store that uses Microsoft Software Key Storage Provider. You may choose to modify the example to use another store, such as your hardware security module. For that, you will need to make sure the key store provider (KSP) that implements CNG for your device is installed and properly on your machine. You will need to replace "Microsoft Software Key Storage Provider" with your device’s KSP name.
+The example leverages the key store that uses Microsoft Software Key Storage Provider. You may choose to modify the example to use another store, such as your hardware security module. For that, you will need to make sure the key store provider (KSP) that implements CNG for your device is installed and properly on your machine. You will need to replace "Microsoft Software Key Storage Provider" with your device's KSP name.
 
 
 ```

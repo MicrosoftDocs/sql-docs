@@ -66,7 +66,7 @@ fn:contains ($arg1 as xs:string?, $arg2 as xs:string?) as xs:boolean?
   
 USE AdventureWorks  
 GO  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
 SELECT ProductModelID, CatalogDescription.query('  
       <Prod>  
          { /pd:ProductDescription/@ProductModelID }  
@@ -89,9 +89,9 @@ where CatalogDescription.exist('
   
  `<pd:Summary xmlns:pd=`  
   
- `"http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">`  
+ `"https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">`  
   
- `<p1:p xmlns:p1="http://www.w3.org/1999/xhtml">`  
+ `<p1:p xmlns:p1="https://www.w3.org/1999/xhtml">`  
   
  `A TRUE multi-sport bike that offers streamlined riding and`  
   

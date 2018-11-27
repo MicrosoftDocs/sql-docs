@@ -55,7 +55,7 @@ manager: craigg
 |**Number of rows per batch**|**RowsPerBatch**|The number of records to retrieve in each batch by the web service. The default value is **50**.|  
 ||**ApplicationName**|The text that is displayed in event logs. The default value is **MDM**.|  
 ||**SiteTitle**|The text that is displayed in the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] web browser's title bar. The default value is **Master Data Manager**.|  
-|**Log retention in Days**|**LogRentionDays**|The number of days after which the logs will be deleted. The default value is -1 and indicates the log tables will not be cleaned.<br /><br /> If the value is 0, log tables retain only today’s data. Data logs for the previous days are truncated.<br /><br /> If the value is greater than 0, the log data is retained for the number of days specified by the value.|  
+|**Log retention in Days**|**LogRentionDays**|The number of days after which the logs will be deleted. The default value is -1 and indicates the log tables will not be cleaned.<br /><br /> If the value is 0, log tables retain only today's data. Data logs for the previous days are truncated.<br /><br /> If the value is greater than 0, the log data is retained for the number of days specified by the value.|  
   
 ##  <a name="Versions"></a> Version Management Settings  
   
@@ -104,11 +104,11 @@ manager: craigg
   
 |Configuration Manager Setting|System Setting|Description|  
 |-----------------------------------|--------------------|-----------------|  
-|**Master Data Manager URL for notifications**|**MDMRootURL**|The URL for the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] web application, which is used in the link in email notifications, for example `http://constoso/mds`.|  
+|**Master Data Manager URL for notifications**|**MDMRootURL**|The URL for the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] web application, which is used in the link in email notifications, for example `https://constoso/mds`.|  
 |**Notification email interval**|**NotificationInterval**|The frequency, in seconds, that email notifications are sent. The default value is **120** seconds (2 minutes).|  
 |**Number of notifications in a single email**|**NotificationsPerEmail**|The maximum number of validation issues that will be listed in a single notification email. Additional issues, if they exist, are not included in the email, but are available in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].|  
 |**Default email format**|**EmailFormat**|The format for all email notifications. The default value is **HTML** or **1**. The database setting of **2** indicates **Text**.<br /><br /> Note: You can override this for an individual user in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], by changing and saving the **Email format** on the user's **General** tab.|  
-|**Regular expression for email address**|**EmailRegExPattern**|In the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **User and Group Permissions** functional area, the regular expression used to validate the email address entered on a user's **General** tab. For more information about regular expressions, see [Regular Expression Language Elements](http://go.microsoft.com/fwlink/?LinkId=164401) in the MSDN library.|  
+|**Regular expression for email address**|**EmailRegExPattern**|In the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **User and Group Permissions** functional area, the regular expression used to validate the email address entered on a user's **General** tab. For more information about regular expressions, see [Regular Expression Language Elements](https://go.microsoft.com/fwlink/?LinkId=164401) in the MSDN library.|  
 |**Database Mail account**|**EmailProfilePrincipalAccount**|Displays the Database Mail account to use when sending email notifications. The default profile is **mds_email_user**.|  
 |**Database Mail profile**|**DatabaseMailProfile**|The Database Mail profile to use when sending email notifications. The default value is blank.|  
 ||**ValidationIssueHTML**|In HTML format, the text of the email users get when a business rule fails validation.|  

@@ -3,17 +3,15 @@ title: "Tutorial: Use Azure Blob storage service with SQL Server 2016 | Microsof
 ms.custom: ""
 ms.date: "01/07/2016"
 ms.prod: sql
+ms.technology: 
 ms.prod_service: "database-engine"
-ms.component: "tutorial"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 applies_to: 
   - "SQL Server 2016"
 ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
-caps.latest.revision: 23
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -52,6 +50,7 @@ You can create a stored access policy and a shared access signature by using Azu
 -   Storage account  
 -   Azure blob container   
 -   SAS policy    
+
 This script starts by declaring a number of variables to specify the names for the above resources and the names of the following required input values:  
   
 -   A prefix name used in naming other resource objects    

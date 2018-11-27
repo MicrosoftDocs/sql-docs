@@ -54,5 +54,5 @@ Enter the full Windows user name of the owner. This might be formatted as *domai
   
 ## See Also  
 [Adding and Removing Access Database Files](adding-and-removing-access-database-files-accesstosql.md)  
-[User Interface Reference(Access)](http://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
+[User Interface Reference(Access)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

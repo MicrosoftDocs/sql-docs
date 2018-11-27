@@ -159,7 +159,7 @@ JOIN #T2
   
 -   The reference may find multiple matches that were originally distinct. This will also raise an error.  
   
- We’ll illustrate this with a few examples. For these we assume there is a partially-contained database named `MyCDB` with its database collation set to the default collation, **Latin1_General_100_CI_AS_WS_KS_SC**. We assume that the instance collation is **Latin1_General_100_CS_AS_WS_KS_SC**. The two collations differ only in case sensitivity.  
+ We'll illustrate this with a few examples. For these we assume there is a partially-contained database named `MyCDB` with its database collation set to the default collation, **Latin1_General_100_CI_AS_WS_KS_SC**. We assume that the instance collation is **Latin1_General_100_CS_AS_WS_KS_SC**. The two collations differ only in case sensitivity.  
   
 ### Example 1  
  The following example illustrates the case where the reference finds exactly one match.  

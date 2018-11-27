@@ -48,7 +48,7 @@ For this walkthrough, you use the **rxHistogram** function to view the distribut
   
     Because the low and high levels were already added to the data source `sqlFraudDS` (using the `colInfo` parameter), the levels are automatically used in the histogram.
   
-5. The default return value of **rxCube** is an *rxCube object*, which represents a cross-tabulation. However, you can use the [rxResultsDF](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxresultsdf) function to convert the results into a data frame that can easily be used in one of R’s standard plotting functions.
+5. The default return value of **rxCube** is an *rxCube object*, which represents a cross-tabulation. However, you can use the [rxResultsDF](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxresultsdf) function to convert the results into a data frame that can easily be used in one of R's standard plotting functions.
   
     ```R
     cubePlot <- rxResultsDF(cube1)

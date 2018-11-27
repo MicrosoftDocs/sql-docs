@@ -12,7 +12,7 @@ manager: cgronlun
 # Create a local R package repository using miniCRAN
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-[miniCRAN](https://cran.r-project.org/web/packages/miniCRAN/index.html) package, created by [Andre de Vries](http://blog.revolutionanalytics.com/2016/05/minicran-sql-server.html), identifies and downloads packages and  dependencies into a single folder, which you can copy to other computers for offline R package installation.
+[miniCRAN](https://cran.r-project.org/web/packages/miniCRAN/index.html) package, created by [Andre de Vries](https://blog.revolutionanalytics.com/2016/05/minicran-sql-server.html), identifies and downloads packages and  dependencies into a single folder, which you can copy to other computers for offline R package installation.
 
 As an input, specify one or more packages. **miniCRAN** recursively reads the dependency tree for these packages and downloads only the listed packages and their dependencies from CRAN or similar repositories.
 

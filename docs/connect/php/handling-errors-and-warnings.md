@@ -15,7 +15,7 @@ manager: craigg
 # Handling Errors and Warnings
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-If you are using the PDO_SQLSRV driver, you can find more information about errors and error handling on the [PDO](http://php.net/manual/book.pdo.php) website.  
+If you are using the PDO_SQLSRV driver, you can find more information about errors and error handling on the [PDO](https://php.net/manual/book.pdo.php) website.  
   
 Topics in this section provide information about handling errors and warnings with the SQLSRV driver of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   

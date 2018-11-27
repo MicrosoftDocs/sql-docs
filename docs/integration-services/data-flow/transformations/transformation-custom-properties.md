@@ -46,9 +46,9 @@ manager: craigg
 # Transformation Custom Properties
   In addition to the properties that are common to most data flow objects in the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] object model, many data flow objects have custom properties that are specific to the object. These custom properties are available only at run time, and are not documented in the [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] Managed Programming Reference Documentation.  
   
- This topic lists and describes the custom properties of the various data flow transformations. For information about the properties common to most data flow objects, see [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796).  
+ This topic lists and describes the custom properties of the various data flow transformations. For information about the properties common to most data flow objects, see [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796).  
   
- Some properties of transformations can be set by using property expressions. For more information, see [Data Flow Properties that Can Be Set by Using Expressions](http://msdn.microsoft.com/library/cd0e171a-08be-45d6-81dc-ed94f37698b8).  
+ Some properties of transformations can be set by using property expressions. For more information, see [Data Flow Properties that Can Be Set by Using Expressions](https://msdn.microsoft.com/library/cd0e171a-08be-45d6-81dc-ed94f37698b8).  
   
 ## Transformations with Custom Properties  
   
@@ -178,7 +178,7 @@ manager: craigg
   
 |Property|Data type|Description|  
 |--------------|---------------|-----------------|  
-|FastParse|Boolean|A value that indicates whether the column uses the quicker, but locale-insensitive, fast parsing routines that [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] provides, or the locale-sensitive standard parsing routines. The default value of this property is **False**. For more information, see [Fast Parse](http://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95) and [Standard Parse](http://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013). .<br /><br /> Note: This property is not available in the **Data Conversion Transformation Editor**, but can be set by using the **Advanced Editor**.|  
+|FastParse|Boolean|A value that indicates whether the column uses the quicker, but locale-insensitive, fast parsing routines that [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] provides, or the locale-sensitive standard parsing routines. The default value of this property is **False**. For more information, see [Fast Parse](https://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95) and [Standard Parse](https://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013). .<br /><br /> Note: This property is not available in the **Data Conversion Transformation Editor**, but can be set by using the **Advanced Editor**.|  
 |SourceInputColumnLineageId|Integer|The **LineageID** of the input column that is the source of the output column.|  
   
  The input, the input columns, and the output of the Data Conversion transformation have no custom properties.  
@@ -623,8 +623,8 @@ manager: craigg
   
 ## See Also  
  [Integration Services Transformations](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
- [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)   
- [Path Properties](http://msdn.microsoft.com/library/89b1e347-9579-4f6b-af74-c6519ea08eea)   
- [Data Flow Properties that Can Be Set by Using Expressions](http://msdn.microsoft.com/library/cd0e171a-08be-45d6-81dc-ed94f37698b8)  
+ [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)   
+ [Path Properties](https://msdn.microsoft.com/library/89b1e347-9579-4f6b-af74-c6519ea08eea)   
+ [Data Flow Properties that Can Be Set by Using Expressions](https://msdn.microsoft.com/library/cd0e171a-08be-45d6-81dc-ed94f37698b8)  
   
   

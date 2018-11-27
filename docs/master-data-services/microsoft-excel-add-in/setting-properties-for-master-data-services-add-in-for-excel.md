@@ -36,7 +36,7 @@ manager: craigg
 |Data: Filters|Maximum rows|Select the threshold for the number of rows being loaded, beyond which a filter warning will be posted.|  
 |Data: Filters|Maximum columns|Select the threshold for the number of columns being loaded, beyond which a filter warning will be posted.|  
 |Data: Cell Format|Change the color when: Attribute values change|Click to specify that the color of a cell will be changed if the attribute value in that cell changes when you refresh the Excel Add-in table with new data from the MDS repository.|  
-|Data: Cell Format|Change the color when: Members are added|Click to specify that the color of a row’s cells will be changed if a new member is added to the row when you refresh the Excel Add-in table with new data from the MDS repository.|  
+|Data: Cell Format|Change the color when: Members are added|Click to specify that the color of a row's cells will be changed if a new member is added to the row when you refresh the Excel Add-in table with new data from the MDS repository.|  
 |Data: Cell Format|Display format|Select the preferred format for displaying values of domain-based attributes. The options are Code {Name}, Code, and Name {Code}.|  
   
   

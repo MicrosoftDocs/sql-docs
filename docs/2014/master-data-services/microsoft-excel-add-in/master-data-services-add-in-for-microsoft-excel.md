@@ -27,7 +27,7 @@ manager: craigg
 ## Terms  
  When working with the Add-in, you may encounter the following terms.  
   
--   The *MDS repository* is where all master data is stored. It is a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database that is configured to store MDS data. To work with data from the repository, you load data it into Excel; when you’re done working with it, you publish changes back to the repository. Administrators can add new entities and attributes to the repository.  
+-   The *MDS repository* is where all master data is stored. It is a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database that is configured to store MDS data. To work with data from the repository, you load data it into Excel; when you're done working with it, you publish changes back to the repository. Administrators can add new entities and attributes to the repository.  
   
 -   *MDS-managed data* is data that is stored in the MDS repository and that you load into Excel, where the data is displayed as highlighted rows. You can add data that is not MDS-managed to your worksheet, and it is not affected when you refresh the MDS-managed data.  
   

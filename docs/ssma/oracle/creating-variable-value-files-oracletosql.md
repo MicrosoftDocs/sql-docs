@@ -20,7 +20,7 @@ Variable Value File is an XML file comprising the parameter values of commands l
 > [!NOTE]  
 > 1.  Variable names are prefixed and suffixed with a $ (dollar) symbol. If the variables are not assigned a value in the variable value file, you will encounter an error during the parsing of the script file resulting in stalling the console execution process.  
 > 2.  The escape character for **$** is **$$**. If the value of a variable or static value of a parameter contains **$** (dollar) symbol, then **$$** must be specified to treat it as a character instead of a variable.  
-> 3.  For maintainability purposes, variables can be declared inside `‘variable-group’` elements for logical separation of user defined variables.  Usage of this element is not mandatory.  
+> 3.  For maintainability purposes, variables can be declared inside `'variable-group'` elements for logical separation of user defined variables.  Usage of this element is not mandatory.  
   
 **Examples:**  
   
@@ -85,5 +85,5 @@ Variable Value File is an XML file comprising the parameter values of commands l
 The next step in operating the console is [Creating the Server Connection Files &#40;OracleToSQL&#41;](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md)  
   
 ## See Also  
-[Creating the Server Files (Oracle)](http://msdn.microsoft.com/002f129e-0868-48ad-a4b4-c68b5007e12e)  
+[Creating the Server Files (Oracle)](https://msdn.microsoft.com/002f129e-0868-48ad-a4b4-c68b5007e12e)  
   

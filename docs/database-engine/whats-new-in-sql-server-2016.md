@@ -27,7 +27,7 @@ To review what is new in the other SQL Server components, see [What's New in SQL
 
 #### Try it out
 
-- To download [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], go to  **[Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**![download](../analysis-services/media/download.png "download").
+- To download [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], go to  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**![download](../analysis-services/media/download.png "download").
 
 - Have an Azure account?  Then go **[Here](https://azure.microsoft.com/services/virtual-machines/sql-server/)** to spin up a Virtual Machine with [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] already installed.
 
@@ -85,7 +85,7 @@ This release offers improvements for columnstore indexes including updateable no
 
 For more details, see these topics in the [Columnstore Indexes Guide](../relational-databases/indexes/columnstore-indexes-overview.md) section of Books Online:
 
-- [Columnstore Indexes Versioned Feature Summary](~/relational-databases/indexes/columnstore-indexes-what-s-new.md) – includes what’s new.
+- [Columnstore Indexes Versioned Feature Summary](~/relational-databases/indexes/columnstore-indexes-what-s-new.md) – includes what's new.
 
 - [Columnstore Indexes Data Loading](../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)
 
@@ -287,7 +287,7 @@ SQL Server 2016 adds built-in support for importing and exporting JSON and worki
  For more information, see [PolyBase Guide](../relational-databases/polybase/polybase-guide.md).
 
 ## Stretch database
- Stretch Database is a new feature in [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] that migrates your historical data transparently and securely to the Microsoft Azure cloud. You can access your SQL Server data seamlessly regardless of whether it’s on-premises or stretched to the cloud. You set the policy that determines where data is stored, and SQL Server handles the data movement in the background. The entire table is always online and queryable. And, Stretch Database doesn't require any changes to existing queries or applications – the location of the data is completely transparent to the application. For more info, see [Stretch Database](../sql-server/stretch-database/stretch-database.md).
+ Stretch Database is a new feature in [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] that migrates your historical data transparently and securely to the Microsoft Azure cloud. You can access your SQL Server data seamlessly regardless of whether it's on-premises or stretched to the cloud. You set the policy that determines where data is stored, and SQL Server handles the data movement in the background. The entire table is always online and queryable. And, Stretch Database doesn't require any changes to existing queries or applications – the location of the data is completely transparent to the application. For more info, see [Stretch Database](../sql-server/stretch-database/stretch-database.md).
  
 ## Support for UTF-8
 [bcp Utility](../tools/bcp-utility.md), [BULK INSERT](../t-sql/statements/bulk-insert-transact-sql.md), and [OPENROWSET](../t-sql/functions/openrowset-transact-sql.md) now support the UTF-8 code page. For more information, see those topics and [Create a Format File &#40;SQL Server&#41;](../relational-databases/import-export/create-a-format-file-sql-server.md).
@@ -376,11 +376,11 @@ Row-level security introduces predicate based access control. It features a flex
 
 
 ### Always Encrypted
-With Always Encrypted, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] can perform operations on encrypted data, and best of all the encryption key resides with the application inside the customer’s trusted environment and not on the server. Always Encrypted secures customer data so DBAs do not have access to plain text data. Encryption and decryption of data happens transparently at the driver level minimizing changes that have to be made to existing applications. For more information, see [Always Encrypted &#40;Database Engine&#41;](../relational-databases/security/encryption/always-encrypted-database-engine.md).
+With Always Encrypted, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] can perform operations on encrypted data, and best of all the encryption key resides with the application inside the customer's trusted environment and not on the server. Always Encrypted secures customer data so DBAs do not have access to plain text data. Encryption and decryption of data happens transparently at the driver level minimizing changes that have to be made to existing applications. For more information, see [Always Encrypted &#40;Database Engine&#41;](../relational-databases/security/encryption/always-encrypted-database-engine.md).
 
 
 ### Dynamic Data Masking
-Dynamic data masking limits sensitive data exposure by masking it to non-privileged users. Dynamic data masking helps prevent unauthorized access to sensitive data by enabling customers to designate how much of the sensitive data to reveal with minimal impact on the application layer. It’s a policy-based security feature that hides the sensitive data in the result set of a query over designated database fields, while the data in the database is not changed. For more information, see [Dynamic Data Masking](../relational-databases/security/dynamic-data-masking.md).
+Dynamic data masking limits sensitive data exposure by masking it to non-privileged users. Dynamic data masking helps prevent unauthorized access to sensitive data by enabling customers to designate how much of the sensitive data to reveal with minimal impact on the application layer. It's a policy-based security feature that hides the sensitive data in the result set of a query over designated database fields, while the data in the database is not changed. For more information, see [Dynamic Data Masking](../relational-databases/security/dynamic-data-masking.md).
 
 
 ### New permissions
@@ -434,17 +434,17 @@ Download the latest [SQL Server Management Studio (SSMS)](../ssms/download-sql-s
 - [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] supports the Active Directory Authentication Library (ADAL) which is under development for connecting to Microsoft Azure. This replaces the certificate-based authentication used in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].
 - [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] installation requires installing .NET 4.6 as a pre-requisite. .NET 4.6 will be automatically installed by setup when [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] is installed.
 - A new query result grid option supports keeping Carriage Return/Line Feed (newline characters) when copying or saving text from the results grid. Set this from the Tools/Options menu.
-- SQL Server Management Tools is no longer installed from the main feature tree; for details see [Install SQL Server Management Tools with SSMS](http://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381).
+- SQL Server Management Tools is no longer installed from the main feature tree; for details see [Install SQL Server Management Tools with SSMS](https://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381).
 - [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] installation requires installing .NET 4.6.1 as a pre-requisite. .NET 4.6.1 will be automatically installed by setup when [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] is installed.
 
 ### Upgrade Advisor
 SQL Server 2016 Upgrade Advisor Preview is a standalone tool that enables users of prior versions to run a set of upgrade rules against their SQL Server database to pinpoint breaking and behavior changes and deprecated features as well as providing help with the adoption of new features such as Stretch Database.
 
- You can download Upgrade Advisor Preview [here](https://www.microsoft.com/en-us/download/details.aspx?id=48119) or you can install it by using the Web Platform Installer.
+ You can download Upgrade Advisor Preview [here](https://www.microsoft.com/download/details.aspx?id=48119) or you can install it by using the Web Platform Installer.
 
 ## See Also
 [What's New in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)
  
 [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md) 
  
-[Install SQL Server Management Tools with SSMS](http://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)
+[Install SQL Server Management Tools with SSMS](https://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)

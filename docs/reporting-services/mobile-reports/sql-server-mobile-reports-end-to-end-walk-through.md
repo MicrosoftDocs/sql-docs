@@ -32,7 +32,7 @@ To follow along, you need these products:
 *  OR: World Wide Importers sample database, available from the [Microsoft SQL Server Samples](../../sample/microsoft-sql-server-samples.md) page.
 * To view the result: 
   *   [Sign up for the Power BI service](https://go.microsoft.com/fwlink/?LinkID=513879) and
-  *  [Download the Power BI mobile app](https://powerbi.microsoft.com/en-us/documentation/powerbi-power-bi-apps-for-mobile-devices/) to your mobile device: iOS, Android phone, or Windows 10 device.  
+  *  [Download the Power BI mobile app](https://powerbi.microsoft.com/documentation/powerbi-power-bi-apps-for-mobile-devices/) to your mobile device: iOS, Android phone, or Windows 10 device.  
 
   
 ## Create a shared data source  
@@ -71,7 +71,7 @@ Use an existing [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] client
    
 4. In the Name field, type the name of the server where you saved your data source, in this format:   
    
-   Name: http://*localhost*/ReportServer  
+   Name: https://*localhost*/ReportServer  
    Items of type: Data Sources (*.rsds)  
    
 5. Click **Open**, and navigate to the data source you created on that server.  
@@ -255,7 +255,7 @@ You can save your report locally or to a [!INCLUDE[PRODUCT_NAME](../../includes/
 To view your [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] report, you first need to:
 
 *  [Sign up for the Power BI service](https://go.microsoft.com/fwlink/?LinkID=513879), if you don't have an account yet.
-*  [Download the Power BI mobile app](https://powerbi.microsoft.com/en-us/documentation/powerbi-power-bi-apps-for-mobile-devices/) to your mobile device.  
+*  [Download the Power BI mobile app](https://powerbi.microsoft.com/documentation/powerbi-power-bi-apps-for-mobile-devices/) to your mobile device.  
 
 ### View your mobile report
   

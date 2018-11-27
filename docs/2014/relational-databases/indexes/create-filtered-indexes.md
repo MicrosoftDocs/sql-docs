@@ -109,7 +109,7 @@ manager: craigg
   
 8.  Click **OK**.  
   
-9. On the **Filter** page, under **Filter Expression**, enter SQL expression that you’ll use to create the filtered index.  
+9. On the **Filter** page, under **Filter Expression**, enter SQL expression that you'll use to create the filtered index.  
   
 10. Click **OK**.  
   

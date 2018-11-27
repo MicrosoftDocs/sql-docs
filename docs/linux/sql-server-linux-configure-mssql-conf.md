@@ -142,7 +142,7 @@ The **telemetry.customerfeedback** setting changes whether SQL Server sends feed
    sudo systemctl restart mssql-server
    ```
 
-For more information, see [Customer Feedback for SQL Server on Linux](sql-server-linux-customer-feedback.md) and the [SQL Server Privacy Statement](http://go.microsoft.com/fwlink/?LinkID=868444).
+For more information, see [Customer Feedback for SQL Server on Linux](sql-server-linux-customer-feedback.md) and the [SQL Server Privacy Statement](https://go.microsoft.com/fwlink/?LinkID=868444).
 
 ## <a id="datadir"></a> Change the default data or log directory location
 
@@ -391,7 +391,7 @@ The first phase capture is controlled by the **coredump.coredumptype** setting, 
     | Type | Description |
     |-----|-----|
     | **mini** | Mini is the smallest dump file type. It uses the Linux system information to determine threads and modules in the process. The dump contains only the host environment thread stacks and modules. It does not contain indirect memory references or globals. |
-    | **miniplus** | MiniPlus is similar to mini, but it includes additional memory. It understands the internals of SQLPAL and the host environment, adding the following memory regions to the dump:</br></br> - Various globals</br> - All memory above 64TB</br> - All named regions found in **/proc/$pid/maps**</br> - Indirect memory from threads and stacks</br> - Thread information</br> - Associated Teb’s and Peb’s</br> - Module Information</br> - VMM and VAD tree |
+    | **miniplus** | MiniPlus is similar to mini, but it includes additional memory. It understands the internals of SQLPAL and the host environment, adding the following memory regions to the dump:</br></br> - Various globals</br> - All memory above 64TB</br> - All named regions found in **/proc/$pid/maps**</br> - Indirect memory from threads and stacks</br> - Thread information</br> - Associated Teb's and Peb's</br> - Module Information</br> - VMM and VAD tree |
     | **filtered** | Filtered uses a subtraction-based design where all memory in the process is included unless specifically excluded. The design understands the internals of SQLPAL and the host environment, excluding certain regions from the dump.
     | **full** | Full is a complete process dump that includes all regions located in **/proc/$pid/maps**. This is not controlled by **coredump.captureminiandfull** setting. |
 
@@ -500,7 +500,7 @@ The **network.rpcport** and **distributedtransaction.servertcpport** settings ar
 
 In addition to setting these values, you must also configure routing and update the firewall for port 135. For more information on how to do this, see [How to configure MSDTC on Linux](sql-server-linux-configure-msdtc.md).
 
-There are several other settings for mssql-conf that you can use to monitor and troubleshoot MSDTC. The following table briefly describes these settings. For more information on their use, see the details in the Windows support article, [How to enable diagnostic tracing for MS DTC](https://support.microsoft.com/en-us/help/926099/how-to-enable-diagnostic-tracing-for-ms-dtc-on-a-windows-based-compute).
+There are several other settings for mssql-conf that you can use to monitor and troubleshoot MSDTC. The following table briefly describes these settings. For more information on their use, see the details in the Windows support article, [How to enable diagnostic tracing for MS DTC](https://support.microsoft.com/help/926099/how-to-enable-diagnostic-tracing-for-ms-dtc-on-a-windows-based-compute).
 
 | mssql-conf setting | Description |
 |---|---|

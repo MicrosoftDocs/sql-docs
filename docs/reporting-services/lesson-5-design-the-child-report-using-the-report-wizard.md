@@ -37,7 +37,7 @@ After you create a data connection and data table for the child report, your nex
   
 7.  Select **Next** twice, then Select **Finish** to close the **Report Wizard**.  
   
-    You’ve now created the .rdlc file. The file opens in Report Designer. The tablix you designed is now displayed in the design surface.  
+    You've now created the .rdlc file. The file opens in Report Designer. The tablix you designed is now displayed in the design surface.  
   
 8.  With the .rdlc file open, add a parameter by doing the following:  
   

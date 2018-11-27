@@ -147,7 +147,7 @@ manager: craigg
 >  A report server administrator cannot manage from one place all the individual subscriptions that are in use on a given report server. However, report server administrators can access each individual subscription to modify or delete it.  
   
 ##  <a name="bkmk_delete_subscription"></a> To Delete a Subscription  
- To delete a subscription”  
+ To delete a subscription"  
   
 1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](../report-manager-ssrs-native-mode.md).  
   

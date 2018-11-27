@@ -1,4 +1,4 @@
----
+﻿---
 title: Common issues with Launchpad service and external script execution in SQL Server| Microsoft Docs
 ms.prod: sql
 ms.technology: mlserver
@@ -13,7 +13,7 @@ manager: cgronlun
 
  SQL Server Trusted Launchpad service supports external script execution for R and Python. On SQL Server 2016 R Services, SP1 provides the service. SQL Server 2017 includes the Launchpad ervice as part of the intitial installation.
 
-Multiple issues can prevent Launchpad from starting, including configuration problems or changes, or missing network protocols. This article provides troubleshooting guidance for many issues. For any we missed, you can post questions to the [Machine Learning Server forum](https://social.msdn.microsoft.com/Forums/home?category=MicrosoftR).
+Multiple issues can prevent Launchpad from starting, including configuration problems or changes, or missing network protocols. This article provides troubleshooting guidance for many issues. For any we missed, you can post questions to the [Machine Learning Server forum](https://social.msdn.microsoft.com/Forums/en-US/home?category=MicrosoftR).
 
 **Applies to:** SQL Server 2016 R Services, SQL Server 2017 Machine Learning Services
 
@@ -152,7 +152,7 @@ This error can mean one of several things:
 
 - Launchpad might have insufficient external users to run the external query. For example, if you are running more than 20 external queries concurrently, and there are only 20 default users, one or more queries might fail.
 
-- Insufficient memory is available to process the R task. This error happens most often in a default environment, where SQL Server might be using up to 70 percent of the computer’s resources. For information about how to modify the server configuration to support greater use of resources by R, see [Operationalizing your R code](r/operationalizing-your-r-code.md).
+- Insufficient memory is available to process the R task. This error happens most often in a default environment, where SQL Server might be using up to 70 percent of the computer's resources. For information about how to modify the server configuration to support greater use of resources by R, see [Operationalizing your R code](r/operationalizing-your-r-code.md).
 
 ## "Can't find package"
 

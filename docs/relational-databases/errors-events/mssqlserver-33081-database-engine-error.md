@@ -36,7 +36,7 @@ WHERE ring_buffer_type = 'RING_BUFFER_SECURITY_ERROR';
 ```  
   
 ## User Action  
-To investigate the problem, search for the Windows error code in MSDN (http://msdn.microsoft.com/). Resolve the error, or contact [!INCLUDE[msCoName](../../includes/msconame-md.md)] CSS for more information. If you need to contact CSS, collect the following information for our support staff.  
+To investigate the problem, search for the Windows error code in MSDN (https://msdn.microsoft.com/). Resolve the error, or contact [!INCLUDE[msCoName](../../includes/msconame-md.md)] CSS for more information. If you need to contact CSS, collect the following information for our support staff.  
   
 -   The error log showing the failed to load cryptographic provider error.  
   

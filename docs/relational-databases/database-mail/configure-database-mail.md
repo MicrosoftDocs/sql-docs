@@ -434,7 +434,7 @@ manager: craigg
  The **mailitem_id** of the test e-mail message.  
   
  **Troubleshoot**  
- Click to open Books Online to the [Troubleshooting Database Mail](http://msdn.microsoft.com/library/ms188663.aspx)topic.  
+ Click to open Books Online to the [Troubleshooting Database Mail](https://msdn.microsoft.com/library/ms188663.aspx)topic.  
   
  [Database Mail Configuration Wizard](#DBWizard)  
   

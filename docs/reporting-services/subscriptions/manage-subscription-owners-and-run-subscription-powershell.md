@@ -106,7 +106,7 @@ powershell c:\scripts\ListAll_SSRS_Subscriptions.ps1 "[server]/reportserver" "/"
  **SharePoint mode syntax:**  
   
 ```  
-powershell c:\scripts\ListAll_SSRS_Subscriptions.ps1 "[server]/_vti_bin/reportserver" "http://[server]"  
+powershell c:\scripts\ListAll_SSRS_Subscriptions.ps1 "[server]/_vti_bin/reportserver" "https://[server]"  
 ```  
   
  **Script:**  
@@ -120,7 +120,7 @@ Param(
     [string]$site  
    )  
   
-$rs2010 += New-WebServiceProxy -Uri "http://$server/ReportService2010.asmx" -Namespace SSRS.ReportingService2010 -UseDefaultCredential ;  
+$rs2010 += New-WebServiceProxy -Uri "https://$server/ReportService2010.asmx" -Namespace SSRS.ReportingService2010 -UseDefaultCredential ;  
 $subscriptions += $rs2010.ListSubscriptions($site); # use "/" for default native mode site  
   
 Write-Host " "  
@@ -143,7 +143,7 @@ powershell c:\scripts\ListAll_SSRS_Subscriptions4User.ps1 "[Domain]\[user]" "[se
  **SharePoint mode syntax:**  
   
 ```  
-powershell c:\scripts\ListAll_SSRS_Subscriptions4User.ps1 "[Domain]\[user]"  "[server]/_vti_bin/reportserver" "http://[server]"  
+powershell c:\scripts\ListAll_SSRS_Subscriptions4User.ps1 "[Domain]\[user]"  "[server]/_vti_bin/reportserver" "https://[server]"  
 ```  
   
  **Script:**  
@@ -159,7 +159,7 @@ Param(
     [string]$site  
 )  
   
-$rs2010 = New-WebServiceProxy -Uri "http://$server/ReportService2010.asmx" -Namespace SSRS.ReportingService2010 -UseDefaultCredential ;  
+$rs2010 = New-WebServiceProxy -Uri "https://$server/ReportService2010.asmx" -Namespace SSRS.ReportingService2010 -UseDefaultCredential ;  
 $subscriptions += $rs2010.ListSubscriptions($site);  
   
 Write-Host " "  
@@ -197,7 +197,7 @@ Param(
     [string]$server  
 )  
   
-$rs2010 = New-WebServiceProxy -Uri "http://$server/ReportService2010.asmx" -Namespace SSRS.ReportingService2010 -UseDefaultCredential ;  
+$rs2010 = New-WebServiceProxy -Uri "https://$server/ReportService2010.asmx" -Namespace SSRS.ReportingService2010 -UseDefaultCredential ;  
 $items = $rs2010.ListChildren("/", $true);  
   
 $subscriptions = @();  
@@ -239,7 +239,7 @@ ForEach ($item in $items)
 ```  
   
 ##  <a name="bkmk_list_for_1_report"></a> Script: List all subscriptions associated with a specific report  
- This script lists all of the subscriptions associated with a specific report. The report path syntax is different SharePoint mode which requires a full URL. In the syntax examples, the report name used is “title only”, which contains a space and therefore requires the single quotes around the report name.  
+ This script lists all of the subscriptions associated with a specific report. The report path syntax is different SharePoint mode which requires a full URL. In the syntax examples, the report name used is "title only", which contains a space and therefore requires the single quotes around the report name.  
   
  **Native mode syntax:**  
   
@@ -250,7 +250,7 @@ powershell c:\scripts\List_SSRS_One_Reports_Subscriptions.ps1 "[server]/reportse
  **SharePoint mode syntax:**  
   
 ```  
-powershell c:\scripts\List_SSRS_One_Reports_Subscriptions.ps1 "[server]/_vti_bin/reportserver"  "'http://[server]/shared documents/title only.rdl'" "http://[server]"  
+powershell c:\scripts\List_SSRS_One_Reports_Subscriptions.ps1 "[server]/_vti_bin/reportserver"  "'https://[server]/shared documents/title only.rdl'" "https://[server]"  
 ```  
   
  **Script:**  
@@ -267,7 +267,7 @@ Param
       [string]$site  
 )  
   
-$rs2010 = New-WebServiceProxy -Uri "http://$server/ReportService2010.asmx" -Namespace SSRS.ReportingService2010 -UseDefaultCredential ;  
+$rs2010 = New-WebServiceProxy -Uri "https://$server/ReportService2010.asmx" -Namespace SSRS.ReportingService2010 -UseDefaultCredential ;  
 $subscriptions += $rs2010.ListSubscriptions($site);  
   
 Write-Host " "  
@@ -288,7 +288,7 @@ powershell c:\scripts\Change_SSRS_Owner_One_Subscription.ps1 "[Domain]\[new owne
  **SharePoint mode syntax:**  
   
 ```  
-powershell c:\scripts\Change_SSRS_Owner_One_Subscription.ps1 "[Domain]\[new owner]" "[server]/_vti_bin/reportserver" "http://[server]" "9660674b-f020-453f-b1e3-d9ba37624519"  
+powershell c:\scripts\Change_SSRS_Owner_One_Subscription.ps1 "[Domain]\[new owner]" "[server]/_vti_bin/reportserver" "https://[server]" "9660674b-f020-453f-b1e3-d9ba37624519"  
 ```  
   
  **Script:**  
@@ -306,7 +306,7 @@ Param(
     [string]$site,  
     [string]$subscriptionid  
    )  
-$rs2010 = New-WebServiceProxy -Uri "http://$server/ReportService2010.asmx" -Namespace SSRS.ReportingService2010 -UseDefaultCredential;  
+$rs2010 = New-WebServiceProxy -Uri "https://$server/ReportService2010.asmx" -Namespace SSRS.ReportingService2010 -UseDefaultCredential;  
   
 $subscription += $rs2010.ListSubscriptions($site) | where {$_.SubscriptionID -eq $subscriptionid};  
   
@@ -333,7 +333,7 @@ $subscription | select Path, report, Description, SubscriptionID, Owner, Status
   
  For more information on the configuration file, see [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md).  
   
- The script includes delay logic “`Start-Sleep -s 6`” so there is time after the event fires, for the updated status to be available with the ListSubscription method.  
+ The script includes delay logic "`Start-Sleep -s 6`" so there is time after the event fires, for the updated status to be available with the ListSubscription method.  
   
  **Native mode syntax:**  
   
@@ -344,7 +344,7 @@ powershell c:\scripts\FireSubscription.ps1 "[server]/reportserver" $null "70366e
  **SharePoint mode syntax:**  
   
 ```  
-powershell c:\scripts\FireSubscription.ps1 "[server]/_vti_bin/reportserver" "http://[server]" "c3425c72-580d-423e-805a-41cf9799fd25"  
+powershell c:\scripts\FireSubscription.ps1 "[server]/_vti_bin/reportserver" "https://[server]" "c3425c72-580d-423e-805a-41cf9799fd25"  
 ```  
   
  **Script:**  
@@ -362,7 +362,7 @@ Param(
   [string]$subscriptionid  
   )  
   
-$rs2010 = New-WebServiceProxy -Uri "http://$server/ReportService2010.asmx" -Namespace SSRS.ReportingService2010 -UseDefaultCredential ;  
+$rs2010 = New-WebServiceProxy -Uri "https://$server/ReportService2010.asmx" -Namespace SSRS.ReportingService2010 -UseDefaultCredential ;  
 #event type is case sensative to what is in the rsreportserver.config  
 $rs2010.FireEvent("TimedSubscription",$subscriptionid,$site)  
   

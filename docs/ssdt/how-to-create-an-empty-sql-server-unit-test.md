@@ -90,10 +90,10 @@ After you have configured the test project and created the unit test, the next s
 -   Add test conditions or other assert statement to verify the script results.  
   
 > [!NOTE]  
-> The Inconclusive test condition is the default condition added to every test. This test condition is included to indicate that test verification has not been implemented. Delete this test condition from your test after you have added other test conditions. For more information, see [How to: Add Test Conditions to Database Unit Tests](http://msdn.microsoft.com/library/aa833242(VS.100).aspx).  
+> The Inconclusive test condition is the default condition added to every test. This test condition is included to indicate that test verification has not been implemented. Delete this test condition from your test after you have added other test conditions. For more information, see [How to: Add Test Conditions to Database Unit Tests](https://msdn.microsoft.com/library/aa833242(VS.100).aspx).  
   
 ## See Also  
 [How to: Run SQL Server Unit Tests](../ssdt/how-to-run-sql-server-unit-tests.md)  
 [Creating and Defining SQL Server Unit Tests](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
-[Creating Unit Tests](http://msdn.microsoft.com/library/ms182523(VS.90).aspx)  
+[Creating Unit Tests](https://msdn.microsoft.com/library/ms182523(VS.90).aspx)  
   

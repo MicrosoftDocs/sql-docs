@@ -17,9 +17,9 @@ Microsoft provides you with a robust set command line options to execute and con
 ## Command Line Options in SSMA Console  
 Described herein are the console command options.  
   
-For the purpose of this section, the term ‘option’ is also referred to as ‘switch’.  
+For the purpose of this section, the term 'option' is also referred to as 'switch'.  
   
-Options are not case-sensitive and may start with either ‘**-**’ or, ‘**/**’ character.  
+Options are not case-sensitive and may start with either '**-**' or, '**/**' character.  
   
 If options are specified, it becomes mandatory to specify the corresponding option parameters.  
   
@@ -29,7 +29,7 @@ Option parameters must be separated from the option character by white space.
   
 `C:\> SSMAforDB2Console.EXE -s scriptfile`  
   
-`C:\> SSMAforDB2Console.EXE -s “C Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts \AssessmentReportGenerationSample.xml” –v “C Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts \VariableValueFileSample.xml” –c “C Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts \ServersConnectionFileSample.xml”`  
+`C:\> SSMAforDB2Console.EXE -s "C Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts \AssessmentReportGenerationSample.xml" –v "C Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts \VariableValueFileSample.xml" –c "C Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts \ServersConnectionFileSample.xml"`  
   
 Folder or file names containing spaces should be specified in double quotes.  
   
@@ -40,7 +40,7 @@ A mandatory switch, the script file path/name specifies the script of command se
   
 **Syntax Examples:**  
   
-`C:\>SSMAforDB2Console.EXE –s “C Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts \ConversionAndDataMigrationSample.xml”`  
+`C:\>SSMAforDB2Console.EXE –s "C Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts \ConversionAndDataMigrationSample.xml"`  
   
 ### Variable Value File Option: –v/variable  
 This file comprises variables used in the script file. This is an optional switch. If variables are not declared in variable file and used in the script file, the application generates an error and terminates the console execution.  
@@ -51,9 +51,9 @@ This file comprises variables used in the script file. This is an optional switc
   
     `C:\>SSMAforDB2Console.EXE -s`  
   
-    `“C:\ Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts \ConversionAndDataMigrationSample.xml” –v c:\migration`  
+    `"C:\ Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts \ConversionAndDataMigrationSample.xml" –v c:\migration`  
   
-    `projects\global_variablevaluefile.xml –v “c:\migrationprojects\instance_variablevaluefile.xml”`  
+    `projects\global_variablevaluefile.xml –v "c:\migrationprojects\instance_variablevaluefile.xml"`  
   
 ### Server Connection File Option: –c/serverconnection  
 This file contains server connection information for each server. Each server definition is identified by a unique Server ID. The Server IDs are referenced in the script file for connection related commands.  
@@ -64,7 +64,7 @@ Server definition can be a part of server connection file and/or script file. Se
   
 -   Server IDs are used in the script file and they are defined in a separate server connection file, server connection file uses variables which are defined in the variable value file:  
   
-    `C:\>SSMAforDB2Console.EXE –s “C:\ Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts \ConversionAndDataMigrationSample.xml”  –v`  
+    `C:\>SSMAforDB2Console.EXE –s "C:\ Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts \ConversionAndDataMigrationSample.xml"  –v`  
   
     `c:\SsmaProjects\myvaluefile1.xml –c`  
   
@@ -72,7 +72,7 @@ Server definition can be a part of server connection file and/or script file. Se
   
 -   Server definition is embedded in the script file:  
   
-    `C:\>SSMAforDB2Console.EXE –s “C:\ Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts \ConversionAndDataMigrationSample.xml”`  
+    `C:\>SSMAforDB2Console.EXE –s "C:\ Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts \ConversionAndDataMigrationSample.xml"`  
   
 ### XML Output Option: -x/xmloutput [xmloutputfile]  
 This command is used for outputting the command output messages in an xml format either to console or to an xml file.  
@@ -85,13 +85,13 @@ There are two options available for xmloutput, viz..,:
   
     `C:\>SSMAforDB2Console.EXE –s`  
   
-    `“C:\ Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts \ConversionAndDataMigrationSample.xml”  –x d:\xmloutput\project1output.xml`  
+    `"C:\ Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts \ConversionAndDataMigrationSample.xml"  –x d:\xmloutput\project1output.xml`  
   
 -   If no filepath is provided after the xmloutput  switch then the xmlout is displayed on the console itself.  
   
     **Syntax Example:**  
   
-    `C:\>SSMAforDB2Console.EXE –s “C:\ Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts \ConversionAndDataMigrationSample.xml”  –xmloutput`  
+    `C:\>SSMAforDB2Console.EXE –s "C:\ Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts \ConversionAndDataMigrationSample.xml"  –xmloutput`  
   
 ### Log File Option: –l/log  
 All the SSMA operations in the Console application get recorded in a log file. This is an optional switch. If a log file and its path are specified at the command line, the log gets generated in the specified location. Otherwise, it gets generated in its default location.  
@@ -100,7 +100,7 @@ All the SSMA operations in the Console application get recorded in a log file. T
   
 `C:\>SSMAforDB2Console.EXE`  
   
-`“C:\ Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts \ConversionAndDataMigrationSample.xml”  –l c:\SsmaProjects\migration1.log`  
+`"C:\ Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts \ConversionAndDataMigrationSample.xml"  –l c:\SsmaProjects\migration1.log`  
   
 ### Project Environment Folder Option: –e/projectenvironment  
 This denotes the project environment settings folder for the current SSMA project. This switch is optional.  
@@ -109,12 +109,12 @@ This denotes the project environment settings folder for the current SSMA projec
   
 `C:\>SSMAforDB2Console.EXE –s`  
   
-`“C:\ Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts \ConversionAndDataMigrationSample.xml”  –e c:\SsmaProjects\CommonEnvironment`  
+`"C:\ Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts \ConversionAndDataMigrationSample.xml"  –e c:\SsmaProjects\CommonEnvironment`  
   
 ### Secure Password Option: –p/securepassword  
 This option indicates the encrypted password for server connections. It differs from all other options: the option neither executes any script nor helps in any migration-related activities but helps manage password-encryption for the server connections used in the migration project.  
   
-You cannot enter any other option or password as the command line parameter. Otherwise, it results in an error. For more information, refer to the [Managing Passwords](http://msdn.microsoft.com/56d546e3-8747-4169-aace-693302667e94) section.  
+You cannot enter any other option or password as the command line parameter. Otherwise, it results in an error. For more information, refer to the [Managing Passwords](https://msdn.microsoft.com/56d546e3-8747-4169-aace-693302667e94) section.  
   
 The following sub-options are supported for `–p/securepassword`:  
   

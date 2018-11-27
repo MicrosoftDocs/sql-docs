@@ -21,7 +21,7 @@ manager: craigg
   
  For more information about date/time improvements, see [Date and Time Improvements &#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md).  
   
- For information about sample applications that demonstrate this feature, see [SQL Server Data Programming Samples](http://msftdpprodsamples.codeplex.com/).  
+ For information about sample applications that demonstrate this feature, see [SQL Server Data Programming Samples](https://msftdpprodsamples.codeplex.com/).  
   
 ## Usage  
  The following sections describe various ways of using the new date and time types.  

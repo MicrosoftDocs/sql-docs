@@ -21,7 +21,7 @@ manager: craigg
 
 ## Introduction
 
-Microsoft SQL Server contains Internet-enabled features that can collect and send information about your computer or device. This is called *standard computer information*. The Local Audit component of [SQL Server Usage Feedback collection](http://support.microsoft.com/kb/3153756) writes data collected by the service to a designated folder, representing the data (logs) that will be sent to Microsoft. The purpose of the Local Audit is to allow customers to see all data Microsoft collects with this feature, for compliance, regulatory or privacy validation reasons.  
+Microsoft SQL Server contains Internet-enabled features that can collect and send information about your computer or device. This is called *standard computer information*. The Local Audit component of [SQL Server Usage Feedback collection](https://support.microsoft.com/kb/3153756) writes data collected by the service to a designated folder, representing the data (logs) that will be sent to Microsoft. The purpose of the Local Audit is to allow customers to see all data Microsoft collects with this feature, for compliance, regulatory or privacy validation reasons.  
 
 As of SQL Server 2016 CU2, Local Audit is configurable at the instance level for SQL Server Database Engine and Analysis Services (SSAS). In SQL Server 2016 CU4 and SQL Server 2016 SP1, Local Audit is also enabled for SQL Server Integration Services (SSIS). Other SQL Server components that get installed during Setup and SQL Server Tools that are downloaded or installed after Setup do not have Local Audit capability for usage feedback collection. 
 
@@ -158,7 +158,7 @@ Local Audit will produce one log file per day. The log files will be in a form o
 
 1. To limit disk space usage by the files written by Local Audit, set up a policy or a regular job to clean up the Local Audit Directory to remove older, unneeded files.  
 
-2. Secure the Local Audit Directory path so that it is only accessible by the appropriate people. Note that the log files contain information as outlined in [How to configure SQL Server 2016 to send feedback to Microsoft](http://support.microsoft.com/kb/3153756). Access to this file should prevent most members of your organization from reading it.  
+2. Secure the Local Audit Directory path so that it is only accessible by the appropriate people. Note that the log files contain information as outlined in [How to configure SQL Server 2016 to send feedback to Microsoft](https://support.microsoft.com/kb/3153756). Access to this file should prevent most members of your organization from reading it.  
 
 ## Data Dictionary of Local Audit Output Data Structure 
 
@@ -316,7 +316,7 @@ DBAs will need to self-manage the clean-up of the files in the directory to avoi
 
 **Is there a client or tool that I can use to read this JSON output?**
 The output can be read with Notepad, Visual Studio, or any JSON reader of your choice.
-Alternatively, you can read the JSON file and analyze the data in an SQL Server 2016 instance as illustrated below. More details on how to read JSON file in SQL Server, please visit [Importing JSON files into SQL Server using OPENROWSET (BULK) and OPENJSON (Transact-SQL)](http://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/10/07/bulk-importing-json-files-into-sql-server/).
+Alternatively, you can read the JSON file and analyze the data in an SQL Server 2016 instance as illustrated below. More details on how to read JSON file in SQL Server, please visit [Importing JSON files into SQL Server using OPENROWSET (BULK) and OPENJSON (Transact-SQL)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/10/07/bulk-importing-json-files-into-sql-server/).
 
 ```Transact-SQL
 DECLARE @JSONFile AS VARCHAR(MAX)

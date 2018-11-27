@@ -73,7 +73,7 @@ The top things I saw missing were:
 - Toggle full screen (**SHIFT+ALT+ENTER**).
 - **F8** to show **Object Explorer** / **Servers view**.
 
-It’s easy to find and replace these keybindings. Run *Open Keyboard Shortcuts* to show the **Keyboard Shortcuts** tab in Azure Data Studio, search for *query* and then choose **Change Keybinding**. Once you're done changing the keybinding you can see the updated mapping in the keybindings.json file (run *Open Keyboard Shortcuts* to see it).
+It's easy to find and replace these keybindings. Run *Open Keyboard Shortcuts* to show the **Keyboard Shortcuts** tab in Azure Data Studio, search for *query* and then choose **Change Keybinding**. Once you're done changing the keybinding you can see the updated mapping in the keybindings.json file (run *Open Keyboard Shortcuts* to see it).
 
 ![keyboard shortcuts](./media/tutorial-create-extension/keyboard-shortcuts.png)
 
@@ -169,7 +169,7 @@ In this tutorial, you learned how to:
 > * Publish your extension to the marketplace
 
 
-We hope after reading this you’ll be inspired to build your own extension for Azure Data Studio. We have support for Dashboard Insights (pretty graphs that run against your SQL Server), a number of SQL-specific APIs, and a huge existing set of extension points inherited from Visual Studio Code.
+We hope after reading this you'll be inspired to build your own extension for Azure Data Studio. We have support for Dashboard Insights (pretty graphs that run against your SQL Server), a number of SQL-specific APIs, and a huge existing set of extension points inherited from Visual Studio Code.
 
 If you have an idea but are not sure how to get started, please open an issue or tweet at the team: [azuredatastudio](https://twitter.com/azuredatastudio).
 

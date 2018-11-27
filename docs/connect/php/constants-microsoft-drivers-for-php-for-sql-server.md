@@ -20,7 +20,7 @@ manager: craigg
 This topic discusses the constants that are defined by the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
 ## PDO_SQLSRV Driver Constants  
-The constants listed on the [PDO website](http://php.net/manual/book.pdo.php) are valid in the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
+The constants listed on the [PDO website](https://php.net/manual/book.pdo.php) are valid in the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
 The following describe the Microsoft-specific constants in the PDO_SQLSRV driver.  
   
@@ -49,7 +49,7 @@ The available values to pass to PDO::SQLSRV_ATTR_ENCODING are
 |PDO::SQLSRV_ENCODING_BINARY|Data is a raw byte stream from the server without performing encoding or translation.<br /><br />Not valid for PDO::setAttribute.|  
 |PDO::SQLSRV_ENCODING_SYSTEM|Data is 8-bit characters as specified in the code page of the Windows locale that is set on the system. Any multi-byte characters or characters that do not map into this code page are substituted with a single-byte question mark (?) character.|  
 |PDO::SQLSRV_ENCODING_UTF8|Data is in the UTF-8 encoding. This is the default encoding.|  
-|PDO::SQLSRV_ENCODING_DEFAULT|Uses PDO::SQLSRV_ENCODING_SYSTEM if specified during connection.<br /><br />Use the connection’s encoding if specified in a prepare statement.|  
+|PDO::SQLSRV_ENCODING_DEFAULT|Uses PDO::SQLSRV_ENCODING_SYSTEM if specified during connection.<br /><br />Use the connection's encoding if specified in a prepare statement.|  
   
 ### Query Timeout  
 The PDO::SQLSRV_ATTR_QUERY_TIMEOUT attribute is any non-negative integer representing the timeout period, in seconds. Zero (0) is the default and means no timeout.  
@@ -126,7 +126,7 @@ The following list contains the constants for specifying parameter direction whe
 |SQLSRV_PARAM_OUT|Indicates an output parameter.|  
   
 ### PHPTYPE Constants  
-The following table lists the constants that are used to describe PHP data types. For information about PHP data types, see [PHP Types](http://php.net/manual/en/language.types.php).  
+The following table lists the constants that are used to describe PHP data types. For information about PHP data types, see [PHP Types](https://php.net/manual/en/language.types.php).  
   
 |SQLSRV constant|PHP data type|  
 |-------------------|-----------------|  

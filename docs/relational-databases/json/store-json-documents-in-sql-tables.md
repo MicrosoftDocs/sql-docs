@@ -43,12 +43,12 @@ Every time someone inserts or updates a document in the table, this constraint v
 When you store your JSON documents in the table, you can use standard Transact-SQL language to query the documents. For example:
 
 ```sql
-SELECT TOP 100 JSON_VALUE(log, ‘$.severity’), AVG( CAST( JSON_VALUE(log,’$.duration’) as float))
+SELECT TOP 100 JSON_VALUE(log, '$.severity'), AVG( CAST( JSON_VALUE(log,'$.duration') as float))
  FROM WebSite.Logs
- WHERE CAST( JSON_VALUE(log,’$.date’) as datetime) > @datetime
- GROUP BY JSON_VALUE(log, ‘$.severity’)
- HAVING AVG( CAST( JSON_VALUE(log,’$.duration’) as float) ) > 100
- ORDER BY AVG( CAST( JSON_VALUE(log,’$.duration’) as float) ) DESC
+ WHERE CAST( JSON_VALUE(log,'$.date') as datetime) > @datetime
+ GROUP BY JSON_VALUE(log, '$.severity')
+ HAVING AVG( CAST( JSON_VALUE(log,'$.duration') as float) ) > 100
+ ORDER BY AVG( CAST( JSON_VALUE(log,'$.duration') as float) ) DESC
 ```
 
 It's a powerful advantage that you can use *any* T-SQL function and query clause to query JSON documents. SQL Server and SQL Database don't introduce any constraints in the queries that you can use to analyze JSON documents. You can extract values from a JSON document with the `JSON_VALUE` function and use it in the query like any other value.
@@ -71,7 +71,7 @@ create table WebSite.Logs (
 );
 ```
 
-The computed column used in this example is a non-persisted or virtual column that doesn’t add additional space to the table. It is used by the index `ix_severity` to improve performance of the queries like the following example:
+The computed column used in this example is a non-persisted or virtual column that doesn't add additional space to the table. It is used by the index `ix_severity` to improve performance of the queries like the following example:
 
 ```sql
 SELECT log
@@ -157,7 +157,7 @@ Native JSON functions in SQL Server and SQL Database enable you to process JSON 
   
 ### Microsoft blog posts  
   
-For specific solutions, use cases, and recommendations, see these [blog posts](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) about the built-in JSON support in SQL Server and Azure SQL Database.  
+For specific solutions, use cases, and recommendations, see these [blog posts](https://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) about the built-in JSON support in SQL Server and Azure SQL Database.  
 
 ### Microsoft videos
 

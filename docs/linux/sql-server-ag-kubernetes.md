@@ -13,26 +13,26 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 ---
 # Always On availability groups for SQL Server containers
 
-SQL Server 2019 supports availability groups on containers in a Kubernetes. For availability groups, deploy the SQL Server [Kubernetes operator](http://coreos.com/blog/introducing-operators.html) to your Kubernetes cluster. The operator helps package, deploy, and manage the availability group in a cluster.
+SQL Server 2019 supports availability groups on containers in a Kubernetes. For availability groups, deploy the SQL Server [Kubernetes operator](https://coreos.com/blog/introducing-operators.html) to your Kubernetes cluster. The operator helps package, deploy, and manage the availability group in a cluster.
 
 ![AG in Kubernetes Container](media/tutorial-sql-server-ag-containers-kubernetes/KubernetesCluster.png)
 
 In the image above, a four-node kubernetes clusters host an availability group with three replicas. The solution includes the following components:
 
-* A Kubernetes [*deployment*](http://kubernetes.io/docs/concepts/workloads/controllers/deployment/). The deployment includes the operator and a configuration map. These provide the container image, software, and instructions required to deploy SQL Server instances for the availability group.
+* A Kubernetes [*deployment*](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/). The deployment includes the operator and a configuration map. These provide the container image, software, and instructions required to deploy SQL Server instances for the availability group.
 
-* Three nodes, each hosting a [*StatefulSet*](http://kubernetes.io/docs/concepts/workloads/controllers/statefulset/). The StatefulSet contains a [*pod*](http://kubernetes.io/docs/concepts/workloads/pods/pod-overview/). Each pod contains:
+* Three nodes, each hosting a [*StatefulSet*](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/). The StatefulSet contains a [*pod*](https://kubernetes.io/docs/concepts/workloads/pods/pod-overview/). Each pod contains:
   * A SQL Server container running one instance of SQL Server.
   * An availability group agent. 
 
-* Two [*ConfigMaps*](http://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/) related to the availability group. The ConfigMaps provide information about:
+* Two [*ConfigMaps*](https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/) related to the availability group. The ConfigMaps provide information about:
   * The deployment for the operator.
   * The availability group.
 
- * [*Persistent volumes*](http://kubernetes.io/docs/concepts/storage/persistent-volumes/) are pieces of storage. A *persistent volume claim* (PVC) is a request for storage by a user. Each container is affiliated with a PVC for the data and log storage. In Azure Kubernetes Service (AKS), you [create a persistent volume claim](http://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv) to automatically provision storage based on a storage class.
+ * [*Persistent volumes*](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) are pieces of storage. A *persistent volume claim* (PVC) is a request for storage by a user. Each container is affiliated with a PVC for the data and log storage. In Azure Kubernetes Service (AKS), you [create a persistent volume claim](https://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv) to automatically provision storage based on a storage class.
 
 
-In addition, the cluster stores [*secrets*](http://kubernetes.io/docs/concepts/configuration/secret/) for the passwords, certificates, keys, and other sensitive information.
+In addition, the cluster stores [*secrets*](https://kubernetes.io/docs/concepts/configuration/secret/) for the passwords, certificates, keys, and other sensitive information.
 
 ## Deploy the availability group in Kubernetes
 
@@ -68,11 +68,11 @@ The code for the operator, HA supervisor, and SQL Server is packaged in a Docker
 
 * `mssql-operator`
 
-    This process is deployed as a separate Kubernetes deployment. It registers the [Kubernetes custom resource](http://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/) called `SqlServer` (sqlservers.mssql.microsoft.com). Then it listens for such resources being created or updated in the Kubernetes cluster. For every such event, it creates or updates the Kubernetes resources for the corresponding instance (for example the StatefulSet, or `mssql-server-k8s-init-sql` job).
+    This process is deployed as a separate Kubernetes deployment. It registers the [Kubernetes custom resource](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/) called `SqlServer` (sqlservers.mssql.microsoft.com). Then it listens for such resources being created or updated in the Kubernetes cluster. For every such event, it creates or updates the Kubernetes resources for the corresponding instance (for example the StatefulSet, or `mssql-server-k8s-init-sql` job).
 
 * `mssql-server-k8s-health-agent`
 
-    This web server serves Kubernetes [liveness probes](http://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes/) to determine the health of a SQL Server instance. Monitors the health of the local SQL Server instance by calling `sp_server_diagnostics` and comparing the results with your monitor policy.
+    This web server serves Kubernetes [liveness probes](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes/) to determine the health of a SQL Server instance. Monitors the health of the local SQL Server instance by calling `sp_server_diagnostics` and comparing the results with your monitor policy.
 
 * `mssql-ha-supervisor`
 
@@ -86,7 +86,7 @@ The code for the operator, HA supervisor, and SQL Server is packaged in a Docker
 
 * `mssql-server-k8s-init-sql`
   
-    This Kubernetes [job](http://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/) applies a desired state configuration to a SQL Server instance. The job is created by the operator every time a SqlServer resource is created or updated. It ensures that the target SQL Server instance corresponding to the custom resource has the desired configuration described in the resource.
+    This Kubernetes [job](https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/) applies a desired state configuration to a SQL Server instance. The job is created by the operator every time a SqlServer resource is created or updated. It ensures that the target SQL Server instance corresponding to the custom resource has the desired configuration described in the resource.
 
     For example, if any of the following settings are required, it completes them:
   * Update the SA password

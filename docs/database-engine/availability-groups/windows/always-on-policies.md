@@ -13,7 +13,7 @@ manager: craigg
 ---
 # Always On Availability Groups policies
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  The Always On Availability Groups system policies are used by the Always On Dashboard to provide information on the availability group health to the user. They are very useful for initial troubleshooting of an availability group’s operational issues. These policies can be extended and used to customize the Always On Dashboard, or run instantly to report the desired health information.  
+  The Always On Availability Groups system policies are used by the Always On Dashboard to provide information on the availability group health to the user. They are very useful for initial troubleshooting of an availability group's operational issues. These policies can be extended and used to customize the Always On Dashboard, or run instantly to report the desired health information.  
   
  There are 14 system policies for availability groups. For detailed information on each policy, see [Always On policies for operational issues with Always On Availability Groups (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md).  
   
@@ -27,6 +27,6 @@ manager: craigg
 3.  To view all the availability groups system policies, in the **Select a page** pane, click **Policy Selection**.  
   
 ## Next steps  
- [The Always On health model, part 2: Extending the health model](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx).  
+ [The Always On health model, part 2: Extending the health model](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx).  
   
   

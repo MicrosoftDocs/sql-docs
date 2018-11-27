@@ -62,10 +62,34 @@ SELECT TRANSLATE('2*[3+4]/{7-2}', '[]{}', '()()');
 2*(3+4)/(7-2)
 ```
 
->  [!NOTE]
->  The `TRANSLATE` function in this example is equivalent to but much simplier than the following statement using `REPLACE`:
-> `SELECT REPLACE(REPLACE(REPLACE(REPLACE('2*[3+4]/{7-2}','[','('), ']', ')'), '{', '('), '}', ')');` 
+#### Equivalent calls to REPLACE
 
+In the following SELECT statement, there is a group of four nested calls to the REPLACE function. This group is equivalent to the one call made to the TRANSLATE function in the preceding SELECT:
+
+```sql
+SELECT
+REPLACE
+(
+      REPLACE
+      (
+            REPLACE
+            (
+                  REPLACE
+                  (
+                        '2*[3+4]/{7-2}',
+                        '[',
+                        '('
+                  ),
+                  ']',
+                  ')'
+            ),
+            '{',
+            '('
+      ),
+      '}',
+      ')'
+);
+```
 
 ###  B. Convert GeoJSON points into WKT    
 GeoJSON is a format for encoding a variety of geographic data structures. With the `TRANSLATE` function, developers can easily convert GeoJSON points to WKT format and vice versa. The following query replaces square and curly braces in input  with regular braces:   

@@ -32,78 +32,59 @@ manager: craigg
  These steps are discussed in turn below.  
   
 ## Determine Your Monitoring Goals  
- To monitor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] effectively you should clearly identify your reason for monitoring. Reasons can include the following:  
+To monitor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] effectively you should clearly identify your reason for monitoring. Reasons can include the following:  
   
 -   Establish a baseline for performance.  
-  
 -   Identify performance changes over time.  
-  
 -   Diagnose specific performance problems.  
-  
 -   Identify components or processes to optimize.  
-  
 -   Compare the effect of different client applications on performance.  
-  
 -   Audit user activity.  
-  
 -   Test a server under different loads.  
-  
 -   Test database architecture.  
-  
 -   Test maintenance schedules.  
-  
 -   Test backup and restore plans.  
-  
 -   Determining when to modify your hardware configuration.  
   
 ## Select the Appropriate Tool  
- After determining why you are monitoring, you should select the appropriate tools for that type of monitoring. The Windows operating system and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provide a complete set of tools to monitor servers in transaction-intensive environments. These tools clearly reveal the condition of an instance of the SQL Server Database Engine or an instance of SQL Server Analysis Services.  
+After determining why you are monitoring, you should select the appropriate tools for that type of monitoring. The Windows operating system and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provide a complete set of tools to monitor servers in transaction-intensive environments. These tools clearly reveal the condition of an instance of the SQL Server Database Engine or an instance of SQL Server Analysis Services.  
   
- Windows provides the following tools for monitoring applications that are running on a server:  
+Windows provides the following tools for monitoring applications that are running on a server:  
   
 -   System Monitor, which lets you collect and view real-time data about activities such as memory, disk, and processor usage  
-  
 -   Performance logs and alerts  
-  
 -   Task Manager  
   
- For more information about Windows Server or Windows tools, see the Windows documentation.  
+For more information about Windows Server or Windows tools, see the Windows documentation.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides the following tools for monitoring components of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides the following tools for monitoring components of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
--   SQL Trace  
-  
--   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]  
-  
--   Distributed Replay Utility  
-  
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Activity Monitor  
-  
+-   [Extended Events](../../relational-databases/extended-events/extended-events.md)
+-   [SQL Trace](../../relational-databases/sql-trace/sql-trace.md)  
+-   [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
+-   [Distributed Replay Utility](../../tools/distributed-replay/sql-server-distributed-replay.md)  
+-   [Activity Monitor](../../relational-databases/performance-monitor/activity-monitor.md)  
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Graphical Showplan  
+-   [System Stored procedures](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)
+-   [Database Console Commands (DBCC)](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
+-   [Dynamic management views and functions](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
+-   [Trace flags](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 
   
--   Stored procedures  
-  
--   Database Console Commands (DBCC)  
-  
--   Built-in functions  
-  
--   Trace flags  
-  
- For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] monitoring tools, see [Performance Monitoring and Tuning Tools](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md).  
+For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] monitoring tools, see [Performance Monitoring and Tuning Tools](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md).  
   
 ## Identify the Components to Monitor  
- The third step to monitoring an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is to identify the components that you monitor. For example, if you are using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] to trace a server you can define the trace to collect data about specific events. You can also exclude events that do not apply to your situation.  
+The third step to monitoring an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is to identify the components that you monitor. For example, if you are using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] to trace a server you can define the trace to collect data about specific events. You can also exclude events that do not apply to your situation.  
   
 ## Select Metrics for Monitored Components  
- After identifying the components to monitor, determine the metrics for components you monitor. For example, after selecting the events to include in a trace, you can choose to include only specific data about the events. Limiting the trace to data that is relevant to the trace minimizes the system resources required to perform the tracing.  
+After identifying the components to monitor, determine the metrics for components you monitor. For example, after selecting the events to include in a trace, you can choose to include only specific data about the events. Limiting the trace to data that is relevant to the trace minimizes the system resources required to perform the tracing.  
   
 ## Monitor the Server  
- To monitor the server, run the monitoring tool that you have configured to gather data. For example, after a trace is defined, you can run the trace to gather data about events raised in the server.  
+To monitor the server, run the monitoring tool that you have configured to gather data. For example, after a trace is defined, you can run the trace to gather data about events raised in the server.  
   
 ## Analyze the Data  
- After the trace has finished, analyze the data to see if you have achieved your monitoring goal. If you have not, modify the components or metrics that you used to monitor the server.  
+After the trace has finished, analyze the data to see if you have achieved your monitoring goal. If you have not, modify the components or metrics that you used to monitor the server.  
   
- The following outlines the process for capturing event data and putting it to use.  
+The following outlines the process for capturing event data and putting it to use.  
   
 1.  Apply filters to limit the event data collected.  
   

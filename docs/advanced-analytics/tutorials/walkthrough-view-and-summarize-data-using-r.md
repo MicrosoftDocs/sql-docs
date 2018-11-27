@@ -3,7 +3,7 @@ title: View and summarize data using R (walkthrough)| Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 11/02/2018  
+ms.date: 11/26/2018  
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
@@ -12,27 +12,17 @@ manager: cgronlun
 # View and summarize data using R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Now let's work with the same data using R code. In this lesson, you learn how to use the functions in the **RevoScaleR** package.
+This lesson introduces you to functions in the **RevoScaleR** package and steps you through the following tasks:
 
-An R script is provided with this walkthrough that includes all the code needed to create the data object, generate summaries, and build models. The R script file, **RSQL_RWalkthrough.R**, can be found in the location where you installed the script files.
-
-+ If you are experienced with R, you can run the script all at once.
-+ For people learning to use RevoScaleR, this tutorial goes through the script line by line.
-+ To run individual lines from the script, you can highlight a line or lines in the file and press Ctrl + ENTER.
-
-> [!TIP]
-> Save your R workspace in case you want to complete the rest of the walkthrough later.  That way the data objects and other variables are ready for re-use.
+> [!div class="checklist"]
+> * Connect to SQL Server
+> * Define a query that has the data you need, or specify a table or view
+> * Define one or more compute contexts to use when running R code
+> * Optionally, define transformations that are applied to the data source while it is being read from the source
 
 ## Define a SQL Server compute context
 
-Microsoft R makes it easy to get data from  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to use in your R code. The process is as follows:
-  
-- Create a connection to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance
-- Define a query that has the data you need, or specify a table or view
-- Define one or more compute contexts to use when running R code
-- Optionally, define transformations that are applied to the data source while it is being read from the source
-
-The following steps are all part of the R code and should be run in an R environment. We used Microsoft R Client, because it includes all the RevoScaleR packages, as well as a basic, lightweight set of R tools.
+Run the following R statements in an R environment. This section assumes a [data science workstations with Microsoft R Client](../r/set-up-a-data-science-client.md), because it includes all the RevoScaleR packages, as well as a basic, lightweight set of R tools. For example, you can use RGUI to run the R script in this section.
 
 1. If the **RevoScaleR** package is  not already loaded, run this line of R code:
 
@@ -58,7 +48,7 @@ The following steps are all part of the R code and should be run in an R environ
     connStr <- "Driver=SQL Server;Server=your_server_name;Database=nyctaxi_sample;Trusted_Connection=True"
     ```
 
-    The R script available for download uses SQL logins only. Generally, we recommend that you use Windows authentication where possible, to avoid saving passwords in your R code. However, to ensure that the code in this tutorial matches the code downloaded from Github, we'll use a SQL login for the rest of the walkthrough.
+    Generally, we recommend that you use Windows authentication where possible, to avoid saving passwords in your R code.
 
 3. Define variables to use in creating a new *compute context*. After you create the compute context object, you can use it to run R code on the SQL Server instance.
 
@@ -185,7 +175,7 @@ In this section, you'll try out several of the functions provided in [!INCLUDE[r
 
 ### Bonus exercise on big data
 
-Try defining a new query string with all the rows. we recommend you set up a new data source object for this experiment. You might also try changing the *rowsToRead* parameter to see how it affects throughput.
+Try defining a new query string with all the rows. We recommend you set up a new data source object for this experiment. You might also try changing the *rowsToRead* parameter to see how it affects throughput.
 
 ```R
 bigDataQuery  <- "SELECT tipped, fare_amount, passenger_count,trip_time_in_secs,trip_distance, pickup_datetime, dropoff_datetime, pickup_longitude, pickup_latitude, dropoff_longitude, dropoff_latitude FROM nyctaxi_sample"
@@ -211,10 +201,7 @@ print(paste("It takes CPU Time=", round(used.time[1]+used.time[2],2)," seconds,
 > 
 > Another option is to monitor R jobs running on SQL Server using these [custom reports](../r/monitor-r-services-using-custom-reports-in-management-studio.md).
 
-## Next lesson
+## Next steps
 
-[Create graphs and plots using R](walkthrough-create-graphs-and-plots-using-r.md)
-
-## Previous lesson
-
-[Explore the data using SQL](walkthrough-view-and-explore-the-data.md)
+> [!div class="nextstepaction"]
+> [Create graphs and plots using R](walkthrough-create-graphs-and-plots-using-r.md)

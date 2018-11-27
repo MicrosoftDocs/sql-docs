@@ -70,7 +70,7 @@
 - name: Tutorials
   href: tutorials/machine-learning-services-tutorials.md
   items:
-  - name: Data
+  - name: Sample data
     items:
     - name: Airline data set
       href: tutorials/demo-data-airlinedemo-in-sql.md
@@ -82,20 +82,20 @@
     href: tutorials/sql-server-python-tutorials.md
     items:
     - name: Train and use your first model
-      href: tutorials/train-score-using-python-in-tsql.md    
+      href: tutorials/train-score-using-python-in-tsql.md 
+    - name: Create a Python model using revoscalepy
+      href: tutorials/use-python-revoscalepy-to-create-model.md  
     - name: Learn in-database analytics
       href: tutorials/sqldev-in-database-python-for-sql-developers.md
       items:
-      - name: 1 - Visualize data
+      - name: 1 - Data exploration
         href: tutorials/sqldev-py3-explore-and-visualize-the-data.md
-      - name: 2 - Create data features
+      - name: 2 - Feature engineering
         href: tutorials/sqldev-py4-create-data-features-using-t-sql.md
-      - name: 3 - Train and save to SQL
+      - name: 3 - Train and deploy
         href: tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md
-      - name: 4 - Predict outcomes
+      - name: 4 - Predictions
         href: tutorials/sqldev-py6-operationalize-the-model.md
-    - name: Create a model using revoscalepy
-      href: tutorials/use-python-revoscalepy-to-create-model.md
   - name: R
     href: tutorials/sql-server-r-tutorials.md
     items:
@@ -104,22 +104,18 @@
     - name: Learn in-database analytics
       href: tutorials/sqldev-in-database-r-for-sql-developers.md
       items:
-      - name: 1 - Visualize data
+      - name: 1 - Data exploration
         href: tutorials/sqldev-explore-and-visualize-the-data.md
-      - name: 2 - Create data features
+      - name: 2 - Feature engineering
         href: tutorials/sqldev-create-data-features-using-t-sql.md
-      - name: 3 - Train and save to SQL
+      - name: 3 - Train and deploy
         href: tutorials/sqldev-train-and-save-a-model-using-t-sql.md
-      - name: 4 - Predict outcomes
+      - name: 4 - Predictions
         href: tutorials/sqldev-operationalize-the-model.md
     - name: Data science end-to-end walkthrough
       href: tutorials/walkthrough-data-science-end-to-end-walkthrough.md
       items:
-      - name: Prepare data
-        href: tutorials/walkthrough-prepare-the-data.md
-      - name: Explore data using SQL
-        href: tutorials/walkthrough-view-and-explore-the-data.md
-      - name: Summarize data using R
+      - name: Explore and summarize data
         href: tutorials/walkthrough-view-and-summarize-data-using-r.md
       - name: Create graphs and plots
         href: tutorials/walkthrough-create-graphs-and-plots-using-r.md

@@ -3,7 +3,7 @@ title: Create graphs and plots using SQL and R (walkthrough) | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
+ms.date: 11/26/2018  
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
@@ -40,7 +40,7 @@ In this part of the walkthrough, you learn techniques for generating plots and m
 
 Typically, database servers block Internet access. This can be inconvenient when using R packages that need to download maps or other images to generate plots. However, there is a workaround that you might find useful when developing your own applications. Basically, you generate the map representation on the client, and then overlay on the map the points that are stored as attributes in the SQL Server table.
 
-1. Define the function that creates the R plot object. The custom function *mapPlot* creates a scatter plot that uses the taxi pickup locations, and plots the number of rides that started from each location. It uses the **ggplot2** and  **ggmap** packages, which should already be installed and loaded.
+1. Define the function that creates the R plot object. The custom function *mapPlot* creates a scatter plot that uses the taxi pickup locations, and plots the number of rides that started from each location. It uses the **ggplot2** and  **ggmap** packages, which should already be [installed and loaded](walkthrough-data-science-end-to-end-walkthrough.md#add-packages).
 
     ```R
     mapPlot <- function(inDataSource, googMap){
@@ -85,7 +85,7 @@ Typically, database servers block Internet access. This can be inconvenient when
     + When the line beginning with `plot` runs, the rendered data is serialized back to the local R environment so that you can view it in your R client.
 
     > [!NOTE]
-    > If you're using SQL Server in an Azure virtual machine, you might get an error at this point. That's because a default firewall rule in Azure blocks network access by R code. For details on how to fix this error, see [Installing R Services in an Azure VM](../r/installing-sql-server-r-services-on-an-azure-virtual-machine.md).
+    > If you are using SQL Server in an Azure virtual machine, you might get an error at this point. An error occurs when the default firewall rule in Azure blocks network access by R code. For details on how to fix this error, see [Installing R Services in an Azure VM](../r/installing-sql-server-r-services-on-an-azure-virtual-machine.md).
 
 4. The following image shows the output plot. The taxi pickup locations are added to the map as red dots. Your image might look different, depending how many locations are in the data source you used.
 

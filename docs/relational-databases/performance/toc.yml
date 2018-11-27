@@ -64,15 +64,15 @@
     href: monitor-sql-server-components.md
     items:
     - name: Activity Monitor
-      href: ../relational-databases/performance-monitor/activity-monitor.md
+      href: ../performance-monitor/activity-monitor.md
     - name: Dynamic management views and functions
-      href: ../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md
+      href: ../system-dynamic-management-views/system-dynamic-management-views.md
     - name: Extended events
-      href: ../relational-databases/extended-events/extended-events.md
+      href: ../extended-events/extended-events.md
     - name: SQL Server Profiler
-      href: ../tools/sql-server-profiler/sql-server-profiler.md
+      href: ../../tools/sql-server-profiler/sql-server-profiler.md
     - name: SQL Trace
-      href: ../relational-databases/sql-trace/sql-trace.md
+      href: ../sql-trace/sql-trace.md
   - name: Performance Monitoring and Tuning Tools
     href: performance-monitoring-and-tuning-tools.md
     items:
@@ -139,34 +139,34 @@
   - name: Monitor Resource Usage (System Monitor)
     href: ../performance-monitor/monitor-resource-usage-system-monitor.md
 - name: Internals and Architecture
-  href: ../relational-databases/sql-server-guides.md
+  href: ../sql-server-guides.md
   items:
   - name: Cursors
-    href: ../relational-databases/cursors.md
+    href: ../cursors.md
   - name: Ghost record cleanup process
-    href: ../relational-databases/ghost-record-cleanup-process-guide.md
+    href: ../ghost-record-cleanup-process-guide.md
   - name: Index Architecture and Design
-    href: ../relational-databases/sql-server-index-design-guide.md
+    href: ../sql-server-index-design-guide.md
   - name: Joins
     href: joins.md
   - name: Memory Management Architecture
-    href: ../relational-databases/memory-management-architecture-guide.md
+    href: ../memory-management-architecture-guide.md
     items:
       - name: Reading pages
-        href: ../relational-databases/reading-pages.md
+        href: ../reading-pages.md
       - name: Writing pages
-        href: ../relational-databases/writing-pages.md
+        href: ../writing-pages.md
   - name: Pages and Extents Architecture
-    href: ../relational-databases/pages-and-extents-architecture-guide.md
+    href: ../pages-and-extents-architecture-guide.md
   - name: Query Processing Architecture
-    href: ../relational-databases/query-processing-architecture-guide.md
+    href: ../query-processing-architecture-guide.md
   - name: Showplan Logical and Physical Operators Reference
-    href: ../relational-databases/showplan-logical-and-physical-operators-reference.md
+    href: ../showplan-logical-and-physical-operators-reference.md
   - name: Subqueries
     href: subqueries.md
   - name: Thread and Task Architecture
-    href: ../relational-databases/thread-and-task-architecture-guide.md
+    href: ../thread-and-task-architecture-guide.md
   - name: Transaction Log Architecture and Management
-    href: ../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md
+    href: ../sql-server-transaction-log-architecture-and-management-guide.md
   - name: Transaction Locking and Row Versioning
-    href: ../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md
+    href: ../sql-server-transaction-locking-and-row-versioning-guide.md

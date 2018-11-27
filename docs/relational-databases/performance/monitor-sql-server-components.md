@@ -69,7 +69,10 @@ For more information about Windows Server or Windows tools, see the Windows docu
 -   [Database Console Commands (DBCC)](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 -   [Dynamic management views and functions](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
 -   [Trace flags](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 
-  
+
+> [!IMPORTANT]
+> SQL Trace and [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] are deprecated. Use Extended Events instead. For more information on [Extended Events](../../relational-databases/extended-events/extended-events.md), see [Quick Start: Extended events in SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md) and [SSMS XEvent Profiler](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md).
+
 For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] monitoring tools, see [Performance Monitoring and Tuning Tools](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md).  
   
 ## Identify the Components to Monitor  
@@ -80,7 +83,7 @@ After identifying the components to monitor, determine the metrics for component
   
 ## Monitor the Server  
 To monitor the server, run the monitoring tool that you have configured to gather data. For example, after a trace is defined, you can run the trace to gather data about events raised in the server.  
-  
+
 ## Analyze the Data  
 After the trace has finished, analyze the data to see if you have achieved your monitoring goal. If you have not, modify the components or metrics that you used to monitor the server.  
   
@@ -88,27 +91,46 @@ The following outlines the process for capturing event data and putting it to us
   
 1.  Apply filters to limit the event data collected.  
   
-     Limiting the event data allows for the system to focus on the events pertinent to the monitoring scenario. For example, if you want to monitor slow queries, you can use a filter to monitor only those queries issued by the application that take more than 30 seconds to run against a particular database. For more information, see [Set a Trace Filter &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/set-a-trace-filter-transact-sql.md) and [Filter Events in a Trace &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md).  
+    Limiting the event data allows for the system to focus on the events pertinent to the monitoring scenario. For example, if you want to monitor slow queries, you can use a filter to monitor only those queries issued by the application that take more than 30 seconds to run against a particular database. 
+    
+    For more information on filtering Extended Event traces, see [Quick Start: Extended events in SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md#demo-of-ssms-integration). 
+    
+    For more information on filtering SQL Trace, see [Set a Trace Filter &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/set-a-trace-filter-transact-sql.md) and [Filter Events in a Trace &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md).  
   
 2.  Monitor (capture) events.  
   
-     As soon as it is enabled, active monitoring captures data from the specified application, instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], or operating system. For example, when disk activity is monitored using System Monitor, monitoring captures event data, such as disk reads and writes, and displays it on the screen. For more information, see [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md).  
+    As soon as it is enabled, active monitoring captures data from the specified application, instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], or operating system. For example, when disk activity is monitored using System Monitor, monitoring captures event data, such as disk reads and writes, and displays it on the screen. For more information, see [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md).  
   
 3.  Save captured event data.  
   
-     Saving captured event data lets you analyze it later or even replay it using the Distributed Replay Utility or [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Captured event data is saved to a file that can be loaded back into the tool that originally created it for analysis. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] permits event data to be saved to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table. Saving captured event data is important when you are creating a performance baseline. The performance baseline data is saved and used, when comparing recently captured event data, to determine whether performance is optimal. For more information, see [SQL Server Profiler Templates and Permissions](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md).  
+    Saving captured event data lets you analyze it later. Captured event data that is saved to a file that can be loaded back into the tool that originally created it for analysis. Saving captured event data is important when you are creating a performance baseline. The performance baseline data is saved and used, when comparing recently captured event data, to determine whether performance is optimal.
+    
+    Extended Events permits event data to be saved to an event file, event counter, histogram, and ring buffer. For more information, see [Targets for Extended Events in SQL Server](../../relational-databases/extended-events/targets-for-extended-events-in-sql-server.md).
+    
+    SQL Trace event data can even be replayed using the Distributed Replay Utility or [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] permits event data to be saved to a file or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table. For more information, see [SQL Server Profiler Templates and Permissions](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md).  
   
 4.  Create trace templates that contain the settings specified to capture the events.  
   
-     Trace templates include specifications about the events themselves, event data, and filters that are used to capture data. These templates can be used to monitor a specific set of events later without redefining the events, event data, and filters. For example, if you want to frequently monitor the number of deadlocks, and the users involved in those deadlocks, you can create a template defining those events, event data, and event filters; save the template; and reapply the filter the next time that you want to monitor deadlocks. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] uses trace templates for this purpose. For more information, see [Set Trace Definition Defaults &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/set-trace-definition-defaults-sql-server-profiler.md) and [Create a Trace Template &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md).  
+    Trace templates include specifications about the events themselves, event data, and filters that are used to capture data. These templates can be used to monitor a specific set of events later without redefining the events, event data, and filters. For example, if you want to frequently monitor the number of deadlocks, and the users involved in those deadlocks, you can create a template defining those events, event data, and event filters; save the template; and reapply the filter the next time that you want to monitor deadlocks.
+    
+    An Extended Event session definition is a template that can be scripted and re-used. To create and manage sessions, see [Manage Event Sessions in the Object Explorer](../../relational-databases/extended-events/manage-event-sessions-in-the-object-explorer.md). The [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] XEvent Profiler already provides templates that are ready to use. For more information, see [Use the SSMS XEvent Profiler](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md).
+       
+    [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] uses trace templates for this purpose. For more information, see [Set Trace Definition Defaults &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/set-trace-definition-defaults-sql-server-profiler.md) and [Create a Trace Template &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md).  
+    
+    > [!TIP]
+    > A SQL Trace definition can be converted to an Extended Event session. For more information, see [Convert an Existing SQL Trace Script to an Extended Events Session](../../relational-databases/extended-events/convert-an-existing-sql-trace-script-to-an-extended-events-session.md).
   
 5.  Analyze captured event data.  
   
-     To be analyzed, the captured event data is loaded into the application that captured the data. For example, a captured trace from [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] can be reloaded into [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] for viewing and analysis. For more information, see [View and Analyze Traces with SQL Server Profiler](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md).  
+     To be analyzed, the captured event data is loaded into the application that captured the data. 
+     
+     For example, a captured Extended Event trace can be be reloaded into [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] for viewing ana analysis. For more information, see [Advanced Viewing of Target Data from Extended Events in SQL Server](../../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md).
+
+     SQL Trace data can be reloaded into [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] for viewing and analysis. For more information, see [View and Analyze Traces with SQL Server Profiler](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md).  
   
-     Analyzing event data involves determining what is occurring and why. This information lets you make changes that can improve performance, such as adding more memory, changing indexes, correcting coding problems with Transact-SQL statements or stored procedures, and so on, depending on the type of analysis performed. For example, you can use the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor to analyze a captured trace from [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] and make index recommendations based on the results.  
+     Analyzing event data involves determining what is occurring and why. This information lets you make changes that can improve performance, such as adding more memory, changing indexes, correcting coding problems with [!INCLUDE[tsql](../../includes/tsql-md.md)] statements or stored procedures, and so on, depending on the type of analysis performed. For example, you can use the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor to analyze a captured trace from Extended Events or [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] and make index recommendations based on the results.  
   
-6.  Replay captured event data.  
+6.  Replay captured event data (optional).  
   
      Event replay lets you establish a test copy of the database environment from which the data was captured, and then repeat the captured events as they occurred originally on the real system. This capability is only available with the Distributed Replay Utility or [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. You can replay the events at the same speed as they originally occurred, as fast as possible (to stress the system), or more likely, one step at a time (to analyze the system after each event has occurred). By analyzing the exact events in a test environment, you can prevent harm to the production system. For more information, see [Replay Traces](../../tools/sql-server-profiler/replay-traces.md).  
   

@@ -21,7 +21,7 @@ monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linu
 # TRANSLATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-Returns the string provided as a first argument after some characters specified in the second argument are translated into a destination set of characters.
+Returns the string provided as a first argument after some characters specified in the second argument are translated into a destination set of characters specified in the third argument.
 
 ## Syntax   
 ```
@@ -30,23 +30,23 @@ TRANSLATE ( inputString, characters, translations)
 
 ## Arguments   
 
-inputString   
-Is an [expression](../../t-sql/language-elements/expressions-transact-sql.md) of any character type (nvarchar, varchar, nchar, char).
+ *inputString*   
+ Is the string [expression](../../t-sql/language-elements/expressions-transact-sql.md) to be searched. *inputString* can be any character data type (nvarchar, varchar, nchar, char).
 
-characters   
-Is a [expression](../../t-sql/language-elements/expressions-transact-sql.md) of any character type containing characters that should be replaced.
+ *characters*   
+ Is a string [expression](../../t-sql/language-elements/expressions-transact-sql.md) containing characters that should be replaced. *characters* can be any character data type.
 
-translations   
-Is a character [expression](../../t-sql/language-elements/expressions-transact-sql.md) that matches second argument by type and length.
+*translations*   
+ Is a string [expression](../../t-sql/language-elements/expressions-transact-sql.md) containing the replacment characters. *translations* must be the same data type and length as *characters*.
 
 ## Return Types   
-Returns a character expression of the same type as `inputString` where characters from the second argument are replaced with the matching characters from third argument.
+Returns a character expression of the same data type as `inputString` where characters from the second argument are replaced with the matching characters from third argument.
 
 ## Remarks   
 
-`TRANSLATE` function will return an error if characters and translations have different lengths. `TRANSLATE` function should return unchanged input if null vales are provided as characters or replacement arguments. The behavior of the `TRANSLATE` function should be identical to the [REPLACE](../../t-sql/functions/replace-transact-sql.md) function.   
+`TRANSLATE` will return an error if *characters* and *translations* expressions have different lengths. `TRANSLATE` will return NULL if any of the arguements are NULL.  
 
-The behavior of the `TRANSLATE` function is equivalent to using multiple `REPLACE` functions.
+The behavior of the `TRANSLATE` function is equivalent to using multiple [REPLACE](../../t-sql/functions/replace-transact-sql.md) functions.
 
 `TRANSLATE` is always SC collation aware.
 

@@ -136,6 +136,8 @@
       href: save-showplan-xml-events-separately-sql-server-profiler.md
     - name: Save Showplan XML Statistics Profile Events Separately (SQL Server Profiler)
       href: save-showplan-xml-statistics-profile-events-separately-sql-server-profiler.md
+    - name: Use the system_health Session
+      href: ../extended-events/use-the-system-health-session.md
   - name: Monitor Resource Usage (System Monitor)
     href: ../performance-monitor/monitor-resource-usage-system-monitor.md
 - name: Internals and Architecture

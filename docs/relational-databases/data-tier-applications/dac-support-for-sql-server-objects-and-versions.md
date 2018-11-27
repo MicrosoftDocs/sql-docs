@@ -90,7 +90,7 @@ manager: craigg
   
     -   MONEY, SMALLMONEY, NUMERIC, DECIMAL base types:  Precision is not preserved.  
   
-        -   DECIMAL/NUMERIC base types with precision 38:  the “TotalBytes” sql_variant metadata is always set to 21.  
+        -   DECIMAL/NUMERIC base types with precision 38:  the "TotalBytes" sql_variant metadata is always set to 21.  
   
     -   All text base types:  The database default collation is applied for all text.  
   

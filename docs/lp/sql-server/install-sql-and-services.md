@@ -150,7 +150,7 @@ featureFlags:
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Install SQL Server Reporting Services (SSRS)</h3>
-                                                    <p>A solution for creating, publishing, and managing reports, then delivering them to the right users in different ways, whether that’s viewing them in web browser, on their mobile device, or as an email in their in-box. </p>
+                                                    <p>A solution for creating, publishing, and managing reports, then delivering them to the right users in different ways, whether that's viewing them in web browser, on their mobile device, or as an email in their in-box. </p>
                                                 </div>
                                             </div>
                                         </div>

@@ -48,7 +48,7 @@ Here is a list of scenarios and application patterns where we have seen customer
 
 This is the core scenario for which we built In-Memory OLTP: support large volumes of transactions, with consistent low latency for individual transactions.
 
-Common workload scenarios are: trading of financial instruments, sports betting, mobile gaming, and ad delivery. Another common pattern we’ve seen is a “catalog” that is frequently read and/or updated. One example is where you have large files, each distributed over a number of cluster nodes, and you catalog the location of each shard of each file in a memory-optimized table.
+Common workload scenarios are: trading of financial instruments, sports betting, mobile gaming, and ad delivery. Another common pattern we've seen is a "catalog" that is frequently read and/or updated. One example is where you have large files, each distributed over a number of cluster nodes, and you catalog the location of each shard of each file in a memory-optimized table.
 
 #### Implementation considerations
 
@@ -61,7 +61,7 @@ To get started in an existing application:
 #### Customer Case Studies
 
 - CMC Markets leverages In-Memory OLTP in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] to achieve consistent low latency: [Because a second is too long to wait, this financial services firm is updating its trading software now.](https://customers.microsoft.com/story/because-a-second-is-too-long-to-wait-this-financial-services-firm-is-updating-its-trading-software)
-- Derivco leverages In-Memory OLTP in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] to support increased throughput and handle spikes in the workload: [When an online gaming company doesn’t want to risk its future, it bets on [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].](https://customers.microsoft.com/story/when-an-online-gaming-company-doesnt-want-to-risk-its-future-it-bets-on-sql-server-2016)
+- Derivco leverages In-Memory OLTP in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] to support increased throughput and handle spikes in the workload: [When an online gaming company doesn't want to risk its future, it bets on [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].](https://customers.microsoft.com/story/when-an-online-gaming-company-doesnt-want-to-risk-its-future-it-bets-on-sql-server-2016)
 
 
 ### Data ingestion, including IoT (Internet-of-Things)
@@ -86,7 +86,7 @@ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] samples repository
  
 #### Customer Case Studies
 
-- [Quorum doubles key database’s workload while lowering utilization by 70% by leveraging In-Memory OLTP in Azure SQL Database](https://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database)
+- [Quorum doubles key database's workload while lowering utilization by 70% by leveraging In-Memory OLTP in Azure SQL Database](https://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database)
 - EdgeNet improved the performance of batch data load and removed the need to maintain a mid-tier cache, with In-Memory OLTP in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]: [Data Services Firm Gains Real-Time Access to Product Data with In-Memory Technology](https://customers.microsoft.com/story/data-services-firm-gains-real-time-access-to-product-d)
 - Beth Israel Deaconess Medical Center was able to dramatically improve data ingestion rate from domain controllers, and handle spikes in the workload, with In-Memory OLTP in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]: [https://customers.microsoft.com/story/strengthening-data-security-and-creating-more-time-for]
 

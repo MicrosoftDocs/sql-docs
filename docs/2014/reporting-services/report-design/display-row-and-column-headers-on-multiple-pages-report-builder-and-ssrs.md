@@ -50,7 +50,7 @@ manager: craigg
   
 3.  Click the static member that corresponds to the static member (row or column) that you want to remain visible while scrolling. The Properties pane displays the **Tablix Member** properties.  
   
-     If you don’t see the Properties pane, click the **View** tab at the top of the Report Builder window and then click **Properties**.  
+     If you don't see the Properties pane, click the **View** tab at the top of the Report Builder window and then click **Properties**.  
   
 4.  In the Properties pane, set **RepeatOnNewPage** to True.  
   

@@ -33,7 +33,7 @@ In the original public dataset, the taxi identifiers and trip records were provi
 
 **Taxi identifiers**
   
--   The _medallion_ column represents the taxi’s unique id number.
+-   The _medallion_ column represents the taxi's unique id number.
   
 -   The _hack\_license_ column contains the taxi driver's license number (anonymized).
   

@@ -240,7 +240,7 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
 ```
 
 ##### COMPRESSION_DELAY = **0** | \<delay>[Minutes]  
-   Specifies a lower bound on how long a row should stay in delta rowgroup before it is eligible for migration to compressed rowgroup. For example, a customer can say that if a row is unchanged for  120 minutes, make it  eligible for compressing into columnar storage format. For columnstore index on disk-based tables, we don’t track the time when a row was inserted or updated,  we use the delta rowgroup closed time as a proxy for the row instead. The default duration is 0 minutes. A row is migrated to columnar storage once 1 million rows have been accumulated in delta rowgroup and it has been marked closed.  
+   Specifies a lower bound on how long a row should stay in delta rowgroup before it is eligible for migration to compressed rowgroup. For example, a customer can say that if a row is unchanged for  120 minutes, make it  eligible for compressing into columnar storage format. For columnstore index on disk-based tables, we don't track the time when a row was inserted or updated,  we use the delta rowgroup closed time as a proxy for the row instead. The default duration is 0 minutes. A row is migrated to columnar storage once 1 million rows have been accumulated in delta rowgroup and it has been marked closed.  
   
 ###### DATA_COMPRESSION  
    Specifies the data compression option for the specified table, partition number, or range of partitions. Applies only to columnstore indexes, including both nonclustered columnstore and clustered columnstore indexes. The options are as follows:
@@ -508,7 +508,7 @@ GO
     ```sql  
     --Process for dropping a clustered index.  
     --First, look up the name of the clustered rowstore index.  
-    --Clustered rowstore indexes always use the DEFAULT name ‘ClusteredIndex_<GUID>’.  
+    --Clustered rowstore indexes always use the DEFAULT name 'ClusteredIndex_<GUID>'.  
     SELECT i.name   
     FROM sys.indexes i   
     JOIN sys.tables t  

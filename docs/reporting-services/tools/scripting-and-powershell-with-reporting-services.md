@@ -48,7 +48,7 @@ ms.author: maghan
   
 -   [Use PowerShell to Create an Azure VM With a Native Mode Report Server](https://msdn.microsoft.com/library/azure/dn449661.aspx).  
   
--   See the section “Access the WMI classes using PowerShell” in [Access the Reporting Services WMI Provider](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md).  
+-   See the section "Access the WMI classes using PowerShell" in [Access the Reporting Services WMI Provider](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md).  
   
 
 ## RS.exe scripting samples  

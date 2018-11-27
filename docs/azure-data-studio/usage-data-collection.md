@@ -17,7 +17,7 @@ manager: craigg
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] collects usage data and sends it to Microsoft to help improve our products and services. To learn more, read the [privacy statement](https://go.microsoft.com/fwlink/?LinkID=528096&clcid=0x409).
 
-If you don’t wish to send usage data to Microsoft, you can set the *telemetry.enableTelemetry* setting to *false*.
+If you don't wish to send usage data to Microsoft, you can set the *telemetry.enableTelemetry* setting to *false*.
 
 To silence all telemetry events from [!INCLUDE[name-sos](../includes/name-sos-short.md)], from **File** > **Preferences** > **Settings**, add the following option:
 

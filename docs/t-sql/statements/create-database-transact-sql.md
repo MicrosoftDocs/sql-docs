@@ -2,7 +2,7 @@
 title: "CREATE DATABASE (Transact-SQL) | Microsoft Docs"
 description: Create database syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, and Parallel Data Warehouse
 ms.custom: ""
-ms.date: "10/02/2018"
+ms.date: "11/16/2018"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
@@ -1073,10 +1073,7 @@ The name of the database that is to be copied.
 Databases in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] have several default settings that are set when the database is created. For more information about these default settings, see the list of values in [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).  
   
 MAXSIZE provides the ability to limit the size of the database. If the size of the database reaches its MAXSIZE, you receive error code 40544. When this occurs, you cannot insert or update data, or create new objects (such as tables, stored procedures, views, and functions). However, you can still read and delete data, truncate tables, drop tables and indexes, and rebuild indexes. You can then update MAXSIZE to a value larger than your current database size or delete some data to free storage space. There may be as much as a fifteen-minute delay before you can insert new data.  
-  
-> [!IMPORTANT]  
->  The `CREATE DATABASE` statement must be the only statement in a [!INCLUDE[tsql](../../includes/tsql-md.md)] batch. 
-  
+   
 To change the size, edition, or service objective values later, use [ALTER DATABASE &#40;Azure SQL Database&#41;](../../t-sql/statements/alter-database-transact-sql.md?&tabs=sqldbls).  
 
 The CATALOG_COLLATION argument is only available during database creation. 
@@ -1184,7 +1181,7 @@ CREATE DATABASE db_copy
 The following example sets the catalog collation to DATABASE_DEFAULT during database creation, which sets the catalog collation to be the same as the database collation.
 
 ```sql
-CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140  (MAXSIZE = 100 MB, EDITION = ‘basic’)  
+CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140  (MAXSIZE = 100 MB, EDITION = 'basic')  
   WITH CATALOG_COLLATION = DATABASE_DEFAULT 
 ```
   
@@ -1318,11 +1315,11 @@ Specifies the service tier of the database. For [!INCLUDE[ssSDW](../../includes/
 *MAXSIZE*  
 The default is 245,760 GB (240 TB).  
 
-**Applies to:** Optimized for Elasticity performance tier
+**Applies to:** Optimized for Compute Gen1
 
 The maximum allowable size for the database. The database cannot grow beyond MAXSIZE. 
 
-**Applies to:** Optimized for Compute performance tier
+**Applies to:** Optimized for Compute Gen2
 
 The maximum allowable size for rowstore data in the database. Data stored in rowstore tables, a columnstore index's deltastore, or a nonclustered index on a clustered columnstore index cannot grow beyond MAXSIZE.  Data compressed into columnstore format does not have a size limit and is not constrained by MAXSIZE.
   

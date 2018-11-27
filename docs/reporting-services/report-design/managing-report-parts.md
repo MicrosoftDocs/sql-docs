@@ -80,7 +80,7 @@ ms.author: maggies
     > [!IMPORTANT]  
     >  In each of these steps, ensure that the report parts are being reused in reports from trusted locations and users.  
   
--   Report parts use the same permission policies as the existing “Resource” item type. Within a folder, there is no differentiation between traditional resource items and report parts from a security inheritance perspective. The report part will inherit the same permission policy as the images in the same folder. When this distinction is needed, item level security can be configured for the desired report parts. Or, you can put report parts should be in separate folders that have the correct permissions configured.  
+-   Report parts use the same permission policies as the existing "Resource" item type. Within a folder, there is no differentiation between traditional resource items and report parts from a security inheritance perspective. The report part will inherit the same permission policy as the images in the same folder. When this distinction is needed, item level security can be configured for the desired report parts. Or, you can put report parts should be in separate folders that have the correct permissions configured.  
   
 ## See Also  
  [Report Parts and Datasets in Report Builder](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   

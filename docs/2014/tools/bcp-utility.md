@@ -139,7 +139,7 @@ manager: craigg
 |*code_page*|Specific code page number; for example, 850.<br /><br /> **\*\* Important \*\*** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] does not support code page 65001 (UTF-8 encoding).|  
   
  `-d` *database_name*  
- Specifies the database to connect to. By default, bcp.exe connects to the user’s default database. If `-d`*database_name* and a three part name (*database_name.schema.table*, passed as the first parameter to bcp.exe) is specified, an error will occur because you cannot specify the database name twice.If *database_name* begins with a hyphen (-) or a forward slash (/), do not add a space between `-d` and the database name.  
+ Specifies the database to connect to. By default, bcp.exe connects to the user's default database. If `-d`*database_name* and a three part name (*database_name.schema.table*, passed as the first parameter to bcp.exe) is specified, an error will occur because you cannot specify the database name twice.If *database_name* begins with a hyphen (-) or a forward slash (/), do not add a space between `-d` and the database name.  
   
  **-e** *err_file*  
  Specifies the full path of an error file used to store any rows that the **bcp** utility cannot transfer from the file to the database. Error messages from the **bcp** command go to the workstation of the user. If this option is not used, an error file is not created.  

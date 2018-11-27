@@ -109,7 +109,7 @@ manager: craigg
 |target_max_batched_transactions|100|1|1000|True|The maximum number of Oracle transactions that can be processed as one transaction in SQL Server CT tables update.|  
 |target_idle_lsn_update_interval|10|0|1|False|The interval (in seconds) for updating the **lsn_time_mapping** table when the captured tables have no activity.|  
 |trace_retention_period|24|1|24*31|False|The amount of time (in hours to keep messages in the trace table).|  
-|sql_reconnect_interval|2|2|3600|False|The amount of time (in seconds) to wait before reconnecting to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This interval is used in addition to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] client’s connect timeout.|  
+|sql_reconnect_interval|2|2|3600|False|The amount of time (in seconds) to wait before reconnecting to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This interval is used in addition to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] client's connect timeout.|  
 |sql_reconnect_limit|-1|-1|-1|False|The maximum number of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reconnections. The default -1 means that the process tries to reconnect until it stops.|  
 |cdc_restart_limit|6|-1|3600|False|In most cases, the CDC service restarts an abnormally ended CDC instance automatically. This property defines after how many failures per hour the service stops to restart the instance. The value -1 means that the instance should be always restarted.<br /><br /> The Service returns to restart the instance after any update of the configuration table.|  
 |cdc_memory_report|0|0|1000|False|If the value of the parameter was changed, the CDC Instance prints its memory report on the trace table.|  

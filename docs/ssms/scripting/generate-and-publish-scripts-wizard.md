@@ -334,7 +334,7 @@ For a more detailed Tutorial on using the Generate and Publish Scripts wizard, p
  
 ## Generating Scripts on Azure SQL Data Warehouse  
 
-If the syntax generated when using “Script As…” does not look like [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] syntax or if you receive an error message, you may need to set your scripting options in SQL Server Management Studio to [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].  
+If the syntax generated when using "Script As…" does not look like [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] syntax or if you receive an error message, you may need to set your scripting options in SQL Server Management Studio to [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].  
 
 ### How to set default scripting options to SQL Data Warehouse  
 

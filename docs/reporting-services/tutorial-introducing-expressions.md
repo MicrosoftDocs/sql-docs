@@ -416,9 +416,9 @@ In this section, you add a column and then use the **Now** function or the `Exec
 11. Click **Run** to preview the report.  
   
 ## <a name="Indicator"></a>7. Use an Indicator to Show Sales Comparison  
-In this section, you add a new column and use an indicator to show whether a person’s year-to-date (YTD) purchases are above or below the average YTD purchases. The **Round** function removes decimals from values.  
+In this section, you add a new column and use an indicator to show whether a person's year-to-date (YTD) purchases are above or below the average YTD purchases. The **Round** function removes decimals from values.  
   
-Configuring the indicator and its states takes many steps. If you want, you can skip ahead in the “To configure the indicator” procedure, and copy/paste the completed expressions from this tutorial into the **Expression** dialog box.  
+Configuring the indicator and its states takes many steps. If you want, you can skip ahead in the "To configure the indicator" procedure, and copy/paste the completed expressions from this tutorial into the **Expression** dialog box.  
   
 ### To add the + or - AVG Sales column  
   
@@ -583,9 +583,9 @@ Create a parameter so report readers can specify the color to apply to alternati
   
 8. Click **Parameters** and in the **Values** list, double-click **RowColor**.  
   
-22. Immediately after `Parameters!RowColor.Value`, type **, “White”)**  
+22. Immediately after `Parameters!RowColor.Value`, type **, "White")**  
   
-    The completed expression is: `=IIF(RowNumber(Nothing) MOD 2, Parameters!RowColor.Value, “White”)`  
+    The completed expression is: `=IIF(RowNumber(Nothing) MOD 2, Parameters!RowColor.Value, "White")`  
     
     ![report-builder-expression-tutorial-banded-color-expressn](../reporting-services/media/report-builder-expression-tutorial-banded-color-expressn.png)
   

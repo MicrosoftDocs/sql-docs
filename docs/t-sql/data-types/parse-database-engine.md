@@ -80,7 +80,7 @@ hierarchyidRepresentation    StringRepresentation
 The following code snippet calls the Parse() method:
   
 ```sql
-string input = “/1/2/”;  
+string input = "/1/2/";  
 SqlHierarchyId.Parse(input);  
 ```  
   

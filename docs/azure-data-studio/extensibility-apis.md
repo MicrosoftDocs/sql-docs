@@ -38,19 +38,19 @@ Gets a dictionary containing the credentials associated with a connection. These
 ```
 > let connection = sqlops.connection.getCurrentConnection();
 connection: {
-	providerName: ‘MSSQL’,
-	connectionId: ‘d97bb63a-466e-4ef0-ab6f-00cd44721dcc’,
+	providerName: 'MSSQL',
+	connectionId: 'd97bb63a-466e-4ef0-ab6f-00cd44721dcc',
 	options: {
-		server: ‘mairvine-sql-server’,
-		user: ‘sa’,
-		authenticationType: ‘sqlLogin’,
+		server: 'mairvine-sql-server',
+		user: 'sa',
+		authenticationType: 'sqlLogin',
 		…
 	},
 	…
 }
 > let credentials = sqlops.connection.getCredentials(connection.connectionId);
 credentials: {
-	password: ‘abc123’
+	password: 'abc123'
 }
 
 ```

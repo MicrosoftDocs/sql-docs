@@ -18,7 +18,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 
 This article provides the steps to rotate keys for Always Encrypted using the SqlServer PowerShell module. For information about how to start using the SqlServer PowerShell module for Always Encrypted, see [Configure Always Encrypted using PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md).
 
-Rotating Always Encrypted Keys is the process of replacing an existing key with a new one. You may need to rotate a key if it has been compromised, or in order to comply with your organization’s policies or compliance regulations that mandate cryptographic keys must be rotated on a regular basis. 
+Rotating Always Encrypted Keys is the process of replacing an existing key with a new one. You may need to rotate a key if it has been compromised, or in order to comply with your organization's policies or compliance regulations that mandate cryptographic keys must be rotated on a regular basis. 
 
 Always Encrypted uses two types of keys, so there are two high-level key rotation workflows; rotating column master keys, and rotating column encryption keys.
 

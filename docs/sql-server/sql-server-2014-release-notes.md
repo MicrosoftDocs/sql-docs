@@ -41,7 +41,7 @@ SQL Server 2014 SP2 contains rollups of released hotfixes for SQL Server 2014 SP
 |Database cloning|Use the new DBCC command to troubleshoot existing production databases by cloning the schema, metadata, and statistics but without the data. Cloned databases are not meant to be used in production environments.|[KB 3177838](https://support.microsoft.com/help/3177838/how-to-use-dbcc-clonedatabase-to-generate-a-schema-and-statistics-only)
 |DMF additions|New DMF sys.dm_db_incremental_stats_properties expose information per-partition for incremental statistics.|[KB 3170114](https://support.microsoft.com/help/3170114/update-to-add-dmf-sys-dm-db-incremental-stats-properties-in-sql-server)
 |DMF for retrieving input buffer in SQL Server|A new DMF for retrieving the input buffer for a session/request (sys.dm_exec_input_buffer) is now available. This is functionally equivalent to DBCC INPUTBUFFER.|[sys.dm_exec_input_buffer](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql)
-|DROP DDL Support for Replication|Allows a table that’s included as an article in transactional replication publication to be dropped from the database and the publication.|[KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactiona)
+|DROP DDL Support for Replication|Allows a table that's included as an article in transactional replication publication to be dropped from the database and the publication.|[KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactiona)
 |IFI privilege to SQL service account|Determine whether Instant File initialization (IFI) is in effect at the SQL Server service startup.|[Database File Initialization](https://docs.microsoft.com/sql/relational-databases/databases/database-instant-file-initialization)
 |Memory Grants - Handling issues|You can leverage diagnostic hints while running queries by capping their memory grants to prevent memory contention.|[KB 3107401](https://support.microsoft.com/help/3107401/new-query-memory-grant-options-are-available-min-grant-percent-and-max)
 |Query execution lightweight per-operator profiling |Optimizes collecting per-operator query execution statistics such as actual number of rows.|[Developers Choice: Query progress - anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/)
@@ -161,7 +161,7 @@ SQL Server 2014 Standard has the following changes:
 3.  Add back the default constraints in the migration script.    
 4.  Execute the migration script.  
   
-#### Informational message “file access denied” incorrectly reported as an error in the SQL Server 2014 error log  
+#### Informational message "file access denied" incorrectly reported as an error in the SQL Server 2014 error log  
 **Issue:** When restarting a server that has databases that contain memory-optimized tables, you may see the following type of error messages in the SQL Server 2014 error log:  
   
 ```  
@@ -286,7 +286,7 @@ If you already have the issue with mismatched instance_id values, the only way t
 ### <a name="SSRS"></a>Reporting Services (RTM)
   
 #### The SQL Server 2012 Reporting Services Native Mode report server cannot run side-by-side with SQL Server 2014 Reporting Services SharePoint Components  
-**Issue:** The [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Native mode Windows service ‘SQL Server Reporting Services’ (ReportingServicesService.exe) fails to start when there are [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint components installed on the same server.  
+**Issue:** The [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Native mode Windows service 'SQL Server Reporting Services' (ReportingServicesService.exe) fails to start when there are [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint components installed on the same server.  
   
 **Workaround:** Uninstall [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint components and restart Microsoft SQL Server 2012 Reporting Services Windows service.  
   
@@ -353,7 +353,7 @@ This issue is because Availability Group Listeners require assigning one IP addr
   
 **Workaround:**  
   
-1.  Download the MSOLAP.5 provider from the [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] Feature Pack. Install the provider on the application servers running Excel Services. For more information, see the section “Microsoft Analysis Services OLE DB Provider for Microsoft SQL Server 2012 SP1” [Microsoft SQL Server 2012 SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=35580).  
+1.  Download the MSOLAP.5 provider from the [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] Feature Pack. Install the provider on the application servers running Excel Services. For more information, see the section "Microsoft Analysis Services OLE DB Provider for Microsoft SQL Server 2012 SP1" [Microsoft SQL Server 2012 SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=35580).  
   
 2.  Register MSOLAP.5 as a trusted provider with SharePoint Excel Services. For more information, see [Add MSOLAP.5 as a Trusted Data Provider in Excel Services](https://technet.microsoft.com/library/hh758436.aspx).  
   
@@ -368,7 +368,7 @@ This issue is because Availability Group Listeners require assigning one IP addr
   
 **Workaround:**  
   
-1.  Download the MSOLAP.5 provider from the [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] Feature Pack. Install the provider on the application servers running Excel Services. For more information, see the section “Microsoft Analysis Services OLE DB Provider for Microsoft SQL Server 2012 SP1” [Microsoft SQL Server 2012 SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=35580).  
+1.  Download the MSOLAP.5 provider from the [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] Feature Pack. Install the provider on the application servers running Excel Services. For more information, see the section "Microsoft Analysis Services OLE DB Provider for Microsoft SQL Server 2012 SP1" [Microsoft SQL Server 2012 SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=35580).  
   
 2.  Register MSOLAP.5 as a trusted provider with SharePoint Excel Services. For more information, see [Add MSOLAP.5 as a Trusted Data Provider in Excel Services](https://technet.microsoft.com/library/hh758436.aspx).  
   
@@ -383,7 +383,7 @@ This issue is because Availability Group Listeners require assigning one IP addr
   
 **Workaround:**  
   
-1.  In Microsoft Excel, clear the custom advanced properties. See the “Workaround” section of the following knowledge base article [KB 2927748](https://support.microsoft.com/kb/2927748).  
+1.  In Microsoft Excel, clear the custom advanced properties. See the "Workaround" section of the following knowledge base article [KB 2927748](https://support.microsoft.com/kb/2927748).  
   
 **More Information:**  
   

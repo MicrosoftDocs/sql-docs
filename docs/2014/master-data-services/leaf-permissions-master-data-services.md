@@ -36,7 +36,7 @@ manager: craigg
 |**Deny**|Leaf members for the entity are not displayed.|  
   
 ## Attribute Permissions  
- Attribute permissions apply to the attribute’s values for the specific entity. Users with attribute permissions only cannot add or remove members.  
+ Attribute permissions apply to the attribute's values for the specific entity. Users with attribute permissions only cannot add or remove members.  
   
 |Permission|Description|  
 |----------------|-----------------|  

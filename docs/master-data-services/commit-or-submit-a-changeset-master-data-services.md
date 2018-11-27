@@ -17,13 +17,13 @@ manager: craigg
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  A changeset is a collection of the pending changes on the master data. If entity changes don’t require administrator approval, you can commit the changeset. If the entity changes require administrator approval, you can submit the changeset for approval.  
+  A changeset is a collection of the pending changes on the master data. If entity changes don't require administrator approval, you can commit the changeset. If the entity changes require administrator approval, you can submit the changeset for approval.  
   
 ## Prerequisites  
   
 -   You must have permission to access the **Explorer** functional area. For more information, see [Functional Area Permissions &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)  
   
--   If the entity changes don’t require administrator approval, you can commit the changeset only if you own the changeset and the changeset status is open.  
+-   If the entity changes don't require administrator approval, you can commit the changeset only if you own the changeset and the changeset status is open.  
   
 -   If the entity changes require administrator approval, you can submit the changeset for approval only if you own the changeset and the changeset status is open or rejected.  
   

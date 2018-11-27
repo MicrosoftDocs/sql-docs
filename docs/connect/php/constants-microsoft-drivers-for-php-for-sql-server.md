@@ -49,7 +49,7 @@ The available values to pass to PDO::SQLSRV_ATTR_ENCODING are
 |PDO::SQLSRV_ENCODING_BINARY|Data is a raw byte stream from the server without performing encoding or translation.<br /><br />Not valid for PDO::setAttribute.|  
 |PDO::SQLSRV_ENCODING_SYSTEM|Data is 8-bit characters as specified in the code page of the Windows locale that is set on the system. Any multi-byte characters or characters that do not map into this code page are substituted with a single-byte question mark (?) character.|  
 |PDO::SQLSRV_ENCODING_UTF8|Data is in the UTF-8 encoding. This is the default encoding.|  
-|PDO::SQLSRV_ENCODING_DEFAULT|Uses PDO::SQLSRV_ENCODING_SYSTEM if specified during connection.<br /><br />Use the connection’s encoding if specified in a prepare statement.|  
+|PDO::SQLSRV_ENCODING_DEFAULT|Uses PDO::SQLSRV_ENCODING_SYSTEM if specified during connection.<br /><br />Use the connection's encoding if specified in a prepare statement.|  
   
 ### Query Timeout  
 The PDO::SQLSRV_ATTR_QUERY_TIMEOUT attribute is any non-negative integer representing the timeout period, in seconds. Zero (0) is the default and means no timeout.  

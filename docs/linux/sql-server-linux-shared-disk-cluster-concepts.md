@@ -60,7 +60,7 @@ All FCIs, whether they are on Linux or Windows Server, require some form of shar
 - iSCSI
 - Network File System (NFS)
 - Server Message Block (SMB)
-Under Windows Server, there are slightly different options. One option not currently supported for Linux-based FCIs is the ability to use a disk that is local to the node for TempDB, which is SQL Server’s temporary workspace.
+Under Windows Server, there are slightly different options. One option not currently supported for Linux-based FCIs is the ability to use a disk that is local to the node for TempDB, which is SQL Server's temporary workspace.
 
 In a configuration that spans multiple locations, what is stored at one data center must be synchronized with the other. In the event of a failover, the FCI will be able to come online and the storage is seen to be the same. Achieving this will require some external method for storage replication, whether it is done via the underlying storage hardware or some software-based utility. 
 

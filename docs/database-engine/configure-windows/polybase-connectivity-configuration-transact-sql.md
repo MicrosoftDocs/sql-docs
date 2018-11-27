@@ -78,7 +78,7 @@ RECONFIGURE
  **RECONFIGURE**  
  Updates the run value (run_value) to match the configuration value (config_value). See [Result Sets](#ResultSets) for definitions of run_value and config_value. The new configuration value that is set by sp_configure does not become effective until the run value is set by the RECONFIGURE statement.  
   
- After running RECONFIGURE, you must stop and restart the SQL Server service. Note that when stopping the SQL Server service, the two additional PolyBase Engine and Data Movement Service will automatically stop. After restarting the SQL Server engine service, re-start these two services again (they won’t start automatically).  
+ After running RECONFIGURE, you must stop and restart the SQL Server service. Note that when stopping the SQL Server service, the two additional PolyBase Engine and Data Movement Service will automatically stop. After restarting the SQL Server engine service, re-start these two services again (they won't start automatically).  
   
 ## Return Code Values  
  0 (success) or 1 (failure)  

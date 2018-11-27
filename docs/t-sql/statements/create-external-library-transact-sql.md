@@ -86,7 +86,7 @@ This option is useful if you need to create a library or alter an existing libra
 
 **PLATFORM = WINDOWS**
 
-Specifies the platform for the content of the library. The value defaults to the host platform on which SQL Server is running. Therefore, the user doesn’t have to specify the value. It is required in case where multiple platforms are supported, or the user needs to specify a different platform. 
+Specifies the platform for the content of the library. The value defaults to the host platform on which SQL Server is running. Therefore, the user doesn't have to specify the value. It is required in case where multiple platforms are supported, or the user needs to specify a different platform. 
 
 in SQL Server 2017, Windows is the only supported platform.
 

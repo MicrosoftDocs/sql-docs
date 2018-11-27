@@ -202,14 +202,14 @@ The database encryption key (DEK) is protected by the certificates stored in the
   
 The system can access the keys without requiring human intervention (such as providing a password). If the certificate is not available, the system will output an error explaining that the DEK cannot be decrypted until the proper certificate is available.  
   
-When moving a database from one appliance to another, the certificate used to protect its’ DEK must be restored first on the destination server. Then the database can be restored as usual. For more information, see the standard SQL Server documentation, at [Move a TDE Protected Database to Another SQL Server](https://technet.microsoft.com/library/ff773063.aspx).  
+When moving a database from one appliance to another, the certificate used to protect its' DEK must be restored first on the destination server. Then the database can be restored as usual. For more information, see the standard SQL Server documentation, at [Move a TDE Protected Database to Another SQL Server](https://technet.microsoft.com/library/ff773063.aspx).  
   
 Certificates used to encrypt DEKs should be retained as long as there are database backups that use them. Certificate backups must include the certificate private key, because without the private key a certificate cannot be used for database restore. Those certificate private key backups are stored in a separate file, protected by a password that must be provided for certificate restore.  
   
 ## Restoring the master Database  
 The master database can be restored using **DWConfig**, as part of the disaster recovery.  
   
--   If the control node hasn’t changed, that is if the master database is restored on the same and unchanged appliance from which the backup of master database was taken, the DMK and all the certificates will be readable without additional action.  
+-   If the control node hasn't changed, that is if the master database is restored on the same and unchanged appliance from which the backup of master database was taken, the DMK and all the certificates will be readable without additional action.  
   
 -   If the master database is restored on a different appliance, or if the control node has been changed since the backup of the master database, additional steps will be required in order to regenerate the DMK.  
   

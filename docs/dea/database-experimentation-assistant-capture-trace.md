@@ -130,7 +130,7 @@ Following are some possible errors you might see and solutions for resolving the
 |Unable to start the trace on the target SQL Server, check whether you have the required permissions and that the SQL Server account has write access to the specified trace file path Sql Error Code (53)|The user running the DEA tool must have access to the computer running SQL Server. The user must be assigned the sysadmin role.|  
 |Unable to start the trace on the target SQL Server, check whether you have the required permissions and that the SQL Server account has write access to the specified trace file path Sql Error Code (19062)|The trace path specified might not exist or the folder doesn't have write permissions for the account under which SQL Server services are running (for example, NETWORK SERVICE). The path must exist, and it must have the required permissions for the trace to start.|  
 |A DEA trace currently is running on the target server.|An active trace is already running on the target server. You can't start a new trace when a server-wide trace is already running.|  
-|Can't open the requested database for capturing trace. This error might be caused by an incorrect database name.|The specified database doesn’t exist, or it’s not accessible to the current user. Use the correct database name.|  
+|Can't open the requested database for capturing trace. This error might be caused by an incorrect database name.|The specified database doesn't exist, or it's not accessible to the current user. Use the correct database name.|  
 
 If you see any other errors labeled *Sql Error Code*, see [System error messages](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/cc645603(v=sql.105)) for detailed descriptions and resolutions.
     

@@ -176,7 +176,7 @@ ms.author: maggies
   
  `<Extension Name="WORD" Type="Microsoft.ReportingServices.Rendering.WordRenderer.WordDocumentRenderer,Microsoft.ReportingServices.WordRendering" Visible="false"/>`  
   
- The WORDOPENXML extension defines the Word renderer for [!INCLUDE[ofprword](../../includes/ofprword-md.md)] .docx files. The WORD extension defines the [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 version. `Visible = “false”` indicates the Word 2003 renderer is hidden. For more information, see [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) and [RSReportDesigner Configuration File](../../reporting-services/report-server/rsreportdesigner-configuration-file.md).  
+ The WORDOPENXML extension defines the Word renderer for [!INCLUDE[ofprword](../../includes/ofprword-md.md)] .docx files. The WORD extension defines the [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 version. `Visible = "false"` indicates the Word 2003 renderer is hidden. For more information, see [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) and [RSReportDesigner Configuration File](../../reporting-services/report-server/rsreportdesigner-configuration-file.md).  
   
 ### Differences Between the Word and Word 2003 Renderers  
  Reports, rendered by using the Word or Word 2003 renderers tend to be visually indistinguishable. However, you might notice minor differences between the two the Word or Word 2003formats.  

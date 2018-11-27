@@ -73,7 +73,7 @@ manager: craigg
   
 4.  To open an existing report stored on your local machine or a report server, click the SQL Server icon in the upper left-hand corner, and then click Open.  
   
-     If you don’t see the report server in the list of existing servers, close the **Open Report** dialog box and then click **Connect** at the bottom of Report Builder to connect to the server.  
+     If you don't see the report server in the list of existing servers, close the **Open Report** dialog box and then click **Connect** at the bottom of Report Builder to connect to the server.  
   
 ## See Also  
  [Report Builder in SQL Server 2014](report-builder-in-sql-server-2016.md)  

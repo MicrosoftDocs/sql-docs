@@ -16,7 +16,7 @@ manager: kfile
   
  To represent the object hierarchy, ASSL uses the following XML conventions:  
   
--   All objects and properties are represented as elements, except for standard XML attributes such as ‘xml:lang’.  
+-   All objects and properties are represented as elements, except for standard XML attributes such as 'xml:lang'.  
   
 -   Both element names and enumeration values follow the Microsoft .NET Framework naming convention of Pascal casing with no underscores.  
   
@@ -58,7 +58,7 @@ manager: kfile
   
  `<Cubes>`  
   
- `<Cube xsi:type=”RegularCube”>`  
+ `<Cube xsi:type="RegularCube">`  
   
  `<Name>Sales</Name>`  
   
@@ -66,7 +66,7 @@ manager: kfile
   
  `</Cube>`  
   
- `<Cube xsi:type=”VirtualCube”>`  
+ `<Cube xsi:type="VirtualCube">`  
   
  `<Name>SalesAndInventory</Name>`  
   

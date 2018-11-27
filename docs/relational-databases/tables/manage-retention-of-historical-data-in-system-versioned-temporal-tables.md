@@ -37,7 +37,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 
 -   [Retention Policy](https://msdn.microsoft.com/library/mt637341.aspx#using-temporal-history-retention-policy-approach)  
 
- With each of these approaches, the logic for migrating or cleaning history data is based on the column that corresponds to end of period in the current table. The end of period value for each row determines the moment when the row version becomes “closed”, i.e. when it lands in the history table. For example, the condition `SysEndTime < DATEADD (DAYS, -30, SYSUTCDATETIME ())` specifies that historical data older than one month needs to be removed or moved out from the history table.  
+ With each of these approaches, the logic for migrating or cleaning history data is based on the column that corresponds to end of period in the current table. The end of period value for each row determines the moment when the row version becomes "closed", i.e. when it lands in the history table. For example, the condition `SysEndTime < DATEADD (DAYS, -30, SYSUTCDATETIME ())` specifies that historical data older than one month needs to be removed or moved out from the history table.  
   
 > **NOTE:**  The examples in this topic use this [Temporal Table example](creating-a-system-versioned-temporal-table.md).  
   
@@ -102,7 +102,7 @@ SET (REMOTE_DATA_ARCHIVE = ON (MIGRATION_STATE = OUTBOUND));
 ```  
   
 ### Using Transact-SQL to stretch a portion of the history table  
- To stretch only a portion of the history table, you start by creating an [inline predicate function](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md). For this example, let’s assume that you configured inline predicate function for the first time on December 1, 2015 and want to stretch to Azure all history date older than November 1, 2015. To accomplish this, start by creating the following function:  
+ To stretch only a portion of the history table, you start by creating an [inline predicate function](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md). For this example, let's assume that you configured inline predicate function for the first time on December 1, 2015 and want to stretch to Azure all history date older than November 1, 2015. To accomplish this, start by creating the following function:  
   
 ```  
 CREATE FUNCTION dbo.fn_StretchBySystemEndTime20151101(@systemEndTime datetime2)   
@@ -168,7 +168,7 @@ COMMIT ;
   
 -   Recurring partition maintenance tasks  
   
- For the illustration, let’s assume that we want to keep historical data for 6 months and that we want to keep every month of data in a separate partition. Also, let’s assume that we activated system-versioning in September of 2015.  
+ For the illustration, let's assume that we want to keep historical data for 6 months and that we want to keep every month of data in a separate partition. Also, let's assume that we activated system-versioning in September of 2015.  
   
  A partitioning configuration task creates the initial partitioning configuration for the history table. For this example, we would create the same number partitions as the size of sliding window, in months, plus one additional empty partition pre-prepared (explained below). This configuration  ensures that the system will be able to store new data correctly when we start the recurring partition maintenance task for the first time and guarantees that we never split partitions with data to avoid expensive data movements. You should perform this task using Transact-SQL using the example script below.  
   
@@ -178,7 +178,7 @@ COMMIT ;
   
 > **NOTE:** See Performance considerations with table partitioning below for the performance implications of using RANGE LEFT versus RANGE RIGHT when configuring partitioning.  
   
- Note that first and last partition are “open” on lower and upper boundaries respectively to ensure that every new row has destination partition regardless of the value in partitioning column.   
+ Note that first and last partition are "open" on lower and upper boundaries respectively to ensure that every new row has destination partition regardless of the value in partitioning column.   
 As time goes by, new rows in history table will land in higher partitions. When 6th partition gets filled up, we will have reached the targeted retention period. This is the moment to start the recurring partition maintenance task for the first time (it needs to be scheduled to run periodically, once per month in this example).  
   
  The following picture illustrates the recurring partition maintenance tasks (see detailed steps below).  
@@ -327,7 +327,7 @@ COMMIT TRANSACTION
 ### Performance considerations with table partitioning  
  It is important to perform the MERGE and SPLIT RANGE operations to avoid any data movement as data movement can incur significant performance overhead. For more information, see [Modify a Partition Function](../../relational-databases/partitions/modify-a-partition-function.md).You accomplish this by using RANGE LEFT rather than RANGE RIGHT when you [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md).  
   
- Let’s first visually explain meaning of the  RANGE LEFT and RANGE RIGHT options:  
+ Let's first visually explain meaning of the  RANGE LEFT and RANGE RIGHT options:  
   
  ![Partitioning3](../../relational-databases/tables/media/partitioning3.png "Partitioning3")  
   
@@ -335,7 +335,7 @@ COMMIT TRANSACTION
   
  In sliding window scenario, we always remove lowest partition boundary.  
   
--   RANGE LEFT case: In RANGE LEFT case, the lowest partition boundary belongs to partition 1, which is empty (after partition switch out), so MERGE RANGE won’t incur any data movement.  
+-   RANGE LEFT case: In RANGE LEFT case, the lowest partition boundary belongs to partition 1, which is empty (after partition switch out), so MERGE RANGE won't incur any data movement.  
   
 -   RANGE RIGHT case: In RANGE RIGHT case, the lowest partition boundary belongs to partition 2, which is not empty as we assumed that partition 1 was emptied by switch out. In this case MERGE RANGE will incur data movement (data from partition 2 will be moved to partition 1). To avoid this, RANGE RIGHT in the sliding window scenario needs to have partition 1, which is always empty. This means that if we use RANGE RIGHT, we should create and maintain one additional partition compared to RANGE LEFT case.  
   

@@ -50,7 +50,7 @@ EXEC[stg].[udp_name_Leaf]
       @VersionName = N'VERSION_1',  
 @LogFlag = 1,  
 @BatchTag = N'batch1'  
-      @UserName=N’domain\user’  
+      @UserName=N'domain\user'  
   
 GO  
   

@@ -57,7 +57,7 @@ The live execution plan can also be accessed from the **[Activity Monitor](../..
  The statistics profile infrastructure must be enabled before live query statistics can capture information about the progress of queries. Depending on the version, the overhead may be significant. For more information on this overhead, see [Query Profiling Infrastructure](../../relational-databases/performance/query-profiling-infrastructure.md).
   
 ## Permissions  
- Requires the database level **SHOWPLAN** permission to populate the **Live Query Statistics** results page, the server level **VIEW SERVER STATE** permission to see the live statistics, and requires any permissions necessary to execute the query.  
+ Requires the database level `SHOWPLAN` permission to populate the **Live Query Statistics** results page, the server level `VIEW SERVER STATE` permission to see the live statistics, and requires any permissions necessary to execute the query.  
   
 ## See Also  
  [Monitor and Tune for Performance](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
